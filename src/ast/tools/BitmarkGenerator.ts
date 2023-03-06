@@ -1,6 +1,7 @@
 import { AstNodeType } from '../AstNodeType';
-import { Ast, AstNode, AstNodeInfo } from '../Ast';
-import { Format } from '../types/Format';
+import { Ast, AstWalkCallbacks, AstNode, AstNodeInfo } from '../Ast';
+import { TextFormatNode } from '../nodes/TextFormatNode';
+import { TextFormat } from '../types/TextFormat';
 
 import { CodeGenerator } from './CodeGenerator';
 import { CodeWriter } from './writer/CodeWriter';
@@ -18,6 +19,7 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
   // TODO - make Ast class a singleton
   private ast = new Ast();
   private options: BitmarkGeneratorOptions;
+  private astWalker: AstWalker;
 
   constructor(writer: TextWriter, options?: BitmarkGeneratorOptions) {
     super(writer);
@@ -26,85 +28,181 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
       ...DEFAULT_OPTIONS,
       ...options,
     };
+
+    this.astWalker = new AstWalker(this);
   }
 
   public generate(root: AstNode): void {
-    const enterNodeCallback = (node: AstNode, route: AstNodeInfo[]) => {
-      switch (node.type) {
-        // Non-terminal
-        case AstNodeType.bitmark:
-          break;
-        case AstNodeType.bit:
-          break;
-        case AstNodeType.bitHeader:
-          this.writeOPD();
-          break;
-
-        // Terminal
-        case AstNodeType.type:
-          this.writeString(node.value);
-          break;
-        case AstNodeType.format: {
-          const isMinusMinus = Format.fromValue(node.value) === Format.bitmarkMinusMinus;
-          const writeFormat = !isMinusMinus || this.options.explicitTextFormat;
-          if (writeFormat) {
-            this.writeColonString(node.value);
-          }
-          break;
-        }
-        case AstNodeType.attachmentType:
-          this.writeAtString(node.value);
-          break;
-        case AstNodeType.text:
-          this.writeString(node.value);
-          break;
-        default:
-        // Ignore unknown node
-      }
-    };
-
-    const exitNodeCallback = (node: AstNode, route: AstNodeInfo[]) => {
-      switch (node.type) {
-        // Non-terminal
-        case AstNodeType.bitmark:
-          break;
-        case AstNodeType.bit:
-          break;
-        case AstNodeType.bitHeader:
-          this.writeCL();
-          this.writeNL();
-          break;
-
-        // Terminal
-        case AstNodeType.type:
-        case AstNodeType.format:
-        case AstNodeType.attachmentType:
-        case AstNodeType.text:
-        default:
-        // Ignore
-      }
-    };
-
-    this.ast.walk(root, enterNodeCallback, exitNodeCallback);
+    this.ast.walk(root, this.astWalker);
 
     this.writeEndOfLine();
   }
+
+  //
+  // NODE HANDLERS
+  //
+
+  //
+  // Non-Terminal nodes (branches)
+  //
+
+  // bitmark
+
+  // bit
+
+  // bitHeader
+
+  protected on_bitHeader_enter(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeOPD();
+  }
+
+  protected on_bitHeader_between(
+    _node: AstNode,
+    left: AstNode,
+    right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    if (left.type === AstNodeType.bitType && right.type === AstNodeType.textFormat) {
+      const writeFormat = this.isWriteFormat(right as TextFormatNode);
+      if (writeFormat) {
+        this.writeColon();
+      }
+    }
+  }
+
+  protected on_bitHeader_exit(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeCL();
+    this.writeNL();
+  }
+
+  // bitElementArray
+
+  protected on_bitElementArray_enter(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  protected on_bitElementArray_between(
+    _node: AstNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    //
+  }
+
+  protected on_bitElementArray_exit(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  // property
+
+  protected on_property_enter(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeOPA();
+  }
+
+  protected on_property_between(
+    _node: AstNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    this.writeColon();
+  }
+
+  protected on_property_exit(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeCL();
+    this.writeNL();
+  }
+
+  //
+  // Terminal nodes (leaves)
+  //
+
+  // bitType
+
+  protected on_bitType_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeString(node.value);
+  }
+
+  // textFormat
+
+  protected on_textFormat_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    const writeFormat = this.isWriteFormat(node as TextFormatNode);
+    if (writeFormat) {
+      this.writeString(node.value);
+    }
+  }
+
+  // attachmentType
+
+  protected on_attachmentType_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeString(node.value);
+  }
+
+  // key
+
+  protected on_key_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeString(node.value);
+  }
+
+  // value
+
+  protected on_value_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeString(node.value);
+  }
+
+  // item
+
+  protected on_item_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    if (node.value) {
+      this.writeOPC();
+      this.writeString(node.value);
+      this.writeCL();
+      this.writeNL();
+    }
+  }
+
+  // instruction
+
+  protected on_instruction_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    if (node.value) {
+      this.writeOPB();
+      this.writeString(node.value);
+      this.writeCL();
+      this.writeNL();
+    }
+  }
+
+  // text
+
+  protected on_text_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeString(node.value);
+  }
+
+  // END NODE HANDLERS
+
+  //
+  // WRITE FUNCTIONS
+  //
 
   protected writeString(s?: string): void {
     if (s != null) this.write(s);
   }
 
-  protected writeAtString(s?: string): void {
-    if (s != null) this.write(`@${s}`);
-  }
+  // protected writeAtString(s?: string): void {
+  //   if (s != null) this.write(`@${s}`);
+  // }
 
-  protected writeColonString(s?: string): void {
-    if (s != null) this.write(`:${s}`);
-  }
+  // protected writeColonString(s?: string): void {
+  //   if (s != null) this.write(`:${s}`);
+  // }
 
-  protected writeColonColonString(s?: string): void {
-    if (s != null) this.write(`::${s}`);
-  }
+  // protected writeColonColonString(s?: string): void {
+  //   if (s != null) this.write(`::${s}`);
+  // }
 
   protected writeOPBUL(): void {
     this.write('[•');
@@ -170,20 +268,68 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
     this.write(']');
   }
 
-  // protected writeAt(): void {
-  //   this.write(':');
-  // }
+  protected writeAt(): void {
+    this.write('@');
+  }
 
-  // protected writeColon(): void {
-  //   this.write(':');
-  // }
+  protected writeColon(): void {
+    this.write(':');
+  }
 
-  // protected writeDoubleColon(): void {
-  //   this.write('::');
-  // }
+  protected writeDoubleColon(): void {
+    this.write('::');
+  }
 
   protected writeNL(): void {
     this.write('\n');
+  }
+
+  protected isWriteFormat(node: TextFormatNode): boolean {
+    const isMinusMinus = TextFormat.fromValue(node.value) === TextFormat.bitmarkMinusMinus;
+    const writeFormat = !isMinusMinus || this.options.explicitTextFormat;
+    return !!writeFormat;
+  }
+}
+
+class AstWalker implements AstWalkCallbacks {
+  private generator: BitmarkGenerator;
+
+  constructor(generator: BitmarkGenerator) {
+    this.generator = generator;
+
+    this.enter = this.enter.bind(this);
+    this.between = this.between.bind(this);
+    this.exit = this.exit.bind(this);
+  }
+
+  enter(node: AstNode, parent: AstNode | undefined, route: AstNodeInfo[]) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const gen = this.generator as any;
+    const funcName = `on_${node.type}_enter`;
+
+    if (typeof gen[funcName] === 'function') {
+      gen[funcName](node, parent, route);
+    }
+  }
+
+  between(node: AstNode, leftNode: AstNode, rightNode: AstNode, parent: AstNode | undefined, route: AstNodeInfo[]) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const gen = this.generator as any;
+    const funcName = `on_${node.type}_between`;
+
+    if (typeof gen[funcName] === 'function') {
+      gen[funcName](node, leftNode, rightNode, parent, route);
+    }
+  }
+
+  exit(node: AstNode, parent: AstNode | undefined, route: AstNodeInfo[]) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const gen = this.generator as any;
+    const funcName = `on_${node.type}_exit`;
+
+    if (typeof gen[funcName] === 'function') {
+      gen[funcName](node, parent, route);
+    }
   }
 }
 

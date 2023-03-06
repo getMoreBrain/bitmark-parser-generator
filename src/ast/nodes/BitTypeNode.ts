@@ -1,13 +1,13 @@
-import { BitTypeType } from '../json/bitType';
 import { AstNodeType } from '../AstNodeType';
 import { AstNode } from '../Ast';
+import { BitTypeType } from '../types/BitType';
 
 class BitTypeNode implements AstNode {
-  type = AstNodeType.type;
+  type = AstNodeType.bitType;
   bitType: BitTypeType;
 
   constructor(type: BitTypeType) {
-    this.type = AstNodeType.type;
+    this.type = AstNodeType.bitType;
     this.bitType = type;
   }
 

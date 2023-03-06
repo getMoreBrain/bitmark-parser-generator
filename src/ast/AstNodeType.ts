@@ -8,6 +8,7 @@ const AstNodeType = superenum({
   bit: 'bit', // bit
   bitHeader: 'bitHeader', // bit header, e.g. [.article:bitmark++&image:jpg]
   bitElementArray: 'bitElementArray', // array of bit elements
+  property: 'property',
   // article: 'article',
   // op: 'op', // Open  [ ... ]
   // opd: 'opd', // Open dot  [. ... ]
@@ -15,10 +16,13 @@ const AstNodeType = superenum({
   // cl: 'cl', // ]
 
   // Terminal
-  type: 'type', // bit type
-  format: 'format', // text format
+  bitType: 'bitType', // bit type
+  textFormat: 'textFormat', // text format
   attachmentType: 'attachmentType', // attachment type
-  instruction: 'instruction',
+  key: 'key', // key (a string that represents a key)
+  value: 'value', // value (a string that represents a value)
+  item: 'item', // item (a string that represents a item)
+  instruction: 'instruction', // instruction (a string that represents a instruction)
   text: 'text', // text (maybe needs to be split up???)
   // nl: 'nl', // new-line
 });

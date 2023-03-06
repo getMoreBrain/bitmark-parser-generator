@@ -24,8 +24,8 @@ class BitmarkWriter extends CodeWriter {
           break;
 
         // Terminal
-        case AstNodeType.type:
-        case AstNodeType.format:
+        case AstNodeType.bitType:
+        case AstNodeType.textFormat:
         case AstNodeType.text:
           this.writeString(node.value);
           break;
@@ -49,8 +49,8 @@ class BitmarkWriter extends CodeWriter {
           break;
 
         // Terminal
-        case AstNodeType.type:
-        case AstNodeType.format:
+        case AstNodeType.bitType:
+        case AstNodeType.textFormat:
         case AstNodeType.text:
         default:
         // Ignore

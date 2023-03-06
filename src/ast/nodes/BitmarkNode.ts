@@ -5,15 +5,15 @@ import { BitNode } from './BitNode';
 
 class BitmarkNode implements AstNode {
   type = AstNodeType.bitmark;
-  bit: BitNode;
+  bits: BitNode[];
 
-  constructor(bit: BitNode) {
+  constructor(bits: BitNode[]) {
     this.type = AstNodeType.bitmark;
-    this.bit = bit;
+    this.bits = bits;
   }
 
   get children(): AstNode[] {
-    return [this.bit];
+    return [...this.bits];
   }
 }
 

@@ -3,15 +3,15 @@ import { AstNode } from '../Ast';
 
 import { AttachmentTypeNode } from './AttachmentTypeNode';
 import { BitTypeNode } from './BitTypeNode';
-import { FormatNode } from './FormatNode';
+import { TextFormatNode } from './TextFormatNode';
 
 class BitHeaderNode implements AstNode {
   type: AstNodeTypeType = AstNodeType.bitHeader;
   bitTypeNode: BitTypeNode;
-  formatNode: FormatNode;
+  formatNode: TextFormatNode;
   attachmentTypeNode?: AttachmentTypeNode;
 
-  constructor(bitTypeNode: BitTypeNode, formatNode: FormatNode, attachmentTypeNode?: AttachmentTypeNode) {
+  constructor(bitTypeNode: BitTypeNode, formatNode: TextFormatNode, attachmentTypeNode?: AttachmentTypeNode) {
     this.bitTypeNode = bitTypeNode;
     this.formatNode = formatNode;
     this.attachmentTypeNode = attachmentTypeNode;

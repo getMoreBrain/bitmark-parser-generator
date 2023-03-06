@@ -1,6 +1,5 @@
-import { stringUtils } from '../utils/stringUtils';
-
 import { AstNodeTypeType } from './AstNodeType';
+import { stringUtils } from './tools/StringUtils';
 
 export interface AstNode {
   type: AstNodeTypeType;
@@ -16,7 +15,17 @@ export interface AstNodeInfo {
   value?: any;
 }
 
-export type WalkCallback = (node: AstNode, route: AstNodeInfo[]) => void;
+export interface AstWalkCallbacks {
+  enter?: (node: AstNode, parent: AstNode | undefined, route: AstNodeInfo[]) => void;
+  between?: (
+    node: AstNode,
+    leftNode: AstNode,
+    rightNode: AstNode,
+    parent: AstNode | undefined,
+    route: AstNodeInfo[],
+  ) => void;
+  exit?: (node: AstNode, parent: AstNode | undefined, route: AstNodeInfo[]) => void;
+}
 
 class Ast {
   createNode(type: AstNodeTypeType): AstNode {
@@ -55,8 +64,8 @@ class Ast {
   //   return child;
   // }
 
-  walk(root: AstNode, enter: WalkCallback, exit?: WalkCallback): void {
-    this.walkRecursive(root, enter, exit, [{ index: 0, type: root.type }]);
+  walk(root: AstNode, callbacks: AstWalkCallbacks): void {
+    this.walkRecursive(root, undefined, callbacks, [{ index: 0, type: root.type }]);
   }
 
   routeToString(route: AstNodeInfo[]): string {
@@ -76,32 +85,41 @@ class Ast {
 
   private walkRecursive(
     node: AstNode,
-    enter: WalkCallback,
-    exit: WalkCallback | undefined,
+    parent: AstNode | undefined,
+    callbacks: AstWalkCallbacks,
     route: AstNodeInfo[],
   ): void {
+    const { enter, between, exit } = callbacks;
+
     // Call the enter callback for the node before walking children
-    enter(node, route);
+    if (enter) enter(node, parent, route);
 
     // Walk child nodes first
     if (node.children) {
-      let ci = 0;
-      for (const c of node.children) {
-        if (c) {
+      for (let i = 0, len = node.children.length; i < len; i++) {
+        const lastChild = i === len - 1;
+        const child = node.children[i];
+
+        if (child) {
           const r = route.slice();
           r.push({
-            type: c.type,
-            index: ci,
-            value: c.value,
+            type: child.type,
+            index: i,
+            value: child.value,
           });
-          this.walkRecursive(c, enter, exit, r);
-          ci++;
+          this.walkRecursive(child, node, callbacks, r);
+
+          if (!lastChild) {
+            const nextChild = node.children[i + 1];
+            // Call the between callback when between children
+            if (between) between(node, child, nextChild, parent, route);
+          }
         }
       }
     }
 
     // Call the exit callback for the node before walking children
-    if (exit) exit(node, route);
+    if (exit) exit(node, parent, route);
   }
 }
 

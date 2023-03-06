@@ -1,10 +1,10 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-const Format = superenum({
+const TextFormat = superenum({
   bitmarkMinusMinus: 'bitmark--',
   bitmarkPlusPlus: 'bitmark++',
 });
 
-export type FormatType = EnumType<typeof Format>;
+export type TextFormatType = EnumType<typeof TextFormat>;
 
-export { Format };
+export { TextFormat };

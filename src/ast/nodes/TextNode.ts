@@ -1,6 +1,5 @@
 import { AstNodeType } from '../AstNodeType';
 import { AstNode } from '../Ast';
-import { Format, FormatType } from '../types/Format';
 
 import { BitElementNode } from './BitElementNode';
 

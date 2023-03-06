@@ -1,12 +1,12 @@
 import { AstNodeType } from '../AstNodeType';
 import { AstNode } from '../Ast';
 
-class InstructionNode implements AstNode {
-  type = AstNodeType.instruction;
+class ValueNode implements AstNode {
+  type = AstNodeType.value;
   val: string;
 
   constructor(value: string) {
-    this.type = AstNodeType.instruction;
+    this.type = AstNodeType.value;
     this.val = value;
   }
 
@@ -15,4 +15,4 @@ class InstructionNode implements AstNode {
   }
 }
 
-export { InstructionNode };
+export { ValueNode };
