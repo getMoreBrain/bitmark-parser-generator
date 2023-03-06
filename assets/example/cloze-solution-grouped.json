@@ -1,0 +1,168 @@
+[
+  {
+    "bitmark": "[.cloze-solution-grouped]\n[@id:92412]\n[%A9]\n[!Ergänzen Sie die passenden Nomen.]\nAndreas war ein [_Musterschüler][@example]. Schon in der Grundschule war er [_Klassenbester][%1] Sein liebstes [_Fach][%2] war von Anfang an Mathematik. Er vergaß nie, seine [_Hausaufgaben][%3] zu machen. Nach der Grundschule ging er auf das[_Gymnasium][%4]. Jedes Jahr brachte er das beste[_Zeugnis][%5] der Klasse mit nach Hause. Er schrieb sehr gute [_Aufsätze][%6] und seine [_Diktate][%7] waren fehlerfrei. Als er älter wurde, gab er schwächeren Schülern [_Nachhilfeunterricht][%8]. Außerhalb der [_Schulzeit][%9] las Andreas viel, um seine [_Allgemeinbildung][%10] zu verbessern. Im [_Unterricht][%11] bereitete er sich auf seine [_Prüfungen][%12] gut vor. Sein [_Abitur][%13] bestand er mit einer sehr guten [_Durchschnittsnote][%14].",
+    "bit": {
+      "type": "cloze-solution-grouped",
+      "format": "bitmark--",
+      "body": "Andreas war ein {0}. Schon in der Grundschule war er {1} Sein liebstes {2} war von Anfang an Mathematik. Er vergaß nie, seine {3} zu machen. Nach der Grundschule ging er auf das{4}. Jedes Jahr brachte er das beste{5} der Klasse mit nach Hause. Er schrieb sehr gute {6} und seine {7} waren fehlerfrei. Als er älter wurde, gab er schwächeren Schülern {8}. Außerhalb der {9} las Andreas viel, um seine {10} zu verbessern. Im {11} bereitete er sich auf seine {12} gut vor. Sein {13} bestand er mit einer sehr guten {14}.",
+      "item": "A9",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": ["92412"],
+      "instruction": "Ergänzen Sie die passenden Nomen.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": ["Musterschüler"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "1",
+          "solutions": ["Klassenbester"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "2",
+          "solutions": ["Fach"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "3",
+          "solutions": ["Hausaufgaben"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "4",
+          "solutions": ["Gymnasium"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "5",
+          "solutions": ["Zeugnis"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "6",
+          "solutions": ["Aufsätze"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "7",
+          "solutions": ["Diktate"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "8",
+          "solutions": ["Nachhilfeunterricht"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "9",
+          "solutions": ["Schulzeit"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "10",
+          "solutions": ["Allgemeinbildung"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "gap",
+          "item": "11",
+          "solutions": ["Unterricht"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "gap",
+          "item": "12",
+          "solutions": ["Prüfungen"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "gap",
+          "item": "13",
+          "solutions": ["Abitur"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "gap",
+          "item": "14",
+          "solutions": ["Durchschnittsnote"],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  }
+]

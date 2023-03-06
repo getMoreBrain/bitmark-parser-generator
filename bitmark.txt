@@ -1,0 +1,20 @@
+Hello World
+
+0,bitmark
+0,bitmark -> 0,bit
+0,bitmark -> 0,bit -> 0,bitHeader
+0,bitmark -> 0,bit -> 0,bitHeader -> 0,type(article)
+0,bitmark -> 0,bit -> 0,bitHeader -> 1,format(bitmark--)
+0,bitmark -> 0,bit -> 1,bitElementArray
+0,bitmark -> 0,bit -> 1,bitElementArray -> 0,text(Zeichnungen: Jean-Marc Deltorn)
+
+[.article:bitmark--]
+Zeichnungen: Jean-Marc Deltorn
+
+Die Hörtexte wurden gesprochen von: Burkhard Behnke, Claudia Gräf, Susanne Prager, Axel Thielmann
+
+© SCHUBERT-Verlag, Leipzig
+https://www.schubert-verlag.de 
+
+3., veränderte Auflage 2019 Alle Rechte vorbehalten
+ISBN:978-3-941323-43-8

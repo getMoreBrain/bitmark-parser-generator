@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<title>bonaroo-able test</title>
+<script src="../../dist/browser/bmg.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const { bmg } = window.bmg;
+    console.log('Bmg Browser Test');
+    console.log(bmg);
+
+    const Enum = bmg(
+      {
+        thing: 'thing',
+        other: 'other',
+        something: 'somethingOther',
+        99: 1,
+      },
+      {
+        iterationKeys: ['other', 99, 'thing', 'something'],
+      },
+    );
+    console.log(Enum);
+
+    const textEnum = document.createElement('pre');
+    textEnum.textContent = JSON.stringify(Enum, null, 2);
+    document.body.appendChild(textEnum);
+
+    const textEnumIteration = document.createElement('pre');
+    const s = [];
+    for (const e of Enum) {
+      s.push(e);
+    }
+    console.log(s);
+    const str = JSON.stringify(s);
+    textEnumIteration.textContent = str;
+    document.body.appendChild(textEnumIteration);
+
+    const ok = str === '["other",1,"thing","somethingOther"]';
+
+    const textResult = document.createElement('pre');
+    textResult.textContent = ok ? 'PASS' : 'FAIL';
+    textResult.style.background = ok ? 'green' : 'red';
+    textResult.style.color = 'white';
+    textResult.style.display = 'inline';
+    document.body.appendChild(textResult);
+  });
+</script>
