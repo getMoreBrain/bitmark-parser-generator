@@ -41,7 +41,7 @@ class Bmg {
     // const filename = testFiles.chat1;
     // const filename = testFiles.chat2;
     // const filename = testFiles.conversation1;
-    const filename = testFiles.cloze;
+    // const filename = testFiles.cloze;
     // const filename = testFiles.cloze2;
     // const filename = testFiles.cloze3;
     // const filename = testFiles.cloze4;
@@ -108,7 +108,7 @@ class Bmg {
     // const filename = testFiles.multires_1;
     // const filename = testFiles.multires_1_2;
     // const filename = testFiles.multich1;
-    // const filename = testFiles.multich2;
+    const filename = testFiles.multich2;
     // const filename = testFiles.multichtx1;
     // const filename = testFiles.multichtx2;
     // const filename = testFiles.multichtx3;
@@ -169,7 +169,7 @@ class Bmg {
         flags: 'w',
       },
       {
-        explicitTextFormat: true,
+        explicitTextFormat: false,
       },
     );
 

@@ -83,6 +83,29 @@ class Ast {
     }, '');
   }
 
+  routeToTreeString(route: AstNodeInfo[]): string {
+    let str = '';
+    for (let i = 0, len = route.length; i < len; i++) {
+      const val = route[i];
+      const last = i === route.length - 1;
+      const secondToLast = i === route.length - 2;
+
+      if (last) {
+        str += `${val.type}[${val.index}]`;
+        if (val.value) {
+          const s = stringUtils.firstLine(`${val.value}`, 100);
+          str += `(${s})`;
+        }
+      } else if (secondToLast) {
+        str += '|__';
+      } else {
+        str += '   ';
+      }
+    }
+
+    return str;
+  }
+
   private walkRecursive(
     node: AstNode,
     parent: AstNode | undefined,

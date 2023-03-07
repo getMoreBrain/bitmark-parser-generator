@@ -10,6 +10,10 @@ const BitTypeMap = superenum({
   gap: '_',
   statementTrue: '+',
   statementFalse: '-',
+  choiceTrue: '+',
+  choiceFalse: '-',
+  responseTrue: '+',
+  responseFalse: '-',
   example: '@',
 });
 

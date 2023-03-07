@@ -1,15 +1,13 @@
 import { AstNodeType } from '../AstNodeType';
 import { Ast, AstWalkCallbacks, AstNode, AstNodeInfo } from '../Ast';
-import { BitElementsNode } from '../nodes/BitElementsNode';
+import { BitBitTypeNode } from '../nodes/BitBitTypeNode';
 import { BitNode } from '../nodes/BitNode';
+import { BitTypeNode } from '../nodes/BitTypeNode';
 import { BitmarkNode } from '../nodes/BitmarkNode';
 import { BitsNode } from '../nodes/BitsNode';
-import { PlaceholderHeaderNode } from '../nodes/PlaceholderHeaderNode';
-import { StatementNode } from '../nodes/StatementNode';
-import { TextFormatNode } from '../nodes/TextFormatNode';
+import { BitBitType } from '../types/BitBitType';
 import { BitTypeMap } from '../types/BitTypeMap';
 import { BitType } from '../types/BitType';
-import { PlaceholderType } from '../types/PlaceholderType';
 import { TextFormat } from '../types/TextFormat';
 
 import { CodeGenerator } from './CodeGenerator';
@@ -84,13 +82,16 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
   }
 
   protected on_bits_between(
-    _node: BitsNode,
+    node: BitsNode,
     _left: AstNode,
     _right: AstNode,
     _parent: AstNode | undefined,
     _route: AstNodeInfo[],
   ): void {
-    //
+    const isTopLevelBits = this.isTopLevelBits(node);
+    if (isTopLevelBits) {
+      this.writeNL();
+    }
   }
 
   protected on_bits_exit(_node: BitsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
@@ -135,113 +136,6 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
     }
   }
 
-  // bitHeader
-
-  protected on_bitHeader_enter(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeOPD();
-  }
-
-  protected on_bitHeader_between(
-    _node: AstNode,
-    left: AstNode,
-    right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    if (left.type === AstNodeType.bitBitType && right.type === AstNodeType.textFormat) {
-      const writeFormat = this.isWriteFormat(right as TextFormatNode);
-      if (writeFormat) {
-        this.writeColon();
-      }
-    }
-  }
-
-  protected on_bitHeader_exit(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeCL();
-  }
-
-  // bitElements
-
-  protected on_bitElements_enter(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  protected on_bitElements_between(
-    node: BitElementsNode,
-    left: AstNode,
-    right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    const itemLead = left.type === AstNodeType.item && right.type === AstNodeType.lead;
-    const inline = node.inline || itemLead;
-
-    if (!inline) {
-      this.writeNL();
-    }
-  }
-
-  protected on_bitElements_exit(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // property
-
-  protected on_property_enter(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeOPA();
-  }
-
-  protected on_property_between(
-    _node: AstNode,
-    _left: AstNode,
-    right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    if (right.value !== true) {
-      this.writeColon();
-    }
-  }
-
-  protected on_property_exit(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeCL();
-  }
-
-  // placeholderHeader
-
-  protected on_placeholderHeader_enter(
-    node: PlaceholderHeaderNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    switch (node.placeholderType) {
-      case PlaceholderType.gap:
-        this.writeOPU();
-        break;
-      default:
-        this.writeOP();
-    }
-  }
-
-  protected on_placeholderHeader_between(
-    _node: AstNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    // if (left.type === AstNodeType.bitType && right.type === AstNodeType.textFormat) {
-    //   const writeFormat = this.isWriteFormat(right as TextFormatNode);
-    //   if (writeFormat) {
-    //     this.writeColon();
-    //   }
-    // }
-  }
-
-  protected on_placeholderHeader_exit(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeCL();
-  }
-
   //
   // Terminal nodes (leaves)
   //
@@ -266,8 +160,10 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
       const write = this.isWriteFormat(node.value);
 
       if (write) {
-        this.writeColon();
-        this.writeString(node.value);
+        if (node.value !== true) {
+          this.writeColon();
+          this.writeString(`${node.value}`);
+        }
       }
     }
   }
@@ -281,86 +177,6 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
     }
   }
 
-  // textFormat
-
-  protected on_textFormat_enter(node: TextFormatNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    const writeFormat = this.isWriteFormat(node);
-    if (writeFormat) {
-      this.writeString(node.value);
-    }
-  }
-
-  // key
-
-  protected on_key_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeString(node.value);
-  }
-
-  // value
-
-  protected on_value_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value !== true) {
-      this.writeString(`${node.value}`);
-    }
-  }
-
-  // item
-
-  protected on_item_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      this.writeOPC();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
-
-  // lead
-
-  protected on_lead_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      this.writeOPC();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
-
-  // statement
-
-  protected on_statement_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    const statementNode = node as StatementNode;
-    if (statementNode.value) {
-      statementNode.isCorrect ? this.writeOPP() : this.writeOPM();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
-
-  // hint
-
-  protected on_hint_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      this.writeOPQ();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
-
-  // instruction
-
-  protected on_instruction_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      this.writeOPB();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
-
-  // text
-
-  protected on_text_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeString(node.value);
-  }
-
   // END NODE HANDLERS
 
   //
@@ -371,73 +187,61 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
     if (s != null) this.write(s);
   }
 
-  // protected writeAtString(s?: string): void {
-  //   if (s != null) this.write(`@${s}`);
+  // protected writeOPBUL(): void {
+  //   this.write('[•');
   // }
 
-  // protected writeColonString(s?: string): void {
-  //   if (s != null) this.write(`:${s}`);
+  // protected writeOPESC(): void {
+  //   this.write('[^');
   // }
 
-  // protected writeColonColonString(s?: string): void {
-  //   if (s != null) this.write(`::${s}`);
+  // protected writeOPRANGLE(): void {
+  //   this.write('[►');
   // }
 
-  protected writeOPBUL(): void {
-    this.write('[•');
-  }
+  // protected writeOPDANGLE(): void {
+  //   this.write('[▼');
+  // }
 
-  protected writeOPESC(): void {
-    this.write('[^');
-  }
+  // protected writeOPD(): void {
+  //   this.write('[.');
+  // }
 
-  protected writeOPRANGLE(): void {
-    this.write('[►');
-  }
+  // protected writeOPU(): void {
+  //   this.write('[_');
+  // }
 
-  protected writeOPDANGLE(): void {
-    this.write('[▼');
-  }
+  // protected writeOPB(): void {
+  //   this.write('[!');
+  // }
 
-  protected writeOPD(): void {
-    this.write('[.');
-  }
+  // protected writeOPQ(): void {
+  //   this.write('[?');
+  // }
 
-  protected writeOPU(): void {
-    this.write('[_');
-  }
+  // protected writeOPA(): void {
+  //   this.write('[@');
+  // }
 
-  protected writeOPB(): void {
-    this.write('[!');
-  }
+  // protected writeOPP(): void {
+  //   this.write('[+');
+  // }
 
-  protected writeOPQ(): void {
-    this.write('[?');
-  }
+  // protected writeOPM(): void {
+  //   this.write('[-');
+  // }
 
-  protected writeOPA(): void {
-    this.write('[@');
-  }
+  // protected writeOPS(): void {
+  //   this.write('[\\');
+  // }
 
-  protected writeOPP(): void {
-    this.write('[+');
-  }
+  // protected writeOPR(): void {
+  //   this.write('[*');
+  // }
 
-  protected writeOPM(): void {
-    this.write('[-');
-  }
-
-  protected writeOPS(): void {
-    this.write('[\\');
-  }
-
-  protected writeOPR(): void {
-    this.write('[*');
-  }
-
-  protected writeOPC(): void {
-    this.write('[%');
-  }
+  // protected writeOPC(): void {
+  //   this.write('[%');
+  // }
 
   protected writeOP(): void {
     this.write('[');
@@ -445,10 +249,6 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
 
   protected writeCL(): void {
     this.write(']');
-  }
-
-  protected writeAt(): void {
-    this.write('@');
   }
 
   protected writeAmpersand(): void {
@@ -459,13 +259,41 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
     this.write(':');
   }
 
-  protected writeDoubleColon(): void {
-    this.write('::');
-  }
+  // protected writeDoubleColon(): void {
+  //   this.write('::');
+  // }
 
   protected writeNL(): void {
     this.write('\n');
   }
+
+  protected isTopLevelBits(node: BitsNode): boolean {
+    if (node.type !== AstNodeType.bits) return false;
+
+    if (node.bitNode && node.bitNode.bitTypeNode) {
+      switch (node.bitNode.bitTypeNode.bitType) {
+        case BitType.bit:
+          // case BitType.statementFalse:
+          return true;
+      }
+    }
+
+    return false;
+  }
+
+  // protected isTopLevelBit(node: BitNode): boolean {
+  //   if (node.type !== AstNodeType.bit) return false;
+
+  //   if (node.bitTypeNode) {
+  //     switch (node.bitTypeNode.bitType) {
+  //       case BitType.bit:
+  //       case BitType.property:
+  //         return true;
+  //     }
+  //   }
+
+  //   return false;
+  // }
 
   protected isBodyNode(node: BitNode): boolean {
     if (node.type !== AstNodeType.bit) return false;

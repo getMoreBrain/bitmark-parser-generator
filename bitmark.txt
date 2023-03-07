@@ -4,39 +4,12 @@ Hello World
 0,bitmark -> 0,bits
 0,bitmark -> 0,bits -> 0,bit
 0,bitmark -> 0,bits -> 0,bit -> 0,bitType(bit)
-0,bitmark -> 0,bits -> 0,bit -> 1,bitKey(cloze)
+0,bitmark -> 0,bits -> 0,bit -> 1,bitKey(multiple-choice)
 0,bitmark -> 0,bits -> 0,bit -> 2,bitValue(bitmark--)
 0,bitmark -> 0,bits -> 1,bits
 0,bitmark -> 0,bits -> 1,bits -> 0,bit
-0,bitmark -> 0,bits -> 1,bits -> 0,bit -> 0,bitType(item)
-0,bitmark -> 0,bits -> 1,bits -> 0,bit -> 1,bitKey(cl1)
-0,bitmark -> 0,bits -> 2,bits
-0,bitmark -> 0,bits -> 2,bits -> 0,bit
-0,bitmark -> 0,bits -> 2,bits -> 0,bit -> 0,bitType(body)
-0,bitmark -> 0,bits -> 2,bits -> 0,bit -> 1,bitKey
-0,bitmark -> 0,bits -> 2,bits -> 1,bits
-0,bitmark -> 0,bits -> 2,bits -> 1,bits -> 0,bit
-0,bitmark -> 0,bits -> 2,bits -> 1,bits -> 0,bit -> 0,bitType(text)
-0,bitmark -> 0,bits -> 2,bits -> 1,bits -> 0,bit -> 1,bitKey(I am coffee toast)
-0,bitmark -> 0,bits -> 2,bits -> 2,bits
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 0,bit
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 0,bit -> 0,bitType(gap)
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 0,bit -> 1,bitKey(cloze)
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 1,bits
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 1,bits -> 0,bit
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 1,bits -> 0,bit -> 0,bitType(gap)
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 1,bits -> 0,bit -> 1,bitKey(gap text)
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 2,bits
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 2,bits -> 0,bit
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 2,bits -> 0,bit -> 0,bitType(hint)
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 2,bits -> 0,bit -> 1,bitKey(1 or 2)
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 3,bits
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 3,bits -> 0,bit
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 3,bits -> 0,bit -> 0,bitType(instruction)
-0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 3,bits -> 0,bit -> 1,bitKey(verb)
-0,bitmark -> 0,bits -> 2,bits -> 3,bits
-0,bitmark -> 0,bits -> 2,bits -> 3,bits -> 0,bit
-0,bitmark -> 0,bits -> 2,bits -> 3,bits -> 0,bit -> 0,bitType(text)
-0,bitmark -> 0,bits -> 2,bits -> 3,bits -> 0,bit -> 1,bitKey
+0,bitmark -> 0,bits -> 1,bits -> 0,bit -> 0,bitType(instruction)
+0,bitmark -> 0,bits -> 1,bits -> 0,bit -> 1,bitKey(What color do the following beverages have?)
 
-[.cloze:bitmark--][%cl1]I am coffee toast[_cloze][_gap text][?1 or 2][!verb]
+[.multiple-choice]
+[!What color do the following beverages have?]

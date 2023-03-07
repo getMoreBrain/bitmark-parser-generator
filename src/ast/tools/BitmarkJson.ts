@@ -77,17 +77,21 @@ class BitmarkJson {
       id,
       ageRange,
       language,
+      labelTrue,
+      labelFalse,
       //
       item,
       lead,
-      statement,
-      isCorrect,
-      statements,
       solutions,
       hint,
       instruction,
       isExample,
       example,
+      statement,
+      isCorrect,
+      statements,
+      choices,
+      responses,
       body,
       placeholders,
     } = bit;
@@ -96,6 +100,8 @@ class BitmarkJson {
     let itemNode: BitsNode | undefined;
     let leadNode: BitsNode | undefined;
     const statementNodes: BitsNode[] = [];
+    const choicesNodes: BitsNode[] = [];
+    const responsesNodes: BitsNode[] = [];
     const solutionNodes: BitsNode[] = [];
     let hintNode: BitsNode | undefined;
     let instructionNode: BitsNode | undefined;
@@ -112,6 +118,8 @@ class BitmarkJson {
     if (id) properties.id = id;
     if (ageRange) properties.ageRange = ageRange;
     if (language) properties.language = language;
+    if (labelTrue) properties.labelTrue = labelTrue;
+    if (labelFalse) properties.labelFalse = labelFalse;
 
     for (const [k, v] of Object.entries(properties)) {
       let vArray = v;
@@ -144,26 +152,6 @@ class BitmarkJson {
       } as RecurringBitJson);
     }
 
-    // +-statement
-    if (statement) {
-      const statementNode = this.bitToAstRecursive({
-        _type: isCorrect ? BitType.statementTrue : BitType.statementFalse,
-        _key: statement,
-      } as RecurringBitJson);
-      statementNodes.push(statementNode);
-    }
-    if (Array.isArray(statements)) {
-      for (const s of statements) {
-        const { isCorrect, statement, ...rest } = s;
-        const statementNode = this.bitToAstRecursive({
-          _type: isCorrect ? BitType.statementTrue : BitType.statementFalse,
-          _key: statement,
-          ...rest,
-        } as RecurringBitJson);
-        statementNodes.push(statementNode);
-      }
-    }
-
     // ?hint
     if (hint) {
       hintNode = this.bitToAstRecursive({
@@ -189,21 +177,71 @@ class BitmarkJson {
       } as RecurringBitJson);
     }
 
+    // +-statement
+    if (statement) {
+      const node = this.bitToAstRecursive({
+        _type: isCorrect ? BitType.statementTrue : BitType.statementFalse,
+        _key: statement,
+      } as RecurringBitJson);
+      statementNodes.push(node);
+    }
+    if (Array.isArray(statements)) {
+      for (const s of statements) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { _type, _key, isCorrect, statement, ...rest } = s;
+        const node = this.bitToAstRecursive({
+          _type: isCorrect ? BitType.statementTrue : BitType.statementFalse,
+          _key: statement,
+          ...rest,
+        } as RecurringBitJson);
+        statementNodes.push(node);
+      }
+    }
+
+    //+-choice
+    if (Array.isArray(choices)) {
+      for (const c of choices) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { _type, _key, isCorrect, choice, ...rest } = c;
+        const node = this.bitToAstRecursive({
+          _type: isCorrect ? BitType.choiceTrue : BitType.choiceFalse,
+          _key: choice,
+          ...rest,
+        } as RecurringBitJson);
+        choicesNodes.push(node);
+      }
+    }
+
+    //+-response
+    if (Array.isArray(responses)) {
+      for (const r of responses) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { _type, _key, isCorrect, response, ...rest } = r;
+        const node = this.bitToAstRecursive({
+          _type: isCorrect ? BitType.responseTrue : BitType.responseFalse,
+          _key: response,
+          ...rest,
+        } as RecurringBitJson);
+        responsesNodes.push(node);
+      }
+    }
+
     // // Solutions
     if (Array.isArray(solutions)) {
       for (const s of solutions) {
-        const solutionNode = this.bitToAstRecursive({
+        const node = this.bitToAstRecursive({
           _type: _type,
           _key: s,
-        } as unknown as RecurringBitJson);
-        solutionNodes.push(solutionNode);
+        } as RecurringBitJson);
+        solutionNodes.push(node);
       }
     }
 
     // Placeholders
     if (placeholders) {
       for (const [key, val] of Object.entries(placeholders)) {
-        const { solutions, ...rest } = val;
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { _type, _key, solutions, ...rest } = val;
 
         if (solutions && solutions.length > 0) {
           const ss = solutions.slice(1);
@@ -212,7 +250,7 @@ class BitmarkJson {
             _key: solutions[0],
             solutions: ss,
             ...rest,
-          } as unknown as RecurringBitJson);
+          } as RecurringBitJson);
         }
       }
     }
@@ -243,11 +281,13 @@ class BitmarkJson {
     Array.prototype.push.apply(childBits, propertyNodes);
     if (itemNode) childBits.push(itemNode);
     if (leadNode) childBits.push(leadNode);
-    Array.prototype.push.apply(childBits, statementNodes);
     Array.prototype.push.apply(childBits, solutionNodes);
     if (hintNode) childBits.push(hintNode);
     if (instructionNode) childBits.push(instructionNode);
     if (exampleNode) childBits.push(exampleNode);
+    Array.prototype.push.apply(childBits, statementNodes);
+    Array.prototype.push.apply(childBits, choicesNodes);
+    Array.prototype.push.apply(childBits, responsesNodes);
     if (bodyNode) childBits.push(bodyNode);
 
     // Build bit
