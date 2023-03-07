@@ -1,0 +1,28 @@
+[
+  {
+    "bitmark": "[.vocabulary-1]\nSeitenlinie\n[@language:de]\n==\nside line\n[@language:en-gb]\n[@ipa:ˈsʌɪdlʌɪn]\n[@pronunciation::media/audio/sideline_brit.mp3]\n--\nside line\n[@language:en-us]\n[@ipa:ˈssaɪdlaɪn]\n[@pronunciation::media/audio/sideline_us.mp3]\n--\ntouch line\n[@language:en]",
+    "bit": {
+      "type": "vocabulary-1",
+      "format": "bitmark--",
+      "body": "Seitenlinie\n\n==\nside line\n\n\n\n--\nside line\n\n\n\n--\ntouch line",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "language": [
+        "de",
+        "en-gb",
+        "en-us",
+        "en"
+      ],
+      "ipa": [
+        "ˈsʌɪdlʌɪn",
+        "ˈssaɪdlaɪn"
+      ],
+      "pronunciation": [
+        ":media/audio/sideline_brit.mp3",
+        ":media/audio/sideline_us.mp3"
+      ]
+    }
+  }
+]

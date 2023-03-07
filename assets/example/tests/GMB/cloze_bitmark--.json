@@ -1,0 +1,29 @@
+[
+  {
+    "bitmark": "[.cloze:bitmark--] This sentence is a [_cloze][_gap text][!noun].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "This sentence is a {0}.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cloze",
+            "gap text"
+          ],
+          "hint": "",
+          "instruction": "noun",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  }
+]

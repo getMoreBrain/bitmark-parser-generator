@@ -4,6 +4,45 @@ class StringUtils {
   }
 
   /**
+   * Split a string using a set of placeholders, returning an array of strings and placeholders.
+   *
+   * e.g.
+   * str = "This {0} a {1} with lots {2} placeholders"
+   * placeholders = ["{0}", "{1}", "{2}"]
+   *
+   * return = ["This ", "{0}", " a ", "{1}", " with lots ", "{2}", " placeholders"]
+   *
+   * @param str
+   * @param placeholders
+   */
+  splitPlaceholders(str: string, placeholders: string[]): string[] {
+    let res: string[] = [str];
+
+    // Split all texts in texts (with key) and return new text array with key inserted at the split points
+    const splitTexts = (texts: string[], key: string): string[] => {
+      const newTexts: string[] = [];
+      for (const text of texts) {
+        const tParts = text.split(key);
+        for (let i = 0, len = tParts.length; i < len; i++) {
+          const tPart = tParts[i];
+          const lastIndex = i === len - 1;
+          newTexts.push(tPart);
+          if (!lastIndex) {
+            newTexts.push(key);
+          }
+        }
+      }
+      return newTexts;
+    };
+
+    for (const p of placeholders) {
+      res = splitTexts(res, p);
+    }
+
+    return res;
+  }
+
+  /**
    * Return the first line of text to a specified maximum width.
    * @argument str The string to be truncated.
    * @argument width The maximum width of the wrapped text in characters.

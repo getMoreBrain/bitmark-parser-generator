@@ -1,0 +1,15 @@
+[
+  {
+    "bitmark": "[.document-upload:mp4]\n[!Please upload your favorite song (as mp3-file).]\nDo you like music?",
+    "bit": {
+      "type": "document-upload",
+      "format": "bitmark--",
+      "body": "Do you like music?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Please upload your favorite song (as mp3-file)."
+    }
+  }
+]

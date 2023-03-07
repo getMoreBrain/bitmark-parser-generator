@@ -1,0 +1,660 @@
+[
+  {
+    "bitmark": "[.multiple-choice-text&image]\n[%A27a]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/verschmutzung.png]\n||image doesn't show up||\n[!Vertiefen Sie den Wortschatz des Textes A26b. Arbeiten Sie zu zweit.\nWas kann man miteinander verbinden? Bilden Sie Komposita und nennen Sie auch die Artikel.]\n\n[+die][-der][-das][@example] Luft[-Kraftwerk][-Krise][-Szenarium][+Verschmutzung][-Katastrophe][-Herd][-Sterben][-Gefahren][@example]\n[+die][-der][-das] Reaktor[-Kraftwerk][-Krise][-Szenarium][-Verschmutzung][+Katastrophe][-Herd][-Sterben][-Gefahren]\n[-die][-der][+das] Kern[+Kraftwerk][-Krise][-Szenarium][-Verschmutzung][-Katastrophe][-Herd][-Sterben][-Gefahren]\n[-die][-der][+das] Bedrohungs[-Kraftwerk][-Krise][+Szenarium][-Verschmutzung][-Katastrophe][-Herd][-Sterben][-Gefahren]\n[-die][+der][-das] Gefahren[-Kraftwerk][-Krise][-Szenarium][-Verschmutzung][-Katastrophe][+Herd][-Sterben][-Gefahren]\n[-die][-der][+das] Regenwald[-Kraftwerk][-Krise][-Szenarium][-Verschmutzung][-Katastrophe][-Herd][+Sterben][-Gefahren]\n[+die][-der][-das] Umwelt[-Kraftwerk][-Krise][-Szenarium][-Verschmutzung][-Katastrophe][-Herd][-Sterben][+Gefahren]\n[+die][-der][-das] Finanz[-Kraftwerk][+Krise][-Szenarium][-Verschmutzung][-Katastrophe][-Herd][-Sterben][-Gefahren]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "{0} Luft{1}\n{2} Reaktor{3}\n{4} Kern{5}\n{6} Bedrohungs{7}\n{8} Gefahren{9}\n{10} Regenwald{11}\n{12} Umwelt{13}\n{14} Finanz{15}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Kraftwerk",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Krise",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Szenarium",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verschmutzung",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Katastrophe",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Herd",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Sterben",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Gefahren",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Kraftwerk",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Krise",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Szenarium",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verschmutzung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Katastrophe",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Herd",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Sterben",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Gefahren",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Kraftwerk",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Krise",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Szenarium",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verschmutzung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Katastrophe",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Herd",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Sterben",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Gefahren",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Kraftwerk",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Krise",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Szenarium",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Verschmutzung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Katastrophe",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Herd",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Sterben",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Gefahren",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Kraftwerk",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Krise",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Szenarium",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verschmutzung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Katastrophe",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Herd",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Sterben",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Gefahren",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Kraftwerk",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Krise",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Szenarium",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verschmutzung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Katastrophe",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Herd",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Sterben",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Gefahren",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Kraftwerk",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Krise",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Szenarium",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verschmutzung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Katastrophe",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Herd",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Sterben",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Gefahren",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{15}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Kraftwerk",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Krise",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Szenarium",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verschmutzung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Katastrophe",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Herd",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Sterben",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Gefahren",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "A27a",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/verschmutzung.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "instruction": "Vertiefen Sie den Wortschatz des Textes A26b. Arbeiten Sie zu zweit.\nWas kann man miteinander verbinden? Bilden Sie Komposita und nennen Sie auch die Artikel."
+    }
+  }
+]

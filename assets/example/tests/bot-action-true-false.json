@@ -1,0 +1,119 @@
+[
+  {
+    "bitmark": "[.bot-action-true-false]\n[!Was denkst du? Darf man sich nach dem Konsum von Cannabis hinters Steuer setzen?]\n===\n[%A]\n[-Ja]\n\nLeider falsch.\nDie richtige Antwort ist Nein.\n[@reaction:celebrate]\n===\n[%B]\n[+Nein]\n\nRichtig!\n===\n[%C]\n[-Vielleicht]\n\nNope!\n===\nCannabis im Strassenverkehr: Hier gilt **Nulltoleranz.**",
+    "bit": {
+      "type": "bot-action-true-false",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Was denkst du? Darf man sich nach dem Konsum von Cannabis hinters Steuer setzen?",
+      "responses": [
+        {
+          "response": "Ja",
+          "reaction": "celebrate",
+          "item": "A",
+          "feedback": "Die richtige Antwort ist Nein.\n",
+          "isCorrect": false
+        },
+        {
+          "response": "Nein",
+          "reaction": "",
+          "item": "B",
+          "feedback": "Richtig!\n",
+          "isCorrect": true
+        },
+        {
+          "response": "Vielleicht",
+          "reaction": "",
+          "item": "C",
+          "feedback": "Nope!\n",
+          "isCorrect": false
+        }
+      ],
+      "footer": "Cannabis im Strassenverkehr: Hier gilt **Nulltoleranz.**"
+    }
+  },
+  {
+    "bitmark": "[.bot-action-true-false]\n[!\nWusstest du, dass du einen **Teil der Kosten selbst bezahlen** musst, wenn du bekifft einen Unfall verursachst?\n]\n\nDer Entscheid darüber liegt nicht bei der Versicherung, sondern ist **gesetzlich vorgeschrieben.**\n\n===\n[%A]\n[!👍 Cool! Ja, das weiss ich]\n[+You are right]\n[@reaction:celebrate]\n👍 Cool!\n===\n[%B]\n[!👍 Cool n groovy!]\n[-You are wrong]\n[@reaction:like]\n👍 Cool n groovy!\n===\n[%C]\n[!Das war mir nicht bewusst]\n[-You are bad]\n[@reaction:like]\n👍 Cool n groovy n farout!\n===\n[%D]\n[+You are good]\n\n👍 Cool n groovy n good!\n[@reaction:like]\n===",
+    "bit": {
+      "type": "bot-action-true-false",
+      "format": "bitmark--",
+      "body": "Der Entscheid darüber liegt nicht bei der Versicherung, sondern ist **gesetzlich vorgeschrieben.**",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Wusstest du, dass du einen **Teil der Kosten selbst bezahlen** musst, wenn du bekifft einen Unfall verursachst?",
+      "responses": [
+        {
+          "response": "You are right",
+          "reaction": "celebrate",
+          "item": "A",
+          "feedback": "👍 Cool!",
+          "isCorrect": true
+        },
+        {
+          "response": "You are wrong",
+          "reaction": "like",
+          "item": "B",
+          "feedback": "👍 Cool n groovy!",
+          "isCorrect": false
+        },
+        {
+          "response": "You are bad",
+          "reaction": "like",
+          "item": "C",
+          "feedback": "👍 Cool n groovy n farout!",
+          "isCorrect": false
+        },
+        {
+          "response": "You are good",
+          "reaction": "like",
+          "item": "D",
+          "feedback": "👍 Cool n groovy n good!",
+          "isCorrect": true
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.bot-action-true-false:bitmark++]\n[!Was denkst du? Darf man sich nach dem Konsum von Cannabis hinters Steuer setzen?]\n===\n[%A]\n[-Jajajaja]\n\nLeider falsch.\nDie richtige Antwort ist Nein.\n[@reaction:celebrate]\n===\n[%B]\n[+Nein]\n\nRichtig!\n===\n[%C]\n[-Vielleicht]\n\nNope!\n===\nCannabis im Strassenverkehr: Hier gilt **Nulltoleranz.**",
+    "bit": {
+      "type": "bot-action-true-false",
+      "format": "bitmark++",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Was denkst du? Darf man sich nach dem Konsum von Cannabis hinters Steuer setzen?",
+      "responses": [
+        {
+          "response": "Jajajaja",
+          "reaction": "celebrate",
+          "item": "A",
+          "feedback": "Die richtige Antwort ist Nein.\n",
+          "isCorrect": false
+        },
+        {
+          "response": "Nein",
+          "reaction": "",
+          "item": "B",
+          "feedback": "Richtig!\n",
+          "isCorrect": true
+        },
+        {
+          "response": "Vielleicht",
+          "reaction": "",
+          "item": "C",
+          "feedback": "Nope!\n",
+          "isCorrect": false
+        }
+      ],
+      "footer": "Cannabis im Strassenverkehr: Hier gilt **Nulltoleranz.**"
+    }
+  }
+]

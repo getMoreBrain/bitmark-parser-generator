@@ -1,0 +1,34 @@
+[
+  {
+    "bitmark": "[.true-false]\n===\n[+Ein Elefant ist grösser als eine Maus.][@example:meiyou]\n===\n[+Ein Tiger ist grösser als eine Hauskatze.]\n===\n[-Eine Kuh ist kleiner als ein Hund.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "",
+      "lead": "",
+      "instruction": "",
+      "hint": "",
+      "labelTrue": "",
+      "labelFalse": "",
+      "statements": [
+        {
+          "statement": "Ein Elefant ist grösser als eine Maus.",
+          "isCorrect": true,
+          "isExample": true,
+          "example": "meiyou"
+        },
+        {
+          "statement": "Ein Tiger ist grösser als eine Hauskatze.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Eine Kuh ist kleiner als ein Hund.",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": ""
+    }
+  }
+]

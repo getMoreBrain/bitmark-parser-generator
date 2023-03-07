@@ -6,7 +6,6 @@ class KeyNode implements AstNode {
   key: string;
 
   constructor(key: string) {
-    this.type = AstNodeType.key;
     this.key = key;
   }
 

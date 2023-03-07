@@ -1,0 +1,299 @@
+[
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[%A29a]\n[!„Es wächst zusammen, was zusammengehört.“\nLesen Sie den Text. Welche Sätze passen in die Lücken 1 bis 6? Ein Satz passt nicht.]\n[@reference: Nach: Badische Zeitung, 2.10.2017]\n\n**Eine Einheit?**\n\nSehen sich die Ost- und Westdeutschen nach drei Jahrzehnten Wiedervereinigung nun als eine Einheit? Diese Frage stellen sich die Politiker jedes Jahr am 3. Oktober, wenn der Jahrestag der deutschen Wiedervereinigung gefeiert wird. [%1][-Im Vergleich zu 2011 ist das aber ein deutlicher Fortschritt.][-Heute sind viele Menschen im Osten mit ihrer Umwelt zufrieden.][+Und jedes Jahr sind die Antworten ernüchternd.][-Die Folge sind verwahrloste und verwaiste Orte.][-Die Erfolge nach der Wiedervereinigung sind enorm.][-Auch einige ostdeutsche Großstädte zählen zu den Gewinnern.][-Aber es geht in kleinen Schritten in die richtige Richtung.]\n\nNach einer Umfrage des Meinungsforschungsinstituts Forsa scheint sich Willy Brandts berühmter Satz: „Es wächst zusammen, was zusammengehört“, den er kurz nach dem Mauerfall geäußert hat, nicht so einfach in die Realität umsetzen zu lassen. [%2][-Im Vergleich zu 2011 ist das aber ein deutlicher Fortschritt.][-Heute sind viele Menschen im Osten mit ihrer Umwelt zufrieden.][-Und jedes Jahr sind die Antworten ernüchternd.][-Die Folge sind verwahrloste und verwaiste Orte.][-Die Erfolge nach der Wiedervereinigung sind enorm.][-Auch einige ostdeutsche Großstädte zählen zu den Gewinnern.][+Aber es geht in kleinen Schritten in die richtige Richtung.] Immerhin sagt nun schon jeder Zweite, die beiden Teile Deutschlands seien sich nähergekommen. Das bedeutet aber auch, die Hälfte der Deutschen sieht das nicht so, in den ostdeutschen Bundesländern sind es sogar 55 Prozent. [%3][+Im Vergleich zu 2011 ist das aber ein deutlicher Fortschritt.][-Heute sind viele Menschen im Osten mit ihrer Umwelt zufrieden.][-Und jedes Jahr sind die Antworten ernüchternd.][-Die Folge sind verwahrloste und verwaiste Orte.][-Die Erfolge nach der Wiedervereinigung sind enorm.][-Auch einige ostdeutsche Großstädte zählen zu den Gewinnern.][-Aber es geht in kleinen Schritten in die richtige Richtung.] Damals gaben 67 Prozent der Ostdeutschen an, dass es immer noch deutliche Unterschiede zwischen den alten und den neuen Bundesländern gebe. Große Differenzen sehen die Bürger vor allem bei der Verteilung des Wohlstands. Ein Beispiel dafür ist die Tatsache, dass nur sechs der 500 reichsten Deutschen in den neuen Bundesländern leben. Viele Regionen im Westen profitierten von der guten wirtschaftlichen Entwicklung. [%4][-Im Vergleich zu 2011 ist das aber ein deutlicher Fortschritt.][-Heute sind viele Menschen im Osten mit ihrer Umwelt zufrieden.][-Und jedes Jahr sind die Antworten ernüchternd.][-Die Folge sind verwahrloste und verwaiste Orte.][-Die Erfolge nach der Wiedervereinigung sind enorm.][+Auch einige ostdeutsche Großstädte zählen zu den Gewinnern.][-Aber es geht in kleinen Schritten in die richtige Richtung.] Verlierer sind die ländlichen Gebiete im Osten des Landes, die von überdurchschnittlich hoher Arbeitslosigkeit und der Abwanderung junger Familien geprägt sind. [%5][-Im Vergleich zu 2011 ist das aber ein deutlicher Fortschritt.][-Heute sind viele Menschen im Osten mit ihrer Umwelt zufrieden.][-Und jedes Jahr sind die Antworten ernüchternd.][+Die Folge sind verwahrloste und verwaiste Orte.][-Die Erfolge nach der Wiedervereinigung sind enorm.][-Auch einige ostdeutsche Großstädte zählen zu den Gewinnern.][-Aber es geht in kleinen Schritten in die richtige Richtung.]\n\nEinen positiven Effekt hatte die Wiedervereinigung auf die Umwelt in Ostdeutschland. Weil die Führung in der DDR die Chemieindustrie förderte und sich gleichzeitig nicht um die ökologischen Aspekte kümmerte, litten die Menschen und die Landschaft jahrzehntelang unter Giften und Abgasen. [%6][-Im Vergleich zu 2011 ist das aber ein deutlicher Fortschritt.][+Heute sind viele Menschen im Osten mit ihrer Umwelt zufrieden.][-Und jedes Jahr sind die Antworten ernüchternd.][-Die Folge sind verwahrloste und verwaiste Orte.][-Die Erfolge nach der Wiedervereinigung sind enorm.][-Auch einige ostdeutsche Großstädte zählen zu den Gewinnern.][-Aber es geht in kleinen Schritten in die richtige Richtung.]\n\nHoffnung für die Zukunft geben auch die jungen Leute, die immerhin zu 67 Prozent den Einheitsgedanken bejahen.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "**Eine Einheit?**\n\nSehen sich die Ost- und Westdeutschen nach drei Jahrzehnten Wiedervereinigung nun als eine Einheit? Diese Frage stellen sich die Politiker jedes Jahr am 3. Oktober, wenn der Jahrestag der deutschen Wiedervereinigung gefeiert wird. {0}\n\nNach einer Umfrage des Meinungsforschungsinstituts Forsa scheint sich Willy Brandts berühmter Satz: „Es wächst zusammen, was zusammengehört“, den er kurz nach dem Mauerfall geäußert hat, nicht so einfach in die Realität umsetzen zu lassen. {1} Immerhin sagt nun schon jeder Zweite, die beiden Teile Deutschlands seien sich nähergekommen. Das bedeutet aber auch, die Hälfte der Deutschen sieht das nicht so, in den ostdeutschen Bundesländern sind es sogar 55 Prozent. {2} Damals gaben 67 Prozent der Ostdeutschen an, dass es immer noch deutliche Unterschiede zwischen den alten und den neuen Bundesländern gebe. Große Differenzen sehen die Bürger vor allem bei der Verteilung des Wohlstands. Ein Beispiel dafür ist die Tatsache, dass nur sechs der 500 reichsten Deutschen in den neuen Bundesländern leben. Viele Regionen im Westen profitierten von der guten wirtschaftlichen Entwicklung. {3} Verlierer sind die ländlichen Gebiete im Osten des Landes, die von überdurchschnittlich hoher Arbeitslosigkeit und der Abwanderung junger Familien geprägt sind. {4}\n\nEinen positiven Effekt hatte die Wiedervereinigung auf die Umwelt in Ostdeutschland. Weil die Führung in der DDR die Chemieindustrie förderte und sich gleichzeitig nicht um die ökologischen Aspekte kümmerte, litten die Menschen und die Landschaft jahrzehntelang unter Giften und Abgasen. {5}\n\nHoffnung für die Zukunft geben auch die jungen Leute, die immerhin zu 67 Prozent den Einheitsgedanken bejahen.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Im Vergleich zu 2011 ist das aber ein deutlicher Fortschritt.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Heute sind viele Menschen im Osten mit ihrer Umwelt zufrieden.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Und jedes Jahr sind die Antworten ernüchternd.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Die Folge sind verwahrloste und verwaiste Orte.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Die Erfolge nach der Wiedervereinigung sind enorm.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Auch einige ostdeutsche Großstädte zählen zu den Gewinnern.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Aber es geht in kleinen Schritten in die richtige Richtung.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Im Vergleich zu 2011 ist das aber ein deutlicher Fortschritt.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Heute sind viele Menschen im Osten mit ihrer Umwelt zufrieden.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Und jedes Jahr sind die Antworten ernüchternd.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Die Folge sind verwahrloste und verwaiste Orte.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Die Erfolge nach der Wiedervereinigung sind enorm.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Auch einige ostdeutsche Großstädte zählen zu den Gewinnern.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Aber es geht in kleinen Schritten in die richtige Richtung.",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Im Vergleich zu 2011 ist das aber ein deutlicher Fortschritt.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Heute sind viele Menschen im Osten mit ihrer Umwelt zufrieden.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Und jedes Jahr sind die Antworten ernüchternd.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Die Folge sind verwahrloste und verwaiste Orte.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Die Erfolge nach der Wiedervereinigung sind enorm.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Auch einige ostdeutsche Großstädte zählen zu den Gewinnern.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Aber es geht in kleinen Schritten in die richtige Richtung.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Im Vergleich zu 2011 ist das aber ein deutlicher Fortschritt.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Heute sind viele Menschen im Osten mit ihrer Umwelt zufrieden.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Und jedes Jahr sind die Antworten ernüchternd.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Die Folge sind verwahrloste und verwaiste Orte.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Die Erfolge nach der Wiedervereinigung sind enorm.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Auch einige ostdeutsche Großstädte zählen zu den Gewinnern.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Aber es geht in kleinen Schritten in die richtige Richtung.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Im Vergleich zu 2011 ist das aber ein deutlicher Fortschritt.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Heute sind viele Menschen im Osten mit ihrer Umwelt zufrieden.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Und jedes Jahr sind die Antworten ernüchternd.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Die Folge sind verwahrloste und verwaiste Orte.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Die Erfolge nach der Wiedervereinigung sind enorm.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Auch einige ostdeutsche Großstädte zählen zu den Gewinnern.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Aber es geht in kleinen Schritten in die richtige Richtung.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Im Vergleich zu 2011 ist das aber ein deutlicher Fortschritt.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Heute sind viele Menschen im Osten mit ihrer Umwelt zufrieden.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Und jedes Jahr sind die Antworten ernüchternd.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Die Folge sind verwahrloste und verwaiste Orte.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Die Erfolge nach der Wiedervereinigung sind enorm.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Auch einige ostdeutsche Großstädte zählen zu den Gewinnern.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Aber es geht in kleinen Schritten in die richtige Richtung.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "A29a",
+      "instruction": "„Es wächst zusammen, was zusammengehört.“\nLesen Sie den Text. Welche Sätze passen in die Lücken 1 bis 6? Ein Satz passt nicht.",
+      "reference": [
+        "Nach: Badische Zeitung, 2.10.2017"
+      ]
+    }
+  }
+]

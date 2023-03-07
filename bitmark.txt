@@ -1,20 +1,42 @@
 Hello World
 
 0,bitmark
-0,bitmark -> 0,bit
-0,bitmark -> 0,bit -> 0,bitHeader
-0,bitmark -> 0,bit -> 0,bitHeader -> 0,bitType(cloze-solution-grouped)
-0,bitmark -> 0,bit -> 0,bitHeader -> 1,textFormat(bitmark--)
-0,bitmark -> 0,bit -> 1,bitElementArray
-0,bitmark -> 0,bit -> 1,bitElementArray -> 0,property
-0,bitmark -> 0,bit -> 1,bitElementArray -> 0,property -> 0,key(id)
-0,bitmark -> 0,bit -> 1,bitElementArray -> 0,property -> 1,value(92412)
-0,bitmark -> 0,bit -> 1,bitElementArray -> 1,item(A9)
-0,bitmark -> 0,bit -> 1,bitElementArray -> 2,instruction(Ergänzen Sie die passenden Nomen.)
-0,bitmark -> 0,bit -> 1,bitElementArray -> 3,text(Andreas war ein {0}. Schon in der Grundschule war er {1} Sein liebstes {2} war von Anfang an Mathema)
+0,bitmark -> 0,bits
+0,bitmark -> 0,bits -> 0,bit
+0,bitmark -> 0,bits -> 0,bit -> 0,bitType(bit)
+0,bitmark -> 0,bits -> 0,bit -> 1,bitKey(cloze)
+0,bitmark -> 0,bits -> 0,bit -> 2,bitValue(bitmark--)
+0,bitmark -> 0,bits -> 1,bits
+0,bitmark -> 0,bits -> 1,bits -> 0,bit
+0,bitmark -> 0,bits -> 1,bits -> 0,bit -> 0,bitType(item)
+0,bitmark -> 0,bits -> 1,bits -> 0,bit -> 1,bitKey(cl1)
+0,bitmark -> 0,bits -> 2,bits
+0,bitmark -> 0,bits -> 2,bits -> 0,bit
+0,bitmark -> 0,bits -> 2,bits -> 0,bit -> 0,bitType(body)
+0,bitmark -> 0,bits -> 2,bits -> 0,bit -> 1,bitKey
+0,bitmark -> 0,bits -> 2,bits -> 1,bits
+0,bitmark -> 0,bits -> 2,bits -> 1,bits -> 0,bit
+0,bitmark -> 0,bits -> 2,bits -> 1,bits -> 0,bit -> 0,bitType(text)
+0,bitmark -> 0,bits -> 2,bits -> 1,bits -> 0,bit -> 1,bitKey(I am coffee toast)
+0,bitmark -> 0,bits -> 2,bits -> 2,bits
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 0,bit
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 0,bit -> 0,bitType(gap)
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 0,bit -> 1,bitKey(cloze)
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 1,bits
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 1,bits -> 0,bit
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 1,bits -> 0,bit -> 0,bitType(gap)
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 1,bits -> 0,bit -> 1,bitKey(gap text)
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 2,bits
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 2,bits -> 0,bit
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 2,bits -> 0,bit -> 0,bitType(hint)
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 2,bits -> 0,bit -> 1,bitKey(1 or 2)
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 3,bits
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 3,bits -> 0,bit
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 3,bits -> 0,bit -> 0,bitType(instruction)
+0,bitmark -> 0,bits -> 2,bits -> 2,bits -> 3,bits -> 0,bit -> 1,bitKey(verb)
+0,bitmark -> 0,bits -> 2,bits -> 3,bits
+0,bitmark -> 0,bits -> 2,bits -> 3,bits -> 0,bit
+0,bitmark -> 0,bits -> 2,bits -> 3,bits -> 0,bit -> 0,bitType(text)
+0,bitmark -> 0,bits -> 2,bits -> 3,bits -> 0,bit -> 1,bitKey
 
-[.cloze-solution-grouped:bitmark--]
-[@id:92412]
-[%A9]
-[!Ergänzen Sie die passenden Nomen.]
-Andreas war ein {0}. Schon in der Grundschule war er {1} Sein liebstes {2} war von Anfang an Mathematik. Er vergaß nie, seine {3} zu machen. Nach der Grundschule ging er auf das{4}. Jedes Jahr brachte er das beste{5} der Klasse mit nach Hause. Er schrieb sehr gute {6} und seine {7} waren fehlerfrei. Als er älter wurde, gab er schwächeren Schülern {8}. Außerhalb der {9} las Andreas viel, um seine {10} zu verbessern. Im {11} bereitete er sich auf seine {12} gut vor. Sein {13} bestand er mit einer sehr guten {14}.
+[.cloze:bitmark--][%cl1]I am coffee toast[_cloze][_gap text][?1 or 2][!verb]

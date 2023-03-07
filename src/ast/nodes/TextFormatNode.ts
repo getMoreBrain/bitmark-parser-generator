@@ -7,7 +7,6 @@ class TextFormatNode implements AstNode {
   format: TextFormatType;
 
   constructor(format?: TextFormatType) {
-    this.type = AstNodeType.textFormat;
     this.format = TextFormat.fromValue(format) ?? TextFormat.bitmarkMinusMinus;
   }
 

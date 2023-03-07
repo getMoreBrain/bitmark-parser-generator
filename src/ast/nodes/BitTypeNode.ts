@@ -7,7 +7,6 @@ class BitTypeNode implements AstNode {
   bitType: BitTypeType;
 
   constructor(type: BitTypeType) {
-    this.type = AstNodeType.bitType;
     this.bitType = type;
   }
 

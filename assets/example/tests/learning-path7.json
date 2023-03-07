@@ -1,0 +1,62 @@
+[
+  {
+    "bitmark": "[.learning-path-external-link]\n[!Grundlagen 1 – Externe Konserve]\n[@action:Selbststudium]\n[@duration: 3600s]\n[@externalLinkText:www.apple.com]\n[@externalLink:https://www.apple.com]\n[@progressPoints:not12345]",
+    "bit": {
+      "type": "learning-path-external-link",
+      "format": "bitmark--",
+      "body": "[@progressPoints:not12345]",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "isTracked": true,
+      "isInfoOnly": false,
+      "instruction": "Grundlagen 1 – Externe Konserve",
+      "action": "Selbststudium",
+      "duration": "3600s",
+      "externalLinkText": "www.apple.com",
+      "externalLink": "https://www.apple.com"
+    },
+    "errors": [
+      {
+        "message": "progressPoints property has to be positive integer value",
+        "line": 7,
+        "column": 0,
+        "errorLine": "[@externalLink:https://www.apple.com]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.learning-path-classroom-event]\n[!Grundlagen 1]\n[@action:Päsenz-Seminar]\n[@date:2022-10-01T08:00:00CET]\n[@duration:28800s]\n[@location:Zug]\n[@isTracked:trua]\n[@isInfoOnly:felse]",
+    "bit": {
+      "type": "learning-path-classroom-event",
+      "format": "bitmark--",
+      "body": "[@isTracked:trua]\n[@isInfoOnly:felse]",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "isTracked": true,
+      "isInfoOnly": false,
+      "instruction": "Grundlagen 1",
+      "action": "Päsenz-Seminar",
+      "date": "2022-10-01T08:00:00CET",
+      "duration": "28800s",
+      "location": "Zug"
+    },
+    "errors": [
+      {
+        "message": "isTracked property has to be true or false",
+        "line": 7,
+        "column": 0,
+        "errorLine": "[@location:Zug]"
+      },
+      {
+        "message": "isInfoOnly property has to be true or false",
+        "line": 8,
+        "column": 0,
+        "errorLine": "[@isTracked:trua]"
+      }
+    ]
+  }
+]

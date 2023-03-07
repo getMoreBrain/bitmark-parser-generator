@@ -3,14 +3,13 @@ import { AstNode } from '../Ast';
 
 class ValueNode implements AstNode {
   type = AstNodeType.value;
-  val: string;
+  val: string | boolean;
 
-  constructor(value: string) {
-    this.type = AstNodeType.value;
+  constructor(value: string | boolean) {
     this.val = value;
   }
 
-  get value(): string {
+  get value(): string | boolean {
     return this.val;
   }
 }

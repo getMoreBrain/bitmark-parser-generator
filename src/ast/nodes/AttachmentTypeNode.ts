@@ -1,19 +1,18 @@
-import { AstNodeType } from '../AstNodeType';
+import { AstNodeType, AstNodeTypeType } from '../AstNodeType';
 import { AstNode } from '../Ast';
-import { SubBitTypeType } from '../types/SubBitType';
+import { BitAttachmentTypeType } from '../types/BitAttachmentType';
 
-class AttachmentTypeNode implements AstNode {
-  type = AstNodeType.attachmentType;
-  attachmentType: SubBitTypeType;
+class BitAttachmentTypeNode implements AstNode {
+  type: AstNodeTypeType = AstNodeType.bitAttachmentType;
+  bitAttachmentType: BitAttachmentTypeType;
 
-  constructor(attachmentType: SubBitTypeType) {
-    this.type = AstNodeType.attachmentType;
-    this.attachmentType = attachmentType;
+  constructor(bitAttachmentType: BitAttachmentTypeType) {
+    this.bitAttachmentType = bitAttachmentType;
   }
 
-  get value(): SubBitTypeType {
-    return this.attachmentType;
+  get value(): BitAttachmentTypeType {
+    return this.bitAttachmentType;
   }
 }
 
-export { AttachmentTypeNode };
+export { BitAttachmentTypeNode };

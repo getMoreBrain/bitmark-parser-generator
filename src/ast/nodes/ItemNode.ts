@@ -6,7 +6,6 @@ class ItemNode implements AstNode {
   val: string;
 
   constructor(value: string) {
-    this.type = AstNodeType.item;
     this.val = value;
   }
 

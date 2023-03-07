@@ -1,6 +1,6 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-const SubBitType = superenum({
+const BitAttachmentType = superenum({
   app: 'app',
   document: 'document',
   documentOnline: 'document-online',
@@ -15,6 +15,6 @@ const SubBitType = superenum({
   videoOnline: 'video-online',
 });
 
-export type SubBitTypeType = EnumType<typeof SubBitType>;
+export type BitAttachmentTypeType = EnumType<typeof BitAttachmentType>;
 
-export { SubBitType };
+export { BitAttachmentType };

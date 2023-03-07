@@ -1,0 +1,51 @@
+[
+  {
+    "bitmark": "[.cloze] This sentence is a [_cloze][_gap text][!noun] with [_4][?1 or 2] gaps including an instruction for the first and a hint for the second ] gap [. [& means the start of bit [.match][@example]::remark::  <<kool<<\n[&audio:https://cdn.bitbook.education/cat.wmv]\nEND",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "This sentence is a {0} with {1} gaps including an instruction for the first and a hint for the second ] gap [. [& means the start of bit [.match]::remark::  <<kool<<\n\nEND",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cloze",
+            "gap text"
+          ],
+          "hint": "",
+          "instruction": "noun",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4"
+          ],
+          "hint": "1 or 2",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    },
+    "example": "",
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "wmv",
+          "src": "https://cdn.bitbook.education/cat.wmv"
+        }
+      ]
+    }
+  }
+]

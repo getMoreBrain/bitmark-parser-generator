@@ -1,18 +1,18 @@
 import { AstNodeType, AstNodeTypeType } from '../AstNodeType';
 import { AstNode } from '../Ast';
 
-import { AttachmentTypeNode } from './AttachmentTypeNode';
-import { BitTypeNode } from './BitTypeNode';
+import { BitAttachmentTypeNode } from './AttachmentTypeNode';
+import { BitBitTypeNode } from './BitBitTypeNode';
 import { TextFormatNode } from './TextFormatNode';
 
 class BitHeaderNode implements AstNode {
   type: AstNodeTypeType = AstNodeType.bitHeader;
-  bitTypeNode: BitTypeNode;
+  bitBitTypeNode: BitBitTypeNode;
   formatNode: TextFormatNode;
-  attachmentTypeNode?: AttachmentTypeNode;
+  attachmentTypeNode?: BitAttachmentTypeNode;
 
-  constructor(bitTypeNode: BitTypeNode, formatNode: TextFormatNode, attachmentTypeNode?: AttachmentTypeNode) {
-    this.bitTypeNode = bitTypeNode;
+  constructor(bitTypeNode: BitBitTypeNode, formatNode: TextFormatNode, attachmentTypeNode?: BitAttachmentTypeNode) {
+    this.bitBitTypeNode = bitTypeNode;
     this.formatNode = formatNode;
     this.attachmentTypeNode = attachmentTypeNode;
   }
@@ -20,7 +20,7 @@ class BitHeaderNode implements AstNode {
   get children(): AstNode[] {
     const children = [];
 
-    children.push(this.bitTypeNode);
+    children.push(this.bitBitTypeNode);
     children.push(this.formatNode);
     if (this.attachmentTypeNode) children.push(this.attachmentTypeNode);
 

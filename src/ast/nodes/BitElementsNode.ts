@@ -3,18 +3,19 @@ import { AstNode } from '../Ast';
 
 import { BitElementNode } from './BitElementNode';
 
-class BitElementArrayNode implements AstNode {
-  type = AstNodeType.bitElementArray;
+class BitElementsNode implements AstNode {
+  type = AstNodeType.bitElements;
   bitElementNodes: BitElementNode[] = [];
+  inline: boolean;
 
-  constructor(bitElementNodes: BitElementNode[]) {
-    this.type = AstNodeType.bitElementArray;
+  constructor(bitElementNodes: BitElementNode[], inline: boolean) {
     this.bitElementNodes = bitElementNodes;
+    this.inline = inline;
   }
 
-  get children(): AstNode[] {
+  get children(): BitElementNode[] {
     return [...this.bitElementNodes];
   }
 }
 
-export { BitElementArrayNode };
+export { BitElementsNode };

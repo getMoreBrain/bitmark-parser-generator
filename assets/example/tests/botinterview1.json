@@ -1,0 +1,45 @@
+[
+  {
+    "bitmark": "[.bot-interview&audio]\n===\nSie hören jetzt einen Text zum Thema __Einkommen von Spitzensportlern.__\n---\n[&audio:http://cdn.bitbook.education/publishers/3/books/26363/einkommen_spitzensportler.mp3]\n---\nHören Sie den Text zweimal.\n---\nWie hoch ist ein durchschnittliches monatliches Bruttoeinkommen von Spitzensportlern?\n===\n[_20000 ][!Euro ]\n===\nWieviel Zeit bleibt für die Berufstätigkeit?\n===\n[-10h][+20h][-30h][-42h]\n===\nWürde es Sie reizen, als Spitzsportler zu arbeiten?\n===\n[_]\n===",
+    "bit": {
+      "type": "bot-interview",
+      "format": "bitmark--",
+      "body": "---\n\n---\n\n---\n{0}{1}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "http://cdn.bitbook.education/publishers/3/books/26363/einkommen_spitzensportler.mp3"
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "20000"
+          ],
+          "hint": "",
+          "instruction": "Euro",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  }
+]

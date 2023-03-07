@@ -1,0 +1,20 @@
+[
+  {
+    "bitmark": "[.  survey]\n===\nThe mood in the company is...\n[ • good  ]\n[ • not so good  ]\n===\nWe can discuss problems...\n[  • well  ]\n[  • not so well   ]\n===",
+    "bit": {
+      "type": "survey",
+      "format": "bitmark--",
+      "body": "===\nThe mood in the company is...\n\n\n===\nWe can discuss problems...\n\n\n===",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "bullet": [
+        "good",
+        "not so good",
+        "well",
+        "not so well"
+      ]
+    }
+  }
+]

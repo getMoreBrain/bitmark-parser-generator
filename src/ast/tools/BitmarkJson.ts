@@ -1,22 +1,27 @@
-import { BitJson } from '../json/BitJson';
+import { BitJson, RecurringBitJson, ValidPropertiesJson } from '../json/BitJson';
 import { BitWrapperJson } from '../json/BitWrapperJson';
-import { BitElementNode } from '../nodes/BitElementNode';
-import { BitNode } from '../nodes/BitNode';
 import { BitmarkNode } from '../nodes/BitmarkNode';
-import { InstructionNode } from '../nodes/InstructionNode';
-import { ItemNode } from '../nodes/ItemNode';
-import { PropertyNode } from '../nodes/PropertyNode';
-import { TextNode } from '../nodes/TextNode';
+import { BitsNode } from '../nodes/BitsNode';
+import { BitBitType } from '../types/BitBitType';
 import { BitType } from '../types/BitType';
 import { TextFormat } from '../types/TextFormat';
 
 import { Builder } from './Builder';
 import { stringUtils } from './StringUtils';
 
+// const BODY_SPLIT_REGEX = new RegExp('{[0-9]+}', 'g');
+
+/**
+ * Bitmark JSON handing
+ *
+ * NOTES:
+ * - Need to store JSON properties from bitmark in a sub-variable, otherwise it is not possible to distinguish
+ *   them from other things in the JSON without a complex process (plus there can be clashes right now)
+ */
 class BitmarkJson {
   toAst(json: unknown): BitmarkNode {
     const bitWrappers = this.preprocessJson(json);
-    const bitNodes: BitNode[] = [];
+    const bitsNodes: BitsNode[] = [];
 
     for (const bitWrapper of bitWrappers) {
       const { bit, bitmark } = bitWrapper;
@@ -25,74 +30,235 @@ class BitmarkJson {
       console.log('\n\n');
 
       // Transform to AST
-      const bitNode = this.bitToAst(bit);
-      bitNodes.push(bitNode);
+      const bitsNode = this.bitToAst(bit);
+      bitsNodes.push(bitsNode);
     }
 
-    const bitmarkNode = Builder.bitmark(bitNodes);
+    const bitmarkNode = Builder.bitmark(bitsNodes);
 
     return bitmarkNode;
   }
 
-  private bitToAst(bit: BitJson): BitNode {
-    const propertyNodes: PropertyNode[] = [];
-    let itemNode: ItemNode | undefined;
-    let instructionNode: InstructionNode | undefined;
-    let bodyNode: TextNode | undefined;
-    const { type, body, format, id, item, instruction } = bit;
+  private bitToAst(bit: BitJson): BitsNode {
+    const { type, format } = bit;
 
     // Check type
-    const bitType = BitType.fromValue(type);
-    if (!bitType) {
-      throw new Error(`Invalid bit type: ${type}`);
+    const bitBitType = BitBitType.fromValue(type);
+    if (!bitBitType) {
+      throw new Error(`Invalid bit bit type: ${type}`);
     }
 
     // Get format
     const textFormat = TextFormat.fromValue(format) ?? TextFormat.bitmarkMinusMinus;
 
-    // @Id
-    if (id) {
-      let idArray = id;
-      if (!Array.isArray(idArray)) {
-        idArray = [id as string];
+    // Get attachment type (TODO)
+    const attachmentType = undefined;
+
+    // Build bits
+    const bitsNode = this.bitToAstRecursive({
+      _type: BitType.bit,
+      _key: bitBitType,
+      _value: textFormat,
+      _attachmentType: attachmentType,
+      ...bit,
+    } as RecurringBitJson);
+
+    return bitsNode;
+  }
+
+  private bitToAstRecursive(bit: RecurringBitJson): BitsNode {
+    const {
+      // Master bit
+      _type,
+      _key,
+      _value,
+      _attachmentType,
+      // Properties
+      id,
+      ageRange,
+      language,
+      //
+      item,
+      lead,
+      statement,
+      isCorrect,
+      statements,
+      solutions,
+      hint,
+      instruction,
+      isExample,
+      example,
+      body,
+      placeholders,
+    } = bit;
+
+    const propertyNodes: BitsNode[] = [];
+    let itemNode: BitsNode | undefined;
+    let leadNode: BitsNode | undefined;
+    const statementNodes: BitsNode[] = [];
+    const solutionNodes: BitsNode[] = [];
+    let hintNode: BitsNode | undefined;
+    let instructionNode: BitsNode | undefined;
+    let exampleNode: BitsNode | undefined;
+    const placeholderNodes: {
+      [keyof: string]: BitsNode;
+    } = {};
+    let bodyNode: BitsNode | undefined;
+
+    // TODO - validation checks on _type, _key, _value, _attachmentType, etc dependent on type
+
+    // @property
+    const properties: ValidPropertiesJson = {} as ValidPropertiesJson;
+    if (id) properties.id = id;
+    if (ageRange) properties.ageRange = ageRange;
+    if (language) properties.language = language;
+
+    for (const [k, v] of Object.entries(properties)) {
+      let vArray = v;
+      if (!Array.isArray(vArray)) {
+        vArray = [v as string];
       }
-      for (const i of idArray) {
-        propertyNodes.push(Builder.property(Builder.key('id'), Builder.value(`${i}`)));
+      for (const val of vArray) {
+        const child = this.bitToAstRecursive({
+          _type: BitType.property,
+          _key: k,
+          _value: val,
+        } as RecurringBitJson);
+        propertyNodes.push(child);
       }
     }
 
     // %item
     if (item) {
-      itemNode = Builder.item(item);
+      itemNode = this.bitToAstRecursive({
+        _type: BitType.item,
+        _key: item,
+      } as RecurringBitJson);
+    }
+
+    // %lead
+    if (lead) {
+      leadNode = this.bitToAstRecursive({
+        _type: BitType.lead,
+        _key: lead,
+      } as RecurringBitJson);
+    }
+
+    // +-statement
+    if (statement) {
+      const statementNode = this.bitToAstRecursive({
+        _type: isCorrect ? BitType.statementTrue : BitType.statementFalse,
+        _key: statement,
+      } as RecurringBitJson);
+      statementNodes.push(statementNode);
+    }
+    if (Array.isArray(statements)) {
+      for (const s of statements) {
+        const { isCorrect, statement, ...rest } = s;
+        const statementNode = this.bitToAstRecursive({
+          _type: isCorrect ? BitType.statementTrue : BitType.statementFalse,
+          _key: statement,
+          ...rest,
+        } as RecurringBitJson);
+        statementNodes.push(statementNode);
+      }
+    }
+
+    // ?hint
+    if (hint) {
+      hintNode = this.bitToAstRecursive({
+        _type: BitType.hint,
+        _key: hint,
+      } as RecurringBitJson);
     }
 
     // !instruction
     if (instruction) {
-      instructionNode = Builder.instruction(instruction);
+      instructionNode = this.bitToAstRecursive({
+        _type: BitType.instruction,
+        _key: instruction,
+      } as RecurringBitJson);
     }
 
-    // Body
+    // @example
+    if (isExample) {
+      exampleNode = this.bitToAstRecursive({
+        _type: BitType.example,
+        _key: 'example',
+        _value: example || true,
+      } as RecurringBitJson);
+    }
+
+    // // Solutions
+    if (Array.isArray(solutions)) {
+      for (const s of solutions) {
+        const solutionNode = this.bitToAstRecursive({
+          _type: _type,
+          _key: s,
+        } as unknown as RecurringBitJson);
+        solutionNodes.push(solutionNode);
+      }
+    }
+
+    // Placeholders
+    if (placeholders) {
+      for (const [key, val] of Object.entries(placeholders)) {
+        const { solutions, ...rest } = val;
+
+        if (solutions && solutions.length > 0) {
+          const ss = solutions.slice(1);
+          placeholderNodes[key] = this.bitToAstRecursive({
+            _type: val.type,
+            _key: solutions[0],
+            solutions: ss,
+            ...rest,
+          } as unknown as RecurringBitJson);
+        }
+      }
+    }
+
+    // Body (with insterted placeholders)
     if (body) {
-      bodyNode = Builder.text(body);
+      // TODO - this split will need escaping, but actually we shouldn't need it anyway once bitmark JSON is actually
+      // all JSON
+
+      const bodyPartNodes: BitsNode[] = [];
+      const bodyParts: string[] = stringUtils.splitPlaceholders(body, Object.keys(placeholderNodes));
+
+      for (let i = 0, len = bodyParts.length; i < len; i++) {
+        const bodyPart = bodyParts[i];
+
+        if (placeholderNodes[bodyPart] instanceof BitsNode) {
+          bodyPartNodes.push(placeholderNodes[bodyPart]);
+        } else {
+          bodyPartNodes.push(Builder.text2(bodyPart));
+        }
+      }
+
+      bodyNode = Builder.body(bodyPartNodes);
     }
 
-    // Build bitElementNodes
-    const bitElementNodes: BitElementNode[] = [];
-    Array.prototype.push.apply(bitElementNodes, propertyNodes);
-    if (itemNode) {
-      bitElementNodes.push(itemNode);
-    }
-    if (instructionNode) {
-      bitElementNodes.push(instructionNode);
-    }
-    if (bodyNode) {
-      bitElementNodes.push(bodyNode);
-    }
+    // Build childBits
+    const childBits: BitsNode[] = [];
+    Array.prototype.push.apply(childBits, propertyNodes);
+    if (itemNode) childBits.push(itemNode);
+    if (leadNode) childBits.push(leadNode);
+    Array.prototype.push.apply(childBits, statementNodes);
+    Array.prototype.push.apply(childBits, solutionNodes);
+    if (hintNode) childBits.push(hintNode);
+    if (instructionNode) childBits.push(instructionNode);
+    if (exampleNode) childBits.push(exampleNode);
+    if (bodyNode) childBits.push(bodyNode);
 
     // Build bit
-    const bitNode = Builder.bit(
-      Builder.bitHeader(Builder.bitType(bitType), Builder.textFormat(textFormat)),
-      Builder.bitElementArray(bitElementNodes),
+    const bitNode = Builder.bits(
+      Builder.bit(
+        Builder.bitType(_type),
+        Builder.bitKey(_key),
+        _value != null ? Builder.bitValue(_value) : undefined,
+        _attachmentType ? Builder.bitAttachmentType(_attachmentType) : undefined,
+      ),
+      childBits,
     );
 
     return bitNode;
@@ -146,7 +312,7 @@ class BitmarkJson {
   isBit(bit: unknown): boolean {
     if (Object.prototype.hasOwnProperty.call(bit, 'type')) {
       const b = bit as BitJson;
-      return !!BitType.fromValue(b.type);
+      return !!BitBitType.fromValue(b.type);
     }
     return false;
   }

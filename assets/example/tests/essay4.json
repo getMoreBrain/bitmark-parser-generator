@@ -1,0 +1,30 @@
+[
+  {
+    "bitmark": "[.essay:bitmark--&image]\n[!Describe the graphic. What did you expect, what surprised you?]\n[&image:http://cdn.bitbook.education/publishers/3/books/26363/statistics_en.jpg]\n[@example:\nThis is a **really** nice graphic!\nIt really surprised me, that the chosen color of the graph is blue.\n]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Describe the graphic. What did you expect, what surprised you?",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": true,
+      "example": "This is a **really** nice graphic!\nIt really surprised me, that the chosen color of the graph is blue.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "http://cdn.bitbook.education/publishers/3/books/26363/statistics_en.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  }
+]

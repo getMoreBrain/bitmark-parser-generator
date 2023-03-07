@@ -1,6 +1,15 @@
 import { AstNodeType } from '../AstNodeType';
 import { Ast, AstWalkCallbacks, AstNode, AstNodeInfo } from '../Ast';
+import { BitElementsNode } from '../nodes/BitElementsNode';
+import { BitNode } from '../nodes/BitNode';
+import { BitmarkNode } from '../nodes/BitmarkNode';
+import { BitsNode } from '../nodes/BitsNode';
+import { PlaceholderHeaderNode } from '../nodes/PlaceholderHeaderNode';
+import { StatementNode } from '../nodes/StatementNode';
 import { TextFormatNode } from '../nodes/TextFormatNode';
+import { BitTypeMap } from '../types/BitTypeMap';
+import { BitType } from '../types/BitType';
+import { PlaceholderType } from '../types/PlaceholderType';
 import { TextFormat } from '../types/TextFormat';
 
 import { CodeGenerator } from './CodeGenerator';
@@ -48,7 +57,83 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
 
   // bitmark
 
+  protected on_bitmark_enter(_node: BitmarkNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  protected on_bitmark_between(
+    _node: BitmarkNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    this.writeNL();
+    this.writeNL();
+    this.writeNL();
+  }
+
+  protected on_bitmark_exit(_node: BitmarkNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  // bits
+
+  protected on_bits_enter(_node: BitsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  protected on_bits_between(
+    _node: BitsNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    //
+  }
+
+  protected on_bits_exit(_node: BitsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
   // bit
+
+  protected on_bit_enter(node: BitNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    const isBody = this.isBodyNode(node);
+    const isText = this.isTextNode(node);
+
+    if (isBody) {
+      // this.writeNL();
+      // this.writeNL();
+      // this.writeNL();
+    } else if (!isText) {
+      this.writeOP();
+    }
+  }
+
+  protected on_bit_between(
+    _node: BitNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    //
+  }
+
+  protected on_bit_exit(node: BitNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    const isBody = this.isBodyNode(node);
+    const isText = this.isTextNode(node);
+
+    if (isBody) {
+      // this.writeNL();
+      // this.writeNL();
+      // this.writeNL();
+    } else if (!isText) {
+      this.writeCL();
+    }
+  }
 
   // bitHeader
 
@@ -63,7 +148,7 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
     _parent: AstNode | undefined,
     _route: AstNodeInfo[],
   ): void {
-    if (left.type === AstNodeType.bitType && right.type === AstNodeType.textFormat) {
+    if (left.type === AstNodeType.bitBitType && right.type === AstNodeType.textFormat) {
       const writeFormat = this.isWriteFormat(right as TextFormatNode);
       if (writeFormat) {
         this.writeColon();
@@ -73,26 +158,30 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
 
   protected on_bitHeader_exit(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
     this.writeCL();
-    this.writeNL();
   }
 
-  // bitElementArray
+  // bitElements
 
-  protected on_bitElementArray_enter(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected on_bitElements_enter(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
     //
   }
 
-  protected on_bitElementArray_between(
-    _node: AstNode,
-    _left: AstNode,
-    _right: AstNode,
+  protected on_bitElements_between(
+    node: BitElementsNode,
+    left: AstNode,
+    right: AstNode,
     _parent: AstNode | undefined,
     _route: AstNodeInfo[],
   ): void {
-    //
+    const itemLead = left.type === AstNodeType.item && right.type === AstNodeType.lead;
+    const inline = node.inline || itemLead;
+
+    if (!inline) {
+      this.writeNL();
+    }
   }
 
-  protected on_bitElementArray_exit(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected on_bitElements_exit(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
     //
   }
 
@@ -105,16 +194,52 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
   protected on_property_between(
     _node: AstNode,
     _left: AstNode,
-    _right: AstNode,
+    right: AstNode,
     _parent: AstNode | undefined,
     _route: AstNodeInfo[],
   ): void {
-    this.writeColon();
+    if (right.value !== true) {
+      this.writeColon();
+    }
   }
 
   protected on_property_exit(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
     this.writeCL();
-    this.writeNL();
+  }
+
+  // placeholderHeader
+
+  protected on_placeholderHeader_enter(
+    node: PlaceholderHeaderNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    switch (node.placeholderType) {
+      case PlaceholderType.gap:
+        this.writeOPU();
+        break;
+      default:
+        this.writeOP();
+    }
+  }
+
+  protected on_placeholderHeader_between(
+    _node: AstNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    // if (left.type === AstNodeType.bitType && right.type === AstNodeType.textFormat) {
+    //   const writeFormat = this.isWriteFormat(right as TextFormatNode);
+    //   if (writeFormat) {
+    //     this.writeColon();
+    //   }
+    // }
+  }
+
+  protected on_placeholderHeader_exit(_node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeCL();
   }
 
   //
@@ -124,22 +249,45 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
   // bitType
 
   protected on_bitType_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    const bitTypeText = BitTypeMap.fromKey(node.value) ?? '';
+    this.writeString(bitTypeText);
+  }
+
+  // bitKey
+
+  protected on_bitKey_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
     this.writeString(node.value);
   }
 
-  // textFormat
+  // bitValue
 
-  protected on_textFormat_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    const writeFormat = this.isWriteFormat(node as TextFormatNode);
-    if (writeFormat) {
+  protected on_bitValue_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    if (node.value) {
+      const write = this.isWriteFormat(node.value);
+
+      if (write) {
+        this.writeColon();
+        this.writeString(node.value);
+      }
+    }
+  }
+
+  // bitAttachmentType
+
+  protected on_bitAttachmentType_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    if (node.value) {
+      this.writeAmpersand();
       this.writeString(node.value);
     }
   }
 
-  // attachmentType
+  // textFormat
 
-  protected on_attachmentType_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeString(node.value);
+  protected on_textFormat_enter(node: TextFormatNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    const writeFormat = this.isWriteFormat(node);
+    if (writeFormat) {
+      this.writeString(node.value);
+    }
   }
 
   // key
@@ -151,7 +299,9 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
   // value
 
   protected on_value_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeString(node.value);
+    if (node.value !== true) {
+      this.writeString(`${node.value}`);
+    }
   }
 
   // item
@@ -161,7 +311,37 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
       this.writeOPC();
       this.writeString(node.value);
       this.writeCL();
-      this.writeNL();
+    }
+  }
+
+  // lead
+
+  protected on_lead_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    if (node.value) {
+      this.writeOPC();
+      this.writeString(node.value);
+      this.writeCL();
+    }
+  }
+
+  // statement
+
+  protected on_statement_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    const statementNode = node as StatementNode;
+    if (statementNode.value) {
+      statementNode.isCorrect ? this.writeOPP() : this.writeOPM();
+      this.writeString(node.value);
+      this.writeCL();
+    }
+  }
+
+  // hint
+
+  protected on_hint_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    if (node.value) {
+      this.writeOPQ();
+      this.writeString(node.value);
+      this.writeCL();
     }
   }
 
@@ -172,7 +352,6 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
       this.writeOPB();
       this.writeString(node.value);
       this.writeCL();
-      this.writeNL();
     }
   }
 
@@ -272,6 +451,10 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
     this.write('@');
   }
 
+  protected writeAmpersand(): void {
+    this.write('&');
+  }
+
   protected writeColon(): void {
     this.write(':');
   }
@@ -284,8 +467,18 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
     this.write('\n');
   }
 
-  protected isWriteFormat(node: TextFormatNode): boolean {
-    const isMinusMinus = TextFormat.fromValue(node.value) === TextFormat.bitmarkMinusMinus;
+  protected isBodyNode(node: BitNode): boolean {
+    if (node.type !== AstNodeType.bit) return false;
+    return node.bitTypeNode?.bitType === BitType.body;
+  }
+
+  protected isTextNode(node: BitNode): boolean {
+    if (node.type !== AstNodeType.bit) return false;
+    return node.bitTypeNode?.bitType === BitType.text;
+  }
+
+  protected isWriteFormat(bitValue: string): boolean {
+    const isMinusMinus = TextFormat.fromValue(bitValue) === TextFormat.bitmarkMinusMinus;
     const writeFormat = !isMinusMinus || this.options.explicitTextFormat;
     return !!writeFormat;
   }

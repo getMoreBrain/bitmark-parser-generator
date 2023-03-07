@@ -1,18 +1,17 @@
 import { AstNodeType } from '../AstNodeType';
 import { AstNode } from '../Ast';
 
-import { BitNode } from './BitNode';
+import { BitsNode } from './BitsNode';
 
 class BitmarkNode implements AstNode {
   type = AstNodeType.bitmark;
-  bits: BitNode[];
+  bits: BitsNode[];
 
-  constructor(bits: BitNode[]) {
-    this.type = AstNodeType.bitmark;
+  constructor(bits: BitsNode[]) {
     this.bits = bits;
   }
 
-  get children(): AstNode[] {
+  get children(): BitsNode[] {
     return [...this.bits];
   }
 }

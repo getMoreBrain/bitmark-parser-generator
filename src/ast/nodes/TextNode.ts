@@ -1,16 +1,15 @@
 import { AstNodeType } from '../AstNodeType';
 import { AstNode } from '../Ast';
 
-import { BitElementNode } from './BitElementNode';
+import { TextElementNode } from './TextElementNode';
 
-class TextNode extends BitElementNode implements AstNode {
+class TextNode extends TextElementNode implements AstNode {
   type = AstNodeType.text;
   text?: string;
 
   constructor(text?: string) {
     super();
 
-    this.type = AstNodeType.text;
     this.text = text;
   }
 

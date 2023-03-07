@@ -1,0 +1,22 @@
+[
+  {
+    "bitmark": "[.page:bitmark++]\n**Erfolg um jeden Preis**\n\nImmer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.\n\n[&image:http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg]\n\nWas sind dagegen ein paar anabole Steroide ==anabole Steroide==(*synthetisch hergestellte Mittel zur Leistungssteigerung)==",
+    "bit": {
+      "type": "page",
+      "format": "bitmark++",
+      "body": "**Erfolg um jeden Preis**\n\nImmer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.\n\n\n\nWas sind dagegen ein paar anabole Steroide ==anabole Steroide==(*synthetisch hergestellte Mittel zur Leistungssteigerung)=="
+    },
+    "emphasized": [
+      "**Erfolg um jeden Preis**\n"
+    ],
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "jpg",
+          "src": "http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg"
+        }
+      ]
+    }
+  }
+]

@@ -75,7 +75,7 @@ class Ast {
         acc += ' -> ';
       } else {
         if (val.value) {
-          const s = stringUtils.firstLine(val.value, 100);
+          const s = stringUtils.firstLine(`${val.value}`, 100);
           acc += `(${s})`;
         }
       }

@@ -6,7 +6,6 @@ class InstructionNode implements AstNode {
   val: string;
 
   constructor(value: string) {
-    this.type = AstNodeType.instruction;
     this.val = value;
   }
 

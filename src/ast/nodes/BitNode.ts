@@ -1,24 +1,37 @@
 import { AstNodeType } from '../AstNodeType';
 import { AstNode } from '../Ast';
 
-import { BitElementArrayNode } from './BitElementArrayNode';
-import { BitHeaderNode } from './BitHeaderNode';
+import { BitAttachmentTypeNode } from './AttachmentTypeNode';
+import { BitKeyNode } from './BitKeyNode';
+import { BitTypeNode } from './BitTypeNode';
+import { BitValueNode } from './BitValueNode';
 
 class BitNode implements AstNode {
   type = AstNodeType.bit;
-  bitHeaderNode: BitHeaderNode;
-  bitElementArrayNode?: BitElementArrayNode;
+  bitTypeNode: BitTypeNode;
+  bitKeyNode: BitKeyNode;
+  bitValueNode?: BitValueNode;
+  attachmentTypeNode?: BitAttachmentTypeNode;
 
-  constructor(bitHeaderNode: BitHeaderNode, bitElementArrayNode?: BitElementArrayNode) {
-    this.bitHeaderNode = bitHeaderNode;
-    this.bitElementArrayNode = bitElementArrayNode;
+  constructor(
+    bitTypeNode: BitTypeNode,
+    bitKeyNode: BitKeyNode,
+    bitValueNode?: BitValueNode,
+    attachmentTypeNode?: BitAttachmentTypeNode,
+  ) {
+    this.bitTypeNode = bitTypeNode;
+    this.bitKeyNode = bitKeyNode;
+    this.bitValueNode = bitValueNode;
+    this.attachmentTypeNode = attachmentTypeNode;
   }
 
   get children(): AstNode[] {
     const children = [];
 
-    children.push(this.bitHeaderNode);
-    if (this.bitElementArrayNode) children.push(this.bitElementArrayNode);
+    children.push(this.bitTypeNode);
+    children.push(this.bitKeyNode);
+    if (this.bitValueNode) children.push(this.bitValueNode);
+    if (this.attachmentTypeNode) children.push(this.attachmentTypeNode);
 
     return children;
   }
