@@ -48,7 +48,7 @@ class Bmg {
     // const filename = testFiles.cloze5;
     // const filename = testFiles.cloze10;
     // const filename = testFiles.cloze11;
-    // const filename = testFiles.cloze12;
+    const filename = testFiles.cloze12;
     // const filename = testFiles.cloze13;
     // const filename = testFiles.clozeEmoji;
     // const filename = testFiles.clozeEmoji2;
@@ -108,7 +108,7 @@ class Bmg {
     // const filename = testFiles.multires_1;
     // const filename = testFiles.multires_1_2;
     // const filename = testFiles.multich1;
-    const filename = testFiles.multich2;
+    // const filename = testFiles.multich2;
     // const filename = testFiles.multichtx1;
     // const filename = testFiles.multichtx2;
     // const filename = testFiles.multichtx3;

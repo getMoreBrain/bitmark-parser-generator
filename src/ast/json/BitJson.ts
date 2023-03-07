@@ -18,6 +18,8 @@ export interface RecurringBitJson extends BitJson {
   isExample: boolean;
   example: string;
   isCorrect: boolean;
+  // quiz: string;
+  quizzes: RecurringBitJson[];
   statement: string;
   statements: RecurringBitJson[];
   choice: string;
@@ -37,7 +39,9 @@ export interface RecurringBitJson extends BitJson {
   title: string;
   description: string;
   solution: string;
-  solutions: string[] | null; // Can there be no solutions?
+  solutions: string[] | null;
+  text: string;
+  options: RecurringBitJson[];
   isCaseSensitive: boolean;
   isLongAnswer: boolean;
   key: string;

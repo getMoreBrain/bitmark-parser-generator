@@ -83,10 +83,12 @@ class BitmarkJson {
       item,
       lead,
       solutions,
+      options,
       hint,
       instruction,
       isExample,
       example,
+      quizzes,
       statement,
       isCorrect,
       statements,
@@ -99,13 +101,16 @@ class BitmarkJson {
     const propertyNodes: BitsNode[] = [];
     let itemNode: BitsNode | undefined;
     let leadNode: BitsNode | undefined;
+    const quizzesNodes: BitsNode[] = [];
     const statementNodes: BitsNode[] = [];
     const choicesNodes: BitsNode[] = [];
     const responsesNodes: BitsNode[] = [];
+    const optionNodes: BitsNode[] = [];
     const solutionNodes: BitsNode[] = [];
     let hintNode: BitsNode | undefined;
     let instructionNode: BitsNode | undefined;
     let exampleNode: BitsNode | undefined;
+    let cardsNode: BitsNode | undefined;
     const placeholderNodes: {
       [keyof: string]: BitsNode;
     } = {};
@@ -177,6 +182,21 @@ class BitmarkJson {
       } as RecurringBitJson);
     }
 
+    // === quizzes
+    if (Array.isArray(quizzes)) {
+      for (const q of quizzes) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { _type, _key, ...rest } = q;
+        const node = this.bitToAstRecursive({
+          _type: BitType.quiz,
+          _key: '',
+          ...rest,
+        } as RecurringBitJson);
+        quizzesNodes.push(node);
+      }
+      cardsNode = Builder.cards(quizzesNodes);
+    }
+
     // +-statement
     if (statement) {
       const node = this.bitToAstRecursive({
@@ -226,6 +246,21 @@ class BitmarkJson {
       }
     }
 
+    //+-option(select)
+    if (Array.isArray(options)) {
+      // TODO - prefix / postfix
+      for (const o of options) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { _type, _key, isCorrect, text, ...rest } = o;
+        const node = this.bitToAstRecursive({
+          _type: isCorrect ? BitType.responseTrue : BitType.responseFalse,
+          _key: text,
+          ...rest,
+        } as RecurringBitJson);
+        optionNodes.push(node);
+      }
+    }
+
     // // Solutions
     if (Array.isArray(solutions)) {
       for (const s of solutions) {
@@ -240,17 +275,31 @@ class BitmarkJson {
     // Placeholders
     if (placeholders) {
       for (const [key, val] of Object.entries(placeholders)) {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const { _type, _key, solutions, ...rest } = val;
+        if (val.type === BitType.gap) {
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          const { _type, _key, solutions, ...rest } = val;
 
-        if (solutions && solutions.length > 0) {
-          const ss = solutions.slice(1);
-          placeholderNodes[key] = this.bitToAstRecursive({
-            _type: val.type,
-            _key: solutions[0],
-            solutions: ss,
-            ...rest,
-          } as RecurringBitJson);
+          if (solutions && solutions.length > 0) {
+            const ss = solutions.slice(1);
+            placeholderNodes[key] = this.bitToAstRecursive({
+              _type: val.type,
+              _key: solutions[0],
+              solutions: ss,
+              ...rest,
+            } as RecurringBitJson);
+          }
+        } else if (val.type === BitType.select) {
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          const { _type, _key, options, ...rest } = val;
+
+          if (options && options.length > 0) {
+            placeholderNodes[key] = this.bitToAstRecursive({
+              _type: val.type,
+              _key: 'selectTODO',
+              options,
+              ...rest,
+            } as RecurringBitJson);
+          }
         }
       }
     }
@@ -269,7 +318,7 @@ class BitmarkJson {
         if (placeholderNodes[bodyPart] instanceof BitsNode) {
           bodyPartNodes.push(placeholderNodes[bodyPart]);
         } else {
-          bodyPartNodes.push(Builder.text2(bodyPart));
+          bodyPartNodes.push(Builder.text(bodyPart));
         }
       }
 
@@ -288,6 +337,8 @@ class BitmarkJson {
     Array.prototype.push.apply(childBits, statementNodes);
     Array.prototype.push.apply(childBits, choicesNodes);
     Array.prototype.push.apply(childBits, responsesNodes);
+    Array.prototype.push.apply(childBits, optionNodes);
+    if (cardsNode) childBits.push(cardsNode);
     if (bodyNode) childBits.push(bodyNode);
 
     // Build bit

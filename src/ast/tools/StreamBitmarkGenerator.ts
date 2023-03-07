@@ -51,7 +51,9 @@ class StreamBitmarkGenerator implements CodeGenerator {
         enter: (node: AstNode, parent: AstNode | undefined, route: AstNodeInfo[]) => {
           const routeStr = this.ast.routeToString(route);
 
-          bitmarkGenerator.writeLine(`${routeStr}`);
+          if (node.value) {
+            bitmarkGenerator.writeLine(`${routeStr}`);
+          }
         },
       });
       bitmarkGenerator.writeLine();

@@ -77,8 +77,11 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
 
   // bits
 
-  protected on_bits_enter(_node: BitsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
+  protected on_bits_enter(node: BitsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    // const isCardBits = this.isCardNode(node.bitNode);
+    // if (isCardBits) {
+    //   this.writeCardDivider();
+    // }
   }
 
   protected on_bits_between(
@@ -89,26 +92,34 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
     _route: AstNodeInfo[],
   ): void {
     const isTopLevelBits = this.isTopLevelBits(node);
-    if (isTopLevelBits) {
+    const isCards = this.isCardsNode(node.bitNode);
+    const isQuiz = this.isQuizNode(node.bitNode);
+
+    if (isTopLevelBits || isQuiz) {
       this.writeNL();
+    } else if (isCards) {
+      this.writeCardDivider();
     }
   }
 
-  protected on_bits_exit(_node: BitsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
+  protected on_bits_exit(node: BitsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    const isCards = this.isCardsNode(node.bitNode);
+    if (isCards) {
+      this.writeCardDivider();
+    }
+
+    const isQuiz = this.isQuizNode(node.bitNode);
+    if (isQuiz) {
+      this.writeNL();
+    }
   }
 
   // bit
 
   protected on_bit_enter(node: BitNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    const isBody = this.isBodyNode(node);
-    const isText = this.isTextNode(node);
+    const isHiddenBit = this.isHiddenBitNode(node);
 
-    if (isBody) {
-      // this.writeNL();
-      // this.writeNL();
-      // this.writeNL();
-    } else if (!isText) {
+    if (!isHiddenBit) {
       this.writeOP();
     }
   }
@@ -124,14 +135,9 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
   }
 
   protected on_bit_exit(node: BitNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    const isBody = this.isBodyNode(node);
-    const isText = this.isTextNode(node);
+    const isHiddenBit = this.isHiddenBitNode(node);
 
-    if (isBody) {
-      // this.writeNL();
-      // this.writeNL();
-      // this.writeNL();
-    } else if (!isText) {
+    if (!isHiddenBit) {
       this.writeCL();
     }
   }
@@ -263,6 +269,10 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
   //   this.write('::');
   // }
 
+  protected writeCardDivider(): void {
+    this.write('===');
+  }
+
   protected writeNL(): void {
     this.write('\n');
   }
@@ -295,14 +305,40 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
   //   return false;
   // }
 
+  protected isHiddenBitNode(node: BitNode): boolean {
+    return this.isBodyNode(node) || this.isTextNode(node) || this.isQuizNode(node) || this.isCardsNode(node);
+  }
+
   protected isBodyNode(node: BitNode): boolean {
-    if (node.type !== AstNodeType.bit) return false;
+    if (!node || node.type !== AstNodeType.bit) return false;
     return node.bitTypeNode?.bitType === BitType.body;
   }
 
   protected isTextNode(node: BitNode): boolean {
-    if (node.type !== AstNodeType.bit) return false;
+    if (!node || node.type !== AstNodeType.bit) return false;
     return node.bitTypeNode?.bitType === BitType.text;
+  }
+
+  protected isCardsNode(node: BitNode): boolean {
+    if (!node || node.type !== AstNodeType.bit) return false;
+    if (node.bitTypeNode) {
+      switch (node.bitTypeNode.bitType) {
+        case BitType.cards:
+          return true;
+      }
+    }
+    return false;
+  }
+
+  protected isQuizNode(node: BitNode): boolean {
+    if (!node || node.type !== AstNodeType.bit) return false;
+    if (node.bitTypeNode) {
+      switch (node.bitTypeNode.bitType) {
+        case BitType.quiz:
+          return true;
+      }
+    }
+    return false;
   }
 
   protected isWriteFormat(bitValue: string): boolean {

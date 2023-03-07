@@ -65,13 +65,19 @@ class Builder {
     return node;
   }
 
+  cards(cards: BitsNode[]): BitsNode {
+    const node = new BitsNode(new BitNode(new BitTypeNode(BitType.cards), new BitKeyNode('')), cards);
+
+    return node;
+  }
+
   body(parts: BitsNode[]): BitsNode {
     const node = new BitsNode(new BitNode(new BitTypeNode(BitType.body), new BitKeyNode('')), parts);
 
     return node;
   }
 
-  text2(text: string): BitsNode {
+  text(text: string): BitsNode {
     const node = new BitsNode(new BitNode(new BitTypeNode(BitType.text), new BitKeyNode(text)));
 
     return node;
