@@ -1,0 +1,32 @@
+1.
+The main bit has various 'chained' sub-bits (e.g. information, hint, format) that are optional but common to
+most if not all bits. Even if they are not common, they could be included (and just ignored)
+
+Common properties:
+
+type
+format ?
+body ?
+
+
+
+2.
+Some main bits have some extra fields that are either specific to those bits, or to similar bits
+
+They are:
+
+3.
+The body can have special (placeholder) bits within it these special bits are not the same as main bits.
+It may be that only certain bits can have placeholder bits, and only of a specific type.
+e.g. gap in [.cloze]..., status in [.multiple-choice]...
+
+They are:
+
+gap
+[.cloze][.cloze-instruction-grouped][.cloze-solution-grouped][.cloze-and-multiple-choice-text]
+
+select
+[.clozeAndMultipleChoiceText][.multipleChoice][.multipleChoice1][.multipleChoiceText]
+
+highlight
+[.highlight-text]

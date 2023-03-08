@@ -4,7 +4,7 @@ import { BitmarkNode } from '../nodes/BitmarkNode';
 import { BitsNode } from '../nodes/BitsNode';
 import { BitBitType } from '../types/BitBitType';
 import { BitType } from '../types/BitType';
-import { TextFormat } from '../types/TextFormat';
+import { BitTextFormat } from '../types/BitTextFormat';
 
 import { Builder } from './Builder';
 import { stringUtils } from './StringUtils';
@@ -49,7 +49,7 @@ class BitmarkJson {
     }
 
     // Get format
-    const textFormat = TextFormat.fromValue(format) ?? TextFormat.bitmarkMinusMinus;
+    const textFormat = BitTextFormat.fromValue(format) ?? BitTextFormat.bitmarkMinusMinus;
 
     // Get attachment type (TODO)
     const attachmentType = undefined;
@@ -94,6 +94,7 @@ class BitmarkJson {
       statements,
       choices,
       responses,
+      resource,
       body,
       placeholders,
     } = bit;
@@ -111,6 +112,7 @@ class BitmarkJson {
     let instructionNode: BitsNode | undefined;
     let exampleNode: BitsNode | undefined;
     let cardsNode: BitsNode | undefined;
+    let resourceNode: BitsNode | undefined;
     const placeholderNodes: {
       [keyof: string]: BitsNode;
     } = {};
@@ -253,7 +255,7 @@ class BitmarkJson {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const { _type, _key, isCorrect, text, ...rest } = o;
         const node = this.bitToAstRecursive({
-          _type: isCorrect ? BitType.responseTrue : BitType.responseFalse,
+          _type: isCorrect ? BitType.optionTrue : BitType.optionFalse,
           _key: text,
           ...rest,
         } as RecurringBitJson);
@@ -261,7 +263,7 @@ class BitmarkJson {
       }
     }
 
-    // // Solutions
+    // Solutions
     if (Array.isArray(solutions)) {
       for (const s of solutions) {
         const node = this.bitToAstRecursive({
@@ -271,6 +273,15 @@ class BitmarkJson {
         solutionNodes.push(node);
       }
     }
+
+    // &resource
+    // if (resource) {
+    //   resourceNode = this.bitToAstRecursive({
+    //     _type: BitType.example,
+    //     _key: 'example',
+    //     _value: example || true,
+    //   } as RecurringBitJson);
+    // }
 
     // Placeholders
     if (placeholders) {

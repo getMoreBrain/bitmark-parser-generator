@@ -8,7 +8,7 @@ import { BitsNode } from '../nodes/BitsNode';
 import { BitBitType } from '../types/BitBitType';
 import { BitTypeMap } from '../types/BitTypeMap';
 import { BitType } from '../types/BitType';
-import { TextFormat } from '../types/TextFormat';
+import { BitTextFormat } from '../types/BitTextFormat';
 
 import { CodeGenerator } from './CodeGenerator';
 import { CodeWriter } from './writer/CodeWriter';
@@ -342,7 +342,7 @@ class BitmarkGenerator extends CodeWriter implements CodeGenerator {
   }
 
   protected isWriteFormat(bitValue: string): boolean {
-    const isMinusMinus = TextFormat.fromValue(bitValue) === TextFormat.bitmarkMinusMinus;
+    const isMinusMinus = BitTextFormat.fromValue(bitValue) === BitTextFormat.bitmarkMinusMinus;
     const writeFormat = !isMinusMinus || this.options.explicitTextFormat;
     return !!writeFormat;
   }

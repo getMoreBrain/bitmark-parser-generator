@@ -10,9 +10,10 @@
       ],
       "resource": {
         "type": "image-link",
-        "image-link": {
-          "provider": "docs.bitmark.cloud",
+        "imageLink": {
+          "provider": "",
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
+          "format": "mp4",
           "src2x": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/poster.png"
         }
       }
@@ -29,7 +30,7 @@
       ],
       "resource": {
         "type": "website-link",
-        "website-link": {
+        "websiteLink": {
           "siteName": "",
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4"
         }
@@ -47,7 +48,7 @@
       ],
       "resource": {
         "type": "article-link",
-        "article-link": {
+        "articleLink": {
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4"
         }
       }
@@ -124,7 +125,7 @@
       ],
       "resource": {
         "type": "website-link",
-        "website-link": {
+        "websiteLink": {
           "siteName": "",
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4"
         }
@@ -142,7 +143,7 @@
       ],
       "resource": {
         "type": "article-link",
-        "article-link": {
+        "articleLink": {
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4"
         }
       }
@@ -159,7 +160,7 @@
       ],
       "resource": {
         "type": "app-link",
-        "app-link": {
+        "appLink": {
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4"
         }
       }
@@ -210,7 +211,7 @@
       ],
       "resource": {
         "type": "video-link",
-        "video-link": {
+        "videoLink": {
           "provider": "docs.bitmark.cloud",
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
           "width": "740",
@@ -245,10 +246,9 @@
       ],
       "resource": {
         "type": "still-image-film",
-        "still-image-film": {
+        "image": {
           "provider": "",
-          "url": "",
-          "src": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
+          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
           "format": "mp4",
           "duration": "PT12M31S"
         }
@@ -266,9 +266,10 @@
       ],
       "resource": {
         "type": "still-image-film-link",
-        "still-image-film": {
-          "provider": "docs.bitmark.cloud",
+        "videoLink": {
+          "provider": "",
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
+          "format": "mp4",
           "duration": "PT12M31S"
         }
       }

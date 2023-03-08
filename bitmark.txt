@@ -1,27 +1,10 @@
 Hello World
 
 0,bitmark -> 0,bits -> 0,bit -> 0,bitType(bit)
-0,bitmark -> 0,bits -> 0,bit -> 1,bitKey(cloze)
+0,bitmark -> 0,bits -> 0,bit -> 1,bitKey(essay)
 0,bitmark -> 0,bits -> 0,bit -> 2,bitValue(bitmark--)
-0,bitmark -> 0,bits -> 1,bits -> 0,bit -> 0,bitType(body)
-0,bitmark -> 0,bits -> 1,bits -> 1,bits -> 0,bit -> 0,bitType(text)
-0,bitmark -> 0,bits -> 1,bits -> 1,bits -> 0,bit -> 1,bitKey(This sentence is a )
-0,bitmark -> 0,bits -> 1,bits -> 2,bits -> 0,bit -> 0,bitType(gap)
-0,bitmark -> 0,bits -> 1,bits -> 2,bits -> 0,bit -> 1,bitKey(cloze)
-0,bitmark -> 0,bits -> 1,bits -> 2,bits -> 1,bits -> 0,bit -> 0,bitType(gap)
-0,bitmark -> 0,bits -> 1,bits -> 2,bits -> 1,bits -> 0,bit -> 1,bitKey(gap text)
-0,bitmark -> 0,bits -> 1,bits -> 2,bits -> 2,bits -> 0,bit -> 0,bitType(instruction)
-0,bitmark -> 0,bits -> 1,bits -> 2,bits -> 2,bits -> 0,bit -> 1,bitKey(noun)
-0,bitmark -> 0,bits -> 1,bits -> 3,bits -> 0,bit -> 0,bitType(text)
-0,bitmark -> 0,bits -> 1,bits -> 3,bits -> 0,bit -> 1,bitKey( with )
-0,bitmark -> 0,bits -> 1,bits -> 4,bits -> 0,bit -> 0,bitType(gap)
-0,bitmark -> 0,bits -> 1,bits -> 4,bits -> 0,bit -> 1,bitKey(4)
-0,bitmark -> 0,bits -> 1,bits -> 4,bits -> 1,bits -> 0,bit -> 0,bitType(hint)
-0,bitmark -> 0,bits -> 1,bits -> 4,bits -> 1,bits -> 0,bit -> 1,bitKey(1 or 2)
-0,bitmark -> 0,bits -> 1,bits -> 5,bits -> 0,bit -> 0,bitType(text)
-0,bitmark -> 0,bits -> 1,bits -> 5,bits -> 0,bit -> 1,bitKey( gaps including an instruction for the first and a hint for the second ] gap [. [& means the start o)
+0,bitmark -> 0,bits -> 1,bits -> 0,bit -> 0,bitType(instruction)
+0,bitmark -> 0,bits -> 1,bits -> 0,bit -> 1,bitKey(Beschreiben Sie die Grafik. Was haben Sie erwartet, was hat Sie überrascht?)
 
-[.cloze]
-This sentence is a [_cloze][_gap text][!noun] with [_4][?1 or 2] gaps including an instruction for the first and a hint for the second ] gap [. [& means the start of bit [.match]::remark::  <<kool<<
-
-END
+[.essay:bitmark--]
+[!Beschreiben Sie die Grafik. Was haben Sie erwartet, was hat Sie überrascht?]

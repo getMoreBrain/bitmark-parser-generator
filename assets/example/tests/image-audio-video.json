@@ -259,8 +259,8 @@
       "example": "",
       "resource": {
         "type": "image",
-        "image": {
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
+        "imageLink": {
+          "src": "",
           "showInIndex": false,
           "format": "png",
           "width": null,
@@ -268,7 +268,8 @@
           "alt": "",
           "caption": "",
           "license": "",
-          "copyright": ""
+          "copyright": "",
+          "url": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png"
         }
       }
     }
@@ -327,14 +328,16 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "resource": {
-        "type": "audio",
-        "audio": {
+      "example": ""
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
           "format": "mp3",
           "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3"
         }
-      }
+      ]
     }
   },
   {
@@ -543,10 +546,9 @@
       "example": "",
       "resource": {
         "type": "still-image-film",
-        "still-image-film": {
+        "image": {
           "provider": "",
-          "url": "",
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
+          "url": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
           "format": "wmv"
         }
       }
@@ -564,10 +566,9 @@
       "example": "",
       "resource": {
         "type": "still-image-film",
-        "still-image-film": {
+        "image": {
           "provider": "",
-          "url": "",
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
+          "url": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
           "format": "wmv"
         }
       }

@@ -1,7 +1,36 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-const BitBitType = superenum({
+const BitBitTypeRaw = {
   book: 'book',
+  bookFrontispiece: 'book-frontispiece',
+  bookTitle: 'book-title',
+  bookCopyright: 'book-copyright',
+  bookDedication: 'book-dedication',
+  bookForword: 'book-foreword',
+  bookPreface: 'book-preface',
+  bookPrologue: 'book-prologue',
+  bookEpilogue: 'book-epilogue',
+  bookIntroduction: 'book-introduction',
+  bookIncitingIncident: 'book-inciting-incident',
+  bookConclusion: 'book-conclusion',
+  bookAfterword: 'book-afterword',
+  bookPostscript: 'book-postscript',
+  bookAppendix: 'book-appendix',
+  bookAddendum: 'book-addendum',
+  bookAcknowledgments: 'book-acknowledgments',
+  bookListOfContributors: 'book-list-of-contributors',
+  bookBibliography: 'book-bibliography',
+  bookReferenceList: 'book-reference-list',
+  bookEndnotes: 'book-endnotes',
+  bookNotes: 'book-notes',
+  bookCopyrightPermissions: 'book-copyright-permissions',
+  bookTeaser: 'book-teaser',
+  bookAutherBio: 'book-author-bio',
+  bookRequestForABookReview: 'book-request-for-a-book-review',
+  bookComingSoon: 'book-coming-soon',
+  bookReadMore: 'book-read-more',
+  bookSummary: 'book-summary',
+  bookEpigraph: 'book-epigraph',
   chapter: 'chapter',
   summary: 'summary',
   bitAlias: 'bit-alias',
@@ -42,7 +71,6 @@ const BitBitType = superenum({
   flashcard1: 'flashcard-1',
   chat: 'chat',
   conversation: 'conversation',
-  botInterview: 'bot-interview',
   selfAssessment: 'self-assessment',
   rating: 'rating',
   survey: 'survey',
@@ -50,8 +78,18 @@ const BitBitType = superenum({
   surveyAnonymous: 'survey-anonymous',
   surveyAnonymous1: 'survey-anonymous-1',
   hint: 'hint',
-});
+  botInterview: 'bot-interview',
+  botActionRatingNumber: 'bot-action-rating-number',
+  botActionResponse: 'bot-action-response',
+  botActionTrueFalse: 'bot-action-true-false',
+  code: 'code',
+  card1: 'card-1',
+  question1: 'question-1',
+} as const;
 
+const BitBitType = superenum(BitBitTypeRaw);
+
+export type BitBitTypeKeys = keyof typeof BitBitTypeRaw;
 export type BitBitTypeType = EnumType<typeof BitBitType>;
 
 export { BitBitType };

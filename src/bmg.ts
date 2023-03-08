@@ -48,7 +48,7 @@ class Bmg {
     // const filename = testFiles.cloze5;
     // const filename = testFiles.cloze10;
     // const filename = testFiles.cloze11;
-    const filename = testFiles.cloze12;
+    // const filename = testFiles.cloze12;
     // const filename = testFiles.cloze13;
     // const filename = testFiles.clozeEmoji;
     // const filename = testFiles.clozeEmoji2;
@@ -60,7 +60,7 @@ class Bmg {
     // const filename = testFiles.corr3;
     // const filename = testFiles.docup1;
     // const filename = testFiles.essay1;
-    // const filename = testFiles.essay2;
+    const filename = testFiles.essay2;
     // const filename = testFiles.essay3;
     // const filename = testFiles.essay4;
     // const filename = testFiles.essay5;
@@ -169,7 +169,7 @@ class Bmg {
         flags: 'w',
       },
       {
-        explicitTextFormat: false,
+        explicitTextFormat: true,
       },
     );
 

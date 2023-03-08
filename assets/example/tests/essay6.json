@@ -13,9 +13,10 @@
       "example": "",
       "resource": {
         "type": "image-link",
-        "image-link": {
-          "provider": "docs.bitbook.education",
-          "url": "https://docs.bitbook.education/bit-books/compendio/schubert_erkundungen_c1/web-resources/cover/compendio_uebungen/web_resources/images/05_ablauf_und_termine_022.png"
+        "imageLink": {
+          "provider": "",
+          "url": "https://docs.bitbook.education/bit-books/compendio/schubert_erkundungen_c1/web-resources/cover/compendio_uebungen/web_resources/images/05_ablauf_und_termine_022.png",
+          "format": "png"
         }
       }
     }

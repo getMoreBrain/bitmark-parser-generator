@@ -1,0 +1,5 @@
+class AstRuleManager {
+  //
+}
+
+export { AstRuleManager };
