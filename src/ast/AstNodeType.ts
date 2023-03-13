@@ -6,7 +6,6 @@ const AstNodeType = superenum({
   // Non-terminal
   bitmark: 'bitmark', // bitmark
   bit: 'bit', // bit
-  bitHeader: 'bitHeader', // bitHeader
   properties: 'properties',
   property: 'property',
   propertyValues: 'propertyValues',

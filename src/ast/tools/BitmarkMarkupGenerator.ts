@@ -106,18 +106,42 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
 
   // bit
 
-  protected on_bit_enter(_node: BitNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
+  protected on_bit_enter(node: BitNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeOPD();
+    this.writeString(node.bitType.value);
+
+    if (node.textFormat) {
+      const write = this.isWriteTextFormat(node.textFormat.value);
+
+      if (write) {
+        this.writeColon();
+        this.writeString(node.textFormat.value);
+      }
+    }
+
+    if (node.attachmentType) {
+      this.writeAmpersand();
+      this.writeString(node.attachmentType.value);
+    }
+    this.writeCL();
+    this.writeNL();
   }
 
   protected on_bit_between(
     _node: BitNode,
-    _left: AstNode,
+    left: AstNode,
     _right: AstNode,
     _parent: AstNode | undefined,
     _route: AstNodeInfo[],
   ): void {
-    this.writeNL();
+    const noNl =
+      left.type === AstNodeType.bitType ||
+      left.type === AstNodeType.textFormat ||
+      left.type === AstNodeType.attachmentType;
+
+    if (!noNl) {
+      this.writeNL();
+    }
   }
 
   protected on_bit_exit(_node: BitNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
@@ -127,7 +151,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
   // bitHeader
 
   protected on_bitHeader_enter(_node: BitHeaderNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeOPD();
+    //
   }
 
   protected on_bitHeader_between(
@@ -137,17 +161,11 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
     _parent: AstNode | undefined,
     _route: AstNodeInfo[],
   ): void {
-    if (right.type === AstNodeType.textFormat) {
-      if (this.isWriteTextFormat(right.value)) {
-        this.writeColon();
-      }
-    } else if (right.type === AstNodeType.attachmentType) {
-      this.writeAmpersand();
-    }
+    //
   }
 
   protected on_bitHeader_exit(_node: BitHeaderNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeCL();
+    //
   }
 
   // properties
@@ -380,7 +398,9 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
     //
   }
 
-  protected on_choice_exit(_node: ChoiceNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {}
+  protected on_choice_exit(_node: ChoiceNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
 
   //
   // Terminal nodes (leaves)
@@ -388,32 +408,24 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
 
   // bitType
 
-  protected on_bitType_enter(node: BitTypeNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeString(node.value);
+  protected on_bitType_enter(_node: BitTypeNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
   }
 
   // textFormat
 
-  protected on_textFormat_enter(node: TextFormatNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      const write = this.isWriteTextFormat(node.value);
-
-      if (write) {
-        this.writeString(node.value);
-      }
-    }
+  protected on_textFormat_enter(_node: TextFormatNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
   }
 
   // attachmentType
 
   protected on_attachmentType_enter(
-    node: AttachmentTypeNode,
+    _node: AttachmentTypeNode,
     _parent: AstNode | undefined,
     _route: AstNodeInfo[],
   ): void {
-    if (node.value) {
-      this.writeString(node.value);
-    }
+    //
   }
 
   // item

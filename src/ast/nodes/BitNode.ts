@@ -8,8 +8,9 @@ import { TextFormatType } from '../types/TextFormat';
 import { Resource } from '../types/resources/Resource';
 
 import { AgeRangesNode } from './AgeRangesNode';
+import { AttachmentTypeNode } from './AttachmentTypeNode';
 import { BaseBranchNode } from './BaseBranchNode';
-import { BitHeaderNode } from './BitHeaderNode';
+import { BitTypeNode } from './BitTypeNode';
 import { BodyNode } from './BodyNode';
 import { ChoiceNode } from './ChoiceNode';
 import { ChoicesNode } from './ChoicesNode';
@@ -21,9 +22,12 @@ import { ItemLeadNode } from './ItemLeadNode';
 import { LanguagesNode } from './LanguagesNode';
 import { PropertiesNode } from './PropertiesNode';
 import { ResourceNode } from './ResourceNode';
+import { TextFormatNode } from './TextFormatNode';
 
 type Children = (
-  | BitHeaderNode
+  | BitTypeNode
+  | TextFormatNode
+  | AttachmentTypeNode
   | IdsNode
   | AgeRangesNode
   | LanguagesNode
@@ -39,7 +43,9 @@ type Children = (
 
 class BitNode extends BaseBranchNode<Children> implements AstNode {
   type = AstNodeType.bit;
-  bitHeaderNode: BitHeaderNode;
+  bitType: BitTypeNode;
+  textFormat: TextFormatNode;
+  attachmentType?: AttachmentTypeNode;
   ids?: IdsNode;
   ageRanges?: AgeRangesNode;
   languages?: LanguagesNode;
@@ -69,7 +75,9 @@ class BitNode extends BaseBranchNode<Children> implements AstNode {
     resource?: Resource,
     body?: BodyNode,
   ): BitNode {
-    const bitHeaderNode = BitHeaderNode.create(bitType, textFormat, attachmentType);
+    const bitTypeNode = BitTypeNode.create(bitType);
+    const textFormatNode = TextFormatNode.create(textFormat);
+    const attachmentTypeNode = AttachmentTypeNode.create(attachmentType);
     const idsNode = IdsNode.create(ids);
     const ageRangesNode = AgeRangesNode.create(ageRanges);
     const languagesNode = LanguagesNode.create(languages);
@@ -81,7 +89,9 @@ class BitNode extends BaseBranchNode<Children> implements AstNode {
     const choicesNode = ChoicesNode.create(choices);
     const resourceNode = ResourceNode.create(resource);
     const node = new BitNode(
-      bitHeaderNode,
+      bitTypeNode,
+      textFormatNode,
+      attachmentTypeNode,
       idsNode,
       ageRangesNode,
       languagesNode,
@@ -101,7 +111,9 @@ class BitNode extends BaseBranchNode<Children> implements AstNode {
   }
 
   protected constructor(
-    bitHeaderNode: BitHeaderNode,
+    bitType: BitTypeNode,
+    textFormat: TextFormatNode,
+    attachmentType?: AttachmentTypeNode,
     ids?: IdsNode,
     ageRanges?: AgeRangesNode,
     languages?: LanguagesNode,
@@ -115,7 +127,9 @@ class BitNode extends BaseBranchNode<Children> implements AstNode {
     body?: BodyNode,
   ) {
     super();
-    this.bitHeaderNode = bitHeaderNode;
+    this.bitType = bitType;
+    this.textFormat = textFormat;
+    this.attachmentType = attachmentType;
     this.ids = ids;
     this.ageRanges = ageRanges;
     this.languages = languages;
@@ -130,8 +144,9 @@ class BitNode extends BaseBranchNode<Children> implements AstNode {
   }
 
   protected buildChildren(): Children {
-    const children: Children = [this.bitHeaderNode];
+    const children: Children = [this.bitType, this.textFormat];
 
+    if (this.attachmentType) children.push(this.attachmentType);
     if (this.ids) children.push(this.ids);
     if (this.ageRanges) children.push(this.ageRanges);
     if (this.languages) children.push(this.languages);
@@ -149,7 +164,8 @@ class BitNode extends BaseBranchNode<Children> implements AstNode {
 
   protected validate(): void {
     // Check
-    NodeValidator.isRequired(this.bitHeaderNode, 'bitHeaderNode');
+    NodeValidator.isRequired(this.bitType, 'bitType');
+    NodeValidator.isRequired(this.textFormat, 'textFormat');
   }
 }
 
