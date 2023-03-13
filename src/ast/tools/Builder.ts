@@ -3,8 +3,8 @@ import { BitmarkNode } from '../nodes/BitmarkNode';
 import { BodyNode, BodyNodeTypes } from '../nodes/BodyNode';
 import { BodyTextNode } from '../nodes/BodyTextNode';
 import { ChoiceNode } from '../nodes/ChoiceNode';
-import { ChoicesNode } from '../nodes/ChoicesNode';
 import { GapNode } from '../nodes/GapNode';
+import { QuizNode } from '../nodes/QuizNode';
 import { ResponseNode } from '../nodes/ResponseNode';
 import { SelectNode } from '../nodes/SelectNode';
 import { SelectOptionsNode } from '../nodes/SelectOptionsNode';
@@ -36,6 +36,7 @@ class Builder {
     example?: string | boolean,
     choices?: ChoiceNode[],
     responses?: ResponseNode[],
+    quizzes?: QuizNode[],
     resource?: Resource,
     body?: BodyNode,
   ): BitNode {
@@ -54,6 +55,7 @@ class Builder {
       example,
       choices,
       responses,
+      quizzes,
       resource,
       body,
     );
@@ -83,6 +85,17 @@ class Builder {
     isCaseSensitive?: boolean,
   ): ResponseNode {
     return ResponseNode.create(text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive);
+  }
+
+  quiz(
+    choiceNodes: ChoiceNode[],
+    item?: string,
+    lead?: string,
+    hint?: string,
+    instruction?: string,
+    example?: string | boolean,
+  ): QuizNode {
+    return QuizNode.create(choiceNodes, item, lead, hint, instruction, example);
   }
 
   body(bodyParts: BodyNodeTypes[]): BodyNode {

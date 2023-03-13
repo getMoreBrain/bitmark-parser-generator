@@ -15,6 +15,7 @@ export interface BitJson {
   example: string;
   choices: ChoiceBitJson[];
   responses: ResponseBitJson[];
+  quizzes: QuizBitJson[];
   body: string;
   resource: ResourceBitJson;
   placeholders: BodyBitsJson;
@@ -88,4 +89,14 @@ export interface ResponseBitJson {
   isExample: boolean;
   example: string;
   isCaseSensitive: boolean;
+}
+
+export interface QuizBitJson {
+  choices: ChoiceBitJson[];
+  item: string;
+  lead: string;
+  hint: string;
+  instruction: string;
+  isExample: boolean;
+  example: string;
 }

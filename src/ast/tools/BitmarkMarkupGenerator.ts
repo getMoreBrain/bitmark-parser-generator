@@ -2,7 +2,6 @@ import { AstNodeType } from '../AstNodeType';
 import { Ast, AstWalkCallbacks, AstNode, AstNodeInfo } from '../Ast';
 import { AgeRangesNode } from '../nodes/AgeRangesNode';
 import { AttachmentTypeNode } from '../nodes/AttachmentTypeNode';
-import { BitHeaderNode } from '../nodes/BitHeaderNode';
 import { BitNode } from '../nodes/BitNode';
 import { BitTypeNode } from '../nodes/BitTypeNode';
 import { BitmarkNode } from '../nodes/BitmarkNode';
@@ -27,6 +26,8 @@ import { PropertiesNode } from '../nodes/PropertiesNode';
 import { PropertyKeyNode } from '../nodes/PropertyKeyNode';
 import { PropertyValueNode } from '../nodes/PropertyValueNode';
 import { PropertyValuesNode } from '../nodes/PropertyValuesNode';
+import { QuizNode } from '../nodes/QuizNode';
+import { QuizzesNode } from '../nodes/QuizzesNode';
 import { ResourceNode } from '../nodes/ResourceNode';
 import { ResponseNode } from '../nodes/ResponseNode';
 import { ResponsesNode } from '../nodes/ResponsesNode';
@@ -147,26 +148,6 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
   }
 
   protected on_bit_exit(_node: BitNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // bitHeader
-
-  protected on_bitHeader_enter(_node: BitHeaderNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  protected on_bitHeader_between(
-    _node: BitHeaderNode,
-    _left: AstNode,
-    right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_bitHeader_exit(_node: BitHeaderNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
     //
   }
 
@@ -451,6 +432,50 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
   }
 
   protected on_response_exit(_node: ResponseNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  // quizzes
+
+  protected on_quizzes_enter(_node: QuizzesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeCardDivider();
+    this.writeNL();
+  }
+
+  protected on_quizzes_between(
+    _node: QuizzesNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    this.writeNL();
+    this.writeCardDivider();
+    this.writeNL();
+  }
+
+  protected on_quizzes_exit(_node: QuizzesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeNL();
+    this.writeCardDivider();
+  }
+
+  // quiz
+
+  protected on_quiz_enter(_node: QuizNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  protected on_quiz_between(
+    _node: QuizNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    this.writeNL();
+  }
+
+  protected on_quiz_exit(_node: QuizNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
     //
   }
 

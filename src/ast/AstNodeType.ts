@@ -20,6 +20,8 @@ const AstNodeType = superenum({
   choice: 'choice',
   responses: 'responses',
   response: 'response',
+  quizzes: 'quizzes',
+  quiz: 'quiz',
 
   // Terminal (leaf)
   markup: 'markup', // bitmark markup

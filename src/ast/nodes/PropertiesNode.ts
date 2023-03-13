@@ -10,7 +10,7 @@ import { PropertyValueNode } from './PropertyValueNode';
 type Children = PropertyNode[];
 
 class PropertiesNode extends BaseBranchNode<Children> implements AstNode {
-  type = AstNodeType.property;
+  type = AstNodeType.properties;
   propertyNodes: PropertyNode[];
 
   static create(properties?: Property[]): PropertiesNode | undefined {

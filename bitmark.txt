@@ -3,6 +3,27 @@ Hello World
 0,bitmark -> 0,bit -> 0,bitType(multiple-choice)
 0,bitmark -> 0,bit -> 1,textFormat(bitmark--)
 0,bitmark -> 0,bit -> 2,instruction(What color do the following beverages have?)
+0,bitmark -> 0,bit -> 3,quizzes -> 0,quiz -> 0,instruction(Milk)
+0,bitmark -> 0,bit -> 3,quizzes -> 0,quiz -> 1,choices -> 0,choice -> 0,choiceText(white)
+0,bitmark -> 0,bit -> 3,quizzes -> 0,quiz -> 1,choices -> 0,choice -> 1,isCorrect(true)
+0,bitmark -> 0,bit -> 3,quizzes -> 0,quiz -> 1,choices -> 1,choice -> 0,choiceText(red)
+0,bitmark -> 0,bit -> 3,quizzes -> 0,quiz -> 1,choices -> 2,choice -> 0,choiceText(blue)
+0,bitmark -> 0,bit -> 3,quizzes -> 1,quiz -> 0,instruction(Red Wine)
+0,bitmark -> 0,bit -> 3,quizzes -> 1,quiz -> 1,choices -> 0,choice -> 0,choiceText(red)
+0,bitmark -> 0,bit -> 3,quizzes -> 1,quiz -> 1,choices -> 0,choice -> 1,isCorrect(true)
+0,bitmark -> 0,bit -> 3,quizzes -> 1,quiz -> 1,choices -> 1,choice -> 0,choiceText(white)
+0,bitmark -> 0,bit -> 3,quizzes -> 1,quiz -> 1,choices -> 2,choice -> 0,choiceText(green)
 
 [.multiple-choice]
 [!What color do the following beverages have?]
+===
+[!Milk]
+[+white]
+[-red]
+[-blue]
+===
+[!Red Wine]
+[+red]
+[-white]
+[-green]
+===
