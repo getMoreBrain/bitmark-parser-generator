@@ -9,10 +9,10 @@ import { InstructionNode } from './InstructionNode';
 import { IsCaseSensitiveNode } from './IsCaseSensitiveNode';
 import { IsCorrectNode } from './IsCorrectNode';
 import { ItemLeadNode } from './ItemLeadNode';
-import { SelectOptionTextNode } from './SelectOptionTextNode';
+import { TextNode } from './TextNode';
 
 type Children = (
-  | SelectOptionTextNode
+  | TextNode
   | IsCorrectNode
   | ItemLeadNode
   | HintNode
@@ -23,7 +23,7 @@ type Children = (
 
 class SelectOptionNode extends BaseBranchNode<Children> implements AstNode {
   type = AstNodeType.selectOption;
-  text: SelectOptionTextNode;
+  text: TextNode;
   isCorrect: IsCorrectNode;
   itemLead?: ItemLeadNode;
   hint?: HintNode;
@@ -41,7 +41,7 @@ class SelectOptionNode extends BaseBranchNode<Children> implements AstNode {
     example?: string | boolean,
     isCaseSensitive?: boolean,
   ): SelectOptionNode {
-    const selectOptionTextNode = SelectOptionTextNode.create(text);
+    const selectOptionTextNode = TextNode.create(text);
     const isCorrectNode = IsCorrectNode.create(isCorrect ?? false) as IsCorrectNode;
     const itemLeadNode = ItemLeadNode.create(item, lead);
     const hintNode = HintNode.create(hint);
@@ -64,7 +64,7 @@ class SelectOptionNode extends BaseBranchNode<Children> implements AstNode {
   }
 
   protected constructor(
-    text: SelectOptionTextNode,
+    text: TextNode,
     isCorrect: IsCorrectNode,
     itemLead?: ItemLeadNode,
     hint?: HintNode,

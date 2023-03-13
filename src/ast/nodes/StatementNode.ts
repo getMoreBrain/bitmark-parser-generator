@@ -21,8 +21,8 @@ type Children = (
   | IsCaseSensitiveNode
 )[];
 
-class ChoiceNode extends BaseBranchNode<Children> implements AstNode {
-  type = AstNodeType.choice;
+class StatementNode extends BaseBranchNode<Children> implements AstNode {
+  type = AstNodeType.statement;
   text: TextNode;
   isCorrect: IsCorrectNode;
   itemLead?: ItemLeadNode;
@@ -40,16 +40,16 @@ class ChoiceNode extends BaseBranchNode<Children> implements AstNode {
     instruction?: string,
     example?: string | boolean,
     isCaseSensitive?: boolean,
-  ): ChoiceNode {
-    const textNode = TextNode.create(text);
+  ): StatementNode {
+    const statementTextNode = TextNode.create(text);
     const isCorrectNode = IsCorrectNode.create(isCorrect ?? false) as IsCorrectNode;
     const itemLeadNode = ItemLeadNode.create(item, lead);
     const hintNode = HintNode.create(hint);
     const instructionNode = InstructionNode.create(instruction);
     const exampleNode = ExampleNode.create(example);
     const isCaseSensitiveNode = IsCaseSensitiveNode.create(isCaseSensitive);
-    const node = new ChoiceNode(
-      textNode,
+    const node = new StatementNode(
+      statementTextNode,
       isCorrectNode,
       itemLeadNode,
       hintNode,
@@ -101,4 +101,4 @@ class ChoiceNode extends BaseBranchNode<Children> implements AstNode {
   }
 }
 
-export { ChoiceNode };
+export { StatementNode };

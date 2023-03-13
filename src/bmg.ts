@@ -121,10 +121,10 @@ class Bmg {
     // const filename = testFiles.multitxt4; // ?? resources TODO
     // const filename = testFiles.prepnote1; // OK
     // const filename = testFiles.rec1; // EMPTY INPUT
-    const filename = testFiles.seq1;
-    // const filename = testFiles.seq2;
+    // const filename = testFiles.seq1; // OK
+    // const filename = testFiles.seq2; // OK
     // const filename = testFiles.takepic1;
-    // const filename = testFiles.truefalse1;
+    const filename = testFiles.truefalse1;
     // const filename = testFiles.truefalse2;
     // const filename = testFiles.truefalse3;
     // const filename = testFiles.truefalse4;

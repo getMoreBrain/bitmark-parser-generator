@@ -4,11 +4,11 @@ import { NodeValidator } from '../tools/NodeValidator';
 
 import { BaseValueNode } from './BaseLeafNode';
 
-class SelectOptionTextNode extends BaseValueNode<string> implements AstNode {
-  type = AstNodeType.selectOptionText;
+class TextNode extends BaseValueNode<string> implements AstNode {
+  type = AstNodeType.text;
 
-  static create(text: string): SelectOptionTextNode {
-    const node = new SelectOptionTextNode(text);
+  static create(text: string): TextNode {
+    const node = new TextNode(text);
 
     node.validate();
 
@@ -20,8 +20,8 @@ class SelectOptionTextNode extends BaseValueNode<string> implements AstNode {
   }
 
   protected validate(): void {
-    NodeValidator.isNonEmptyString(this.value, 'selectOptionText');
+    NodeValidator.isNonEmptyString(this.value, 'text');
   }
 }
 
-export { SelectOptionTextNode };
+export { TextNode };

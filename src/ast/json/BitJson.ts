@@ -14,6 +14,9 @@ export interface BitJson {
   isExample: boolean;
   example: string;
   elements: ElementBitJson[];
+  statement: string;
+  isCorrect: boolean;
+  statements: StatementBitJson[];
   choices: ChoiceBitJson[];
   responses: ResponseBitJson[];
   quizzes: QuizBitJson[];
@@ -23,6 +26,18 @@ export interface BitJson {
 }
 
 export type ElementBitJson = string;
+
+export interface StatementBitJson {
+  statement: string;
+  isCorrect: boolean;
+  item: string;
+  lead: string;
+  hint: string;
+  instruction: string;
+  isExample: boolean;
+  example: string;
+  isCaseSensitive: boolean;
+}
 
 export interface ChoiceBitJson {
   choice: string;

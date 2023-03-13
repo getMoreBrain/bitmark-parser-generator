@@ -8,6 +8,7 @@ import { QuizNode } from '../nodes/QuizNode';
 import { ResponseNode } from '../nodes/ResponseNode';
 import { SelectNode } from '../nodes/SelectNode';
 import { SelectOptionNode } from '../nodes/SelectOptionNode';
+import { StatementNode } from '../nodes/StatementNode';
 import { AttachmentTypeType } from '../types/AttachmentType';
 import { BitTypeType } from '../types/BitType';
 import { Property } from '../types/Property';
@@ -35,6 +36,7 @@ class Builder {
     instruction?: string,
     example?: string | boolean,
     elements?: string[],
+    statements?: StatementNode[],
     choices?: ChoiceNode[],
     responses?: ResponseNode[],
     quizzes?: QuizNode[],
@@ -55,6 +57,7 @@ class Builder {
       instruction,
       example,
       elements,
+      statements,
       choices,
       responses,
       quizzes,
@@ -148,61 +151,18 @@ class Builder {
     return SelectOptionNode.create(text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive);
   }
 
-  // itemLead(item?: string, lead?: string): ItemLeadNode | undefined {
-  //   return ItemLeadNode.create(item, lead);
-  // }
-
-  // properties(properties?: Property[]): PropertiesNode | undefined {
-  //   return PropertiesNode.create(properties);
-  // }
-
-  // bitType(type: BitTypeType): BitTypeNode {
-  //   const node = new BitTypeNode(type);
-
-  //   return node;
-  // }
-
-  // bitBitType(type: BitBitTypeType): BitBitTypeNode {
-  //   const node = new BitBitTypeNode(type);
-
-  //   return node;
-  // }
-
-  // bitKey(key: string): BitKeyNode {
-  //   const node = new BitKeyNode(key);
-
-  //   return node;
-  // }
-
-  // bitValue(value: string | boolean): BitValueNode {
-  //   const node = new BitValueNode(value);
-
-  //   return node;
-  // }
-
-  // bitAttachmentType(type: AttachmentTypeType): BitAttachmentTypeNode {
-  //   const node = new BitAttachmentTypeNode(type);
-
-  //   return node;
-  // }
-
-  // cards(cards: BitsNode[]): BitsNode {
-  //   const node = new BitsNode(new BitNode(new BitTypeNode(BitType.cards), new BitKeyNode('')), cards);
-
-  //   return node;
-  // }
-
-  // body(parts: BitsNode[]): BitsNode {
-  //   const node = new BitsNode(new BitNode(new BitTypeNode(BitType.body), new BitKeyNode('')), parts);
-
-  //   return node;
-  // }
-
-  // text(text: string): BitsNode {
-  //   const node = new BitsNode(new BitNode(new BitTypeNode(BitType.text), new BitKeyNode(text)));
-
-  //   return node;
-  // }
+  statement(
+    text: string,
+    isCorrect: boolean,
+    item?: string,
+    lead?: string,
+    hint?: string,
+    instruction?: string,
+    example?: string | boolean,
+    isCaseSensitive?: boolean,
+  ): StatementNode {
+    return StatementNode.create(text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive);
+  }
 }
 
 const builder = new Builder();

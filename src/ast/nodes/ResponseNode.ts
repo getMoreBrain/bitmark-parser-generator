@@ -9,10 +9,10 @@ import { InstructionNode } from './InstructionNode';
 import { IsCaseSensitiveNode } from './IsCaseSensitiveNode';
 import { IsCorrectNode } from './IsCorrectNode';
 import { ItemLeadNode } from './ItemLeadNode';
-import { ResponseTextNode } from './ResponseTextNode';
+import { TextNode } from './TextNode';
 
 type Children = (
-  | ResponseTextNode
+  | TextNode
   | IsCorrectNode
   | ItemLeadNode
   | HintNode
@@ -23,7 +23,7 @@ type Children = (
 
 class ResponseNode extends BaseBranchNode<Children> implements AstNode {
   type = AstNodeType.response;
-  text: ResponseTextNode;
+  text: TextNode;
   isCorrect: IsCorrectNode;
   itemLead?: ItemLeadNode;
   hint?: HintNode;
@@ -41,7 +41,7 @@ class ResponseNode extends BaseBranchNode<Children> implements AstNode {
     example?: string | boolean,
     isCaseSensitive?: boolean,
   ): ResponseNode {
-    const responseTextNode = ResponseTextNode.create(text);
+    const textNode = TextNode.create(text);
     const isCorrectNode = IsCorrectNode.create(isCorrect ?? false) as IsCorrectNode;
     const itemLeadNode = ItemLeadNode.create(item, lead);
     const hintNode = HintNode.create(hint);
@@ -49,7 +49,7 @@ class ResponseNode extends BaseBranchNode<Children> implements AstNode {
     const exampleNode = ExampleNode.create(example);
     const isCaseSensitiveNode = IsCaseSensitiveNode.create(isCaseSensitive);
     const node = new ResponseNode(
-      responseTextNode,
+      textNode,
       isCorrectNode,
       itemLeadNode,
       hintNode,
@@ -64,7 +64,7 @@ class ResponseNode extends BaseBranchNode<Children> implements AstNode {
   }
 
   protected constructor(
-    text: ResponseTextNode,
+    text: TextNode,
     isCorrect: IsCorrectNode,
     itemLead?: ItemLeadNode,
     hint?: HintNode,

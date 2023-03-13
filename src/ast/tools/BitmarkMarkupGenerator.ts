@@ -34,11 +34,13 @@ import { ResponseNode } from '../nodes/ResponseNode';
 import { ResponsesNode } from '../nodes/ResponsesNode';
 import { SelectNode } from '../nodes/SelectNode';
 import { SelectOptionNode } from '../nodes/SelectOptionNode';
-import { SelectOptionTextNode } from '../nodes/SelectOptionTextNode';
 import { SelectOptionsNode } from '../nodes/SelectOptionsNode';
 import { SolutionNode } from '../nodes/SolutionNode';
 import { SolutionsNode } from '../nodes/SolutionsNode';
+import { StatementNode } from '../nodes/StatementNode';
+import { StatementsNode } from '../nodes/StatementsNode';
 import { TextFormatNode } from '../nodes/TextFormatNode';
+import { TextNode } from '../nodes/TextNode';
 import { TextFormat } from '../types/TextFormat';
 import { ArticleOnlineResource } from '../types/resources/ArticleOnlineResource';
 import { ResourceType } from '../types/resources/ResouceType';
@@ -374,6 +376,52 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
     //
   }
 
+  // statements
+
+  protected on_statements_enter(_node: StatementsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  protected on_statements_between(
+    _node: StatementsNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    this.writeNL();
+  }
+
+  protected on_statements_exit(_node: StatementsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  // statement
+
+  protected on_statement_enter(node: StatementNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    if (node.isCorrect.value) {
+      this.writeOPP();
+    } else {
+      this.writeOPM();
+    }
+    this.write(node.text.value);
+    this.writeCL();
+  }
+
+  protected on_statement_between(
+    _node: StatementNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    //
+  }
+
+  protected on_statement_exit(_node: StatementNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
   // choices
 
   protected on_choices_enter(_node: ChoicesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
@@ -660,11 +708,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
 
   // selectOptionText
 
-  protected on_selectOptionText_enter(
-    node: SelectOptionTextNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
+  protected on_selectOptionText_enter(node: TextNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
     if (node.value) {
       //
     }
@@ -861,38 +905,6 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
     this.write('\n');
   }
 
-  // protected isBodyNode(node: BitNode): boolean {
-  //   if (!node || node.type !== AstNodeType.bit) return false;
-  //   return node.bitTypeNode?.bitType === BitType.body;
-  // }
-
-  // protected isTextNode(node: BitNode): boolean {
-  //   if (!node || node.type !== AstNodeType.bit) return false;
-  //   return node.bitTypeNode?.bitType === BitType.text;
-  // }
-
-  // protected isCardsNode(node: BitNode): boolean {
-  //   if (!node || node.type !== AstNodeType.bit) return false;
-  //   if (node.bitTypeNode) {
-  //     switch (node.bitTypeNode.bitType) {
-  //       case BitType.cards:
-  //         return true;
-  //     }
-  //   }
-  //   return false;
-  // }
-
-  // protected isQuizNode(node: BitNode): boolean {
-  //   if (!node || node.type !== AstNodeType.bit) return false;
-  //   if (node.bitTypeNode) {
-  //     switch (node.bitTypeNode.bitType) {
-  //       case BitType.quiz:
-  //         return true;
-  //     }
-  //   }
-  //   return false;
-  // }
-
   protected isWriteTextFormat(bitValue: string): boolean {
     const isMinusMinus = TextFormat.fromValue(bitValue) === TextFormat.bitmarkMinusMinus;
     const writeFormat = !isMinusMinus || this.options.explicitTextFormat;
@@ -943,275 +955,3 @@ class AstWalker implements AstWalkCallbacks {
 }
 
 export { BitmarkMarkupGenerator };
-
-// // bits
-
-// protected on_bit_enter(node: BitNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-//   // const isCardBits = this.isCardNode(node.bitNode);
-//   // if (isCardBits) {
-//   //   this.writeCardDivider();
-//   // }
-// }
-
-// protected on_bits_between(
-//   node: BitsNode,
-//   _left: AstNode,
-//   _right: AstNode,
-//   _parent: AstNode | undefined,
-//   _route: AstNodeInfo[],
-// ): void {
-//   const isTopLevelBits = this.isTopLevelBits(node);
-//   const isCards = this.isCardsNode(node.bitNode);
-//   const isQuiz = this.isQuizNode(node.bitNode);
-
-//   if (isTopLevelBits || isQuiz) {
-//     this.writeNL();
-//   } else if (isCards) {
-//     this.writeCardDivider();
-//   }
-// }
-
-// protected on_bits_exit(node: BitsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-//   const isCards = this.isCardsNode(node.bitNode);
-//   if (isCards) {
-//     this.writeCardDivider();
-//   }
-
-//   const isQuiz = this.isQuizNode(node.bitNode);
-//   if (isQuiz) {
-//     this.writeNL();
-//   }
-// }
-
-// // bit
-
-// protected on_bit_enter(node: BitNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-//   const isHiddenBit = this.isHiddenBitNode(node);
-
-//   if (!isHiddenBit) {
-//     this.writeOP();
-//   }
-// }
-
-// protected on_bit_between(
-//   _node: BitNode,
-//   _left: AstNode,
-//   _right: AstNode,
-//   _parent: AstNode | undefined,
-//   _route: AstNodeInfo[],
-// ): void {
-//   //
-// }
-
-// protected on_bit_exit(node: BitNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-//   const isHiddenBit = this.isHiddenBitNode(node);
-
-//   if (!isHiddenBit) {
-//     this.writeCL();
-//   }
-// }
-
-// //
-// // Terminal nodes (leaves)
-// //
-
-// // bitType
-
-// protected on_bitType_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-//   const bitTypeText = BitTypeMap.fromKey(node.value) ?? '';
-//   this.writeString(bitTypeText);
-// }
-
-// // bitKey
-
-// protected on_bitKey_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-//   this.writeString(node.value);
-// }
-
-// // bitValue
-
-// protected on_bitValue_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-//   if (node.value) {
-//     const write = this.isWriteFormat(node.value);
-
-//     if (write) {
-//       if (node.value !== true) {
-//         this.writeColon();
-//         this.writeString(node.value);
-//       }
-//     }
-//   }
-// }
-
-// // bitAttachmentType
-
-// protected on_bitAttachmentType_enter(node: AstNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-//   if (node.value) {
-//     this.writeAmpersand();
-//     this.writeString(node.value);
-//   }
-// }
-
-// // END NODE HANDLERS
-
-// //
-// // WRITE FUNCTIONS
-// //
-
-// protected writeString(s?: string): void {
-//   if (s != null) this.write(s);
-// }
-
-// // protected writeOPBUL(): void {
-// //   this.write('[•');
-// // }
-
-// // protected writeOPESC(): void {
-// //   this.write('[^');
-// // }
-
-// // protected writeOPRANGLE(): void {
-// //   this.write('[►');
-// // }
-
-// // protected writeOPDANGLE(): void {
-// //   this.write('[▼');
-// // }
-
-// // protected writeOPD(): void {
-// //   this.write('[.');
-// // }
-
-// // protected writeOPU(): void {
-// //   this.write('[_');
-// // }
-
-// // protected writeOPB(): void {
-// //   this.write('[!');
-// // }
-
-// // protected writeOPQ(): void {
-// //   this.write('[?');
-// // }
-
-// // protected writeOPA(): void {
-// //   this.write('[@');
-// // }
-
-// // protected writeOPP(): void {
-// //   this.write('[+');
-// // }
-
-// // protected writeOPM(): void {
-// //   this.write('[-');
-// // }
-
-// // protected writeOPS(): void {
-// //   this.write('[\\');
-// // }
-
-// // protected writeOPR(): void {
-// //   this.write('[*');
-// // }
-
-// // protected writeOPC(): void {
-// //   this.write('[%');
-// // }
-
-// protected writeOP(): void {
-//   this.write('[');
-// }
-
-// protected writeCL(): void {
-//   this.write(']');
-// }
-
-// protected writeAmpersand(): void {
-//   this.write('&');
-// }
-
-// protected writeColon(): void {
-//   this.write(':');
-// }
-
-// // protected writeDoubleColon(): void {
-// //   this.write('::');
-// // }
-
-// protected writeCardDivider(): void {
-//   this.write('===');
-// }
-
-// protected writeNL(): void {
-//   this.write('\n');
-// }
-
-// protected isTopLevelBits(node: BitsNode): boolean {
-//   if (node.type !== AstNodeType.bits) return false;
-
-//   if (node.bitNode && node.bitNode.bitTypeNode) {
-//     switch (node.bitNode.bitTypeNode.bitType) {
-//       case BitType.bit:
-//         // case BitType.statementFalse:
-//         return true;
-//     }
-//   }
-
-//   return false;
-// }
-
-// // protected isTopLevelBit(node: BitNode): boolean {
-// //   if (node.type !== AstNodeType.bit) return false;
-
-// //   if (node.bitTypeNode) {
-// //     switch (node.bitTypeNode.bitType) {
-// //       case BitType.bit:
-// //       case BitType.property:
-// //         return true;
-// //     }
-// //   }
-
-// //   return false;
-// // }
-
-// protected isHiddenBitNode(node: BitNode): boolean {
-//   return this.isBodyNode(node) || this.isTextNode(node) || this.isQuizNode(node) || this.isCardsNode(node);
-// }
-
-// protected isBodyNode(node: BitNode): boolean {
-//   if (!node || node.type !== AstNodeType.bit) return false;
-//   return node.bitTypeNode?.bitType === BitType.body;
-// }
-
-// protected isTextNode(node: BitNode): boolean {
-//   if (!node || node.type !== AstNodeType.bit) return false;
-//   return node.bitTypeNode?.bitType === BitType.text;
-// }
-
-// protected isCardsNode(node: BitNode): boolean {
-//   if (!node || node.type !== AstNodeType.bit) return false;
-//   if (node.bitTypeNode) {
-//     switch (node.bitTypeNode.bitType) {
-//       case BitType.cards:
-//         return true;
-//     }
-//   }
-//   return false;
-// }
-
-// protected isQuizNode(node: BitNode): boolean {
-//   if (!node || node.type !== AstNodeType.bit) return false;
-//   if (node.bitTypeNode) {
-//     switch (node.bitTypeNode.bitType) {
-//       case BitType.quiz:
-//         return true;
-//     }
-//   }
-//   return false;
-// }
-
-// protected isWriteFormat(bitValue: string): boolean {
-//   const isMinusMinus = TextFormat.fromValue(bitValue) === TextFormat.bitmarkMinusMinus;
-//   const writeFormat = !isMinusMinus || this.options.explicitTextFormat;
-//   return !!writeFormat;
-// }

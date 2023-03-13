@@ -1,4 +1,4 @@
-import { BitJson, ChoiceBitJson, QuizBitJson, ResponseBitJson } from '../json/BitJson';
+import { BitJson, ChoiceBitJson, QuizBitJson, ResponseBitJson, StatementBitJson } from '../json/BitJson';
 import { BitWrapperJson } from '../json/BitWrapperJson';
 import { GapBitJson, BodyBitJson, BodyBitsJson, SelectBitJson, SelectOptionBitJson } from '../json/BodyBitJson';
 import { BitNode } from '../nodes/BitNode';
@@ -11,6 +11,7 @@ import { QuizNode } from '../nodes/QuizNode';
 import { ResponseNode } from '../nodes/ResponseNode';
 import { SelectNode } from '../nodes/SelectNode';
 import { SelectOptionNode } from '../nodes/SelectOptionNode';
+import { StatementNode } from '../nodes/StatementNode';
 import { AttachmentTypeType } from '../types/AttachmentType';
 import { BitType, BitTypeType } from '../types/BitType';
 import { BodyBitType } from '../types/BodyBitType';
@@ -172,6 +173,9 @@ class BitmarkJson {
       isExample,
       example,
       elements,
+      statement,
+      isCorrect,
+      statements,
       choices,
       responses,
       quizzes,
@@ -185,6 +189,9 @@ class BitmarkJson {
 
     // Attachment type (TODO, not in JSON? ... or should it be derived from resource?)
     const attachmentType = undefined;
+
+    //+-statement
+    const statementNodes = this.statementBitsToAst(statement, isCorrect, statements);
 
     //+-choice
     const choiceNodes = this.choiceBitsToAst(choices);
@@ -213,6 +220,7 @@ class BitmarkJson {
       instruction,
       example || isExample,
       elements,
+      statementNodes,
       choiceNodes,
       responseNodes,
       quizNodes,
@@ -221,6 +229,38 @@ class BitmarkJson {
     );
 
     return bitNode;
+  }
+
+  private statementBitsToAst(
+    statement?: string,
+    isCorrect?: boolean,
+    statements?: StatementBitJson[],
+  ): StatementNode[] {
+    const nodes: StatementNode[] = [];
+
+    if (statement) {
+      const node = Builder.statement(statement, isCorrect ?? false);
+      nodes.push(node);
+    }
+
+    if (Array.isArray(statements)) {
+      for (const s of statements) {
+        const { statement, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = s;
+        const node = Builder.statement(
+          statement,
+          isCorrect,
+          item,
+          lead,
+          hint,
+          instruction,
+          example || isExample,
+          isCaseSensitive,
+        );
+        nodes.push(node);
+      }
+    }
+
+    return nodes;
   }
 
   private choiceBitsToAst(choices?: ChoiceBitJson[]): ChoiceNode[] {
