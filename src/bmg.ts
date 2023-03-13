@@ -9,7 +9,7 @@ Copyright ©2023 Get More Brain
 import fs from 'fs-extra';
 
 import { BitmarkJson } from './ast/tools/BitmarkJson';
-import { StreamBitmarkGenerator } from './ast/tools/StreamBitmarkGenerator';
+import { StreamBitmapMarkupGenerator } from './ast/tools/StreamBitmapMarkupGenerator';
 import { testFiles } from './testFiles';
 
 class Bmg {
@@ -23,7 +23,7 @@ class Bmg {
 
     // const filename = testFiles.learningPath1;
     // const filename = testFiles.learningPath3;
-    // const filename = testFiles.resourceAll;
+    // const filename = testFiles.resourceAll; // ?? resources TODO
     // const filename = testFiles.utfgpun;
     // const filename = testFiles.learningPath4;
     // const filename = testFiles.learningPath5;
@@ -33,26 +33,26 @@ class Bmg {
     // const filename = testFiles.book2;
     // const filename = testFiles.page1;
     // const filename = testFiles.page2;
-    // const filename = testFiles.article1;
-    // const filename = testFiles.article2;
-    // const filename = testFiles.assign1;
+    // const filename = testFiles.article1; // ?? &image excess resources
+    // const filename = testFiles.article2; // ?? &image excess resources
+    // const filename = testFiles.assign1; // COMPLETED
     // const filename = testFiles.botinterview1;
     // const filename = testFiles.botinterview2;
     // const filename = testFiles.chat1;
     // const filename = testFiles.chat2;
     // const filename = testFiles.conversation1;
-    // const filename = testFiles.cloze;
-    // const filename = testFiles.cloze2;
-    // const filename = testFiles.cloze3;
-    // const filename = testFiles.cloze4;
-    // const filename = testFiles.cloze5;
-    // const filename = testFiles.cloze10;
-    // const filename = testFiles.cloze11;
-    // const filename = testFiles.cloze12;
-    // const filename = testFiles.cloze13;
-    // const filename = testFiles.clozeEmoji;
-    // const filename = testFiles.clozeEmoji2;
-    // const filename = testFiles.clozeig;
+    // const filename = testFiles.cloze; // COMPLETED
+    // const filename = testFiles.cloze2; // COMPLETED
+    // const filename = testFiles.cloze3; // COMPLETED
+    // const filename = testFiles.cloze4; // COMPLETED
+    // const filename = testFiles.cloze5; // COMPLETED
+    // const filename = testFiles.cloze10; // ?? @example
+    // const filename = testFiles.cloze11; // COMPLETED
+    // const filename = testFiles.cloze12; // COMPLETED
+    // const filename = testFiles.cloze13; // ?? @example
+    // const filename = testFiles.clozeEmoji; // COMPLETED
+    // const filename = testFiles.clozeEmoji2; // COMPLETED
+    // const filename = testFiles.clozeig; // COMPLETED
     // const filename = testFiles.clozenmultx;
     // const filename = testFiles.clozesg1;
     // const filename = testFiles.corr1;
@@ -60,7 +60,7 @@ class Bmg {
     // const filename = testFiles.corr3;
     // const filename = testFiles.docup1;
     // const filename = testFiles.essay1;
-    const filename = testFiles.essay2;
+    // const filename = testFiles.essay2;
     // const filename = testFiles.essay3;
     // const filename = testFiles.essay4;
     // const filename = testFiles.essay5;
@@ -103,7 +103,7 @@ class Bmg {
     // const filename = testFiles.matchArticle1;
     // const filename = testFiles.matchMatrix1;
     // const filename = testFiles.matchMatrix3;
-    // const filename = testFiles.multich_1;
+    const filename = testFiles.multich_1;
     // const filename = testFiles.multich_1_2;
     // const filename = testFiles.multires_1;
     // const filename = testFiles.multires_1_2;
@@ -163,13 +163,13 @@ class Bmg {
     const bitmarkAst = BitmarkJson.toAst(json);
 
     // Generate markup code from AST
-    const generator = new StreamBitmarkGenerator(
+    const generator = new StreamBitmapMarkupGenerator(
       './bitmark.txt',
       {
         flags: 'w',
       },
       {
-        explicitTextFormat: true,
+        explicitTextFormat: false,
       },
     );
 

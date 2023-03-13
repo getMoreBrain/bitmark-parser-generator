@@ -6,14 +6,51 @@ const AstNodeType = superenum({
   // Non-terminal
   bitmark: 'bitmark', // bitmark
   bit: 'bit', // bit
-  bits: 'bits', // bit plus its child bits
+  bitHeader: 'bitHeader', // bitHeader
+  properties: 'properties',
+  property: 'property',
+  propertyValues: 'propertyValues',
+  itemLead: 'itemLead',
+  body: 'body',
+  gap: 'gap',
+  select: 'select',
+  solutions: 'solutions',
+  selectOptions: 'selectOptions',
+  selectOption: 'selectOption',
+  choices: 'choices',
+  choice: 'choice',
 
-  // Terminal
-  bitType: 'bitType', // bit type (e.g. . % ? ! + - _)
-  bitBitType: 'bitBitType', // bit bit type (e.g. article, cloze)
-  bitKey: 'bitKey', // bitKey (a string that represents the text of a bit after the type)
-  bitValue: 'bitValue', // bitValue (a string that represents the text of a bit after the bitKey)
-  bitAttachmentType: 'bitAttachmentType', // bit attachment type
+  // Terminal (leaf)
+  markup: 'markup', // bitmark markup
+  bitType: 'bitType', // bit type
+  attachmentType: 'attachmentType', // bit attachment type
+  textFormat: 'textFormat',
+  item: 'item',
+  lead: 'lead',
+  hint: 'hint',
+  instruction: 'instruction',
+  example: 'example',
+  bodyText: 'bodyText',
+  solution: 'solution',
+  prefix: 'prefix',
+  postfix: 'postfix',
+  isCaseSensitive: 'isCaseSensitive',
+  isCorrect: 'isCorrect',
+  selectOptionText: 'selectOptionText',
+  choiceText: 'choiceText',
+  propertyKey: 'propertyKey',
+  propertyValue: 'propertyValue',
+  ids: 'ids',
+  ageRanges: 'ageRanges',
+  languages: 'languages',
+  resource: 'resource',
+  // resourceType: 'resourceType',
+  // imageResource: 'imageResource',
+  // audioResource: 'audioResource',
+  // videoResource: 'videoResource',
+  // text: 'text',
+  // number: 'number',
+  // boolean: 'boolean',
 });
 
 export type AstNodeTypeType = EnumType<typeof AstNodeType>;

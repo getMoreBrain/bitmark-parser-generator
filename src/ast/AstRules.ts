@@ -1,11 +1,11 @@
 import { ArticleResourceFormat } from './types/ArticleResourceFormat';
 import { AudioResourceFormat } from './types/AudioResourceFormat';
 import { BitBitType, BitBitTypeKeys, BitBitTypeType } from './types/BitBitType';
-import { BitResourceType, BitResourceTypeKeys, BitResourceTypeType } from './types/BitResouceType';
-import { BitTextFormat } from './types/BitTextFormat';
 import { BodyBitType, BodyBitTypeKeys, BodyBitTypeType } from './types/BodyBitType';
 import { ImageResourceFormat } from './types/ImageResourceFormat';
+import { TextFormat } from './types/TextFormat';
 import { VideoResourceFormat } from './types/VideoResourceFormat';
+import { ResourceType, ResourceTypeKeys, ResourceTypeType } from './types/resources/ResouceType';
 
 import {
   articleOnlineFormatValidator,
@@ -48,7 +48,7 @@ type BodyBitDefinitions = {
 };
 
 type ResourceDefinitions = {
-  [key in BitResourceTypeKeys]: PropertyDefinition[];
+  [key in ResourceTypeKeys]: PropertyDefinition[];
 };
 
 // PROPERTIES
@@ -61,7 +61,7 @@ const bodyBitTypePropertyCreator = (type: BodyBitTypeType): PropertyDefinition =
   return { key: 'type', defaultValue: type, validator: bodyBitTypeValidator };
 };
 
-const bitResourceTypePropertyCreator = (type: BitResourceTypeType): PropertyDefinition => {
+const bitResourceTypePropertyCreator = (type: ResourceTypeType): PropertyDefinition => {
   return { key: 'type', defaultValue: type, validator: bitResourceTypeValidator };
 };
 
@@ -73,7 +73,7 @@ const Properties = {
 
   // BIT / STANDARD
   // Bit standard properties
-  format: { key: 'format', defaultValue: BitTextFormat.bitmarkMinusMinus, validator: bitTextFormatValidator },
+  format: { key: 'format', defaultValue: TextFormat.bitmarkMinusMinus, validator: bitTextFormatValidator },
   body: { key: 'body', defaultValue: '', validator: stringValidator },
   item: { key: 'item', defaultValue: '', validator: stringValidator },
   lead: { key: 'lead', defaultValue: '', validator: stringValidator },
@@ -761,23 +761,23 @@ const SELECT_OPTIONS_DEFINITIONS: PropertyDefinition[] = [Properties.text, Prope
 
 const RESOURCE_DEFINITIONS: ResourceDefinitions = {
   image: [
-    bitResourceTypePropertyCreator(BitResourceType.image),
+    bitResourceTypePropertyCreator(ResourceType.image),
     Properties.imageFormat,
     Properties.src,
     //
   ],
-  audio: [bitResourceTypePropertyCreator(BitResourceType.audio), Properties.audioFormat],
+  audio: [bitResourceTypePropertyCreator(ResourceType.audio), Properties.audioFormat],
   article: [
-    bitResourceTypePropertyCreator(BitResourceType.article),
+    bitResourceTypePropertyCreator(ResourceType.article),
     Properties.articleOnlineFormat,
     Properties.url,
     Properties.body,
   ],
   articleOnline: [
-    bitResourceTypePropertyCreator(BitResourceType.articleOnline),
+    bitResourceTypePropertyCreator(ResourceType.articleOnline),
     // TODO
   ],
-  app: [bitResourceTypePropertyCreator(BitResourceType.app), Properties.app],
+  app: [bitResourceTypePropertyCreator(ResourceType.app), Properties.app],
 };
 
 export {

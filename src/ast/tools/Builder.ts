@@ -1,87 +1,163 @@
-import { BitAttachmentTypeNode } from '../nodes/AttachmentTypeNode';
-import { BitBitTypeNode } from '../nodes/BitBitTypeNode';
-import { BitKeyNode } from '../nodes/BitKeyNode';
 import { BitNode } from '../nodes/BitNode';
-import { BitTypeNode } from '../nodes/BitTypeNode';
-import { BitValueNode } from '../nodes/BitValueNode';
 import { BitmarkNode } from '../nodes/BitmarkNode';
-import { BitsNode } from '../nodes/BitsNode';
-import { BitAttachmentTypeType } from '../types/BitAttachmentType';
-import { BitBitTypeType } from '../types/BitBitType';
+import { BodyNode, BodyNodeTypes } from '../nodes/BodyNode';
+import { BodyTextNode } from '../nodes/BodyTextNode';
+import { ChoiceNode } from '../nodes/ChoiceNode';
+import { ChoicesNode } from '../nodes/ChoicesNode';
+import { GapNode } from '../nodes/GapNode';
+import { SelectNode } from '../nodes/SelectNode';
+import { SelectOptionsNode } from '../nodes/SelectOptionsNode';
+import { AttachmentTypeType } from '../types/AttachmentType';
 import { BitTypeType } from '../types/BitType';
-import { BitType } from '../types/BitType';
+import { Property } from '../types/Property';
+import { TextFormatType } from '../types/TextFormat';
+import { Resource } from '../types/resources/Resource';
 
 class Builder {
-  bitmark(bits: BitsNode[]): BitmarkNode {
-    const node = new BitmarkNode(bits);
-
-    return node;
-  }
-
-  bits(bitNode: BitNode, bitsNodes?: BitsNode[]): BitsNode {
-    const node = new BitsNode(bitNode, bitsNodes);
+  bitmark(bits: BitNode[]): BitmarkNode {
+    const node = BitmarkNode.create(bits);
 
     return node;
   }
 
   bit(
-    bitTypeNode: BitTypeNode,
-    bitKeyNode: BitKeyNode,
-    bitValueNode?: BitValueNode,
-    attachmentTypeNode?: BitAttachmentTypeNode,
+    bitType: BitTypeType,
+    textFormat?: TextFormatType,
+    attachmentType?: AttachmentTypeType,
+    ids?: string | string[],
+    ageRanges?: number | number[],
+    languages?: string | string[],
+    properties?: Property[],
+    item?: string,
+    lead?: string,
+    hint?: string,
+    instruction?: string,
+    example?: string | boolean,
+    choices?: ChoiceNode[],
+    resource?: Resource,
+    body?: BodyNode,
   ): BitNode {
-    const node = new BitNode(bitTypeNode, bitKeyNode, bitValueNode, attachmentTypeNode);
-
-    return node;
+    return BitNode.create(
+      bitType,
+      textFormat,
+      attachmentType,
+      ids,
+      ageRanges,
+      languages,
+      properties,
+      item,
+      lead,
+      hint,
+      instruction,
+      example,
+      choices,
+      resource,
+      body,
+    );
   }
 
-  bitType(type: BitTypeType): BitTypeNode {
-    const node = new BitTypeNode(type);
-
-    return node;
+  choice(
+    text: string,
+    isCorrect: boolean,
+    item?: string,
+    lead?: string,
+    hint?: string,
+    instruction?: string,
+    example?: string | boolean,
+    isCaseSensitive?: boolean,
+  ): ChoiceNode {
+    return ChoiceNode.create(text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive);
   }
 
-  bitBitType(type: BitBitTypeType): BitBitTypeNode {
-    const node = new BitBitTypeNode(type);
-
-    return node;
+  body(bodyParts: BodyNodeTypes[]): BodyNode {
+    return BodyNode.create(bodyParts);
   }
 
-  bitKey(key: string): BitKeyNode {
-    const node = new BitKeyNode(key);
-
-    return node;
+  bodyText(text: string): BodyTextNode {
+    return BodyTextNode.create(text);
   }
 
-  bitValue(value: string | boolean): BitValueNode {
-    const node = new BitValueNode(value);
-
-    return node;
+  gap(
+    solutions: string[],
+    item?: string,
+    lead?: string,
+    hint?: string,
+    instruction?: string,
+    example?: string | boolean,
+    isCaseSensitive?: boolean,
+  ): GapNode {
+    return GapNode.create(solutions, item, lead, hint, instruction, example, isCaseSensitive);
   }
 
-  bitAttachmentType(type: BitAttachmentTypeType): BitAttachmentTypeNode {
-    const node = new BitAttachmentTypeNode(type);
-
-    return node;
+  select(
+    optionsNode: SelectOptionsNode,
+    prefix?: string,
+    postfix?: string,
+    item?: string,
+    lead?: string,
+    hint?: string,
+    instruction?: string,
+    example?: string | boolean,
+    isCaseSensitive?: boolean,
+  ): SelectNode {
+    return SelectNode.create(optionsNode, prefix, postfix, item, lead, hint, instruction, example, isCaseSensitive);
   }
 
-  cards(cards: BitsNode[]): BitsNode {
-    const node = new BitsNode(new BitNode(new BitTypeNode(BitType.cards), new BitKeyNode('')), cards);
+  // itemLead(item?: string, lead?: string): ItemLeadNode | undefined {
+  //   return ItemLeadNode.create(item, lead);
+  // }
 
-    return node;
-  }
+  // properties(properties?: Property[]): PropertiesNode | undefined {
+  //   return PropertiesNode.create(properties);
+  // }
 
-  body(parts: BitsNode[]): BitsNode {
-    const node = new BitsNode(new BitNode(new BitTypeNode(BitType.body), new BitKeyNode('')), parts);
+  // bitType(type: BitTypeType): BitTypeNode {
+  //   const node = new BitTypeNode(type);
 
-    return node;
-  }
+  //   return node;
+  // }
 
-  text(text: string): BitsNode {
-    const node = new BitsNode(new BitNode(new BitTypeNode(BitType.text), new BitKeyNode(text)));
+  // bitBitType(type: BitBitTypeType): BitBitTypeNode {
+  //   const node = new BitBitTypeNode(type);
 
-    return node;
-  }
+  //   return node;
+  // }
+
+  // bitKey(key: string): BitKeyNode {
+  //   const node = new BitKeyNode(key);
+
+  //   return node;
+  // }
+
+  // bitValue(value: string | boolean): BitValueNode {
+  //   const node = new BitValueNode(value);
+
+  //   return node;
+  // }
+
+  // bitAttachmentType(type: AttachmentTypeType): BitAttachmentTypeNode {
+  //   const node = new BitAttachmentTypeNode(type);
+
+  //   return node;
+  // }
+
+  // cards(cards: BitsNode[]): BitsNode {
+  //   const node = new BitsNode(new BitNode(new BitTypeNode(BitType.cards), new BitKeyNode('')), cards);
+
+  //   return node;
+  // }
+
+  // body(parts: BitsNode[]): BitsNode {
+  //   const node = new BitsNode(new BitNode(new BitTypeNode(BitType.body), new BitKeyNode('')), parts);
+
+  //   return node;
+  // }
+
+  // text(text: string): BitsNode {
+  //   const node = new BitsNode(new BitNode(new BitTypeNode(BitType.text), new BitKeyNode(text)));
+
+  //   return node;
+  // }
 }
 
 const builder = new Builder();

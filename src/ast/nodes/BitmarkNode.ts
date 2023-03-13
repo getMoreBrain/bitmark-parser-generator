@@ -1,18 +1,36 @@
 import { AstNodeType } from '../AstNodeType';
 import { AstNode } from '../Ast';
+import { NodeValidator } from '../tools/NodeValidator';
 
-import { BitsNode } from './BitsNode';
+import { BaseBranchNode } from './BaseBranchNode';
+import { BitNode } from './BitNode';
 
-class BitmarkNode implements AstNode {
+type Children = BitNode[];
+
+class BitmarkNode extends BaseBranchNode<Children> implements AstNode {
   type = AstNodeType.bitmark;
-  bits: BitsNode[];
+  bits: BitNode[];
 
-  constructor(bits: BitsNode[]) {
+  static create(bits: BitNode[]): BitmarkNode {
+    const node = new BitmarkNode(bits);
+
+    node.validate();
+
+    return node;
+  }
+
+  protected constructor(bits: BitNode[]) {
+    super();
     this.bits = bits;
   }
 
-  get children(): BitsNode[] {
+  protected buildChildren(): Children {
     return [...this.bits];
+  }
+
+  protected validate(): void {
+    // Check
+    NodeValidator.isRequired(this.bits, 'bits');
   }
 }
 

@@ -1,10 +1,25 @@
 Hello World
 
-0,bitmark -> 0,bits -> 0,bit -> 0,bitType(bit)
-0,bitmark -> 0,bits -> 0,bit -> 1,bitKey(essay)
-0,bitmark -> 0,bits -> 0,bit -> 2,bitValue(bitmark--)
-0,bitmark -> 0,bits -> 1,bits -> 0,bit -> 0,bitType(instruction)
-0,bitmark -> 0,bits -> 1,bits -> 0,bit -> 1,bitKey(Beschreiben Sie die Grafik. Was haben Sie erwartet, was hat Sie überrascht?)
+0,bitmark -> 0,bit -> 0,bitHeader -> 0,bitType(multiple-choice-1)
+0,bitmark -> 0,bit -> 0,bitHeader -> 1,textFormat(bitmark--)
+0,bitmark -> 0,bit -> 1,itemLead -> 0,item(321x)
+0,bitmark -> 0,bit -> 2,hint(Cows produce milk.)
+0,bitmark -> 0,bit -> 3,instruction(What color is milk?)
+0,bitmark -> 0,bit -> 4,choices -> 0,choice -> 0,choiceText(white)
+0,bitmark -> 0,bit -> 4,choices -> 0,choice -> 1,isCorrect(true)
+0,bitmark -> 0,bit -> 4,choices -> 0,choice -> 2,hint(cow)
+0,bitmark -> 0,bit -> 4,choices -> 0,choice -> 3,instruction(color of milk)
+0,bitmark -> 0,bit -> 4,choices -> 1,choice -> 0,choiceText(red)
+0,bitmark -> 0,bit -> 4,choices -> 1,choice -> 2,hint(snake)
+0,bitmark -> 0,bit -> 4,choices -> 1,choice -> 3,instruction(color of snake)
+0,bitmark -> 0,bit -> 4,choices -> 2,choice -> 0,choiceText(blue)
+0,bitmark -> 0,bit -> 4,choices -> 2,choice -> 2,hint(spider)
+0,bitmark -> 0,bit -> 4,choices -> 2,choice -> 3,instruction(color of sky)
 
-[.essay:bitmark--]
-[!Beschreiben Sie die Grafik. Was haben Sie erwartet, was hat Sie überrascht?]
+[.multiple-choice-1]
+[%321x]
+[?Cows produce milk.]
+[!What color is milk?]
+[+white][?cow][!color of milk]
+[+red][?snake][!color of snake]
+[+blue][?spider][!color of sky]

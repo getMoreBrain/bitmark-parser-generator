@@ -3,11 +3,11 @@ import { stringUtils } from './tools/StringUtils';
 import { ArticleResourceFormat } from './types/ArticleResourceFormat';
 import { AudioResourceFormat } from './types/AudioResourceFormat';
 import { BitBitType } from './types/BitBitType';
-import { BitResourceType } from './types/BitResouceType';
-import { BitTextFormat } from './types/BitTextFormat';
 import { BodyBitType } from './types/BodyBitType';
 import { ImageResourceFormat } from './types/ImageResourceFormat';
+import { TextFormat } from './types/TextFormat';
 import { VideoResourceFormat } from './types/VideoResourceFormat';
+import { ResourceType } from './types/resources/ResouceType';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type Validator = (value: any) => boolean;
@@ -44,11 +44,11 @@ const bodyBitTypeValidator = (value: string): boolean => {
 };
 
 const bitResourceTypeValidator = (value: string): boolean => {
-  return !!BitResourceType.fromValue(value);
+  return !!ResourceType.fromValue(value);
 };
 
 const bitTextFormatValidator = (value: string): boolean => {
-  return !!BitTextFormat.fromValue(value);
+  return !!TextFormat.fromValue(value);
 };
 
 const placeholdersValidator = (value: string[]): boolean => {

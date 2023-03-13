@@ -1,18 +1,30 @@
-import { AstNodeType, AstNodeTypeType } from '../AstNodeType';
+import { AstNodeType } from '../AstNodeType';
 import { AstNode } from '../Ast';
-import { BitAttachmentTypeType } from '../types/BitAttachmentType';
+import { AttachmentType, AttachmentTypeType } from '../types/AttachmentType';
 
-class BitAttachmentTypeNode implements AstNode {
-  type: AstNodeTypeType = AstNodeType.bitAttachmentType;
-  bitAttachmentType: BitAttachmentTypeType;
+import { BaseValueNode } from './BaseLeafNode';
 
-  constructor(bitAttachmentType: BitAttachmentTypeType) {
-    this.bitAttachmentType = bitAttachmentType;
+class AttachmentTypeNode extends BaseValueNode<AttachmentTypeType> implements AstNode {
+  type = AstNodeType.attachmentType;
+
+  static create(attachmentType?: AttachmentTypeType): AttachmentTypeNode | undefined {
+    const node = attachmentType ? new AttachmentTypeNode(attachmentType) : undefined;
+    if (node) node.validate();
+
+    return node;
   }
 
-  get value(): BitAttachmentTypeType {
-    return this.bitAttachmentType;
+  protected constructor(attachmentType: AttachmentTypeType) {
+    super(attachmentType);
+  }
+
+  protected validate(): void {
+    // Check type
+    const type = AttachmentType.fromValue(this.value);
+    if (!type) {
+      throw new Error(`Invalid attachment type: ${this.value}`);
+    }
   }
 }
 
-export { BitAttachmentTypeNode };
+export { AttachmentTypeNode };
