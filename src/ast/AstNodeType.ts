@@ -18,6 +18,8 @@ const AstNodeType = superenum({
   selectOption: 'selectOption',
   choices: 'choices',
   choice: 'choice',
+  responses: 'responses',
+  response: 'response',
 
   // Terminal (leaf)
   markup: 'markup', // bitmark markup
@@ -37,6 +39,7 @@ const AstNodeType = superenum({
   isCorrect: 'isCorrect',
   selectOptionText: 'selectOptionText',
   choiceText: 'choiceText',
+  responseText: 'responseText',
   propertyKey: 'propertyKey',
   propertyValue: 'propertyValue',
   ids: 'ids',

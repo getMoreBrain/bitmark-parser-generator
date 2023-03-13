@@ -5,6 +5,7 @@ import { BodyTextNode } from '../nodes/BodyTextNode';
 import { ChoiceNode } from '../nodes/ChoiceNode';
 import { ChoicesNode } from '../nodes/ChoicesNode';
 import { GapNode } from '../nodes/GapNode';
+import { ResponseNode } from '../nodes/ResponseNode';
 import { SelectNode } from '../nodes/SelectNode';
 import { SelectOptionsNode } from '../nodes/SelectOptionsNode';
 import { AttachmentTypeType } from '../types/AttachmentType';
@@ -34,6 +35,7 @@ class Builder {
     instruction?: string,
     example?: string | boolean,
     choices?: ChoiceNode[],
+    responses?: ResponseNode[],
     resource?: Resource,
     body?: BodyNode,
   ): BitNode {
@@ -51,6 +53,7 @@ class Builder {
       instruction,
       example,
       choices,
+      responses,
       resource,
       body,
     );
@@ -67,6 +70,19 @@ class Builder {
     isCaseSensitive?: boolean,
   ): ChoiceNode {
     return ChoiceNode.create(text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive);
+  }
+
+  response(
+    text: string,
+    isCorrect: boolean,
+    item?: string,
+    lead?: string,
+    hint?: string,
+    instruction?: string,
+    example?: string | boolean,
+    isCaseSensitive?: boolean,
+  ): ResponseNode {
+    return ResponseNode.create(text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive);
   }
 
   body(bodyParts: BodyNodeTypes[]): BodyNode {

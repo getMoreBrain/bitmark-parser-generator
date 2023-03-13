@@ -28,6 +28,8 @@ import { PropertyKeyNode } from '../nodes/PropertyKeyNode';
 import { PropertyValueNode } from '../nodes/PropertyValueNode';
 import { PropertyValuesNode } from '../nodes/PropertyValuesNode';
 import { ResourceNode } from '../nodes/ResourceNode';
+import { ResponseNode } from '../nodes/ResponseNode';
+import { ResponsesNode } from '../nodes/ResponsesNode';
 import { SelectNode } from '../nodes/SelectNode';
 import { SelectOptionNode } from '../nodes/SelectOptionNode';
 import { SelectOptionTextNode } from '../nodes/SelectOptionTextNode';
@@ -383,7 +385,11 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
   // choice
 
   protected on_choice_enter(node: ChoiceNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeOPP();
+    if (node.isCorrect.value) {
+      this.writeOPP();
+    } else {
+      this.writeOPM();
+    }
     this.write(node.text.value);
     this.writeCL();
   }
@@ -399,6 +405,52 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
   }
 
   protected on_choice_exit(_node: ChoiceNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  // responses
+
+  protected on_responses_enter(_node: ResponsesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  protected on_responses_between(
+    _node: ResponsesNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    this.writeNL();
+  }
+
+  protected on_responses_exit(_node: ResponsesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  // response
+
+  protected on_response_enter(node: ResponseNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    if (node.isCorrect.value) {
+      this.writeOPP();
+    } else {
+      this.writeOPM();
+    }
+    this.write(node.text.value);
+    this.writeCL();
+  }
+
+  protected on_response_between(
+    _node: ResponseNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    //
+  }
+
+  protected on_response_exit(_node: ResponseNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
     //
   }
 

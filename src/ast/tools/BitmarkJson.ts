@@ -7,6 +7,7 @@ import { BodyNode, BodyNodeTypes } from '../nodes/BodyNode';
 import { BodyTextNode } from '../nodes/BodyTextNode';
 import { ChoiceNode } from '../nodes/ChoiceNode';
 import { GapNode } from '../nodes/GapNode';
+import { ResponseNode } from '../nodes/ResponseNode';
 import { SelectNode } from '../nodes/SelectNode';
 import { AttachmentTypeType } from '../types/AttachmentType';
 import { BitType, BitTypeType } from '../types/BitType';
@@ -57,6 +58,7 @@ class BitmarkJson {
       isExample,
       example,
       choices,
+      responses,
       body,
       id,
       ageRange,
@@ -66,6 +68,7 @@ class BitmarkJson {
     } = bit;
 
     const choiceNodes: ChoiceNode[] = [];
+    const responseNodes: ResponseNode[] = [];
     let bodyNode: BodyNode | undefined;
     const placeholderNodes: {
       [keyof: string]: GapNode | SelectNode | BodyTextNode;
@@ -89,6 +92,24 @@ class BitmarkJson {
           isCaseSensitive,
         );
         choiceNodes.push(node);
+      }
+    }
+
+    //+-response
+    if (Array.isArray(responses)) {
+      for (const r of responses) {
+        const { response, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = r;
+        const node = Builder.response(
+          response,
+          isCorrect,
+          item,
+          lead,
+          hint,
+          instruction,
+          example || isExample,
+          isCaseSensitive,
+        );
+        responseNodes.push(node);
       }
     }
 
@@ -139,6 +160,7 @@ class BitmarkJson {
       instruction,
       example || isExample,
       choiceNodes,
+      responseNodes,
       resource,
       bodyNode, // body
     );
