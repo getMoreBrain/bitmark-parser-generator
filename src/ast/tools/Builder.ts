@@ -89,14 +89,15 @@ class Builder {
   }
 
   quiz(
-    choiceNodes: ChoiceNode[],
+    choiceNodes?: ChoiceNode[],
+    responseNodes?: ResponseNode[],
     item?: string,
     lead?: string,
     hint?: string,
     instruction?: string,
     example?: string | boolean,
   ): QuizNode {
-    return QuizNode.create(choiceNodes, item, lead, hint, instruction, example);
+    return QuizNode.create(choiceNodes, responseNodes, item, lead, hint, instruction, example);
   }
 
   body(bodyParts: BodyNodeTypes[]): BodyNode {

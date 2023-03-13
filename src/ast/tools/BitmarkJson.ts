@@ -802,9 +802,10 @@ class BitmarkJson {
     const nodes: QuizNode[] = [];
     if (Array.isArray(quizzes)) {
       for (const q of quizzes) {
-        const { choices, item, lead, hint, instruction, isExample, example } = q;
+        const { choices, responses, item, lead, hint, instruction, isExample, example } = q;
         const choiceNodes = this.choiceBitsToAst(choices);
-        const node = Builder.quiz(choiceNodes, item, lead, hint, instruction, example || isExample);
+        const responseNodes = this.responseBitsToAst(responses);
+        const node = Builder.quiz(choiceNodes, responseNodes, item, lead, hint, instruction, example || isExample);
         nodes.push(node);
       }
     }

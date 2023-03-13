@@ -6,6 +6,16 @@ class NodeValidator {
     throw new Error(`${name} is required but is not set`);
   }
 
+  isOneOfRequired(vals: unknown[], names: string[]) {
+    if (Array.isArray(vals)) {
+      for (const v of vals) {
+        if (v) return;
+      }
+    }
+
+    throw new Error(`One of '${names.join(', ')}' is required but none is set`);
+  }
+
   isString(val: unknown, name: string) {
     if (stringUtils.isString(val)) return;
     throw new Error(`${name} is required to be a string`);

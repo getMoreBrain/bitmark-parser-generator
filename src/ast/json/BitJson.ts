@@ -93,6 +93,7 @@ export interface ResponseBitJson {
 
 export interface QuizBitJson {
   choices: ChoiceBitJson[];
+  responses: ResponseBitJson[];
   item: string;
   lead: string;
   hint: string;

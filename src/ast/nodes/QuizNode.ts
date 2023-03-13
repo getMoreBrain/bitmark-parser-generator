@@ -9,32 +9,37 @@ import { ExampleNode } from './ExampleNode';
 import { HintNode } from './HintNode';
 import { InstructionNode } from './InstructionNode';
 import { ItemLeadNode } from './ItemLeadNode';
+import { ResponseNode } from './ResponseNode';
+import { ResponsesNode } from './ResponsesNode';
 
-type Children = (ChoicesNode | ItemLeadNode | HintNode | InstructionNode | ExampleNode)[];
+type Children = (ChoicesNode | ResponsesNode | ItemLeadNode | HintNode | InstructionNode | ExampleNode)[];
 
 class QuizNode extends BaseBranchNode<Children> implements AstNode {
   type = AstNodeType.quiz;
-  choices: ChoicesNode;
+  choices?: ChoicesNode;
+  responses?: ResponsesNode;
   itemLead?: ItemLeadNode;
   hint?: HintNode;
   instruction?: InstructionNode;
   example?: ExampleNode;
 
   static create(
-    choiceNodes: ChoiceNode[],
+    choiceNodes?: ChoiceNode[],
+    responsesNodes?: ResponseNode[],
     item?: string,
     lead?: string,
     hint?: string,
     instruction?: string,
     example?: string | boolean,
   ): QuizNode {
-    const choicesNode = ChoicesNode.create(choiceNodes) as ChoicesNode;
+    const choicesNode = ChoicesNode.create(choiceNodes);
+    const responsesNode = ResponsesNode.create(responsesNodes);
     const itemLeadNode = ItemLeadNode.create(item, lead);
     const hintNode = HintNode.create(hint);
     const instructionNode = InstructionNode.create(instruction);
     const exampleNode = ExampleNode.create(example);
 
-    const node = new QuizNode(choicesNode, itemLeadNode, hintNode, instructionNode, exampleNode);
+    const node = new QuizNode(choicesNode, responsesNode, itemLeadNode, hintNode, instructionNode, exampleNode);
 
     node.validate();
 
@@ -42,7 +47,8 @@ class QuizNode extends BaseBranchNode<Children> implements AstNode {
   }
 
   protected constructor(
-    choices: ChoicesNode,
+    choices?: ChoicesNode,
+    responses?: ResponsesNode,
     itemLead?: ItemLeadNode,
     hint?: HintNode,
     instruction?: InstructionNode,
@@ -50,6 +56,7 @@ class QuizNode extends BaseBranchNode<Children> implements AstNode {
   ) {
     super();
     this.choices = choices;
+    this.responses = responses;
     this.itemLead = itemLead;
     this.hint = hint;
     this.instruction = instruction;
@@ -59,18 +66,19 @@ class QuizNode extends BaseBranchNode<Children> implements AstNode {
   protected buildChildren(): Children {
     const children: Children = [];
 
-    // NOTE: choices should go at the end (they are like the 'body' of the quiz)
+    // NOTE: choices/responses should go at the end (they are like the 'body' of the quiz)
     if (this.itemLead) children.push(this.itemLead);
     if (this.hint) children.push(this.hint);
     if (this.instruction) children.push(this.instruction);
     if (this.example) children.push(this.example);
-    children.push(this.choices);
+    if (this.choices) children.push(this.choices);
+    if (this.responses) children.push(this.responses);
 
     return children;
   }
 
   protected validate(): void {
-    NodeValidator.isRequired(this.choices, 'choices');
+    NodeValidator.isOneOfRequired([this.choices, this.responses], ['choices', 'responses']);
   }
 }
 
