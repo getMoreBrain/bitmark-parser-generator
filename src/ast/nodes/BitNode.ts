@@ -14,6 +14,7 @@ import { BitTypeNode } from './BitTypeNode';
 import { BodyNode } from './BodyNode';
 import { ChoiceNode } from './ChoiceNode';
 import { ChoicesNode } from './ChoicesNode';
+import { ElementsNode } from './ElementsNode';
 import { ExampleNode } from './ExampleNode';
 import { HintNode } from './HintNode';
 import { IdsNode } from './IdsNode';
@@ -40,6 +41,7 @@ type Children = (
   | HintNode
   | InstructionNode
   | ExampleNode
+  | ElementsNode
   | ChoicesNode
   | ResponsesNode
   | QuizzesNode
@@ -60,6 +62,7 @@ class BitNode extends BaseBranchNode<Children> implements AstNode {
   hint?: HintNode;
   instruction?: InstructionNode;
   example?: ExampleNode;
+  elements?: ElementsNode;
   choices?: ChoicesNode;
   responses?: ResponsesNode;
   quizzes?: QuizzesNode;
@@ -79,6 +82,7 @@ class BitNode extends BaseBranchNode<Children> implements AstNode {
     hint?: string,
     instruction?: string,
     example?: string | boolean,
+    elements?: string[],
     choices?: ChoiceNode[],
     responses?: ResponseNode[],
     quizzes?: QuizNode[],
@@ -96,6 +100,7 @@ class BitNode extends BaseBranchNode<Children> implements AstNode {
     const hintNode = HintNode.create(hint);
     const instructionNode = InstructionNode.create(instruction);
     const exampleNode = ExampleNode.create(example);
+    const elementsNode = ElementsNode.create(elements);
     const choicesNode = ChoicesNode.create(choices);
     const responsesNode = ResponsesNode.create(responses);
     const quizzesNode = QuizzesNode.create(quizzes);
@@ -112,6 +117,7 @@ class BitNode extends BaseBranchNode<Children> implements AstNode {
       hintNode,
       instructionNode,
       exampleNode,
+      elementsNode,
       choicesNode,
       responsesNode,
       quizzesNode,
@@ -136,6 +142,7 @@ class BitNode extends BaseBranchNode<Children> implements AstNode {
     hint?: HintNode,
     instruction?: InstructionNode,
     example?: ExampleNode,
+    elementsNode?: ElementsNode,
     choicesNode?: ChoicesNode,
     responsesNode?: ResponsesNode,
     quizzesNode?: QuizzesNode,
@@ -154,6 +161,7 @@ class BitNode extends BaseBranchNode<Children> implements AstNode {
     this.hint = hint;
     this.instruction = instruction;
     this.example = example;
+    this.elements = elementsNode;
     this.choices = choicesNode;
     this.responses = responsesNode;
     this.quizzes = quizzesNode;
@@ -173,6 +181,7 @@ class BitNode extends BaseBranchNode<Children> implements AstNode {
     if (this.hint) children.push(this.hint);
     if (this.instruction) children.push(this.instruction);
     if (this.example) children.push(this.example);
+    if (this.elements) children.push(this.elements);
     if (this.choices) children.push(this.choices);
     if (this.responses) children.push(this.responses);
     if (this.quizzes) children.push(this.quizzes);

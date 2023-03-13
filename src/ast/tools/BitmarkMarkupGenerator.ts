@@ -9,6 +9,7 @@ import { BodyNode } from '../nodes/BodyNode';
 import { BodyTextNode } from '../nodes/BodyTextNode';
 import { ChoiceNode } from '../nodes/ChoiceNode';
 import { ChoicesNode } from '../nodes/ChoicesNode';
+import { ElementsNode } from '../nodes/ElementsNode';
 import { ExampleNode } from '../nodes/ExampleNode';
 import { GapNode } from '../nodes/GapNode';
 import { HintNode } from '../nodes/HintNode';
@@ -277,6 +278,30 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
 
   protected on_select_exit(_node: SelectNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
     //
+  }
+
+  // elements
+
+  protected on_elements_enter(_node: ElementsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeCardDivider();
+    this.writeNL();
+  }
+
+  protected on_elements_between(
+    _node: ElementsNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    this.writeNL();
+    this.writeElementDivider();
+    this.writeNL();
+  }
+
+  protected on_elements_exit(_node: ElementsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeNL();
+    this.writeCardDivider();
   }
 
   // solutions
@@ -575,6 +600,14 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
     }
   }
 
+  // element
+
+  protected on_element_enter(node: SolutionNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    if (node.value) {
+      this.writeString(node.value);
+    }
+  }
+
   // solution
 
   protected on_solution_enter(node: SolutionNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
@@ -818,6 +851,10 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
 
   protected writeCardDivider(): void {
     this.write('===');
+  }
+
+  protected writeElementDivider(): void {
+    this.write('---');
   }
 
   protected writeNL(): void {

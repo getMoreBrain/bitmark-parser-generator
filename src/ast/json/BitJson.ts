@@ -13,59 +13,16 @@ export interface BitJson {
   instruction: string;
   isExample: boolean;
   example: string;
+  elements: ElementBitJson[];
   choices: ChoiceBitJson[];
   responses: ResponseBitJson[];
   quizzes: QuizBitJson[];
   body: string;
   resource: ResourceBitJson;
   placeholders: BodyBitsJson;
-
-  // isCorrect: boolean;
-  // quiz: string;
-  // quizzes: BitJson[];
-  // statement: string;
-  // statements: BitJson[];
-  // choice: string;
-  // choices: BitJson[];
-  // response: string;
-  // responses: BitJson[];
-
-  // ageRange: BitJson;
-  // language: BitJson;
-  // labelTrue: BitJson;
-  // labelFalse: BitJson;
-
-  // isTracked: boolean;
-  // isInfoOnly: boolean;
-  // partialAnswer: string;
-  // url: string;
-  // title: string;
-  // description: string;
-  // solution: string;
-  // solutions: string[] | null;
-  // text: string;
-  // options: BitJson[];
-  // isCaseSensitive: boolean;
-  // isLongAnswer: boolean;
-  // key: string;
-  // keyImage: {
-  //   width: number | null;
-  //   height: number | null;
-  //   src: string;
-  // }; // Delete when not needed
-  // keyAudio: {
-  //   format: string;
-  //   src: string;
-  // }; // Delete when not needed
-  // values: [];
-  // heading: {
-  //   forKeys: string; // heading key.
-  //   forValues: []; // heading values.(of???)
-  // };
-  // pairs: []; // here Match_pair(s) comes in (of???)
-  // matrix: []; // array of MatchMatrix_matrixelem (of???)
-  // cells: []; // (of???)
 }
+
+export type ElementBitJson = string;
 
 export interface ChoiceBitJson {
   choice: string;

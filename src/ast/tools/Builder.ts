@@ -8,7 +8,6 @@ import { QuizNode } from '../nodes/QuizNode';
 import { ResponseNode } from '../nodes/ResponseNode';
 import { SelectNode } from '../nodes/SelectNode';
 import { SelectOptionNode } from '../nodes/SelectOptionNode';
-import { SelectOptionsNode } from '../nodes/SelectOptionsNode';
 import { AttachmentTypeType } from '../types/AttachmentType';
 import { BitTypeType } from '../types/BitType';
 import { Property } from '../types/Property';
@@ -35,6 +34,7 @@ class Builder {
     hint?: string,
     instruction?: string,
     example?: string | boolean,
+    elements?: string[],
     choices?: ChoiceNode[],
     responses?: ResponseNode[],
     quizzes?: QuizNode[],
@@ -54,6 +54,7 @@ class Builder {
       hint,
       instruction,
       example,
+      elements,
       choices,
       responses,
       quizzes,
