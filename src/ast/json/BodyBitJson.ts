@@ -20,7 +20,21 @@ export interface GapBitJson extends BaseBodyBitJson {
 
 export interface SelectBitJson extends BaseBodyBitJson {
   type: 'select'; // body bit type
-  // solutions: string[];
+  options: SelectOptionBitJson[];
+  prefix: string;
+  postfix: string;
+}
+
+export interface SelectOptionBitJson {
+  text: string;
+  isCorrect: boolean;
+  item: string;
+  lead: string;
+  hint: string;
+  instruction: string;
+  isExample: boolean;
+  example: string;
+  isCaseSensitive: boolean;
 }
 
 export type BodyBitJson = GapBitJson | SelectBitJson;

@@ -108,8 +108,8 @@ class Bmg {
     // const filename = testFiles.multires_1; // COMPLETED
     // const filename = testFiles.multires_1_2; // COMPLETED
     // const filename = testFiles.multich1; // COMPLETED
-    const filename = testFiles.multich2;
-    // const filename = testFiles.multichtx1;
+    // const filename = testFiles.multich2; // COMPLETED
+    const filename = testFiles.multichtx1;
     // const filename = testFiles.multichtx2;
     // const filename = testFiles.multichtx3;
     // const filename = testFiles.multichtx4;

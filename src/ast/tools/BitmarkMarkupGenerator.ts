@@ -325,8 +325,14 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
 
   // selectOption
 
-  protected on_selectOption_enter(_node: SelectOptionNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
+  protected on_selectOption_enter(node: SelectOptionNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    if (node.isCorrect.value) {
+      this.writeOPP();
+    } else {
+      this.writeOPM();
+    }
+    this.write(node.text.value);
+    this.writeCL();
   }
 
   protected on_selectOption_between(
@@ -583,7 +589,9 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
 
   protected on_prefix_enter(node: PrefixNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
     if (node.value) {
-      //
+      this.writeOPPRE();
+      this.writeString(node.value);
+      this.writeCL();
     }
   }
 
@@ -591,7 +599,9 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
 
   protected on_postfix_enter(node: PostfixNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
     if (node.value) {
-      //
+      this.writeOPPOST();
+      this.writeString(node.value);
+      this.writeCL();
     }
   }
 
@@ -603,7 +613,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
     _route: AstNodeInfo[],
   ): void {
     if (node.value) {
-      //
+      // Not in bitmark??
     }
   }
 
@@ -776,6 +786,14 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
 
   protected writeOPAMP(): void {
     this.write('[&');
+  }
+
+  protected writeOPPRE(): void {
+    this.write("['");
+  }
+
+  protected writeOPPOST(): void {
+    this.write('['); // TODO - not sure what symbol is for postfix
   }
 
   protected writeOP(): void {

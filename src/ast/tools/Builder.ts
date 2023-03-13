@@ -7,6 +7,7 @@ import { GapNode } from '../nodes/GapNode';
 import { QuizNode } from '../nodes/QuizNode';
 import { ResponseNode } from '../nodes/ResponseNode';
 import { SelectNode } from '../nodes/SelectNode';
+import { SelectOptionNode } from '../nodes/SelectOptionNode';
 import { SelectOptionsNode } from '../nodes/SelectOptionsNode';
 import { AttachmentTypeType } from '../types/AttachmentType';
 import { BitTypeType } from '../types/BitType';
@@ -119,7 +120,7 @@ class Builder {
   }
 
   select(
-    optionsNode: SelectOptionsNode,
+    optionNodes: SelectOptionNode[],
     prefix?: string,
     postfix?: string,
     item?: string,
@@ -129,7 +130,20 @@ class Builder {
     example?: string | boolean,
     isCaseSensitive?: boolean,
   ): SelectNode {
-    return SelectNode.create(optionsNode, prefix, postfix, item, lead, hint, instruction, example, isCaseSensitive);
+    return SelectNode.create(optionNodes, prefix, postfix, item, lead, hint, instruction, example, isCaseSensitive);
+  }
+
+  selectOption(
+    text: string,
+    isCorrect: boolean,
+    item?: string,
+    lead?: string,
+    hint?: string,
+    instruction?: string,
+    example?: string | boolean,
+    isCaseSensitive?: boolean,
+  ): SelectOptionNode {
+    return SelectOptionNode.create(text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive);
   }
 
   // itemLead(item?: string, lead?: string): ItemLeadNode | undefined {

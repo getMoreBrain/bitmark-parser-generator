@@ -1,6 +1,6 @@
 import { BitJson, ChoiceBitJson, QuizBitJson, ResponseBitJson } from '../json/BitJson';
 import { BitWrapperJson } from '../json/BitWrapperJson';
-import { GapBitJson, BodyBitJson, BodyBitsJson } from '../json/BodyBitJson';
+import { GapBitJson, BodyBitJson, BodyBitsJson, SelectBitJson, SelectOptionBitJson } from '../json/BodyBitJson';
 import { BitNode } from '../nodes/BitNode';
 import { BitmarkNode } from '../nodes/BitmarkNode';
 import { BodyNode, BodyNodeTypes } from '../nodes/BodyNode';
@@ -10,6 +10,7 @@ import { GapNode } from '../nodes/GapNode';
 import { QuizNode } from '../nodes/QuizNode';
 import { ResponseNode } from '../nodes/ResponseNode';
 import { SelectNode } from '../nodes/SelectNode';
+import { SelectOptionNode } from '../nodes/SelectOptionNode';
 import { AttachmentTypeType } from '../types/AttachmentType';
 import { BitType, BitTypeType } from '../types/BitType';
 import { BodyBitType } from '../types/BodyBitType';
@@ -775,6 +776,28 @@ class BitmarkJson {
     return nodes;
   }
 
+  private selectOptionBitsToAst(options?: SelectOptionBitJson[]): SelectOptionNode[] {
+    const nodes: SelectOptionNode[] = [];
+    if (Array.isArray(options)) {
+      for (const o of options) {
+        const { text, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = o;
+        const node = Builder.selectOption(
+          text,
+          isCorrect,
+          item,
+          lead,
+          hint,
+          instruction,
+          example || isExample,
+          isCaseSensitive,
+        );
+        nodes.push(node);
+      }
+    }
+
+    return nodes;
+  }
+
   private quizBitsToAst(quizzes?: QuizBitJson[]): QuizNode[] {
     const nodes: QuizNode[] = [];
     if (Array.isArray(quizzes)) {
@@ -842,7 +865,7 @@ class BitmarkJson {
         return this.gapBitToAst(bit);
         break;
       case BodyBitType.select:
-        // TODO
+        return this.selectBitToAst(bit);
         break;
     }
     return BodyTextNode.create('');
@@ -857,14 +880,27 @@ class BitmarkJson {
     return bitNode;
   }
 
-  // private selectBitToAst(bit: GapPlaceholderJson): GapNode {
-  //   const { item, lead, hint, instruction, isExample, example, isCaseSensitive, solutions } = bit;
+  private selectBitToAst(bit: SelectBitJson): SelectNode {
+    const { options, prefix, postfix, item, lead, hint, instruction, isExample, example } = bit;
 
-  //   // Build bit
-  //   const bitNode = Builder.select(solutions, item, lead, hint, instruction, example || isExample, isCaseSensitive);
+    // Build options bits
+    const selectOptionNodes = this.selectOptionBitsToAst(options);
 
-  //   return bitNode;
-  // }
+    // Build bit
+    const node = Builder.select(
+      selectOptionNodes,
+      prefix,
+      postfix,
+      item,
+      lead,
+      hint,
+      instruction,
+      example || isExample,
+      true,
+    );
+
+    return node;
+  }
 }
 
 const bitmarkJson = new BitmarkJson();

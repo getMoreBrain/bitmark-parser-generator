@@ -10,6 +10,7 @@ import { IsCaseSensitiveNode } from './IsCaseSensitiveNode';
 import { ItemLeadNode } from './ItemLeadNode';
 import { PostfixNode } from './PostfixNode';
 import { PrefixNode } from './PrefixNode';
+import { SelectOptionNode } from './SelectOptionNode';
 import { SelectOptionsNode } from './SelectOptionsNode';
 
 type Children = (
@@ -35,7 +36,7 @@ class SelectNode extends BaseBranchNode<Children> implements AstNode {
   isCaseSensitive?: IsCaseSensitiveNode;
 
   static create(
-    optionsNode: SelectOptionsNode,
+    optionNodes: SelectOptionNode[],
     prefix?: string,
     postfix?: string,
     item?: string,
@@ -45,6 +46,7 @@ class SelectNode extends BaseBranchNode<Children> implements AstNode {
     example?: string | boolean,
     isCaseSensitive?: boolean,
   ): SelectNode {
+    const optionsNode = SelectOptionsNode.create(optionNodes) as SelectOptionsNode;
     const prefixNode = PrefixNode.create(prefix);
     const postfixNode = PostfixNode.create(postfix);
     const itemLeadNode = ItemLeadNode.create(item, lead);
@@ -90,9 +92,10 @@ class SelectNode extends BaseBranchNode<Children> implements AstNode {
   }
 
   protected buildChildren(): Children {
-    const children: Children = [this.optionsNode];
+    const children: Children = [];
 
     if (this.prefix) children.push(this.prefix);
+    children.push(this.optionsNode);
     if (this.postfix) children.push(this.postfix);
     if (this.itemLead) children.push(this.itemLead);
     if (this.hint) children.push(this.hint);
