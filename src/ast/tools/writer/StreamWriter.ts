@@ -285,7 +285,7 @@ export class StreamWriter implements TextWriter {
   }
 
   private readTextFile(path: string, useCache: boolean, encoding?: string): string | undefined {
-    if (useCache && this.textFileCache.hasOwnProperty(path)) {
+    if (useCache && Object.prototype.hasOwnProperty.call(this.textFileCache, path)) {
       return this.textFileCache[path]!;
     }
 
@@ -301,7 +301,7 @@ export class StreamWriter implements TextWriter {
       encoding = encoding.toLowerCase();
     } else encoding = 'utf-8';
 
-    let contents: string = fs.readFileSync(path, encoding);
+    let contents: string = fs.readFileSync(path, encoding as BufferEncoding);
     if (contents == null || contents.length === 0) return undefined;
 
     // Remove any utf-8 BOM if there is any

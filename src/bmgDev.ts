@@ -13,10 +13,6 @@ import { FileBitmapMarkupGenerator } from './ast/tools/FileBitmapMarkupGenerator
 import { testFiles } from './testFiles';
 
 class Bmg {
-  helloWorld(): void {
-    console.log('Hello World\n\n');
-  }
-
   async test(): Promise<void> {
     /* SUPPORTED FULLY */
     // const filename = testFiles.assign1; // OK
@@ -74,8 +70,8 @@ class Bmg {
     /* NOTES */
     // - It is not easily possible to convert excess JSON properties to [@...] because it is hard to detect which
     //   properties are excess (depends on the bit). Not impossible, but problematic
-    // - Sometimes 'reference' in the JSON comes from [►...] and sometimes from [@reference:...] (see essay7.json / bit-alias1.json)
-    // - Cards '===' are not translated in4to JSON. Sometimes they exist, and sometimes not (see bot-action-true-false.json / multires-1.json)
+    // - Sometimes 'reference' in the JSON comes from [►...] and sometimes from [@reference:...] (see essay7.json / bit-alias1.json) @reference is deprecated (now footnote)
+    // - Cards '===' are not translated into JSON. Sometimes they exist, and sometimes not (see bot-action-true-false.json / multires-1.json)
     // - 'resource' vs 'excessResources[]'
     // - 'bitmark-grammer' project missing 'antlr4ts' dependency
 
@@ -175,12 +171,25 @@ class Bmg {
     // Read in the test file
     const json = await fs.readJson(filename);
 
+    // Preprocess and log
+    console.log('\n');
+    const bitWrappers = BitmarkJson.preprocessJson(json);
+    for (const bitWrapper of bitWrappers) {
+      const { bitmark } = bitWrapper;
+
+      if (bitmark) {
+        console.log(`${bitmark}`);
+        console.log('\n\n');
+      }
+    }
+
     // Convert the bitmark JSON to bitmark AST
     const bitmarkAst = BitmarkJson.toAst(json);
 
     // Generate markup code from AST
+    const fileName = './bitmark.txt';
     const generator = new FileBitmapMarkupGenerator(
-      './bitmark.txt',
+      fileName,
       {
         flags: 'w',
       },
@@ -189,15 +198,14 @@ class Bmg {
       },
     );
 
-    generator.generate(bitmarkAst);
+    await generator.generate(bitmarkAst);
   }
 }
 
 const bmg = new Bmg();
-bmg.helloWorld();
 
 bmg.test().then(() => {
-  console.log('END');
+  // Done
 });
 
 export { bmg };

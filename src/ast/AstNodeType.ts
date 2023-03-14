@@ -29,6 +29,12 @@ const AstNodeType = superenum({
   pair: 'pair',
   pairValues: 'pairValues',
 
+  resource: 'resource',
+  resourceType: 'resourceType',
+  imageResource: 'imageResource',
+  audioResource: 'audioResource',
+  videoResource: 'videoResource',
+
   // Terminal (leaf)
   markup: 'markup', // bitmark markup
   bitType: 'bitType', // bit type
@@ -55,12 +61,6 @@ const AstNodeType = superenum({
   ids: 'ids',
   ageRanges: 'ageRanges',
   languages: 'languages',
-  resource: 'resource',
-  // resourceType: 'resourceType',
-  // imageResource: 'imageResource',
-  // audioResource: 'audioResource',
-  // videoResource: 'videoResource',
-  // text: 'text',
   // number: 'number',
   // boolean: 'boolean',
 });

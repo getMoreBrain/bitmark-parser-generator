@@ -1,13 +1,13 @@
-import { ResourceJson } from './json/ResourceJson';
+import { ResourceJson } from './json/__old/ResourceJson';
 import { stringUtils } from './tools/StringUtils';
-import { ArticleResourceFormat } from './types/ArticleResourceFormat';
-import { AudioResourceFormat } from './types/AudioResourceFormat';
-import { BitBitType } from './types/BitBitType';
+import { BitType } from './types/BitType';
 import { BodyBitType } from './types/BodyBitType';
-import { ImageResourceFormat } from './types/ImageResourceFormat';
 import { TextFormat } from './types/TextFormat';
-import { VideoResourceFormat } from './types/VideoResourceFormat';
+import { ArticleResourceFormat } from './types/resources/ArticleResourceFormat';
+import { AudioResourceFormat } from './types/resources/AudioResourceFormat';
+import { ImageResourceFormat } from './types/resources/ImageResourceFormat';
 import { ResourceType } from './types/resources/ResouceType';
+import { VideoResourceFormat } from './types/resources/VideoResourceFormat';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type Validator = (value: any) => boolean;
@@ -35,8 +35,8 @@ const propertyValidator = (value: string | string[]): boolean => {
   return true;
 };
 
-const bitBitTypeValidator = (value: string): boolean => {
-  return !!BitBitType.fromValue(value);
+const bitTypeValidator = (value: string): boolean => {
+  return !!BitType.fromValue(value);
 };
 
 const bodyBitTypeValidator = (value: string): boolean => {
@@ -113,7 +113,7 @@ export {
   booleanValidator,
   urlValidator,
   propertyValidator,
-  bitBitTypeValidator,
+  bitTypeValidator as bitBitTypeValidator,
   bodyBitTypeValidator,
   bitResourceTypeValidator,
   bitTextFormatValidator,

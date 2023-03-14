@@ -1,6 +1,6 @@
 import path from 'path';
 
-const base = 'assets/example/tests/';
+const base = 'assets/test/json/';
 
 const rawFiles = {
   learningPath1: 'learning-path1.json',
