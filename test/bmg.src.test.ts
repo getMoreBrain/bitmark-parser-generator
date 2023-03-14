@@ -20,6 +20,7 @@ import { FileBitmapMarkupGenerator } from '../src/ast/tools/FileBitmapMarkupGene
 
 import { deepDiffMapper } from './utils/deepDiffMapper';
 
+// TODO should use 'require.resolve()' rather than direct node_modules
 const NODE_MODULES_DIR = path.resolve(__dirname, '../node_modules');
 const BITMARK_GRAMMAR_DIR = path.resolve(NODE_MODULES_DIR, 'bitmark-grammar');
 const JSON_TEST_OUTPUT_DIR = path.resolve(__dirname, '../assets/test/json');
@@ -123,7 +124,7 @@ describe('bitmark-generator', () => {
     writeTestJson(allTestJsonMap);
 
     const allTestJson = Object.values(allTestJsonMap);
-    // const allTestJson = [allTestJsonMap['rating1']];
+    // const allTestJson = [allTestJsonMap['article1']];
 
     describe.each(allTestJson)('Test file: %s', (testJson: JsonTestCase) => {
       test('JSON ==> Markup ==> JSON', async () => {

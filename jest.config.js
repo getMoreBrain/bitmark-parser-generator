@@ -19,6 +19,10 @@ module.exports = {
       },
     ],
   },
-  reporters: ['default', [require.resolve('jest-junit'), { output: '<rootDir>/junit.xml' }]],
+  reporters: [
+    'default',
+    [require.resolve('jest-junit'), { output: '<rootDir>/junit.xml' }],
+    [require.resolve('jest-html-reporter'), { pageTitle: 'bitmark-generator Test Report', includeFailureMsg: true }],
+  ],
   // collectCoverageFrom: ['src/**/*.{js,ts}', '!<rootDir>/node_modules/', '!<rootDir>/path/to/dir/'],
 };
