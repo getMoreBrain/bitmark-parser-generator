@@ -50,7 +50,6 @@ import { TextFormat } from '../types/TextFormat';
 import { ArticleOnlineResource } from '../types/resources/ArticleOnlineResource';
 import { ResourceType } from '../types/resources/ResouceType';
 
-import { CodeGenerator } from './CodeGenerator';
 import { CodeWriter } from './writer/CodeWriter';
 import { TextWriter } from './writer/TextWriter';
 
@@ -62,7 +61,7 @@ export interface BitmarkGeneratorOptions {
   explicitTextFormat?: boolean;
 }
 
-class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
+class BitmarkMarkupGenerator extends CodeWriter {
   // TODO - make Ast class a singleton
   private ast = new Ast();
   private options: BitmarkGeneratorOptions;

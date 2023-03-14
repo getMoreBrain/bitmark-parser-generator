@@ -9,7 +9,7 @@ Copyright ©2023 Get More Brain
 import fs from 'fs-extra';
 
 import { BitmarkJson } from './ast/tools/BitmarkJson';
-import { StreamBitmapMarkupGenerator } from './ast/tools/StreamBitmapMarkupGenerator';
+import { FileBitmapMarkupGenerator } from './ast/tools/FileBitmapMarkupGenerator';
 import { testFiles } from './testFiles';
 
 class Bmg {
@@ -20,7 +20,7 @@ class Bmg {
   async test(): Promise<void> {
     /* SUPPORTED FULLY */
     // const filename = testFiles.assign1; // OK
-    // const filename = testFiles.cloze; // OK
+    const filename = testFiles.cloze; // OK
     // const filename = testFiles.cloze2; // OK
     // const filename = testFiles.cloze3; // OK
     // const filename = testFiles.cloze4; // OK
@@ -77,6 +77,7 @@ class Bmg {
     // - Sometimes 'reference' in the JSON comes from [►...] and sometimes from [@reference:...] (see essay7.json / bit-alias1.json)
     // - Cards '===' are not translated in4to JSON. Sometimes they exist, and sometimes not (see bot-action-true-false.json / multires-1.json)
     // - 'resource' vs 'excessResources[]'
+    // - 'bitmark-grammer' project missing 'antlr4ts' dependency
 
     // const filename = testFiles.learningPath1; // ??
     // const filename = testFiles.learningPath3; // ??
@@ -105,7 +106,7 @@ class Bmg {
     // const filename = testFiles.essay7; // ?? resources TODO / @reference property
     // const filename = testFiles.essay8; // ?? resources TODO
     // const filename = testFiles.essay9; // ?? resources TODO
-    // const filename = testFiles.flashcard1; // OK ??
+    // const filename = testFiles.flashcard1; // OK ?? or is JSON wrong
     // const filename = testFiles.flashcard2; // ?? &audio excess resources
     // const filename = testFiles.flashcard3; // ?? How @language property is handled
     // const filename = testFiles.flashcard4; // ?? How @lang @pos properties are handled
@@ -178,7 +179,7 @@ class Bmg {
     const bitmarkAst = BitmarkJson.toAst(json);
 
     // Generate markup code from AST
-    const generator = new StreamBitmapMarkupGenerator(
+    const generator = new FileBitmapMarkupGenerator(
       './bitmark.txt',
       {
         flags: 'w',

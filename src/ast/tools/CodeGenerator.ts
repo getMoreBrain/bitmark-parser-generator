@@ -1,5 +1,5 @@
 import { AstNode } from '../Ast';
 
 export interface CodeGenerator {
-  generate: (root: AstNode) => void;
+  generate: (root: AstNode) => Promise<void | string>;
 }

@@ -36,10 +36,10 @@ class BitmarkJson {
     const bitsNodes: BitNode[] = [];
 
     for (const bitWrapper of bitWrappers) {
-      const { bit, bitmark } = bitWrapper;
+      const { bit /*, bitmark*/ } = bitWrapper;
 
-      console.log(`${bitmark ?? ''}`);
-      console.log('\n\n');
+      // console.log(`${bitmark ?? ''}`);
+      // console.log('\n\n');
 
       // Transform to AST
       const bitsNode = this.bitToAst(bit);

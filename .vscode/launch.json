@@ -7,8 +7,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "BMG",
-      "program": "${workspaceFolder}/src/bmg.ts",
+      "name": "BMG Dev",
+      "program": "${workspaceFolder}/src/bmgDev.ts",
       "runtimeArgs": [
         "--loader",
         "tsx"

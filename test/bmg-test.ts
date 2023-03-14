@@ -2,7 +2,7 @@
 
 import { describe, test } from '@jest/globals';
 
-import { Bmg } from '../src/bmg';
+import { Bmg } from '../src/bmgDev';
 
 const bmgTests = (bmg: Bmg) => {
   describe('bmg', () => {

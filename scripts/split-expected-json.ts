@@ -1,8 +1,11 @@
 import fs from 'fs-extra';
 import path from 'path';
 
+const NODE_MODULES_DIR = path.resolve(__dirname, '../node_modules');
+const BITMARK_GRAMMAR_DIR = path.resolve(NODE_MODULES_DIR, 'bitmark-grammar');
+const inputFilename = path.resolve(BITMARK_GRAMMAR_DIR, 'src/tests/EXPECTED.json');
 const exampleDir = path.resolve(__dirname, '../assets/example');
-const inputFilename = path.resolve(exampleDir, './expected/EXPECTED.JSON');
+// const inputFilename = path.resolve(exampleDir, './expected/EXPECTED.JSON');
 
 console.log(`Splitting: ${inputFilename}`);
 
