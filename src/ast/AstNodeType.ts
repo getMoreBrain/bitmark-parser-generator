@@ -25,6 +25,9 @@ const AstNodeType = superenum({
   response: 'response',
   quizzes: 'quizzes',
   quiz: 'quiz',
+  pairs: 'pairs',
+  pair: 'pair',
+  pairValues: 'pairValues',
 
   // Terminal (leaf)
   markup: 'markup', // bitmark markup
@@ -42,7 +45,10 @@ const AstNodeType = superenum({
   prefix: 'prefix',
   postfix: 'postfix',
   isCaseSensitive: 'isCaseSensitive',
+  isLongAnswer: 'isLongAnswer',
   isCorrect: 'isCorrect',
+  pairKey: 'pairKey',
+  pairValue: 'pairValue',
   text: 'text',
   propertyKey: 'propertyKey',
   propertyValue: 'propertyValue',

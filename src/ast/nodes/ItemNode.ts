@@ -18,7 +18,7 @@ class ItemNode extends BaseValueNode<string> implements AstNode {
   }
 
   protected validate(): void {
-    NodeValidator.isNonEmptyString(this.value, 'item');
+    NodeValidator.isString(this.value, 'item');
   }
 }
 

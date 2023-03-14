@@ -1,4 +1,4 @@
-import { BitJson, ChoiceBitJson, QuizBitJson, ResponseBitJson, StatementBitJson } from '../json/BitJson';
+import { BitJson, ChoiceBitJson, PairBitJson, QuizBitJson, ResponseBitJson, StatementBitJson } from '../json/BitJson';
 import { BitWrapperJson } from '../json/BitWrapperJson';
 import { GapBitJson, BodyBitJson, BodyBitsJson, SelectBitJson, SelectOptionBitJson } from '../json/BodyBitJson';
 import { BitNode } from '../nodes/BitNode';
@@ -7,6 +7,7 @@ import { BodyNode, BodyNodeTypes } from '../nodes/BodyNode';
 import { BodyTextNode } from '../nodes/BodyTextNode';
 import { ChoiceNode } from '../nodes/ChoiceNode';
 import { GapNode } from '../nodes/GapNode';
+import { PairNode } from '../nodes/PairNode';
 import { QuizNode } from '../nodes/QuizNode';
 import { ResponseNode } from '../nodes/ResponseNode';
 import { SelectNode } from '../nodes/SelectNode';
@@ -179,6 +180,7 @@ class BitmarkJson {
       choices,
       responses,
       quizzes,
+      pairs,
       body,
       id,
       ageRange,
@@ -202,6 +204,9 @@ class BitmarkJson {
     // quizzes
     const quizNodes = this.quizBitsToAst(quizzes);
 
+    // pairs
+    const pairsNodes = this.pairBitsToAst(pairs);
+
     // body & placeholders
     const bodyNode = this.bodyToAst(body, placeholders);
 
@@ -224,6 +229,7 @@ class BitmarkJson {
       choiceNodes,
       responseNodes,
       quizNodes,
+      pairsNodes,
       resource,
       bodyNode,
     );
@@ -337,6 +343,29 @@ class BitmarkJson {
         const choiceNodes = this.choiceBitsToAst(choices);
         const responseNodes = this.responseBitsToAst(responses);
         const node = Builder.quiz(choiceNodes, responseNodes, item, lead, hint, instruction, example || isExample);
+        nodes.push(node);
+      }
+    }
+
+    return nodes;
+  }
+
+  private pairBitsToAst(pairs?: PairBitJson[]): PairNode[] {
+    const nodes: PairNode[] = [];
+    if (Array.isArray(pairs)) {
+      for (const p of pairs) {
+        const { key, values, item, lead, hint, instruction, isExample, example, isCaseSensitive, isLongAnswer } = p;
+        const node = Builder.pair(
+          key,
+          values,
+          item,
+          lead,
+          hint,
+          instruction,
+          example || isExample,
+          isCaseSensitive,
+          isLongAnswer,
+        );
         nodes.push(node);
       }
     }

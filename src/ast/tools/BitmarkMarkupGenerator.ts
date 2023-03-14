@@ -21,6 +21,11 @@ import { ItemLeadNode } from '../nodes/ItemLeadNode';
 import { ItemNode } from '../nodes/ItemNode';
 import { LanguagesNode } from '../nodes/LanguagesNode';
 import { LeadNode } from '../nodes/LeadNode';
+import { PairKeyNode } from '../nodes/PairKeyNode';
+import { PairNode } from '../nodes/PairNode';
+import { PairValueNode } from '../nodes/PairValueNode';
+import { PairValuesNode } from '../nodes/PairValuesNode';
+import { PairsNode } from '../nodes/PairsNode';
 import { PostfixNode } from '../nodes/PostfixNode';
 import { PrefixNode } from '../nodes/PrefixNode';
 import { PropertiesNode } from '../nodes/PropertiesNode';
@@ -379,7 +384,8 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
   // statements
 
   protected on_statements_enter(_node: StatementsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
+    this.writeCardDivider();
+    this.writeNL();
   }
 
   protected on_statements_between(
@@ -390,10 +396,13 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
     _route: AstNodeInfo[],
   ): void {
     this.writeNL();
+    this.writeCardDivider();
+    this.writeNL();
   }
 
   protected on_statements_exit(_node: StatementsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
+    this.writeNL();
+    this.writeCardDivider();
   }
 
   // statement
@@ -558,6 +567,76 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
     //
   }
 
+  // pairs
+
+  protected on_pairs_enter(_node: PairsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeNL();
+    this.writeCardDivider();
+    this.writeNL();
+  }
+
+  protected on_pairs_between(
+    _node: PairsNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    this.writeNL();
+    this.writeCardDivider();
+    this.writeNL();
+  }
+
+  protected on_pairs_exit(_node: PairsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeNL();
+    this.writeCardDivider();
+    this.writeNL();
+  }
+
+  // pair
+
+  protected on_pair_enter(_node: PairNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  protected on_pair_between(
+    _node: PairNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    //
+  }
+
+  protected on_pair_exit(_node: PairNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
+  // pairValues
+
+  protected on_pairValues_enter(_node: PairValuesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    this.writeNL();
+    this.writePairKeyValueDivider();
+    this.writeNL();
+  }
+
+  protected on_pairValues_between(
+    _node: PairValuesNode,
+    _left: AstNode,
+    _right: AstNode,
+    _parent: AstNode | undefined,
+    _route: AstNodeInfo[],
+  ): void {
+    this.writeNL();
+    this.writePairValueDivider();
+    this.writeNL();
+  }
+
+  protected on_pairValues_exit(_node: PairValuesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    //
+  }
+
   //
   // Terminal nodes (leaves)
   //
@@ -587,7 +666,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
   // item
 
   protected on_item_enter(node: ItemNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
+    if (node.value != null) {
       this.writeOPC();
       this.writeString(node.value);
       this.writeCL();
@@ -698,6 +777,14 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
     }
   }
 
+  // isLongAnswer
+
+  protected on_isLongAnswer_enter(node: IsCorrectNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    if (node.value) {
+      //
+    }
+  }
+
   // isCorrect
 
   protected on_isCorrect_enter(node: IsCorrectNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
@@ -706,11 +793,27 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
     }
   }
 
-  // selectOptionText
+  // pairKey
 
-  protected on_selectOptionText_enter(node: TextNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected on_pairKey_enter(node: PairKeyNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
     if (node.value) {
-      //
+      this.writeString(node.value);
+    }
+  }
+
+  // pairValue
+
+  protected on_pairValue_enter(node: PairValueNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    if (node.value) {
+      this.writeString(node.value);
+    }
+  }
+
+  // text
+
+  protected on_text_enter(node: TextNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+    if (node.value) {
+      this.writeString(node.value);
     }
   }
 
@@ -899,6 +1002,14 @@ class BitmarkMarkupGenerator extends CodeWriter implements CodeGenerator {
 
   protected writeElementDivider(): void {
     this.write('---');
+  }
+
+  protected writePairKeyValueDivider(): void {
+    this.write('==');
+  }
+
+  protected writePairValueDivider(): void {
+    this.write('--');
   }
 
   protected writeNL(): void {

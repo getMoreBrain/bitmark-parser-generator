@@ -20,6 +20,7 @@ export interface BitJson {
   choices: ChoiceBitJson[];
   responses: ResponseBitJson[];
   quizzes: QuizBitJson[];
+  pairs: PairBitJson[];
   body: string;
   resource: ResourceBitJson;
   placeholders: BodyBitsJson;
@@ -73,3 +74,18 @@ export interface QuizBitJson {
   isExample: boolean;
   example: string;
 }
+
+export interface PairBitJson {
+  key: string;
+  values: PairValuesBitJson[];
+  item: string;
+  lead: string;
+  hint: string;
+  instruction: string;
+  isExample: boolean;
+  example: string;
+  isCaseSensitive: boolean;
+  isLongAnswer: boolean;
+}
+
+export type PairValuesBitJson = string;

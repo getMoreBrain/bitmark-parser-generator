@@ -74,7 +74,7 @@ class Ast {
       if (idx < route.length - 1) {
         acc += ' -> ';
       } else {
-        if (val.value) {
+        if (val.value != null) {
           const s = stringUtils.firstLine(`${val.value}`, 100);
           acc += `(${s})`;
         }

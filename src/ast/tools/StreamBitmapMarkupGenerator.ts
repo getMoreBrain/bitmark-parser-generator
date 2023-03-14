@@ -51,7 +51,7 @@ class StreamBitmapMarkupGenerator implements CodeGenerator {
         enter: (node: AstNode, parent: AstNode | undefined, route: AstNodeInfo[]) => {
           const routeStr = this.ast.routeToString(route);
 
-          if (node.value) {
+          if (node.value != null) {
             bitmarkGenerator.writeLine(`${routeStr}`);
           }
         },
