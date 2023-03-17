@@ -1,6 +1,6 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-const AstNodeType = superenum({
+const AstNodeTypeRaw = {
   unknown: 'unknown', // unknown
 
   // Non-terminal
@@ -55,6 +55,7 @@ const AstNodeType = superenum({
   isCorrect: 'isCorrect',
   pairKey: 'pairKey',
   pairValue: 'pairValue',
+  statementText: 'statementText',
   text: 'text',
   propertyKey: 'propertyKey',
   propertyValue: 'propertyValue',
@@ -63,8 +64,11 @@ const AstNodeType = superenum({
   languages: 'languages',
   // number: 'number',
   // boolean: 'boolean',
-});
+} as const;
+
+export type AstNodeTypeKeys = keyof typeof AstNodeTypeRaw;
+const AstNodeType = superenum(AstNodeTypeRaw);
 
 export type AstNodeTypeType = EnumType<typeof AstNodeType>;
 
-export { AstNodeType };
+export { AstNodeType, AstNodeTypeRaw };

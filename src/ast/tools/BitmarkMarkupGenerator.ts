@@ -1,57 +1,40 @@
 import { AstNodeType } from '../AstNodeType';
-import { Ast, AstWalkCallbacks, AstNode, AstNodeInfo } from '../Ast';
-import { AttachmentTypeNode } from '../nodes/bit/AttachmentTypeNode';
-import { BitNode } from '../nodes/bit/BitNode';
-import { BitTypeNode } from '../nodes/bit/BitTypeNode';
-import { TextFormatNode } from '../nodes/bit/TextFormatNode';
-import { BitmarkNode } from '../nodes/bitmark/BitmarkNode';
-import { BodyNode } from '../nodes/body/BodyNode';
-import { BodyTextNode } from '../nodes/body/BodyTextNode';
-import { ChoiceNode } from '../nodes/choice/ChoiceNode';
-import { ChoicesNode } from '../nodes/choice/ChoicesNode';
-import { ElementsNode } from '../nodes/element/ElementsNode';
-import { GapNode } from '../nodes/gap/GapNode';
-import { SolutionNode } from '../nodes/gap/SolutionNode';
-import { SolutionsNode } from '../nodes/gap/SolutionsNode';
-import { ExampleNode } from '../nodes/generic/ExampleNode';
-import { HintNode } from '../nodes/generic/HintNode';
-import { InstructionNode } from '../nodes/generic/InstructionNode';
-import { IsCaseSensitiveNode } from '../nodes/generic/IsCaseSensitiveNode';
-import { IsCorrectNode } from '../nodes/generic/IsCorrectNode';
-import { ItemLeadNode } from '../nodes/generic/ItemLeadNode';
-import { ItemNode } from '../nodes/generic/ItemNode';
-import { LeadNode } from '../nodes/generic/LeadNode';
-import { PostfixNode } from '../nodes/generic/PostfixNode';
-import { PrefixNode } from '../nodes/generic/PrefixNode';
-import { TextNode } from '../nodes/generic/TextNode';
-import { PairKeyNode } from '../nodes/pair/PairKeyNode';
-import { PairNode } from '../nodes/pair/PairNode';
-import { PairValueNode } from '../nodes/pair/PairValueNode';
-import { PairValuesNode } from '../nodes/pair/PairValuesNode';
-import { PairsNode } from '../nodes/pair/PairsNode';
-import { PropertiesNode } from '../nodes/property/PropertiesNode';
-import { PropertyKeyNode } from '../nodes/property/PropertyKeyNode';
-import { PropertyValueNode } from '../nodes/property/PropertyValueNode';
-import { PropertyValuesNode } from '../nodes/property/PropertyValuesNode';
-import { AgeRangesNode } from '../nodes/property/specific/AgeRangesNode';
-import { IdsNode } from '../nodes/property/specific/IdsNode';
-import { LanguagesNode } from '../nodes/property/specific/LanguagesNode';
-import { QuizNode } from '../nodes/quiz/QuizNode';
-import { QuizzesNode } from '../nodes/quiz/QuizzesNode';
-import { ResourceNode } from '../nodes/resource/ResourceNode';
-import { ResponseNode } from '../nodes/response/ResponseNode';
-import { ResponsesNode } from '../nodes/response/ResponsesNode';
-import { SelectNode } from '../nodes/select/SelectNode';
-import { SelectOptionNode } from '../nodes/select/SelectOptionNode';
-import { SelectOptionsNode } from '../nodes/select/SelectOptionsNode';
-import { StatementNode } from '../nodes/statement/StatementNode';
-import { StatementsNode } from '../nodes/statement/StatementsNode';
+import { Ast, AstWalkCallbacks, NodeInfo } from '../Ast';
 import { TextFormat } from '../types/TextFormat';
 import { ArticleOnlineResource } from '../types/resources/ArticleOnlineResource';
 import { ResourceType } from '../types/resources/ResouceType';
 
 import { CodeWriter } from './writer/CodeWriter';
 import { TextWriter } from './writer/TextWriter';
+
+import {
+  Bit,
+  Bitmark,
+  Body,
+  BodyText,
+  Choice,
+  Example,
+  Gap,
+  Hint,
+  Instruction,
+  IsCaseSensitive,
+  IsCorrect,
+  Item,
+  ItemLead,
+  Lead,
+  Node,
+  Pair,
+  PairKey,
+  PairValue,
+  Postfix,
+  Prefix,
+  Quiz,
+  Response,
+  Select,
+  SelectOption,
+  Solution,
+  Statement,
+} from '../nodes/BitmarkNodes';
 
 const DEFAULT_OPTIONS: BitmarkGeneratorOptions = {
   //
@@ -61,11 +44,9 @@ export interface BitmarkGeneratorOptions {
   explicitTextFormat?: boolean;
 }
 
-class BitmarkMarkupGenerator extends CodeWriter {
-  // TODO - make Ast class a singleton
-  private ast = new Ast();
+class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   private options: BitmarkGeneratorOptions;
-  private astWalker: AstWalker;
+  private printed = false;
 
   constructor(writer: TextWriter, options?: BitmarkGeneratorOptions) {
     super(writer);
@@ -75,13 +56,60 @@ class BitmarkMarkupGenerator extends CodeWriter {
       ...options,
     };
 
-    this.astWalker = new AstWalker(this);
+    this.enter = this.enter.bind(this);
+    this.between = this.between.bind(this);
+    this.exit = this.exit.bind(this);
+    this.leaf = this.leaf.bind(this);
   }
 
-  public generate(root: AstNode): void {
-    this.ast.walk(root, this.astWalker);
+  public generate(bitmark: Bitmark): void {
+    Ast.walk(bitmark, this);
 
     this.writeEndOfLine();
+  }
+
+  enter(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const gen = this as any;
+    const funcName = `enter_${node.key}`;
+
+    if (!this.printed) {
+      this.printed = true;
+    }
+
+    if (typeof gen[funcName] === 'function') {
+      gen[funcName](node, parent, route);
+    }
+  }
+
+  between(node: NodeInfo, left: NodeInfo, right: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const gen = this as any;
+    const funcName = `between_${node.key}`;
+
+    if (typeof gen[funcName] === 'function') {
+      gen[funcName](node, left, right, parent, route);
+    }
+  }
+
+  exit(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const gen = this as any;
+    const funcName = `exit_${node.key}`;
+
+    if (typeof gen[funcName] === 'function') {
+      gen[funcName](node, parent, route);
+    }
+  }
+
+  leaf(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const gen = this as any;
+    const funcName = `leaf_${node.key}`;
+
+    if (typeof gen[funcName] === 'function') {
+      gen[funcName](node, parent, route);
+    }
   }
 
   //
@@ -94,547 +122,513 @@ class BitmarkMarkupGenerator extends CodeWriter {
 
   // bitmark
 
-  protected on_bitmark_enter(_node: BitmarkNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected enter_bitmark(_node: NodeInfo, _parent: Node | undefined, _route: NodeInfo[]): void {
     //
   }
 
-  protected on_bitmark_between(
-    _node: BitmarkNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
+  protected between_bitmark(
+    _node: NodeInfo,
+    _left: Node,
+    _right: Node,
+    _parent: Node | undefined,
+    _route: NodeInfo[],
   ): void {
     this.writeNL();
     this.writeNL();
     this.writeNL();
   }
 
-  protected on_bitmark_exit(_node: BitmarkNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected exit_bitmark(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     //
   }
 
-  // bit
+  // bitmark -> bit
 
-  protected on_bit_enter(node: BitNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected enter_bitsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const bit = node.value as Bit;
+
     this.writeOPD();
-    this.writeString(node.bitType.value);
+    this.writeString(bit.type);
 
-    if (node.textFormat) {
-      const write = this.isWriteTextFormat(node.textFormat.value);
+    if (bit.textFormat) {
+      const write = this.isWriteTextFormat(bit.textFormat);
 
       if (write) {
         this.writeColon();
-        this.writeString(node.textFormat.value);
+        this.writeString(bit.textFormat);
       }
     }
 
-    if (node.attachmentType) {
+    if (bit.resource?.type) {
       this.writeAmpersand();
-      this.writeString(node.attachmentType.value);
+      this.writeString(bit.resource?.type);
     }
     this.writeCL();
     this.writeNL();
   }
 
-  protected on_bit_between(
-    _node: BitNode,
-    left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
+  protected between_bitmark_bits_(
+    _node: NodeInfo,
+    left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
   ): void {
     const noNl =
-      left.type === AstNodeType.bitType ||
-      left.type === AstNodeType.textFormat ||
-      left.type === AstNodeType.attachmentType;
+      left.key === AstNodeType.bitType ||
+      left.key === AstNodeType.textFormat ||
+      left.key === AstNodeType.attachmentType;
 
     if (!noNl) {
       this.writeNL();
     }
   }
 
-  protected on_bit_exit(_node: BitNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected exit_bitsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     //
   }
 
-  // properties
+  // // properties
 
-  protected on_properties_enter(_node: PropertiesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  // protected enter_properties(_node: Properties, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected between_properties(
+  //   _node: Properties,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   //
+  // }
+
+  // protected exit_properties(_node: PropertyValues, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // propertyValues
+
+  // protected enter_propertyValues(_node: PropertyValues, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected between_propertyValues(
+  //   _node: Properties,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   //
+  // }
+
+  // protected exit_propertyValues(_node: PropertyValues, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  //  bitmark -> bit -> itemLead
+
+  protected enter_itemLead(_node: ItemLead, _parent: Node | undefined, _route: NodeInfo[]): void {
     //
   }
 
-  protected on_properties_between(
-    _node: PropertiesNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
+  protected between_itemLead(
+    _node: ItemLead,
+    _left: Node,
+    _right: Node,
+    _parent: Node | undefined,
+    _route: NodeInfo[],
   ): void {
     //
   }
 
-  protected on_properties_exit(_node: PropertyValuesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected exit_itemLead(_node: ItemLead, _parent: Node | undefined, _route: NodeInfo[]): void {
     //
   }
 
-  // propertyValues
-
-  protected on_propertyValues_enter(
-    _node: PropertyValuesNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_propertyValues_between(
-    _node: PropertiesNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_propertyValues_exit(
-    _node: PropertyValuesNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  // itemLead
-
-  protected on_itemLead_enter(_node: ItemLeadNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  protected on_itemLead_between(
-    _node: ItemLeadNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_itemLead_exit(_node: ItemLeadNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // body
-
-  protected on_body_enter(_node: BodyNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  protected on_body_between(
-    _node: BodyNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_ibody_exit(_node: BodyNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // gap
-
-  protected on_gap_enter(_node: GapNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  protected on_gap_between(
-    _node: GapNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_gap_exit(_node: GapNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // select
-
-  protected on_select_enter(_node: SelectNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  protected on_select_between(
-    _node: SelectNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_select_exit(_node: SelectNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // elements
-
-  protected on_elements_enter(_node: ElementsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeCardDivider();
-    this.writeNL();
-  }
-
-  protected on_elements_between(
-    _node: ElementsNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    this.writeNL();
-    this.writeElementDivider();
-    this.writeNL();
-  }
-
-  protected on_elements_exit(_node: ElementsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeNL();
-    this.writeCardDivider();
-  }
-
-  // solutions
-
-  protected on_solutions_enter(_node: SolutionsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  protected on_solutions_between(
-    _node: SolutionsNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_solutions_exit(_node: SolutionsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // selectOptions
-
-  protected on_selectOptions_enter(
-    _node: SelectOptionsNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_selectOptions_between(
-    _node: SelectOptionsNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_selectOptions_exit(_node: SelectOptionsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // selectOption
-
-  protected on_selectOption_enter(node: SelectOptionNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.isCorrect.value) {
-      this.writeOPP();
-    } else {
-      this.writeOPM();
-    }
-    this.write(node.text.value);
-    this.writeCL();
-  }
-
-  protected on_selectOption_between(
-    _node: SelectOptionNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_selectOption_exit(_node: SelectOptionNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // statements
-
-  protected on_statements_enter(_node: StatementsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeCardDivider();
-    this.writeNL();
-  }
-
-  protected on_statements_between(
-    _node: StatementsNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    this.writeNL();
-    this.writeCardDivider();
-    this.writeNL();
-  }
-
-  protected on_statements_exit(_node: StatementsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeNL();
-    this.writeCardDivider();
-  }
-
-  // statement
-
-  protected on_statement_enter(node: StatementNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.isCorrect.value) {
-      this.writeOPP();
-    } else {
-      this.writeOPM();
-    }
-    this.write(node.text.value);
-    this.writeCL();
-  }
-
-  protected on_statement_between(
-    _node: StatementNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_statement_exit(_node: StatementNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // choices
-
-  protected on_choices_enter(_node: ChoicesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  protected on_choices_between(
-    _node: ChoicesNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    this.writeNL();
-  }
-
-  protected on_choices_exit(_node: ChoicesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // choice
-
-  protected on_choice_enter(node: ChoiceNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.isCorrect.value) {
-      this.writeOPP();
-    } else {
-      this.writeOPM();
-    }
-    this.write(node.text.value);
-    this.writeCL();
-  }
-
-  protected on_choice_between(
-    _node: ChoiceNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_choice_exit(_node: ChoiceNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // responses
-
-  protected on_responses_enter(_node: ResponsesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  protected on_responses_between(
-    _node: ResponsesNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    this.writeNL();
-  }
-
-  protected on_responses_exit(_node: ResponsesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // response
-
-  protected on_response_enter(node: ResponseNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.isCorrect.value) {
-      this.writeOPP();
-    } else {
-      this.writeOPM();
-    }
-    this.write(node.text.value);
-    this.writeCL();
-  }
-
-  protected on_response_between(
-    _node: ResponseNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_response_exit(_node: ResponseNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // quizzes
-
-  protected on_quizzes_enter(_node: QuizzesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeCardDivider();
-    this.writeNL();
-  }
-
-  protected on_quizzes_between(
-    _node: QuizzesNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    this.writeNL();
-    this.writeCardDivider();
-    this.writeNL();
-  }
-
-  protected on_quizzes_exit(_node: QuizzesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeNL();
-    this.writeCardDivider();
-  }
-
-  // quiz
-
-  protected on_quiz_enter(_node: QuizNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  protected on_quiz_between(
-    _node: QuizNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    this.writeNL();
-  }
-
-  protected on_quiz_exit(_node: QuizNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // pairs
-
-  protected on_pairs_enter(_node: PairsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeNL();
-    this.writeCardDivider();
-    this.writeNL();
-  }
-
-  protected on_pairs_between(
-    _node: PairsNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    this.writeNL();
-    this.writeCardDivider();
-    this.writeNL();
-  }
-
-  protected on_pairs_exit(_node: PairsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeNL();
-    this.writeCardDivider();
-    this.writeNL();
-  }
-
-  // pair
-
-  protected on_pair_enter(_node: PairNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  protected on_pair_between(
-    _node: PairNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
-
-  protected on_pair_exit(_node: PairNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
-  // pairValues
-
-  protected on_pairValues_enter(_node: PairValuesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    this.writeNL();
-    this.writePairKeyValueDivider();
-    this.writeNL();
-  }
-
-  protected on_pairValues_between(
-    _node: PairValuesNode,
-    _left: AstNode,
-    _right: AstNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    this.writeNL();
-    this.writePairValueDivider();
-    this.writeNL();
-  }
-
-  protected on_pairValues_exit(_node: PairValuesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
+  // // body
+
+  // protected enter_body(_node: Body, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected between_body(_node: Body, _left: Node, _right: Node, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected exit_ibody(_node: Body, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // gap
+
+  // protected enter_gap(_node: Gap, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected between_gap(_node: Gap, _left: Node, _right: Node, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected exit_gap(_node: Gap, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // select
+
+  // protected enter_select(_node: Select, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected between_select(
+  //   _node: Select,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   //
+  // }
+
+  // protected exit_select(_node: Select, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // elements
+
+  // protected enter_elements(_node: Elements, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   this.writeCardDivider();
+  //   this.writeNL();
+  // }
+
+  // protected between_elements(
+  //   _node: Elements,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  //   this.writeElementDivider();
+  //   this.writeNL();
+  // }
+
+  // protected exit_elements(_node: Elements, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  //   this.writeCardDivider();
+  // }
+
+  // // solutions
+
+  // protected enter_solutions(_node: Solutions, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected between_solutions(
+  //   _node: Solutions,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   //
+  // }
+
+  // protected exit_solutions(_node: Solutions, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // selectOptions
+
+  // protected enter_selectOptions(_node: SelectOptions, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected between_selectOptions(
+  //   _node: SelectOptions,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   //
+  // }
+
+  // protected exit_selectOptions(_node: SelectOptions, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // selectOption
+
+  // protected enter_selectOption(node: SelectOption, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   if (node.isCorrect.value) {
+  //     this.writeOPP();
+  //   } else {
+  //     this.writeOPM();
+  //   }
+  //   this.write(node.text.value);
+  //   this.writeCL();
+  // }
+
+  // protected between_selectOption(
+  //   _node: SelectOption,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   //
+  // }
+
+  // protected exit_selectOption(_node: SelectOption, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // statements
+
+  // protected enter_statements(_node: Statements, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   this.writeCardDivider();
+  //   this.writeNL();
+  // }
+
+  // protected between_statements(
+  //   _node: Statements,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  //   this.writeCardDivider();
+  //   this.writeNL();
+  // }
+
+  // protected exit_statements(_node: Statements, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  //   this.writeCardDivider();
+  // }
+
+  // // statement
+
+  // protected enter_statement(node: Statement, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   if (node.isCorrect.value) {
+  //     this.writeOPP();
+  //   } else {
+  //     this.writeOPM();
+  //   }
+  //   this.write(node.text.value);
+  //   this.writeCL();
+  // }
+
+  // protected between_statement(
+  //   _node: Statement,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   //
+  // }
+
+  // protected exit_statement(_node: Statement, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // choices
+
+  // protected enter_choices(_node: Choices, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected between_choices(
+  //   _node: Choices,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  // }
+
+  // protected exit_choices(_node: Choices, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // choice
+
+  // protected enter_choice(node: Choice, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   if (node.isCorrect.value) {
+  //     this.writeOPP();
+  //   } else {
+  //     this.writeOPM();
+  //   }
+  //   this.write(node.text.value);
+  //   this.writeCL();
+  // }
+
+  // protected between_choice(
+  //   _node: Choice,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   //
+  // }
+
+  // protected exit_choice(_node: Choice, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // responses
+
+  // protected enter_responses(_node: Responses, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected between_responses(
+  //   _node: Responses,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  // }
+
+  // protected exit_responses(_node: Responses, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // response
+
+  // protected enter_response(node: Response, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   if (node.isCorrect.value) {
+  //     this.writeOPP();
+  //   } else {
+  //     this.writeOPM();
+  //   }
+  //   this.write(node.text.value);
+  //   this.writeCL();
+  // }
+
+  // protected between_response(
+  //   _node: Response,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   //
+  // }
+
+  // protected exit_response(_node: Response, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // quizzes
+
+  // protected enter_quizzes(_node: Quizzes, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   this.writeCardDivider();
+  //   this.writeNL();
+  // }
+
+  // protected between_quizzes(
+  //   _node: Quizzes,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  //   this.writeCardDivider();
+  //   this.writeNL();
+  // }
+
+  // protected exit_quizzes(_node: Quizzes, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  //   this.writeCardDivider();
+  // }
+
+  // // quiz
+
+  // protected enter_quiz(_node: Quiz, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected between_quiz(_node: Quiz, _left: Node, _right: Node, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  // }
+
+  // protected exit_quiz(_node: Quiz, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // pairs
+
+  // protected enter_pairs(_node: Pairs, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  //   this.writeCardDivider();
+  //   this.writeNL();
+  // }
+
+  // protected between_pairs(
+  //   _node: Pairs,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  //   this.writeCardDivider();
+  //   this.writeNL();
+  // }
+
+  // protected exit_pairs(_node: Pairs, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  //   this.writeCardDivider();
+  //   this.writeNL();
+  // }
+
+  // // pair
+
+  // protected enter_pair(_node: Pair, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected between_pair(_node: Pair, _left: Node, _right: Node, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected exit_pair(_node: Pair, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // pairValues
+
+  // protected enter_pairValues(_node: PairValues, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  //   this.writePairKeyValueDivider();
+  //   this.writeNL();
+  // }
+
+  // protected between_pairValues(
+  //   _node: PairValues,
+  //   _left: Node,
+  //   _right: Node,
+  //   _parent: Node | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  //   this.writePairValueDivider();
+  //   this.writeNL();
+  // }
+
+  // protected exit_pairValues(_node: PairValues, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
 
   //
   // Terminal nodes (leaves)
@@ -642,29 +636,13 @@ class BitmarkMarkupGenerator extends CodeWriter {
 
   // bitType
 
-  protected on_bitType_enter(_node: BitTypeNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
-
   // textFormat
-
-  protected on_textFormat_enter(_node: TextFormatNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    //
-  }
 
   // attachmentType
 
-  protected on_attachmentType_enter(
-    _node: AttachmentTypeNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    //
-  }
+  //  * -> itemLead --> item
 
-  // item
-
-  protected on_item_enter(node: ItemNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected leaf_item(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) {
       this.writeOPC();
       this.writeString(node.value);
@@ -672,9 +650,9 @@ class BitmarkMarkupGenerator extends CodeWriter {
     }
   }
 
-  // lead
+  //  * -> itemLead --> lead
 
-  protected on_lead_enter(node: LeadNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected leaf_lead(node: NodeInfo, _parent: Node | undefined, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeOPC();
       this.writeString(node.value);
@@ -682,9 +660,9 @@ class BitmarkMarkupGenerator extends CodeWriter {
     }
   }
 
-  // hint
+  //  * -> hint
 
-  protected on_hint_enter(node: HintNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected leaf_hint(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeOPQ();
       this.writeString(node.value);
@@ -692,9 +670,9 @@ class BitmarkMarkupGenerator extends CodeWriter {
     }
   }
 
-  // instruction
+  // * -> instruction
 
-  protected on_instruction_enter(node: InstructionNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected leaf_instruction(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeOPB();
       this.writeString(node.value);
@@ -702,41 +680,44 @@ class BitmarkMarkupGenerator extends CodeWriter {
     }
   }
 
-  // example
+  // * -> example
 
-  protected on_example_enter(node: ExampleNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected leaf_example(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const example = node.value;
 
-    this.writeOPA();
-    this.writeString('example');
+    if (example) {
+      this.writeOPA();
+      this.writeString('example');
 
-    if (example !== true && example !== '') {
-      this.writeColon();
-      this.writeString(example as string);
+      if (example !== true && example !== '') {
+        this.writeColon();
+        this.writeString(example as string);
+      }
+
+      this.writeCL();
     }
-
-    this.writeCL();
   }
 
-  // bodyText
+  // bitmark -> bits -> body -> bodyText
 
-  protected on_bodyText_enter(node: BodyTextNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected leaf_bodyText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeString(node.value);
     }
   }
 
-  // element
+  // // element
 
-  protected on_element_enter(node: SolutionNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      this.writeString(node.value);
-    }
-  }
+  // protected enter_element(node: Solution, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeString(node.value);
+  //   }
+  // }
 
-  // solution
+  // bitmark -> bits -> body -> solutions -> solution
+  // ? -> solutions -> solution
 
-  protected on_solution_enter(node: SolutionNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
+  protected leaf_solutionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeOPU();
       this.writeString(node.value);
@@ -744,159 +725,155 @@ class BitmarkMarkupGenerator extends CodeWriter {
     }
   }
 
-  // prefix
+  // // prefix
 
-  protected on_prefix_enter(node: PrefixNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      this.writeOPPRE();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
+  // protected enter_prefix(node: Prefix, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeOPPRE();
+  //     this.writeString(node.value);
+  //     this.writeCL();
+  //   }
+  // }
 
-  // postfix
+  // // postfix
 
-  protected on_postfix_enter(node: PostfixNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      this.writeOPPOST();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
+  // protected enter_postfix(node: Postfix, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeOPPOST();
+  //     this.writeString(node.value);
+  //     this.writeCL();
+  //   }
+  // }
 
-  // isCaseSensitive
+  // // isCaseSensitive
 
-  protected on_isCaseSensitive_enter(
-    node: IsCaseSensitiveNode,
-    _parent: AstNode | undefined,
-    _route: AstNodeInfo[],
-  ): void {
-    if (node.value) {
-      // Not in bitmark??
-    }
-  }
+  // protected enter_isCaseSensitive(node: IsCaseSensitive, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     // Not in bitmark??
+  //   }
+  // }
 
-  // isLongAnswer
+  // // isLongAnswer
 
-  protected on_isLongAnswer_enter(node: IsCorrectNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      //
-    }
-  }
+  // protected enter_isLongAnswer(node: IsCorrect, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     //
+  //   }
+  // }
 
-  // isCorrect
+  // // isCorrect
 
-  protected on_isCorrect_enter(node: IsCorrectNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      //
-    }
-  }
+  // protected enter_isCorrect(node: IsCorrect, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     //
+  //   }
+  // }
 
-  // pairKey
+  // // pairKey
 
-  protected on_pairKey_enter(node: PairKeyNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      this.writeString(node.value);
-    }
-  }
+  // protected enter_pairKey(node: PairKey, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeString(node.value);
+  //   }
+  // }
 
-  // pairValue
+  // // pairValue
 
-  protected on_pairValue_enter(node: PairValueNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      this.writeString(node.value);
-    }
-  }
+  // protected enter_pairValue(node: PairValue, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeString(node.value);
+  //   }
+  // }
 
-  // text
+  // // // text
 
-  protected on_text_enter(node: TextNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      this.writeString(node.value);
-    }
-  }
+  // // protected enter_text(node: Text, _parent: Node | undefined, _route: NodeInfo[]): void {
+  // //   if (node.value) {
+  // //     this.writeString(node.value);
+  // //   }
+  // // }
 
-  // propertyKey
+  // // // propertyKey
 
-  protected on_propertyKey_enter(node: PropertyKeyNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      //
-    }
-  }
+  // // protected enter_propertyKey(node: PropertyKey, _parent: Node | undefined, _route: NodeInfo[]): void {
+  // //   if (node.value) {
+  // //     //
+  // //   }
+  // // }
 
-  // propertyValue
+  // // // propertyValue
 
-  protected on_propertyValue_enter(node: PropertyValueNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    if (node.value) {
-      //
-    }
-  }
+  // // protected enter_propertyValue(node: PropertyValue, _parent: Node | undefined, _route: NodeInfo[]): void {
+  // //   if (node.value) {
+  // //     //
+  // //   }
+  // // }
 
-  // ids
+  // // ids
 
-  protected on_ids_enter(node: IdsNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    for (const id of node.value) {
-      if (id) {
-        this.writeOPA();
-        this.writeString('id');
-        this.writeColon();
-        this.writeString(`${id}`);
-        this.writeCL();
-      }
-    }
-  }
+  // protected enter_ids(node: Ids, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   for (const id of node.value) {
+  //     if (id) {
+  //       this.writeOPA();
+  //       this.writeString('id');
+  //       this.writeColon();
+  //       this.writeString(`${id}`);
+  //       this.writeCL();
+  //     }
+  //   }
+  // }
 
-  // ageRanges
+  // // ageRanges
 
-  protected on_ageRanges_enter(node: AgeRangesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    for (const ageRange of node.value) {
-      if (ageRange) {
-        this.writeOPA();
-        this.writeString('ageRange');
-        this.writeColon();
-        this.writeString(`${ageRange}`);
-        this.writeCL();
-      }
-    }
-  }
+  // protected enter_ageRanges(node: AgeRanges, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   for (const ageRange of node.value) {
+  //     if (ageRange) {
+  //       this.writeOPA();
+  //       this.writeString('ageRange');
+  //       this.writeColon();
+  //       this.writeString(`${ageRange}`);
+  //       this.writeCL();
+  //     }
+  //   }
+  // }
 
-  // languages
+  // // languages
 
-  protected on_languages_enter(node: LanguagesNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    for (const lang of node.value) {
-      if (lang) {
-        this.writeOPA();
-        this.writeString('language');
-        this.writeColon();
-        this.writeString(`${lang}`);
-        this.writeCL();
-      }
-    }
-  }
+  // protected enter_languages(node: Languages, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   for (const lang of node.value) {
+  //     if (lang) {
+  //       this.writeOPA();
+  //       this.writeString('language');
+  //       this.writeColon();
+  //       this.writeString(`${lang}`);
+  //       this.writeCL();
+  //     }
+  //   }
+  // }
 
-  // resource
+  // // resource
 
-  protected on_resource_enter(node: ResourceNode, _parent: AstNode | undefined, _route: AstNodeInfo[]): void {
-    const resource = node.value;
-    if (resource) {
-      this.writeOPAMP();
-      this.writeString(resource.type);
-      this.writeColon();
+  // protected enter_resource(node: Resource, _parent: Node | undefined, _route: NodeInfo[]): void {
+  //   const resource = node.value;
+  //   if (resource) {
+  //     this.writeOPAMP();
+  //     this.writeString(resource.type);
+  //     this.writeColon();
 
-      switch (resource.type) {
-        case ResourceType.articleOnline: {
-          const articleOnline = resource.articleOnline as ArticleOnlineResource;
-          this.writeString(articleOnline.url);
-          break;
-        }
-        case ResourceType.app:
-          this.writeString(resource.app);
-          break;
-      }
+  //     switch (resource.type) {
+  //       case ResourceType.articleOnline: {
+  //         const articleOnline = resource.articleOnline as ArticleOnlineResource;
+  //         this.writeString(articleOnline.url);
+  //         break;
+  //       }
+  //       case ResourceType.app:
+  //         this.writeString(resource.app);
+  //         break;
+  //     }
 
-      this.writeCL();
-    }
-  }
+  //     this.writeCL();
+  //   }
+  // }
   // END NODE HANDLERS
 
   //
@@ -1019,48 +996,6 @@ class BitmarkMarkupGenerator extends CodeWriter {
     const isMinusMinus = TextFormat.fromValue(bitValue) === TextFormat.bitmarkMinusMinus;
     const writeFormat = !isMinusMinus || this.options.explicitTextFormat;
     return !!writeFormat;
-  }
-}
-
-class AstWalker implements AstWalkCallbacks {
-  private generator: BitmarkMarkupGenerator;
-
-  constructor(generator: BitmarkMarkupGenerator) {
-    this.generator = generator;
-
-    this.enter = this.enter.bind(this);
-    this.between = this.between.bind(this);
-    this.exit = this.exit.bind(this);
-  }
-
-  enter(node: AstNode, parent: AstNode | undefined, route: AstNodeInfo[]) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const gen = this.generator as any;
-    const funcName = `on_${node.type}_enter`;
-
-    if (typeof gen[funcName] === 'function') {
-      gen[funcName](node, parent, route);
-    }
-  }
-
-  between(node: AstNode, leftNode: AstNode, rightNode: AstNode, parent: AstNode | undefined, route: AstNodeInfo[]) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const gen = this.generator as any;
-    const funcName = `on_${node.type}_between`;
-
-    if (typeof gen[funcName] === 'function') {
-      gen[funcName](node, leftNode, rightNode, parent, route);
-    }
-  }
-
-  exit(node: AstNode, parent: AstNode | undefined, route: AstNodeInfo[]) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const gen = this.generator as any;
-    const funcName = `on_${node.type}_exit`;
-
-    if (typeof gen[funcName] === 'function') {
-      gen[funcName](node, parent, route);
-    }
   }
 }
 

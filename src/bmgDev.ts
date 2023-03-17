@@ -8,6 +8,8 @@ Copyright ©2023 Get More Brain
 
 import fs from 'fs-extra';
 
+import { AstNodeType } from './ast/AstNodeType';
+import { Ast } from './ast/Ast';
 import { BitmarkJson } from './ast/tools/BitmarkJson';
 import { FileBitmapMarkupGenerator } from './ast/tools/FileBitmapMarkupGenerator';
 import { testFiles } from './testFiles';
@@ -185,6 +187,9 @@ class Bmg {
 
     // Convert the bitmark JSON to bitmark AST
     const bitmarkAst = BitmarkJson.toAst(json);
+
+    console.log(JSON.stringify(bitmarkAst, null, 2));
+    Ast.printTree(bitmarkAst);
 
     // Generate markup code from AST
     const fileName = './bitmark.txt';

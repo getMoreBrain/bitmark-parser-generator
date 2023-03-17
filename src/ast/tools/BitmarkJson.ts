@@ -1,25 +1,28 @@
 import { BitJson, ChoiceBitJson, PairBitJson, QuizBitJson, ResponseBitJson, StatementBitJson } from '../json/BitJson';
 import { BitWrapperJson } from '../json/BitWrapperJson';
 import { GapBitJson, BodyBitJson, BodyBitsJson, SelectBitJson, SelectOptionBitJson } from '../json/BodyBitJson';
-import { BitNode } from '../nodes/bit/BitNode';
-import { BitmarkNode } from '../nodes/bitmark/BitmarkNode';
-import { BodyNode, BodyNodeTypes } from '../nodes/body/BodyNode';
-import { BodyTextNode } from '../nodes/body/BodyTextNode';
-import { ChoiceNode } from '../nodes/choice/ChoiceNode';
-import { GapNode } from '../nodes/gap/GapNode';
-import { PairNode } from '../nodes/pair/PairNode';
-import { QuizNode } from '../nodes/quiz/QuizNode';
-import { ResponseNode } from '../nodes/response/ResponseNode';
-import { SelectNode } from '../nodes/select/SelectNode';
-import { SelectOptionNode } from '../nodes/select/SelectOptionNode';
-import { StatementNode } from '../nodes/statement/StatementNode';
-import { AttachmentTypeType } from '../types/AttachmentType';
 import { BitType, BitTypeType } from '../types/BitType';
 import { BodyBitType } from '../types/BodyBitType';
 import { TextFormatType } from '../types/TextFormat';
 
 import { Builder } from './Builder';
 import { stringUtils } from './StringUtils';
+
+import {
+  Bit,
+  Bitmark,
+  Body,
+  BodyPart,
+  BodyText,
+  Choice,
+  Gap,
+  Pair,
+  Quiz,
+  Response,
+  Select,
+  SelectOption,
+  Statement,
+} from '../nodes/BitmarkNodes';
 
 // const BODY_SPLIT_REGEX = new RegExp('{[0-9]+}', 'g');
 
@@ -31,9 +34,9 @@ import { stringUtils } from './StringUtils';
  *   them from other things in the JSON without a complex process (plus there can be clashes right now)
  */
 class BitmarkJson {
-  toAst(json: unknown): BitmarkNode {
+  toAst(json: unknown): Bitmark {
     const bitWrappers = this.preprocessJson(json);
-    const bitsNodes: BitNode[] = [];
+    const bitsNodes: Bit[] = [];
 
     for (const bitWrapper of bitWrappers) {
       const { bit /*, bitmark*/ } = bitWrapper;
@@ -163,7 +166,7 @@ class BitmarkJson {
     };
   }
 
-  private bitToAst(bit: BitJson): BitNode {
+  private bitToAst(bit: BitJson): Bit {
     const {
       type,
       format,
@@ -189,9 +192,6 @@ class BitmarkJson {
       placeholders,
     } = bit;
 
-    // Attachment type (TODO, not in JSON? ... or should it be derived from resource?)
-    const attachmentType = undefined;
-
     //+-statement
     const statementNodes = this.statementBitsToAst(statement, isCorrect, statements);
 
@@ -214,7 +214,6 @@ class BitmarkJson {
     const bitNode = Builder.bit(
       type as BitTypeType,
       format as TextFormatType | undefined,
-      attachmentType as AttachmentTypeType | undefined,
       id,
       ageRange,
       language,
@@ -241,8 +240,8 @@ class BitmarkJson {
     statement?: string,
     isCorrect?: boolean,
     statements?: StatementBitJson[],
-  ): StatementNode[] {
-    const nodes: StatementNode[] = [];
+  ): Statement[] | undefined {
+    const nodes: Statement[] = [];
 
     if (statement) {
       const node = Builder.statement(statement, isCorrect ?? false);
@@ -266,11 +265,13 @@ class BitmarkJson {
       }
     }
 
+    if (nodes.length === 0) return undefined;
+
     return nodes;
   }
 
-  private choiceBitsToAst(choices?: ChoiceBitJson[]): ChoiceNode[] {
-    const nodes: ChoiceNode[] = [];
+  private choiceBitsToAst(choices?: ChoiceBitJson[]): Choice[] | undefined {
+    const nodes: Choice[] = [];
     if (Array.isArray(choices)) {
       for (const c of choices) {
         const { choice, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = c;
@@ -288,11 +289,13 @@ class BitmarkJson {
       }
     }
 
+    if (nodes.length === 0) return undefined;
+
     return nodes;
   }
 
-  private responseBitsToAst(responses?: ResponseBitJson[]): ResponseNode[] {
-    const nodes: ResponseNode[] = [];
+  private responseBitsToAst(responses?: ResponseBitJson[]): Response[] | undefined {
+    const nodes: Response[] = [];
     if (Array.isArray(responses)) {
       for (const r of responses) {
         const { response, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = r;
@@ -310,11 +313,13 @@ class BitmarkJson {
       }
     }
 
+    if (nodes.length === 0) return undefined;
+
     return nodes;
   }
 
-  private selectOptionBitsToAst(options?: SelectOptionBitJson[]): SelectOptionNode[] {
-    const nodes: SelectOptionNode[] = [];
+  private selectOptionBitsToAst(options?: SelectOptionBitJson[]): SelectOption[] {
+    const nodes: SelectOption[] = [];
     if (Array.isArray(options)) {
       for (const o of options) {
         const { text, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = o;
@@ -335,8 +340,8 @@ class BitmarkJson {
     return nodes;
   }
 
-  private quizBitsToAst(quizzes?: QuizBitJson[]): QuizNode[] {
-    const nodes: QuizNode[] = [];
+  private quizBitsToAst(quizzes?: QuizBitJson[]): Quiz[] | undefined {
+    const nodes: Quiz[] = [];
     if (Array.isArray(quizzes)) {
       for (const q of quizzes) {
         const { choices, responses, item, lead, hint, instruction, isExample, example } = q;
@@ -347,11 +352,13 @@ class BitmarkJson {
       }
     }
 
+    if (nodes.length === 0) return undefined;
+
     return nodes;
   }
 
-  private pairBitsToAst(pairs?: PairBitJson[]): PairNode[] {
-    const nodes: PairNode[] = [];
+  private pairBitsToAst(pairs?: PairBitJson[]): Pair[] | undefined {
+    const nodes: Pair[] = [];
     if (Array.isArray(pairs)) {
       for (const p of pairs) {
         const { key, values, item, lead, hint, instruction, isExample, example, isCaseSensitive, isLongAnswer } = p;
@@ -370,14 +377,16 @@ class BitmarkJson {
       }
     }
 
+    if (nodes.length === 0) return undefined;
+
     return nodes;
   }
 
-  private bodyToAst(body: string, placeholders: BodyBitsJson): BodyNode | undefined {
-    let node: BodyNode | undefined;
+  private bodyToAst(body: string, placeholders: BodyBitsJson): Body | undefined {
+    let node: Body | undefined;
 
     const placeholderNodes: {
-      [keyof: string]: GapNode | SelectNode | BodyTextNode;
+      [keyof: string]: BodyPart;
     } = {};
 
     // Placeholders
@@ -393,7 +402,7 @@ class BitmarkJson {
       // TODO - this split will need escaping, but actually we shouldn't need it anyway once bitmark JSON is actually
       // all JSON
 
-      const bodyPartNodes: BodyNodeTypes[] = [];
+      const bodyPartNodes: BodyPart[] = [];
       const bodyParts: string[] = stringUtils.splitPlaceholders(body, Object.keys(placeholderNodes));
 
       for (let i = 0, len = bodyParts.length; i < len; i++) {
@@ -415,24 +424,23 @@ class BitmarkJson {
     return node;
   }
 
-  private bodyTextToAst(bodyText: string): BodyTextNode {
+  private bodyTextToAst(bodyText: string): BodyText {
     // TODO => Will be more complicated one the body text is JSON
     return Builder.bodyText(bodyText);
   }
 
-  private bodyBitToAst(bit: BodyBitJson): GapNode | SelectNode | BodyTextNode {
+  private bodyBitToAst(bit: BodyBitJson): BodyPart {
     switch (bit.type) {
       case BodyBitType.gap:
         return this.gapBitToAst(bit);
-        break;
+
       case BodyBitType.select:
         return this.selectBitToAst(bit);
-        break;
     }
-    return BodyTextNode.create('');
+    return this.bodyTextToAst('');
   }
 
-  private gapBitToAst(bit: GapBitJson): GapNode {
+  private gapBitToAst(bit: GapBitJson): Gap {
     const { item, lead, hint, instruction, isExample, example, isCaseSensitive, solutions } = bit;
 
     // Build bit
@@ -441,7 +449,7 @@ class BitmarkJson {
     return bitNode;
   }
 
-  private selectBitToAst(bit: SelectBitJson): SelectNode {
+  private selectBitToAst(bit: SelectBitJson): Select {
     const { options, prefix, postfix, item, lead, hint, instruction, isExample, example } = bit;
 
     // Build options bits

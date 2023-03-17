@@ -1,5 +1,6 @@
-import { AstNode } from '../Ast';
+import { AstNodeTypeType } from '../AstNodeType';
+import { Node } from '../nodes/BitmarkNodes';
 
 export interface CodeGenerator {
-  generate: (root: AstNode) => Promise<void | string>;
+  generate: (root: Node, rootType?: AstNodeTypeType) => Promise<void | string>;
 }

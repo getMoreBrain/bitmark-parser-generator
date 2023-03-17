@@ -1,4 +1,5 @@
-import { AstNodeTypeType } from './AstNodeType';
+import { AstNodeType, AstNodeTypeType } from './AstNodeType';
+import { Bitmark, Node } from './nodes/BitmarkNodes';
 import { stringUtils } from './tools/StringUtils';
 
 export interface AstNode {
@@ -8,69 +9,47 @@ export interface AstNode {
   readonly children?: AstNode[];
 }
 
-export interface AstNodeInfo {
+export interface NodeInfo {
   index: number;
-  type: AstNodeTypeType;
+  key: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   value?: any;
 }
 
 export interface AstWalkCallbacks {
-  enter?: (node: AstNode, parent: AstNode | undefined, route: AstNodeInfo[]) => void;
+  enter?: (node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) => void;
   between?: (
-    node: AstNode,
-    leftNode: AstNode,
-    rightNode: AstNode,
-    parent: AstNode | undefined,
-    route: AstNodeInfo[],
+    node: NodeInfo,
+    leftNode: NodeInfo,
+    rightNode: NodeInfo,
+    parent: NodeInfo | undefined,
+    route: NodeInfo[],
   ) => void;
-  exit?: (node: AstNode, parent: AstNode | undefined, route: AstNodeInfo[]) => void;
+  exit?: (node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) => void;
+  leaf?: (node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) => void;
 }
 
 class Ast {
-  createNode(type: AstNodeTypeType): AstNode {
-    return {
-      type,
-    };
+  walk(bitmark: Bitmark, callbacks: AstWalkCallbacks): void {
+    this.walkRecursive(bitmark, undefined, callbacks, [{ index: 0, key: 'bitmark', value: bitmark }]);
   }
 
-  // addNode(parent: AstNode, child: AstNode): AstNode {
-  //   if (!parent.children) parent.children = [];
-
-  //   // Remove node if already a child
-  //   const i = parent.children.indexOf(child);
-  //   if (i >= 0) {
-  //     parent.children.splice(i, 1);
-  //   }
-
-  //   // Add node as a child
-  //   parent.children.push(child);
-
-  //   return child;
-  // }
-
-  // removeNode(parent: AstNode, child: AstNode): AstNode {
-  //   if (!parent.children) return child;
-
-  //   // Remove node if a child
-  //   const i = parent.children.indexOf(child);
-  //   if (i >= 0) {
-  //     parent.children.splice(i, 1);
-  //   }
-  //   if (parent.children.length === 0) {
-  //     delete parent.children;
-  //   }
-
-  //   return child;
-  // }
-
-  walk(root: AstNode, callbacks: AstWalkCallbacks): void {
-    this.walkRecursive(root, undefined, callbacks, [{ index: 0, type: root.type }]);
-  }
-
-  routeToString(route: AstNodeInfo[]): string {
+  getRouteKey(route: NodeInfo[]): string {
     return route.reduce((acc, val, idx) => {
-      acc += `${val.index},${val.type}`;
+      if (+val.key !== val.index) {
+        acc += `${val.key}`;
+        if (idx < route.length - 1) {
+          acc += '_';
+        }
+      }
+      return acc;
+    }, '');
+  }
+
+  routeToString(route: NodeInfo[]): string {
+    return route.reduce((acc, val, idx) => {
+      // acc += `${val.type}[${val.index}]`;
+      acc += `${val.key}`;
       if (idx < route.length - 1) {
         acc += ' -> ';
       } else {
@@ -83,7 +62,7 @@ class Ast {
     }, '');
   }
 
-  routeToTreeString(route: AstNodeInfo[]): string {
+  routeToTreeString(route: NodeInfo[]): string {
     let str = '';
     for (let i = 0, len = route.length; i < len; i++) {
       const val = route[i];
@@ -91,7 +70,7 @@ class Ast {
       const secondToLast = i === route.length - 2;
 
       if (last) {
-        str += `${val.type}[${val.index}]`;
+        str += `${val.key}[${val.index}]`;
         if (val.value) {
           const s = stringUtils.firstLine(`${val.value}`, 100);
           str += `(${s})`;
@@ -106,44 +85,124 @@ class Ast {
     return str;
   }
 
+  printTree(bitmark: Bitmark): void {
+    this.walkRecursive(
+      bitmark,
+      undefined,
+      {
+        enter: (_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]) => {
+          console.log('Enter:   ' + this.getRouteKey(route));
+        },
+        between: (
+          _node: NodeInfo,
+          _left: NodeInfo,
+          _right: NodeInfo,
+          _parent: NodeInfo | undefined,
+          route: NodeInfo[],
+        ) => {
+          console.log('Between: ' + this.getRouteKey(route));
+        },
+        exit: (_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]) => {
+          console.log('Exit:    ' + this.getRouteKey(route));
+        },
+        leaf: (_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]) => {
+          console.log('Leaf:    ' + this.getRouteKey(route));
+        },
+      },
+      [{ index: 0, key: 'bitmark', value: bitmark }],
+    );
+  }
+
   private walkRecursive(
-    node: AstNode,
-    parent: AstNode | undefined,
+    node: Node,
+    parent: NodeInfo | undefined,
     callbacks: AstWalkCallbacks,
-    route: AstNodeInfo[],
+    route: NodeInfo[],
   ): void {
-    const { enter, between, exit } = callbacks;
+    const { enter, between, exit, leaf } = callbacks;
+
+    const parentKey = route[route.length - 1].key;
+    const isValue = this.isValue(node);
+    const isBranch = !isValue;
+    const nodeInfo = route[route.length - 1];
 
     // Call the enter callback for the node before walking children
-    if (enter) enter(node, parent, route);
+    if (isBranch) {
+      if (enter) enter(nodeInfo, parent, route);
+    } else {
+      if (leaf) leaf(nodeInfo, parent, route);
+    }
 
-    // Walk child nodes first
-    if (node.children) {
-      for (let i = 0, len = node.children.length; i < len; i++) {
+    // Walk child nodes
+    if (isBranch) {
+      const isArray = this.isArray(node);
+      const keys = Object.keys(node);
+      for (let i = 0, len = keys.length; i < len; i++) {
+        const key = keys[i];
         const lastChild = i === len - 1;
-        const child = node.children[i];
 
-        if (child) {
-          const r = route.slice();
-          r.push({
-            type: child.type,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const nodeAsAny = node as any;
+        const child = nodeAsAny[key];
+
+        if (child != null) {
+          const childNodeInfo: NodeInfo = {
+            key: this.getAstKey(key, parentKey, isArray),
             index: i,
-            value: child.value,
-          });
-          this.walkRecursive(child, node, callbacks, r);
+            value: child,
+          };
+
+          const r = route.slice();
+          r.push(childNodeInfo);
+          this.walkRecursive(child, nodeInfo, callbacks, r);
 
           if (!lastChild) {
-            const nextChild = node.children[i + 1];
+            const nextKey = keys[i + 1];
+            const nextChild = nodeAsAny[nextKey];
+            const nextChildNodeInfo: NodeInfo = {
+              key: this.getAstKey(nextKey, parentKey, isArray),
+              index: i + 1,
+              value: nextChild,
+            };
+
             // Call the between callback when between children
-            if (between) between(node, child, nextChild, parent, route);
+            if (between) between(nodeInfo, childNodeInfo, nextChildNodeInfo, parent, route);
           }
         }
       }
     }
 
     // Call the exit callback for the node before walking children
-    if (exit) exit(node, parent, route);
+    if (isBranch) {
+      if (exit) exit(nodeInfo, parent, route);
+    }
+  }
+
+  private getAstKey(key: string, parentKey: string, isParentArray: boolean): string {
+    let astKey = key;
+
+    if (isParentArray && parentKey) {
+      astKey = `${parentKey}Value`;
+    }
+
+    return astKey;
+  }
+
+  private isArray(x: unknown): boolean {
+    return Array.isArray(x);
+    // return Object.prototype.toString.call(x) === '[object Array]';
+  }
+
+  private isObject(x: unknown): boolean {
+    return Object.prototype.toString.call(x) === '[object Object]';
+  }
+
+  private isValue(x: unknown): boolean {
+    return !this.isObject(x) && !this.isArray(x);
   }
 }
 
-export { Ast };
+// Singleton
+const ast = new Ast();
+
+export { ast as Ast };

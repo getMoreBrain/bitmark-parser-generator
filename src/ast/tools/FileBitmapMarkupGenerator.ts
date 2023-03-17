@@ -1,7 +1,8 @@
 import fs from 'fs-extra';
 import * as promises from 'node:fs/promises';
 
-import { AstNode } from '../Ast';
+import { AstNodeTypeType } from '../AstNodeType';
+import { Node } from '../nodes/BitmarkNodes';
 
 import { BitmarkMarkupGenerator, BitmarkGeneratorOptions } from './BitmarkMarkupGenerator';
 import { CodeGenerator } from './CodeGenerator';
@@ -22,8 +23,6 @@ interface StreamOptions {
 }
 
 class FileBitmapMarkupGenerator implements CodeGenerator {
-  // TODO - make Ast class a singleton
-  // private ast = new Ast();
   private path: fs.PathLike;
   private streamOptions?: BufferEncoding | StreamOptions;
   private bitmarkOptions?: BitmarkGeneratorOptions;
@@ -38,7 +37,7 @@ class FileBitmapMarkupGenerator implements CodeGenerator {
     this.bitmarkOptions = bitmarkOptions;
   }
 
-  public async generate(root: AstNode): Promise<void | string> {
+  public async generate(root: Node, rootType?: AstNodeTypeType): Promise<void | string> {
     return new Promise((resolve, reject) => {
       const writeStream = fs.createWriteStream(this.path, this.streamOptions);
       writeStream.once('open', (_fd: number) => {
@@ -59,7 +58,7 @@ class FileBitmapMarkupGenerator implements CodeGenerator {
         // });
         // bitmarkGenerator.writeLine();
 
-        bitmarkGenerator.generate(root);
+        bitmarkGenerator.generate(root, rootType);
 
         writeStream.end();
         // console.log('Generator: Finished generating \'%s\'...', fullOutputFileName);

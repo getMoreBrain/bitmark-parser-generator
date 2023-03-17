@@ -1,60 +1,63 @@
-import { BitNode } from '../nodes/bit/BitNode';
-import { BitmarkNode } from '../nodes/bitmark/BitmarkNode';
-import { BodyNode, BodyNodeTypes } from '../nodes/body/BodyNode';
-import { BodyTextNode } from '../nodes/body/BodyTextNode';
-import { ChoiceNode } from '../nodes/choice/ChoiceNode';
-import { GapNode } from '../nodes/gap/GapNode';
-import { PairNode } from '../nodes/pair/PairNode';
-import { QuizNode } from '../nodes/quiz/QuizNode';
-import { ResponseNode } from '../nodes/response/ResponseNode';
-import { SelectNode } from '../nodes/select/SelectNode';
-import { SelectOptionNode } from '../nodes/select/SelectOptionNode';
-import { StatementNode } from '../nodes/statement/StatementNode';
-import { AttachmentTypeType } from '../types/AttachmentType';
 import { BitTypeType } from '../types/BitType';
 import { Property } from '../types/Property';
-import { TextFormatType } from '../types/TextFormat';
+import { TextFormat, TextFormatType } from '../types/TextFormat';
 import { Resource } from '../types/resources/Resource';
 
+import {
+  Bit,
+  Bitmark,
+  Body,
+  BodyPart,
+  BodyText,
+  Choice,
+  Gap,
+  ItemLead,
+  Pair,
+  Quiz,
+  Response,
+  Select,
+  SelectOption,
+  Statement,
+} from '../nodes/BitmarkNodes';
+
 class Builder {
-  bitmark(bits: BitNode[]): BitmarkNode {
-    const node = BitmarkNode.create(bits);
+  bitmark(bits: Bit[]): Bitmark {
+    const node: Bitmark = {
+      bits: bits,
+    };
 
     return node;
   }
 
   bit(
-    bitType: BitTypeType,
+    type: BitTypeType,
     textFormat?: TextFormatType,
-    attachmentType?: AttachmentTypeType,
     ids?: string | string[],
     ageRanges?: number | number[],
     languages?: string | string[],
-    properties?: Property[],
+    properties?: Property[], // unused
     item?: string,
     lead?: string,
     hint?: string,
     instruction?: string,
     example?: string | boolean,
     elements?: string[],
-    statements?: StatementNode[],
-    choices?: ChoiceNode[],
-    responses?: ResponseNode[],
-    quizzes?: QuizNode[],
-    pairs?: PairNode[],
+    statements?: Statement[],
+    choices?: Choice[],
+    responses?: Response[],
+    quizzes?: Quiz[],
+    pairs?: Pair[],
     resource?: Resource,
-    body?: BodyNode,
-  ): BitNode {
-    return BitNode.create(
-      bitType,
-      textFormat,
-      attachmentType,
-      ids,
-      ageRanges,
-      languages,
-      properties,
-      item,
-      lead,
+    body?: Body,
+  ): Bit {
+    const node: Bit = {
+      type,
+      textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
+      ids: this.asArray(ids),
+      ageRanges: this.asArray(ageRanges),
+      languages: this.asArray(languages),
+      resource,
+      itemLead: this.itemLead(item, lead),
       hint,
       instruction,
       example,
@@ -64,9 +67,10 @@ class Builder {
       responses,
       quizzes,
       pairs,
-      resource,
       body,
-    );
+    };
+
+    return node;
   }
 
   choice(
@@ -78,8 +82,18 @@ class Builder {
     instruction?: string,
     example?: string | boolean,
     isCaseSensitive?: boolean,
-  ): ChoiceNode {
-    return ChoiceNode.create(text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive);
+  ): Choice {
+    const node: Choice = {
+      text,
+      isCorrect,
+      itemLead: this.itemLead(item, lead),
+      hint,
+      instruction,
+      example,
+      isCaseSensitive,
+    };
+
+    return node;
   }
 
   response(
@@ -91,20 +105,39 @@ class Builder {
     instruction?: string,
     example?: string | boolean,
     isCaseSensitive?: boolean,
-  ): ResponseNode {
-    return ResponseNode.create(text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive);
+  ): Response {
+    const node: Response = {
+      text,
+      isCorrect,
+      itemLead: this.itemLead(item, lead),
+      hint,
+      instruction,
+      example,
+      isCaseSensitive,
+    };
+
+    return node;
   }
 
   quiz(
-    choiceNodes?: ChoiceNode[],
-    responseNodes?: ResponseNode[],
+    choices?: Choice[],
+    responses?: Response[],
     item?: string,
     lead?: string,
     hint?: string,
     instruction?: string,
     example?: string | boolean,
-  ): QuizNode {
-    return QuizNode.create(choiceNodes, responseNodes, item, lead, hint, instruction, example);
+  ): Quiz {
+    const node: Quiz = {
+      choices,
+      responses,
+      itemLead: this.itemLead(item, lead),
+      hint,
+      instruction,
+      example,
+    };
+
+    return node;
   }
 
   pair(
@@ -117,16 +150,31 @@ class Builder {
     example?: string | boolean,
     isCaseSensitive?: boolean,
     isLongAnswer?: boolean,
-  ): PairNode {
-    return PairNode.create(key, values, item, lead, hint, instruction, example, isCaseSensitive, isLongAnswer);
+  ): Pair {
+    const node: Pair = {
+      key,
+      values,
+      itemLead: this.itemLead(item, lead),
+      hint,
+      instruction,
+      example,
+      isCaseSensitive,
+      isLongAnswer,
+    };
+
+    return node;
   }
 
-  body(bodyParts: BodyNodeTypes[]): BodyNode {
-    return BodyNode.create(bodyParts);
+  body(bodyParts: BodyPart[]): Body {
+    const node: Body = bodyParts;
+    return node;
   }
 
-  bodyText(text: string): BodyTextNode {
-    return BodyTextNode.create(text);
+  bodyText(text: string): BodyText {
+    const node: BodyText = {
+      bodyText: text,
+    };
+    return node;
   }
 
   gap(
@@ -137,12 +185,21 @@ class Builder {
     instruction?: string,
     example?: string | boolean,
     isCaseSensitive?: boolean,
-  ): GapNode {
-    return GapNode.create(solutions, item, lead, hint, instruction, example, isCaseSensitive);
+  ): Gap {
+    const node: Gap = {
+      solutions,
+      itemLead: this.itemLead(item, lead),
+      hint,
+      instruction,
+      example,
+      isCaseSensitive,
+    };
+
+    return node;
   }
 
   select(
-    optionNodes: SelectOptionNode[],
+    options: SelectOption[],
     prefix?: string,
     postfix?: string,
     item?: string,
@@ -151,8 +208,19 @@ class Builder {
     instruction?: string,
     example?: string | boolean,
     isCaseSensitive?: boolean,
-  ): SelectNode {
-    return SelectNode.create(optionNodes, prefix, postfix, item, lead, hint, instruction, example, isCaseSensitive);
+  ): Select {
+    const node: Select = {
+      options,
+      prefix,
+      postfix,
+      itemLead: this.itemLead(item, lead),
+      hint,
+      instruction,
+      example,
+      isCaseSensitive,
+    };
+
+    return node;
   }
 
   selectOption(
@@ -164,8 +232,18 @@ class Builder {
     instruction?: string,
     example?: string | boolean,
     isCaseSensitive?: boolean,
-  ): SelectOptionNode {
-    return SelectOptionNode.create(text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive);
+  ): SelectOption {
+    const node: SelectOption = {
+      text,
+      isCorrect,
+      itemLead: this.itemLead(item, lead),
+      hint,
+      instruction,
+      example,
+      isCaseSensitive,
+    };
+
+    return node;
   }
 
   statement(
@@ -177,8 +255,37 @@ class Builder {
     instruction?: string,
     example?: string | boolean,
     isCaseSensitive?: boolean,
-  ): StatementNode {
-    return StatementNode.create(text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive);
+  ): Statement {
+    const node: Statement = {
+      text,
+      isCorrect,
+      itemLead: this.itemLead(item, lead),
+      hint,
+      instruction,
+      example,
+      isCaseSensitive,
+    };
+
+    return node;
+  }
+
+  private itemLead(item?: string, lead?: string): ItemLead | undefined {
+    let node: ItemLead | undefined;
+
+    if (item || lead) {
+      node = {
+        item,
+        lead,
+      };
+    }
+
+    return node;
+  }
+
+  private asArray<T>(val: T | T[] | undefined): T[] | undefined {
+    if (val == null) return undefined;
+    if (Array.isArray(val)) return val;
+    return [val];
   }
 }
 
