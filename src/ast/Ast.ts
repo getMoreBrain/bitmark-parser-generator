@@ -11,7 +11,7 @@ export interface AstNode {
 
 export interface NodeInfo {
   index: number;
-  key: string;
+  key: AstNodeTypeType;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   value?: any;
 }
@@ -178,14 +178,15 @@ class Ast {
     }
   }
 
-  private getAstKey(key: string, parentKey: string, isParentArray: boolean): string {
+  private getAstKey(key: string, parentKey: string, isParentArray: boolean): AstNodeTypeType {
     let astKey = key;
 
     if (isParentArray && parentKey) {
       astKey = `${parentKey}Value`;
     }
 
-    return astKey;
+    // return astKey;
+    return AstNodeType.fromKey(astKey) || AstNodeType.unknown;
   }
 
   private isArray(x: unknown): boolean {

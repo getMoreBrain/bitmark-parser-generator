@@ -48,7 +48,7 @@ export interface Bitmark {
 // Bit
 
 export interface Bit {
-  type: BitTypeType;
+  bitType: BitTypeType;
   textFormat: TextFormatType;
   ids?: Id[];
   ageRanges?: Age[];
@@ -101,13 +101,13 @@ export interface Quiz {
 
 export interface Pair {
   key?: PairKey;
-  values?: PairValue[];
   itemLead?: ItemLead;
   hint?: Hint;
   instruction?: Instruction;
   example?: Example;
   isCaseSensitive?: IsCaseSensitive;
   isLongAnswer?: IsLongAnswer;
+  values?: PairValue[];
 }
 
 export type PairKey = string;
@@ -122,22 +122,23 @@ export interface Resource {
 
 // Body
 
-export type Body = (BodyText | Gap | Select)[];
+export type Body = BodyPart[];
 export type BodyPart = BodyText | Gap | Select;
 
 export interface BodyText {
   bodyText: string;
 }
-
 // Gap
 
 export interface Gap {
-  solutions: Solution[];
-  itemLead?: ItemLead;
-  hint?: Hint;
-  instruction?: Instruction;
-  example?: Example;
-  isCaseSensitive?: IsCaseSensitive;
+  gap: {
+    solutions: Solution[];
+    itemLead?: ItemLead;
+    hint?: Hint;
+    instruction?: Instruction;
+    example?: Example;
+    isCaseSensitive?: IsCaseSensitive;
+  };
 }
 
 export type Solution = string;
@@ -145,14 +146,16 @@ export type Solution = string;
 // Select
 
 export interface Select {
-  options: SelectOption[];
-  prefix?: Prefix;
-  postfix?: Postfix;
-  itemLead?: ItemLead;
-  hint?: Hint;
-  instruction?: Instruction;
-  example?: Example;
-  isCaseSensitive?: IsCaseSensitive;
+  select: {
+    prefix?: Prefix;
+    options: SelectOption[];
+    postfix?: Postfix;
+    itemLead?: ItemLead;
+    hint?: Hint;
+    instruction?: Instruction;
+    example?: Example;
+    isCaseSensitive?: IsCaseSensitive;
+  };
 }
 
 export interface SelectOption {

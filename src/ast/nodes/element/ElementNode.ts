@@ -4,7 +4,7 @@ import { NodeValidator } from '../../tools/NodeValidator';
 import { BaseValueNode } from '../BaseLeafNode';
 
 class ElementNode extends BaseValueNode<string> implements AstNode {
-  type = AstNodeType.element;
+  type = AstNodeType.elementsValue;
 
   static create(element?: string): ElementNode | undefined {
     const node = element ? new ElementNode(element) : undefined;

@@ -8,7 +8,7 @@ import { SelectOptionNode } from './SelectOptionNode';
 type Children = SelectOptionNode[];
 
 class SelectOptionsNode extends BaseBranchNode<Children> implements AstNode {
-  type = AstNodeType.selectOptions;
+  type = AstNodeType.options;
   optionNodes: SelectOptionNode[];
 
   static create(optionNodes: SelectOptionNode[]): SelectOptionsNode | undefined {

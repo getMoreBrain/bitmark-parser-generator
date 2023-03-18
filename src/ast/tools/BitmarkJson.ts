@@ -413,8 +413,8 @@ class BitmarkJson {
           bodyPartNodes.push(placeholderNodes[bodyPart]);
         } else {
           // Treat as text
-          const bodyTextNode = this.bodyTextToAst(bodyPart);
-          bodyPartNodes.push(bodyTextNode);
+          const bodyText = this.bodyTextToAst(bodyPart);
+          bodyPartNodes.push(bodyText);
         }
       }
 
@@ -431,11 +431,14 @@ class BitmarkJson {
 
   private bodyBitToAst(bit: BodyBitJson): BodyPart {
     switch (bit.type) {
-      case BodyBitType.gap:
-        return this.gapBitToAst(bit);
-
-      case BodyBitType.select:
-        return this.selectBitToAst(bit);
+      case BodyBitType.gap: {
+        const gap = this.gapBitToAst(bit);
+        return gap;
+      }
+      case BodyBitType.select: {
+        const select = this.selectBitToAst(bit);
+        return select;
+      }
     }
     return this.bodyTextToAst('');
   }

@@ -4,7 +4,7 @@ import { NodeValidator } from '../../tools/NodeValidator';
 import { BaseValueNode } from '../BaseLeafNode';
 
 class PairValueNode extends BaseValueNode<string> implements AstNode {
-  type = AstNodeType.pairValue;
+  type = AstNodeType.valuesValue;
 
   static create(pairValue?: string): PairValueNode | undefined {
     const node = pairValue ? new PairValueNode(pairValue) : undefined;

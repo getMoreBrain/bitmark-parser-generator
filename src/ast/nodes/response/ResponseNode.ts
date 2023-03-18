@@ -21,7 +21,7 @@ type Children = (
 )[];
 
 class ResponseNode extends BaseBranchNode<Children> implements AstNode {
-  type = AstNodeType.response;
+  type = AstNodeType.responsesValue;
   text: TextNode;
   isCorrect: IsCorrectNode;
   itemLead?: ItemLeadNode;

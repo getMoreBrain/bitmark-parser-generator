@@ -21,7 +21,7 @@ type Children = (
 )[];
 
 class StatementNode extends BaseBranchNode<Children> implements AstNode {
-  type = AstNodeType.statement;
+  type = AstNodeType.statementsValue;
   text: TextNode;
   isCorrect: IsCorrectNode;
   itemLead?: ItemLeadNode;

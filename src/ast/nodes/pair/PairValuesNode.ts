@@ -8,7 +8,7 @@ import { PairValueNode } from './PairValueNode';
 type Children = PairValueNode[];
 
 class PairValuesNode extends BaseBranchNode<Children> implements AstNode {
-  type = AstNodeType.pairValues;
+  type = AstNodeType.values;
   pairValueNodes: PairValueNode[];
 
   static create(pairValues: string[]): PairValuesNode {

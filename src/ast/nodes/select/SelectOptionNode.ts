@@ -21,7 +21,7 @@ type Children = (
 )[];
 
 class SelectOptionNode extends BaseBranchNode<Children> implements AstNode {
-  type = AstNodeType.selectOption;
+  type = AstNodeType.optionsValue;
   text: TextNode;
   isCorrect: IsCorrectNode;
   itemLead?: ItemLeadNode;

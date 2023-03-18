@@ -1,40 +1,10 @@
 import { AstNodeType } from '../AstNodeType';
 import { Ast, AstWalkCallbacks, NodeInfo } from '../Ast';
+import { Bit, Bitmark, Choice, ItemLead, Response, SelectOption, Statement } from '../nodes/BitmarkNodes';
 import { TextFormat } from '../types/TextFormat';
-import { ArticleOnlineResource } from '../types/resources/ArticleOnlineResource';
-import { ResourceType } from '../types/resources/ResouceType';
 
 import { CodeWriter } from './writer/CodeWriter';
 import { TextWriter } from './writer/TextWriter';
-
-import {
-  Bit,
-  Bitmark,
-  Body,
-  BodyText,
-  Choice,
-  Example,
-  Gap,
-  Hint,
-  Instruction,
-  IsCaseSensitive,
-  IsCorrect,
-  Item,
-  ItemLead,
-  Lead,
-  Node,
-  Pair,
-  PairKey,
-  PairValue,
-  Postfix,
-  Prefix,
-  Quiz,
-  Response,
-  Select,
-  SelectOption,
-  Solution,
-  Statement,
-} from '../nodes/BitmarkNodes';
 
 const DEFAULT_OPTIONS: BitmarkGeneratorOptions = {
   //
@@ -122,15 +92,13 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   // bitmark
 
-  protected enter_bitmark(_node: NodeInfo, _parent: Node | undefined, _route: NodeInfo[]): void {
-    //
-  }
+  // bitmark -> bits
 
-  protected between_bitmark(
+  protected between_bits(
     _node: NodeInfo,
-    _left: Node,
-    _right: Node,
-    _parent: Node | undefined,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
     this.writeNL();
@@ -138,17 +106,13 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     this.writeNL();
   }
 
-  protected exit_bitmark(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    //
-  }
-
-  // bitmark -> bit
+  // bitmark -> bits -> bitValue
 
   protected enter_bitsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const bit = node.value as Bit;
 
     this.writeOPD();
-    this.writeString(bit.type);
+    this.writeString(bit.bitType);
 
     if (bit.textFormat) {
       const write = this.isWriteTextFormat(bit.textFormat);
@@ -167,379 +131,212 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     this.writeNL();
   }
 
-  protected between_bitmark_bits_(
+  protected between_bitsValue(
     _node: NodeInfo,
     left: NodeInfo,
     _right: NodeInfo,
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
-    const noNl =
-      left.key === AstNodeType.bitType ||
-      left.key === AstNodeType.textFormat ||
-      left.key === AstNodeType.attachmentType;
+    const noNl = left.key === AstNodeType.bitType || left.key === AstNodeType.textFormat;
 
     if (!noNl) {
       this.writeNL();
     }
   }
 
-  protected exit_bitsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    //
+  // bitmark -> bits -> bitValue -> ids
+
+  protected enter_ids(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    for (const id of node.value) {
+      if (id) {
+        this.writeOPA();
+        this.writeString('id');
+        this.writeColon();
+        this.writeString(`${id}`);
+        this.writeCL();
+      }
+    }
   }
 
-  // // properties
+  // bitmark -> bits -> bitValue -> ageRanges
 
-  // protected enter_properties(_node: Properties, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // protected between_properties(
-  //   _node: Properties,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   //
-  // }
-
-  // protected exit_properties(_node: PropertyValues, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // // propertyValues
-
-  // protected enter_propertyValues(_node: PropertyValues, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // protected between_propertyValues(
-  //   _node: Properties,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   //
-  // }
-
-  // protected exit_propertyValues(_node: PropertyValues, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  //  bitmark -> bit -> itemLead
-
-  protected enter_itemLead(_node: ItemLead, _parent: Node | undefined, _route: NodeInfo[]): void {
-    //
+  protected enter_ageRanges(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    for (const ageRange of node.value) {
+      if (ageRange) {
+        this.writeOPA();
+        this.writeString('ageRange');
+        this.writeColon();
+        this.writeString(`${ageRange}`);
+        this.writeCL();
+      }
+    }
   }
 
-  protected between_itemLead(
-    _node: ItemLead,
-    _left: Node,
-    _right: Node,
-    _parent: Node | undefined,
+  // bitmark -> bits -> bitValue -> languages
+
+  protected enter_languages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    for (const lang of node.value) {
+      if (lang) {
+        this.writeOPA();
+        this.writeString('language');
+        this.writeColon();
+        this.writeString(`${lang}`);
+        this.writeCL();
+      }
+    }
+  }
+
+  // bitmark -> bits -> bitValue -> itemLead
+
+  // bitmark -> bits -> bitValue -> body
+
+  // bitmark -> bits -> bitValue -> body -> gap
+
+  // bitmark -> bits -> bitValue -> body -> select
+
+  // bitmark -> bits -> bitValue -> elements
+
+  protected enter_elements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeCardDivider();
+    this.writeNL();
+  }
+
+  protected between_elements(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
-    //
+    this.writeNL();
+    this.writeElementDivider();
+    this.writeNL();
   }
 
-  protected exit_itemLead(_node: ItemLead, _parent: Node | undefined, _route: NodeInfo[]): void {
-    //
+  protected exit_elements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeNL();
+    this.writeCardDivider();
   }
 
-  // // body
+  // bitmark -> bits -> bitValue -> body -> gap -> solutions
 
-  // protected enter_body(_node: Body, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  // bitmark -> bits -> bitValue -> body -> select
 
-  // protected between_body(_node: Body, _left: Node, _right: Node, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  // bitmark -> bits -> bitValue -> body -> select -> options
 
-  // protected exit_ibody(_node: Body, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  // bitmark -> bits -> bitValue -> body -> select -> options -> optionsValue
 
-  // // gap
+  protected enter_optionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const optionsNode = node.value as SelectOption;
+    if (optionsNode.isCorrect) {
+      this.writeOPP();
+    } else {
+      this.writeOPM();
+    }
+    this.write(optionsNode.text);
+    this.writeCL();
+  }
 
-  // protected enter_gap(_node: Gap, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  // bitmark -> bits -> bitValue -> statements
 
-  // protected between_gap(_node: Gap, _left: Node, _right: Node, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  protected enter_statements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeCardDivider();
+    this.writeNL();
+  }
 
-  // protected exit_gap(_node: Gap, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  protected between_statements(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeNL();
+    this.writeCardDivider();
+    this.writeNL();
+  }
 
-  // // select
+  protected exit_statements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeNL();
+    this.writeCardDivider();
+  }
 
-  // protected enter_select(_node: Select, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  // bitmark -> bits -> bitValue -> statements -> statementsValue
 
-  // protected between_select(
-  //   _node: Select,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   //
-  // }
+  protected enter_statementsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const statement = node.value as Statement;
+    if (statement.isCorrect) {
+      this.writeOPP();
+    } else {
+      this.writeOPM();
+    }
+    this.write(statement.text);
+    this.writeCL();
+  }
 
-  // protected exit_select(_node: Select, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  // bitmark -> bits -> bitValue -> choices
 
-  // // elements
+  protected between_choices(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeNL();
+  }
 
-  // protected enter_elements(_node: Elements, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   this.writeCardDivider();
-  //   this.writeNL();
-  // }
+  // bitmark -> bits -> bitValue -> choices -> choicesValue
 
-  // protected between_elements(
-  //   _node: Elements,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   this.writeNL();
-  //   this.writeElementDivider();
-  //   this.writeNL();
-  // }
+  protected enter_choicesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const choice = node.value as Choice;
+    if (choice.isCorrect) {
+      this.writeOPP();
+    } else {
+      this.writeOPM();
+    }
+    this.write(choice.text);
+    this.writeCL();
+  }
 
-  // protected exit_elements(_node: Elements, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   this.writeNL();
-  //   this.writeCardDivider();
-  // }
+  // bitmark -> bits -> bitValue -> responses
 
-  // // solutions
+  protected between_responses(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeNL();
+  }
 
-  // protected enter_solutions(_node: Solutions, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  // bitmark -> bits -> bitValue -> responses -> responsesValue
 
-  // protected between_solutions(
-  //   _node: Solutions,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   //
-  // }
-
-  // protected exit_solutions(_node: Solutions, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // // selectOptions
-
-  // protected enter_selectOptions(_node: SelectOptions, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // protected between_selectOptions(
-  //   _node: SelectOptions,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   //
-  // }
-
-  // protected exit_selectOptions(_node: SelectOptions, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // // selectOption
-
-  // protected enter_selectOption(node: SelectOption, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   if (node.isCorrect.value) {
-  //     this.writeOPP();
-  //   } else {
-  //     this.writeOPM();
-  //   }
-  //   this.write(node.text.value);
-  //   this.writeCL();
-  // }
-
-  // protected between_selectOption(
-  //   _node: SelectOption,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   //
-  // }
-
-  // protected exit_selectOption(_node: SelectOption, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // // statements
-
-  // protected enter_statements(_node: Statements, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   this.writeCardDivider();
-  //   this.writeNL();
-  // }
-
-  // protected between_statements(
-  //   _node: Statements,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   this.writeNL();
-  //   this.writeCardDivider();
-  //   this.writeNL();
-  // }
-
-  // protected exit_statements(_node: Statements, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   this.writeNL();
-  //   this.writeCardDivider();
-  // }
-
-  // // statement
-
-  // protected enter_statement(node: Statement, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   if (node.isCorrect.value) {
-  //     this.writeOPP();
-  //   } else {
-  //     this.writeOPM();
-  //   }
-  //   this.write(node.text.value);
-  //   this.writeCL();
-  // }
-
-  // protected between_statement(
-  //   _node: Statement,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   //
-  // }
-
-  // protected exit_statement(_node: Statement, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // // choices
-
-  // protected enter_choices(_node: Choices, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // protected between_choices(
-  //   _node: Choices,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   this.writeNL();
-  // }
-
-  // protected exit_choices(_node: Choices, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // // choice
-
-  // protected enter_choice(node: Choice, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   if (node.isCorrect.value) {
-  //     this.writeOPP();
-  //   } else {
-  //     this.writeOPM();
-  //   }
-  //   this.write(node.text.value);
-  //   this.writeCL();
-  // }
-
-  // protected between_choice(
-  //   _node: Choice,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   //
-  // }
-
-  // protected exit_choice(_node: Choice, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // // responses
-
-  // protected enter_responses(_node: Responses, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // protected between_responses(
-  //   _node: Responses,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   this.writeNL();
-  // }
-
-  // protected exit_responses(_node: Responses, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // // response
-
-  // protected enter_response(node: Response, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   if (node.isCorrect.value) {
-  //     this.writeOPP();
-  //   } else {
-  //     this.writeOPM();
-  //   }
-  //   this.write(node.text.value);
-  //   this.writeCL();
-  // }
-
-  // protected between_response(
-  //   _node: Response,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   //
-  // }
-
-  // protected exit_response(_node: Response, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  protected enter_responsesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const response = node.value as Response;
+    if (response.isCorrect) {
+      this.writeOPP();
+    } else {
+      this.writeOPM();
+    }
+    this.write(response.text);
+    this.writeCL();
+  }
 
   // // quizzes
 
-  // protected enter_quizzes(_node: Quizzes, _parent: Node | undefined, _route: NodeInfo[]): void {
+  // protected enter_quizzes(_node: Quizzes, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   this.writeCardDivider();
   //   this.writeNL();
   // }
 
   // protected between_quizzes(
   //   _node: Quizzes,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
   //   _route: NodeInfo[],
   // ): void {
   //   this.writeNL();
@@ -547,98 +344,80 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   //   this.writeNL();
   // }
 
-  // protected exit_quizzes(_node: Quizzes, _parent: Node | undefined, _route: NodeInfo[]): void {
+  // protected exit_quizzes(_node: Quizzes, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   this.writeNL();
   //   this.writeCardDivider();
   // }
 
   // // quiz
 
-  // protected enter_quiz(_node: Quiz, _parent: Node | undefined, _route: NodeInfo[]): void {
+  // protected enter_quiz(_node: Quiz, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   //
   // }
 
-  // protected between_quiz(_node: Quiz, _left: Node, _right: Node, _parent: Node | undefined, _route: NodeInfo[]): void {
+  // protected between_quiz(_node: Quiz, _left: NodeInfo, _right: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   this.writeNL();
   // }
 
-  // protected exit_quiz(_node: Quiz, _parent: Node | undefined, _route: NodeInfo[]): void {
+  // protected exit_quiz(_node: Quiz, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   //
   // }
 
-  // // pairs
+  // bitmark -> bits -> bitValue -> pairs
 
-  // protected enter_pairs(_node: Pairs, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   this.writeNL();
-  //   this.writeCardDivider();
-  //   this.writeNL();
-  // }
+  protected enter_pairs(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeNL();
+    this.writeCardDivider();
+    this.writeNL();
+  }
 
-  // protected between_pairs(
-  //   _node: Pairs,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   this.writeNL();
-  //   this.writeCardDivider();
-  //   this.writeNL();
-  // }
+  protected between_pairs(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeNL();
+    this.writeCardDivider();
+    this.writeNL();
+  }
 
-  // protected exit_pairs(_node: Pairs, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   this.writeNL();
-  //   this.writeCardDivider();
-  //   this.writeNL();
-  // }
+  protected exit_pairs(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeNL();
+    this.writeCardDivider();
+    this.writeNL();
+  }
 
-  // // pair
+  // bitmark -> bits -> bitValue -> pairs -> pairsValue
 
-  // protected enter_pair(_node: Pair, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  // bitmark -> bits -> bitValue -> pairs -> pairsValue -> values
 
-  // protected between_pair(_node: Pair, _left: Node, _right: Node, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  protected enter_values(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeNL();
+    this.writePairKeyValueDivider();
+    this.writeNL();
+  }
 
-  // protected exit_pair(_node: Pair, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // // pairValues
-
-  // protected enter_pairValues(_node: PairValues, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   this.writeNL();
-  //   this.writePairKeyValueDivider();
-  //   this.writeNL();
-  // }
-
-  // protected between_pairValues(
-  //   _node: PairValues,
-  //   _left: Node,
-  //   _right: Node,
-  //   _parent: Node | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   this.writeNL();
-  //   this.writePairValueDivider();
-  //   this.writeNL();
-  // }
-
-  // protected exit_pairValues(_node: PairValues, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  protected between_values(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeNL();
+    this.writeElementDivider();
+    this.writeNL();
+  }
 
   //
   // Terminal nodes (leaves)
   //
 
-  // bitType
+  // bitmark -> bits -> bitValue -> bitType
 
-  // textFormat
-
-  // attachmentType
+  // bitmark -> bits -> bitValue -> textFormat
 
   //  * -> itemLead --> item
 
@@ -652,7 +431,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   //  * -> itemLead --> lead
 
-  protected leaf_lead(node: NodeInfo, _parent: Node | undefined, _route: NodeInfo[]): void {
+  protected leaf_lead(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeOPC();
       this.writeString(node.value);
@@ -670,7 +449,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     }
   }
 
-  // * -> instruction
+  // bitmark -> bits -> bitValue ->  * -> instruction
 
   protected leaf_instruction(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
@@ -680,7 +459,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     }
   }
 
-  // * -> example
+  // bitmark -> bits -> bitValue ->  * -> example
 
   protected leaf_example(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const example = node.value;
@@ -706,13 +485,13 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     }
   }
 
-  // // element
+  // bitmark -> bits -> bitValue -> elements -> elementsValue
 
-  // protected enter_element(node: Solution, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   if (node.value) {
-  //     this.writeString(node.value);
-  //   }
-  // }
+  protected leaf_elementsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeString(node.value);
+    }
+  }
 
   // bitmark -> bits -> body -> solutions -> solution
   // ? -> solutions -> solution
@@ -725,77 +504,59 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     }
   }
 
-  // // prefix
+  // bitmark -> bits -> body -> options -> prefix
 
-  // protected enter_prefix(node: Prefix, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   if (node.value) {
-  //     this.writeOPPRE();
-  //     this.writeString(node.value);
-  //     this.writeCL();
-  //   }
-  // }
+  protected leaf_prefix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeOPPRE();
+      this.writeString(node.value);
+      this.writeCL();
+    }
+  }
 
-  // // postfix
+  // bitmark -> bits -> body -> options -> postfix
 
-  // protected enter_postfix(node: Postfix, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   if (node.value) {
-  //     this.writeOPPOST();
-  //     this.writeString(node.value);
-  //     this.writeCL();
-  //   }
-  // }
+  protected leaf_postfix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeOPPOST();
+      this.writeString(node.value);
+      this.writeCL();
+    }
+  }
 
-  // // isCaseSensitive
+  // bitmark -> bits -> bitValue ->  * -> isCaseSensitive
 
-  // protected enter_isCaseSensitive(node: IsCaseSensitive, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   if (node.value) {
-  //     // Not in bitmark??
-  //   }
-  // }
+  // bitmark -> bits -> bitValue ->  * -> isLongAnswer
 
-  // // isLongAnswer
+  // bitmark -> bits -> bitValue ->  * -> isCorrect
 
-  // protected enter_isLongAnswer(node: IsCorrect, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   if (node.value) {
-  //     //
-  //   }
-  // }
+  // bitmark -> bits -> bitValue -> pairs -> pairsValue -> key
 
-  // // isCorrect
+  protected leaf_key(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeString(node.value);
+    }
+  }
 
-  // protected enter_isCorrect(node: IsCorrect, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   if (node.value) {
-  //     //
-  //   }
-  // }
+  // bitmark -> bits -> bitValue -> pairs -> pairsValue -> values -> valuesValue
 
-  // // pairKey
+  protected leaf_valuesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeString(node.value);
+    }
+  }
 
-  // protected enter_pairKey(node: PairKey, _parent: Node | undefined, _route: NodeInfo[]): void {
+  // // bitmark -> bits -> bitValue -> statements -> text
+
+  // protected leaf_text(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   if (node.value) {
   //     this.writeString(node.value);
   //   }
   // }
-
-  // // pairValue
-
-  // protected enter_pairValue(node: PairValue, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   if (node.value) {
-  //     this.writeString(node.value);
-  //   }
-  // }
-
-  // // // text
-
-  // // protected enter_text(node: Text, _parent: Node | undefined, _route: NodeInfo[]): void {
-  // //   if (node.value) {
-  // //     this.writeString(node.value);
-  // //   }
-  // // }
 
   // // // propertyKey
 
-  // // protected enter_propertyKey(node: PropertyKey, _parent: Node | undefined, _route: NodeInfo[]): void {
+  // // protected leaf_propertyKey(node: PropertyKey, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   // //   if (node.value) {
   // //     //
   // //   }
@@ -803,57 +564,15 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   // // // propertyValue
 
-  // // protected enter_propertyValue(node: PropertyValue, _parent: Node | undefined, _route: NodeInfo[]): void {
+  // // protected leaf_propertyValue(node: PropertyValue, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   // //   if (node.value) {
   // //     //
   // //   }
   // // }
 
-  // // ids
-
-  // protected enter_ids(node: Ids, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   for (const id of node.value) {
-  //     if (id) {
-  //       this.writeOPA();
-  //       this.writeString('id');
-  //       this.writeColon();
-  //       this.writeString(`${id}`);
-  //       this.writeCL();
-  //     }
-  //   }
-  // }
-
-  // // ageRanges
-
-  // protected enter_ageRanges(node: AgeRanges, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   for (const ageRange of node.value) {
-  //     if (ageRange) {
-  //       this.writeOPA();
-  //       this.writeString('ageRange');
-  //       this.writeColon();
-  //       this.writeString(`${ageRange}`);
-  //       this.writeCL();
-  //     }
-  //   }
-  // }
-
-  // // languages
-
-  // protected enter_languages(node: Languages, _parent: Node | undefined, _route: NodeInfo[]): void {
-  //   for (const lang of node.value) {
-  //     if (lang) {
-  //       this.writeOPA();
-  //       this.writeString('language');
-  //       this.writeColon();
-  //       this.writeString(`${lang}`);
-  //       this.writeCL();
-  //     }
-  //   }
-  // }
-
   // // resource
 
-  // protected enter_resource(node: Resource, _parent: Node | undefined, _route: NodeInfo[]): void {
+  // protected leaf_resource(node: Resource, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   const resource = node.value;
   //   if (resource) {
   //     this.writeOPAMP();
@@ -977,15 +696,11 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   }
 
   protected writeElementDivider(): void {
-    this.write('---');
+    this.write('--');
   }
 
   protected writePairKeyValueDivider(): void {
     this.write('==');
-  }
-
-  protected writePairValueDivider(): void {
-    this.write('--');
   }
 
   protected writeNL(): void {

@@ -8,7 +8,6 @@ Copyright ©2023 Get More Brain
 
 import fs from 'fs-extra';
 
-import { AstNodeType } from './ast/AstNodeType';
 import { Ast } from './ast/Ast';
 import { BitmarkJson } from './ast/tools/BitmarkJson';
 import { FileBitmapMarkupGenerator } from './ast/tools/FileBitmapMarkupGenerator';
@@ -18,7 +17,7 @@ class Bmg {
   async test(): Promise<void> {
     /* SUPPORTED FULLY */
     // const filename = testFiles.assign1; // OK
-    const filename = testFiles.cloze; // OK
+    // const filename = testFiles.cloze; // OK
     // const filename = testFiles.cloze2; // OK
     // const filename = testFiles.cloze3; // OK
     // const filename = testFiles.cloze4; // OK
@@ -44,7 +43,7 @@ class Bmg {
     // const filename = testFiles.multitxt1; // OK
     // const filename = testFiles.multitxt3; // OK
     // const filename = testFiles.prepnote1; // OK
-    // const filename = testFiles.seq1; // OK
+    const filename = testFiles.seq1; // OK
     // const filename = testFiles.seq2; // OK
     // const filename = testFiles.truefalse2; // OK
     // const filename = testFiles.truefalse4; // OK
@@ -199,7 +198,7 @@ class Bmg {
         flags: 'w',
       },
       {
-        explicitTextFormat: false,
+        explicitTextFormat: true,
       },
     );
 

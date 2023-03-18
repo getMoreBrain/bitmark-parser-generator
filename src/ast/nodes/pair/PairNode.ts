@@ -24,7 +24,7 @@ type Children = (
 )[];
 
 class PairNode extends BaseBranchNode<Children> implements AstNode {
-  type = AstNodeType.pair;
+  type = AstNodeType.pairsValue;
   key: PairKeyNode;
   values?: PairValuesNode;
   itemLead?: ItemLeadNode;

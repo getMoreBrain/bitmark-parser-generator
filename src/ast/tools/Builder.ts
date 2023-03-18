@@ -30,7 +30,7 @@ class Builder {
   }
 
   bit(
-    type: BitTypeType,
+    bitType: BitTypeType,
     textFormat?: TextFormatType,
     ids?: string | string[],
     ageRanges?: number | number[],
@@ -50,8 +50,9 @@ class Builder {
     resource?: Resource,
     body?: Body,
   ): Bit {
+    // NOTE: Node order is important and is defined here
     const node: Bit = {
-      type,
+      bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
       ids: this.asArray(ids),
       ageRanges: this.asArray(ageRanges),
@@ -70,6 +71,23 @@ class Builder {
       body,
     };
 
+    // Remove Optionals
+    if (!node.ids) delete node.ids;
+    if (!node.ageRanges) delete node.ageRanges;
+    if (!node.languages) delete node.languages;
+    if (!node.resource) delete node.resource;
+    if (!node.itemLead) delete node.itemLead;
+    if (!node.hint) delete node.hint;
+    if (!node.instruction) delete node.instruction;
+    if (!node.example) delete node.example;
+    if (!node.elements) delete node.elements;
+    if (!node.statements) delete node.statements;
+    if (!node.choices) delete node.choices;
+    if (!node.responses) delete node.responses;
+    if (!node.quizzes) delete node.quizzes;
+    if (!node.pairs) delete node.pairs;
+    if (!node.body) delete node.body;
+
     return node;
   }
 
@@ -83,6 +101,7 @@ class Builder {
     example?: string | boolean,
     isCaseSensitive?: boolean,
   ): Choice {
+    // NOTE: Node order is important and is defined here
     const node: Choice = {
       text,
       isCorrect,
@@ -92,6 +111,13 @@ class Builder {
       example,
       isCaseSensitive,
     };
+
+    // Remove Optionals
+    if (!node.itemLead) delete node.itemLead;
+    if (!node.hint) delete node.hint;
+    if (!node.instruction) delete node.instruction;
+    if (!node.example) delete node.example;
+    if (!node.isCaseSensitive) delete node.isCaseSensitive;
 
     return node;
   }
@@ -106,6 +132,7 @@ class Builder {
     example?: string | boolean,
     isCaseSensitive?: boolean,
   ): Response {
+    // NOTE: Node order is important and is defined here
     const node: Response = {
       text,
       isCorrect,
@@ -115,6 +142,13 @@ class Builder {
       example,
       isCaseSensitive,
     };
+
+    // Remove Optionals
+    if (!node.itemLead) delete node.itemLead;
+    if (!node.hint) delete node.hint;
+    if (!node.instruction) delete node.instruction;
+    if (!node.example) delete node.example;
+    if (!node.isCaseSensitive) delete node.isCaseSensitive;
 
     return node;
   }
@@ -128,6 +162,7 @@ class Builder {
     instruction?: string,
     example?: string | boolean,
   ): Quiz {
+    // NOTE: Node order is important and is defined here
     const node: Quiz = {
       choices,
       responses,
@@ -136,6 +171,14 @@ class Builder {
       instruction,
       example,
     };
+
+    // Remove Optionals
+    if (!node.choices) delete node.choices;
+    if (!node.responses) delete node.responses;
+    if (!node.itemLead) delete node.itemLead;
+    if (!node.hint) delete node.hint;
+    if (!node.instruction) delete node.instruction;
+    if (!node.example) delete node.example;
 
     return node;
   }
@@ -151,16 +194,25 @@ class Builder {
     isCaseSensitive?: boolean,
     isLongAnswer?: boolean,
   ): Pair {
+    // NOTE: Node order is important and is defined here
     const node: Pair = {
       key,
-      values,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
       example,
       isCaseSensitive,
       isLongAnswer,
+      values,
     };
+
+    // Remove Optionals
+    if (!node.itemLead) delete node.itemLead;
+    if (!node.hint) delete node.hint;
+    if (!node.instruction) delete node.instruction;
+    if (!node.example) delete node.example;
+    if (!node.isCaseSensitive) delete node.isCaseSensitive;
+    if (!node.isLongAnswer) delete node.isLongAnswer;
 
     return node;
   }
@@ -171,6 +223,7 @@ class Builder {
   }
 
   bodyText(text: string): BodyText {
+    // NOTE: Node order is important and is defined here
     const node: BodyText = {
       bodyText: text,
     };
@@ -186,14 +239,24 @@ class Builder {
     example?: string | boolean,
     isCaseSensitive?: boolean,
   ): Gap {
+    // NOTE: Node order is important and is defined here
     const node: Gap = {
-      solutions,
-      itemLead: this.itemLead(item, lead),
-      hint,
-      instruction,
-      example,
-      isCaseSensitive,
+      gap: {
+        solutions,
+        itemLead: this.itemLead(item, lead),
+        hint,
+        instruction,
+        example,
+        isCaseSensitive,
+      },
     };
+
+    // Remove Optionals
+    if (!node.gap.itemLead) delete node.gap.itemLead;
+    if (!node.gap.hint) delete node.gap.hint;
+    if (!node.gap.instruction) delete node.gap.instruction;
+    if (!node.gap.example) delete node.gap.example;
+    if (!node.gap.isCaseSensitive) delete node.gap.isCaseSensitive;
 
     return node;
   }
@@ -209,16 +272,26 @@ class Builder {
     example?: string | boolean,
     isCaseSensitive?: boolean,
   ): Select {
+    // NOTE: Node order is important and is defined here
     const node: Select = {
-      options,
-      prefix,
-      postfix,
-      itemLead: this.itemLead(item, lead),
-      hint,
-      instruction,
-      example,
-      isCaseSensitive,
+      select: {
+        prefix,
+        options,
+        postfix,
+        itemLead: this.itemLead(item, lead),
+        hint,
+        instruction,
+        example,
+        isCaseSensitive,
+      },
     };
+
+    // Remove Optionals
+    if (!node.select.itemLead) delete node.select.itemLead;
+    if (!node.select.hint) delete node.select.hint;
+    if (!node.select.instruction) delete node.select.instruction;
+    if (!node.select.example) delete node.select.example;
+    if (!node.select.isCaseSensitive) delete node.select.isCaseSensitive;
 
     return node;
   }
@@ -233,6 +306,7 @@ class Builder {
     example?: string | boolean,
     isCaseSensitive?: boolean,
   ): SelectOption {
+    // NOTE: Node order is important and is defined here
     const node: SelectOption = {
       text,
       isCorrect,
@@ -242,6 +316,13 @@ class Builder {
       example,
       isCaseSensitive,
     };
+
+    // Remove Optionals
+    if (!node.itemLead) delete node.itemLead;
+    if (!node.hint) delete node.hint;
+    if (!node.instruction) delete node.instruction;
+    if (!node.example) delete node.example;
+    if (!node.isCaseSensitive) delete node.isCaseSensitive;
 
     return node;
   }
@@ -256,6 +337,7 @@ class Builder {
     example?: string | boolean,
     isCaseSensitive?: boolean,
   ): Statement {
+    // NOTE: Node order is important and is defined here
     const node: Statement = {
       text,
       isCorrect,
@@ -266,12 +348,20 @@ class Builder {
       isCaseSensitive,
     };
 
+    // Remove Optionals
+    if (!node.itemLead) delete node.itemLead;
+    if (!node.hint) delete node.hint;
+    if (!node.instruction) delete node.instruction;
+    if (!node.example) delete node.example;
+    if (!node.isCaseSensitive) delete node.isCaseSensitive;
+
     return node;
   }
 
   private itemLead(item?: string, lead?: string): ItemLead | undefined {
     let node: ItemLead | undefined;
 
+    // NOTE: Node order is important and is defined here
     if (item || lead) {
       node = {
         item,
