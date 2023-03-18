@@ -35,7 +35,7 @@ class Builder {
     ids?: string | string[],
     ageRanges?: number | number[],
     languages?: string | string[],
-    properties?: Property[], // unused
+    _properties?: Property[], // unused
     item?: string,
     lead?: string,
     hint?: string,

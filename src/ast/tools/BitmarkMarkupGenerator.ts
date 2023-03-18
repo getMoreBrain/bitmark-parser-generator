@@ -1,6 +1,6 @@
 import { AstNodeType } from '../AstNodeType';
 import { Ast, AstWalkCallbacks, NodeInfo } from '../Ast';
-import { Bit, Bitmark, Choice, ItemLead, Response, SelectOption, Statement } from '../nodes/BitmarkNodes';
+import { Bit, Bitmark, Choice, Response, SelectOption, Statement } from '../nodes/BitmarkNodes';
 import { TextFormat } from '../types/TextFormat';
 
 import { CodeWriter } from './writer/CodeWriter';

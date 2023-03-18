@@ -1,4 +1,3 @@
-import { ResourceJson } from './json/__old/ResourceJson';
 import { stringUtils } from './tools/StringUtils';
 import { BitType } from './types/BitType';
 import { BodyBitType } from './types/BodyBitType';
@@ -86,10 +85,10 @@ const selectOptionsValidator = (value: string[]): boolean => {
   return true;
 };
 
-const resourceValidator = (value: ResourceJson): boolean => {
-  // TODO
-  return true;
-};
+// const resourceValidator = (value: ResourceJson): boolean => {
+//   // TODO
+//   return true;
+// };
 
 const imageResourceFormatValidator = (value: string): boolean => {
   return !!ImageResourceFormat.fromValue(value);
@@ -124,7 +123,7 @@ export {
   botActionTrueFalseResponsesValidator,
   gapSolutionsValidator,
   selectOptionsValidator,
-  resourceValidator,
+  // resourceValidator,
   imageResourceFormatValidator,
   audioResourceFormatValidator,
   videoResourceFormatValidator,
