@@ -1,5 +1,5 @@
-import { ResourceBitJson } from './ResourceJson';
+import { ResourceJson } from './ResourceJson';
 
 export interface ParserJson {
-  excessResources?: ResourceBitJson[];
+  excessResources?: ResourceJson[];
 }

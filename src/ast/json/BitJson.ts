@@ -1,5 +1,5 @@
 import { BodyBitsJson } from './BodyBitJson';
-import { ResourceBitJson } from './ResourceJson';
+import { ResourceJson } from './ResourceJson';
 
 export interface BitJson {
   type: string; // bit type
@@ -7,6 +7,7 @@ export interface BitJson {
   id: string | string[];
   ageRange: number | number[];
   language: string | string[];
+  computerLanguage: string | string[];
   item: string;
   lead: string;
   hint: string;
@@ -22,7 +23,7 @@ export interface BitJson {
   quizzes: QuizBitJson[];
   pairs: PairBitJson[];
   body: string;
-  resource: ResourceBitJson;
+  resource: ResourceJson;
   placeholders: BodyBitsJson;
 }
 

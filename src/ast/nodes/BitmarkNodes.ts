@@ -53,6 +53,7 @@ export interface Bit {
   ids?: Id[];
   ageRanges?: Age[];
   languages?: Language[];
+  computerLanguages?: ComputerLanguage[];
   resource?: Resource;
   // properties?: PropertiesNode;
   itemLead?: ItemLead;
@@ -117,7 +118,112 @@ export type PairValue = string;
 
 export interface Resource {
   type: ResourceTypeType;
-  // TODO
+  format?: string;
+  url?: string;
+  license?: string;
+  copyright?: string;
+  provider?: string;
+  showInIndex?: boolean;
+}
+
+export interface ImageLikeResource extends Resource {
+  type: 'image' | 'image-link';
+  src1x?: string;
+  src2x?: string;
+  src3x?: string;
+  src4x?: string;
+  width?: number;
+  height?: number;
+  alt?: string;
+  caption?: string;
+}
+
+export interface AudioLikeResource extends Resource {
+  type: 'audio' | 'audio-link';
+}
+
+export interface VideoLikeResource extends Resource {
+  type: 'video' | 'video-link' | 'still-image-film' | 'still-image-film-link';
+  width?: number;
+  height?: number;
+  duration?: number; // string?
+  mute?: boolean;
+  autoplay?: boolean;
+  allowSubtitles?: boolean;
+  showSubtitles?: boolean;
+  alt?: string;
+  posterImage?: ImageResource;
+  thumbnails?: ImageResource[];
+}
+
+export interface ArticleLikeResource extends Resource {
+  type: 'article' | 'article-link' | 'document' | 'document-link';
+  body?: string;
+}
+
+export interface AppLikeResource extends Resource {
+  type: 'app' | 'app-link';
+}
+
+export interface ImageResource extends ImageLikeResource {
+  type: 'image';
+}
+
+export interface ImageLinkResource extends ImageLikeResource {
+  type: 'image-link';
+}
+
+export interface AudioResource extends AudioLikeResource {
+  type: 'audio';
+}
+
+export interface AudioLinkResource extends AudioLikeResource {
+  type: 'audio-link';
+}
+
+export interface VideoResource extends Resource, VideoLikeResource {
+  type: 'video';
+}
+
+export interface VideoLinkResource extends VideoLikeResource {
+  type: 'video-link';
+}
+
+export interface StillImageFilmResource extends VideoLikeResource {
+  type: 'still-image-film';
+}
+
+export interface StillImageFilmLinkResource extends VideoLikeResource {
+  type: 'still-image-film-link';
+}
+
+export interface ArticleResource extends ArticleLikeResource {
+  type: 'article';
+}
+
+export interface ArticleLinkResource extends ArticleLikeResource {
+  type: 'article-link';
+}
+
+export interface DocumentResource extends ArticleLikeResource {
+  type: 'document';
+}
+
+export interface DocumentLinkResource extends ArticleLikeResource {
+  type: 'document-link';
+}
+
+export interface AppResource extends AppLikeResource {
+  type: 'app';
+}
+
+export interface AppLinkResource extends AppLikeResource {
+  type: 'app-link';
+}
+
+export interface WebsiteLinkResource extends Resource {
+  type: 'website-link';
+  siteName?: string;
 }
 
 // Body
@@ -176,6 +282,7 @@ export type Postfix = string;
 export type Id = string;
 export type Age = number;
 export type Language = string;
+export type ComputerLanguage = string;
 
 export interface ItemLead {
   item?: Item;

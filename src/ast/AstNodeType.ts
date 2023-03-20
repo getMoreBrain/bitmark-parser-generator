@@ -67,8 +67,24 @@ const AstNodeTypeRaw = {
   ageRangesValue: 'ageRangesValue',
   languages: 'languages',
   languagesValue: 'languagesValue',
-  // number: 'number',
-  // boolean: 'boolean',
+  computerLanguages: 'computerLanguages',
+  computerLanguagesValue: 'computerLanguagesValue',
+
+  // Resources
+  type: 'type',
+  format: 'format',
+  url: 'url',
+  src: 'src',
+  src1x: 'src1x',
+  src2x: 'src2x',
+  src3x: 'src3x',
+  src4x: 'src4x',
+  width: 'width',
+  height: 'height',
+  duration: 'duration',
+  posterImage: 'posterImage',
+  thumbnails: 'thumbnails',
+  thumbnailsValue: 'thumbnailsValue',
 } as const;
 
 export type AstNodeTypeKeys = keyof typeof AstNodeTypeRaw;

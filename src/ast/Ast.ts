@@ -186,7 +186,8 @@ class Ast {
     }
 
     // return astKey;
-    return AstNodeType.fromKey(astKey) || AstNodeType.unknown;
+    return AstNodeType.fromKey(astKey) || (`unknown(${astKey})` as AstNodeTypeType);
+    // return AstNodeType.fromKey(astKey) || AstNodeType.unknown;
   }
 
   private isArray(x: unknown): boolean {

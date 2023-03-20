@@ -1,99 +1,230 @@
-import { AppLinkResource } from '../types/resources/AppLinkResource';
-import { AppResource } from '../types/resources/AppResource';
-import { ArticleLinkResource } from '../types/resources/ArticleLinkResource';
-import { ArticleOnlineResource } from '../types/resources/ArticleOnlineResource';
-import { ArticleResource } from '../types/resources/ArticleResource';
-import { AudioResource } from '../types/resources/AudioResource';
-import { ImageLinkResource } from '../types/resources/ImageLinkResource';
-import { ImageResource } from '../types/resources/ImageResource';
-import { StillImageFilmLinkResource } from '../types/resources/StillImageFilmLinkResource';
-import { StillImageFilmResource } from '../types/resources/StillImageFilmResource';
-import { VideoLinkResource } from '../types/resources/VideoLinkResource';
-import { VideoResource } from '../types/resources/VideoResource';
-import { WebsiteLinkResource } from '../types/resources/WebsiteLinkResource';
+export type ResourceDataJson = ImageResourceJson &
+  ImageLinkResourceJson &
+  AudioResourceJson &
+  AudioLinkResourceJson &
+  VideoResourceJson &
+  VideoLinkResourceJson &
+  StillImageFilmResourceJson &
+  StillImageFilmLinkResourceJson &
+  ArticleResourceJson &
+  ArticleLinkResourceJson &
+  DocumentResourceJson &
+  DocumentLinkResourceJson &
+  // AppResourceJson &
+  AppLinkResourceJson &
+  WebsiteLinkResourceJson;
 
-export interface BaseResourceJson {
+export type ResourceJson =
+  | ImageResourceWrapperJson
+  | ImageLinkResourceWrapperJson
+  | AudioResourceWrapperJson
+  | AudioLinkResourceWrapperJson
+  | VideoResourceWrapperJson
+  | VideoLinkResourceWrapperJson
+  | StillImageFilmResourceWrapperJson
+  | StillImageFilmLinkResourceWrapperJson
+  | ArticleResourceWrapperJson
+  | ArticleLinkResourceWrapperJson
+  | DocumentResourceWrapperJson
+  | DocumentLinkResourceWrapperJson
+  | AppResourceWrapperJson
+  | AppLinkResourceWrapperJson
+  | WebsiteLinkResourceWrapperJson;
+
+export interface ResourceWrapperJson {
   type: string; // resource bit type
 }
 
-export interface WebsiteLinkResourceJson extends BaseResourceJson {
-  type: 'website-link'; // resource type
-  websiteLink: WebsiteLinkResource;
-}
-
-export interface ImageResourceJson extends BaseResourceJson {
+export interface ImageResourceWrapperJson extends ResourceWrapperJson {
   type: 'image'; // resource type
-  image: ImageResource;
+  image: ImageResourceJson;
 }
-export interface ImageLinkResourceJson extends BaseResourceJson {
+export interface ImageLinkResourceWrapperJson extends ResourceWrapperJson {
   type: 'image-link'; // resource type
-  imageLink: ImageLinkResource;
+  imageLink: ImageLinkResourceJson;
 }
 
-export interface AudioResourceJson extends BaseResourceJson {
+export interface AudioResourceWrapperJson extends ResourceWrapperJson {
   type: 'audio'; // resource type
-  audio: AudioResource;
+  audio: AudioResourceJson;
 }
 
-export interface VideoResourceJson extends BaseResourceJson {
+export interface AudioLinkResourceWrapperJson extends ResourceWrapperJson {
+  type: 'audio-link'; // resource type
+  audioLink: AudioLinkResourceJson;
+}
+
+export interface VideoResourceWrapperJson extends ResourceWrapperJson {
   type: 'video'; // resource type
-  video: VideoResource;
+  video: VideoResourceJson;
 }
 
-export interface VideoLinkResourceJson extends BaseResourceJson {
+export interface VideoLinkResourceWrapperJson extends ResourceWrapperJson {
   type: 'video-link'; // resource type
-  videoLink: VideoLinkResource;
+  videoLink: VideoLinkResourceJson;
 }
 
-export interface StillImageFilmResourceJson extends BaseResourceJson {
+export interface StillImageFilmResourceWrapperJson extends ResourceWrapperJson {
   type: 'still-image-film'; // resource type
-  stillImageFilm: StillImageFilmResource;
+  stillImageFilm: StillImageFilmResourceJson;
 }
 
-export interface StillImageFilmLinkResourceJson extends BaseResourceJson {
+export interface StillImageFilmLinkResourceWrapperJson extends ResourceWrapperJson {
   type: 'still-image-film-link'; // resource type
-  stillImageFilmLink: StillImageFilmLinkResource;
+  stillImageFilmLink: StillImageFilmLinkResourceJson;
 }
 
-export interface ArticleResourceJson extends BaseResourceJson {
+export interface ArticleResourceWrapperJson extends ResourceWrapperJson {
   type: 'article'; // resource type
-  article: ArticleResource;
+  article: ArticleResourceJson;
 }
 
-export interface ArticleLinkResourceJson extends BaseResourceJson {
+export interface ArticleLinkResourceWrapperJson extends ResourceWrapperJson {
   type: 'article-link'; // resource type
-  articleLink: ArticleLinkResource;
+  articleLink: ArticleLinkResourceJson;
 }
 
 // Deprecated ??
-export interface ArticleOnlineResourceJson extends BaseResourceJson {
-  type: 'article-online'; // resource type
-  articleOnline: ArticleOnlineResource;
+export interface DocumentResourceWrapperJson extends ResourceWrapperJson {
+  type: 'document'; // resource type
+  document: DocumentResourceJson;
 }
 
-export interface AppResourceJson extends BaseResourceJson {
+export interface DocumentLinkResourceWrapperJson extends ResourceWrapperJson {
+  type: 'document-link'; // resource type
+  documentLink: DocumentLinkResourceJson;
+}
+
+export interface AppResourceWrapperJson extends ResourceWrapperJson {
   type: 'app'; // resource type
-  app: AppResource;
+  app: AppResourceJson;
   // private:{}
 }
 
-export interface AppLinkResourceJson extends BaseResourceJson {
+export interface AppLinkResourceWrapperJson extends ResourceWrapperJson {
   type: 'app-link'; // resource type
-  appLink: AppLinkResource;
+  appLink: AppLinkResourceJson;
   // private:{}
 }
 
-export type ResourceBitJson =
-  | WebsiteLinkResourceJson
-  | ImageResourceJson
-  | ImageLinkResourceJson
-  | AudioResourceJson
-  | VideoResourceJson
-  | VideoLinkResourceJson
-  | StillImageFilmResourceJson
-  | StillImageFilmLinkResourceJson
-  | ArticleResourceJson
-  | ArticleLinkResourceJson
-  | ArticleOnlineResourceJson
-  | AppResourceJson
-  | AppLinkResourceJson;
+export interface WebsiteLinkResourceWrapperJson extends ResourceWrapperJson {
+  type: 'website-link'; // resource type
+  websiteLink: WebsiteLinkResourceJson;
+}
+
+export interface BaseResourceJson {
+  license: string;
+  copyright: string;
+  provider: string;
+  showInIndex: boolean;
+}
+
+export interface LinkResourceJson extends BaseResourceJson {
+  url: string;
+}
+
+export interface ImageLikeResourceJson extends BaseResourceJson {
+  format: string;
+  url: string;
+  src: string;
+  src1x: string;
+  src2x: string;
+  src3x: string;
+  src4x: string;
+  width: number;
+  height: number;
+  alt: string;
+  caption: string;
+}
+
+export interface AudioLikeResourceJson extends BaseResourceJson {
+  format: string;
+  url: string;
+  src: string;
+}
+
+export interface VideoLikeResourceJson extends BaseResourceJson {
+  format: string;
+  url: string;
+  src: string;
+  width: number;
+  height: number;
+  duration: number; // string?
+  mute: boolean;
+  autoplay: boolean;
+  allowSubtitles: boolean;
+  showSubtitles: boolean;
+  alt: string;
+  posterImage: ImageResourceJson;
+  thumbnails: ImageResourceJson[];
+}
+
+export interface ArticleLikeResourceJson extends BaseResourceJson {
+  format: string;
+  url: string;
+  href: string;
+  body: string;
+}
+
+export interface AppLikeResourceJson extends BaseResourceJson {
+  app: string;
+  url: string;
+}
+
+export interface ImageResourceJson extends ImageLikeResourceJson {
+  //
+}
+
+export interface ImageLinkResourceJson extends LinkResourceJson, ImageLikeResourceJson {
+  url: string;
+}
+
+export interface AudioResourceJson extends AudioLikeResourceJson {
+  src: string;
+}
+
+export interface AudioLinkResourceJson extends LinkResourceJson, AudioLikeResourceJson {
+  url: string;
+}
+
+export interface VideoResourceJson extends VideoLikeResourceJson {
+  //
+}
+
+export interface VideoLinkResourceJson extends LinkResourceJson, VideoLikeResourceJson {
+  url: string;
+}
+
+export interface StillImageFilmResourceJson extends VideoLikeResourceJson {
+  //
+}
+
+export interface StillImageFilmLinkResourceJson extends LinkResourceJson, VideoLikeResourceJson {
+  url: string;
+}
+
+export interface ArticleResourceJson extends ArticleLikeResourceJson {
+  //
+}
+
+export interface ArticleLinkResourceJson extends LinkResourceJson, ArticleLikeResourceJson {
+  url: string;
+}
+
+export interface DocumentResourceJson extends ArticleLikeResourceJson {
+  //
+}
+
+export interface DocumentLinkResourceJson extends LinkResourceJson, ArticleLikeResourceJson {
+  url: string;
+}
+
+export type AppResourceJson = string;
+
+export interface AppLinkResourceJson extends LinkResourceJson, AppLikeResourceJson {
+  url: string;
+}
+
+export interface WebsiteLinkResourceJson extends BaseResourceJson {
+  siteName: string;
+}

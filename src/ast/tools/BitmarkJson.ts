@@ -1,9 +1,11 @@
 import { BitJson, ChoiceBitJson, PairBitJson, QuizBitJson, ResponseBitJson, StatementBitJson } from '../json/BitJson';
 import { BitWrapperJson } from '../json/BitWrapperJson';
 import { GapBitJson, BodyBitJson, BodyBitsJson, SelectBitJson, SelectOptionBitJson } from '../json/BodyBitJson';
+import { ResourceDataJson, ResourceJson } from '../json/ResourceJson';
 import { BitType, BitTypeType } from '../types/BitType';
 import { BodyBitType } from '../types/BodyBitType';
 import { TextFormatType } from '../types/TextFormat';
+import { ResourceType, ResourceTypeType } from '../types/resources/ResouceType';
 
 import { Builder } from './Builder';
 import { stringUtils } from './StringUtils';
@@ -16,8 +18,10 @@ import {
   BodyText,
   Choice,
   Gap,
+  ImageResource,
   Pair,
   Quiz,
+  Resource,
   Response,
   Select,
   SelectOption,
@@ -49,7 +53,7 @@ class BitmarkJson {
       bitsNodes.push(bitsNode);
     }
 
-    const bitmarkNode = Builder.bitmark(bitsNodes);
+    const bitmarkNode = Builder.bitmark({ bits: bitsNodes });
 
     return bitmarkNode;
   }
@@ -76,36 +80,6 @@ class BitmarkJson {
   //       propertyNodes.push(child);
   //     }
   //   }
-
-  //   // +-statement
-  //   if (statement) {
-  //     const node = this.bitToAstRecursive({
-  //       _type: isCorrect ? BitType.statementTrue : BitType.statementFalse,
-  //       _key: statement,
-  //     } as RecurringBitJson);
-  //     statementNodes.push(node);
-  //   }
-  //   if (Array.isArray(statements)) {
-  //     for (const s of statements) {
-  //       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  //       const { _type, _key, isCorrect, statement, ...rest } = s;
-  //       const node = this.bitToAstRecursive({
-  //         _type: isCorrect ? BitType.statementTrue : BitType.statementFalse,
-  //         _key: statement,
-  //         ...rest,
-  //       } as RecurringBitJson);
-  //       statementNodes.push(node);
-  //     }
-  //   }
-
-  //   // &resource
-  //   // if (resource) {
-  //   //   resourceNode = this.bitToAstRecursive({
-  //   //     _type: BitType.example,
-  //   //     _key: 'example',
-  //   //     _value: example || true,
-  //   //   } as RecurringBitJson);
-  //   // }
 
   preprocessJson(json: string | unknown): BitWrapperJson[] {
     const bitWrappers: BitWrapperJson[] = [];
@@ -188,6 +162,7 @@ class BitmarkJson {
       id,
       ageRange,
       language,
+      computerLanguage,
       resource,
       placeholders,
     } = bit;
@@ -207,31 +182,35 @@ class BitmarkJson {
     // pairs
     const pairsNodes = this.pairBitsToAst(pairs);
 
+    // resource
+    const resourceNode = this.resourceBitToAst(resource);
+
     // body & placeholders
     const bodyNode = this.bodyToAst(body, placeholders);
 
     // Build bit
-    const bitNode = Builder.bit(
-      type as BitTypeType,
-      format as TextFormatType | undefined,
-      id,
-      ageRange,
-      language,
-      undefined, // properties
+    const bitNode = Builder.bit({
+      bitType: type as BitTypeType,
+      textFormat: format as TextFormatType | undefined,
+      ids: id,
+      ageRanges: ageRange,
+      languages: language,
+      computerLanguages: computerLanguage,
+      _properties: undefined, // UNUSED
       item,
       lead,
       hint,
       instruction,
-      example || isExample,
+      example: example || isExample,
       elements,
-      statementNodes,
-      choiceNodes,
-      responseNodes,
-      quizNodes,
-      pairsNodes,
-      resource,
-      bodyNode,
-    );
+      statements: statementNodes,
+      choices: choiceNodes,
+      responses: responseNodes,
+      quizzes: quizNodes,
+      pairs: pairsNodes,
+      resource: resourceNode,
+      body: bodyNode,
+    });
 
     return bitNode;
   }
@@ -244,23 +223,23 @@ class BitmarkJson {
     const nodes: Statement[] = [];
 
     if (statement) {
-      const node = Builder.statement(statement, isCorrect ?? false);
+      const node = Builder.statement({ text: statement, isCorrect: isCorrect ?? false });
       nodes.push(node);
     }
 
     if (Array.isArray(statements)) {
       for (const s of statements) {
         const { statement, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = s;
-        const node = Builder.statement(
-          statement,
+        const node = Builder.statement({
+          text: statement,
           isCorrect,
           item,
           lead,
           hint,
           instruction,
-          example || isExample,
+          example: example || isExample,
           isCaseSensitive,
-        );
+        });
         nodes.push(node);
       }
     }
@@ -275,16 +254,16 @@ class BitmarkJson {
     if (Array.isArray(choices)) {
       for (const c of choices) {
         const { choice, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = c;
-        const node = Builder.choice(
-          choice,
+        const node = Builder.choice({
+          text: choice,
           isCorrect,
           item,
           lead,
           hint,
           instruction,
-          example || isExample,
+          example: example || isExample,
           isCaseSensitive,
-        );
+        });
         nodes.push(node);
       }
     }
@@ -299,16 +278,16 @@ class BitmarkJson {
     if (Array.isArray(responses)) {
       for (const r of responses) {
         const { response, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = r;
-        const node = Builder.response(
-          response,
+        const node = Builder.response({
+          text: response,
           isCorrect,
           item,
           lead,
           hint,
           instruction,
-          example || isExample,
+          example: example || isExample,
           isCaseSensitive,
-        );
+        });
         nodes.push(node);
       }
     }
@@ -323,16 +302,16 @@ class BitmarkJson {
     if (Array.isArray(options)) {
       for (const o of options) {
         const { text, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = o;
-        const node = Builder.selectOption(
+        const node = Builder.selectOption({
           text,
           isCorrect,
           item,
           lead,
           hint,
           instruction,
-          example || isExample,
+          example: example || isExample,
           isCaseSensitive,
-        );
+        });
         nodes.push(node);
       }
     }
@@ -347,7 +326,15 @@ class BitmarkJson {
         const { choices, responses, item, lead, hint, instruction, isExample, example } = q;
         const choiceNodes = this.choiceBitsToAst(choices);
         const responseNodes = this.responseBitsToAst(responses);
-        const node = Builder.quiz(choiceNodes, responseNodes, item, lead, hint, instruction, example || isExample);
+        const node = Builder.quiz({
+          choices: choiceNodes,
+          responses: responseNodes,
+          item,
+          lead,
+          hint,
+          instruction,
+          example: example || isExample,
+        });
         nodes.push(node);
       }
     }
@@ -362,17 +349,17 @@ class BitmarkJson {
     if (Array.isArray(pairs)) {
       for (const p of pairs) {
         const { key, values, item, lead, hint, instruction, isExample, example, isCaseSensitive, isLongAnswer } = p;
-        const node = Builder.pair(
+        const node = Builder.pair({
           key,
           values,
           item,
           lead,
           hint,
           instruction,
-          example || isExample,
+          example: example || isExample,
           isCaseSensitive,
           isLongAnswer,
-        );
+        });
         nodes.push(node);
       }
     }
@@ -380,6 +367,97 @@ class BitmarkJson {
     if (nodes.length === 0) return undefined;
 
     return nodes;
+  }
+
+  private resourceBitToAst(resource?: ResourceJson): Resource | undefined {
+    let node: Resource | undefined;
+
+    if (resource) {
+      let resourceKey = ResourceType.keyFromValue(resource.type) ?? ResourceType.unknown;
+
+      // Extra resource key mapping for 'still-image-film' / 'still-image-film-link'
+      if (resource.type === ResourceType.stillImageFilm) {
+        resourceKey = ResourceType.keyFromValue(ResourceType.video) ?? ResourceType.unknown;
+      } else if (resource.type === ResourceType.stillImageFilmLink) {
+        resourceKey = ResourceType.keyFromValue(ResourceType.videoLink) ?? ResourceType.unknown;
+      }
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const data: ResourceDataJson | undefined = (resource as any)[resourceKey];
+
+      if (!data) return undefined;
+
+      node = this.resourceDataToAst(resource.type, data);
+    }
+
+    return node;
+  }
+
+  private resourceDataToAst(type: ResourceTypeType, data?: Partial<ResourceDataJson>): Resource | undefined {
+    let node: Resource | undefined;
+
+    if (data) {
+      if (!data) return undefined;
+
+      const dataAsString: string | undefined = stringUtils.isString(data) ? (data as string) : undefined;
+
+      // url / src / href / app
+      const url = data.url || data.src || data.href || data.app || dataAsString;
+
+      // Sub resources
+      const posterImage = this.resourceDataToAst(ResourceType.image, data.posterImage) as ImageResource;
+      const thumbnails = data.thumbnails
+        ? data.thumbnails.map((t) => {
+            return this.resourceDataToAst(ResourceType.image, t) as ImageResource;
+          })
+        : undefined;
+
+      // Resource
+      node = Builder.resource({
+        type,
+
+        // Generic (except Article / Document)
+        url,
+
+        // ImageLikeResource / AudioLikeResource / VideoLikeResource / Article / Document
+        format: data.format,
+
+        // ImageLikeResource
+        src1x: data.src1x,
+        src2x: data.src2x,
+        src3x: data.src3x,
+        src4x: data.src4x,
+        caption: data.caption,
+
+        // ImageLikeResource / VideoLikeResource
+        width: data.width,
+        height: data.height,
+        alt: data.alt,
+
+        // VideoLikeResource
+        duration: data.duration,
+        mute: data.mute,
+        autoplay: data.autoplay,
+        allowSubtitles: data.allowSubtitles,
+        showSubtitles: data.showSubtitles,
+        posterImage,
+        thumbnails,
+
+        // WebsiteLinkResource
+        siteName: data.siteName,
+
+        // ArticleLikeResource
+        body: data.body,
+
+        // Generic Resource
+        license: data.license,
+        copyright: data.copyright,
+        provider: data.provider,
+        showInIndex: data.showInIndex,
+      });
+    }
+
+    return node;
   }
 
   private bodyToAst(body: string, placeholders: BodyBitsJson): Body | undefined {
@@ -418,7 +496,7 @@ class BitmarkJson {
         }
       }
 
-      node = Builder.body(bodyPartNodes);
+      node = Builder.body({ bodyParts: bodyPartNodes });
     }
 
     return node;
@@ -426,7 +504,7 @@ class BitmarkJson {
 
   private bodyTextToAst(bodyText: string): BodyText {
     // TODO => Will be more complicated one the body text is JSON
-    return Builder.bodyText(bodyText);
+    return Builder.bodyText({ text: bodyText });
   }
 
   private bodyBitToAst(bit: BodyBitJson): BodyPart {
@@ -447,7 +525,15 @@ class BitmarkJson {
     const { item, lead, hint, instruction, isExample, example, isCaseSensitive, solutions } = bit;
 
     // Build bit
-    const bitNode = Builder.gap(solutions, item, lead, hint, instruction, example || isExample, isCaseSensitive);
+    const bitNode = Builder.gap({
+      solutions,
+      item,
+      lead,
+      hint,
+      instruction,
+      example: example || isExample,
+      isCaseSensitive,
+    });
 
     return bitNode;
   }
@@ -459,17 +545,17 @@ class BitmarkJson {
     const selectOptionNodes = this.selectOptionBitsToAst(options);
 
     // Build bit
-    const node = Builder.select(
-      selectOptionNodes,
+    const node = Builder.select({
+      options: selectOptionNodes,
       prefix,
       postfix,
       item,
       lead,
       hint,
       instruction,
-      example || isExample,
-      true,
-    );
+      example: example || isExample,
+      isCaseSensitive: true,
+    });
 
     return node;
   }

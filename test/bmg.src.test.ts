@@ -104,12 +104,15 @@ function writeTestJson(allTestJson: JsonTestCases): void {
 
 function removeMarkup(obj: any): void {
   if (obj) {
-    if (Array.isArray(obj)) {
-      for (const item of obj) {
-        delete item.bitmark;
+    if (!Array.isArray(obj)) {
+      obj = [obj];
+    }
+    for (const item of obj) {
+      delete item.bitmark;
+      delete item.parser;
+      if (item.resource) {
+        delete item.resource.private;
       }
-    } else {
-      delete obj.bitmark;
     }
   }
 }

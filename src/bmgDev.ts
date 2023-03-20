@@ -16,6 +16,7 @@ import { testFiles } from './testFiles';
 class Bmg {
   async test(): Promise<void> {
     /* SUPPORTED FULLY */
+    // const filename = testFiles.article1; // OK
     // const filename = testFiles.assign1; // OK
     // const filename = testFiles.cloze; // OK
     // const filename = testFiles.cloze2; // OK
@@ -43,7 +44,7 @@ class Bmg {
     // const filename = testFiles.multitxt1; // OK
     // const filename = testFiles.multitxt3; // OK
     // const filename = testFiles.prepnote1; // OK
-    const filename = testFiles.seq1; // OK
+    // const filename = testFiles.seq1; // OK
     // const filename = testFiles.seq2; // OK
     // const filename = testFiles.truefalse2; // OK
     // const filename = testFiles.truefalse4; // OK
@@ -78,7 +79,7 @@ class Bmg {
 
     // const filename = testFiles.learningPath1; // ??
     // const filename = testFiles.learningPath3; // ??
-    // const filename = testFiles.resourceAll; // ?? resources TODO
+    const filename = testFiles.resourceAll; // ?? resources TODO
     // const filename = testFiles.utfgpun; // ?? resources TODO
     // const filename = testFiles.learningPath4; // ??
     // const filename = testFiles.learningPath5; // ??
@@ -88,8 +89,7 @@ class Bmg {
     // const filename = testFiles.book2; // ??  properties / titles
     // const filename = testFiles.page1; // ??
     // const filename = testFiles.page2; // ??
-    // const filename = testFiles.article1; // ?? &image excess resources
-    // const filename = testFiles.article2; // ?? &image excess resources
+    // const filename = testFiles.article2; // GONE
     // const filename = testFiles.botinterview1; // ?? Has a gap with no solutions
     // const filename = testFiles.botinterview2; // ?? Card is not present in JSON / resources
     // const filename = testFiles.chat1; // ?? chat / initiator / partner / resources
@@ -162,7 +162,7 @@ class Bmg {
     // const filename = testFiles.vocab1; // ?? lots
     // const filename = testFiles.vocab2; // ?? lots
     // const filename = testFiles.bookBits ;// ??  properties / titles
-    // const filename = testFiles.code; // 'computerLangauge' property
+    // const filename = testFiles.code; // 'computerLanguage' property
     // const filename = testFiles.imageAudioVideo; // Lots of Resource bits
     // const filename = testFiles.botActionResponse; // Invalid empty text node
     // const filename = testFiles.botActionTrueFalse; // Responses have 'feedback' and card dividers and @reaction properties
@@ -198,7 +198,7 @@ class Bmg {
         flags: 'w',
       },
       {
-        explicitTextFormat: true,
+        explicitTextFormat: false,
       },
     );
 

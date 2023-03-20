@@ -1,19 +1,23 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 const ResourceTypeRaw = {
-  websiteLink: 'website-link',
+  unknown: 'unknown',
+
   image: 'image',
   imageLink: 'image-link',
   audio: 'audio',
+  audioLink: 'audio-link',
   video: 'video',
   videoLink: 'video-link',
   stillImageFilm: 'still-image-film',
   stillImageFilmLink: 'still-image-film-link',
   article: 'article',
   articleLink: 'article-link',
-  articleOnline: 'article-online',
+  document: 'document',
+  documentLink: 'document-link',
   app: 'app',
   appLink: 'app-link',
+  websiteLink: 'website-link',
 } as const;
 
 const ResourceType = superenum(ResourceTypeRaw);

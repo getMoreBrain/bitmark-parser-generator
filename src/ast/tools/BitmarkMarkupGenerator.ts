@@ -1,10 +1,33 @@
 import { AstNodeType } from '../AstNodeType';
 import { Ast, AstWalkCallbacks, NodeInfo } from '../Ast';
-import { Bit, Bitmark, Choice, Response, SelectOption, Statement } from '../nodes/BitmarkNodes';
 import { TextFormat } from '../types/TextFormat';
+import { ResourceType } from '../types/resources/ResouceType';
 
 import { CodeWriter } from './writer/CodeWriter';
 import { TextWriter } from './writer/TextWriter';
+
+import {
+  AppLinkResource,
+  AppResource,
+  ArticleLinkResource,
+  ArticleResource,
+  AudioResource,
+  Bit,
+  Bitmark,
+  Choice,
+  DocumentLinkResource,
+  DocumentResource,
+  ImageResource,
+  Resource,
+  Response,
+  SelectOption,
+  Statement,
+  StillImageFilmLinkResource,
+  StillImageFilmResource,
+  VideoLinkResource,
+  VideoResource,
+  WebsiteLinkResource,
+} from '../nodes/BitmarkNodes';
 
 const DEFAULT_OPTIONS: BitmarkGeneratorOptions = {
   //
@@ -148,43 +171,25 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   // bitmark -> bits -> bitValue -> ids
 
   protected enter_ids(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    for (const id of node.value) {
-      if (id) {
-        this.writeOPA();
-        this.writeString('id');
-        this.writeColon();
-        this.writeString(`${id}`);
-        this.writeCL();
-      }
-    }
+    this.writeProperty('id', node.value);
   }
 
   // bitmark -> bits -> bitValue -> ageRanges
 
   protected enter_ageRanges(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    for (const ageRange of node.value) {
-      if (ageRange) {
-        this.writeOPA();
-        this.writeString('ageRange');
-        this.writeColon();
-        this.writeString(`${ageRange}`);
-        this.writeCL();
-      }
-    }
+    this.writeProperty('ageRange', node.value);
   }
 
   // bitmark -> bits -> bitValue -> languages
 
   protected enter_languages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    for (const lang of node.value) {
-      if (lang) {
-        this.writeOPA();
-        this.writeString('language');
-        this.writeColon();
-        this.writeString(`${lang}`);
-        this.writeCL();
-      }
-    }
+    this.writeProperty('language', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> computerLanguages
+
+  protected enter_computerLanguages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('computerLanguage', node.value);
   }
 
   // bitmark -> bits -> bitValue -> itemLead
@@ -411,6 +416,40 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     this.writeNL();
   }
 
+  // bitmark -> bits -> bitValue -> resource
+
+  protected enter_resource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const resource = node.value as Resource;
+
+    if (resource) {
+      this.writeOPAMP();
+      this.writeString(resource.type);
+      if (resource.url) {
+        this.writeColon();
+        this.writeString(resource.url);
+      }
+      this.writeCL();
+    }
+  }
+
+  // bitmark -> bits -> bitValue -> resource -> posterImage
+
+  protected enter_posterImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const posterImage = node.value as ImageResource;
+    if (posterImage && posterImage.url) {
+      this.writeProperty('posterImage', posterImage.url);
+    }
+  }
+
+  // bitmark -> bits -> bitValue -> resource -> ...
+  // bitmark -> bits -> bitValue -> resource -> posterImage -> ...
+  // bitmark -> bits -> bitValue -> resource -> thumbnails -> thumbnailsValue -> ...
+  // [src1x,src2x,src3x,src4x,width,height,alt,caption]
+
+  // protected enter_posterImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('posterImage', node.value);
+  // }
+
   //
   // Terminal nodes (leaves)
   //
@@ -554,45 +593,68 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   //   }
   // }
 
-  // // // propertyKey
+  // bitmark -> bits -> bitValue -> resource -> ...
+  // bitmark -> bits -> bitValue -> resource -> posterImage -> ...
+  // bitmark -> bits -> bitValue -> resource -> thumbnails -> thumbnailsValue -> ...
+  // [src1x,src2x,src3x,src4x,width,height,alt,caption]
 
-  // // protected leaf_propertyKey(node: PropertyKey, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  // //   if (node.value) {
-  // //     //
-  // //   }
-  // // }
+  protected leaf_src1x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('src1x', node.value);
+  }
 
-  // // // propertyValue
+  protected leaf_src2x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('src2x', node.value);
+  }
 
-  // // protected leaf_propertyValue(node: PropertyValue, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  // //   if (node.value) {
-  // //     //
-  // //   }
-  // // }
+  protected leaf_src3x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('src3x', node.value);
+  }
 
-  // // resource
+  protected leaf_src4x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('src4x', node.value);
+  }
 
-  // protected leaf_resource(node: Resource, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   const resource = node.value;
-  //   if (resource) {
-  //     this.writeOPAMP();
-  //     this.writeString(resource.type);
-  //     this.writeColon();
+  protected leaf_width(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('width', node.value);
+  }
 
-  //     switch (resource.type) {
-  //       case ResourceType.articleOnline: {
-  //         const articleOnline = resource.articleOnline as ArticleOnlineResource;
-  //         this.writeString(articleOnline.url);
-  //         break;
-  //       }
-  //       case ResourceType.app:
-  //         this.writeString(resource.app);
-  //         break;
-  //     }
+  protected leaf_height(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('height', node.value);
+  }
 
-  //     this.writeCL();
-  //   }
-  // }
+  protected leaf_alt(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('alt', node.value);
+  }
+
+  protected leaf_caption(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('caption', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> resource -> ...
+  // bitmark -> bits -> bitValue -> resource -> posterImage -> ...
+  // bitmark -> bits -> bitValue -> resource -> thumbnails -> thumbnailsValue -> ...
+  // [duration,mute,autoplay,allowSubtitles,showSubtitles]
+
+  protected leaf_duration(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('duration', node.value);
+  }
+
+  protected leaf_mute(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('mute', node.value);
+  }
+
+  protected leaf_autoplay(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('autoplay', node.value);
+  }
+
+  protected leaf_allowSubtitles(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('allowSubtitles', node.value);
+  }
+
+  protected leaf_showSubtitles(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('showSubtitles', node.value);
+  }
+
   // END NODE HANDLERS
 
   //
@@ -705,6 +767,24 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   protected writeNL(): void {
     this.write('\n');
+  }
+
+  protected writeProperty(name: string, values?: unknown | unknown[]): void {
+    if (values !== undefined) {
+      if (!Array.isArray(values)) {
+        values = [values];
+      }
+
+      for (const val of values as []) {
+        if (val !== undefined) {
+          this.writeOPA();
+          this.writeString(name);
+          this.writeColon();
+          this.writeString(`${val}`);
+          this.writeCL();
+        }
+      }
+    }
   }
 
   protected isWriteTextFormat(bitValue: string): boolean {
