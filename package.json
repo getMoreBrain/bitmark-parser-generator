@@ -19,7 +19,7 @@
     "build-iife": "tsc && rollup -c",
     "build-doc": "typedoc",
     "test": "jest --runInBand --coverage",
-    "test-books": "jest --config=jest.books.config.js --coverage",
+    "test-books": "jest --config=jest.books.config.js --runInBand --coverage",
     "convert": "tsx ./src/bmgConvertToJson.ts",
     "split-expected-json": "tsx ./scripts/split-expected-json.ts",
     "publish": "yarn npm publish",

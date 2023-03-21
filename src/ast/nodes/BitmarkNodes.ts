@@ -65,6 +65,7 @@ export interface Bit {
   resource?: Resource;
   book?: string;
   title?: string;
+  subtitle?: string;
   level?: number;
   toc?: boolean;
   progress?: boolean;
@@ -80,6 +81,7 @@ export interface Bit {
   choices?: Choice[];
   responses?: Response[];
   quizzes?: Quiz[];
+  heading?: Heading;
   pairs?: Pair[];
   body?: Body;
   questions?: Question[];
@@ -113,6 +115,13 @@ export interface Quiz {
   hint?: string;
   instruction?: string;
   example?: Example;
+}
+
+// Heading
+
+export interface Heading {
+  forKeys: string;
+  forValues: string[];
 }
 
 // Pair

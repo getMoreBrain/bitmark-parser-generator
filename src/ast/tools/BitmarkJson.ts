@@ -12,6 +12,7 @@ import { Builder } from './Builder';
 import {
   BitJson,
   ChoiceBitJson,
+  HeadingJson,
   PairBitJson,
   QuestionJson,
   QuizBitJson,
@@ -27,6 +28,7 @@ import {
   Choice,
   FooterText,
   Gap,
+  Heading,
   ImageResource,
   Pair,
   Question,
@@ -177,6 +179,7 @@ class BitmarkJson {
       labelFalse,
       book,
       title,
+      subtitle,
       level,
       toc,
       progress,
@@ -193,12 +196,13 @@ class BitmarkJson {
       statement,
       isCorrect,
       statements,
-      choices,
       responses,
       quizzes,
+      heading,
       pairs,
       resource,
       body,
+      choices,
       questions,
       footer,
       placeholders,
@@ -207,26 +211,29 @@ class BitmarkJson {
     //+-statement
     const statementNodes = this.statementBitsToAst(statement, isCorrect, statements);
 
-    //+-choice
-    const choiceNodes = this.choiceBitsToAst(choices);
-
     //+-response
     const responseNodes = this.responseBitsToAst(responses);
 
     // quizzes
     const quizNodes = this.quizBitsToAst(quizzes);
 
+    // heading
+    const headingNode = this.headingBitToAst(heading);
+
     // pairs
     const pairsNodes = this.pairBitsToAst(pairs);
-
-    // questions
-    const questionNodes = this.questionBitsToAst(questions);
 
     // resource
     const resourceNode = this.resourceBitToAst(resource);
 
     // body & placeholders
     const bodyNode = this.bodyToAst(body, placeholders);
+
+    //+-choice
+    const choiceNodes = this.choiceBitsToAst(choices);
+
+    // questions
+    const questionNodes = this.questionBitsToAst(questions);
 
     // footer
     const footerNode = this.footerToAst(footer);
@@ -258,6 +265,7 @@ class BitmarkJson {
       labelFalse,
       book,
       title,
+      subtitle,
       level,
       toc,
       progress,
@@ -271,12 +279,13 @@ class BitmarkJson {
       example: example || isExample,
       elements,
       statements: statementNodes,
-      choices: choiceNodes,
       responses: responseNodes,
       quizzes: quizNodes,
+      heading: headingNode,
       pairs: pairsNodes,
       resource: resourceNode,
       body: bodyNode,
+      choices: choiceNodes,
       questions: questionNodes,
       footer: footerNode,
     });
@@ -411,6 +420,15 @@ class BitmarkJson {
     if (nodes.length === 0) return undefined;
 
     return nodes;
+  }
+
+  private headingBitToAst(heading?: HeadingJson): Heading | undefined {
+    let node: Heading | undefined;
+    if (heading) {
+      node = Builder.heading({ forKeys: heading.forKeys, forValues: heading.forValues });
+    }
+
+    return node;
   }
 
   private pairBitsToAst(pairs?: PairBitJson[]): Pair[] | undefined {

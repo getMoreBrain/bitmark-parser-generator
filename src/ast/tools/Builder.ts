@@ -36,6 +36,7 @@ import {
   WebsiteLinkResource,
   Question,
   FooterText,
+  Heading,
 } from '../nodes/BitmarkNodes';
 
 interface RemoveUnwantedPropertiesOptions {
@@ -81,6 +82,7 @@ class Builder {
     labelFalse?: string;
     book?: string;
     title?: string;
+    subtitle?: string;
     level?: number;
     toc?: boolean;
     progress?: boolean;
@@ -94,12 +96,13 @@ class Builder {
     example?: string | boolean;
     elements?: string[];
     statements?: Statement[];
-    choices?: Choice[];
     responses?: Response[];
     quizzes?: Quiz[];
+    heading?: Heading;
     pairs?: Pair[];
     resource?: Resource;
     body?: Body;
+    choices?: Choice[];
     questions?: Question[];
     footer?: FooterText;
   }): Bit {
@@ -130,6 +133,7 @@ class Builder {
       book,
       resource,
       title,
+      subtitle,
       level,
       toc,
       progress,
@@ -143,11 +147,12 @@ class Builder {
       example,
       elements,
       statements,
-      choices,
       responses,
       quizzes,
+      heading,
       pairs,
       body,
+      choices,
       questions,
       footer,
     } = data;
@@ -180,6 +185,7 @@ class Builder {
       labelTrue,
       labelFalse,
       title,
+      subtitle,
       level,
       toc,
       progress,
@@ -193,11 +199,12 @@ class Builder {
       resource,
       elements,
       statements,
-      choices,
       responses,
       quizzes,
+      heading,
       pairs,
       body,
+      choices,
       questions,
       footer,
     };
@@ -295,6 +302,21 @@ class Builder {
 
     // Remove Unset Optionals
     this.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  heading(data: { forKeys: string; forValues: string | string[] }): Heading {
+    const { forKeys, forValues } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Heading = {
+      forKeys: forKeys || '',
+      forValues: this.asArray(forValues) ?? [],
+    };
+
+    // Remove Unset Optionals
+    // this.removeUnwantedProperties(node);
 
     return node;
   }

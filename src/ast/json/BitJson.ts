@@ -31,6 +31,7 @@ export interface BitJson {
   book: string;
 
   title: string;
+  subtitle: string;
   level: number;
   toc: boolean;
   progress: boolean;
@@ -48,12 +49,13 @@ export interface BitJson {
   statement: string;
   isCorrect: boolean;
   statements: StatementBitJson[];
-  choices: ChoiceBitJson[];
   responses: ResponseBitJson[];
   quizzes: QuizBitJson[];
+  heading: HeadingJson;
   pairs: PairBitJson[];
   resource: ResourceJson;
   body: string;
+  choices: ChoiceBitJson[];
   questions: QuestionJson[];
   footer: string;
   placeholders: BodyBitsJson;
@@ -106,6 +108,11 @@ export interface QuizBitJson {
   instruction: string;
   isExample: boolean;
   example: string;
+}
+
+export interface HeadingJson {
+  forKeys: string;
+  forValues: string | string[];
 }
 
 export interface PairBitJson {

@@ -13,6 +13,13 @@ import { FileUtils } from '../src/utils/FileUtils';
 
 import { deepDiffMapper } from './utils/deepDiffMapper';
 
+// Passed: 0-2, 4-5, 7, 9, 11
+// Failed:
+// - 3: akad_2_aufgabenset_4 (parser error)
+
+const SINGLE_FILE_START = 6;
+const SINGLE_FILE_COUNT = 1;
+
 // TODO should use 'require.resolve()' rather than direct node_modules
 const JSON_TEST_INPUT_DIR = path.resolve(__dirname, '../assets/test/books/json');
 const JSON_TEST_OUTPUT_DIR = path.resolve(__dirname, '../assets/test/books/results');
@@ -74,7 +81,9 @@ describe('bitmark-generator', () => {
 
     let allTestFiles = getTestJsonFilenames();
 
-    allTestFiles = allTestFiles.slice(0, 1);
+    if (Number.isInteger(SINGLE_FILE_START)) {
+      allTestFiles = allTestFiles.slice(SINGLE_FILE_START, SINGLE_FILE_START + SINGLE_FILE_COUNT);
+    }
 
     console.info(`JSON tests found: ${allTestFiles.length}`);
 

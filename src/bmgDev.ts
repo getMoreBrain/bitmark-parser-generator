@@ -170,12 +170,14 @@ class Bmg {
     // const filename = testFiles.botActionRatingNumber; // Responses.response is a number, not a string
     // const filename = testFiles.vendorAmchart; // [.vendor-amcharts-5-chart] is unknown bit, for testing
 
-    const filename = path.resolve(
-      __dirname,
-      '..',
-      'assets/test/books/json',
-      'publishers/akad/akad_2_aufgabenset_1.json',
-    );
+    // const filename = path.resolve(
+    //   __dirname,
+    //   '..',
+    //   'assets/test/books/json',
+    //   'publishers/akad/akad_2_aufgabenset_5.json',
+    // );
+
+    const filename = path.resolve(__dirname, '..', 'assets/test', 'test.json');
 
     // Read in the test file
     const json = await fs.readJson(filename);

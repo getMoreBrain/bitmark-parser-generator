@@ -7,26 +7,15 @@ import { CodeWriter } from './writer/CodeWriter';
 import { TextWriter } from './writer/TextWriter';
 
 import {
-  AppLinkResource,
-  AppResource,
-  ArticleLinkResource,
   ArticleResource,
-  AudioResource,
   Bit,
   Bitmark,
   Choice,
-  DocumentLinkResource,
-  DocumentResource,
   ImageResource,
   Resource,
   Response,
   SelectOption,
   Statement,
-  StillImageFilmLinkResource,
-  StillImageFilmResource,
-  VideoLinkResource,
-  VideoResource,
-  WebsiteLinkResource,
 } from '../nodes/BitmarkNodes';
 
 const DEFAULT_OPTIONS: BitmarkGeneratorOptions = {
@@ -322,7 +311,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   // bitmark -> bits -> bitValue -> elements
 
   protected enter_elements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeCardDivider();
+    this.writeMajorDivider();
     this.writeNL();
   }
 
@@ -340,7 +329,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   protected exit_elements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeNL();
-    this.writeCardDivider();
+    this.writeMajorDivider();
   }
 
   // bitmark -> bits -> bitValue -> body -> gap -> solutions
@@ -365,7 +354,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   // bitmark -> bits -> bitValue -> statements
 
   protected enter_statements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeCardDivider();
+    this.writeMajorDivider();
     this.writeNL();
   }
 
@@ -377,13 +366,13 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     _route: NodeInfo[],
   ): void {
     this.writeNL();
-    this.writeCardDivider();
+    this.writeMajorDivider();
     this.writeNL();
   }
 
   protected exit_statements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeNL();
-    this.writeCardDivider();
+    this.writeMajorDivider();
   }
 
   // bitmark -> bits -> bitValue -> statements -> statementsValue
@@ -487,11 +476,55 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   //   //
   // }
 
+  // bitmark -> bits -> bitValue -> heading
+
+  protected enter_heading(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeMajorDivider();
+    this.writeNL();
+  }
+
+  protected between_heading(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeNL();
+    this.writeMinorDivider();
+    this.writeNL();
+  }
+
+  protected exit_heading(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // this.writeMajorDivider();
+    // this.writeNL();
+  }
+
+  // bitmark -> bits -> bitValue -> heading -> forValues
+
+  protected enter_forValues(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    //
+  }
+
+  protected between_forValues(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeMinorDivider();
+    this.writeNL();
+  }
+
+  protected exit_forValues(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    //
+  }
+
   // bitmark -> bits -> bitValue -> pairs
 
   protected enter_pairs(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeNL();
-    this.writeCardDivider();
+    this.writeMajorDivider();
     this.writeNL();
   }
 
@@ -503,23 +536,35 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     _route: NodeInfo[],
   ): void {
     this.writeNL();
-    this.writeCardDivider();
+    this.writeMajorDivider();
     this.writeNL();
   }
 
   protected exit_pairs(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeNL();
-    this.writeCardDivider();
+    this.writeMajorDivider();
     this.writeNL();
   }
 
   // bitmark -> bits -> bitValue -> pairs -> pairsValue
 
+  protected between_pairsValue(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    // this.writeNL();
+    // this.writeMinorDivider();
+    // this.writeNL();
+  }
+
   // bitmark -> bits -> bitValue -> pairs -> pairsValue -> values
 
   protected enter_values(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeNL();
-    this.writePairKeyValueDivider();
+    this.writeMinorDivider();
     this.writeNL();
   }
 
@@ -538,7 +583,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   // bitmark -> bits -> bitValue -> questions
 
   protected enter_questions(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeCardDivider();
+    this.writeMajorDivider();
     this.writeNL();
   }
 
@@ -549,20 +594,20 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
-    this.writeCardDivider();
+    this.writeMajorDivider();
     this.writeNL();
   }
 
   protected exit_questions(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeCardDivider();
+    this.writeMajorDivider();
     this.writeNL();
   }
 
   // bitmark -> bits -> bitValue -> questions -> questionsValue
 
   protected between_questionsValue(
-    node: NodeInfo,
-    left: NodeInfo,
+    _node: NodeInfo,
+    _left: NodeInfo,
     _right: NodeInfo,
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
@@ -631,7 +676,20 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     if (level && title) {
       this.writeOP();
       for (let i = 0; i < level; i++) this.writeHash();
-      this.writeString(node.value);
+      this.writeString(title);
+      this.writeCL();
+    }
+  }
+
+  //  bitmark -> bits -> subtitle
+
+  protected leaf_subtitle(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const subtitle = node.value;
+    const level = 2;
+    if (level && subtitle) {
+      this.writeOP();
+      for (let i = 0; i < level; i++) this.writeHash();
+      this.writeString(subtitle);
       this.writeCL();
     }
   }
@@ -810,6 +868,22 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   // bitmark -> bits -> bitValue ->  * -> isLongAnswer
 
   // bitmark -> bits -> bitValue ->  * -> isCorrect
+
+  // bitmark -> bits -> bitValue -> heading -> forKeys
+
+  protected leaf_forKeys(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeOPHASH();
+    this.writeString(node.value);
+    this.writeCL();
+  }
+
+  // bitmark -> bits -> bitValue -> heading -> forValuesValue
+
+  protected leaf_forValuesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeOPHASH();
+    this.writeString(node.value);
+    this.writeCL();
+  }
 
   // bitmark -> bits -> bitValue -> pairs -> pairsValue -> key
 
@@ -994,6 +1068,10 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     this.write('[$');
   }
 
+  protected writeOPHASH(): void {
+    this.write('[#');
+  }
+
   protected writeOPPRE(): void {
     this.write("['");
   }
@@ -1026,16 +1104,16 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     this.write('#');
   }
 
-  protected writeCardDivider(): void {
+  protected writeMajorDivider(): void {
     this.write('===');
+  }
+
+  protected writeMinorDivider(): void {
+    this.write('==');
   }
 
   protected writeElementDivider(): void {
     this.write('--');
-  }
-
-  protected writePairKeyValueDivider(): void {
-    this.write('==');
   }
 
   protected writeNL(): void {
