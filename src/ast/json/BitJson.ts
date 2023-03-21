@@ -24,6 +24,11 @@ export interface BitJson {
   deeplink: string | string[];
   videoCallLink: string | string[];
   bot: string | string[];
+  list: string | string[];
+  labelTrue: string;
+  labelFalse: string;
+
+  book: string;
 
   title: string;
   level: number;
@@ -31,6 +36,7 @@ export interface BitJson {
   progress: boolean;
   anchor: string;
   reference: string | string[]; // Has 2 meanings, depending on bit (anchor/reference, or @reference)
+  referenceEnd: string;
 
   item: string;
   lead: string;

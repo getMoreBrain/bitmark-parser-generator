@@ -38,6 +38,13 @@ import {
   FooterText,
 } from '../nodes/BitmarkNodes';
 
+interface RemoveUnwantedPropertiesOptions {
+  ignoreUndefined?: string[];
+  ignoreFalse?: string[];
+  ignoreEmptyString?: string[];
+  ignoreEmptyArrays?: string[];
+}
+
 class Builder {
   bitmark(data: { bits: Bit[] }): Bitmark {
     const { bits } = data;
@@ -52,6 +59,7 @@ class Builder {
     bitType: BitTypeType;
     textFormat?: TextFormatType;
     ids?: string | string[];
+    externalIds?: string | string[];
     ageRanges?: number | number[];
     languages?: string | string[];
     computerLanguages?: string | string[];
@@ -68,13 +76,17 @@ class Builder {
     deepLinks?: string | string[];
     videoCallLinks?: string | string[];
     bots?: string | string[];
-    _properties?: Property[]; // unused
+    lists?: string | string[];
+    labelTrue?: string;
+    labelFalse?: string;
+    book?: string;
     title?: string;
     level?: number;
     toc?: boolean;
     progress?: boolean;
     anchor?: string;
     reference?: string | string[];
+    referenceEnd?: string;
     item?: string;
     lead?: string;
     hint?: string;
@@ -95,6 +107,7 @@ class Builder {
       bitType,
       textFormat,
       ids,
+      externalIds,
       ageRanges,
       languages,
       computerLanguages,
@@ -111,6 +124,10 @@ class Builder {
       deepLinks,
       videoCallLinks,
       bots,
+      lists,
+      labelTrue,
+      labelFalse,
+      book,
       resource,
       title,
       level,
@@ -118,6 +135,7 @@ class Builder {
       progress,
       anchor,
       reference,
+      referenceEnd,
       item,
       lead,
       hint,
@@ -139,6 +157,8 @@ class Builder {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
       ids: this.asArray(ids),
+      externalIds: this.asArray(externalIds),
+      book,
       ageRanges: this.asArray(ageRanges),
       languages: this.asArray(languages),
       computerLanguages: this.asArray(computerLanguages),
@@ -156,12 +176,16 @@ class Builder {
       bots: this.asArray(bots),
       durations: this.asArray(durations),
       referenceProperties: undefined, // Important for property order, do not remove
+      lists: this.asArray(lists),
+      labelTrue,
+      labelFalse,
       title,
       level,
       toc,
       progress,
       anchor,
       reference: undefined, // Important for property order, do not remove
+      referenceEnd,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
@@ -182,43 +206,7 @@ class Builder {
     this.handleBitReference(node, reference);
 
     // Remove Unset Optionals
-    if (!node.ids) delete node.ids;
-    if (!node.ageRanges) delete node.ageRanges;
-    if (!node.languages) delete node.languages;
-    if (!node.computerLanguages) delete node.computerLanguages;
-    if (!node.coverImages) delete node.coverImages;
-    if (!node.publishers) delete node.publishers;
-    if (!node.publications) delete node.publications;
-    if (!node.authors) delete node.authors;
-    if (!node.dates) delete node.dates;
-    if (!node.locations) delete node.locations;
-    if (!node.themes) delete node.themes;
-    if (!node.kinds) delete node.kinds;
-    if (!node.actions) delete node.actions;
-    if (!node.deepLinks) delete node.deepLinks;
-    if (!node.videoCallLinks) delete node.videoCallLinks;
-    if (!node.bots) delete node.bots;
-    if (!node.referenceProperties) delete node.referenceProperties;
-    if (!node.resource) delete node.resource;
-    if (!node.title) delete node.title;
-    if (!node.level) delete node.level;
-    if (!node.toc) delete node.toc;
-    if (!node.progress) delete node.progress;
-    if (!node.anchor) delete node.anchor;
-    if (!node.reference) delete node.reference;
-    if (!node.itemLead) delete node.itemLead;
-    if (!node.hint) delete node.hint;
-    if (!node.instruction) delete node.instruction;
-    if (!node.example) delete node.example;
-    if (!node.elements) delete node.elements;
-    if (!node.statements) delete node.statements;
-    if (!node.choices) delete node.choices;
-    if (!node.responses) delete node.responses;
-    if (!node.quizzes) delete node.quizzes;
-    if (!node.pairs) delete node.pairs;
-    if (!node.body) delete node.body;
-    if (!node.questions) delete node.questions;
-    if (!node.footer) delete node.footer;
+    this.removeUnwantedProperties(node);
 
     // Validate and correct invalid bits as much as possible
     this.validateBit(node);
@@ -250,11 +238,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.itemLead) delete node.itemLead;
-    if (!node.hint) delete node.hint;
-    if (!node.instruction) delete node.instruction;
-    if (!node.example) delete node.example;
-    if (!node.isCaseSensitive) delete node.isCaseSensitive;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -283,11 +267,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.itemLead) delete node.itemLead;
-    if (!node.hint) delete node.hint;
-    if (!node.instruction) delete node.instruction;
-    if (!node.example) delete node.example;
-    if (!node.isCaseSensitive) delete node.isCaseSensitive;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -314,12 +294,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.choices) delete node.choices;
-    if (!node.responses) delete node.responses;
-    if (!node.itemLead) delete node.itemLead;
-    if (!node.hint) delete node.hint;
-    if (!node.instruction) delete node.instruction;
-    if (!node.example) delete node.example;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -350,12 +325,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.itemLead) delete node.itemLead;
-    if (!node.hint) delete node.hint;
-    if (!node.instruction) delete node.instruction;
-    if (!node.example) delete node.example;
-    if (!node.isCaseSensitive) delete node.isCaseSensitive;
-    if (!node.isLongAnswer) delete node.isLongAnswer;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -399,14 +369,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.partialAnswer) delete node.partialAnswer;
-    if (!node.sampleSolution) delete node.sampleSolution;
-    if (!node.itemLead) delete node.itemLead;
-    if (!node.hint) delete node.hint;
-    if (!node.instruction) delete node.instruction;
-    if (!node.example) delete node.example;
-    if (!node.isCaseSensitive) delete node.isCaseSensitive;
-    if (!node.isShortAnswer) delete node.isShortAnswer;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -462,11 +425,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.gap.itemLead) delete node.gap.itemLead;
-    if (!node.gap.hint) delete node.gap.hint;
-    if (!node.gap.instruction) delete node.gap.instruction;
-    if (!node.gap.example) delete node.gap.example;
-    if (!node.gap.isCaseSensitive) delete node.gap.isCaseSensitive;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -499,11 +458,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.select.itemLead) delete node.select.itemLead;
-    if (!node.select.hint) delete node.select.hint;
-    if (!node.select.instruction) delete node.select.instruction;
-    if (!node.select.example) delete node.select.example;
-    if (!node.select.isCaseSensitive) delete node.select.isCaseSensitive;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -532,11 +487,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.itemLead) delete node.itemLead;
-    if (!node.hint) delete node.hint;
-    if (!node.instruction) delete node.instruction;
-    if (!node.example) delete node.example;
-    if (!node.isCaseSensitive) delete node.isCaseSensitive;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -565,11 +516,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.itemLead) delete node.itemLead;
-    if (!node.hint) delete node.hint;
-    if (!node.instruction) delete node.instruction;
-    if (!node.example) delete node.example;
-    if (!node.isCaseSensitive) delete node.isCaseSensitive;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -998,13 +945,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.format) delete node.format;
-    if (!node.url) delete node.url;
-    if (!node.siteName) delete node.siteName;
-    if (!node.license) delete node.license;
-    if (!node.copyright) delete node.copyright;
-    if (!node.provider) delete node.provider;
-    if (!node.showInIndex) delete node.showInIndex;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -1102,20 +1043,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.format) delete node.format;
-    if (!node.url) delete node.url;
-    if (!node.src1x) delete node.src1x;
-    if (!node.src2x) delete node.src2x;
-    if (!node.src3x) delete node.src3x;
-    if (!node.src4x) delete node.src4x;
-    if (!node.width) delete node.width;
-    if (!node.height) delete node.height;
-    if (!node.alt) delete node.alt;
-    if (!node.caption) delete node.caption;
-    if (!node.license) delete node.license;
-    if (!node.copyright) delete node.copyright;
-    if (!node.provider) delete node.provider;
-    if (!node.showInIndex) delete node.showInIndex;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -1214,22 +1142,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.format) delete node.format;
-    if (!node.url) delete node.url;
-    if (!node.width) delete node.width;
-    if (!node.height) delete node.height;
-    if (!node.duration) delete node.duration;
-    if (!node.mute) delete node.mute;
-    if (!node.autoplay) delete node.autoplay;
-    if (!node.allowSubtitles) delete node.allowSubtitles;
-    if (!node.showSubtitles) delete node.showSubtitles;
-    if (!node.alt) delete node.alt;
-    if (!node.posterImage) delete node.posterImage;
-    if (!node.thumbnails) delete node.thumbnails;
-    if (!node.license) delete node.license;
-    if (!node.copyright) delete node.copyright;
-    if (!node.provider) delete node.provider;
-    if (!node.showInIndex) delete node.showInIndex;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -1259,13 +1172,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.format) delete node.format;
-    if (!node.url) delete node.url;
-    if (!node.body) delete node.body;
-    if (!node.license) delete node.license;
-    if (!node.copyright) delete node.copyright;
-    if (!node.provider) delete node.provider;
-    if (!node.showInIndex) delete node.showInIndex;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -1291,12 +1198,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    if (!node.format) delete node.format;
-    if (!node.url) delete node.url;
-    if (!node.license) delete node.license;
-    if (!node.copyright) delete node.copyright;
-    if (!node.provider) delete node.provider;
-    if (!node.showInIndex) delete node.showInIndex;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -1308,6 +1210,60 @@ class Builder {
     // must be included in the markup
     if (!bit.questions) {
       bit.questions = [];
+    }
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private removeUnwantedProperties(obj: any, options?: RemoveUnwantedPropertiesOptions): void {
+    options = Object.assign({}, options);
+
+    this.removeUndefinedProperties(obj, options.ignoreUndefined);
+    this.removeFalseProperties(obj, options.ignoreFalse);
+    this.removeEmptyStringProperties(obj, options.ignoreEmptyString);
+    this.removeEmptyArrayProperties(obj, options.ignoreEmptyArrays);
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private removeUndefinedProperties(obj: any, ignoreKeys?: string[]): void {
+    for (const [k, v] of Object.entries(obj)) {
+      if (ignoreKeys && ignoreKeys.indexOf(k) >= 0) continue;
+
+      if (v == undefined) {
+        delete obj[k];
+      }
+    }
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private removeFalseProperties(obj: any, ignoreKeys?: string[]): void {
+    for (const [k, v] of Object.entries(obj)) {
+      if (ignoreKeys && ignoreKeys.indexOf(k) >= 0) continue;
+
+      if (v === false) {
+        delete obj[k];
+      }
+    }
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private removeEmptyStringProperties(obj: any, ignoreKeys?: string[]): void {
+    for (const [k, v] of Object.entries(obj)) {
+      if (ignoreKeys && ignoreKeys.indexOf(k) >= 0) continue;
+
+      if (v === '') {
+        delete obj[k];
+      }
+    }
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private removeEmptyArrayProperties(obj: any, ignoreKeys?: string[]): void {
+    for (const [k, v] of Object.entries(obj)) {
+      if (ignoreKeys && ignoreKeys.indexOf(k) >= 0) continue;
+
+      if (Array.isArray(v) && v.length === 0) {
+        delete obj[k];
+      }
     }
   }
 

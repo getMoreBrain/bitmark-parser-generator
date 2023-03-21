@@ -127,7 +127,7 @@ describe('bitmark-generator', () => {
     writeTestJson(allTestJsonMap);
 
     // const allTestJson = Object.values(allTestJsonMap);
-    const allTestJson = [allTestJsonMap['learning-path1']];
+    const allTestJson = [allTestJsonMap['learning-path6']];
 
     // Error cases
     //
@@ -138,7 +138,6 @@ describe('bitmark-generator', () => {
     // describe.each(allTestJson)('Test file: %s', (testJson: JsonTestCase) => {
     // test('JSON ==> Markup ==> JSON', async () => {
     allTestJson.forEach((testJson) => {
-      // )('Test file: %s', (testJson: JsonTestCase)
       test(`JSON ==> Markup ==> JSON: ${testJson.id}`, async () => {
         const { id, json } = testJson;
 

@@ -48,12 +48,16 @@ const AstNodeTypeRaw = {
 
   ids: 'ids',
   idsValue: 'idsValue',
+  externalIds: 'externalIds',
+  externalIdsValue: 'externalIdsValue',
   ageRanges: 'ageRanges',
   ageRangesValue: 'ageRangesValue',
   languages: 'languages',
   languagesValue: 'languagesValue',
   computerLanguages: 'computerLanguages',
   computerLanguagesValue: 'computerLanguagesValue',
+  coverImages: 'coverImages',
+  coverImagesValue: 'coverImagesValue',
   publishers: 'publishers',
   publishersValue: 'publishersValue',
   publications: 'publications',
@@ -80,6 +84,12 @@ const AstNodeTypeRaw = {
   botsValue: 'botsValue',
   referenceProperties: 'referenceProperties',
   referencePropertiesValue: 'referencePropertiesValue',
+  lists: 'lists',
+  listsValue: 'listsValue',
+  labelTrue: 'labelTrue',
+  labelFalse: 'labelFalse',
+
+  book: 'book',
 
   item: 'item',
   lead: 'lead',
@@ -93,6 +103,7 @@ const AstNodeTypeRaw = {
   progress: 'progress',
   anchor: 'anchor',
   reference: 'reference',
+  referenceEnd: 'referenceEnd',
 
   bodyText: 'bodyText',
   footerText: 'footerText',

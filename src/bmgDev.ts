@@ -78,7 +78,7 @@ class Bmg {
     // - 'resource' vs 'excessResources[]'
     // - 'bitmark-grammer' project missing 'antlr4ts' dependency
 
-    const filename = testFiles.learningPath1; // ??
+    // const filename = testFiles.learningPath1; // ??
     // const filename = testFiles.learningPath3; // ??
     // const filename = testFiles.resourceAll; // ?? resources TODO
     // const filename = testFiles.utfgpun; // ?? resources TODO
@@ -170,7 +170,12 @@ class Bmg {
     // const filename = testFiles.botActionRatingNumber; // Responses.response is a number, not a string
     // const filename = testFiles.vendorAmchart; // [.vendor-amcharts-5-chart] is unknown bit, for testing
 
-    // const filename = path.resolve(__dirname, '..', 'assets/test/books/json', '1100_gueter_und_erbrecht.bit.json');
+    const filename = path.resolve(
+      __dirname,
+      '..',
+      'assets/test/books/json',
+      'publishers/akad/akad_2_aufgabenset_1.json',
+    );
 
     // Read in the test file
     const json = await fs.readJson(filename);

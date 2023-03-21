@@ -1,4 +1,5 @@
-import { stringUtils } from './tools/StringUtils';
+import { StringUtils } from '../utils/StringUtils';
+
 import { BitType } from './types/BitType';
 import { BodyBitType } from './types/BodyBitType';
 import { TextFormat } from './types/TextFormat';
@@ -12,7 +13,7 @@ import { VideoResourceFormat } from './types/resources/VideoResourceFormat';
 export type Validator = (value: any) => boolean;
 
 const stringValidator = (value: string): boolean => {
-  return stringUtils.isString(value);
+  return StringUtils.isString(value);
 };
 
 const numberValidator = (value: number): boolean => {
@@ -26,7 +27,7 @@ const booleanValidator = (value: boolean): boolean => {
 
 const urlValidator = (value: string): boolean => {
   // Currently just validates item is a string
-  return stringUtils.isString(value);
+  return StringUtils.isString(value);
 };
 
 const propertyValidator = (value: string | string[]): boolean => {

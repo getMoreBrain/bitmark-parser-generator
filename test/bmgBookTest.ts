@@ -1,11 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// import { bmg } from '../src/bmgDev';
-
-// import { bmgTests } from './bmg-test';
-
-// // Run tests on src
-// bmgTests(bmg);
-
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { describe, test } from '@jest/globals';
@@ -17,62 +9,32 @@ import path from 'path';
 
 import { BitmarkJson } from '../src/ast/tools/BitmarkJson';
 import { FileBitmapMarkupGenerator } from '../src/ast/tools/FileBitmapMarkupGenerator';
+import { FileUtils } from '../src/utils/FileUtils';
 
 import { deepDiffMapper } from './utils/deepDiffMapper';
-
-// const TEST_FILES = ['1_2_erfolgsregel.bit.json'];
-const TEST_FILES = ['1100_gueter_und_erbrecht.bit.json'];
 
 // TODO should use 'require.resolve()' rather than direct node_modules
 const JSON_TEST_INPUT_DIR = path.resolve(__dirname, '../assets/test/books/json');
 const JSON_TEST_OUTPUT_DIR = path.resolve(__dirname, '../assets/test/books/results');
 
-interface JsonTestCases {
-  [key: string]: JsonTestCase;
-}
-
-class JsonTestCase {
-  id: string;
-  json: unknown;
-
-  constructor(id: string, json: unknown) {
-    this.id = id;
-    this.json = json;
-  }
-
-  toString(): string {
-    return this.id;
-  }
-}
-
 function getTestJsonFilenames(): string[] {
-  const filenames: string[] = [];
-
-  const files = fs.readdirSync(JSON_TEST_INPUT_DIR, {
-    withFileTypes: true,
+  const files = FileUtils.getFilenamesSync(JSON_TEST_INPUT_DIR, {
+    match: new RegExp('.+.json'),
+    recursive: true,
   });
 
-  for (const file of files) {
-    if (file.isFile() && path.extname(file.name) === '.json') {
-      if (TEST_FILES.indexOf(file.name) >= 0) {
-        const fn = path.resolve(JSON_TEST_INPUT_DIR, file.name);
-        filenames.push(fn);
-      }
-    }
-  }
-
-  return filenames;
+  return files;
 }
 
-function writeTestJsonAndBitmark(json: unknown, id: string): void {
+function writeTestJsonAndBitmark(json: unknown, fullFolder: string, id: string): void {
   // // Write original JSON
-  // const jsonFile = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.json`);
-  // fs.writeFileSync(jsonFile, JSON.stringify(json, null, 2));
+  const jsonFile = path.resolve(fullFolder, `${id}.json`);
+  fs.writeFileSync(jsonFile, JSON.stringify(json, null, 2));
 
   // Write original Bitmark
   const bitwrappers = BitmarkJson.preprocessJson(json);
 
-  const markupFile = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.bit`);
+  const markupFile = path.resolve(fullFolder, `${id}.bit`);
   let markup = '';
   for (let i = 0, len = bitwrappers.length; i < len; i++) {
     const bw = bitwrappers[i];
@@ -87,7 +49,9 @@ function writeTestJsonAndBitmark(json: unknown, id: string): void {
   fs.writeFileSync(markupFile, markup);
 }
 
-function removeMarkup(obj: any): void {
+function removeMarkup(obj: any, options?: { removeErrors?: boolean }): void {
+  options = Object.assign({}, options);
+
   if (obj) {
     if (!Array.isArray(obj)) {
       obj = [obj];
@@ -95,6 +59,7 @@ function removeMarkup(obj: any): void {
     for (const item of obj) {
       delete item.bitmark;
       delete item.parser;
+      if (options.removeErrors) delete item.errors;
       if (item.resource) {
         delete item.resource.private;
       }
@@ -107,24 +72,39 @@ describe('bitmark-generator', () => {
     // Ensure required folders
     fs.ensureDirSync(JSON_TEST_OUTPUT_DIR);
 
-    const allTestFiles = getTestJsonFilenames();
+    let allTestFiles = getTestJsonFilenames();
+
+    allTestFiles = allTestFiles.slice(0, 1);
 
     console.info(`JSON tests found: ${allTestFiles.length}`);
 
-    describe.each(allTestFiles)('Test file: %s', (testFile: string) => {
-      test('JSON ==> Markup ==> JSON', async () => {
-        const id = path.basename(testFile);
+    // describe.each(allTestFiles)('Test file: %s', (testFile: string) => {
+    //   test('JSON ==> Markup ==> JSON', async () => {
+
+    allTestFiles.forEach((testFile: string) => {
+      const partFolderAndFile = testFile.replace(JSON_TEST_INPUT_DIR, '');
+      const partFolder = path.dirname(partFolderAndFile);
+      const fullFolder = path.join(JSON_TEST_OUTPUT_DIR, partFolder);
+      const id = path.basename(partFolderAndFile, '.json');
+
+      // console.log('partFolderAndFile', partFolderAndFile);
+      // console.log('partFolder', partFolder);
+      // console.log('fullFolder', fullFolder);
+      // console.log('id', id);
+
+      test(`JSON ==> Markup ==> JSON: ${id}`, async () => {
+        fs.ensureDirSync(fullFolder);
 
         const json = fs.readJsonSync(testFile, 'utf8');
 
         // Write original bitmark (and JSON?)
-        writeTestJsonAndBitmark(json, id);
+        writeTestJsonAndBitmark(json, fullFolder, id);
 
         // Convert the bitmark JSON to bitmark AST
         const bitmarkAst = BitmarkJson.toAst(json);
 
         // Generate markup code from AST
-        const markupFile = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.gen.bit`);
+        const markupFile = path.resolve(fullFolder, `${id}.gen.bit`);
         const generator = new FileBitmapMarkupGenerator(
           markupFile,
           {
@@ -156,10 +136,14 @@ describe('bitmark-generator', () => {
         }
 
         // Write the new JSON
-        const fileNewJson = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.gen.json`);
+        const fileNewJson = path.resolve(fullFolder, `${id}.gen.json`);
         fs.writeFileSync(fileNewJson, JSON.stringify(newJson, null, 2), {
           encoding: 'utf8',
         });
+
+        // Remove uninteresting JSON items
+        removeMarkup(json, { removeErrors: true });
+        removeMarkup(newJson);
 
         // Compare old and new JSONs
         const diffMap = deepDiffMapper.map(json, newJson, {
@@ -167,15 +151,19 @@ describe('bitmark-generator', () => {
         });
 
         // Write the diff Map JSON
-        const fileDiffMap = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.diff.json`);
+        const fileDiffMap = path.resolve(fullFolder, `${id}.diff.json`);
         fs.writeFileSync(fileDiffMap, JSON.stringify(diffMap, null, 2), {
           encoding: 'utf8',
         });
 
-        removeMarkup(json);
-        removeMarkup(newJson);
+        // // Remove uninteresting JSON items
+        // removeMarkup(json, { removeErrors: true });
+        // removeMarkup(newJson);
 
         expect(newJson).toEqual(json);
+
+        // If we get to here, we can delete the diff file as there were no important differences
+        fs.removeSync(fileDiffMap);
 
         // const equal = deepEqual(newJson, json, { strict: true });
         // expect(equal).toEqual(true);

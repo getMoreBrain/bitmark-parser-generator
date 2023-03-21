@@ -1,6 +1,7 @@
+import { StringUtils } from '../utils/StringUtils';
+
 import { AstNodeType, AstNodeTypeType } from './AstNodeType';
 import { Bitmark, Node } from './nodes/BitmarkNodes';
-import { stringUtils } from './tools/StringUtils';
 
 export interface AstNode {
   type: AstNodeTypeType;
@@ -54,7 +55,7 @@ class Ast {
         acc += ' -> ';
       } else {
         if (val.value != null) {
-          const s = stringUtils.firstLine(`${val.value}`, 100);
+          const s = StringUtils.firstLine(`${val.value}`, 100);
           acc += `(${s})`;
         }
       }
@@ -72,7 +73,7 @@ class Ast {
       if (last) {
         str += `${val.key}[${val.index}]`;
         if (val.value) {
-          const s = stringUtils.firstLine(`${val.value}`, 100);
+          const s = StringUtils.firstLine(`${val.value}`, 100);
           str += `(${s})`;
         }
       } else if (secondToLast) {

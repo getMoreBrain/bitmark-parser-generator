@@ -122,4 +122,4 @@ class StringUtils {
 
 const stringUtils = new StringUtils();
 
-export { stringUtils };
+export { stringUtils as StringUtils };

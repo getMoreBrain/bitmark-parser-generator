@@ -1,3 +1,4 @@
+import { StringUtils } from '../../utils/StringUtils';
 import { BitWrapperJson } from '../json/BitWrapperJson';
 import { GapBitJson, BodyBitJson, BodyBitsJson, SelectBitJson, SelectOptionBitJson } from '../json/BodyBitJson';
 import { ResourceDataJson, ResourceJson } from '../json/ResourceJson';
@@ -7,7 +8,6 @@ import { TextFormatType } from '../types/TextFormat';
 import { ResourceType, ResourceTypeType } from '../types/resources/ResouceType';
 
 import { Builder } from './Builder';
-import { stringUtils } from './StringUtils';
 
 import {
   BitJson,
@@ -94,7 +94,7 @@ class BitmarkJson {
   preprocessJson(json: string | unknown): BitWrapperJson[] {
     const bitWrappers: BitWrapperJson[] = [];
 
-    if (stringUtils.isString(json)) {
+    if (StringUtils.isString(json)) {
       const str = json as string;
       try {
         json = JSON.parse(str);
@@ -155,6 +155,7 @@ class BitmarkJson {
       type,
       format,
       id,
+      externalId,
       ageRange,
       language,
       computerLanguage,
@@ -171,12 +172,17 @@ class BitmarkJson {
       deeplink,
       videoCallLink,
       bot,
+      list,
+      labelTrue,
+      labelFalse,
+      book,
       title,
       level,
       toc,
       progress,
       anchor,
       reference,
+      referenceEnd,
       item,
       lead,
       hint,
@@ -230,6 +236,7 @@ class BitmarkJson {
       bitType: type as BitTypeType,
       textFormat: format as TextFormatType | undefined,
       ids: id,
+      externalIds: externalId,
       ageRanges: ageRange,
       languages: language,
       computerLanguages: computerLanguage,
@@ -246,13 +253,17 @@ class BitmarkJson {
       deepLinks: deeplink,
       videoCallLinks: videoCallLink,
       bots: bot,
-      _properties: undefined, // UNUSED
+      lists: list,
+      labelTrue,
+      labelFalse,
+      book,
       title,
       level,
       toc,
       progress,
       anchor,
       reference,
+      referenceEnd,
       item,
       lead,
       hint,
@@ -497,7 +508,7 @@ class BitmarkJson {
     if (data) {
       if (!data) return undefined;
 
-      const dataAsString: string | undefined = stringUtils.isString(data) ? (data as string) : undefined;
+      const dataAsString: string | undefined = StringUtils.isString(data) ? (data as string) : undefined;
 
       // url / src / href / app
       const url = data.url || data.src || data.href || data.app || dataAsString;
@@ -579,7 +590,7 @@ class BitmarkJson {
       // all JSON
 
       const bodyPartNodes: BodyPart[] = [];
-      const bodyParts: string[] = stringUtils.splitPlaceholders(body, Object.keys(placeholderNodes));
+      const bodyParts: string[] = StringUtils.splitPlaceholders(body, Object.keys(placeholderNodes));
 
       for (let i = 0, len = bodyParts.length; i < len; i++) {
         const bodyPart = bodyParts[i];
@@ -621,7 +632,7 @@ class BitmarkJson {
 
   private footerToAst(footerText: string): FooterText | undefined {
     // TODO => Will be more complicated one the body text is JSON
-    if (stringUtils.isString(footerText)) {
+    if (StringUtils.isString(footerText)) {
       return Builder.footerText({ text: footerText });
     }
     return undefined;

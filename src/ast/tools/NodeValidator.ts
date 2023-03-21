@@ -1,4 +1,4 @@
-import { stringUtils } from './StringUtils';
+import { StringUtils } from '../../utils/StringUtils';
 
 class NodeValidator {
   isRequired(val: unknown, name: string) {
@@ -17,23 +17,23 @@ class NodeValidator {
   }
 
   isString(val: unknown, name: string) {
-    if (stringUtils.isString(val)) return;
+    if (StringUtils.isString(val)) return;
     throw new Error(`${name} is required to be a string`);
   }
 
   isNonEmptyString(val: unknown, name: string) {
-    if (stringUtils.isString(val) && val !== '') return;
+    if (StringUtils.isString(val) && val !== '') return;
     throw new Error(`${name} is required to be a non-empty string`);
   }
 
   isStringOrBoolean(val: unknown, name: string) {
-    if (stringUtils.isString(val)) return;
+    if (StringUtils.isString(val)) return;
     if (val === true || val === false) return;
     throw new Error(`${name} is required to be a string or a boolean`);
   }
 
   isNonEmptyStringOrBoolean(val: unknown, name: string) {
-    if (stringUtils.isString(val) && val !== '') return;
+    if (StringUtils.isString(val) && val !== '') return;
     if (val === true || val === false) return;
     throw new Error(`${name} is required to be a non-empty string or a boolean`);
   }
@@ -59,7 +59,7 @@ class NodeValidator {
   }
 
   isStringOrNumberOrBooleanOrNullOrUndefined(val: unknown, name: string) {
-    if (stringUtils.isString(val)) return;
+    if (StringUtils.isString(val)) return;
     if (Number.isFinite(val)) return;
     if (val === true || val === false) return;
     if (val == null) return;

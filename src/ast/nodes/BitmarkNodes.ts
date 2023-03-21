@@ -41,6 +41,7 @@ export interface Bit {
   bitType: BitTypeType;
   textFormat: TextFormatType;
   ids?: string[];
+  externalIds?: string[];
   ageRanges?: number[];
   languages?: string[];
   computerLanguages?: string[];
@@ -58,14 +59,18 @@ export interface Bit {
   videoCallLinks?: string[];
   bots?: string[];
   referenceProperties?: string[];
+  lists?: string[];
+  labelTrue?: string;
+  labelFalse?: string;
   resource?: Resource;
-  // properties?: PropertiesNode;
+  book?: string;
   title?: string;
   level?: number;
   toc?: boolean;
   progress?: boolean;
   anchor?: string;
   reference?: string;
+  referenceEnd?: string;
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
