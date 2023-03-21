@@ -13,12 +13,14 @@ import { FileUtils } from '../src/utils/FileUtils';
 
 import { deepDiffMapper } from './utils/deepDiffMapper';
 
-// Passed: 0-2, 4-5, 7, 9, 11
+// Passed: 0-2, 4-26, 28
 // Failed:
-// - 3: akad_2_aufgabenset_4 (parser error)
+// - 3: akad_2_aufgabenset_4 (parser error?)
+// - 27: berufsbildner_qualicarte (bullet, parser error?)
+// - 29: berufsbildner_quiz_bewertungsgespraech (multiple-response-1, parser error?)
 
-const SINGLE_FILE_START = 6;
-const SINGLE_FILE_COUNT = 1;
+const SINGLE_FILE_START = 30;
+const SINGLE_FILE_COUNT = 50;
 
 // TODO should use 'require.resolve()' rather than direct node_modules
 const JSON_TEST_INPUT_DIR = path.resolve(__dirname, '../assets/test/books/json');
@@ -152,7 +154,7 @@ describe('bitmark-generator', () => {
 
         // Remove uninteresting JSON items
         removeMarkup(json, { removeErrors: true });
-        removeMarkup(newJson);
+        removeMarkup(newJson, { removeErrors: true });
 
         // Compare old and new JSONs
         const diffMap = deepDiffMapper.map(json, newJson, {

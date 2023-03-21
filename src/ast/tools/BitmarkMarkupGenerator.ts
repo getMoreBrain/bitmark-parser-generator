@@ -12,6 +12,7 @@ import {
   Bitmark,
   Choice,
   ImageResource,
+  ItemLead,
   Resource,
   Response,
   SelectOption,
@@ -302,6 +303,22 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   // bitmark -> bits -> bitValue -> itemLead
 
+  protected enter_itemLead(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const itemLead = node.value as ItemLead;
+    if (itemLead && (itemLead.item || itemLead.lead)) {
+      // Always write item if item or lead is set
+      this.writeOPC();
+      this.writeString(itemLead.item);
+      this.writeCL();
+
+      if (itemLead.lead) {
+        this.writeOPC();
+        this.writeString(itemLead.lead);
+        this.writeCL();
+      }
+    }
+  }
+
   // bitmark -> bits -> bitValue -> body
 
   // bitmark -> bits -> bitValue -> body -> gap
@@ -389,6 +406,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   }
 
   // bitmark -> bits -> bitValue -> choices
+  // bitmark -> bits -> bitValue -> quizzes -> quizzesValue -> choices
 
   protected between_choices(
     _node: NodeInfo,
@@ -397,6 +415,10 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
+    this.writeNL();
+  }
+
+  protected exit_choices(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeNL();
   }
 
@@ -438,43 +460,41 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     this.writeCL();
   }
 
-  // // quizzes
+  // bitmark -> bits -> bitValue -> quizzes
 
-  // protected enter_quizzes(_node: Quizzes, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   this.writeCardDivider();
-  //   this.writeNL();
-  // }
+  protected enter_quizzes(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeMajorDivider();
+    this.writeNL();
+  }
 
-  // protected between_quizzes(
-  //   _node: Quizzes,
-  //   _left: NodeInfo,
-  //   _right: NodeInfo,
-  //   _parent: NodeInfo | undefined,
-  //   _route: NodeInfo[],
-  // ): void {
-  //   this.writeNL();
-  //   this.writeCardDivider();
-  //   this.writeNL();
-  // }
+  protected between_quizzes(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    // this.writeNL();
+    this.writeMajorDivider();
+    this.writeNL();
+  }
 
-  // protected exit_quizzes(_node: Quizzes, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   this.writeNL();
-  //   this.writeCardDivider();
-  // }
+  protected exit_quizzes(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeMajorDivider();
+    this.writeNL();
+  }
 
-  // // quiz
+  // bitmark -> bits -> bitValue -> quizzes -> quizzesValue
 
-  // protected enter_quiz(_node: Quiz, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
-
-  // protected between_quiz(_node: Quiz, _left: NodeInfo, _right: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   this.writeNL();
-  // }
-
-  // protected exit_quiz(_node: Quiz, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   //
-  // }
+  protected between_quizzesValue(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeNL();
+  }
 
   // bitmark -> bits -> bitValue -> heading
 
@@ -752,23 +772,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   //  * -> itemLead --> item
 
-  protected leaf_item(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value != null) {
-      this.writeOPC();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
-
   //  * -> itemLead --> lead
-
-  protected leaf_lead(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeOPC();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
 
   //  * -> hint
 

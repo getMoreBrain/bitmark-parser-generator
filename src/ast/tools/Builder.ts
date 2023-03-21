@@ -292,12 +292,12 @@ class Builder {
 
     // NOTE: Node order is important and is defined here
     const node: Quiz = {
-      choices,
       responses,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
       example,
+      choices,
     };
 
     // Remove Unset Optionals
@@ -756,6 +756,7 @@ class Builder {
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
     alt?: string;
+    caption?: string;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
     license?: string;
@@ -782,6 +783,7 @@ class Builder {
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
     alt?: string;
+    caption?: string;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
     license?: string;
@@ -808,6 +810,7 @@ class Builder {
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
     alt?: string;
+    caption?: string;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
     license?: string;
@@ -834,6 +837,7 @@ class Builder {
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
     alt?: string;
+    caption?: string;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
     license?: string;
@@ -1115,6 +1119,7 @@ class Builder {
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
     alt?: string;
+    caption?: string;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
     license?: string;
@@ -1134,6 +1139,7 @@ class Builder {
       allowSubtitles,
       showSubtitles,
       alt,
+      caption,
       posterImage,
       thumbnails,
       license,
@@ -1155,6 +1161,7 @@ class Builder {
       allowSubtitles,
       showSubtitles,
       alt,
+      caption,
       posterImage,
       thumbnails,
       license,

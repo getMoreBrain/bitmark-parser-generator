@@ -32,7 +32,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: ALL  Tests",
+      "name": "Jest: ALL Tests",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": ["-i"],
@@ -42,9 +42,6 @@
       // "internalConsoleOptions": "openOnSessionStart",
       // "outFiles": ["${workspaceRoot}/dist/**/*"],
       // "envFile": "${workspaceRoot}/.env",
-      "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
-      }
     },
     {
       "type": "node",
@@ -59,9 +56,20 @@
       // "internalConsoleOptions": "openOnSessionStart",
       // "outFiles": ["${workspaceRoot}/dist/**/*"],
       // "envFile": "${workspaceRoot}/.env",
-      "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
-      }
-    }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest: Book Tests",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": ["--config=jest.books.config.js", "-i"],
+      // "preLaunchTask": "build",
+      "console": "integratedTerminal",
+      // "disableOptimisticBPs": true,
+      // "internalConsoleOptions": "openOnSessionStart",
+      // "outFiles": ["${workspaceRoot}/dist/**/*"],
+      // "envFile": "${workspaceRoot}/.env",
+    },
   ]
 }

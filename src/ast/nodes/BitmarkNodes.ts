@@ -192,6 +192,7 @@ export interface VideoLikeResource extends Resource {
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
   alt?: string;
+  caption?: string;
   posterImage?: ImageResource;
   thumbnails?: ImageResource[];
 }
