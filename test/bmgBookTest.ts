@@ -11,15 +11,19 @@ import { BitmarkJson } from '../src/ast/tools/BitmarkJson';
 import { FileBitmapMarkupGenerator } from '../src/ast/tools/FileBitmapMarkupGenerator';
 import { FileUtils } from '../src/utils/FileUtils';
 
+import { BitJsonUtils } from './utils/BitJsonUtils';
 import { deepDiffMapper } from './utils/deepDiffMapper';
 
-// Passed: 0-2, 4-26, 28
+// Passed: 0-2, 4-26, 28, 30-37
 // Failed:
 // - 3: akad_2_aufgabenset_4 (parser error?)
 // - 27: berufsbildner_qualicarte (bullet, parser error?)
 // - 29: berufsbildner_quiz_bewertungsgespraech (multiple-response-1, parser error?)
+// - 38: zentrale_aufnahmepruefung_2019_mathe (interview->questions, parser error?)
 
-const SINGLE_FILE_START = 30;
+// TODO - delete bits with errors before testing (as bits with errors will cause issues in the test for sure!)
+
+const SINGLE_FILE_START = 0;
 const SINGLE_FILE_COUNT = 50;
 
 // TODO should use 'require.resolve()' rather than direct node_modules
@@ -58,26 +62,8 @@ function writeTestJsonAndBitmark(json: unknown, fullFolder: string, id: string):
   fs.writeFileSync(markupFile, markup);
 }
 
-function removeMarkup(obj: any, options?: { removeErrors?: boolean }): void {
-  options = Object.assign({}, options);
-
-  if (obj) {
-    if (!Array.isArray(obj)) {
-      obj = [obj];
-    }
-    for (const item of obj) {
-      delete item.bitmark;
-      delete item.parser;
-      if (options.removeErrors) delete item.errors;
-      if (item.resource) {
-        delete item.resource.private;
-      }
-    }
-  }
-}
-
-describe('bitmark-generator', () => {
-  describe('JSON', () => {
+describe('bitmark-gen', () => {
+  describe('JSON => Markup => JSON: Books', () => {
     // Ensure required folders
     fs.ensureDirSync(JSON_TEST_OUTPUT_DIR);
 
@@ -103,10 +89,13 @@ describe('bitmark-generator', () => {
       // console.log('fullFolder', fullFolder);
       // console.log('id', id);
 
-      test(`JSON ==> Markup ==> JSON: ${id}`, async () => {
+      test(`${id}`, async () => {
         fs.ensureDirSync(fullFolder);
 
         const json = fs.readJsonSync(testFile, 'utf8');
+
+        // Remove uninteresting JSON items
+        BitJsonUtils.cleanupJson(json, { removeParser: true, removeErrors: true });
 
         // Write original bitmark (and JSON?)
         writeTestJsonAndBitmark(json, fullFolder, id);
@@ -153,8 +142,8 @@ describe('bitmark-generator', () => {
         });
 
         // Remove uninteresting JSON items
-        removeMarkup(json, { removeErrors: true });
-        removeMarkup(newJson, { removeErrors: true });
+        BitJsonUtils.cleanupJson(json, { removeMarkup: true });
+        BitJsonUtils.cleanupJson(newJson, { removeMarkup: true, removeParser: true, removeErrors: true });
 
         // Compare old and new JSONs
         const diffMap = deepDiffMapper.map(json, newJson, {
@@ -166,10 +155,6 @@ describe('bitmark-generator', () => {
         fs.writeFileSync(fileDiffMap, JSON.stringify(diffMap, null, 2), {
           encoding: 'utf8',
         });
-
-        // // Remove uninteresting JSON items
-        // removeMarkup(json, { removeErrors: true });
-        // removeMarkup(newJson);
 
         expect(newJson).toEqual(json);
 

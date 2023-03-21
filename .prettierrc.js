@@ -5,5 +5,6 @@ module.exports = {
   trailingComma: 'all',
   singleQuote: true,
   arrowParens: 'always',
+  // bracketSameLine: true,
   // plugins: [require('prettier-plugin-import-sort')],
 };

@@ -94,14 +94,14 @@ class Builder {
     hint?: string;
     instruction?: string;
     example?: string | boolean;
+    resource?: Resource;
+    body?: Body;
     elements?: string[];
     statements?: Statement[];
     responses?: Response[];
     quizzes?: Quiz[];
     heading?: Heading;
     pairs?: Pair[];
-    resource?: Resource;
-    body?: Body;
     choices?: Choice[];
     questions?: Question[];
     footer?: FooterText;
@@ -131,7 +131,6 @@ class Builder {
       labelTrue,
       labelFalse,
       book,
-      resource,
       title,
       subtitle,
       level,
@@ -145,13 +144,14 @@ class Builder {
       hint,
       instruction,
       example,
+      resource,
+      body,
       elements,
       statements,
       responses,
       quizzes,
       heading,
       pairs,
-      body,
       choices,
       questions,
       footer,
@@ -197,13 +197,13 @@ class Builder {
       instruction,
       example,
       resource,
+      body,
       elements,
       statements,
       responses,
       quizzes,
       heading,
       pairs,
-      body,
       choices,
       questions,
       footer,
@@ -280,24 +280,24 @@ class Builder {
   }
 
   quiz(data: {
-    choices?: Choice[];
-    responses?: Response[];
     item?: string;
     lead?: string;
     hint?: string;
     instruction?: string;
     example?: string | boolean;
+    choices?: Choice[];
+    responses?: Response[];
   }): Quiz {
     const { choices, responses, item, lead, hint, instruction, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Quiz = {
-      responses,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
       example,
       choices,
+      responses,
     };
 
     // Remove Unset Optionals
@@ -367,7 +367,6 @@ class Builder {
     const {
       question,
       partialAnswer,
-      sampleSolution,
       item,
       lead,
       hint,
@@ -375,6 +374,7 @@ class Builder {
       example,
       isCaseSensitive,
       isShortAnswer,
+      sampleSolution,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -382,12 +382,14 @@ class Builder {
       itemLead: this.itemLead(item, lead),
       question,
       partialAnswer,
-      sampleSolution,
       hint,
       instruction,
       example,
       isCaseSensitive,
-      isShortAnswer,
+      // Writing [@shortAnswer] after the 'question' causes newlines in the body to change.
+      // This is likely a parser bug.
+      // isShortAnswer,
+      sampleSolution,
     };
 
     // Remove Unset Optionals
@@ -558,7 +560,6 @@ class Builder {
       src2x?: string;
       src3x?: string;
       src4x?: string;
-      caption?: string;
 
       // ImageLikeResource / VideoLikeResource
       width?: number;
@@ -585,6 +586,7 @@ class Builder {
       copyright?: string;
       provider?: string;
       showInIndex?: boolean;
+      caption?: string;
     },
     //
   ): Resource | undefined {
@@ -675,11 +677,11 @@ class Builder {
     width?: number;
     height?: number;
     alt?: string;
-    caption?: string;
     license?: string;
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): ImageResource {
     const node: ImageResource = this.imageLikeResource({
       type: ResourceType.image,
@@ -699,11 +701,11 @@ class Builder {
     width?: number;
     height?: number;
     alt?: string;
-    caption?: string;
     license?: string;
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): ImageLinkResource {
     const node: ImageLinkResource = this.imageLikeResource({
       type: ResourceType.imageLink,
@@ -720,6 +722,7 @@ class Builder {
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): AudioResource {
     const node: AudioResource = this.audioLikeResource({
       type: ResourceType.audio,
@@ -736,6 +739,7 @@ class Builder {
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): AudioLinkResource {
     const node: AudioLinkResource = this.audioLikeResource({
       type: ResourceType.audioLink,
@@ -756,13 +760,13 @@ class Builder {
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
     alt?: string;
-    caption?: string;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): VideoResource {
     const node: VideoResource = this.videoLikeResource({
       type: ResourceType.video,
@@ -783,13 +787,13 @@ class Builder {
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
     alt?: string;
-    caption?: string;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): VideoLinkResource {
     const node: VideoLinkResource = this.videoLikeResource({
       type: ResourceType.videoLink,
@@ -810,13 +814,13 @@ class Builder {
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
     alt?: string;
-    caption?: string;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): StillImageFilmResource {
     const node: StillImageFilmResource = this.videoLikeResource({
       type: ResourceType.stillImageFilm,
@@ -837,13 +841,13 @@ class Builder {
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
     alt?: string;
-    caption?: string;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): StillImageFilmLinkResource {
     const node: StillImageFilmLinkResource = this.videoLikeResource({
       type: ResourceType.stillImageFilmLink,
@@ -861,6 +865,7 @@ class Builder {
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): ArticleResource {
     const node: ArticleResource = this.articleLikeResource({
       type: ResourceType.article,
@@ -877,6 +882,7 @@ class Builder {
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): ArticleLinkResource {
     const node: ArticleLinkResource = this.articleLikeResource({
       type: ResourceType.articleLink,
@@ -894,6 +900,7 @@ class Builder {
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): DocumentResource {
     const node: DocumentResource = this.articleLikeResource({
       type: ResourceType.document,
@@ -910,6 +917,7 @@ class Builder {
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): DocumentLinkResource {
     const node: DocumentLinkResource = this.articleLikeResource({
       type: ResourceType.documentLink,
@@ -925,6 +933,7 @@ class Builder {
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): AppResource {
     const node: AppResource = this.appLikeResource({
       type: ResourceType.appLink,
@@ -940,6 +949,7 @@ class Builder {
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): AppLinkResource {
     const node: AppLinkResource = this.appLikeResource({
       type: ResourceType.appLink,
@@ -956,8 +966,9 @@ class Builder {
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): WebsiteLinkResource {
-    const { url, siteName, license, copyright, provider, showInIndex } = data;
+    const { url, siteName, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: WebsiteLinkResource = {
@@ -968,6 +979,7 @@ class Builder {
       copyright,
       provider,
       showInIndex,
+      caption,
     };
 
     // Remove Unset Optionals
@@ -1025,11 +1037,11 @@ class Builder {
     width?: number;
     height?: number;
     alt?: string;
-    caption?: string;
     license?: string;
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): ImageResource | ImageLinkResource {
     const {
       type,
@@ -1042,11 +1054,11 @@ class Builder {
       width,
       height,
       alt,
-      caption,
       license,
       copyright,
       provider,
       showInIndex,
+      caption,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1061,11 +1073,11 @@ class Builder {
       width,
       height,
       alt,
-      caption,
       license,
       copyright,
       provider,
       showInIndex,
+      caption,
     };
 
     // Remove Unset Optionals
@@ -1082,8 +1094,9 @@ class Builder {
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): AudioResource | AudioLinkResource {
-    const { type, format, url, license, copyright, provider, showInIndex } = data;
+    const { type, format, url, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioResource | AudioLinkResource = {
@@ -1094,15 +1107,11 @@ class Builder {
       copyright,
       provider,
       showInIndex,
+      caption,
     };
 
     // Remove Unset Optionals
-    if (!node.format) delete node.format;
-    if (!node.url) delete node.url;
-    if (!node.license) delete node.license;
-    if (!node.copyright) delete node.copyright;
-    if (!node.provider) delete node.provider;
-    if (!node.showInIndex) delete node.showInIndex;
+    this.removeUnwantedProperties(node);
 
     return node;
   }
@@ -1119,13 +1128,13 @@ class Builder {
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
     alt?: string;
-    caption?: string;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource {
     const {
       type,
@@ -1139,13 +1148,13 @@ class Builder {
       allowSubtitles,
       showSubtitles,
       alt,
-      caption,
       posterImage,
       thumbnails,
       license,
       copyright,
       provider,
       showInIndex,
+      caption,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1161,13 +1170,13 @@ class Builder {
       allowSubtitles,
       showSubtitles,
       alt,
-      caption,
       posterImage,
       thumbnails,
       license,
       copyright,
       provider,
       showInIndex,
+      caption,
     };
 
     // Remove Unset Optionals
@@ -1185,8 +1194,9 @@ class Builder {
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource {
-    const { type, format, url, body, license, copyright, provider, showInIndex } = data;
+    const { type, format, url, body, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource = {
@@ -1198,6 +1208,7 @@ class Builder {
       copyright,
       provider,
       showInIndex,
+      caption,
     };
 
     // Remove Unset Optionals
@@ -1213,8 +1224,9 @@ class Builder {
     copyright?: string;
     provider?: string;
     showInIndex?: boolean;
+    caption?: string;
   }): AppResource | AppLinkResource {
-    const { type, url, license, copyright, provider, showInIndex } = data;
+    const { type, url, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AppResource | AppLinkResource = {
@@ -1224,6 +1236,7 @@ class Builder {
       copyright,
       provider,
       showInIndex,
+      caption,
     };
 
     // Remove Unset Optionals

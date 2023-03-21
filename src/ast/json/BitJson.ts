@@ -48,13 +48,14 @@ export interface BitJson {
   elements: ElementBitJson[];
   statement: string;
   isCorrect: boolean;
+  resource: ResourceJson;
+  body: string;
+
   statements: StatementBitJson[];
   responses: ResponseBitJson[];
   quizzes: QuizBitJson[];
   heading: HeadingJson;
   pairs: PairBitJson[];
-  resource: ResourceJson;
-  body: string;
   choices: ChoiceBitJson[];
   questions: QuestionJson[];
   footer: string;
@@ -100,14 +101,14 @@ export interface ResponseBitJson {
 }
 
 export interface QuizBitJson {
-  choices: ChoiceBitJson[];
-  responses: ResponseBitJson[];
   item: string;
   lead: string;
   hint: string;
   instruction: string;
   isExample: boolean;
   example: string;
+  choices: ChoiceBitJson[];
+  responses: ResponseBitJson[];
 }
 
 export interface HeadingJson {

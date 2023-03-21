@@ -192,6 +192,8 @@ class BitmarkJson {
       instruction,
       isExample,
       example,
+      resource,
+      body,
       elements,
       statement,
       isCorrect,
@@ -200,13 +202,17 @@ class BitmarkJson {
       quizzes,
       heading,
       pairs,
-      resource,
-      body,
       choices,
       questions,
       footer,
       placeholders,
     } = bit;
+
+    // resource
+    const resourceNode = this.resourceBitToAst(resource);
+
+    // body & placeholders
+    const bodyNode = this.bodyToAst(body, placeholders);
 
     //+-statement
     const statementNodes = this.statementBitsToAst(statement, isCorrect, statements);
@@ -222,12 +228,6 @@ class BitmarkJson {
 
     // pairs
     const pairsNodes = this.pairBitsToAst(pairs);
-
-    // resource
-    const resourceNode = this.resourceBitToAst(resource);
-
-    // body & placeholders
-    const bodyNode = this.bodyToAst(body, placeholders);
 
     //+-choice
     const choiceNodes = this.choiceBitsToAst(choices);
@@ -277,14 +277,14 @@ class BitmarkJson {
       hint,
       instruction,
       example: example || isExample,
+      resource: resourceNode,
+      body: bodyNode,
       elements,
       statements: statementNodes,
       responses: responseNodes,
       quizzes: quizNodes,
       heading: headingNode,
       pairs: pairsNodes,
-      resource: resourceNode,
-      body: bodyNode,
       choices: choiceNodes,
       questions: questionNodes,
       footer: footerNode,
@@ -401,17 +401,17 @@ class BitmarkJson {
     const nodes: Quiz[] = [];
     if (Array.isArray(quizzes)) {
       for (const q of quizzes) {
-        const { choices, responses, item, lead, hint, instruction, isExample, example } = q;
+        const { item, lead, hint, instruction, isExample, example, choices, responses } = q;
         const choiceNodes = this.choiceBitsToAst(choices);
         const responseNodes = this.responseBitsToAst(responses);
         const node = Builder.quiz({
-          choices: choiceNodes,
-          responses: responseNodes,
           item,
           lead,
           hint,
           instruction,
           example: example || isExample,
+          choices: choiceNodes,
+          responses: responseNodes,
         });
         nodes.push(node);
       }

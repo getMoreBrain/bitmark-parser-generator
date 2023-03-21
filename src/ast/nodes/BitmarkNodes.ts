@@ -109,12 +109,12 @@ export interface Response extends Decision {
 // Quiz
 
 export interface Quiz {
-  choices?: Choice[];
-  responses?: Response[];
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
   example?: Example;
+  choices?: Choice[];
+  responses?: Response[];
 }
 
 // Heading
@@ -164,6 +164,7 @@ export interface Resource {
   copyright?: string;
   provider?: string;
   showInIndex?: boolean;
+  caption?: string;
 }
 
 export interface ImageLikeResource extends Resource {
@@ -175,7 +176,6 @@ export interface ImageLikeResource extends Resource {
   width?: number;
   height?: number;
   alt?: string;
-  caption?: string;
 }
 
 export interface AudioLikeResource extends Resource {
@@ -192,7 +192,6 @@ export interface VideoLikeResource extends Resource {
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
   alt?: string;
-  caption?: string;
   posterImage?: ImageResource;
   thumbnails?: ImageResource[];
 }

@@ -10,21 +10,24 @@ import {
   ArticleResource,
   Bit,
   Bitmark,
+  Body,
   Choice,
   ImageResource,
   ItemLead,
   Resource,
   Response,
   SelectOption,
+  Solution,
   Statement,
 } from '../nodes/BitmarkNodes';
 
 const DEFAULT_OPTIONS: BitmarkGeneratorOptions = {
-  //
+  // debugGenerationInline: true,
 };
 
 export interface BitmarkGeneratorOptions {
   explicitTextFormat?: boolean;
+  debugGenerationInline?: boolean;
 }
 
 class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
@@ -60,6 +63,8 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
       this.printed = true;
     }
 
+    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { open: true });
+
     if (typeof gen[funcName] === 'function') {
       gen[funcName](node, parent, route);
     }
@@ -69,6 +74,8 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const gen = this as any;
     const funcName = `between_${node.key}`;
+
+    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { single: true });
 
     if (typeof gen[funcName] === 'function') {
       gen[funcName](node, left, right, parent, route);
@@ -80,6 +87,8 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     const gen = this as any;
     const funcName = `exit_${node.key}`;
 
+    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { close: true });
+
     if (typeof gen[funcName] === 'function') {
       gen[funcName](node, parent, route);
     }
@@ -90,9 +99,13 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     const gen = this as any;
     const funcName = `leaf_${node.key}`;
 
+    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { open: true });
+
     if (typeof gen[funcName] === 'function') {
       gen[funcName](node, parent, route);
     }
+
+    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { close: true });
   }
 
   //
@@ -321,7 +334,26 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   // bitmark -> bits -> bitValue -> body
 
+  protected enter_body(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // always write a NL before the body content if there is any?
+    const body = node.value as Body;
+    if (body.length > 0) {
+      this.writeNL();
+    }
+  }
+
   // bitmark -> bits -> bitValue -> body -> gap
+
+  // bitmark -> bits -> bitValue -> body -> gap -> solutions
+
+  protected enter_solutions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const solutions = node.value as Solution[];
+    if (solutions && solutions.length === 0) {
+      // If there are no solutions, we need to write the special cloze gap [_] to indicate this
+      this.writeOPU();
+      this.writeCL();
+    }
+  }
 
   // bitmark -> bits -> bitValue -> body -> select
 
@@ -447,6 +479,10 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     this.writeNL();
   }
 
+  protected exit_responses(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeNL();
+  }
+
   // bitmark -> bits -> bitValue -> responses -> responsesValue
 
   protected enter_responsesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -489,11 +525,13 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   protected between_quizzesValue(
     _node: NodeInfo,
     _left: NodeInfo,
-    _right: NodeInfo,
+    right: NodeInfo,
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
-    this.writeNL();
+    if (right.key === AstNodeType.choices || right.key === AstNodeType.responses) {
+      this.writeNL();
+    }
   }
 
   // bitmark -> bits -> bitValue -> heading
@@ -628,11 +666,13 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   protected between_questionsValue(
     _node: NodeInfo,
     _left: NodeInfo,
-    _right: NodeInfo,
+    right: NodeInfo,
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
-    //
+    if (right.key === AstNodeType.sampleSolution) {
+      this.writeNL();
+    }
   }
 
   protected exit_questionsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -836,7 +876,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> body -> solutions -> solution
+  // bitmark -> bits -> bitValue -> body -> gap -> solutions -> solution
   // ? -> solutions -> solution
 
   protected leaf_solutionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -910,7 +950,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   protected leaf_question(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeString(node.value);
-      this.writeNL();
+      // this.writeNL();
     }
   }
 
@@ -926,13 +966,13 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   // bitmark -> bits -> bitValue -> questions -> questionsValue -> question -> isShortAnswer
 
-  // protected leaf_isShortAnswer(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   if (node.value === true) {
-  //     this.writeOPA();
-  //     this.writeString('shortAnswer');
-  //     this.writeCL();
-  //   }
-  // }
+  protected leaf_isShortAnswer(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value === true) {
+      this.writeOPA();
+      this.writeString('shortAnswer');
+      this.writeCL();
+    }
+  }
 
   // bitmark -> bits -> bitValue -> statements -> text
 
@@ -1121,6 +1161,10 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   }
 
   protected writeNL(): void {
+    if (this.options.debugGenerationInline) {
+      this.write('\\n');
+      return;
+    }
     this.write('\n');
   }
 
@@ -1140,6 +1184,19 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
         }
       }
     }
+  }
+
+  protected writeInlineDebug(key: string, state: { open?: boolean; close?: boolean; single?: boolean }) {
+    let tag = key;
+    if (state.open) {
+      tag = `<${key}>`;
+    } else if (state.close) {
+      tag = `</${key}>`;
+    } else if (state.single) {
+      tag = `<${key} />`;
+    }
+
+    this.writeString(tag);
   }
 
   protected isWriteTextFormat(bitValue: string): boolean {

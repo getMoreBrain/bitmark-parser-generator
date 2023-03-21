@@ -18,6 +18,7 @@ import path from 'path';
 import { BitmarkJson } from '../src/ast/tools/BitmarkJson';
 import { FileBitmapMarkupGenerator } from '../src/ast/tools/FileBitmapMarkupGenerator';
 
+import { BitJsonUtils } from './utils/BitJsonUtils';
 import { deepDiffMapper } from './utils/deepDiffMapper';
 
 // TODO should use 'require.resolve()' rather than direct node_modules
@@ -102,23 +103,8 @@ function writeTestJson(allTestJson: JsonTestCases): void {
   }
 }
 
-function removeMarkup(obj: any): void {
-  if (obj) {
-    if (!Array.isArray(obj)) {
-      obj = [obj];
-    }
-    for (const item of obj) {
-      delete item.bitmark;
-      delete item.parser;
-      if (item.resource) {
-        delete item.resource.private;
-      }
-    }
-  }
-}
-
 describe('bitmark-generator', () => {
-  describe('JSON', () => {
+  describe('JSON -> Markup -> JSON: Basic', () => {
     const allTestJsonMap = getTestJson();
 
     console.info(`JSON tests found: ${Object.keys(allTestJsonMap).length}`);
@@ -138,8 +124,11 @@ describe('bitmark-generator', () => {
     // describe.each(allTestJson)('Test file: %s', (testJson: JsonTestCase) => {
     // test('JSON ==> Markup ==> JSON', async () => {
     allTestJson.forEach((testJson) => {
-      test(`JSON ==> Markup ==> JSON: ${testJson.id}`, async () => {
+      test(`${testJson.id}`, async () => {
         const { id, json } = testJson;
+
+        // Remove uninteresting JSON items
+        BitJsonUtils.cleanupJson(json, { removeParser: true, removeErrors: true });
 
         // Convert the bitmark JSON to bitmark AST
         const bitmarkAst = BitmarkJson.toAst(json);
@@ -182,6 +171,10 @@ describe('bitmark-generator', () => {
           encoding: 'utf8',
         });
 
+        // Remove uninteresting JSON items
+        BitJsonUtils.cleanupJson(json, { removeMarkup: true });
+        BitJsonUtils.cleanupJson(newJson, { removeMarkup: true, removeParser: true, removeErrors: true });
+
         // Compare old and new JSONs
         const diffMap = deepDiffMapper.map(json, newJson, {
           ignoreUnchanged: true,
@@ -192,9 +185,6 @@ describe('bitmark-generator', () => {
         fs.writeFileSync(fileDiffMap, JSON.stringify(diffMap, null, 2), {
           encoding: 'utf8',
         });
-
-        removeMarkup(json);
-        removeMarkup(newJson);
 
         expect(newJson).toEqual(json);
 
