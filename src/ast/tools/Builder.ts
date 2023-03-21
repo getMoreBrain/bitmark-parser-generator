@@ -1,4 +1,4 @@
-import { BitTypeType } from '../types/BitType';
+import { BitType, BitTypeType } from '../types/BitType';
 import { Property } from '../types/Property';
 import { TextFormat, TextFormatType } from '../types/TextFormat';
 import { ResourceType, ResourceTypeType } from '../types/resources/ResouceType';
@@ -34,6 +34,8 @@ import {
   VideoLinkResource,
   VideoResource,
   WebsiteLinkResource,
+  Question,
+  FooterText,
 } from '../nodes/BitmarkNodes';
 
 class Builder {
@@ -53,7 +55,26 @@ class Builder {
     ageRanges?: number | number[];
     languages?: string | string[];
     computerLanguages?: string | string[];
+    coverImages?: string | string[];
+    publishers?: string | string[];
+    publications?: string | string[];
+    authors?: string | string[];
+    dates?: string | string[];
+    locations?: string | string[];
+    themes?: string | string[];
+    kinds?: string | string[];
+    actions?: string | string[];
+    durations?: string | string[];
+    deepLinks?: string | string[];
+    videoCallLinks?: string | string[];
+    bots?: string | string[];
     _properties?: Property[]; // unused
+    title?: string;
+    level?: number;
+    toc?: boolean;
+    progress?: boolean;
+    anchor?: string;
+    reference?: string | string[];
     item?: string;
     lead?: string;
     hint?: string;
@@ -67,6 +88,8 @@ class Builder {
     pairs?: Pair[];
     resource?: Resource;
     body?: Body;
+    questions?: Question[];
+    footer?: FooterText;
   }): Bit {
     const {
       bitType,
@@ -75,7 +98,26 @@ class Builder {
       ageRanges,
       languages,
       computerLanguages,
+      coverImages,
+      publishers,
+      publications,
+      authors,
+      dates,
+      locations,
+      themes,
+      kinds,
+      actions,
+      durations,
+      deepLinks,
+      videoCallLinks,
+      bots,
       resource,
+      title,
+      level,
+      toc,
+      progress,
+      anchor,
+      reference,
       item,
       lead,
       hint,
@@ -88,6 +130,8 @@ class Builder {
       quizzes,
       pairs,
       body,
+      questions,
+      footer,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -98,11 +142,31 @@ class Builder {
       ageRanges: this.asArray(ageRanges),
       languages: this.asArray(languages),
       computerLanguages: this.asArray(computerLanguages),
-      resource,
+      coverImages: this.asArray(coverImages),
+      publishers: this.asArray(publishers),
+      publications: this.asArray(publications),
+      authors: this.asArray(authors),
+      dates: this.asArray(dates),
+      locations: this.asArray(locations),
+      themes: this.asArray(themes),
+      kinds: this.asArray(kinds),
+      actions: this.asArray(actions),
+      deepLinks: this.asArray(deepLinks),
+      videoCallLinks: this.asArray(videoCallLinks),
+      bots: this.asArray(bots),
+      durations: this.asArray(durations),
+      referenceProperties: undefined, // Important for property order, do not remove
+      title,
+      level,
+      toc,
+      progress,
+      anchor,
+      reference: undefined, // Important for property order, do not remove
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
       example,
+      resource,
       elements,
       statements,
       choices,
@@ -110,14 +174,38 @@ class Builder {
       quizzes,
       pairs,
       body,
+      questions,
+      footer,
     };
 
-    // Remove Optionals
+    // Handle special case properties
+    this.handleBitReference(node, reference);
+
+    // Remove Unset Optionals
     if (!node.ids) delete node.ids;
     if (!node.ageRanges) delete node.ageRanges;
     if (!node.languages) delete node.languages;
     if (!node.computerLanguages) delete node.computerLanguages;
+    if (!node.coverImages) delete node.coverImages;
+    if (!node.publishers) delete node.publishers;
+    if (!node.publications) delete node.publications;
+    if (!node.authors) delete node.authors;
+    if (!node.dates) delete node.dates;
+    if (!node.locations) delete node.locations;
+    if (!node.themes) delete node.themes;
+    if (!node.kinds) delete node.kinds;
+    if (!node.actions) delete node.actions;
+    if (!node.deepLinks) delete node.deepLinks;
+    if (!node.videoCallLinks) delete node.videoCallLinks;
+    if (!node.bots) delete node.bots;
+    if (!node.referenceProperties) delete node.referenceProperties;
     if (!node.resource) delete node.resource;
+    if (!node.title) delete node.title;
+    if (!node.level) delete node.level;
+    if (!node.toc) delete node.toc;
+    if (!node.progress) delete node.progress;
+    if (!node.anchor) delete node.anchor;
+    if (!node.reference) delete node.reference;
     if (!node.itemLead) delete node.itemLead;
     if (!node.hint) delete node.hint;
     if (!node.instruction) delete node.instruction;
@@ -129,6 +217,11 @@ class Builder {
     if (!node.quizzes) delete node.quizzes;
     if (!node.pairs) delete node.pairs;
     if (!node.body) delete node.body;
+    if (!node.questions) delete node.questions;
+    if (!node.footer) delete node.footer;
+
+    // Validate and correct invalid bits as much as possible
+    this.validateBit(node);
 
     return node;
   }
@@ -156,7 +249,7 @@ class Builder {
       isCaseSensitive,
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.itemLead) delete node.itemLead;
     if (!node.hint) delete node.hint;
     if (!node.instruction) delete node.instruction;
@@ -189,7 +282,7 @@ class Builder {
       isCaseSensitive,
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.itemLead) delete node.itemLead;
     if (!node.hint) delete node.hint;
     if (!node.instruction) delete node.instruction;
@@ -220,7 +313,7 @@ class Builder {
       example,
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.choices) delete node.choices;
     if (!node.responses) delete node.responses;
     if (!node.itemLead) delete node.itemLead;
@@ -256,13 +349,64 @@ class Builder {
       values,
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.itemLead) delete node.itemLead;
     if (!node.hint) delete node.hint;
     if (!node.instruction) delete node.instruction;
     if (!node.example) delete node.example;
     if (!node.isCaseSensitive) delete node.isCaseSensitive;
     if (!node.isLongAnswer) delete node.isLongAnswer;
+
+    return node;
+  }
+
+  question(data: {
+    question: string;
+    partialAnswer?: string;
+    sampleSolution?: string;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
+    isCaseSensitive?: boolean;
+    isShortAnswer?: boolean;
+  }): Question {
+    const {
+      question,
+      partialAnswer,
+      sampleSolution,
+      item,
+      lead,
+      hint,
+      instruction,
+      example,
+      isCaseSensitive,
+      isShortAnswer,
+    } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Question = {
+      itemLead: this.itemLead(item, lead),
+      question,
+      partialAnswer,
+      sampleSolution,
+      hint,
+      instruction,
+      example,
+      isCaseSensitive,
+      isShortAnswer,
+    };
+
+    // Remove Unset Optionals
+    if (!node.partialAnswer) delete node.partialAnswer;
+    if (!node.sampleSolution) delete node.sampleSolution;
+    if (!node.itemLead) delete node.itemLead;
+    if (!node.hint) delete node.hint;
+    if (!node.instruction) delete node.instruction;
+    if (!node.example) delete node.example;
+    if (!node.isCaseSensitive) delete node.isCaseSensitive;
+    if (!node.isShortAnswer) delete node.isShortAnswer;
 
     return node;
   }
@@ -280,6 +424,16 @@ class Builder {
     // NOTE: Node order is important and is defined here
     const node: BodyText = {
       bodyText: text,
+    };
+    return node;
+  }
+
+  footerText(data: { text: string }): FooterText {
+    const { text } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: FooterText = {
+      footerText: text,
     };
     return node;
   }
@@ -307,7 +461,7 @@ class Builder {
       },
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.gap.itemLead) delete node.gap.itemLead;
     if (!node.gap.hint) delete node.gap.hint;
     if (!node.gap.instruction) delete node.gap.instruction;
@@ -344,7 +498,7 @@ class Builder {
       },
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.select.itemLead) delete node.select.itemLead;
     if (!node.select.hint) delete node.select.hint;
     if (!node.select.instruction) delete node.select.instruction;
@@ -377,7 +531,7 @@ class Builder {
       isCaseSensitive,
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.itemLead) delete node.itemLead;
     if (!node.hint) delete node.hint;
     if (!node.instruction) delete node.instruction;
@@ -410,7 +564,7 @@ class Builder {
       isCaseSensitive,
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.itemLead) delete node.itemLead;
     if (!node.hint) delete node.hint;
     if (!node.instruction) delete node.instruction;
@@ -843,7 +997,7 @@ class Builder {
       showInIndex,
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.format) delete node.format;
     if (!node.url) delete node.url;
     if (!node.siteName) delete node.siteName;
@@ -868,6 +1022,30 @@ class Builder {
 
     return node;
   }
+
+  handleBitReference(bit: Bit, reference: string | string[] | undefined) {
+    if (Array.isArray(reference) && reference.length > 0) {
+      bit.referenceProperties = reference;
+    } else if (reference) {
+      bit.reference = reference as string;
+    }
+  }
+
+  // Validation
+
+  validateBit(bit: Bit) {
+    switch (bit.bitType) {
+      case BitType.interview:
+      case BitType.interviewInstructionGrouped:
+      case BitType.botInterview:
+        this.validateInterviewBit(bit);
+        break;
+    }
+  }
+
+  //
+  // Private
+  //
 
   private imageLikeResource(data: {
     type: 'image' | 'image-link';
@@ -923,7 +1101,7 @@ class Builder {
       showInIndex,
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.format) delete node.format;
     if (!node.url) delete node.url;
     if (!node.src1x) delete node.src1x;
@@ -964,7 +1142,7 @@ class Builder {
       showInIndex,
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.format) delete node.format;
     if (!node.url) delete node.url;
     if (!node.license) delete node.license;
@@ -1035,7 +1213,7 @@ class Builder {
       showInIndex,
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.format) delete node.format;
     if (!node.url) delete node.url;
     if (!node.width) delete node.width;
@@ -1056,7 +1234,7 @@ class Builder {
     return node;
   }
 
-  articleLikeResource(data: {
+  private articleLikeResource(data: {
     type: 'article' | 'article-link' | 'document' | 'document-link';
     format: string | undefined;
     url?: string; // url / href
@@ -1080,7 +1258,7 @@ class Builder {
       showInIndex,
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.format) delete node.format;
     if (!node.url) delete node.url;
     if (!node.body) delete node.body;
@@ -1092,7 +1270,7 @@ class Builder {
     return node;
   }
 
-  appLikeResource(data: {
+  private appLikeResource(data: {
     type: 'app' | 'app-link';
     url: string; // url / app
     license?: string;
@@ -1112,7 +1290,7 @@ class Builder {
       showInIndex,
     };
 
-    // Remove Optionals
+    // Remove Unset Optionals
     if (!node.format) delete node.format;
     if (!node.url) delete node.url;
     if (!node.license) delete node.license;
@@ -1121,6 +1299,16 @@ class Builder {
     if (!node.showInIndex) delete node.showInIndex;
 
     return node;
+  }
+
+  private validateInterviewBit(bit: Bit) {
+    // Ensure bit has a questions array as the
+    // ===
+    // ===
+    // must be included in the markup
+    if (!bit.questions) {
+      bit.questions = [];
+    }
   }
 
   private asArray<T>(val: T | T[] | undefined): T[] | undefined {

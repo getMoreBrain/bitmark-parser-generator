@@ -22,22 +22,12 @@ export type Node =
   | Solution
   | Select
   | SelectOption
-  | Prefix
-  | Postfix
-  | Id
-  | Age
-  | Language
   | BodyText
   | ItemLead
-  | Item
-  | Lead
-  | Instruction
   | Example
-  | Element
-  | Text
-  | IsCorrect
-  | IsCaseSensitive
-  | IsLongAnswer;
+  | string
+  | number
+  | boolean;
 
 // Bitmark
 
@@ -50,23 +40,45 @@ export interface Bitmark {
 export interface Bit {
   bitType: BitTypeType;
   textFormat: TextFormatType;
-  ids?: Id[];
-  ageRanges?: Age[];
-  languages?: Language[];
-  computerLanguages?: ComputerLanguage[];
+  ids?: string[];
+  ageRanges?: number[];
+  languages?: string[];
+  computerLanguages?: string[];
+  coverImages?: string[];
+  publishers?: string[];
+  publications?: string[];
+  authors?: string[];
+  dates?: string[];
+  locations?: string[];
+  themes?: string[];
+  kinds?: string[];
+  actions?: string[];
+  durations?: string[];
+  deepLinks?: string[];
+  videoCallLinks?: string[];
+  bots?: string[];
+  referenceProperties?: string[];
   resource?: Resource;
   // properties?: PropertiesNode;
+  title?: string;
+  level?: number;
+  toc?: boolean;
+  progress?: boolean;
+  anchor?: string;
+  reference?: string;
   itemLead?: ItemLead;
-  hint?: Hint;
-  instruction?: Instruction;
+  hint?: string;
+  instruction?: string;
   example?: Example;
-  elements?: Element[];
+  elements?: string[];
   statements?: Statement[];
   choices?: Choice[];
   responses?: Response[];
   quizzes?: Quiz[];
   pairs?: Pair[];
   body?: Body;
+  questions?: Question[];
+  footer?: FooterText;
 }
 
 // Statement
@@ -93,8 +105,8 @@ export interface Quiz {
   choices?: Choice[];
   responses?: Response[];
   itemLead?: ItemLead;
-  hint?: Hint;
-  instruction?: Instruction;
+  hint?: string;
+  instruction?: string;
   example?: Example;
 }
 
@@ -103,16 +115,30 @@ export interface Quiz {
 export interface Pair {
   key?: PairKey;
   itemLead?: ItemLead;
-  hint?: Hint;
-  instruction?: Instruction;
+  hint?: string;
+  instruction?: string;
   example?: Example;
-  isCaseSensitive?: IsCaseSensitive;
-  isLongAnswer?: IsLongAnswer;
+  isCaseSensitive?: boolean;
+  isLongAnswer?: boolean;
   values?: PairValue[];
 }
 
 export type PairKey = string;
 export type PairValue = string;
+
+// Question
+
+export interface Question {
+  question: string;
+  partialAnswer?: string;
+  sampleSolution?: string;
+  itemLead?: ItemLead;
+  hint?: string;
+  instruction?: string;
+  example?: Example;
+  isCaseSensitive?: boolean;
+  isShortAnswer?: boolean;
+}
 
 // Resource
 
@@ -234,16 +260,23 @@ export type BodyPart = BodyText | Gap | Select;
 export interface BodyText {
   bodyText: string;
 }
+
+// Footer
+
+export interface FooterText {
+  footerText: string;
+}
+
 // Gap
 
 export interface Gap {
   gap: {
     solutions: Solution[];
     itemLead?: ItemLead;
-    hint?: Hint;
-    instruction?: Instruction;
+    hint?: string;
+    instruction?: string;
     example?: Example;
-    isCaseSensitive?: IsCaseSensitive;
+    isCaseSensitive?: boolean;
   };
 }
 
@@ -253,61 +286,44 @@ export type Solution = string;
 
 export interface Select {
   select: {
-    prefix?: Prefix;
+    prefix?: string;
     options: SelectOption[];
-    postfix?: Postfix;
+    postfix?: string;
     itemLead?: ItemLead;
-    hint?: Hint;
-    instruction?: Instruction;
+    hint?: string;
+    instruction?: string;
     example?: Example;
-    isCaseSensitive?: IsCaseSensitive;
+    isCaseSensitive?: boolean;
   };
 }
 
 export interface SelectOption {
-  text: Text;
-  isCorrect: IsCorrect;
+  text: string;
+  isCorrect: boolean;
   itemLead?: ItemLead;
-  hint?: Hint;
-  instruction?: Instruction;
+  hint?: string;
+  instruction?: string;
   example?: Example;
-  isCaseSensitive?: IsCaseSensitive;
+  isCaseSensitive?: boolean;
 }
-
-export type Prefix = string;
-export type Postfix = string;
 
 // Generic
 
-export type Id = string;
-export type Age = number;
-export type Language = string;
-export type ComputerLanguage = string;
-
 export interface ItemLead {
-  item?: Item;
-  lead?: Lead;
+  item?: string;
+  lead?: string;
 }
 
-export type Item = string;
-export type Lead = string;
-export type Hint = string;
-export type Instruction = string;
 export type Example = string | boolean;
-export type Element = string;
-export type Text = string;
-export type IsCorrect = boolean;
-export type IsCaseSensitive = boolean;
-export type IsLongAnswer = boolean;
 
 export interface Decision {
-  text: Text;
-  isCorrect: IsCorrect;
+  text: string;
+  isCorrect: boolean;
   itemLead?: ItemLead;
-  hint?: Hint;
-  instruction?: Instruction;
+  hint?: string;
+  instruction?: string;
   example?: Example;
-  isCaseSensitive?: IsCaseSensitive;
+  isCaseSensitive?: boolean;
 }
 
 // protected validate(): void {

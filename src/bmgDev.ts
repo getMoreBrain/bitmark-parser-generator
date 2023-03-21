@@ -7,6 +7,7 @@ Copyright ©2023 Get More Brain
 */
 
 import fs from 'fs-extra';
+import path from 'path';
 
 import { Ast } from './ast/Ast';
 import { BitmarkJson } from './ast/tools/BitmarkJson';
@@ -77,9 +78,9 @@ class Bmg {
     // - 'resource' vs 'excessResources[]'
     // - 'bitmark-grammer' project missing 'antlr4ts' dependency
 
-    // const filename = testFiles.learningPath1; // ??
+    const filename = testFiles.learningPath1; // ??
     // const filename = testFiles.learningPath3; // ??
-    const filename = testFiles.resourceAll; // ?? resources TODO
+    // const filename = testFiles.resourceAll; // ?? resources TODO
     // const filename = testFiles.utfgpun; // ?? resources TODO
     // const filename = testFiles.learningPath4; // ??
     // const filename = testFiles.learningPath5; // ??
@@ -168,6 +169,8 @@ class Bmg {
     // const filename = testFiles.botActionTrueFalse; // Responses have 'feedback' and card dividers and @reaction properties
     // const filename = testFiles.botActionRatingNumber; // Responses.response is a number, not a string
     // const filename = testFiles.vendorAmchart; // [.vendor-amcharts-5-chart] is unknown bit, for testing
+
+    // const filename = path.resolve(__dirname, '..', 'assets/test/books/json', '1100_gueter_und_erbrecht.bit.json');
 
     // Read in the test file
     const json = await fs.readJson(filename);

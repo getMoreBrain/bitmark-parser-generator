@@ -161,7 +161,22 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
-    const noNl = left.key === AstNodeType.bitType || left.key === AstNodeType.textFormat;
+    // The following keys are combined with other keys so don't need newlines
+    const noNlKeys = [
+      AstNodeType.bitType,
+      AstNodeType.textFormat,
+      AstNodeType.level,
+      AstNodeType.progress,
+      AstNodeType.toc,
+    ];
+
+    // Check if a no newline key is to the left in this 'between' callback
+    const noNl = ((): boolean => {
+      for (const keyType of noNlKeys) {
+        if (left.key === keyType /*|| right.key === keyType*/) return true;
+      }
+      return false;
+    })();
 
     if (!noNl) {
       this.writeNL();
@@ -191,6 +206,94 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   protected enter_computerLanguages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('computerLanguage', node.value);
   }
+
+  // bitmark -> bits -> bitValue -> coverImages
+
+  protected enter_coverImages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('coverImage', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> publishers
+
+  protected enter_publisher(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('publisher', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> publications
+
+  protected enter_publications(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('publication', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> authors
+
+  protected enter_authors(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('author', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> dates
+
+  protected enter_date(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('date', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> locations
+
+  protected enter_location(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('location', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> themes
+
+  protected enter_themes(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('theme', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> kinds
+
+  protected enter_kinds(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('kind', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> actions
+
+  protected enter_actions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('action', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> durations
+
+  protected enter_durations(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('duration', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> deepLinks
+
+  protected enter_deepLinks(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('deeplink', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> videoCallLinks
+
+  protected enter_videoCallLinks(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('videoCallLink', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> bots
+
+  protected enter_bots(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('bot', node.value);
+  }
+
+  //  bitmark -> bits -> referenceProperties
+
+  protected enter_referenceProperties(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('reference', node.value);
+  }
+
+  // protected enter_referencePropertiesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('computerLanguage', node.value);
+  // }
 
   // bitmark -> bits -> bitValue -> itemLead
 
@@ -416,15 +519,60 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     this.writeNL();
   }
 
+  // bitmark -> bits -> bitValue -> questions
+
+  protected enter_questions(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeCardDivider();
+    this.writeNL();
+  }
+
+  protected between_questions(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeCardDivider();
+    this.writeNL();
+  }
+
+  protected exit_questions(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeCardDivider();
+    this.writeNL();
+  }
+
+  // bitmark -> bits -> bitValue -> questions -> questionsValue
+
+  protected exit_questionsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeNL();
+  }
+
+  protected between_questionsValue(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    //
+  }
+
   // bitmark -> bits -> bitValue -> resource
 
   protected enter_resource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const resource = node.value as Resource;
+    const resourceAsArticle = resource as ArticleResource;
 
     if (resource) {
       this.writeOPAMP();
       this.writeString(resource.type);
-      if (resource.url) {
+      if (resource.type === ResourceType.article && resourceAsArticle.body) {
+        this.writeColon();
+        // this.writeNL();
+        this.writeString(resourceAsArticle.body);
+        this.writeNL();
+      } else if (resource.url) {
         this.writeColon();
         this.writeString(resource.url);
       }
@@ -457,6 +605,40 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   // bitmark -> bits -> bitValue -> bitType
 
   // bitmark -> bits -> bitValue -> textFormat
+
+  //  bitmark -> bits -> title
+
+  protected leaf_title(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const title = node.value;
+    const bit = parent?.value as Bit;
+    const level = bit.level || 1;
+    if (level && title) {
+      this.writeOP();
+      for (let i = 0; i < level; i++) this.writeHash();
+      this.writeString(node.value);
+      this.writeCL();
+    }
+  }
+
+  //  bitmark -> bits -> anchor
+
+  protected leaf_anchor(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeOPDANGLE();
+      this.writeString(node.value);
+      this.writeCL();
+    }
+  }
+
+  //  bitmark -> bits -> reference
+
+  protected leaf_reference(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeOPRANGLE();
+      this.writeString(node.value);
+      this.writeCL();
+    }
+  }
 
   //  * -> itemLead --> item
 
@@ -524,6 +706,14 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     }
   }
 
+  // bitmark -> bits -> footer -> footerText
+
+  protected leaf_footerText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeString(node.value);
+    }
+  }
+
   // bitmark -> bits -> bitValue -> elements -> elementsValue
 
   protected leaf_elementsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -582,6 +772,24 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   protected leaf_valuesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeString(node.value);
+    }
+  }
+
+  // bitmark -> bits -> bitValue -> questions -> questionsValue -> question
+
+  protected leaf_question(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeString(node.value);
+    }
+  }
+
+  // bitmark -> bits -> bitValue -> questions -> questionsValue -> question -> isShortAnswer
+
+  protected leaf_isShortAnswer(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value === true) {
+      this.writeOPA();
+      this.writeString('shortAnswer');
+      this.writeCL();
     }
   }
 
@@ -752,6 +960,10 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   // protected writeDoubleColon(): void {
   //   this.write('::');
   // }
+
+  protected writeHash(): void {
+    this.write('#');
+  }
 
   protected writeCardDivider(): void {
     this.write('===');

@@ -1,4 +1,3 @@
-import { BitJson, ChoiceBitJson, PairBitJson, QuizBitJson, ResponseBitJson, StatementBitJson } from '../json/BitJson';
 import { BitWrapperJson } from '../json/BitWrapperJson';
 import { GapBitJson, BodyBitJson, BodyBitsJson, SelectBitJson, SelectOptionBitJson } from '../json/BodyBitJson';
 import { ResourceDataJson, ResourceJson } from '../json/ResourceJson';
@@ -11,15 +10,26 @@ import { Builder } from './Builder';
 import { stringUtils } from './StringUtils';
 
 import {
+  BitJson,
+  ChoiceBitJson,
+  PairBitJson,
+  QuestionJson,
+  QuizBitJson,
+  ResponseBitJson,
+  StatementBitJson,
+} from '../json/BitJson';
+import {
   Bit,
   Bitmark,
   Body,
   BodyPart,
   BodyText,
   Choice,
+  FooterText,
   Gap,
   ImageResource,
   Pair,
+  Question,
   Quiz,
   Resource,
   Response,
@@ -144,6 +154,29 @@ class BitmarkJson {
     const {
       type,
       format,
+      id,
+      ageRange,
+      language,
+      computerLanguage,
+      coverImage,
+      publisher,
+      publications,
+      author,
+      date,
+      location,
+      theme,
+      kind,
+      action,
+      duration,
+      deeplink,
+      videoCallLink,
+      bot,
+      title,
+      level,
+      toc,
+      progress,
+      anchor,
+      reference,
       item,
       lead,
       hint,
@@ -158,12 +191,10 @@ class BitmarkJson {
       responses,
       quizzes,
       pairs,
-      body,
-      id,
-      ageRange,
-      language,
-      computerLanguage,
       resource,
+      body,
+      questions,
+      footer,
       placeholders,
     } = bit;
 
@@ -182,11 +213,17 @@ class BitmarkJson {
     // pairs
     const pairsNodes = this.pairBitsToAst(pairs);
 
+    // questions
+    const questionNodes = this.questionBitsToAst(questions);
+
     // resource
     const resourceNode = this.resourceBitToAst(resource);
 
     // body & placeholders
     const bodyNode = this.bodyToAst(body, placeholders);
+
+    // footer
+    const footerNode = this.footerToAst(footer);
 
     // Build bit
     const bitNode = Builder.bit({
@@ -196,7 +233,26 @@ class BitmarkJson {
       ageRanges: ageRange,
       languages: language,
       computerLanguages: computerLanguage,
+      coverImages: coverImage,
+      publishers: publisher,
+      publications,
+      authors: author,
+      dates: date,
+      locations: location,
+      themes: theme,
+      kinds: kind,
+      actions: action,
+      durations: duration,
+      deepLinks: deeplink,
+      videoCallLinks: videoCallLink,
+      bots: bot,
       _properties: undefined, // UNUSED
+      title,
+      level,
+      toc,
+      progress,
+      anchor,
+      reference,
       item,
       lead,
       hint,
@@ -210,6 +266,8 @@ class BitmarkJson {
       pairs: pairsNodes,
       resource: resourceNode,
       body: bodyNode,
+      questions: questionNodes,
+      footer: footerNode,
     });
 
     return bitNode;
@@ -369,6 +427,44 @@ class BitmarkJson {
     return nodes;
   }
 
+  private questionBitsToAst(questions?: QuestionJson[]): Question[] | undefined {
+    const nodes: Question[] = [];
+    if (Array.isArray(questions)) {
+      for (const q of questions) {
+        const {
+          question,
+          partialAnswer,
+          sampleSolution,
+          item,
+          lead,
+          hint,
+          instruction,
+          isExample,
+          example,
+          isCaseSensitive,
+          isShortAnswer,
+        } = q;
+        const node = Builder.question({
+          question,
+          partialAnswer,
+          sampleSolution,
+          item,
+          lead,
+          hint,
+          instruction,
+          example: example || isExample,
+          isCaseSensitive,
+          isShortAnswer,
+        });
+        nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+
+    return nodes;
+  }
+
   private resourceBitToAst(resource?: ResourceJson): Resource | undefined {
     let node: Resource | undefined;
 
@@ -377,7 +473,9 @@ class BitmarkJson {
 
       // Extra resource key mapping for 'still-image-film' / 'still-image-film-link'
       if (resource.type === ResourceType.stillImageFilm) {
-        resourceKey = ResourceType.keyFromValue(ResourceType.video) ?? ResourceType.unknown;
+        // TODO - I think this is wrong and should be 'video', not 'image'
+        resourceKey = ResourceType.keyFromValue(ResourceType.image) ?? ResourceType.unknown;
+        // resourceKey = ResourceType.keyFromValue(ResourceType.video) ?? ResourceType.unknown;
       } else if (resource.type === ResourceType.stillImageFilmLink) {
         resourceKey = ResourceType.keyFromValue(ResourceType.videoLink) ?? ResourceType.unknown;
       }
@@ -519,6 +617,14 @@ class BitmarkJson {
       }
     }
     return this.bodyTextToAst('');
+  }
+
+  private footerToAst(footerText: string): FooterText | undefined {
+    // TODO => Will be more complicated one the body text is JSON
+    if (stringUtils.isString(footerText)) {
+      return Builder.footerText({ text: footerText });
+    }
+    return undefined;
   }
 
   private gapBitToAst(bit: GapBitJson): Gap {

@@ -6,10 +6,14 @@ package.tgz
 /packages/*/dist/*
 /vscode-case-study
 .history
-junit.xml
 /coverage
 tsconfig.tsbuildinfo
 
+# TEST
+/test/results
+test.txt
+test-report.html
+junit.xml
 
 # YARN
 **/.yarn/*
@@ -27,5 +31,4 @@ node_modules
 # PACKAGE SPECIFIC
 /assets/test
 bitmark.txt
-test.txt
-test-report.html
+

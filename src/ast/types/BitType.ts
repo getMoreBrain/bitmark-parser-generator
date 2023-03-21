@@ -1,34 +1,5 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-// const BitType = superenum({
-//   bit: 'bit', // .
-//   property: 'property', // @
-//   cards: 'cards', // ===
-//   item: 'item', // %
-//   lead: 'lead', // %
-//   hint: 'hint', // ?
-//   instruction: 'instruction', // !
-//   quiz: 'quiz', // HIDDEN
-//   gap: 'gap', // _
-//   select: 'select', // HIDDEN
-//   statementTrue: 'statementTrue', // +
-//   statementFalse: 'statementFalse', // -
-//   choiceTrue: 'choiceTrue', // +
-//   choiceFalse: 'choiceFalse', // -
-//   responseTrue: 'responseTrue', // +
-//   responseFalse: 'responseFalse', // -
-//   optionTrue: 'optionTrue', // +
-//   optionFalse: 'optionFalse', // -
-//   example: 'example', // @
-//   resource: 'resource',
-//   body: 'body', // HIDDEN
-//   text: 'text', // HIDDEN
-// });
-
-// export type BitTypeType = EnumType<typeof BitType>;
-
-// export { BitType };
-
 const BitTypeRaw = {
   book: 'book',
   bookFrontispiece: 'book-frontispiece',
@@ -79,6 +50,18 @@ const BitTypeRaw = {
   essay: 'essay',
   interview: 'interview',
   interviewInstructionGrouped: 'interview-instruction-grouped',
+  learningPathLti: 'learning-path-lti',
+  learningPathStep: 'learning-path-step',
+  learningPathBook: 'learning-path-book',
+  learningPathSign: 'learning-path-sign',
+  learningPathVideoCall: 'learning-path-video-call',
+  learningPathLearningGoal: 'learning-path-learning-goal',
+  learningPathClosing: 'learning-path-closing',
+  learningPathFeedback: 'learning-path-feedback',
+  learningPathBotTraining: 'learning-path-bot-training',
+  learningPathExternalLink: 'learning-path-external-link',
+  learningPathClassroomTraining: 'learning-path-classroom-training',
+  learningPathClassroomEvent: 'learning-path-classroom-event',
   match: 'match',
   matchReverse: 'match-reverse',
   matchPicture: 'match-picture',
@@ -102,6 +85,7 @@ const BitTypeRaw = {
   conversation: 'conversation',
   selfAssessment: 'self-assessment',
   rating: 'rating',
+  sampleSolution: 'sample-solution',
   survey: 'survey',
   survey1: 'survey-1',
   surveyAnonymous: 'survey-anonymous',
@@ -111,6 +95,10 @@ const BitTypeRaw = {
   botActionRatingNumber: 'bot-action-rating-number',
   botActionResponse: 'bot-action-response',
   botActionTrueFalse: 'bot-action-true-false',
+  botActionSend: 'bot-action-send',
+  botActionAnnounce: 'bot-action-announce',
+  botActionSave: 'bot-action-save',
+  botActionRemind: 'bot-action-remind',
   code: 'code',
   card1: 'card-1',
   question1: 'question-1',
