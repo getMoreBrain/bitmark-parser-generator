@@ -13,6 +13,7 @@ import {
   Body,
   Choice,
   Heading,
+  HighlightText,
   ImageResource,
   ItemLead,
   Resource,
@@ -364,9 +365,9 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitValue -> body -> gap
+  // bitmark -> bits -> bitValue -> body -> bodyValue -> gap
 
-  // bitmark -> bits -> bitValue -> body -> gap -> solutions
+  // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions
 
   protected enter_solutions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const solutions = node.value as Solution[];
@@ -376,8 +377,6 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
       this.writeCL();
     }
   }
-
-  // bitmark -> bits -> bitValue -> body -> select
 
   // bitmark -> bits -> bitValue -> elements
 
@@ -403,22 +402,39 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     this.writeMajorDivider();
   }
 
-  // bitmark -> bits -> bitValue -> body -> gap -> solutions
+  // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions
 
-  // bitmark -> bits -> bitValue -> body -> select
+  // bitmark -> bits -> bitValue -> body -> bodyValue -> select
 
-  // bitmark -> bits -> bitValue -> body -> select -> options
+  // bitmark -> bits -> bitValue -> body -> bodyValue -> select -> options
 
-  // bitmark -> bits -> bitValue -> body -> select -> options -> optionsValue
+  // bitmark -> bits -> bitValue -> body -> bodyValue -> select -> options -> optionsValue
 
   protected enter_optionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const optionsNode = node.value as SelectOption;
-    if (optionsNode.isCorrect) {
+    const selectOption = node.value as SelectOption;
+    if (selectOption.isCorrect) {
       this.writeOPP();
     } else {
       this.writeOPM();
     }
-    this.write(optionsNode.text);
+    this.write(selectOption.text);
+    this.writeCL();
+  }
+
+  // bitmark -> bits -> bitValue -> body -> bodyValue -> highlight
+
+  // bitmark -> bits -> bitValue -> body -> bodyValue -> highlight -> texts
+
+  // bitmark -> bits -> bitValue -> body -> bodyValue -> highlight -> texts -> textsValue
+
+  protected enter_textsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const highlightText = node.value as HighlightText;
+    if (highlightText.isCorrect) {
+      this.writeOPP();
+    } else {
+      this.writeOPM();
+    }
+    this.write(highlightText.text);
     this.writeCL();
   }
 
@@ -921,7 +937,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> body -> bodyText
+  // bitmark -> bits -> body -> bodyValue -> bodyText
 
   protected leaf_bodyText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
@@ -945,7 +961,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitValue -> body -> gap -> solutions -> solution
+  // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions -> solution
   // ? -> solutions -> solution
 
   protected leaf_solutionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -956,7 +972,8 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> body -> options -> prefix
+  // bitmark -> bits -> bitValue-> body -> bodyValue -> select -> options -> prefix
+  // bitmark -> bits -> bitValue-> body -> bodyValue -> highlight -> options -> prefix
 
   protected leaf_prefix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
@@ -966,7 +983,8 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> body -> options -> postfix
+  // bitmark -> bits -> bitValue-> body -> bodyValue -> select -> options -> postfix
+  // bitmark -> bits -> bitValue-> body -> bodyValue -> highlight -> options -> postfix
 
   protected leaf_postfix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {

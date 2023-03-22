@@ -1,6 +1,5 @@
 import { StringUtils } from '../../utils/StringUtils';
 import { BitWrapperJson } from '../json/BitWrapperJson';
-import { GapBitJson, BodyBitJson, BodyBitsJson, SelectBitJson, SelectOptionBitJson } from '../json/BodyBitJson';
 import { ResourceDataJson, ResourceJson } from '../json/ResourceJson';
 import { BitType, BitTypeType } from '../types/BitType';
 import { BodyBitType } from '../types/BodyBitType';
@@ -20,6 +19,15 @@ import {
   StatementBitJson,
 } from '../json/BitJson';
 import {
+  GapBitJson,
+  BodyBitJson,
+  BodyBitsJson,
+  SelectBitJson,
+  SelectOptionBitJson,
+  HighlightBitJson,
+  HighlightTextBitJson,
+} from '../json/BodyBitJson';
+import {
   Bit,
   Bitmark,
   Body,
@@ -29,6 +37,8 @@ import {
   FooterText,
   Gap,
   Heading,
+  Highlight,
+  HighlightText,
   ImageResource,
   Pair,
   Question,
@@ -407,6 +417,30 @@ class BitmarkJson {
     return nodes;
   }
 
+  private highlightTextBitsToAst(highlightTexts?: HighlightTextBitJson[]): HighlightText[] {
+    const nodes: HighlightText[] = [];
+    if (Array.isArray(highlightTexts)) {
+      for (const t of highlightTexts) {
+        const { text, isCorrect, isHighlighted, item, lead, hint, instruction, isExample, example, isCaseSensitive } =
+          t;
+        const node = Builder.highlightText({
+          text,
+          isCorrect,
+          isHighlighted,
+          item,
+          lead,
+          hint,
+          instruction,
+          example: example || isExample,
+          isCaseSensitive,
+        });
+        nodes.push(node);
+      }
+    }
+
+    return nodes;
+  }
+
   private quizBitsToAst(quizzes?: QuizBitJson[]): Quiz[] | undefined {
     const nodes: Quiz[] = [];
     if (Array.isArray(quizzes)) {
@@ -654,6 +688,10 @@ class BitmarkJson {
         const select = this.selectBitToAst(bit);
         return select;
       }
+      case BodyBitType.highlight: {
+        const hightlight = this.highlightBitToAst(bit);
+        return hightlight;
+      }
     }
     return this.bodyTextToAst('');
   }
@@ -692,6 +730,28 @@ class BitmarkJson {
     // Build bit
     const node = Builder.select({
       options: selectOptionNodes,
+      prefix,
+      postfix,
+      item,
+      lead,
+      hint,
+      instruction,
+      example: example || isExample,
+      isCaseSensitive: true,
+    });
+
+    return node;
+  }
+
+  private highlightBitToAst(bit: HighlightBitJson): Highlight {
+    const { texts, prefix, postfix, item, lead, hint, instruction, isExample, example } = bit;
+
+    // Build options bits
+    const highlightTextNodes = this.highlightTextBitsToAst(texts);
+
+    // Build bit
+    const node = Builder.highlight({
+      texts: highlightTextNodes,
       prefix,
       postfix,
       item,

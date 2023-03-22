@@ -273,7 +273,7 @@ export interface WebsiteLinkResource extends Resource {
 // Body
 
 export type Body = BodyPart[];
-export type BodyPart = BodyText | Gap | Select;
+export type BodyPart = BodyText | Gap | Select | Highlight;
 
 export interface BodyText {
   bodyText: string;
@@ -318,6 +318,32 @@ export interface Select {
 export interface SelectOption {
   text: string;
   isCorrect: boolean;
+  itemLead?: ItemLead;
+  hint?: string;
+  instruction?: string;
+  example?: Example;
+  isCaseSensitive?: boolean;
+}
+
+// Highlight
+
+export interface Highlight {
+  highlight: {
+    prefix?: string;
+    texts: HighlightText[];
+    postfix?: string;
+    itemLead?: ItemLead;
+    hint?: string;
+    instruction?: string;
+    example?: Example;
+    isCaseSensitive?: boolean;
+  };
+}
+
+export interface HighlightText {
+  text: string;
+  isCorrect: boolean;
+  isHighlighted: boolean;
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;

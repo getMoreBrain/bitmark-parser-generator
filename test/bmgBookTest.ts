@@ -14,7 +14,7 @@ import { FileUtils } from '../src/utils/FileUtils';
 import { BitJsonUtils } from './utils/BitJsonUtils';
 import { deepDiffMapper } from './utils/deepDiffMapper';
 
-// Passed: 0-26, 28-37, 39-58, 60, 76-78, 81-92
+// Passed: 0-26, 28-37, 39-58, 60, 76-78, 81-92, 94-99, 101-102, 104-106, 108-109, 111-120, 122-143
 // Failed:
 // - 27: berufsbildner_qualicarte (bullet, parser error?)
 // - 38: zentrale_aufnahmepruefung_2019_mathe (.interview->questions, parser error?)
@@ -22,11 +22,17 @@ import { deepDiffMapper } from './utils/deepDiffMapper';
 // - 61-74: card2brain/* (.flashcard-1-> no === / == so cards interpreted as body, parser error?)
 // - 75: fage_band8 (.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
 // - 79-80: marketing (.match-solution-grouped, parser error?)
+// - 93: match (.match, parser error - body corrupted if before matches)
+// - 100: englisch_helfen_adjektiv (.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
+// - 103: englisch_hilfen_adjektiv (.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
+// - 107: englisch_hilfen_fragen (.cloze, not parsed fully by the parser (might be invalid))
+// - 110: englisch_hilfen_if_saetze (there is an extra ] in the original (likely invalid))
+// - 121: englisch_hilfen_zeitformen (.cloze, not parsed fully by the parser (might be invalid))
 
 // TODO - delete bits with errors before testing (as bits with errors will cause issues in the test for sure!)
 
-const SINGLE_FILE_START = 93;
-const SINGLE_FILE_COUNT = 50;
+const SINGLE_FILE_START = 144;
+const SINGLE_FILE_COUNT = 1;
 
 // TODO should use 'require.resolve()' rather than direct node_modules
 const JSON_TEST_INPUT_DIR = path.resolve(__dirname, '../assets/test/books/json');

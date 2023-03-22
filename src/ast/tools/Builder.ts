@@ -39,6 +39,8 @@ import {
   Question,
   FooterText,
   Heading,
+  HighlightText,
+  Highlight,
 } from '../nodes/BitmarkNodes';
 
 interface RemoveUnwantedPropertiesOptions {
@@ -517,6 +519,70 @@ class Builder {
     const node: SelectOption = {
       text,
       isCorrect,
+      itemLead: this.itemLead(item, lead),
+      hint,
+      instruction,
+      example,
+      isCaseSensitive,
+    };
+
+    // Remove Unset Optionals
+    this.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  highlight(data: {
+    texts: HighlightText[];
+    prefix?: string;
+    postfix?: string;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
+    isCaseSensitive?: boolean;
+  }): Highlight {
+    const { texts, prefix, postfix, item, lead, hint, instruction, example, isCaseSensitive } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Highlight = {
+      highlight: {
+        prefix,
+        texts,
+        postfix,
+        itemLead: this.itemLead(item, lead),
+        hint,
+        instruction,
+        example,
+        isCaseSensitive,
+      },
+    };
+
+    // Remove Unset Optionals
+    this.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  highlightText(data: {
+    text: string;
+    isCorrect: boolean;
+    isHighlighted: boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
+    isCaseSensitive?: boolean;
+  }): HighlightText {
+    const { text, isCorrect, isHighlighted, item, lead, hint, instruction, example, isCaseSensitive } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: HighlightText = {
+      text,
+      isCorrect,
+      isHighlighted,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,

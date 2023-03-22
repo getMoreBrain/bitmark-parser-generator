@@ -64,6 +64,7 @@ const BitTypeRaw = {
   groupBorn: 'group-born',
   groupDied: 'group-died',
   help: 'help',
+  highlightText: 'highlight-text',
   hint: 'hint',
   info: 'info',
   internalLink: 'internal-link',
@@ -84,6 +85,7 @@ const BitTypeRaw = {
   mark: 'mark',
   match: 'match',
   matchAudio: 'match-audio',
+  matchMatrix: 'match-matrix',
   matchPicture: 'match-picture',
   matchReverse: 'match-reverse',
   matchSolutionGrouped: 'match-solution-grouped',
@@ -114,6 +116,7 @@ const BitTypeRaw = {
   trueFalse: 'true-false',
   trueFalse1: 'true-false-1',
   video: 'video',
+  warning: 'warning',
 } as const;
 
 const BitType = superenum(BitTypeRaw);
