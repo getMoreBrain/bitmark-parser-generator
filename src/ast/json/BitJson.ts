@@ -20,13 +20,17 @@ export interface BitJson {
   theme: string | string[];
   kind: string | string[];
   action: string | string[];
+  thumbImage: string | string[];
   duration: string | string[];
   deeplink: string | string[];
+  externalLink: string;
+  externalLinkText: string;
   videoCallLink: string | string[];
   bot: string | string[];
   list: string | string[];
   labelTrue: string;
   labelFalse: string;
+  quotedPerson: string;
 
   book: string;
 

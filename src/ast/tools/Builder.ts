@@ -73,13 +73,17 @@ class Builder {
     themes?: string | string[];
     kinds?: string | string[];
     actions?: string | string[];
+    thumbImages?: string | string[];
     durations?: string | string[];
     deepLinks?: string | string[];
+    externalLink?: string;
+    externalLinkText?: string;
     videoCallLinks?: string | string[];
     bots?: string | string[];
     lists?: string | string[];
     labelTrue?: string;
     labelFalse?: string;
+    quotedPerson?: string;
     book?: string;
     title?: string;
     subtitle?: string;
@@ -123,14 +127,18 @@ class Builder {
       themes,
       kinds,
       actions,
+      thumbImages,
       durations,
       deepLinks,
+      externalLink,
+      externalLinkText,
       videoCallLinks,
       bots,
       lists,
       labelTrue,
       labelFalse,
       book,
+      quotedPerson,
       title,
       subtitle,
       level,
@@ -176,7 +184,10 @@ class Builder {
       themes: this.asArray(themes),
       kinds: this.asArray(kinds),
       actions: this.asArray(actions),
+      thumbImages: this.asArray(thumbImages),
       deepLinks: this.asArray(deepLinks),
+      externalLink,
+      externalLinkText,
       videoCallLinks: this.asArray(videoCallLinks),
       bots: this.asArray(bots),
       durations: this.asArray(durations),
@@ -184,6 +195,7 @@ class Builder {
       lists: this.asArray(lists),
       labelTrue,
       labelFalse,
+      quotedPerson,
       title,
       subtitle,
       level,

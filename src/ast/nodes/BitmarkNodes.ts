@@ -54,15 +54,18 @@ export interface Bit {
   themes?: string[];
   kinds?: string[];
   actions?: string[];
+  thumbImages?: string[];
   durations?: string[];
   deepLinks?: string[];
+  externalLink?: string;
+  externalLinkText?: string;
   videoCallLinks?: string[];
   bots?: string[];
   referenceProperties?: string[];
   lists?: string[];
   labelTrue?: string;
   labelFalse?: string;
-  resource?: Resource;
+  quotedPerson?: string;
   book?: string;
   title?: string;
   subtitle?: string;
@@ -76,6 +79,7 @@ export interface Bit {
   hint?: string;
   instruction?: string;
   example?: Example;
+  resource?: Resource;
   elements?: string[];
   statements?: Statement[];
   choices?: Choice[];

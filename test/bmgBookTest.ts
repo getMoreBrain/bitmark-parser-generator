@@ -14,14 +14,18 @@ import { FileUtils } from '../src/utils/FileUtils';
 import { BitJsonUtils } from './utils/BitJsonUtils';
 import { deepDiffMapper } from './utils/deepDiffMapper';
 
-// Passed: 0-26, 28-37, 39-50
+// Passed: 0-26, 28-37, 39-58, 60, 76-78
 // Failed:
 // - 27: berufsbildner_qualicarte (bullet, parser error?)
-// - 38: zentrale_aufnahmepruefung_2019_mathe (interview->questions, parser error?)
+// - 38: zentrale_aufnahmepruefung_2019_mathe (.interview->questions, parser error?)
+// - 59: bumbacher_vier_facetten (.self-assesment->bullet, parser error?)
+// - 61-74: card2brain/* (.flashcard-1-> no === / == so cards interpreted as body, parser error?)
+// - 75: fage_band8 (.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
+// - 79-80: marketing (.match-solution-grouped, parser error?)
 
 // TODO - delete bits with errors before testing (as bits with errors will cause issues in the test for sure!)
 
-const SINGLE_FILE_START = 51;
+const SINGLE_FILE_START = 81;
 const SINGLE_FILE_COUNT = 50;
 
 // TODO should use 'require.resolve()' rather than direct node_modules

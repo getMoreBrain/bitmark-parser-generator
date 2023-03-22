@@ -149,10 +149,13 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
       }
     }
 
-    if (bit.resource?.type) {
+    // Write the resource type if there is a resource (unless the bit itself is the resource)
+    const resourceType = bit.resource?.type;
+    if (resourceType && resourceType !== bit.bitType) {
       this.writeAmpersand();
       this.writeString(bit.resource?.type);
     }
+
     this.writeCL();
     this.writeNL();
   }
@@ -232,7 +235,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   // bitmark -> bits -> bitValue -> publishers
 
-  protected enter_publisher(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_publishers(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('publisher', node.value);
   }
 
@@ -276,6 +279,12 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   protected enter_actions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('action', node.value);
+  }
+
+  // bitmark -> bits -> bitValue -> thumbImages
+
+  protected enter_thumbImages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('thumbImage', node.value);
   }
 
   // bitmark -> bits -> bitValue -> durations
@@ -813,6 +822,22 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     }
   }
 
+  //  bitmark -> bits -> bitValue -> externalLink
+
+  protected leaf_externalLink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeProperty('externalLink', node.value);
+    }
+  }
+
+  //  bitmark -> bits -> bitValue -> externalLinkText
+
+  protected leaf_externalLinkText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeProperty('externalLinkText', node.value);
+    }
+  }
+
   //  bitmark -> bits -> bitValue -> labelTrue
 
   protected leaf_labelTrue(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -820,6 +845,14 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     if (bit) {
       this.writeProperty('labelTrue', node.value ?? '');
       this.writeProperty('labelFalse', bit.labelFalse ?? '');
+    }
+  }
+
+  //  bitmark -> bits -> bitValue -> quotedPerson
+
+  protected leaf_quotedPerson(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeProperty('quotedPerson', node.value);
     }
   }
 

@@ -76,10 +76,14 @@ const AstNodeTypeRaw = {
   kindsValue: 'kindsValue',
   actions: 'actions',
   actionsValue: 'actionsValue',
+  thumbImages: 'thumbImages',
+  thumbImagesValue: 'thumbImagesValue',
   durations: 'durations',
   durationsValue: 'durationsValue',
   deepLinks: 'deepLinks',
   deepLinksValue: 'deepLinksValue',
+  externalLink: 'externalLink',
+  externalLinkText: 'externalLinkText',
   videoCallLinks: 'videoCallLinks',
   videoCallLinksValue: 'videoCallLinksValue',
   bots: 'bots',
@@ -90,6 +94,7 @@ const AstNodeTypeRaw = {
   listsValue: 'listsValue',
   labelTrue: 'labelTrue',
   labelFalse: 'labelFalse',
+  quotedPerson: 'quotedPerson',
 
   book: 'book',
 
