@@ -62,7 +62,9 @@ class BitmarkJson {
 
       // Transform to AST
       const bitsNode = this.bitToAst(bit);
-      bitsNodes.push(bitsNode);
+      if (bitsNode) {
+        bitsNodes.push(bitsNode);
+      }
     }
 
     const bitmarkNode = Builder.bitmark({ bits: bitsNodes });
@@ -152,7 +154,7 @@ class BitmarkJson {
     };
   }
 
-  private bitToAst(bit: BitJson): Bit {
+  private bitToAst(bit: BitJson): Bit | undefined {
     const {
       type,
       format,

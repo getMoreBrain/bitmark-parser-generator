@@ -12,6 +12,7 @@ import {
   Bitmark,
   Body,
   Choice,
+  Heading,
   ImageResource,
   ItemLead,
   Resource,
@@ -54,7 +55,8 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     this.writeEndOfLine();
   }
 
-  enter(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) {
+  enter(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+    let res: boolean | void;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const gen = this as any;
     const funcName = `enter_${node.key}`;
@@ -66,11 +68,20 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { open: true });
 
     if (typeof gen[funcName] === 'function') {
-      gen[funcName](node, parent, route);
+      res = gen[funcName](node, parent, route);
     }
+
+    return res;
   }
 
-  between(node: NodeInfo, left: NodeInfo, right: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) {
+  between(
+    node: NodeInfo,
+    left: NodeInfo,
+    right: NodeInfo,
+    parent: NodeInfo | undefined,
+    route: NodeInfo[],
+  ): boolean | void {
+    let res: boolean | void;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const gen = this as any;
     const funcName = `between_${node.key}`;
@@ -78,11 +89,13 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { single: true });
 
     if (typeof gen[funcName] === 'function') {
-      gen[funcName](node, left, right, parent, route);
+      res = gen[funcName](node, left, right, parent, route);
     }
+
+    return res;
   }
 
-  exit(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) {
+  exit(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): void {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const gen = this as any;
     const funcName = `exit_${node.key}`;
@@ -94,7 +107,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     }
   }
 
-  leaf(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) {
+  leaf(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): void {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const gen = this as any;
     const funcName = `leaf_${node.key}`;
@@ -545,7 +558,17 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   // bitmark -> bits -> bitValue -> heading
 
-  protected enter_heading(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_heading(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
+    const heading = node.value as Heading;
+
+    // Ensure the heading is valid for writing out (it will be valid, but if it is empty, it should not be written)
+    let valid = false;
+    if (heading && heading.forKeys /*&& heading.forValues && heading.forValues.length > 0*/) {
+      valid = true;
+    }
+
+    if (!valid) return false;
+
     this.writeMajorDivider();
     this.writeNL();
   }

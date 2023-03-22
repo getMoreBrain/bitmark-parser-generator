@@ -14,7 +14,7 @@ import { FileUtils } from '../src/utils/FileUtils';
 import { BitJsonUtils } from './utils/BitJsonUtils';
 import { deepDiffMapper } from './utils/deepDiffMapper';
 
-// Passed: 0-26, 28-37, 39-58, 60, 76-78
+// Passed: 0-26, 28-37, 39-58, 60, 76-78, 81-92
 // Failed:
 // - 27: berufsbildner_qualicarte (bullet, parser error?)
 // - 38: zentrale_aufnahmepruefung_2019_mathe (.interview->questions, parser error?)
@@ -25,7 +25,7 @@ import { deepDiffMapper } from './utils/deepDiffMapper';
 
 // TODO - delete bits with errors before testing (as bits with errors will cause issues in the test for sure!)
 
-const SINGLE_FILE_START = 81;
+const SINGLE_FILE_START = 93;
 const SINGLE_FILE_COUNT = 50;
 
 // TODO should use 'require.resolve()' rather than direct node_modules

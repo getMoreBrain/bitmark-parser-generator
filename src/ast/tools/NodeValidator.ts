@@ -1,6 +1,53 @@
 import { StringUtils } from '../../utils/StringUtils';
+import { ArticleResource, Bit, Resource } from '../nodes/BitmarkNodes';
+import { BitType } from '../types/BitType';
 
 class NodeValidator {
+  validateBit(bit: Bit | undefined): Bit | undefined {
+    if (!bit) return bit;
+
+    let ret: Bit | undefined = bit;
+    switch (bit.bitType) {
+      case BitType.interview:
+      case BitType.interviewInstructionGrouped:
+      case BitType.botInterview:
+        ret = this.validateInterviewBit(bit);
+        break;
+    }
+
+    return ret;
+  }
+
+  validateResource<T extends Resource>(resource: T | undefined): T | undefined {
+    if (!resource) return resource;
+
+    let ret: T | undefined = resource;
+    let valid = false;
+    const resourceAsArticle = resource as ArticleResource;
+
+    switch (resource.type) {
+      case BitType.article:
+        valid = !!resourceAsArticle.body;
+        break;
+      default:
+        valid = !!resource.url;
+    }
+
+    // Note: even if resource is invalid, we still return it as it is used to set the resource attachment type
+    // in the bit declaration, and if it is removed completely this cannot be done.
+    if (!valid) {
+      if (resource.type) {
+        ret = {
+          type: resource.type,
+        } as T;
+      } else {
+        ret = undefined;
+      }
+    }
+
+    return ret;
+  }
+
   isRequired(val: unknown, name: string) {
     if (val) return;
     throw new Error(`${name} is required but is not set`);
@@ -66,8 +113,20 @@ class NodeValidator {
     throw new Error(`${name} is required to be a string or a number or a boolean or null or undefined`);
   }
 
-  isValidResource(val: unknown, name: string) {
-    // TODO
+  //
+  // private
+  //
+
+  private validateInterviewBit(bit: Bit): Bit | undefined {
+    // Ensure bit has a questions array as the
+    // ===
+    // ===
+    // must be included in the markup
+    if (!bit.questions) {
+      bit.questions = [];
+    }
+
+    return bit;
   }
 }
 

@@ -3,6 +3,8 @@ import { Property } from '../types/Property';
 import { TextFormat, TextFormatType } from '../types/TextFormat';
 import { ResourceType, ResourceTypeType } from '../types/resources/ResouceType';
 
+import { NodeValidator } from './NodeValidator';
+
 import {
   Resource,
   AppLinkResource,
@@ -109,7 +111,7 @@ class Builder {
     choices?: Choice[];
     questions?: Question[];
     footer?: FooterText;
-  }): Bit {
+  }): Bit | undefined {
     const {
       bitType,
       textFormat,
@@ -166,7 +168,7 @@ class Builder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: Bit = {
+    let node: Bit | undefined = {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
       ids: this.asArray(ids),
@@ -228,7 +230,7 @@ class Builder {
     this.removeUnwantedProperties(node);
 
     // Validate and correct invalid bits as much as possible
-    this.validateBit(node);
+    node = NodeValidator.validateBit(node);
 
     return node;
   }
@@ -979,11 +981,11 @@ class Builder {
     provider?: string;
     showInIndex?: boolean;
     caption?: string;
-  }): WebsiteLinkResource {
+  }): WebsiteLinkResource | undefined {
     const { url, siteName, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: WebsiteLinkResource = {
+    let node: WebsiteLinkResource | undefined = {
       type: ResourceType.websiteLink,
       url,
       siteName,
@@ -996,6 +998,9 @@ class Builder {
 
     // Remove Unset Optionals
     this.removeUnwantedProperties(node);
+
+    // Validate and correct invalid bits as much as possible
+    node = NodeValidator.validateResource(node);
 
     return node;
   }
@@ -1022,18 +1027,6 @@ class Builder {
     }
   }
 
-  // Validation
-
-  validateBit(bit: Bit) {
-    switch (bit.bitType) {
-      case BitType.interview:
-      case BitType.interviewInstructionGrouped:
-      case BitType.botInterview:
-        this.validateInterviewBit(bit);
-        break;
-    }
-  }
-
   //
   // Private
   //
@@ -1054,7 +1047,7 @@ class Builder {
     provider?: string;
     showInIndex?: boolean;
     caption?: string;
-  }): ImageResource | ImageLinkResource {
+  }): ImageResource | ImageLinkResource | undefined {
     const {
       type,
       format,
@@ -1074,7 +1067,7 @@ class Builder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: ImageResource | ImageLinkResource = {
+    let node: ImageResource | ImageLinkResource | undefined = {
       type,
       format,
       url,
@@ -1095,6 +1088,9 @@ class Builder {
     // Remove Unset Optionals
     this.removeUnwantedProperties(node);
 
+    // Validate and correct invalid bits as much as possible
+    node = NodeValidator.validateResource(node);
+
     return node;
   }
 
@@ -1107,11 +1103,11 @@ class Builder {
     provider?: string;
     showInIndex?: boolean;
     caption?: string;
-  }): AudioResource | AudioLinkResource {
+  }): AudioResource | AudioLinkResource | undefined {
     const { type, format, url, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: AudioResource | AudioLinkResource = {
+    let node: AudioResource | AudioLinkResource | undefined = {
       type,
       format,
       url,
@@ -1124,6 +1120,9 @@ class Builder {
 
     // Remove Unset Optionals
     this.removeUnwantedProperties(node);
+
+    // Validate and correct invalid bits as much as possible
+    node = NodeValidator.validateResource(node);
 
     return node;
   }
@@ -1147,7 +1146,7 @@ class Builder {
     provider?: string;
     showInIndex?: boolean;
     caption?: string;
-  }): VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource {
+  }): VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource | undefined {
     const {
       type,
       format,
@@ -1170,7 +1169,7 @@ class Builder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource = {
+    let node: VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource | undefined = {
       type,
       format,
       url,
@@ -1194,6 +1193,9 @@ class Builder {
     // Remove Unset Optionals
     this.removeUnwantedProperties(node);
 
+    // Validate and correct invalid bits as much as possible
+    node = NodeValidator.validateResource(node);
+
     return node;
   }
 
@@ -1207,11 +1209,11 @@ class Builder {
     provider?: string;
     showInIndex?: boolean;
     caption?: string;
-  }): ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource {
+  }): ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource | undefined {
     const { type, format, url, body, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource = {
+    let node: ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource | undefined = {
       type,
       format,
       url,
@@ -1226,6 +1228,9 @@ class Builder {
     // Remove Unset Optionals
     this.removeUnwantedProperties(node);
 
+    // Validate and correct invalid bits as much as possible
+    node = NodeValidator.validateResource(node);
+
     return node;
   }
 
@@ -1237,11 +1242,11 @@ class Builder {
     provider?: string;
     showInIndex?: boolean;
     caption?: string;
-  }): AppResource | AppLinkResource {
+  }): AppResource | AppLinkResource | undefined {
     const { type, url, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: AppResource | AppLinkResource = {
+    let node: AppResource | AppLinkResource | undefined = {
       type,
       url,
       license,
@@ -1254,17 +1259,10 @@ class Builder {
     // Remove Unset Optionals
     this.removeUnwantedProperties(node);
 
-    return node;
-  }
+    // Validate and correct invalid bits as much as possible
+    node = NodeValidator.validateResource(node);
 
-  private validateInterviewBit(bit: Bit) {
-    // Ensure bit has a questions array as the
-    // ===
-    // ===
-    // must be included in the markup
-    if (!bit.questions) {
-      bit.questions = [];
-    }
+    return node;
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
