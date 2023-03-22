@@ -14,16 +14,14 @@ import { FileUtils } from '../src/utils/FileUtils';
 import { BitJsonUtils } from './utils/BitJsonUtils';
 import { deepDiffMapper } from './utils/deepDiffMapper';
 
-// Passed: 0-2, 4-26, 28, 30-37
+// Passed: 0-26, 28-37, 39-50
 // Failed:
-// - 3: akad_2_aufgabenset_4 (parser error?)
 // - 27: berufsbildner_qualicarte (bullet, parser error?)
-// - 29: berufsbildner_quiz_bewertungsgespraech (multiple-response-1, parser error?)
 // - 38: zentrale_aufnahmepruefung_2019_mathe (interview->questions, parser error?)
 
 // TODO - delete bits with errors before testing (as bits with errors will cause issues in the test for sure!)
 
-const SINGLE_FILE_START = 0;
+const SINGLE_FILE_START = 51;
 const SINGLE_FILE_COUNT = 50;
 
 // TODO should use 'require.resolve()' rather than direct node_modules

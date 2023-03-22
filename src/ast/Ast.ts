@@ -18,14 +18,14 @@ export interface NodeInfo {
 }
 
 export interface AstWalkCallbacks {
-  enter?: (node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) => void;
+  enter?: (node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) => void | boolean;
   between?: (
     node: NodeInfo,
     leftNode: NodeInfo,
     rightNode: NodeInfo,
     parent: NodeInfo | undefined,
     route: NodeInfo[],
-  ) => void;
+  ) => void | boolean;
   exit?: (node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) => void;
   leaf?: (node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]) => void;
 }
@@ -129,7 +129,11 @@ class Ast {
 
     // Call the enter callback for the node before walking children
     if (isBranch) {
-      if (enter) enter(nodeInfo, parent, route);
+      if (enter) {
+        const res = enter(nodeInfo, parent, route);
+        // If return is false, stop walking this node
+        if (res === false) return;
+      }
     } else {
       if (leaf) leaf(nodeInfo, parent, route);
     }
@@ -167,7 +171,11 @@ class Ast {
             };
 
             // Call the between callback when between children
-            if (between) between(nodeInfo, childNodeInfo, nextChildNodeInfo, parent, route);
+            if (between) {
+              const res = between(nodeInfo, childNodeInfo, nextChildNodeInfo, parent, route);
+              // If return is false, stop looping children
+              if (res === false) break;
+            }
           }
         }
       }

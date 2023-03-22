@@ -681,11 +681,24 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   // bitmark -> bits -> bitValue -> resource
 
-  protected enter_resource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_resource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const resource = node.value as Resource;
     const resourceAsArticle = resource as ArticleResource;
 
     if (resource) {
+      // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
+      let valid = false;
+      if (resource.type === ResourceType.article && resourceAsArticle.body) {
+        // Article with body
+        valid = true;
+      } else if (resource.url) {
+        // Other resource with a url (url / src / app / ...etc)
+        valid = true;
+      }
+
+      // Resource is not valid, cancel walking it's tree.
+      if (!valid) return false;
+
       this.writeOPAMP();
       this.writeString(resource.type);
       if (resource.type === ResourceType.article && resourceAsArticle.body) {
