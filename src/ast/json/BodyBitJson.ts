@@ -12,7 +12,7 @@ export interface BaseBodyBitJson {
   example: string;
 }
 
-export interface GapBitJson extends BaseBodyBitJson {
+export interface GapJson extends BaseBodyBitJson {
   type: 'gap'; // body bit type
   solutions: string[];
   item: string;
@@ -24,14 +24,14 @@ export interface GapBitJson extends BaseBodyBitJson {
   isCaseSensitive: boolean;
 }
 
-export interface SelectBitJson extends BaseBodyBitJson {
+export interface SelectJson extends BaseBodyBitJson {
   type: 'select'; // body bit type
-  options: SelectOptionBitJson[];
+  options: SelectOptionJson[];
   prefix: string;
   postfix: string;
 }
 
-export interface SelectOptionBitJson {
+export interface SelectOptionJson {
   text: string;
   isCorrect: boolean;
   item: string;
@@ -43,14 +43,14 @@ export interface SelectOptionBitJson {
   isCaseSensitive: boolean;
 }
 
-export interface HighlightBitJson extends BaseBodyBitJson {
+export interface HighlightJson extends BaseBodyBitJson {
   type: 'highlight'; // body bit type
-  texts: HighlightTextBitJson[];
+  texts: HighlightTextJson[];
   prefix: string;
   postfix: string;
 }
 
-export interface HighlightTextBitJson {
+export interface HighlightTextJson {
   text: string;
   isHighlighted: boolean;
   isCorrect: boolean;
@@ -63,4 +63,4 @@ export interface HighlightTextBitJson {
   isCaseSensitive: boolean;
 }
 
-export type BodyBitJson = GapBitJson | SelectBitJson | HighlightBitJson;
+export type BodyBitJson = GapJson | SelectJson | HighlightJson;

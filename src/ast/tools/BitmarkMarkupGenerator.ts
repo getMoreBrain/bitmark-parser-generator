@@ -1151,7 +1151,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     this.writeProperty('copyright', node.value);
   }
 
-  protected leaf_provider(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_provider(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     // provider is included in the url (it is the domain) and should not be written as a property
     // this.writeProperty('provider', node.value);
   }

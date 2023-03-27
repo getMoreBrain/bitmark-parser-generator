@@ -10,24 +10,24 @@ import { Builder } from './Builder';
 
 import {
   BitJson,
-  ChoiceBitJson,
+  ChoiceJson,
   HeadingJson,
-  MatrixBitJson,
+  MatrixJson,
   MatrixCellJson,
-  PairBitJson,
+  PairJson,
   QuestionJson,
-  QuizBitJson,
-  ResponseBitJson,
-  StatementBitJson,
+  QuizJson,
+  ResponseJson,
+  StatementJson,
 } from '../json/BitJson';
 import {
-  GapBitJson,
+  GapJson,
   BodyBitJson,
   BodyBitsJson,
-  SelectBitJson,
-  SelectOptionBitJson,
-  HighlightBitJson,
-  HighlightTextBitJson,
+  SelectJson,
+  SelectOptionJson,
+  HighlightJson,
+  HighlightTextJson,
 } from '../json/BodyBitJson';
 import {
   AudioResource,
@@ -328,7 +328,7 @@ class BitmarkJson {
   private statementBitsToAst(
     statement?: string,
     isCorrect?: boolean,
-    statements?: StatementBitJson[],
+    statements?: StatementJson[],
   ): Statement[] | undefined {
     const nodes: Statement[] = [];
 
@@ -359,7 +359,7 @@ class BitmarkJson {
     return nodes;
   }
 
-  private choiceBitsToAst(choices?: ChoiceBitJson[]): Choice[] | undefined {
+  private choiceBitsToAst(choices?: ChoiceJson[]): Choice[] | undefined {
     const nodes: Choice[] = [];
     if (Array.isArray(choices)) {
       for (const c of choices) {
@@ -383,7 +383,7 @@ class BitmarkJson {
     return nodes;
   }
 
-  private responseBitsToAst(responses?: ResponseBitJson[]): Response[] | undefined {
+  private responseBitsToAst(responses?: ResponseJson[]): Response[] | undefined {
     const nodes: Response[] = [];
     if (Array.isArray(responses)) {
       for (const r of responses) {
@@ -407,7 +407,7 @@ class BitmarkJson {
     return nodes;
   }
 
-  private selectOptionBitsToAst(options?: SelectOptionBitJson[]): SelectOption[] {
+  private selectOptionBitsToAst(options?: SelectOptionJson[]): SelectOption[] {
     const nodes: SelectOption[] = [];
     if (Array.isArray(options)) {
       for (const o of options) {
@@ -429,7 +429,7 @@ class BitmarkJson {
     return nodes;
   }
 
-  private highlightTextBitsToAst(highlightTexts?: HighlightTextBitJson[]): HighlightText[] {
+  private highlightTextBitsToAst(highlightTexts?: HighlightTextJson[]): HighlightText[] {
     const nodes: HighlightText[] = [];
     if (Array.isArray(highlightTexts)) {
       for (const t of highlightTexts) {
@@ -453,7 +453,7 @@ class BitmarkJson {
     return nodes;
   }
 
-  private quizBitsToAst(quizzes?: QuizBitJson[]): Quiz[] | undefined {
+  private quizBitsToAst(quizzes?: QuizJson[]): Quiz[] | undefined {
     const nodes: Quiz[] = [];
     if (Array.isArray(quizzes)) {
       for (const q of quizzes) {
@@ -487,7 +487,7 @@ class BitmarkJson {
     return node;
   }
 
-  private pairBitsToAst(pairs?: PairBitJson[]): Pair[] | undefined {
+  private pairBitsToAst(pairs?: PairJson[]): Pair[] | undefined {
     const nodes: Pair[] = [];
     if (Array.isArray(pairs)) {
       for (const p of pairs) {
@@ -531,7 +531,7 @@ class BitmarkJson {
     return nodes;
   }
 
-  private matrixBitsToAst(matrix?: MatrixBitJson[]): Matrix[] | undefined {
+  private matrixBitsToAst(matrix?: MatrixJson[]): Matrix[] | undefined {
     const nodes: Matrix[] = [];
     if (Array.isArray(matrix)) {
       for (const m of matrix) {
@@ -783,7 +783,7 @@ class BitmarkJson {
     return undefined;
   }
 
-  private gapBitToAst(bit: GapBitJson): Gap {
+  private gapBitToAst(bit: GapJson): Gap {
     const { item, lead, hint, instruction, isExample, example, isCaseSensitive, solutions } = bit;
 
     // Build bit
@@ -800,7 +800,7 @@ class BitmarkJson {
     return bitNode;
   }
 
-  private selectBitToAst(bit: SelectBitJson): Select {
+  private selectBitToAst(bit: SelectJson): Select {
     const { options, prefix, postfix, item, lead, hint, instruction, isExample, example } = bit;
 
     // Build options bits
@@ -822,7 +822,7 @@ class BitmarkJson {
     return node;
   }
 
-  private highlightBitToAst(bit: HighlightBitJson): Highlight {
+  private highlightBitToAst(bit: HighlightJson): Highlight {
     const { texts, prefix, postfix, item, lead, hint, instruction, isExample, example } = bit;
 
     // Build options bits

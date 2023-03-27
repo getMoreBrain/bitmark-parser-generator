@@ -53,24 +53,24 @@ export interface BitJson {
   body: string;
 
   sampleSolution: string;
-  elements: ElementBitJson[];
+  elements: ElementJson[];
   statement: string;
   isCorrect: boolean;
-  statements: StatementBitJson[];
-  responses: ResponseBitJson[];
-  quizzes: QuizBitJson[];
+  statements: StatementJson[];
+  responses: ResponseJson[];
+  quizzes: QuizJson[];
   heading: HeadingJson;
-  pairs: PairBitJson[];
-  matrix: MatrixBitJson[];
-  choices: ChoiceBitJson[];
+  pairs: PairJson[];
+  matrix: MatrixJson[];
+  choices: ChoiceJson[];
   questions: QuestionJson[];
   footer: string;
   placeholders: BodyBitsJson;
 }
 
-export type ElementBitJson = string;
+export type ElementJson = string;
 
-export interface StatementBitJson {
+export interface StatementJson {
   statement: string;
   isCorrect: boolean;
   item: string;
@@ -82,7 +82,7 @@ export interface StatementBitJson {
   isCaseSensitive: boolean;
 }
 
-export interface ChoiceBitJson {
+export interface ChoiceJson {
   choice: string;
   isCorrect: boolean;
   item: string;
@@ -94,7 +94,7 @@ export interface ChoiceBitJson {
   isCaseSensitive: boolean;
 }
 
-export interface ResponseBitJson {
+export interface ResponseJson {
   response: string;
   isCorrect: boolean;
   item: string;
@@ -106,15 +106,15 @@ export interface ResponseBitJson {
   isCaseSensitive: boolean;
 }
 
-export interface QuizBitJson {
+export interface QuizJson {
   item: string;
   lead: string;
   hint: string;
   instruction: string;
   isExample: boolean;
   example: string;
-  choices: ChoiceBitJson[];
-  responses: ResponseBitJson[];
+  choices: ChoiceJson[];
+  responses: ResponseJson[];
 }
 
 export interface HeadingJson {
@@ -122,11 +122,11 @@ export interface HeadingJson {
   forValues: string | string[];
 }
 
-export interface PairBitJson {
+export interface PairJson {
   key: string;
   keyAudio: AudioResourceJson;
   keyImage: ImageResourceJson;
-  values: PairValuesBitJson[];
+  values: string[];
   item: string;
   lead: string;
   hint: string;
@@ -137,9 +137,7 @@ export interface PairBitJson {
   isLongAnswer: boolean;
 }
 
-export type PairValuesBitJson = string;
-
-export interface MatrixBitJson {
+export interface MatrixJson {
   key: string;
   cells: MatrixCellJson[];
   item: string;
@@ -153,7 +151,7 @@ export interface MatrixBitJson {
 }
 
 export interface MatrixCellJson {
-  values: MatrixValuesBitJson[];
+  values: string[];
   item: string;
   lead: string;
   hint: string;
@@ -161,8 +159,6 @@ export interface MatrixCellJson {
   isExample: boolean;
   example: string;
 }
-
-export type MatrixValuesBitJson = string;
 
 export interface QuestionJson {
   question: string;
