@@ -100,6 +100,7 @@ const BitTypeRaw = {
   question1: 'question-1',
   quote: 'quote',
   rating: 'rating',
+  // record: 'record',
   recordAudio: 'record-audio',
   remark: 'remark',
   sampleSolution: 'sample-solution',

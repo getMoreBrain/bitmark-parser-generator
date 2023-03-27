@@ -12,6 +12,8 @@ import {
   BitJson,
   ChoiceBitJson,
   HeadingJson,
+  MatrixBitJson,
+  MatrixCellJson,
   PairBitJson,
   QuestionJson,
   QuizBitJson,
@@ -28,6 +30,7 @@ import {
   HighlightTextBitJson,
 } from '../json/BodyBitJson';
 import {
+  AudioResource,
   Bit,
   Bitmark,
   Body,
@@ -40,6 +43,8 @@ import {
   Highlight,
   HighlightText,
   ImageResource,
+  Matrix,
+  MatrixCell,
   Pair,
   Question,
   Quiz,
@@ -218,6 +223,7 @@ class BitmarkJson {
       quizzes,
       heading,
       pairs,
+      matrix,
       choices,
       questions,
       footer,
@@ -244,6 +250,9 @@ class BitmarkJson {
 
     // pairs
     const pairsNodes = this.pairBitsToAst(pairs);
+
+    // matrix
+    const matrixNodes = this.matrixBitsToAst(matrix);
 
     //+-choice
     const choiceNodes = this.choiceBitsToAst(choices);
@@ -305,6 +314,7 @@ class BitmarkJson {
       quizzes: quizNodes,
       heading: headingNode,
       pairs: pairsNodes,
+      matrix: matrixNodes,
       choices: choiceNodes,
       questions: questionNodes,
       footer: footerNode,
@@ -479,9 +489,28 @@ class BitmarkJson {
     const nodes: Pair[] = [];
     if (Array.isArray(pairs)) {
       for (const p of pairs) {
-        const { key, values, item, lead, hint, instruction, isExample, example, isCaseSensitive, isLongAnswer } = p;
+        const {
+          key,
+          keyAudio,
+          keyImage,
+          values,
+          item,
+          lead,
+          hint,
+          instruction,
+          isExample,
+          example,
+          isCaseSensitive,
+          isLongAnswer,
+        } = p;
+
+        const audio = this.resourceDataToAst(ResourceType.audio, keyAudio) as AudioResource;
+        const image = this.resourceDataToAst(ResourceType.image, keyImage) as ImageResource;
+
         const node = Builder.pair({
           key,
+          keyAudio: audio,
+          keyImage: image,
           values,
           item,
           lead,
@@ -490,6 +519,54 @@ class BitmarkJson {
           example: example || isExample,
           isCaseSensitive,
           isLongAnswer,
+        });
+        nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+
+    return nodes;
+  }
+
+  private matrixBitsToAst(matrix?: MatrixBitJson[]): Matrix[] | undefined {
+    const nodes: Matrix[] = [];
+    if (Array.isArray(matrix)) {
+      for (const m of matrix) {
+        const { key, cells, item, lead, hint, instruction, isExample, example, isCaseSensitive, isLongAnswer } = m;
+        const node = Builder.matrix({
+          key,
+          cells: this.matrixCellsToAst(cells) ?? [],
+          item,
+          lead,
+          hint,
+          instruction,
+          example: example || isExample,
+          isCaseSensitive,
+          isLongAnswer,
+        });
+        nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+
+    return nodes;
+  }
+
+  private matrixCellsToAst(matrixCells?: MatrixCellJson[]): MatrixCell[] | undefined {
+    const nodes: MatrixCell[] = [];
+    if (Array.isArray(matrixCells)) {
+      for (const mc of matrixCells) {
+        const { values, item, lead, hint, instruction, isExample, example } = mc;
+
+        const node = Builder.matrixCell({
+          values,
+          item,
+          lead,
+          hint,
+          instruction,
+          example: example || isExample,
         });
         nodes.push(node);
       }

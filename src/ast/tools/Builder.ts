@@ -1,5 +1,5 @@
-import { BitType, BitTypeType } from '../types/BitType';
-import { Property } from '../types/Property';
+import { ObjectUtils } from '../../utils/ObjectUtils';
+import { BitTypeType } from '../types/BitType';
 import { TextFormat, TextFormatType } from '../types/TextFormat';
 import { ResourceType, ResourceTypeType } from '../types/resources/ResouceType';
 
@@ -41,6 +41,8 @@ import {
   Heading,
   HighlightText,
   Highlight,
+  MatrixCell,
+  Matrix,
 } from '../nodes/BitmarkNodes';
 
 interface RemoveUnwantedPropertiesOptions {
@@ -110,6 +112,7 @@ class Builder {
     quizzes?: Quiz[];
     heading?: Heading;
     pairs?: Pair[];
+    matrix?: Matrix[];
     choices?: Choice[];
     questions?: Question[];
     footer?: FooterText;
@@ -164,13 +167,14 @@ class Builder {
       quizzes,
       heading,
       pairs,
+      matrix,
       choices,
       questions,
       footer,
     } = data;
 
     // NOTE: Node order is important and is defined here
-    let node: Bit | undefined = {
+    const node: Bit = {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
       ids: this.asArray(ids),
@@ -220,6 +224,7 @@ class Builder {
       quizzes,
       heading,
       pairs,
+      matrix,
       choices,
       questions,
       footer,
@@ -232,9 +237,7 @@ class Builder {
     this.removeUnwantedProperties(node);
 
     // Validate and correct invalid bits as much as possible
-    node = NodeValidator.validateBit(node);
-
-    return node;
+    return NodeValidator.validateBit(node);
   }
 
   choice(data: {
@@ -338,7 +341,9 @@ class Builder {
   }
 
   pair(data: {
-    key: string;
+    key?: string;
+    keyAudio?: AudioResource;
+    keyImage?: ImageResource;
     values: string[];
     item?: string;
     lead?: string;
@@ -348,10 +353,44 @@ class Builder {
     isCaseSensitive?: boolean;
     isLongAnswer?: boolean;
   }): Pair {
-    const { key, values, item, lead, hint, instruction, example, isCaseSensitive, isLongAnswer } = data;
+    const { key, keyAudio, keyImage, values, item, lead, hint, instruction, example, isCaseSensitive, isLongAnswer } =
+      data;
 
     // NOTE: Node order is important and is defined here
     const node: Pair = {
+      key,
+      keyAudio,
+      keyImage,
+      itemLead: this.itemLead(item, lead),
+      hint,
+      instruction,
+      example,
+      isCaseSensitive,
+      isLongAnswer,
+      values,
+    };
+
+    // Remove Unset Optionals
+    this.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  matrix(data: {
+    key: string;
+    cells: MatrixCell[];
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
+    isCaseSensitive?: boolean;
+    isLongAnswer?: boolean;
+  }): Matrix {
+    const { key, cells, item, lead, hint, instruction, example, isCaseSensitive, isLongAnswer } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Matrix = {
       key,
       itemLead: this.itemLead(item, lead),
       hint,
@@ -359,6 +398,31 @@ class Builder {
       example,
       isCaseSensitive,
       isLongAnswer,
+      cells,
+    };
+
+    // Remove Unset Optionals
+    this.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  matrixCell(data: {
+    values: string[];
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
+  }): MatrixCell {
+    const { values, item, lead, hint, instruction, example } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: MatrixCell = {
+      itemLead: this.itemLead(item, lead),
+      hint,
+      instruction,
+      example,
       values,
     };
 
@@ -389,7 +453,7 @@ class Builder {
       instruction,
       example,
       isCaseSensitive,
-      isShortAnswer,
+      // isShortAnswer,
       sampleSolution,
     } = data;
 
@@ -1051,7 +1115,7 @@ class Builder {
     const { url, siteName, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
-    let node: WebsiteLinkResource | undefined = {
+    const node: WebsiteLinkResource = {
       type: ResourceType.websiteLink,
       url,
       siteName,
@@ -1066,9 +1130,7 @@ class Builder {
     this.removeUnwantedProperties(node);
 
     // Validate and correct invalid bits as much as possible
-    node = NodeValidator.validateResource(node);
-
-    return node;
+    return NodeValidator.validateResource(node);
   }
 
   private itemLead(item?: string, lead?: string): ItemLead | undefined {
@@ -1133,7 +1195,7 @@ class Builder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    let node: ImageResource | ImageLinkResource | undefined = {
+    const node: ImageResource | ImageLinkResource = {
       type,
       format,
       url,
@@ -1155,9 +1217,7 @@ class Builder {
     this.removeUnwantedProperties(node);
 
     // Validate and correct invalid bits as much as possible
-    node = NodeValidator.validateResource(node);
-
-    return node;
+    return NodeValidator.validateResource(node);
   }
 
   private audioLikeResource(data: {
@@ -1173,7 +1233,7 @@ class Builder {
     const { type, format, url, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
-    let node: AudioResource | AudioLinkResource | undefined = {
+    const node: AudioResource | AudioLinkResource = {
       type,
       format,
       url,
@@ -1188,9 +1248,7 @@ class Builder {
     this.removeUnwantedProperties(node);
 
     // Validate and correct invalid bits as much as possible
-    node = NodeValidator.validateResource(node);
-
-    return node;
+    return NodeValidator.validateResource(node);
   }
 
   private videoLikeResource(data: {
@@ -1235,7 +1293,7 @@ class Builder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    let node: VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource | undefined = {
+    const node: VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource = {
       type,
       format,
       url,
@@ -1260,9 +1318,7 @@ class Builder {
     this.removeUnwantedProperties(node);
 
     // Validate and correct invalid bits as much as possible
-    node = NodeValidator.validateResource(node);
-
-    return node;
+    return NodeValidator.validateResource(node);
   }
 
   private articleLikeResource(data: {
@@ -1279,7 +1335,7 @@ class Builder {
     const { type, format, url, body, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
-    let node: ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource | undefined = {
+    const node: ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource = {
       type,
       format,
       url,
@@ -1295,9 +1351,7 @@ class Builder {
     this.removeUnwantedProperties(node);
 
     // Validate and correct invalid bits as much as possible
-    node = NodeValidator.validateResource(node);
-
-    return node;
+    return NodeValidator.validateResource(node);
   }
 
   private appLikeResource(data: {
@@ -1312,7 +1366,7 @@ class Builder {
     const { type, url, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
-    let node: AppResource | AppLinkResource | undefined = {
+    const node: AppResource | AppLinkResource = {
       type,
       url,
       license,
@@ -1326,63 +1380,17 @@ class Builder {
     this.removeUnwantedProperties(node);
 
     // Validate and correct invalid bits as much as possible
-    node = NodeValidator.validateResource(node);
-
-    return node;
+    return NodeValidator.validateResource(node);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private removeUnwantedProperties(obj: any, options?: RemoveUnwantedPropertiesOptions): void {
+  private removeUnwantedProperties(obj: unknown, options?: RemoveUnwantedPropertiesOptions): void {
     options = Object.assign({}, options);
 
-    this.removeUndefinedProperties(obj, options.ignoreUndefined);
-    this.removeFalseProperties(obj, options.ignoreFalse);
-    this.removeEmptyStringProperties(obj, options.ignoreEmptyString);
-    this.removeEmptyArrayProperties(obj, options.ignoreEmptyArrays);
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private removeUndefinedProperties(obj: any, ignoreKeys?: string[]): void {
-    for (const [k, v] of Object.entries(obj)) {
-      if (ignoreKeys && ignoreKeys.indexOf(k) >= 0) continue;
-
-      if (v == undefined) {
-        delete obj[k];
-      }
-    }
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private removeFalseProperties(obj: any, ignoreKeys?: string[]): void {
-    for (const [k, v] of Object.entries(obj)) {
-      if (ignoreKeys && ignoreKeys.indexOf(k) >= 0) continue;
-
-      if (v === false) {
-        delete obj[k];
-      }
-    }
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private removeEmptyStringProperties(obj: any, ignoreKeys?: string[]): void {
-    for (const [k, v] of Object.entries(obj)) {
-      if (ignoreKeys && ignoreKeys.indexOf(k) >= 0) continue;
-
-      if (v === '') {
-        delete obj[k];
-      }
-    }
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private removeEmptyArrayProperties(obj: any, ignoreKeys?: string[]): void {
-    for (const [k, v] of Object.entries(obj)) {
-      if (ignoreKeys && ignoreKeys.indexOf(k) >= 0) continue;
-
-      if (Array.isArray(v) && v.length === 0) {
-        delete obj[k];
-      }
-    }
+    ObjectUtils.removeUndefinedProperties(obj, options.ignoreUndefined);
+    ObjectUtils.removeFalseProperties(obj, options.ignoreFalse);
+    ObjectUtils.removeEmptyStringProperties(obj, options.ignoreEmptyString);
+    ObjectUtils.removeEmptyArrayProperties(obj, options.ignoreEmptyArrays);
   }
 
   private asArray<T>(val: T | T[] | undefined): T[] | undefined {

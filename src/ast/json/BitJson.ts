@@ -1,5 +1,5 @@
 import { BodyBitsJson } from './BodyBitJson';
-import { ResourceJson } from './ResourceJson';
+import { AudioResourceJson, ImageResourceJson, ResourceJson } from './ResourceJson';
 
 export interface BitJson {
   type: string; // bit type
@@ -60,6 +60,7 @@ export interface BitJson {
   quizzes: QuizBitJson[];
   heading: HeadingJson;
   pairs: PairBitJson[];
+  matrix: MatrixBitJson[];
   choices: ChoiceBitJson[];
   questions: QuestionJson[];
   footer: string;
@@ -122,6 +123,8 @@ export interface HeadingJson {
 
 export interface PairBitJson {
   key: string;
+  keyAudio: AudioResourceJson;
+  keyImage: ImageResourceJson;
   values: PairValuesBitJson[];
   item: string;
   lead: string;
@@ -132,6 +135,33 @@ export interface PairBitJson {
   isCaseSensitive: boolean;
   isLongAnswer: boolean;
 }
+
+export type PairValuesBitJson = string;
+
+export interface MatrixBitJson {
+  key: string;
+  cells: MatrixCellJson[];
+  item: string;
+  lead: string;
+  hint: string;
+  instruction: string;
+  isExample: boolean;
+  example: string;
+  isCaseSensitive: boolean;
+  isLongAnswer: boolean;
+}
+
+export interface MatrixCellJson {
+  values: MatrixValuesBitJson[];
+  item: string;
+  lead: string;
+  hint: string;
+  instruction: string;
+  isExample: boolean;
+  example: string;
+}
+
+export type MatrixValuesBitJson = string;
 
 export interface QuestionJson {
   question: string;
@@ -146,5 +176,3 @@ export interface QuestionJson {
   isCaseSensitive: boolean;
   isShortAnswer: boolean;
 }
-
-export type PairValuesBitJson = string;

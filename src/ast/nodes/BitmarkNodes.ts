@@ -12,14 +12,11 @@ export type Node =
   | Response
   | Quiz
   | Pair
-  | PairKey
-  | PairValue
   | Resource
   | Body
   | BodyPart
   | BodyText
   | Gap
-  | Solution
   | Select
   | SelectOption
   | BodyText
@@ -87,6 +84,7 @@ export interface Bit {
   quizzes?: Quiz[];
   heading?: Heading;
   pairs?: Pair[];
+  matrix?: Matrix[];
   body?: Body;
   questions?: Question[];
   footer?: FooterText;
@@ -131,18 +129,36 @@ export interface Heading {
 // Pair
 
 export interface Pair {
-  key?: PairKey;
+  key?: string;
+  keyAudio?: AudioResource;
+  keyImage?: ImageResource;
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
   example?: Example;
   isCaseSensitive?: boolean;
   isLongAnswer?: boolean;
-  values?: PairValue[];
+  values?: string[];
 }
 
-export type PairKey = string;
-export type PairValue = string;
+export interface Matrix {
+  key: string;
+  itemLead?: ItemLead;
+  hint?: string;
+  instruction?: string;
+  example?: Example;
+  isCaseSensitive?: boolean;
+  isLongAnswer?: boolean;
+  cells: MatrixCell[];
+}
+
+export interface MatrixCell {
+  itemLead?: ItemLead;
+  hint?: string;
+  instruction?: string;
+  example?: Example;
+  values?: string[];
+}
 
 // Question
 
@@ -289,7 +305,7 @@ export interface FooterText {
 
 export interface Gap {
   gap: {
-    solutions: Solution[];
+    solutions: string[];
     itemLead?: ItemLead;
     hint?: string;
     instruction?: string;
@@ -297,8 +313,6 @@ export interface Gap {
     isCaseSensitive?: boolean;
   };
 }
-
-export type Solution = string;
 
 // Select
 

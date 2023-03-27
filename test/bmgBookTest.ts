@@ -28,10 +28,11 @@ import { deepDiffMapper } from './utils/deepDiffMapper';
 // - 107: englisch_hilfen_fragen (.cloze, not parsed fully by the parser (might be invalid))
 // - 110: englisch_hilfen_if_saetze (there is an extra ] in the original (likely invalid))
 // - 121: englisch_hilfen_zeitformen (.cloze, not parsed fully by the parser (might be invalid))
+// - 144: gmb_quizzes (.multiple-choice, parser error due to @example, record-audio -> recor, parser error)
 
 // TODO - delete bits with errors before testing (as bits with errors will cause issues in the test for sure!)
 
-const SINGLE_FILE_START = 144;
+const SINGLE_FILE_START = 145;
 const SINGLE_FILE_COUNT = 1;
 
 // TODO should use 'require.resolve()' rather than direct node_modules

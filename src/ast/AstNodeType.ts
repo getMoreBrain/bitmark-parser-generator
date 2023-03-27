@@ -36,6 +36,10 @@ const AstNodeTypeRaw = {
   pairs: 'pairs',
   pairsValue: 'pairsValue',
   values: 'values',
+  matrix: 'matrix',
+  matrixValue: 'matrixValue',
+  cells: 'cells',
+  cellsValue: 'cellsValue',
   questions: 'questions',
   questionsValue: 'questionsValue',
 
@@ -137,6 +141,8 @@ const AstNodeTypeRaw = {
   text: 'text',
   propertyKey: 'propertyKey',
   propertyValue: 'propertyValue',
+  keyAudio: 'keyAudio',
+  keyImage: 'keyImage',
 
   // Resources
   type: 'type',

@@ -112,8 +112,8 @@ describe('bitmark-generator', () => {
     // Write the json to file
     writeTestJson(allTestJsonMap);
 
-    // const allTestJson = Object.values(allTestJsonMap);
-    const allTestJson = [allTestJsonMap['learning-path6']];
+    const allTestJson = Object.values(allTestJsonMap);
+    // const allTestJson = [allTestJsonMap['learning-path6']];
 
     // Error cases
     //

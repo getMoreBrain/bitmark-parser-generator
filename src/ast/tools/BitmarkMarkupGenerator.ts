@@ -1,5 +1,6 @@
 import { AstNodeType, AstNodeTypeType } from '../AstNodeType';
 import { Ast, AstWalkCallbacks, NodeInfo } from '../Ast';
+import { BitType, BitTypeType } from '../types/BitType';
 import { TextFormat } from '../types/TextFormat';
 import { ResourceType } from '../types/resources/ResouceType';
 
@@ -16,6 +17,7 @@ import {
   HighlightText,
   ImageResource,
   ItemLead,
+  Node,
   Resource,
   Response,
   SelectOption,
@@ -440,9 +442,13 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   // bitmark -> bits -> bitValue -> statements
 
-  protected enter_statements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
-    this.writeNL();
+  protected enter_statements(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
+    const isStatementDivider = this.isStatementDivider(route);
+
+    if (isStatementDivider) {
+      this.writeMajorDivider();
+      this.writeNL();
+    }
   }
 
   protected between_statements(
@@ -450,16 +456,24 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     _left: NodeInfo,
     _right: NodeInfo,
     _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
+    route: NodeInfo[],
   ): void {
-    this.writeNL();
-    this.writeMajorDivider();
+    const isStatementDivider = this.isStatementDivider(route);
+
+    if (isStatementDivider) {
+      this.writeNL();
+      this.writeMajorDivider();
+    }
     this.writeNL();
   }
 
-  protected exit_statements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeNL();
-    this.writeMajorDivider();
+  protected exit_statements(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
+    const isStatementDivider = this.isStatementDivider(route);
+
+    if (isStatementDivider) {
+      this.writeNL();
+      this.writeMajorDivider();
+    }
   }
 
   // bitmark -> bits -> bitValue -> statements -> statementsValue
@@ -619,6 +633,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
+    this.writeNL();
     this.writeMinorDivider();
     this.writeNL();
   }
@@ -666,7 +681,61 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     // this.writeNL();
   }
 
+  // bitmark -> bits -> bitValue -> pairs -> pairsValue -> keyAudio
+
+  protected enter_keyAudio(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+    // This is a resource, so handle it with the common code
+    this.writeResource(node, parent, route);
+  }
+
+  // bitmark -> bits -> bitValue -> pairs -> pairsValue -> keyImage
+
+  protected enter_keyImage(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+    // This is a resource, so handle it with the common code
+    this.writeResource(node, parent, route);
+  }
+
+  // bitmark -> bits -> bitValue -> matrix
+
+  protected enter_matrix(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeMajorDivider();
+    this.writeNL();
+  }
+
+  protected between_matrix(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeNL();
+    this.writeMajorDivider();
+    this.writeNL();
+  }
+
+  protected exit_matrix(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeNL();
+    this.writeMajorDivider();
+    this.writeNL();
+  }
+
+  // bitmark -> bits -> bitValue -> matrix -> matrixValue
+
+  protected between_matrixValue(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    // this.writeNL();
+    // this.writeMinorDivider();
+    // this.writeNL();
+  }
+
   // bitmark -> bits -> bitValue -> pairs -> pairsValue -> values
+  // bitmark -> bits -> bitValue -> matrix -> matrixValue -> cells -> cellsValue -> values
 
   protected enter_values(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeNL();
@@ -729,37 +798,9 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   // bitmark -> bits -> bitValue -> resource
 
-  protected enter_resource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
-    const resource = node.value as Resource;
-    const resourceAsArticle = resource as ArticleResource;
-
-    if (resource) {
-      // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
-      let valid = false;
-      if (resource.type === ResourceType.article && resourceAsArticle.body) {
-        // Article with body
-        valid = true;
-      } else if (resource.url) {
-        // Other resource with a url (url / src / app / ...etc)
-        valid = true;
-      }
-
-      // Resource is not valid, cancel walking it's tree.
-      if (!valid) return false;
-
-      this.writeOPAMP();
-      this.writeString(resource.type);
-      if (resource.type === ResourceType.article && resourceAsArticle.body) {
-        this.writeColon();
-        // this.writeNL();
-        this.writeString(resourceAsArticle.body);
-        this.writeNL();
-      } else if (resource.url) {
-        this.writeColon();
-        this.writeString(resource.url);
-      }
-      this.writeCL();
-    }
+  protected enter_resource(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+    // This is a resource, so handle it with the common code
+    this.writeResource(node, parent, route);
   }
 
   // bitmark -> bits -> bitValue -> resource -> posterImage
@@ -1017,6 +1058,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   }
 
   // bitmark -> bits -> bitValue -> pairs -> pairsValue -> key
+  // bitmark -> bits -> bitValue -> matrix -> matrixValue -> key
 
   protected leaf_key(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
@@ -1025,6 +1067,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   }
 
   // bitmark -> bits -> bitValue -> pairs -> pairsValue -> values -> valuesValue
+  // bitmark -> bits -> bitValue -> matrix -> matrixValue -> cells -> cellsValue -> values -> valuesValue
 
   protected leaf_valuesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
@@ -1255,6 +1298,39 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     this.write('\n');
   }
 
+  protected writeResource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
+    const resource = node.value as Resource;
+    const resourceAsArticle = resource as ArticleResource;
+
+    if (resource) {
+      // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
+      let valid = false;
+      if (resource.type === ResourceType.article && resourceAsArticle.body) {
+        // Article with body
+        valid = true;
+      } else if (resource.url) {
+        // Other resource with a url (url / src / app / ...etc)
+        valid = true;
+      }
+
+      // Resource is not valid, cancel walking it's tree.
+      if (!valid) return false;
+
+      this.writeOPAMP();
+      this.writeString(resource.type);
+      if (resource.type === ResourceType.article && resourceAsArticle.body) {
+        this.writeColon();
+        // this.writeNL();
+        this.writeString(resourceAsArticle.body);
+        this.writeNL();
+      } else if (resource.url) {
+        this.writeColon();
+        this.writeString(resource.url);
+      }
+      this.writeCL();
+    }
+  }
+
   protected writeProperty(name: string, values?: unknown | unknown[]): void {
     if (values !== undefined) {
       if (!Array.isArray(values)) {
@@ -1290,6 +1366,22 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     const isMinusMinus = TextFormat.fromValue(bitValue) === TextFormat.bitmarkMinusMinus;
     const writeFormat = !isMinusMinus || this.options.explicitTextFormat;
     return !!writeFormat;
+  }
+
+  protected isStatementDivider(route: NodeInfo[]) {
+    const bitType = this.getBitType(route);
+    return !(bitType === BitType.trueFalse1);
+  }
+
+  protected getBitType(route: NodeInfo[]): BitTypeType | undefined {
+    for (const node of route) {
+      if (node.key === AstNodeType.bitsValue) {
+        const n = node.value as Bit;
+        return n?.bitType;
+      }
+    }
+
+    return undefined;
   }
 }
 
