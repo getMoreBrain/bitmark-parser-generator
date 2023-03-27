@@ -1,6 +1,6 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-const AstNodeTypeRaw = {
+const NodeType = superenum({
   unknown: 'unknown', // unknown
 
   // Non-terminal
@@ -52,7 +52,6 @@ const AstNodeTypeRaw = {
   // Terminal (leaf)
   markup: 'markup', // bitmark markup
   bitType: 'bitType', // bit type
-  attachmentType: 'attachmentType', // bit attachment type
   textFormat: 'textFormat',
 
   ids: 'ids',
@@ -167,11 +166,8 @@ const AstNodeTypeRaw = {
   posterImage: 'posterImage',
   thumbnails: 'thumbnails',
   thumbnailsValue: 'thumbnailsValue',
-} as const;
+});
 
-export type AstNodeTypeKeys = keyof typeof AstNodeTypeRaw;
-const AstNodeType = superenum(AstNodeTypeRaw);
+export type NodeTypeType = EnumType<typeof NodeType>;
 
-export type AstNodeTypeType = EnumType<typeof AstNodeType>;
-
-export { AstNodeType, AstNodeTypeRaw };
+export { NodeType };

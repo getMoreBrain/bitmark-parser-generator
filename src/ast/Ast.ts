@@ -1,18 +1,11 @@
 import { StringUtils } from '../utils/StringUtils';
 
-import { AstNodeType, AstNodeTypeType } from './AstNodeType';
-import { Bitmark, Node } from './nodes/BitmarkNodes';
-
-export interface AstNode {
-  type: AstNodeTypeType;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  readonly value?: any;
-  readonly children?: AstNode[];
-}
+import { NodeTypeType, NodeType } from './model/NodeType';
+import { Bitmark, Node } from './model/Nodes';
 
 export interface NodeInfo {
   index: number;
-  key: AstNodeTypeType;
+  key: NodeTypeType;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   value?: any;
 }
@@ -187,7 +180,7 @@ class Ast {
     }
   }
 
-  private getAstKey(key: string, parentKey: string, isParentArray: boolean): AstNodeTypeType {
+  private getAstKey(key: string, parentKey: string, isParentArray: boolean): NodeTypeType {
     let astKey = key;
 
     if (isParentArray && parentKey) {
@@ -195,7 +188,7 @@ class Ast {
     }
 
     // return astKey;
-    return AstNodeType.fromKey(astKey) || (`unknown(${astKey})` as AstNodeTypeType);
+    return NodeType.fromKey(astKey) || (`unknown(${astKey})` as NodeTypeType);
     // return AstNodeType.fromKey(astKey) || AstNodeType.unknown;
   }
 

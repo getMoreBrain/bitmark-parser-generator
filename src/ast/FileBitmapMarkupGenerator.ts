@@ -1,11 +1,9 @@
 import fs from 'fs-extra';
 import * as promises from 'node:fs/promises';
 
-import { AstNodeTypeType } from '../AstNodeType';
-import { Node } from '../nodes/BitmarkNodes';
-
 import { BitmarkMarkupGenerator, BitmarkGeneratorOptions } from './BitmarkMarkupGenerator';
 import { CodeGenerator } from './CodeGenerator';
+import { Bitmark } from './model/Nodes';
 import { StreamWriter } from './writer/StreamWriter';
 
 interface StreamOptions {
@@ -37,7 +35,7 @@ class FileBitmapMarkupGenerator implements CodeGenerator {
     this.bitmarkOptions = bitmarkOptions;
   }
 
-  public async generate(root: Node, rootType?: AstNodeTypeType): Promise<void | string> {
+  public async generate(bitmark: Bitmark): Promise<void | string> {
     return new Promise((resolve, reject) => {
       const writeStream = fs.createWriteStream(this.path, this.streamOptions);
       writeStream.once('open', (_fd: number) => {
@@ -47,18 +45,7 @@ class FileBitmapMarkupGenerator implements CodeGenerator {
         // bitmarkGenerator.writeLine('Hello World');
         // bitmarkGenerator.writeLine();
 
-        // this.ast.walk(root, {
-        //   enter: (node: AstNode, parent: AstNode | undefined, route: AstNodeInfo[]) => {
-        //     const routeStr = this.ast.routeToString(route);
-
-        //     if (node.value != null) {
-        //       bitmarkGenerator.writeLine(`${routeStr}`);
-        //     }
-        //   },
-        // });
-        // bitmarkGenerator.writeLine();
-
-        bitmarkGenerator.generate(root, rootType);
+        bitmarkGenerator.generate(bitmark);
 
         writeStream.end();
         // console.log('Generator: Finished generating \'%s\'...', fullOutputFileName);

@@ -1,6 +1,7 @@
-import { StringUtils } from '../../utils/StringUtils';
-import { ArticleResource, Bit, Resource } from '../nodes/BitmarkNodes';
-import { BitType } from '../types/BitType';
+import { BitType } from '../enum/BitType';
+import { StringUtils } from '../utils/StringUtils';
+
+import { ArticleResource, Bit, Resource } from './model/Nodes';
 
 class NodeValidator {
   validateBit(bit: Bit | undefined): Bit | undefined {

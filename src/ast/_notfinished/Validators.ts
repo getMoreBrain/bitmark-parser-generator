@@ -1,4 +1,4 @@
-import { StringUtils } from '../utils/StringUtils';
+import { StringUtils } from '../../utils/StringUtils';
 
 import { BitType } from './types/BitType';
 import { BodyBitType } from './types/BodyBitType';

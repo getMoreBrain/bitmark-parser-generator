@@ -1,5 +1,0 @@
-class AstRuleManager {
-  //
-}
-
-export { AstRuleManager };

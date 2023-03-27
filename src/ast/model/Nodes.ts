@@ -1,6 +1,6 @@
-import { BitTypeType } from '../types/BitType';
-import { TextFormatType } from '../types/TextFormat';
-import { ResourceTypeType } from '../types/resources/ResouceType';
+import { BitTypeType } from '../../enum/BitType';
+import { ResourceTypeType } from '../../enum/ResouceType';
+import { TextFormatType } from '../../enum/TextFormat';
 
 // Node
 

@@ -1,49 +1,49 @@
-import { ObjectUtils } from '../../utils/ObjectUtils';
-import { BitTypeType } from '../types/BitType';
-import { TextFormat, TextFormatType } from '../types/TextFormat';
-import { ResourceType, ResourceTypeType } from '../types/resources/ResouceType';
+import { BitTypeType } from '../enum/BitType';
+import { ResourceTypeType, ResourceType } from '../enum/ResouceType';
+import { TextFormatType, TextFormat } from '../enum/TextFormat';
+import { ObjectUtils } from '../utils/ObjectUtils';
 
 import { NodeValidator } from './NodeValidator';
 
 import {
-  Resource,
-  AppLinkResource,
-  AppResource,
-  ArticleLinkResource,
-  ArticleResource,
-  AudioLinkResource,
-  AudioResource,
   Bit,
   Bitmark,
+  Resource,
   Body,
-  BodyPart,
-  BodyText,
-  Choice,
-  DocumentLinkResource,
-  DocumentResource,
-  Gap,
-  ImageLinkResource,
-  ImageResource,
-  ItemLead,
-  Pair,
-  Quiz,
-  Response,
-  Select,
-  SelectOption,
   Statement,
-  StillImageFilmLinkResource,
-  StillImageFilmResource,
-  VideoLinkResource,
-  VideoResource,
-  WebsiteLinkResource,
+  Response,
+  Quiz,
+  Heading,
+  Pair,
+  Matrix,
+  Choice,
   Question,
   FooterText,
-  Heading,
+  AudioResource,
+  ImageResource,
+  MatrixCell,
+  BodyPart,
+  BodyText,
+  Gap,
+  SelectOption,
+  Select,
   HighlightText,
   Highlight,
-  MatrixCell,
-  Matrix,
-} from '../nodes/BitmarkNodes';
+  ImageLinkResource,
+  AudioLinkResource,
+  VideoResource,
+  VideoLinkResource,
+  StillImageFilmResource,
+  StillImageFilmLinkResource,
+  ArticleResource,
+  ArticleLinkResource,
+  DocumentResource,
+  DocumentLinkResource,
+  AppResource,
+  AppLinkResource,
+  WebsiteLinkResource,
+  ItemLead,
+} from './model/Nodes';
 
 interface RemoveUnwantedPropertiesOptions {
   ignoreUndefined?: string[];

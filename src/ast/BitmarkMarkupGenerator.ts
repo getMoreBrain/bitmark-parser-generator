@@ -1,27 +1,27 @@
-import { AstNodeType, AstNodeTypeType } from '../AstNodeType';
-import { Ast, AstWalkCallbacks, NodeInfo } from '../Ast';
-import { BitType, BitTypeType } from '../types/BitType';
-import { TextFormat } from '../types/TextFormat';
-import { ResourceType } from '../types/resources/ResouceType';
+import { BitType, BitTypeType } from '../enum/BitType';
+import { ResourceType } from '../enum/ResouceType';
+import { TextFormat } from '../enum/TextFormat';
 
+import { AstWalkCallbacks, Ast, NodeInfo } from './Ast';
+import { NodeTypeType, NodeType } from './model/NodeType';
 import { CodeWriter } from './writer/CodeWriter';
 import { TextWriter } from './writer/TextWriter';
 
 import {
-  ArticleResource,
-  Bit,
   Bitmark,
-  Body,
-  Choice,
-  Heading,
-  HighlightText,
-  ImageResource,
+  Bit,
   ItemLead,
-  Resource,
-  Response,
+  Body,
   SelectOption,
+  HighlightText,
   Statement,
-} from '../nodes/BitmarkNodes';
+  Choice,
+  Response,
+  Heading,
+  ImageResource,
+  Resource,
+  ArticleResource,
+} from './model/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkGeneratorOptions = {
   // debugGenerationInline: true,
@@ -182,20 +182,20 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     _route: NodeInfo[],
   ): void {
     // The following keys are combined with other keys so don't need newlines
-    const noNlKeys: AstNodeTypeType[] = [
-      AstNodeType.bitType,
-      AstNodeType.textFormat,
-      AstNodeType.level,
-      AstNodeType.progress,
-      AstNodeType.toc,
-      AstNodeType.referenceEnd,
-      AstNodeType.labelFalse,
+    const noNlKeys: NodeTypeType[] = [
+      NodeType.bitType,
+      NodeType.textFormat,
+      NodeType.level,
+      NodeType.progress,
+      NodeType.toc,
+      NodeType.referenceEnd,
+      NodeType.labelFalse,
     ];
 
     const bit = node.value as Bit;
     if (bit.book) {
       // If the book node exists, remove the newline caused by reference as it will be bound to book
-      noNlKeys.push(AstNodeType.reference);
+      noNlKeys.push(NodeType.reference);
     }
 
     // Check if a no newline key is to the left in this 'between' callback
@@ -585,7 +585,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
-    if (right.key === AstNodeType.choices || right.key === AstNodeType.responses) {
+    if (right.key === NodeType.choices || right.key === NodeType.responses) {
       this.writeNL();
     }
   }
@@ -791,7 +791,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
-    if (right.key === AstNodeType.sampleSolution) {
+    if (right.key === NodeType.sampleSolution) {
       this.writeNL();
     }
   }
@@ -1396,7 +1396,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   protected getBitType(route: NodeInfo[]): BitTypeType | undefined {
     for (const node of route) {
-      if (node.key === AstNodeType.bitsValue) {
+      if (node.key === NodeType.bitsValue) {
         const n = node.value as Bit;
         return n?.bitType;
       }

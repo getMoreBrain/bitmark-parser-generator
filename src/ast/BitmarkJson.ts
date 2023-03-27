@@ -1,10 +1,10 @@
-import { StringUtils } from '../../utils/StringUtils';
-import { BitWrapperJson } from '../json/BitWrapperJson';
-import { ResourceDataJson, ResourceJson } from '../json/ResourceJson';
-import { BitType, BitTypeType } from '../types/BitType';
-import { BodyBitType } from '../types/BodyBitType';
-import { TextFormatType } from '../types/TextFormat';
-import { ResourceType, ResourceTypeType } from '../types/resources/ResouceType';
+import { BitType, BitTypeType } from '../enum/BitType';
+import { BodyBitType } from '../enum/BodyBitType';
+import { ResourceType, ResourceTypeType } from '../enum/ResouceType';
+import { TextFormatType } from '../enum/TextFormat';
+import { BitWrapperJson } from '../json/model/BitWrapperJson';
+import { ResourceJson, ResourceDataJson } from '../json/model/ResourceJson';
+import { StringUtils } from '../utils/StringUtils';
 
 import { Builder } from './Builder';
 
@@ -19,16 +19,17 @@ import {
   QuizJson,
   ResponseJson,
   StatementJson,
-} from '../json/BitJson';
+} from '../json/model/BitJson';
 import {
-  GapJson,
-  BodyBitJson,
-  BodyBitsJson,
-  SelectJson,
   SelectOptionJson,
-  HighlightJson,
   HighlightTextJson,
-} from '../json/BodyBitJson';
+  BodyBitsJson,
+  BodyBitJson,
+  GapJson,
+  SelectJson,
+  HighlightJson,
+} from '../json/model/BodyBitJson';
+
 import {
   AudioResource,
   Bit,
@@ -53,7 +54,7 @@ import {
   Select,
   SelectOption,
   Statement,
-} from '../nodes/BitmarkNodes';
+} from './model/Nodes';
 
 // const BODY_SPLIT_REGEX = new RegExp('{[0-9]+}', 'g');
 

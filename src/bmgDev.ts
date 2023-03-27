@@ -10,8 +10,8 @@ import fs from 'fs-extra';
 import path from 'path';
 
 import { Ast } from './ast/Ast';
-import { BitmarkJson } from './ast/tools/BitmarkJson';
-import { FileBitmapMarkupGenerator } from './ast/tools/FileBitmapMarkupGenerator';
+import { BitmarkJson } from './ast/BitmarkJson';
+import { FileBitmapMarkupGenerator } from './ast/FileBitmapMarkupGenerator';
 import { testFiles } from './testFiles';
 
 class Bmg {

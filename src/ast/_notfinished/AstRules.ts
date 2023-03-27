@@ -5,7 +5,7 @@ import { BodyBitType, BodyBitTypeKeys, BodyBitTypeType } from './types/BodyBitTy
 import { ImageResourceFormat } from './types/ImageResourceFormat';
 import { TextFormat } from './types/TextFormat';
 import { VideoResourceFormat } from './types/VideoResourceFormat';
-import { ResourceType, ResourceTypeKeys, ResourceTypeType } from './types/resources/ResouceType';
+import { ResourceType, ResourceTypeKeys, ResourceTypeType } from './types/ResouceType';
 
 import {
   articleOnlineFormatValidator,
