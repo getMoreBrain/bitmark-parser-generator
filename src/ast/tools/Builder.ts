@@ -106,6 +106,7 @@ class Builder {
     example?: string | boolean;
     resource?: Resource;
     body?: Body;
+    sampleSolutions: string | string[];
     elements?: string[];
     statements?: Statement[];
     responses?: Response[];
@@ -161,6 +162,7 @@ class Builder {
       example,
       resource,
       body,
+      sampleSolutions,
       elements,
       statements,
       responses,
@@ -218,6 +220,7 @@ class Builder {
       example,
       resource,
       body,
+      sampleSolutions: this.asArray(sampleSolutions),
       elements,
       statements,
       responses,

@@ -77,6 +77,8 @@ export interface Bit {
   instruction?: string;
   example?: Example;
   resource?: Resource;
+  body?: Body;
+  sampleSolutions?: string[];
   elements?: string[];
   statements?: Statement[];
   choices?: Choice[];
@@ -85,7 +87,6 @@ export interface Bit {
   heading?: Heading;
   pairs?: Pair[];
   matrix?: Matrix[];
-  body?: Body;
   questions?: Question[];
   footer?: FooterText;
 }

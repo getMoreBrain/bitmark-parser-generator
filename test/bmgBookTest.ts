@@ -15,6 +15,7 @@ import { BitJsonUtils } from './utils/BitJsonUtils';
 import { deepDiffMapper } from './utils/deepDiffMapper';
 
 // Passed: 0-26, 28-37, 39-58, 60, 76-78, 81-92, 94-99, 101-102, 104-106, 108-109, 111-120, 122-143
+// 150-154, 157-174, 177-198
 // Failed:
 // - 27: berufsbildner_qualicarte (bullet, parser error?)
 // - 38: zentrale_aufnahmepruefung_2019_mathe (.interview->questions, parser error?)
@@ -28,11 +29,20 @@ import { deepDiffMapper } from './utils/deepDiffMapper';
 // - 107: englisch_hilfen_fragen (.cloze, not parsed fully by the parser (might be invalid))
 // - 110: englisch_hilfen_if_saetze (there is an extra ] in the original (likely invalid))
 // - 121: englisch_hilfen_zeitformen (.cloze, not parsed fully by the parser (might be invalid))
-// - 144: gmb_quizzes (.multiple-choice, parser error due to @example, record-audio -> recor, parser error)
+// - 144: gmb_quizzes (.multiple-choice, parser error due to @example, record-audio -> record, parser error)
+// - 145: gmb_quizzes_for_design (.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
+// - 146: gmb_quizzes_v2 (.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
+// - 147: gmb_release_notes (@authors.name is not implemented (not sure if we should implement it))
+// - 148: gmb_test_book_utf8 (@authors.name is not implemented (not sure if we should implement it))
+// - 149: gmb_test_book_utf8 (@authors.name @quoter (quotedPerson?) are not implemented (not sure if we should implement it))
+// - 155: hgf_pauli_band_2 (failing because .interview has empty question with @shortAnswer which is currently being ignored due to a parser error)
+// - 156: hgf_pauli_band_3 (failing because .interview has empty question with @shortAnswer which is currently being ignored due to a parser error)
+// - 175: lernen_will_mehr_betriebswirtschaft (Unsupported @image tag)
+// - 176: medium_artwork_personalization (Typo in @language tag (@languge))
 
 // TODO - delete bits with errors before testing (as bits with errors will cause issues in the test for sure!)
 
-const SINGLE_FILE_START = 145;
+const SINGLE_FILE_START = 199;
 const SINGLE_FILE_COUNT = 1;
 
 // TODO should use 'require.resolve()' rather than direct node_modules

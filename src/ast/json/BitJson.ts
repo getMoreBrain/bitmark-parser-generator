@@ -49,12 +49,13 @@ export interface BitJson {
   instruction: string;
   isExample: boolean;
   example: string;
-  elements: ElementBitJson[];
-  statement: string;
-  isCorrect: boolean;
   resource: ResourceJson;
   body: string;
 
+  sampleSolution: string;
+  elements: ElementBitJson[];
+  statement: string;
+  isCorrect: boolean;
   statements: StatementBitJson[];
   responses: ResponseBitJson[];
   quizzes: QuizBitJson[];

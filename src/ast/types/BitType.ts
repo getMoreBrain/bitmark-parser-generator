@@ -102,6 +102,7 @@ const BitTypeRaw = {
   rating: 'rating',
   // record: 'record',
   recordAudio: 'record-audio',
+  releaseNote: 'release-note',
   remark: 'remark',
   sampleSolution: 'sample-solution',
   selfAssessment: 'self-assessment',
@@ -117,6 +118,7 @@ const BitTypeRaw = {
   trueFalse: 'true-false',
   trueFalse1: 'true-false-1',
   video: 'video',
+  videoLink: 'video-link',
   warning: 'warning',
 } as const;
 

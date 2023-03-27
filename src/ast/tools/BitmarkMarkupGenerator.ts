@@ -17,11 +17,9 @@ import {
   HighlightText,
   ImageResource,
   ItemLead,
-  Node,
   Resource,
   Response,
   SelectOption,
-  Solution,
   Statement,
 } from '../nodes/BitmarkNodes';
 
@@ -339,6 +337,12 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
     this.writeProperty('list', node.value);
   }
 
+  // bitmark -> bits -> bitValue -> sampleSolutions
+
+  protected enter_sampleSolutions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('sampleSolution', node.value);
+  }
+
   // bitmark -> bits -> bitValue -> itemLead
 
   protected enter_itemLead(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -372,7 +376,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions
 
   protected enter_solutions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const solutions = node.value as Solution[];
+    const solutions = node.value as string[];
     if (solutions && solutions.length === 0) {
       // If there are no solutions, we need to write the special cloze gap [_] to indicate this
       this.writeOPU();
@@ -1137,6 +1141,23 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
 
   protected leaf_alt(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('alt', node.value);
+  }
+
+  protected leaf_license(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('license', node.value);
+  }
+
+  protected leaf_copyright(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('copyright', node.value);
+  }
+
+  protected leaf_provider(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // provider is included in the url (it is the domain) and should not be written as a property
+    // this.writeProperty('provider', node.value);
+  }
+
+  protected leaf_showInIndex(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('showInIndex', node.value);
   }
 
   protected leaf_caption(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
