@@ -1474,7 +1474,7 @@ __metadata:
     "@types/node": ^18.11.7
     "@typescript-eslint/eslint-plugin": ^5.41.0
     "@typescript-eslint/parser": ^5.41.0
-    bitmark-grammar: "https://github.com/bitmark-standard/bitmark-grammar.git#master"
+    bitmark-grammar: "https://github.com/bitmark-standard/bitmark-grammar.git#commit=5997c30679f1cf0845b7f24b8928506aa98e5633"
     core-js: ^3.26.0
     eslint: ^8.26.0
     eslint-config-prettier: ^8.5.0
@@ -3107,9 +3107,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bitmark-grammar@https://github.com/bitmark-standard/bitmark-grammar.git#master":
-  version: 1.0.31
-  resolution: "bitmark-grammar@https://github.com/bitmark-standard/bitmark-grammar.git#commit=b99b9941dbb8dd302801da39df4a6d1c4f636d9c"
+"bitmark-grammar@https://github.com/bitmark-standard/bitmark-grammar.git#commit=5997c30679f1cf0845b7f24b8928506aa98e5633":
+  version: 1.0.35
+  resolution: "bitmark-grammar@https://github.com/bitmark-standard/bitmark-grammar.git#commit=5997c30679f1cf0845b7f24b8928506aa98e5633"
   dependencies:
     antlr4ts: ^0.5.0-alpha.4
     colors: ^1.4.0
@@ -3122,7 +3122,7 @@ __metadata:
     ramda: ^0.28.0
     safe-buffer: ^5.2.1
     utf8-length: 0.0.1
-  checksum: 00afb63ab0fd587d38d156f82a652c5487f3ee0c666264a168caebed68873a001de3cc53193d8a9d256c6de3eb73d13977c1d2f29e14eb8ca5165ae39a2fc6f5
+  checksum: 5c3849637da040251c10ff0f0b6cb733b907d1800e13782944a1987c2dd5220caca52ea23c7e7228f5beabf5144ea8ffc08b13e748f79c581862cd5a7745b6bb
   languageName: node
   linkType: hard
 

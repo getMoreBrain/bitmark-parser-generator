@@ -60,7 +60,7 @@
     "@types/node": "^18.11.7",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
     "@typescript-eslint/parser": "^5.41.0",
-    "bitmark-grammar": "https://github.com/bitmark-standard/bitmark-grammar.git#master",
+    "bitmark-grammar": "https://github.com/bitmark-standard/bitmark-grammar.git#commit=5997c30679f1cf0845b7f24b8928506aa98e5633",
     "core-js": "^3.26.0",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
