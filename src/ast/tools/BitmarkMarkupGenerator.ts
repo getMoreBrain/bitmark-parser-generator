@@ -256,7 +256,7 @@ class BitmarkMarkupGenerator extends CodeWriter implements AstWalkCallbacks {
   // bitmark -> bits -> bitValue -> publications
 
   protected enter_publications(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('publication', node.value);
+    this.writeProperty('publications', node.value);
   }
 
   // bitmark -> bits -> bitValue -> authors

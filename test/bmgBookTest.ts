@@ -15,7 +15,7 @@ import { BitJsonUtils } from './utils/BitJsonUtils';
 import { deepDiffMapper } from './utils/deepDiffMapper';
 
 // Passed: 0-26, 28-37, 39-58, 60, 76-78, 81-92, 94-99, 101-102, 104-106, 108-109, 111-120, 122-143
-// 150-154, 157-174, 177-198
+// 150-154, 157-174, 177-209, 211, 214-216, 218-220, 225, 227-235, 237-
 // Failed:
 // - 27: berufsbildner_qualicarte (bullet, parser error?)
 // - 38: zentrale_aufnahmepruefung_2019_mathe (.interview->questions, parser error?)
@@ -32,17 +32,26 @@ import { deepDiffMapper } from './utils/deepDiffMapper';
 // - 144: gmb_quizzes (.multiple-choice, parser error due to @example, record-audio -> record, parser error)
 // - 145: gmb_quizzes_for_design (.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
 // - 146: gmb_quizzes_v2 (.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
-// - 147: gmb_release_notes (@authors.name is not implemented (not sure if we should implement it))
-// - 148: gmb_test_book_utf8 (@authors.name is not implemented (not sure if we should implement it))
+// - 147: gmb_release_notes (@authors.name is not implemented (not sure if I should implement it))
+// - 148: gmb_test_book_utf8 (@authors.name is not implemented (not sure if I should implement it))
 // - 149: gmb_test_book_utf8 (@authors.name @quoter (quotedPerson?) are not implemented (not sure if we should implement it))
 // - 155: hgf_pauli_band_2 (failing because .interview has empty question with @shortAnswer which is currently being ignored due to a parser error)
 // - 156: hgf_pauli_band_3 (failing because .interview has empty question with @shortAnswer which is currently being ignored due to a parser error)
 // - 175: lernen_will_mehr_betriebswirtschaft (Unsupported @image tag)
 // - 176: medium_artwork_personalization (Typo in @language tag (@languge))
+// - 210: the_art_of_art_history_final (parser error due to unescaped [...] at end of body)
+// - 212: beltz_paedagogik (parser error due to unescaped [...] within body)
+// - 213: eeo (parser error due to unescaped [...] within body)
+// - 217: psychologie_heute (unsupported tag @trimmedImages - not sure if I should implement it)
+// - 221: rolang_exercises_book_2022 (parser error in [.interview] - see "question": "viitor) weekendul următor.")
+// - 222: schubert_erkundungen_b2 - TODO - code generator bitmark kills parser
+// - 223: schubert_erkundungen_b2_sl_design - TODO - code generator bitmark kills parser
+// - 224: schubert_online_a2_spektrum -(.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
+// - 226: schubert_online_b2 -(.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
+// - 236: sofatutor_unregelmaeßige_verben -(.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
+// - 246: informatik - TODO - code generator bitmark kills parser
 
-// TODO - delete bits with errors before testing (as bits with errors will cause issues in the test for sure!)
-
-const SINGLE_FILE_START = 199;
+const SINGLE_FILE_START = 249;
 const SINGLE_FILE_COUNT = 1;
 
 // TODO should use 'require.resolve()' rather than direct node_modules
