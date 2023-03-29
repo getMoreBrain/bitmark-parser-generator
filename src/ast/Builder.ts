@@ -1,13 +1,13 @@
-import { BitTypeType } from '../enum/BitType';
-import { ResourceTypeType, ResourceType } from '../enum/ResouceType';
-import { TextFormatType, TextFormat } from '../enum/TextFormat';
+import { BitTypeType } from '../model/enum/BitType';
+import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
+import { TextFormatType, TextFormat } from '../model/enum/TextFormat';
 import { ObjectUtils } from '../utils/ObjectUtils';
 
-import { NodeValidator } from './NodeValidator';
+import { NodeValidator } from './rules/NodeValidator';
 
 import {
   Bit,
-  Bitmark,
+  BitmarkAst,
   Resource,
   Body,
   Statement,
@@ -43,7 +43,7 @@ import {
   AppLinkResource,
   WebsiteLinkResource,
   ItemLead,
-} from './model/Nodes';
+} from '../model/ast/Nodes';
 
 interface RemoveUnwantedPropertiesOptions {
   ignoreUndefined?: string[];
@@ -52,16 +52,31 @@ interface RemoveUnwantedPropertiesOptions {
   ignoreEmptyArrays?: string[];
 }
 
-class Builder {
-  bitmark(data: { bits: Bit[] }): Bitmark {
+/**
+ * Builder to build bitmark AST node programmatically
+ */
+class BuilderClass {
+  /**
+   * Build bitmark node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  bitmark(data: { bits?: Bit[] }): BitmarkAst {
     const { bits } = data;
-    const node: Bitmark = {
+    const node: BitmarkAst = {
       bits: bits,
     };
 
     return node;
   }
 
+  /**
+   * Build bit node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   bit(data: {
     bitType: BitTypeType;
     textFormat?: TextFormatType;
@@ -243,6 +258,12 @@ class Builder {
     return NodeValidator.validateBit(node);
   }
 
+  /**
+   * Build choice node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   choice(data: {
     text: string;
     isCorrect: boolean;
@@ -272,6 +293,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build response node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   response(data: {
     text: string;
     isCorrect: boolean;
@@ -301,6 +328,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build quiz node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   quiz(data: {
     item?: string;
     lead?: string;
@@ -328,6 +361,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build heading node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   heading(data: { forKeys: string; forValues: string | string[] }): Heading {
     const { forKeys, forValues } = data;
 
@@ -343,6 +382,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build pair node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   pair(data: {
     key?: string;
     keyAudio?: AudioResource;
@@ -379,6 +424,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build matrix node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   matrix(data: {
     key: string;
     cells: MatrixCell[];
@@ -410,6 +461,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build matrixCell node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   matrixCell(data: {
     values: string[];
     item?: string;
@@ -435,6 +492,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build question node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   question(data: {
     question: string;
     partialAnswer?: string;
@@ -481,6 +544,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build body node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   body(data: { bodyParts: BodyPart[] }): Body {
     const { bodyParts } = data;
 
@@ -488,6 +557,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build bodyText node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   bodyText(data: { text: string }): BodyText {
     const { text } = data;
 
@@ -498,6 +573,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build footer node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   footerText(data: { text: string }): FooterText {
     const { text } = data;
 
@@ -508,6 +589,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build gap node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   gap(data: {
     solutions: string[];
     item?: string;
@@ -537,6 +624,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build select node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   select(data: {
     options: SelectOption[];
     prefix?: string;
@@ -570,6 +663,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build selectOption node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   selectOption(data: {
     text: string;
     isCorrect: boolean;
@@ -599,6 +698,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build highlight node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   highlight(data: {
     texts: HighlightText[];
     prefix?: string;
@@ -632,6 +737,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build highlightText node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   highlightText(data: {
     text: string;
     isCorrect: boolean;
@@ -663,6 +774,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build statement node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   statement(data: {
     text: string;
     isCorrect: boolean;
@@ -692,6 +809,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build resource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   resource(
     data: {
       type: ResourceTypeType;
@@ -814,6 +937,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build imageResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   imageResource(data: {
     format: string;
     url: string; //src
@@ -838,6 +967,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build imageLinkResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   imageLinkResource(data: {
     format: string;
     url: string;
@@ -862,6 +997,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build audioResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   audioResource(data: {
     format: string;
     url: string; // src
@@ -879,6 +1020,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build audioLinkResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   audioLinkResource(data: {
     format: string;
     url: string;
@@ -896,6 +1043,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build videoResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   videoResource(data: {
     format: string;
     url: string; // src
@@ -923,6 +1076,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build videoLinkResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   videoLinkResource(data: {
     format: string;
     url: string;
@@ -950,6 +1109,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build stillImageFilmResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   stillImageFilmResource(data: {
     format: string;
     url: string; // src
@@ -977,6 +1142,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build stillImageFilmLinkResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   stillImageFilmLinkResource(data: {
     format: string;
     url: string;
@@ -1004,6 +1175,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build articleResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   articleResource(data: {
     format: string;
     href?: string;
@@ -1022,6 +1199,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build articleLinkResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   articleLinkResource(data: {
     format: string;
     url: string;
@@ -1039,6 +1222,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build documentResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   documentResource(data: {
     format: string;
     href?: string;
@@ -1057,6 +1246,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build documentLinkResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   documentLinkResource(data: {
     format: string;
     url: string;
@@ -1074,6 +1269,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build appResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   appResource(data: {
     url: string; // app
     license?: string;
@@ -1090,6 +1291,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build appLinkResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   appLinkResource(data: {
     url: string;
     license?: string;
@@ -1106,6 +1313,12 @@ class Builder {
     return node;
   }
 
+  /**
+   * Build websiteLinkResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
   websiteLinkResource(data: {
     url: string;
     siteName?: string;
@@ -1150,7 +1363,7 @@ class Builder {
     return node;
   }
 
-  handleBitReference(bit: Bit, reference: string | string[] | undefined) {
+  private handleBitReference(bit: Bit, reference: string | string[] | undefined) {
     if (Array.isArray(reference) && reference.length > 0) {
       bit.referenceProperties = reference;
     } else if (reference) {
@@ -1403,6 +1616,7 @@ class Builder {
   }
 }
 
-const builder = new Builder();
+const Builder = new BuilderClass();
 
-export { builder as Builder };
+export { Builder };
+export type { BuilderClass };

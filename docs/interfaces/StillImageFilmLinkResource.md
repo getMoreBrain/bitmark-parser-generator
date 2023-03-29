@@ -1,0 +1,284 @@
+[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / StillImageFilmLinkResource
+
+# Interface: StillImageFilmLinkResource
+
+## Hierarchy
+
+- `VideoLikeResource`
+
+  ↳ **`StillImageFilmLinkResource`**
+
+## Table of contents
+
+### Properties
+
+- [format](StillImageFilmLinkResource.md#format)
+- [url](StillImageFilmLinkResource.md#url)
+- [license](StillImageFilmLinkResource.md#license)
+- [copyright](StillImageFilmLinkResource.md#copyright)
+- [provider](StillImageFilmLinkResource.md#provider)
+- [showInIndex](StillImageFilmLinkResource.md#showInIndex)
+- [caption](StillImageFilmLinkResource.md#caption)
+- [width](StillImageFilmLinkResource.md#width)
+- [height](StillImageFilmLinkResource.md#height)
+- [duration](StillImageFilmLinkResource.md#duration)
+- [mute](StillImageFilmLinkResource.md#mute)
+- [autoplay](StillImageFilmLinkResource.md#autoplay)
+- [allowSubtitles](StillImageFilmLinkResource.md#allowSubtitles)
+- [showSubtitles](StillImageFilmLinkResource.md#showSubtitles)
+- [alt](StillImageFilmLinkResource.md#alt)
+- [posterImage](StillImageFilmLinkResource.md#posterImage)
+- [thumbnails](StillImageFilmLinkResource.md#thumbnails)
+- [type](StillImageFilmLinkResource.md#type)
+
+## Properties
+
+### format
+
+• `Optional` **format**: `string`
+
+#### Inherited from
+
+VideoLikeResource.format
+
+#### Defined in
+
+model/ast/Nodes.ts:182
+
+___
+
+### url
+
+• `Optional` **url**: `string`
+
+#### Inherited from
+
+VideoLikeResource.url
+
+#### Defined in
+
+model/ast/Nodes.ts:183
+
+___
+
+### license
+
+• `Optional` **license**: `string`
+
+#### Inherited from
+
+VideoLikeResource.license
+
+#### Defined in
+
+model/ast/Nodes.ts:184
+
+___
+
+### copyright
+
+• `Optional` **copyright**: `string`
+
+#### Inherited from
+
+VideoLikeResource.copyright
+
+#### Defined in
+
+model/ast/Nodes.ts:185
+
+___
+
+### provider
+
+• `Optional` **provider**: `string`
+
+#### Inherited from
+
+VideoLikeResource.provider
+
+#### Defined in
+
+model/ast/Nodes.ts:186
+
+___
+
+### showInIndex
+
+• `Optional` **showInIndex**: `boolean`
+
+#### Inherited from
+
+VideoLikeResource.showInIndex
+
+#### Defined in
+
+model/ast/Nodes.ts:187
+
+___
+
+### caption
+
+• `Optional` **caption**: `string`
+
+#### Inherited from
+
+VideoLikeResource.caption
+
+#### Defined in
+
+model/ast/Nodes.ts:188
+
+___
+
+### width
+
+• `Optional` **width**: `number`
+
+#### Inherited from
+
+VideoLikeResource.width
+
+#### Defined in
+
+model/ast/Nodes.ts:208
+
+___
+
+### height
+
+• `Optional` **height**: `number`
+
+#### Inherited from
+
+VideoLikeResource.height
+
+#### Defined in
+
+model/ast/Nodes.ts:209
+
+___
+
+### duration
+
+• `Optional` **duration**: `number`
+
+#### Inherited from
+
+VideoLikeResource.duration
+
+#### Defined in
+
+model/ast/Nodes.ts:210
+
+___
+
+### mute
+
+• `Optional` **mute**: `boolean`
+
+#### Inherited from
+
+VideoLikeResource.mute
+
+#### Defined in
+
+model/ast/Nodes.ts:211
+
+___
+
+### autoplay
+
+• `Optional` **autoplay**: `boolean`
+
+#### Inherited from
+
+VideoLikeResource.autoplay
+
+#### Defined in
+
+model/ast/Nodes.ts:212
+
+___
+
+### allowSubtitles
+
+• `Optional` **allowSubtitles**: `boolean`
+
+#### Inherited from
+
+VideoLikeResource.allowSubtitles
+
+#### Defined in
+
+model/ast/Nodes.ts:213
+
+___
+
+### showSubtitles
+
+• `Optional` **showSubtitles**: `boolean`
+
+#### Inherited from
+
+VideoLikeResource.showSubtitles
+
+#### Defined in
+
+model/ast/Nodes.ts:214
+
+___
+
+### alt
+
+• `Optional` **alt**: `string`
+
+#### Inherited from
+
+VideoLikeResource.alt
+
+#### Defined in
+
+model/ast/Nodes.ts:215
+
+___
+
+### posterImage
+
+• `Optional` **posterImage**: [`ImageResource`](ImageResource.md)
+
+#### Inherited from
+
+VideoLikeResource.posterImage
+
+#### Defined in
+
+model/ast/Nodes.ts:216
+
+___
+
+### thumbnails
+
+• `Optional` **thumbnails**: [`ImageResource`](ImageResource.md)[]
+
+#### Inherited from
+
+VideoLikeResource.thumbnails
+
+#### Defined in
+
+model/ast/Nodes.ts:217
+
+___
+
+### type
+
+• **type**: ``"still-image-film-link"``
+
+#### Overrides
+
+VideoLikeResource.type
+
+#### Defined in
+
+model/ast/Nodes.ts:258

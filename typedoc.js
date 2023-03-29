@@ -3,7 +3,7 @@
  * @type {import('typedoc').TypeDocOptions}
  */
 module.exports = {
-  entryPoints: ['src/bmg.ts'],
+  entryPoints: ['./src/index.ts', './ast/Ast'],
   out: 'docs',
   plugin: ['typedoc-plugin-markdown'],
   entryDocument: 'API.md',

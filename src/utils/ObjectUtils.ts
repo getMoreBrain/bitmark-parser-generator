@@ -1,6 +1,3 @@
-import fs from 'fs-extra';
-import path from 'path';
-
 export interface GetFilenamesSyncOptions {
   match?: RegExp;
   recursive?: boolean;
@@ -17,8 +14,8 @@ class ObjectUtils {
    * is used by NodeJS and Chrome do have a specific iteration order which is defined by the order properties are
    * added to an object. Many applications rely on this iteration order.
    *
-   * @param obj object with properties to re-order
-   * @param order array of property keys in the desired order.
+   * @param obj - object with properties to re-order
+   * @param order - array of property keys in the desired order.
    */
   orderProperties<T>(obj: T, order: string[]): void {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -34,12 +31,18 @@ class ObjectUtils {
     }
   }
 
-  removeUndefinedProperties(obj: unknown, ignoreKeys?: string[]): void {
+  /**
+   * Remove any keys whose value is 'undefined' from a plain JS object
+   *
+   * @param obj plain JS object
+   * @param excludeKeys keys to be excluded from removal
+   */
+  removeUndefinedProperties(obj: unknown, excludeKeys?: string[]): void {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const objAsAny = obj as any;
 
     for (const [k, v] of Object.entries(objAsAny)) {
-      if (ignoreKeys && ignoreKeys.indexOf(k) >= 0) continue;
+      if (excludeKeys && excludeKeys.indexOf(k) >= 0) continue;
 
       if (v == undefined) {
         delete objAsAny[k];
@@ -47,12 +50,18 @@ class ObjectUtils {
     }
   }
 
-  removeFalseProperties(obj: unknown, ignoreKeys?: string[]): void {
+  /**
+   * Remove any keys whose value is 'false' from a plain JS object
+   *
+   * @param obj plain JS object
+   * @param excludeKeys keys to be excluded from removal
+   */
+  removeFalseProperties(obj: unknown, excludeKeys?: string[]): void {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const objAsAny = obj as any;
 
     for (const [k, v] of Object.entries(objAsAny)) {
-      if (ignoreKeys && ignoreKeys.indexOf(k) >= 0) continue;
+      if (excludeKeys && excludeKeys.indexOf(k) >= 0) continue;
 
       if (v === false) {
         delete objAsAny[k];
@@ -60,12 +69,18 @@ class ObjectUtils {
     }
   }
 
-  removeEmptyStringProperties(obj: unknown, ignoreKeys?: string[]): void {
+  /**
+   * Remove any keys whose value is '' from a plain JS object
+   *
+   * @param obj plain JS object
+   * @param excludeKeys keys to be excluded from removal
+   */
+  removeEmptyStringProperties(obj: unknown, excludeKeys?: string[]): void {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const objAsAny = obj as any;
 
     for (const [k, v] of Object.entries(objAsAny)) {
-      if (ignoreKeys && ignoreKeys.indexOf(k) >= 0) continue;
+      if (excludeKeys && excludeKeys.indexOf(k) >= 0) continue;
 
       if (v === '') {
         delete objAsAny[k];
@@ -73,12 +88,18 @@ class ObjectUtils {
     }
   }
 
-  removeEmptyArrayProperties(obj: unknown, ignoreKeys?: string[]): void {
+  /**
+   * Remove any keys whose value is '[]' from a plain JS object
+   *
+   * @param obj plain JS object
+   * @param excludeKeys keys to be excluded from removal
+   */
+  removeEmptyArrayProperties(obj: unknown, excludeKeys?: string[]): void {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const objAsAny = obj as any;
 
     for (const [k, v] of Object.entries(objAsAny)) {
-      if (ignoreKeys && ignoreKeys.indexOf(k) >= 0) continue;
+      if (excludeKeys && excludeKeys.indexOf(k) >= 0) continue;
 
       if (Array.isArray(v) && v.length === 0) {
         delete objAsAny[k];

@@ -9,16 +9,25 @@
     "module": "CommonJS",
     "target": "ES6",
     "esModuleInterop": true,
-    "lib": ["ES6"],
+    "lib": ["ES6", "DOM", "DOM.Iterable"],
     "outDir": "dist/cjs",
     "sourceMap": true,
     "declaration": true,
     "declarationDir": "dist/types",
     "declarationMap": true,
     // "skipLibCheck": true
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    // "allowSyntheticDefaultImports": true,
+    // "experimentalDecorators": true,
+    // "downlevelIteration": true,
+    // "importHelpers": true,
+    // "allowJs": false,
+    // "incremental": true,
+    // "strictPropertyInitialization": false
+    // "resolveJsonModule": true,
     // "typeRoots": ["./@types", "./node_modules/@types"]
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+   "exclude": ["node_modules"],
 }

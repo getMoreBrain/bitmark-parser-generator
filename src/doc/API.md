@@ -1,12 +1,15 @@
-[@bitmark-standard/bmg](../README.md)
+[@bitmark-standard/bitmark-generator](../README.md)
 ================
 
 A bitmark generator.
 
-
 ## API
 
-- [`TODO`](./interfaces/TODO.md)
+- [`BitmarkTool.convert(input, options)`](./interfaces/BitmarkToolClass.md)
+- [`Builder`](./interfaces/BuilderClass.md)
+- [`JsonParser.toAst(input)`](./interfaces/JsonParserClass.md)
+- [`BitmarkParser.toAst(input)`](./interfaces/BitmarkParserClass.md)
+- [`Ast`](./interfaces/AstClass.md)
 
 ## License
 

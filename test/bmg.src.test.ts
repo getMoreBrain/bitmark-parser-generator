@@ -9,14 +9,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { describe, test } from '@jest/globals';
-// import bitmarkGrammer from 'bitmark-grammar';
-import { BitmarkParser } from 'bitmark-grammar/src';
 // import deepEqual from 'deep-equal';
 import fs from 'fs-extra';
 import path from 'path';
 
-import { BitmarkJson } from '../src/ast/tools/BitmarkJson';
-import { FileBitmapMarkupGenerator } from '../src/ast/tools/FileBitmapMarkupGenerator';
+import { BitmarkFileGenerator } from '../src/generator/bitmark/BitmarkFileGenerator';
+import { BitmarkParser } from '../src/parser/bitmark/BitmarkParser';
+import { JsonParser } from '../src/parser/json/JsonParser';
 
 import { BitJsonUtils } from './utils/BitJsonUtils';
 import { deepDiffMapper } from './utils/deepDiffMapper';
@@ -85,7 +84,7 @@ function writeTestJson(allTestJson: JsonTestCases): void {
     fs.writeFileSync(jsonFile, JSON.stringify(json, null, 2));
 
     // Write original Bitmark
-    const bitwrappers = BitmarkJson.preprocessJson(json);
+    const bitwrappers = JsonParser.preprocessJson(json);
 
     const markupFile = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.bit`);
     let markup = '';
@@ -131,35 +130,22 @@ describe('bitmark-generator', () => {
         BitJsonUtils.cleanupJson(json, { removeParser: true, removeErrors: true });
 
         // Convert the bitmark JSON to bitmark AST
-        const bitmarkAst = BitmarkJson.toAst(json);
+        const bitmarkAst = JsonParser.toAst(json);
 
         // Generate markup code from AST
         const markupFile = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.gen.bit`);
-        const generator = new FileBitmapMarkupGenerator(
-          markupFile,
-          {
-            flags: 'w',
-          },
-          {
-            explicitTextFormat: false,
-          },
-        );
+        const generator = new BitmarkFileGenerator(markupFile, undefined, {
+          explicitTextFormat: false,
+        });
 
         await generator.generate(bitmarkAst);
 
         const markup = fs.readFileSync(markupFile, 'utf8');
 
         // Generate JSON from generated bitmark markup using the parser
-        // const newJson = bitmarkGrammer.parse(markupFile);
-        const parser = new BitmarkParser(markup, {
-          trace: false,
-          debug: false,
-          need_error_report: false,
-        });
-
         let newJson = [];
         try {
-          const newJsonStr = parser.parse();
+          const newJsonStr = BitmarkParser.parse(markup);
           newJson = JSON.parse(newJsonStr);
         } catch {
           throw new Error('Failed to parse bitmark-grammer output');

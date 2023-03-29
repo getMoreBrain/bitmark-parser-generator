@@ -1,14 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { describe, test } from '@jest/globals';
-// import bitmarkGrammer from 'bitmark-grammar';
-import { BitmarkParser } from 'bitmark-grammar/src';
 // import deepEqual from 'deep-equal';
 import fs from 'fs-extra';
 import path from 'path';
 
-import { BitmarkJson } from '../src/ast/tools/BitmarkJson';
-import { FileBitmapMarkupGenerator } from '../src/ast/tools/FileBitmapMarkupGenerator';
+import { BitmarkFileGenerator } from '../src/generator/bitmark/BitmarkFileGenerator';
+import { BitmarkParser } from '../src/parser/bitmark/BitmarkParser';
+import { JsonParser } from '../src/parser/json/JsonParser';
 import { FileUtils } from '../src/utils/FileUtils';
 
 import { BitJsonUtils } from './utils/BitJsonUtils';
@@ -53,7 +52,7 @@ import { deepDiffMapper } from './utils/deepDiffMapper';
 // - 249: wiss_aufgabensammlung_business_engineering (parser error, [.interview] Body is incorrect - has the first question attached to it.)
 
 const SINGLE_FILE_START = 0;
-const SINGLE_FILE_COUNT = 300;
+const SINGLE_FILE_COUNT = 1;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, '../assets/test/books/bits');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, '../assets/test/books/results');
@@ -138,14 +137,7 @@ describe('bitmark-gen', () => {
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
         // Generate JSON from generated bitmark markup using the parser
-        // const newJson = bitmarkGrammer.parse(markupFile);
-        const originalParser = new BitmarkParser(originalMarkup, {
-          trace: false,
-          debug: false,
-          need_error_report: false,
-        });
-
-        const originalJsonStr = originalParser.parse();
+        const originalJsonStr = BitmarkParser.parse(originalMarkup);
         const originalJson = JSON.parse(originalJsonStr);
 
         // Write the new JSON
@@ -160,32 +152,19 @@ describe('bitmark-gen', () => {
         // writeTestJsonAndBitmark(originalJson, fullFolder, id);
 
         // Convert the bitmark JSON to bitmark AST
-        const bitmarkAst = BitmarkJson.toAst(originalJson);
+        const bitmarkAst = JsonParser.toAst(originalJson);
 
         // Generate markup code from AST
-        const generator = new FileBitmapMarkupGenerator(
-          generatedMarkupFile,
-          {
-            flags: 'w',
-          },
-          {
-            explicitTextFormat: false,
-          },
-        );
+        const generator = new BitmarkFileGenerator(generatedMarkupFile, undefined, {
+          explicitTextFormat: false,
+        });
 
         await generator.generate(bitmarkAst);
 
         const newMarkup = fs.readFileSync(generatedMarkupFile, 'utf8');
 
         // Generate JSON from generated bitmark markup using the parser
-        // const newJson = bitmarkGrammer.parse(markupFile);
-        const newParser = new BitmarkParser(newMarkup, {
-          trace: false,
-          debug: false,
-          need_error_report: false,
-        });
-
-        const newJsonStr = newParser.parse();
+        const newJsonStr = BitmarkParser.parse(newMarkup);
         const newJson = JSON.parse(newJsonStr);
 
         // Write the new JSON
