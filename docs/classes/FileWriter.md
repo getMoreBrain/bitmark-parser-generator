@@ -57,7 +57,7 @@ Create a writer to write to a file.
 
 #### Defined in
 
-[ast/writer/FileWriter.ts:34](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/FileWriter.ts#L34)
+[ast/writer/FileWriter.ts:34](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/FileWriter.ts#L34)
 
 ## Accessors
 
@@ -71,7 +71,7 @@ Create a writer to write to a file.
 
 #### Defined in
 
-[ast/writer/FileWriter.ts:43](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/FileWriter.ts#L43)
+[ast/writer/FileWriter.ts:43](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/FileWriter.ts#L43)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[ast/writer/FileWriter.ts:47](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/FileWriter.ts#L47)
+[ast/writer/FileWriter.ts:47](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/FileWriter.ts#L47)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[ast/writer/FileWriter.ts:51](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/FileWriter.ts#L51)
+[ast/writer/FileWriter.ts:51](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/FileWriter.ts#L51)
 
 ___
 
@@ -119,7 +119,7 @@ StreamWriter.stream
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:15](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StreamWriter.ts#L15)
+[ast/writer/StreamWriter.ts:15](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StreamWriter.ts#L15)
 
 • `set` **stream**(`stream`): `void`
 
@@ -141,7 +141,7 @@ StreamWriter.stream
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:22](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StreamWriter.ts#L22)
+[ast/writer/StreamWriter.ts:22](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StreamWriter.ts#L22)
 
 ## Methods
 
@@ -163,7 +163,7 @@ Must be called before any calls to writeXXX();
 
 #### Defined in
 
-[ast/writer/FileWriter.ts:55](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/FileWriter.ts#L55)
+[ast/writer/FileWriter.ts:55](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/FileWriter.ts#L55)
 
 ___
 
@@ -185,7 +185,7 @@ Must be called after any calls to writeXXX();
 
 #### Defined in
 
-[ast/writer/FileWriter.ts:80](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/FileWriter.ts#L80)
+[ast/writer/FileWriter.ts:80](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/FileWriter.ts#L80)
 
 ___
 
@@ -211,7 +211,7 @@ Writes a new line to the output. The line is indented automatically. The line is
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:30](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StreamWriter.ts#L30)
+[ast/writer/StreamWriter.ts:30](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StreamWriter.ts#L30)
 
 ___
 
@@ -238,7 +238,7 @@ Writes a collection of lines to the output. Each line is indented automatically 
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:41](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StreamWriter.ts#L41)
+[ast/writer/StreamWriter.ts:41](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StreamWriter.ts#L41)
 
 ___
 
@@ -264,7 +264,7 @@ Writes a string value to the output.
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:56](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StreamWriter.ts#L56)
+[ast/writer/StreamWriter.ts:56](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StreamWriter.ts#L56)
 
 ___
 
@@ -284,7 +284,7 @@ Writes a single whitespace character to the output.
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:63](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StreamWriter.ts#L63)
+[ast/writer/StreamWriter.ts:63](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StreamWriter.ts#L63)
 
 ## Properties
 
@@ -298,4 +298,4 @@ Writes a single whitespace character to the output.
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:10](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StreamWriter.ts#L10)
+[ast/writer/StreamWriter.ts:10](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StreamWriter.ts#L10)

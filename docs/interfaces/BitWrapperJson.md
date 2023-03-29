@@ -18,7 +18,7 @@
 
 #### Defined in
 
-model/json/BitWrapperJson.ts:5
+[model/json/BitWrapperJson.ts:5](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BitWrapperJson.ts#L5)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-model/json/BitWrapperJson.ts:6
+[model/json/BitWrapperJson.ts:6](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BitWrapperJson.ts#L6)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-model/json/BitWrapperJson.ts:7
+[model/json/BitWrapperJson.ts:7](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BitWrapperJson.ts#L7)

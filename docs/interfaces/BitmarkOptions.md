@@ -22,7 +22,7 @@ If false, only include bitmark text format if it is not 'bitmark--'
 
 #### Defined in
 
-generator/bitmark/BitmarkGenerator.ts:37
+[generator/bitmark/BitmarkGenerator.ts:37](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L37)
 
 ___
 
@@ -35,4 +35,4 @@ Generate debug information in the output.
 
 #### Defined in
 
-generator/bitmark/BitmarkGenerator.ts:42
+[generator/bitmark/BitmarkGenerator.ts:42](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L42)

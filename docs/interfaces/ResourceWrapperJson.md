@@ -50,4 +50,4 @@
 
 #### Defined in
 
-model/json/ResourceJson.ts:35
+[model/json/ResourceJson.ts:35](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L35)

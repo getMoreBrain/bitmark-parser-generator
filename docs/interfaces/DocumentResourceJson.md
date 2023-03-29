@@ -33,7 +33,7 @@ ArticleLikeResourceJson.license
 
 #### Defined in
 
-model/json/ResourceJson.ts:116
+[model/json/ResourceJson.ts:116](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L116)
 
 ___
 
@@ -47,7 +47,7 @@ ArticleLikeResourceJson.copyright
 
 #### Defined in
 
-model/json/ResourceJson.ts:117
+[model/json/ResourceJson.ts:117](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L117)
 
 ___
 
@@ -61,7 +61,7 @@ ArticleLikeResourceJson.provider
 
 #### Defined in
 
-model/json/ResourceJson.ts:118
+[model/json/ResourceJson.ts:118](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L118)
 
 ___
 
@@ -75,7 +75,7 @@ ArticleLikeResourceJson.showInIndex
 
 #### Defined in
 
-model/json/ResourceJson.ts:119
+[model/json/ResourceJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L119)
 
 ___
 
@@ -89,7 +89,7 @@ ArticleLikeResourceJson.format
 
 #### Defined in
 
-model/json/ResourceJson.ts:163
+[model/json/ResourceJson.ts:163](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L163)
 
 ___
 
@@ -103,7 +103,7 @@ ArticleLikeResourceJson.url
 
 #### Defined in
 
-model/json/ResourceJson.ts:164
+[model/json/ResourceJson.ts:164](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L164)
 
 ___
 
@@ -117,7 +117,7 @@ ArticleLikeResourceJson.href
 
 #### Defined in
 
-model/json/ResourceJson.ts:165
+[model/json/ResourceJson.ts:165](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L165)
 
 ___
 
@@ -131,4 +131,4 @@ ArticleLikeResourceJson.body
 
 #### Defined in
 
-model/json/ResourceJson.ts:166
+[model/json/ResourceJson.ts:166](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L166)

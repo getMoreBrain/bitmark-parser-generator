@@ -48,7 +48,7 @@ bitmark AST
 
 #### Defined in
 
-parser/json/JsonParser.ts:71
+[parser/json/JsonParser.ts:71](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/parser/json/JsonParser.ts#L71)
 
 ___
 
@@ -56,8 +56,8 @@ ___
 
 ▸ **preprocessJson**(`json`): [`BitWrapperJson`](../interfaces/BitWrapperJson.md)[]
 
-Preprocess bitmark JSON into a standard format (BitWrapperJson[]) from either a bit or a bitwrapper as a string
-or a plain JS object
+Preprocess bitmark JSON into a standard format (BitWrapperJson[] object) from either a bit or a bitwrapper
+as a string or a plain JS object
 
 #### Parameters
 
@@ -69,11 +69,11 @@ or a plain JS object
 
 [`BitWrapperJson`](../interfaces/BitWrapperJson.md)[]
 
-bitmark JSON in a standard format (BitWrapperJson[])
+bitmark JSON in a standard format (BitWrapperJson[] object)
 
 #### Defined in
 
-parser/json/JsonParser.ts:99
+[parser/json/JsonParser.ts:99](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/parser/json/JsonParser.ts#L99)
 
 ___
 
@@ -97,7 +97,7 @@ true if BitWrapper JSON, otherwise false
 
 #### Defined in
 
-parser/json/JsonParser.ts:142
+[parser/json/JsonParser.ts:142](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/parser/json/JsonParser.ts#L142)
 
 ___
 
@@ -121,7 +121,7 @@ true if Bit JSON, otherwise false
 
 #### Defined in
 
-parser/json/JsonParser.ts:156
+[parser/json/JsonParser.ts:156](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/parser/json/JsonParser.ts#L156)
 
 ___
 
@@ -145,4 +145,4 @@ the Bit wrapper in a BitWrapper
 
 #### Defined in
 
-parser/json/JsonParser.ts:170
+[parser/json/JsonParser.ts:170](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/parser/json/JsonParser.ts#L170)

@@ -37,7 +37,7 @@
 
 #### Defined in
 
-parser/bitmark/BitmarkParser.ts:7
+[parser/bitmark/BitmarkParser.ts:7](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/parser/bitmark/BitmarkParser.ts#L7)
 
 ___
 
@@ -57,4 +57,4 @@ ___
 
 #### Defined in
 
-parser/bitmark/BitmarkParser.ts:13
+[parser/bitmark/BitmarkParser.ts:13](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/parser/bitmark/BitmarkParser.ts#L13)

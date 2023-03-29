@@ -36,7 +36,7 @@ Generate bitmark JSON from a bitmark AST as a string
 
 #### Defined in
 
-generator/json/JsonStringGenerator.ts:21
+[generator/json/JsonStringGenerator.ts:21](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonStringGenerator.ts#L21)
 
 ## Methods
 
@@ -62,4 +62,4 @@ Generator.generate
 
 #### Defined in
 
-generator/json/JsonStringGenerator.ts:31
+[generator/json/JsonStringGenerator.ts:31](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonStringGenerator.ts#L31)

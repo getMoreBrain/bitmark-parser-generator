@@ -34,7 +34,7 @@ Generate bitmark markup from a bitmark AST as a string
 
 #### Defined in
 
-generator/bitmark/BitmarkStringGenerator.ts:19
+[generator/bitmark/BitmarkStringGenerator.ts:19](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkStringGenerator.ts#L19)
 
 ## Methods
 
@@ -60,4 +60,4 @@ Generator.generate
 
 #### Defined in
 
-generator/bitmark/BitmarkStringGenerator.ts:29
+[generator/bitmark/BitmarkStringGenerator.ts:29](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkStringGenerator.ts#L29)

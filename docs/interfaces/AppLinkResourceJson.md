@@ -33,7 +33,7 @@
 
 #### Defined in
 
-model/json/ResourceJson.ts:116
+[model/json/ResourceJson.ts:116](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L116)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-model/json/ResourceJson.ts:117
+[model/json/ResourceJson.ts:117](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L117)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-model/json/ResourceJson.ts:118
+[model/json/ResourceJson.ts:118](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L118)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-model/json/ResourceJson.ts:119
+[model/json/ResourceJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L119)
 
 ___
 
@@ -89,7 +89,7 @@ AppLikeResourceJson.app
 
 #### Defined in
 
-model/json/ResourceJson.ts:170
+[model/json/ResourceJson.ts:170](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L170)
 
 ___
 
@@ -103,4 +103,4 @@ ___
 
 #### Defined in
 
-model/json/ResourceJson.ts:225
+[model/json/ResourceJson.ts:225](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L225)

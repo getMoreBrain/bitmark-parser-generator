@@ -16,4 +16,4 @@
 
 #### Defined in
 
-model/json/ParserJson.ts:4
+[model/json/ParserJson.ts:4](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ParserJson.ts#L4)

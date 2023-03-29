@@ -24,7 +24,7 @@
 
 #### Defined in
 
-model/ast/Nodes.ts:167
+[model/ast/Nodes.ts:167](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L167)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-model/ast/Nodes.ts:168
+[model/ast/Nodes.ts:168](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L168)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-model/ast/Nodes.ts:169
+[model/ast/Nodes.ts:169](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L169)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-model/ast/Nodes.ts:170
+[model/ast/Nodes.ts:170](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L170)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-model/ast/Nodes.ts:171
+[model/ast/Nodes.ts:171](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L171)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-model/ast/Nodes.ts:172
+[model/ast/Nodes.ts:172](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L172)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-model/ast/Nodes.ts:173
+[model/ast/Nodes.ts:173](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L173)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-model/ast/Nodes.ts:174
+[model/ast/Nodes.ts:174](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L174)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-model/ast/Nodes.ts:175
+[model/ast/Nodes.ts:175](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L175)

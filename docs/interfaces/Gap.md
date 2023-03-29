@@ -27,4 +27,4 @@
 
 #### Defined in
 
-model/ast/Nodes.ts:308
+[model/ast/Nodes.ts:308](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L308)

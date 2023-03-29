@@ -24,7 +24,7 @@
 
 #### Defined in
 
-model/json/BodyBitJson.ts:37
+[model/json/BodyBitJson.ts:37](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BodyBitJson.ts#L37)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-model/json/BodyBitJson.ts:38
+[model/json/BodyBitJson.ts:38](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BodyBitJson.ts#L38)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-model/json/BodyBitJson.ts:39
+[model/json/BodyBitJson.ts:39](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BodyBitJson.ts#L39)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-model/json/BodyBitJson.ts:40
+[model/json/BodyBitJson.ts:40](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BodyBitJson.ts#L40)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-model/json/BodyBitJson.ts:41
+[model/json/BodyBitJson.ts:41](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BodyBitJson.ts#L41)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-model/json/BodyBitJson.ts:42
+[model/json/BodyBitJson.ts:42](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BodyBitJson.ts#L42)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-model/json/BodyBitJson.ts:43
+[model/json/BodyBitJson.ts:43](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BodyBitJson.ts#L43)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-model/json/BodyBitJson.ts:44
+[model/json/BodyBitJson.ts:44](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BodyBitJson.ts#L44)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-model/json/BodyBitJson.ts:45
+[model/json/BodyBitJson.ts:45](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BodyBitJson.ts#L45)

@@ -22,7 +22,7 @@ Child index of the node
 
 #### Defined in
 
-[ast/Ast.ts:11](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/Ast.ts#L11)
+[ast/Ast.ts:12](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L12)
 
 ___
 
@@ -34,7 +34,7 @@ Node key
 
 #### Defined in
 
-[ast/Ast.ts:15](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/Ast.ts#L15)
+[ast/Ast.ts:16](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L16)
 
 ___
 
@@ -46,4 +46,4 @@ Node value (if any)
 
 #### Defined in
 
-[ast/Ast.ts:19](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/Ast.ts#L19)
+[ast/Ast.ts:20](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L20)

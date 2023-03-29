@@ -45,4 +45,4 @@
 
 #### Defined in
 
-generator/Generator.ts:4
+[generator/Generator.ts:4](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/Generator.ts#L4)

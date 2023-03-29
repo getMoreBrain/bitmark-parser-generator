@@ -44,7 +44,7 @@ Generate bitmark markup from a bitmark AST
 
 #### Defined in
 
-generator/bitmark/BitmarkGenerator.ts:59
+[generator/bitmark/BitmarkGenerator.ts:59](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L59)
 
 ## Methods
 
@@ -70,7 +70,7 @@ Generator.generate
 
 #### Defined in
 
-generator/bitmark/BitmarkGenerator.ts:78
+[generator/bitmark/BitmarkGenerator.ts:78](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L78)
 
 ___
 
@@ -98,7 +98,7 @@ AstWalkCallbacks.enter
 
 #### Defined in
 
-generator/bitmark/BitmarkGenerator.ts:92
+[generator/bitmark/BitmarkGenerator.ts:92](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L92)
 
 ___
 
@@ -128,7 +128,7 @@ AstWalkCallbacks.between
 
 #### Defined in
 
-generator/bitmark/BitmarkGenerator.ts:111
+[generator/bitmark/BitmarkGenerator.ts:111](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L111)
 
 ___
 
@@ -156,7 +156,7 @@ AstWalkCallbacks.exit
 
 #### Defined in
 
-generator/bitmark/BitmarkGenerator.ts:132
+[generator/bitmark/BitmarkGenerator.ts:132](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L132)
 
 ___
 
@@ -184,7 +184,7 @@ AstWalkCallbacks.leaf
 
 #### Defined in
 
-generator/bitmark/BitmarkGenerator.ts:144
+[generator/bitmark/BitmarkGenerator.ts:144](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L144)
 
 ___
 
@@ -206,7 +206,7 @@ Writes a string value to the output.
 
 #### Defined in
 
-generator/bitmark/BitmarkGenerator.ts:1449
+[generator/bitmark/BitmarkGenerator.ts:1449](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L1449)
 
 ___
 
@@ -228,7 +228,7 @@ Writes a new line to the output. The line is indented automatically. The line is
 
 #### Defined in
 
-generator/bitmark/BitmarkGenerator.ts:1458
+[generator/bitmark/BitmarkGenerator.ts:1458](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L1458)
 
 ___
 
@@ -251,7 +251,7 @@ Writes a collection of lines to the output. Each line is indented automatically 
 
 #### Defined in
 
-generator/bitmark/BitmarkGenerator.ts:1468
+[generator/bitmark/BitmarkGenerator.ts:1468](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L1468)
 
 ___
 
@@ -267,4 +267,4 @@ Writes a single whitespace character to the output.
 
 #### Defined in
 
-generator/bitmark/BitmarkGenerator.ts:1476
+[generator/bitmark/BitmarkGenerator.ts:1476](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L1476)

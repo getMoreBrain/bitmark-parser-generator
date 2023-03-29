@@ -27,15 +27,19 @@ Bitmark tool for manipulating bitmark in all its formats.
 
 ▸ **convert**(`input`, `options?`): `Promise`<`unknown`\>
 
+TODO
+- put all the conversions in functions to make code clearer
+- implement conversions that are 'not supported' using bitmark parser
+
 Convert bitmark from bitmark to JSON, or JSON to bitmark.
 
-Input type is detected automatically and may be string, object, or file
+Input type is detected automatically and may be string, object (JSON or AST), or file
 
 Output type is selected automatically based on input type detection:
-- input = json, output = bitmark
-- input = bitmark, output = json
+- input(JSON/AST) ==> output(bitmark)
+- input(bitmark)  ==> output(JSON)
 
-By default, the result is returned as a string for bitmark, or a plain JS object for JSON.
+By default, the result is returned as a string for bitmark, or a plain JS object for JSON/AST.
 
 The options can be used to write the output to a file and to set conversion options or override defaults.
 
@@ -47,7 +51,7 @@ Error if any error occurs
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `input` | `unknown` | bitmark or JSON as a string, plain JS object, or file path. |
+| `input` | `unknown` | bitmark or JSON as a string, JSON or AST as plain JS object, or path to a file containing JSON, AST, or bitmark. |
 | `options?` | [`ConvertOptions`](../interfaces/ConvertOptions.md) | the conversion options |
 
 #### Returns
@@ -59,7 +63,7 @@ void if writing to a file
 
 #### Defined in
 
-BitmarkTool.ts:80
+[BitmarkTool.ts:90](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/BitmarkTool.ts#L90)
 
 ___
 
@@ -67,9 +71,9 @@ ___
 
 ▸ **createAst**(`input`): [`BitmarkAst`](../interfaces/BitmarkAst.md)
 
-Create a bitmark AST (Abstract Syntax Tree) from bitmark or JSON
+Create a bitmark AST (Abstract Syntax Tree) from bitmark or JSON or AST
 
-Input type is detected automatically and may be string, object, or file
+Input type is detected automatically and may be string, object (JSON or AST), or file
 
 **`Throws`**
 
@@ -89,4 +93,4 @@ bitmark AST
 
 #### Defined in
 
-BitmarkTool.ts:159
+[BitmarkTool.ts:209](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/BitmarkTool.ts#L209)

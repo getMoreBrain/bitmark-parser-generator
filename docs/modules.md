@@ -149,13 +149,13 @@
 
 ### Output
 
-• `Const` **Output**: `Readonly`<{ `bitmark`: ``"bitmark"`` = 'bitmark'; `json`: ``"json"`` = 'json' }\> & `EnumExtensions`<`EnumType`<{ `bitmark`: ``"bitmark"`` = 'bitmark'; `json`: ``"json"`` = 'json' }\>\>
+• `Const` **Output**: `Readonly`<{ `bitmark`: ``"bitmark"`` = 'bitmark'; `json`: ``"json"`` = 'json'; `ast`: ``"ast"`` = 'ast' }\> & `EnumExtensions`<`EnumType`<{ `bitmark`: ``"bitmark"`` = 'bitmark'; `json`: ``"json"`` = 'json'; `ast`: ``"ast"`` = 'ast' }\>\>
 
 Output type enumeration
 
 #### Defined in
 
-BitmarkTool.ts:43
+[BitmarkTool.ts:44](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/BitmarkTool.ts#L44)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-BitmarkTool.ts:185
+[BitmarkTool.ts:243](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/BitmarkTool.ts#L243)
 
 ___
 
@@ -175,7 +175,7 @@ ___
 
 #### Defined in
 
-[ast/Ast.ts:266](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/Ast.ts#L266)
+[ast/Ast.ts:305](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L305)
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 #### Defined in
 
-[ast/Builder.ts:1619](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/Builder.ts#L1619)
+[ast/Builder.ts:1619](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1619)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-model/ast/NodeType.ts:7
+[model/ast/NodeType.ts:7](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/NodeType.ts#L7)
 
 ___
 
@@ -205,7 +205,7 @@ ___
 
 #### Defined in
 
-model/enum/BitType.ts:127
+[model/enum/BitType.ts:127](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/enum/BitType.ts#L127)
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 #### Defined in
 
-model/enum/ResourceType.ts:23
+[model/enum/ResourceType.ts:23](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/enum/ResourceType.ts#L23)
 
 ___
 
@@ -225,7 +225,7 @@ ___
 
 #### Defined in
 
-model/enum/TextFormat.ts:3
+[model/enum/TextFormat.ts:3](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/enum/TextFormat.ts#L3)
 
 ___
 
@@ -235,7 +235,7 @@ ___
 
 #### Defined in
 
-parser/bitmark/BitmarkParser.ts:18
+[parser/bitmark/BitmarkParser.ts:18](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/parser/bitmark/BitmarkParser.ts#L18)
 
 ___
 
@@ -245,7 +245,7 @@ ___
 
 #### Defined in
 
-parser/json/JsonParser.ts:852
+[parser/json/JsonParser.ts:852](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/parser/json/JsonParser.ts#L852)
 
 ## Type Aliases
 
@@ -255,7 +255,7 @@ parser/json/JsonParser.ts:852
 
 #### Defined in
 
-BitmarkTool.ts:54
+[BitmarkTool.ts:59](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/BitmarkTool.ts#L59)
 
 ___
 
@@ -265,7 +265,7 @@ ___
 
 #### Defined in
 
-model/ast/NodeType.ts:175
+[model/ast/NodeType.ts:175](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/NodeType.ts#L175)
 
 ___
 
@@ -275,7 +275,7 @@ ___
 
 #### Defined in
 
-model/ast/Nodes.ts:7
+[model/ast/Nodes.ts:7](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L7)
 
 ___
 
@@ -285,7 +285,7 @@ ___
 
 #### Defined in
 
-model/ast/Nodes.ts:292
+[model/ast/Nodes.ts:292](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L292)
 
 ___
 
@@ -295,7 +295,7 @@ ___
 
 #### Defined in
 
-model/ast/Nodes.ts:293
+[model/ast/Nodes.ts:293](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L293)
 
 ___
 
@@ -305,7 +305,7 @@ ___
 
 #### Defined in
 
-model/ast/Nodes.ts:376
+[model/ast/Nodes.ts:376](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L376)
 
 ___
 
@@ -315,7 +315,7 @@ ___
 
 #### Defined in
 
-model/enum/BitType.ts:130
+[model/enum/BitType.ts:130](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/enum/BitType.ts#L130)
 
 ___
 
@@ -325,7 +325,7 @@ ___
 
 #### Defined in
 
-model/enum/ResourceType.ts:26
+[model/enum/ResourceType.ts:26](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/enum/ResourceType.ts#L26)
 
 ___
 
@@ -335,7 +335,7 @@ ___
 
 #### Defined in
 
-model/enum/TextFormat.ts:8
+[model/enum/TextFormat.ts:8](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/enum/TextFormat.ts#L8)
 
 ___
 
@@ -345,7 +345,7 @@ ___
 
 #### Defined in
 
-model/json/BodyBitJson.ts:5
+[model/json/BodyBitJson.ts:5](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BodyBitJson.ts#L5)
 
 ___
 
@@ -355,7 +355,7 @@ ___
 
 #### Defined in
 
-model/json/ResourceJson.ts:1
+[model/json/ResourceJson.ts:1](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L1)
 
 ___
 
@@ -365,7 +365,7 @@ ___
 
 #### Defined in
 
-model/json/ResourceJson.ts:17
+[model/json/ResourceJson.ts:17](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L17)
 
 ___
 
@@ -375,4 +375,4 @@ ___
 
 #### Defined in
 
-model/json/ResourceJson.ts:222
+[model/json/ResourceJson.ts:222](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L222)

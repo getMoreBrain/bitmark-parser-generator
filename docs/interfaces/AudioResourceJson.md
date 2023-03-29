@@ -32,7 +32,7 @@ AudioLikeResourceJson.license
 
 #### Defined in
 
-model/json/ResourceJson.ts:116
+[model/json/ResourceJson.ts:116](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L116)
 
 ___
 
@@ -46,7 +46,7 @@ AudioLikeResourceJson.copyright
 
 #### Defined in
 
-model/json/ResourceJson.ts:117
+[model/json/ResourceJson.ts:117](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L117)
 
 ___
 
@@ -60,7 +60,7 @@ AudioLikeResourceJson.provider
 
 #### Defined in
 
-model/json/ResourceJson.ts:118
+[model/json/ResourceJson.ts:118](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L118)
 
 ___
 
@@ -74,7 +74,7 @@ AudioLikeResourceJson.showInIndex
 
 #### Defined in
 
-model/json/ResourceJson.ts:119
+[model/json/ResourceJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L119)
 
 ___
 
@@ -88,7 +88,7 @@ AudioLikeResourceJson.format
 
 #### Defined in
 
-model/json/ResourceJson.ts:141
+[model/json/ResourceJson.ts:141](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L141)
 
 ___
 
@@ -102,7 +102,7 @@ AudioLikeResourceJson.url
 
 #### Defined in
 
-model/json/ResourceJson.ts:142
+[model/json/ResourceJson.ts:142](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L142)
 
 ___
 
@@ -116,4 +116,4 @@ AudioLikeResourceJson.src
 
 #### Defined in
 
-model/json/ResourceJson.ts:183
+[model/json/ResourceJson.ts:183](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L183)

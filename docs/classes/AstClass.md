@@ -15,6 +15,8 @@ An AST (Abstract Syntax Tree) implementation for the bitmark language
 - [walk](AstClass.md#walk)
 - [getRouteKey](AstClass.md#getRouteKey)
 - [printTree](AstClass.md#printTree)
+- [preprocessAst](AstClass.md#preprocessAst)
+- [isAst](AstClass.md#isAst)
 
 ## Constructors
 
@@ -68,7 +70,7 @@ Exit  A1
 
 #### Defined in
 
-[ast/Ast.ts:108](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/Ast.ts#L108)
+[ast/Ast.ts:109](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L109)
 
 ___
 
@@ -92,7 +94,7 @@ For the route A1 -> B4 -> C2 the route key would be A1_B4_C2
 
 #### Defined in
 
-[ast/Ast.ts:120](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/Ast.ts#L120)
+[ast/Ast.ts:121](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L121)
 
 ___
 
@@ -115,4 +117,53 @@ Useful for debug / development purposes
 
 #### Defined in
 
-[ast/Ast.ts:138](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/Ast.ts#L138)
+[ast/Ast.ts:139](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L139)
+
+___
+
+### preprocessAst
+
+▸ **preprocessAst**(`ast`): `undefined` \| [`BitmarkAst`](../interfaces/BitmarkAst.md)
+
+Preprocess bitmark AST into a standard format (BitmarkAst object) from bitmark AST either as a string
+or a plain JS object
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `ast` | `unknown` | bitmark AST as a string or a plain JS object |
+
+#### Returns
+
+`undefined` \| [`BitmarkAst`](../interfaces/BitmarkAst.md)
+
+bitmark AST in a standard format (BitmarkAst object)
+
+#### Defined in
+
+[ast/Ast.ts:174](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L174)
+
+___
+
+### isAst
+
+▸ **isAst**(`ast`): `boolean`
+
+Check if a plain JS object is valid AST
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `ast` | `unknown` |
+
+#### Returns
+
+`boolean`
+
+true if Bit JSON, otherwise false
+
+#### Defined in
+
+[ast/Ast.ts:197](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L197)

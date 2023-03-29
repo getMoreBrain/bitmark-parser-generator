@@ -42,7 +42,7 @@ Writer to write to a string.
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:9](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StringWriter.ts#L9)
+[ast/writer/StringWriter.ts:9](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StringWriter.ts#L9)
 
 ## Methods
 
@@ -60,7 +60,7 @@ This cannot be called until after close() has resolved its Promise.
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:18](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StringWriter.ts#L18)
+[ast/writer/StringWriter.ts:18](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StringWriter.ts#L18)
 
 ___
 
@@ -82,7 +82,7 @@ Must be called before any calls to writeXXX();
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:22](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StringWriter.ts#L22)
+[ast/writer/StringWriter.ts:22](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StringWriter.ts#L22)
 
 ___
 
@@ -104,7 +104,7 @@ Must be called after any calls to writeXXX();
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:28](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StringWriter.ts#L28)
+[ast/writer/StringWriter.ts:28](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StringWriter.ts#L28)
 
 ___
 
@@ -130,7 +130,7 @@ Writes a new line to the output. The line is indented automatically. The line is
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:37](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StringWriter.ts#L37)
+[ast/writer/StringWriter.ts:37](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StringWriter.ts#L37)
 
 ___
 
@@ -157,7 +157,7 @@ Writes a collection of lines to the output. Each line is indented automatically 
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:48](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StringWriter.ts#L48)
+[ast/writer/StringWriter.ts:48](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StringWriter.ts#L48)
 
 ___
 
@@ -183,7 +183,7 @@ Writes a string value to the output.
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:63](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StringWriter.ts#L63)
+[ast/writer/StringWriter.ts:63](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StringWriter.ts#L63)
 
 ___
 
@@ -203,4 +203,4 @@ Writes a single whitespace character to the output.
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:70](https://github.com/getMoreBrain/bitmark-generator/blob/2e4b4f5/src/ast/writer/StringWriter.ts#L70)
+[ast/writer/StringWriter.ts:70](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/writer/StringWriter.ts#L70)

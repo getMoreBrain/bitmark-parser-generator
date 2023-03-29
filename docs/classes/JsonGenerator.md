@@ -46,7 +46,7 @@ Generate bitmark JSON from a bitmark AST
 
 #### Defined in
 
-generator/json/JsonGenerator.ts:64
+[generator/json/JsonGenerator.ts:64](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonGenerator.ts#L64)
 
 ## Methods
 
@@ -72,7 +72,7 @@ Generator.generate
 
 #### Defined in
 
-generator/json/JsonGenerator.ts:83
+[generator/json/JsonGenerator.ts:83](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonGenerator.ts#L83)
 
 ___
 
@@ -100,7 +100,7 @@ AstWalkCallbacks.enter
 
 #### Defined in
 
-generator/json/JsonGenerator.ts:97
+[generator/json/JsonGenerator.ts:97](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonGenerator.ts#L97)
 
 ___
 
@@ -130,7 +130,7 @@ AstWalkCallbacks.between
 
 #### Defined in
 
-generator/json/JsonGenerator.ts:116
+[generator/json/JsonGenerator.ts:116](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonGenerator.ts#L116)
 
 ___
 
@@ -158,7 +158,7 @@ AstWalkCallbacks.exit
 
 #### Defined in
 
-generator/json/JsonGenerator.ts:137
+[generator/json/JsonGenerator.ts:137](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonGenerator.ts#L137)
 
 ___
 
@@ -186,7 +186,7 @@ AstWalkCallbacks.leaf
 
 #### Defined in
 
-generator/json/JsonGenerator.ts:149
+[generator/json/JsonGenerator.ts:149](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonGenerator.ts#L149)
 
 ___
 
@@ -208,7 +208,7 @@ Writes a string value to the output.
 
 #### Defined in
 
-generator/json/JsonGenerator.ts:1455
+[generator/json/JsonGenerator.ts:1455](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonGenerator.ts#L1455)
 
 ___
 
@@ -230,7 +230,7 @@ Writes a new line to the output. The line is indented automatically. The line is
 
 #### Defined in
 
-generator/json/JsonGenerator.ts:1464
+[generator/json/JsonGenerator.ts:1464](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonGenerator.ts#L1464)
 
 ___
 
@@ -253,7 +253,7 @@ Writes a collection of lines to the output. Each line is indented automatically 
 
 #### Defined in
 
-generator/json/JsonGenerator.ts:1474
+[generator/json/JsonGenerator.ts:1474](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonGenerator.ts#L1474)
 
 ___
 
@@ -269,4 +269,4 @@ Writes a single whitespace character to the output.
 
 #### Defined in
 
-generator/json/JsonGenerator.ts:1482
+[generator/json/JsonGenerator.ts:1482](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonGenerator.ts#L1482)
