@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:48](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L48)
+[model/json/ResourceJson.ts:48](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L48)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:49](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L49)
+[model/json/ResourceJson.ts:49](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L49)

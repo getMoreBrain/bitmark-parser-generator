@@ -21,7 +21,7 @@ Append to a file if true, otherwise overwrite
 
 #### Defined in
 
-[ast/writer/FileWriter.ts:13](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/writer/FileWriter.ts#L13)
+[ast/writer/FileWriter.ts:13](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/ast/writer/FileWriter.ts#L13)
 
 ___
 
@@ -33,4 +33,4 @@ Character encoding, defaults to 'utf8'
 
 #### Defined in
 
-[ast/writer/FileWriter.ts:17](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/writer/FileWriter.ts#L17)
+[ast/writer/FileWriter.ts:17](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/ast/writer/FileWriter.ts#L17)

@@ -72,7 +72,7 @@ Exit  A1
 
 #### Defined in
 
-[ast/Ast.ts:111](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L111)
+[ast/Ast.ts:111](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/ast/Ast.ts#L111)
 
 ___
 
@@ -96,7 +96,7 @@ For the route A1 -> B4 -> C2 the route key would be A1_B4_C2
 
 #### Defined in
 
-[ast/Ast.ts:123](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L123)
+[ast/Ast.ts:123](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/ast/Ast.ts#L123)
 
 ___
 
@@ -119,7 +119,7 @@ Useful for debug / development purposes
 
 #### Defined in
 
-[ast/Ast.ts:141](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L141)
+[ast/Ast.ts:141](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/ast/Ast.ts#L141)
 
 ___
 
@@ -144,7 +144,7 @@ bitmark AST in a standard format (BitmarkAst object)
 
 #### Defined in
 
-[ast/Ast.ts:176](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L176)
+[ast/Ast.ts:176](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/ast/Ast.ts#L176)
 
 ___
 
@@ -168,4 +168,4 @@ true if Bit JSON, otherwise false
 
 #### Defined in
 
-[ast/Ast.ts:199](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L199)
+[ast/Ast.ts:199](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/ast/Ast.ts#L199)

@@ -42,7 +42,7 @@ VideoLikeResourceJson.license
 
 #### Defined in
 
-[model/json/ResourceJson.ts:116](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L116)
+[model/json/ResourceJson.ts:116](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L116)
 
 ___
 
@@ -56,7 +56,7 @@ VideoLikeResourceJson.copyright
 
 #### Defined in
 
-[model/json/ResourceJson.ts:117](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L117)
+[model/json/ResourceJson.ts:117](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L117)
 
 ___
 
@@ -70,7 +70,7 @@ VideoLikeResourceJson.provider
 
 #### Defined in
 
-[model/json/ResourceJson.ts:118](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L118)
+[model/json/ResourceJson.ts:118](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L118)
 
 ___
 
@@ -84,7 +84,7 @@ VideoLikeResourceJson.showInIndex
 
 #### Defined in
 
-[model/json/ResourceJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L119)
+[model/json/ResourceJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L119)
 
 ___
 
@@ -98,7 +98,7 @@ VideoLikeResourceJson.format
 
 #### Defined in
 
-[model/json/ResourceJson.ts:147](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L147)
+[model/json/ResourceJson.ts:147](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L147)
 
 ___
 
@@ -112,7 +112,7 @@ VideoLikeResourceJson.url
 
 #### Defined in
 
-[model/json/ResourceJson.ts:148](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L148)
+[model/json/ResourceJson.ts:148](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L148)
 
 ___
 
@@ -126,7 +126,7 @@ VideoLikeResourceJson.src
 
 #### Defined in
 
-[model/json/ResourceJson.ts:149](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L149)
+[model/json/ResourceJson.ts:149](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L149)
 
 ___
 
@@ -140,7 +140,7 @@ VideoLikeResourceJson.width
 
 #### Defined in
 
-[model/json/ResourceJson.ts:150](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L150)
+[model/json/ResourceJson.ts:150](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L150)
 
 ___
 
@@ -154,7 +154,7 @@ VideoLikeResourceJson.height
 
 #### Defined in
 
-[model/json/ResourceJson.ts:151](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L151)
+[model/json/ResourceJson.ts:151](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L151)
 
 ___
 
@@ -168,7 +168,7 @@ VideoLikeResourceJson.duration
 
 #### Defined in
 
-[model/json/ResourceJson.ts:152](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L152)
+[model/json/ResourceJson.ts:152](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L152)
 
 ___
 
@@ -182,7 +182,7 @@ VideoLikeResourceJson.mute
 
 #### Defined in
 
-[model/json/ResourceJson.ts:153](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L153)
+[model/json/ResourceJson.ts:153](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L153)
 
 ___
 
@@ -196,7 +196,7 @@ VideoLikeResourceJson.autoplay
 
 #### Defined in
 
-[model/json/ResourceJson.ts:154](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L154)
+[model/json/ResourceJson.ts:154](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L154)
 
 ___
 
@@ -210,7 +210,7 @@ VideoLikeResourceJson.allowSubtitles
 
 #### Defined in
 
-[model/json/ResourceJson.ts:155](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L155)
+[model/json/ResourceJson.ts:155](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L155)
 
 ___
 
@@ -224,7 +224,7 @@ VideoLikeResourceJson.showSubtitles
 
 #### Defined in
 
-[model/json/ResourceJson.ts:156](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L156)
+[model/json/ResourceJson.ts:156](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L156)
 
 ___
 
@@ -238,7 +238,7 @@ VideoLikeResourceJson.alt
 
 #### Defined in
 
-[model/json/ResourceJson.ts:157](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L157)
+[model/json/ResourceJson.ts:157](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L157)
 
 ___
 
@@ -252,7 +252,7 @@ VideoLikeResourceJson.posterImage
 
 #### Defined in
 
-[model/json/ResourceJson.ts:158](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L158)
+[model/json/ResourceJson.ts:158](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L158)
 
 ___
 
@@ -266,4 +266,4 @@ VideoLikeResourceJson.thumbnails
 
 #### Defined in
 
-[model/json/ResourceJson.ts:159](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L159)
+[model/json/ResourceJson.ts:159](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L159)

@@ -34,7 +34,7 @@ ArticleLikeResource.format
 
 #### Defined in
 
-[model/ast/Nodes.ts:182](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L182)
+[model/ast/Nodes.ts:182](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L182)
 
 ___
 
@@ -48,7 +48,7 @@ ArticleLikeResource.url
 
 #### Defined in
 
-[model/ast/Nodes.ts:183](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L183)
+[model/ast/Nodes.ts:183](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L183)
 
 ___
 
@@ -62,7 +62,7 @@ ArticleLikeResource.license
 
 #### Defined in
 
-[model/ast/Nodes.ts:184](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L184)
+[model/ast/Nodes.ts:184](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L184)
 
 ___
 
@@ -76,7 +76,7 @@ ArticleLikeResource.copyright
 
 #### Defined in
 
-[model/ast/Nodes.ts:185](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L185)
+[model/ast/Nodes.ts:185](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L185)
 
 ___
 
@@ -90,7 +90,7 @@ ArticleLikeResource.provider
 
 #### Defined in
 
-[model/ast/Nodes.ts:186](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L186)
+[model/ast/Nodes.ts:186](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L186)
 
 ___
 
@@ -104,7 +104,7 @@ ArticleLikeResource.showInIndex
 
 #### Defined in
 
-[model/ast/Nodes.ts:187](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L187)
+[model/ast/Nodes.ts:187](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L187)
 
 ___
 
@@ -118,7 +118,7 @@ ArticleLikeResource.caption
 
 #### Defined in
 
-[model/ast/Nodes.ts:188](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L188)
+[model/ast/Nodes.ts:188](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L188)
 
 ___
 
@@ -132,7 +132,7 @@ ArticleLikeResource.body
 
 #### Defined in
 
-[model/ast/Nodes.ts:222](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L222)
+[model/ast/Nodes.ts:222](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L222)
 
 ___
 
@@ -146,4 +146,4 @@ ArticleLikeResource.type
 
 #### Defined in
 
-[model/ast/Nodes.ts:274](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L274)
+[model/ast/Nodes.ts:274](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L274)

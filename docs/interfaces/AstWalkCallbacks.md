@@ -44,7 +44,7 @@ Called when a branch node is entered
 
 #### Defined in
 
-[ast/Ast.ts:35](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L35)
+[ast/Ast.ts:35](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/ast/Ast.ts#L35)
 
 ___
 
@@ -74,7 +74,7 @@ Called when between child nodes
 
 #### Defined in
 
-[ast/Ast.ts:47](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L47)
+[ast/Ast.ts:47](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/ast/Ast.ts#L47)
 
 ___
 
@@ -102,7 +102,7 @@ Called when a branch node is exited
 
 #### Defined in
 
-[ast/Ast.ts:62](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L62)
+[ast/Ast.ts:62](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/ast/Ast.ts#L62)
 
 ___
 
@@ -130,4 +130,4 @@ Called when a leaf node is entered
 
 #### Defined in
 
-[ast/Ast.ts:71](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L71)
+[ast/Ast.ts:71](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/ast/Ast.ts#L71)

@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:296](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L296)
+[model/ast/Nodes.ts:296](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L296)

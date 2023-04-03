@@ -50,4 +50,4 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:35](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L35)
+[model/json/ResourceJson.ts:35](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/ResourceJson.ts#L35)

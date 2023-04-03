@@ -43,7 +43,7 @@ VideoLikeResource.format
 
 #### Defined in
 
-[model/ast/Nodes.ts:182](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L182)
+[model/ast/Nodes.ts:182](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L182)
 
 ___
 
@@ -57,7 +57,7 @@ VideoLikeResource.url
 
 #### Defined in
 
-[model/ast/Nodes.ts:183](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L183)
+[model/ast/Nodes.ts:183](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L183)
 
 ___
 
@@ -71,7 +71,7 @@ VideoLikeResource.license
 
 #### Defined in
 
-[model/ast/Nodes.ts:184](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L184)
+[model/ast/Nodes.ts:184](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L184)
 
 ___
 
@@ -85,7 +85,7 @@ VideoLikeResource.copyright
 
 #### Defined in
 
-[model/ast/Nodes.ts:185](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L185)
+[model/ast/Nodes.ts:185](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L185)
 
 ___
 
@@ -99,7 +99,7 @@ VideoLikeResource.provider
 
 #### Defined in
 
-[model/ast/Nodes.ts:186](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L186)
+[model/ast/Nodes.ts:186](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L186)
 
 ___
 
@@ -113,7 +113,7 @@ VideoLikeResource.showInIndex
 
 #### Defined in
 
-[model/ast/Nodes.ts:187](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L187)
+[model/ast/Nodes.ts:187](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L187)
 
 ___
 
@@ -127,7 +127,7 @@ VideoLikeResource.caption
 
 #### Defined in
 
-[model/ast/Nodes.ts:188](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L188)
+[model/ast/Nodes.ts:188](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L188)
 
 ___
 
@@ -141,7 +141,7 @@ VideoLikeResource.width
 
 #### Defined in
 
-[model/ast/Nodes.ts:208](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L208)
+[model/ast/Nodes.ts:208](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L208)
 
 ___
 
@@ -155,7 +155,7 @@ VideoLikeResource.height
 
 #### Defined in
 
-[model/ast/Nodes.ts:209](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L209)
+[model/ast/Nodes.ts:209](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L209)
 
 ___
 
@@ -169,7 +169,7 @@ VideoLikeResource.duration
 
 #### Defined in
 
-[model/ast/Nodes.ts:210](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L210)
+[model/ast/Nodes.ts:210](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L210)
 
 ___
 
@@ -183,7 +183,7 @@ VideoLikeResource.mute
 
 #### Defined in
 
-[model/ast/Nodes.ts:211](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L211)
+[model/ast/Nodes.ts:211](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L211)
 
 ___
 
@@ -197,7 +197,7 @@ VideoLikeResource.autoplay
 
 #### Defined in
 
-[model/ast/Nodes.ts:212](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L212)
+[model/ast/Nodes.ts:212](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L212)
 
 ___
 
@@ -211,7 +211,7 @@ VideoLikeResource.allowSubtitles
 
 #### Defined in
 
-[model/ast/Nodes.ts:213](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L213)
+[model/ast/Nodes.ts:213](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L213)
 
 ___
 
@@ -225,7 +225,7 @@ VideoLikeResource.showSubtitles
 
 #### Defined in
 
-[model/ast/Nodes.ts:214](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L214)
+[model/ast/Nodes.ts:214](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L214)
 
 ___
 
@@ -239,7 +239,7 @@ VideoLikeResource.alt
 
 #### Defined in
 
-[model/ast/Nodes.ts:215](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L215)
+[model/ast/Nodes.ts:215](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L215)
 
 ___
 
@@ -253,7 +253,7 @@ VideoLikeResource.posterImage
 
 #### Defined in
 
-[model/ast/Nodes.ts:216](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L216)
+[model/ast/Nodes.ts:216](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L216)
 
 ___
 
@@ -267,7 +267,7 @@ VideoLikeResource.thumbnails
 
 #### Defined in
 
-[model/ast/Nodes.ts:217](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L217)
+[model/ast/Nodes.ts:217](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L217)
 
 ___
 
@@ -281,4 +281,4 @@ VideoLikeResource.type
 
 #### Defined in
 
-[model/ast/Nodes.ts:250](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L250)
+[model/ast/Nodes.ts:250](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L250)

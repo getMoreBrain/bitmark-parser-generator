@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:359](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L359)
+[model/ast/Nodes.ts:359](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L359)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:360](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L360)
+[model/ast/Nodes.ts:360](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L360)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:361](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L361)
+[model/ast/Nodes.ts:361](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L361)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:362](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L362)
+[model/ast/Nodes.ts:362](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L362)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:363](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L363)
+[model/ast/Nodes.ts:363](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L363)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:364](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L364)
+[model/ast/Nodes.ts:364](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L364)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:365](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L365)
+[model/ast/Nodes.ts:365](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L365)
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:366](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L366)
+[model/ast/Nodes.ts:366](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L366)

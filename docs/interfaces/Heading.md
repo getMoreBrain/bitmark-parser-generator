@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:126](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L126)
+[model/ast/Nodes.ts:126](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L126)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:127](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L127)
+[model/ast/Nodes.ts:127](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L127)

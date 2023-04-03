@@ -32,7 +32,7 @@ Decision.text
 
 #### Defined in
 
-[model/ast/Nodes.ts:379](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L379)
+[model/ast/Nodes.ts:379](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L379)
 
 ___
 
@@ -46,7 +46,7 @@ Decision.isCorrect
 
 #### Defined in
 
-[model/ast/Nodes.ts:380](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L380)
+[model/ast/Nodes.ts:380](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L380)
 
 ___
 
@@ -60,7 +60,7 @@ Decision.itemLead
 
 #### Defined in
 
-[model/ast/Nodes.ts:381](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L381)
+[model/ast/Nodes.ts:381](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L381)
 
 ___
 
@@ -74,7 +74,7 @@ Decision.hint
 
 #### Defined in
 
-[model/ast/Nodes.ts:382](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L382)
+[model/ast/Nodes.ts:382](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L382)
 
 ___
 
@@ -88,7 +88,7 @@ Decision.instruction
 
 #### Defined in
 
-[model/ast/Nodes.ts:383](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L383)
+[model/ast/Nodes.ts:383](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L383)
 
 ___
 
@@ -102,7 +102,7 @@ Decision.example
 
 #### Defined in
 
-[model/ast/Nodes.ts:384](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L384)
+[model/ast/Nodes.ts:384](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L384)
 
 ___
 
@@ -116,4 +116,4 @@ Decision.isCaseSensitive
 
 #### Defined in
 
-[model/ast/Nodes.ts:385](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L385)
+[model/ast/Nodes.ts:385](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/ast/Nodes.ts#L385)

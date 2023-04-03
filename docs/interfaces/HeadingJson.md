@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[model/json/BitJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/BitJson.ts#L119)
+[model/json/BitJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/BitJson.ts#L119)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:120](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/BitJson.ts#L120)
+[model/json/BitJson.ts:120](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/model/json/BitJson.ts#L120)

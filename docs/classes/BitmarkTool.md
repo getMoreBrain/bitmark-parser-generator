@@ -63,7 +63,7 @@ void if writing to a file
 
 #### Defined in
 
-[BitmarkTool.ts:94](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/BitmarkTool.ts#L94)
+[BitmarkTool.ts:94](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/BitmarkTool.ts#L94)
 
 ___
 
@@ -93,4 +93,4 @@ bitmark AST
 
 #### Defined in
 
-[BitmarkTool.ts:214](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/BitmarkTool.ts#L214)
+[BitmarkTool.ts:214](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/BitmarkTool.ts#L214)

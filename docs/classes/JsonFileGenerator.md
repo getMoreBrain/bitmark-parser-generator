@@ -38,7 +38,7 @@ Generate bitmark JSON from a bitmark AST as a file
 
 #### Defined in
 
-[generator/json/JsonFileGenerator.ts:24](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/json/JsonFileGenerator.ts#L24)
+[generator/json/JsonFileGenerator.ts:24](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/generator/json/JsonFileGenerator.ts#L24)
 
 ## Methods
 
@@ -64,4 +64,4 @@ Generator.generate
 
 #### Defined in
 
-[generator/json/JsonFileGenerator.ts:34](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/json/JsonFileGenerator.ts#L34)
+[generator/json/JsonFileGenerator.ts:34](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/generator/json/JsonFileGenerator.ts#L34)

@@ -24,7 +24,7 @@ Specify the output format, overriding the default
 
 #### Defined in
 
-[BitmarkTool.ts:22](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/BitmarkTool.ts#L22)
+[BitmarkTool.ts:22](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/BitmarkTool.ts#L22)
 
 ___
 
@@ -36,7 +36,7 @@ Specify a file to write the output to
 
 #### Defined in
 
-[BitmarkTool.ts:26](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/BitmarkTool.ts#L26)
+[BitmarkTool.ts:26](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/BitmarkTool.ts#L26)
 
 ___
 
@@ -48,7 +48,7 @@ Options for the output file
 
 #### Defined in
 
-[BitmarkTool.ts:30](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/BitmarkTool.ts#L30)
+[BitmarkTool.ts:30](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/BitmarkTool.ts#L30)
 
 ___
 
@@ -60,7 +60,7 @@ Options for bitmark generation
 
 #### Defined in
 
-[BitmarkTool.ts:34](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/BitmarkTool.ts#L34)
+[BitmarkTool.ts:34](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/BitmarkTool.ts#L34)
 
 ___
 
@@ -72,4 +72,4 @@ Options for JSON generation
 
 #### Defined in
 
-[BitmarkTool.ts:38](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/BitmarkTool.ts#L38)
+[BitmarkTool.ts:38](https://github.com/getMoreBrain/bitmark-generator/blob/ccb191f/src/BitmarkTool.ts#L38)
