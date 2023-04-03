@@ -61,7 +61,6 @@
     "@types/eslint-plugin-prettier": "^3.1.0",
     "@types/jest": "^29.2.0",
     "@types/node": "^18.11.7",
-    "@types/fs-extra": "^11.0.1",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
     "@typescript-eslint/parser": "^5.41.0",
     "esbuild-register": "^3.4.2",
@@ -88,6 +87,7 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
+    "@types/fs-extra": "^11.0.1",
     "@ncoderz/superenum": "^0.2.0",
     "bitmark-grammar": "^1.0.35",
     "fs-extra": "^11.1.0"
