@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / StillImageFilmResourceWrapperJson
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / StillImageFilmResourceWrapperJson
 
 # Interface: StillImageFilmResourceWrapperJson
 
@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:68](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L68)
+[model/json/ResourceJson.ts:68](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L68)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:69](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L69)
+[model/json/ResourceJson.ts:69](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L69)

@@ -1,4 +1,4 @@
-@bitmark-standard/bitmark-generator / [Modules](modules.md)
+@bitmark-standard/bitmark-generator / [Exports](modules.md)
 
 [@bitmark-standard/bitmark-generator](../README.md)
 ================
@@ -7,11 +7,11 @@ A bitmark generator.
 
 ## API
 
-- [`BitmarkTool.convert(input, options)`](./interfaces/BitmarkToolClass.md)
-- [`Builder`](./interfaces/BuilderClass.md)
-- [`JsonParser.toAst(input)`](./interfaces/JsonParserClass.md)
-- [`BitmarkParser.toAst(input)`](./interfaces/BitmarkParserClass.md)
-- [`Ast`](./interfaces/AstClass.md)
+- [`BitmarkTool.convert(input, options)`](./classes/BitmarkToolClass.md)
+- [`Builder`](./classes/BuilderClass.md)
+- [`JsonParser.toAst(input)`](./classes/JsonParserClass.md)
+- [`BitmarkParser.toAst(input)`](./classes/BitmarkParserClass.md)
+- [`Ast`](./classes/AstClass.md)
 
 ## License
 

@@ -17,13 +17,13 @@ import { JsonParser } from './parser/json/JsonParser';
  */
 export interface ConvertOptions {
   /**
-   * Specify the output type, overriding the default
+   * Specify the output format, overriding the default
    */
-  output?: OutputType;
+  outputFormat?: OutputType;
   /**
    * Specify a file to write the output to
    */
-  outputFile?: fs.PathLike;
+  output?: fs.PathLike;
   /**
    * Options for the output file
    */
@@ -62,7 +62,11 @@ export type OutputType = EnumType<typeof Output>;
  * Bitmark tool for manipulating bitmark in all its formats.
  *
  */
-class BitmarkToolClass {
+class BitmarkTool {
+  protected ast = new Ast();
+  protected jsonParser = new JsonParser();
+  protected bitmarkParser = new BitmarkParser();
+
   /**
    * TODO
    * - put all the conversions in functions to make code clearer
@@ -94,10 +98,10 @@ class BitmarkToolClass {
     const bitmarkOptions = Object.assign({}, opts.bitmarkOptions);
     const jsonOptions = Object.assign({}, opts.jsonOptions);
     const jsonPrettifySpace = jsonOptions.prettify === true ? 2 : jsonOptions.prettify || undefined;
-    const output = opts.output;
-    const outputBitmark = output === Output.bitmark;
-    const outputJson = output === Output.json;
-    const outputAst = output === Output.ast;
+    const outputFormat = opts.outputFormat;
+    const outputBitmark = outputFormat === Output.bitmark;
+    const outputJson = outputFormat === Output.json;
+    const outputAst = outputFormat === Output.ast;
 
     let inStr: string = input as string;
 
@@ -109,14 +113,14 @@ class BitmarkToolClass {
     }
 
     // Preprocess as AST to see if AST
-    let ast = Ast.preprocessAst(inStr);
+    let ast = this.ast.preprocessAst(inStr);
     const isAst = !!ast;
 
     if (!isAst) {
       // Not AST, so process as JSON to see if we have JSON
-      ast = JsonParser.toAst(inStr);
+      ast = this.jsonParser.toAst(inStr);
     }
-    const isJson = !!ast;
+    const isJson = !!ast?.bits;
     const isBitmark = !isJson && !isAst; // Assume bitmark since not AST or JSON
 
     // Convert
@@ -132,15 +136,15 @@ class BitmarkToolClass {
       } else {
         // Bitmark ==> JSON
         // Convert the bitmark to JSON
-        const unformattedJsonStr = BitmarkParser.parse(inStr);
+        const unformattedJsonStr = this.bitmarkParser.parse(inStr);
         const json = JSON.parse(unformattedJsonStr);
         const jsonStr = JSON.stringify(json, undefined, jsonPrettifySpace);
 
-        if (opts.outputFile) {
+        if (opts.output) {
           // Write JSON to file
           const flag = fileOptions.append ? 'a' : 'w';
-          fs.ensureDirSync(path.dirname(opts.outputFile.toString()));
-          fs.writeFileSync(opts.outputFile, jsonStr, {
+          fs.ensureDirSync(path.dirname(opts.output.toString()));
+          fs.writeFileSync(opts.output, jsonStr, {
             flag,
           });
         } else {
@@ -160,9 +164,9 @@ class BitmarkToolClass {
       } else {
         // AST ==> Bitmark
         // Convert the AST to bitmark
-        if (opts.outputFile) {
+        if (opts.output) {
           // Write markup file
-          const generator = new BitmarkFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
+          const generator = new BitmarkFileGenerator(opts.output, fileOptions, bitmarkOptions);
           await generator.generate(ast);
         } else {
           // Generate markup string
@@ -176,15 +180,16 @@ class BitmarkToolClass {
       if (outputJson) {
         // JSON ==> JSON
         // Return the original input as JSON (TODO - validate it)
-        res = JsonParser.preprocessJson(inStr);
+        res = this.jsonParser.preprocessJson(inStr);
       } else if (outputAst) {
         // JSON ==> AST
+        res = ast;
       } else {
         // JSON ==> Bitmark
         // Convert the JSON to bitmark
-        if (opts.outputFile) {
+        if (opts.output) {
           // Write markup file
-          const generator = new BitmarkFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
+          const generator = new BitmarkFileGenerator(opts.output, fileOptions, bitmarkOptions);
           await generator.generate(ast);
         } else {
           // Generate markup string
@@ -218,19 +223,19 @@ class BitmarkToolClass {
     }
 
     // Preprocess as AST to see if AST
-    let ast = Ast.preprocessAst(inStr);
+    let ast = this.ast.preprocessAst(inStr);
     const isAst = !!ast;
 
     if (!isAst) {
       // Not AST, so process as JSON to see if we have JSON
-      ast = JsonParser.toAst(inStr);
+      ast = this.jsonParser.toAst(inStr);
     }
-    const isJson = !!ast;
+    const isJson = !!ast?.bits;
     const isBitmark = !isJson && !isAst; // Assume bitmark since not AST or JSON
 
     if (isBitmark) {
       // Bitmark ==> AST
-      res = BitmarkParser.toAst(inStr);
+      res = this.bitmarkParser.toAst(inStr);
     } else {
       // JSON / AST ==> AST
       res = ast as BitmarkAst;
@@ -240,7 +245,4 @@ class BitmarkToolClass {
   }
 }
 
-const BitmarkTool = new BitmarkToolClass();
-
 export { BitmarkTool, Output };
-export type { BitmarkToolClass };

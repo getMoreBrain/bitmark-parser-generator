@@ -51,6 +51,7 @@ export interface JsonOptions {
  * TODO: NOT IMPLEMENTED!
  */
 class JsonGenerator implements Generator<void>, AstWalkCallbacks {
+  protected ast = new Ast();
   private options: JsonOptions;
   private writer: Writer;
   private printed = false;
@@ -85,7 +86,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     await this.writer.open();
 
     // Walk the bitmark AST
-    Ast.walk(ast, this);
+    this.ast.walk(ast, this);
 
     // Ensure a blank line at end of file
     this.writeLine();

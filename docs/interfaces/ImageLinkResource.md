@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / ImageLinkResource
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / ImageLinkResource
 
 # Interface: ImageLinkResource
 
@@ -40,7 +40,7 @@ ImageLikeResource.format
 
 #### Defined in
 
-[model/ast/Nodes.ts:182](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L182)
+[model/ast/Nodes.ts:182](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L182)
 
 ___
 
@@ -54,7 +54,7 @@ ImageLikeResource.url
 
 #### Defined in
 
-[model/ast/Nodes.ts:183](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L183)
+[model/ast/Nodes.ts:183](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L183)
 
 ___
 
@@ -68,7 +68,7 @@ ImageLikeResource.license
 
 #### Defined in
 
-[model/ast/Nodes.ts:184](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L184)
+[model/ast/Nodes.ts:184](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L184)
 
 ___
 
@@ -82,7 +82,7 @@ ImageLikeResource.copyright
 
 #### Defined in
 
-[model/ast/Nodes.ts:185](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L185)
+[model/ast/Nodes.ts:185](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L185)
 
 ___
 
@@ -96,7 +96,7 @@ ImageLikeResource.provider
 
 #### Defined in
 
-[model/ast/Nodes.ts:186](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L186)
+[model/ast/Nodes.ts:186](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L186)
 
 ___
 
@@ -110,7 +110,7 @@ ImageLikeResource.showInIndex
 
 #### Defined in
 
-[model/ast/Nodes.ts:187](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L187)
+[model/ast/Nodes.ts:187](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L187)
 
 ___
 
@@ -124,7 +124,7 @@ ImageLikeResource.caption
 
 #### Defined in
 
-[model/ast/Nodes.ts:188](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L188)
+[model/ast/Nodes.ts:188](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L188)
 
 ___
 
@@ -138,7 +138,7 @@ ImageLikeResource.src1x
 
 #### Defined in
 
-[model/ast/Nodes.ts:193](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L193)
+[model/ast/Nodes.ts:193](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L193)
 
 ___
 
@@ -152,7 +152,7 @@ ImageLikeResource.src2x
 
 #### Defined in
 
-[model/ast/Nodes.ts:194](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L194)
+[model/ast/Nodes.ts:194](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L194)
 
 ___
 
@@ -166,7 +166,7 @@ ImageLikeResource.src3x
 
 #### Defined in
 
-[model/ast/Nodes.ts:195](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L195)
+[model/ast/Nodes.ts:195](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L195)
 
 ___
 
@@ -180,7 +180,7 @@ ImageLikeResource.src4x
 
 #### Defined in
 
-[model/ast/Nodes.ts:196](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L196)
+[model/ast/Nodes.ts:196](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L196)
 
 ___
 
@@ -194,7 +194,7 @@ ImageLikeResource.width
 
 #### Defined in
 
-[model/ast/Nodes.ts:197](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L197)
+[model/ast/Nodes.ts:197](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L197)
 
 ___
 
@@ -208,7 +208,7 @@ ImageLikeResource.height
 
 #### Defined in
 
-[model/ast/Nodes.ts:198](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L198)
+[model/ast/Nodes.ts:198](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L198)
 
 ___
 
@@ -222,7 +222,7 @@ ImageLikeResource.alt
 
 #### Defined in
 
-[model/ast/Nodes.ts:199](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L199)
+[model/ast/Nodes.ts:199](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L199)
 
 ___
 
@@ -236,4 +236,4 @@ ImageLikeResource.type
 
 #### Defined in
 
-[model/ast/Nodes.ts:234](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L234)
+[model/ast/Nodes.ts:234](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L234)

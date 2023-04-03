@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / HeadingJson
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / HeadingJson
 
 # Interface: HeadingJson
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[model/json/BitJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BitJson.ts#L119)
+[model/json/BitJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/BitJson.ts#L119)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:120](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/BitJson.ts#L120)
+[model/json/BitJson.ts:120](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/BitJson.ts#L120)

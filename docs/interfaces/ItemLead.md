@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / ItemLead
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / ItemLead
 
 # Interface: ItemLead
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:372](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L372)
+[model/ast/Nodes.ts:372](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L372)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:373](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L373)
+[model/ast/Nodes.ts:373](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L373)

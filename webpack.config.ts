@@ -7,7 +7,7 @@ const root = __dirname;
 const entry = path.resolve(root, './dist/cjs/index.js');
 const outputFilename = path.resolve(root, './dist/browser/');
 
-const MAX_ASSET_SIZE = 1024 * 1204 * 10; // 10 MB!!
+const MAX_ASSET_SIZE = 1024 * 1204 * 50; // 50 MB!!
 
 const config: Configuration = {
   target: 'browserslist:modern',
@@ -22,7 +22,7 @@ const config: Configuration = {
   entry,
   output: {
     path: outputFilename,
-    filename: 'index.min.js',
+    filename: 'bitmark-generator.min.js',
     library: {
       type: 'umd',
       name: 'bitmarkGenerator',
@@ -49,7 +49,11 @@ const config: Configuration = {
       }),
     ],
   },
-  plugins: [new NodePolyfillPlugin()],
+  plugins: [
+    new NodePolyfillPlugin({
+      includeAliases: ['constants', 'os', 'path', 'process', 'stream'],
+    }),
+  ],
 };
 
 // eslint-disable-next-line arca/no-default-export

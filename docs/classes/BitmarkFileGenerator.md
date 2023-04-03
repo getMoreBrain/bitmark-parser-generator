@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / BitmarkFileGenerator
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / BitmarkFileGenerator
 
 # Class: BitmarkFileGenerator
 
@@ -36,7 +36,7 @@ Generate bitmark markup from a bitmark AST as a file
 
 #### Defined in
 
-[generator/bitmark/BitmarkFileGenerator.ts:22](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkFileGenerator.ts#L22)
+[generator/bitmark/BitmarkFileGenerator.ts:22](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/bitmark/BitmarkFileGenerator.ts#L22)
 
 ## Methods
 
@@ -62,4 +62,4 @@ Generator.generate
 
 #### Defined in
 
-[generator/bitmark/BitmarkFileGenerator.ts:32](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkFileGenerator.ts#L32)
+[generator/bitmark/BitmarkFileGenerator.ts:32](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/bitmark/BitmarkFileGenerator.ts#L32)

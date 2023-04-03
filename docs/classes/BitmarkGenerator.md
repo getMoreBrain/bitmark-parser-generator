@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / BitmarkGenerator
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / BitmarkGenerator
 
 # Class: BitmarkGenerator
 
@@ -44,7 +44,7 @@ Generate bitmark markup from a bitmark AST
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:59](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L59)
+[generator/bitmark/BitmarkGenerator.ts:60](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/bitmark/BitmarkGenerator.ts#L60)
 
 ## Methods
 
@@ -70,7 +70,7 @@ Generator.generate
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:78](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L78)
+[generator/bitmark/BitmarkGenerator.ts:79](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/bitmark/BitmarkGenerator.ts#L79)
 
 ___
 
@@ -98,7 +98,7 @@ AstWalkCallbacks.enter
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:92](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L92)
+[generator/bitmark/BitmarkGenerator.ts:93](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/bitmark/BitmarkGenerator.ts#L93)
 
 ___
 
@@ -128,7 +128,7 @@ AstWalkCallbacks.between
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:111](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L111)
+[generator/bitmark/BitmarkGenerator.ts:112](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/bitmark/BitmarkGenerator.ts#L112)
 
 ___
 
@@ -156,7 +156,7 @@ AstWalkCallbacks.exit
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:132](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L132)
+[generator/bitmark/BitmarkGenerator.ts:133](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/bitmark/BitmarkGenerator.ts#L133)
 
 ___
 
@@ -184,7 +184,7 @@ AstWalkCallbacks.leaf
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:144](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L144)
+[generator/bitmark/BitmarkGenerator.ts:145](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/bitmark/BitmarkGenerator.ts#L145)
 
 ___
 
@@ -206,7 +206,7 @@ Writes a string value to the output.
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:1449](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L1449)
+[generator/bitmark/BitmarkGenerator.ts:1450](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/bitmark/BitmarkGenerator.ts#L1450)
 
 ___
 
@@ -228,7 +228,7 @@ Writes a new line to the output. The line is indented automatically. The line is
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:1458](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L1458)
+[generator/bitmark/BitmarkGenerator.ts:1459](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/bitmark/BitmarkGenerator.ts#L1459)
 
 ___
 
@@ -251,7 +251,7 @@ Writes a collection of lines to the output. Each line is indented automatically 
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:1468](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L1468)
+[generator/bitmark/BitmarkGenerator.ts:1469](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/bitmark/BitmarkGenerator.ts#L1469)
 
 ___
 
@@ -267,4 +267,4 @@ Writes a single whitespace character to the output.
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:1476](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/bitmark/BitmarkGenerator.ts#L1476)
+[generator/bitmark/BitmarkGenerator.ts:1477](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/bitmark/BitmarkGenerator.ts#L1477)

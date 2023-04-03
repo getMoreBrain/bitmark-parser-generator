@@ -15,6 +15,10 @@ import { Ast } from '../src/ast/Ast';
 import { BitmarkStringGenerator } from '../src/generator/bitmark/BitmarkStringGenerator';
 import { JsonParser } from '../src/parser/json/JsonParser';
 
+const jsonParser = new JsonParser();
+const ast = new Ast();
+const bitmarkTool = new BitmarkTool();
+
 class Bmg {
   async test(debug?: boolean): Promise<void> {
     const filename = path.resolve(__dirname, '..', 'assets/test', 'test.json');
@@ -25,7 +29,7 @@ class Bmg {
 
       // Preprocess and log
       console.log('\n');
-      const bitWrappers = JsonParser.preprocessJson(json);
+      const bitWrappers = jsonParser.preprocessJson(json);
       for (const bitWrapper of bitWrappers) {
         const { bitmark } = bitWrapper;
 
@@ -36,10 +40,10 @@ class Bmg {
       }
 
       // Convert the bitmark JSON to bitmark AST
-      const bitmarkAst = JsonParser.toAst(json);
+      const bitmarkAst = jsonParser.toAst(json);
 
       console.log(JSON.stringify(bitmarkAst, null, 2));
-      Ast.printTree(bitmarkAst);
+      ast.printTree(bitmarkAst);
 
       // // Generate markup code from AST
       // const fileName = './bitmark.txt';
@@ -57,7 +61,7 @@ class Bmg {
       const res = await generator.generate(bitmarkAst);
       console.log(res);
     } else {
-      const res = await BitmarkTool.convert(filename);
+      const res = await bitmarkTool.convert(filename);
       // BitmarkGenerator.convert(json);
       console.log(res);
     }

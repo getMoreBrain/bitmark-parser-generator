@@ -1,0 +1,35 @@
+[.true-false]
+[@id:287883]
+[%][%true-false]
+[@labelTrue:rather yes][@labelFalse:rather no]
+===
+[+A house is bigger than a car.]
+===
+[+A tiger is bigger than a cat.]
+===
+[-A cow is bigger than a dog.]
+===
+
+[.true-false]
+[@id:287885]
+[%][%true-false]
+[!What colors can cows have in Switzerland?]
+===
+[+brown]
+===
+[+purple, but only in chocolate ads]
+===
+[-blue]
+===
+[-green]
+===
+
+[.true-false:bitmark--&image]
+[@id:287887]
+[%][%true-false]
+[&image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png][@width:928]
+===
+[-On the picture, you see a mouse.]
+===
+[+There is a cat on the picture.]
+===

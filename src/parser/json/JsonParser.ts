@@ -56,10 +56,12 @@ import {
 
 // const BODY_SPLIT_REGEX = new RegExp('{[0-9]+}', 'g');
 
+const builder = new Builder();
+
 /**
  * A parser for parsing bitmark JSON to bitmark AST
  */
-class JsonParserClass {
+class JsonParser {
   /**
    * Convert JSON to AST.
    *
@@ -84,7 +86,7 @@ class JsonParserClass {
 
     const bits = bitsNodes.length > 0 ? { bits: bitsNodes } : {};
 
-    const ast = Builder.bitmark(bits);
+    const ast = builder.bitmark(bits);
 
     return ast;
   }
@@ -269,7 +271,7 @@ class JsonParserClass {
     const footerNode = this.footerToAst(footer);
 
     // Build bit
-    const bitNode = Builder.bit({
+    const bitNode = builder.bit({
       bitType: type as BitTypeType,
       textFormat: format as TextFormatType | undefined,
       ids: id,
@@ -337,14 +339,14 @@ class JsonParserClass {
     const nodes: Statement[] = [];
 
     if (statement) {
-      const node = Builder.statement({ text: statement, isCorrect: isCorrect ?? false });
+      const node = builder.statement({ text: statement, isCorrect: isCorrect ?? false });
       nodes.push(node);
     }
 
     if (Array.isArray(statements)) {
       for (const s of statements) {
         const { statement, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = s;
-        const node = Builder.statement({
+        const node = builder.statement({
           text: statement,
           isCorrect,
           item,
@@ -368,7 +370,7 @@ class JsonParserClass {
     if (Array.isArray(choices)) {
       for (const c of choices) {
         const { choice, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = c;
-        const node = Builder.choice({
+        const node = builder.choice({
           text: choice,
           isCorrect,
           item,
@@ -392,7 +394,7 @@ class JsonParserClass {
     if (Array.isArray(responses)) {
       for (const r of responses) {
         const { response, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = r;
-        const node = Builder.response({
+        const node = builder.response({
           text: response,
           isCorrect,
           item,
@@ -416,7 +418,7 @@ class JsonParserClass {
     if (Array.isArray(options)) {
       for (const o of options) {
         const { text, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = o;
-        const node = Builder.selectOption({
+        const node = builder.selectOption({
           text,
           isCorrect,
           item,
@@ -439,7 +441,7 @@ class JsonParserClass {
       for (const t of highlightTexts) {
         const { text, isCorrect, isHighlighted, item, lead, hint, instruction, isExample, example, isCaseSensitive } =
           t;
-        const node = Builder.highlightText({
+        const node = builder.highlightText({
           text,
           isCorrect,
           isHighlighted,
@@ -464,7 +466,7 @@ class JsonParserClass {
         const { item, lead, hint, instruction, isExample, example, choices, responses } = q;
         const choiceNodes = this.choiceBitsToAst(choices);
         const responseNodes = this.responseBitsToAst(responses);
-        const node = Builder.quiz({
+        const node = builder.quiz({
           item,
           lead,
           hint,
@@ -485,7 +487,7 @@ class JsonParserClass {
   private headingBitToAst(heading?: HeadingJson): Heading | undefined {
     let node: Heading | undefined;
     if (heading) {
-      node = Builder.heading({ forKeys: heading.forKeys, forValues: heading.forValues });
+      node = builder.heading({ forKeys: heading.forKeys, forValues: heading.forValues });
     }
 
     return node;
@@ -513,7 +515,7 @@ class JsonParserClass {
         const audio = this.resourceDataToAst(ResourceType.audio, keyAudio) as AudioResource;
         const image = this.resourceDataToAst(ResourceType.image, keyImage) as ImageResource;
 
-        const node = Builder.pair({
+        const node = builder.pair({
           key,
           keyAudio: audio,
           keyImage: image,
@@ -540,7 +542,7 @@ class JsonParserClass {
     if (Array.isArray(matrix)) {
       for (const m of matrix) {
         const { key, cells, item, lead, hint, instruction, isExample, example, isCaseSensitive, isLongAnswer } = m;
-        const node = Builder.matrix({
+        const node = builder.matrix({
           key,
           cells: this.matrixCellsToAst(cells) ?? [],
           item,
@@ -566,7 +568,7 @@ class JsonParserClass {
       for (const mc of matrixCells) {
         const { values, item, lead, hint, instruction, isExample, example } = mc;
 
-        const node = Builder.matrixCell({
+        const node = builder.matrixCell({
           values,
           item,
           lead,
@@ -600,7 +602,7 @@ class JsonParserClass {
           isCaseSensitive,
           isShortAnswer,
         } = q;
-        const node = Builder.question({
+        const node = builder.question({
           question,
           partialAnswer,
           sampleSolution,
@@ -667,7 +669,7 @@ class JsonParserClass {
         : undefined;
 
       // Resource
-      node = Builder.resource({
+      node = builder.resource({
         type,
 
         // Generic (except Article / Document)
@@ -750,7 +752,7 @@ class JsonParserClass {
         }
       }
 
-      node = Builder.body({ bodyParts: bodyPartNodes });
+      node = builder.body({ bodyParts: bodyPartNodes });
     }
 
     return node;
@@ -758,7 +760,7 @@ class JsonParserClass {
 
   private bodyTextToAst(bodyText: string): BodyText {
     // TODO => Will be more complicated one the body text is JSON
-    return Builder.bodyText({ text: bodyText });
+    return builder.bodyText({ text: bodyText });
   }
 
   private bodyBitToAst(bit: BodyBitJson): BodyPart {
@@ -782,7 +784,7 @@ class JsonParserClass {
   private footerToAst(footerText: string): FooterText | undefined {
     // TODO => Will be more complicated one the body text is JSON
     if (StringUtils.isString(footerText)) {
-      return Builder.footerText({ text: footerText });
+      return builder.footerText({ text: footerText });
     }
     return undefined;
   }
@@ -791,7 +793,7 @@ class JsonParserClass {
     const { item, lead, hint, instruction, isExample, example, isCaseSensitive, solutions } = bit;
 
     // Build bit
-    const bitNode = Builder.gap({
+    const bitNode = builder.gap({
       solutions,
       item,
       lead,
@@ -811,7 +813,7 @@ class JsonParserClass {
     const selectOptionNodes = this.selectOptionBitsToAst(options);
 
     // Build bit
-    const node = Builder.select({
+    const node = builder.select({
       options: selectOptionNodes,
       prefix,
       postfix,
@@ -833,7 +835,7 @@ class JsonParserClass {
     const highlightTextNodes = this.highlightTextBitsToAst(texts);
 
     // Build bit
-    const node = Builder.highlight({
+    const node = builder.highlight({
       texts: highlightTextNodes,
       prefix,
       postfix,
@@ -849,7 +851,4 @@ class JsonParserClass {
   }
 }
 
-const JsonParser = new JsonParserClass();
-
 export { JsonParser };
-export type { JsonParserClass };

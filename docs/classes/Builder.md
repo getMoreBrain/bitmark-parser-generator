@@ -1,6 +1,6 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / BuilderClass
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / Builder
 
-# Class: BuilderClass
+# Class: Builder
 
 Builder to build bitmark AST node programmatically
 
@@ -8,51 +8,51 @@ Builder to build bitmark AST node programmatically
 
 ### Constructors
 
-- [constructor](BuilderClass.md#constructor)
+- [constructor](Builder.md#constructor)
 
 ### Methods
 
-- [bitmark](BuilderClass.md#bitmark)
-- [bit](BuilderClass.md#bit)
-- [choice](BuilderClass.md#choice)
-- [response](BuilderClass.md#response)
-- [quiz](BuilderClass.md#quiz)
-- [heading](BuilderClass.md#heading)
-- [pair](BuilderClass.md#pair)
-- [matrix](BuilderClass.md#matrix)
-- [matrixCell](BuilderClass.md#matrixCell)
-- [question](BuilderClass.md#question)
-- [body](BuilderClass.md#body)
-- [bodyText](BuilderClass.md#bodyText)
-- [footerText](BuilderClass.md#footerText)
-- [gap](BuilderClass.md#gap)
-- [select](BuilderClass.md#select)
-- [selectOption](BuilderClass.md#selectOption)
-- [highlight](BuilderClass.md#highlight)
-- [highlightText](BuilderClass.md#highlightText)
-- [statement](BuilderClass.md#statement)
-- [resource](BuilderClass.md#resource)
-- [imageResource](BuilderClass.md#imageResource)
-- [imageLinkResource](BuilderClass.md#imageLinkResource)
-- [audioResource](BuilderClass.md#audioResource)
-- [audioLinkResource](BuilderClass.md#audioLinkResource)
-- [videoResource](BuilderClass.md#videoResource)
-- [videoLinkResource](BuilderClass.md#videoLinkResource)
-- [stillImageFilmResource](BuilderClass.md#stillImageFilmResource)
-- [stillImageFilmLinkResource](BuilderClass.md#stillImageFilmLinkResource)
-- [articleResource](BuilderClass.md#articleResource)
-- [articleLinkResource](BuilderClass.md#articleLinkResource)
-- [documentResource](BuilderClass.md#documentResource)
-- [documentLinkResource](BuilderClass.md#documentLinkResource)
-- [appResource](BuilderClass.md#appResource)
-- [appLinkResource](BuilderClass.md#appLinkResource)
-- [websiteLinkResource](BuilderClass.md#websiteLinkResource)
+- [bitmark](Builder.md#bitmark)
+- [bit](Builder.md#bit)
+- [choice](Builder.md#choice)
+- [response](Builder.md#response)
+- [quiz](Builder.md#quiz)
+- [heading](Builder.md#heading)
+- [pair](Builder.md#pair)
+- [matrix](Builder.md#matrix)
+- [matrixCell](Builder.md#matrixCell)
+- [question](Builder.md#question)
+- [body](Builder.md#body)
+- [bodyText](Builder.md#bodyText)
+- [footerText](Builder.md#footerText)
+- [gap](Builder.md#gap)
+- [select](Builder.md#select)
+- [selectOption](Builder.md#selectOption)
+- [highlight](Builder.md#highlight)
+- [highlightText](Builder.md#highlightText)
+- [statement](Builder.md#statement)
+- [resource](Builder.md#resource)
+- [imageResource](Builder.md#imageResource)
+- [imageLinkResource](Builder.md#imageLinkResource)
+- [audioResource](Builder.md#audioResource)
+- [audioLinkResource](Builder.md#audioLinkResource)
+- [videoResource](Builder.md#videoResource)
+- [videoLinkResource](Builder.md#videoLinkResource)
+- [stillImageFilmResource](Builder.md#stillImageFilmResource)
+- [stillImageFilmLinkResource](Builder.md#stillImageFilmLinkResource)
+- [articleResource](Builder.md#articleResource)
+- [articleLinkResource](Builder.md#articleLinkResource)
+- [documentResource](Builder.md#documentResource)
+- [documentLinkResource](Builder.md#documentLinkResource)
+- [appResource](Builder.md#appResource)
+- [appLinkResource](Builder.md#appLinkResource)
+- [websiteLinkResource](Builder.md#websiteLinkResource)
 
 ## Constructors
 
 ### constructor
 
-• **new BuilderClass**()
+• **new Builder**()
 
 ## Methods
 
@@ -75,7 +75,7 @@ Build bitmark node
 
 #### Defined in
 
-[ast/Builder.ts:65](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L65)
+[ast/Builder.ts:65](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L65)
 
 ___
 
@@ -151,7 +151,7 @@ Build bit node
 
 #### Defined in
 
-[ast/Builder.ts:80](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L80)
+[ast/Builder.ts:80](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L80)
 
 ___
 
@@ -181,7 +181,7 @@ Build choice node
 
 #### Defined in
 
-[ast/Builder.ts:267](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L267)
+[ast/Builder.ts:267](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L267)
 
 ___
 
@@ -211,7 +211,7 @@ Build response node
 
 #### Defined in
 
-[ast/Builder.ts:302](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L302)
+[ast/Builder.ts:302](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L302)
 
 ___
 
@@ -240,7 +240,7 @@ Build quiz node
 
 #### Defined in
 
-[ast/Builder.ts:337](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L337)
+[ast/Builder.ts:337](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L337)
 
 ___
 
@@ -264,7 +264,7 @@ Build heading node
 
 #### Defined in
 
-[ast/Builder.ts:370](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L370)
+[ast/Builder.ts:370](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L370)
 
 ___
 
@@ -297,7 +297,7 @@ Build pair node
 
 #### Defined in
 
-[ast/Builder.ts:391](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L391)
+[ast/Builder.ts:391](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L391)
 
 ___
 
@@ -328,7 +328,7 @@ Build matrix node
 
 #### Defined in
 
-[ast/Builder.ts:433](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L433)
+[ast/Builder.ts:433](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L433)
 
 ___
 
@@ -356,7 +356,7 @@ Build matrixCell node
 
 #### Defined in
 
-[ast/Builder.ts:470](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L470)
+[ast/Builder.ts:470](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L470)
 
 ___
 
@@ -388,7 +388,7 @@ Build question node
 
 #### Defined in
 
-[ast/Builder.ts:501](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L501)
+[ast/Builder.ts:501](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L501)
 
 ___
 
@@ -411,7 +411,7 @@ Build body node
 
 #### Defined in
 
-[ast/Builder.ts:553](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L553)
+[ast/Builder.ts:553](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L553)
 
 ___
 
@@ -434,7 +434,7 @@ Build bodyText node
 
 #### Defined in
 
-[ast/Builder.ts:566](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L566)
+[ast/Builder.ts:566](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L566)
 
 ___
 
@@ -457,7 +457,7 @@ Build footer node
 
 #### Defined in
 
-[ast/Builder.ts:582](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L582)
+[ast/Builder.ts:582](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L582)
 
 ___
 
@@ -486,7 +486,7 @@ Build gap node
 
 #### Defined in
 
-[ast/Builder.ts:598](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L598)
+[ast/Builder.ts:598](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L598)
 
 ___
 
@@ -517,7 +517,7 @@ Build select node
 
 #### Defined in
 
-[ast/Builder.ts:633](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L633)
+[ast/Builder.ts:633](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L633)
 
 ___
 
@@ -547,7 +547,7 @@ Build selectOption node
 
 #### Defined in
 
-[ast/Builder.ts:672](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L672)
+[ast/Builder.ts:672](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L672)
 
 ___
 
@@ -578,7 +578,7 @@ Build highlight node
 
 #### Defined in
 
-[ast/Builder.ts:707](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L707)
+[ast/Builder.ts:707](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L707)
 
 ___
 
@@ -609,7 +609,7 @@ Build highlightText node
 
 #### Defined in
 
-[ast/Builder.ts:746](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L746)
+[ast/Builder.ts:746](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L746)
 
 ___
 
@@ -639,7 +639,7 @@ Build statement node
 
 #### Defined in
 
-[ast/Builder.ts:783](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L783)
+[ast/Builder.ts:783](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L783)
 
 ___
 
@@ -685,7 +685,7 @@ Build resource node
 
 #### Defined in
 
-[ast/Builder.ts:818](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L818)
+[ast/Builder.ts:818](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L818)
 
 ___
 
@@ -721,7 +721,7 @@ Build imageResource node
 
 #### Defined in
 
-[ast/Builder.ts:946](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L946)
+[ast/Builder.ts:946](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L946)
 
 ___
 
@@ -757,7 +757,7 @@ Build imageLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:976](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L976)
+[ast/Builder.ts:976](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L976)
 
 ___
 
@@ -786,7 +786,7 @@ Build audioResource node
 
 #### Defined in
 
-[ast/Builder.ts:1006](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1006)
+[ast/Builder.ts:1006](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L1006)
 
 ___
 
@@ -815,7 +815,7 @@ Build audioLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1029](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1029)
+[ast/Builder.ts:1029](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L1029)
 
 ___
 
@@ -854,7 +854,7 @@ Build videoResource node
 
 #### Defined in
 
-[ast/Builder.ts:1052](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1052)
+[ast/Builder.ts:1052](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L1052)
 
 ___
 
@@ -893,7 +893,7 @@ Build videoLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1085](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1085)
+[ast/Builder.ts:1085](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L1085)
 
 ___
 
@@ -932,7 +932,7 @@ Build stillImageFilmResource node
 
 #### Defined in
 
-[ast/Builder.ts:1118](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1118)
+[ast/Builder.ts:1118](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L1118)
 
 ___
 
@@ -971,7 +971,7 @@ Build stillImageFilmLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1151](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1151)
+[ast/Builder.ts:1151](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L1151)
 
 ___
 
@@ -1001,7 +1001,7 @@ Build articleResource node
 
 #### Defined in
 
-[ast/Builder.ts:1184](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1184)
+[ast/Builder.ts:1184](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L1184)
 
 ___
 
@@ -1030,7 +1030,7 @@ Build articleLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1208](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1208)
+[ast/Builder.ts:1208](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L1208)
 
 ___
 
@@ -1060,7 +1060,7 @@ Build documentResource node
 
 #### Defined in
 
-[ast/Builder.ts:1231](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1231)
+[ast/Builder.ts:1231](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L1231)
 
 ___
 
@@ -1089,7 +1089,7 @@ Build documentLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1255](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1255)
+[ast/Builder.ts:1255](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L1255)
 
 ___
 
@@ -1117,7 +1117,7 @@ Build appResource node
 
 #### Defined in
 
-[ast/Builder.ts:1278](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1278)
+[ast/Builder.ts:1278](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L1278)
 
 ___
 
@@ -1145,7 +1145,7 @@ Build appLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1300](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1300)
+[ast/Builder.ts:1300](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L1300)
 
 ___
 
@@ -1174,4 +1174,4 @@ Build websiteLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1322](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Builder.ts#L1322)
+[ast/Builder.ts:1322](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Builder.ts#L1322)

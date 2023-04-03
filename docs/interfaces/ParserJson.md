@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / ParserJson
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / ParserJson
 
 # Interface: ParserJson
 
@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[model/json/ParserJson.ts:4](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ParserJson.ts#L4)
+[model/json/ParserJson.ts:4](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ParserJson.ts#L4)

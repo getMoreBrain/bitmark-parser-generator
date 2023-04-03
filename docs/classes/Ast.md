@@ -1,6 +1,6 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / AstClass
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / Ast
 
-# Class: AstClass
+# Class: Ast
 
 An AST (Abstract Syntax Tree) implementation for the bitmark language
 
@@ -8,21 +8,21 @@ An AST (Abstract Syntax Tree) implementation for the bitmark language
 
 ### Constructors
 
-- [constructor](AstClass.md#constructor)
+- [constructor](Ast.md#constructor)
 
 ### Methods
 
-- [walk](AstClass.md#walk)
-- [getRouteKey](AstClass.md#getRouteKey)
-- [printTree](AstClass.md#printTree)
-- [preprocessAst](AstClass.md#preprocessAst)
-- [isAst](AstClass.md#isAst)
+- [walk](Ast.md#walk)
+- [getRouteKey](Ast.md#getRouteKey)
+- [printTree](Ast.md#printTree)
+- [preprocessAst](Ast.md#preprocessAst)
+- [isAst](Ast.md#isAst)
 
 ## Constructors
 
 ### constructor
 
-• **new AstClass**()
+• **new Ast**()
 
 ## Methods
 
@@ -38,6 +38,7 @@ Walking the tree can be used to convert it to another format (e.g. bitmark marku
 The tree is navigated from root to leaf, decending each branch greedily.
 
 e.g. for the tree:
+```
 A
 |__B1
 |  |__C1
@@ -56,6 +57,7 @@ Enter B2
 Leaf  C3
 Exit  B2
 Exit  A1
+```
 
 #### Parameters
 
@@ -70,7 +72,7 @@ Exit  A1
 
 #### Defined in
 
-[ast/Ast.ts:109](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L109)
+[ast/Ast.ts:111](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L111)
 
 ___
 
@@ -94,7 +96,7 @@ For the route A1 -> B4 -> C2 the route key would be A1_B4_C2
 
 #### Defined in
 
-[ast/Ast.ts:121](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L121)
+[ast/Ast.ts:123](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L123)
 
 ___
 
@@ -117,7 +119,7 @@ Useful for debug / development purposes
 
 #### Defined in
 
-[ast/Ast.ts:139](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L139)
+[ast/Ast.ts:141](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L141)
 
 ___
 
@@ -142,7 +144,7 @@ bitmark AST in a standard format (BitmarkAst object)
 
 #### Defined in
 
-[ast/Ast.ts:174](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L174)
+[ast/Ast.ts:176](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L176)
 
 ___
 
@@ -166,4 +168,4 @@ true if Bit JSON, otherwise false
 
 #### Defined in
 
-[ast/Ast.ts:197](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/ast/Ast.ts#L197)
+[ast/Ast.ts:199](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/ast/Ast.ts#L199)

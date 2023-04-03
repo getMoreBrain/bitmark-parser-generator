@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / ImageLinkResourceJson
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / ImageLinkResourceJson
 
 # Interface: ImageLinkResourceJson
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:116](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L116)
+[model/json/ResourceJson.ts:116](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L116)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:117](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L117)
+[model/json/ResourceJson.ts:117](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L117)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:118](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L118)
+[model/json/ResourceJson.ts:118](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L118)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L119)
+[model/json/ResourceJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L119)
 
 ___
 
@@ -98,7 +98,7 @@ ImageLikeResourceJson.format
 
 #### Defined in
 
-[model/json/ResourceJson.ts:127](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L127)
+[model/json/ResourceJson.ts:127](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L127)
 
 ___
 
@@ -112,7 +112,7 @@ ImageLikeResourceJson.src
 
 #### Defined in
 
-[model/json/ResourceJson.ts:129](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L129)
+[model/json/ResourceJson.ts:129](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L129)
 
 ___
 
@@ -126,7 +126,7 @@ ImageLikeResourceJson.src1x
 
 #### Defined in
 
-[model/json/ResourceJson.ts:130](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L130)
+[model/json/ResourceJson.ts:130](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L130)
 
 ___
 
@@ -140,7 +140,7 @@ ImageLikeResourceJson.src2x
 
 #### Defined in
 
-[model/json/ResourceJson.ts:131](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L131)
+[model/json/ResourceJson.ts:131](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L131)
 
 ___
 
@@ -154,7 +154,7 @@ ImageLikeResourceJson.src3x
 
 #### Defined in
 
-[model/json/ResourceJson.ts:132](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L132)
+[model/json/ResourceJson.ts:132](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L132)
 
 ___
 
@@ -168,7 +168,7 @@ ImageLikeResourceJson.src4x
 
 #### Defined in
 
-[model/json/ResourceJson.ts:133](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L133)
+[model/json/ResourceJson.ts:133](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L133)
 
 ___
 
@@ -182,7 +182,7 @@ ImageLikeResourceJson.width
 
 #### Defined in
 
-[model/json/ResourceJson.ts:134](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L134)
+[model/json/ResourceJson.ts:134](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L134)
 
 ___
 
@@ -196,7 +196,7 @@ ImageLikeResourceJson.height
 
 #### Defined in
 
-[model/json/ResourceJson.ts:135](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L135)
+[model/json/ResourceJson.ts:135](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L135)
 
 ___
 
@@ -210,7 +210,7 @@ ImageLikeResourceJson.alt
 
 #### Defined in
 
-[model/json/ResourceJson.ts:136](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L136)
+[model/json/ResourceJson.ts:136](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L136)
 
 ___
 
@@ -224,7 +224,7 @@ ImageLikeResourceJson.caption
 
 #### Defined in
 
-[model/json/ResourceJson.ts:137](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L137)
+[model/json/ResourceJson.ts:137](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L137)
 
 ___
 
@@ -238,4 +238,4 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:179](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L179)
+[model/json/ResourceJson.ts:179](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L179)

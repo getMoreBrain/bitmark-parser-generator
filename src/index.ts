@@ -27,9 +27,7 @@ export { NodeType } from './model/ast/NodeType';
 //
 // Type only exports
 //
-export type { BitmarkToolClass } from './BitmarkTool';
 
-export type { AstClass } from './ast/Ast';
 export type { ConvertOptions, OutputType } from './BitmarkTool';
 export type { FileOptions } from './ast/writer/FileWriter';
 export type { BitmarkOptions } from './generator/bitmark/BitmarkGenerator';
@@ -38,9 +36,6 @@ export type { BitTypeType } from './model/enum/BitType';
 export type { TextFormatType } from './model/enum/TextFormat';
 export type { ResourceTypeType } from './model/enum/ResourceType';
 export type { NodeTypeType } from './model/ast/NodeType';
-export type { BuilderClass } from './ast/Builder';
-export type { JsonParserClass } from './parser/json/JsonParser';
-export type { BitmarkParserClass } from './parser/bitmark/BitmarkParser';
 export type { Generator } from './generator/Generator';
 
 export type { NodeInfo, AstWalkCallbacks } from './ast/Ast';

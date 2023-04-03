@@ -8,7 +8,7 @@ module.exports = {
   testEnvironment: 'node',
   verbose: true,
   testTimeout: 50000,
-  testMatch: ['<rootDir>/test/bmgBookTest.ts'],
+  testMatch: ['<rootDir>/bmgBookTest.ts'],
   transform: {
     '^.+\\.tsx?$': [
       'ts-jest',
@@ -21,11 +21,11 @@ module.exports = {
   },
   reporters: [
     'default',
-    [require.resolve('jest-junit'), { outputDirectory: '<rootDir>/test/results' }],
+    [require.resolve('jest-junit'), { outputDirectory: '<rootDir>/results' }],
     [
       require.resolve('jest-html-reporter'),
       {
-        outputPath: './test/results/test-report-books.html',
+        outputPath: '<rootDir>/results/test-report.html',
         pageTitle: 'bitmark-generator Books Test Report',
         includeFailureMsg: false,
       },

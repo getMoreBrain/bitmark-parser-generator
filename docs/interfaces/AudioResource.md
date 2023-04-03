@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / AudioResource
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / AudioResource
 
 # Interface: AudioResource
 
@@ -33,7 +33,7 @@ AudioLikeResource.format
 
 #### Defined in
 
-[model/ast/Nodes.ts:182](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L182)
+[model/ast/Nodes.ts:182](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L182)
 
 ___
 
@@ -47,7 +47,7 @@ AudioLikeResource.url
 
 #### Defined in
 
-[model/ast/Nodes.ts:183](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L183)
+[model/ast/Nodes.ts:183](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L183)
 
 ___
 
@@ -61,7 +61,7 @@ AudioLikeResource.license
 
 #### Defined in
 
-[model/ast/Nodes.ts:184](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L184)
+[model/ast/Nodes.ts:184](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L184)
 
 ___
 
@@ -75,7 +75,7 @@ AudioLikeResource.copyright
 
 #### Defined in
 
-[model/ast/Nodes.ts:185](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L185)
+[model/ast/Nodes.ts:185](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L185)
 
 ___
 
@@ -89,7 +89,7 @@ AudioLikeResource.provider
 
 #### Defined in
 
-[model/ast/Nodes.ts:186](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L186)
+[model/ast/Nodes.ts:186](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L186)
 
 ___
 
@@ -103,7 +103,7 @@ AudioLikeResource.showInIndex
 
 #### Defined in
 
-[model/ast/Nodes.ts:187](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L187)
+[model/ast/Nodes.ts:187](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L187)
 
 ___
 
@@ -117,7 +117,7 @@ AudioLikeResource.caption
 
 #### Defined in
 
-[model/ast/Nodes.ts:188](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L188)
+[model/ast/Nodes.ts:188](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L188)
 
 ___
 
@@ -131,4 +131,4 @@ AudioLikeResource.type
 
 #### Defined in
 
-[model/ast/Nodes.ts:238](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L238)
+[model/ast/Nodes.ts:238](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L238)

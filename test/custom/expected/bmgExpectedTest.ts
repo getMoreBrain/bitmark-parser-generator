@@ -13,12 +13,11 @@ import { describe, test } from '@jest/globals';
 import fs from 'fs-extra';
 import path from 'path';
 
-import { BitmarkFileGenerator } from '../src/generator/bitmark/BitmarkFileGenerator';
-import { BitmarkParser } from '../src/parser/bitmark/BitmarkParser';
-import { JsonParser } from '../src/parser/json/JsonParser';
-
-import { BitJsonUtils } from './utils/BitJsonUtils';
-import { deepDiffMapper } from './utils/deepDiffMapper';
+import { BitmarkFileGenerator } from '../../../src/generator/bitmark/BitmarkFileGenerator';
+import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
+import { JsonParser } from '../../../src/parser/json/JsonParser';
+import { BitJsonUtils } from '../../utils/BitJsonUtils';
+import { deepDiffMapper } from '../../utils/deepDiffMapper';
 
 // TODO should use 'require.resolve()' rather than direct node_modules
 const NODE_MODULES_DIR = path.resolve(__dirname, '../node_modules');
@@ -26,6 +25,9 @@ const BITMARK_GRAMMAR_DIR = path.resolve(NODE_MODULES_DIR, 'bitmark-grammar');
 const JSON_TEST_OUTPUT_DIR = path.resolve(__dirname, '../assets/test/json');
 const EXPECTED_JSON = path.resolve(BITMARK_GRAMMAR_DIR, 'src/tests/EXPECTED.json');
 const EXPECTED_JSON_MATCH_REG_EX = new RegExp('<<<<(.+)(\\n[^<<<<]*\\n)<<<<', 'gm');
+
+const jsonParser = new JsonParser();
+const bitmarkParser = new BitmarkParser();
 
 interface JsonTestCases {
   [key: string]: JsonTestCase;
@@ -84,7 +86,7 @@ function writeTestJson(allTestJson: JsonTestCases): void {
     fs.writeFileSync(jsonFile, JSON.stringify(json, null, 2));
 
     // Write original Bitmark
-    const bitwrappers = JsonParser.preprocessJson(json);
+    const bitwrappers = jsonParser.preprocessJson(json);
 
     const markupFile = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.bit`);
     let markup = '';
@@ -130,7 +132,7 @@ describe('bitmark-generator', () => {
         BitJsonUtils.cleanupJson(json, { removeParser: true, removeErrors: true });
 
         // Convert the bitmark JSON to bitmark AST
-        const bitmarkAst = JsonParser.toAst(json);
+        const bitmarkAst = jsonParser.toAst(json);
 
         // Generate markup code from AST
         const markupFile = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.gen.bit`);
@@ -145,7 +147,7 @@ describe('bitmark-generator', () => {
         // Generate JSON from generated bitmark markup using the parser
         let newJson = [];
         try {
-          const newJsonStr = BitmarkParser.parse(markup);
+          const newJsonStr = bitmarkParser.parse(markup);
           newJson = JSON.parse(newJsonStr);
         } catch {
           throw new Error('Failed to parse bitmark-grammer output');

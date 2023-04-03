@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <head>
   <title>bonaroo-able test</title>
-  <script src="../../dist/browser/index.min.js"></script>
+  <script src="../../dist/browser/bitmark-generator.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const { BitmarkJson, StringBitmapMarkupGenerator, BitmarkParser } = window.bitmarkGenerator;
       console.log('bitmark-generator Browser Test');
+
+      const { BitmarkTool } = window.bitmarkGenerator;
+      const tool = new BitmarkTool();
 
       const defaultJson = JSON.parse(`[
     {
@@ -50,21 +52,10 @@
       const jsonToBitmark = async () => {
         console.log('Converting JSON to Bitmark');
         try {
-          // Get the JSON from the input box
-          const json = JSON.parse(dom.json.value);
+          const json = dom.json.value;
+          const bitmark = await tool.convert(json);
 
-          // Convert the bitmark JSON to bitmark AST
-          const ast = BitmarkJson.toAst(json);
-          console.log(ast);
-
-          // Generate markup code from AST
-          const generator = new StringBitmapMarkupGenerator({
-            explicitTextFormat: false,
-          });
-
-          const res = await generator.generate(ast);
-
-          dom.bitmark.value = res;
+          dom.bitmark.value = bitmark;
         } catch (e) {
           dom.bitmark.value = JSON.stringify(e, Object.getOwnPropertyNames(e), 2);
           console.log(e);
@@ -74,17 +65,8 @@
       const bitmarkToJson = async () => {
         console.log('Converting Bitmark to JSON');
         try {
-          // Get the Bitmark from the input box
           const bitmark = dom.bitmark.value;
-
-          const parser = new BitmarkParser();
-
-          const jsonStr = parser.parse(bitmark);
-          const json = JSON.parse(jsonStr);
-
-          // Convert the bitmark JSON to bitmark AST
-          // const ast = BitmarkJson.toAst(json);
-          // console.log(ast);
+          const json = await tool.convert(bitmark);
 
           dom.json.value = JSON.stringify(json, null, 2);
         } catch (e) {

@@ -74,7 +74,7 @@ export interface AstWalkCallbacks {
 /**
  * An AST (Abstract Syntax Tree) implementation for the bitmark language
  */
-class AstClass {
+class Ast {
   /**
    * Walk an AST, decending each branch and calling callbacks when entering, leaving, and when in between child
    * nodes.
@@ -84,6 +84,7 @@ class AstClass {
    * The tree is navigated from root to leaf, decending each branch greedily.
    *
    * e.g. for the tree:
+   * ```
    * A
    * |__B1
    * |  |__C1
@@ -102,6 +103,7 @@ class AstClass {
    * Leaf  C3
    * Exit  B2
    * Exit  A1
+   * ```
    *
    * @param ast - bitmark AST
    * @param callbacks - set of callbacks to call while walking the tree
@@ -301,8 +303,4 @@ class AstClass {
   }
 }
 
-// Singleton
-const Ast = new AstClass();
-
 export { Ast };
-export type { AstClass };

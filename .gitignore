@@ -10,7 +10,8 @@ package.tgz
 tsconfig.tsbuildinfo
 
 # TEST
-/test/results
+/test/**/results
+/test/**/coverage
 test.txt
 test-report.html
 junit.xml

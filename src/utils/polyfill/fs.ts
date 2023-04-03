@@ -3,4 +3,10 @@ function existsSync(_filename: string): boolean {
   return false;
 }
 
-export { existsSync };
+const realpath = {
+  native: function () {
+    return undefined;
+  },
+};
+
+export { existsSync, realpath };

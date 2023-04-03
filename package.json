@@ -4,7 +4,7 @@
   "description": "A bitmark generator",
   "author": "Richard Sewell",
   "license": "ISC",
-  "homepage": "https://github.com/bitmark-standard/bitmark-grammar#readme",
+  "homepage": "https://github.com/bitmark-standard/bitmark-generator#readme",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
@@ -12,15 +12,15 @@
     "dist"
   ],
   "scripts": {
-    "start": "vite-node ./test/bmgDev.ts",
+    "start": "vite-node ./test/custom/dev/bmgDev.ts",
     "build": "run build-cjs && run build-esm && webpack && run build-doc",
     "build-cjs": "tsc",
     "build-esm": "tsc --module ES6 --outDir 'dist/esm'",
     "build-umd": "tsc && webpack",
     "build-doc": "typedoc",
     "test": "jest --runInBand --coverage",
-    "test-books": "jest --config=jest.books.config.js --runInBand --coverage",
-    "split-expected-json": "tsx ./scripts/split-expected-json.ts",
+    "test-books": "jest --config=./test/custom/books/jest.books.config.js --runInBand --coverage",
+    "test-expected": "jest --config=./test/custom/expected/jest.expected.config.js --runInBand --coverage",
     "publish": "yarn npm publish",
     "prepublish": "run lint && run clean && run build && run test",
     "clean": "shx rm -rf ./dist",
@@ -49,6 +49,11 @@
       "last 5 firefox versions"
     ]
   },
+  "jsdelivr": "dist/browser/bitmark-generator.min.js",
+  "unpkg": "dist/browser/bitmark-generator.min.js",
+  "contributors": [
+    "Richard Sewell (https://github.com/zx-ncoderz)"
+  ],
   "resolutions": {
     "antlr4ts": "0.5.0-alpha.4"
   },

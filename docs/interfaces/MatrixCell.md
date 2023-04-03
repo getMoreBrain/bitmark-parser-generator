@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / MatrixCell
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / MatrixCell
 
 # Interface: MatrixCell
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:157](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L157)
+[model/ast/Nodes.ts:157](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L157)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:158](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L158)
+[model/ast/Nodes.ts:158](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L158)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:159](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L159)
+[model/ast/Nodes.ts:159](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L159)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:160](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L160)
+[model/ast/Nodes.ts:160](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L160)
 
 ___
 
@@ -60,4 +60,4 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:161](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L161)
+[model/ast/Nodes.ts:161](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L161)

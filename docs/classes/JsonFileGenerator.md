@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / JsonFileGenerator
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / JsonFileGenerator
 
 # Class: JsonFileGenerator
 
@@ -38,7 +38,7 @@ Generate bitmark JSON from a bitmark AST as a file
 
 #### Defined in
 
-[generator/json/JsonFileGenerator.ts:24](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonFileGenerator.ts#L24)
+[generator/json/JsonFileGenerator.ts:24](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/json/JsonFileGenerator.ts#L24)
 
 ## Methods
 
@@ -64,4 +64,4 @@ Generator.generate
 
 #### Defined in
 
-[generator/json/JsonFileGenerator.ts:34](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/json/JsonFileGenerator.ts#L34)
+[generator/json/JsonFileGenerator.ts:34](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/json/JsonFileGenerator.ts#L34)

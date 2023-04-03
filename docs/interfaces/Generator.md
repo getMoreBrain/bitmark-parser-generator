@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / Generator
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / Generator
 
 # Interface: Generator<T\>
 
@@ -45,4 +45,4 @@
 
 #### Defined in
 
-[generator/Generator.ts:4](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/generator/Generator.ts#L4)
+[generator/Generator.ts:4](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/generator/Generator.ts#L4)

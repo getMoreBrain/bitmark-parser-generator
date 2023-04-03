@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / ResourceWrapperJson
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / ResourceWrapperJson
 
 # Interface: ResourceWrapperJson
 
@@ -50,4 +50,4 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:35](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/json/ResourceJson.ts#L35)
+[model/json/ResourceJson.ts:35](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/json/ResourceJson.ts#L35)

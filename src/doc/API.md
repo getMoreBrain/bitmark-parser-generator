@@ -5,11 +5,11 @@ A bitmark generator.
 
 ## API
 
-- [`BitmarkTool.convert(input, options)`](./interfaces/BitmarkToolClass.md)
-- [`Builder`](./interfaces/BuilderClass.md)
-- [`JsonParser.toAst(input)`](./interfaces/JsonParserClass.md)
-- [`BitmarkParser.toAst(input)`](./interfaces/BitmarkParserClass.md)
-- [`Ast`](./interfaces/AstClass.md)
+- [`BitmarkTool.convert(input, options)`](./classes/BitmarkTool.md)
+- [`Builder`](./classes/Builder.md)
+- [`JsonParser.toAst(input)`](./classes/JsonParser.md)
+- [`BitmarkParser.toAst(input)`](./classes/BitmarkParser.md)
+- [`Ast`](./classes/Ast.md)
 
 ## License
 

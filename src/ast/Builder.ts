@@ -55,7 +55,7 @@ interface RemoveUnwantedPropertiesOptions {
 /**
  * Builder to build bitmark AST node programmatically
  */
-class BuilderClass {
+class Builder {
   /**
    * Build bitmark node
    *
@@ -1616,7 +1616,4 @@ class BuilderClass {
   }
 }
 
-const Builder = new BuilderClass();
-
 export { Builder };
-export type { BuilderClass };

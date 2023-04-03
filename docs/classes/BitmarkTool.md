@@ -1,6 +1,6 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / BitmarkToolClass
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / BitmarkTool
 
-# Class: BitmarkToolClass
+# Class: BitmarkTool
 
 Bitmark tool for manipulating bitmark in all its formats.
 
@@ -8,18 +8,18 @@ Bitmark tool for manipulating bitmark in all its formats.
 
 ### Constructors
 
-- [constructor](BitmarkToolClass.md#constructor)
+- [constructor](BitmarkTool.md#constructor)
 
 ### Methods
 
-- [convert](BitmarkToolClass.md#convert)
-- [createAst](BitmarkToolClass.md#createAst)
+- [convert](BitmarkTool.md#convert)
+- [createAst](BitmarkTool.md#createAst)
 
 ## Constructors
 
 ### constructor
 
-• **new BitmarkToolClass**()
+• **new BitmarkTool**()
 
 ## Methods
 
@@ -63,7 +63,7 @@ void if writing to a file
 
 #### Defined in
 
-[BitmarkTool.ts:90](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/BitmarkTool.ts#L90)
+[BitmarkTool.ts:94](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/BitmarkTool.ts#L94)
 
 ___
 
@@ -93,4 +93,4 @@ bitmark AST
 
 #### Defined in
 
-[BitmarkTool.ts:209](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/BitmarkTool.ts#L209)
+[BitmarkTool.ts:214](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/BitmarkTool.ts#L214)

@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Modules](../modules.md) / FooterText
+[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / FooterText
 
 # Interface: FooterText
 
@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:302](https://github.com/getMoreBrain/bitmark-generator/blob/a7a40de/src/model/ast/Nodes.ts#L302)
+[model/ast/Nodes.ts:302](https://github.com/getMoreBrain/bitmark-generator/blob/416295c/src/model/ast/Nodes.ts#L302)
