@@ -17,14 +17,14 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://npm.pkg.github.com'
           cache: 'yarn'
-      # - name: Setup Yarn
-      #   run: |
-      #     yarn config set npmScopes.bitmark-standard.npmRegistryServer "https://npm.pkg.github.com"
-      #     yarn config set npmScopes.bitmark-standard.npmPublishRegistry "https://npm.pkg.github.com"
-      #     yarn config set npmScopes.bitmark-standard.npmAlwaysAuth true
-      #     yarn config set npmScopes.bitmark-standard.npmAuthToken $GITHUB_AUTH_TOKEN
-      #   env:
-      #     GITHUB_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Yarn
+        run: |
+          yarn config set npmScopes.getmorebrain.npmRegistryServer "https://npm.pkg.github.com"
+          yarn config set npmScopes.getmorebrain.npmPublishRegistry "https://npm.pkg.github.com"
+          yarn config set npmScopes.getmorebrain.npmAlwaysAuth true
+          yarn config set npmScopes.getmorebrain.npmAuthToken $GITHUB_AUTH_TOKEN
+        env:
+          GITHUB_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install dependencies
         run: yarn install --immutable
       - name: Publish
