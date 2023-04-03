@@ -6,7 +6,7 @@ Copyright ©2023 Get More Brain
 
 */
 
-import fs from 'fs-extra';
+import * as fs from 'fs-extra';
 import path from 'path';
 
 import { BitmarkTool } from '../src/BitmarkTool';

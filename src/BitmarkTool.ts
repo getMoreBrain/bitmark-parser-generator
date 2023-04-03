@@ -1,5 +1,5 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
-import fs from 'fs-extra';
+import * as fs from 'fs-extra';
 import path from 'path';
 
 import { Ast } from './ast/Ast';

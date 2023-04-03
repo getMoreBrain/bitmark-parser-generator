@@ -10,7 +10,7 @@
 
 import { describe, test } from '@jest/globals';
 // import deepEqual from 'deep-equal';
-import fs from 'fs-extra';
+import * as fs from 'fs-extra';
 import path from 'path';
 
 import { BitmarkFileGenerator } from '../../../src/generator/bitmark/BitmarkFileGenerator';

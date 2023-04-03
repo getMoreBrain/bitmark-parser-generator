@@ -1,4 +1,4 @@
-import fs from 'fs-extra';
+import * as fs from 'fs-extra';
 
 import { FileOptions, FileWriter } from '../../ast/writer/FileWriter';
 import { BitmarkAst } from '../../model/ast/Nodes';
