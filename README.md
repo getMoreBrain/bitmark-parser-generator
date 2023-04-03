@@ -1,6 +1,8 @@
 @bitmark-standard/bitmark-generator
 ================
 
+![Build & Test](https://github.com/getMoreBrain/bitmark-generator/actions/workflows/build-test.yml/badge.svg?branch=main)
+
 A bitmark generator using an Abstract Syntax Tree (AST).
 
 Use this package to programmatically create bitmark or convert between bitmark formats.
