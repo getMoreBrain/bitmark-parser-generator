@@ -9,19 +9,19 @@ Copyright ©2023 Get More Brain
 import * as fs from 'fs-extra';
 import path from 'path';
 
-import { BitmarkTool } from '../src/BitmarkTool';
-import { Ast } from '../src/ast/Ast';
-// import { BitmarkFileGenerator } from '../src/generator/bitmark/BitmarkFileGenerator';
-import { BitmarkStringGenerator } from '../src/generator/bitmark/BitmarkStringGenerator';
-import { JsonParser } from '../src/parser/json/JsonParser';
+import { BitmarkTool } from '../../../src/BitmarkTool';
+import { Ast } from '../../../src/ast/Ast';
+// import { BitmarkFileGenerator } from '../../..src/generator/bitmark/BitmarkFileGenerator';
+import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
+import { JsonParser } from '../../../src/parser/json/JsonParser';
 
 const jsonParser = new JsonParser();
 const ast = new Ast();
 const bitmarkTool = new BitmarkTool();
 
-class Bmg {
+class BmgDevJson {
   async test(debug?: boolean): Promise<void> {
-    const filename = path.resolve(__dirname, '..', 'assets/test', 'test.json');
+    const filename = path.resolve(__dirname, '../../..', 'assets/test', 'test.json');
 
     if (debug) {
       // Read in the test file
@@ -68,11 +68,8 @@ class Bmg {
   }
 }
 
-const bmg = new Bmg();
+const bmg = new BmgDevJson();
 
 bmg.test(false).then(() => {
   // Done
 });
-
-export { bmg };
-export type { Bmg };

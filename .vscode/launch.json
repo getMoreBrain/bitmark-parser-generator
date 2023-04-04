@@ -7,11 +7,26 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "BMG Dev",
-      "program": "${workspaceFolder}/test/bmgDev.ts",
+      "name": "BMG Dev JSON",
+      "program": "${workspaceFolder}/test/custom/dev/bmgDevJson.ts",
       "runtimeArgs": [
-        "--loader",
-        "tsx"
+        "-r",
+        "esbuild-register"
+      ],
+      "console": "integratedTerminal",
+      "sourceMaps": true,
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "BMG Dev Bitmark",
+      "program": "${workspaceFolder}/test/custom/dev/bmgDevBitmark.ts",
+      "runtimeArgs": [
+        "-r",
+        "esbuild-register"
       ],
       "console": "integratedTerminal",
       "sourceMaps": true,

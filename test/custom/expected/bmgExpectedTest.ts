@@ -145,13 +145,7 @@ describe('bitmark-generator', () => {
         const markup = fs.readFileSync(markupFile, 'utf8');
 
         // Generate JSON from generated bitmark markup using the parser
-        let newJson = [];
-        try {
-          const newJsonStr = bitmarkParser.parse(markup);
-          newJson = JSON.parse(newJsonStr);
-        } catch {
-          throw new Error('Failed to parse bitmark-grammer output');
-        }
+        const newJson = bitmarkParser.parse(markup);
 
         // Write the new JSON
         const fileNewJson = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.gen.json`);

@@ -136,8 +136,7 @@ class BitmarkTool {
       } else {
         // Bitmark ==> JSON
         // Convert the bitmark to JSON
-        const unformattedJsonStr = this.bitmarkParser.parse(inStr);
-        const json = JSON.parse(unformattedJsonStr);
+        const json = this.bitmarkParser.parse(inStr);
         const jsonStr = JSON.stringify(json, undefined, jsonPrettifySpace);
 
         if (opts.output) {

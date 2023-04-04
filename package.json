@@ -12,7 +12,8 @@
     "dist"
   ],
   "scripts": {
-    "start": "vite-node ./test/custom/dev/bmgDev.ts",
+    "start": "node -r esbuild-register ./test/custom/dev/bmgDevJson.ts",
+    "start-bit": "node -r esbuild-register ./test/custom/dev/bmgDevBitmark.ts",
     "build": "run build-cjs && run build-esm && webpack && run build-doc",
     "build-cjs": "tsc",
     "build-esm": "tsc --module ES6 --outDir 'dist/esm'",
@@ -29,12 +30,12 @@
     "tsc": "tsc",
     "jest": "jest"
   },
-  "packageManager": "yarn@3.2.4",
+  "packageManager": "yarn@3.5.0",
   "engines": {
     "node": ">=10",
     "npm": ">=6.8.0",
     "git": ">=2.11.0",
-    "yarn": ">=3"
+    "yarn": ">=3.5.0"
   },
   "keywords": [
     "bitmark"
@@ -63,6 +64,7 @@
     "@types/node": "^18.11.7",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
     "@typescript-eslint/parser": "^5.41.0",
+    "esbuild": "^0.17.15",
     "esbuild-register": "^3.4.2",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
@@ -81,8 +83,6 @@
     "typedoc": "^0.23.19",
     "typedoc-plugin-markdown": "^3.13.6",
     "typescript": "^4.8.4",
-    "vite-node": "^0.29.8",
-    "vite-tsconfig-paths": "^4.0.7",
     "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1"
   },
