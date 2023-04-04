@@ -1,0 +1,73 @@
+[.essay:bitmark++]
+[@id:152151]
+[!Eine Garagen- und Fahrschulgruppe wendet die Gruppenbesteuerung an: Die Beteiligungsverhältnisse präsentieren sich wie folgt:]
+|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_1.png|
+
+Erstellen Sie die Mehrwertsteuerabrechnung 20.1 aufgrund der nachfolgenden Angaben:
+
+**01.01. bis 31.12.20.1 - Beträge In CHF (exkl. MWST)**
+• Autohandels AG
+3.200.000 - Verkäufe an inländische Kunden
+80.000 - Verkäufe an Fahrschule
+100.000 - Dividendenerträge von Gruppengesellschaften
+Investitionen 7,7% = 50% des Umsatzes
+Übriger Aufwand 7,7% = 10% des Umsatzes
+
+• Immobilien AG
+120.000 - Mieterträge von Autohandels AG
+80.000 - Mieterträge von Reparatur und Carrossierie AG
+100.000 - Mietersträge von Fahrschule AG
+-65.000 - Aufwendungen (7,7%)
+
+• Reparatur und Carrosserie AG
+820.000 - Umsätze mit Dritten
+150.000 - Umsätze mit Fahrschule AG
+-360.000 - Aufwendungen (7,7%)
+
+• Fahrschule AG
+270.000 - Kurse und Schulungen im Inland
+80.000 - Kurse und Schulungen im Ausland
+40.000 - Verkäufe von ausgemusterten Fahrzeugen an Dritte
+140.000 - Aufwendungen (7,7%)
+||despite it being a table with three columns I didn't want to do it as an image since it would need two separate images with only one line in the second one||
+
+[?|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png|
+1)VOST: 3.200.000 * 60% * 7,70%				VOST	**147.840**
+2)|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_5.png|
+3) VOST auf steuerbaren Leistungen = 84,5% auf 7,7% von 360	    **23.423**
+
+4)direkte VOST auf Ausland-Umsätzen, da für diese
+optiert werden könnte (Art. 29 Ibis MWSTG).
+Berechnung: 80.000 / 3.900 = 20.51%; 140.000 * 20,51 * 7,70%	       **2.211**
+
+**Abrechnung:**
+
+Umsatz (3.200.000+820.000+390.000)	4.410.000
+./. ausg. Umsätze	-390.000
+steuerbare Umsätze	4.020.000
+
+**Steuer 7,70%	309.540**
+**VOST	-176.557**
+**Nettozahllast	132.983**
+]
+
+
+[.essay]
+[@id:136476]
+[%1]
+[!Gib das Ergebnis an:
+(107 · 0.471)+(6.98+3.41+3.02−3.39)−(97 · 0.471)]
+
+[.interview:bitmark--&image]
+[@id:136477]
+[%2]
+[&image:https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/mathe_2019/web-resources/images/aufnahmepruefung1.png]
+
+[!__Auf dem Ponyhof__]
+===
+a) Wie gross ist der Futterbedarf im Monat März für alle Ponys?
+===
+b) Wie viel sollte ein Reiter eines Ponys mit durchschnittlichem Gewicht höchstens wiegen?
+===
+c) Einmal pro Tag wird Wasser für die Ponys bereitgestellt. Wie viele Wassertröge werden mindestens benötigt?
+===

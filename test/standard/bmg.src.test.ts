@@ -27,7 +27,7 @@ const bitmarkParser = new BitmarkParser();
  */
 function getTestFilenames(): string[] {
   const files = FileUtils.getFilenamesSync(TEST_INPUT_DIR, {
-    // match: new RegExp('.+.json'),
+    match: new RegExp('.+\\.bit$'),
     recursive: true,
   });
 
@@ -101,8 +101,7 @@ describe('bitmark-gen', () => {
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
         // Generate JSON from generated bitmark markup using the parser
-        const originalJsonStr = bitmarkParser.parse(originalMarkup);
-        const originalJson = JSON.parse(originalJsonStr);
+        const originalJson = bitmarkParser.parse(originalMarkup);
 
         // Write the new JSON
         fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {
@@ -128,8 +127,7 @@ describe('bitmark-gen', () => {
         const newMarkup = fs.readFileSync(generatedMarkupFile, 'utf8');
 
         // Generate JSON from generated bitmark markup using the parser
-        const newJsonStr = bitmarkParser.parse(newMarkup);
-        const newJson = JSON.parse(newJsonStr);
+        const newJson = bitmarkParser.parse(newMarkup);
 
         // Write the new JSON
         fs.writeFileSync(generatedJsonFile, JSON.stringify(newJson, null, 2), {

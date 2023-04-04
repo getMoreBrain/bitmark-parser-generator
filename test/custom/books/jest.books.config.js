@@ -5,10 +5,12 @@ module.exports = {
 
   // setupFiles: ['core-js'],
 
+  rootDir: '../../..',
+  roots: ['<rootDir>/src', '<rootDir>/test/custom/books'],
   testEnvironment: 'node',
   verbose: true,
   testTimeout: 50000,
-  testMatch: ['<rootDir>/bmgBookTest.ts'],
+  testMatch: ['<rootDir>/test/custom/books/bmgBookTest.ts'],
   transform: {
     '^.+\\.tsx?$': [
       'ts-jest',
@@ -21,15 +23,20 @@ module.exports = {
   },
   reporters: [
     'default',
-    [require.resolve('jest-junit'), { outputDirectory: '<rootDir>/results' }],
+    [require.resolve('jest-junit'), { outputDirectory: '<rootDir>/test/custom/books/results' }],
     [
       require.resolve('jest-html-reporter'),
       {
-        outputPath: '<rootDir>/results/test-report.html',
+        outputPath: '<rootDir>/test/custom/books/results/test-report.html',
         pageTitle: 'bitmark-generator Books Test Report',
         includeFailureMsg: false,
       },
     ],
   ],
-  // collectCoverageFrom: ['src/**/*.{js,ts}', '!<rootDir>/node_modules/', '!<rootDir>/path/to/dir/'],
+  collectCoverageFrom: [
+    '<rootDir>/src/model/**/*.{js,ts}',
+    '<rootDir>/src/ast/**/*.{js,ts}',
+    '<rootDir>/src/parser/json/**/*.{js,ts}',
+    // '<rootDir>/src/**/*.{js,ts}'
+  ],
 };

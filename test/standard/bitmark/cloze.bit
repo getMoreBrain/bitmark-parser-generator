@@ -1,9 +1,76 @@
-[.cloze-instruction-grouped]
-[@id:287822]
-[%][%cloze-instruction-grouped]
-Der Fußball [_erfreut][!erfreuen][@example] sich nicht nur in Deutschland besonderer Beliebtheit, er [_steht][!stehen] auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ...
+[.cloze:bitmark++]
+[@id:152331]
+Umsatzsteuern
+|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_4.png|
 
-[.cloze-solution-grouped]
-[@id:287825]
-[%][%cloze-solution-grouped]
-Der Fußball [_erfreut][@example] sich nicht nur in Deutschland besonderer Beliebtheit, er [_steht] auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ...
+VOST-Berechnungen
+
+Schulungs AG
+Direkt:	 27,5 % auf CHF 20.000	CHF	5.500
+Indirekt:		CHF	0
+
+Verlag AG
+Direkt:	85,7 % auf CHF 80.000	CHF	68.560
+Indirekt:	14,3 % auf 27,5 % auf CHF 80.000	CHF	3.146
+
+Total Vorsteuern Gruppe	CHF	77.206
+
+MWST-Abrechnung
+
+Umsatzsteuer		CHF	[_151.640]
+
+./. Vorsteuern		CHF	[_-77.206]
+
+Nettosteuer		CHF	[_74.434]
+
+[.cloze:bitmark++]
+[@id:193275]
+[▼Ref_Roche]
+[%][%Leitbild 6]
+Our people make our business. Our people discover, develop and manufacture our products and ensure that they reach the patients who need them. Therefore, we’ve created a supportive work environment where people can be truly invested in their work. We encourage big thinking and give our people the support and flexibility they need to make their mark. This is more than just a job. It’s an international family dedicated to making a real impact on the world around us. We believe that employees who are engaged are key to delivering the highest standards and the greatest levels of innovation. That’s why we care about what makes working here a rewarding experience for our employees.
+[_Roche]
+
+[.cloze:bitmark++]
+[@id:193276]
+[▼Ref_Emmi]
+[%][%Leitbild 7]
+Die Mitarbeitenden sind unser wichtigstes Kapital. Respekt, Menschlichkeit und Vertrauen prägen unsere Zusammenarbeit. Die Personalpolitik stellt die Attraktivität von uns als Arbeitgeberin sicher und erschliesst für die Umsetzung der Unternehmenspolitik die notwendigen personellen Ressourcen. Träger der Personalpolitik sind die Vorgesetzten. Grundsätze: Mit geeigneten Personalgewinnungs- und Auswahlverfahren werden die richtigen Mitarbeitenden am richtigen Arbeitsplatz eingesetzt. Bei der Personalauswahl wird neben der fachlichen Qualifikationen auf soziale Kompetenzen geachtet. Aus- und Weiterbildungsmassnahmen werden gezielt auf die Bedürfnisse der Mitarbeitenden und Firma abgestimmt. Die Personalentwicklungsmassnahmen sichern die Qualifikation der Mitarbeitenden für die momentanen und zukünftigen Anforderungen Die Mitarbeitenden werden offen und transparent informiert. Auf der Basis gegenseitiger Offenheit und gegenseitigen Vertrauens pflegen wir eine intensive Zusammenarbeit mit den Personalkommissionen Führung wahrnehmen und vorleben heisst: regelmässig Ziele verständlich und offen zu kommunizieren und die Aufgaben darauf auszurichten, Mitarbeitende und Teams befähigen, lösungs- und eigenverantwortlich zu handeln, Kompetenzen und Verantwortungen so weit wie möglich delegieren
+[_Emmi]
+
+
+[.cloze:bitmark--]
+[@id:136392]
+[%05_Ablauf und Termine_023 (Freitext) ]
+[!Ordnen Sie die folgenden Aufgaben den einzelnen Projektphasen zu.]
+A] Stakeholder-Analyse
+B] Erstellen eines Projektstrukturplans
+C] Projektführung
+D] Machbarkeitsanalyse
+E] Projektabschlussbericht
+F] Erstellen eines Aufwandsplans
+G] Auflösung der Projektorganisation
+H] Controlling
+
+**Projektphase**
+Initialisierung [_a][_A] [_d][_D]
+Planung [_b][_B] [_f][_F]
+Realisierung [_c][_C] [_h][_H]
+Abschluss [_e][_E] [_g][_G]
+
+||TODO: should the number of possible answer appear? are they interchangable?||
+
+[.cloze:bitmark--&image]
+[@id:136524]
+[&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]
+[%2a]
+[!Forum „Fußball-WM 2018“. Welcher Beitrag passt zu welchem Foto? Lesen Sie und ordnen Sie zu. (Zu einem Text gibt es kein Foto. Schreiben Sie dann X.)]
+
+Wo und mit wem seht ihr die Spiele der Fußball-WM? Schreibt uns!
+[_c] ThomasK: Ich will auf jeden Fall alle Spiele mit der deutschen Nationalmannschaft sehen. Ich sehe die Spiele am liebsten in meinem Lieblingslokal. Das mache ich schon lange so. Dort treffe ich dann immer einige Nachbarn und Bekannte – und wir haben immer Spaß zusammen. Ich sehe ein Fußballspiel nie allein zu Hause. Das finde ich super langweilig. Man muss doch mit jemandem über alles reden können!
+
+[_x] Nina85: Ich schaue Fußballspiele am liebsten mit meiner Familie. Mein Mann und die Kinder sind große Fußballfans. Wenn das Wetter gut ist, stellen wir den Fernseher in den Garten und grillen. Wenn Deutschland spielt, tragen wir natürlich alle Schals in Schwarz, Rot und Gold . In der Pause spielen die Kinder Fußball – dann sehen wir die besten Momente aus dem Spiel noch einmal.☺Mir ist Fußball nicht so wichtig. Aber die WM- Spiele sind wirklich toll, weil mein Mann und die Kinder so viel Spaß haben.
+
+[_a] RafaelS: Ich habe Tickets für zwei WM-Spiele gekauft! Ich sehe große Länder-spiele super gern im Stadion – zusammen mit Fußballfans aus der ganzen Welt. Wir singen und feiern zusammen! Mir ist auch egal, welches Team dann spielt. Ich bin gern live dabei. Und im Stadion ist es einfach toll! Okay, die Tickets sind nicht billig und die Reise kostet auch Geld. Aber das muss einfach sein! Die WM ist ja nur alle vier Jahre.
+
+[_b] JasMini: Ich schaue nur Fußball, wenn die deutsche Nationalmannschaft spielt. Die anderen Mannschaften interessieren mich nicht. Wenn Deutschland spielt, dann lade ich meine Freundin zu mir nach Hause ein. Das ist immer cool. Unsere Männer gehen zum Public Viewing auf den Marktplatz. Aber da sind mir zu viele Menschen und es ist sehr laut. Das mag ich nicht. Ich finde es in unserem Wohnzimmer einfach schöner.
+
