@@ -1,8 +1,6 @@
-import pegParser from '@getMoreBrain/bitmark-peg-parse-helpers';
 import { parse } from 'bitmark-grammar';
 
 import { BitmarkAst } from '../../model/ast/Nodes';
-import { TextFormat } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { JsonParser } from '../json/JsonParser';
 
@@ -18,16 +16,6 @@ class BitmarkParser {
   parse(pathOrMarkup: string): BitWrapperJson[] {
     const jsonStr = parse(pathOrMarkup);
     const json = JSON.parse(jsonStr) as BitWrapperJson[];
-
-    for (const bitWrapper of json) {
-      const pegFormat =
-        TextFormat.keyFromValue(bitWrapper.bit.format) ?? TextFormat.keyFromValue(TextFormat.bitmarkMinusMinus);
-      const content = pegParser.parse(bitWrapper.bit.body, {
-        startRule: pegFormat,
-      });
-
-      (bitWrapper.bit as any).content = content;
-    }
 
     return json;
   }
