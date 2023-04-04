@@ -87,6 +87,7 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
+    "@getmorebrain/bitmark-peg-parse-helpers": "^1.0.10",
     "@ncoderz/superenum": "^0.2.0",
     "@types/fs-extra": "^11.0.1",
     "bitmark-grammar": "^1.0.35",

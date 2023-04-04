@@ -1555,6 +1555,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@getmorebrain/bitmark-generator@workspace:."
   dependencies:
+    "@getmorebrain/bitmark-peg-parse-helpers": ^1.0.10
     "@ncoderz/superenum": ^0.2.0
     "@types/eslint-plugin-prettier": ^3.1.0
     "@types/fs-extra": ^11.0.1
@@ -1587,6 +1588,13 @@ __metadata:
     webpack-cli: ^5.0.1
   languageName: unknown
   linkType: soft
+
+"@getmorebrain/bitmark-peg-parse-helpers@npm:^1.0.10":
+  version: 1.0.10
+  resolution: "@getmorebrain/bitmark-peg-parse-helpers@npm:1.0.10::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40getMoreBrain%2Fbitmark-peg-parse-helpers%2F1.0.10%2F03db39a874409a0de77f6e0233022366716b11d5"
+  checksum: d187e638357633d234795ddbb088c5bd162bfba1d49b386c0b4ca408c4dfb15e27ab71eab874e1a937b9934ad1268292a2d7d9a814769eff4a28ae2c28258997
+  languageName: node
+  linkType: hard
 
 "@humanwhocodes/config-array@npm:^0.11.8":
   version: 0.11.8
