@@ -23,7 +23,7 @@ const bitmarkParser = new BitmarkParser();
 
 class BmgDevBitmark {
   async test(debug?: boolean): Promise<void> {
-    const filename = path.resolve(__dirname, '../../..', 'assets/test', 'test.bit');
+    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.bit');
 
     if (debug) {
       // Read in the test file

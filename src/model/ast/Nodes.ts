@@ -1,3 +1,4 @@
+import { ParserError } from '../ParserError';
 import { BitTypeType } from '../enum/BitType';
 import { ResourceTypeType } from '../enum/ResourceType';
 import { TextFormatType } from '../enum/TextFormat';
@@ -30,6 +31,7 @@ export type Node =
 
 export interface BitmarkAst {
   bits?: Bit[];
+  errors?: ParserError[];
 }
 
 // Bit
@@ -63,6 +65,7 @@ export interface Bit {
   labelTrue?: string;
   labelFalse?: string;
   quotedPerson?: string;
+  extraProperties?: ExtraProperties;
   book?: string;
   title?: string;
   subtitle?: string;
@@ -89,6 +92,12 @@ export interface Bit {
   matrix?: Matrix[];
   questions?: Question[];
   footer?: FooterText;
+}
+
+// Extra Properties
+
+export interface ExtraProperties {
+  [key: string]: unknown[];
 }
 
 // Statement

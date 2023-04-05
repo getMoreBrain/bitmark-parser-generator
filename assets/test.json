@@ -1,0 +1,50 @@
+[
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166861]\n[%Teilauftrag a)]\n**Marktanalyse (6min)**\nAls erstes geht es für die Firma Fenstech AG darum, zu erfahren, was der Markt im Moment zu bieten hat. Es gibt verschiedene Möglichkeiten, sich einen Überblick über die Marktsituation zu verschaffen. Bei unserer Firma stehen 3 Varianten im Raum:\n[!Nennen Sie zu jeder Variante stichwortartig je zwei Vor- und Nachteile.]\n===\na) Besuch der Orbit-iEX in Zürich[@shortAnswer]\n===\nb) Zusammenarbeit mit einem externen Berater[@shortAnswer]\n===\nc) Internet[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Teilauftrag a)",
+      "instruction": "Nennen Sie zu jeder Variante stichwortartig je zwei Vor- und Nachteile.",
+      "body": "**Marktanalyse (6min)**\nAls erstes geht es für die Firma Fenstech AG darum, zu erfahren, was der Markt im Moment zu bieten hat. Es gibt verschiedene Möglichkeiten, sich einen Überblick über die Marktsituation zu verschaffen. Bei unserer Firma stehen 3 Varianten im Raum:",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "a) Besuch der Orbit-iEX in Zürich",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "b) Zusammenarbeit mit einem externen Berater",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "c) Internet",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": ["166861"]
+    }
+  }
+]

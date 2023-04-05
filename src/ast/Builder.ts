@@ -1,3 +1,4 @@
+import { ParserError } from '../model/ParserError';
 import { BitTypeType } from '../model/enum/BitType';
 import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
 import { TextFormatType, TextFormat } from '../model/enum/TextFormat';
@@ -43,6 +44,7 @@ import {
   AppLinkResource,
   WebsiteLinkResource,
   ItemLead,
+  ExtraProperties,
 } from '../model/ast/Nodes';
 
 interface RemoveUnwantedPropertiesOptions {
@@ -62,10 +64,12 @@ class Builder {
    * @param data - data for the node
    * @returns
    */
-  bitmark(data: { bits?: Bit[] }): BitmarkAst {
-    const { bits } = data;
+  bitmark(data: { bits?: Bit[]; errors?: ParserError[] }): BitmarkAst {
+    const { bits, errors } = data;
+
     const node: BitmarkAst = {
-      bits: bits,
+      bits,
+      errors,
     };
 
     return node;
@@ -105,6 +109,9 @@ class Builder {
     labelTrue?: string;
     labelFalse?: string;
     quotedPerson?: string;
+    extraProperties?: {
+      [key: string]: unknown | unknown[];
+    };
     book?: string;
     title?: string;
     subtitle?: string;
@@ -160,6 +167,7 @@ class Builder {
       lists,
       labelTrue,
       labelFalse,
+      extraProperties,
       book,
       quotedPerson,
       title,
@@ -221,6 +229,7 @@ class Builder {
       labelTrue,
       labelFalse,
       quotedPerson,
+      extraProperties: this.parseExtraProperties(extraProperties),
       title,
       subtitle,
       level,
@@ -1607,6 +1616,21 @@ class Builder {
     ObjectUtils.removeFalseProperties(obj, options.ignoreFalse);
     ObjectUtils.removeEmptyStringProperties(obj, options.ignoreEmptyString);
     ObjectUtils.removeEmptyArrayProperties(obj, options.ignoreEmptyArrays);
+  }
+
+  private parseExtraProperties(extraProperties: { [key: string]: unknown } | undefined): ExtraProperties | undefined {
+    if (!extraProperties) return undefined;
+
+    const entries = Object.entries(extraProperties);
+    if (entries.length === 0) return undefined;
+
+    const res: ExtraProperties = {};
+
+    for (const [key, value] of entries) {
+      res[key] = this.asArray(value) || [value];
+    }
+
+    return res;
   }
 
   private asArray<T>(val: T | T[] | undefined): T[] | undefined {

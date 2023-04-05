@@ -1555,7 +1555,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@getmorebrain/bitmark-generator@workspace:."
   dependencies:
-    "@getmorebrain/bitmark-peg-parse-helpers": ^1.0.10
     "@ncoderz/superenum": ^0.2.0
     "@types/eslint-plugin-prettier": ^3.1.0
     "@types/fs-extra": ^11.0.1
@@ -1577,10 +1576,12 @@ __metadata:
     jest-html-reporter: ^3.7.0
     jest-junit: ^14.0.1
     node-polyfill-webpack-plugin: ^2.0.1
+    peggy: ^3.0.2
     prettier: ^2.7.1
     shx: ^0.3.4
     terser-webpack-plugin: ^5.3.7
     ts-jest: ^29.0.3
+    ts-pegjs: ^3.1.0
     typedoc: ^0.23.19
     typedoc-plugin-markdown: ^3.13.6
     typescript: ^4.8.4
@@ -1588,13 +1589,6 @@ __metadata:
     webpack-cli: ^5.0.1
   languageName: unknown
   linkType: soft
-
-"@getmorebrain/bitmark-peg-parse-helpers@npm:^1.0.10":
-  version: 1.0.10
-  resolution: "@getmorebrain/bitmark-peg-parse-helpers@npm:1.0.10::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40getMoreBrain%2Fbitmark-peg-parse-helpers%2F1.0.10%2F03db39a874409a0de77f6e0233022366716b11d5"
-  checksum: d187e638357633d234795ddbb088c5bd162bfba1d49b386c0b4ca408c4dfb15e27ab71eab874e1a937b9934ad1268292a2d7d9a814769eff4a28ae2c28258997
-  languageName: node
-  linkType: hard
 
 "@humanwhocodes/config-array@npm:^0.11.8":
   version: 0.11.8
@@ -3406,6 +3400,13 @@ __metadata:
   version: 1.4.0
   resolution: "colors@npm:1.4.0"
   checksum: 98aa2c2418ad87dedf25d781be69dc5fc5908e279d9d30c34d8b702e586a0474605b3a189511482b9d5ed0d20c867515d22749537f7bc546256c6014f3ebdcec
+  languageName: node
+  linkType: hard
+
+"commander@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "commander@npm:10.0.0"
+  checksum: 9f6495651f878213005ac744dd87a85fa3d9f2b8b90d1c19d0866d666bda7f735adfd7c2f10dfff345782e2f80ea258f98bb4efcef58e4e502f25f883940acfd
   languageName: node
   linkType: hard
 
@@ -6573,6 +6574,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"peggy@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "peggy@npm:3.0.2"
+  dependencies:
+    commander: ^10.0.0
+    source-map-generator: 0.8.0
+  bin:
+    peggy: bin/peggy.js
+  checksum: bdca2291a2453e35fb9499bd414f25d44093aecaeb992ef90151ab126514c053c30d4bf5b54f68cbce22a4420eef75219a6deb1209b300630bff38e7640115d9
+  languageName: node
+  linkType: hard
+
 "performance-now@npm:^2.1.0":
   version: 2.1.0
   resolution: "performance-now@npm:2.1.0"
@@ -7251,6 +7264,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"source-map-generator@npm:0.8.0":
+  version: 0.8.0
+  resolution: "source-map-generator@npm:0.8.0"
+  checksum: 15e7854c04a4b1bc8a477664a65c58316d792fb24a7b427219ac597eed7f57a3905637c783126b123cf05f9d4fdc45a8fadb8bc2fbf010a82d92e35c193aba51
+  languageName: node
+  linkType: hard
+
 "source-map-support@npm:0.5.13":
   version: 0.5.13
   resolution: "source-map-support@npm:0.5.13"
@@ -7579,6 +7599,17 @@ __metadata:
   bin:
     ts-jest: cli.js
   checksum: f60f129c2287f4c963d9ee2677132496c5c5a5d39c27ad234199a1140c26318a7d5bda34890ab0e30636ec42a8de28f84487c09e9dcec639c9c67812b3a38373
+  languageName: node
+  linkType: hard
+
+"ts-pegjs@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "ts-pegjs@npm:3.1.0"
+  peerDependencies:
+    peggy: ^2.0.1
+  bin:
+    tspegjs: src/cli.js
+  checksum: fd6fdc483986c08e824de3aea937a6bba776be65d96f12d6e18734a891a27bd7f526bbb3df334c00f09f035875685726af4378a43ac1bb10a5771f2d6166096e
   languageName: node
   linkType: hard
 

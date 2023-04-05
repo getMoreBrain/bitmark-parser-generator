@@ -1,0 +1,40 @@
+{
+  "bits": [
+    {
+      "bitType": "interview",
+      "textFormat": "bitmark--",
+      "ids": ["166861"],
+      "itemLead": { "item": "Teilauftrag a)" },
+      "instruction": "Nennen Sie zu jeder Variante stichwortartig je zwei Vor- und Nachteile.",
+      "body": [
+        {
+          "bodyText": "**Marktanalyse (6min)**\nAls erstes geht es für die Firma Fenstech AG darum, zu erfahren, was der Markt im Moment zu bieten hat. Es gibt verschiedene Möglichkeiten, sich einen Überblick über die Marktsituation zu verschaffen. Bei unserer Firma stehen 3 Varianten im Raum:a) Besuch der Orbit-iEX in Zürichb) Zusammenarbeit mit einem externen Berater"
+        }
+      ],
+      "questions": [
+        { "question": "a) Besuch der Orbit-iEX in Zürich" },
+        { "question": "b) Zusammenarbeit mit einem externen Berater" },
+        { "question": "c) Internet" }
+      ],
+      "footer": { "footerText": "" }
+    },
+    {
+      "bitType": "cloze",
+      "textFormat": "bitmark--",
+      "itemLead": { "item": "cl1" },
+      "body": [
+        { "bodyText": "I am coffee toast" },
+        {
+          "gap": {
+            "solutions": ["cloze", "gap text"],
+            "hint": "1 or 2",
+            "instruction": "verb",
+            "example": false,
+            "isCaseSensitive": true
+          }
+        },
+        { "bodyText": "" }
+      ]
+    }
+  ]
+}
