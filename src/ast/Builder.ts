@@ -84,28 +84,28 @@ class Builder {
   bit(data: {
     bitType: BitTypeType;
     textFormat?: TextFormatType;
-    ids?: string | string[];
-    externalIds?: string | string[];
-    ageRanges?: number | number[];
-    languages?: string | string[];
-    computerLanguages?: string | string[];
-    coverImages?: string | string[];
-    publishers?: string | string[];
+    id?: string | string[];
+    externalId?: string | string[];
+    ageRange?: number | number[];
+    language?: string | string[];
+    computerLanguage?: string | string[];
+    coverImage?: string | string[];
+    publisher?: string | string[];
     publications?: string | string[];
-    authors?: string | string[];
-    dates?: string | string[];
-    locations?: string | string[];
-    themes?: string | string[];
-    kinds?: string | string[];
-    actions?: string | string[];
-    thumbImages?: string | string[];
-    durations?: string | string[];
-    deepLinks?: string | string[];
+    author?: string | string[];
+    date?: string | string[];
+    location?: string | string[];
+    theme?: string | string[];
+    kind?: string | string[];
+    action?: string | string[];
+    thumbImage?: string | string[];
+    duration?: string | string[];
+    deepLink?: string | string[];
     externalLink?: string;
     externalLinkText?: string;
-    videoCallLinks?: string | string[];
-    bots?: string | string[];
-    lists?: string | string[];
+    videoCallLink?: string | string[];
+    bot?: string | string[];
+    list?: string | string[];
     labelTrue?: string;
     labelFalse?: string;
     quotedPerson?: string;
@@ -143,28 +143,28 @@ class Builder {
     const {
       bitType,
       textFormat,
-      ids,
-      externalIds,
-      ageRanges,
-      languages,
-      computerLanguages,
-      coverImages,
-      publishers,
+      id,
+      externalId,
+      ageRange,
+      language,
+      computerLanguage,
+      coverImage,
+      publisher,
       publications,
-      authors,
-      dates,
-      locations,
-      themes,
-      kinds,
-      actions,
-      thumbImages,
-      durations,
-      deepLinks,
+      author,
+      date,
+      location,
+      theme,
+      kind,
+      action,
+      thumbImage,
+      duration,
+      deepLink,
       externalLink,
       externalLinkText,
-      videoCallLinks,
-      bots,
-      lists,
+      videoCallLink,
+      bot,
+      list,
       labelTrue,
       labelFalse,
       extraProperties,
@@ -202,34 +202,33 @@ class Builder {
     const node: Bit = {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
-      ids: this.asArray(ids),
-      externalIds: this.asArray(externalIds),
+      ids: this.asArray(id),
+      externalIds: this.asArray(externalId),
       book,
-      ageRanges: this.asArray(ageRanges),
-      languages: this.asArray(languages),
-      computerLanguages: this.asArray(computerLanguages),
-      coverImages: this.asArray(coverImages),
-      publishers: this.asArray(publishers),
+      ageRanges: this.asArray(ageRange),
+      languages: this.asArray(language),
+      computerLanguages: this.asArray(computerLanguage),
+      coverImages: this.asArray(coverImage),
+      publishers: this.asArray(publisher),
       publications: this.asArray(publications),
-      authors: this.asArray(authors),
-      dates: this.asArray(dates),
-      locations: this.asArray(locations),
-      themes: this.asArray(themes),
-      kinds: this.asArray(kinds),
-      actions: this.asArray(actions),
-      thumbImages: this.asArray(thumbImages),
-      deepLinks: this.asArray(deepLinks),
+      authors: this.asArray(author),
+      dates: this.asArray(date),
+      locations: this.asArray(location),
+      themes: this.asArray(theme),
+      kinds: this.asArray(kind),
+      actions: this.asArray(action),
+      thumbImages: this.asArray(thumbImage),
+      deepLinks: this.asArray(deepLink),
       externalLink,
       externalLinkText,
-      videoCallLinks: this.asArray(videoCallLinks),
-      bots: this.asArray(bots),
-      durations: this.asArray(durations),
+      videoCallLinks: this.asArray(videoCallLink),
+      bots: this.asArray(bot),
+      durations: this.asArray(duration),
       referenceProperties: undefined, // Important for property order, do not remove
-      lists: this.asArray(lists),
+      lists: this.asArray(list),
       labelTrue,
       labelFalse,
       quotedPerson,
-      extraProperties: this.parseExtraProperties(extraProperties),
       title,
       subtitle,
       level,
@@ -242,6 +241,7 @@ class Builder {
       hint,
       instruction,
       example,
+      extraProperties: this.parseExtraProperties(extraProperties),
       resource,
       body,
       sampleSolutions: this.asArray(sampleSolutions),

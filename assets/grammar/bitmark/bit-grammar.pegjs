@@ -16,7 +16,7 @@ interface BitHeader {
   resourceType?: ResourceTypeType;
 }
 
-type BitTag = TypeValue | TypeKeyValue;
+type BitContent = TypeValue | TypeKeyValue;
 
 interface TypeValue {
   type: string;
@@ -35,7 +35,10 @@ const TypeKey = superenum({
   ResourceType: 'ResourceType',
   Property: 'Property',
   UnknownProperty: 'UnknownProperty',
+  ItemLead: 'ItemLead',
   Instruction: 'Instruction',
+  Hint: 'Hint',
+  BodyLine: 'BodyLine',
 });
 
 //
@@ -72,14 +75,14 @@ function buildBits(bits: (Bit | undefined)[]): BitmarkAst {
 }
 
 // Build bit
-function buildBit(bitHeader: BitHeader, bitTags: BitTag[], bitContent: string): Bit | undefined {
+function buildBit(bitHeader: BitHeader, bitContent: BitContent[], extraContent: string): Bit | undefined {
   const { bitType, textFormat, resourceType } = bitHeader;
 
   // Bit type was invalid, so ignore the bit
   if (!bitType) return undefined;
 
   // Map the bit tags
-  const tags = mapBitTags(bitTags);
+  const tags = mapBitContent(bitContent);
 
   // const bit: Bit = {
   //   bitType,
@@ -97,7 +100,8 @@ function buildBit(bitHeader: BitHeader, bitTags: BitTag[], bitContent: string): 
     ...tags,
   });
 
-  bit.content = bitContent;
+  bit.content = extraContent;
+  // bit.resourceType = resourceType;
 
   return bit;
 }
@@ -143,12 +147,15 @@ function buildTextAndResourceType(value1: TypeValue | undefined, value2: TypeVal
   return res;
 }
 
-// Process the bit tags
-function mapBitTags(bitTags: BitTag[]) {
-  const extraProperties: any = {};
+// Process the bit content
+function mapBitContent(bitContent: BitContent[]) {
+  console.log(bitContent);
 
-  const res = bitTags.reduce((acc, bitTag, _index) => {
-    const { type, key, value } = bitTag as TypeKeyValue;
+  const extraProperties: any = {};
+  let seenItem = false;
+
+  const res = bitContent.reduce((acc, content, _index) => {
+    const { type, key, value } = content as TypeKeyValue;
 
     switch (type) {
       case TypeKey.Property: {
@@ -161,9 +168,29 @@ function mapBitTags(bitTags: BitTag[]) {
         }
         break;
       }
+      case TypeKey.ItemLead: {
+        if (!seenItem) {
+          acc.item = value;
+        } else {
+          acc.lead = value;
+        }
+        seenItem = true;
+        break;
+      }
+
+      case TypeKey.Instruction: {
+        acc.instruction = value;
+        break;
+      }
+
+      case TypeKey.Hint: {
+        acc.hint = value;
+        break;
+      }
+
 
       default:
-        return bitTag;
+        // Unknown tag
     }
 
     return acc;
@@ -206,8 +233,8 @@ Bits
 
 // A bit
 Bit
-  = bitHeader: BitHeader bitTags: BitTags bitContent: $Anything { return buildBit(bitHeader, bitTags, bitContent) }
-  // = bitHeader: BitHeader bitTags: BitTags Anything { return { type: bitHeader, bitTags } }
+  = bitHeader: BitHeader bitContent: BitContent { return buildBit(bitHeader, bitContent) }
+  // = bitHeader: BitHeader bitContent: BitContent extraContent: $Anything { return buildBit(bitHeader, bitContent, extraContent) }
 
 // The bit header, e.g. [.interview&image:bitmark++], [.interview:bitmark--&image], [.cloze]
 BitHeader
@@ -225,18 +252,37 @@ TextFormat
 ResourceType
   = "&" value: Bit_Value { return { type: TypeKey.ResourceType, value } }
 
-// All bit tags
-BitTags
-  = bitTags: (PropertyTag)* { return bitTags }
+// All bit content (tags, body, cards)
+BitContent
+  = bitContent: (BitTag / BitBodyLine)* { return bitContent }
 
-// Property (@) Bit
+// Bit tag
+BitTag
+  = tag: (PropertyTag / ItemLeadTag / InstructionTag / HintTag) { return tag }
+
+// Line of Body of the bit
+BitBodyLine
+  = value: $(NL !BitHeader / (Char+ NL?)) { return { type: TypeKey.BodyLine, value: value } }
+
+// Cards
+BitCards
+  = bitBody: (PropertyTag)* { return bitBody }
+
+// Property (@) tag
 PropertyTag
   = "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" NL? { return { type: TypeKey.Property, key, value } }
 
-// Instruction (!) Bit
-InstructionBit
+// Item / Lead (%) tag
+ItemLeadTag
+  = "[%" value: Tag_Value "]"  NL? { return { type: TypeKey.ItemLead, value } }
+
+// Instruction (!) tag
+InstructionTag
   = "[!" value: Tag_Value "]"  NL? { return { type: TypeKey.Instruction, value } }
 
+// Hint (?) tag
+HintTag
+  = "[?" value: Tag_Value "]"  NL? { return { type: TypeKey.Hint, value } }
 
 
 //
