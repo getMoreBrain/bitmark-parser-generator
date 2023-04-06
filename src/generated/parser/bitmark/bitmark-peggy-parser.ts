@@ -317,27 +317,62 @@ function peg$parse(input: string, options?: ParseOptions) {
   const peg$c30 = function(value: any): any { return { type: TypeKey.CardSet, value: value } };
   const peg$c31 = "===";
   const peg$c32 = peg$literalExpectation("===", false);
-  const peg$c33 = function(): any { cardIndex = 0; cardSideIndex = 0; cardVariantIndex = 0; };
+  const peg$c33 = function(): any {
+      cardIndex = 0; cardSideIndex = 0; cardVariantIndex = 0; cardSectionLineCount = 0;
+    };
   const peg$c34 = function(): any { console.log('CardSetEnd'); };
-  const peg$c35 = function(value: any): any { cardIndex++; cardSideIndex = 0; cardVariantIndex = 0; return value; };
+  const peg$c35 = function(value: any): any {
+      cardIndex++; cardSideIndex = 0; cardVariantIndex = 0; cardSectionLineCount = 0;
+      return value;
+    };
   const peg$c36 = function(value: any): any { return value; };
   const peg$c37 = "==";
   const peg$c38 = peg$literalExpectation("==", false);
   const peg$c39 = "--";
   const peg$c40 = peg$literalExpectation("--", false);
   const peg$c41 = function(value: any): any {
-      if (value === "==") {
+      let isSideDivider = false;
+      let isVariantDivider = false;
+
+      if (Array.isArray(value) && value.length === 2) {
+        value = value[0];
+        isSideDivider = (value === "==");
+        isVariantDivider = (value === "--");
+      }
+
+      // This card section has no lines, so it's a special case blank
+      const emptyCardOrSideOrVariant = cardSectionLineCount === 0;
+      const currentSideIndex = cardSideIndex;
+      const currentVariantIndex = cardVariantIndex;
+
+      if (isSideDivider) {
         cardSideIndex++;
         cardVariantIndex = 0;
+        cardSectionLineCount = 0;
         console.log(`Card ${cardIndex} Side: ${value}`)
-      } else if (value === "--") {
+      } else if (isVariantDivider) {
         cardVariantIndex++;
+        cardSectionLineCount = 0;
         console.log(`Card ${cardIndex}, Side ${cardSideIndex}, Variant: ${cardVariantIndex}`)
+      }
+
+      if (emptyCardOrSideOrVariant) {
+        // This card section has no lines, so it's a special case blank
+        return {
+          type: TypeKey.Card,
+          value: {
+            cardIndex,
+            cardSideIndex: currentSideIndex,
+            cardVariantIndex: currentVariantIndex,
+            value: '',
+          }
+        };
       }
 
       return value;
     };
   const peg$c42 = function(value: any): any {
+    cardSectionLineCount++;
     console.log(`CardLine (Card ${cardIndex}, Side ${cardSideIndex}, Variant: ${cardVariantIndex}): ${value}`)
     return {
       type: TypeKey.Card,
@@ -1092,13 +1127,9 @@ function peg$parse(input: string, options?: ParseOptions) {
     if (s2 as any !== peg$FAILED) {
       s3 = [];
       s4 = peg$parseCard();
-      if (s4 as any !== peg$FAILED) {
-        while (s4 as any !== peg$FAILED) {
-          s3.push(s4);
-          s4 = peg$parseCard();
-        }
-      } else {
-        s3 = peg$FAILED;
+      while (s4 as any !== peg$FAILED) {
+        s3.push(s4);
+        s4 = peg$parseCard();
       }
       if (s3 as any !== peg$FAILED) {
         s4 = peg$parseCardSetEnd();
@@ -1179,7 +1210,7 @@ function peg$parse(input: string, options?: ParseOptions) {
   }
 
   function peg$parseCardSetEnd(): any {
-    let s0, s1;
+    let s0, s1, s2, s3;
 
     s0 = peg$currPos;
     if (input.substr(peg$currPos, 3) === peg$c31) {
@@ -1190,10 +1221,28 @@ function peg$parse(input: string, options?: ParseOptions) {
       if (peg$silentFails === 0) { peg$fail(peg$c32); }
     }
     if (s1 as any !== peg$FAILED) {
-      peg$savedPos = s0;
-      s1 = peg$c34();
+      s2 = peg$currPos;
+      peg$silentFails++;
+      s3 = peg$parseEOL();
+      peg$silentFails--;
+      if (s3 as any !== peg$FAILED) {
+        peg$currPos = s2;
+        s2 = undefined;
+      } else {
+        s2 = peg$FAILED;
+      }
+      if (s2 as any !== peg$FAILED) {
+        peg$savedPos = s0;
+        s1 = peg$c34();
+        s0 = s1;
+      } else {
+        peg$currPos = s0;
+        s0 = peg$FAILED;
+      }
+    } else {
+      peg$currPos = s0;
+      s0 = peg$FAILED;
     }
-    s0 = s1;
 
     return s0;
   }
@@ -1270,6 +1319,9 @@ function peg$parse(input: string, options?: ParseOptions) {
         peg$currPos = s6;
         s6 = peg$FAILED;
       }
+      if (s6 as any === peg$FAILED) {
+        s6 = peg$parseBitHeader();
+      }
       peg$silentFails--;
       if (s6 as any === peg$FAILED) {
         s5 = undefined;
@@ -1316,6 +1368,9 @@ function peg$parse(input: string, options?: ParseOptions) {
           peg$currPos = s6;
           s6 = peg$FAILED;
         }
+        if (s6 as any === peg$FAILED) {
+          s6 = peg$parseBitHeader();
+        }
         peg$silentFails--;
         if (s6 as any === peg$FAILED) {
           s5 = undefined;
@@ -1338,8 +1393,23 @@ function peg$parse(input: string, options?: ParseOptions) {
     if (s2 as any !== peg$FAILED) {
       s3 = peg$parsePossibleCardLine();
       if (s3 as any !== peg$FAILED) {
-        s2 = [s2, s3];
-        s1 = s2;
+        s4 = peg$currPos;
+        peg$silentFails++;
+        s5 = peg$parseBitHeader();
+        peg$silentFails--;
+        if (s5 as any === peg$FAILED) {
+          s4 = undefined;
+        } else {
+          peg$currPos = s4;
+          s4 = peg$FAILED;
+        }
+        if (s4 as any !== peg$FAILED) {
+          s2 = [s2, s3, s4];
+          s1 = s2;
+        } else {
+          peg$currPos = s1;
+          s1 = peg$FAILED;
+        }
       } else {
         peg$currPos = s1;
         s1 = peg$FAILED;
@@ -1889,6 +1959,7 @@ function peg$parse(input: string, options?: ParseOptions) {
   let cardIndex = 0;
   let cardSideIndex = 0;
   let cardVariantIndex = 0;
+  let cardSectionLineCount = 0;
 
   //
   // Instance functions

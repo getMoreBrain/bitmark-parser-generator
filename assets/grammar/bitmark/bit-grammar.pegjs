@@ -87,6 +87,7 @@ const nonFatalErrors: ParserError[] = [];
 let cardIndex = 0;
 let cardSideIndex = 0;
 let cardVariantIndex = 0;
+let cardSectionLineCount = 0;
 
 //
 // Instance functions
@@ -323,29 +324,63 @@ BodyLine
 
 // CardSet
 CardSet
-  = value: (CardSetStart Card+ CardSetEnd) { return { type: TypeKey.CardSet, value: value } }
+  = value: (CardSetStart Card* CardSetEnd) { return { type: TypeKey.CardSet, value: value } }
 
 CardSetStart
-  = NL &("===" NL) { cardIndex = 0; cardSideIndex = 0; cardVariantIndex = 0; }
+  = NL &("===" NL) {
+    cardIndex = 0; cardSideIndex = 0; cardVariantIndex = 0; cardSectionLineCount = 0;
+  }
 
 CardSetEnd
-  = "===" { console.log('CardSetEnd'); }
+  = "===" &EOL { console.log('CardSetEnd'); }
 
 Card
-  = value: ("===" NL CardContent) { cardIndex++; cardSideIndex = 0; cardVariantIndex = 0; return value; }
+  = value: ("===" NL CardContent) {
+    cardIndex++; cardSideIndex = 0; cardVariantIndex = 0; cardSectionLineCount = 0;
+    return value;
+  }
 
 CardContent
-  = value: ((PossibleCardLine !("===" EOL))* PossibleCardLine) { return value; };
+  = value: ((PossibleCardLine !(("===" EOL) / BitHeader))* PossibleCardLine !BitHeader) { return value; };
 
 PossibleCardLine
-  = value: ("===" NL /"==" NL / "--" NL / CardLine) {
-    if (value === "==") {
+  = value: ("===" NL / "==" NL / "--" NL / CardLine) {
+    let isSideDivider = false;
+    let isVariantDivider = false;
+
+    if (Array.isArray(value) && value.length === 2) {
+      value = value[0];
+      isSideDivider = (value === "==");
+      isVariantDivider = (value === "--");
+    }
+
+    // This card section has no lines, so it's a special case blank
+    const emptyCardOrSideOrVariant = cardSectionLineCount === 0;
+    const currentSideIndex = cardSideIndex;
+    const currentVariantIndex = cardVariantIndex;
+
+    if (isSideDivider) {
       cardSideIndex++;
       cardVariantIndex = 0;
+      cardSectionLineCount = 0;
       console.log(`Card ${cardIndex} Side: ${value}`)
-    } else if (value === "--") {
+    } else if (isVariantDivider) {
       cardVariantIndex++;
+      cardSectionLineCount = 0;
       console.log(`Card ${cardIndex}, Side ${cardSideIndex}, Variant: ${cardVariantIndex}`)
+    }
+
+    if (emptyCardOrSideOrVariant) {
+      // This card section has no lines, so it's a special case blank
+      return {
+        type: TypeKey.Card,
+        value: {
+          cardIndex,
+          cardSideIndex: currentSideIndex,
+          cardVariantIndex: currentVariantIndex,
+          value: '',
+        }
+      };
     }
 
     return value;
@@ -354,6 +389,7 @@ PossibleCardLine
 // TODO - move code into functions and process other rules to simplify output
 CardLine
  = value: $(Line NL) {
+  cardSectionLineCount++;
   console.log(`CardLine (Card ${cardIndex}, Side ${cardSideIndex}, Variant: ${cardVariantIndex}): ${value}`)
   return {
     type: TypeKey.Card,
