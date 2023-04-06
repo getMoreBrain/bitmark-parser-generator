@@ -295,13 +295,27 @@ ResourceType
 
 // All bit content (tags, body, cards)
 BitContent
-  // = value: (Tag / CardSet / BodyLine)* { return value }
-  // = value: (CardSet / (Tag / BodyLine)*) { return value }
   = value: (CardSet / Tag / BodyLine)* { return value }
 
 // Bit tag
 Tag
   = value: (PropertyTag / ItemLeadTag / InstructionTag / HintTag) { return value }
+
+// Property (@) tag
+PropertyTag
+  = NL? "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Property, key, value } }
+
+// Item / Lead (%) tag
+ItemLeadTag
+  = NL? "[%" value: Tag_Value "]" { return { type: TypeKey.ItemLead, value } }
+
+// Instruction (!) tag
+InstructionTag
+  = NL? "[!" value: Tag_Value "]" { return { type: TypeKey.Instruction, value } }
+
+// Hint (?) tag
+HintTag
+  = NL? "[?" value: Tag_Value "]" { return { type: TypeKey.Hint, value } }
 
 // Line of Body of the bit
 BodyLine
@@ -351,22 +365,6 @@ CardLine
     }
   };
 };
-
-// Property (@) tag
-PropertyTag
-  = NL? "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Property, key, value } }
-
-// Item / Lead (%) tag
-ItemLeadTag
-  = NL? "[%" value: Tag_Value "]" { return { type: TypeKey.ItemLead, value } }
-
-// Instruction (!) tag
-InstructionTag
-  = NL? "[!" value: Tag_Value "]" { return { type: TypeKey.Instruction, value } }
-
-// Hint (?) tag
-HintTag
-  = NL? "[?" value: Tag_Value "]" { return { type: TypeKey.Hint, value } }
 
 
 //
