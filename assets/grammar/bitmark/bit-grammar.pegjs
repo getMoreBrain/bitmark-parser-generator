@@ -84,7 +84,9 @@ const builder = new Builder();
 // Instance variables
 //
 const nonFatalErrors: ParserError[] = [];
-
+let cardIndex = 0;
+let cardSideIndex = 0;
+let cardVariantIndex = 0;
 
 //
 // Instance functions
@@ -295,7 +297,7 @@ ResourceType
 BitContent
   // = value: (Tag / CardSet / BodyLine)* { return value }
   // = value: (CardSet / (Tag / BodyLine)*) { return value }
-  = value: (CardSet / Tag / .)* Empty { return value }
+  = value: (CardSet / Tag / BodyLine)* { return value }
 
 // Bit tag
 Tag
@@ -307,28 +309,48 @@ BodyLine
 
 // CardSet
 CardSet
-  = value: (CardSetStart Card+ CardSetEnd)
-  // = value: $("===" NL Card !"===")+
-  // = value: NL "===" (NL Card)+
-  {
-    // if (typeof value === "undefined") return { type: TypeKey.Ignore, value: undefined };
-    console.log(`CardSet: ${value}`);
-
-    return { type: TypeKey.CardSet, value: value };
-  }
+  = value: (CardSetStart Card+ CardSetEnd) { return { type: TypeKey.CardSet, value: value } }
 
 CardSetStart
-  = NL &("===" NL) { console.log('CardSetStart'); }
+  = NL &("===" NL) { cardIndex = 0; cardSideIndex = 0; cardVariantIndex = 0; }
 
 CardSetEnd
-  // = "===" &(BlankLine* (BitHeader / EOF)) { console.log('CardSetEnd'); }
   = "===" { console.log('CardSetEnd'); }
 
 Card
-  = value: $("===" NL (Char+ NL !("===" EOL))+ Char+ NL) { console.log(`Card: ${value}`); return { type: TypeKey.Card, value: value } }
-  // = value: Anything "===" NL? { console.log(`Card: ${value}`); return { type: TypeKey.Card, value: value } }
+  = value: ("===" NL CardContent) { cardIndex++; cardSideIndex = 0; cardVariantIndex = 0; return value; }
 
+CardContent
+  = value: ((PossibleCardLine !("===" EOL))* PossibleCardLine) { return value; };
 
+PossibleCardLine
+  = value: ("===" NL /"==" NL / "--" NL / CardLine) {
+    if (value === "==") {
+      cardSideIndex++;
+      cardVariantIndex = 0;
+      console.log(`Card ${cardIndex} Side: ${value}`)
+    } else if (value === "--") {
+      cardVariantIndex++;
+      console.log(`Card ${cardIndex}, Side ${cardSideIndex}, Variant: ${cardVariantIndex}`)
+    }
+
+    return value;
+  };
+
+// TODO - move code into functions and process other rules to simplify output
+CardLine
+ = value: $(Line NL) {
+  console.log(`CardLine (Card ${cardIndex}, Side ${cardSideIndex}, Variant: ${cardVariantIndex}): ${value}`)
+  return {
+    type: TypeKey.Card,
+    value: {
+      cardIndex,
+      cardSideIndex,
+      cardVariantIndex,
+      value
+    }
+  };
+};
 
 // Property (@) tag
 PropertyTag
@@ -368,34 +390,6 @@ KeyValueTag_Value
 // Enumerations
 //
 
-// Valid property types
-// PropertyTypeEnum
-//   = 'id'
-//   / 'externalId'
-//   / 'ageRange'
-//   / 'language'
-//   / 'computerLanguage'
-//   / 'coverImage'
-//   / 'publisher'
-//   / 'publications'
-//   / 'author'
-//   / 'date'
-//   / 'location'
-//   / 'theme'
-//   / 'kind'
-//   / 'action'
-//   / 'thumbImage'
-//   / 'duration'
-//   / 'deeplink'
-//   / 'externalLink'
-//   / 'externalLinkText'
-//   / 'videoCallLink'
-//   / 'bot'
-//   / 'list'
-//   / 'labelTrue'
-//   / 'labelFalse'
-//   / 'quotedPerson'
-
 
 //
 // Generic rules
@@ -413,7 +407,7 @@ Anything "Anything"
 Char "Character"
   = [^\n\r\u2028\u2029] //u2028: line separator, u2029: paragraph separator
 
-// Match a line of text, excluding the line terminator
+// Match a line of text or and empty line, excluding the line terminator
 Line "Line"
  = Char*
 
