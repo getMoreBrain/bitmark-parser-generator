@@ -1,0 +1,88 @@
+[.match:bitmark--]
+[@id:135887]
+[%6]
+[!Traduceți următoarele expresii / cuvinte:
+__Translate the following phrases / words:__]
+===
+every day
+==
+în fiecare zi
+===
+every week
+==
+în fiecare săptămână
+===
+this week
+==
+săptămâna asta
+--
+săptămâna aceasta
+===
+next week
+==
+săptămâna viitoare
+--
+săptămâna următoare
+===
+last week
+==
+săptămâna trecută
+===
+yesterday evening
+==
+ieri seară
+===
+late / early
+==
+târziu / devreme
+===
+later / earlier
+==
+mai târziu / mai devreme
+===
+fast / slowly
+==
+repede / încet
+===
+faster / slower
+==
+mai repede / mai încet
+===
+
+
+
+[.interview:bitmark++&image]
+[@unknown:166861]
+[@id:166861]
+[@unknown2: some thing]
+[%Teilauftrag a)]
+[!Nennen Sie zu jeder Variante stichwortartig je zwei Vor- und Nachteile.]
+
+Here is somme text with tags [@id:166861] in it [.interview:bitmark++&image] will it work?
+
+**Marktanalyse (6min)**
+Als erstes geht es für die Firma Fenstech AG darum, zu erfahren, was der Markt im Moment zu bieten hat. Es gibt verschiedene Möglichkeiten, sich einen Überblick über die Marktsituation zu verschaffen. Bei unserer Firma stehen 3 Varianten im Raum:
+===
+a) Besuch der Orbit-iEX in Zürich
+===
+b) Zusammenarbeit mit einem externen Berater
+===
+c) Internet
+===
+
+
+[.cloze]
+[%][%lead]
+I am coffee toast[_cloze]
+[?1 or 2][_gap text][!verb]
+
+
+
+[.cloze:bitmark--][%cl1]I am coffee toast[_cloze][?1 or 2][_gap text][!verb]
+
+
+
+
+
+[.cloze&video][%cl1]I am coffee toast[_cloze][!noun ain hint for the second gap][?1 or 2][_gap text][!verb]
+

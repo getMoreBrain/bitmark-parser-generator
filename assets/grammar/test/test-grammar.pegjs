@@ -4,12 +4,6 @@
  * RA Sewell
  *
  * (c) 2023 Get More Brain AG
- *
- *   CardSet
- * === Card
- * ==    Side
- * --      Variant
- *
  */
 
 {{ // GLOBAL JS
@@ -35,24 +29,8 @@ interface TypeKeyValue {
   value?: unknown;
 }
 
-// CardSet types
-interface CardSet {
-  card: Card[];
-}
-
-interface Card {
-  side: Side[];
-}
-
-interface CardSide {
-  variant: CardVariant[];
-}
-
-type CardVariant = string;
-
 // Code Enumerations
 const TypeKey = superenum({
-  Ignore: 'Ignore',
   TextFormat: 'TextFormat',
   ResourceType: 'ResourceType',
   Property: 'Property',
@@ -62,9 +40,6 @@ const TypeKey = superenum({
   Hint: 'Hint',
   BodyLine: 'BodyLine',
   CardSet: 'CardSet',
-  Card: 'Card',
-  CardSide: 'CardSide',
-  CardVariant: 'CardVariant',
 });
 
 //
@@ -126,8 +101,6 @@ function buildBit(bitHeader: BitHeader, bitContent: BitContent[], extraContent: 
     ...tags,
   });
 
-
-  bit.cardSet = tags.cardSet;
   bit.content = extraContent;
   // bit.resourceType = resourceType;
 
@@ -180,7 +153,6 @@ function mapBitContent(bitContent: BitContent[]) {
   console.log(bitContent);
 
   const extraProperties: any = {};
-  let body = '';
   let seenItem = false;
 
   const res = bitContent.reduce((acc, content, _index) => {
@@ -217,15 +189,6 @@ function mapBitContent(bitContent: BitContent[]) {
         break;
       }
 
-      case TypeKey.BodyLine: {
-        body += value;
-        break;
-      }
-
-      case TypeKey.CardSet: {
-        acc.cardSet = value;
-        break;
-      }
 
       default:
         // Unknown tag
@@ -235,7 +198,6 @@ function mapBitContent(bitContent: BitContent[]) {
   }, {} as any);
 
   res.extraProperties = extraProperties;
-  res.body = body.trim();
 
   return res;
 }
@@ -258,9 +220,8 @@ function addError(message: string) {
 
 
 // Root rule
-bitmark
-  = bits: Bits+ { return buildBits(bits) }
-  / NoContent { return { bits: [] } }
+test
+  = BlankLine* CardSet BlankLine*
 
 // No content in the input
 NoContent
@@ -277,7 +238,7 @@ Bit
 
 // The bit header, e.g. [.interview&image:bitmark++], [.interview:bitmark--&image], [.cloze]
 BitHeader
-  = NL? "[." bitType: Bit_Value formatAndResource: TextFormatAndResourceType? "]" { return buildBitHeader(bitType, formatAndResource) }
+  = "[." bitType: Bit_Value formatAndResource: TextFormatAndResourceType? "]" NL? { return buildBitHeader(bitType, formatAndResource) }
 
 // Text format and resource type
 TextFormatAndResourceType
@@ -293,9 +254,7 @@ ResourceType
 
 // All bit content (tags, body, cards)
 BitContent
-  // = value: (Tag / CardSet / BodyLine)* { return value }
-  // = value: (CardSet / (Tag / BodyLine)*) { return value }
-  = value: (CardSet / Tag / .)* Empty { return value }
+  = value: (Tag / CardSet/ BodyLine)* { return value }
 
 // Bit tag
 Tag
@@ -303,48 +262,27 @@ Tag
 
 // Line of Body of the bit
 BodyLine
-  = value: $(NL !BitHeader / Char+) { return { type: TypeKey.BodyLine, value: value } }
+  = value: $(NL !BitHeader / (Char+ NL?)) { return { type: TypeKey.BodyLine, value: value } }
 
-// CardSet
+// Card
 CardSet
-  = value: (CardSetStart Card+ CardSetEnd)
-  // = value: $("===" NL Card !"===")+
-  // = value: NL "===" (NL Card)+
-  {
-    // if (typeof value === "undefined") return { type: TypeKey.Ignore, value: undefined };
-    console.log(`CardSet: ${value}`);
-
-    return { type: TypeKey.CardSet, value: value };
-  }
-
-CardSetStart
-  = NL &("===" NL) { console.log('CardSetStart'); }
-
-CardSetEnd
-  // = "===" &(BlankLine* (BitHeader / EOF)) { console.log('CardSetEnd'); }
-  = "===" { console.log('CardSetEnd'); }
-
-Card
-  = value: $("===" NL (Char+ NL !("===" EOL))+ Char+ NL) { console.log(`Card: ${value}`); return { type: TypeKey.Card, value: value } }
-  // = value: Anything "===" NL? { console.log(`Card: ${value}`); return { type: TypeKey.Card, value: value } }
-
-
+  = value: $("===" NL (Char+ NL)+ !"===")+ { return { type: TypeKey.CardSet, value: value } }
 
 // Property (@) tag
 PropertyTag
-  = NL? "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Property, key, value } }
+  = "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" NL? { return { type: TypeKey.Property, key, value } }
 
 // Item / Lead (%) tag
 ItemLeadTag
-  = NL? "[%" value: Tag_Value "]" { return { type: TypeKey.ItemLead, value } }
+  = "[%" value: Tag_Value "]"  NL? { return { type: TypeKey.ItemLead, value } }
 
 // Instruction (!) tag
 InstructionTag
-  = NL? "[!" value: Tag_Value "]" { return { type: TypeKey.Instruction, value } }
+  = "[!" value: Tag_Value "]"  NL? { return { type: TypeKey.Instruction, value } }
 
 // Hint (?) tag
 HintTag
-  = NL? "[?" value: Tag_Value "]" { return { type: TypeKey.Hint, value } }
+  = "[?" value: Tag_Value "]"  NL? { return { type: TypeKey.Hint, value } }
 
 
 //
@@ -402,23 +340,23 @@ KeyValueTag_Value
 //
 
 // Match empty space (multiple lines or single line)
-Empty "Empty"
+Empty
   = ([ \t] / NL)*
 
 // Match anything
-Anything "Anything"
+Anything
   = .*
 
 // Match a single charachter, but not a line terminator
-Char "Character"
+Char
   = [^\n\r\u2028\u2029] //u2028: line separator, u2029: paragraph separator
 
 // Match a line of text, excluding the line terminator
-Line "Line"
+Line
  = Char*
 
 // Match an empty line, including the line terminator
-BlankLine "Blank Line"
+BlankLine
   = [ \t]* NL
 
 
@@ -429,13 +367,10 @@ NL "Line Terminator"
   / "\u2028"
   / "\u2029"
 
-// End of line including End of file
 EOL
   = NL / !.
 
-// End of file
-EOF
- = !.
+
 
 
 
