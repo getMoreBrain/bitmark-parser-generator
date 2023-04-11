@@ -239,9 +239,9 @@ KeyValueTag_Value
 // Generic rules
 //
 
-// Match empty space (multiple lines or single line)
+// Match empty space to the end of the input
 Empty "Empty"
-  = ([ \t] / NL)*
+  = ([ \t] / NL)* EOF
 
 // Match anything
 Anything "Anything"

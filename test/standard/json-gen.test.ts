@@ -5,7 +5,7 @@ import { describe, test } from '@jest/globals';
 import * as fs from 'fs-extra';
 import path from 'path';
 
-import { BitmarkFileGenerator } from '../../src/generator/bitmark/BitmarkFileGenerator';
+import { JsonFileGenerator } from '../../src/generator/json/JsonFileGenerator';
 import { BitmarkParser } from '../../src/parser/bitmark/BitmarkParser';
 import { JsonParser } from '../../src/parser/json/JsonParser';
 import { FileUtils } from '../../src/utils/FileUtils';
@@ -13,10 +13,10 @@ import { BitJsonUtils } from '../utils/BitJsonUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
 const SINGLE_FILE_START = 0;
-const SINGLE_FILE_COUNT = 100;
+const SINGLE_FILE_COUNT = 1;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, './bitmark');
-const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/output');
+const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/json-gen/output');
 
 const jsonParser = new JsonParser();
 const bitmarkParser = new BitmarkParser();
@@ -57,8 +57,8 @@ function getTestFilenames(): string[] {
 //   fs.writeFileSync(markupFile, markup);
 // }
 
-describe('bitmark-gen', () => {
-  describe('JSON => Markup => JSON: Tests', () => {
+describe('json-gen', () => {
+  describe('Markup => JSON (both parsers): Tests', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
 
@@ -90,8 +90,8 @@ describe('bitmark-gen', () => {
         // Calculate the filenames
         const originalMarkupFile = path.resolve(fullFolder, `${id}.bit`);
         const originalJsonFile = path.resolve(fullFolder, `${id}.json`);
-        const generatedMarkupFile = path.resolve(fullFolder, `${id}.gen.bit`);
         const generatedJsonFile = path.resolve(fullFolder, `${id}.gen.json`);
+        const generatedAstFile = path.resolve(fullFolder, `${id}.ast.json`);
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);
 
         // Copy the original test markup file to the output folder
@@ -114,25 +114,22 @@ describe('bitmark-gen', () => {
         // // Write original bitmark (and JSON?)
         // writeTestJsonAndBitmark(originalJson, fullFolder, id);
 
-        // Convert the bitmark JSON to bitmark AST
-        const bitmarkAst = jsonParser.toAst(originalJson);
+        // Convert the Bitmark markup to bitmark AST
+        const bitmarkAst = bitmarkParser.toAst(originalMarkup);
 
-        // Generate markup code from AST
-        const generator = new BitmarkFileGenerator(generatedMarkupFile, undefined, {
-          explicitTextFormat: false,
+        // Write the new AST
+        fs.writeFileSync(generatedAstFile, JSON.stringify(bitmarkAst, null, 2), {
+          encoding: 'utf8',
+        });
+
+        // Generate JSON from AST
+        const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
+          prettify: true,
         });
 
         await generator.generate(bitmarkAst);
 
-        const newMarkup = fs.readFileSync(generatedMarkupFile, 'utf8');
-
-        // Generate JSON from generated bitmark markup using the parser
-        const newJson = bitmarkParser.parse(newMarkup);
-
-        // Write the new JSON
-        fs.writeFileSync(generatedJsonFile, JSON.stringify(newJson, null, 2), {
-          encoding: 'utf8',
-        });
+        const newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
         BitJsonUtils.cleanupJson(originalJson, { removeMarkup: true });

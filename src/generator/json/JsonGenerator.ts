@@ -3,6 +3,10 @@ import { Writer } from '../../ast/writer/Writer';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { ResourceType } from '../../model/enum/ResourceType';
+import { BitJson } from '../../model/json/BitJson';
+import { BitWrapperJson } from '../../model/json/BitWrapperJson';
+import { GapJson } from '../../model/json/BodyBitJson';
+import { StringUtils } from '../../utils/StringUtils';
 import { Generator } from '../Generator';
 
 import {
@@ -19,6 +23,7 @@ import {
   ImageResource,
   Resource,
   ArticleResource,
+  Gap,
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: JsonOptions = {
@@ -53,8 +58,15 @@ export interface JsonOptions {
 class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   protected ast = new Ast();
   private options: JsonOptions;
+  private jsonPrettifySpace: number | undefined;
   private writer: Writer;
   private printed = false;
+
+  // Variables used by the parser
+  private json!: Partial<BitWrapperJson>[];
+  private bitWrapperJson!: Partial<BitWrapperJson>;
+  private bitJson!: Partial<BitJson>;
+  private placeholderIndex = 0;
 
   /**
    * Generate bitmark JSON from a bitmark AST
@@ -67,6 +79,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       ...DEFAULT_OPTIONS,
       ...options,
     };
+    this.jsonPrettifySpace = this.options.prettify === true ? 2 : this.options.prettify || undefined;
 
     this.writer = writer;
 
@@ -77,7 +90,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   }
 
   /**
-   * Generate bitmark JSON from bitmark AST
+   * Generate bitmark markup from bitmark AST
    *
    * @param ast bitmark AST
    */
@@ -88,8 +101,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     // Walk the bitmark AST
     this.ast.walk(ast, this);
 
-    // Ensure a blank line at end of file
-    this.writeLine();
+    // Write the JSON object to file
+    this.write(JSON.stringify(this.json, null, this.jsonPrettifySpace));
 
     // Close the writer
     await this.writer.close();
@@ -171,1239 +184,1084 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
   // bitmark
 
-  // bitmark -> bits
-
-  protected between_bits(
+  protected enter_bitmark(
     _node: NodeInfo,
     _left: NodeInfo,
     _right: NodeInfo,
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
-    this.writeNL();
-    this.writeNL();
-    this.writeNL();
+    // Reset the JSON
+    this.json = [];
   }
+
+  // bitmark -> bits
 
   // bitmark -> bits -> bitValue
 
   protected enter_bitsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const bit = node.value as Bit;
 
-    this.writeOPD();
-    this.writeString(bit.bitType);
+    // Reset
+    this.placeholderIndex = 0;
 
-    if (bit.textFormat) {
-      const write = this.isWriteTextFormat(bit.textFormat);
+    this.bitWrapperJson = {
+      //
+    };
+    this.json.push(this.bitWrapperJson);
 
-      if (write) {
-        this.writeColon();
-        this.writeString(bit.textFormat);
-      }
-    }
-
-    // Write the resource type if there is a resource (unless the bit itself is the resource)
-    const resourceType = bit.resource?.type;
-    if (resourceType && resourceType !== bit.bitType) {
-      this.writeAmpersand();
-      this.writeString(bit.resource?.type);
-    }
-
-    this.writeCL();
-    this.writeNL();
-  }
-
-  protected between_bitsValue(
-    node: NodeInfo,
-    left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    // The following keys are combined with other keys so don't need newlines
-    const noNlKeys: NodeTypeType[] = [
-      NodeType.bitType,
-      NodeType.textFormat,
-      NodeType.level,
-      NodeType.progress,
-      NodeType.toc,
-      NodeType.referenceEnd,
-      NodeType.labelFalse,
-    ];
-
-    const bit = node.value as Bit;
-    if (bit.book) {
-      // If the book node exists, remove the newline caused by reference as it will be bound to book
-      noNlKeys.push(NodeType.reference);
-    }
-
-    // Check if a no newline key is to the left in this 'between' callback
-    const noNl = ((): boolean => {
-      for (const keyType of noNlKeys) {
-        if (left.key === keyType /*|| right.key === keyType*/) return true;
-      }
-      return false;
-    })();
-
-    if (!noNl) {
-      this.writeNL();
-    }
+    this.bitJson = {
+      type: bit.bitType,
+      format: bit.textFormat,
+    };
+    this.bitWrapperJson.bit = this.bitJson as BitJson;
   }
 
   // bitmark -> bits -> bitValue -> ids
 
   protected enter_ids(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('id', node.value);
+    this.writeProperty(this.bitJson, 'id', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> externalIds
+  // // bitmark -> bits -> bitValue -> externalIds
 
-  protected enter_externalIds(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('externalId', node.value);
-  }
+  // protected enter_externalIds(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('externalId', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> ageRanges
+  // // bitmark -> bits -> bitValue -> ageRanges
 
-  protected enter_ageRanges(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('ageRange', node.value);
-  }
+  // protected enter_ageRanges(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('ageRange', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> languages
+  // // bitmark -> bits -> bitValue -> languages
 
-  protected enter_languages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('language', node.value);
-  }
+  // protected enter_languages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('language', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> computerLanguages
+  // // bitmark -> bits -> bitValue -> computerLanguages
 
-  protected enter_computerLanguages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('computerLanguage', node.value);
-  }
+  // protected enter_computerLanguages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('computerLanguage', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> coverImages
+  // // bitmark -> bits -> bitValue -> coverImages
 
-  protected enter_coverImages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('coverImage', node.value);
-  }
+  // protected enter_coverImages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('coverImage', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> publishers
+  // // bitmark -> bits -> bitValue -> publishers
 
-  protected enter_publishers(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('publisher', node.value);
-  }
+  // protected enter_publishers(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('publisher', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> publications
+  // // bitmark -> bits -> bitValue -> publications
 
-  protected enter_publications(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('publications', node.value);
-  }
+  // protected enter_publications(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('publications', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> authors
+  // // bitmark -> bits -> bitValue -> authors
 
-  protected enter_authors(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('author', node.value);
-  }
+  // protected enter_authors(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('author', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> dates
+  // // bitmark -> bits -> bitValue -> dates
 
-  protected enter_dates(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('date', node.value);
-  }
+  // protected enter_dates(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('date', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> locations
+  // // bitmark -> bits -> bitValue -> locations
 
-  protected enter_locations(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('location', node.value);
-  }
+  // protected enter_locations(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('location', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> themes
+  // // bitmark -> bits -> bitValue -> themes
 
-  protected enter_themes(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('theme', node.value);
-  }
+  // protected enter_themes(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('theme', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> kinds
+  // // bitmark -> bits -> bitValue -> kinds
 
-  protected enter_kinds(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('kind', node.value);
-  }
+  // protected enter_kinds(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('kind', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> actions
+  // // bitmark -> bits -> bitValue -> actions
 
-  protected enter_actions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('action', node.value);
-  }
+  // protected enter_actions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('action', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> thumbImages
+  // // bitmark -> bits -> bitValue -> thumbImages
 
-  protected enter_thumbImages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('thumbImage', node.value);
-  }
+  // protected enter_thumbImages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('thumbImage', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> durations
+  // // bitmark -> bits -> bitValue -> durations
 
-  protected enter_durations(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('duration', node.value);
-  }
+  // protected enter_durations(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('duration', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> deepLinks
+  // // bitmark -> bits -> bitValue -> deepLinks
 
-  protected enter_deepLinks(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('deeplink', node.value);
-  }
+  // protected enter_deepLinks(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('deeplink', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> videoCallLinks
+  // // bitmark -> bits -> bitValue -> videoCallLinks
 
-  protected enter_videoCallLinks(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('videoCallLink', node.value);
-  }
+  // protected enter_videoCallLinks(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('videoCallLink', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> bots
+  // // bitmark -> bits -> bitValue -> bots
 
-  protected enter_bots(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('bot', node.value);
-  }
+  // protected enter_bots(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('bot', node.value);
+  // }
 
-  //  bitmark -> bits -> referenceProperties
+  // //  bitmark -> bits -> referenceProperties
 
-  protected enter_referenceProperties(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('reference', node.value);
-  }
+  // protected enter_referenceProperties(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('reference', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> lists
+  // // bitmark -> bits -> bitValue -> lists
 
-  protected enter_lists(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('list', node.value);
-  }
+  // protected enter_lists(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('list', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> sampleSolutions
+  // // bitmark -> bits -> bitValue -> sampleSolutions
 
-  protected enter_sampleSolutions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('sampleSolution', node.value);
-  }
+  // protected enter_sampleSolutions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('sampleSolution', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> itemLead
+  // // bitmark -> bits -> bitValue -> itemLead
 
-  protected enter_itemLead(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const itemLead = node.value as ItemLead;
-    if (itemLead && (itemLead.item || itemLead.lead)) {
-      // Always write item if item or lead is set
-      this.writeOPC();
-      this.writeString(itemLead.item);
-      this.writeCL();
+  // protected enter_itemLead(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const itemLead = node.value as ItemLead;
+  //   if (itemLead && (itemLead.item || itemLead.lead)) {
+  //     // Always write item if item or lead is set
+  //     this.writeOPC();
+  //     this.writeString(itemLead.item);
+  //     this.writeCL();
 
-      if (itemLead.lead) {
-        this.writeOPC();
-        this.writeString(itemLead.lead);
-        this.writeCL();
-      }
-    }
-  }
+  //     if (itemLead.lead) {
+  //       this.writeOPC();
+  //       this.writeString(itemLead.lead);
+  //       this.writeCL();
+  //     }
+  //   }
+  // }
 
   // bitmark -> bits -> bitValue -> body
 
-  protected enter_body(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    // always write a NL before the body content if there is any?
-    const body = node.value as Body;
-    if (body.length > 0) {
-      this.writeNL();
-    }
-  }
-
   // bitmark -> bits -> bitValue -> body -> bodyValue -> gap
 
-  // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions
+  protected enter_gap(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const gap = node.value as Gap['gap'];
 
-  protected enter_solutions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const solutions = node.value as string[];
-    if (solutions && solutions.length === 0) {
-      // If there are no solutions, we need to write the special cloze gap [_] to indicate this
-      this.writeOPU();
-      this.writeCL();
-    }
-  }
+    // Ensure placeholders exists
+    if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
 
-  // bitmark -> bits -> bitValue -> elements
+    // Add the placeholder to the body
+    const placeholder = `{${this.placeholderIndex}}`;
+    this.bitJson.body += placeholder;
+    this.placeholderIndex++;
 
-  protected enter_elements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  protected between_elements(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    this.writeNL();
-    this.writeElementDivider();
-    this.writeNL();
-  }
-
-  protected exit_elements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeNL();
-    this.writeMajorDivider();
+    // Add the gap
+    const gapJson: GapJson = {
+      type: 'gap',
+      solutions: gap.solutions,
+      item: gap.itemLead?.item ?? '',
+      lead: gap.itemLead?.lead ?? '',
+      hint: gap.hint ?? '',
+      instruction: gap.instruction ?? '',
+      isExample: !!gap.example,
+      example: StringUtils.isString(gap.example) ? (gap.example as string) : '',
+      isCaseSensitive: gap.isCaseSensitive ?? false,
+      //
+    };
+    this.bitJson.placeholders[placeholder] = gapJson;
   }
 
   // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions
 
-  // bitmark -> bits -> bitValue -> body -> bodyValue -> select
-
-  // bitmark -> bits -> bitValue -> body -> bodyValue -> select -> options
-
-  // bitmark -> bits -> bitValue -> body -> bodyValue -> select -> options -> optionsValue
-
-  protected enter_optionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const selectOption = node.value as SelectOption;
-    if (selectOption.isCorrect) {
-      this.writeOPP();
-    } else {
-      this.writeOPM();
-    }
-    this.write(selectOption.text);
-    this.writeCL();
-  }
-
-  // bitmark -> bits -> bitValue -> body -> bodyValue -> highlight
-
-  // bitmark -> bits -> bitValue -> body -> bodyValue -> highlight -> texts
-
-  // bitmark -> bits -> bitValue -> body -> bodyValue -> highlight -> texts -> textsValue
-
-  protected enter_textsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const highlightText = node.value as HighlightText;
-    if (highlightText.isCorrect) {
-      this.writeOPP();
-    } else {
-      this.writeOPM();
-    }
-    this.write(highlightText.text);
-    this.writeCL();
-  }
-
-  // bitmark -> bits -> bitValue -> statements
-
-  protected enter_statements(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
-    const isStatementDivider = this.isStatementDivider(route);
-
-    if (isStatementDivider) {
-      this.writeMajorDivider();
-      this.writeNL();
-    }
-  }
-
-  protected between_statements(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    route: NodeInfo[],
-  ): void {
-    const isStatementDivider = this.isStatementDivider(route);
-
-    if (isStatementDivider) {
-      this.writeNL();
-      this.writeMajorDivider();
-    }
-    this.writeNL();
-  }
-
-  protected exit_statements(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
-    const isStatementDivider = this.isStatementDivider(route);
-
-    if (isStatementDivider) {
-      this.writeNL();
-      this.writeMajorDivider();
-    }
-  }
-
-  // bitmark -> bits -> bitValue -> statements -> statementsValue
-
-  protected enter_statementsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const statement = node.value as Statement;
-    if (statement.isCorrect) {
-      this.writeOPP();
-    } else {
-      this.writeOPM();
-    }
-    this.write(statement.text);
-    this.writeCL();
-  }
-
-  // bitmark -> bits -> bitValue -> choices
-  // bitmark -> bits -> bitValue -> quizzes -> quizzesValue -> choices
-
-  protected between_choices(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    this.writeNL();
-  }
-
-  protected exit_choices(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeNL();
-  }
-
-  // bitmark -> bits -> bitValue -> choices -> choicesValue
-
-  protected enter_choicesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const choice = node.value as Choice;
-    if (choice.isCorrect) {
-      this.writeOPP();
-    } else {
-      this.writeOPM();
-    }
-    this.write(choice.text);
-    this.writeCL();
-  }
-
-  // bitmark -> bits -> bitValue -> responses
-
-  protected between_responses(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    this.writeNL();
-  }
-
-  protected exit_responses(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeNL();
-  }
-
-  // bitmark -> bits -> bitValue -> responses -> responsesValue
-
-  protected enter_responsesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const response = node.value as Response;
-    if (response.isCorrect) {
-      this.writeOPP();
-    } else {
-      this.writeOPM();
-    }
-    this.write(response.text);
-    this.writeCL();
-  }
-
-  // bitmark -> bits -> bitValue -> quizzes
-
-  protected enter_quizzes(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  protected between_quizzes(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    // this.writeNL();
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  protected exit_quizzes(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  // bitmark -> bits -> bitValue -> quizzes -> quizzesValue
-
-  protected between_quizzesValue(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    if (right.key === NodeType.choices || right.key === NodeType.responses) {
-      this.writeNL();
-    }
-  }
-
-  // bitmark -> bits -> bitValue -> heading
-
-  protected enter_heading(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
-    const heading = node.value as Heading;
-
-    // Ensure the heading is valid for writing out (it will be valid, but if it is empty, it should not be written)
-    let valid = false;
-    if (heading && heading.forKeys /*&& heading.forValues && heading.forValues.length > 0*/) {
-      valid = true;
-    }
-
-    if (!valid) return false;
-
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  protected between_heading(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    this.writeNL();
-    this.writeMinorDivider();
-    this.writeNL();
-  }
-
-  protected exit_heading(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    // this.writeMajorDivider();
-    // this.writeNL();
-  }
-
-  // bitmark -> bits -> bitValue -> heading -> forValues
-
-  protected enter_forValues(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    //
-  }
-
-  protected between_forValues(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    this.writeNL();
-    this.writeMinorDivider();
-    this.writeNL();
-  }
-
-  protected exit_forValues(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    //
-  }
-
-  // bitmark -> bits -> bitValue -> pairs
-
-  protected enter_pairs(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  protected between_pairs(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    this.writeNL();
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  protected exit_pairs(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeNL();
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  // bitmark -> bits -> bitValue -> pairs -> pairsValue
-
-  protected between_pairsValue(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    // this.writeNL();
-    // this.writeMinorDivider();
-    // this.writeNL();
-  }
-
-  // bitmark -> bits -> bitValue -> pairs -> pairsValue -> keyAudio
-
-  protected enter_keyAudio(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
-    // This is a resource, so handle it with the common code
-    this.writeResource(node, parent, route);
-  }
-
-  // bitmark -> bits -> bitValue -> pairs -> pairsValue -> keyImage
-
-  protected enter_keyImage(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
-    // This is a resource, so handle it with the common code
-    this.writeResource(node, parent, route);
-  }
-
-  // bitmark -> bits -> bitValue -> matrix
-
-  protected enter_matrix(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  protected between_matrix(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    this.writeNL();
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  protected exit_matrix(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeNL();
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  // bitmark -> bits -> bitValue -> matrix -> matrixValue
-
-  protected between_matrixValue(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    // this.writeNL();
-    // this.writeMinorDivider();
-    // this.writeNL();
-  }
-
-  // bitmark -> bits -> bitValue -> pairs -> pairsValue -> values
-  // bitmark -> bits -> bitValue -> matrix -> matrixValue -> cells -> cellsValue -> values
-
-  protected enter_values(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeNL();
-    this.writeMinorDivider();
-    this.writeNL();
-  }
-
-  protected between_values(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    this.writeNL();
-    this.writeElementDivider();
-    this.writeNL();
-  }
-
-  // bitmark -> bits -> bitValue -> questions
-
-  protected enter_questions(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  protected between_questions(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  protected exit_questions(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
-    this.writeNL();
-  }
-
-  // bitmark -> bits -> bitValue -> questions -> questionsValue
-
-  protected between_questionsValue(
-    _node: NodeInfo,
-    _left: NodeInfo,
-    right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    if (right.key === NodeType.sampleSolution) {
-      this.writeNL();
-    }
-  }
-
-  protected exit_questionsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeNL();
-  }
-
-  // bitmark -> bits -> bitValue -> resource
-
-  protected enter_resource(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
-    // This is a resource, so handle it with the common code
-    this.writeResource(node, parent, route);
-  }
-
-  // bitmark -> bits -> bitValue -> resource -> posterImage
-
-  protected enter_posterImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const posterImage = node.value as ImageResource;
-    if (posterImage && posterImage.url) {
-      this.writeProperty('posterImage', posterImage.url);
-    }
-  }
-
-  // bitmark -> bits -> bitValue -> resource -> ...
-  // bitmark -> bits -> bitValue -> resource -> posterImage -> ...
-  // bitmark -> bits -> bitValue -> resource -> thumbnails -> thumbnailsValue -> ...
-  // [src1x,src2x,src3x,src4x,width,height,alt,caption]
-
-  // protected enter_posterImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   this.writeProperty('posterImage', node.value);
+  // // bitmark -> bits -> bitValue -> elements
+
+  // protected enter_elements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeMajorDivider();
+  //   this.writeNL();
   // }
 
-  //
-  // Terminal nodes (leaves)
-  //
+  // protected between_elements(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  //   this.writeElementDivider();
+  //   this.writeNL();
+  // }
 
-  // bitmark -> bits -> bitValue -> bitType
+  // protected exit_elements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  //   this.writeMajorDivider();
+  // }
 
-  // bitmark -> bits -> bitValue -> textFormat
+  // // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions
 
-  //  bitmark -> bits -> title
+  // // bitmark -> bits -> bitValue -> body -> bodyValue -> select
 
-  protected leaf_title(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const title = node.value;
-    const bit = parent?.value as Bit;
-    const level = bit.level || 1;
-    if (level && title) {
-      this.writeOP();
-      for (let i = 0; i < level; i++) this.writeHash();
-      this.writeString(title);
-      this.writeCL();
-    }
-  }
+  // // bitmark -> bits -> bitValue -> body -> bodyValue -> select -> options
 
-  //  bitmark -> bits -> subtitle
+  // // bitmark -> bits -> bitValue -> body -> bodyValue -> select -> options -> optionsValue
 
-  protected leaf_subtitle(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const subtitle = node.value;
-    const level = 2;
-    if (level && subtitle) {
-      this.writeOP();
-      for (let i = 0; i < level; i++) this.writeHash();
-      this.writeString(subtitle);
-      this.writeCL();
-    }
-  }
+  // protected enter_optionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const selectOption = node.value as SelectOption;
+  //   if (selectOption.isCorrect) {
+  //     this.writeOPP();
+  //   } else {
+  //     this.writeOPM();
+  //   }
+  //   this.write(selectOption.text);
+  //   this.writeCL();
+  // }
 
-  // bitmark -> bits -> bitValue -> book
+  // // bitmark -> bits -> bitValue -> body -> bodyValue -> highlight
 
-  protected leaf_book(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const bit = parent?.value as Bit;
+  // // bitmark -> bits -> bitValue -> body -> bodyValue -> highlight -> texts
 
-    if (bit && node.value) {
-      this.writeProperty('book', node.value);
-      if (bit.reference) {
-        this.writeOPRANGLE();
-        this.writeString(bit.reference);
-        this.writeCL();
+  // // bitmark -> bits -> bitValue -> body -> bodyValue -> highlight -> texts -> textsValue
 
-        if (bit.referenceEnd) {
-          this.writeOPRANGLE();
-          this.writeString(bit.referenceEnd);
-          this.writeCL();
-        }
-      }
-    }
-  }
+  // protected enter_textsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const highlightText = node.value as HighlightText;
+  //   if (highlightText.isCorrect) {
+  //     this.writeOPP();
+  //   } else {
+  //     this.writeOPM();
+  //   }
+  //   this.write(highlightText.text);
+  //   this.writeCL();
+  // }
 
-  //  bitmark -> bits -> bitValue -> anchor
+  // // bitmark -> bits -> bitValue -> statements
 
-  protected leaf_anchor(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeOPDANGLE();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
+  // protected enter_statements(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
+  //   const isStatementDivider = this.isStatementDivider(route);
 
-  //  bitmark -> bits -> bitValue -> reference
+  //   if (isStatementDivider) {
+  //     this.writeMajorDivider();
+  //     this.writeNL();
+  //   }
+  // }
 
-  protected leaf_reference(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const bit = parent?.value as Bit;
+  // protected between_statements(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   route: NodeInfo[],
+  // ): void {
+  //   const isStatementDivider = this.isStatementDivider(route);
 
-    if (bit && node.value) {
-      // Only write reference if it is not chained to 'book'
-      if (!bit.book) {
-        this.writeOPRANGLE();
-        this.writeString(node.value);
-        this.writeCL();
-      }
-    }
-  }
+  //   if (isStatementDivider) {
+  //     this.writeNL();
+  //     this.writeMajorDivider();
+  //   }
+  //   this.writeNL();
+  // }
 
-  //  bitmark -> bits -> bitValue -> externalLink
+  // protected exit_statements(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
+  //   const isStatementDivider = this.isStatementDivider(route);
 
-  protected leaf_externalLink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeProperty('externalLink', node.value);
-    }
-  }
+  //   if (isStatementDivider) {
+  //     this.writeNL();
+  //     this.writeMajorDivider();
+  //   }
+  // }
 
-  //  bitmark -> bits -> bitValue -> externalLinkText
+  // // bitmark -> bits -> bitValue -> statements -> statementsValue
 
-  protected leaf_externalLinkText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeProperty('externalLinkText', node.value);
-    }
-  }
+  // protected enter_statementsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const statement = node.value as Statement;
+  //   if (statement.isCorrect) {
+  //     this.writeOPP();
+  //   } else {
+  //     this.writeOPM();
+  //   }
+  //   this.write(statement.text);
+  //   this.writeCL();
+  // }
 
-  //  bitmark -> bits -> bitValue -> labelTrue
+  // // bitmark -> bits -> bitValue -> choices
+  // // bitmark -> bits -> bitValue -> quizzes -> quizzesValue -> choices
 
-  protected leaf_labelTrue(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const bit = parent?.value as Bit;
-    if (bit) {
-      this.writeProperty('labelTrue', node.value ?? '');
-      this.writeProperty('labelFalse', bit.labelFalse ?? '');
-    }
-  }
+  // protected between_choices(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  // }
 
-  //  bitmark -> bits -> bitValue -> quotedPerson
+  // protected exit_choices(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  // }
 
-  protected leaf_quotedPerson(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeProperty('quotedPerson', node.value);
-    }
-  }
+  // // bitmark -> bits -> bitValue -> choices -> choicesValue
 
-  //  * -> itemLead --> item
+  // protected enter_choicesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const choice = node.value as Choice;
+  //   if (choice.isCorrect) {
+  //     this.writeOPP();
+  //   } else {
+  //     this.writeOPM();
+  //   }
+  //   this.write(choice.text);
+  //   this.writeCL();
+  // }
 
-  //  * -> itemLead --> lead
+  // // bitmark -> bits -> bitValue -> responses
 
-  //  * -> hint
+  // protected between_responses(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  // }
 
-  protected leaf_hint(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeOPQ();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
+  // protected exit_responses(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  // }
 
-  // bitmark -> bits -> bitValue ->  * -> instruction
+  // // bitmark -> bits -> bitValue -> responses -> responsesValue
 
-  protected leaf_instruction(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeOPB();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
+  // protected enter_responsesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const response = node.value as Response;
+  //   if (response.isCorrect) {
+  //     this.writeOPP();
+  //   } else {
+  //     this.writeOPM();
+  //   }
+  //   this.write(response.text);
+  //   this.writeCL();
+  // }
 
-  // bitmark -> bits -> bitValue ->  * -> example
+  // // bitmark -> bits -> bitValue -> quizzes
 
-  protected leaf_example(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const example = node.value;
+  // protected enter_quizzes(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeMajorDivider();
+  //   this.writeNL();
+  // }
 
-    if (example) {
-      this.writeOPA();
-      this.writeString('example');
+  // protected between_quizzes(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   // this.writeNL();
+  //   this.writeMajorDivider();
+  //   this.writeNL();
+  // }
 
-      if (example !== true && example !== '') {
-        this.writeColon();
-        this.writeString(example as string);
-      }
+  // protected exit_quizzes(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeMajorDivider();
+  //   this.writeNL();
+  // }
 
-      this.writeCL();
-    }
-  }
+  // // bitmark -> bits -> bitValue -> quizzes -> quizzesValue
+
+  // protected between_quizzesValue(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   if (right.key === NodeType.choices || right.key === NodeType.responses) {
+  //     this.writeNL();
+  //   }
+  // }
+
+  // // bitmark -> bits -> bitValue -> heading
+
+  // protected enter_heading(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
+  //   const heading = node.value as Heading;
+
+  //   // Ensure the heading is valid for writing out (it will be valid, but if it is empty, it should not be written)
+  //   let valid = false;
+  //   if (heading && heading.forKeys /*&& heading.forValues && heading.forValues.length > 0*/) {
+  //     valid = true;
+  //   }
+
+  //   if (!valid) return false;
+
+  //   this.writeMajorDivider();
+  //   this.writeNL();
+  // }
+
+  // protected between_heading(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  //   this.writeMinorDivider();
+  //   this.writeNL();
+  // }
+
+  // protected exit_heading(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   // this.writeMajorDivider();
+  //   // this.writeNL();
+  // }
+
+  // // bitmark -> bits -> bitValue -> heading -> forValues
+
+  // protected enter_forValues(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // protected between_forValues(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  //   this.writeMinorDivider();
+  //   this.writeNL();
+  // }
+
+  // protected exit_forValues(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   //
+  // }
+
+  // // bitmark -> bits -> bitValue -> pairs
+
+  // protected enter_pairs(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeMajorDivider();
+  //   this.writeNL();
+  // }
+
+  // protected between_pairs(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  //   this.writeMajorDivider();
+  //   this.writeNL();
+  // }
+
+  // protected exit_pairs(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  //   this.writeMajorDivider();
+  //   this.writeNL();
+  // }
+
+  // // bitmark -> bits -> bitValue -> pairs -> pairsValue
+
+  // protected between_pairsValue(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   // this.writeNL();
+  //   // this.writeMinorDivider();
+  //   // this.writeNL();
+  // }
+
+  // // bitmark -> bits -> bitValue -> pairs -> pairsValue -> keyAudio
+
+  // protected enter_keyAudio(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+  //   // This is a resource, so handle it with the common code
+  //   this.writeResource(node, parent, route);
+  // }
+
+  // // bitmark -> bits -> bitValue -> pairs -> pairsValue -> keyImage
+
+  // protected enter_keyImage(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+  //   // This is a resource, so handle it with the common code
+  //   this.writeResource(node, parent, route);
+  // }
+
+  // // bitmark -> bits -> bitValue -> matrix
+
+  // protected enter_matrix(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeMajorDivider();
+  //   this.writeNL();
+  // }
+
+  // protected between_matrix(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  //   this.writeMajorDivider();
+  //   this.writeNL();
+  // }
+
+  // protected exit_matrix(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  //   this.writeMajorDivider();
+  //   this.writeNL();
+  // }
+
+  // // bitmark -> bits -> bitValue -> matrix -> matrixValue
+
+  // protected between_matrixValue(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   // this.writeNL();
+  //   // this.writeMinorDivider();
+  //   // this.writeNL();
+  // }
+
+  // // bitmark -> bits -> bitValue -> pairs -> pairsValue -> values
+  // // bitmark -> bits -> bitValue -> matrix -> matrixValue -> cells -> cellsValue -> values
+
+  // protected enter_values(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  //   this.writeMinorDivider();
+  //   this.writeNL();
+  // }
+
+  // protected between_values(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeNL();
+  //   this.writeElementDivider();
+  //   this.writeNL();
+  // }
+
+  // // bitmark -> bits -> bitValue -> questions
+
+  // protected enter_questions(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeMajorDivider();
+  //   this.writeNL();
+  // }
+
+  // protected between_questions(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   _right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   this.writeMajorDivider();
+  //   this.writeNL();
+  // }
+
+  // protected exit_questions(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeMajorDivider();
+  //   this.writeNL();
+  // }
+
+  // // bitmark -> bits -> bitValue -> questions -> questionsValue
+
+  // protected between_questionsValue(
+  //   _node: NodeInfo,
+  //   _left: NodeInfo,
+  //   right: NodeInfo,
+  //   _parent: NodeInfo | undefined,
+  //   _route: NodeInfo[],
+  // ): void {
+  //   if (right.key === NodeType.sampleSolution) {
+  //     this.writeNL();
+  //   }
+  // }
+
+  // protected exit_questionsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  // }
+
+  // // bitmark -> bits -> bitValue -> resource
+
+  // protected enter_resource(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+  //   // This is a resource, so handle it with the common code
+  //   this.writeResource(node, parent, route);
+  // }
+
+  // // bitmark -> bits -> bitValue -> resource -> posterImage
+
+  // protected enter_posterImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const posterImage = node.value as ImageResource;
+  //   if (posterImage && posterImage.url) {
+  //     this.writeProperty('posterImage', posterImage.url);
+  //   }
+  // }
+
+  // // bitmark -> bits -> bitValue -> resource -> ...
+  // // bitmark -> bits -> bitValue -> resource -> posterImage -> ...
+  // // bitmark -> bits -> bitValue -> resource -> thumbnails -> thumbnailsValue -> ...
+  // // [src1x,src2x,src3x,src4x,width,height,alt,caption]
+
+  // // protected enter_posterImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  // //   this.writeProperty('posterImage', node.value);
+  // // }
+
+  // //
+  // // Terminal nodes (leaves)
+  // //
+
+  // // bitmark -> bits -> bitValue -> bitType
+
+  // // bitmark -> bits -> bitValue -> textFormat
+
+  // //  bitmark -> bits -> title
+
+  // protected leaf_title(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const title = node.value;
+  //   const bit = parent?.value as Bit;
+  //   const level = bit.level || 1;
+  //   if (level && title) {
+  //     this.writeOP();
+  //     for (let i = 0; i < level; i++) this.writeHash();
+  //     this.writeString(title);
+  //     this.writeCL();
+  //   }
+  // }
+
+  // //  bitmark -> bits -> subtitle
+
+  // protected leaf_subtitle(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const subtitle = node.value;
+  //   const level = 2;
+  //   if (level && subtitle) {
+  //     this.writeOP();
+  //     for (let i = 0; i < level; i++) this.writeHash();
+  //     this.writeString(subtitle);
+  //     this.writeCL();
+  //   }
+  // }
+
+  // // bitmark -> bits -> bitValue -> book
+
+  // protected leaf_book(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const bit = parent?.value as Bit;
+
+  //   if (bit && node.value) {
+  //     this.writeProperty('book', node.value);
+  //     if (bit.reference) {
+  //       this.writeOPRANGLE();
+  //       this.writeString(bit.reference);
+  //       this.writeCL();
+
+  //       if (bit.referenceEnd) {
+  //         this.writeOPRANGLE();
+  //         this.writeString(bit.referenceEnd);
+  //         this.writeCL();
+  //       }
+  //     }
+  //   }
+  // }
+
+  // //  bitmark -> bits -> bitValue -> anchor
+
+  // protected leaf_anchor(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeOPDANGLE();
+  //     this.writeString(node.value);
+  //     this.writeCL();
+  //   }
+  // }
+
+  // //  bitmark -> bits -> bitValue -> reference
+
+  // protected leaf_reference(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const bit = parent?.value as Bit;
+
+  //   if (bit && node.value) {
+  //     // Only write reference if it is not chained to 'book'
+  //     if (!bit.book) {
+  //       this.writeOPRANGLE();
+  //       this.writeString(node.value);
+  //       this.writeCL();
+  //     }
+  //   }
+  // }
+
+  // //  bitmark -> bits -> bitValue -> externalLink
+
+  // protected leaf_externalLink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeProperty('externalLink', node.value);
+  //   }
+  // }
+
+  // //  bitmark -> bits -> bitValue -> externalLinkText
+
+  // protected leaf_externalLinkText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeProperty('externalLinkText', node.value);
+  //   }
+  // }
+
+  // //  bitmark -> bits -> bitValue -> labelTrue
+
+  // protected leaf_labelTrue(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const bit = parent?.value as Bit;
+  //   if (bit) {
+  //     this.writeProperty('labelTrue', node.value ?? '');
+  //     this.writeProperty('labelFalse', bit.labelFalse ?? '');
+  //   }
+  // }
+
+  // //  bitmark -> bits -> bitValue -> quotedPerson
+
+  // protected leaf_quotedPerson(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeProperty('quotedPerson', node.value);
+  //   }
+  // }
+
+  // //  * -> itemLead --> item
+
+  // //  * -> itemLead --> lead
+
+  // //  * -> hint
+
+  // protected leaf_hint(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeOPQ();
+  //     this.writeString(node.value);
+  //     this.writeCL();
+  //   }
+  // }
+
+  // // bitmark -> bits -> bitValue ->  * -> instruction
+
+  // protected leaf_instruction(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeOPB();
+  //     this.writeString(node.value);
+  //     this.writeCL();
+  //   }
+  // }
+
+  // // bitmark -> bits -> bitValue ->  * -> example
+
+  // protected leaf_example(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const example = node.value;
+
+  //   if (example) {
+  //     this.writeOPA();
+  //     this.writeString('example');
+
+  //     if (example !== true && example !== '') {
+  //       this.writeColon();
+  //       this.writeString(example as string);
+  //     }
+
+  //     this.writeCL();
+  //   }
+  // }
 
   // bitmark -> bits -> body -> bodyValue -> bodyText
 
   protected leaf_bodyText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
-      this.writeString(node.value);
+      if (!this.bitJson.body) this.bitJson.body = '';
+      this.bitJson.body += node.value;
     }
   }
 
-  // bitmark -> bits -> footer -> footerText
+  // // bitmark -> bits -> footer -> footerText
 
-  protected leaf_footerText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeString(node.value);
-    }
-  }
+  // protected leaf_footerText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeString(node.value);
+  //   }
+  // }
 
-  // bitmark -> bits -> bitValue -> elements -> elementsValue
+  // // bitmark -> bits -> bitValue -> elements -> elementsValue
 
-  protected leaf_elementsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeString(node.value);
-    }
-  }
+  // protected leaf_elementsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeString(node.value);
+  //   }
+  // }
 
-  // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions -> solution
-  // ? -> solutions -> solution
+  // // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions -> solution
+  // // ? -> solutions -> solution
 
-  protected leaf_solutionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeOPU();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
+  // protected leaf_solutionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeOPU();
+  //     this.writeString(node.value);
+  //     this.writeCL();
+  //   }
+  // }
 
-  // bitmark -> bits -> bitValue-> body -> bodyValue -> select -> options -> prefix
-  // bitmark -> bits -> bitValue-> body -> bodyValue -> highlight -> options -> prefix
+  // // bitmark -> bits -> bitValue-> body -> bodyValue -> select -> options -> prefix
+  // // bitmark -> bits -> bitValue-> body -> bodyValue -> highlight -> options -> prefix
 
-  protected leaf_prefix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeOPPRE();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
+  // protected leaf_prefix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeOPPRE();
+  //     this.writeString(node.value);
+  //     this.writeCL();
+  //   }
+  // }
 
-  // bitmark -> bits -> bitValue-> body -> bodyValue -> select -> options -> postfix
-  // bitmark -> bits -> bitValue-> body -> bodyValue -> highlight -> options -> postfix
+  // // bitmark -> bits -> bitValue-> body -> bodyValue -> select -> options -> postfix
+  // // bitmark -> bits -> bitValue-> body -> bodyValue -> highlight -> options -> postfix
 
-  protected leaf_postfix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeOPPOST();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
+  // protected leaf_postfix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeOPPOST();
+  //     this.writeString(node.value);
+  //     this.writeCL();
+  //   }
+  // }
 
-  // bitmark -> bits -> bitValue ->  * -> isCaseSensitive
+  // // bitmark -> bits -> bitValue ->  * -> isCaseSensitive
 
-  // bitmark -> bits -> bitValue ->  * -> isLongAnswer
+  // // bitmark -> bits -> bitValue ->  * -> isLongAnswer
 
-  // bitmark -> bits -> bitValue ->  * -> isCorrect
+  // // bitmark -> bits -> bitValue ->  * -> isCorrect
 
-  // bitmark -> bits -> bitValue -> heading -> forKeys
+  // // bitmark -> bits -> bitValue -> heading -> forKeys
 
-  protected leaf_forKeys(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeOPHASH();
-    this.writeString(node.value);
-    this.writeCL();
-  }
+  // protected leaf_forKeys(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeOPHASH();
+  //   this.writeString(node.value);
+  //   this.writeCL();
+  // }
 
-  // bitmark -> bits -> bitValue -> heading -> forValuesValue
+  // // bitmark -> bits -> bitValue -> heading -> forValuesValue
 
-  protected leaf_forValuesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeOPHASH();
-    this.writeString(node.value);
-    this.writeCL();
-  }
+  // protected leaf_forValuesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeOPHASH();
+  //   this.writeString(node.value);
+  //   this.writeCL();
+  // }
 
-  // bitmark -> bits -> bitValue -> pairs -> pairsValue -> key
-  // bitmark -> bits -> bitValue -> matrix -> matrixValue -> key
+  // // bitmark -> bits -> bitValue -> pairs -> pairsValue -> key
+  // // bitmark -> bits -> bitValue -> matrix -> matrixValue -> key
 
-  protected leaf_key(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeString(node.value);
-    }
-  }
+  // protected leaf_key(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeString(node.value);
+  //   }
+  // }
 
-  // bitmark -> bits -> bitValue -> pairs -> pairsValue -> values -> valuesValue
-  // bitmark -> bits -> bitValue -> matrix -> matrixValue -> cells -> cellsValue -> values -> valuesValue
+  // // bitmark -> bits -> bitValue -> pairs -> pairsValue -> values -> valuesValue
+  // // bitmark -> bits -> bitValue -> matrix -> matrixValue -> cells -> cellsValue -> values -> valuesValue
 
-  protected leaf_valuesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeString(node.value);
-    }
-  }
+  // protected leaf_valuesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeString(node.value);
+  //   }
+  // }
 
-  // bitmark -> bits -> bitValue -> questions -> questionsValue -> question
+  // // bitmark -> bits -> bitValue -> questions -> questionsValue -> question
 
-  protected leaf_question(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeString(node.value);
-      // this.writeNL();
-    }
-  }
+  // protected leaf_question(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeString(node.value);
+  //     // this.writeNL();
+  //   }
+  // }
 
-  // bitmark -> bits -> bitValue -> questions -> questionsValue -> sampleSolution
+  // // bitmark -> bits -> bitValue -> questions -> questionsValue -> sampleSolution
 
-  protected leaf_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeOPDOLLAR();
-      this.writeString(node.value);
-      this.writeCL();
-    }
-  }
+  // protected leaf_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value) {
+  //     this.writeOPDOLLAR();
+  //     this.writeString(node.value);
+  //     this.writeCL();
+  //   }
+  // }
 
-  // bitmark -> bits -> bitValue -> questions -> questionsValue -> question -> isShortAnswer
+  // // bitmark -> bits -> bitValue -> questions -> questionsValue -> question -> isShortAnswer
 
-  protected leaf_isShortAnswer(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value === true) {
-      this.writeOPA();
-      this.writeString('shortAnswer');
-      this.writeCL();
-    }
-  }
+  // protected leaf_isShortAnswer(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   if (node.value === true) {
+  //     this.writeOPA();
+  //     this.writeString('shortAnswer');
+  //     this.writeCL();
+  //   }
+  // }
 
-  // bitmark -> bits -> bitValue -> statements -> text
+  // // bitmark -> bits -> bitValue -> statements -> text
 
-  // bitmark -> bits -> bitValue -> resource -> ...
-  // bitmark -> bits -> bitValue -> resource -> posterImage -> ...
-  // bitmark -> bits -> bitValue -> resource -> thumbnails -> thumbnailsValue -> ...
-  // [src1x,src2x,src3x,src4x,width,height,alt,caption]
+  // // bitmark -> bits -> bitValue -> resource -> ...
+  // // bitmark -> bits -> bitValue -> resource -> posterImage -> ...
+  // // bitmark -> bits -> bitValue -> resource -> thumbnails -> thumbnailsValue -> ...
+  // // [src1x,src2x,src3x,src4x,width,height,alt,caption]
 
-  protected leaf_src1x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('src1x', node.value);
-  }
+  // protected leaf_src1x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('src1x', node.value);
+  // }
 
-  protected leaf_src2x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('src2x', node.value);
-  }
+  // protected leaf_src2x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('src2x', node.value);
+  // }
 
-  protected leaf_src3x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('src3x', node.value);
-  }
+  // protected leaf_src3x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('src3x', node.value);
+  // }
 
-  protected leaf_src4x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('src4x', node.value);
-  }
+  // protected leaf_src4x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('src4x', node.value);
+  // }
 
-  protected leaf_width(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('width', node.value);
-  }
+  // protected leaf_width(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('width', node.value);
+  // }
 
-  protected leaf_height(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('height', node.value);
-  }
+  // protected leaf_height(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('height', node.value);
+  // }
 
-  protected leaf_alt(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('alt', node.value);
-  }
+  // protected leaf_alt(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('alt', node.value);
+  // }
 
-  protected leaf_license(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('license', node.value);
-  }
+  // protected leaf_license(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('license', node.value);
+  // }
 
-  protected leaf_copyright(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('copyright', node.value);
-  }
+  // protected leaf_copyright(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('copyright', node.value);
+  // }
 
-  protected leaf_provider(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    // provider is included in the url (it is the domain) and should not be written as a property
-    // this.writeProperty('provider', node.value);
-  }
+  // protected leaf_provider(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   // provider is included in the url (it is the domain) and should not be written as a property
+  //   // this.writeProperty('provider', node.value);
+  // }
 
-  protected leaf_showInIndex(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('showInIndex', node.value);
-  }
+  // protected leaf_showInIndex(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('showInIndex', node.value);
+  // }
 
-  protected leaf_caption(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('caption', node.value);
-  }
+  // protected leaf_caption(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('caption', node.value);
+  // }
 
-  // bitmark -> bits -> bitValue -> resource -> ...
-  // bitmark -> bits -> bitValue -> resource -> posterImage -> ...
-  // bitmark -> bits -> bitValue -> resource -> thumbnails -> thumbnailsValue -> ...
-  // [duration,mute,autoplay,allowSubtitles,showSubtitles]
+  // // bitmark -> bits -> bitValue -> resource -> ...
+  // // bitmark -> bits -> bitValue -> resource -> posterImage -> ...
+  // // bitmark -> bits -> bitValue -> resource -> thumbnails -> thumbnailsValue -> ...
+  // // [duration,mute,autoplay,allowSubtitles,showSubtitles]
 
-  protected leaf_duration(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('duration', node.value);
-  }
+  // protected leaf_duration(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('duration', node.value);
+  // }
 
-  protected leaf_mute(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('mute', node.value);
-  }
+  // protected leaf_mute(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('mute', node.value);
+  // }
 
-  protected leaf_autoplay(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('autoplay', node.value);
-  }
+  // protected leaf_autoplay(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('autoplay', node.value);
+  // }
 
-  protected leaf_allowSubtitles(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('allowSubtitles', node.value);
-  }
+  // protected leaf_allowSubtitles(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('allowSubtitles', node.value);
+  // }
 
-  protected leaf_showSubtitles(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('showSubtitles', node.value);
-  }
+  // protected leaf_showSubtitles(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   this.writeProperty('showSubtitles', node.value);
+  // }
 
-  // END NODE HANDLERS
+  // // END NODE HANDLERS
 
-  //
-  // WRITE FUNCTIONS
-  //
+  // //
+  // // WRITE FUNCTIONS
+  // //
 
   protected writeString(s?: string): void {
     if (s != null) this.write(`${s}`);
   }
 
-  protected writeOPBUL(): void {
-    this.write('[•');
-  }
+  // protected writeResource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
+  //   const resource = node.value as Resource;
+  //   const resourceAsArticle = resource as ArticleResource;
 
-  protected writeOPESC(): void {
-    this.write('[^');
-  }
+  //   if (resource) {
+  //     // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
+  //     let valid = false;
+  //     if (resource.type === ResourceType.article && resourceAsArticle.body) {
+  //       // Article with body
+  //       valid = true;
+  //     } else if (resource.url) {
+  //       // Other resource with a url (url / src / app / ...etc)
+  //       valid = true;
+  //     }
 
-  protected writeOPRANGLE(): void {
-    this.write('[►');
-  }
+  //     // Resource is not valid, cancel walking it's tree.
+  //     if (!valid) return false;
 
-  protected writeOPDANGLE(): void {
-    this.write('[▼');
-  }
-
-  protected writeOPD(): void {
-    this.write('[.');
-  }
-
-  protected writeOPU(): void {
-    this.write('[_');
-  }
-
-  protected writeOPB(): void {
-    this.write('[!');
-  }
-
-  protected writeOPQ(): void {
-    this.write('[?');
-  }
-
-  protected writeOPA(): void {
-    this.write('[@');
-  }
-
-  protected writeOPP(): void {
-    this.write('[+');
-  }
-
-  protected writeOPM(): void {
-    this.write('[-');
-  }
-
-  protected writeOPS(): void {
-    this.write('[\\');
-  }
-
-  protected writeOPR(): void {
-    this.write('[*');
-  }
-
-  protected writeOPC(): void {
-    this.write('[%');
-  }
-
-  protected writeOPAMP(): void {
-    this.write('[&');
-  }
-
-  protected writeOPDOLLAR(): void {
-    this.write('[$');
-  }
-
-  protected writeOPHASH(): void {
-    this.write('[#');
-  }
-
-  protected writeOPPRE(): void {
-    this.write("['");
-  }
-
-  protected writeOPPOST(): void {
-    this.write('['); // TODO - not sure what symbol is for postfix
-  }
-
-  protected writeOP(): void {
-    this.write('[');
-  }
-
-  protected writeCL(): void {
-    this.write(']');
-  }
-
-  protected writeAmpersand(): void {
-    this.write('&');
-  }
-
-  protected writeColon(): void {
-    this.write(':');
-  }
-
-  // protected writeDoubleColon(): void {
-  //   this.write('::');
+  //     this.writeOPAMP();
+  //     this.writeString(resource.type);
+  //     if (resource.type === ResourceType.article && resourceAsArticle.body) {
+  //       this.writeColon();
+  //       // this.writeNL();
+  //       this.writeString(resourceAsArticle.body);
+  //       this.writeNL();
+  //     } else if (resource.url) {
+  //       this.writeColon();
+  //       this.writeString(resource.url);
+  //     }
+  //     this.writeCL();
+  //   }
   // }
 
-  protected writeHash(): void {
-    this.write('#');
-  }
-
-  protected writeMajorDivider(): void {
-    this.write('===');
-  }
-
-  protected writeMinorDivider(): void {
-    this.write('==');
-  }
-
-  protected writeElementDivider(): void {
-    this.write('--');
-  }
-
-  protected writeNL(): void {
-    if (this.options.debugGenerationInline) {
-      this.write('\\n');
-      return;
-    }
-    this.write('\n');
-  }
-
-  protected writeResource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
-    const resource = node.value as Resource;
-    const resourceAsArticle = resource as ArticleResource;
-
-    if (resource) {
-      // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
-      let valid = false;
-      if (resource.type === ResourceType.article && resourceAsArticle.body) {
-        // Article with body
-        valid = true;
-      } else if (resource.url) {
-        // Other resource with a url (url / src / app / ...etc)
-        valid = true;
-      }
-
-      // Resource is not valid, cancel walking it's tree.
-      if (!valid) return false;
-
-      this.writeOPAMP();
-      this.writeString(resource.type);
-      if (resource.type === ResourceType.article && resourceAsArticle.body) {
-        this.writeColon();
-        // this.writeNL();
-        this.writeString(resourceAsArticle.body);
-        this.writeNL();
-      } else if (resource.url) {
-        this.writeColon();
-        this.writeString(resource.url);
-      }
-      this.writeCL();
-    }
-  }
-
-  protected writeProperty(name: string, values?: unknown | unknown[]): void {
+  protected writeProperty(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    target: any,
+    name: string,
+    values: unknown[] | undefined,
+    singleWithoutArray?: boolean,
+  ): void {
     if (values !== undefined) {
-      if (!Array.isArray(values)) {
-        values = [values];
-      }
-
-      for (const val of values as []) {
-        if (val !== undefined) {
-          this.writeOPA();
-          this.writeString(name);
-          this.writeColon();
-          this.writeString(`${val}`);
-          this.writeCL();
+      if (Array.isArray(values) && values.length > 0) {
+        if (singleWithoutArray && values.length === 1) {
+          target[name] = values[0];
+        } else {
+          target[name] = values;
         }
       }
     }
@@ -1422,17 +1280,16 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     this.writeString(tag);
   }
 
-  protected isWriteTextFormat(_bitValue: string): boolean {
-    // const isMinusMinus = TextFormat.fromValue(bitValue) === TextFormat.bitmarkMinusMinus;
-    // const writeFormat = !isMinusMinus || this.options.explicitTextFormat;
-    // return !!writeFormat;
-    return false;
-  }
+  // protected isWriteTextFormat(bitValue: string): boolean {
+  //   const isMinusMinus = TextFormat.fromValue(bitValue) === TextFormat.bitmarkMinusMinus;
+  //   const writeFormat = !isMinusMinus || this.options.explicitTextFormat;
+  //   return !!writeFormat;
+  // }
 
-  protected isStatementDivider(route: NodeInfo[]) {
-    const bitType = this.getBitType(route);
-    return !(bitType === BitType.trueFalse1);
-  }
+  // protected isStatementDivider(route: NodeInfo[]) {
+  //   const bitType = this.getBitType(route);
+  //   return !(bitType === BitType.trueFalse1);
+  // }
 
   protected getBitType(route: NodeInfo[]): BitTypeType | undefined {
     for (const node of route) {

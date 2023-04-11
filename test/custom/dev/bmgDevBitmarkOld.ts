@@ -13,8 +13,6 @@ import { BitmarkTool } from '../../../src/BitmarkTool';
 import { Ast } from '../../../src/ast/Ast';
 // import { BitmarkFileGenerator } from '../../..src/generator/bitmark/BitmarkFileGenerator';
 import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
-import { JsonObjectGenerator } from '../../../src/generator/json/JsonObjectGenerator';
-import { BitmarkParserType } from '../../../src/model/enum/BitmarkParserType';
 import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
 import { JsonParser } from '../../../src/parser/json/JsonParser';
 
@@ -36,17 +34,13 @@ class BmgDevBitmark {
       // Preprocess and log
       console.log(`\n${bitStr}\n\n`);
 
-      // Generate AST from the Bitmark markup
-      const bitmarkAst = bitmarkParser.toAst(bitStr, {
-        parserType: BitmarkParserType.peggy,
-      });
-
-      // AST ==> Bitmark
-      const generator = new JsonObjectGenerator({
-        prettify: true,
-      });
-      const json = await generator.generate(bitmarkAst);
+      // Bitmark ==> JSON
+      // Convert the bitmark to JSON
+      const json = bitmarkParser.parse(bitStr);
       const jsonStr = JSON.stringify(json, undefined, 2);
+
+      // Convert the bitmark JSON to bitmark AST
+      const bitmarkAst = jsonParser.toAst(json);
 
       console.log(JSON.stringify(bitmarkAst, null, 2));
       ast.printTree(bitmarkAst);
@@ -62,6 +56,6 @@ class BmgDevBitmark {
 
 const bmg = new BmgDevBitmark();
 
-bmg.test(true).then(() => {
+bmg.test(false).then(() => {
   // Done
 });

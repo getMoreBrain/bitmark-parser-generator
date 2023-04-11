@@ -2,7 +2,7 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 import { Builder } from '../../ast/Builder';
-import { Card, CardSet, CardSide } from '../../model/ast/CardSet';
+import { CardSet } from '../../model/ast/CardSet';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { PropertyKey } from '../../model/enum/PropertyKey';
 import { ResourceType, ResourceTypeType } from '../../model/enum/ResourceType';
@@ -669,14 +669,14 @@ class BitmarkParserHelper {
     const matrix: Matrix[] = [];
     let matrixCells: MatrixCell[] = [];
     let matrixCellValues: string[] = [];
-    let keyAudio: AudioResource | undefined = undefined;
-    let keyImage: ImageResource | undefined = undefined;
+    // let keyAudio: AudioResource | undefined = undefined;
+    // let keyImage: ImageResource | undefined = undefined;
 
     for (const card of cardSet.cards) {
       forKeys = undefined;
       matrixKey = undefined;
-      keyAudio = undefined;
-      keyImage = undefined;
+      // keyAudio = undefined;
+      // keyImage = undefined;
       matrixCells = [];
       matrixCellValues = [];
       sideIdx = 0;
@@ -704,13 +704,13 @@ class BitmarkParserHelper {
             // First side
             if (tags.heading != null) {
               forKeys = tags.heading;
-            } else if (tags.resource) {
-              console.log('WARNING: Match card has resource on first side', tags.resource);
-              if (tags.resource.type === ResourceType.audio) {
-                keyAudio = tags.resource as AudioResource;
-              } else if (tags.resource.type === ResourceType.image) {
-                keyImage = tags.resource as ImageResource;
-              }
+              // } else if (tags.resource) {
+              //   console.log('WARNING: Match card has resource on first side', tags.resource);
+              //   if (tags.resource.type === ResourceType.audio) {
+              //     keyAudio = tags.resource as AudioResource;
+              //   } else if (tags.resource.type === ResourceType.image) {
+              //     keyImage = tags.resource as ImageResource;
+              //   }
             } else {
               // If not a heading or resource, it is a matrix
               matrixKey = tags.body;
@@ -745,6 +745,8 @@ class BitmarkParserHelper {
       } else {
         const m = builder.matrix({
           key: matrixKey ?? '',
+          // keyAudio,
+          // keyImage,
           cells: matrixCells,
           isCaseSensitive: true,
         });
