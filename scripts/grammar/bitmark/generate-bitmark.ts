@@ -11,14 +11,7 @@ type SourceOptions = SourceBuildOptions<'source'> & {
 };
 
 const customHeader = `
-import { EnumType, superenum } from '@ncoderz/superenum';
-import { BitType, BitTypeType } from '../../../model/enum/BitType';
-import { TextFormat, TextFormatType } from '../../../model/enum/TextFormat';
-import { ResourceType, ResourceTypeType } from '../../../model/enum/ResourceType';
-import { PropertyKey, PropertyKeyType } from '../../../model/enum/PropertyKey';
-import { ParserError } from '../../../model/ParserError';
-import { BitmarkAst, Bit } from '../../../model/ast/Nodes';
-import { Builder } from '../../../ast/Builder';
+import { BitmarkParserHelper, TypeKey } from '../../../parser/bitmark/BitmarkParserHelper';
 `;
 
 const inputTextPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'text-grammar.pegjs');
@@ -30,7 +23,9 @@ const testFilePath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark
 const commandLineOptions = process.argv.slice(2);
 const optTest = commandLineOptions.includes('--test');
 const optBitmark = commandLineOptions.includes('--bit');
-const allowedStartRules = optBitmark ? ['bitmark'] : ['bitmarkPlus', 'bitmarkPlusPlus', 'bitmarkMinusMinus'];
+const allowedStartRules = optBitmark
+  ? ['bitmark', 'body', 'cardContent']
+  : ['bitmarkPlus', 'bitmarkPlusPlus', 'bitmarkMinusMinus'];
 const startRule = optBitmark ? 'bitmark' : 'bitmarkPlus';
 
 // Select input file

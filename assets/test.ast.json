@@ -1,0 +1,139 @@
+{
+  "bits": [
+    {
+      "bitType": "multiple-response",
+      "textFormat": "bitmark--",
+      "ids": [
+        "230950"
+      ],
+      "itemLead": {
+        "item": "Nr. 4464"
+      },
+      "instruction": "Welche Antworten sind richtig?",
+      "quizzes": [
+        {
+          "instruction": "1. Was sind typische Signalwörter für das Simple Present?",
+          "responses": [
+            {
+              "text": "just"
+            },
+            {
+              "text": "normally",
+              "isCorrect": true
+            },
+            {
+              "text": "seldom",
+              "isCorrect": true
+            },
+            {
+              "text": "two weeks ago"
+            },
+            {
+              "text": "usually",
+              "isCorrect": true
+            },
+            {
+              "text": "yet"
+            }
+          ]
+        },
+        {
+          "instruction": "2. Welche Verbformen sind richtig gebildet?",
+          "responses": [
+            {
+              "text": "she agrees",
+              "isCorrect": true
+            },
+            {
+              "text": "she annoys",
+              "isCorrect": true
+            },
+            {
+              "text": "she cries",
+              "isCorrect": true
+            },
+            {
+              "text": "she hurrys"
+            },
+            {
+              "text": "she kissis"
+            },
+            {
+              "text": "she rushes",
+              "isCorrect": true
+            },
+            {
+              "text": "she teachs"
+            },
+            {
+              "text": "she worrys"
+            }
+          ]
+        },
+        {
+          "instruction": "3. Welche Handlungen kennzeichnen das Simple Present?",
+          "responses": [
+            {
+              "text": "allgemeine Aussagen",
+              "isCorrect": true
+            },
+            {
+              "text": "feststehende Handlungen (auch Zukunft)",
+              "isCorrect": true
+            },
+            {
+              "text": "Handlungen geschehen im Moment des Sprechens"
+            },
+            {
+              "text": "Handlungen haben in der Vergangenheit begonnen und dauern jetzt noch an"
+            },
+            {
+              "text": "Handlungen sind abgeschlossen"
+            },
+            {
+              "text": "Handlungsfolgen",
+              "isCorrect": true
+            },
+            {
+              "text": "regelmäßige, wiederholte Handlungen",
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "instruction": "4. Welche Sätze/Fragen stehen im Simple Present?",
+          "responses": [
+            {
+              "text": "Are you Greek?",
+              "isCorrect": true
+            },
+            {
+              "text": "Do you have a brother?",
+              "isCorrect": true
+            },
+            {
+              "text": "I don't usually have lunch at school."
+            },
+            {
+              "text": "Martin has been to Montreal."
+            },
+            {
+              "text": "Peggy was on holiday."
+            },
+            {
+              "text": "The largest number of people lives in Brooklyn.",
+              "isCorrect": true
+            },
+            {
+              "text": "We have two cars.",
+              "isCorrect": true
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "footerText": ""
+      }
+    }
+  ]
+}

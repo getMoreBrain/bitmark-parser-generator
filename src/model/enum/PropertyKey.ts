@@ -26,6 +26,13 @@ const PropertyKey = superenum({
   labelTrue: 'labelTrue',
   labelFalse: 'labelFalse',
   quotedPerson: 'quotedPerson',
+
+  // Gap / Select
+  example: 'example',
+
+  // Questions
+  shortAnswer: 'shortAnswer',
+  caseSensitive: 'caseSensitive',
 });
 
 export type PropertyKeyType = EnumType<typeof PropertyKey>;

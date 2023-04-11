@@ -1,7 +1,7 @@
-import { ParserError } from '../ParserError';
 import { BitTypeType } from '../enum/BitType';
 import { ResourceTypeType } from '../enum/ResourceType';
 import { TextFormatType } from '../enum/TextFormat';
+import { ParserError } from '../parser/ParserError';
 
 // Node
 

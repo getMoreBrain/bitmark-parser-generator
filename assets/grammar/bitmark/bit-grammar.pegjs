@@ -4,75 +4,17 @@
  * RA Sewell
  *
  * (c) 2023 Get More Brain AG
- *
- *   CardSet
- * === Card
- * ==    Side
- * --      Variant
+ * All rights reserved.
  *
  */
 
 {{ // GLOBAL JS
 
-// Types
-
-interface BitHeader {
-  bitType?: BitTypeType;
-  textFormat?: TextFormatType;
-  resourceType?: ResourceTypeType;
-}
-
-type BitContent = TypeValue | TypeKeyValue;
-
-interface TypeValue {
-  type: string;
-  value?: unknown;
-}
-
-interface TypeKeyValue {
-  type: string;
-  key: string;
-  value?: unknown;
-}
-
-// CardSet types
-interface CardSet {
-  card: Card[];
-}
-
-interface Card {
-  side: Side[];
-}
-
-interface CardSide {
-  variant: CardVariant[];
-}
-
-type CardVariant = string;
-
-// Code Enumerations
-const TypeKey = superenum({
-  Ignore: 'Ignore',
-  TextFormat: 'TextFormat',
-  ResourceType: 'ResourceType',
-  Property: 'Property',
-  UnknownProperty: 'UnknownProperty',
-  ItemLead: 'ItemLead',
-  Instruction: 'Instruction',
-  Hint: 'Hint',
-  BodyLine: 'BodyLine',
-  CardSet: 'CardSet',
-  Card: 'Card',
-  CardSide: 'CardSide',
-  CardVariant: 'CardVariant',
-});
-
 //
 // Global variables
 //
-const builder = new Builder();
 
-
+// None
 
 }} // END GLOBAL JS
 
@@ -83,186 +25,23 @@ const builder = new Builder();
 //
 // Instance variables
 //
-const nonFatalErrors: ParserError[] = [];
-let cardIndex = 0;
-let cardSideIndex = 0;
-let cardVariantIndex = 0;
-let cardSectionLineCount = 0;
 
-//
-// Instance functions
-//
+const helper = new BitmarkParserHelper({
+  parse: peg$parse,
+  parserText: text,
+  parserLocation: location,
+});
 
-// Build bits
-function buildBits(bits: (Bit | undefined)[]): BitmarkAst {
-  const res = builder.bitmark({
-    bits: bits.filter(bit => !!bit) as Bit[],
-    errors: nonFatalErrors.length > 0 ? nonFatalErrors : undefined,
-  })
-
-  return res;
-}
-
-// Build bit
-function buildBit(bitHeader: BitHeader, bitContent: BitContent[], extraContent: string): Bit | undefined {
-  const { bitType, textFormat, resourceType } = bitHeader;
-
-  // Bit type was invalid, so ignore the bit
-  if (!bitType) return undefined;
-
-  // Map the bit tags
-  const tags = mapBitContent(bitContent);
-
-  // const bit: Bit = {
-  //   bitType,
-  //   textFormat,
-  //   resourceType,
-  //   ...tags,
-  //   content: bitContent,
-  // } as Bit;
-
-  // Build the final bit
-  const bit = builder.bit({
-    bitType,
-    textFormat,
-    resourceType,
-    ...tags,
-  });
-
-
-  bit.cardSet = tags.cardSet;
-  bit.content = extraContent;
-  // bit.resourceType = resourceType;
-
-  return bit;
-}
-
-// Build bit header
-function buildBitHeader(bitType: string, textFormatAndResourceType: Partial<BitHeader>): BitHeader {
-  // Get / check bit type
-  const validBitType = BitType.fromValue(bitType);
-  if (!validBitType) {
-    addError(`Invalid bit type: ${bitType}`);
-  }
-
-  return {
-    bitType: validBitType,
-    ...textFormatAndResourceType,
-  }
-}
-
-// Build text and resource type
-function buildTextAndResourceType(value1: TypeValue | undefined, value2: TypeValue | undefined): Partial<BitHeader> {
-  const res: Partial<BitHeader> = { textFormat: TextFormat.bitmarkMinusMinus };
-  const processValue = (value: TypeValue | undefined) => {
-    if (value) {
-      if (value.type === TypeKey.TextFormat) {
-        // Parse text format, adding default if not set / invalid
-        res.textFormat = TextFormat.fromValue(value.value);
-        if (value.value && !res.textFormat) {
-          addError(`Invalid text format '${value.value}', defaulting to '${TextFormat.bitmarkMinusMinus}'`);
-        }
-        res.textFormat = res.textFormat ?? TextFormat.bitmarkMinusMinus;
-      } else {
-        // Parse resource type, adding error if invalid
-        res.resourceType = ResourceType.fromValue(value.value);
-        if (value.value && !res.resourceType) {
-          addError(`Invalid resource type '${value.value}', Resource type will be implied automatically if a resource is present`);
-        }
-      }
-    }
-  }
-  processValue(value1);
-  processValue(value2);
-
-  return res;
-}
-
-// Process the bit content
-function mapBitContent(bitContent: BitContent[]) {
-  console.log(bitContent);
-
-  const extraProperties: any = {};
-  let body = '';
-  let seenItem = false;
-
-  const res = bitContent.reduce((acc, content, _index) => {
-    const { type, key, value } = content as TypeKeyValue;
-
-    switch (type) {
-      case TypeKey.Property: {
-        if (PropertyKey.fromValue(key)) {
-          // Known property
-          acc[key] = value;
-        } else {
-          // Unknown (extra) property
-          extraProperties[key] = value;
-        }
-        break;
-      }
-      case TypeKey.ItemLead: {
-        if (!seenItem) {
-          acc.item = value;
-        } else {
-          acc.lead = value;
-        }
-        seenItem = true;
-        break;
-      }
-
-      case TypeKey.Instruction: {
-        acc.instruction = value;
-        break;
-      }
-
-      case TypeKey.Hint: {
-        acc.hint = value;
-        break;
-      }
-
-      case TypeKey.BodyLine: {
-        body += value;
-        break;
-      }
-
-      case TypeKey.CardSet: {
-        acc.cardSet = value;
-        break;
-      }
-
-      default:
-        // Unknown tag
-    }
-
-    return acc;
-  }, {} as any);
-
-  res.extraProperties = extraProperties;
-  res.body = body.trim();
-
-  return res;
-}
-
-
-/**
- * Add an error to the list of non-fatal errors
- * @param message The error message
- */
-function addError(message: string) {
-  const error: ParserError = {
-    message,
-    text: text(),
-    location: location(),
-  };
-  nonFatalErrors.push(error);
-}
 
 } // END PER PARSE JS
 
+//
+// Bitmark
+//
 
-// Root rule
+// Root bitmark rule
 bitmark
-  = bits: Bits+ { return buildBits(bits) }
+  = bits: Bits+ { return helper.buildBits(bits) }
   / NoContent { return { bits: [] } }
 
 // No content in the input
@@ -275,16 +54,16 @@ Bits
 
 // A bit
 Bit
-  = bitHeader: BitHeader bitContent: BitContent { return buildBit(bitHeader, bitContent) }
+  = bitHeader: BitHeader bitContent: BitContent { return helper.buildBit(bitHeader, bitContent) }
   // = bitHeader: BitHeader bitContent: BitContent extraContent: $Anything { return buildBit(bitHeader, bitContent, extraContent) }
 
 // The bit header, e.g. [.interview&image:bitmark++], [.interview:bitmark--&image], [.cloze]
 BitHeader
-  = NL? "[." bitType: Bit_Value formatAndResource: TextFormatAndResourceType? "]" { return buildBitHeader(bitType, formatAndResource) }
+  = NL? "[." bitType: Bit_Value formatAndResource: TextFormatAndResourceType? "]" { return helper.buildBitHeader(bitType, formatAndResource) }
 
 // Text format and resource type
 TextFormatAndResourceType
-  = value1: (TextFormat / ResourceType)? value2: (TextFormat / ResourceType)? { return buildTextAndResourceType(value1, value2) }
+  = value1: (TextFormat / ResourceType)? value2: (TextFormat / ResourceType)? { return helper.buildTextAndResourceType(value1, value2) }
 
 // Text format
 TextFormat
@@ -296,11 +75,82 @@ ResourceType
 
 // All bit content (tags, body, cards)
 BitContent
-  = value: (CardSet / Tag / BodyLine)* { return value }
+  = value: (CardSet / BitTag / BodyLine)* { return value }
 
 // Bit tag
-Tag
+BitTag
   = value: (PropertyTag / ItemLeadTag / InstructionTag / HintTag) { return value }
+
+// Line of Body of the bit
+BodyLine
+  = value: $(NL !BitHeader / Char+) { return { type: TypeKey.BodyLine, value: value } }
+
+// CardSet
+CardSet
+  = value: (CardSetStart Card* CardSetEnd) { return { type: TypeKey.CardSet, value: value[1].flat() } }
+
+CardSetStart
+  = NL &("===" NL) { helper.processCardSetStart(); }
+
+CardSetEnd
+  = "===" &EOL { helper.processCardSetEnd(); }
+
+Card
+  = value: ("===" NL CardContent) { helper.processCard(); return value[2]; }
+
+CardContent
+  = value: ((PossibleCardLine !(("===" EOL) / BitHeader))* PossibleCardLine (!BitHeader !EOL)) {
+    const cards = helper.reduceToArrayOfTypes(value, TypeKey.Card);
+    return cards;
+  };
+
+PossibleCardLine
+  = value: ("===" NL / "==" NL / "--" NL / CardLine) { return helper.processPossibleCardLine(value); }
+
+CardLine
+ = value: $(Line NL) { return helper.processCardLine(value); }
+
+
+//
+// Body
+//
+
+// Root body rule
+body
+  = value: (BodyTags / BodyChar)* { return value; }
+
+// Line of Body of the bit
+BodyChar
+  = value: (Char / NL) { return { type: TypeKey.BodyChar, value: value } }
+
+// BodyTags
+BodyTags
+  = value: (GapTags / SelectTags) { return value; }
+
+// Gap tags
+GapTags
+  = value: ClozeTag others: (ClozeTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Gap, value: [value, ...others] }; }
+
+// Select tags
+SelectTags
+  = value: (TrueTag / FalseTag)+ others: (TrueTag / FalseTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Select, value: [...value, ...others] } }
+
+
+//
+// Card content (standard)
+//
+
+// Root cardContent rule
+cardContent
+  = value: (CardContentTags / BodyChar)* { return value; }
+
+CardContentTags
+  = value: (ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueTag / FalseTag / PropertyTag) { return value; }
+
+
+//
+// Tags
+//
 
 // Property (@) tag
 PropertyTag
@@ -318,89 +168,22 @@ InstructionTag
 HintTag
   = NL? "[?" value: Tag_Value "]" { return { type: TypeKey.Hint, value } }
 
-// Line of Body of the bit
-BodyLine
-  = value: $(NL !BitHeader / Char+) { return { type: TypeKey.BodyLine, value: value } }
+// True (+) tag
+TrueTag
+  = NL? "[+" value: Tag_Value "]" { return { type: TypeKey.True, value } }
 
-// CardSet
-CardSet
-  = value: (CardSetStart Card* CardSetEnd) { return { type: TypeKey.CardSet, value: value } }
+// False (-) tag
+FalseTag
+  = NL? "[-" value: Tag_Value "]" { return { type: TypeKey.False, value } }
 
-CardSetStart
-  = NL &("===" NL) {
-    cardIndex = 0; cardSideIndex = 0; cardVariantIndex = 0; cardSectionLineCount = 0;
-  }
+// Cloze tag
+ClozeTag
+  = NL? "[_" value: Tag_Value "]" { return { type: TypeKey.Cloze, value } }
 
-CardSetEnd
-  = "===" &EOL { console.log('CardSetEnd'); }
+// Sample Solution tag
+SampleSolutionTag
+  = NL? "[$" value: Tag_Value "]" { return { type: TypeKey.SampleSolution, value } }
 
-Card
-  = value: ("===" NL CardContent) {
-    cardIndex++; cardSideIndex = 0; cardVariantIndex = 0; cardSectionLineCount = 0;
-    return value;
-  }
-
-CardContent
-  = value: ((PossibleCardLine !(("===" EOL) / BitHeader))* PossibleCardLine !BitHeader) { return value; };
-
-PossibleCardLine
-  = value: ("===" NL / "==" NL / "--" NL / CardLine) {
-    let isSideDivider = false;
-    let isVariantDivider = false;
-
-    if (Array.isArray(value) && value.length === 2) {
-      value = value[0];
-      isSideDivider = (value === "==");
-      isVariantDivider = (value === "--");
-    }
-
-    // This card section has no lines, so it's a special case blank
-    const emptyCardOrSideOrVariant = cardSectionLineCount === 0;
-    const currentSideIndex = cardSideIndex;
-    const currentVariantIndex = cardVariantIndex;
-
-    if (isSideDivider) {
-      cardSideIndex++;
-      cardVariantIndex = 0;
-      cardSectionLineCount = 0;
-      console.log(`Card ${cardIndex} Side: ${value}`)
-    } else if (isVariantDivider) {
-      cardVariantIndex++;
-      cardSectionLineCount = 0;
-      console.log(`Card ${cardIndex}, Side ${cardSideIndex}, Variant: ${cardVariantIndex}`)
-    }
-
-    if (emptyCardOrSideOrVariant) {
-      // This card section has no lines, so it's a special case blank
-      return {
-        type: TypeKey.Card,
-        value: {
-          cardIndex,
-          cardSideIndex: currentSideIndex,
-          cardVariantIndex: currentVariantIndex,
-          value: '',
-        }
-      };
-    }
-
-    return value;
-  };
-
-// TODO - move code into functions and process other rules to simplify output
-CardLine
- = value: $(Line NL) {
-  cardSectionLineCount++;
-  console.log(`CardLine (Card ${cardIndex}, Side ${cardSideIndex}, Variant: ${cardVariantIndex}): ${value}`)
-  return {
-    type: TypeKey.Card,
-    value: {
-      cardIndex,
-      cardSideIndex,
-      cardVariantIndex,
-      value
-    }
-  };
-};
 
 
 //
@@ -439,7 +222,7 @@ Anything "Anything"
 
 // Match a single charachter, but not a line terminator
 Char "Character"
-  = [^\n\r\u2028\u2029] //u2028: line separator, u2029: paragraph separator
+  = [^\n\r\u2028\u2029] // u2028: line separator, u2029: paragraph separator
 
 // Match a line of text or and empty line, excluding the line terminator
 Line "Line"

@@ -1,7 +1,7 @@
-import { ParserError } from '../model/ParserError';
 import { BitTypeType } from '../model/enum/BitType';
 import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
 import { TextFormatType, TextFormat } from '../model/enum/TextFormat';
+import { ParserError } from '../model/parser/ParserError';
 import { ObjectUtils } from '../utils/ObjectUtils';
 
 import { NodeValidator } from './rules/NodeValidator';
@@ -128,7 +128,7 @@ class Builder {
     example?: string | boolean;
     resource?: Resource;
     body?: Body;
-    sampleSolutions: string | string[];
+    sampleSolutions?: string | string[];
     elements?: string[];
     statements?: Statement[];
     responses?: Response[];

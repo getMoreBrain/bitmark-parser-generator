@@ -1,50 +1,251 @@
 [
   {
-    "bitmark": "[.interview:bitmark--]\n[@id:166861]\n[%Teilauftrag a)]\n**Marktanalyse (6min)**\nAls erstes geht es für die Firma Fenstech AG darum, zu erfahren, was der Markt im Moment zu bieten hat. Es gibt verschiedene Möglichkeiten, sich einen Überblick über die Marktsituation zu verschaffen. Bei unserer Firma stehen 3 Varianten im Raum:\n[!Nennen Sie zu jeder Variante stichwortartig je zwei Vor- und Nachteile.]\n===\na) Besuch der Orbit-iEX in Zürich[@shortAnswer]\n===\nb) Zusammenarbeit mit einem externen Berater[@shortAnswer]\n===\nc) Internet[@shortAnswer]\n===",
+    "bitmark": "[.multiple-response]\n[@id:230950]\n[%Nr. 4464]\n[!Welche Antworten sind richtig?]\n===\n[!1. Was sind typische Signalwörter für das Simple Present?]\n[-just]\n[+normally]\n[+seldom]\n[-two weeks ago]\n[+usually]\n[-yet]\n===\n[!2. Welche Verbformen sind richtig gebildet?]\n[+she agrees]\n[+she annoys]\n[+she cries]\n[-she hurrys]\n[-she kissis]\n[+she rushes]\n[-she teachs]\n[-she worrys]\n===\n[!3. Welche Handlungen kennzeichnen das Simple Present?]\n[+allgemeine Aussagen]\n[+feststehende Handlungen (auch Zukunft)]\n[-Handlungen geschehen im Moment des Sprechens]\n[-Handlungen haben in der Vergangenheit begonnen und dauern jetzt noch an]\n[-Handlungen sind abgeschlossen]\n[+Handlungsfolgen]\n[+regelmäßige, wiederholte Handlungen]\n===\n[!4. Welche Sätze/Fragen stehen im Simple Present?]\n[+Are you Greek?]\n[+Do you have a brother?]\n[-I don't usually have lunch at school.]\n[-Martin has been to Montreal.]\n[-Peggy was on holiday.]\n[+The largest number of people lives in Brooklyn.]\n[+We have two cars.]\n===",
     "bit": {
-      "type": "interview",
+      "type": "multiple-response",
       "format": "bitmark--",
-      "item": "Teilauftrag a)",
-      "instruction": "Nennen Sie zu jeder Variante stichwortartig je zwei Vor- und Nachteile.",
-      "body": "**Marktanalyse (6min)**\nAls erstes geht es für die Firma Fenstech AG darum, zu erfahren, was der Markt im Moment zu bieten hat. Es gibt verschiedene Möglichkeiten, sich einen Überblick über die Marktsituation zu verschaffen. Bei unserer Firma stehen 3 Varianten im Raum:",
+      "item": "Nr. 4464",
+      "instruction": "Welche Antworten sind richtig?",
+      "body": "",
       "footer": "",
       "hint": "",
-      "questions": [
+      "quizzes": [
         {
           "item": "",
-          "question": "a) Besuch der Orbit-iEX in Zürich",
-          "instruction": "",
+          "instruction": "1. Was sind typische Signalwörter für das Simple Present?",
+          "responses": [
+            {
+              "response": "just",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "normally",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "seldom",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "two weeks ago",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "usually",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "yet",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
           "hint": "",
           "isExample": false,
-          "example": "",
-          "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "example": ""
         },
         {
           "item": "",
-          "question": "b) Zusammenarbeit mit einem externen Berater",
-          "instruction": "",
+          "instruction": "2. Welche Verbformen sind richtig gebildet?",
+          "responses": [
+            {
+              "response": "she agrees",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she annoys",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she cries",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she hurrys",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she kissis",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she rushes",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she teachs",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she worrys",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
           "hint": "",
           "isExample": false,
-          "example": "",
-          "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "example": ""
         },
         {
           "item": "",
-          "question": "c) Internet",
-          "instruction": "",
+          "instruction": "3. Welche Handlungen kennzeichnen das Simple Present?",
+          "responses": [
+            {
+              "response": "allgemeine Aussagen",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "feststehende Handlungen (auch Zukunft)",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Handlungen geschehen im Moment des Sprechens",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Handlungen haben in der Vergangenheit begonnen und dauern jetzt noch an",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Handlungen sind abgeschlossen",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Handlungsfolgen",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "regelmäßige, wiederholte Handlungen",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
           "hint": "",
           "isExample": false,
-          "example": "",
-          "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "4. Welche Sätze/Fragen stehen im Simple Present?",
+          "responses": [
+            {
+              "response": "Are you Greek?",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Do you have a brother?",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "I don't usually have lunch at school.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Martin has been to Montreal.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Peggy was on holiday.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "The largest number of people lives in Brooklyn.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "We have two cars.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
-      "id": ["166861"]
+      "id": [
+        "230950"
+      ]
     }
   }
 ]
