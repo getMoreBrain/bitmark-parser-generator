@@ -145,7 +145,27 @@ cardContent
   = value: (CardContentTags / BodyChar)* { return value; }
 
 CardContentTags
-  = value: (ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueTag / FalseTag / PropertyTag) { return value; }
+  = value: (ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueTag / FalseTag / PropertyTag / HeadingTag / SubHeadingTag / ResourceTags) { return value; }
+
+//
+// Resource
+//
+ResourceTags
+  = value: ResourceTag {
+    console.log('RESOURCE_TAGS', value);
+    // TODO - insert other tags values into the resource tag value
+    return value;
+  }
+
+// The bit header, e.g. [.interview&image:bitmark++], [.interview:bitmark--&image], [.cloze]
+ResourceTag
+  = NL? "[&" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Resource, key, url: value } }
+
+// Resource Extra Data Tag
+ResourceXXTag
+  = value1: (TextFormat / ResourceType)? value2: (TextFormat / ResourceType)? { return helper.buildTextAndResourceType(value1, value2) }
+
+
 
 
 //
@@ -184,6 +204,13 @@ ClozeTag
 SampleSolutionTag
   = NL? "[$" value: Tag_Value "]" { return { type: TypeKey.SampleSolution, value } }
 
+// Heading tag
+HeadingTag
+  = NL? "[#" value: Tag_Value "]" { return { type: TypeKey.Heading, value } }
+
+// Sub-Heading tag
+SubHeadingTag
+  = NL? "[##" value: Tag_Value "]" { return { type: TypeKey.SubHeading, value } }
 
 
 //

@@ -26,6 +26,10 @@ import {
   Matrix,
   Choice,
   Question,
+  Resource,
+  AudioResource,
+  ImageResource,
+  MatrixCell,
 } from '../../model/ast/Nodes';
 
 export interface ParseOptions {
@@ -66,6 +70,8 @@ export interface TypeKeyParseResult {
   isCorrect: boolean;
   responses?: Response[];
   choices?: Choice[];
+  heading?: string;
+  resource?: Resource;
 }
 
 export interface BitSpecificCards {
@@ -94,9 +100,16 @@ interface TypeKeyValue {
   value?: unknown;
 }
 
+interface TypeKeyResource {
+  type: string;
+  key: string;
+  url: string;
+}
+
 const TypeKey = superenum({
   TextFormat: 'TextFormat',
   ResourceType: 'ResourceType',
+  Resource: 'Resource',
   Property: 'Property',
   ItemLead: 'ItemLead',
   Instruction: 'Instruction',
@@ -111,6 +124,8 @@ const TypeKey = superenum({
   Cloze: 'Cloze',
   Select: 'Select',
   SampleSolution: 'SampleSolution',
+  Heading: 'Heading',
+  SubHeading: 'SubHeading',
 });
 
 export type TypeKeyType = EnumType<typeof TypeKey>;
@@ -154,6 +169,8 @@ class BitmarkParserHelper {
     const {
       cardSet,
       body: unparsedBody,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      heading, // Remove so types match
       ...tags
     } = this.typeKeyDataParser(bitContent, [
       TypeKey.Property,
@@ -379,11 +396,26 @@ class BitmarkParserHelper {
       case BitType.trueFalse:
         return this.parseStatements(cardSet);
 
+      case BitType.multipleChoice:
+        return this.parseQuiz(cardSet, false, true);
+
       case BitType.multipleResponse:
         return this.parseQuiz(cardSet, true, false);
 
       case BitType.interview:
         return this.parseQuestions(cardSet);
+
+      case BitType.match:
+      case BitType.matchSolutionGrouped:
+      case BitType.matchReverse:
+      case BitType.matchAudio:
+      case BitType.matchPicture:
+        // ==> heading / pairs
+        return this.parseMatchPairs(cardSet);
+
+      case BitType.matchMatrix:
+        // ==> heading / matrix
+        return this.parseMatchMatrix(cardSet);
 
       default:
       // Return default empty object
@@ -458,7 +490,6 @@ class BitmarkParserHelper {
 
   parseQuiz(cardSet: CardSet, insertResponses: boolean, insertChoices: boolean): BitSpecificCards {
     const quizzes: Quiz[] = [];
-    const responses: Statement[] = [];
 
     for (const card of cardSet.cards) {
       for (const side of card.sides) {
@@ -542,16 +573,201 @@ class BitmarkParserHelper {
     };
   }
 
+  parseMatchPairs(cardSet: CardSet): BitSpecificCards {
+    let sideIdx = 0;
+    let heading: Heading | undefined;
+    const pairs: Pair[] = [];
+    let forKeys: string | undefined = undefined;
+    const forValues: string[] = [];
+    let pairKey: string | undefined = undefined;
+    let pairValues: string[] = [];
+    let keyAudio: AudioResource | undefined = undefined;
+    let keyImage: ImageResource | undefined = undefined;
+
+    for (const card of cardSet.cards) {
+      forKeys = undefined;
+      pairKey = undefined;
+      pairValues = [];
+      keyAudio = undefined;
+      keyImage = undefined;
+      sideIdx = 0;
+
+      for (const side of card.sides) {
+        for (const rawContent of side.variants) {
+          const content = this.parse(rawContent, {
+            startRule: 'cardContent',
+          }) as BitContent[];
+
+          const tags = this.typeKeyDataParser(content, [
+            TypeKey.BodyChar,
+            TypeKey.Heading,
+            TypeKey.SubHeading,
+            // TypeKey.Property,
+            // TypeKey.ItemLead,
+            // TypeKey.Instruction,
+            // TypeKey.Hint,
+            TypeKey.Resource,
+          ]);
+
+          if (sideIdx === 0) {
+            // First side
+            if (tags.heading != null) {
+              forKeys = tags.heading;
+            } else if (tags.resource) {
+              console.log('WARNING: Match card has resource on first side', tags.resource);
+              if (tags.resource.type === ResourceType.audio) {
+                keyAudio = tags.resource as AudioResource;
+              } else if (tags.resource.type === ResourceType.image) {
+                keyImage = tags.resource as ImageResource;
+              }
+            } else {
+              // If not a heading or resource, it is a pair
+              pairKey = tags.body;
+            }
+          } else {
+            // Subsequent sides
+            if (tags.heading != null) {
+              forValues.push(tags.heading);
+            } else if (tags.heading == null) {
+              // If not a heading, it is a pair
+              pairValues.push(tags.body ?? '');
+            }
+          }
+        }
+        sideIdx++;
+      }
+
+      if (forKeys != null) {
+        heading = builder.heading({
+          forKeys,
+          forValues,
+        });
+      } else {
+        const pair = builder.pair({
+          key: pairKey ?? '',
+          keyAudio,
+          keyImage,
+          values: pairValues,
+          isCaseSensitive: true,
+        });
+        pairs.push(pair);
+      }
+    }
+
+    return {
+      heading,
+      pairs: pairs.length > 0 ? pairs : undefined,
+    };
+  }
+
+  parseMatchMatrix(cardSet: CardSet): BitSpecificCards {
+    let sideIdx = 0;
+    let heading: Heading | undefined;
+    let forKeys: string | undefined = undefined;
+    const forValues: string[] = [];
+    let matrixKey: string | undefined = undefined;
+    const matrix: Matrix[] = [];
+    let matrixCells: MatrixCell[] = [];
+    let matrixCellValues: string[] = [];
+    let keyAudio: AudioResource | undefined = undefined;
+    let keyImage: ImageResource | undefined = undefined;
+
+    for (const card of cardSet.cards) {
+      forKeys = undefined;
+      matrixKey = undefined;
+      keyAudio = undefined;
+      keyImage = undefined;
+      matrixCells = [];
+      matrixCellValues = [];
+      sideIdx = 0;
+
+      for (const side of card.sides) {
+        matrixCellValues = [];
+
+        for (const rawContent of side.variants) {
+          const content = this.parse(rawContent, {
+            startRule: 'cardContent',
+          }) as BitContent[];
+
+          const tags = this.typeKeyDataParser(content, [
+            TypeKey.BodyChar,
+            TypeKey.Heading,
+            TypeKey.SubHeading,
+            // TypeKey.Property,
+            // TypeKey.ItemLead,
+            // TypeKey.Instruction,
+            // TypeKey.Hint,
+            TypeKey.Resource,
+          ]);
+
+          if (sideIdx === 0) {
+            // First side
+            if (tags.heading != null) {
+              forKeys = tags.heading;
+            } else if (tags.resource) {
+              console.log('WARNING: Match card has resource on first side', tags.resource);
+              if (tags.resource.type === ResourceType.audio) {
+                keyAudio = tags.resource as AudioResource;
+              } else if (tags.resource.type === ResourceType.image) {
+                keyImage = tags.resource as ImageResource;
+              }
+            } else {
+              // If not a heading or resource, it is a matrix
+              matrixKey = tags.body;
+            }
+          } else {
+            // Subsequent sides
+            if (tags.heading != null) {
+              forValues.push(tags.heading);
+            } else if (tags.heading == null) {
+              // If not a heading, it is a  matrix
+              matrixCellValues.push(tags.body ?? '');
+            }
+          }
+        }
+
+        // Finished looping variants, create matrix cell
+        if (sideIdx > 0) {
+          const matrixCell = builder.matrixCell({
+            values: matrixCellValues,
+          });
+          matrixCells.push(matrixCell);
+        }
+
+        sideIdx++;
+      }
+
+      if (forKeys != null) {
+        heading = builder.heading({
+          forKeys,
+          forValues,
+        });
+      } else {
+        const m = builder.matrix({
+          key: matrixKey ?? '',
+          cells: matrixCells,
+          isCaseSensitive: true,
+        });
+        matrix.push(m);
+      }
+    }
+
+    return {
+      heading,
+      matrix: matrix.length > 0 ? matrix : undefined,
+    };
+  }
+
   //     sampleSolutions: this.asArray(sampleSolutions), ??
   //     elements DONE
-  //     statements,  DONE
-  //     responses,
-  //     quizzes,
+  //     statements, - OPEN when not in quiz
+  //     responses, - OPEN when not in quiz
+  //     quizzes, DONE ???
   //     heading,
   //     pairs,
   //     matrix,
-  //     choices,
-  //     questions,
+  //     choices, - OPEN when not in quiz
+  //     questions, - DONE ???
   //     footer,
 
   typeKeyDataParser(data: BitContent[], validTypes: TypeKeyType[]): TypeKeyParseResult {
@@ -632,8 +848,32 @@ class BitmarkParserHelper {
           break;
         }
 
+        case TypeKey.Heading: {
+          acc.heading = value;
+          break;
+        }
+
+        case TypeKey.SubHeading: {
+          acc.subHeading = value;
+          break;
+        }
+
         case TypeKey.CardSet: {
           acc.cardSet = value;
+          break;
+        }
+
+        case TypeKey.Resource: {
+          const resource = content as TypeKeyResource;
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          const { type: ignoreType, key: ignoreKey, ...resourceData } = resource;
+          const type = ResourceType.fromValue(key);
+          if (type) {
+            acc.resource = builder.resource({
+              type,
+              ...resourceData,
+            });
+          }
           break;
         }
 

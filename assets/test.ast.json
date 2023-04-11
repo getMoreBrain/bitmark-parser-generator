@@ -1,139 +1,57 @@
 {
   "bits": [
     {
-      "bitType": "multiple-response",
+      "bitType": "match-matrix",
       "textFormat": "bitmark--",
       "ids": [
-        "230950"
+        "285721"
       ],
       "itemLead": {
-        "item": "Nr. 4464"
+        "item": "23",
+        "lead": "match-matrix"
       },
-      "instruction": "Welche Antworten sind richtig?",
-      "quizzes": [
+      "instruction": "Bring the german verbs into the correct tense.",
+      "heading": {
+        "forKeys": "Verb",
+        "forValues": [
+          "Future, 1st Person, Singular",
+          "Past, 3rd Person, Plural"
+        ]
+      },
+      "matrix": [
         {
-          "instruction": "1. Was sind typische Signalwörter für das Simple Present?",
-          "responses": [
+          "key": "gehen",
+          "isCaseSensitive": true,
+          "cells": [
             {
-              "text": "just"
+              "values": [
+                "ich werde gehen"
+              ]
             },
             {
-              "text": "normally",
-              "isCorrect": true
-            },
-            {
-              "text": "seldom",
-              "isCorrect": true
-            },
-            {
-              "text": "two weeks ago"
-            },
-            {
-              "text": "usually",
-              "isCorrect": true
-            },
-            {
-              "text": "yet"
+              "values": [
+                "sie gingen"
+              ]
             }
           ]
         },
         {
-          "instruction": "2. Welche Verbformen sind richtig gebildet?",
-          "responses": [
+          "key": "sprechen",
+          "isCaseSensitive": true,
+          "cells": [
             {
-              "text": "she agrees",
-              "isCorrect": true
+              "values": [
+                "ich werde sprechen"
+              ]
             },
             {
-              "text": "she annoys",
-              "isCorrect": true
-            },
-            {
-              "text": "she cries",
-              "isCorrect": true
-            },
-            {
-              "text": "she hurrys"
-            },
-            {
-              "text": "she kissis"
-            },
-            {
-              "text": "she rushes",
-              "isCorrect": true
-            },
-            {
-              "text": "she teachs"
-            },
-            {
-              "text": "she worrys"
-            }
-          ]
-        },
-        {
-          "instruction": "3. Welche Handlungen kennzeichnen das Simple Present?",
-          "responses": [
-            {
-              "text": "allgemeine Aussagen",
-              "isCorrect": true
-            },
-            {
-              "text": "feststehende Handlungen (auch Zukunft)",
-              "isCorrect": true
-            },
-            {
-              "text": "Handlungen geschehen im Moment des Sprechens"
-            },
-            {
-              "text": "Handlungen haben in der Vergangenheit begonnen und dauern jetzt noch an"
-            },
-            {
-              "text": "Handlungen sind abgeschlossen"
-            },
-            {
-              "text": "Handlungsfolgen",
-              "isCorrect": true
-            },
-            {
-              "text": "regelmäßige, wiederholte Handlungen",
-              "isCorrect": true
-            }
-          ]
-        },
-        {
-          "instruction": "4. Welche Sätze/Fragen stehen im Simple Present?",
-          "responses": [
-            {
-              "text": "Are you Greek?",
-              "isCorrect": true
-            },
-            {
-              "text": "Do you have a brother?",
-              "isCorrect": true
-            },
-            {
-              "text": "I don't usually have lunch at school."
-            },
-            {
-              "text": "Martin has been to Montreal."
-            },
-            {
-              "text": "Peggy was on holiday."
-            },
-            {
-              "text": "The largest number of people lives in Brooklyn.",
-              "isCorrect": true
-            },
-            {
-              "text": "We have two cars.",
-              "isCorrect": true
+              "values": [
+                "sie sprachen"
+              ]
             }
           ]
         }
-      ],
-      "footer": {
-        "footerText": ""
-      }
+      ]
     }
   ]
 }
