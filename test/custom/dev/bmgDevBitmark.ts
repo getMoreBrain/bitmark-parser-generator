@@ -42,9 +42,7 @@ class BmgDevBitmark {
       });
 
       // AST ==> Bitmark
-      const generator = new JsonObjectGenerator({
-        prettify: true,
-      });
+      const generator = new JsonObjectGenerator();
       const json = await generator.generate(bitmarkAst);
       const jsonStr = JSON.stringify(json, undefined, 2);
 

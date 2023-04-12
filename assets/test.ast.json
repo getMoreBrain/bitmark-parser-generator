@@ -1,55 +1,53 @@
 {
   "bits": [
     {
-      "bitType": "match-matrix",
+      "bitType": "cloze-and-multiple-choice-text",
       "textFormat": "bitmark--",
       "ids": [
-        "285721"
+        "287842"
       ],
       "itemLead": {
-        "item": "23",
-        "lead": "match-matrix"
+        "lead": "cloze-and-multiple-choice-text"
       },
-      "instruction": "Bring the german verbs into the correct tense.",
-      "heading": {
-        "forKeys": "Verb",
-        "forValues": [
-          "Future, 1st Person, Singular",
-          "Past, 3rd Person, Plural"
-        ]
-      },
-      "matrix": [
+      "body": [
         {
-          "key": "gehen",
-          "isCaseSensitive": true,
-          "cells": [
-            {
-              "values": [
-                "ich werde gehen"
-              ]
-            },
-            {
-              "values": [
-                "sie gingen"
-              ]
-            }
-          ]
+          "bodyText": "The students completed the "
         },
         {
-          "key": "sprechen",
-          "isCaseSensitive": true,
-          "cells": [
-            {
-              "values": [
-                "ich werde sprechen"
-              ]
-            },
-            {
-              "values": [
-                "sie sprachen"
-              ]
-            }
-          ]
+          "gap": {
+            "solutions": [
+              "cloze"
+            ],
+            "hint": "",
+            "instruction": "",
+            "example": false,
+            "isCaseSensitive": true
+          }
+        },
+        {
+          "bodyText": " with the correct verb "
+        },
+        {
+          "select": {
+            "prefix": "",
+            "options": [
+              {
+                "text": "forms",
+                "isCorrect": true
+              },
+              {
+                "text": "formats"
+              }
+            ],
+            "postfix": "",
+            "hint": "",
+            "instruction": "",
+            "example": false,
+            "isCaseSensitive": true
+          }
+        },
+        {
+          "bodyText": "."
         }
       ]
     }

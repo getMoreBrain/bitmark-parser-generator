@@ -21,7 +21,7 @@ const ast = new Ast();
 const bitmarkTool = new BitmarkTool();
 const bitmarkParser = new BitmarkParser();
 
-class BmgDevBitmark {
+class BmgDevBitmarkAntlr {
   async test(debug?: boolean): Promise<void> {
     const filename = path.resolve(__dirname, '../../..', 'assets', 'test.bit');
 
@@ -47,14 +47,16 @@ class BmgDevBitmark {
 
       console.log(jsonStr);
     } else {
-      const res = await bitmarkTool.convert(filename);
+      const res = await bitmarkTool.convert(filename, {
+        bitmarkParserType: 'antlr',
+      });
       const resStr = JSON.stringify(res, undefined, 2);
       console.log(resStr);
     }
   }
 }
 
-const bmg = new BmgDevBitmark();
+const bmg = new BmgDevBitmarkAntlr();
 
 bmg.test(false).then(() => {
   // Done

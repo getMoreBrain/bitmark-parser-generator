@@ -1,3 +1,5 @@
+import { URL } from 'url';
+
 import { BitTypeType } from '../model/enum/BitType';
 import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
 import { TextFormatType, TextFormat } from '../model/enum/TextFormat';
@@ -1386,7 +1388,6 @@ class Builder {
 
   private imageLikeResource(data: {
     type: 'image' | 'image-link';
-    format: string;
     url: string;
     src1x?: string;
     src2x?: string;
@@ -1403,7 +1404,6 @@ class Builder {
   }): ImageResource | ImageLinkResource | undefined {
     const {
       type,
-      format,
       url,
       src1x,
       src2x,
@@ -1422,7 +1422,7 @@ class Builder {
     // NOTE: Node order is important and is defined here
     const node: ImageResource | ImageLinkResource = {
       type,
-      format,
+      format: this.extractResourceFormatFromUrl(url),
       url,
       src1x,
       src2x,
@@ -1447,7 +1447,6 @@ class Builder {
 
   private audioLikeResource(data: {
     type: 'audio' | 'audio-link';
-    format: string;
     url: string;
     license?: string;
     copyright?: string;
@@ -1455,12 +1454,12 @@ class Builder {
     showInIndex?: boolean;
     caption?: string;
   }): AudioResource | AudioLinkResource | undefined {
-    const { type, format, url, license, copyright, provider, showInIndex, caption } = data;
+    const { type, url, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioResource | AudioLinkResource = {
       type,
-      format,
+      format: this.extractResourceFormatFromUrl(url),
       url,
       license,
       copyright,
@@ -1478,7 +1477,6 @@ class Builder {
 
   private videoLikeResource(data: {
     type: 'video' | 'video-link' | 'still-image-film' | 'still-image-film-link';
-    format: string;
     url: string;
     width?: number;
     height?: number;
@@ -1498,7 +1496,6 @@ class Builder {
   }): VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource | undefined {
     const {
       type,
-      format,
       url,
       width,
       height,
@@ -1520,7 +1517,7 @@ class Builder {
     // NOTE: Node order is important and is defined here
     const node: VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource = {
       type,
-      format,
+      format: this.extractResourceFormatFromUrl(url),
       url,
       width,
       height,
@@ -1548,7 +1545,6 @@ class Builder {
 
   private articleLikeResource(data: {
     type: 'article' | 'article-link' | 'document' | 'document-link';
-    format: string | undefined;
     url?: string; // url / href
     body?: string | undefined;
     license?: string;
@@ -1557,12 +1553,12 @@ class Builder {
     showInIndex?: boolean;
     caption?: string;
   }): ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource | undefined {
-    const { type, format, url, body, license, copyright, provider, showInIndex, caption } = data;
+    const { type, url, body, license, copyright, provider, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource = {
       type,
-      format,
+      format: this.extractResourceFormatFromUrl(url),
       url,
       body,
       license,
@@ -1606,6 +1602,20 @@ class Builder {
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateResource(node);
+  }
+
+  protected extractResourceFormatFromUrl(url: string | undefined): string | undefined {
+    let format: string | undefined;
+
+    if (url) {
+      const parsedUrl = new URL(url);
+      const pathParts = parsedUrl.pathname.split('.');
+      if (pathParts.length > 1) {
+        format = pathParts[pathParts.length - 1];
+      }
+    }
+
+    return format;
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

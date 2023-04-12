@@ -17,7 +17,7 @@ import { BitmarkParserHelper, TypeKey } from '../../../parser/bitmark/BitmarkPar
 const inputTextPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'text-grammar.pegjs');
 const inputBitmarkPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'bit-grammar.pegjs');
 const outputPath = path.resolve(__dirname, '../../..', 'src/generated/parser/bitmark/', 'bitmark-peggy-parser.ts');
-const testFilePath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'grammar-test.bitm');
+const testFilePath = path.resolve(__dirname, '../../..', 'assets/', 'test.bit');
 
 // Process command line options
 const commandLineOptions = process.argv.slice(2);

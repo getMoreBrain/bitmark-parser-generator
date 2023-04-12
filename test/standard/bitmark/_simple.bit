@@ -1,11 +1,14 @@
-[.article:bitmark++]
-[@id:151970]
+[.interview:bitmark--]
+[@id:136405]
+[%Persönliche Angaben]
 
-intern und extern
-• Leitbild
-• transparente Kommunikation
-• marktübliche Vergütung
-• etc.
+===
+Name:[@shortAnswer]
+===
+Vorname:[@shortAnswer]
+===
+Prüfungsnummer:[@shortAnswer]
+===
+Kantonsschule:[@shortAnswer]
+===
 
-
-[.cloze:bitmark--][%cl1]I am coffee toast[_cloze][?1 or 2][_gap text][!verb]

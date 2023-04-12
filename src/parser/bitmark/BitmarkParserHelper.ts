@@ -70,11 +70,18 @@ export interface TypeKeyParseResult {
   isCorrect: boolean;
   responses?: Response[];
   choices?: Choice[];
-  heading?: string;
+  title?: string[];
+  subtitle?: string;
   resource?: Resource;
 }
 
-export interface BitSpecificCards {
+interface BitSpecificTitles {
+  title?: string;
+  subtitle?: string;
+  level?: number;
+}
+
+interface BitSpecificCards {
   sampleSolutions?: string | string[];
   elements?: string[];
   statements?: Statement[];
@@ -110,6 +117,10 @@ const TypeKey = superenum({
   TextFormat: 'TextFormat',
   ResourceType: 'ResourceType',
   Resource: 'Resource',
+  ResourceProperty: 'ResourceProperty',
+  Title: 'Title',
+  Anchor: 'Anchor',
+  Reference: 'Reference',
   Property: 'Property',
   ItemLead: 'ItemLead',
   Instruction: 'Instruction',
@@ -124,8 +135,7 @@ const TypeKey = superenum({
   Cloze: 'Cloze',
   Select: 'Select',
   SampleSolution: 'SampleSolution',
-  Heading: 'Heading',
-  SubHeading: 'SubHeading',
+  Comment: 'Comment',
 });
 
 export type TypeKeyType = EnumType<typeof TypeKey>;
@@ -165,25 +175,34 @@ class BitmarkParserHelper {
     // Bit type was invalid, so ignore the bit
     if (!bitType) return undefined;
 
+    console.log(`==== bitContent ====`);
+    console.log(JSON.stringify(bitContent, null, 2));
+    console.log(`==== END: bitContent ====`);
+
     // Parse the bit content into a an object with the appropriate keys
     const {
       cardSet,
       body: unparsedBody,
+      title,
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      heading, // Remove so types match
+      // heading, // Remove so types match
       ...tags
     } = this.typeKeyDataParser(bitContent, [
+      TypeKey.Title,
+      TypeKey.Anchor,
+      TypeKey.Reference,
       TypeKey.Property,
       TypeKey.ItemLead,
       TypeKey.Instruction,
       TypeKey.Hint,
+      TypeKey.Resource,
       TypeKey.BodyLine,
       TypeKey.CardSet,
     ]);
 
-    console.log(`==== tags ====`);
-    console.log(tags);
-    console.log(`==== END: tags ====`);
+    // console.log(`==== tags ====`);
+    // console.log(tags);
+    // console.log(`==== END: tags ====`);
 
     console.log(`==== unparsedBody ====`);
     console.log(unparsedBody);
@@ -193,10 +212,14 @@ class BitmarkParserHelper {
     const parsedBody = this.parse(unparsedBody ?? '', {
       startRule: 'body',
     });
-    // console.log(`==== parsedBody ====`);
-    // console.log(JSON.stringify(parsedBody, null, 2));
-    // console.log(`==== END: parsedBody ====`);
+    console.log(`==== parsedBody ====`);
+    console.log(JSON.stringify(parsedBody, null, 2));
+    console.log(`==== END: parsedBody ====`);
 
+    // Build the titles for the specific bit type
+    const titles = this.buildTitles(bitType, title ?? []);
+
+    // Build the card data for the specific bit type
     const bitSpecificCards = cardSet ? this.buildCards(bitType, cardSet) : {};
 
     // Build the body (parts and placeholders)
@@ -218,6 +241,7 @@ class BitmarkParserHelper {
       bitType,
       textFormat,
       // resourceType,
+      ...titles,
       ...tags,
       ...bitSpecificCards,
       body,
@@ -323,6 +347,7 @@ class BitmarkParserHelper {
     const gap = builder.gap({
       solutions: [],
       ...tags,
+      isCaseSensitive: true,
     });
 
     return gap;
@@ -331,8 +356,9 @@ class BitmarkParserHelper {
   buildSelect(selectContent: BitContent[]): Select | undefined {
     // const options: SelectOption[] = [];
     // let seenItem = false;
+    console.log(`==== selectContent ====`, selectContent);
 
-    const tags = this.typeKeyDataParser(selectContent, [
+    const { trueFalse, ...tags } = this.typeKeyDataParser(selectContent, [
       TypeKey.True,
       TypeKey.False,
       TypeKey.Property,
@@ -341,12 +367,43 @@ class BitmarkParserHelper {
       TypeKey.Hint,
     ]);
 
+    console.log(`==== selectContent TAGS ====`, trueFalse);
+
+    const options: SelectOption[] = [];
+    if (trueFalse) {
+      for (const tf of trueFalse) {
+        options.push(builder.selectOption(tf));
+      }
+    }
+
     const select = builder.select({
-      options: [],
+      options,
       ...tags,
     });
 
     return select;
+  }
+
+  buildTitles(bitType: BitTypeType, title: string[]): BitSpecificTitles {
+    switch (bitType) {
+      case BitType.chapter: {
+        let t: string | undefined;
+        if (title.length > 0) t = title[title.length - 1];
+
+        return {
+          title: t,
+          level: title.length > 0 ? title.length - 1 : undefined,
+        };
+      }
+
+      case BitType.book:
+      default: {
+        return {
+          title: title[1] ?? undefined,
+          subtitle: title[2] ?? undefined,
+        };
+      }
+    }
   }
 
   buildCards(bitType: BitTypeType, cardSetContent: TypeValue[]): BitSpecificCards {
@@ -600,8 +657,7 @@ class BitmarkParserHelper {
 
           const tags = this.typeKeyDataParser(content, [
             TypeKey.BodyChar,
-            TypeKey.Heading,
-            TypeKey.SubHeading,
+            TypeKey.Title,
             // TypeKey.Property,
             // TypeKey.ItemLead,
             // TypeKey.Instruction,
@@ -609,10 +665,13 @@ class BitmarkParserHelper {
             TypeKey.Resource,
           ]);
 
+          // Get the 'heading' which is the [#title] at level 1
+          const heading = tags.title && tags.title[1];
+
           if (sideIdx === 0) {
             // First side
-            if (tags.heading != null) {
-              forKeys = tags.heading;
+            if (heading != null) {
+              forKeys = heading;
             } else if (tags.resource) {
               console.log('WARNING: Match card has resource on first side', tags.resource);
               if (tags.resource.type === ResourceType.audio) {
@@ -626,9 +685,9 @@ class BitmarkParserHelper {
             }
           } else {
             // Subsequent sides
-            if (tags.heading != null) {
-              forValues.push(tags.heading);
-            } else if (tags.heading == null) {
+            if (heading != null) {
+              forValues.push(heading);
+            } else if (tags.title == null) {
               // If not a heading, it is a pair
               pairValues.push(tags.body ?? '');
             }
@@ -691,8 +750,7 @@ class BitmarkParserHelper {
 
           const tags = this.typeKeyDataParser(content, [
             TypeKey.BodyChar,
-            TypeKey.Heading,
-            TypeKey.SubHeading,
+            TypeKey.Title,
             // TypeKey.Property,
             // TypeKey.ItemLead,
             // TypeKey.Instruction,
@@ -700,10 +758,13 @@ class BitmarkParserHelper {
             TypeKey.Resource,
           ]);
 
+          // Get the 'heading' which is the [#title] at level 1
+          const heading = tags.title && tags.title[1];
+
           if (sideIdx === 0) {
             // First side
-            if (tags.heading != null) {
-              forKeys = tags.heading;
+            if (heading != null) {
+              forKeys = heading;
               // } else if (tags.resource) {
               //   console.log('WARNING: Match card has resource on first side', tags.resource);
               //   if (tags.resource.type === ResourceType.audio) {
@@ -717,9 +778,9 @@ class BitmarkParserHelper {
             }
           } else {
             // Subsequent sides
-            if (tags.heading != null) {
-              forValues.push(tags.heading);
-            } else if (tags.heading == null) {
+            if (heading != null) {
+              forValues.push(heading);
+            } else if (tags.title == null) {
               // If not a heading, it is a  matrix
               matrixCellValues.push(tags.body ?? '');
             }
@@ -784,7 +845,30 @@ class BitmarkParserHelper {
       // Only parse valid types
       if (validTypes.indexOf(type as TypeKeyType) === -1) return acc;
 
+      const trimmedStringValue = StringUtils.trimmedString(value);
+
       switch (type) {
+        case TypeKey.Title: {
+          // Parse the title and its level
+          if (!acc.title) acc.title = [];
+          const titleValue: { title: string; level: string[] } = value as any;
+          console.log(titleValue);
+          const title = StringUtils.trimmedString(titleValue.title);
+          const level = titleValue.level.length;
+          acc.title[level] = title;
+          break;
+        }
+
+        case TypeKey.Anchor: {
+          acc.anchor = trimmedStringValue;
+          break;
+        }
+
+        case TypeKey.Reference: {
+          acc.reference = trimmedStringValue;
+          break;
+        }
+
         case TypeKey.Property: {
           if (PropertyKey.fromValue(key)) {
             // Known property
@@ -804,21 +888,21 @@ class BitmarkParserHelper {
 
         case TypeKey.ItemLead: {
           if (!seenItem) {
-            acc.item = value;
+            acc.item = trimmedStringValue;
           } else {
-            acc.lead = value;
+            acc.lead = trimmedStringValue;
           }
           seenItem = true;
           break;
         }
 
         case TypeKey.Instruction: {
-          acc.instruction = value;
+          acc.instruction = trimmedStringValue;
           break;
         }
 
         case TypeKey.Hint: {
-          acc.hint = value;
+          acc.hint = trimmedStringValue;
           break;
         }
 
@@ -830,13 +914,13 @@ class BitmarkParserHelper {
 
         case TypeKey.Cloze: {
           if (StringUtils.isString(value)) {
-            solutions.push(value as string);
+            solutions.push(trimmedStringValue);
           }
           break;
         }
 
         case TypeKey.SampleSolution: {
-          acc.sampleSolution = value;
+          acc.sampleSolution = trimmedStringValue;
           break;
         }
 
@@ -844,19 +928,9 @@ class BitmarkParserHelper {
         case TypeKey.False: {
           if (!Array.isArray(acc.trueFalse)) acc.trueFalse = [];
           acc.trueFalse.push({
-            text: value,
+            text: trimmedStringValue,
             isCorrect: type === TypeKey.True,
           });
-          break;
-        }
-
-        case TypeKey.Heading: {
-          acc.heading = value;
-          break;
-        }
-
-        case TypeKey.SubHeading: {
-          acc.subHeading = value;
           break;
         }
 
@@ -896,6 +970,27 @@ class BitmarkParserHelper {
 
     return res;
   }
+
+  //
+  // Resource parsing
+  //
+
+  processResourceTags(resourceValue: any, extraProps: any[]) {
+    const invalidResourceExtraProperties = ['type', 'key', 'value'];
+
+    // Merge extra properties into the resource type (TODO = check if valid??)
+    for (const p of extraProps) {
+      if (!invalidResourceExtraProperties.includes(p.key)) {
+        resourceValue[p.key] = p.value;
+      }
+    }
+
+    return resourceValue;
+  }
+
+  //
+  // Card parsing
+  //
 
   processCardSetStart() {
     this.cardIndex = 0;

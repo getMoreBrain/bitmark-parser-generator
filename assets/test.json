@@ -1,75 +1,50 @@
 [
   {
-    "bitmark": "[.match-matrix]\n[@id:285721]\n[%23][%match-matrix]\n[!Bring the german verbs into the correct tense.]\n\n===\n[#Verb]\n==\n[#Future, 1st Person, Singular]\n==\n[#Past, 3rd Person, Plural]\n===\ngehen\n==\nich werde gehen\n==\nsie gingen\n===\nsprechen\n==\nich werde sprechen\n==\nsie sprachen\n===",
+    "bitmark": "[.cloze-and-multiple-choice-text]\n[@id:287842]\n[%][%cloze-and-multiple-choice-text]\nThe students completed the [_cloze] with the correct verb [+forms][-formats].",
     "bit": {
-      "type": "match-matrix",
+      "type": "cloze-and-multiple-choice-text",
       "format": "bitmark--",
-      "item": "23",
-      "heading": {
-        "forKeys": "Verb",
-        "forValues": [
-          "Future, 1st Person, Singular",
-          "Past, 3rd Person, Plural"
-        ]
-      },
-      "matrix": [
-        {
-          "key": "gehen",
-          "cells": [
-            {
-              "item": "",
-              "instruction": "",
-              "values": [
-                "ich werde gehen"
-              ]
-            },
-            {
-              "item": "",
-              "instruction": "",
-              "values": [
-                "sie gingen"
-              ]
-            }
-          ],
+      "body": "The students completed the {0} with the correct verb {1}.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
           "item": "",
-          "isCaseSensitive": true,
+          "solutions": [
+            "cloze"
+          ],
           "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": ""
         },
-        {
-          "key": "sprechen",
-          "cells": [
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
             {
-              "item": "",
-              "instruction": "",
-              "values": [
-                "ich werde sprechen"
-              ]
+              "text": "forms",
+              "hint": "",
+              "isCorrect": true
             },
             {
-              "item": "",
-              "instruction": "",
-              "values": [
-                "sie sprachen"
-              ]
+              "text": "formats",
+              "hint": "",
+              "isCorrect": false
             }
           ],
-          "item": "",
-          "isCaseSensitive": true,
+          "prefix": "",
+          "postfix": "",
           "hint": "",
+          "instruction": "",
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": ""
         }
-      ],
-      "body": "",
+      },
       "id": [
-        "285721"
+        "287842"
       ],
-      "lead": "match-matrix",
-      "instruction": "Bring the german verbs into the correct tense."
+      "lead": "cloze-and-multiple-choice-text"
     }
   }
 ]

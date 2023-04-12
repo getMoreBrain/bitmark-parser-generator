@@ -9,6 +9,7 @@ import { BitmarkOptions } from './generator/bitmark/BitmarkGenerator';
 import { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerator';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
 import { JsonOptions } from './generator/json/JsonGenerator';
+import { JsonObjectGenerator } from './generator/json/JsonObjectGenerator';
 import { JsonStringGenerator } from './generator/json/JsonStringGenerator';
 import { BitmarkAst } from './model/ast/Nodes';
 import { BitmarkParserType, BitmarkParserTypeType } from './model/enum/BitmarkParserType';
@@ -20,7 +21,7 @@ import { JsonParser } from './parser/json/JsonParser';
  */
 export interface ConvertOptions {
   /**
-   * Specify the bitmark parser type, overriding the default
+   * Specify the bitmark parser to use, overriding the default
    */
   bitmarkParserType?: BitmarkParserTypeType;
   /**
@@ -30,7 +31,7 @@ export interface ConvertOptions {
   /**
    * Specify a file to write the output to
    */
-  output?: fs.PathLike;
+  outputFile?: fs.PathLike;
   /**
    * Options for the output file
    */
@@ -148,13 +149,14 @@ class BitmarkTool {
         if (bitmarkParserType === BitmarkParserType.antlr) {
           // Convert the bitmark to JSON using the antlr parser
           const json = this.bitmarkParser.parse(inStr);
-          const jsonStr = JSON.stringify(json, undefined, jsonPrettifySpace);
 
-          if (opts.output) {
+          if (opts.outputFile) {
+            const jsonStr = JSON.stringify(json, undefined, jsonPrettifySpace);
+
             // Write JSON to file
             const flag = fileOptions.append ? 'a' : 'w';
-            fs.ensureDirSync(path.dirname(opts.output.toString()));
-            fs.writeFileSync(opts.output, jsonStr, {
+            fs.ensureDirSync(path.dirname(opts.outputFile.toString()));
+            fs.writeFileSync(opts.outputFile, jsonStr, {
               flag,
             });
           } else {
@@ -170,13 +172,13 @@ class BitmarkTool {
           });
 
           // Convert the JSON to bitmark
-          if (opts.output) {
+          if (opts.outputFile) {
             // Write JSON file
-            const generator = new JsonFileGenerator(opts.output, fileOptions, bitmarkOptions);
+            const generator = new JsonFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
             await generator.generate(ast);
           } else {
-            // Generate JSON string
-            const generator = new JsonStringGenerator(bitmarkOptions);
+            // Generate JSON object
+            const generator = new JsonObjectGenerator(bitmarkOptions);
             res = await generator.generate(ast);
           }
         }
@@ -193,9 +195,9 @@ class BitmarkTool {
       } else {
         // AST ==> Bitmark
         // Convert the AST to bitmark
-        if (opts.output) {
+        if (opts.outputFile) {
           // Write markup file
-          const generator = new BitmarkFileGenerator(opts.output, fileOptions, bitmarkOptions);
+          const generator = new BitmarkFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
           await generator.generate(ast);
         } else {
           // Generate markup string
@@ -216,9 +218,9 @@ class BitmarkTool {
       } else {
         // JSON ==> Bitmark
         // Convert the JSON to bitmark
-        if (opts.output) {
+        if (opts.outputFile) {
           // Write markup file
-          const generator = new BitmarkFileGenerator(opts.output, fileOptions, bitmarkOptions);
+          const generator = new BitmarkFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
           await generator.generate(ast);
         } else {
           // Generate markup string

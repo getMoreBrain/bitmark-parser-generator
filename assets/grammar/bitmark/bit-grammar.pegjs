@@ -79,11 +79,11 @@ BitContent
 
 // Bit tag
 BitTag
-  = value: (PropertyTag / ItemLeadTag / InstructionTag / HintTag) { return value }
+  = value: (TitleTag / CommentTag / AnchorTag / ReferenceTag / PropertyTag / ItemLeadTag / InstructionTag / HintTag / ResourceTags) { return value }
 
 // Line of Body of the bit
 BodyLine
-  = value: $(NL !BitHeader / Char+) { return { type: TypeKey.BodyLine, value: value } }
+  = value: $(NL !BitHeader / Char+ EOL) { return { type: TypeKey.BodyLine, value: value } }
 
 // CardSet
 CardSet
@@ -129,11 +129,11 @@ BodyTags
 
 // Gap tags
 GapTags
-  = value: ClozeTag others: (ClozeTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Gap, value: [value, ...others] }; }
+  = value: ClozeInlineTag others: (ClozeInlineTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Gap, value: [value, ...others] }; }
 
 // Select tags
 SelectTags
-  = value: (TrueTag / FalseTag)+ others: (TrueTag / FalseTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Select, value: [...value, ...others] } }
+  = value: (TrueInlineTag / FalseInlineTag)+ others: (TrueInlineTag / FalseInlineTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Select, value: [...value, ...others] } }
 
 
 //
@@ -145,16 +145,17 @@ cardContent
   = value: (CardContentTags / BodyChar)* { return value; }
 
 CardContentTags
-  = value: (ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueTag / FalseTag / PropertyTag / HeadingTag / SubHeadingTag / ResourceTags) { return value; }
+  = value: (ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueTag / FalseTag / PropertyTag / TitleTag / ResourceTags) { return value; }
 
 //
 // Resource
 //
 ResourceTags
-  = value: ResourceTag {
-    console.log('RESOURCE_TAGS', value);
+  = value: ResourceTag props: ResourcePropertyTag* {
+    console.log('RESOURCE_TAGS', value, props);
+
     // TODO - insert other tags values into the resource tag value
-    return value;
+    return helper.processResourceTags(value, props);
   }
 
 // The bit header, e.g. [.interview&image:bitmark++], [.interview:bitmark--&image], [.cloze]
@@ -162,8 +163,8 @@ ResourceTag
   = NL? "[&" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Resource, key, url: value } }
 
 // Resource Extra Data Tag
-ResourceXXTag
-  = value1: (TextFormat / ResourceType)? value2: (TextFormat / ResourceType)? { return helper.buildTextAndResourceType(value1, value2) }
+ResourcePropertyTag
+  = "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.ResourceProperty, key, value } }
 
 
 
@@ -171,6 +172,19 @@ ResourceXXTag
 //
 // Tags
 //
+
+// Title tag
+TitleTag
+  = NL? "[" level: "#"+ title: Tag_Value "]" { return { type: TypeKey.Title, value: { level, title } } }
+
+// Anchor tag
+AnchorTag
+  = NL? "[▼" value: Tag_Value "]" { return { type: TypeKey.Anchor, value } }
+
+// Reference tag
+ReferenceTag
+  = NL? "[►" value: Tag_Value "]" { return { type: TypeKey.Reference, value } }
+
 
 // Property (@) tag
 PropertyTag
@@ -196,21 +210,29 @@ TrueTag
 FalseTag
   = NL? "[-" value: Tag_Value "]" { return { type: TypeKey.False, value } }
 
-// Cloze tag
-ClozeTag
-  = NL? "[_" value: Tag_Value "]" { return { type: TypeKey.Cloze, value } }
-
 // Sample Solution tag
 SampleSolutionTag
   = NL? "[$" value: Tag_Value "]" { return { type: TypeKey.SampleSolution, value } }
 
-// Heading tag
-HeadingTag
-  = NL? "[#" value: Tag_Value "]" { return { type: TypeKey.Heading, value } }
+// Comment Tag
+CommentTag
+  = NL? "||" value: Comment_Value "||" { return { type: TypeKey.Comment, value } }
 
-// Sub-Heading tag
-SubHeadingTag
-  = NL? "[##" value: Tag_Value "]" { return { type: TypeKey.SubHeading, value } }
+//
+// Inline Tags
+//
+
+// Cloze tag
+ClozeInlineTag
+  = "[_" value: Tag_Value "]" { return { type: TypeKey.Cloze, value } }
+
+// True (+) tag
+TrueInlineTag
+  = "[+" value: Tag_Value "]" { return { type: TypeKey.True, value } }
+
+// False (-) tag
+FalseInlineTag
+  = "[-" value: Tag_Value "]" { return { type: TypeKey.False, value } }
 
 
 //
@@ -229,6 +251,9 @@ Bit_Value
 KeyValueTag_Value
   = ":" value: Tag_Value { return value }
   / '' { return true }
+
+Comment_Value
+  = value: $[^||]* { return value }
 
 //
 // Enumerations

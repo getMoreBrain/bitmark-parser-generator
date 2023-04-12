@@ -5,7 +5,7 @@ import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { BitJson } from '../../model/json/BitJson';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
-import { GapJson } from '../../model/json/BodyBitJson';
+import { GapJson, SelectJson, SelectOptionJson } from '../../model/json/BodyBitJson';
 import { StringUtils } from '../../utils/StringUtils';
 import { Generator } from '../Generator';
 
@@ -24,7 +24,46 @@ import {
   Resource,
   ArticleResource,
   Gap,
+  AudioResource,
+  VideoResource,
+  AppResource,
+  WebsiteLinkResource,
+  Select,
 } from '../../model/ast/Nodes';
+import {
+  AppLikeResourceJson,
+  AppLinkResourceJson,
+  AppLinkResourceWrapperJson,
+  AppResourceJson,
+  AppResourceWrapperJson,
+  ArticleLikeResourceJson,
+  ArticleLinkResourceWrapperJson,
+  ArticleResourceJson,
+  ArticleResourceWrapperJson,
+  AudioLinkResourceJson,
+  AudioLinkResourceWrapperJson,
+  AudioResourceJson,
+  AudioResourceWrapperJson,
+  BaseResourceJson,
+  DocumentLinkResourceJson,
+  DocumentLinkResourceWrapperJson,
+  DocumentResourceJson,
+  DocumentResourceWrapperJson,
+  ImageLinkResourceJson,
+  ImageLinkResourceWrapperJson,
+  ImageResourceJson,
+  ImageResourceWrapperJson,
+  ResourceJson,
+  ResourceWrapperJson,
+  StillImageFilmLinkResourceWrapperJson,
+  StillImageFilmResourceWrapperJson,
+  VideoLinkResourceJson,
+  VideoLinkResourceWrapperJson,
+  VideoResourceJson,
+  VideoResourceWrapperJson,
+  WebsiteLinkResourceJson,
+  WebsiteLinkResourceWrapperJson,
+} from '../../model/json/ResourceJson';
 
 const DEFAULT_OPTIONS: JsonOptions = {
   // debugGenerationInline: true,
@@ -210,17 +249,86 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     };
     this.json.push(this.bitWrapperJson);
 
-    this.bitJson = {
-      type: bit.bitType,
-      format: bit.textFormat,
-    };
+    this.bitJson = this.createBitJson(bit);
     this.bitWrapperJson.bit = this.bitJson as BitJson;
+
+    // Add properties
+    if (bit.ids != null) this.addProperty(this.bitJson, 'id', bit.ids);
+    if (bit.externalIds != null) this.addProperty(this.bitJson, 'externalId', bit.externalIds);
+    if (bit.book != null) this.addProperty(this.bitJson, 'id', bit.book);
+    if (bit.ageRanges != null) this.addProperty(this.bitJson, 'ageRange', bit.ageRanges);
+    if (bit.languages != null) this.addProperty(this.bitJson, 'language', bit.languages);
+    if (bit.computerLanguages != null) this.addProperty(this.bitJson, 'computerLanguage', bit.computerLanguages);
+    if (bit.coverImages != null) this.addProperty(this.bitJson, 'coverImage', bit.coverImages);
+    if (bit.publishers != null) this.addProperty(this.bitJson, 'publisher', bit.publishers);
+    if (bit.publications != null) this.addProperty(this.bitJson, 'publications', bit.publications);
+    if (bit.authors != null) this.addProperty(this.bitJson, 'author', bit.authors);
+    if (bit.dates != null) this.addProperty(this.bitJson, 'date', bit.dates);
+    if (bit.locations != null) this.addProperty(this.bitJson, 'location', bit.locations);
+    if (bit.themes != null) this.addProperty(this.bitJson, 'theme', bit.themes);
+    if (bit.kinds != null) this.addProperty(this.bitJson, 'kind', bit.kinds);
+    if (bit.actions != null) this.addProperty(this.bitJson, 'action', bit.actions);
+    if (bit.thumbImages != null) this.addProperty(this.bitJson, 'thumbImage', bit.thumbImages);
+    if (bit.deepLinks != null) this.addProperty(this.bitJson, 'deeplink', bit.deepLinks);
+    if (bit.externalLink != null) this.addProperty(this.bitJson, 'externalLink', bit.externalLink);
+    if (bit.externalLinkText != null) this.addProperty(this.bitJson, 'externalLinkText', bit.externalLinkText);
+    if (bit.videoCallLinks != null) this.addProperty(this.bitJson, 'videoCallLink', bit.videoCallLinks);
+    if (bit.durations != null) this.addProperty(this.bitJson, 'duration', bit.durations);
+    if (bit.referenceProperties != null) this.addProperty(this.bitJson, 'reference', bit.referenceProperties); // Important for property order, do not remove
+    if (bit.lists != null) this.addProperty(this.bitJson, 'list', bit.lists);
+    if (bit.labelTrue != null) this.addProperty(this.bitJson, 'labelTrue', bit.labelTrue);
+    if (bit.labelFalse != null) this.addProperty(this.bitJson, 'labelFalse', bit.labelFalse);
+    if (bit.quotedPerson != null) this.addProperty(this.bitJson, 'quotedPerson', bit.quotedPerson);
+
+    // Book data - Title, subtile, level, toc, progress, anchor, reference, etc
+    if (bit.title != null) this.bitJson.title = bit.title ?? '';
+    if (bit.subtitle != null) this.bitJson.subtitle = bit.subtitle ?? '';
+    if (bit.level != null) this.bitJson.level = bit.level ?? 1;
+    if (bit.toc != null) this.bitJson.toc = bit.toc ?? '';
+    // ??? if (bit.progress != null) this.bitJson.progress = bit.progress ?? '';
+    if (bit.anchor != null) this.bitJson.anchor = bit.anchor ?? '';
+    if (bit.reference != null) this.bitJson.reference = bit.reference ?? ''; // Important for property order, do not remove
+    if (bit.referenceEnd != null) this.bitJson.referenceEnd = bit.referenceEnd ?? '';
+
+    // Item, Lead, Hint, Instruction
+    // if (bit.itemLead?.item != null) this.bitJson.item = bit.itemLead?.item ?? '';
+    if (bit.itemLead?.item) this.bitJson.item = bit.itemLead?.item ?? '';
+    if (bit.itemLead?.lead != null) this.bitJson.lead = bit.itemLead?.lead ?? '';
+    if (bit.hint != null) this.bitJson.hint = bit.hint ?? '';
+    if (bit.instruction != null) this.bitJson.instruction = bit.instruction ?? '';
+
+    // Example
+    if (bit.example != null) this.addProperty(this.bitJson, 'toc', bit.example ?? true);
+
+    // Extra properties
+    if (bit.extraProperties) {
+      for (const [key, values] of Object.entries(bit.extraProperties)) {
+        this.addProperty(this.bitJson, key, values);
+      }
+    }
+
+    // Body (filled in by enter_body)
+    this.bitJson.body = '';
+
+    //   resource,
+    //   body,
+    //   sampleSolutions: this.asArray(sampleSolutions),
+    //   elements,
+    //   statements,
+    //   responses,
+    //   quizzes,
+    //   heading,
+    //   pairs,
+    //   matrix,
+    //   choices,
+    //   questions,
+    //   footer,
   }
 
   // bitmark -> bits -> bitValue -> ids
 
   protected enter_ids(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty(this.bitJson, 'id', node.value);
+    this.addProperty(this.bitJson, 'id', node.value);
   }
 
   // // bitmark -> bits -> bitValue -> externalIds
@@ -382,8 +490,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     this.bitJson.body += placeholder;
     this.placeholderIndex++;
 
-    // Add the gap
-    const gapJson: GapJson = {
+    // Create the gap
+    const gapJson: Partial<GapJson> = {
       type: 'gap',
       solutions: gap.solutions,
       item: gap.itemLead?.item ?? '',
@@ -392,10 +500,15 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       instruction: gap.instruction ?? '',
       isExample: !!gap.example,
       example: StringUtils.isString(gap.example) ? (gap.example as string) : '',
-      isCaseSensitive: gap.isCaseSensitive ?? false,
+      isCaseSensitive: gap.isCaseSensitive ?? true,
       //
     };
-    this.bitJson.placeholders[placeholder] = gapJson;
+
+    // Remove unwanted properties
+    if (!gapJson.lead) delete gapJson.lead;
+
+    // Add the gap to the placeholders
+    this.bitJson.placeholders[placeholder] = gapJson as GapJson;
   }
 
   // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions
@@ -426,7 +539,67 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
   // // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions
 
-  // // bitmark -> bits -> bitValue -> body -> bodyValue -> select
+  // bitmark -> bits -> bitValue -> body -> bodyValue -> select
+
+  protected enter_select(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const select = node.value as Select['select'];
+
+    // Ensure placeholders exists
+    if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
+
+    // Add the placeholder to the body
+    const placeholder = `{${this.placeholderIndex}}`;
+    this.bitJson.body += placeholder;
+    this.placeholderIndex++;
+
+    // Create the select options
+    const options: SelectOptionJson[] = [];
+    for (const option of select.options) {
+      const optionJson: Partial<SelectOptionJson> = {
+        text: option.text,
+        isCorrect: option.isCorrect ?? false,
+        item: select.itemLead?.item ?? '',
+        lead: select.itemLead?.lead ?? '',
+        hint: select.hint ?? '',
+        instruction: select.instruction ?? '',
+        isExample: !!select.example,
+        example: StringUtils.isString(select.example) ? (select.example as string) : '',
+        // isCaseSensitive: select.isCaseSensitive ?? true,
+        //
+      };
+
+      // Remove unwanted properties
+      if (!optionJson.item) delete optionJson.item;
+      if (!optionJson.lead) delete optionJson.lead;
+      if (!optionJson.instruction) delete optionJson.instruction;
+      if (!optionJson.example) delete optionJson.example;
+      if (!optionJson.isExample) delete optionJson.isExample;
+      if (!optionJson.isCaseSensitive) delete optionJson.isCaseSensitive;
+
+      options.push(optionJson as SelectOptionJson);
+    }
+
+    // Create the select
+    const selectJson: Partial<SelectJson> = {
+      type: 'select',
+      prefix: select.prefix ?? '',
+      options,
+      postfix: select.postfix ?? '',
+      item: select.itemLead?.item ?? '',
+      lead: select.itemLead?.lead ?? '',
+      hint: select.hint ?? '',
+      instruction: select.instruction ?? '',
+      isExample: !!select.example,
+      example: StringUtils.isString(select.example) ? (select.example as string) : '',
+      //
+    };
+
+    // Remove unwanted properties
+    if (!selectJson.lead) delete selectJson.lead;
+
+    // Add the gap to the placeholders
+    this.bitJson.placeholders[placeholder] = selectJson as SelectJson;
+  }
 
   // // bitmark -> bits -> bitValue -> body -> bodyValue -> select -> options
 
@@ -818,10 +991,10 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
   // // bitmark -> bits -> bitValue -> resource
 
-  // protected enter_resource(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
-  //   // This is a resource, so handle it with the common code
-  //   this.writeResource(node, parent, route);
-  // }
+  protected enter_resource(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+    // This is a resource, so handle it with the common code
+    this.addResource(node, parent, route);
+  }
 
   // // bitmark -> bits -> bitValue -> resource -> posterImage
 
@@ -1002,7 +1175,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
   protected leaf_bodyText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
-      if (!this.bitJson.body) this.bitJson.body = '';
+      // if (!this.bitJson.body) this.bitJson.body = '';
       this.bitJson.body += node.value;
     }
   }
@@ -1216,47 +1389,264 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (s != null) this.write(`${s}`);
   }
 
-  // protected writeResource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
-  //   const resource = node.value as Resource;
-  //   const resourceAsArticle = resource as ArticleResource;
+  protected addResource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
+    const resource = node.value as Resource;
+    const resourceAsArticle = resource as ArticleResource;
 
-  //   if (resource) {
-  //     // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
-  //     let valid = false;
-  //     if (resource.type === ResourceType.article && resourceAsArticle.body) {
-  //       // Article with body
-  //       valid = true;
-  //     } else if (resource.url) {
-  //       // Other resource with a url (url / src / app / ...etc)
-  //       valid = true;
-  //     }
+    if (resource) {
+      // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
+      let valid = false;
+      if (resource.type === ResourceType.article && resourceAsArticle.body) {
+        // Article with body
+        valid = true;
+      } else if (resource.url) {
+        // Other resource with a url (url / src / app / ...etc)
+        valid = true;
+      }
 
-  //     // Resource is not valid, cancel walking it's tree.
-  //     if (!valid) return false;
+      // Resource is not valid, cancel walking it's tree.
+      if (!valid) return false;
 
-  //     this.writeOPAMP();
-  //     this.writeString(resource.type);
-  //     if (resource.type === ResourceType.article && resourceAsArticle.body) {
-  //       this.writeColon();
-  //       // this.writeNL();
-  //       this.writeString(resourceAsArticle.body);
-  //       this.writeNL();
-  //     } else if (resource.url) {
-  //       this.writeColon();
-  //       this.writeString(resource.url);
-  //     }
-  //     this.writeCL();
-  //   }
-  // }
+      // Resource is valid, write it.
+      const resourceJson: ResourceWrapperJson = {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        type: resource.type as any,
+      };
+      this.bitJson.resource = resourceJson as ResourceJson;
 
-  protected writeProperty(
+      switch (resource.type) {
+        case ResourceType.image:
+          (resourceJson as ImageResourceWrapperJson).image = this.addImageLikeResource(resource as ImageResource);
+          break;
+
+        case ResourceType.imageLink:
+          (resourceJson as ImageLinkResourceWrapperJson).imageLink = this.addImageLikeResource(
+            resource as ImageResource,
+          );
+          break;
+
+        case ResourceType.audio:
+          (resourceJson as AudioResourceWrapperJson).audio = this.addAudioLikeResource(resource as AudioResource);
+          break;
+
+        case ResourceType.audioLink:
+          (resourceJson as AudioLinkResourceWrapperJson).audioLink = this.addAudioLinkLikeResource(
+            resource as AudioResource,
+          );
+          break;
+
+        case ResourceType.video:
+          (resourceJson as VideoResourceWrapperJson).video = this.addVideoLikeResource(resource as VideoResource);
+          break;
+
+        case ResourceType.videoLink:
+          (resourceJson as VideoLinkResourceWrapperJson).videoLink = this.addVideoLikeResource(
+            resource as VideoResource,
+          );
+          break;
+
+        case ResourceType.stillImageFilm:
+          (resourceJson as StillImageFilmResourceWrapperJson).stillImageFilm = this.addVideoLikeResource(
+            resource as VideoResource,
+          );
+          break;
+
+        case ResourceType.stillImageFilmLink:
+          (resourceJson as StillImageFilmLinkResourceWrapperJson).stillImageFilmLink = this.addVideoLikeResource(
+            resource as VideoResource,
+          );
+          break;
+
+        case ResourceType.article:
+          (resourceJson as ArticleResourceWrapperJson).article = this.addArticleLikeResource(
+            resource as ArticleResource,
+          );
+          break;
+
+        case ResourceType.articleLink:
+          (resourceJson as ArticleLinkResourceWrapperJson).articleLink = this.addArticleLinkLikeResource(
+            resource as ArticleResource,
+          );
+          break;
+
+        case ResourceType.document:
+          (resourceJson as DocumentResourceWrapperJson).document = this.addArticleLikeResource(
+            resource as ArticleResource,
+          );
+          break;
+
+        case ResourceType.documentLink:
+          (resourceJson as DocumentLinkResourceWrapperJson).documentLink = this.addArticleLinkLikeResource(
+            resource as ArticleResource,
+          );
+          break;
+
+        case ResourceType.app:
+          (resourceJson as AppResourceWrapperJson).app = resource.url ?? '';
+          break;
+
+        case ResourceType.appLink:
+          (resourceJson as AppLinkResourceWrapperJson).appLink = this.addAppLinkLikeResource(resource as AppResource);
+          break;
+
+        case ResourceType.websiteLink:
+          (resourceJson as WebsiteLinkResourceWrapperJson).websiteLink = this.addWebsiteLikeResource(
+            resource as WebsiteLinkResource,
+          );
+          break;
+
+        default:
+      }
+    }
+  }
+
+  protected addImageLikeResource(resource: ImageResource): ImageResourceJson | ImageLinkResourceJson {
+    const resourceJson: Partial<ImageResourceJson | ImageLinkResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.url != null) resourceJson.src = resource.url;
+    if (resource.src1x != null) resourceJson.src1x = resource.src1x;
+    if (resource.src2x != null) resourceJson.src2x = resource.src2x;
+    if (resource.src3x != null) resourceJson.src3x = resource.src3x;
+    if (resource.src4x != null) resourceJson.src4x = resource.src4x;
+    resourceJson.width = resource.width ?? null;
+    resourceJson.height = resource.height ?? null;
+    resourceJson.alt = resource.alt ?? '';
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as ImageResourceJson | ImageLinkResourceJson;
+  }
+
+  protected addAudioLikeResource(resource: AudioResource): AudioResourceJson {
+    const resourceJson: Partial<AudioResourceJson | AudioLinkResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.url != null) resourceJson.src = resource.url;
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as AudioResourceJson;
+  }
+
+  protected addAudioLinkLikeResource(resource: AudioResource): AudioLinkResourceJson {
+    const resourceJson: Partial<AudioLinkResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.url != null) resourceJson.url = resource.url;
+
+    // Properties that are always added that do not come from the markup
+    resourceJson.duration = '';
+    resourceJson.autoplay = true;
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson, true);
+
+    return resourceJson as AudioLinkResourceJson;
+  }
+
+  protected addVideoLikeResource(resource: VideoResource): VideoResourceJson | VideoLinkResourceJson {
+    const resourceJson: Partial<VideoResourceJson | VideoLinkResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.url != null) resourceJson.src = resource.url;
+    resourceJson.width = resource.width ?? null;
+    resourceJson.height = resource.height ?? null;
+
+    if (resource.duration != null) resourceJson.duration = resource.duration;
+    if (resource.mute != null) resourceJson.mute = resource.mute;
+    if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
+    if (resource.allowSubtitles != null) resourceJson.allowSubtitles = resource.allowSubtitles;
+    if (resource.showSubtitles != null) resourceJson.showSubtitles = resource.showSubtitles;
+
+    if (resource.alt != null) resourceJson.alt = resource.alt;
+
+    if (resource.posterImage != null) resourceJson.posterImage = this.addImageLikeResource(resource.posterImage);
+    if (resource.thumbnails != null && resource.thumbnails.length > 0) {
+      resourceJson.thumbnails = [];
+      for (const thumbnail of resource.thumbnails) {
+        resourceJson.thumbnails.push(this.addImageLikeResource(thumbnail));
+      }
+    }
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as VideoResourceJson | VideoLinkResourceJson;
+  }
+
+  protected addArticleLikeResource(resource: ArticleResource): ArticleResourceJson | DocumentResourceJson {
+    const resourceJson: Partial<ArticleResourceJson | DocumentResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.url != null) resourceJson.body = resource.url;
+    // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as ArticleResourceJson | DocumentResourceJson;
+  }
+
+  protected addArticleLinkLikeResource(resource: ArticleResource): ArticleLikeResourceJson | DocumentLinkResourceJson {
+    const resourceJson: Partial<ArticleLikeResourceJson | DocumentLinkResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.url != null) resourceJson.url = resource.url;
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as ArticleLikeResourceJson | DocumentLinkResourceJson;
+  }
+
+  protected addAppLinkLikeResource(resource: AppResource): AppLinkResourceJson {
+    const resourceJson: Partial<AppLinkResourceJson> = {};
+
+    // if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.url != null) resourceJson.app = resource.url;
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as AppLinkResourceJson;
+  }
+
+  protected addWebsiteLikeResource(resource: WebsiteLinkResource): WebsiteLinkResourceJson {
+    const resourceJson: Partial<WebsiteLinkResourceJson> = {};
+
+    // if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.url != null) resourceJson.url = resource.url;
+    if (resource.siteName != null) resourceJson.siteName = resource.siteName;
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as WebsiteLinkResourceJson;
+  }
+
+  protected addGenericResourceProperties(resource: Resource, resourceJson: BaseResourceJson, noDefaults?: boolean) {
+    if (noDefaults) {
+      if (resource.license != null) resourceJson.license = resource.license ?? '';
+      if (resource.copyright != null) resourceJson.copyright = resource.copyright ?? '';
+      if (resource.provider != null) resourceJson.provider = resource.provider;
+      if (resource.showInIndex != null) resourceJson.showInIndex = resource.showInIndex ?? false;
+      if (resource.caption != null) resourceJson.caption = resource.caption ?? '';
+    } else {
+      resourceJson.license = resource.license ?? '';
+      resourceJson.copyright = resource.copyright ?? '';
+      if (resource.provider != null) resourceJson.provider = resource.provider;
+      resourceJson.showInIndex = resource.showInIndex ?? false;
+      resourceJson.caption = resource.caption ?? '';
+    }
+
+    return resourceJson as ArticleResourceJson | DocumentResourceJson;
+  }
+
+  protected addProperty(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     target: any,
     name: string,
-    values: unknown[] | undefined,
+    values: unknown | unknown[] | undefined,
     singleWithoutArray?: boolean,
   ): void {
     if (values !== undefined) {
+      if (!Array.isArray(values)) values = [values];
+
       if (Array.isArray(values) && values.length > 0) {
         if (singleWithoutArray && values.length === 1) {
           target[name] = values[0];
@@ -1300,6 +1690,55 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     }
 
     return undefined;
+  }
+
+  protected createBitJson(bit: Bit): Partial<BitJson> {
+    const bitJson: Partial<BitJson> = {
+      type: bit.bitType,
+      format: bit.textFormat,
+    };
+
+    // Add default properties to the bit.
+    // NOTE: Not all bits have the same default properties.
+    //       The properties used in the antlr parser are a bit random sometimes.
+    switch (bit.bitType) {
+      case BitType.assignment:
+      case BitType.book:
+      case BitType.cloze:
+      case BitType.clozeInstructionGrouped:
+      case BitType.clozeSolutionGrouped:
+      case BitType.example:
+      case BitType.help:
+      case BitType.hint:
+      case BitType.info:
+      case BitType.internalLink:
+      case BitType.quote:
+        bitJson.item = '';
+        bitJson.hint = '';
+        bitJson.isExample = false;
+        bitJson.example = '';
+        break;
+
+      case BitType.chapter:
+        bitJson.item = '';
+        bitJson.hint = '';
+        bitJson.isExample = false;
+        bitJson.example = '';
+        bitJson.toc = true; // Always set on chapter bits?
+        bitJson.progress = true; // Always set on chapter bits
+        break;
+
+      case BitType.interview:
+        bitJson.item = '';
+        bitJson.hint = '';
+        bitJson.instruction = '';
+        bitJson.footer = '';
+        break;
+
+      default:
+    }
+
+    return bitJson;
   }
 
   //

@@ -7,7 +7,7 @@ import path from 'path';
 
 import { JsonFileGenerator } from '../../src/generator/json/JsonFileGenerator';
 import { BitmarkParser } from '../../src/parser/bitmark/BitmarkParser';
-import { JsonParser } from '../../src/parser/json/JsonParser';
+// import { JsonParser } from '../../src/parser/json/JsonParser';
 import { FileUtils } from '../../src/utils/FileUtils';
 import { BitJsonUtils } from '../utils/BitJsonUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
@@ -18,7 +18,7 @@ const SINGLE_FILE_COUNT = 1;
 const TEST_INPUT_DIR = path.resolve(__dirname, './bitmark');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/json-gen/output');
 
-const jsonParser = new JsonParser();
+// const jsonParser = new JsonParser();
 const bitmarkParser = new BitmarkParser();
 
 /**
