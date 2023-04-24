@@ -31,6 +31,7 @@ export type Node =
 
 export interface BitmarkAst {
   bits?: Bit[];
+  errors?: ParserError[];
 }
 
 // Bit

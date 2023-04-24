@@ -46,6 +46,11 @@ export interface ParserHelperOptions {
   parserLocation: () => ParserError['location'];
 }
 
+interface SubParserResult<T> {
+  value?: T;
+  errors?: ParserError[];
+}
+
 interface BitHeader {
   bitType?: BitTypeType;
   textFormat?: TextFormatType;
@@ -159,22 +164,54 @@ class BitmarkParserHelper {
     this.parserLocation = options.parserLocation;
   }
 
+  // For debugging only
+  print(header: string, data: unknown): void {
+    console.log(`===== ${header} =====`);
+    console.log(JSON.stringify(data, null, 2));
+  }
+
   // Build bits
-  buildBits(bits: (Bit | undefined)[]): BitmarkAst {
+  buildBits(bitStrs: string[]): BitmarkAst {
+    const bits: Bit[] = [];
+    let errors: ParserError[] = [];
+
+    for (const bitStr of bitStrs) {
+      // Trim the bit string to remove any leading or trailing whitespace
+      // Actually, let's do this in the parser otherwise we'll lose correct error locations
+      // bitStr = bitStr.trim();
+
+      this.print('RAW BIT', bitStr);
+
+      // Parse the raw bit
+      const bitParserResult = this.parse(bitStr ?? '', {
+        startRule: 'bit',
+      }) as SubParserResult<Bit>;
+
+      if (bitParserResult.value) {
+        bits.push(bitParserResult.value);
+      } else {
+        // TODO - convert error location to master parser location
+
+        // If bit is undefined, then there was an error parsing the bit
+        errors = errors.concat(bitParserResult.errors ?? []);
+      }
+    }
+
     const res = builder.bitmark({
-      bits: bits.filter((bit) => !!bit) as Bit[],
-      errors: this.nonFatalErrors.length > 0 ? this.nonFatalErrors : undefined,
+      // bits: bits.filter((bit) => !!bit) as Bit[],
+      bits,
+      errors: errors.length > 0 ? errors : undefined,
     });
 
     return res;
   }
 
   // Build bit
-  buildBit(bitHeader: BitHeader, bitContent: BitContent[]): Bit | undefined {
+  buildBit(bitHeader: BitHeader, bitContent: BitContent[]): SubParserResult<Bit> {
     const { bitType, textFormat, resourceType } = bitHeader;
 
-    // Bit type was invalid, so ignore the bit
-    if (!bitType) return undefined;
+    // Bit type was invalid, so ignore the bit, returning instead the parsing errors
+    if (!bitType) return this.invalidBit();
 
     console.log(`==== bitContent ====`);
     console.log(JSON.stringify(bitContent, null, 2));
@@ -256,7 +293,17 @@ class BitmarkParserHelper {
     // (bit as any).cardSet = cardSet;
     (bit as any).resourceType = resourceType;
 
-    return bit;
+    return { value: bit };
+  }
+
+  // Build bit for data that cannot be parsed
+  invalidBit(): SubParserResult<Bit> {
+    // Create the error
+    this.addError('Invalid bit');
+
+    return {
+      errors: this.nonFatalErrors,
+    };
   }
 
   // Build bit header

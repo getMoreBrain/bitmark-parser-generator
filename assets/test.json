@@ -1,250 +1,43 @@
 [
   {
-    "bitmark": "[.multiple-choice:bitmark]\n[@id:190701]\n[!ICH BEVORZUGE …]\n===\n[!1. ]\n[+Bier]\n[-Wein]\n===\n[!2. ]\n[+Schokolade]\n[-Chips]\n===\n[!3. ]\n[+Ferien am Meer]\n[-Ferien in den Bergen]\n===\n[!4. ]\n[+Hund]\n[-Katze]\n===\n[!5. ]\n[+Sport treiben]\n[-TV schauen]\n===\n[!6. ]\n[+Kundenkontakt]\n[-Büroarbeit]\n===\n[!7. ]\n[+Kaffee]\n[-Tee]\n===\n[!8. ]\n[+Stadt]\n[-Land]\n===\n[!9. ]\n[+Selber Kochen]\n[-Im Restaurant Essen]\n===\n[!10. ]\n[+Weihnachten mit zu Hause mit der Familie]\n[-Weihnachten in die Ferien fahren]\n===\n[!11. ]\n[+Wellness]\n[-Fitness]\n===\n[!12. ]\n[+Spazieren]\n[-Velotour]\n===\n[!13. ]\n[+Sportliche Kleider ]\n[-Elegante Kleider]\n===\n[!14. ]\n[+Camping]\n[-5 Stern Hotel]\n===\n[!15. ]\n[+Schlager]\n[-Pop/Rock]\n===\n[!16. ]\n[+Tatort (Krimi)]\n[-Rosamunde Pilcher (Roman)]\n===\n[!17. ]\n[+Kultur]\n[-Sport]\n===\n[!18. ]\n[+Migros]\n[-Coop]\n===",
+    "bitmark": "[.interview:bitmark--]\n[@id:198779]\n[%1]\n[!Erklären Sie den Begriff „Steuerüberwälzung“.]\n===\n[$Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]",
     "bit": {
-      "type": "multiple-choice",
+      "type": "interview",
       "format": "bitmark--",
-      "item": "",
-      "instruction": "",
-      "body": "[@id:190701]\n[!ICH BEVORZUGE …]\n===\n[!1. ]\n[+Bier]\n[-Wein]\n===\n[!2. ]\n[+Schokolade]\n[-Chips]\n===\n[!3. ]\n[+Ferien am Meer]\n[-Ferien in den Bergen]\n===\n[!4. ]\n[+Hund]\n[-Katze]\n===\n[!5. ]\n[+Sport treiben]\n[-TV schauen]\n===\n[!6. ]\n[+Kundenkontakt]\n[-Büroarbeit]\n===\n[!7. ]\n[+Kaffee]\n[-Tee]\n===\n[!8. ]\n[+Stadt]\n[-Land]\n===\n[!9. ]\n[+Selber Kochen]\n[-Im Restaurant Essen]\n===\n[!10. ]\n[+Weihnachten mit zu Hause mit der Familie]\n[-Weihnachten in die Ferien fahren]\n===\n[!11. ]\n[+Wellness]\n[-Fitness]\n===\n[!12. ]\n[+Spazieren]\n[-Velotour]\n===\n[!13. ]\n[+Sportliche Kleider ]\n[-Elegante Kleider]\n===\n[!14. ]\n[+Camping]\n[-5 Stern Hotel]\n===\n[!15. ]\n[+Schlager]\n[-Pop/Rock]\n===\n[!16. ]\n[+Tatort (Krimi)]\n[-Rosamunde Pilcher (Roman)]\n===\n[!17. ]\n[+Kultur]\n[-Sport]\n===\n[!18. ]\n[+Migros]\n[-Coop]\n===",
+      "item": "1",
+      "instruction": "Erklären Sie den Begriff „Steuerüberwälzung“.",
+      "body": "",
       "footer": "",
       "hint": "",
-      "quizzes": []
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198779"
+      ]
     },
     "errors": [
       {
-        "message": "Rule violation around ':'",
-        "line": 1,
-        "column": 17,
-        "errorLine": "[.multiple-choice:bitmark]"
+        "message": "Unexpected input '\\n\n'",
+        "line": 8,
+        "column": 0,
+        "errorLine": ""
       },
       {
-        "message": "Unexpected input '[@'",
-        "line": 2,
+        "message": "Rule violation around '<EOF>'",
+        "line": 8,
         "column": 0,
-        "errorLine": "[@id:190701]"
-      },
-      {
-        "message": "Unexpected input '[!'",
-        "line": 3,
-        "column": 0,
-        "errorLine": "[!ICH BEVORZUGE …]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 6,
-        "column": 0,
-        "errorLine": "[+Bier]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 7,
-        "column": 0,
-        "errorLine": "[-Wein]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 10,
-        "column": 0,
-        "errorLine": "[+Schokolade]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 11,
-        "column": 0,
-        "errorLine": "[-Chips]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 14,
-        "column": 0,
-        "errorLine": "[+Ferien am Meer]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 15,
-        "column": 0,
-        "errorLine": "[-Ferien in den Bergen]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 18,
-        "column": 0,
-        "errorLine": "[+Hund]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 19,
-        "column": 0,
-        "errorLine": "[-Katze]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 22,
-        "column": 0,
-        "errorLine": "[+Sport treiben]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 23,
-        "column": 0,
-        "errorLine": "[-TV schauen]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 26,
-        "column": 0,
-        "errorLine": "[+Kundenkontakt]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 27,
-        "column": 0,
-        "errorLine": "[-Büroarbeit]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 30,
-        "column": 0,
-        "errorLine": "[+Kaffee]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 31,
-        "column": 0,
-        "errorLine": "[-Tee]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 34,
-        "column": 0,
-        "errorLine": "[+Stadt]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 35,
-        "column": 0,
-        "errorLine": "[-Land]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 38,
-        "column": 0,
-        "errorLine": "[+Selber Kochen]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 39,
-        "column": 0,
-        "errorLine": "[-Im Restaurant Essen]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 42,
-        "column": 0,
-        "errorLine": "[+Weihnachten mit zu Hause mit der Familie]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 43,
-        "column": 0,
-        "errorLine": "[-Weihnachten in die Ferien fahren]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 46,
-        "column": 0,
-        "errorLine": "[+Wellness]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 47,
-        "column": 0,
-        "errorLine": "[-Fitness]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 50,
-        "column": 0,
-        "errorLine": "[+Spazieren]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 51,
-        "column": 0,
-        "errorLine": "[-Velotour]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 54,
-        "column": 0,
-        "errorLine": "[+Sportliche Kleider ]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 55,
-        "column": 0,
-        "errorLine": "[-Elegante Kleider]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 58,
-        "column": 0,
-        "errorLine": "[+Camping]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 59,
-        "column": 0,
-        "errorLine": "[-5 Stern Hotel]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 62,
-        "column": 0,
-        "errorLine": "[+Schlager]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 63,
-        "column": 0,
-        "errorLine": "[-Pop/Rock]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 66,
-        "column": 0,
-        "errorLine": "[+Tatort (Krimi)]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 67,
-        "column": 0,
-        "errorLine": "[-Rosamunde Pilcher (Roman)]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 70,
-        "column": 0,
-        "errorLine": "[+Kultur]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 71,
-        "column": 0,
-        "errorLine": "[-Sport]"
-      },
-      {
-        "message": "Unexpected input '[+'",
-        "line": 74,
-        "column": 0,
-        "errorLine": "[+Migros]"
-      },
-      {
-        "message": "Unexpected input '[-'",
-        "line": 75,
-        "column": 0,
-        "errorLine": "[-Coop]"
+        "errorLine": ""
       }
     ]
   }

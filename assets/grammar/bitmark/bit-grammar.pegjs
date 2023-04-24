@@ -40,26 +40,50 @@ const helper = new BitmarkParserHelper({
 //
 
 // Root bitmark rule
+// - this rule splits the input into individual bits
+// - it will match ANYTHING, so all bitmark is valid
+// - it will return an array of bit markup
 bitmark
-  = bits: Bits+ { return helper.buildBits(bits) }
-  / NoContent { return { bits: [] } }
+  = BM_Bitmark
 
-// No content in the input
-NoContent
-  = Empty
+BM_Bitmark
+  = firstBit: BM_FirstBit bits: BM_Bits { return helper.buildBits([ firstBit, ...bits]) }
+  / bit: $Anything { return helper.buildBits([ bit ]) }
 
-// A bit with lines before / after
-Bits
-  = BlankLine* bit: Bit BlankLine* { return bit }
+// First bit (matches any content before the first bit header that starts with a NL)
+BM_FirstBit
+  = $(BlankLine* BM_BodyLine*)
 
-// A bit
+// Subsequent bits after the first bit
+BM_Bits
+  = ($BM_Bit)+
+
+// A bit with potential blank lines before
+BM_Bit
+  =  BlankLine* BM_BitHeader BM_BodyLine*
+
+// A bit header
+BM_BitHeader
+  = NL? $("[." [^\]]* "]")
+
+// A line of bit body (and not a subsequent bit header)
+BM_BodyLine
+  = NL !BitHeader / Char+
+
+
+// Root bit rule
+// - parses a single bit
+bit
+ = BlankLine* bit: Bit BlankLine* { return bit }
+
+// A single bit
 Bit
-  = bitHeader: BitHeader bitContent: BitContent { return helper.buildBit(bitHeader, bitContent) }
-  // = bitHeader: BitHeader bitContent: BitContent extraContent: $Anything { return buildBit(bitHeader, bitContent, extraContent) }
+ = bitHeader: BitHeader bitContent: BitContent { return helper.buildBit(bitHeader, bitContent) }
+ / bit: $Anything { return helper.invalidBit(bit) }
 
 // The bit header, e.g. [.interview&image:bitmark++], [.interview:bitmark--&image], [.cloze]
 BitHeader
-  = NL? "[." bitType: Bit_Value formatAndResource: TextFormatAndResourceType? "]" { return helper.buildBitHeader(bitType, formatAndResource) }
+  = "[." bitType: Bit_Value formatAndResource: TextFormatAndResourceType? "]" { return helper.buildBitHeader(bitType, formatAndResource) }
 
 // Text format and resource type
 TextFormatAndResourceType
@@ -83,7 +107,7 @@ BitTag
 
 // Line of Body of the bit
 BodyLine
-  = value: $(NL !BitHeader / Char+ EOL) { return { type: TypeKey.BodyLine, value: value } }
+  = value: $(NL / Char+ EOL) { return { type: TypeKey.BodyLine, value: value } }
 
 // CardSet
 CardSet
@@ -93,13 +117,13 @@ CardSetStart
   = NL? &("===" NL) { helper.processCardSetStart(); }
 
 CardSetEnd
-  = "===" &EOL { helper.processCardSetEnd(); }
+  = ("===" &EOL) { helper.processCardSetEnd(); }
 
 Card
   = value: ("===" NL CardContent) { helper.processCard(); return value[2]; }
 
 CardContent
-  = value: ((PossibleCardLine !(("===" EOL) / BitHeader))* PossibleCardLine (!BitHeader !EOL)) {
+  = value: ((PossibleCardLine !("===" EOL))* PossibleCardLine !EOL) {
     const cards = helper.reduceToArrayOfTypes(value, TypeKey.Card);
     return cards;
   };

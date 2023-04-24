@@ -1,11 +1,18 @@
 {
   "bits": [
     {
-      "bitType": "multiple-choice",
+      "bitType": "interview",
       "textFormat": "bitmark--",
-      "body": [
+      "ids": [
+        "198779"
+      ],
+      "itemLead": {
+        "item": "1"
+      },
+      "instruction": "Erklären Sie den Begriff „Steuerüberwälzung“.",
+      "questions": [
         {
-          "bodyText": "[@id:190701]\n[!ICH BEVORZUGE …]\n===\n[!1. ]\n[+Bier]\n[-Wein]\n===\n[!2. ]\n[+Schokolade]\n[-Chips]\n===\n[!3. ]\n[+Ferien am Meer]\n[-Ferien in den Bergen]\n===\n[!4. ]\n[+Hund]\n[-Katze]\n===\n[!5. ]\n[+Sport treiben]\n[-TV schauen]\n===\n[!6. ]\n[+Kundenkontakt]\n[-Büroarbeit]\n===\n[!7. ]\n[+Kaffee]\n[-Tee]\n===\n[!8. ]\n[+Stadt]\n[-Land]\n===\n[!9. ]\n[+Selber Kochen]\n[-Im Restaurant Essen]\n===\n[!10. ]\n[+Weihnachten mit zu Hause mit der Familie]\n[-Weihnachten in die Ferien fahren]\n===\n[!11. ]\n[+Wellness]\n[-Fitness]\n===\n[!12. ]\n[+Spazieren]\n[-Velotour]\n===\n[!13. ]\n[+Sportliche Kleider ]\n[-Elegante Kleider]\n===\n[!14. ]\n[+Camping]\n[-5 Stern Hotel]\n===\n[!15. ]\n[+Schlager]\n[-Pop/Rock]\n===\n[!16. ]\n[+Tatort (Krimi)]\n[-Rosamunde Pilcher (Roman)]\n===\n[!17. ]\n[+Kultur]\n[-Sport]\n===\n[!18. ]\n[+Migros]\n[-Coop]\n==="
+          "sampleSolution": "Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger."
         }
       ],
       "footer": {
