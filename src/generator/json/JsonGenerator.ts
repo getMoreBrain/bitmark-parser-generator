@@ -1,10 +1,10 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
-import { Pair, Question } from '../../model/ast/Nodes';
+import { Pair, Question, Quiz } from '../../model/ast/Nodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { ResourceType } from '../../model/enum/ResourceType';
-import { BitJson, HeadingJson, PairJson, QuestionJson } from '../../model/json/BitJson';
+import { BitJson, ChoiceJson, HeadingJson, PairJson, QuestionJson, QuizJson } from '../../model/json/BitJson';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { GapJson, SelectJson, SelectOptionJson } from '../../model/json/BodyBitJson';
 import { StringUtils } from '../../utils/StringUtils';
@@ -324,6 +324,18 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     //   choices,
     //   questions,
     //   footer,
+
+    // bitmark
+    if (bit.bitmark) {
+      this.bitWrapperJson.bitmark = bit.bitmark;
+    }
+
+    // errors
+    if (bit.errors) {
+      this.bitWrapperJson.parser = {
+        errors: bit.errors,
+      };
+    }
   }
 
   // bitmark -> bits -> bitValue -> ids
@@ -742,12 +754,59 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeCL();
   // }
 
-  // // bitmark -> bits -> bitValue -> quizzes
+  // bitmark -> bits -> bitValue -> quizzes
 
-  // protected enter_quizzes(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   this.writeMajorDivider();
-  //   this.writeNL();
-  // }
+  protected enter_quizzes(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const quizzes = node.value as Quiz[];
+    const quizzesJson: QuizJson[] = [];
+
+    if (quizzes) {
+      for (const q of quizzes) {
+        // Choices
+        const choicesJson: ChoiceJson[] = [];
+        if (q.choices) {
+          for (const c of q.choices) {
+            // Create the choice
+            const choiceJson: Partial<ChoiceJson> = {
+              choice: c.text ?? '',
+              isCorrect: c.isCorrect ?? false,
+              item: c.itemLead?.item ?? '',
+              lead: c.itemLead?.lead ?? '',
+              hint: c.hint ?? '',
+              instruction: c.instruction ?? '',
+              // isExample: !!c.example,
+              // example: StringUtils.isString(c.example) ? (c.example as string) : '',
+            };
+
+            // Delete unwanted properties
+            if (q.itemLead?.lead == null) delete choiceJson.lead;
+
+            choicesJson.push(choiceJson as ChoiceJson);
+          }
+        }
+
+        // Create the quiz
+        const quizJson: Partial<QuizJson> = {
+          item: q.itemLead?.item ?? '',
+          lead: q.itemLead?.lead ?? '',
+          hint: q.hint ?? '',
+          instruction: q.instruction ?? '',
+          isExample: !!q.example,
+          example: StringUtils.isString(q.example) ? (q.example as string) : '',
+          choices: choicesJson,
+        };
+
+        // Delete unwanted properties
+        if (q.itemLead?.lead == null) delete quizJson.lead;
+
+        quizzesJson.push(quizJson as QuizJson);
+      }
+    }
+
+    if (quizzesJson.length > 0) {
+      this.bitJson.quizzes = quizzesJson;
+    }
+  }
 
   // protected between_quizzes(
   //   _node: NodeInfo,
@@ -1804,6 +1863,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         break;
 
       case BitType.interview:
+      case BitType.multipleChoice:
         bitJson.item = '';
         bitJson.hint = '';
         bitJson.instruction = '';

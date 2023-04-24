@@ -21,6 +21,16 @@ class BitJsonUtils {
         if (bit) {
           if (bit.resource) {
             delete bit.resource.private;
+
+            // Delete the defaults - ignored for testing
+            for (const key of Object.keys(bit.resource)) {
+              const resource = bit.resource[key];
+              if (!resource.license) delete resource.license;
+              if (!resource.copyright) delete resource.copyright;
+              if (!resource.provider) delete resource.provider;
+              if (!resource.showInIndex) delete resource.showInIndex;
+              if (!resource.caption) delete resource.caption;
+            }
           }
         }
 

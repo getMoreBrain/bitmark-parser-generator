@@ -229,6 +229,9 @@ class BitmarkParserHelper {
     // console.log(JSON.stringify(body, null, 2));
     // console.log(`==== END: body ====`);
 
+    // Build the errors
+    const errors = this.buildErrors();
+
     // const bit: Bit = {
     //   bitType,
     //   textFormat,
@@ -246,6 +249,7 @@ class BitmarkParserHelper {
       ...tags,
       ...bitSpecificCards,
       body,
+      errors,
     });
 
     // (bit as any).bitSpecificCards = bitSpecificCards;
@@ -978,6 +982,15 @@ class BitmarkParserHelper {
     if (solutions.length > 0) res.solutions = solutions;
 
     return res;
+  }
+
+  buildErrors(): ParserError[] | undefined {
+    let errors: ParserError[] | undefined;
+    if (this.nonFatalErrors.length > 0) {
+      errors = this.nonFatalErrors;
+      this.nonFatalErrors = [];
+    }
+    return errors;
   }
 
   //

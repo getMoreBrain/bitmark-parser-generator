@@ -170,6 +170,17 @@ const NodeType = superenum({
   posterImage: 'posterImage',
   thumbnails: 'thumbnails',
   thumbnailsValue: 'thumbnailsValue',
+
+  // Errors
+  errors: 'errors',
+  errorsValue: 'errorsValue',
+  message: 'message',
+  location: 'location',
+  start: 'start',
+  end: 'end',
+  offset: 'offset',
+  line: 'line',
+  column: 'column',
 });
 
 export type NodeTypeType = EnumType<typeof NodeType>;

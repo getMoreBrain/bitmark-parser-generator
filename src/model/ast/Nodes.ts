@@ -31,7 +31,6 @@ export type Node =
 
 export interface BitmarkAst {
   bits?: Bit[];
-  errors?: ParserError[];
 }
 
 // Bit
@@ -92,6 +91,9 @@ export interface Bit {
   matrix?: Matrix[];
   questions?: Question[];
   footer?: FooterText;
+
+  bitmark?: string;
+  errors?: ParserError[];
 }
 
 // Extra Properties

@@ -141,6 +141,9 @@ class Builder {
     choices?: Choice[];
     questions?: Question[];
     footer?: FooterText;
+
+    bitmark?: string;
+    errors?: ParserError[];
   }): Bit | undefined {
     const {
       bitType,
@@ -198,6 +201,9 @@ class Builder {
       choices,
       questions,
       footer,
+
+      bitmark,
+      errors,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -257,6 +263,9 @@ class Builder {
       choices,
       questions,
       footer,
+
+      bitmark,
+      errors,
     };
 
     // Handle special case properties
