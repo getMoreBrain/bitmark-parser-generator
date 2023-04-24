@@ -1,9 +1,10 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
+import { Pair, Question } from '../../model/ast/Nodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { ResourceType } from '../../model/enum/ResourceType';
-import { BitJson } from '../../model/json/BitJson';
+import { BitJson, HeadingJson, PairJson, QuestionJson } from '../../model/json/BitJson';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { GapJson, SelectJson, SelectOptionJson } from '../../model/json/BodyBitJson';
 import { StringUtils } from '../../utils/StringUtils';
@@ -779,22 +780,39 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   }
   // }
 
-  // // bitmark -> bits -> bitValue -> heading
+  // bitmark -> bits -> bitValue -> heading
 
-  // protected enter_heading(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
-  //   const heading = node.value as Heading;
+  protected enter_heading(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
+    const heading = node.value as Heading;
 
-  //   // Ensure the heading is valid for writing out (it will be valid, but if it is empty, it should not be written)
-  //   let valid = false;
-  //   if (heading && heading.forKeys /*&& heading.forValues && heading.forValues.length > 0*/) {
-  //     valid = true;
-  //   }
+    // Ensure the heading is valid for writing out (it will be valid, but if it is empty, it should not be written)
+    let valid = false;
+    if (heading && heading.forKeys /*&& heading.forValues && heading.forValues.length > 0*/) {
+      valid = true;
+    }
 
-  //   if (!valid) return false;
+    if (!valid) return false;
 
-  //   this.writeMajorDivider();
-  //   this.writeNL();
-  // }
+    // Create the heading
+    const headingJson: Partial<HeadingJson> = {
+      forKeys: heading.forKeys ?? '',
+    };
+
+    // TODO: Should probably check wether bit is a match or a matrix and add a string for match and array for matrix
+    if (Array.isArray(heading.forValues)) {
+      if (heading.forValues.length > 1) {
+        headingJson.forValues = heading.forValues;
+      } else if (heading.forValues.length === 1) {
+        headingJson.forValues = heading.forValues[0];
+      } else {
+        headingJson.forValues = heading.forValues;
+      }
+    } else {
+      headingJson.forValues = heading.forValues;
+    }
+
+    this.bitJson.heading = headingJson as HeadingJson;
+  }
 
   // protected between_heading(
   //   _node: NodeInfo,
@@ -835,12 +853,40 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   //
   // }
 
-  // // bitmark -> bits -> bitValue -> pairs
+  // bitmark -> bits -> bitValue -> pairs
 
-  // protected enter_pairs(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   this.writeMajorDivider();
-  //   this.writeNL();
-  // }
+  protected enter_pairs(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const pairs = node.value as Pair[];
+    const pairsJson: PairJson[] = [];
+
+    if (pairs) {
+      for (const p of pairs) {
+        // Create the question
+        const pairJson: Partial<PairJson> = {
+          key: p.key ?? '',
+          values: p.values ?? [],
+          item: p.itemLead?.item ?? '',
+          lead: p.itemLead?.lead ?? '',
+          hint: p.hint ?? '',
+          instruction: p.instruction ?? '',
+          isExample: !!p.example,
+          example: StringUtils.isString(p.example) ? (p.example as string) : '',
+          isCaseSensitive: p.isCaseSensitive ?? true,
+          isLongAnswer: p.isLongAnswer ?? false,
+          //
+        };
+
+        // Delete unwanted properties
+        if (p.itemLead?.lead == null) delete pairJson.lead;
+
+        pairsJson.push(pairJson as PairJson);
+      }
+    }
+
+    if (pairsJson.length > 0) {
+      this.bitJson.pairs = pairsJson;
+    }
+  }
 
   // protected between_pairs(
   //   _node: NodeInfo,
@@ -948,12 +994,41 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeNL();
   // }
 
-  // // bitmark -> bits -> bitValue -> questions
+  // bitmark -> bits -> bitValue -> questions
 
-  // protected enter_questions(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   this.writeMajorDivider();
-  //   this.writeNL();
-  // }
+  protected enter_questions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const questions = node.value as Question[];
+    const questionsJson: QuestionJson[] = [];
+
+    if (questions) {
+      for (const q of questions) {
+        // Create the question
+        const questionJson: Partial<QuestionJson> = {
+          question: q.question ?? '',
+          partialAnswer: q.partialAnswer ?? '',
+          sampleSolution: q.sampleSolution ?? '',
+          item: q.itemLead?.item ?? '',
+          lead: q.itemLead?.lead ?? '',
+          hint: q.hint ?? '',
+          instruction: q.instruction ?? '',
+          isExample: !!q.example,
+          example: StringUtils.isString(q.example) ? (q.example as string) : '',
+          // isCaseSensitive: q.isCaseSensitive ?? true,
+          isShortAnswer: q.isShortAnswer ?? true,
+          //
+        };
+
+        // Delete unwanted properties
+        if (q.itemLead?.lead == null) delete questionJson.lead;
+
+        questionsJson.push(questionJson as QuestionJson);
+      }
+    }
+
+    if (questionsJson.length > 0) {
+      this.bitJson.questions = questionsJson;
+    }
+  }
 
   // protected between_questions(
   //   _node: NodeInfo,
@@ -1733,6 +1808,12 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         bitJson.hint = '';
         bitJson.instruction = '';
         bitJson.footer = '';
+        break;
+
+      case BitType.match:
+      case BitType.matchReverse:
+        bitJson.item = '';
+        bitJson.heading = {} as HeadingJson;
         break;
 
       default:

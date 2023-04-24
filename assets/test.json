@@ -1,50 +1,71 @@
 [
   {
-    "bitmark": "[.cloze-and-multiple-choice-text]\n[@id:287842]\n[%][%cloze-and-multiple-choice-text]\nThe students completed the [_cloze] with the correct verb [+forms][-formats].",
+    "bitmark": "[.match-reverse]\n[@id:287869]\n[%][%match-reverse]\n[!Wie heißen die passenden Nomen?]\n===\nTier\n==\ndas[@example]\n===\nKuh\n==\ndie\n===\nLöwe\n==\ndie\n===\nSchmetterling\n==\nder\n===",
     "bit": {
-      "type": "cloze-and-multiple-choice-text",
+      "type": "match-reverse",
       "format": "bitmark--",
-      "body": "The students completed the {0} with the correct verb {1}.",
-      "placeholders": {
-        "{0}": {
-          "type": "gap",
-          "item": "",
-          "solutions": [
-            "cloze"
+      "item": "",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Tier",
+          "values": [
+            "das"
           ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Kuh",
+          "values": [
+            "die"
+          ],
+          "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": "",
+          "isLongAnswer": false
         },
-        "{1}": {
-          "type": "select",
-          "item": "",
-          "options": [
-            {
-              "text": "forms",
-              "hint": "",
-              "isCorrect": true
-            },
-            {
-              "text": "formats",
-              "hint": "",
-              "isCorrect": false
-            }
+        {
+          "key": "Löwe",
+          "values": [
+            "die"
           ],
-          "prefix": "",
-          "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
+          "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Schmetterling",
+          "values": [
+            "der"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
         }
-      },
-      "id": [
-        "287842"
       ],
-      "lead": "cloze-and-multiple-choice-text"
+      "body": "",
+      "id": [
+        "287869"
+      ],
+      "lead": "match-reverse",
+      "instruction": "Wie heißen die passenden Nomen?"
     }
   }
 ]

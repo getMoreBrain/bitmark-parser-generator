@@ -1,14 +1,21 @@
-[.interview:bitmark--]
-[@id:136405]
-[%Persönliche Angaben]
-
+[.match-reverse]
+[@id:287869]
+[%][%match-reverse]
+[!Wie heißen die passenden Nomen?]
 ===
-Name:[@shortAnswer]
+Tier
+==
+das[@example]
 ===
-Vorname:[@shortAnswer]
+Kuh
+==
+die
 ===
-Prüfungsnummer:[@shortAnswer]
+Löwe
+==
+die
 ===
-Kantonsschule:[@shortAnswer]
+Schmetterling
+==
+der
 ===
-

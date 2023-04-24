@@ -1,53 +1,49 @@
 {
   "bits": [
     {
-      "bitType": "cloze-and-multiple-choice-text",
+      "bitType": "match-reverse",
       "textFormat": "bitmark--",
       "ids": [
-        "287842"
+        "287869"
       ],
       "itemLead": {
-        "lead": "cloze-and-multiple-choice-text"
+        "item": "",
+        "lead": "match-reverse"
       },
-      "body": [
+      "instruction": "Wie heißen die passenden Nomen?",
+      "heading": {
+        "forKeys": "",
+        "forValues": []
+      },
+      "pairs": [
         {
-          "bodyText": "The students completed the "
+          "key": "Tier",
+          "example": true,
+          "isCaseSensitive": true,
+          "values": [
+            "das"
+          ]
         },
         {
-          "gap": {
-            "solutions": [
-              "cloze"
-            ],
-            "hint": "",
-            "instruction": "",
-            "example": false,
-            "isCaseSensitive": true
-          }
+          "key": "Kuh",
+          "isCaseSensitive": true,
+          "values": [
+            "die"
+          ]
         },
         {
-          "bodyText": " with the correct verb "
+          "key": "Löwe",
+          "isCaseSensitive": true,
+          "values": [
+            "die"
+          ]
         },
         {
-          "select": {
-            "prefix": "",
-            "options": [
-              {
-                "text": "forms",
-                "isCorrect": true
-              },
-              {
-                "text": "formats"
-              }
-            ],
-            "postfix": "",
-            "hint": "",
-            "instruction": "",
-            "example": false,
-            "isCaseSensitive": true
-          }
-        },
-        {
-          "bodyText": "."
+          "key": "Schmetterling",
+          "isCaseSensitive": true,
+          "values": [
+            "der"
+          ]
         }
       ]
     }

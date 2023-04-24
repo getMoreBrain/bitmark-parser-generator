@@ -912,6 +912,9 @@ function peg$parse(input: string, options?: ParseOptions) {
 
     s0 = peg$currPos;
     s1 = peg$parseNL();
+    if (s1 as any === peg$FAILED) {
+      s1 = null;
+    }
     if (s1 as any !== peg$FAILED) {
       s2 = peg$currPos;
       peg$silentFails++;

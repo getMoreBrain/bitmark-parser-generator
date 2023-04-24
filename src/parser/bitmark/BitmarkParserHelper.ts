@@ -67,6 +67,7 @@ export interface TypeKeyParseResult {
     text: string;
     isCorrect: boolean;
   }[];
+  example?: string;
   isCorrect: boolean;
   responses?: Response[];
   choices?: Choice[];
@@ -640,6 +641,7 @@ class BitmarkParserHelper {
     let pairValues: string[] = [];
     let keyAudio: AudioResource | undefined = undefined;
     let keyImage: ImageResource | undefined = undefined;
+    let example: string | boolean | undefined = undefined;
 
     for (const card of cardSet.cards) {
       forKeys = undefined;
@@ -648,6 +650,7 @@ class BitmarkParserHelper {
       keyAudio = undefined;
       keyImage = undefined;
       sideIdx = 0;
+      example = undefined;
 
       for (const side of card.sides) {
         for (const rawContent of side.variants) {
@@ -658,7 +661,7 @@ class BitmarkParserHelper {
           const tags = this.typeKeyDataParser(content, [
             TypeKey.BodyChar,
             TypeKey.Title,
-            // TypeKey.Property,
+            TypeKey.Property,
             // TypeKey.ItemLead,
             // TypeKey.Instruction,
             // TypeKey.Hint,
@@ -692,6 +695,11 @@ class BitmarkParserHelper {
               pairValues.push(tags.body ?? '');
             }
           }
+
+          // Example tag
+          if (tags.example) {
+            example = tags.example ?? true;
+          }
         }
         sideIdx++;
       }
@@ -707,6 +715,7 @@ class BitmarkParserHelper {
           keyAudio,
           keyImage,
           values: pairValues,
+          example,
           isCaseSensitive: true,
         });
         pairs.push(pair);
