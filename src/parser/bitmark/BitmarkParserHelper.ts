@@ -57,6 +57,11 @@ interface BitHeader {
   resourceType?: ResourceTypeType;
 }
 
+interface TrueFalseValue {
+  text: string;
+  isCorrect: boolean;
+}
+
 interface CardData {
   cardIndex: number;
   cardSideIndex: number;
@@ -68,10 +73,7 @@ export interface TypeKeyParseResult {
   cardSet?: TypeValue[];
   body?: string;
   // solutions?: string[];
-  trueFalse?: {
-    text: string;
-    isCorrect: boolean;
-  }[];
+  trueFalse?: TrueFalseValue[];
   example?: string;
   isCorrect: boolean;
   responses?: Response[];
@@ -85,6 +87,11 @@ interface BitSpecificTitles {
   title?: string;
   subtitle?: string;
   level?: number;
+}
+
+interface BitSpecificTrueFalse_V1 {
+  choices?: Choice[];
+  responses?: Response[];
 }
 
 interface BitSpecificCards {
@@ -133,6 +140,7 @@ const TypeKey = superenum({
   Hint: 'Hint',
   True: 'True',
   False: 'False',
+  TrueFalse_V1: 'TrueFalse_V1',
   BodyLine: 'BodyLine',
   BodyChar: 'BodyChar',
   CardSet: 'CardSet',
@@ -180,15 +188,20 @@ class BitmarkParserHelper {
       // Actually, let's do this in the parser otherwise we'll lose correct error locations
       // bitStr = bitStr.trim();
 
-      this.print('RAW BIT', bitStr);
+      this.print('RAW BIT', bitStr.trim());
 
       // Parse the raw bit
       const bitParserResult = this.parse(bitStr ?? '', {
         startRule: 'bit',
       }) as SubParserResult<Bit>;
 
-      if (bitParserResult.value) {
-        bits.push(bitParserResult.value);
+      const bit = bitParserResult.value;
+      if (bit) {
+        // Add markup to the bit
+        bit.bitmark = bitStr.trim();
+
+        // Add the bit to the list of bits
+        bits.push(bit);
       } else {
         // TODO - convert error location to master parser location
 
@@ -217,15 +230,18 @@ class BitmarkParserHelper {
     console.log(JSON.stringify(bitContent, null, 2));
     console.log(`==== END: bitContent ====`);
 
+    const isMultipleChoiceV1 = bitType === BitType.multipleChoice1;
+    const isMultipleResponseV1 = bitType === BitType.multipleResponse1;
+
     // Parse the bit content into a an object with the appropriate keys
     const {
       cardSet,
       body: unparsedBody,
       title,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      // heading, // Remove so types match
+      choices,
+      responses,
       ...tags
-    } = this.typeKeyDataParser(bitContent, [
+    } = this.typeKeyDataParser(bitType, bitContent, [
       TypeKey.Title,
       TypeKey.Anchor,
       TypeKey.Reference,
@@ -233,6 +249,7 @@ class BitmarkParserHelper {
       TypeKey.ItemLead,
       TypeKey.Instruction,
       TypeKey.Hint,
+      TypeKey.TrueFalse_V1,
       TypeKey.Resource,
       TypeKey.BodyLine,
       TypeKey.CardSet,
@@ -258,10 +275,10 @@ class BitmarkParserHelper {
     const titles = this.buildTitles(bitType, title ?? []);
 
     // Build the card data for the specific bit type
-    const bitSpecificCards = cardSet ? this.buildCards(bitType, cardSet) : {};
+    const bitSpecificCards = this.buildCards(bitType, cardSet, choices, responses);
 
     // Build the body (parts and placeholders)
-    const body = this.buildBody(parsedBody);
+    const body = this.buildBody(bitType, parsedBody);
     // console.log(`==== body ====`);
     // console.log(JSON.stringify(body, null, 2));
     // console.log(`==== END: body ====`);
@@ -269,20 +286,14 @@ class BitmarkParserHelper {
     // Build the errors
     const errors = this.buildErrors();
 
-    // const bit: Bit = {
-    //   bitType,
-    //   textFormat,
-    //   resourceType,
-    //   ...mappedBitContent,
-    //   content: bitContent,
-    // } as Bit;
-
     // Build the final bit
     const bit = builder.bit({
       bitType,
       textFormat,
       // resourceType,
       ...titles,
+      choices: isMultipleChoiceV1 ? choices : undefined,
+      responses: isMultipleResponseV1 ? responses : undefined,
       ...tags,
       ...bitSpecificCards,
       body,
@@ -349,7 +360,7 @@ class BitmarkParserHelper {
     return res;
   }
 
-  buildBody(bodyContent: BitContent[]): Body {
+  buildBody(bitType: BitTypeType, bodyContent: BitContent[]): Body {
     const bodyParts: BodyPart[] = [];
     let bodyPart = '';
 
@@ -369,11 +380,11 @@ class BitmarkParserHelper {
         bodyPart += value;
       } else if (type === TypeKey.Gap) {
         buildBodyText();
-        const gap = this.buildGap(value as BitContent[]);
+        const gap = this.buildGap(bitType, value as BitContent[]);
         if (gap) bodyParts.push(gap);
       } else if (type === TypeKey.Select) {
         buildBodyText();
-        const select = this.buildSelect(value as BitContent[]);
+        const select = this.buildSelect(bitType, value as BitContent[]);
         if (select) bodyParts.push(select);
       }
     }
@@ -384,11 +395,11 @@ class BitmarkParserHelper {
     return builder.body({ bodyParts });
   }
 
-  buildGap(gapContent: BitContent[]): Gap | undefined {
+  buildGap(bitType: BitTypeType, gapContent: BitContent[]): Gap | undefined {
     // const solutions: string[] = [];
     // const seenItem = false;
 
-    const tags = this.typeKeyDataParser(gapContent, [
+    const tags = this.typeKeyDataParser(bitType, gapContent, [
       TypeKey.Cloze,
       TypeKey.Property,
       TypeKey.ItemLead,
@@ -405,12 +416,12 @@ class BitmarkParserHelper {
     return gap;
   }
 
-  buildSelect(selectContent: BitContent[]): Select | undefined {
+  buildSelect(bitType: BitTypeType, selectContent: BitContent[]): Select | undefined {
     // const options: SelectOption[] = [];
     // let seenItem = false;
     console.log(`==== selectContent ====`, selectContent);
 
-    const { trueFalse, ...tags } = this.typeKeyDataParser(selectContent, [
+    const { trueFalse, ...tags } = this.typeKeyDataParser(bitType, selectContent, [
       TypeKey.True,
       TypeKey.False,
       TypeKey.Property,
@@ -458,61 +469,66 @@ class BitmarkParserHelper {
     }
   }
 
-  buildCards(bitType: BitTypeType, cardSetContent: TypeValue[]): BitSpecificCards {
+  buildCards(
+    bitType: BitTypeType,
+    cardSetContent: TypeValue[] | undefined,
+    choicesV1: Choice[] | undefined,
+    responsesV1: Response[] | undefined,
+  ): BitSpecificCards {
     const cardSet: CardSet = {
       cards: [],
     };
 
     // Build card set
-    for (const content of cardSetContent) {
-      if (!content) continue;
-      const { type, value: cardData } = content as TypeValue;
-      if (!type || type !== TypeKey.Card) continue;
-      const { cardIndex, cardSideIndex, cardVariantIndex: cardContentIndex, value } = cardData as CardData;
+    if (cardSetContent) {
+      for (const content of cardSetContent) {
+        if (!content) continue;
+        const { type, value: cardData } = content as TypeValue;
+        if (!type || type !== TypeKey.Card) continue;
+        const { cardIndex, cardSideIndex, cardVariantIndex: cardContentIndex, value } = cardData as CardData;
 
-      // Get or create card
-      let card = cardSet.cards[cardIndex];
-      if (!card) {
-        card = {
-          sides: [],
-        };
-        cardSet.cards[cardIndex] = card;
-      }
+        // Get or create card
+        let card = cardSet.cards[cardIndex];
+        if (!card) {
+          card = {
+            sides: [],
+          };
+          cardSet.cards[cardIndex] = card;
+        }
 
-      // Get or create side
-      let side = card.sides[cardSideIndex];
-      if (!side) {
-        side = {
-          variants: [],
-        };
-        card.sides[cardSideIndex] = side;
-      }
+        // Get or create side
+        let side = card.sides[cardSideIndex];
+        if (!side) {
+          side = {
+            variants: [],
+          };
+          card.sides[cardSideIndex] = side;
+        }
 
-      // Set variant value
-      const variant = side.variants[cardContentIndex];
-      if (!variant) {
-        side.variants[cardContentIndex] = value;
-      } else {
-        side.variants[cardContentIndex] += value;
+        // Set variant value
+        const variant = side.variants[cardContentIndex];
+        if (!variant) {
+          side.variants[cardContentIndex] = value;
+        } else {
+          side.variants[cardContentIndex] += value;
+        }
       }
     }
 
     // Parse the card contents
     switch (bitType) {
       case BitType.sequence:
-        return this.parseElements(cardSet);
+        return this.parseElements(bitType, cardSet);
 
       case BitType.trueFalse:
-        return this.parseStatements(cardSet);
+        return this.parseStatements(bitType, cardSet);
 
       case BitType.multipleChoice:
-        return this.parseQuiz(cardSet, false, true);
-
       case BitType.multipleResponse:
-        return this.parseQuiz(cardSet, true, false);
+        return this.parseQuiz(bitType, cardSet, choicesV1, responsesV1);
 
       case BitType.interview:
-        return this.parseQuestions(cardSet);
+        return this.parseQuestions(bitType, cardSet);
 
       case BitType.match:
       case BitType.matchSolutionGrouped:
@@ -520,11 +536,11 @@ class BitmarkParserHelper {
       case BitType.matchAudio:
       case BitType.matchPicture:
         // ==> heading / pairs
-        return this.parseMatchPairs(cardSet);
+        return this.parseMatchPairs(bitType, cardSet);
 
       case BitType.matchMatrix:
         // ==> heading / matrix
-        return this.parseMatchMatrix(cardSet);
+        return this.parseMatchMatrix(bitType, cardSet);
 
       default:
       // Return default empty object
@@ -533,7 +549,7 @@ class BitmarkParserHelper {
     return {};
   }
 
-  parseElements(cardSet: CardSet): BitSpecificCards {
+  parseElements(bitType: BitTypeType, cardSet: CardSet): BitSpecificCards {
     const elements: string[] = [];
 
     for (const card of cardSet.cards) {
@@ -543,7 +559,7 @@ class BitmarkParserHelper {
             startRule: 'cardContent',
           }) as BitContent[];
 
-          const tags = this.typeKeyDataParser(content, [TypeKey.BodyChar]);
+          const tags = this.typeKeyDataParser(bitType, content, [TypeKey.BodyChar]);
 
           elements.push(tags.body ?? '');
         }
@@ -555,7 +571,7 @@ class BitmarkParserHelper {
     };
   }
 
-  parseStatements(cardSet: CardSet): BitSpecificCards {
+  parseStatements(bitType: BitTypeType, cardSet: CardSet): BitSpecificCards {
     const statements: Statement[] = [];
 
     for (const card of cardSet.cards) {
@@ -565,7 +581,7 @@ class BitmarkParserHelper {
             startRule: 'cardContent',
           }) as BitContent[];
 
-          const tags = this.typeKeyDataParser(content, [
+          const tags = this.typeKeyDataParser(bitType, content, [
             TypeKey.True,
             TypeKey.False,
             TypeKey.Property,
@@ -597,8 +613,16 @@ class BitmarkParserHelper {
     };
   }
 
-  parseQuiz(cardSet: CardSet, insertResponses: boolean, insertChoices: boolean): BitSpecificCards {
+  parseQuiz(
+    bitType: BitTypeType,
+    cardSet: CardSet,
+    choicesV1: Choice[] | undefined,
+    responsesV1: Response[] | undefined,
+  ): BitSpecificCards {
     const quizzes: Quiz[] = [];
+    const insertChoices = bitType === BitType.multipleChoice;
+    const insertResponses = bitType === BitType.multipleResponse;
+    if (!insertChoices && !insertResponses) return {};
 
     for (const card of cardSet.cards) {
       for (const side of card.sides) {
@@ -607,7 +631,7 @@ class BitmarkParserHelper {
             startRule: 'cardContent',
           }) as BitContent[];
 
-          const tags = this.typeKeyDataParser(content, [
+          const tags = this.typeKeyDataParser(bitType, content, [
             TypeKey.True,
             TypeKey.False,
             TypeKey.Property,
@@ -629,7 +653,7 @@ class BitmarkParserHelper {
             if (tags.trueFalse && tags.trueFalse.length > 0) {
               tags.choices = [];
               for (const tf of tags.trueFalse) {
-                const response = builder.response(tf);
+                const response = builder.choice(tf);
                 tags.choices.push(response);
               }
             }
@@ -643,12 +667,26 @@ class BitmarkParserHelper {
       }
     }
 
+    // Add a quiz for the V1 choices / responses
+    if (insertChoices && Array.isArray(choicesV1) && choicesV1.length > 0) {
+      const quiz = builder.quiz({
+        choices: choicesV1,
+      });
+      quizzes.push(quiz);
+    }
+    if (insertResponses && Array.isArray(responsesV1) && responsesV1.length > 0) {
+      const quiz = builder.quiz({
+        responses: responsesV1,
+      });
+      quizzes.push(quiz);
+    }
+
     return {
       quizzes: quizzes.length > 0 ? quizzes : undefined,
     };
   }
 
-  parseQuestions(cardSet: CardSet): BitSpecificCards {
+  parseQuestions(bitType: BitTypeType, cardSet: CardSet): BitSpecificCards {
     const questions: Question[] = [];
 
     for (const card of cardSet.cards) {
@@ -658,7 +696,7 @@ class BitmarkParserHelper {
             startRule: 'cardContent',
           }) as BitContent[];
 
-          const tags = this.typeKeyDataParser(content, [
+          const tags = this.typeKeyDataParser(bitType, content, [
             TypeKey.BodyChar,
             TypeKey.Property,
             TypeKey.ItemLead,
@@ -682,7 +720,7 @@ class BitmarkParserHelper {
     };
   }
 
-  parseMatchPairs(cardSet: CardSet): BitSpecificCards {
+  parseMatchPairs(bitType: BitTypeType, cardSet: CardSet): BitSpecificCards {
     let sideIdx = 0;
     let heading: Heading | undefined;
     const pairs: Pair[] = [];
@@ -709,7 +747,7 @@ class BitmarkParserHelper {
             startRule: 'cardContent',
           }) as BitContent[];
 
-          const tags = this.typeKeyDataParser(content, [
+          const tags = this.typeKeyDataParser(bitType, content, [
             TypeKey.BodyChar,
             TypeKey.Title,
             TypeKey.Property,
@@ -779,7 +817,7 @@ class BitmarkParserHelper {
     };
   }
 
-  parseMatchMatrix(cardSet: CardSet): BitSpecificCards {
+  parseMatchMatrix(bitType: BitTypeType, cardSet: CardSet): BitSpecificCards {
     let sideIdx = 0;
     let heading: Heading | undefined;
     let forKeys: string | undefined = undefined;
@@ -808,7 +846,7 @@ class BitmarkParserHelper {
             startRule: 'cardContent',
           }) as BitContent[];
 
-          const tags = this.typeKeyDataParser(content, [
+          const tags = this.typeKeyDataParser(bitType, content, [
             TypeKey.BodyChar,
             TypeKey.Title,
             // TypeKey.Property,
@@ -881,22 +919,74 @@ class BitmarkParserHelper {
     };
   }
 
+  parseTrueFalse_V1(bitType: BitTypeType, trueFalseContent: BitContent[]): BitSpecificTrueFalse_V1 {
+    console.log(`==== parseTrueFalse_V1 ====`, trueFalseContent);
+
+    // this.print(`==== parseTrueFalse_V1 ====`, trueFalseContent);
+
+    // NOTE: We handle V1 tags in V2 multiple-choice / multiple-response for maxium backwards compatibility
+    const insertChoices = bitType === BitType.multipleChoice || bitType === BitType.multipleChoice1;
+    const insertResponses = bitType === BitType.multipleResponse || bitType === BitType.multipleResponse1;
+    if (!insertChoices && !insertResponses) return {};
+
+    const tags = this.typeKeyDataParser(bitType, trueFalseContent, [
+      TypeKey.True,
+      TypeKey.False,
+      TypeKey.Property,
+      TypeKey.ItemLead,
+      TypeKey.Instruction,
+      TypeKey.Hint,
+    ]);
+
+    console.log(`==== parseTrueFalse_V1 TAGS ====`, tags);
+
+    const choices: Choice[] = [];
+    const responses: Response[] = [];
+    if (insertChoices) {
+      if (tags.trueFalse && tags.trueFalse.length > 0) {
+        for (const tf of tags.trueFalse) {
+          const choice = builder.choice(tf);
+          choices.push(choice);
+        }
+      }
+    }
+    if (insertResponses) {
+      if (tags.trueFalse && tags.trueFalse.length > 0) {
+        for (const tf of tags.trueFalse) {
+          const response = builder.response(tf);
+          responses.push(response);
+        }
+      }
+    }
+
+    const res: BitSpecificTrueFalse_V1 = {};
+    if (insertChoices) {
+      res.choices = choices;
+    } else if (insertResponses) {
+      res.responses = responses;
+    }
+
+    return res;
+  }
+
   //     sampleSolutions: this.asArray(sampleSolutions), ??
   //     elements DONE
   //     statements, - OPEN when not in quiz
-  //     responses, - OPEN when not in quiz
+  //     responses, - DONE
   //     quizzes, DONE ???
   //     heading,
   //     pairs,
   //     matrix,
-  //     choices, - OPEN when not in quiz
+  //     choices, - DONE
   //     questions, - DONE ???
   //     footer,
 
-  typeKeyDataParser(data: BitContent[], validTypes: TypeKeyType[]): TypeKeyParseResult {
+  typeKeyDataParser(bitType: BitTypeType, data: BitContent[], validTypes: TypeKeyType[]): TypeKeyParseResult {
     let seenItem = false;
     let body = '';
     const solutions: string[] = [];
+    const choices: Choice[] = [];
+    const responses: Response[] = [];
     const extraProperties: any = {};
 
     const res = data.reduce((acc, content, _index) => {
@@ -994,6 +1084,13 @@ class BitmarkParserHelper {
           break;
         }
 
+        case TypeKey.TrueFalse_V1: {
+          const choiceResponse = this.parseTrueFalse_V1(bitType, value as BitContent[]);
+          if (choiceResponse.choices) choices.push(...choiceResponse.choices);
+          if (choiceResponse.responses) responses.push(...choiceResponse.responses);
+          break;
+        }
+
         case TypeKey.CardSet: {
           acc.cardSet = value;
           break;
@@ -1024,9 +1121,12 @@ class BitmarkParserHelper {
       res.extraProperties = extraProperties;
     }
 
+    // TODO - should not trim body as it will offset the error locations. Trim it in the parser instead
     res.body = body.trim();
 
     if (solutions.length > 0) res.solutions = solutions;
+    if (choices.length > 0) res.choices = choices;
+    if (responses.length > 0) res.responses = responses;
 
     return res;
   }

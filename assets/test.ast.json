@@ -1,23 +1,30 @@
 {
   "bits": [
     {
-      "bitType": "interview",
+      "bitType": "multiple-choice-1",
       "textFormat": "bitmark--",
       "ids": [
-        "198779"
+        "131345"
       ],
       "itemLead": {
-        "item": "1"
+        "item": "5"
       },
-      "instruction": "Erklären Sie den Begriff „Steuerüberwälzung“.",
-      "questions": [
+      "instruction": "Herr Cimildoro ___ in der Schweiz.",
+      "choices": [
         {
-          "sampleSolution": "Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger."
+          "text": "a) wohnst"
+        },
+        {
+          "text": "b) Wohnung"
+        },
+        {
+          "text": "c) wohnen"
+        },
+        {
+          "text": "d) wohnt",
+          "isCorrect": true
         }
-      ],
-      "footer": {
-        "footerText": ""
-      }
+      ]
     }
   ]
 }

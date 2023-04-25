@@ -78,12 +78,18 @@ bit
 
 // A single bit
 Bit
- = bitHeader: BitHeader bitContent: BitContent { return helper.buildBit(bitHeader, bitContent) }
+ = bitHeader: BitHeader_Select bitContent: BitContent_Select { return helper.buildBit(bitHeader, bitContent) }
+ / bitHeader: BitHeader bitContent: BitContent { return helper.buildBit(bitHeader, bitContent) }
  / bit: $Anything { return helper.invalidBit(bit) }
 
 // The bit header, e.g. [.interview&image:bitmark++], [.interview:bitmark--&image], [.cloze]
 BitHeader
   = "[." bitType: Bit_Value formatAndResource: TextFormatAndResourceType? "]" { return helper.buildBitHeader(bitType, formatAndResource) }
+
+// The bit header Select, i.e. [.multiple-choice-text]
+BitHeader_Select
+  = "[." bitType: Bit_Value_Select formatAndResource: TextFormatAndResourceType? "]" { return helper.buildBitHeader(bitType, formatAndResource) }
+
 
 // Text format and resource type
 TextFormatAndResourceType
@@ -101,9 +107,20 @@ ResourceType
 BitContent
   = value: (CardSet / BitTag / BodyLine)* { return value }
 
+// All bit content - V1 (tags, body)
+BitContent_Select
+  = value: (CardSet / BitTag_Select / BodyLine)* { return value }
+
 // Bit tag
 BitTag
+  = value: (TitleTag / CommentTag / AnchorTag / ReferenceTag / PropertyTag / ItemLeadTag / InstructionTag / HintTag / TrueFalseTags_V1 / ResourceTags) { return value }
+
+// Bit tags for select (do not capture top level true / false tags)
+BitTag_Select
   = value: (TitleTag / CommentTag / AnchorTag / ReferenceTag / PropertyTag / ItemLeadTag / InstructionTag / HintTag / ResourceTags) { return value }
+
+TrueFalseTags_V1
+  = value: (TrueInlineTag / FalseInlineTag)+ others: (TrueInlineTag / FalseInlineTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.TrueFalse_V1, value: [...value, ...others] } }
 
 // Line of Body of the bit
 BodyLine
@@ -272,6 +289,9 @@ KeyValueTag_Key
 Bit_Value
   = value: $[^&:\]]* { return value }
 
+Bit_Value_Select
+  = value: $("multiple-choice-text") { return value }
+
 KeyValueTag_Value
   = ":" value: Tag_Value { return value }
   / '' { return true }
@@ -304,10 +324,12 @@ Char "Character"
 Line "Line"
  = Char*
 
+WSL "whitespace in line"
+  = [ \t]*
+
 // Match an empty line, including the line terminator
 BlankLine "Blank Line"
   = [ \t]* NL
-
 
 NL "Line Terminator"
   = "\n"

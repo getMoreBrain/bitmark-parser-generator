@@ -1,44 +1,48 @@
 [
   {
-    "bitmark": "[.interview:bitmark--]\n[@id:198779]\n[%1]\n[!Erklären Sie den Begriff „Steuerüberwälzung“.]\n===\n[$Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]",
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131345][%5]\n[!Herr Cimildoro ___ in der Schweiz.] [-a) wohnst]\n[-b) Wohnung] [-c) wohnen] [+d) wohnt]",
     "bit": {
-      "type": "interview",
+      "type": "multiple-choice-1",
       "format": "bitmark--",
-      "item": "1",
-      "instruction": "Erklären Sie den Begriff „Steuerüberwälzung“.",
+      "item": "5",
+      "instruction": "Herr Cimildoro ___ in der Schweiz.",
       "body": "",
-      "footer": "",
       "hint": "",
-      "questions": [
+      "choices": [
         {
+          "choice": "a) wohnst",
           "item": "",
-          "question": "",
+          "isCorrect": false,
           "instruction": "",
-          "hint": "",
-          "isExample": false,
-          "example": "",
-          "sampleSolution": "Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "hint": ""
+        },
+        {
+          "choice": "b) Wohnung",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) wohnen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) wohnt",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
         }
       ],
+      "isExample": false,
+      "example": "",
       "id": [
-        "198779"
+        "131345"
       ]
-    },
-    "errors": [
-      {
-        "message": "Unexpected input '\\n\n'",
-        "line": 8,
-        "column": 0,
-        "errorLine": ""
-      },
-      {
-        "message": "Rule violation around '<EOF>'",
-        "line": 8,
-        "column": 0,
-        "errorLine": ""
-      }
-    ]
+    }
   }
 ]
