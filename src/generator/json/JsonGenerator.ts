@@ -1,7 +1,7 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
-import { Pair, Question, Quiz } from '../../model/ast/Nodes';
+import { Matrix, Pair, Question, Quiz } from '../../model/ast/Nodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
@@ -34,6 +34,8 @@ import {
   BitJson,
   ChoiceJson,
   HeadingJson,
+  MatrixCellJson,
+  MatrixJson,
   PairJson,
   QuestionJson,
   QuizJson,
@@ -1068,12 +1070,65 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeResource(node, parent, route);
   // }
 
-  // // bitmark -> bits -> bitValue -> matrix
+  // bitmark -> bits -> bitValue -> matrix
 
-  // protected enter_matrix(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   this.writeMajorDivider();
-  //   this.writeNL();
-  // }
+  protected enter_matrix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const matrix = node.value as Matrix[];
+    const matrixJsonArray: MatrixJson[] = [];
+
+    if (matrix) {
+      for (const m of matrix) {
+        // Choices
+        const matrixCellsJson: MatrixCellJson[] = [];
+        if (m.cells) {
+          for (const c of m.cells) {
+            // Create the choice
+            const matrixCellJson: Partial<MatrixCellJson> = {
+              values: c.values ?? [],
+              item: c.itemLead?.item ?? '',
+              lead: c.itemLead?.lead ?? '',
+              hint: c.hint ?? '',
+              instruction: c.instruction ?? '',
+              isExample: !!c.example,
+              example: StringUtils.isString(c.example) ? (c.example as string) : '',
+            };
+
+            // Delete unwanted properties
+            if (c.itemLead?.lead == null) delete matrixCellJson.lead;
+            if (c.hint == null) delete matrixCellJson.hint;
+            if (c.example == null) delete matrixCellJson.isExample;
+            if (c.example == null) delete matrixCellJson.example;
+
+            matrixCellsJson.push(matrixCellJson as MatrixCellJson);
+          }
+        }
+
+        // Create the matrix
+        const matrixJson: Partial<MatrixJson> = {
+          key: m.key ?? '',
+          cells: matrixCellsJson ?? [],
+          item: m.itemLead?.item ?? '',
+          lead: m.itemLead?.lead ?? '',
+          hint: m.hint ?? '',
+          instruction: m.instruction ?? '',
+          isExample: !!m.example,
+          example: StringUtils.isString(m.example) ? (m.example as string) : '',
+          isCaseSensitive: m.isCaseSensitive ?? true,
+          isLongAnswer: m.isLongAnswer ?? false,
+        };
+
+        // Delete unwanted properties
+        if (m.itemLead?.lead == null) delete matrixJson.lead;
+        if (m.instruction == null) delete matrixJson.instruction;
+
+        matrixJsonArray.push(matrixJson as MatrixJson);
+      }
+    }
+
+    if (matrixJsonArray.length > 0) {
+      this.bitJson.matrix = matrixJsonArray;
+    }
+  }
 
   // protected between_matrix(
   //   _node: NodeInfo,
@@ -1901,6 +1956,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return undefined;
   }
 
+  // TODD - it would be better to remove the unwanted defaults, rather than adding them.
+  // Then it would be easy to stop doing it (and correct all the defaults) and also the order would be correct in the
+  // generated JSON.
   protected createBitJson(bit: Bit): Partial<BitJson> {
     const bitJson: Partial<BitJson> = {
       type: bit.bitType,
@@ -1959,6 +2017,10 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       case BitType.matchReverse:
         bitJson.item = '';
         bitJson.heading = {} as HeadingJson;
+        break;
+
+      case BitType.matchMatrix:
+        bitJson.item = '';
         break;
 
       default:

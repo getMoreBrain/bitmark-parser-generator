@@ -1,28 +1,40 @@
 {
   "bits": [
     {
-      "bitType": "multiple-choice-1",
+      "bitType": "match-matrix",
       "textFormat": "bitmark--",
       "ids": [
-        "131345"
+        "287966"
       ],
       "itemLead": {
-        "item": "5"
+        "item": "",
+        "lead": "match-matrix"
       },
-      "instruction": "Herr Cimildoro ___ in der Schweiz.",
-      "choices": [
+      "instruction": "Bring the german verbs into the correct tense.",
+      "body": [
         {
-          "text": "a) wohnst"
-        },
+          "bodyText": "[!Instruction]sie gingen[@example]sprechenich werde sprechensie sprachen"
+        }
+      ],
+      "heading": {
+        "forKeys": "Verb",
+        "forValues": [
+          "Future, 1st Person, Singular",
+          "Past, 3rd Person, Plural"
+        ]
+      },
+      "matrix": [
         {
-          "text": "b) Wohnung"
-        },
-        {
-          "text": "c) wohnen"
-        },
-        {
-          "text": "d) wohnt",
-          "isCorrect": true
+          "key": "gehen",
+          "isCaseSensitive": true,
+          "cells": [
+            {
+              "example": true,
+              "values": [
+                "ich werde gehen"
+              ]
+            }
+          ]
         }
       ]
     }

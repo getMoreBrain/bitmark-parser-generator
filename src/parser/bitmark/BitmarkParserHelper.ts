@@ -826,6 +826,7 @@ class BitmarkParserHelper {
     const matrix: Matrix[] = [];
     let matrixCells: MatrixCell[] = [];
     let matrixCellValues: string[] = [];
+    let matrixCellTags = {};
     // let keyAudio: AudioResource | undefined = undefined;
     // let keyImage: ImageResource | undefined = undefined;
 
@@ -840,6 +841,7 @@ class BitmarkParserHelper {
 
       for (const side of card.sides) {
         matrixCellValues = [];
+        matrixCellTags = {};
 
         for (const rawContent of side.variants) {
           const content = this.parse(rawContent, {
@@ -849,15 +851,20 @@ class BitmarkParserHelper {
           const tags = this.typeKeyDataParser(bitType, content, [
             TypeKey.BodyChar,
             TypeKey.Title,
-            // TypeKey.Property,
-            // TypeKey.ItemLead,
-            // TypeKey.Instruction,
-            // TypeKey.Hint,
+            TypeKey.Property,
+            TypeKey.ItemLead,
+            TypeKey.Instruction,
+            TypeKey.Hint,
             TypeKey.Resource,
           ]);
 
+          const { title, body, ...restTags } = tags;
+
+          // Merge the tags into the matrix cell tags
+          Object.assign(matrixCellTags, restTags);
+
           // Get the 'heading' which is the [#title] at level 1
-          const heading = tags.title && tags.title[1];
+          const heading = title && title[1];
 
           if (sideIdx === 0) {
             // First side
@@ -872,7 +879,7 @@ class BitmarkParserHelper {
               //   }
             } else {
               // If not a heading or resource, it is a matrix
-              matrixKey = tags.body;
+              matrixKey = body;
             }
           } else {
             // Subsequent sides
@@ -880,7 +887,7 @@ class BitmarkParserHelper {
               forValues.push(heading);
             } else if (tags.title == null) {
               // If not a heading, it is a  matrix
-              matrixCellValues.push(tags.body ?? '');
+              matrixCellValues.push(body ?? '');
             }
           }
         }
@@ -889,6 +896,7 @@ class BitmarkParserHelper {
         if (sideIdx > 0) {
           const matrixCell = builder.matrixCell({
             values: matrixCellValues,
+            ...matrixCellTags,
           });
           matrixCells.push(matrixCell);
         }
