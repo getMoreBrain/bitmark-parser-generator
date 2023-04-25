@@ -1245,8 +1245,17 @@ class BitmarkParserHelper {
     };
   }
 
-  // Reduce the bit content to type objects
-  reduceToArrayOfTypes(data: unknown, validTypes: TypeKeyType[]): BitContent[] {
+  /**
+   * Reduce the data to type objects.
+   *
+   * The input data can have any structure. It will be reduced to an array of BitContent objects.
+   *
+   * @param data the data to reduce
+   * @param validTypes types include in the reduced data
+   * @param recurseIntoTypes set to true to reduce types which have array values
+   * @returns an array of BitContent objects reduced from the input data
+   */
+  reduceToArrayOfTypes(data: unknown, validTypes?: TypeKeyType[], recurseIntoTypes?: boolean): BitContent[] {
     if (!Array.isArray(data)) return [];
 
     const res = data.reduce((acc, content, _index) => {
@@ -1260,7 +1269,7 @@ class BitmarkParserHelper {
       } else {
         if (!this.isType(content, validTypes)) return acc;
 
-        if (Array.isArray(value)) {
+        if (recurseIntoTypes && Array.isArray(value)) {
           // Not a TypeKeyValue - recurse
           const subValues = this.reduceToArrayOfTypes(value, validTypes);
           acc.push(...subValues);
@@ -1279,13 +1288,16 @@ class BitmarkParserHelper {
    * Returns true if a value is a TypeKeyValue or TypeKey type with a type in the given types
    *
    * @param value The value to check
-   * @param validType The type or types to check
+   * @param validType The type or types to check, or undefined to check for any type
    * @returns True if the value is a TypeKeyValue or TypeKey type with a type in the given types, otherwise False.
    */
-  isType(value: unknown, validType: TypeKeyType | TypeKeyType[]): boolean {
+  isType(value: unknown, validType?: TypeKeyType | TypeKeyType[]): boolean {
     if (!value) return false;
     const { type } = value as TypeValue;
 
+    if (!validType) {
+      return !!TypeKey.fromValue(type as TypeKeyType);
+    }
     if (Array.isArray(validType)) {
       return validType.indexOf(type as TypeKeyType) >= 0;
     }

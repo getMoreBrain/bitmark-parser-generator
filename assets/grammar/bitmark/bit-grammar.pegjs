@@ -78,7 +78,7 @@ bit
 
 // A single bit
 Bit
- = bitHeader: BitHeader_Select bitContent: BitContent_Select { return helper.buildBit(bitHeader, bitContent) }
+ = bitHeader: BitHeader_Inline bitContent: BitContent_Inline { return helper.buildBit(bitHeader, bitContent) }
  / bitHeader: BitHeader bitContent: BitContent { return helper.buildBit(bitHeader, bitContent) }
  / bit: $Anything { return helper.invalidBit(bit) }
 
@@ -86,9 +86,9 @@ Bit
 BitHeader
   = "[." bitType: Bit_Value formatAndResource: TextFormatAndResourceType? "]" { return helper.buildBitHeader(bitType, formatAndResource) }
 
-// The bit header Select, i.e. [.multiple-choice-text]
-BitHeader_Select
-  = "[." bitType: Bit_Value_Select formatAndResource: TextFormatAndResourceType? "]" { return helper.buildBitHeader(bitType, formatAndResource) }
+// The bit header for bits with inline true/false, i.e. [.multiple-choice-text]
+BitHeader_Inline
+  = "[." bitType: Bit_Value_Inline formatAndResource: TextFormatAndResourceType? "]" { return helper.buildBitHeader(bitType, formatAndResource) }
 
 
 // Text format and resource type
@@ -105,26 +105,34 @@ ResourceType
 
 // All bit content (tags, body, cards)
 BitContent
-  = value: (CardSet / BitTagChain / BodyLine)* { return value }
+  = value: (CardSet / BitTagChain / BodyLine)* { return helper.reduceToArrayOfTypes(value) }
 
-// All bit content for select (do not capture top level true / false tags)
-BitContent_Select
-  = value: (CardSet / BitTag_Select / BodyLine)* { return value }
+// All bit content for bits with inline true/false, i.e. [.multiple-choice-text]
+BitContent_Inline
+  = value: (CardSet / BitTagChain_Inline / BodyLine)* { return helper.reduceToArrayOfTypes(value) }
 
 // Bit tag chain
 BitTagChain
-  = value: (BitTag (WSL? BitTag)*) { return value }
+  = value: (BitTag ChainedBitTag*) { return helper.reduceToArrayOfTypes(value) }
 
-// Bit tag chain for select (do not capture top level true / false tags)
-BitTagChain_Select
-  = value: (BitTag_Select (WSL? BitTag_Select)*) { return value }
+// Bit tag chain for bits with inline true/false, i.e. [.multiple-choice-text]
+BitTagChain_Inline
+  = value: (BitTag_Inline ChainedBitTag_Inline*) { return helper.reduceToArrayOfTypes(value) }
+
+// Chained Bit tag
+ChainedBitTag
+ = WSL? value: BitTag { return value }
 
 // Bit tag
 BitTag
   = value: (TitleTag / CommentTag / AnchorTag / ReferenceTag / PropertyTag / ItemLeadTag / InstructionTag / HintTag / TrueFalseTags_V1 / ResourceTags) { return value }
 
-// Bit tags for select (do not capture top level true / false tags)
-BitTag_Select
+// Chained Bit tag for bits with inline true/false, i.e. [.multiple-choice-text]
+ChainedBitTag_Inline
+ = WSL? value: BitTag { return value }
+
+// Bit tags for bits with inline true/false, i.e. [.multiple-choice-text] - don't match top level true/false tags as they should be considered as inline tags
+BitTag_Inline
   = value: (TitleTag / CommentTag / AnchorTag / ReferenceTag / PropertyTag / ItemLeadTag / InstructionTag / HintTag / ResourceTags) { return value }
 
 TrueFalseTags_V1
@@ -297,7 +305,7 @@ KeyValueTag_Key
 Bit_Value
   = value: $[^&:\]]* { return value }
 
-Bit_Value_Select
+Bit_Value_Inline
   = value: $("multiple-choice-text") { return value }
 
 KeyValueTag_Value
