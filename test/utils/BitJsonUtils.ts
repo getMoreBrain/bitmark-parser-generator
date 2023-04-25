@@ -19,6 +19,19 @@ class BitJsonUtils {
         if (options.removeParser) delete bw.parser;
         const bit = bw.bit;
         if (bit) {
+          // Clean bit
+
+          // // Item, Lead, Hint, Instruction
+          // if (!bit.item) delete bit.item;
+          // if (!bit.lead) delete bit.lead;
+          // if (!bit.hint) delete bit.hint;
+          // if (!bit.instruction) delete bit.instruction;
+
+          // // Example
+          // if (!bit.example) delete bit.example;
+          // if (!bit.isExample) delete bit.isExample;
+
+          // Clean bit resource
           if (bit.resource) {
             delete bit.resource.private;
 

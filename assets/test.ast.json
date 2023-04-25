@@ -1,26 +1,19 @@
 {
   "bits": [
     {
-      "bitType": "statement",
+      "bitType": "true-false-1",
       "textFormat": "bitmark--",
       "ids": [
-        "191210"
+        "285736"
       ],
-      "body": [
+      "itemLead": {
+        "item": "28",
+        "lead": "true-false-1"
+      },
+      "statements": [
         {
-          "bodyText": "Alle kriegen mit, egal wo sie sind, wie sehr wir selber die digitale Technologie-Nutzung nicht richtig unter Kontrolle haben. Da ist niemand ausgenommen."
-        }
-      ]
-    },
-    {
-      "bitType": "statement",
-      "textFormat": "bitmark--",
-      "ids": [
-        "191207"
-      ],
-      "body": [
-        {
-          "bodyText": "Ruhe und konzentriertes Arbeiten – das soll Offtime bieten. (Foto: ==Pablo Ruiz==|link:https://www.domainmarkt.de/pabloruiz.de|)"
+          "text": "Ein Elefant ist grösser als eine Maus.",
+          "isCorrect": true
         }
       ]
     }

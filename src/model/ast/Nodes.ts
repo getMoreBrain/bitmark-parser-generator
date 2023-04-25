@@ -83,6 +83,7 @@ export interface Bit {
   body?: Body;
   sampleSolutions?: string[];
   elements?: string[];
+  statement?: Statement;
   statements?: Statement[];
   choices?: Choice[];
   responses?: Response[];

@@ -1,23 +1,19 @@
 [
   {
-    "bitmark": "[.statement]\n[@id:191210]\nAlle kriegen mit, egal wo sie sind, wie sehr wir selber die digitale Technologie-Nutzung nicht richtig unter Kontrolle haben. Da ist niemand ausgenommen.",
+    "bitmark": "[.true-false-1]\n[@id:285736]\n[%28][%true-false-1]\n[+Ein Elefant ist grösser als eine Maus.]",
     "bit": {
-      "type": "statement",
+      "type": "true-false-1",
       "format": "bitmark--",
-      "body": "Alle kriegen mit, egal wo sie sind, wie sehr wir selber die digitale Technologie-Nutzung nicht richtig unter Kontrolle haben. Da ist niemand ausgenommen.",
+      "item": "28",
+      "lead": "true-false-1",
+      "instruction": "",
+      "hint": "",
+      "statement": "Ein Elefant ist grösser als eine Maus.",
+      "isCorrect": true,
+      "isExample": false,
+      "body": "",
       "id": [
-        "191210"
-      ]
-    }
-  },
-  {
-    "bitmark": "[.statement]\n[@id:191207]\nRuhe und konzentriertes Arbeiten – das soll Offtime bieten. (Foto: ==Pablo Ruiz==|link:https://www.domainmarkt.de/pabloruiz.de|)",
-    "bit": {
-      "type": "statement",
-      "format": "bitmark--",
-      "body": "Ruhe und konzentriertes Arbeiten – das soll Offtime bieten. (Foto: ==Pablo Ruiz==|link:https://www.domainmarkt.de/pabloruiz.de|)",
-      "id": [
-        "191207"
+        "285736"
       ]
     }
   }

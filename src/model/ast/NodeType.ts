@@ -27,6 +27,7 @@ const NodeType = superenum({
   optionsValue: 'optionsValue',
   texts: 'texts',
   textsValue: 'textsValue',
+  statement: 'statement',
   statements: 'statements',
   statementsValue: 'statementsValue',
   choices: 'choices',

@@ -76,6 +76,7 @@ export interface TypeKeyParseResult {
   trueFalse?: TrueFalseValue[];
   example?: string;
   isCorrect: boolean;
+  statement?: Statement;
   responses?: Response[];
   choices?: Choice[];
   title?: string[];
@@ -90,6 +91,7 @@ interface BitSpecificTitles {
 }
 
 interface BitSpecificTrueFalse_V1 {
+  statement?: Statement;
   choices?: Choice[];
   responses?: Response[];
 }
@@ -230,6 +232,7 @@ class BitmarkParserHelper {
     console.log(JSON.stringify(bitContent, null, 2));
     console.log(`==== END: bitContent ====`);
 
+    const isTrueFalseV1 = bitType === BitType.trueFalse1;
     const isMultipleChoiceV1 = bitType === BitType.multipleChoice1;
     const isMultipleResponseV1 = bitType === BitType.multipleResponse1;
 
@@ -238,6 +241,7 @@ class BitmarkParserHelper {
       cardSet,
       body: unparsedBody,
       title,
+      statement,
       choices,
       responses,
       ...tags
@@ -275,7 +279,7 @@ class BitmarkParserHelper {
     const titles = this.buildTitles(bitType, title ?? []);
 
     // Build the card data for the specific bit type
-    const bitSpecificCards = this.buildCards(bitType, cardSet, choices, responses);
+    const bitSpecificCards = this.buildCards(bitType, cardSet, statement, choices, responses);
 
     // Build the body (parts and placeholders)
     const body = this.buildBody(bitType, parsedBody);
@@ -292,6 +296,7 @@ class BitmarkParserHelper {
       textFormat,
       // resourceType,
       ...titles,
+      statement: isTrueFalseV1 ? statement : undefined,
       choices: isMultipleChoiceV1 ? choices : undefined,
       responses: isMultipleResponseV1 ? responses : undefined,
       ...tags,
@@ -472,6 +477,7 @@ class BitmarkParserHelper {
   buildCards(
     bitType: BitTypeType,
     cardSetContent: TypeValue[] | undefined,
+    statementV1: Statement | undefined,
     choicesV1: Choice[] | undefined,
     responsesV1: Response[] | undefined,
   ): BitSpecificCards {
@@ -521,7 +527,7 @@ class BitmarkParserHelper {
         return this.parseElements(bitType, cardSet);
 
       case BitType.trueFalse:
-        return this.parseStatements(bitType, cardSet);
+        return this.parseStatements(bitType, cardSet, statementV1);
 
       case BitType.multipleChoice:
       case BitType.multipleResponse:
@@ -571,7 +577,7 @@ class BitmarkParserHelper {
     };
   }
 
-  parseStatements(bitType: BitTypeType, cardSet: CardSet): BitSpecificCards {
+  parseStatements(bitType: BitTypeType, cardSet: CardSet, statementV1: Statement | undefined): BitSpecificCards {
     const statements: Statement[] = [];
 
     for (const card of cardSet.cards) {
@@ -606,6 +612,11 @@ class BitmarkParserHelper {
           statements.push(statement);
         }
       }
+    }
+
+    // Add the V1 statement to the end of the statements array to improve backwards compatibility
+    if (statementV1) {
+      statements.push(statementV1);
     }
 
     return {
@@ -933,9 +944,10 @@ class BitmarkParserHelper {
     // this.print(`==== parseTrueFalse_V1 ====`, trueFalseContent);
 
     // NOTE: We handle V1 tags in V2 multiple-choice / multiple-response for maxium backwards compatibility
+    const insertStatement = bitType === BitType.trueFalse || bitType === BitType.trueFalse1;
     const insertChoices = bitType === BitType.multipleChoice || bitType === BitType.multipleChoice1;
     const insertResponses = bitType === BitType.multipleResponse || bitType === BitType.multipleResponse1;
-    if (!insertChoices && !insertResponses) return {};
+    if (!insertStatement && !insertChoices && !insertResponses) return {};
 
     const tags = this.typeKeyDataParser(bitType, trueFalseContent, [
       TypeKey.True,
@@ -948,8 +960,14 @@ class BitmarkParserHelper {
 
     console.log(`==== parseTrueFalse_V1 TAGS ====`, tags);
 
+    let statement: Statement | undefined;
     const choices: Choice[] = [];
     const responses: Response[] = [];
+    if (insertStatement) {
+      if (tags.trueFalse && tags.trueFalse.length > 0) {
+        statement = builder.statement(tags.trueFalse[0]);
+      }
+    }
     if (insertChoices) {
       if (tags.trueFalse && tags.trueFalse.length > 0) {
         for (const tf of tags.trueFalse) {
@@ -968,7 +986,9 @@ class BitmarkParserHelper {
     }
 
     const res: BitSpecificTrueFalse_V1 = {};
-    if (insertChoices) {
+    if (insertStatement) {
+      res.statement = statement;
+    } else if (insertChoices) {
       res.choices = choices;
     } else if (insertResponses) {
       res.responses = responses;
@@ -993,6 +1013,7 @@ class BitmarkParserHelper {
     let seenItem = false;
     let body = '';
     const solutions: string[] = [];
+    let statement: Statement | undefined;
     const choices: Choice[] = [];
     const responses: Response[] = [];
     const extraProperties: any = {};
@@ -1096,9 +1117,10 @@ class BitmarkParserHelper {
         }
 
         case TypeKey.TrueFalse_V1: {
-          const choiceResponse = this.parseTrueFalse_V1(bitType, value as BitContent[]);
-          if (choiceResponse.choices) choices.push(...choiceResponse.choices);
-          if (choiceResponse.responses) responses.push(...choiceResponse.responses);
+          const tf = this.parseTrueFalse_V1(bitType, value as BitContent[]);
+          if (tf.statement) statement = tf.statement;
+          if (tf.choices) choices.push(...tf.choices);
+          if (tf.responses) responses.push(...tf.responses);
           break;
         }
 
@@ -1135,6 +1157,7 @@ class BitmarkParserHelper {
     // TODO - should not trim body as it will offset the error locations. Trim it in the parser instead
     res.body = body.trim();
 
+    if (statement != null) res.statement = statement;
     if (solutions.length > 0) res.solutions = solutions;
     if (choices.length > 0) res.choices = choices;
     if (responses.length > 0) res.responses = responses;

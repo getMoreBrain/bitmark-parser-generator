@@ -49,6 +49,10 @@ export interface BitJson {
   instruction: string;
   isExample: boolean;
   example: string;
+  // NEW property - not in the ANTLR parser
+  extraProperties: {
+    [key: string]: unknown | unknown[];
+  };
   resource: ResourceJson;
   body: string;
 

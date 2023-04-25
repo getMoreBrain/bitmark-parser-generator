@@ -132,6 +132,7 @@ class Builder {
     body?: Body;
     sampleSolutions?: string | string[];
     elements?: string[];
+    statement?: Statement;
     statements?: Statement[];
     responses?: Response[];
     quizzes?: Quiz[];
@@ -192,6 +193,7 @@ class Builder {
       body,
       sampleSolutions,
       elements,
+      statement,
       statements,
       responses,
       quizzes,
@@ -254,6 +256,7 @@ class Builder {
       body,
       sampleSolutions: this.asArray(sampleSolutions),
       elements,
+      statement,
       statements,
       responses,
       quizzes,
