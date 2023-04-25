@@ -1,48 +1,53 @@
 [
   {
-    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131345][%5]\n[!Herr Cimildoro ___ in der Schweiz.] [-a) wohnst]\n[-b) Wohnung] [-c) wohnen] [+d) wohnt]",
+    "bitmark": "[.cloze:bitmark--]\n0. young → [_younger]  [@example] → [_youngest]  [_youngerer!] [@example]",
     "bit": {
-      "type": "multiple-choice-1",
+      "type": "cloze",
       "format": "bitmark--",
-      "item": "5",
-      "instruction": "Herr Cimildoro ___ in der Schweiz.",
-      "body": "",
+      "body": "0. young → {0}   → {1}  {2}",
+      "item": "",
       "hint": "",
-      "choices": [
-        {
-          "choice": "a) wohnst",
-          "item": "",
-          "isCorrect": false,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "choice": "b) Wohnung",
-          "item": "",
-          "isCorrect": false,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "choice": "c) wohnen",
-          "item": "",
-          "isCorrect": false,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "choice": "d) wohnt",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        }
-      ],
       "isExample": false,
       "example": "",
-      "id": [
-        "131345"
-      ]
-    }
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "younger"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "youngest"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "youngerer!"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    },
+    "example": ""
   }
 ]

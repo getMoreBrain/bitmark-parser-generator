@@ -105,11 +105,19 @@ ResourceType
 
 // All bit content (tags, body, cards)
 BitContent
-  = value: (CardSet / BitTag / BodyLine)* { return value }
+  = value: (CardSet / BitTagChain / BodyLine)* { return value }
 
-// All bit content - V1 (tags, body)
+// All bit content for select (do not capture top level true / false tags)
 BitContent_Select
   = value: (CardSet / BitTag_Select / BodyLine)* { return value }
+
+// Bit tag chain
+BitTagChain
+  = value: (BitTag (WSL? BitTag)*) { return value }
+
+// Bit tag chain for select (do not capture top level true / false tags)
+BitTagChain_Select
+  = value: (BitTag_Select (WSL? BitTag_Select)*) { return value }
 
 // Bit tag
 BitTag
@@ -166,14 +174,14 @@ BodyChar
 
 // BodyTags
 BodyTags
-  = value: (GapTags / SelectTags) { return value; }
+  = value: (GapTagsChain / SelectTagsChain) { return value; }
 
-// Gap tags
-GapTags
+// Gap tags chain
+GapTagsChain
   = value: ClozeInlineTag others: (ClozeInlineTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Gap, value: [value, ...others] }; }
 
-// Select tags
-SelectTags
+// Select tags chain
+SelectTagsChain
   = value: (TrueInlineTag / FalseInlineTag)+ others: (TrueInlineTag / FalseInlineTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Select, value: [...value, ...others] } }
 
 

@@ -1,28 +1,53 @@
 {
   "bits": [
     {
-      "bitType": "multiple-choice-1",
+      "bitType": "cloze",
       "textFormat": "bitmark--",
-      "ids": [
-        "131345"
-      ],
-      "itemLead": {
-        "item": "5"
-      },
-      "instruction": "Herr Cimildoro ___ in der Schweiz.",
-      "choices": [
+      "body": [
         {
-          "text": "a) wohnst"
+          "bodyText": "0. young → "
         },
         {
-          "text": "b) Wohnung"
+          "gap": {
+            "solutions": [
+              "younger"
+            ],
+            "hint": "",
+            "instruction": "",
+            "example": false,
+            "isCaseSensitive": true
+          }
         },
         {
-          "text": "c) wohnen"
+          "bodyText": "   → "
         },
         {
-          "text": "d) wohnt",
-          "isCorrect": true
+          "gap": {
+            "solutions": [
+              "youngest"
+            ],
+            "hint": "",
+            "instruction": "",
+            "example": false,
+            "isCaseSensitive": true
+          }
+        },
+        {
+          "bodyText": "  "
+        },
+        {
+          "gap": {
+            "solutions": [
+              "youngerer!"
+            ],
+            "hint": "",
+            "instruction": "",
+            "example": false,
+            "isCaseSensitive": true
+          }
+        },
+        {
+          "bodyText": ""
         }
       ]
     }
