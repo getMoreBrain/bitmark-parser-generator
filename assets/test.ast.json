@@ -1,40 +1,26 @@
 {
   "bits": [
     {
-      "bitType": "match-matrix",
+      "bitType": "statement",
       "textFormat": "bitmark--",
       "ids": [
-        "287966"
+        "191210"
       ],
-      "itemLead": {
-        "item": "",
-        "lead": "match-matrix"
-      },
-      "instruction": "Bring the german verbs into the correct tense.",
       "body": [
         {
-          "bodyText": "[!Instruction]sie gingen[@example]sprechenich werde sprechensie sprachen"
+          "bodyText": "Alle kriegen mit, egal wo sie sind, wie sehr wir selber die digitale Technologie-Nutzung nicht richtig unter Kontrolle haben. Da ist niemand ausgenommen."
         }
+      ]
+    },
+    {
+      "bitType": "statement",
+      "textFormat": "bitmark--",
+      "ids": [
+        "191207"
       ],
-      "heading": {
-        "forKeys": "Verb",
-        "forValues": [
-          "Future, 1st Person, Singular",
-          "Past, 3rd Person, Plural"
-        ]
-      },
-      "matrix": [
+      "body": [
         {
-          "key": "gehen",
-          "isCaseSensitive": true,
-          "cells": [
-            {
-              "example": true,
-              "values": [
-                "ich werde gehen"
-              ]
-            }
-          ]
+          "bodyText": "Ruhe und konzentriertes Arbeiten – das soll Offtime bieten. (Foto: ==Pablo Ruiz==|link:https://www.domainmarkt.de/pabloruiz.de|)"
         }
       ]
     }

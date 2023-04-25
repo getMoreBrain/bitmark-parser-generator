@@ -1,107 +1,24 @@
 [
   {
-    "bitmark": "[.match-matrix]\n[@id:287966]\n[%][%match-matrix]\n[!Bring the german verbs into the correct tense.]\n\n===\n[#Verb]\n==\n[#Future, 1st Person, Singular]\n==\n[#Past, 3rd Person, Plural]\n===\ngehen\n==\nich werde gehen[@example] [!Instruction]\n==\nsie gingen[@example]\n===\nsprechen\n==\nich werde sprechen\n==\nsie sprachen\n===",
+    "bitmark": "[.statement]\n[@id:191210]\nAlle kriegen mit, egal wo sie sind, wie sehr wir selber die digitale Technologie-Nutzung nicht richtig unter Kontrolle haben. Da ist niemand ausgenommen.",
     "bit": {
-      "type": "match-matrix",
+      "type": "statement",
       "format": "bitmark--",
-      "item": "",
-      "heading": {
-        "forKeys": "Verb",
-        "forValues": [
-          "Future, 1st Person, Singular",
-          "Past, 3rd Person, Plural"
-        ]
-      },
-      "matrix": [
-        {
-          "key": "gehen",
-          "cells": [
-            {
-              "item": "",
-              "instruction": "",
-              "values": [
-                "ich werde gehen"
-              ],
-              "example": "",
-              "isExample": true
-            }
-          ],
-          "item": "",
-          "isCaseSensitive": true,
-          "hint": "",
-          "isExample": false,
-          "example": "",
-          "isLongAnswer": false
-        }
-      ],
-      "body": "[!Instruction]sie gingen[@example]sprechenich werde sprechensie sprachen",
+      "body": "Alle kriegen mit, egal wo sie sind, wie sehr wir selber die digitale Technologie-Nutzung nicht richtig unter Kontrolle haben. Da ist niemand ausgenommen.",
       "id": [
-        "287966"
-      ],
-      "lead": "match-matrix",
-      "instruction": "Bring the german verbs into the correct tense."
-    },
-    "errors": [
-      {
-        "message": "Unexpected input ' '",
-        "line": 15,
-        "column": 25,
-        "errorLine": "ich werde gehen[@example] [!Instruction]"
-      },
-      {
-        "message": "Unexpected input '=='",
-        "line": 16,
-        "column": 0,
-        "errorLine": "=="
-      },
-      {
-        "message": "Unexpected input 'sie gingen'",
-        "line": 17,
-        "column": 0,
-        "errorLine": "sie gingen[@example]"
-      },
-      {
-        "message": "Unexpected input '==='",
-        "line": 18,
-        "column": 0,
-        "errorLine": "==="
-      },
-      {
-        "message": "Unexpected input 'sprechen'",
-        "line": 19,
-        "column": 0,
-        "errorLine": "sprechen"
-      },
-      {
-        "message": "Unexpected input '=='",
-        "line": 20,
-        "column": 0,
-        "errorLine": "=="
-      },
-      {
-        "message": "Unexpected input 'ich werde sprechen'",
-        "line": 21,
-        "column": 0,
-        "errorLine": "ich werde sprechen"
-      },
-      {
-        "message": "Unexpected input '=='",
-        "line": 22,
-        "column": 0,
-        "errorLine": "=="
-      },
-      {
-        "message": "Unexpected input 'sie sprachen'",
-        "line": 23,
-        "column": 0,
-        "errorLine": "sie sprachen"
-      },
-      {
-        "message": "Unexpected input '==='",
-        "line": 24,
-        "column": 0,
-        "errorLine": "==="
-      }
-    ]
+        "191210"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.statement]\n[@id:191207]\nRuhe und konzentriertes Arbeiten – das soll Offtime bieten. (Foto: ==Pablo Ruiz==|link:https://www.domainmarkt.de/pabloruiz.de|)",
+    "bit": {
+      "type": "statement",
+      "format": "bitmark--",
+      "body": "Ruhe und konzentriertes Arbeiten – das soll Offtime bieten. (Foto: ==Pablo Ruiz==|link:https://www.domainmarkt.de/pabloruiz.de|)",
+      "id": [
+        "191207"
+      ]
+    }
   }
 ]

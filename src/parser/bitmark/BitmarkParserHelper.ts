@@ -1034,6 +1034,9 @@ class BitmarkParserHelper {
               acc.isShortAnswer = value;
             } else if (key === PropertyKey.caseSensitive) {
               acc.isCaseSensitive = value;
+            } else if (key === PropertyKey.quotedPerson) {
+              // Ensure value is trimmed
+              acc.quotedPerson = ((value as string) ?? '').trim();
             } else {
               acc[key] = value;
             }

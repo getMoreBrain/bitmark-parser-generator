@@ -289,7 +289,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (bit.lists != null) this.addProperty(this.bitJson, 'list', bit.lists);
     if (bit.labelTrue != null) this.addProperty(this.bitJson, 'labelTrue', bit.labelTrue);
     if (bit.labelFalse != null) this.addProperty(this.bitJson, 'labelFalse', bit.labelFalse);
-    if (bit.quotedPerson != null) this.addProperty(this.bitJson, 'quotedPerson', bit.quotedPerson);
+    if (bit.quotedPerson != null) this.bitJson.quotedPerson = bit.quotedPerson;
 
     // Book data - Title, subtile, level, toc, progress, anchor, reference, etc
     if (bit.title != null) this.bitJson.title = bit.title ?? '';
@@ -581,12 +581,18 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       const optionJson: Partial<SelectOptionJson> = {
         text: option.text,
         isCorrect: option.isCorrect ?? false,
-        item: select.itemLead?.item ?? '',
-        lead: select.itemLead?.lead ?? '',
-        hint: select.hint ?? '',
-        instruction: select.instruction ?? '',
-        isExample: !!select.example,
-        example: StringUtils.isString(select.example) ? (select.example as string) : '',
+        // item: select.itemLead?.item ?? '',
+        // lead: select.itemLead?.lead ?? '',
+        // hint: select.hint ?? '',
+        // instruction: select.instruction ?? '',
+        // isExample: !!select.example,
+        // example: StringUtils.isString(select.example) ? (select.example as string) : '',
+        item: option.itemLead?.item ?? '',
+        lead: option.itemLead?.lead ?? '',
+        hint: option.hint ?? '',
+        instruction: option.instruction ?? '',
+        isExample: !!option.example,
+        example: StringUtils.isString(option.example) ? (option.example as string) : '',
         // isCaseSensitive: select.isCaseSensitive ?? true,
         //
       };
@@ -1979,7 +1985,11 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       case BitType.hint:
       case BitType.info:
       case BitType.internalLink:
+      case BitType.note:
+      case BitType.preparationNote:
       case BitType.quote:
+      case BitType.remark:
+      case BitType.sideNote:
         bitJson.item = '';
         bitJson.hint = '';
         bitJson.isExample = false;
