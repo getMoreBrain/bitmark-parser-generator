@@ -16,7 +16,7 @@ const SINGLE_FILE_START = 0;
 const SINGLE_FILE_COUNT = 1;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, './bitmark');
-const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/json-gen/output');
+const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/bitmark-parser/output');
 
 // const jsonParser = new JsonParser();
 const bitmarkParser = new BitmarkParser();
@@ -100,7 +100,7 @@ describe('json-gen', () => {
         // Read in the test markup file
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
-        // Generate JSON from generated bitmark markup using the parser
+        // Generate JSON from generated bitmark markup using the ANTLR parser
         const originalJson = bitmarkParser.parse(originalMarkup);
 
         // Write the new JSON

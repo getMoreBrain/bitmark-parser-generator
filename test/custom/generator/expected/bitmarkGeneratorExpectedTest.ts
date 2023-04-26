@@ -13,16 +13,16 @@ import { describe, test } from '@jest/globals';
 import * as fs from 'fs-extra';
 import path from 'path';
 
-import { BitmarkFileGenerator } from '../../../src/generator/bitmark/BitmarkFileGenerator';
-import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
-import { JsonParser } from '../../../src/parser/json/JsonParser';
-import { BitJsonUtils } from '../../utils/BitJsonUtils';
-import { deepDiffMapper } from '../../utils/deepDiffMapper';
+import { BitmarkFileGenerator } from '../../../../src/generator/bitmark/BitmarkFileGenerator';
+import { BitmarkParser } from '../../../../src/parser/bitmark/BitmarkParser';
+import { JsonParser } from '../../../../src/parser/json/JsonParser';
+import { BitJsonUtils } from '../../../utils/BitJsonUtils';
+import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 
 // TODO should use 'require.resolve()' rather than direct node_modules
-const NODE_MODULES_DIR = path.resolve(__dirname, '../node_modules');
+const NODE_MODULES_DIR = path.resolve(__dirname, '../../../../node_modules');
 const BITMARK_GRAMMAR_DIR = path.resolve(NODE_MODULES_DIR, 'bitmark-grammar');
-const JSON_TEST_OUTPUT_DIR = path.resolve(__dirname, '../assets/test/json');
+const TEST_OUTPUT_DIR = path.resolve(__dirname, 'results/output');
 const EXPECTED_JSON = path.resolve(BITMARK_GRAMMAR_DIR, 'src/tests/EXPECTED.json');
 const EXPECTED_JSON_MATCH_REG_EX = new RegExp('<<<<(.+)(\\n[^<<<<]*\\n)<<<<', 'gm');
 
@@ -76,19 +76,19 @@ function getTestJson(): JsonTestCases {
 
 function writeTestJson(allTestJson: JsonTestCases): void {
   // Ensure required folders
-  fs.ensureDirSync(JSON_TEST_OUTPUT_DIR);
+  fs.ensureDirSync(TEST_OUTPUT_DIR);
 
   for (const testJson of Object.values(allTestJson)) {
     const { id, json } = testJson;
 
     // Write original JSON
-    const jsonFile = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.json`);
+    const jsonFile = path.resolve(TEST_OUTPUT_DIR, `${id}.json`);
     fs.writeFileSync(jsonFile, JSON.stringify(json, null, 2));
 
     // Write original Bitmark
     const bitwrappers = jsonParser.preprocessJson(json);
 
-    const markupFile = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.bit`);
+    const markupFile = path.resolve(TEST_OUTPUT_DIR, `${id}.bit`);
     let markup = '';
     for (let i = 0, len = bitwrappers.length; i < len; i++) {
       const bw = bitwrappers[i];
@@ -135,7 +135,7 @@ describe('bitmark-generator', () => {
         const bitmarkAst = jsonParser.toAst(json);
 
         // Generate markup code from AST
-        const markupFile = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.gen.bit`);
+        const markupFile = path.resolve(TEST_OUTPUT_DIR, `${id}.gen.bit`);
         const generator = new BitmarkFileGenerator(markupFile, undefined, {
           explicitTextFormat: false,
         });
@@ -148,7 +148,7 @@ describe('bitmark-generator', () => {
         const newJson = bitmarkParser.parse(markup);
 
         // Write the new JSON
-        const fileNewJson = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.gen.json`);
+        const fileNewJson = path.resolve(TEST_OUTPUT_DIR, `${id}.gen.json`);
         fs.writeFileSync(fileNewJson, JSON.stringify(newJson, null, 2), {
           encoding: 'utf8',
         });
@@ -163,7 +163,7 @@ describe('bitmark-generator', () => {
         });
 
         // Write the diff Map JSON
-        const fileDiffMap = path.resolve(JSON_TEST_OUTPUT_DIR, `${id}.diff.json`);
+        const fileDiffMap = path.resolve(TEST_OUTPUT_DIR, `${id}.diff.json`);
         fs.writeFileSync(fileDiffMap, JSON.stringify(diffMap, null, 2), {
           encoding: 'utf8',
         });

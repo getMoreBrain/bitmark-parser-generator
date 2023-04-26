@@ -16,13 +16,13 @@ const SINGLE_FILE_START = 0;
 const SINGLE_FILE_COUNT = 100;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, './bitmark');
-const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/bitmark-gen/output');
+const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/bitmark-generator/output');
 
 const jsonParser = new JsonParser();
 const bitmarkParser = new BitmarkParser();
 
 // DISABLE TESTS
-return false;
+// return false;
 
 /**
  * Get the list of files in the TEST_INPUT_DIR (bitmark files)

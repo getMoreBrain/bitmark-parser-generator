@@ -1,20 +1,40 @@
 [
   {
-    "bitmark": "[.true-false-1]\n[@id:285736]\n[%28][%true-false-1]\n[+Ein Elefant ist grösser als eine Maus.]",
+    "bitmark": "[.video]\n[@id:301454]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
     "bit": {
-      "type": "true-false-1",
+      "type": "video",
       "format": "bitmark--",
-      "item": "28",
-      "lead": "true-false-1",
-      "instruction": "",
-      "hint": "",
-      "statement": "Ein Elefant ist grösser als eine Maus.",
-      "isCorrect": true,
-      "isExample": false,
       "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
       "id": [
-        "285736"
-      ]
+        "301454"
+      ],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "format": "png",
+            "width": null,
+            "height": null
+          }
+        }
+      }
     }
   }
 ]

@@ -5,12 +5,12 @@ import { describe, test } from '@jest/globals';
 import * as fs from 'fs-extra';
 import path from 'path';
 
-import { BitmarkFileGenerator } from '../../../src/generator/bitmark/BitmarkFileGenerator';
-import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
-import { JsonParser } from '../../../src/parser/json/JsonParser';
-import { FileUtils } from '../../../src/utils/FileUtils';
-import { BitJsonUtils } from '../../utils/BitJsonUtils';
-import { deepDiffMapper } from '../../utils/deepDiffMapper';
+import { BitmarkFileGenerator } from '../../../../src/generator/bitmark/BitmarkFileGenerator';
+import { BitmarkParser } from '../../../../src/parser/bitmark/BitmarkParser';
+import { JsonParser } from '../../../../src/parser/json/JsonParser';
+import { FileUtils } from '../../../../src/utils/FileUtils';
+import { BitJsonUtils } from '../../../utils/BitJsonUtils';
+import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 
 // Passed: 0-26, 28-37, 39-58, 60, 76-78, 81-92, 94-99, 101-102, 104-106, 108-109, 111-120, 122-143
 // 150-154, 157-174, 177-209, 211, 214-216, 218-220, 225, 227-235, 237-
@@ -53,8 +53,8 @@ import { deepDiffMapper } from '../../utils/deepDiffMapper';
 const SINGLE_FILE_START = 0;
 const SINGLE_FILE_COUNT = 1;
 
-const TEST_INPUT_DIR = path.resolve(__dirname, '../../../assets/test/books/bits');
-const TEST_OUTPUT_DIR = path.resolve(__dirname, '../../../assets/test/books/results');
+const TEST_INPUT_DIR = path.resolve(__dirname, '../../../../assets/test/books/bits');
+const TEST_OUTPUT_DIR = path.resolve(__dirname, 'results/output');
 
 const jsonParser = new JsonParser();
 const bitmarkParser = new BitmarkParser();
@@ -95,7 +95,7 @@ function getTestFilenames(): string[] {
 //   fs.writeFileSync(markupFile, markup);
 // }
 
-describe('bitmark-gen', () => {
+describe('bitmark-generator', () => {
   describe('JSON => Markup => JSON: Books', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);

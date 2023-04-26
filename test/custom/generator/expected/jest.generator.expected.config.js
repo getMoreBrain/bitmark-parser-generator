@@ -5,12 +5,12 @@ module.exports = {
 
   // setupFiles: ['core-js'],
 
-  rootDir: '../../..',
-  roots: ['<rootDir>/src', '<rootDir>/test/custom/books'],
+  rootDir: '../../../..',
+  roots: ['<rootDir>/src', '<rootDir>/test/custom/generator/expected'],
   testEnvironment: 'node',
   verbose: true,
   testTimeout: 50000,
-  testMatch: ['<rootDir>/test/custom/books/bmgBookTest.ts'],
+  testMatch: ['<rootDir>/test/custom/generator/expected/bitmarkGeneratorExpectedTest.ts'],
   transform: {
     '^.+\\.tsx?$': [
       'ts-jest',
@@ -23,12 +23,12 @@ module.exports = {
   },
   reporters: [
     'default',
-    [require.resolve('jest-junit'), { outputDirectory: '<rootDir>/test/custom/books/results' }],
+    [require.resolve('jest-junit'), { outputDirectory: '<rootDir>/test/custom/generator/expected/results' }],
     [
       require.resolve('jest-html-reporter'),
       {
-        outputPath: '<rootDir>/test/custom/books/results/test-report.html',
-        pageTitle: 'bitmark-generator Books Test Report',
+        outputPath: '<rootDir>/test/custom/generator/expected/results/test-report.html',
+        pageTitle: 'bitmark-generator Expected Test Report',
         includeFailureMsg: false,
       },
     ],
