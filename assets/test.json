@@ -1,40 +1,38 @@
 [
   {
-    "bitmark": "[.video]\n[@id:301454]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
+    "bitmark": "[.interview:bitmark--]\n[@id:198780]\n[%2]\n[!Bei welchen Steuerarten des Bundes ist eine Überwälzung vorgesehen und wie funktioniert sie?]\n===\n[$- Bei der Verrechnungssteuer: Eine Bank überwälzt die Steuerzahllast, indem sie auf dem Zinsertrag 35% an die ESTV abliefert und dem Steuerträger nur 65% ausbezahlt\n- Bei der MWST, indem der MWST-Betrag auf dem Umsatz eingerechnet wird und dem Verbraucher / Konsumenten belastet wird\n(Annahme: Konsument ist nicht selbst MWSTpflichtig, sondern der Endverbraucher !)]",
     "bit": {
-      "type": "video",
+      "type": "interview",
       "format": "bitmark--",
+      "item": "2",
+      "instruction": "Bei welchen Steuerarten des Bundes ist eine Überwälzung vorgesehen und wie funktioniert sie?",
       "body": "",
-      "item": "",
+      "footer": "",
       "hint": "",
-      "isExample": false,
-      "example": "",
-      "id": [
-        "301454"
-      ],
-      "resource": {
-        "type": "video",
-        "video": {
-          "format": "mp4",
-          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4",
-          "width": null,
-          "height": null,
-          "duration": "",
-          "mute": false,
-          "autoplay": false,
-          "allowSubtitles": false,
-          "showSubtitles": false,
-          "alt": "",
-          "license": "",
-          "copyright": "",
-          "posterImage": {
-            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
-            "format": "png",
-            "width": null,
-            "height": null
-          }
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "- Bei der Verrechnungssteuer: Eine Bank überwälzt die Steuerzahllast, indem sie auf dem Zinsertrag 35% an die ESTV abliefert und dem Steuerträger nur 65% ausbezahlt\n- Bei der MWST, indem der MWST-Betrag auf dem Umsatz eingerechnet wird und dem Verbraucher / Konsumenten belastet wird\n(Annahme: Konsument ist nicht selbst MWSTpflichtig, sondern der Endverbraucher !)",
+          "partialAnswer": "",
+          "isShortAnswer": true
         }
+      ],
+      "id": [
+        "198780"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
       }
-    }
+    ]
   }
 ]

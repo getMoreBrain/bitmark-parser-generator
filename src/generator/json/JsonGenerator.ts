@@ -1940,6 +1940,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         if (bitJson.example == null) bitJson.example = '';
         if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
         if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
+        if (bitJson.body == null) bitJson.body = '';
         break;
 
       case BitType.interview:
@@ -1948,6 +1949,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         if (bitJson.item == null) bitJson.item = '';
         if (bitJson.hint == null) bitJson.hint = '';
         if (bitJson.instruction == null) bitJson.instruction = '';
+        if (bitJson.body == null) bitJson.body = '';
         if (bitJson.footer == null) bitJson.footer = '';
         break;
 

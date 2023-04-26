@@ -7,13 +7,12 @@ import path from 'path';
 
 import { JsonFileGenerator } from '../../../../src/generator/json/JsonFileGenerator';
 import { BitmarkParser } from '../../../../src/parser/bitmark/BitmarkParser';
-import { JsonParser } from '../../../../src/parser/json/JsonParser';
+// import { JsonParser } from '../../../../src/parser/json/JsonParser';
 import { FileUtils } from '../../../../src/utils/FileUtils';
 import { BitJsonUtils } from '../../../utils/BitJsonUtils';
 import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 
-// Passed: 0-26, 28-37, 39-58, 60, 76-78, 81-92, 94-99, 101-102, 104-106, 108-109, 111-120, 122-143
-// 150-154, 157-174, 177-209, 211, 214-216, 218-220, 225, 227-235, 237-
+// Passed: 0-
 // Failed:
 // - 27: berufsbildner_qualicarte (bullet, parser error?)
 // - 38: zentrale_aufnahmepruefung_2019_mathe (.interview->questions, parser error?)
