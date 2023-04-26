@@ -686,8 +686,8 @@ class JsonParser {
         caption: data.caption,
 
         // ImageLikeResource / VideoLikeResource
-        width: data.width,
-        height: data.height,
+        width: data.width ?? undefined,
+        height: data.height ?? undefined,
         alt: data.alt,
 
         // VideoLikeResource
@@ -708,7 +708,6 @@ class JsonParser {
         // Generic Resource
         license: data.license,
         copyright: data.copyright,
-        provider: data.provider,
         showInIndex: data.showInIndex,
       });
     }

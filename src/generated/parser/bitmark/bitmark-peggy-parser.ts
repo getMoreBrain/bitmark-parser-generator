@@ -267,7 +267,7 @@ function peg$parse(input: string, options?: ParseOptions) {
   const peg$c38 = function(value: any, others: any): any { return { type: TypeKey.Gap, value: [value, ...others] }; };
   const peg$c39 = function(value: any, others: any): any { return { type: TypeKey.Select, value: [...value, ...others] } };
   const peg$c40 = function(value: any, props: any): any {
-      console.log('RESOURCE_TAGS', value, props);
+      // console.log('RESOURCE_TAGS', value, props);
 
       // TODO - insert other tags values into the resource tag value
       return helper.processResourceTags(value, props);
@@ -2053,23 +2053,26 @@ function peg$parse(input: string, options?: ParseOptions) {
     let s0, s1;
 
     s0 = peg$currPos;
-    s1 = peg$parseItemLeadTag();
+    s1 = peg$parseCommentTag();
     if (s1 as any === peg$FAILED) {
-      s1 = peg$parseInstructionTag();
+      s1 = peg$parseItemLeadTag();
       if (s1 as any === peg$FAILED) {
-        s1 = peg$parseHintTag();
+        s1 = peg$parseInstructionTag();
         if (s1 as any === peg$FAILED) {
-          s1 = peg$parseSampleSolutionTag();
+          s1 = peg$parseHintTag();
           if (s1 as any === peg$FAILED) {
-            s1 = peg$parseTrueTag();
+            s1 = peg$parseSampleSolutionTag();
             if (s1 as any === peg$FAILED) {
-              s1 = peg$parseFalseTag();
+              s1 = peg$parseTrueTag();
               if (s1 as any === peg$FAILED) {
-                s1 = peg$parsePropertyTag();
+                s1 = peg$parseFalseTag();
                 if (s1 as any === peg$FAILED) {
-                  s1 = peg$parseTitleTag();
+                  s1 = peg$parsePropertyTag();
                   if (s1 as any === peg$FAILED) {
-                    s1 = peg$parseResourceTags();
+                    s1 = peg$parseTitleTag();
+                    if (s1 as any === peg$FAILED) {
+                      s1 = peg$parseResourceTags();
+                    }
                   }
                 }
               }

@@ -4,6 +4,7 @@ import { describe, test } from '@jest/globals';
 // import deepEqual from 'deep-equal';
 import * as fs from 'fs-extra';
 import path from 'path';
+import { performance } from 'perf_hooks';
 
 import { JsonFileGenerator } from '../../../../src/generator/json/JsonFileGenerator';
 import { BitmarkParser } from '../../../../src/parser/bitmark/BitmarkParser';
@@ -12,9 +13,20 @@ import { FileUtils } from '../../../../src/utils/FileUtils';
 import { BitJsonUtils } from '../../../utils/BitJsonUtils';
 import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 
-// Passed: 0-
+// Passed: 6, 8-10, 12, 15-28, 30, 32-33
 // Failed:
-// - 27: berufsbildner_qualicarte (bullet, parser error?)
+// - 0: akad_2_aufgabenset_1 (.interview missing last ===)
+// - 1: akad_2_aufgabenset_2 (.book, invalid coverImage tag (empty value))
+// - 3: akad_2_aufgabenset_3 (.interview missing last ===)
+// - 4: akad_2_aufgabenset_4 (.interview ANTLR parser does not handle ✓ in sampleSolution)
+// - 5: akad_2_aufgabenset_5 (.multiple-choice has body text in the cardset - ANTLR parser adds this to the body, new parser does not)
+// - 7: akad_mehrwertsteuer_gruppenbesteuerung (.book, invalid coverImage tag (empty value))
+// - 11: axa_effektive_software_architekturen_k1 (wrong format in resource, ANTLR parser fails on unicode characters)
+// - 13: effektive_software_architekturen_axa_version (wrong format in resource, ANTLR parser fails on unicode characters)
+// - 14: effektive_software_architekturen_axa_version_v2 (wrong format in resource, ANTLR parser fails on unicode characters)
+// - 29: berufsbildner_qualicarte (bullet, ANTLR parser error?)
+// - 31: berufsbildner_quiz_bewertungsgespraech (bullet, ANTLR parser error - bits end up with errors, but single bits parse ok??)
+
 // - 38: zentrale_aufnahmepruefung_2019_mathe (.interview->questions, parser error?)
 // - 59: bumbacher_vier_facetten (.self-assesment->bullet, parser error?)
 // - 61-74: card2brain/* (.flashcard-1-> no === / == so cards interpreted as body, parser error?)
@@ -49,7 +61,7 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // - 246: informatik - TODO - code generator bitmark kills parser
 // - 249: wiss_aufgabensammlung_business_engineering (parser error, [.interview] Body is incorrect - has the first question attached to it.)
 
-const SINGLE_FILE_START = 0;
+const SINGLE_FILE_START = 34;
 const SINGLE_FILE_COUNT = 1;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, '../../../../assets/test/books/bits');
@@ -111,6 +123,9 @@ describe('bitmark-parser', () => {
     //   test('JSON ==> Markup ==> JSON', async () => {
 
     allTestFiles.forEach((testFile: string) => {
+      performance.clearMarks();
+      performance.clearMeasures();
+
       const partFolderAndFile = testFile.replace(TEST_INPUT_DIR, '');
       const partFolder = path.dirname(partFolderAndFile);
       const fullFolder = path.join(TEST_OUTPUT_DIR, partFolder);
@@ -138,12 +153,15 @@ describe('bitmark-parser', () => {
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
         // Generate JSON from generated bitmark markup using the ANTLR parser
+        performance.mark('ANTLR:Start');
         const originalJson = bitmarkParser.parse(originalMarkup);
 
         // Write the new JSON
         fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {
           encoding: 'utf8',
         });
+
+        performance.mark('ANTLR:End');
 
         // Remove uninteresting JSON items
         BitJsonUtils.cleanupJson(originalJson, { removeParser: true, removeErrors: true });
@@ -152,6 +170,7 @@ describe('bitmark-parser', () => {
         // writeTestJsonAndBitmark(originalJson, fullFolder, id);
 
         // Convert the Bitmark markup to bitmark AST
+        performance.mark('PEG:Start');
         const bitmarkAst = bitmarkParser.toAst(originalMarkup);
 
         // Write the new AST
@@ -165,6 +184,8 @@ describe('bitmark-parser', () => {
         });
 
         await generator.generate(bitmarkAst);
+
+        performance.mark('PEG:End');
 
         const newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
 
@@ -181,6 +202,12 @@ describe('bitmark-parser', () => {
         fs.writeFileSync(jsonDiffFile, JSON.stringify(diffMap, null, 2), {
           encoding: 'utf8',
         });
+
+        console.log(
+          `'${id}' timing; ANTLR: ${
+            Math.round(performance.measure('ANTLR', 'ANTLR:Start', 'ANTLR:End').duration) / 1000
+          } s, PEG: ${Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000} s`,
+        );
 
         expect(newJson).toEqual(originalJson);
 

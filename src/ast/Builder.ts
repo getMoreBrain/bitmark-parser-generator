@@ -877,7 +877,6 @@ class Builder {
       // Generic Resource
       license?: string;
       copyright?: string;
-      provider?: string;
       showInIndex?: boolean;
       caption?: string;
     },
@@ -978,7 +977,6 @@ class Builder {
     alt?: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): ImageResource {
@@ -1008,7 +1006,6 @@ class Builder {
     alt?: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): ImageLinkResource {
@@ -1031,7 +1028,6 @@ class Builder {
     url: string; // src
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AudioResource {
@@ -1054,7 +1050,6 @@ class Builder {
     url: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AudioLinkResource {
@@ -1087,7 +1082,6 @@ class Builder {
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): VideoResource {
@@ -1120,7 +1114,6 @@ class Builder {
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): VideoLinkResource {
@@ -1153,7 +1146,6 @@ class Builder {
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): StillImageFilmResource {
@@ -1186,7 +1178,6 @@ class Builder {
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): StillImageFilmLinkResource {
@@ -1210,7 +1201,6 @@ class Builder {
     body?: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): ArticleResource {
@@ -1233,7 +1223,6 @@ class Builder {
     url: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): ArticleLinkResource {
@@ -1257,7 +1246,6 @@ class Builder {
     body?: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): DocumentResource {
@@ -1280,7 +1268,6 @@ class Builder {
     url: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): DocumentLinkResource {
@@ -1302,7 +1289,6 @@ class Builder {
     url: string; // app
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AppResource {
@@ -1324,7 +1310,6 @@ class Builder {
     url: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AppLinkResource {
@@ -1347,11 +1332,10 @@ class Builder {
     siteName?: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): WebsiteLinkResource | undefined {
-    const { url, siteName, license, copyright, provider, showInIndex, caption } = data;
+    const { url, siteName, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: WebsiteLinkResource = {
@@ -1360,7 +1344,6 @@ class Builder {
       siteName,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     };
@@ -1410,31 +1393,17 @@ class Builder {
     alt?: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): ImageResource | ImageLinkResource | undefined {
-    const {
-      type,
-      url,
-      src1x,
-      src2x,
-      src3x,
-      src4x,
-      width,
-      height,
-      alt,
-      license,
-      copyright,
-      provider,
-      showInIndex,
-      caption,
-    } = data;
+    const { type, url, src1x, src2x, src3x, src4x, width, height, alt, license, copyright, showInIndex, caption } =
+      data;
 
     // NOTE: Node order is important and is defined here
     const node: ImageResource | ImageLinkResource = {
       type,
       format: this.extractResourceFormatFromUrl(url),
+      provider: this.extractResourceProviderFromUrl(url),
       url,
       src1x,
       src2x,
@@ -1445,7 +1414,6 @@ class Builder {
       alt,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     };
@@ -1462,20 +1430,19 @@ class Builder {
     url: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AudioResource | AudioLinkResource | undefined {
-    const { type, url, license, copyright, provider, showInIndex, caption } = data;
+    const { type, url, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioResource | AudioLinkResource = {
       type,
       format: this.extractResourceFormatFromUrl(url),
+      provider: this.extractResourceProviderFromUrl(url),
       url,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     };
@@ -1502,7 +1469,6 @@ class Builder {
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource | undefined {
@@ -1521,7 +1487,6 @@ class Builder {
       thumbnails,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     } = data;
@@ -1530,6 +1495,7 @@ class Builder {
     const node: VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource = {
       type,
       format: this.extractResourceFormatFromUrl(url),
+      provider: this.extractResourceProviderFromUrl(url),
       url,
       width,
       height,
@@ -1543,7 +1509,6 @@ class Builder {
       thumbnails,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     };
@@ -1561,21 +1526,20 @@ class Builder {
     body?: string | undefined;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource | undefined {
-    const { type, url, body, license, copyright, provider, showInIndex, caption } = data;
+    const { type, url, body, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource = {
       type,
       format: this.extractResourceFormatFromUrl(url),
+      provider: this.extractResourceProviderFromUrl(url),
       url,
       body,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     };
@@ -1592,11 +1556,10 @@ class Builder {
     url: string; // url / app
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AppResource | AppLinkResource | undefined {
-    const { type, url, license, copyright, provider, showInIndex, caption } = data;
+    const { type, url, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AppResource | AppLinkResource = {
@@ -1604,7 +1567,6 @@ class Builder {
       url,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     };
@@ -1628,6 +1590,17 @@ class Builder {
     }
 
     return format;
+  }
+
+  protected extractResourceProviderFromUrl(url: string | undefined): string | undefined {
+    let domain: string | undefined;
+
+    if (url) {
+      const parsedUrl = new URL(url);
+      domain = parsedUrl.hostname;
+    }
+
+    return domain;
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

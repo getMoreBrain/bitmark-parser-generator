@@ -1524,7 +1524,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
           break;
 
         case ResourceType.videoLink:
-          (resourceJson as VideoLinkResourceWrapperJson).videoLink = this.addVideoLikeResource(
+          (resourceJson as VideoLinkResourceWrapperJson).videoLink = this.addVideoLinkLikeResource(
             resource as VideoResource,
           );
           break;
@@ -1588,6 +1588,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     const resourceJson: Partial<ImageResourceJson | ImageLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
     if (resource.url != null) resourceJson.src = resource.url;
     if (resource.src1x != null) resourceJson.src1x = resource.src1x;
     if (resource.src2x != null) resourceJson.src2x = resource.src2x;
@@ -1606,6 +1607,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     const resourceJson: Partial<AudioResourceJson | AudioLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
     if (resource.url != null) resourceJson.src = resource.url;
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
@@ -1617,6 +1619,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     const resourceJson: Partial<AudioLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
     if (resource.url != null) resourceJson.url = resource.url;
 
     // Properties that are always added that do not come from the markup
@@ -1628,10 +1631,11 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return resourceJson as AudioLinkResourceJson;
   }
 
-  protected addVideoLikeResource(resource: VideoResource): VideoResourceJson | VideoLinkResourceJson {
-    const resourceJson: Partial<VideoResourceJson | VideoLinkResourceJson> = {};
+  protected addVideoLikeResource(resource: VideoResource): VideoResourceJson {
+    const resourceJson: Partial<VideoResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
     if (resource.url != null) resourceJson.src = resource.url;
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
@@ -1657,10 +1661,41 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return resourceJson as VideoResourceJson | VideoLinkResourceJson;
   }
 
+  protected addVideoLinkLikeResource(resource: VideoResource): VideoLinkResourceJson {
+    const resourceJson: Partial<VideoLinkResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.url != null) resourceJson.url = resource.url;
+    resourceJson.width = resource.width ?? null;
+    resourceJson.height = resource.height ?? null;
+
+    if (resource.duration != null) resourceJson.duration = resource.duration;
+    if (resource.mute != null) resourceJson.mute = resource.mute;
+    if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
+    if (resource.allowSubtitles != null) resourceJson.allowSubtitles = resource.allowSubtitles;
+    if (resource.showSubtitles != null) resourceJson.showSubtitles = resource.showSubtitles;
+
+    if (resource.alt != null) resourceJson.alt = resource.alt;
+
+    if (resource.posterImage != null) resourceJson.posterImage = this.addImageLikeResource(resource.posterImage);
+    if (resource.thumbnails != null && resource.thumbnails.length > 0) {
+      resourceJson.thumbnails = [];
+      for (const thumbnail of resource.thumbnails) {
+        resourceJson.thumbnails.push(this.addImageLikeResource(thumbnail));
+      }
+    }
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as VideoLinkResourceJson;
+  }
+
   protected addArticleLikeResource(resource: ArticleResource): ArticleResourceJson | DocumentResourceJson {
     const resourceJson: Partial<ArticleResourceJson | DocumentResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
     if (resource.url != null) resourceJson.body = resource.url;
     // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
@@ -1673,6 +1708,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     const resourceJson: Partial<ArticleLikeResourceJson | DocumentLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
     if (resource.url != null) resourceJson.url = resource.url;
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
@@ -1848,6 +1884,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       statement: undefined,
       isCorrect: undefined,
       sampleSolution: undefined,
+      partialAnswer: undefined,
       elements: undefined,
       statements: undefined,
       responses: undefined,
@@ -1876,10 +1913,19 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
    * @returns
    */
   protected cleanBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
+    // Clear 'item' which may be an empty string if 'lead' was set but item not
+    // Only necessary because '.article' does not include a default value for 'item'
+    // which is totally inconsistent, but maybe is wanted.
+    if (!bitJson.item) bitJson.item = undefined;
+
     // Add default properties to the bit.
     // NOTE: Not all bits have the same default properties.
     //       The properties used in the antlr parser are a bit random sometimes?
     switch (bitJson.type) {
+      case BitType.article:
+        if (bitJson.body == null) bitJson.body = '';
+        break;
+
       case BitType.assignment:
       case BitType.book:
       case BitType.cloze:
@@ -1895,22 +1941,33 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       case BitType.quote:
       case BitType.remark:
       case BitType.sideNote:
+      case BitType.takePicture:
         if (bitJson.item == null) bitJson.item = '';
         if (bitJson.hint == null) bitJson.hint = '';
         if (bitJson.isExample == null) bitJson.isExample = false;
         if (bitJson.example == null) bitJson.example = '';
+        if (bitJson.body == null) bitJson.body = '';
         break;
 
       case BitType.multipleChoice1:
       case BitType.multipleResponse1:
       case BitType.sequence:
-      case BitType.takePicture:
         if (bitJson.item == null) bitJson.item = '';
         if (bitJson.hint == null) bitJson.hint = '';
         if (bitJson.instruction == null) bitJson.instruction = '';
         if (bitJson.isExample == null) bitJson.isExample = false;
         if (bitJson.example == null) bitJson.example = '';
         if (bitJson.body == null) bitJson.body = '';
+        break;
+
+      case BitType.essay:
+        if (bitJson.item == null) bitJson.item = '';
+        if (bitJson.hint == null) bitJson.hint = '';
+        if (bitJson.instruction == null) bitJson.instruction = '';
+        if (bitJson.isExample == null) bitJson.isExample = false;
+        if (bitJson.example == null) bitJson.example = '';
+        if (bitJson.body == null) bitJson.body = '';
+        if (bitJson.partialAnswer == null) bitJson.partialAnswer = '';
         break;
 
       case BitType.trueFalse1:
@@ -1940,6 +1997,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         if (bitJson.example == null) bitJson.example = '';
         if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
         if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
+        if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
         if (bitJson.body == null) bitJson.body = '';
         break;
 
@@ -1957,6 +2015,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       case BitType.matchReverse:
         if (bitJson.item == null) bitJson.item = '';
         if (bitJson.heading == null) bitJson.heading = {} as HeadingJson;
+        if (bitJson.body == null) bitJson.body = '';
         break;
 
       case BitType.matchMatrix:
@@ -2028,6 +2087,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (bitJson.statement == null) delete bitJson.statement;
     if (bitJson.isCorrect == null) delete bitJson.isCorrect;
     if (bitJson.sampleSolution == null) delete bitJson.sampleSolution;
+    if (bitJson.partialAnswer == null) delete bitJson.partialAnswer;
     if (bitJson.elements == null) delete bitJson.elements;
     if (bitJson.statements == null) delete bitJson.statements;
     if (bitJson.responses == null) delete bitJson.responses;

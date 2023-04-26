@@ -1,4 +1,5 @@
 [.article:bitmark--]
+|| Fails on unicode characters in the ANTLR parser ||
 [@id:145791]
 [%Eine Welt voller Informationen]
 Die erste Theorie der Information geht auf das Jahr 1948 zurück, als der Mathematiker Claude Shannon darüber nachdachte, wie sich die Übertragung von Nachrichten besser bewerkstelligen lässt. Shannon gelangte zu der Erkenntnis, dass dieses „besser“ bedeutet, sich nicht auf die inhaltliche Bedeutung der Nachricht zu konzentrieren. Er schränkt sich ein und klammert das Komplexe und Komplizierte erst einmal aus. Shannon schreibt: „ Das fundamentale Problem der Kommunikation besteht darin, an einem Punkt eine Nachricht, die an einem anderen Punkt ausgewählt wurde, exakt oder näherungsweise wiederzugeben. Oft haben Nachrichten eine __Bedeutung__, das heißt, sie beziehen sich auf ein System oder sind korreliert mit einem System, das bestimmte physikalische konzeptuelle Entitäten besitzt. Diese semantischen Aspekte der Kommunikation sind für das technische Problem irrelevant.“ Dank dieser Einschränkung gelingt es Shannon, eine vollständige mathematische Theorie der Information zu entwickeln. Sie bietet den Vorteil, unabhängig davon zu sein, in welcher Form die Information vorliegt – als Schrift, als Muster, als Bild oder wie auch immer. Die Information muss nur durch einen Code auf Nullen und Einsen zurückzuführen sein, und die dabei entstehenden Folgen gilt es dann zu zählen.
@@ -11,3 +12,13 @@ In seinen zwei Arbeiten mit dem Originaltitel __A Mathematical Theory of Communi
 V W X Y Z [ \ ] ^ _ ` 	a b c d e f g h i j k l m n o p q
 r s t u v w x y z { | } ~
 
+[.article:bitmark--&image]
+|| Fails on image format extraction in ANTLR parser ||
+[@id:295724]
+[&image:https://docs.bitmark.cloud/bit-books/axa/effektive_software-architekturen/web-resources/images/k2/axa_effektive_software_architekturen_k2_11]
+
+
+[.article:bitmark--]
+|| Fails on \u0002 unicode spaces in the ANTLR parser ||
+[@id:295962]
+Hierzu gehören die üblicherweise als Mengengerüste bezeichneten Informationen: Wie viele Benutzer bearbeiten wann wie viele Daten in welcher Zeit? Welche Reaktionszeiten oder Durchsätze soll das System erbringen, welche Prozessor- oder Datenbanklast darf dabei entstehen?

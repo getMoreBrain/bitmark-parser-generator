@@ -176,8 +176,9 @@ class BitmarkParserHelper {
 
   // For debugging only
   print(header: string, data: unknown): void {
-    console.log(`===== ${header} =====`);
-    console.log(JSON.stringify(data, null, 2));
+    // console.log(`===== ${header} =====`);
+    // console.log(JSON.stringify(data, null, 2));
+    // console.log(`===== END: ${header} =====`);
   }
 
   // Build bits
@@ -228,9 +229,9 @@ class BitmarkParserHelper {
     // Bit type was invalid, so ignore the bit, returning instead the parsing errors
     if (!bitType) return this.invalidBit();
 
-    console.log(`==== bitContent ====`);
-    console.log(JSON.stringify(bitContent, null, 2));
-    console.log(`==== END: bitContent ====`);
+    // console.log(`==== bitContent ====`);
+    // console.log(JSON.stringify(bitContent, null, 2));
+    // console.log(`==== END: bitContent ====`);
 
     const isTrueFalseV1 = bitType === BitType.trueFalse1;
     const isMultipleChoiceV1 = bitType === BitType.multipleChoice1;
@@ -263,17 +264,17 @@ class BitmarkParserHelper {
     // console.log(tags);
     // console.log(`==== END: tags ====`);
 
-    console.log(`==== unparsedBody ====`);
-    console.log(unparsedBody);
-    console.log(`==== END: unparsedBody ====`);
+    // console.log(`==== unparsedBody ====`);
+    // console.log(unparsedBody);
+    // console.log(`==== END: unparsedBody ====`);
 
     // Parse the body
     const parsedBody = this.parse(unparsedBody ?? '', {
       startRule: 'body',
     });
-    console.log(`==== parsedBody ====`);
-    console.log(JSON.stringify(parsedBody, null, 2));
-    console.log(`==== END: parsedBody ====`);
+    // console.log(`==== parsedBody ====`);
+    // console.log(JSON.stringify(parsedBody, null, 2));
+    // console.log(`==== END: parsedBody ====`);
 
     // Build the titles for the specific bit type
     const titles = this.buildTitles(bitType, title ?? []);
@@ -424,7 +425,7 @@ class BitmarkParserHelper {
   buildSelect(bitType: BitTypeType, selectContent: BitContent[]): Select | undefined {
     // const options: SelectOption[] = [];
     // let seenItem = false;
-    console.log(`==== selectContent ====`, selectContent);
+    // console.log(`==== selectContent ====`, selectContent);
 
     const { trueFalse, ...tags } = this.typeKeyDataParser(bitType, selectContent, [
       TypeKey.True,
@@ -435,7 +436,7 @@ class BitmarkParserHelper {
       TypeKey.Hint,
     ]);
 
-    console.log(`==== selectContent TAGS ====`, trueFalse);
+    // console.log(`==== selectContent TAGS ====`, trueFalse);
 
     const options: SelectOption[] = [];
     if (trueFalse) {
@@ -776,7 +777,7 @@ class BitmarkParserHelper {
             if (heading != null) {
               forKeys = heading;
             } else if (tags.resource) {
-              console.log('WARNING: Match card has resource on first side', tags.resource);
+              // console.log('WARNING: Match card has resource on first side', tags.resource);
               if (tags.resource.type === ResourceType.audio) {
                 keyAudio = tags.resource as AudioResource;
               } else if (tags.resource.type === ResourceType.image) {
@@ -939,7 +940,7 @@ class BitmarkParserHelper {
   }
 
   parseTrueFalse_V1(bitType: BitTypeType, trueFalseContent: BitContent[]): BitSpecificTrueFalse_V1 {
-    console.log(`==== parseTrueFalse_V1 ====`, trueFalseContent);
+    // console.log(`==== parseTrueFalse_V1 ====`, trueFalseContent);
 
     // this.print(`==== parseTrueFalse_V1 ====`, trueFalseContent);
 
@@ -958,7 +959,7 @@ class BitmarkParserHelper {
       TypeKey.Hint,
     ]);
 
-    console.log(`==== parseTrueFalse_V1 TAGS ====`, tags);
+    // console.log(`==== parseTrueFalse_V1 TAGS ====`, tags);
 
     let statement: Statement | undefined;
     const choices: Choice[] = [];
@@ -1031,7 +1032,7 @@ class BitmarkParserHelper {
           // Parse the title and its level
           if (!acc.title) acc.title = [];
           const titleValue: { title: string; level: string[] } = value as any;
-          console.log(titleValue);
+          // console.log(titleValue);
           const title = StringUtils.trimmedString(titleValue.title);
           const level = titleValue.level.length;
           acc.title[level] = title;
@@ -1265,9 +1266,9 @@ class BitmarkParserHelper {
 
   processCardLine(value: unknown) {
     this.cardSectionLineCount++;
-    console.log(
-      `CardLine (Card ${this.cardIndex}, Side ${this.cardSideIndex}, Variant: ${this.cardVariantIndex}): ${value}`,
-    );
+    // console.log(
+    //   `CardLine (Card ${this.cardIndex}, Side ${this.cardSideIndex}, Variant: ${this.cardVariantIndex}): ${value}`,
+    // );
     return {
       type: TypeKey.Card,
       value: {

@@ -57,6 +57,7 @@ export interface BitJson {
   body: string;
 
   sampleSolution: string;
+  partialAnswer: string;
   elements: string[];
   statement: string;
   isCorrect: boolean;

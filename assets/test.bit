@@ -1,8 +1,71 @@
-[.interview:bitmark--]
-[@id:198780]
-[%2]
-[!Bei welchen Steuerarten des Bundes ist eine Überwälzung vorgesehen und wie funktioniert sie?]
-===
-[$- Bei der Verrechnungssteuer: Eine Bank überwälzt die Steuerzahllast, indem sie auf dem Zinsertrag 35% an die ESTV abliefert und dem Steuerträger nur 65% ausbezahlt
-- Bei der MWST, indem der MWST-Betrag auf dem Umsatz eingerechnet wird und dem Verbraucher / Konsumenten belastet wird
-(Annahme: Konsument ist nicht selbst MWSTpflichtig, sondern der Endverbraucher !)]
+[.book]
+[@id:187220]
+[#Quiz Bewertungsgespräch]
+[@language:de]
+[@coverImage:https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_quiz_bewertungsgespr.png]
+[@externalId:e-quiz-bewertungsgesprch_yqibvpfbbhoy]
+
+[.article:bitmark--&video-link]
+[@id:187221]
+[&video-link:https://www.youtube.com/watch?v=VHiotHBtpzw]
+Bildungsbericht 3: Vorbereitung auf das Gespräch
+
+[.article:bitmark--&video-link]
+[@id:187222]
+[&video-link:https://www.youtube.com/watch?v=wG_ZUUjQI1k]
+Bildungsbericht 4: Gesprächsführung
+
+[.chapter]
+[▼ch-1]
+[@id:187223]
+[#Quiz Bewertungsgespräch]
+
+[.multiple-response-1:bitmark--]
+[@id:187540]
+[!Was ist das Ziel eines Beurteilungsgesprächs? Bitte wählen Sie alle zutreffenden Antworten]
+[-Die Lerndokumentation überprüfen]
+[-Die Lernenden besser kennenzulernen]
+[+Rückmeldung zum Verhalten und Leistung]
+[+Überprüfen der betrieblichen Ausbildung und deren Zielen]
+
+[.multiple-response-1:bitmark--]
+[@id:187541]
+[!Welche Informationsquellen für die Vorbereitung eines Gesprächs kennst du?
+Bitte wählen Sie alle zutreffenden Antworten]
+[+Rückmeldungen Praxisbildner/Berufsbildner]
+[+Beobachtungen am Arbeitsplatz]
+[-Gehörtes von Arbeitskollegen]
+[+Lerndokumentation]
+
+[.multiple-response-1:bitmark--]
+[@id:187542]
+[!Wie schaffst du eine angenehme Gesprächsumgebung? Bitte wählen Sie alle zutreffenden Antworten]
+[+Die Dauer des Gesprächs definieren]
+[-Mit den Zielen für das nächste Semester beginnen]
+[+Mit einem 'Eisbrecher' starten]
+[+Der Sinn des Gesprächs erklären]
+
+[.multiple-response-1:bitmark--]
+[@id:187543]
+[!Wenn du das Beurteilungsgespräch alleine führst, was ist dabei zu beachten?
+Bitte wählen Sie alle zutreffenden Antworten]
+[+Genügend Zeit einberechnen]
+[+Rückmeldungen bei anderen Berufsbildner/Praxisbildner K° einholen]
+[-Dass der Raum gross genug ist]
+[+Mich absichern was ich von den anderen BB/PB rückmelden darf]
+
+[.multiple-response-1:bitmark--]
+[@id:187544]
+[!Nach welchen Beurteilungsmerkmalen beurteilst du die Teamfähigkeit? Bitte wählen Sie alle zutreffenden Antworten]
+[+Umgang mit Kritik]
+[+Beteiligt sich der Lernende in Gesprächen aktiv]
+[+Bringt sich der Lernende ins Team ein]
+[-Pünktlichkeit]
+
+[.multiple-response-1:bitmark--]
+[@id:187545]
+[!Was geschieht am Ende eines Beurteilungsgesprächs? Bitte wählen Sie alle zutreffenden Antworten]
+[+Es werden Ziele und Massnahmen für das nächste Semester M definiert]
+[+Positiver Gesprächsabschluss (z.B mit Lob, Wertschätzung, attraktive Aufgabe in Aussicht stellen)]
+[-Verbesserungschritte werden ausführlich diskutiert]
+[-Die Lerndokumentation kontrolliert und korrigiert]

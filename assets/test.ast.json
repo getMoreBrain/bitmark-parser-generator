@@ -1,23 +1,215 @@
 {
   "bits": [
     {
-      "bitType": "interview",
+      "bitType": "book",
       "textFormat": "bitmark--",
       "ids": [
-        "198780"
+        "187220"
       ],
-      "itemLead": {
-        "item": "2"
+      "externalIds": [
+        "e-quiz-bewertungsgesprch_yqibvpfbbhoy"
+      ],
+      "languages": [
+        "de"
+      ],
+      "coverImages": [
+        "https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_quiz_bewertungsgespr.png"
+      ],
+      "title": "Quiz Bewertungsgespräch"
+    },
+    {
+      "bitType": "article",
+      "textFormat": "bitmark--",
+      "ids": [
+        "187221"
+      ],
+      "resource": {
+        "type": "video-link",
+        "url": "https://www.youtube.com/watch?v=VHiotHBtpzw",
+        "provider": "www.youtube.com"
       },
-      "instruction": "Bei welchen Steuerarten des Bundes ist eine Überwälzung vorgesehen und wie funktioniert sie?",
-      "questions": [
+      "body": [
         {
-          "sampleSolution": "- Bei der Verrechnungssteuer: Eine Bank überwälzt die Steuerzahllast, indem sie auf dem Zinsertrag 35% an die ESTV abliefert und dem Steuerträger nur 65% ausbezahlt\n- Bei der MWST, indem der MWST-Betrag auf dem Umsatz eingerechnet wird und dem Verbraucher / Konsumenten belastet wird\n(Annahme: Konsument ist nicht selbst MWSTpflichtig, sondern der Endverbraucher !)"
+          "bodyText": "Bildungsbericht 3: Vorbereitung auf das Gespräch"
         }
+      ]
+    },
+    {
+      "bitType": "article",
+      "textFormat": "bitmark--",
+      "ids": [
+        "187222"
       ],
-      "footer": {
-        "footerText": ""
-      }
+      "resource": {
+        "type": "video-link",
+        "url": "https://www.youtube.com/watch?v=wG_ZUUjQI1k",
+        "provider": "www.youtube.com"
+      },
+      "body": [
+        {
+          "bodyText": "Bildungsbericht 4: Gesprächsführung"
+        }
+      ]
+    },
+    {
+      "bitType": "chapter",
+      "textFormat": "bitmark--",
+      "ids": [
+        "187223"
+      ],
+      "title": "Quiz Bewertungsgespräch",
+      "level": 1,
+      "toc": true,
+      "progress": true,
+      "anchor": "ch-1"
+    },
+    {
+      "bitType": "multiple-response-1",
+      "textFormat": "bitmark--",
+      "ids": [
+        "187540"
+      ],
+      "instruction": "Was ist das Ziel eines Beurteilungsgesprächs? Bitte wählen Sie alle zutreffenden Antworten",
+      "responses": [
+        {
+          "text": "Die Lerndokumentation überprüfen"
+        },
+        {
+          "text": "Die Lernenden besser kennenzulernen"
+        },
+        {
+          "text": "Rückmeldung zum Verhalten und Leistung",
+          "isCorrect": true
+        },
+        {
+          "text": "Überprüfen der betrieblichen Ausbildung und deren Zielen",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "bitType": "multiple-response-1",
+      "textFormat": "bitmark--",
+      "ids": [
+        "187541"
+      ],
+      "instruction": "Welche Informationsquellen für die Vorbereitung eines Gesprächs kennst du?\nBitte wählen Sie alle zutreffenden Antworten",
+      "responses": [
+        {
+          "text": "Rückmeldungen Praxisbildner/Berufsbildner",
+          "isCorrect": true
+        },
+        {
+          "text": "Beobachtungen am Arbeitsplatz",
+          "isCorrect": true
+        },
+        {
+          "text": "Gehörtes von Arbeitskollegen"
+        },
+        {
+          "text": "Lerndokumentation",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "bitType": "multiple-response-1",
+      "textFormat": "bitmark--",
+      "ids": [
+        "187542"
+      ],
+      "instruction": "Wie schaffst du eine angenehme Gesprächsumgebung? Bitte wählen Sie alle zutreffenden Antworten",
+      "responses": [
+        {
+          "text": "Die Dauer des Gesprächs definieren",
+          "isCorrect": true
+        },
+        {
+          "text": "Mit den Zielen für das nächste Semester beginnen"
+        },
+        {
+          "text": "Mit einem 'Eisbrecher' starten",
+          "isCorrect": true
+        },
+        {
+          "text": "Der Sinn des Gesprächs erklären",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "bitType": "multiple-response-1",
+      "textFormat": "bitmark--",
+      "ids": [
+        "187543"
+      ],
+      "instruction": "Wenn du das Beurteilungsgespräch alleine führst, was ist dabei zu beachten?\nBitte wählen Sie alle zutreffenden Antworten",
+      "responses": [
+        {
+          "text": "Genügend Zeit einberechnen",
+          "isCorrect": true
+        },
+        {
+          "text": "Rückmeldungen bei anderen Berufsbildner/Praxisbildner K° einholen",
+          "isCorrect": true
+        },
+        {
+          "text": "Dass der Raum gross genug ist"
+        },
+        {
+          "text": "Mich absichern was ich von den anderen BB/PB rückmelden darf",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "bitType": "multiple-response-1",
+      "textFormat": "bitmark--",
+      "ids": [
+        "187544"
+      ],
+      "instruction": "Nach welchen Beurteilungsmerkmalen beurteilst du die Teamfähigkeit? Bitte wählen Sie alle zutreffenden Antworten",
+      "responses": [
+        {
+          "text": "Umgang mit Kritik",
+          "isCorrect": true
+        },
+        {
+          "text": "Beteiligt sich der Lernende in Gesprächen aktiv",
+          "isCorrect": true
+        },
+        {
+          "text": "Bringt sich der Lernende ins Team ein",
+          "isCorrect": true
+        },
+        {
+          "text": "Pünktlichkeit"
+        }
+      ]
+    },
+    {
+      "bitType": "multiple-response-1",
+      "textFormat": "bitmark--",
+      "ids": [
+        "187545"
+      ],
+      "instruction": "Was geschieht am Ende eines Beurteilungsgesprächs? Bitte wählen Sie alle zutreffenden Antworten",
+      "responses": [
+        {
+          "text": "Es werden Ziele und Massnahmen für das nächste Semester M definiert",
+          "isCorrect": true
+        },
+        {
+          "text": "Positiver Gesprächsabschluss (z.B mit Lob, Wertschätzung, attraktive Aufgabe in Aussicht stellen)",
+          "isCorrect": true
+        },
+        {
+          "text": "Verbesserungschritte werden ausführlich diskutiert"
+        },
+        {
+          "text": "Die Lerndokumentation kontrolliert und korrigiert"
+        }
+      ]
     }
   ]
 }

@@ -43,6 +43,11 @@ class BitJsonUtils {
               if (!resource.provider) delete resource.provider;
               if (!resource.showInIndex) delete resource.showInIndex;
               if (!resource.caption) delete resource.caption;
+              if (!resource.duration) delete resource.duration;
+
+              // Ignore provider and format because they are generated (sometimes incorrectly by ANTLR parser)
+              delete resource.provider;
+              delete resource.format;
             }
           }
         }

@@ -202,14 +202,14 @@ cardContent
   = value: (CardContentTags / BodyChar)* { return value; }
 
 CardContentTags
-  = value: (ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueTag / FalseTag / PropertyTag / TitleTag / ResourceTags) { return value; }
+  = value: (CommentTag / ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueTag / FalseTag / PropertyTag / TitleTag / ResourceTags) { return value; }
 
 //
 // Resource
 //
 ResourceTags
   = value: ResourceTag props: ResourcePropertyTag* {
-    console.log('RESOURCE_TAGS', value, props);
+    // console.log('RESOURCE_TAGS', value, props);
 
     // TODO - insert other tags values into the resource tag value
     return helper.processResourceTags(value, props);
