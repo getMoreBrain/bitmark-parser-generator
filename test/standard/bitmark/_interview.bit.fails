@@ -53,3 +53,36 @@ Erstellung von neuen Garagen anstelle der bisherigen Parkplätze zwecks Erzielun
 [$Es handelt sich bei den Garagen um wertvermehrende Anlagekosten, die keine Gewinnungskosten darstellen.]
 ===
 
+
+[.interview:bitmark--&image]
+|| Incorrect body in ANTLR parser ||
+[@id:136477]
+[%2]
+[&image:https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/mathe_2019/web-resources/images/aufnahmepruefung1.png]
+
+[!__Auf dem Ponyhof__]
+===
+a) Wie gross ist der Futterbedarf im Monat März für alle Ponys?
+===
+b) Wie viel sollte ein Reiter eines Ponys mit durchschnittlichem Gewicht höchstens wiegen?
+===
+c) Einmal pro Tag wird Wasser für die Ponys bereitgestellt. Wie viele Wassertröge werden mindestens benötigt?
+===
+
+
+[.interview:bitmark--]
+|| Incorrectly terminated card ==== not === ||
+[@id:136417]
+[!Bilde mit den vorgegebenen Satzanfängen und Wörtern einen vollständigen Satz. Du darfst weder ein Wort verändern noch weitere Wörter hinzufügen. **Achtung: Nur wenn alle Wörter richtig geschrieben sind, erhältst du die volle Punktzahl!**]
+
+===
+**Phrase 1**
+avec / beaucoup / chien / d'automne / de / Lise / fait / les / promenades / son / vacances
+Pendant
+[$les vacances d'automne Lise fait beaucoup de promenades avec son chien. / les vacances d'automne, Lise fait avec son chien beaucoup de promenades.]
+===
+**Phrase 2**
+à /amis / au bord / du / fête / inviter/lac / leurs / leur/ vont
+Lise et Nicolas
+[$vont inviter leurs amis à leur fête au bord du lac. / vont inviter leurs amis au bord du lac à leur fête.]
+====

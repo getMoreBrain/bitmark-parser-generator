@@ -1,4 +1,5 @@
 [.match-solution-grouped]
+||body incorrectely contains ===\n=== etc in the ANTLR parser output||
 [@id:136377]
 [%10_Beschaffung_043 (Match) - 1]
 [!Für welche der unten aufgeführten Konstellationen empfehlen Sie eher mehr bzw. eher weniger spezifische Massnahmen zum Controlling von Lieferanten?]
@@ -29,6 +30,7 @@ eher nein
 ===
 
 [.match-solution-grouped]
+||body incorrectely contains ===\n=== etc in the ANTLR parser output||
 [@id:136378]
 [%01_Grundlagen_B_001 ]
 [!Handelt es sich bei den in der Tabelle erwähnten Vorhaben um Projekte? Begründen Sie Ihre Antwort.]
@@ -60,6 +62,7 @@ nein
 ||todo: ja&nein - fehler? ||
 
 [.match-solution-grouped]
+||body incorrectely contains ===\n=== etc in the ANTLR parser output||
 [@id:136379]
 [%01_Grundlagen_B_002]
 [!Ordnen Sie in der folgenden Tabelle die aufgeführten Merkmale jeweils dem Tagesgeschäft im Unternehmen oder einem Projekt zu.]
@@ -93,6 +96,7 @@ Tagesgeschäft
 
 
 [.match-solution-grouped:bitmark--]
+||body incorrectely contains ===\n=== etc in the ANTLR parser output||
 [@id:213726]
 [%4]
 [!Ordnen Sie den Schritten aus dem Marketingkonzept die richtigen Fragen zu.]

@@ -352,7 +352,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> bitValue -> actions
 
   protected enter_actions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'action', node.value);
+    if (node.value != null) this.addProperty(this.bitJson, 'action', node.value, true);
   }
 
   // bitmark -> bits -> bitValue -> thumbImages
@@ -437,6 +437,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     // Ensure placeholders exists
     if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
+
+    // Ensure body exists
+    if (this.bitJson.body == null) this.bitJson.body = '';
 
     // Add the placeholder to the body
     const placeholder = `{${this.placeholderIndex}}`;
@@ -1173,13 +1176,13 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //  bitmark -> bits -> bitValue -> externalLink
 
   protected leaf_externalLink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'externalLink', node.value);
+    if (node.value != null) this.addProperty(this.bitJson, 'externalLink', node.value, true);
   }
 
   //  bitmark -> bits -> bitValue -> externalLinkText
 
   protected leaf_externalLinkText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'externalLinkText', node.value);
+    if (node.value != null) this.addProperty(this.bitJson, 'externalLinkText', node.value, true);
   }
 
   //  bitmark -> bits -> bitValue -> labelTrue
@@ -1871,6 +1874,10 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       example: undefined,
       isExample: undefined,
 
+      // Only .learningPathExternalLink?
+      isTracked: undefined,
+      isInfoOnly: undefined,
+
       // Extra Properties
       extraProperties: undefined,
 
@@ -2013,6 +2020,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
       case BitType.match:
       case BitType.matchReverse:
+      case BitType.matchSolutionGrouped:
         if (bitJson.item == null) bitJson.item = '';
         if (bitJson.heading == null) bitJson.heading = {} as HeadingJson;
         if (bitJson.body == null) bitJson.body = '';
@@ -2020,6 +2028,17 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
       case BitType.matchMatrix:
         if (bitJson.item == null) bitJson.item = '';
+        break;
+
+      case BitType.learningPathExternalLink:
+        if (bitJson.item == null) bitJson.item = '';
+        if (bitJson.hint == null) bitJson.hint = '';
+        if (bitJson.isExample == null) bitJson.isExample = false;
+        if (bitJson.example == null) bitJson.example = '';
+        if (bitJson.example == null) bitJson.example = '';
+        if (bitJson.isTracked == null) bitJson.isTracked = true;
+        if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
+        if (bitJson.body == null) bitJson.body = '';
         break;
 
       default:

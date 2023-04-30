@@ -5,6 +5,7 @@ import { Builder } from '../../ast/Builder';
 import { CardSet } from '../../model/ast/CardSet';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { PropertyKey } from '../../model/enum/PropertyKey';
+import { ResourcePropertyKey } from '../../model/enum/ResourcePropertyKey';
 import { ResourceType, ResourceTypeType } from '../../model/enum/ResourceType';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { ParserError } from '../../model/parser/ParserError';
@@ -1052,15 +1053,45 @@ class BitmarkParserHelper {
         case TypeKey.Property: {
           if (PropertyKey.fromValue(key)) {
             // Known property
-            if (key === PropertyKey.shortAnswer) {
-              acc.isShortAnswer = value;
-            } else if (key === PropertyKey.caseSensitive) {
-              acc.isCaseSensitive = value;
-            } else if (key === PropertyKey.quotedPerson) {
-              // Ensure value is trimmed
-              acc.quotedPerson = ((value as string) ?? '').trim();
-            } else {
-              acc[key] = value;
+            switch (key) {
+              case PropertyKey.shortAnswer: {
+                acc.isShortAnswer = value;
+                break;
+              }
+              case PropertyKey.caseSensitive: {
+                acc.isCaseSensitive = value;
+                break;
+              }
+              case PropertyKey.id:
+              case PropertyKey.externalId:
+              case PropertyKey.ageRange:
+              case PropertyKey.language:
+              case PropertyKey.computerLanguage:
+              case PropertyKey.coverImage:
+              case PropertyKey.publisher:
+              case PropertyKey.publications:
+              case PropertyKey.author:
+              case PropertyKey.date:
+              case PropertyKey.location:
+              case PropertyKey.theme:
+              case PropertyKey.kind:
+              case PropertyKey.action:
+              case PropertyKey.thumbImage:
+              case PropertyKey.duration:
+              case PropertyKey.deeplink:
+              case PropertyKey.externalLink:
+              case PropertyKey.externalLinkText:
+              case PropertyKey.videoCallLink:
+              case PropertyKey.bot:
+              case PropertyKey.list:
+              case PropertyKey.quotedPerson: {
+                // Trim specific string properties - It might be better NOT to do this, but ANTLR parser does it
+                acc[key] = ((value as string) ?? '').trim();
+                break;
+              }
+              default: {
+                acc[key] = value;
+              }
             }
           } else {
             // Unknown (extra) property
@@ -1185,7 +1216,24 @@ class BitmarkParserHelper {
     // Merge extra properties into the resource type (TODO = check if valid??)
     for (const p of extraProps) {
       if (!invalidResourceExtraProperties.includes(p.key)) {
-        resourceValue[p.key] = p.value;
+        switch (p.key) {
+          case ResourcePropertyKey.license:
+          case ResourcePropertyKey.copyright:
+          case ResourcePropertyKey.provider:
+          case ResourcePropertyKey.caption:
+          case ResourcePropertyKey.src1x:
+          case ResourcePropertyKey.src2x:
+          case ResourcePropertyKey.src3x:
+          case ResourcePropertyKey.src4x:
+          case ResourcePropertyKey.alt:
+          case ResourcePropertyKey.duration:
+            // Trim specific string properties - It might be better NOT to do this, but ANTLR parser does it
+            resourceValue[p.key] = `${p.value ?? ''}`.trim();
+            break;
+
+          default:
+            resourceValue[p.key] = p.value;
+        }
       }
     }
 

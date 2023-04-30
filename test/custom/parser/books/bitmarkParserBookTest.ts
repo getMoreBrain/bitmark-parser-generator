@@ -13,55 +13,194 @@ import { FileUtils } from '../../../../src/utils/FileUtils';
 import { BitJsonUtils } from '../../../utils/BitJsonUtils';
 import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 
-// Passed: 6, 8-10, 12, 15-28, 30, 32-33
+// Passed: 5, 7-9, 11, 14-28, 30, 32-33, 35, 37-39, 42, 46, 49-60, 62, 79, 86-87, 90-94, 97-98, 110
+//         116, 119-125, 132, 136-137, 139-146, 149-150, 169, 175, 181, 184, 186, 188, 191, 197, 200-205
+//         207, 210, 216-217, 225-226, 228, 239, 241, 244, 261, 263-264, 274, 279, 285
 // Failed:
 // - 0: akad_2_aufgabenset_1 (.interview missing last ===)
 // - 1: akad_2_aufgabenset_2 (.book, invalid coverImage tag (empty value))
-// - 3: akad_2_aufgabenset_3 (.interview missing last ===)
-// - 4: akad_2_aufgabenset_4 (.interview ANTLR parser does not handle ✓ in sampleSolution)
-// - 5: akad_2_aufgabenset_5 (.multiple-choice has body text in the cardset - ANTLR parser adds this to the body, new parser does not)
-// - 7: akad_mehrwertsteuer_gruppenbesteuerung (.book, invalid coverImage tag (empty value))
-// - 11: axa_effektive_software_architekturen_k1 (wrong format in resource, ANTLR parser fails on unicode characters)
-// - 13: effektive_software_architekturen_axa_version (wrong format in resource, ANTLR parser fails on unicode characters)
-// - 14: effektive_software_architekturen_axa_version_v2 (wrong format in resource, ANTLR parser fails on unicode characters)
+// - 2: akad_2_aufgabenset_3 (.interview missing last ===)
+// - 3: akad_2_aufgabenset_4 (.interview ANTLR parser does not handle ✓ in sampleSolution)
+// - 4: akad_2_aufgabenset_5 (.multiple-choice has body text in the cardset - ANTLR parser adds this to the body, new parser does not)
+// - 6: akad_mehrwertsteuer_gruppenbesteuerung (.book, invalid coverImage tag (empty value))
+// - 10: axa_effektive_software_architekturen_k1 (wrong format in resource, ANTLR parser fails on unicode characters)
+// - 12: effektive_software_architekturen_axa_version (wrong format in resource, ANTLR parser fails on unicode characters)
+// - 13: effektive_software_architekturen_axa_version_v2 (wrong format in resource, ANTLR parser fails on unicode characters)
 // - 29: berufsbildner_qualicarte (bullet, ANTLR parser error?)
 // - 31: berufsbildner_quiz_bewertungsgespraech (bullet, ANTLR parser error - bits end up with errors, but single bits parse ok??)
+// - 34: das_methodenbuch_teil_1 (extra title level that is not supported in book, strange control character fails in ANTLR)
+// - 36: das_methodenbuch_teil_3 (excess resource in article - how best to handle?)
+// - 40: zentrale_aufnahmepruefung_2019_mathe (.interview incorrect body ANTLR parser)
+// - 41: zentrale_aufnahmepruefung_2020_fr (.interview incorrectly terminated with ====)
+// - 43: bookboon_big_data (Fails on comment at end of line containing https://www.gartner.com/it/page.jsp?id=2194315 - not sure if this should be considered a comment or not?!)
+// - 44: bookboon_learning_developement_staying_relevant (Fails on comment at end of line containing https://www.gartner.com/it/page.jsp?id=2194315 - not sure if this should be considered a comment or not?!)
+// - 45: bookboon_learning_development_21 (Fails on ∑ unicode character in the ANTLR parser)
+// - 47: bumbacher_1a_quiz (Fails because bitmark format is missing -- or ++)
+// - 48: bumbacher_1a_survey (Not sure if .survey bit is still supported and if so how. Generates JSON with bullets)
+// - 61: bumbacher_vier_facetten (Not sure if .self-assesment is still supported. Parses to 'bullets' and strange body)
+// - 63: adjektive_gegenteil (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 64: anatomie_einfuehrung (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 65: baustoffkunde (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 66: bautechnik (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 67: business_english_1 (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 68: e-trading (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 69: einfuehrung_in_die_politische_philosophie (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 70: hermes_51_foundation (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 71: knobelaufgaben (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 72: laender_und_hauptstaedte (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 73: psychiatrie_geschichte (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 74: psychology (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 75: sozialstrukturanalyse (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 76: uebungsaufgaben_wi_bba (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
+// - 77: fage_band8 ([!instruction] at end of body line - parsers differ, not sure what is correct thing to do / The [%items] are incorrectly interpreted by the ANTLR parser as being at the top level)
+// - 78: gesundheitsförderung_und_krankheitsprävention_für_die_haut
+// - 80: compendio_change_management
+// - 81: compendio_repetitionsfragen.txt
+// - 82: marketing
+// - 83: quizzes_marketing_unternehmensfuehrung
+// - 84: unternehmensfuehrung
+// - 85: cornelsen_ab.txt
+// - 88: deepdive_pesto
+// - 89: deepdive_ruesten
+// - 95: dike_buch_information_als_snippets
+// - 96: dw_et_a1.txt
+// - 99: eb_zuerich_et_a1.txt
+// - 100: eb_zuerich_et_a2.txt
+// - 101: unit1
+// - 102: unit2
+// - 103: electrosuisse_sl_content
+// - 104: electrosuisse_sl_design
+// - 105: n15
+// - 106: schulungsunterlagen
+// - 107: web_content
+// - 108: englisch_helfen_adjektiv
+// - 109: englisch_hilfen-phrasal
+// - 111: englisch_hilfen_adjektiv
+// - 112: englisch_hilfen_artikel
+// - 113: englisch_hilfen_complex_tests
+// - 114: englisch_hilfen_complex_tests_2
+// - 115: englisch_hilfen_fragen
+// - 117: englisch_hilfen_hilfsverben
+// - 118: englisch_hilfen_if_saetze
+// - 126: englisch_hilfen_satz
+// - 127: englisch_hilfen_substantiv
+// - 128: englisch_hilfen_verb
+// - 129: englisch_hilfen_zeitformen
+// - 130: klett_beispiel_sprachen.txt
+// - 131: f1rst_die_unternehmensformel
+// - 133: f1rst_hypnotic_mind
+// - 134: f1rst_lehrgang
+// - 135: f1rst_lehrgang_1
+// - 138: f1rst_lehrgang_29
+// - 147: f1rst_lehrgang_probleme
+// - 148: f1rst_lehrgang_start
+// - 151: get_abstract_der_fuerst.txt
+// - 152: get_abstract_unternehmensethik.txt
+// - 153: get_abstract_warum_es_so_schwierig.txt
+// - 154: global_citizen_program
+// - 155: gmb_bitmark_article.txt
+// - 156: gmb_bitmark_artikel.txt
+// - 157: gmb_digitalisierung_des_lernens.txt
+// - 158: gmb_digitization_of_learning.txt
+// - 159: gmb_manual
+// - 160: gmb_quizzes
+// - 161: gmb_quizzes_for_design
+// - 162: gmb_quizzes_v2
+// - 163: gmb_release_notes
+// - 164: gmb_test_book_utf8
+// - 165: gmb_theme_book
+// - 166: haufe_future_learning_und_new_work
+// - 167: hep_uebungen
+// - 168: hgf_bewertung_probekochen
+// - 170: hgf_bildungsbericht_probekochen
+// - 171: hgf_pauli_band_2
+// - 172: hgf_pauli_band_3
+// - 173: hgf_praxisauftrag
+// - 174: hgf_referenzgericht_v2
+// - 176: ict_darstellung_von_daten
+// - 177: ict_darstellung_von_daten_2
+// - 178: ict_rechnen_mit_daten
+// - 179: ict_sichere_passwoerter
+// - 180: ielts_preparation_1
+// - 182: ielts_preparation_3
+// - 183: ielts_preparation_4
+// - 185: interkantonale_lehrmittelzentrale_lehrmittel_in_einer_digitalen_welt
+// - 187: email_templates
+// - 189: learningpool_experience
+// - 190: personalised_learning
+// - 192: st_gallen_leher.txt
+// - 193: st_gallen_schueler.txt
+// - 194: lernen_will_mehr_betriebswirtschaft
+// - 195: medium_artwork_personalization
+// - 196: medium_biennales_are_ending_final
+// - 198: medium_cybersecurity_guide
+// - 199: medium_literally_literary_suicide_final
+// - 206: medium_toxic_positivity
+// - 208: 1101_checklisten_muster_gueter_u_erbrecht
+// - 209: 1111_grundlagen_des_gueter_u_erbrechts
+// - 211: 1203_steuern_und_kapitalanlagen
+// - 212: 1218_modul_steuern_einstiegsfragebogen
+// - 213: 2002_wohneigentumsförderung
+// - 214: 4213_bvg_basics
+// - 215: 6108_gueter_u_erbrecht_pruefungstraining
+// - 218: 1_navigation
+// - 219: 2_seiteninhalte
+// - 220: 3_orientierung
+// - 221: 4_kommunikation
+// - 222: 5_wissenstest
+// - 223: bedienungsanleitung
+// - 224: didaktischer_hintergrund
+// - 227: netzwoche_wie_ein_passwort_nicht_nur_stark_sondern_auch_sicher_ist
+// - 229: open_university_beginers_german_places_and_people.txt
+// - 230: open_university_beginners_german_food_and_drink.txt
+// - 231: open_university_exploring_economics_secret_life_of_tshirts.txt
+// - 232: open_university_introducing_the_environment.txt
+// - 233: open_university_introducing_virgils_aeneid.txt
+// - 234: open_university_the_civil_rights_movement.txt
+// - 235: the_art_of_art_history_final
+// - 236: beltz_klientenzentrierte
+// - 237: beltz_paedagogik
+// - 238: eeo
+// - 240: haufe_arbeitszeitmodelle_der_zukunft
+// - 242: psychologie_heute
+// - 243: dreieckspyramide
+// - 245: parabeln
+// - 246: rav.txt
+// - 247: rolang_exercises_book_2022
+// - 248: rolang_learn_romanian_book.txt
+// - 249: rolang_learn_romanian_exercisesbook.txt
+// - 250: schubert_erkundungen_b2
+// - 251: schubert_erkundungen_b2_sl_design
+// - 252: schubert_online_a1_begegnungen.txt
+// - 253: schubert_online_a2_spektrum
+// - 254: schubert_online_ab_b2
+// - 255: schubert_online_b1_begegnungen.txt
+// - 256: schubert_online_b1_spektrum.txt
+// - 257: schubert_online_b2
+// - 258: schubert_scorm.txt
+// - 259: seneca_moral_letters
+// - 260: book
+// - 262: free_e_book
+// - 265: sofatutor_achsensymmetrische_figuren
+// - 266: sofatutor_beschreibungen_anfertigen_ueberblick.txt
+// - 267: sofatutor_funktionsweise_des_bunsenbrenners.txt
+// - 268: sofatutor_pronunciation–word_stress (1)
+// - 269: sofatutor_saeugetiere_anpassung_an_den_lebensraum.txt
+// - 270: sofatutor_toene_und_klaenge_in_der_musik
+// - 271: sofatutor_unregelmaeßige_verben
+// - 272: homeoffice_modul_1
+// - 273: swiss_edtech_collider_platform
+// - 275: uk_rezepte_1
+// - 276: uk_rezepte_3
+// - 277: uk_rezepte_4
+// - 278: arbeitssicherheit
+// - 280: farblehre
+// - 281: informatik
+// - 282: mathe
+// - 283: wiss_aufgabensammlung_1472
+// - 284: wiss_aufgabensammlung_business_engineering
 
-// - 38: zentrale_aufnahmepruefung_2019_mathe (.interview->questions, parser error?)
-// - 59: bumbacher_vier_facetten (.self-assesment->bullet, parser error?)
-// - 61-74: card2brain/* (.flashcard-1-> no === / == so cards interpreted as body, parser error?)
-// - 75: fage_band8 (.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
-// - 79-80: marketing (.match-solution-grouped, parser error?)
-// - 93: match (.match, parser error - body corrupted if before matches)
-// - 100: englisch_helfen_adjektiv (.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
-// - 103: englisch_hilfen_adjektiv (.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
-// - 107: englisch_hilfen_fragen (.cloze, not parsed fully by the parser (might be invalid))
-// - 110: englisch_hilfen_if_saetze (there is an extra ] in the original (likely invalid))
-// - 121: englisch_hilfen_zeitformen (.cloze, not parsed fully by the parser (might be invalid))
-// - 144: gmb_quizzes (.multiple-choice, parser error due to @example, record-audio -> record, parser error)
-// - 145: gmb_quizzes_for_design (.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
-// - 146: gmb_quizzes_v2 (.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
-// - 147: gmb_release_notes (@authors.name is not implemented (not sure if I should implement it))
-// - 148: gmb_test_book_utf8 (@authors.name is not implemented (not sure if I should implement it))
-// - 149: gmb_test_book_utf8 (@authors.name @quoter (quotedPerson?) are not implemented (not sure if we should implement it))
-// - 155: hgf_pauli_band_2 (failing because .interview has empty question with @shortAnswer which is currently being ignored due to a parser error)
-// - 156: hgf_pauli_band_3 (failing because .interview has empty question with @shortAnswer which is currently being ignored due to a parser error)
-// - 175: lernen_will_mehr_betriebswirtschaft (Unsupported @image tag)
-// - 176: medium_artwork_personalization (Typo in @language tag (@languge))
-// - 210: the_art_of_art_history_final (parser error due to unescaped [...] at end of body)
-// - 212: beltz_paedagogik (parser error due to unescaped [...] within body)
-// - 213: eeo (parser error due to unescaped [...] within body)
-// - 217: psychologie_heute (unsupported tag @trimmedImages - not sure if I should implement it)
-// - 221: rolang_exercises_book_2022 (parser error in [.interview] - see "question": "viitor) weekendul următor.")
-// - 222: schubert_erkundungen_b2 - TODO - code generator bitmark kills parser
-// - 223: schubert_erkundungen_b2_sl_design - TODO - code generator bitmark kills parser
-// - 224: schubert_online_a2_spektrum -(.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
-// - 226: schubert_online_b2 -(.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
-// - 236: sofatutor_unregelmaeßige_verben -(.match-solution-grouped, body incorrectly filled with === / ==, parser error?)
-// - 246: informatik - TODO - code generator bitmark kills parser
-// - 249: wiss_aufgabensammlung_business_engineering (parser error, [.interview] Body is incorrect - has the first question attached to it.)
-
-const SINGLE_FILE_START = 34;
+const SINGLE_FILE_START = 77;
 const SINGLE_FILE_COUNT = 1;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, '../../../../assets/test/books/bits');

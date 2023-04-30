@@ -1,3 +1,10 @@
+[.essay:bitmark--]
+|| PEG parser does not consider the instruction [!] at the end of the body line valid, but the ANTLR parser does ||
+[@id:245552]
+[%][%Lernaufgabe E – 22]
+Fachmann Gesundheit Bruno Moll und Fachfrau Gesundheit Anna Schulz haben in der erweiterten Beispielhaften Situation mithilfe des Internets weitere präventive Massnahmen recherchiert. Aus ihren Recherchen ziehen sie den Schluss, dass es reicht, wenn sich die Klientinnen und Klienten gut ernähren, viel an der frischen Luft sind und gute soziale Kontakte pflegen. [!Überprüfen Sie die Hypothese und beurteilen Sie diese Aussage.]
+
+
 [.essay:bitmark++]
 [@id:152151]
 [!Eine Garagen- und Fahrschulgruppe wendet die Gruppenbesteuerung an: Die Beteiligungsverhältnisse präsentieren sich wie folgt:]

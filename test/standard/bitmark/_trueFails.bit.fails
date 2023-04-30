@@ -1,4 +1,5 @@
 [.true-false:bitmark--]
+|| The [%items] are incorrectly interpreted by the ANTLR parser as being at the top level  ||
 [@id:245958]
 [%][%Selbsttest Berufspraxis F.2]
 [@labelTrue:Richtig][@labelFalse:Falsch]

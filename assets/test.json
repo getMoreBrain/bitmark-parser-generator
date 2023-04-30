@@ -1,364 +1,55 @@
 [
   {
-    "bitmark": "[.book]\n[@id:187220]\n[#Quiz Bewertungsgespräch]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_quiz_bewertungsgespr.png]\n[@externalId:e-quiz-bewertungsgesprch_yqibvpfbbhoy]",
+    "bitmark": "[.true-false:bitmark--]\n[@id:245958]\n[%][%Selbsttest Berufspraxis F.2]\n[@labelTrue:Richtig][@labelFalse:Falsch]\n===\n[%1]\n[-Gemeinsam mit dem Klienten plant die FaGe die Durchführung und Evaluation der Pflegeinterventionen.]\n===\n[%2]\n[+Damit die Klientin mit einer Schizophrenie ihr verändertes Erleben mit der Umwelt vergleichen kann, ist es wichtig, im Umgang klar, verlässlich und verbindlich zu sein.]\n===\n[%3]\n[+Bei Menschen mit einer Borderline-Störung ist ein offener Austausch der Mitarbeitenden im Team wichtig, da oft «Spaltungsversuche» von den Klienten unternommen werden.]\n===\n[%4]\n[-Klientinnen, die in einer manischen Phase Dinge tun, die anderen peinlich sind (z.B. in der Öffentlichkeit ausziehen), wissen davon in der depressiven Ohase nichts mehr.]\n===\n[%5]\n[+Wichtige pflegerische Massnahmen bei Klienten mit bipolarer Störung sind der Schutz vor Suizidalität und das Kommunizieren mit Ich-Botschaften.]\n===\n[%6]\n[-Ist man gerade anwesend, während die Klientin eine Panikattacke erlebt, ist es wichtig, Ruhe zu bewahren und Hilfe zu holen.]\n===\n[%7]\n[+Unter Skills versteht man Fähigkeiten und Bewältigungsstrategien, um aufkommende negative Gefühle zu regulieren und Spannungen abzubauen.]\n===",
     "bit": {
-      "type": "book",
+      "type": "true-false",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
+      "item": "1",
+      "lead": "Selbsttest Berufspraxis F.2",
+      "instruction": "",
       "hint": "",
-      "isExample": false,
-      "example": "",
-      "id": [
-        "187220"
-      ],
-      "title": "Quiz Bewertungsgespräch",
-      "language": [
-        "de"
-      ],
-      "coverImage": [
-        "https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_quiz_bewertungsgespr.png"
-      ],
-      "externalId": [
-        "e-quiz-bewertungsgesprch_yqibvpfbbhoy"
-      ]
-    }
-  },
-  {
-    "bitmark": "[.article:bitmark--&video-link]\n[@id:187221]\n[&video-link:https://www.youtube.com/watch?v=VHiotHBtpzw]\nBildungsbericht 3: Vorbereitung auf das Gespräch",
-    "bit": {
-      "type": "article",
-      "format": "bitmark--",
-      "body": "Bildungsbericht 3: Vorbereitung auf das Gespräch",
-      "id": [
-        "187221"
-      ],
-      "resource": {
-        "type": "video-link",
-        "videoLink": {
-          "provider": "www.youtube.com",
-          "url": "https://www.youtube.com/watch?v=VHiotHBtpzw",
-          "width": null,
-          "height": null,
-          "duration": ""
-        }
-      }
-    }
-  },
-  {
-    "bitmark": "[.article:bitmark--&video-link]\n[@id:187222]\n[&video-link:https://www.youtube.com/watch?v=wG_ZUUjQI1k]\nBildungsbericht 4: Gesprächsführung",
-    "bit": {
-      "type": "article",
-      "format": "bitmark--",
-      "body": "Bildungsbericht 4: Gesprächsführung",
-      "id": [
-        "187222"
-      ],
-      "resource": {
-        "type": "video-link",
-        "videoLink": {
-          "provider": "www.youtube.com",
-          "url": "https://www.youtube.com/watch?v=wG_ZUUjQI1k",
-          "width": null,
-          "height": null,
-          "duration": ""
-        }
-      }
-    }
-  },
-  {
-    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:187223]\n[#Quiz Bewertungsgespräch]",
-    "bit": {
-      "type": "chapter",
-      "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
-      "isExample": false,
-      "example": "",
-      "level": 1,
-      "progress": true,
-      "toc": true,
-      "anchor": "ch-1",
-      "id": [
-        "187223"
-      ],
-      "title": "Quiz Bewertungsgespräch"
-    }
-  },
-  {
-    "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187540]\n[!Was ist das Ziel eines Beurteilungsgesprächs? Bitte wählen Sie alle zutreffenden Antworten]\n[-Die Lerndokumentation überprüfen]\n[-Die Lernenden besser kennenzulernen]\n[+Rückmeldung zum Verhalten und Leistung]\n[+Überprüfen der betrieblichen Ausbildung und deren Zielen]",
-    "bit": {
-      "type": "multiple-response-1",
-      "format": "bitmark--",
-      "item": "",
-      "instruction": "Was ist das Ziel eines Beurteilungsgesprächs? Bitte wählen Sie alle zutreffenden Antworten",
-      "body": "",
-      "hint": "",
-      "responses": [
+      "labelTrue": "Richtig",
+      "labelFalse": "Falsch",
+      "statements": [
         {
-          "response": "Die Lerndokumentation überprüfen",
-          "item": "",
+          "statement": "Gemeinsam mit dem Klienten plant die FaGe die Durchführung und Evaluation der Pflegeinterventionen.",
           "isCorrect": false,
-          "instruction": "",
-          "hint": ""
+          "isExample": false
         },
         {
-          "response": "Die Lernenden besser kennenzulernen",
-          "item": "",
+          "statement": "Damit die Klientin mit einer Schizophrenie ihr verändertes Erleben mit der Umwelt vergleichen kann, ist es wichtig, im Umgang klar, verlässlich und verbindlich zu sein.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Bei Menschen mit einer Borderline-Störung ist ein offener Austausch der Mitarbeitenden im Team wichtig, da oft «Spaltungsversuche» von den Klienten unternommen werden.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Klientinnen, die in einer manischen Phase Dinge tun, die anderen peinlich sind (z.B. in der Öffentlichkeit ausziehen), wissen davon in der depressiven Ohase nichts mehr.",
           "isCorrect": false,
-          "instruction": "",
-          "hint": ""
+          "isExample": false
         },
         {
-          "response": "Rückmeldung zum Verhalten und Leistung",
-          "item": "",
+          "statement": "Wichtige pflegerische Massnahmen bei Klienten mit bipolarer Störung sind der Schutz vor Suizidalität und das Kommunizieren mit Ich-Botschaften.",
           "isCorrect": true,
-          "instruction": "",
-          "hint": ""
+          "isExample": false
         },
         {
-          "response": "Überprüfen der betrieblichen Ausbildung und deren Zielen",
-          "item": "",
+          "statement": "Ist man gerade anwesend, während die Klientin eine Panikattacke erlebt, ist es wichtig, Ruhe zu bewahren und Hilfe zu holen.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Unter Skills versteht man Fähigkeiten und Bewältigungsstrategien, um aufkommende negative Gefühle zu regulieren und Spannungen abzubauen.",
           "isCorrect": true,
-          "instruction": "",
-          "hint": ""
+          "isExample": false
         }
       ],
-      "isExample": false,
-      "example": "",
-      "id": [
-        "187540"
-      ]
-    }
-  },
-  {
-    "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187541]\n[!Welche Informationsquellen für die Vorbereitung eines Gesprächs kennst du?\nBitte wählen Sie alle zutreffenden Antworten]\n[+Rückmeldungen Praxisbildner/Berufsbildner]\n[+Beobachtungen am Arbeitsplatz]\n[-Gehörtes von Arbeitskollegen]\n[+Lerndokumentation]",
-    "bit": {
-      "type": "multiple-response-1",
-      "format": "bitmark--",
-      "item": "",
-      "instruction": "Welche Informationsquellen für die Vorbereitung eines Gesprächs kennst du?\nBitte wählen Sie alle zutreffenden Antworten",
       "body": "",
-      "hint": "",
-      "responses": [
-        {
-          "response": "Rückmeldungen Praxisbildner/Berufsbildner",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Beobachtungen am Arbeitsplatz",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Gehörtes von Arbeitskollegen",
-          "item": "",
-          "isCorrect": false,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Lerndokumentation",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        }
-      ],
-      "isExample": false,
-      "example": "",
       "id": [
-        "187541"
-      ]
-    }
-  },
-  {
-    "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187542]\n[!Wie schaffst du eine angenehme Gesprächsumgebung? Bitte wählen Sie alle zutreffenden Antworten]\n[+Die Dauer des Gesprächs definieren]\n[-Mit den Zielen für das nächste Semester beginnen]\n[+Mit einem 'Eisbrecher' starten]\n[+Der Sinn des Gesprächs erklären]",
-    "bit": {
-      "type": "multiple-response-1",
-      "format": "bitmark--",
-      "item": "",
-      "instruction": "Wie schaffst du eine angenehme Gesprächsumgebung? Bitte wählen Sie alle zutreffenden Antworten",
-      "body": "",
-      "hint": "",
-      "responses": [
-        {
-          "response": "Die Dauer des Gesprächs definieren",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Mit den Zielen für das nächste Semester beginnen",
-          "item": "",
-          "isCorrect": false,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Mit einem 'Eisbrecher' starten",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Der Sinn des Gesprächs erklären",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        }
-      ],
-      "isExample": false,
-      "example": "",
-      "id": [
-        "187542"
-      ]
-    }
-  },
-  {
-    "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187543]\n[!Wenn du das Beurteilungsgespräch alleine führst, was ist dabei zu beachten?\nBitte wählen Sie alle zutreffenden Antworten]\n[+Genügend Zeit einberechnen]\n[+Rückmeldungen bei anderen Berufsbildner/Praxisbildner K° einholen]\n[-Dass der Raum gross genug ist]\n[+Mich absichern was ich von den anderen BB/PB rückmelden darf]",
-    "bit": {
-      "type": "multiple-response-1",
-      "format": "bitmark--",
-      "item": "",
-      "instruction": "Wenn du das Beurteilungsgespräch alleine führst, was ist dabei zu beachten?\nBitte wählen Sie alle zutreffenden Antworten",
-      "body": "",
-      "hint": "",
-      "responses": [
-        {
-          "response": "Genügend Zeit einberechnen",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Rückmeldungen bei anderen Berufsbildner/Praxisbildner K° einholen",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Dass der Raum gross genug ist",
-          "item": "",
-          "isCorrect": false,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Mich absichern was ich von den anderen BB/PB rückmelden darf",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        }
-      ],
-      "isExample": false,
-      "example": "",
-      "id": [
-        "187543"
-      ]
-    }
-  },
-  {
-    "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187544]\n[!Nach welchen Beurteilungsmerkmalen beurteilst du die Teamfähigkeit? Bitte wählen Sie alle zutreffenden Antworten]\n[+Umgang mit Kritik]\n[+Beteiligt sich der Lernende in Gesprächen aktiv]\n[+Bringt sich der Lernende ins Team ein]\n[-Pünktlichkeit]",
-    "bit": {
-      "type": "multiple-response-1",
-      "format": "bitmark--",
-      "item": "",
-      "instruction": "Nach welchen Beurteilungsmerkmalen beurteilst du die Teamfähigkeit? Bitte wählen Sie alle zutreffenden Antworten",
-      "body": "",
-      "hint": "",
-      "responses": [
-        {
-          "response": "Umgang mit Kritik",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Beteiligt sich der Lernende in Gesprächen aktiv",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Bringt sich der Lernende ins Team ein",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Pünktlichkeit",
-          "item": "",
-          "isCorrect": false,
-          "instruction": "",
-          "hint": ""
-        }
-      ],
-      "isExample": false,
-      "example": "",
-      "id": [
-        "187544"
-      ]
-    }
-  },
-  {
-    "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187545]\n[!Was geschieht am Ende eines Beurteilungsgesprächs? Bitte wählen Sie alle zutreffenden Antworten]\n[+Es werden Ziele und Massnahmen für das nächste Semester M definiert]\n[+Positiver Gesprächsabschluss (z.B mit Lob, Wertschätzung, attraktive Aufgabe in Aussicht stellen)]\n[-Verbesserungschritte werden ausführlich diskutiert]\n[-Die Lerndokumentation kontrolliert und korrigiert]",
-    "bit": {
-      "type": "multiple-response-1",
-      "format": "bitmark--",
-      "item": "",
-      "instruction": "Was geschieht am Ende eines Beurteilungsgesprächs? Bitte wählen Sie alle zutreffenden Antworten",
-      "body": "",
-      "hint": "",
-      "responses": [
-        {
-          "response": "Es werden Ziele und Massnahmen für das nächste Semester M definiert",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Positiver Gesprächsabschluss (z.B mit Lob, Wertschätzung, attraktive Aufgabe in Aussicht stellen)",
-          "item": "",
-          "isCorrect": true,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Verbesserungschritte werden ausführlich diskutiert",
-          "item": "",
-          "isCorrect": false,
-          "instruction": "",
-          "hint": ""
-        },
-        {
-          "response": "Die Lerndokumentation kontrolliert und korrigiert",
-          "item": "",
-          "isCorrect": false,
-          "instruction": "",
-          "hint": ""
-        }
-      ],
-      "isExample": false,
-      "example": "",
-      "id": [
-        "187545"
+        "245958"
       ]
     }
   }

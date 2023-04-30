@@ -49,6 +49,8 @@ export interface BitJson {
   instruction: string;
   isExample: boolean;
   example: string;
+  isTracked: boolean; // only .learningPathExternalLink?
+  isInfoOnly: boolean; // only .learningPathExternalLink?
   // NEW property - not in the ANTLR parser
   extraProperties: {
     [key: string]: unknown | unknown[];
