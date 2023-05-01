@@ -32,6 +32,7 @@ const PropertyKey = superenum({
 
   // Questions
   shortAnswer: 'shortAnswer',
+  longAnswer: 'longAnswer',
   caseSensitive: 'caseSensitive',
 });
 

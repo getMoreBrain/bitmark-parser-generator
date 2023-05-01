@@ -296,7 +296,7 @@ class BitmarkParserHelper {
     const bit = builder.bit({
       bitType,
       textFormat,
-      // resourceType,
+      resourceType,
       ...titles,
       statement: isTrueFalseV1 ? statement : undefined,
       choices: isMultipleChoiceV1 ? choices : undefined,
@@ -309,7 +309,6 @@ class BitmarkParserHelper {
 
     // (bit as any).bitSpecificCards = bitSpecificCards;
     // (bit as any).cardSet = cardSet;
-    (bit as any).resourceType = resourceType;
 
     return { value: bit };
   }
@@ -1056,6 +1055,10 @@ class BitmarkParserHelper {
             switch (key) {
               case PropertyKey.shortAnswer: {
                 acc.isShortAnswer = value;
+                break;
+              }
+              case PropertyKey.longAnswer: {
+                acc.isShortAnswer = !value;
                 break;
               }
               case PropertyKey.caseSensitive: {

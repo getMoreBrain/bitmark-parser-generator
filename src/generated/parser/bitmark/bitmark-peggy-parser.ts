@@ -1920,11 +1920,14 @@ function peg$parse(input: string, options?: ParseOptions) {
       s2 = [];
       s3 = peg$parseClozeInlineTag();
       if (s3 as any === peg$FAILED) {
-        s3 = peg$parseInstructionTag();
+        s3 = peg$parseItemLeadTag();
         if (s3 as any === peg$FAILED) {
-          s3 = peg$parseHintTag();
+          s3 = peg$parseInstructionTag();
           if (s3 as any === peg$FAILED) {
-            s3 = peg$parsePropertyTag();
+            s3 = peg$parseHintTag();
+            if (s3 as any === peg$FAILED) {
+              s3 = peg$parsePropertyTag();
+            }
           }
         }
       }
@@ -1932,11 +1935,14 @@ function peg$parse(input: string, options?: ParseOptions) {
         s2.push(s3);
         s3 = peg$parseClozeInlineTag();
         if (s3 as any === peg$FAILED) {
-          s3 = peg$parseInstructionTag();
+          s3 = peg$parseItemLeadTag();
           if (s3 as any === peg$FAILED) {
-            s3 = peg$parseHintTag();
+            s3 = peg$parseInstructionTag();
             if (s3 as any === peg$FAILED) {
-              s3 = peg$parsePropertyTag();
+              s3 = peg$parseHintTag();
+              if (s3 as any === peg$FAILED) {
+                s3 = peg$parsePropertyTag();
+              }
             }
           }
         }
@@ -1983,11 +1989,14 @@ function peg$parse(input: string, options?: ParseOptions) {
       if (s3 as any === peg$FAILED) {
         s3 = peg$parseFalseInlineTag();
         if (s3 as any === peg$FAILED) {
-          s3 = peg$parseInstructionTag();
+          s3 = peg$parseItemLeadTag();
           if (s3 as any === peg$FAILED) {
-            s3 = peg$parseHintTag();
+            s3 = peg$parseInstructionTag();
             if (s3 as any === peg$FAILED) {
-              s3 = peg$parsePropertyTag();
+              s3 = peg$parseHintTag();
+              if (s3 as any === peg$FAILED) {
+                s3 = peg$parsePropertyTag();
+              }
             }
           }
         }
@@ -1998,11 +2007,14 @@ function peg$parse(input: string, options?: ParseOptions) {
         if (s3 as any === peg$FAILED) {
           s3 = peg$parseFalseInlineTag();
           if (s3 as any === peg$FAILED) {
-            s3 = peg$parseInstructionTag();
+            s3 = peg$parseItemLeadTag();
             if (s3 as any === peg$FAILED) {
-              s3 = peg$parseHintTag();
+              s3 = peg$parseInstructionTag();
               if (s3 as any === peg$FAILED) {
-                s3 = peg$parsePropertyTag();
+                s3 = peg$parseHintTag();
+                if (s3 as any === peg$FAILED) {
+                  s3 = peg$parsePropertyTag();
+                }
               }
             }
           }

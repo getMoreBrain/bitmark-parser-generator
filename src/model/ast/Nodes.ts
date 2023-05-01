@@ -39,6 +39,7 @@ export interface BitmarkAst {
 export interface Bit {
   bitType: BitTypeType;
   textFormat: TextFormatType;
+  resourceType?: ResourceTypeType;
   ids?: string[];
   externalIds?: string[];
   ageRanges?: number[];

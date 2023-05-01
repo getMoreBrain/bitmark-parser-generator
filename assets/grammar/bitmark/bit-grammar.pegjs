@@ -186,11 +186,11 @@ BodyTags
 
 // Gap tags chain
 GapTagsChain
-  = value: ClozeInlineTag others: (ClozeInlineTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Gap, value: [value, ...others] }; }
+  = value: ClozeInlineTag others: (ClozeInlineTag / ItemLeadTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Gap, value: [value, ...others] }; }
 
 // Select tags chain
 SelectTagsChain
-  = value: (TrueInlineTag / FalseInlineTag)+ others: (TrueInlineTag / FalseInlineTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Select, value: [...value, ...others] } }
+  = value: (TrueInlineTag / FalseInlineTag)+ others: (TrueInlineTag / FalseInlineTag / ItemLeadTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Select, value: [...value, ...others] } }
 
 
 //

@@ -13,7 +13,7 @@ import { FileUtils } from '../../../../src/utils/FileUtils';
 import { BitJsonUtils } from '../../../utils/BitJsonUtils';
 import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 
-// Passed: 5, 7-9, 11, 14-28, 30, 32-33, 35, 37-39, 42, 46, 49-60, 62, 79, 86-87, 90-94, 97-98, 110
+// Passed: 5, 7-9, 11, 14-28, 30, 32-33, 35, 37-39, 42, 46, 49-60, 62, 79, 85-94, 97-98, 110
 //         116, 119-125, 132, 136-137, 139-146, 149-150, 169, 175, 181, 184, 186, 188, 191, 197, 200-205
 //         207, 210, 216-217, 225-226, 228, 239, 241, 244, 261, 263-264, 274, 279, 285
 // Failed:
@@ -53,20 +53,17 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // - 75: sozialstrukturanalyse (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
 // - 76: uebungsaufgaben_wi_bba (.flashcard-1 Parses as body only in ANTLR parser - format looks OLD)
 // - 77: fage_band8 ([!instruction] at end of body line - parsers differ, not sure what is correct thing to do / The [%items] are incorrectly interpreted by the ANTLR parser as being at the top level)
-// - 78: gesundheitsförderung_und_krankheitsprävention_für_die_haut
-// - 80: compendio_change_management
-// - 81: compendio_repetitionsfragen.txt
-// - 82: marketing
-// - 83: quizzes_marketing_unternehmensfuehrung
-// - 84: unternehmensfuehrung
-// - 85: cornelsen_ab.txt
-// - 88: deepdive_pesto
-// - 89: deepdive_ruesten
-// - 95: dike_buch_information_als_snippets
-// - 96: dw_et_a1.txt
-// - 99: eb_zuerich_et_a1.txt
-// - 100: eb_zuerich_et_a2.txt
-// - 101: unit1
+// - 78: gesundheitsförderung_und_krankheitsprävention_für_die_haut (double :: in the bit declaration confuses the ANTLR parser / [!instruction] in the middle of the body results in one extra \n in the ANTLR parser - not sure what is the desired behaviour )
+// - 80: compendio_change_management (Excess resources in ANTLR parser, success in new parser - what is best behaviour?)
+// - 81: compendio_repetitionsfragen.txt (ANTLR parser interprets the [?hint] as a footer, but PEG parser interprets it as a hint, Square brackets confuse the ANTLR parser / .interview ANTLR parser loses the \n's from the body)
+// - 82: marketing (ANTLR parser fails to parse body)
+// - 83: quizzes_marketing_unternehmensfuehrung (.match-solution-grouped issues)
+// - 84: unternehmensfuehrung ([!instruction] at end of body line - parsers differ, not sure what is correct thing to do)
+// - 95: dike_buch_information_als_snippets (Fails on unescaped square brackets '[Umgruppierung, Leichte Umformulierung:]' in ANTLR parser)
+// - 96: dw_et_a1.txt (Chaining is incorrectly handled by the ANTLR parser / This dividers are incorrect. ANTLR parser throws errors, PEG parser parses as body)
+// - 99: eb_zuerich_et_a1.txt (?)
+// - 100: eb_zuerich_et_a2.txt (ANTLR parse error in the [!instruction] / Angled brackets confuse the ANTLR parser)
+// - 101: unit1 (There are invisible spaces at the end of the match keys, and the ANTLR parser does not strip them)
 // - 102: unit2
 // - 103: electrosuisse_sl_content
 // - 104: electrosuisse_sl_design
@@ -200,7 +197,7 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // - 283: wiss_aufgabensammlung_1472
 // - 284: wiss_aufgabensammlung_business_engineering
 
-const SINGLE_FILE_START = 77;
+const SINGLE_FILE_START = 102;
 const SINGLE_FILE_COUNT = 1;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, '../../../../assets/test/books/bits');

@@ -8,6 +8,7 @@ import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { GapJson, SelectJson, SelectOptionJson } from '../../model/json/BodyBitJson';
 import { ParserError } from '../../model/parser/ParserError';
 import { StringUtils } from '../../utils/StringUtils';
+import { UrlUtils } from '../../utils/UrlUtils';
 import { Generator } from '../Generator';
 
 import {
@@ -1587,8 +1588,20 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
-  protected addImageLikeResource(resource: ImageResource): ImageResourceJson | ImageLinkResourceJson {
+  protected addImageLikeResource(resource: ImageResource | string): ImageResourceJson | ImageLinkResourceJson {
     const resourceJson: Partial<ImageResourceJson | ImageLinkResourceJson> = {};
+
+    if (StringUtils.isString(resource)) {
+      const url = resource as string;
+      resource = {
+        type: ResourceType.image,
+        url,
+        format: UrlUtils.fileExtensionFromUrl(url),
+        provider: UrlUtils.domainFromUrl(url),
+      };
+    }
+
+    resource = resource as ImageResource; // Keep TS compiler happy
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
@@ -1909,6 +1922,16 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       footer: undefined,
     };
 
+    // Add the resource template if there should be a resource (indicated by resourceType) but there is none defined.
+    if (bit.resourceType && !bitJson.resource) {
+      const jsonKey = ResourceType.keyFromValue(bit.resourceType);
+      bitJson.resource = {
+        type: bit.resourceType,
+      } as ResourceJson;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      if (jsonKey) (bitJson.resource as any)[jsonKey] = {};
+    }
+
     return bitJson;
   }
 
@@ -1949,6 +1972,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       case BitType.remark:
       case BitType.sideNote:
       case BitType.takePicture:
+      case BitType.video:
         if (bitJson.item == null) bitJson.item = '';
         if (bitJson.hint == null) bitJson.hint = '';
         if (bitJson.isExample == null) bitJson.isExample = false;
@@ -2008,7 +2032,6 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         if (bitJson.body == null) bitJson.body = '';
         break;
 
-      case BitType.interview:
       case BitType.multipleChoice:
       case BitType.multipleResponse:
         if (bitJson.item == null) bitJson.item = '';
@@ -2016,6 +2039,15 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         if (bitJson.instruction == null) bitJson.instruction = '';
         if (bitJson.body == null) bitJson.body = '';
         if (bitJson.footer == null) bitJson.footer = '';
+        break;
+
+      case BitType.interview:
+        if (bitJson.item == null) bitJson.item = '';
+        if (bitJson.hint == null) bitJson.hint = '';
+        if (bitJson.instruction == null) bitJson.instruction = '';
+        if (bitJson.body == null) bitJson.body = '';
+        if (bitJson.footer == null) bitJson.footer = '';
+        if (bitJson.questions == null) bitJson.questions = [];
         break;
 
       case BitType.match:

@@ -1,3 +1,11 @@
+[.multiple-choice-1]
+|| ANTLR parse error in the [!instruction] ||
+[@id:131476][%16]
+[!<Warum wolltest du wieder in die Schweiz zurück?>
+<<Weil ich keine Arbeit ....>> ]
+[-a) gefunden][+b) hatte][-c) war]
+
+
 [.multiple-choice:bitmark]
 || Fails because bitmark format is missing -- or ++ ||
 [@id:190701]
@@ -75,6 +83,13 @@
 [+Migros]
 [-Coop]
 ===
+
+
+[.multiple-choice-1:bitmark--]
+|| Fails due to @example after first option. ANTLR parser incorrectly adds 'example' at the top JSON level, PEG parser just ignores tag||
+[@id:131330][!91. Das ist ___ Kind.]
+[+a) ein][@example] [-b) eine] [-c) einen]
+
 
 [.multiple-choice-1&image-link]
 [@id:232617]

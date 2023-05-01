@@ -1,4 +1,14 @@
 [.article:bitmark--]
+|| Fails on unescaped square brackets '[Umgruppierung, Leichte Umformulierung:]' in ANTLR parser ||
+[@id:145773]
+Im Anfang war das Wort“, mit der das Evangelium des Johannes beginnt. Faust will das Wort bekanntlich nicht so hoch schätzen, und er schlägt andere Möglichkeiten vor – Sinn, Kraft oder Tat. Das war vor zweihundert Jahren. Heute würden wir die Stelle erneut anders übersetzen, nämlich mit unserem Schlüsselwort: Im Anfang war die Information. „It from Bit“, wie es die englische Sprache in wunderbarer Kürze und mit lässiger Eleganz unter Zuhilfenahme der wissenschaftlich messbaren Einheit der Information, des Bit, auszudrücken gestattet.]
+Die Formel „It from Bit“ stammt von dem kürzlich verstorbenen amerikanischen Physiker John A. Wheeler, der dadurch nicht nur andeutet, dass die plumpe Welt ihren Anfang einer Formbildung – einer In-formation – verdankt, sondern auch, dass wir selbst das Etwas durch die Informationen erzeugen, die wir von ihm bekommen.
+[Umgruppierung, Leichte Umformulierung:] Und wir erwerben Informationen, weil wir nach ihnen streben. Dies ist unsere Natur, was in der Metaphysik des Aristoteles nachzulesen ist: „Alle Menschen streben von Natur nach Wissen“.
+Heute sprechen wir weniger von Wissen als von Informationen. Wir benützen diesen Begriff mit größter Selbstverständlichkeit, aber wir können aber hoffen, dass wir am Ende der Suche nach Informationen über die Information schließlich über ein wenig mehr wirkliches Wissen verfügen – gemeint ist: ein Verständnis dafür, wie wir dazu gekommen sind, die Welt immer mehr als einen Kosmos von Informationen zu verstehen und was das für unser Verständnis der Welt bedeutet.
+Wir wollen sehen, zu was sie uns führt.
+
+
+[.article:bitmark--]
 || Fails on unicode characters in the ANTLR parser ||
 [@id:145791]
 [%Eine Welt voller Informationen]
@@ -39,6 +49,12 @@ Für einige Methoden haben wir Vorlagen vorbereitet, die ihr nutzen könnt sowie
 Diese Methode ermöglicht es Schüler*innen, die eigene und kritische Perspektive auf Sachverhalte, die Gesellschaft oder Diskurse durch reale Begegnungen mit Personen zu erweitern, zu hinterfragen oder neu zu bilden. Zur Gestaltung einer anregenden Lernatmosphäre braucht es eine Kombination aus unterschiedlichen Lernorten, Impulsgebenden, Lernpartner*innen und Erwartungen. Gerade in sehr stark digital geprägten Lernkontexten ermöglicht diese Methode eine kreative Verzahnung von digitalen und analogen Lernformen.
 
 Schüler*innen kommen mit Menschen aus ihrem Umfeld ins Gespräch, bestenfalls im direkten Kontakt oder auch per Telefon oder Videokonferenz. Damit schlägt diese Methode die inhaltliche „Brücke“ zwischen analogem Selbstlernen und digitalem Online-Unterricht. Der soziale Austausch, die authentische Lernerfahrung und das Verlassen der eigenen mentalen und physischen „Vier-Wände“ ist der Trumpf dieser Methode. Das Interview zeigt Schüler*innen wie mächtig das Gespräch mit anderen Menschen sein kann.
+
+[.article:bitmark--]
+|| Excess resources in ANTLR parser, success in new parser - what is best behaviour? ||
+[@id:270178]
+[%Drei-Phasen-Modell nach Lewin und Leading-Change-Modell nach Kotter]
+[&image:https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter2.png]
 
 
 [.article:bitmark--]

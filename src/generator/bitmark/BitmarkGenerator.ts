@@ -1136,9 +1136,11 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
   protected leaf_isShortAnswer(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value === true) {
-      this.writeOPA();
-      this.writeString('shortAnswer');
-      this.writeCL();
+      // Writing [@shortAnswer] after the 'question' causes newlines in the body to change.
+      // This is likely a parser bug.
+      // this.writeOPA();
+      // this.writeString('shortAnswer');
+      // this.writeCL();
     }
   }
 

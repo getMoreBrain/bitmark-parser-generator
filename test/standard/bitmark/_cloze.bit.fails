@@ -1,4 +1,5 @@
 [.cloze:bitmark--]
+|| Square brackets confuse the ANTLR parser ||
 [@id:136392]
 [%05_Ablauf und Termine_023 (Freitext) ]
 [!Ordnen Sie die folgenden Aufgaben den einzelnen Projektphasen zu.]

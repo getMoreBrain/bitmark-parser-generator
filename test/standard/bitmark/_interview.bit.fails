@@ -1,4 +1,118 @@
 [.interview:bitmark--]
+|| ANTLR parser loses the \n's from the body ||
+[@id:136399]
+[%11_Planung und Steuerung_048 (Freitext)]
+Ein Projekt meldet folgende Zahlen:
+
+Gesamtbudget (Budget at Completion, BAC)    1 000 000 CHF
+Plan-Kosten (Planned Value, PV)    500 000 CHF
+Earned Value (EV)    400 000 CHF
+Ist-Aufwand (Actual Cost, AC)    550 000 CHF
+Projektdauer	12 Monate
+
+[!Berechnen und kommentieren Sie unten stehende Kennzahlen:]
+===
+**Terminabweichung: SV**
+Berechnung
+===
+Feststellung[@shortAnswer]
+[?Das Projekt liegt aktuell hinter dem Plan.]
+===
+
+**Kostenabweichung: CV**
+Berechnung
+===
+Feststellung[@shortAnswer]
+[?Das Projekt hat aktuell das Budget überzogen.]
+===
+
+**Geschätzte Kosten bei Fertigstellung: EAC**
+Berechnung
+===
+Feststellung[@shortAnswer]
+[?Wenn es so weitergeht, wird das Projekt teurer werden.]
+===
+
+**Geschätzte Kostenabweichung Projektabschluss: VAC**
+Berechnung
+===
+Feststellung[@shortAnswer]
+[?Wenn es so weitergeht, wird das Projekt teurer werden.]
+===
+
+**Kosteneffizienz: CPI**
+Berechnung
+===
+Feststellung[@shortAnswer]
+[?Wenn es so weitergeht, wird das Projekt teurer werden.]
+===
+**Zeiteffizienz: SPI**
+Berechnung
+===
+Feststellung[@shortAnswer]
+[?Wenn es so weitergeht, wird das Projekt länger dauern.]
+===
+**Geschätzte Gesamtdauer: ETAC**
+Berechnung
+===
+Feststellung[@shortAnswer]
+[?Wenn es so weitergeht, wird das Projekt länger dauern.]
+===
+**Benötigte Kosteneffizienz: TCPI**
+Berechnung
+===
+Feststellung[@shortAnswer]
+[?Um das Projektbudget einzuhalten, brauchte es eine 33%ige Effizienzsteigerung.]
+===
+
+||TODO: add the results of the calculations||
+
+
+[.interview:bitmark--&audio]
+|| ANTLR parser fails to recognise the [%item] tags ||
+[@id:301927]
+[%K]
+[!Listen to announcements 1–4 again. Write down any additional information you hear.]
+[&audio:https://docs.bitmark.cloud/bit-books/ef/unit_1/web-resources/audio/b1_1_1_6_k.mp3]
+===
+[%1]
+[$have travel documents and boarding pass ready, passengers with small children and passengers who need extra help boarding now, regular boarding in about ten minutes]
+===
+[%2]
+[$the departure gate for this flight has changed]
+===
+[%3]
+[$final call, go to gate now]
+===
+[%4]
+[$don’t leave bags alone, bags will be removed and destroyed]
+===
+
+[.interview]
+|| Missing final === - PEG parser interprets the last part as body (maybe should be footer). ||
+|| ANTLR parser errors and guesses that the last line is actually part of the interview questions ||
+[@id:302059]
+[%F]
+[!Look at the sentences. Are the phrasal verbs separable or inseparable? Rewrite the sentences if possible.]
+===
+[%1] Drop by my house after school. I’ve baked a cake. [$inseparable]
+===
+[%2] Can you help put away the dishes, please? [$Can you help put the dishes away, please?]
+===
+[%3] I want to make a cake, but I’ve run out of butter. [$inseparable]
+===
+[%4] I’m dying to show off my new cake baking skills. [$I’m dying to show my new cake baking skills off.]
+===
+[%5] After 15 minutes turn down the oven to 120°C. [$After 15 minutes turn the oven down to 120°C.]
+===
+[%6] I added salt instead of sugar. I’ll have to throw away the mixture and start again. [$I added salt instead of sugar. I’ll have to throw the mixture away and start again.]
+===
+[%7] I can’t figure out this recipe. [$I can’t figure this recipe out.]
+===
+[%8] I should take up cooking. It seems easy and fun. [$inseparable]
+
+
+[.interview:bitmark--]
 [@id:198780]
 [%2]
 [!Bei welchen Steuerarten des Bundes ist eine Überwälzung vorgesehen und wie funktioniert sie?]
@@ -86,3 +200,12 @@ Pendant
 Lise et Nicolas
 [$vont inviter leurs amis à leur fête au bord du lac. / vont inviter leurs amis au bord du lac à leur fête.]
 ====
+
+[.interview]
+|| ANTLR parser interprets the [?hint] as a footer, but PEG parser interprets it as a hint ||
+[@id:136384]
+[%14_Change und Transformation_060 (Match) ]
+[!Welche drei Voraussetzungen müssen für Veränderungsprozesse gegeben sein?]
+===
+===
+[?Veränderungsbedarf, Veränderungsbereitschaft, Veränderungsfähigkeit]

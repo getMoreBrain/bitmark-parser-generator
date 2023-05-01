@@ -35,15 +35,23 @@ class BitJsonUtils {
           if (bit.resource) {
             delete bit.resource.private;
 
+            const resourcesToClean = [...Object.keys(bit.resource).map((key) => bit.resource[key])];
+            if (bit.resource?.video?.posterImage) resourcesToClean.push(bit.resource.video.posterImage);
+
             // Delete the defaults - ignored for testing
-            for (const key of Object.keys(bit.resource)) {
-              const resource = bit.resource[key];
+            for (const resource of resourcesToClean) {
               if (!resource.license) delete resource.license;
               if (!resource.copyright) delete resource.copyright;
               if (!resource.provider) delete resource.provider;
               if (!resource.showInIndex) delete resource.showInIndex;
               if (!resource.caption) delete resource.caption;
               if (!resource.duration) delete resource.duration;
+
+              if (!resource.allowSubtitles) delete resource.allowSubtitles;
+              if (!resource.showSubtitles) delete resource.showSubtitles;
+              if (!resource.autoplay) delete resource.autoplay;
+              if (!resource.mute) delete resource.mute;
+              if (!resource.alt) delete resource.alt;
 
               // Ignore provider and format because they are generated (sometimes incorrectly by ANTLR parser)
               delete resource.provider;

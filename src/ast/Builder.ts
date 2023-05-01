@@ -5,6 +5,7 @@ import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
 import { TextFormatType, TextFormat } from '../model/enum/TextFormat';
 import { ParserError } from '../model/parser/ParserError';
 import { ObjectUtils } from '../utils/ObjectUtils';
+import { UrlUtils } from '../utils/UrlUtils';
 
 import { NodeValidator } from './rules/NodeValidator';
 
@@ -86,6 +87,7 @@ class Builder {
   bit(data: {
     bitType: BitTypeType;
     textFormat?: TextFormatType;
+    resourceType?: ResourceTypeType; // This is optional, it will be inferred from the resource
     id?: string | string[];
     externalId?: string | string[];
     ageRange?: number | number[];
@@ -149,6 +151,7 @@ class Builder {
     const {
       bitType,
       textFormat,
+      resourceType,
       id,
       externalId,
       ageRange,
@@ -212,6 +215,7 @@ class Builder {
     const node: Bit = {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
+      resourceType: resource?.type ?? ResourceType.fromValue(resourceType),
       ids: this.asArray(id),
       externalIds: this.asArray(externalId),
       book,
@@ -542,7 +546,7 @@ class Builder {
       instruction,
       example,
       isCaseSensitive,
-      // isShortAnswer,
+      isShortAnswer,
       sampleSolution,
     } = data;
 
@@ -555,14 +559,12 @@ class Builder {
       instruction,
       example,
       isCaseSensitive,
-      // Writing [@shortAnswer] after the 'question' causes newlines in the body to change.
-      // This is likely a parser bug.
-      // isShortAnswer,
+      isShortAnswer,
       sampleSolution,
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    this.removeUnwantedProperties(node, { ignoreFalse: ['isShortAnswer'] });
 
     return node;
   }
@@ -1402,8 +1404,8 @@ class Builder {
     // NOTE: Node order is important and is defined here
     const node: ImageResource | ImageLinkResource = {
       type,
-      format: this.extractResourceFormatFromUrl(url),
-      provider: this.extractResourceProviderFromUrl(url),
+      format: UrlUtils.fileExtensionFromUrl(url),
+      provider: UrlUtils.domainFromUrl(url),
       url,
       src1x,
       src2x,
@@ -1438,8 +1440,8 @@ class Builder {
     // NOTE: Node order is important and is defined here
     const node: AudioResource | AudioLinkResource = {
       type,
-      format: this.extractResourceFormatFromUrl(url),
-      provider: this.extractResourceProviderFromUrl(url),
+      format: UrlUtils.fileExtensionFromUrl(url),
+      provider: UrlUtils.domainFromUrl(url),
       url,
       license,
       copyright,
@@ -1494,8 +1496,8 @@ class Builder {
     // NOTE: Node order is important and is defined here
     const node: VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource = {
       type,
-      format: this.extractResourceFormatFromUrl(url),
-      provider: this.extractResourceProviderFromUrl(url),
+      format: UrlUtils.fileExtensionFromUrl(url),
+      provider: UrlUtils.domainFromUrl(url),
       url,
       width,
       height,
@@ -1534,8 +1536,8 @@ class Builder {
     // NOTE: Node order is important and is defined here
     const node: ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource = {
       type,
-      format: this.extractResourceFormatFromUrl(url),
-      provider: this.extractResourceProviderFromUrl(url),
+      format: UrlUtils.fileExtensionFromUrl(url),
+      provider: UrlUtils.domainFromUrl(url),
       url,
       body,
       license,
@@ -1576,31 +1578,6 @@ class Builder {
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateResource(node);
-  }
-
-  protected extractResourceFormatFromUrl(url: string | undefined): string | undefined {
-    let format: string | undefined;
-
-    if (url) {
-      const parsedUrl = new URL(url);
-      const pathParts = parsedUrl.pathname.split('.');
-      if (pathParts.length > 1) {
-        format = pathParts[pathParts.length - 1];
-      }
-    }
-
-    return format;
-  }
-
-  protected extractResourceProviderFromUrl(url: string | undefined): string | undefined {
-    let domain: string | undefined;
-
-    if (url) {
-      const parsedUrl = new URL(url);
-      domain = parsedUrl.hostname;
-    }
-
-    return domain;
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

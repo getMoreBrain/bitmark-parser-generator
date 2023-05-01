@@ -1,55 +1,29 @@
 [
   {
-    "bitmark": "[.true-false:bitmark--]\n[@id:245958]\n[%][%Selbsttest Berufspraxis F.2]\n[@labelTrue:Richtig][@labelFalse:Falsch]\n===\n[%1]\n[-Gemeinsam mit dem Klienten plant die FaGe die Durchführung und Evaluation der Pflegeinterventionen.]\n===\n[%2]\n[+Damit die Klientin mit einer Schizophrenie ihr verändertes Erleben mit der Umwelt vergleichen kann, ist es wichtig, im Umgang klar, verlässlich und verbindlich zu sein.]\n===\n[%3]\n[+Bei Menschen mit einer Borderline-Störung ist ein offener Austausch der Mitarbeitenden im Team wichtig, da oft «Spaltungsversuche» von den Klienten unternommen werden.]\n===\n[%4]\n[-Klientinnen, die in einer manischen Phase Dinge tun, die anderen peinlich sind (z.B. in der Öffentlichkeit ausziehen), wissen davon in der depressiven Ohase nichts mehr.]\n===\n[%5]\n[+Wichtige pflegerische Massnahmen bei Klienten mit bipolarer Störung sind der Schutz vor Suizidalität und das Kommunizieren mit Ich-Botschaften.]\n===\n[%6]\n[-Ist man gerade anwesend, während die Klientin eine Panikattacke erlebt, ist es wichtig, Ruhe zu bewahren und Hilfe zu holen.]\n===\n[%7]\n[+Unter Skills versteht man Fähigkeiten und Bewältigungsstrategien, um aufkommende negative Gefühle zu regulieren und Spannungen abzubauen.]\n===",
+    "bitmark": "[.interview:bitmark++]\n[@id:302160]\n[%C]\n[!Read the article quickly. Write the best title on the line.]\n\nHow to find the freshest food\nTop tips for a top dinner party\nHow to make new friends\n===\nTitle: [$Top tips for a dinner party]\n===\n__Bored of eating the same food in the same old restaurants? Why not invite your friends over and show them your skills in the kitchen? Here are some tips to make the meal a success.__\n1 ASK YOUR FRIENDS IF THEY HAVE A SPECIAL DIET\n\nSome of your guests may be vegetarian, they may not eat fish, or they might have an allergy. Ask before you plan your menu so there are no problems on the night.\n\n2 PREPARE OR SHARE\n\nTry to plan a menu that has a dish you can make before your guests arrive. It could be a starter, a main course, or even part of a dessert. Or you could plan a set of sharing plates that you and your guests can eat and enjoy together.\n\n3 EAT FRESH\n\nDepending on the time of year, different fresh fruit and vegetables are available. For example, in summer, strawberries, blueberries, and raspberries are at their best. Use these in a fruit salad or a fresh fruit mocktail to start the evening. In winter, foods such as sweet potatoes, spinach, and broccoli are freshest, so use some of these to make a delicious veggie soup.\n\n4 RELAX!\n\nOf course you’ll need some time in the kitchen, but don’t stay in there too long! Relax, join your friends, and make sure to enjoy the evening and conversation.\n|image:https://docs.bitmark.cloud/bit-books/ef/unit_2/web-resources/images/ef_unit2_listening_focus_6.png|",
     "bit": {
-      "type": "true-false",
-      "format": "bitmark--",
-      "item": "1",
-      "lead": "Selbsttest Berufspraxis F.2",
-      "instruction": "",
+      "type": "interview",
+      "format": "bitmark++",
+      "item": "C",
+      "instruction": "Read the article quickly. Write the best title on the line.",
+      "body": "How to find the freshest food\nTop tips for a top dinner party\nHow to make new friends",
+      "footer": "__Bored of eating the same food in the same old restaurants? Why not invite your friends over and show them your skills in the kitchen? Here are some tips to make the meal a success.__\n1 ASK YOUR FRIENDS IF THEY HAVE A SPECIAL DIET\n\nSome of your guests may be vegetarian, they may not eat fish, or they might have an allergy. Ask before you plan your menu so there are no problems on the night.\n\n2 PREPARE OR SHARE\n\nTry to plan a menu that has a dish you can make before your guests arrive. It could be a starter, a main course, or even part of a dessert. Or you could plan a set of sharing plates that you and your guests can eat and enjoy together.\n\n3 EAT FRESH\n\nDepending on the time of year, different fresh fruit and vegetables are available. For example, in summer, strawberries, blueberries, and raspberries are at their best. Use these in a fruit salad or a fresh fruit mocktail to start the evening. In winter, foods such as sweet potatoes, spinach, and broccoli are freshest, so use some of these to make a delicious veggie soup.\n\n4 RELAX!\n\nOf course you’ll need some time in the kitchen, but don’t stay in there too long! Relax, join your friends, and make sure to enjoy the evening and conversation.\n|image:https://docs.bitmark.cloud/bit-books/ef/unit_2/web-resources/images/ef_unit2_listening_focus_6.png|",
       "hint": "",
-      "labelTrue": "Richtig",
-      "labelFalse": "Falsch",
-      "statements": [
+      "questions": [
         {
-          "statement": "Gemeinsam mit dem Klienten plant die FaGe die Durchführung und Evaluation der Pflegeinterventionen.",
-          "isCorrect": false,
-          "isExample": false
-        },
-        {
-          "statement": "Damit die Klientin mit einer Schizophrenie ihr verändertes Erleben mit der Umwelt vergleichen kann, ist es wichtig, im Umgang klar, verlässlich und verbindlich zu sein.",
-          "isCorrect": true,
-          "isExample": false
-        },
-        {
-          "statement": "Bei Menschen mit einer Borderline-Störung ist ein offener Austausch der Mitarbeitenden im Team wichtig, da oft «Spaltungsversuche» von den Klienten unternommen werden.",
-          "isCorrect": true,
-          "isExample": false
-        },
-        {
-          "statement": "Klientinnen, die in einer manischen Phase Dinge tun, die anderen peinlich sind (z.B. in der Öffentlichkeit ausziehen), wissen davon in der depressiven Ohase nichts mehr.",
-          "isCorrect": false,
-          "isExample": false
-        },
-        {
-          "statement": "Wichtige pflegerische Massnahmen bei Klienten mit bipolarer Störung sind der Schutz vor Suizidalität und das Kommunizieren mit Ich-Botschaften.",
-          "isCorrect": true,
-          "isExample": false
-        },
-        {
-          "statement": "Ist man gerade anwesend, während die Klientin eine Panikattacke erlebt, ist es wichtig, Ruhe zu bewahren und Hilfe zu holen.",
-          "isCorrect": false,
-          "isExample": false
-        },
-        {
-          "statement": "Unter Skills versteht man Fähigkeiten und Bewältigungsstrategien, um aufkommende negative Gefühle zu regulieren und Spannungen abzubauen.",
-          "isCorrect": true,
-          "isExample": false
+          "item": "",
+          "question": "Title:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Top tips for a dinner party",
+          "partialAnswer": "",
+          "isShortAnswer": true
         }
       ],
-      "body": "",
       "id": [
-        "245958"
+        "302160"
       ]
     }
   }
