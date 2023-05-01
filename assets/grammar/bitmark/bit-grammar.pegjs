@@ -6,6 +6,7 @@
  * (c) 2023 Get More Brain AG
  * All rights reserved.
  *
+ * For details of opertation, see the comments in BitmarkParserHelper.ts
  */
 
 {{ // GLOBAL JS

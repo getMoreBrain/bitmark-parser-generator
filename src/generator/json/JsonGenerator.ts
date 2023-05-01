@@ -783,6 +783,29 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
           }
         }
 
+        // Responses
+        const responsesJson: ResponseJson[] = [];
+        if (q.responses) {
+          for (const c of q.responses) {
+            // Create the choice
+            const responseJson: Partial<ResponseJson> = {
+              response: c.text ?? '',
+              isCorrect: c.isCorrect ?? false,
+              item: c.itemLead?.item ?? '',
+              lead: c.itemLead?.lead ?? '',
+              hint: c.hint ?? '',
+              instruction: c.instruction ?? '',
+              // isExample: !!c.example,
+              // example: StringUtils.isString(c.example) ? (c.example as string) : '',
+            };
+
+            // Delete unwanted properties
+            if (q.itemLead?.lead == null) delete responseJson.lead;
+
+            responsesJson.push(responseJson as ResponseJson);
+          }
+        }
+
         // Create the quiz
         const quizJson: Partial<QuizJson> = {
           item: q.itemLead?.item ?? '',
@@ -791,7 +814,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
           instruction: q.instruction ?? '',
           isExample: !!q.example,
           example: StringUtils.isString(q.example) ? (q.example as string) : '',
-          choices: choicesJson,
+          choices: q.choices ? choicesJson : undefined,
+          responses: q.responses ? responsesJson : undefined,
         };
 
         // Delete unwanted properties
@@ -1250,14 +1274,14 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
-  // // bitmark -> bits -> footer -> footerText
+  // bitmark -> bits -> footer -> footerText
 
-  // protected leaf_footerText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   if (node.value) {
-  //     this.writeString(node.value);
-  //   }
-  // }
-
+  protected leaf_footerText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      if (this.bitJson.footer == null) this.bitJson.footer = '';
+      this.bitJson.footer += node.value;
+    }
+  }
   // bitmark -> bits -> bitValue -> elements -> elementsValue
 
   // protected leaf_elementsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {

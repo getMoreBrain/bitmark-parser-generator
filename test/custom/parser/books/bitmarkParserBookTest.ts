@@ -64,7 +64,7 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // - 99: eb_zuerich_et_a1.txt (?)
 // - 100: eb_zuerich_et_a2.txt (ANTLR parse error in the [!instruction] / Angled brackets confuse the ANTLR parser)
 // - 101: unit1 (There are invisible spaces at the end of the match keys, and the ANTLR parser does not strip them)
-// - 102: unit2
+// - 102: unit2 (?)
 // - 103: electrosuisse_sl_content
 // - 104: electrosuisse_sl_design
 // - 105: n15
@@ -92,8 +92,6 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // - 147: f1rst_lehrgang_probleme
 // - 148: f1rst_lehrgang_start
 // - 151: get_abstract_der_fuerst.txt
-// - 152: get_abstract_unternehmensethik.txt
-// - 153: get_abstract_warum_es_so_schwierig.txt
 // - 154: global_citizen_program
 // - 155: gmb_bitmark_article.txt
 // - 156: gmb_bitmark_artikel.txt
@@ -113,7 +111,6 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // - 171: hgf_pauli_band_2
 // - 172: hgf_pauli_band_3
 // - 173: hgf_praxisauftrag
-// - 174: hgf_referenzgericht_v2
 // - 176: ict_darstellung_von_daten
 // - 177: ict_darstellung_von_daten_2
 // - 178: ict_rechnen_mit_daten
@@ -133,7 +130,6 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // - 198: medium_cybersecurity_guide
 // - 199: medium_literally_literary_suicide_final
 // - 206: medium_toxic_positivity
-// - 208: 1101_checklisten_muster_gueter_u_erbrecht
 // - 209: 1111_grundlagen_des_gueter_u_erbrechts
 // - 211: 1203_steuern_und_kapitalanlagen
 // - 212: 1218_modul_steuern_einstiegsfragebogen
@@ -186,7 +182,7 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // - 270: sofatutor_toene_und_klaenge_in_der_musik
 // - 271: sofatutor_unregelmaeßige_verben
 // - 272: homeoffice_modul_1
-// - 273: swiss_edtech_collider_platform
+// - 274: mercado
 // - 275: uk_rezepte_1
 // - 276: uk_rezepte_3
 // - 277: uk_rezepte_4
@@ -197,8 +193,11 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // - 283: wiss_aufgabensammlung_1472
 // - 284: wiss_aufgabensammlung_business_engineering
 
-const SINGLE_FILE_START = 102;
+const SINGLE_FILE_START = 103;
 const SINGLE_FILE_COUNT = 1;
+
+// const SINGLE_FILE_START = 0;
+// const SINGLE_FILE_COUNT = 1000;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, '../../../../assets/test/books/bits');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, 'results/output');

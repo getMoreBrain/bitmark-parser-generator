@@ -1,29 +1,138 @@
 [
   {
-    "bitmark": "[.interview:bitmark++]\n[@id:302160]\n[%C]\n[!Read the article quickly. Write the best title on the line.]\n\nHow to find the freshest food\nTop tips for a top dinner party\nHow to make new friends\n===\nTitle: [$Top tips for a dinner party]\n===\n__Bored of eating the same food in the same old restaurants? Why not invite your friends over and show them your skills in the kitchen? Here are some tips to make the meal a success.__\n1 ASK YOUR FRIENDS IF THEY HAVE A SPECIAL DIET\n\nSome of your guests may be vegetarian, they may not eat fish, or they might have an allergy. Ask before you plan your menu so there are no problems on the night.\n\n2 PREPARE OR SHARE\n\nTry to plan a menu that has a dish you can make before your guests arrive. It could be a starter, a main course, or even part of a dessert. Or you could plan a set of sharing plates that you and your guests can eat and enjoy together.\n\n3 EAT FRESH\n\nDepending on the time of year, different fresh fruit and vegetables are available. For example, in summer, strawberries, blueberries, and raspberries are at their best. Use these in a fruit salad or a fresh fruit mocktail to start the evening. In winter, foods such as sweet potatoes, spinach, and broccoli are freshest, so use some of these to make a delicious veggie soup.\n\n4 RELAX!\n\nOf course you’ll need some time in the kitchen, but don’t stay in there too long! Relax, join your friends, and make sure to enjoy the evening and conversation.\n|image:https://docs.bitmark.cloud/bit-books/ef/unit_2/web-resources/images/ef_unit2_listening_focus_6.png|",
+    "bitmark": "[.multiple-choice:bitmark--]\n[@id:291806]\n[%]\n[!Teilen Sie die folgenden Begriffe in der entsprechenden Spalte korrekt zu:]\n===\n[!Staatliche Vorsorge]\n[+1. Säule][%1]\n[-2. Säule][%2]\n[-3. Säule][%3]\n===\n[!Individuelle Ergänzung]\n[-1. Säule][%1]\n[-2. Säule][%2]\n[+3. Säule][%3]\n===\n[!Existenzsicherung]\n[+1. Säule][%1]\n[-2. Säule][%2]\n[-3. Säule][%3]\n===\n[!Berufliche Vorsorge]\n[-1. Säule][%1]\n[+2. Säule][%2]\n[-3. Säule][%3]\n===",
     "bit": {
-      "type": "interview",
-      "format": "bitmark++",
-      "item": "C",
-      "instruction": "Read the article quickly. Write the best title on the line.",
-      "body": "How to find the freshest food\nTop tips for a top dinner party\nHow to make new friends",
-      "footer": "__Bored of eating the same food in the same old restaurants? Why not invite your friends over and show them your skills in the kitchen? Here are some tips to make the meal a success.__\n1 ASK YOUR FRIENDS IF THEY HAVE A SPECIAL DIET\n\nSome of your guests may be vegetarian, they may not eat fish, or they might have an allergy. Ask before you plan your menu so there are no problems on the night.\n\n2 PREPARE OR SHARE\n\nTry to plan a menu that has a dish you can make before your guests arrive. It could be a starter, a main course, or even part of a dessert. Or you could plan a set of sharing plates that you and your guests can eat and enjoy together.\n\n3 EAT FRESH\n\nDepending on the time of year, different fresh fruit and vegetables are available. For example, in summer, strawberries, blueberries, and raspberries are at their best. Use these in a fruit salad or a fresh fruit mocktail to start the evening. In winter, foods such as sweet potatoes, spinach, and broccoli are freshest, so use some of these to make a delicious veggie soup.\n\n4 RELAX!\n\nOf course you’ll need some time in the kitchen, but don’t stay in there too long! Relax, join your friends, and make sure to enjoy the evening and conversation.\n|image:https://docs.bitmark.cloud/bit-books/ef/unit_2/web-resources/images/ef_unit2_listening_focus_6.png|",
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Teilen Sie die folgenden Begriffe in der entsprechenden Spalte korrekt zu:",
+      "body": "",
+      "footer": "",
       "hint": "",
-      "questions": [
+      "quizzes": [
         {
           "item": "",
-          "question": "Title:",
-          "instruction": "",
+          "instruction": "Staatliche Vorsorge",
+          "choices": [
+            {
+              "choice": "1. Säule",
+              "item": "1",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2. Säule",
+              "item": "2",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3. Säule",
+              "item": "3",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
           "hint": "",
           "isExample": false,
-          "example": "",
-          "sampleSolution": "Top tips for a dinner party",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Individuelle Ergänzung",
+          "choices": [
+            {
+              "choice": "1. Säule",
+              "item": "1",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2. Säule",
+              "item": "2",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3. Säule",
+              "item": "3",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Existenzsicherung",
+          "choices": [
+            {
+              "choice": "1. Säule",
+              "item": "1",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2. Säule",
+              "item": "2",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3. Säule",
+              "item": "3",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Berufliche Vorsorge",
+          "choices": [
+            {
+              "choice": "1. Säule",
+              "item": "1",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2. Säule",
+              "item": "2",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3. Säule",
+              "item": "3",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "id": [
-        "302160"
+        "291806"
       ]
     }
   }

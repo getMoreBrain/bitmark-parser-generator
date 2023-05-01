@@ -1,28 +1,112 @@
 {
   "bits": [
     {
-      "bitType": "interview",
-      "textFormat": "bitmark++",
+      "bitType": "multiple-choice",
+      "textFormat": "bitmark--",
       "ids": [
-        "302160"
+        "291806"
       ],
-      "itemLead": {
-        "item": "C"
-      },
-      "instruction": "Read the article quickly. Write the best title on the line.",
-      "body": [
+      "instruction": "Teilen Sie die folgenden Begriffe in der entsprechenden Spalte korrekt zu:",
+      "quizzes": [
         {
-          "bodyText": "How to find the freshest food\nTop tips for a top dinner party\nHow to make new friends"
-        }
-      ],
-      "questions": [
+          "instruction": "Staatliche Vorsorge",
+          "choices": [
+            {
+              "text": "1. Säule",
+              "isCorrect": true,
+              "itemLead": {
+                "item": "1"
+              }
+            },
+            {
+              "text": "2. Säule",
+              "itemLead": {
+                "item": "2"
+              }
+            },
+            {
+              "text": "3. Säule",
+              "itemLead": {
+                "item": "3"
+              }
+            }
+          ]
+        },
         {
-          "question": "Title:",
-          "sampleSolution": "Top tips for a dinner party"
+          "instruction": "Individuelle Ergänzung",
+          "choices": [
+            {
+              "text": "1. Säule",
+              "itemLead": {
+                "item": "1"
+              }
+            },
+            {
+              "text": "2. Säule",
+              "itemLead": {
+                "item": "2"
+              }
+            },
+            {
+              "text": "3. Säule",
+              "isCorrect": true,
+              "itemLead": {
+                "item": "3"
+              }
+            }
+          ]
+        },
+        {
+          "instruction": "Existenzsicherung",
+          "choices": [
+            {
+              "text": "1. Säule",
+              "isCorrect": true,
+              "itemLead": {
+                "item": "1"
+              }
+            },
+            {
+              "text": "2. Säule",
+              "itemLead": {
+                "item": "2"
+              }
+            },
+            {
+              "text": "3. Säule",
+              "itemLead": {
+                "item": "3"
+              }
+            }
+          ]
+        },
+        {
+          "instruction": "Berufliche Vorsorge",
+          "choices": [
+            {
+              "text": "1. Säule",
+              "itemLead": {
+                "item": "1"
+              }
+            },
+            {
+              "text": "2. Säule",
+              "isCorrect": true,
+              "itemLead": {
+                "item": "2"
+              }
+            },
+            {
+              "text": "3. Säule",
+              "itemLead": {
+                "item": "3"
+              }
+            }
+          ]
         }
       ],
       "footer": {
-        "footerText": "__Bored of eating the same food in the same old restaurants? Why not invite your friends over and show them your skills in the kitchen? Here are some tips to make the meal a success.__\n1 ASK YOUR FRIENDS IF THEY HAVE A SPECIAL DIET\n\nSome of your guests may be vegetarian, they may not eat fish, or they might have an allergy. Ask before you plan your menu so there are no problems on the night.\n\n2 PREPARE OR SHARE\n\nTry to plan a menu that has a dish you can make before your guests arrive. It could be a starter, a main course, or even part of a dessert. Or you could plan a set of sharing plates that you and your guests can eat and enjoy together.\n\n3 EAT FRESH\n\nDepending on the time of year, different fresh fruit and vegetables are available. For example, in summer, strawberries, blueberries, and raspberries are at their best. Use these in a fruit salad or a fresh fruit mocktail to start the evening. In winter, foods such as sweet potatoes, spinach, and broccoli are freshest, so use some of these to make a delicious veggie soup.\n\n4 RELAX!\n\nOf course you’ll need some time in the kitchen, but don’t stay in there too long! Relax, join your friends, and make sure to enjoy the evening and conversation.\n|image:https://docs.bitmark.cloud/bit-books/ef/unit_2/web-resources/images/ef_unit2_listening_focus_6.png|"
+        "footerText": ""
       }
     }
   ]

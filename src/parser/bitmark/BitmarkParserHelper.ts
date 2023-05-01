@@ -1,3 +1,73 @@
+/**
+ * BitmarkParserHelper.ts
+ * v0.0.1
+ * RA Sewell
+ *
+ * (c) 2023 Get More Brain AG
+ * All rights reserved.
+ *
+ * About the parser:
+ * -----------------
+ *
+ * 1. The peggy.js PEG parser is used to parse bitmark markup into a simple AST.
+ * 2. The AST can then be walked to generate any output format required.
+ *    - The default output format is JSON.
+ *    - The output could also be bitmark, therefore providing a way to prettify / standardise bitmark markup.
+ * 3. The parser should not generate a fatal error under any circumstances, because all text is valid bitmark markup.
+ *    - The only fatal error for a bit is if the bit header tag (e.g. [.cloze:bitmark--]) cannot be parsed. In this
+ *      case the bit will be ignored and an error will be added at the AST top level. Parsing will continue.
+ *    - If the parser encounters suspect bitmark it will generate 'errors' which it will attach to the AST at bit level
+ * 4. The parser should be as fast as possible, without being overly complicated.
+ *
+ * Theory of operation:
+ * --------------------
+ *
+ * The parser splits the parse into multiple parses. This makes the parser much easier to write and understand than
+ * attempting to parse the entire markup in one pass.
+ *
+ * It also improves the performance in some cases, because although it means multiple passes over the same data, the
+ * comparisions made at each pass are fewer and simpler.
+ *
+ * The parser has the following parse entry points:
+ * - bitmark (external code should use this entry point)
+ * - bit
+ * - body
+ * - cardContent
+ *
+ * bitmark:
+ *
+ * This is the top level entry point for parsing a bitmark. It splits a set of bitmark bits into individual bits, and
+ * passes each individual bit to the 'bit' entry point for parsing.
+ *
+ * bit:
+ *
+ * This is the top level single-bit parser. It parses the bit header, the top level tags, the body, the card set, and
+ * the footer. Any inline bits (gaps, selects, true/false v1 tags) will be unparsed in the body / cardContent
+ *
+ * body:
+ *
+ * This entry point takes in the body text parsed out by the 'bit' parser and parses the inline bits
+ * (gaps, selects, true/false v1 tags) to produce body texts split with the parsed inline bits
+ *
+ * cardContent:
+ *
+ * This entry point takes in the text content of each card leaf parsed out by the 'bit' parser and parses the
+ * inline bits (true/false v2, sampleSolution, item, lead, etc tags) to produce the card set specific output for the
+ * specific bit type being parsed.
+ *
+ * Each rule of the parser outputs one or more objects containing a 'type', 'value' and optional 'key' property.
+ * The 'type' describes to this helper code what the parsed 'value' represents. If the value is not a single value,
+ * but a key/value pair then 'key' will also be set.
+ *
+ *
+ * Debugging and Development
+ * -------------------------
+ *
+ * - To build the parser, run 'yarn build-grammar-bit'
+ * - Modify the bitmark in '_simple.bit' to test the parser (this will be parsed after building the parser)
+ * - To undersand the operation and to help debug and develop, use the DEBUG_XXX flags in the code below.
+ *
+ */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { EnumType, superenum } from '@ncoderz/superenum';
 
@@ -31,7 +101,30 @@ import {
   AudioResource,
   ImageResource,
   MatrixCell,
+  FooterText,
 } from '../../model/ast/Nodes';
+
+// Debugging flags for helping develop and debug the parser
+const ENABLE_DEBUG = true;
+const DEBUG_BIT_RAW = true; // Print the raw bitmark
+const DEBUG_BIT_CONTENT = true; // Print the top level parsed bit content
+const DEBUG_BIT_TAGS = true; // Print the tags extracted from the bit parsed content
+const DEBUG_BODY_UNPARSED = true; // Print the unparsed body extracted from the bit content
+const DEBUG_BODY_PARSED = false; // Print the parsed body (will create a lot of output if body is large)
+const DEBUG_BODY_FINAL = true; // Print the final parsed body
+const DEBUG_FOOTER_UNPARSED = false; // Print the unparsed footer (actually the footer is not really parsed again)
+const DEBUG_FOOTER_FINAL = true; // Print the final parsed footer
+const DEBUG_GAP_CONTENT = true; // Print the parsed gap content
+const DEBUG_GAP_TAGS = true; // Print the tags extracted from the parsed gap content
+const DEBUG_SELECT_CONTENT = true; // Print the parsed select content
+const DEBUG_SELECT_TAGS = true; // Print the tags extracted from the parsed select content
+const DEBUG_PARSE_TRUE_FALSE_V1_CONTENT = true; // Print the parsed true/false (v1) content
+const DEBUG_PARSE_TRUE_FALSE_V1_TAGS = true; // Print the tags extracted from the parsed true/false (v1) content
+const DEBUG_CARD_SET_CONTENT = true; // Print the parsed card set content
+const DEBUG_CARD_SET = true; // Print the card set built from the parsed card set content
+
+// DO NOT EDIT THIS LINE. Ensures no debug in production in case ENABLE_DEBUG is accidentally left on
+const DEBUG = ENABLE_DEBUG && process.env.NODE_ENV === 'development';
 
 export interface ParseOptions {
   filename?: string;
@@ -73,6 +166,7 @@ interface CardData {
 export interface TypeKeyParseResult {
   cardSet?: TypeValue[];
   body?: string;
+  footer?: string;
   // solutions?: string[];
   trueFalse?: TrueFalseValue[];
   example?: string;
@@ -175,13 +269,6 @@ class BitmarkParserHelper {
     this.parserLocation = options.parserLocation;
   }
 
-  // For debugging only
-  print(header: string, data: unknown): void {
-    // console.log(`===== ${header} =====`);
-    // console.log(JSON.stringify(data, null, 2));
-    // console.log(`===== END: ${header} =====`);
-  }
-
   // Build bits
   buildBits(bitStrs: string[]): BitmarkAst {
     const bits: Bit[] = [];
@@ -192,7 +279,7 @@ class BitmarkParserHelper {
       // Actually, let's do this in the parser otherwise we'll lose correct error locations
       // bitStr = bitStr.trim();
 
-      this.print('RAW BIT', bitStr.trim());
+      if (DEBUG_BIT_RAW) this.debugPrint('RAW BIT', bitStr.trim());
 
       // Parse the raw bit
       const bitParserResult = this.parse(bitStr ?? '', {
@@ -230,9 +317,7 @@ class BitmarkParserHelper {
     // Bit type was invalid, so ignore the bit, returning instead the parsing errors
     if (!bitType) return this.invalidBit();
 
-    // console.log(`==== bitContent ====`);
-    // console.log(JSON.stringify(bitContent, null, 2));
-    // console.log(`==== END: bitContent ====`);
+    if (DEBUG_BIT_CONTENT) this.debugPrint('bitContent', bitContent);
 
     const isTrueFalseV1 = bitType === BitType.trueFalse1;
     const isMultipleChoiceV1 = bitType === BitType.multipleChoice1;
@@ -242,6 +327,7 @@ class BitmarkParserHelper {
     const {
       cardSet,
       body: unparsedBody,
+      footer: unparsedFooter,
       title,
       statement,
       choices,
@@ -261,21 +347,16 @@ class BitmarkParserHelper {
       TypeKey.CardSet,
     ]);
 
-    // console.log(`==== tags ====`);
-    // console.log(tags);
-    // console.log(`==== END: tags ====`);
-
-    // console.log(`==== unparsedBody ====`);
-    // console.log(unparsedBody);
-    // console.log(`==== END: unparsedBody ====`);
+    if (DEBUG_BIT_TAGS) this.debugPrint('tags', tags);
+    if (DEBUG_BODY_UNPARSED) this.debugPrint('unparsedBody', unparsedBody);
+    if (DEBUG_FOOTER_UNPARSED) this.debugPrint('unparsedFooter', unparsedBody);
 
     // Parse the body
     const parsedBody = this.parse(unparsedBody ?? '', {
       startRule: 'body',
     });
-    // console.log(`==== parsedBody ====`);
-    // console.log(JSON.stringify(parsedBody, null, 2));
-    // console.log(`==== END: parsedBody ====`);
+
+    if (DEBUG_BODY_PARSED) this.debugPrint('parsedBody', parsedBody);
 
     // Build the titles for the specific bit type
     const titles = this.buildTitles(bitType, title ?? []);
@@ -285,9 +366,12 @@ class BitmarkParserHelper {
 
     // Build the body (parts and placeholders)
     const body = this.buildBody(bitType, parsedBody);
-    // console.log(`==== body ====`);
-    // console.log(JSON.stringify(body, null, 2));
-    // console.log(`==== END: body ====`);
+
+    // Build the footer
+    const footer = this.buildFooter(bitType, unparsedFooter);
+
+    if (DEBUG_BODY_FINAL) this.debugPrint('body', body);
+    if (DEBUG_FOOTER_FINAL) this.debugPrint('footer', footer);
 
     // Build the errors
     const errors = this.buildErrors();
@@ -304,6 +388,7 @@ class BitmarkParserHelper {
       ...tags,
       ...bitSpecificCards,
       body,
+      footer,
       errors,
     });
 
@@ -401,9 +486,19 @@ class BitmarkParserHelper {
     return builder.body({ bodyParts });
   }
 
+  buildFooter(bitType: BitTypeType, footer: string | undefined): FooterText {
+    let footerText: FooterText = {} as FooterText;
+
+    if (footer) {
+      footerText = builder.footerText({
+        text: footer,
+      });
+    }
+    return footerText;
+  }
+
   buildGap(bitType: BitTypeType, gapContent: BitContent[]): Gap | undefined {
-    // const solutions: string[] = [];
-    // const seenItem = false;
+    if (DEBUG_GAP_CONTENT) this.debugPrint('gap content', gapContent);
 
     const tags = this.typeKeyDataParser(bitType, gapContent, [
       TypeKey.Cloze,
@@ -412,6 +507,8 @@ class BitmarkParserHelper {
       TypeKey.Instruction,
       TypeKey.Hint,
     ]);
+
+    if (DEBUG_GAP_TAGS) this.debugPrint('gap TAGS', tags);
 
     const gap = builder.gap({
       solutions: [],
@@ -423,9 +520,7 @@ class BitmarkParserHelper {
   }
 
   buildSelect(bitType: BitTypeType, selectContent: BitContent[]): Select | undefined {
-    // const options: SelectOption[] = [];
-    // let seenItem = false;
-    // console.log(`==== selectContent ====`, selectContent);
+    if (DEBUG_SELECT_CONTENT) this.debugPrint('select content', selectContent);
 
     const { trueFalse, ...tags } = this.typeKeyDataParser(bitType, selectContent, [
       TypeKey.True,
@@ -436,7 +531,7 @@ class BitmarkParserHelper {
       TypeKey.Hint,
     ]);
 
-    // console.log(`==== selectContent TAGS ====`, trueFalse);
+    if (DEBUG_SELECT_TAGS) this.debugPrint('select TAGS', { trueFalse, ...tags });
 
     const options: SelectOption[] = [];
     if (trueFalse) {
@@ -486,6 +581,8 @@ class BitmarkParserHelper {
       cards: [],
     };
 
+    if (DEBUG_CARD_SET_CONTENT) this.debugPrint('card set content', cardSetContent);
+
     // Build card set
     if (cardSetContent) {
       for (const content of cardSetContent) {
@@ -521,6 +618,8 @@ class BitmarkParserHelper {
         }
       }
     }
+
+    if (DEBUG_CARD_SET) this.debugPrint('card set', cardSet);
 
     // Parse the card contents
     switch (bitType) {
@@ -940,9 +1039,7 @@ class BitmarkParserHelper {
   }
 
   parseTrueFalse_V1(bitType: BitTypeType, trueFalseContent: BitContent[]): BitSpecificTrueFalse_V1 {
-    // console.log(`==== parseTrueFalse_V1 ====`, trueFalseContent);
-
-    // this.print(`==== parseTrueFalse_V1 ====`, trueFalseContent);
+    if (DEBUG_PARSE_TRUE_FALSE_V1_CONTENT) this.debugPrint('trueFalse V1 content', trueFalseContent);
 
     // NOTE: We handle V1 tags in V2 multiple-choice / multiple-response for maxium backwards compatibility
     const insertStatement = bitType === BitType.trueFalse || bitType === BitType.trueFalse1;
@@ -959,7 +1056,7 @@ class BitmarkParserHelper {
       TypeKey.Hint,
     ]);
 
-    // console.log(`==== parseTrueFalse_V1 TAGS ====`, tags);
+    if (DEBUG_PARSE_TRUE_FALSE_V1_TAGS) this.debugPrint('trueFalse V1 tags', tags);
 
     let statement: Statement | undefined;
     const choices: Choice[] = [];
@@ -1013,6 +1110,8 @@ class BitmarkParserHelper {
   typeKeyDataParser(bitType: BitTypeType, data: BitContent[], validTypes: TypeKeyType[]): TypeKeyParseResult {
     let seenItem = false;
     let body = '';
+    let footer = '';
+    let inFooter = false;
     const solutions: string[] = [];
     let statement: Statement | undefined;
     const choices: Choice[] = [];
@@ -1123,7 +1222,15 @@ class BitmarkParserHelper {
           break;
         }
 
-        case TypeKey.BodyLine:
+        case TypeKey.BodyLine: {
+          if (inFooter) {
+            footer += value;
+          } else {
+            body += value;
+          }
+          break;
+        }
+
         case TypeKey.BodyChar: {
           body += value;
           break;
@@ -1161,6 +1268,7 @@ class BitmarkParserHelper {
 
         case TypeKey.CardSet: {
           acc.cardSet = value;
+          inFooter = true; // After the card set, body lines should be written to the footer rather than the body
           break;
         }
 
@@ -1189,8 +1297,9 @@ class BitmarkParserHelper {
       res.extraProperties = extraProperties;
     }
 
-    // TODO - should not trim body as it will offset the error locations. Trim it in the parser instead
+    // TODO - should not trim body/footer as it will offset the error locations. Trim it in the parser instead
     res.body = body.trim();
+    res.footer = footer.trim();
 
     if (statement != null) res.statement = statement;
     if (solutions.length > 0) res.solutions = solutions;
@@ -1402,6 +1511,20 @@ class BitmarkParserHelper {
       location: this.parserLocation(),
     };
     this.nonFatalErrors.push(error);
+  }
+
+  /**
+   * Print out data for debugging
+   *
+   * @param header
+   * @param data
+   */
+  debugPrint(header: string, data: unknown): void {
+    if (DEBUG) {
+      console.log(`===== ${header} =====`);
+      console.log(JSON.stringify(data, null, 2));
+      console.log(`===== END: ${header} =====`);
+    }
   }
 }
 
