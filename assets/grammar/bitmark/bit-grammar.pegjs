@@ -79,18 +79,12 @@ bit
 
 // A single bit
 Bit
- = bitHeader: BitHeader_Inline bitContent: BitContent_Inline { return helper.buildBit(bitHeader, bitContent) }
- / bitHeader: BitHeader bitContent: BitContent { return helper.buildBit(bitHeader, bitContent) }
+ = bitHeader: BitHeader bitContent: BitContent { return helper.buildBit(bitHeader, bitContent) }
  / bit: $Anything { return helper.invalidBit(bit) }
 
 // The bit header, e.g. [.interview&image:bitmark++], [.interview:bitmark--&image], [.cloze]
 BitHeader
   = "[." bitType: Bit_Value formatAndResource: TextFormatAndResourceType? "]" { return helper.buildBitHeader(bitType, formatAndResource) }
-
-// The bit header for bits with inline true/false, i.e. [.multiple-choice-text]
-BitHeader_Inline
-  = "[." bitType: Bit_Value_Inline formatAndResource: TextFormatAndResourceType? "]" { return helper.buildBitHeader(bitType, formatAndResource) }
-
 
 // Text format and resource type
 TextFormatAndResourceType
@@ -106,42 +100,23 @@ ResourceType
 
 // All bit content (tags, body, cards)
 BitContent
-  = value: (CardSet / BitTagChain / BodyLine)* { return helper.reduceToArrayOfTypes(value) }
+  = value: (CardSet / GapTagsChain / TrueFalseTagsChain / StandardTagsChain / BodyChar)* { return helper.reduceToArrayOfTypes(value) }
 
-// All bit content for bits with inline true/false, i.e. [.multiple-choice-text]
-BitContent_Inline
-  = value: (CardSet / BitTagChain_Inline / BodyLine)* { return helper.reduceToArrayOfTypes(value) }
-
-// Bit tag chain
-BitTagChain
+// Standard bit tags chain
+StandardTagsChain
   = value: (BitTag ChainedBitTag*) { return helper.reduceToArrayOfTypes(value) }
 
-// Bit tag chain for bits with inline true/false, i.e. [.multiple-choice-text]
-BitTagChain_Inline
-  = value: (BitTag_Inline ChainedBitTag_Inline*) { return helper.reduceToArrayOfTypes(value) }
-
-// Chained Bit tag
+// Chained bit tag
 ChainedBitTag
- = WSL? value: BitTag { return value }
+ = WS value: BitTag { return value }
 
 // Bit tag
 BitTag
-  = value: (TitleTag / CommentTag / AnchorTag / ReferenceTag / PropertyTag / ItemLeadTag / InstructionTag / HintTag / TrueFalseTags_V1 / ResourceTags) { return value }
-
-// Chained Bit tag for bits with inline true/false, i.e. [.multiple-choice-text]
-ChainedBitTag_Inline
- = WSL? value: BitTag { return value }
-
-// Bit tags for bits with inline true/false, i.e. [.multiple-choice-text] - don't match top level true/false tags as they should be considered as inline tags
-BitTag_Inline
   = value: (TitleTag / CommentTag / AnchorTag / ReferenceTag / PropertyTag / ItemLeadTag / InstructionTag / HintTag / ResourceTags) { return value }
 
-TrueFalseTags_V1
-  = value: (TrueInlineTag / FalseInlineTag)+ others: (TrueInlineTag / FalseInlineTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.TrueFalse_V1, value: [...value, ...others] } }
-
 // Line of Body of the bit
-BodyLine
-  = value: $(NL / Char+ EOL) { return { type: TypeKey.BodyLine, value: value } }
+BodyChar
+  = value: (Char / NL) { return { type: TypeKey.BodyChar, value: value } }
 
 // CardSet
 CardSet
@@ -170,40 +145,21 @@ CardLine
 
 
 //
-// Body
-//
-
-// Root body rule
-body
-  = value: (BodyTags / BodyChar)* { return value; }
-
-// Line of Body of the bit
-BodyChar
-  = value: (Char / NL) { return { type: TypeKey.BodyChar, value: value } }
-
-// BodyTags
-BodyTags
-  = value: (GapTagsChain / SelectTagsChain) { return value; }
-
-// Gap tags chain
-GapTagsChain
-  = value: ClozeInlineTag others: (ClozeInlineTag / ItemLeadTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Gap, value: [value, ...others] }; }
-
-// Select tags chain
-SelectTagsChain
-  = value: (TrueInlineTag / FalseInlineTag)+ others: (TrueInlineTag / FalseInlineTag / ItemLeadTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.Select, value: [...value, ...others] } }
-
-
-//
 // Card content (standard)
 //
 
 // Root cardContent rule
 cardContent
-  = value: (CardContentTags / BodyChar)* { return value; }
+  = value: (CardContentTags / CardChar)* { return value; }
 
 CardContentTags
-  = value: (CommentTag / ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueTag / FalseTag / PropertyTag / TitleTag / ResourceTags) { return value; }
+  // = value: (CommentTag / ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueTag / FalseTag / PropertyTag / TitleTag / ResourceTags) { return value; }
+  = value: (CommentTag / ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueFalseTagsChain / PropertyTag / TitleTag / ResourceTags) { return value; }
+
+// Line of Body of the card
+CardChar
+  = value: (Char / NL) { return { type: TypeKey.CardChar, value: value } }
+
 
 //
 // Resource
@@ -225,6 +181,17 @@ ResourcePropertyTag
   = "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.ResourceProperty, key, value } }
 
 
+//
+// Tag chains
+//
+
+// Gap tags chain
+GapTagsChain
+  = value: ClozeTag+ others: (ChainedItemLeadTag / ChainedInstructionTag / ChainedHintTag / ChainedPropertyTag)* { return { type: TypeKey.GapChain, value: [...value, ...others] }; }
+
+// True/False tags chain
+TrueFalseTagsChain
+  = value: (TrueTag / FalseTag)+ others: (ChainedItemLeadTag / ChainedInstructionTag / ChainedHintTag / ChainedPropertyTag)* { return { type: TypeKey.TrueFalseChain, value: [...value, ...others] } }
 
 
 //
@@ -233,64 +200,72 @@ ResourcePropertyTag
 
 // Title tag
 TitleTag
-  = NL? "[" level: "#"+ title: Tag_Value "]" { return { type: TypeKey.Title, value: { level, title } } }
+  = "[" level: "#"+ title: Tag_Value "]" { return { type: TypeKey.Title, value: { level, title } } }
 
 // Anchor tag
 AnchorTag
-  = NL? "[▼" value: Tag_Value "]" { return { type: TypeKey.Anchor, value } }
+  = "[▼" value: Tag_Value "]" { return { type: TypeKey.Anchor, value } }
 
 // Reference tag
 ReferenceTag
-  = NL? "[►" value: Tag_Value "]" { return { type: TypeKey.Reference, value } }
-
+  = "[►" value: Tag_Value "]" { return { type: TypeKey.Reference, value } }
 
 // Property (@) tag
 PropertyTag
-  = NL? "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Property, key, value } }
+  = "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Property, key, value } }
 
 // Item / Lead (%) tag
 ItemLeadTag
-  = NL? "[%" value: Tag_Value "]" { return { type: TypeKey.ItemLead, value } }
+  = "[%" value: Tag_Value "]" { return { type: TypeKey.ItemLead, value } }
 
 // Instruction (!) tag
 InstructionTag
-  = NL? "[!" value: Tag_Value "]" { return { type: TypeKey.Instruction, value } }
+  = "[!" value: Tag_Value "]" { return { type: TypeKey.Instruction, value } }
 
 // Hint (?) tag
 HintTag
-  = NL? "[?" value: Tag_Value "]" { return { type: TypeKey.Hint, value } }
+  = "[?" value: Tag_Value "]" { return { type: TypeKey.Hint, value } }
 
 // True (+) tag
 TrueTag
-  = NL? "[+" value: Tag_Value "]" { return { type: TypeKey.True, value } }
-
-// False (-) tag
-FalseTag
-  = NL? "[-" value: Tag_Value "]" { return { type: TypeKey.False, value } }
-
-// Sample Solution tag
-SampleSolutionTag
-  = NL? "[$" value: Tag_Value "]" { return { type: TypeKey.SampleSolution, value } }
-
-// Comment Tag
-CommentTag
-  = NL? "||" value: Comment_Value "||" { return { type: TypeKey.Comment, value } }
-
-//
-// Inline Tags
-//
-
-// Cloze tag
-ClozeInlineTag
-  = "[_" value: Tag_Value "]" { return { type: TypeKey.Cloze, value } }
-
-// True (+) tag
-TrueInlineTag
   = "[+" value: Tag_Value "]" { return { type: TypeKey.True, value } }
 
 // False (-) tag
-FalseInlineTag
+FalseTag
   = "[-" value: Tag_Value "]" { return { type: TypeKey.False, value } }
+
+// Sample Solution tag
+SampleSolutionTag
+  = "[$" value: Tag_Value "]" { return { type: TypeKey.SampleSolution, value } }
+
+// Comment Tag
+CommentTag
+  = "||" value: Comment_Value "||" { return { type: TypeKey.Comment, value } }
+
+// Cloze tag
+ClozeTag
+  = "[_" value: Tag_Value "]" { return { type: TypeKey.Cloze, value } }
+
+
+//
+// Chained Tags
+//
+
+// Chained Property (@) tag
+ChainedPropertyTag
+  = WS "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Property, key, value } }
+
+// Chained Item / Lead (%) tag
+ChainedItemLeadTag
+  = WS "[%" value: Tag_Value "]" { return { type: TypeKey.ItemLead, value } }
+
+// Chained Instruction (!) tag
+ChainedInstructionTag
+  = WS "[!" value: Tag_Value "]" { return { type: TypeKey.Instruction, value } }
+
+// Chained Hint (?) tag
+ChainedHintTag
+  = WS "[?" value: Tag_Value "]" { return { type: TypeKey.Hint, value } }
 
 
 //
@@ -305,9 +280,6 @@ KeyValueTag_Key
 
 Bit_Value
   = value: $[^&:\]]* { return value }
-
-Bit_Value_Inline
-  = value: $("multiple-choice-text") { return value }
 
 KeyValueTag_Value
   = ":" value: Tag_Value { return value }
@@ -355,6 +327,9 @@ NL "Line Terminator"
   / "\u2028"
   / "\u2029"
 
+WS "whitespace"
+  = [ \t\n\r\u2028\u2029]*
+
 // End of line including End of file
 EOL
   = NL / !.
@@ -362,22 +337,4 @@ EOL
 // End of file
 EOF
  = !.
-
-
-
-// WSL "whitespace in line"
-//   = [ \t]*
-
-// _ "space"
-//   = $((WhiteSpace / LineTerminator )*)
-
-// HTS "language tag separator"
-//     = [ \t] / NL
-
-// WhiteSpace "white space, separator"
-//   = [\t\v\f \u00A0\uFEFF\u0020\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]
-
-// LineTerminator = [\n\r\u2028\u2029]
-// char = [^\n\r\u2028\u2029] //u2028: line separator, u2029: paragraph separator
-// word = [^\n\r\u2028\u2029\t\v\f \u00A0\uFEFF\u0020\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]
 

@@ -31,3 +31,14 @@ Manchmal kennst du ein Wort nicht.
 [+"Entschuldigung, was bedeutet ...?"][-"Können Sie das aufschreiben bitte?"][-"Entschuldigung, können Sie das
 wiederholen."]
 
+[.cloze-and-multiple-choice-text]
+|| ANTLR parser does not assign hints correcly ||
+[@id:287842]
+[%][%cloze-and-multiple-choice-text]
+The students completed the [_cloze] with the correct verb [+forms][-formats]
+
+[+other][-options] is on another line and may cause issues with bit chaining.
+
+Here we chain a [+other][-options][?hint] hint correctly
+
+Here we chain a [+other] [-options][?hint] hint incorrectly

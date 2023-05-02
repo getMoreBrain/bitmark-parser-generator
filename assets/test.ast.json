@@ -1,113 +1,21 @@
 {
   "bits": [
     {
-      "bitType": "multiple-choice",
+      "bitType": "sequence",
       "textFormat": "bitmark--",
       "ids": [
-        "291806"
+        "285747"
       ],
-      "instruction": "Teilen Sie die folgenden Begriffe in der entsprechenden Spalte korrekt zu:",
-      "quizzes": [
-        {
-          "instruction": "Staatliche Vorsorge",
-          "choices": [
-            {
-              "text": "1. Säule",
-              "isCorrect": true,
-              "itemLead": {
-                "item": "1"
-              }
-            },
-            {
-              "text": "2. Säule",
-              "itemLead": {
-                "item": "2"
-              }
-            },
-            {
-              "text": "3. Säule",
-              "itemLead": {
-                "item": "3"
-              }
-            }
-          ]
-        },
-        {
-          "instruction": "Individuelle Ergänzung",
-          "choices": [
-            {
-              "text": "1. Säule",
-              "itemLead": {
-                "item": "1"
-              }
-            },
-            {
-              "text": "2. Säule",
-              "itemLead": {
-                "item": "2"
-              }
-            },
-            {
-              "text": "3. Säule",
-              "isCorrect": true,
-              "itemLead": {
-                "item": "3"
-              }
-            }
-          ]
-        },
-        {
-          "instruction": "Existenzsicherung",
-          "choices": [
-            {
-              "text": "1. Säule",
-              "isCorrect": true,
-              "itemLead": {
-                "item": "1"
-              }
-            },
-            {
-              "text": "2. Säule",
-              "itemLead": {
-                "item": "2"
-              }
-            },
-            {
-              "text": "3. Säule",
-              "itemLead": {
-                "item": "3"
-              }
-            }
-          ]
-        },
-        {
-          "instruction": "Berufliche Vorsorge",
-          "choices": [
-            {
-              "text": "1. Säule",
-              "itemLead": {
-                "item": "1"
-              }
-            },
-            {
-              "text": "2. Säule",
-              "isCorrect": true,
-              "itemLead": {
-                "item": "2"
-              }
-            },
-            {
-              "text": "3. Säule",
-              "itemLead": {
-                "item": "3"
-              }
-            }
-          ]
-        }
-      ],
-      "footer": {
-        "footerText": ""
-      }
+      "itemLead": {
+        "item": "32",
+        "lead": "sequence"
+      },
+      "elements": [
+        "Ein Elefant",
+        "ist",
+        "grösser als",
+        "eine Maus."
+      ]
     }
   ]
 }

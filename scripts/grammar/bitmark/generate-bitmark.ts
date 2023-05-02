@@ -24,7 +24,7 @@ const commandLineOptions = process.argv.slice(2);
 const optTest = commandLineOptions.includes('--test');
 const optBitmark = commandLineOptions.includes('--bit');
 const allowedStartRules = optBitmark
-  ? ['bitmark', 'bit', 'body', 'cardContent']
+  ? ['bitmark', 'bit', 'cardContent']
   : ['bitmarkPlus', 'bitmarkPlusPlus', 'bitmarkMinusMinus'];
 const startRule = optBitmark ? 'bitmark' : 'bitmarkPlus';
 

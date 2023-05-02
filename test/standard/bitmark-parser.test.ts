@@ -4,6 +4,7 @@ import { describe, test } from '@jest/globals';
 // import deepEqual from 'deep-equal';
 import * as fs from 'fs-extra';
 import path from 'path';
+import { performance } from 'perf_hooks';
 
 import { JsonFileGenerator } from '../../src/generator/json/JsonFileGenerator';
 import { BitmarkParser } from '../../src/parser/bitmark/BitmarkParser';
@@ -74,6 +75,9 @@ describe('json-gen', () => {
     //   test('JSON ==> Markup ==> JSON', async () => {
 
     allTestFiles.forEach((testFile: string) => {
+      performance.clearMarks();
+      performance.clearMeasures();
+
       const partFolderAndFile = testFile.replace(TEST_INPUT_DIR, '');
       const partFolder = path.dirname(partFolderAndFile);
       const fullFolder = path.join(TEST_OUTPUT_DIR, partFolder);
@@ -101,12 +105,15 @@ describe('json-gen', () => {
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
         // Generate JSON from generated bitmark markup using the ANTLR parser
+        performance.mark('ANTLR:Start');
         const originalJson = bitmarkParser.parse(originalMarkup);
 
         // Write the new JSON
         fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {
           encoding: 'utf8',
         });
+
+        performance.mark('ANTLR:End');
 
         // Remove uninteresting JSON items
         BitJsonUtils.cleanupJson(originalJson, { removeParser: true, removeErrors: true });
@@ -115,6 +122,7 @@ describe('json-gen', () => {
         // writeTestJsonAndBitmark(originalJson, fullFolder, id);
 
         // Convert the Bitmark markup to bitmark AST
+        performance.mark('PEG:Start');
         const bitmarkAst = bitmarkParser.toAst(originalMarkup);
 
         // Write the new AST
@@ -128,6 +136,8 @@ describe('json-gen', () => {
         });
 
         await generator.generate(bitmarkAst);
+
+        performance.mark('PEG:End');
 
         const newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
 
@@ -144,6 +154,11 @@ describe('json-gen', () => {
         fs.writeFileSync(jsonDiffFile, JSON.stringify(diffMap, null, 2), {
           encoding: 'utf8',
         });
+
+        const antlrTimeSecs = Math.round(performance.measure('ANTLR', 'ANTLR:Start', 'ANTLR:End').duration) / 1000;
+        const pegTimeSecs = Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000;
+        const speedUp = Math.round((antlrTimeSecs / pegTimeSecs) * 100) / 100;
+        console.log(`'${id}' timing; ANTLR: ${antlrTimeSecs} s, PEG: ${pegTimeSecs} s, speedup: x${speedUp}`);
 
         expect(newJson).toEqual(originalJson);
 

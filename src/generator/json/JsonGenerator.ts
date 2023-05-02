@@ -269,7 +269,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
   protected exit_bitsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     // Clean up the bit JSON, removing any unwanted values
-    this.cleanBitJson(this.bitJson);
+    this.cleanAndSetDefaultsForBitJson(this.bitJson);
   }
 
   // bitmark -> bits -> bitValue -> ids
@@ -509,6 +509,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     // Ensure placeholders exists
     if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
+
+    // Ensure body exists
+    if (this.bitJson.body == null) this.bitJson.body = '';
 
     // Add the placeholder to the body
     const placeholder = `{${this.placeholderIndex}}`;
@@ -1966,7 +1969,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
    * @param bit
    * @returns
    */
-  protected cleanBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
+  protected cleanAndSetDefaultsForBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
     // Clear 'item' which may be an empty string if 'lead' was set but item not
     // Only necessary because '.article' does not include a default value for 'item'
     // which is totally inconsistent, but maybe is wanted.
@@ -2084,6 +2087,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
       case BitType.matchMatrix:
         if (bitJson.item == null) bitJson.item = '';
+        if (bitJson.body == null) bitJson.body = '';
         break;
 
       case BitType.learningPathExternalLink:

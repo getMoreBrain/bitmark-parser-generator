@@ -193,11 +193,11 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // - 283: wiss_aufgabensammlung_1472
 // - 284: wiss_aufgabensammlung_business_engineering
 
-const SINGLE_FILE_START = 103;
-const SINGLE_FILE_COUNT = 1;
+// const SINGLE_FILE_START = 103;
+// const SINGLE_FILE_COUNT = 1;
 
-// const SINGLE_FILE_START = 0;
-// const SINGLE_FILE_COUNT = 1000;
+const SINGLE_FILE_START = 0;
+const SINGLE_FILE_COUNT = 1000;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, '../../../../assets/test/books/bits');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, 'results/output');
@@ -338,11 +338,10 @@ describe('bitmark-parser', () => {
           encoding: 'utf8',
         });
 
-        console.log(
-          `'${id}' timing; ANTLR: ${
-            Math.round(performance.measure('ANTLR', 'ANTLR:Start', 'ANTLR:End').duration) / 1000
-          } s, PEG: ${Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000} s`,
-        );
+        const antlrTimeSecs = Math.round(performance.measure('ANTLR', 'ANTLR:Start', 'ANTLR:End').duration) / 1000;
+        const pegTimeSecs = Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000;
+        const speedUp = Math.round((antlrTimeSecs / pegTimeSecs) * 100) / 100;
+        console.log(`'${id}' timing; ANTLR: ${antlrTimeSecs} s, PEG: ${pegTimeSecs} s, speedup: x${speedUp}`);
 
         expect(newJson).toEqual(originalJson);
 

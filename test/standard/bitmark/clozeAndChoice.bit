@@ -1,4 +1,10 @@
 [.cloze-and-multiple-choice-text]
 [@id:287842]
 [%][%cloze-and-multiple-choice-text]
-The students completed the [_cloze] with the correct verb [+forms][-formats].
+The students completed the [_cloze] with the correct verb [+forms][-formats]
+
+[+other][-options] is on another line and may cause issues with bit chaining.
+
+Here we chain [+other][-options] correctly
+
+Here we chain [+other] [-options] incorrectly

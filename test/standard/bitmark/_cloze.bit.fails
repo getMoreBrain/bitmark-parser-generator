@@ -24,3 +24,9 @@ Abschluss [_e][_E] [_g][_G]
 [.cloze:bitmark--]
 0. young → [_younger]  [@example] → [_youngest]  [_youngerer!][@example]
 
+[.cloze:bitmark--]
+|| Chaining of [?HINT?] does not work because of the space and it ends up at the top level ||
+[@id:272904]
+[%34]
+[!Füllen Sie den Lückentext zum Vertriebssystem mit den passenden Begriffen aus.]
+Beim [_direkten Vertrieb][_direkten Vertrieb2][?Hint] verkauft eigene [_Verkaufsstellen] einrichten, [_Verkaufsmitarbeitende] einstellen. Beim [_indirekten Vertrieb][_indirekten Vertrieb2] [?HINT?] läuft den [_Grosshandel] [_NOT Grosshandel2] und / oder den [_Einzelhandel].
