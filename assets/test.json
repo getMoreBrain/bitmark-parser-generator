@@ -1,25 +1,170 @@
 [
   {
-    "bitmark": "[.sequence]\n[%32][%sequence]\n[@id:285747]\n===\nEin Elefant\n--\nist\n--\ngrösser als\n--\neine Maus.\n===",
+    "bitmark": "[.multiple-choice:bitmark--]\n[@id:292011]\n[%][%Wissensüberprüfung]\n===\n[!1. Welche Aufgabe hat der Sicherheitsfonds?]\n[-Anschluss von Arbeitgebern ohne Vorsorgeeinrichtung.]\n[+Zahlung von Beiträgen bei ungünstiger Altersstruktur.]\n[-Anschluss von arbeitslosen Personen.]\n===\n[!2. Welches ist die zulässige Rechtsform einer Vorsorgeeinrichtung?]\n[+Stiftung]\n[-Verein]\n[-Gesellschaft mit beschränkter Haftung]\n===\n[!3. Wer überprüft den Anschluss eines Arbeitgebers an eine Vorsorgeeinrichtung?]\n[+Ausgleichskasse der AHV]\n[-Aufsichtsbehörde]\n[-Revisionsstelle der Firma]\n===\n[!4. Eine Person, die nicht der obligatorischen Versicherung untersteht, arbeitet für mehrere Arbeitgeber und verdient einen Lohn über CHF 22'050. Sie möchte sich freiwillig versichern. Wen muss sie kontaktieren?]\n[-Den Sicherheitsfonds BVG]\n[-Aufsichtsbehörde]\n[+Die Auffangeinrichtung]\n===\n[!5. Welche Aufgabe ist nicht Teil der Verpflichtung der Auffangeinrichtung?]\n[-Arbeitgeber, die ihrer Pflicht zum Anschluss nicht nachkommen, anzuschliessen.]\n[+Zuschüsse an jene Vorsorgeeinrichtungen ausrichten, die eine ungünstige Altersstruktur aufweisen.]\n[-Anschluss von Selbständigerwerbenden, die sich freiwillig versichern lassen wollen.]",
     "bit": {
-      "type": "sequence",
+      "type": "multiple-choice",
       "format": "bitmark--",
+      "item": "",
       "instruction": "",
       "body": "",
-      "elements": [
-        "Ein Elefant",
-        "ist",
-        "grösser als",
-        "eine Maus."
-      ],
-      "item": "32",
+      "footer": "",
       "hint": "",
-      "isExample": false,
-      "example": "",
-      "lead": "sequence",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "1. Welche Aufgabe hat der Sicherheitsfonds?",
+          "choices": [
+            {
+              "choice": "Anschluss von Arbeitgebern ohne Vorsorgeeinrichtung.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Zahlung von Beiträgen bei ungünstiger Altersstruktur.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anschluss von arbeitslosen Personen.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "2. Welches ist die zulässige Rechtsform einer Vorsorgeeinrichtung?",
+          "choices": [
+            {
+              "choice": "Stiftung",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Verein",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Gesellschaft mit beschränkter Haftung",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "3. Wer überprüft den Anschluss eines Arbeitgebers an eine Vorsorgeeinrichtung?",
+          "choices": [
+            {
+              "choice": "Ausgleichskasse der AHV",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Aufsichtsbehörde",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Revisionsstelle der Firma",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "4. Eine Person, die nicht der obligatorischen Versicherung untersteht, arbeitet für mehrere Arbeitgeber und verdient einen Lohn über CHF 22'050. Sie möchte sich freiwillig versichern. Wen muss sie kontaktieren?",
+          "choices": [
+            {
+              "choice": "Den Sicherheitsfonds BVG",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Aufsichtsbehörde",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Die Auffangeinrichtung",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "5. Welche Aufgabe ist nicht Teil der Verpflichtung der Auffangeinrichtung?",
+          "choices": [
+            {
+              "choice": "Arbeitgeber, die ihrer Pflicht zum Anschluss nicht nachkommen, anzuschliessen.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Zuschüsse an jene Vorsorgeeinrichtungen ausrichten, die eine ungünstige Altersstruktur aufweisen.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anschluss von Selbständigerwerbenden, die sich freiwillig versichern lassen wollen.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
       "id": [
-        "285747"
-      ]
+        "292011"
+      ],
+      "lead": "Wissensüberprüfung"
     }
   }
 ]
