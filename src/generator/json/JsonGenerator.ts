@@ -15,13 +15,10 @@ import {
   BitmarkAst,
   Bit,
   ItemLead,
-  SelectOption,
-  HighlightText,
   Response,
   Statement,
   Choice,
   Heading,
-  Body,
   ImageResource,
   Resource,
   ArticleResource,
@@ -45,10 +42,8 @@ import {
   StatementJson,
 } from '../../model/json/BitJson';
 import {
-  AppLikeResourceJson,
   AppLinkResourceJson,
   AppLinkResourceWrapperJson,
-  AppResourceJson,
   AppResourceWrapperJson,
   ArticleLikeResourceJson,
   ArticleLinkResourceWrapperJson,
@@ -1811,8 +1806,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       if (!Array.isArray(values)) values = [values];
 
       if (Array.isArray(values) && values.length > 0) {
-        if (singleWithoutArray && values.length === 1) {
-          target[name] = values[0];
+        if (singleWithoutArray && values.length >= 1) {
+          target[name] = values[values.length - 1];
         } else {
           target[name] = values;
         }

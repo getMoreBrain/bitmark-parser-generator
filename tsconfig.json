@@ -4,8 +4,10 @@
     "strict": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    // Have to set next 2 parameters to false to avoid errors in peggy parser TS (should probably switch the parser to JS)
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    //
     "module": "CommonJS",
     "target": "ES6",
     "esModuleInterop": true,

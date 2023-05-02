@@ -18,22 +18,23 @@ const PropertyKey = superenum({
   thumbImage: 'thumbImage',
   duration: 'duration',
   deeplink: 'deeplink',
-  externalLink: 'externalLink',
-  externalLinkText: 'externalLinkText',
   videoCallLink: 'videoCallLink',
   bot: 'bot',
   list: 'list',
-  labelTrue: 'labelTrue',
-  labelFalse: 'labelFalse',
-  quotedPerson: 'quotedPerson',
+  progress: 'progress', // single
+  externalLink: 'externalLink', // single
+  externalLinkText: 'externalLinkText', // single
+  labelTrue: 'labelTrue', // single
+  labelFalse: 'labelFalse', // single
+  quotedPerson: 'quotedPerson', // single
 
   // Gap / Select
-  example: 'example',
+  example: 'example', // single
 
   // Questions
-  shortAnswer: 'shortAnswer',
-  longAnswer: 'longAnswer',
-  caseSensitive: 'caseSensitive',
+  shortAnswer: 'shortAnswer', // single
+  longAnswer: 'longAnswer', // single
+  caseSensitive: 'caseSensitive', // single
 });
 
 export type PropertyKeyType = EnumType<typeof PropertyKey>;

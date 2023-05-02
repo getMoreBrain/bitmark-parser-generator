@@ -41,8 +41,9 @@
       const defaultJsonTxt = JSON.stringify(defaultJson, null, 2);
 
       const dom = {
-        json: document.getElementById('input'),
-        bitmark: document.getElementById('output'),
+        json: document.getElementById('output'),
+        bitmark: document.getElementById('input'),
+        ast: document.getElementById('ast'),
         toBitmark: document.getElementById('toBitmark'),
         toJson: document.getElementById('toJson'),
       };
@@ -67,16 +68,23 @@
         try {
           const bitmark = dom.bitmark.value;
           const json = await tool.convert(bitmark);
+          const ast = await tool.convert(bitmark, {
+            outputFormat: 'ast',
+          });
 
           dom.json.value = JSON.stringify(json, null, 2);
+          dom.ast.value = JSON.stringify(ast, null, 2);
         } catch (e) {
           dom.json.value = JSON.stringify(e, Object.getOwnPropertyNames(e), 2);
+          dom.ast.value = 'Error';
           console.log(e);
         }
       };
 
       dom.toBitmark.addEventListener('click', jsonToBitmark);
       dom.toJson.addEventListener('click', bitmarkToJson);
+      dom.bitmark.addEventListener('input', bitmarkToJson);
+      dom.json.addEventListener('input', jsonToBitmark);
     });
   </script>
   <style>
@@ -84,12 +92,24 @@
       display: flex;
       justify-content: space-between;
     }
+    .left {
+      display: flex;
+      flex-direction: column;
+    }
     .input {
       width: 48vw;
-      height: 98vh;
+      height: 48vh;
       box-sizing: border-box;
       margin: 0;
-      padding: 0;
+      padding: 5px;
+      margin-bottom: 2vh;
+    }
+    .ast {
+      width: 48vw;
+      height: 48vh;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 5px;
     }
     .buttons {
       width: 3vw;
@@ -104,17 +124,20 @@
       height: 98vh;
       box-sizing: border-box;
       margin: 0;
-      padding: 0;
+      padding: 5px;
     }
   </style>
 </head>
 
 <body>
   <div class="wrapper">
-    <textarea id="input" class="input"></textarea>
+    <div class="left">
+      <textarea id="input" class="input"></textarea>
+      <textarea id="ast" class="input"></textarea>
+    </div>
     <div class="buttons">
-      <button id="toBitmark">==></button>
-      <button id="toJson"><==</button>
+      <button id="toJson">==></button>
+      <button id="toBitmark"><==</button>
     </div>
     <textarea id="output" class="output"></textarea>
   </div>

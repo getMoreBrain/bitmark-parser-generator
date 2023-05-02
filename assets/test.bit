@@ -1,2 +1,10 @@
-[.article:bitmark++]
-[@id:151970]
+[.true-false]
+[@id:297893]
+[%3][%lead]
+[@labelTrue:korrekt][@labelFalse:falsch]
+[@labelTrue:korrekt3][@labelFalse:falsch2]
+===
+[+1) Wenn Sie „auf der grünen Wiese“ entwickeln, sind Sie relativ frei in der Wahl von Komponenten und der Abbildung der Fachdomäne auf Komponenten.][@example]
+===
+[-2) Wenn Sie ein Teilsystem innerhalb einer existierenden Systemlandschaft entwickeln, unterliegen Sie keinen Restriktionen]
+===

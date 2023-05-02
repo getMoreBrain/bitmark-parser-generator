@@ -10,7 +10,6 @@ import { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerat
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
 import { JsonOptions } from './generator/json/JsonGenerator';
 import { JsonObjectGenerator } from './generator/json/JsonObjectGenerator';
-import { JsonStringGenerator } from './generator/json/JsonStringGenerator';
 import { BitmarkAst } from './model/ast/Nodes';
 import { BitmarkParserType, BitmarkParserTypeType } from './model/enum/BitmarkParserType';
 import { BitmarkParser } from './parser/bitmark/BitmarkParser';

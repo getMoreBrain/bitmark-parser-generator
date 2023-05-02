@@ -57,7 +57,7 @@ BM_FirstBit
 
 // Subsequent bits after the first bit
 BM_Bits
-  = ($BM_Bit)+
+  = ($BM_Bit)*
 
 // A bit with potential blank lines before
 BM_Bit
@@ -133,7 +133,7 @@ Card
 
 CardContent
   = value: ((PossibleCardLine !("===" EOL))* PossibleCardLine !EOL) {
-    const cards = helper.reduceToArrayOfTypes(value, TypeKey.Card);
+    const cards = helper.reduceToArrayOfTypes(value, [TypeKey.Card]);
     return cards;
   };
 
@@ -220,7 +220,7 @@ ItemLeadTag
 
 // Instruction (!) tag
 InstructionTag
-  = "[!" value: Tag_Value "]" { return { type: TypeKey.Instruction, value } }
+  = "[!" value: Tag_Value ("]" / (WS EOF)) { return { type: TypeKey.Instruction, value } }
 
 // Hint (?) tag
 HintTag

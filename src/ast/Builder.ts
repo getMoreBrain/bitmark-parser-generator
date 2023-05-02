@@ -1,5 +1,3 @@
-import { URL } from 'url';
-
 import { BitTypeType } from '../model/enum/BitType';
 import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
 import { TextFormatType, TextFormat } from '../model/enum/TextFormat';

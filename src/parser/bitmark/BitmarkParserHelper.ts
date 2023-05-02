@@ -418,7 +418,7 @@ class BitmarkParserHelper {
   }
 
   // Build bit for data that cannot be parsed
-  invalidBit(): SubParserResult<Bit> {
+  invalidBit(bit?: unknown): SubParserResult<Bit> {
     // Create the error
     this.addError('Invalid bit');
 
@@ -1169,7 +1169,7 @@ class BitmarkParserHelper {
     const responses: Response[] = [];
     const extraProperties: any = {};
 
-    // Helpers for building the body text
+    // Helper for building the body text
     const addBodyText = () => {
       if (bodyPart) {
         if (bodyPart) {
@@ -1179,6 +1179,16 @@ class BitmarkParserHelper {
           bodyParts.push(bodyText);
         }
         bodyPart = '';
+      }
+    };
+
+    // Helpers for building the properties
+    const addProperty = (obj: any, key: string, value: unknown, single?: boolean) => {
+      if (!single && Object.prototype.hasOwnProperty.call(obj, key)) {
+        const originalValue = obj[key];
+        obj[key] = [originalValue, value];
+      } else {
+        obj[key] = value;
       }
     };
 
@@ -1217,6 +1227,7 @@ class BitmarkParserHelper {
           if (PropertyKey.fromValue(key)) {
             // Known property
             switch (key) {
+              // Special cases
               case PropertyKey.shortAnswer: {
                 acc.isShortAnswer = value as boolean;
                 break;
@@ -1229,6 +1240,15 @@ class BitmarkParserHelper {
                 acc.isCaseSensitive = value as boolean;
                 break;
               }
+              case PropertyKey.externalLink:
+              case PropertyKey.externalLinkText:
+              case PropertyKey.quotedPerson:
+              case PropertyKey.labelTrue:
+              case PropertyKey.labelFalse:
+                // Trim specific string properties - It might be better NOT to do this, but ANTLR parser does it
+                addProperty(acc, key, ((value as string) ?? '').trim(), true);
+                break;
+
               case PropertyKey.id:
               case PropertyKey.externalId:
               case PropertyKey.ageRange:
@@ -1246,23 +1266,21 @@ class BitmarkParserHelper {
               case PropertyKey.thumbImage:
               case PropertyKey.duration:
               case PropertyKey.deeplink:
-              case PropertyKey.externalLink:
-              case PropertyKey.externalLinkText:
               case PropertyKey.videoCallLink:
               case PropertyKey.bot:
-              case PropertyKey.list:
-              case PropertyKey.quotedPerson: {
+              case PropertyKey.list: {
                 // Trim specific string properties - It might be better NOT to do this, but ANTLR parser does it
-                (acc as any)[key] = ((value as string) ?? '').trim();
+                addProperty(acc, key, ((value as string) ?? '').trim());
                 break;
               }
               default: {
-                (acc as any)[key] = value;
+                // Standard property case
+                addProperty(acc, key, value);
               }
             }
           } else {
             // Unknown (extra) property
-            extraProperties[key] = value;
+            addProperty(extraProperties, key, value);
           }
           break;
         }

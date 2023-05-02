@@ -4,7 +4,6 @@ import { parse as bitmarkParse } from '../../generated/parser/bitmark/bitmark-pe
 // import { parse as pegParse } from '../../generated/parser/bitmark/bitmark-peggy-parser';
 import { BitmarkAst } from '../../model/ast/Nodes';
 import { BitmarkParserType, BitmarkParserTypeType } from '../../model/enum/BitmarkParserType';
-import { TextFormat } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { JsonParser } from '../json/JsonParser';
 

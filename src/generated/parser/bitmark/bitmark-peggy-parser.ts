@@ -252,7 +252,7 @@ function peg$parse(input: string, options?: ParseOptions) {
   const peg$c26 = function(): any { helper.processCardSetEnd(); };
   const peg$c27 = function(value: any): any { helper.processCard(); return value[2]; };
   const peg$c28 = function(value: any): any {
-      const cards = helper.reduceToArrayOfTypes(value, TypeKey.Card);
+      const cards = helper.reduceToArrayOfTypes(value, [TypeKey.Card]);
       return cards;
     };
   const peg$c29 = "==";
@@ -585,19 +585,15 @@ function peg$parse(input: string, options?: ParseOptions) {
     } else {
       s1 = s2;
     }
-    if (s1 as any !== peg$FAILED) {
-      while (s1 as any !== peg$FAILED) {
-        s0.push(s1);
-        s1 = peg$currPos;
-        s2 = peg$parseBM_Bit();
-        if (s2 as any !== peg$FAILED) {
-          s1 = input.substring(s1, peg$currPos);
-        } else {
-          s1 = s2;
-        }
+    while (s1 as any !== peg$FAILED) {
+      s0.push(s1);
+      s1 = peg$currPos;
+      s2 = peg$parseBM_Bit();
+      if (s2 as any !== peg$FAILED) {
+        s1 = input.substring(s1, peg$currPos);
+      } else {
+        s1 = s2;
       }
-    } else {
-      s0 = peg$FAILED;
     }
 
     return s0;
@@ -2132,7 +2128,7 @@ function peg$parse(input: string, options?: ParseOptions) {
   }
 
   function peg$parseInstructionTag(): any {
-    let s0, s1, s2, s3;
+    let s0, s1, s2, s3, s4, s5;
 
     s0 = peg$currPos;
     if (input.substr(peg$currPos, 2) === peg$c61) {
@@ -2151,6 +2147,23 @@ function peg$parse(input: string, options?: ParseOptions) {
         } else {
           s3 = peg$FAILED;
           if (peg$silentFails === 0) { peg$fail(peg$c7); }
+        }
+        if (s3 as any === peg$FAILED) {
+          s3 = peg$currPos;
+          s4 = peg$parseWS();
+          if (s4 as any !== peg$FAILED) {
+            s5 = peg$parseEOF();
+            if (s5 as any !== peg$FAILED) {
+              s4 = [s4, s5];
+              s3 = s4;
+            } else {
+              peg$currPos = s3;
+              s3 = peg$FAILED;
+            }
+          } else {
+            peg$currPos = s3;
+            s3 = peg$FAILED;
+          }
         }
         if (s3 as any !== peg$FAILED) {
           peg$savedPos = s0;
