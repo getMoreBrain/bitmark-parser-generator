@@ -13,7 +13,6 @@ const PropertyKey = superenum({
   date: 'date',
   location: 'location',
   theme: 'theme',
-  kind: 'kind',
   action: 'action',
   thumbImage: 'thumbImage',
   duration: 'duration',
@@ -21,6 +20,7 @@ const PropertyKey = superenum({
   videoCallLink: 'videoCallLink',
   bot: 'bot',
   list: 'list',
+  kind: 'kind', // single
   progress: 'progress', // single
   externalLink: 'externalLink', // single
   externalLinkText: 'externalLinkText', // single

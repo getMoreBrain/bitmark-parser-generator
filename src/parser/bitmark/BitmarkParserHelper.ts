@@ -676,7 +676,7 @@ class BitmarkParserHelper {
 
           if (DEBUG_CARD_PARSED) this.debugPrint('parsedCardContent (statements)', content);
 
-          const tags = this.typeKeyValueProcessor(bitType, content, [
+          const { statements: chainedStatements, ...tags } = this.typeKeyValueProcessor(bitType, content, [
             TypeKey.TrueFalseChain,
             TypeKey.Property,
             TypeKey.ItemLead,
@@ -686,8 +686,18 @@ class BitmarkParserHelper {
 
           if (DEBUG_CARD_TAGS) this.debugPrint('card tags (statements)', tags);
 
-          if (tags.statements) {
-            statements.push(...(tags.statements ?? []));
+          // Re-build the statement, adding any tags that were not in the True/False chain
+          // These tags are actually not in the correct place, but we can still interpret them and fix the data.
+          // As .true-false only has one statement per card, we can just add the extra tags to the statement.
+          if (Array.isArray(chainedStatements)) {
+            for (const s of chainedStatements) {
+              const statement = builder.statement({
+                ...tags,
+                ...s,
+                ...s.itemLead,
+              });
+              statements.push(statement);
+            }
           }
         }
       }
@@ -1240,6 +1250,7 @@ class BitmarkParserHelper {
                 acc.isCaseSensitive = value as boolean;
                 break;
               }
+              case PropertyKey.kind:
               case PropertyKey.externalLink:
               case PropertyKey.externalLinkText:
               case PropertyKey.quotedPerson:
@@ -1261,7 +1272,6 @@ class BitmarkParserHelper {
               case PropertyKey.date:
               case PropertyKey.location:
               case PropertyKey.theme:
-              case PropertyKey.kind:
               case PropertyKey.action:
               case PropertyKey.thumbImage:
               case PropertyKey.duration:

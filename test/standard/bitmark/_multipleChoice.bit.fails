@@ -5,32 +5,6 @@
 <<Weil ich keine Arbeit ....>> ]
 [-a) gefunden][+b) hatte][-c) war]
 
-[.multiple-choice:bitmark--]
-|| PEG parser is not correctly parsing the chained [%item] tags - it is adding them at the quizzes level ||
-[@id:291806]
-[%]
-[!Teilen Sie die folgenden Begriffe in der entsprechenden Spalte korrekt zu:]
-===
-[!Staatliche Vorsorge]
-[+1. Säule][%1]
-[-2. Säule][%2]
-[-3. Säule][%3]
-===
-[!Individuelle Ergänzung]
-[-1. Säule][%1]
-[-2. Säule][%2]
-[+3. Säule][%3]
-===
-[!Existenzsicherung]
-[+1. Säule][%1]
-[-2. Säule][%2]
-[-3. Säule][%3]
-===
-[!Berufliche Vorsorge]
-[-1. Säule][%1]
-[+2. Säule][%2]
-[-3. Säule][%3]
-===
 
 
 [.multiple-choice:bitmark]

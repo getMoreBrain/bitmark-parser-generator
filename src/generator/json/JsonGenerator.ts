@@ -342,7 +342,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> bitValue -> kinds
 
   protected enter_kinds(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'kind', node.value);
+    if (node.value != null) this.addProperty(this.bitJson, 'kind', node.value, true);
   }
 
   // bitmark -> bits -> bitValue -> actions
@@ -1991,6 +1991,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       case BitType.note:
       case BitType.preparationNote:
       case BitType.quote:
+      case BitType.releaseNote:
       case BitType.remark:
       case BitType.sideNote:
       case BitType.takePicture:

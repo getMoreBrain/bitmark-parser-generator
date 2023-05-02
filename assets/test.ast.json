@@ -4,22 +4,41 @@
       "bitType": "true-false",
       "textFormat": "bitmark--",
       "ids": [
-        "297893"
+        "245958"
       ],
-      "labelTrue": "korrekt3",
-      "labelFalse": "falsch2",
+      "labelTrue": "Richtig",
+      "labelFalse": "Falsch",
       "itemLead": {
-        "item": "3",
-        "lead": "lead"
+        "item": "1",
+        "lead": "Selbsttest Berufspraxis F.2"
       },
+      "example": true,
       "statements": [
         {
-          "text": "1) Wenn Sie „auf der grünen Wiese“ entwickeln, sind Sie relativ frei in der Wahl von Komponenten und der Abbildung der Fachdomäne auf Komponenten.",
-          "isCorrect": true,
+          "text": "Gemeinsam mit dem Klienten plant die FaGe die Durchführung und Evaluation der Pflegeinterventionen.",
           "example": true
         },
         {
-          "text": "2) Wenn Sie ein Teilsystem innerhalb einer existierenden Systemlandschaft entwickeln, unterliegen Sie keinen Restriktionen"
+          "text": "Damit die Klientin mit einer Schizophrenie ihr verändertes Erleben mit der Umwelt vergleichen kann, ist es wichtig, im Umgang klar, verlässlich und verbindlich zu sein.",
+          "isCorrect": true
+        },
+        {
+          "text": "Bei Menschen mit einer Borderline-Störung ist ein offener Austausch der Mitarbeitenden im Team wichtig, da oft «Spaltungsversuche» von den Klienten unternommen werden.",
+          "isCorrect": true
+        },
+        {
+          "text": "Klientinnen, die in einer manischen Phase Dinge tun, die anderen peinlich sind (z.B. in der Öffentlichkeit ausziehen), wissen davon in der depressiven Ohase nichts mehr."
+        },
+        {
+          "text": "Wichtige pflegerische Massnahmen bei Klienten mit bipolarer Störung sind der Schutz vor Suizidalität und das Kommunizieren mit Ich-Botschaften.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ist man gerade anwesend, während die Klientin eine Panikattacke erlebt, ist es wichtig, Ruhe zu bewahren und Hilfe zu holen."
+        },
+        {
+          "text": "Unter Skills versteht man Fähigkeiten und Bewältigungsstrategien, um aufkommende negative Gefühle zu regulieren und Spannungen abzubauen.",
+          "isCorrect": true
         }
       ]
     }

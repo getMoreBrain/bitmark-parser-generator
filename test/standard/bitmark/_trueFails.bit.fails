@@ -1,5 +1,7 @@
 [.true-false:bitmark--]
-|| The [%items] are incorrectly interpreted by the ANTLR parser as being at the top level  ||
+|| The [%items] are interpreted by the ANTLR parser as being at the top level  ||
+|| The [%items] are ignored by the PEG parser ||
+|| The issue is the [%items] should be chained AFTER the T/F ||
 [@id:245958]
 [%][%Selbsttest Berufspraxis F.2]
 [@labelTrue:Richtig][@labelFalse:Falsch]

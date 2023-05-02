@@ -1,32 +1,67 @@
 [
   {
-    "bitmark": "[.true-false]\n[@id:297893]\n[%3][%lead]\n[@labelTrue:korrekt][@labelFalse:falsch]\n[@labelTrue:korrekt3][@labelFalse:falsch2]\n===\n[+1) Wenn Sie „auf der grünen Wiese“ entwickeln, sind Sie relativ frei in der Wahl von Komponenten und der Abbildung der Fachdomäne auf Komponenten.][@example]\n===\n[-2) Wenn Sie ein Teilsystem innerhalb einer existierenden Systemlandschaft entwickeln, unterliegen Sie keinen Restriktionen]\n===",
+    "bitmark": "[.true-false:bitmark--]\n|| The [%items] are interpreted by the ANTLR parser as being at the top level  ||\n|| The [%items] are ignored by the PEG parser ||\n|| The issue is the [%items] should be chained AFTER the T/F ||\n[@id:245958]\n[%][%Selbsttest Berufspraxis F.2]\n[@labelTrue:Richtig][@labelFalse:Falsch]\n===\n[%1]\n[@example]\n[-Gemeinsam mit dem Klienten plant die FaGe die Durchführung und Evaluation der Pflegeinterventionen.]\n===\n[%2]\n[+Damit die Klientin mit einer Schizophrenie ihr verändertes Erleben mit der Umwelt vergleichen kann, ist es wichtig, im Umgang klar, verlässlich und verbindlich zu sein.]\n===\n[%3]\n[+Bei Menschen mit einer Borderline-Störung ist ein offener Austausch der Mitarbeitenden im Team wichtig, da oft «Spaltungsversuche» von den Klienten unternommen werden.]\n===\n[%4]\n[-Klientinnen, die in einer manischen Phase Dinge tun, die anderen peinlich sind (z.B. in der Öffentlichkeit ausziehen), wissen davon in der depressiven Ohase nichts mehr.]\n===\n[%5]\n[+Wichtige pflegerische Massnahmen bei Klienten mit bipolarer Störung sind der Schutz vor Suizidalität und das Kommunizieren mit Ich-Botschaften.]\n===\n[%6]\n[-Ist man gerade anwesend, während die Klientin eine Panikattacke erlebt, ist es wichtig, Ruhe zu bewahren und Hilfe zu holen.]\n===\n[%99]\n[+Unter Skills versteht man Fähigkeiten und Bewältigungsstrategien, um aufkommende negative Gefühle zu regulieren und Spannungen abzubauen.][%7][@example]\n===",
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "item": "3",
-      "lead": "lead",
+      "item": "1",
+      "lead": "Selbsttest Berufspraxis F.2",
       "instruction": "",
       "hint": "",
-      "labelTrue": "korrekt3",
-      "labelFalse": "falsch2",
+      "labelTrue": "Richtig",
+      "labelFalse": "Falsch",
       "statements": [
         {
-          "statement": "1) Wenn Sie „auf der grünen Wiese“ entwickeln, sind Sie relativ frei in der Wahl von Komponenten und der Abbildung der Fachdomäne auf Komponenten.",
-          "isCorrect": true,
+          "statement": "Gemeinsam mit dem Klienten plant die FaGe die Durchführung und Evaluation der Pflegeinterventionen.",
+          "isCorrect": false,
           "isExample": true,
           "example": ""
         },
         {
-          "statement": "2) Wenn Sie ein Teilsystem innerhalb einer existierenden Systemlandschaft entwickeln, unterliegen Sie keinen Restriktionen",
+          "statement": "Damit die Klientin mit einer Schizophrenie ihr verändertes Erleben mit der Umwelt vergleichen kann, ist es wichtig, im Umgang klar, verlässlich und verbindlich zu sein.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Bei Menschen mit einer Borderline-Störung ist ein offener Austausch der Mitarbeitenden im Team wichtig, da oft «Spaltungsversuche» von den Klienten unternommen werden.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Klientinnen, die in einer manischen Phase Dinge tun, die anderen peinlich sind (z.B. in der Öffentlichkeit ausziehen), wissen davon in der depressiven Ohase nichts mehr.",
           "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Wichtige pflegerische Massnahmen bei Klienten mit bipolarer Störung sind der Schutz vor Suizidalität und das Kommunizieren mit Ich-Botschaften.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Ist man gerade anwesend, während die Klientin eine Panikattacke erlebt, ist es wichtig, Ruhe zu bewahren und Hilfe zu holen.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Unter Skills versteht man Fähigkeiten und Bewältigungsstrategien, um aufkommende negative Gefühle zu regulieren und Spannungen abzubauen.",
+          "isCorrect": true,
           "isExample": false
         }
       ],
       "body": "",
       "id": [
-        "297893"
-      ]
-    }
+        "245958"
+      ],
+      "example": "",
+      "isExample": true
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n===\n'",
+        "line": 29,
+        "column": 154,
+        "errorLine": "[+Unter Skills versteht man Fähigkeiten und Bewältigungsstrategien, um aufkommende negative Gefühle zu regulieren und Spannungen abzubauen.][%7][@example]"
+      }
+    ]
   }
 ]
