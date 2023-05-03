@@ -315,7 +315,7 @@ class JsonParser {
       example: example || isExample,
       resource: resourceNode,
       body: bodyNode,
-      sampleSolutions: sampleSolution,
+      sampleSolution: sampleSolution,
       elements,
       statements: statementNodes,
       responses: responseNodes,

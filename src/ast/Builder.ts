@@ -103,14 +103,14 @@ class Builder {
     thumbImage?: string | string[];
     duration?: string | string[];
     deepLink?: string | string[];
-    externalLink?: string;
-    externalLinkText?: string;
+    externalLink?: string | string[];
+    externalLinkText?: string | string[];
     videoCallLink?: string | string[];
     bot?: string | string[];
     list?: string | string[];
-    labelTrue?: string;
-    labelFalse?: string;
-    quotedPerson?: string;
+    labelTrue?: string | string[];
+    labelFalse?: string | string[];
+    quotedPerson?: string | string[];
     extraProperties?: {
       [key: string]: unknown | unknown[];
     };
@@ -121,6 +121,8 @@ class Builder {
     toc?: boolean;
     progress?: boolean;
     anchor?: string;
+    // If an array is passed to reference, it will be considered an "[@reference:Some text]" property
+    // If a string is passed to reference, it will be considered a "[►Reference]" tag
     reference?: string | string[];
     referenceEnd?: string;
     item?: string;
@@ -130,7 +132,7 @@ class Builder {
     example?: string | boolean;
     resource?: Resource;
     body?: Body;
-    sampleSolutions?: string | string[];
+    sampleSolution?: string | string[];
     elements?: string[];
     statement?: Statement;
     statements?: Statement[];
@@ -192,7 +194,7 @@ class Builder {
       example,
       resource,
       body,
-      sampleSolutions,
+      sampleSolution,
       elements,
       statement,
       statements,
@@ -214,33 +216,33 @@ class Builder {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
       resourceType: resource?.type ?? ResourceType.fromValue(resourceType),
-      ids: this.asArray(id),
-      externalIds: this.asArray(externalId),
+      id: this.asArray(id),
+      externalId: this.asArray(externalId),
       book,
-      ageRanges: this.asArray(ageRange),
-      languages: this.asArray(language),
-      computerLanguages: this.asArray(computerLanguage),
-      coverImages: this.asArray(coverImage),
-      publishers: this.asArray(publisher),
+      ageRange: this.asArray(ageRange),
+      language: this.asArray(language),
+      computerLanguage: this.asArray(computerLanguage),
+      coverImage: this.asArray(coverImage),
+      publisher: this.asArray(publisher),
       publications: this.asArray(publications),
-      authors: this.asArray(author),
-      dates: this.asArray(date),
-      locations: this.asArray(location),
-      themes: this.asArray(theme),
-      kinds: this.asArray(kind),
-      actions: this.asArray(action),
-      thumbImages: this.asArray(thumbImage),
-      deepLinks: this.asArray(deepLink),
-      externalLink,
-      externalLinkText,
-      videoCallLinks: this.asArray(videoCallLink),
-      bots: this.asArray(bot),
-      durations: this.asArray(duration),
-      referenceProperties: undefined, // Important for property order, do not remove
-      lists: this.asArray(list),
-      labelTrue,
-      labelFalse,
-      quotedPerson,
+      author: this.asArray(author),
+      date: this.asArray(date),
+      location: this.asArray(location),
+      theme: this.asArray(theme),
+      kind: this.asArray(kind),
+      action: this.asArray(action),
+      thumbImage: this.asArray(thumbImage),
+      deeplink: this.asArray(deepLink),
+      externalLink: this.asArray(externalLink),
+      externalLinkText: this.asArray(externalLinkText),
+      videoCallLink: this.asArray(videoCallLink),
+      bot: this.asArray(bot),
+      duration: this.asArray(duration),
+      referenceProperty: undefined, // Important for property order, do not remove
+      list: this.asArray(list),
+      labelTrue: this.asArray(labelTrue),
+      labelFalse: this.asArray(labelFalse),
+      quotedPerson: this.asArray(quotedPerson),
       title,
       subtitle,
       level,
@@ -256,7 +258,7 @@ class Builder {
       extraProperties: this.parseExtraProperties(extraProperties),
       resource,
       body,
-      sampleSolutions: this.asArray(sampleSolutions),
+      sampleSolution: this.asArray(sampleSolution),
       elements,
       statement,
       statements,
@@ -1371,7 +1373,7 @@ class Builder {
 
   private handleBitReference(bit: Bit, reference: string | string[] | undefined) {
     if (Array.isArray(reference) && reference.length > 0) {
-      bit.referenceProperties = reference;
+      bit.referenceProperty = reference;
     } else if (reference) {
       bit.reference = reference as string;
     }

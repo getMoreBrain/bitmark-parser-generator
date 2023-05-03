@@ -13,21 +13,22 @@ const PropertyKey = superenum({
   date: 'date',
   location: 'location',
   theme: 'theme',
-  reference: 'reference',
+  kind: 'kind', // single
   action: 'action',
   thumbImage: 'thumbImage',
-  duration: 'duration',
   deeplink: 'deeplink',
-  videoCallLink: 'videoCallLink',
-  bot: 'bot',
-  list: 'list',
-  kind: 'kind', // single
-  progress: 'progress', // single
   externalLink: 'externalLink', // single
   externalLinkText: 'externalLinkText', // single
+  videoCallLink: 'videoCallLink',
+  bot: 'bot',
+  duration: 'duration',
+  reference: 'reference',
+  list: 'list',
   labelTrue: 'labelTrue', // single
   labelFalse: 'labelFalse', // single
   quotedPerson: 'quotedPerson', // single
+
+  progress: 'progress', // single
 
   // Gap / Select
   example: 'example', // single

@@ -267,45 +267,45 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     this.cleanAndSetDefaultsForBitJson(this.bitJson);
   }
 
-  // bitmark -> bits -> bitValue -> ids
+  // bitmark -> bits -> bitValue -> id
 
-  protected enter_ids(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_id(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'id', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> externalIds
+  // bitmark -> bits -> bitValue -> externalId
 
-  protected enter_externalIds(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_externalId(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'externalId', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> ageRanges
+  // bitmark -> bits -> bitValue -> ageRange
 
-  protected enter_ageRanges(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_ageRange(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'ageRange', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> languages
+  // bitmark -> bits -> bitValue -> language
 
-  protected enter_languages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_language(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'language', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> computerLanguages
+  // bitmark -> bits -> bitValue -> computerLanguage
 
-  protected enter_computerLanguages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_computerLanguage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'computerLanguage', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> coverImages
+  // bitmark -> bits -> bitValue -> coverImage
 
-  protected enter_coverImages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_coverImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'coverImage', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> publishers
+  // bitmark -> bits -> bitValue -> publisher
 
-  protected enter_publishers(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_publisher(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'publisher', node.value);
   }
 
@@ -315,87 +315,123 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (node.value != null) this.addProperty(this.bitJson, 'publications', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> authors
+  // bitmark -> bits -> bitValue -> author
 
-  protected enter_authors(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_author(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'author', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> dates
+  // bitmark -> bits -> bitValue -> date
 
-  protected enter_dates(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_date(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'date', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> locations
+  // bitmark -> bits -> bitValue -> location
 
-  protected enter_locations(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_location(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // Ignore location that is not at the bit level as there is a key clash with error.location / bit.location
+    if (parent?.key !== NodeType.bitsValue) return;
+
     if (node.value != null) this.addProperty(this.bitJson, 'location', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> themes
+  // bitmark -> bits -> bitValue -> theme
 
-  protected enter_themes(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_theme(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'theme', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> kinds
+  // bitmark -> bits -> bitValue -> kind
 
-  protected enter_kinds(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_kind(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'kind', node.value, true);
   }
 
-  // bitmark -> bits -> bitValue -> actions
+  // bitmark -> bits -> bitValue -> action
 
-  protected enter_actions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_action(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'action', node.value, true);
   }
 
-  // bitmark -> bits -> bitValue -> thumbImages
+  // bitmark -> bits -> bitValue -> thumbImage
 
-  protected enter_thumbImages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_thumbImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'thumbImage', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> durations
+  // bitmark -> bits -> bitValue -> duration
 
-  protected enter_durations(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_duration(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // Ignore duration that is not at the bit level as there is a key clash with resource...duration / bit.duration
+    if (parent?.key !== NodeType.bitsValue) return;
+
     if (node.value != null) this.addProperty(this.bitJson, 'duration', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> deepLinks
+  // bitmark -> bits -> bitValue -> deeplink
 
-  protected enter_deepLinks(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_deeplink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'deeplink', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> videoCallLinks
+  //  bitmark -> bits -> bitValue -> externalLink
 
-  protected enter_videoCallLinks(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_externalLink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value != null) this.addProperty(this.bitJson, 'externalLink', node.value, true);
+  }
+
+  //  bitmark -> bits -> bitValue -> externalLinkText
+
+  protected enter_externalLinkText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value != null) this.addProperty(this.bitJson, 'externalLinkText', node.value, true);
+  }
+
+  // bitmark -> bits -> bitValue -> videoCallLink
+
+  protected enter_videoCallLink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'videoCallLink', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> bots
+  // bitmark -> bits -> bitValue -> bot
 
-  protected enter_bots(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_bot(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'bot', node.value);
   }
 
-  //  bitmark -> bits -> referenceProperties
+  //  bitmark -> bits -> referenceProperty
 
-  protected enter_referenceProperties(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_referenceProperty(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'reference', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> lists
+  // bitmark -> bits -> bitValue -> list
 
-  protected enter_lists(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_list(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'list', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> sampleSolutions
+  //  bitmark -> bits -> bitValue -> labelTrue
 
-  protected enter_sampleSolutions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_labelTrue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value != null) this.addProperty(this.bitJson, 'labelTrue', node.value ?? '', true);
+  }
+
+  //  bitmark -> bits -> bitValue -> labelFalse
+
+  protected enter_labelFalse(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value != null) this.addProperty(this.bitJson, 'labelFalse', node.value ?? '', true);
+  }
+
+  //  bitmark -> bits -> bitValue -> quotedPerson
+
+  protected enter_quotedPerson(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value != null) this.addProperty(this.bitJson, 'quotedPerson', node.value, true);
+  }
+
+  // bitmark -> bits -> bitValue -> sampleSolution
+
+  protected enter_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'sampleSolution', node.value);
   }
 
@@ -1194,36 +1230,6 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
   protected leaf_referenceEnd(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'referenceEnd', node.value, true);
-  }
-
-  //  bitmark -> bits -> bitValue -> externalLink
-
-  protected leaf_externalLink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'externalLink', node.value, true);
-  }
-
-  //  bitmark -> bits -> bitValue -> externalLinkText
-
-  protected leaf_externalLinkText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'externalLinkText', node.value, true);
-  }
-
-  //  bitmark -> bits -> bitValue -> labelTrue
-
-  protected leaf_labelTrue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'labelTrue', node.value ?? '', true);
-  }
-
-  //  bitmark -> bits -> bitValue -> labelFalse
-
-  protected leaf_labelFalse(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'labelFalse', node.value ?? '', true);
-  }
-
-  //  bitmark -> bits -> bitValue -> quotedPerson
-
-  protected leaf_quotedPerson(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'quotedPerson', node.value, true);
   }
 
   //  * -> itemLead --> item

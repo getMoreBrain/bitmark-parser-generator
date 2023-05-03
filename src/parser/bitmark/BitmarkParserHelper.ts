@@ -201,7 +201,7 @@ interface StatementsOrChoicesOrResponses {
 }
 
 interface BitSpecificCards {
-  sampleSolutions?: string | string[];
+  sampleSolution?: string | string[];
   elements?: string[];
   statements?: Statement[];
   responses?: Response[];
@@ -1195,16 +1195,12 @@ class BitmarkParserHelper {
     };
 
     // Helpers for building the properties
-    const addProperty = (obj: any, key: string, value: unknown, single?: boolean) => {
-      if (single) {
-        obj[key] = value;
+    const addProperty = (obj: any, key: string, value: unknown) => {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        const originalValue = obj[key];
+        obj[key] = [...originalValue, value];
       } else {
-        if (!single && Object.prototype.hasOwnProperty.call(obj, key)) {
-          const originalValue = obj[key];
-          obj[key] = [...originalValue, value];
-        } else {
-          obj[key] = [value];
-        }
+        obj[key] = [value];
       }
     };
 
@@ -1243,28 +1239,21 @@ class BitmarkParserHelper {
           if (PropertyKey.fromValue(key)) {
             // Known property
             switch (key) {
-              // Special cases
               case PropertyKey.shortAnswer: {
+                // Different naming
                 acc.isShortAnswer = value as boolean;
                 break;
               }
               case PropertyKey.longAnswer: {
+                // Different naming
                 acc.isShortAnswer = !value;
                 break;
               }
               case PropertyKey.caseSensitive: {
+                // Different naming
                 acc.isCaseSensitive = value as boolean;
                 break;
               }
-              case PropertyKey.kind:
-              case PropertyKey.externalLink:
-              case PropertyKey.externalLinkText:
-              case PropertyKey.quotedPerson:
-              case PropertyKey.labelTrue:
-              case PropertyKey.labelFalse:
-                // Trim specific string properties - It might be better NOT to do this, but ANTLR parser does it
-                addProperty(acc, key, ((value as string) ?? '').trim(), true);
-                break;
 
               case PropertyKey.id:
               case PropertyKey.externalId:
@@ -1278,14 +1267,20 @@ class BitmarkParserHelper {
               case PropertyKey.date:
               case PropertyKey.location:
               case PropertyKey.theme:
-              case PropertyKey.reference:
+              case PropertyKey.kind:
               case PropertyKey.action:
               case PropertyKey.thumbImage:
-              case PropertyKey.duration:
               case PropertyKey.deeplink:
+              case PropertyKey.externalLink:
+              case PropertyKey.externalLinkText:
               case PropertyKey.videoCallLink:
               case PropertyKey.bot:
-              case PropertyKey.list: {
+              case PropertyKey.duration:
+              case PropertyKey.reference:
+              case PropertyKey.list:
+              case PropertyKey.labelTrue:
+              case PropertyKey.labelFalse:
+              case PropertyKey.quotedPerson: {
                 // Trim specific string properties - It might be better NOT to do this, but ANTLR parser does it
                 addProperty(acc, key, ((value as string) ?? '').trim());
                 break;

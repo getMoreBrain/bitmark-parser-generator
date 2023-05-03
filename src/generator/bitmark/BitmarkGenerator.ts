@@ -245,45 +245,45 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitValue -> ids
+  // bitmark -> bits -> bitValue -> id
 
-  protected enter_ids(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_id(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('id', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> externalIds
+  // bitmark -> bits -> bitValue -> externalId
 
-  protected enter_externalIds(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_externalId(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('externalId', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> ageRanges
+  // bitmark -> bits -> bitValue -> ageRange
 
-  protected enter_ageRanges(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_ageRange(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('ageRange', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> languages
+  // bitmark -> bits -> bitValue -> language
 
-  protected enter_languages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_language(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('language', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> computerLanguages
+  // bitmark -> bits -> bitValue -> computerLanguage
 
-  protected enter_computerLanguages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_computerLanguage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('computerLanguage', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> coverImages
+  // bitmark -> bits -> bitValue -> coverImage
 
-  protected enter_coverImages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_coverImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('coverImage', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> publishers
+  // bitmark -> bits -> bitValue -> publisher
 
-  protected enter_publishers(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_publisher(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('publisher', node.value);
   }
 
@@ -293,87 +293,127 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     this.writeProperty('publications', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> authors
+  // bitmark -> bits -> bitValue -> author
 
-  protected enter_authors(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_author(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('author', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> dates
+  // bitmark -> bits -> bitValue -> date
 
-  protected enter_dates(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_date(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('date', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> locations
+  // bitmark -> bits -> bitValue -> location
 
-  protected enter_locations(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_location(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // Ignore location that is NOT at the bit level as there is a key clash with error.location / bit.location
+    if (parent?.key !== NodeType.bitsValue) return;
+
     this.writeProperty('location', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> themes
+  // bitmark -> bits -> bitValue -> theme
 
-  protected enter_themes(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_theme(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('theme', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> kinds
+  // bitmark -> bits -> bitValue -> kind
 
-  protected enter_kinds(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_kind(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('kind', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> actions
+  // bitmark -> bits -> bitValue -> action
 
-  protected enter_actions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_action(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('action', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> thumbImages
+  // bitmark -> bits -> bitValue -> thumbImage
 
-  protected enter_thumbImages(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_thumbImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('thumbImage', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> durations
+  // bitmark -> bits -> bitValue -> duration
 
-  protected enter_durations(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_duration(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // Ignore duration that is not at the bit level as there is a key clash with resource...duration / bit.duration
+    if (parent?.key !== NodeType.bitsValue) return;
+
     this.writeProperty('duration', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> deepLinks
+  // bitmark -> bits -> bitValue -> deepLink
 
-  protected enter_deepLinks(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_deepLink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('deeplink', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> videoCallLinks
+  //  bitmark -> bits -> bitValue -> externalLink
 
-  protected enter_videoCallLinks(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_externalLink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeProperty('externalLink', node.value, true);
+    }
+  }
+
+  //  bitmark -> bits -> bitValue -> externalLinkText
+
+  protected enter_externalLinkText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeProperty('externalLinkText', node.value, true);
+    }
+  }
+
+  // bitmark -> bits -> bitValue -> videoCallLink
+
+  protected enter_videoCallLink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('videoCallLink', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> bots
+  // bitmark -> bits -> bitValue -> bot
 
-  protected enter_bots(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_bot(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('bot', node.value);
   }
 
-  //  bitmark -> bits -> referenceProperties
+  //  bitmark -> bits -> referenceProperty
 
-  protected enter_referenceProperties(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_referenceProperty(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('reference', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> lists
+  // bitmark -> bits -> bitValue -> list
 
-  protected enter_lists(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_list(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('list', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> sampleSolutions
+  //  bitmark -> bits -> bitValue -> labelTrue
 
-  protected enter_sampleSolutions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_labelTrue(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const bit = parent?.value as Bit;
+    if (bit) {
+      this.writeProperty('labelTrue', node.value ?? '', true);
+      this.writeProperty('labelFalse', bit.labelFalse ?? '', true);
+    }
+  }
+
+  //  bitmark -> bits -> bitValue -> quotedPerson
+
+  protected enter_quotedPerson(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value) {
+      this.writeProperty('quotedPerson', node.value, true);
+    }
+  }
+
+  // bitmark -> bits -> bitValue -> sampleSolution
+
+  protected enter_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('sampleSolution', node.value);
   }
 
@@ -940,40 +980,6 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
-  //  bitmark -> bits -> bitValue -> externalLink
-
-  protected leaf_externalLink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeProperty('externalLink', node.value);
-    }
-  }
-
-  //  bitmark -> bits -> bitValue -> externalLinkText
-
-  protected leaf_externalLinkText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeProperty('externalLinkText', node.value);
-    }
-  }
-
-  //  bitmark -> bits -> bitValue -> labelTrue
-
-  protected leaf_labelTrue(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const bit = parent?.value as Bit;
-    if (bit) {
-      this.writeProperty('labelTrue', node.value ?? '');
-      this.writeProperty('labelFalse', bit.labelFalse ?? '');
-    }
-  }
-
-  //  bitmark -> bits -> bitValue -> quotedPerson
-
-  protected leaf_quotedPerson(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeProperty('quotedPerson', node.value);
-    }
-  }
-
   //  * -> itemLead --> item
 
   //  * -> itemLead --> lead
@@ -1205,7 +1211,10 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> bitValue -> resource -> thumbnails -> thumbnailsValue -> ...
   // [duration,mute,autoplay,allowSubtitles,showSubtitles]
 
-  protected leaf_duration(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_duration(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // Ignore duration that IS at the bit level as there is a key clash with resource...duration / bit.duration
+    if (parent?.key === NodeType.bitsValue) return;
+
     this.writeProperty('duration', node.value);
   }
 
@@ -1388,19 +1397,27 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
-  protected writeProperty(name: string, values?: unknown | unknown[]): void {
+  protected writeProperty(name: string, values?: unknown | unknown[], singleOnly?: boolean): void {
+    let valuesArray: unknown[];
+
     if (values !== undefined) {
       if (!Array.isArray(values)) {
-        values = [values];
+        valuesArray = [values];
+      } else {
+        valuesArray = values;
       }
 
-      for (const val of values as []) {
-        if (val !== undefined) {
-          this.writeOPA();
-          this.writeString(name);
-          this.writeColon();
-          this.writeString(`${val}`);
-          this.writeCL();
+      if (valuesArray.length > 0) {
+        if (singleOnly) valuesArray = valuesArray.slice(valuesArray.length - 1);
+
+        for (const val of valuesArray) {
+          if (val !== undefined) {
+            this.writeOPA();
+            this.writeString(name);
+            this.writeColon();
+            this.writeString(`${val}`);
+            this.writeCL();
+          }
         }
       }
     }
