@@ -1,31 +1,32 @@
 [
   {
-    "bitmark": "[.assignment:bitmark--&image]\n[%B6]\n[!Lesen Sie den folgenden Text.]\n\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/lippe-detmold.jpg]\n**Eine starke Frau: Pauline von Lippe-Detmold**\n\nFürstin Pauline zur Lippe, 1769 in Ballenstedt geboren, gilt heute als Musterbeispiel für jene Regenten von kleinen Herrschaftsgebieten, in die das alte deutsche Reich zerfallen war. Pauline führte ihr kleines Fürstentum so mustergültig, dass die Bewohner bis zu den Weltkriegen in gutem bürgerlichen Wohlstand leben konnten. Ihr Vater, Fürst von Anhalt-Bernburg, erzog sie auf gleiche Weise wie ihren Bruder. Sie erhielt Unterricht in Staatswissenschaften und verbrachte den ganzen Tag am Schreibtisch.\n\nSpäter heiratete sie den Fürsten Leopold zur Lippe, der aber schon im Jahre 1802 starb. Von da an musste Pauline die Regentschaft für ihren unmündigen Sohn übernehmen. Schon bald bemerkte sie das Elend und die große Armut, die im Lande herrschten. Sie las Bücher über moderne Sozialfürsorge und erkannte, dass die Armen vor allem Arbeit brauchten. Sie errichtete Berufsschulen für Kinder. Dort erlernten sie ein kleines Handwerk und erhielten dafür ein bisschen Geld. Dieser Lohn half den Kindern später beim Aufbau einer eigenen Existenz.\n\nPauline ließ Listen von Armen und Kranken anfertigen und wer ganz hilfebedürftig war, wurde kostenlos in Krankenstuben versorgt. Zur Betreuung von Wahnsinnigen und Gemütskranken ließ sie ein Schloss umbauen und Kuhställe einrichten, in denen die Kranken Käse und Butter herstellen konnten. Nach der Gründung des ersten deutschen Kindergartens in Detmold (1802) veranstaltete sie ein Seminar für Frauen, um Erzieherinnen für weitere Kindergärten auszubilden. Pauline legte Vorratslager mit Getreide an, was für Zeiten der Hungersnot dringend notwendig war. Sie sorgte für neue Straßenkarten und verkürzte die Wehrpflicht für junge Männer auf fünf Jahre. In vielen Dingen, z. B. in der Fürsorge für Geisteskranke, war Pauline ihrer Zeit so weit voraus, dass sie auf Unverständnis bei Teilen der Bevölkerung und der eigenen Familie stieß. Sie starb 1820 völlig verarmt in Detmold.\n\nBei der hastigen Beerdigung folgten nur wenige ihrem Sarg, nicht einmal ihre eigenen Kinder. Paulines wohltätige Einrichtungen aber gibt es bis heute und im Volk ist sie dafür unvergessen.\n\n[@reference: Eine starke Frau. Neue Ruhr Zeitung/Neue Rhein Zeitung (NRZ), 18.2.2001 (Marlis Haase)]",
+    "bitmark": "[.essay&article]\n[!Fassen Sie den Text kurz mit eigenen Worten zusammen.]",
     "bit": {
-      "type": "assignment",
+      "type": "essay",
       "format": "bitmark--",
-      "body": "**Eine starke Frau: Pauline von Lippe-Detmold**\n\nFürstin Pauline zur Lippe, 1769 in Ballenstedt geboren, gilt heute als Musterbeispiel für jene Regenten von kleinen Herrschaftsgebieten, in die das alte deutsche Reich zerfallen war. Pauline führte ihr kleines Fürstentum so mustergültig, dass die Bewohner bis zu den Weltkriegen in gutem bürgerlichen Wohlstand leben konnten. Ihr Vater, Fürst von Anhalt-Bernburg, erzog sie auf gleiche Weise wie ihren Bruder. Sie erhielt Unterricht in Staatswissenschaften und verbrachte den ganzen Tag am Schreibtisch.\n\nSpäter heiratete sie den Fürsten Leopold zur Lippe, der aber schon im Jahre 1802 starb. Von da an musste Pauline die Regentschaft für ihren unmündigen Sohn übernehmen. Schon bald bemerkte sie das Elend und die große Armut, die im Lande herrschten. Sie las Bücher über moderne Sozialfürsorge und erkannte, dass die Armen vor allem Arbeit brauchten. Sie errichtete Berufsschulen für Kinder. Dort erlernten sie ein kleines Handwerk und erhielten dafür ein bisschen Geld. Dieser Lohn half den Kindern später beim Aufbau einer eigenen Existenz.\n\nPauline ließ Listen von Armen und Kranken anfertigen und wer ganz hilfebedürftig war, wurde kostenlos in Krankenstuben versorgt. Zur Betreuung von Wahnsinnigen und Gemütskranken ließ sie ein Schloss umbauen und Kuhställe einrichten, in denen die Kranken Käse und Butter herstellen konnten. Nach der Gründung des ersten deutschen Kindergartens in Detmold (1802) veranstaltete sie ein Seminar für Frauen, um Erzieherinnen für weitere Kindergärten auszubilden. Pauline legte Vorratslager mit Getreide an, was für Zeiten der Hungersnot dringend notwendig war. Sie sorgte für neue Straßenkarten und verkürzte die Wehrpflicht für junge Männer auf fünf Jahre. In vielen Dingen, z. B. in der Fürsorge für Geisteskranke, war Pauline ihrer Zeit so weit voraus, dass sie auf Unverständnis bei Teilen der Bevölkerung und der eigenen Familie stieß. Sie starb 1820 völlig verarmt in Detmold.\n\nBei der hastigen Beerdigung folgten nur wenige ihrem Sarg, nicht einmal ihre eigenen Kinder. Paulines wohltätige Einrichtungen aber gibt es bis heute und im Volk ist sie dafür unvergessen.",
-      "item": "B6",
+      "instruction": "Fassen Sie den Text kurz mit eigenen Worten zusammen.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "instruction": "Lesen Sie den folgenden Text.",
-      "resource": {
-        "type": "image",
-        "image": {
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/lippe-detmold.jpg",
-          "showInIndex": false,
+      "example": ""
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n**Erfolg um jeden Preis**\n\nImmer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.\n\n[&image:http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg]\n\nWas sind dagegen ein paar anabole Steroide ==anabole Steroide==(*synthetisch hergestellte Mittel zur Leistungssteigerung)==",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Erfolg um jeden Preis**\n\nImmer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.\n\n\n\nWas sind dagegen ein paar anabole Steroide ==anabole Steroide==(*synthetisch hergestellte Mittel zur Leistungssteigerung)=="
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
           "format": "jpg",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "caption": "",
-          "license": "",
-          "copyright": ""
+          "src": "http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg"
         }
-      },
-      "reference": [
-        "Eine starke Frau. Neue Ruhr Zeitung/Neue Rhein Zeitung (NRZ), 18.2.2001 (Marlis Haase)"
       ]
     }
   }

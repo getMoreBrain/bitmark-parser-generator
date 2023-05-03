@@ -5,24 +5,23 @@
       "type": "article",
       "format": "bitmark++",
       "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\n\nSome more text.\n::remark::\n::",
-      "ageRange": [
-        "18",
-        "120"
-      ],
-      "language": [
-        "en",
-        "jp",
-        "cn"
-      ]
-    },
-    "parser": {
-      "excessResources": [
-        {
-          "type": "image",
+      "ageRange": ["18", "120"],
+      "language": ["en", "jp", "cn"],
+      "resource": {
+        "type": "image",
+        "image": {
           "format": "jpg",
-          "src": "https://cdn.bitbook.education/cat.jpg"
+          "provider": "cdn.bitbook.education",
+          "src": "https://cdn.bitbook.education/cat.jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
-      ]
+      }
     }
   }
 ]

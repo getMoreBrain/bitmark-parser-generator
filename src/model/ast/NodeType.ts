@@ -171,7 +171,8 @@ const NodeType = superenum({
   thumbnails: 'thumbnails',
   thumbnailsValue: 'thumbnailsValue',
 
-  // Errors
+  // Parser Info / Errors
+  parser: 'parser',
   errors: 'errors',
   errorsValue: 'errorsValue',
   message: 'message',

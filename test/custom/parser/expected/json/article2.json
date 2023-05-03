@@ -10,7 +10,11 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": ""
+      "example": "",
+      "resource": {
+        "type": "article",
+        "article": {}
+      }
     }
   },
   {

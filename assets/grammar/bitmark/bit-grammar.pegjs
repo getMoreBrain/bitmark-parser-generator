@@ -48,8 +48,8 @@ bitmark
   = BM_Bitmark
 
 BM_Bitmark
-  = firstBit: BM_FirstBit bits: BM_Bits { return helper.buildBits([ firstBit, ...bits]) }
-  / bit: $Anything { return helper.buildBits([ bit ]) }
+  = (WS / CommentTag)* firstBit: BM_FirstBit bits: BM_Bits { return helper.buildBits([ firstBit, ...bits]) }
+  / (WS / CommentTag)* bit: $Anything { return helper.buildBits([ bit ]) }
 
 // First bit (matches any content before the first bit header that starts with a NL)
 BM_FirstBit
@@ -59,7 +59,7 @@ BM_FirstBit
 BM_Bits
   = ($BM_Bit)*
 
-// A bit with potential blank lines before
+// A bit with potential blank lines / comments before it
 BM_Bit
   =  BlankLine* BM_BitHeader BM_BodyLine*
 
@@ -108,7 +108,7 @@ StandardTagsChain
 
 // Chained bit tag
 ChainedBitTag
- = WS value: BitTag { return value }
+ = WS* value: BitTag { return value }
 
 // Bit tag
 BitTag
@@ -165,16 +165,11 @@ CardChar
 // Resource
 //
 ResourceTags
-  = value: ResourceTag props: ResourcePropertyTag* {
-    // console.log('RESOURCE_TAGS', value, props);
-
-    // TODO - insert other tags values into the resource tag value
-    return helper.processResourceTags(value, props);
-  }
+  = value: ResourceTag props: ResourcePropertyTag* { return helper.processResourceTags(value, props); }
 
 // The bit header, e.g. [.interview&image:bitmark++], [.interview:bitmark--&image], [.cloze]
 ResourceTag
-  = NL? "[&" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Resource, key, url: value } }
+  = "[&" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Resource, key, url: value } }
 
 // Resource Extra Data Tag
 ResourcePropertyTag
@@ -220,7 +215,7 @@ ItemLeadTag
 
 // Instruction (!) tag
 InstructionTag
-  = "[!" value: Tag_Value ("]" / (WS EOF)) { return { type: TypeKey.Instruction, value } }
+  = "[!" value: Tag_Value ("]" / (WS* EOF)) { return { type: TypeKey.Instruction, value } }
 
 // Hint (?) tag
 HintTag
@@ -238,13 +233,13 @@ FalseTag
 SampleSolutionTag
   = "[$" value: Tag_Value "]" { return { type: TypeKey.SampleSolution, value } }
 
-// Comment Tag
-CommentTag
-  = "||" value: Comment_Value "||" { return { type: TypeKey.Comment, value } }
-
 // Cloze tag
 ClozeTag
   = "[_" value: Tag_Value "]" { return { type: TypeKey.Cloze, value } }
+
+// Comment Tag
+CommentTag
+  = "||" value: Comment_Value "||" { return { type: TypeKey.Comment, value } }
 
 
 //
@@ -253,19 +248,19 @@ ClozeTag
 
 // Chained Property (@) tag
 ChainedPropertyTag
-  = WS "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Property, key, value } }
+  = WS* "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Property, key, value } }
 
 // Chained Item / Lead (%) tag
 ChainedItemLeadTag
-  = WS "[%" value: Tag_Value "]" { return { type: TypeKey.ItemLead, value } }
+  = WS* "[%" value: Tag_Value "]" { return { type: TypeKey.ItemLead, value } }
 
 // Chained Instruction (!) tag
 ChainedInstructionTag
-  = WS "[!" value: Tag_Value "]" { return { type: TypeKey.Instruction, value } }
+  = WS* "[!" value: Tag_Value "]" { return { type: TypeKey.Instruction, value } }
 
 // Chained Hint (?) tag
 ChainedHintTag
-  = WS "[?" value: Tag_Value "]" { return { type: TypeKey.Hint, value } }
+  = WS* "[?" value: Tag_Value "]" { return { type: TypeKey.Hint, value } }
 
 
 //
@@ -328,7 +323,7 @@ NL "Line Terminator"
   / "\u2029"
 
 WS "whitespace"
-  = [ \t\n\r\u2028\u2029]*
+  = [ \t\n\r\u2028\u2029]
 
 // End of line including End of file
 EOL

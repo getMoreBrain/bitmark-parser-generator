@@ -2,6 +2,7 @@ import { BitTypeType } from '../enum/BitType';
 import { ResourceTypeType } from '../enum/ResourceType';
 import { TextFormatType } from '../enum/TextFormat';
 import { ParserError } from '../parser/ParserError';
+import { ParserInfo } from '../parser/ParserInfo';
 
 // Node
 
@@ -96,7 +97,7 @@ export interface Bit {
   footer?: FooterText;
 
   bitmark?: string;
-  errors?: ParserError[];
+  parser?: ParserInfo;
 }
 
 // Extra Properties

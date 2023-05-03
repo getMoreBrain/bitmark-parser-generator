@@ -6,7 +6,9 @@ import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { GapJson, SelectJson, SelectOptionJson } from '../../model/json/BodyBitJson';
+import { ParserJson } from '../../model/json/ParserJson';
 import { ParserError } from '../../model/parser/ParserError';
+import { ParserInfo } from '../../model/parser/ParserInfo';
 import { StringUtils } from '../../utils/StringUtils';
 import { UrlUtils } from '../../utils/UrlUtils';
 import { Generator } from '../Generator';
@@ -245,7 +247,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
   // bitmark -> bits
 
-  // bitmark -> bits -> bitValue
+  // bitmark -> bits -> bitsValue
 
   protected enter_bitsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const bit = node.value as Bit;
@@ -267,67 +269,67 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     this.cleanAndSetDefaultsForBitJson(this.bitJson);
   }
 
-  // bitmark -> bits -> bitValue -> id
+  // bitmark -> bits -> bitsValue -> id
 
   protected enter_id(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'id', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> externalId
+  // bitmark -> bits -> bitsValue -> externalId
 
   protected enter_externalId(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'externalId', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> ageRange
+  // bitmark -> bits -> bitsValue -> ageRange
 
   protected enter_ageRange(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'ageRange', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> language
+  // bitmark -> bits -> bitsValue -> language
 
   protected enter_language(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'language', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> computerLanguage
+  // bitmark -> bits -> bitsValue -> computerLanguage
 
   protected enter_computerLanguage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'computerLanguage', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> coverImage
+  // bitmark -> bits -> bitsValue -> coverImage
 
   protected enter_coverImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'coverImage', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> publisher
+  // bitmark -> bits -> bitsValue -> publisher
 
   protected enter_publisher(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'publisher', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> publications
+  // bitmark -> bits -> bitsValue -> publications
 
   protected enter_publications(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'publications', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> author
+  // bitmark -> bits -> bitsValue -> author
 
   protected enter_author(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'author', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> date
+  // bitmark -> bits -> bitsValue -> date
 
   protected enter_date(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'date', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> location
+  // bitmark -> bits -> bitsValue -> location
 
   protected enter_location(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     // Ignore location that is not at the bit level as there is a key clash with error.location / bit.location
@@ -336,31 +338,31 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (node.value != null) this.addProperty(this.bitJson, 'location', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> theme
+  // bitmark -> bits -> bitsValue -> theme
 
   protected enter_theme(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'theme', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> kind
+  // bitmark -> bits -> bitsValue -> kind
 
   protected enter_kind(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'kind', node.value, true);
   }
 
-  // bitmark -> bits -> bitValue -> action
+  // bitmark -> bits -> bitsValue -> action
 
   protected enter_action(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'action', node.value, true);
   }
 
-  // bitmark -> bits -> bitValue -> thumbImage
+  // bitmark -> bits -> bitsValue -> thumbImage
 
   protected enter_thumbImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'thumbImage', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> duration
+  // bitmark -> bits -> bitsValue -> duration
 
   protected enter_duration(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     // Ignore duration that is not at the bit level as there is a key clash with resource...duration / bit.duration
@@ -369,31 +371,31 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (node.value != null) this.addProperty(this.bitJson, 'duration', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> deeplink
+  // bitmark -> bits -> bitsValue -> deeplink
 
   protected enter_deeplink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'deeplink', node.value);
   }
 
-  //  bitmark -> bits -> bitValue -> externalLink
+  //  bitmark -> bits -> bitsValue -> externalLink
 
   protected enter_externalLink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'externalLink', node.value, true);
   }
 
-  //  bitmark -> bits -> bitValue -> externalLinkText
+  //  bitmark -> bits -> bitsValue -> externalLinkText
 
   protected enter_externalLinkText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'externalLinkText', node.value, true);
   }
 
-  // bitmark -> bits -> bitValue -> videoCallLink
+  // bitmark -> bits -> bitsValue -> videoCallLink
 
   protected enter_videoCallLink(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'videoCallLink', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> bot
+  // bitmark -> bits -> bitsValue -> bot
 
   protected enter_bot(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'bot', node.value);
@@ -405,37 +407,37 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (node.value != null) this.addProperty(this.bitJson, 'reference', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> list
+  // bitmark -> bits -> bitsValue -> list
 
   protected enter_list(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'list', node.value);
   }
 
-  //  bitmark -> bits -> bitValue -> labelTrue
+  //  bitmark -> bits -> bitsValue -> labelTrue
 
   protected enter_labelTrue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'labelTrue', node.value ?? '', true);
   }
 
-  //  bitmark -> bits -> bitValue -> labelFalse
+  //  bitmark -> bits -> bitsValue -> labelFalse
 
   protected enter_labelFalse(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'labelFalse', node.value ?? '', true);
   }
 
-  //  bitmark -> bits -> bitValue -> quotedPerson
+  //  bitmark -> bits -> bitsValue -> quotedPerson
 
   protected enter_quotedPerson(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'quotedPerson', node.value, true);
   }
 
-  // bitmark -> bits -> bitValue -> sampleSolution
+  // bitmark -> bits -> bitsValue -> sampleSolution
 
   protected enter_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'sampleSolution', node.value);
   }
 
-  // bitmark -> bits -> bitValue -> itemLead
+  // bitmark -> bits -> bitsValue -> itemLead
 
   protected enter_itemLead(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const itemLead = node.value as ItemLead;
@@ -448,7 +450,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (lead != null) this.addProperty(this.bitJson, 'lead', lead ?? '', true);
   }
 
-  // bitmark -> bits -> bitValue -> extraProperties
+  // bitmark -> bits -> bitsValue -> extraProperties
 
   protected enter_extraProperties(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const extraProperties = node.value as ExtraProperties | undefined;
@@ -460,9 +462,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitValue -> body
+  // bitmark -> bits -> bitsValue -> body
 
-  // bitmark -> bits -> bitValue -> body -> bodyValue -> gap
+  // bitmark -> bits -> bitsValue -> body -> bodyValue -> gap
 
   protected enter_gap(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const gap = node.value as Gap['gap'];
@@ -499,9 +501,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     this.bitJson.placeholders[placeholder] = gapJson as GapJson;
   }
 
-  // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions
+  // bitmark -> bits -> bitsValue -> body -> bodyValue -> gap -> solutions
 
-  // bitmark -> bits -> bitValue -> elements
+  // bitmark -> bits -> bitsValue -> elements
 
   protected enter_elements(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const elements = node.value as string[];
@@ -531,9 +533,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeMajorDivider();
   // }
 
-  // // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions
+  // // bitmark -> bits -> bitsValue -> body -> bodyValue -> gap -> solutions
 
-  // bitmark -> bits -> bitValue -> body -> bodyValue -> select
+  // bitmark -> bits -> bitsValue -> body -> bodyValue -> select
 
   protected enter_select(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const select = node.value as Select['select'];
@@ -604,9 +606,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     this.bitJson.placeholders[placeholder] = selectJson as SelectJson;
   }
 
-  // // bitmark -> bits -> bitValue -> body -> bodyValue -> select -> options
+  // // bitmark -> bits -> bitsValue -> body -> bodyValue -> select -> options
 
-  // // bitmark -> bits -> bitValue -> body -> bodyValue -> select -> options -> optionsValue
+  // // bitmark -> bits -> bitsValue -> body -> bodyValue -> select -> options -> optionsValue
 
   // protected enter_optionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   const selectOption = node.value as SelectOption;
@@ -619,11 +621,11 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeCL();
   // }
 
-  // // bitmark -> bits -> bitValue -> body -> bodyValue -> highlight
+  // // bitmark -> bits -> bitsValue -> body -> bodyValue -> highlight
 
-  // // bitmark -> bits -> bitValue -> body -> bodyValue -> highlight -> texts
+  // // bitmark -> bits -> bitsValue -> body -> bodyValue -> highlight -> texts
 
-  // // bitmark -> bits -> bitValue -> body -> bodyValue -> highlight -> texts -> textsValue
+  // // bitmark -> bits -> bitsValue -> body -> bodyValue -> highlight -> texts -> textsValue
 
   // protected enter_textsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   const highlightText = node.value as HighlightText;
@@ -636,7 +638,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeCL();
   // }
 
-  // bitmark -> bits -> bitValue -> statement
+  // bitmark -> bits -> bitsValue -> statement
 
   protected enter_statement(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const statement = node.value as Statement;
@@ -650,7 +652,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitValue -> statements
+  // bitmark -> bits -> bitsValue -> statements
 
   protected enter_statements(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const statements = node.value as Statement[];
@@ -689,7 +691,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitValue -> choices
+  // bitmark -> bits -> bitsValue -> choices
 
   protected enter_choices(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const choices = node.value as Choice[];
@@ -724,7 +726,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitValue -> responses
+  // bitmark -> bits -> bitsValue -> responses
 
   protected enter_responses(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const responses = node.value as Response[];
@@ -773,7 +775,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeNL();
   // }
 
-  // // bitmark -> bits -> bitValue -> responses -> responsesValue
+  // // bitmark -> bits -> bitsValue -> responses -> responsesValue
 
   // protected enter_responsesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   const response = node.value as Response;
@@ -786,7 +788,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeCL();
   // }
 
-  // bitmark -> bits -> bitValue -> quizzes
+  // bitmark -> bits -> bitsValue -> quizzes
 
   protected enter_quizzes(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const quizzes = node.value as Quiz[];
@@ -881,7 +883,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeNL();
   // }
 
-  // // bitmark -> bits -> bitValue -> quizzes -> quizzesValue
+  // // bitmark -> bits -> bitsValue -> quizzes -> quizzesValue
 
   // protected between_quizzesValue(
   //   _node: NodeInfo,
@@ -895,7 +897,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   }
   // }
 
-  // bitmark -> bits -> bitValue -> heading
+  // bitmark -> bits -> bitsValue -> heading
 
   protected enter_heading(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const heading = node.value as Heading;
@@ -946,7 +948,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   // this.writeNL();
   // }
 
-  // // bitmark -> bits -> bitValue -> heading -> forValues
+  // // bitmark -> bits -> bitsValue -> heading -> forValues
 
   // protected enter_forValues(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   //
@@ -968,7 +970,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   //
   // }
 
-  // bitmark -> bits -> bitValue -> pairs
+  // bitmark -> bits -> bitsValue -> pairs
 
   protected enter_pairs(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const pairs = node.value as Pair[];
@@ -1021,7 +1023,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeNL();
   // }
 
-  // // bitmark -> bits -> bitValue -> pairs -> pairsValue
+  // // bitmark -> bits -> bitsValue -> pairs -> pairsValue
 
   // protected between_pairsValue(
   //   _node: NodeInfo,
@@ -1035,21 +1037,21 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   // this.writeNL();
   // }
 
-  // // bitmark -> bits -> bitValue -> pairs -> pairsValue -> keyAudio
+  // // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> keyAudio
 
   // protected enter_keyAudio(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
   //   // This is a resource, so handle it with the common code
   //   this.writeResource(node, parent, route);
   // }
 
-  // // bitmark -> bits -> bitValue -> pairs -> pairsValue -> keyImage
+  // // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> keyImage
 
   // protected enter_keyImage(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
   //   // This is a resource, so handle it with the common code
   //   this.writeResource(node, parent, route);
   // }
 
-  // bitmark -> bits -> bitValue -> matrix
+  // bitmark -> bits -> bitsValue -> matrix
 
   protected enter_matrix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const matrix = node.value as Matrix[];
@@ -1109,11 +1111,11 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitValue -> matrix -> matrixValue
-  // bitmark -> bits -> bitValue -> pairs -> pairsValue -> values
-  // bitmark -> bits -> bitValue -> matrix -> matrixValue -> cells -> cellsValue -> values
+  // bitmark -> bits -> bitsValue -> matrix -> matrixValue
+  // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> values
+  // bitmark -> bits -> bitsValue -> matrix -> matrixValue -> cells -> cellsValue -> values
 
-  // bitmark -> bits -> bitValue -> questions
+  // bitmark -> bits -> bitsValue -> questions
 
   protected enter_questions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const questions = node.value as Question[];
@@ -1149,16 +1151,18 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitValue -> questions -> questionsValue
+  // bitmark -> bits -> bitsValue -> questions -> questionsValue
 
-  // bitmark -> bits -> bitValue -> resource
+  // bitmark -> bits -> bitsValue -> resource
 
   protected enter_resource(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
-    // This is a resource, so handle it with the common code
-    this.addResource(node, parent, route);
+    const resource = node.value as Resource;
+
+    // This is a resource - handle it with the common code
+    this.bitJson.resource = this.parseResourceToJson(resource);
   }
 
-  // // bitmark -> bits -> bitValue -> resource -> posterImage
+  // // bitmark -> bits -> bitsValue -> resource -> posterImage
 
   // protected enter_posterImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   const posterImage = node.value as ImageResource;
@@ -1167,9 +1171,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   }
   // }
 
-  // // bitmark -> bits -> bitValue -> resource -> ...
-  // // bitmark -> bits -> bitValue -> resource -> posterImage -> ...
-  // // bitmark -> bits -> bitValue -> resource -> thumbnails -> thumbnailsValue -> ...
+  // // bitmark -> bits -> bitsValue -> resource -> ...
+  // // bitmark -> bits -> bitsValue -> resource -> posterImage -> ...
+  // // bitmark -> bits -> bitsValue -> resource -> thumbnails -> thumbnailsValue -> ...
   // // [src1x,src2x,src3x,src4x,width,height,alt,caption]
 
   // // protected enter_posterImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1180,9 +1184,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   // Terminal nodes (leaves)
   //
 
-  // bitmark -> bits -> bitValue -> bitType
+  // bitmark -> bits -> bitsValue -> bitType
 
-  // bitmark -> bits -> bitValue -> textFormat
+  // bitmark -> bits -> bitsValue -> textFormat
 
   //  bitmark -> bits -> title
 
@@ -1208,25 +1212,25 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (node.value != null) this.addProperty(this.bitJson, 'toc', node.value, true);
   }
 
-  // bitmark -> bits -> bitValue -> book
+  // bitmark -> bits -> bitsValue -> book
 
   protected leaf_book(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'book', node.value, true);
   }
 
-  //  bitmark -> bits -> bitValue -> anchor
+  //  bitmark -> bits -> bitsValue -> anchor
 
   protected leaf_anchor(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'anchor', node.value, true);
   }
 
-  //  bitmark -> bits -> bitValue -> reference
+  //  bitmark -> bits -> bitsValue -> reference
 
   protected leaf_reference(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'reference', node.value, true);
   }
 
-  //  bitmark -> bits -> bitValue -> referenceEnd
+  //  bitmark -> bits -> bitsValue -> referenceEnd
 
   protected leaf_referenceEnd(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'referenceEnd', node.value, true);
@@ -1236,7 +1240,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
   //  * -> itemLead --> lead
 
-  //  bitmark -> bits -> bitValue ->  * -> hint
+  //  bitmark -> bits -> bitsValue ->  * -> hint
 
   protected leaf_hint(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const hint = node.value as string;
@@ -1247,7 +1251,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (hint != null) this.addProperty(this.bitJson, 'hint', hint ?? '', true);
   }
 
-  // bitmark -> bits -> bitValue ->  * -> instruction
+  // bitmark -> bits -> bitsValue ->  * -> instruction
 
   protected leaf_instruction(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const instruction = node.value as string;
@@ -1258,7 +1262,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (instruction != null) this.addProperty(this.bitJson, 'instruction', instruction ?? '', true);
   }
 
-  // bitmark -> bits -> bitValue ->  * -> example
+  // bitmark -> bits -> bitsValue ->  * -> example
 
   protected leaf_example(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const example = node.value as boolean | undefined;
@@ -1286,7 +1290,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       this.bitJson.footer += node.value;
     }
   }
-  // bitmark -> bits -> bitValue -> elements -> elementsValue
+  // bitmark -> bits -> bitsValue -> elements -> elementsValue
 
   // protected leaf_elementsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   if (node.value) {
@@ -1294,7 +1298,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   }
   // }
 
-  // bitmark -> bits -> bitValue -> body -> bodyValue -> gap -> solutions -> solution
+  // bitmark -> bits -> bitsValue -> body -> bodyValue -> gap -> solutions -> solution
   // ? -> solutions -> solution
 
   // protected leaf_solutionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1305,8 +1309,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   }
   // }
 
-  // bitmark -> bits -> bitValue-> body -> bodyValue -> select -> options -> prefix
-  // bitmark -> bits -> bitValue-> body -> bodyValue -> highlight -> options -> prefix
+  // bitmark -> bits -> bitsValue-> body -> bodyValue -> select -> options -> prefix
+  // bitmark -> bits -> bitsValue-> body -> bodyValue -> highlight -> options -> prefix
 
   // protected leaf_prefix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   if (node.value) {
@@ -1316,8 +1320,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   }
   // }
 
-  // // bitmark -> bits -> bitValue-> body -> bodyValue -> select -> options -> postfix
-  // // bitmark -> bits -> bitValue-> body -> bodyValue -> highlight -> options -> postfix
+  // // bitmark -> bits -> bitsValue-> body -> bodyValue -> select -> options -> postfix
+  // // bitmark -> bits -> bitsValue-> body -> bodyValue -> highlight -> options -> postfix
 
   // protected leaf_postfix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   if (node.value) {
@@ -1327,13 +1331,13 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   }
   // }
 
-  // // bitmark -> bits -> bitValue ->  * -> isCaseSensitive
+  // // bitmark -> bits -> bitsValue ->  * -> isCaseSensitive
 
-  // // bitmark -> bits -> bitValue ->  * -> isLongAnswer
+  // // bitmark -> bits -> bitsValue ->  * -> isLongAnswer
 
-  // // bitmark -> bits -> bitValue ->  * -> isCorrect
+  // // bitmark -> bits -> bitsValue ->  * -> isCorrect
 
-  // // bitmark -> bits -> bitValue -> heading -> forKeys
+  // // bitmark -> bits -> bitsValue -> heading -> forKeys
 
   // protected leaf_forKeys(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   this.writeOPHASH();
@@ -1341,7 +1345,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeCL();
   // }
 
-  // // bitmark -> bits -> bitValue -> heading -> forValuesValue
+  // // bitmark -> bits -> bitsValue -> heading -> forValuesValue
 
   // protected leaf_forValuesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   this.writeOPHASH();
@@ -1349,8 +1353,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeCL();
   // }
 
-  // // bitmark -> bits -> bitValue -> pairs -> pairsValue -> key
-  // // bitmark -> bits -> bitValue -> matrix -> matrixValue -> key
+  // // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> key
+  // // bitmark -> bits -> bitsValue -> matrix -> matrixValue -> key
 
   // protected leaf_key(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   if (node.value) {
@@ -1358,8 +1362,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   }
   // }
 
-  // // bitmark -> bits -> bitValue -> pairs -> pairsValue -> values -> valuesValue
-  // // bitmark -> bits -> bitValue -> matrix -> matrixValue -> cells -> cellsValue -> values -> valuesValue
+  // // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> values -> valuesValue
+  // // bitmark -> bits -> bitsValue -> matrix -> matrixValue -> cells -> cellsValue -> values -> valuesValue
 
   // protected leaf_valuesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   if (node.value) {
@@ -1367,7 +1371,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   }
   // }
 
-  // // bitmark -> bits -> bitValue -> questions -> questionsValue -> question
+  // // bitmark -> bits -> bitsValue -> questions -> questionsValue -> question
 
   // protected leaf_question(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   if (node.value) {
@@ -1376,7 +1380,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   }
   // }
 
-  // // bitmark -> bits -> bitValue -> questions -> questionsValue -> sampleSolution
+  // // bitmark -> bits -> bitsValue -> questions -> questionsValue -> sampleSolution
 
   // protected leaf_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   if (node.value) {
@@ -1386,7 +1390,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   }
   // }
 
-  // // bitmark -> bits -> bitValue -> questions -> questionsValue -> question -> isShortAnswer
+  // // bitmark -> bits -> bitsValue -> questions -> questionsValue -> question -> isShortAnswer
 
   // protected leaf_isShortAnswer(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
   //   if (node.value === true) {
@@ -1396,11 +1400,11 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   }
   // }
 
-  // // bitmark -> bits -> bitValue -> statements -> text
+  // // bitmark -> bits -> bitsValue -> statements -> text
 
-  // // bitmark -> bits -> bitValue -> resource -> ...
-  // // bitmark -> bits -> bitValue -> resource -> posterImage -> ...
-  // // bitmark -> bits -> bitValue -> resource -> thumbnails -> thumbnailsValue -> ...
+  // // bitmark -> bits -> bitsValue -> resource -> ...
+  // // bitmark -> bits -> bitsValue -> resource -> posterImage -> ...
+  // // bitmark -> bits -> bitsValue -> resource -> thumbnails -> thumbnailsValue -> ...
   // // [src1x,src2x,src3x,src4x,width,height,alt,caption]
 
   // protected leaf_src1x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1452,9 +1456,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeProperty('caption', node.value);
   // }
 
-  // // bitmark -> bits -> bitValue -> resource -> ...
-  // // bitmark -> bits -> bitValue -> resource -> posterImage -> ...
-  // // bitmark -> bits -> bitValue -> resource -> thumbnails -> thumbnailsValue -> ...
+  // // bitmark -> bits -> bitsValue -> resource -> ...
+  // // bitmark -> bits -> bitsValue -> resource -> posterImage -> ...
+  // // bitmark -> bits -> bitsValue -> resource -> thumbnails -> thumbnailsValue -> ...
   // // [duration,mute,autoplay,allowSubtitles,showSubtitles]
 
   // protected leaf_duration(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1477,23 +1481,59 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   //   this.writeProperty('showSubtitles', node.value);
   // }
 
-  // bitmark -> bits -> bitValue -> bitmark
+  // bitmark -> bits -> bitsValue -> bitmark
 
   protected leaf_bitmark(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const bitmark = node.value as string | undefined;
     if (bitmark) this.bitWrapperJson.bitmark = bitmark;
   }
 
-  // bitmark -> bits -> bitValue -> errors
+  // bitmark -> bits -> bitsValue -> parser
 
-  protected leaf_errors(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const errors = node.value as ParserError[] | undefined;
-    if (errors && errors.length > 0) {
-      this.bitWrapperJson.parser = {
-        errors,
-      };
+  protected enter_parser(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const parser = node.value as ParserInfo | undefined;
+    if (parser && parser.errors) {
+      // Errors don't need parsing from AST
+      const errors = parser.errors;
+
+      // Parse resources to JSON from AST
+      let excessResources: ResourceJson[] | undefined;
+      if (Array.isArray(parser.excessResources) && parser.excessResources.length > 0) {
+        excessResources = [];
+        for (const r of parser.excessResources) {
+          const rJson = this.parseResourceToJson(r);
+          if (rJson) excessResources.push(rJson);
+        }
+      }
+
+      if (parent?.key === NodeType.bitsValue) {
+        // Bit level parser information
+        this.bitWrapperJson.parser = {
+          excessResources,
+          errors,
+        };
+      } else {
+        // Top level parser information (not specific to a bit)
+        // TODO - not sure where this error can be written
+        // this.bitWrapperJson.parser = {
+        //   errors,
+        // };
+      }
     }
   }
+
+  // bitmark -> errors
+
+  // protected enter_errors(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  //   const errors = node.value as ParserError[] | undefined;
+  //   if (errors && errors.length > 0) {
+  //     // Complete bit is invalid
+  //     // TODO - not sure where this error can be written
+  //     // this.bitWrapperJson.parser = {
+  //     //   errors,
+  //     // };
+  //   }
+  // }
 
   // // END NODE HANDLERS
 
@@ -1505,115 +1545,111 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (s != null) this.write(`${s}`);
   }
 
-  protected addResource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
-    const resource = node.value as Resource;
+  protected parseResourceToJson(resource: Resource | undefined): ResourceJson | undefined {
     const resourceAsArticle = resource as ArticleResource;
 
-    if (resource) {
-      // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
-      let valid = false;
-      if (resource.type === ResourceType.article && resourceAsArticle.body) {
-        // Article with body
-        valid = true;
-      } else if (resource.url) {
-        // Other resource with a url (url / src / app / ...etc)
-        valid = true;
-      }
+    if (!resource) return undefined;
 
-      // Resource is not valid, cancel walking it's tree.
-      if (!valid) return false;
-
-      // Resource is valid, write it.
-      const resourceJson: ResourceWrapperJson = {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        type: resource.type as any,
-      };
-      this.bitJson.resource = resourceJson as ResourceJson;
-
-      switch (resource.type) {
-        case ResourceType.image:
-          (resourceJson as ImageResourceWrapperJson).image = this.addImageLikeResource(resource as ImageResource);
-          break;
-
-        case ResourceType.imageLink:
-          (resourceJson as ImageLinkResourceWrapperJson).imageLink = this.addImageLikeResource(
-            resource as ImageResource,
-          );
-          break;
-
-        case ResourceType.audio:
-          (resourceJson as AudioResourceWrapperJson).audio = this.addAudioLikeResource(resource as AudioResource);
-          break;
-
-        case ResourceType.audioLink:
-          (resourceJson as AudioLinkResourceWrapperJson).audioLink = this.addAudioLinkLikeResource(
-            resource as AudioResource,
-          );
-          break;
-
-        case ResourceType.video:
-          (resourceJson as VideoResourceWrapperJson).video = this.addVideoLikeResource(resource as VideoResource);
-          break;
-
-        case ResourceType.videoLink:
-          (resourceJson as VideoLinkResourceWrapperJson).videoLink = this.addVideoLinkLikeResource(
-            resource as VideoResource,
-          );
-          break;
-
-        case ResourceType.stillImageFilm:
-          (resourceJson as StillImageFilmResourceWrapperJson).stillImageFilm = this.addVideoLikeResource(
-            resource as VideoResource,
-          );
-          break;
-
-        case ResourceType.stillImageFilmLink:
-          (resourceJson as StillImageFilmLinkResourceWrapperJson).stillImageFilmLink = this.addVideoLikeResource(
-            resource as VideoResource,
-          );
-          break;
-
-        case ResourceType.article:
-          (resourceJson as ArticleResourceWrapperJson).article = this.addArticleLikeResource(
-            resource as ArticleResource,
-          );
-          break;
-
-        case ResourceType.articleLink:
-          (resourceJson as ArticleLinkResourceWrapperJson).articleLink = this.addArticleLinkLikeResource(
-            resource as ArticleResource,
-          );
-          break;
-
-        case ResourceType.document:
-          (resourceJson as DocumentResourceWrapperJson).document = this.addArticleLikeResource(
-            resource as ArticleResource,
-          );
-          break;
-
-        case ResourceType.documentLink:
-          (resourceJson as DocumentLinkResourceWrapperJson).documentLink = this.addArticleLinkLikeResource(
-            resource as ArticleResource,
-          );
-          break;
-
-        case ResourceType.app:
-          (resourceJson as AppResourceWrapperJson).app = resource.url ?? '';
-          break;
-
-        case ResourceType.appLink:
-          (resourceJson as AppLinkResourceWrapperJson).appLink = this.addAppLinkLikeResource(resource as AppResource);
-          break;
-
-        case ResourceType.websiteLink:
-          (resourceJson as WebsiteLinkResourceWrapperJson).websiteLink = this.addWebsiteLikeResource(
-            resource as WebsiteLinkResource,
-          );
-          break;
-
-        default:
-      }
+    // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
+    let valid = false;
+    if (resource.type === ResourceType.article && resourceAsArticle.body) {
+      // Article with body
+      valid = true;
+    } else if (resource.url) {
+      // Other resource with a url (url / src / app / ...etc)
+      valid = true;
     }
+
+    // Resource is not valid, return undefined
+    if (!valid) return undefined;
+
+    // Resource is valid, write it.
+    const resourceJson: ResourceWrapperJson = {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      type: resource.type as any,
+    };
+
+    switch (resource.type) {
+      case ResourceType.image:
+        (resourceJson as ImageResourceWrapperJson).image = this.addImageLikeResource(resource as ImageResource);
+        break;
+
+      case ResourceType.imageLink:
+        (resourceJson as ImageLinkResourceWrapperJson).imageLink = this.addImageLikeResource(resource as ImageResource);
+        break;
+
+      case ResourceType.audio:
+        (resourceJson as AudioResourceWrapperJson).audio = this.addAudioLikeResource(resource as AudioResource);
+        break;
+
+      case ResourceType.audioLink:
+        (resourceJson as AudioLinkResourceWrapperJson).audioLink = this.addAudioLinkLikeResource(
+          resource as AudioResource,
+        );
+        break;
+
+      case ResourceType.video:
+        (resourceJson as VideoResourceWrapperJson).video = this.addVideoLikeResource(resource as VideoResource);
+        break;
+
+      case ResourceType.videoLink:
+        (resourceJson as VideoLinkResourceWrapperJson).videoLink = this.addVideoLinkLikeResource(
+          resource as VideoResource,
+        );
+        break;
+
+      case ResourceType.stillImageFilm:
+        (resourceJson as StillImageFilmResourceWrapperJson).stillImageFilm = this.addVideoLikeResource(
+          resource as VideoResource,
+        );
+        break;
+
+      case ResourceType.stillImageFilmLink:
+        (resourceJson as StillImageFilmLinkResourceWrapperJson).stillImageFilmLink = this.addVideoLikeResource(
+          resource as VideoResource,
+        );
+        break;
+
+      case ResourceType.article:
+        (resourceJson as ArticleResourceWrapperJson).article = this.addArticleLikeResource(resource as ArticleResource);
+        break;
+
+      case ResourceType.articleLink:
+        (resourceJson as ArticleLinkResourceWrapperJson).articleLink = this.addArticleLinkLikeResource(
+          resource as ArticleResource,
+        );
+        break;
+
+      case ResourceType.document:
+        (resourceJson as DocumentResourceWrapperJson).document = this.addArticleLikeResource(
+          resource as ArticleResource,
+        );
+        break;
+
+      case ResourceType.documentLink:
+        (resourceJson as DocumentLinkResourceWrapperJson).documentLink = this.addArticleLinkLikeResource(
+          resource as ArticleResource,
+        );
+        break;
+
+      case ResourceType.app:
+        (resourceJson as AppResourceWrapperJson).app = resource.url ?? '';
+        break;
+
+      case ResourceType.appLink:
+        (resourceJson as AppLinkResourceWrapperJson).appLink = this.addAppLinkLikeResource(resource as AppResource);
+        break;
+
+      case ResourceType.websiteLink:
+        (resourceJson as WebsiteLinkResourceWrapperJson).websiteLink = this.addWebsiteLikeResource(
+          resource as WebsiteLinkResource,
+        );
+        break;
+
+      default:
+    }
+
+    return resourceJson as ResourceJson;
   }
 
   protected addImageLikeResource(resource: ImageResource | string): ImageResourceJson | ImageLinkResourceJson {

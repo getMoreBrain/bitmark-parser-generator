@@ -73,6 +73,7 @@ import { ResourcePropertyKey } from '../../model/enum/ResourcePropertyKey';
 import { ResourceType, ResourceTypeType } from '../../model/enum/ResourceType';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { ParserError } from '../../model/parser/ParserError';
+import { ParserInfo } from '../../model/parser/ParserInfo';
 import { StringUtils } from '../../utils/StringUtils';
 
 import {
@@ -175,7 +176,7 @@ export interface TypeKeyParseResult {
   responses?: Response[];
   title?: string[];
   subtitle?: string;
-  resource?: Resource;
+  resources?: Resource[];
   item?: string;
   lead?: string;
   instruction?: string;
@@ -265,6 +266,7 @@ const builder = new Builder();
 
 class BitmarkParserHelper {
   private nonFatalErrors: ParserError[] = [];
+  private parser: ParserInfo = {};
   private cardIndex = 0;
   private cardSideIndex = 0;
   private cardVariantIndex = 0;
@@ -350,6 +352,7 @@ class BitmarkParserHelper {
       statements,
       choices,
       responses,
+      resources,
       ...tags
     } = this.typeKeyValueProcessor(bitType, bitContent, [
       TypeKey.Title,
@@ -392,8 +395,12 @@ class BitmarkParserHelper {
     // // Build the footer
     // const footer = this.buildFooter(bitType, unparsedFooter);
 
+    // Build the resources
+    const resource = this.buildResource(resourceType, resources);
+
     // Build the errors
     const errors = this.buildErrors();
+    this.parser.errors = errors;
 
     // Build the final bit
     const bit = builder.bit({
@@ -405,10 +412,11 @@ class BitmarkParserHelper {
       choices: isMultipleChoiceV1 ? choices : undefined,
       responses: isMultipleResponseV1 ? responses : undefined,
       ...tags,
+      resource,
       ...bitSpecificCards,
       body,
       footer,
-      errors,
+      parser: this.parser,
     });
 
     // (bit as any).bitSpecificCards = bitSpecificCards;
@@ -468,6 +476,41 @@ class BitmarkParserHelper {
     processValue(value2);
 
     return res;
+  }
+
+  /**
+   * Get the valid resource from all the resources on the bit, and add the invalid ones to
+   * excess resources
+   *
+   * @param resourceType
+   * @param resource
+   */
+  private buildResource(resourceType: string | undefined, resources: Resource[] | undefined): Resource | undefined {
+    let resource: Resource | undefined;
+    const excessResources: Resource[] = [];
+
+    if (resources) {
+      for (const r of resources) {
+        if (r.type === resourceType && !resource) {
+          resource = r;
+        } else {
+          excessResources.push(r);
+        }
+      }
+    }
+
+    if (excessResources.length > 0) {
+      // Set the excess resources in the parser info
+      this.parser.excessResources = excessResources;
+
+      // Add an error to warn about the excess resources
+      const resourceTypeString = resourceType ? `&${resourceType}` : 'NOT SET';
+      this.addError(
+        `${excessResources.length} excess resource(s) present in the bit. The bit resource type is '${resourceTypeString}'`,
+      );
+    }
+
+    return resource;
   }
 
   buildGap(bitType: BitTypeType, gapContent: BitContent[]): Gap | undefined {
@@ -867,7 +910,7 @@ class BitmarkParserHelper {
 
           if (DEBUG_CARD_PARSED) this.debugPrint('parsedCardContent (match heading / pairs)', content);
 
-          const { cardBody, title, resource, example, ...tags } = this.typeKeyValueProcessor(bitType, content, [
+          const { cardBody, title, resources, example, ...tags } = this.typeKeyValueProcessor(bitType, content, [
             TypeKey.CardText,
             TypeKey.Title,
             TypeKey.Property,
@@ -886,7 +929,9 @@ class BitmarkParserHelper {
             // First side
             if (heading != null) {
               forKeys = heading;
-            } else if (resource) {
+            } else if (Array.isArray(resources) && resources.length > 0) {
+              // TODO - should search the correct resource type based on the bit type
+              const resource = resources[0];
               // console.log('WARNING: Match card has resource on first side', tags.resource);
               if (resource.type === ResourceType.audio) {
                 keyAudio = resource as AudioResource;
@@ -1179,6 +1224,7 @@ class BitmarkParserHelper {
     const statements: Statement[] = [];
     const choices: Choice[] = [];
     const responses: Response[] = [];
+    const resources: Resource[] = [];
     const extraProperties: any = {};
 
     // Helper for building the body text
@@ -1356,10 +1402,11 @@ class BitmarkParserHelper {
           const { type: ignoreType, key: ignoreKey, ...resourceData } = resource;
           const type = ResourceType.fromValue(key);
           if (type) {
-            acc.resource = builder.resource({
+            const resource = builder.resource({
               type,
               ...resourceData,
             });
+            if (resource) resources.push(resource);
           }
           break;
         }
@@ -1439,10 +1486,13 @@ class BitmarkParserHelper {
     if (choices.length > 0) res.choices = choices;
     if (responses.length > 0) res.responses = responses;
 
+    // Add the resources if they exist
+    if (resources.length > 0) res.resources = resources;
+
     return res;
   }
 
-  buildErrors(): ParserError[] | undefined {
+  private buildErrors(): ParserError[] | undefined {
     let errors: ParserError[] | undefined;
     if (this.nonFatalErrors.length > 0) {
       errors = this.nonFatalErrors;
@@ -1457,7 +1507,7 @@ class BitmarkParserHelper {
    * @param bitContent bit content to split
    * @param types to split on
    */
-  splitBitContent(bitContent: BitContent[], types: TypeKeyType[]): BitContent[][] {
+  private splitBitContent(bitContent: BitContent[], types: TypeKeyType[]): BitContent[][] {
     const parts: BitContent[][] = [];
     let part: BitContent[] = [];
 
@@ -1483,7 +1533,7 @@ class BitmarkParserHelper {
    *
    * @param bitContent
    */
-  mergeCharToText(bitContent: BitContent[]) {
+  private mergeCharToText(bitContent: BitContent[]) {
     const bc: BitContent[] = [];
     let bodyText: TypeValue | undefined;
     let cardText: TypeValue | undefined;
@@ -1529,6 +1579,108 @@ class BitmarkParserHelper {
     if (cardText) bc.push(cardText);
 
     return bc;
+  }
+
+  //
+  // Validation
+  //
+
+  //
+  // Util functions
+  //
+
+  /**
+   * Returns true if a value is a TypeKeyValue or TypeKey type with a type in the given types
+   *
+   * @param value The value to check
+   * @param validType The type or types to check, or undefined to check for any type
+   * @returns True if the value is a TypeKeyValue or TypeKey type with a type in the given types, otherwise False.
+   */
+  private isType(value: unknown, validType?: TypeKeyType | TypeKeyType[]): boolean {
+    if (!value) return false;
+    const { type } = value as TypeValue;
+
+    if (!validType) {
+      return !!TypeKey.fromValue(type as TypeKeyType);
+    }
+    if (Array.isArray(validType)) {
+      return validType.indexOf(type as TypeKeyType) >= 0;
+    }
+
+    return validType === type;
+  }
+
+  /**
+   * Trim the body parts, removing any whitespace only parts at start and end of body
+   *
+   * @param bodyParts the body parts to trim
+   * @returns the trimmed body parts
+   */
+  private trimBodyParts(bodyParts: BodyPart[]): BodyPart[] {
+    // Trim start
+    let foundBodyText = false;
+    let trimmedBodyParts: BodyPart[] = bodyParts.reduce((acc, bodyPart) => {
+      const bodyText = bodyPart as BodyText;
+      if (!foundBodyText && bodyText.bodyText != undefined) {
+        const t = bodyText.bodyText.trimStart();
+        if (t) {
+          foundBodyText = true;
+          acc.push({ bodyText: t });
+        }
+      } else {
+        // Not body text, so add it
+        foundBodyText = true;
+        acc.push(bodyPart);
+      }
+      return acc;
+    }, [] as BodyPart[]);
+
+    // Trim end
+    foundBodyText = false;
+    trimmedBodyParts = trimmedBodyParts.reduceRight((acc, bodyPart) => {
+      const bodyText = bodyPart as BodyText;
+      if (!foundBodyText && bodyText.bodyText != undefined) {
+        const t = bodyText.bodyText.trimEnd();
+        if (t) {
+          foundBodyText = true;
+          acc.unshift({ bodyText: t });
+        }
+      } else {
+        // Not body text, so add it
+        foundBodyText = true;
+        acc.unshift(bodyPart);
+      }
+      return acc;
+    }, [] as BodyPart[]);
+
+    return trimmedBodyParts;
+  }
+
+  /**
+   * Add an error to the list of non-fatal errors
+   * @param message The error message
+   */
+  addError(message: string) {
+    const error: ParserError = {
+      message,
+      text: this.parserText(),
+      location: this.parserLocation(),
+    };
+    this.nonFatalErrors.push(error);
+  }
+
+  /**
+   * Print out data for debugging
+   *
+   * @param header
+   * @param data
+   */
+  debugPrint(header: string, data: unknown): void {
+    if (DEBUG) {
+      console.log(`===== START: ${header} =====`);
+      console.log(JSON.stringify(data, null, 2));
+      console.log(`===== END: ${header} =====`);
+    }
   }
 
   //
@@ -1690,100 +1842,6 @@ class BitmarkParserHelper {
     }, [] as BitContent[]);
 
     return res;
-  }
-
-  /**
-   * Returns true if a value is a TypeKeyValue or TypeKey type with a type in the given types
-   *
-   * @param value The value to check
-   * @param validType The type or types to check, or undefined to check for any type
-   * @returns True if the value is a TypeKeyValue or TypeKey type with a type in the given types, otherwise False.
-   */
-  isType(value: unknown, validType?: TypeKeyType | TypeKeyType[]): boolean {
-    if (!value) return false;
-    const { type } = value as TypeValue;
-
-    if (!validType) {
-      return !!TypeKey.fromValue(type as TypeKeyType);
-    }
-    if (Array.isArray(validType)) {
-      return validType.indexOf(type as TypeKeyType) >= 0;
-    }
-
-    return validType === type;
-  }
-
-  /**
-   * Trim the body parts, removing any whitespace only parts at start and end of body
-   *
-   * @param bodyParts the body parts to trim
-   * @returns the trimmed body parts
-   */
-  trimBodyParts(bodyParts: BodyPart[]): BodyPart[] {
-    // Trim start
-    let foundBodyText = false;
-    let trimmedBodyParts: BodyPart[] = bodyParts.reduce((acc, bodyPart) => {
-      const bodyText = bodyPart as BodyText;
-      if (!foundBodyText && bodyText.bodyText != undefined) {
-        const t = bodyText.bodyText.trimStart();
-        if (t) {
-          foundBodyText = true;
-          acc.push({ bodyText: t });
-        }
-      } else {
-        // Not body text, so add it
-        foundBodyText = true;
-        acc.push(bodyPart);
-      }
-      return acc;
-    }, [] as BodyPart[]);
-
-    // Trim end
-    foundBodyText = false;
-    trimmedBodyParts = trimmedBodyParts.reduceRight((acc, bodyPart) => {
-      const bodyText = bodyPart as BodyText;
-      if (!foundBodyText && bodyText.bodyText != undefined) {
-        const t = bodyText.bodyText.trimEnd();
-        if (t) {
-          foundBodyText = true;
-          acc.unshift({ bodyText: t });
-        }
-      } else {
-        // Not body text, so add it
-        foundBodyText = true;
-        acc.unshift(bodyPart);
-      }
-      return acc;
-    }, [] as BodyPart[]);
-
-    return trimmedBodyParts;
-  }
-
-  /**
-   * Add an error to the list of non-fatal errors
-   * @param message The error message
-   */
-  addError(message: string) {
-    const error: ParserError = {
-      message,
-      text: this.parserText(),
-      location: this.parserLocation(),
-    };
-    this.nonFatalErrors.push(error);
-  }
-
-  /**
-   * Print out data for debugging
-   *
-   * @param header
-   * @param data
-   */
-  debugPrint(header: string, data: unknown): void {
-    if (DEBUG) {
-      console.log(`===== START: ${header} =====`);
-      console.log(JSON.stringify(data, null, 2));
-      console.log(`===== END: ${header} =====`);
-    }
   }
 }
 

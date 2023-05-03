@@ -2,6 +2,7 @@ import { BitTypeType } from '../model/enum/BitType';
 import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
 import { TextFormatType, TextFormat } from '../model/enum/TextFormat';
 import { ParserError } from '../model/parser/ParserError';
+import { ParserInfo } from '../model/parser/ParserInfo';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { UrlUtils } from '../utils/UrlUtils';
 
@@ -146,7 +147,7 @@ class Builder {
     footer?: FooterText;
 
     bitmark?: string;
-    errors?: ParserError[];
+    parser?: ParserInfo;
   }): Bit | undefined {
     const {
       bitType,
@@ -208,7 +209,7 @@ class Builder {
       footer,
 
       bitmark,
-      errors,
+      parser,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -272,7 +273,7 @@ class Builder {
       footer,
 
       bitmark,
-      errors,
+      parser,
     };
 
     // Handle special case properties
