@@ -1,0 +1,46 @@
+[
+  {
+    "bitmark": "[.multiple-choice]\n[%A9a]\n[!Textarbeit\nEntscheiden Sie, welche der Antworten a), b) oder c) passt. Es gibt jeweils nur eine richtige Lösung.]\n===\n[%1][!Die Nachrichten werden beeinflusst ]\n[-a) vom Programmdirektor.][%100][!000000000][?Hint001']\n[+b) von der Auswahl verschiedener Leute.][%110][!111111111111][?Hint002]\n[-c) vom Nachrichtensprecher.][%120][!22222222222][?Hint003]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "A9a",
+      "instruction": "Textarbeit\nEntscheiden Sie, welche der Antworten a), b) oder c) passt. Es gibt jeweils nur eine richtige Lösung.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "1",
+          "instruction": "Die Nachrichten werden beeinflusst",
+          "choices": [
+            {
+              "choice": "a) vom Programmdirektor.",
+              "item": "100",
+              "isCorrect": false,
+              "instruction": "000000000",
+              "hint": "Hint001'"
+            },
+            {
+              "choice": "b) von der Auswahl verschiedener Leute.",
+              "item": "110",
+              "isCorrect": true,
+              "instruction": "111111111111",
+              "hint": "Hint002"
+            },
+            {
+              "choice": "c) vom Nachrichtensprecher.",
+              "item": "120",
+              "isCorrect": false,
+              "instruction": "22222222222",
+              "hint": "Hint003"
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ]
+    }
+  }
+]

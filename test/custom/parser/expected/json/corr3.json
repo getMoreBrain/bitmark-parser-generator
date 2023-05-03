@@ -1,0 +1,15 @@
+[
+  {
+    "bitmark": "[.correction]\n[!Please correct the upper and lower case..]\n\n[-in der Deutschen sprache spielt die Gross- und kleinschreibung eine Grosse Rolle.]\n[+In der deutschen Sprache spielt die Gross- und Kleinschreibung eine grosse Rolle.]",
+    "bit": {
+      "type": "correction",
+      "format": "bitmark--",
+      "body": "[-in der Deutschen sprache spielt die Gross- und kleinschreibung eine Grosse Rolle.]\n[+In der deutschen Sprache spielt die Gross- und Kleinschreibung eine grosse Rolle.]",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Please correct the upper and lower case.."
+    }
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "bitmark": "[.mark:bitmark++]\n[%A4a]\n[!Die indirekte Rede\n\nLesen Sie die folgenden Sätze und kennzeichnen Sie die Verben.]\nDie Ergebnisse seien alarmierend.\nFast jedes fünfte Kind in Deutschland habe psychische Probleme. \nKäse zerstöre den Körper, mache fett, faul und krank.\nVon den Tätern fehle jede Spur.\n\n► Diese Sätze stehen in der indirekten Rede, das heißt, sie geben wieder, was jemand gesagt hat. Im Deutschen kann man dafür eine besondere grammatische Form verwenden: den",
+    "bit": {
+      "type": "mark",
+      "format": "bitmark++",
+      "item": "A4a",
+      "instruction": "Die indirekte Rede\n\nLesen Sie die folgenden Sätze und kennzeichnen Sie die Verben.",
+      "hint": "",
+      "body": "Die Ergebnisse seien alarmierend.\nFast jedes fünfte Kind in Deutschland habe psychische Probleme. \nKäse zerstöre den Körper, mache fett, faul und krank.\nVon den Tätern fehle jede Spur.\n\n► Diese Sätze stehen in der indirekten Rede, das heißt, sie geben wieder, was jemand gesagt hat. Im Deutschen kann man dafür eine besondere grammatische Form verwenden: den",
+      "marks": {}
+    }
+  }
+]

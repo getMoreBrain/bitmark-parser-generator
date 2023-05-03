@@ -1,0 +1,1073 @@
+[
+  {
+    "bitmark": "[.cloze]\n[%A27 – Wortschatz]\n[!Liebe und Leid\nLösen Sie das Worträtsel. Suchen Sie die passenden Nomen. Das Lösungswort ergibt sich, wenn Sie die markierten Kästchen senkrecht lesen.]\n[%1] Das hat man, wenn der geliebte Partner/die geliebte Partnerin nicht da ist.\n[_S][@example] [_e][@example] [_h][@example][%1] [_n][@example] [_s][@example] [_u] [_c] [_h] [_t]\n[%2] Das Brautpaar muss sie während der Feier anschneiden, dann kann man sie essen.\n[_T] [_o][%2] [_r] [_t] [_e]\n[%3] Das machen viele Singles, manche online.\n[_P][@example] [_a][@example] [_r] [_t] [_n] [_e] [_r] [_s] [_u] [_c] [_h] [_e][%3]\n[%4] Man trägt ihn normalerweise, wenn man verheiratet ist.\n[_E] [_h][%4] [_e] [_r] [_i] [_n] [_g][@example]\n[%5] Man empfindet ihn, wenn die Ehe nicht gut geht und man sich trennt.\n[_T] [_r] [_e] [_n] [_n] [_u] [_n] [_g] [_s] [_s][@example] [_c][@example] [_h][@example] [_m] [_e] [_r] [_z][%5]\n[%6] Die Braut trägt es während der Hochzeit, es ist oft weiß.\n[_B][@example] [_r][@example] [_a] [_u] [_t] [_k] [_l] [_e][%6] [_i] [_d]\n[%7] Das hat man zum Beispiel, wenn man in jemanden verliebt ist und die Liebe nicht erwidert wird.\n[_L][@example] [_i][%7] [_e] [_b] [_e] [_s] [_k] [_u] [_m] [_m] [_e] [_r]\n[%8] Der, der die Braut heiratet.\n[_B] [_r] [_ä][@example] [_u][@example] [_t][%8] [_i] [_g] [_a] [_m]\nLösung: [_H][!1][@example] [_o][!2] [_c][!3] [_h][!4] [_z][!5] [_e][!6] [_i][!7] [_t][!8]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Das hat man, wenn der geliebte Partner/die geliebte Partnerin nicht da ist.\n{0} {1} {2} {3} {4} {5} {6} {7} {8}\n Das Brautpaar muss sie während der Feier anschneiden, dann kann man sie essen.\n{9} {10} {11} {12} {13}\n Das machen viele Singles, manche online.\n{14} {15} {16} {17} {18} {19} {20} {21} {22} {23} {24} {25}\n Man trägt ihn normalerweise, wenn man verheiratet ist.\n{26} {27} {28} {29} {30} {31} {32}\n Man empfindet ihn, wenn die Ehe nicht gut geht und man sich trennt.\n{33} {34} {35} {36} {37} {38} {39} {40} {41} {42} {43} {44} {45} {46} {47} {48}\n Die Braut trägt es während der Hochzeit, es ist oft weiß.\n{49} {50} {51} {52} {53} {54} {55} {56} {57} {58}\n Das hat man zum Beispiel, wenn man in jemanden verliebt ist und die Liebe nicht erwidert wird.\n{59} {60} {61} {62} {63} {64} {65} {66} {67} {68} {69} {70}\n Der, der die Braut heiratet.\n{71} {72} {73} {74} {75} {76} {77} {78} {79}\nLösung: {80} {81} {82} {83} {84} {85} {86} {87}",
+      "item": "A27 – Wortschatz",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Liebe und Leid\nLösen Sie das Worträtsel. Suchen Sie die passenden Nomen. Das Lösungswort ergibt sich, wenn Sie die markierten Kästchen senkrecht lesen.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "S"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "1",
+          "solutions": [
+            "h"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "n"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "s"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "u"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "c"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "h"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "t"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "T"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "2",
+          "solutions": [
+            "o"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "r"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "t"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "P"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{15}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{16}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "r"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{17}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "t"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{18}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "n"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{19}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{20}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "r"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{21}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "s"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{22}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "u"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{23}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "c"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{24}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "h"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{25}": {
+          "type": "gap",
+          "item": "3",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{26}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "E"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{27}": {
+          "type": "gap",
+          "item": "4",
+          "solutions": [
+            "h"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{28}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{29}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "r"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{30}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "i"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{31}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "n"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{32}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "g"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{33}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "T"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{34}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "r"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{35}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{36}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "n"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{37}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "n"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{38}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "u"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{39}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "n"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{40}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "g"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{41}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "s"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{42}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "s"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{43}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "c"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{44}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "h"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{45}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "m"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{46}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{47}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "r"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{48}": {
+          "type": "gap",
+          "item": "5",
+          "solutions": [
+            "z"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{49}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "B"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{50}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "r"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{51}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{52}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "u"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{53}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "t"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{54}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "k"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{55}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "l"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{56}": {
+          "type": "gap",
+          "item": "6",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{57}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "i"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{58}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "d"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{59}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "L"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{60}": {
+          "type": "gap",
+          "item": "7",
+          "solutions": [
+            "i"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{61}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{62}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "b"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{63}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{64}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "s"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{65}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "k"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{66}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "u"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{67}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "m"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{68}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "m"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{69}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{70}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "r"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{71}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "B"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{72}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "r"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{73}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ä"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{74}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "u"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{75}": {
+          "type": "gap",
+          "item": "8",
+          "solutions": [
+            "t"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{76}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "i"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{77}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "g"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{78}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{79}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "m"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{80}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "H"
+          ],
+          "hint": "",
+          "instruction": "1",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{81}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "o"
+          ],
+          "hint": "",
+          "instruction": "2",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{82}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "c"
+          ],
+          "hint": "",
+          "instruction": "3",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{83}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "h"
+          ],
+          "hint": "",
+          "instruction": "4",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{84}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "z"
+          ],
+          "hint": "",
+          "instruction": "5",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{85}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "6",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{86}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "i"
+          ],
+          "hint": "",
+          "instruction": "7",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{87}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "t"
+          ],
+          "hint": "",
+          "instruction": "8",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,4246 @@
+[
+  {
+    "bitmark": "[.book]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 3,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[%1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[%Sich vorstellen 1]\n[!Was passt zusammen? Wählen Sie jeweils eine sinnvolle Ergänzung.]\n1.  Ich heiße [-Deutsch][+Franziska Binder][-in Wien][-Lehrerin][-Tennis][-Französisch und Englisch][-Romane].\n2. Ich wohne [-Deutsch][-Franziska Binder][+in Wien][-Lehrerin][-Tennis][-Französisch und Englisch][-Romane].\n3. Ich bin [-Deutsch][-Franziska Binder][-in Wien][+Lehrerin][-Tennis][-Französisch und Englisch][-Romane].\n4. Meine Muttersprache ist [+Deutsch][-Franziska Binder][-in Wien][-Lehrerin][-Tennis][-Französisch und Englisch][-Romane].\n5. Ich spreche auch [-Deutsch][-Franziska Binder][-in Wien][-Lehrerin][-Tennis][+Französisch und Englisch][-Romane].\n6. Ich lese gern [-Deutsch][-Franziska Binder][-in Wien][-Lehrerin][-Tennis][-Französisch und Englisch][+Romane].\n7. Ich spiele gern [-Deutsch][-Franziska Binder][-in Wien][-Lehrerin][+Tennis][-Französisch und Englisch][-Romane].",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1.  Ich heiße {0}.\n2. Ich wohne {1}.\n3. Ich bin {2}.\n4. Meine Muttersprache ist {3}.\n5. Ich spreche auch {4}.\n6. Ich lese gern {5}.\n7. Ich spiele gern {6}.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Deutsch",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Franziska Binder",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "in Wien",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Lehrerin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Tennis",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Französisch und Englisch",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Romane",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Deutsch",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Franziska Binder",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "in Wien",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Lehrerin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Tennis",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Französisch und Englisch",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Romane",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Deutsch",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Franziska Binder",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "in Wien",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Lehrerin",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Tennis",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Französisch und Englisch",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Romane",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Deutsch",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Franziska Binder",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "in Wien",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Lehrerin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Tennis",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Französisch und Englisch",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Romane",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Deutsch",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Franziska Binder",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "in Wien",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Lehrerin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Tennis",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Französisch und Englisch",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Romane",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Deutsch",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Franziska Binder",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "in Wien",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Lehrerin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Tennis",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Französisch und Englisch",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Romane",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Deutsch",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Franziska Binder",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "in Wien",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Lehrerin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Tennis",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Französisch und Englisch",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Romane",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "Sich vorstellen 1",
+      "instruction": "Was passt zusammen? Wählen Sie jeweils eine sinnvolle Ergänzung."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--]\n[%Sich vorstellen 2]\n[%Welche Frage passt? Wählen Sie die richtige Ergänzung.]\n===\n[!1. Ich heiße Franziska Binder.]\n[+Wie heißen Sie?]\n[-Wie ist Ihr Familienname?]\n===\n[!2. Ich bin 34.]\t \n[-Was ist Ihre Telefonnummer?]\n[+Wie alt sind Sie?]\n===\n[!3. In München.]\t \n[+Wo wohnen Sie?]\n[-Woher kommen Sie?]\n===\n[!4. Ich bin Sekretärin.]\n[+Was sind Sie von Beruf?]\n[-Wie heißen Sie?]\n===\n[!5. Aus Österreich.]\n[-Wo wohnen Sie?]\n[+Woher kommen Sie?]\n===\n[!6. Spanisch und Englisch.]\n[+Welche Sprachen sprechen Sie?]\n[-Was ist Ihre Muttersprache?]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "Sich vorstellen 2",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "1. Ich heiße Franziska Binder.",
+          "choices": [
+            {
+              "choice": "Wie heißen Sie?",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Wie ist Ihr Familienname?",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "2. Ich bin 34.",
+          "choices": [
+            {
+              "choice": "Was ist Ihre Telefonnummer?",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Wie alt sind Sie?",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "3. In München.",
+          "choices": [
+            {
+              "choice": "Wo wohnen Sie?",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Woher kommen Sie?",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "4. Ich bin Sekretärin.",
+          "choices": [
+            {
+              "choice": "Was sind Sie von Beruf?",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Wie heißen Sie?",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "5. Aus Österreich.",
+          "choices": [
+            {
+              "choice": "Wo wohnen Sie?",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Woher kommen Sie?",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "6. Spanisch und Englisch.",
+          "choices": [
+            {
+              "choice": "Welche Sprachen sprechen Sie?",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Was ist Ihre Muttersprache?",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&imageWithAudio]\n[%Sich vorstellen 3]\n[!Hören Sie den Text und ergänzen Sie.\nAchten Sie auf die Groß- und Kleinschreibung.]\n1. Familienname: [_Stein]\t\n2. Vorname: [_Ulrich]\n3. Alter: [_32] Jahre.\n4. Beruf: [_Architekt].\n5. Wohnort: [_Hamburg]\t\n6. Telefonnummer: [_0403547621\n[&image]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "1. Familienname: {0}\t\n2. Vorname: {1}\n3. Alter: {2} Jahre.\n4. Beruf: {3}.\n5. Wohnort: {4}\t\n6. Telefonnummer: [_0403547621\n[&image]",
+      "item": "Sich vorstellen 3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Hören Sie den Text und ergänzen Sie.\nAchten Sie auf die Groß- und Kleinschreibung.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Stein"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Ulrich"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "32"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Architekt"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Hamburg"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 23,
+        "errorLine": "[.cloze:bitmark--&imageWithAudio]"
+      },
+      {
+        "message": "Unexpected input ' [_0403547621\\n'",
+        "line": 10,
+        "column": 30,
+        "errorLine": "6. Telefonnummer: [_0403547621"
+      },
+      {
+        "message": "Unexpected input '[_'",
+        "line": 10,
+        "column": 18,
+        "errorLine": "6. Telefonnummer: [_0403547621"
+      },
+      {
+        "message": "Unexpected input '[&image'",
+        "line": 11,
+        "column": 0,
+        "errorLine": "[&image]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[%Verben 1]\n[!Was ist richtig? Wählen Sie aus.]\n1. kommen: Otto [-komme][+kommt] aus Deutschland.\n2. heißen: Ich [+heiße][-heißt]Marina Müller.\n3. wohnen: Wir [+wohnen][-wohnt] in München.\n4. sein: Herr Heinemann [-bist][+ist] Informatiker.\n5. sein: Ich [+bin][-ist] Sekretärin.\n6. studieren: Wo [-studiert][+studierst] du?\n7. sein: [-Bist][+Sind] Sie unsere Lehrerin?\n8. heißen: Wie [+heißt][-heißen] du?",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. kommen: Otto {0} aus Deutschland.\n2. heißen: Ich {1}Marina Müller.\n3. wohnen: Wir {2} in München.\n4. sein: Herr Heinemann {3} Informatiker.\n5. sein: Ich {4} Sekretärin.\n6. studieren: Wo {5} du?\n7. sein: {6} Sie unsere Lehrerin?\n8. heißen: Wie {7} du?",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "komme",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "kommt",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "heiße",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "heißt",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "wohnen",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "wohnt",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "bist",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ist",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "bin",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ist",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "studiert",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "studierst",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Bist",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Sind",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "heißt",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "heißen",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "Verben 1",
+      "instruction": "Was ist richtig? Wählen Sie aus."
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&audio]\n||2 audios||\n[%Welche Zahlen hören Sie?]\n[!Notieren Sie.]\n1. [_22] [_3] [_45] [_10] [_31]\n2. [_9] [_12] [_100] [_78] [_94]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "1. {0} {1} {2} {3} {4}\n2. {5} {6} {7} {8} {9}",
+      "item": "Welche Zahlen hören Sie?",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Notieren Sie.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "22"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "3"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "45"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "10"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "31"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "9"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "12"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "100"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "78"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "94"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.match:bitmark--]\n[%Sprachen]\n[!Wie heißt die Sprache?]\n===\n[%0.]Frankreich\t\n==\nFranzösisch[@example]\n===\n[%1.]Griechenland\n==\nGriechisch\n===\n[%2.]Polen\n==\nPolnisch\n===\n[%3.]Schweden\n==\nSchwedisch\n===\n[%4.]die Türkei\n==\nTürkisch\n===\n[%5.]Japan\n==\nJapanisch\n===\n[%6.]Russland\n==\nRussisch\n===\n[%7.]Großbritannien\n==\nEnglisch\n===\n[%8.]Ungarn\n==\nUngarisch\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "Sprachen",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Frankreich\t",
+          "values": [
+            "Französisch"
+          ],
+          "item": "0.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Griechenland",
+          "values": [
+            "Griechisch"
+          ],
+          "item": "1.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Polen",
+          "values": [
+            "Polnisch"
+          ],
+          "item": "2.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Schweden",
+          "values": [
+            "Schwedisch"
+          ],
+          "item": "3.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "die Türkei",
+          "values": [
+            "Türkisch"
+          ],
+          "item": "4.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Japan",
+          "values": [
+            "Japanisch"
+          ],
+          "item": "5.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Russland",
+          "values": [
+            "Russisch"
+          ],
+          "item": "6.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Großbritannien",
+          "values": [
+            "Englisch"
+          ],
+          "item": "7.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Ungarn",
+          "values": [
+            "Ungarisch"
+          ],
+          "item": "8.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "instruction": "Wie heißt die Sprache?"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[%Verben 2]\n[!Was ist richtig? Wählen Sie aus.]\n1. spielen: Maximilian [+spielt][-spielen][-spielst] gern Fußball.\n2. hören: Marta [-hören][-höre][+hört]gern Popmusik.\n3. sammeln: Hans [-sammeln][-sammle][+sammelt] Briefmarken.\n4. lesen: Susanne [-lese][+liest][-lest] gern Kriminalromane.\n5. schreiben: Martin [-schreibe][-schreibst][+schreibt] Computerprogramme.\n6. singen: Marie [+singt][-singen][-singe] im Chor.\n7. lernen: Meine Nachbarin [-lernst][+lernt][-lerne] Gitarre.\n8. wohnen: Meine Schwester [+wohnt][-wohnen][-wohnst] in Berlin.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. spielen: Maximilian {0} gern Fußball.\n2. hören: Marta {1}gern Popmusik.\n3. sammeln: Hans {2} Briefmarken.\n4. lesen: Susanne {3} gern Kriminalromane.\n5. schreiben: Martin {4} Computerprogramme.\n6. singen: Marie {5} im Chor.\n7. lernen: Meine Nachbarin {6} Gitarre.\n8. wohnen: Meine Schwester {7} in Berlin.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "spielt",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "spielen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "spielst",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "hören",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "höre",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "hört",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "sammeln",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sammle",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sammelt",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "lese",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "liest",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "lest",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "schreibe",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "schreibst",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "schreibt",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "singt",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "singen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "singe",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "lernst",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "lernt",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "lerne",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "wohnt",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "wohnen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "wohnst",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "Verben 2",
+      "instruction": "Was ist richtig? Wählen Sie aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[%Landeskunde: Deutschland, Österreich und die Schweiz]\n[!Welches Wort passt?]\n1. Deutschland hat 82,4 Millionen [+Einwohner][-Amtssprache][-Hauptstadt][-Republik][-Kantone][-Bundesländer].\n2. Die [-Einwohner][-Amtssprache][+Hauptstadt][-Republik][-Kantone][-Bundesländer] von Deutschland ist Berlin.\n3. Österreich hat neun [-Einwohner][-Amtssprache][-Hauptstadt][-Republik][-Kantone][+Bundesländer].\n4. Seit 1918 ist Österreich eine [-Einwohner][-Amtssprache][-Hauptstadt][+Republik][-Kantone][-Bundesländer].\n5. Die [-Einwohner][+Amtssprache][-Hauptstadt][-Republik][-Kantone][-Bundesländer] in Österreich ist Deutsch.\n6. Die Schweiz hat 26 [-Einwohner][-Amtssprache][-Hauptstadt][-Republik][+Kantone][-Bundesländer]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Deutschland hat 82,4 Millionen {0}.\n2. Die {1} von Deutschland ist Berlin.\n3. Österreich hat neun {2}.\n4. Seit 1918 ist Österreich eine {3}.\n5. Die {4} in Österreich ist Deutsch.\n6. Die Schweiz hat 26 {5}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Einwohner",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Amtssprache",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Hauptstadt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Republik",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Kantone",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bundesländer",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Einwohner",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Amtssprache",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Hauptstadt",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Republik",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Kantone",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bundesländer",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Einwohner",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Amtssprache",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Hauptstadt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Republik",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Kantone",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bundesländer",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Einwohner",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Amtssprache",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Hauptstadt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Republik",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Kantone",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bundesländer",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Einwohner",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Amtssprache",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Hauptstadt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Republik",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Kantone",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bundesländer",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Einwohner",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Amtssprache",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Hauptstadt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Republik",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Kantone",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Bundesländer",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "Landeskunde: Deutschland, Österreich und die Schweiz",
+      "instruction": "Welches Wort passt?"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[%2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[%Ein Dialog im Büro]\n[!Ergänzen Sie die Verben.]\n**Frau Herzberg:** Guten Tag. [-arbeite][-sind][-Fehlt][+Suchen][-bin][-Kommen][-glaube][-ist][-können] Sie etwas?\n**Herr Heinemann:** Ja, mein Büro. Ich [-arbeite][-sind][-Fehlt][-Suchen][+bin][-Kommen][-glaube][-ist][-können] neu hier.\n**Frau Herzberg:** Sind Sie Herr Heinemann?\n**Herr Heinemann:** Ja.\n**Frau Herzberg:** Herzlich willkommen! Mein Name ist Lisa Herzberg, ich [+arbeite][-sind][-Fehlt][-Suchen][-bin][-Kommen][-glaube][-ist][-können] hier als Sekretärin. [-arbeite][-sind][-Fehlt][-Suchen][-bin][+Kommen][-glaube][-ist][-können] Sie! Hier ist Ihr Büro.\n**Herr Heinemann:** Oh, das ist ein schönes Zimmer!\n**Frau Herzberg:** Hoffentlich [-arbeite][-sind][-Fehlt][-Suchen][-bin][-Kommen][-glaube][+ist][-können] alles da: Dort [-arbeite][+sind][-Fehlt][-Suchen][-bin][-Kommen][-glaube][-ist][-können] der Schreibtisch, der Computer, der Drucker, das Telefon, die Schreibtischlampe, der Stuhl und hier ist das Regal. [-arbeite][-sind][+Fehlt][-Suchen][-bin][-Kommen][-glaube][-ist][-können] etwas?\n**Herr Heinemann:** Nein, ich [-arbeite][-sind][-Fehlt][-Suchen][-bin][-Kommen][+glaube][-ist][-können] nicht. Vielen Dank, Frau Herzberg.\n**Frau Herzberg:** Vielleicht [-arbeite][-sind][-Fehlt][-Suchen][-bin][-Kommen][-glaube][-ist][+können] wir später zusammen Kaffee trinken.\n**Herr Heinemann:** Gerne.\n**Frau Herzberg:** Bis später.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "**Frau Herzberg:** Guten Tag. {0} Sie etwas?\n**Herr Heinemann:** Ja, mein Büro. Ich {1} neu hier.\n**Frau Herzberg:** Sind Sie Herr Heinemann?\n**Herr Heinemann:** Ja.\n**Frau Herzberg:** Herzlich willkommen! Mein Name ist Lisa Herzberg, ich {2} hier als Sekretärin. {3} Sie! Hier ist Ihr Büro.\n**Herr Heinemann:** Oh, das ist ein schönes Zimmer!\n**Frau Herzberg:** Hoffentlich {4} alles da: Dort {5} der Schreibtisch, der Computer, der Drucker, das Telefon, die Schreibtischlampe, der Stuhl und hier ist das Regal. {6} etwas?\n**Herr Heinemann:** Nein, ich {7} nicht. Vielen Dank, Frau Herzberg.\n**Frau Herzberg:** Vielleicht {8} wir später zusammen Kaffee trinken.\n**Herr Heinemann:** Gerne.\n**Frau Herzberg:** Bis später.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "arbeite",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sind",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Fehlt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Suchen",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "bin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Kommen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "glaube",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ist",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "können",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "arbeite",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sind",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Fehlt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Suchen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bin",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Kommen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "glaube",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ist",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "können",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "arbeite",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "sind",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Fehlt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Suchen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Kommen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "glaube",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ist",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "können",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "arbeite",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sind",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Fehlt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Suchen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Kommen",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "glaube",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ist",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "können",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "arbeite",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sind",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Fehlt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Suchen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Kommen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "glaube",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ist",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "können",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "arbeite",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sind",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Fehlt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Suchen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Kommen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "glaube",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ist",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "können",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "arbeite",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sind",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Fehlt",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Suchen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Kommen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "glaube",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ist",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "können",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "arbeite",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sind",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Fehlt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Suchen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Kommen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "glaube",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ist",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "können",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "arbeite",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sind",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Fehlt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Suchen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bin",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Kommen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "glaube",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ist",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "können",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "Ein Dialog im Büro",
+      "instruction": "Ergänzen Sie die Verben."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[%Gegenteile]\n[!Wie heißt das Gegenteil? Wählen Sie aus.]\n\n1. ein schönes Bild\t\tein [-billige][-langweiliges][-unmoderne][-bequemer][-großer][-helles][+hässliches] Bild\n2. eine moderne Lampe\t\teine [-billige][-langweiliges][+unmoderne][-bequemer][-großer][-helles][-hässliches] Lampe\n3. ein unbequemer Stuhl\t\tein [-billige][-langweiliges][-unmoderne][+bequemer][-großer][-helles][-hässliches] Stuhl\n4. ein kleiner Tisch\t\tein [-billige][-langweiliges][-unmoderne][-bequemer][+großer][-helles][-hässliches] Tisch\n5. eine teure Brille\t\teine [+billige][-langweiliges][-unmoderne][-bequemer][-großer][-helles][-hässliches] Brille\n6. ein interessantes Buch\t\tein [-billige][+langweiliges][-unmoderne][-bequemer][-großer][-helles][-hässliches] Buch\n7. ein dunkles Zimmer\t\tein [-billige][-langweiliges][-unmoderne][-bequemer][-großer][+helles][-hässliches] Zimmer",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. ein schönes Bild\t\tein {0} Bild\n2. eine moderne Lampe\t\teine {1} Lampe\n3. ein unbequemer Stuhl\t\tein {2} Stuhl\n4. ein kleiner Tisch\t\tein {3} Tisch\n5. eine teure Brille\t\teine {4} Brille\n6. ein interessantes Buch\t\tein {5} Buch\n7. ein dunkles Zimmer\t\tein {6} Zimmer",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "billige",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "langweiliges",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "unmoderne",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bequemer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "großer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "helles",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "hässliches",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "billige",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "langweiliges",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "unmoderne",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "bequemer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "großer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "helles",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "hässliches",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "billige",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "langweiliges",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "unmoderne",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bequemer",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "großer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "helles",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "hässliches",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "billige",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "langweiliges",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "unmoderne",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bequemer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "großer",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "helles",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "hässliches",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "billige",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "langweiliges",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "unmoderne",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bequemer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "großer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "helles",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "hässliches",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "billige",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "langweiliges",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "unmoderne",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bequemer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "großer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "helles",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "hässliches",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "billige",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "langweiliges",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "unmoderne",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bequemer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "großer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "helles",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "hässliches",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "Gegenteile",
+      "instruction": "Wie heißt das Gegenteil? Wählen Sie aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--&audio]\n[%Das neue Büro]\n[!Hören Sie das Gespräch und markieren Sie die richtige Antwort.]\n===\n[!1. Im Büro sind]\n[+zwei Stühle.]\t  \n[-drei Stühle.]\n[-vier Stühle.]\n===\n[!2. Im Büro ist keine]\n[-Uhr.][+Kaffeemaschine.][-Lampe.]\n===\n[!3. Die Lampe]\n[-geht nicht.][+funktioniert gut.][-fehlt.]\n===\n[!4. Der Computer ist]\n[-teuer.][-kaputt.][+modern.]\n===\n[!5. Die Stühle sind]\n[+bequem.][-alt.][-schön.]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "Das neue Büro",
+      "instruction": "Hören Sie das Gespräch und markieren Sie die richtige Antwort.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "1. Im Büro sind",
+          "choices": [
+            {
+              "choice": "zwei Stühle.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "5. Die Stühle sind",
+          "choices": [
+            {
+              "choice": "drei Stühle.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "vier Stühle.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Uhr.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Kaffeemaschine.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Lampe.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "geht nicht.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "funktioniert gut.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "fehlt.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "teuer.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "kaputt.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "modern.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "bequem.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "alt.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "schön.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\t  '",
+        "line": 6,
+        "column": 15,
+        "errorLine": "[+zwei Stühle.]\t  "
+      }
+    ]
+  },
+  {
+    "bitmark": "[.cloze-solution-grouped:bitmark--]\n[%Was kann man hier machen?]\n[!Ergänzen Sie das passende Verb.]\n1. Das ist die Kantine. Hier können die Mitarbeiter etwas [_essen].\n2. Das ist das Sprachzentrum. Hier kann man Sprachen [_lernen].\n3. Das ist die Bibliothek. Hier kann man Bücher und Zeitungen [_lesen].\n4. Das ist die Sporthalle. Hier kann man Volleyball oder Fußball [_spielen].\n5. Das ist das Sekretariat. Hier kann man Informationen [_bekommen].\n6. Das ist mein Büro. Hier kann ich [_arbeiten].",
+    "bit": {
+      "type": "cloze-solution-grouped",
+      "format": "bitmark--",
+      "body": "1. Das ist die Kantine. Hier können die Mitarbeiter etwas {0}.\n2. Das ist das Sprachzentrum. Hier kann man Sprachen {1}.\n3. Das ist die Bibliothek. Hier kann man Bücher und Zeitungen {2}.\n4. Das ist die Sporthalle. Hier kann man Volleyball oder Fußball {3}.\n5. Das ist das Sekretariat. Hier kann man Informationen {4}.\n6. Das ist mein Büro. Hier kann ich {5}.",
+      "item": "Was kann man hier machen?",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Ergänzen Sie das passende Verb.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "essen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "lernen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "lesen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "spielen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "bekommen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "arbeiten"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[%Verbformen]\n[!Ergänzen Sie die Endungen.]\n1. Am Montag besuch[_en] wir unsere Freunde in Köln.\n\n2. Am Dienstag geh[_t] meine Freundin nicht arbeiten.\n\n3. Am Mittwoch könn[_t] ihr nach Berlin fahren.\n\n4. Am Donnerstag lern[_st] du Schwedisch.\n\n5. Am Freitag mach[_en] Herr und Frau Lehmann Yoga.\n\n6. Am Samstag spiel[_t] Xaver Tennis.\n\n7. Am Sonntag sprech[_e] ich nur Spanisch.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "1. Am Montag besuch{0} wir unsere Freunde in Köln.\n\n2. Am Dienstag geh{1} meine Freundin nicht arbeiten.\n\n3. Am Mittwoch könn{2} ihr nach Berlin fahren.\n\n4. Am Donnerstag lern{3} du Schwedisch.\n\n5. Am Freitag mach{4} Herr und Frau Lehmann Yoga.\n\n6. Am Samstag spiel{5} Xaver Tennis.\n\n7. Am Sonntag sprech{6} ich nur Spanisch.",
+      "item": "Verbformen",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Ergänzen Sie die Endungen.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "en"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "t"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "t"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "st"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "en"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "t"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze]\n[%Im Geschäft]\n[!Was kostet wie viel? Hören Sie und wählen Sie die richtige Antwort aus.]\n||multiple audios||",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Im Geschäft",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Was kostet wie viel? Hören Sie und wählen Sie die richtige Antwort aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[%Welche Präposition ist richtig?]\n[!Wählen Sie aus.]\n1. Ich komme [-nach][-in][+aus] Polen.\n2. Er wohnt [+in][-bei][-aus] Japan.\n3. Wir arbeiten [-in][+bei][-nach] BMW.\n4. Fliegt ihr [+nach][-in][-an] Barcelona?\n5. Sie studieren [-in][+an][-bei] der Universität.\n6. Wohnt ihr auch [-aus][+in][-nach] Österreich?\n7. Wann fährst du [-bei][+nach][-aus] Brasilien?\n8. Fahren Sie auch [-aus][-in][+nach] Istanbul?",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Ich komme {0} Polen.\n2. Er wohnt {1} Japan.\n3. Wir arbeiten {2} BMW.\n4. Fliegt ihr {3} Barcelona?\n5. Sie studieren {4} der Universität.\n6. Wohnt ihr auch {5} Österreich?\n7. Wann fährst du {6} Brasilien?\n8. Fahren Sie auch {7} Istanbul?",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "nach",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "in",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "aus",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "in",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "bei",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "aus",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "in",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bei",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "nach",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "nach",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "in",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "in",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "bei",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "aus",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "in",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "nach",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "bei",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "nach",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "aus",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "aus",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "in",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "nach",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "Welche Präposition ist richtig?",
+      "instruction": "Wählen Sie aus."
+    }
+  },
+  {
+    "bitmark": "[.chapter:bitmark--]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 3,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--&audio]\n[%An der Hotelrezeption]\n[!Hören Sie den Dialog und ergänzen Sie die Informationen.]\n1. Der Mann möchte [-ein Doppelzimmer][-ein Dreibettzimmer][+ein Einzelzimmer]\n2. Er bleibt [+eine Nacht][-zwei Nächte][-drei Nächte].\n3. Das Zimmer mit Internetanschluss kostet [-45][-54][+55] Euro.\n4. [+Alle Zimmer][-Viele Zimmer][-Einige Zimmer] haben eine Minibar.\n5. Die Rezeptionistin möchte [-seine Telefonnummer][+seine Adresse][-seine Unterschrieft].\n6. Der Mann kommt [-aus der Schweiz][-aus Österreich][+aus Deutschland].\n7. Seine Postleitzahl ist [+10625][-10723][-10635].\n8. Die Rezeptionistin gibt dem Mann [-ihre Telefonnummer][+den Schlüssel][-eine Karte]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Der Mann möchte {0}\n2. Er bleibt {1}.\n3. Das Zimmer mit Internetanschluss kostet {2} Euro.\n4. {3} haben eine Minibar.\n5. Die Rezeptionistin möchte {4}.\n6. Der Mann kommt {5}.\n7. Seine Postleitzahl ist {6}.\n8. Die Rezeptionistin gibt dem Mann {7}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ein Doppelzimmer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ein Dreibettzimmer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ein Einzelzimmer",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "eine Nacht",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zwei Nächte",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "drei Nächte",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "45",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "54",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "55",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Alle Zimmer",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Viele Zimmer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Einige Zimmer",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "seine Telefonnummer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "seine Adresse",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "seine Unterschrieft",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "aus der Schweiz",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "aus Österreich",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "aus Deutschland",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "10625",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "10723",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "10635",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ihre Telefonnummer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "den Schlüssel",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "eine Karte",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "An der Hotelrezeption",
+      "instruction": "Hören Sie den Dialog und ergänzen Sie die Informationen."
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[%Buchstabensalat]\n[!Welcher Gegenstand ist das?]\n1. RDIOA\tdas [_Radio]\n2. NEFRSEEHR\tder [_Fernseher]\n3. HSCSCHTRIEIB\tder [_Schreibtisch]\n4. EIPRS\tder [_Preis]\n5. CHBSADWIMM\tdas [_Schwimmbad]\n6. RÜHSTCÜFK\tdas [_Frühstück]\n7. OKAPTHEE\tdie [_Apotheke]\n8. HLTOE\tdas [_Hotel]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "1. RDIOA\tdas {0}\n2. NEFRSEEHR\tder {1}\n3. HSCSCHTRIEIB\tder {2}\n4. EIPRS\tder {3}\n5. CHBSADWIMM\tdas {4}\n6. RÜHSTCÜFK\tdas {5}\n7. OKAPTHEE\tdie {6}\n8. HLTOE\tdas {7}",
+      "item": "Buchstabensalat",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Welcher Gegenstand ist das?",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Radio"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Fernseher"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Schreibtisch"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Preis"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Schwimmbad"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Frühstück"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Apotheke"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Hotel"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark--]\n[%Was gehört zusammen?]\n[!Wählen Sie aus.]\n===\n[%1]der Park-\n==\n-platz\n===\n[%2]die Postleit-\n==\n-zahl\n===\n[%3]das Spezialitäten-\n==\n-restaurant\n===\n[%4]die Mini-\n==\n-bar\n===\n[%5]das Doppel-\n==\n-zimmer\n===\n[%6]die Kredit-\n==\n-karte\n===\n[%7]das Stadt-\n==\n-zentrum\n===\n[%8]der Internet-\n==\n-anschluss\n===\n[%9]der Zimmer-\n==\n-schlüssel\n===\n[%10]der Hosen-\n==\n-bügler\n===",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "Was gehört zusammen?",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "der Park-",
+          "values": [
+            "-platz"
+          ],
+          "item": "1",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "die Postleit-",
+          "values": [
+            "-zahl"
+          ],
+          "item": "2",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "das Spezialitäten-",
+          "values": [
+            "-restaurant"
+          ],
+          "item": "3",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "die Mini-",
+          "values": [
+            "-bar"
+          ],
+          "item": "4",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "das Doppel-",
+          "values": [
+            "-zimmer"
+          ],
+          "item": "5",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "die Kredit-",
+          "values": [
+            "-karte"
+          ],
+          "item": "6",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "das Stadt-",
+          "values": [
+            "-zentrum"
+          ],
+          "item": "7",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "der Internet-",
+          "values": [
+            "-anschluss"
+          ],
+          "item": "8",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "der Zimmer-",
+          "values": [
+            "-schlüssel"
+          ],
+          "item": "9",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "der Hosen-",
+          "values": [
+            "-bügler"
+          ],
+          "item": "10",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "instruction": "Wählen Sie aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[%Welcher Artikel ist richtig?]\n[!Wählen Sie aus.]\n1. [+der][-die][-das] Fernseher\n2. [-der][+die][-das] Zimmerausstattung\n3. [-der][+die][-das] Dusche\n4. [-der][+die][-das] Tiefgarage\n5. [-der][+die][-das] Lampe\n6. [+der][-die][-das] Informatiker\n7. [-der][-die][+das] Auto\n8. [-der][-die][+das] Theater\n9. [-der][+die][-das] Kaffeemaschine\n10. [+der][-die][-das] Sessel\n11. [-der][-die][+das] Fitnesszentrum\n12. [-der][-die][+das] Einzelzimmer\n13. [+der][-die][-das] Zimmerschlüssel\n14. [-der][-die][+das] Bett\n15. [-der][-die][+das] Telefon\n16. [-der][-die][+das] Toilettenpapier\n17. [-der][-die][+das] Museum\n18. [+der][-die][-das] Gast\n19. [+der][-die][-das] Drucker\n20. [-der][+die][-das] Kreditkarte",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. {0} Fernseher\n2. {1} Zimmerausstattung\n3. {2} Dusche\n4. {3} Tiefgarage\n5. {4} Lampe\n6. {5} Informatiker\n7. {6} Auto\n8. {7} Theater\n9. {8} Kaffeemaschine\n10. {9} Sessel\n11. {10} Fitnesszentrum\n12. {11} Einzelzimmer\n13. {12} Zimmerschlüssel\n14. {13} Bett\n15. {14} Telefon\n16. {15} Toilettenpapier\n17. {16} Museum\n18. {17} Gast\n19. {18} Drucker\n20. {19} Kreditkarte",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{15}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{16}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{17}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{18}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{19}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "Welcher Artikel ist richtig?",
+      "instruction": "Wählen Sie aus."
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[%Wortschatz]\n[!Ergänzen Sie die Ausdrücke.]\n•. Fernseher: sehen Radio:  [_hören]\n•. Deutschland: Land München:  [_Stadt]\n•. Restaurant: essen Café:  [_trinken]\n4. ein Gast: Einzelzimmer zwei Gäste:  [_Doppelzimmer]\n5. Schmidt: Familienname Anette: [_Vorname]\n6. Bett: schlafen Stuhl:  [_sitzen]\n7. E-Mail: schreiben Roman:  [_lesen]\n8. Musik: hören\tGitarre: [_spielen]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "•. Fernseher: sehen Radio:  {0}\n•. Deutschland: Land München:  {1}\n•. Restaurant: essen Café:  {2}\n4. ein Gast: Einzelzimmer zwei Gäste:  {3}\n5. Schmidt: Familienname Anette: {4}\n6. Bett: schlafen Stuhl:  {5}\n7. E-Mail: schreiben Roman:  {6}\n8. Musik: hören\tGitarre: {7}",
+      "item": "Wortschatz",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Ergänzen Sie die Ausdrücke.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "hören"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Stadt"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "trinken"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Doppelzimmer"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Vorname"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sitzen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "lesen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "spielen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[%Akkusativ]\n[!Ergänzen Sie die Akkusativformen.]\n1.Ich besuche mein Eltern morgen.\n2. Hörst du d Musik?\n3. Seht ihr d Mann dort?\n4. Er liest interessantes Buch.\n5. Wir trinken ein Kaffee.\n6. Sie suchen ein Parkplatz.\n7. Können Sie d Tür öffnen?\n8. Möchten Sie mein Kugelschreiber?\n9. Das Zimmer hat kein Internetanschluss.\n10. Entschuldigung! Gibt es hier ein Touristeninformation?",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "1.Ich besuche mein Eltern morgen.\n2. Hörst du d Musik?\n3. Seht ihr d Mann dort?\n4. Er liest interessantes Buch.\n5. Wir trinken ein Kaffee.\n6. Sie suchen ein Parkplatz.\n7. Können Sie d Tür öffnen?\n8. Möchten Sie mein Kugelschreiber?\n9. Das Zimmer hat kein Internetanschluss.\n10. Entschuldigung! Gibt es hier ein Touristeninformation?",
+      "item": "Akkusativ",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Ergänzen Sie die Akkusativformen."
+    }
+  }
+]

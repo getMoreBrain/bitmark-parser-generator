@@ -1,0 +1,48 @@
+[
+  {
+    "bitmark": "[.interview:bitmark--&image][@id:92393]\n[%A1 – Partnerarbeit]\n[! Sich kennenlernen]\n===\n**Diese Angaben muss man meistens machen:**\n\n\nName:[@shortAnswer]\n===\nWohnort:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "A1 – Partnerarbeit",
+      "instruction": "Sich kennenlernen",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "**Diese Angaben muss man meistens machen:**\n\n\nName:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Wohnort:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "92393"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Missing resource(s) for &image",
+        "line": 0,
+        "column": 0
+      }
+    ]
+  }
+]

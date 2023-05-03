@@ -1,0 +1,21 @@
+[
+  {
+    "bitmark": "[.sequence]\n[%seq1]\n===\nEin Elefant\n--\nist\n--\ngrösser als\n--\neine Maus.\n===",
+    "bit": {
+      "type": "sequence",
+      "format": "bitmark--",
+      "instruction": "",
+      "body": "",
+      "elements": [
+        "Ein Elefant",
+        "ist",
+        "grösser als",
+        "eine Maus."
+      ],
+      "item": "seq1",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    }
+  }
+]

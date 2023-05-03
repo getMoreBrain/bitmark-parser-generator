@@ -1,0 +1,452 @@
+[
+  {
+    "bitmark": "[.cloze-and-multiple-choice-text:bitmark--]\n[%A32a]\n[!Reisebedingungen\n\nSie haben bei einem Reiseveranstalter eine Pauschalreise gebucht.\nLesen Sie die Allgemeinen Reisebedingungen und wählen Sie zu den Punkten 1 bis 6 die passenden Überschriften.]\n\n**◼︎ Auszug aus den Allgemeinen Reisebedingungen**\n[-Mitwirkungspflicht des Reisenden][-Umbuchungen][-Rücktrittsmöglichkeiten des Reiseveranstalters][-Rücktritt und Stornokosten][-Beschränkung der Haftung][-Preiserhöhung][+Bezahlung][-Leistungsveränderungen ][-Datenschutz][-Abschluss des Vertrages][@example]\nAnzahlung und Restzahlung des Reisepreises erfolgen vor Reiseantritt ausschließlich an den Reiseveranstalter und nicht an den Reisevermittler bzw. das Reisebüro. Leistet der Kunde die Anzahlung und/oder die Restzahlung nicht zum vereinbarten Termin, so ist der Reiseveranstalter nach Mahnung des Kunden berechtigt, vom Reisevertrag zurückzutreten und ihm Rücktrittskosten in Rechnung zu stellen. \n\n(1) [-Mitwirkungspflicht des Reisenden][-Umbuchungen][-Rücktrittsmöglichkeiten des Reiseveranstalters][-Rücktritt und Stornokosten][-Beschränkung der Haftung][-Preiserhöhung][-Bezahlung][+Leistungsveränderungen ][-Datenschutz][-Abschluss des Vertrages]\nAnpassungen von Reiseleistungen seitens des Reiseveranstalters, die nach Vertragsabschluss aus unterschiedlichen Gründen notwendig werden können, sind nur gestattet, wenn die Änderungen die Gesamtleistung der Reise nicht erheblich beeinträchtigen. Der Reiseveranstalter ist verpflichtet, den Kunden über wesentliche Leistungsänderungen unverzüglich nach Kenntnis zu informieren und ihm den Änderungsgrund mitzuteilen. \n\n(2) [-Mitwirkungspflicht des Reisenden][-Umbuchungen][-Rücktrittsmöglichkeiten des Reiseveranstalters][-Rücktritt und Stornokosten][-Beschränkung der Haftung][+Preiserhöhung][-Bezahlung][-Leistungsveränderungen ][-Datenschutz][-Abschluss des Vertrages]\nDer Reiseveranstalter behält sich das Recht vor, den im Reisevertrag vereinbarten Preis im Falle einer nachträglichen Erhöhung der Beförderungskosten durch die ausführende Airline oder der Abgaben für Leistungen wie Hafen- oder Flughafengebühren anzupassen.\n\n(3) [-Mitwirkungspflicht des Reisenden][-Umbuchungen][-Rücktrittsmöglichkeiten des Reiseveranstalters][+Rücktritt und Stornokosten][-Beschränkung der Haftung][-Preiserhöhung][-Bezahlung][-Leistungsveränderungen ][-Datenschutz][-Abschluss des Vertrages]\nDer Kunde kann jederzeit vor Reisebeginn von der Reise zurücktreten. Der Rücktritt ist gegenüber dem Reiseveranstalter in schriftlicher Form zu erklären.\nDer Reiseveranstalter hat in diesem Fall Anspruch auf eine angemessene Entschädigung für seine Aufwendungen in Abhängigkeit vom Zeitpunkt des Rücktritts. Bei einer Absage bis 10 Tage vor Reiseantritt sind 80 Prozent des Reisepreises fällig.\n\n(4) [-Mitwirkungspflicht des Reisenden][+Umbuchungen][-Rücktrittsmöglichkeiten des Reiseveranstalters][-Rücktritt und Stornokosten][-Beschränkung der Haftung][-Preiserhöhung][-Bezahlung][-Leistungsveränderungen ][-Datenschutz][-Abschluss des Vertrages]\nNach Vertragsabschluss hat der Kunde in der Regel kein Recht auf Änderungen des Reisetermins, des Reiseziels, der Unterkunft oder der Beförderungsart. Werden die Änderungswünsche des Kunden dennoch berücksichtigt, kann der Reiseveranstalter zusätzliche Kosten geltend machen.\n\n(5) [+Mitwirkungspflicht des Reisenden][-Umbuchungen][-Rücktrittsmöglichkeiten des Reiseveranstalters][-Rücktritt und Stornokosten][-Beschränkung der Haftung][-Preiserhöhung][-Bezahlung][-Leistungsveränderungen ][-Datenschutz][-Abschluss des Vertrages]\nStellt der Kunde während der Reise Mängel fest, so kann er die Beseitigung der Mängel verlangen. Der Reisende ist aber verpflichtet, dem Reiseveranstalter die Mängel unverzüglich anzuzeigen. Erfolgt die Mängelanzeige am Urlaubsort nicht, hat der Reisende keinen Anspruch auf Minderung des Reisepreises.\n\n(6) [-Mitwirkungspflicht des Reisenden][-Umbuchungen][-Rücktrittsmöglichkeiten des Reiseveranstalters][-Rücktritt und Stornokosten][+Beschränkung der Haftung][-Preiserhöhung][-Bezahlung][-Leistungsveränderungen ][-Datenschutz][-Abschluss des Vertrages]\nReisende haben nur einen Anspruch auf Ausgleichszahlung für Schäden, wenn der Reiseveranstalter dafür allein verantwortlich ist. Mögliche darüber hinausgehende Ansprüche bei Fremdleistungen, zum Beispiel bei Flugverspätungen, übernimmt der Reiseveranstalter nicht.\n[@reference:Nach: Hurtigruten Online, Zugriff: 4.1.2019 https://www.hurtigruten.de/praktische-informationen/]",
+    "bit": {
+      "type": "cloze-and-multiple-choice-text",
+      "format": "bitmark--",
+      "body": "**◼︎ Auszug aus den Allgemeinen Reisebedingungen**\n{0}\nAnzahlung und Restzahlung des Reisepreises erfolgen vor Reiseantritt ausschließlich an den Reiseveranstalter und nicht an den Reisevermittler bzw. das Reisebüro. Leistet der Kunde die Anzahlung und/oder die Restzahlung nicht zum vereinbarten Termin, so ist der Reiseveranstalter nach Mahnung des Kunden berechtigt, vom Reisevertrag zurückzutreten und ihm Rücktrittskosten in Rechnung zu stellen. \n\n(1) {1}\nAnpassungen von Reiseleistungen seitens des Reiseveranstalters, die nach Vertragsabschluss aus unterschiedlichen Gründen notwendig werden können, sind nur gestattet, wenn die Änderungen die Gesamtleistung der Reise nicht erheblich beeinträchtigen. Der Reiseveranstalter ist verpflichtet, den Kunden über wesentliche Leistungsänderungen unverzüglich nach Kenntnis zu informieren und ihm den Änderungsgrund mitzuteilen. \n\n(2) {2}\nDer Reiseveranstalter behält sich das Recht vor, den im Reisevertrag vereinbarten Preis im Falle einer nachträglichen Erhöhung der Beförderungskosten durch die ausführende Airline oder der Abgaben für Leistungen wie Hafen- oder Flughafengebühren anzupassen.\n\n(3) {3}\nDer Kunde kann jederzeit vor Reisebeginn von der Reise zurücktreten. Der Rücktritt ist gegenüber dem Reiseveranstalter in schriftlicher Form zu erklären.\nDer Reiseveranstalter hat in diesem Fall Anspruch auf eine angemessene Entschädigung für seine Aufwendungen in Abhängigkeit vom Zeitpunkt des Rücktritts. Bei einer Absage bis 10 Tage vor Reiseantritt sind 80 Prozent des Reisepreises fällig.\n\n(4) {4}\nNach Vertragsabschluss hat der Kunde in der Regel kein Recht auf Änderungen des Reisetermins, des Reiseziels, der Unterkunft oder der Beförderungsart. Werden die Änderungswünsche des Kunden dennoch berücksichtigt, kann der Reiseveranstalter zusätzliche Kosten geltend machen.\n\n(5) {5}\nStellt der Kunde während der Reise Mängel fest, so kann er die Beseitigung der Mängel verlangen. Der Reisende ist aber verpflichtet, dem Reiseveranstalter die Mängel unverzüglich anzuzeigen. Erfolgt die Mängelanzeige am Urlaubsort nicht, hat der Reisende keinen Anspruch auf Minderung des Reisepreises.\n\n(6) {6}\nReisende haben nur einen Anspruch auf Ausgleichszahlung für Schäden, wenn der Reiseveranstalter dafür allein verantwortlich ist. Mögliche darüber hinausgehende Ansprüche bei Fremdleistungen, zum Beispiel bei Flugverspätungen, übernimmt der Reiseveranstalter nicht.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Mitwirkungspflicht des Reisenden",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Umbuchungen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Rücktrittsmöglichkeiten des Reiseveranstalters",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Rücktritt und Stornokosten",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Beschränkung der Haftung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Preiserhöhung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bezahlung",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Leistungsveränderungen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Datenschutz",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Abschluss des Vertrages",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Mitwirkungspflicht des Reisenden",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Umbuchungen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Rücktrittsmöglichkeiten des Reiseveranstalters",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Rücktritt und Stornokosten",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Beschränkung der Haftung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Preiserhöhung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bezahlung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Leistungsveränderungen",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Datenschutz",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Abschluss des Vertrages",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Mitwirkungspflicht des Reisenden",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Umbuchungen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Rücktrittsmöglichkeiten des Reiseveranstalters",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Rücktritt und Stornokosten",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Beschränkung der Haftung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Preiserhöhung",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Bezahlung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Leistungsveränderungen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Datenschutz",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Abschluss des Vertrages",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Mitwirkungspflicht des Reisenden",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Umbuchungen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Rücktrittsmöglichkeiten des Reiseveranstalters",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Rücktritt und Stornokosten",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Beschränkung der Haftung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Preiserhöhung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bezahlung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Leistungsveränderungen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Datenschutz",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Abschluss des Vertrages",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Mitwirkungspflicht des Reisenden",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Umbuchungen",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Rücktrittsmöglichkeiten des Reiseveranstalters",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Rücktritt und Stornokosten",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Beschränkung der Haftung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Preiserhöhung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bezahlung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Leistungsveränderungen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Datenschutz",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Abschluss des Vertrages",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Mitwirkungspflicht des Reisenden",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Umbuchungen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Rücktrittsmöglichkeiten des Reiseveranstalters",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Rücktritt und Stornokosten",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Beschränkung der Haftung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Preiserhöhung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bezahlung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Leistungsveränderungen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Datenschutz",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Abschluss des Vertrages",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Mitwirkungspflicht des Reisenden",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Umbuchungen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Rücktrittsmöglichkeiten des Reiseveranstalters",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Rücktritt und Stornokosten",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Beschränkung der Haftung",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Preiserhöhung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bezahlung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Leistungsveränderungen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Datenschutz",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Abschluss des Vertrages",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "A32a",
+      "instruction": "Reisebedingungen\n\nSie haben bei einem Reiseveranstalter eine Pauschalreise gebucht.\nLesen Sie die Allgemeinen Reisebedingungen und wählen Sie zu den Punkten 1 bis 6 die passenden Überschriften.",
+      "reference": [
+        "Nach: Hurtigruten Online, Zugriff: 4.1.2019 https://www.hurtigruten.de/praktische-informationen/"
+      ]
+    },
+    "example": ""
+  }
+]

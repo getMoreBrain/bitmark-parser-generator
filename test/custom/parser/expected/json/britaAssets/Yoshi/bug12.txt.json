@@ -1,0 +1,239 @@
+[
+  {
+    "bitmark": "[.interview]\n[%A2]\n[!Bilden Sie Fragen zu den vorgegebenen Antworten.]\n\n===\n◇ Ulrike Lipka.[@shortAnswer]\n[@example:Wie heißen Sie? Wie ist Ihr Name?]\n===\n[%1]In Berlin, Ewaldstraße 15. In Hamburg.[@shortAnswer]\n[$Wo wohnen Sie?]\n===\n[%2]In Hamburg.[@shortAnswer]\n[$Wo sind Sie geboren?]\n===\n[%3]Am 23. August 1975.[@shortAnswer]\n[$Wann Sind Sie geboren?]\n===\n[%4]Ja, ich bin Deutsche.[@shortAnswer]\n[$Sind Sie Deutsche?]\n===\n[%5]Ich war auf der Grundschule und dann auf dem Gymnasium. Dort habe ich mein Abitur gemacht.[@shortAnswer]\n[$Was für eine Schulausbildung haben Sie?]\n===\n[%6]Ich habe Journalistik studiert.[@shortAnswer]\n[$Haben Sie studiert?/Was haben Sie studiert?]\n===\n[%7]Ich bin jetzt Nachrichtenredakteurin.[@shortAnswer]\n[$Als was arbeiten Sie jetzt?/Was für eine Stelle haben Sie?/Was machen Sie jetzt beruflich?]\n===\n[%8]Beim Deutschlandradio Kultur.[@shortAnswer]\n[$Wo arbeiten Sie?]\n===\n[%9]Nein, ich bin geschieden.[@shortAnswer]\n[$Sind Sie verheiratet/ledig?]\n===\n[%10]Ja, ich habe eine Tochter.[@shortAnswer]\n[$Haben Sie Kinder?]\n===\n[%11]Ich lese gern Krimis und spiele Tischtennis. Englisch, Russisch und Französisch.[@shortAnswer]\n[$Was machen Sie in Ihrer Freizeit?/Was sind Ihre Hobbys?]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "A2",
+      "instruction": "Bilden Sie Fragen zu den vorgegebenen Antworten.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "◇ Ulrike Lipka.",
+          "instruction": "",
+          "hint": "",
+          "isExample": true,
+          "example": "Wie heißen Sie? Wie ist Ihr Name?",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "1",
+          "question": "In Berlin, Ewaldstraße 15. In Hamburg.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wo wohnen Sie?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "2",
+          "question": "In Hamburg.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wo sind Sie geboren?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "3",
+          "question": "Am 23. August 1975.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wann Sind Sie geboren?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "4",
+          "question": "Ja, ich bin Deutsche.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Sind Sie Deutsche?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "5",
+          "question": "Ich war auf der Grundschule und dann auf dem Gymnasium. Dort habe ich mein Abitur gemacht.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Was für eine Schulausbildung haben Sie?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "6",
+          "question": "Ich habe Journalistik studiert.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Haben Sie studiert?/Was haben Sie studiert?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "7",
+          "question": "Ich bin jetzt Nachrichtenredakteurin.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Als was arbeiten Sie jetzt?/Was für eine Stelle haben Sie?/Was machen Sie jetzt beruflich?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "8",
+          "question": "Beim Deutschlandradio Kultur.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wo arbeiten Sie?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "9",
+          "question": "Nein, ich bin geschieden.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Sind Sie verheiratet/ledig?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "10",
+          "question": "Ja, ich habe eine Tochter.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Haben Sie Kinder?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "11",
+          "question": "Ich lese gern Krimis und spiele Tischtennis. Englisch, Russisch und Französisch.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Was machen Sie in Ihrer Freizeit?/Was sind Ihre Hobbys?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[%A20 – Sätze mit ähnlicher Bedeutung]\n[!Formen Sie die Sätze so um, dass Sie die in Klammern angegebenen Wörter in der richtigen Form in den Satz einarbeiten. Arbeiten Sie zu zweit und vergleichen Sie im Anschluss Ihre Ergebnisse mit anderen Teilnehmern.]\n===\n◇ In Deutschland **kommen** auf jede Wohnung weniger als zwei Menschen. __(wohnen – durchschnittlich)__[@shortAnswer]\n[@example:In Deutschland wohnen in jeder Wohnung durchschnittlich weniger als zwei Menschen.]\n===\n[%1]Die meisten Deutschen **leben** nach wie vor **zur Miete**, nämlich 52 Prozent. __(mieten – Wohnung)__[@shortAnswer]\n[$Die meisten Deutschen mieten eine Wohnung, nämlich 52 Prozent.]\n===\n[%2]In der „Mieterstadt\" Berlin **liegt die Eigentümerquote** bei nur 14,8 Prozent. __(es – geben – Wohnungseigentümer)__[@shortAnswer]\n[$In der „Mieterstadt\" Berlin gibt es 14,8 Prozent Wohnungseigentümer.]\n===\n[%3]Die höchsten Mieten zahlt man in München mit durchschnittlich 10,25 Euro pro Quadratmeter, das **sind** 65 Prozent mehr als im Bundesdurchschnitt. __(liegt)__[@shortAnswer]\n[$Die höchsten Mieten zahlt man in München mit durchschnittlich 10,25 Euro pro Quadratmeter, das liegt 65 Prozent über dem Bundesdurchschnitt.]\n===\n[%4]In Hamburg **beträgt der Wohnungsleerstand** 1,6 Prozent. __(leer stehen – Wohnungen)__[@shortAnswer]\n[$In Hamburg stehen 1,6 Prozent der Wohnungen leer.]\n===\n[%5]In Deutschland **haben** die Menschen viel Platz: Die durchschnittliche Wohnung **ist** gut 90 Quadratmeter groß und hat 4,4 Zimmer. __(Verfügung – stehen, Größe – haben)__[@shortAnswer]\n[$In Deutschland steht den Menschen viel Platz zur Verfügung: Die durchschnittliche Wohnung hat eine Größe von gut 90 Quadratmetern und 4,4 Zimmer.]\n===\n[%6]Besonders häufig **sind so karg ausgestattete** Wohnungen in Ostdeutschland. __(verfügen – nicht – Bad oder WC)__[@shortAnswer]\n[$Wohnungen, die nicht über ein Bad oder WC verfügen, gibt es besonders häufig (häufiger) in Ostdeutschland.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "A20 – Sätze mit ähnlicher Bedeutung",
+      "instruction": "Formen Sie die Sätze so um, dass Sie die in Klammern angegebenen Wörter in der richtigen Form in den Satz einarbeiten. Arbeiten Sie zu zweit und vergleichen Sie im Anschluss Ihre Ergebnisse mit anderen Teilnehmern.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "◇ In Deutschland **kommen** auf jede Wohnung weniger als zwei Menschen. __(wohnen – durchschnittlich)__",
+          "instruction": "",
+          "hint": "",
+          "isExample": true,
+          "example": "In Deutschland wohnen in jeder Wohnung durchschnittlich weniger als zwei Menschen.",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "1",
+          "question": "Die meisten Deutschen **leben** nach wie vor **zur Miete**, nämlich 52 Prozent. __(mieten – Wohnung)__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Die meisten Deutschen mieten eine Wohnung, nämlich 52 Prozent.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "2",
+          "question": "In der „Mieterstadt\" Berlin **liegt die Eigentümerquote** bei nur 14,8 Prozent. __(es – geben – Wohnungseigentümer)__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "In der „Mieterstadt\" Berlin gibt es 14,8 Prozent Wohnungseigentümer.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "3",
+          "question": "Die höchsten Mieten zahlt man in München mit durchschnittlich 10,25 Euro pro Quadratmeter, das **sind** 65 Prozent mehr als im Bundesdurchschnitt. __(liegt)__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Die höchsten Mieten zahlt man in München mit durchschnittlich 10,25 Euro pro Quadratmeter, das liegt 65 Prozent über dem Bundesdurchschnitt.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "4",
+          "question": "In Hamburg **beträgt der Wohnungsleerstand** 1,6 Prozent. __(leer stehen – Wohnungen)__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "In Hamburg stehen 1,6 Prozent der Wohnungen leer.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "5",
+          "question": "In Deutschland **haben** die Menschen viel Platz: Die durchschnittliche Wohnung **ist** gut 90 Quadratmeter groß und hat 4,4 Zimmer. __(Verfügung – stehen, Größe – haben)__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "In Deutschland steht den Menschen viel Platz zur Verfügung: Die durchschnittliche Wohnung hat eine Größe von gut 90 Quadratmetern und 4,4 Zimmer.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "6",
+          "question": "Besonders häufig **sind so karg ausgestattete** Wohnungen in Ostdeutschland. __(verfügen – nicht – Bad oder WC)__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wohnungen, die nicht über ein Bad oder WC verfügen, gibt es besonders häufig (häufiger) in Ostdeutschland.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ]
+    }
+  }
+]

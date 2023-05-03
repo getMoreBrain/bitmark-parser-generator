@@ -1562,7 +1562,7 @@ __metadata:
     "@types/node": ^18.11.7
     "@typescript-eslint/eslint-plugin": ^5.41.0
     "@typescript-eslint/parser": ^5.41.0
-    bitmark-grammar: ^1.0.35
+    bitmark-grammar: 1.0.69
     esbuild: ^0.17.15
     esbuild-register: ^3.4.2
     eslint: ^8.26.0
@@ -2097,6 +2097,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/diff@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "@types/diff@npm:5.0.3"
+  checksum: d8a7d4de12f1aba0bd0c17b0b0d1e45c83824d3d6cc65763fbad371cd8315361a7e16fbae3f260a83bfdf30cebe1c876b42cec4518698055bc430fb09db1cbc8
+  languageName: node
+  linkType: hard
+
 "@types/eslint-plugin-prettier@npm:^3.1.0":
   version: 3.1.0
   resolution: "@types/eslint-plugin-prettier@npm:3.1.0"
@@ -2230,6 +2237,15 @@ __metadata:
   version: 2.7.2
   resolution: "@types/prettier@npm:2.7.2"
   checksum: b47d76a5252265f8d25dd2fe2a5a61dc43ba0e6a96ffdd00c594cb4fd74c1982c2e346497e3472805d97915407a09423804cc2110a0b8e1b22cffcab246479b7
+  languageName: node
+  linkType: hard
+
+"@types/ramda@npm:^0.29.0":
+  version: 0.29.1
+  resolution: "@types/ramda@npm:0.29.1"
+  dependencies:
+    types-ramda: ^0.29.2
+  checksum: e8473504d62aeb430345d20ef776209f2cc3a7b19e683f1c59130cb0a876556dd88a380bfde01ea64edc7daeac8dad838b7f6693850181039da83132356d78fb
   languageName: node
   linkType: hard
 
@@ -2947,12 +2963,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bitmark-grammar@npm:^1.0.35":
-  version: 1.0.35
-  resolution: "bitmark-grammar@npm:1.0.35"
+"bitmark-grammar@npm:1.0.69":
+  version: 1.0.69
+  resolution: "bitmark-grammar@npm:1.0.69"
   dependencies:
+    "@types/diff": ^5.0.3
+    "@types/ramda": ^0.29.0
     antlr4ts: ^0.5.0-alpha.4
-    colors: ^1.4.0
     core-util-is: ^1.0.3
     emoji-regex: ^7.0.3
     fs: 0.0.1-security
@@ -2962,7 +2979,7 @@ __metadata:
     ramda: ^0.28.0
     safe-buffer: ^5.2.1
     utf8-length: 0.0.1
-  checksum: 1593e5b68d6d01fc9946a62ff5864e0e6f7a1e90113bf835bb60e121c1910e0b826edbc3eae0e61258d286f9d5f17644891bc64183260d4f08b663cfcf09b7be
+  checksum: 5d68eb671b71e4bc223c0ac85a6c22cd2294c485b920cf24d405aa19106382995aaecbc902c3ccf57fef0e3507c2c3a6cee3827cf8cd80d274da2259579e6b9e
   languageName: node
   linkType: hard
 
@@ -3393,13 +3410,6 @@ __metadata:
   version: 2.0.19
   resolution: "colorette@npm:2.0.19"
   checksum: 888cf5493f781e5fcf54ce4d49e9d7d698f96ea2b2ef67906834bb319a392c667f9ec69f4a10e268d2946d13a9503d2d19b3abaaaf174e3451bfe91fb9d82427
-  languageName: node
-  linkType: hard
-
-"colors@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "colors@npm:1.4.0"
-  checksum: 98aa2c2418ad87dedf25d781be69dc5fc5908e279d9d30c34d8b702e586a0474605b3a189511482b9d5ed0d20c867515d22749537f7bc546256c6014f3ebdcec
   languageName: node
   linkType: hard
 
@@ -7613,6 +7623,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-toolbelt@npm:^9.6.0":
+  version: 9.6.0
+  resolution: "ts-toolbelt@npm:9.6.0"
+  checksum: 9f35fd95d895a5d32ea9fd2e532a695b0bae6cbff6832b77292efa188a0ed1ed6e54f63f74a8920390f3d909a7a3adb20a144686372a8e78b420246a9bd3d58a
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^1.8.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
@@ -7699,6 +7716,15 @@ __metadata:
   bin:
     typedoc: bin/typedoc
   checksum: 40eb4e207aac1b734e09400cf03f543642cc7b11000895198dd5a0d3166315759ccf4ac30a2915153597c5c186101c72bac2f1fc12b428184a9274d3a0e44c5e
+  languageName: node
+  linkType: hard
+
+"types-ramda@npm:^0.29.2":
+  version: 0.29.2
+  resolution: "types-ramda@npm:0.29.2"
+  dependencies:
+    ts-toolbelt: ^9.6.0
+  checksum: 0b394d4be7d7f110eff2b3c13fe1a648dc14ac22da2acb5575f6621230d43e6bb1067d5a61b9793ba122efe46cda85b9e5eff7bb23d82ffa436e1f24140fff79
   languageName: node
   linkType: hard
 

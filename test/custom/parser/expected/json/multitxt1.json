@@ -1,0 +1,554 @@
+[
+  {
+    "bitmark": "[.multiple-choice-text]\n[%A18a]\n[!Wörtern auf der Spur\n\nErgänzen Sie die bestimmten Artikel.]\n\n[+der][-die][-das] Schuss \n[-der][-die][+das] Verbrechen\n[-der][+die][-das] Spur\n[-der][+die][-das] Aufklärung\n\n[-der][+die][-das] Polizei \n[+der][-die][-das] Beweis \n[+der][-die][-das] Mord \n[-der][+die][-das] Tat\n\n[-der][-die][+das] Blaulicht\n[+der][-die][-das] Totschlag\n[-der][-die][+das] Geständnis\n[-der][-die][+das] Ergebnis\n\n[-der][+die][-das] Spurensicherung\n[-der][+die][-das] Mordkommission\n[-der][+die][-das] DNA-Analyse\n[-der][+die][-das] Spannung\n\n[+der][-die][-das] Ermittler\n[-der][-die][+das] Gefängnis\n[+der][-die][-das] Tatort\n[-der][+die][-das] Realität",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "{0} Schuss \n{1} Verbrechen\n{2} Spur\n{3} Aufklärung\n\n{4} Polizei \n{5} Beweis \n{6} Mord \n{7} Tat\n\n{8} Blaulicht\n{9} Totschlag\n{10} Geständnis\n{11} Ergebnis\n\n{12} Spurensicherung\n{13} Mordkommission\n{14} DNA-Analyse\n{15} Spannung\n\n{16} Ermittler\n{17} Gefängnis\n{18} Tatort\n{19} Realität",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{15}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{16}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{17}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{18}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{19}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "A18a",
+      "instruction": "Wörtern auf der Spur\n\nErgänzen Sie die bestimmten Artikel."
+    }
+  }
+]

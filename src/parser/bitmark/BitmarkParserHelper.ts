@@ -846,7 +846,7 @@ class BitmarkParserHelper {
     let pairValues: string[] = [];
     let keyAudio: AudioResource | undefined = undefined;
     let keyImage: ImageResource | undefined = undefined;
-    let example: string | boolean | undefined = undefined;
+    let extraTags = {};
 
     for (const card of cardSet.cards) {
       forKeys = undefined;
@@ -855,7 +855,7 @@ class BitmarkParserHelper {
       keyAudio = undefined;
       keyImage = undefined;
       sideIdx = 0;
-      example = undefined;
+      extraTags = {};
 
       for (const side of card.sides) {
         for (const rawContent of side.variants) {
@@ -867,50 +867,53 @@ class BitmarkParserHelper {
 
           if (DEBUG_CARD_PARSED) this.debugPrint('parsedCardContent (match heading / pairs)', content);
 
-          const tags = this.typeKeyValueProcessor(bitType, content, [
+          const { cardBody, title, resource, example, ...tags } = this.typeKeyValueProcessor(bitType, content, [
             TypeKey.CardText,
             TypeKey.Title,
             TypeKey.Property,
-            // TypeKey.ItemLead,
-            // TypeKey.Instruction,
-            // TypeKey.Hint,
+            TypeKey.ItemLead,
+            TypeKey.Instruction,
+            TypeKey.Hint,
             TypeKey.Resource,
           ]);
 
           if (DEBUG_CARD_TAGS) this.debugPrint('card tags (match heading / pairs)', tags);
 
           // Get the 'heading' which is the [#title] at level 1
-          const heading = tags.title && tags.title[1];
+          const heading = title && title[1];
 
           if (sideIdx === 0) {
             // First side
             if (heading != null) {
               forKeys = heading;
-            } else if (tags.resource) {
+            } else if (resource) {
               // console.log('WARNING: Match card has resource on first side', tags.resource);
-              if (tags.resource.type === ResourceType.audio) {
-                keyAudio = tags.resource as AudioResource;
-              } else if (tags.resource.type === ResourceType.image) {
-                keyImage = tags.resource as ImageResource;
+              if (resource.type === ResourceType.audio) {
+                keyAudio = resource as AudioResource;
+              } else if (resource.type === ResourceType.image) {
+                keyImage = resource as ImageResource;
               }
             } else {
               // If not a heading or resource, it is a pair
-              pairKey = tags.cardBody;
+              pairKey = cardBody;
             }
           } else {
             // Subsequent sides
             if (heading != null) {
               forValues.push(heading);
-            } else if (tags.title == null) {
+            } else if (title == null) {
               // If not a heading, it is a pair
-              pairValues.push(tags.cardBody ?? '');
+              pairValues.push(cardBody ?? '');
             }
           }
 
-          // Example tag
-          if (tags.example) {
-            example = tags.example ?? true;
-          }
+          // Extra tags
+          extraTags = {
+            ...extraTags,
+            ...tags,
+            example: example ? true : false,
+            isCaseSensitive: true,
+          };
         }
         sideIdx++;
       }
@@ -926,8 +929,7 @@ class BitmarkParserHelper {
           keyAudio,
           keyImage,
           values: pairValues,
-          example,
-          isCaseSensitive: true,
+          ...extraTags,
         });
         pairs.push(pair);
       }
@@ -1194,11 +1196,15 @@ class BitmarkParserHelper {
 
     // Helpers for building the properties
     const addProperty = (obj: any, key: string, value: unknown, single?: boolean) => {
-      if (!single && Object.prototype.hasOwnProperty.call(obj, key)) {
-        const originalValue = obj[key];
-        obj[key] = [originalValue, value];
-      } else {
+      if (single) {
         obj[key] = value;
+      } else {
+        if (!single && Object.prototype.hasOwnProperty.call(obj, key)) {
+          const originalValue = obj[key];
+          obj[key] = [...originalValue, value];
+        } else {
+          obj[key] = [value];
+        }
       }
     };
 
@@ -1272,6 +1278,7 @@ class BitmarkParserHelper {
               case PropertyKey.date:
               case PropertyKey.location:
               case PropertyKey.theme:
+              case PropertyKey.reference:
               case PropertyKey.action:
               case PropertyKey.thumbImage:
               case PropertyKey.duration:

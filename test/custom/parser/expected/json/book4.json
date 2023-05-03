@@ -1,0 +1,18 @@
+[
+  {
+    "bitmark": "[.book]\n[^.book]\n[^Kompatibilitätsmodus  ]\n[#Microsoft PowerPoint - CFP - Folien [^Kompatibilitätsmodus  ]]\n[@authors.name:ami]\nIch habe die __(deutsche)__ Staatsbürgerschaft. Ich bin __(Deutsche[r]). __",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "[^.book]\n[^Kompatibilitätsmodus  ]\n\n\nIch habe die __(deutsche)__ Staatsbürgerschaft. Ich bin __(Deutsche[r]). __",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "title": "Microsoft PowerPoint - CFP - Folien [^Kompatibilitätsmodus  ]",
+      "authors.name": [
+        "ami"
+      ]
+    }
+  }
+]

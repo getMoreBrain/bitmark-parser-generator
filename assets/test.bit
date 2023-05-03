@@ -1,30 +1,16 @@
-[.true-false:bitmark--]
-|| The [%items] are interpreted by the ANTLR parser as being at the top level  ||
-|| The [%items] are ignored by the PEG parser ||
-|| The issue is the [%items] should be chained AFTER the T/F ||
-[@id:245958]
-[%][%Selbsttest Berufspraxis F.2]
-[@labelTrue:Richtig][@labelFalse:Falsch]
-===
-[%1]
-[@example]
-[-Gemeinsam mit dem Klienten plant die FaGe die Durchführung und Evaluation der Pflegeinterventionen.]
-===
-[%2]
-[+Damit die Klientin mit einer Schizophrenie ihr verändertes Erleben mit der Umwelt vergleichen kann, ist es wichtig, im Umgang klar, verlässlich und verbindlich zu sein.]
-===
-[%3]
-[+Bei Menschen mit einer Borderline-Störung ist ein offener Austausch der Mitarbeitenden im Team wichtig, da oft «Spaltungsversuche» von den Klienten unternommen werden.]
-===
-[%4]
-[-Klientinnen, die in einer manischen Phase Dinge tun, die anderen peinlich sind (z.B. in der Öffentlichkeit ausziehen), wissen davon in der depressiven Ohase nichts mehr.]
-===
-[%5]
-[+Wichtige pflegerische Massnahmen bei Klienten mit bipolarer Störung sind der Schutz vor Suizidalität und das Kommunizieren mit Ich-Botschaften.]
-===
-[%6]
-[-Ist man gerade anwesend, während die Klientin eine Panikattacke erlebt, ist es wichtig, Ruhe zu bewahren und Hilfe zu holen.]
-===
-[%99]
-[+Unter Skills versteht man Fähigkeiten und Bewältigungsstrategien, um aufkommende negative Gefühle zu regulieren und Spannungen abzubauen.][%7][@example]
-===
+[.assignment:bitmark--&image]
+[%B6]
+[!Lesen Sie den folgenden Text.]
+
+[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/lippe-detmold.jpg]
+**Eine starke Frau: Pauline von Lippe-Detmold**
+
+Fürstin Pauline zur Lippe, 1769 in Ballenstedt geboren, gilt heute als Musterbeispiel für jene Regenten von kleinen Herrschaftsgebieten, in die das alte deutsche Reich zerfallen war. Pauline führte ihr kleines Fürstentum so mustergültig, dass die Bewohner bis zu den Weltkriegen in gutem bürgerlichen Wohlstand leben konnten. Ihr Vater, Fürst von Anhalt-Bernburg, erzog sie auf gleiche Weise wie ihren Bruder. Sie erhielt Unterricht in Staatswissenschaften und verbrachte den ganzen Tag am Schreibtisch.
+
+Später heiratete sie den Fürsten Leopold zur Lippe, der aber schon im Jahre 1802 starb. Von da an musste Pauline die Regentschaft für ihren unmündigen Sohn übernehmen. Schon bald bemerkte sie das Elend und die große Armut, die im Lande herrschten. Sie las Bücher über moderne Sozialfürsorge und erkannte, dass die Armen vor allem Arbeit brauchten. Sie errichtete Berufsschulen für Kinder. Dort erlernten sie ein kleines Handwerk und erhielten dafür ein bisschen Geld. Dieser Lohn half den Kindern später beim Aufbau einer eigenen Existenz.
+
+Pauline ließ Listen von Armen und Kranken anfertigen und wer ganz hilfebedürftig war, wurde kostenlos in Krankenstuben versorgt. Zur Betreuung von Wahnsinnigen und Gemütskranken ließ sie ein Schloss umbauen und Kuhställe einrichten, in denen die Kranken Käse und Butter herstellen konnten. Nach der Gründung des ersten deutschen Kindergartens in Detmold (1802) veranstaltete sie ein Seminar für Frauen, um Erzieherinnen für weitere Kindergärten auszubilden. Pauline legte Vorratslager mit Getreide an, was für Zeiten der Hungersnot dringend notwendig war. Sie sorgte für neue Straßenkarten und verkürzte die Wehrpflicht für junge Männer auf fünf Jahre. In vielen Dingen, z. B. in der Fürsorge für Geisteskranke, war Pauline ihrer Zeit so weit voraus, dass sie auf Unverständnis bei Teilen der Bevölkerung und der eigenen Familie stieß. Sie starb 1820 völlig verarmt in Detmold.
+
+Bei der hastigen Beerdigung folgten nur wenige ihrem Sarg, nicht einmal ihre eigenen Kinder. Paulines wohltätige Einrichtungen aber gibt es bis heute und im Volk ist sie dafür unvergessen.
+
+[@reference: Eine starke Frau. Neue Ruhr Zeitung/Neue Rhein Zeitung (NRZ), 18.2.2001 (Marlis Haase)]

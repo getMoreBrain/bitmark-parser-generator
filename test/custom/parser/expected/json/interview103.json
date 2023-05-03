@@ -1,0 +1,173 @@
+[
+  {
+    "bitmark": "[.interview]\n[%A9c]\n[!Textarbeit\n\nKomposita: Was passt zusammen?\nOrdnen Sie zu. Nennen Sie auch den Artikel.]\n\n-träger -streitigkeiten -redaktion -sendung -macher -mann -versuch -auswahl -wert -thema\n\n===\nWiedererkennungs-[@shortAnswer]\n[$der Wiedererkennungswert]\n===\nNachrichten-[@shortAnswer]\n[$die Nachrichtenredaktion, die Nachrichtensendung, die Nachrichtenmacher, die Nachrichtenauswahl]\n===\nErklärungs-[@shortAnswer]\n[$der Erklärungsversuch]\n===\nNobelpreis-[@shortAnswer]\n[$der Nobelpreisträger]\n===\nKamera-[@shortAnswer]\n[$der Kameramann]\n===\nGrenz-[@shortAnswer]\n[$die Grenzstreitigkeiten (Pl.)]\n===\nThemen-[@shortAnswer]\n[$die Themenauswahl]\n===\nGesprächs-[@shortAnswer]\n[$das Gesprächsthema]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "A9c",
+      "instruction": "Textarbeit\n\nKomposita: Was passt zusammen?\nOrdnen Sie zu. Nennen Sie auch den Artikel.",
+      "body": "-träger -streitigkeiten -redaktion -sendung -macher -mann -versuch -auswahl -wert -thema",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Wiedererkennungs-",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "der Wiedererkennungswert",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Nachrichten-",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "die Nachrichtenredaktion, die Nachrichtensendung, die Nachrichtenmacher, die Nachrichtenauswahl",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Erklärungs-",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "der Erklärungsversuch",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Nobelpreis-",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "der Nobelpreisträger",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Kamera-",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "der Kameramann",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Grenz-",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "die Grenzstreitigkeiten (Pl.)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Themen-",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "die Themenauswahl",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Gesprächs-",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "das Gesprächsthema",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[%A10]\n[!Erklären Sie die unterstrichenen Ausdrücke mit eigenen Worten.]\n===\n[%1] Die Antwort __scheint auf der Hand zu liegen.__[@shortAnswer]\n[$ist naheliegend]\n===\n[%2] Kuriosität: Das Ereignis sollte __von der Norm abweichen__.[@shortAnswer]\n[$etwas Besonderes sein/nicht normal/alltäglich/gewöhnlich sein]\n===\n[%3] Die Nachrichtenmacher __kümmern sich kaum um__ diese wissenschaftlichen Erklärungsversuche.[@shortAnswer]\n[$interessieren sich nicht für]\n===\n[%4] __die Vorgehensweise__ bei der Themenauswahl[@shortAnswer]\n[$der Ablauf/die Prozedur]\n===\n[%5] Neuigkeiten __brauchen einen Wiedererkennungswert__.[@shortAnswer]\n[$müssen etwas beinhalten, was der Zuschauer schon kennt/was schon bekannt ist]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "A10",
+      "instruction": "Erklären Sie die unterstrichenen Ausdrücke mit eigenen Worten.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "1",
+          "question": "Die Antwort __scheint auf der Hand zu liegen.__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "ist naheliegend",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "2",
+          "question": "Kuriosität: Das Ereignis sollte __von der Norm abweichen__.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "etwas Besonderes sein/nicht normal/alltäglich/gewöhnlich sein",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "3",
+          "question": "Die Nachrichtenmacher __kümmern sich kaum um__ diese wissenschaftlichen Erklärungsversuche.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "interessieren sich nicht für",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "4",
+          "question": "__die Vorgehensweise__ bei der Themenauswahl",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "der Ablauf/die Prozedur",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "5",
+          "question": "Neuigkeiten __brauchen einen Wiedererkennungswert__.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "müssen etwas beinhalten, was der Zuschauer schon kennt/was schon bekannt ist",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ]
+    }
+  }
+]

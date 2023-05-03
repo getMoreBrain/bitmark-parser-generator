@@ -1,0 +1,73 @@
+[
+  {
+    "bitmark": "[.essay&article-attachment]\n[!Fassen Sie den Text kurz mit eigenen Worten zusammen.]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Fassen Sie den Text kurz mit eigenen Worten zusammen.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '-attachment'",
+        "line": 1,
+        "column": 15,
+        "errorLine": "[.essay&article-attachment]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article-attachment]\n**Erfolg um jeden Preis**\n\nImmer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.\n\n[&image::http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg]\n\nWas sind dagegen ein paar anabole Steroide ['anabole Steroide][*synthetisch hergestellte Mittel zur Leistungssteigerung]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Erfolg um jeden Preis**\n\nImmer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.\n\nhttp://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg]\n\nWas sind dagegen ein paar anabole Steroide ['anabole Steroide][*synthetisch hergestellte Mittel zur Leistungssteigerung]"
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": ":",
+          "src": ":"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '-attachment'",
+        "line": 1,
+        "column": 9,
+        "errorLine": "[.article-attachment]"
+      },
+      {
+        "message": "Rule violation around '::'",
+        "line": 6,
+        "column": 7,
+        "errorLine": "[&image::http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 6,
+        "column": 73,
+        "errorLine": "[&image::http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg]"
+      },
+      {
+        "message": "Unexpected input '[*'",
+        "line": 8,
+        "column": 62,
+        "errorLine": "Was sind dagegen ein paar anabole Steroide ['anabole Steroide][*synthetisch hergestellte Mittel zur Leistungssteigerung]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 8,
+        "column": 119,
+        "errorLine": "Was sind dagegen ein paar anabole Steroide ['anabole Steroide][*synthetisch hergestellte Mittel zur Leistungssteigerung]"
+      }
+    ]
+  }
+]

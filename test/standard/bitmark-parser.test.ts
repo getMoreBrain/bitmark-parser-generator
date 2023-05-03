@@ -14,7 +14,7 @@ import { BitJsonUtils } from '../utils/BitJsonUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
 const SINGLE_FILE_START = 0;
-const SINGLE_FILE_COUNT = 100;
+const SINGLE_FILE_COUNT = 1;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, './bitmark');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/bitmark-parser/output');

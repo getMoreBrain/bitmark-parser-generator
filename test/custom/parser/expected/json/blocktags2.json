@@ -1,0 +1,55 @@
+[
+  {
+    "bitmark": "[.article]\n[!shows the sample block tags]\n??This is the optional title of the help text??\n!!This is the title of a highlighted text block!!\n<< This is the optional title of the remark <<\n\n>>This is the optional title of the note\nThis is a note. Click icon (and the optional title) to display the note.\n>>\n\n<<This is the optional title of the remark\nThis is a remark.\n<<\n\n??This is the optional title of the help text\nThis is the help text. User needs to click the (?) button (or optional title) to show the help text.\n??\n\n!!This is the title of a highlighted text block\nThis is the text of it.\n!!\n\n!!This is the title of a highlighted text block in red\nThis is the text of it.\n(red)!!",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "??This is the optional title of the help text??\n!!This is the title of a highlighted text block!!\n<< This is the optional title of the remark <<\n\n>>This is the optional title of the note\nThis is a note. Click icon (and the optional title) to display the note.\n>>\n\n<<This is the optional title of the remark\nThis is a remark.\n<<\n\n??This is the optional title of the help text\nThis is the help text. User needs to click the (?) button (or optional title) to show the help text.\n??\n\n!!This is the title of a highlighted text block\nThis is the text of it.\n!!\n\n!!This is the title of a highlighted text block in red\nThis is the text of it.\n(red)!!",
+      "instruction": "shows the sample block tags"
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<'",
+        "line": 5,
+        "column": 1,
+        "errorLine": "<< This is the optional title of the remark <<"
+      },
+      {
+        "message": "Unexpected input '<<'",
+        "line": 5,
+        "column": 45,
+        "errorLine": "<< This is the optional title of the remark <<"
+      },
+      {
+        "message": "Unexpected input '<'",
+        "line": 5,
+        "column": 45,
+        "errorLine": "<< This is the optional title of the remark <<"
+      },
+      {
+        "message": "Unexpected input '>'",
+        "line": 7,
+        "column": 1,
+        "errorLine": ">>This is the optional title of the note"
+      },
+      {
+        "message": "Unexpected input '>'",
+        "line": 9,
+        "column": 1,
+        "errorLine": ">>"
+      },
+      {
+        "message": "Unexpected input '<'",
+        "line": 11,
+        "column": 1,
+        "errorLine": "<<This is the optional title of the remark"
+      },
+      {
+        "message": "Unexpected input '<'",
+        "line": 13,
+        "column": 1,
+        "errorLine": "<<"
+      }
+    ]
+  }
+]

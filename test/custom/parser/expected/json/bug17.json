@@ -1,0 +1,37 @@
+[
+  {
+    "bitmark": "[.essay:bitmark++]\n[%A11a – Schriftlicher Ausdruck]\n[! Brief an eine Zeitung\n\nSchreiben Sie eine Reaktion auf diesen Artikel an die Zeitung (ungefähr 180 Wörter).]\n\nSagen Sie,\n*warum Sie schreiben\n*ob Schüler in Ihrem Heimatland eine Schuluniform tragen\n*welche Vorteile oder Nachteile das Tragen einer Schuluniform Ihrer Meinung nach hat.\n\n::remark::Schulkleidung statt Markenwahn\nSchüler in Uniform? Bayerns Ministerpräsident, die Bundesbildungsministerin und die Bundesjustizministerin sprachen sich für die Schuluniform aus. Die Bildungsministerin sagte gestern dazu, dass das Tragen einer Schuluniform zu begrüßen ist, wenn einheitliche Schulkleidung zur Identifizierung mit der Schule beiträgt und Symbol einer Gemeinschaft aller Schüler ist. „Falls Schulkleidung darüber hinaus dem verbreiteten Markenwahn entgegenwirkt, umso besser.“\n::\n\n||Bild ergänzen||",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark++",
+      "instruction": "Brief an eine Zeitung\n\nSchreiben Sie eine Reaktion auf diesen Artikel an die Zeitung (ungefähr 180 Wörter).",
+      "partialAnswer": "",
+      "body": "Sagen Sie,\n*warum Sie schreiben\n*ob Schüler in Ihrem Heimatland eine Schuluniform tragen\n*welche Vorteile oder Nachteile das Tragen einer Schuluniform Ihrer Meinung nach hat.\n\n::remark::Schulkleidung statt Markenwahn\nSchüler in Uniform? Bayerns Ministerpräsident, die Bundesbildungsministerin und die Bundesjustizministerin sprachen sich für die Schuluniform aus. Die Bildungsministerin sagte gestern dazu, dass das Tragen einer Schuluniform zu begrüßen ist, wenn einheitliche Schulkleidung zur Identifizierung mit der Schule beiträgt und Symbol einer Gemeinschaft aller Schüler ist. „Falls Schulkleidung darüber hinaus dem verbreiteten Markenwahn entgegenwirkt, umso besser.“\n::",
+      "item": "A11a – Schriftlicher Ausdruck",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark++]\n[%A2b]\n[! Strukturierung eines Vortrages\n\nEine Vertreterin oder ein Vertreter der Gruppe hält den Vortrag im Plenum.]\n\nErarbeiten Sie zunächst in Zweier- oder Dreiergruppen eine Struktur für den Vortrag. Nutzen Sie dazu unter anderem die angegebenen Redemittel. Ergänzen Sie dann inhaltliche Stichpunkte.\n\nDann soll eine Vertreterin oder ein Vertreter der Gruppe den Vortrag im Plenum halten.\n::remark::Einleitung\n* Ich möchte heute über ... sprechen.\n* Das Thema meines heutigen Vortrages ist ...\n* Ich interessiere mich für das Thema .../beschäftige mich mit dem Thema ... schon sehr lange.\n::\n\n::remark:Hauptteil::\n* Schon seit einigen Jahren .../Wenn man sich die Entwicklung genauer ansieht, muss man feststellen, ...\n* Studien haben bewiesen, .../Experten weisen immer wieder darauf hin, ...\n* Meiner Meinung nach .../Ich bin der Ansicht, dass ...\n* Ich habe die Erfahrung gemacht, ...\n::\n\n::remark::Schluss\n* Das erfordert ein Umdenken.\n* Wir sollten .../ Ich kann nur empfehlen, ...\n* Abschließend möchte ich noch betonen, ...\n::",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "Erarbeiten Sie zunächst in Zweier- oder Dreiergruppen eine Struktur für den Vortrag. Nutzen Sie dazu unter anderem die angegebenen Redemittel. Ergänzen Sie dann inhaltliche Stichpunkte.\n\nDann soll eine Vertreterin oder ein Vertreter der Gruppe den Vortrag im Plenum halten.\n::remark::Einleitung\n* Ich möchte heute über ... sprechen.\n* Das Thema meines heutigen Vortrages ist ...\n* Ich interessiere mich für das Thema .../beschäftige mich mit dem Thema ... schon sehr lange.\n::\n\n::remark:Hauptteil::\n* Schon seit einigen Jahren .../Wenn man sich die Entwicklung genauer ansieht, muss man feststellen, ...\n* Studien haben bewiesen, .../Experten weisen immer wieder darauf hin, ...\n* Meiner Meinung nach .../Ich bin der Ansicht, dass ...\n* Ich habe die Erfahrung gemacht, ...\n::\n\n::remark::Schluss\n* Das erfordert ein Umdenken.\n* Wir sollten .../ Ich kann nur empfehlen, ...\n* Abschließend möchte ich noch betonen, ...\n::",
+      "item": "A2b",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Strukturierung eines Vortrages\n\nEine Vertreterin oder ein Vertreter der Gruppe hält den Vortrag im Plenum."
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n**Relativsätze mit lokalen Präpositionen**\n::remark::\n__Präpositionen + Relativpronomen__\nDas Haus, **in dem** ich wohne, wird renoviert.\nDie Stadt, **in die** ich umgezogen bin, gefällt mir gut. \nDie Stadt, **aus der** ich komme, war mir zu hektisch.\n::\noder\n::remark::\n__wo/wohin/woher __\nDas Haus, **wo** ich wohne, wird renoviert.\nDie Stadt, **wohin** ich umgezogen bin, gefällt mir gut.\nDie Stadt, **woher** ich komme, war mir zu hektisch.\n::\nNach Städte- und Ländernamen steht nur wo oder __wohin/woher__: Leipzig, **wohin** ich umgezogen bin, gefällt mir gut.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Relativsätze mit lokalen Präpositionen**\n::remark::\n__Präpositionen + Relativpronomen__\nDas Haus, **in dem** ich wohne, wird renoviert.\nDie Stadt, **in die** ich umgezogen bin, gefällt mir gut. \nDie Stadt, **aus der** ich komme, war mir zu hektisch.\n::\noder\n::remark::\n__wo/wohin/woher __\nDas Haus, **wo** ich wohne, wird renoviert.\nDie Stadt, **wohin** ich umgezogen bin, gefällt mir gut.\nDie Stadt, **woher** ich komme, war mir zu hektisch.\n::\nNach Städte- und Ländernamen steht nur wo oder __wohin/woher__: Leipzig, **wohin** ich umgezogen bin, gefällt mir gut."
+    }
+  }
+]

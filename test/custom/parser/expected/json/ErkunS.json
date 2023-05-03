@@ -1,0 +1,59 @@
+[
+  {
+    "bitmark": "[.match:bitmark--]\n[%A3a]\n[!Fragen Sie.\nBilden Sie aus den Wortreihen Fragen im Präsens oder Präteritum.]\n===\n[%0] ◇ Sie – historische Romane – mögen __(Präsens)__\n==\nMögen Sie historische Romane?[@example]\n===\n[%10] ◇ wollen – werden – was – früher – Sie __(Präteritum)__\n==\nWas wollten Sie früher werden?[@example]\n===\n[%1] warum – Deutsch lernen – Sie – wollen [@longAnswer]\n==\nWarum wollen Sie Deutsch lernen?\n===\n[%2] möchten – wohin – fahren – Sie – im nächsten Urlaub __(Präsens)__\n==\nWohin möchten Sie im nächsten Urlaub fahren?\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "A3a",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "◇ Sie – historische Romane – mögen __(Präsens)__",
+          "values": ["Mögen Sie historische Romane?"],
+          "item": "0",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "◇ wollen – werden – was – früher – Sie __(Präteritum)__",
+          "values": ["Was wollten Sie früher werden?"],
+          "item": "10",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "warum – Deutsch lernen – Sie – wollen",
+          "values": ["Warum wollen Sie Deutsch lernen?"],
+          "item": "1",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "möchten – wohin – fahren – Sie – im nächsten Urlaub __(Präsens)__",
+          "values": ["Wohin möchten Sie im nächsten Urlaub fahren?"],
+          "item": "2",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "instruction": "Fragen Sie.\nBilden Sie aus den Wortreihen Fragen im Präsens oder Präteritum."
+    }
+  }
+]

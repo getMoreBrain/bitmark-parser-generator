@@ -1,0 +1,127 @@
+[
+  {
+    "bitmark": "[.multiple-response]\n[!What colors can animals have in Switzerland?]\n===\n[%1][!What colours can cows have in Switzerland?]\n[+brown][%a10]\n[+purple, but only in chocolate ads][%a20]\n[-blue][%a30]\n[-green][%a40]\n===\n[%2][!What colours can cats have in Switzerland?]\n[+brown][%50]\n[+black][%60]\n[+blue][%70]\n[-green][%80]\n===\n◇ [!Die Freizeitaktivitäten der Deutschen sind sehr unterschiedlich.]\n[+purple][%90][!inst ####]\n[+pink][%100][!inst #####]\n[+yellow][%110][!inst ######]\n[-beige][%120][!inst #######]\n===",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "What colors can animals have in Switzerland?",
+      "body": "◇",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "1",
+          "instruction": "What colours can cows have in Switzerland?",
+          "responses": [
+            {
+              "response": "brown",
+              "item": "a10",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "purple, but only in chocolate ads",
+              "item": "a20",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "blue",
+              "item": "a30",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "green",
+              "item": "a40",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "2",
+          "instruction": "What colours can cats have in Switzerland?",
+          "responses": [
+            {
+              "response": "brown",
+              "item": "50",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "black",
+              "item": "60",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "blue",
+              "item": "70",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "green",
+              "item": "80",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Die Freizeitaktivitäten der Deutschen sind sehr unterschiedlich.",
+          "responses": [
+            {
+              "response": "purple",
+              "item": "90",
+              "isCorrect": true,
+              "instruction": "inst ####",
+              "hint": ""
+            },
+            {
+              "response": "pink",
+              "item": "100",
+              "isCorrect": true,
+              "instruction": "inst #####",
+              "hint": ""
+            },
+            {
+              "response": "yellow",
+              "item": "110",
+              "isCorrect": true,
+              "instruction": "inst ######",
+              "hint": ""
+            },
+            {
+              "response": "beige",
+              "item": "120",
+              "isCorrect": false,
+              "instruction": "inst #######",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ]
+    }
+  }
+]

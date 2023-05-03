@@ -1,0 +1,53 @@
+[
+  {
+    "bitmark": "[.multiple-choice:bitmark--]\n[%Aufgabe 10]\n (1 Antwort)\t2 Pkt.\n[!Welcher Dienst ermöglich die automatische Vergabe von IP-Adressen?]\n[-A.\tDNS]\n[-B.\tNAT]\n[-C.\tRAID]\n[+D.\tDHCP]",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "Aufgabe 10",
+      "instruction": "Welcher Dienst ermöglich die automatische Vergabe von IP-Adressen?",
+      "body": "(1 Antwort)\t2 Pkt.",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "A.\tDNS",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "B.\tNAT",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "C.\tRAID",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "D.\tDHCP",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ]
+    }
+  }
+]

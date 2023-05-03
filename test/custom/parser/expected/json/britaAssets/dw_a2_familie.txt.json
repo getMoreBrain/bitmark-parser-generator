@@ -1,0 +1,1725 @@
+[
+  {
+    "bitmark": "[.book]\n[#Familie A2 Deutsche Welle]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "title": "Familie A2 Deutsche Welle"
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&video]\n[&video:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/video/a2_e2_l1_f9_sd_avc.mp4]\n[!Selma und Nico sind auf dem Weg zum Deutschkurs, als Selmas Handy klingelt: Ihre Mutter macht sich Sorgen um Selma. Nico erzählt Selma von seiner eigenen anstrengenden Familie, aber für Selma ist das nicht dasselbe. \n  \n**Über Familienmitglieder sprechen** \nHier lernst du: \n-über verschiedene Generationen zu sprechen \n-über Konflikte in der Familie zu sprechen \n-Familienmitglieder  zu beschreiben]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/video/a2_e2_l1_f9_sd_avc.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "",
+            "format": "",
+            "width": null,
+            "height": null
+          }
+        }
+      },
+      "instruction": "Selma und Nico sind auf dem Weg zum Deutschkurs, als Selmas Handy klingelt: Ihre Mutter macht sich Sorgen um Selma. Nico erzählt Selma von seiner eigenen anstrengenden Familie, aber für Selma ist das nicht dasselbe. \n  \n**Über Familienmitglieder sprechen** \nHier lernst du: \n-über verschiedene Generationen zu sprechen \n-über Konflikte in der Familie zu sprechen \n-Familienmitglieder  zu beschreiben"
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&video]\n[&video:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/video/a2_e2_l1_f9_sd_avc.mp4]\n[!Nico und Selma \nWas passiert? Sieh dir die Folge an und wähl die richtige Antwort.]\n  \n**Neue Wörter**: Wenn man mit einem Fahrrad unterwegs ist, aber nicht damit fährt, „schiebt“ man es.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "**Neue Wörter**: Wenn man mit einem Fahrrad unterwegs ist, aber nicht damit fährt, „schiebt“ man es.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/video/a2_e2_l1_f9_sd_avc.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "",
+            "format": "",
+            "width": null,
+            "height": null
+          }
+        }
+      },
+      "instruction": "Nico und Selma \nWas passiert? Sieh dir die Folge an und wähl die richtige Antwort."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice]\n[%1/12]\n===\n[!Wen siehst du?]\n[-Selma, Nico und Inge.]\n[-Selma und ihre Familie.]\n[+Nico und Selma.]\n===\n[!Wo sind sie?]\n[+Sie sind draußen.]\n[-Sie sind im Kino.]\n[-Sie sind beim Deutschkurs.]\n===\n[!Was macht Nico?]\n[+Er schiebt sein Fahrrad.]\n[-Er fährt Auto.]\n[-Er spielt Computer.]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "1/12",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "Wen siehst du?",
+          "choices": [
+            {
+              "choice": "Selma, Nico und Inge.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Selma und ihre Familie.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Nico und Selma.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Wo sind sie?",
+          "choices": [
+            {
+              "choice": "Sie sind draußen.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Sie sind im Kino.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Sie sind beim Deutschkurs.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Was macht Nico?",
+          "choices": [
+            {
+              "choice": "Er schiebt sein Fahrrad.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Er fährt Auto.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Er spielt Computer.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze-instruction-grouped:bitmark--&video]\n[%2/12]\n[&video:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/video/a2_e2_l1_s2_video1_sd_avc.mp4]\n**Das Telefonat** \nSelma berichtet kurz von dem Telefonat. Sieh dir das Video an. Wähl dann die fehlenden Wörter in der richtigen Reihenfolge aus und vervollständige so den Text. \n  \nNico: Hast du [_mit deinem Vater][!mit deinem Vater]  telefoniert? \nSelma: Nein, das war meine Mutter. Sie macht sich Sorgen, weil ich nicht angerufen habe. Ich habe ihr aber gesagt, dass ich [_beim Sprachkurs][!beim Sprachkurs] bin. \n  \n  \nTipp: Sieh dir zur Kontrolle noch einmal den Videoausschnitt an.",
+    "bit": {
+      "type": "cloze-instruction-grouped",
+      "format": "bitmark--",
+      "body": "**Das Telefonat** \nSelma berichtet kurz von dem Telefonat. Sieh dir das Video an. Wähl dann die fehlenden Wörter in der richtigen Reihenfolge aus und vervollständige so den Text. \n  \nNico: Hast du {0}  telefoniert? \nSelma: Nein, das war meine Mutter. Sie macht sich Sorgen, weil ich nicht angerufen habe. Ich habe ihr aber gesagt, dass ich {1} bin. \n  \n  \nTipp: Sieh dir zur Kontrolle noch einmal den Videoausschnitt an.",
+      "item": "2/12",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/video/a2_e2_l1_s2_video1_sd_avc.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "",
+            "format": "",
+            "width": null,
+            "height": null
+          }
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "mit deinem Vater"
+          ],
+          "hint": "",
+          "instruction": "mit deinem Vater",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "beim Sprachkurs"
+          ],
+          "hint": "",
+          "instruction": "beim Sprachkurs",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment]\n[!Bilder von Selma \nSag, in welcher Situation du Selma siehst. Vervollständige die Sätze.]\n[%3/12]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3/12",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Bilder von Selma \nSag, in welcher Situation du Selma siehst. Vervollständige die Sätze."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1&image]\n[%3/12]\n[&image:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/images/a2-k2-1-3.1.png]\n[!Das ist Selma …]\n[+mit ihrem Handy.]\n[-mit ihrer Tasche.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "3/12",
+      "instruction": "Das ist Selma …",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "mit ihrem Handy.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "mit ihrer Tasche.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/images/a2-k2-1-3.1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1&image]\n[%3/12]\n[&image:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/images/a2-k2-1-3.2.png]\n[!Das ist Selma …]\n[+mit ihrer Mutter.]\n[-mit ihrem Vater.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "3/12",
+      "instruction": "Das ist Selma …",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "mit ihrer Mutter.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "mit ihrem Vater.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/images/a2-k2-1-3.2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1&image]\n[%3/12]\n[&image:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/images/a2-k2-1-3.3.png]\n[!Selma ist …]\n[+bei ihren Eltern.]\n[-bei ihren Freunden.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "3/12",
+      "instruction": "Selma ist …",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "bei ihren Eltern.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "bei ihren Freunden.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/images/a2-k2-1-3.3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze-instruction-grouped:bitmark--]\n[%4/12]\n[!Was passt zusammen? \nErinnerst du dich an die Possessivartikel? Bilde korrekte Paare, indem du erst ein Personalpronomen und dann den passenden Possessivartikel auswählst.]\n  \nich[_mein][!mein]\ndu [_dein][!dein]\ner [_sein][!sein]\nsie [_ihr][!ihr]\nes [_sein][!sein]\nwir [_unser][!unser]\nihr [_euer][!euer]\nsie [_ihr][!ihr]\n  \nDie Possessivartikel im Nominativ und Akkusativ hast du bereits in A1/Einheit 15 gelernt. Je nachdem, ob das Substantiv maskulin, neutral oder feminin ist, ob es im Singular oder Plural steht, ob es im Nominativ, im Akkusativ oder im Dativ verwendet wird, können die Endungen variieren. \n  \n**Beispiele:** \nDas ist mein Hund. (Nominativ) \nIch finde meinen Hund schön. (Akkusativ) \nIch gehe mit meinem Hund spazieren. (Dativ) \n  \nDie Endungen im Dativ lernst du auf der nächsten Übungsseite. Hier noch mal eine kurze Übersicht zur Erinnerung:  \n  \n**Nominativ:** \nmaskulin: mein \nfeminin: mein-e \nneutral: mein \nplural: mein-e \n  \n**Akkusativ:** \nmaskulin: mein-en \nfeminin: mein-e \nneutral: mein \nplural: mein-e",
+    "bit": {
+      "type": "cloze-instruction-grouped",
+      "format": "bitmark--",
+      "body": "ich{0}\ndu {1}\ner {2}\nsie {3}\nes {4}\nwir {5}\nihr {6}\nsie {7}\n  \nDie Possessivartikel im Nominativ und Akkusativ hast du bereits in A1/Einheit 15 gelernt. Je nachdem, ob das Substantiv maskulin, neutral oder feminin ist, ob es im Singular oder Plural steht, ob es im Nominativ, im Akkusativ oder im Dativ verwendet wird, können die Endungen variieren. \n  \n**Beispiele:** \nDas ist mein Hund. (Nominativ) \nIch finde meinen Hund schön. (Akkusativ) \nIch gehe mit meinem Hund spazieren. (Dativ) \n  \nDie Endungen im Dativ lernst du auf der nächsten Übungsseite. Hier noch mal eine kurze Übersicht zur Erinnerung:  \n  \n**Nominativ:** \nmaskulin: mein \nfeminin: mein-e \nneutral: mein \nplural: mein-e \n  \n**Akkusativ:** \nmaskulin: mein-en \nfeminin: mein-e \nneutral: mein \nplural: mein-e",
+      "item": "4/12",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Was passt zusammen? \nErinnerst du dich an die Possessivartikel? Bilde korrekte Paare, indem du erst ein Personalpronomen und dann den passenden Possessivartikel auswählst.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "mein"
+          ],
+          "hint": "",
+          "instruction": "mein",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "dein"
+          ],
+          "hint": "",
+          "instruction": "dein",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sein"
+          ],
+          "hint": "",
+          "instruction": "sein",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ihr"
+          ],
+          "hint": "",
+          "instruction": "ihr",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sein"
+          ],
+          "hint": "",
+          "instruction": "sein",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "unser"
+          ],
+          "hint": "",
+          "instruction": "unser",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "euer"
+          ],
+          "hint": "",
+          "instruction": "euer",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ihr"
+          ],
+          "hint": "",
+          "instruction": "ihr",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[%5/12]\n[!Possessivartikel im Dativ \nWähl für jede Lücke die richtige Endung aus.]\n  \nNach bestimmten Präpositionen (z. B. __„mit“__ und __„bei“__)  steht der Possessivartikel im Dativ. Schau dir die Beispiele an. \n  \nIch habe nicht mit meinem Vater telefoniert. \nIch bin mit meinem Fahrrad gefahren.             \nIch habe mit meiner Mutter telefoniert.           \nIch bin bei meinen Freunden. \n  \nIm Dativ Plural bekommt das Substantiv meistens die Endung „-n“. \n  \n__Info:__ Es gibt auch noch andere Präpositionen (und auch Verben), nach denen immer der Dativ steht. Diese wirst du nach und nach lernen. \n  \nWie lauten die Endungen der Possessivartikel im Dativ? \nDativ maskulin: mit mein[-en][+em][-e] Vater \nDativ feminin: mit mein[-en][-em][+er] Mutter \nDativ neutral: mit mein[-e][-er][+em] Fahrrad \nDativ Plural: bei mein[-em][-er][+en] Freunden",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "Nach bestimmten Präpositionen (z. B. __„mit“__ und __„bei“__)  steht der Possessivartikel im Dativ. Schau dir die Beispiele an. \n  \nIch habe nicht mit meinem Vater telefoniert. \nIch bin mit meinem Fahrrad gefahren.             \nIch habe mit meiner Mutter telefoniert.           \nIch bin bei meinen Freunden. \n  \nIm Dativ Plural bekommt das Substantiv meistens die Endung „-n“. \n  \n__Info:__ Es gibt auch noch andere Präpositionen (und auch Verben), nach denen immer der Dativ steht. Diese wirst du nach und nach lernen. \n  \nWie lauten die Endungen der Possessivartikel im Dativ? \nDativ maskulin: mit mein{0} Vater \nDativ feminin: mit mein{1} Mutter \nDativ neutral: mit mein{2} Fahrrad \nDativ Plural: bei mein{3} Freunden",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "en",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "em",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "e",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "en",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "em",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "er",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "e",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "er",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "em",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "em",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "er",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "en",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "item": "5/12",
+      "instruction": "Possessivartikel im Dativ \nWähl für jede Lücke die richtige Endung aus."
+    }
+  },
+  {
+    "bitmark": "[.cloze-instruction-grouped:bitmark--]\n[!Wer macht was? (1) \nWähl die richtigen Possessivartikel im Dativ aus. Achte darauf, ob das Substantiv maskulin, feminin oder neutral ist und im Singular oder Plural steht.]\n[%6/12.1]\nGehe nach folgendem Muster vor: \nich – mein- / du – dein- / … \n  \nWähl die fehlenden Possessivartikel in der richtigen Reihenfolge aus. \n  \nIch spiele mit [_meinem][!meinem] Sohn. \nDu spielst mit [_deinem][!deinem] Sohn. \nEr spielt mit [_seinem][!seinem] Sohn. \nSie spielt mit [_ihrem][!ihrem] Sohn. \n  \nIch spiele mit [_meinen][!meinen] Söhnen. \nDu spielst mit [_deinen][!deinen] Söhnen. \nEr spielt mit [_seinen][!seinen] Söhnen. \nSie spielt mit [_ihren][!ihren] Söhnen. \n  \n__Achtung!__ Der Plural von „der Sohn“ heißt „die Söhne“.",
+    "bit": {
+      "type": "cloze-instruction-grouped",
+      "format": "bitmark--",
+      "body": "Gehe nach folgendem Muster vor: \nich – mein- / du – dein- / … \n  \nWähl die fehlenden Possessivartikel in der richtigen Reihenfolge aus. \n  \nIch spiele mit {0} Sohn. \nDu spielst mit {1} Sohn. \nEr spielt mit {2} Sohn. \nSie spielt mit {3} Sohn. \n  \nIch spiele mit {4} Söhnen. \nDu spielst mit {5} Söhnen. \nEr spielt mit {6} Söhnen. \nSie spielt mit {7} Söhnen. \n  \n__Achtung!__ Der Plural von „der Sohn“ heißt „die Söhne“.",
+      "item": "6/12.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Wer macht was? (1) \nWähl die richtigen Possessivartikel im Dativ aus. Achte darauf, ob das Substantiv maskulin, feminin oder neutral ist und im Singular oder Plural steht.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "meinem"
+          ],
+          "hint": "",
+          "instruction": "meinem",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "deinem"
+          ],
+          "hint": "",
+          "instruction": "deinem",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "seinem"
+          ],
+          "hint": "",
+          "instruction": "seinem",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ihrem"
+          ],
+          "hint": "",
+          "instruction": "ihrem",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "meinen"
+          ],
+          "hint": "",
+          "instruction": "meinen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "deinen"
+          ],
+          "hint": "",
+          "instruction": "deinen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "seinen"
+          ],
+          "hint": "",
+          "instruction": "seinen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ihren"
+          ],
+          "hint": "",
+          "instruction": "ihren",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze-instruction-grouped:bitmark--]\n[%6/12.2]\nWähl die fehlenden Possessivartikel in der richtigen Reihenfolge aus. \n  \nWir spielen mit [_unserer][!unserer] Tochter. \nIhr spielt mit [_eurer][!eurer] Tochter. \nSie spielen mit [_ihrer][_ihrer] Tochter. \n  \nWir spielen mit [_unseren][!unseren] Töchtern. \nIhr spielt mit [_euren][!euren] Töchtern. \nSie spielen mit [_ihren][!ihren] Töchtern. \n  \n__Achtung!__ Der Plural von „die Tochter“ heißt „die Töchter“.",
+    "bit": {
+      "type": "cloze-instruction-grouped",
+      "format": "bitmark--",
+      "body": "Wähl die fehlenden Possessivartikel in der richtigen Reihenfolge aus. \n  \nWir spielen mit {0} Tochter. \nIhr spielt mit {1} Tochter. \nSie spielen mit {2} Tochter. \n  \nWir spielen mit {3} Töchtern. \nIhr spielt mit {4} Töchtern. \nSie spielen mit {5} Töchtern. \n  \n__Achtung!__ Der Plural von „die Tochter“ heißt „die Töchter“.",
+      "item": "6/12.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "unserer"
+          ],
+          "hint": "",
+          "instruction": "unserer",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "eurer"
+          ],
+          "hint": "",
+          "instruction": "eurer",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ihrer",
+            "ihrer"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "unseren"
+          ],
+          "hint": "",
+          "instruction": "unseren",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "euren"
+          ],
+          "hint": "",
+          "instruction": "euren",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ihren"
+          ],
+          "hint": "",
+          "instruction": "ihren",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze-instruction-grouped:bitmark--]\n[!Wer macht was? (2) \nSchreib die richtigen Possessivartikel im Dativ in die Lücken.]\n  \nGehe nach folgendem Muster vor: \nich – mein- / du – dein- / ... \n[%7/12]\nFinde den richtigen Possessivartikel. \n  \n(die Frau – die Frauen) \nIch fahre mit [_meiner] Frau zur Arbeit. \n  \n(der Bruder – die Brüder) \nDu spielst mit [_deinem] Bruder Tennis. \n  \n(der Freund – die Freunde) \nEr ist bei [_seinen] Freunden. \n  \n(die Großmutter – die Großmütter)  \nSie ist bei [_ihrer] Großmutter. \n  \nFinde den richtigen Possessivartikel. \n  \n(der Bruder – die Brüder) \nWir sehen mit [_unserem] Bruder fern. \nWir sehen mit [_unseren] Brüdern fern. \n  \n(die Freundin – die Freundinnen) \nIhr seid bei [_eurer] Freundin. \nIhr seid bei [_euren] Freundinnen. \n  \n(die Tochter – die Töchter) \nSie haben Probleme mit [_ihrer]  Tochter. \nSie haben Probleme mit [_ihren] Töchtern.",
+    "bit": {
+      "type": "cloze-instruction-grouped",
+      "format": "bitmark--",
+      "body": "Gehe nach folgendem Muster vor: \nich – mein- / du – dein- / ... \n\nFinde den richtigen Possessivartikel. \n  \n(die Frau – die Frauen) \nIch fahre mit {0} Frau zur Arbeit. \n  \n(der Bruder – die Brüder) \nDu spielst mit {1} Bruder Tennis. \n  \n(der Freund – die Freunde) \nEr ist bei {2} Freunden. \n  \n(die Großmutter – die Großmütter)  \nSie ist bei {3} Großmutter. \n  \nFinde den richtigen Possessivartikel. \n  \n(der Bruder – die Brüder) \nWir sehen mit {4} Bruder fern. \nWir sehen mit {5} Brüdern fern. \n  \n(die Freundin – die Freundinnen) \nIhr seid bei {6} Freundin. \nIhr seid bei {7} Freundinnen. \n  \n(die Tochter – die Töchter) \nSie haben Probleme mit {8}  Tochter. \nSie haben Probleme mit {9} Töchtern.",
+      "item": "7/12",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Wer macht was? (2) \nSchreib die richtigen Possessivartikel im Dativ in die Lücken.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "meiner"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "deinem"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "seinen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ihrer"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "unserem"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "unseren"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "eurer"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "euren"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ihrer"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ihren"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment]\n[%8/12]\n[!Und jetzt bist du dran. \nHör die Frage und erzähl ein bisschen von dir. Achte bei der Antwort auf die richtigen Possessivartikel im Dativ. Antworte positiv oder negativ in vollen Sätzen.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "8/12",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Und jetzt bist du dran. \nHör die Frage und erzähl ein bisschen von dir. Achte bei der Antwort auf die richtigen Possessivartikel im Dativ. Antworte positiv oder negativ in vollen Sätzen."
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[!Telefonierst du oft mit deinen Freunden?]\nJa, .../ Nein, ... \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a1_audio1_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Ja, .../ Nein, ...",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Telefonierst du oft mit deinen Freunden?",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a1_audio1_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[!Wie war deine Aussprache?]\nGut \nNicht so gut \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a1_loesungsaudio_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Gut \nNicht so gut",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Wie war deine Aussprache?",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a1_loesungsaudio_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[!Wohnst du bei deinen Eltern?]\nJa, ... / Nein, … \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a2_audio1_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Ja, ... / Nein, …",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Wohnst du bei deinen Eltern?",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a2_audio1_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[!Wie war deine Aussprache?]\nGut \nNicht so gut \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a2_loesungsaudio_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Gut \nNicht so gut",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Wie war deine Aussprache?",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a2_loesungsaudio_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[!Hörst du oft mit deinem Handy Musik?]\nJa, ... / Nein, ... \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a3_audio1_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Ja, ... / Nein, ...",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Hörst du oft mit deinem Handy Musik?",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a3_audio1_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[!Wie war deine Aussprache?]\nGut \nNicht so gut \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a3_loesungsaudio_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Gut \nNicht so gut",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Wie war deine Aussprache?",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a3_loesungsaudio_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[!Fährst du manchmal mit deinem Fahrrad zur Arbeit?]\nJa, ... / Nein, ... \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a4_audio1_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Ja, ... / Nein, ...",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Fährst du manchmal mit deinem Fahrrad zur Arbeit?",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a4_audio1_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[!Wie war deine Aussprache?]\nGut \nNicht so gut \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a4_loesungsaudio_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Gut \nNicht so gut",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Wie war deine Aussprache?",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s8_a4_loesungsaudio_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.true-false&video]\n[%9/12]\n[!Worüber sprechen Selma und Nico? \nSieh dir das Video noch einmal an und lies die Frage. Mehrere Antworten sind richtig.]\n[&video:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/video/a2_e2_l1_f9_sd_avc.mp4]\nWas ist richtig? \n===\n[-Nico und Selma sprechen über Freunde.]\n=== \n[+Nico und Selma sprechen über die Familie.]\n===\n[+Nico hat Probleme mit seinen Eltern.]\n===\n[+Selma möchte bei ihrer Familie sein.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "9/12",
+      "lead": "",
+      "instruction": "Worüber sprechen Selma und Nico? \nSieh dir das Video noch einmal an und lies die Frage. Mehrere Antworten sind richtig.",
+      "hint": "",
+      "labelTrue": "",
+      "labelFalse": "",
+      "statements": [
+        {
+          "statement": "Nico und Selma sprechen über Freunde.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Nico und Selma sprechen über die Familie.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Nico hat Probleme mit seinen Eltern.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Selma möchte bei ihrer Familie sein.",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "Was ist richtig?",
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/video/a2_e2_l1_f9_sd_avc.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "",
+            "format": "",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment]\n[%10/12]\n[!Die Familie von Max \nHör dir den Text an und schreib die fehlenden Familienwörter auf.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "10/12",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Die Familie von Max \nHör dir den Text an und schreib die fehlenden Familienwörter auf."
+    }
+  },
+  {
+    "bitmark": "[.cloze&audio]\n[!Schreib das passende Wort in die Lücke. In jede Lücke passt ein Wort.]\n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s11_a1_audio1_dwdownload.mp3]\nMeine [_Eltern] heißen Franz und Hilde. Ich habe Geschwister: einen [_Bruder] und eine [_Schwester].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Meine {0} heißen Franz und Hilde. Ich habe Geschwister: einen {1} und eine {2}.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Schreib das passende Wort in die Lücke. In jede Lücke passt ein Wort.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s11_a1_audio1_dwdownload.mp3"
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Eltern"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Bruder"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Schwester"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze&audio]\n[!Schreib das passende Wort in die Lücke. In jede Lücke passt ein Wort.]\nFabian ist jünger als ich und Single , also ledig. Jeanette ist meine  \n[_Schwester]. Sie war mit Philipp verheiratet. Jetzt sind sie geschieden. Sie haben zwei Kinder. \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s11_a2_audio1_dwdownload.mp3]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Fabian ist jünger als ich und Single , also ledig. Jeanette ist meine  \n{0}. Sie war mit Philipp verheiratet. Jetzt sind sie geschieden. Sie haben zwei Kinder.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Schreib das passende Wort in die Lücke. In jede Lücke passt ein Wort.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Schwester"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s11_a2_audio1_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze&audio]\n[! Schreib das passende Wort in die Lücke. In jede Lücke passt ein Wort.]\nLaura ist meine [_Nichte], Janis ist mein [_Neffe]. \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s11_a3_audio1_dwdownload.mp3]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Laura ist meine {0}, Janis ist mein {1}.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Schreib das passende Wort in die Lücke. In jede Lücke passt ein Wort.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Nichte"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Neffe"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s11_a3_audio1_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze&audio]\n[! Schreib das passende Wort in die Lücke. In jede Lücke passt ein Wort.]\n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s11_a4_audio1_dwdownload.mp3]\nMeine Eltern haben also schon Enkel. Meine Mutter ist die  \n[_Großmutter] von Laura und Janis. Mein Vater ist ihr [_Großvater].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Meine Eltern haben also schon Enkel. Meine Mutter ist die  \n{0} von Laura und Janis. Mein Vater ist ihr {1}.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Schreib das passende Wort in die Lücke. In jede Lücke passt ein Wort.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s11_a4_audio1_dwdownload.mp3"
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Großmutter"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Großvater"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment]\n[%11/12]\n[!Familiäre Beziehungen beschreiben \nWie nennt man den Bruder deines Vaters und wie heißt der Vater deines Vaters? Hör die Frage. Vervollständige die Antwort und sprich sie laut. Hör dir dann das Lösungsaudio an und kontrolliere so deine Aussprache.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "11/12",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Familiäre Beziehungen beschreiben \nWie nennt man den Bruder deines Vaters und wie heißt der Vater deines Vaters? Hör die Frage. Vervollständige die Antwort und sprich sie laut. Hör dir dann das Lösungsaudio an und kontrolliere so deine Aussprache."
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[!Wer ist die Mutter von deinem Vater?]\nDie Mutter von ... \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a1_audio1_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Die Mutter von ...",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Wer ist die Mutter von deinem Vater?",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a1_audio1_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a1_loesungsaudio_dwdownload.mp3]\n[!Wie war deine Aussprache?]\nGut \nNicht so gut",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Gut \nNicht so gut",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a1_loesungsaudio_dwdownload.mp3"
+        }
+      },
+      "instruction": "Wie war deine Aussprache?"
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a2_audio1_dwdownload.mp3]\n[!Wer ist die Schwester von deiner Mutter?]\nDie Schwester von …",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Die Schwester von …",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a2_audio1_dwdownload.mp3"
+        }
+      },
+      "instruction": "Wer ist die Schwester von deiner Mutter?"
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a2_loesungsaudio_dwdownload.mp3]\n[!Wie war deine Aussprache?]\nGut \nNicht so gut",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Gut \nNicht so gut",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a2_loesungsaudio_dwdownload.mp3"
+        }
+      },
+      "instruction": "Wie war deine Aussprache?"
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a3_audio1_dwdownload.mp3]\n[!Wer ist der Sohn von deinem Bruder?]\nDer Sohn von …",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Der Sohn von …",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a3_audio1_dwdownload.mp3"
+        }
+      },
+      "instruction": "Wer ist der Sohn von deinem Bruder?"
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a3_loesungsaudio_dwdownload.mp3]\n[!Wie war deine Aussprache?]\nGut \nNicht so gut",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Gut \nNicht so gut",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a3_loesungsaudio_dwdownload.mp3"
+        }
+      },
+      "instruction": "Wie war deine Aussprache?"
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a4_audio1_dwdownload.mp3]\n[!Wer ist der Vater von deinem Vater?]\nDer Vater von …",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Der Vater von …",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a4_audio1_dwdownload.mp3"
+        }
+      },
+      "instruction": "Wer ist der Vater von deinem Vater?"
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a4_loesungsaudio_dwdownload.mp3]\n[!Wie war deine Aussprache?]\nGut \nNicht so gut",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Gut \nNicht so gut",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s13_a4_loesungsaudio_dwdownload.mp3"
+        }
+      },
+      "instruction": "Wie war deine Aussprache?"
+    }
+  },
+  {
+    "bitmark": "[.assignment]\n[%12/12]\n[!Deine Familie und du \nHör dir die Fragen an und antworte frei. Im Lösungsaudio hörst du Beispiele für mögliche Antworten.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "12/12",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Deine Familie und du \nHör dir die Fragen an und antworte frei. Im Lösungsaudio hörst du Beispiele für mögliche Antworten."
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\nHast du eine große oder eine kleine Familie? \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a1_audio1_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Hast du eine große oder eine kleine Familie?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a1_audio1_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\nWie war deine Aussprache? \nGut \nNicht so gut \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a1_loesungsaudio_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Wie war deine Aussprache? \nGut \nNicht so gut",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a1_loesungsaudio_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\nHast du Geschwister? Wie heißen sie? \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a2_audio1_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Hast du Geschwister? Wie heißen sie?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a2_audio1_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\nWie war deine Aussprache? \nGut \nNicht so gut \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a2_loesungsaudio_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Wie war deine Aussprache? \nGut \nNicht so gut",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a2_loesungsaudio_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&audio]\nWar dein Vater früher streng? \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a3_audio1_dwdownload.mp3]\n \n__Neue Wörter__: Eltern, die „streng“ sind, finden Regeln und Disziplin bei der Erziehung besonders wichtig.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "War dein Vater früher streng? \n\n \n__Neue Wörter__: Eltern, die „streng“ sind, finden Regeln und Disziplin bei der Erziehung besonders wichtig.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a3_audio1_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\nWie war deine Aussprache? \nGut \nNicht so gut \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a3_loesungsaudio_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Wie war deine Aussprache? \nGut \nNicht so gut",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a3_loesungsaudio_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\nHaben deine Eltern oder deine Geschwister früher mit dir gespielt? \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a4_audio1_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Haben deine Eltern oder deine Geschwister früher mit dir gespielt?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a4_audio1_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment&audio]\nWie war deine Aussprache? \nGut \nNicht so gut \n[&audio:https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a4_loesungsaudio_dwdownload.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Wie war deine Aussprache? \nGut \nNicht so gut",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/a2/familie/familiengeschichten/web-resources/audio/a2_e2_l1_s14_a4_loesungsaudio_dwdownload.mp3"
+        }
+      }
+    }
+  }
+]

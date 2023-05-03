@@ -1,0 +1,117 @@
+[
+  {
+    "bitmark": "[.  true-false-1]\n[+Ein Elefant ist\ngrösser als eine Maus.]\n\n\n|| OK ||",
+    "bit": {
+      "type": "true-false-1",
+      "format": "bitmark--",
+      "item": "",
+      "lead": "",
+      "instruction": "",
+      "hint": "",
+      "statement": "Ein Elefant ist\ngrösser als eine Maus.",
+      "isCorrect": true,
+      "isExample": false,
+      "body": ""
+    }
+  },
+  {
+    "bitmark": "[.  true-false]\n\n===\n[+Ein Elefant ist grösser als\neine Maus.][@example:meiyou]\n===\n[+Ein Tiger ist grösser\nals eine Hauskatze.]\n===\n[-Eine Kuh ist\nkleiner als ein Hund.]\n===\n\n|| ok ||",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "",
+      "lead": "",
+      "instruction": "",
+      "hint": "",
+      "labelTrue": "",
+      "labelFalse": "",
+      "statements": [
+        {
+          "statement": "Ein Elefant ist grösser als\neine Maus.",
+          "isCorrect": true,
+          "isExample": true,
+          "example": "meiyou"
+        },
+        {
+          "statement": "Ein Tiger ist grösser\nals eine Hauskatze.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Eine Kuh ist\nkleiner als ein Hund.",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": ""
+    }
+  },
+  {
+    "bitmark": "[.  true-false]\n[@labelTrue:rather yes][@labelFalse:rather no]\n===\n[+A house is\nbigger than a car.]\n===\n[+A tiger\nis bigger than a cat.]\n===\n[-A cow is\nbigger than a dog.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "",
+      "lead": "",
+      "instruction": "",
+      "hint": "",
+      "labelTrue": "rather yes",
+      "labelFalse": "rather no",
+      "statements": [
+        {
+          "statement": "A house is\nbigger than a car.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "A tiger\nis bigger than a cat.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "A cow is\nbigger than a dog.",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": ""
+    }
+  },
+  {
+    "bitmark": "[.  true-false]\n\n[!What colors can cows\nhave in Switzerland?]\n===\n[+brown ]\n===\n[+purple, but\nonly in chocolate ads][@example:we are the world]\n===\n[-blue ]\n===\n[-green ]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "",
+      "lead": "",
+      "instruction": "What colors can cows\nhave in Switzerland?",
+      "hint": "",
+      "labelTrue": "",
+      "labelFalse": "",
+      "statements": [
+        {
+          "statement": "brown",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "purple, but\nonly in chocolate ads",
+          "isCorrect": true,
+          "isExample": true,
+          "example": "we are the world"
+        },
+        {
+          "statement": "blue",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "green",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": ""
+    }
+  }
+]

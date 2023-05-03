@@ -1,0 +1,225 @@
+[
+  {
+    "bitmark": "[.interview:bitmark--]\n[%C3]\n[!Ergänzen Sie Orts- bzw. Richtungsangaben.]\n[?(Beispiele) 1. ans Meer/nach Italien/in die Schweiz 2. im Büro/zu Hause, im Kino/beim Friseur 3. an die Hauswand/ direkt vor den Eingang 4. im Keller 5. im Gras/hinter dem Tor/unter dem Schrank 6. in Spanien/in den Niederlanden/ auf einem Zeltplatz 7. neben den Schrank/über das Bett 8. Moskau/auf den Kanarischen Inseln/am Urlaubsort 9. auf den Ofen/ins Bad/in die Küche 10. vor dem Kino/in dem japanischen Restaurant 11. ins Bett/auf das Sofa 12. an den Strand/in die Stadt/ins Freibad 13. im Büro 14. sie steht im Bad/liegt schon im Koffer 15. in die Kantine zum Mittagessen 16. bei Siemens/im Büro neben mir 17. in der ersten Reihe/neben der Königin]\n\n===\n[%◇]Die Leute sitzen \n[@example: __am Tisch/auf der Parkbank/im Gras ... __][@shortAnswer]\n===\n[%1]Wir fahren jedes Jahr ...[@shortAnswer]\n===\n[%2]Marie ist nicht ...[@shortAnswer]\n===\nSie ist  ...[@shortAnswer]\n===\n[%3]Er stellt das Fahrrad immer  ...[@shortAnswer]\n===\n[%4]Aber heute steht das Fahrrad ...[@shortAnswer]\n===\n[%5]Der Ball liegt ...[@shortAnswer]\n===\n[%6]Wir waren letztes Jahr ...[@shortAnswer]\n===\n[%7]Ich würde das Bild ... hängen.[@shortAnswer]\n===\n[%8]Als wir in ... ankamen, regnete es in Strömen.[@shortAnswer]\n===\n[%9]Ich lege Bücher niemals ...[@shortAnswer]\n===\n[%10]Sie ist mit Franz ... verabredet.[@shortAnswer]\n===\n[%11]Ich bin müde. Ich lege mich ...[@shortAnswer]\n===\n[%12]Es ist wunderschönes Wetter. Lass uns ... gehen.[@shortAnswer]\n===\n[%13]Carlo hat seinen Laptop ... vergessen.[@shortAnswer]\n===\n[%14]Hast du meine Sonnencreme gesehen? Ja,...[@shortAnswer]\n===\n[%15]Kommst du mit ...?[@shortAnswer]\n===\n[%16]Judith arbeitet jetzt ...[@shortAnswer]\n===\n[%17]Der Ehrengast sitzt ...[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "C3",
+      "instruction": "Ergänzen Sie Orts- bzw. Richtungsangaben.",
+      "body": "",
+      "footer": "",
+      "hint": "(Beispiele) 1. ans Meer/nach Italien/in die Schweiz 2. im Büro/zu Hause, im Kino/beim Friseur 3. an die Hauswand/ direkt vor den Eingang 4. im Keller 5. im Gras/hinter dem Tor/unter dem Schrank 6. in Spanien/in den Niederlanden/ auf einem Zeltplatz 7. neben den Schrank/über das Bett 8. Moskau/auf den Kanarischen Inseln/am Urlaubsort 9. auf den Ofen/ins Bad/in die Küche 10. vor dem Kino/in dem japanischen Restaurant 11. ins Bett/auf das Sofa 12. an den Strand/in die Stadt/ins Freibad 13. im Büro 14. sie steht im Bad/liegt schon im Koffer 15. in die Kantine zum Mittagessen 16. bei Siemens/im Büro neben mir 17. in der ersten Reihe/neben der Königin",
+      "questions": [
+        {
+          "item": "◇",
+          "question": "Die Leute sitzen",
+          "instruction": "",
+          "hint": "",
+          "isExample": true,
+          "example": "__am Tisch/auf der Parkbank/im Gras ... __",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "1",
+          "question": "Wir fahren jedes Jahr ...",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "2",
+          "question": "Marie ist nicht ...",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Sie ist  ...",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "3",
+          "question": "Er stellt das Fahrrad immer  ...",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "4",
+          "question": "Aber heute steht das Fahrrad ...",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "5",
+          "question": "Der Ball liegt ...",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "6",
+          "question": "Wir waren letztes Jahr ...",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "7",
+          "question": "Ich würde das Bild ... hängen.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "8",
+          "question": "Als wir in ... ankamen, regnete es in Strömen.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "9",
+          "question": "Ich lege Bücher niemals ...",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "10",
+          "question": "Sie ist mit Franz ... verabredet.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "11",
+          "question": "Ich bin müde. Ich lege mich ...",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "12",
+          "question": "Es ist wunderschönes Wetter. Lass uns ... gehen.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "13",
+          "question": "Carlo hat seinen Laptop ... vergessen.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "14",
+          "question": "Hast du meine Sonnencreme gesehen? Ja,...",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "15",
+          "question": "Kommst du mit ...?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "16",
+          "question": "Judith arbeitet jetzt ...",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "17",
+          "question": "Der Ehrengast sitzt ...",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ]
+    }
+  }
+]

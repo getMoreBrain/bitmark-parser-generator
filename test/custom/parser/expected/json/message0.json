@@ -1,0 +1,14 @@
+[
+  {
+    "bitmark": "[.message&website] Have a look at http://www.apple.com",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "Have a look at http://www.apple.com",
+      "resource": {
+        "type": "website",
+        "website": {}
+      }
+    }
+  }
+]

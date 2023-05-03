@@ -3,10 +3,14 @@ class UrlUtils {
     let format: string | undefined;
 
     if (url) {
-      const parsedUrl = new URL(url);
-      const pathParts = parsedUrl.pathname.split('.');
-      if (pathParts.length > 1) {
-        format = pathParts[pathParts.length - 1];
+      try {
+        const parsedUrl = new URL(url);
+        const pathParts = parsedUrl.pathname.split('.');
+        if (pathParts.length > 1) {
+          format = pathParts[pathParts.length - 1];
+        }
+      } catch (e) {
+        // will return undefined
       }
     }
 
@@ -17,8 +21,12 @@ class UrlUtils {
     let domain: string | undefined;
 
     if (url) {
-      const parsedUrl = new URL(url);
-      domain = parsedUrl.hostname;
+      try {
+        const parsedUrl = new URL(url);
+        domain = parsedUrl.hostname;
+      } catch (e) {
+        // will return undefined
+      }
     }
 
     return domain;

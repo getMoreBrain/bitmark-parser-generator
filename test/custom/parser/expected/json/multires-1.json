@@ -1,0 +1,45 @@
+[
+  {
+    "bitmark": "[.multiple-response-1]\n[%123a][!What colours can cows have in Switzerland?]\n[+brown]\n[+purple]\n[-blue]\n[-green]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "123a",
+      "instruction": "What colours can cows have in Switzerland?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "brown",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "purple",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "blue",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "green",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": ""
+    }
+  }
+]

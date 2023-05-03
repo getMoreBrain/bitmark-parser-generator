@@ -1,0 +1,60 @@
+[
+  {
+    "bitmark": "[.interview-instruction-grouped]\n[!Please rewrite the following sentences by using one of the verbs above.]\n\n===\nIch habe den Mörder sofort erkannt. [!identifizieren]\n===\nDer Umsatz hat in den letzten zehn Jahren stark zugenommen. [!steigern]\n===\nGen der Umsatz hat in den letzten zehn Jahren stark zugenommen. [!steigern]\n===\nDen gen der Umsatz hat in den letzten zehn Jahren stark zugenommen. [!steigern]\n===",
+    "bit": {
+      "type": "interview-instruction-grouped",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Please rewrite the following sentences by using one of the verbs above.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Ich habe den Mörder sofort erkannt.",
+          "instruction": "identifizieren",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Der Umsatz hat in den letzten zehn Jahren stark zugenommen.",
+          "instruction": "steigern",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Gen der Umsatz hat in den letzten zehn Jahren stark zugenommen.",
+          "instruction": "steigern",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Den gen der Umsatz hat in den letzten zehn Jahren stark zugenommen.",
+          "instruction": "steigern",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ]
+    }
+  }
+]

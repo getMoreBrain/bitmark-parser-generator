@@ -1,0 +1,269 @@
+[
+  {
+    "bitmark": "[.match:bitmark--]\n[%A3a\n[!Fragen Sie.\n\nBilden Sie aus den Wortreihen Fragen im Präsens oder Präteritum.]\n===\n[%◇] Sie – historische Romane – mögen __(Präsens)__\n==\nMögen Sie historische Romane?[@example]\n===\n[%◇] wollen – werden – was – früher – Sie __(Präteritum)__\n==\nWas wollten Sie früher werden?[@example]\n===\n[%1] warum – Deutsch lernen – Sie – wollen __(Präsens)__\n==\nWarum wollen Sie Deutsch lernen?\n===\n[%2] möchten – wohin – fahren – Sie – im nächsten Urlaub __(Präsens)__\n==\nWohin möchten Sie im nächsten Urlaub fahren?\n===\n[%3] Musik – mögen – welche – Sie __(Präsens)__\n==\nWelche Musik mögen Sie?\n===\n[%4] können – welche – sprechen – Sprachen – besonders gut – Sie __(Präsens)__\n==\nWelche Sprachen können Sie besonders gut sprechen?\n===\n[%5 als Kind – dürfen – Sie – was – nicht – tun __(Präteritum)__\n==\nWas durften Sie als Kind nicht tun?\n===\n[%6] aufstehen – Sie – morgens – müssen – wann __(Präsens)__\n==\nWann müssen Sie morgens aufstehen?\n===\n[%7] wohnen – Sie – wo – möchten – am liebsten __(Präsens)__\n==\nWo möchten Sie am liebsten wohnen?\n===\n[%8] Sie – Ski laufen – als Kind – können __(Präteritum)__\n==\nKonnten Sie als Kind Ski laufen?\n===\n[%9] mögen – Sie – früher – Zeichentrickfilme __(Präteritum)__\n==\nMochten Sie früher Zeichentrickfilme?\n===\n[%10] eine Prüfung – wiederholen – schon mal – müssen – Sie __(Präteritum)__\n==\nMussten Sie schon mal eine Prüfung wiederholen?\n===\n[%11] in Ihrer Arbeitszeit – dürfen – Sie – privat im Internet – surfen __(Präsens)__\n==\nDürfen Sie in Ihrer Arbeitszeit privat im Internet surfen?\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "",
+      "heading": {},
+      "pairs": [
+        {
+          "key": " Sie – historische Romane – mögen __(Präsens)__",
+          "values": [
+            "Mögen Sie historische Romane?"
+          ],
+          "item": "◇",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": " wollen – werden – was – früher – Sie __(Präteritum)__",
+          "values": [
+            "Was wollten Sie früher werden?"
+          ],
+          "item": "◇",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": " warum – Deutsch lernen – Sie – wollen __(Präsens)__",
+          "values": [
+            "Warum wollen Sie Deutsch lernen?"
+          ],
+          "item": "1",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": " möchten – wohin – fahren – Sie – im nächsten Urlaub __(Präsens)__",
+          "values": [
+            "Wohin möchten Sie im nächsten Urlaub fahren?"
+          ],
+          "item": "2",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": " Musik – mögen – welche – Sie __(Präsens)__",
+          "values": [
+            "Welche Musik mögen Sie?"
+          ],
+          "item": "3",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": " können – welche – sprechen – Sprachen – besonders gut – Sie __(Präsens)__",
+          "values": [
+            "Welche Sprachen können Sie besonders gut sprechen?"
+          ],
+          "item": "4",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "Was durften Sie als Kind nicht tun?[%6] aufstehen – Sie – morgens – müssen – wann __(Präsens)__Wann müssen Sie morgens aufstehen?[%7] wohnen – Sie – wo – möchten – am liebsten __(Präsens)__Wo möchten Sie am liebsten wohnen?[%8] Sie – Ski laufen – als Kind – können __(Präteritum)__Konnten Sie als Kind Ski laufen?[%9] mögen – Sie – früher – Zeichentrickfilme __(Präteritum)__Mochten Sie früher Zeichentrickfilme?[%10] eine Prüfung – wiederholen – schon mal – müssen – Sie __(Präteritum)__Mussten Sie schon mal eine Prüfung wiederholen?[%11] in Ihrer Arbeitszeit – dürfen – Sie – privat im Internet – surfen __(Präsens)__Dürfen Sie in Ihrer Arbeitszeit privat im Internet surfen?",
+      "instruction": "Fragen Sie.\n\nBilden Sie aus den Wortreihen Fragen im Präsens oder Präteritum."
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '\\n'",
+        "line": 2,
+        "column": 5,
+        "errorLine": "[%A3a"
+      },
+      {
+        "message": "Rule violation around '\\n'",
+        "line": 31,
+        "column": 64,
+        "errorLine": "[%5 als Kind – dürfen – Sie – was – nicht – tun __(Präteritum)__"
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 32,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'Was durften Sie als Kind nicht tun?'",
+        "line": 33,
+        "column": 0,
+        "errorLine": "Was durften Sie als Kind nicht tun?"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 34,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 35,
+        "column": 0,
+        "errorLine": "[%6] aufstehen – Sie – morgens – müssen – wann __(Präsens)__"
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 36,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'Wann müssen Sie morgens aufstehen?'",
+        "line": 37,
+        "column": 0,
+        "errorLine": "Wann müssen Sie morgens aufstehen?"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 38,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 39,
+        "column": 0,
+        "errorLine": "[%7] wohnen – Sie – wo – möchten – am liebsten __(Präsens)__"
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 40,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'Wo möchten Sie am liebsten wohnen?'",
+        "line": 41,
+        "column": 0,
+        "errorLine": "Wo möchten Sie am liebsten wohnen?"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 42,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 43,
+        "column": 0,
+        "errorLine": "[%8] Sie – Ski laufen – als Kind – können __(Präteritum)__"
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 44,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'Konnten Sie als Kind Ski laufen?'",
+        "line": 45,
+        "column": 0,
+        "errorLine": "Konnten Sie als Kind Ski laufen?"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 46,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 47,
+        "column": 0,
+        "errorLine": "[%9] mögen – Sie – früher – Zeichentrickfilme __(Präteritum)__"
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 48,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'Mochten Sie früher Zeichentrickfilme?'",
+        "line": 49,
+        "column": 0,
+        "errorLine": "Mochten Sie früher Zeichentrickfilme?"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 50,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 51,
+        "column": 0,
+        "errorLine": "[%10] eine Prüfung – wiederholen – schon mal – müssen – Sie __(Präteritum)__"
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 52,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'Mussten Sie schon mal eine Prüfung wiederholen?'",
+        "line": 53,
+        "column": 0,
+        "errorLine": "Mussten Sie schon mal eine Prüfung wiederholen?"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 54,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 55,
+        "column": 0,
+        "errorLine": "[%11] in Ihrer Arbeitszeit – dürfen – Sie – privat im Internet – surfen __(Präsens)__"
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 56,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'Dürfen Sie in Ihrer Arbeitszeit privat im Internet surfen?'",
+        "line": 57,
+        "column": 0,
+        "errorLine": "Dürfen Sie in Ihrer Arbeitszeit privat im Internet surfen?"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 58,
+        "column": 0,
+        "errorLine": "==="
+      }
+    ]
+  }
+]

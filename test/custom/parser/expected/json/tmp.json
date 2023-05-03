@@ -1,0 +1,27 @@
+[
+  {
+    "bitmark": "[.interview]\n[%A2]\n[!Bilden Sie Fragen zu den vorgegebenen Antworten.]\n\n===\n◇ Ulrike Lipka.[@shortAnswer]\n==\n[@example:Wie heißen Sie? Wie ist Ihr Name?]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "A2",
+      "instruction": "Bilden Sie Fragen zu den vorgegebenen Antworten.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "◇ Ulrike Lipka.==",
+          "instruction": "",
+          "hint": "",
+          "isExample": true,
+          "example": "Wie heißen Sie? Wie ist Ihr Name?",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ]
+    }
+  }
+]

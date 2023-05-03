@@ -1,0 +1,50 @@
+[
+  {
+    "bitmark": "[.vocabulary]\nBasic english vocabulary\n===\nWoche\n[&image:https://media/images/calendar_week.jpg]\n[@language:de]\n[@pos:noun]\n[@gender:f]\n[@number:singular]\n==\nweek\n[@language:en]\n[@ipa:'wi:k]\n[@pronunciation:https://media/audio/week.mp3]\n==\nAlex tells Sandra that his band will be playing in Kensington next week.\n[@language:en]\n===\nfeste Freundin\n[@language:de]\n[@pos:noun]\n==\ngirlfriend [!m. boyfriend]\n[@language:en]\n[@ipa:ˈɡɜːlfrɛnd]\n[@pronunciation:https://media/audio/girlfriend.mp3]\n==\nAlex tells Sandra that his band will be playing in Kensington next week.\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "Basic english vocabulary\n===\nWoche\n\n\n\n\n\n==\nweek\n\n\n\n==\nAlex tells Sandra that his band will be playing in Kensington next week.\n\n===\nfeste Freundin\n\n\n==\ngirlfriend \n\n\n\n==\nAlex tells Sandra that his band will be playing in Kensington next week.\n\n===",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "language": [
+        "de",
+        "en",
+        "en",
+        "de",
+        "en",
+        "en"
+      ],
+      "pos": [
+        "noun",
+        "noun"
+      ],
+      "gender": [
+        "f"
+      ],
+      "number": [
+        "singular"
+      ],
+      "ipa": [
+        "'wi:k",
+        "ˈɡɜːlfrɛnd"
+      ],
+      "pronunciation": [
+        "https://media/audio/week.mp3",
+        "https://media/audio/girlfriend.mp3"
+      ],
+      "instruction": "m. boyfriend"
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "jpg",
+          "src": "https://media/images/calendar_week.jpg"
+        }
+      ]
+    }
+  }
+]

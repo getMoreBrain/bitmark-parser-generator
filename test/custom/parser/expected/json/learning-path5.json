@@ -1,0 +1,40 @@
+[
+  {
+    "bitmark": "[.learning-path-external-link]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z][@date:2022-04-19T00:00:00]\n[@location:Zug]\n[@list:One]\n[@list:Two]\n[@list:Three]\n[@list:Four]\n[@id:119760]\n[@botAnnounceAt: Allein zu Haus]\n[@botSaveAt:Tagesspiegel]\n[@botSendAt:Tagesspiegel]\n[@botRemindAt: Welche Aussage entspricht]\n[@externalLink: optional property ]\n[@videoCallLink:https://zoom.us/j/96545131108?pwd=RXdvTTVhW1aG1GcWFJeEEvQT09]",
+    "bit": {
+      "type": "learning-path-external-link",
+      "format": "bitmark--",
+      "body": "First one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "isTracked": true,
+      "isInfoOnly": false,
+      "instruction": "Skript «Grundausbildung Altersvorsorge»",
+      "action": "Selbststudium",
+      "duration": "3600s",
+      "book": "e-876z78z87og87g8zg",
+      "reference": "Ref4.2.34",
+      "referenceEnd": "Ref4.3.1",
+      "dateEnd": "2022-04-19T00:00:00",
+      "date": "2015-03-25T12:00:00Z",
+      "location": "Zug",
+      "list": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "id": [
+        "119760"
+      ],
+      "botAnnounceAt": "Allein zu Haus",
+      "botSaveAt": "Tagesspiegel",
+      "botSendAt": "Tagesspiegel",
+      "botRemindAt": "Welche Aussage entspricht",
+      "externalLink": "optional property",
+      "videoCallLink": "https://zoom.us/j/96545131108?pwd=RXdvTTVhW1aG1GcWFJeEEvQT09"
+    }
+  }
+]

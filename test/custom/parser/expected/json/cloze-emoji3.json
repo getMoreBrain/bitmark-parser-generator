@@ -1,0 +1,40 @@
+[
+  {
+    "bitmark": "[.cloze][%clm3]I am coffee toast[_cloze][!☕😄✊✊✋noun ain hint for the second gap][?1 or 2]  [_gap text][!verb]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "I am coffee toast{0}  {1}",
+      "item": "clm3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cloze"
+          ],
+          "hint": "1 or 2",
+          "instruction": "☕😄✊✊✋noun ain hint for the second gap",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "gap text"
+          ],
+          "hint": "",
+          "instruction": "verb",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  }
+]

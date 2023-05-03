@@ -1,0 +1,250 @@
+[
+  {
+    "bitmark": "[.conversation-right-1]\nYoo!",
+    "bit": {
+      "type": "conversation-right-1",
+      "format": "bitmark--",
+      "body": "Yoo!",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    }
+  },
+  {
+    "bitmark": "[.bot-action-response]\n===\n[!Ja, das weiss ich]\n[%A]\n[@reaction:celebrate]\n👍 Cool!\n===\n[!Das war mir nicht bewusst]\n[%B]\n😅\n[@reaction:like]\n===\nTHIS IS THE FOOTER",
+    "bit": {
+      "type": "bot-action-response",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "responses": [
+        {
+          "response": "Ja, das weiss ich",
+          "reaction": "celebrate",
+          "item": "A",
+          "feedback": "👍 Cool!"
+        },
+        {
+          "response": "Das war mir nicht bewusst",
+          "reaction": "like",
+          "item": "B",
+          "feedback": "😅"
+        }
+      ],
+      "footer": "THIS IS THE FOOTER"
+    }
+  },
+  {
+    "bitmark": "[.conversation-right-1]\n[!conv right 1]\n[@partner:David  Foster]\n[&image:https://cdn.bitbook.education/avatars/cat_70x70@3.jpg]\n\nAu 1ᵉʳ juillet 2014, l’Association suisse des banquiers (ASB) a édicté les directives suivantes concernant les exigences minimales pour les financements hypothécaires: Pour financer une hypothèque, il faut un apport minimal de fonds propres à la valeur de nantissement. Ces fonds propres ne doivent pas provenir de l’avoir du 2ᵉ pilier (versement anticipé et mise en gage). Cette part minimale de fonds propres est de 10%.",
+    "bit": {
+      "type": "conversation-right-1",
+      "format": "bitmark--",
+      "body": "Au 1ᵉʳ juillet 2014, l’Association suisse des banquiers (ASB) a édicté les directives suivantes concernant les exigences minimales pour les financements hypothécaires: Pour financer une hypothèque, il faut un apport minimal de fonds propres à la valeur de nantissement. Ces fonds propres ne doivent pas provenir de l’avoir du 2ᵉ pilier (versement anticipé et mise en gage). Cette part minimale de fonds propres est de 10%.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "conv right 1",
+      "partner": {
+        "name": "David  Foster",
+        "avatarImage": {
+          "src": "https://cdn.bitbook.education/avatars/cat_70x70@3.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.document]\nBody\n[&document:https://docs.bitmark.cloud/bit-books/iona_douglas/lektion_19/web-resources/documents/transcript_pedestrianisation_in_the_netherlands_1.pdf]",
+    "bit": {
+      "type": "document",
+      "format": "bitmark--",
+      "body": "Body",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "document",
+        "document": {
+          "url": "https://docs.bitmark.cloud/bit-books/iona_douglas/lektion_19/web-resources/documents/transcript_pedestrianisation_in_the_netherlands_1.pdf",
+          "provider": "docs.bitmark.cloud"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.match]\n[@id:324342]\n[%item][%Lead]\n[!Instruction]\n===\nHe will fix your laptop for you.\n==\nYour laptop will be fixed by him.\n--\nYour laptop will be fixed for you by him.\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "item",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "He will fix your laptop for you.",
+          "values": [
+            "Your laptop will be fixed by him.",
+            "Your laptop will be fixed for you by him."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "324342"
+      ],
+      "lead": "Lead",
+      "instruction": "Instruction"
+    }
+  },
+  {
+    "bitmark": "[.match-all-reverse]\n[@id:324342]\n[%item][%Lead]\n[!Instruction]\n===\nHe will fix your laptop for you.\n==\nYour laptop will be fixed by him.\n--\nYour laptop will be fixed for you by him.\n===",
+    "bit": {
+      "type": "match-all-reverse",
+      "format": "bitmark--",
+      "item": "item",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "He will fix your laptop for you.",
+          "values": [
+            "Your laptop will be fixed by him.",
+            "Your laptop will be fixed for you by him."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "324342"
+      ],
+      "lead": "Lead",
+      "instruction": "Instruction"
+    }
+  },
+  {
+    "bitmark": "[.match-matrix]\n[!Bring the german verbs into the correct tense.]\n\n===\n[#Verb]\n==\n[#Future, 1st Person, Singular]\n==\n[#Past, 3rd Person, Plural]\n===\ngehen\n==\nich werde gehen\n==\nsie gingen\n--\nwhat the heck\n===\nsprechen\n==\nich werde sprechen\n==\nsie sprachen\n===",
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": "",
+      "heading": {
+        "forKeys": "Verb",
+        "forValues": [
+          "Future, 1st Person, Singular",
+          "Past, 3rd Person, Plural"
+        ]
+      },
+      "matrix": [
+        {
+          "key": "gehen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "ich werde gehen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "sie gingen",
+                "what the heck"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "sprechen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "ich werde sprechen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "sie sprachen"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "instruction": "Bring the german verbs into the correct tense."
+    }
+  },
+  {
+    "bitmark": "[.match-all]\n[@id:324342]\n[%item][%Lead]\n[!Instruction]\n===\nHe will fix your laptop for you.\n==\nYour laptop will be fixed by him.\n--\nYour laptop will be fixed for you by him.\n===",
+    "bit": {
+      "type": "match-all",
+      "format": "bitmark--",
+      "item": "item",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "He will fix your laptop for you.",
+          "values": [
+            "Your laptop will be fixed by him.",
+            "Your laptop will be fixed for you by him."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "324342"
+      ],
+      "lead": "Lead",
+      "instruction": "Instruction"
+    }
+  }
+]

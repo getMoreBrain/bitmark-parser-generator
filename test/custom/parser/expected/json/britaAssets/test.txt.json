@@ -1,0 +1,312 @@
+[
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[%Vocabular (Vocabulary)]\n===\naceeași\n[@language:ro]\n[@pos:adj]\n[@pos:pron]\n==\nthe same\n[@language:en]\n===\nan, ani (s.m.\n[@language:ro]\n[@pos:\n==\nyear\n[@language:en]\n===\ncâți (adj. pron.\n[@language:ro]\n[@pos:\n==\nhow many\n[@language:en]\n===\nsoț, soți (s.m.\n[@language:ro]\n[@pos:\n==\nhusband\n[@language:en]\n===\nsoție, soții (s.f.\n[@language:ro]\n[@pos:\n==\nwife\n[@language:en]\n===\ntânăr, tânără (adj.\n[@language:ro]\n[@pos:\n==\nyoung\n[@language:en]\n===\nvârstă, vârste (s.f.\n[@language:ro]\n[@pos:\n==\nage\n[@language:en]\n===\n\n[%0]\n[%1]\n[%2]\n[%3]\n[%4]\n[%5]\n[%6]\n[%7]\n[%8]\n[%9]\n[%10]\n[%11]\n[%12]\n[%13]\n[%14]\n[%15]\n[%16]\n\nhttps://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/swiss_life_grundausbildung_altersvorsorge1.png",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\naceeași\n\n\n\n==\nthe same\n\n===\nan, ani (s.m.\n[@language:ro]\n[@pos:\n==\nyear\n[@language:en]\n===\ncâți (adj. pron.\n[@language:ro]\n[@pos:\n==\nhow many\n[@language:en]\n===\nsoț, soți (s.m.\n[@language:ro]\n[@pos:\n==\nhusband\n[@language:en]\n===\nsoție, soții (s.f.\n[@language:ro]\n[@pos:\n==\nwife\n[@language:en]\n===\ntânăr, tânără (adj.\n[@language:ro]\n[@pos:\n==\nyoung\n[@language:en]\n===\nvârstă, vârste (s.f.\n[@language:ro]\n[@pos:\n==\nage\n[@language:en]\n===\n\n[%0]\n[%1]\n[%2]\n[%3]\n[%4]\n[%5]\n[%6]\n[%7]\n[%8]\n[%9]\n[%10]\n[%11]\n[%12]\n[%13]\n[%14]\n[%15]\n[%16]\n\nhttps://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/swiss_life_grundausbildung_altersvorsorge1.png",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "language": [
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "adj",
+        "pron"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n===\nan, ani (s.m.\n[@language:ro]\n[@pos:\n==\n'",
+        "line": 14,
+        "column": 6,
+        "errorLine": "[@pos:"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 13,
+        "column": 0,
+        "errorLine": "[@language:ro]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 14,
+        "column": 0,
+        "errorLine": "[@pos:"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 17,
+        "column": 0,
+        "errorLine": "[@language:en]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 20,
+        "column": 0,
+        "errorLine": "[@language:ro]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 21,
+        "column": 0,
+        "errorLine": "[@pos:"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 24,
+        "column": 0,
+        "errorLine": "[@language:en]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 27,
+        "column": 0,
+        "errorLine": "[@language:ro]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 28,
+        "column": 0,
+        "errorLine": "[@pos:"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 31,
+        "column": 0,
+        "errorLine": "[@language:en]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 34,
+        "column": 0,
+        "errorLine": "[@language:ro]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 35,
+        "column": 0,
+        "errorLine": "[@pos:"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 38,
+        "column": 0,
+        "errorLine": "[@language:en]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 41,
+        "column": 0,
+        "errorLine": "[@language:ro]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 42,
+        "column": 0,
+        "errorLine": "[@pos:"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 45,
+        "column": 0,
+        "errorLine": "[@language:en]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 48,
+        "column": 0,
+        "errorLine": "[@language:ro]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 49,
+        "column": 0,
+        "errorLine": "[@pos:"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 52,
+        "column": 0,
+        "errorLine": "[@language:en]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 55,
+        "column": 0,
+        "errorLine": "[%0]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 56,
+        "column": 0,
+        "errorLine": "[%1]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 57,
+        "column": 0,
+        "errorLine": "[%2]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 58,
+        "column": 0,
+        "errorLine": "[%3]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 59,
+        "column": 0,
+        "errorLine": "[%4]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 60,
+        "column": 0,
+        "errorLine": "[%5]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 61,
+        "column": 0,
+        "errorLine": "[%6]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 62,
+        "column": 0,
+        "errorLine": "[%7]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 63,
+        "column": 0,
+        "errorLine": "[%8]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 64,
+        "column": 0,
+        "errorLine": "[%9]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 65,
+        "column": 0,
+        "errorLine": "[%10]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 66,
+        "column": 0,
+        "errorLine": "[%11]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 67,
+        "column": 0,
+        "errorLine": "[%12]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 68,
+        "column": 0,
+        "errorLine": "[%13]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 69,
+        "column": 0,
+        "errorLine": "[%14]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 70,
+        "column": 0,
+        "errorLine": "[%15]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 71,
+        "column": 0,
+        "errorLine": "[%16]"
+      },
+      {
+        "message": "Unexpected input 'https://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/swiss_life_grundausbildung_altersvorsorge1.png'",
+        "line": 73,
+        "column": 0,
+        "errorLine": "https://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/swiss_life_grundausbildung_altersvorsorge1.png"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[&image:https://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/logo_swiss_life.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/logo_swiss_life.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[&image:https://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/logo_swiss_life_sw.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/logo_swiss_life_sw.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[&image:https://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/logo_swiss_life.jpeg]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/logo_swiss_life.jpeg",
+          "showInIndex": false,
+          "format": "jpeg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  }
+]

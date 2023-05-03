@@ -1,0 +1,32 @@
+[
+  {
+    "bitmark": "[.essay&image]\n[!Beschreiben Sie die Grafik. Was haben Sie erwartet, was hat Sie überrascht?]\n[&image:http://cdn.bitbook.education/publishers/3/books/26363/statistik.jpg][@src2x:http://cdn.bitbook.education/publishers/3/books/26363/statistik2.jpg][@src3x:http://cdn.bitbook.education/publishers/3/books/26363/statistik3.jpg]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Beschreiben Sie die Grafik. Was haben Sie erwartet, was hat Sie überrascht?",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "http://cdn.bitbook.education/publishers/3/books/26363/statistik.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": "",
+          "src2x": "http://cdn.bitbook.education/publishers/3/books/26363/statistik2.jpg",
+          "src3x": "http://cdn.bitbook.education/publishers/3/books/26363/statistik3.jpg"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "bitmark": "[.multiple-choice-1]\n[%321x][!What color is milk?]\n[?Cows produce milk.]\n[+white][?cow][!color of milk]\n[-red][?snake][!color of snake]\n[-blue][?spider][!color of sky]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "321x",
+      "instruction": "What color is milk?",
+      "body": "",
+      "hint": "Cows produce milk.",
+      "choices": [
+        {
+          "choice": "white",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "color of milk",
+          "hint": "cow"
+        },
+        {
+          "choice": "red",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "color of snake",
+          "hint": "snake"
+        },
+        {
+          "choice": "blue",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "color of sky",
+          "hint": "spider"
+        }
+      ],
+      "isExample": false,
+      "example": ""
+    }
+  }
+]

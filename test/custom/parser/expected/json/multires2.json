@@ -1,0 +1,90 @@
+[
+  {
+    "bitmark": "[.multiple-response]\n[!What colors can animals have in Switzerland?]\n===\n[!What colours can cows have in Switzerland?]\n[+brown]\n[+purple, but only in chocolate ads]\n[-blue][?by you]\n[-green]\n===\n[!What colours can cats have in Switzerland?]\n[+brown]\n[+black]\n[+blue][?is green]\n[-green]\n===",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "What colors can animals have in Switzerland?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "What colours can cows have in Switzerland?",
+          "responses": [
+            {
+              "response": "brown",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "purple, but only in chocolate ads",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "blue",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": "by you"
+            },
+            {
+              "response": "green",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "What colours can cats have in Switzerland?",
+          "responses": [
+            {
+              "response": "brown",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "black",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "blue",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": "is green"
+            },
+            {
+              "response": "green",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ]
+    }
+  }
+]

@@ -30,6 +30,7 @@
     "test-generator-expected": "jest --config=./test/custom/generator/expected/jest.generator.expected.config.js --runInBand",
     "test-parser-standard": "jest --config=jest.config.js --testMatch=\\<rootDir\\>/test/standard/bitmark-parser.test.ts --runInBand",
     "test-parser-books": "jest --config=./test/custom/parser/books/jest.parser.books.config.js --runInBand",
+    "test-parser-expected": "jest --config=./test/custom/parser/expected/jest.parser.expected.config.js --runInBand",
     "publish": "yarn npm publish",
     "prepublish": "run lint && run clean && run build && run test",
     "clean": "shx rm -rf ./dist",
@@ -99,7 +100,7 @@
   "dependencies": {
     "@ncoderz/superenum": "^0.2.0",
     "@types/fs-extra": "^11.0.1",
-    "bitmark-grammar": "^1.0.35",
+    "bitmark-grammar": "1.0.69",
     "fs-extra": "^11.1.0"
   }
 }

@@ -13,6 +13,7 @@ const PropertyKey = superenum({
   date: 'date',
   location: 'location',
   theme: 'theme',
+  reference: 'reference',
   action: 'action',
   thumbImage: 'thumbImage',
   duration: 'duration',

@@ -1,0 +1,24 @@
+[
+  {
+    "bitmark": "[.book]\n\n[@authors.name:Anne Buschas]\n[@authors.name:Susanne Raven]\n[@authors.name:Szilvia Szita]\n\n[#Erkundungen B2]\n[##2 Deutsch als Fremdsprache]\n[###3 Deutsch als Fremdsprache]\n[####4 Deutsch als Fremdsprache]\n[@subject: Integriertes Kurs- und Arbeitsbuch]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "authors.name": [
+        "Anne Buschas",
+        "Susanne Raven",
+        "Szilvia Szita"
+      ],
+      "title": "Erkundungen B2",
+      "subtitle": "4 Deutsch als Fremdsprache",
+      "subject": [
+        "Integriertes Kurs- und Arbeitsbuch"
+      ]
+    }
+  }
+]

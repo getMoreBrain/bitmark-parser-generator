@@ -1,0 +1,67 @@
+[
+  {
+    "bitmark": "[.cloze][%cl12] This sentence is a [_cloze][_gap text][!noun] with [_4][?1 or 2] gaps including an instruction for the first and a hint for the second ] gap [. [& means the start of bit [.match][@example]::remark::  <<kool<<\n[&audio:https://cdn.bitbook.education/cat.wmv]\nEND",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "This sentence is a {0} with {1} gaps including an instruction for the first and a hint for the second ] gap [. [& means the start of bit [.match][@example]::remark::  <<kool<<\n[&audio:https://cdn.bitbook.education/cat.wmv]\nEND",
+      "item": "cl12",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cloze",
+            "gap text"
+          ],
+          "hint": "",
+          "instruction": "noun",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4"
+          ],
+          "hint": "1 or 2",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[.'",
+        "line": 1,
+        "column": 157,
+        "errorLine": "[.cloze][%cl12] This sentence is a [_cloze][_gap text][!noun] with [_4][?1 or 2] gaps including an instruction for the first and a hint for the second ] gap [. [& means the start of bit ${{0}}[@example]::remark::  <<kool<<"
+      },
+      {
+        "message": "Unexpected input '[&'",
+        "line": 1,
+        "column": 160,
+        "errorLine": "[.cloze][%cl12] This sentence is a [_cloze][_gap text][!noun] with [_4][?1 or 2] gaps including an instruction for the first and a hint for the second ] gap [. [& means the start of bit ${{0}}[@example]::remark::  <<kool<<"
+      },
+      {
+        "message": "Unexpected input '[&audio'",
+        "line": 2,
+        "column": 0,
+        "errorLine": "[&audio:https://cdn.bitbook.education/cat.wmv]"
+      },
+      {
+        "message": "Unexpected input 'END'",
+        "line": 3,
+        "column": 0,
+        "errorLine": "END"
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "bitmark": "[.vocabulary]\nBasic english vocabulary\n===\nWoche\n[&image:http://media/images/calendar_week.jpg]\n[@language:de]\n[@pos:noun]\n[@gender:f]\n[@number:singular]\n==\ngirlfriend [!m. boyfriend]\n[@language:en]\n[@ipa:'wi:k]\n[@ipa:ˈɡɜːlfrɛnd]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "Basic english vocabulary\n===\nWoche\n\n\n\n\n\n==\ngirlfriend \n\n\n\n===",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "language": [
+        "de",
+        "en"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "gender": [
+        "f"
+      ],
+      "number": [
+        "singular"
+      ],
+      "instruction": "m. boyfriend",
+      "ipa": [
+        "'wi:k",
+        "ˈɡɜːlfrɛnd"
+      ]
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "jpg",
+          "src": "http://media/images/calendar_week.jpg"
+        }
+      ]
+    }
+  }
+]
