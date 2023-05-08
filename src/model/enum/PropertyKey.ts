@@ -17,6 +17,8 @@ const PropertyKey = superenum({
   kind: 'kind', // single
   action: 'action',
   thumbImage: 'thumbImage',
+  focusX: 'focusX',
+  focusY: 'focusY',
   deeplink: 'deeplink',
   externalLink: 'externalLink', // single
   externalLinkText: 'externalLinkText', // single

@@ -57,6 +57,8 @@ export interface Bit {
   kind?: string[];
   action?: string[];
   thumbImage?: string[];
+  focusX?: number[];
+  focusY?: number[];
   duration?: string[];
   deeplink?: string[];
   externalLink?: string[];
@@ -83,7 +85,7 @@ export interface Bit {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
+  example?: Example[];
   resource?: Resource;
   body?: Body;
   sampleSolution?: string[];
@@ -133,7 +135,7 @@ export interface Quiz {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
+  example?: Example[];
   choices?: Choice[];
   responses?: Response[];
 }
@@ -154,7 +156,7 @@ export interface Pair {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
+  example?: Example[];
   isCaseSensitive?: boolean;
   isLongAnswer?: boolean;
   values?: string[];
@@ -165,7 +167,7 @@ export interface Matrix {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
+  example?: Example[];
   isCaseSensitive?: boolean;
   isLongAnswer?: boolean;
   cells: MatrixCell[];
@@ -175,7 +177,7 @@ export interface MatrixCell {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
+  example?: Example[];
   values?: string[];
 }
 
@@ -188,7 +190,7 @@ export interface Question {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
+  example?: Example[];
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
 }
@@ -330,7 +332,7 @@ export interface Gap {
     itemLead?: ItemLead;
     hint?: string;
     instruction?: string;
-    example?: Example;
+    example?: Example[];
     isCaseSensitive?: boolean;
   };
 }
@@ -345,7 +347,7 @@ export interface Select {
     itemLead?: ItemLead;
     hint?: string;
     instruction?: string;
-    example?: Example;
+    example?: Example[];
     isCaseSensitive?: boolean;
   };
 }
@@ -356,7 +358,7 @@ export interface SelectOption {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
+  example?: Example[];
   isCaseSensitive?: boolean;
 }
 
@@ -370,7 +372,7 @@ export interface Highlight {
     itemLead?: ItemLead;
     hint?: string;
     instruction?: string;
-    example?: Example;
+    example?: Example[];
     isCaseSensitive?: boolean;
   };
 }
@@ -382,7 +384,7 @@ export interface HighlightText {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
+  example?: Example[];
   isCaseSensitive?: boolean;
 }
 
@@ -401,7 +403,7 @@ export interface Decision {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
+  example?: Example[];
   isCaseSensitive?: boolean;
 }
 

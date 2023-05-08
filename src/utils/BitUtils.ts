@@ -20,6 +20,40 @@ class BitUtils {
     if (resource) return resource.type;
 
     switch (bitType) {
+      case BitType.image:
+      case BitType.focusImage:
+      case BitType.browserImage:
+      case BitType.photo:
+      case BitType.screenshot:
+      case BitType.imageZoom:
+        return ResourceType.image;
+
+      case BitType.imageLink:
+        return ResourceType.imageLink;
+
+      case BitType.audio:
+      case BitType.audioEmbed:
+        return ResourceType.audio;
+
+      case BitType.audioLink:
+        return ResourceType.audioLink;
+
+      case BitType.video:
+      case BitType.videoEmbed:
+      case BitType.videoPortrait:
+      case BitType.videoLandscape:
+        return ResourceType.video;
+
+      case BitType.videoLink:
+        return ResourceType.videoLink;
+
+      case BitType.stillImageFilm:
+      case BitType.stillImageFilmEmbed:
+        return ResourceType.stillImageFilm;
+
+      case BitType.stillImageFilmLink:
+        return ResourceType.stillImageFilmLink;
+
       case BitType.document:
         return ResourceType.document;
 
@@ -28,12 +62,6 @@ class BitUtils {
 
       case BitType.documentDownload:
         return ResourceType.documentDownload;
-
-      case BitType.video:
-        return BitType.video;
-
-      case BitType.videoLink:
-        return BitType.videoLink;
 
       default:
       // Do nothing

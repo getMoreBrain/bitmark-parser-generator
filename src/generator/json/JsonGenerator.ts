@@ -1,7 +1,6 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeType } from '../../model/ast/NodeType';
-import { ExtraProperties, Highlight, Matrix, Pair, Question, Quiz } from '../../model/ast/Nodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
@@ -9,10 +8,21 @@ import { GapJson, HighlightJson, HighlightTextJson, SelectJson, SelectOptionJson
 import { ParserJson } from '../../model/json/ParserJson';
 import { ParserError } from '../../model/parser/ParserError';
 import { ParserInfo } from '../../model/parser/ParserInfo';
+import { ArrayUtils } from '../../utils/ArrayUtils';
 import { StringUtils } from '../../utils/StringUtils';
 import { UrlUtils } from '../../utils/UrlUtils';
 import { Generator } from '../Generator';
 
+import {
+  Example,
+  ExtraProperties,
+  Highlight,
+  HighlightText,
+  Matrix,
+  Pair,
+  Question,
+  Quiz,
+} from '../../model/ast/Nodes';
 import {
   BitmarkAst,
   Bit,
@@ -99,6 +109,24 @@ export interface JsonOptions {
    * Generate debug information in the output.
    */
   debugGenerationInline?: boolean;
+}
+
+interface ItemLeadHintInstructionNode {
+  itemLead?: ItemLead;
+  hint?: string;
+  instruction?: string;
+}
+
+interface ItemLeadHintInstuction {
+  item: string;
+  lead: string;
+  hint: string;
+  instruction: string;
+}
+
+interface ExampleAndIsExample {
+  isExample: boolean;
+  example: string;
 }
 
 /**
@@ -369,6 +397,20 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (node.value != null) this.addProperty(this.bitJson, 'thumbImage', node.value);
   }
 
+  // bitmark -> bits -> bitsValue -> focusX
+
+  protected enter_focusX(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (Number.isNaN(+node.value)) return;
+    if (node.value != null) this.addProperty(this.bitJson, 'focusX', +node.value, true);
+  }
+
+  // bitmark -> bits -> bitsValue -> focusY
+
+  protected enter_focusY(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (Number.isNaN(+node.value)) return;
+    if (node.value != null) this.addProperty(this.bitJson, 'focusY', +node.value, true);
+  }
+
   // bitmark -> bits -> bitsValue -> duration
 
   protected enter_duration(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -440,7 +482,10 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
   //  bitmark -> bits -> bitsValue -> partialAnswer
 
-  protected enter_partialAnswer(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_partialAnswer(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // Ignore partialAnswers that are not at the bit level as they are handled elsewhere
+    if (parent?.key !== NodeType.bitsValue) return;
+
     if (node.value != null) this.addProperty(this.bitJson, 'partialAnswer', node.value, true);
   }
 
@@ -535,12 +580,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     const gapJson: Partial<GapJson> = {
       type: 'gap',
       solutions: gap.solutions,
-      item: gap.itemLead?.item ?? '',
-      lead: gap.itemLead?.lead ?? '',
-      hint: gap.hint ?? '',
-      instruction: gap.instruction ?? '',
-      isExample: !!gap.example,
-      example: StringUtils.isString(gap.example) ? (gap.example as string) : '',
+      ...this.toItemLeadHintInstruction(gap),
+      ...this.toExampleAndIsExample(gap.example),
       isCaseSensitive: gap.isCaseSensitive ?? true,
       //
     };
@@ -609,20 +650,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         text: text.text,
         isCorrect: text.isCorrect ?? false,
         isHighlighted: text.isHighlighted ?? false,
-        // item: select.itemLead?.item ?? '',
-        // lead: select.itemLead?.lead ?? '',
-        // hint: select.hint ?? '',
-        // instruction: select.instruction ?? '',
-        // isExample: !!select.example,
-        // example: StringUtils.isString(select.example) ? (select.example as string) : '',
-        item: text.itemLead?.item ?? '',
-        lead: text.itemLead?.lead ?? '',
-        hint: text.hint ?? '',
-        instruction: text.instruction ?? '',
-        isExample: !!text.example,
-        example: StringUtils.isString(text.example) ? (text.example as string) : '',
-        // isCaseSensitive: select.isCaseSensitive ?? true,
-        //
+        ...this.toItemLeadHintInstruction(text),
+        ...this.toExampleAndIsExample(text.example),
       };
 
       // Remove unwanted properties
@@ -642,13 +671,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       prefix: highlight.prefix ?? '',
       texts,
       postfix: highlight.postfix ?? '',
-      item: highlight.itemLead?.item ?? '',
-      lead: highlight.itemLead?.lead ?? '',
-      hint: highlight.hint ?? '',
-      instruction: highlight.instruction ?? '',
-      isExample: !!highlight.example,
-      example: StringUtils.isString(highlight.example) ? (highlight.example as string) : '',
-      //
+      ...this.toItemLeadHintInstruction(highlight),
+      ...this.toExampleAndIsExample(highlight.example),
     };
 
     // Remove unwanted properties
@@ -680,20 +704,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       const optionJson: Partial<SelectOptionJson> = {
         text: option.text,
         isCorrect: option.isCorrect ?? false,
-        // item: select.itemLead?.item ?? '',
-        // lead: select.itemLead?.lead ?? '',
-        // hint: select.hint ?? '',
-        // instruction: select.instruction ?? '',
-        // isExample: !!select.example,
-        // example: StringUtils.isString(select.example) ? (select.example as string) : '',
-        item: option.itemLead?.item ?? '',
-        lead: option.itemLead?.lead ?? '',
-        hint: option.hint ?? '',
-        instruction: option.instruction ?? '',
-        isExample: !!option.example,
-        example: StringUtils.isString(option.example) ? (option.example as string) : '',
-        // isCaseSensitive: select.isCaseSensitive ?? true,
-        //
+        ...this.toItemLeadHintInstruction(option),
+        ...this.toExampleAndIsExample(option.example),
       };
 
       // Remove unwanted properties
@@ -713,13 +725,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       prefix: select.prefix ?? '',
       options,
       postfix: select.postfix ?? '',
-      item: select.itemLead?.item ?? '',
-      lead: select.itemLead?.lead ?? '',
-      hint: select.hint ?? '',
-      instruction: select.instruction ?? '',
-      isExample: !!select.example,
-      example: StringUtils.isString(select.example) ? (select.example as string) : '',
-      //
+      ...this.toItemLeadHintInstruction(select),
+      ...this.toExampleAndIsExample(select.example),
     };
 
     // Remove unwanted properties
@@ -790,12 +797,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         const statementJson: Partial<StatementJson> = {
           statement: s.text ?? '',
           isCorrect: s.isCorrect ?? false,
-          item: s.itemLead?.item ?? '',
-          lead: s.itemLead?.lead ?? '',
-          hint: s.hint ?? '',
-          instruction: s.instruction ?? '',
-          isExample: !!s.example,
-          example: StringUtils.isString(s.example) ? (s.example as string) : '',
+          ...this.toItemLeadHintInstruction(s),
+          ...this.toExampleAndIsExample(s.example),
         };
 
         // Delete unwanted properties
@@ -829,12 +832,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         const choiceJson: Partial<ChoiceJson> = {
           choice: c.text ?? '',
           isCorrect: c.isCorrect ?? false,
-          item: c.itemLead?.item ?? '',
-          lead: c.itemLead?.lead ?? '',
-          hint: c.hint ?? '',
-          instruction: c.instruction ?? '',
-          // isExample: !!c.example,
-          // example: StringUtils.isString(c.example) ? (c.example as string) : '',
+          ...this.toItemLeadHintInstruction(c),
+          // ...this.toExampleAndIsExample(c.example),
         };
 
         // Delete unwanted properties
@@ -864,12 +863,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         const responseJson: Partial<ResponseJson> = {
           response: r.text ?? '',
           isCorrect: r.isCorrect ?? false,
-          item: r.itemLead?.item ?? '',
-          lead: r.itemLead?.lead ?? '',
-          hint: r.hint ?? '',
-          instruction: r.instruction ?? '',
-          // isExample: !!c.example,
-          // example: StringUtils.isString(c.example) ? (c.example as string) : '',
+          ...this.toItemLeadHintInstruction(r),
+          // ...this.toExampleAndIsExample(r.example),
         };
 
         // Delete unwanted properties
@@ -927,12 +922,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
             const choiceJson: Partial<ChoiceJson> = {
               choice: c.text ?? '',
               isCorrect: c.isCorrect ?? false,
-              item: c.itemLead?.item ?? '',
-              lead: c.itemLead?.lead ?? '',
-              hint: c.hint ?? '',
-              instruction: c.instruction ?? '',
-              // isExample: !!c.example,
-              // example: StringUtils.isString(c.example) ? (c.example as string) : '',
+              ...this.toItemLeadHintInstruction(c),
+              // ...this.toExampleAndIsExample(c.example),
             };
 
             // Delete unwanted properties
@@ -950,12 +941,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
             const responseJson: Partial<ResponseJson> = {
               response: c.text ?? '',
               isCorrect: c.isCorrect ?? false,
-              item: c.itemLead?.item ?? '',
-              lead: c.itemLead?.lead ?? '',
-              hint: c.hint ?? '',
-              instruction: c.instruction ?? '',
-              // isExample: !!c.example,
-              // example: StringUtils.isString(c.example) ? (c.example as string) : '',
+              ...this.toItemLeadHintInstruction(c),
+              // ...this.toExampleAndIsExample(c.example),
             };
 
             // Delete unwanted properties
@@ -967,12 +954,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
         // Create the quiz
         const quizJson: Partial<QuizJson> = {
-          item: q.itemLead?.item ?? '',
-          lead: q.itemLead?.lead ?? '',
-          hint: q.hint ?? '',
-          instruction: q.instruction ?? '',
-          isExample: !!q.example,
-          example: StringUtils.isString(q.example) ? (q.example as string) : '',
+          ...this.toItemLeadHintInstruction(q),
+          ...this.toExampleAndIsExample(q.example),
           choices: q.choices ? choicesJson : undefined,
           responses: q.responses ? responsesJson : undefined,
         };
@@ -1105,12 +1088,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         const pairJson: Partial<PairJson> = {
           key: p.key ?? '',
           values: p.values ?? [],
-          item: p.itemLead?.item ?? '',
-          lead: p.itemLead?.lead ?? '',
-          hint: p.hint ?? '',
-          instruction: p.instruction ?? '',
-          isExample: !!p.example,
-          example: StringUtils.isString(p.example) ? (p.example as string) : '',
+          ...this.toItemLeadHintInstruction(p),
+          ...this.toExampleAndIsExample(p.example),
           isCaseSensitive: p.isCaseSensitive ?? true,
           isLongAnswer: p.isLongAnswer ?? false,
           //
@@ -1189,12 +1168,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
             // Create the choice
             const matrixCellJson: Partial<MatrixCellJson> = {
               values: c.values ?? [],
-              item: c.itemLead?.item ?? '',
-              lead: c.itemLead?.lead ?? '',
-              hint: c.hint ?? '',
-              instruction: c.instruction ?? '',
-              isExample: !!c.example,
-              example: StringUtils.isString(c.example) ? (c.example as string) : '',
+              ...this.toItemLeadHintInstruction(c),
+              ...this.toExampleAndIsExample(c.example),
             };
 
             // Delete unwanted properties
@@ -1211,12 +1186,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         const matrixJson: Partial<MatrixJson> = {
           key: m.key ?? '',
           cells: matrixCellsJson ?? [],
-          item: m.itemLead?.item ?? '',
-          lead: m.itemLead?.lead ?? '',
-          hint: m.hint ?? '',
-          instruction: m.instruction ?? '',
-          isExample: !!m.example,
-          example: StringUtils.isString(m.example) ? (m.example as string) : '',
+          ...this.toItemLeadHintInstruction(m),
+          ...this.toExampleAndIsExample(m.example),
           isCaseSensitive: m.isCaseSensitive ?? true,
           isLongAnswer: m.isLongAnswer ?? false,
         };
@@ -1246,17 +1217,18 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (questions) {
       for (const q of questions) {
+        const example = ArrayUtils.asSingle(q.example);
         // Create the question
         const questionJson: Partial<QuestionJson> = {
           question: q.question ?? '',
-          partialAnswer: q.partialAnswer ?? '',
+          partialAnswer: ArrayUtils.asSingle(q.partialAnswer) ?? '',
           sampleSolution: q.sampleSolution ?? '',
           item: q.itemLead?.item ?? '',
           lead: q.itemLead?.lead ?? '',
           hint: q.hint ?? '',
           instruction: q.instruction ?? '',
-          isExample: !!q.example,
-          example: StringUtils.isString(q.example) ? (q.example as string) : '',
+          isExample: !!example,
+          example: StringUtils.isString(example) ? (example as string) : '',
           // isCaseSensitive: q.isCaseSensitive ?? true,
           isShortAnswer: q.isShortAnswer ?? true,
           //
@@ -1984,6 +1956,24 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return resourceJson as ArticleResourceJson | DocumentResourceJson;
   }
 
+  protected toItemLeadHintInstruction(item: ItemLeadHintInstructionNode): ItemLeadHintInstuction {
+    return {
+      item: item.itemLead?.item ?? '',
+      lead: item.itemLead?.lead ?? '',
+      hint: item.hint ?? '',
+      instruction: item.instruction ?? '',
+    };
+  }
+
+  protected toExampleAndIsExample(example: Example[] | undefined): ExampleAndIsExample {
+    const ex = ArrayUtils.asSingle(example);
+
+    return {
+      isExample: !!ex,
+      example: StringUtils.isString(ex) ? (ex as string) : '',
+    };
+  }
+
   protected addProperty(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     target: any,
@@ -2069,6 +2059,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       kind: undefined,
       action: undefined,
       thumbImage: undefined,
+      focusX: undefined,
+      focusY: undefined,
       deeplink: undefined,
       externalLink: undefined,
       externalLinkText: undefined,
@@ -2169,6 +2161,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         break;
 
       case BitType.assignment:
+      case BitType.audio:
+      case BitType.audioEmbed:
+      case BitType.audioLink:
       case BitType.bitAlias:
       case BitType.blogArticle:
       case BitType.book:
@@ -2202,31 +2197,45 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       case BitType.bookSummary:
       case BitType.bookTeaser:
       case BitType.bookTitle:
+      case BitType.browserImage:
       case BitType.card1:
       case BitType.cloze:
       case BitType.clozeInstructionGrouped:
       case BitType.clozeSolutionGrouped:
       case BitType.code:
       case BitType.document:
-      case BitType.documentLink:
       case BitType.documentDownload:
+      case BitType.documentLink:
       case BitType.example:
+      case BitType.focusImage:
       case BitType.help:
       case BitType.hint:
+      case BitType.image:
+      case BitType.imageLink:
+      case BitType.imageZoom:
       case BitType.info:
       case BitType.internalLink:
       case BitType.newspaperArticle:
       case BitType.note:
       case BitType.notebookArticle:
+      case BitType.photo:
       case BitType.preparationNote:
       case BitType.question1:
       case BitType.quote:
       case BitType.releaseNote:
       case BitType.remark:
-      case BitType.summary:
+      case BitType.screenshot:
       case BitType.sideNote:
+      case BitType.stillImageFilm:
+      case BitType.stillImageFilmEmbed:
+      case BitType.stillImageFilmLink:
+      case BitType.summary:
       case BitType.takePicture:
       case BitType.video:
+      case BitType.videoEmbed:
+      case BitType.videoLandscape:
+      case BitType.videoLink:
+      case BitType.videoPortrait:
       case BitType.workbookArticle:
         if (bitJson.item == null) bitJson.item = '';
         if (bitJson.hint == null) bitJson.hint = '';

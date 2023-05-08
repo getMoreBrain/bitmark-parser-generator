@@ -106,6 +106,8 @@ class Builder {
     kind?: string | string[];
     action?: string | string[];
     thumbImage?: string | string[];
+    focusX?: number | number[];
+    focusY?: number | number[];
     duration?: string | string[];
     deepLink?: string | string[];
     externalLink?: string | string[];
@@ -175,6 +177,8 @@ class Builder {
       kind,
       action,
       thumbImage,
+      focusX,
+      focusY,
       duration,
       deepLink,
       externalLink,
@@ -243,6 +247,8 @@ class Builder {
       kind: ArrayUtils.asArray(kind),
       action: ArrayUtils.asArray(action),
       thumbImage: ArrayUtils.asArray(thumbImage),
+      focusX: ArrayUtils.asArray(focusX),
+      focusY: ArrayUtils.asArray(focusY),
       deeplink: ArrayUtils.asArray(deepLink),
       externalLink: ArrayUtils.asArray(externalLink),
       externalLinkText: ArrayUtils.asArray(externalLinkText),

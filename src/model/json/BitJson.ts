@@ -22,6 +22,8 @@ export interface BitJson {
   kind: string | string[];
   action: string | string[];
   thumbImage: string | string[];
+  focusX: number;
+  focusY: number;
   duration: string | string[];
   deeplink: string | string[];
   externalLink: string;
