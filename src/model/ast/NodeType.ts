@@ -109,6 +109,8 @@ const NodeType = superenum({
   labelTrue: 'labelTrue',
   labelFalse: 'labelFalse',
   quotedPerson: 'quotedPerson',
+  partialAnswer: 'partialAnswer',
+  partialAnswerValue: 'partialAnswerValue',
 
   book: 'book',
 
@@ -117,6 +119,7 @@ const NodeType = superenum({
   hint: 'hint',
   instruction: 'instruction',
   example: 'example',
+  exampleValue: 'exampleValue',
 
   extraProperties: 'extraProperties',
 
@@ -148,7 +151,6 @@ const NodeType = superenum({
   key: 'key',
   valuesValue: 'valuesValue',
   question: 'question',
-  partialAnswer: 'partialAnswer',
   sampleSolution: 'sampleSolution',
   sampleSolutionValue: 'sampleSolutionValue',
   statementText: 'statementText',

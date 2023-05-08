@@ -116,6 +116,7 @@ class Builder {
     labelTrue?: string | string[];
     labelFalse?: string | string[];
     quotedPerson?: string | string[];
+    partialAnswer?: string | string[];
     levelProperty?: string | string[];
     book?: string;
     title?: string;
@@ -185,6 +186,7 @@ class Builder {
       labelFalse,
       book,
       quotedPerson,
+      partialAnswer,
       levelProperty,
       title,
       subtitle,
@@ -252,6 +254,7 @@ class Builder {
       labelTrue: ArrayUtils.asArray(labelTrue),
       labelFalse: ArrayUtils.asArray(labelFalse),
       quotedPerson: ArrayUtils.asArray(quotedPerson),
+      partialAnswer: ArrayUtils.asArray(partialAnswer),
       levelProperty: ArrayUtils.asArray(levelProperty),
       title,
       subtitle,
@@ -856,8 +859,8 @@ class Builder {
     data: {
       type: ResourceTypeType;
 
-      // Generic (except Article / Document)
-      url?: string; // url / src / href / app
+      // Generic part (value of bit tag)
+      value?: string; // url / src / href / app / body
 
       // ImageLikeResource / AudioLikeResource / VideoLikeResource / Article / Document
       format?: string;
@@ -886,7 +889,7 @@ class Builder {
       siteName?: string;
 
       // ArticleLikeResource
-      body?: string;
+      // body?: string;
 
       // Generic Resource
       license?: string;
@@ -898,10 +901,10 @@ class Builder {
   ): Resource | undefined {
     let node: Resource | undefined;
 
-    const { type, url: urlIn, format: formatIn, ...rest } = data;
+    const { type, value: valueIn, format: formatIn, ...rest } = data;
     const finalData = {
       type,
-      url: urlIn ?? '',
+      value: valueIn ?? '',
       format: formatIn ?? '',
       ...rest,
     };
@@ -985,7 +988,7 @@ class Builder {
    */
   imageResource(data: {
     format: string;
-    url: string; //src
+    value: string; //src
     src1x?: string;
     src2x?: string;
     src3x?: string;
@@ -1014,7 +1017,7 @@ class Builder {
    */
   imageLinkResource(data: {
     format: string;
-    url: string;
+    value: string;
     src1x?: string;
     src2x?: string;
     src3x?: string;
@@ -1043,7 +1046,7 @@ class Builder {
    */
   audioResource(data: {
     format: string;
-    url: string; // src
+    value: string; // src
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
@@ -1065,7 +1068,7 @@ class Builder {
    */
   audioLinkResource(data: {
     format: string;
-    url: string;
+    value: string;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
@@ -1087,7 +1090,7 @@ class Builder {
    */
   videoResource(data: {
     format: string;
-    url: string; // src
+    value: string; // src
     width?: number;
     height?: number;
     duration?: number; // string?
@@ -1119,7 +1122,7 @@ class Builder {
    */
   videoLinkResource(data: {
     format: string;
-    url: string;
+    value: string;
     width?: number;
     height?: number;
     duration?: number; // string?
@@ -1151,7 +1154,7 @@ class Builder {
    */
   stillImageFilmResource(data: {
     format: string;
-    url: string; // src
+    value: string; // src
     width?: number;
     height?: number;
     duration?: number; // string?
@@ -1183,7 +1186,7 @@ class Builder {
    */
   stillImageFilmLinkResource(data: {
     format: string;
-    url: string;
+    value: string;
     width?: number;
     height?: number;
     duration?: number; // string?
@@ -1215,8 +1218,7 @@ class Builder {
    */
   articleResource(data: {
     format: string;
-    href?: string;
-    body?: string;
+    value: string;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
@@ -1238,7 +1240,7 @@ class Builder {
    */
   articleLinkResource(data: {
     format: string;
-    url: string;
+    value: string;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
@@ -1283,7 +1285,7 @@ class Builder {
    */
   documentLinkResource(data: {
     format: string;
-    url: string;
+    value: string;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
@@ -1305,7 +1307,7 @@ class Builder {
    */
   documentDownloadResource(data: {
     format: string;
-    url: string;
+    value: string;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
@@ -1326,7 +1328,7 @@ class Builder {
    * @returns
    */
   appResource(data: {
-    url: string; // app
+    value: string; // app
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
@@ -1347,7 +1349,7 @@ class Builder {
    * @returns
    */
   appLinkResource(data: {
-    url: string;
+    value: string;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
@@ -1368,19 +1370,19 @@ class Builder {
    * @returns
    */
   websiteLinkResource(data: {
-    url: string;
+    value: string;
     siteName?: string;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
     caption?: string;
   }): WebsiteLinkResource | undefined {
-    const { url, siteName, license, copyright, showInIndex, caption } = data;
+    const { value, siteName, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: WebsiteLinkResource = {
       type: ResourceType.websiteLink,
-      url,
+      value,
       siteName,
       license,
       copyright,
@@ -1423,7 +1425,7 @@ class Builder {
 
   private imageLikeResource(data: {
     type: 'image' | 'image-link';
-    url: string;
+    value: string;
     src1x?: string;
     src2x?: string;
     src3x?: string;
@@ -1436,15 +1438,15 @@ class Builder {
     showInIndex?: boolean;
     caption?: string;
   }): ImageResource | ImageLinkResource | undefined {
-    const { type, url, src1x, src2x, src3x, src4x, width, height, alt, license, copyright, showInIndex, caption } =
+    const { type, value, src1x, src2x, src3x, src4x, width, height, alt, license, copyright, showInIndex, caption } =
       data;
 
     // NOTE: Node order is important and is defined here
     const node: ImageResource | ImageLinkResource = {
       type,
-      format: UrlUtils.fileExtensionFromUrl(url),
-      provider: UrlUtils.domainFromUrl(url),
-      url,
+      format: UrlUtils.fileExtensionFromUrl(value),
+      provider: UrlUtils.domainFromUrl(value),
+      value,
       src1x,
       src2x,
       src3x,
@@ -1467,20 +1469,20 @@ class Builder {
 
   private audioLikeResource(data: {
     type: 'audio' | 'audio-link';
-    url: string;
+    value: string;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AudioResource | AudioLinkResource | undefined {
-    const { type, url, license, copyright, showInIndex, caption } = data;
+    const { type, value, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioResource | AudioLinkResource = {
       type,
-      format: UrlUtils.fileExtensionFromUrl(url),
-      provider: UrlUtils.domainFromUrl(url),
-      url,
+      format: UrlUtils.fileExtensionFromUrl(value),
+      provider: UrlUtils.domainFromUrl(value),
+      value,
       license,
       copyright,
       showInIndex,
@@ -1496,7 +1498,7 @@ class Builder {
 
   private videoLikeResource(data: {
     type: 'video' | 'video-link' | 'still-image-film' | 'still-image-film-link';
-    url: string;
+    value: string;
     width?: number;
     height?: number;
     duration?: number; // string?
@@ -1514,7 +1516,7 @@ class Builder {
   }): VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource | undefined {
     const {
       type,
-      url,
+      value,
       width,
       height,
       duration,
@@ -1534,9 +1536,9 @@ class Builder {
     // NOTE: Node order is important and is defined here
     const node: VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource = {
       type,
-      format: UrlUtils.fileExtensionFromUrl(url),
-      provider: UrlUtils.domainFromUrl(url),
-      url,
+      format: UrlUtils.fileExtensionFromUrl(value),
+      provider: UrlUtils.domainFromUrl(value),
+      value,
       width,
       height,
       duration,
@@ -1562,7 +1564,7 @@ class Builder {
 
   private articleLikeResource(data: {
     type: 'article' | 'article-link' | 'document' | 'document-link' | 'document-download';
-    url?: string; // url / href
+    value?: string; // url / href
     body?: string | undefined;
     license?: string;
     copyright?: string;
@@ -1575,7 +1577,7 @@ class Builder {
     | DocumentLinkResource
     | DocumentDownloadResource
     | undefined {
-    const { type, url, body, license, copyright, showInIndex, caption } = data;
+    const { type, value, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node:
@@ -1585,10 +1587,9 @@ class Builder {
       | DocumentLinkResource
       | DocumentDownloadResource = {
       type,
-      format: UrlUtils.fileExtensionFromUrl(url),
-      provider: UrlUtils.domainFromUrl(url),
-      url,
-      body,
+      format: UrlUtils.fileExtensionFromUrl(value),
+      provider: UrlUtils.domainFromUrl(value),
+      value,
       license,
       copyright,
       showInIndex,
@@ -1604,18 +1605,18 @@ class Builder {
 
   private appLikeResource(data: {
     type: 'app' | 'app-link';
-    url: string; // url / app
+    value: string; // url / app
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AppResource | AppLinkResource | undefined {
-    const { type, url, license, copyright, showInIndex, caption } = data;
+    const { type, value, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AppResource | AppLinkResource = {
       type,
-      url,
+      value,
       license,
       copyright,
       showInIndex,

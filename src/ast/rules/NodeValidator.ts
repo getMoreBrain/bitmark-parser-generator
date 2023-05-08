@@ -23,14 +23,10 @@ class NodeValidator {
 
     let ret: T | undefined = resource;
     let valid = false;
-    const resourceAsArticle = resource as ArticleResource;
 
     switch (resource.type) {
-      case BitType.article:
-        valid = !!resourceAsArticle.body;
-        break;
       default:
-        valid = !!resource.url;
+        valid = !!resource.value;
     }
 
     // Note: even if resource is invalid, we still return it as it is used to set the resource attachment type

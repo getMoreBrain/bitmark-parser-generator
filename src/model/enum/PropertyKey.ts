@@ -28,6 +28,7 @@ const PropertyKey = superenum({
   labelTrue: 'labelTrue', // single
   labelFalse: 'labelFalse', // single
   quotedPerson: 'quotedPerson', // single
+  partialAnswer: 'partialAnswer', // single
 
   toc: 'toc', // single
   progress: 'progress', // single

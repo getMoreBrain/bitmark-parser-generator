@@ -74,6 +74,7 @@ import { ResourceType, ResourceTypeType } from '../../model/enum/ResourceType';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { ParserError } from '../../model/parser/ParserError';
 import { ParserInfo } from '../../model/parser/ParserInfo';
+import { BitUtils } from '../../utils/BitUtils';
 import { StringUtils } from '../../utils/StringUtils';
 
 import {
@@ -98,8 +99,9 @@ import {
   MatrixCell,
   FooterText,
   BodyText,
+  HighlightText,
+  Highlight,
 } from '../../model/ast/Nodes';
-import { BitUtils } from '../../utils/BitUtils';
 
 // Debugging flags for helping develop and debug the parser
 const ENABLE_DEBUG = true;
@@ -113,6 +115,8 @@ const DEBUG_GAP_CONTENT = true; // Print the parsed gap content
 const DEBUG_GAP_TAGS = true; // Print the tags extracted from the parsed gap content
 const DEBUG_SELECT_CONTENT = true; // Print the parsed select content (true/false v2)
 const DEBUG_SELECT_TAGS = true; // Print the tags extracted from the parsed select content (true/false v2)
+const DEBUG_HIGHLIGHT_CONTENT = true; // Print the parsed select content (highlight text)
+const DEBUG_HIGHLIGHT_TAGS = true; // Print the tags extracted from the parsed select content (highlight text)
 const DEBUG_TRUE_FALSE_V1_CONTENT = true; // Print the parsed true/false (v1) content
 const DEBUG_TRUE_FALSE_V1_TAGS = true; // Print the tags extracted from the parsed true/false (v1) content
 const DEBUG_CHOICE_RESPONSE_V1_CONTENT = true; // Print the parsed choices/responses content
@@ -495,13 +499,19 @@ class BitmarkParserHelper {
     const finalResourceType = BitUtils.calculateResourceType(bitType, resourceType, undefined);
 
     if (resources) {
-      for (const r of resources) {
+      for (const r of resources.reverse()) {
         if (r.type === finalResourceType && !resource) {
           resource = r;
         } else {
           excessResources.push(r);
         }
       }
+    }
+
+    if (resourceType && !resource) {
+      this.addError(
+        `Resource type '&${resourceType}' specified in the bit header, but such a resource is not present in the bit`,
+      );
     }
 
     if (excessResources.length > 0) {
@@ -538,6 +548,35 @@ class BitmarkParserHelper {
     });
 
     return gap;
+  }
+
+  buildHighlight(bitType: BitTypeType, highlightContent: BitContent[]): Highlight | undefined {
+    if (DEBUG_HIGHLIGHT_CONTENT) this.debugPrint('highlight content', highlightContent);
+
+    const { trueFalse, ...tags } = this.typeKeyValueProcessor(bitType, highlightContent, [
+      TypeKey.True,
+      TypeKey.False,
+      TypeKey.Property,
+      TypeKey.ItemLead,
+      TypeKey.Instruction,
+      TypeKey.Hint,
+    ]);
+
+    if (DEBUG_HIGHLIGHT_TAGS) this.debugPrint('highlight TAGS', { trueFalse, ...tags });
+
+    const texts: HighlightText[] = [];
+    if (trueFalse) {
+      for (const tf of trueFalse) {
+        texts.push(builder.highlightText({ ...tf, isHighlighted: false }));
+      }
+    }
+
+    const highlight = builder.highlight({
+      texts,
+      ...tags,
+    });
+
+    return highlight;
   }
 
   buildSelect(bitType: BitTypeType, selectContent: BitContent[]): Select | undefined {
@@ -1335,7 +1374,8 @@ class BitmarkParserHelper {
               case PropertyKey.list:
               case PropertyKey.labelTrue:
               case PropertyKey.labelFalse:
-              case PropertyKey.quotedPerson: {
+              case PropertyKey.quotedPerson:
+              case PropertyKey.partialAnswer: {
                 // Trim specific string properties - It might be better NOT to do this, but ANTLR parser does it
                 addProperty(acc, key, ((value as string) ?? '').trim());
                 break;
@@ -1456,6 +1496,10 @@ class BitmarkParserHelper {
             if (tf.statements) statements.push(...tf.statements);
             if (tf.choices) choices.push(...tf.choices);
             if (tf.responses) responses.push(...tf.responses);
+          } else if (bitType === BitType.highlightText) {
+            // Treat as highlight text
+            const highlight = this.buildHighlight(bitType, value as BitContent[]);
+            if (highlight) bodyParts.push(highlight);
           } else {
             // Treat as select
             const select = this.buildSelect(bitType, value as BitContent[]);

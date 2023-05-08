@@ -6,8 +6,8 @@
       "item": "cl13",
       "hint": "",
       "example": "",
-      "isExample": false,
-      "body": "This sentence is a {0} with {1} gaps including an instruction for the first and a hint for the second ] gap means the start of bit [.match]\n::remark::\n\nEND\n::",
+      "isExample": true,
+      "body": "This sentence is a {0} with {1} gaps including an instruction for the first and a hint for the second ] gap means the start of bit [.match]\n::remark::\n[&audio:https://cdn.bitbook.education/cat.wmv]\nEND\n::",
       "placeholders": {
         "{0}": {
           "type": "gap",
@@ -30,40 +30,6 @@
           "isCaseSensitive": true
         }
       }
-    },
-    "parser": {
-      "excessResources": [
-        {
-          "type": "audio",
-          "audio": {
-            "format": "wmv",
-            "provider": "cdn.bitbook.education",
-            "src": "https://cdn.bitbook.education/cat.wmv",
-            "license": "",
-            "copyright": "",
-            "showInIndex": false,
-            "caption": ""
-          }
-        }
-      ],
-      "errors": [
-        {
-          "message": "1 excess resource(s) present in the bit. The bit resource type is 'NOT SET'",
-          "text": "[.cloze][%cl13] This sentence is a [_cloze][_gap text][!noun] with [_4][?1 or 2] gaps including an instruction for the first and a hint for the second ] gap means the start of bit [.match][@example]\n::remark::\n[&audio:https://cdn.bitbook.education/cat.wmv]\nEND\n::\n",
-          "location": {
-            "start": {
-              "offset": 0,
-              "line": 1,
-              "column": 1
-            },
-            "end": {
-              "offset": 264,
-              "line": 6,
-              "column": 1
-            }
-          }
-        }
-      ]
     },
     "bitmark": "[.cloze][%cl13] This sentence is a [_cloze][_gap text][!noun] with [_4][?1 or 2] gaps including an instruction for the first and a hint for the second ] gap means the start of bit [.match][@example]\n::remark::\n[&audio:https://cdn.bitbook.education/cat.wmv]\nEND\n::"
   }

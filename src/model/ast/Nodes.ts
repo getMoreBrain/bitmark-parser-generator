@@ -68,6 +68,7 @@ export interface Bit {
   labelTrue?: string[];
   labelFalse?: string[];
   quotedPerson?: string[];
+  partialAnswer?: string[];
   extraProperties?: ExtraProperties;
   book?: string;
   title?: string;
@@ -197,7 +198,7 @@ export interface Question {
 export interface Resource {
   type: ResourceTypeType;
   format?: string;
-  url?: string;
+  value?: string; // url / src / body / etc
   license?: string;
   copyright?: string;
   provider?: string;
@@ -236,7 +237,6 @@ export interface VideoLikeResource extends Resource {
 
 export interface ArticleLikeResource extends Resource {
   type: 'article' | 'article-link' | 'document' | 'document-link' | 'document-download';
-  body?: string;
 }
 
 export interface AppLikeResource extends Resource {

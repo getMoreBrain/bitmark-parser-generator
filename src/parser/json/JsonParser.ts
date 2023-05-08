@@ -673,7 +673,7 @@ class JsonParser {
         type,
 
         // Generic (except Article / Document)
-        url,
+        value: url,
 
         // ImageLikeResource / AudioLikeResource / VideoLikeResource / Article / Document
         format: data.format,

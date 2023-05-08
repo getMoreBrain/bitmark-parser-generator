@@ -1,11 +1,11 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeType } from '../../model/ast/NodeType';
-import { ExtraProperties, Matrix, Pair, Question, Quiz } from '../../model/ast/Nodes';
+import { ExtraProperties, Highlight, Matrix, Pair, Question, Quiz } from '../../model/ast/Nodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
-import { GapJson, SelectJson, SelectOptionJson } from '../../model/json/BodyBitJson';
+import { GapJson, HighlightJson, HighlightTextJson, SelectJson, SelectOptionJson } from '../../model/json/BodyBitJson';
 import { ParserJson } from '../../model/json/ParserJson';
 import { ParserError } from '../../model/parser/ParserError';
 import { ParserInfo } from '../../model/parser/ParserInfo';
@@ -438,6 +438,12 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (node.value != null) this.addProperty(this.bitJson, 'quotedPerson', node.value, true);
   }
 
+  //  bitmark -> bits -> bitsValue -> partialAnswer
+
+  protected enter_partialAnswer(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value != null) this.addProperty(this.bitJson, 'partialAnswer', node.value, true);
+  }
+
   //  bitmark -> bits -> bitsValue -> levelProperty
 
   protected enter_levelProperty(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -460,6 +466,22 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
   protected enter_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'sampleSolution', node.value);
+  }
+
+  // bitmark -> bits -> bitsValue -> example
+
+  protected enter_example(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const example = node.value as boolean | undefined;
+
+    // Ignore example that is not at the bit level as it are handled elsewhere
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    if (Array.isArray(example) && example.length > 0) {
+      this.addProperty(this.bitJson, 'isExample', true, true);
+      let exampleStr = example[example.length - 1];
+      exampleStr = (StringUtils.isString(exampleStr) ? exampleStr : '') ?? '';
+      this.addProperty(this.bitJson, 'example', exampleStr, true);
+    }
   }
 
   // bitmark -> bits -> bitsValue -> itemLead
@@ -563,6 +585,78 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   // }
 
   // // bitmark -> bits -> bitsValue -> body -> bodyValue -> gap -> solutions
+
+  // bitmark -> bits -> bitsValue -> body -> bodyValue -> highlight
+
+  protected enter_highlight(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const highlight = node.value as Highlight['highlight'];
+
+    // Ensure placeholders exists
+    if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
+
+    // Ensure body exists
+    if (this.bitJson.body == null) this.bitJson.body = '';
+
+    // Add the placeholder to the body
+    const placeholder = `{${this.placeholderIndex}}`;
+    this.bitJson.body += placeholder;
+    this.placeholderIndex++;
+
+    // Create the select options
+    const texts: HighlightTextJson[] = [];
+    for (const text of highlight.texts) {
+      const textJson: Partial<HighlightTextJson> = {
+        text: text.text,
+        isCorrect: text.isCorrect ?? false,
+        isHighlighted: text.isHighlighted ?? false,
+        // item: select.itemLead?.item ?? '',
+        // lead: select.itemLead?.lead ?? '',
+        // hint: select.hint ?? '',
+        // instruction: select.instruction ?? '',
+        // isExample: !!select.example,
+        // example: StringUtils.isString(select.example) ? (select.example as string) : '',
+        item: text.itemLead?.item ?? '',
+        lead: text.itemLead?.lead ?? '',
+        hint: text.hint ?? '',
+        instruction: text.instruction ?? '',
+        isExample: !!text.example,
+        example: StringUtils.isString(text.example) ? (text.example as string) : '',
+        // isCaseSensitive: select.isCaseSensitive ?? true,
+        //
+      };
+
+      // Remove unwanted properties
+      if (!textJson.item) delete textJson.item;
+      if (!textJson.lead) delete textJson.lead;
+      if (!textJson.hint) delete textJson.hint;
+      if (!textJson.example) delete textJson.example;
+      if (!textJson.isExample) delete textJson.isExample;
+      if (!textJson.isCaseSensitive) delete textJson.isCaseSensitive;
+
+      texts.push(textJson as HighlightTextJson);
+    }
+
+    // Create the select
+    const highlightJson: Partial<HighlightJson> = {
+      type: 'highlight',
+      prefix: highlight.prefix ?? '',
+      texts,
+      postfix: highlight.postfix ?? '',
+      item: highlight.itemLead?.item ?? '',
+      lead: highlight.itemLead?.lead ?? '',
+      hint: highlight.hint ?? '',
+      instruction: highlight.instruction ?? '',
+      isExample: !!highlight.example,
+      example: StringUtils.isString(highlight.example) ? (highlight.example as string) : '',
+      //
+    };
+
+    // Remove unwanted properties
+    if (!highlightJson.lead) delete highlightJson.lead;
+
+    // Add the gap to the placeholders
+    this.bitJson.placeholders[placeholder] = highlightJson as HighlightJson;
+  }
 
   // bitmark -> bits -> bitsValue -> body -> bodyValue -> select
 
@@ -1291,17 +1385,6 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (instruction != null) this.addProperty(this.bitJson, 'instruction', instruction ?? '', true);
   }
 
-  // bitmark -> bits -> bitsValue ->  * -> example
-
-  protected leaf_example(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const example = node.value as boolean | undefined;
-
-    // Ignore example that is not at the bit level as it are handled elsewhere
-    if (parent?.key !== NodeType.bitsValue) return;
-
-    if (example != null) this.addProperty(this.bitJson, 'example', example ?? true, true);
-  }
-
   // bitmark -> bits -> body -> bodyValue -> bodyText
 
   protected leaf_bodyText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1575,17 +1658,11 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   }
 
   protected parseResourceToJson(resource: Resource | undefined): ResourceJson | undefined {
-    const resourceAsArticle = resource as ArticleResource;
-
     if (!resource) return undefined;
 
     // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
     let valid = false;
-    if (resource.type === ResourceType.article && resourceAsArticle.body) {
-      // Article with body
-      valid = true;
-    } else if (resource.url) {
-      // Other resource with a url (url / src / app / ...etc)
+    if (resource.value) {
       valid = true;
     }
 
@@ -1604,7 +1681,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         break;
 
       case ResourceType.imageLink:
-        (resourceJson as ImageLinkResourceWrapperJson).imageLink = this.addImageLikeResource(resource as ImageResource);
+        (resourceJson as ImageLinkResourceWrapperJson).imageLink = this.addImageLinkLikeResource(
+          resource as ImageResource,
+        );
         break;
 
       case ResourceType.audio:
@@ -1668,7 +1747,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         break;
 
       case ResourceType.app:
-        (resourceJson as AppResourceWrapperJson).app = resource.url ?? '';
+        (resourceJson as AppResourceWrapperJson).app = resource.value ?? '';
         break;
 
       case ResourceType.appLink:
@@ -1687,16 +1766,16 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return resourceJson as ResourceJson;
   }
 
-  protected addImageLikeResource(resource: ImageResource | string): ImageResourceJson | ImageLinkResourceJson {
-    const resourceJson: Partial<ImageResourceJson | ImageLinkResourceJson> = {};
+  protected addImageLikeResource(resource: ImageResource | string): ImageResourceJson {
+    const resourceJson: Partial<ImageResourceJson> = {};
 
     if (StringUtils.isString(resource)) {
-      const url = resource as string;
+      const value = resource as string;
       resource = {
         type: ResourceType.image,
-        url,
-        format: UrlUtils.fileExtensionFromUrl(url),
-        provider: UrlUtils.domainFromUrl(url),
+        value,
+        format: UrlUtils.fileExtensionFromUrl(value),
+        provider: UrlUtils.domainFromUrl(value),
       };
     }
 
@@ -1704,7 +1783,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.url != null) resourceJson.src = resource.url;
+    if (resource.value != null) resourceJson.src = resource.value;
     if (resource.src1x != null) resourceJson.src1x = resource.src1x;
     if (resource.src2x != null) resourceJson.src2x = resource.src2x;
     if (resource.src3x != null) resourceJson.src3x = resource.src3x;
@@ -1715,7 +1794,38 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
 
-    return resourceJson as ImageResourceJson | ImageLinkResourceJson;
+    return resourceJson as ImageResourceJson;
+  }
+
+  protected addImageLinkLikeResource(resource: ImageResource | string): ImageLinkResourceJson {
+    const resourceJson: Partial<ImageLinkResourceJson> = {};
+
+    if (StringUtils.isString(resource)) {
+      const value = resource as string;
+      resource = {
+        type: ResourceType.image,
+        value,
+        format: UrlUtils.fileExtensionFromUrl(value),
+        provider: UrlUtils.domainFromUrl(value),
+      };
+    }
+
+    resource = resource as ImageResource; // Keep TS compiler happy
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.url = resource.value;
+    if (resource.src1x != null) resourceJson.src1x = resource.src1x;
+    if (resource.src2x != null) resourceJson.src2x = resource.src2x;
+    if (resource.src3x != null) resourceJson.src3x = resource.src3x;
+    if (resource.src4x != null) resourceJson.src4x = resource.src4x;
+    resourceJson.width = resource.width ?? null;
+    resourceJson.height = resource.height ?? null;
+    resourceJson.alt = resource.alt ?? '';
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as ImageLinkResourceJson;
   }
 
   protected addAudioLikeResource(resource: AudioResource): AudioResourceJson {
@@ -1723,7 +1833,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.url != null) resourceJson.src = resource.url;
+    if (resource.value != null) resourceJson.src = resource.value;
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
 
@@ -1735,7 +1845,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.url != null) resourceJson.url = resource.url;
+    if (resource.value != null) resourceJson.url = resource.value;
 
     // Properties that are always added that do not come from the markup
     resourceJson.duration = '';
@@ -1751,7 +1861,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.url != null) resourceJson.src = resource.url;
+    if (resource.value != null) resourceJson.src = resource.value;
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
 
@@ -1781,7 +1891,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.url != null) resourceJson.url = resource.url;
+    if (resource.value != null) resourceJson.url = resource.value;
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
 
@@ -1811,7 +1921,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.url != null) resourceJson.body = resource.url;
+    if (resource.value != null) resourceJson.body = resource.value;
     // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
@@ -1826,7 +1936,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.url != null) resourceJson.url = resource.url;
+    if (resource.value != null) resourceJson.url = resource.value;
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
 
@@ -1837,7 +1947,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     const resourceJson: Partial<AppLinkResourceJson> = {};
 
     // if (resource.format != null) resourceJson.format = resource.format;
-    if (resource.url != null) resourceJson.app = resource.url;
+    if (resource.value != null) resourceJson.app = resource.value;
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
 
@@ -1848,7 +1958,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     const resourceJson: Partial<WebsiteLinkResourceJson> = {};
 
     // if (resource.format != null) resourceJson.format = resource.format;
-    if (resource.url != null) resourceJson.url = resource.url;
+    if (resource.value != null) resourceJson.url = resource.value;
     if (resource.siteName != null) resourceJson.siteName = resource.siteName;
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
@@ -1968,6 +2078,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       labelTrue: undefined,
       labelFalse: undefined,
       quotedPerson: undefined,
+      partialAnswer: undefined,
 
       // Book data
       title: undefined,
@@ -2006,7 +2117,6 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       statement: undefined,
       isCorrect: undefined,
       sampleSolution: undefined,
-      partialAnswer: undefined,
       elements: undefined,
       statements: undefined,
       responses: undefined,
@@ -2025,14 +2135,14 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     };
 
     // Add the resource template if there should be a resource (indicated by resourceType) but there is none defined.
-    if (bit.resourceType && !bitJson.resource) {
-      const jsonKey = ResourceType.keyFromValue(bit.resourceType);
-      bitJson.resource = {
-        type: bit.resourceType,
-      } as ResourceJson;
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      if (jsonKey) (bitJson.resource as any)[jsonKey] = {};
-    }
+    // if (bit.resourceType && !bitJson.resource) {
+    //   const jsonKey = ResourceType.keyFromValue(bit.resourceType);
+    //   bitJson.resource = {
+    //     type: bit.resourceType,
+    //   } as ResourceJson;
+    //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    //   if (jsonKey) (bitJson.resource as any)[jsonKey] = {};
+    // }
 
     return bitJson;
   }

@@ -169,7 +169,7 @@ ResourceTags
 
 // The bit header, e.g. [.interview&image:bitmark++], [.interview:bitmark--&image], [.cloze]
 ResourceTag
-  = "[&" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Resource, key, url: value } }
+  = "[&" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Resource, key, value } }
 
 // Resource Extra Data Tag
 ResourcePropertyTag

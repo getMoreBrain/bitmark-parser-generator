@@ -10,11 +10,7 @@
       "item": "05_Ablauf und Termine_022 (Freitext)",
       "hint": "Korrekte Lösung \n18 Monate. (Hinweis: Für die Berechnung kann das Zeichnen eines Gantt-Diagramms hilfreich sein.)",
       "isExample": false,
-      "example": "",
-      "resource": {
-        "type": "image",
-        "image": {}
-      }
+      "example": ""
     },
     "parser": {
       "excessResources": [

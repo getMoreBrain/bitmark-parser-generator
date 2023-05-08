@@ -7,25 +7,7 @@
       "hint": "",
       "example": "",
       "isExample": false,
-      "body": "This sentence is a {0} with {1} gaps including an instruction for the first and a hint for the second ] gap  means the start of bit\n::remark::\n\nEND\n::",
-      "resource": {
-        "type": "image",
-        "image": {
-          "format": "jpg",
-          "provider": "cdn.bitbook.education",
-          "src": "https://cdn.bitbook.education/cat.jpg",
-          "src2x": "https://cdn.bitbook.education/cat2.jpg",
-          "src3x": "https://cdn.bitbook.education/cat3.jpg",
-          "src4x": "https://cdn.bitbook.education/cat4.jpg",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": ""
-        }
-      },
+      "body": "This sentence is a {0} with {1} gaps including an instruction for the first and a hint for the second ] gap  means the start of bit\n::remark::\n[&image:https://cdn.bitbook.education/cat.jpg][@src2x:https://cdn.bitbook.education/cat2.jpg][@src3x:https://cdn.bitbook.education/cat3.jpg][@src4x:https://cdn.bitbook.education/cat4.jpg]\nEND\n::",
       "placeholders": {
         "{0}": {
           "type": "gap",

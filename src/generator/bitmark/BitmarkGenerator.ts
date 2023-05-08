@@ -891,8 +891,8 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
   protected enter_posterImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const posterImage = node.value as ImageResource;
-    if (posterImage && posterImage.url) {
-      this.writeProperty('posterImage', posterImage.url);
+    if (posterImage && posterImage.value) {
+      this.writeProperty('posterImage', posterImage.value);
     }
   }
 
@@ -921,7 +921,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     const level = bit.level || 1;
     if (level && title) {
       this.writeOP();
-      for (let i = 0; i < level; i++) this.writeHash();
+      for (let i = 0; i < +level; i++) this.writeHash();
       this.writeString(title);
       this.writeCL();
     }
@@ -1377,11 +1377,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     if (resource) {
       // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
       let valid = false;
-      if (resource.type === ResourceType.article && resourceAsArticle.body) {
-        // Article with body
-        valid = true;
-      } else if (resource.url) {
-        // Other resource with a url (url / src / app / ...etc)
+      if (resource.value) {
         valid = true;
       }
 
@@ -1390,14 +1386,14 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
       this.writeOPAMP();
       this.writeString(resource.type);
-      if (resource.type === ResourceType.article && resourceAsArticle.body) {
+      if (resource.type === ResourceType.article && resourceAsArticle.value) {
         this.writeColon();
         // this.writeNL();
-        this.writeString(resourceAsArticle.body);
+        this.writeString(resourceAsArticle.value);
         this.writeNL();
-      } else if (resource.url) {
+      } else if (resource.value) {
         this.writeColon();
-        this.writeString(resource.url);
+        this.writeString(resource.value);
       }
       this.writeCL();
     }

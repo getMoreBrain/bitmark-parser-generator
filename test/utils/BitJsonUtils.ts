@@ -17,6 +17,8 @@ class BitJsonUtils {
       for (const bw of bitWrappers) {
         if (options.removeMarkup) delete bw.bitmark;
         if (options.removeParser) delete bw.parser;
+        delete bw.example;
+
         const bit = bw.bit;
         if (bit) {
           // Clean bit
@@ -40,6 +42,9 @@ class BitJsonUtils {
 
             // Delete the defaults - ignored for testing
             for (const resource of resourcesToClean) {
+              if (!resource.width) delete resource.width;
+              if (!resource.height) delete resource.height;
+
               if (!resource.license) delete resource.license;
               if (!resource.copyright) delete resource.copyright;
               if (!resource.provider) delete resource.provider;
@@ -52,6 +57,8 @@ class BitJsonUtils {
               if (!resource.autoplay) delete resource.autoplay;
               if (!resource.mute) delete resource.mute;
               if (!resource.alt) delete resource.alt;
+
+              if (!resource.href) delete resource.href;
 
               // Ignore provider and format because they are generated (sometimes incorrectly by ANTLR parser)
               delete resource.provider;
