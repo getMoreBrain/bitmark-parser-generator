@@ -56,6 +56,7 @@ import {
   AudioResourceJson,
   AudioResourceWrapperJson,
   BaseResourceJson,
+  DocumentDownloadResourceWrapperJson,
   DocumentLinkResourceJson,
   DocumentLinkResourceWrapperJson,
   DocumentResourceJson,
@@ -296,7 +297,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> bitsValue -> computerLanguage
 
   protected enter_computerLanguage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'computerLanguage', node.value);
+    if (node.value != null) this.addProperty(this.bitJson, 'computerLanguage', node.value, true);
   }
 
   // bitmark -> bits -> bitsValue -> coverImage
@@ -321,6 +322,12 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
   protected enter_author(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'author', node.value);
+  }
+
+  // bitmark -> bits -> bitsValue -> subject
+
+  protected enter_subject(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value != null) this.addProperty(this.bitJson, 'subject', node.value);
   }
 
   // bitmark -> bits -> bitsValue -> date
@@ -431,6 +438,24 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (node.value != null) this.addProperty(this.bitJson, 'quotedPerson', node.value, true);
   }
 
+  //  bitmark -> bits -> bitsValue -> levelProperty
+
+  protected enter_levelProperty(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value != null) this.addProperty(this.bitJson, 'level', node.value, true);
+  }
+
+  // bitmark -> bits -> bitsValue -> toc
+
+  protected enter_toc(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value != null) this.addProperty(this.bitJson, 'toc', node.value, true);
+  }
+
+  // bitmark -> bits -> bitsValue -> progress
+
+  protected enter_progress(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (node.value != null) this.addProperty(this.bitJson, 'progress', node.value, true);
+  }
+
   // bitmark -> bits -> bitsValue -> sampleSolution
 
   protected enter_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -457,7 +482,11 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (extraProperties) {
       for (const [key, values] of Object.entries(extraProperties)) {
-        this.addProperty(this.bitJson, key, values);
+        let k = key;
+        if (Object.prototype.hasOwnProperty.call(this.bitJson, key)) {
+          k = `_${key}`;
+        }
+        this.addProperty(this.bitJson, k, values);
       }
     }
   }
@@ -1621,13 +1650,19 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         break;
 
       case ResourceType.document:
-        (resourceJson as DocumentResourceWrapperJson).document = this.addArticleLikeResource(
+        (resourceJson as DocumentResourceWrapperJson).document = this.addArticleLinkLikeResource(
           resource as ArticleResource,
         );
         break;
 
       case ResourceType.documentLink:
         (resourceJson as DocumentLinkResourceWrapperJson).documentLink = this.addArticleLinkLikeResource(
+          resource as ArticleResource,
+        );
+        break;
+
+      case ResourceType.documentDownload:
+        (resourceJson as DocumentDownloadResourceWrapperJson).documentDownload = this.addArticleLinkLikeResource(
           resource as ArticleResource,
         );
         break;
@@ -1771,7 +1806,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return resourceJson as VideoLinkResourceJson;
   }
 
-  protected addArticleLikeResource(resource: ArticleResource): ArticleResourceJson | DocumentResourceJson {
+  protected addArticleLikeResource(resource: ArticleResource): ArticleResourceJson {
     const resourceJson: Partial<ArticleResourceJson | DocumentResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
@@ -1784,8 +1819,10 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return resourceJson as ArticleResourceJson | DocumentResourceJson;
   }
 
-  protected addArticleLinkLikeResource(resource: ArticleResource): ArticleLikeResourceJson | DocumentLinkResourceJson {
-    const resourceJson: Partial<ArticleLikeResourceJson | DocumentLinkResourceJson> = {};
+  protected addArticleLinkLikeResource(
+    resource: ArticleResource,
+  ): ArticleLikeResourceJson | DocumentResourceJson | DocumentLinkResourceJson {
+    const resourceJson: Partial<ArticleLikeResourceJson | DocumentResourceJson | DocumentLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
@@ -1793,7 +1830,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
 
-    return resourceJson as ArticleLikeResourceJson | DocumentLinkResourceJson;
+    return resourceJson as ArticleLikeResourceJson | DocumentResourceJson | DocumentLinkResourceJson;
   }
 
   protected addAppLinkLikeResource(resource: AppResource): AppLinkResourceJson {
@@ -1915,6 +1952,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       publisher: undefined,
       publications: undefined,
       author: undefined,
+      subject: undefined,
       date: undefined,
       location: undefined,
       theme: undefined,
@@ -2021,23 +2059,65 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         break;
 
       case BitType.assignment:
+      case BitType.bitAlias:
+      case BitType.blogArticle:
       case BitType.book:
+      case BitType.bookAcknowledgments:
+      case BitType.bookAddendum:
+      case BitType.bookAfterword:
+      case BitType.bookAppendix:
+      case BitType.bookArticle:
+      case BitType.bookAutherBio:
+      case BitType.bookBibliography:
+      case BitType.bookComingSoon:
+      case BitType.bookConclusion:
+      case BitType.bookCopyright:
+      case BitType.bookCopyrightPermissions:
+      case BitType.bookDedication:
+      case BitType.bookEndnotes:
+      case BitType.bookEpigraph:
+      case BitType.bookEpilogue:
+      case BitType.bookForword:
+      case BitType.bookFrontispiece:
+      case BitType.bookIncitingIncident:
+      case BitType.bookIntroduction:
+      case BitType.bookListOfContributors:
+      case BitType.bookNotes:
+      case BitType.bookPostscript:
+      case BitType.bookPreface:
+      case BitType.bookPrologue:
+      case BitType.bookReadMore:
+      case BitType.bookReferenceList:
+      case BitType.bookRequestForABookReview:
+      case BitType.bookSummary:
+      case BitType.bookTeaser:
+      case BitType.bookTitle:
+      case BitType.card1:
       case BitType.cloze:
       case BitType.clozeInstructionGrouped:
       case BitType.clozeSolutionGrouped:
+      case BitType.code:
+      case BitType.document:
+      case BitType.documentLink:
+      case BitType.documentDownload:
       case BitType.example:
       case BitType.help:
       case BitType.hint:
       case BitType.info:
       case BitType.internalLink:
+      case BitType.newspaperArticle:
       case BitType.note:
+      case BitType.notebookArticle:
       case BitType.preparationNote:
+      case BitType.question1:
       case BitType.quote:
       case BitType.releaseNote:
       case BitType.remark:
+      case BitType.summary:
       case BitType.sideNote:
       case BitType.takePicture:
       case BitType.video:
+      case BitType.workbookArticle:
         if (bitJson.item == null) bitJson.item = '';
         if (bitJson.hint == null) bitJson.hint = '';
         if (bitJson.isExample == null) bitJson.isExample = false;
@@ -2155,6 +2235,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (bitJson.publisher == null) delete bitJson.publisher;
     if (bitJson.publications == null) delete bitJson.publications;
     if (bitJson.author == null) delete bitJson.author;
+    if (bitJson.subject == null) delete bitJson.subject;
     if (bitJson.date == null) delete bitJson.date;
     if (bitJson.location == null) delete bitJson.location;
     if (bitJson.theme == null) delete bitJson.theme;

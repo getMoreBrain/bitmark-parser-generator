@@ -1,33 +1,48 @@
 [
   {
-    "bitmark": "[.essay&article]\n[!Fassen Sie den Text kurz mit eigenen Worten zusammen.]",
+    "bitmark": "[.  essay]\n[%ess1]\n[! What is an essay?]\n\n::rema:rk::\nYes. Choices are missing\nMany things are wrong.\nPlease be aware, that the item  is possible at different places\n\nOne per bit for the bit itself.\nOne per \"line\" if a quiz supports/is using \"lines\" (separated blocks by ===.\nBut item can also be chained.\nBut that's not what we want. Bit still valid.\nThis is a [_cloze][%a)] with [_two][%b)] gaps.\nIt would we \"acceptable\" to write this as This is a *a)* [_cloze] with *b)* [_two] gaps.\nANd some more :: tesxt",
     "bit": {
       "type": "essay",
       "format": "bitmark--",
-      "instruction": "Fassen Sie den Text kurz mit eigenen Worten zusammen.",
+      "instruction": "What is an essay?",
       "partialAnswer": "",
-      "body": "",
-      "item": "",
+      "body": "::rema:rk::\nYes. Choices are missing\nMany things are wrong.\nPlease be aware, that the item  is possible at different places\n\nOne per bit for the bit itself.\nOne per \"line\" if a quiz supports/is using \"lines\" (separated blocks by ===.\nBut item can also be chained.\nBut that's not what we want. Bit still valid.\nThis is a [_cloze][%a)] with [_two][%b)] gaps.\nIt would we \"acceptable\" to write this as This is a *a)* [_cloze] with *b)* [_two] gaps.\nANd some more :: tesxt",
+      "item": "ess1",
       "hint": "",
       "isExample": false,
       "example": ""
-    }
-  },
-  {
-    "bitmark": "[.article:bitmark++]\n**Erfolg um jeden Preis**\n\nImmer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.\n\n[&image:http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg]\n\nWas sind dagegen ein paar anabole Steroide ==anabole Steroide==(*synthetisch hergestellte Mittel zur Leistungssteigerung)==",
-    "bit": {
-      "type": "article",
-      "format": "bitmark++",
-      "body": "**Erfolg um jeden Preis**\n\nImmer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.\n\n\n\nWas sind dagegen ein paar anabole Steroide ==anabole Steroide==(*synthetisch hergestellte Mittel zur Leistungssteigerung)=="
     },
-    "parser": {
-      "excessResources": [
-        {
-          "type": "image",
-          "format": "jpg",
-          "src": "http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg"
-        }
-      ]
-    }
+    "errors": [
+      {
+        "message": "Unexpected input '::'",
+        "line": 5,
+        "column": 0,
+        "errorLine": "::rema:rk::"
+      },
+      {
+        "message": "Unexpected input '::'",
+        "line": 5,
+        "column": 9,
+        "errorLine": "::rema:rk::"
+      },
+      {
+        "message": "Unexpected input 'This is a [_'",
+        "line": 14,
+        "column": 10,
+        "errorLine": "This is a [_cloze][%a)] with [_two][%b)] gaps."
+      },
+      {
+        "message": "Unexpected input '[_'",
+        "line": 14,
+        "column": 10,
+        "errorLine": "This is a [_cloze][%a)] with [_two][%b)] gaps."
+      },
+      {
+        "message": "Rule violation around ']'",
+        "line": 14,
+        "column": 17,
+        "errorLine": "This is a [_cloze][%a)] with [_two][%b)] gaps."
+      }
+    ]
   }
 ]

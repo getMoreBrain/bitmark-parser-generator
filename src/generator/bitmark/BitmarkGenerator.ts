@@ -299,6 +299,12 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     this.writeProperty('author', node.value);
   }
 
+  // bitmark -> bits -> bitsValue -> subject
+
+  protected enter_subject(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('subject', node.value);
+  }
+
   // bitmark -> bits -> bitsValue -> date
 
   protected enter_date(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {

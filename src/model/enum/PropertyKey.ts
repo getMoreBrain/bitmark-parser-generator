@@ -10,6 +10,7 @@ const PropertyKey = superenum({
   publisher: 'publisher',
   publications: 'publications',
   author: 'author',
+  subject: 'subject', // Not sure if 'subject' is a supported property key
   date: 'date',
   location: 'location',
   theme: 'theme',
@@ -28,7 +29,9 @@ const PropertyKey = superenum({
   labelFalse: 'labelFalse', // single
   quotedPerson: 'quotedPerson', // single
 
+  toc: 'toc', // single
   progress: 'progress', // single
+  level: 'level', // single
 
   // Gap / Select
   example: 'example', // single

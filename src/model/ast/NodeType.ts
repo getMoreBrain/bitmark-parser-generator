@@ -59,6 +59,7 @@ const NodeType = superenum({
   bitType: 'bitType', // bit type
   textFormat: 'textFormat',
 
+  // Properties
   id: 'id',
   idValue: 'idValue',
   externalId: 'externalId',
@@ -77,6 +78,8 @@ const NodeType = superenum({
   publicationsValue: 'publicationsValue',
   author: 'author',
   authorValue: 'authorValue',
+  subject: 'subject',
+  subjectValue: 'subjectValue',
   date: 'date',
   dateValue: 'dateValue',
   location: 'location',
@@ -115,11 +118,17 @@ const NodeType = superenum({
   instruction: 'instruction',
   example: 'example',
 
+  extraProperties: 'extraProperties',
+
   title: 'title',
   subtitle: 'subtitle',
   level: 'level',
   toc: 'toc',
+  tocValue: 'tocValue',
   progress: 'progress',
+  progressValue: 'progressValue',
+  levelProperty: 'levelProperty',
+  levelPropertyValue: 'LevelPropertyValue',
   anchor: 'anchor',
   reference: 'reference',
   referenceEnd: 'referenceEnd',

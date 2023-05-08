@@ -108,15 +108,15 @@ StandardTagsChain
 
 // Chained bit tag
 ChainedBitTag
- = WS* value: BitTag { return value }
+ = WSL* value: BitTag { return value }
 
 // Bit tag
 BitTag
-  = value: (TitleTag / CommentTag / AnchorTag / ReferenceTag / PropertyTag / ItemLeadTag / InstructionTag / HintTag / ResourceTags) { return value }
+  = value: (CommentTag / RemarkTag / TitleTag / AnchorTag / ReferenceTag / PropertyTag / ItemLeadTag / InstructionTag / HintTag / ResourceTags) { return value }
 
 // Line of Body of the bit
 BodyChar
-  = value: (Char / NL) { return { type: TypeKey.BodyChar, value: value } }
+  = value: . { return { type: TypeKey.BodyChar, value: value } }
 
 // CardSet
 CardSet
@@ -158,7 +158,7 @@ CardContentTags
 
 // Line of Body of the card
 CardChar
-  = value: (Char / NL) { return { type: TypeKey.CardChar, value: value } }
+  = value: . { return { type: TypeKey.CardChar, value: value } }
 
 
 //
@@ -182,7 +182,7 @@ ResourcePropertyTag
 
 // Gap tags chain
 GapTagsChain
-  = value: ClozeTag+ others: (ChainedItemLeadTag / ChainedInstructionTag / ChainedHintTag / ChainedPropertyTag)* { return { type: TypeKey.GapChain, value: [...value, ...others] }; }
+  = value: ClozeTag+ others: (ClozeTag / ChainedItemLeadTag / ChainedInstructionTag / ChainedHintTag / ChainedPropertyTag)* { return { type: TypeKey.GapChain, value: [...value, ...others] }; }
 
 // True/False tags chain
 TrueFalseTagsChain
@@ -237,9 +237,14 @@ SampleSolutionTag
 ClozeTag
   = "[_" value: Tag_Value "]" { return { type: TypeKey.Cloze, value } }
 
+// Remark (unparsed body)
+RemarkTag
+  = value: $("::" RemarkTag_Key "::" RemarkTag_Value "::") { return { type: TypeKey.BodyText, value } }
+
 // Comment Tag
 CommentTag
   = "||" value: Comment_Value "||" { return { type: TypeKey.Comment, value } }
+
 
 
 //
@@ -271,17 +276,23 @@ Tag_Value
   = value: $[^\]]* { return value }
 
 KeyValueTag_Key
-  = value: $[^:\]]* { return value }
+  = value: $[^:\]]* { return value ? value.trim() : '' }
 
 Bit_Value
-  = value: $[^&:\]]* { return value }
+  = value: $[^&:\]]* { return value ? value.trim() : null }
 
 KeyValueTag_Value
-  = ":" value: Tag_Value { return value }
+  = ":" value: Tag_Value { return value ? value.trim() : '' }
   / '' { return true }
 
+RemarkTag_Key
+  = value: $(!"::" Char)* { return value }
+
+RemarkTag_Value
+  = value: $(!"::" .)* { return value }
+
 Comment_Value
-  = value: $[^||]* { return value }
+  = value: $(!"||" .)* { return value }
 
 //
 // Enumerations
@@ -309,7 +320,7 @@ Line "Line"
  = Char*
 
 WSL "whitespace in line"
-  = [ \t]*
+  = [ \t]
 
 // Match an empty line, including the line terminator
 BlankLine "Blank Line"

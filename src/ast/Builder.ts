@@ -1,8 +1,10 @@
-import { BitTypeType } from '../model/enum/BitType';
+import { BitType, BitTypeType } from '../model/enum/BitType';
 import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
 import { TextFormatType, TextFormat } from '../model/enum/TextFormat';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
+import { ArrayUtils } from '../utils/ArrayUtils';
+import { BitUtils } from '../utils/BitUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { UrlUtils } from '../utils/UrlUtils';
 
@@ -47,6 +49,7 @@ import {
   WebsiteLinkResource,
   ItemLead,
   ExtraProperties,
+  DocumentDownloadResource,
 } from '../model/ast/Nodes';
 
 interface RemoveUnwantedPropertiesOptions {
@@ -96,6 +99,7 @@ class Builder {
     publisher?: string | string[];
     publications?: string | string[];
     author?: string | string[];
+    subject?: string | string[];
     date?: string | string[];
     location?: string | string[];
     theme?: string | string[];
@@ -112,13 +116,11 @@ class Builder {
     labelTrue?: string | string[];
     labelFalse?: string | string[];
     quotedPerson?: string | string[];
-    extraProperties?: {
-      [key: string]: unknown | unknown[];
-    };
+    levelProperty?: string | string[];
     book?: string;
     title?: string;
     subtitle?: string;
-    level?: number;
+    level?: number | string;
     toc?: boolean;
     progress?: boolean;
     anchor?: string;
@@ -131,6 +133,9 @@ class Builder {
     hint?: string;
     instruction?: string;
     example?: string | boolean;
+    extraProperties?: {
+      [key: string]: unknown | unknown[];
+    };
     resource?: Resource;
     body?: Body;
     sampleSolution?: string | string[];
@@ -162,6 +167,7 @@ class Builder {
       publisher,
       publications,
       author,
+      subject,
       date,
       location,
       theme,
@@ -177,9 +183,9 @@ class Builder {
       list,
       labelTrue,
       labelFalse,
-      extraProperties,
       book,
       quotedPerson,
+      levelProperty,
       title,
       subtitle,
       level,
@@ -193,6 +199,7 @@ class Builder {
       hint,
       instruction,
       example,
+      extraProperties,
       resource,
       body,
       sampleSolution,
@@ -216,34 +223,36 @@ class Builder {
     const node: Bit = {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
-      resourceType: resource?.type ?? ResourceType.fromValue(resourceType),
-      id: this.asArray(id),
-      externalId: this.asArray(externalId),
+      resourceType: BitUtils.calculateResourceType(bitType, resourceType, resource),
+      id: ArrayUtils.asArray(id),
+      externalId: ArrayUtils.asArray(externalId),
       book,
-      ageRange: this.asArray(ageRange),
-      language: this.asArray(language),
-      computerLanguage: this.asArray(computerLanguage),
-      coverImage: this.asArray(coverImage),
-      publisher: this.asArray(publisher),
-      publications: this.asArray(publications),
-      author: this.asArray(author),
-      date: this.asArray(date),
-      location: this.asArray(location),
-      theme: this.asArray(theme),
-      kind: this.asArray(kind),
-      action: this.asArray(action),
-      thumbImage: this.asArray(thumbImage),
-      deeplink: this.asArray(deepLink),
-      externalLink: this.asArray(externalLink),
-      externalLinkText: this.asArray(externalLinkText),
-      videoCallLink: this.asArray(videoCallLink),
-      bot: this.asArray(bot),
-      duration: this.asArray(duration),
+      ageRange: ArrayUtils.asArray(ageRange),
+      language: ArrayUtils.asArray(language),
+      computerLanguage: ArrayUtils.asArray(computerLanguage),
+      coverImage: ArrayUtils.asArray(coverImage),
+      publisher: ArrayUtils.asArray(publisher),
+      publications: ArrayUtils.asArray(publications),
+      author: ArrayUtils.asArray(author),
+      subject: ArrayUtils.asArray(subject),
+      date: ArrayUtils.asArray(date),
+      location: ArrayUtils.asArray(location),
+      theme: ArrayUtils.asArray(theme),
+      kind: ArrayUtils.asArray(kind),
+      action: ArrayUtils.asArray(action),
+      thumbImage: ArrayUtils.asArray(thumbImage),
+      deeplink: ArrayUtils.asArray(deepLink),
+      externalLink: ArrayUtils.asArray(externalLink),
+      externalLinkText: ArrayUtils.asArray(externalLinkText),
+      videoCallLink: ArrayUtils.asArray(videoCallLink),
+      bot: ArrayUtils.asArray(bot),
+      duration: ArrayUtils.asArray(duration),
       referenceProperty: undefined, // Important for property order, do not remove
-      list: this.asArray(list),
-      labelTrue: this.asArray(labelTrue),
-      labelFalse: this.asArray(labelFalse),
-      quotedPerson: this.asArray(quotedPerson),
+      list: ArrayUtils.asArray(list),
+      labelTrue: ArrayUtils.asArray(labelTrue),
+      labelFalse: ArrayUtils.asArray(labelFalse),
+      quotedPerson: ArrayUtils.asArray(quotedPerson),
+      levelProperty: ArrayUtils.asArray(levelProperty),
       title,
       subtitle,
       level,
@@ -256,10 +265,9 @@ class Builder {
       hint,
       instruction,
       example,
-      extraProperties: this.parseExtraProperties(extraProperties),
       resource,
       body,
-      sampleSolution: this.asArray(sampleSolution),
+      sampleSolution: ArrayUtils.asArray(sampleSolution),
       elements,
       statement,
       statements,
@@ -274,6 +282,9 @@ class Builder {
 
       bitmark,
       parser,
+
+      // Must always be last in the AST so key clashes are avoided correctly with other properties
+      extraProperties: this.parseExtraProperties(extraProperties),
     };
 
     // Handle special case properties
@@ -401,7 +412,7 @@ class Builder {
     // NOTE: Node order is important and is defined here
     const node: Heading = {
       forKeys: forKeys || '',
-      forValues: this.asArray(forValues) ?? [],
+      forValues: ArrayUtils.asArray(forValues) ?? [],
     };
 
     // Remove Unset Optionals
@@ -944,6 +955,10 @@ class Builder {
         node = this.documentLinkResource(finalData);
         break;
 
+      case ResourceType.documentDownload:
+        node = this.documentDownloadResource(finalData);
+        break;
+
       case ResourceType.app:
         node = this.appResource(finalData);
         break;
@@ -1283,6 +1298,28 @@ class Builder {
   }
 
   /**
+   * Build documentDownloadResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  documentDownloadResource(data: {
+    format: string;
+    url: string;
+    license?: string;
+    copyright?: string;
+    showInIndex?: boolean;
+    caption?: string;
+  }): DocumentDownloadResource {
+    const node: DocumentDownloadResource = this.articleLikeResource({
+      type: ResourceType.documentDownload,
+      ...data,
+    }) as DocumentDownloadResource;
+
+    return node;
+  }
+
+  /**
    * Build appResource node
    *
    * @param data - data for the node
@@ -1524,18 +1561,29 @@ class Builder {
   }
 
   private articleLikeResource(data: {
-    type: 'article' | 'article-link' | 'document' | 'document-link';
+    type: 'article' | 'article-link' | 'document' | 'document-link' | 'document-download';
     url?: string; // url / href
     body?: string | undefined;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
     caption?: string;
-  }): ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource | undefined {
+  }):
+    | ArticleResource
+    | ArticleLinkResource
+    | DocumentResource
+    | DocumentLinkResource
+    | DocumentDownloadResource
+    | undefined {
     const { type, url, body, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource = {
+    const node:
+      | ArticleResource
+      | ArticleLinkResource
+      | DocumentResource
+      | DocumentLinkResource
+      | DocumentDownloadResource = {
       type,
       format: UrlUtils.fileExtensionFromUrl(url),
       provider: UrlUtils.domainFromUrl(url),
@@ -1600,16 +1648,10 @@ class Builder {
     const res: ExtraProperties = {};
 
     for (const [key, value] of entries) {
-      res[key] = this.asArray(value) || [value];
+      res[key] = ArrayUtils.asArray(value) || [value];
     }
 
     return res;
-  }
-
-  private asArray<T>(val: T | T[] | undefined): T[] | undefined {
-    if (val == null) return undefined;
-    if (Array.isArray(val)) return val;
-    return [val];
   }
 }
 

@@ -99,6 +99,7 @@ import {
   FooterText,
   BodyText,
 } from '../../model/ast/Nodes';
+import { BitUtils } from '../../utils/BitUtils';
 
 // Debugging flags for helping develop and debug the parser
 const ENABLE_DEBUG = true;
@@ -396,7 +397,7 @@ class BitmarkParserHelper {
     // const footer = this.buildFooter(bitType, unparsedFooter);
 
     // Build the resources
-    const resource = this.buildResource(resourceType, resources);
+    const resource = this.buildResource(bitType, resourceType, resources);
 
     // Build the errors
     const errors = this.buildErrors();
@@ -465,9 +466,7 @@ class BitmarkParserHelper {
           // Parse resource type, adding error if invalid
           res.resourceType = ResourceType.fromValue(value.value);
           if (value.value && !res.resourceType) {
-            this.addError(
-              `Invalid resource type '${value.value}', Resource type will be implied automatically if a resource is present`,
-            );
+            this.addError(`Invalid resource type '${value.value}'`);
           }
         }
       }
@@ -485,13 +484,19 @@ class BitmarkParserHelper {
    * @param resourceType
    * @param resource
    */
-  private buildResource(resourceType: string | undefined, resources: Resource[] | undefined): Resource | undefined {
+  private buildResource(
+    bitType: BitTypeType,
+    resourceType: string | undefined,
+    resources: Resource[] | undefined,
+  ): Resource | undefined {
     let resource: Resource | undefined;
     const excessResources: Resource[] = [];
 
+    const finalResourceType = BitUtils.calculateResourceType(bitType, resourceType, undefined);
+
     if (resources) {
       for (const r of resources) {
-        if (r.type === resourceType && !resource) {
+        if (r.type === finalResourceType && !resource) {
           resource = r;
         } else {
           excessResources.push(r);
@@ -1300,7 +1305,11 @@ class BitmarkParserHelper {
                 acc.isCaseSensitive = value as boolean;
                 break;
               }
-
+              case PropertyKey.level: {
+                // Different naming
+                addProperty(acc, 'levelProperty', value);
+                break;
+              }
               case PropertyKey.id:
               case PropertyKey.externalId:
               case PropertyKey.ageRange:

@@ -50,6 +50,7 @@ export interface Bit {
   publisher?: string[];
   publications?: string[];
   author?: string[];
+  subject?: string[];
   date?: string[];
   location?: string[];
   theme?: string[];
@@ -71,7 +72,8 @@ export interface Bit {
   book?: string;
   title?: string;
   subtitle?: string;
-  level?: number;
+  levelProperty?: string[]; // 'level' can be a property [@level:2] - string
+  level?: number | string; // 'level' can either the subtitle level [##subtitle]
   toc?: boolean;
   progress?: boolean;
   anchor?: string;
@@ -233,7 +235,7 @@ export interface VideoLikeResource extends Resource {
 }
 
 export interface ArticleLikeResource extends Resource {
-  type: 'article' | 'article-link' | 'document' | 'document-link';
+  type: 'article' | 'article-link' | 'document' | 'document-link' | 'document-download';
   body?: string;
 }
 
@@ -289,6 +291,9 @@ export interface DocumentLinkResource extends ArticleLikeResource {
   type: 'document-link';
 }
 
+export interface DocumentDownloadResource extends ArticleLikeResource {
+  type: 'document-download';
+}
 export interface AppResource extends AppLikeResource {
   type: 'app';
 }

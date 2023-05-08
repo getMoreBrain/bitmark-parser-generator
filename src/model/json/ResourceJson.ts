@@ -95,6 +95,11 @@ export interface DocumentLinkResourceWrapperJson extends ResourceWrapperJson {
   documentLink: DocumentLinkResourceJson;
 }
 
+export interface DocumentDownloadResourceWrapperJson extends ResourceWrapperJson {
+  type: 'document-download'; // resource type
+  documentDownload: DocumentDownloadResourceJson;
+}
+
 export interface AppResourceWrapperJson extends ResourceWrapperJson {
   type: 'app'; // resource type
   app: AppResourceJson;
@@ -218,6 +223,10 @@ export interface DocumentResourceJson extends ArticleLikeResourceJson {
 }
 
 export interface DocumentLinkResourceJson extends LinkResourceJson, ArticleLikeResourceJson {
+  url: string;
+}
+
+export interface DocumentDownloadResourceJson extends LinkResourceJson, ArticleLikeResourceJson {
   url: string;
 }
 
