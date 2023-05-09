@@ -41,51 +41,51 @@ export interface Bit {
   bitType: BitTypeType;
   textFormat: TextFormatType;
   resourceType?: ResourceTypeType;
-  id?: string[];
-  externalId?: string[];
-  ageRange?: number[];
-  language?: string[];
-  computerLanguage?: string[];
-  coverImage?: string[];
-  publisher?: string[];
-  publications?: string[];
-  author?: string[];
-  subject?: string[];
-  date?: string[];
-  location?: string[];
-  theme?: string[];
-  kind?: string[];
-  action?: string[];
-  thumbImage?: string[];
-  focusX?: number[];
-  focusY?: number[];
-  duration?: string[];
-  deeplink?: string[];
-  externalLink?: string[];
-  externalLinkText?: string[];
-  videoCallLink?: string[];
-  bot?: string[];
-  referenceProperty?: string[];
-  list?: string[];
-  labelTrue?: string[];
-  labelFalse?: string[];
-  quotedPerson?: string[];
-  partialAnswer?: string[];
+  id?: Property;
+  externalId?: Property;
+  ageRange?: Property;
+  language?: Property;
+  computerLanguage?: Property;
+  coverImage?: Property;
+  publisher?: Property;
+  publications?: Property;
+  author?: Property;
+  subject?: Property;
+  date?: Property;
+  location?: Property;
+  theme?: Property;
+  kind?: Property;
+  action?: Property;
+  thumbImage?: Property;
+  focusX?: Property;
+  focusY?: Property;
+  duration?: Property;
+  deeplink?: Property;
+  externalLink?: Property;
+  externalLinkText?: Property;
+  videoCallLink?: Property;
+  bot?: Property;
+  referenceProperty?: Property;
+  list?: Property;
+  labelTrue?: Property;
+  labelFalse?: Property;
+  quotedPerson?: Property;
+  partialAnswer?: Property;
   extraProperties?: ExtraProperties;
   book?: string;
   title?: string;
   subtitle?: string;
-  levelProperty?: string[]; // 'level' can be a property [@level:2] - string
-  level?: number | string; // 'level' can either the subtitle level [##subtitle]
-  toc?: boolean;
-  progress?: boolean;
+  levelProperty?: Property; // 'level' can be a property [@level:2] - string
+  level?: number; // 'level' can either the subtitle level [##subtitle]
+  toc?: Property;
+  progress?: Property;
   anchor?: string;
   reference?: string;
   referenceEnd?: string;
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example[];
+  example?: Property;
   resource?: Resource;
   body?: Body;
   sampleSolution?: string[];
@@ -108,8 +108,10 @@ export interface Bit {
 // Extra Properties
 
 export interface ExtraProperties {
-  [key: string]: unknown[];
+  [key: string]: Property;
 }
+
+export type Property = string[] | number[] | boolean[] | unknown[];
 
 // Statement
 
@@ -135,7 +137,7 @@ export interface Quiz {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example[];
+  example?: Example;
   choices?: Choice[];
   responses?: Response[];
 }
@@ -156,9 +158,9 @@ export interface Pair {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example[];
+  example?: Example;
   isCaseSensitive?: boolean;
-  isLongAnswer?: boolean;
+  isShortAnswer?: boolean;
   values?: string[];
 }
 
@@ -167,9 +169,9 @@ export interface Matrix {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example[];
+  example?: Example;
   isCaseSensitive?: boolean;
-  isLongAnswer?: boolean;
+  isShortAnswer?: boolean;
   cells: MatrixCell[];
 }
 
@@ -177,7 +179,7 @@ export interface MatrixCell {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example[];
+  example?: Example;
   values?: string[];
 }
 
@@ -190,7 +192,7 @@ export interface Question {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example[];
+  example?: Example;
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
 }
@@ -332,7 +334,7 @@ export interface Gap {
     itemLead?: ItemLead;
     hint?: string;
     instruction?: string;
-    example?: Example[];
+    example?: Example;
     isCaseSensitive?: boolean;
   };
 }
@@ -347,7 +349,7 @@ export interface Select {
     itemLead?: ItemLead;
     hint?: string;
     instruction?: string;
-    example?: Example[];
+    example?: Example;
     isCaseSensitive?: boolean;
   };
 }
@@ -358,7 +360,7 @@ export interface SelectOption {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example[];
+  example?: Example;
   isCaseSensitive?: boolean;
 }
 
@@ -372,7 +374,7 @@ export interface Highlight {
     itemLead?: ItemLead;
     hint?: string;
     instruction?: string;
-    example?: Example[];
+    example?: Example;
     isCaseSensitive?: boolean;
   };
 }
@@ -384,7 +386,7 @@ export interface HighlightText {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example[];
+  example?: Example;
   isCaseSensitive?: boolean;
 }
 
@@ -403,7 +405,7 @@ export interface Decision {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example[];
+  example?: Example;
   isCaseSensitive?: boolean;
 }
 

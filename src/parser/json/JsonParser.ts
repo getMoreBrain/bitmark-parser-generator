@@ -54,6 +54,11 @@ import {
   HighlightJson,
 } from '../../model/json/BodyBitJson';
 
+interface ReferenceAndReferenceProperty {
+  reference?: string;
+  referenceProperty?: string | string[];
+}
+
 // const BODY_SPLIT_REGEX = new RegExp('{[0-9]+}', 'g');
 
 const builder = new Builder();
@@ -211,7 +216,7 @@ class JsonParser {
       toc,
       progress,
       anchor,
-      reference,
+      reference: referenceIn,
       referenceEnd,
       item,
       lead,
@@ -270,6 +275,9 @@ class JsonParser {
     // footer
     const footerNode = this.footerToAst(footer);
 
+    // Convert reference to referenceProperty
+    const { reference, referenceProperty } = this.referenceToAst(referenceIn);
+
     // Build bit
     const bitNode = builder.bit({
       bitType: type as BitTypeType,
@@ -289,8 +297,9 @@ class JsonParser {
       kind,
       action,
       duration,
+      referenceProperty,
       thumbImage,
-      deepLink: deeplink,
+      deeplink,
       externalLink,
       externalLinkText,
       videoCallLink,
@@ -526,7 +535,7 @@ class JsonParser {
           instruction,
           example: example || isExample,
           isCaseSensitive,
-          isLongAnswer,
+          isShortAnswer: !isLongAnswer,
         });
         nodes.push(node);
       }
@@ -551,7 +560,7 @@ class JsonParser {
           instruction,
           example: example || isExample,
           isCaseSensitive,
-          isLongAnswer,
+          isShortAnswer: !isLongAnswer,
         });
         nodes.push(node);
       }
@@ -658,7 +667,7 @@ class JsonParser {
       const dataAsString: string | undefined = StringUtils.isString(data) ? (data as string) : undefined;
 
       // url / src / href / app
-      const url = data.url || data.src || data.href || data.app || dataAsString;
+      const url = data.url || data.src || data.href || data.app || data.body || dataAsString;
 
       // Sub resources
       const posterImage = this.resourceDataToAst(ResourceType.image, data.posterImage) as ImageResource;
@@ -701,9 +710,6 @@ class JsonParser {
 
         // WebsiteLinkResource
         siteName: data.siteName,
-
-        // ArticleLikeResource
-        body: data.body,
 
         // Generic Resource
         license: data.license,
@@ -786,6 +792,20 @@ class JsonParser {
       return builder.footerText({ text: footerText });
     }
     return undefined;
+  }
+
+  private referenceToAst(reference: string | string[]): ReferenceAndReferenceProperty {
+    if (Array.isArray(reference) && reference.length > 0) {
+      return {
+        reference: undefined,
+        referenceProperty: reference,
+      };
+    }
+
+    return {
+      reference: reference as string,
+      referenceProperty: undefined,
+    };
   }
 
   private gapBitToAst(bit: GapJson): Gap {

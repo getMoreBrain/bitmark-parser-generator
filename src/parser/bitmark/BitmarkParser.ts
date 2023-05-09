@@ -1,11 +1,11 @@
 import { parse } from 'bitmark-grammar';
 
-import { parse as bitmarkParse } from '../../generated/parser/bitmark/bitmark-peggy-parser';
-// import { parse as pegParse } from '../../generated/parser/bitmark/bitmark-peggy-parser';
 import { BitmarkAst } from '../../model/ast/Nodes';
 import { BitmarkParserType, BitmarkParserTypeType } from '../../model/enum/BitmarkParserType';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { JsonParser } from '../json/JsonParser';
+
+import { parse as bitmarkParse } from './BitmarkPegParser';
 
 export interface BitmarkParserOptions {
   parserType?: BitmarkParserTypeType;

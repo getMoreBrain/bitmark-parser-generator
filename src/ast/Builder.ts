@@ -1,11 +1,15 @@
-import { BitType, BitTypeType } from '../model/enum/BitType';
+import { BitTypeType } from '../model/enum/BitType';
+import { PropertyKey, PropertyKeyMetadata, PropertyKeyType } from '../model/enum/PropertyKey';
 import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
 import { TextFormatType, TextFormat } from '../model/enum/TextFormat';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BitUtils } from '../utils/BitUtils';
+import { BooleanUtils } from '../utils/BooleanUtils';
+import { NumberUtils } from '../utils/NumberUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
+import { StringUtils } from '../utils/StringUtils';
 import { UrlUtils } from '../utils/UrlUtils';
 
 import { NodeValidator } from './rules/NodeValidator';
@@ -50,6 +54,7 @@ import {
   ItemLead,
   ExtraProperties,
   DocumentDownloadResource,
+  Property,
 } from '../model/ast/Nodes';
 
 interface RemoveUnwantedPropertiesOptions {
@@ -109,7 +114,8 @@ class Builder {
     focusX?: number | number[];
     focusY?: number | number[];
     duration?: string | string[];
-    deepLink?: string | string[];
+    referenceProperty?: string | string[];
+    deeplink?: string | string[];
     externalLink?: string | string[];
     externalLinkText?: string | string[];
     videoCallLink?: string | string[];
@@ -129,7 +135,7 @@ class Builder {
     anchor?: string;
     // If an array is passed to reference, it will be considered an "[@reference:Some text]" property
     // If a string is passed to reference, it will be considered a "[►Reference]" tag
-    reference?: string | string[];
+    reference?: string;
     referenceEnd?: string;
     item?: string;
     lead?: string;
@@ -180,7 +186,8 @@ class Builder {
       focusX,
       focusY,
       duration,
-      deepLink,
+      referenceProperty,
+      deeplink,
       externalLink,
       externalLinkText,
       videoCallLink,
@@ -230,50 +237,50 @@ class Builder {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
       resourceType: BitUtils.calculateResourceType(bitType, resourceType, resource),
-      id: ArrayUtils.asArray(id),
-      externalId: ArrayUtils.asArray(externalId),
+      id: this.toAstProperty(PropertyKey.id, id),
+      externalId: this.toAstProperty(PropertyKey.externalId, externalId),
       book,
-      ageRange: ArrayUtils.asArray(ageRange),
-      language: ArrayUtils.asArray(language),
-      computerLanguage: ArrayUtils.asArray(computerLanguage),
-      coverImage: ArrayUtils.asArray(coverImage),
-      publisher: ArrayUtils.asArray(publisher),
-      publications: ArrayUtils.asArray(publications),
-      author: ArrayUtils.asArray(author),
-      subject: ArrayUtils.asArray(subject),
-      date: ArrayUtils.asArray(date),
-      location: ArrayUtils.asArray(location),
-      theme: ArrayUtils.asArray(theme),
-      kind: ArrayUtils.asArray(kind),
-      action: ArrayUtils.asArray(action),
-      thumbImage: ArrayUtils.asArray(thumbImage),
-      focusX: ArrayUtils.asArray(focusX),
-      focusY: ArrayUtils.asArray(focusY),
-      deeplink: ArrayUtils.asArray(deepLink),
-      externalLink: ArrayUtils.asArray(externalLink),
-      externalLinkText: ArrayUtils.asArray(externalLinkText),
-      videoCallLink: ArrayUtils.asArray(videoCallLink),
-      bot: ArrayUtils.asArray(bot),
-      duration: ArrayUtils.asArray(duration),
-      referenceProperty: undefined, // Important for property order, do not remove
-      list: ArrayUtils.asArray(list),
-      labelTrue: ArrayUtils.asArray(labelTrue),
-      labelFalse: ArrayUtils.asArray(labelFalse),
-      quotedPerson: ArrayUtils.asArray(quotedPerson),
-      partialAnswer: ArrayUtils.asArray(partialAnswer),
-      levelProperty: ArrayUtils.asArray(levelProperty),
+      ageRange: this.toAstProperty(PropertyKey.ageRange, ageRange),
+      language: this.toAstProperty(PropertyKey.language, language),
+      computerLanguage: this.toAstProperty(PropertyKey.computerLanguage, computerLanguage),
+      coverImage: this.toAstProperty(PropertyKey.coverImage, coverImage),
+      publisher: this.toAstProperty(PropertyKey.publisher, publisher),
+      publications: this.toAstProperty(PropertyKey.publications, publications),
+      author: this.toAstProperty(PropertyKey.author, author),
+      subject: this.toAstProperty(PropertyKey.subject, subject),
+      date: this.toAstProperty(PropertyKey.date, date),
+      location: this.toAstProperty(PropertyKey.location, location),
+      theme: this.toAstProperty(PropertyKey.theme, theme),
+      kind: this.toAstProperty(PropertyKey.kind, kind),
+      action: this.toAstProperty(PropertyKey.action, action),
+      thumbImage: this.toAstProperty(PropertyKey.thumbImage, thumbImage),
+      focusX: this.toAstProperty(PropertyKey.focusX, focusX),
+      focusY: this.toAstProperty(PropertyKey.focusY, focusY),
+      deeplink: this.toAstProperty(PropertyKey.deeplink, deeplink),
+      externalLink: this.toAstProperty(PropertyKey.externalLink, externalLink),
+      externalLinkText: this.toAstProperty(PropertyKey.externalLinkText, externalLinkText),
+      videoCallLink: this.toAstProperty(PropertyKey.videoCallLink, videoCallLink),
+      bot: this.toAstProperty(PropertyKey.bot, bot),
+      duration: this.toAstProperty(PropertyKey.duration, duration),
+      referenceProperty: this.toAstProperty(PropertyKey.reference, referenceProperty),
+      list: this.toAstProperty(PropertyKey.list, list),
+      labelTrue: this.toAstProperty(PropertyKey.labelTrue, labelTrue),
+      labelFalse: this.toAstProperty(PropertyKey.labelFalse, labelFalse),
+      quotedPerson: this.toAstProperty(PropertyKey.quotedPerson, quotedPerson),
+      partialAnswer: this.toAstProperty(PropertyKey.partialAnswer, partialAnswer),
+      levelProperty: this.toAstProperty(PropertyKey.level, levelProperty),
       title,
       subtitle,
-      level,
-      toc,
-      progress,
+      level: NumberUtils.asNumber(level),
+      toc: this.toAstProperty(PropertyKey.toc, toc),
+      progress: this.toAstProperty(PropertyKey.progress, progress),
       anchor,
-      reference: undefined, // Important for property order, do not remove
+      reference,
       referenceEnd,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example,
+      example: this.toAstProperty(PropertyKey.example, example),
       resource,
       body,
       sampleSolution: ArrayUtils.asArray(sampleSolution),
@@ -295,9 +302,6 @@ class Builder {
       // Must always be last in the AST so key clashes are avoided correctly with other properties
       extraProperties: this.parseExtraProperties(extraProperties),
     };
-
-    // Handle special case properties
-    this.handleBitReference(node, reference);
 
     // Remove Unset Optionals
     this.removeUnwantedProperties(node);
@@ -447,9 +451,9 @@ class Builder {
     instruction?: string;
     example?: string | boolean;
     isCaseSensitive?: boolean;
-    isLongAnswer?: boolean;
+    isShortAnswer?: boolean;
   }): Pair {
-    const { key, keyAudio, keyImage, values, item, lead, hint, instruction, example, isCaseSensitive, isLongAnswer } =
+    const { key, keyAudio, keyImage, values, item, lead, hint, instruction, example, isCaseSensitive, isShortAnswer } =
       data;
 
     // NOTE: Node order is important and is defined here
@@ -462,7 +466,7 @@ class Builder {
       instruction,
       example,
       isCaseSensitive,
-      isLongAnswer,
+      isShortAnswer,
       values,
     };
 
@@ -487,9 +491,9 @@ class Builder {
     instruction?: string;
     example?: string | boolean;
     isCaseSensitive?: boolean;
-    isLongAnswer?: boolean;
+    isShortAnswer?: boolean;
   }): Matrix {
-    const { key, cells, item, lead, hint, instruction, example, isCaseSensitive, isLongAnswer } = data;
+    const { key, cells, item, lead, hint, instruction, example, isCaseSensitive, isShortAnswer } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Matrix = {
@@ -499,7 +503,7 @@ class Builder {
       instruction,
       example,
       isCaseSensitive,
-      isLongAnswer,
+      isShortAnswer,
       cells,
     };
 
@@ -1417,14 +1421,6 @@ class Builder {
     return node;
   }
 
-  private handleBitReference(bit: Bit, reference: string | string[] | undefined) {
-    if (Array.isArray(reference) && reference.length > 0) {
-      bit.referenceProperty = reference;
-    } else if (reference) {
-      bit.reference = reference as string;
-    }
-  }
-
   //
   // Private
   //
@@ -1634,6 +1630,34 @@ class Builder {
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateResource(node);
+  }
+
+  private toAstProperty(key: PropertyKeyType, value: unknown | unknown[] | undefined): Property | undefined {
+    const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(key) ?? {};
+
+    if (value == null) return undefined;
+
+    // if (key === 'progress') debugger;
+
+    // Convert property as needed
+    const processValue = (v: unknown) => {
+      if (v == null) return undefined;
+      if (meta.isTrimmedString) v = StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
+      if (meta.isNumber) v = NumberUtils.asNumber(v);
+      if (meta.isBoolean) v = BooleanUtils.asBoolean(v, true);
+      if (meta.isInvertedBoolean) v = !BooleanUtils.asBoolean(v, true);
+      return v;
+    };
+    if (Array.isArray(value)) {
+      const valueArray = value as unknown[];
+      for (let i = 0, len = valueArray.length; i < len; i++) {
+        valueArray[i] = processValue(valueArray[i]);
+      }
+    } else {
+      value = processValue(value);
+    }
+
+    return ArrayUtils.asArray(value);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

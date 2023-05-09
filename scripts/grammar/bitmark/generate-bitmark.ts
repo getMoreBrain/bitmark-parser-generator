@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import peggy, { SourceBuildOptions } from 'peggy';
-import tspegjs from 'ts-pegjs';
 
 type SourceOptions = SourceBuildOptions<'source'> & {
   tspegjs: {
@@ -14,9 +13,13 @@ const customHeader = `
 import { BitmarkParserHelper, TypeKey } from '../../../parser/bitmark/BitmarkParserHelper';
 `;
 
+const dependencies = {
+  '{ BitmarkParserHelper, TypeKey }': '../../../parser/bitmark/BitmarkParserHelper',
+};
+
 const inputTextPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'text-grammar.pegjs');
 const inputBitmarkPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'bit-grammar.pegjs');
-const outputPath = path.resolve(__dirname, '../../..', 'src/generated/parser/bitmark/', 'bitmark-peggy-parser.ts');
+const outputPath = path.resolve(__dirname, '../../..', 'src/generated/parser/bitmark/', 'bitmark-peggy-parser.js');
 const testFilePath = path.resolve(__dirname, '../../..', 'assets/', 'test.bit');
 
 // Process command line options
@@ -48,9 +51,10 @@ const grammar = fs.readFileSync(inputPath, 'utf8');
 // Build parser options
 const options: SourceOptions = {
   output: 'source',
-  format: 'commonjs',
+  format: 'es',
   allowedStartRules,
-  plugins: [tspegjs],
+  plugins: [],
+  dependencies,
   tspegjs: {
     customHeader,
     // returnTypes: TODO,

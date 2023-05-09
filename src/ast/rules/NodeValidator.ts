@@ -1,4 +1,4 @@
-import { ArticleResource, Bit, Resource } from '../../model/ast/Nodes';
+import { Bit, Resource } from '../../model/ast/Nodes';
 import { BitType } from '../../model/enum/BitType';
 import { StringUtils } from '../../utils/StringUtils';
 

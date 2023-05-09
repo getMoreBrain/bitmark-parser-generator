@@ -5,8 +5,8 @@
     "strictNullChecks": true,
     "noImplicitAny": true,
     // Have to set next 2 parameters to false to avoid errors in peggy parser TS (should probably switch the parser to JS)
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     //
     "module": "CommonJS",
     "target": "ES6",
@@ -24,7 +24,7 @@
     // "experimentalDecorators": true,
     // "downlevelIteration": true,
     // "importHelpers": true,
-    // "allowJs": false,
+    "allowJs": true, // Required for PEG parser
     // "incremental": true,
     // "strictPropertyInitialization": false
     // "resolveJsonModule": true,

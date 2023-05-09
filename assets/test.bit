@@ -1,12 +1,3 @@
-|| OK ||
-[.interview]
-[%X01]
-[!This is a job interview.]
-
-===
-What was your last job? [@example:I worked at Miller's as an internal lawyer.][@example:I worked at Miller's as an internal lawyer.]
-===
-Why did you quit your last job?[@partialAnswer: Hello Hello World][@partialAnswer: Hello Hello World]
-===
-How much did you earn in your last job?
-===
+[.chapter][▼imprint]
+[##Imprint and Legal Notice]
+[@example]

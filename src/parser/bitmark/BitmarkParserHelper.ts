@@ -68,13 +68,15 @@ import { EnumType, superenum } from '@ncoderz/superenum';
 import { Builder } from '../../ast/Builder';
 import { CardSet } from '../../model/ast/CardSet';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
-import { PropertyKey } from '../../model/enum/PropertyKey';
+import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourcePropertyKey } from '../../model/enum/ResourcePropertyKey';
 import { ResourceType, ResourceTypeType } from '../../model/enum/ResourceType';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { ParserError } from '../../model/parser/ParserError';
 import { ParserInfo } from '../../model/parser/ParserInfo';
 import { BitUtils } from '../../utils/BitUtils';
+import { BooleanUtils } from '../../utils/BooleanUtils';
+import { NumberUtils } from '../../utils/NumberUtils';
 import { StringUtils } from '../../utils/StringUtils';
 
 import {
@@ -431,7 +433,7 @@ class BitmarkParserHelper {
   }
 
   // Build bit for data that cannot be parsed
-  invalidBit(bit?: unknown): SubParserResult<Bit> {
+  invalidBit(_bit?: unknown): SubParserResult<Bit> {
     // Create the error
     this.addError('Invalid bit');
 
@@ -1285,12 +1287,27 @@ class BitmarkParserHelper {
     };
 
     // Helpers for building the properties
-    const addProperty = (obj: any, key: string, value: unknown) => {
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        const originalValue = obj[key];
-        obj[key] = [...originalValue, value];
+    const addProperty = (obj: any, key: string, v: unknown) => {
+      const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(PropertyKey.fromValue(key)) ?? {};
+
+      // if (key === 'progress') debugger;
+
+      // Convert property and key as needed
+      if (meta.astKey) key = meta.astKey;
+      if (meta.isTrimmedString) v = StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
+      if (meta.isNumber) v = NumberUtils.asNumber(v);
+      if (meta.isBoolean) v = BooleanUtils.asBoolean(v, true);
+      if (meta.isInvertedBoolean) v = !BooleanUtils.asBoolean(v, true);
+
+      if (meta.isSingle) {
+        obj[key] = v;
       } else {
-        obj[key] = [value];
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+          const originalValue = obj[key];
+          obj[key] = [...originalValue, v];
+        } else {
+          obj[key] = [v];
+        }
       }
     };
 
@@ -1328,63 +1345,7 @@ class BitmarkParserHelper {
         case TypeKey.Property: {
           if (PropertyKey.fromValue(key)) {
             // Known property
-            switch (key) {
-              case PropertyKey.shortAnswer: {
-                // Different naming
-                acc.isShortAnswer = value as boolean;
-                break;
-              }
-              case PropertyKey.longAnswer: {
-                // Different naming
-                acc.isShortAnswer = !value;
-                break;
-              }
-              case PropertyKey.caseSensitive: {
-                // Different naming
-                acc.isCaseSensitive = value as boolean;
-                break;
-              }
-              case PropertyKey.level: {
-                // Different naming
-                addProperty(acc, 'levelProperty', value);
-                break;
-              }
-              case PropertyKey.id:
-              case PropertyKey.externalId:
-              case PropertyKey.ageRange:
-              case PropertyKey.language:
-              case PropertyKey.computerLanguage:
-              case PropertyKey.coverImage:
-              case PropertyKey.publisher:
-              case PropertyKey.publications:
-              case PropertyKey.author:
-              case PropertyKey.date:
-              case PropertyKey.location:
-              case PropertyKey.theme:
-              case PropertyKey.kind:
-              case PropertyKey.action:
-              case PropertyKey.thumbImage:
-              case PropertyKey.deeplink:
-              case PropertyKey.externalLink:
-              case PropertyKey.externalLinkText:
-              case PropertyKey.videoCallLink:
-              case PropertyKey.bot:
-              case PropertyKey.duration:
-              case PropertyKey.reference:
-              case PropertyKey.list:
-              case PropertyKey.labelTrue:
-              case PropertyKey.labelFalse:
-              case PropertyKey.quotedPerson:
-              case PropertyKey.partialAnswer: {
-                // Trim specific string properties - It might be better NOT to do this, but ANTLR parser does it
-                addProperty(acc, key, ((value as string) ?? '').trim());
-                break;
-              }
-              default: {
-                // Standard property case
-                addProperty(acc, key, value);
-              }
-            }
+            addProperty(acc, key, value);
           } else {
             // Unknown (extra) property
             addProperty(extraProperties, key, value);
