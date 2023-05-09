@@ -123,7 +123,7 @@ CardSet
   = value: (CardSetStart Card* CardSetEnd) { return { type: TypeKey.CardSet, value: value[1].flat() } }
 
 CardSetStart
-  = NL? &("===" NL) { helper.processCardSetStart(); }
+  = NL &("===" NL) { helper.processCardSetStart(); }
 
 CardSetEnd
   = ("===" &EOL) { helper.processCardSetEnd(); }

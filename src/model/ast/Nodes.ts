@@ -99,6 +99,7 @@ export interface Bit {
   pairs?: Pair[];
   matrix?: Matrix[];
   questions?: Question[];
+  botResponses?: BotResponse[];
   footer?: FooterText;
 
   bitmark?: string;
@@ -129,6 +130,15 @@ export interface Choice extends Decision {
 
 export interface Response extends Decision {
   //
+}
+
+// Bot Response
+export interface BotResponse {
+  response: string;
+  reaction: string;
+  feedback: string;
+  itemLead?: ItemLead;
+  hint?: string;
 }
 
 // Quiz

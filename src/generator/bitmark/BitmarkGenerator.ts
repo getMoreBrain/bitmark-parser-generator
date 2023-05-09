@@ -1094,7 +1094,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
       const funcName = `enter_${astKey}`;
 
       // Special cases
-      if (astKey === 'labelFalse') continue;
+      if (astKey === PropertyKey.labelFalse) continue;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[funcName] = (node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]) => {
@@ -1106,17 +1106,18 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
         // Ignore any property that is not at the bit level as that will be handled by a different handler
         if (parent?.key !== NodeType.bitsValue) return;
 
-        // Special cases
         if (astKey === 'labelTrue') {
+          // Special case
           const bit = parent?.value as Bit;
           if (bit) {
-            this.writeProperty('labelTrue', value, meta.isSingle);
-            this.writeProperty('labelFalse', bit.labelFalse, meta.isSingle);
+            this.writeProperty(PropertyKey.labelTrue, value, meta.isSingle);
+            this.writeProperty(PropertyKey.labelFalse, bit.labelFalse, meta.isSingle);
           }
-        } else if (astKey === 'example') {
+        } else if (astKey === PropertyKey.example) {
+          // Special case
           this.writeProperty('example', value, meta.isSingle, true);
         } else {
-          // Standard property
+          // Standard case
           this.writeProperty(key, node.value, meta.isSingle);
         }
       };

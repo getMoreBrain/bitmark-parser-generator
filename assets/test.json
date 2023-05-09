@@ -1,19 +1,27 @@
 [
   {
-    "bitmark": "[.chapter][▼imprint]\n[##Imprint and Legal Notice]",
+    "bitmark": "[.interview:bitmark--]\n[%B4]\n[!Überlegen Sie sich einen Vorfall und erstatten Sie selbst Strafanzeige gegen unbekannt.]\n(Vorname, Nachname)\n(Straße, Hausnummer)\n(Postleitzahl, Ort)\n(Telefonnummer)\n\nAn die Staatsanwaltschaft\n(Straße, Hausnummer)\n(Postleitzahl, Ort)\n\n__Strafanzeige gegen unbekannt__\n\n(Ort, Datum)\n===\nSehr geehrte Damen und Herren,\nfolgenden Vorfall möchte ich zur Anzeige bringen:\n===\n===",
     "bit": {
-      "type": "chapter",
+      "type": "interview",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
+      "item": "B4",
+      "instruction": "Überlegen Sie sich einen Vorfall und erstatten Sie selbst Strafanzeige gegen unbekannt.",
+      "body": "(Vorname, Nachname)\n(Straße, Hausnummer)\n(Postleitzahl, Ort)\n(Telefonnummer)\n\nAn die Staatsanwaltschaft\n(Straße, Hausnummer)\n(Postleitzahl, Ort)\n\n__Strafanzeige gegen unbekannt__\n\n(Ort, Datum)",
+      "footer": "",
       "hint": "",
-      "isExample": false,
-      "example": "",
-      "level": 2,
-      "progress": true,
-      "toc": true,
-      "anchor": "imprint",
-      "title": "Imprint and Legal Notice"
+      "questions": [
+        {
+          "item": "",
+          "question": "Sehr geehrte Damen und Herren,\nfolgenden Vorfall möchte ich zur Anzeige bringen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ]
     }
   }
 ]

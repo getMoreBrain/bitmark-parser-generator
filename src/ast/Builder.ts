@@ -55,6 +55,7 @@ import {
   ExtraProperties,
   DocumentDownloadResource,
   Property,
+  BotResponse,
 } from '../model/ast/Nodes';
 
 interface RemoveUnwantedPropertiesOptions {
@@ -158,6 +159,7 @@ class Builder {
     matrix?: Matrix[];
     choices?: Choice[];
     questions?: Question[];
+    botResponses?: BotResponse[];
     footer?: FooterText;
 
     bitmark?: string;
@@ -226,6 +228,7 @@ class Builder {
       matrix,
       choices,
       questions,
+      botResponses,
       footer,
 
       bitmark,
@@ -294,6 +297,7 @@ class Builder {
       matrix,
       choices,
       questions,
+      botResponses,
       footer,
 
       bitmark,
@@ -372,6 +376,37 @@ class Builder {
       instruction,
       example,
       isCaseSensitive,
+    };
+
+    // Remove Unset Optionals
+    this.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
+   * Build bot response node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  botResponse(data: {
+    response: string;
+    reaction: string;
+    feedback: string;
+    item?: string;
+    lead?: string;
+    hint?: string;
+  }): BotResponse {
+    const { response, reaction, feedback, item, lead, hint } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: BotResponse = {
+      response,
+      reaction,
+      feedback,
+      itemLead: this.itemLead(item, lead),
+      hint,
     };
 
     // Remove Unset Optionals

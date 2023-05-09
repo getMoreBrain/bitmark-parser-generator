@@ -1,7 +1,7 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeType } from '../../model/ast/NodeType';
-import { Example, ExtraProperties, Highlight, Matrix, Pair, Question, Quiz } from '../../model/ast/Nodes';
+import { BotResponse, Example, ExtraProperties, Highlight, Matrix, Pair, Question, Quiz } from '../../model/ast/Nodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
@@ -33,6 +33,7 @@ import {
 } from '../../model/ast/Nodes';
 import {
   BitJson,
+  BotResponseJson,
   ChoiceJson,
   HeadingJson,
   MatrixCellJson,
@@ -288,6 +289,22 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   protected exit_bitsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     // Clean up the bit JSON, removing any unwanted values
     this.cleanAndSetDefaultsForBitJson(this.bitJson);
+  }
+
+  // bitmark -> bits -> bitsValue -> example
+
+  protected enter_example(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const example = node.value as boolean | undefined;
+
+    // Ignore example that is not at the bit level as it are handled elsewhere
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    if (Array.isArray(example) && example.length > 0) {
+      this.addProperty(this.bitJson, 'isExample', true, true);
+      let exampleStr = example[example.length - 1];
+      exampleStr = (StringUtils.isString(exampleStr) ? exampleStr : '') ?? '';
+      this.addProperty(this.bitJson, PropertyKey.example, exampleStr, true);
+    }
   }
 
   // bitmark -> bits -> bitsValue -> sampleSolution
@@ -806,6 +823,41 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
+  // bitmark -> bits -> bitsValue -> botResponses
+
+  protected enter_botResponses(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const botResponses = node.value as BotResponse[];
+
+    // Ignore responses that are not at the bit level as they are handled elsewhere as quizzes
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const responsesJson: BotResponseJson[] = [];
+    if (botResponses) {
+      for (const r of botResponses) {
+        // Create the response
+        const responseJson: Partial<BotResponseJson> = {
+          response: r.response ?? '',
+          reaction: r.reaction ?? '',
+          feedback: r.feedback ?? '',
+          ...this.toItemLeadHintInstruction(r),
+          // ...this.toExampleAndIsExample(r.example),
+        };
+
+        // Delete unwanted properties
+        if (r.itemLead?.lead == null) delete responseJson.lead;
+        if (r.hint == null) delete responseJson.hint;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        delete (responseJson as any).instruction;
+
+        responsesJson.push(responseJson as BotResponseJson);
+      }
+    }
+
+    if (responsesJson.length > 0) {
+      this.bitJson.responses = responsesJson;
+    }
+  }
+
   // bitmark -> bits -> bitsValue -> resource
 
   protected enter_resource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
@@ -968,6 +1020,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       const astKey = meta.astKey ? meta.astKey : key;
       const funcName = `enter_${astKey}`;
 
+      // Special cases (handled outside of the automatically generated handlers)
+      if (astKey === PropertyKey.example) continue;
+
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[funcName] = (node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]) => {
         const value = node.value as unknown[] | undefined;
@@ -982,6 +1037,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         let jsonKey = key as string;
         if (meta.jsonKey) jsonKey = meta.jsonKey;
 
+        // Add the property
         this.addProperty(this.bitJson, jsonKey, value, meta.isSingle);
       };
 
@@ -1556,6 +1612,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       case BitType.bookSummary:
       case BitType.bookTeaser:
       case BitType.bookTitle:
+      case BitType.botActionResponse:
       case BitType.browserImage:
       case BitType.card1:
       case BitType.cloze:

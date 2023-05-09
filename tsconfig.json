@@ -4,7 +4,6 @@
     "strict": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
-    // Have to set next 2 parameters to false to avoid errors in peggy parser TS (should probably switch the parser to JS)
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     //
