@@ -1794,14 +1794,14 @@ class BitmarkParserHelper {
     this.cardIndex = -1;
     this.cardSideIndex = 0;
     this.cardVariantIndex = 0;
-    console.log('CardSetStart');
+    // console.log('CardSetStart');
   }
 
   processCardSetEnd() {
     this.cardIndex = 0;
     this.cardSideIndex = 0;
     this.cardVariantIndex = 0;
-    console.log('CardSetEnd');
+    // console.log('CardSetEnd');
   }
 
   processCardLineOrDivider(value: unknown) {

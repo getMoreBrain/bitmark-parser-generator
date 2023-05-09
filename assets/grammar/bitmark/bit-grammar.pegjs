@@ -108,7 +108,7 @@ StandardTagsChain
 
 // Chained bit tag
 ChainedBitTag
- = WSL* value: BitTag { return value }
+ = value: BitTag { return value }
 
 // Bit tag
 BitTag
@@ -178,11 +178,11 @@ ResourcePropertyTag
 
 // Gap tags chain
 GapTagsChain
-  = value: ClozeTag+ others: (ClozeTag / ChainedItemLeadTag / ChainedInstructionTag / ChainedHintTag / ChainedPropertyTag)* { return { type: TypeKey.GapChain, value: [...value, ...others] }; }
+  = value: ClozeTag+ others: (ClozeTag / ItemLeadTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.GapChain, value: [...value, ...others] }; }
 
 // True/False tags chain
 TrueFalseTagsChain
-  = value: (TrueTag / FalseTag)+ others: (ChainedItemLeadTag / ChainedInstructionTag / ChainedHintTag / ChainedPropertyTag)* { return { type: TypeKey.TrueFalseChain, value: [...value, ...others] } }
+  = value: (TrueTag / FalseTag)+ others: (ItemLeadTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.TrueFalseChain, value: [...value, ...others] } }
 
 
 //
@@ -240,28 +240,6 @@ RemarkTag
 // Comment Tag
 CommentTag
   = "||" value: Comment_Value "||" { return { type: TypeKey.Comment, value } }
-
-
-
-//
-// Chained Tags
-//
-
-// Chained Property (@) tag
-ChainedPropertyTag
-  = WS* "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Property, key, value } }
-
-// Chained Item / Lead (%) tag
-ChainedItemLeadTag
-  = WS* "[%" value: Tag_Value "]" { return { type: TypeKey.ItemLead, value } }
-
-// Chained Instruction (!) tag
-ChainedInstructionTag
-  = WS* "[!" value: Tag_Value "]" { return { type: TypeKey.Instruction, value } }
-
-// Chained Hint (?) tag
-ChainedHintTag
-  = WS* "[?" value: Tag_Value "]" { return { type: TypeKey.Hint, value } }
 
 
 //
