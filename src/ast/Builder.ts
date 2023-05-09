@@ -624,7 +624,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node, { ignoreFalse: ['isShortAnswer'] });
+    this.removeUnwantedProperties(node, { ignoreEmptyString: ['question'], ignoreFalse: ['isShortAnswer'] });
 
     return node;
   }
