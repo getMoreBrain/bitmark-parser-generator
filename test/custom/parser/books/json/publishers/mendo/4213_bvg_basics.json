@@ -1,0 +1,1033 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:145001]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/mendo_bvg_basics_cover.png]\n[#BVG Basics - Vorsorgeleistungen und ihre Finanz]\n[@externalId:e-bvg-basics--vorsorgeleistungen-und-ihre-_mgaezgmfl8ur]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145001"
+      ],
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/mendo_bvg_basics_cover.png"
+      ],
+      "title": "BVG Basics - Vorsorgeleistungen und ihre Finanz",
+      "externalId": [
+        "e-bvg-basics--vorsorgeleistungen-und-ihre-_mgaezgmfl8ur"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:145002]\n[&video-link:https://player.vimeo.com/video/351183037][@posterImage:https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/poster_images/4213–video1-bvg_als_minimalgesetz.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "145002"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/351183037",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "posterImage": "https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/poster_images/4213–video1-bvg_als_minimalgesetz.png"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:145003]\n[##BVG als Minimalgesetz]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "145003"
+      ],
+      "title": "BVG als Minimalgesetz"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145004]\nDer Verfassungsauftrag zur beruflichen Vorsorge wird seit 1985 durch das Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) sowie verschiedene Verordnungen konkretisiert. Dabei hat der Gesetzgeber die Arbeitnehmenden sowie deren Angehörige einem BVG-Obligatorium unterstellt, das einen minimalen Vorsorgeschutz gegen die wirtschaftlichen Folgen der Risiken Alter, Invalidität und Tod gewährleistet. Seit 1997 unterstehen auch Bezüger von Taggeldern der Arbeitslosenversicherung der obligatorischen Versicherung für die Folgen von Tod und Invalidität.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Verfassungsauftrag zur beruflichen Vorsorge wird seit 1985 durch das Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) sowie verschiedene Verordnungen konkretisiert. Dabei hat der Gesetzgeber die Arbeitnehmenden sowie deren Angehörige einem BVG-Obligatorium unterstellt, das einen minimalen Vorsorgeschutz gegen die wirtschaftlichen Folgen der Risiken Alter, Invalidität und Tod gewährleistet. Seit 1997 unterstehen auch Bezüger von Taggeldern der Arbeitslosenversicherung der obligatorischen Versicherung für die Folgen von Tod und Invalidität.",
+      "id": [
+        "145004"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145005]\nDas BVG verpflichtet die Arbeitgeberfirmen, ihre Mitarbeitenden ab einer vorgegebenen Lohnhöhe (Einstiegsschwelle 2019: CHF 21'330) im Rahmen der BVG-Minimalvorsorge zu versichern. Dem Arbeitgeber bleibt allerdings freigestellt, die berufliche Vorsorge in eigener Regie durchzuführen, also eine eigene Pensionskasse zu führen, oder sich einer Gemeinschafts- oder Sammeleinrichtung anzuschliessen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das BVG verpflichtet die Arbeitgeberfirmen, ihre Mitarbeitenden ab einer vorgegebenen Lohnhöhe (Einstiegsschwelle 2019: CHF 21'330) im Rahmen der BVG-Minimalvorsorge zu versichern. Dem Arbeitgeber bleibt allerdings freigestellt, die berufliche Vorsorge in eigener Regie durchzuführen, also eine eigene Pensionskasse zu führen, oder sich einer Gemeinschafts- oder Sammeleinrichtung anzuschliessen.",
+      "id": [
+        "145005"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145006]\nVon Gesetzes wegen sind minimale Alters-, Todesfall- und Invalidenleistungen für die versicherten Personen, ihre Ehepartner sowie ihre Kinder zu gewährleisten. Die minimalen Altersgutschriften belaufen sich je nach Alter der versicherten Person auf 7, 10, 15 oder 18 Prozent des versicherten Lohns. Der BVG-Mindestumwandlungssatz, der das angesparte und verzinste Altersguthaben bei Pensionierung in eine Altersrente umwandelt, beträgt 6.8 Prozent (Stand 2019). Die BVG-Mindestverzinsung der Altersguthaben wird jährlich vom Bundesrat vorgegeben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Von Gesetzes wegen sind minimale Alters-, Todesfall- und Invalidenleistungen für die versicherten Personen, ihre Ehepartner sowie ihre Kinder zu gewährleisten. Die minimalen Altersgutschriften belaufen sich je nach Alter der versicherten Person auf 7, 10, 15 oder 18 Prozent des versicherten Lohns. Der BVG-Mindestumwandlungssatz, der das angesparte und verzinste Altersguthaben bei Pensionierung in eine Altersrente umwandelt, beträgt 6.8 Prozent (Stand 2019). Die BVG-Mindestverzinsung der Altersguthaben wird jährlich vom Bundesrat vorgegeben.",
+      "id": [
+        "145006"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:145007]\n[##Überobligatorische Vorsorge]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "145007"
+      ],
+      "title": "Überobligatorische Vorsorge"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145008]\nIn der Praxis beschränken sich die wenigsten Pensionskassen auf das BVG-Minimum. Bei der grossen Mehrheit handelt es sich um umhüllende oder überobligatorische Vorsorgeeinrichtungen, deren Versicherte ein Altersguthaben aufbauen, das über dem BVG-Minimum liegt. Der überobligatorische Gestaltungsfreiraum wird in der Praxis lediglich durch den maximal versicherbaren AHV-Lohn (2019: CHF 853'200.–) und die BVG-Angemessenheitsvorschriften (Art. 1 BVV 2) eingeschränkt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In der Praxis beschränken sich die wenigsten Pensionskassen auf das BVG-Minimum. Bei der grossen Mehrheit handelt es sich um umhüllende oder überobligatorische Vorsorgeeinrichtungen, deren Versicherte ein Altersguthaben aufbauen, das über dem BVG-Minimum liegt. Der überobligatorische Gestaltungsfreiraum wird in der Praxis lediglich durch den maximal versicherbaren AHV-Lohn (2019: CHF 853'200.–) und die BVG-Angemessenheitsvorschriften (Art. 1 BVV 2) eingeschränkt.",
+      "id": [
+        "145008"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145009]\nPensionskassen, die das BVG-Obligatorium für die ihnen angeschlossenen Arbeitgeberfirmen umsetzen und gleichzeitig einen überobligatorischen Teil abdecken, werden umhüllende Vorsorgeeinrichtungen genannt. Sie verwenden die reglementarischen Vorsorgeleistungen und Beitragszahlungen für ihre Jahresrechnung und weisen im Anhang zusätzlich die Höhe der BVG-Altersguthaben (Schattenrechnung) aus. Kassen, die lediglich Leistungen über dem BVG-Obligatorium versichern, sind rein überobligatorische Vorsorgeeinrichtungen. Diese besitzen eine noch grössere Handlungsfreiheit. So können beispielsweise Kassen, die ausschliesslich Löhne über dem Anderthalbfachen des maximal versicherten BVG-Jahreslohns (2019: CHF 127'980.–) abdecken, ihren Versicherten unterschiedliche Anlagestrategien anbieten (Art. 1e BVV 2).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Pensionskassen, die das BVG-Obligatorium für die ihnen angeschlossenen Arbeitgeberfirmen umsetzen und gleichzeitig einen überobligatorischen Teil abdecken, werden umhüllende Vorsorgeeinrichtungen genannt. Sie verwenden die reglementarischen Vorsorgeleistungen und Beitragszahlungen für ihre Jahresrechnung und weisen im Anhang zusätzlich die Höhe der BVG-Altersguthaben (Schattenrechnung) aus. Kassen, die lediglich Leistungen über dem BVG-Obligatorium versichern, sind rein überobligatorische Vorsorgeeinrichtungen. Diese besitzen eine noch grössere Handlungsfreiheit. So können beispielsweise Kassen, die ausschliesslich Löhne über dem Anderthalbfachen des maximal versicherten BVG-Jahreslohns (2019: CHF 127'980.–) abdecken, ihren Versicherten unterschiedliche Anlagestrategien anbieten (Art. 1e BVV 2).",
+      "id": [
+        "145009"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145010]\nZusätzliche Vorsorgeleistungen sind rechtlich nur zulässig, wenn sie dem Zweck der beruflichen Vorsorge dienen. Das heisst, sie müssen die finanziellen Folgen der Risiken Alter, Tod und Invalidität abfedern. Präventive Massnahmen, wie beispielsweise die Unterstützung von Arbeitsplätzen für teilinvalide Menschen oder berufliche Ausbildungsmassnahmen für die Wiedereingliederung, sind im Rahmen der beruflichen Vorsorge nicht zugelassen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Zusätzliche Vorsorgeleistungen sind rechtlich nur zulässig, wenn sie dem Zweck der beruflichen Vorsorge dienen. Das heisst, sie müssen die finanziellen Folgen der Risiken Alter, Tod und Invalidität abfedern. Präventive Massnahmen, wie beispielsweise die Unterstützung von Arbeitsplätzen für teilinvalide Menschen oder berufliche Ausbildungsmassnahmen für die Wiedereingliederung, sind im Rahmen der beruflichen Vorsorge nicht zugelassen.",
+      "id": [
+        "145010"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145011]\n**Quellennachweis (Text und Grafiken):**\nUrs Schaffner: Finanzielle Führung von Pensionskassen in der Praxis, VPS Verlag 2016, aktualisiert durch Autor im Juli 2019",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Quellennachweis (Text und Grafiken):**\nUrs Schaffner: Finanzielle Führung von Pensionskassen in der Praxis, VPS Verlag 2016, aktualisiert durch Autor im Juli 2019",
+      "id": [
+        "145011"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:145012]\n[&video-link:https://player.vimeo.com/video/351183125][@posterImage:https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/poster_images/4213–video2–überobligatorische_leistungen.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "145012"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/351183125",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "posterImage": "https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/poster_images/4213–video2–überobligatorische_leistungen.png"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:145013]\n[&video-link:https://player.vimeo.com/video/351183167][@posterImage:https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/poster_images/4213–video3–beitrags-und_leistungsprimat.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "145013"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/351183167",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "posterImage": "https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/poster_images/4213–video3–beitrags-und_leistungsprimat.png"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:145014]\n[#Langfristiges Leistungs- und Finanzierungskonzept]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "145014"
+      ],
+      "title": "Langfristiges Leistungs- und Finanzierungskonzept"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145015]\nDie Pensionskasse versichert gemäss Bundesverfassung die Mitarbeitenden der angeschlossenen Arbeitgeberfirmen und deren Familienangehörige vor den finanziellen Folgen der versicherungstechnischen Risiken Alter, Tod und Invalidität. Nach einem Vorsorgefall und dem damit verbundenen Verlust des regelmässigen Erwerbseinkommens soll zusammen mit den Leistungen der eidgenössischen Alters-, Hinterlassenen- und Invalidenversicherung (AHV/IV) die gewohnte Lebenshaltung in angemessener Weise fortgeführt werden können. Dabei wird grundsätzlich davon ausgegangen, dass die Vorsorge bei einer lückenlosen Versicherungsdauer rund 60 Prozent des Einkommens abdecken soll, das vor dem Eintreten des Vorsorgefalls verdient wurde. Die Pensionskasse ist von Gesetzes wegen verpflichtet, die Altersleistungen im Kapitaldeckungsverfahren zu finanzieren. Dazu werden reglementarische Beitragszahlungen des Arbeitgebers und der Arbeitnehmenden einverlangt. Diese werden systematisch in Form von Altersguthaben für die versicherten Personen zurückgestellt und als gemeinsames Vorsorgevermögen gewinnbringend am Kapitalmarkt angelegt. Der Gesetzgeber gibt die Mindestsparbeiträge pro Altersgruppe sowie den Mindestumwandlungssatz im Rücktrittsalter und damit die minimale Altersrente vor. Die Pensionskasse hat im Rahmen einer Schattenrechnung und einer Bestätigung des Pensionsversicherungsexperten zu belegen, dass sie diese Mindestvorschriften einhält.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Pensionskasse versichert gemäss Bundesverfassung die Mitarbeitenden der angeschlossenen Arbeitgeberfirmen und deren Familienangehörige vor den finanziellen Folgen der versicherungstechnischen Risiken Alter, Tod und Invalidität. Nach einem Vorsorgefall und dem damit verbundenen Verlust des regelmässigen Erwerbseinkommens soll zusammen mit den Leistungen der eidgenössischen Alters-, Hinterlassenen- und Invalidenversicherung (AHV/IV) die gewohnte Lebenshaltung in angemessener Weise fortgeführt werden können. Dabei wird grundsätzlich davon ausgegangen, dass die Vorsorge bei einer lückenlosen Versicherungsdauer rund 60 Prozent des Einkommens abdecken soll, das vor dem Eintreten des Vorsorgefalls verdient wurde. Die Pensionskasse ist von Gesetzes wegen verpflichtet, die Altersleistungen im Kapitaldeckungsverfahren zu finanzieren. Dazu werden reglementarische Beitragszahlungen des Arbeitgebers und der Arbeitnehmenden einverlangt. Diese werden systematisch in Form von Altersguthaben für die versicherten Personen zurückgestellt und als gemeinsames Vorsorgevermögen gewinnbringend am Kapitalmarkt angelegt. Der Gesetzgeber gibt die Mindestsparbeiträge pro Altersgruppe sowie den Mindestumwandlungssatz im Rücktrittsalter und damit die minimale Altersrente vor. Die Pensionskasse hat im Rahmen einer Schattenrechnung und einer Bestätigung des Pensionsversicherungsexperten zu belegen, dass sie diese Mindestvorschriften einhält.",
+      "id": [
+        "145015"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145016]\nParallel zum Alterssparen bezahlen Arbeitnehmende und Arbeitgeber reglementarische Risikobeiträge für die Finanzierung der Invaliditäts- und Todesfallleistungen. Die entsprechenden Mindestleistungen sind ebenfalls gesetzlich festgeschrieben. Die Höhe der dafür zu erhebenden Beiträge ist im Gegensatz zum Alterssparen nicht vorgegeben, muss aber mithilfe von versicherungstechnischen Methoden festgelegt und regelmässig überprüft werden. Die Risikobeitragszahlungen werden grundsätzlich direkt für die Bildung der Vorsorgekapitalien von neuen Invaliditäts- und Hinterlassenenrenten verwendet und nicht am Kapitalmarkt angelegt. Insofern handelt es sich um eine klassische Lebensversicherung im Rahmen einer Solidaritätsgemeinschaft, an die alle Versicherten Beiträge leisten, um das notwendige Vorsorgekapital für die Leistungen jener Personen zu finanzieren, die von einem Vorsorgefall betroffen sind.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Parallel zum Alterssparen bezahlen Arbeitnehmende und Arbeitgeber reglementarische Risikobeiträge für die Finanzierung der Invaliditäts- und Todesfallleistungen. Die entsprechenden Mindestleistungen sind ebenfalls gesetzlich festgeschrieben. Die Höhe der dafür zu erhebenden Beiträge ist im Gegensatz zum Alterssparen nicht vorgegeben, muss aber mithilfe von versicherungstechnischen Methoden festgelegt und regelmässig überprüft werden. Die Risikobeitragszahlungen werden grundsätzlich direkt für die Bildung der Vorsorgekapitalien von neuen Invaliditäts- und Hinterlassenenrenten verwendet und nicht am Kapitalmarkt angelegt. Insofern handelt es sich um eine klassische Lebensversicherung im Rahmen einer Solidaritätsgemeinschaft, an die alle Versicherten Beiträge leisten, um das notwendige Vorsorgekapital für die Leistungen jener Personen zu finanzieren, die von einem Vorsorgefall betroffen sind.",
+      "id": [
+        "145016"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:145017]\n[##Äquivalenzprinzip]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "145017"
+      ],
+      "title": "Äquivalenzprinzip"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145018]\nDie Basis des Leistungs- und Finanzierungskonzepts einer Pensionskasse ist das Äquivalenzprinzip. Unter Äquivalenz versteht man grundsätzlich die Gleichwertigkeit von Einnahmen und Ausgaben eines Unternehmens im Erwartungswert. Werden Sozialversicherungsleistungen im Umlageverfahren finanziert, wie dies bei der AHV und IV der Fall ist, so müssen die Beitragszahlungen die in einer Rechnungsperiode ausbezahlten Vorsorgeleistungen finanzieren. Bei der Pensionskasse werden die Altersleistungen dagegen im Kapitaldeckungsverfahren finanziert. Das Äquivalenzprinzip gilt somit für die Leistungen und deren Finanzierung mittels Beitragszahlungen und der auf den angesparten Vorsorgekapitalien erwirtschafteten Anlagerenditen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Basis des Leistungs- und Finanzierungskonzepts einer Pensionskasse ist das Äquivalenzprinzip. Unter Äquivalenz versteht man grundsätzlich die Gleichwertigkeit von Einnahmen und Ausgaben eines Unternehmens im Erwartungswert. Werden Sozialversicherungsleistungen im Umlageverfahren finanziert, wie dies bei der AHV und IV der Fall ist, so müssen die Beitragszahlungen die in einer Rechnungsperiode ausbezahlten Vorsorgeleistungen finanzieren. Bei der Pensionskasse werden die Altersleistungen dagegen im Kapitaldeckungsverfahren finanziert. Das Äquivalenzprinzip gilt somit für die Leistungen und deren Finanzierung mittels Beitragszahlungen und der auf den angesparten Vorsorgekapitalien erwirtschafteten Anlagerenditen.",
+      "id": [
+        "145018"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145019]\nDie individuelle Äquivalenz ist das Gleichgewicht auf der Ebene des einzelnen Versicherten. So beruht beispielsweise die Finanzierung der Altersrente im Beitragsprimat auf dem Prinzip der individuellen Äquivalenz. Grundsätzlich herrscht während des Sparprozesses keine Solidarität zwischen den Versicherten – mit Ausnahme der gemeinsamen Verzinsung der Altersguthaben. Des Weiteren sollte das zum Zeitpunkt des Altersrücktritts angesparte Altersguthaben für die Finanzierung der lebenslangen Altersrente im Durchschnitt aller Rentenbezüger ausreichen. Dies setzt allerdings voraus, dass der für die Berechnung der Höhe der Altersrente angewendete Umwandlungssatz die steigende Lebenserwartung und realistische Vermögenserträge berücksichtigt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die individuelle Äquivalenz ist das Gleichgewicht auf der Ebene des einzelnen Versicherten. So beruht beispielsweise die Finanzierung der Altersrente im Beitragsprimat auf dem Prinzip der individuellen Äquivalenz. Grundsätzlich herrscht während des Sparprozesses keine Solidarität zwischen den Versicherten – mit Ausnahme der gemeinsamen Verzinsung der Altersguthaben. Des Weiteren sollte das zum Zeitpunkt des Altersrücktritts angesparte Altersguthaben für die Finanzierung der lebenslangen Altersrente im Durchschnitt aller Rentenbezüger ausreichen. Dies setzt allerdings voraus, dass der für die Berechnung der Höhe der Altersrente angewendete Umwandlungssatz die steigende Lebenserwartung und realistische Vermögenserträge berücksichtigt.",
+      "id": [
+        "145019"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145020]\nBei der kollektiven Äquivalenz steht das angestrebte Gleichgewicht für ein gegebenes Versichertenkollektiv im Vordergrund. So wird die Finanzierung der Invaliditäts- und Todesfallleistungen der Pensionskasse durch die Risikobeiträge nach dem kollektiven Äquivalenzprinzip berechnet. Bei lebenslangen Risikoleistungen muss beispielsweise die Summe der Risikobeiträge zusammen mit den im Vorsorgefall frei werdenden Altersguthaben der betroffenen Versicherten mindestens den Vorsorgekapitalien der in derselben Zeitperiode neu fällig gewordenen Rentenzahlungen entsprechen. Ausserdem erfolgt die Finanzierung bei einem Leistungsprimatsplan nach dem Prinzip der kollektiven Äquivalenz. Die Austrittsleistungen entsprechen dabei dem Barwert der erworbenen Rentenleistung. Die Altersrente ist abhängig von der Höhe des versicherten Lohns, die reglementarischen Beitragszahlungen werden aufgrund der versprochenen Leistungen versicherungsmathematisch berechnet.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bei der kollektiven Äquivalenz steht das angestrebte Gleichgewicht für ein gegebenes Versichertenkollektiv im Vordergrund. So wird die Finanzierung der Invaliditäts- und Todesfallleistungen der Pensionskasse durch die Risikobeiträge nach dem kollektiven Äquivalenzprinzip berechnet. Bei lebenslangen Risikoleistungen muss beispielsweise die Summe der Risikobeiträge zusammen mit den im Vorsorgefall frei werdenden Altersguthaben der betroffenen Versicherten mindestens den Vorsorgekapitalien der in derselben Zeitperiode neu fällig gewordenen Rentenzahlungen entsprechen. Ausserdem erfolgt die Finanzierung bei einem Leistungsprimatsplan nach dem Prinzip der kollektiven Äquivalenz. Die Austrittsleistungen entsprechen dabei dem Barwert der erworbenen Rentenleistung. Die Altersrente ist abhängig von der Höhe des versicherten Lohns, die reglementarischen Beitragszahlungen werden aufgrund der versprochenen Leistungen versicherungsmathematisch berechnet.",
+      "id": [
+        "145020"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:145021]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/skript3/mendo_4213_s3_1.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "145021"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/skript3/mendo_4213_s3_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145022]\nJedes Leistungs- und Finanzierungskonzept basiert auf möglichst präzisen Annahmen über die langfristig erwarteten Entwicklungen. So wird die erwartete Rendite der Vermögensanlagen meist auf Basis von Marktzinssätzen von Bundesobligationen mit langen Laufzeiten zuzüglich einer erwarteten Anlagerisikoprämie für risikoreichere Anlagekategorien wie Aktien, Immobilien oder alternative Anlagen berechnet. Der Umwandlungssatz bei Beitragsprimatskassen oder der jährliche Rentensatz bei Leistungsprimatskassen zur Berechnung der Leistungen stützt sich auf die Annahmen bezüglich der Lebenserwartung der versicherten Personen und des langfristigen Diskontierungszinssatzes (technischen Zinssatz) für die erwarteten Kapitalzahlungen an die Rentenbezüger. Die Risikobeiträge wiederum fussen auf dem Gegenwartswert der versprochenen Leistungen sowie den verwendeten Sterbe- und Invalidierungswahrscheinlichkeiten. Auch die Sparbeiträge bei Leistungsprimatskassen berücksichtigen versicherungstechnische Annahmen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Jedes Leistungs- und Finanzierungskonzept basiert auf möglichst präzisen Annahmen über die langfristig erwarteten Entwicklungen. So wird die erwartete Rendite der Vermögensanlagen meist auf Basis von Marktzinssätzen von Bundesobligationen mit langen Laufzeiten zuzüglich einer erwarteten Anlagerisikoprämie für risikoreichere Anlagekategorien wie Aktien, Immobilien oder alternative Anlagen berechnet. Der Umwandlungssatz bei Beitragsprimatskassen oder der jährliche Rentensatz bei Leistungsprimatskassen zur Berechnung der Leistungen stützt sich auf die Annahmen bezüglich der Lebenserwartung der versicherten Personen und des langfristigen Diskontierungszinssatzes (technischen Zinssatz) für die erwarteten Kapitalzahlungen an die Rentenbezüger. Die Risikobeiträge wiederum fussen auf dem Gegenwartswert der versprochenen Leistungen sowie den verwendeten Sterbe- und Invalidierungswahrscheinlichkeiten. Auch die Sparbeiträge bei Leistungsprimatskassen berücksichtigen versicherungstechnische Annahmen.",
+      "id": [
+        "145022"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:145023]\n**Quellennachweis (Text und Grafiken):**\nUrs Schaffner: Finanzielle Führung von Pensionskassen in der Praxis, VPS Verlag 2016",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Quellennachweis (Text und Grafiken):**\nUrs Schaffner: Finanzielle Führung von Pensionskassen in der Praxis, VPS Verlag 2016",
+      "id": [
+        "145023"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:145024]\n[&video-link:https://player.vimeo.com/video/351183198][@posterImage:https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/poster_images/4213–video4–finanzierung_von_vorsorgeleistungen.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "145024"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/351183198",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "posterImage": "https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/poster_images/4213–video4–finanzierung_von_vorsorgeleistungen.png"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:145025]\n[&video-link:https://player.vimeo.com/video/351183247][@posterImage:https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/poster_images/4213–video5–rückversicherung_von_vorsorgeleistungen.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "145025"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/351183247",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "posterImage": "https://docs.bitmark.cloud/bit-books/mendo/4213_bvg_basics/web-resources/images/poster_images/4213–video5–rückversicherung_von_vorsorgeleistungen.png"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:145026]\n[#1203 – Fragebogen – Steuern und Kapitalanlagen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "145026"
+      ],
+      "title": "1203 – Fragebogen – Steuern und Kapitalanlagen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:145027]\n[%1/16]\n\n[!Welche Aussage ist bezüglich der Stempelsteuern (Umsatzabgabe auf dem Fondshandel) korrekt?]\n[+Beim Kauf schweizerischer Anlagefonds fällt für den Anleger keine Stempelsteuer an]\n[-Beim Kauf ausländischer Anlagefonds fällt für den Anleger keine Stempelsteuer an]\n[-Beim Kauf von Anlagefonds fällt für den Anleger generell keine Stempelsteuer an]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "1/16",
+      "instruction": "Welche Aussage ist bezüglich der Stempelsteuern (Umsatzabgabe auf dem Fondshandel) korrekt?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Beim Kauf schweizerischer Anlagefonds fällt für den Anleger keine Stempelsteuer an",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Beim Kauf ausländischer Anlagefonds fällt für den Anleger keine Stempelsteuer an",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Beim Kauf von Anlagefonds fällt für den Anleger generell keine Stempelsteuer an",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145027"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:145028]\n[%2/16]\n[!Vermögenserträge aus einem Anlagefonds sind dann im Einkommen steuerbar, wenn die Fondsleitung diese ausschüttet. Solange die jährlichen Erträge thesauriert werden, fällt keine Einkommenssteuer an.]\n[-Richtig]\n[+Falsch]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "2/16",
+      "instruction": "Vermögenserträge aus einem Anlagefonds sind dann im Einkommen steuerbar, wenn die Fondsleitung diese ausschüttet. Solange die jährlichen Erträge thesauriert werden, fällt keine Einkommenssteuer an.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Richtig",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Falsch",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145028"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:145029]\n[%3/16]\n[!Der Verkäufer eines Zero-Bonds, welcher diesen vor Fälligkeit verkauft, realisiert einen steuerfreien Kapitalgewinn, sofern er diesen im Privatvermögen gehalten hat.]\n[-Richtig]\n[+Falsch]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "3/16",
+      "instruction": "Der Verkäufer eines Zero-Bonds, welcher diesen vor Fälligkeit verkauft, realisiert einen steuerfreien Kapitalgewinn, sofern er diesen im Privatvermögen gehalten hat.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Richtig",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Falsch",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145029"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:145030]\n[%4/16]\n[!Welche Aussage trifft auf steuerfrei ausbezahlte Dividenden von Schweizer Aktiengesellschaften zu?]\n[+Eine Dividendenzahlung zulasten von Einlagereserven der Aktionäre erfolgt einkommenssteuerfrei]\n[-Eine Dividendenzahlung aus dem letzten Jahresgewinn erfolgt einkommenssteuerfrei]\n[-Es gibt keine einkommenssteuerfreien Dividendenzahlungen.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "4/16",
+      "instruction": "Welche Aussage trifft auf steuerfrei ausbezahlte Dividenden von Schweizer Aktiengesellschaften zu?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Eine Dividendenzahlung zulasten von Einlagereserven der Aktionäre erfolgt einkommenssteuerfrei",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Eine Dividendenzahlung aus dem letzten Jahresgewinn erfolgt einkommenssteuerfrei",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Es gibt keine einkommenssteuerfreien Dividendenzahlungen.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145030"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:145031]\n[%5/16]\n[!Die steuerliche Regelung von Immobilienfonds mit direktem Grundbesitz ist speziell, da die Fondsleitung die Erträge aus dem Grundbesitz versteuern muss – und nicht der Anleger.]\n[+Richtig]\n[-Falsch]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "5/16",
+      "instruction": "Die steuerliche Regelung von Immobilienfonds mit direktem Grundbesitz ist speziell, da die Fondsleitung die Erträge aus dem Grundbesitz versteuern muss – und nicht der Anleger.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Richtig",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Falsch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145031"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:145032]\n[%6/16]\n[!Liegt bei einem strukturierten Produkt eine Bondkomponente vor, so fallen auf Erträgen aus dem Bondteil Einkommenssteuern an.]\n[+Richtig]\n[-Falsch]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "6/16",
+      "instruction": "Liegt bei einem strukturierten Produkt eine Bondkomponente vor, so fallen auf Erträgen aus dem Bondteil Einkommenssteuern an.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Richtig",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Falsch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145032"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1]\n[@id:145033]\n[%7/16]\n[!Welche der folgenden Positionen unterliegt der Einkommenssteuer für Privatanleger?]\n[+Ausschüttung eines Jahreszinses aus einer Obligation]\n[-Abrechnung eines Marchzinses (Einnahme beim Anleger)]\n[+Ausschüttung einer Dividende aus dem ordentlichen Jahresgewinn einer Aktiengesellschaft]\n[-Gewinne aus Optionsgeschäften]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "7/16",
+      "instruction": "Welche der folgenden Positionen unterliegt der Einkommenssteuer für Privatanleger?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Ausschüttung eines Jahreszinses aus einer Obligation",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Abrechnung eines Marchzinses (Einnahme beim Anleger)",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Ausschüttung einer Dividende aus dem ordentlichen Jahresgewinn einer Aktiengesellschaft",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Gewinne aus Optionsgeschäften",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145033"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:145034]\n[%8/16]\n[!Erhaltene Bezugsrechte bei Kapitalerhöhungen stellen beim Altaktionär nicht steuerbares Einkommen dar.]\n[+Richtig]\n[-Falsch]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "8/16",
+      "instruction": "Erhaltene Bezugsrechte bei Kapitalerhöhungen stellen beim Altaktionär nicht steuerbares Einkommen dar.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Richtig",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Falsch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145034"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:145035]\n[%9/16]\n[!Untersteht der Kapitalgewinn aus dem Verkauf einer inländischen Aktie des Privatvermögens der Verrechnungssteuer?]\n[-Ja]\n[+Nein]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "9/16",
+      "instruction": "Untersteht der Kapitalgewinn aus dem Verkauf einer inländischen Aktie des Privatvermögens der Verrechnungssteuer?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Ja",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Nein",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145035"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:145036]\n[%10/16]\n[!Wo ist der Ertrag eines Anlagefonds luxemburgischen Rechts einkommenssteuerpflichtig?]\n[-An der Quelle]\n[+Am Wohnsitz des Anlegers]\n[-In Luxemburg]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "10/16",
+      "instruction": "Wo ist der Ertrag eines Anlagefonds luxemburgischen Rechts einkommenssteuerpflichtig?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "An der Quelle",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Am Wohnsitz des Anlegers",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "In Luxemburg",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145036"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1]\n[@id:145037]\n[%11/16]\n[!Unter gewissen Umständen droht Anlegern als gewerbsmässige Wertschriftenhändler qualifiziert zu werden. Welche Aussagen stimmen hierzu?]\n[-Dies betrifft nur juristische Personen]\n[+Dies kann Anleger betreffen, die mit Optionen sehr viele Transaktionen ausführen]\n[-Dies betrifft nur Personen, die im Handelsregister eingetragen sind.]\n[-Dies betrifft primär Personen, die einzelne Anlagefonds im Depot halten.]\n[-Dies betrifft nur ausländische Anleger]\n[+Dies kann Anleger betreffen, die Fremdkapital einsetzen und sehr viele Transaktionen ausführen]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "11/16",
+      "instruction": "Unter gewissen Umständen droht Anlegern als gewerbsmässige Wertschriftenhändler qualifiziert zu werden. Welche Aussagen stimmen hierzu?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Dies betrifft nur juristische Personen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Dies kann Anleger betreffen, die mit Optionen sehr viele Transaktionen ausführen",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Dies betrifft nur Personen, die im Handelsregister eingetragen sind.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Dies betrifft primär Personen, die einzelne Anlagefonds im Depot halten.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Dies betrifft nur ausländische Anleger",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Dies kann Anleger betreffen, die Fremdkapital einsetzen und sehr viele Transaktionen ausführen",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145037"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:145038]\n[%12/16]\n[!Optionsprämien, die der Verkäufer (Schreiber) von Call- oder Putoptionen vereinnahmt, gelten als Kapitalgewinne und sind daher einkommenssteuerlich nicht relevant.]\n[+Richtig]\n[-Falsch]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "12/16",
+      "instruction": "Optionsprämien, die der Verkäufer (Schreiber) von Call- oder Putoptionen vereinnahmt, gelten als Kapitalgewinne und sind daher einkommenssteuerlich nicht relevant.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Richtig",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Falsch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145038"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:145039]\n[%13/16]\n[!Welches ist das typische Merkmal einer reinen Diskontobligation; einem Zerobond?]\n[+Keine periodische Verzinsung des Nominalkapitals]\n[-Der Nominalzins ist weniger als die Hälfte der Gesamtrendite der Obligation.]\n[-Der Zins wird in der Höhe des Coupons jeweils am Jahresende ausbezahlt.]\n[-Es kann zwischen Thesaurierung und Ausschüttung des Kapitalertrages gewählt werden.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "13/16",
+      "instruction": "Welches ist das typische Merkmal einer reinen Diskontobligation; einem Zerobond?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Keine periodische Verzinsung des Nominalkapitals",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Der Nominalzins ist weniger als die Hälfte der Gesamtrendite der Obligation.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Der Zins wird in der Höhe des Coupons jeweils am Jahresende ausbezahlt.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Es kann zwischen Thesaurierung und Ausschüttung des Kapitalertrages gewählt werden.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145039"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:145040]\n[%14/16]\n[!Welche Aussage ist korrekt bezüglich einer Besteuerung von Kapitalgewinnen?]\n[+Kapitalgewinne im Geschäftsvermögen werden besteuert]\n[- Kapitalgewinne im Privatvermögen werden besteuert]\n[-Kapitalgewinne im Privat- und Geschäftsvermögen werden besteuert]\n[-Kapitalgewinne werden gar nicht besteuert]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "14/16",
+      "instruction": "Welche Aussage ist korrekt bezüglich einer Besteuerung von Kapitalgewinnen?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Kapitalgewinne im Geschäftsvermögen werden besteuert",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Kapitalgewinne im Privatvermögen werden besteuert",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Kapitalgewinne im Privat- und Geschäftsvermögen werden besteuert",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Kapitalgewinne werden gar nicht besteuert",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145040"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1]\n[@id:145041]\n[%15/16]\n[!Welche der folgenden Situationen / Aussagen treffen auf IUP-Obligationen zu?]\n[+Keine periodische Verzinsung des Nominalkapitals]\n[+Der Nominalzins ist weniger als die Hälfte der Gesamtrendite der Obligation.]\n[-Der Zins wird in der Höhe des Coupons jeweils am Jahresende ausbezahlt.]\n[-Es kann zwischen Thesaurierung und Ausschüttung des Kapitalertrages gewählt werden.]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "15/16",
+      "instruction": "Welche der folgenden Situationen / Aussagen treffen auf IUP-Obligationen zu?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Keine periodische Verzinsung des Nominalkapitals",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Der Nominalzins ist weniger als die Hälfte der Gesamtrendite der Obligation.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Der Zins wird in der Höhe des Coupons jeweils am Jahresende ausbezahlt.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Es kann zwischen Thesaurierung und Ausschüttung des Kapitalertrages gewählt werden.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145041"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:145042]\n[%16/16]\n[!Bei Zerobonds wird die Differenz zwischen Ausgabepreis oder Kaufpreis zum Rückzahlungspreis bzw. Verkaufspreis im Jahr der Rückzahlung bzw. des Verkaufes besteuert.]\n[+Richtig]\n[-Falsch]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "16/16",
+      "instruction": "Bei Zerobonds wird die Differenz zwischen Ausgabepreis oder Kaufpreis zum Rückzahlungspreis bzw. Verkaufspreis im Jahr der Rückzahlung bzw. des Verkaufes besteuert.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Richtig",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Falsch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "145042"
+      ]
+    }
+  }
+]

@@ -1,0 +1,1153 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:198777]\n[#Aufgabenset 1]\n[@language:de]\n[@coverImage:]\n[@externalId:e-aufgabenset-1_038--gjgmwjs]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "198777"
+      ],
+      "title": "Aufgabenset 1",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "undefined"
+      ],
+      "externalId": [
+        "e-aufgabenset-1_038--gjgmwjs"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Rule violation around ']'",
+        "line": 5,
+        "column": 13,
+        "errorLine": "[@coverImage:]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:198778]\n[▼ch-1]\n[#Grundlagen des Schweizer Steuersystems]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "198778"
+      ],
+      "anchor": "ch-1",
+      "title": "Grundlagen des Schweizer Steuersystems"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198779]\n[%1]\n[!Erklären Sie den Begriff „Steuerüberwälzung“.]\n===\n[$Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "1",
+      "instruction": "Erklären Sie den Begriff „Steuerüberwälzung“.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198779"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198780]\n[%2]\n[!Bei welchen Steuerarten des Bundes ist eine Überwälzung vorgesehen und wie funktioniert sie?]\n===\n[$- Bei der Verrechnungssteuer: Eine Bank überwälzt die Steuerzahllast, indem sie auf dem Zinsertrag 35% an die ESTV abliefert und dem Steuerträger nur 65% ausbezahlt \n- Bei der MWST, indem der MWST-Betrag auf dem Umsatz eingerechnet wird und dem Verbraucher / Konsumenten belastet wird \n(Annahme: Konsument ist nicht selbst MWSTpflichtig, sondern der Endverbraucher !)]",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "2",
+      "instruction": "Bei welchen Steuerarten des Bundes ist eine Überwälzung vorgesehen und wie funktioniert sie?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "- Bei der Verrechnungssteuer: Eine Bank überwälzt die Steuerzahllast, indem sie auf dem Zinsertrag 35% an die ESTV abliefert und dem Steuerträger nur 65% ausbezahlt \n- Bei der MWST, indem der MWST-Betrag auf dem Umsatz eingerechnet wird und dem Verbraucher / Konsumenten belastet wird \n(Annahme: Konsument ist nicht selbst MWSTpflichtig, sondern der Endverbraucher !)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198780"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n\n'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      },
+      {
+        "message": "Rule violation around '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.interview:bitmark++]\n[@id:198781]\n[%3]\n[!Mit welchen Steuern (bspw. Einkommenssteuer, Vermögenssteuer, Mehrwertsteuer, Erbschaftssteuer usw.) sind die einzelnen Ereignisse konfrontiert?]\n\nAnton erhält von seinen Eltern (Variante: von seinem Onkel, seiner Tante) einen Erbvorbezug (Variante: eine Schenkung) von Fr. 200'000. Er macht sich nach seiner abgeschlossenen Ausbildung als Finanzplaner selbständig. Zwei Jahre später heiratet er seine langjährige Freundin Barbara und ein weiteres Jahr darauf wird die Tochter Clara geboren. Sie kaufen sich ein schönes Haus, müssen sich dazu aber einen Teil ihrer Säule 2 auszahlen lassen. Das Einzelunternehmen von Anton entwickelt sich gut und er beschäftigt bereits einige Angestellte. Aus verschiedenen Gründen (Haftung, Mitarbeiterbeteiligung, ggf. steuerliche Überlegungen) möchte Anton eine Aktiengesellschaft gründen und gleichzeitig seine Frau Barbara mitbeteiligen, welche Betriebsökonomin ist und ihn damit auch beruflich sehr gut ergänzt. Anton und Barbara beziehen  aus der Aktiengesellschaft ein regelmässiges Einkommen, schütten sich aber keine Dividende aus. Einige Jahre darauf entschliessen sie sich ein Mitarbeiteraktienmodell einzurichten. Ab diesem Zeitpunkt wird jährlich auch eine Dividende ausgeschüttet. Für die Mitarbeiterbeteiligung hält die Aktiengesellschaft eigene Aktien. Die Aktiengesellschaft hat ein gutes Wachstum und Anton und Barbara entschliessen sich, mit ihrem Unternehmen in einen grösseren Markt zu ziehen. Sie wechseln mit der Aktiengesellschaft den Kanton, behalten aber ihr Haus und vermieten es. \n\nDie Geschichte von Anton und Barbara, ihrer Tochter Clara und der Aktiengesellschaft liesse sich beliebig fortsetzen. Sie zeigt aber bereits jetzt schon anschaulich, wie alltägliche Ereignisse praktisch immer auch mit irgendwelchen Steuern im Zusammenhang stehen.\n\nDabei sind Mehrfachnennungen von verschiedenen Steuern bei einzelnen Ereignissen möglich. Die nachstehende Tabelle soll der einfacheren Erfassung dienen.\n===\nEreignis Steuern\n[$Erbvorbezug, Schenkung Eltern\nIn vielen Kantonen schenkungssteuerfrei für Nachkommen. Nach Erhalt Einkommens-und Vermögenssteuer.]\n===\nEreignis Steuern\n[$Erbvorbezug, Schenkung Onkel Tante\nIn den meisten Kantonen steuerbar bei der Schenkungssteuer. Sonst aber Kantone LU und SZ. Nach Erhalt Einkommens- und Vermögenssteuer.]\n===\nEreignis Steuern\n[$Selbständigkeit\nWechsel bei der Einkommenssteuer von unselbständig zu selbständig, u.a. Buchwertprinzip.]\n===\nEreignis Steuern\n[$Heirat und Tochter\nWechsel zur Familienbesteuerung für Einkommens- und Vermögensbesteuerung.]\n===\nEreignis Steuern\n[$Hauskauf\nEigenmietwert, Schuldzinsenabzug, LUK, Vermögenssteuerwert, Schulden bei Einkommens- und Vermögenssteuer.]\n===\nEreignis Steuern\n[$Bezug Säule 2\nKapitalleistungen aus Vorsorge mit reduzierter Einkommenssteuer.]\n===\nEreignis Steuern\n[$Umwandlung EU in AG\nGrundsätzlich Steuerneutralität, Wechsel selbständig zu unselbständig, Beginn Arbeitstätigkeit Ehefrau bei Einkommens und Vermögenssteuer, ggf Emissionsabgabe]\n===\nEreignis Steuern\n[$Mitarbeiteraktien\nGgf Verkauf Aktien grundsätzlich steuerfrei bei Einkommenssteuer wenn aus Privatvermögen. Kapitalgewinn aus Verkauf eigene Aktien unterliegt bei Aktiengesellschaft der Gewinnsteuer]\n===\nEreignis Steuern\n[$Dividende\nEinkommenssteuer, allenfalls reduziert, wenn Voraussetzungen erfüllt.]\n===\nEreignis Steuern\n[$Eigene Aktien\nPlafonierung und Veräusserungsfrist, ansonsten Einkommens- und Verrechnungssteuer.]\n===\nEreignis Steuern\n[$Hausvermietung\nMietertrag und LUK Einkommenssteuer, interkantonale Steuerausscheidung]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark++",
+      "item": "3",
+      "instruction": "Mit welchen Steuern (bspw. Einkommenssteuer, Vermögenssteuer, Mehrwertsteuer, Erbschaftssteuer usw.) sind die einzelnen Ereignisse konfrontiert?",
+      "body": "Anton erhält von seinen Eltern (Variante: von seinem Onkel, seiner Tante) einen Erbvorbezug (Variante: eine Schenkung) von Fr. 200'000. Er macht sich nach seiner abgeschlossenen Ausbildung als Finanzplaner selbständig. Zwei Jahre später heiratet er seine langjährige Freundin Barbara und ein weiteres Jahr darauf wird die Tochter Clara geboren. Sie kaufen sich ein schönes Haus, müssen sich dazu aber einen Teil ihrer Säule 2 auszahlen lassen. Das Einzelunternehmen von Anton entwickelt sich gut und er beschäftigt bereits einige Angestellte. Aus verschiedenen Gründen (Haftung, Mitarbeiterbeteiligung, ggf. steuerliche Überlegungen) möchte Anton eine Aktiengesellschaft gründen und gleichzeitig seine Frau Barbara mitbeteiligen, welche Betriebsökonomin ist und ihn damit auch beruflich sehr gut ergänzt. Anton und Barbara beziehen  aus der Aktiengesellschaft ein regelmässiges Einkommen, schütten sich aber keine Dividende aus. Einige Jahre darauf entschliessen sie sich ein Mitarbeiteraktienmodell einzurichten. Ab diesem Zeitpunkt wird jährlich auch eine Dividende ausgeschüttet. Für die Mitarbeiterbeteiligung hält die Aktiengesellschaft eigene Aktien. Die Aktiengesellschaft hat ein gutes Wachstum und Anton und Barbara entschliessen sich, mit ihrem Unternehmen in einen grösseren Markt zu ziehen. Sie wechseln mit der Aktiengesellschaft den Kanton, behalten aber ihr Haus und vermieten es. \n\nDie Geschichte von Anton und Barbara, ihrer Tochter Clara und der Aktiengesellschaft liesse sich beliebig fortsetzen. Sie zeigt aber bereits jetzt schon anschaulich, wie alltägliche Ereignisse praktisch immer auch mit irgendwelchen Steuern im Zusammenhang stehen.\n\nDabei sind Mehrfachnennungen von verschiedenen Steuern bei einzelnen Ereignissen möglich. Die nachstehende Tabelle soll der einfacheren Erfassung dienen.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Ereignis Steuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Erbvorbezug, Schenkung Eltern\nIn vielen Kantonen schenkungssteuerfrei für Nachkommen. Nach Erhalt Einkommens-und Vermögenssteuer.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ereignis Steuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Erbvorbezug, Schenkung Onkel Tante\nIn den meisten Kantonen steuerbar bei der Schenkungssteuer. Sonst aber Kantone LU und SZ. Nach Erhalt Einkommens- und Vermögenssteuer.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ereignis Steuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Selbständigkeit\nWechsel bei der Einkommenssteuer von unselbständig zu selbständig, u.a. Buchwertprinzip.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ereignis Steuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Heirat und Tochter\nWechsel zur Familienbesteuerung für Einkommens- und Vermögensbesteuerung.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ereignis Steuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Hauskauf\nEigenmietwert, Schuldzinsenabzug, LUK, Vermögenssteuerwert, Schulden bei Einkommens- und Vermögenssteuer.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ereignis Steuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Bezug Säule 2\nKapitalleistungen aus Vorsorge mit reduzierter Einkommenssteuer.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ereignis Steuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Umwandlung EU in AG\nGrundsätzlich Steuerneutralität, Wechsel selbständig zu unselbständig, Beginn Arbeitstätigkeit Ehefrau bei Einkommens und Vermögenssteuer, ggf Emissionsabgabe",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ereignis Steuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Mitarbeiteraktien\nGgf Verkauf Aktien grundsätzlich steuerfrei bei Einkommenssteuer wenn aus Privatvermögen. Kapitalgewinn aus Verkauf eigene Aktien unterliegt bei Aktiengesellschaft der Gewinnsteuer",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ereignis Steuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Dividende\nEinkommenssteuer, allenfalls reduziert, wenn Voraussetzungen erfüllt.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ereignis Steuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Eigene Aktien\nPlafonierung und Veräusserungsfrist, ansonsten Einkommens- und Verrechnungssteuer.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ereignis Steuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Hausvermietung\nMietertrag und LUK Einkommenssteuer, interkantonale Steuerausscheidung",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198781"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198782]\n[%4]\n[!Geben Sie eine Definition für öffentliche Abgaben und für Steuern.]\n===\n[$Öffentliche Abgaben sind die aufgrund der Hoheitsgewalt des Gemeinwesens geschuldeten finanziellen Leistungen bzw. Geldleistungen der Individuen an das Gemeinwesen.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "4",
+      "instruction": "Geben Sie eine Definition für öffentliche Abgaben und für Steuern.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Öffentliche Abgaben sind die aufgrund der Hoheitsgewalt des Gemeinwesens geschuldeten finanziellen Leistungen bzw. Geldleistungen der Individuen an das Gemeinwesen.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198782"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:198783]\n[%5]\n[!Nennen Sie konkrete Beispiele für:]\n===\n• Allgemeine Steuern\n[$Grundstückgewinnsteuer, Erbschafts- und Schenkungssteuer, Verrechnungssteuer, Stempelsteuer]\n===\n• Zwecksteuern\n[$Alkohol- und Biersteuer, Tabaksteuer, Mehrwertsteuer (AHV Prozent), Spitalsteuer, Motorfahrzeugsteuer]\n===\n• Lenkungssteuern\n[$C02-Abgabe, Alkohol- und Biersteuer (teilweise), Tabaksteuer (teilweise)]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "5",
+      "instruction": "Nennen Sie konkrete Beispiele für:",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "• Allgemeine Steuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Grundstückgewinnsteuer, Erbschafts- und Schenkungssteuer, Verrechnungssteuer, Stempelsteuer",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "• Zwecksteuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Alkohol- und Biersteuer, Tabaksteuer, Mehrwertsteuer (AHV Prozent), Spitalsteuer, Motorfahrzeugsteuer",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "• Lenkungssteuern",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "C02-Abgabe, Alkohol- und Biersteuer (teilweise), Tabaksteuer (teilweise)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198783"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:198784]\n[%6]\n[!Um was für Arten von Einkünften des Gemeinwesens handelt es sich in den folgenden Fällen und wie sind sie innerhalb der Abgabenstruktur einzuordnen?]\n===\n• AHV-Beiträge\n[$öffentliche Abgabe; Kausalabgabe; Vorzugslast]\n===\n• Dividende eines Atomkraftwerks\n[$privatwirtschaftliche Einkünfte des Gemeinwesens]\n===\n• Steuerbusse von Fr. l '000\n[$Geldbusse]\n===\n• Abgabe infolge Leistungsunmöglichkeit des Militärdienstes:\n[$öffentliche Abgabe; Kausalabgabe; Ersatzabgabe]\n===\n• Entgelt für Kehrichtabfallsäcke\n[$öffentliche Abgabe; Kausalabgabe; Gebühr]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "6",
+      "instruction": "Um was für Arten von Einkünften des Gemeinwesens handelt es sich in den folgenden Fällen und wie sind sie innerhalb der Abgabenstruktur einzuordnen?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "• AHV-Beiträge",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "öffentliche Abgabe; Kausalabgabe; Vorzugslast",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "• Dividende eines Atomkraftwerks",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "privatwirtschaftliche Einkünfte des Gemeinwesens",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "• Steuerbusse von Fr. l '000",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Geldbusse",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "• Abgabe infolge Leistungsunmöglichkeit des Militärdienstes:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "öffentliche Abgabe; Kausalabgabe; Ersatzabgabe",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "• Entgelt für Kehrichtabfallsäcke",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "öffentliche Abgabe; Kausalabgabe; Gebühr",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198784"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198785]\n[%7]\nZum Zweck der Finanzierung der Staatsstrassen erhebt ein Kanton eine \"Staatstaxe\" von 10 bis 40 Rappen je Logiernacht für alle Personen, die im Kanton gegen Entgelt beherbergt werden oder in einem Ferienhaus, einer Ferienwohnung, im Zelt oder Wohnwagen und dergleichen übernachten. \n\nHandelt es sich hierbei um eine Steuer? Überlegen Sie sich zuerst eine Antwort, lesen Sie anschliessend den im Lernraum aufgeschalteten Bundesgerichtsentscheid BGE 90 I 77 dazu.\n===\n[$Siehe dazu BGE 90 I 77 E. 3 S. 80 ff. (Liver gegen Graubünden, Kanton und Steuerverwaltung)\n\nDabei stellt sich zunächst die Frage nach der rechtlichen Natur der streitigen Staatstaxe, denn das aus Art. 46 Abs. 2 aBV abgeleitete Verbot der interkantonalen Doppelbesteuerung gilt nach feststehender Rechtsprechung nur für eigentliche Steuern, nicht auch für Gebühren und Vorzugslasten\n\nUm eine Gebühr kann es sich nicht handeln. Gebühren sind ein Entgelt für eine bestimmte, vom Pflichtigen veranlasste Amtshandlung oder für die Benützung einer öffentlichen Anstalt (BGE 82 I 301 E. 3 a und dort angeführte frühere Urteile, 84 I 165 E. 3). \n\nDie Staatstaxe wird aber ohne Rücksicht darauf erhoben, ob der Pflichtige die Kantonsstrassen, zu deren Finanzierung der Ertrag der .Abgabe bestimmt ist, auch tatsächlich benützt. Sie ist daher noch weniger als die Automobilsteuer ein Entgelt für die Strassenbenützung.\n(BGE 57 I 5 mit Verweisungen)\nZudem würde die Erhebung einer Gebühr für die Strassenbenützung gegen Art. 37 Abs. 2 a BV verstossen. \n\nEntgegen der Auffassung des Kleinen Rates liegt aber auch keine Vorzugslast vor. Vorzugslasten sind Beiträge, die vom Pflichtigen für den ihm aus einer öffentlichen Einrichtung erwachsenden wirtschaftlichen Vorteil erhoben und einerseits nach den zu deckenden Kosten der Einrichtung, anderseits nach Massgabe des dem Pflichtigen daraus erwachsenden Sondervorteils bemessen werden \n(BGE 63 I 153) 67 I 309 /10, 70 L 126, 7 4 I 224 /5, 86 I 99 E. 2). \n\nDie Staatstaxe dient jedoch nicht dem Ausgleich eines Vorteiles, welcher den abgabepflichtigen Personen allein oder doch in besonderem Masse erwächst, denn die Staatstrassen, für deren Finanzierung die Abgabe erhoben wird, dienen der gesamten Bevölkerung und Wirtschaft des Kantons und darüber hinaus denjenigen, welche den Kanton mit ihren Fahrzeugen durchqueren. Insbesondere ist klar, dass diejenigen, die im Kanton übernachten, ohne dort Erwerbseinkommen und bewegliches Vermögen zu versteuern, und die den überwiegenden Teil der Abgabenpflichtigen ausmachen, aus den Kantonsstrassen keinen grösseren Vorteil ziehen als diejenigen, die im Kanton Wohnsitz haben, deshalb für Erwerbseinkommen und bewegliches Vermögen steuerpflichtig sind und daher gemäss Art. 4 im „Gesetz über die Strassenfinanzierung “ von der Abgabe befreit sind. \n\nDass es sich nicht um eine Vorzugslast handeln kann, ergibt sich auch daraus, dass die Höhe der Taxe nach der Preislage der Beherbergungsstätte abgestuft ist und nicht nach dem mehr oder weniger grossen Vorteil, den die Strassenanlagen dem Abgabepflichtigen bieten. Dagegen erfüllt die Staatstaxe alle Merkmale der Steuer, denn sie wird voraussetzungslos, d.h. nicht als Äquivalent für eine staatliche Leistung oder einen besonderen Vorteil, sondern lediglich im Anschluss an einen bestimmten, in der Person des Pflichtigen erfüllten wirtschaftlichen Tatbestand erhoben und stellt einen Beitrag an die allgemeinen, dem Wohl der Gesamtheit dienenden Staatsausgaben dar \n(BGE 52 I 51, 53 I 482, 54 I 37, 63 I 153, 86 I 99 E. 2). \n\nErstellung und Unterhalt eines leistungsfähigen Kantonsstrassennetzes gehören zu den im Interesse der gesamten Bevölkerung und Wirtschaft eines Kantons liegenden allgemeinen Staatsaufgaben, ja bilden heute, angesichts der immer stärkeren Zunahme des Motorfahrzeugverkehrs, eine der grössten, wichtigsten und dringendsten Staatsausgaben. Dass die Staatstaxe nach Art. 2 „Gesetz über die Strassenfinanzierung“ ausschliesslich zur Finanzierung der Strassen und Tilgung der Strassenschuld verwendet werden muss, \nstempelt sie nicht zur Vorzugslast, da auch Abgaben, deren Verwendung dergestalt gebunden ist, unter die Steuern (sog. Zwecksteuern) fallen, wenn darauf im Übrigen die Merkmale der Steuer zutreffen (vgl. BGE 53 I 377, 63 1154). \nEs ist daher nicht einzusehen, wieso die Staatstaxe, wie in der Beschwerdeantwort behauptet wird, \"sowohl den Charakter einer Sondersteuer im Sinne einer Gemengsteuer als auch einer Vorzugslast\" habe. ]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "7",
+      "instruction": "",
+      "body": "Zum Zweck der Finanzierung der Staatsstrassen erhebt ein Kanton eine \"Staatstaxe\" von 10 bis 40 Rappen je Logiernacht für alle Personen, die im Kanton gegen Entgelt beherbergt werden oder in einem Ferienhaus, einer Ferienwohnung, im Zelt oder Wohnwagen und dergleichen übernachten. \n\nHandelt es sich hierbei um eine Steuer? Überlegen Sie sich zuerst eine Antwort, lesen Sie anschliessend den im Lernraum aufgeschalteten Bundesgerichtsentscheid BGE 90 I 77 dazu.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Siehe dazu BGE 90 I 77 E. 3 S. 80 ff. (Liver gegen Graubünden, Kanton und Steuerverwaltung)\n\nDabei stellt sich zunächst die Frage nach der rechtlichen Natur der streitigen Staatstaxe, denn das aus Art. 46 Abs. 2 aBV abgeleitete Verbot der interkantonalen Doppelbesteuerung gilt nach feststehender Rechtsprechung nur für eigentliche Steuern, nicht auch für Gebühren und Vorzugslasten\n\nUm eine Gebühr kann es sich nicht handeln. Gebühren sind ein Entgelt für eine bestimmte, vom Pflichtigen veranlasste Amtshandlung oder für die Benützung einer öffentlichen Anstalt (BGE 82 I 301 E. 3 a und dort angeführte frühere Urteile, 84 I 165 E. 3). \n\nDie Staatstaxe wird aber ohne Rücksicht darauf erhoben, ob der Pflichtige die Kantonsstrassen, zu deren Finanzierung der Ertrag der .Abgabe bestimmt ist, auch tatsächlich benützt. Sie ist daher noch weniger als die Automobilsteuer ein Entgelt für die Strassenbenützung.\n(BGE 57 I 5 mit Verweisungen)\nZudem würde die Erhebung einer Gebühr für die Strassenbenützung gegen Art. 37 Abs. 2 a BV verstossen. \n\nEntgegen der Auffassung des Kleinen Rates liegt aber auch keine Vorzugslast vor. Vorzugslasten sind Beiträge, die vom Pflichtigen für den ihm aus einer öffentlichen Einrichtung erwachsenden wirtschaftlichen Vorteil erhoben und einerseits nach den zu deckenden Kosten der Einrichtung, anderseits nach Massgabe des dem Pflichtigen daraus erwachsenden Sondervorteils bemessen werden \n(BGE 63 I 153) 67 I 309 /10, 70 L 126, 7 4 I 224 /5, 86 I 99 E. 2). \n\nDie Staatstaxe dient jedoch nicht dem Ausgleich eines Vorteiles, welcher den abgabepflichtigen Personen allein oder doch in besonderem Masse erwächst, denn die Staatstrassen, für deren Finanzierung die Abgabe erhoben wird, dienen der gesamten Bevölkerung und Wirtschaft des Kantons und darüber hinaus denjenigen, welche den Kanton mit ihren Fahrzeugen durchqueren. Insbesondere ist klar, dass diejenigen, die im Kanton übernachten, ohne dort Erwerbseinkommen und bewegliches Vermögen zu versteuern, und die den überwiegenden Teil der Abgabenpflichtigen ausmachen, aus den Kantonsstrassen keinen grösseren Vorteil ziehen als diejenigen, die im Kanton Wohnsitz haben, deshalb für Erwerbseinkommen und bewegliches Vermögen steuerpflichtig sind und daher gemäss Art. 4 im „Gesetz über die Strassenfinanzierung “ von der Abgabe befreit sind. \n\nDass es sich nicht um eine Vorzugslast handeln kann, ergibt sich auch daraus, dass die Höhe der Taxe nach der Preislage der Beherbergungsstätte abgestuft ist und nicht nach dem mehr oder weniger grossen Vorteil, den die Strassenanlagen dem Abgabepflichtigen bieten. Dagegen erfüllt die Staatstaxe alle Merkmale der Steuer, denn sie wird voraussetzungslos, d.h. nicht als Äquivalent für eine staatliche Leistung oder einen besonderen Vorteil, sondern lediglich im Anschluss an einen bestimmten, in der Person des Pflichtigen erfüllten wirtschaftlichen Tatbestand erhoben und stellt einen Beitrag an die allgemeinen, dem Wohl der Gesamtheit dienenden Staatsausgaben dar \n(BGE 52 I 51, 53 I 482, 54 I 37, 63 I 153, 86 I 99 E. 2). \n\nErstellung und Unterhalt eines leistungsfähigen Kantonsstrassennetzes gehören zu den im Interesse der gesamten Bevölkerung und Wirtschaft eines Kantons liegenden allgemeinen Staatsaufgaben, ja bilden heute, angesichts der immer stärkeren Zunahme des Motorfahrzeugverkehrs, eine der grössten, wichtigsten und dringendsten Staatsausgaben. Dass die Staatstaxe nach Art. 2 „Gesetz über die Strassenfinanzierung“ ausschliesslich zur Finanzierung der Strassen und Tilgung der Strassenschuld verwendet werden muss, \nstempelt sie nicht zur Vorzugslast, da auch Abgaben, deren Verwendung dergestalt gebunden ist, unter die Steuern (sog. Zwecksteuern) fallen, wenn darauf im Übrigen die Merkmale der Steuer zutreffen (vgl. BGE 53 I 377, 63 1154). \nEs ist daher nicht einzusehen, wieso die Staatstaxe, wie in der Beschwerdeantwort behauptet wird, \"sowohl den Charakter einer Sondersteuer im Sinne einer Gemengsteuer als auch einer Vorzugslast\" habe.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198785"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198786]\n[%8]\nÜberlegen Sie sich zuerst eine Antwort, lesen Sie anschliessend den im Lernraum aufgeschalteten Bundesgerichtsentscheid BGE 57 I 1 dazu.\nEin Kanton erhebt von den im Kanton ansässigen Besitzern von Motorfahrzeugen eine nach der Fahrzeugstärke abgestufte \"Verkehrsgebühr für Motorfahrzeuge\", deren Ertrag ausschliesslich zur Strassenfinanzierung verwendet wird. Handelt es sich hierbei um eine Steuer?\n===\n[$Siehe dazu BGE 5 7 I 1 E. 1 S. 6 f (Sender gegen Aargau).\n\nDie streitige Abgabe ist nach der bundesgerichtlichen Praxis als Steuer aufzufassen, für die das Doppelbesteuerungsverbot des Art. 46 Abs. 2 aBV gilt \n(BGE 44 IS. 13 ff; 47 IS. 514 ff; 48 IS. 75 ff; 50 IS. 108). \n\nWas speziell die Einwendung des Regierungsrates betrifft, dass es sich dabei rechtlich um ein Entgelt für die Benützung der öffentlichen Strassen handle, so hat das Bundesgericht bei zwei Entscheiden \n(BGE 44 IS. 14 f; 48 IS. 76 ff) bereits mit eingehender Begründung dargetan, dass das bei den damals in Frage stehenden Automobilverkehrsabgaben der Kantone Genf, Waadt und Schaffhausen nicht zutreffe, weil der Zusammenhang oder das Abhängigkeitsverhältnis zwischen diesen und den Leistungen des Staates für die Strassen zu wenig eng und bestimmt sei (vgl. auch BGE 47 IS. 299). \n\nDasselbe gilt auch im vorliegenden Fall. Die schaffhauserische Abgabe war ebenso wie die heute streitige nach der Motorstärke abgestuft. Zudem hat sich der Regierungsrat des Kantons Aargau 1921 in Sachen Aktiengesellschaft Ziegelwerke Horw-Gettnau-Muri selbst auf den Standpunkt gestellt, dass es sich bei der aargauischen Automobilverkehrsabgabe um eine Besteuerung handle, und sich demgemäss vor dem Bundesgericht in rechtlicher Beziehung auf dessen Entscheid in Sachen Guillermin gegen Waadt und Genf berufen, wenn er auch die Abgabe dem Wortlaut der Verordnung vom 3. Dezember 1920 gemäss eine Gebühr nannte. Das Bundesgericht hat denn auch schon damals ohne weiteres angenommen, dass diese Abgabe rechtlich eine Steuer bilde (BGE 47 IS.511, 513, 515).]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "8",
+      "instruction": "",
+      "body": "Überlegen Sie sich zuerst eine Antwort, lesen Sie anschliessend den im Lernraum aufgeschalteten Bundesgerichtsentscheid BGE 57 I 1 dazu.\nEin Kanton erhebt von den im Kanton ansässigen Besitzern von Motorfahrzeugen eine nach der Fahrzeugstärke abgestufte \"Verkehrsgebühr für Motorfahrzeuge\", deren Ertrag ausschliesslich zur Strassenfinanzierung verwendet wird. Handelt es sich hierbei um eine Steuer?",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Siehe dazu BGE 5 7 I 1 E. 1 S. 6 f (Sender gegen Aargau).\n\nDie streitige Abgabe ist nach der bundesgerichtlichen Praxis als Steuer aufzufassen, für die das Doppelbesteuerungsverbot des Art. 46 Abs. 2 aBV gilt \n(BGE 44 IS. 13 ff; 47 IS. 514 ff; 48 IS. 75 ff; 50 IS. 108). \n\nWas speziell die Einwendung des Regierungsrates betrifft, dass es sich dabei rechtlich um ein Entgelt für die Benützung der öffentlichen Strassen handle, so hat das Bundesgericht bei zwei Entscheiden \n(BGE 44 IS. 14 f; 48 IS. 76 ff) bereits mit eingehender Begründung dargetan, dass das bei den damals in Frage stehenden Automobilverkehrsabgaben der Kantone Genf, Waadt und Schaffhausen nicht zutreffe, weil der Zusammenhang oder das Abhängigkeitsverhältnis zwischen diesen und den Leistungen des Staates für die Strassen zu wenig eng und bestimmt sei (vgl. auch BGE 47 IS. 299). \n\nDasselbe gilt auch im vorliegenden Fall. Die schaffhauserische Abgabe war ebenso wie die heute streitige nach der Motorstärke abgestuft. Zudem hat sich der Regierungsrat des Kantons Aargau 1921 in Sachen Aktiengesellschaft Ziegelwerke Horw-Gettnau-Muri selbst auf den Standpunkt gestellt, dass es sich bei der aargauischen Automobilverkehrsabgabe um eine Besteuerung handle, und sich demgemäss vor dem Bundesgericht in rechtlicher Beziehung auf dessen Entscheid in Sachen Guillermin gegen Waadt und Genf berufen, wenn er auch die Abgabe dem Wortlaut der Verordnung vom 3. Dezember 1920 gemäss eine Gebühr nannte. Das Bundesgericht hat denn auch schon damals ohne weiteres angenommen, dass diese Abgabe rechtlich eine Steuer bilde (BGE 47 IS.511, 513, 515).",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198786"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198787]\n[%9]\n[!Um was für Abgaben handelt es sich? Handelt es sich hierbei um eine Steuer?]\nNach dem Kur- und Sporttaxengesetz der Gemeinde Flims muss jeder in Flims weilende Gast pro Logiernacht eine Kurtaxe entrichten, deren Ertrag im Interesse der Gäste zur Förderung des Ferien- und Sportortes Flims zu verwenden ist. In der Zeit vom 15. Dezember bis 15. März ist ausserdem eine Sporttaxe zur Finanzierung der Wintersportanlagen im Interesse der Gäste zu bezahlen. Die Kurtaxe ist je nach Lage und Bettenpreis der Hotels, Ferienwohnungen usw. abgestuft, die Sporttaxe ist für alle Gäste gleich hoch.\n\nÜberlegen Sie sich zuerst eine Antwort, lesen Sie anschliessend den im Lernraum aufgeschalteten Bundesgerichtsentscheid BGE 90 I 86 und BGE 102 Ia143 dazu. \n===\n[$Siehe dazu BGE 90 I 86 E. 3 S. 92 ff (Jaeger gegen Flims und Grosser Rat GR) und \nBGE 102 la 143 E. 2a S. 144 f (Caretta gegen Bezirksrat Einsiedeln, RR SZ und VGer SZ). \n\nDass die streitige Kur- und Sporttaxe von Flims keine neue Gebühr ist, liegt auf der Hand und ist denn auch unbestritten. Gebühren sind ein Entgelt für eine bestimmte, vom Pflichtigen veranlasste Amtshandlung\noder für die Benützung einer öffentlichen Anstalt (BGE 82 I 301 E. 3 a und dort angeführte frühere Urteile; 84 I 165 E. 3). Die Kur- und Sporttaxe muss aber von den Abgabepflichtigen auch dann bezahlt werden, wenn diese die Kur- und Sporteinrichtungen, für deren Erstellung und Unterhalt die Abgabe erhoben wird, nicht benützen.\nMit Bezug auf solche Gäste könnte die Kur- und Sporttaxe höchstens insofern Elemente einer Gebühr enthalten, als ihr Ertrag zur Deckung der Kosten der Gästekontrolle oder des Auskunftsdienstes oder anderer, im Interesse aller Gäste liegenden Einrichtungen dient (vgl. BGE 67 I 205 ff), worüber indes dem KSG und den Akten nichts zu entnehmen ist. \n\nNach Auffassung der Gemeinde Flims, des Kleinen und anscheinend auch des Grossen Rates stellt die Kur- und Sporttaxe eine Vorzugslast dar. Vorzugslasten sind Beitrage, die vom Pflichtigen für den ihm aus einer öffentlichen Einrichtung erwachsenden wirtschaftlichen Sondervorteil erhoben und einerseits nach den zu deckenden Kosten der Einrichtung, anderseits nach Massgabe des dem Pflichtigen erwachsenden\nVorteils bemessen werden (BGE 63 I 153, 67 I 309 /10, 70 I 126, 74 I 224 /5, 86 I 99 E. 2). Danach könnte die Kur- und Sporttaxe nur dann als Vorzugslast gelten, wenn die Kur- und Sporteinrichtungen, für welche sie verwendet wird, den Abgabepflichtigen, d.h. den «Gästen» im Sinne von Art. 1 KSG, einen Vorteil brächten, der andern Personen nicht oder nicht im gleichen Masse zukommt. Das trifft jedoch nicht zu. Diese Einrichtungen stehen nicht nur oder in erster Linie jenen «Gästen» zur Verfügung, sondern auch Personen, die nicht abgabepflichtig sind, nämlich den Einwohnern von Flims, denjenigen die sich dort länger als 3 Monate ununterbrochen im eigenen Ferienhaus aufhalten oder bei einer nicht abgabepflichtigen Person unentgeltlich übernachten (Art. 6 lit. d KSG), ferner den Kurgästen aus Nachbargemeinden und andern, sich nur tagsüber in Flims aufhaltenden Personen. \nAnderseits trifft die Abgabepflicht auch Personen, welche aus den Kur- und Sporteinrichtungen keinen Vorteil ziehen können, wozu neben Geschäftsreisenden (Art. 6 lit. b KSG) vor allem diejenigen gehören, die sich zu Heilzwecken in Flims aufhalten und bettlägerig sind. Mit dem Wesen einer Vorzugslast ist es auch unvereinbar, dass die Kurtaxe nicht nach Massgabe des dem Abgabepflichtigen aus den Kurtaxe Sporteinrichtungen erwachsenden Vorteils bemessen wird, sondern nach Art und Lage der Logierstätte abgestuft ist.\n\nIst die Kur- und Sporttaxe demnach eine öffentlich rechtliche Abgabe, die erhoben wird, ohne wesentlich an die Voraussetzung einer Gegenleistung oder eines besonderen Vorteils geknüpft zu sein, so ist sie als Steuer aufzufassen, deren Merkmal eben die Voraussetzungslosigkeit ist (BGE 52 I 51, 54 I 37, 63 I 153; Blumenstein, System S. 3). Diese Voraussetzungslosigkeit wird von der Gemeinde zu Unrecht bestritten, da die Kur- und Sporttaxe vom Abgabepflichtigen geschuldet wird ohne Rücksicht darauf ob er die mit ihr finanzierten Einrichtungen tatsächlich benützt oder wenigstens benützen könnte. Dass die Kur- und Sporttaxen gemäss Art. 9 und 10 KSG ausschliesslich im Interesse der Gäste zu verwenden sind und nicht der Entlastung des ordentlichen Gemeindehaushaltes dienen dürfen, stempelt sie nicht zur Vorzugslast, sondern zur Zwecksteuer, die mit jener nicht zu verwechseln ist (vgl. BGE 73158, 86199).\n\nSiehe dazu BGE 102 la 143 E. 2a S. 144 f \nDie Kurtaxe ist eine Steuer. Sie ist mit Art. 4 und 46 Abs. 2 aBV vereinbar, wenn sie auf einer gesetzlichen Grundlage beruht, ausschliesslieh dem Zwecke des Kurbetriebes dient und es sich um eine Steuer von geringer Höhe handelt (E. 2a). Art 4 aBV wird nicht dadurch verletzt, dass Passanten die Kureinrichtungen mitbenützen, wenn dem Verhältnis zwischen ihnen und den Kurgästen bei der Bemessung der Kurtaxe Rechnung getragen wird (E. 2c).]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "9",
+      "instruction": "Um was für Abgaben handelt es sich? Handelt es sich hierbei um eine Steuer?",
+      "body": "Nach dem Kur- und Sporttaxengesetz der Gemeinde Flims muss jeder in Flims weilende Gast pro Logiernacht eine Kurtaxe entrichten, deren Ertrag im Interesse der Gäste zur Förderung des Ferien- und Sportortes Flims zu verwenden ist. In der Zeit vom 15. Dezember bis 15. März ist ausserdem eine Sporttaxe zur Finanzierung der Wintersportanlagen im Interesse der Gäste zu bezahlen. Die Kurtaxe ist je nach Lage und Bettenpreis der Hotels, Ferienwohnungen usw. abgestuft, die Sporttaxe ist für alle Gäste gleich hoch.\n\nÜberlegen Sie sich zuerst eine Antwort, lesen Sie anschliessend den im Lernraum aufgeschalteten Bundesgerichtsentscheid BGE 90 I 86 und BGE 102 Ia143 dazu.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Siehe dazu BGE 90 I 86 E. 3 S. 92 ff (Jaeger gegen Flims und Grosser Rat GR) und \nBGE 102 la 143 E. 2a S. 144 f (Caretta gegen Bezirksrat Einsiedeln, RR SZ und VGer SZ). \n\nDass die streitige Kur- und Sporttaxe von Flims keine neue Gebühr ist, liegt auf der Hand und ist denn auch unbestritten. Gebühren sind ein Entgelt für eine bestimmte, vom Pflichtigen veranlasste Amtshandlung\noder für die Benützung einer öffentlichen Anstalt (BGE 82 I 301 E. 3 a und dort angeführte frühere Urteile; 84 I 165 E. 3). Die Kur- und Sporttaxe muss aber von den Abgabepflichtigen auch dann bezahlt werden, wenn diese die Kur- und Sporteinrichtungen, für deren Erstellung und Unterhalt die Abgabe erhoben wird, nicht benützen.\nMit Bezug auf solche Gäste könnte die Kur- und Sporttaxe höchstens insofern Elemente einer Gebühr enthalten, als ihr Ertrag zur Deckung der Kosten der Gästekontrolle oder des Auskunftsdienstes oder anderer, im Interesse aller Gäste liegenden Einrichtungen dient (vgl. BGE 67 I 205 ff), worüber indes dem KSG und den Akten nichts zu entnehmen ist. \n\nNach Auffassung der Gemeinde Flims, des Kleinen und anscheinend auch des Grossen Rates stellt die Kur- und Sporttaxe eine Vorzugslast dar. Vorzugslasten sind Beitrage, die vom Pflichtigen für den ihm aus einer öffentlichen Einrichtung erwachsenden wirtschaftlichen Sondervorteil erhoben und einerseits nach den zu deckenden Kosten der Einrichtung, anderseits nach Massgabe des dem Pflichtigen erwachsenden\nVorteils bemessen werden (BGE 63 I 153, 67 I 309 /10, 70 I 126, 74 I 224 /5, 86 I 99 E. 2). Danach könnte die Kur- und Sporttaxe nur dann als Vorzugslast gelten, wenn die Kur- und Sporteinrichtungen, für welche sie verwendet wird, den Abgabepflichtigen, d.h. den «Gästen» im Sinne von Art. 1 KSG, einen Vorteil brächten, der andern Personen nicht oder nicht im gleichen Masse zukommt. Das trifft jedoch nicht zu. Diese Einrichtungen stehen nicht nur oder in erster Linie jenen «Gästen» zur Verfügung, sondern auch Personen, die nicht abgabepflichtig sind, nämlich den Einwohnern von Flims, denjenigen die sich dort länger als 3 Monate ununterbrochen im eigenen Ferienhaus aufhalten oder bei einer nicht abgabepflichtigen Person unentgeltlich übernachten (Art. 6 lit. d KSG), ferner den Kurgästen aus Nachbargemeinden und andern, sich nur tagsüber in Flims aufhaltenden Personen. \nAnderseits trifft die Abgabepflicht auch Personen, welche aus den Kur- und Sporteinrichtungen keinen Vorteil ziehen können, wozu neben Geschäftsreisenden (Art. 6 lit. b KSG) vor allem diejenigen gehören, die sich zu Heilzwecken in Flims aufhalten und bettlägerig sind. Mit dem Wesen einer Vorzugslast ist es auch unvereinbar, dass die Kurtaxe nicht nach Massgabe des dem Abgabepflichtigen aus den Kurtaxe Sporteinrichtungen erwachsenden Vorteils bemessen wird, sondern nach Art und Lage der Logierstätte abgestuft ist.\n\nIst die Kur- und Sporttaxe demnach eine öffentlich rechtliche Abgabe, die erhoben wird, ohne wesentlich an die Voraussetzung einer Gegenleistung oder eines besonderen Vorteils geknüpft zu sein, so ist sie als Steuer aufzufassen, deren Merkmal eben die Voraussetzungslosigkeit ist (BGE 52 I 51, 54 I 37, 63 I 153; Blumenstein, System S. 3). Diese Voraussetzungslosigkeit wird von der Gemeinde zu Unrecht bestritten, da die Kur- und Sporttaxe vom Abgabepflichtigen geschuldet wird ohne Rücksicht darauf ob er die mit ihr finanzierten Einrichtungen tatsächlich benützt oder wenigstens benützen könnte. Dass die Kur- und Sporttaxen gemäss Art. 9 und 10 KSG ausschliesslich im Interesse der Gäste zu verwenden sind und nicht der Entlastung des ordentlichen Gemeindehaushaltes dienen dürfen, stempelt sie nicht zur Vorzugslast, sondern zur Zwecksteuer, die mit jener nicht zu verwechseln ist (vgl. BGE 73158, 86199).\n\nSiehe dazu BGE 102 la 143 E. 2a S. 144 f \nDie Kurtaxe ist eine Steuer. Sie ist mit Art. 4 und 46 Abs. 2 aBV vereinbar, wenn sie auf einer gesetzlichen Grundlage beruht, ausschliesslieh dem Zwecke des Kurbetriebes dient und es sich um eine Steuer von geringer Höhe handelt (E. 2a). Art 4 aBV wird nicht dadurch verletzt, dass Passanten die Kureinrichtungen mitbenützen, wenn dem Verhältnis zwischen ihnen und den Kurgästen bei der Bemessung der Kurtaxe Rechnung getragen wird (E. 2c).",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198787"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198788]\n[%10]\n[!Beurteilen Sie, welche Steuer „sozialer“ ist.]\nIm Hinblick auf die Erreichung der Ausgewogenheit in der Verteilung der Steuerlast sind die Einkommenssteuer des Bundes (direkte Bundessteuer) und die Mehrwertsteuer einander gegenüberzustellen.\n===\n[$Die Mehrwertsteuer wird unabhängig von der wirtschaftlichen Leistungsfähigkeit der Unternehmen bzw. Konsumenten auf den steuerbaren Umsätzen erhoben.\n\nDie Einkommenssteuer berücksichtigt hingegen die wirtschaftliche Leistungsfähigkeit durch Ausgestaltung progressiver Tarife. \n\nGemäss Art. 127 Abs. 2 BV sind bei der der Ausgestaltung der Steuer, soweit es die Art der Steuer zulässt, insbesondere die Grundsätze der Allgemeinheit und der Gleichmässigkeit der Besteuerung sowie der\nGrundsatz der Besteuerung nach der wirtschaftlichen Leistungsfähigkeit zu beachten.\n\nIm Vergleich der beiden besagten Steuern ist die Einkommenssteuer insofern \"sozialer\".]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "10",
+      "instruction": "Beurteilen Sie, welche Steuer „sozialer“ ist.",
+      "body": "Im Hinblick auf die Erreichung der Ausgewogenheit in der Verteilung der Steuerlast sind die Einkommenssteuer des Bundes (direkte Bundessteuer) und die Mehrwertsteuer einander gegenüberzustellen.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Die Mehrwertsteuer wird unabhängig von der wirtschaftlichen Leistungsfähigkeit der Unternehmen bzw. Konsumenten auf den steuerbaren Umsätzen erhoben.\n\nDie Einkommenssteuer berücksichtigt hingegen die wirtschaftliche Leistungsfähigkeit durch Ausgestaltung progressiver Tarife. \n\nGemäss Art. 127 Abs. 2 BV sind bei der der Ausgestaltung der Steuer, soweit es die Art der Steuer zulässt, insbesondere die Grundsätze der Allgemeinheit und der Gleichmässigkeit der Besteuerung sowie der\nGrundsatz der Besteuerung nach der wirtschaftlichen Leistungsfähigkeit zu beachten.\n\nIm Vergleich der beiden besagten Steuern ist die Einkommenssteuer insofern \"sozialer\".",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198788"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198789]\n[%11]\n[!In welche Kategorie gehören nach den beiden Einteilungskriterien für direkte und indirekte Steuern:\n\n- die Mehrwertsteuer?\n- die Einkommenssteuer?]\n===\n[$Es gibt zwei verschiedene Unterscheidungskriterien für direkte und indirekte Steuern:\n\n1. Kriterium: \nSteuersubjekt und Steuerträger sind bei den direkten Steuern identisch. Indirekte Steuern sind nach diesem Kriterium somit die zu überwälzenden Steuern. Steuersubjekt ist der Leistungsschuldner und Steuerträger der Leistungsempfänger. Gemäss dem Kriterium 1 lassen sich die Mehrwertsteuer und Einkommenssteuer wie folgt klassifizieren:\n\nElemente        Mehrwertsteuer      Einkommenssteuer\nSteuersubjekt   Leistungserbringer  Einkommensempfänger\nSteuerträger    Leistungsempfänger  Einkommensempfänger\nKlassigizierung Indirekte Steuer    Direkte Steuer\n\n2. Kriterium:\nDirekte Steuern sind jene, bei welchen die Steuerberechnungsgrundlage und das Steuerobjekt unmittelbar miteinander verbunden sind, indem die Steuerberechnungsgrundlage zugleich das Steuerobjekt bildet. Gemäss dem Kriterium 2 lassen sich die Mehrwertsteuer und Einkommenssteuer wie folgt klassifizieren:\n\nElemente                    Mehrwertsteuer                  Einkommenssteuer\nSteuerobjekt                Tätigen steuerbarer Umsätze     Erzielen steuerbarer Umsätze\nSteuerberechnungsgrundlage  Entgelt                         Einkomme\nKlassifizierung             Indirekte Steuer                Direkte Steuer]",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "11",
+      "instruction": "In welche Kategorie gehören nach den beiden Einteilungskriterien für direkte und indirekte Steuern:\n\n- die Mehrwertsteuer?\n- die Einkommenssteuer?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Es gibt zwei verschiedene Unterscheidungskriterien für direkte und indirekte Steuern:\n\n1. Kriterium: \nSteuersubjekt und Steuerträger sind bei den direkten Steuern identisch. Indirekte Steuern sind nach diesem Kriterium somit die zu überwälzenden Steuern. Steuersubjekt ist der Leistungsschuldner und Steuerträger der Leistungsempfänger. Gemäss dem Kriterium 1 lassen sich die Mehrwertsteuer und Einkommenssteuer wie folgt klassifizieren:\n\nElemente        Mehrwertsteuer      Einkommenssteuer\nSteuersubjekt   Leistungserbringer  Einkommensempfänger\nSteuerträger    Leistungsempfänger  Einkommensempfänger\nKlassigizierung Indirekte Steuer    Direkte Steuer\n\n2. Kriterium:\nDirekte Steuern sind jene, bei welchen die Steuerberechnungsgrundlage und das Steuerobjekt unmittelbar miteinander verbunden sind, indem die Steuerberechnungsgrundlage zugleich das Steuerobjekt bildet. Gemäss dem Kriterium 2 lassen sich die Mehrwertsteuer und Einkommenssteuer wie folgt klassifizieren:\n\nElemente                    Mehrwertsteuer                  Einkommenssteuer\nSteuerobjekt                Tätigen steuerbarer Umsätze     Erzielen steuerbarer Umsätze\nSteuerberechnungsgrundlage  Entgelt                         Einkomme\nKlassifizierung             Indirekte Steuer                Direkte Steuer",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198789"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n\n'",
+        "line": 27,
+        "column": 0,
+        "errorLine": ""
+      },
+      {
+        "message": "Rule violation around '<EOF>'",
+        "line": 27,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198790]\n[%12]\n[!Handelt es sich nachfolgend um periodische oder nicht periodische Steuern?]\n===\n• Einkommenssteuer\n[$Periodisch\t (StHG Art. 15]\n===\n• Emissionsabgabe\n[$Nicht periodisch\t (StG Art. 7)]\n===\n• Grundstückgewinnsteuer\n[$Nicht periodisch\t (StHG Art. 19)]\n===\n• Mehrwertsteuer\n[$Periodisch\t (MWSTG. Art. 34 f)]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "12",
+      "instruction": "Handelt es sich nachfolgend um periodische oder nicht periodische Steuern?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "• Einkommenssteuer",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Periodisch\t (StHG Art. 15",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "• Emissionsabgabe",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Nicht periodisch\t (StG Art. 7)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "• Grundstückgewinnsteuer",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Nicht periodisch\t (StHG Art. 19)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "• Mehrwertsteuer",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Periodisch\t (MWSTG. Art. 34 f)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198790"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198791]\n[%13]\n[!Auf schweizerischen Kapitalerträgen werden sowohl beim Empfänger als auch an der Quelle Steuern erhoben. Um welche handelt es sich?]\n===\n[$Der Empfänger von Kapitalerträgen schuldet einerseits die Einkommens- bzw. Gewinnsteuer. \nGesetzliche Grundlagen sind bspw.:\nKanton \t\t\tBund\nNatürliche Personen \tArt. 7 StHG \t\tArt. 20f DBG\nJuristische Personen \tArt. 24 StHG \t\tArt. 57f DBG\n\nAndererseits wird an der Quelle die Verrechnungssteuer erhoben. Gemäss Art. 10 VStG ist steuerpflichtig der Schuldner der steuerbaren Leistung, und er muss die Steuer der ESTV abliefern. Es ist darauf hinzuweisen, dass es sich für Personen mit Wohnsitz im Inland lediglich um eine Sicherungssteuer handelt. \nGemäss Art. 21 ff VStG kann der Empfänger des Ertrages die abgelieferte Verrechnungssteuer vollumfänglich (allerdings ohne Verzinsung) zurückfordern, falls der Ertrag bei der Einkommens- bzw. Gewinnsteuer ordentlich deklariert wird.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "13",
+      "instruction": "Auf schweizerischen Kapitalerträgen werden sowohl beim Empfänger als auch an der Quelle Steuern erhoben. Um welche handelt es sich?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Der Empfänger von Kapitalerträgen schuldet einerseits die Einkommens- bzw. Gewinnsteuer. \nGesetzliche Grundlagen sind bspw.:\nKanton \t\t\tBund\nNatürliche Personen \tArt. 7 StHG \t\tArt. 20f DBG\nJuristische Personen \tArt. 24 StHG \t\tArt. 57f DBG\n\nAndererseits wird an der Quelle die Verrechnungssteuer erhoben. Gemäss Art. 10 VStG ist steuerpflichtig der Schuldner der steuerbaren Leistung, und er muss die Steuer der ESTV abliefern. Es ist darauf hinzuweisen, dass es sich für Personen mit Wohnsitz im Inland lediglich um eine Sicherungssteuer handelt. \nGemäss Art. 21 ff VStG kann der Empfänger des Ertrages die abgelieferte Verrechnungssteuer vollumfänglich (allerdings ohne Verzinsung) zurückfordern, falls der Ertrag bei der Einkommens- bzw. Gewinnsteuer ordentlich deklariert wird.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198791"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198792]\n[%14]\n[!Grundstückgewinne können vom Gesetzgeber entweder mit einer Subjektsteuer oder mit einer Objektsteuer belegt werden. \n\nUm welche Steuern handelt es sich?]\n===\n[$Grundstückgewinne werden in sämtlichen Kantonen als Einkommen bei natürlichen Personen oder Gewinn bei juristischen Personen besteuert. Je nach Ausgestaltung der Gesetzgebung werden dabei die Grundstückgewinne entweder durch die ordentliche Einkommens- oder Gewinnsteuer (Subjektsteuer) oder durch eine Spezialeinkommenssteuer, die Grundstückgewinnsteuer (Objektsteuer) erfasst.\n\nSubjektsteuern stellen auf die gesamte wirtschaftliche Leistungsfähigkeit eines Steuersubjektes ab, indem sie dieses selbst nach Massgabe seiner gesamten wirtschaftlichen Situation (Reineinkommen bzw. -gewinn) besteuern. Dies bedeutet, dass das Totaleinkommen für die Berechnung des Steuertarifs herbeigezogen wird. Gemäss der Rechtsprechung des Bundesgerichts sind im Bereich der Einkommensbesteuerung\nnur die Reineinkommens- und Reingewinnsteuern Subjektsteuern.\n\nSiehe dazu BGE 131 II 722 E. 2.1 S. 723 und BGE 130 II 202 E. 3.2 S. 207.\n\nObjektsteuern belasten ein einzelnes Steuerobjekt ohne Rücksicht auf die gesamte wirtschaftliche Leistungsfähigkeit des Steuersubjektes. Mit anderen Worten wird für die Berechnung des Steuertarifs nur das\neinzelne Steuerobjekt, im vorliegenden Fall der Grundstückgewinn,\nmiteinbezogen.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "14",
+      "instruction": "Grundstückgewinne können vom Gesetzgeber entweder mit einer Subjektsteuer oder mit einer Objektsteuer belegt werden. \n\nUm welche Steuern handelt es sich?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Grundstückgewinne werden in sämtlichen Kantonen als Einkommen bei natürlichen Personen oder Gewinn bei juristischen Personen besteuert. Je nach Ausgestaltung der Gesetzgebung werden dabei die Grundstückgewinne entweder durch die ordentliche Einkommens- oder Gewinnsteuer (Subjektsteuer) oder durch eine Spezialeinkommenssteuer, die Grundstückgewinnsteuer (Objektsteuer) erfasst.\n\nSubjektsteuern stellen auf die gesamte wirtschaftliche Leistungsfähigkeit eines Steuersubjektes ab, indem sie dieses selbst nach Massgabe seiner gesamten wirtschaftlichen Situation (Reineinkommen bzw. -gewinn) besteuern. Dies bedeutet, dass das Totaleinkommen für die Berechnung des Steuertarifs herbeigezogen wird. Gemäss der Rechtsprechung des Bundesgerichts sind im Bereich der Einkommensbesteuerung\nnur die Reineinkommens- und Reingewinnsteuern Subjektsteuern.\n\nSiehe dazu BGE 131 II 722 E. 2.1 S. 723 und BGE 130 II 202 E. 3.2 S. 207.\n\nObjektsteuern belasten ein einzelnes Steuerobjekt ohne Rücksicht auf die gesamte wirtschaftliche Leistungsfähigkeit des Steuersubjektes. Mit anderen Worten wird für die Berechnung des Steuertarifs nur das\neinzelne Steuerobjekt, im vorliegenden Fall der Grundstückgewinn,\nmiteinbezogen.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198792"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198793]\n[%15]\nEin Einzelunternehmer verkauft seine Betriebsliegenschaft für Fr. 500'000. Die Anlagekosten belaufen sich auf Fr. 400'000. Mit welchen Steuern wird dieser Verkauf belastet beim Bund und in den Kantonen St. Gallen und Zürich, falls die Betriebsliegenschaft einmal im Kanton St. Gallen und einmal im Kanton Zürich liegt?\n\nVariante: Wie sieht es aus, wenn der Einzelunternehmer nicht seine Betriebsliegenschaft, sondern seine Wohnliegenschaft für Fr. 500'000, bei Anlagekosten von Fr. 400'000, verkauft?\n===\n[$Die Betriebsliegenschaft des Einzelunternehmers ist als Geschäftsvermögen einzustufen. Kapitalgewinne aus dem Verkauf von Geschäftsvermögen unterliegen beim Bund der ordentlichen Einkommenssteuer.\nDie Differenz zwischen dem Verkaufspreis und den Anlagekosten wird mit den übrigen Einkünften steuerlich erfasst (Art. 18 Abs. 2 DBG). Somit wird der Gewinn von Fr. 100'000 einkommensbesteuert. \nDies gilt für die Direkte Bundessteuer sowohl im Kanton St. Gallen als auch im Kanton Zürich.\n\nDer Kanton St. Gallen kennt bei der Besteuerung von Gewinnen aus der Veräusserung von Liegenschaften das dualistische System. Das heisst, dass Gewinne aus dem Verkauf von Grundstücken des Privatvermögens der Grundstückgewinnsteuer und solche des Geschäftsvermögens der Einkommens- bzw. Gewinnsteuer unterliegen. S. Art. 31 Abs. 2i. V.m. Art. 130 Abs. 1 StG SG. Da die Betriebsliegenschaft Geschäftsvermögen darstellt, unterliegt der Gewinn über Fr. 100'000 der kantonalen Einkommenssteuer. Zur Vervollständigung der Lösung sei darauf hingewiesen, dass für Grundstücke des Geschäftsvermögens grundsätzlich die Differenz zwischen Verkaufspreis und Buchwert der Einkommens- bzw. Gewinnsteuer unterliegt (Buchwertprinzip). Die Anlagekosten haben grundsätzlich beim Geschäftsvermögen keinen Einfluss.\n\nDer Kanton Zürich kennt bei Gewinnen aus der Veräusserung von Grundstücken das monistische System. S. § 18 Abs. 2 i. V. m. § 216 StG ZH D.h., dass Grundstückgewinne, unabhängig davon, ob sie aus der Veräusserung von Privat- oder Geschäftsvermögen herrühren, immer mit der Grundstückgewinnsteuer erfasst werden. Die Differenz zwischen Verkaufspreis und Anlagekosten von Fr. 100'000 unterliegt im Kanton Zürich somit der Grundstückgewinnsteuer. In diesem Zusammenhang ist jedoch zu erwähnen, dass, sofern die Betriebsliegenschaft während der Haltedauer abgeschrieben worden ist, die Differenz zwischen den Anlagekosten und dem tieferem Buchwert als wieder eingebrachten Abschreibungen der Einkommens- bzw. Gewinnsteuer unterliegt (Buchwertprinzip).]\n===\nVariante\n[$Kapitalgewinne aus der Veräusserung von Privatvermögen unterliegen beim Bund keiner Besteuerung (Art. 16 Abs. 3 DBG). Somit unterliegt der Grundstückgewinn über Fr. 100'000 beim Bund nicht der Einkommenssteuer, sondern ist steuerfrei.\n\nDer Kanton St. Gallen kennt das dualistische System. Somit unterliegt der Gewinn aus der Veräusserung der Privatliegenschaft über Fr. 100'000 der Grundstückgewinnsteuer. (siehe oben)\n\nDer Kanton Zürich kennt das monistische System. Gewinne aus der Veräusserung von Grundstücken des Privatvermögens unterliegen der Grundstückgewinnsteuer. Auch im Kanton Zürich unterliegt der Gewinn von Fr. 100'000 somit der Grundstückgewinnsteuer. (siehe oben)]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "15",
+      "instruction": "",
+      "body": "Ein Einzelunternehmer verkauft seine Betriebsliegenschaft für Fr. 500'000. Die Anlagekosten belaufen sich auf Fr. 400'000. Mit welchen Steuern wird dieser Verkauf belastet beim Bund und in den Kantonen St. Gallen und Zürich, falls die Betriebsliegenschaft einmal im Kanton St. Gallen und einmal im Kanton Zürich liegt?\n\nVariante: Wie sieht es aus, wenn der Einzelunternehmer nicht seine Betriebsliegenschaft, sondern seine Wohnliegenschaft für Fr. 500'000, bei Anlagekosten von Fr. 400'000, verkauft?",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Die Betriebsliegenschaft des Einzelunternehmers ist als Geschäftsvermögen einzustufen. Kapitalgewinne aus dem Verkauf von Geschäftsvermögen unterliegen beim Bund der ordentlichen Einkommenssteuer.\nDie Differenz zwischen dem Verkaufspreis und den Anlagekosten wird mit den übrigen Einkünften steuerlich erfasst (Art. 18 Abs. 2 DBG). Somit wird der Gewinn von Fr. 100'000 einkommensbesteuert. \nDies gilt für die Direkte Bundessteuer sowohl im Kanton St. Gallen als auch im Kanton Zürich.\n\nDer Kanton St. Gallen kennt bei der Besteuerung von Gewinnen aus der Veräusserung von Liegenschaften das dualistische System. Das heisst, dass Gewinne aus dem Verkauf von Grundstücken des Privatvermögens der Grundstückgewinnsteuer und solche des Geschäftsvermögens der Einkommens- bzw. Gewinnsteuer unterliegen. S. Art. 31 Abs. 2i. V.m. Art. 130 Abs. 1 StG SG. Da die Betriebsliegenschaft Geschäftsvermögen darstellt, unterliegt der Gewinn über Fr. 100'000 der kantonalen Einkommenssteuer. Zur Vervollständigung der Lösung sei darauf hingewiesen, dass für Grundstücke des Geschäftsvermögens grundsätzlich die Differenz zwischen Verkaufspreis und Buchwert der Einkommens- bzw. Gewinnsteuer unterliegt (Buchwertprinzip). Die Anlagekosten haben grundsätzlich beim Geschäftsvermögen keinen Einfluss.\n\nDer Kanton Zürich kennt bei Gewinnen aus der Veräusserung von Grundstücken das monistische System. S. § 18 Abs. 2 i. V. m. § 216 StG ZH D.h., dass Grundstückgewinne, unabhängig davon, ob sie aus der Veräusserung von Privat- oder Geschäftsvermögen herrühren, immer mit der Grundstückgewinnsteuer erfasst werden. Die Differenz zwischen Verkaufspreis und Anlagekosten von Fr. 100'000 unterliegt im Kanton Zürich somit der Grundstückgewinnsteuer. In diesem Zusammenhang ist jedoch zu erwähnen, dass, sofern die Betriebsliegenschaft während der Haltedauer abgeschrieben worden ist, die Differenz zwischen den Anlagekosten und dem tieferem Buchwert als wieder eingebrachten Abschreibungen der Einkommens- bzw. Gewinnsteuer unterliegt (Buchwertprinzip).",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Variante",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Kapitalgewinne aus der Veräusserung von Privatvermögen unterliegen beim Bund keiner Besteuerung (Art. 16 Abs. 3 DBG). Somit unterliegt der Grundstückgewinn über Fr. 100'000 beim Bund nicht der Einkommenssteuer, sondern ist steuerfrei.\n\nDer Kanton St. Gallen kennt das dualistische System. Somit unterliegt der Gewinn aus der Veräusserung der Privatliegenschaft über Fr. 100'000 der Grundstückgewinnsteuer. (siehe oben)\n\nDer Kanton Zürich kennt das monistische System. Gewinne aus der Veräusserung von Grundstücken des Privatvermögens unterliegen der Grundstückgewinnsteuer. Auch im Kanton Zürich unterliegt der Gewinn von Fr. 100'000 somit der Grundstückgewinnsteuer. (siehe oben)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198793"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198794]\n[%16]\n[!Zählen Sie die 5 Punkte des Steuerrechtsverhältnisses auf.]\n===\n[$Steuerhoheit\nSteuersubjekt\nSteuerobjekt\nBemessungsgrundlage\nSteuermass]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "16",
+      "instruction": "Zählen Sie die 5 Punkte des Steuerrechtsverhältnisses auf.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Steuerhoheit\nSteuersubjekt\nSteuerobjekt\nBemessungsgrundlage\nSteuermass",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198794"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198795]\n[%17]\n[!Erklären Sie den Unterschied zwischen direkten und indirekten Steuern.]\n===\n[$Direkte Steuern: Steuersubjekt und Steuerträger sind identisch\nIndirekte Steuern: Steuersubjekt und Steuerträger sind verschieden]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "17",
+      "instruction": "Erklären Sie den Unterschied zwischen direkten und indirekten Steuern.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Direkte Steuern: Steuersubjekt und Steuerträger sind identisch\nIndirekte Steuern: Steuersubjekt und Steuerträger sind verschieden",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198795"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:198796]\n[%18]\n[!Wer ist Steuersubjekt und bei diesen Steuern und in welchen Gesetzesbestimmungen steht dies? \nNennen Sie jeweils die wichtigsten im Gesetz genannten Steuersubjekte.]\n===\n• der Gewinnsteuer (direkte Bundessteuer)?\n[$Juristische Personen  (Art. 49 DBG)]\n===\n• der Grundstückgewinnsteuer?\n[$der Veräusserer des Grundstücks (Art. 12 Abs. 1 StHG)]\n===\n• der Verrechnungssteuer?\n[$inländische Kapitalgesellschaften und Genossenschaften, etc. (Art. 4 VStG)]\n===\n• der Mehrwertsteuer (Inlandsteuer)?\n[$Unternehmen (Art. 10 MWSTG)]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "18",
+      "instruction": "Wer ist Steuersubjekt und bei diesen Steuern und in welchen Gesetzesbestimmungen steht dies? \nNennen Sie jeweils die wichtigsten im Gesetz genannten Steuersubjekte.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "• der Gewinnsteuer (direkte Bundessteuer)?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Juristische Personen  (Art. 49 DBG)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "• der Grundstückgewinnsteuer?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "der Veräusserer des Grundstücks (Art. 12 Abs. 1 StHG)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "• der Verrechnungssteuer?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "inländische Kapitalgesellschaften und Genossenschaften, etc. (Art. 4 VStG)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "• der Mehrwertsteuer (Inlandsteuer)?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Unternehmen (Art. 10 MWSTG)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198796"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198797]\n[%19]\nDer Kanton A hat ein Steuergesetz beschlossen, welches für natürliche Personen folgende Tarife vorsieht:\n\n**Steuerbares Einkommen in CHF** - **Steuer in CHF**\n100.000                                              10.000\n200.000                                              18.000\n300.000                                              24.000\n\n[!Entspricht dieser Tarif der Bundesverfassung und falls nein, welcher Artikel der Bundesverfassung könnte allenfalls verletzt sein? Begründen Sie Ihre Antwort mit Hinweis auf Artikel und Absatz der Bundesverfassung.]\n===\n[$Nein, der Kanton A verletzt die Besteuerung nach der wirtschaftlichen Leistungsfähigkeit gemäss Art. 127 Abs. 2 BV. Es handelt sich hier um einen degressiven Steuertarif. Dies hat das Bundesgericht im Fall des Kt. OW für verfassungswidrig erklärt.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "19",
+      "instruction": "Entspricht dieser Tarif der Bundesverfassung und falls nein, welcher Artikel der Bundesverfassung könnte allenfalls verletzt sein? Begründen Sie Ihre Antwort mit Hinweis auf Artikel und Absatz der Bundesverfassung.",
+      "body": "Der Kanton A hat ein Steuergesetz beschlossen, welches für natürliche Personen folgende Tarife vorsieht:\n\n**Steuerbares Einkommen in CHF** - **Steuer in CHF**\n100.000                                              10.000\n200.000                                              18.000\n300.000                                              24.000",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Nein, der Kanton A verletzt die Besteuerung nach der wirtschaftlichen Leistungsfähigkeit gemäss Art. 127 Abs. 2 BV. Es handelt sich hier um einen degressiven Steuertarif. Dies hat das Bundesgericht im Fall des Kt. OW für verfassungswidrig erklärt.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198797"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198798]\n[%20]\n[!Erklären Sie den Begriff „Steuerobjekt“.]\n===\n[$Das Steuerobjekt gibt an, wofür man Steuern zahlen muss (Gegenstand der Steuererhebung). Es ist der Tatbestand, der die objektive Steuerpflicht auslöst.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "20",
+      "instruction": "Erklären Sie den Begriff „Steuerobjekt“.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Das Steuerobjekt gibt an, wofür man Steuern zahlen muss (Gegenstand der Steuererhebung). Es ist der Tatbestand, der die objektive Steuerpflicht auslöst.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198798"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198799]\n[%21]\n[!Erklären Sie den Begriff „Steuerhoheit“.]\n===\n[$Die Befugnis eines öffentlich-rechtlichen Hoheitsträgers (Bund, Kanton etc.), Steuern zu erheben.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "21",
+      "instruction": "Erklären Sie den Begriff „Steuerhoheit“.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Die Befugnis eines öffentlich-rechtlichen Hoheitsträgers (Bund, Kanton etc.), Steuern zu erheben.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198799"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false]\n[@id:198800]\n[%22]\n[!Welche der folgenden Steuerarten werden vom Bund und welche vom Kanton erhoben? (1 Punkt)]\n[@labelTrue:Kanton][@labelFalse:Bund]\nSteuerart:\n===\n[-Stempelabgaben]\n===\n[+Vergnügungssteuer]\n===\n[+Motorfahrzeugsteuer]\n===\n[-Tabaksteuer]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "22",
+      "lead": "",
+      "instruction": "Welche der folgenden Steuerarten werden vom Bund und welche vom Kanton erhoben? (1 Punkt)",
+      "hint": "",
+      "labelTrue": "Kanton",
+      "labelFalse": "Bund",
+      "statements": [
+        {
+          "statement": "Stempelabgaben",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Vergnügungssteuer",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Motorfahrzeugsteuer",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Tabaksteuer",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": "Steuerart:",
+      "id": [
+        "198800"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:198801]\n[%23]\n[!Erklären Sie den Begriff „Steuersubjekt“.]\n===\n[$Das Steuersubjekt ist diejenige Person (nat. und jur. Person), die in einem Rechtsverhältnis zum Staat steht und für die Entrichtung des Steuerbetrages verantwortlich ist.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "23",
+      "instruction": "Erklären Sie den Begriff „Steuersubjekt“.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Das Steuersubjekt ist diejenige Person (nat. und jur. Person), die in einem Rechtsverhältnis zum Staat steht und für die Entrichtung des Steuerbetrages verantwortlich ist.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198801"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false]\n[@id:198802]\n[%24]\n[@labelTrue:Richtig][@labelFalse:Falsch]\n[!Welche der folgenden Gestaltungsprinzipien der Bundesverfassung sind Teil der rechtsstaatlichen Grundsätze und kennzeichnen die schweizerische Steuergesetzgebung?]\n===\n[+Verbot der Doppelbesteuerung]\n===\n[+Wirtschaftsfreiheit]\n===\n[-Meinungsfreiheit]\n===\n[+Glaubens- und Gewissensfreiheit]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "24",
+      "lead": "",
+      "instruction": "Welche der folgenden Gestaltungsprinzipien der Bundesverfassung sind Teil der rechtsstaatlichen Grundsätze und kennzeichnen die schweizerische Steuergesetzgebung?",
+      "hint": "",
+      "labelTrue": "Richtig",
+      "labelFalse": "Falsch",
+      "statements": [
+        {
+          "statement": "Verbot der Doppelbesteuerung",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Wirtschaftsfreiheit",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Meinungsfreiheit",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Glaubens- und Gewissensfreiheit",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "198802"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198803]\n[%25]\n[!Bezeichnen Sie die fünf Elemente des Steuerrechtsverhältnisses bzw. der Steuerpflicht für:]\n===\n• die Grundstückgewinnsteuer des Kanton Aargau\n[$Steuerhoheit: \t\t    Kanton und Gemeinden \t\t\t    § 95 i. V.m. § 111 StG AG\nSteuersubjekt: \t\t        veräussernde Person\t\t\t        § 100 StG AG\nSteuerobjekt: \t\t        Gewinn aus veräussertem Grundstück\t§ 101 ff StG AG\nSteuerberechnungsgrundlage:\tsteuerbarer Grundstückgewinn\t\t§ 109 StG AG\nSteuermass: \t\tvgl. § 109 StG AG]\n===\n• die Mehrwertsteuer\n[$Steuerhoheit:\t            Bund\t\t\t\t\t\t                    Art. 1 MWSTG\nSteuersubjekt:\t            Unternehmen betreibende Person\t\t\t        Art. 10 ff MWSTG\nSteuerobjekt: \t            im Inland gegen Entgelt erbrachte Leistungen\tArt. 18 ff MWSTG\nSteuerberechnungsgrundlage: tatsächlich empfangenes Entgelt (Grundsatz)\t    Art. 24 MWSTG\nSteuermass:                 7.7 %, 2. 5 % und 3.6 %\t\t\t\t            Art. 25 MWSTG]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "25",
+      "instruction": "Bezeichnen Sie die fünf Elemente des Steuerrechtsverhältnisses bzw. der Steuerpflicht für:",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "• die Grundstückgewinnsteuer des Kanton Aargau",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Steuerhoheit: \t\t    Kanton und Gemeinden \t\t\t    § 95 i. V.m. § 111 StG AG\nSteuersubjekt: \t\t        veräussernde Person\t\t\t        § 100 StG AG\nSteuerobjekt: \t\t        Gewinn aus veräussertem Grundstück\t§ 101 ff StG AG\nSteuerberechnungsgrundlage:\tsteuerbarer Grundstückgewinn\t\t§ 109 StG AG\nSteuermass: \t\tvgl. § 109 StG AG",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "• die Mehrwertsteuer",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Steuerhoheit:\t            Bund\t\t\t\t\t\t                    Art. 1 MWSTG\nSteuersubjekt:\t            Unternehmen betreibende Person\t\t\t        Art. 10 ff MWSTG\nSteuerobjekt: \t            im Inland gegen Entgelt erbrachte Leistungen\tArt. 18 ff MWSTG\nSteuerberechnungsgrundlage: tatsächlich empfangenes Entgelt (Grundsatz)\t    Art. 24 MWSTG\nSteuermass:                 7.7 %, 2. 5 % und 3.6 %\t\t\t\t            Art. 25 MWSTG",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198803"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198804]\n[%26]\n[!Zeigen Sie anhand der Erbschaftssteuer die Beziehung von Steuerobjekt und Steuerberechnungsgrundlage auf.]\n===\n[$Steuerobjekt ist der Vermögensanfall (bspw. § 142 Abs. 1 StG AG).\nFür die Steuerberechnung sind weitere Faktoren wesentlich: Der Verwandtschaftsgrad (bspw.§ 147 Abs. 1 und 2 StG AG) und die Höhe des Vermögensanfalls (bspw. § 147 Abs. 1 und § 149 Abs. 1 StG AG).]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "26",
+      "instruction": "Zeigen Sie anhand der Erbschaftssteuer die Beziehung von Steuerobjekt und Steuerberechnungsgrundlage auf.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Steuerobjekt ist der Vermögensanfall (bspw. § 142 Abs. 1 StG AG).\nFür die Steuerberechnung sind weitere Faktoren wesentlich: Der Verwandtschaftsgrad (bspw.§ 147 Abs. 1 und 2 StG AG) und die Höhe des Vermögensanfalls (bspw. § 147 Abs. 1 und § 149 Abs. 1 StG AG).",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198804"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198805]\n[%27]\n[!Zeigen Sie anhand der Steuerberechnungsformel die betragsmässigen Elemente des Steuerrechtsverhältnisses für diesen Fall auf.]\nSabine besitzt eine Kassaobligation von Fr. 20'000, verzinst mit 2 %. Sabine löst den fälligen Coupon des laufenden Jahres bei ihrer Bank ein. Wenige Tage darauf erhält Sabine die Gutschriftanzeige. Vom Bruttoertrag ist Sabine die Verrechnungssteuer in Abzug gebracht worden.\n===\n[$Steuerberechnungsgrundlage:           Zins von Fr. 400 p.a. = Fr. 20'000 * 2%     (Art. 4 Abs. 1 i. V.m. Art. 13 Abs. 1 Bst. a VStG)\nSteuermass:                             35 % \t                                    (Art. 13 Abs. 1 Bst. a VStG)\nSteuerbetrag:                           Fr. 140 = Fr. 20'000 x 2 % = Fr. 400 x 35 % = Fr.140]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "27",
+      "instruction": "Zeigen Sie anhand der Steuerberechnungsformel die betragsmässigen Elemente des Steuerrechtsverhältnisses für diesen Fall auf.",
+      "body": "Sabine besitzt eine Kassaobligation von Fr. 20'000, verzinst mit 2 %. Sabine löst den fälligen Coupon des laufenden Jahres bei ihrer Bank ein. Wenige Tage darauf erhält Sabine die Gutschriftanzeige. Vom Bruttoertrag ist Sabine die Verrechnungssteuer in Abzug gebracht worden.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Steuerberechnungsgrundlage:           Zins von Fr. 400 p.a. = Fr. 20'000 * 2%     (Art. 4 Abs. 1 i. V.m. Art. 13 Abs. 1 Bst. a VStG)\nSteuermass:                             35 % \t                                    (Art. 13 Abs. 1 Bst. a VStG)\nSteuerbetrag:                           Fr. 140 = Fr. 20'000 x 2 % = Fr. 400 x 35 % = Fr.140",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198805"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198806]\n[%28]\nSybille wohnt im Kanton Aargau, welcher auch im Verhältnis Erblasser zu Nachkommen eine  Erbschaftssteuer erhebt, und hat von ihrem Vater Milton ein erhebliches Wertschriftenvermögen geerbt.\nBei seinem Tod hatte der Vater seinen Wohnsitz in Australien.\n[!Prüfen Sie anhand des Steuerrechtsverhältnisses, ob Sybille mit Erbschaftssteuern zu rechnen hat.]\n===\n[$Von den fünf Elementen des Steuerrechtsverhältnisses ist dasjenige der Steuerhoheit nicht erfüllt, weil die örtlichen Voraussetzungen nicht gegeben sind, indem der Vater Milton im Zeitpunkt seines Todes nicht\nWohnsitz im Kanton Aargau hatte. Siehe dazu bspw. § 144 Abs. 1 StG AG, wonach steuerbar Vermögensanfälle sind, die von einer Person stammen, die im Kanton Wohnsitz oder Aufenthalt hat oder im Zeitpunkt ihres\nTodes hatte oder im Kanton verschollen erklärt wird.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "28",
+      "instruction": "Prüfen Sie anhand des Steuerrechtsverhältnisses, ob Sybille mit Erbschaftssteuern zu rechnen hat.",
+      "body": "Sybille wohnt im Kanton Aargau, welcher auch im Verhältnis Erblasser zu Nachkommen eine  Erbschaftssteuer erhebt, und hat von ihrem Vater Milton ein erhebliches Wertschriftenvermögen geerbt.\nBei seinem Tod hatte der Vater seinen Wohnsitz in Australien.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Von den fünf Elementen des Steuerrechtsverhältnisses ist dasjenige der Steuerhoheit nicht erfüllt, weil die örtlichen Voraussetzungen nicht gegeben sind, indem der Vater Milton im Zeitpunkt seines Todes nicht\nWohnsitz im Kanton Aargau hatte. Siehe dazu bspw. § 144 Abs. 1 StG AG, wonach steuerbar Vermögensanfälle sind, die von einer Person stammen, die im Kanton Wohnsitz oder Aufenthalt hat oder im Zeitpunkt ihres\nTodes hatte oder im Kanton verschollen erklärt wird.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198806"
+      ]
+    }
+  }
+]

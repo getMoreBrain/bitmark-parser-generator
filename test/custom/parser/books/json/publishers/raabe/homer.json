@@ -1,0 +1,168 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:183653]\n[#Homer]\n[@externalId:e-homer_k-7xehpltoem]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "183653"
+      ],
+      "title": "Homer",
+      "externalId": [
+        "e-homer_k-7xehpltoem"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:183654]\n[#Homer Simpson fährt Motorrad]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "183654"
+      ],
+      "title": "Homer Simpson fährt Motorrad"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183655]\n[%][%Filminfo:]\nDie Simpsons: Der Film (2007) von David Silverman nach Matt Groening",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Simpsons: Der Film (2007) von David Silverman nach Matt Groening",
+      "id": [
+        "183655"
+      ],
+      "lead": "Filminfo:"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183656]\n[%][%Begriffe:]\nZentripetalkraft, Kreisbewegung",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Zentripetalkraft, Kreisbewegung",
+      "id": [
+        "183656"
+      ],
+      "lead": "Begriffe:"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183657]\n[%][%DVD:]\nFSK 6, Preis 14 €",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "FSK 6, Preis 14 €",
+      "id": [
+        "183657"
+      ],
+      "lead": "DVD:"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183658]\n[%][%Stelle:]\nKapitel 13 (41:15-42:30) und Kapitel 22 (1:07:36-1:11:29)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Kapitel 13 (41:15-42:30) und Kapitel 22 (1:07:36-1:11:29)",
+      "id": [
+        "183658"
+      ],
+      "lead": "Stelle:"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183659]\n[%][%Beschreibung:]\nUm ein Fahrzeug zu gewinnen, muss Homer in der ersten Szene auf einem Rummelplatz in einer Drahtkugel mit einem Motorrad ein Looping fahren.\nDieses Kunststück wiederholt er später, als er in einer riesigen Glashalbkugel, die über seine Stadt gestülpt wurde, zur oben angebrachten Öffnung in der Glocke fährt, um eine in der Stadt platzierte Bombe herauszuwerfen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Um ein Fahrzeug zu gewinnen, muss Homer in der ersten Szene auf einem Rummelplatz in einer Drahtkugel mit einem Motorrad ein Looping fahren.\nDieses Kunststück wiederholt er später, als er in einer riesigen Glashalbkugel, die über seine Stadt gestülpt wurde, zur oben angebrachten Öffnung in der Glocke fährt, um eine in der Stadt platzierte Bombe herauszuwerfen.",
+      "id": [
+        "183659"
+      ],
+      "lead": "Beschreibung:"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183660]\n[%][%Physikalische Sichtweise:]\nDamit Homer nicht herunterfällt, müssen sich Zentripetalkraft und Schwerkraft die Waage halten - Lisa gibt ihrem Vater auf dem Rummel auch den richtigen Tipp: dass er oben angekommen Gas geben muss.\nDie Kugel auf dem Rummelplatz dürfte einen Radius von rund 4 Metern aufweisen. Damit gilt:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Damit Homer nicht herunterfällt, müssen sich Zentripetalkraft und Schwerkraft die Waage halten - Lisa gibt ihrem Vater auf dem Rummel auch den richtigen Tipp: dass er oben angekommen Gas geben muss.\nDie Kugel auf dem Rummelplatz dürfte einen Radius von rund 4 Metern aufweisen. Damit gilt:",
+      "id": [
+        "183660"
+      ],
+      "lead": "Physikalische Sichtweise:"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183661]\nZu berücksichtigen bleibt allerdings, dass bei dieser Geschwindigkeit die Haftreibung der Räder mit zunehmender Steigung abnimmt - will man am höchsten Punkt den gleichen Anpressdruck haben, bedarf es damit der doppelten Geschwindigkeit, was aber ebenfalls kein Problem darstellt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Zu berücksichtigen bleibt allerdings, dass bei dieser Geschwindigkeit die Haftreibung der Räder mit zunehmender Steigung abnimmt - will man am höchsten Punkt den gleichen Anpressdruck haben, bedarf es damit der doppelten Geschwindigkeit, was aber ebenfalls kein Problem darstellt.",
+      "id": [
+        "183661"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183662]\nDie Fahrt auf der Glaskuppel erfordert zunächst die schwierige Schätzung des Durchmes sers. Berücksichtigen sollte man, dass auch das Kernkraftwerk unter der Kuppel steht und dieses nur einen Teil der Stadt ausmacht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Fahrt auf der Glaskuppel erfordert zunächst die schwierige Schätzung des Durchmes sers. Berücksichtigen sollte man, dass auch das Kernkraftwerk unter der Kuppel steht und dieses nur einen Teil der Stadt ausmacht.",
+      "id": [
+        "183662"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183663]\nMit einem Radius von einem Kilometer (dies ist sehr niedrig angesetzt) und dem Kräfte- gleichgewicht von Schwer- und Zentripetalkraft, was nicht reichen würde, um das Motorrad auf einer glatten Oberfläche anzutreiben, ergibt sich bereits:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Mit einem Radius von einem Kilometer (dies ist sehr niedrig angesetzt) und dem Kräfte- gleichgewicht von Schwer- und Zentripetalkraft, was nicht reichen würde, um das Motorrad auf einer glatten Oberfläche anzutreiben, ergibt sich bereits:",
+      "id": [
+        "183663"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183664]\nAls Übungsaufgabe können Sie schnell ausrechnen lassen, welche Umlaufdauer für eine Loopingfahrt nötig ist.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Als Übungsaufgabe können Sie schnell ausrechnen lassen, welche Umlaufdauer für eine Loopingfahrt nötig ist.",
+      "id": [
+        "183664"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183665]\nDies bedeutet im ersten Fall eine maximale Umlaufdauer von knapp 4 Sekunden, was Homer deutlich unterbietet, im zweiten Fall allerdings eine von gut einer Minute. Da die Strecke sich nur auf die obere Halbkugel beschränkt und davon für die Fahrt zum Loch nur die Hälfte verbleibt, ergeben sich rund 15 Sekunden. Nachdem Homer zunächst einige Runden am unteren Rand der Kuppel fährt, fordert ihn Marge auf, nun endlich an die Bombe zu denken - allein ab diesem Zeitounkt braucht Homer deutlich langer als eine viertel Minute.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dies bedeutet im ersten Fall eine maximale Umlaufdauer von knapp 4 Sekunden, was Homer deutlich unterbietet, im zweiten Fall allerdings eine von gut einer Minute. Da die Strecke sich nur auf die obere Halbkugel beschränkt und davon für die Fahrt zum Loch nur die Hälfte verbleibt, ergeben sich rund 15 Sekunden. Nachdem Homer zunächst einige Runden am unteren Rand der Kuppel fährt, fordert ihn Marge auf, nun endlich an die Bombe zu denken - allein ab diesem Zeitounkt braucht Homer deutlich langer als eine viertel Minute.",
+      "id": [
+        "183665"
+      ]
+    }
+  }
+]

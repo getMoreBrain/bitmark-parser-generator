@@ -1,0 +1,1763 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:184798]\n[#Grundlagen des Güter- und Erbrechts]\n[@coverImage:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_1111_cover.png]\n[@language:de]\n[@externalId:e-grundlagen-des-gter-und-erbrechts_4bbgsi7h_xmh]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184798"
+      ],
+      "title": "Grundlagen des Güter- und Erbrechts",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_1111_cover.png"
+      ],
+      "language": [
+        "de"
+      ],
+      "externalId": [
+        "e-grundlagen-des-gter-und-erbrechts_4bbgsi7h_xmh"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:184799]\n[#Grundlagen des Güterrechts]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "184799"
+      ],
+      "title": "Grundlagen des Güterrechts"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:184800]\n[#Güterrecht]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "184800"
+      ],
+      "title": "Güterrecht"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184801]\n• Errungenschaftsbeteiligung (ZGB 196 ff.)\n• Gütergemeinschaft (ZGB 221 ff.)\n• Gütertrennung (ZGB 247 ff.)\n• Der alte Stand der Güterverbindung",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Errungenschaftsbeteiligung (ZGB 196 ff.)\n• Gütergemeinschaft (ZGB 221 ff.)\n• Gütertrennung (ZGB 247 ff.)\n• Der alte Stand der Güterverbindung",
+      "id": [
+        "184801"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:184802]\n[#Die Errungenschaftsbeteiligung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "184802"
+      ],
+      "title": "Die Errungenschaftsbeteiligung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184803]\n•Von Gesetzes wegen, wenn keine anderslautende Regelung getroffen\n•Vermögensmassen",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "•Von Gesetzes wegen, wenn keine anderslautende Regelung getroffen\n•Vermögensmassen",
+      "id": [
+        "184803"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184804]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_1_v3.png][@width:500]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "184804"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_1_v3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "500",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:184805]\n[#Eigengut und Errungenschaft]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "184805"
+      ],
+      "title": "Eigengut und Errungenschaft"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:198433]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_16.png][@width:600]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "198433"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_16.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "600",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:184810]\n[#Güterrechtliche Auseinandersetzung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "184810"
+      ],
+      "title": "Güterrechtliche Auseinandersetzung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184811]\n• **Auflösung der Ehe Scheidung**\n    • Jeder Ehegatte nimmt sein Eigengut mit\n    • Von der Errungenschaft erhält jeder Gatte die Hälfte\n• **Auflösung der Ehe Tod**\n    • Eigengut fällt in den Nachlass des Verstorbenen\n    • Die Hälfte der Errungenschaft fällt in den Nachlass des Verstorbenen\n    • Der überlebende Gatte erhält sein Eigengut sowie die Hälfte der Errungenschaft",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Auflösung der Ehe Scheidung**\n    • Jeder Ehegatte nimmt sein Eigengut mit\n    • Von der Errungenschaft erhält jeder Gatte die Hälfte\n• **Auflösung der Ehe Tod**\n    • Eigengut fällt in den Nachlass des Verstorbenen\n    • Die Hälfte der Errungenschaft fällt in den Nachlass des Verstorbenen\n    • Der überlebende Gatte erhält sein Eigengut sowie die Hälfte der Errungenschaft",
+      "id": [
+        "184811"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:184812]\n[#Güterrechtliche Auseinandersetzung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "184812"
+      ],
+      "title": "Güterrechtliche Auseinandersetzung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184813]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_2_v2.png][@width:500]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "184813"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_2_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "500",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:184814]\n[#Änderungen Errungenschaftsbeteiligung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "184814"
+      ],
+      "title": "Änderungen Errungenschaftsbeteiligung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184815]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_1111_folien_nachlassplanung_missing_image_v2.png][@width:150]\n• **Ehevertrag nötig (notarielle Beurkundung)**\n\n    • Änderungen beim Vorschlag (ZGB 216)\n    • Geschäftsvermögen von Errungenschaft zu Eigengut erklären (ZGB 199.1)\n    • Vermögenserträge ins Eigengut (ZGB 199.2)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Ehevertrag nötig (notarielle Beurkundung)**\n\n    • Änderungen beim Vorschlag (ZGB 216)\n    • Geschäftsvermögen von Errungenschaft zu Eigengut erklären (ZGB 199.1)\n    • Vermögenserträge ins Eigengut (ZGB 199.2)",
+      "id": [
+        "184815"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_1111_folien_nachlassplanung_missing_image_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "150",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:184816]\n[#Gütergemeinschaft]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "184816"
+      ],
+      "title": "Gütergemeinschaft"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184817]\n• **Todesfall**\n    • Eigengut Mann / Frau (persönliche Gegenstände)\n    • Gesamtgut Ehegatten\n• **Scheidung**\n    • Jeder Ehegatte nimmt was unter der Errungenschaftsbeteiligung sein Eigengut wäre mit\n    • Rest je zur Hälfte\n• **Ehevertrag**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Todesfall**\n    • Eigengut Mann / Frau (persönliche Gegenstände)\n    • Gesamtgut Ehegatten\n• **Scheidung**\n    • Jeder Ehegatte nimmt was unter der Errungenschaftsbeteiligung sein Eigengut wäre mit\n    • Rest je zur Hälfte\n• **Ehevertrag**",
+      "id": [
+        "184817"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-9]\n[@id:184818]\n[#Eigengut und Gesamtgut]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "184818"
+      ],
+      "title": "Eigengut und Gesamtgut"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:198434]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_17.png][@width:600]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "198434"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_17.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "600",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-10]\n[@id:184822]\n[#Güterrechtliche Auseinandersetzung Todesfall]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-10",
+      "id": [
+        "184822"
+      ],
+      "title": "Güterrechtliche Auseinandersetzung Todesfall"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184823]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_3_v2.png][@width:600]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "184823"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_3_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "600",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-11]\n[@id:184824]\n[#Gütertrennung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-11",
+      "id": [
+        "184824"
+      ],
+      "title": "Gütertrennung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184825]\n• **Eigengut Mann / Eigengut Frau**\n• **Von Gesetzes wegen**\n    • Konkurs über Ehegatten\n    • Bei gerichtlicher Trennung\n• **Durch Anordnung Richter**\n    • Auf Begehren Ehegatten \n    • Auf Antrag Aufsichtsbehörde (Betreibungswesen)\n    • Auf Begehren Vormund eines Ehegatten\n• **Freiwillig mittels Ehevertrag**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Eigengut Mann / Eigengut Frau**\n• **Von Gesetzes wegen**\n    • Konkurs über Ehegatten\n    • Bei gerichtlicher Trennung\n• **Durch Anordnung Richter**\n    • Auf Begehren Ehegatten \n    • Auf Antrag Aufsichtsbehörde (Betreibungswesen)\n    • Auf Begehren Vormund eines Ehegatten\n• **Freiwillig mittels Ehevertrag**",
+      "id": [
+        "184825"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-12]\n[@id:184826]\n[#Eigengut]\n\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_18.png]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-12",
+      "id": [
+        "184826"
+      ],
+      "title": "Eigengut"
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "png",
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_18.png"
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-13]\n[@id:184829]\n[#Güterrechtliche Auseinandersetzung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-13",
+      "id": [
+        "184829"
+      ],
+      "title": "Güterrechtliche Auseinandersetzung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184830]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_4_v2.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "184830"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_4_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-14]\n[@id:184831]\n[#Der alte Stand der Güterverbindung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-14",
+      "id": [
+        "184831"
+      ],
+      "title": "Der alte Stand der Güterverbindung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184832]\n• **Erklärung bis am 31.12.1988**\n• **Vermögensmassen**\n    • Eheliches Vermögen\n    • Sondergut Frau\n    • Sondergut Mann",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Erklärung bis am 31.12.1988**\n• **Vermögensmassen**\n    • Eheliches Vermögen\n    • Sondergut Frau\n    • Sondergut Mann",
+      "id": [
+        "184832"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-15]\n[@id:184833]\n[#Grundlagen des Erbrechts]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-15",
+      "id": [
+        "184833"
+      ],
+      "title": "Grundlagen des Erbrechts"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-16]\n[@id:184834]\n[#Erbrecht]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-16",
+      "id": [
+        "184834"
+      ],
+      "title": "Erbrecht"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184835]\n• Gesetzliche Erbfolge\n• Pflichtteile und frei verfügbare Quote\n• Letztwillige Verfügungen\n• Umsetzung letzter Wille\n• Nachlassplanung",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Gesetzliche Erbfolge\n• Pflichtteile und frei verfügbare Quote\n• Letztwillige Verfügungen\n• Umsetzung letzter Wille\n• Nachlassplanung",
+      "id": [
+        "184835"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-17]\n[@id:184836]\n[#Gesetzliche Erbfolge]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-17",
+      "id": [
+        "184836"
+      ],
+      "title": "Gesetzliche Erbfolge"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184837]\n• 1.Parentel: Nachkommen\n• 2. Parentel: Stamm der Eltern\n• 3. Parentel: Stamm der Grosseltern\n• Spezialstellung Ehegatte (Gleichstellung mit 1. Parentel)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• 1.Parentel: Nachkommen\n• 2. Parentel: Stamm der Eltern\n• 3. Parentel: Stamm der Grosseltern\n• Spezialstellung Ehegatte (Gleichstellung mit 1. Parentel)",
+      "id": [
+        "184837"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-18]\n[@id:184838]\n[#Gesetzliche Erbfolge]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-18",
+      "id": [
+        "184838"
+      ],
+      "title": "Gesetzliche Erbfolge"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184839]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_5_v3.png][@caption:«Das Geld fliesst wie das Blut.»][@600]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "184839"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_5_v3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "«Das Geld fliesst wie das Blut.»",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-19]\n[@id:184840]\n[#Gesetzliche Erbfolge für Ehegatten]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-19",
+      "id": [
+        "184840"
+      ],
+      "title": "Gesetzliche Erbfolge für Ehegatten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184841]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_6_v2.png][@width:500]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "184841"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_6_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "500",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-20]\n[@id:198435]\n[#Pflichtteile]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-20",
+      "id": [
+        "198435"
+      ],
+      "title": "Pflichtteile"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184842]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_7_v2.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "184842"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_7_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.example:bitmark--&image]\n[@id:184843]\n[%][%Pflichtteile – Beispiel]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_8_v2.png][@width:400]",
+    "bit": {
+      "type": "example",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184843"
+      ],
+      "lead": "Pflichtteile – Beispiel",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_8_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "400",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-21]\n[@id:184844]\n[#Pflichtteilsverletzungen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-21",
+      "id": [
+        "184844"
+      ],
+      "title": "Pflichtteilsverletzungen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184845]\n• **Herabsetzungsklage (ZGB 519 ff.)**\n• **Spezialfall: Lebensversicherung mit Rückkaufswert**\n    • Lebensversicherung gehört in eine güterrechtliche Auseinandersetzung\n    • Im Erbrecht gemäss ZGB Art. 476 und 529 nur im Rahmen des Rückkaufswerts bei Pflichtteils-berechnung zu berücksichtigen",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Herabsetzungsklage (ZGB 519 ff.)**\n• **Spezialfall: Lebensversicherung mit Rückkaufswert**\n    • Lebensversicherung gehört in eine güterrechtliche Auseinandersetzung\n    • Im Erbrecht gemäss ZGB Art. 476 und 529 nur im Rahmen des Rückkaufswerts bei Pflichtteils-berechnung zu berücksichtigen",
+      "id": [
+        "184845"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-22]\n[@id:184846]\n[#«Spezialfall» Vorsorgekonto 3a]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-22",
+      "id": [
+        "184846"
+      ],
+      "title": "«Spezialfall» Vorsorgekonto 3a"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184847]\n• **In Güterrecht erfasst\n• 2 juristische Meinungen herrschen vor bei Erbrecht:**\n    • Vorsorgekonto 3a wird zum Nachlass gezählt\n    • Auf Saldo des Vorsorgekonto 3a besteht lediglich ein Pflichtteilsschutz (analog Versicherungen)\n• **Gerichtsentscheide hierzu**\n    • Kantonale Entscheide = «Nachlass»\n    • Bundesgerichtsentscheid 9C-523/2013 vom 28.2.2014 __(allerdings ging es dort primär um Begünstigung BVV3 und eine ausgeschlagene Erbschaft)__ = tendenziell «Pflichtteilsschutz»\n\n**Kurs Mendo = «Nachlass»**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **In Güterrecht erfasst\n• 2 juristische Meinungen herrschen vor bei Erbrecht:**\n    • Vorsorgekonto 3a wird zum Nachlass gezählt\n    • Auf Saldo des Vorsorgekonto 3a besteht lediglich ein Pflichtteilsschutz (analog Versicherungen)\n• **Gerichtsentscheide hierzu**\n    • Kantonale Entscheide = «Nachlass»\n    • Bundesgerichtsentscheid 9C-523/2013 vom 28.2.2014 __(allerdings ging es dort primär um Begünstigung BVV3 und eine ausgeschlagene Erbschaft)__ = tendenziell «Pflichtteilsschutz»\n\n**Kurs Mendo = «Nachlass»**",
+      "id": [
+        "184847"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-23]\n[@id:184848]\n[#Was fällt in Nachlass?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-23",
+      "id": [
+        "184848"
+      ],
+      "title": "Was fällt in Nachlass?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:198436]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_19.png][@width:600]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "198436"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_19.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "600",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-24]\n[@id:184852]\n[#Was gehört zum Nachlass/Pflichtteil? (ab 01.01.2023)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-24",
+      "id": [
+        "184852"
+      ],
+      "title": "Was gehört zum Nachlass/Pflichtteil? (ab 01.01.2023)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184853]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_9_v2.png][@width:500]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "184853"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_9_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "500",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-25]\n[@id:184854]\n[#Letztwillige Verfügung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-25",
+      "id": [
+        "184854"
+      ],
+      "title": "Letztwillige Verfügung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184855]\n• **Verfügungen**\n    • Erbeneinsetzung\n    • Vermächtnisse\n    • Teilungsvorschriften\n    • Willensvollstreckung\n    • Stiftung\n• **Möglichkeiten**\n    • Testament (eigenhändig / weitere Formen)\n    • Erbvertrag",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Verfügungen**\n    • Erbeneinsetzung\n    • Vermächtnisse\n    • Teilungsvorschriften\n    • Willensvollstreckung\n    • Stiftung\n• **Möglichkeiten**\n    • Testament (eigenhändig / weitere Formen)\n    • Erbvertrag",
+      "id": [
+        "184855"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-26]\n[@id:184856]\n[#Willensvollstreckung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-26",
+      "id": [
+        "184856"
+      ],
+      "title": "Willensvollstreckung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184857]\n• Aufgaben\n    • Wille des Erblassers vertreten\n    • Erbschaft verwalten\n    • Schulden des Erblassers bezahlen\n    • Vermächtnisse ausrichten\n    • Vertretung gegenüber Behörden\n    • Vorbereitung und Vollzug der Erbteilung\n    • Auskunft und Einsicht gewähren\n    • Rechenschaft ablegen\n\n• Nutzen:\n    • Eine Erbteilung ist eine anspruchsvolle Aufgabe\n    • Lösung innerhalb der Familie kann zu Verzögerungen, Streitigkeiten etc. führen\n    • Bei komplexen Familien- oder Vermögensverhältnisse ist der Beizug eines \n    • Spezialisten oder die Einsetzung einer neutralen Drittperson als Willensvoll-strecker sinnvoll\n    • Willensvollstrecker ist verantwortlich für eine rasche und effiziente Erbteilung im Sinne des Erblassers",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Aufgaben\n    • Wille des Erblassers vertreten\n    • Erbschaft verwalten\n    • Schulden des Erblassers bezahlen\n    • Vermächtnisse ausrichten\n    • Vertretung gegenüber Behörden\n    • Vorbereitung und Vollzug der Erbteilung\n    • Auskunft und Einsicht gewähren\n    • Rechenschaft ablegen\n\n• Nutzen:\n    • Eine Erbteilung ist eine anspruchsvolle Aufgabe\n    • Lösung innerhalb der Familie kann zu Verzögerungen, Streitigkeiten etc. führen\n    • Bei komplexen Familien- oder Vermögensverhältnisse ist der Beizug eines \n    • Spezialisten oder die Einsetzung einer neutralen Drittperson als Willensvoll-strecker sinnvoll\n    • Willensvollstrecker ist verantwortlich für eine rasche und effiziente Erbteilung im Sinne des Erblassers",
+      "id": [
+        "184857"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-27]\n[@id:184858]\n[#Konkubinat]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-27",
+      "id": [
+        "184858"
+      ],
+      "title": "Konkubinat"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184859]\n• Der Konkubinatspartner hat keinen gesetzlichen Erbanspruch\n\n• Der Konkubinatspartner ist nur erbberechtigt, wenn er als Erbe eingesetzt wird\n\n• Der Konkubinatspartner bezahlt im Gegensatz zum Ehepartner in der Regel eine Erbschaftssteuer",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Der Konkubinatspartner hat keinen gesetzlichen Erbanspruch\n\n• Der Konkubinatspartner ist nur erbberechtigt, wenn er als Erbe eingesetzt wird\n\n• Der Konkubinatspartner bezahlt im Gegensatz zum Ehepartner in der Regel eine Erbschaftssteuer",
+      "id": [
+        "184859"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-28]\n[@id:184860]\n[#Eingetragene Partnerschaft (PartG)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-28",
+      "id": [
+        "184860"
+      ],
+      "title": "Eingetragene Partnerschaft (PartG)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184861]\n• **Bundesgesetz über die eingetragene Partnerschaft gleichgeschlechtlicher Paare:**\n    • Vermögensrecht anstatt Güterrecht\n    • Ordentlicher Güterstand = Gütertrennung \n    • Wechsel in «Errungenschaftsbeteiligung» durch Vermögensvertrag (öffentliche Beurkundung)\n    • Gütergemeinschaft nicht möglich!\n    • Eingetragene Partner sind erbrechtlich den Ehegatten gleichgestellt",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Bundesgesetz über die eingetragene Partnerschaft gleichgeschlechtlicher Paare:**\n    • Vermögensrecht anstatt Güterrecht\n    • Ordentlicher Güterstand = Gütertrennung \n    • Wechsel in «Errungenschaftsbeteiligung» durch Vermögensvertrag (öffentliche Beurkundung)\n    • Gütergemeinschaft nicht möglich!\n    • Eingetragene Partner sind erbrechtlich den Ehegatten gleichgestellt",
+      "id": [
+        "184861"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-29]\n[@id:184862]\n[#Das eigenhändige Testament]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-29",
+      "id": [
+        "184862"
+      ],
+      "title": "Das eigenhändige Testament"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184863]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_10_v2.png][@width:150]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "184863"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_10_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "150",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184864]\n• **Handschriftlich von A bis Z**\n• **Struktur**\n    • Personenangaben\n    • Widerruf früherer Testamente\n    • Erbeinsetzung / Vermächtnisse / Teilungsanordnungen\n    • Willensvollstrecker\n    • Ort, Datum und Unterschrift\n• **Sicherheitsvorkehrungen**\n    • Hinterlegung\n    • Zentrales Testamentsregister",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Handschriftlich von A bis Z**\n• **Struktur**\n    • Personenangaben\n    • Widerruf früherer Testamente\n    • Erbeinsetzung / Vermächtnisse / Teilungsanordnungen\n    • Willensvollstrecker\n    • Ort, Datum und Unterschrift\n• **Sicherheitsvorkehrungen**\n    • Hinterlegung\n    • Zentrales Testamentsregister",
+      "id": [
+        "184864"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-30]\n[@id:184865]\n[#Weitere Testamentsformen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-30",
+      "id": [
+        "184865"
+      ],
+      "title": "Weitere Testamentsformen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184866]\n• **Öffentliches Testament**\n    • Notar oder Urkundsperson (je nach kantonaler Gesetzgebung)\n    • Unterzeichnung Erblasser (2 Zeugen)\n• **Nottestament**\n    • Mündliche Verfügung in äusserster Notlage\n    • Mindestens in Anwesenheit von 2 Personen, die dies beim Gericht niederschreiben müssen\n    • Wirkungsverlust innert 14 Tagen nach Wegfall Verhinderungsgrund / falls Verhinderungsgrund bleibt, bleibt Nottestament in kraft",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Öffentliches Testament**\n    • Notar oder Urkundsperson (je nach kantonaler Gesetzgebung)\n    • Unterzeichnung Erblasser (2 Zeugen)\n• **Nottestament**\n    • Mündliche Verfügung in äusserster Notlage\n    • Mindestens in Anwesenheit von 2 Personen, die dies beim Gericht niederschreiben müssen\n    • Wirkungsverlust innert 14 Tagen nach Wegfall Verhinderungsgrund / falls Verhinderungsgrund bleibt, bleibt Nottestament in kraft",
+      "id": [
+        "184866"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-31]\n[@id:184867]\n[#Der Erbvertrag]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-31",
+      "id": [
+        "184867"
+      ],
+      "title": "Der Erbvertrag"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184868]\n• **Öffentliche Beurkundung (2 Zeugen)**\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_1111_folien_nachlassplanung_missing_image_v2.png]\n    • Erfassung letzter Wille unter Vertragsparteien (Erblasser und seine Erben)\n    • Abänderungen nur bei Einverständnis aller Vertragsparteien möglich\n    • Nebst letztwilligen Verfügungen können auch Erbverzicht / Erbauskauf geregelt werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Öffentliche Beurkundung (2 Zeugen)**\n\n    • Erfassung letzter Wille unter Vertragsparteien (Erblasser und seine Erben)\n    • Abänderungen nur bei Einverständnis aller Vertragsparteien möglich\n    • Nebst letztwilligen Verfügungen können auch Erbverzicht / Erbauskauf geregelt werden.",
+      "id": [
+        "184868"
+      ]
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "png",
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_1111_folien_nachlassplanung_missing_image_v2.png"
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-32]\n[@id:184869]\n[#Erbrechtsrevision – ab 01.01.2023]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-32",
+      "id": [
+        "184869"
+      ],
+      "title": "Erbrechtsrevision – ab 01.01.2023"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184870]\n• Neuregelung der Pflichtteile bei Nachkommen und Eltern, keine Anpassung bei Ehegatten und eingetragenen Partnern\n• Erbrechtliche Regelung der Vorsorgeguthaben der Säule 3a, werden gleich wie Versicherungsansprüche behandelt\n• Wegfall des Pflichtteilanspruchs mit Aufnahme eines Scheidungsverfahrens (heute bis zur Rechtskraft der Scheidung der Fall), auch keine Ansprüche aus einer letztwilligen Verfügung\n• Lebzeitige Zuwendungen (Schenkungen, Erbvorbezüge) unterliegen bereits der Anfechtung, wenn mit Verpflichtungen aus Erbvertrag nicht vereinbar (ohne Schädigungsabsicht)\n• Keine Änderung bei Vorschlagszuweisung mittels Ehevertrag\n• Weitere Revisionsschritte im internationalen Erbrecht und Unternehmens-Erbrecht folgen",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Neuregelung der Pflichtteile bei Nachkommen und Eltern, keine Anpassung bei Ehegatten und eingetragenen Partnern\n• Erbrechtliche Regelung der Vorsorgeguthaben der Säule 3a, werden gleich wie Versicherungsansprüche behandelt\n• Wegfall des Pflichtteilanspruchs mit Aufnahme eines Scheidungsverfahrens (heute bis zur Rechtskraft der Scheidung der Fall), auch keine Ansprüche aus einer letztwilligen Verfügung\n• Lebzeitige Zuwendungen (Schenkungen, Erbvorbezüge) unterliegen bereits der Anfechtung, wenn mit Verpflichtungen aus Erbvertrag nicht vereinbar (ohne Schädigungsabsicht)\n• Keine Änderung bei Vorschlagszuweisung mittels Ehevertrag\n• Weitere Revisionsschritte im internationalen Erbrecht und Unternehmens-Erbrecht folgen",
+      "id": [
+        "184870"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-33]\n[@id:184871]\n[#Erbgang]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-33",
+      "id": [
+        "184871"
+      ],
+      "title": "Erbgang"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184872]\n• **Inventar durch kantonale Behörde / Siegelung**\n    • Ausschlagung oder Annahme\n    • Öffentliches Inventar\n    • Amtliche Liquidation\n• **Eröffnung der Verfügungen von Todes wegen**\n• **Erbengemeinschaft und Willensvollstrecker**\n• **Erbteilung**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Inventar durch kantonale Behörde / Siegelung**\n    • Ausschlagung oder Annahme\n    • Öffentliches Inventar\n    • Amtliche Liquidation\n• **Eröffnung der Verfügungen von Todes wegen**\n• **Erbengemeinschaft und Willensvollstrecker**\n• **Erbteilung**",
+      "id": [
+        "184872"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-34]\n[@id:184873]\n[#Annahme einer Erbschaft]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-34",
+      "id": [
+        "184873"
+      ],
+      "title": "Annahme einer Erbschaft"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184874]\n• **Annahme der Erbschaft (Vermutung):\nErklärt der Erbe während der angesetzten Frist die Ausschlagung nicht, so hat er die Erbschaft vorbehaltlos erworben.\n\n• Ausschlagung der Erbschaft:\nJeder Erbe kann innert 3 Monaten die Erbschaft bei der zuständigen Behörde ausschlagen, das bedeutet, dass er auf seine Erbschaft verzichtet (Art. 566 ff. ZGB).**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Annahme der Erbschaft (Vermutung):\nErklärt der Erbe während der angesetzten Frist die Ausschlagung nicht, so hat er die Erbschaft vorbehaltlos erworben.\n\n• Ausschlagung der Erbschaft:\nJeder Erbe kann innert 3 Monaten die Erbschaft bei der zuständigen Behörde ausschlagen, das bedeutet, dass er auf seine Erbschaft verzichtet (Art. 566 ff. ZGB).**",
+      "id": [
+        "184874"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184875]\n• **Annahme unter öffentlichem Inventar:\nBevor sich ein Erbe entscheidet, kann er innert 1 Monat bei der zuständigen Behörde verlangen, dass ein öffentliches Inventar erstellt wird (Art. 580 ff. ZGB).\n\n• Amtliche Liquidation:\nErben oder Gläubiger können innert 3 Monaten die amtliche Liquidation verlangen. Die zuständige kantonale Behörde bzw. der Erbschaftsverwalter (im Überschuldungsfall das Konkursamt) führt die amtliche Liquidation durch.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Annahme unter öffentlichem Inventar:\nBevor sich ein Erbe entscheidet, kann er innert 1 Monat bei der zuständigen Behörde verlangen, dass ein öffentliches Inventar erstellt wird (Art. 580 ff. ZGB).\n\n• Amtliche Liquidation:\nErben oder Gläubiger können innert 3 Monaten die amtliche Liquidation verlangen. Die zuständige kantonale Behörde bzw. der Erbschaftsverwalter (im Überschuldungsfall das Konkursamt) führt die amtliche Liquidation durch.**",
+      "id": [
+        "184875"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-35]\n[@id:184876]\n[#Nachlassplanung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-35",
+      "id": [
+        "184876"
+      ],
+      "title": "Nachlassplanung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184877]\n• **Güterrechtliche Regelungen**\n    • Wahl Güterstand\n    • Vorschlagszuweisung bei Errungenschaft\n• **Erbrechtliche Regelungen**\n    • Besserstellung Ehegatten\n    • Erbverzichte (z.B. bei Konkubinat)\n    • Nutzniessung und Wohnrecht\n    • Schenkungen (gemischte Schenkungen)\n    • Verwandtenunterstützung",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Güterrechtliche Regelungen**\n    • Wahl Güterstand\n    • Vorschlagszuweisung bei Errungenschaft\n• **Erbrechtliche Regelungen**\n    • Besserstellung Ehegatten\n    • Erbverzichte (z.B. bei Konkubinat)\n    • Nutzniessung und Wohnrecht\n    • Schenkungen (gemischte Schenkungen)\n    • Verwandtenunterstützung",
+      "id": [
+        "184877"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-36]\n[@id:184878]\n[#Ehe für alle – Was ändert sich für gleichgeschlecht-liche Paare?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-36",
+      "id": [
+        "184878"
+      ],
+      "title": "Ehe für alle – Was ändert sich für gleichgeschlecht-liche Paare?"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-37]\n[@id:184879]\n[#Übersicht]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-37",
+      "id": [
+        "184879"
+      ],
+      "title": "Übersicht"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184880]\n**26.09.2021: Ja zur «Ehe für alle»**\n• Gleichgeschlechtliche Paare können neu auch zivil heiraten.\n• Sie werden anderen Ehepaaren damit rechtlich und institutionell gleichgestellt.\n\n**01.07.2022: Inkrafttreten der geänderten Artikel im ZGB**\n• Eingetragene Partnerschaften können beibehalten oder in eine Ehe umgewandelt werden (mittels Umwandlungserklärung beim Zivilstandsamt).\n• Eingetragene Partnerschaften können aber nicht mehr neu eingegangen werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**26.09.2021: Ja zur «Ehe für alle»**\n• Gleichgeschlechtliche Paare können neu auch zivil heiraten.\n• Sie werden anderen Ehepaaren damit rechtlich und institutionell gleichgestellt.\n\n**01.07.2022: Inkrafttreten der geänderten Artikel im ZGB**\n• Eingetragene Partnerschaften können beibehalten oder in eine Ehe umgewandelt werden (mittels Umwandlungserklärung beim Zivilstandsamt).\n• Eingetragene Partnerschaften können aber nicht mehr neu eingegangen werden.",
+      "id": [
+        "184880"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-38]\n[@id:184881]\n[#Auswirkungen Güter-/Erbrecht]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-38",
+      "id": [
+        "184881"
+      ],
+      "title": "Auswirkungen Güter-/Erbrecht"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184882]\n**Ehegüterrecht:**\n• Als ordentlicher Güterstand gilt neu die Errungenschafts-beteiligung. Es muss nicht mehr extra ein Vermögensvertrag abgeschlossen werden.\n**Erbrecht:**\n• Keine Änderungen: die bisherigen Begünstigungs-möglichkeiten gelten weiterhin!",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Ehegüterrecht:**\n• Als ordentlicher Güterstand gilt neu die Errungenschafts-beteiligung. Es muss nicht mehr extra ein Vermögensvertrag abgeschlossen werden.\n**Erbrecht:**\n• Keine Änderungen: die bisherigen Begünstigungs-möglichkeiten gelten weiterhin!",
+      "id": [
+        "184882"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-39]\n[@id:184883]\n[#Vorsorgeauftrag und Vermögenssorge]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-39",
+      "id": [
+        "184883"
+      ],
+      "title": "Vorsorgeauftrag und Vermögenssorge"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-40]\n[@id:184884]\n[#Blick.ch – im April 2018]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-40",
+      "id": [
+        "184884"
+      ],
+      "title": "Blick.ch – im April 2018"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184885]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_11_v2.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "184885"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_11_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-41]\n[@id:184886]\n[#Tagesanzeiger.ch – im Juli 2019]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-41",
+      "id": [
+        "184886"
+      ],
+      "title": "Tagesanzeiger.ch – im Juli 2019"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184887]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_12.png]\n\n==Mehr...==|link:https://www.tagblatt.ch/leben/ratgeber/muessen-wir-als-ehepaar-einen-vorsorgeauftrag-machen-ld.1139303|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "==Mehr...==|link:https://www.tagblatt.ch/leben/ratgeber/muessen-wir-als-ehepaar-einen-vorsorgeauftrag-machen-ld.1139303|",
+      "id": [
+        "184887"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_12.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-42]\n[@id:184888]\n[#Massnahmen zum Vermögenschutz]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-42",
+      "id": [
+        "184888"
+      ],
+      "title": "Massnahmen zum Vermögenschutz"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184889]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_13_v2.png][@width:600]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "184889"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_13_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "600",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-43]\n[@id:184890]\n[#Der Vorsorgeauftrag]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-43",
+      "id": [
+        "184890"
+      ],
+      "title": "Der Vorsorgeauftrag"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184891]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_14.png]\n• **Inhalt eines Vorsorgeauftrags**\n    • Personensorge\n    • Vermögenssorge\n    • Vertretung im Rechtsverkehr\n• **Vorsorgeauftrag kann alle Bereiche oder Teile umfassen**\n• **Formvorschriften (ZGB Art. 361)**\n    • Eigenhändiger Vorsorgeauftrag\n    • Öffentlich beurkundeter Vorsorgeauftrag",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Inhalt eines Vorsorgeauftrags**\n    • Personensorge\n    • Vermögenssorge\n    • Vertretung im Rechtsverkehr\n• **Vorsorgeauftrag kann alle Bereiche oder Teile umfassen**\n• **Formvorschriften (ZGB Art. 361)**\n    • Eigenhändiger Vorsorgeauftrag\n    • Öffentlich beurkundeter Vorsorgeauftrag",
+      "id": [
+        "184891"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_14.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-44]\n[@id:184892]\n[#Vermögenssorge - Situationen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-44",
+      "id": [
+        "184892"
+      ],
+      "title": "Vermögenssorge - Situationen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:184893]\n[&image:https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_15_v2.png][@width:450]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "184893"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/mendo/1111_folien_nachlassplanung_neu/web-resources/images/mendo_111_folien_nachlassplanung_15_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "450",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-45]\n[@id:184894]\n[#Vermögenssorge – Vertretung Ehepartner / eingetr. Ptr.]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-45",
+      "id": [
+        "184894"
+      ],
+      "title": "Vermögenssorge – Vertretung Ehepartner / eingetr. Ptr."
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184895]\n• **Übertragung der Vertretungs- und Entscheidbefugnis bei Verlust der Urteilsfähigkeit an den Ehepartner oder eingetragenen Partner ...**\n    • ZGB Art. 374 – 376 \n    • Urteilsunfähigkeit (auch vorübergehende)\n    • Tatsächlich gelebte Beziehung zwischen den Partnern\n    • Es liegt kein Vorsorgeauftrag / Beistandschaft vor",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Übertragung der Vertretungs- und Entscheidbefugnis bei Verlust der Urteilsfähigkeit an den Ehepartner oder eingetragenen Partner ...**\n    • ZGB Art. 374 – 376 \n    • Urteilsunfähigkeit (auch vorübergehende)\n    • Tatsächlich gelebte Beziehung zwischen den Partnern\n    • Es liegt kein Vorsorgeauftrag / Beistandschaft vor",
+      "id": [
+        "184895"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-46]\n[@id:184896]\n[#Ausserordentliche Vermögenssorge]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-46",
+      "id": [
+        "184896"
+      ],
+      "title": "Ausserordentliche Vermögenssorge"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184897]\n[%][%ZGB Art. 374]\n1 Wer als Ehegatte, eingetragene Partnerin oder eingetragener Partner mit einer Person, die urteilsunfähig wird, einen gemeinsamen Haushalt führt oder ihr regelmässig und persönlich Beistand leistet, hat von Gesetzes wegen ein Vertretungsrecht, wenn weder ein Vorsorgeauftrag noch eine entsprechende Beistandschaft besteht. \n2 Das Vertretungsrecht umfasst: \n    1. alle Rechtshandlungen, die zur Deckung des Unterhaltsbedarfs üblicherweise erforderlich sind; \n    2. die ordentliche Verwaltung des Einkommens und der übrigen Vermögenswerte; und \n    3. nötigenfalls die Befugnis, die Post zu öffnen und zu erledigen. \n3 Für Rechtshandlungen im Rahmen der ausserordentlichen **Vermögensverwaltung** muss der Ehegatte, die eingetragene Partnerin oder der eingetragene Partner die Zustimmung der Erwachsenenschutzbehörde einholen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "1 Wer als Ehegatte, eingetragene Partnerin oder eingetragener Partner mit einer Person, die urteilsunfähig wird, einen gemeinsamen Haushalt führt oder ihr regelmässig und persönlich Beistand leistet, hat von Gesetzes wegen ein Vertretungsrecht, wenn weder ein Vorsorgeauftrag noch eine entsprechende Beistandschaft besteht. \n2 Das Vertretungsrecht umfasst: \n    1. alle Rechtshandlungen, die zur Deckung des Unterhaltsbedarfs üblicherweise erforderlich sind; \n    2. die ordentliche Verwaltung des Einkommens und der übrigen Vermögenswerte; und \n    3. nötigenfalls die Befugnis, die Post zu öffnen und zu erledigen. \n3 Für Rechtshandlungen im Rahmen der ausserordentlichen **Vermögensverwaltung** muss der Ehegatte, die eingetragene Partnerin oder der eingetragene Partner die Zustimmung der Erwachsenenschutzbehörde einholen.",
+      "id": [
+        "184897"
+      ],
+      "lead": "ZGB Art. 374"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-47]\n[@id:184898]\n[#Vermögenssorge - Vorsorgebeauftragter]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-47",
+      "id": [
+        "184898"
+      ],
+      "title": "Vermögenssorge - Vorsorgebeauftragter"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198437]\n• **Vertretung durch Vorsorgebeauftragter bei Urteilsunfähigkeit**\n    • ZGB Art. 360 – 369\n    • Prüfung des Vorsorgeauftrags durch KESB\n    • Annahme des Auftrags\n    • Haftungsnormen = Auftragsrecht (Sorgfalts- und Treuepflichten)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Vertretung durch Vorsorgebeauftragter bei Urteilsunfähigkeit**\n    • ZGB Art. 360 – 369\n    • Prüfung des Vorsorgeauftrags durch KESB\n    • Annahme des Auftrags\n    • Haftungsnormen = Auftragsrecht (Sorgfalts- und Treuepflichten)",
+      "id": [
+        "198437"
+      ]
+    }
+  }
+]

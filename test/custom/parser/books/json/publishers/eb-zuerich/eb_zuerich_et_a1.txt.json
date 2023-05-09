@@ -1,0 +1,3203 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:131324][#Einstufungsgstest A1 EB Zürich]\n[@externalId:e-einstufungsgstest-a1-eb-zrich_ywykpvv_wc95]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131324"
+      ],
+      "title": "Einstufungsgstest A1 EB Zürich",
+      "externalId": [
+        "e-einstufungsgstest-a1-eb-zrich_ywykpvv_wc95"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:131325]**Deutschtest\nNiveaustufe A1 Gemeinsamer Europäischer Referenzrahmen (GER)\n \nAnleitung**\n• Bearbeiten Sie den Test ohne zu unterbrechen.\n• Die Bearbeitungszeit beträgt pro 30 Fragen höchstens 30 Minuten.\n• Lösen Sie die Aufgaben ohne fremde Hilfe.\n• Benützen Sie keine Wörter- oder Grammatikbücher.\n• Wenn Sie einenFrage nicht beantworten können, lassen Sie diese offen. Raten verfälscht\ndas Resultat.\n• Sobald die Aufgaben für Sie zu schwierig werden, hören Sie auf und zählen Ihre erreichte\nPunktzahl zusammen. Vergleichen Sie diese dann mit dem Lösungsschlüssel.\nLösung am Computer\nWenn Sie den Einstufungstest am Computer lösen, klicken Sie das richtige Feld bei den möglichen Antworten an oder schreiben Sie die richtige Antwort in das Textfeld. Beachten Sie bitte auch die korrekte Gross-/Kleinschreibung. Um den Test problemlos zu lösen, verwenden Sie bitte ausschliesslich den Adobe Acrobat Reader (mindestens Version 6.0). Um die Antwortfelder auszufüllen und die Auswertung zu starten muss das Handwerkzeug\naktiv sein. Mit dem Zoomwerkzeug   lässt sich der Testinhalt skalieren.\n\nBeispiele",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Deutschtest\nNiveaustufe A1 Gemeinsamer Europäischer Referenzrahmen (GER)\n \nAnleitung**\n• Bearbeiten Sie den Test ohne zu unterbrechen.\n• Die Bearbeitungszeit beträgt pro 30 Fragen höchstens 30 Minuten.\n• Lösen Sie die Aufgaben ohne fremde Hilfe.\n• Benützen Sie keine Wörter- oder Grammatikbücher.\n• Wenn Sie einenFrage nicht beantworten können, lassen Sie diese offen. Raten verfälscht\ndas Resultat.\n• Sobald die Aufgaben für Sie zu schwierig werden, hören Sie auf und zählen Ihre erreichte\nPunktzahl zusammen. Vergleichen Sie diese dann mit dem Lösungsschlüssel.\nLösung am Computer\nWenn Sie den Einstufungstest am Computer lösen, klicken Sie das richtige Feld bei den möglichen Antworten an oder schreiben Sie die richtige Antwort in das Textfeld. Beachten Sie bitte auch die korrekte Gross-/Kleinschreibung. Um den Test problemlos zu lösen, verwenden Sie bitte ausschliesslich den Adobe Acrobat Reader (mindestens Version 6.0). Um die Antwortfelder auszufüllen und die Auswertung zu starten muss das Handwerkzeug\naktiv sein. Mit dem Zoomwerkzeug   lässt sich der Testinhalt skalieren.\n\nBeispiele",
+      "id": [
+        "131325"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131326][!91. Das ist ___ Kind.]\n[+a) ein][@example] [-b) eine] [-c) einen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "91. Das ist ___ Kind.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) ein",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) eine",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) einen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131326"
+      ]
+    },
+    "example": ""
+  },
+  {
+    "bitmark": "[.cloze]\n[@id:131327][%92]\nHier [_dürfen][@example] Sie nicht spielen. Es ist verboten.]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Hier {0} Sie nicht spielen. Es ist verboten.]",
+      "item": "92",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131327"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "dürfen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131328]**Auswertung**\nAm Computer gelöste Aufgaben können Sie «per Knopfdruck» (Seite 11) auswerten. Klicken Sie auf den Knopf «Auswertung» und in der Anzeige erscheint die erreichte Punktzahl.\n \n**Lösung auf Papier**\nKreuzen Sie den richtigen Buchstaben auf dem Antwortblatt (Seite 14) an, oder schreiben Sie das passende Wort.\nBeispiele\n \n \n91. Das ist ____ Kind.\na) ein b) eine c) einen \n92. Hier ____ Sie nicht spielen. Es ist verboten.\t\t\n\t\t\t\t\n**Antwort**\n91. a b c  \n92. dürfen \n\t\t\t\t\t\t\n**Auswertung**\t\t\t\t\t\nAuf Papier gelöste Aufgaben werten Sie mittels des Lösungsblattes (Seite 12) aus und zählen anschliessend die erreichten Punkte zusammen.\nAnhand der Punkteskala ermitteln Sie selber die für Sie geeignete Stufe. \n\t\n \n\nEN Instructions",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Auswertung**\nAm Computer gelöste Aufgaben können Sie «per Knopfdruck» (Seite 11) auswerten. Klicken Sie auf den Knopf «Auswertung» und in der Anzeige erscheint die erreichte Punktzahl.\n \n**Lösung auf Papier**\nKreuzen Sie den richtigen Buchstaben auf dem Antwortblatt (Seite 14) an, oder schreiben Sie das passende Wort.\nBeispiele\n \n \n91. Das ist ____ Kind.\na) ein b) eine c) einen \n92. Hier ____ Sie nicht spielen. Es ist verboten.\t\t\n\t\t\t\t\n**Antwort**\n91. a b c  \n92. dürfen \n\t\t\t\t\t\t\n**Auswertung**\t\t\t\t\t\nAuf Papier gelöste Aufgaben werten Sie mittels des Lösungsblattes (Seite 12) aus und zählen anschliessend die erreichten Punkte zusammen.\nAnhand der Punkteskala ermitteln Sie selber die für Sie geeignete Stufe. \n\t\n \n\nEN Instructions",
+      "id": [
+        "131328"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:131329]**German test \nLevel GER A1 European Languages Portfolio \n  \nHow to do it** \n• Complete the test in one sitting (no breaks or interruptions). \n• Do not take more than 30 minutes for 30 questions. \n• Do the test without help from others. \n• Do not use dictionaries, grammar guides, etc. \n• If you can not answer a question, leave it out. Guessing gives inaccurate results. \n• As soon as the questions become too difficult, stop doing the test. Then calculate the \nnumber of points you have achieved so far, and compare them with the key. \n  \n**Taking the test on a PC** \nIf you are taking the test on a PC, just click the box you think contains the correct answer, or type your answer into the relevant field. Ensure you use capitals and small case letters appropriately. To ensure smooth completion of the test, you should be using Adobe Acrobat Reader (this should be at least Version 6.0). To complete the boxes and generate your results, the cursor has to change to the “hand” symbol . Using the “zoom” tool enables you to view the level of difficulty of the test questions. \nExamples",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**German test \nLevel GER A1 European Languages Portfolio \n  \nHow to do it** \n• Complete the test in one sitting (no breaks or interruptions). \n• Do not take more than 30 minutes for 30 questions. \n• Do the test without help from others. \n• Do not use dictionaries, grammar guides, etc. \n• If you can not answer a question, leave it out. Guessing gives inaccurate results. \n• As soon as the questions become too difficult, stop doing the test. Then calculate the \nnumber of points you have achieved so far, and compare them with the key. \n  \n**Taking the test on a PC** \nIf you are taking the test on a PC, just click the box you think contains the correct answer, or type your answer into the relevant field. Ensure you use capitals and small case letters appropriately. To ensure smooth completion of the test, you should be using Adobe Acrobat Reader (this should be at least Version 6.0). To complete the boxes and generate your results, the cursor has to change to the “hand” symbol . Using the “zoom” tool enables you to view the level of difficulty of the test questions. \nExamples",
+      "id": [
+        "131329"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131330][!91. Das ist ___ Kind.]\n[+a) ein][@example] [-b) eine] [-c) einen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "91. Das ist ___ Kind.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) ein",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) eine",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) einen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131330"
+      ]
+    },
+    "example": ""
+  },
+  {
+    "bitmark": "[.cloze]\n[@id:131331][%92]\nHier [_dürfen][@example]Sie nicht spielen. Es ist verboten.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Hier {0}Sie nicht spielen. Es ist verboten.",
+      "item": "92",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131331"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "dürfen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131332]**Evaluation** \nTo evaluate questions completed on a PC (page 11), click the “evaluate” button and your result in points appears in the display. \n  \n**Taking the paper test** \nPut a cross against the correct letter on the answer sheet (page 14), or write in the correct word. \n Examples \n \n  \n91. Das ist ____ Kind. \na) ein b) eine c) einen  \n  \n92. Hier ____ Sie nicht spielen. Es ist verboten. \n                         \nAnswer \n91. a b c   \n92. dürfen  \n                         \n**Evaluation** \nEvaluate your results using the answer sheet (page 12), and then count the number of points you have achieved. \nUse the scale to see what level best suits you. \n \n \n\nFR Instructions",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Evaluation** \nTo evaluate questions completed on a PC (page 11), click the “evaluate” button and your result in points appears in the display. \n  \n**Taking the paper test** \nPut a cross against the correct letter on the answer sheet (page 14), or write in the correct word. \n Examples \n \n  \n91. Das ist ____ Kind. \na) ein b) eine c) einen  \n  \n92. Hier ____ Sie nicht spielen. Es ist verboten. \n                         \nAnswer \n91. a b c   \n92. dürfen  \n                         \n**Evaluation** \nEvaluate your results using the answer sheet (page 12), and then count the number of points you have achieved. \nUse the scale to see what level best suits you. \n \n \n\nFR Instructions",
+      "id": [
+        "131332"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:131333]**Test d’allemand \nNiveau A1 du CECR, Cadre européen de référence pour les langues \n  \nConsignes** \n• Faites le test d’une seule traite. \n• La durée du test, prévue pour 30 questions, est de 30 minutes, au maximum. \n• Résolvez seul/e les exercices proposés. \n• N’utilisez ni dictionnaire ,ni grammaire. \n• Si vous ne pouvez pas répondre à l’une des questions, passez à la suivante. \n• N’essayez pas de deviner la réponse, cela fausserait le résultat. \n• Dès que les exercices s’avèrent trop difficiles pour vous, arrêtez-vous et comptez les \npoints totalisés, puis comparez score obtenu et solutions. \n  \n**Test: version électronique** \nSi vous faites le test en ligne, cliquez, parmi les réponses proposées, sur la case de votre choix ou écrivez votre réponse dans la zone de texte. Tenez soigneusement compte des majuscules et des minuscules. Pour résoudre le test sans problème, utilisez uniquement le système Adobe Acrobat Reader (à partir de la version 6.0). Pour remplir les cases-réponses et commencer l’évaluation, l’outil   devra être actif. Avec le zoom   vous pouvez agrandir le contenu du test. \n \n  \nExemples",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Test d’allemand \nNiveau A1 du CECR, Cadre européen de référence pour les langues \n  \nConsignes** \n• Faites le test d’une seule traite. \n• La durée du test, prévue pour 30 questions, est de 30 minutes, au maximum. \n• Résolvez seul/e les exercices proposés. \n• N’utilisez ni dictionnaire ,ni grammaire. \n• Si vous ne pouvez pas répondre à l’une des questions, passez à la suivante. \n• N’essayez pas de deviner la réponse, cela fausserait le résultat. \n• Dès que les exercices s’avèrent trop difficiles pour vous, arrêtez-vous et comptez les \npoints totalisés, puis comparez score obtenu et solutions. \n  \n**Test: version électronique** \nSi vous faites le test en ligne, cliquez, parmi les réponses proposées, sur la case de votre choix ou écrivez votre réponse dans la zone de texte. Tenez soigneusement compte des majuscules et des minuscules. Pour résoudre le test sans problème, utilisez uniquement le système Adobe Acrobat Reader (à partir de la version 6.0). Pour remplir les cases-réponses et commencer l’évaluation, l’outil   devra être actif. Avec le zoom   vous pouvez agrandir le contenu du test. \n \n  \nExemples",
+      "id": [
+        "131333"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131334][%91] Das ist ___ Kind.]\n[+a) ein][@example] [-b) eine] [-c) einen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "91",
+      "instruction": "",
+      "body": "Das ist ___ Kind.]",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) ein",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) eine",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) einen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131334"
+      ]
+    },
+    "example": "",
+    "errors": [
+      {
+        "message": "Unexpected input ']'",
+        "line": 2,
+        "column": 35,
+        "errorLine": "[@id:131334][%91] Das ist ___ Kind.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.cloze]\n[@id:131335]92. Hier [_dürfen][@example]Sie nicht spielen. Es ist verboten.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "92. Hier {0}Sie nicht spielen. Es ist verboten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131335"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "dürfen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131336]**Évaluation en ligne** \nEn un clic, vous pouvez évaluer vos réponses (cf. p.11). \nCliquez sur le bouton «Évaluation » et le nombre de points totalisés vous apparaîtra. \n  \n  \n**Test: version papier** \nCochez la lettre de votre choix sur la feuille-réponse (cf. p.14) ou écrivez le mot, selon vous, adéquat. \n \n Exemples \n \n91. Das ist ____ Kind. \na) ein b) eine c) einen  \n  \n92. Hier ____ Sie nicht spielen. Es ist verboten. \n                         \nRéponse \n91. a b c   \n92. dürfen  \n                         \n**Évaluation** \nPour les exercices résolus en version papier, évaluez vos réponses à l’aide de la grille des solutions (cf. p.12) et enfin, totalisez les points obtenus. \nÀ l’aide du barème proposé, vous pourrez évaluer vous-même votre niveau. \n \n \n \n \nES Instructions",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Évaluation en ligne** \nEn un clic, vous pouvez évaluer vos réponses (cf. p.11). \nCliquez sur le bouton «Évaluation » et le nombre de points totalisés vous apparaîtra. \n  \n  \n**Test: version papier** \nCochez la lettre de votre choix sur la feuille-réponse (cf. p.14) ou écrivez le mot, selon vous, adéquat. \n \n Exemples \n \n91. Das ist ____ Kind. \na) ein b) eine c) einen  \n  \n92. Hier ____ Sie nicht spielen. Es ist verboten. \n                         \nRéponse \n91. a b c   \n92. dürfen  \n                         \n**Évaluation** \nPour les exercices résolus en version papier, évaluez vos réponses à l’aide de la grille des solutions (cf. p.12) et enfin, totalisez les points obtenus. \nÀ l’aide du barème proposé, vous pourrez évaluer vous-même votre niveau. \n \n \n \n \nES Instructions",
+      "id": [
+        "131336"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:131337]**Test de alemán \nNivel de Ger A1 del Marco de Referencia europeo \n  \nInstrucciones** \n• Trabaje el test sin interrupción. \n• El tiempo para responder a 30 preguntas es de 30 minutos. \n• Responda a las preguntas sin ninguna otra ayuda. \n• No utilice ni diccionarios ni gramáticas. \n• Si no puede responder a una de las preguntas, la deje en blanco. Adivinarla \nalteraría el resultado final. \n• Cuando las preguntas se le hagan muy difíciles, no continúe y cuente el número \nde puntos obtenidos hasta ahí. Lo compruebe con la clave de soluciones. \n  \n**Test con el ordenador** \nSi usted hace el test de nivel con el ordenador, pulse la casilla correcta en las soluciones o escriba la respuesta correcta en el espacio para responder. Por favor, tenga en cuenta mayúsculas y minúsculas. Para poder hacer el test sin problemas, utilice solamente el programa de Adobe Acrobat Reader ( mínimo versión 6.0) para escribir en las casillas de las respuestas y poder ver el resultado de la evaluación tiene que estar activa la mano . Con el símbolo de la lupa   se puede escalar en el contenido del test. \n \n  \nEjemplo",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Test de alemán \nNivel de Ger A1 del Marco de Referencia europeo \n  \nInstrucciones** \n• Trabaje el test sin interrupción. \n• El tiempo para responder a 30 preguntas es de 30 minutos. \n• Responda a las preguntas sin ninguna otra ayuda. \n• No utilice ni diccionarios ni gramáticas. \n• Si no puede responder a una de las preguntas, la deje en blanco. Adivinarla \nalteraría el resultado final. \n• Cuando las preguntas se le hagan muy difíciles, no continúe y cuente el número \nde puntos obtenidos hasta ahí. Lo compruebe con la clave de soluciones. \n  \n**Test con el ordenador** \nSi usted hace el test de nivel con el ordenador, pulse la casilla correcta en las soluciones o escriba la respuesta correcta en el espacio para responder. Por favor, tenga en cuenta mayúsculas y minúsculas. Para poder hacer el test sin problemas, utilice solamente el programa de Adobe Acrobat Reader ( mínimo versión 6.0) para escribir en las casillas de las respuestas y poder ver el resultado de la evaluación tiene que estar activa la mano . Con el símbolo de la lupa   se puede escalar en el contenido del test. \n \n  \nEjemplo",
+      "id": [
+        "131337"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131338][!91. Das ist ___ Kind.]\n[+a) ein][@example] [-b) eine] [-c) einen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "91. Das ist ___ Kind.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) ein",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) eine",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) einen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131338"
+      ]
+    },
+    "example": ""
+  },
+  {
+    "bitmark": "[.cloze]\n[@id:131339]92. Hier [_dürfen][@example]Sie nicht spielen. Es ist verboten.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "92. Hier {0}Sie nicht spielen. Es ist verboten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131339"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "dürfen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131340]**Evaluación** \nLas soluciones hechas con el ordenador se pueden evaluar haciendo clik (página 11) en la casilla de evaluación “Auswertung”y aparecerá una indicación con el número de puntos alcanzados. \n  \n  \n**Test por escrito.** \nPonga una “x” en la casilla con la respuesta correcta en la hoja de respuestas (página 14) o escriba la palabara correcta en el epacio correspondiente. \n  \nEjemplo \n  \n91. Das ist ____ Kind. \na) ein b) eine c) einen  \n  \n92. Hier ____ Sie nicht spielen. Es ist verboten. \n                         \nRespuesta \n91. a b c   \n92. dürfen  \n                         \n**Evaluación** \nEn el test por escrito las soluciones se ven en la hoja de soluciones ( página 12) y se cuentan a continuación los puntos conseguidos. \nDependiendo de los puntos conseguidos determina usted mismo el nivel más adecuado para usted.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Evaluación** \nLas soluciones hechas con el ordenador se pueden evaluar haciendo clik (página 11) en la casilla de evaluación “Auswertung”y aparecerá una indicación con el número de puntos alcanzados. \n  \n  \n**Test por escrito.** \nPonga una “x” en la casilla con la respuesta correcta en la hoja de respuestas (página 14) o escriba la palabara correcta en el epacio correspondiente. \n  \nEjemplo \n  \n91. Das ist ____ Kind. \na) ein b) eine c) einen  \n  \n92. Hier ____ Sie nicht spielen. Es ist verboten. \n                         \nRespuesta \n91. a b c   \n92. dürfen  \n                         \n**Evaluación** \nEn el test por escrito las soluciones se ven en la hoja de soluciones ( página 12) y se cuentan a continuación los puntos conseguidos. \nDependiendo de los puntos conseguidos determina usted mismo el nivel más adecuado para usted.",
+      "id": [
+        "131340"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131341][%1]\n[!Mein Name ___ Maria Lopez.]\n[+a) ist]\n[-b) heisst]\n[-c) hat]\n[-d) bin]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "1",
+      "instruction": "Mein Name ___ Maria Lopez.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) ist",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) heisst",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) hat",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) bin",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131341"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131342][%2]\n[!Woher ___ du?]\n[-a) arbeitest]\n[-b) wohnst]\n[-c) ist]\n[+d) kommst]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "2",
+      "instruction": "Woher ___ du?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) arbeitest",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) wohnst",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) ist",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) kommst",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131342"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131343][%3]\n[!Ich ___ aus Brasilien.]\n[-a) spreche]\n[-b) lebe]\n[+c) komme ]\n[-d) wohne]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "3",
+      "instruction": "Ich ___ aus Brasilien.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) spreche",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) lebe",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) komme",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) wohne",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131343"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131344][%4]\n[!Wo ___ Maria?] [+a) arbeitet]\n[-b) arbeiten] [-c) arbeitest] [-d) Arbeit]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "4",
+      "instruction": "Wo ___ Maria?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) arbeitet",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) arbeiten",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) arbeitest",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) Arbeit",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131344"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131345][%5]\n[!Herr Cimildoro ___ in der Schweiz.] [-a) wohnst]\n[-b) Wohnung] [-c) wohnen] [+d) wohnt]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "5",
+      "instruction": "Herr Cimildoro ___ in der Schweiz.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) wohnst",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Wohnung",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) wohnen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) wohnt",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131345"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131346][%6]\n[!Er ___ nach Italien.] [+a) fährt]\n[-b) fahre] [-c) fahrt] [-d) fahren]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "6",
+      "instruction": "Er ___ nach Italien.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) fährt",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) fahre",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) fahrt",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) fahren",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131346"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131347][%7]\n[!Er ___ Ferien.] [-a) hast]\n[-b) haben] [+c) hat]\n[-d) habt]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "7",
+      "instruction": "Er ___ Ferien.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) hast",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) haben",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) hat",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) habt",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131347"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131348][%8]\n[!Wir ___ in Zürich.] [-a) ist]\n[+b) sind] [-c) sein] [-d) seid]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "8",
+      "instruction": "Wir ___ in Zürich.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) ist",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) sind",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) sein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) seid",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131348"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--&image]\n[@id:131349][%9]\n[!Es ist ___ .] [-a) halb vier]\n[-b) Viertel nach vier] [+c) Viertel vor vier]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-9.png]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "9",
+      "instruction": "Es ist ___ .",
+      "body": "[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-9.png]",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) halb vier",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Viertel nach vier",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Viertel vor vier",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131349"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[&image'",
+        "line": 5,
+        "column": 0,
+        "errorLine": "[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-9.png]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--&image]\n[@id:131350][%10]\n[!Es ist ___ .]\n[+a) zehn nach eins]\n[-b) zehn vor eins] [-c) eins und zehn]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-10.png]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "10",
+      "instruction": "Es ist ___ .",
+      "body": "[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-10.png]",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) zehn nach eins",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) zehn vor eins",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) eins und zehn",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131350"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[&image'",
+        "line": 6,
+        "column": 0,
+        "errorLine": "[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-10.png]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131351][%11]\n[!Fr. 37.–]\n[+a) siebenunddreissig Franken] [-b) dreissigundsieben Franken] [-c) dreiundsiebzig Franken]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "11",
+      "instruction": "Fr. 37.–",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) siebenunddreissig Franken",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) dreissigundsieben Franken",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) dreiundsiebzig Franken",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131351"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131352][%12]\n[!Fr. 28.–]\n[-a) zweiundachtzig Franken] [+b) achtundzwanzig Franken] [-c) zwanzigachtzig Franken]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "12",
+      "instruction": "Fr. 28.–",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) zweiundachtzig Franken",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) achtundzwanzig Franken",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) zwanzigachtzig Franken",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131352"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131353][%13]\n[!Ich möchte ___ Kaffee.] [-a) einem]\n[-b) eine] [+c) einen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "13",
+      "instruction": "Ich möchte ___ Kaffee.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) einem",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) eine",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) einen",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131353"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131354][%14]\n[!Der Kaffee ist ___ gut.] [+a) nicht]\n[-b) kein] [-c) nichts]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "14",
+      "instruction": "Der Kaffee ist ___ gut.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) nicht",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) kein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) nichts",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131354"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131355][%15]\n[!Was ist richtig?]\n[-a) Ich eine Pizza nehme.] [+b) Ich nehme eine Pizza.] [-c) Ich eine Pizza möchte.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "15",
+      "instruction": "Was ist richtig?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) Ich eine Pizza nehme.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Ich nehme eine Pizza.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Ich eine Pizza möchte.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131355"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131356][%16]\n[!Was ist richtig?]\n[+a) Ich möchte bezahlen, bitte.] [-b) Ich bezahlen möchte, bitte.] [-c) Ich bitte möchte bezahlen.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "16",
+      "instruction": "Was ist richtig?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) Ich möchte bezahlen, bitte.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Ich bezahlen möchte, bitte.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Ich bitte möchte bezahlen.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131356"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze&image]\n[@id:131357][!Wie heisst das?]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-17.1.png]\n[_die Uhr][@example]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131357"
+      ],
+      "instruction": "Wie heisst das?",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-17.1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "die Uhr"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze&image]\n[@id:131358][%17]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-17.png]\n[_das Buch][_die Zeitung]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0}",
+      "item": "17",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131358"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-17.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "das Buch",
+            "die Zeitung"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze&image]\n[@id:131359][%18]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-18.png]\n[_die Brille][_die Sonnenbrille]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0}",
+      "item": "18",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131359"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-18.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "die Brille",
+            "die Sonnenbrille"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze&image]\n[@id:131360][%19]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-19.png]\n[_der Schirm][_der Regenschirm]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0}",
+      "item": "19",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131360"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-19.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "der Schirm",
+            "der Regenschirm"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze]\n[@id:131361][%20-22]\n[!ein oder eine, kein oder keine?]\n20.  \ndie Handtasche       eine Handtasche \ndas Telefon          [_ein]Telefon \n21. \nder Rucksack         kein Rucksack \ndie Banane.          [_]Bananen\n22.\ndie Uhr.             keine Uhr\nder Schwan           [_]Schwan",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "20.  \ndie Handtasche       eine Handtasche \ndas Telefon          {0}Telefon \n21. \nder Rucksack         kein Rucksack \ndie Banane.          {1}Bananen\n22.\ndie Uhr.             keine Uhr\nder Schwan           {2}Schwan",
+      "item": "20-22",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131361"
+      ],
+      "instruction": "ein oder eine, kein oder keine?",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ein"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze]\n[@id:131362][%23-29]\n[!Ordnen Sie a), b) ... der Zahl 23, 24 ... zu.]\n23. Wie heissen Sie?[_f]\n24. Wo wohnen Sie? [_a]\n25.Woher kommst du?[_e]\n26. Wann bist du geboren?[_d]\n27. Ich bin ledig.[_g]\n28. Was machen Sie?[_b]\n29. Bitte unterschreiben Sie.[_c]\n  \na) Wohnort \nb) Beruf \nc) Unterschrift  \nd) Geburtsdatum  \ne) Herkunftsland  \nf) Name \ng) Zivilstand",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "23. Wie heissen Sie?{0}\n24. Wo wohnen Sie? {1}\n25.Woher kommst du?{2}\n26. Wann bist du geboren?{3}\n27. Ich bin ledig.{4}\n28. Was machen Sie?{5}\n29. Bitte unterschreiben Sie.{6}\n  \na) Wohnort \nb) Beruf \nc) Unterschrift  \nd) Geburtsdatum  \ne) Herkunftsland  \nf) Name \ng) Zivilstand",
+      "item": "23-29",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131362"
+      ],
+      "instruction": "Ordnen Sie a), b) ... der Zahl 23, 24 ... zu.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "f"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "d"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "g"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "b"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "c"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131363][%30]\n[!Pamela ___ heute viel Arbeit. ]\n[-a) habe]\n[-b) ist ]\n[+c) hat]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "30",
+      "instruction": "Pamela ___ heute viel Arbeit.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) habe",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) ist",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) hat",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131363"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131364][%31]\n[!Maria ___ gestern Abend zu Hause.] [+a) war]\n[-b) sein]\n[-c) gewesen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "31",
+      "instruction": "Maria ___ gestern Abend zu Hause.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) war",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) sein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) gewesen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131364"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131365][%32]\n[!Sie kauft ___] [-a) Pizza aus.]\n[+b) Pizza und Wein ein.] [-c) Pizza essen.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "32",
+      "instruction": "Sie kauft ___",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) Pizza aus.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Pizza und Wein ein.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Pizza essen.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131365"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131366][%33]\n[!Sie ___ den Abfall weg.] [-a) trinkt]\n[+b) trägt] [-c) tragen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "33",
+      "instruction": "Sie ___ den Abfall weg.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) trinkt",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) trägt",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) tragen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131366"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze&image]\n[@id:131367][! Was passt??]\n[%34]\n[_Abfall wegtragen]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-34.png]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0}",
+      "item": "34",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131367"
+      ],
+      "instruction": "Was passt??",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Abfall wegtragen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-34.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze&image]\n[@id:131368][! Was passt??]\n[%35]\n[_einkaufen]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-35.png]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0}",
+      "item": "35",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131368"
+      ],
+      "instruction": "Was passt??",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "einkaufen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-35.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze&image]\n[@id:131369][! Was passt??]\n[%36]\n[_abwaschen]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-36.png]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0}",
+      "item": "36",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131369"
+      ],
+      "instruction": "Was passt??",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "abwaschen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-36.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131370][%37]\n[!Sie ___ spät ein.] [+a) schläft]\n[-b) wäscht] [-c) deckt]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "37",
+      "instruction": "Sie ___ spät ein.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) schläft",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) wäscht",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) deckt",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131370"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131371][%38]\n[!Was ist richtig?]\n[+a) Herr Rossi kauft im Coop ein.] [-b) Herr Rossi einkaufe im Coop.] [-c) Herr Rossi im Coop einkauft.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "38",
+      "instruction": "Was ist richtig?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) Herr Rossi kauft im Coop ein.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Herr Rossi einkaufe im Coop.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Herr Rossi im Coop einkauft.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131371"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze-solution-grouped&image]\n[@id:131372][%39-41]\n[!Welches Modalverb passt?]\n39. Hier [_kann] man Bücher lesen. \n40. Hier [_muss] man leise sprechen. \n41. Hier [_darf]  man nicht rauchen. \n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-39.png]",
+    "bit": {
+      "type": "cloze-solution-grouped",
+      "format": "bitmark--",
+      "body": "39. Hier {0} man Bücher lesen. \n40. Hier {1} man leise sprechen. \n41. Hier {2}  man nicht rauchen.",
+      "item": "39-41",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131372"
+      ],
+      "instruction": "Welches Modalverb passt?",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "kann"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "muss"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "darf"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-39.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.true-false:bitmark--]\n[@id:131373][%42-48]\n[!Lesen Sie den Text \nStimmt der Satz?]\nAnna Meier kommt aus Bern. Sie lebt jetzt in Zürich. Ihr Mann arbeitet hier bei einer Bank. Anna ist verheiratet und hat drei kleine Kinder. Anna ist 36 Jahre alt und von Beruf Krankenschwester. Aber sie ist jetzt Hausfrau. Ihr Hobby ist Musik. \n===\n[-42. Anna Meier wohnt in Bern.]\n===\n[-43. Ihr Vorname ist Meier.]\n===\n[+44. Herr Meier arbeitet in Zürich.]\n===\n[+45. Ihre Kinder sind noch nicht gross.]\n===\n[-46. Anna hat 36 Jahre lang als Krankenschwester gearbeitet.]\n===\n[-47. Ihr Hobby ist Hausfrau.]\n===\n[-48. Sie verdient mit Musik Geld]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "42-48",
+      "lead": "",
+      "instruction": "Lesen Sie den Text \nStimmt der Satz?",
+      "hint": "",
+      "labelTrue": "",
+      "labelFalse": "",
+      "statements": [
+        {
+          "statement": "42. Anna Meier wohnt in Bern.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "43. Ihr Vorname ist Meier.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "44. Herr Meier arbeitet in Zürich.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "45. Ihre Kinder sind noch nicht gross.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "46. Anna hat 36 Jahre lang als Krankenschwester gearbeitet.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "47. Ihr Hobby ist Hausfrau.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "48. Sie verdient mit Musik Geld",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": "Anna Meier kommt aus Bern. Sie lebt jetzt in Zürich. Ihr Mann arbeitet hier bei einer Bank. Anna ist verheiratet und hat drei kleine Kinder. Anna ist 36 Jahre alt und von Beruf Krankenschwester. Aber sie ist jetzt Hausfrau. Ihr Hobby ist Musik.",
+      "id": [
+        "131373"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131374][%49]\n[!Was ist richtig?]\n[-a) Er heute Fisch kaufen möchte.] [+b) Er möchte heute Fisch kaufen.] [-c) Er heute möchte kauft Fisch.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "49",
+      "instruction": "Was ist richtig?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) Er heute Fisch kaufen möchte.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Er möchte heute Fisch kaufen.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Er heute möchte kauft Fisch.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131374"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze&image]\n[@id:131375][!Was haben diese Leute?]\n[%50]\n[_Bauchschmerzen]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-50.png]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0}",
+      "item": "50",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131375"
+      ],
+      "instruction": "Was haben diese Leute?",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Bauchschmerzen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-50.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze&image]\n[@id:131376][%51]\n[_Schnupfen]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-51.png]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0}",
+      "item": "51",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131376"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Schnupfen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-51.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze&image]\n[@id:131377][%52]\n[_Fieber]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-52.png]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0}",
+      "item": "52",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131377"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Fieber"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-52.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze&image]\n[@id:131378][%53-55]\n[!Singular/Plural]\n53.eine [_Hand] – zwei Hände \n54. ein Auge – zwei [_Augen]\n55. ein [_Ohr] – zwei Ohren \n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-53.png]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "53.eine {0} – zwei Hände \n54. ein Auge – zwei {1}\n55. ein {2} – zwei Ohren",
+      "item": "53-55",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131378"
+      ],
+      "instruction": "Singular/Plural",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Hand"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Augen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Ohr"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-53.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--&image]\n[@id:131379][%56]\n[!Hier ..... man stoppen.] [+a) muss]\n[-b) kann] [-c) darf]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-56.png]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "56",
+      "instruction": "Hier ..... man stoppen.",
+      "body": "[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-56.png]",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) muss",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) kann",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) darf",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131379"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[&image'",
+        "line": 5,
+        "column": 0,
+        "errorLine": "[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-56.png]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--&image]\n[@id:131380][%57]\n[!Hier ____ man nicht Velo fahren.]\n[-a) muss]\n[-b) will] [+c) darf]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-57.png]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "57",
+      "instruction": "Hier ____ man nicht Velo fahren.",
+      "body": "[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-57.png]",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) muss",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) will",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) darf",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131380"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[&image'",
+        "line": 6,
+        "column": 0,
+        "errorLine": "[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-57.png]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--&image]\n[@id:131381]58. Hier ____ man telefonieren. [-a) muss]\n[+b) kann] [-c) darf]\n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-58.png]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "58. Hier ____ man telefonieren. \n \n[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-58.png]",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) muss",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) kann",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) darf",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131381"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[&image'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[&image:https://docs.bitbook.education/bit-books/eb-zuerich/einstufungstest-a1/web-resources/images/et-a1-58.png]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.cloze]\n[@id:131382][%59-60]\n[!Wie heisst die richtige Form?]\nBeispiel: klein – kleiner – am kleinsten \n59. [_lang] – länger – am längsten  \n60. gut – [_besser] – am besten",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Beispiel: klein – kleiner – am kleinsten \n59. {0} – länger – am längsten  \n60. gut – {1} – am besten",
+      "item": "59-60",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131382"
+      ],
+      "instruction": "Wie heisst die richtige Form?",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "lang"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "besser"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131383][%61]\n[!Es ist Sonntag. Frau Aybek möchte Blumen kaufen. Sie geht zum Bahnhof. Frau Aybek findet es gut, ___]\n[+a) dass man hier immer Blumen kaufen kann.]\n[-b) man hier immer Blumen kaufen kann.]\n[-c) dass man kann hier immer Blumen kaufen.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "61",
+      "instruction": "Es ist Sonntag. Frau Aybek möchte Blumen kaufen. Sie geht zum Bahnhof. Frau Aybek findet es gut, ___",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) dass man hier immer Blumen kaufen kann.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) man hier immer Blumen kaufen kann.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) dass man kann hier immer Blumen kaufen.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131383"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131384][%62]\n[!Er heisst Antonio._________ Bruder lebt in Paris]\n[-a) Ihre]\n[+b) Sein]\n[-c) Ihr]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "62",
+      "instruction": "Er heisst Antonio._________ Bruder lebt in Paris",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) Ihre",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Sein",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Ihr",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131384"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131385][%63]\n[!Frau Aybek besucht ___ Schwester.]\n[+a) ihre]\n[-b) seine] [-c) ihr]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "63",
+      "instruction": "Frau Aybek besucht ___ Schwester.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) ihre",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) seine",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) ihr",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131385"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false:bitmark--]\n[@id:131386][%64-69]\n[!Lesen Sie den Text.]\nCarlo Rossi wohnt in Zürich und arbeitet in Regensdorf. Von Zürich nach Regensdorf sind es 15 km. Diesen Arbeitsweg muss Carlo am Morgen und am Abend machen: Er ist ein Pendler. Carlo ist früher mit dem Bus zur Arbeit gefahren. Er hat so 35 Minuten für einen Arbeitsweg gebraucht, täglich also 70 Minuten. «Das war mir zu lange», sagt er. \nCarlo hat dann ein Auto gemietet. Aber mit dem Auto war Carlo nicht schneller. «Es gibt hier sehr viele Pendler. Am Morgen und am Abend sind zu viele Autos auf der Strasse. Da muss man so viel warten», erzählt er. Das Pendeln mit dem Auto war auch teuer: Carlo hat einen Parkplatz in Zürich gemietet. Die Miete für den Parkplatz hat mehr als ein Bus- Abonnement gekostet! Jetzt hat Carlo ein Motorrad gekauft. Er ist so in nur fünfzehn Minuten am Arbeitsplatz. Mit dem Motorrad ist er also am schnellsten. «Wenn es regnet, nehme ich aber lieber den Bus», sagt Carlo. \nStimmt der Satz? \n===\n[+64. Ein Pendler ist jemand, der einen langen Arbeitsweg hat.]\n===\n[+65. Carlo fährt jeden Tag nach Regensdorf und zurück.]\n===\n[-66. Er fährt nicht mehr mit dem Bus, weil der Bus zu teuer ist.]\n===\n[+67. Carlo hat sein Auto nicht gekauft, er hat es nur gemietet.]\n===\n[-68. Mit dem Auto ist Carlo am schnellsten am Arbeitsplatz.]\n===\n[+69. Carlo fährt jetzt meistens mit dem Motorrad zur Arbeit.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "64-69",
+      "lead": "",
+      "instruction": "Lesen Sie den Text.",
+      "hint": "",
+      "labelTrue": "",
+      "labelFalse": "",
+      "statements": [
+        {
+          "statement": "64. Ein Pendler ist jemand, der einen langen Arbeitsweg hat.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "65. Carlo fährt jeden Tag nach Regensdorf und zurück.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "66. Er fährt nicht mehr mit dem Bus, weil der Bus zu teuer ist.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "67. Carlo hat sein Auto nicht gekauft, er hat es nur gemietet.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "68. Mit dem Auto ist Carlo am schnellsten am Arbeitsplatz.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "69. Carlo fährt jetzt meistens mit dem Motorrad zur Arbeit.",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "Carlo Rossi wohnt in Zürich und arbeitet in Regensdorf. Von Zürich nach Regensdorf sind es 15 km. Diesen Arbeitsweg muss Carlo am Morgen und am Abend machen: Er ist ein Pendler. Carlo ist früher mit dem Bus zur Arbeit gefahren. Er hat so 35 Minuten für einen Arbeitsweg gebraucht, täglich also 70 Minuten. «Das war mir zu lange», sagt er. \nCarlo hat dann ein Auto gemietet. Aber mit dem Auto war Carlo nicht schneller. «Es gibt hier sehr viele Pendler. Am Morgen und am Abend sind zu viele Autos auf der Strasse. Da muss man so viel warten», erzählt er. Das Pendeln mit dem Auto war auch teuer: Carlo hat einen Parkplatz in Zürich gemietet. Die Miete für den Parkplatz hat mehr als ein Bus- Abonnement gekostet! Jetzt hat Carlo ein Motorrad gekauft. Er ist so in nur fünfzehn Minuten am Arbeitsplatz. Mit dem Motorrad ist er also am schnellsten. «Wenn es regnet, nehme ich aber lieber den Bus», sagt Carlo. \nStimmt der Satz?",
+      "id": [
+        "131386"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze-solution-grouped]\n[@id:131387][%70-77]\n[!Ergänzen Sie die Fragen 70.–77. mit den richtigen Fragepronomen (Wiederholungen möglich). ]\n70. «[_was] hast du da?» «Einen Kugelschreiber» \n71. [_wo] fährt der Zug ab?» «Auf Gleis zwei.» \n72. [_wie lange] haben Sie dort Aufenthalt?» «Zwei Stunden.» \n73. [_wie lange] wollen Sie dort bleiben?» «Nur drei Tage.» \n74. [_wohin] fahren Sie?» «Nach Bern.» \n75. [_wann] kommt er in Zürich an?» «Um 12.32 Uhr.» \n76. [_warum] fahren Sie nach Basel?» «Weil ich dort arbeite.» \n77. [_wann] kommen Sie zurück?» «In drei Tagen.»",
+    "bit": {
+      "type": "cloze-solution-grouped",
+      "format": "bitmark--",
+      "body": "70. «{0} hast du da?» «Einen Kugelschreiber» \n71. {1} fährt der Zug ab?» «Auf Gleis zwei.» \n72. {2} haben Sie dort Aufenthalt?» «Zwei Stunden.» \n73. {3} wollen Sie dort bleiben?» «Nur drei Tage.» \n74. {4} fahren Sie?» «Nach Bern.» \n75. {5} kommt er in Zürich an?» «Um 12.32 Uhr.» \n76. {6} fahren Sie nach Basel?» «Weil ich dort arbeite.» \n77. {7} kommen Sie zurück?» «In drei Tagen.»",
+      "item": "70-77",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131387"
+      ],
+      "instruction": "Ergänzen Sie die Fragen 70.–77. mit den richtigen Fragepronomen (Wiederholungen möglich).",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "was"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wo"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wie lange"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wie lange"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wohin"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wann"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "warum"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wann"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131388][%78]\n[!Herr Stone arbeitet ________ Informatiker.] [+a) als]\n[-b) wie]\n[-c) mit]\n[-d) in]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "78",
+      "instruction": "Herr Stone arbeitet ________ Informatiker.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) als",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) wie",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) mit",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) in",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131388"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131389][%79]\n[!Er hat ___ schon drei Jahre nicht mehr geschrieben.]\n[-a) unser] [+b) uns] [-c) dich] [-d) deine]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "79",
+      "instruction": "Er hat ___ schon drei Jahre nicht mehr geschrieben.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) unser",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) uns",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) dich",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) deine",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131389"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131390][%80]\n[!Ist das ___ Kugelschreiber, Nina? Ja, das ist meiner.]\n[+a) dein]\n[-b) mein]\n[-c) du]\n[-d) deiner]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "80",
+      "instruction": "Ist das ___ Kugelschreiber, Nina? Ja, das ist meiner.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) dein",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) mein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) du",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) deiner",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131390"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131391][%81]\n[!Heute ist dein Geburtstag. Ich gratuliere ___ ganz herzlich!]\n[-a) dich]\n[-b) damit]\n[+c) dir] [-d) das]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "81",
+      "instruction": "Heute ist dein Geburtstag. Ich gratuliere ___ ganz herzlich!",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) dich",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) damit",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) dir",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) das",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131391"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131392][%82]\n[!Sergio hat Geburtstag, was schenken wir ___?]\n[+a) ihm]\n[-b) ihn]\n[-c) er] [-d) ihr]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "82",
+      "instruction": "Sergio hat Geburtstag, was schenken wir ___?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) ihm",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) ihn",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) er",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) ihr",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131392"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131393][%83]\n[!Ich bin hier ____ Schule gegangen.] [-a) in]\n[+b) zur] [-c) nach] [-d) von]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "83",
+      "instruction": "Ich bin hier ____ Schule gegangen.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) in",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) zur",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) nach",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) von",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131393"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131394][%84]\n[!Kann ich bitte ___ dem Chef sprechen?] [-a) über]\n[-b) für]\n[-c) an]\n[+d) mit]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "84",
+      "instruction": "Kann ich bitte ___ dem Chef sprechen?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) über",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) für",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) an",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) mit",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131394"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131395][%85]\n[!Hilf ___ doch mal bitte mit dem Koffer, er ist furchtbar schwer.]\n[-a) du]\n[+b) mir]\n[-c) mich] [-d) dir]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "85",
+      "instruction": "Hilf ___ doch mal bitte mit dem Koffer, er ist furchtbar schwer.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) du",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) mir",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) mich",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) dir",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131395"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131396][%86]\n[!Hast du Frau Meier mal gesehen? Ja, ich habe ___ erst gestern getroffen.]\n[-a) ihn]\n[+b) sie]\n[-c) mich] [-d) Ihnen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "86",
+      "instruction": "Hast du Frau Meier mal gesehen? Ja, ich habe ___ erst gestern getroffen.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) ihn",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) sie",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) mich",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) Ihnen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131396"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131397][%87]\n[!Sind Sie am Samstag ins Theater gegangen? ___, leider hatte ich keine Zeit.]\n[-a) Ja]\n[-b) Doch]\n[-c) Nicht]\n[+d) Nein]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "87",
+      "instruction": "Sind Sie am Samstag ins Theater gegangen? ___, leider hatte ich keine Zeit.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) Ja",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Doch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Nicht",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) Nein",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131397"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131398][%88]\n[!Hat Ihnen der Film denn nicht gefallen? ___, er hat mir sehr gefallen.]\n[-a) Ja]\n[+b) Doch]\n[-c) Nein] [-d) Nicht]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "88",
+      "instruction": "Hat Ihnen der Film denn nicht gefallen? ___, er hat mir sehr gefallen.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) Ja",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Doch",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Nein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) Nicht",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131398"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131399][%89]\n[!Waren Sie schon einmal in Genf? ___, vor etwa zwei Monaten war ich dort.]\n[-a) Nicht]\n[-b) Doch] [-c) Nein] [+d) Ja]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "89",
+      "instruction": "Waren Sie schon einmal in Genf? ___, vor etwa zwei Monaten war ich dort.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) Nicht",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Doch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Nein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) Ja",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131399"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:131400][%90]\nLesen Sie den Brief. \nLiebe Nachbarinnen und Nachbarn und \nMorgen habe ich Geburtstag. Das möchte ich gern mit meinen Freunden feiern. Deshalb wird es vielleicht bei uns ein bisschen lauter zugehen als normalerweise. Bitte entschuldigen Sie auch, wenn das Fest bis nach Mitternacht geht. Es kommt bestimmt nicht oft vor. \nViele Grüsse \nPetra Müller \n[!Welcher Satz stimmt?]\n[-a) Petra hat nicht oft Geburtstag.]\n[-b) Petra plant eine Party und entschuldigt sich bei ihren Gästen.] [-c) Petra feiert Geburtstag und die Nachbarinnen kommen auch.] [+d) Petra feiert ein bisschen länger als normalerweise.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "90",
+      "instruction": "Welcher Satz stimmt?",
+      "body": "Lesen Sie den Brief. \nLiebe Nachbarinnen und Nachbarn und \nMorgen habe ich Geburtstag. Das möchte ich gern mit meinen Freunden feiern. Deshalb wird es vielleicht bei uns ein bisschen lauter zugehen als normalerweise. Bitte entschuldigen Sie auch, wenn das Fest bis nach Mitternacht geht. Es kommt bestimmt nicht oft vor. \nViele Grüsse \nPetra Müller",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) Petra hat nicht oft Geburtstag.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Petra plant eine Party und entschuldigt sich bei ihren Gästen.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Petra feiert Geburtstag und die Nachbarinnen kommen auch.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) Petra feiert ein bisschen länger als normalerweise.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131400"
+      ]
+    }
+  }
+]

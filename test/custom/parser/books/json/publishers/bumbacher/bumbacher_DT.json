@@ -1,0 +1,148 @@
+[
+  {
+    "bitmark": "[.book]\r\n[@id:191142]\r\n[@language:de]\r\n[@coverImage:https://docs.bitmark.cloud/bit-books/bumbacher/primepool_cover2.png]\r\n[#DT Workshop]\r\n[@externalId:e-dt_czfr8ozrfzbg]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191142"
+      ],
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/bumbacher/primepool_cover2.png"
+      ],
+      "title": "DT Workshop",
+      "externalId": [
+        "e-dt_czfr8ozrfzbg"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:191143]\r\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_dT_workshop/web-resources/images/bumbacher_dT_workshop_1.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "191143"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_dT_workshop/web-resources/images/bumbacher_dT_workshop_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.preparation-note]\r\n[@id:191144]\r\n[%1][%Verstehen „Design Challenge“]",
+    "bit": {
+      "type": "preparation-note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191144"
+      ],
+      "lead": "Verstehen „Design Challenge“"
+    }
+  },
+  {
+    "bitmark": "[.preparation-note]\r\n[@id:191145]\r\n[%2][%Beobachten / befragen]",
+    "bit": {
+      "type": "preparation-note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191145"
+      ],
+      "lead": "Beobachten / befragen"
+    }
+  },
+  {
+    "bitmark": "[.preparation-note]\r\n[@id:191146]\r\n[%3][%Sichtweisen definieren / zusammen tragen „How might we“]",
+    "bit": {
+      "type": "preparation-note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191146"
+      ],
+      "lead": "Sichtweisen definieren / zusammen tragen „How might we“"
+    }
+  },
+  {
+    "bitmark": "[.preparation-note]\r\n[@id:191147]\r\n[%4][%Ideen finden]",
+    "bit": {
+      "type": "preparation-note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191147"
+      ],
+      "lead": "Ideen finden"
+    }
+  },
+  {
+    "bitmark": "[.preparation-note]\r\n[@id:191148]\r\n[%5][%Prototypen entwickeln]",
+    "bit": {
+      "type": "preparation-note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191148"
+      ],
+      "lead": "Prototypen entwickeln"
+    }
+  },
+  {
+    "bitmark": "[.preparation-note]\r\n[@id:191149]\r\n[%6][%Testen]",
+    "bit": {
+      "type": "preparation-note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "6",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191149"
+      ],
+      "lead": "Testen"
+    }
+  }
+]

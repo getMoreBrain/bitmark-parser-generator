@@ -12,7 +12,7 @@ module.exports = {
   testTimeout: 50000,
   testMatch: ['<rootDir>/test/custom/parser/expected/bitmarkParserExpectedTest.ts'],
   transform: {
-    '^.+\\.tsx?$': [
+    '^.+\\.[jt]sx?$': [
       'ts-jest',
       {
         diagnostics: true,
@@ -28,7 +28,7 @@ module.exports = {
       require.resolve('jest-html-reporter'),
       {
         outputPath: '<rootDir>/test/custom/parser/expected/results/test-report.html',
-        pageTitle: 'bitmark-parser Books Test Report',
+        pageTitle: 'bitmark-parser Expected Test Report',
         includeFailureMsg: false,
       },
     ],

@@ -12,7 +12,7 @@ module.exports = {
   testTimeout: 50000,
   testMatch: ['<rootDir>/test/custom/generator/books/bitmarkGeneratorBookTest.ts'],
   transform: {
-    '^.+\\.tsx?$': [
+    '^.+\\.[jt]sx?$': [
       'ts-jest',
       {
         diagnostics: true,

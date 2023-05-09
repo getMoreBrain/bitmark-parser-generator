@@ -1,0 +1,1262 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:216184]\n[@externalId:e-partizipien-grammatikbungen_wseitozrnxii]\n[#Partizipien – Grammatikübungen]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/englisch-hilfen/web-resources/images/englischhilfen_grammatik_cover.png]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216184"
+      ],
+      "externalId": [
+        "e-partizipien-grammatikbungen_wseitozrnxii"
+      ],
+      "title": "Partizipien – Grammatikübungen",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/englisch-hilfen/web-resources/images/englischhilfen_grammatik_cover.png"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216185]\n[%Nr. 2514]\n[!Setze das Verb in Klammern als **Partizip Perfekt** (past participle) in die Lücken ein.]\n0. [_shocked][@example] politicians __(shock)__\n1. [_repaired][!repair] watches\n2. [_stolen][!steal] computers\n3. [_fascinated][!fascinate] fans\n4. [_bored][!bore] students\n5. [_confused][!confuse] boys\n6. [_forgotten][!forget] umbrellas\n7. [_disappointed][!disappoint] girls\n8. [_swapped][!swap] comics\n9. [_worried][!worry] doctors\n10. [_amused][!amuse] queens",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. {0} politicians __(shock)__\n1. {1} watches\n2. {2} computers\n3. {3} fans\n4. {4} students\n5. {5} boys\n6. {6} umbrellas\n7. {7} girls\n8. {8} comics\n9. {9} doctors\n10. {10} queens",
+      "item": "Nr. 2514",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216185"
+      ],
+      "instruction": "Setze das Verb in Klammern als **Partizip Perfekt** (past participle) in die Lücken ein.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "shocked"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "repaired"
+          ],
+          "hint": "",
+          "instruction": "repair",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "stolen"
+          ],
+          "hint": "",
+          "instruction": "steal",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "fascinated"
+          ],
+          "hint": "",
+          "instruction": "fascinate",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "bored"
+          ],
+          "hint": "",
+          "instruction": "bore",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "confused"
+          ],
+          "hint": "",
+          "instruction": "confuse",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "forgotten"
+          ],
+          "hint": "",
+          "instruction": "forget",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "disappointed"
+          ],
+          "hint": "",
+          "instruction": "disappoint",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "swapped"
+          ],
+          "hint": "",
+          "instruction": "swap",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "worried"
+          ],
+          "hint": "",
+          "instruction": "worry",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "amused"
+          ],
+          "hint": "",
+          "instruction": "amuse",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216186]\n[%Nr. 2516]\n[!Setze das Verb in Klammern als **Partizip Perfekt** (past participle) in die Lücken ein.]\n0. [_flying][@example] birds __(fly)__\n1. [_barking][!bark] dogs\n2. [_playing][!play] children\n3. [_screaming][!scream] girls\n4. [_dancing][!dance] cowboys\n5. [_swimming][!swim] ducks\n6. [_crying][!cry] babies\n7. [_running][!run] water\n8. [_singing][!sing] teachers\n9. [_falling][!fall] leaves\n10. [_lying][!lie] people",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. {0} birds __(fly)__\n1. {1} dogs\n2. {2} children\n3. {3} girls\n4. {4} cowboys\n5. {5} ducks\n6. {6} babies\n7. {7} water\n8. {8} teachers\n9. {9} leaves\n10. {10} people",
+      "item": "Nr. 2516",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216186"
+      ],
+      "instruction": "Setze das Verb in Klammern als **Partizip Perfekt** (past participle) in die Lücken ein.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "flying"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "barking"
+          ],
+          "hint": "",
+          "instruction": "bark",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "playing"
+          ],
+          "hint": "",
+          "instruction": "play",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "screaming"
+          ],
+          "hint": "",
+          "instruction": "scream",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "dancing"
+          ],
+          "hint": "",
+          "instruction": "dance",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "swimming"
+          ],
+          "hint": "",
+          "instruction": "swim",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "crying"
+          ],
+          "hint": "",
+          "instruction": "cry",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "running"
+          ],
+          "hint": "",
+          "instruction": "run",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "singing"
+          ],
+          "hint": "",
+          "instruction": "sing",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "falling"
+          ],
+          "hint": "",
+          "instruction": "fall",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "lying"
+          ],
+          "hint": "",
+          "instruction": "lie",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216187]\n[%Nr. 2510]\n[!Finde zu den deutschen Partizipien die richtige englische Entsprechung.]\n1. langweilig → [+boring][-broken][-exciting][-excited][-falling][-frightened][-frightening][-interesting][-interested][-surprised]\n2. interessant → [-boring][-broken][-exciting][-excited][-falling][-frightened][-frightening][+interesting][-interested][-surprised]\n3. zerbrochen → [-boring][+broken][-exciting][-excited][-falling][-frightened][-frightening][-interesting][-interested][-surprised]\n4. fallend → [-boring][-broken][-exciting][-excited][+falling][-frightened][-frightening][-interesting][-interested][-surprised]\n5. interessiert → [-boring][-broken][-exciting][-excited][-falling][-frightened][-frightening][-interesting][+interested][-surprised]\n6. aufgeregt → [-boring][-broken][-exciting][+excited][-falling][-frightened][-frightening][-interesting][-interested][-surprised]\n7. überrascht → [-boring][-broken][-exciting][-excited][-falling][-frightened][-frightening][-interesting][-interested][+surprised]\n8. erschreckt → [-boring][-broken][-exciting][-excited][-falling][+frightened][-frightening][-interesting][-interested][-surprised]\n9. aufregend → [-boring][-broken][+exciting][-excited][-falling][-frightened][-frightening][-interesting][-interested][-surprised]\n10. erschreckend → [-boring][-broken][-exciting][-excited][-falling][-frightened][+frightening][-interesting][-interested][-surprised]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. langweilig → {0}\n2. interessant → {1}\n3. zerbrochen → {2}\n4. fallend → {3}\n5. interessiert → {4}\n6. aufgeregt → {5}\n7. überrascht → {6}\n8. erschreckt → {7}\n9. aufregend → {8}\n10. erschreckend → {9}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "boring",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "broken",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "exciting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "excited",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "falling",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightened",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightening",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interesting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interested",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "surprised",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "boring",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "broken",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "exciting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "excited",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "falling",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightened",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightening",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interesting",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "interested",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "surprised",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "boring",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "broken",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "exciting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "excited",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "falling",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightened",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightening",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interesting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interested",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "surprised",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "boring",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "broken",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "exciting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "excited",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "falling",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "frightened",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightening",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interesting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interested",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "surprised",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "boring",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "broken",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "exciting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "excited",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "falling",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightened",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightening",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interesting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interested",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "surprised",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "boring",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "broken",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "exciting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "excited",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "falling",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightened",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightening",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interesting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interested",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "surprised",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "boring",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "broken",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "exciting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "excited",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "falling",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightened",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightening",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interesting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interested",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "surprised",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "boring",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "broken",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "exciting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "excited",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "falling",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightened",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "frightening",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interesting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interested",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "surprised",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "boring",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "broken",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "exciting",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "excited",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "falling",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightened",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightening",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interesting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interested",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "surprised",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "boring",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "broken",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "exciting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "excited",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "falling",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightened",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "frightening",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "interesting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "interested",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "surprised",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216187"
+      ],
+      "item": "Nr. 2510",
+      "instruction": "Finde zu den deutschen Partizipien die richtige englische Entsprechung."
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216188]\n[%Nr. 2512]\n[!Übersetze die Partizipien ins Englische.]\n0. überraschende Neuigkeiten → [_surprising][@example] news\n1. ein wartender Junge → a [_waiting] boy\n2. eine interessante Geschichte → an [_interesting] story\n3. ein kaputtes Auto → a [_broken] car\n4. die vergessene Pizza → the [_forgotten] pizza\n5. der arbeitende Vater → the [_working] father\n6. Ich sah ihn gehen. → I saw him [_going].\n7. der reparierte Computer → the [_repaired] computer\n8. die redenden Schüler → the [_talking] students\n9. aufgeregte Fans → [_excited] fans\n10. das nebenan wohnende Mädchen → the girl [_living] next door",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. überraschende Neuigkeiten → {0} news\n1. ein wartender Junge → a {1} boy\n2. eine interessante Geschichte → an {2} story\n3. ein kaputtes Auto → a {3} car\n4. die vergessene Pizza → the {4} pizza\n5. der arbeitende Vater → the {5} father\n6. Ich sah ihn gehen. → I saw him {6}.\n7. der reparierte Computer → the {7} computer\n8. die redenden Schüler → the {8} students\n9. aufgeregte Fans → {9} fans\n10. das nebenan wohnende Mädchen → the girl {10} next door",
+      "item": "Nr. 2512",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216188"
+      ],
+      "instruction": "Übersetze die Partizipien ins Englische.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "surprising"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "waiting"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "interesting"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "broken"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "forgotten"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "working"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "going"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "repaired"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "talking"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "excited"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "living"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216189]\n[%Nr. 2518]\n[!Setze das Verb in Klammern als **Partizip Präsens** (present participle) oder als **Partizip Perfekt** (past participle) in die Lücken ein.]\n0. I talked to the man [_reading][@example] __(read)__ the newspaper.\n1. He saw his friend [_going][!go] out with Sue.\n2. The bus crashed into the blue car [_driving][!drive] down the hill.\n3. Peter hurt his leg [_doing][!do] karate.\n4. The umbrella [_found][!find] at the bus stop belongs to John Smith.\n5. The people [_dancing][!dance] in the street are all very friendly.\n6. I heard my mother [_talking][!talk] on the phone.\n7. My uncle always has his car [_washed][!wash].\n8. We stood [_waiting][!wait] for the taxi.\n9. [_Looking][!look] down from the tower we saw many people walking in the streets.\n10. The people drove off in a [_stolen][!steal] car.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. I talked to the man {0} __(read)__ the newspaper.\n1. He saw his friend {1} out with Sue.\n2. The bus crashed into the blue car {2} down the hill.\n3. Peter hurt his leg {3} karate.\n4. The umbrella {4} at the bus stop belongs to John Smith.\n5. The people {5} in the street are all very friendly.\n6. I heard my mother {6} on the phone.\n7. My uncle always has his car {7}.\n8. We stood {8} for the taxi.\n9. {9} down from the tower we saw many people walking in the streets.\n10. The people drove off in a {10} car.",
+      "item": "Nr. 2518",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216189"
+      ],
+      "instruction": "Setze das Verb in Klammern als **Partizip Präsens** (present participle) oder als **Partizip Perfekt** (past participle) in die Lücken ein.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "reading"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "going"
+          ],
+          "hint": "",
+          "instruction": "go",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "driving"
+          ],
+          "hint": "",
+          "instruction": "drive",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "doing"
+          ],
+          "hint": "",
+          "instruction": "do",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "found"
+          ],
+          "hint": "",
+          "instruction": "find",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "dancing"
+          ],
+          "hint": "",
+          "instruction": "dance",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "talking"
+          ],
+          "hint": "",
+          "instruction": "talk",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "washed"
+          ],
+          "hint": "",
+          "instruction": "wash",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "waiting"
+          ],
+          "hint": "",
+          "instruction": "wait",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Looking"
+          ],
+          "hint": "",
+          "instruction": "look",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "stolen"
+          ],
+          "hint": "",
+          "instruction": "steal",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  }
+]

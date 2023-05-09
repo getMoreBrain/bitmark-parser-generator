@@ -192,13 +192,20 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // - 283: wiss_aufgabensammlung_1472
 // - 284: wiss_aufgabensammlung_business_engineering
 
-// const SINGLE_FILE_START = 128;
+// const SINGLE_FILE_START = 0;
 // const SINGLE_FILE_COUNT = 1;
 
 const SINGLE_FILE_START = 0;
 const SINGLE_FILE_COUNT = 1000;
 
+// Use the following flag to test against the ANTLR parser. This is a slow process.
+const TEST_AGAINST_ANTLR_PARSER = false; // PEG = 65.838 s,  ANTLR = 960.157 s = 16 min
+
+// Set to true to generate performance debug output
+const DEBUG_PERFORMANCE = true;
+
 const TEST_INPUT_DIR = path.resolve(__dirname, '../../../../assets/test/books/bits');
+const JSON_INPUT_DIR = path.resolve(__dirname, 'json');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, 'results/output');
 
 // const jsonParser = new JsonParser();
@@ -263,6 +270,8 @@ describe('bitmark-parser', () => {
       const partFolderAndFile = testFile.replace(TEST_INPUT_DIR, '');
       const partFolder = path.dirname(partFolderAndFile);
       const fullFolder = path.join(TEST_OUTPUT_DIR, partFolder);
+      const fullJsonInputFolder = path.join(JSON_INPUT_DIR, partFolder);
+      const fileId = testFile.replace(TEST_INPUT_DIR + '/', '');
       const id = path.basename(partFolderAndFile, '.bit');
 
       // console.log('partFolderAndFile', partFolderAndFile);
@@ -274,6 +283,7 @@ describe('bitmark-parser', () => {
         fs.ensureDirSync(fullFolder);
 
         // Calculate the filenames
+        const testJsonFile = path.resolve(fullJsonInputFolder, `${id}.json`);
         const originalMarkupFile = path.resolve(fullFolder, `${id}.bit`);
         const originalJsonFile = path.resolve(fullFolder, `${id}.json`);
         const generatedJsonFile = path.resolve(fullFolder, `${id}.gen.json`);
@@ -286,16 +296,28 @@ describe('bitmark-parser', () => {
         // Read in the test markup file
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
-        // Generate JSON from generated bitmark markup using the ANTLR parser
-        performance.mark('ANTLR:Start');
-        const originalJson = bitmarkParser.parse(originalMarkup);
+        let originalJson: unknown;
 
-        // Write the new JSON
-        fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {
-          encoding: 'utf8',
-        });
+        if (TEST_AGAINST_ANTLR_PARSER) {
+          // Generate JSON from generated bitmark markup using the ANTLR parser
+          performance.mark('ANTLR:Start');
+          originalJson = bitmarkParser.parse(originalMarkup);
 
-        performance.mark('ANTLR:End');
+          // Write the new JSON
+          fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {
+            encoding: 'utf8',
+          });
+
+          performance.mark('ANTLR:End');
+        } else {
+          // TEST AGAINST JSON FILES
+
+          // Copy the original expected JSON file to the output folder
+          fs.copySync(testJsonFile, originalJsonFile);
+
+          // Read in the test expected JSON file
+          originalJson = fs.readJsonSync(originalJsonFile, 'utf8');
+        }
 
         // Remove uninteresting JSON items
         BitJsonUtils.cleanupJson(originalJson, { removeParser: true, removeErrors: true });
@@ -337,10 +359,17 @@ describe('bitmark-parser', () => {
           encoding: 'utf8',
         });
 
-        const antlrTimeSecs = Math.round(performance.measure('ANTLR', 'ANTLR:Start', 'ANTLR:End').duration) / 1000;
-        const pegTimeSecs = Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000;
-        const speedUp = Math.round((antlrTimeSecs / pegTimeSecs) * 100) / 100;
-        console.log(`'${id}' timing; ANTLR: ${antlrTimeSecs} s, PEG: ${pegTimeSecs} s, speedup: x${speedUp}`);
+        // Print performance information
+        if (DEBUG_PERFORMANCE) {
+          const pegTimeSecs = Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000;
+          if (TEST_AGAINST_ANTLR_PARSER) {
+            const antlrTimeSecs = Math.round(performance.measure('ANTLR', 'ANTLR:Start', 'ANTLR:End').duration) / 1000;
+            const speedUp = Math.round((antlrTimeSecs / pegTimeSecs) * 100) / 100;
+            console.log(`'${fileId}' timing; ANTLR: ${antlrTimeSecs} s, PEG: ${pegTimeSecs} s, speedup: x${speedUp}`);
+          } else {
+            console.log(`'${fileId}' timing; PEG: ${pegTimeSecs} s`);
+          }
+        }
 
         expect(newJson).toEqual(originalJson);
 

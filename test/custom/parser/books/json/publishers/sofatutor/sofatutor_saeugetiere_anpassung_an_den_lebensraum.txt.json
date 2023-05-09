@@ -1,0 +1,935 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:131304]\n[#Säugetiere – Anpassung an den Lebensraum]\n[@language:de]\n[@coverImage:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/cover_sofatutor_bio.png]\n[@externalId:e-sugetiere--anpassung-an-den-lebensraum_ixhe3vw3ruej]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131304"
+      ],
+      "title": "Säugetiere – Anpassung an den Lebensraum",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/cover_sofatutor_bio.png"
+      ],
+      "externalId": [
+        "e-sugetiere--anpassung-an-den-lebensraum_ixhe3vw3ruej"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:131305]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_bio8.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "131305"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_bio8.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131306]\n[%Aufgabenübersicht]\n1 Gib an, ob die Aussagen zur Anpassung von Säugetieren richtig sind.\n2 Ergänze den Infotext zur Anpassung des Maulwurfs.\n3 Beschreibe den Braun- und den Eisbären.\n4 Ordne die Schädel den passenden Tieren zu.\n5 Gib an, ob ein Tier eher in einer warmen oder in einer kalten Region vorkommt.\n6 Bestimme Beispiele zur Anpassung von Lebewesen.\n+ mit vielen Tipps, Lösungsschlüsseln und Lösungswegen zu allen Aufgaben",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "1 Gib an, ob die Aussagen zur Anpassung von Säugetieren richtig sind.\n2 Ergänze den Infotext zur Anpassung des Maulwurfs.\n3 Beschreibe den Braun- und den Eisbären.\n4 Ordne die Schädel den passenden Tieren zu.\n5 Gib an, ob ein Tier eher in einer warmen oder in einer kalten Region vorkommt.\n6 Bestimme Beispiele zur Anpassung von Lebewesen.\n+ mit vielen Tipps, Lösungsschlüsseln und Lösungswegen zu allen Aufgaben",
+      "id": [
+        "131306"
+      ],
+      "item": "Aufgabenübersicht"
+    }
+  },
+  {
+    "bitmark": "[.true-false:bitmark--]\n[@id:131307]\n[%1 von 6]\n[!Gib an, ob die Aussagen zur Anpassung von Säugetieren richtig sind.]\n[@labelTrue:richtig][@labelFalse:falsch]\n===\n[-Fledermäuse haben durch ihre Nachtaktivität besonders gut ausgeprägte Augen.]\n===\n[-Nur Säugetiere sind optimal an ihren Lebensraum und ihre Lebensbedingungen angepasst.]\n===\n[+Mit den Ultraschalllauten kann sich die Fledermaus in der dunklen Nacht orientieren.]\n===\n[-Der Braunbär und der Eisbär sind nicht eng verwandt.]\n===\n[+Mit seinen flachen Backenzähnen kann der Braunbär gut Beeren zerkleinern.]\n===\n[$Fledermäuse haben große Ohren und nutzen Ultraschalllaute, um sich zu orientieren. Ihre Augen sind damit nicht mehr nötig und ebenso wie beim Maulwurf sehr unterentwickelt. Braunbären und Eisbären sind nah miteinander verwandt. Ihre unterschiedliche Erscheinung ist eine Anpassung an ihren Lebensraum, ihre Lebensbedingungen und ihre Nahrungsvorlieben. So hat der Braunbär ein braunes Fell, um sich im Wald zu tarnen, und flache Backenzähne, um Beeren oder andere Früchte des Waldes fressen zu können. Der Eisbär hat hingegen ein weißes Fell und zackige Backenzähne.]",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "1 von 6",
+      "lead": "",
+      "instruction": "Gib an, ob die Aussagen zur Anpassung von Säugetieren richtig sind.",
+      "hint": "",
+      "labelTrue": "richtig",
+      "labelFalse": "falsch",
+      "statements": [
+        {
+          "statement": "Fledermäuse haben durch ihre Nachtaktivität besonders gut ausgeprägte Augen.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Nur Säugetiere sind optimal an ihren Lebensraum und ihre Lebensbedingungen angepasst.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Mit den Ultraschalllauten kann sich die Fledermaus in der dunklen Nacht orientieren.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Der Braunbär und der Eisbär sind nicht eng verwandt.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Mit seinen flachen Backenzähnen kann der Braunbär gut Beeren zerkleinern.",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "[$Fledermäuse haben große Ohren und nutzen Ultraschalllaute, um sich zu orientieren. Ihre Augen sind damit nicht mehr nötig und ebenso wie beim Maulwurf sehr unterentwickelt. Braunbären und Eisbären sind nah miteinander verwandt. Ihre unterschiedliche Erscheinung ist eine Anpassung an ihren Lebensraum, ihre Lebensbedingungen und ihre Nahrungsvorlieben. So hat der Braunbär ein braunes Fell, um sich im Wald zu tarnen, und flache Backenzähne, um Beeren oder andere Früchte des Waldes fressen zu können. Der Eisbär hat hingegen ein weißes Fell und zackige Backenzähne.]",
+      "id": [
+        "131307"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '[",
+        "line": 17,
+        "column": 0,
+        "errorLine": "[$Fledermäuse haben große Ohren und nutzen Ultraschalllaute, um sich zu orientieren. Ihre Augen sind damit nicht mehr nötig und ebenso wie beim Maulwurf sehr unterentwickelt. Braunbären und Eisbären sind nah miteinander verwandt. Ihre unterschiedliche Erscheinung ist eine Anpassung an ihren Lebensraum, ihre Lebensbedingungen und ihre Nahrungsvorlieben. So hat der Braunbär ein braunes Fell, um sich im Wald zu tarnen, und flache Backenzähne, um Beeren oder andere Früchte des Waldes fressen zu können. Der Eisbär hat hingegen ein weißes Fell und zackige Backenzähne.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:131308]\n[%2 von 6]\n[!Ergänze den Infotext zur Anpassung des Maulwurfs.\nWähle die passenden Begriffe für die Textlücken.]\n\nDu hast nun einiges über die Anpassung von Säugetieren an ihren Lebensraum erfahren. Unter anderem hast du auch die Anpassung des Maulwurfs kennengelernt. Versuche, mit deinem neuen Wissen den Lückentext zu ergänzen.\n\nDer Maulwurf hat eine [-Augen][+spindelförmige][-Knochen][-dicke Borsten][-Geschmackssinn][-Grabwerkzeuge][-Geruchssinn][-keinen Strich] Form und eine spitz zulaufende Nase. Diese benötigt er, um sich optimal durch seine engen Tunnelsysteme zu bewegen.\n\nSein Fell besitzt [-Augen][-spindelförmige][-Knochen][-dicke Borsten][-Geschmackssinn][-Grabwerkzeuge][-Geruchssinn][+keinen Strich]. So bleibt es dem Maulwurf erspart, in den engen Tunnelsystemen wenden zu müssen, da er sich mit seinem Fell problemlos auch rückwärts fortbewegen kann.\n\nDamit er seine Tunnelsysteme anlegen kann, verfügt der Maulwurf über große Vorderextremitäten, die er als [-Augen][-spindelförmige][-Knochen][-dicke Borsten][-Geschmackssinn][+Grabwerkzeuge][-Geruchssinn][-keinen Strich] verwendet.\n\nDie [+Augen][-spindelförmige][-Knochen][-dicke Borsten][-Geschmackssinn][-Grabwerkzeuge][-Geruchssinn][-keinen Strich] des Maulwurfs sind unterentwickelt. Das hängt damit zusammen, dass der Maulwurf sich die längste Zeit unter der Erde aufhält, in der es stets dunkel ist.\n\nGehör-, Tast- und [-Augen][-spindelförmige][-Knochen][-dicke Borsten][-Geschmackssinn][-Grabwerkzeuge][+Geruchssinn][-keinen Strich] sind dafür aber umso besser ausgeprägt.\n\n[$Der Maulwurf ist spindelförmig und besitzt ein Fell ohne Strich. Dadurch kann er sich optimal in seinen engen Tunnelsystemen vor und zurück bewegen. Seine großen Vorderextremitäten kann er wie Schaufeln als Grabwerkzeuge verwenden. Er schaufelt die Erde links und rechts an seinem Körper vorbei. Da es ohnehin sehr dunkel unter der Erde ist, besitzt der Maulwurf auch nur sehr unterentwickelte Augen. Tast-, Gehör- und Geruchssinn sind dafür besonders gut ausgeprägt.]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "Du hast nun einiges über die Anpassung von Säugetieren an ihren Lebensraum erfahren. Unter anderem hast du auch die Anpassung des Maulwurfs kennengelernt. Versuche, mit deinem neuen Wissen den Lückentext zu ergänzen.\n\nDer Maulwurf hat eine {0} Form und eine spitz zulaufende Nase. Diese benötigt er, um sich optimal durch seine engen Tunnelsysteme zu bewegen.\n\nSein Fell besitzt {1}. So bleibt es dem Maulwurf erspart, in den engen Tunnelsystemen wenden zu müssen, da er sich mit seinem Fell problemlos auch rückwärts fortbewegen kann.\n\nDamit er seine Tunnelsysteme anlegen kann, verfügt der Maulwurf über große Vorderextremitäten, die er als {2} verwendet.\n\nDie {3} des Maulwurfs sind unterentwickelt. Das hängt damit zusammen, dass der Maulwurf sich die längste Zeit unter der Erde aufhält, in der es stets dunkel ist.\n\nGehör-, Tast- und {4} sind dafür aber umso besser ausgeprägt.\n\n[$Der Maulwurf ist spindelförmig und besitzt ein Fell ohne Strich. Dadurch kann er sich optimal in seinen engen Tunnelsystemen vor und zurück bewegen. Seine großen Vorderextremitäten kann er wie Schaufeln als Grabwerkzeuge verwenden. Er schaufelt die Erde links und rechts an seinem Körper vorbei. Da es ohnehin sehr dunkel unter der Erde ist, besitzt der Maulwurf auch nur sehr unterentwickelte Augen. Tast-, Gehör- und Geruchssinn sind dafür besonders gut ausgeprägt.]",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Augen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "spindelförmige",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Knochen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "dicke Borsten",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Geschmackssinn",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Grabwerkzeuge",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Geruchssinn",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "keinen Strich",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Augen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "spindelförmige",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Knochen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "dicke Borsten",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Geschmackssinn",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Grabwerkzeuge",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Geruchssinn",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "keinen Strich",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Augen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "spindelförmige",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Knochen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "dicke Borsten",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Geschmackssinn",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Grabwerkzeuge",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Geruchssinn",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "keinen Strich",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Augen",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "spindelförmige",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Knochen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "dicke Borsten",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Geschmackssinn",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Grabwerkzeuge",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Geruchssinn",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "keinen Strich",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Augen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "spindelförmige",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Knochen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "dicke Borsten",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Geschmackssinn",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Grabwerkzeuge",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Geruchssinn",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "keinen Strich",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "131308"
+      ],
+      "item": "2 von 6",
+      "instruction": "Ergänze den Infotext zur Anpassung des Maulwurfs.\nWähle die passenden Begriffe für die Textlücken."
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '[",
+        "line": 19,
+        "column": 0,
+        "errorLine": "[$Der Maulwurf ist spindelförmig und besitzt ein Fell ohne Strich. Dadurch kann er sich optimal in seinen engen Tunnelsystemen vor und zurück bewegen. Seine großen Vorderextremitäten kann er wie Schaufeln als Grabwerkzeuge verwenden. Er schaufelt die Erde links und rechts an seinem Körper vorbei. Da es ohnehin sehr dunkel unter der Erde ist, besitzt der Maulwurf auch nur sehr unterentwickelte Augen. Tast-, Gehör- und Geruchssinn sind dafür besonders gut ausgeprägt.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--&image]\n[@id:131309]\n[%3 von 6]\n[!Beschreibe den Braun- und den Eisbären.\nOrdne die Begriffe zum passenden Oberbegriff.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_bio5.png]\nDu hast nun einiges über die Anpassungen des Braunbärs und des Eisbärs kennengelernt. Wähle für jede Bärenart die korrekten Merkmale aus.\n\n===\n[!A. Braunbär]\n[-fressen keine Beeren]\n[+Waldregionen]\n[+braunes Fell]\n[-Polargebiete]\n[+flache Backenzähne]\n[-weißes Fell]\n[-gezackte Zähne]\n[-ausgeprägte Nase]\n[+fressen Beeren]\n===\n[!B. Eisbär]\n[+fressen keine Beeren]\n[-Waldregionen]\n[-braunes Fell]\n[+Polargebiete]\n[-flache Backenzähne]\n[+weißes Fell]\n[+gezackte Zähne]\n[+ausgeprägte Nase]\n[-fressen Beeren]\n===\n\n[$Der **Braunbär** __lebt in Waldregionen und ist mit seinem braunen Fell__ perfekt im Wald getarnt und damit an seinen Lebensraum angepasst. Außerdem gibt es im Wald __Beeren__, welche der Braunbär mittels seiner __flachen Backenzähne__ prima zerkleinern kann.\n\nDer **Eisbär** kann diese __Beeren nicht fressen__. Er besitzt zackige Backenzähne und frisst damit hauptsächlich Fleisch. Mit seinem __weißen Fell__ kann er sich ausgezeichnet im Schnee tarnen. Die Tarnung braucht er weniger, um sich vor anderen Feinden zu verstecken. Er benötigt die Tarnung, um sich an seine Beute heranzuschleichen. Mit seiner __gut ausgeprägten Nase__ kann er seine Beute bereits aus großer Entfernung orten. Damit ist der Eisbär perfekt an seinen Lebensraum, die __Polargebiete__, angepasst.]",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "3 von 6",
+      "instruction": "Beschreibe den Braun- und den Eisbären.\nOrdne die Begriffe zum passenden Oberbegriff.",
+      "body": "Du hast nun einiges über die Anpassungen des Braunbärs und des Eisbärs kennengelernt. Wähle für jede Bärenart die korrekten Merkmale aus.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n[$Der **Braunbär** __lebt in Waldregionen und ist mit seinem braunen Fell__ perfekt im Wald getarnt und damit an seinen Lebensraum angepasst. Außerdem gibt es im Wald __Beeren__, welche der Braunbär mittels seiner __flachen Backenzähne__ prima zerkleinern kann.\n\nDer **Eisbär** kann diese __Beeren nicht fressen__. Er besitzt zackige Backenzähne und frisst damit hauptsächlich Fleisch. Mit seinem __weißen Fell__ kann er sich ausgezeichnet im Schnee tarnen. Die Tarnung braucht er weniger, um sich vor anderen Feinden zu verstecken. Er benötigt die Tarnung, um sich an seine Beute heranzuschleichen. Mit seiner __gut ausgeprägten Nase__ kann er seine Beute bereits aus großer Entfernung orten. Damit ist der Eisbär perfekt an seinen Lebensraum, die __Polargebiete__, angepasst.]",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "A. Braunbär",
+          "responses": [
+            {
+              "response": "fressen keine Beeren",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Waldregionen",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "braunes Fell",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Polargebiete",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "flache Backenzähne",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "weißes Fell",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "gezackte Zähne",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "ausgeprägte Nase",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "fressen Beeren",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "B. Eisbär",
+          "responses": [
+            {
+              "response": "fressen keine Beeren",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Waldregionen",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "braunes Fell",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Polargebiete",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "flache Backenzähne",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "weißes Fell",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "gezackte Zähne",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "ausgeprägte Nase",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "fressen Beeren",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "131309"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_bio5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '[",
+        "line": 33,
+        "column": 0,
+        "errorLine": "[$Der **Braunbär** __lebt in Waldregionen und ist mit seinem braunen Fell__ perfekt im Wald getarnt und damit an seinen Lebensraum angepasst. Außerdem gibt es im Wald __Beeren__, welche der Braunbär mittels seiner __flachen Backenzähne__ prima zerkleinern kann."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\n[@id:131310]\n[%4 von 6]\n[!Ordne die Schädel den passenden Tieren zu.\nOrdne die Bilder korrekt zu.]\n\nAm Beispiel des Eisbären und des Braunbären hast du gesehen, dass sich die Gebisse der Tiere je nach Region und Nahrungsangebot unterscheiden. So können die Braunbären mit flachen Backenzähnen im Wald am besten überleben und sich dort verbreiten. In Polarregionen ist der Eisbär – unter anderem durch seine zackigen Backenzähne – am besten an seinen Lebensraum angepasst. Dadurch kann er sich in diesen Gebieten besonders gut verbreiten.\n\nVersuche herauszufinden, welcher Schädel zu welchem Tier passt. Achte dabei besonders darauf, was die einzelnen Tiere fressen.\n\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_bio3.png\n::\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_bio6.png\n::\nA [_3]\nB [_4]\nC [_1]\nD [_2]\n\n[?Am Beispiel der Bären hast du gesehen, dass sich die Form der Zähne besonders darin unterscheidet, ob ein Tier Pflanzen oder Fleisch frisst. Beim Pferd weißt du, dass es nur Pflanzen frisst. Der Schädel mit den flachen Backenzähnen, wie du sie auch beim Braunbär siehst, gehört zum Pferd. Nagetiere wie das Eichhörnchen fressen auch Pflanzen, jedoch ist deren pflanzliche Nahrung wesentlich härter. Dafür besitzen sie im vorderen Teil des Gebisses lange Nagezähne. Da die Nagezähne sehr beansprucht werden und sich ständig abnutzen, wachsen diese Nagezähne stetig nach. Nun bleiben nur noch der Hund, der Maulwurf und das Schwein. Der Hund ernährt sich von Fleisch, er ist ein Fleischfresser. Eine Besonderheit beim Hund ist aber auch, dass er ein Raubtier ist und sehr ausgeprägte Eckzähne besitzt. Der Schädel mit den gezackten Zähnen und den großen Eckzähnen gehört also zum Hund. Das Schwein ist sowohl Fleisch- als auch Pflanzenfresser. Der Schädel mit flachen und gezackten Zähnen gehört also zum Schwein. Der letzte Schädel gehört zum Maulwurf. Er ernährt sich von Insekten und besitzt durchgehend kleine spitze Zähne, mit denen er die Insektenpanzer oder Schneckenhäuser knacken und anschließend seine Beute fressen kann.]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "Am Beispiel des Eisbären und des Braunbären hast du gesehen, dass sich die Gebisse der Tiere je nach Region und Nahrungsangebot unterscheiden. So können die Braunbären mit flachen Backenzähnen im Wald am besten überleben und sich dort verbreiten. In Polarregionen ist der Eisbär – unter anderem durch seine zackigen Backenzähne – am besten an seinen Lebensraum angepasst. Dadurch kann er sich in diesen Gebieten besonders gut verbreiten.\n\nVersuche herauszufinden, welcher Schädel zu welchem Tier passt. Achte dabei besonders darauf, was die einzelnen Tiere fressen.\n\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_bio3.png\n::\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_bio6.png\n::\nA {0}\nB {1}\nC {2}\nD {3}",
+      "item": "4 von 6",
+      "hint": "Am Beispiel der Bären hast du gesehen, dass sich die Form der Zähne besonders darin unterscheidet, ob ein Tier Pflanzen oder Fleisch frisst. Beim Pferd weißt du, dass es nur Pflanzen frisst. Der Schädel mit den flachen Backenzähnen, wie du sie auch beim Braunbär siehst, gehört zum Pferd. Nagetiere wie das Eichhörnchen fressen auch Pflanzen, jedoch ist deren pflanzliche Nahrung wesentlich härter. Dafür besitzen sie im vorderen Teil des Gebisses lange Nagezähne. Da die Nagezähne sehr beansprucht werden und sich ständig abnutzen, wachsen diese Nagezähne stetig nach. Nun bleiben nur noch der Hund, der Maulwurf und das Schwein. Der Hund ernährt sich von Fleisch, er ist ein Fleischfresser. Eine Besonderheit beim Hund ist aber auch, dass er ein Raubtier ist und sehr ausgeprägte Eckzähne besitzt. Der Schädel mit den gezackten Zähnen und den großen Eckzähnen gehört also zum Hund. Das Schwein ist sowohl Fleisch- als auch Pflanzenfresser. Der Schädel mit flachen und gezackten Zähnen gehört also zum Schwein. Der letzte Schädel gehört zum Maulwurf. Er ernährt sich von Insekten und besitzt durchgehend kleine spitze Zähne, mit denen er die Insektenpanzer oder Schneckenhäuser knacken und anschließend seine Beute fressen kann.",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131310"
+      ],
+      "instruction": "Ordne die Schädel den passenden Tieren zu.\nOrdne die Bilder korrekt zu.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "3"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "1"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "2"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--&image]\n[@id:131311]\n[%5 von 6 (1)]\n[!Gib an, ob ein Tier eher in einer warmen oder in einer kalten Region vorkommt.\nOrdne die Tiere in den passenden Lebensraum.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_bio_5von6_a.png]\n===\n[!A.]\n[+1]\n[-2]\n[+3]\n[-4]\n[-5]\n[+6]\n===\n\n[$Der **Wüstenfuchs**, die große **Wüstenspringmaus** und der **Kaphase** kommen in __warmen Regionen__ vor. Der Wüstenfuchs, die große Wüstenspringmaus und auch der Kaphase sind an ihren großen Ohren zu erkennen.\n\nWenn dir warm ist, dann kugelst du dich nicht zusammen, sondern du streckst alle viere von dir, um möglichst gut abzukühlen. So ähnlich ist das auch mit den großen abstehenden Ohren bei den Tieren der warmen Regionen.\n\nIn __kalten Regionen__ findet man den **Kaiserpinguin**, den **Schneehasen** und den **Polarfuchs**. Bereits an der Fellfarbe des Schneehasens und des Polarfuchses lässt sich erkennen, dass sie in Regionen vorkommen, in denen viel Schnee liegt und in denen es kalt ist. Sie sind meist „kugelig“ in ihrer Körperform und auch die Körperfortsätze (Ohren, Arme, Beine) sind kurz und liegen nah am Körper.\n\nWenn dir kalt ist, kugelst du dich auch zusammen, um nicht auszukühlen. Körperpartien, wie deine Hände, Füße, oder deinen Kopf, schützt du mit Kleidungsstücken vor Auskühlung. So ähnlich ist dies auch bei den Tieren der kalten Regionen.]",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "5 von 6 (1)",
+      "instruction": "Gib an, ob ein Tier eher in einer warmen oder in einer kalten Region vorkommt.\nOrdne die Tiere in den passenden Lebensraum.",
+      "body": "[$Der **Wüstenfuchs**, die große **Wüstenspringmaus** und der **Kaphase** kommen in __warmen Regionen__ vor. Der Wüstenfuchs, die große Wüstenspringmaus und auch der Kaphase sind an ihren großen Ohren zu erkennen.\n\nWenn dir warm ist, dann kugelst du dich nicht zusammen, sondern du streckst alle viere von dir, um möglichst gut abzukühlen. So ähnlich ist das auch mit den großen abstehenden Ohren bei den Tieren der warmen Regionen.\n\nIn __kalten Regionen__ findet man den **Kaiserpinguin**, den **Schneehasen** und den **Polarfuchs**. Bereits an der Fellfarbe des Schneehasens und des Polarfuchses lässt sich erkennen, dass sie in Regionen vorkommen, in denen viel Schnee liegt und in denen es kalt ist. Sie sind meist „kugelig“ in ihrer Körperform und auch die Körperfortsätze (Ohren, Arme, Beine) sind kurz und liegen nah am Körper.\n\nWenn dir kalt ist, kugelst du dich auch zusammen, um nicht auszukühlen. Körperpartien, wie deine Hände, Füße, oder deinen Kopf, schützt du mit Kleidungsstücken vor Auskühlung. So ähnlich ist dies auch bei den Tieren der kalten Regionen.]",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "A.",
+          "responses": [
+            {
+              "response": "1",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "3",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "4",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "5",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "6",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "131311"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_bio_5von6_a.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '[",
+        "line": 17,
+        "column": 0,
+        "errorLine": "[$Der **Wüstenfuchs**, die große **Wüstenspringmaus** und der **Kaphase** kommen in __warmen Regionen__ vor. Der Wüstenfuchs, die große Wüstenspringmaus und auch der Kaphase sind an ihren großen Ohren zu erkennen."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--&image]\n[@id:131312]\n[%5 von 6 (2)]\n[!Gib an, ob ein Tier eher in einer warmen oder in einer kalten Region vorkommt.\nOrdne die Tiere in den passenden Lebensraum.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_bio_5von6_b.png]\n===\n[!B]\n[-1]\n[+2]\n[-3]\n[+4]\n[+5]\n[-6]\n===\n\n\n[$Der **Wüstenfuchs**, die große **Wüstenspringmaus** und der **Kaphase** kommen in __warmen Regionen__ vor. Der Wüstenfuchs, die große Wüstenspringmaus und auch der Kaphase sind an ihren großen Ohren zu erkennen.\n\nWenn dir warm ist, dann kugelst du dich nicht zusammen, sondern du streckst alle viere von dir, um möglichst gut abzukühlen. So ähnlich ist das auch mit den großen abstehenden Ohren bei den Tieren der warmen Regionen.\n\nIn __kalten Regionen__ findet man den **Kaiserpinguin**, den **Schneehasen** und den **Polarfuchs**. Bereits an der Fellfarbe des Schneehasens und des Polarfuchses lässt sich erkennen, dass sie in Regionen vorkommen, in denen viel Schnee liegt und in denen es kalt ist. Sie sind meist „kugelig“ in ihrer Körperform und auch die Körperfortsätze (Ohren, Arme, Beine) sind kurz und liegen nah am Körper.\n\nWenn dir kalt ist, kugelst du dich auch zusammen, um nicht auszukühlen. Körperpartien, wie deine Hände, Füße, oder deinen Kopf, schützt du mit Kleidungsstücken vor Auskühlung. So ähnlich ist dies auch bei den Tieren der kalten Regionen.]",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "5 von 6 (2)",
+      "instruction": "Gib an, ob ein Tier eher in einer warmen oder in einer kalten Region vorkommt.\nOrdne die Tiere in den passenden Lebensraum.",
+      "body": "[$Der **Wüstenfuchs**, die große **Wüstenspringmaus** und der **Kaphase** kommen in __warmen Regionen__ vor. Der Wüstenfuchs, die große Wüstenspringmaus und auch der Kaphase sind an ihren großen Ohren zu erkennen.\n\nWenn dir warm ist, dann kugelst du dich nicht zusammen, sondern du streckst alle viere von dir, um möglichst gut abzukühlen. So ähnlich ist das auch mit den großen abstehenden Ohren bei den Tieren der warmen Regionen.\n\nIn __kalten Regionen__ findet man den **Kaiserpinguin**, den **Schneehasen** und den **Polarfuchs**. Bereits an der Fellfarbe des Schneehasens und des Polarfuchses lässt sich erkennen, dass sie in Regionen vorkommen, in denen viel Schnee liegt und in denen es kalt ist. Sie sind meist „kugelig“ in ihrer Körperform und auch die Körperfortsätze (Ohren, Arme, Beine) sind kurz und liegen nah am Körper.\n\nWenn dir kalt ist, kugelst du dich auch zusammen, um nicht auszukühlen. Körperpartien, wie deine Hände, Füße, oder deinen Kopf, schützt du mit Kleidungsstücken vor Auskühlung. So ähnlich ist dies auch bei den Tieren der kalten Regionen.]",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "B",
+          "responses": [
+            {
+              "response": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "2",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "5",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "6",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "131312"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_bio_5von6_b.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '[",
+        "line": 18,
+        "column": 0,
+        "errorLine": "[$Der **Wüstenfuchs**, die große **Wüstenspringmaus** und der **Kaphase** kommen in __warmen Regionen__ vor. Der Wüstenfuchs, die große Wüstenspringmaus und auch der Kaphase sind an ihren großen Ohren zu erkennen."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark--]\n[@id:131313]\n[%6 von 6]\n[!Bestimme Beispiele zur Anpassung von Lebewesen.\nWähle die passenden Satzelemente.]\nHier sind Beispiele von Lebewesen dargestellt, die ideal an Lebensraum, Lebensbedingungen und Nahrungsvorlieben angepasst sind. Finde heraus, welche Satzelemente zusammenpassen.\n===\nDer Mensch und der Affe haben einen gemeinsamen Vorfahren. Der Mensch besitzt jedoch keinen Schwanz mehr,\n==\nda sein Lebensraum nicht mehr in den Bäumen, sondern auf dem Boden ist.\n===\nDer englische Birkenspanner war ursprünglich weiß und färbte sich dann dunkel,\n==\nda sich sein Lebensraum derart veränderte, dass er sich mit dunkler Färbung besser tarnen konnte.\n===\nAuf den Keguelen-Inseln leben flugunfähige Fliegen mit kleinen Stummelflügeln,\n==\nda ihr Lebensraum sehr windig ist und sie so weniger gefährdet sind, weggeweht zu werden.\n===\nIgel halten im Winter Winterschlaf,\n==\nda ihr Lebensraum in dieser Zeit kaum Nahrung zum Überleben bietet.\n===\nViele Fische besitzen einen stromlinienförmigen Körper,\n==\nda sie sich so in ihrem Lebensraum leicht fortbewegen können.\n===\nKakteen speichern Wasser und tragen Dornen,\n==\num so in ihrem trockenen Lebensraum nicht auszutrocknen.\n===\n\n[?Beim Mensch, aber auch bei einigen Menschenaffenarten, die nicht mehr in den Bäumen leben, hat sich der Schwanz zurückgebildet. Der Schwanz war ursprünglich eine Kletterhilfe und ist auf dem Boden überflüssig geworden. Auch die Flügel der Keguelen-Fliegen haben sich zurückgebildet. Sie waren auf der windigen Insel ebenfalls unnötig, beziehungsweise sogar ein Nachteil. Fliegen mit großen Flügeln wurden vom Wind auf das Wasser weggeweht und sind gestorben. Deshalb wurden die Flügel der Keguelen-Fliege im Laufe der Evolution immer kleiner. Der Igel hält im Winter Winterschlaf. Der Grund dafür ist das geringe Nahrungsangebot. Der Igel frisst sich vor dem Winterschlaf eine dicke Speckschicht an, von der er dann in der Winterschlafzeit zehren kann. Viele Fische besitzen einen stromlinienförmigen Körper, da sie sich so mit weniger Kraftaufwand im Wasser fortbewegen können. Diese Energieeinsparung ist ein enormer Vorteil . Genauso wie Tiere können sich Pflanzen an ihren Lebensraum anpassen. Ein Beispiel sind die Kakteenpflanzen. Sie speichern Wasser und tragen Dornen, um sich vor der Austrocknung zu schützen.]",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "6 von 6",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Der Mensch und der Affe haben einen gemeinsamen Vorfahren. Der Mensch besitzt jedoch keinen Schwanz mehr,",
+          "values": [
+            "da sein Lebensraum nicht mehr in den Bäumen, sondern auf dem Boden ist."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Der englische Birkenspanner war ursprünglich weiß und färbte sich dann dunkel,",
+          "values": [
+            "da sich sein Lebensraum derart veränderte, dass er sich mit dunkler Färbung besser tarnen konnte."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Auf den Keguelen-Inseln leben flugunfähige Fliegen mit kleinen Stummelflügeln,",
+          "values": [
+            "da ihr Lebensraum sehr windig ist und sie so weniger gefährdet sind, weggeweht zu werden."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Igel halten im Winter Winterschlaf,",
+          "values": [
+            "da ihr Lebensraum in dieser Zeit kaum Nahrung zum Überleben bietet."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Viele Fische besitzen einen stromlinienförmigen Körper,",
+          "values": [
+            "da sie sich so in ihrem Lebensraum leicht fortbewegen können."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Kakteen speichern Wasser und tragen Dornen,",
+          "values": [
+            "um so in ihrem trockenen Lebensraum nicht auszutrocknen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "Hier sind Beispiele von Lebewesen dargestellt, die ideal an Lebensraum, Lebensbedingungen und Nahrungsvorlieben angepasst sind. Finde heraus, welche Satzelemente zusammenpassen.",
+      "id": [
+        "131313"
+      ],
+      "instruction": "Bestimme Beispiele zur Anpassung von Lebewesen.\nWähle die passenden Satzelemente.",
+      "hint": "Beim Mensch, aber auch bei einigen Menschenaffenarten, die nicht mehr in den Bäumen leben, hat sich der Schwanz zurückgebildet. Der Schwanz war ursprünglich eine Kletterhilfe und ist auf dem Boden überflüssig geworden. Auch die Flügel der Keguelen-Fliegen haben sich zurückgebildet. Sie waren auf der windigen Insel ebenfalls unnötig, beziehungsweise sogar ein Nachteil. Fliegen mit großen Flügeln wurden vom Wind auf das Wasser weggeweht und sind gestorben. Deshalb wurden die Flügel der Keguelen-Fliege im Laufe der Evolution immer kleiner. Der Igel hält im Winter Winterschlaf. Der Grund dafür ist das geringe Nahrungsangebot. Der Igel frisst sich vor dem Winterschlaf eine dicke Speckschicht an, von der er dann in der Winterschlafzeit zehren kann. Viele Fische besitzen einen stromlinienförmigen Körper, da sie sich so mit weniger Kraftaufwand im Wasser fortbewegen können. Diese Energieeinsparung ist ein enormer Vorteil . Genauso wie Tiere können sich Pflanzen an ihren Lebensraum anpassen. Ein Beispiel sind die Kakteenpflanzen. Sie speichern Wasser und tragen Dornen, um sich vor der Austrocknung zu schützen."
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131314]\n[%Unsere Tipps für die Aufgaben]\n**Gib an, ob die Aussagen zur Anpassung von Säugetieren richtig sind.**\n1. Tipp\nDie Rückbildung der Augen beim Maulwurf hatte keinerlei Folgen für das Leben des Maulwurfs. Er lebte ohnehin unter der Erde und die unterentwickelten Augen beeinträchtigen ihn nicht. Deshalb blieben die Augen des Maulwurfs unterentwickelt.\n2. Tipp\nUm zu überleben, muss man perfekt an seinen Lebensraum angepasst sein.\n\n**Ergänze den Infotext zur Anpassung des Maulwurfs.** \n1. Tipp\nWenn du durch einen dunklen Raum läufst, dann tastest du dich langsam vor.\n2. Tipp\nWenn du einen Hund streichelst, dann streichst du ihm vom Kopf aus über den Rücken. Damit folgst du dem Strich seines Fells.\n\n**Beschreibe den Braun- und den Eisbären.** \n1. Tipp\nPflanzen gibt es nur sehr selten in den Polargebieten.\n2. Tipp\nDas Fell eines Tieres sollte am besten an die Umgebung angepasst sein, damit sich das Tier tarnen kann.\n3. Tipp\nSpitze Backenzähne wären ungeeignet, um Beeren zu fressen.\n\n**Ordne die Schädel den passenden Tieren zu.**\n1. Tipp\nEinige Tiere müssen ihre Beute jagen. Das sind die sogenannten Raubtiere. Sie müssen das perfekte Werkzeug haben, um ihre Beute zu fangen und zu zerkleinern.\n2. Tipp\nNagetiere besitzen Zähne, die stetig nachwachsen.\n3. Tipp\nIm Beispiel sind Insektenfresser, Pflanzenfresser, Fleischfresser, Nagetiere und Allesfresser zu sehen.\n\n**Gib an, ob ein Tier eher in einer warmen oder in einer kalten Region vorkommt.**\n1. Tipp\nGroße Ohren sind meistens ein Zeichen für warme Regionen.\n2. Tipp\nDie Fellfarbe kann einen Hinweis auf den Lebensraum geben.\n\n**Bestimme Beispiele zur Anpassung von Lebewesen.**\n1. Tipp\nBeim Maulwurf sind die Augen unterentwickelt, da er diese nicht mehr benötigt. Auch andere Organe können vollständig zurückentwickelt werden.\n2. Tipp\nAusreichend Nahrung ist nicht das ganze Jahr über vorhanden. Eichhörnchen vergraben beispielsweise Nüsse, die sie in Jahreszeiten mit wenig Nahrung wieder ausgraben und fressen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Gib an, ob die Aussagen zur Anpassung von Säugetieren richtig sind.**\n1. Tipp\nDie Rückbildung der Augen beim Maulwurf hatte keinerlei Folgen für das Leben des Maulwurfs. Er lebte ohnehin unter der Erde und die unterentwickelten Augen beeinträchtigen ihn nicht. Deshalb blieben die Augen des Maulwurfs unterentwickelt.\n2. Tipp\nUm zu überleben, muss man perfekt an seinen Lebensraum angepasst sein.\n\n**Ergänze den Infotext zur Anpassung des Maulwurfs.** \n1. Tipp\nWenn du durch einen dunklen Raum läufst, dann tastest du dich langsam vor.\n2. Tipp\nWenn du einen Hund streichelst, dann streichst du ihm vom Kopf aus über den Rücken. Damit folgst du dem Strich seines Fells.\n\n**Beschreibe den Braun- und den Eisbären.** \n1. Tipp\nPflanzen gibt es nur sehr selten in den Polargebieten.\n2. Tipp\nDas Fell eines Tieres sollte am besten an die Umgebung angepasst sein, damit sich das Tier tarnen kann.\n3. Tipp\nSpitze Backenzähne wären ungeeignet, um Beeren zu fressen.\n\n**Ordne die Schädel den passenden Tieren zu.**\n1. Tipp\nEinige Tiere müssen ihre Beute jagen. Das sind die sogenannten Raubtiere. Sie müssen das perfekte Werkzeug haben, um ihre Beute zu fangen und zu zerkleinern.\n2. Tipp\nNagetiere besitzen Zähne, die stetig nachwachsen.\n3. Tipp\nIm Beispiel sind Insektenfresser, Pflanzenfresser, Fleischfresser, Nagetiere und Allesfresser zu sehen.\n\n**Gib an, ob ein Tier eher in einer warmen oder in einer kalten Region vorkommt.**\n1. Tipp\nGroße Ohren sind meistens ein Zeichen für warme Regionen.\n2. Tipp\nDie Fellfarbe kann einen Hinweis auf den Lebensraum geben.\n\n**Bestimme Beispiele zur Anpassung von Lebewesen.**\n1. Tipp\nBeim Maulwurf sind die Augen unterentwickelt, da er diese nicht mehr benötigt. Auch andere Organe können vollständig zurückentwickelt werden.\n2. Tipp\nAusreichend Nahrung ist nicht das ganze Jahr über vorhanden. Eichhörnchen vergraben beispielsweise Nüsse, die sie in Jahreszeiten mit wenig Nahrung wieder ausgraben und fressen.",
+      "id": [
+        "131314"
+      ],
+      "item": "Unsere Tipps für die Aufgaben"
+    }
+  }
+]

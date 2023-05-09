@@ -1,0 +1,3624 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:216167]\n[@externalId:e-die-indirekte-redereported-spe_xq4k4wteufxq]\n[#Die indirekte Rede/Reported Speech – Übungen]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/englisch-hilfen/web-resources/images/englischhilfen_grammatik_cover.png]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216167"
+      ],
+      "externalId": [
+        "e-die-indirekte-redereported-spe_xq4k4wteufxq"
+      ],
+      "title": "Die indirekte Rede/Reported Speech – Übungen",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/englisch-hilfen/web-resources/images/englischhilfen_grammatik_cover.png"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216169]\n[%Nr. 2310]\n[!Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.]\n0. ​Peter: \"I clean the black shoes.\"\nPeter told me (that) [_he cleaned the black shoes][@example].\n1. John: \"Mandy is at home.\"\nJohn said (that) [_Mandy was at home].\n2. Max: \"Frank often reads a book.\"\nMax told me (that) [_Frank often read a book].\n3. Susan: \"I'm watching TV.\"\nSusan said to me (that) [_she was watching TV].\n4. Simon: \"David was ill.\"\nSimon said (that) [_David had been ill].\n5. Peggy: \"The girls helped in the house.\"\nPeggy told me (that) [_the girls had helped in the house].\n6. Richard: \"I am going to ride my skateboard.\"\nRichard said to me (that) [_he was going to ride his skateboard].\n7. Stephen and Claire: \"We have cleaned the windows.\"\nStephen and Claire told me (that) [_they had cleaned the windows].\n8. Charles: \"I didn't have time to do my homework.\"\nCharles remarked (that) [_he hadn't had time to do his homework].\n9. Mrs Jones: \"My mother will be 50 years old.\"\nMrs Jones told me (that) [_her mother would be 50 years old].\n10. Jean: \"The boss must sign the letter.\"\nJean said (that) [_the boss had to sign the letter].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. ​Peter: \"I clean the black shoes.\"\nPeter told me (that) {0}.\n1. John: \"Mandy is at home.\"\nJohn said (that) {1}.\n2. Max: \"Frank often reads a book.\"\nMax told me (that) {2}.\n3. Susan: \"I'm watching TV.\"\nSusan said to me (that) {3}.\n4. Simon: \"David was ill.\"\nSimon said (that) {4}.\n5. Peggy: \"The girls helped in the house.\"\nPeggy told me (that) {5}.\n6. Richard: \"I am going to ride my skateboard.\"\nRichard said to me (that) {6}.\n7. Stephen and Claire: \"We have cleaned the windows.\"\nStephen and Claire told me (that) {7}.\n8. Charles: \"I didn't have time to do my homework.\"\nCharles remarked (that) {8}.\n9. Mrs Jones: \"My mother will be 50 years old.\"\nMrs Jones told me (that) {9}.\n10. Jean: \"The boss must sign the letter.\"\nJean said (that) {10}.",
+      "item": "Nr. 2310",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216169"
+      ],
+      "instruction": "Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "he cleaned the black shoes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Mandy was at home"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Frank often read a book"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "she was watching TV"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "David had been ill"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "the girls had helped in the house"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "he was going to ride his skateboard"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "they had cleaned the windows"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "he hadn't had time to do his homework"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "her mother would be 50 years old"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "the boss had to sign the letter"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216170]\n[%Nr. 2312]\n[!Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.]\n0. Peter: \"I cleaned the black shoes yesterday.\"\nPeter told me (that) [_he had cleaned the black shoes the day before][@example].\n1. Emily: \"Our teacher will go to Leipzig tomorrow.\"\nEmily said (that) [_their teacher would go to Leipzig the next day].\n2. Helen: \"I was writing a letter yesterday.\"\nHelen told me (that) [_she had been writing a letter the day before].\n3. Robert: \"My father flew to Dallas last year.\"\nRobert told me (that) [_his father had flown to Dallas the year before].\n4. Lisa: \"Tim went to the stadium an hour ago.\"\nLisa said (that) [_Tim had gone to the stadium an hour before].\n5. Patricia: \"My mother will celebrate her birthday next weekend.\"\nPatricia said (that) [_her mother would celebrate her birthday the following weekend].\n6. Michael: \"I am going to read a book this week.\"\nMichael said to me (that) [_he was going to read a book that week].\n7. Jason and Victoria: \"We will do our best in the exams tomorrow.\"\nJason and Victoria told me (that) [_they would do their best in the exams the next day].\n8. Andrew: \"We didn't eat fish two days ago.\"\nAndrew remarked (that) [_they hadn't eaten fish two days before].\n9. Alice: \"I spent all my pocket money on Monday.\"\nAlice complained (that) [_she had spent all her pocket money on Monday].\n10. David: \"John had already gone at six.\"\nDavid said (that) [_John had already gone at six].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. Peter: \"I cleaned the black shoes yesterday.\"\nPeter told me (that) {0}.\n1. Emily: \"Our teacher will go to Leipzig tomorrow.\"\nEmily said (that) {1}.\n2. Helen: \"I was writing a letter yesterday.\"\nHelen told me (that) {2}.\n3. Robert: \"My father flew to Dallas last year.\"\nRobert told me (that) {3}.\n4. Lisa: \"Tim went to the stadium an hour ago.\"\nLisa said (that) {4}.\n5. Patricia: \"My mother will celebrate her birthday next weekend.\"\nPatricia said (that) {5}.\n6. Michael: \"I am going to read a book this week.\"\nMichael said to me (that) {6}.\n7. Jason and Victoria: \"We will do our best in the exams tomorrow.\"\nJason and Victoria told me (that) {7}.\n8. Andrew: \"We didn't eat fish two days ago.\"\nAndrew remarked (that) {8}.\n9. Alice: \"I spent all my pocket money on Monday.\"\nAlice complained (that) {9}.\n10. David: \"John had already gone at six.\"\nDavid said (that) {10}.",
+      "item": "Nr. 2312",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216170"
+      ],
+      "instruction": "Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "he had cleaned the black shoes the day before"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "their teacher would go to Leipzig the next day"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "she had been writing a letter the day before"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "his father had flown to Dallas the year before"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Tim had gone to the stadium an hour before"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "her mother would celebrate her birthday the following weekend"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "he was going to read a book that week"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "they would do their best in the exams the next day"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "they hadn't eaten fish two days before"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "she had spent all her pocket money on Monday"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "John had already gone at six"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216171]\n[%Nr. 2322]\n[!Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.]\n0. Peter: \"Did John clean the black shoes?\"\nPeter asked me [_if John had cleaned the black shoes][@example].\n1. Christopher: \"Do you want to dance?\"\nChristopher asked me [_if I wanted to dance].\n2. Betty: \"When did you come?\"\nBetty wanted to know [_when I had come].\n3. Mark: \"Has John arrived?\"\nMark asked me [_if John had arrived].\n4. Ronald: \"Where does Maria park her car?\"\nRonald asked me [_where Maria parked her car].\n5. Elisabeth: \"Did you watch the latest film?\"\nElisabeth asked me [_if I had watched the latest film].\n6. Mandy: \"Can I help you?\"\nMandy wanted to know [_if she could help me].\n7. Andrew: \"Will Mandy have lunch with Sue?\"\nAndrew asked me [_if Mandy would have lunch with Sue].\n8. Justin: \"What are you doing?\"\nJustin asked me [_what I was doing].\n9. Frank: \"How much pocket money does Lisa get?\"\nFrank wanted to know [_how much pocket money Lisa got].\n10. Anne: \"Must I do the shopping?\"\nAnne asked [_if she had to do the shopping].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. Peter: \"Did John clean the black shoes?\"\nPeter asked me {0}.\n1. Christopher: \"Do you want to dance?\"\nChristopher asked me {1}.\n2. Betty: \"When did you come?\"\nBetty wanted to know {2}.\n3. Mark: \"Has John arrived?\"\nMark asked me {3}.\n4. Ronald: \"Where does Maria park her car?\"\nRonald asked me {4}.\n5. Elisabeth: \"Did you watch the latest film?\"\nElisabeth asked me {5}.\n6. Mandy: \"Can I help you?\"\nMandy wanted to know {6}.\n7. Andrew: \"Will Mandy have lunch with Sue?\"\nAndrew asked me {7}.\n8. Justin: \"What are you doing?\"\nJustin asked me {8}.\n9. Frank: \"How much pocket money does Lisa get?\"\nFrank wanted to know {9}.\n10. Anne: \"Must I do the shopping?\"\nAnne asked {10}.",
+      "item": "Nr. 2322",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216171"
+      ],
+      "instruction": "Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "if John had cleaned the black shoes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "if I wanted to dance"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "when I had come"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "if John had arrived"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "where Maria parked her car"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "if I had watched the latest film"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "if she could help me"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "if Mandy would have lunch with Sue"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "what I was doing"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "how much pocket money Lisa got"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "if she had to do the shopping"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216172]\n[%Nr. 2324]\n[!Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.]\n0. Peter: \"Did John clean the black shoes yesterday?\"\nPeter asked me [_if John had cleaned the black shoes the day before][@example].\n1. Mandy: \"Are the boys reading the book?\"\nYesterday Mandy asked me [_if the boys were reading the book].\n2. Jason: \"Who gave you the laptop?\"\nYesterday Jason wanted to know [_who had given me the laptop].\n3. Robert: \"Is Tim leaving on Friday?\"\nYesterday Robert asked me [_if Tim was leaving on Friday].\n4. Daniel: \"Will it rain tomorrow?\"\nYesterday Daniel asked me [_if it would rain today].\n5. Jennifer: \"Where do you play football today?\"\nYesterday Jennifer wanted to know [_where I played football].\n6. Nancy: \"Why didn't Nick go to New York last summer?\"\nYesterday Nancy wanted to know [_why Nick hadn't gone to New York the summer before].\n7. Barbara: \"Must I do my homework this afternoon?\"\nYesterday Barbara asked me [_if she had to do her homework that afternoon].\n8. Linda: \"Did Max fly to London two weeks ago?\"\nYesterday Linda wanted to know [_if Max had flown to London two weeks before].\n9. Grandmother: \"Where are my glasses?\"\nYesterday Grandmother asked me [_where her glasses were].\n10. A man: \"When does the train to Liverpool leave?\"\nYesterday a man asked me [_when the train to Liverpool left].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. Peter: \"Did John clean the black shoes yesterday?\"\nPeter asked me {0}.\n1. Mandy: \"Are the boys reading the book?\"\nYesterday Mandy asked me {1}.\n2. Jason: \"Who gave you the laptop?\"\nYesterday Jason wanted to know {2}.\n3. Robert: \"Is Tim leaving on Friday?\"\nYesterday Robert asked me {3}.\n4. Daniel: \"Will it rain tomorrow?\"\nYesterday Daniel asked me {4}.\n5. Jennifer: \"Where do you play football today?\"\nYesterday Jennifer wanted to know {5}.\n6. Nancy: \"Why didn't Nick go to New York last summer?\"\nYesterday Nancy wanted to know {6}.\n7. Barbara: \"Must I do my homework this afternoon?\"\nYesterday Barbara asked me {7}.\n8. Linda: \"Did Max fly to London two weeks ago?\"\nYesterday Linda wanted to know {8}.\n9. Grandmother: \"Where are my glasses?\"\nYesterday Grandmother asked me {9}.\n10. A man: \"When does the train to Liverpool leave?\"\nYesterday a man asked me {10}.",
+      "item": "Nr. 2324",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216172"
+      ],
+      "instruction": "Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "if John had cleaned the black shoes the day before"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "if the boys were reading the book"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "who had given me the laptop"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "if Tim was leaving on Friday"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "if it would rain today"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "where I played football"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "why Nick hadn't gone to New York the summer before"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "if she had to do her homework that afternoon"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "if Max had flown to London two weeks before"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "where her glasses were"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "when the train to Liverpool left"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216173]\n[%Nr. 2326]\n[!Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.]\n0. Peter: \"Clean the black shoes!\"\nPeter told me [_to clean the black shoes][@example].\n1. Andrew: \"Clean the blue bike!\"\nAndrew told me [_to clean the blue bike].\n2. Jessica: \"Write a text message!\"\nJessica told me [_to write a text message].\n3. Nelly: \"Help Peter's sister!\"\nNelly told me [_to help Peter's sister].\n4. Fred: \"Wash your hands!\"\nFred told me [_to wash my hands].\n5. Anna: \"Open the window!\"\nAnna told me [_to open the window].\n6. Tom: \"Come at 8!\"\nTom told me [_to come at 8].\n7. Teacher: \"Do your homework!\"\nThe teacher told me [_to do my homework].\n8. Doris: \"Dance with me!\"\nDoris told me [_to dance with her].\n9. Sabine: \"Meet Sandy at the station!\"\nSabine told me [_to meet Sandy at the station].\n10. Victoria: \"Check your e-mails!\"\nVictoria told me [_to check my e-mails].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. Peter: \"Clean the black shoes!\"\nPeter told me {0}.\n1. Andrew: \"Clean the blue bike!\"\nAndrew told me {1}.\n2. Jessica: \"Write a text message!\"\nJessica told me {2}.\n3. Nelly: \"Help Peter's sister!\"\nNelly told me {3}.\n4. Fred: \"Wash your hands!\"\nFred told me {4}.\n5. Anna: \"Open the window!\"\nAnna told me {5}.\n6. Tom: \"Come at 8!\"\nTom told me {6}.\n7. Teacher: \"Do your homework!\"\nThe teacher told me {7}.\n8. Doris: \"Dance with me!\"\nDoris told me {8}.\n9. Sabine: \"Meet Sandy at the station!\"\nSabine told me {9}.\n10. Victoria: \"Check your e-mails!\"\nVictoria told me {10}.",
+      "item": "Nr. 2326",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216173"
+      ],
+      "instruction": "Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "to clean the black shoes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "to clean the blue bike"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "to write a text message"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "to help Peter's sister"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "to wash my hands"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "to open the window"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "to come at 8"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "to do my homework"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "to dance with her"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "to meet Sandy at the station"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "to check my e-mails"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216174]\n[%Nr. 2328]\n[!Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.]\n0. Peter: \"Don't clean the black shoes!\"\nPeter told me [_not to clean the black shoes][@example].\n1. Karen: \"Don't play football in the garden!\"\nKaren told me [_not to play football in the garden].\n2. Teacher: \"Don't forget your homework!\"\nThe teacher reminded me [_not to forget my homework].\n3. Mike: \"Don't shout at Peter!\"\nMike told me [_not to shout at Peter].\n4. Yvonne: \"Don't talk to your neighbour!\"\nYvonne told me [_not to talk to my neighbour].\n5. Denise: \"Don't open the door!\"\nDenise told me [_not to open the door].\n6. Marcel: \"Don't sing that song!\"\nMarcel reminded me [_not to sing that song].\n7. Jane: \"Don't watch the new film!\"\nJane advised me [_not to watch the new film].\n8. Jane: \"Don't watch the new film!\"\nJane advised me [_not to watch the new film].\n9. Lisa: \"Don't fly via Paris!\"\nLisa advised me [_not to fly via Paris].\n10. Jamie: \"Don't eat so much junk food!\"\nJamie reminded me [_not to eat so much junk food].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. Peter: \"Don't clean the black shoes!\"\nPeter told me {0}.\n1. Karen: \"Don't play football in the garden!\"\nKaren told me {1}.\n2. Teacher: \"Don't forget your homework!\"\nThe teacher reminded me {2}.\n3. Mike: \"Don't shout at Peter!\"\nMike told me {3}.\n4. Yvonne: \"Don't talk to your neighbour!\"\nYvonne told me {4}.\n5. Denise: \"Don't open the door!\"\nDenise told me {5}.\n6. Marcel: \"Don't sing that song!\"\nMarcel reminded me {6}.\n7. Jane: \"Don't watch the new film!\"\nJane advised me {7}.\n8. Jane: \"Don't watch the new film!\"\nJane advised me {8}.\n9. Lisa: \"Don't fly via Paris!\"\nLisa advised me {9}.\n10. Jamie: \"Don't eat so much junk food!\"\nJamie reminded me {10}.",
+      "item": "Nr. 2328",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216174"
+      ],
+      "instruction": "Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "not to clean the black shoes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "not to play football in the garden"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "not to forget my homework"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "not to shout at Peter"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "not to talk to my neighbour"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "not to open the door"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "not to sing that song"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "not to watch the new film"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "not to watch the new film"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "not to fly via Paris"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "not to eat so much junk food"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216175]\n[%Nr. 2318]\n[!Beende die vorgegebenen Sätze in der indirekte Rede. Achte auf die Einleitungssätze und die Verschiebung bei den Zeiten.]\n0. Henry: \"Greg is feeding the dog.\"\nHenry told me (that) Greg [_was feeding the dog][@example].\n1. Tim: \"She works in an office.\"\nTim said (that) she [_worked in an office].\n2. Jessica: \"I am going to clean the room.\"\nJessica told me (that) she [_was going to clean the room].\n3. Jeff: \"They like the song.\"\nJeff said (that) they [_liked the song].\n4. Ian and Marvin: \"We need new shoes.\"\nIan and Marvin remarked (that) they [_needed new shoes].\n5. Kathy: \"He can speak Spanish.\"\nKathy told us (that) he [_could speak Spanish].\n6. Teacher: \"Rachel has never been to Philadelphia.\"\nThe teacher said (that) Rachel [_had never been to Philadelphia].\n7. Lucy: \"The train didn't arrive on time.\"\nLucy said to Gerry (that) the train [_hadn't arrived on time].\n8. Emma: \"I'm sitting on the chair.\"\nEmma  said (that) she [_was sitting on the chair].\n9. Nick: \"Walter doesn't eat meat.\"\nNick told us (that) Walter [_didn't eat meat].\n10. Holly: \"Abby and Nathan will travel to Alaska.\"\nHolly remarked (that) Abby and Nathan [_would travel to Alaska].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. Henry: \"Greg is feeding the dog.\"\nHenry told me (that) Greg {0}.\n1. Tim: \"She works in an office.\"\nTim said (that) she {1}.\n2. Jessica: \"I am going to clean the room.\"\nJessica told me (that) she {2}.\n3. Jeff: \"They like the song.\"\nJeff said (that) they {3}.\n4. Ian and Marvin: \"We need new shoes.\"\nIan and Marvin remarked (that) they {4}.\n5. Kathy: \"He can speak Spanish.\"\nKathy told us (that) he {5}.\n6. Teacher: \"Rachel has never been to Philadelphia.\"\nThe teacher said (that) Rachel {6}.\n7. Lucy: \"The train didn't arrive on time.\"\nLucy said to Gerry (that) the train {7}.\n8. Emma: \"I'm sitting on the chair.\"\nEmma  said (that) she {8}.\n9. Nick: \"Walter doesn't eat meat.\"\nNick told us (that) Walter {9}.\n10. Holly: \"Abby and Nathan will travel to Alaska.\"\nHolly remarked (that) Abby and Nathan {10}.",
+      "item": "Nr. 2318",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216175"
+      ],
+      "instruction": "Beende die vorgegebenen Sätze in der indirekte Rede. Achte auf die Einleitungssätze und die Verschiebung bei den Zeiten.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "was feeding the dog"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "worked in an office"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "was going to clean the room"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "liked the song"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "needed new shoes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "could speak Spanish"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "had never been to Philadelphia"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "hadn't arrived on time"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "was sitting on the chair"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "didn't eat meat"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "would travel to Alaska"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216176]\n[%Nr. 2316]\n[!Setze in die Sätze der indirekten Rede die passenden Pronomen ein. Wähle dabei aus den Vorgaben aus und beachte die vorgegebenen Satzteile.]\n1. Jacob: \"I work in an office.\"\nJacob told me (that) [-I][+he][-her][-him][-my][-our][-she][-their][-they] worked in an office.\n2. Ryan and Lucas: \"We play football.\"\nRyan and Lucas told me (that) [-I][-he][-her][-him][-my][-our][-she][-their][+they] played football.\n3. Victoria: \"I like my cat.\"\nVictoria told me (that) [-I][-he][-her][-him][-my][-our][+she][-their][-they] liked [-I][-he][+her][-him][-my][-our][-she][-their][-they] cat.\n4. Henry: \"Can you see me?\"\nHenry asked me if [+I][-he][-her][-him][-my][-our][-she][-their][-they] could see [-I][-he][-her][+him][-my][-our][-she][-their][-they].\n5. Julian: \"I will have to borrow your pencil.\"\nJulian told me (that) [-I][+he][-her][-him][-my][-our][-she][-their][-they] would have to borrow [-I][-he][-her][-him][+my][-our][-she][-their][-they] pencil.\n6. Melanie: \"My father is Jamaican.\"\nMelanie told me (that) [-I][-he][+her][-him][-my][-our][-she][-their][-they] father is Jamaican.\n7. Emma and Doris: \"Can we use your camera?\"\nEmma and Doris asked me if [-I][-he][-her][-him][-my][-our][-she][-their][+they] could use [-I][-he][-her][-him][+my][-our][-she][-their][-they] camera.\n8. Leah: \"How is your journey?\"\nLeah asked me how [-I][-he][-her][-him][+my][-our][-she][-their][-they] journey was.\n9. Isabella and Ella: \"We love our pets.\"\nIsabella and Ella told me (that) [-I][-he][-her][-him][-my][-our][-she][-their][+they] loved [-I][-he][-her][-him][-my][-our][-she][+their][-they] pets.\n10. Grandmother: \"Please bring me a cup of my tea.\"\nGrandmother told me to bring [-I][-he][+her][-him][-my][-our][-she][-their][-they] a cup of [-I][-he][+her][-him][-my][-our][-she][-their][-they] tea.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Jacob: \"I work in an office.\"\nJacob told me (that) {0} worked in an office.\n2. Ryan and Lucas: \"We play football.\"\nRyan and Lucas told me (that) {1} played football.\n3. Victoria: \"I like my cat.\"\nVictoria told me (that) {2} liked {3} cat.\n4. Henry: \"Can you see me?\"\nHenry asked me if {4} could see {5}.\n5. Julian: \"I will have to borrow your pencil.\"\nJulian told me (that) {6} would have to borrow {7} pencil.\n6. Melanie: \"My father is Jamaican.\"\nMelanie told me (that) {8} father is Jamaican.\n7. Emma and Doris: \"Can we use your camera?\"\nEmma and Doris asked me if {9} could use {10} camera.\n8. Leah: \"How is your journey?\"\nLeah asked me how {11} journey was.\n9. Isabella and Ella: \"We love our pets.\"\nIsabella and Ella told me (that) {12} loved {13} pets.\n10. Grandmother: \"Please bring me a cup of my tea.\"\nGrandmother told me to bring {14} a cup of {15} tea.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{15}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "him",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "my",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216176"
+      ],
+      "item": "Nr. 2316",
+      "instruction": "Setze in die Sätze der indirekten Rede die passenden Pronomen ein. Wähle dabei aus den Vorgaben aus und beachte die vorgegebenen Satzteile."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216177]\n[%Nr. 2314]\n[!Wie endet der Satz in der indirekten Rede? Wähle aus den Vorgaben aus und beachte dabei den Einleitungssatz.]\n1. Benjamin: \"I often have a big hamburger.\"\nBenjamin says (that) [+he often has a big hamburger][-he often had a big hamburger].\n2. Hannah: \"They live in Boston.\"\nHannah said (that) [-they live in Boston][+they lived in Boston].\n3. Tyler: \"Ian doesn't invite girls to his parties.\"\nTyler told me (that) [-Ian doesn't invite girls to his parties][+Ian didn't invite girls to his parties].\n4. Dominic: \"She understands Japanese.\"\nDominic remarks (that) [-she understood Japanese][+she understands Japanese].\n5. Sophia: \"Bella doesn't collect stickers.\"\nSophia explains (that) [+Bella doesn't collect stickers][-Bella didn't collect stickers].\n6. Robert: \"Dennis often downloads the latest tunes.\"\nRobert added (that) [-Dennis often downloads the latest tunes.][+Dennis often downloaded the latest tunes.]\n7. Olivia: \"Leroy is out riding his new waveboard today.\"\nOlivia explained (that) [-Leroy is out riding his new waveboard today][+Leroy was out riding his new waveboard that day].\n8. Luke: \"I don't know what to do.\"\nLuke added (that) [-he doesn't know what to do][+he didn't know what to do].\n9. Lily: \"Mr Jones is rude to Samantha.\"\nLily thinks (that) [+Mr Jones is rude to Samantha][-Mr Jones was rude to Samantha].\n10. James and David: \"We have to go now.\"\nJames and David tell me (that) [+they have to go now][+they had to go then].",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Benjamin: \"I often have a big hamburger.\"\nBenjamin says (that) {0}.\n2. Hannah: \"They live in Boston.\"\nHannah said (that) {1}.\n3. Tyler: \"Ian doesn't invite girls to his parties.\"\nTyler told me (that) {2}.\n4. Dominic: \"She understands Japanese.\"\nDominic remarks (that) {3}.\n5. Sophia: \"Bella doesn't collect stickers.\"\nSophia explains (that) {4}.\n6. Robert: \"Dennis often downloads the latest tunes.\"\nRobert added (that) {5}\n7. Olivia: \"Leroy is out riding his new waveboard today.\"\nOlivia explained (that) {6}.\n8. Luke: \"I don't know what to do.\"\nLuke added (that) {7}.\n9. Lily: \"Mr Jones is rude to Samantha.\"\nLily thinks (that) {8}.\n10. James and David: \"We have to go now.\"\nJames and David tell me (that) {9}.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "he often has a big hamburger",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "he often had a big hamburger",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "they live in Boston",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they lived in Boston",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Ian doesn't invite girls to his parties",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Ian didn't invite girls to his parties",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "she understood Japanese",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "she understands Japanese",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Bella doesn't collect stickers",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Bella didn't collect stickers",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Dennis often downloads the latest tunes.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Dennis often downloaded the latest tunes.",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Leroy is out riding his new waveboard today",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Leroy was out riding his new waveboard that day",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "he doesn't know what to do",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "he didn't know what to do",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Mr Jones is rude to Samantha",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Mr Jones was rude to Samantha",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "they have to go now",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "they had to go then",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216177"
+      ],
+      "item": "Nr. 2314",
+      "instruction": "Wie endet der Satz in der indirekten Rede? Wähle aus den Vorgaben aus und beachte dabei den Einleitungssatz."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216178]\n[%Nr. 2320]\n[!Wenn der Einleitungssatz in der indirekten Rede im Simple Past steht, werden Zeitangaben verändert. Welche Zeitangabe wird wie verändert? Wähle die richtige Form aus dem Auswahlmenü.]\n1. today - [-a week before][+that day][-that morning][-the day before][-the following week][-the next day][-the week before][-the weekend before][-those days][-then]\n2. yesterday - [-a week before][-that day][-that morning][+the day before][-the following week][-the next day][-the week before][-the weekend before][-those days][-then]\n3. tomorrow - [-a week before][-that day][-that morning][-the day before][-the following week][+the next day][-the week before][-the weekend before][-those days][-then]\n4. a week ago - [+a week before][-that day][-that morning][-the day before][-the following week][-the next day][-the week before][-the weekend before][-those days][-then]\n5. last weekend - [-a week before][-that day][-that morning][-the day before][-the following week][-the next day][-the week before][+the weekend before][-those days][-then]\n6. next week - [-a week before][-that day][-that morning][-the day before][+the following week][-the next day][-the week before][-the weekend before][-those days][-then]\n7. these days - [-a week before][-that day][-that morning][-the day before][-the following week][-the next day][-the week before][-the weekend before][+those days][-then]\n8. last week - [-a week before][-that day][-that morning][-the day before][-the following week][-the next day][+the week before][-the weekend before][-those days][-then]\n9. now - [-a week before][-that day][-that morning][-the day before][-the following week][-the next day][-the week before][-the weekend before][-those days][+then]\n10. this morning - [-a week before][-that day][+that morning][-the day before][-the following week][-the next day][-the week before][-the weekend before][-those days][-then]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. today - {0}\n2. yesterday - {1}\n3. tomorrow - {2}\n4. a week ago - {3}\n5. last weekend - {4}\n6. next week - {5}\n7. these days - {6}\n8. last week - {7}\n9. now - {8}\n10. this morning - {9}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that day",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "that morning",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the day before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the following week",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the next day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the weekend before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "those days",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that morning",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the day before",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the following week",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the next day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the weekend before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "those days",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that morning",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the day before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the following week",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the next day",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the weekend before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "those days",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a week before",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "that day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that morning",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the day before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the following week",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the next day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the weekend before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "those days",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that morning",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the day before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the following week",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the next day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the weekend before",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "those days",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that morning",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the day before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the following week",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the next day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the weekend before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "those days",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that morning",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the day before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the following week",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the next day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the weekend before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "those days",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that morning",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the day before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the following week",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the next day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the week before",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the weekend before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "those days",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that morning",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the day before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the following week",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the next day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the weekend before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "those days",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that morning",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the day before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the following week",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the next day",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the week before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the weekend before",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "those days",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216178"
+      ],
+      "item": "Nr. 2320",
+      "instruction": "Wenn der Einleitungssatz in der indirekten Rede im Simple Past steht, werden Zeitangaben verändert. Welche Zeitangabe wird wie verändert? Wähle die richtige Form aus dem Auswahlmenü."
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216179]\n[%Nr. 2334]\n[!Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.]\n0. Jeremy: \"I have always wanted a dog.\"\nJeremy said (that) [_he had always wanted a dog][@example].\n1. Grandma: \"Dad has made breakfast.\"\nGrandma said (that) [_Dad had made breakfast].\n2. Mia and Zoe: \"We have cleaned the kitchen.\"\nMia and Zoe said (that) [_they had cleaned the kitchen].\n3. Tom: \"She has left the house.\"\nTom remarked (that) [_she had left the house].\n4. Ella: \"I have taken great photos.\"\nElla told me (that) [_she had taken great photos].\n5. Max: \"They haven't written text messages.\"\nMax said (that) [_they hadn't written text messages].\n6. Henry: \"Lisa has tried skateboarding.\"\nHenry mentioned (that) [_Lisa had tried skateboarding].\n7. Anna: \"Richard has never touched a snake.\"\nAnna said (that) [_Richard had never touched a snake].\n8. Lucas: \"I haven't seen my brother since 2018.\"\nLucas remarked (that) [_he hadn't seen his brother since 2018].\n9. Grace: \"Ken has fed the pets.\"\nGrace told me (that) [_Ken had fed the pets].\n10. Ruby: \"Adam has not collected stickers.\"\nRuby told me (that) [_Adam had not collected stickers].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. Jeremy: \"I have always wanted a dog.\"\nJeremy said (that) {0}.\n1. Grandma: \"Dad has made breakfast.\"\nGrandma said (that) {1}.\n2. Mia and Zoe: \"We have cleaned the kitchen.\"\nMia and Zoe said (that) {2}.\n3. Tom: \"She has left the house.\"\nTom remarked (that) {3}.\n4. Ella: \"I have taken great photos.\"\nElla told me (that) {4}.\n5. Max: \"They haven't written text messages.\"\nMax said (that) {5}.\n6. Henry: \"Lisa has tried skateboarding.\"\nHenry mentioned (that) {6}.\n7. Anna: \"Richard has never touched a snake.\"\nAnna said (that) {7}.\n8. Lucas: \"I haven't seen my brother since 2018.\"\nLucas remarked (that) {8}.\n9. Grace: \"Ken has fed the pets.\"\nGrace told me (that) {9}.\n10. Ruby: \"Adam has not collected stickers.\"\nRuby told me (that) {10}.",
+      "item": "Nr. 2334",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216179"
+      ],
+      "instruction": "Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "he had always wanted a dog"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Dad had made breakfast"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "they had cleaned the kitchen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "she had left the house"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "she had taken great photos"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "they hadn't written text messages"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Lisa had tried skateboarding"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Richard had never touched a snake"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "he hadn't seen his brother since 2018"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Ken had fed the pets"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Adam had not collected stickers"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216180]\n[%Nr. 2336]\n[!Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.]\n0. Joe: \"I'm drawing a picture.\"\nJoe said (that) [_he was drawing a picture][@example].\n1. Jenny: \"I'm coming down.\"\nJenny said (that) [_she was coming down].\n2. Tim: \"Jack is having breakfast.\"\nTim said (that) [_Jack was having breakfast].\n3. Jamy: \"She's telling a joke.\"\nJamy told me (that) [_she was telling a joke].\n4. Mavis: \"The dog is running after the cat.\"\nMavis remarked (that) [_the dog was running after the cat].\n5. Peter: \"I'm playing the piano.\"\nPeter said (that) [_he was playing the piano].\n6. Zack: \"You're drinking tea.\"\nZack mentioned (that) [_I was drinking tea].\n7. Ella: \"It's not raining.\"\nElla remarked (that) [_it was not raining].\n8. Jacob: \"Riley is checking the computer.\"\nJacob said (that) [_Riley was checking the computer].\n9. Owen: \"They aren't watching TV.\"\nOwen told me (that) [_they weren't watching TV].\n10. Nora: \"He is learning Spanish words.\"\nNora said (that) [_he was learning Spanish words].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. Joe: \"I'm drawing a picture.\"\nJoe said (that) {0}.\n1. Jenny: \"I'm coming down.\"\nJenny said (that) {1}.\n2. Tim: \"Jack is having breakfast.\"\nTim said (that) {2}.\n3. Jamy: \"She's telling a joke.\"\nJamy told me (that) {3}.\n4. Mavis: \"The dog is running after the cat.\"\nMavis remarked (that) {4}.\n5. Peter: \"I'm playing the piano.\"\nPeter said (that) {5}.\n6. Zack: \"You're drinking tea.\"\nZack mentioned (that) {6}.\n7. Ella: \"It's not raining.\"\nElla remarked (that) {7}.\n8. Jacob: \"Riley is checking the computer.\"\nJacob said (that) {8}.\n9. Owen: \"They aren't watching TV.\"\nOwen told me (that) {9}.\n10. Nora: \"He is learning Spanish words.\"\nNora said (that) {10}.",
+      "item": "Nr. 2336",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216180"
+      ],
+      "instruction": "Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "he was drawing a picture"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "she was coming down"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Jack was having breakfast"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "she was telling a joke"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "the dog was running after the cat"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "he was playing the piano"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "I was drinking tea"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "it was not raining"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Riley was checking the computer"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "they weren't watching TV"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "he was learning Spanish words"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216181]\n[%Nr. 2332]\n[!Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.]\n0. Layla: \"They landed on a little island.\"\nLayla said (that) [_they had landed on a little island][@example].\n1. Emma: \"The train left at eight.\"\nEmma said (that) [_the train had left at eight].\n2. Sophia: \"Dan forgot his keys.\"\nSophia said (that) [_Dan had forgotten his keys].\n3. Alexander: \"I had a meeting at four.\"\nAlexander remarked (that) [_he had had a meeting at four].\n4. Jackson and Leo: \"We visited Aunt Elisabeth.\"\nJackson and Leo said (that) [_they had visited Aunt Elisabeth].\n5. Mum: \"William repaired the printer.\"\nMum remarked (that) [_William had repaired the printer].\n6. Toby: \"Jeff didn't like the food in the restaurant.\"\nToby mentioned (that) [_Jeff hadn't liked the food in the restaurant].\n7. Hannah: \"I walked to the museum.\"\nHannah told me (that) [_she had walked to the museum].\n8. Nick: \"She went home late.\"\nEmma said (that) [_she had gone home late].\n9. Alisha: \"Lucas lost my money.\"\nAlisha told me (that) [_Lucas had lost her money].\n10. Dad: \"Emily didn't eat potatoes as a child.\"\nMum told me (that) [_Emily hadn't eaten potatoes as a child].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. Layla: \"They landed on a little island.\"\nLayla said (that) {0}.\n1. Emma: \"The train left at eight.\"\nEmma said (that) {1}.\n2. Sophia: \"Dan forgot his keys.\"\nSophia said (that) {2}.\n3. Alexander: \"I had a meeting at four.\"\nAlexander remarked (that) {3}.\n4. Jackson and Leo: \"We visited Aunt Elisabeth.\"\nJackson and Leo said (that) {4}.\n5. Mum: \"William repaired the printer.\"\nMum remarked (that) {5}.\n6. Toby: \"Jeff didn't like the food in the restaurant.\"\nToby mentioned (that) {6}.\n7. Hannah: \"I walked to the museum.\"\nHannah told me (that) {7}.\n8. Nick: \"She went home late.\"\nEmma said (that) {8}.\n9. Alisha: \"Lucas lost my money.\"\nAlisha told me (that) {9}.\n10. Dad: \"Emily didn't eat potatoes as a child.\"\nMum told me (that) {10}.",
+      "item": "Nr. 2332",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216181"
+      ],
+      "instruction": "Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "they had landed on a little island"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "the train had left at eight"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Dan had forgotten his keys"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "he had had a meeting at four"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "they had visited Aunt Elisabeth"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "William had repaired the printer"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Jeff hadn't liked the food in the restaurant"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "she had walked to the museum"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "she had gone home late"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Lucas had lost her money"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Emily hadn't eaten potatoes as a child"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216182]\n[%Nr. 2330]\n[!Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.]\n0. Abigail: \"Isabella hates fish.\"\nAbigail said (that) [_Isabella hated fish][@example].\n1. Helen: \"I speak English and Spanish.\"\nHelen said (that) [_she spoke English and Spanish].\n2. Ken: \"Joy often reads comics.\"\nKen said (that) [_Joy often read comics].\n3. Harry and Marie: \"We go swimming in the lake.\"\nHarry and Marie told me (that) [_they went swimming in the lake].\n4. Madison: \"I'm tired.\"\nMadison remarked (that) [_she was tired].\n5. Amy: \"The boys always wear jeans.\"\nAmy told me (that) [_the boys always wore jeans].\n6. Oliver and Noah: \"Our smartphones don't work.\"\nOliver and Noah mentioned (that) [_their smartphones didn't work].\n7. Lisa: \"Alan sometimes meets friends.\"\nLisa said (that) [_Alan sometimes met friends].\n8. Andrew: \"I really love my moped.\"\nAndrew said (that) [_he really loved his moped].\n9. Nick: \"You have a fast car.\"\nNick remarked (that) [_I had a fast car].\n10. Josie: \"Your dogs are cute.\"\nJosie told me (that) [_my dogs were cute].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. Abigail: \"Isabella hates fish.\"\nAbigail said (that) {0}.\n1. Helen: \"I speak English and Spanish.\"\nHelen said (that) {1}.\n2. Ken: \"Joy often reads comics.\"\nKen said (that) {2}.\n3. Harry and Marie: \"We go swimming in the lake.\"\nHarry and Marie told me (that) {3}.\n4. Madison: \"I'm tired.\"\nMadison remarked (that) {4}.\n5. Amy: \"The boys always wear jeans.\"\nAmy told me (that) {5}.\n6. Oliver and Noah: \"Our smartphones don't work.\"\nOliver and Noah mentioned (that) {6}.\n7. Lisa: \"Alan sometimes meets friends.\"\nLisa said (that) {7}.\n8. Andrew: \"I really love my moped.\"\nAndrew said (that) {8}.\n9. Nick: \"You have a fast car.\"\nNick remarked (that) {9}.\n10. Josie: \"Your dogs are cute.\"\nJosie told me (that) {10}.",
+      "item": "Nr. 2330",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216182"
+      ],
+      "instruction": "Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Isabella hated fish"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "she spoke English and Spanish"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Joy often read comics"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "they went swimming in the lake"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "she was tired"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "the boys always wore jeans"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "their smartphones didn't work"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Alan sometimes met friends"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "he really loved his moped"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "I had a fast car"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "my dogs were cute"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216183]\n[%Nr. 2338]\n[!Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.]\n0. Willy: \"They will try to help.\"\nWilly said (that) [_they would try to help].\n1. Henry: \"I will be late.\"\nHenry said (that) [_he would be late].\n2. Victoria: \"Dan will meet Tim at five.\"\nVictoria said (that) [_Dan would meet Tim at five].\n3. Mum: \"The boys will repair the bike.\"\nMum told me (that) [_the boys would repair the bike].\n4. Dad: \"Sue will invite all her friends to the party.\"\nDad mentioned (that) [_Sue would invite all her friends to the party].\n5. Lucy: \"The teachers will ask questions.\"\nLucy told me (that) [_the teachers would ask questions].\n6. Alexander: \"The cat will not climb the tree.\"\nAlexander said (that) [_the cat would not climb the tree].\n7. Alisha: \"I'll phone my friend.\"\nAlisha told me (that) [_she would phone her friend].\n8. Ian: \"They will buy new furniture.\"\nIan said (that) [_they would buy new furniture].\n9. Ron and Cliff: \"We will learn new phrases.\"\nRon and Cliff told me (that) [_they would learn new phrases].\n10. Jeremy: \"They won't drink coffee.\"\nJeremy remarked (that) [_they wouldn't drink coffee].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. Willy: \"They will try to help.\"\nWilly said (that) {0}.\n1. Henry: \"I will be late.\"\nHenry said (that) {1}.\n2. Victoria: \"Dan will meet Tim at five.\"\nVictoria said (that) {2}.\n3. Mum: \"The boys will repair the bike.\"\nMum told me (that) {3}.\n4. Dad: \"Sue will invite all her friends to the party.\"\nDad mentioned (that) {4}.\n5. Lucy: \"The teachers will ask questions.\"\nLucy told me (that) {5}.\n6. Alexander: \"The cat will not climb the tree.\"\nAlexander said (that) {6}.\n7. Alisha: \"I'll phone my friend.\"\nAlisha told me (that) {7}.\n8. Ian: \"They will buy new furniture.\"\nIan said (that) {8}.\n9. Ron and Cliff: \"We will learn new phrases.\"\nRon and Cliff told me (that) {9}.\n10. Jeremy: \"They won't drink coffee.\"\nJeremy remarked (that) {10}.",
+      "item": "Nr. 2338",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216183"
+      ],
+      "instruction": "Vervollständige die Sätze in der indirekten Rede. **Verändere dabei immer die Zeitform**, obwohl es bei einigen Sätzen nicht immer nötig wäre.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "they would try to help"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "he would be late"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Dan would meet Tim at five"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "the boys would repair the bike"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Sue would invite all her friends to the party"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "the teachers would ask questions"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "the cat would not climb the tree"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "she would phone her friend"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "they would buy new furniture"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "they would learn new phrases"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "they wouldn't drink coffee"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  }
+]

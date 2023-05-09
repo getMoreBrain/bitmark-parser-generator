@@ -1,0 +1,632 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:135326]\n[#Klett - Offene didaktische Aufgaben]\n[@externalId:e-klett_4368kn6f9avt]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "135326"
+      ],
+      "title": "Klett - Offene didaktische Aufgaben",
+      "externalId": [
+        "e-klett_4368kn6f9avt"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:135327]\n[%Kapitel 12, Aufgabe 7a]\n[!Wie heißt das passende Fragewort? Notieren Sie die Fragen. Denken Sie auch an die Satzzeichen.]\n===\n[%1]Marko hat __in Griechenland__ Urlaub gemacht.\n[@example:Wo hat Marco Urlaub gemacht?]\n===\n[%2]Er war __mit seiner Familie__ dort.[@shortAnswer]\n[$Mit wem war er dort?]\n===\n[%3]Sie haben __drei Wochen__ Urlaub gemacht.[@shortAnswer]\n[$Wie lange haben sie Urlaub gemacht?]\n===\n[%4]Am Anfang war das Wetter __leider schlecht__.[@shortAnswer]\n[$Wie war das Wetter am Anfang?]\n===\n[%5]Sie haben __ein Auto und viel gesehen__.[@shortAnswer]\n[$Was haben sie gemacht?]\n===\n[%6]Einmal hatten sie Probleme. __Ein Autofahrer__ hat ihnen geholfen.[@shortAnswer]\n[$Wer hat ihnen geholfen?]\n===\n[%7]Marco hat __ihn__ zum Essen eingeladen.[@shortAnswer]\n[$Wen hat Marco zum Essen eingeladen?]\n===\n[%8]__Ende August__ sind sie wieder nach Hause gefahren.[@shortAnswer]\n[$Wann sind sie wieder nach Hause gefahren?]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Kapitel 12, Aufgabe 7a",
+      "instruction": "Wie heißt das passende Fragewort? Notieren Sie die Fragen. Denken Sie auch an die Satzzeichen.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "1",
+          "question": "Marko hat __in Griechenland__ Urlaub gemacht.",
+          "instruction": "",
+          "hint": "",
+          "isExample": true,
+          "example": "Wo hat Marco Urlaub gemacht?",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "2",
+          "question": "Er war __mit seiner Familie__ dort.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Mit wem war er dort?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "3",
+          "question": "Sie haben __drei Wochen__ Urlaub gemacht.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wie lange haben sie Urlaub gemacht?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "4",
+          "question": "Am Anfang war das Wetter __leider schlecht__.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wie war das Wetter am Anfang?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "5",
+          "question": "Sie haben __ein Auto und viel gesehen__.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Was haben sie gemacht?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "6",
+          "question": "Einmal hatten sie Probleme. __Ein Autofahrer__ hat ihnen geholfen.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wer hat ihnen geholfen?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "7",
+          "question": "Marco hat __ihn__ zum Essen eingeladen.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wen hat Marco zum Essen eingeladen?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "8",
+          "question": "__Ende August__ sind sie wieder nach Hause gefahren.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wann sind sie wieder nach Hause gefahren?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "135327"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--&image]\n[@id:135328]\n[%Kapitel 10, Aufgabe 8g]\n[!Was hat Eva gemacht? Schreiben Sie einen Text]\n[&image:https://docs.bitmark.cloud/bit-books/ernst_klett/beispiel_uebungen/web-resources/images/eva.png]\nin Berlin zur Schule gehen | in Köln eine Ausbildung zur Erzieherin machen | nach der Ausbildung Tom treffen | zusammen nach Südamerika fahren und drei Monate bleiben | jetzt als Erzieherin in Kindergarten arbeiten",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Was hat Eva gemacht? Schreiben Sie einen Text",
+      "partialAnswer": "",
+      "body": "in Berlin zur Schule gehen | in Köln eine Ausbildung zur Erzieherin machen | nach der Ausbildung Tom treffen | zusammen nach Südamerika fahren und drei Monate bleiben | jetzt als Erzieherin in Kindergarten arbeiten",
+      "item": "Kapitel 10, Aufgabe 8g",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "135328"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/ernst_klett/beispiel_uebungen/web-resources/images/eva.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:135329]\n[%Aufgabe]\n[!Was kochen/essen Sie gern? Was brauchen Sie? Schreiben Sie einen kurzen Text]\nIch esse gern Schnitzel mit Pommes frites und Salat. Ich brauche...",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Was kochen/essen Sie gern? Was brauchen Sie? Schreiben Sie einen kurzen Text",
+      "partialAnswer": "",
+      "body": "Ich esse gern Schnitzel mit Pommes frites und Salat. Ich brauche...",
+      "item": "Aufgabe",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "135329"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze-solution-grouped:bitmark++]\n[@id:135330]\n[%Kapitel 10, Aufgabe 2]\n[!Ergänzen Sie die Wörter.]\n|image:https://docs.bitmark.cloud/bit-books/ernst_klett/beispiel_uebungen/web-resources/images/a.png|\nA.  Ich arbeite im Team zusammen mit fünf [_Kollegen].\nIch mag meine Chefin, sie ist sehr [_nett]. Ich [_verdiene] nicht viel Geld, aber meine Arbeit ist sehr interessant.\n|image:https://docs.bitmark.cloud/bit-books/ernst_klett/beispiel_uebungen/web-resources/images/b.png|\nB. Meine Arbeit ist [_anstrengend]. Am Abend bin ich immer müde. Geld ist für mich nicht wichtig, aber die Arbeit muss auch [_Spaß] machen. \nIch will [_Karriere] machen und bald Chefin sein.",
+    "bit": {
+      "type": "cloze-solution-grouped",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/ernst_klett/beispiel_uebungen/web-resources/images/a.png|\nA.  Ich arbeite im Team zusammen mit fünf {0}.\nIch mag meine Chefin, sie ist sehr {1}. Ich {2} nicht viel Geld, aber meine Arbeit ist sehr interessant.\n|image:https://docs.bitmark.cloud/bit-books/ernst_klett/beispiel_uebungen/web-resources/images/b.png|\nB. Meine Arbeit ist {3}. Am Abend bin ich immer müde. Geld ist für mich nicht wichtig, aber die Arbeit muss auch {4} machen. \nIch will {5} machen und bald Chefin sein.",
+      "item": "Kapitel 10, Aufgabe 2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "135330"
+      ],
+      "instruction": "Ergänzen Sie die Wörter.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kollegen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "nett"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "verdiene"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "anstrengend"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Spaß"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Karriere"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.mark:bitmark--]\n[@id:135331]\n[%Kapitel 9, Aufgabe 7a]\n[!Lesen Sie die Mail von Mario. ==Markieren== Sie alle positiven Äußerungen.]\nHallo Kevin, \n\nendlich habe ich eine Wohnung, nächste Woche kann ich einziehen. Die Wohnung ist echt ==super==, ==zentral== und ==groß==. Aber ich muss noch viel tun: meine Bücher, Teller und alle Küchensachen in Kisten packen – ich nehme fast alles mit. Die Sachen sind alle noch ==schön== und die brauche ich weiter. Mein Schrank passt auch ==perfekt== in die Wohnung, aber mein Sofa ist schon etwas kaputt und ich finde es total hässlich. \n\nDas Wohnzimmer ist ganz ==toll== und hat einen Balkon. Vor dem Balkonfenster ist ==viel Licht== und da ist Platz für ein Sofa. Und auf dem Balkon ist es wirklich ==schön==, da können wir im Sommer grillen und feiern. Die Küche ist schon ==perfekt==, alles ist da: Waschmaschine, Spülmaschine, Herd – das ist ==super==. Aber das Schlafzimmer … Mein Schrank sieht noch gut aus, aber mein Bett ist zu groß und auch nicht mehr schön! Kommst du am Wochenende mit Shoppen? Ich brauche Hilfe … \n\nViele Grüße \nMario",
+    "bit": {
+      "type": "mark",
+      "format": "bitmark--",
+      "item": "Kapitel 9, Aufgabe 7a",
+      "instruction": "Lesen Sie die Mail von Mario. ==Markieren== Sie alle positiven Äußerungen.",
+      "hint": "",
+      "body": "Hallo Kevin, \n\nendlich habe ich eine Wohnung, nächste Woche kann ich einziehen. Die Wohnung ist echt ==super==, ==zentral== und ==groß==. Aber ich muss noch viel tun: meine Bücher, Teller und alle Küchensachen in Kisten packen – ich nehme fast alles mit. Die Sachen sind alle noch ==schön== und die brauche ich weiter. Mein Schrank passt auch ==perfekt== in die Wohnung, aber mein Sofa ist schon etwas kaputt und ich finde es total hässlich. \n\nDas Wohnzimmer ist ganz ==toll== und hat einen Balkon. Vor dem Balkonfenster ist ==viel Licht== und da ist Platz für ein Sofa. Und auf dem Balkon ist es wirklich ==schön==, da können wir im Sommer grillen und feiern. Die Küche ist schon ==perfekt==, alles ist da: Waschmaschine, Spülmaschine, Herd – das ist ==super==. Aber das Schlafzimmer … Mein Schrank sieht noch gut aus, aber mein Bett ist zu groß und auch nicht mehr schön! Kommst du am Wochenende mit Shoppen? Ich brauche Hilfe … \n\nViele Grüße \nMario",
+      "marks": {},
+      "id": [
+        "135331"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:135332]\n[%Kapitel 9, Aufgabe 9c]\n[!Wählen Sie ein Zimmer in ihrer Wohnung und beschreiben Sie die Möbel und Farben.]\nIm Wohnzimmer ist der Schrank. Er ist weiß und ...",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Wählen Sie ein Zimmer in ihrer Wohnung und beschreiben Sie die Möbel und Farben.",
+      "partialAnswer": "",
+      "body": "Im Wohnzimmer ist der Schrank. Er ist weiß und ...",
+      "item": "Kapitel 9, Aufgabe 9c",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "135332"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.match-matrix:bitmark--&image]\n[@id:135333]\n[%Kapitel 6, Aufgabe 2b]\n[!Rätsel: Welche Freizeitaktivitäten mögen die Personen?]\nMila, Helena, Alex und Ali haben verschiedene Hobbys: Fahrrad fahren, lesen, Computer spielen, schwimmen.\n\nSie haben einen Computer, eine Kamera, einen Fußball und Ski.\n\nMila fährt gern Fahrrad, sie hat keinen Fußball, Fußball mag sie nicht. Helena mag ihre Ski. Alex findet Computer spielen super. Der Schwimmer mag seine Kamera.\n===\n[#]\n==\n[#Das machen sie:]\n==\n[#Das haben sie:]\n===\nMila\n==\nFahrrad fahren[@example]\n==\nComputer\n===\nHelena\n==\nlesen\n==\nSki[@example]\n===\nAlex\n==\nComputer spielen\n==\nFußball\n===\nAli\n==\nschwimmen\n==\nKamera\n===\n[&image:https://docs.bitmark.cloud/bit-books/ernst_klett/beispiel_uebungen/web-resources/images/hobbys.png]",
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": "Kapitel 6, Aufgabe 2b",
+      "heading": {
+        "forKeys": "",
+        "forValues": [
+          "Das machen sie:",
+          "Das haben sie:"
+        ]
+      },
+      "matrix": [
+        {
+          "key": "Mila",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Fahrrad fahren"
+              ],
+              "example": "",
+              "isExample": true
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Computer"
+              ],
+              "example": "",
+              "isExample": true
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Helena",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "lesen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Ski"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Alex",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Computer spielen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Fußball"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Ali",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "schwimmen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Kamera"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": ", ,  und  haben verschiedene Hobbys: Fahrrad fahren, lesen, Computer spielen, schwimmen.\n\nSie haben einen Computer, eine Kamera, einen Fußball und Ski.\n\nMila fährt gern Fahrrad, sie hat keinen Fußball, Fußball mag sie nicht. Helena mag ihre Ski. Alex findet Computer spielen super. Der Schwimmer mag seine Kamera.MilaHelenaAlexAli",
+      "id": [
+        "135333"
+      ],
+      "instruction": "Rätsel: Welche Freizeitaktivitäten mögen die Personen?",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/ernst_klett/beispiel_uebungen/web-resources/images/hobbys.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:135334]\n[%Kapitel 4, Aufgabe 1b]\n[!Suchen Sie neun Wörter]\n[&image:https://docs.bitmark.cloud/bit-books/ernst_klett/beispiel_uebungen/web-resources/images/suchraetsel.png]\n1. [_Joghurt][@example]\n2. [_Kuchen][_Kartoffel][_Wasser][_Nudel][_Marmelade][_Tee][_Saft][_Brot]\n3. [_Kuchen][_Kartoffel][_Wasser][_Nudel][_Marmelade][_Tee][_Saft][_Brot]\n4. [_Kuchen][_Kartoffel][_Wasser][_Nudel][_Marmelade][_Tee][_Saft][_Brot]\n5. [_Kuchen][_Kartoffel][_Wasser][_Nudel][_Marmelade][_Tee][_Saft][_Brot]\n6. [_Kuchen][_Kartoffel][_Wasser][_Nudel][_Marmelade][_Tee][_Saft][_Brot]\n7. [_Kuchen][_Kartoffel][_Wasser][_Nudel][_Marmelade][_Tee][_Saft][_Brot]\n8. [_Kuchen][_Kartoffel][_Wasser][_Nudel][_Marmelade][_Tee][_Saft][_Brot]\n9. [_Kuchen][_Kartoffel][_Wasser][_Nudel][_Marmelade][_Tee][_Saft][_Brot]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "1. {0}\n2. {1}\n3. {2}\n4. {3}\n5. {4}\n6. {5}\n7. {6}\n8. {7}\n9. {8}",
+      "item": "Kapitel 4, Aufgabe 1b",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "135334"
+      ],
+      "instruction": "Suchen Sie neun Wörter",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/ernst_klett/beispiel_uebungen/web-resources/images/suchraetsel.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Joghurt"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kuchen",
+            "Kartoffel",
+            "Wasser",
+            "Nudel",
+            "Marmelade",
+            "Tee",
+            "Saft",
+            "Brot"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kuchen",
+            "Kartoffel",
+            "Wasser",
+            "Nudel",
+            "Marmelade",
+            "Tee",
+            "Saft",
+            "Brot"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kuchen",
+            "Kartoffel",
+            "Wasser",
+            "Nudel",
+            "Marmelade",
+            "Tee",
+            "Saft",
+            "Brot"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kuchen",
+            "Kartoffel",
+            "Wasser",
+            "Nudel",
+            "Marmelade",
+            "Tee",
+            "Saft",
+            "Brot"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kuchen",
+            "Kartoffel",
+            "Wasser",
+            "Nudel",
+            "Marmelade",
+            "Tee",
+            "Saft",
+            "Brot"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kuchen",
+            "Kartoffel",
+            "Wasser",
+            "Nudel",
+            "Marmelade",
+            "Tee",
+            "Saft",
+            "Brot"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kuchen",
+            "Kartoffel",
+            "Wasser",
+            "Nudel",
+            "Marmelade",
+            "Tee",
+            "Saft",
+            "Brot"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kuchen",
+            "Kartoffel",
+            "Wasser",
+            "Nudel",
+            "Marmelade",
+            "Tee",
+            "Saft",
+            "Brot"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  }
+]

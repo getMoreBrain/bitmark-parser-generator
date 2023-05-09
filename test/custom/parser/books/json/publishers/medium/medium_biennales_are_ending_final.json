@@ -1,0 +1,426 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:198114]\n[@language:en]\n[#Biennales are ending]\n[@coverImage:https://docs.bitmark.cloud/bit-books/medium/biennales_are_ending/medium_biennales_cover.png\n[@externalId:e-biennales-are-ending_aalzvu2zzvem]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "[@coverImage:https://docs.bitmark.cloud/bit-books/medium/biennales_are_ending/medium_biennales_cover.png",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "198114"
+      ],
+      "language": [
+        "en"
+      ],
+      "title": "Biennales are ending",
+      "externalId": [
+        "e-biennales-are-ending_aalzvu2zzvem"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@'",
+        "line": 6,
+        "column": 0,
+        "errorLine": "[@externalId:e-biennales-are-ending_aalzvu2zzvem]"
+      },
+      {
+        "message": "Missing a colon in [@] tag",
+        "line": 5,
+        "column": 0,
+        "errorLine": "[#Biennales are ending]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198115]\n==“Everyone Create Art”==|link:https://medium.com/data-driven-fiction/everyone-can-create-8270ecf1f379| is born",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "==“Everyone Create Art”==|link:https://medium.com/data-driven-fiction/everyone-can-create-8270ecf1f379| is born",
+      "id": [
+        "198115"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:198116]\n[&image:https://docs.bitmark.cloud/bit-books/medium/biennales_are_ending/biennales_are_ending_1.png]\nhttps://www.buymeacoffee.com/evartology",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "https://www.buymeacoffee.com/evartology",
+      "id": [
+        "198116"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/biennales_are_ending/biennales_are_ending_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198117]\n**The Biennale** may be facing a jam-packed calendar and other challenges in 2022. In addition, they continue to face leadership issues and a lack of in-depth engagement from their audience. So will this century-old platform have a future?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**The Biennale** may be facing a jam-packed calendar and other challenges in 2022. In addition, they continue to face leadership issues and a lack of in-depth engagement from their audience. So will this century-old platform have a future?",
+      "id": [
+        "198117"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198118]\nlist of Biennales 2022:\n\n•. La Biennale di Venezia (ITA)\n•. documenta (GER)\n•. Berlin Biennale (GER)\n•. Biennale d’art contemporain de Lyon (FRA)\n•. Kochi-Muziris Biennale (IND)\n•. Bangkok Art Biennale (THA)\n•. Asian Art Biennale — Phantasmapolis (ROC)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "list of Biennales 2022:\n\n•. La Biennale di Venezia (ITA)\n•. documenta (GER)\n•. Berlin Biennale (GER)\n•. Biennale d’art contemporain de Lyon (FRA)\n•. Kochi-Muziris Biennale (IND)\n•. Bangkok Art Biennale (THA)\n•. Asian Art Biennale — Phantasmapolis (ROC)",
+      "id": [
+        "198118"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198119]\n**Art curators confront predicaments of their own**\n\nI’m an ==AI art curator==|link:https://evartology.medium.com/ai-power-for-digital-art-9b924e985722|, and this is one of the most engaging art stories in the past 100 years.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Art curators confront predicaments of their own**\n\nI’m an ==AI art curator==|link:https://evartology.medium.com/ai-power-for-digital-art-9b924e985722|, and this is one of the most engaging art stories in the past 100 years.",
+      "id": [
+        "198119"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198120]\nA recent study by the National Endowment for the Arts found that many cultural institutions __“lack the capacity and resources to adequately support the growing needs of tech-savvy ==artists==|link:https://medium.com/mlearning-ai/can-ai-replace-artists-378d466f69b8| and their audiences.”__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "A recent study by the National Endowment for the Arts found that many cultural institutions __“lack the capacity and resources to adequately support the growing needs of tech-savvy ==artists==|link:https://medium.com/mlearning-ai/can-ai-replace-artists-378d466f69b8| and their audiences.”__",
+      "id": [
+        "198120"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198121]\nAt the same time, ==artists==|link:https://medium.com/mlearning-ai/can-ai-replace-artists-378d466f69b8| __“have demonstrated a unique ability to respond creatively to the challenges of the pandemic by engaging with audiences and responding to demands for greater equity and inclusion.”__ Nonetheless, there are still some significant gaps in today’s curatorial world.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "At the same time, ==artists==|link:https://medium.com/mlearning-ai/can-ai-replace-artists-378d466f69b8| __“have demonstrated a unique ability to respond creatively to the challenges of the pandemic by engaging with audiences and responding to demands for greater equity and inclusion.”__ Nonetheless, there are still some significant gaps in today’s curatorial world.",
+      "id": [
+        "198121"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198122]\nDuring this period of rampant technological expansion and innovation, however, **art biennales** can no longer afford to be stuck in the past. To become relevant, they need to take note of emerging practices and innovations within the broader art world. For example, a recent exhibition at Singapore Biennale featured an interactive ==self-portrait==|link:https://medium.com/mlearning-ai/cocaine-for-the-eyes-and-brain-2f55312b8e77| at the entrance that asked visitors what makes them happy — taking the initiative with an unexpected visual element by complementing it with a survey conducted via iPads.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "During this period of rampant technological expansion and innovation, however, **art biennales** can no longer afford to be stuck in the past. To become relevant, they need to take note of emerging practices and innovations within the broader art world. For example, a recent exhibition at Singapore Biennale featured an interactive ==self-portrait==|link:https://medium.com/mlearning-ai/cocaine-for-the-eyes-and-brain-2f55312b8e77| at the entrance that asked visitors what makes them happy — taking the initiative with an unexpected visual element by complementing it with a survey conducted via iPads.",
+      "id": [
+        "198122"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198123]\nSimilarly, during Art Basel Hong Kong 2021, it was decided to present the work of a ==virtual reality artist==|link:https://sketchfab.com/3d-models/panna-datasculpture-f0b1f908848c4f6387696102028f4e9f| by utilizing a VR headset and special software that created an immersive environment that allowed viewers to explore the ==artist’s==|link:https://evartology.medium.com/10-habits-of-highly-successful-artists-a344d1be941d| work.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Similarly, during Art Basel Hong Kong 2021, it was decided to present the work of a ==virtual reality artist==|link:https://sketchfab.com/3d-models/panna-datasculpture-f0b1f908848c4f6387696102028f4e9f| by utilizing a VR headset and special software that created an immersive environment that allowed viewers to explore the ==artist’s==|link:https://evartology.medium.com/10-habits-of-highly-successful-artists-a344d1be941d| work.",
+      "id": [
+        "198123"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198124]\nThe Biennale has always faced many challenges, but this year has been particularly challenging due to the following:\n\n- The **art calendar** is jam-packed, making it difficult for people to find time in their schedules.\n- There are **leadership** issues. Some believe there should be no single leader because ==artists==|link:https://medium.com/mlearning-ai/can-ai-replace-artists-378d466f69b8| need to speak for themselves instead of being talked about.\n- **Technology** is advancing at an alarming rate, and the Biennale needs to get on board if it wants its voice heard in ==the future of contemporary art==|link:https://medium.com/mlearning-ai/what-is-the-future-of-digital-art-936bf9f815d7|.\n- Biennales need more proactive engagement with other lenses than just high manifestations of **masculine culture**, i.e., they need to engage more with women, minorities, and different sexualities if they",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "The Biennale has always faced many challenges, but this year has been particularly challenging due to the following:\n\n- The **art calendar** is jam-packed, making it difficult for people to find time in their schedules.\n- There are **leadership** issues. Some believe there should be no single leader because ==artists==|link:https://medium.com/mlearning-ai/can-ai-replace-artists-378d466f69b8| need to speak for themselves instead of being talked about.\n- **Technology** is advancing at an alarming rate, and the Biennale needs to get on board if it wants its voice heard in ==the future of contemporary art==|link:https://medium.com/mlearning-ai/what-is-the-future-of-digital-art-936bf9f815d7|.\n- Biennales need more proactive engagement with other lenses than just high manifestations of **masculine culture**, i.e., they need to engage more with women, minorities, and different sexualities if they",
+      "id": [
+        "198124"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198125]\nBiennales are increasingly taking steps to adapt to the times by offering the **==tools for artists==|link:https://art.mlearning.ai/|** to engage with their audiences. This is where Technology is used as a tool for behavior and community building. As one founder of the ==“Everyone Create Art”==|link:https://medium.com/data-driven-fiction/everyone-can-create-8270ecf1f379| explained:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Biennales are increasingly taking steps to adapt to the times by offering the **==tools for artists==|link:https://art.mlearning.ai/|** to engage with their audiences. This is where Technology is used as a tool for behavior and community building. As one founder of the ==“Everyone Create Art”==|link:https://medium.com/data-driven-fiction/everyone-can-create-8270ecf1f379| explained:",
+      "id": [
+        "198125"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:198126]\n__“Technology allows us to become more experimental on a smaller scale… Rather than being constricted by the same form of art or content, we can live in it and then go about doing something else in another ==medium==|link:https://medium.com/mlearning-ai/the-codex-is-the-message-ae14f22bd2af| afterward.”__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "__“Technology allows us to become more experimental on a smaller scale… Rather than being constricted by the same form of art or content, we can live in it and then go about doing something else in another ==medium==|link:https://medium.com/mlearning-ai/the-codex-is-the-message-ae14f22bd2af| afterward.”__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "198126"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198127]\nBy enabling ==artists==|link:https://medium.com/mlearning-ai/can-ai-replace-artists-378d466f69b8| to continue experimenting with audience engagement and Technology, biennales can capitalize on the growing potential of art to stimulate ongoing conversation and connection.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "By enabling ==artists==|link:https://medium.com/mlearning-ai/can-ai-replace-artists-378d466f69b8| to continue experimenting with audience engagement and Technology, biennales can capitalize on the growing potential of art to stimulate ongoing conversation and connection.",
+      "id": [
+        "198127"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198128]\nTo truly become sustainable, biennales will need to consider responsible sustainability. In the climate change context, biennales can be more mindful of their impact on the planet by looking into what kinds of data they can ==collect==|link:https://medium.com/mlearning-ai/why-you-should-start-collecting-art-21f3d6576796|, how it can be used to inform decisions, and most importantly, how they can make that information available to their audiences. If this is done to encourage viewers to think about their impact on the environment, it can have a massive effect on how people feel about the world.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "To truly become sustainable, biennales will need to consider responsible sustainability. In the climate change context, biennales can be more mindful of their impact on the planet by looking into what kinds of data they can ==collect==|link:https://medium.com/mlearning-ai/why-you-should-start-collecting-art-21f3d6576796|, how it can be used to inform decisions, and most importantly, how they can make that information available to their audiences. If this is done to encourage viewers to think about their impact on the environment, it can have a massive effect on how people feel about the world.",
+      "id": [
+        "198128"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198129]\nAnother way biennales can become more environmentally friendly is by reducing the enormous amounts of carbon they consume to transport works of art and having ==an app that has information related to exhibitions==|link:https://medium.com/mlearning-ai/turings-nose-a3980fb4b390| on it. This will help visitors make informed decisions about the exhibits they want to attend and get involved in activities related to them.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Another way biennales can become more environmentally friendly is by reducing the enormous amounts of carbon they consume to transport works of art and having ==an app that has information related to exhibitions==|link:https://medium.com/mlearning-ai/turings-nose-a3980fb4b390| on it. This will help visitors make informed decisions about the exhibits they want to attend and get involved in activities related to them.",
+      "id": [
+        "198129"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198130]\nHistorically, biennales were a way for museums to express their independence and break free from the hierarchies of traditional art institutions. However, given their dependence on public funding and an abundance of biennales, this initial role has become increasingly challenging to fulfill.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Historically, biennales were a way for museums to express their independence and break free from the hierarchies of traditional art institutions. However, given their dependence on public funding and an abundance of biennales, this initial role has become increasingly challenging to fulfill.",
+      "id": [
+        "198130"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198131]\nAs a result, there is a growing need for young institutions to create a more nuanced experience and not just copy what others are doing — which can ultimately be counter-productive as it prevents them from being unique. On the other side of the spectrum, there is also an ongoing need for established biennales to accept their own past while at the same time embracing a new paradigm where they can allow curators to innovate. In doing so, they will continue to be relevant and enable artists to flourish.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "As a result, there is a growing need for young institutions to create a more nuanced experience and not just copy what others are doing — which can ultimately be counter-productive as it prevents them from being unique. On the other side of the spectrum, there is also an ongoing need for established biennales to accept their own past while at the same time embracing a new paradigm where they can allow curators to innovate. In doing so, they will continue to be relevant and enable artists to flourish.",
+      "id": [
+        "198131"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198132]\nBiennales have existed for more than a hundred years, but the way people experience them has changed dramatically in recent decades. As a result, the contemporary art world has become more accessible and open than ever before.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Biennales have existed for more than a hundred years, but the way people experience them has changed dramatically in recent decades. As a result, the contemporary art world has become more accessible and open than ever before.",
+      "id": [
+        "198132"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198133]\n**it’s time for ==“Everyone Create Art”==|link:https://medium.com/data-driven-fiction/everyone-can-create-8270ecf1f379|.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**it’s time for ==“Everyone Create Art”==|link:https://medium.com/data-driven-fiction/everyone-can-create-8270ecf1f379|.**",
+      "id": [
+        "198133"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark--]\n[@id:198134]\n__“Every human being has inherent creativity that has been honed through time. It is important for us to continue to nurture our capacity for creativity. It is also important that as we evolve as a society we make sure that creative aspects are not lost on us.”__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "__“Every human being has inherent creativity that has been honed through time. It is important for us to continue to nurture our capacity for creativity. It is also important that as we evolve as a society we make sure that creative aspects are not lost on us.”__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "198134"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198135]\nThe team at **==“Everyone Create Art”==|link:https://www.buymeacoffee.com/evartology|** is set on bringing a vision to life in a way that makes AI art accessible and available for everyone. An AI art project shows us a future where everyone can create art at the highest level, without limits, without costs, and reach billions of art lovers.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "The team at **==“Everyone Create Art”==|link:https://www.buymeacoffee.com/evartology|** is set on bringing a vision to life in a way that makes AI art accessible and available for everyone. An AI art project shows us a future where everyone can create art at the highest level, without limits, without costs, and reach billions of art lovers.",
+      "id": [
+        "198135"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198136]\n**==“Everyone Create Art”==|link:https://www.buymeacoffee.com/evartology|** will be the first art gallery without walls, where everyone can be an artist and a ==curator==|link:https://medium.com/mlearning-ai/how-to-become-a-curator-3c0c75f74637|. Machine Learning (ML) will support this art gallery as an ==AI Art Curator==|link:https://medium.com/mlearning-ai/how-to-become-a-curator-3c0c75f74637|, and no human interaction will be required. You are welcome to visit us at any time.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**==“Everyone Create Art”==|link:https://www.buymeacoffee.com/evartology|** will be the first art gallery without walls, where everyone can be an artist and a ==curator==|link:https://medium.com/mlearning-ai/how-to-become-a-curator-3c0c75f74637|. Machine Learning (ML) will support this art gallery as an ==AI Art Curator==|link:https://medium.com/mlearning-ai/how-to-become-a-curator-3c0c75f74637|, and no human interaction will be required. You are welcome to visit us at any time.",
+      "id": [
+        "198136"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198137]\n**==“Everyone Create Art”==|link:https://www.buymeacoffee.com/evartology|** is a 3D virtual gallery for artists and AI art curators. The point of the project is led by the founders of ==Machine Learning==|link:https://medium.com/mlearning-ai|.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**==“Everyone Create Art”==|link:https://www.buymeacoffee.com/evartology|** is a 3D virtual gallery for artists and AI art curators. The point of the project is led by the founders of ==Machine Learning==|link:https://medium.com/mlearning-ai|.",
+      "id": [
+        "198137"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198138]\nThe team behind **==“Everyone Create Art”==|link:https://www.buymeacoffee.com/evartology|** has been in the space of VR art for years. They created their first ==VR art gallery==|link:https://sketchfab.com/3d-models/mlearningai-vrooml-f355f4cbcde740a08f4e33dc720df2da| in 2016 that presented immersive and interactive experiences with AI support. The idea was to give artists a chance to explore their creative ideas in an entirely new way, where they can share them with anyone anywhere around the world. The result was a massive success all over the globe as people started sharing their own experiences, stories, and perspectives on this platform.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "The team behind **==“Everyone Create Art”==|link:https://www.buymeacoffee.com/evartology|** has been in the space of VR art for years. They created their first ==VR art gallery==|link:https://sketchfab.com/3d-models/mlearningai-vrooml-f355f4cbcde740a08f4e33dc720df2da| in 2016 that presented immersive and interactive experiences with AI support. The idea was to give artists a chance to explore their creative ideas in an entirely new way, where they can share them with anyone anywhere around the world. The result was a massive success all over the globe as people started sharing their own experiences, stories, and perspectives on this platform.",
+      "id": [
+        "198138"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198139]\n**==“Everyone Create Art”==|link:https://www.buymeacoffee.com/evartology|** is a concept that could not exist without the support of ML, so they launched an ==AI Art==|link:https://medium.com/mlearning-ai/are-artists-using-ai-to-change-the-concept-of-art-1e92d8ba1ede| project intending to bring art to everyone. This world-changing vision can only be achieved and become a reality through AI, so they started developing their own solution that would support every aspect of this idea — from having an interactive gallery for artists on one side to being a virtual assistant for everyone interested in art.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**==“Everyone Create Art”==|link:https://www.buymeacoffee.com/evartology|** is a concept that could not exist without the support of ML, so they launched an ==AI Art==|link:https://medium.com/mlearning-ai/are-artists-using-ai-to-change-the-concept-of-art-1e92d8ba1ede| project intending to bring art to everyone. This world-changing vision can only be achieved and become a reality through AI, so they started developing their own solution that would support every aspect of this idea — from having an interactive gallery for artists on one side to being a virtual assistant for everyone interested in art.",
+      "id": [
+        "198139"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198140]\nThe **==“Everyone Create Art”==|link:https://www.buymeacoffee.com/evartology|** project was developed by the ==MLearning.ai==|link:https://medium.com/mlearning-ai| team and supported by a group passionate about ==AI art==|link:https://medium.com/mlearning-ai/are-artists-using-ai-to-change-the-concept-of-art-1e92d8ba1ede|.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "The **==“Everyone Create Art”==|link:https://www.buymeacoffee.com/evartology|** project was developed by the ==MLearning.ai==|link:https://medium.com/mlearning-ai| team and supported by a group passionate about ==AI art==|link:https://medium.com/mlearning-ai/are-artists-using-ai-to-change-the-concept-of-art-1e92d8ba1ede|.",
+      "id": [
+        "198140"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198141]\nArt is everywhere. But the question is, **==how much do you love it==|link:https://www.buymeacoffee.com/evartology|**?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Art is everywhere. But the question is, **==how much do you love it==|link:https://www.buymeacoffee.com/evartology|**?",
+      "id": [
+        "198141"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198142]\nI am ==an Art Curator==|link:https://medium.com/mlearning-ai/how-to-become-a-curator-3c0c75f74637|, founder at ==EvArtology==|link:https://evartology.com/|, and ==ML consultant at MLearning.ai==|link:https://www.linkedin.com/company/mlearning-ai/|. I advise companies and institutions in the ==creative industries==|link:https://medium.com/mlearning-ai/machine-learning-will-free-creatives-79f005145e4| on using AI tools in their daily work. Human collaboration with ML models can be very creative and bring huge benefits. ==The new era begins now==|link:https://medium.com/mlearning-ai/is-ai-art-really-art-a363073d62d0|.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "I am ==an Art Curator==|link:https://medium.com/mlearning-ai/how-to-become-a-curator-3c0c75f74637|, founder at ==EvArtology==|link:https://evartology.com/|, and ==ML consultant at MLearning.ai==|link:https://www.linkedin.com/company/mlearning-ai/|. I advise companies and institutions in the ==creative industries==|link:https://medium.com/mlearning-ai/machine-learning-will-free-creatives-79f005145e4| on using AI tools in their daily work. Human collaboration with ML models can be very creative and bring huge benefits. ==The new era begins now==|link:https://medium.com/mlearning-ai/is-ai-art-really-art-a363073d62d0|.",
+      "id": [
+        "198142"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198143]\n• **==Twitter==|link:https://twitter.com/evARTology| * ==Instagram==|link:https://www.instagram.com/evartology/| * ==Tumblr==|link:https://evartology.com/| * ==Linkedin==|link:https://www.linkedin.com/checkpoint/challengesV2/AQHWd6pp5je6PAAAAX_BJ4XarPtXogeVhxTUoUw8m1w4Uw1QOoGXAE_j3nou1f8rrlfHrW985aicBU_wtiC-hu1PQPVy6dSAhA?original_referer=https%3A%2F%2Fmedium.com%2Fdata-driven-fiction%2Fbiennales-are-ending-410def29b47b| * ==Facebook==|link:https://www.facebook.com/evARTologycom| * ==AIcafe==|link:https://www.buymeacoffee.com/evartology|**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• **==Twitter==|link:https://twitter.com/evARTology| * ==Instagram==|link:https://www.instagram.com/evartology/| * ==Tumblr==|link:https://evartology.com/| * ==Linkedin==|link:https://www.linkedin.com/checkpoint/challengesV2/AQHWd6pp5je6PAAAAX_BJ4XarPtXogeVhxTUoUw8m1w4Uw1QOoGXAE_j3nou1f8rrlfHrW985aicBU_wtiC-hu1PQPVy6dSAhA?original_referer=https%3A%2F%2Fmedium.com%2Fdata-driven-fiction%2Fbiennales-are-ending-410def29b47b| * ==Facebook==|link:https://www.facebook.com/evARTologycom| * ==AIcafe==|link:https://www.buymeacoffee.com/evartology|**",
+      "id": [
+        "198143"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198144]\nWe thank ==our donors==|link:https://www.buymeacoffee.com/evartology| and especially ==Stefan Winkler==|link:https://medium.com/@swinkler.austria|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "We thank ==our donors==|link:https://www.buymeacoffee.com/evartology| and especially ==Stefan Winkler==|link:https://medium.com/@swinkler.austria|",
+      "id": [
+        "198144"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:198145]\n[&image:https://docs.bitmark.cloud/bit-books/medium/biennales_are_ending/biennales_are_ending_2.png][@width:400]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "198145"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/biennales_are_ending/biennales_are_ending_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "400",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:198146]\n|image:https://docs.bitmark.cloud/bit-books/medium/biennales_are_ending/biennales_are_ending_3.png||@width:400|\n==suryanarayanan k==|link:https://surissoul.medium.com/|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/medium/biennales_are_ending/biennales_are_ending_3.png||@width:400|\n==suryanarayanan k==|link:https://surissoul.medium.com/|",
+      "id": [
+        "198146"
+      ]
+    }
+  }
+]

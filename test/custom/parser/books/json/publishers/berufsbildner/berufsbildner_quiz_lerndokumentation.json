@@ -1,0 +1,244 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:187232]\n[#Quiz Lerndokumentation]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_quiz_lerndoku.png]\n[@externalId:e-quiz-lerndokumentation_gisk5w4hbwhd]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187232"
+      ],
+      "title": "Quiz Lerndokumentation",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_quiz_lerndoku.png"
+      ],
+      "externalId": [
+        "e-quiz-lerndokumentation_gisk5w4hbwhd"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:187546]\n[&video-link:https://www.youtube.com/watch?v=FW47I-KbmF4&t=6s][@caption:Erklärvideo die Lerndokumentation]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "187546"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=FW47I-KbmF4&t=6s",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Erklärvideo die Lerndokumentation"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187233]\n[!Was sind die Vorteile einer Lerndokumentation für den Lernenden?\nBitte wählen Sie alle zutreffenden Antworten]\n[+Reflexion des Gelernten]\n[-Neue Lernstrategien sammeln]\n[+Zusammenfassung der neugelernten Arbeitstechniken]\n[+Die Lerndoku dient als Nachschlagewerk]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Was sind die Vorteile einer Lerndokumentation für den Lernenden?\nBitte wählen Sie alle zutreffenden Antworten",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Reflexion des Gelernten",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Neue Lernstrategien sammeln",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Zusammenfassung der neugelernten Arbeitstechniken",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Die Lerndoku dient als Nachschlagewerk",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187233"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187234]\n[!Was sind die Vorteile für den Berufsbildner/Praxisbildner\nBitte wählen Sie alle zutreffenden Antworten]\n[-Lernender lernt eine Arbeit zu schreiben]\n[+Führungsinstrument]\n[+Übersicht über den effektiv erfolgten Bildungsverlauf]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Was sind die Vorteile für den Berufsbildner/Praxisbildner\nBitte wählen Sie alle zutreffenden Antworten",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Lernender lernt eine Arbeit zu schreiben",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Führungsinstrument",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Übersicht über den effektiv erfolgten Bildungsverlauf",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187234"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:187235]\n[!Wie oft sollte eine Lerndokumentation überprüft werden? (Empfehlung)\nBitte wählen Sie alle zutreffenden Antworten]\n[+ 1x im Monat]\n[-1x im Semester]\n[-1x im Jahr]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Wie oft sollte eine Lerndokumentation überprüft werden? (Empfehlung)\nBitte wählen Sie alle zutreffenden Antworten",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "1x im Monat",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "1x im Semester",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "1x im Jahr",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187235"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:187236]\n[!Darf die Lerndokumentation beim Qualifikationsverfahren angewendet werden?\nBitte wählen Sie alle zutreffenden Antworten]\n[-Ja]\n[-Nein]\n[+Dies ist in der jeweiligen Bildungsverordnung genau definiert]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Darf die Lerndokumentation beim Qualifikationsverfahren angewendet werden?\nBitte wählen Sie alle zutreffenden Antworten",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Ja",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Nein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Dies ist in der jeweiligen Bildungsverordnung genau definiert",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187236"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:187237]\n[!Ist das Führen einer Lerndokumentation Pflicht?\nBitte wählen Sie alle zutreffenden Antworten]\n[+Ja, das Führen der Lerndokumentation ist gemäss Bildungsverordnung für jeden Lernenden obligatorisch]\n[-nein, das kann der Betrieb bestimmen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Ist das Führen einer Lerndokumentation Pflicht?\nBitte wählen Sie alle zutreffenden Antworten",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Ja, das Führen der Lerndokumentation ist gemäss Bildungsverordnung für jeden Lernenden obligatorisch",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "nein, das kann der Betrieb bestimmen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187237"
+      ]
+    }
+  }
+]

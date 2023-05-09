@@ -1,0 +1,291 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:186241]\n[#Der Bildungsbericht – Zielsetzung]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_bildungsb_ziel.png]\n[@externalId:e-der-bildungsbericht--zielsetzung_ecfprjgagyji]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186241"
+      ],
+      "title": "Der Bildungsbericht – Zielsetzung",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_bildungsb_ziel.png"
+      ],
+      "externalId": [
+        "e-der-bildungsbericht--zielsetzung_ecfprjgagyji"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\n[@id:186244]\nWir sprechen über den Kontext des Bildungsberichts, konkret\n• darüber dass der Bildungsbericht gesetzlich vorgeschrieben ist,\n• über Sinn und Zweck des Bildungsberichts,\n• über die Form des Bildungsberichts\n• und schliesslich über die Lerndokumentation, die für den Bildungsbericht wichtig ist.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "Wir sprechen über den Kontext des Bildungsberichts, konkret\n• darüber dass der Bildungsbericht gesetzlich vorgeschrieben ist,\n• über Sinn und Zweck des Bildungsberichts,\n• über die Form des Bildungsberichts\n• und schliesslich über die Lerndokumentation, die für den Bildungsbericht wichtig ist.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186244"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:186837]\n[&video-link:https://www.youtube.com/watch?v=E41oFn8EdqY][@caption:Erklärvideo zum Bildungsbericht (1/2): Zielsetzung]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "186837"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=E41oFn8EdqY",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Erklärvideo zum Bildungsbericht (1/2): Zielsetzung"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:186242]\n[##Notizen zum Erklärvideo | 901]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "186242"
+      ],
+      "title": "Notizen zum Erklärvideo | 901"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:186243]\nDiese Notiz enthält den vollständigen, gesprochenen Text zum Erklärvideo \"Der Bildungsbericht – Zielsetzung\". Das Manuskript dient als eigenständiges Dokument für das Ausfüllen des Bildungsberichtes. Es kann zusätzlich mit persönlichen Notizen ergänzt werden und dient damit als Gedankenstütze.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Diese Notiz enthält den vollständigen, gesprochenen Text zum Erklärvideo \"Der Bildungsbericht – Zielsetzung\". Das Manuskript dient als eigenständiges Dokument für das Ausfüllen des Bildungsberichtes. Es kann zusätzlich mit persönlichen Notizen ergänzt werden und dient damit als Gedankenstütze.",
+      "id": [
+        "186243"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:186833]\n[##Schritt 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "186833"
+      ],
+      "title": "Schritt 1"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:186245]\n[%][%Der Bildungsbericht ist gesetzlich vorgeschrieben]\nDas Berufsbildungsgesetz – BBG - schreibt in Artikel 20 vor, dass sich die Verantwortlichen der Lehrbetriebe für den bestmöglichen Lernerfolg der Lernenden einsetzen und diesen periodisch überprüfen müssen. In Abschnitt 7 der Bildungsverordnungen – das sind Verordnungen des SBFI über die berufliche Grundbildung – ist festgehalten, dass die Berufsbildnerin oder der Berufsbildner den Bildungsstand der lernenden Person festhält und mit ihr mindestens einmal pro Semester bespricht. Das Instrument dazu ist der Bildungsbericht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Berufsbildungsgesetz – BBG - schreibt in Artikel 20 vor, dass sich die Verantwortlichen der Lehrbetriebe für den bestmöglichen Lernerfolg der Lernenden einsetzen und diesen periodisch überprüfen müssen. In Abschnitt 7 der Bildungsverordnungen – das sind Verordnungen des SBFI über die berufliche Grundbildung – ist festgehalten, dass die Berufsbildnerin oder der Berufsbildner den Bildungsstand der lernenden Person festhält und mit ihr mindestens einmal pro Semester bespricht. Das Instrument dazu ist der Bildungsbericht.",
+      "id": [
+        "186245"
+      ],
+      "lead": "Der Bildungsbericht ist gesetzlich vorgeschrieben"
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:186246]\n[!Meine Notizen:]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Meine Notizen:",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186246"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:186834]\n[##Schritt 2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "186834"
+      ],
+      "title": "Schritt 2"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:186247]\n[%][%Sinn und Zweck des Bildungsberichts]\nDer Bildungsbericht ist also Pflicht. Jedoch sollte es für alle Berufsbildnerinnen und Berufsbildner eine Selbstverständlichkeit sein, den Stand der Ausbildung auch ausserhalb des Bildungsberichts mit der lernenden Person zu besprechen. Der Bildungsbericht ergänzt die kürzeren und längeren Besprechungen, die vor, während und zum Abschluss einzelner Arbeiten geführt werden. Das Gespräch, für das der Bildungsbericht Grundlage ist, soll nicht spontan, sondern gut vorbereitet stattfinden. Häufig wird bei dieser Gelegenheit auch das Zeugnis der Berufsfachschule besprochen. Auch die lernende Person hat Gelegenheit, Erfahrungen und Meinungen einzubringen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Bildungsbericht ist also Pflicht. Jedoch sollte es für alle Berufsbildnerinnen und Berufsbildner eine Selbstverständlichkeit sein, den Stand der Ausbildung auch ausserhalb des Bildungsberichts mit der lernenden Person zu besprechen. Der Bildungsbericht ergänzt die kürzeren und längeren Besprechungen, die vor, während und zum Abschluss einzelner Arbeiten geführt werden. Das Gespräch, für das der Bildungsbericht Grundlage ist, soll nicht spontan, sondern gut vorbereitet stattfinden. Häufig wird bei dieser Gelegenheit auch das Zeugnis der Berufsfachschule besprochen. Auch die lernende Person hat Gelegenheit, Erfahrungen und Meinungen einzubringen.",
+      "id": [
+        "186247"
+      ],
+      "lead": "Sinn und Zweck des Bildungsberichts"
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:186248]\n[!Meine Notizen:]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Meine Notizen:",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186248"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:186835]\n[##Schritt 3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "186835"
+      ],
+      "title": "Schritt 3"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:186249]\n[%][%Form des Bildungsberichts]\nEs gibt verschiedene Formen des Bildungsberichts. Es kann sich beispielsweise um eine Variante des Formulars handeln, das für die Qualifikationsgespräche mit den Mitarbeitenden verwendet wird.\n\nDie meisten Organisationen der Arbeitswelt – OdA - stellen berufsspezifische Beurteilungsbögen mit den berufsspezifischen Inhalten zur Verfügung.\n\nDas SDBB hat das berufsneutrale Formular „Bildungsbericht“ erarbeitet. Es handelt sich um ein Instrument, das auf Grund der spezifischen Bedürfnisse der betrieblichen Ausbildung zusammengestellt wurde und von den Berufsbildnerinnen und Berufsbildnern übernommen werden kann.\n\nMit diesem Instrument können persönliches Verhalten, Arbeitsverhalten und berufliches Können in einem Beurteilungsbogen erfasst werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Es gibt verschiedene Formen des Bildungsberichts. Es kann sich beispielsweise um eine Variante des Formulars handeln, das für die Qualifikationsgespräche mit den Mitarbeitenden verwendet wird.\n\nDie meisten Organisationen der Arbeitswelt – OdA - stellen berufsspezifische Beurteilungsbögen mit den berufsspezifischen Inhalten zur Verfügung.\n\nDas SDBB hat das berufsneutrale Formular „Bildungsbericht“ erarbeitet. Es handelt sich um ein Instrument, das auf Grund der spezifischen Bedürfnisse der betrieblichen Ausbildung zusammengestellt wurde und von den Berufsbildnerinnen und Berufsbildnern übernommen werden kann.\n\nMit diesem Instrument können persönliches Verhalten, Arbeitsverhalten und berufliches Können in einem Beurteilungsbogen erfasst werden.",
+      "id": [
+        "186249"
+      ],
+      "lead": "Form des Bildungsberichts"
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:186250]\n[!Meine Notizen:]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Meine Notizen:",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186250"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:186836]\n[##Schritt 4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "186836"
+      ],
+      "title": "Schritt 4"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:186251]\n[%][%Lerndokumentation]\nEine wichtige Grundlage für das Erstellen des Bildungsberichts ist die Lerndokumentation.\n\nDie lernende Person hält darin alle wesentlichen Arbeiten, die erworbenen Fähigkeiten und Fertigkeiten sowie die gemachten Erfahrungen fest.\n\nDie Lerndokumentation wird systematisch geführt und dient auch als Nachschlagewerk.\n\nDie Berufsbildner/innen erhalten mit der Lerndokumentation nicht nur eine Übersicht über den effektiv erfolgten Bildungsverlauf, sondern können aus ihr auch das Berufsinteresse und das persönliche Engagement der lernenden Person ablesen. Bei verschiedenen Berufen darf die Lerndokumentation an der Abschlussprüfung bei der praktischen Arbeit benutzt werden; sie dient also auch als Grundlage für das Qualifikationsverfahren. Die Bildungsverordnung enthält die entsprechenden Hinweise.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Eine wichtige Grundlage für das Erstellen des Bildungsberichts ist die Lerndokumentation.\n\nDie lernende Person hält darin alle wesentlichen Arbeiten, die erworbenen Fähigkeiten und Fertigkeiten sowie die gemachten Erfahrungen fest.\n\nDie Lerndokumentation wird systematisch geführt und dient auch als Nachschlagewerk.\n\nDie Berufsbildner/innen erhalten mit der Lerndokumentation nicht nur eine Übersicht über den effektiv erfolgten Bildungsverlauf, sondern können aus ihr auch das Berufsinteresse und das persönliche Engagement der lernenden Person ablesen. Bei verschiedenen Berufen darf die Lerndokumentation an der Abschlussprüfung bei der praktischen Arbeit benutzt werden; sie dient also auch als Grundlage für das Qualifikationsverfahren. Die Bildungsverordnung enthält die entsprechenden Hinweise.",
+      "id": [
+        "186251"
+      ],
+      "lead": "Lerndokumentation"
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:186252]\n[!Meine Notizen:]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Meine Notizen:",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186252"
+      ]
+    }
+  }
+]

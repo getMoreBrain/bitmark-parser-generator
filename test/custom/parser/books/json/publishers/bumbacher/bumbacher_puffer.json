@@ -1,0 +1,187 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:191214]\n[#Gruppenarbeit Führung & gute Arbeit]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/bumbacher/primepool_cover2.png]\n[@externalId:e-gruppenarbeit-fhrung--gute-arbeit_jegmpjqssahn]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191214"
+      ],
+      "title": "Gruppenarbeit Führung & gute Arbeit",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/bumbacher/primepool_cover2.png"
+      ],
+      "externalId": [
+        "e-gruppenarbeit-fhrung--gute-arbeit_jegmpjqssahn"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191215]\n[%][%Teil I:]\n\nSie haben die Führungsgrundsätze Ihrer Firma mitgebracht. Sie erleben diese wahrscheinlich im Arbeitsalltag und nun geht es darum diese zu reflektieren und den anderen Gruppenteilnehmenden näher zu bringen:\nFolgende Fragen können Ihnen zur Diskussion helfen:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Sie haben die Führungsgrundsätze Ihrer Firma mitgebracht. Sie erleben diese wahrscheinlich im Arbeitsalltag und nun geht es darum diese zu reflektieren und den anderen Gruppenteilnehmenden näher zu bringen:\nFolgende Fragen können Ihnen zur Diskussion helfen:",
+      "id": [
+        "191215"
+      ],
+      "lead": "Teil I:"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:192038]\n===\n[%1]Wie würden Sie den Führungsstil Ihres Unternehmens bezeichnen?\n===\n[%2]Worin sehen Sie die Vor- und Nachteile dieses Führungsstils?\n===\n[%3]Werden die definierten Führungsgrundsätze gelebt?\n===\n[%4]Wie wäre Ihrer Meinung nach der ideal Führungsstil Ihres Unternehmens? Bitte begründen Sie Ihre Antwort.\n===\n[%5]Werden Ihre Vorgesetzten genügend unterstützt?\n===\n[%6]Welchen Einfluss hat aus Ihrer Meinung Ihr Vorgesetzter auf Ihre Arbeitsleistung?\n===\n[%7]Wenn Sie drei Wünsche an die Führung hätten, welche Wünsche wären das? Bitte begründen.\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "1",
+          "question": "Wie würden Sie den Führungsstil Ihres Unternehmens bezeichnen?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "2",
+          "question": "Worin sehen Sie die Vor- und Nachteile dieses Führungsstils?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "3",
+          "question": "Werden die definierten Führungsgrundsätze gelebt?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "4",
+          "question": "Wie wäre Ihrer Meinung nach der ideal Führungsstil Ihres Unternehmens? Bitte begründen Sie Ihre Antwort.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "5",
+          "question": "Werden Ihre Vorgesetzten genügend unterstützt?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "6",
+          "question": "Welchen Einfluss hat aus Ihrer Meinung Ihr Vorgesetzter auf Ihre Arbeitsleistung?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "7",
+          "question": "Wenn Sie drei Wünsche an die Führung hätten, welche Wünsche wären das? Bitte begründen.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "192038"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191216]\n[%][% Teil II:]\nNun gehen Sie nach Draussen und befragen mindestens 10 Personen zu „Führung und guter Arbeit“. \nSeien Sie dabei frei. Ein Beispiel könnte sein: Was bedeutet gute Arbeit für Sie? Wann arbeiten Sie gerne? Wie sieht es bei Ihnen aus? Was wünschen Sie sich? Wann sind Sie erfolgreich etc.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Nun gehen Sie nach Draussen und befragen mindestens 10 Personen zu „Führung und guter Arbeit“. \nSeien Sie dabei frei. Ein Beispiel könnte sein: Was bedeutet gute Arbeit für Sie? Wann arbeiten Sie gerne? Wie sieht es bei Ihnen aus? Was wünschen Sie sich? Wann sind Sie erfolgreich etc.",
+      "id": [
+        "191216"
+      ],
+      "lead": "Teil II:"
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:191217]\nNotieren Sie auch hier zusammenfassend die wichtigsten Erkenntnisse aus der Strassenumfrage. Welche neuen Inputs sind dazugekommen?",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "",
+      "partialAnswer": "",
+      "body": "Notieren Sie auch hier zusammenfassend die wichtigsten Erkenntnisse aus der Strassenumfrage. Welche neuen Inputs sind dazugekommen?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191217"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:191218]\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_puffer/web-resources/images/bumbacher_puffer_1.png]\n\nSie werden im Anschluss den Anderen Ihre Ergebnisse kurz präsentieren.\n\nViel Spass und viel Erfolg!",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Sie werden im Anschluss den Anderen Ihre Ergebnisse kurz präsentieren.\n\nViel Spass und viel Erfolg!",
+      "id": [
+        "191218"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_puffer/web-resources/images/bumbacher_puffer_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  }
+]

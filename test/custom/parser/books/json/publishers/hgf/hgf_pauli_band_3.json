@@ -1,0 +1,2623 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:166206]\n[#Pauli Kompakt]\n[##Fragen und Antworten rund ums Kochen]\n[#Band 3]\n[@coverImage:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_coverimage.png]\n[@language:de]\n[@externalId:e-band-3_thbvfx_3ffhj]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166206"
+      ],
+      "title": "Band 3",
+      "subtitle": "Fragen und Antworten rund ums Kochen",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_coverimage.png"
+      ],
+      "language": [
+        "de"
+      ],
+      "externalId": [
+        "e-band-3_thbvfx_3ffhj"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:166207]\n[#Bestimmung von Gewürzen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "166207"
+      ],
+      "title": "Bestimmung von Gewürzen"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:166208]\n[%5.6]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_1.png]\n[!Benennen Sie die abgebildeten Kräuter und Gewürze in deutscher, französischer und englischer Sprache und bestimmen Sie je drei typische Verwendungszwecke.]\n\n[_][!deutsch] [_][!französisch] [_][!englisch]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0} {1} {2}",
+      "item": "5.6",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166208"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "instruction": "Benennen Sie die abgebildeten Kräuter und Gewürze in deutscher, französischer und englischer Sprache und bestimmen Sie je drei typische Verwendungszwecke.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "deutsch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "französisch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "englisch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166209]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_1.png]\n[!Benennen Sie die abgebildeten Kräuter und Gewürze in deutscher, französischer und englischer Sprache und bestimmen Sie je drei typische Verwendungszwecke.]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Benennen Sie die abgebildeten Kräuter und Gewürze in deutscher, französischer und englischer Sprache und bestimmen Sie je drei typische Verwendungszwecke.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166209"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:166210]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_2.png]\n[_][!deutsch] [_][!französisch] [_][!englisch]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0} {1} {2}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166210"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "deutsch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "französisch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "englisch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166211]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_2.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166211"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:166212]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_3.png]\n[_][!deutsch] [_][!französisch] [_][!englisch]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0} {1} {2}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166212"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "deutsch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "französisch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "englisch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166213]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_3.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166213"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:166214]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_4.png]\n[_][!deutsch] [_][!französisch] [_][!englisch]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0} {1} {2}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166214"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "deutsch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "französisch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "englisch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166215]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_4.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166215"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:166216]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_5.png]\n[_][!deutsch] [_][!französisch] [_][!englisch]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0} {1} {2}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166216"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "deutsch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "französisch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "englisch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166217]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_5.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166217"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:166218]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_6.png]\n[_][!deutsch] [_][!französisch] [_][!englisch]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0} {1} {2}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166218"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "deutsch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "französisch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [],
+          "hint": "",
+          "instruction": "englisch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166219]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_6.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166219"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:166220]\n[#Konfekte gefüllt/ungefüllt]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "166220"
+      ],
+      "title": "Konfekte gefüllt/ungefüllt"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166221]\n[%10.6]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_7.png]\n[!Die Auswahl an Konfekt ist gross, es gibt gefüllte und ungefüllte sowie saisonale Backwaren. Benennen und beschreiben Sie die abgebildeten Konfekte.]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "10.6",
+      "instruction": "Die Auswahl an Konfekt ist gross, es gibt gefüllte und ungefüllte sowie saisonale Backwaren. Benennen und beschreiben Sie die abgebildeten Konfekte.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166221"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_7.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166222]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_8.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166222"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_8.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166223]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_9.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166223"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_9.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166224]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_10.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166224"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_10.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166225]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_11.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166225"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_11.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:166226]\n[#Aussagen zu Pralinen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "166226"
+      ],
+      "title": "Aussagen zu Pralinen"
+    }
+  },
+  {
+    "bitmark": "[.true-false:bitmark--]\n[@id:166227]\n[!Überprüfen Sie die folgenden Aussagen zu Pralinen. Setzen Sie bei den richtigen Aussagen ein Häkchen und formulieren Sie die Falschaussagen richtig.]\n[@labelTrue:richtig][@labelFalse:falsch]\n===\n[+10.7 Die Hohlkugeln von unten her leicht überfüllen, da sich die Ganache zusammenzieht.]\n===\n[-10.8 Unter Trempieren vesteht man das Parfümieren mit Spirituosen. ]\n===\n[+10.9 Pralinen: Lagerung bei ca. 21 °C und bei 80–85 % relativer Luftfeuchtigkeit.]\n===\n[-10.10 Gefrorene Pralinen möglichst langsam (2 Tage) bei 5 bis 18°C auftauen.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "",
+      "lead": "",
+      "instruction": "Überprüfen Sie die folgenden Aussagen zu Pralinen. Setzen Sie bei den richtigen Aussagen ein Häkchen und formulieren Sie die Falschaussagen richtig.",
+      "hint": "",
+      "labelTrue": "richtig",
+      "labelFalse": "falsch",
+      "statements": [
+        {
+          "statement": "10.7 Die Hohlkugeln von unten her leicht überfüllen, da sich die Ganache zusammenzieht.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "10.8 Unter Trempieren vesteht man das Parfümieren mit Spirituosen.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "10.9 Pralinen: Lagerung bei ca. 21 °C und bei 80–85 % relativer Luftfeuchtigkeit.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "10.10 Gefrorene Pralinen möglichst langsam (2 Tage) bei 5 bis 18°C auftauen.",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "166227"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166228]\n[!Überprüfen Sie die folgenden Aussagen zu Pralinen. Setzen Sie bei den richtigen Aussagen ein Häkchen und formulieren Sie die Falschaussagen richtig.]\n===\n[%10.7] Die Hohlkugeln von unten her leicht überfüllen, da sich die Ganache zusammenzieht.][@shortAnswer]\n===\n[%10.8] Unter Trempieren vesteht man das Parfümieren mit Spirituosen. ][@shortAnswer]\n===\n[%10.9] Pralinen: Lagerung bei ca. 21 °C und bei 80–85 % relativer Luftfeuchtigkeit.][@shortAnswer]\n===\n[%10.10]Gefrorene Pralinen möglichst langsam (2 Tage) bei 5 bis 18°C auftauen.[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Überprüfen Sie die folgenden Aussagen zu Pralinen. Setzen Sie bei den richtigen Aussagen ein Häkchen und formulieren Sie die Falschaussagen richtig.",
+      "body": "][@shortAnswer][%10.8] Unter Trempieren vesteht man das Parfümieren mit Spirituosen. ][@shortAnswer][%10.9] Pralinen: Lagerung bei ca. 21 °C und bei 80–85 % relativer Luftfeuchtigkeit.][@shortAnswer][%10.10]Gefrorene Pralinen möglichst langsam (2 Tage) bei 5 bis 18°C auftauen.[@shortAnswer]",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "10.7",
+          "question": "Die Hohlkugeln von unten her leicht überfüllen, da sich die Ganache zusammenzieht.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166228"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Rule violation around ']'",
+        "line": 5,
+        "column": 90,
+        "errorLine": "[%10.7] Die Hohlkugeln von unten her leicht überfüllen, da sich die Ganache zusammenzieht.][@shortAnswer]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:166229]\n[#Charlotte royal]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "166229"
+      ],
+      "title": "Charlotte royal"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166230]\n[%10.11]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_12.png]\n[!Eine Charlotte ist eine üppige Süssspeise, die zum Anrichten gestürzt wird. Beschreiben Sie die Zubereitung der Charlotte royal unter Einbezug der Bildfolge.]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "10.11",
+      "instruction": "Eine Charlotte ist eine üppige Süssspeise, die zum Anrichten gestürzt wird. Beschreiben Sie die Zubereitung der Charlotte royal unter Einbezug der Bildfolge.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166230"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_12.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166231]\n[%10.12]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_13.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "10.12",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166231"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_13.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166232]\n[%10.13]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_14.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "10.13",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166232"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_14.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166233]\n[%10.14]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_15.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "10.14",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166233"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_15.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166234]\n[%10.15]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_16.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "10.15",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166234"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_16.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:166235]\n[#Garprozesse / Geräte / Gerichte]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "166235"
+      ],
+      "title": "Garprozesse / Geräte / Gerichte"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:166236]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_17.png]\nAls Vorbereitung auf das bevorstehende Qualifikationsverfahren hat der Küchenchef ein paar Aufgaben zum Thema «Käse» vorbereitet.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Als Vorbereitung auf das bevorstehende Qualifikationsverfahren hat der Küchenchef ein paar Aufgaben zum Thema «Käse» vorbereitet.",
+      "id": [
+        "166236"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_17.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166237]\n[%21.20]\n[!Schlagen Sie zu jeder aufgeführten Gartechnik ein passendes Käsegericht vor. Ordnen Sie zum vorgeschlagenen Käsegericht einen geeigneten Kochapparat zu.]\n===\nBacken\n[@shortAnswer]\n===\nGratinieren\n[@shortAnswer]\n===\nFrittieren\n[@shortAnswer]\n===\nSautieren\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "21.20",
+      "instruction": "Schlagen Sie zu jeder aufgeführten Gartechnik ein passendes Käsegericht vor. Ordnen Sie zum vorgeschlagenen Käsegericht einen geeigneten Kochapparat zu.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Backen",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Gratinieren",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Frittieren",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Sautieren",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166237"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:166238]\n[#Garprozesse / Kombinationen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "166238"
+      ],
+      "title": "Garprozesse / Kombinationen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166239]\nGarprozesse: Sie sind für die Fischvorspeise verantwortlich und nutzen die Gelegenheit, anhand einer Rezeptvorlage Ihr Fachwissen wiederzugeben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Garprozesse: Sie sind für die Fischvorspeise verantwortlich und nutzen die Gelegenheit, anhand einer Rezeptvorlage Ihr Fachwissen wiederzugeben.",
+      "id": [
+        "166239"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.match:bitmark--&image]\n[@id:166240]\n[%21.21]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/pauli_band_3_18.png]\n[!Koordinieren Sie die Schritte der Zubereitung (1–8) so, dass die Reihenfolge fachlich korrekt ist.]\n===\nBild A\n==\n1\n===\nBild B\n==\n2\n===\nBild C\n==\n3\n===\nBild D\n==\n4\n===\nBild E\n==\n5\n===\nBild F\n==\n6\n===\nBild G\n==\n7\n===\nBild H\n==\n8\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "21.21",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Bild A",
+          "values": [
+            "1"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild B",
+          "values": [
+            "2"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild C",
+          "values": [
+            "3"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild D",
+          "values": [
+            "4"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild E",
+          "values": [
+            "5"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild F",
+          "values": [
+            "6"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild G",
+          "values": [
+            "7"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild H",
+          "values": [
+            "8"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "166240"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/pauli_band_3_18.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "instruction": "Koordinieren Sie die Schritte der Zubereitung (1–8) so, dass die Reihenfolge fachlich korrekt ist."
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:166241]\n[#Zerlegung des Lamms]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "166241"
+      ],
+      "title": "Zerlegung des Lamms"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166242]\nDas Lamm wird in verschiedene Teile/Muskelpartien zerlegt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Lamm wird in verschiedene Teile/Muskelpartien zerlegt.",
+      "id": [
+        "166242"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:166243]\n[%25.20]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_19.png]\n[!Benennen Sie sechs Hauptteile, in die ein Lamm zerlegt wird.]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "",
+      "item": "25.20",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166243"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_19.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "instruction": "Benennen Sie sechs Hauptteile, in die ein Lamm zerlegt wird."
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:166244]\n[#Kraftbrühen-Zubereitung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "166244"
+      ],
+      "title": "Kraftbrühen-Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166245]\nGarprozesse: Sie sind für die Suppen verantwortlich und nutzen die Gelegenheit, anhand einer Rezeptvorlage Ihr Fachwissen wiederzugeben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Garprozesse: Sie sind für die Suppen verantwortlich und nutzen die Gelegenheit, anhand einer Rezeptvorlage Ihr Fachwissen wiederzugeben.",
+      "id": [
+        "166245"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.match:bitmark--&image]\n[@id:166246]\n[%25.25]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/pauli_band_3_20.png]\n[!Koordinieren Sie die Schritte der Zubereitung einer Kraftbrühe (1–8) so, dass die Reihenfolge fachlich korrekt ist.]\n===\nBild A\n==\n1\n===\nBild B\n==\n2\n===\nBild C\n==\n3\n===\nBild D\n==\n4\n===\nBild E\n==\n5\n===\nBild F\n==\n6\n===\nBild G\n==\n7\n===\nBild H\n==\n8\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "25.25",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Bild A",
+          "values": [
+            "1"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild B",
+          "values": [
+            "2"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild C",
+          "values": [
+            "3"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild D",
+          "values": [
+            "4"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild E",
+          "values": [
+            "5"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild F",
+          "values": [
+            "6"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild G",
+          "values": [
+            "7"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild H",
+          "values": [
+            "8"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "166246"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/pauli_band_3_20.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "instruction": "Koordinieren Sie die Schritte der Zubereitung einer Kraftbrühe (1–8) so, dass die Reihenfolge fachlich korrekt ist."
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-9]\n[@id:166247]\n[#Warenkostenberechnung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "166247"
+      ],
+      "title": "Warenkostenberechnung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166248]\nBerechnen von Warenkosten",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Berechnen von Warenkosten",
+      "id": [
+        "166248"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:166249]\n[%25.26]\nFür 5,400kg frische Karotten müssen CHF 13.50 bezahlt werden. Durch das Schälen entsteht ein Verlust von 15% und durch das anschliessende Tournieren ein Verlust von 23%.\n[!Wie hoch sind die Warenkosten für 1kg tournierte Karotten?]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Wie hoch sind die Warenkosten für 1kg tournierte Karotten?",
+      "partialAnswer": "",
+      "body": "Für 5,400kg frische Karotten müssen CHF 13.50 bezahlt werden. Durch das Schälen entsteht ein Verlust von 15% und durch das anschliessende Tournieren ein Verlust von 23%.",
+      "item": "25.26",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166249"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166250]\nGarprozesse: Der Entremetier stellt das unten in Schritten abgebildete Kartoffelgericht her.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Garprozesse: Der Entremetier stellt das unten in Schritten abgebildete Kartoffelgericht her.",
+      "id": [
+        "166250"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166251]\n[%26.12]\n[!Benennen Sie das Kartoffelgericht mit der korrekten Fachbezeichnung.]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "26.12",
+      "instruction": "Benennen Sie das Kartoffelgericht mit der korrekten Fachbezeichnung.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166251"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.match:bitmark--&image]\n[@id:166252]\n[%26.13]\n[!Koordinieren Sie die Schritte der Zubereitung (1–6) so, dass die Reihenfolge fachlich korrekt ist.]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_27.png]\n===\nBild A\n==\n1\n===\nBild B\n==\n2\n===\nBild C\n==\n3\n===\nBild D\n==\n4\n===\nBild E\n==\n5\n===\nBild F\n==\n6\n===\nBild G\n==\n7\n===\nBild H\n==\n8\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "26.13",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Bild A",
+          "values": [
+            "1"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild B",
+          "values": [
+            "2"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild C",
+          "values": [
+            "3"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild D",
+          "values": [
+            "4"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild E",
+          "values": [
+            "5"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild F",
+          "values": [
+            "6"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild G",
+          "values": [
+            "7"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bild H",
+          "values": [
+            "8"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "166252"
+      ],
+      "instruction": "Koordinieren Sie die Schritte der Zubereitung (1–6) so, dass die Reihenfolge fachlich korrekt ist.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_27.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-10]\n[@id:166253]\n[#Vom EVP zu den WK]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-10",
+      "id": [
+        "166253"
+      ],
+      "title": "Vom EVP zu den WK"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166254]\nKalkulationsaufgabe: Fischmenge",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Kalkulationsaufgabe: Fischmenge",
+      "id": [
+        "166254"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:166255]\n[%26.14]\nDer effektive Verkaufspreis (EVP) einer Portion Thonsalat beträgt CHF 16.50. Die Warenkosten (WK) für den abgetropften Thon betragen CHF 20.50/kg. Die Warenkosten (WK) für Garnitur und Salatsauce betragen CHF 1.40. Der Faktor/Richtfaktor (F) beträgt 3,25 und die Mehrwertsteuer (MwSt) macht 8% aus.\n[!Wie viele Gramm Thon dürfen verwendet werden?]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Wie viele Gramm Thon dürfen verwendet werden?",
+      "partialAnswer": "",
+      "body": "Der effektive Verkaufspreis (EVP) einer Portion Thonsalat beträgt CHF 16.50. Die Warenkosten (WK) für den abgetropften Thon betragen CHF 20.50/kg. Die Warenkosten (WK) für Garnitur und Salatsauce betragen CHF 1.40. Der Faktor/Richtfaktor (F) beträgt 3,25 und die Mehrwertsteuer (MwSt) macht 8% aus.",
+      "item": "26.14",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166255"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-11]\n[@id:166256]\n[#Käsesorten und Qualität]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-11",
+      "id": [
+        "166256"
+      ],
+      "title": "Käsesorten und Qualität"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166257]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_21.png]\n[!Verschiedene Kriterien wie beispielsweise der Reifegrad bestimmen die Qualität von Käse. Ordnen Sie die unten abgebildeten Käse mit Namen der dazugehörenden Gruppe zu.]\n===\n[%27.1] Extrahartkäse[@shortAnswer]\n[!1-7]\n===\n[%27.2] Blau- / Grünschimmelkäse\n[@shortAnswer]\n===\n[%27.3] Rotschmierkäse\n[@shortAnswer]\n===\n[%27.4] Weissschimmelkäse[@shortAnswer]\n===\n[%27.5] Hartkäse[@shortAnswer]\n===\n[%27.6] Halbhartkäse[@shortAnswer]\n===\n[%27.7] Frischkäse[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Verschiedene Kriterien wie beispielsweise der Reifegrad bestimmen die Qualität von Käse. Ordnen Sie die unten abgebildeten Käse mit Namen der dazugehörenden Gruppe zu.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "27.1",
+          "question": "Extrahartkäse",
+          "instruction": "1-7",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.2",
+          "question": "Blau- / Grünschimmelkäse",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.3",
+          "question": "Rotschmierkäse",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.4",
+          "question": "Weissschimmelkäse",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.5",
+          "question": "Hartkäse",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.6",
+          "question": "Halbhartkäse",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.7",
+          "question": "Frischkäse",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166257"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_21.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-12]\n[@id:166258]\n[#Obst-Gruppierung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-12",
+      "id": [
+        "166258"
+      ],
+      "title": "Obst-Gruppierung"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166259]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_22.png]\n[!Das Angebot an Obst hat sich, bedingt durch die Nachfrage, vergrössert. Obst wird in verschiedene Kategorien eingeteilt. Ordnen Sie die abgebildeten Obstsorten mit Namen der richtigen Gruppe zu.]\n===\n[%27.9] Beerenobst[@shortAnswer]\n[!1-7]\n===\n[%27.10] Exotische Frucht (1) [@shortAnswer]\n===\n[%27.11] Hartschalenobst [@shortAnswer]\n===\n[%27.12] Zitrusfrucht[@shortAnswer]\n===\n[%27.13] Steinobst[@shortAnswer]\n===\n[%27.14] Exotische Frucht (2) [@shortAnswer]\n===\n[%27.15] Kernobst[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Das Angebot an Obst hat sich, bedingt durch die Nachfrage, vergrössert. Obst wird in verschiedene Kategorien eingeteilt. Ordnen Sie die abgebildeten Obstsorten mit Namen der richtigen Gruppe zu.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "27.9",
+          "question": "Beerenobst",
+          "instruction": "1-7",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.10",
+          "question": "Exotische Frucht (1)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.11",
+          "question": "Hartschalenobst",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.12",
+          "question": "Zitrusfrucht",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.13",
+          "question": "Steinobst",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.14",
+          "question": "Exotische Frucht (2)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.15",
+          "question": "Kernobst",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166259"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_22.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166260]",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [],
+      "id": [
+        "166260"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n\n'",
+        "line": 4,
+        "column": 0,
+        "errorLine": ""
+      },
+      {
+        "message": "Missing resource(s) for &image",
+        "line": 0,
+        "column": 0
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-13]\n[@id:166261]\n[#Zuordnung Gewürze]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-13",
+      "id": [
+        "166261"
+      ],
+      "title": "Zuordnung Gewürze"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166262]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_23.png]\n[!Gewürze und Kräuter haben auch aus ernährungsphysiologischer Sicht aufgrund der unterschiedlichen Inhaltsstoffe eine grosse Bedeutung. Ordnen Sie die abgebildeten Gewürze und Kräuter mit Namen dem richtigen Gericht zu.]\n===\n[%27.31] Bouillabaisse marseillaise[@shortAnswer]\n===\n[%27.32] Thunfisch-Sashimi[@shortAnswer]\n===\n[%27.33] Sweet and sour pork [@shortAnswer]\n===\n[%27.34] Gravad Lax[@shortAnswer]\n===\n[%27.35] Sauerkraut[@shortAnswer]\n===\n[%27.36] Tomaten-Mozzarella-Salat [@shortAnswer]\n===\n[%27.37] Kutteln nach Zürcher Art[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Gewürze und Kräuter haben auch aus ernährungsphysiologischer Sicht aufgrund der unterschiedlichen Inhaltsstoffe eine grosse Bedeutung. Ordnen Sie die abgebildeten Gewürze und Kräuter mit Namen dem richtigen Gericht zu.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "27.31",
+          "question": "Bouillabaisse marseillaise",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.32",
+          "question": "Thunfisch-Sashimi",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.33",
+          "question": "Sweet and sour pork",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.34",
+          "question": "Gravad Lax",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.35",
+          "question": "Sauerkraut",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.36",
+          "question": "Tomaten-Mozzarella-Salat",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "27.37",
+          "question": "Kutteln nach Zürcher Art",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166262"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_23.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-14]\n[@id:166263]\n[#Parboiling-Verfahren]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-14",
+      "id": [
+        "166263"
+      ],
+      "title": "Parboiling-Verfahren"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166264]\n[%31.1]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_24.png]\n[!Im Handel ist der sogenannte «Parboiled-Reis» sehr beliebt. Erläutern Sie anhand der Abbildungen die drei Verarbeitungsschritte dieses Verfahrens.]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "31.1",
+      "instruction": "Im Handel ist der sogenannte «Parboiled-Reis» sehr beliebt. Erläutern Sie anhand der Abbildungen die drei Verarbeitungsschritte dieses Verfahrens.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166264"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_24.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166265]\n[%31.2]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_25.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "31.2",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166265"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_25.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:166266]\n[%31.3]\n[&image:https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_26.png]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "31.3",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166266"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/hgf/pauli_band_3/web-resources/images/hgf_pauli_band_3_26.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166267]\n[%31.4]\n[!Fassen Sie mit zwei Aussagen den Sinn und Zweck dieses Verfahrens zusammen.]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "31.4",
+      "instruction": "Fassen Sie mit zwei Aussagen den Sinn und Zweck dieses Verfahrens zusammen.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166267"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-15]\n[@id:166268]\n[#Berechnung Basisverkaufspreis]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-15",
+      "id": [
+        "166268"
+      ],
+      "title": "Berechnung Basisverkaufspreis"
+    }
+  },
+  {
+    "bitmark": "[.article]\n[@id:166269]\nBerechnung des Basisverkaufspreises.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Berechnung des Basisverkaufspreises.",
+      "id": [
+        "166269"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:166270]\n[%31.5]\nDie Speisekarte wird mit dem Gericht «Carpaccio» ergänzt. Der Einkaufspreis für das Rindsfilet beträgt CHF 65.– pro kg. Für die weiteren Zutaten werden Warenkosten (WK) von CHF 2.80 pro Gericht berechnet. Der Faktor (F) wurde auf 3,450 festgelegt.\n[!Berechnen Sie den Basisverkaufspreis des Gerichtes, wenn für eine Portion 80g Rindsfilet verwendet werden.]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Berechnen Sie den Basisverkaufspreis des Gerichtes, wenn für eine Portion 80g Rindsfilet verwendet werden.",
+      "partialAnswer": "",
+      "body": "Die Speisekarte wird mit dem Gericht «Carpaccio» ergänzt. Der Einkaufspreis für das Rindsfilet beträgt CHF 65.– pro kg. Für die weiteren Zutaten werden Warenkosten (WK) von CHF 2.80 pro Gericht berechnet. Der Faktor (F) wurde auf 3,450 festgelegt.",
+      "item": "31.5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166270"
+      ]
+    }
+  }
+]

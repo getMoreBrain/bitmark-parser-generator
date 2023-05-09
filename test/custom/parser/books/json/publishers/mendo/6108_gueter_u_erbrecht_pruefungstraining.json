@@ -1,0 +1,1358 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:184923]\n[@language:de]\n[#Prüfungstraining]\n[@coverImage:https://docs.bitmark.cloud/bit-books/mendo/6108/web-resources/images/mendo_6108_cover.png]\n[@externalId:e-prfungstraining_x1ogoownsvzh]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184923"
+      ],
+      "language": [
+        "de"
+      ],
+      "title": "Prüfungstraining",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/mendo/6108/web-resources/images/mendo_6108_cover.png"
+      ],
+      "externalId": [
+        "e-prfungstraining_x1ogoownsvzh"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184924]\nGÜTER- UND ERBRECHT\nBILDUNGSGANG DIPL. FINANZBERATER/IN IAF\nDOKUMENT 6108\n\nLÖSUNGEN",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "GÜTER- UND ERBRECHT\nBILDUNGSGANG DIPL. FINANZBERATER/IN IAF\nDOKUMENT 6108\n\nLÖSUNGEN",
+      "id": [
+        "184924"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:184925]\nUnsere Bildungspartner:\n|image:https://docs.bitmark.cloud/bit-books/mendo/1112_kurzfall_nachlassplanung/web-resources/images/mendo_kurzfall_nachlassplanung_1.png|@width:914|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Unsere Bildungspartner:\n|image:https://docs.bitmark.cloud/bit-books/mendo/1112_kurzfall_nachlassplanung/web-resources/images/mendo_kurzfall_nachlassplanung_1.png|@width:914|",
+      "id": [
+        "184925"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--]\n[@id:184926]\n[%1]\n[!Kreuzen Sie sämtliche zutreffenden Möglichkeiten an!]\nDieser Güterstand ....\n===\n[!... kann heute noch gewählt werden]\n[+Errungenschaftsbeteiligung]\n[+Gütergemeinschaft]\n[+Gütertrennung]\n===\n[!bietet steuerliche Vorteile]\n[-Errungenschaftsbeteiligung]\n[-Gütergemeinschaft]\n[-Gütertrennung]\n===\n[!muss öffentlich beglaubigt werden]\n[-Errungenschaftsbeteiligung]\n[+Gütergemeinschaft]\n[+Gütertrennung]\n===\n[!hat vier Vermögensmassen]\n[+Errungenschaftsbeteiligung]\n[-Gütergemeinschaft]\n[-Gütertrennung]\n===\n[!ist ein vertraglicher Güterstand]\n[-Errungenschaftsbeteiligung]\n[+Gütergemeinschaft]\n[+Gütertrennung]\n===\n[!bei diesem Güterstand ist das Eigengut am kleinsten]\n[-Errungenschaftsbeteiligung]\n[+Gütergemeinschaft]\n[-Gütertrennung]\n===\n[!bei diesem Güterstand gibt es keine güterrechtliche Auseinandersetzung]\n[-Errungenschaftsbeteiligung]\n[-Gütergemeinschaft]\n[+Gütertrennung]\n===",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "1",
+      "instruction": "Kreuzen Sie sämtliche zutreffenden Möglichkeiten an!",
+      "body": "Dieser Güterstand ....",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "... kann heute noch gewählt werden",
+          "responses": [
+            {
+              "response": "Errungenschaftsbeteiligung",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütergemeinschaft",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütertrennung",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "bietet steuerliche Vorteile",
+          "responses": [
+            {
+              "response": "Errungenschaftsbeteiligung",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütergemeinschaft",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütertrennung",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "muss öffentlich beglaubigt werden",
+          "responses": [
+            {
+              "response": "Errungenschaftsbeteiligung",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütergemeinschaft",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütertrennung",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "hat vier Vermögensmassen",
+          "responses": [
+            {
+              "response": "Errungenschaftsbeteiligung",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütergemeinschaft",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütertrennung",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "ist ein vertraglicher Güterstand",
+          "responses": [
+            {
+              "response": "Errungenschaftsbeteiligung",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütergemeinschaft",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütertrennung",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "bei diesem Güterstand ist das Eigengut am kleinsten",
+          "responses": [
+            {
+              "response": "Errungenschaftsbeteiligung",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütergemeinschaft",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütertrennung",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "bei diesem Güterstand gibt es keine güterrechtliche Auseinandersetzung",
+          "responses": [
+            {
+              "response": "Errungenschaftsbeteiligung",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütergemeinschaft",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gütertrennung",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "184926"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false:bitmark--]\n[@id:184927]\n[%2]\n[!Welche der folgenden Aussagen sind richtig bzw. falsch?]\n[@labelTrue:richtig][@labelFalse:falsch]\n===\n[+Erträge aus dem Eigengut fallen in die Errungenschaft.]\n===\n[-Ein Nachkomme kann enterbt werden, wenn er seit Jahren keinen Kontakt mehr mit den Eltern hatte.]\n===\n[+Geschwister und deren Nachkommen haben kein Pflichtteilsrecht.]\n===\n[-Für Nachkommen beträgt der Pflichtteil immer ½.]\n===\n[+Mit einem Ehevertrag kann vereinbart werden, dass Vermögenswerte der Errungenschaft, die für die Ausübung eines Berufes bestimmt sind, zu Eigengut erklärt werden.]\n===\n[-Das Güterrecht gilt auch für Konkubinatspaare, die seit mehreren Jahren in einer gefestigten Beziehung zusammenleben.]\n===\n[-Ein Erblasser hinterlässt einen Ehepartner und die Eltern. Soviel als möglich seines Nachlasses soll laut Testament dem Fussballclub zugehen. Der Willensvollstrecker überweist 40 % des Nachlasses.]\n===\n[-Es genügt, wenn die Erben von vorhandenen Testamenten und Erbverträgen Kenntnis nehmen und diese befolgen.]\n===\n[-Das Güterrecht regelt, wie der Nachlass zwischen den Erben aufgeteilt wird.]\n===\n[-Nichten und Neffen gehören zur 3. Parantele.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "2",
+      "lead": "",
+      "instruction": "Welche der folgenden Aussagen sind richtig bzw. falsch?",
+      "hint": "",
+      "labelTrue": "richtig",
+      "labelFalse": "falsch",
+      "statements": [
+        {
+          "statement": "Erträge aus dem Eigengut fallen in die Errungenschaft.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Ein Nachkomme kann enterbt werden, wenn er seit Jahren keinen Kontakt mehr mit den Eltern hatte.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Geschwister und deren Nachkommen haben kein Pflichtteilsrecht.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Für Nachkommen beträgt der Pflichtteil immer ½.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Mit einem Ehevertrag kann vereinbart werden, dass Vermögenswerte der Errungenschaft, die für die Ausübung eines Berufes bestimmt sind, zu Eigengut erklärt werden.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Das Güterrecht gilt auch für Konkubinatspaare, die seit mehreren Jahren in einer gefestigten Beziehung zusammenleben.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Ein Erblasser hinterlässt einen Ehepartner und die Eltern. Soviel als möglich seines Nachlasses soll laut Testament dem Fussballclub zugehen. Der Willensvollstrecker überweist 40 % des Nachlasses.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Es genügt, wenn die Erben von vorhandenen Testamenten und Erbverträgen Kenntnis nehmen und diese befolgen.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Das Güterrecht regelt, wie der Nachlass zwischen den Erben aufgeteilt wird.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Nichten und Neffen gehören zur 3. Parantele.",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "184927"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1]\n[@id:184928]\n[%3]\n[!Was gehört bei der Errungenschaft zum Eigengut? Kreuzen Sie die korrekten Antworten an.]\n[-Lohn]\n[-Bonus]\n[+Erbschaft]\n[-Altersrente der Pensionskasse]\n[-Altersrente der AHV]\n[+Kapitalgewinne im Eigengut]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "3",
+      "instruction": "Was gehört bei der Errungenschaft zum Eigengut? Kreuzen Sie die korrekten Antworten an.",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Lohn",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Bonus",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Erbschaft",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Altersrente der Pensionskasse",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Altersrente der AHV",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Kapitalgewinne im Eigengut",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184928"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:184929]\n[%4]\n[!Welcher Wert gilt für die Erbteilung?]\nEine Liegenschaft wurde seinerzeit zu CHF 500'000.-- erworben. Kurz vor dem Tod des Ehemannes wurde diese mit CHF 250'000.-- total saniert. Die Gebäudeversicherung weist einen Versicherungswert von CHF 820'000.-- aus; das Steueramt hat einen steuerbaren Verkehrswert festgelegt mit CHF 840'000.-- und ein neutraler Schätzer hat den Verkehrswert per Todestag mit CHF 965'000.-- ermittelt.\n\n[-CHF 500’000]\n[-CHF 750’000]\n[-CHF 820’000]\n[-CHF 840’000]\n[+CHF 965’000]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "4",
+      "instruction": "Welcher Wert gilt für die Erbteilung?",
+      "body": "Eine Liegenschaft wurde seinerzeit zu CHF 500'000.-- erworben. Kurz vor dem Tod des Ehemannes wurde diese mit CHF 250'000.-- total saniert. Die Gebäudeversicherung weist einen Versicherungswert von CHF 820'000.-- aus; das Steueramt hat einen steuerbaren Verkehrswert festgelegt mit CHF 840'000.-- und ein neutraler Schätzer hat den Verkehrswert per Todestag mit CHF 965'000.-- ermittelt.",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "CHF 500’000",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "CHF 750’000",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "CHF 820’000",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "CHF 840’000",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "CHF 965’000",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184929"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1]\n[@id:184930]\n[%5]\n[!Wer ist gesetzlicher Erbe?]\n[+Kind]\n[+Mutter]\n[+Ehegatte]\n[+Schwester]\n[+Eingetragener Partner]\n[+Grossvater]\n[-Konkubinatspartner]\n[+Nichte]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "5",
+      "instruction": "Wer ist gesetzlicher Erbe?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Kind",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Mutter",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Ehegatte",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Schwester",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Eingetragener Partner",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Grossvater",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Konkubinatspartner",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Nichte",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184930"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:184931]\n[%6]\n[!Was können Sie unternehmen? - Welche Klage?]\nEin nachweisbar geisteskranker Erblasser (alleinstehend), dessen Eltern noch leben, hat in einem Testament seinen Nachlass einem Tierheim vermacht. Die Eltern sind damit nicht einverstanden.\n\n[-Herabsetzungsklage]\n[-Erbschaftsklage]\n[+Ungültigkeitsklage]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "6",
+      "instruction": "Was können Sie unternehmen? - Welche Klage?",
+      "body": "Ein nachweisbar geisteskranker Erblasser (alleinstehend), dessen Eltern noch leben, hat in einem Testament seinen Nachlass einem Tierheim vermacht. Die Eltern sind damit nicht einverstanden.",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Herabsetzungsklage",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Erbschaftsklage",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ungültigkeitsklage",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184931"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:184932]\n[%7]\n[!Wie nennt man diese Erben?]\nAus einem Testament geht hervor, dass die Gotte des Erblassers einen Betrag von CHF 10'000.-- und die Caritas CHF 20'000.-- erhalten sollen.\n\n[-Gesetzliche Erben]\n[-Pflichtteilsgeschützte Erben]\n[+Vermächtnisempfänger]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "7",
+      "instruction": "Wie nennt man diese Erben?",
+      "body": "Aus einem Testament geht hervor, dass die Gotte des Erblassers einen Betrag von CHF 10'000.-- und die Caritas CHF 20'000.-- erhalten sollen.",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Gesetzliche Erben",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Pflichtteilsgeschützte Erben",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Vermächtnisempfänger",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184932"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:184933]\n[%8]\n[!Ein Erblasser hinterlässt als einzigen Erben seine Tochter. Der Nachlass beträgt netto CHF 200'000.-- Wie hoch ist]\n===\nder gesetzliche Anspruch?\n[@shortAnswer]\n[$CHF 200’000]\n===\nder Pflichtteils-Anspruch?\n[@shortAnswer]\n[$CHF 150’000]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "8",
+      "instruction": "Ein Erblasser hinterlässt als einzigen Erben seine Tochter. Der Nachlass beträgt netto CHF 200'000.-- Wie hoch ist",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "der gesetzliche Anspruch?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "CHF 200’000",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "der Pflichtteils-Anspruch?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "CHF 150’000",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "184933"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1]\n[@id:184934]\n[%9]\n[!Welche Formvorschriften sind beim eigenhändigen Testament zu beachten?]\n[-Notarielle Beurkundung]\n[-2 Zeugen]\n[+Handschriftlich verfasst]\n[-Unterschrieben durch Erben]\n[+Unterschrieben durch Erblasser]\n[-Unterschrieben durch Willensvollstrecker]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "9",
+      "instruction": "Welche Formvorschriften sind beim eigenhändigen Testament zu beachten?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Notarielle Beurkundung",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "2 Zeugen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Handschriftlich verfasst",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Unterschrieben durch Erben",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Unterschrieben durch Erblasser",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Unterschrieben durch Willensvollstrecker",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184934"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:184935]\n[%10]\n[!Wie gross ist die Forderung von Frau Meier gegenüber ihrem Ehemann Franz Meier?]\nFranz Meier hat von seiner Ehefrau zum Bau eines Hauses (Alleineigentum Franz Meier) CHF 200'000.-- erhalten; er selbst beteiligte sich mit CHF 280'000.--. Bei Auflösung der Ehe wurde der Verkehrswert der Liegenschaft auf CHF 620'000.-- geschätzt, während der Steuerwert mit CHF 510'000.--- ausgewiesen wird. Zwei Jahre nach dem Hausbau hat die Ehefrau für den Bau einer freistehenden Garage aus einer erhaltenen Erbschaft weitere CHF 15'000.-- zugeschossen. Die Eheleute haben weder einen Zins vereinbart, noch je einen Ehe- und Erbvertrag abgeschlossen.\n===\n[@shortAnswer]\n[$CHF 269’292]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "10",
+      "instruction": "Wie gross ist die Forderung von Frau Meier gegenüber ihrem Ehemann Franz Meier?",
+      "body": "Franz Meier hat von seiner Ehefrau zum Bau eines Hauses (Alleineigentum Franz Meier) CHF 200'000.-- erhalten; er selbst beteiligte sich mit CHF 280'000.--. Bei Auflösung der Ehe wurde der Verkehrswert der Liegenschaft auf CHF 620'000.-- geschätzt, während der Steuerwert mit CHF 510'000.--- ausgewiesen wird. Zwei Jahre nach dem Hausbau hat die Ehefrau für den Bau einer freistehenden Garage aus einer erhaltenen Erbschaft weitere CHF 15'000.-- zugeschossen. Die Eheleute haben weder einen Zins vereinbart, noch je einen Ehe- und Erbvertrag abgeschlossen.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "CHF 269’292",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "184935"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:184936]\n[%11]\n[!Wie lautet die Erbteilung? (korrekte Aufstellung mit Ausweis der Beträge für alle Erben!)]\nKurt Sutter hinterlässt einen Sohn, eine Adoptivtochter, seine Eltern, einen Bruder und eine Pflegetochter. Das Inventar weist Aktiven von CHF 940'850.— und Passiven von gesamthaft CHF 384'600.—aus. In seinem Testament verfügt Kurt Sutter, dass dem Männerchor ein Legat von CHF 5'000.—auszurichten sei und die Adoptivtochter zu Gunsten seines Bruders auf den Pflichtteil zu setzen sei, weil diese sich in den letzten Jahre von ihm abgewendet habe.\n===\n[$Aktiven: \tCHF 940’850\nPassiven: \tCHF 384’600\nNachlass:\tCHF 556'250]\n===\nErbanteile:\n[$Sohn\t\t    CHF 273'125\nAdoptivtochter\tCHF 208'593\nMutter\t\t    CHF \t0\nVater\t\t    CHF \t0\nBruder\t\t    CHF   69'532\nPflegetochter\tCHF \t0\nMännerchor\t    CHF \t5'000]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "11",
+      "instruction": "Wie lautet die Erbteilung? (korrekte Aufstellung mit Ausweis der Beträge für alle Erben!)",
+      "body": "Kurt Sutter hinterlässt einen Sohn, eine Adoptivtochter, seine Eltern, einen Bruder und eine Pflegetochter. Das Inventar weist Aktiven von CHF 940'850.— und Passiven von gesamthaft CHF 384'600.—aus. In seinem Testament verfügt Kurt Sutter, dass dem Männerchor ein Legat von CHF 5'000.—auszurichten sei und die Adoptivtochter zu Gunsten seines Bruders auf den Pflichtteil zu setzen sei, weil diese sich in den letzten Jahre von ihm abgewendet habe.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Aktiven: \tCHF 940’850\nPassiven: \tCHF 384’600\nNachlass:\tCHF 556'250",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Erbanteile:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Sohn\t\t    CHF 273'125\nAdoptivtochter\tCHF 208'593\nMutter\t\t    CHF \t0\nVater\t\t    CHF \t0\nBruder\t\t    CHF   69'532\nPflegetochter\tCHF \t0\nMännerchor\t    CHF \t5'000",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "184936"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:184937]\n[%12]\n[!Moritz Fischer, wohnhaft in Wollerau SZ hinterlässt seine Ehefrau und eine Tochter. Die Vermögenssituation sieht – nachdem die güterrechtliche Auseinandersetzung stattgefunden hat - wie folgt aus:]\n===\n[$Wertschriften\t                                CHF  \t2'250'000.--\nFerienhaus in Laax mit einem Steuerwert von \tCHF \t800'000.--\nund einem Verkehrswert von \t                    CHF \t1'100'000.--\nübriges Vermögen\t                            CHF\t150'000.--\nSchulden                                        keine]\n===\nWie sieht die **Erbschaftsverteilung** aus, wenn kein Testament vorhanden ist und sich die Erben geeinigt haben, dass die Tochter unter Anrechnung an ihren Erbteil das Ferienhaus übernimmt.\n===\n||tabelle fehlt||",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "12",
+      "instruction": "Moritz Fischer, wohnhaft in Wollerau SZ hinterlässt seine Ehefrau und eine Tochter. Die Vermögenssituation sieht – nachdem die güterrechtliche Auseinandersetzung stattgefunden hat - wie folgt aus:",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wertschriften\t                                CHF  \t2'250'000.--\nFerienhaus in Laax mit einem Steuerwert von \tCHF \t800'000.--\nund einem Verkehrswert von \t                    CHF \t1'100'000.--\nübriges Vermögen\t                            CHF\t150'000.--\nSchulden                                        keine",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Wie sieht die **Erbschaftsverteilung** aus, wenn kein Testament vorhanden ist und sich die Erben geeinigt haben, dass die Tochter unter Anrechnung an ihren Erbteil das Ferienhaus übernimmt.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "184937"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:184938]\n[%13]\n[!Karin Müller hinterlässt ihren Konkubinatspartner Max Frei, die gemeinsame Tochter Patricia Müller und einen nicht gemeinsamen Sohn ihres Partners, Kurt Frei, ihre Eltern und die Schwester Käthi.\nDas Inventar weist folgende Werte auf:]\n===\n[$Wertschriften\t                CHF\t160'000.--\nAuto, Mobiliar – Verkehrswert\tCHF\t15'000.--\nLebensversicherung \t            CHF\t120'000.--\nmit einem Rückkaufswert von \tCHF\t60'000.--\nzu Gunsten Ihres Konkubinatspartners\t\nSchulden\t                    CHF\t5'000.—]\t\n===\nEs besteht kein Testament. Wie sieht die Erbteilung aus, wenn aufgrund einer Pflichtteilsverletzung das zuständige Gericht feststellen müsste, dass die Pflichtteile eingehalten werden müssen?\t\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "13",
+      "instruction": "Karin Müller hinterlässt ihren Konkubinatspartner Max Frei, die gemeinsame Tochter Patricia Müller und einen nicht gemeinsamen Sohn ihres Partners, Kurt Frei, ihre Eltern und die Schwester Käthi.\nDas Inventar weist folgende Werte auf:",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "<missing ':'>",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wertschriften\t                CHF\t160'000.--\nAuto, Mobiliar – Verkehrswert\tCHF\t15'000.--\nLebensversicherung \t            CHF\t120'000.--\nmit einem Rückkaufswert von \tCHF\t60'000.--\nzu Gunsten Ihres Konkubinatspartners\t\nSchulden\t                    CHF\t5'000.—",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Es besteht kein Testament. Wie sieht die Erbteilung aus, wenn aufgrund einer Pflichtteilsverletzung das zuständige Gericht feststellen müsste, dass die Pflichtteile eingehalten werden müssen?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "184938"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n===\n'",
+        "line": 12,
+        "column": 42,
+        "errorLine": "Schulden\t                    CHF\t5'000.—]\t"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184939]\n**Bei Fragen 14 – 23 wird jeweils nur 1 Wort/Begriff verlangt!**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Bei Fragen 14 – 23 wird jeweils nur 1 Wort/Begriff verlangt!**",
+      "id": [
+        "184939"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:184940]\n[%14]\nWelcher Güterstand kann heute nicht mehr vereinbart werden?\t\n[_Güterverbindung]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Welcher Güterstand kann heute nicht mehr vereinbart werden?\t\n{0}",
+      "item": "14",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184940"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Güterverbindung"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:184941]\n[%15]\nWie heisst der ordentliche Güterstand?\n[_Errungenschaftsbeteiligung]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Wie heisst der ordentliche Güterstand?\n{0}",
+      "item": "15",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184941"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Errungenschaftsbeteiligung"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:184942]\n[%16]\nWelchen Güterstand kann ein Richter anordnen?\n[_Gütertrennung]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Welchen Güterstand kann ein Richter anordnen?\n{0}",
+      "item": "16",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184942"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Gütertrennung"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:184943]\n[%17]\nBei welchem Güterstand gibt es ein Gesamtgut?\n[_Gütergemeinschaft]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Bei welchem Güterstand gibt es ein Gesamtgut?\n{0}",
+      "item": "17",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184943"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Gütergemeinschaft"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:184944]\n[%18]\nKann ein Ehevertrag bereits vor der Heirat abgeschlossen werden?\n[_Ja]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Kann ein Ehevertrag bereits vor der Heirat abgeschlossen werden?\n{0}",
+      "item": "18",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184944"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Ja"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:184945]\n[%19]\nIn welchem Gesetz ist das Erbrecht geregelt?\n[_Zivilgesetzbuch / ZGB]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "In welchem Gesetz ist das Erbrecht geregelt?\n{0}",
+      "item": "19",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184945"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Zivilgesetzbuch / ZGB"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:184946]\n[%20]\nGehört der Arbeitserwerb bei der Errungenschaftsbeteiligung zum Eigengut?\n[_Nein]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Gehört der Arbeitserwerb bei der Errungenschaftsbeteiligung zum Eigengut?\n{0}",
+      "item": "20",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184946"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Nein"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:184947]\n[%21]\nZu welcher Parantele gehören die Cousins und Cousinen eines Erblassers:\n[_3. Parentel]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Zu welcher Parantele gehören die Cousins und Cousinen eines Erblassers:\n{0}",
+      "item": "21",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184947"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "3. Parentel"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:184948]\n[%22]\nWie heisst der Teil des Nachlasses, über den der Erblasser frei bestimmen kann?\t\n[_Freie Quote]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Wie heisst der Teil des Nachlasses, über den der Erblasser frei bestimmen kann?\t\n{0}",
+      "item": "22",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184948"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Freie Quote"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1]\n[@id:184949]\n[%23]\n[!Welche Aussagen sind richtig?]\n[+Ein öffentliches Testament darf mit der Schreibmaschine geschrieben werden]\n[-Der Staat erbt alles, wenn ein Erblasser nur noch eine Cousine hat und kein Testament vorhanden ist]\n[-Das Güterrecht ist im OR (Obligationenrecht) geregelt]\n[+Ein Testament kann jederzeit abgeändert oder ersetzt werden]\n[+Ein lediger Erblasser (ohne Nachkommen), dessen Eltern verstorben sind, vermacht sein ganzes Vermögen dem Turnverein, obwohl noch eine Schwester und ein Bruder vorhanden sind. Darf er das?]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "23",
+      "instruction": "Welche Aussagen sind richtig?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Ein öffentliches Testament darf mit der Schreibmaschine geschrieben werden",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Der Staat erbt alles, wenn ein Erblasser nur noch eine Cousine hat und kein Testament vorhanden ist",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Das Güterrecht ist im OR (Obligationenrecht) geregelt",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Ein Testament kann jederzeit abgeändert oder ersetzt werden",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Ein lediger Erblasser (ohne Nachkommen), dessen Eltern verstorben sind, vermacht sein ganzes Vermögen dem Turnverein, obwohl noch eine Schwester und ein Bruder vorhanden sind. Darf er das?",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184949"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1]\n[@id:184950]\n[%24]\n[!Welche Aussagen über das eheliche Güterrecht sind falsch?]\n[+Das Güterrecht regelt die Frage, in welchem Umfang Adoptivkinder erbberechtigt sind]\n[+Wenn ein Ehegatte anstelle eines Vorschlages einen Rückschlag aufweist, muss dieser ebenfalls hälftig berücksichtigt werden]\n[-Ein abgeschlossener Ehevertrag ist nur rechtsgültig, wenn er schriftlich und notariell beglaubigt ist]\n[+Bei der Gütertrennung gibt es neben dem Eigengut der Frau und dem Eigengut des Mannes noch ein Gesamtgut]\n[-Eine Frau hat im Laufe der Ehe von ihren Eltern eine Erbschaft von CHF 450'000.-- erhalten. Dieser Betrag gehört zum Eigengut der Frau.]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "24",
+      "instruction": "Welche Aussagen über das eheliche Güterrecht sind falsch?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Das Güterrecht regelt die Frage, in welchem Umfang Adoptivkinder erbberechtigt sind",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Wenn ein Ehegatte anstelle eines Vorschlages einen Rückschlag aufweist, muss dieser ebenfalls hälftig berücksichtigt werden",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Ein abgeschlossener Ehevertrag ist nur rechtsgültig, wenn er schriftlich und notariell beglaubigt ist",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Bei der Gütertrennung gibt es neben dem Eigengut der Frau und dem Eigengut des Mannes noch ein Gesamtgut",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Eine Frau hat im Laufe der Ehe von ihren Eltern eine Erbschaft von CHF 450'000.-- erhalten. Dieser Betrag gehört zum Eigengut der Frau.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "184950"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:184951]\n**Bei den Fragen 25, 26 und 27 kann nur mit JA oder NEIN geantwortet werden!**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Bei den Fragen 25, 26 und 27 kann nur mit JA oder NEIN geantwortet werden!**",
+      "id": [
+        "184951"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false:bitmark--]\n[@id:184952]\n[%25]\n[!Fragen zur Errungenschaftsbeteiligung]\n[@labelTrue:ja][@labelFalse:nein]\n===\n[+Bei Vermögensgegenständen (Mobiliar, Auto) ist der Verkehrswert massgebend]\n===\n[+Eine Änderung der Beteiligung am Vorschlag (Abweichung vom Gesetz) kann mit einem Ehevertrag vereinbart werden]\n===\n[-Leistungen der Personalfürsorgeeinrichtung gehören zum Eigengut]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "25",
+      "lead": "",
+      "instruction": "Fragen zur Errungenschaftsbeteiligung",
+      "hint": "",
+      "labelTrue": "ja",
+      "labelFalse": "nein",
+      "statements": [
+        {
+          "statement": "Bei Vermögensgegenständen (Mobiliar, Auto) ist der Verkehrswert massgebend",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Eine Änderung der Beteiligung am Vorschlag (Abweichung vom Gesetz) kann mit einem Ehevertrag vereinbart werden",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Leistungen der Personalfürsorgeeinrichtung gehören zum Eigengut",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "184952"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false:bitmark--]\n[@id:184953]\n[%26]\n[!Fragen zur Gütergemeinschaft]\n[@labelTrue:ja][@labelFalse:nein]\n===\n[+Der überlebende Ehegatte kann verlangen, dass ihm der Hausrat zu Eigentum zugeteilt wird]\n===\n[-Das Eigengut ist bei der Gütergemeinschaft grösser als bei der Errungenschaftsbeteiligung]\n===\n[+Im Todesfall kommt es immer zur hälftigen Teilung, auch wenn ein Ehegatte praktisch das ganze Gesamtgut eingebracht bzw. während der Ehe erarbeitet hat.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "26",
+      "lead": "",
+      "instruction": "Fragen zur Gütergemeinschaft",
+      "hint": "",
+      "labelTrue": "ja",
+      "labelFalse": "nein",
+      "statements": [
+        {
+          "statement": "Der überlebende Ehegatte kann verlangen, dass ihm der Hausrat zu Eigentum zugeteilt wird",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Das Eigengut ist bei der Gütergemeinschaft grösser als bei der Errungenschaftsbeteiligung",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Im Todesfall kommt es immer zur hälftigen Teilung, auch wenn ein Ehegatte praktisch das ganze Gesamtgut eingebracht bzw. während der Ehe erarbeitet hat.",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "184953"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false:bitmark--]\n[@id:184954]\n[%27]\n[!Fragen zur Gütertrennung]\n[@labelTrue:ja][@labelFalse:nein]\n===\n[-Bevor eine Erbteilung vorgenommen werden kann, muss die güterrechtliche Auseinandersetzung durchgeführt werden]\n===\n[+Gütertrennung kann vor oder nach Eheschluss vereinbart werden]\n===\n[-Dieser Güterstand kann mit einfacher Schriftlichkeit vereinbart werden. Es braucht lediglich zwei Zeugen]\n===\n[-Ein Ehegatte haftet auch für die Schulden des andern Ehegatten]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "27",
+      "lead": "",
+      "instruction": "Fragen zur Gütertrennung",
+      "hint": "",
+      "labelTrue": "ja",
+      "labelFalse": "nein",
+      "statements": [
+        {
+          "statement": "Bevor eine Erbteilung vorgenommen werden kann, muss die güterrechtliche Auseinandersetzung durchgeführt werden",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Gütertrennung kann vor oder nach Eheschluss vereinbart werden",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Dieser Güterstand kann mit einfacher Schriftlichkeit vereinbart werden. Es braucht lediglich zwei Zeugen",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Ein Ehegatte haftet auch für die Schulden des andern Ehegatten",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "184954"
+      ]
+    }
+  }
+]

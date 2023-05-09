@@ -1,0 +1,625 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:191108]\n[#FEELGOOD-MANAGER/IN]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/bumbacher/primepool_cover2.png]\n[@externalId:e-feelgood-managerin_zzopmvuapdim]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191108"
+      ],
+      "title": "FEELGOOD-MANAGER/IN",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/bumbacher/primepool_cover2.png"
+      ],
+      "externalId": [
+        "e-feelgood-managerin_zzopmvuapdim"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191109]\n[▼ch-1]\n[#WELCHE HERAUSFORDERUNGEN AUF SIE WARTEN]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191109"
+      ],
+      "anchor": "ch-1",
+      "title": "WELCHE HERAUSFORDERUNGEN AUF SIE WARTEN"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191110]\n[▼ch-2]\n[## ARBEITSSTEUERUNG]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191110"
+      ],
+      "anchor": "ch-2",
+      "title": "ARBEITSSTEUERUNG"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191111]\n[%][% Was Sie zu einer guten Vermarktung beitragen]\nIhr Auftrag ist, das Wohlbefinden der Mitarbeitenden zu stär.- ken und effizientes Arbeiten zu ermöglichen. Dazu stehen Sie in intensivem Austausch mit den Kollegen, fordern Verbesse- rungsvorschläge und Anregungen ein. Ihr Erfolg bemisst sich daran, wie gut es Ihnen gelingt, die Unternehmenskultur und die Zufriedenheit der Mitarbeitenden zu verbessern.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ihr Auftrag ist, das Wohlbefinden der Mitarbeitenden zu stär.- ken und effizientes Arbeiten zu ermöglichen. Dazu stehen Sie in intensivem Austausch mit den Kollegen, fordern Verbesse- rungsvorschläge und Anregungen ein. Ihr Erfolg bemisst sich daran, wie gut es Ihnen gelingt, die Unternehmenskultur und die Zufriedenheit der Mitarbeitenden zu verbessern.",
+      "id": [
+        "191111"
+      ],
+      "lead": "Was Sie zu einer guten Vermarktung beitragen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:191112]\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_4.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "191112"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191113]\n[▼ch-3]\n[## ARBEITSAUFGABEN]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191113"
+      ],
+      "anchor": "ch-3",
+      "title": "ARBEITSAUFGABEN"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191114]\n[%][% Wie vielfältig Ihr Aufgabenspektrum ist]\nIhr Aufgabenspektrum ist breit und vielfältig: Verbesserung der Kommunikation, des Arbeitsumfelds und Arbeitsflusses, Organisation von Gemeinschaftserlebnissen. Entsprechend be- arbeiten Sie mehrere Projekte mit ihren diversen Schnittstellen parallel. Als Feelgood-Manager nehmen Sie zudem die Rolle eines Vertrauensmanagers ein, der ein offenes Ohr für alle Mitarbeiterbelange hat.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ihr Aufgabenspektrum ist breit und vielfältig: Verbesserung der Kommunikation, des Arbeitsumfelds und Arbeitsflusses, Organisation von Gemeinschaftserlebnissen. Entsprechend be- arbeiten Sie mehrere Projekte mit ihren diversen Schnittstellen parallel. Als Feelgood-Manager nehmen Sie zudem die Rolle eines Vertrauensmanagers ein, der ein offenes Ohr für alle Mitarbeiterbelange hat.",
+      "id": [
+        "191114"
+      ],
+      "lead": "Wie vielfältig Ihr Aufgabenspektrum ist"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:191115]\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_5.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "191115"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191116]\n[▼ch-4]\n[## ARBEITSRAHMEN]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191116"
+      ],
+      "anchor": "ch-4",
+      "title": "ARBEITSRAHMEN"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191117]\n[%][%Wie viel Flexibilität erforderlich ist]\nIhre Hauptaufgabe ist es, für die Kollegen und Kolleginnen ansprechbar zu sein. Je nach Unternehmensgröße findet der direkte Kontakt über Treffpunkte, wie Teeküchen, Lounge- Ecken oder über Veranstaltungen statt oder virtuell über Skype, Chat u.ä.. Ihre Arbeitszeiten und -orte können Sie zu einem bestimmten Grad flexibel wählen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ihre Hauptaufgabe ist es, für die Kollegen und Kolleginnen ansprechbar zu sein. Je nach Unternehmensgröße findet der direkte Kontakt über Treffpunkte, wie Teeküchen, Lounge- Ecken oder über Veranstaltungen statt oder virtuell über Skype, Chat u.ä.. Ihre Arbeitszeiten und -orte können Sie zu einem bestimmten Grad flexibel wählen.",
+      "id": [
+        "191117"
+      ],
+      "lead": "Wie viel Flexibilität erforderlich ist"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:191118]\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_6.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "191118"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191119]\n[▼ch-5]\n[## ARBEITSKOMPETENZEN]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191119"
+      ],
+      "anchor": "ch-5",
+      "title": "ARBEITSKOMPETENZEN"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191120]\n[%][% Wie stark Sie zum Kompetenzerhalt gefordert sind]\nFeelgood-Management hat inhaltliche Schnittstellen zu Perso- nalmanagement, Unternehmensstrategie, Office-Management und Architektur. Je nach Unternehmensgröße arbeiten Sie in einem interdisziplinären Team, das eine Vielfalt an Kompeten- zen abdeckt oder Sie sind selbst gefordert, sich in andere Fach- gebiete einzuarbeiten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Feelgood-Management hat inhaltliche Schnittstellen zu Perso- nalmanagement, Unternehmensstrategie, Office-Management und Architektur. Je nach Unternehmensgröße arbeiten Sie in einem interdisziplinären Team, das eine Vielfalt an Kompeten- zen abdeckt oder Sie sind selbst gefordert, sich in andere Fach- gebiete einzuarbeiten.",
+      "id": [
+        "191120"
+      ],
+      "lead": "Wie stark Sie zum Kompetenzerhalt gefordert sind"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:191121]\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_7.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "191121"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_7.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:191122]\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_8.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "191122"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_8.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191123]\n[▼ch-6]\n[#WIE SIE SICH EINBRINGEN UND ENTFALTEN KÖNNEN]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191123"
+      ],
+      "anchor": "ch-6",
+      "title": "WIE SIE SICH EINBRINGEN UND ENTFALTEN KÖNNEN"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191124]\n[▼ch-7]\n[##SELBSTÄNDIGKEIT IN DER ARBEIT]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191124"
+      ],
+      "anchor": "ch-7",
+      "title": "SELBSTÄNDIGKEIT IN DER ARBEIT"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191125]\n[%][% Wie viel Selbständigkeit Ihnen gewährt wird – und von Ihnen erwartet wird]\nIn Ihrem Job als Feelgood-Manager finden Sie Lösungen für Probleme, Sie definieren selbständig geeignete Vorge- hensweisen und organisieren die Umsetzung. Nachhaltiges Feelgood-Management baut auf der Stärke von selbstorgani- sierenden Teams im Unternehmen auf, die sich selbständig um bestimmte Feelgood-Aufgaben kümmern. Die Fähigkeit zur Selbstorganisation und Kooperation ist sowohl für Sie als auch für die Teams unerlässlich. Sie selbst sind nahe genug an den Menschen und im Geschehen, um zu entscheiden, wann Sie für wen erreichbar sein sollten, welche Arbeitsplatzausstattung Sie benötigen und was Ihre persönlichen Lernbedarfe und -ziele sowie geeignete Bildungsmaßnahmen sind.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In Ihrem Job als Feelgood-Manager finden Sie Lösungen für Probleme, Sie definieren selbständig geeignete Vorge- hensweisen und organisieren die Umsetzung. Nachhaltiges Feelgood-Management baut auf der Stärke von selbstorgani- sierenden Teams im Unternehmen auf, die sich selbständig um bestimmte Feelgood-Aufgaben kümmern. Die Fähigkeit zur Selbstorganisation und Kooperation ist sowohl für Sie als auch für die Teams unerlässlich. Sie selbst sind nahe genug an den Menschen und im Geschehen, um zu entscheiden, wann Sie für wen erreichbar sein sollten, welche Arbeitsplatzausstattung Sie benötigen und was Ihre persönlichen Lernbedarfe und -ziele sowie geeignete Bildungsmaßnahmen sind.",
+      "id": [
+        "191125"
+      ],
+      "lead": "Wie viel Selbständigkeit Ihnen gewährt wird – und von Ihnen erwartet wird"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:191126]\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_9.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "191126"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_9.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191127]\n[▼ch-8]\n[##SELBSTVERWIRKLICHUNG DURCH DIE ARBEIT]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191127"
+      ],
+      "anchor": "ch-8",
+      "title": "SELBSTVERWIRKLICHUNG DURCH DIE ARBEIT"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191128]\n[%][% Warum dieser Job Sinn macht und welche Ziele Sie sonst noch verfolgen können]\nAls Feelgood-Manager/in sind Sie Gestalter und Bewahrer der Unternehmenskultur. Ihre Aufgabe ist es, Strukturen aufzu- bauen, die ein Arbeitsumfeld entstehen lassen, in welchem sich die Mitarbeitenden wohlfühlen. So entsteht ein positives Arbeitsklima, das stressfreies, produktives Arbeiten fördert.\n\nDer Alltag eines Feelgood-Managers wird dadurch bestimmt, für die Fragen und Bedürfnisse von Mitarbeitenden da zu sein. Die Arbeit mit Kollegen, Teams und Führungskräften erfordert Einfühlungsvermögen sowie Überzeugungskraft und ist nicht immer frei von Konflikten. Dem gegenüber steht die große Chance, eigene Ideen zu verwirklichen, mehr Spaß in den Arbeitsalltag zu bringen und Menschen glücklich zu machen. Der Erfolg Ihrer Arbeit wird sichtbar, wenn Kollegen mit einem Lächeln zur Arbeit kommen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Als Feelgood-Manager/in sind Sie Gestalter und Bewahrer der Unternehmenskultur. Ihre Aufgabe ist es, Strukturen aufzu- bauen, die ein Arbeitsumfeld entstehen lassen, in welchem sich die Mitarbeitenden wohlfühlen. So entsteht ein positives Arbeitsklima, das stressfreies, produktives Arbeiten fördert.\n\nDer Alltag eines Feelgood-Managers wird dadurch bestimmt, für die Fragen und Bedürfnisse von Mitarbeitenden da zu sein. Die Arbeit mit Kollegen, Teams und Führungskräften erfordert Einfühlungsvermögen sowie Überzeugungskraft und ist nicht immer frei von Konflikten. Dem gegenüber steht die große Chance, eigene Ideen zu verwirklichen, mehr Spaß in den Arbeitsalltag zu bringen und Menschen glücklich zu machen. Der Erfolg Ihrer Arbeit wird sichtbar, wenn Kollegen mit einem Lächeln zur Arbeit kommen.",
+      "id": [
+        "191128"
+      ],
+      "lead": "Warum dieser Job Sinn macht und welche Ziele Sie sonst noch verfolgen können"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:191129]\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_10.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "191129"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_10.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:191130]\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_11.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "191130"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_11.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191131]\n[▼ch-9]\n[#WISSENSWERTES ZU JOB, TEAM UND ARBEITGEBER]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191131"
+      ],
+      "anchor": "ch-9",
+      "title": "WISSENSWERTES ZU JOB, TEAM UND ARBEITGEBER"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191132]\n[▼ch-10]\n[##AUFGABENSPEKTRUM]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191132"
+      ],
+      "anchor": "ch-10",
+      "title": "AUFGABENSPEKTRUM"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191133]\n[%][% Was alles zu Ihren Aufgaben gehört (nach ca. zwei Jahren Berufserfahrung)]\n\n• Systematisches Feelgood-Management aufbauen bzw. weiterentwickeln auf der Basis von Leitbildern, Werten und Unternehmenskultur\n• Offene und transparente Kommunikationskanäle schaffen bzw. weiterentwickeln\n• Feelgood-Kultur etablieren und weiterentwickeln: systematische Analyse von Mitarbeiterbedürfnissen, Feedback- und Fehlerkultur, etc.\n• Optimale, stressfreie Arbeitsumgebung schaffen: Treffpunkte und Austauschmöglichkeiten, störungsfreies Arbeitsumfeld etc.\n• Nachhaltige Feelgood-Strukturen etablieren: Freiwillige, selbstorganisierende Kümmerer-Teams aufbauen und weiterentwickeln\n• Lernangebote etablieren: Konfliktmanagement, Feedbackkultur, selbstorganisierende Teamstrukturen, Retrospektiven, Coaching u.ä",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Systematisches Feelgood-Management aufbauen bzw. weiterentwickeln auf der Basis von Leitbildern, Werten und Unternehmenskultur\n• Offene und transparente Kommunikationskanäle schaffen bzw. weiterentwickeln\n• Feelgood-Kultur etablieren und weiterentwickeln: systematische Analyse von Mitarbeiterbedürfnissen, Feedback- und Fehlerkultur, etc.\n• Optimale, stressfreie Arbeitsumgebung schaffen: Treffpunkte und Austauschmöglichkeiten, störungsfreies Arbeitsumfeld etc.\n• Nachhaltige Feelgood-Strukturen etablieren: Freiwillige, selbstorganisierende Kümmerer-Teams aufbauen und weiterentwickeln\n• Lernangebote etablieren: Konfliktmanagement, Feedbackkultur, selbstorganisierende Teamstrukturen, Retrospektiven, Coaching u.ä",
+      "id": [
+        "191133"
+      ],
+      "lead": "Was alles zu Ihren Aufgaben gehört (nach ca. zwei Jahren Berufserfahrung)"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191134]\n[▼ch-11]\n[##TEAM-KOLLEGEN]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191134"
+      ],
+      "anchor": "ch-11",
+      "title": "TEAM-KOLLEGEN"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191135]\n[%][% Mit wem Sie zusammenarbeiten und was das Besondere des Teams ausmacht]\nAls Feelgood-Manager/in arbeiten Sie, je nach Unternehmensgröße, als Einzelperson oder im Team in Vollzeit oder Teilzeit. Bei kleineren Unternehmen hat der Feelgood-Manager häufig mehrere Zuständigkeiten, die sich thematisch ergänzen, wie z. B. Office-Management oder Personal. In Start-up-Unternehmen wird die Rolle des Feelgood-Managers auch nach dem Rotationsprinzip vergeben, so dass jeder Feelgood-Manager auf Zeit sein kann.\n\nIn Ihre Vorhaben beziehen Sie Kollegen aus den betroffenen Bereichen sowie die unterschiedlichsten Fachdisziplinen ein, z.B. Personal-, Office-, Event-, Gebäudemanagement, Organisationsentwicklung, IT, oder Architektur. Dabei wird sehr kreativ an neuen Lösungsansätzen gearbeitet. Sie erweitern so stetig Ihr Praxiswissen und Ihre Fähigkeiten – und profitieren dabei von dem hervorragenden Wissen und den Erfahrungen Ihrer Team- und Projekt-Kollegen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Als Feelgood-Manager/in arbeiten Sie, je nach Unternehmensgröße, als Einzelperson oder im Team in Vollzeit oder Teilzeit. Bei kleineren Unternehmen hat der Feelgood-Manager häufig mehrere Zuständigkeiten, die sich thematisch ergänzen, wie z. B. Office-Management oder Personal. In Start-up-Unternehmen wird die Rolle des Feelgood-Managers auch nach dem Rotationsprinzip vergeben, so dass jeder Feelgood-Manager auf Zeit sein kann.\n\nIn Ihre Vorhaben beziehen Sie Kollegen aus den betroffenen Bereichen sowie die unterschiedlichsten Fachdisziplinen ein, z.B. Personal-, Office-, Event-, Gebäudemanagement, Organisationsentwicklung, IT, oder Architektur. Dabei wird sehr kreativ an neuen Lösungsansätzen gearbeitet. Sie erweitern so stetig Ihr Praxiswissen und Ihre Fähigkeiten – und profitieren dabei von dem hervorragenden Wissen und den Erfahrungen Ihrer Team- und Projekt-Kollegen.",
+      "id": [
+        "191135"
+      ],
+      "lead": "Mit wem Sie zusammenarbeiten und was das Besondere des Teams ausmacht"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:191136]\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_12_new.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "191136"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_12_new.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191137]\n[▼ch-12]\n[##ARBEITGEBER]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191137"
+      ],
+      "anchor": "ch-12",
+      "title": "ARBEITGEBER"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191138]\n[%][% Wer Ihr Arbeitgeber sein könnte und wie Sie Kontakt aufnehmen können]\nZu den Branchen, die bereits Feelgood-Manager/innen beschäftigen, zählen IT, Medien, Kreativwirtschaft und Beratungsunternehmen. Weitere Branchen folgen, vor allem die, die mit Technischen Experten arbeiten, wie Maschinen- und Fahrzeugtechnik, Mechatronik, Energie- und Elektrotechnik.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Zu den Branchen, die bereits Feelgood-Manager/innen beschäftigen, zählen IT, Medien, Kreativwirtschaft und Beratungsunternehmen. Weitere Branchen folgen, vor allem die, die mit Technischen Experten arbeiten, wie Maschinen- und Fahrzeugtechnik, Mechatronik, Energie- und Elektrotechnik.",
+      "id": [
+        "191138"
+      ],
+      "lead": "Wer Ihr Arbeitgeber sein könnte und wie Sie Kontakt aufnehmen können"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:191139]\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_13.png]\n\nMehr zum Feelgood-Manager/in - was das für Menschen sind, wie ihre Jobs aussehen, welche Unternehmen sie einsetzen und welche Trainingsangebote es gibt - finden Sie unter: http://www.goodplace.org/\n\nJobs zum Wohlfühlen finden Sie hier – GOODplace-Unternehmen sind erkennbar am roten Label: http://www.feelgood-at-work.de/",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Mehr zum Feelgood-Manager/in - was das für Menschen sind, wie ihre Jobs aussehen, welche Unternehmen sie einsetzen und welche Trainingsangebote es gibt - finden Sie unter: http://www.goodplace.org/\n\nJobs zum Wohlfühlen finden Sie hier – GOODplace-Unternehmen sind erkennbar am roten Label: http://www.feelgood-at-work.de/",
+      "id": [
+        "191139"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_2_kai_jobprofile/web-resources/images/bumbacher_2_kai_jobprofile_13.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  }
+]

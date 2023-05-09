@@ -1,0 +1,1835 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:193616]\n[@language:en]\n[#The Three-Hour Brand Sprint]\n[@externalId:e-the-three-hour-brand-sprint_vyxly86jqo7c]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "193616"
+      ],
+      "language": [
+        "en"
+      ],
+      "title": "The Three-Hour Brand Sprint",
+      "externalId": [
+        "e-the-three-hour-brand-sprint_vyxly86jqo7c"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193617]\n[▼ch-1]\n[##GV’s Simple Recipe For Getting Started On Your Brand]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193617"
+      ],
+      "anchor": "ch-1",
+      "title": "GV’s Simple Recipe For Getting Started On Your Brand"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193618]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_1.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193618"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193619]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_2.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193619"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193620]\nWarning: This is a post about branding, but I’m no brand expert. For most of my career, any mention of the word __brand__ made me uncomfortable. I figured it was a fine line between “brand exercise” and “total waste of time.”",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Warning: This is a post about branding, but I’m no brand expert. For most of my career, any mention of the word __brand__ made me uncomfortable. I figured it was a fine line between “brand exercise” and “total waste of time.”",
+      "id": [
+        "193620"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193621]\nI was forced to confront my branding heebie-jeebies five years ago, when I joined Google Ventures. Previously, I’d always worked at big companies (Google, Microsoft, Oakley) with established brands. But at GV, I found myself working with startups who were thinking about their brands for the first time. They were designing logos, creating visual identities, and naming their companies — in other words, making a lot of big decisions.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "I was forced to confront my branding heebie-jeebies five years ago, when I joined Google Ventures. Previously, I’d always worked at big companies (Google, Microsoft, Oakley) with established brands. But at GV, I found myself working with startups who were thinking about their brands for the first time. They were designing logos, creating visual identities, and naming their companies — in other words, making a lot of big decisions.",
+      "id": [
+        "193621"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193622]\n**Brand exercises make big decisions easier**\nLuckily for our startups, two of my colleagues at GV, ==Laura Melahn==|link:https://www.gv.com/team/laura-melahn/| and Daniel Burka, actually __are__ experts on branding. (They’re modest and will tell you they’re not experts, but don’t listen. Among other things, Laura helped name ==Calico==|link:https://www.calicolabs.com/| and Daniel helped design the ==Firefox==|link:https://www.mozilla.org/en-GB/firefox/new/?redirect_source=firefox-com| logo. They really get this stuff.)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Brand exercises make big decisions easier**\nLuckily for our startups, two of my colleagues at GV, ==Laura Melahn==|link:https://www.gv.com/team/laura-melahn/| and Daniel Burka, actually __are__ experts on branding. (They’re modest and will tell you they’re not experts, but don’t listen. Among other things, Laura helped name ==Calico==|link:https://www.calicolabs.com/| and Daniel helped design the ==Firefox==|link:https://www.mozilla.org/en-GB/firefox/new/?redirect_source=firefox-com| logo. They really get this stuff.)",
+      "id": [
+        "193622"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193623]\nOver the past few years, I’ve watched Laura and Daniel help startups through these stressful decisions about naming, identity, logos, and so on. They start with brand exercises. Much to my surprise, the exercises are __not__ a goofy waste of time.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Over the past few years, I’ve watched Laura and Daniel help startups through these stressful decisions about naming, identity, logos, and so on. They start with brand exercises. Much to my surprise, the exercises are __not__ a goofy waste of time.",
+      "id": [
+        "193623"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193624]\nThe point of these exercises, it turns out, is to make the abstract idea of “our brand” into something concrete. After doing the exercises, the team gets a common language to describe what their company is about — and all subsequent squishy decisions about visuals, voice, and identity become way easier.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The point of these exercises, it turns out, is to make the abstract idea of “our brand” into something concrete. After doing the exercises, the team gets a common language to describe what their company is about — and all subsequent squishy decisions about visuals, voice, and identity become way easier.",
+      "id": [
+        "193624"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193625]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_3.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193625"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193626]\n[%][%Introducing the Brand Sprint]\nAt GV, we use our five-day ==Design Sprint==|link:https://www.gv.com/sprint/| to help teams tackle product and marketing challenges. We decided to put the brand exercises into a sprint-like process that any team can use. And the best part is: We squeezed it into just three hours. We don’t think more time necessarily yields better results. And because the process is fast, you can involve the people who really need to be there.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "At GV, we use our five-day ==Design Sprint==|link:https://www.gv.com/sprint/| to help teams tackle product and marketing challenges. We decided to put the brand exercises into a sprint-like process that any team can use. And the best part is: We squeezed it into just three hours. We don’t think more time necessarily yields better results. And because the process is fast, you can involve the people who really need to be there.",
+      "id": [
+        "193626"
+      ],
+      "lead": "Introducing the Brand Sprint"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193627]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_4.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193627"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193628]\nNow, to be clear, we didn’t invent these ideas or exercises. Instead, the Brand Sprint borrows from great thinkers about branding. Laura’s favorite examples include Steve Jobs’s ==1997 internal meeting at Apple==|link:https://www.youtube.com/watch?v=keCwRdbwNQY|, Stewart Butterfield’s essay ==We Don’t Sell Saddles Here==|link:https://medium.com/@stewart/we-dont-sell-saddles-here-4c59524d650d#.kv8tzi44n|, Simon Sinek’s TED talk ==How Great Leaders Inspire Action==|link:https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action|, Phil Knight’s Nike memoir ==Shoe Dog==|link:https://play.google.com/store/books/details/Phil_Knight_Shoe_Dog?id=wO3PCgAAQBAJ&hl=en|, and the work of the excellent identity agency ==Hello Monday==|link:https://www.hellomonday.com/home|. If these materials are the greatest hits, the Brand Sprint is our mix tape.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Now, to be clear, we didn’t invent these ideas or exercises. Instead, the Brand Sprint borrows from great thinkers about branding. Laura’s favorite examples include Steve Jobs’s ==1997 internal meeting at Apple==|link:https://www.youtube.com/watch?v=keCwRdbwNQY|, Stewart Butterfield’s essay ==We Don’t Sell Saddles Here==|link:https://medium.com/@stewart/we-dont-sell-saddles-here-4c59524d650d#.kv8tzi44n|, Simon Sinek’s TED talk ==How Great Leaders Inspire Action==|link:https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action|, Phil Knight’s Nike memoir ==Shoe Dog==|link:https://play.google.com/store/books/details/Phil_Knight_Shoe_Dog?id=wO3PCgAAQBAJ&hl=en|, and the work of the excellent identity agency ==Hello Monday==|link:https://www.hellomonday.com/home|. If these materials are the greatest hits, the Brand Sprint is our mix tape.",
+      "id": [
+        "193628"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193629]\nThe Brand Sprint consists of six exercises. First, you’ll think about your company’s motivation:\n• **20-Year Roadmap** helps you think long-term.\n• **What, How, Why** reminds you __why__ your company exists.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The Brand Sprint consists of six exercises. First, you’ll think about your company’s motivation:\n• **20-Year Roadmap** helps you think long-term.\n• **What, How, Why** reminds you __why__ your company exists.",
+      "id": [
+        "193629"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193630]\nNext, you’ll add detail:\n• **Top 3 Values** makes your __why__ more specific.\n• **Top 3 Audiences** helps you prioritize the target for your brand.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Next, you’ll add detail:\n• **Top 3 Values** makes your __why__ more specific.\n• **Top 3 Audiences** helps you prioritize the target for your brand.",
+      "id": [
+        "193630"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193631]\nFinally, you’ll position your brand relative to others:\n• **Personality Sliders** defines the attitude and style of your brand.\n• **Competitive Landscape** compares your brand to other companies.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Finally, you’ll position your brand relative to others:\n• **Personality Sliders** defines the attitude and style of your brand.\n• **Competitive Landscape** compares your brand to other companies.",
+      "id": [
+        "193631"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193632]\nThis post is a D.I.Y. guide. You can do these exercises with your own team, without any special expertise. At the end, you’ll have a set of diagrams — a simple brand cheat-sheet — that you can use to make decisions. It’s not a replacement for a good branding agency, but it’s a heckuva lot better than nothing. And if you __do__ hire an agency, the cheat-sheet will make you a better, smarter client.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This post is a D.I.Y. guide. You can do these exercises with your own team, without any special expertise. At the end, you’ll have a set of diagrams — a simple brand cheat-sheet — that you can use to make decisions. It’s not a replacement for a good branding agency, but it’s a heckuva lot better than nothing. And if you __do__ hire an agency, the cheat-sheet will make you a better, smarter client.",
+      "id": [
+        "193632"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193633]\nBefore you start your Brand Sprint, you’ll need to make sure a few things are in order.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Before you start your Brand Sprint, you’ll need to make sure a few things are in order.",
+      "id": [
+        "193633"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193634]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_5.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193634"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193635]\n[%][%Set the Stage]\n\nIt’s time to assemble a team, find a three-hour block on the calendar, set the ground rules, and assign some optional homework (which is the best kind of homework). But first, should you even run a Brand Sprint at all?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "It’s time to assemble a team, find a three-hour block on the calendar, set the ground rules, and assign some optional homework (which is the best kind of homework). But first, should you even run a Brand Sprint at all?",
+      "id": [
+        "193635"
+      ],
+      "lead": "Set the Stage"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193636]\n[▼ch-2]\n[#Start with a trigger]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193636"
+      ],
+      "anchor": "ch-2",
+      "title": "Start with a trigger"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193637]\nA word of caution: Don’t run a Brand Sprint unless you really __have to__. If you won’t use the results right away, wait for a trigger event. Good triggers are naming your company, designing a logo, hiring an agency, or writing a manifesto.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "A word of caution: Don’t run a Brand Sprint unless you really __have to__. If you won’t use the results right away, wait for a trigger event. Good triggers are naming your company, designing a logo, hiring an agency, or writing a manifesto.",
+      "id": [
+        "193637"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193638]\n[▼ch-3]\n[#Get the right team]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193638"
+      ],
+      "anchor": "ch-3",
+      "title": "Get the right team"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193639]\nYou need **two to six participants** for a Brand Sprint. These have to be company executives. Many startup teams don’t think of themselves as “executives.” If it sounds funny to you, try “decision-maker” or “stakeholder”. Bottom line: Your Brand Sprint needs to include people with authority and ownership of your company’s identity.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You need **two to six participants** for a Brand Sprint. These have to be company executives. Many startup teams don’t think of themselves as “executives.” If it sounds funny to you, try “decision-maker” or “stakeholder”. Bottom line: Your Brand Sprint needs to include people with authority and ownership of your company’s identity.",
+      "id": [
+        "193639"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193640]\n**Must have in the room:**\n• CEO",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Must have in the room:**\n• CEO",
+      "id": [
+        "193640"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193641]\n**And at least one of these:**\n• Co-founder\n• Head of marketing\n• Head of product or design",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**And at least one of these:**\n• Co-founder\n• Head of marketing\n• Head of product or design",
+      "id": [
+        "193641"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193642]\n**One participant must be the “Decider”** — the company’s true decision-maker about your brand. In most cases, the Decider is the CEO, but in some cases the Decider could be a co-founder or CMO. This __does not work__ without the Decider. Find some way to fit the Brand Sprint into her schedule. If she won’t make the time, don’t do the sprint.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**One participant must be the “Decider”** — the company’s true decision-maker about your brand. In most cases, the Decider is the CEO, but in some cases the Decider could be a co-founder or CMO. This __does not work__ without the Decider. Find some way to fit the Brand Sprint into her schedule. If she won’t make the time, don’t do the sprint.",
+      "id": [
+        "193642"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193643]\nIn addition to your executives, you’ll need **one or two facilitators**. These might be folks from marketing, product, or design. Since you’re reading this post, you’re a good candidate. The facilitators should have good writing skills. (You’ll see why later in the post.)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In addition to your executives, you’ll need **one or two facilitators**. These might be folks from marketing, product, or design. Since you’re reading this post, you’re a good candidate. The facilitators should have good writing skills. (You’ll see why later in the post.)",
+      "id": [
+        "193643"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193644]\nSometimes, you might **bring in a customer expert**. For example, in our Brand Sprint with Element Science, we had CEO Uday Kumar (the Decider) and design director Maarten Dinger — but Uday also brought along his colleague John White, an expert in the medical device field who could help us see through the eyes of the customer.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Sometimes, you might **bring in a customer expert**. For example, in our Brand Sprint with Element Science, we had CEO Uday Kumar (the Decider) and design director Maarten Dinger — but Uday also brought along his colleague John White, an expert in the medical device field who could help us see through the eyes of the customer.",
+      "id": [
+        "193644"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193645]\n[▼ch-4]\n[#Schedule a Block of Time]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193645"
+      ],
+      "anchor": "ch-4",
+      "title": "Schedule a Block of Time"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193646]\nThe Brand Sprint is designed to fit into a morning or afternoon. The schedule will go something like this:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The Brand Sprint is designed to fit into a morning or afternoon. The schedule will go something like this:",
+      "id": [
+        "193646"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193647]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_6.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193647"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193648]\nTry to find a block of three straight hours — it works much better if you don’t have to split up and regroup later. Be sure to book your time in a room with **lots of whiteboard space**, and bring **blank white copy paper** and some **pens**.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Try to find a block of three straight hours — it works much better if you don’t have to split up and regroup later. Be sure to book your time in a room with **lots of whiteboard space**, and bring **blank white copy paper** and some **pens**.",
+      "id": [
+        "193648"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193649]\n[▼ch-5]\n[#Homework (optional)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193649"
+      ],
+      "anchor": "ch-5",
+      "title": "Homework (optional)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193650]\nFor an optimal Brand Sprint, ask everyone to do two things before you start:\n1. Read this post.\n2. Fill out ==this PDF==|link:https://www.dropbox.com/s/xj1wpmi56l1muge/brand%20exercises.pdf?dl=0| or ==this Google Slides deck==|link:https://docs.google.com/presentation/d/1mCKVYn8YhFAXNmCZ5T7aMnLBVgGeXLnKMalkmGzbqO0/edit#slide=id.gd54e9b682a_4_0| (thanks to ==Human Deluxe==|link:https://humandeluxe.com/|).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "For an optimal Brand Sprint, ask everyone to do two things before you start:\n1. Read this post.\n2. Fill out ==this PDF==|link:https://www.dropbox.com/s/xj1wpmi56l1muge/brand%20exercises.pdf?dl=0| or ==this Google Slides deck==|link:https://docs.google.com/presentation/d/1mCKVYn8YhFAXNmCZ5T7aMnLBVgGeXLnKMalkmGzbqO0/edit#slide=id.gd54e9b682a_4_0| (thanks to ==Human Deluxe==|link:https://humandeluxe.com/|).",
+      "id": [
+        "193650"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193651]\nBut if you don’t have time before the sprint, don’t worry — it’ll still work.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "But if you don’t have time before the sprint, don’t worry — it’ll still work.",
+      "id": [
+        "193651"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193652]\n[▼ch-6]\n[#Set the ground rules]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193652"
+      ],
+      "anchor": "ch-6",
+      "title": "Set the ground rules"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193653]\nOnce everybody’s together in the room, the Brand Sprint has two simple rules to maintain focus:\n\n• **No devices.** Put away your laptops, phones, Oculus Rifts, etc. (But do take a break in the middle for snacks and email.)\n• **Time-box all activities** with a ==Time Timer==|link:https://library.gv.com/the-time-timer-google-ventures-secret-weapon-for-instantly-better-meetings-53c94faf426b#.lu9w0hwom| or other simple timer.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Once everybody’s together in the room, the Brand Sprint has two simple rules to maintain focus:\n\n• **No devices.** Put away your laptops, phones, Oculus Rifts, etc. (But do take a break in the middle for snacks and email.)\n• **Time-box all activities** with a ==Time Timer==|link:https://library.gv.com/the-time-timer-google-ventures-secret-weapon-for-instantly-better-meetings-53c94faf426b#.lu9w0hwom| or other simple timer.",
+      "id": [
+        "193653"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193654]\nOkay, you’ve got a triggering event, you’ve got the right people together, you’ve set the ground rules, and you’ve (maybe) done some homework. You’re ready to sprint!",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Okay, you’ve got a triggering event, you’ve got the right people together, you’ve set the ground rules, and you’ve (maybe) done some homework. You’re ready to sprint!",
+      "id": [
+        "193654"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193655]\n[▼ch-7]\n[#1. 20-Year Roadmap (15 minutes)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193655"
+      ],
+      "anchor": "ch-7",
+      "title": "1. 20-Year Roadmap (15 minutes)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193656]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_7.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193656"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_7.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193657]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_8.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193657"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_8.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193658]\nMost teams focus on what they’re doing now, which makes sense. But if your company is successful, your brand will last a long time. So for the first exercise, you’ll look into the future and think about what your company might be doing 20 years from now.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Most teams focus on what they’re doing now, which makes sense. But if your company is successful, your brand will last a long time. So for the first exercise, you’ll look into the future and think about what your company might be doing 20 years from now.",
+      "id": [
+        "193658"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193659]\n**HOW TO**\nDraw a timeline on the whiteboard, labeled with 5, 10, 15, and 20 years into the future, like this:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**HOW TO**\nDraw a timeline on the whiteboard, labeled with 5, 10, 15, and 20 years into the future, like this:",
+      "id": [
+        "193659"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193660]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_9.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193660"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_9.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193661]\nWhat will your company be doing at each of those future dates? To decide, you’ll use a simple exercise we call ==Note-and-Vote==|link:https://www.fastcompany.com/3034772/note-and-vote-how-google-ventures-avoids-groupthink-in-meetings|. In fact, you’ll be using Note-and-Vote throughout the Brand Sprint, because, as Daniel Burka says, “If you let people talk out loud very much, the whole thing will be a disaster.”",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "What will your company be doing at each of those future dates? To decide, you’ll use a simple exercise we call ==Note-and-Vote==|link:https://www.fastcompany.com/3034772/note-and-vote-how-google-ventures-avoids-groupthink-in-meetings|. In fact, you’ll be using Note-and-Vote throughout the Brand Sprint, because, as Daniel Burka says, “If you let people talk out loud very much, the whole thing will be a disaster.”",
+      "id": [
+        "193661"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193662]\nNote-and-Vote speeds up thinking and decision-making by alternating between solo and group activities. Here’s how it works for the 20-Year Roadmap:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Note-and-Vote speeds up thinking and decision-making by alternating between solo and group activities. Here’s how it works for the 20-Year Roadmap:",
+      "id": [
+        "193662"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193663]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_10.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193663"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_10.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193664]\nYou might be wondering: Who cares? What’s the point of imagining what we’ll be doing 20 years from now?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You might be wondering: Who cares? What’s the point of imagining what we’ll be doing 20 years from now?",
+      "id": [
+        "193664"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193665]\nNobody will expect you to stick to the 20-Year Roadmap—that’s not the point. The point of the 20-Year Roadmap is to get your team thinking about the lifetime of your brand. A great brand will last until the year 2038 — and beyond.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Nobody will expect you to stick to the 20-Year Roadmap—that’s not the point. The point of the 20-Year Roadmap is to get your team thinking about the lifetime of your brand. A great brand will last until the year 2038 — and beyond.",
+      "id": [
+        "193665"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193666]\n[▼ch-8]\n[#2. What, How, Why (30 minutes)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193666"
+      ],
+      "anchor": "ch-8",
+      "title": "2. What, How, Why (30 minutes)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193667]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_11.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193667"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_11.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193668]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_12.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193668"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_12.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193669]\nWhat, How, Why is an exercise based completely on Simon Sinek’s “Golden Circle”. (Sidenote: ==Sinek’s TED talk==|link:https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action| is the third most popular of all time with 30 million views, despite grainy video and the fact he uses a flimsy flipchart instead of fancy-pants slides. It wasn’t even at the main TED — it was at a small TEDx event! But the framework and the talk are so great it doesn’t matter.)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "What, How, Why is an exercise based completely on Simon Sinek’s “Golden Circle”. (Sidenote: ==Sinek’s TED talk==|link:https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action| is the third most popular of all time with 30 million views, despite grainy video and the fact he uses a flimsy flipchart instead of fancy-pants slides. It wasn’t even at the main TED — it was at a small TEDx event! But the framework and the talk are so great it doesn’t matter.)",
+      "id": [
+        "193669"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:193670]\n[&video-link:https://youtu.be/qp0HIF3SfI4]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193670"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/qp0HIF3SfI4",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193671]\nSinek’s premise is basically this: You need to know why you’re in business — and talk about it. When a company has a strong motivation and that motivation shines through, customers buy the product. It’s easy to find supporting examples. Sinek points to Apple, but companies like Nike, Patagonia, Airbnb, and LEGO obviously fit the bill.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Sinek’s premise is basically this: You need to know why you’re in business — and talk about it. When a company has a strong motivation and that motivation shines through, customers buy the product. It’s easy to find supporting examples. Sinek points to Apple, but companies like Nike, Patagonia, Airbnb, and LEGO obviously fit the bill.",
+      "id": [
+        "193671"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193672]\nOn the other hand, you might argue, there are plenty of successful companies whose primary motivation seems to just be… making money. And, yeah, that’s a reasonable argument. But if you’re reading this post, you probably want a brand that stands out from the competition, and stands for more than just financial success. And I think Sinek’s right: __why__ brands are stronger.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "On the other hand, you might argue, there are plenty of successful companies whose primary motivation seems to just be… making money. And, yeah, that’s a reasonable argument. But if you’re reading this post, you probably want a brand that stands out from the competition, and stands for more than just financial success. And I think Sinek’s right: __why__ brands are stronger.",
+      "id": [
+        "193672"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193673]\nPlus, knowing why you’re in business can be very motivating for you and your team. In other words, it’s worth the 30 minutes.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Plus, knowing why you’re in business can be very motivating for you and your team. In other words, it’s worth the 30 minutes.",
+      "id": [
+        "193673"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193674]\n**HOW TO**\nStart by drawing three concentric circles on a whiteboard. Label the outside circle “what”, the middle circle “how”, and the inside circle “why”, like this:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**HOW TO**\nStart by drawing three concentric circles on a whiteboard. Label the outside circle “what”, the middle circle “how”, and the inside circle “why”, like this:",
+      "id": [
+        "193674"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193675]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_13.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193675"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_13.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193676]\nNext, collect answers to these questions:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Next, collect answers to these questions:",
+      "id": [
+        "193676"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193677]\n**What does your company do?**\nA phrase or sentence describing your primary business for the next five years. __Examples: “Make toothpaste”, “fix cars”, etc.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**What does your company do?**\nA phrase or sentence describing your primary business for the next five years. __Examples: “Make toothpaste”, “fix cars”, etc.__",
+      "id": [
+        "193677"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193678]\n**How do you do it?**\nWhat’s your secret sauce? What technology or approach sets you apart from the competition? __Examples: “Made with all-natural ingredients”, “best-in-class friendly service”, etc.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**How do you do it?**\nWhat’s your secret sauce? What technology or approach sets you apart from the competition? __Examples: “Made with all-natural ingredients”, “best-in-class friendly service”, etc.__",
+      "id": [
+        "193678"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193679]\n**Why?**\nYou can think of the __why__ as the reason you get out of bed in the morning and go to work. The __why__ should reflect the core reason your company exists, and it won’t change much over time. You may pivot the business, launch new products, and enter new markets, but your why remains the same. __Examples: “Promote healthy living”, “help people get where they need to go”, etc.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Why?**\nYou can think of the __why__ as the reason you get out of bed in the morning and go to work. The __why__ should reflect the core reason your company exists, and it won’t change much over time. You may pivot the business, launch new products, and enter new markets, but your why remains the same. __Examples: “Promote healthy living”, “help people get where they need to go”, etc.__",
+      "id": [
+        "193679"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193680]\nOnce again, you’ll Note-and-Vote:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Once again, you’ll Note-and-Vote:",
+      "id": [
+        "193680"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193681]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_14.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193681"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_14.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193682]\nTo better understand the power of __why__, let’s talk about Apple and Nike.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "To better understand the power of __why__, let’s talk about Apple and Nike.",
+      "id": [
+        "193682"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:193683]\nAs I mentioned above, Simon Sinek uses Apple as an example of a company who understands and communicates their __why__ extremely well. Normally, I avoid using Apple or Steve Jobs as an example for anything, because (a) it’s really overdone and (b) there are so many hard-to-replicate reasons for their success. Saying “do what Apple did!” isn’t very helpful advice. But… when Laura showed me this ==1997 video of Jobs==|link:https://www.youtube.com/watch?v=keCwRdbwNQY|, I realized we had to include it in this guide.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "As I mentioned above, Simon Sinek uses Apple as an example of a company who understands and communicates their __why__ extremely well. Normally, I avoid using Apple or Steve Jobs as an example for anything, because (a) it’s really overdone and (b) there are so many hard-to-replicate reasons for their success. Saying “do what Apple did!” isn’t very helpful advice. But… when Laura showed me this ==1997 video of Jobs==|link:https://www.youtube.com/watch?v=keCwRdbwNQY|, I realized we had to include it in this guide.",
+      "id": [
+        "193683"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&video-link]\n[@id:193684]\n[&video-link:https://youtu.be/keCwRdbwNQY]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "",
+      "id": [
+        "193684"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/keCwRdbwNQY",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193685]\nThe video is worth watching for a few reasons. First, it’s unpolished. Jobs was a fantastic speaker, and here you get to see him without the trappings of an iPhone event. Second, he’s addressing Apple employees, not the world. It’s a behind-the-scenes video from before Apple’s resurgence, which is very cool to see. And finally, it’s completely on-topic for your Brand Sprint. This is the moment where Jobs explains Apple’s __why__ and its importance to their products, advertising, and sales. Today — 20 years later! — the __why__ is still relevant.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The video is worth watching for a few reasons. First, it’s unpolished. Jobs was a fantastic speaker, and here you get to see him without the trappings of an iPhone event. Second, he’s addressing Apple employees, not the world. It’s a behind-the-scenes video from before Apple’s resurgence, which is very cool to see. And finally, it’s completely on-topic for your Brand Sprint. This is the moment where Jobs explains Apple’s __why__ and its importance to their products, advertising, and sales. Today — 20 years later! — the __why__ is still relevant.",
+      "id": [
+        "193685"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193686]\nOne more classic example is Nike. (Also a bit obvious and overdone, but so good I can’t resist.) Here’s a quote from Phil Knight’s __Shoe Dog__ about the earliest days of Nike, in 1964:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "One more classic example is Nike. (Also a bit obvious and overdone, but so good I can’t resist.) Here’s a quote from Phil Knight’s __Shoe Dog__ about the earliest days of Nike, in 1964:",
+      "id": [
+        "193686"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:193687]\n“I’d been unable to sell encyclopedias, and I’d despised it to boot. I’d been slightly better at selling mutual funds, but I’d felt dead inside. So why was selling shoes so different? Because, I realized, it wasn’t selling. I believed in running. I believed that if people got out and ran a few miles every day, the world would be a better place, and I believed these shoes were better to run in. People, sensing my belief, wanted some of that belief for themselves. Belief, I decided. Belief is irresistible.”",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "“I’d been unable to sell encyclopedias, and I’d despised it to boot. I’d been slightly better at selling mutual funds, but I’d felt dead inside. So why was selling shoes so different? Because, I realized, it wasn’t selling. I believed in running. I believed that if people got out and ran a few miles every day, the world would be a better place, and I believed these shoes were better to run in. People, sensing my belief, wanted some of that belief for themselves. Belief, I decided. Belief is irresistible.”",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "193687"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193688]\nToday, more than 50 years later, Nike stands for pretty much the exact same thing. Here’s their current mission statement:\n\n__Bring inspiration and innovation to every athlete* in the world.\n*If you have a body, you are an athlete.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Today, more than 50 years later, Nike stands for pretty much the exact same thing. Here’s their current mission statement:\n\n__Bring inspiration and innovation to every athlete* in the world.\n*If you have a body, you are an athlete.__",
+      "id": [
+        "193688"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193689]\nComing up with a great __why__ sounds basic. It’s not. It’s surprisingly hard. Encourage your CEO or founder to be idealistic and remember why they started this company or took this job. We spend most of our time at the office being pragmatic. This is not a time to be pragmatic — it’s a time to wear your heart on your sleeve.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Coming up with a great __why__ sounds basic. It’s not. It’s surprisingly hard. Encourage your CEO or founder to be idealistic and remember why they started this company or took this job. We spend most of our time at the office being pragmatic. This is not a time to be pragmatic — it’s a time to wear your heart on your sleeve.",
+      "id": [
+        "193689"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193690]\n[▼ch-9]\n[#3. Top Three Values (30 minutes)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193690"
+      ],
+      "anchor": "ch-9",
+      "title": "3. Top Three Values (30 minutes)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193691]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_15.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193691"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_15.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193692]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_16.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193692"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_16.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193693]\nNext, you’ll make your __why__ more specific by listing and ranking your company values. I know “company values” sounds like consultant baloney, but it’s just another way of saying “stuff that really matters to us” or, better yet, “decision-making principles”.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Next, you’ll make your __why__ more specific by listing and ranking your company values. I know “company values” sounds like consultant baloney, but it’s just another way of saying “stuff that really matters to us” or, better yet, “decision-making principles”.",
+      "id": [
+        "193693"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193694]\nCompany values are often things like:\n• Honesty\n• Integrity\n• Sustainable\n• Affordable\n• Luxury\n• Data-driven\n• Service\n• Simple\n• Trusted\n• Reliable\n• Accessible to everyone\n• Etc.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Company values are often things like:\n• Honesty\n• Integrity\n• Sustainable\n• Affordable\n• Luxury\n• Data-driven\n• Service\n• Simple\n• Trusted\n• Reliable\n• Accessible to everyone\n• Etc.",
+      "id": [
+        "193694"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193695]\nLots of companies list their values, but very few do the hard work to reduce and prioritize. And prioritization is essential — you’ve got to **cut down to just three values** and rank them so you have **one single most important value**. If you have ten or twenty values, __anything__ you do can be considered “on brand”. Knowing your most important value makes decisions easier, clarifies your message, and sets you apart from the competition. It’s hard work but worth it.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Lots of companies list their values, but very few do the hard work to reduce and prioritize. And prioritization is essential — you’ve got to **cut down to just three values** and rank them so you have **one single most important value**. If you have ten or twenty values, __anything__ you do can be considered “on brand”. Knowing your most important value makes decisions easier, clarifies your message, and sets you apart from the competition. It’s hard work but worth it.",
+      "id": [
+        "193695"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193696]\n**HOW TO**\nTo generate and rank your values, you’ll do another Note-and-Vote:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**HOW TO**\nTo generate and rank your values, you’ll do another Note-and-Vote:",
+      "id": [
+        "193696"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193697]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_17.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193697"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_17.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193698]\n[▼ch-10]\n[#4. Top Three Audiences (30 minutes)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193698"
+      ],
+      "anchor": "ch-10",
+      "title": "4. Top Three Audiences (30 minutes)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193699]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_18.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193699"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_18.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193700]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_19.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193700"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_19.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193701]\nValues are helpful for brand decisions, but they’re not the whole picture — you need to know who you’re talking to. In this exercise, you’ll list all your possible audiences, then figure out who’s most important.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Values are helpful for brand decisions, but they’re not the whole picture — you need to know who you’re talking to. In this exercise, you’ll list all your possible audiences, then figure out who’s most important.",
+      "id": [
+        "193701"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193702]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_20.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193702"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_20.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193703]\nWho qualifies as an “audience”? Customers, for sure, but you can think more broadly by asking this question: **Whose opinion do you care about?**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Who qualifies as an “audience”? Customers, for sure, but you can think more broadly by asking this question: **Whose opinion do you care about?**",
+      "id": [
+        "193703"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193704]\nWhen you answer that, you may realize your brand matters not just to customers but also to other businesses, reporters, advertisers, employees, potential hires, and heck, maybe even government regulators.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "When you answer that, you may realize your brand matters not just to customers but also to other businesses, reporters, advertisers, employees, potential hires, and heck, maybe even government regulators.",
+      "id": [
+        "193704"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193705]\nA common question is whether to use broad categories (like “athletes”) or segments (like “runners”). Really it’s up to you — most companies just know whether segments or categories are the best way to go.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "A common question is whether to use broad categories (like “athletes”) or segments (like “runners”). Really it’s up to you — most companies just know whether segments or categories are the best way to go.",
+      "id": [
+        "193705"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193706]\n**HOW TO**\nGuess what, Note-and-Vote!",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**HOW TO**\nGuess what, Note-and-Vote!",
+      "id": [
+        "193706"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193707]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_21.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193707"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_21.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193708]\nOkay, at this point you’ve talked through the company’s identity and its audience. Only two more activities to go!",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Okay, at this point you’ve talked through the company’s identity and its audience. Only two more activities to go!",
+      "id": [
+        "193708"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193709]\nThese final two exercises are classics you may have seen before. Both are designed to get you thinking about how your company’s brand compares with others. And, to be honest, both exercises may seem corny the first time you do them. Just power through — I promise this is all worthwhile.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "These final two exercises are classics you may have seen before. Both are designed to get you thinking about how your company’s brand compares with others. And, to be honest, both exercises may seem corny the first time you do them. Just power through — I promise this is all worthwhile.",
+      "id": [
+        "193709"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193710]\n[▼ch-11]\n[#5. Personality Sliders (30 minutes)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193710"
+      ],
+      "anchor": "ch-11",
+      "title": "5. Personality Sliders (30 minutes)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193711]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_22.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193711"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_22.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193712]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_23.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193712"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_23.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193713]\nPersonality Sliders” sounds delicious, but it’s really just another whiteboard thing. In this exercise, you’ll position your company’s “sliders” between pairs of brand extremes:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Personality Sliders” sounds delicious, but it’s really just another whiteboard thing. In this exercise, you’ll position your company’s “sliders” between pairs of brand extremes:",
+      "id": [
+        "193713"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193714]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_24.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193714"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_24.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193715]\nThere are good reasons to be on the left or right of any of these lines, and it’s even okay if some of your sliders end up in the middle. But it’s helpful to be strongly opinionated on at least one or two ranges.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "There are good reasons to be on the left or right of any of these lines, and it’s even okay if some of your sliders end up in the middle. But it’s helpful to be strongly opinionated on at least one or two ranges.",
+      "id": [
+        "193715"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193716]\n**HOW TO**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**HOW TO**",
+      "id": [
+        "193716"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193717]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_25.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193717"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_25.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193718]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_26.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193718"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_26.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193719]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_27.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193719"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_27.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193720]\n[▼ch-12]\n[#6. Competitive Landscape (30 minutes)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193720"
+      ],
+      "anchor": "ch-12",
+      "title": "6. Competitive Landscape (30 minutes)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193721]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_28.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193721"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_28.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193722]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_29.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193722"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_29.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193723]\nThis last exercise is a simple 2x2 matrix (I know, consultant nirvana). I actually don’t think I even need to explain this one, so let’s dive right in:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This last exercise is a simple 2x2 matrix (I know, consultant nirvana). I actually don’t think I even need to explain this one, so let’s dive right in:",
+      "id": [
+        "193723"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193724]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_30.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193724"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_30.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193725]\n**HOW TO**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**HOW TO**",
+      "id": [
+        "193725"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193726]\n[&image:https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_31.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193726"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/the_three_hour_brand_sprint/the_three_hour_brand_sprint_31.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193727]\nNow you have a complete Super Simple Brand Guide! That’s right — it’s just a slide deck filled with whiteboard photos. But don’t underestimate it.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Now you have a complete Super Simple Brand Guide! That’s right — it’s just a slide deck filled with whiteboard photos. But don’t underestimate it.",
+      "id": [
+        "193727"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193728]\nTaken together, these six diagrams are a powerful, concrete representation of your company’s brand. When you’re faced with a big decision — about naming, identity, marketing, or even company policy — you can use these diagrams as a guide. And if you decide to hire an agency, you can start your relationship with them by walking through your new brand guide. It’ll give you a giant head start.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Taken together, these six diagrams are a powerful, concrete representation of your company’s brand. When you’re faced with a big decision — about naming, identity, marketing, or even company policy — you can use these diagrams as a guide. And if you decide to hire an agency, you can start your relationship with them by walking through your new brand guide. It’ll give you a giant head start.",
+      "id": [
+        "193728"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193729]\nYour Super Simple Brand Guide can also help new employees understand what your company is about, and can even remind the founding team what you stand for. That’s a big deal. When you really nail your brand, it’s not a fluffy veneer applied at the end (as I had often feared). Instead, it’s everything: what you build, the way you build it, who you build it for, and how you do your work. And we think it’s definitely worth three hours to figure that out.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Your Super Simple Brand Guide can also help new employees understand what your company is about, and can even remind the founding team what you stand for. That’s a big deal. When you really nail your brand, it’s not a fluffy veneer applied at the end (as I had often feared). Instead, it’s everything: what you build, the way you build it, who you build it for, and how you do your work. And we think it’s definitely worth three hours to figure that out.",
+      "id": [
+        "193729"
+      ]
+    }
+  }
+]

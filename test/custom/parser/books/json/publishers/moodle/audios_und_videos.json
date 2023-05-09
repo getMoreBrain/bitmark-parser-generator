@@ -1,0 +1,1938 @@
+[
+  {
+    "bitmark": "[.book]\r\n[@id:234364]\r\n[@coverImage:https://docs.bitmark.cloud/bit-books/moodle/videos_und_audios/web-resources/images/moodle_videos_cover.png]\r\n[#Videos und Audios selbst erstellen – schnell, einfach und pädagogisch sinnvoll]\r\n[@language:de]\r\n[@externalId:e-videos-und-audios-selbst-erste_gsnnudihyqtc]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234364"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/moodle/videos_und_audios/web-resources/images/moodle_videos_cover.png"
+      ],
+      "title": "Videos und Audios selbst erstellen – schnell, einfach und pädagogisch sinnvoll",
+      "language": [
+        "de"
+      ],
+      "externalId": [
+        "e-videos-und-audios-selbst-erste_gsnnudihyqtc"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-1]\r\n[@id:234239]\r\n[#Überblick]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "234239"
+      ],
+      "title": "Überblick"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-2]\r\n[@id:234240]\r\n[##Herzlich Willkommen!]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "234240"
+      ],
+      "title": "Herzlich Willkommen!"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234241]\r\n[%][%Einführung ins Thema Videos und Audios selbst erstellen]\r\n[&video-link:https://youtu.be/YnjB50atAh4][@caption:Video Einführung ins Thema Videos und Audios selbst erstellen von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234241"
+      ],
+      "lead": "Einführung ins Thema Videos und Audios selbst erstellen",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/YnjB50atAh4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Einführung ins Thema Videos und Audios selbst erstellen von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-3]\r\n[@id:234242]\r\n[##Die Inhalte dieses Lernangebots im Überblick]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "234242"
+      ],
+      "title": "Die Inhalte dieses Lernangebots im Überblick"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234243]\r\nHerzlich willkommen im Onlinekurs __Videos und Audios selbst erstellen – schnell, einfach und pädagogisch sinnvoll.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Herzlich willkommen im Onlinekurs __Videos und Audios selbst erstellen – schnell, einfach und pädagogisch sinnvoll.__",
+      "id": [
+        "234243"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note]\r\n[@id:234245]\r\n[%][%Reflektieren und ausprobieren!]\r\nBeim Durcharbeiten dieses Kurses können Sie ein eigenes multimediales Produkt Schritt für Schritt (mit)erstellen. Sie finden in jedem Kapitel einen entsprechenden Hinweis.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Beim Durcharbeiten dieses Kurses können Sie ein eigenes multimediales Produkt Schritt für Schritt (mit)erstellen. Sie finden in jedem Kapitel einen entsprechenden Hinweis.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234245"
+      ],
+      "lead": "Reflektieren und ausprobieren!"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-4]\r\n[@id:234246]\r\n[##Glossar zu Video und Audio]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "234246"
+      ],
+      "title": "Glossar zu Video und Audio"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234247]\r\nIn unserem Glossar finden Sie die zentralen Begriffe rund ums Thema. Die einzelnen Begriffe werden im Laufe dieses Lernangebots erklärt.\r\n\r\n• **Audacity**\r\nEin kostenfreies Open-Source-Programm, um Audiodatei am PC bearbeiten zu können.\r\n\r\n• **Audiogespräch**\r\nEin Gespräch bzw. Interview, welches als Audio aufgezeichnet und veröffentlicht wird. Bei einer Reihe von Audiogesprächen sprechen wir von einem Podcast.\r\n\r\n• **Creative-Commons-Lizenzen**\r\nHinter den Creative Commons (CC) steht eine Non-Profit-Organisation. Diese bietet Urheberinnen und Urhebern vorgefertigte Lizenzverträge für Nutzung durch andere an. Die CC-Lizenzen schützen die Urheberinnen und Urheber und zeigen den Nutzenden auf, wie und unter welchen Bedingungen die Materialien verwendet werden dürfen.\r\n\r\n• **Cognitive Load Theory**\r\nKognitive Theorie zu Funktionsweise und Belastung des Arbeitsgedächtnisses in Lernprozesses. Ausführliche Informationen finden Sie in Kapitel Lernen mit Multimedia.\r\n\r\n• **Cognitive theory of multimedia learning**\r\nKognitive Theorie zur Gestaltung lernförderlicher, multimedialer Materialien. Ausführliche Informationen finden Sie in Kapitel Lernen mit Multimedia.\r\n\r\n• **Filmkiste**\r\nSelbstgebaute Kiste, z.B. aus Plastik zur Aufnahme von Legetechnik-Filmen.\r\n\r\n• **Greenscreen**\r\nGrüner Hintergrund für die Aufnahme von Videos und Fotos, welcher in der Nachbearbeitung (durch eine App) durch ein anderes Video/Foto ersetzt wird. Dies ermöglicht es uns. Protagonisten an andere reale oder fiktive Orte zu versetzen.\r\n\r\n• **Lavalier-Mikrofon**\r\nAnsteckmikrofon, welches eine gute Audioaufnahme bei einem bzw. einer Sprecher:in ermöglicht.\r\n\r\n• **Legetechnik**\r\nDie einfachste Animation der Welt: Mittels der Hände und gebastelter, gezeichneter oder gedruckter Objekte werden Erklär- und Lernvideos produziert. In Kapitel __Videos mit Legetechnik und StopMotion erstellen__ finden Sie weitere Informationen.\r\n\r\n• **Multimedia**\r\nDie Verbindung mehrerer Medien zu einem Material: z.B. Video als Verbindung von Bild und Ton. Auch die Verbindung von Text und Bild in einem Schulbuch ist streng gesehen bereits Multimedia.\r\n\r\n• **Open Educational Resources**\r\nFrei lizenzierte Bildungsmaterialien, die in der Regel online zur Verfügung stehen und von jedem verwendet, bearbeitet und verbreitet werden können, da sie nicht unter dem klassischen Copyright (alle Rechte vorbehalten) stehen, sondern unter einer freien Creative-Commons-Lizenz.\r\n\r\n• **Podcast**\r\nPodcasts sind Audiodateien von unterschiedlicher Länge, die die Möglichkeit bieten, einfach und bequem mobil per Smartphone abgespielt zu werden. Das Wort setzt sich zusammen aus „pod“ (der Bezeichnung eines MP3-Players der Firma Apple) sowie „cast“ (in Anspielung auf Broadcast, auch Rundfunk genannt). Ziel von Podcasting ist es, Inhalte frei verfügbar in Form einer Erzählung, oder auch eines Interviews an externe Hörer weiterzugeben. Bedient wird sich dabei an einfachen Technologien der Audioaufnahme und Cutting-Tools. Ihr größter Vorteil dabei sind die eher geringen Kosten und die räumliche wie zeitliche Emanzipation des Hörerlebnisses. (Quelle: “ELearning - Beratung” von Jana Brehmer & Sebastian Becker, Lizenz: CC BY 4.0. Die Quellen dieses Werks sind verfügbar auf GitLab. Bearbeitung: Änderung einzelner Formulierungen.)\r\n\r\n• **Screencast/Tutorial**\r\nAufzeichnung des Bildschirms (PC, Tablet oder Smartphone) zur Erklärung eines Sachverhalts oder einer Software. Auch eine (PowerPoint-) Präsentation kann mit einem Screencast aufgenommen werden.\r\n\r\n• **Shotcut**\r\nEin kostenfreies Open-Source-Programm, um Videos am PC bearbeiten und schneiden zu können.\r\n\r\n• **Stop Motion**\r\nDas Daumenkino in digitaler Form: Mehrere (viele) Einzelbilder werden mittels einer (in der Basisversion) kostenfreien App zu einem animierten Video zusammengesetzt.\r\n\r\n• **Storyboard**\r\nSkizzierung, Beschreibung und Dialoge des geplanten Lernvideos können in einem Storyboard festgehalten werden. Dies ermöglicht eine strukturierte Aufnahme. Bei der Erstellung von Lernvideos mit/von Schülerinnen und Schülern dienst das Storyboard zudem als Feedbackmöglichkeit und Prozesssicherung.\r\n\r\n• **Talking Head**\r\nErklärvideos, bei denen ein oder mehrerer Sprecher einen Sachverhalt erklären. Die Kameras sind in der Regel ausschließlich auf die Oberkörper der Protagonisten gerichtet und zeigen „sprechende Köpfe“.\r\n\r\n• **Teleprompter**\r\nGerät, das z.B. mittels eines Tablets den Text für das Video in Laufschrift einblendet und ein Ablesen während des Filmes ermöglicht.\r\n\r\n• **WirLernenOnline**\r\nWirLernenOnline ist die größte Plattform für frei zugängliche Bildungsmaterialien im deutschsprachigen Raum.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In unserem Glossar finden Sie die zentralen Begriffe rund ums Thema. Die einzelnen Begriffe werden im Laufe dieses Lernangebots erklärt.\r\n\r\n• **Audacity**\r\nEin kostenfreies Open-Source-Programm, um Audiodatei am PC bearbeiten zu können.\r\n\r\n• **Audiogespräch**\r\nEin Gespräch bzw. Interview, welches als Audio aufgezeichnet und veröffentlicht wird. Bei einer Reihe von Audiogesprächen sprechen wir von einem Podcast.\r\n\r\n• **Creative-Commons-Lizenzen**\r\nHinter den Creative Commons (CC) steht eine Non-Profit-Organisation. Diese bietet Urheberinnen und Urhebern vorgefertigte Lizenzverträge für Nutzung durch andere an. Die CC-Lizenzen schützen die Urheberinnen und Urheber und zeigen den Nutzenden auf, wie und unter welchen Bedingungen die Materialien verwendet werden dürfen.\r\n\r\n• **Cognitive Load Theory**\r\nKognitive Theorie zu Funktionsweise und Belastung des Arbeitsgedächtnisses in Lernprozesses. Ausführliche Informationen finden Sie in Kapitel Lernen mit Multimedia.\r\n\r\n• **Cognitive theory of multimedia learning**\r\nKognitive Theorie zur Gestaltung lernförderlicher, multimedialer Materialien. Ausführliche Informationen finden Sie in Kapitel Lernen mit Multimedia.\r\n\r\n• **Filmkiste**\r\nSelbstgebaute Kiste, z.B. aus Plastik zur Aufnahme von Legetechnik-Filmen.\r\n\r\n• **Greenscreen**\r\nGrüner Hintergrund für die Aufnahme von Videos und Fotos, welcher in der Nachbearbeitung (durch eine App) durch ein anderes Video/Foto ersetzt wird. Dies ermöglicht es uns. Protagonisten an andere reale oder fiktive Orte zu versetzen.\r\n\r\n• **Lavalier-Mikrofon**\r\nAnsteckmikrofon, welches eine gute Audioaufnahme bei einem bzw. einer Sprecher:in ermöglicht.\r\n\r\n• **Legetechnik**\r\nDie einfachste Animation der Welt: Mittels der Hände und gebastelter, gezeichneter oder gedruckter Objekte werden Erklär- und Lernvideos produziert. In Kapitel __Videos mit Legetechnik und StopMotion erstellen__ finden Sie weitere Informationen.\r\n\r\n• **Multimedia**\r\nDie Verbindung mehrerer Medien zu einem Material: z.B. Video als Verbindung von Bild und Ton. Auch die Verbindung von Text und Bild in einem Schulbuch ist streng gesehen bereits Multimedia.\r\n\r\n• **Open Educational Resources**\r\nFrei lizenzierte Bildungsmaterialien, die in der Regel online zur Verfügung stehen und von jedem verwendet, bearbeitet und verbreitet werden können, da sie nicht unter dem klassischen Copyright (alle Rechte vorbehalten) stehen, sondern unter einer freien Creative-Commons-Lizenz.\r\n\r\n• **Podcast**\r\nPodcasts sind Audiodateien von unterschiedlicher Länge, die die Möglichkeit bieten, einfach und bequem mobil per Smartphone abgespielt zu werden. Das Wort setzt sich zusammen aus „pod“ (der Bezeichnung eines MP3-Players der Firma Apple) sowie „cast“ (in Anspielung auf Broadcast, auch Rundfunk genannt). Ziel von Podcasting ist es, Inhalte frei verfügbar in Form einer Erzählung, oder auch eines Interviews an externe Hörer weiterzugeben. Bedient wird sich dabei an einfachen Technologien der Audioaufnahme und Cutting-Tools. Ihr größter Vorteil dabei sind die eher geringen Kosten und die räumliche wie zeitliche Emanzipation des Hörerlebnisses. (Quelle: “ELearning - Beratung” von Jana Brehmer & Sebastian Becker, Lizenz: CC BY 4.0. Die Quellen dieses Werks sind verfügbar auf GitLab. Bearbeitung: Änderung einzelner Formulierungen.)\r\n\r\n• **Screencast/Tutorial**\r\nAufzeichnung des Bildschirms (PC, Tablet oder Smartphone) zur Erklärung eines Sachverhalts oder einer Software. Auch eine (PowerPoint-) Präsentation kann mit einem Screencast aufgenommen werden.\r\n\r\n• **Shotcut**\r\nEin kostenfreies Open-Source-Programm, um Videos am PC bearbeiten und schneiden zu können.\r\n\r\n• **Stop Motion**\r\nDas Daumenkino in digitaler Form: Mehrere (viele) Einzelbilder werden mittels einer (in der Basisversion) kostenfreien App zu einem animierten Video zusammengesetzt.\r\n\r\n• **Storyboard**\r\nSkizzierung, Beschreibung und Dialoge des geplanten Lernvideos können in einem Storyboard festgehalten werden. Dies ermöglicht eine strukturierte Aufnahme. Bei der Erstellung von Lernvideos mit/von Schülerinnen und Schülern dienst das Storyboard zudem als Feedbackmöglichkeit und Prozesssicherung.\r\n\r\n• **Talking Head**\r\nErklärvideos, bei denen ein oder mehrerer Sprecher einen Sachverhalt erklären. Die Kameras sind in der Regel ausschließlich auf die Oberkörper der Protagonisten gerichtet und zeigen „sprechende Köpfe“.\r\n\r\n• **Teleprompter**\r\nGerät, das z.B. mittels eines Tablets den Text für das Video in Laufschrift einblendet und ein Ablesen während des Filmes ermöglicht.\r\n\r\n• **WirLernenOnline**\r\nWirLernenOnline ist die größte Plattform für frei zugängliche Bildungsmaterialien im deutschsprachigen Raum.",
+      "id": [
+        "234247"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-5]\r\n[@id:234248]\r\n[#Multimedia im Unterricht]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "234248"
+      ],
+      "title": "Multimedia im Unterricht"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234249]\r\n[%][%Einstieg ins Thema Multimedia]\r\n[&video-link:https://www.youtube.com/watch?v=mQMjZnXyqDg][@caption:Video Einstieg ins Thema Multimedia von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234249"
+      ],
+      "lead": "Einstieg ins Thema Multimedia",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=mQMjZnXyqDg",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Einstieg ins Thema Multimedia von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-6]\r\n[@id:234250]\r\n[##Mediennutzung junger Menschen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "234250"
+      ],
+      "title": "Mediennutzung junger Menschen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234251]\r\nWie nutzen Kinder und Jugendliche in Alltag und Schule Medien? Seit 1998 erhebt dies jährlich die JIM- (12-19-jährige) bzw. die KIM-Studie (6-13-jährige). In der Studie erfahren wir u.a. welche Geräte und Plattformen genutzt werden, wie häufige Kinder diese einsetzen und welche Medien eher in der Schule und welche in der Freizeit bevorzugt werden. Diese Angaben werden nach u.a. nach Alter und Geschlecht differenziert.\r\n\r\n• ==JIM-Studie==|link:https://www.mpfs.de/studien/?tab=tab-18-1|\r\n• ==KIM-Studie==|link:https://www.mpfs.de/studien/?tab=tab-18-2|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wie nutzen Kinder und Jugendliche in Alltag und Schule Medien? Seit 1998 erhebt dies jährlich die JIM- (12-19-jährige) bzw. die KIM-Studie (6-13-jährige). In der Studie erfahren wir u.a. welche Geräte und Plattformen genutzt werden, wie häufige Kinder diese einsetzen und welche Medien eher in der Schule und welche in der Freizeit bevorzugt werden. Diese Angaben werden nach u.a. nach Alter und Geschlecht differenziert.\r\n\r\n• ==JIM-Studie==|link:https://www.mpfs.de/studien/?tab=tab-18-1|\r\n• ==KIM-Studie==|link:https://www.mpfs.de/studien/?tab=tab-18-2|",
+      "id": [
+        "234251"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-7]\r\n[@id:234252]\r\n[##Multimedia mit Schülerinnen und Schülern erstellen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "234252"
+      ],
+      "title": "Multimedia mit Schülerinnen und Schülern erstellen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234253]\r\nIn diesem Kurs wollen wir einen besonderen Fokus darauflegen, wie multimediale Inhalte mit und von unseren Schülerinnen und Schülern erstellt werden können. Schauen Sie sich die Inhalte dieses Kurses daher gerne aus zwei Perspektiven an: Wie nutzen und erstellen Sie für Ihre Lernenden Audios und Videos? Wie können Schülerinnen und Schüler selber Audios und Videos (als Projektarbeit) erstellen?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In diesem Kurs wollen wir einen besonderen Fokus darauflegen, wie multimediale Inhalte mit und von unseren Schülerinnen und Schülern erstellt werden können. Schauen Sie sich die Inhalte dieses Kurses daher gerne aus zwei Perspektiven an: Wie nutzen und erstellen Sie für Ihre Lernenden Audios und Videos? Wie können Schülerinnen und Schüler selber Audios und Videos (als Projektarbeit) erstellen?",
+      "id": [
+        "234253"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-8]\r\n[@id:234254]\r\n[##Literaturtipp]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "234254"
+      ],
+      "title": "Literaturtipp"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234255]\r\nWenn Sie die Inhalte aus diesem Kurs vertiefen wollen, dann empfehle ich Ihnen das Buch von Dorgerloh und Wolf zu lesen:\r\n\r\nDorgerloh, Stephan & Karsten D. Wolf (2020). ==Lehren und Lernen mit Tutorials und Erklärvideos==|link:https://www.beltz.de/fachmedien/paedagogik/produkte/details/39174-lehren-und-lernen-mit-tutorials-und-erklaervideos.html|. Beltz.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn Sie die Inhalte aus diesem Kurs vertiefen wollen, dann empfehle ich Ihnen das Buch von Dorgerloh und Wolf zu lesen:\r\n\r\nDorgerloh, Stephan & Karsten D. Wolf (2020). ==Lehren und Lernen mit Tutorials und Erklärvideos==|link:https://www.beltz.de/fachmedien/paedagogik/produkte/details/39174-lehren-und-lernen-mit-tutorials-und-erklaervideos.html|. Beltz.",
+      "id": [
+        "234255"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\r\n[@id:234256]\r\n[%][%Reflektieren und ausprobieren!]\r\nScreencast, Tutorials, __talking head__ und Animation: Welche Audio- und Videoformate nutzen Sie selber gerne zum Lernen und welche setzen Sie im Unterricht bereits ein?\r\n\r\nKönnen Sie sich vorstellen, dass Ihre Lernenden selber Medienprodukte z.B. als Ergebnis einer Unterrichtseinheit gestalten?\r\n\r\nWenn Sie mögen, teilen Sie Ihre Gedanken im ==Forum==|link:https://moodle.nibis.de/mooc_dev/mod/forum/view.php?id=2382|.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "Screencast, Tutorials, __talking head__ und Animation: Welche Audio- und Videoformate nutzen Sie selber gerne zum Lernen und welche setzen Sie im Unterricht bereits ein?\r\n\r\nKönnen Sie sich vorstellen, dass Ihre Lernenden selber Medienprodukte z.B. als Ergebnis einer Unterrichtseinheit gestalten?\r\n\r\nWenn Sie mögen, teilen Sie Ihre Gedanken im ==Forum==|link:https://moodle.nibis.de/mooc_dev/mod/forum/view.php?id=2382|.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234256"
+      ],
+      "lead": "Reflektieren und ausprobieren!"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-9]\r\n[@id:234257]\r\n[#Lernen mit Multimedia]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "234257"
+      ],
+      "title": "Lernen mit Multimedia"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234258]\r\n[%][%Einführung in Kognitive Lerntheorien]\r\n[&video-link:https://www.youtube.com/watch?v=Xi4g4yr9Dk4][@caption:Video Einführung in Kognitive Lerntheorien von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234258"
+      ],
+      "lead": "Einführung in Kognitive Lerntheorien",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=Xi4g4yr9Dk4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Einführung in Kognitive Lerntheorien von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-10]\r\n[@id:234259]\r\n[##Multimediales Lernen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-10",
+      "id": [
+        "234259"
+      ],
+      "title": "Multimediales Lernen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234260]\r\nEin Lernprozess kann durch viele unterschiedliche Faktoren beschrieben werden, die Einfluss auf das Lernergebnis nehmen können. In diesem Kurs beschränken wir uns auf die Betrachtungsweise des kognitiven Lernprozesses mit Hilfe multimedialer Inhalte. Die kognitive Analyse des Lernens ist ein gut untersuchtes Forschungsfeld, das eine Rückbeziehung auf verschiedene Theorien zulässt.\r\n\r\nIn aktuellen Diskussionen spielen bei multimedialen Lerninhalten oftmals Videos oder Animationen, zum Teil sogar Interaktionen eine große Rolle. Wir sprechen jedoch bereits bei jeder Kombination von verschiedenen Elementen, wie Text und Bild von Multimedia (Mayer, 2001). Dabei sind zahlreiche Differenzierungen möglich. Es wird zwischen gesprochenem und geschriebenem Text unterschieden und ob ein Bild als Standbild oder Animation eingesetzt wird. Daher sind bereits Arbeitsblätter, die einen Fließtext mit einem informativen Bild, sei es auch ein dekoratives Bild, multimedial aufbereitet. Als zentrale Frage steht im Mittelpunkt, wie multimediale Inhalte von Lernenden aufgenommen werden und wie diese den Lernprozess unterstützen oder stören können. Nach Mayer (2001) ist es von entscheidender Bedeutung, wie Lernende mit ihren kognitiven Ressourcen multimediale Inhalte überhaupt aufnehmen und verarbeiten können. Dies bedeutet, dass die Art und Weise der Verarbeitung von Informationen mit in die Entwicklung von multimedialen Lerninhalten einbezogen werden muss. An dieser Stelle kommt die Cognitive Load Theory (Sweller 1988) ins Spiel, welche die Verarbeitung von Informationen beschreibt. Diese beiden Grundtheorien helfen uns, multimediales Lernen aus kognitiver Sicht zu verstehen, sodass wir praktische Kriterien ableiten können, die uns bei der Erstellung multimedialer Inhalte helfen können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ein Lernprozess kann durch viele unterschiedliche Faktoren beschrieben werden, die Einfluss auf das Lernergebnis nehmen können. In diesem Kurs beschränken wir uns auf die Betrachtungsweise des kognitiven Lernprozesses mit Hilfe multimedialer Inhalte. Die kognitive Analyse des Lernens ist ein gut untersuchtes Forschungsfeld, das eine Rückbeziehung auf verschiedene Theorien zulässt.\r\n\r\nIn aktuellen Diskussionen spielen bei multimedialen Lerninhalten oftmals Videos oder Animationen, zum Teil sogar Interaktionen eine große Rolle. Wir sprechen jedoch bereits bei jeder Kombination von verschiedenen Elementen, wie Text und Bild von Multimedia (Mayer, 2001). Dabei sind zahlreiche Differenzierungen möglich. Es wird zwischen gesprochenem und geschriebenem Text unterschieden und ob ein Bild als Standbild oder Animation eingesetzt wird. Daher sind bereits Arbeitsblätter, die einen Fließtext mit einem informativen Bild, sei es auch ein dekoratives Bild, multimedial aufbereitet. Als zentrale Frage steht im Mittelpunkt, wie multimediale Inhalte von Lernenden aufgenommen werden und wie diese den Lernprozess unterstützen oder stören können. Nach Mayer (2001) ist es von entscheidender Bedeutung, wie Lernende mit ihren kognitiven Ressourcen multimediale Inhalte überhaupt aufnehmen und verarbeiten können. Dies bedeutet, dass die Art und Weise der Verarbeitung von Informationen mit in die Entwicklung von multimedialen Lerninhalten einbezogen werden muss. An dieser Stelle kommt die Cognitive Load Theory (Sweller 1988) ins Spiel, welche die Verarbeitung von Informationen beschreibt. Diese beiden Grundtheorien helfen uns, multimediales Lernen aus kognitiver Sicht zu verstehen, sodass wir praktische Kriterien ableiten können, die uns bei der Erstellung multimedialer Inhalte helfen können.",
+      "id": [
+        "234260"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-11]\r\n[@id:234262]\r\n[##Cognitive Load Theory]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-11",
+      "id": [
+        "234262"
+      ],
+      "title": "Cognitive Load Theory"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234263]\r\nJohn Sweller geht bei seiner bereits in den 1980er Jahren entstandenen Theorie davon aus, dass jeder Lernprozess eine kognitive Belastung der Ressourcen des Arbeitsgedächtnisses bedeutet. Dabei beschreibt Sweller (1988) drei Arten von kognitiver Belastung:\r\n\r\n• Intrinsische kognitive Belastung\r\n• Extrinsische kognitive Belastung\r\n• Lernbezogene kognitive Belastung\r\n\r\nUnter der intrinsischen kognitiven Belastung kann dabei die Belastung verstanden werden, die durch das Lernmaterial selbst bedingt ist, z. B. die Schwierigkeit oder die Komplexität: Je komplexer Lernelemente sind, desto höher ist die intrinsische Belastung. Die extrinsische kognitive Belastung entsteht durch die Gestaltung und Darstellung des Lernmaterials. Lernmaterial, welches viele interessante, aber im Kern irrelevante, eher dekorative Bilder enthält, erzeugt dabei eine höhere extrinsische Belastung. Dies bezieht sich insbesondere auf multimediale Inhalte, die (nur) aus dekorativen Zwecken multimedial gestaltet wurden. So kann eine Fokussierung auf das Wesentliche erschwert werden. Bei der lernbezogenen kognitiven Belastung steht der Aufwand des Lernenden, der für das Verständnis des Materials betrieben werden muss, im Zentrum der Überlegungen. Diese Belastung sollte gefördert werden, da so neue Schemata im Arbeitsgedächtnis entstehen können, die den Lernprozess nachhaltig beeinflussen. Dies kann dadurch erreicht werden, dass die intrinsische und die extrinsische Belastung, z. B. durch die bessere Aufbereitung des Lernmaterials möglichst geringgehalten werden (Sweller, 1988).\r\n\r\nSweller führt weiter aus, dass die Elementinteraktivität eine wichtige Rolle bei der gesamten kognitiven Belastung spielt. So gäbe es Elemente, welche unabhängig voneinander gelernt und verstanden werden können. Verständnis ist dabei die Fähigkeit, zusammenhängende Elemente gleichzeitig im Arbeitsgedächtnis verarbeiten zu können. Elemente, die unabhängig voneinander gelernt werden können, belasten die kognitiven Ressourcen dabei weniger als Elemente, die stark miteinander zusammenhängen. Sweller spricht hierbei auch von gering elementinteraktiven Material z. B. das Erlernen von Vokabeln in einer Fremdsprache und höher elementinteraktiven Material, z. B. dem Erlernen einer fremdsprachlichen Syntax (Sweller, 2003).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "John Sweller geht bei seiner bereits in den 1980er Jahren entstandenen Theorie davon aus, dass jeder Lernprozess eine kognitive Belastung der Ressourcen des Arbeitsgedächtnisses bedeutet. Dabei beschreibt Sweller (1988) drei Arten von kognitiver Belastung:\r\n\r\n• Intrinsische kognitive Belastung\r\n• Extrinsische kognitive Belastung\r\n• Lernbezogene kognitive Belastung\r\n\r\nUnter der intrinsischen kognitiven Belastung kann dabei die Belastung verstanden werden, die durch das Lernmaterial selbst bedingt ist, z. B. die Schwierigkeit oder die Komplexität: Je komplexer Lernelemente sind, desto höher ist die intrinsische Belastung. Die extrinsische kognitive Belastung entsteht durch die Gestaltung und Darstellung des Lernmaterials. Lernmaterial, welches viele interessante, aber im Kern irrelevante, eher dekorative Bilder enthält, erzeugt dabei eine höhere extrinsische Belastung. Dies bezieht sich insbesondere auf multimediale Inhalte, die (nur) aus dekorativen Zwecken multimedial gestaltet wurden. So kann eine Fokussierung auf das Wesentliche erschwert werden. Bei der lernbezogenen kognitiven Belastung steht der Aufwand des Lernenden, der für das Verständnis des Materials betrieben werden muss, im Zentrum der Überlegungen. Diese Belastung sollte gefördert werden, da so neue Schemata im Arbeitsgedächtnis entstehen können, die den Lernprozess nachhaltig beeinflussen. Dies kann dadurch erreicht werden, dass die intrinsische und die extrinsische Belastung, z. B. durch die bessere Aufbereitung des Lernmaterials möglichst geringgehalten werden (Sweller, 1988).\r\n\r\nSweller führt weiter aus, dass die Elementinteraktivität eine wichtige Rolle bei der gesamten kognitiven Belastung spielt. So gäbe es Elemente, welche unabhängig voneinander gelernt und verstanden werden können. Verständnis ist dabei die Fähigkeit, zusammenhängende Elemente gleichzeitig im Arbeitsgedächtnis verarbeiten zu können. Elemente, die unabhängig voneinander gelernt werden können, belasten die kognitiven Ressourcen dabei weniger als Elemente, die stark miteinander zusammenhängen. Sweller spricht hierbei auch von gering elementinteraktiven Material z. B. das Erlernen von Vokabeln in einer Fremdsprache und höher elementinteraktiven Material, z. B. dem Erlernen einer fremdsprachlichen Syntax (Sweller, 2003).",
+      "id": [
+        "234263"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-12]\r\n[@id:234266]\r\n[##Cognitive Theory of multimedia Learning]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-12",
+      "id": [
+        "234266"
+      ],
+      "title": "Cognitive Theory of multimedia Learning"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234267]\r\nDie kognitive Theorie des multimedialen Lernens, im englischen Original abgekürzt als CTML, versucht die Verarbeitung kognitiver Prozesse multimedialer Lerninhalte zu erläutern. Mayer setzt dabei voraus, dass der Mensch zwei kapazitätsbegrenzte Kanäle besitzt, um auditive und visuelle Informationen zu verarbeiten. Je nach Art der multimedialen Darstellungsform können Augen und Ohren die Informationen unterschiedlich gut wahrnehmen und im Arbeitsgedächtnis speichern. Gibt es auf einem oder auf beiden Kanälen eine Überlastung, sei es für das Gehirn schwieriger die Informationen so zu verarbeiten, dass sie dauerhaft unter Einbeziehung von Vorwissen im Langzeitgedächtnis gespeichert werden können (Mayer, 2001). Dabei werden fünf kognitive Schritte beschrieben:\r\n\r\n1. Selektion verbaler Informationen\r\n2. Selektion visueller Informationen\r\n3. Organisation verbaler Informationen\r\n4. Organisation visueller Informationen\r\n5. Integration bereits vorhandenen Wissens\r\n\r\nMittels dieses Wissens leitet Mayer Prinzipien ab, wie Lernprozesses gestaltet werden müssen, sodass Lerninhalte erfolgreich und ohne Überschreitung der kognitiven Kapazität vermittelt werden können. Mit Einhaltung dieser Prinzipien sei eine bestmögliche Unterstützung des Lernprozesses möglich (Mayer, 2005).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die kognitive Theorie des multimedialen Lernens, im englischen Original abgekürzt als CTML, versucht die Verarbeitung kognitiver Prozesse multimedialer Lerninhalte zu erläutern. Mayer setzt dabei voraus, dass der Mensch zwei kapazitätsbegrenzte Kanäle besitzt, um auditive und visuelle Informationen zu verarbeiten. Je nach Art der multimedialen Darstellungsform können Augen und Ohren die Informationen unterschiedlich gut wahrnehmen und im Arbeitsgedächtnis speichern. Gibt es auf einem oder auf beiden Kanälen eine Überlastung, sei es für das Gehirn schwieriger die Informationen so zu verarbeiten, dass sie dauerhaft unter Einbeziehung von Vorwissen im Langzeitgedächtnis gespeichert werden können (Mayer, 2001). Dabei werden fünf kognitive Schritte beschrieben:\r\n\r\n1. Selektion verbaler Informationen\r\n2. Selektion visueller Informationen\r\n3. Organisation verbaler Informationen\r\n4. Organisation visueller Informationen\r\n5. Integration bereits vorhandenen Wissens\r\n\r\nMittels dieses Wissens leitet Mayer Prinzipien ab, wie Lernprozesses gestaltet werden müssen, sodass Lerninhalte erfolgreich und ohne Überschreitung der kognitiven Kapazität vermittelt werden können. Mit Einhaltung dieser Prinzipien sei eine bestmögliche Unterstützung des Lernprozesses möglich (Mayer, 2005).",
+      "id": [
+        "234267"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234269]\r\n[%][%Kognitive Theorie des multimedialen Lernens]\r\n[&video-link:https://www.youtube.com/watch?v=pJP54RKtqlE][@caption:Video Kognitive Theorie des multimedialen Lernens (Richard E. Mayer) von Monika Mzyczek, Slata Witt und Matthias Kostrzewa für Ruhr-Universität Bochum | Lizenz CC BY SA 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234269"
+      ],
+      "lead": "Kognitive Theorie des multimedialen Lernens",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=pJP54RKtqlE",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Kognitive Theorie des multimedialen Lernens (Richard E. Mayer) von Monika Mzyczek, Slata Witt und Matthias Kostrzewa für Ruhr-Universität Bochum | Lizenz CC BY SA 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-13]\r\n[@id:234270]\r\n[##Zum Vertiefen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-13",
+      "id": [
+        "234270"
+      ],
+      "title": "Zum Vertiefen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234271]\r\n• ==Kognitive Theorie des multimedialen Lernens – 10 Prinzipien zum multimedialen Lernen nach Mayer (PDF)==|link:https://campus.oercamp.de/wp-content/uploads/2020/07/Text_CTML-Video.pdf|\r\n• Videos zum Selbstlernkurs: __==Erstellung lernförderlicher Arbeitsmaterialien – kognitive-Load Theorie==|link:https://www.youtube.com/watch?v=RcJ4glu8Z1M&list=PLwKiLhXWbZzQ4VkG2a1zFq2BWFXZzt75o&index=11|__, NLQ Hildesheim",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• ==Kognitive Theorie des multimedialen Lernens – 10 Prinzipien zum multimedialen Lernen nach Mayer (PDF)==|link:https://campus.oercamp.de/wp-content/uploads/2020/07/Text_CTML-Video.pdf|\r\n• Videos zum Selbstlernkurs: __==Erstellung lernförderlicher Arbeitsmaterialien – kognitive-Load Theorie==|link:https://www.youtube.com/watch?v=RcJ4glu8Z1M&list=PLwKiLhXWbZzQ4VkG2a1zFq2BWFXZzt75o&index=11|__, NLQ Hildesheim",
+      "id": [
+        "234271"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-14]\r\n[@id:234272]\r\n[##Literatur]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-14",
+      "id": [
+        "234272"
+      ],
+      "title": "Literatur"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234273]\r\n• Mayer, Richard: Multimedia Learning. Cambridge University Press. 2001.\r\n• Mayer, Richard (Hrsg.): The Cambridge Handbook of Multimedia Learning. Cambrige University Press. 2005.\r\n• Sweller, John: Cognitive Load During Problem Solving. Effect on Learning. In: Cognitive Science 12, Seite. 257-285. 1988.\r\n• Sweller, John: Evolution of human cognitive architecture. In: The Psychology of Learning and Motivation, 43, Seite 215-266. 2003.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Mayer, Richard: Multimedia Learning. Cambridge University Press. 2001.\r\n• Mayer, Richard (Hrsg.): The Cambridge Handbook of Multimedia Learning. Cambrige University Press. 2005.\r\n• Sweller, John: Cognitive Load During Problem Solving. Effect on Learning. In: Cognitive Science 12, Seite. 257-285. 1988.\r\n• Sweller, John: Evolution of human cognitive architecture. In: The Psychology of Learning and Motivation, 43, Seite 215-266. 2003.",
+      "id": [
+        "234273"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\r\n[@id:234274]\r\n[%][%Reflektieren und ausprobieren!]\r\nSuchen Sie auf einer Videoplattform, z.B. YouTube Videos heraus, die sich potentiell für Ihren Fachunterricht eignen könnten. Schauen Sie sich die Videos an und geben Sie Ihnen eine spontane Bewertung. Untersuchen Sie die Videos anschließend auf die ==zehn Prinzipien==|link:https://campus.oercamp.de/wp-content/uploads/2020/07/Text_CTML-Video.pdf| zum multimedialen Lernen nach Mayer und vergleichen Sie dies mit Ihrer subjektiven Bewertung. Was stellen Sie fest?",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "Suchen Sie auf einer Videoplattform, z.B. YouTube Videos heraus, die sich potentiell für Ihren Fachunterricht eignen könnten. Schauen Sie sich die Videos an und geben Sie Ihnen eine spontane Bewertung. Untersuchen Sie die Videos anschließend auf die ==zehn Prinzipien==|link:https://campus.oercamp.de/wp-content/uploads/2020/07/Text_CTML-Video.pdf| zum multimedialen Lernen nach Mayer und vergleichen Sie dies mit Ihrer subjektiven Bewertung. Was stellen Sie fest?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234274"
+      ],
+      "lead": "Reflektieren und ausprobieren!"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-15]\r\n[@id:234275]\r\n[##Didaktische Implikationen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-15",
+      "id": [
+        "234275"
+      ],
+      "title": "Didaktische Implikationen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:234276]\r\nWas können wir aus dem Gelernten für die Gestaltung von multimedialen Inhalten in der Praxis mitnehmen?\r\n\r\n**1. Implikation**\r\nUnser Arbeitsgedächtnis ist begrenzt. Bei der Gestaltung von multimedialen Lerninhalten müssen wir dies berücksichtigen, um eine Überlastung des Arbeitsgedächtnis zu verhindern.\r\n\r\n**2. Implikation**\r\nJe komplexer und schwieriger der Inhalt ist, desto besser muss das Lernmaterial aufbereitet werden.\r\n\r\n**3. Implikation**\r\nDie zehn Prinzipien nach Richard Mayer können uns helfen, das eigene Lernmaterialien zu überprüfen – sowohl bei der Konzeption als auch zur Reflexion. Sie können dementsprechend auch als Qualitätskriterien bei eine objektiven Überprüfung fungieren.\r\n\r\n**4. Implikation**\r\nWir haben ausschließlich kognitive Aspekte multimedialen Lernes betrachtet. Grundsätzlich sollten bei der Erstellung von Materialien auch weitere Dimensionen – z. B. motivationale Aspekte – berücksichtigt werden.\r\n\r\nH5P-Element __Didaktische Implikationen__ von Matthias Kostrzewa für das OERcamp | Lizenz Lizenz ==CC BY 4.0==|link:https://creativecommons.org/licenses/by/4.0/deed.de|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Was können wir aus dem Gelernten für die Gestaltung von multimedialen Inhalten in der Praxis mitnehmen?\r\n\r\n**1. Implikation**\r\nUnser Arbeitsgedächtnis ist begrenzt. Bei der Gestaltung von multimedialen Lerninhalten müssen wir dies berücksichtigen, um eine Überlastung des Arbeitsgedächtnis zu verhindern.\r\n\r\n**2. Implikation**\r\nJe komplexer und schwieriger der Inhalt ist, desto besser muss das Lernmaterial aufbereitet werden.\r\n\r\n**3. Implikation**\r\nDie zehn Prinzipien nach Richard Mayer können uns helfen, das eigene Lernmaterialien zu überprüfen – sowohl bei der Konzeption als auch zur Reflexion. Sie können dementsprechend auch als Qualitätskriterien bei eine objektiven Überprüfung fungieren.\r\n\r\n**4. Implikation**\r\nWir haben ausschließlich kognitive Aspekte multimedialen Lernes betrachtet. Grundsätzlich sollten bei der Erstellung von Materialien auch weitere Dimensionen – z. B. motivationale Aspekte – berücksichtigt werden.\r\n\r\nH5P-Element __Didaktische Implikationen__ von Matthias Kostrzewa für das OERcamp | Lizenz Lizenz ==CC BY 4.0==|link:https://creativecommons.org/licenses/by/4.0/deed.de|",
+      "id": [
+        "234276"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-16]\r\n[@id:234277]\r\n[#Produktion Step by step]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-16",
+      "id": [
+        "234277"
+      ],
+      "title": "Produktion Step by step"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234278]\r\n[&video-link:https://www.youtube.com/watch?v=QQ2U8WmdR2o][@caption:Video Einführung in die Medienproduktion von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234278"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=QQ2U8WmdR2o",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Einführung in die Medienproduktion von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234279]\r\nWie kommen wir Schritt für Schritt von einer Idee zu einem fertigen Medienprodukt? Wenn Ihre Lernenden ein eigenes Audio oder Video erstellen sollen, dann sollte nicht nur das Ergebnis bzw. Produkt, sondern auch der Weg bzw. Prozess dorthin festgehalten werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wie kommen wir Schritt für Schritt von einer Idee zu einem fertigen Medienprodukt? Wenn Ihre Lernenden ein eigenes Audio oder Video erstellen sollen, dann sollte nicht nur das Ergebnis bzw. Produkt, sondern auch der Weg bzw. Prozess dorthin festgehalten werden.",
+      "id": [
+        "234279"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.hint]\r\n[@id:234280]\r\n[%][%Tipp! Vorbereitung spart Nachbereitung]\r\nInvestieren Sie in Planung und Storyboard etwas mehr Zeit und sparen Sie sich dadurch eine aufwendige Postproduktion.",
+    "bit": {
+      "type": "hint",
+      "format": "bitmark--",
+      "body": "Investieren Sie in Planung und Storyboard etwas mehr Zeit und sparen Sie sich dadurch eine aufwendige Postproduktion.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234280"
+      ],
+      "lead": "Tipp! Vorbereitung spart Nachbereitung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-17]\r\n[@id:234281]\r\n[##Vorlagen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-17",
+      "id": [
+        "234281"
+      ],
+      "title": "Vorlagen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:234282]\r\n• ==Vorlage für ein Storyboard==|link:https://moodle.nibis.de/mooc_dev/pluginfile.php/3530/mod_label/intro/Vorlage-Storyboard.pdf|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==Vorlage für ein Storyboard==|link:https://moodle.nibis.de/mooc_dev/pluginfile.php/3530/mod_label/intro/Vorlage-Storyboard.pdf|",
+      "id": [
+        "234282"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\r\n[@id:234283]\r\n[%][%Reflektieren und ausprobieren!]\r\nEntwickeln Sie eine erste Idee für ein Audio- oder Videoprodukt und setzen Sie die Idee in ein Drehbuch, Skript oder Storyboard um.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "Entwickeln Sie eine erste Idee für ein Audio- oder Videoprodukt und setzen Sie die Idee in ein Drehbuch, Skript oder Storyboard um.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234283"
+      ],
+      "lead": "Reflektieren und ausprobieren!"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-18]\r\n[@id:234284]\r\n[#Audios und Podcasts]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-18",
+      "id": [
+        "234284"
+      ],
+      "title": "Audios und Podcasts"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234285]\r\n[%][%Einführung in die Audioproduktion]\r\n[&video-link:https://www.youtube.com/watch?v=TntE_ZHGgFE][@caption:Video Einführung in die Audioproduktion von Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234285"
+      ],
+      "lead": "Einführung in die Audioproduktion",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=TntE_ZHGgFE",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Einführung in die Audioproduktion von Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.hint:bitmark--]\r\n[@id:234286]\r\n[%][%Tipps und Tricks für gute Audioaufnahmen]\r\nSeien Sie kreativ bei der Optimierung Ihres Klassenzimmers bzw. Aufnahmeortes: Nutzen Sie Jacken, Decken und Schirme, um den Schall zu brechen. Nutzen Sie ein extra Mikrofon (nicht das interne Mikrofon des Smartphones oder Tablets) für bessere Aufnahmen. Tipps für geeignete Mikrofone finden Sie im nächsten Kapitel.",
+    "bit": {
+      "type": "hint",
+      "format": "bitmark--",
+      "body": "Seien Sie kreativ bei der Optimierung Ihres Klassenzimmers bzw. Aufnahmeortes: Nutzen Sie Jacken, Decken und Schirme, um den Schall zu brechen. Nutzen Sie ein extra Mikrofon (nicht das interne Mikrofon des Smartphones oder Tablets) für bessere Aufnahmen. Tipps für geeignete Mikrofone finden Sie im nächsten Kapitel.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234286"
+      ],
+      "lead": "Tipps und Tricks für gute Audioaufnahmen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-19]\r\n[@id:234287]\r\n[##Hörspielwettbewerb der Hörwurm]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-19",
+      "id": [
+        "234287"
+      ],
+      "title": "Hörspielwettbewerb der Hörwurm"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234288]\r\nDer ==__Hörwurm__ ist der Hörspielwettbewerb==|link:https://www.der-hoerwurm.de/| für Grundschulkinder in Niedersachsen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der ==__Hörwurm__ ist der Hörspielwettbewerb==|link:https://www.der-hoerwurm.de/| für Grundschulkinder in Niedersachsen.",
+      "id": [
+        "234288"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\r\n[@id:234289]\r\n[%][%Reflektieren und ausprobieren!]\r\nNehmen Sie Ihre eigene Stimme mit dem Smartphone auf. Was verändert sich, wenn Sie das Mikrofon näher oder weiter weghalten, wenn Sie den Ort wechseln, wenn Sie ein externes Mikrofon verwenden? Verändern Sie auch Ihre Stimme in Klangfarbe, Intensität, Lautstärke, Modulation etc. und lernen Sie Ihre eigene Stimme und deren Wirkung kennen.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Nehmen Sie Ihre eigene Stimme mit dem Smartphone auf. Was verändert sich, wenn Sie das Mikrofon näher oder weiter weghalten, wenn Sie den Ort wechseln, wenn Sie ein externes Mikrofon verwenden? Verändern Sie auch Ihre Stimme in Klangfarbe, Intensität, Lautstärke, Modulation etc. und lernen Sie Ihre eigene Stimme und deren Wirkung kennen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234289"
+      ],
+      "lead": "Reflektieren und ausprobieren!"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-20]\r\n[@id:234290]\r\n[#Videos und Audios mit dem Smartphone und Tablet erstellen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-20",
+      "id": [
+        "234290"
+      ],
+      "title": "Videos und Audios mit dem Smartphone und Tablet erstellen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234291]\r\n[%][%Welche Ausstattung braucht es?]\r\n[&video-link:https://www.youtube.com/watch?v=LwTQhxKMDaM][@caption:Video Welche Ausstattung braucht es? von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234291"
+      ],
+      "lead": "Welche Ausstattung braucht es?",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=LwTQhxKMDaM",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Welche Ausstattung braucht es? von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-21]\r\n[@id:234292]\r\n[##Basisausstattung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-21",
+      "id": [
+        "234292"
+      ],
+      "title": "Basisausstattung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234293]\r\nWelche Basisausstattung brauchen Sie, um Videos und Audios erstellen zu können?\r\n\r\n• Smartphone oder Tablet mit guter Kamera\r\n• Stativ, z.B. Selfiestick mit Stativfunktion (ab 20€)\r\n• externes Mikrofon, z.B. Lavaliermikrofon (ordentliche ab 10€, sehr gute ab 50€)\r\n• Location (kostenfrei)\r\n• Lichtquellen: natürliches Licht (Sonnenlicht) oder kleine LED-Leuchten (ab 20€)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Welche Basisausstattung brauchen Sie, um Videos und Audios erstellen zu können?\r\n\r\n• Smartphone oder Tablet mit guter Kamera\r\n• Stativ, z.B. Selfiestick mit Stativfunktion (ab 20€)\r\n• externes Mikrofon, z.B. Lavaliermikrofon (ordentliche ab 10€, sehr gute ab 50€)\r\n• Location (kostenfrei)\r\n• Lichtquellen: natürliches Licht (Sonnenlicht) oder kleine LED-Leuchten (ab 20€)",
+      "id": [
+        "234293"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234294]\r\n[%][%Trick: Das Tablet als Teleprompter nutzen]\r\n[&video-link:https://www.youtube.com/watch?v=ILu5hWQisaE][@caption:Video Videos mit Teleprompter einsprechen von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234294"
+      ],
+      "lead": "Trick: Das Tablet als Teleprompter nutzen",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=ILu5hWQisaE",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Videos mit Teleprompter einsprechen von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.side-note:bitmark--&video-link]\r\n[@id:234295]\r\n[%][%Exkurs: Videos mit Greenscreen mit dem Smartphone erstellen]\r\n[&video-link:https://www.youtube.com/watch?v=hHNwgB5-0t0][@caption:Video Videos mit Greenscreen mit dem Smartphone erstellen von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "side-note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234295"
+      ],
+      "lead": "Exkurs: Videos mit Greenscreen mit dem Smartphone erstellen",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=hHNwgB5-0t0",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Videos mit Greenscreen mit dem Smartphone erstellen von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.side-note:bitmark--&video-link]\r\n[@id:234296]\r\n[%][%Exkurs: Hier wurden die Videos dieses Kurses produziert]\r\n[&video-link:https://www.youtube.com/watch?v=k8G2SEGX7B4][@caption:Video Einblicke ins Studio der Ruhr-Universität Bochum von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "side-note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234296"
+      ],
+      "lead": "Exkurs: Hier wurden die Videos dieses Kurses produziert",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=k8G2SEGX7B4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Einblicke ins Studio der Ruhr-Universität Bochum von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-22]\r\n[@id:234297]\r\n[##Medienzentrum Harburg und Medienzentrum Lüneburg]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-22",
+      "id": [
+        "234297"
+      ],
+      "title": "Medienzentrum Harburg und Medienzentrum Lüneburg"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234298]\r\nIn den Medienzentren können Sie Equipment ausleihen oder ein professionelles Studio nutzen. Darüber hinaus erhalten Sie dort Unterstützung zu Ihrem Vorhaben.\r\n\r\nIm nachfolgenden Video stellt sich das Medienzentrum Harburg kurz vor:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In den Medienzentren können Sie Equipment ausleihen oder ein professionelles Studio nutzen. Darüber hinaus erhalten Sie dort Unterstützung zu Ihrem Vorhaben.\r\n\r\nIm nachfolgenden Video stellt sich das Medienzentrum Harburg kurz vor:",
+      "id": [
+        "234298"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234365]\r\n[&video-link:https://www.youtube.com/watch?v=n0twJ9qZB8w][@caption:Video Das Medienzentrum Landkreis Harburg stellt sich vor vom Medienzentrum LK Harburg | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234365"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=n0twJ9qZB8w",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Das Medienzentrum Landkreis Harburg stellt sich vor vom Medienzentrum LK Harburg | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234300]\r\n• ==Medienzentrum Landkreis Harburg==|link:https://www.medienzentrum-harburg.de/|\r\n• ==Kreismedienzentrum Lüneburg==|link:https://www.medienzentrum-lueneburg.de/|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• ==Medienzentrum Landkreis Harburg==|link:https://www.medienzentrum-harburg.de/|\r\n• ==Kreismedienzentrum Lüneburg==|link:https://www.medienzentrum-lueneburg.de/|",
+      "id": [
+        "234300"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\r\n[@id:234301]\r\n[%][%Reflektieren und ausprobieren!]\r\nFilmen Sie sich selber und nutzen Sie verschiedene Gesten und Mimik, um Ihre Performance vor der Kamera kennenzulernen.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Filmen Sie sich selber und nutzen Sie verschiedene Gesten und Mimik, um Ihre Performance vor der Kamera kennenzulernen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234301"
+      ],
+      "lead": "Reflektieren und ausprobieren!"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-23]\r\n[@id:234302]\r\n[#Videos mit Legetechnik und Stop Motion erstellen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-23",
+      "id": [
+        "234302"
+      ],
+      "title": "Videos mit Legetechnik und Stop Motion erstellen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234303]\r\n[%][%Einführung in die Medienformate Legetechnik und Stop Motion]\r\n[&video-link:https://www.youtube.com/watch?v=52oOcxRZV34][@caption:Video Einführung in die Medienformate Legetechnik und Stop Motion von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]\r\n\r\nLern- und Erklärvideos zu erstellen, kann ganz schön aufwendig sein. Wir zeigen Ihnen nun zwei Möglichkeiten, wie Sie ganz einfach eigene Videos erstellen können mit Hilfe der Legetechnik und als __Stop-Motion__-Animation.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Lern- und Erklärvideos zu erstellen, kann ganz schön aufwendig sein. Wir zeigen Ihnen nun zwei Möglichkeiten, wie Sie ganz einfach eigene Videos erstellen können mit Hilfe der Legetechnik und als __Stop-Motion__-Animation.",
+      "id": [
+        "234303"
+      ],
+      "lead": "Einführung in die Medienformate Legetechnik und Stop Motion",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=52oOcxRZV34",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Einführung in die Medienformate Legetechnik und Stop Motion von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-24]\r\n[@id:234305]\r\n[##Verschiedene Techniken]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-24",
+      "id": [
+        "234305"
+      ],
+      "title": "Verschiedene Techniken"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234306]\r\n[%][%Legetechnik]\r\n[&video-link:https://www.youtube.com/watch?v=cWTEUtx2Y4c][@caption:Video Legetechnik von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsortien für das OERcamp | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234306"
+      ],
+      "lead": "Legetechnik",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=cWTEUtx2Y4c",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Legetechnik von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsortien für das OERcamp | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234307]\r\n[%][%Stop Motion]\r\n[&video-link:https://www.youtube.com/watch?v=XnxEwQ4_AmI][@caption:Video Stop Motion von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten für das OERcamp | Lizenz CC BY 4.0]\r\n\r\nDie Animation für Stop-Motion-Videos kann eine App übernehmen: Stop Motion Studio. Diese ist zumindest in der Basisversion kostenfrei (Vollversion: 4,99 € Stand März 2022). Sie finden die App im ==App Store==|link:https://apps.apple.com/de/app/stop-motion-studio/id441651297| sowie im ==Play Store==|link:https://play.google.com/store/apps/details?id=com.cateater.stopmotionstudio&hl=de|.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Animation für Stop-Motion-Videos kann eine App übernehmen: Stop Motion Studio. Diese ist zumindest in der Basisversion kostenfrei (Vollversion: 4,99 € Stand März 2022). Sie finden die App im ==App Store==|link:https://apps.apple.com/de/app/stop-motion-studio/id441651297| sowie im ==Play Store==|link:https://play.google.com/store/apps/details?id=com.cateater.stopmotionstudio&hl=de|.",
+      "id": [
+        "234307"
+      ],
+      "lead": "Stop Motion",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=XnxEwQ4_AmI",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Stop Motion von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten für das OERcamp | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234309]\r\n[%][%Eine Filmkiste bauen]\r\nMit Hilfe einer Filmkiste können Sie Legetechnik-Videos oder auch Stop-Motion-Videos ganz einfach selber erstellen. Und das Beste: Auch Ihre Schülerinnen und Schüler können so ihre eigenen Videos entwickeln. Wir zeigen nun, wie mit wenig Aufwand und sehr geringen Kosten eine eigene Filmkiste gebaut werden kann:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Mit Hilfe einer Filmkiste können Sie Legetechnik-Videos oder auch Stop-Motion-Videos ganz einfach selber erstellen. Und das Beste: Auch Ihre Schülerinnen und Schüler können so ihre eigenen Videos entwickeln. Wir zeigen nun, wie mit wenig Aufwand und sehr geringen Kosten eine eigene Filmkiste gebaut werden kann:",
+      "id": [
+        "234309"
+      ],
+      "lead": "Eine Filmkiste bauen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234366]\r\n[&video-link:https://www.youtube.com/watch?v=xI0S5ZK92Sw][@caption:Video Eine Filmkiste bauen von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten für das OERcamp | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234366"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=xI0S5ZK92Sw",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Eine Filmkiste bauen von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten für das OERcamp | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\r\n[@id:234310]\r\n[%][%Reflektieren und ausprobieren!]\r\nSetzen Sie oder Ihre Schülerinnen und Schüler ein kleines Video zu Ihrem aktuellen Unterrichtsthema mit Legetechnik oder Stop Motion um.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Setzen Sie oder Ihre Schülerinnen und Schüler ein kleines Video zu Ihrem aktuellen Unterrichtsthema mit Legetechnik oder Stop Motion um.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234310"
+      ],
+      "lead": "Reflektieren und ausprobieren!"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-25]\r\n[@id:234311]\r\n[#Postproduktion]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-25",
+      "id": [
+        "234311"
+      ],
+      "title": "Postproduktion"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234312]\r\n[%][%Einführung in die Bearbeitung einer Medienproduktion]\r\n[&video-link:https://www.youtube.com/watch?v=wMg0VxIEeQk][@caption:Video Einführung in die Bearbeitung einer Medienproduktion von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234312"
+      ],
+      "lead": "Einführung in die Bearbeitung einer Medienproduktion",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=wMg0VxIEeQk",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Einführung in die Bearbeitung einer Medienproduktion von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-26]\r\n[@id:234313]\r\n[##80-20-Regel]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-26",
+      "id": [
+        "234313"
+      ],
+      "title": "80-20-Regel"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234314]\r\nPerfektionismus im Kontext Audio und Video in der Schule ist fehl am Platz. Tipp: Verlieren Sie sich nicht in Detailarbeit, sondern gehen Sie Pragmatisch an kleine Fehler heran. Es gilt dazu die 80-20-Regel: Sie können 80% des Ergebnisses mit 20% des Aufwands (100% erforderlich für ein „perfektes“ Video) erzielen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Perfektionismus im Kontext Audio und Video in der Schule ist fehl am Platz. Tipp: Verlieren Sie sich nicht in Detailarbeit, sondern gehen Sie Pragmatisch an kleine Fehler heran. Es gilt dazu die 80-20-Regel: Sie können 80% des Ergebnisses mit 20% des Aufwands (100% erforderlich für ein „perfektes“ Video) erzielen.",
+      "id": [
+        "234314"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-27]\r\n[@id:234315]\r\n[##Abspann]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-27",
+      "id": [
+        "234315"
+      ],
+      "title": "Abspann"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234316]\r\nEin Lern- und Erklärvideos sollte immer einen Abspann mit den folgenden Informationen beinhalten:\r\n\r\n• Titel des Videos\r\n• Wer hat es erstellt?\r\n• Wer war beteiligt?\r\n• Wann wurde es erstellt?\r\n• Copyright-Hinweise von Drittmaterialien (siehe Kapitel Externe Medien verwenden)\r\n• Lizenz des Videos",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ein Lern- und Erklärvideos sollte immer einen Abspann mit den folgenden Informationen beinhalten:\r\n\r\n• Titel des Videos\r\n• Wer hat es erstellt?\r\n• Wer war beteiligt?\r\n• Wann wurde es erstellt?\r\n• Copyright-Hinweise von Drittmaterialien (siehe Kapitel Externe Medien verwenden)\r\n• Lizenz des Videos",
+      "id": [
+        "234316"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-28]\r\n[@id:234317]\r\n[##Postproduktion mit dem Tablet]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-28",
+      "id": [
+        "234317"
+      ],
+      "title": "Postproduktion mit dem Tablet"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234318]\r\nEinfache Postproduktionsschritte können auch am Tablet vorgenommen werden. Grundsätzlich empfiehlt es sich dies eher an einem PC zu tun.\r\n\r\nHier finden Sie Schritt-für-Schritt Anleitungen:\r\n\r\n• ==Anleitung Videoschnitt mit iMovie (iOS)==|link:https://lehrerfortbildung-bw.de/st_digital/tablet/fortbildungen/tablet/ios/kreativ/videoschnitt/|\r\n• ==Anleitung Videoschnitt mit dem Videoeditor von Samsung (Android)==|link:https://lehrerfortbildung-bw.de/st_digital/tablet/fortbildungen/tablet/android/kreativ/videoschnitt/|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Einfache Postproduktionsschritte können auch am Tablet vorgenommen werden. Grundsätzlich empfiehlt es sich dies eher an einem PC zu tun.\r\n\r\nHier finden Sie Schritt-für-Schritt Anleitungen:\r\n\r\n• ==Anleitung Videoschnitt mit iMovie (iOS)==|link:https://lehrerfortbildung-bw.de/st_digital/tablet/fortbildungen/tablet/ios/kreativ/videoschnitt/|\r\n• ==Anleitung Videoschnitt mit dem Videoeditor von Samsung (Android)==|link:https://lehrerfortbildung-bw.de/st_digital/tablet/fortbildungen/tablet/android/kreativ/videoschnitt/|",
+      "id": [
+        "234318"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-29]\r\n[@id:234320]\r\n[##Postproduktion am PC]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-29",
+      "id": [
+        "234320"
+      ],
+      "title": "Postproduktion am PC"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234321]\r\nPostproduktion funktioniert am besten an einem PC oder Laptop. Für grundlegende und erweiterte Funktionen können wir Open-Source-Software verwenden, für die Audiobearbeitung ==Audacity==|link:https://www.audacity.de/downloads/| und ==Shotcut==|link:https://shotcut.org/| für Videobearbeitung. Beide Programme sind weit verbreitet, sodass Sie im Web eine Vielzahl an Tutorials und Lernressourcen finden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Postproduktion funktioniert am besten an einem PC oder Laptop. Für grundlegende und erweiterte Funktionen können wir Open-Source-Software verwenden, für die Audiobearbeitung ==Audacity==|link:https://www.audacity.de/downloads/| und ==Shotcut==|link:https://shotcut.org/| für Videobearbeitung. Beide Programme sind weit verbreitet, sodass Sie im Web eine Vielzahl an Tutorials und Lernressourcen finden.",
+      "id": [
+        "234321"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234322]\r\n[%][%Audacity-Bearbeitung]\r\n[&video-link:https://www.youtube.com/watch?v=NDR-qm_5Bpw][@caption:Video Audacity-Bearbeitung von Kai Obermüller für die Agentur J&K – Jöran und Konsorten für das OERcamp | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234322"
+      ],
+      "lead": "Audacity-Bearbeitung",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=NDR-qm_5Bpw",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Audacity-Bearbeitung von Kai Obermüller für die Agentur J&K – Jöran und Konsorten für das OERcamp | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234323]\r\n[%][%Video-Remix mit Shotcut]\r\n[&video-link:https://www.youtube.com/watch?v=LXghdP6CBkE][@caption:Video Video-Remix mit Shotcut von Kai Obermüller für die Agentur J&K – Jöran und Konsorten für das OERcamp | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234323"
+      ],
+      "lead": "Video-Remix mit Shotcut",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=LXghdP6CBkE",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Video-Remix mit Shotcut von Kai Obermüller für die Agentur J&K – Jöran und Konsorten für das OERcamp | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\r\n[@id:234324]\r\n[%][%Reflektieren und ausprobieren!]\r\nBearbeiten Sie Ihr im Laufe des Kurses erstelltes Audio oder Video mit einem der vorgestellten Programme.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Bearbeiten Sie Ihr im Laufe des Kurses erstelltes Audio oder Video mit einem der vorgestellten Programme.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234324"
+      ],
+      "lead": "Reflektieren und ausprobieren!"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-30]\r\n[@id:234325]\r\n[#Externe Medien verwenden]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-30",
+      "id": [
+        "234325"
+      ],
+      "title": "Externe Medien verwenden"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234326]\r\n[%][%Einführung ins Thema OER in Videos]\r\n[&video-link:https://www.youtube.com/watch?v=eNjiGGtPPkM][@caption:Video Einführung ins Thema OER in Videos von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234326"
+      ],
+      "lead": "Einführung ins Thema OER in Videos",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=eNjiGGtPPkM",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Einführung ins Thema OER in Videos von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-31]\r\n[@id:234327]\r\n[##OER kurz erklärt]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-31",
+      "id": [
+        "234327"
+      ],
+      "title": "OER kurz erklärt"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234328]\r\n[%][%Einführung Lizenzmodelle]\r\n[&video-link:https://www.youtube.com/watch?v=luYUuCS6mFw][@caption:Video Einführung Lizenzmodelle mit Jöran Muuß-Merholz von Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234328"
+      ],
+      "lead": "Einführung Lizenzmodelle",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=luYUuCS6mFw",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Einführung Lizenzmodelle mit Jöran Muuß-Merholz von Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234329]\r\n[%][%Die TULLU-Regel – CC-Lizenzen korrekt angeben]\r\nIn der Praxis ist das Verwenden von Material unter einer freien Lizenz gar nicht so einfach, denn die Tücke liegt im Detail: Was muss in die Lizenzangabe? Wie ist der/die Urheber/-in zu nennen und was ist sonst zu beachten? Wenn man die Vorgaben nicht einhält, ist die Lizenz nicht gültig. Die hier vorgestellte TULLU-Regel hilft dabei, freies Bildungsmaterial korrekt weiterzuverwenden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In der Praxis ist das Verwenden von Material unter einer freien Lizenz gar nicht so einfach, denn die Tücke liegt im Detail: Was muss in die Lizenzangabe? Wie ist der/die Urheber/-in zu nennen und was ist sonst zu beachten? Wenn man die Vorgaben nicht einhält, ist die Lizenz nicht gültig. Die hier vorgestellte TULLU-Regel hilft dabei, freies Bildungsmaterial korrekt weiterzuverwenden.",
+      "id": [
+        "234329"
+      ],
+      "lead": "Die TULLU-Regel – CC-Lizenzen korrekt angeben"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234330]\r\n[%][%Creative Commons Werke richtig auszeichnen]\r\nWer frei lizenziertes Material weiterverwenden möchte, muss einen korrekten Nachweis erbringen, in dem steht, wer Urheberinnen und Urheber des Materials ist und unter welcher Lizenz es veröffentlicht wurde. Wie das genau aussehen sollte, lässt sich mit der TULLU-Regel beschreiben. Sie ist in enger Anlehnung an die Richtlinien von Creative Commons entwickelt worden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wer frei lizenziertes Material weiterverwenden möchte, muss einen korrekten Nachweis erbringen, in dem steht, wer Urheberinnen und Urheber des Materials ist und unter welcher Lizenz es veröffentlicht wurde. Wie das genau aussehen sollte, lässt sich mit der TULLU-Regel beschreiben. Sie ist in enger Anlehnung an die Richtlinien von Creative Commons entwickelt worden.",
+      "id": [
+        "234330"
+      ],
+      "lead": "Creative Commons Werke richtig auszeichnen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:234367]\r\n[&image:https://docs.bitmark.cloud/bit-books/moodle/videos_und_audios/web-resources/images/moodle_videos_und_audios_1.png][@width:500][@caption:Infografik von Julia Eggestein nach einem Konzept von Jöran Muuß-Merholz und Sonja Borski für OERinfo – Informationsstelle OER via OERinfo | Lizenz: CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234367"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/moodle/videos_und_audios/web-resources/images/moodle_videos_und_audios_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "500",
+          "height": null,
+          "alt": "",
+          "caption": "Infografik von Julia Eggestein nach einem Konzept von Jöran Muuß-Merholz und Sonja Borski für OERinfo – Informationsstelle OER via OERinfo | Lizenz: CC BY 4.0",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234331]\r\n[%][%Die Bestandteile der TULLU-Regel]\r\n• **Titel** – wie ist das Material benannt? Wenn ein Titel angegeben ist, sollte dieser genannt werden.\r\n**Urheberinnen und Urheber** – wer hat das Material erstellt? Der Name muss so angegeben werden, so wie ihn der/die Urheber*in genannt hat, auch wenn es sich um Nutzernamen, einen Gruppen-, Firmen- oder Vereinsnamen handelt.\r\n• **Lizenz** – unter welcher Creative Commons Lizenz ist das Material veröffentlicht worden? Die Lizenzversion muss mit allen Bestandteilen genannt werden (siehe Beispiel unten), dazu gehört auch die Versionsnummer und ggf. die Angabe, ob es sich um eine portierte (an die Gesetzgebung eines Landes angepasste) Version handelt.\r\n• **Link zur Lizenz** – wo ist der Lizenztext zu finden? Ein Link auf die Lizenz muss angegeben sein (bei Printprodukten wird der Link ausgeschrieben). Sehr unüblich, aber möglich ist es, anstelle eines Links eine Kopie des Lizenztextes mit dem Werk zu verbreiten.\r\n• **Ursprungsort** – wo ist das Material zu finden? Ein Link auf den Fundort ist notwendig, damit Nachnutzer*innen den Ursprung nachvollziehen können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Titel** – wie ist das Material benannt? Wenn ein Titel angegeben ist, sollte dieser genannt werden.\r\n**Urheberinnen und Urheber** – wer hat das Material erstellt? Der Name muss so angegeben werden, so wie ihn der/die Urheber*in genannt hat, auch wenn es sich um Nutzernamen, einen Gruppen-, Firmen- oder Vereinsnamen handelt.\r\n• **Lizenz** – unter welcher Creative Commons Lizenz ist das Material veröffentlicht worden? Die Lizenzversion muss mit allen Bestandteilen genannt werden (siehe Beispiel unten), dazu gehört auch die Versionsnummer und ggf. die Angabe, ob es sich um eine portierte (an die Gesetzgebung eines Landes angepasste) Version handelt.\r\n• **Link zur Lizenz** – wo ist der Lizenztext zu finden? Ein Link auf die Lizenz muss angegeben sein (bei Printprodukten wird der Link ausgeschrieben). Sehr unüblich, aber möglich ist es, anstelle eines Links eine Kopie des Lizenztextes mit dem Werk zu verbreiten.\r\n• **Ursprungsort** – wo ist das Material zu finden? Ein Link auf den Fundort ist notwendig, damit Nachnutzer*innen den Ursprung nachvollziehen können.",
+      "id": [
+        "234331"
+      ],
+      "lead": "Die Bestandteile der TULLU-Regel"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234332]\r\n[%][%Mit der TULLU-Regel OER verwenden, veröffentlichen und teilen]\r\n[&video-link:https://www.youtube.com/watch?v=D-eFTwedyC8][@caption:Video Mit der TULLU-Regel OER verwenden, veröffentlichen und teilen mit Jöran Muuß-Merholz von Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234332"
+      ],
+      "lead": "Mit der TULLU-Regel OER verwenden, veröffentlichen und teilen",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=D-eFTwedyC8",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Mit der TULLU-Regel OER verwenden, veröffentlichen und teilen mit Jöran Muuß-Merholz von Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-32]\r\n[@id:234333]\r\n[##Exkurs: Das Recht am eigenen Bild]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-32",
+      "id": [
+        "234333"
+      ],
+      "title": "Exkurs: Das Recht am eigenen Bild"
+    }
+  },
+  {
+    "bitmark": "[.side-note:bitmark--]\r\n[@id:234334]\r\n[%][%Recht am eigenen Bild]\r\nIn Deutschland soll das Recht am eigenen Bild dafür sorgen, dass Menschen selbst darüber bestimmen dürfen, wann wo und wie sie öffentlich dargestellt werden. Der Begriff »Recht am eigenen Bild« ist dabei nicht nur wörtlich zu nehmen – es zählt jede Form der Darstellung, ob als Foto oder Zeichnung, Video- oder Tonaufnahme. Entscheidend ist allein, ob eine Person erkennbar ist.\r\n\r\nEs gibt zahlreiche Ausnahmen, aber die Regel lautet: Erkennbare Personen müssen vor einer Veröffentlichung zustimmen. Für OER bedeutet das: Wenn ein Material eine erkennbare Person beinhaltet, so braucht es sowohl eine Freigabe (in Form einer freien Lizenz) durch den Urheber als auch durch die erkennbaren Personen.\r\n\r\nZu den Ausnahmen, bei denen das Recht am eigenen Bild nicht beansprucht werden kann, gehören vor allem:\r\n\r\n• Personen der Zeitgeschichte, also bei Menschen im öffentlichen Interesse (zum Beispiel Politikerinnen),\r\n• Personen als Beiwerk, die nicht im Mittelpunkt einer Abbildung stehen (zum Beispiel Touristen vor dem Brandenburger Tor, wenn das Brandenburger Tor den Schwerpunkt der Abbildung darstellt),\r\n• Kunstfreiheit, wenn die Abbildung einem höheren Interesse der Kunst dient,\r\n• Personen im Kontext von öffentlichen Veranstaltungen, beispielsweise Demonstrationen, Sport- oder  Bildungsveranstaltungen, wenn hier das Gesamtgeschehen und nicht die Person im Vordergrund steht,\r\n• vereinbarte Ausnahmen, etwa wenn beispielsweise Gäste einer Veranstaltung durch ihre Teilnahme eine Zustimmung geben, etwa über Hausordnungen oder sonstige Vereinbarungen.\r\n\r\nÜbrigens: Eine Regelung namens »Gruppenbild«, das ab einer bestimmten Anzahl von abgebildeten Personen keine Einwilligung beansprucht, gibt es nach deutschem Recht nicht, auch wenn der Mythos sich hartnäckig hält.",
+    "bit": {
+      "type": "side-note",
+      "format": "bitmark--",
+      "body": "In Deutschland soll das Recht am eigenen Bild dafür sorgen, dass Menschen selbst darüber bestimmen dürfen, wann wo und wie sie öffentlich dargestellt werden. Der Begriff »Recht am eigenen Bild« ist dabei nicht nur wörtlich zu nehmen – es zählt jede Form der Darstellung, ob als Foto oder Zeichnung, Video- oder Tonaufnahme. Entscheidend ist allein, ob eine Person erkennbar ist.\r\n\r\nEs gibt zahlreiche Ausnahmen, aber die Regel lautet: Erkennbare Personen müssen vor einer Veröffentlichung zustimmen. Für OER bedeutet das: Wenn ein Material eine erkennbare Person beinhaltet, so braucht es sowohl eine Freigabe (in Form einer freien Lizenz) durch den Urheber als auch durch die erkennbaren Personen.\r\n\r\nZu den Ausnahmen, bei denen das Recht am eigenen Bild nicht beansprucht werden kann, gehören vor allem:\r\n\r\n• Personen der Zeitgeschichte, also bei Menschen im öffentlichen Interesse (zum Beispiel Politikerinnen),\r\n• Personen als Beiwerk, die nicht im Mittelpunkt einer Abbildung stehen (zum Beispiel Touristen vor dem Brandenburger Tor, wenn das Brandenburger Tor den Schwerpunkt der Abbildung darstellt),\r\n• Kunstfreiheit, wenn die Abbildung einem höheren Interesse der Kunst dient,\r\n• Personen im Kontext von öffentlichen Veranstaltungen, beispielsweise Demonstrationen, Sport- oder  Bildungsveranstaltungen, wenn hier das Gesamtgeschehen und nicht die Person im Vordergrund steht,\r\n• vereinbarte Ausnahmen, etwa wenn beispielsweise Gäste einer Veranstaltung durch ihre Teilnahme eine Zustimmung geben, etwa über Hausordnungen oder sonstige Vereinbarungen.\r\n\r\nÜbrigens: Eine Regelung namens »Gruppenbild«, das ab einer bestimmten Anzahl von abgebildeten Personen keine Einwilligung beansprucht, gibt es nach deutschem Recht nicht, auch wenn der Mythos sich hartnäckig hält.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234334"
+      ],
+      "lead": "Recht am eigenen Bild"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-33]\r\n[@id:234338]\r\n[##Quellen für frei lizenzierte Materialien]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-33",
+      "id": [
+        "234338"
+      ],
+      "title": "Quellen für frei lizenzierte Materialien"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234339]\r\n• Das Buch ==Freie Unterrichtsmaterialien finden, rechtssicher einsetzen, selbst machen und teilen==|link:https://www.was-ist-oer.de/wp-content/uploads/sites/17/2018/01/Joeran-Muuss-Merholz-Freie-Unterrichtsmaterialien-Beltz-2018.pdf| steht unter der Lizenz ==CC BY-SA 4.0==|link:https://creativecommons.org/licenses/by-sa/4.0/deed.de|.\r\n• Offene Bildungsmaterialien finden Sie bei ==WirLernenOnline==|link:https://wirlernenonline.de/|.\r\n• Im ==Kurs 100 tolle Quellen für OER==|link:https://campus.oercamp.de/Kurs/100-tolle-quellen-fuer-oer/| gibt es weitere nach Themen sortierte Tipps und Links.\r\n• ==Der Gold-Standard für OER-Materialien – Kapitel: Der Gold-Standard für Video als OER – Warum eine CC-Lizenz nicht ausreicht==|link:https://www.oercamp.de/wp-content/uploads/2021/04/Goldstandard-fuer-OER-2021.pdf|, Blanche Fabri, ==CC BY 4.0==|link:https://creativecommons.org/licenses/by/4.0/deed.de|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Das Buch ==Freie Unterrichtsmaterialien finden, rechtssicher einsetzen, selbst machen und teilen==|link:https://www.was-ist-oer.de/wp-content/uploads/sites/17/2018/01/Joeran-Muuss-Merholz-Freie-Unterrichtsmaterialien-Beltz-2018.pdf| steht unter der Lizenz ==CC BY-SA 4.0==|link:https://creativecommons.org/licenses/by-sa/4.0/deed.de|.\r\n• Offene Bildungsmaterialien finden Sie bei ==WirLernenOnline==|link:https://wirlernenonline.de/|.\r\n• Im ==Kurs 100 tolle Quellen für OER==|link:https://campus.oercamp.de/Kurs/100-tolle-quellen-fuer-oer/| gibt es weitere nach Themen sortierte Tipps und Links.\r\n• ==Der Gold-Standard für OER-Materialien – Kapitel: Der Gold-Standard für Video als OER – Warum eine CC-Lizenz nicht ausreicht==|link:https://www.oercamp.de/wp-content/uploads/2021/04/Goldstandard-fuer-OER-2021.pdf|, Blanche Fabri, ==CC BY 4.0==|link:https://creativecommons.org/licenses/by/4.0/deed.de|",
+      "id": [
+        "234339"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\r\n[@id:234340]\r\n[%][%Reflektieren und ausprobieren!]\r\nLernen Sie z.B. die Plattform WirLernenOnline kennen und suchen sie dort nach passenden Videos/Audios, die Sie in Ihr eigenes Medienprodukt oder Ihre Unterrichtsplanung einbauen können. Achten Sie dabei auf eine korrekte Lizenzangabe nach der TULLU-Regel.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Lernen Sie z.B. die Plattform WirLernenOnline kennen und suchen sie dort nach passenden Videos/Audios, die Sie in Ihr eigenes Medienprodukt oder Ihre Unterrichtsplanung einbauen können. Achten Sie dabei auf eine korrekte Lizenzangabe nach der TULLU-Regel.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234340"
+      ],
+      "lead": "Reflektieren und ausprobieren!"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-34]\r\n[@id:234341]\r\n[#Veröffentlichung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-34",
+      "id": [
+        "234341"
+      ],
+      "title": "Veröffentlichung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:234342]\r\n[%][%Wo und wie können Medienprodukte veröffentlicht werden?]\r\n[&video-link:https://www.youtube.com/watch?v=CJAA21QfXYg][@caption:Video Wo und wie können Medienprodukte veröffentlicht werden? von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "234342"
+      ],
+      "lead": "Wo und wie können Medienprodukte veröffentlicht werden?",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=CJAA21QfXYg",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Video Wo und wie können Medienprodukte veröffentlicht werden? von Matthias Kostrzewa für die Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz CC BY 4.0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-35]\r\n[@id:234343]\r\n[##Wo kann ich veröffentlichen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-35",
+      "id": [
+        "234343"
+      ],
+      "title": "Wo kann ich veröffentlichen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234344]\r\nWer schon einmal Videos erstellt hat, weiß wie schnell einige hundert Megabyte und mehr an Daten zusammenkommen. Viele Learning- Management-Systeme (LMS) haben Upload-Limits, die es nicht ermöglichen, längere Videos hochzuladen. Daher ist eine entschiedene Frage bei Videos: Wo kann ich sie speichern und veröffentlichen?\r\n\r\nZunächst kann es sich lohnen, das Video zu komprimieren, eine Anleitung finden Sie unter ==Video mit dem VLC-Player komprimieren==|link:https://www.heise.de/tipps-tricks/Video-komprimieren-so-geht-s-4912514.html|.\r\n\r\nDie bekannteste Videoplattform im Netz ist **YouTube**, und Sie können in diesem Kurs sehen, dass unsere Videos zum Teil dort veröffentlicht wurden. YouTube bietet viele Vorteile: Die Videos sind zuverlässig jederzeit verfügbar, sie lassen sich leicht einbetten und werden gut gefunden. Außerdem lässt sich bei YouTube eine CC BY-Lizenz vermerken. Auch weitere Tools wie H5P sind mit YouTube kompatibel. Wenn Sie Videos auf YouTube veröffentlichen, liegen diese Daten unter Umständen auf US-Servern. Dies kann insbesondere dann, wenn Schülerinnen und Schüler im Video zu sehen oder zu hören sind, zu rechtlichen Problemen führen. Wir brauchen daher evtl. eine Alternative.\r\n\r\nEine Alternative kann Vimeo sein. Die kostenfreie Basisversion ist jedoch beschränkt (max. 500 MB und ein HD-Video pro Woche). Außerdem sind die Anforderungen an Videos durch die Nutzungsbedingungen hoch, beispielsweise:\r\n\r\n• Alle Inhalte müssen maßgeblich selbstproduziert sein – wer ein Video hochlädt, muss also auch dessen Urheber sein. Eine Ausnahme wird lediglich bei Inhabern eines Pro-Accounts gemacht – diese müssen nicht Urheber sein, sondern lediglich die Erlaubnis zum Veröffentlichen des Videos nachweisen können.\r\n• Beiträge dürfen keine Werbung enthalten. Ausnahme sind auch hier Pro-Accounts, wobei der Rahmen für Werbung von Vimeo ziemlich eng gesteckt ist, damit keine Spam- oder Trash-Beiträge die Community verschrecken.\r\n• Es dürfen keine Ausschnitte aus dem Fernsehen, aus Songs oder aus Filmen gezeigt werden.\r\n• Screencaptures von Video-/Computerspielen sind ebenfalls nicht gestattet. Ausnahme: Spieleentwickler dürfen Ausschnitte ihrer Arbeit präsentieren.\r\n\r\nEine weitere Alternative ist ==PeerTube==|link:https://joinpeertube.org/de/#what-is-peertube|, eine freie und dezentrale Alternative zu Videoplattformen. PeerTube basiert auf einer freie Software, die vom französischen, gemeinnützigem Verein Framasoft finanziert wird.\r\n\r\nZum Schluss stellt sich noch die Frage, ob Ihre Schule oder Ihr Bundesland Infrastruktur für Videos bereithält, z. B. über eine LMS, eine Cloud oder die Bildungsserver. Die Frage, wo Lernvideos am besten veröffentlicht werden sollen, muss folglich individuell beantwortet werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wer schon einmal Videos erstellt hat, weiß wie schnell einige hundert Megabyte und mehr an Daten zusammenkommen. Viele Learning- Management-Systeme (LMS) haben Upload-Limits, die es nicht ermöglichen, längere Videos hochzuladen. Daher ist eine entschiedene Frage bei Videos: Wo kann ich sie speichern und veröffentlichen?\r\n\r\nZunächst kann es sich lohnen, das Video zu komprimieren, eine Anleitung finden Sie unter ==Video mit dem VLC-Player komprimieren==|link:https://www.heise.de/tipps-tricks/Video-komprimieren-so-geht-s-4912514.html|.\r\n\r\nDie bekannteste Videoplattform im Netz ist **YouTube**, und Sie können in diesem Kurs sehen, dass unsere Videos zum Teil dort veröffentlicht wurden. YouTube bietet viele Vorteile: Die Videos sind zuverlässig jederzeit verfügbar, sie lassen sich leicht einbetten und werden gut gefunden. Außerdem lässt sich bei YouTube eine CC BY-Lizenz vermerken. Auch weitere Tools wie H5P sind mit YouTube kompatibel. Wenn Sie Videos auf YouTube veröffentlichen, liegen diese Daten unter Umständen auf US-Servern. Dies kann insbesondere dann, wenn Schülerinnen und Schüler im Video zu sehen oder zu hören sind, zu rechtlichen Problemen führen. Wir brauchen daher evtl. eine Alternative.\r\n\r\nEine Alternative kann Vimeo sein. Die kostenfreie Basisversion ist jedoch beschränkt (max. 500 MB und ein HD-Video pro Woche). Außerdem sind die Anforderungen an Videos durch die Nutzungsbedingungen hoch, beispielsweise:\r\n\r\n• Alle Inhalte müssen maßgeblich selbstproduziert sein – wer ein Video hochlädt, muss also auch dessen Urheber sein. Eine Ausnahme wird lediglich bei Inhabern eines Pro-Accounts gemacht – diese müssen nicht Urheber sein, sondern lediglich die Erlaubnis zum Veröffentlichen des Videos nachweisen können.\r\n• Beiträge dürfen keine Werbung enthalten. Ausnahme sind auch hier Pro-Accounts, wobei der Rahmen für Werbung von Vimeo ziemlich eng gesteckt ist, damit keine Spam- oder Trash-Beiträge die Community verschrecken.\r\n• Es dürfen keine Ausschnitte aus dem Fernsehen, aus Songs oder aus Filmen gezeigt werden.\r\n• Screencaptures von Video-/Computerspielen sind ebenfalls nicht gestattet. Ausnahme: Spieleentwickler dürfen Ausschnitte ihrer Arbeit präsentieren.\r\n\r\nEine weitere Alternative ist ==PeerTube==|link:https://joinpeertube.org/de/#what-is-peertube|, eine freie und dezentrale Alternative zu Videoplattformen. PeerTube basiert auf einer freie Software, die vom französischen, gemeinnützigem Verein Framasoft finanziert wird.\r\n\r\nZum Schluss stellt sich noch die Frage, ob Ihre Schule oder Ihr Bundesland Infrastruktur für Videos bereithält, z. B. über eine LMS, eine Cloud oder die Bildungsserver. Die Frage, wo Lernvideos am besten veröffentlicht werden sollen, muss folglich individuell beantwortet werden.",
+      "id": [
+        "234344"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\r\n[@id:234350]\r\n[%][%Reflektieren und ausprobieren!]\r\nVeröffentlichen Sie gerne ein von Ihren Schülerinnen und Schülern produziertes Video auf YouTube, natürlich unter Berücksichtigung der DSGVO-Konformität. Die Anzahl der Aufrufe und Rückmeldungen sind ein gutes Feedback für Ihre Schülerinnen und Schülern. Kennen Sie weitere Veröffentlichungsmöglichkeiten? Teilen Sie diese gerne im ==Forum==|link:https://moodle.nibis.de/mooc_dev/mod/forum/view.php?id=2382|.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "Veröffentlichen Sie gerne ein von Ihren Schülerinnen und Schülern produziertes Video auf YouTube, natürlich unter Berücksichtigung der DSGVO-Konformität. Die Anzahl der Aufrufe und Rückmeldungen sind ein gutes Feedback für Ihre Schülerinnen und Schülern. Kennen Sie weitere Veröffentlichungsmöglichkeiten? Teilen Sie diese gerne im ==Forum==|link:https://moodle.nibis.de/mooc_dev/mod/forum/view.php?id=2382|.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234350"
+      ],
+      "lead": "Reflektieren und ausprobieren!"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-36]\r\n[@id:234351]\r\n[#Abschlüsse und Anschlüsse]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-36",
+      "id": [
+        "234351"
+      ],
+      "title": "Abschlüsse und Anschlüsse"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-37]\r\n[@id:234352]\r\n[##Wie kann ich weitermachen?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-37",
+      "id": [
+        "234352"
+      ],
+      "title": "Wie kann ich weitermachen?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234353]\r\nDieser Kurs hat Ihnen einen ersten Überblick zum Thema Audio und Video im Lernkontext gegeben. Nun können Sie die Inhalte vertiefen. Mögliche Anlaufstellen sind:\r\n\r\n• ==Universitätsverbund digiLL==|link:https://digill.de/|\r\n• ==Digital.learning.lab==|link:https://digitallearninglab.de/|\r\n• ==Campus der OERcamps==|link:https://campus.oercamp.de/|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieser Kurs hat Ihnen einen ersten Überblick zum Thema Audio und Video im Lernkontext gegeben. Nun können Sie die Inhalte vertiefen. Mögliche Anlaufstellen sind:\r\n\r\n• ==Universitätsverbund digiLL==|link:https://digill.de/|\r\n• ==Digital.learning.lab==|link:https://digitallearninglab.de/|\r\n• ==Campus der OERcamps==|link:https://campus.oercamp.de/|",
+      "id": [
+        "234353"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-38]\r\n[@id:234354]\r\n[##Vom Video zum interaktiven Video]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-38",
+      "id": [
+        "234354"
+      ],
+      "title": "Vom Video zum interaktiven Video"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234355]\r\nMachen Sie aus einem Video ein interaktives Video mit Fragen, Aufgaben und zusätzlichen Anwendungen. Dies ist mit H5P möglich, einer Open-Source-Software, die u.a. in Moodle verfügbar ist.\r\n\r\n• ==Überblick zu H5P==|link:https://digill.de/course/einstieg-in-h5p-erstellung-interaktiver-lehr-lernmaterialien/|\r\n• ==Umfangreicher H5P-Selbstlernkurs==|link:https://campus.oercamp.de/Kurs/h5p/|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Machen Sie aus einem Video ein interaktives Video mit Fragen, Aufgaben und zusätzlichen Anwendungen. Dies ist mit H5P möglich, einer Open-Source-Software, die u.a. in Moodle verfügbar ist.\r\n\r\n• ==Überblick zu H5P==|link:https://digill.de/course/einstieg-in-h5p-erstellung-interaktiver-lehr-lernmaterialien/|\r\n• ==Umfangreicher H5P-Selbstlernkurs==|link:https://campus.oercamp.de/Kurs/h5p/|",
+      "id": [
+        "234355"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\r\n[@id:234356]\r\n[%][%Reflektieren!]\r\nWas nehmen Sie aus diesem Kurs mit? Teilen Sie Ihre Learnings unter #TIL (Today I Learned) im ==Forum==|link:https://moodle.nibis.de/mooc_dev/mod/forum/view.php?id=2382|.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "Was nehmen Sie aus diesem Kurs mit? Teilen Sie Ihre Learnings unter #TIL (Today I Learned) im ==Forum==|link:https://moodle.nibis.de/mooc_dev/mod/forum/view.php?id=2382|.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234356"
+      ],
+      "lead": "Reflektieren!"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-39]\r\n[@id:234357]\r\n[##Über dieses Lernangebot]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-39",
+      "id": [
+        "234357"
+      ],
+      "title": "Über dieses Lernangebot"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234358]\r\n[%][%Kontakt]\r\nWenn Sie eine Frage oder eine Rückmeldung zu diesem Lernangebot haben, freuen wir uns, wenn Sie uns im Forum oder Jörg Steinemann über steinemann@nlq.nibis.de, Tel. +49 51211695-430 kontaktieren. ==Hier gelangen Sie zum Forum==|link:https://moodle.nibis.de/mooc_dev/mod/forum/view.php?id=2382|.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn Sie eine Frage oder eine Rückmeldung zu diesem Lernangebot haben, freuen wir uns, wenn Sie uns im Forum oder Jörg Steinemann über steinemann@nlq.nibis.de, Tel. +49 51211695-430 kontaktieren. ==Hier gelangen Sie zum Forum==|link:https://moodle.nibis.de/mooc_dev/mod/forum/view.php?id=2382|.",
+      "id": [
+        "234358"
+      ],
+      "lead": "Kontakt"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234359]\r\n[%][%Aktualität]\r\nDieses Lernangebot wurde im Februar 2022 fertiggestellt und ist danach nicht mehr aktualisiert worden. Es liegt in der Natur des Internets, dass Webangebote und Links sich verändern oder nicht mehr verfügbar sind. Insofern bitten wir um Nachsicht, falls ein genanntes und/oder verlinktes Angebot nicht mehr erreichbar ist oder sich verändert hat.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieses Lernangebot wurde im Februar 2022 fertiggestellt und ist danach nicht mehr aktualisiert worden. Es liegt in der Natur des Internets, dass Webangebote und Links sich verändern oder nicht mehr verfügbar sind. Insofern bitten wir um Nachsicht, falls ein genanntes und/oder verlinktes Angebot nicht mehr erreichbar ist oder sich verändert hat.",
+      "id": [
+        "234359"
+      ],
+      "lead": "Aktualität"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234360]\r\n[%][%Lizenzen]\r\nDieser Onlinekurs ist frei lizenziert und im Sinne von Open Educational Resources (OER) offen zur weiteren Verwendung, Veränderung, Weitergabe etc. Als Gesamtwerk steht er unter der Lizenz CC BY 4.0. Details zu dieser Lizenz finden Sie ==hier in Kurzform==|link:https://creativecommons.org/licenses/by/4.0/deed.de| und ==hier ausführlich==|link:https://creativecommons.org/licenses/by/4.0/legalcode.de|. Als Namensnennung im Sinne der Lizenz ist vorgesehen: „Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz ==CC BY 4.0“==|link:https://creativecommons.org/licenses/by/4.0/deed.de|.\r\n\r\nEinzelne Elemente des Kurses, zum Beispiel Abbildungen, Videos, Texte, können eigenständig unter anderen Lizenzbedingungen freigegeben sein, auch durch Dritte. In diesen Fällen ist dies im oder am jeweiligen Element angeben.\r\n\r\nScreenshots und Screencasts werden im Sinne von Bildzitaten und/oder in der Annahme genutzt, dass die abgebildeten Inhalte keinen urheberrechtlichen Schutz beanspruchen können. Die darin abgebildeten Inhalte / Programme stehen i.d.R. nicht unter freier Lizenz und können nur weiterverwendet werden, solange sie im Sinne von Bildzitaten genutzt werden. Abgebildete Logos, Marken etc. stehen nicht unter freier Lizenz und sind unter Umständen zudem markenrechtlich geschützt. (Details zum urheberrechtlichen Umgang mit Screenshots stehen im Artikel „==Screenshots richtig nutzen==|link:https://irights.info/artikel/screenshots-richtig-nutzen/30127|“ von Henry Steinhau, erschienen 2020 bei iRights.info.)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieser Onlinekurs ist frei lizenziert und im Sinne von Open Educational Resources (OER) offen zur weiteren Verwendung, Veränderung, Weitergabe etc. Als Gesamtwerk steht er unter der Lizenz CC BY 4.0. Details zu dieser Lizenz finden Sie ==hier in Kurzform==|link:https://creativecommons.org/licenses/by/4.0/deed.de| und ==hier ausführlich==|link:https://creativecommons.org/licenses/by/4.0/legalcode.de|. Als Namensnennung im Sinne der Lizenz ist vorgesehen: „Agentur J&K – Jöran und Konsorten im Auftrag des Niedersächsischen Landesinstituts für schulische Qualitätsentwicklung (NLQ Hildesheim) | Lizenz ==CC BY 4.0“==|link:https://creativecommons.org/licenses/by/4.0/deed.de|.\r\n\r\nEinzelne Elemente des Kurses, zum Beispiel Abbildungen, Videos, Texte, können eigenständig unter anderen Lizenzbedingungen freigegeben sein, auch durch Dritte. In diesen Fällen ist dies im oder am jeweiligen Element angeben.\r\n\r\nScreenshots und Screencasts werden im Sinne von Bildzitaten und/oder in der Annahme genutzt, dass die abgebildeten Inhalte keinen urheberrechtlichen Schutz beanspruchen können. Die darin abgebildeten Inhalte / Programme stehen i.d.R. nicht unter freier Lizenz und können nur weiterverwendet werden, solange sie im Sinne von Bildzitaten genutzt werden. Abgebildete Logos, Marken etc. stehen nicht unter freier Lizenz und sind unter Umständen zudem markenrechtlich geschützt. (Details zum urheberrechtlichen Umgang mit Screenshots stehen im Artikel „==Screenshots richtig nutzen==|link:https://irights.info/artikel/screenshots-richtig-nutzen/30127|“ von Henry Steinhau, erschienen 2020 bei iRights.info.)",
+      "id": [
+        "234360"
+      ],
+      "lead": "Lizenzen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:234363]\r\n[%][%Team]\r\n• Verantwortlich seitens des NLQ: Jörg Steinemann\r\n• Konzeption, Redaktion, Moderation: Matthias Kostrzewa, Digitalisierungsbeauftragter an der Professional School of Education der Ruhr-Universität Bochum und freier Medienberater für Schulen und Bildungseinrichtungen, Twitter: @matkost04 und Blanche Fabri, Agentur J&K – Jöran und Konsorten\r\n• Gesamtleitung: Blanche Fabri, Agentur J&K – Jöran und Konsorten\r\n• Produktionsleitung: Blanche Fabri, Agentur J&K – Jöran und Konsorten\r\n• Mitarbeit: Axel Jansen, Kai Obermüller, Phuong Nguyen, Agentur J&K – Jöran und Konsorten",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Verantwortlich seitens des NLQ: Jörg Steinemann\r\n• Konzeption, Redaktion, Moderation: Matthias Kostrzewa, Digitalisierungsbeauftragter an der Professional School of Education der Ruhr-Universität Bochum und freier Medienberater für Schulen und Bildungseinrichtungen, Twitter: @matkost04 und Blanche Fabri, Agentur J&K – Jöran und Konsorten\r\n• Gesamtleitung: Blanche Fabri, Agentur J&K – Jöran und Konsorten\r\n• Produktionsleitung: Blanche Fabri, Agentur J&K – Jöran und Konsorten\r\n• Mitarbeit: Axel Jansen, Kai Obermüller, Phuong Nguyen, Agentur J&K – Jöran und Konsorten",
+      "id": [
+        "234363"
+      ],
+      "lead": "Team"
+    }
+  }
+]

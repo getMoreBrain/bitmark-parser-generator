@@ -1,0 +1,1798 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:187077]\n[#Handbuch]\n[##Erläuterungen zu den Qualitätsanforderungen der QualiCarte]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_handbuch.png]\n[@externalId:e-handbuch_cimagn89chyw]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187077"
+      ],
+      "title": "Handbuch",
+      "subtitle": "Erläuterungen zu den Qualitätsanforderungen der QualiCarte",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_handbuch.png"
+      ],
+      "externalId": [
+        "e-handbuch_cimagn89chyw"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:187078]\n[#Impressum]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "187078"
+      ],
+      "title": "Impressum"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187079]\n[%][%Handbuch zur QualiCarte]\nAusgabe Januar 2011, www.qbb.berufsbildung.ch\nauch in Französisch und Italienisch verfügbar\n© SDBB Bern\nGanzer oder teilweiser Nachdruck einschliesslich Speicherung und Nutzung auf optischen und elektronischen Datenträgern für nicht kommerzielle Zwecke – mit entsprechender Quellenangabe – erlaubt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ausgabe Januar 2011, www.qbb.berufsbildung.ch\nauch in Französisch und Italienisch verfügbar\n© SDBB Bern\nGanzer oder teilweiser Nachdruck einschliesslich Speicherung und Nutzung auf optischen und elektronischen Datenträgern für nicht kommerzielle Zwecke – mit entsprechender Quellenangabe – erlaubt.",
+      "id": [
+        "187079"
+      ],
+      "lead": "Handbuch zur QualiCarte"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187080]\n[%][%Herausgeber]\nSchweizerisches Dienstleistungszentrum Berufsbildung I\nBerufs-, Studien- und Laufbahnberatung SDBB, Bern",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Schweizerisches Dienstleistungszentrum Berufsbildung I\nBerufs-, Studien- und Laufbahnberatung SDBB, Bern",
+      "id": [
+        "187080"
+      ],
+      "lead": "Herausgeber"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187081]\n[%][%Erarbeitet von]\nSchweizerische Berufsbildungsämter-Konferenz SBBK, Bern",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Schweizerische Berufsbildungsämter-Konferenz SBBK, Bern",
+      "id": [
+        "187081"
+      ],
+      "lead": "Erarbeitet von"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187082]\n[%][%In Zusammenarbeit mit]\nSchweizerischer Arbeitgeberverband SAV, Zürich\nSchweizerischer Gewerbeverband SGV, Bern",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Schweizerischer Arbeitgeberverband SAV, Zürich\nSchweizerischer Gewerbeverband SGV, Bern",
+      "id": [
+        "187082"
+      ],
+      "lead": "In Zusammenarbeit mit"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187083]\n[%][%Unterstützt durch]\nBundesamt für Berufsbildung und Technologie BBT, Bern",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bundesamt für Berufsbildung und Technologie BBT, Bern",
+      "id": [
+        "187083"
+      ],
+      "lead": "Unterstützt durch"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187084]\n[%][%Redaktion]\nSBBK – Kommission betriebliche Grundbildung",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "SBBK – Kommission betriebliche Grundbildung",
+      "id": [
+        "187084"
+      ],
+      "lead": "Redaktion"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187085]\n[%][%Grafik]\nnaef-grafik.ch, Bonstetten",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "naef-grafik.ch, Bonstetten",
+      "id": [
+        "187085"
+      ],
+      "lead": "Grafik"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:187086]\n[#Einleitung]\n[%1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "187086"
+      ],
+      "title": "Einleitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187087]\n[%][%Ziel und Zweck]\nDie **Quali**__Carte__ ist ein berufsunabhängiges Instrument zur Beurteilung der Qualität in der betrieblichen Ausbildung. Mit Hilfe der **Quali**__Carte__ soll das Optimierungspotenzial erkannt werden, um den Ausbildungsprozess laufend zu verbessern. Die  **Quali**__Carte__ definiert Anforderungen an eine qualitativ hochwertige Ausbildung. Diese Anforderungen entsprechen im Minimum den gesetzlichen Vorschriften, die zum Beispiel in der Bildungsverordnung festgehalten sind, sie können die gesetzlichen Vorschriften aber auch übersteigen.\n\nDie **Quali**__Carte__ wird auch häufig im Bereich der kantonalen Lehraufsicht eingesetzt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die **Quali**__Carte__ ist ein berufsunabhängiges Instrument zur Beurteilung der Qualität in der betrieblichen Ausbildung. Mit Hilfe der **Quali**__Carte__ soll das Optimierungspotenzial erkannt werden, um den Ausbildungsprozess laufend zu verbessern. Die  **Quali**__Carte__ definiert Anforderungen an eine qualitativ hochwertige Ausbildung. Diese Anforderungen entsprechen im Minimum den gesetzlichen Vorschriften, die zum Beispiel in der Bildungsverordnung festgehalten sind, sie können die gesetzlichen Vorschriften aber auch übersteigen.\n\nDie **Quali**__Carte__ wird auch häufig im Bereich der kantonalen Lehraufsicht eingesetzt.",
+      "id": [
+        "187087"
+      ],
+      "lead": "Ziel und Zweck"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187088]\n[%][%Aufbau]\nDie QualiCarte besteht aus 28 Qualitätsanforderungen, die in fünf Kapitel unterteilt sind: Ziele und Optimierungsmassnahmen, Auswahl und Anstellung, Einführung, Bildungsprozess, Abschluss.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die QualiCarte besteht aus 28 Qualitätsanforderungen, die in fünf Kapitel unterteilt sind: Ziele und Optimierungsmassnahmen, Auswahl und Anstellung, Einführung, Bildungsprozess, Abschluss.",
+      "id": [
+        "187088"
+      ],
+      "lead": "Aufbau"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187089]\n[%][%Anwendung]\nAlle 28 Anforderungskriterien müssen objektiv bewertet werden. Die Beurteilung kann der/die Berufsbildner/in alleine oder gemeinsam mit Kolleginnen/Kollegen vornehmen. Bei Unklarheiten geben das Handbuch zur **Quali**__Carte__ oder das Handbuch betriebliche Grundbildung mit zahlreichen Checklisten und Merkblättern aufschlussreiche Informationen.\n\nBei Qualitätsanforderungen, welche mit **-** oder **- -**  bewertet werden, muss der Lehrbetrieb Massnahmen ergreifen und überprüfen, damit die entsprechenden Anforderungen in Zukunft ebenfalls erfüllt werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Alle 28 Anforderungskriterien müssen objektiv bewertet werden. Die Beurteilung kann der/die Berufsbildner/in alleine oder gemeinsam mit Kolleginnen/Kollegen vornehmen. Bei Unklarheiten geben das Handbuch zur **Quali**__Carte__ oder das Handbuch betriebliche Grundbildung mit zahlreichen Checklisten und Merkblättern aufschlussreiche Informationen.\n\nBei Qualitätsanforderungen, welche mit **-** oder **- -**  bewertet werden, muss der Lehrbetrieb Massnahmen ergreifen und überprüfen, damit die entsprechenden Anforderungen in Zukunft ebenfalls erfüllt werden.",
+      "id": [
+        "187089"
+      ],
+      "lead": "Anwendung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:187090]\n[##Abkürzungen]\n[%1.1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "187090"
+      ],
+      "title": "Abkürzungen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187091]\n[%][%BBG]\nBerufsbildungsgesetz\nBundesgesetz vom 13. Dezember 2002 über die Berufsbildung",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Berufsbildungsgesetz\nBundesgesetz vom 13. Dezember 2002 über die Berufsbildung",
+      "id": [
+        "187091"
+      ],
+      "lead": "BBG"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187092]\n[%][%BBV]\nBerufsbildungsverordnung\nVerordnung vom 19. November 2003 über die Berufsbildung",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Berufsbildungsverordnung\nVerordnung vom 19. November 2003 über die Berufsbildung",
+      "id": [
+        "187092"
+      ],
+      "lead": "BBV"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187093]\n[%][%QdA]\nOrganisation(en) der Arbeitswelt",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Organisation(en) der Arbeitswelt",
+      "id": [
+        "187093"
+      ],
+      "lead": "QdA"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187094]\n[%][%QV]\nQualifikationsverfahren",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Qualifikationsverfahren",
+      "id": [
+        "187094"
+      ],
+      "lead": "QV"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187095]\n[%][%üK]\nüberbetriebliche Kurse",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "überbetriebliche Kurse",
+      "id": [
+        "187095"
+      ],
+      "lead": "üK"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:187096]\n[#QualiCarte anwenden]\n[%2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "187096"
+      ],
+      "title": "QualiCarte anwenden"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187097]\nDas nachfolgende Kapitel erläutert sämtliche Qualitätsanforderungen der **Quali**__Carte__ und gibt weiterführende Erklärungen dazu. Diese sollen den Anwenderinnen und Anwendern helfen, die Karte optimal einzusetzen und die Beurteilungen möglichst objektiv durchzuführen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das nachfolgende Kapitel erläutert sämtliche Qualitätsanforderungen der **Quali**__Carte__ und gibt weiterführende Erklärungen dazu. Diese sollen den Anwenderinnen und Anwendern helfen, die Karte optimal einzusetzen und die Beurteilungen möglichst objektiv durchzuführen.",
+      "id": [
+        "187097"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:187098]\n[##Administrative Angaben]\n[%2.1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "187098"
+      ],
+      "title": "Administrative Angaben"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187099]\n[%][%Lehrbetrieb]\nName des Anbieters der Bildung in beruflicher Praxis, evtl. mit Angaben zur zuständigen\nAbteilung und /oder zum beurteilten Beruf.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Name des Anbieters der Bildung in beruflicher Praxis, evtl. mit Angaben zur zuständigen\nAbteilung und /oder zum beurteilten Beruf.",
+      "id": [
+        "187099"
+      ],
+      "lead": "Lehrbetrieb"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187100]\n[%][%Datum]\nDatum, an dem die Beurteilung durchgeführt wird.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Datum, an dem die Beurteilung durchgeführt wird.",
+      "id": [
+        "187100"
+      ],
+      "lead": "Datum"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187101]\n[%][%Berufsbildner/in]\nPerson im Lehrbetrieb, welche die Gesamtverantwortung für die Ausbildung der Lernenden übernimmt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Person im Lehrbetrieb, welche die Gesamtverantwortung für die Ausbildung der Lernenden übernimmt.",
+      "id": [
+        "187101"
+      ],
+      "lead": "Berufsbildner/in"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187102]\n[%][%Beurteilung]\n+ + Anforderungen gut erfüllt \n+ Anforderungen erfüllt\n- Anforderungen teilweise erfüllt \n- - Anforderungen nicht erfüllt",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "+ + Anforderungen gut erfüllt \n+ Anforderungen erfüllt\n- Anforderungen teilweise erfüllt \n- - Anforderungen nicht erfüllt",
+      "id": [
+        "187102"
+      ],
+      "lead": "Beurteilung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187103]\n[%][%Bemerkungen]\nIn dieser Spalte können zusätzliche Beobachtungen, Bemerkungen sowie Hinweise auf mögliche Optimierungsmassnahmen notiert werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In dieser Spalte können zusätzliche Beobachtungen, Bemerkungen sowie Hinweise auf mögliche Optimierungsmassnahmen notiert werden.",
+      "id": [
+        "187103"
+      ],
+      "lead": "Bemerkungen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:187104]\n[##Überprüfung der Ziele und Optimierungsmassnahmen]\n[%2.2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "187104"
+      ],
+      "title": "Überprüfung der Ziele und Optimierungsmassnahmen"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187105]\nDie in der letzten **Quali**__Carte__ festgehaltenen Massnahmen sind wirksam. Die gesetzten Ziele wurden erreicht.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Die in der letzten **Quali**__Carte__ festgehaltenen Massnahmen sind wirksam. Die gesetzten Ziele wurden erreicht.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187105"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187106]\nKontinuität bei der Ausbildung und die Überprüfung der Wirksamkeit von getroffenen Massnahmen sind in einem Qualitätsentwicklungsprozess zentral. Für die Lehrbetriebe, welche bereits eine **Quali**__Carte__ ausgefüllt haben, besteht hier die Möglichkeit die Umsetzung der Massnahmen zu bewerten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Kontinuität bei der Ausbildung und die Überprüfung der Wirksamkeit von getroffenen Massnahmen sind in einem Qualitätsentwicklungsprozess zentral. Für die Lehrbetriebe, welche bereits eine **Quali**__Carte__ ausgefüllt haben, besteht hier die Möglichkeit die Umsetzung der Massnahmen zu bewerten.",
+      "id": [
+        "187106"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:187107]\n[##Anstellung]\n[%2.3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "187107"
+      ],
+      "title": "Anstellung"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187108]\n1. Das Anforderungsprofil an die lernende Person ist bekannt.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "1. Das Anforderungsprofil an die lernende Person ist bekannt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187108"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187109]\n**Der Lehrbetrieb arbeitet Anstellungsmodalitäten aus.** \nDie erste Gruppe von Qualitätsanforderungen definiert die wichtigsten Punkte, die für die Anstellung einer lernenden Person zu beachten sind: von der Stellenausschreibung bis hin zur Unterzeichnung des Lehrvertrags. Es geht also um den ersten Kontakt, d.h. um die Grundlage für den Beginn der beruflichen Grundbildung im Lehrbetrieb.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Der Lehrbetrieb arbeitet Anstellungsmodalitäten aus.** \nDie erste Gruppe von Qualitätsanforderungen definiert die wichtigsten Punkte, die für die Anstellung einer lernenden Person zu beachten sind: von der Stellenausschreibung bis hin zur Unterzeichnung des Lehrvertrags. Es geht also um den ersten Kontakt, d.h. um die Grundlage für den Beginn der beruflichen Grundbildung im Lehrbetrieb.",
+      "id": [
+        "187109"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187110]\nEin Anforderungsprofil besteht aus einer Reihe von Kriterien, die Fähigkeiten, Kompetenzen und Persönlichkeit, welche die lernende Person mitbringen sollte, beschreiben. Wenn ein Lehrbetrieb eine lernende Person sucht, ist es wichtig, dass den Berufsbildungsverantwortlichen das gewünschte Anforderungsprofil bekannt ist. Dies ist eine Voraussetzung, damit die lernende Person die Ausbildung erfolgreich und zur Zufriedenheit des Lehrbetriebs absolvieren kann.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ein Anforderungsprofil besteht aus einer Reihe von Kriterien, die Fähigkeiten, Kompetenzen und Persönlichkeit, welche die lernende Person mitbringen sollte, beschreiben. Wenn ein Lehrbetrieb eine lernende Person sucht, ist es wichtig, dass den Berufsbildungsverantwortlichen das gewünschte Anforderungsprofil bekannt ist. Dies ist eine Voraussetzung, damit die lernende Person die Ausbildung erfolgreich und zur Zufriedenheit des Lehrbetriebs absolvieren kann.",
+      "id": [
+        "187110"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187111]\nNormalerweise lädt der Lehrbetrieb mehrere Interessenten ein, die eine Berufslehre machen möchten. Wenn vorgängig alle Auswahlkriterien (im Anforderungsprofil) bekannt sind, wird es dem Lehrbetrieb leichter fallen, die geeignete Person zu finden. Damit verringert sich das Risiko einer späteren Auflösung des Lehrverhältnisses.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Normalerweise lädt der Lehrbetrieb mehrere Interessenten ein, die eine Berufslehre machen möchten. Wenn vorgängig alle Auswahlkriterien (im Anforderungsprofil) bekannt sind, wird es dem Lehrbetrieb leichter fallen, die geeignete Person zu finden. Damit verringert sich das Risiko einer späteren Auflösung des Lehrverhältnisses.",
+      "id": [
+        "187111"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187112]\nDie Berufsbildenden sollen einerseits auf die Motivationen achten, die während des Vorstellungsgesprächs und der Schnupperlehre zum Ausdruck kommen. Andererseits sollen auch die Noten der letzten Schuljahre berücksichtigt werden. Je nach Branche werden von den Berufsverbänden auch verschiedene Eignungs- und Motivationstests durchgeführt. Die Testergebnisse stehen den Lehrbetrieben zur Verfügung, damit sie eine geeignete lernende Person finden können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Berufsbildenden sollen einerseits auf die Motivationen achten, die während des Vorstellungsgesprächs und der Schnupperlehre zum Ausdruck kommen. Andererseits sollen auch die Noten der letzten Schuljahre berücksichtigt werden. Je nach Branche werden von den Berufsverbänden auch verschiedene Eignungs- und Motivationstests durchgeführt. Die Testergebnisse stehen den Lehrbetrieben zur Verfügung, damit sie eine geeignete lernende Person finden können.",
+      "id": [
+        "187112"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187113]\n2. Gespräche mit den ausgewählten Bewerbenden finden statt und weitere Auswahlinstrumente werden eingesetzt.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "2. Gespräche mit den ausgewählten Bewerbenden finden statt und weitere Auswahlinstrumente werden eingesetzt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187113"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187114]\nMit einem oder mehreren Gesprächen kann sich der Lehrbetrieb ein objektives Bild über die künftige lernende Person machen und diese über die Anforderungen des Lehrbetriebs informieren. Ein offizielles Gespräch, das in einem formellen Rahmen ausserhalb des «Produktionsstresses» durchgeführt wird, gilt als lohnende Investition in eine optimale Auswahl der lernenden Person.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Mit einem oder mehreren Gesprächen kann sich der Lehrbetrieb ein objektives Bild über die künftige lernende Person machen und diese über die Anforderungen des Lehrbetriebs informieren. Ein offizielles Gespräch, das in einem formellen Rahmen ausserhalb des «Produktionsstresses» durchgeführt wird, gilt als lohnende Investition in eine optimale Auswahl der lernenden Person.",
+      "id": [
+        "187114"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187115]\nIm Rahmen der Gespräche wird auch abgeklärt, ob sich die Interessentin/der Interessent mit der Berufswahl auseinandergesetzt hat. Ist dies nicht der Fall, muss auf die möglichen Folgen einer falschen Berufswahl hingewiesen und allenfalls an die Berufsberatung oder weitere Stellen verwiesen werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Im Rahmen der Gespräche wird auch abgeklärt, ob sich die Interessentin/der Interessent mit der Berufswahl auseinandergesetzt hat. Ist dies nicht der Fall, muss auf die möglichen Folgen einer falschen Berufswahl hingewiesen und allenfalls an die Berufsberatung oder weitere Stellen verwiesen werden.",
+      "id": [
+        "187115"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187116]\nSoweit sinnvoll, können weitere Auswahlinstrumente (z.B. Selektionsmappe, Eignungstest) eingesetzt werden. Die Berufsbildungsverantwortlichen im Lehrbetrieb sind soweit möglich in die Selektion der Lernenden mit einzubeziehen. Berufsbildner/innen arbeiten eng mit den Lernenden zusammen und sollen somit auch ein Mitspracherecht in der Auswahl der zukünftigen Lernenden haben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Soweit sinnvoll, können weitere Auswahlinstrumente (z.B. Selektionsmappe, Eignungstest) eingesetzt werden. Die Berufsbildungsverantwortlichen im Lehrbetrieb sind soweit möglich in die Selektion der Lernenden mit einzubeziehen. Berufsbildner/innen arbeiten eng mit den Lernenden zusammen und sollen somit auch ein Mitspracherecht in der Auswahl der zukünftigen Lernenden haben.",
+      "id": [
+        "187116"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187117]\n3. Es werden Schnupperlehren organisiert und ausgewertet.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "3. Es werden Schnupperlehren organisiert und ausgewertet.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187117"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187118]\nSchnupperlehren sind wichtig. Sie ermöglichen künftigen Lernenden einen Einblick in den Lehrbetrieb und den Beruf. Zudem können sie sich eine Vorstellung über den Arbeitsplatz machen und künftige Arbeitskolleginnen und Arbeitskollegen kennen lernen. Die Schnupperlehre sollte deshalb ein möglichst vollständiges Bild der angebotenen Lehrstelle vermitteln.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Schnupperlehren sind wichtig. Sie ermöglichen künftigen Lernenden einen Einblick in den Lehrbetrieb und den Beruf. Zudem können sie sich eine Vorstellung über den Arbeitsplatz machen und künftige Arbeitskolleginnen und Arbeitskollegen kennen lernen. Die Schnupperlehre sollte deshalb ein möglichst vollständiges Bild der angebotenen Lehrstelle vermitteln.",
+      "id": [
+        "187118"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187119]\nDen interessierten Jugendlichen sollte auch ausserhalb von Schnupperlehren Einblicke in den Beruf gewährt werden, z.B. in Form von Informationsanlässen, Beteiligung an Verbandsveranstaltungen, etc.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Den interessierten Jugendlichen sollte auch ausserhalb von Schnupperlehren Einblicke in den Beruf gewährt werden, z.B. in Form von Informationsanlässen, Beteiligung an Verbandsveranstaltungen, etc.",
+      "id": [
+        "187119"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187120]\nFür die Lehrbetriebe bieten Schnupperlehren die Möglichkeit, Interessen und Fähigkeiten einer zukünftigen lernenden Person zu erkennen und auszuwerten. Mehrere Beobachter/innen im Betrieb garantieren dabei ein umfassenderes Bild. Zur Auswertung gehört auch ein Abschlussgespräch. Allen Personen, welche eine Schnupperlehre absolvieren, ist in geeigneter Form eine Rückmeldung zu geben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Für die Lehrbetriebe bieten Schnupperlehren die Möglichkeit, Interessen und Fähigkeiten einer zukünftigen lernenden Person zu erkennen und auszuwerten. Mehrere Beobachter/innen im Betrieb garantieren dabei ein umfassenderes Bild. Zur Auswertung gehört auch ein Abschlussgespräch. Allen Personen, welche eine Schnupperlehre absolvieren, ist in geeigneter Form eine Rückmeldung zu geben.",
+      "id": [
+        "187120"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187121]\n4. Die Bewerbenden werden über die Arbeitsbedingungen informiert.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "4. Die Bewerbenden werden über die Arbeitsbedingungen informiert.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187121"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187122]\nInformationen über die Arbeitsbedingungen und die besonderen Anforderungen des Lehrbetriebs sind wichtig. Sie spielen für die Wahl der Lehrstelle und für die ganze Dauer der beruflichen Grundbildung eine wesentliche Rolle. Geltende Regeln des Lehrbetriebs (Arbeitszeit, Löhne, Kleidervorschriften, Überstunden, Kosten, welche die lernende Person oder deren gesetzliche Vertretung zu tragen haben, Dienstreisen zu anderen Arbeitsorten, etc.) sind wichtig beim Entscheid des Bewerbers/der Bewerberin für oder gegen eine Lehrstelle. Sie müssen deswegen für die Bewerberin/den Bewerber transparent sein.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Informationen über die Arbeitsbedingungen und die besonderen Anforderungen des Lehrbetriebs sind wichtig. Sie spielen für die Wahl der Lehrstelle und für die ganze Dauer der beruflichen Grundbildung eine wesentliche Rolle. Geltende Regeln des Lehrbetriebs (Arbeitszeit, Löhne, Kleidervorschriften, Überstunden, Kosten, welche die lernende Person oder deren gesetzliche Vertretung zu tragen haben, Dienstreisen zu anderen Arbeitsorten, etc.) sind wichtig beim Entscheid des Bewerbers/der Bewerberin für oder gegen eine Lehrstelle. Sie müssen deswegen für die Bewerberin/den Bewerber transparent sein.",
+      "id": [
+        "187122"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187123]\nDiese Informationen werden den Bewerbenden während des Bewerbungsgesprächs oder während der Schnupperlehre vermittelt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Diese Informationen werden den Bewerbenden während des Bewerbungsgesprächs oder während der Schnupperlehre vermittelt.",
+      "id": [
+        "187123"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187124]\nDa die Grundvoraussetzungen bei jedem Beruf anders sind ist es nötig, sich auf die jeweilige Bildungsverordnung und die Gesamtarbeitsverträge zu beziehen. Diese können bei den Berufsverbänden bezogen werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Da die Grundvoraussetzungen bei jedem Beruf anders sind ist es nötig, sich auf die jeweilige Bildungsverordnung und die Gesamtarbeitsverträge zu beziehen. Diese können bei den Berufsverbänden bezogen werden.",
+      "id": [
+        "187124"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187125]\n5. Die Resultate des Bewerbungsverfahrens werden allen Bewerbenden klar kommuniziert.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "5. Die Resultate des Bewerbungsverfahrens werden allen Bewerbenden klar kommuniziert.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187125"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187126]\nDer Entscheid für bzw. gegen eine potentielle lernende Person muss dieser offen und klar kommuniziert werden. Diese kann zum Beispiel durch schriftliche Zusagen bzw. Absagen erfolgen. Absagen sollten begründet werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Entscheid für bzw. gegen eine potentielle lernende Person muss dieser offen und klar kommuniziert werden. Diese kann zum Beispiel durch schriftliche Zusagen bzw. Absagen erfolgen. Absagen sollten begründet werden.",
+      "id": [
+        "187126"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187127]\nIn den vergangenen Jahren wurden die Lehrverträge immer früher vor Lehrbeginn unterzeichnet. Das birgt verschiedene Probleme in sich. Der zu frühe Abschluss eines Lehrvertrags kann z.B. zur Folge haben, dass ein Lehrverhältnis bereits vor Beginn wieder aufgelöst wird (ungenügende Berufswahl, Nichtantreten der Stelle, etc.). Für die Lehrbetriebe entstehen in diesem Fall Zusatzaufwände.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In den vergangenen Jahren wurden die Lehrverträge immer früher vor Lehrbeginn unterzeichnet. Das birgt verschiedene Probleme in sich. Der zu frühe Abschluss eines Lehrvertrags kann z.B. zur Folge haben, dass ein Lehrverhältnis bereits vor Beginn wieder aufgelöst wird (ungenügende Berufswahl, Nichtantreten der Stelle, etc.). Für die Lehrbetriebe entstehen in diesem Fall Zusatzaufwände.",
+      "id": [
+        "187127"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187128]\n6. Den Bewerbenden werden die Vertragsbedingungen erklärt.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "6. Den Bewerbenden werden die Vertragsbedingungen erklärt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187128"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187129]\nIn der Bewerbungsphase, spätestens vor der Vertragsunterzeichnung, müssen den Bewerbenden und deren gesetzlicher Vertretung die verschiedenen Bedingungen des Vertrages mündlich erläutert werden. Dank diesen Erklärungen wissen die Lernenden, was sie erwartet und welche Verpflichtungen sie während ihrer Lehrzeit eingehen. Die Vertragsbedingungen müssen von beiden Parteien akzeptiert werden, da sie sich vertraglich zu deren Einhaltung verpflichten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In der Bewerbungsphase, spätestens vor der Vertragsunterzeichnung, müssen den Bewerbenden und deren gesetzlicher Vertretung die verschiedenen Bedingungen des Vertrages mündlich erläutert werden. Dank diesen Erklärungen wissen die Lernenden, was sie erwartet und welche Verpflichtungen sie während ihrer Lehrzeit eingehen. Die Vertragsbedingungen müssen von beiden Parteien akzeptiert werden, da sie sich vertraglich zu deren Einhaltung verpflichten.",
+      "id": [
+        "187129"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:187130]\n[##Einführung]\n[%2.4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "187130"
+      ],
+      "title": "Einführung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187131]\n**Der Lehrbetrieb bereitet ein Einführungsprogramm vor. **\nEine gute Einführung der eintretenden lernenden Person in den Lehrbetrieb oder in eine neue Abteilung ist wichtig und hilft mit, sie von Anfang an in das Unternehmen respektive in die entsprechende Abteilung zu integrieren. Der erste Eindruck und die damit verbundenen Erfahrungen sind oft entscheidend für den Erfolg oder Misserfolg de Ausbildung.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Der Lehrbetrieb bereitet ein Einführungsprogramm vor. **\nEine gute Einführung der eintretenden lernenden Person in den Lehrbetrieb oder in eine neue Abteilung ist wichtig und hilft mit, sie von Anfang an in das Unternehmen respektive in die entsprechende Abteilung zu integrieren. Der erste Eindruck und die damit verbundenen Erfahrungen sind oft entscheidend für den Erfolg oder Misserfolg de Ausbildung.",
+      "id": [
+        "187131"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187132]\n7. Die für die Ausbildung zuständigen Personen sind bestimmt.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "7. Die für die Ausbildung zuständigen Personen sind bestimmt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187132"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187133]\nLehrbetriebe müssen pro Beruf eine für die Ausbildung verantwortliche Person stellen, die nicht nur den Kurs für Berufsbildnerinnen und Berufsbildnern absolviert hat, sondern auch über hohe Sozialkompetenzen verfügt. Diese Person muss weiter in der Lage sein, ihre Methoden- und Fachkompetenzen in der Praxis mit Lernenden zu vermitteln.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Lehrbetriebe müssen pro Beruf eine für die Ausbildung verantwortliche Person stellen, die nicht nur den Kurs für Berufsbildnerinnen und Berufsbildnern absolviert hat, sondern auch über hohe Sozialkompetenzen verfügt. Diese Person muss weiter in der Lage sein, ihre Methoden- und Fachkompetenzen in der Praxis mit Lernenden zu vermitteln.",
+      "id": [
+        "187133"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187134]\nSie sollte andere Personen im Lehrbetrieb motivieren können, diese Ausbildung ebenfalls zu absolvieren. Die Aufgaben für die Betreuung der Lernenden sollen Bestandteil des Pflichtenhefts des/der verantwortlichen Berufsbildners/Berufsbildnerin sein.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Sie sollte andere Personen im Lehrbetrieb motivieren können, diese Ausbildung ebenfalls zu absolvieren. Die Aufgaben für die Betreuung der Lernenden sollen Bestandteil des Pflichtenhefts des/der verantwortlichen Berufsbildners/Berufsbildnerin sein.",
+      "id": [
+        "187134"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187135]\nDie für die Ausbildung im Betrieb verantwortliche Berufsbildnerin wird im Lehrvertrag aufgeführt. Die lernende Person kann sich bei Fragen und Problemen an sie wenden. Der Berufsbildner ist zuständig, dass best mögliche Lernbedingungen geschaffen werden, die das gegenseitige Vertrauen zu Gunsten des Ausbildungsprozesses stärken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die für die Ausbildung im Betrieb verantwortliche Berufsbildnerin wird im Lehrvertrag aufgeführt. Die lernende Person kann sich bei Fragen und Problemen an sie wenden. Der Berufsbildner ist zuständig, dass best mögliche Lernbedingungen geschaffen werden, die das gegenseitige Vertrauen zu Gunsten des Ausbildungsprozesses stärken.",
+      "id": [
+        "187135"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187136]\nWenn sich mehrere Personen um die lernende Person kümmern, müssen die Zuständigkeiten klar sein. Der Unterschied zwischen dem/der verantwortlichen Berufsbildner/in und Fachkräften des Betriebs, welche einen Teil der beruflichen Praxis vermitteln, muss nachvollziehbar sein.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn sich mehrere Personen um die lernende Person kümmern, müssen die Zuständigkeiten klar sein. Der Unterschied zwischen dem/der verantwortlichen Berufsbildner/in und Fachkräften des Betriebs, welche einen Teil der beruflichen Praxis vermitteln, muss nachvollziehbar sein.",
+      "id": [
+        "187136"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187137]\nScheidet eine verantwortliche Berufsbildnerin aus dem Lehrbetrieb aus, muss das Beruf bildungsamt informiert und eine neue Person für diese Funktion vorschlagen werden. Diese Person ist verpflichtet, den Kurs für Berufsbildner/innen in vernünftiger Frist zu besuchen. Die Übergabe der Betreuungsaufgaben an den neu verantwortlichen Berufsbildner muss klar geregelt werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Scheidet eine verantwortliche Berufsbildnerin aus dem Lehrbetrieb aus, muss das Beruf bildungsamt informiert und eine neue Person für diese Funktion vorschlagen werden. Diese Person ist verpflichtet, den Kurs für Berufsbildner/innen in vernünftiger Frist zu besuchen. Die Übergabe der Betreuungsaufgaben an den neu verantwortlichen Berufsbildner muss klar geregelt werden.",
+      "id": [
+        "187137"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187138]\nDie Höchstzahl der Lernenden pro Lehrbetrieb ist in der berufsspezifischen Bildungsverordnung geregelt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Höchstzahl der Lernenden pro Lehrbetrieb ist in der berufsspezifischen Bildungsverordnung geregelt.",
+      "id": [
+        "187138"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187139]\n8. Die persönliche Begrüssung und Einführung am ersten Lehrtag sind organisiert.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "8. Die persönliche Begrüssung und Einführung am ersten Lehrtag sind organisiert.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187139"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187140]\nDie Begrüssung am ersten Arbeitstag ist sowohl für die Lernenden als auch für die Berufsbildenden von grosser Bedeutung. Für die lernende Person ist es wichtig zu wissen, dass die Mitarbeiterinnen und Mitarbeiter des Lehrbetriebs über den Lehrbeginn informiert sind. Der/die Berufsbildner/in und weitere an der Ausbildung mitwirkende Personen bereiten sich auf den ersten Lehrtag vor.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Begrüssung am ersten Arbeitstag ist sowohl für die Lernenden als auch für die Berufsbildenden von grosser Bedeutung. Für die lernende Person ist es wichtig zu wissen, dass die Mitarbeiterinnen und Mitarbeiter des Lehrbetriebs über den Lehrbeginn informiert sind. Der/die Berufsbildner/in und weitere an der Ausbildung mitwirkende Personen bereiten sich auf den ersten Lehrtag vor.",
+      "id": [
+        "187140"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187141]\n9. Die Lernenden werden über die Tätigkeiten und das Arbeitsumfeld des Lehrbetriebs informiert.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "9. Die Lernenden werden über die Tätigkeiten und das Arbeitsumfeld des Lehrbetriebs informiert.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187141"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187142]\nDiese Informationen müssen bereits bei der Anstellung der lernenden Person vorliegen. Die Lernenden erfahren, in welchen Bereichen der Lehrbetrieb tätig ist, was von den Lernenden erwartet wird und welche Regeln und Routinen gelten. Dadurch lassen sich viele Missverständnisse vermeiden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Diese Informationen müssen bereits bei der Anstellung der lernenden Person vorliegen. Die Lernenden erfahren, in welchen Bereichen der Lehrbetrieb tätig ist, was von den Lernenden erwartet wird und welche Regeln und Routinen gelten. Dadurch lassen sich viele Missverständnisse vermeiden.",
+      "id": [
+        "187142"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187143]\n10. Die Lernenden werden über die Arbeits-, Sicherheits-, Gesundheits- und Hygienevorschriften informiert.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "10. Die Lernenden werden über die Arbeits-, Sicherheits-, Gesundheits- und Hygienevorschriften informiert.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187143"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187144]\nDie Arbeits-, Sicherheits- und Gesundheitsbestimmungen sind pro Beruf und Lehrbetrieb unterschiedlich. Es ist unabdingbar, den Lernenden die Risiken und Gefahren des Berufs sowie die spezifischen Regeln des Lehrbetriebs zu erklären. In einigen Betrieben und Branchen werden dafür spezielle Kurse angeboten. Weiter sollen die Lernenden über Berufsethik, Vertraulichkeit und weitere berufsspezifische Vorgaben informiert werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Arbeits-, Sicherheits- und Gesundheitsbestimmungen sind pro Beruf und Lehrbetrieb unterschiedlich. Es ist unabdingbar, den Lernenden die Risiken und Gefahren des Berufs sowie die spezifischen Regeln des Lehrbetriebs zu erklären. In einigen Betrieben und Branchen werden dafür spezielle Kurse angeboten. Weiter sollen die Lernenden über Berufsethik, Vertraulichkeit und weitere berufsspezifische Vorgaben informiert werden.",
+      "id": [
+        "187144"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187145]\n11. Ein Arbeitsplatz mit den für die Ausübung des Berufes erforderlichen Werkzeugen und Einrichtungen wird den Lernenden zur Verfügung gestellt.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "11. Ein Arbeitsplatz mit den für die Ausübung des Berufes erforderlichen Werkzeugen und Einrichtungen wird den Lernenden zur Verfügung gestellt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187145"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187146]\nDie Vorbereitung des Arbeitsplatzes ist eine wichtige Voraussetzung für einen erfolgreichen Start im Betrieb und zeigt auch Wertschätzung gegenüber der lernenden Person.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Vorbereitung des Arbeitsplatzes ist eine wichtige Voraussetzung für einen erfolgreichen Start im Betrieb und zeigt auch Wertschätzung gegenüber der lernenden Person.",
+      "id": [
+        "187146"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187147]\nDie Lernenden müssen über alle erforderlichen Materialien und über einen eigenen Arbeitsplatz (gemäss Bildungsverordnung und Vorschriften der OdA) verfügen, damit sie ihren Beruf erlernen und ihre Arbeit ausführen können. Werkzeuge, Instrumente, Arbeitskleider und Ressourcen müssen den Lernenden bis zum Abschluss der beruflichen Grundbildung zur Verfügung stehen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Lernenden müssen über alle erforderlichen Materialien und über einen eigenen Arbeitsplatz (gemäss Bildungsverordnung und Vorschriften der OdA) verfügen, damit sie ihren Beruf erlernen und ihre Arbeit ausführen können. Werkzeuge, Instrumente, Arbeitskleider und Ressourcen müssen den Lernenden bis zum Abschluss der beruflichen Grundbildung zur Verfügung stehen.",
+      "id": [
+        "187147"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187148]\n12. Die Lernenden werden bei Lehrbeginn über Sinn und Zweck der Bildungsverordnung und des Bildungsplans (betrieblicher Bildungsplan, Modelllehrgang, etc.) informiert.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "12. Die Lernenden werden bei Lehrbeginn über Sinn und Zweck der Bildungsverordnung und des Bildungsplans (betrieblicher Bildungsplan, Modelllehrgang, etc.) informiert.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187148"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187149]\nZu jeder Bildungsverordnung gibt es einen Bildungsplan. Dieser richtet sich sowohl an die Berufsbildner/innen als auch an die Lernenden und ist der eigentliche Leitfaden für den gesamten Verlauf der beruflichen Grundbildung.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Zu jeder Bildungsverordnung gibt es einen Bildungsplan. Dieser richtet sich sowohl an die Berufsbildner/innen als auch an die Lernenden und ist der eigentliche Leitfaden für den gesamten Verlauf der beruflichen Grundbildung.",
+      "id": [
+        "187149"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187150]\nFür eine erfolgreiche Ausbildung ist die Arbeit mit dem Bildungsplan des Berufs und den darauf basierenden Unterlagen der OdA zur Umsetzung der beruflichen Grundbildung zentral. Es ist wichtig, den Lernenden bei Lehrbeginn diese Unterlagen vorzustellen. Der individuelle Bildungsplan wird zusammen mit der lernenden Person erstellt. Er enthält individuelle Kriterien der Planung und Überprüfung der vorgegebenen Ziele.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Für eine erfolgreiche Ausbildung ist die Arbeit mit dem Bildungsplan des Berufs und den darauf basierenden Unterlagen der OdA zur Umsetzung der beruflichen Grundbildung zentral. Es ist wichtig, den Lernenden bei Lehrbeginn diese Unterlagen vorzustellen. Der individuelle Bildungsplan wird zusammen mit der lernenden Person erstellt. Er enthält individuelle Kriterien der Planung und Überprüfung der vorgegebenen Ziele.",
+      "id": [
+        "187150"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187151]\n13. Die Lernenden erhalten während der Probezeit regelmässig Rückmeldungen; am Ende der Probezeit wird zusammen mit den Lernenden ein Bildungsbericht erstellt.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "13. Die Lernenden erhalten während der Probezeit regelmässig Rückmeldungen; am Ende der Probezeit wird zusammen mit den Lernenden ein Bildungsbericht erstellt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187151"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187152]\nWenn die Lernenden die berufliche Grundbildung beginnen, gelten gemäss Obligationenrecht ein bis drei Monate Probezeit. Am Ende dieser Probezeit wird eine Bilanz der erworbenen Kenntnisse und Kompetenzen gezogen. Zu diesem Zweck wird ein gemeinsames Gespräch geführt. Das Instrument dazu ist der Bildungsbericht. Empfehlenswert ist es, nach Möglichkeit die gesetzliche Vertretung der lernenden Person in dieses Gespräch mit einzubeziehen. Falls nötig kann durch Abrede der Parteien unter Zustimmung der kantonalen Behörde die Probezeit ausnahmsweise bis auf höchstens sechs Monate verlängert werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn die Lernenden die berufliche Grundbildung beginnen, gelten gemäss Obligationenrecht ein bis drei Monate Probezeit. Am Ende dieser Probezeit wird eine Bilanz der erworbenen Kenntnisse und Kompetenzen gezogen. Zu diesem Zweck wird ein gemeinsames Gespräch geführt. Das Instrument dazu ist der Bildungsbericht. Empfehlenswert ist es, nach Möglichkeit die gesetzliche Vertretung der lernenden Person in dieses Gespräch mit einzubeziehen. Falls nötig kann durch Abrede der Parteien unter Zustimmung der kantonalen Behörde die Probezeit ausnahmsweise bis auf höchstens sechs Monate verlängert werden.",
+      "id": [
+        "187152"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-9]\n[@id:187153]\n[##Bildungsprozess]\n[%2.5]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "187153"
+      ],
+      "title": "Bildungsprozess"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187154]\n**Der Lehrbetrieb fördert den schrittweisen Erwerb von Handlungskompetenzen und Kenntnissen, die für das Berufsleben nötig sind und nimmt sich für die Ausbildung der lernenden Person Zeit.**\nDas dritte Kapitel der **Quali**__Carte__ ist in Bezug auf die Qualitätsanforderungen am umfassendsten, da sich der Bildungsprozess über die gesamte Dauer der beruflichen Grundbildung erstreckt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Der Lehrbetrieb fördert den schrittweisen Erwerb von Handlungskompetenzen und Kenntnissen, die für das Berufsleben nötig sind und nimmt sich für die Ausbildung der lernenden Person Zeit.**\nDas dritte Kapitel der **Quali**__Carte__ ist in Bezug auf die Qualitätsanforderungen am umfassendsten, da sich der Bildungsprozess über die gesamte Dauer der beruflichen Grundbildung erstreckt.",
+      "id": [
+        "187154"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187155]\nDer/die Berufsbildner/in soll den Lernenden helfen, sich die Kompetenzen anzueignen, die für das Berufsleben nötig sind. Er oder sie soll sich die Zeit nehmen den Lernenden diese Kompetenzen schrittweise zu vermitteln.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der/die Berufsbildner/in soll den Lernenden helfen, sich die Kompetenzen anzueignen, die für das Berufsleben nötig sind. Er oder sie soll sich die Zeit nehmen den Lernenden diese Kompetenzen schrittweise zu vermitteln.",
+      "id": [
+        "187155"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187156]\n14. Der Stellenwert der Ausbildung von Lernenden durch Ihre Berufsbildenden und andere Arten der Unterstützung sind im Lehrbetrieb formell verankert.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "14. Der Stellenwert der Ausbildung von Lernenden durch Ihre Berufsbildenden und andere Arten der Unterstützung sind im Lehrbetrieb formell verankert.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187156"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187157]\nDamit die Ausbildung von Lernenden im Lehrbetrieb den nötigen Stellenwert erhält, wird diese am besten formell verankert, zum Beispiel im Rahmen eines Leitbilds, einer Strategie, der Philosophie oder Vision. Damit werden den Berufsbildenden die notwendigen Ressourcen zugestanden, um eine gute Ausbildung zu gewährleisten. Umfang und Art der Unterstützung kann in Form eines Reglements und /oder im Stellenbeschrieb festgehalten werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Damit die Ausbildung von Lernenden im Lehrbetrieb den nötigen Stellenwert erhält, wird diese am besten formell verankert, zum Beispiel im Rahmen eines Leitbilds, einer Strategie, der Philosophie oder Vision. Damit werden den Berufsbildenden die notwendigen Ressourcen zugestanden, um eine gute Ausbildung zu gewährleisten. Umfang und Art der Unterstützung kann in Form eines Reglements und /oder im Stellenbeschrieb festgehalten werden.",
+      "id": [
+        "187157"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187158]\n15. Der Bildungsplan und die anderen Instrumente zur Förderung der betrieblichen Bildung werden konsequent eingesetzt.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "15. Der Bildungsplan und die anderen Instrumente zur Förderung der betrieblichen Bildung werden konsequent eingesetzt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187158"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187159]\nMit der Benutzung des Bildungsplans und weiterer Instrumente (Modelllehrgang, Lerndokumentation, etc.) übernehmen Lernende Mitverantwortung für ihren Lernprozess. Der/die Berufsbildner/in kann mit diesen Instrumenten den Ausbildungsstand der lernenden Person überprüfen. Der Lernfortschritt ist regelmässig anhand des Bildungsplans zu besprechen und zu dokumentieren. Bei konsequentem Einsatz der Instrumente kann der/die Berufsbildner/in die Ausbildung so planen, überprüfen und anpassen, dass sie den Bedürfnissen der Lernenden gerecht wird.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Mit der Benutzung des Bildungsplans und weiterer Instrumente (Modelllehrgang, Lerndokumentation, etc.) übernehmen Lernende Mitverantwortung für ihren Lernprozess. Der/die Berufsbildner/in kann mit diesen Instrumenten den Ausbildungsstand der lernenden Person überprüfen. Der Lernfortschritt ist regelmässig anhand des Bildungsplans zu besprechen und zu dokumentieren. Bei konsequentem Einsatz der Instrumente kann der/die Berufsbildner/in die Ausbildung so planen, überprüfen und anpassen, dass sie den Bedürfnissen der Lernenden gerecht wird.",
+      "id": [
+        "187159"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187160]\n16. Der/die Berufsbildner/in setzt klare und messbare Lernschritte fest und überprüft sie.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "16. Der/die Berufsbildner/in setzt klare und messbare Lernschritte fest und überprüft sie.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187160"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187161]\nDer/die Berufsbildner/in legt messbare und kontrollierbare Lernschritte fest und bespricht diese mit den Lernenden. Die Lernschritte werden in Abstimmung mit den Aktivitäten des Lehrbetriebs und des Bildungsplanes festgelegt. Die Lernschritte werden in regelmässigen Abständen überprüft und besprochen. Die Lernenden können sich so jederzeit verbessern.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der/die Berufsbildner/in legt messbare und kontrollierbare Lernschritte fest und bespricht diese mit den Lernenden. Die Lernschritte werden in Abstimmung mit den Aktivitäten des Lehrbetriebs und des Bildungsplanes festgelegt. Die Lernschritte werden in regelmässigen Abständen überprüft und besprochen. Die Lernenden können sich so jederzeit verbessern.",
+      "id": [
+        "187161"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187162]\n17. Verschiedene Arbeitsmethoden und Arbeitsabläufe werden geplant, gezeigt und erklärt.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "17. Verschiedene Arbeitsmethoden und Arbeitsabläufe werden geplant, gezeigt und erklärt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187162"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187163]\nDamit die Lernenden die einzelnen Arbeitsabläufe verstehen, müssen diese mit Hilfe berufspädagogischer Methoden gezeigt, erklärt und umgesetzt werden. Eine gute Zusammenarbeit ist bei der Vermittlung der Arbeitsmethoden und Arbeitsabläufe wichtig. Die Lernenden erfahren, in welcher Reihenfolge bestimmte Arbeiten erledigt werden müssen. Somit werden sie die Arbeiten auch korrekt durchführen können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Damit die Lernenden die einzelnen Arbeitsabläufe verstehen, müssen diese mit Hilfe berufspädagogischer Methoden gezeigt, erklärt und umgesetzt werden. Eine gute Zusammenarbeit ist bei der Vermittlung der Arbeitsmethoden und Arbeitsabläufe wichtig. Die Lernenden erfahren, in welcher Reihenfolge bestimmte Arbeiten erledigt werden müssen. Somit werden sie die Arbeiten auch korrekt durchführen können.",
+      "id": [
+        "187163"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187164]\n18. Die Arbeiten der Lernenden werden in qualitativer und quantitativer Hinsicht überprüft, dokumentiert und besprochen.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "18. Die Arbeiten der Lernenden werden in qualitativer und quantitativer Hinsicht überprüft, dokumentiert und besprochen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187164"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187165]\nDer/die Berufsbildner/in muss die Arbeit der Lernenden regelmässig kontrollieren und mit ihnen besprechen. Es wird überprüft, inwiefern die Lernenden die Aufgaben verstehen, die Arbeiten korrekt erledigen und Fortschritte in der Berufspraxis machen. Die Beurteilung am Ende jedes Semesters in Form des Bildungsberichts gibt auch den Lernenden Klarheit darüber, wie es um ihr Verhalten und ihre Leistungen im Lehrbetrieb steht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der/die Berufsbildner/in muss die Arbeit der Lernenden regelmässig kontrollieren und mit ihnen besprechen. Es wird überprüft, inwiefern die Lernenden die Aufgaben verstehen, die Arbeiten korrekt erledigen und Fortschritte in der Berufspraxis machen. Die Beurteilung am Ende jedes Semesters in Form des Bildungsberichts gibt auch den Lernenden Klarheit darüber, wie es um ihr Verhalten und ihre Leistungen im Lehrbetrieb steht.",
+      "id": [
+        "187165"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187166]\n19. Die Lernenden werden schrittweise in die Arbeitsprozesse des Lehrbetriebs integriert, ihre Selbstständigkeit wird gefördert.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "19. Die Lernenden werden schrittweise in die Arbeitsprozesse des Lehrbetriebs integriert, ihre Selbstständigkeit wird gefördert.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187166"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187167]\nDie Arbeiten müssen den Lernenden schrittweise übertragen werden. Müssen Lernende beispielsweise schon am ersten Tag eine zu schwierige Arbeit erledigen, könnte sie das entmutigen. Wenn die Schwierigkeit der Arbeiten jedoch schrittweise zunimmt, können die Lernenden immer selbstständiger werden und die Methoden-, Selbst- und Sozialkompetenz wird optimal gefördert.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Arbeiten müssen den Lernenden schrittweise übertragen werden. Müssen Lernende beispielsweise schon am ersten Tag eine zu schwierige Arbeit erledigen, könnte sie das entmutigen. Wenn die Schwierigkeit der Arbeiten jedoch schrittweise zunimmt, können die Lernenden immer selbstständiger werden und die Methoden-, Selbst- und Sozialkompetenz wird optimal gefördert.",
+      "id": [
+        "187167"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187168]\n20. Die Leistungen der Lernenden in der Berufsfachschule und in den überbetrieblichen Kursen werden kontrolliert und besprochen.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "20. Die Leistungen der Lernenden in der Berufsfachschule und in den überbetrieblichen Kursen werden kontrolliert und besprochen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187168"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187169]\nDamit die Lernenden ihre Ausbildung erfolgreich abschliessen können, müssen auch die Leistungen in der Berufsfachschule und in den überbetrieblichen Kursen genügend sein. Haben die Lernenden dort Schwierigkeiten, muss sich die Berufsbildnerin darum kümmern. Es ist daher wichtig, auch die schulischen Leistungen und die Leistungen der üK regelmässig zu besprechen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Damit die Lernenden ihre Ausbildung erfolgreich abschliessen können, müssen auch die Leistungen in der Berufsfachschule und in den überbetrieblichen Kursen genügend sein. Haben die Lernenden dort Schwierigkeiten, muss sich die Berufsbildnerin darum kümmern. Es ist daher wichtig, auch die schulischen Leistungen und die Leistungen der üK regelmässig zu besprechen.",
+      "id": [
+        "187169"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187170]\n21. Der/die Berufsbildner/in achtet darauf, dass die lernende Person entsprechend ihren Möglichkeiten gefördert wird.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "21. Der/die Berufsbildner/in achtet darauf, dass die lernende Person entsprechend ihren Möglichkeiten gefördert wird.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187170"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187171]\nLernende sollen entsprechend ihrem Ausbildungsstand gefördert werden. Je nachdem ist der Besuch von Förder- oder Stützkursen sinnvoll. Hilfe kann auch vom Berufsbildner selbst oder von einer anderen Fachkraft im Lehrbetrieb kommen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Lernende sollen entsprechend ihrem Ausbildungsstand gefördert werden. Je nachdem ist der Besuch von Förder- oder Stützkursen sinnvoll. Hilfe kann auch vom Berufsbildner selbst oder von einer anderen Fachkraft im Lehrbetrieb kommen.",
+      "id": [
+        "187171"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187172]\nTalentierte Lernende sollten zusätzlich gefördert werden, zum Beispiel durch den Besuch von Freikursen, internen Schulungen oder den Eintritt in die Berufsmaturaklasse. Der Eintritt in eine Berufsmaturaklasse wird grundsätzlich vor Lehrbeginn geregelt, während der beruflichen Grundbildung wird der Eintritt kompliziert oder ist gar nicht möglich.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Talentierte Lernende sollten zusätzlich gefördert werden, zum Beispiel durch den Besuch von Freikursen, internen Schulungen oder den Eintritt in die Berufsmaturaklasse. Der Eintritt in eine Berufsmaturaklasse wird grundsätzlich vor Lehrbeginn geregelt, während der beruflichen Grundbildung wird der Eintritt kompliziert oder ist gar nicht möglich.",
+      "id": [
+        "187172"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187173]\n22. Gemäss Bildungsverordnung des entsprechenden Berufs erstellt der/die Berufsbildner/in halbjährlich einen Bildungsbericht und bespricht diesen mit der lernenden Person.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "22. Gemäss Bildungsverordnung des entsprechenden Berufs erstellt der/die Berufsbildner/in halbjährlich einen Bildungsbericht und bespricht diesen mit der lernenden Person.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187173"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187174]\nZur Beurteilung der Lernenden erstellt der/die Berufsbildner/in normalerweise jedes Semester einen Bildungsbericht. Im Bericht werden der Bildungsstand, die gemachten Lernfortschritte und der Förderbedarf dokumentiert. Dadurch werden die Kenntnisse und die noch zu machenden Fortschritte beurteilt und in strukturierter Form festgehalten. Der Bericht muss mit der lernenden Person besprochen werden. Diese Rückmeldung hilft ihr, das Arbeits- und Lernverhalten weiter zu reflektieren und zu entwickeln.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Zur Beurteilung der Lernenden erstellt der/die Berufsbildner/in normalerweise jedes Semester einen Bildungsbericht. Im Bericht werden der Bildungsstand, die gemachten Lernfortschritte und der Förderbedarf dokumentiert. Dadurch werden die Kenntnisse und die noch zu machenden Fortschritte beurteilt und in strukturierter Form festgehalten. Der Bericht muss mit der lernenden Person besprochen werden. Diese Rückmeldung hilft ihr, das Arbeits- und Lernverhalten weiter zu reflektieren und zu entwickeln.",
+      "id": [
+        "187174"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187175]\nHat die lernende Person das 18. Altersjahr noch nicht erreicht, muss der Bildungsbericht der gesetzlichen Vertretung zur Kenntnis gebracht werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Hat die lernende Person das 18. Altersjahr noch nicht erreicht, muss der Bildungsbericht der gesetzlichen Vertretung zur Kenntnis gebracht werden.",
+      "id": [
+        "187175"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187176]\nEs gibt verschiedene Formen des Bildungsberichts. Es kann sich beispielsweise um eine Variante des Formulars handeln, das für die Qualifikationsgespräche mit den Mitarbeitenden verwendet wird. Viele Organisationen der Arbeitswelt stellen Beurteilungsbögen mit den berufsspezifischen Inhalten zur Verfügung. Beim SDBB ist das berufsneutrale Formular «Bildungsbericht» erhältlich. Bildungsberichte müssen aufbewahrt werden. Kantonale Behörden und gesetzliche Vertreter müssen diese jederzeit einsehen können. Bildungsberichte können als Grundlage für die Formulierung des Lehrzeugnisses verwendet werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Es gibt verschiedene Formen des Bildungsberichts. Es kann sich beispielsweise um eine Variante des Formulars handeln, das für die Qualifikationsgespräche mit den Mitarbeitenden verwendet wird. Viele Organisationen der Arbeitswelt stellen Beurteilungsbögen mit den berufsspezifischen Inhalten zur Verfügung. Beim SDBB ist das berufsneutrale Formular «Bildungsbericht» erhältlich. Bildungsberichte müssen aufbewahrt werden. Kantonale Behörden und gesetzliche Vertreter müssen diese jederzeit einsehen können. Bildungsberichte können als Grundlage für die Formulierung des Lehrzeugnisses verwendet werden.",
+      "id": [
+        "187176"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187177]\n23. Der/die Berufsbildner/in bietet den Lernenden Gelegenheit zu kritischen Rückmeldungen und geht nach Möglichkeit auf diese ein.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "23. Der/die Berufsbildner/in bietet den Lernenden Gelegenheit zu kritischen Rückmeldungen und geht nach Möglichkeit auf diese ein.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187177"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187178]\nWenn der/die Berufsbildner/in Entscheide trifft, die die Ausbildung betreffen, brauchen die Lernenden die Gelegenheit, ihre Meinung zu äussern. Werden die Rückmeldungen ernst genommen und wird auf Anregungen eingegangen, stärkt dies die Vertrauensbasis. Die Lernenden können sich so verantwortungsbewusst an der Ausbildung beteiligen und ihre Meinungen und Ansichten einbringen. Die Rückmeldungen erlauben es auch, die Ausbildung kontinuierlich zu verbessern, was künftigen Lernenden zu Gute kommt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn der/die Berufsbildner/in Entscheide trifft, die die Ausbildung betreffen, brauchen die Lernenden die Gelegenheit, ihre Meinung zu äussern. Werden die Rückmeldungen ernst genommen und wird auf Anregungen eingegangen, stärkt dies die Vertrauensbasis. Die Lernenden können sich so verantwortungsbewusst an der Ausbildung beteiligen und ihre Meinungen und Ansichten einbringen. Die Rückmeldungen erlauben es auch, die Ausbildung kontinuierlich zu verbessern, was künftigen Lernenden zu Gute kommt.",
+      "id": [
+        "187178"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-10]\n[@id:187179]\n[##Verantwortung und Abschluss]\n[%2.6]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.6",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-10",
+      "id": [
+        "187179"
+      ],
+      "title": "Verantwortung und Abschluss"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187180]\n**Der Lehrbetrieb setzt sich für die Lernenden ein und arbeitet mit allen Partnern der Berufsbildung zusammen.**\nDamit die Berufslehre sowohl für die Lernenden als auch für die Berufsbildenden unter optimalen Bedingungen erfolgen kann, stehen zahlreiche Partner zur Seite. Diese Partner begleiten sie während der gesamten beruflichen Grundbildung und bieten Unterstützung bei Schwierigkeiten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Der Lehrbetrieb setzt sich für die Lernenden ein und arbeitet mit allen Partnern der Berufsbildung zusammen.**\nDamit die Berufslehre sowohl für die Lernenden als auch für die Berufsbildenden unter optimalen Bedingungen erfolgen kann, stehen zahlreiche Partner zur Seite. Diese Partner begleiten sie während der gesamten beruflichen Grundbildung und bieten Unterstützung bei Schwierigkeiten.",
+      "id": [
+        "187180"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187181]\n24. Hat die lernende Person Schwierigkeiten oder droht die Auflösung des Lehrverhältnisses, kontaktiert der/die Berufsbildner/in je nach Situation frühzeitig die gesetzlichen Vertreter, das zuständige Berufsbildungsamt und/oder die Berufsfachschule.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "24. Hat die lernende Person Schwierigkeiten oder droht die Auflösung des Lehrverhältnisses, kontaktiert der/die Berufsbildner/in je nach Situation frühzeitig die gesetzlichen Vertreter, das zuständige Berufsbildungsamt und/oder die Berufsfachschule.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187181"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187182]\nEs liegt in der Verantwortung des Lehrbetriebs und des Berufsbildners, die von den Lernenden ausgehenden Zeichen und Signale zu analysieren und zu beantworten. Die Lernenden müssen wissen, wer zu ihrer Unterstützung da ist. Da die Berufsbildnerin nicht immer in der Lage sein kann, den Lernenden selber zu helfen, kann es sinnvoll sein, weitere Fachleute um Rat zu bitten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Es liegt in der Verantwortung des Lehrbetriebs und des Berufsbildners, die von den Lernenden ausgehenden Zeichen und Signale zu analysieren und zu beantworten. Die Lernenden müssen wissen, wer zu ihrer Unterstützung da ist. Da die Berufsbildnerin nicht immer in der Lage sein kann, den Lernenden selber zu helfen, kann es sinnvoll sein, weitere Fachleute um Rat zu bitten.",
+      "id": [
+        "187182"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187183]\nEntscheide, die im Zusammenhang mit Schwierigkeiten gefällt werden, müssen schriftlich festgehalten werden. Dies ist nötig, um den Verlauf der Entscheidungen später nachvollziehen zu können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Entscheide, die im Zusammenhang mit Schwierigkeiten gefällt werden, müssen schriftlich festgehalten werden. Dies ist nötig, um den Verlauf der Entscheidungen später nachvollziehen zu können.",
+      "id": [
+        "187183"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187184]\nDer Lehrbetrieb muss die zuständige Person des Berufsbildungsamtes informieren, wenn die Gefahr einer Auflösung des Lehrverhältnisses besteht. Dies ist nicht nur eine gesetzliche Pflicht, sondern kann auch helfen, eine für alle Beteiligten sinnvolle Lösung zu finden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Lehrbetrieb muss die zuständige Person des Berufsbildungsamtes informieren, wenn die Gefahr einer Auflösung des Lehrverhältnisses besteht. Dies ist nicht nur eine gesetzliche Pflicht, sondern kann auch helfen, eine für alle Beteiligten sinnvolle Lösung zu finden.",
+      "id": [
+        "187184"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187185]\nBei unmündigen Lernenden muss die gesetzliche Vertretung so früh wie möglich über die drohende Auflösung des Lehrverhältnisses informiert werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bei unmündigen Lernenden muss die gesetzliche Vertretung so früh wie möglich über die drohende Auflösung des Lehrverhältnisses informiert werden.",
+      "id": [
+        "187185"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187186]\n25. Alle für das Qualifikationsverfahren notwendigen organisatorischen und formalen Massnahmen werden rechtzeitig getroffen.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "25. Alle für das Qualifikationsverfahren notwendigen organisatorischen und formalen Massnahmen werden rechtzeitig getroffen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187186"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187187]\nDer/die Berufsbildner/in muss sicherstellen, dass die lernende Person ausreichend auf die Abschlussprüfung vorbereitet wird. Das Vermitteln der Branchenkunde ist Aufgabe des Berufsbildners /der Berufsbildnerin. Dies kann von ihm/ihr selbst ausgeführt werden oder an eine kompetente Person im Lehrbetrieb delegiert werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der/die Berufsbildner/in muss sicherstellen, dass die lernende Person ausreichend auf die Abschlussprüfung vorbereitet wird. Das Vermitteln der Branchenkunde ist Aufgabe des Berufsbildners /der Berufsbildnerin. Dies kann von ihm/ihr selbst ausgeführt werden oder an eine kompetente Person im Lehrbetrieb delegiert werden.",
+      "id": [
+        "187187"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187188]\nDas Qualifikationsverfahren beginnt im Grunde genommen bereits am Lehrbeginn. Die schrittweise erworbenen Kompetenzen werden regelmässig Mal formell (Prüfung), Mal informell (Gespräch) überprüft. Es ist die Aufgabe des Lehrbetriebs alles zu unternehmen, damit die betrieblichen Bildungsziele erreicht werden. Für das Qualifikationsverfahren muss der Betrieb insbesondere folgende Pflichten wahrnehmen:\n\n- Rechtzeitige Anmeldung zum Qualifikationsverfahren\n- Fristgerechte Einreichung der Erfahrungsnoten, falls verlangt\n- Organisation der praktischen Prüfungen, falls diese im Betrieb stattfinden\n(z.B. individuelle praktische Arbeit)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Qualifikationsverfahren beginnt im Grunde genommen bereits am Lehrbeginn. Die schrittweise erworbenen Kompetenzen werden regelmässig Mal formell (Prüfung), Mal informell (Gespräch) überprüft. Es ist die Aufgabe des Lehrbetriebs alles zu unternehmen, damit die betrieblichen Bildungsziele erreicht werden. Für das Qualifikationsverfahren muss der Betrieb insbesondere folgende Pflichten wahrnehmen:\n\n- Rechtzeitige Anmeldung zum Qualifikationsverfahren\n- Fristgerechte Einreichung der Erfahrungsnoten, falls verlangt\n- Organisation der praktischen Prüfungen, falls diese im Betrieb stattfinden\n(z.B. individuelle praktische Arbeit)",
+      "id": [
+        "187188"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187189]\n26. Die Austrittsmodalitäten betreffend der Lernenden sind rechtzeitig geregelt.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "26. Die Austrittsmodalitäten betreffend der Lernenden sind rechtzeitig geregelt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187189"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187190]\nDer Austrittsprozess der Lernenden ist im Lehrbetrieb geregelt und soll wie folgt ausgeführt werden. Vor dem Austritt erhalten die Lernenden ein Lehrzeugnis oder eine Arbeitsbestätigung, Informationen über den Versicherungsschutz, etc. Die Vorbereitung des Austritts muss bereits ein Semester vor Abschluss der beruflichen Grundbildung beginnen. Die Lernenden sollen frühzeitig auf ihre Zukunftspläne und über Möglichkeiten zur Weiterbeschäftigung im oder ausserhalb des Lehrbetriebs angesprochen werden. Falls die lernende Person die Möglichkeit auf eine allfällige Weiterbeschäftigung im Lehrbetrieb hat, muss sie informiert werden. Zeichnet sich keine Lösung ab, gilt es die Lernenden auf bestehende Beratungs- und Arbeitsmarktinstitutionen aufmerksam zu machen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Austrittsprozess der Lernenden ist im Lehrbetrieb geregelt und soll wie folgt ausgeführt werden. Vor dem Austritt erhalten die Lernenden ein Lehrzeugnis oder eine Arbeitsbestätigung, Informationen über den Versicherungsschutz, etc. Die Vorbereitung des Austritts muss bereits ein Semester vor Abschluss der beruflichen Grundbildung beginnen. Die Lernenden sollen frühzeitig auf ihre Zukunftspläne und über Möglichkeiten zur Weiterbeschäftigung im oder ausserhalb des Lehrbetriebs angesprochen werden. Falls die lernende Person die Möglichkeit auf eine allfällige Weiterbeschäftigung im Lehrbetrieb hat, muss sie informiert werden. Zeichnet sich keine Lösung ab, gilt es die Lernenden auf bestehende Beratungs- und Arbeitsmarktinstitutionen aufmerksam zu machen.",
+      "id": [
+        "187190"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187191]\n27. Der/die Berufsbildner/in bildet sich regelmässig weiter.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "27. Der/die Berufsbildner/in bildet sich regelmässig weiter.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187191"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187192]\nDie Berufsbildner und Berufsbildnerinnen bilden sich fachlich und pädagogisch-didaktisch weiter. Eine regelmässige Weiterbildung in einem sich stetig verändernden Umfeld ist zentral, damit die Ausbildungsqualität langfristig gesichert ist. Normalerweise bilden sich die Berufsbildenden auch im Interesse der Firma fachlich weiter. Ferner können sie von den Ausbildungsangeboten der OdA und der Kantone zu berufsbildnerischen und pädagogischen Themen profitieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Berufsbildner und Berufsbildnerinnen bilden sich fachlich und pädagogisch-didaktisch weiter. Eine regelmässige Weiterbildung in einem sich stetig verändernden Umfeld ist zentral, damit die Ausbildungsqualität langfristig gesichert ist. Normalerweise bilden sich die Berufsbildenden auch im Interesse der Firma fachlich weiter. Ferner können sie von den Ausbildungsangeboten der OdA und der Kantone zu berufsbildnerischen und pädagogischen Themen profitieren.",
+      "id": [
+        "187192"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:187193]\n28. Der Lehrbetrieb stellt dem/der Berufsbildner/in die notwendigen zeitlichen, finanziellen und materiellen Ressourcen zur Verfügung.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "28. Der Lehrbetrieb stellt dem/der Berufsbildner/in die notwendigen zeitlichen, finanziellen und materiellen Ressourcen zur Verfügung.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187193"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187194]\nUm die Qualität der Bildung und die Einhaltung der Bildungsplanstandards zu gewährleisten, muss der Lehrbetrieb dem/der Berufsbildner/in ein angemessenes Arbeitspensum für die Betreuung der Lernenden, finanzielle Mittel und die materiell notwendigen Gegenstände (eingerichteter Arbeitsplatz mit nötigen Werkzeugen) zur Verfügung stellen. Anbieter von Bildung in beruflicher Praxis sollen potentielle Berufsbildnerinnen und Berufsbildner direkt und persönlich motivieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Um die Qualität der Bildung und die Einhaltung der Bildungsplanstandards zu gewährleisten, muss der Lehrbetrieb dem/der Berufsbildner/in ein angemessenes Arbeitspensum für die Betreuung der Lernenden, finanzielle Mittel und die materiell notwendigen Gegenstände (eingerichteter Arbeitsplatz mit nötigen Werkzeugen) zur Verfügung stellen. Anbieter von Bildung in beruflicher Praxis sollen potentielle Berufsbildnerinnen und Berufsbildner direkt und persönlich motivieren.",
+      "id": [
+        "187194"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-11]\n[@id:187195]\n[##Selbstevaluation]\n[%2.7]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.7",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-11",
+      "id": [
+        "187195"
+      ],
+      "title": "Selbstevaluation"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187196]\n[%][%Ziele, Massnahmen und Fristen]\nNach jeder Qualitätsprüfung mit der **Quali**Carte werden im Sinne der kontinuierlichen Qualitätsentwicklung mehrere Ziele vereinbart (i.d.R. drei). Diese Ziele werden auf Grund der in der QualiCarte dokumentierten Beurteilungen festgelegt. Sie dienen dazu, die Qualität der Ausbildung zu verbessern und die noch nicht realisierten Qualitätsanforderungen anzugehen. Die Ziele müssen einfach formuliert und kontrollierbar sein. Die Fristen sollen realistisch und unter Berücksichtigung der betrieblichen Gegebenheiten gesetzt werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Nach jeder Qualitätsprüfung mit der **Quali**Carte werden im Sinne der kontinuierlichen Qualitätsentwicklung mehrere Ziele vereinbart (i.d.R. drei). Diese Ziele werden auf Grund der in der QualiCarte dokumentierten Beurteilungen festgelegt. Sie dienen dazu, die Qualität der Ausbildung zu verbessern und die noch nicht realisierten Qualitätsanforderungen anzugehen. Die Ziele müssen einfach formuliert und kontrollierbar sein. Die Fristen sollen realistisch und unter Berücksichtigung der betrieblichen Gegebenheiten gesetzt werden.",
+      "id": [
+        "187196"
+      ],
+      "lead": "Ziele, Massnahmen und Fristen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187197]\nBei der Qualitätsentwicklung ist die Kontinuität zentral. Deswegen muss regelmässig (z.B. jährlich) überprüft werden, ob die geplanten Ziele und Massnahmen umgesetzt wurden. Bevor also mit der Beurteilung der Ausbildung gestartet wird, sollten die zuletzt angesetzten Massnahmen ausgewertet werden. Wurden die gesetzten Ziele erreicht? Wurden die Massnahmen umgesetzt und haben sie ihre Wirkung erreicht?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bei der Qualitätsentwicklung ist die Kontinuität zentral. Deswegen muss regelmässig (z.B. jährlich) überprüft werden, ob die geplanten Ziele und Massnahmen umgesetzt wurden. Bevor also mit der Beurteilung der Ausbildung gestartet wird, sollten die zuletzt angesetzten Massnahmen ausgewertet werden. Wurden die gesetzten Ziele erreicht? Wurden die Massnahmen umgesetzt und haben sie ihre Wirkung erreicht?",
+      "id": [
+        "187197"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-12]\n[@id:187198]\n[#Anwendungsbereiche]\n[%3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-12",
+      "id": [
+        "187198"
+      ],
+      "title": "Anwendungsbereiche"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187199]\n[%][%Selbstevaluation]\nDie Selbstevaluation ist ein Instrument, das den Lehrbetrieben helfen soll, die Qualität ihrer betrieblichen Ausbildung kontinuierlich weiterzuentwickeln. Mit der Selbstevaluation überprüft der Lehrbetrieb selbstständig seine Ausbildung mit vorgegebenen Qualitätsstandards. Die **Quali**Carte bzw. deren Anforderungskriterien können ohne Weiteres in bestehende Qualitätsmanagementsysteme integriert werden. Dadurch vereinheitlicht und vereinfacht sich die Ausbildung in den Lehrbetrieben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Selbstevaluation ist ein Instrument, das den Lehrbetrieben helfen soll, die Qualität ihrer betrieblichen Ausbildung kontinuierlich weiterzuentwickeln. Mit der Selbstevaluation überprüft der Lehrbetrieb selbstständig seine Ausbildung mit vorgegebenen Qualitätsstandards. Die **Quali**Carte bzw. deren Anforderungskriterien können ohne Weiteres in bestehende Qualitätsmanagementsysteme integriert werden. Dadurch vereinheitlicht und vereinfacht sich die Ausbildung in den Lehrbetrieben.",
+      "id": [
+        "187199"
+      ],
+      "lead": "Selbstevaluation"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187200]\n[%][%Fremdevaluation]\nÜberprüfen Vertreter/innen von Kantonen oder OdA die Lehrbetriebe, kann die **Quali**Carte auch zur Fremdevaluation benutzt werden, indem sie alleine oder gemeinsam mit den Lehrbetrieben eine Bewertung vornehmen. Dadurch kann die Selbstevaluation durch eine Aussensicht ergänzt werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Überprüfen Vertreter/innen von Kantonen oder OdA die Lehrbetriebe, kann die **Quali**Carte auch zur Fremdevaluation benutzt werden, indem sie alleine oder gemeinsam mit den Lehrbetrieben eine Bewertung vornehmen. Dadurch kann die Selbstevaluation durch eine Aussensicht ergänzt werden.",
+      "id": [
+        "187200"
+      ],
+      "lead": "Fremdevaluation"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187201]\n[%][%Kantonale Lehraufsicht]\nGemäss Berufsbildungsgesetz Art. 24 sorgen die Kantone für die Aufsicht über die berufliche Grundbildung. Die Organisationen der Arbeitswelt und die Kantone haben hierfür einen Qualitätsstandard definiert, der in der **Quali**Carte festgehalten ist. Das heisst, für die Beurteilung der Bildungsqualität in beruflicher Praxis wenden die Kantone die Qualitätskriterien gemäss **Quali**Carte an. Diese sind als Mindestanforderungen zu verstehen, die bei der betrieblichen Ausbildung erfüllt sein müssen. Die Kantone können sich bei der Erteilung bzw. dem Entzug der Bildungsbewilligung oder der Aufsichtstätigkeit in Lehrbetrieben auf die Anforderungskriterien gemäss **Quali**Carte berufen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Gemäss Berufsbildungsgesetz Art. 24 sorgen die Kantone für die Aufsicht über die berufliche Grundbildung. Die Organisationen der Arbeitswelt und die Kantone haben hierfür einen Qualitätsstandard definiert, der in der **Quali**Carte festgehalten ist. Das heisst, für die Beurteilung der Bildungsqualität in beruflicher Praxis wenden die Kantone die Qualitätskriterien gemäss **Quali**Carte an. Diese sind als Mindestanforderungen zu verstehen, die bei der betrieblichen Ausbildung erfüllt sein müssen. Die Kantone können sich bei der Erteilung bzw. dem Entzug der Bildungsbewilligung oder der Aufsichtstätigkeit in Lehrbetrieben auf die Anforderungskriterien gemäss **Quali**Carte berufen.",
+      "id": [
+        "187201"
+      ],
+      "lead": "Kantonale Lehraufsicht"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187202]\n[%][%Kurse für Berufsbildnerinnen und Berufsbildner]\nIn verschiedenen Kantonen werden die **Quali**Carte und ihre Anwendung in den Kursen für Berufsbildnerinnen und Berufsbildner vermittelt. Die **Quali**Carte kann dabei als Instrument eingesetzt werden, welches die im Kurs behandelten Themengebiete zusammenfasst.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In verschiedenen Kantonen werden die **Quali**Carte und ihre Anwendung in den Kursen für Berufsbildnerinnen und Berufsbildner vermittelt. Die **Quali**Carte kann dabei als Instrument eingesetzt werden, welches die im Kurs behandelten Themengebiete zusammenfasst.",
+      "id": [
+        "187202"
+      ],
+      "lead": "Kurse für Berufsbildnerinnen und Berufsbildner"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187203]\n[%][%Weiterbildung von Berufsbildnerinnen und Berufsbildnern]\nIn verschiedenen Kantonen werden regelmässig Weiterbildungskurse für Berufsbildnerinnen und Berufsbildner zur Anwendung der **Quali**Carte angeboten. Damit soll die Verbreitung der **Quali**Carte in den Lehrbetrieben gefördert und unterstützt werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In verschiedenen Kantonen werden regelmässig Weiterbildungskurse für Berufsbildnerinnen und Berufsbildner zur Anwendung der **Quali**Carte angeboten. Damit soll die Verbreitung der **Quali**Carte in den Lehrbetrieben gefördert und unterstützt werden.",
+      "id": [
+        "187203"
+      ],
+      "lead": "Weiterbildung von Berufsbildnerinnen und Berufsbildnern"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187204]\n[%][%Umsetzung und Koordination]\nIn enger Zusammenarbeit zwischen Organisationen der Arbeitswelt (OdA) und Kantonen soll die **Quali**Carte in möglichst vielen Lehrbetrieben für die Weiterentwicklung der betrieblichen Ausbildungsqualität angewandt werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In enger Zusammenarbeit zwischen Organisationen der Arbeitswelt (OdA) und Kantonen soll die **Quali**Carte in möglichst vielen Lehrbetrieben für die Weiterentwicklung der betrieblichen Ausbildungsqualität angewandt werden.",
+      "id": [
+        "187204"
+      ],
+      "lead": "Umsetzung und Koordination"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187205]\n[%][%Weiterentwicklung der QualiCarte]\nDie Einführung der **Quali**Carte bei interessierten Partnern und somit die Umsetzung des Konzepts soll koordiniert, begleitet und evaluiert werden. Dies erfolgt nicht aufgrund einer fixen Vorgabe, sondern kann auf verschiedene Weise realisiert werden. Die Einführung kann sowohl von nationalen Verbänden wie auch von Kantonen gefördert werden. Die Umsetzung erfolgt im Sinne der Verbundpartnerschaft in gegenseitiger Absprache. Die gewonnenen Erfahrungen und Erkenntnisse sollen wiederum in die Weiterentwicklung der **Quali**Carte einfliessen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Einführung der **Quali**Carte bei interessierten Partnern und somit die Umsetzung des Konzepts soll koordiniert, begleitet und evaluiert werden. Dies erfolgt nicht aufgrund einer fixen Vorgabe, sondern kann auf verschiedene Weise realisiert werden. Die Einführung kann sowohl von nationalen Verbänden wie auch von Kantonen gefördert werden. Die Umsetzung erfolgt im Sinne der Verbundpartnerschaft in gegenseitiger Absprache. Die gewonnenen Erfahrungen und Erkenntnisse sollen wiederum in die Weiterentwicklung der **Quali**Carte einfliessen.",
+      "id": [
+        "187205"
+      ],
+      "lead": "Weiterentwicklung der QualiCarte"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-13]\n[@id:187206]\n[#Anhang]\n[%4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-13",
+      "id": [
+        "187206"
+      ],
+      "title": "Anhang"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-14]\n[@id:187207]\n[##Hilfsmittel und Links]\n[%4.1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-14",
+      "id": [
+        "187207"
+      ],
+      "title": "Hilfsmittel und Links"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187208]\n[%][%Links]\nwww.qbb.berufsbildung.ch\nDie Internetseite zur Qualität der Berufsbildung. Die Seite bietet Instrumente und wertvolle Hinweise zur Qualitätssicherung und -entwicklung der betrieblichen Ausbildung (**Quali**Carte) und zur Beurteilung der Qualität der überbetrieblichen Kurse (**Qual**üK).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "www.qbb.berufsbildung.ch\nDie Internetseite zur Qualität der Berufsbildung. Die Seite bietet Instrumente und wertvolle Hinweise zur Qualitätssicherung und -entwicklung der betrieblichen Ausbildung (**Quali**Carte) und zur Beurteilung der Qualität der überbetrieblichen Kurse (**Qual**üK).",
+      "id": [
+        "187208"
+      ],
+      "lead": "Links"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187209]\nwww.berufsbildung.ch\nDas Portal zur Berufsbildung. Hier sind alle aktuellen und wichtigen Informationen rund um die Berufsbildung online abrufbar.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "www.berufsbildung.ch\nDas Portal zur Berufsbildung. Hier sind alle aktuellen und wichtigen Informationen rund um die Berufsbildung online abrufbar.",
+      "id": [
+        "187209"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187210]\nwww.sbbk.ch\nHomepage der Schweizerischen Berufsbildungsämter-Konferenz (SBBK). Die Seite stellt aktuelle und wichtige Informationen über die interkantonale Koordination und laufende Projekte in der Berufsbildung zur Verfügung.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "www.sbbk.ch\nHomepage der Schweizerischen Berufsbildungsämter-Konferenz (SBBK). Die Seite stellt aktuelle und wichtige Informationen über die interkantonale Koordination und laufende Projekte in der Berufsbildung zur Verfügung.",
+      "id": [
+        "187210"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187211]\n[%][%Nachschlagewerk]\n**Lexikon der Berufsbildung:** Das Referenzwerk der Berufsbildung. In diesem Taschenbuch werden alle wichtigen Begriffe der Berufsbildung in kurzen und informativen Texten beschrieben. Es enthält rund 230 Stichwörter und schliesst die Grundlagen des Arbeitsverhältnisses mit ein. Das Lexikon ist Teil des Handbuchs betriebliche Grundbildung. Es steht online in drei Sprachen zur Verfügung.\nwww.lex.berufsbildung.ch",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Lexikon der Berufsbildung:** Das Referenzwerk der Berufsbildung. In diesem Taschenbuch werden alle wichtigen Begriffe der Berufsbildung in kurzen und informativen Texten beschrieben. Es enthält rund 230 Stichwörter und schliesst die Grundlagen des Arbeitsverhältnisses mit ein. Das Lexikon ist Teil des Handbuchs betriebliche Grundbildung. Es steht online in drei Sprachen zur Verfügung.\nwww.lex.berufsbildung.ch",
+      "id": [
+        "187211"
+      ],
+      "lead": "Nachschlagewerk"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187212]\n[%][%Checklisten und Formulare]\n**Handbuch betriebliche Grundbildung:** Das branchenunabhängige Arbeitsinstrument für die betriebliche Ausbildung. Es enthält viele nützliche Hilfsmittel wie Checklisten und Formulare, die vom Auswahlverfahren bis hin zum Qualifikationsverfahren die praktische und administrative Betreuungsarbeit erleichtern.\nwww.hb.berufsbildung.ch",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Handbuch betriebliche Grundbildung:** Das branchenunabhängige Arbeitsinstrument für die betriebliche Ausbildung. Es enthält viele nützliche Hilfsmittel wie Checklisten und Formulare, die vom Auswahlverfahren bis hin zum Qualifikationsverfahren die praktische und administrative Betreuungsarbeit erleichtern.\nwww.hb.berufsbildung.ch",
+      "id": [
+        "187212"
+      ],
+      "lead": "Checklisten und Formulare"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187213]\n[%][%Merkblätter]\n**Die offiziellen Merkblätter der Kantone:** In Zusammenarbeit mit Arbeitsgruppen, Fachgremien und dem Bundesamt für Berufsbildung und Technologie (BBT) erarbeitet. Die Merkblätter sind auf die Praxis ausgerichtet, enthalten kompakte Informationen zum Thema und zeigen Handlungsmöglichkeiten auf. Wichtige Adressen und Links sind am Schluss aufgeführt. Teils sind die Merkblätter im «Handbuch betriebliche Grundbildung» integriert. Sie werden laufend aktualisiert und sind kostenlos verfügbar.\nwww.mb.berufsbildung.ch",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Die offiziellen Merkblätter der Kantone:** In Zusammenarbeit mit Arbeitsgruppen, Fachgremien und dem Bundesamt für Berufsbildung und Technologie (BBT) erarbeitet. Die Merkblätter sind auf die Praxis ausgerichtet, enthalten kompakte Informationen zum Thema und zeigen Handlungsmöglichkeiten auf. Wichtige Adressen und Links sind am Schluss aufgeführt. Teils sind die Merkblätter im «Handbuch betriebliche Grundbildung» integriert. Sie werden laufend aktualisiert und sind kostenlos verfügbar.\nwww.mb.berufsbildung.ch",
+      "id": [
+        "187213"
+      ],
+      "lead": "Merkblätter"
+    }
+  }
+]

@@ -1,0 +1,3691 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:230947]\n[#Complex Tests]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/englisch-hilfen/web-resources/images/englischhilfen_grammatik_cover.png]\n[@externalId:e-complex-tests_uwllltlhepqb]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "230947"
+      ],
+      "title": "Complex Tests",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/englisch-hilfen/web-resources/images/englischhilfen_grammatik_cover.png"
+      ],
+      "externalId": [
+        "e-complex-tests_uwllltlhepqb"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:230948]\n[%Nr. 4464]\n[!Verneine die vorgegebenen Sätze.]\n===\n1. We are from Nigeria.\n[$We are not from Nigeria.][@shortAnswer]\n===\n2.They hate fish.\n[$They do not hate fish.][@shortAnswer]\n===\n3. She wants to become a superstar.\n[$She does not want to become a superstar.][@shortAnswer]\n===\n4.The sun goes around the earth.\n[$The sun does not go around the earth.][@shortAnswer]\n===\n5. Dave believes in ghosts.\n[$Dave does not believe in ghosts.][@shortAnswer]\n===\n6. Jane and Sue teach Spanish.\n[$Jane and Sue don't teach Spanish.][@shortAnswer]\n===\n7. She flies to Sofia every April.\n[$She does not fly to Sofia every April.][@shortAnswer]\n===\n8. The phone rings.\n[$The phone does not ring.][@shortAnswer]\n===\n9. The banks close at 2 o'clock.\n[$The banks do not close at 2 o'clock.][@shortAnswer]\n===\n10. Anne has lunch at home.\n[$Anne does not have lunch at home.][@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Nr. 4464",
+      "instruction": "Verneine die vorgegebenen Sätze.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. We are from Nigeria.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "We are not from Nigeria.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2.They hate fish.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "They do not hate fish.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "3. She wants to become a superstar.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "She does not want to become a superstar.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "4.The sun goes around the earth.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "The sun does not go around the earth.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "5. Dave believes in ghosts.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Dave does not believe in ghosts.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "6. Jane and Sue teach Spanish.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Jane and Sue don't teach Spanish.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "7. She flies to Sofia every April.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "She does not fly to Sofia every April.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "8. The phone rings.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "The phone does not ring.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "9. The banks close at 2 o'clock.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "The banks do not close at 2 o'clock.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "10. Anne has lunch at home.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Anne does not have lunch at home.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "230948"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:230949]\n[!Setze die in Klammern stehenden Verben in die Lücken.]\n[%Nr. 4464]\n\n1. Ally [_cannot read][!can/not/to read] his handwriting.\n2. I [_enjoy][!to enjoy] travelling.\n3. David usually [_speaks][!to speak] French on the telephone.\n4. They [_have][!to have] a nice garden.\n5. Stan [_gathers][!to gather] Pat and Steve [_are][!to be] rather popular.\n6. My aunt often [_jumps][!to jump] queues.\n7. Water [_expands][!to expand] when it [_freezes][!to freeze].\n8. She [_tries][!to try] to lose weight.\n9. Hawaii [_is][!to be] in the Pacific Ocean.\n10. We sometimes [_look][!to look] around the shops.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "1. Ally {0} his handwriting.\n2. I {1} travelling.\n3. David usually {2} French on the telephone.\n4. They {3} a nice garden.\n5. Stan {4} Pat and Steve {5} rather popular.\n6. My aunt often {6} queues.\n7. Water {7} when it {8}.\n8. She {9} to lose weight.\n9. Hawaii {10} in the Pacific Ocean.\n10. We sometimes {11} around the shops.",
+      "item": "Nr. 4464",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "230949"
+      ],
+      "instruction": "Setze die in Klammern stehenden Verben in die Lücken.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cannot read"
+          ],
+          "hint": "",
+          "instruction": "can/not/to read",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "enjoy"
+          ],
+          "hint": "",
+          "instruction": "to enjoy",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "speaks"
+          ],
+          "hint": "",
+          "instruction": "to speak",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "have"
+          ],
+          "hint": "",
+          "instruction": "to have",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "gathers"
+          ],
+          "hint": "",
+          "instruction": "to gather",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "are"
+          ],
+          "hint": "",
+          "instruction": "to be",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "jumps"
+          ],
+          "hint": "",
+          "instruction": "to jump",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "expands"
+          ],
+          "hint": "",
+          "instruction": "to expand",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "freezes"
+          ],
+          "hint": "",
+          "instruction": "to freeze",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "tries"
+          ],
+          "hint": "",
+          "instruction": "to try",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "is"
+          ],
+          "hint": "",
+          "instruction": "to be",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "look"
+          ],
+          "hint": "",
+          "instruction": "to look",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--]\n[@id:230950]\n[%Nr. 4464]\n[!Welche Antworten sind richtig?]\n===\n[!1. Was sind typische Signalwörter für das Simple Present?]\n[-just]\n[+normally]\n[+seldom]\n[-two weeks ago]\n[+usually]\n[-yet]\n===\n[!2. Welche Verbformen sind richtig gebildet?]\n[+she agrees]\n[+she annoys]\n[+she cries]\n[-she hurrys]\n[-she kissis]\n[+she rushes]\n[-she teachs]\n[-she worrys]\n===\n[!3. Welche Handlungen kennzeichnen das Simple Present?]\n[+allgemeine Aussagen]\n[+feststehende Handlungen (auch Zukunft)]\n[-Handlungen geschehen im Moment des Sprechens]\n[-Handlungen haben in der Vergangenheit begonnen und dauern jetzt noch an]\n[-Handlungen sind abgeschlossen]\n[+Handlungsfolgen]\n[+regelmäßige, wiederholte Handlungen]\n===\n[!4. Welche Sätze/Fragen stehen im Simple Present?]\n[+Are you Greek?]\n[+Do you have a brother?]\n[-I don't usually have lunch at school.]\n[-Martin has been to Montreal.]\n[-Peggy was on holiday.]\n[+The largest number of people lives in Brooklyn.]\n[+We have two cars.]\n===",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "Nr. 4464",
+      "instruction": "Welche Antworten sind richtig?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "1. Was sind typische Signalwörter für das Simple Present?",
+          "responses": [
+            {
+              "response": "just",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "normally",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "seldom",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "two weeks ago",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "usually",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "yet",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "2. Welche Verbformen sind richtig gebildet?",
+          "responses": [
+            {
+              "response": "she agrees",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she annoys",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she cries",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she hurrys",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she kissis",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she rushes",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she teachs",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "she worrys",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "3. Welche Handlungen kennzeichnen das Simple Present?",
+          "responses": [
+            {
+              "response": "allgemeine Aussagen",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "feststehende Handlungen (auch Zukunft)",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Handlungen geschehen im Moment des Sprechens",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Handlungen haben in der Vergangenheit begonnen und dauern jetzt noch an",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Handlungen sind abgeschlossen",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Handlungsfolgen",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "regelmäßige, wiederholte Handlungen",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "4. Welche Sätze/Fragen stehen im Simple Present?",
+          "responses": [
+            {
+              "response": "Are you Greek?",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Do you have a brother?",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "I don't usually have lunch at school.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Martin has been to Montreal.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Peggy was on holiday.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "The largest number of people lives in Brooklyn.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "We have two cars.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "230950"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:230951]\n[!Bilde Fragen]\n[%Nr. 4464]\n===\n1. your parents / to wait up for you\n[$Do your parents wait up for you?][@shortAnswer]\n===\n2. who / to help / Roger / in the shop (Wer hilft Roger im Laden?)\n[$Who helps Roger in the shop?][@shortAnswer]\n===\n3. what / can / we / to do / to find / the stolen bike\n[$What can we do to find the stolen bike?][@shortAnswer]\n===\n4. how / you / to feel\n[$How do you feel?][@shortAnswer]\n===\n5. can / I / to get / you / a glass of water\n[$Can I get you a glass of water?][@shortAnswer]\n===\n6. why / not to clean / you / your shoes\n[$Why don't you clean your shoes?][@shortAnswer]\n===\n7. may / I / to come in\n[$May I come in?][@shortAnswer]\n===\n8. who / to help / Roger / in the shop (Wem hilft Roger im Laden?)\n[$Who does Roger help in the shop?][@shortAnswer]\n===\n9. you / to speak / any Roman language\n[$Do you speak any Roman language?][@shortAnswer]\n===\n10. Pat / not to come / with us\n[$Doesn't Pat come with us?][@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Nr. 4464",
+      "instruction": "Bilde Fragen",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. your parents / to wait up for you",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Do your parents wait up for you?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2. who / to help / Roger / in the shop (Wer hilft Roger im Laden?)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Who helps Roger in the shop?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "3. what / can / we / to do / to find / the stolen bike",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "What can we do to find the stolen bike?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "4. how / you / to feel",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "How do you feel?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "5. can / I / to get / you / a glass of water",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Can I get you a glass of water?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "6. why / not to clean / you / your shoes",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Why don't you clean your shoes?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "7. may / I / to come in",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "May I come in?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "8. who / to help / Roger / in the shop (Wem hilft Roger im Laden?)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Who does Roger help in the shop?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "9. you / to speak / any Roman language",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Do you speak any Roman language?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "10. Pat / not to come / with us",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Doesn't Pat come with us?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "230951"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:230952]\n[!Schreibe die Sätze und benutze die Kurz- oder Langform, je nachdem was nicht dasteht.]\n[%Nr. 4464]\n===\n1. You shouldn't eat so much meat.\n[$You should not eat so much meat.][@shortAnswer]\n===\n2. We're late.\n[$We are late.][@shortAnswer]\n===\n3. He isn't from Peking.\n[$He is not from Peking.][@shortAnswer]\n===\n4. I'm not Spanish.\n[$I am not Spanish.][@shortAnswer]\n===\n5. He cannot come with us.\n[$He can't come with us.][@shortAnswer]\n===\n6. She does not like rice.\n[$She doesn't like rice.][@shortAnswer]\n===\n7. That is a pity.\n[$That's a pity.][@shortAnswer]\n===\n8. They don't walk to school.\n[$They do not walk to school.][@shortAnswer]\n===\n9. They are in the attic.\n[$They're in the attic.][@shortAnswer]\n===\n10. She need not come.\n[$She needn't come.][@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Nr. 4464",
+      "instruction": "Schreibe die Sätze und benutze die Kurz- oder Langform, je nachdem was nicht dasteht.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. You shouldn't eat so much meat.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "You should not eat so much meat.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2. We're late.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "We are late.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "3. He isn't from Peking.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "He is not from Peking.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "4. I'm not Spanish.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "I am not Spanish.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "5. He cannot come with us.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "He can't come with us.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "6. She does not like rice.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "She doesn't like rice.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "7. That is a pity.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "That's a pity.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "8. They don't walk to school.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "They do not walk to school.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "9. They are in the attic.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "They're in the attic.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "10. She need not come.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "She needn't come.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "230952"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:230953]\n[%Nr. 4464]\n[!Setze die richtigen Verbformen ein.]\n\n1. Tomorrow [+is][-are][-be][-am] Sunday.\n2. He [+should][-schould] be at home by 10 o'clock.\n3. I usually [+go][-goes][-gos] to bed at 11 o'clock.\n4. She might [+arrive][-arrives][-arrivs] at Gatwick airport.\n5. The museum [+doesn't][-does'nt][-dosn't][-don't] open on Mondays.\n6. It [+may][-mays] rain later.\n7. What time [+does][-dos][-do] the film begin?\n8. The lesson [+starts][-start] at 8.30.\n9. Anne and Peggy [-is][+are][-be][-am] too late.\n10. They [+don't][-do'nt][-doesn't] wear school uniform.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Tomorrow {0} Sunday.\n2. He {1} be at home by 10 o'clock.\n3. I usually {2} to bed at 11 o'clock.\n4. She might {3} at Gatwick airport.\n5. The museum {4} open on Mondays.\n6. It {5} rain later.\n7. What time {6} the film begin?\n8. The lesson {7} at 8.30.\n9. Anne and Peggy {8} too late.\n10. They {9} wear school uniform.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "be",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "am",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "should",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "schould",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "go",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "goes",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "gos",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "arrive",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "arrives",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "arrivs",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "doesn't",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "does'nt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "dosn't",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "don't",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "may",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "mays",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "does",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "dos",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "do",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "starts",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "start",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "be",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "am",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "don't",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "do'nt",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "doesn't",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "230953"
+      ],
+      "item": "Nr. 4464",
+      "instruction": "Setze die richtigen Verbformen ein."
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:230954]\n[!Frage nach den unterstrichenen Satzteilen.]\n[%Nr.4464]\n===\n1. I like cycling __because it's fun.__\n[$Why do you like cycling?][@shortAnswer]\n===\n2. Lisa talks about __Danny.__\n[$Who does Lisa talk about?][@shortAnswer]\n===\n3. The child plays __the trumpet.__\n[$What does the child play?][@shortAnswer]\n===\n4. Susan is __25 years old.__\n[$How old is Susan?][@shortAnswer]\n===\n5. They usually go on holiday __in July.__\n[$When do they usually go on holiday?][@shortAnswer]\n===\n6. Jerry comes __from Leeds.__\n[$Where does Jerry come from?][@shortAnswer]\n===\n7. We write to __four__ pen friends.\n[$How many pen friends do we write to?][@shortAnswer]\n===\n8. Mel works __in an office.__\n[$Where does Mel work?][@shortAnswer]\n===\n9. He works __60__ hours a week.\n[$How many hours a week does he work?][@shortAnswer]\n===\n10. __Pamela__ does not like squash.\n[$Who does not like squash?][@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Nr.4464",
+      "instruction": "Frage nach den unterstrichenen Satzteilen.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. I like cycling __because it's fun.__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Why do you like cycling?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2. Lisa talks about __Danny.__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Who does Lisa talk about?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "3. The child plays __the trumpet.__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "What does the child play?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "4. Susan is __25 years old.__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "How old is Susan?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "5. They usually go on holiday __in July.__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "When do they usually go on holiday?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "6. Jerry comes __from Leeds.__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Where does Jerry come from?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "7. We write to __four__ pen friends.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "How many pen friends do we write to?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "8. Mel works __in an office.__",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Where does Mel work?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "9. He works __60__ hours a week.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "How many hours a week does he work?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "10. __Pamela__ does not like squash.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Who does not like squash?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "230954"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:230955]\n[%Nr. 4465]\n[!Setze die in Klammern stehenden Verben in die Lücken.]\n\n1. Look! The boys [_are running][!to run] to the playground.\n2. Tom never [_writes][!to write] picture postcards.\n3. We [_are playing][!to play] a computer game at the moment.\n4. Pat often [_goes][!to go] to concerts.\n5. Listen! Anne and Susan [_are singing][!to sing] a song.\n6. I [_am watching][!to watch] a nice film now.\n7. Angela sometimes [_visits][!to visit] a museum.\n8. They [_are][!to be] from Tokyo.\n9. The cat seldom [_sleeps][!to sleep] on the sofa.\n10. Every afternoon Jack [_has][!to have] a cup of tea.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "1. Look! The boys {0} to the playground.\n2. Tom never {1} picture postcards.\n3. We {2} a computer game at the moment.\n4. Pat often {3} to concerts.\n5. Listen! Anne and Susan {4} a song.\n6. I {5} a nice film now.\n7. Angela sometimes {6} a museum.\n8. They {7} from Tokyo.\n9. The cat seldom {8} on the sofa.\n10. Every afternoon Jack {9} a cup of tea.",
+      "item": "Nr. 4465",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "230955"
+      ],
+      "instruction": "Setze die in Klammern stehenden Verben in die Lücken.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "are running"
+          ],
+          "hint": "",
+          "instruction": "to run",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "writes"
+          ],
+          "hint": "",
+          "instruction": "to write",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "are playing"
+          ],
+          "hint": "",
+          "instruction": "to play",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "goes"
+          ],
+          "hint": "",
+          "instruction": "to go",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "are singing"
+          ],
+          "hint": "",
+          "instruction": "to sing",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "am watching"
+          ],
+          "hint": "",
+          "instruction": "to watch",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "visits"
+          ],
+          "hint": "",
+          "instruction": "to visit",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "are"
+          ],
+          "hint": "",
+          "instruction": "to be",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sleeps"
+          ],
+          "hint": "",
+          "instruction": "to sleep",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "has"
+          ],
+          "hint": "",
+          "instruction": "to have",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:230956]\n[%Nr. 4465]\n[!Verneine die vorgegebenen Sätze.]\n===\n1. I collect picture postcards.[@shortAnswer]\n[$I do not collect picture postcards.]\n===\n2. I am repairing my bike.[@shortAnswer]\n[$I am not repairing my bike.]\n===\n3. She does magic tricks.[@shortAnswer]\n[$She does not do magic tricks.]\n===\n4. Our teacher checks the homework every day.[@shortAnswer]\n[$Our teacher does not check the homework every day.]\n===\n5. Sam and Max live with their mother.[@shortAnswer]\n[$Sam and Max do not live with their mother.]\n===\n6. The dog is sitting under the tree.[@shortAnswer]\n[$The dog is not sitting under the tree.]\n===\n7. You are having fun.[@shortAnswer]\n[$You are not having fun.]\n===\n8. They play chess in a club.[@shortAnswer]\n[$They do not play chess in a club.]\n===\n9. He is looking at a photo.[@shortAnswer]\n[$He is not looking at a photo.]\n===\n10. Cathy forgets her homework.[@shortAnswer]\n[$Cathy does not forget her homework.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Nr. 4465",
+      "instruction": "Verneine die vorgegebenen Sätze.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. I collect picture postcards.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "I do not collect picture postcards.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2. I am repairing my bike.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "I am not repairing my bike.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "3. She does magic tricks.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "She does not do magic tricks.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "4. Our teacher checks the homework every day.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Our teacher does not check the homework every day.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "5. Sam and Max live with their mother.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Sam and Max do not live with their mother.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "6. The dog is sitting under the tree.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "The dog is not sitting under the tree.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "7. You are having fun.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "You are not having fun.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "8. They play chess in a club.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "They do not play chess in a club.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "9. He is looking at a photo.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "He is not looking at a photo.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "10. Cathy forgets her homework.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Cathy does not forget her homework.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "230956"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--]\n[@id:230957]\n[%Nr. 4465]\n[!Welche Antworten sind richtig?]\n===\n[!1. Welche Sätze/Fragen stehen im Simple Present?]\n[+Do you like tea?]\n[+He is British.]\n[-She dropped a glass of milk.]\n[-She is sitting on a chair.]\n[+We don't go by bus.]\n===\n[!2. Welche Sätze/Fragen stehen im Present Progressive?]\n[-He does not make the beds.]\n[-I often take photos.]\n[+Is the cat playing in the garden?]\n[+She's doing her homework.]\n[+They are not cleaning their room.]\n[-We have a new car.]\n===\n[!3. Was sind typische Signalwörter für das Present Progressive?]\n[+at the moment]\n[-every day]\n[+Listen!]\n[+now]\n[-often]\n[-sometimes]\n===\n[!4. Was sind typische Signalwörter für das Simple Present?]\n[-at the moment]\n[+every day]\n[-now]\n[+often]\n[+sometimes]\n[-yesterday]\n===\n[!5. Welche Verbformen kennzeichnen das Simple Present?]\n[-are + Infinitiv + -ing]\n[+Infinitiv]\n[-Infinitiv + -ed]\n[-Infinitiv + -ing]\n[+Infinitiv + -s]\n===\n[!6. Welche Verbformen kennzeichnen das Present Progressive?]\n[+am + Infinitiv + -ing]\n[+are + Infinitiv + -ing]\n[-Infinitiv]\n[-Infinitiv + -ing]\n[+is + Infinitiv + -ing]\n[+to be + Infinitiv + -ing]\n===",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "Nr. 4465",
+      "instruction": "Welche Antworten sind richtig?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "1. Welche Sätze/Fragen stehen im Simple Present?",
+          "responses": [
+            {
+              "response": "Do you like tea?",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "He is British.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "She dropped a glass of milk.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "She is sitting on a chair.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "We don't go by bus.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "2. Welche Sätze/Fragen stehen im Present Progressive?",
+          "responses": [
+            {
+              "response": "He does not make the beds.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "I often take photos.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Is the cat playing in the garden?",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "She's doing her homework.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "They are not cleaning their room.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "We have a new car.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "3. Was sind typische Signalwörter für das Present Progressive?",
+          "responses": [
+            {
+              "response": "at the moment",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "every day",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Listen!",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "now",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "often",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "sometimes",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "4. Was sind typische Signalwörter für das Simple Present?",
+          "responses": [
+            {
+              "response": "at the moment",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "every day",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "now",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "often",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "sometimes",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "yesterday",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "5. Welche Verbformen kennzeichnen das Simple Present?",
+          "responses": [
+            {
+              "response": "are + Infinitiv + -ing",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Infinitiv",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Infinitiv + -ed",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Infinitiv + -ing",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Infinitiv + -s",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "6. Welche Verbformen kennzeichnen das Present Progressive?",
+          "responses": [
+            {
+              "response": "am + Infinitiv + -ing",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "are + Infinitiv + -ing",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Infinitiv",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Infinitiv + -ing",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "is + Infinitiv + -ing",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "to be + Infinitiv + -ing",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "230957"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--]\n[@id:230958]\n[%Nr. 4465]\n[!Welche Zeitform wird bei folgenden Handlungen verwendet?]\n===\n[!1. allgemeine Aussagen]\n[-Present Progressive]\n[+Simple Present]\n===\n[!2. Handlungsfolgen in der Gegenwart]\n[-Present Progressive]\n[+Simple Present]\n===\n[!3. regelmäßig wiederholte Handlungen]\n[-Present Progressive]\n[+Simple Present]\n===\n[!4. gewohnheitsmäßige Handlungen]\n[-Present Progressive]\n[+Simple Present]\n===\n[!5. Handlungen geschehen im Moment des Sprechens]\n[+Present Progressive]\n[-Simple Present]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "Nr. 4465",
+      "instruction": "Welche Zeitform wird bei folgenden Handlungen verwendet?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "1. allgemeine Aussagen",
+          "choices": [
+            {
+              "choice": "Present Progressive",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Simple Present",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "2. Handlungsfolgen in der Gegenwart",
+          "choices": [
+            {
+              "choice": "Present Progressive",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Simple Present",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "3. regelmäßig wiederholte Handlungen",
+          "choices": [
+            {
+              "choice": "Present Progressive",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Simple Present",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "4. gewohnheitsmäßige Handlungen",
+          "choices": [
+            {
+              "choice": "Present Progressive",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Simple Present",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "5. Handlungen geschehen im Moment des Sprechens",
+          "choices": [
+            {
+              "choice": "Present Progressive",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Simple Present",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "230958"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--]\n[@id:230959]\n[%Nr. 4465]\n[!Signalwörter in Sätzen – Welcher Satz ist richtig?]\n===\n[!1.]\n[+Timmy is asking a lot of questions now.]\n[-Timmy is sometimes asking a lot of questions.]\n===\n[!2.]\n[+Every afternoon mum makes a cup of tea.]\n[-Listen! Mum makes a cup of tea.]\n===\n[!3.]\n[+He often reads a book.]\n[-He reads a book now.]\n===\n[!4.]\n[-Listen! We play the drums.]\n[+We never play the drums.]\n===\n[!5.]\n[+Dorothy helps with the cooking in the afternoons.]\n[-Look! Dorothy helps with the cooking.]\n===\n[!6.]\n[-Every day the boy is making a snowball.]\n[+Look! The boy is making a snowball.]\n===\n[!7.]\n[-Andy repairs things at the moment.]\n[+Andy sometimes repairs things.]\n===\n[!8.]\n[+They always go to school by bus.]\n[-They go to school by bus at the moment.]\n===\n[!9.]\n[+Look! Stan is doing magic tricks.]\n[-Stan is usually doing magic tricks.]\n===\n[!10.]\n[+Listen! The girls are making a lot of noise.]\n[-The girls are often making a lot of noise.]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "Nr. 4465",
+      "instruction": "Signalwörter in Sätzen – Welcher Satz ist richtig?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "1.",
+          "choices": [
+            {
+              "choice": "Timmy is asking a lot of questions now.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Timmy is sometimes asking a lot of questions.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "2.",
+          "choices": [
+            {
+              "choice": "Every afternoon mum makes a cup of tea.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Listen! Mum makes a cup of tea.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "3.",
+          "choices": [
+            {
+              "choice": "He often reads a book.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "He reads a book now.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "4.",
+          "choices": [
+            {
+              "choice": "Listen! We play the drums.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "We never play the drums.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "5.",
+          "choices": [
+            {
+              "choice": "Dorothy helps with the cooking in the afternoons.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Look! Dorothy helps with the cooking.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "6.",
+          "choices": [
+            {
+              "choice": "Every day the boy is making a snowball.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Look! The boy is making a snowball.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "7.",
+          "choices": [
+            {
+              "choice": "Andy repairs things at the moment.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Andy sometimes repairs things.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "8.",
+          "choices": [
+            {
+              "choice": "They always go to school by bus.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "They go to school by bus at the moment.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "9.",
+          "choices": [
+            {
+              "choice": "Look! Stan is doing magic tricks.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Stan is usually doing magic tricks.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "10.",
+          "choices": [
+            {
+              "choice": "Listen! The girls are making a lot of noise.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "The girls are often making a lot of noise.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "230959"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:230960]\n[%Nr. 4465]\n[!Setze die richtigen Verbformen ein.]\n\n1. Sandy often [+forgets][-forget] her homework.\n2. Pat [+drives][-drive] a school bus.\n3. Anne and Tom [+are][-am][-be][-is] feeding the cows.\n4. I [-are][+am][-be][-is] from New Zealand.\n5. I [-are][+am][-be][-is] preparing dinner.\n6. [+Do][-Does] they walk to school?\n7. The baby [-are][-am][-be][+is] crying.\n8. Andy [+is][-are][-am] washing his pullover.\n9. We [+are][-am][-be][-is] drawing a picture.\n10. Our friend sometimes [+goes][-go]to the supermarket.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Sandy often {0} her homework.\n2. Pat {1} a school bus.\n3. Anne and Tom {2} feeding the cows.\n4. I {3} from New Zealand.\n5. I {4} preparing dinner.\n6. {5} they walk to school?\n7. The baby {6} crying.\n8. Andy {7} washing his pullover.\n9. We {8} drawing a picture.\n10. Our friend sometimes {9}to the supermarket.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "forgets",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "forget",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "drives",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "drive",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "am",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "be",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "am",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "be",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "am",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "be",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Do",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Does",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "am",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "be",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "am",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "am",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "be",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "goes",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "go",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "230960"
+      ],
+      "item": "Nr. 4465",
+      "instruction": "Setze die richtigen Verbformen ein."
+    }
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--]\n[@id:230961]\n[%Nr. 4468]\n[!Welche Antworten sind richtig?]\n===\n[!1. Welches sind typische Signalwörter für das Simple Present?]\n[-already]\n[-at the moment]\n[+every day]\n[-last week]\n[+normally]\n[-now]\n[+seldom]\n[+usually]\n===\n[!2. Welches sind typische Signalwörter für das Present Progressive?]\n[-ago]\n[+at the moment]\n[-just]\n[+Listen!]\n[+Look!]\n[-never]\n[+now]\n[-yet]\n===\n[!3. Welche Sätze/Fragen stehen im Simple Present?]\n[-Anne is always coming late.]\n[+First I get up then I have breakfast.]\n[-He's just finished the letter.]\n[+I'm here.]\n[-I was having breakfast.]\n[+She lives in Sofia.]\n===\n[!4. Welche Sätze/Fragen stehen im Present Progressive?]\n[+He's having a shower.]\n[-He had a shower in the morning.]\n[-He often has a shower in the morning.]\n[-He was sitting on the beach.]\n[+We're thinking of buying a new car.]\n===",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "Nr. 4468",
+      "instruction": "Welche Antworten sind richtig?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "1. Welches sind typische Signalwörter für das Simple Present?",
+          "responses": [
+            {
+              "response": "already",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "at the moment",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "every day",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "last week",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "normally",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "now",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "seldom",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "usually",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "2. Welches sind typische Signalwörter für das Present Progressive?",
+          "responses": [
+            {
+              "response": "ago",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "at the moment",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "just",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Listen!",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Look!",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "never",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "now",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "yet",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "3. Welche Sätze/Fragen stehen im Simple Present?",
+          "responses": [
+            {
+              "response": "Anne is always coming late.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "First I get up then I have breakfast.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "He's just finished the letter.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "I'm here.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "I was having breakfast.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "She lives in Sofia.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "4. Welche Sätze/Fragen stehen im Present Progressive?",
+          "responses": [
+            {
+              "response": "He's having a shower.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "He had a shower in the morning.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "He often has a shower in the morning.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "He was sitting on the beach.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "We're thinking of buying a new car.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "230961"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:230962]\n[%Nr. 4468]\n[!Setze die richtigen Verbformen ein.]\n\n1. He [+is living][-lives] with his grandmother until his mother comes back from China.\n2. I have to go now. [+It's getting][-It gets] dark.\n3. Hey John! [+Are you thinking][-Do you think] about Peggy?\n4. I [+think][-am thinking] his brother is football-crazy.\n5. My father [+prefers][-is prefering] tea for breakfast.\n6. This cake [+tastes][-is tasting] wonderful.\n7. He [+is reading][-reads] the newspaper at the moment.\n8. We [+hear][-are hearing] music in the street.\n9. [+Does your little brother believe][-Is your little brother believing] in ghosts?\n10. [+I agree][-I am agreeing] with you.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. He {0} with his grandmother until his mother comes back from China.\n2. I have to go now. {1} dark.\n3. Hey John! {2} about Peggy?\n4. I {3} his brother is football-crazy.\n5. My father {4} tea for breakfast.\n6. This cake {5} wonderful.\n7. He {6} the newspaper at the moment.\n8. We {7} music in the street.\n9. {8} in ghosts?\n10. {9} with you.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is living",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "lives",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "It's getting",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "It gets",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Are you thinking",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Do you think",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "think",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "am thinking",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "prefers",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "is prefering",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "tastes",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "is tasting",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is reading",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "reads",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "hear",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "are hearing",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Does your little brother believe",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Is your little brother believing",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "I agree",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "I am agreeing",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "230962"
+      ],
+      "item": "Nr. 4468",
+      "instruction": "Setze die richtigen Verbformen ein."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--]\n[@id:230963]\n[%Nr. 4468]\n[!Welche Handlungen stehen in welcher Zeitform?]\n===\n[!1. Welche der folgenden Handlungen steht im Simple Present?]\n[-Handlung geschieht im Moment des Sprechens]\n[-Handlung ist in der Vergangenheit abgeschlossen]\n[+regelmäßig wiederholte Handlung]\n===\n[!2. Welche der folgenden Handlungen steht im Simple Present?]\n[-Handlung begann in der Vergangenheit und dauert bis in die Gegenwart an]\n[+Handlungsfolgen in der Gegenwart]\n[-Plan in der Zukunft]\n===\n[!3. Welche der folgenden Handlungen steht im Present Progressive?]\n[+Handlung geschieht im Moment des Sprechens]\n[-Handlung wurde gerade abgeschlossen]\n[-regelmäßig wiederholte Handlung]\n===\n[!4. Welche der folgenden Handlungen steht im Simple Present?]\n[+allgemeine Aussage]\n[-feststehender Plan in der Zukunft]\n[-Resultat einer Handlung ist wichtig]\n===\n[!5. Welche der folgenden Handlungen steht im Present Progressive?]\n[+Handlungen, die nur vorübergehend stattfinden]\n[-Handlungsfolgen in der Gegenwart]\n[-Resultat einer Handlung ist wichtig]\n===\n[!6. Welche der folgenden Handlungen steht im Simple Present?]\n[+feststehende Handlung (auch in der Zukunft, z.B. Fahrplan)]\n[-Handlung fand gerade statt, als ein neues Ereignis eintrat]\n[-spontane Handlung in der Zukunft]\n===\n[!7. Welche der folgenden Handlungen steht im Present Progressive?]\n[-allgemeine Aussage]\n[-spontane Handlung in der Zukunft]\n[+zukünftige Handlung ist fest geplant]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "Nr. 4468",
+      "instruction": "Welche Handlungen stehen in welcher Zeitform?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "1. Welche der folgenden Handlungen steht im Simple Present?",
+          "choices": [
+            {
+              "choice": "Handlung geschieht im Moment des Sprechens",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Handlung ist in der Vergangenheit abgeschlossen",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "regelmäßig wiederholte Handlung",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "2. Welche der folgenden Handlungen steht im Simple Present?",
+          "choices": [
+            {
+              "choice": "Handlung begann in der Vergangenheit und dauert bis in die Gegenwart an",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Handlungsfolgen in der Gegenwart",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Plan in der Zukunft",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "3. Welche der folgenden Handlungen steht im Present Progressive?",
+          "choices": [
+            {
+              "choice": "Handlung geschieht im Moment des Sprechens",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Handlung wurde gerade abgeschlossen",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "regelmäßig wiederholte Handlung",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "4. Welche der folgenden Handlungen steht im Simple Present?",
+          "choices": [
+            {
+              "choice": "allgemeine Aussage",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "feststehender Plan in der Zukunft",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Resultat einer Handlung ist wichtig",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "5. Welche der folgenden Handlungen steht im Present Progressive?",
+          "choices": [
+            {
+              "choice": "Handlungen, die nur vorübergehend stattfinden",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Handlungsfolgen in der Gegenwart",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Resultat einer Handlung ist wichtig",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "6. Welche der folgenden Handlungen steht im Simple Present?",
+          "choices": [
+            {
+              "choice": "feststehende Handlung (auch in der Zukunft, z.B. Fahrplan)",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Handlung fand gerade statt, als ein neues Ereignis eintrat",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "spontane Handlung in der Zukunft",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "7. Welche der folgenden Handlungen steht im Present Progressive?",
+          "choices": [
+            {
+              "choice": "allgemeine Aussage",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "spontane Handlung in der Zukunft",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "zukünftige Handlung ist fest geplant",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "230963"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:230964]\n[%Nr. 4468]\n[!Setze die Verben entweder im Simple Present oder im Present Progressive ein.]\n\n1. Anne [_has][!to have] red hair.\n2. My history teacher [_talks][!to talk] too much.\n3. Listen! They [_are coming][!to come] home.\n4. The bus to New York [_leaves][!to leave] at 6.30.\n5. Right now Christine [_is working][!to work] on the computer.\n6. Hey! What [_are][!to be] you [_doing][!to do] there?\n7. I usually [_work][!to work] as a teacher in Germany, but this summer I [_am working][!to work] as a language assistant in Rome.\n8. John often [_takes][!to take] sugar in his coffee.\n9. The flowers [_smell][!to smell] beautiful.\n10. I [_am][!to be] thirsty.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "1. Anne {0} red hair.\n2. My history teacher {1} too much.\n3. Listen! They {2} home.\n4. The bus to New York {3} at 6.30.\n5. Right now Christine {4} on the computer.\n6. Hey! What {5} you {6} there?\n7. I usually {7} as a teacher in Germany, but this summer I {8} as a language assistant in Rome.\n8. John often {9} sugar in his coffee.\n9. The flowers {10} beautiful.\n10. I {11} thirsty.",
+      "item": "Nr. 4468",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "230964"
+      ],
+      "instruction": "Setze die Verben entweder im Simple Present oder im Present Progressive ein.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "has"
+          ],
+          "hint": "",
+          "instruction": "to have",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "talks"
+          ],
+          "hint": "",
+          "instruction": "to talk",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "are coming"
+          ],
+          "hint": "",
+          "instruction": "to come",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "leaves"
+          ],
+          "hint": "",
+          "instruction": "to leave",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "is working"
+          ],
+          "hint": "",
+          "instruction": "to work",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "are"
+          ],
+          "hint": "",
+          "instruction": "to be",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "doing"
+          ],
+          "hint": "",
+          "instruction": "to do",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "work"
+          ],
+          "hint": "",
+          "instruction": "to work",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "am working"
+          ],
+          "hint": "",
+          "instruction": "to work",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "takes"
+          ],
+          "hint": "",
+          "instruction": "to take",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "smell"
+          ],
+          "hint": "",
+          "instruction": "to smell",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "am"
+          ],
+          "hint": "",
+          "instruction": "to be",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:230965]\n[%Nr. 4468]\n[!Verneine die vorgegebenen Sätze.]\n===\n1. I like fish.\n[$I do not like fish.][@shortAnswer]\n===\n2. She is good at sports.\n[$She is not good at sports.][@shortAnswer]\n===\n3. He is waiting for the bus.\n[$He is not waiting for the bus.][@shortAnswer]\n===\n4. Anne is smiling.\n[$Anne is not smiling.][@shortAnswer]\n===\n5. They are using a dictionary.\n[$They are not using a dictionary.][@shortAnswer]\n===\n6. We are carrying a big box.\n[$We are not carrying a big box.][@shortAnswer]\n===\n7. Stacey works in the library.\n[$Stacey does not work in the library.][@shortAnswer]\n===\n8. My friend lives in Stockholm.\n[$My friend does not live in Stockholm.][@shortAnswer]\n===\n9. The diary is lying on the floor.\n[$The diary is not lying on the floor.][@shortAnswer]\n===\n10. They are preparing the picnic.\n[$They are not preparing the picnic.][@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Nr. 4468",
+      "instruction": "Verneine die vorgegebenen Sätze.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. I like fish.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "I do not like fish.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2. She is good at sports.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "She is not good at sports.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "3. He is waiting for the bus.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "He is not waiting for the bus.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "4. Anne is smiling.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Anne is not smiling.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "5. They are using a dictionary.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "They are not using a dictionary.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "6. We are carrying a big box.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "We are not carrying a big box.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "7. Stacey works in the library.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Stacey does not work in the library.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "8. My friend lives in Stockholm.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "My friend does not live in Stockholm.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "9. The diary is lying on the floor.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "The diary is not lying on the floor.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "10. They are preparing the picnic.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "They are not preparing the picnic.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "230965"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--]\n[@id:230966]\n[%Nr. 4468]\n[!Welcher Satz ist oder welche Sätze sind richtig?]\n===\n[!1.]\n[+I love holidays.]\n[+I'm loving every minute of my holiday.]\n===\n[!2.]\n[+You are silly.]\n[+You are being very silly about this.]\n===\n[!3.]\n[+She weighs 60 kilos.]\n[+She is weighing the turkey.]\n===\n[!4.]\n[+I think we should go.]\n[-I am thinking we should go.]\n===\n[!5.]\n[+The soup tastes good.]\n[+I am tasting the soup.]\n===\n[!6.]\n[+I feel fine.]\n[+I'm feeling fine.]\n===\n[!7.]\n[+I remember my first day at school.]\n[-I am remembering my first date.]\n===\n[!8.]\n[+I need a new computer.]\n[-I am needing an umbrella now.]\n===\n[!9.]\n[+I see what the teacher means.]\n[-I'm seeing what the teacher means.]\n===",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "Nr. 4468",
+      "instruction": "Welcher Satz ist oder welche Sätze sind richtig?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "1.",
+          "responses": [
+            {
+              "response": "I love holidays.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "I'm loving every minute of my holiday.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "2.",
+          "responses": [
+            {
+              "response": "You are silly.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "You are being very silly about this.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "3.",
+          "responses": [
+            {
+              "response": "She weighs 60 kilos.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "She is weighing the turkey.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "4.",
+          "responses": [
+            {
+              "response": "I think we should go.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "I am thinking we should go.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "5.",
+          "responses": [
+            {
+              "response": "The soup tastes good.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "I am tasting the soup.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "6.",
+          "responses": [
+            {
+              "response": "I feel fine.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "I'm feeling fine.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "7.",
+          "responses": [
+            {
+              "response": "I remember my first day at school.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "I am remembering my first date.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "8.",
+          "responses": [
+            {
+              "response": "I need a new computer.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "I am needing an umbrella now.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "9.",
+          "responses": [
+            {
+              "response": "I see what the teacher means.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "I'm seeing what the teacher means.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "230966"
+      ]
+    }
+  }
+]

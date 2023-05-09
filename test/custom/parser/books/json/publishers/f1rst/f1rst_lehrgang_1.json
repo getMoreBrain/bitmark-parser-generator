@@ -1,0 +1,665 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:302185]\n[@externalId:e-nicht-warten-starten_aumdbwu9i1wj]\n[#Nicht warten - starten]\n\n\n[@publisher:f1rst]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/cover_f1rst_lehrgang.png]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "302185"
+      ],
+      "externalId": [
+        "e-nicht-warten-starten_aumdbwu9i1wj"
+      ],
+      "title": "Nicht warten - starten",
+      "publisher": [
+        "f1rst"
+      ],
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/cover_f1rst_lehrgang.png"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:302186]\n||Nutzungsrechte: VITOGAZ Schweiz\nJede kostenlose Weitergabe ist untersagt.||",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "302186"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:302187]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_27.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "302187"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_27.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:302188]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_15.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "302188"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_15.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302189]\nGetreu dem Motto __nicht warten__ – starten wird hier natürlich großen Wert darauf gelegt, dass Sie die Essenzen aus diesem Lehrgang sofort umsetzen. Doch auch hier gilt: Qualität geht vor Quantität. Es geht nicht darum, alle hier vorgestellten Anregungen in Angriff zu nehmen. Betrachten Sie die Anregungen als einen __Basar der Möglichkeiten__. Hier wie dort nehmen Sie nur das, was Ihnen wirklich gefällt und was für Sie von großem Nutzen ist. Alles, was ein Basar bietet, kaufen zu wollen, auf diese Idee käme wohl keiner. So ist es auch mit dem Wissen aus diesem Lehrgang. Viel wichtiger, als alle Tipps nur halbherzig anzupacken, ist es, sich den einen oder anderen Tipp herauszupicken und alles daran zu setzen, diesen gewinnbringend umzusetzen. Es ist wie mit den Sonnenstrahlen. Breit gestreut wärmen sie und richten für gewöhnlich keinen Schaden an. Gebündelt über einem Brennglas bringen sie Holz zum Brennen. Wenn auch Sie sich buchstäblich „brennend“ auf eine (!) Aufgabe konzentrieren, dann wird sich der Erfolg bald „einschleichen“. Nur in der Konzentration zeigt sich der wahre Meister! Je genauer Sie Ihre Anstrengungen auf ein Ziel ausrichten, desto leichter werden Sie es erreichen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Getreu dem Motto __nicht warten__ – starten wird hier natürlich großen Wert darauf gelegt, dass Sie die Essenzen aus diesem Lehrgang sofort umsetzen. Doch auch hier gilt: Qualität geht vor Quantität. Es geht nicht darum, alle hier vorgestellten Anregungen in Angriff zu nehmen. Betrachten Sie die Anregungen als einen __Basar der Möglichkeiten__. Hier wie dort nehmen Sie nur das, was Ihnen wirklich gefällt und was für Sie von großem Nutzen ist. Alles, was ein Basar bietet, kaufen zu wollen, auf diese Idee käme wohl keiner. So ist es auch mit dem Wissen aus diesem Lehrgang. Viel wichtiger, als alle Tipps nur halbherzig anzupacken, ist es, sich den einen oder anderen Tipp herauszupicken und alles daran zu setzen, diesen gewinnbringend umzusetzen. Es ist wie mit den Sonnenstrahlen. Breit gestreut wärmen sie und richten für gewöhnlich keinen Schaden an. Gebündelt über einem Brennglas bringen sie Holz zum Brennen. Wenn auch Sie sich buchstäblich „brennend“ auf eine (!) Aufgabe konzentrieren, dann wird sich der Erfolg bald „einschleichen“. Nur in der Konzentration zeigt sich der wahre Meister! Je genauer Sie Ihre Anstrengungen auf ein Ziel ausrichten, desto leichter werden Sie es erreichen.",
+      "id": [
+        "302189"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302190]\nDas setzt natürlich voraus, dass Sie überhaupt ein Ziel haben. Es ist hinlänglich bekannt, dass das Setzen von Zielen eine der effektivsten Methoden zur Selbst- und Fremdmotivation ist. Doch weniger als 5 Prozent der Bevölkerung nutzt diese erfolgsversprechende Technik. Die restlichen 95 Prozent und damit die Mehrheit probiert alles Mögliche aus, um erfolgreicher zu werden, aber sie schaffen es nicht. Auf die Idee, sich einfach nur Ziele zu setzen, kommen sie nicht. Sie verlieren sich in negativen Gesprächen und Gedanken, sinnlosen Projekten und Kleinkrämerei. Wenn Sie wissen wollen, wie großartig das Leben mit all seinen Möglichkeiten ist, dann schauen Sie über den sprichwörtlichen Tellerrand und werden Sie sich bewusst, dass Sie und nur Sie allein, sich Ihre Grenzen setzen. Es gibt – fast – keine Grenzen, was gern bewiesen werden soll. Setzen Sie sich nachts unter den Sternenhimmel und schauen Sie ins Weltall. Sie sehen Sterne, die hunderte von Millionen Kilometer entfernt sind. Hunderte Millionen Kilometer! So weit können Sie (theoretisch) schauen. Selbst die Sonne, die wir bei gutem Wetter sehen, ist mehr als 150 Millionen Kilometer entfernt und Sie können sie sehen und zwar so gut, dass Sie eine Sonnenbrille aufsetzen müssen, um sich nicht die Augen zu verbrennen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das setzt natürlich voraus, dass Sie überhaupt ein Ziel haben. Es ist hinlänglich bekannt, dass das Setzen von Zielen eine der effektivsten Methoden zur Selbst- und Fremdmotivation ist. Doch weniger als 5 Prozent der Bevölkerung nutzt diese erfolgsversprechende Technik. Die restlichen 95 Prozent und damit die Mehrheit probiert alles Mögliche aus, um erfolgreicher zu werden, aber sie schaffen es nicht. Auf die Idee, sich einfach nur Ziele zu setzen, kommen sie nicht. Sie verlieren sich in negativen Gesprächen und Gedanken, sinnlosen Projekten und Kleinkrämerei. Wenn Sie wissen wollen, wie großartig das Leben mit all seinen Möglichkeiten ist, dann schauen Sie über den sprichwörtlichen Tellerrand und werden Sie sich bewusst, dass Sie und nur Sie allein, sich Ihre Grenzen setzen. Es gibt – fast – keine Grenzen, was gern bewiesen werden soll. Setzen Sie sich nachts unter den Sternenhimmel und schauen Sie ins Weltall. Sie sehen Sterne, die hunderte von Millionen Kilometer entfernt sind. Hunderte Millionen Kilometer! So weit können Sie (theoretisch) schauen. Selbst die Sonne, die wir bei gutem Wetter sehen, ist mehr als 150 Millionen Kilometer entfernt und Sie können sie sehen und zwar so gut, dass Sie eine Sonnenbrille aufsetzen müssen, um sich nicht die Augen zu verbrennen.",
+      "id": [
+        "302190"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302191]\nSetzen Sie sich Ziele und dann vertrauen Sie auf die universelle Kraft, die zu jeder Zeit und immer wirkt. Wenn Sie zweifeln, wiederholen Sie diese Übung. Setzen Sie sich unter den Sternenhimmel und beobachten Sie die Sterne. Fragen Sie sich in diesen Momenten, was Sie vom Leben wollen und was Sie bereit sind, dem Leben zu geben. Merke:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Setzen Sie sich Ziele und dann vertrauen Sie auf die universelle Kraft, die zu jeder Zeit und immer wirkt. Wenn Sie zweifeln, wiederholen Sie diese Übung. Setzen Sie sich unter den Sternenhimmel und beobachten Sie die Sterne. Fragen Sie sich in diesen Momenten, was Sie vom Leben wollen und was Sie bereit sind, dem Leben zu geben. Merke:",
+      "id": [
+        "302191"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:302192]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_84.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "302192"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_84.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302193]\nLesen Sie nicht einfach weiter. Auf welcher Seite stehen Sie? Gehören Sie zu der Mehrheit, die kein Ziel hat oder zur Minderheit, die sich ein Ziel steckt und es mit Begeisterung erreicht? Dann leben Sie, wie Bob Dylan es einmal formulierte:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Lesen Sie nicht einfach weiter. Auf welcher Seite stehen Sie? Gehören Sie zu der Mehrheit, die kein Ziel hat oder zur Minderheit, die sich ein Ziel steckt und es mit Begeisterung erreicht? Dann leben Sie, wie Bob Dylan es einmal formulierte:",
+      "id": [
+        "302193"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:302194]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_28.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "302194"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_28.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302195]\nStellen Sie sich den Zugführer eines ICE-Zuges vor, der mit seinem vierhundert Meter langen Zug den Hauptbahnhof verlassen möchte. Sein Ziel ist es, dieses Wunder der Technik auf mehr als 250 Stundenkilometer hochzufahren, damit die Fahrgäste schnell ans Ziel kommen. Er würde deshalb kaum auf die Idee kommen, in diesem Moment für die Sicherheit der Passagiere zu sorgen und nachzuschauen, ob denn nun alle einen Platz haben oder anderweitig gesichert sind. Auch würde er nach dem Erreichen der Höchstgeschwindigkeit wohl kaum den Getränkewagen durch den Gang schieben. Seine Aufgabe ist es, den Zug sicher von A nach B zu fahren. Dieser Aufgabe widmet er sich voll und ganz. Deshalb wird er während des Startvorgangs den Schalthebel auch auf volle Kraft stellen und nicht auf halben Schub, wohl wissend, dass sein Zug keine Chance hat, in Fahrt zu kommen. Weil er sich auf dieses eine Ziel konzentriert, wird er es schaffen, seine Fahrgäste von A nach B zu bringen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Stellen Sie sich den Zugführer eines ICE-Zuges vor, der mit seinem vierhundert Meter langen Zug den Hauptbahnhof verlassen möchte. Sein Ziel ist es, dieses Wunder der Technik auf mehr als 250 Stundenkilometer hochzufahren, damit die Fahrgäste schnell ans Ziel kommen. Er würde deshalb kaum auf die Idee kommen, in diesem Moment für die Sicherheit der Passagiere zu sorgen und nachzuschauen, ob denn nun alle einen Platz haben oder anderweitig gesichert sind. Auch würde er nach dem Erreichen der Höchstgeschwindigkeit wohl kaum den Getränkewagen durch den Gang schieben. Seine Aufgabe ist es, den Zug sicher von A nach B zu fahren. Dieser Aufgabe widmet er sich voll und ganz. Deshalb wird er während des Startvorgangs den Schalthebel auch auf volle Kraft stellen und nicht auf halben Schub, wohl wissend, dass sein Zug keine Chance hat, in Fahrt zu kommen. Weil er sich auf dieses eine Ziel konzentriert, wird er es schaffen, seine Fahrgäste von A nach B zu bringen.",
+      "id": [
+        "302195"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302196]\nEgal, wie die Umstände auch sein mögen, der Zugführer wird immer volle Leistung bringen. Er würde nie auf die Idee kommen, nur mit halbem Schub zu starten, um z. B. den Verschleiß der Räder aufzuhalten. Schade nur, dass viele diesem Beispiel nicht folgen. In ihrer Euphorie beginnen sie die Dinge oft nur halbherzig und hören bereits auf halbem Weg wieder auf. Schade um die verlorene Zeit. Nur wer auf „volle Leistung“ setzt, kann, wie ein ICE-Zug, zu Höherem aufsteigen. Das ist auch die zentrale Botschaft dieses Lehrgangs. Wenn Sie eine Veränderung bewirken möchten, dann ist es wichtig, dass Sie immer 100 Prozent Leistung bringen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Egal, wie die Umstände auch sein mögen, der Zugführer wird immer volle Leistung bringen. Er würde nie auf die Idee kommen, nur mit halbem Schub zu starten, um z. B. den Verschleiß der Räder aufzuhalten. Schade nur, dass viele diesem Beispiel nicht folgen. In ihrer Euphorie beginnen sie die Dinge oft nur halbherzig und hören bereits auf halbem Weg wieder auf. Schade um die verlorene Zeit. Nur wer auf „volle Leistung“ setzt, kann, wie ein ICE-Zug, zu Höherem aufsteigen. Das ist auch die zentrale Botschaft dieses Lehrgangs. Wenn Sie eine Veränderung bewirken möchten, dann ist es wichtig, dass Sie immer 100 Prozent Leistung bringen.",
+      "id": [
+        "302196"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302197]\nApropos Zugführer. Hier wird deutlich, wie sich die Zeiten verändert haben. Die „lahme“ Dampflok wurde durch Hochgeschwindigkeitszüge ersetzt, die bis zu 420 Stundenkilometer leisten. Das wurde nur möglich, weil es Menschen gab, die sich nie mit dem Erreichten zufriedengaben. Sie nahmen das Bestehende und suchten nach Verbesserungsmöglichkeiten. Erinnern wir uns. Als die Dampflokomotive „Rocket“ im Jahre 1830 zwischen Liverpool und Manchester auf „atemberaubende“ 48 Kilometer in der Stunde beschleunigte, glaubten die Menschen an einen Rekord für die Ewigkeit, während sich die Mediziner ernsthaft fragten, ob das menschliche Gehirn einen derartigen Geschwindigkeitsrausch überhaupt verkraften kann. Es kann. Inzwischen gibt es einen Hochgeschwindigkeitszug, der mit 420 Stundenkilometer über Chinas Gleise rauscht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Apropos Zugführer. Hier wird deutlich, wie sich die Zeiten verändert haben. Die „lahme“ Dampflok wurde durch Hochgeschwindigkeitszüge ersetzt, die bis zu 420 Stundenkilometer leisten. Das wurde nur möglich, weil es Menschen gab, die sich nie mit dem Erreichten zufriedengaben. Sie nahmen das Bestehende und suchten nach Verbesserungsmöglichkeiten. Erinnern wir uns. Als die Dampflokomotive „Rocket“ im Jahre 1830 zwischen Liverpool und Manchester auf „atemberaubende“ 48 Kilometer in der Stunde beschleunigte, glaubten die Menschen an einen Rekord für die Ewigkeit, während sich die Mediziner ernsthaft fragten, ob das menschliche Gehirn einen derartigen Geschwindigkeitsrausch überhaupt verkraften kann. Es kann. Inzwischen gibt es einen Hochgeschwindigkeitszug, der mit 420 Stundenkilometer über Chinas Gleise rauscht.",
+      "id": [
+        "302197"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302198]\nMerke: Stillstand ist Rückschritt.\n\nDie Kraft, die jeden erfolgreichen Menschen, und damit auch den Zugführer, um beim Beispiel zu bleiben, antreibt, ist die Kraft der",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Merke: Stillstand ist Rückschritt.\n\nDie Kraft, die jeden erfolgreichen Menschen, und damit auch den Zugführer, um beim Beispiel zu bleiben, antreibt, ist die Kraft der",
+      "id": [
+        "302198"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:302199]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_89.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "302199"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_89.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302200]\nOhne Entschlossenheit funktioniert gar nichts. Entschlossenheit hat so gar nichts mit einem festen Willen zu tun. Natürlich brauchen Sie einen starken Willen, wenn Sie etwas im Leben erreichen wollen. Doch der Wille allein wird Sie nicht nach vorne bringen. Sie müssen auch die Entschlossenheit haben, diesen Willen umzusetzen. Das ist ein fundamentaler Unterschied.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ohne Entschlossenheit funktioniert gar nichts. Entschlossenheit hat so gar nichts mit einem festen Willen zu tun. Natürlich brauchen Sie einen starken Willen, wenn Sie etwas im Leben erreichen wollen. Doch der Wille allein wird Sie nicht nach vorne bringen. Sie müssen auch die Entschlossenheit haben, diesen Willen umzusetzen. Das ist ein fundamentaler Unterschied.",
+      "id": [
+        "302200"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302201]\nNehmen wir an, Sie haben sich entschieden, nächsten Mittwoch einen Tag Auszeit von Ihrer Firma zu nehmen. Mit der Personalabteilung haben Sie vereinbart, dass dieser „Urlaubstag“ mit den aufgelaufenen Überstunden verrechnet wird. Sie freuen sich auf diesen freien Tag, weil Sie endlich Zeit haben, Ihrem Hobby nachzugehen. Am Dienstagnachmittag, Sie zählen bereits die restlichen Minuten bis zum Feierabend, kommt der Abteilungsleiter zu Ihnen. Er spricht von einem dringenden Auftrag, der nur mit allen verfügbaren Personen abgewickelt werden kann. Dazu benötigt er für den morgigen Mittwoch auch Ihre Unterstützung. Wie verhalten Sie sich im „Normalfall“? Nun zeigt sich der Unterschied zwischen Wollen und Entschlossenheit. Es sei unterstellt, dass es Ihnen leichter fällt, zur Arbeit zu gehen (obwohl Sie genau das nicht wollten), als den freien Tag anzutreten. Insbesondere dann, wenn schon seit Wochen in der Firma das Gerücht die Runde macht, das Arbeitsplätze abgebaut werden sollen. Die Angst, möglicherweise ein „Abschusskandidat“ zu sein, wenn Sie morgen nicht kommen, verdrängt die Entschlossenheit. Damit beweisen Sie, dass Sie zwar den Willen hatten, diesen Tag freizunehmen, doch es fehlt die Entschlossenheit, es zu tun.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Nehmen wir an, Sie haben sich entschieden, nächsten Mittwoch einen Tag Auszeit von Ihrer Firma zu nehmen. Mit der Personalabteilung haben Sie vereinbart, dass dieser „Urlaubstag“ mit den aufgelaufenen Überstunden verrechnet wird. Sie freuen sich auf diesen freien Tag, weil Sie endlich Zeit haben, Ihrem Hobby nachzugehen. Am Dienstagnachmittag, Sie zählen bereits die restlichen Minuten bis zum Feierabend, kommt der Abteilungsleiter zu Ihnen. Er spricht von einem dringenden Auftrag, der nur mit allen verfügbaren Personen abgewickelt werden kann. Dazu benötigt er für den morgigen Mittwoch auch Ihre Unterstützung. Wie verhalten Sie sich im „Normalfall“? Nun zeigt sich der Unterschied zwischen Wollen und Entschlossenheit. Es sei unterstellt, dass es Ihnen leichter fällt, zur Arbeit zu gehen (obwohl Sie genau das nicht wollten), als den freien Tag anzutreten. Insbesondere dann, wenn schon seit Wochen in der Firma das Gerücht die Runde macht, das Arbeitsplätze abgebaut werden sollen. Die Angst, möglicherweise ein „Abschusskandidat“ zu sein, wenn Sie morgen nicht kommen, verdrängt die Entschlossenheit. Damit beweisen Sie, dass Sie zwar den Willen hatten, diesen Tag freizunehmen, doch es fehlt die Entschlossenheit, es zu tun.",
+      "id": [
+        "302201"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302202]\nEntschlossenheit heißt eben, sich nicht unterkriegen zu lassen, egal, wie die Umstände sein mögen. Wenn Sie ein klares Ziel haben und fest entschlossen sind, es auch erreichen zu wollen, dann haben Sie durch die Kraft der Entschlossenheit auch die Möglichkeit, es zu erreichen. Nur beispielhaft seien zwei Menschen genannt, die genau das erreicht haben, obwohl ihre Vita alles andere als erfolgsversprechend verlief. In einem Werbeclip der Deutschen Telekom wird ein auf der Bühne stehender untersetzter, schüchterner Mann mit gequältem Gesichtsausdruck gezeigt. Es wird deutlich: Dieser Verlierertyp will an einem englischen Talentwettbewerb teilnehmen. Schauen Sie sich noch einmal das Video an:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Entschlossenheit heißt eben, sich nicht unterkriegen zu lassen, egal, wie die Umstände sein mögen. Wenn Sie ein klares Ziel haben und fest entschlossen sind, es auch erreichen zu wollen, dann haben Sie durch die Kraft der Entschlossenheit auch die Möglichkeit, es zu erreichen. Nur beispielhaft seien zwei Menschen genannt, die genau das erreicht haben, obwohl ihre Vita alles andere als erfolgsversprechend verlief. In einem Werbeclip der Deutschen Telekom wird ein auf der Bühne stehender untersetzter, schüchterner Mann mit gequältem Gesichtsausdruck gezeigt. Es wird deutlich: Dieser Verlierertyp will an einem englischen Talentwettbewerb teilnehmen. Schauen Sie sich noch einmal das Video an:",
+      "id": [
+        "302202"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:302203]\n[&video-link:https://www.youtube.com/watch?v=ZkaHOQQayTI]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "302203"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=ZkaHOQQayTI",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302204]\nDer Engländer mit den Zahnlücken singt die Arie „Nessun Dorma“ von Puccinis „Turandot“. Er singt sie nicht gut, sondern perfekt! Am Ende bleibt kaum ein Auge trocken. Dabei handelt es sich nicht um eine gestellte „Werbegeschichte“, die für die Leistungen des Unternehmens wirbt. Sie ist authentisch. Es ist die Story eines Mannes, der an sich glaubt und nie aufgegeben hat. Wörtlich sagt der neugeborene Star: „Mein Traum ist, das zu tun, wozu ich geboren wurde.“ Der Sohn eines Busfahrers wurde als Junge in der Schule geärgert, seine Stimme war, wie er später sagte, sein „einziger wahrer Freund“. Er sang im Schulchor und träumte von Höherem. 1999 gewann er einen Gesangswettbewerb. Mit dem Preisgeld von 8000 Pfund finanzierte er dann seinen Gesangsunterricht. Dann schlug das Schicksal erbarmungslos zu. Nach einem Blinddarmdurchbruch und einem Nierentumor erlitt er zu allem Ärger noch einen Schlüsselbeinbruch. Seine Karriere als Opernsänger war zu Ende, ehe sie richtig begann. Er ging zurück in die Arbeitswelt. Hier verdiente er sich zunächst als Regalpacker im Supermarkt seine Brötchen, später als Handy-Verkäufer. Obwohl er vier Jahre nicht mehr ernsthaft gesungen hatte, ließ ihn der Traum nie wirklich los. Er nahm all seinen Mut zusammen und trat in der besagten Talentshow auf. Seine Sternstunde! Seitdem ist das Glück nicht mehr von Paul Potts Seite gewichen. Die Leute strömen zu seinen Konzerten. Der neugeborene Star am Opernhimmel sagt dazu: „Endlich tue ich das, was ich immer tun wollte, etwas, das ich liebe.“ Nach all den Irrungen, Wirrungen und Schicksalsschlägen hat sich Paul Potts nie unterkriegen lassen. Er zeigt uns, wohin der feste Glaube an sich selbst jeden bringen kann. Aber sehen Sie selbst:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Engländer mit den Zahnlücken singt die Arie „Nessun Dorma“ von Puccinis „Turandot“. Er singt sie nicht gut, sondern perfekt! Am Ende bleibt kaum ein Auge trocken. Dabei handelt es sich nicht um eine gestellte „Werbegeschichte“, die für die Leistungen des Unternehmens wirbt. Sie ist authentisch. Es ist die Story eines Mannes, der an sich glaubt und nie aufgegeben hat. Wörtlich sagt der neugeborene Star: „Mein Traum ist, das zu tun, wozu ich geboren wurde.“ Der Sohn eines Busfahrers wurde als Junge in der Schule geärgert, seine Stimme war, wie er später sagte, sein „einziger wahrer Freund“. Er sang im Schulchor und träumte von Höherem. 1999 gewann er einen Gesangswettbewerb. Mit dem Preisgeld von 8000 Pfund finanzierte er dann seinen Gesangsunterricht. Dann schlug das Schicksal erbarmungslos zu. Nach einem Blinddarmdurchbruch und einem Nierentumor erlitt er zu allem Ärger noch einen Schlüsselbeinbruch. Seine Karriere als Opernsänger war zu Ende, ehe sie richtig begann. Er ging zurück in die Arbeitswelt. Hier verdiente er sich zunächst als Regalpacker im Supermarkt seine Brötchen, später als Handy-Verkäufer. Obwohl er vier Jahre nicht mehr ernsthaft gesungen hatte, ließ ihn der Traum nie wirklich los. Er nahm all seinen Mut zusammen und trat in der besagten Talentshow auf. Seine Sternstunde! Seitdem ist das Glück nicht mehr von Paul Potts Seite gewichen. Die Leute strömen zu seinen Konzerten. Der neugeborene Star am Opernhimmel sagt dazu: „Endlich tue ich das, was ich immer tun wollte, etwas, das ich liebe.“ Nach all den Irrungen, Wirrungen und Schicksalsschlägen hat sich Paul Potts nie unterkriegen lassen. Er zeigt uns, wohin der feste Glaube an sich selbst jeden bringen kann. Aber sehen Sie selbst:",
+      "id": [
+        "302204"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:302205]\n[&video-link:https://www.youtube.com/watch?v=oQrgbadXYxE]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "302205"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=oQrgbadXYxE",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302206]\nNicht viel anders erging es dem zweiten Ausnahmetalent, das heute fast jeder kennt. Die einst so unscheinbare Frau Susan Boyle aus Schottland. Als die damals 47-Jährige die Bühne der englischen Version von „Deutschland sucht das Supertalent“ (Britain ́s Got Talent) betritt, lacht das Publikum wegen ihres Aussehens. Querschlank, Doppelkinn, Dauerwelle im Stil der 50er-Jahre, tapsiges „Getue“ und altbackenes Kleid, dass nur die Wenigsten tragen würden. Die Jury ahnt Fürchterliches. Für sie muss Aussehen und Talent passen. Anders ausgedrückt: Wer nicht hübsch ist – nach den Normen dieser Gesellschaft – hat keine Chance, ein Superstar zu werden. Doch dann holt Susan tief Luft, fängt an zu singen – und es wird plötzlich ganz still im Saal. Für den Augenblick. Dann aber folgt frenetischer Beifall, noch während ihrer Performance. Ihre Version von „I Dreamed A Dream“ aus dem Musical „Les Misérables“ berührt die ganze Welt. Ihr Auftritt wird zum meistgesehenen Internet-Video des Jahres 2009:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Nicht viel anders erging es dem zweiten Ausnahmetalent, das heute fast jeder kennt. Die einst so unscheinbare Frau Susan Boyle aus Schottland. Als die damals 47-Jährige die Bühne der englischen Version von „Deutschland sucht das Supertalent“ (Britain ́s Got Talent) betritt, lacht das Publikum wegen ihres Aussehens. Querschlank, Doppelkinn, Dauerwelle im Stil der 50er-Jahre, tapsiges „Getue“ und altbackenes Kleid, dass nur die Wenigsten tragen würden. Die Jury ahnt Fürchterliches. Für sie muss Aussehen und Talent passen. Anders ausgedrückt: Wer nicht hübsch ist – nach den Normen dieser Gesellschaft – hat keine Chance, ein Superstar zu werden. Doch dann holt Susan tief Luft, fängt an zu singen – und es wird plötzlich ganz still im Saal. Für den Augenblick. Dann aber folgt frenetischer Beifall, noch während ihrer Performance. Ihre Version von „I Dreamed A Dream“ aus dem Musical „Les Misérables“ berührt die ganze Welt. Ihr Auftritt wird zum meistgesehenen Internet-Video des Jahres 2009:",
+      "id": [
+        "302206"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:302207]\n[&video-link:https://www.youtube.com/watch?v=RxPZh4AnWyk]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "302207"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=RxPZh4AnWyk",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302208]\nDie unscheinbare Frau aus dem schottischen Hinterland wird über Nacht zum Superstar, ihre CDs sind absolute Verkaufsschlager. Ihre Entschlossenheit, ein Star werden zu wollen, ebnete ihr den Weg.\nSie werden kein einziges Ziel im Leben erreichen ohne feste Entschlossenheit. Stellen Sie sich einen Kung-Fu-Sportler vor, der in der Lage ist, mehrere Ziegel mit nur einem Handschlag zu durchschlagen. Wie nur ist es möglich, so etwas Unvorstellbares erreichen zu können – eine menschliche Hand aus Fleisch und Blut gegen eine Handvoll übereinander gestapelter Steine? Mit dem Willen allein wird selbst der beste Karatekämpfer auch hier nicht weiterkommen. Denn nur der Bruchteil einer Sekunde eines Zweifels würde ausreichen, seine Hand zu zertrümmern. Nur durch die Kraft der Entschlossenheit erspart er sich Schmerzen und Schlimmeres. Die Konzentration auf den Augenblick, gepaart mit Entschlossenheit, ist der Garant für seinen Erfolg.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die unscheinbare Frau aus dem schottischen Hinterland wird über Nacht zum Superstar, ihre CDs sind absolute Verkaufsschlager. Ihre Entschlossenheit, ein Star werden zu wollen, ebnete ihr den Weg.\nSie werden kein einziges Ziel im Leben erreichen ohne feste Entschlossenheit. Stellen Sie sich einen Kung-Fu-Sportler vor, der in der Lage ist, mehrere Ziegel mit nur einem Handschlag zu durchschlagen. Wie nur ist es möglich, so etwas Unvorstellbares erreichen zu können – eine menschliche Hand aus Fleisch und Blut gegen eine Handvoll übereinander gestapelter Steine? Mit dem Willen allein wird selbst der beste Karatekämpfer auch hier nicht weiterkommen. Denn nur der Bruchteil einer Sekunde eines Zweifels würde ausreichen, seine Hand zu zertrümmern. Nur durch die Kraft der Entschlossenheit erspart er sich Schmerzen und Schlimmeres. Die Konzentration auf den Augenblick, gepaart mit Entschlossenheit, ist der Garant für seinen Erfolg.",
+      "id": [
+        "302208"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302209]\nEs könnte sein, dass Ihnen die eine oder andere Feststellung zu einfach und banal vorkommt, getreu dem Motto: „Das weiß doch wirklich jedes Kind“, dazu hätte man wohl kaum diesen Lehrgang gebraucht. Oh ja, besonders Kinder halten sich für sehr, sehr schlau und lassen sich nur selten gern etwas sagen. Mit dem Lesen eines Buches, einer Trainingseinheit oder eines Newsletters lassen Sie sich immer auf die Anregungen des Autors ein. Er stellt Ihnen seine Sicht der Dinge vor. Wenn er der Meinung ist, es könnte nicht schaden, auch die banalsten Tipps, Anregungen und Ideen zu vermitteln, dann ist das eben seine Meinung, die durchaus von Ihrer abweichen kann. Der Vorteil eines Buches besteht darin, dass Sie zu jeder Zeit die Seite umblättern oder es sogar ganz __zur Seite__ legen können. Die Entscheidung liegt auch wieder allein bei Ihnen. Niemand zwingt Sie zu etwas.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Es könnte sein, dass Ihnen die eine oder andere Feststellung zu einfach und banal vorkommt, getreu dem Motto: „Das weiß doch wirklich jedes Kind“, dazu hätte man wohl kaum diesen Lehrgang gebraucht. Oh ja, besonders Kinder halten sich für sehr, sehr schlau und lassen sich nur selten gern etwas sagen. Mit dem Lesen eines Buches, einer Trainingseinheit oder eines Newsletters lassen Sie sich immer auf die Anregungen des Autors ein. Er stellt Ihnen seine Sicht der Dinge vor. Wenn er der Meinung ist, es könnte nicht schaden, auch die banalsten Tipps, Anregungen und Ideen zu vermitteln, dann ist das eben seine Meinung, die durchaus von Ihrer abweichen kann. Der Vorteil eines Buches besteht darin, dass Sie zu jeder Zeit die Seite umblättern oder es sogar ganz __zur Seite__ legen können. Die Entscheidung liegt auch wieder allein bei Ihnen. Niemand zwingt Sie zu etwas.",
+      "id": [
+        "302209"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302210]\nAngenommen, Sie wären in der Position eines Personalchefs. Sie entscheiden somit, wer einen Job bekommt. Worauf würden Sie in der Regel achten, wenn Sie die Bewerbungsunterlagen durcharbeiten? Es sei davon ausgegangen, dass auch Sie Wert auf die richtige Rechtschreibung legen. Wer stellt schon jemanden ein, der noch nicht einmal in der Lage ist, eine DIN A4-Seite fehlerfrei zu schreiben? Natürlich muss eine Sekretärin fehlerfrei schreiben, während man einem Arbeiter Schreibfehler eher nachsieht. Wobei natürlich der Arbeiter im Vorteil sein kann, der fehlerfrei schreibt! Wenn ich nun ein Buch über die erfolgreiche Bewerbung schreiben und als Erstes darauf hinweisen würde, dass Bewerber unbedingt auf richtige Rechtschreibung achten müssen, könnte Ihnen das doch banal vorkommen, oder? Sie würden es als die normalste Sache der Welt ansehen, dass Bewerbungsunterlagen in einem super-perfekten Zustand sein müssen. Damit gehören Sie zu den 10 Prozent der Bewerber, die eine „richtige“ Bewerbung abgeben könnten. Tatsache ist nämlich, dass 90 Prozent aller Bewerbungsunterlagen Rechtschreibfehler enthalten, und zwar so gewaltig, dass sich einem die Nackenhaare kräuseln. Der noch so banale Erfolgstipp, auf Rechtschreibung zu achten, kann tatsächlich über top oder hopp entscheiden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Angenommen, Sie wären in der Position eines Personalchefs. Sie entscheiden somit, wer einen Job bekommt. Worauf würden Sie in der Regel achten, wenn Sie die Bewerbungsunterlagen durcharbeiten? Es sei davon ausgegangen, dass auch Sie Wert auf die richtige Rechtschreibung legen. Wer stellt schon jemanden ein, der noch nicht einmal in der Lage ist, eine DIN A4-Seite fehlerfrei zu schreiben? Natürlich muss eine Sekretärin fehlerfrei schreiben, während man einem Arbeiter Schreibfehler eher nachsieht. Wobei natürlich der Arbeiter im Vorteil sein kann, der fehlerfrei schreibt! Wenn ich nun ein Buch über die erfolgreiche Bewerbung schreiben und als Erstes darauf hinweisen würde, dass Bewerber unbedingt auf richtige Rechtschreibung achten müssen, könnte Ihnen das doch banal vorkommen, oder? Sie würden es als die normalste Sache der Welt ansehen, dass Bewerbungsunterlagen in einem super-perfekten Zustand sein müssen. Damit gehören Sie zu den 10 Prozent der Bewerber, die eine „richtige“ Bewerbung abgeben könnten. Tatsache ist nämlich, dass 90 Prozent aller Bewerbungsunterlagen Rechtschreibfehler enthalten, und zwar so gewaltig, dass sich einem die Nackenhaare kräuseln. Der noch so banale Erfolgstipp, auf Rechtschreibung zu achten, kann tatsächlich über top oder hopp entscheiden.",
+      "id": [
+        "302210"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302211]\nSomit ist klar, dass es keine banalen Tipps gibt, sondern nur banale Einstellungen dazu. Genauso wenig wie es keine dummen Fragen gibt. Es gibt nur dumme Antworten – Ausnahmen bestätigen die Regel. Das wusste auch Christoph Columbus, der zu seiner Zeit Erstaunliches wagte. Er setzte sein Leben aufs Spiel, um eine andere Welt zu finden. Heute für uns unvorstellbar. Von Europa aus sind wir in weniger als 8 Stunden in Amerika. Für diese Route brauchte die Flotte von Columbus mehrere Monate. Und, wie ist es ihm ergangen? Nun, nach seiner Rückkehr aus Amerika lud Kardinal Mendoza ihn zum Essen ein. Dabei hielt er ihm vor, dass es ein Leichtes gewesen sei, die „Neue Welt“ zu entdecken. Das hätte schließlich auch jeder andere vollführen können. Columbus antwortete nicht und bat um ein gekochtes Ei. Nun bat er die anwesenden Personen, dieses Ei auf die Spitze zu stellen. Es wurden viele Versuche unternommen, aber niemand schaffte es, diese Aufgabe zu erfüllen. Man ist schließlich davon überzeugt, dass es sich hierbei um eine unlösbare Aufgabe handelt. Dann wurde Columbus gebeten, es selbst zu versuchen. Dieser schlägt sein Ei mit der Spitze auf den Tisch, so dass sie leicht eingedrückt wird und das Ei stehen bleibt. Als die Anwesenden protestieren, dass sie das auch gekonnt hätten, antwortete Columbus: __„Der Unterschied ist, meine Herren, dass Sie es hätten tun können, ich hingegen habe es getan!“__\n\nSomit ist klar, dass es keine banalen Tipps gibt, sondern nur banale Einstellungen dazu. Genauso wenig wie es keine dummen Fragen gibt. Es gibt nur dumme Antworten – Ausnahmen bestätigen die Regel. Das wusste auch Christoph Columbus, der zu seiner Zeit Erstaunliches wagte. Er setzte sein Leben aufs Spiel, um eine andere Welt zu finden. Heute für uns unvorstellbar. Von Europa aus sind wir in weniger als 8 Stunden in Amerika. Für diese Route brauchte die Flotte von Columbus mehrere Monate. Und, wie ist es ihm ergangen? Nun, nach seiner Rückkehr aus Amerika lud Kardinal Mendoza ihn zum Essen ein. Dabei hielt er ihm vor, dass es ein Leichtes gewesen sei, die „Neue Welt“ zu entdecken. Das hätte schließlich auch jeder andere vollführen können. Columbus antwortete nicht und bat um ein gekochtes Ei. Nun bat er die anwesenden Personen, dieses Ei auf die Spitze zu stellen. Es wurden viele Versuche unternommen, aber niemand schaffte es, diese Aufgabe zu erfüllen. Man ist schließlich davon überzeugt, dass es sich hierbei um eine unlösbare Aufgabe handelt. Dann wurde Columbus gebeten, es selbst zu versuchen. Dieser schlägt sein Ei mit der Spitze auf den Tisch, so dass sie leicht eingedrückt wird und das Ei stehen bleibt. Als die Anwesenden protestieren, dass sie das auch gekonnt hätten, antwortete Columbus: __„Der Unterschied ist, meine Herren, dass Sie es hätten tun können, ich hingegen habe es getan!“__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Somit ist klar, dass es keine banalen Tipps gibt, sondern nur banale Einstellungen dazu. Genauso wenig wie es keine dummen Fragen gibt. Es gibt nur dumme Antworten – Ausnahmen bestätigen die Regel. Das wusste auch Christoph Columbus, der zu seiner Zeit Erstaunliches wagte. Er setzte sein Leben aufs Spiel, um eine andere Welt zu finden. Heute für uns unvorstellbar. Von Europa aus sind wir in weniger als 8 Stunden in Amerika. Für diese Route brauchte die Flotte von Columbus mehrere Monate. Und, wie ist es ihm ergangen? Nun, nach seiner Rückkehr aus Amerika lud Kardinal Mendoza ihn zum Essen ein. Dabei hielt er ihm vor, dass es ein Leichtes gewesen sei, die „Neue Welt“ zu entdecken. Das hätte schließlich auch jeder andere vollführen können. Columbus antwortete nicht und bat um ein gekochtes Ei. Nun bat er die anwesenden Personen, dieses Ei auf die Spitze zu stellen. Es wurden viele Versuche unternommen, aber niemand schaffte es, diese Aufgabe zu erfüllen. Man ist schließlich davon überzeugt, dass es sich hierbei um eine unlösbare Aufgabe handelt. Dann wurde Columbus gebeten, es selbst zu versuchen. Dieser schlägt sein Ei mit der Spitze auf den Tisch, so dass sie leicht eingedrückt wird und das Ei stehen bleibt. Als die Anwesenden protestieren, dass sie das auch gekonnt hätten, antwortete Columbus: __„Der Unterschied ist, meine Herren, dass Sie es hätten tun können, ich hingegen habe es getan!“__\n\nSomit ist klar, dass es keine banalen Tipps gibt, sondern nur banale Einstellungen dazu. Genauso wenig wie es keine dummen Fragen gibt. Es gibt nur dumme Antworten – Ausnahmen bestätigen die Regel. Das wusste auch Christoph Columbus, der zu seiner Zeit Erstaunliches wagte. Er setzte sein Leben aufs Spiel, um eine andere Welt zu finden. Heute für uns unvorstellbar. Von Europa aus sind wir in weniger als 8 Stunden in Amerika. Für diese Route brauchte die Flotte von Columbus mehrere Monate. Und, wie ist es ihm ergangen? Nun, nach seiner Rückkehr aus Amerika lud Kardinal Mendoza ihn zum Essen ein. Dabei hielt er ihm vor, dass es ein Leichtes gewesen sei, die „Neue Welt“ zu entdecken. Das hätte schließlich auch jeder andere vollführen können. Columbus antwortete nicht und bat um ein gekochtes Ei. Nun bat er die anwesenden Personen, dieses Ei auf die Spitze zu stellen. Es wurden viele Versuche unternommen, aber niemand schaffte es, diese Aufgabe zu erfüllen. Man ist schließlich davon überzeugt, dass es sich hierbei um eine unlösbare Aufgabe handelt. Dann wurde Columbus gebeten, es selbst zu versuchen. Dieser schlägt sein Ei mit der Spitze auf den Tisch, so dass sie leicht eingedrückt wird und das Ei stehen bleibt. Als die Anwesenden protestieren, dass sie das auch gekonnt hätten, antwortete Columbus: __„Der Unterschied ist, meine Herren, dass Sie es hätten tun können, ich hingegen habe es getan!“__",
+      "id": [
+        "302211"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:302212]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_66.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "302212"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_66.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:302213]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_68.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "302213"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_68.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:302214]\n[▼ch-1]\n[#To Do]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "302214"
+      ],
+      "anchor": "ch-1",
+      "title": "To Do"
+    }
+  },
+  {
+    "bitmark": "[.article&image]\n[@id:302215]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_12.png]\n\nKennen Sie die „Peanuts“? Diese einfachen und doch so tiefgründigen Comics des Zeichners Charles Schulz. In einem seiner Comics macht er deutlich, wie einfach es ist, sich selbst negativ zu beeinflussen. Sally fragt Charlie: __„Was muss ich tun, dass ich mich so richtig mies fühle?“__ Er sagt: __„Du musst nur den Kopf senken, dein Gesicht in Falten legen und Schultern und Arme hängen lassen. Du wirst sehen, es funktioniert hundertprozentig. Sofort fühlst du dich richtig mies!“__ Probieren Sie es aus. Sie werden nicht in der Lage sein, in dieser Haltung einen positiven Gedanken zu fassen. Weil alles im Leben zwei Seiten hat, so funktioniert diese Übung auch in die andere Richtung.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Kennen Sie die „Peanuts“? Diese einfachen und doch so tiefgründigen Comics des Zeichners Charles Schulz. In einem seiner Comics macht er deutlich, wie einfach es ist, sich selbst negativ zu beeinflussen. Sally fragt Charlie: __„Was muss ich tun, dass ich mich so richtig mies fühle?“__ Er sagt: __„Du musst nur den Kopf senken, dein Gesicht in Falten legen und Schultern und Arme hängen lassen. Du wirst sehen, es funktioniert hundertprozentig. Sofort fühlst du dich richtig mies!“__ Probieren Sie es aus. Sie werden nicht in der Lage sein, in dieser Haltung einen positiven Gedanken zu fassen. Weil alles im Leben zwei Seiten hat, so funktioniert diese Übung auch in die andere Richtung.",
+      "id": [
+        "302215"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_12.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302216]\nBreiten Sie Ihre Arme aus, schließen Sie die Augen und sehen Sie sich am Ziel Ihrer Wünsche. Sie können sich jetzt nicht dem warmen, positi- ven Gefühl, das spürbar durch Ihren Körper fließt, entziehen. Versetzen Sie sich mit Ihren Gefühlen in die Wirklichkeit, die Sie als erfolgreicher Mensch real erleben werden. Überspringen Sie mit Ihrer Vorstellung die Strecke, die Sie zu Ihrem Ziel noch vor sich haben. Begeistern Sie sich für ein Leben im Erfolg. Und vor allen Dingen achten Sie darauf, dass Sie sich selber treu bleiben. __Verkaufen__ Sie niemals Ihre Seele! Nur deshalb reich werden zu wollen, weil Sie sich ein größeres Auto und Haus leisten können als Ihr Nachbar, macht Sie nicht glücklich. Der Erfolg ist wichtig, doch stellt sich dieser nie ein, wenn Sie in dem, was Sie tun, keinen Sinn sehen. Der österreichische Psychiater Viktor E. Frankl formulierte es so:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Breiten Sie Ihre Arme aus, schließen Sie die Augen und sehen Sie sich am Ziel Ihrer Wünsche. Sie können sich jetzt nicht dem warmen, positi- ven Gefühl, das spürbar durch Ihren Körper fließt, entziehen. Versetzen Sie sich mit Ihren Gefühlen in die Wirklichkeit, die Sie als erfolgreicher Mensch real erleben werden. Überspringen Sie mit Ihrer Vorstellung die Strecke, die Sie zu Ihrem Ziel noch vor sich haben. Begeistern Sie sich für ein Leben im Erfolg. Und vor allen Dingen achten Sie darauf, dass Sie sich selber treu bleiben. __Verkaufen__ Sie niemals Ihre Seele! Nur deshalb reich werden zu wollen, weil Sie sich ein größeres Auto und Haus leisten können als Ihr Nachbar, macht Sie nicht glücklich. Der Erfolg ist wichtig, doch stellt sich dieser nie ein, wenn Sie in dem, was Sie tun, keinen Sinn sehen. Der österreichische Psychiater Viktor E. Frankl formulierte es so:",
+      "id": [
+        "302216"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:302217]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_29.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "302217"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_29.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302218]\nFür was leben Sie? Worin sehen Sie den Sinn Ihres Lebens? Wenn Sie es wissen, was sehr zu begrüßen wäre, dann schreiben Sie es jetzt auf. Wir werden im weiteren Verlauf des Lehrgangs auf diese Übung zurückkommen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Für was leben Sie? Worin sehen Sie den Sinn Ihres Lebens? Wenn Sie es wissen, was sehr zu begrüßen wäre, dann schreiben Sie es jetzt auf. Wir werden im weiteren Verlauf des Lehrgangs auf diese Übung zurückkommen.",
+      "id": [
+        "302218"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:302219]\n[!Darin sehe ich den Sinn meines Lebens:]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Darin sehe ich den Sinn meines Lebens:",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "302219"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:302220]\n[▼ch-2]\n[#Impressum]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "302220"
+      ],
+      "anchor": "ch-2",
+      "title": "Impressum"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302221]\nDas Werk, einschließlich aller seiner Teile, ist urheberrechtlich geschützt. Jede Verwertung außerhalb des Urhebergesetzes ist ohne Zustimmung des Verlages unzulässig und strafbar. Das gilt im Besonderen für Vervielfältigungen, Übersetzungen, Mikroverfilmungen und die Einspeicherung und Verarbeitung in elektronische Systeme. Es ist deshalb nicht gestattet, Abbildungen und Texte zu verändern oder zu manipulieren. Auch die Weitergabe an Dritte ist ohne Zustimmung des Verlages nicht erlaubt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Werk, einschließlich aller seiner Teile, ist urheberrechtlich geschützt. Jede Verwertung außerhalb des Urhebergesetzes ist ohne Zustimmung des Verlages unzulässig und strafbar. Das gilt im Besonderen für Vervielfältigungen, Übersetzungen, Mikroverfilmungen und die Einspeicherung und Verarbeitung in elektronische Systeme. Es ist deshalb nicht gestattet, Abbildungen und Texte zu verändern oder zu manipulieren. Auch die Weitergabe an Dritte ist ohne Zustimmung des Verlages nicht erlaubt.",
+      "id": [
+        "302221"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302222]\nAlle Rechenbeispiele, Informationen, Anregungen und Tipps in dieser Lektion basieren auf den Erkenntnissen sowie der Gesetzeslage zum Zeitpunkt der Drucklegung und wurden mit der größtmöglichen Sorgfalt zusammengestellt. Dabei wurde darauf geachtet, dass die gewählten Beispiele allgemein übertragbar sind. Trotz aller Sorgfalt sind Fehler jedoch nicht ganz auszuschließen. Weil sich in Einzelfällen und durch Änderungen von Gesetzen und Vorschriften eventuell andere Umstände ergeben können, ist jedoch eine Haftung von Verlag und Autor für Schäden aller Art aus der Anwendung der hier erteilten Ratschläge ausgeschlossen. Auch können Autor und Verlag weder eine Garantie noch irgendeine Haftung für Personen-, Sach- oder Vermögensschäden, die auf fehlerhafte Angaben in dieser Lektion zurückzuführen sind, übernehmen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Alle Rechenbeispiele, Informationen, Anregungen und Tipps in dieser Lektion basieren auf den Erkenntnissen sowie der Gesetzeslage zum Zeitpunkt der Drucklegung und wurden mit der größtmöglichen Sorgfalt zusammengestellt. Dabei wurde darauf geachtet, dass die gewählten Beispiele allgemein übertragbar sind. Trotz aller Sorgfalt sind Fehler jedoch nicht ganz auszuschließen. Weil sich in Einzelfällen und durch Änderungen von Gesetzen und Vorschriften eventuell andere Umstände ergeben können, ist jedoch eine Haftung von Verlag und Autor für Schäden aller Art aus der Anwendung der hier erteilten Ratschläge ausgeschlossen. Auch können Autor und Verlag weder eine Garantie noch irgendeine Haftung für Personen-, Sach- oder Vermögensschäden, die auf fehlerhafte Angaben in dieser Lektion zurückzuführen sind, übernehmen.",
+      "id": [
+        "302222"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302223]\nAlle in diesem Buch vorgestellten Geschäftsmodelle sind Beispiele. Deshalb übernehmen Verlag und Autoren keine Erfolgsgarantien oder jede andere Form von Gewährleistungen. Der Leser ist für sein Handeln ausschließlich selbst verantwortlich und sollte sich in jedem Fall steuerlich und juristisch beraten lassen, bevor er den Schritt in die Selbstständigkeit geht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Alle in diesem Buch vorgestellten Geschäftsmodelle sind Beispiele. Deshalb übernehmen Verlag und Autoren keine Erfolgsgarantien oder jede andere Form von Gewährleistungen. Der Leser ist für sein Handeln ausschließlich selbst verantwortlich und sollte sich in jedem Fall steuerlich und juristisch beraten lassen, bevor er den Schritt in die Selbstständigkeit geht.",
+      "id": [
+        "302223"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302224]\nDie UrheberInnen der in diesem Buch enthaltenen Sprüche, Zitate und Aphorismen sind genannt. Fehlen sie, dann waren sie nicht eindeutig feststellbar. Das gilt auch für Spruchweisheiten aus dem Volksmund und für Neuformulierungen alter oder zu langer Sprüche.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die UrheberInnen der in diesem Buch enthaltenen Sprüche, Zitate und Aphorismen sind genannt. Fehlen sie, dann waren sie nicht eindeutig feststellbar. Das gilt auch für Spruchweisheiten aus dem Volksmund und für Neuformulierungen alter oder zu langer Sprüche.",
+      "id": [
+        "302224"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302225]\nDieser Text ist Eigentum oder im Besitz der Vermarkungsrechte von Beat Ambord. Jede Vervielfältigung oder Weiterverarbeitung der Inhalte ist untersagt. Sollten Sie dieses Dokument dennoch außerhalb von Internetseiten der Beat Ambord erhalten haben, melden Sie dies uns bitte sofort. Das Eigentum bezieht sich nicht auf die Bilder. Sie wurden in Lizenz erworben von: www.shutterstock.de (Deckblatt) sowie www.fotolia.com (Textseite nach Deckblatt).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieser Text ist Eigentum oder im Besitz der Vermarkungsrechte von Beat Ambord. Jede Vervielfältigung oder Weiterverarbeitung der Inhalte ist untersagt. Sollten Sie dieses Dokument dennoch außerhalb von Internetseiten der Beat Ambord erhalten haben, melden Sie dies uns bitte sofort. Das Eigentum bezieht sich nicht auf die Bilder. Sie wurden in Lizenz erworben von: www.shutterstock.de (Deckblatt) sowie www.fotolia.com (Textseite nach Deckblatt).",
+      "id": [
+        "302225"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:302226]\nAlle Rechte vorbehalten. Nachdruck – auch auszugsweise – nur mit Genehmigung des Verlages. Mit dem Erwerb dieses Lektion haben Sie ausschließlich Leserechte erworben. Jede kostenlose Weitergabe ist untersagt.\n© Beat Ambord (Under licence 2013); All rights reserved",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Alle Rechte vorbehalten. Nachdruck – auch auszugsweise – nur mit Genehmigung des Verlages. Mit dem Erwerb dieses Lektion haben Sie ausschließlich Leserechte erworben. Jede kostenlose Weitergabe ist untersagt.\n© Beat Ambord (Under licence 2013); All rights reserved",
+      "id": [
+        "302226"
+      ]
+    }
+  }
+]

@@ -1,0 +1,3252 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:131706][#Die 42-Tage Kur]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/cover5.jpg]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131706"
+      ],
+      "title": "Die 42-Tage Kur",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/cover5.jpg"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:131708]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_18.png]\n\n||Nutzungsrechte: VITOGAZ Schweiz\nJede kostenlose Weitergabe ist untersagt.||",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "131708"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_18.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:131709][&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_46.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "131709"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_46.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:131710]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_19.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "131710"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_19.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131711]\nWir Menschen leben in einem Rhythmus, der in einer genialen Weise bereits im Schöpfungsbericht des Alten Testaments vorgegeben ist. Wenn Sie in sich hineinhören, werden Sie spüren, dass jeder Tag eine ganz eigene Grundstimmung hat. Montag ist hoffentlich der Tag, an dem Sie sich mit Elan in die Arbeitswoche begeben. Freitag löst in der Regel im Bewusstsein einer Arbeitswoche das Gefühl der Vorfreude auf das Wochenende, auf viel Zeit mit Freunden, mit der Familie oder einfach nur auf Zeit für Hobbys aus.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wir Menschen leben in einem Rhythmus, der in einer genialen Weise bereits im Schöpfungsbericht des Alten Testaments vorgegeben ist. Wenn Sie in sich hineinhören, werden Sie spüren, dass jeder Tag eine ganz eigene Grundstimmung hat. Montag ist hoffentlich der Tag, an dem Sie sich mit Elan in die Arbeitswoche begeben. Freitag löst in der Regel im Bewusstsein einer Arbeitswoche das Gefühl der Vorfreude auf das Wochenende, auf viel Zeit mit Freunden, mit der Familie oder einfach nur auf Zeit für Hobbys aus.",
+      "id": [
+        "131711"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131712]\nSeien Sie sich der Tatsache bewusst, dass wir in aller Regel überschätzen, was wir innerhalb einer Woche leisten können. Und wir unterschätzen, was wir in einem Jahr zu erreichen imstande sind – wenn wir kontinuierlich an unseren Plänen arbeiten. Selbstverständlich können Sie zu jeder Zeit beginnen, etwas zu verändern. Wann immer Sie innerlich dazu bereit sind, doch eines sollten Sie ganz unnachgiebig, auch sich selber gegenüber, durchziehen: Arbeiten Sie jeden Tag daran! Wichtig sind vor allen Dingen die ersten 42 Tagen. Es ist extrem wichtig, dass Sie an Ihrem Programm festhalten. Wenn Sie diese Tage ohne Unterbrechung geschafft haben, werden Sie spüren, wie eine Gewohnheit entstanden ist,die Sie nicht mehr missen möchten. Nach diesem Einstieg können Sie sich selbst beglückwünschen und sich ein kleines Extra gönnen. Denn dann haben Sie schon einen ganz wesentlichen Schritt gegen die eigene Erfolgsträgheit und die Suche nach Ausreden gewonnen!",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Seien Sie sich der Tatsache bewusst, dass wir in aller Regel überschätzen, was wir innerhalb einer Woche leisten können. Und wir unterschätzen, was wir in einem Jahr zu erreichen imstande sind – wenn wir kontinuierlich an unseren Plänen arbeiten. Selbstverständlich können Sie zu jeder Zeit beginnen, etwas zu verändern. Wann immer Sie innerlich dazu bereit sind, doch eines sollten Sie ganz unnachgiebig, auch sich selber gegenüber, durchziehen: Arbeiten Sie jeden Tag daran! Wichtig sind vor allen Dingen die ersten 42 Tagen. Es ist extrem wichtig, dass Sie an Ihrem Programm festhalten. Wenn Sie diese Tage ohne Unterbrechung geschafft haben, werden Sie spüren, wie eine Gewohnheit entstanden ist,die Sie nicht mehr missen möchten. Nach diesem Einstieg können Sie sich selbst beglückwünschen und sich ein kleines Extra gönnen. Denn dann haben Sie schon einen ganz wesentlichen Schritt gegen die eigene Erfolgsträgheit und die Suche nach Ausreden gewonnen!",
+      "id": [
+        "131712"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131713]\nUnterschätzen Sie nicht die Tatsache, dass die Arbeit an Ihrer erfolgreichen Persönlichkeit vermutlich eine grundlegende Umstellung Ihrer Zeiteinteilung fordert. Am Sonntag, am Tag der Rückbesinnung und Planung kurzfristiger und mittelfristiger Ziele und dem wiederholten Einschwören auf Ihr großes Lebensziel, sollten Sie sich eine ganze Stunde, wenn nicht mehr, für sich gönnen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Unterschätzen Sie nicht die Tatsache, dass die Arbeit an Ihrer erfolgreichen Persönlichkeit vermutlich eine grundlegende Umstellung Ihrer Zeiteinteilung fordert. Am Sonntag, am Tag der Rückbesinnung und Planung kurzfristiger und mittelfristiger Ziele und dem wiederholten Einschwören auf Ihr großes Lebensziel, sollten Sie sich eine ganze Stunde, wenn nicht mehr, für sich gönnen.",
+      "id": [
+        "131713"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131714]\nBeginnen Sie damit, ganz ohne Selbstvorwürfe, zu überlegen, wo es in Ihrem Leben Muster gibt, die immer wieder zu ähnlichen Schwierigkeiten führen und wo Sie sich verändern und Ihre Erfolgschancen verbessern möchten. Wenn Sie einer der zahlreichen Menschen wären, die sich die Ausrede gönnen: „So bin ich halt. Da kann man nichts machen!“, hätten Sie ohnehin nicht zu diesem Lehrgang gegriffen. Die Analyse dessen, wo Sie sich und Ihren Alltag positiv verändern wollen, muss nicht länger dauern als zehn Minuten. Wenn Sie dabei zwei oder drei Punkte festmachen – und diese auch niederschreiben – , ist schon ein wesentlicher Schritt getan.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Beginnen Sie damit, ganz ohne Selbstvorwürfe, zu überlegen, wo es in Ihrem Leben Muster gibt, die immer wieder zu ähnlichen Schwierigkeiten führen und wo Sie sich verändern und Ihre Erfolgschancen verbessern möchten. Wenn Sie einer der zahlreichen Menschen wären, die sich die Ausrede gönnen: „So bin ich halt. Da kann man nichts machen!“, hätten Sie ohnehin nicht zu diesem Lehrgang gegriffen. Die Analyse dessen, wo Sie sich und Ihren Alltag positiv verändern wollen, muss nicht länger dauern als zehn Minuten. Wenn Sie dabei zwei oder drei Punkte festmachen – und diese auch niederschreiben – , ist schon ein wesentlicher Schritt getan.",
+      "id": [
+        "131714"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131715]\n===\n1. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131715"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131716]\n===\n2. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "2. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131716"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131717]\n===\n3. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "3. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131717"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131718]\n===\n4. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "4. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131718"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131719]\n===\n5. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "5. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131719"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131720]\n===\n6. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "6. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131720"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131721]\n===\n7. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "7. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131721"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131722]\n===\n8. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "8. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131722"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131723]\n===\n9. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "9. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131723"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131724]\n===\n10. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "10. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131724"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131725]\n===\n11. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "11. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131725"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131726]\n===\n12. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "12. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131726"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131727]\n===\n13. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "13. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131727"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131728]\n===\n14. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "14. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131728"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131729]\n===\n15. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "15. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131729"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131730]\n===\n16. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "16. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131730"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131731]\n===\n17. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "17. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131731"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131732]\n===\n18. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "18. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131732"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131733]\n===\n19. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "19. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131733"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131734]\n===\n20. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "20. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131734"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131735]\n===\n21. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "21. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131735"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131736]\n===\n22. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "22. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131736"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131737]\n===\n23. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "23. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131737"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131738]\n===\n24. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "24. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131738"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131739]\n===\n25. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "25. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131739"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131740]\n===\n26. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "26. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131740"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131741]\n===\n27. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "27. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131741"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131742]\n===\n28. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "28. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131742"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131743]\n===\n29. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "29. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131743"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131744]\n===\n30. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "30. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131744"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131745]\n===\n31. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "31. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131745"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131746]\n===\n32. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "32. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131746"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131747]\n===\n33. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "33. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131747"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131748]\n===\n34. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "34. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131748"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131749]\n===\n35. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "35. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131749"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131750]\n===\n36. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "36. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131750"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131751]\n===\n37. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "37. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131751"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131752]\n===\n38. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "38. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131752"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131753]\n===\n39. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "39. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131753"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131754]\n===\n40. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "40. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131754"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131755]\n===\n41. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "41. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131755"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131756]\n===\n42. Tag:[@shortAnswer]\n===\nMein Ziel:[@shortAnswer]\n===\nMeine heutigen Erfolge:\n===\nMein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:[@shortAnswer]\n===\nDafür habe ich diese Zeit aufgewendet:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "42. Tag:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein Ziel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Meine heutigen Erfolge:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mein heutiges „Bewegungsprogramm“:\nDas habe ich (sportlich) unternommen:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dafür habe ich diese Zeit aufgewendet:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131756"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:134354]\n[#Impressum]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "134354"
+      ],
+      "title": "Impressum"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131758]Das Werk, einschließlich aller seiner Teile, ist urheberrechtlich geschützt. Jede Verwertung außerhalb des Urhebergesetzes ist ohne Zustimmung des Verlages unzulässig und strafbar. Das gilt im Besonderen für Vervielfältigungen, Übersetzungen, Mikroverfilmungen und die Einspeicherung und Verarbeitung in elektronische Systeme. Es ist deshalb nicht gestattet, Abbildungen und Texte zu verändern oder zu manipulieren. Auch die Weitergabe an Dritte ist ohne Zustimmung des Verlages nicht erlaubt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Werk, einschließlich aller seiner Teile, ist urheberrechtlich geschützt. Jede Verwertung außerhalb des Urhebergesetzes ist ohne Zustimmung des Verlages unzulässig und strafbar. Das gilt im Besonderen für Vervielfältigungen, Übersetzungen, Mikroverfilmungen und die Einspeicherung und Verarbeitung in elektronische Systeme. Es ist deshalb nicht gestattet, Abbildungen und Texte zu verändern oder zu manipulieren. Auch die Weitergabe an Dritte ist ohne Zustimmung des Verlages nicht erlaubt.",
+      "id": [
+        "131758"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131759]Alle Rechenbeispiele, Informationen, Anregungen und Tipps in dieser Lektion basieren auf den Erkenntnissen sowie der Gesetzeslage zum Zeitpunkt der Drucklegung und wurden mit der größtmöglichen Sorgfalt zusammengestellt. Dabei wurde darauf geachtet, dass die gewählten Beispiele allgemein übertragbar sind. Trotz aller Sorgfalt sind Fehler jedoch nicht ganz auszuschließen. Weil sich in Einzelfällen und durch Änderungen von Gesetzen und Vorschriften eventuell andere Umstände ergeben können, ist jedoch eine Haftung von Verlag und Autor für Schäden aller Art aus der Anwendung der hier erteilten Ratschläge ausgeschlossen. Auch können Autor und Verlag weder eine Garantie noch irgendeine Haftung für Personen-, Sach- oder Vermögensschäden, die auf fehlerhafte Angaben in dieser Lektion zurückzuführen sind, übernehmen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Alle Rechenbeispiele, Informationen, Anregungen und Tipps in dieser Lektion basieren auf den Erkenntnissen sowie der Gesetzeslage zum Zeitpunkt der Drucklegung und wurden mit der größtmöglichen Sorgfalt zusammengestellt. Dabei wurde darauf geachtet, dass die gewählten Beispiele allgemein übertragbar sind. Trotz aller Sorgfalt sind Fehler jedoch nicht ganz auszuschließen. Weil sich in Einzelfällen und durch Änderungen von Gesetzen und Vorschriften eventuell andere Umstände ergeben können, ist jedoch eine Haftung von Verlag und Autor für Schäden aller Art aus der Anwendung der hier erteilten Ratschläge ausgeschlossen. Auch können Autor und Verlag weder eine Garantie noch irgendeine Haftung für Personen-, Sach- oder Vermögensschäden, die auf fehlerhafte Angaben in dieser Lektion zurückzuführen sind, übernehmen.",
+      "id": [
+        "131759"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131760]Alle in diesem Buch vorgestellten Geschäftsmodelle sind Beispiele. Deshalb übernehmen Verlag und Autoren keine Erfolgsgarantien oder jede andere Form von Gewährleistungen. Der Leser ist für sein Handeln ausschließlich selbst verantwortlich und sollte sich in jedem Fall steuerlich und juristisch beraten lassen, bevor er den Schritt in die Selbstständigkeit geht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Alle in diesem Buch vorgestellten Geschäftsmodelle sind Beispiele. Deshalb übernehmen Verlag und Autoren keine Erfolgsgarantien oder jede andere Form von Gewährleistungen. Der Leser ist für sein Handeln ausschließlich selbst verantwortlich und sollte sich in jedem Fall steuerlich und juristisch beraten lassen, bevor er den Schritt in die Selbstständigkeit geht.",
+      "id": [
+        "131760"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131761]Die UrheberInnen der in diesem Buch enthaltenen Sprüche, Zitate und Aphorismen sind genannt. Fehlen sie, dann waren sie nicht eindeutig feststellbar. Das gilt auch für Spruchweisheiten aus dem Volksmund und für Neuformulierungen alter oder zu langer Sprüche.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die UrheberInnen der in diesem Buch enthaltenen Sprüche, Zitate und Aphorismen sind genannt. Fehlen sie, dann waren sie nicht eindeutig feststellbar. Das gilt auch für Spruchweisheiten aus dem Volksmund und für Neuformulierungen alter oder zu langer Sprüche.",
+      "id": [
+        "131761"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131762]Dieser Text ist Eigentum oder im Besitz der Vermarkungsrechte von Beat Ambord. Jede Vervielfältigung oder Weiterverarbeitung der Inhalte ist untersagt. Sollten Sie dieses Dokument dennoch außerhalb von Internetseiten der Beat Ambord erhalten haben, melden Sie dies uns bitte sofort. Das Eigentum bezieht sich nicht auf die Bilder. Sie wurden in Lizenz erworben von: www.shutterstock.de (Deckblatt) sowie www.fotolia.com (Textseite nach Deckblatt).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieser Text ist Eigentum oder im Besitz der Vermarkungsrechte von Beat Ambord. Jede Vervielfältigung oder Weiterverarbeitung der Inhalte ist untersagt. Sollten Sie dieses Dokument dennoch außerhalb von Internetseiten der Beat Ambord erhalten haben, melden Sie dies uns bitte sofort. Das Eigentum bezieht sich nicht auf die Bilder. Sie wurden in Lizenz erworben von: www.shutterstock.de (Deckblatt) sowie www.fotolia.com (Textseite nach Deckblatt).",
+      "id": [
+        "131762"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131763]Alle Rechte vorbehalten. Nachdruck – auch auszugsweise – nur mit Genehmigung des Verlages. Mit dem Erwerb dieses Lektion haben Sie ausschließlich Leserechte erworben. Jede kostenlose Weitergabe ist untersagt.\n© Beat Ambord (Under licence 2013); All rights reserved",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Alle Rechte vorbehalten. Nachdruck – auch auszugsweise – nur mit Genehmigung des Verlages. Mit dem Erwerb dieses Lektion haben Sie ausschließlich Leserechte erworben. Jede kostenlose Weitergabe ist untersagt.\n© Beat Ambord (Under licence 2013); All rights reserved",
+      "id": [
+        "131763"
+      ]
+    }
+  }
+]

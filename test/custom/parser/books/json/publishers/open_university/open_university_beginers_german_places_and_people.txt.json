@@ -1,0 +1,3209 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:136530]\n[#Beginners' German: Places and people]\n[@externalId:e-Yv1NYAirECUK]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136530"
+      ],
+      "title": "Beginners' German: Places and people",
+      "externalId": [
+        "e-Yv1NYAirECUK"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:136531]\n[#Introduction]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "136531"
+      ],
+      "title": "Introduction"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136532]\nThis free course focuses on planning and preparing for a journey through German-speaking countries. You will read and hear about a range of places and people.\n\nYou will learn the names of things you need to remember when travelling and, most importantly, you will find out what it’s like to read and listen to German in real contexts, and about developing strategies and studying useful phrases, which will help you to cope in a range of situations.\n\nYou will also find out how to order and pay for things in cafes and restaurants.\n\nThis OpenLearn course is an adapted extract from a previous edition of the Open University course **L193 Rundblick: beginners' German**.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This free course focuses on planning and preparing for a journey through German-speaking countries. You will read and hear about a range of places and people.\n\nYou will learn the names of things you need to remember when travelling and, most importantly, you will find out what it’s like to read and listen to German in real contexts, and about developing strategies and studying useful phrases, which will help you to cope in a range of situations.\n\nYou will also find out how to order and pay for things in cafes and restaurants.\n\nThis OpenLearn course is an adapted extract from a previous edition of the Open University course **L193 Rundblick: beginners' German**.",
+      "id": [
+        "136532"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:136533]\n[#Learning outcomes]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "136533"
+      ],
+      "title": "Learning outcomes"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136534]\nAfter studying this course, you should be able to:\n• demonstrate knowledge of the singular forms of personal pronouns, singular forms of the regular verb kommen and generalisations using man\n• use improved vocabulary and pronunciation related to place names, numbers 0–10, countries, finding out what is available when ordering and paying for things, ordering and paying for food\n• understand the cultures of places and people in Germany, Switzerland and Austria, German-speaking minorities\n• address people, imitate German pronunciation, and read for gist\n• learned how to work out meanings from the contexts.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "After studying this course, you should be able to:\n• demonstrate knowledge of the singular forms of personal pronouns, singular forms of the regular verb kommen and generalisations using man\n• use improved vocabulary and pronunciation related to place names, numbers 0–10, countries, finding out what is available when ordering and paying for things, ordering and paying for food\n• understand the cultures of places and people in Germany, Switzerland and Austria, German-speaking minorities\n• address people, imitate German pronunciation, and read for gist\n• learned how to work out meanings from the contexts.",
+      "id": [
+        "136534"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:136535]\n[#Talking about places and locations]\n[%1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "136535"
+      ],
+      "title": "Talking about places and locations"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136536]\nIn this section, you have a first look at places and people in Germany, Austria and Switzerland. You familiarise yourself with the pronunciation of place names in German, and you talk about the location of cities and towns in German-speaking countries. You also talk about where some people come from (some well-known and some not so well-known).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In this section, you have a first look at places and people in Germany, Austria and Switzerland. You familiarise yourself with the pronunciation of place names in German, and you talk about the location of cities and towns in German-speaking countries. You also talk about where some people come from (some well-known and some not so well-known).",
+      "id": [
+        "136536"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:136537]\n[##People and places]\n[%1.1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "136537"
+      ],
+      "title": "People and places"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&imageWithAudio]\n[@id:136538]\n[%Übung 1]\n[!Here is a map showing places in Germany, Switzerland and Austria. To start with, listen to the audio extract beneath the map. Can you understand where the various people are from? Which of the labelled places do you hear mentioned in the clip?]\n===\n===\nWhich of the places have you heard of before (or perhaps even visited)? Make a note of them. Do you know any other places in Germany, Austria and Switzerland? Where are they?\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf001i.jpg]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs01.mp3]\n|note:Transcript\nFRAU 1: Sind Sie auch aus Frankfurt?\nMANN 1: Nein, München.\nFRAU 1: Und Sie?\nFRAU 2: Berlin.\nFRAU 3: Ich komm’ aus Innsbruck.\nFRAU 2: Ihr Mann auch?\nMANN 2: Nein, nein, aus Zürich.\nFRAU 1: Ist ja ganz international hier! Und Sie? Woher sind Sie?\nFRAU 4: Sorry? I’m afraid I don’t understand a word you’re saying!",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Übung 1",
+      "instruction": "Here is a map showing places in Germany, Switzerland and Austria. To start with, listen to the audio extract beneath the map. Can you understand where the various people are from? Which of the labelled places do you hear mentioned in the clip?",
+      "body": "",
+      "footer": "[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf001i.jpg][&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs01.mp3][&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs01.mp3]|note:Transcript\nFRAU 1: Sind Sie auch aus Frankfurt?\nMANN 1: Nein, München.\nFRAU 1: Und Sie?\nFRAU 2: Berlin.\nFRAU 3: Ich komm’ aus Innsbruck.\nFRAU 2: Ihr Mann auch?\nMANN 2: Nein, nein, aus Zürich.\nFRAU 1: Ist ja ganz international hier! Und Sie? Woher sind Sie?\nFRAU 4: Sorry? I’m afraid I don’t understand a word you’re saying!",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Which of the places have you heard of before (or perhaps even visited)? Make a note of them. Do you know any other places in Germany, Austria and Switzerland? Where are they?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136538"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 27,
+        "errorLine": "[.interview:bitmark--&imageWithAudio]"
+      },
+      {
+        "message": "Missing resource(s) for &image",
+        "line": 0,
+        "column": 0
+      }
+    ]
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&imageWithAudio]\n[@id:136539]\n[%Übung 2]\n[!Now listen to the pronunciation of the place names. Repeat each name as you hear it.\n__Hören Sie und sprechen Sie nach__.]\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf002i.jpg]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs02.mp3]\n|note:Transcript\nDEUTSCHLAND\nRostock →\nInsel Rügen →\nBerlin →\nMünchen →\nAugsburg →\nFrankfurt →\nKöln →\nHamburg →\n\nÖSTERREICH\nWien →\nSalzburg →\nInnsbruck →\n\nSCHWEIZ\nZürich →\nBern →\nGenf →",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "|note:Transcript\nDEUTSCHLAND\nRostock →\nInsel Rügen →\nBerlin →\nMünchen →\nAugsburg →\nFrankfurt →\nKöln →\nHamburg →\n\nÖSTERREICH\nWien →\nSalzburg →\nInnsbruck →\n\nSCHWEIZ\nZürich →\nBern →\nGenf →",
+      "item": "Übung 2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136539"
+      ],
+      "instruction": "Now listen to the pronunciation of the place names. Repeat each name as you hear it.\n__Hören Sie und sprechen Sie nach__.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf002i.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs02.mp3"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 28,
+        "errorLine": "[.assignment:bitmark--&imageWithAudio]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:136540]\n[##Pronunciation]\n[%1.2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "136540"
+      ],
+      "title": "Pronunciation"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136541]\nGerman uses the same letters as English, with some additions: ‘a’, ‘o’ and ‘u’ can sometimes be found with two dots over them (called __Umlaut__). They sound slightly different from ‘a’, ‘o’, and ‘u’ on their own. The letter ‘ß’ represents a double ‘s’ and is pronounced like an ‘s’.\n\nAt this stage, all the German you need to use is presented in the audio clips. Listen to the words and phrases and try to imitate the pronunciation of the speakers. You will find that German pronunciation becomes very easy to predict after a while. As the course progresses, you will be introduced to some of the rules and asked to practise individual sounds.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "German uses the same letters as English, with some additions: ‘a’, ‘o’ and ‘u’ can sometimes be found with two dots over them (called __Umlaut__). They sound slightly different from ‘a’, ‘o’, and ‘u’ on their own. The letter ‘ß’ represents a double ‘s’ and is pronounced like an ‘s’.\n\nAt this stage, all the German you need to use is presented in the audio clips. Listen to the words and phrases and try to imitate the pronunciation of the speakers. You will find that German pronunciation becomes very easy to predict after a while. As the course progresses, you will be introduced to some of the rules and asked to practise individual sounds.",
+      "id": [
+        "136541"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&audio]\n[@id:136542]\n[%Übung 3]\n[!How are the following letters or groups of letters pronounced in German? Listen to this audio extract again and, if you like, make some personal notes on the pronunciation. Write down something that will help you remember how to say the word when you see it written down. The first one has been done as an example.]\n===\n‘eu’ in Deutschland: sounds like[@shortAnswer]\n[@example: ‘oy’ in ‘joy’]\n===\n‘ü’ in München: sounds like …[@shortAnswer]\n===\n‘ch’ in München: sounds like …[@shortAnswer]\n===\n‘au’ in Augsburg: sounds like …[@shortAnswer]\n===\n‘ö’ in Köln: sounds like …[@shortAnswer]\n===\n‘a’ in Hamburg: sounds like …[@shortAnswer]\n===\n‘ei’ in Österreich: sounds like …[@shortAnswer]\n===\n‘w’ in Wien: sounds like …[@shortAnswer]\n===\n‘ie’ in Wien: sounds like …[@shortAnswer]\n===\n‘z’ in Zürich: sounds like …[@shortAnswer]\n===\n[?Answer\nThe answer depends on what you find helpful and on your own mother tongue, accent and knowledge of other languages. Here are some suggestions:\n‘eu’ in Deutschland sounds like ‘oy’ in ‘joy’;\n‘ü’ in München sounds like nothing in English (it is pronounced right at the front of your mouth, halfway between ‘ee’ and ‘oo’);\n‘ch' in München sounds a bit like ‘H’ in ‘Hugh’;\n‘au’ in Augsburg sounds like ‘ou’ in ‘ouch’;\n‘ö’ in Köln sounds a bit like ‘oeu’ in the French word ‘boeuf ’ (but your lips are more closed and pointed when you pronounce it);\n‘a’ in Hamburg sounds like ‘u’ in ‘hum’ (in Standard English);\n‘ei’ in Österreich sounds like ‘I’;\n‘w' in Wien sounds like ‘v’ in ‘Vienna’;\n‘ie’ in Wien sounds like ‘ee’ in ‘see’;\n‘z’ in Zürich sounds like ‘tz’ in ‘Switzerland’.]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs03.mp3]\n||transcript false||\n|note:Transcript\nDEUTSCHLAND\nRostock →\nInsel Rügen →\nBerlin →\nMünchen →\nAugsburg →\nFrankfurt →\nKöln →\nHamburg →\n\nÖSTERREICH\nWien →\nSalzburg →\nInnsbruck →\n\nSCHWEIZ\nZürich →\nBern →\nGenf →",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Übung 3",
+      "instruction": "How are the following letters or groups of letters pronounced in German? Listen to this audio extract again and, if you like, make some personal notes on the pronunciation. Write down something that will help you remember how to say the word when you see it written down. The first one has been done as an example.",
+      "body": "",
+      "footer": "[?Answer\nThe answer depends on what you find helpful and on your own mother tongue, accent and knowledge of other languages. Here are some suggestions:\n‘eu’ in Deutschland sounds like ‘oy’ in ‘joy’;\n‘ü’ in München sounds like nothing in English (it is pronounced right at the front of your mouth, halfway between ‘ee’ and ‘oo’);\n‘ch' in München sounds a bit like ‘H’ in ‘Hugh’;\n‘au’ in Augsburg sounds like ‘ou’ in ‘ouch’;\n‘ö’ in Köln sounds a bit like ‘oeu’ in the French word ‘boeuf ’ (but your lips are more closed and pointed when you pronounce it);\n‘a’ in Hamburg sounds like ‘u’ in ‘hum’ (in Standard English);\n‘ei’ in Österreich sounds like ‘I’;\n‘w' in Wien sounds like ‘v’ in ‘Vienna’;\n‘ie’ in Wien sounds like ‘ee’ in ‘see’;\n‘z’ in Zürich sounds like ‘tz’ in ‘Switzerland’.][&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs03.mp3]|note:Transcript\nDEUTSCHLAND\nRostock →\nInsel Rügen →\nBerlin →\nMünchen →\nAugsburg →\nFrankfurt →\nKöln →\nHamburg →\n\nÖSTERREICH\nWien →\nSalzburg →\nInnsbruck →\n\nSCHWEIZ\nZürich →\nBern →\nGenf →",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "‘eu’ in Deutschland: sounds like",
+          "instruction": "",
+          "hint": "",
+          "isExample": true,
+          "example": "‘oy’ in ‘joy’",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "‘ü’ in München: sounds like …",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "‘ch’ in München: sounds like …",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "‘au’ in Augsburg: sounds like …",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "‘ö’ in Köln: sounds like …",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "‘a’ in Hamburg: sounds like …",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "‘ei’ in Österreich: sounds like …",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "‘w’ in Wien: sounds like …",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "‘ie’ in Wien: sounds like …",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "‘z’ in Zürich: sounds like …",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136542"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs03.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:136543]\n[##Location]\n[%1.3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "136543"
+      ],
+      "title": "Location"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136544]\nIn the previous activities you have been looking at the location of places in Germany, Austria and Switzerland. If you had to give this information in German, this is the vocabulary you would need:\n\n**Vokabeln**\n__das ist__ … that is … / this is …\n__in Deutschland__ in Germany\n__in Norddeutschland__ in northern Germany\n__in Süddeutschland__ in southern Germany\n__in Österreich__ in Austria\n__in der Schweiz__ in Switzerland",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In the previous activities you have been looking at the location of places in Germany, Austria and Switzerland. If you had to give this information in German, this is the vocabulary you would need:\n\n**Vokabeln**\n__das ist__ … that is … / this is …\n__in Deutschland__ in Germany\n__in Norddeutschland__ in northern Germany\n__in Süddeutschland__ in southern Germany\n__in Österreich__ in Austria\n__in der Schweiz__ in Switzerland",
+      "id": [
+        "136544"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&audio]\n[@id:136545]\n[%Übung 4]\n[!Listen to the names of some places and say, in German, where they all are. Repeat this activity until you are happy with your pronunciation.\n__Bitte hören Sie und sprechen Sie. Hier ist ein Beispiel.__]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs03.mp3]\n**You hear:** Hamburg\n**You say:** Hamburg? Das ist in Norddeutschland.\n**You hear:** Hamburg? Hm, das ist in Norddeutschland!\n[?Answer\nAs is the case in English, countries in German in general do not have articles (for example you would say ‘Germany’ not ‘the Germany’). There are a few exceptions though and __Schweiz__ is one of them. That's why you had to say __Das ist in der Schweiz.__)]\n|note:Transcript\n**Abschnitt 3**\n1. Hamburg\n→Hamburg? Hm, das ist in Norddeutschland!\n\n2. Bern\n→Bern? Hm, äh, ja … das ist in der Schweiz!\n\n3. Wien\n→Wien – das ist in Österreich!\n\n4. Rostock\n→Rostock? Ähm, das ist, äh, in Norddeutschland?\n\n5. Genf\n→Genf? Ja, das ist in der Schweiz.\n\n6. München\n→München – das ist in Süddeutschland!",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "**You hear:** Hamburg\n**You say:** Hamburg? Das ist in Norddeutschland.\n**You hear:** Hamburg? Hm, das ist in Norddeutschland!\n\n|note:Transcript\n**Abschnitt 3**\n1. Hamburg\n→Hamburg? Hm, das ist in Norddeutschland!\n\n2. Bern\n→Bern? Hm, äh, ja … das ist in der Schweiz!\n\n3. Wien\n→Wien – das ist in Österreich!\n\n4. Rostock\n→Rostock? Ähm, das ist, äh, in Norddeutschland?\n\n5. Genf\n→Genf? Ja, das ist in der Schweiz.\n\n6. München\n→München – das ist in Süddeutschland!",
+      "item": "Übung 4",
+      "hint": "Answer\nAs is the case in English, countries in German in general do not have articles (for example you would say ‘Germany’ not ‘the Germany’). There are a few exceptions though and __Schweiz__ is one of them. That's why you had to say __Das ist in der Schweiz.__)",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136545"
+      ],
+      "instruction": "Listen to the names of some places and say, in German, where they all are. Repeat this activity until you are happy with your pronunciation.\n__Bitte hören Sie und sprechen Sie. Hier ist ein Beispiel.__",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs03.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.match:bitmark--&audio]\n[@id:136546]\n[%Übung 5]\n[!Now listen to people saying who they are and where they come from. Then, complete the sentences below.]\n===\n1. Claudia Grothe kommt aus \n==\nNorddeutschland\n===\n2. Jasmin kommt aus \n==\nInnsbruck.\n===\n3. Ulf kommt aus \n==\nRostock.\n===\n4. Dieter Hoffmann kommt aus \n==\nKöln.\n===\n5. Bärbel Kleingarn kommt aus \n==\nHamburg.\n===\n6. Peter Neißendorfer kommt aus \n==\nMünchen.\n===\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs03.mp3]\n|note:Transcript\n**Abschnitt 4**\n__Bitte hören Sie.__\n1. Mein Name ist Claudia Grothe. Ich komm’ aus Norddeutschland.\n2. Mein Name ist Jasmin. Ich komme aus Innsbruck.\n3. Mein Name ist Ulf. Ich komme hier aus Rostock.\n4. Mein Name ist Dieter Hoffmann. Ich komme aus Köln.\n5. Mein Name ist Bärbel Kleingarn. Ich bin in Hamburg geboren.\n6. Mein Name ist Peter Neißendorfer. Ich bin in München geboren.",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "Übung 5",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "1. Claudia Grothe kommt aus ",
+          "values": [
+            "Norddeutschland"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2. Jasmin kommt aus ",
+          "values": [
+            "Innsbruck."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "3. Ulf kommt aus ",
+          "values": [
+            "Rostock."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "4. Dieter Hoffmann kommt aus ",
+          "values": [
+            "Köln."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "5. Bärbel Kleingarn kommt aus ",
+          "values": [
+            "Hamburg."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "6. Peter Neißendorfer kommt aus ",
+          "values": [
+            "München."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "|note:Transcript\n**Abschnitt 4**\n__Bitte hören Sie.__\n1. Mein Name ist Claudia Grothe. Ich komm’ aus Norddeutschland.\n2. Mein Name ist Jasmin. Ich komme aus Innsbruck.\n3. Mein Name ist Ulf. Ich komme hier aus Rostock.\n4. Mein Name ist Dieter Hoffmann. Ich komme aus Köln.\n5. Mein Name ist Bärbel Kleingarn. Ich bin in Hamburg geboren.\n6. Mein Name ist Peter Neißendorfer. Ich bin in München geboren.",
+      "id": [
+        "136546"
+      ],
+      "instruction": "Now listen to people saying who they are and where they come from. Then, complete the sentences below.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs03.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136547]\nSo far you have been talking about places, but what about the people who come from these places? You already know __Das ist …__ which you can use for introducing them. And then you could say:\n\n__er kommt aus__ … he comes from …\n__sie kommt aus__ … she comes from …\n\nAnd you may also want to introduce yourself:\n\n__mein Name ist__ … my name is …\n__ich komme aus__ … I come from …\n\n||ub 6 nicht komplett||",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "So far you have been talking about places, but what about the people who come from these places? You already know __Das ist …__ which you can use for introducing them. And then you could say:\n\n__er kommt aus__ … he comes from …\n__sie kommt aus__ … she comes from …\n\nAnd you may also want to introduce yourself:\n\n__mein Name ist__ … my name is …\n__ich komme aus__ … I come from …",
+      "id": [
+        "136547"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:136548]\n[##Numbers 0–10]\n[%1.4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "136548"
+      ],
+      "title": "Numbers 0–10"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136549]\nBefore you can complete the final activity in this section, you need to understand numbers up to ten. Here they are in writing:\n0 null\t\n1 eins\n2 zwei\n3 drei\n4 vier \n5 fünf \n6 sechs \n7 sieben \n8 acht \n9 neun \n10 zehn",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Before you can complete the final activity in this section, you need to understand numbers up to ten. Here they are in writing:\n0 null\t\n1 eins\n2 zwei\n3 drei\n4 vier \n5 fünf \n6 sechs \n7 sieben \n8 acht \n9 neun \n10 zehn",
+      "id": [
+        "136549"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&audio]\n[@id:136550]\n[%Übung 7]\n[!Listen to the audio extract and read the numbers, paying close attention to pronunciation. Then listen again and repeat out loud until you are happy with your own pronunciation.\n__Bitte hören Sie und sprechen Sie nach.__]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs03.mp3]\n|note:Transcript\n**Abschnitt 5**\n__Bitte hören Sie und sprechen Sie nach.__\nnull →\neins →\nzwei →\ndrei →\nvier →\nfünf →\nsechs →\nsieben →\nacht →\nneun →\nzehn →\nzehn, neun, acht, sieben, sechs, fünf, vier, drei, zwei, eins, null\n[ROCKET LAUNCH SOUND EFFECT]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "|note:Transcript\n**Abschnitt 5**\n__Bitte hören Sie und sprechen Sie nach.__\nnull →\neins →\nzwei →\ndrei →\nvier →\nfünf →\nsechs →\nsieben →\nacht →\nneun →\nzehn →\nzehn, neun, acht, sieben, sechs, fünf, vier, drei, zwei, eins, null\n[ROCKET LAUNCH SOUND EFFECT]",
+      "item": "Übung 7",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136550"
+      ],
+      "instruction": "Listen to the audio extract and read the numbers, paying close attention to pronunciation. Then listen again and repeat out loud until you are happy with your own pronunciation.\n__Bitte hören Sie und sprechen Sie nach.__",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs03.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&imageWithAudio]\n[@id:136551]\n[%Übung 8]\n[!Now listen to the audio and look at the pictures below for some more practice in presenting people and pronouncing names. Listen out for the numbers, and then name the relevant person. Here's an example.\n__Bitte hören Sie und sprechen Sie. Hier ist ein Beispiel.__]\n**You hear:** Nummer eins\n(picture number 1 shows Sigmund Freud)\n**You say:** Das ist Sigmund Freud.\n**You hear:** Das ist Sigmund Freud.\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf003_combined.jpg]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs06.mp3]\n|note:Transcript\n**Abschnitt 6**\n__Bitte hören Sie und sprechen Sie.__\nNummer eins\n→Das ist Sigmund Freud.\n\nNummer drei\n→Das ist Wilhelm Tell.\n\nNummer vier\n→Das ist Michael Schumacher.\n\nNummer sieben\n→Das ist Helmut Kohl.\n\nNummer acht\n→Das ist Wolfgang Amadeus Mozart.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "**You hear:** Nummer eins\n(picture number 1 shows Sigmund Freud)\n**You say:** Das ist Sigmund Freud.\n**You hear:** Das ist Sigmund Freud.\n\n\n|note:Transcript\n**Abschnitt 6**\n__Bitte hören Sie und sprechen Sie.__\nNummer eins\n→Das ist Sigmund Freud.\n\nNummer drei\n→Das ist Wilhelm Tell.\n\nNummer vier\n→Das ist Michael Schumacher.\n\nNummer sieben\n→Das ist Helmut Kohl.\n\nNummer acht\n→Das ist Wolfgang Amadeus Mozart.",
+      "item": "Übung 8",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136551"
+      ],
+      "instruction": "Now listen to the audio and look at the pictures below for some more practice in presenting people and pronouncing names. Listen out for the numbers, and then name the relevant person. Here's an example.\n__Bitte hören Sie und sprechen Sie. Hier ist ein Beispiel.__",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf003_combined.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs06.mp3"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 28,
+        "errorLine": "[.assignment:bitmark--&imageWithAudio]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:136552]\n[#Understanding information about countries and languages]\n[%2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "136552"
+      ],
+      "title": "Understanding information about countries and languages"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136553]\nIn this section, you have a look at countries all over the world and meet some of the people who live there. You learn to recognise more names for countries, understand some information about the German language as well as basic personal information. You also learn to use regular verbs and pronouns such as ‘I’, ‘you’, ‘he’ and ‘she’.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In this section, you have a look at countries all over the world and meet some of the people who live there. You learn to recognise more names for countries, understand some information about the German language as well as basic personal information. You also learn to use regular verbs and pronouns such as ‘I’, ‘you’, ‘he’ and ‘she’.",
+      "id": [
+        "136553"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-9]\n[@id:136554]\n[##Where is German spoken?]\n[%2.1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "136554"
+      ],
+      "title": "Where is German spoken?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136555]\nSo far, this course has looked at places in Germany, Austria and Switzerland. In this activity, you'll learn about other countries around the world where you might hear German being spoken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "So far, this course has looked at places in Germany, Austria and Switzerland. In this activity, you'll learn about other countries around the world where you might hear German being spoken.",
+      "id": [
+        "136555"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.match:bitmark--&audio]\n[@id:136556]\n[%Übung 9]\n[!The countries listed below (among many others) have German minorities living within their borders who speak either standard German or a German dialect, or both. Before reading more about why this is the case, decide which continent they belong to by arranging the countries in the blank table below. One has been done as an example.\n__Bitte ordnen Sie.__]\nAustralian • Brasilien • Dänemark • Frankreich • Italien • Kanada • Kasachstan • Namibia • Polen • Rumänien • Russland • USA\n===\nAfrika\n==\n[$Namibia]\n===\nAsien\n==\n[$Kasachstan, Russland]\n===\nAustralian/Ozeanien\n==\n[$Australien]\n===\nEuropa\n==\n[$Dänemark, Frankreich, Italien, Polen, Rumänien, Russland]\n===\nSüdamerika\n==\n[$Brasilien]\n===\nNordamerika\n==\n[$Kanada, USA]\n===\n\nNow listen to this audio clip, which will help you check your answers above. Listen out for the pronunciation of the different countries in German.\n\n__Bitte hören Sie.__\n||order of te q-s||\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs07.mp3]\n|note:Transcript\n**Abschnitt 7**\n__Bitte hören Sie.__\nAfrika – Namibia\nAsien – Kasachstan, Russland\nAustralien/Ozeanien – Australien\nEuropa – Dänemark, Frankreich, Italien, Polen, Rumänien, Russland\nSüdamerika – Brasilien\nNordamerika – Kanada, USA",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "Übung 9",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Afrika",
+          "values": [
+            "[$Namibia]"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Asien",
+          "values": [
+            "[$Kasachstan, Russland]"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Australian/Ozeanien",
+          "values": [
+            "[$Australien]"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Europa",
+          "values": [
+            "[$Dänemark, Frankreich, Italien, Polen, Rumänien, Russland]"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Südamerika",
+          "values": [
+            "[$Brasilien]"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Nordamerika",
+          "values": [
+            "[$Kanada, USA]"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "Australian • Brasilien • Dänemark • Frankreich • Italien • Kanada • Kasachstan • Namibia • Polen • Rumänien • Russland • USA\nNow listen to this audio clip, which will help you check your answers above. Listen out for the pronunciation of the different countries in German.\n\n__Bitte hören Sie.__\n\n\n|note:Transcript\n**Abschnitt 7**\n__Bitte hören Sie.__\nAfrika – Namibia\nAsien – Kasachstan, Russland\nAustralien/Ozeanien – Australien\nEuropa – Dänemark, Frankreich, Italien, Polen, Rumänien, Russland\nSüdamerika – Brasilien\nNordamerika – Kanada, USA",
+      "id": [
+        "136556"
+      ],
+      "instruction": "The countries listed below (among many others) have German minorities living within their borders who speak either standard German or a German dialect, or both. Before reading more about why this is the case, decide which continent they belong to by arranging the countries in the blank table below. One has been done as an example.\n__Bitte ordnen Sie.__",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs07.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-10]\n[@id:136557]\n[##Useful expressions]\n[%2.2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-10",
+      "id": [
+        "136557"
+      ],
+      "title": "Useful expressions"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136558]\nHere are some useful expressions for you to understand when reading about the German language.\n\n**Vokabeln**\n__Deutsch__ German\n__Hochdeutsch__ standard German\n__Deutsche__ Germans\n__Land, länder__ country, countries\n__Staat, staaten__ state, states\n__Sprache__ language\n__Muttersprache__ mother tongue\n__Minderheitensprache__ minority language\n__Landessprache__ national language\n__offizielle Sprache__ official language\n__sprechen, spricht__ speak, speaks",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Here are some useful expressions for you to understand when reading about the German language.\n\n**Vokabeln**\n__Deutsch__ German\n__Hochdeutsch__ standard German\n__Deutsche__ Germans\n__Land, länder__ country, countries\n__Staat, staaten__ state, states\n__Sprache__ language\n__Muttersprache__ mother tongue\n__Minderheitensprache__ minority language\n__Landessprache__ national language\n__offizielle Sprache__ official language\n__sprechen, spricht__ speak, speaks",
+      "id": [
+        "136558"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&image]\n[@id:136559]\n[%Übung 10]\n[!Look at the extracts below to learn more about places where German is spoken. You will probably not understand all of it yet, but keep a look out for the countries mentioned in each paragraph. You may like to make some notes.\n__Bitte markieren Sie.__]\n|note:\nDiscussion\nTranslating some sentences, these are the countries mentioned in each text.\n•. Germany, (the German part of) Switzerland, Austria, Luxembourg, Liechtenstein\n•. more than 60 countries where German is a minority language\n•. Germany, Austria, Denmark, Italy, France\n•. Germany, Namibia\n•. Poland, Russia, Romania\n•. places in the USA, Canada, (Southern) Brazil\n•. Australia\n\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf005i.jpg]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "|note:\nDiscussion\nTranslating some sentences, these are the countries mentioned in each text.\n•. Germany, (the German part of) Switzerland, Austria, Luxembourg, Liechtenstein\n•. more than 60 countries where German is a minority language\n•. Germany, Austria, Denmark, Italy, France\n•. Germany, Namibia\n•. Poland, Russia, Romania\n•. places in the USA, Canada, (Southern) Brazil\n•. Australia",
+      "item": "Übung 10",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136559"
+      ],
+      "instruction": "Look at the extracts below to learn more about places where German is spoken. You will probably not understand all of it yet, but keep a look out for the countries mentioned in each paragraph. You may like to make some notes.\n__Bitte markieren Sie.__",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf005i.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark--]\n[@id:136560]\n[%Übung 11]\n[!Now go through the extracts again. Even without understanding much German, can you guess what kind of information is given in each of them? Read the English summaries below and decide which one represents each of the German extracts.\n__Bitte ordnen Sie zu.__]\n===\nGerman is the national language in a number of European countries.\n==\nExtract 1\n===\nThere are also countries all over the world where German is spoken as a minority language.\n==\nExtract 2\n===\nMany Germans left their home, for example for religious reasons, and went to live in Eastern Europe.\n==\nExtract 5\n===\nGermans also went overseas. For example, you can find a large number of Mennonites in both North and South America.\n==\nExtract 6\n===\nGerman emigration to Australia concentrated in the Barossa Valley, a famous wine-growing area which attracts many tourists.\n==\nExtract 7\n===\nGermany used to have some colonies, where German is still spoken today.\n==\nExtract 4\n===\nGerman is also spoken by some of the people who live in regions that share a border with Germany.\n==\nExtract 3\n===\n|note:Discussion\nIf you found the correct English extracts for some or all of the texts, you will have understood the most important information given. When reading in a foreign language it's important not to be scared by the number of new words and structures that are being used, but to concentrate on what you can understand.",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "Übung 11",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "German is the national language in a number of European countries.",
+          "values": [
+            "Extract 1"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "There are also countries all over the world where German is spoken as a minority language.",
+          "values": [
+            "Extract 2"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Many Germans left their home, for example for religious reasons, and went to live in Eastern Europe.",
+          "values": [
+            "Extract 5"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Germans also went overseas. For example, you can find a large number of Mennonites in both North and South America.",
+          "values": [
+            "Extract 6"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "German emigration to Australia concentrated in the Barossa Valley, a famous wine-growing area which attracts many tourists.",
+          "values": [
+            "Extract 7"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Germany used to have some colonies, where German is still spoken today.",
+          "values": [
+            "Extract 4"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "German is also spoken by some of the people who live in regions that share a border with Germany.",
+          "values": [
+            "Extract 3"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "|note:Discussion\nIf you found the correct English extracts for some or all of the texts, you will have understood the most important information given. When reading in a foreign language it's important not to be scared by the number of new words and structures that are being used, but to concentrate on what you can understand.",
+      "id": [
+        "136560"
+      ],
+      "instruction": "Now go through the extracts again. Even without understanding much German, can you guess what kind of information is given in each of them? Read the English summaries below and decide which one represents each of the German extracts.\n__Bitte ordnen Sie zu.__"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&audio]\n[@id:136561]\n[%Übung 12]\n[!The following audio clip contains five short dialogues in which people talk about their origins. Listen and read the sentences below. They each contain one error. Rewrite the sentences correctly.\n__Hören Sie und korrigieren Sie die Sätze.__]\n**Vokabeln**\n__Herr__  Mr\n__Frau__ Mrs, Miss, Ms\n__meine Familie__ my family\n__meine Mutter__ my mother\n===\n1. Marcos Schneider kommt aus Deutschland.[@shortAnswer]\n[$Marcos Schneider kommt aus Brasilien.]\n===\n2(a). Frau Lahn kommt aus Hahndorf. Das ist in Namibia.[@shortAnswer]\n[$Frau Lahn kommt aus Hahndorf. Das ist in Australien.]\n===\n2(b). Frau Lahns Familie kommt aus Österreich.[@shortAnswer]\n[$Frau Lahns Familie kommt aus Deutschland.]\n===\n3. Frau Lengenfelder kommt aus der Schweiz.[@shortAnswer]\n[$Frau Lengenfelder kommt aus Russland.]\n===\n4. Herr Söder kommt aus Norddeutschland.[@shortAnswer]\n[$Herr Söder kommt aus Dänemark.]\n===\n5. Frau Schweigert kommt aus Kanada.[@shortAnswer]\n[$Frau Schweigert kommt aus Kasachstan.]\n===\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs08.mp3]\n|note:Transcript\n**Dialog 1**\nMARCOS: Hallo, mein Name ist Marcos Schneider.\nSTUDENTIN: Hallo. Kommst du aus Deutschland?\nMARCOS: Nein, aus Blumenau. Das ist in Brasilien.\nSTUDENTIN: Oh.\n\n**Dialog 2**\nMANN: Ihr Deutsch ist perfekt, Frau Lahn. Woher in Australien kommen Sie?\nFRAU LAHN: Ich komme aus Hahndorf im Barossa-Tal. Meine Familie kommt aus Deutschland.\n\n**Dialog 3**\nINTERVIEWERIN: Wie ist Ihr Name, bitte?\nFRAU LENGENFELDER: Mein Name ist Lengenfelder.\nINTERVIEWERIN: Woher kommen Sie?\nFRAU LENGENFELDER: Ich bin in Sibirien geboren, in Russland.\n\n**Dialog 4**\nFRAU: Guten Tag, Herr Söder. Kommen Sie aus Norddeutschland?\nHERR SÖDER: Nein, ich komme aus Dänemark.\n\n**Dialog 5**\nINTERVIEWERIN: Wie ist Ihr Name?\nMICHAEL SCHWEIGERT: Mein Name ist Michael Schweigert.\nINTERVIEWERIN: Woher kommen Sie?\nMICHAEL SCHWEIGERT: Ich bin auch Deutscher, also Nationalität Deutsch. Meine Mutter aber ist geboren in Kasachstan.",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Übung 12",
+      "instruction": "The following audio clip contains five short dialogues in which people talk about their origins. Listen and read the sentences below. They each contain one error. Rewrite the sentences correctly.\n__Hören Sie und korrigieren Sie die Sätze.__",
+      "body": "**Vokabeln**__Herr__  Mr__Frau__ Mrs, Miss, Ms\n__meine Familie__ my family\n__meine Mutter__ my mother",
+      "footer": "[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs08.mp3]|note:Transcript\n**Dialog 1**\nMARCOS: Hallo, mein Name ist Marcos Schneider.\nSTUDENTIN: Hallo. Kommst du aus Deutschland?\nMARCOS: Nein, aus Blumenau. Das ist in Brasilien.\nSTUDENTIN: Oh.\n\n**Dialog 2**\nMANN: Ihr Deutsch ist perfekt, Frau Lahn. Woher in Australien kommen Sie?\nFRAU LAHN: Ich komme aus Hahndorf im Barossa-Tal. Meine Familie kommt aus Deutschland.\n\n**Dialog 3**\nINTERVIEWERIN: Wie ist Ihr Name, bitte?\nFRAU LENGENFELDER: Mein Name ist Lengenfelder.\nINTERVIEWERIN: Woher kommen Sie?\nFRAU LENGENFELDER: Ich bin in Sibirien geboren, in Russland.\n\n**Dialog 4**\nFRAU: Guten Tag, Herr Söder. Kommen Sie aus Norddeutschland?\nHERR SÖDER: Nein, ich komme aus Dänemark.\n\n**Dialog 5**\nINTERVIEWERIN: Wie ist Ihr Name?\nMICHAEL SCHWEIGERT: Mein Name ist Michael Schweigert.\nINTERVIEWERIN: Woher kommen Sie?\nMICHAEL SCHWEIGERT: Ich bin auch Deutscher, also Nationalität Deutsch. Meine Mutter aber ist geboren in Kasachstan.",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. Marcos Schneider kommt aus Deutschland.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Marcos Schneider kommt aus Brasilien.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2(a). Frau Lahn kommt aus Hahndorf. Das ist in Namibia.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Frau Lahn kommt aus Hahndorf. Das ist in Australien.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2(b). Frau Lahns Familie kommt aus Österreich.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Frau Lahns Familie kommt aus Deutschland.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "3. Frau Lengenfelder kommt aus der Schweiz.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Frau Lengenfelder kommt aus Russland.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "4. Herr Söder kommt aus Norddeutschland.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Herr Söder kommt aus Dänemark.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "5. Frau Schweigert kommt aus Kanada.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Frau Schweigert kommt aus Kasachstan.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136561"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs08.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-11]\n[@id:136562]\n[##Personal pronouns]\n[%2.3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-11",
+      "id": [
+        "136562"
+      ],
+      "title": "Personal pronouns"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136563]\nIn order to talk about yourself and other people you need the German for ‘I’, ‘you’, ‘he’, ‘she’ and ‘it’ (personal pronouns).\n__ich__ – I\n__du__ – you (when talking to a close friend, a relative or a child)\n__er__ – he\n__sie__ – she\n__es__ – it\n__Sie__ – you (when talking to an adult who is not a very close friend or relative)\n\nNote that __sie__ with a small letter means ‘she’, whereas __Sie__ with a capital letter means ‘you’.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In order to talk about yourself and other people you need the German for ‘I’, ‘you’, ‘he’, ‘she’ and ‘it’ (personal pronouns).\n__ich__ – I\n__du__ – you (when talking to a close friend, a relative or a child)\n__er__ – he\n__sie__ – she\n__es__ – it\n__Sie__ – you (when talking to an adult who is not a very close friend or relative)\n\nNote that __sie__ with a small letter means ‘she’, whereas __Sie__ with a capital letter means ‘you’.",
+      "id": [
+        "136563"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136564]\n[%Using 'kommen']\nWhile listening to the interviews you may have noticed the different forms of the verb __kommen__ (to come). The form __kommen__ – which is the one you will find in a dictionary – is called the infinitive. In the infinitive almost all German verbs end in –en, but when used in a sentence, –en is replaced by another ending depending on the person you are talking about. Here are the forms of __kommen__ in the singular.\n\n__komm__**en**\nich komm**e**\ndu komm**st**\ner, sie, es komm**t**\nSie komm**en**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "While listening to the interviews you may have noticed the different forms of the verb __kommen__ (to come). The form __kommen__ – which is the one you will find in a dictionary – is called the infinitive. In the infinitive almost all German verbs end in –en, but when used in a sentence, –en is replaced by another ending depending on the person you are talking about. Here are the forms of __kommen__ in the singular.\n\n__komm__**en**\nich komm**e**\ndu komm**st**\ner, sie, es komm**t**\nSie komm**en**",
+      "id": [
+        "136564"
+      ],
+      "item": "Using 'kommen'"
+    }
+  },
+  {
+    "bitmark": "[.cloze-solution-grouped:bitmark--&audio]\n[@id:136565]\n[%Übung 13]\n[!Listen to this audio again:\nNow fill in the gaps in the following quiz by dragging the different forms of kommen to their correct positions.]\n1. Hallo, mein Name ist Marcos Schneider. – Hallo. [_Kommst] du aus Deutschland?\n2. Ich [_komme] aus Hahndorf im Barossa-Tal. Meine Familie [_kommt] aus Deutschland.\n3. Woher [_kommen] Sie? – Ich bin in Sibirien geboren, in Russland.\n4. Guten Tag, Herr Söder. [_Kommen] Sie aus Norddeutschland? – Nein, ich\n[_komme] aus Dänemark.\n5. Woher [_kommen] Sie? – Ich bin auch Deutscher, also Nationalität Deutsch.\n||change instr\nincomplete ex||\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs08.mp3]\n|note:Transcript\n**Dialog 1**\nMARCOS: Hallo, mein Name ist Marcos Schneider.\nSTUDENTIN: Hallo. Kommst du aus Deutschland?\nMARCOS: Nein, aus Blumenau. Das ist in Brasilien.\nSTUDENTIN: Oh.\n\n**Dialog 2**\nMANN: Ihr Deutsch ist perfekt, Frau Lahn. Woher in Australien kommen Sie?\nFRAU LAHN: Ich komme aus Hahndorf im Barossa-Tal. Meine Familie kommt aus Deutschland.\n\n**Dialog 3**\nINTERVIEWERIN: Wie ist Ihr Name, bitte?\nFRAU LENGENFELDER: Mein Name ist Lengenfelder.\nINTERVIEWERIN: Woher kommen Sie?\nFRAU LENGENFELDER: Ich bin in Sibirien geboren, in Russland.\n\n**Dialog 4**\nFRAU: Guten Tag, Herr Söder. Kommen Sie aus Norddeutschland?\nHERR SÖDER: Nein, ich komme aus Dänemark.\n\n**Dialog 5**\nINTERVIEWERIN: Wie ist Ihr Name?\nMICHAEL SCHWEIGERT: Mein Name ist Michael Schweigert.\nINTERVIEWERIN: Woher kommen Sie?\nMICHAEL SCHWEIGERT: Ich bin auch Deutscher, also Nationalität Deutsch. Meine Mutter aber ist geboren in Kasachstan.",
+    "bit": {
+      "type": "cloze-solution-grouped",
+      "format": "bitmark--",
+      "body": "1. Hallo, mein Name ist Marcos Schneider. – Hallo. {0} du aus Deutschland?\n2. Ich {1} aus Hahndorf im Barossa-Tal. Meine Familie {2} aus Deutschland.\n3. Woher {3} Sie? – Ich bin in Sibirien geboren, in Russland.\n4. Guten Tag, Herr Söder. {4} Sie aus Norddeutschland? – Nein, ich\n{5} aus Dänemark.\n5. Woher {6} Sie? – Ich bin auch Deutscher, also Nationalität Deutsch.\n\n\n|note:Transcript\n**Dialog 1**\nMARCOS: Hallo, mein Name ist Marcos Schneider.\nSTUDENTIN: Hallo. Kommst du aus Deutschland?\nMARCOS: Nein, aus Blumenau. Das ist in Brasilien.\nSTUDENTIN: Oh.\n\n**Dialog 2**\nMANN: Ihr Deutsch ist perfekt, Frau Lahn. Woher in Australien kommen Sie?\nFRAU LAHN: Ich komme aus Hahndorf im Barossa-Tal. Meine Familie kommt aus Deutschland.\n\n**Dialog 3**\nINTERVIEWERIN: Wie ist Ihr Name, bitte?\nFRAU LENGENFELDER: Mein Name ist Lengenfelder.\nINTERVIEWERIN: Woher kommen Sie?\nFRAU LENGENFELDER: Ich bin in Sibirien geboren, in Russland.\n\n**Dialog 4**\nFRAU: Guten Tag, Herr Söder. Kommen Sie aus Norddeutschland?\nHERR SÖDER: Nein, ich komme aus Dänemark.\n\n**Dialog 5**\nINTERVIEWERIN: Wie ist Ihr Name?\nMICHAEL SCHWEIGERT: Mein Name ist Michael Schweigert.\nINTERVIEWERIN: Woher kommen Sie?\nMICHAEL SCHWEIGERT: Ich bin auch Deutscher, also Nationalität Deutsch. Meine Mutter aber ist geboren in Kasachstan.",
+      "item": "Übung 13",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136565"
+      ],
+      "instruction": "Listen to this audio again:\nNow fill in the gaps in the following quiz by dragging the different forms of kommen to their correct positions.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kommst"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "komme"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "kommt"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "kommen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kommen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "komme"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "kommen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs08.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:136566]\n[%Übung 14]\n[!Complete the sentences in this quiz with the grammatically correct personal pronouns.]\n1. Hallo, mein Name ist Sam Schmidt – [_ich] komme aus Namibia.\n2. Dein Deutsch ist perfekt! Kommst [_du] aus Deutschland?\n3. Das ist Peter Neißendorfer – [_er] kommt aus München.\n4. Das ist Claudia Grothe – [_sie] kommt aus Norddeutschland.\n5. Frau Lengenfelder – kommen [_Sie] hier aus München? Nein, [_ich] komme aus Russland.\n||incomplete ex||",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "1. Hallo, mein Name ist Sam Schmidt – {0} komme aus Namibia.\n2. Dein Deutsch ist perfekt! Kommst {1} aus Deutschland?\n3. Das ist Peter Neißendorfer – {2} kommt aus München.\n4. Das ist Claudia Grothe – {3} kommt aus Norddeutschland.\n5. Frau Lengenfelder – kommen {4} hier aus München? Nein, {5} komme aus Russland.",
+      "item": "Übung 14",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136566"
+      ],
+      "instruction": "Complete the sentences in this quiz with the grammatically correct personal pronouns.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ich"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "du"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "er"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sie"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Sie"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ich"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-12]\n[@id:136567]\n[#Giving and understanding personal information]\n[%3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-12",
+      "id": [
+        "136567"
+      ],
+      "title": "Giving and understanding personal information"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136568]\nIn this section, you will get more practice in answering questions and giving basic personal information. You'll also learn to use more personal pronouns and regular verbs.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In this section, you will get more practice in answering questions and giving basic personal information. You'll also learn to use more personal pronouns and regular verbs.",
+      "id": [
+        "136568"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-13]\n[@id:136569]\n[##Where do you come from?]\n[%3.1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-13",
+      "id": [
+        "136569"
+      ],
+      "title": "Where do you come from?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136570]\nStart this section by listening to conversations about various countries. You may find this vocabulary useful:\n\n**Vokabeln**\n__Entschuldigung__ excuse me\n__Entschuldigung, woher kommen Sie?__ excuse me, where do you come from?\n__bitte__ please\n__wohnen__ to live",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Start this section by listening to conversations about various countries. You may find this vocabulary useful:\n\n**Vokabeln**\n__Entschuldigung__ excuse me\n__Entschuldigung, woher kommen Sie?__ excuse me, where do you come from?\n__bitte__ please\n__wohnen__ to live",
+      "id": [
+        "136570"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark--&audio]\n[@id:136571]\n[%Übung 15]\n[!Listen to people being asked where they come from, paying particular attention to which countries are mentioned. After listening, complete the activity below, organising the countries in the order they were mentioned.]\n===\n1\n==\nder Schweiz||wth||\n===\n2\n==\nGroßbritannien\n===\n3\n==\nEngland\n===\n4\n==\nSchottland\n===\n5\n==\nWales\n===\n6\n==\nDeutschland\n===\n7\n==\nRussland\n===\n8\n==\nIrland\n===\n9\n==\nBrasilien\n===\n10\n==\nItalien (Norditalien)\n===\n11\n==\nFrankreich\n===\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs09.mp3]\n|note:Transcript\n**Dialogue 1**\nINTERVIEWERIN: Entschuldigung, woher kommen Sie?\nFRAU: Aus der Schweiz.\n\n**Dialogue 2**\nINTERVIEWERIN: Entschuldigung, woher kommen Sie?\nFRAU: Wir kommen aus Großbritannien.\nINTERVIEWERIN: Aus England?\nFRAU: Nein, nein! Ich komme aus Schottland.\nMANN: Und ich aus Wales.\nINTERVIEWERIN: Ach so!\n\n**Dialogue 3**\nINTERVIEWERIN: Und Sie? Woher kommen Sie?\nMANN: Aus Deutschland.\nINTERVIEWERIN: Und Ihre Frau – kommt sie auch aus Deutschland?\nMANN: Nein, meine Frau kommt aus Russland.\n\n**Dialogue 4**\nINTERVIEWER: Entschuldigung, woher kommst du?\nMÄDCHEN: Aus Irland.\n\n**Dialogue 5**\nINTERVIEWERIN: Entschuldigung, woher kommen Sie?\nMANN: Aus Brasilien.\nINTERVIEWERIN: Ach, wirklich?\n\n**Dialogue 6**\nINTERVIEWER: Bitte, woher kommen Sie?\nFRAU: Aus Südtirol.\nINTERVIEWER: Wo ist das?\nFRAU: Ja, in Norditalien.\n\n**Dialogue 7**\nINTERVIEWERIN: Hallo, woher kommt ihr?\nKINDER: Wir kommen aus Frankreich.",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "Übung 15",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "1",
+          "values": [
+            "der Schweiz"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2",
+          "values": [
+            "Großbritannien"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "3",
+          "values": [
+            "England"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "4",
+          "values": [
+            "Schottland"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "5",
+          "values": [
+            "Wales"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "6",
+          "values": [
+            "Deutschland"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "7",
+          "values": [
+            "Russland"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "8",
+          "values": [
+            "Irland"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "9",
+          "values": [
+            "Brasilien"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "10",
+          "values": [
+            "Italien (Norditalien)"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "11",
+          "values": [
+            "Frankreich"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "|note:Transcript\n**Dialogue 1**\nINTERVIEWERIN: Entschuldigung, woher kommen Sie?\nFRAU: Aus der Schweiz.\n\n**Dialogue 2**\nINTERVIEWERIN: Entschuldigung, woher kommen Sie?\nFRAU: Wir kommen aus Großbritannien.\nINTERVIEWERIN: Aus England?\nFRAU: Nein, nein! Ich komme aus Schottland.\nMANN: Und ich aus Wales.\nINTERVIEWERIN: Ach so!\n\n**Dialogue 3**\nINTERVIEWERIN: Und Sie? Woher kommen Sie?\nMANN: Aus Deutschland.\nINTERVIEWERIN: Und Ihre Frau – kommt sie auch aus Deutschland?\nMANN: Nein, meine Frau kommt aus Russland.\n\n**Dialogue 4**\nINTERVIEWER: Entschuldigung, woher kommst du?\nMÄDCHEN: Aus Irland.\n\n**Dialogue 5**\nINTERVIEWERIN: Entschuldigung, woher kommen Sie?\nMANN: Aus Brasilien.\nINTERVIEWERIN: Ach, wirklich?\n\n**Dialogue 6**\nINTERVIEWER: Bitte, woher kommen Sie?\nFRAU: Aus Südtirol.\nINTERVIEWER: Wo ist das?\nFRAU: Ja, in Norditalien.\n\n**Dialogue 7**\nINTERVIEWERIN: Hallo, woher kommt ihr?\nKINDER: Wir kommen aus Frankreich.",
+      "id": [
+        "136571"
+      ],
+      "instruction": "Listen to people being asked where they come from, paying particular attention to which countries are mentioned. After listening, complete the activity below, organising the countries in the order they were mentioned.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs09.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&imageWithAudio]\n[@id:136572]\n[%Übung 16]\n[!Below is a map with arrows pointing to different countries. Listen to the audio and look at the map at the same time. When asked where you come from, answer as indicated by the arrows.\n__Bitte hören Sie und sprechen Sie. Hier ist ein Beispiel.__]\n**Sie hören:** Woher kommen Sie?\n**Sie sagen:** Ich komme aus Deutschland. __(because arrow no. 1 is pointing to Germany)__ \n**Sie hören:** Ich komme aus Deutschland.\n\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf009i.jpg]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs10.mp3]\n|note:Transcript\n**Abschnitt 10**\n__Bitte hören Sie und sprechen Sie.__\n\n**Dialogue 1**\nINTERVIEWER: Woher kommen Sie?\n→\nFRAU\nIch komme aus Deutschland.\n\n**Dialogue 2**\nINTERVIEWERIN: Woher kommen Sie?\n→\nMANN: Ich komme aus Österreich.\n\n**Dialogue 3**\nINTERVIEWER: Entschuldigung, woher kommen Sie?\n→\nFRAU: Ich komme aus der Schweiz.\n\n**Dialogue 4**\nINTERVIEWERIN: Hallo, woher kommen Sie?\n→\nFRAU: Ich komme aus England.\nINTERVIEWERIN: Aus Nordengland oder aus Südengland?\n→\nFRAU: Aus Südengland.\n\n**Dialogue 5**\nINTERVIEWER: Bitte, woher kommen Sie?\n→\nFRAU: Ich komme aus Schottland.\nINTERVIEWER: Ach ja?\n\n**Dialogue 6**\nINTERVIEWERIN: Woher kommen Sie?\n→\nMANN: Ich komme aus Wales.\n\n**Dialogue 7**\nINTERVIEWER: Entschuldigung, woher kommen Sie?\n→\nFRAU: Ich komme aus Irland.\nINTERVIEWER: Aus Nordirland oder aus der Republik Irland?\n→\nFRAU: Aus der Republik Irland.\nINTERVIEWER: Ja? Ich war im August in Cork. Das war fantastisch!",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "**Sie hören:** Woher kommen Sie?\n**Sie sagen:** Ich komme aus Deutschland. __(because arrow no. 1 is pointing to Germany)__ \n**Sie hören:** Ich komme aus Deutschland.\n\n\n\n|note:Transcript\n**Abschnitt 10**\n__Bitte hören Sie und sprechen Sie.__\n\n**Dialogue 1**\nINTERVIEWER: Woher kommen Sie?\n→\nFRAU\nIch komme aus Deutschland.\n\n**Dialogue 2**\nINTERVIEWERIN: Woher kommen Sie?\n→\nMANN: Ich komme aus Österreich.\n\n**Dialogue 3**\nINTERVIEWER: Entschuldigung, woher kommen Sie?\n→\nFRAU: Ich komme aus der Schweiz.\n\n**Dialogue 4**\nINTERVIEWERIN: Hallo, woher kommen Sie?\n→\nFRAU: Ich komme aus England.\nINTERVIEWERIN: Aus Nordengland oder aus Südengland?\n→\nFRAU: Aus Südengland.\n\n**Dialogue 5**\nINTERVIEWER: Bitte, woher kommen Sie?\n→\nFRAU: Ich komme aus Schottland.\nINTERVIEWER: Ach ja?\n\n**Dialogue 6**\nINTERVIEWERIN: Woher kommen Sie?\n→\nMANN: Ich komme aus Wales.\n\n**Dialogue 7**\nINTERVIEWER: Entschuldigung, woher kommen Sie?\n→\nFRAU: Ich komme aus Irland.\nINTERVIEWER: Aus Nordirland oder aus der Republik Irland?\n→\nFRAU: Aus der Republik Irland.\nINTERVIEWER: Ja? Ich war im August in Cork. Das war fantastisch!",
+      "item": "Übung 16",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136572"
+      ],
+      "instruction": "Below is a map with arrows pointing to different countries. Listen to the audio and look at the map at the same time. When asked where you come from, answer as indicated by the arrows.\n__Bitte hören Sie und sprechen Sie. Hier ist ein Beispiel.__",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf009i.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs10.mp3"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 28,
+        "errorLine": "[.assignment:bitmark--&imageWithAudio]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.match-matrix:bitmark--&image]\n[@id:136573]\n[%Übung 17]\n[!Below is some information about eight people who all have German as their mother tongue, but they come from and live in different countries. You were introduced to some of them in the previous sections. Fill in the gaps in the table below, noting where they live and which country they come from.\n__Bitte lesen Sie und schreiben Sie.__]\n===\n[#Name]\n==\n[#wohnt in]\n==\n[#kommt aus]\n===\nMarcos Schneider\n==\nBlumenau (Brasilien)\n==\nBrasilien\n===\nZita Schweigert\n==\nMünchen\n==\nKasachstan\n===\nMichael Schweigert\n==\nMünchen\n==\nDeutschland\n===\nFrau Lengenfelder\n==\nMünchen\n==\nRussland\n===\nFrank Börner\n==\nRügen/Berlin\n==\nBerlin\n===\nMelanie\n==\nRostock\n==\nNorddeutschland\n===\nChristian\n==\nRostock\n==\nNorddeutschland\n===\nHelga Adams\n==\nLeeds (Nordengland)\n==\nÖsterreich\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf010i.jpg]",
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": "Übung 17",
+      "heading": {
+        "forKeys": "Name",
+        "forValues": [
+          "wohnt in",
+          "kommt aus"
+        ]
+      },
+      "matrix": [
+        {
+          "key": "Marcos Schneider",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Blumenau (Brasilien)"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Brasilien"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Zita Schweigert",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "München"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Kasachstan"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Michael Schweigert",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "München"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Deutschland"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Frau Lengenfelder",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "München"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Russland"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Frank Börner",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Rügen/Berlin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Berlin"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Melanie",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Rostock"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Norddeutschland"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Christian",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Rostock"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Norddeutschland"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Helga Adams",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Leeds (Nordengland)"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Österreich"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136573"
+      ],
+      "instruction": "Below is some information about eight people who all have German as their mother tongue, but they come from and live in different countries. You were introduced to some of them in the previous sections. Fill in the gaps in the table below, noting where they live and which country they come from.\n__Bitte lesen Sie und schreiben Sie.__",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf010i.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-14]\n[@id:136574]\n[##Where do you live?]\n[%3.2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-14",
+      "id": [
+        "136574"
+      ],
+      "title": "Where do you live?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136575]\nIn the previous sections, you learned about personal pronouns when talking about one person or one thing only (the singular). Below is a list of all pronouns, singular and plural. You came across some of them in the audio extracts and when reading the introductions in __Übung 17__.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In the previous sections, you learned about personal pronouns when talking about one person or one thing only (the singular). Below is a list of all pronouns, singular and plural. You came across some of them in the audio extracts and when reading the introductions in __Übung 17__.",
+      "id": [
+        "136575"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136576]\n[%Personal pronouns]\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/tabelle.png]\nNote that __sie__ with a small ‘s’ means ‘she’ and also ‘they’.\n\nYou will have noticed that there are different ways of saying ‘you’ in German. __Sie__ is the most useful when you meet German-speaking people. You mainly use __Sie__ throughout this course, but you also learn more about the different ways of addressing people later on.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Note that __sie__ with a small ‘s’ means ‘she’ and also ‘they’.\n\nYou will have noticed that there are different ways of saying ‘you’ in German. __Sie__ is the most useful when you meet German-speaking people. You mainly use __Sie__ throughout this course, but you also learn more about the different ways of addressing people later on.",
+      "id": [
+        "136576"
+      ],
+      "item": "Personal pronouns",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/tabelle.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:136577]\n[%Übung 18]\n[!You also need to know how to use verbs with pronouns in the plural. The table below shows all the forms for __kommen__. ‘__komm-__’ is the stem of the verb that is always the same. Endings are then added according to who you are talking about. Like __kommen__ the verb __wohnen__ is regular. They both work in the same way. Write down the forms for __wohnen__. The first one has been done for you.\n__Bitte schreiben Sie die Formen von „wohnen“ in die Tabelle.__]\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/verben.png]\n**wohnen**\nich [_wohne][@example]\ndu [_wohnst]\ner/sie/es [_wohnt]\nwir [_wohnen]\nihr [_wohnt]\nsie [_wohnen]\nSie [_wohnen]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**wohnen**\nich {0}\ndu {1}\ner/sie/es {2}\nwir {3}\nihr {4}\nsie {5}\nSie {6}",
+      "item": "Übung 18",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136577"
+      ],
+      "instruction": "You also need to know how to use verbs with pronouns in the plural. The table below shows all the forms for __kommen__. ‘__komm-__’ is the stem of the verb that is always the same. Endings are then added according to who you are talking about. Like __kommen__ the verb __wohnen__ is regular. They both work in the same way. Write down the forms for __wohnen__. The first one has been done for you.\n__Bitte schreiben Sie die Formen von „wohnen“ in die Tabelle.__",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/verben.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wohne"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wohnst"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wohnt"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wohnen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wohnt"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wohnen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wohnen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&audio]\n[@id:136578]\n[%Übung 19]\nListen to the audio extracts and practise the different forms of wohnen.\n__Hören Sie und sprechen Sie. Hier ist ein Beispiel.__]\n**Sie hören:** ich\n**Sie sagen:** ich wohne\n**Sie hören:** ich wohne\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs11.mp3]\n|note:Transcript\n**Abschnitt 11**\n__Bitte hören Sie und sprechen Sie.__\nich → ich wohne\ndu → du wohnst\nChristian und Melanie → sie wohnen\nwir → wir wohnen\nMarcos Schneider → er wohnt\nFrau Lengenfelder → sie wohnt\nJa, aber, WO wohnt sie?\nSie wohnt in München!",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Listen to the audio extracts and practise the different forms of wohnen.\n__Hören Sie und sprechen Sie. Hier ist ein Beispiel.__]\n**Sie hören:** ich\n**Sie sagen:** ich wohne\n**Sie hören:** ich wohne\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs11.mp3]\n|note:Transcript\n**Abschnitt 11**\n__Bitte hören Sie und sprechen Sie.__\nich → ich wohne\ndu → du wohnst\nChristian und Melanie → sie wohnen\nwir → wir wohnen\nMarcos Schneider → er wohnt\nFrau Lengenfelder → sie wohnt\nJa, aber, WO wohnt sie?\nSie wohnt in München!",
+      "item": "Übung 19",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136578"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 54,
+        "errorLine": "__Hören Sie und sprechen Sie. Hier ist ein Beispiel.__]"
+      },
+      {
+        "message": "Unexpected input '[&audio'",
+        "line": 9,
+        "column": 0,
+        "errorLine": "[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs11.mp3]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 9,
+        "column": 136,
+        "errorLine": "[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs11.mp3]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark--&image]\n[@id:136579]\n[%Übung 20]\n[!Use the information from Übung 17 (repeated below), to match the answers with the questions in the following activity.]\n**Vokabeln**\n__Wo wohnen Sie?__ Where do you live?\n__Wo wohnt er/sie?__ Where does he/she live?\n===\nWo wohnt Marcos Schneider?\n==\nEr wohnt in Blumenau.\n===\nWoher kommen Melanie und Christian?\n==\nSie kommen aus Norddeutschland.\n===\nWoher kommt Frau Lengenfelder?\n==\nSie kommt aus Russland.\n===\nWo wohnt Herr Börner?\n==\nEr wohnt in Berlin und auf der Insel Rügen.\n===\nWo wohnt Frau Schweigert?\n==\nSie wohnt in München.\n===\nWo wohnt Frau Adams?\n==\nSie wohnt in Leeds.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf010i.jpg]",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "Übung 20",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Wo wohnt Marcos Schneider?",
+          "values": [
+            "Er wohnt in Blumenau."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Woher kommen Melanie und Christian?",
+          "values": [
+            "Sie kommen aus Norddeutschland."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Woher kommt Frau Lengenfelder?",
+          "values": [
+            "Sie kommt aus Russland."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Wo wohnt Herr Börner?",
+          "values": [
+            "Er wohnt in Berlin und auf der Insel Rügen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Wo wohnt Frau Schweigert?",
+          "values": [
+            "Sie wohnt in München."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Wo wohnt Frau Adams?",
+          "values": [
+            "Sie wohnt in Leeds."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "**Vokabeln**\n__Wo wohnen Sie?__ Where do you live?\n__Wo wohnt er/sie?__ Where does he/she live?",
+      "id": [
+        "136579"
+      ],
+      "instruction": "Use the information from Übung 17 (repeated below), to match the answers with the questions in the following activity.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf010i.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark--&image]\n[@id:136580]\n[%Übung 21]\n[!Match the questions and answers below. You will need to look closely at both the grammar and the content.]\n===\nWoher kommt Wilhelm Tell?\n==\nEr kommt aus der Schweiz.\n===\nWoher kommt Wolfgang Amadeus Mozart?\n==\nEr kommt aus Österreich.\n===\nWoher kommt Frau Adams?\n==\nSie kommt aus Österreich.\n===\nWo wohnen die Amish?\n==\nSie wohnen in Pennsylvania.\n===\nWo wohnt Frau Lengenfelder?\n==\nSie wohnt in München.\n===\nWo wohnen Melanie und Christian?\n==\nSie wohnen in Rostock.\n===\nWo wohnen Zita und Michael Schweigert?\n==\nSie wohnen in München.\n===\nWoher kommt Marcos Schneider?\n==\nEr kommt aus Brasilien\n===",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "Übung 21",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Woher kommt Wilhelm Tell?",
+          "values": [
+            "Er kommt aus der Schweiz."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Woher kommt Wolfgang Amadeus Mozart?",
+          "values": [
+            "Er kommt aus Österreich."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Woher kommt Frau Adams?",
+          "values": [
+            "Sie kommt aus Österreich."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Wo wohnen die Amish?",
+          "values": [
+            "Sie wohnen in Pennsylvania."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Wo wohnt Frau Lengenfelder?",
+          "values": [
+            "Sie wohnt in München."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Wo wohnen Melanie und Christian?",
+          "values": [
+            "Sie wohnen in Rostock."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Wo wohnen Zita und Michael Schweigert?",
+          "values": [
+            "Sie wohnen in München."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Woher kommt Marcos Schneider?",
+          "values": [
+            "Er kommt aus Brasilien"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136580"
+      ],
+      "instruction": "Match the questions and answers below. You will need to look closely at both the grammar and the content."
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&audio]\n[@id:136581]\n[%Übung 22]\n[!In this activity, listen to the audio to practise giving some personal information about the people you have come across in this section. Make sure you are familiar with the information given in the extracts in Übung 17, then answer the questions.\n__Bitte hören Sie und sprechen Sie. Hier ist ein Beispiel.__]\n**Sie hören:** Entschuldigen Sie bitte, wie ist Ihr Name? (Lengenfelder)\n**Sie sagen:** Mein Name ist Lengenfelder.\n**Sie hören:** Wo wohnen Sie?\n**Sie sagen:** Ich wohne in München.\n**Sie hören:** Und woher kommen Sie?\n**Sie sagen:** Ich komme aus Russland.\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs12.mp3]\n|note:Transcript\n**Abschnitt 12**\n__Bitte hören Sie und sprechen Sie.__\n\n**Dialogue 1**\nINTERVIEWER: Entschuldigen Sie bitte, wie ist Ihr Name?\n(Lengenfelder)\n→\nFRAU LENGENFELDER: Mein Name ist Lengenfelder.\nINTERVIEWER: Wo wohnen Sie?\n→\nFRAU LENGENFELDER: Ich wohne in München.\nINTERVIEWER: Und woher kommen Sie?\n→\nFRAU LENGENFELDER: Ich komme aus Russland.\n\n**Dialogue 2**\nINTERVIEWERIN: Wie ist Ihr Name?(Frank Börner)\n→\nHERR BÖRNER: Mein Name ist Frank Börner.\nINTERVIEWERIN: Woher kommen Sie?\n→\nHERR BÖRNER: Ich komme aus Berlin.\nINTERVIEWERIN: Und wo wohnen Sie?\n→\nHERR BÖRNER: Ich wohne in Berlin und auf der Insel Rügen.\n\n**Dialogue 3**\nINTERVIEWERIN: Wie ist Ihr Name?(Melanie)\n→\nMELANIE: Mein Name ist Melanie.\nINTERVIEWER: Und wie ist Ihr Name?\n(Christian)\n→\nCHRISTIAN: Mein Name ist Christian.\nINTERVIEWERIN: Also, ähm, Christian und Melanie, woher kommen Sie?\n→\nCHRISTIAN: Wir kommen aus Norddeutschland.\nMELANIE: Ja, Norddeutschland.\nINTERVIEWERIN: Und wo wohnen Sie?\n→\nMELANIE: Wir wohnen in Rostock.\n\n**Dialogue 4**\nINTERVIEWER: Wie ist Ihr Name?\n(give your own name)\n→\nINTERVIEWER: Woher kommen Sie?\n→\nINTERVIEWER: Und wo wohnen Sie?\n→",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "**Sie hören:** Entschuldigen Sie bitte, wie ist Ihr Name? (Lengenfelder)\n**Sie sagen:** Mein Name ist Lengenfelder.\n**Sie hören:** Wo wohnen Sie?\n**Sie sagen:** Ich wohne in München.\n**Sie hören:** Und woher kommen Sie?\n**Sie sagen:** Ich komme aus Russland.\n\n|note:Transcript\n**Abschnitt 12**\n__Bitte hören Sie und sprechen Sie.__\n\n**Dialogue 1**\nINTERVIEWER: Entschuldigen Sie bitte, wie ist Ihr Name?\n(Lengenfelder)\n→\nFRAU LENGENFELDER: Mein Name ist Lengenfelder.\nINTERVIEWER: Wo wohnen Sie?\n→\nFRAU LENGENFELDER: Ich wohne in München.\nINTERVIEWER: Und woher kommen Sie?\n→\nFRAU LENGENFELDER: Ich komme aus Russland.\n\n**Dialogue 2**\nINTERVIEWERIN: Wie ist Ihr Name?(Frank Börner)\n→\nHERR BÖRNER: Mein Name ist Frank Börner.\nINTERVIEWERIN: Woher kommen Sie?\n→\nHERR BÖRNER: Ich komme aus Berlin.\nINTERVIEWERIN: Und wo wohnen Sie?\n→\nHERR BÖRNER: Ich wohne in Berlin und auf der Insel Rügen.\n\n**Dialogue 3**\nINTERVIEWERIN: Wie ist Ihr Name?(Melanie)\n→\nMELANIE: Mein Name ist Melanie.\nINTERVIEWER: Und wie ist Ihr Name?\n(Christian)\n→\nCHRISTIAN: Mein Name ist Christian.\nINTERVIEWERIN: Also, ähm, Christian und Melanie, woher kommen Sie?\n→\nCHRISTIAN: Wir kommen aus Norddeutschland.\nMELANIE: Ja, Norddeutschland.\nINTERVIEWERIN: Und wo wohnen Sie?\n→\nMELANIE: Wir wohnen in Rostock.\n\n**Dialogue 4**\nINTERVIEWER: Wie ist Ihr Name?\n(give your own name)\n→\nINTERVIEWER: Woher kommen Sie?\n→\nINTERVIEWER: Und wo wohnen Sie?\n→",
+      "item": "Übung 22",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136581"
+      ],
+      "instruction": "In this activity, listen to the audio to practise giving some personal information about the people you have come across in this section. Make sure you are familiar with the information given in the extracts in Übung 17, then answer the questions.\n__Bitte hören Sie und sprechen Sie. Hier ist ein Beispiel.__",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs12.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-15]\n[@id:136582]\n[#Ordering and paying for things]\n[%4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-15",
+      "id": [
+        "136582"
+      ],
+      "title": "Ordering and paying for things"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136583]\nYou will now visit the island of Rügen, off Germany’s Baltic coast. You’ll learn to use the pronoun __man__ to talk about the things you can do.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You will now visit the island of Rügen, off Germany’s Baltic coast. You’ll learn to use the pronoun __man__ to talk about the things you can do.",
+      "id": [
+        "136583"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-16]\n[@id:136584]\n[##Where do you live?]\n[%4.1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-16",
+      "id": [
+        "136584"
+      ],
+      "title": "Where do you live?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136585]\n[%Making generalisations using ‘man’]\nWhen you are talking about people in general in English, you might say ‘you’, ‘they’ or ‘people’ rather than the formal-sounding ‘one’. But __man__ doesn’t have the same formal ring to it in German. __Man__ takes the same verb form as __er/sie/es__. Compare the following sentences, for example:\n\n__Was kann man hier essen?__ What can you eat here? (literally: What can one eat here?)\n__Was trinkt man hier?__ What do people drink here?\n__Man bekommt überall Wein__ You (can) get wine anywhere",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "When you are talking about people in general in English, you might say ‘you’, ‘they’ or ‘people’ rather than the formal-sounding ‘one’. But __man__ doesn’t have the same formal ring to it in German. __Man__ takes the same verb form as __er/sie/es__. Compare the following sentences, for example:\n\n__Was kann man hier essen?__ What can you eat here? (literally: What can one eat here?)\n__Was trinkt man hier?__ What do people drink here?\n__Man bekommt überall Wein__ You (can) get wine anywhere",
+      "id": [
+        "136585"
+      ],
+      "item": "Making generalisations using ‘man’"
+    }
+  },
+  {
+    "bitmark": "[.match-picture:bitmark--]\n[@id:136586]\n[%Übung 23]\n[!You can buy food and drink in many different places. In the activity below, match the descriptions with the right picture numbers.]\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_ol_f023.jpg]\n==\nHier kann man japanisch essen.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_ol_f026.jpg]\n==\nHier kann man Kaffee trinken.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_ol_f059.jpg]\n==\nHier kann man Bratwurst kaufen.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_ol_f022.jpg]\n==\nHier kann man ein Schinkenbrötchen kaufen.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_ol_f025.jpg]\n==\nHier kann man Obst und Gemüse kaufen.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_ol_f021.jpg]\n==\nHier kann man Brot kaufen.\n===",
+    "bit": {
+      "type": "match-picture",
+      "format": "bitmark--",
+      "item": "Übung 23",
+      "heading": {},
+      "pairs": [
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_ol_f023.jpg"
+          },
+          "values": [
+            "Hier kann man japanisch essen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_ol_f026.jpg"
+          },
+          "values": [
+            "Hier kann man Kaffee trinken."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_ol_f059.jpg"
+          },
+          "values": [
+            "Hier kann man Bratwurst kaufen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_ol_f022.jpg"
+          },
+          "values": [
+            "Hier kann man ein Schinkenbrötchen kaufen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_ol_f025.jpg"
+          },
+          "values": [
+            "Hier kann man Obst und Gemüse kaufen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_ol_f021.jpg"
+          },
+          "values": [
+            "Hier kann man Brot kaufen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136586"
+      ],
+      "instruction": "You can buy food and drink in many different places. In the activity below, match the descriptions with the right picture numbers."
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&imageWithAudio]\n[@id:136587]\n[%Übung 24]\n[!On the island of Rügen, you might hear someone asking about what you can eat and drink there. Listen for the key words and fill in the gaps in the following sentences. You don’t need to understand everything.\n__Hören Sie und schreiben Sie.__]\n**Vokabeln**\n__aus der Umgebung__ from the surrounding area\n__wer Fisch mag, der ist hier genau richtig__ anyone who likes fish feels at home here\n\n1. Was kann man auf Rügen essen?\nMan kann [_Fisch] essen.\n\n2. Was trinkt man?\nMan trinkt [_Bier].\n\n3. Was bekommt man auch?\nMan bekommt überall auch [_Wein].\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf015i.jpg]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs13.mp3]\n|note:Transcript\n**Abschnitt 13**\n__Hören Sie bitte.__\n\nINTERVIEWERIN: Was kann man hier essen?\nMANN: Essen, ja – insbesondere der Fisch hier aus der Umgebung, und ich denke, wer Fisch mag, der is’ hier genau richtig.\nINTERVIEWERIN: Und was trinkt man hier?\nMANN: Man trinkt Bier. Dieses Bier bekommt man auch in verschiedenen Formen, als Schwarzbier, als helles Bier und man bekommt überall auch Wein.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**Vokabeln**\n__aus der Umgebung__ from the surrounding area\n__wer Fisch mag, der ist hier genau richtig__ anyone who likes fish feels at home here\n\n1. Was kann man auf Rügen essen?\nMan kann {0} essen.\n\n2. Was trinkt man?\nMan trinkt {1}.\n\n3. Was bekommt man auch?\nMan bekommt überall auch {2}.\n\n\n|note:Transcript\n**Abschnitt 13**\n__Hören Sie bitte.__\n\nINTERVIEWERIN: Was kann man hier essen?\nMANN: Essen, ja – insbesondere der Fisch hier aus der Umgebung, und ich denke, wer Fisch mag, der is’ hier genau richtig.\nINTERVIEWERIN: Und was trinkt man hier?\nMANN: Man trinkt Bier. Dieses Bier bekommt man auch in verschiedenen Formen, als Schwarzbier, als helles Bier und man bekommt überall auch Wein.",
+      "item": "Übung 24",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136587"
+      ],
+      "instruction": "On the island of Rügen, you might hear someone asking about what you can eat and drink there. Listen for the key words and fill in the gaps in the following sentences. You don’t need to understand everything.\n__Hören Sie und schreiben Sie.__",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Fisch"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Bier"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Wein"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf015i.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs13.mp3"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 23,
+        "errorLine": "[.cloze:bitmark--&imageWithAudio]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-17]\n[@id:136588]\n[##Café conversations]\n[%4.2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-17",
+      "id": [
+        "136588"
+      ],
+      "title": "Café conversations"
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark--&audio]\n[@id:136589]\n[%Übung 25]\n[!Listen to this conversation in a café. Try to work out the meanings from the context without using a dictionary. Then do the quiz below.]\n===\nkeep the change\n==\nstimmt so\n===\nanything else?\n==\nsonst noch etwas\n===\ntwo pieces of apple cake\n==\nzwei Stück Apfelkuchen\n===\na glass of tea\n==\nein Glas Tee\n===\nI'd like to pay, please\n==\nIch möchte zahlen, bitte\n===\nthat comes to\n==\ndas macht\n===\nwith cream\n==\nmit Sahne\n===\na pot of coffee\n==\nein Kännchen Kaffee\n===\nwith lemon\n==\nmit Zitrone\n===\ntogether or separately\n==\nzusammen oder getrennt\n===\nexcuse me\n==\nentschuldigung\n===\nwe'd like\n==\nwir möchten\n===\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs14.mp3]\n|note:Transcript\n**Abschnitt 14**\n__Hören Sie bitte.__\n\nTHOMAS: Entschuldigung!\nKELLNERIN: Bitte schön?\nTHOMAS: Äh, wir möchten ein Kännchen Kaffee und ein Glas Tee, bitte.\nKELLNERIN: Tee mit Zitrone oder mit Sahne?\nTHOMAS: Mit Zitrone, bitte.\nKELLNERIN: Sonst noch etwas?\nTHOMAS: Zwei Stück Apfelkuchen, bitte.\n(später)\nKELLNERIN: Bitte schön, ein Kännchen Kaffee, ein Glas Tee und zwei Stück Apfelkuchen.\nTHOMAS: Vielen Dank.\n(später)\nTHOMAS: Entschuldigung! Ich möchte zahlen, bitte.\nKELLNERIN: Zusammen oder getrennt?\nTHOMAS: Zusammen, bitte.\nKELLNERIN: Das macht, ähm, €9,15 bitte.\nTHOMAS: €10, bitte schön – stimmt so.\nKELLNERIN: Danke schön.",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "Übung 25",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "keep the change",
+          "values": [
+            "stimmt so"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "anything else?",
+          "values": [
+            "sonst noch etwas"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "two pieces of apple cake",
+          "values": [
+            "zwei Stück Apfelkuchen"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "a glass of tea",
+          "values": [
+            "ein Glas Tee"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "I'd like to pay, please",
+          "values": [
+            "Ich möchte zahlen, bitte"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "that comes to",
+          "values": [
+            "das macht"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "with cream",
+          "values": [
+            "mit Sahne"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "a pot of coffee",
+          "values": [
+            "ein Kännchen Kaffee"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "with lemon",
+          "values": [
+            "mit Zitrone"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "together or separately",
+          "values": [
+            "zusammen oder getrennt"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "excuse me",
+          "values": [
+            "entschuldigung"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "we'd like",
+          "values": [
+            "wir möchten"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "|note:Transcript\n**Abschnitt 14**\n__Hören Sie bitte.__\n\nTHOMAS: Entschuldigung!\nKELLNERIN: Bitte schön?\nTHOMAS: Äh, wir möchten ein Kännchen Kaffee und ein Glas Tee, bitte.\nKELLNERIN: Tee mit Zitrone oder mit Sahne?\nTHOMAS: Mit Zitrone, bitte.\nKELLNERIN: Sonst noch etwas?\nTHOMAS: Zwei Stück Apfelkuchen, bitte.\n(später)\nKELLNERIN: Bitte schön, ein Kännchen Kaffee, ein Glas Tee und zwei Stück Apfelkuchen.\nTHOMAS: Vielen Dank.\n(später)\nTHOMAS: Entschuldigung! Ich möchte zahlen, bitte.\nKELLNERIN: Zusammen oder getrennt?\nTHOMAS: Zusammen, bitte.\nKELLNERIN: Das macht, ähm, €9,15 bitte.\nTHOMAS: €10, bitte schön – stimmt so.\nKELLNERIN: Danke schön.",
+      "id": [
+        "136589"
+      ],
+      "instruction": "Listen to this conversation in a café. Try to work out the meanings from the context without using a dictionary. Then do the quiz below.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs14.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--&audio]\n[@id:136590]\n[%Übung 26]\n[!Listen to the audio again (and look at the transcript if you'd like). The waitress says bitte schön twice. Can you guess from the context what the phrase means in each case (two different meanings)? Write down what you think the different meanings are.\n__Lesen Sie und schreiben Sie.__]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs14.mp3]\n|note:Transcript\n**Abschnitt 14**\n__Hören Sie bitte.__\n\nTHOMAS: Entschuldigung!\nKELLNERIN: Bitte schön?\nTHOMAS: Äh, wir möchten ein Kännchen Kaffee und ein Glas Tee, bitte.\nKELLNERIN: Tee mit Zitrone oder mit Sahne?\nTHOMAS: Mit Zitrone, bitte.\nKELLNERIN: Sonst noch etwas?\nTHOMAS: Zwei Stück Apfelkuchen, bitte.\n(später)\nKELLNERIN: Bitte schön, ein Kännchen Kaffee, ein Glas Tee und zwei Stück Apfelkuchen.\nTHOMAS: Vielen Dank.\n(später)\nTHOMAS: Entschuldigung! Ich möchte zahlen, bitte.\nKELLNERIN: Zusammen oder getrennt?\nTHOMAS: Zusammen, bitte.\nKELLNERIN: Das macht, ähm, €9,15 bitte.\nTHOMAS: €10, bitte schön – stimmt so.\nKELLNERIN: Danke schön.",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Listen to the audio again (and look at the transcript if you'd like). The waitress says bitte schön twice. Can you guess from the context what the phrase means in each case (two different meanings)? Write down what you think the different meanings are.\n__Lesen Sie und schreiben Sie.__",
+      "partialAnswer": "",
+      "body": "|note:Transcript\n**Abschnitt 14**\n__Hören Sie bitte.__\n\nTHOMAS: Entschuldigung!\nKELLNERIN: Bitte schön?\nTHOMAS: Äh, wir möchten ein Kännchen Kaffee und ein Glas Tee, bitte.\nKELLNERIN: Tee mit Zitrone oder mit Sahne?\nTHOMAS: Mit Zitrone, bitte.\nKELLNERIN: Sonst noch etwas?\nTHOMAS: Zwei Stück Apfelkuchen, bitte.\n(später)\nKELLNERIN: Bitte schön, ein Kännchen Kaffee, ein Glas Tee und zwei Stück Apfelkuchen.\nTHOMAS: Vielen Dank.\n(später)\nTHOMAS: Entschuldigung! Ich möchte zahlen, bitte.\nKELLNERIN: Zusammen oder getrennt?\nTHOMAS: Zusammen, bitte.\nKELLNERIN: Das macht, ähm, €9,15 bitte.\nTHOMAS: €10, bitte schön – stimmt so.\nKELLNERIN: Danke schön.",
+      "item": "Übung 26",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136590"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs14.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:136591]\n[%Übung 27]\n[!Here are some extracts from everyday café conversations with a few key words missing.\nUse some of the phrases you have learned to fill in the gaps.\n__Lesen Sie und schreiben Sie.__]\nGAST: Entschuldigung! Die Speisekarte, bitte!\nKELLNER: Ja, sofort. … Bitte [_schön].\n(später)\nKELLNER: Möchten [_Sie] bestellen?\nGAST: Ja, ich [_möchte] einen Kaffee, bitte.\nKELLNER: Eine Tasse oder ein [_Kännchen]?\nGAST: Eine Tasse, bitte.\nKELLNER: Sonst noch [_etwas]?\nGAST: Nein, danke.\n(später)\nKELLNER: Bitte schön?\nGAST: [_Zahlen], bitte.\nKELLNER: Das [_macht] €2,50, bitte.\nGAST: €3,00 – [_stimmt] so.\nKELLNER: Vielen [_Dank]. Auf Wiedersehen.\n\nHaving coffee and cakes with friends in a café or at home is a very popular way to take a late afternoon break in Germany.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "GAST: Entschuldigung! Die Speisekarte, bitte!\nKELLNER: Ja, sofort. … Bitte {0}.\n(später)\nKELLNER: Möchten {1} bestellen?\nGAST: Ja, ich {2} einen Kaffee, bitte.\nKELLNER: Eine Tasse oder ein {3}?\nGAST: Eine Tasse, bitte.\nKELLNER: Sonst noch {4}?\nGAST: Nein, danke.\n(später)\nKELLNER: Bitte schön?\nGAST: {5}, bitte.\nKELLNER: Das {6} €2,50, bitte.\nGAST: €3,00 – {7} so.\nKELLNER: Vielen {8}. Auf Wiedersehen.\n\nHaving coffee and cakes with friends in a café or at home is a very popular way to take a late afternoon break in Germany.",
+      "item": "Übung 27",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136591"
+      ],
+      "instruction": "Here are some extracts from everyday café conversations with a few key words missing.\nUse some of the phrases you have learned to fill in the gaps.\n__Lesen Sie und schreiben Sie.__",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "schön"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Sie"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "möchte"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kännchen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "etwas"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Zahlen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "macht"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "stimmt"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Dank"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&audio]\n[@id:136592]\n[%Übung 28]\n[!Now it's your turn to play the customer's part, using your script from Übung 27. Speak aloud as you play the audio.\n__Hören Sie und sprechen Sie. Sie sind der Gast. Hier ist ein Beispiel.]\n**Sie sagen:** Entschuldigung! Die Speisekarte, bitte.\n**Sie hören:** Entschuldigung! Die Speisekarte, bitte.\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs15.mp3]\n|note:Transcript\n**Abschnitt 15**\n__Hören Sie und sprechen Sie. Bitte beginnen Sie jetzt.__\n\n→\nGAST: Entschuldigung! Die Speisekarte, bitte!\nKELLNER: Ja, sofort. … Bitte schön.\n(später)\nKELLNER: Möchten Sie bestellen?\n→\nGAST: Ja, ich möchte einen Kaffee, bitte.\nKELLNER: Eine Tasse oder ein Kännchen?\n→\nGAST: Eine Tasse, bitte.\nKELLNER: Sonst noch etwas?\n→\nGAST: Nein, danke.\n(später)\nKELLNER: Bitte schön?\n→\nGAST: Zahlen, bitte.\nKELLNER: Das macht €2,50, bitte.\n→\nGAST: €3,00 – stimmt so.\nKELLNER: Vielen Dank. Auf Wiedersehen.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "**Sie sagen:** Entschuldigung! Die Speisekarte, bitte.\n**Sie hören:** Entschuldigung! Die Speisekarte, bitte.\n\n|note:Transcript\n**Abschnitt 15**\n__Hören Sie und sprechen Sie. Bitte beginnen Sie jetzt.__\n\n→\nGAST: Entschuldigung! Die Speisekarte, bitte!\nKELLNER: Ja, sofort. … Bitte schön.\n(später)\nKELLNER: Möchten Sie bestellen?\n→\nGAST: Ja, ich möchte einen Kaffee, bitte.\nKELLNER: Eine Tasse oder ein Kännchen?\n→\nGAST: Eine Tasse, bitte.\nKELLNER: Sonst noch etwas?\n→\nGAST: Nein, danke.\n(später)\nKELLNER: Bitte schön?\n→\nGAST: Zahlen, bitte.\nKELLNER: Das macht €2,50, bitte.\n→\nGAST: €3,00 – stimmt so.\nKELLNER: Vielen Dank. Auf Wiedersehen.",
+      "item": "Übung 28",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136592"
+      ],
+      "instruction": "Now it's your turn to play the customer's part, using your script from Übung 27. Speak aloud as you play the audio.\n__Hören Sie und sprechen Sie. Sie sind der Gast. Hier ist ein Beispiel.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs15.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-18]\n[@id:136593]\n[##What the customer wants]\n[%4.3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-18",
+      "id": [
+        "136593"
+      ],
+      "title": "What the customer wants"
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark--&image]\n[@id:136594]\n[%Übung 29]\n[!Look at this drawing of a busy restaurant. The customers are trying to attract the waiter’s attention. What does each group want?]\n===\nThis group wants a table they have reserved\n==\nGroup 5\n===\nThis group wants to attract the waiter's attention\n==\nGroup 3\n===\nThis group wants the menu\n==\nGroup 1\n===\nThis group wants to order\n==\nGroup 2\n===\nThis group wants to pay\n==\nGroup 4\n===\nThis group wants to query the bill\n==\nGroup 6\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf017i.small.jpg]",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "Übung 29",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "This group wants a table they have reserved",
+          "values": [
+            "Group 5"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "This group wants to attract the waiter's attention",
+          "values": [
+            "Group 3"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "This group wants the menu",
+          "values": [
+            "Group 1"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "This group wants to order",
+          "values": [
+            "Group 2"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "This group wants to pay",
+          "values": [
+            "Group 4"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "This group wants to query the bill",
+          "values": [
+            "Group 6"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136594"
+      ],
+      "instruction": "Look at this drawing of a busy restaurant. The customers are trying to attract the waiter’s attention. What does each group want?",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf017i.small.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-19]\n[@id:136595]\n[##Your turn to order]\n[%4.4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-19",
+      "id": [
+        "136595"
+      ],
+      "title": "Your turn to order"
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&imageWithAudio]\n[@id:136596]\n[%Übung 30]\n[!Here is the menu at a restaurant:\nYou decide to order fish at this restaurant. Begin by calling the waiter, then follow the cues in the audio extract.\n__Hören Sie und sprechen Sie. Hier ist ein Beispiel.__]\n**Sie hören:** Rufen Sie den Kellner.\n**Sie sagen:** Entschuldigung!\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf018i.jpg]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs16.mp3]\n|note:Transcript\n**Abschnitt 16**\n__Bitte hören Sie und sprechen Sie.__\n(Rufen Sie den Kellner.)\n\n→\nGAST: Entschuldigung! Kellner Bitte schön?\n(Speisekarte)\n→\nGAST: Die Speisekarte, bitte.\n(später)\nKELLNER: Bitte schön? Was hätten Sie gern?\n(Bratheringe)\n→\nGAST: Ich möchte Bratheringe, bitte.\nKELLNER: Einmal Bratheringe. Und was möchten Sie trinken?\n(ein Glas Weißbier)\n→\nGAST: Ich möchte ein Glas Weißbier, bitte.\nKELLNER: Ein Glas Weißbier. Sonst noch etwas?\n(Nein)\n→\nGAST: Nein, danke.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "**Sie hören:** Rufen Sie den Kellner.\n**Sie sagen:** Entschuldigung!\n\n\n|note:Transcript\n**Abschnitt 16**\n__Bitte hören Sie und sprechen Sie.__\n(Rufen Sie den Kellner.)\n\n→\nGAST: Entschuldigung! Kellner Bitte schön?\n(Speisekarte)\n→\nGAST: Die Speisekarte, bitte.\n(später)\nKELLNER: Bitte schön? Was hätten Sie gern?\n(Bratheringe)\n→\nGAST: Ich möchte Bratheringe, bitte.\nKELLNER: Einmal Bratheringe. Und was möchten Sie trinken?\n(ein Glas Weißbier)\n→\nGAST: Ich möchte ein Glas Weißbier, bitte.\nKELLNER: Ein Glas Weißbier. Sonst noch etwas?\n(Nein)\n→\nGAST: Nein, danke.",
+      "item": "Übung 30",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136596"
+      ],
+      "instruction": "Here is the menu at a restaurant:\nYou decide to order fish at this restaurant. Begin by calling the waiter, then follow the cues in the audio extract.\n__Hören Sie und sprechen Sie. Hier ist ein Beispiel.__",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/images/l193_1_uf018i.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs16.mp3"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 28,
+        "errorLine": "[.assignment:bitmark--&imageWithAudio]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&audio]\n[@id:136597]\n[%Übung 31]\n[!Did you enjoy your meal? The waiter seems to have disappeared, so you ask the waitress (die Kellnerin) for your bill. You only hear the first cue in the audio, so use the notes below to guide you through the rest of the dialogue.\n__Hier ist ein Beispiel.__]\n\n**Sie hören:** Rufen Sie die Kellnerin.\n**Sie sagen:** Bedienung, bitte!\n[?* I’d like to pay, please.\n• Excuse me, is this right?\n• But I had (ich hatte) fried herring!\n• OK, €10 – keep the change.]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs17.mp3]\n|note:Transcript\n**Abschnitt 17**\n__Bitte hören Sie und sprechen Sie.__\n(Rufen Sie die Kellnerin.)\n\n→\nGAST: Bedienung, bitte!\nKELLNERIN: Ich komme gleich … Ja, bitte schön?\n→\nGAST: Zahlen, bitte!\nKELLNERIN: Moment, bitte. … Ähm, bitte schön – hier ist Ihre Rechnung.\n→\nGAST: Entschuldigung, stimmt das hier?\nKELLNERIN: Ja, das stimmt. Das Lachssteak kostet €8,75, und das Bier €2,25. Zusammen €11.\n→\nGAST: Aber ich hatte Bratheringe!\nKELLNERIN: Bratheringe? Ach, es tut mir Leid! Die Bratheringe kosten nur €6,45 und das Bier €2,25.\nDas macht, ähm, €8,70.\n→\nGAST: Okay, €10, – stimmt so.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "**Sie hören:** Rufen Sie die Kellnerin.\n**Sie sagen:** Bedienung, bitte!\n\n\n|note:Transcript\n**Abschnitt 17**\n__Bitte hören Sie und sprechen Sie.__\n(Rufen Sie die Kellnerin.)\n\n→\nGAST: Bedienung, bitte!\nKELLNERIN: Ich komme gleich … Ja, bitte schön?\n→\nGAST: Zahlen, bitte!\nKELLNERIN: Moment, bitte. … Ähm, bitte schön – hier ist Ihre Rechnung.\n→\nGAST: Entschuldigung, stimmt das hier?\nKELLNERIN: Ja, das stimmt. Das Lachssteak kostet €8,75, und das Bier €2,25. Zusammen €11.\n→\nGAST: Aber ich hatte Bratheringe!\nKELLNERIN: Bratheringe? Ach, es tut mir Leid! Die Bratheringe kosten nur €6,45 und das Bier €2,25.\nDas macht, ähm, €8,70.\n→\nGAST: Okay, €10, – stimmt so.",
+      "item": "Übung 31",
+      "hint": "* I’d like to pay, please.\n• Excuse me, is this right?\n• But I had (ich hatte) fried herring!\n• OK, €10 – keep the change.",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136597"
+      ],
+      "instruction": "Did you enjoy your meal? The waiter seems to have disappeared, so you ask the waitress (die Kellnerin) for your bill. You only hear the first cue in the audio, so use the notes below to guide you through the rest of the dialogue.\n__Hier ist ein Beispiel.__",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_places_and_people/web-resources/audio/lzx193_abs17.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-20]\n[@id:136598]\n[#Conclusion]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-20",
+      "id": [
+        "136598"
+      ],
+      "title": "Conclusion"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136599]\nThis free course provided an introduction to studying Languages. It took you through a series of exercises designed to develop your approach to study and learning at a distance and helped to improve your confidence as an independent learner.\n\nThis OpenLearn course is an adapted extract from a previous edition of the Open University course **L193 Rundblick: beginners' German**.\n\nIf you enjoyed this course, you might be interested in studying the Open University module **L193 Rundblick: beginners' German**. Or, if you are interested in other language short courses, rather than studying languages for a degree, you may want to have a look at what else is on offer here.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This free course provided an introduction to studying Languages. It took you through a series of exercises designed to develop your approach to study and learning at a distance and helped to improve your confidence as an independent learner.\n\nThis OpenLearn course is an adapted extract from a previous edition of the Open University course **L193 Rundblick: beginners' German**.\n\nIf you enjoyed this course, you might be interested in studying the Open University module **L193 Rundblick: beginners' German**. Or, if you are interested in other language short courses, rather than studying languages for a degree, you may want to have a look at what else is on offer here.",
+      "id": [
+        "136599"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-21]\n[@id:136600]\n[#Acknowledgements]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-21",
+      "id": [
+        "136600"
+      ],
+      "title": "Acknowledgements"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136601]\nExcept for third party materials and otherwise stated (see **terms and conditions**), this content is made available under a **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Licence**.\n\nThe material acknowledged below is Proprietary and used under licence (not subject to Creative Commons Licence). Grateful acknowledgement is made to the following sources for permission to reproduce material in this course:\n\nCourse image: **Jay Plemon**  in Flickr made available under **Creative Commons Attribution-NonCommercial 2.0 Licence**.\n\n**Figures**\nÜbung 2 (top left) © Xeniel-Dia\nÜbung 2 (top right) Courtesy of German National Tourist Office\nÜbung 2 (middle): Geneve Tourisme/swiss-image.ch\nÜbung 2 (bottom left) Courtesy of the Austrian National Tourist Ofice\nÜbung 6 (clockwise) (1) © **Mary Evans Picture Library**; (2) Courtesy of Mary Evans Picture Library; (4) Courtesy of Shell; (5) © Mary Evans Picture Library; (6) © AP Photo/Roberto Pfeil; (7) © AP Photo/Rene Macura; (8) © AP Photo/Jacqueline Roggenbrodt\nÜbung 17 (top) Courtesy of Anna Lengenfelder.\n\nEvery effort has been made to contact copyright owners. If any have been inadvertently overlooked, the publishers will be pleased to make the necessary arrangements at the first opportunity.\n\n**Don't miss out**\n\nIf reading this text has inspired you to learn more, you may be interested in joining the millions of people who discover our free learning resources and qualifications by visiting The Open University – **www.open.edu/openlearn/free-courses**.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Except for third party materials and otherwise stated (see **terms and conditions**), this content is made available under a **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Licence**.\n\nThe material acknowledged below is Proprietary and used under licence (not subject to Creative Commons Licence). Grateful acknowledgement is made to the following sources for permission to reproduce material in this course:\n\nCourse image: **Jay Plemon**  in Flickr made available under **Creative Commons Attribution-NonCommercial 2.0 Licence**.\n\n**Figures**\nÜbung 2 (top left) © Xeniel-Dia\nÜbung 2 (top right) Courtesy of German National Tourist Office\nÜbung 2 (middle): Geneve Tourisme/swiss-image.ch\nÜbung 2 (bottom left) Courtesy of the Austrian National Tourist Ofice\nÜbung 6 (clockwise) (1) © **Mary Evans Picture Library**; (2) Courtesy of Mary Evans Picture Library; (4) Courtesy of Shell; (5) © Mary Evans Picture Library; (6) © AP Photo/Roberto Pfeil; (7) © AP Photo/Rene Macura; (8) © AP Photo/Jacqueline Roggenbrodt\nÜbung 17 (top) Courtesy of Anna Lengenfelder.\n\nEvery effort has been made to contact copyright owners. If any have been inadvertently overlooked, the publishers will be pleased to make the necessary arrangements at the first opportunity.\n\n**Don't miss out**\n\nIf reading this text has inspired you to learn more, you may be interested in joining the millions of people who discover our free learning resources and qualifications by visiting The Open University – **www.open.edu/openlearn/free-courses**.",
+      "id": [
+        "136601"
+      ]
+    }
+  }
+]

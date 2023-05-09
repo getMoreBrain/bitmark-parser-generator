@@ -1,0 +1,2422 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:136374]\n[#Repetitionsfragen Compendio]\n[@language:de]\n[@externalId:compendio]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136374"
+      ],
+      "title": "Repetitionsfragen Compendio",
+      "language": [
+        "de"
+      ],
+      "externalId": [
+        "compendio"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:136375]\n[%10_Beschaffung_041]\n[!Beschreiben Sie die vier Phasen des Beschaffungsprozesses.]\n===\nBedarfsanalyse \n[?In dieser Phase wird analysiert, was und in welchem Umfang beschafft werden soll. Dabei kann es sich um Dienstleistungen oder Produkte oder beides handeln. Das Ergebnis der Analyse beschreibt klar, was, ob etwas beschafft werden muss und in welcher Form, Menge und für welche Zeit. Auch das benötigte Budget wird in dieser Phase festgelegt. In der Praxis ist das Lastenheft eine weitverbreitete Form]\n===\nAusschreibung \n[?Basierend auf den Analyseergebnissen werden die benötigten Dienstleistungen bzw. Produkte ausgeschrieben und potenziellen Lieferanten oder Partnern zugänglich gemacht. Die Ausschreibung kann öffentlich oder nur mit einzelnen Lieferanten oder Partnern erfolgen.]\n===\nBewertung \n[?Die Rückmeldungen der angeschriebenen Lieferanten oder Partner (auch als Pflichtenheft bezeichnet) müssen analysiert und ausgewertet werden. Dazu empfiehlt es sich, einen Kriterienkatalog zu erstellen, der die wichtigsten Kriterien für die Auswahl beinhaltet und gewichtet. Das können \nz. B. Zertifikate, Berufserfahrung, Referenzen oder Ähnliches sein.]\n===\nAuftrag erteilen \n[?Wurde ein passender Lieferant oder Partner ausgewählt, muss man mit diesen einen Vertrag basierend auf den Ausschreibungsunterlagen ausarbeiten und unterschreiben.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "10_Beschaffung_041",
+      "instruction": "Beschreiben Sie die vier Phasen des Beschaffungsprozesses.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Bedarfsanalyse",
+          "instruction": "",
+          "hint": "In dieser Phase wird analysiert, was und in welchem Umfang beschafft werden soll. Dabei kann es sich um Dienstleistungen oder Produkte oder beides handeln. Das Ergebnis der Analyse beschreibt klar, was, ob etwas beschafft werden muss und in welcher Form, Menge und für welche Zeit. Auch das benötigte Budget wird in dieser Phase festgelegt. In der Praxis ist das Lastenheft eine weitverbreitete Form",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ausschreibung",
+          "instruction": "",
+          "hint": "Basierend auf den Analyseergebnissen werden die benötigten Dienstleistungen bzw. Produkte ausgeschrieben und potenziellen Lieferanten oder Partnern zugänglich gemacht. Die Ausschreibung kann öffentlich oder nur mit einzelnen Lieferanten oder Partnern erfolgen.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Bewertung",
+          "instruction": "",
+          "hint": "Die Rückmeldungen der angeschriebenen Lieferanten oder Partner (auch als Pflichtenheft bezeichnet) müssen analysiert und ausgewertet werden. Dazu empfiehlt es sich, einen Kriterienkatalog zu erstellen, der die wichtigsten Kriterien für die Auswahl beinhaltet und gewichtet. Das können \nz. B. Zertifikate, Berufserfahrung, Referenzen oder Ähnliches sein.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Auftrag erteilen",
+          "instruction": "",
+          "hint": "Wurde ein passender Lieferant oder Partner ausgewählt, muss man mit diesen einen Vertrag basierend auf den Ausschreibungsunterlagen ausarbeiten und unterschreiben.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136375"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:136376]\n[%10_Beschaffung_042 (Freitext)]\n[!Worin liegen die wesentlichen Unterschiede zwischen dem Werkvertrag und dem Dienstleistungsvertrag? Nennen Sie zwei Unterschiede.]\n===\nWerkvertrag\n===\nDienstleistungsvertrag\n===\n  \n[?**Korrekte Lösung** \nWerkvertrag und Dienstleistungsvertrag: \n  \n   \n  \nWerkvertrag     \n  \n·\tDer Auftragnehmer erbringt ein konkretes Werk. \n·\tDer Werkvertrag ist ergebnisbezogen. \n·\tDas Werk muss die vereinbarte Beschaffenheit haben, das macht den Auftragnehmer ggf. Schadensersatzpflichtig. \n  \nDienstleistungsvertrag \n     \n·\tDer Beauftragte wird tätig und erbringt eine Dienstleistung. \n·\tDer Dienstleistungsvertrag ist prozessbezogen. \n·\tBei einem Dienstleistungsvertrag ist die Schadensersatzpflicht äusserst eingeschränkt, da kein konkretes Werk erstellt wird.]",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "10_Beschaffung_042 (Freitext)",
+      "instruction": "Worin liegen die wesentlichen Unterschiede zwischen dem Werkvertrag und dem Dienstleistungsvertrag? Nennen Sie zwei Unterschiede.",
+      "body": "",
+      "footer": "[?**Korrekte Lösung** \nWerkvertrag und Dienstleistungsvertrag: \n  \n   \n  \nWerkvertrag     \n  \n·\tDer Auftragnehmer erbringt ein konkretes Werk. \n·\tDer Werkvertrag ist ergebnisbezogen. \n·\tDas Werk muss die vereinbarte Beschaffenheit haben, das macht den Auftragnehmer ggf. Schadensersatzpflichtig. \n  \nDienstleistungsvertrag \n     \n·\tDer Beauftragte wird tätig und erbringt eine Dienstleistung. \n·\tDer Dienstleistungsvertrag ist prozessbezogen. \n·\tBei einem Dienstleistungsvertrag ist die Schadensersatzpflicht äusserst eingeschränkt, da kein konkretes Werk erstellt wird.]",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Werkvertrag",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dienstleistungsvertrag",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136376"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped]\n[@id:136377]\n[%10_Beschaffung_043 (Match) - 1]\n[!Für welche der unten aufgeführten Konstellationen empfehlen Sie eher mehr bzw. eher weniger spezifische Massnahmen zum Controlling von Lieferanten?]\n===\nEinsatz von zwei externen Mitarbeitenden über einen Personalverleih-Vertrag \n==\neher nein\n===\nVergabe der Entwicklung eines Teilergebnisses in einem Innovationsprojekt\n== \neher ja\n===\nBereitstellung der Infrastruktur für ein grosses Musikkonzert durch einen spezialisierten Lieferanten \n==\neher ja\n===\nKonfiguration und Einführung einer unternehmensumspannenden ERP-Software (Enterprise Resource Planning) durch eine Dienstleistungsfirma \n==\neher ja\n===\nZusammenarbeit mit einer spezialisierten Consultingfirma zur Optimierung des aktuellen Projektmanagement-Systems im Unternehmen\n==\neher nein\n===\nAusarbeitung eines externen Gutachtens zum Aufzeigen der relevanten IT-Risiken in einem Unternehmen \n==\neher nein\n===",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "10_Beschaffung_043 (Match) - 1",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Einsatz von zwei externen Mitarbeitenden über einen Personalverleih-Vertrag ",
+          "values": [
+            "eher nein"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "Vergabe der Entwicklung eines Teilergebnisses in einem Innovationsprojekt \neher jaBereitstellung der Infrastruktur für ein grosses Musikkonzert durch einen spezialisierten Lieferanten eher jaKonfiguration und Einführung einer unternehmensumspannenden ERP-Software (Enterprise Resource Planning) durch eine Dienstleistungsfirma eher jaZusammenarbeit mit einer spezialisierten Consultingfirma zur Optimierung des aktuellen Projektmanagement-Systems im Unternehmeneher neinAusarbeitung eines externen Gutachtens zum Aufzeigen der relevanten IT-Risiken in einem Unternehmen eher nein",
+      "id": [
+        "136377"
+      ],
+      "instruction": "Für welche der unten aufgeführten Konstellationen empfehlen Sie eher mehr bzw. eher weniger spezifische Massnahmen zum Controlling von Lieferanten?"
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '==='",
+        "line": 13,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input 'Bereitstellung der Infrastruktur für ein grosses Musikkonzert durch einen spezialisierten Lieferanten '",
+        "line": 14,
+        "column": 0,
+        "errorLine": "Bereitstellung der Infrastruktur für ein grosses Musikkonzert durch einen spezialisierten Lieferanten "
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 15,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'eher ja'",
+        "line": 16,
+        "column": 0,
+        "errorLine": "eher ja"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 17,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input 'Konfiguration und Einführung einer unternehmensumspannenden ERP-Software (Enterprise Resource Planning) durch eine Dienstleistungsfirma '",
+        "line": 18,
+        "column": 0,
+        "errorLine": "Konfiguration und Einführung einer unternehmensumspannenden ERP-Software (Enterprise Resource Planning) durch eine Dienstleistungsfirma "
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 19,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'eher ja'",
+        "line": 20,
+        "column": 0,
+        "errorLine": "eher ja"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 21,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input 'Zusammenarbeit mit einer spezialisierten Consultingfirma zur Optimierung des aktuellen Projektmanagement-Systems im Unternehmen'",
+        "line": 22,
+        "column": 0,
+        "errorLine": "Zusammenarbeit mit einer spezialisierten Consultingfirma zur Optimierung des aktuellen Projektmanagement-Systems im Unternehmen"
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 23,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'eher nein'",
+        "line": 24,
+        "column": 0,
+        "errorLine": "eher nein"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 25,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input 'Ausarbeitung eines externen Gutachtens zum Aufzeigen der relevanten IT-Risiken in einem Unternehmen '",
+        "line": 26,
+        "column": 0,
+        "errorLine": "Ausarbeitung eines externen Gutachtens zum Aufzeigen der relevanten IT-Risiken in einem Unternehmen "
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 27,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'eher nein'",
+        "line": 28,
+        "column": 0,
+        "errorLine": "eher nein"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 29,
+        "column": 0,
+        "errorLine": "==="
+      }
+    ]
+  },
+  {
+    "bitmark": "[.match-solution-grouped]\n[@id:136378]\n[%01_Grundlagen_B_001 ]\n[!Handelt es sich bei den in der Tabelle erwähnten Vorhaben um Projekte? Begründen Sie Ihre Antwort.]\n===\nVerlegung des Tempels von Abu Simbel beim Bau des Assuanstaudamms\n==\nja\n===\nAufbau eines neuen Verschlüsselungssystems für Zeichnungen, Teile, Materialien, Stücklisten, Arbeitspläne in einem Maschinenbauunternehmen \n==\nja\n===\nPflegen von Kundenstammdaten für 50000 Kunden auf einer vorliegenden Vordrucksammlung  \n==\nnein\n===\nEvaluation einer IT-Anlage \n==\nja & nein\n===\nAbwicklung einer Fusion zweier Unternehmen \n==\nja \n===\nErweiterung der Gehaltsabrechnung um eine weitere Statistikauswertung \n==\nnein\n===\n||todo: ja&nein - fehler? ||",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "01_Grundlagen_B_001",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Verlegung des Tempels von Abu Simbel beim Bau des Assuanstaudamms",
+          "values": [
+            "ja"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Aufbau eines neuen Verschlüsselungssystems für Zeichnungen, Teile, Materialien, Stücklisten, Arbeitspläne in einem Maschinenbauunternehmen ",
+          "values": [
+            "ja"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Pflegen von Kundenstammdaten für 50000 Kunden auf einer vorliegenden Vordrucksammlung  ",
+          "values": [
+            "nein"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Evaluation einer IT-Anlage ",
+          "values": [
+            "ja & nein"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Abwicklung einer Fusion zweier Unternehmen ",
+          "values": [
+            "ja"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Erweiterung der Gehaltsabrechnung um eine weitere Statistikauswertung ",
+          "values": [
+            "nein"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136378"
+      ],
+      "instruction": "Handelt es sich bei den in der Tabelle erwähnten Vorhaben um Projekte? Begründen Sie Ihre Antwort."
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped]\n[@id:136379]\n[%01_Grundlagen_B_002]\n[!Ordnen Sie in der folgenden Tabelle die aufgeführten Merkmale jeweils dem Tagesgeschäft im Unternehmen oder einem Projekt zu.]\n===\nDynamisch \n==\nProjekt \n===\nKalkulierbare Kosten \n==\nTagesgeschäft \n===\nWenig Hierarchie \n==\nProjekt \n===\nDauerhaft \n==\nTagesgeschäft \n===\nEinmalig \n==\nProjekt \n===\nFunktions- oder stellenorientiert \n==\nTagesgeschäft \n===\n  \n||TODO:adapt instruction||",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "01_Grundlagen_B_002",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Dynamisch ",
+          "values": [
+            "Projekt"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Kalkulierbare Kosten ",
+          "values": [
+            "Tagesgeschäft"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Wenig Hierarchie ",
+          "values": [
+            "Projekt"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Dauerhaft ",
+          "values": [
+            "Tagesgeschäft"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Einmalig ",
+          "values": [
+            "Projekt"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Funktions- oder stellenorientiert ",
+          "values": [
+            "Tagesgeschäft"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136379"
+      ],
+      "instruction": "Ordnen Sie in der folgenden Tabelle die aufgeführten Merkmale jeweils dem Tagesgeschäft im Unternehmen oder einem Projekt zu."
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:136380]\n[%01_Grundlagen_B_003]\n[!Nennen Sie drei Elemente des Projektmanagements und beschreiben Sie diese in Stichworten.]\n===\nElement 1\n===\nElement 2\n===\nElement 3\n===\n[?Korrekte Lösung \nElemente des Projektmanagements und ihre Beschreibung \nZiele - Systemziele und Vorgehensziele \nProjektorganisation - Gestaltung der Aufbau- und Ablauforganisation \nProjektlenkung - Planung, Führung, Steuerung und Kontrolle der Projektaktivitäten \nInstrumente - Techniken der Systemgestaltung und des Projektmanagements \nMitarbeitende - Die am Projekt Beteiligten \nUnternehmenskultur - Gesamtheit der Wertvorstellungen, Leitmotive, Denkhaltungen und Normen in einer Organisation]",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "01_Grundlagen_B_003",
+      "instruction": "Nennen Sie drei Elemente des Projektmanagements und beschreiben Sie diese in Stichworten.",
+      "body": "",
+      "footer": "[?Korrekte Lösung \nElemente des Projektmanagements und ihre Beschreibung \nZiele - Systemziele und Vorgehensziele \nProjektorganisation - Gestaltung der Aufbau- und Ablauforganisation \nProjektlenkung - Planung, Führung, Steuerung und Kontrolle der Projektaktivitäten \nInstrumente - Techniken der Systemgestaltung und des Projektmanagements \nMitarbeitende - Die am Projekt Beteiligten \nUnternehmenskultur - Gesamtheit der Wertvorstellungen, Leitmotive, Denkhaltungen und Normen in einer Organisation]",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Element 1",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Element 2",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Element 3",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136380"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:136381]\n[%02_Projektdesign_004 ]\n[!Über welche expliziten und impliziten Kriterien wird der Projekterfolg beurteilt?][?Korrekte Lösung \n·\tExplizit: Erreichung der Plangrössen Qualität, Umfang (Ziele, Ergebnis), Aufwand (Kosten) und Zeit \n·\tImplizit: Zufriedenheit des Kunden und weiterer relevanter Stakeholder]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Über welche expliziten und impliziten Kriterien wird der Projekterfolg beurteilt?",
+      "partialAnswer": "",
+      "body": "",
+      "item": "02_Projektdesign_004",
+      "hint": "Korrekte Lösung \n·\tExplizit: Erreichung der Plangrössen Qualität, Umfang (Ziele, Ergebnis), Aufwand (Kosten) und Zeit \n·\tImplizit: Zufriedenheit des Kunden und weiterer relevanter Stakeholder",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136381"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:136382]\n[%02_Projektdesign_005]\n[!Vergleichen Sie das Wasserfallmodell mit dem Scrum-Modell. Nennen Sie fünf Entscheidungskriterien, die tendenziell für das eine oder das andere Modell sprechen.]\n===\n**Eher Wasserfallmodell** \n[? Ergebnisanforderungen bei Projektbeginn bekannt und klar \nLeistungsumfang ist klar wichtiger als Termin. \nProjektziele sind eher statisch. \nLieferung nur als gesamtes Projektergebnis möglich \nEher starke Hierarchien und organisatorische Vorgaben im Projekt und im Projektumfeld \nProjektergebnisse sind eher technischer Natur. \nÄnderungen an Projektergebnissen sind im Projektverlauf teuer. \nVorgegebene, eher formelle Kommunikationsanforderungen (Meetings, Entscheidungen, Berichte, Dokumente)]\n===\n**Eher Scrum-Modell** \n[? Anforderungen bei Projektbeginn vage und unscharf \nTermin ist klar wichtiger als Leistungsumfang. \nProjektziele sind eher dynamisch. \nLieferung von Teilergebnissen möglich (iterativer Ansatz) \nProjektteam kann sich weitgehend selbst organisieren. \nProjektergebnisse beziehen viele menschliche Interaktionen mit ein. \nÄnderungen an Projektergebnissen im Projektverlauf sind günstig bis mässig. \nEher informelle, strukturarme Kommunikationsanforderungen (Kommunikation orientiert sich primär entlang den Projektergebnissen)]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "02_Projektdesign_005",
+      "instruction": "Vergleichen Sie das Wasserfallmodell mit dem Scrum-Modell. Nennen Sie fünf Entscheidungskriterien, die tendenziell für das eine oder das andere Modell sprechen.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "**Eher Wasserfallmodell**",
+          "instruction": "",
+          "hint": "Ergebnisanforderungen bei Projektbeginn bekannt und klar \nLeistungsumfang ist klar wichtiger als Termin. \nProjektziele sind eher statisch. \nLieferung nur als gesamtes Projektergebnis möglich \nEher starke Hierarchien und organisatorische Vorgaben im Projekt und im Projektumfeld \nProjektergebnisse sind eher technischer Natur. \nÄnderungen an Projektergebnissen sind im Projektverlauf teuer. \nVorgegebene, eher formelle Kommunikationsanforderungen (Meetings, Entscheidungen, Berichte, Dokumente)",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Eher Scrum-Modell**",
+          "instruction": "",
+          "hint": "Anforderungen bei Projektbeginn vage und unscharf \nTermin ist klar wichtiger als Leistungsumfang. \nProjektziele sind eher dynamisch. \nLieferung von Teilergebnissen möglich (iterativer Ansatz) \nProjektteam kann sich weitgehend selbst organisieren. \nProjektergebnisse beziehen viele menschliche Interaktionen mit ein. \nÄnderungen an Projektergebnissen im Projektverlauf sind günstig bis mässig. \nEher informelle, strukturarme Kommunikationsanforderungen (Kommunikation orientiert sich primär entlang den Projektergebnissen)",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136382"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped]\n[@id:136383]\n[%07_Qualität_031 (Match)]\n[!Ordnen Sie folgende Massnahmen der Verifikation bzw. der Validierung zu.]\n===\nReviews mit dem Kunden zur Aufdeckung von Unklarheiten und irrtümlichen Annahmen \n==\nValidierung \n===\nInkrementelle Entwicklung für schnelles Kundenfeedback \n==\nValidierung \n===\nFormale Reviews von Konzept und Spezifikation \n==\nVerifikation \n===\nPermanente Anwesenheit des Kunden (Scrum / agile Methoden) \n==\nValidierung \n===\nFehlersuche durch Tests \n==\nVerifikation \n===\nLasttests \n==\nVerifikation \n===\nErstellen von Prototypen und Funktionsmustern \n==\nValidierung \n===\nNutzerakzeptanztests \n==\nValidierung \n===\n4-Augen-Prinzip \n==\nVerifikation \n===",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "07_Qualität_031 (Match)",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Reviews mit dem Kunden zur Aufdeckung von Unklarheiten und irrtümlichen Annahmen ",
+          "values": [
+            "Validierung"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Inkrementelle Entwicklung für schnelles Kundenfeedback ",
+          "values": [
+            "Validierung"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Formale Reviews von Konzept und Spezifikation ",
+          "values": [
+            "Verifikation"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Permanente Anwesenheit des Kunden (Scrum / agile Methoden) ",
+          "values": [
+            "Validierung"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Fehlersuche durch Tests ",
+          "values": [
+            "Verifikation"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Lasttests ",
+          "values": [
+            "Verifikation"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Erstellen von Prototypen und Funktionsmustern ",
+          "values": [
+            "Validierung"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Nutzerakzeptanztests ",
+          "values": [
+            "Validierung"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "4-Augen-Prinzip ",
+          "values": [
+            "Verifikation"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136383"
+      ],
+      "instruction": "Ordnen Sie folgende Massnahmen der Verifikation bzw. der Validierung zu."
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:136384]\n[%14_Change und Transformation_060 (Match) ]\n[!Welche drei Voraussetzungen müssen für Veränderungsprozesse gegeben sein?]\n===\n===\n[?Veränderungsbedarf, Veränderungsbereitschaft, Veränderungsfähigkeit]",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "14_Change und Transformation_060 (Match)",
+      "instruction": "Welche drei Voraussetzungen müssen für Veränderungsprozesse gegeben sein?",
+      "body": "",
+      "footer": "[?Veränderungsbedarf, Veränderungsbereitschaft, Veränderungsfähigkeit]",
+      "hint": "",
+      "questions": [],
+      "id": [
+        "136384"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false]\n[@id:136385]\n[%14_Change und Transformation_060]\n[!In der folgenden Tabelle sind einzelne Tätigkeiten aufgelistet, die einer Phase zugeordnet sind. \nBeurteilen Sie, ob die Phasen richtig oder falsch sind:]\n===\n[-Phase 3 / Personelle und finanzielle Ressourcen planen und priorisieren.]\n===\n[+Phase 1 / Promotoren identifizieren, evaluieren und mobilisieren]\n===\n[-Phase 4 / Prognosen erstellen]\n===\n[-Phase 4 / Prozessreview durchführen]\n===\n[-Phase 1 / Kritische Erfolgsfaktoren ableiten]\n===\n[+Phase 2 / Globalziele auf Teilziele herunterbrechen]\n===\n[+Phase 4 / Etappenziele auswerten]\n===\n[+Phase 1 / Betroffene Gruppen und Individuen ermitteln]\n===\n[-Phase 3 / Entscheiden, welche Massnahmen umgesetzt werden]\n===\n[-Phase 4 / Interne Betroffene gemäss dem Kommunikationskonzept informieren]\n===\n[+Phase 3 / Anreizsysteme schaffen]\n===\n[+Phase 5 / Veränderungsvorhaben abschliessen]\n===\n[-Phase 2 / Daten analysieren]\n===\n[+Phase 3 / Projektorganisation bilden]\n===\n[-Phase 4 / Beteiligte ausbilden]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "14_Change und Transformation_060",
+      "lead": "",
+      "instruction": "In der folgenden Tabelle sind einzelne Tätigkeiten aufgelistet, die einer Phase zugeordnet sind. \nBeurteilen Sie, ob die Phasen richtig oder falsch sind:",
+      "hint": "",
+      "labelTrue": "",
+      "labelFalse": "",
+      "statements": [
+        {
+          "statement": "Phase 3 / Personelle und finanzielle Ressourcen planen und priorisieren.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 1 / Promotoren identifizieren, evaluieren und mobilisieren",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 4 / Prognosen erstellen",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 4 / Prozessreview durchführen",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 1 / Kritische Erfolgsfaktoren ableiten",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 2 / Globalziele auf Teilziele herunterbrechen",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 4 / Etappenziele auswerten",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 1 / Betroffene Gruppen und Individuen ermitteln",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 3 / Entscheiden, welche Massnahmen umgesetzt werden",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 4 / Interne Betroffene gemäss dem Kommunikationskonzept informieren",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 3 / Anreizsysteme schaffen",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 5 / Veränderungsvorhaben abschliessen",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 2 / Daten analysieren",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 3 / Projektorganisation bilden",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Phase 4 / Beteiligte ausbilden",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136385"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false]\n[@id:136386]\n[%27_Compliance, Standards und Regulationen_106 (Auswahl)]\n[!Was versteht die Weltgesundheitsorganisation unter Gesundheit? – Kreuzen Sie die richtigen Antworten an.]\n===\n[+Gesundheit ist körperliches Wohlbefinden.]\n===\n[-Gesundheit ist sportlich sein.]\n===\n[-Gesundheit ist Leistungsfähigkeit.]\n===\n[+Gesundheit ist psychisches und soziales Wohlbefinden.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "27_Compliance, Standards und Regulationen_106 (Auswahl)",
+      "lead": "",
+      "instruction": "Was versteht die Weltgesundheitsorganisation unter Gesundheit? – Kreuzen Sie die richtigen Antworten an.",
+      "hint": "",
+      "labelTrue": "",
+      "labelFalse": "",
+      "statements": [
+        {
+          "statement": "Gesundheit ist körperliches Wohlbefinden.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Gesundheit ist sportlich sein.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Gesundheit ist Leistungsfähigkeit.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Gesundheit ist psychisches und soziales Wohlbefinden.",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136386"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false]\n[@id:136387]\n[%29_Kultur und Werte_112 (Auswahl)]\n[!Welche Aussagen über die Kultur einer Organisation sind richtig bzw. falsch?]\n===\n[-Die Kultur einer Organisation ist für das Projekt unwichtig, da Kultur eine Angelegenheit der Vergangenheit ist.]\n===\n[+Die Kultur einer Stammorganisation ist für das Projekt wichtig, denn das Projekt kann auf einen tief greifenden Wandel der Organisation zielen, der auch an der Kultur einer Organisation arbeitet.]\n===\n[-Die Kultur einer Organisation zeigt sich einzig und allein in den Symbolen einer Organisation (z. B. Logo).]\n===\n[+Die Kultur einer Organisation ist zum grössten Teil nicht sichtbar. Sie gibt sich in den Annahmen, Überzeugungen und der Wertorientierung der Organisationsmitglieder zu erkennen.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "29_Kultur und Werte_112 (Auswahl)",
+      "lead": "",
+      "instruction": "Welche Aussagen über die Kultur einer Organisation sind richtig bzw. falsch?",
+      "hint": "",
+      "labelTrue": "",
+      "labelFalse": "",
+      "statements": [
+        {
+          "statement": "Die Kultur einer Organisation ist für das Projekt unwichtig, da Kultur eine Angelegenheit der Vergangenheit ist.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Die Kultur einer Stammorganisation ist für das Projekt wichtig, denn das Projekt kann auf einen tief greifenden Wandel der Organisation zielen, der auch an der Kultur einer Organisation arbeitet.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Die Kultur einer Organisation zeigt sich einzig und allein in den Symbolen einer Organisation (z. B. Logo).",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Die Kultur einer Organisation ist zum grössten Teil nicht sichtbar. Sie gibt sich in den Annahmen, Überzeugungen und der Wertorientierung der Organisationsmitglieder zu erkennen.",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136387"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:136388]\n[%02_Projektdesign_007 (Freitext) ]\n[!Die Projektkomplexität beeinflusst die Wahl des Projektmanagement-Ansatzes. Notieren Sie jeweils zwei Beispiele zu den unten aufgeführten Dimensionen, die die Komplexität im Projekt erhöhen.]\n===\nProjektteam \n[? ·\tGrosse Teams \n·\tKulturell oder ethnisch durchmischte Teams \n·\tGeografisch verteilte Teams]\n===\nProjektziel \n[? ·\tSehr dynamische Projektziele (Moving Target) \n·\tUnklare Projektziele \n·\tRelevante Stakeholder mit entgegengesetzten Zielsetzungen]\n===\nProjektumfeld \n[? ·\tUnklares, nicht analysiertes Projektumfeld \n·\tInstabilität (Unternehmenswandel, Politik) \n·\tViele Stakeholder(-Gruppen)]\n===\nProjektrisiken \n[? ·\tViele Risiken und hohe Risikopotenziale \n·\tViele Risiken mit Auswirkung in unterschiedlichen Dimensionen(z. B. Zeit, Kosten, Ressourcen, Ziele, Qualität) \n·\tProjekte mit vielen Teilprojekten in unterschiedlichen Phasen]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "02_Projektdesign_007 (Freitext)",
+      "instruction": "Die Projektkomplexität beeinflusst die Wahl des Projektmanagement-Ansatzes. Notieren Sie jeweils zwei Beispiele zu den unten aufgeführten Dimensionen, die die Komplexität im Projekt erhöhen.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Projektteam",
+          "instruction": "",
+          "hint": "·\tGrosse Teams \n·\tKulturell oder ethnisch durchmischte Teams \n·\tGeografisch verteilte Teams",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Projektziel",
+          "instruction": "",
+          "hint": "·\tSehr dynamische Projektziele (Moving Target) \n·\tUnklare Projektziele \n·\tRelevante Stakeholder mit entgegengesetzten Zielsetzungen",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Projektumfeld",
+          "instruction": "",
+          "hint": "·\tUnklares, nicht analysiertes Projektumfeld \n·\tInstabilität (Unternehmenswandel, Politik) \n·\tViele Stakeholder(-Gruppen)",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Projektrisiken",
+          "instruction": "",
+          "hint": "·\tViele Risiken und hohe Risikopotenziale \n·\tViele Risiken mit Auswirkung in unterschiedlichen Dimensionen(z. B. Zeit, Kosten, Ressourcen, Ziele, Qualität) \n·\tProjekte mit vielen Teilprojekten in unterschiedlichen Phasen",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136388"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:136389]\n[%04_Leistungsumfang und Lieferobjekte_015 ]\n[!Bei der Behandlung des Projektstrukturplans haben wir zwei Regeln kennengelernt. Notieren Sie in der Tabelle, was man darunter versteht]\n===\nVom Groben zum Detail[@shortAnswer]\n[?Es werden zunächst die Teilaufgaben, dann die Arbeitspakete für jede Teilaufgabe ermittelt.]\n===\nImmer zuerst in die Breite[@shortAnswer]\n[?Es muss jede Ebene vollständig ausgearbeitet sein, bevor die nächste Ebene bearbeitet wird.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "04_Leistungsumfang und Lieferobjekte_015",
+      "instruction": "Bei der Behandlung des Projektstrukturplans haben wir zwei Regeln kennengelernt. Notieren Sie in der Tabelle, was man darunter versteht",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Vom Groben zum Detail",
+          "instruction": "",
+          "hint": "Es werden zunächst die Teilaufgaben, dann die Arbeitspakete für jede Teilaufgabe ermittelt.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Immer zuerst in die Breite",
+          "instruction": "",
+          "hint": "Es muss jede Ebene vollständig ausgearbeitet sein, bevor die nächste Ebene bearbeitet wird.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136389"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:136390]\n[%04_Leistungsumfang und Lieferobjekte_B_017 (Freitext)]\n[!Erklären Sie den aufgabenorientierten oder phasenorientierten Projektstrukturplan in eigenen Worten. Zeichnen Sie dazu ein Beispiel für ein Projekt «Online-Shop aufbauen». Verwenden Sie dafür als oberste Struktureinheiten die Phasen «Konzeption», «Realisierung», «Start» und «Weiterentwicklung».][?Korrekte Lösung \nBeim aufgaben- oder phasenorientierten Projektstrukturplan werden die Arbeitspakete nach Aufgaben bzw. Phasen aufgeteilt. Die Frage «Was muss alles getan werden?» steht im Vordergrund. Der aufgabenorientierte Strukturplan zum Projekt «Online-Shop aufbauen» könnte so aussehen: \nOnline-Shop aufbauen \nKonzeption \nAufbau konzipieren \nText erstellen \nBilder erstellen \nWerbung konzipieren \nZahlsystem konzipieren \n  \nRealisierung \nShopsystem wählen \nSicherheit gewähren \nTemplate wählen \nInhalte umsetzen \nZahlsystem umsetzen \n  \nStart \nShop freischalten \nShop testen \nWerbung platzieren \n   \nWeiterentwicklung \nErfolg analysieren \nMassnahmen festlegen]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Erklären Sie den aufgabenorientierten oder phasenorientierten Projektstrukturplan in eigenen Worten. Zeichnen Sie dazu ein Beispiel für ein Projekt «Online-Shop aufbauen». Verwenden Sie dafür als oberste Struktureinheiten die Phasen «Konzeption», «Realisierung», «Start» und «Weiterentwicklung».",
+      "partialAnswer": "",
+      "body": "",
+      "item": "04_Leistungsumfang und Lieferobjekte_B_017 (Freitext)",
+      "hint": "Korrekte Lösung \nBeim aufgaben- oder phasenorientierten Projektstrukturplan werden die Arbeitspakete nach Aufgaben bzw. Phasen aufgeteilt. Die Frage «Was muss alles getan werden?» steht im Vordergrund. Der aufgabenorientierte Strukturplan zum Projekt «Online-Shop aufbauen» könnte so aussehen: \nOnline-Shop aufbauen \nKonzeption \nAufbau konzipieren \nText erstellen \nBilder erstellen \nWerbung konzipieren \nZahlsystem konzipieren \n  \nRealisierung \nShopsystem wählen \nSicherheit gewähren \nTemplate wählen \nInhalte umsetzen \nZahlsystem umsetzen \n  \nStart \nShop freischalten \nShop testen \nWerbung platzieren \n   \nWeiterentwicklung \nErfolg analysieren \nMassnahmen festlegen",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136390"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay&image]\n[@id:136391]\n[%05_Ablauf und Termine_022 (Freitext) ]\n[!Berechnen Sie aufgrund des folgenden Projektablaufplans die Projektdauer in Monaten. \nHinweis: In den Spalten «Vorgänger» und «Nachfolger» ist jeweils nur eine Nummer aufgeführt.][?Korrekte Lösung \n18 Monate. (Hinweis: Für die Berechnung kann das Zeichnen eines Gantt-Diagramms hilfreich sein.)]\n[&image:https://docs.bitbook.education/bit-books/compendio/schubert_erkundungen_c1/web-resources/cover/compendio_uebungen/web_resources/images/05_ablauf_und_termine_022.png]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Berechnen Sie aufgrund des folgenden Projektablaufplans die Projektdauer in Monaten. \nHinweis: In den Spalten «Vorgänger» und «Nachfolger» ist jeweils nur eine Nummer aufgeführt.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "05_Ablauf und Termine_022 (Freitext)",
+      "hint": "Korrekte Lösung \n18 Monate. (Hinweis: Für die Berechnung kann das Zeichnen eines Gantt-Diagramms hilfreich sein.)",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136391"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/compendio/schubert_erkundungen_c1/web-resources/cover/compendio_uebungen/web_resources/images/05_ablauf_und_termine_022.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:136392]\n[%05_Ablauf und Termine_023 (Freitext) ]\n[!Ordnen Sie die folgenden Aufgaben den einzelnen Projektphasen zu.]\nA] Stakeholder-Analyse \nB] Erstellen eines Projektstrukturplans \nC] Projektführung \nD] Machbarkeitsanalyse \nE] Projektabschlussbericht \nF] Erstellen eines Aufwandsplans \nG] Auflösung der Projektorganisation \nH] Controlling \n  \n**Projektphase** \nInitialisierung [_a][_A] [_d][_D]\nPlanung [_b][_B] [_f][_F]\nRealisierung [_c][_C] [_h][_H]\nAbschluss [_e][_E] [_g][_G]\n  \n||TODO: should the number of possible answer appear? are they interchangable?||",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Controlling \n  \n**Projektphase** \nInitialisierung {0} {1}\nPlanung {2} {3}\nRealisierung {4} {5}\nAbschluss {6} {7}",
+      "item": "05_Ablauf und Termine_023 (Freitext)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136392"
+      ],
+      "instruction": "Ordnen Sie die folgenden Aufgaben den einzelnen Projektphasen zu.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a",
+            "A"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "d",
+            "D"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "b",
+            "B"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "f",
+            "F"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "c",
+            "C"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "h",
+            "H"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e",
+            "E"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "g",
+            "G"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:136393]\n[%06_Organisation, Information und Dokumentation_026 (Freitext)]\n[!Sie haben verschiedene Formen der Projektorganisation kennengelernt. Notieren Sie in der Tabelle je den grössten Vor- und Nachteil der einzelnen Formen aus Ihrer Sicht als Projektleiter.]\n===\n**Reine Projektorganisation** \nGrösster Vorteil [@shortAnswer]\n[?Besseres Know-how im Projekt bezüglich Umsetzung, Kommunikation, Konfliktlösung und Entscheidungsfindung]\n===\nGrösster Nachteil [@shortAnswer]\n[? Abteilungsübergreifende Fachkenntnisse fehlen]\n===\n**Stabsorganisation** \nGrösster Vorteil [@shortAnswer]\n[? Integration der Linie fördert zielorientiertes und hilfreiches Arbeitsumfeld]\n===\nGrösster Nachteil [@shortAnswer]\n[? Fehlende Unterstützung für das Projekt aus der Linienhierarchie]\n===\n**Matrix-Projektorganisation** \nGrösster Vorteil [@shortAnswer]\n[? Einbindung der Linie erhöht die Zustimmung für Projektmitarbeit]\n===\nGrösster Nachteil [@shortAnswer]\n[? Doppelunterstellung schafft Koordinations- und Weisungskonflikte]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "06_Organisation, Information und Dokumentation_026 (Freitext)",
+      "instruction": "Sie haben verschiedene Formen der Projektorganisation kennengelernt. Notieren Sie in der Tabelle je den grössten Vor- und Nachteil der einzelnen Formen aus Ihrer Sicht als Projektleiter.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "**Reine Projektorganisation** \nGrösster Vorteil",
+          "instruction": "",
+          "hint": "Besseres Know-how im Projekt bezüglich Umsetzung, Kommunikation, Konfliktlösung und Entscheidungsfindung",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Grösster Nachteil",
+          "instruction": "",
+          "hint": "Abteilungsübergreifende Fachkenntnisse fehlen",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Stabsorganisation** \nGrösster Vorteil",
+          "instruction": "",
+          "hint": "Integration der Linie fördert zielorientiertes und hilfreiches Arbeitsumfeld",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Grösster Nachteil",
+          "instruction": "",
+          "hint": "Fehlende Unterstützung für das Projekt aus der Linienhierarchie",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Matrix-Projektorganisation** \nGrösster Vorteil",
+          "instruction": "",
+          "hint": "Einbindung der Linie erhöht die Zustimmung für Projektmitarbeit",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Grösster Nachteil",
+          "instruction": "",
+          "hint": "Doppelunterstellung schafft Koordinations- und Weisungskonflikte",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136393"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:136394]\n[%06_Organisation, Information und Dokumentation_027 (Freitext)]\n[!Nennen Sie die wichtigsten drei Aufgaben des Auftraggebers eines Projekts. Begründen Sie Ihre Antwort.][?Korrekte Lösung \nAufgaben des Auftraggebers eines Projekts: \nWichtigste Aufgaben - Begründung \nProjekt beantragen,initiieren und steuern - Der Auftraggeber ist für das Erreichen der Projektziele und das Projektergebnis abschliessend verantwortlich. Damit er diese Verantwortung wahrnehmen kann, muss er ein Projekt erst mal bei den relevanten Entscheidern beantragen und seine Vorstellung sowie seine Anforderungen für die Ziele bzw. das Ergebnis einbringen. Im Projektverlauf sichert der Auftraggeber den Projekterfolg mit der übergeordneten Steuerung. \nWirtschaftliche Rahmenbedingungen und Voraussetzungen sicherstellen - Der Auftraggeber schafft damit die Voraussetzung, dass die Projektziele wie vereinbart verfolgt und das erwartete Projektergebnis gemäss den Anforderungen erstellt werden kann. \nEntscheidungen über Anträge und Massnahmen rechtzeitig fällen - Der Auftraggeber stellt damit sicher, dass das Projekt zielgerichtet und zügig vorankommt.]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Nennen Sie die wichtigsten drei Aufgaben des Auftraggebers eines Projekts. Begründen Sie Ihre Antwort.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "06_Organisation, Information und Dokumentation_027 (Freitext)",
+      "hint": "Korrekte Lösung \nAufgaben des Auftraggebers eines Projekts: \nWichtigste Aufgaben - Begründung \nProjekt beantragen,initiieren und steuern - Der Auftraggeber ist für das Erreichen der Projektziele und das Projektergebnis abschliessend verantwortlich. Damit er diese Verantwortung wahrnehmen kann, muss er ein Projekt erst mal bei den relevanten Entscheidern beantragen und seine Vorstellung sowie seine Anforderungen für die Ziele bzw. das Ergebnis einbringen. Im Projektverlauf sichert der Auftraggeber den Projekterfolg mit der übergeordneten Steuerung. \nWirtschaftliche Rahmenbedingungen und Voraussetzungen sicherstellen - Der Auftraggeber schafft damit die Voraussetzung, dass die Projektziele wie vereinbart verfolgt und das erwartete Projektergebnis gemäss den Anforderungen erstellt werden kann. \nEntscheidungen über Anträge und Massnahmen rechtzeitig fällen - Der Auftraggeber stellt damit sicher, dass das Projekt zielgerichtet und zügig vorankommt.",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136394"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:136395]\n[%06_Organisation, Information und Dokumentation_028 (Freitext)]\n[!Ordnen Sie die folgenden Begriffe den Erklärungen in der Tabelle zu. Notieren Sie nur den entsprechenden Buchstaben.]\nA] Fachausschuss \nB] Reine Projektorganisation \nC] Lenkungsausschuss \nD] Begleitgruppe \nE] Stabsorganisation \nF] Matrix-Projektorganisation \n  \nErklärung \nOrganisationsform, bei der die Stammorganisation bestehen bleibt und nur durch eine projektleitende Stabsstelle ergänzt wird [_e][_E]\n\nOrganisationsform mit eigenständiger Linienorganisation für ein Projekt [_b]\nOrganisationsform, bei der sowohl eine vertikal, nach Funktionen gegliederte Organisationsstruktur als auch eine horizontal wirkende und projektbezogene Organisationsstruktur besteht [_f]\nGremium, das sich insbesondere bei vielen Stakeholder-Gruppen mit dem Projekt auseinandersetzt und Feedback gibt [_d]\nGremium, das bei grösseren Projekten den Auftraggeber bei Entscheidungen unterstützt [_c]\nGremium, das das Projektteam informiert, unterstützt und fachlich berät [_a]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Matrix-Projektorganisation \n  \nErklärung \nOrganisationsform, bei der die Stammorganisation bestehen bleibt und nur durch eine projektleitende Stabsstelle ergänzt wird {0}\n\nOrganisationsform mit eigenständiger Linienorganisation für ein Projekt {1}\nOrganisationsform, bei der sowohl eine vertikal, nach Funktionen gegliederte Organisationsstruktur als auch eine horizontal wirkende und projektbezogene Organisationsstruktur besteht {2}\nGremium, das sich insbesondere bei vielen Stakeholder-Gruppen mit dem Projekt auseinandersetzt und Feedback gibt {3}\nGremium, das bei grösseren Projekten den Auftraggeber bei Entscheidungen unterstützt {4}\nGremium, das das Projektteam informiert, unterstützt und fachlich berät {5}",
+      "item": "06_Organisation, Information und Dokumentation_028 (Freitext)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136395"
+      ],
+      "instruction": "Ordnen Sie die folgenden Begriffe den Erklärungen in der Tabelle zu. Notieren Sie nur den entsprechenden Buchstaben.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e",
+            "E"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "b"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "f"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "d"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "c"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:136396]\n[%08_Kosten und Finanzierung_034 (Freitext) ]\n[!Nennen Sie zu den Finanzierungsarten Beispiele zu möglichen Quellen.]\n**Finanzierungsart** \n===\nInterne Finanzierung[@shortAnswer]\n[? Innerbetrieblicher Umsatz, Auflösung von Gewinnrücklagen oder stillen Reserven]\n===\nExterne Finanzierung[@shortAnswer]\n[? Zuführung von Kapital von Unternehmern und Aktionären, Kredite, Beteiligungen]\n===\nÖffentliche Finanzierung[@shortAnswer]\n[? Zweckgebundene Fördergelder, Bürgschaften, öffentliche Beteiligungsgesellschaften]\n===\nGruppenfinanzierung[@shortAnswer]\n[? Zuführung von Kapital in Form von Darlehen oder stillen Beteiligungen]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "08_Kosten und Finanzierung_034 (Freitext)",
+      "instruction": "Nennen Sie zu den Finanzierungsarten Beispiele zu möglichen Quellen.",
+      "body": "**Finanzierungsart**",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Interne Finanzierung",
+          "instruction": "",
+          "hint": "Innerbetrieblicher Umsatz, Auflösung von Gewinnrücklagen oder stillen Reserven",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Externe Finanzierung",
+          "instruction": "",
+          "hint": "Zuführung von Kapital von Unternehmern und Aktionären, Kredite, Beteiligungen",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Öffentliche Finanzierung",
+          "instruction": "",
+          "hint": "Zweckgebundene Fördergelder, Bürgschaften, öffentliche Beteiligungsgesellschaften",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Gruppenfinanzierung",
+          "instruction": "",
+          "hint": "Zuführung von Kapital in Form von Darlehen oder stillen Beteiligungen",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136396"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:136397]\n[%09_Ressourcen_037 (Freitext)]\n[!Was können Vor- und Nachteile beim Einsatz von internen oder externen Personalressourcen sein? Nennen Sie jeweils zwei Vor- und Nachteile.]\n  \n**Personalressourcen** \n  \n__Interne__ \n===\nVorteile \n[@shortAnswer]\n[? ·\tMitarbeitende sind mit dem Unternehmen vertrauter. \n·\tKürzere Einarbeitungszeit. \n·\tProjektarbeit als Training on the Job.]\n===\nNachteile [@shortAnswer]\n[? ·\tBei veränderungsintensiven Projekten können interne Beziehungen zu Loyalitätskonflikten führen. \n·\tNach langer Projektarbeit ist die Reintegration \n·\tin die Linie erschwert, d. h., Entwicklungspfade müssen geklärt werden.]\n===\n \n__Externe__ \n  \nVorteile \n[@shortAnswer]\n[? ·\tExperten in spezifischen Themen. \n·\tKeine Betriebsblindheit. \n·\tBringt Erfahrungen aus verschiedenen Projekten bzw. Organisationen ein. \n·\tZeitlich befristeter Vertrag]\n===\nNachteile [@shortAnswer]\n[? ·\tVerzögert sich das Projekt, kann es zu vertraglichen \nFriktionen kommen. \n·\tVon den Erfahrungen im Projektmanagement, \ndie während des Projekts gemacht werden, profitieren nach dem Einsatz andere \nUnternehmen.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "09_Ressourcen_037 (Freitext)",
+      "instruction": "Was können Vor- und Nachteile beim Einsatz von internen oder externen Personalressourcen sein? Nennen Sie jeweils zwei Vor- und Nachteile.",
+      "body": "**Personalressourcen** \n  \n__Interne__ \n\n \n__Externe__ \n  \nVorteile \n[@shortAnswer]\n[? ·\tExperten in spezifischen Themen. \n·\tKeine Betriebsblindheit. \n·\tBringt Erfahrungen aus verschiedenen Projekten bzw. Organisationen ein. \n·\tZeitlich befristeter Vertrag]Nachteile [@shortAnswer]\n[? ·\tVerzögert sich das Projekt, kann es zu vertraglichen \nFriktionen kommen. \n·\tVon den Erfahrungen im Projektmanagement, \ndie während des Projekts gemacht werden, profitieren nach dem Einsatz andere \nUnternehmen.]",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Vorteile",
+          "instruction": "",
+          "hint": "·\tMitarbeitende sind mit dem Unternehmen vertrauter. \n·\tKürzere Einarbeitungszeit. \n·\tProjektarbeit als Training on the Job.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Nachteile",
+          "instruction": "",
+          "hint": "·\tBei veränderungsintensiven Projekten können interne Beziehungen zu Loyalitätskonflikten führen. \n·\tNach langer Projektarbeit ist die Reintegration \n·\tin die Linie erschwert, d. h., Entwicklungspfade müssen geklärt werden.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136397"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '__Externe__ '",
+        "line": 22,
+        "column": 0,
+        "errorLine": "__Externe__ "
+      },
+      {
+        "message": "Unexpected input '  '",
+        "line": 23,
+        "column": 0,
+        "errorLine": "  "
+      },
+      {
+        "message": "Unexpected input 'Vorteile '",
+        "line": 24,
+        "column": 0,
+        "errorLine": "Vorteile "
+      },
+      {
+        "message": "Unexpected input '[@shortAnswer]'",
+        "line": 25,
+        "column": 0,
+        "errorLine": "[@shortAnswer]"
+      },
+      {
+        "message": "Unexpected input '[? '",
+        "line": 26,
+        "column": 0,
+        "errorLine": "[? ·\tExperten in spezifischen Themen. "
+      },
+      {
+        "message": "Unexpected input '·\\tKeine Betriebsblindheit. '",
+        "line": 27,
+        "column": 0,
+        "errorLine": "·\tKeine Betriebsblindheit. "
+      },
+      {
+        "message": "Unexpected input '·\\tBringt Erfahrungen aus verschiedenen Projekten bzw. Organisationen ein. '",
+        "line": 28,
+        "column": 0,
+        "errorLine": "·\tBringt Erfahrungen aus verschiedenen Projekten bzw. Organisationen ein. "
+      },
+      {
+        "message": "Unexpected input '·\\tZeitlich befristeter Vertrag'",
+        "line": 29,
+        "column": 0,
+        "errorLine": "·\tZeitlich befristeter Vertrag]"
+      },
+      {
+        "message": "Unexpected input '[? '",
+        "line": 32,
+        "column": 0,
+        "errorLine": "[? ·\tVerzögert sich das Projekt, kann es zu vertraglichen "
+      },
+      {
+        "message": "Unexpected input 'Friktionen kommen. '",
+        "line": 33,
+        "column": 0,
+        "errorLine": "Friktionen kommen. "
+      },
+      {
+        "message": "Unexpected input '·\\tVon den Erfahrungen im Projektmanagement, '",
+        "line": 34,
+        "column": 0,
+        "errorLine": "·\tVon den Erfahrungen im Projektmanagement, "
+      },
+      {
+        "message": "Unexpected input 'die während des Projekts gemacht werden, profitieren nach dem Einsatz andere '",
+        "line": 35,
+        "column": 0,
+        "errorLine": "die während des Projekts gemacht werden, profitieren nach dem Einsatz andere "
+      },
+      {
+        "message": "Unexpected input 'Unternehmen.'",
+        "line": 36,
+        "column": 0,
+        "errorLine": "Unternehmen.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:136398]\n[%11_Planung und Steuerung_044 (Freitext)]\n[!Nennen Sie pro unten aufgeführte Dimension eine grafische Darstellung, die Sie für Ihren guten Projektbericht integrieren würden.]\n**Dimension** - **Grafische Darstellung** \nTermin - [_Meilensteintrend-Grafik]\nKosten - [_Earned-Value-Grafik][_Relative Slip Chart]\nFortschritt - [_Earned-Value-Grafik][_Burn-Down-Grafik]\nRessourcen - [_Kapazitäts-Diagramm]\nRisiken - [_Risikomatrix-Grafik][_Risikoklassen-Grafik][_Risikotrend-Grafik]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**Dimension** - **Grafische Darstellung** \nTermin - {0}\nKosten - {1}\nFortschritt - {2}\nRessourcen - {3}\nRisiken - {4}",
+      "item": "11_Planung und Steuerung_044 (Freitext)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136398"
+      ],
+      "instruction": "Nennen Sie pro unten aufgeführte Dimension eine grafische Darstellung, die Sie für Ihren guten Projektbericht integrieren würden.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Meilensteintrend-Grafik"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Earned-Value-Grafik",
+            "Relative Slip Chart"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Earned-Value-Grafik",
+            "Burn-Down-Grafik"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kapazitäts-Diagramm"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Risikomatrix-Grafik",
+            "Risikoklassen-Grafik",
+            "Risikotrend-Grafik"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:136399]\n[%11_Planung und Steuerung_048 (Freitext)]\nEin Projekt meldet folgende Zahlen: \n   \nGesamtbudget (Budget at Completion, BAC)    1 000 000 CHF \nPlan-Kosten (Planned Value, PV)    500 000 CHF \nEarned Value (EV)    400 000 CHF \nIst-Aufwand (Actual Cost, AC)    550 000 CHF \nProjektdauer\t12 Monate \n   \n[!Berechnen und kommentieren Sie unten stehende Kennzahlen:]\n===\n**Terminabweichung: SV** \nBerechnung\n===\nFeststellung[@shortAnswer]\n[?Das Projekt liegt aktuell hinter dem Plan.]\n===\n  \n**Kostenabweichung: CV** \nBerechnung \n===\nFeststellung[@shortAnswer]\n[?Das Projekt hat aktuell das Budget überzogen.]\n===\n  \n**Geschätzte Kosten bei Fertigstellung: EAC** \nBerechnung \n===\nFeststellung[@shortAnswer]\n[?Wenn es so weitergeht, wird das Projekt teurer werden.]\n===\n  \n**Geschätzte Kostenabweichung Projektabschluss: VAC** \nBerechnung \n===\nFeststellung[@shortAnswer]\n[?Wenn es so weitergeht, wird das Projekt teurer werden.]\n===\n  \n**Kosteneffizienz: CPI** \nBerechnung \n===\nFeststellung[@shortAnswer]\n[?Wenn es so weitergeht, wird das Projekt teurer werden.]\n===\n**Zeiteffizienz: SPI** \nBerechnung \n===\nFeststellung[@shortAnswer]\n[?Wenn es so weitergeht, wird das Projekt länger dauern.]\n===\n**Geschätzte Gesamtdauer: ETAC** \nBerechnung \n===\nFeststellung[@shortAnswer]\n[?Wenn es so weitergeht, wird das Projekt länger dauern.]\n===\n**Benötigte Kosteneffizienz: TCPI** \nBerechnung \n===\nFeststellung[@shortAnswer]\n[?Um das Projektbudget einzuhalten, brauchte es eine 33%ige Effizienzsteigerung.]\n===\n  \n||TODO: add the results of the calculations||",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "11_Planung und Steuerung_048 (Freitext)",
+      "instruction": "Berechnen und kommentieren Sie unten stehende Kennzahlen:",
+      "body": "Ein Projekt meldet folgende Zahlen:    Gesamtbudget (Budget at Completion, BAC)    1 000 000 CHF Plan-Kosten (Planned Value, PV)    500 000 CHF Earned Value (EV)    400 000 CHF Ist-Aufwand (Actual Cost, AC)    550 000 CHF \nProjektdauer\t12 Monate",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "**Terminabweichung: SV** \nBerechnung",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Feststellung",
+          "instruction": "",
+          "hint": "Das Projekt liegt aktuell hinter dem Plan.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Kostenabweichung: CV** \nBerechnung",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Feststellung",
+          "instruction": "",
+          "hint": "Das Projekt hat aktuell das Budget überzogen.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Geschätzte Kosten bei Fertigstellung: EAC** \nBerechnung",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Feststellung",
+          "instruction": "",
+          "hint": "Wenn es so weitergeht, wird das Projekt teurer werden.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Geschätzte Kostenabweichung Projektabschluss: VAC** \nBerechnung",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Feststellung",
+          "instruction": "",
+          "hint": "Wenn es so weitergeht, wird das Projekt teurer werden.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Kosteneffizienz: CPI** \nBerechnung",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Feststellung",
+          "instruction": "",
+          "hint": "Wenn es so weitergeht, wird das Projekt teurer werden.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Zeiteffizienz: SPI** \nBerechnung",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Feststellung",
+          "instruction": "",
+          "hint": "Wenn es so weitergeht, wird das Projekt länger dauern.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Geschätzte Gesamtdauer: ETAC** \nBerechnung",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Feststellung",
+          "instruction": "",
+          "hint": "Wenn es so weitergeht, wird das Projekt länger dauern.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Benötigte Kosteneffizienz: TCPI** \nBerechnung",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Feststellung",
+          "instruction": "",
+          "hint": "Um das Projektbudget einzuhalten, brauchte es eine 33%ige Effizienzsteigerung.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136399"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze]\n[@id:136400]\n[%12_Chancen und Risiken_053 ]\n- W & G/S & Strategie \n[!Bewerten Sie die unten aufgeführten Chancen und Risiken. Notieren Sie zusätzlich die von Ihnen vorgeschlagenen Strategien und Massnahmen pro Chance bzw. Risiko.]\nSkala für Wahrscheinlichkeit (W): 1=sehr unwahrscheinlich, 2=unwahrscheinlich, \n3=wenig wahrscheinlich, 4=ziemlich wahrscheinlich, 5=sehr wahrscheinlich \nSkala für Gewinn / Schaden (G / S): 1=unbedeutend, 2=spürbar, 3=beträchtlich, 4=hoch, 5=sehr hoch \n  \nEin Schlüsselmitarbeiter im Projektteam ist begeisterter Bungee-Jumper.  \nW [_3] G/S [_2] Strategie [_Mindern]\n  \nDer Auftraggeber hat erst vage Vorstellungen, wie das Softwareprojektergebnis aussehen soll. \nW [_5] G/S [_3] Strategie [_Mindern]\n  \nProjekt erkennt im Rahmen der Analyse einen massgeblichen Mehrnutzen, wenn der Projektscope entsprechend erweitert wird. \nW [_4] G/S [_4] Strategie [_Ergreifen]\n  \nDem Projektteam fehlt es an Know-how für das Erarbeiten eines spezifischen Teilergebnisses. \nW [_4] G/S [_4] Strategie [_Verlagern]\n  \nIn der Schweiz soll eine weitere bedeutende Skirenndestination aufgebaut werden. Dazu muss eine neue Infrastruktur aufgebaut werden. Der wirtschaftliche Nutzen für die Region ist gross, aber auch sehr wetterabhängig. \nW [_4] G/S [_5] Strategie [_Versichern]\n  \nEin junger Projektleiter erhält die Chance, ein grösseres Entwicklungsprojekt zu übernehmen. \nW [_4] G/S [_3] Strategie [_Mindern]\n  \nWegen eines Strategiewechsels im Unternehmen droht einem Projekt der Projektabbruch. \nW [_4] G/S [_5] Strategie [_Mindern][_akzeptieren]\n  \nDem Projektsponsor könnten die Gelder zur Finanzierung des Projekts ausgehen. \nW [_2] G/S [_5] Strategie [_Akzeptieren]\n||TODO: adapt instructions||",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "- W & G/S & Strategie \n\nSkala für Wahrscheinlichkeit (W): 1=sehr unwahrscheinlich, 2=unwahrscheinlich, \n3=wenig wahrscheinlich, 4=ziemlich wahrscheinlich, 5=sehr wahrscheinlich \nSkala für Gewinn / Schaden (G / S): 1=unbedeutend, 2=spürbar, 3=beträchtlich, 4=hoch, 5=sehr hoch \n  \nEin Schlüsselmitarbeiter im Projektteam ist begeisterter Bungee-Jumper.  \nW {0} G/S {1} Strategie {2}\n  \nDer Auftraggeber hat erst vage Vorstellungen, wie das Softwareprojektergebnis aussehen soll. \nW {3} G/S {4} Strategie {5}\n  \nProjekt erkennt im Rahmen der Analyse einen massgeblichen Mehrnutzen, wenn der Projektscope entsprechend erweitert wird. \nW {6} G/S {7} Strategie {8}\n  \nDem Projektteam fehlt es an Know-how für das Erarbeiten eines spezifischen Teilergebnisses. \nW {9} G/S {10} Strategie {11}\n  \nIn der Schweiz soll eine weitere bedeutende Skirenndestination aufgebaut werden. Dazu muss eine neue Infrastruktur aufgebaut werden. Der wirtschaftliche Nutzen für die Region ist gross, aber auch sehr wetterabhängig. \nW {12} G/S {13} Strategie {14}\n  \nEin junger Projektleiter erhält die Chance, ein grösseres Entwicklungsprojekt zu übernehmen. \nW {15} G/S {16} Strategie {17}\n  \nWegen eines Strategiewechsels im Unternehmen droht einem Projekt der Projektabbruch. \nW {18} G/S {19} Strategie {20}\n  \nDem Projektsponsor könnten die Gelder zur Finanzierung des Projekts ausgehen. \nW {21} G/S {22} Strategie {23}",
+      "item": "12_Chancen und Risiken_053",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136400"
+      ],
+      "instruction": "Bewerten Sie die unten aufgeführten Chancen und Risiken. Notieren Sie zusätzlich die von Ihnen vorgeschlagenen Strategien und Massnahmen pro Chance bzw. Risiko.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "3"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "2"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Mindern"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "5"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "3"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Mindern"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Ergreifen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Verlagern"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "5"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Versichern"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{15}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{16}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "3"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{17}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Mindern"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{18}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{19}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "5"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{20}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Mindern",
+            "akzeptieren"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{21}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "2"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{22}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "5"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{23}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Akzeptieren"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:136401]\n[%12_Chancen und Risiken_053 ]\n[!Bewerten Sie die unten aufgeführten Chancen und Risiken. Notieren Sie zusätzlich die von Ihnen vorgeschlagenen Strategien und Massnahmen pro Chance bzw. Risiko.]\n===\nEin Schlüsselmitarbeiter im Projektteam ist begeisterter Bungee-Jumper. [@shortAnswer][?Wissensaufbau bei einem zweiten Mitarbeiter]\n===\nDer Auftraggeber hat erst vage Vorstellungen, wie das Softwareprojektergebnis aussehen soll.[@shortAnswer][?Agiles Vorgehen wählen.]\n===\nProjekt erkennt im Rahmen der Analyse einen massgeblichen Mehrnutzen, wenn der Projektscope entsprechend erweitert wird.[@shortAnswer][?Dem Auftraggeber Scope- Erweiterung inkl. Mehrnutzen aufzeigen und Änderung beantragen.]\n===\nDem Projektteam fehlt es an Know-how für das Erarbeiten eines spezifischen Teilergebnisses[@shortAnswer][?Erarbeitung des Teilergebnisses an geeigneten Unterlieferanten auslagern.]\n===\nIn der Schweiz soll eine weitere bedeutende Skirenndestination aufgebaut werden. Dazu muss eine neue Infrastruktur aufgebaut werden. Der wirtschaftliche Nutzen für die Region ist gross, aber auch sehr wetterabhängig.[@shortAnswer][?Wetterversicherung abschliessen und in die Projektkosten einbeziehen.]\n===\nEin junger Projektleiter erhält die Chance, ein grösseres Entwicklungsprojekt zu übernehmen.[@shortAnswer][?Zur Vermeidung von Fehlern wird der Projektleiter durch einen Coach begleitet.]\n===\nWegen eines Strategiewechsels im Unternehmen droht einem Projekt der Projektabbruch.[@shortAnswer][?Mindern: Nutzen des Projekts gemessen an der neuen Strategie aufzeigen. Akzeptieren: Abbruch, falls geringer Beitrag zu neuen Strategie bereits erwiesen ist]\n===\nDem Projektsponsor könnten die Gelder zur Finanzierung des Projekts ausgehen.[@shortAnswer][?Ohne konkreten Hinweis dazu ist Wahrscheinlichkeit gering und Massnahme lohnt sich nicht.]\n===\n||TODO: adapt instructions||",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "12_Chancen und Risiken_053",
+      "instruction": "Bewerten Sie die unten aufgeführten Chancen und Risiken. Notieren Sie zusätzlich die von Ihnen vorgeschlagenen Strategien und Massnahmen pro Chance bzw. Risiko.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Ein Schlüsselmitarbeiter im Projektteam ist begeisterter Bungee-Jumper.",
+          "instruction": "",
+          "hint": "Wissensaufbau bei einem zweiten Mitarbeiter",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Der Auftraggeber hat erst vage Vorstellungen, wie das Softwareprojektergebnis aussehen soll.",
+          "instruction": "",
+          "hint": "Agiles Vorgehen wählen.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Projekt erkennt im Rahmen der Analyse einen massgeblichen Mehrnutzen, wenn der Projektscope entsprechend erweitert wird.",
+          "instruction": "",
+          "hint": "Dem Auftraggeber Scope- Erweiterung inkl. Mehrnutzen aufzeigen und Änderung beantragen.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dem Projektteam fehlt es an Know-how für das Erarbeiten eines spezifischen Teilergebnisses",
+          "instruction": "",
+          "hint": "Erarbeitung des Teilergebnisses an geeigneten Unterlieferanten auslagern.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "In der Schweiz soll eine weitere bedeutende Skirenndestination aufgebaut werden. Dazu muss eine neue Infrastruktur aufgebaut werden. Der wirtschaftliche Nutzen für die Region ist gross, aber auch sehr wetterabhängig.",
+          "instruction": "",
+          "hint": "Wetterversicherung abschliessen und in die Projektkosten einbeziehen.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ein junger Projektleiter erhält die Chance, ein grösseres Entwicklungsprojekt zu übernehmen.",
+          "instruction": "",
+          "hint": "Zur Vermeidung von Fehlern wird der Projektleiter durch einen Coach begleitet.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Wegen eines Strategiewechsels im Unternehmen droht einem Projekt der Projektabbruch.",
+          "instruction": "",
+          "hint": "Mindern: Nutzen des Projekts gemessen an der neuen Strategie aufzeigen. Akzeptieren: Abbruch, falls geringer Beitrag zu neuen Strategie bereits erwiesen ist",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Dem Projektsponsor könnten die Gelder zur Finanzierung des Projekts ausgehen.",
+          "instruction": "",
+          "hint": "Ohne konkreten Hinweis dazu ist Wahrscheinlichkeit gering und Massnahme lohnt sich nicht.",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136401"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:136402]\n[%13_Stakeholder_056 (Freitext)]\nStakeholdergr & Ziele \n[!Sie sind Projektleiter eines Organisationsprojekts in einem Unternehmen. Ziel des Projekts sind die Vereinheitlichung des Projektvorgehens und die Optimierung der Steuerung von verschiedenen Projektarten (Bau, Forschung, Entwicklung). \nWelche Stakeholder-Gruppen sind hauptsächlich von Ihrem Projekt betroffen? Führen Sie vier relevante Gruppen mit ihren Zielen sowie Anforderungen auf und bewerten Sie deren Einfluss / Interesse.]\n[? Geschäftsleiter - Einheitliche und transparente Ergebnisse zur übergeordneten Kontrolle und Steuerung der Projekte \nAbteilungsleiter -  \nKlares Projektmanagement-System, das keinen relevantenMehraufwand in der Projektabwicklung generiert \nKlarheit bezüglich Linien- und Projektfinanzierung \nKlar geregeltes System zur Projektauslösung, Phasenfreigabenund Projektabschluss \nProjektleitende - Einfach anwendbares Projektmanagement-System \nProjektmitarbeitende - Keine Störung in der Projektarbeit durch das Projektmanagement-System]\n===\nStakeholder-Gruppe 1 - Ziele, Anforderungen \n===\nStakeholder-Gruppe 2 - Ziele, Anforderungen \n===\nStakeholder-Gruppe 3 - Ziele, Anforderungen \n===\nStakeholder-Gruppe 4 - Ziele, Anforderungen \n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "13_Stakeholder_056 (Freitext)",
+      "instruction": "Sie sind Projektleiter eines Organisationsprojekts in einem Unternehmen. Ziel des Projekts sind die Vereinheitlichung des Projektvorgehens und die Optimierung der Steuerung von verschiedenen Projektarten (Bau, Forschung, Entwicklung). \nWelche Stakeholder-Gruppen sind hauptsächlich von Ihrem Projekt betroffen? Führen Sie vier relevante Gruppen mit ihren Zielen sowie Anforderungen auf und bewerten Sie deren Einfluss / Interesse.",
+      "body": "Stakeholdergr & Ziele",
+      "footer": "",
+      "hint": "Geschäftsleiter - Einheitliche und transparente Ergebnisse zur übergeordneten Kontrolle und Steuerung der Projekte \nAbteilungsleiter -  \nKlares Projektmanagement-System, das keinen relevantenMehraufwand in der Projektabwicklung generiert \nKlarheit bezüglich Linien- und Projektfinanzierung \nKlar geregeltes System zur Projektauslösung, Phasenfreigabenund Projektabschluss \nProjektleitende - Einfach anwendbares Projektmanagement-System \nProjektmitarbeitende - Keine Störung in der Projektarbeit durch das Projektmanagement-System",
+      "questions": [
+        {
+          "item": "",
+          "question": "Stakeholder-Gruppe 1 - Ziele, Anforderungen",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Stakeholder-Gruppe 2 - Ziele, Anforderungen",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Stakeholder-Gruppe 3 - Ziele, Anforderungen",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Stakeholder-Gruppe 4 - Ziele, Anforderungen",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136402"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:136403]\n[%13_Stakeholder_056 (Freitext)]\nAbk., Einfluss, interesse \n  \n**Geschäftsleiter**   \nAbk. [_GL] Einfluss [_4] Interesse [_3]\n  \n**Abteilungsleiter**  \nAbk. [_AL] Einfluss [_3] Interesse [_2]\n  \n**Projektleitende**  \nAbk. [_PL] Einfluss [_2] Interesse [_4]\n  \n**Projektmitarbeitende**  \nAbk. [_PM] Einfluss [_1] Interesse [_1]\n  \n||TODO: adapt instructions||",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Abk., Einfluss, interesse \n  \n**Geschäftsleiter**   \nAbk. {0} Einfluss {1} Interesse {2}\n  \n**Abteilungsleiter**  \nAbk. {3} Einfluss {4} Interesse {5}\n  \n**Projektleitende**  \nAbk. {6} Einfluss {7} Interesse {8}\n  \n**Projektmitarbeitende**  \nAbk. {9} Einfluss {10} Interesse {11}",
+      "item": "13_Stakeholder_056 (Freitext)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136403"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "GL"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "3"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "AL"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "3"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "2"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "PL"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "2"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "PM"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "1"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "1"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  }
+]

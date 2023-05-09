@@ -10,7 +10,7 @@ module.exports = {
   testTimeout: 50000,
   testMatch: ['<rootDir>/test/standard/**/*.test.ts'],
   transform: {
-    '^.+\\.tsx?$': [
+    '^.+\\.[jt]sx?$': [
       'ts-jest',
       {
         diagnostics: true,

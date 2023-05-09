@@ -1,0 +1,825 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:196200]\n[#Aufgabenset 4]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/akad/aufgabenset_4/web-resources/images/akad_aufgabenset4_cover.png]\n[@externalId:e-aufgabenset-4_18ggotriwutg]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "196200"
+      ],
+      "title": "Aufgabenset 4",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/akad/aufgabenset_4/web-resources/images/akad_aufgabenset4_cover.png"
+      ],
+      "externalId": [
+        "e-aufgabenset-4_18ggotriwutg"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:196201]\n[▼ch-1]\n[##Einkommen natürlicher Personen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "196201"
+      ],
+      "anchor": "ch-1",
+      "title": "Einkommen natürlicher Personen"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:196202]\n[%1]\n[!Welche dieser Beträge sind bei der Direkten Bundessteuer steuerpflichtig, welche nicht und warum?]\nHeinz Huber erzielte im Jahr 2020 folgendes Einkommen:\nZinsen auf Obligationen (Kanton Waadt): Fr. 2'200\nLohn aus Anstellung bei der Treu AG: Fr. 115’760\nRückkauf einer Versicherung: Fr. 25'000\nGewinn aus Verkauf \"Honda Legend\": Fr. 7’000\nMieteinnahmen aus Liegenschaft „Grütli“, Kt. GR: Fr. 18’500\nGewinn aus Verkauf Novartis-Aktien: Fr. 33’500\nLotteriegewinn: Fr. 12'000\nSchenkung von der Patin Else: Fr. 10'000\n===\n[$Einkommenssteuerpflichtig sind:\n-\tLohn aus Anstellung Treu AG\n-\tMieteinnahmen aus Liegenschaft „Grütli, Kt. GR“\n-\tZinsen auf Obligationen, Kt. Waadt\nBeim Gewinn aus dem Verkauf des Hondas Legend und der Novartis-Aktien handelt es sich um einen steuerfreien privaten Kapitalgewinn. \nSchenkungen unterliegen nicht der Einkommenssteuer.\nDer Rückkauf einer Lebensversicherung ist steuerfrei. \nLotteriegewinne bis CHF 1‘000‘000 sind steuerfrei.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "1",
+      "instruction": "Welche dieser Beträge sind bei der Direkten Bundessteuer steuerpflichtig, welche nicht und warum?",
+      "body": "Heinz Huber erzielte im Jahr 2020 folgendes Einkommen:\nZinsen auf Obligationen (Kanton Waadt): Fr. 2'200\nLohn aus Anstellung bei der Treu AG: Fr. 115’760\nRückkauf einer Versicherung: Fr. 25'000\nGewinn aus Verkauf \"Honda Legend\": Fr. 7’000\nMieteinnahmen aus Liegenschaft „Grütli“, Kt. GR: Fr. 18’500\nGewinn aus Verkauf Novartis-Aktien: Fr. 33’500\nLotteriegewinn: Fr. 12'000\nSchenkung von der Patin Else: Fr. 10'000",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Einkommenssteuerpflichtig sind:\n-\tLohn aus Anstellung Treu AG\n-\tMieteinnahmen aus Liegenschaft „Grütli, Kt. GR“\n-\tZinsen auf Obligationen, Kt. Waadt\nBeim Gewinn aus dem Verkauf des Hondas Legend und der Novartis-Aktien handelt es sich um einen steuerfreien privaten Kapitalgewinn. \nSchenkungen unterliegen nicht der Einkommenssteuer.\nDer Rückkauf einer Lebensversicherung ist steuerfrei. \nLotteriegewinne bis CHF 1‘000‘000 sind steuerfrei.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196202"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196203]\n[%2]\n[!Bezeichnen Sie die Steuerfolgen, wenn es sich bei E. Suter]\nE. Suter kauft am 21.6.2020  50 Aktien der Kästli AG zum Kurs vom Fr. 2'000.- Am 15.11.2020 entschliesst er sich, die Aktien zu einem aktuellen Börsenkurs von Fr. 2‘600.- zu verkaufen. Er realisierte also einen Gewinn vor Gebühren von 30'000.- \n===\n[%a]um eine natürliche Person handelt?\n[$Bei diesem Verkauf handelt es sich um eine sog. echte Realisation von stillen Reserven. Es ist ein Kapitalgewinn entstanden.\nFalls keine Indizien für einen gewerbsmässigen Wertschriftenhändler vorliegen, ist dieser Kapitalgewinn, weil die Aktien aus dem Privatvermögen verkauft wurden, steuerfrei (Art. 16 Abs. 3 DBG). ]\n===\n[%b]um eine GmbH handelt?\n[$Eine GmbH kann als  jur. Person definitionsgemäss nur Geschäftsvermögen haben. Somit handelt es sich um die Aufdeckung von stillen Reserven und um einen steuerbaren Kapitalgewinn, der mit der Gewinnsteuer erfasst wird.]\n===\n[%c] eine Kollektivgesellschaft handelt?\n[$Eine Kollektivgesellschaft ist eine Personengesellschaft und die Aktiven der Gesellschaft müssen als Geschäftsvermögen betrachtet werden. Falls dem so ist, handelt es sich um die Aufdeckung von stillen Reserven und um einen steuerbaren Kapitalgewinn, der mit der Einkommenssteuer bei den Gesellschaftern erfasst wird. Die Kollektivgesellschaft selbst ist kein Steuersubjekt und ist demnach nicht steuerpflichtig.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "2",
+      "instruction": "Bezeichnen Sie die Steuerfolgen, wenn es sich bei E. Suter",
+      "body": "E. Suter kauft am 21.6.2020  50 Aktien der Kästli AG zum Kurs vom Fr. 2'000.- Am 15.11.2020 entschliesst er sich, die Aktien zu einem aktuellen Börsenkurs von Fr. 2‘600.- zu verkaufen. Er realisierte also einen Gewinn vor Gebühren von 30'000.-",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "a",
+          "question": "um eine natürliche Person handelt?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Bei diesem Verkauf handelt es sich um eine sog. echte Realisation von stillen Reserven. Es ist ein Kapitalgewinn entstanden.\nFalls keine Indizien für einen gewerbsmässigen Wertschriftenhändler vorliegen, ist dieser Kapitalgewinn, weil die Aktien aus dem Privatvermögen verkauft wurden, steuerfrei (Art. 16 Abs. 3 DBG).",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "b",
+          "question": "um eine GmbH handelt?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Eine GmbH kann als  jur. Person definitionsgemäss nur Geschäftsvermögen haben. Somit handelt es sich um die Aufdeckung von stillen Reserven und um einen steuerbaren Kapitalgewinn, der mit der Gewinnsteuer erfasst wird.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "c",
+          "question": "eine Kollektivgesellschaft handelt?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Eine Kollektivgesellschaft ist eine Personengesellschaft und die Aktiven der Gesellschaft müssen als Geschäftsvermögen betrachtet werden. Falls dem so ist, handelt es sich um die Aufdeckung von stillen Reserven und um einen steuerbaren Kapitalgewinn, der mit der Einkommenssteuer bei den Gesellschaftern erfasst wird. Die Kollektivgesellschaft selbst ist kein Steuersubjekt und ist demnach nicht steuerpflichtig.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196203"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196204]\n[%3]\n===\nWieso spielt bei Selbständigerwerbenden die Unterscheidung zwischen Privat- und Geschäfts-liegenschaft eine wichtige Rolle?\n[$Bezüglich der direkten Bundessteuer ist dies von Bedeutung, weil:\n-\tkeine Abschreibungen auf Liegenschaften im Privatvermögen \n-\tkeine Besteuerung der Veräusserungsgewinne im Privatvermögen\nkeine steuerliche Berücksichtigung von Veräussserungsverlusten im Privatvermögen\n-\tdie direkte Bundessteuer kennt keine Grundstückgewinnsteuer\n-\tLiegenschaften im Geschäftsvermögen können abgeschrieben werden\nVeräusserungsgewinne von Geschäftsliegenschaft unterliegen der Einkommenssteuer\n-\tVerluste aus der Veräusserung von Geschäftsliegenschaften stellen Aufwand dar,\n-\t der das steuerbare Einkommen vermindert.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "3",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Wieso spielt bei Selbständigerwerbenden die Unterscheidung zwischen Privat- und Geschäfts-liegenschaft eine wichtige Rolle?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Bezüglich der direkten Bundessteuer ist dies von Bedeutung, weil:\n-\tkeine Abschreibungen auf Liegenschaften im Privatvermögen \n-\tkeine Besteuerung der Veräusserungsgewinne im Privatvermögen\nkeine steuerliche Berücksichtigung von Veräussserungsverlusten im Privatvermögen\n-\tdie direkte Bundessteuer kennt keine Grundstückgewinnsteuer\n-\tLiegenschaften im Geschäftsvermögen können abgeschrieben werden\nVeräusserungsgewinne von Geschäftsliegenschaft unterliegen der Einkommenssteuer\n-\tVerluste aus der Veräusserung von Geschäftsliegenschaften stellen Aufwand dar,\n-\t der das steuerbare Einkommen vermindert.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196204"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196205]\n[%4]\n[!Welchen Betrag haben Sie hier zu versteuern und wieso?]\nSie besitzen im Privatvermögen eine Obligation mit einem Nennwert von Fr. 100'000.- und einer Fälligkeit am 31. Dezember. Diese verkaufen Sie am 20. Dezember und erzielen einen Erlös von Fr. 105'000.- (Marchzins von Fr. 5'000.-).\n===\n[$Aus diesem Verkauf der Obligation ist keine Steuer geschuldet. Ein allfälliger Gewinn stellt einen steuerfreien privaten Kapitalgewinn dar. Der Marchzins unterliegt keiner Besteuerung als Vermögensertrag.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "4",
+      "instruction": "Welchen Betrag haben Sie hier zu versteuern und wieso?",
+      "body": "Sie besitzen im Privatvermögen eine Obligation mit einem Nennwert von Fr. 100'000.- und einer Fälligkeit am 31. Dezember. Diese verkaufen Sie am 20. Dezember und erzielen einen Erlös von Fr. 105'000.- (Marchzins von Fr. 5'000.-).",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Aus diesem Verkauf der Obligation ist keine Steuer geschuldet. Ein allfälliger Gewinn stellt einen steuerfreien privaten Kapitalgewinn dar. Der Marchzins unterliegt keiner Besteuerung als Vermögensertrag.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196205"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196206]\n[%5]\n[!Wie werden diese Zinsen von Fr. 500.- bei Ihnen und Ihrer Schwester steuerlich behandelt?\nHat der tiefe Zinssatz von 0.50% Auswirkungen auf die definitive Steuerveranlagung von Ihnen oder Ihrer Schwester?\nWelche Steuern sind im Gegensatz zu einem Guthaben bei einer Bank nicht fällig?]\nSie gewähren Ihrer Schwester ein Darlehen zu einem Hausbau von Fr. 100'000.-. Weil Sie Ihre Schwester gut mögen, gewähren Sie ihr dieses Darlehen zu 0.50%.\n===\n\n[$Sie müssen diese erhaltenen Zinsen von Fr. 500.- als Vermögensertrag versteuern (natürlich ohne Verrechnungssteuerabzug).\nIhre Schwester kann diese Fr. 500.- steuermindernd als Schuldzinsenabzug geltend machen.\nDieser tiefe, nicht marktkonforme Zinsfuss von 0.50% hat keinen Einfluss auf die Besteuerung dieses Vermögensertrages, resp. dieser Schuldzinsen. Im Privatvermögen gibt es keine geldwerten Leistung und somit auch keine steuerlichen Korrekturen.\nNatürlich ist auf diesen Zinsen keine Verrechnungssteuer geschuldet.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "5",
+      "instruction": "Wie werden diese Zinsen von Fr. 500.- bei Ihnen und Ihrer Schwester steuerlich behandelt?\nHat der tiefe Zinssatz von 0.50% Auswirkungen auf die definitive Steuerveranlagung von Ihnen oder Ihrer Schwester?\nWelche Steuern sind im Gegensatz zu einem Guthaben bei einer Bank nicht fällig?",
+      "body": "Sie gewähren Ihrer Schwester ein Darlehen zu einem Hausbau von Fr. 100'000.-. Weil Sie Ihre Schwester gut mögen, gewähren Sie ihr dieses Darlehen zu 0.50%.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Sie müssen diese erhaltenen Zinsen von Fr. 500.- als Vermögensertrag versteuern (natürlich ohne Verrechnungssteuerabzug).\nIhre Schwester kann diese Fr. 500.- steuermindernd als Schuldzinsenabzug geltend machen.\nDieser tiefe, nicht marktkonforme Zinsfuss von 0.50% hat keinen Einfluss auf die Besteuerung dieses Vermögensertrages, resp. dieser Schuldzinsen. Im Privatvermögen gibt es keine geldwerten Leistung und somit auch keine steuerlichen Korrekturen.\nNatürlich ist auf diesen Zinsen keine Verrechnungssteuer geschuldet.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196206"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196207]\n[%6]\n[!Berechnen Sie das steuerbare Einkommen von Livio Passaro. Es sind keine weiteren Abzüge zu berücksichtigen. ]\nLivio Passaro legt Ihnen als angehende/-r Steuerspezialist/-in folgende Eckzahlen vor:\n- Nettolohn gemäss Lohnausweis: Fr. 120'000\n\t- Wertschriftenertrag: Fr. 5'000\n\t- Kursgewinn aus dem Verkauf von UBS-Aktien: Fr. 3'200\n\t- Einlage in die Säule 3a: Fr. 5'500\n\t- Eigenmietwert Einfamilienhaus: Fr. 24'000\n\t- Unterhalt Liegenschaft: Fr. 15'000\n\t- Hypothekarzinsen: Fr. 10'000\n\t- Zinsen Lombardkredit: Fr. 5'000\n\t- Ausbildungskosten Ehefrau zur Kosmetikerin \n          (Ehefrau ist gelernte Schneiderin): Fr. 12'000\n\t- Ferienreise in die Karibik: Fr. 6'800\n\t- Kleiderkauf (Anzug mit Krawatte): Fr. 800\n===\n[$Nettolohn: Fr. 120'000\n+ Wertschriftenertrag: Fr. 5'000\n+ Eigenmietwert: Fr. 24'000\t\t\n./. Einlage in die Säule 3a: Fr. 5'500\n./. Unterhalt Liegenschaft: Fr. 15'000\n./. Hypozinsen: Fr. 10'000\n./. Zinsen Lombardkredit: Fr. 5'000\n./. Berufsunkosten von Livio Passaro: Fr. 5'800\nSteuerbares Einkommen von Livio Passaro: Fr. 113'500\n\t\t\nKeinen Einfluss auf die Berechnung des steuerbaren Einkommens haben folgende Beträge:\n- Kursgewinn aus dem Verkauf von UBS-Aktien: privater steuerfreier Kapitalgewinn\n- Ausbildungskosten Ehefrau (nur Weiterbildungskosten sind abziehbar, die in direktem Zusammenhang mit der Erwerbstätigkeit stehen)\n- Ferienreise in die Karibik: Lebenshaltungskosten\n- Kleiderkauf (Anzug mit Krawatte): Lebenshaltungskosten]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "6",
+      "instruction": "Berechnen Sie das steuerbare Einkommen von Livio Passaro. Es sind keine weiteren Abzüge zu berücksichtigen.",
+      "body": "Livio Passaro legt Ihnen als angehende/-r Steuerspezialist/-in folgende Eckzahlen vor:\n- Nettolohn gemäss Lohnausweis: Fr. 120'000\n\t- Wertschriftenertrag: Fr. 5'000\n\t- Kursgewinn aus dem Verkauf von UBS-Aktien: Fr. 3'200\n\t- Einlage in die Säule 3a: Fr. 5'500\n\t- Eigenmietwert Einfamilienhaus: Fr. 24'000\n\t- Unterhalt Liegenschaft: Fr. 15'000\n\t- Hypothekarzinsen: Fr. 10'000\n\t- Zinsen Lombardkredit: Fr. 5'000\n\t- Ausbildungskosten Ehefrau zur Kosmetikerin \n          (Ehefrau ist gelernte Schneiderin): Fr. 12'000\n\t- Ferienreise in die Karibik: Fr. 6'800\n\t- Kleiderkauf (Anzug mit Krawatte): Fr. 800",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Nettolohn: Fr. 120'000\n+ Wertschriftenertrag: Fr. 5'000\n+ Eigenmietwert: Fr. 24'000\t\t\n./. Einlage in die Säule 3a: Fr. 5'500\n./. Unterhalt Liegenschaft: Fr. 15'000\n./. Hypozinsen: Fr. 10'000\n./. Zinsen Lombardkredit: Fr. 5'000\n./. Berufsunkosten von Livio Passaro: Fr. 5'800\nSteuerbares Einkommen von Livio Passaro: Fr. 113'500\n\t\t\nKeinen Einfluss auf die Berechnung des steuerbaren Einkommens haben folgende Beträge:\n- Kursgewinn aus dem Verkauf von UBS-Aktien: privater steuerfreier Kapitalgewinn\n- Ausbildungskosten Ehefrau (nur Weiterbildungskosten sind abziehbar, die in direktem Zusammenhang mit der Erwerbstätigkeit stehen)\n- Ferienreise in die Karibik: Lebenshaltungskosten\n- Kleiderkauf (Anzug mit Krawatte): Lebenshaltungskosten",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196207"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196208]\n[%7]\n[!Welche Beträge bilden bei der direkten Bundessteuer steuerbares Einkommen? Sofern ein Betrag nicht unter die Steuerpflicht fallen sollte, begründen Sie die entsprechende Ausnahme kurz.]\nHerbert Schmidt erzielte im Jahr 2020 die folgenden Einkünfte: \nNettolohn gemäss Lohnausweis: CHF 110'000\nPauschalspesen als Ersatz angefallener Berufsunkosten: CHF 6'000\nWettbewerbsgewinn 1 Mercedes im Wert von: CHF 80'000\nRückkauf einer Lebensversicherung: CHF 20'000\nGewinn aus dem Verkauf des bisherigen Privatfahrzeuges: CHF 2'000\nEinnahmen aus der Vermietung eines privaten Ferienhauses: CHF 12'000\n===\n[$Steuerbare Einkünfte: \nNettolohn gemäss Lohnausweis: 110'000\nEinnahmen aus der Vermietung eines privaten Ferienhauses: 12'000\nTotal steuerbare Einkünfte: 122‘000\nPauschalspesen sind steuerfrei, solange es sich dabei um echten Kostenersatz handelt \t\t \nEinkünfte aus rückkaufsfähigen Lebensversicherungen sind steuerfrei \t\t\nVerkaufsgewinn Privatfahrzeuge = steuerfreier privater Kapitalgewinn  \t\t\nWettbewerbsgewinn 1 Mercedes bis zur Freigrenze von 1‘000‘000 sind steuerfrei. ]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "7",
+      "instruction": "Welche Beträge bilden bei der direkten Bundessteuer steuerbares Einkommen? Sofern ein Betrag nicht unter die Steuerpflicht fallen sollte, begründen Sie die entsprechende Ausnahme kurz.",
+      "body": "Herbert Schmidt erzielte im Jahr 2020 die folgenden Einkünfte: \nNettolohn gemäss Lohnausweis: CHF 110'000\nPauschalspesen als Ersatz angefallener Berufsunkosten: CHF 6'000\nWettbewerbsgewinn 1 Mercedes im Wert von: CHF 80'000\nRückkauf einer Lebensversicherung: CHF 20'000\nGewinn aus dem Verkauf des bisherigen Privatfahrzeuges: CHF 2'000\nEinnahmen aus der Vermietung eines privaten Ferienhauses: CHF 12'000",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Steuerbare Einkünfte: \nNettolohn gemäss Lohnausweis: 110'000\nEinnahmen aus der Vermietung eines privaten Ferienhauses: 12'000\nTotal steuerbare Einkünfte: 122‘000\nPauschalspesen sind steuerfrei, solange es sich dabei um echten Kostenersatz handelt \t\t \nEinkünfte aus rückkaufsfähigen Lebensversicherungen sind steuerfrei \t\t\nVerkaufsgewinn Privatfahrzeuge = steuerfreier privater Kapitalgewinn  \t\t\nWettbewerbsgewinn 1 Mercedes bis zur Freigrenze von 1‘000‘000 sind steuerfrei.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196208"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196209]\n[%8]\n[!Der ledige Horst Vogel wird auf den 1.7.2020 pensioniert und erhält auf diesen Zeitpunkt von seiner Pensionskasse (2. Säule) eine Kapitalauszahlung im Betrag von Fr. 800'000.]\n===\n[%a]Wie wird diese Kapitalauszahlung steuerlich abgerechnet? Berechnen Sie eine allfällige direkte Bundessteuer.\n[$Die Auszahlung der Kapitalabfindung im Betrag von Fr. 800'000 unterliegt gemäss Art. 38 DBG einer Sondersteuer. (1/5tel des Tarifs gemäss Art. 36 DBG)\nMaximaltarif gem. Art. 36 DBG Abs. 1\n- für 755 200 Franken Einkommen: 86‘848.00 Franken\n  Und für je weitere 100 Franken Einkommen: 11.50 Franken\n800‘000 – 755‘200 = 44‘800\t🡪 : 100 x 11.50  = 5152\n5152 + 86‘848 = 92‘000, davon 1/5 = Fr. 18'400.- ]\n===\n[%b]Sachverhaltsänderung bzw. Ergänzung zu Aufgabe 6\n\nHorst Vogel erhält anstelle der Kapitalauszahlung ein monatliche BVG-Rente von Fr. 4'500 (erstmals pro Juli). Zudem wird ihm (ebenfalls erstmals pro Juli) eine monatliche AHV-Rente von Fr. 2'000 bezahlt. Im übrigen hat Horst Vogel für das 1. Semester 2020 noch einen Nettolohn von total Fr. 90'000.- erhalten. Berechnen Sie das steuerbare Roheinkommen von Horst Vogel fürs 2020 und nennen Sie die diesbezügliche Steuerperiode.\n[$Steuerperiode 1.1.2020 - 31.12.2020: \t\t\t\t\t\nLohneinkommen 1. Sem.: 90'000\nBVG-Rente 4'500 x 6 Monate: 27'000\nAHV-Rente 2'000 x 6 Monate: 12'000\nTotal Roheinkommen: 129'000]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "8",
+      "instruction": "Der ledige Horst Vogel wird auf den 1.7.2020 pensioniert und erhält auf diesen Zeitpunkt von seiner Pensionskasse (2. Säule) eine Kapitalauszahlung im Betrag von Fr. 800'000.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "a",
+          "question": "Wie wird diese Kapitalauszahlung steuerlich abgerechnet? Berechnen Sie eine allfällige direkte Bundessteuer.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Die Auszahlung der Kapitalabfindung im Betrag von Fr. 800'000 unterliegt gemäss Art. 38 DBG einer Sondersteuer. (1/5tel des Tarifs gemäss Art. 36 DBG)\nMaximaltarif gem. Art. 36 DBG Abs. 1\n- für 755 200 Franken Einkommen: 86‘848.00 Franken\n  Und für je weitere 100 Franken Einkommen: 11.50 Franken\n800‘000 – 755‘200 = 44‘800\t🡪 : 100 x 11.50  = 5152\n5152 + 86‘848 = 92‘000, davon 1/5 = Fr. 18'400.-",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "b",
+          "question": "Sachverhaltsänderung bzw. Ergänzung zu Aufgabe 6\n\nHorst Vogel erhält anstelle der Kapitalauszahlung ein monatliche BVG-Rente von Fr. 4'500 (erstmals pro Juli). Zudem wird ihm (ebenfalls erstmals pro Juli) eine monatliche AHV-Rente von Fr. 2'000 bezahlt. Im übrigen hat Horst Vogel für das 1. Semester 2020 noch einen Nettolohn von total Fr. 90'000.- erhalten. Berechnen Sie das steuerbare Roheinkommen von Horst Vogel fürs 2020 und nennen Sie die diesbezügliche Steuerperiode.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Steuerperiode 1.1.2020 - 31.12.2020: \t\t\t\t\t\nLohneinkommen 1. Sem.: 90'000\nBVG-Rente 4'500 x 6 Monate: 27'000\nAHV-Rente 2'000 x 6 Monate: 12'000\nTotal Roheinkommen: 129'000",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196209"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196210]\n[%9]\n===\n[%a]Remo Traber hat im Anschluss an sein Betriebswirtschaftsstudium bei der Novartis per 1. Dezember 2020 eine Stelle angetreten und im 2020 das folgende Einkommen realisiert:\n\n\tNettolohn pro Dezember 2020: 7'000\n\tObligationenzins bezahlt per 15.12.2020 (3 % à 40'000): 1'200\n\nErmitteln Sie das steuerbare Roheinkommen sowie das satzbestimmende Einkommen von Remo Traber pro 2020 und berechnen Sie den Bundessteuerbetrag, den Remo Traber im 2020 aufgrund des berechneten Roheinkommens abzuliefern hat (Steuerabzüge können vernachlässigt werden).\n[$Nettolohn pro Dezember 2020: 7'000\nObligationszins bezahlt per 15.12.2020 (3 % à 40'000): 1'200\nTotal steuerbares Roheinkommen: 8'200     \nzum Satz von: 8'200   \nes ist keine Bundessteuer geschuldet (vgl. Tarife gem. Art. 36 DBG, unter der Limite) ]\n===\n[%b]Lukas Hämmerle hat seinen steuerrechtlichen Wohnsitz von Deutschland in die Schweiz verlegt (Neuzuzug, ohne dass er vorgängig in der Schweiz steuerpflichtig gewesen wäre). Er hat bei der Novartis per 1. Dezember 2020 eine Stelle angetreten und im 2020 seit Zuzug in die Schweiz das folgende Einkommen realisiert:\n\n\tNettolohn pro Dezember 2020: 7'000\n\tObligationszins bezahlt per 15.12.2020 (3 % à 40'000): 1'200\n\nBerechnen Sie das steuerbare Roheinkommen sowie das satzbestimmende Einkommen von Lukas Hämmerle pro 2020.\n[$Nettolohn pro Dezember 2020: 7'000\nObligationszins bezahlt per 15.12.2020 (3 % à 40'000): 1'200\nTotal steuerbares Roheinkommen : 8'200      \nSatzbestimmung: das regelmässig fliessende Einkommen ist auf ein Jahr   umzurechnen: \nLohn 7'000 x 12 Mt.: 84'000\nObligationenzins per 15.12.2020 (keine Umrechnung): 1'200\nSatzbestimmendes Einkommen: 85'200]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "9",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "a",
+          "question": "Remo Traber hat im Anschluss an sein Betriebswirtschaftsstudium bei der Novartis per 1. Dezember 2020 eine Stelle angetreten und im 2020 das folgende Einkommen realisiert:\n\n\tNettolohn pro Dezember 2020: 7'000\n\tObligationenzins bezahlt per 15.12.2020 (3 % à 40'000): 1'200\n\nErmitteln Sie das steuerbare Roheinkommen sowie das satzbestimmende Einkommen von Remo Traber pro 2020 und berechnen Sie den Bundessteuerbetrag, den Remo Traber im 2020 aufgrund des berechneten Roheinkommens abzuliefern hat (Steuerabzüge können vernachlässigt werden).",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Nettolohn pro Dezember 2020: 7'000\nObligationszins bezahlt per 15.12.2020 (3 % à 40'000): 1'200\nTotal steuerbares Roheinkommen: 8'200     \nzum Satz von: 8'200   \nes ist keine Bundessteuer geschuldet (vgl. Tarife gem. Art. 36 DBG, unter der Limite)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "b",
+          "question": "Lukas Hämmerle hat seinen steuerrechtlichen Wohnsitz von Deutschland in die Schweiz verlegt (Neuzuzug, ohne dass er vorgängig in der Schweiz steuerpflichtig gewesen wäre). Er hat bei der Novartis per 1. Dezember 2020 eine Stelle angetreten und im 2020 seit Zuzug in die Schweiz das folgende Einkommen realisiert:\n\n\tNettolohn pro Dezember 2020: 7'000\n\tObligationszins bezahlt per 15.12.2020 (3 % à 40'000): 1'200\n\nBerechnen Sie das steuerbare Roheinkommen sowie das satzbestimmende Einkommen von Lukas Hämmerle pro 2020.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Nettolohn pro Dezember 2020: 7'000\nObligationszins bezahlt per 15.12.2020 (3 % à 40'000): 1'200\nTotal steuerbares Roheinkommen : 8'200      \nSatzbestimmung: das regelmässig fliessende Einkommen ist auf ein Jahr   umzurechnen: \nLohn 7'000 x 12 Mt.: 84'000\nObligationenzins per 15.12.2020 (keine Umrechnung): 1'200\nSatzbestimmendes Einkommen: 85'200",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196210"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196211]\n[%10]\n[! Bitte erstellen Sie eine kurze Darlegung der Problematik bezüglich Steuerperiode, Steuersubjekt und zeitlicher Bemessung.]\nAuf den 30.6.2020 sind die nachfolgenden, unabhängigen Ereignisse eingetroffen. \nWie wird bei den einzelnen Ereignissen die Bundessteuerveranlagung 2020 vorgenommen. \n===\n[%a]Frau Meier und Herr Müller heiraten\n[$Gemeinsame Veranlagung für die ganze Steuerperiode 2020; Zusammenrechnung der Einkünfte 2020 (Familienbesteuerung, Familientarif für die ganze Steuerperiode)]\n===\n[%b]Herr Huber-Kunz stirbt und hinterlässt seine Ehefrau\n[$1. Semester Gemeinsame Veranlagung; Zusammenrechnen der Einkünfte 2020 (Familientarif) \n2. Semester  separate Veranlagung der Ehefrau für ihr Einkommen des 2. Semesters (zum Tarif Alleinstehender);\tes liegt je eine unterjährige Steuerperiode vor; d.h. für die Satzbestimmung sind die ordentlichen Einkünfte auf 12 Mt. umzurechnen.]\n===\n[%c]Herr Troxler trennt sich von seiner Ehefrau\n[$Die beiden Personen werden für die ganze Periode 2020 aufgrund der von ihnen erzielten Einkünften getrennt veranlagt (je zum Tarif Alleinstehender)]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "10",
+      "instruction": "Bitte erstellen Sie eine kurze Darlegung der Problematik bezüglich Steuerperiode, Steuersubjekt und zeitlicher Bemessung.",
+      "body": "Auf den 30.6.2020 sind die nachfolgenden, unabhängigen Ereignisse eingetroffen. \nWie wird bei den einzelnen Ereignissen die Bundessteuerveranlagung 2020 vorgenommen.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "a",
+          "question": "Frau Meier und Herr Müller heiraten",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Gemeinsame Veranlagung für die ganze Steuerperiode 2020; Zusammenrechnung der Einkünfte 2020 (Familienbesteuerung, Familientarif für die ganze Steuerperiode)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "b",
+          "question": "Herr Huber-Kunz stirbt und hinterlässt seine Ehefrau",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "1. Semester Gemeinsame Veranlagung; Zusammenrechnen der Einkünfte 2020 (Familientarif) \n2. Semester  separate Veranlagung der Ehefrau für ihr Einkommen des 2. Semesters (zum Tarif Alleinstehender);\tes liegt je eine unterjährige Steuerperiode vor; d.h. für die Satzbestimmung sind die ordentlichen Einkünfte auf 12 Mt. umzurechnen.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "c",
+          "question": "Herr Troxler trennt sich von seiner Ehefrau",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Die beiden Personen werden für die ganze Periode 2020 aufgrund der von ihnen erzielten Einkünften getrennt veranlagt (je zum Tarif Alleinstehender)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196211"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196212]\n[%11]\n[!Darf Karl Gross den Audi entschädigungslos aus dem Geschäft entnehmen und seinem Sohn übergeben (bitte begründen Sie Ihre Antwort). In welchem Betrag ist gegebenenfalls die Erfolgsrechnung steuerrechtlich zu korrigieren (bitte Berechnungen darlegen)?]\nDer selbständigerwerbende Karl Gross kauft ein neues Geschäftsauto (Mercedes) und übergibt sein bisheriges Geschäftsauto (Audi) entschädigungslos seinem Sohn zur privaten Verfügung (der Sohn arbeitet nicht im Geschäft). Der Audi wurde mit einem Buchwert von Fr. 10’000.- in der letzten Bilanz der Einzelfirma ausgewiesen und nun zufolge der entschädigungslosen Übertragung vollständig abgeschrieben. Per Entnahmezeitpunkt hat der Audi einen Verkehrswert von Fr. 30'000.\n===\n[$Die Überführung von Geschäftsvermögen ins Privatvermögen ist der Veräusserung gleichgestellt und hat stets zum Verkehrswert zu erfolgen. \nKorrektur der Erfolgsrechnung:  \nAufrechnung Abschreibung Fr. 10'000 zuzüglich Buchgewinn Fr. 20'000; total 30'000 Aufrg.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "11",
+      "instruction": "Darf Karl Gross den Audi entschädigungslos aus dem Geschäft entnehmen und seinem Sohn übergeben (bitte begründen Sie Ihre Antwort). In welchem Betrag ist gegebenenfalls die Erfolgsrechnung steuerrechtlich zu korrigieren (bitte Berechnungen darlegen)?",
+      "body": "Der selbständigerwerbende Karl Gross kauft ein neues Geschäftsauto (Mercedes) und übergibt sein bisheriges Geschäftsauto (Audi) entschädigungslos seinem Sohn zur privaten Verfügung (der Sohn arbeitet nicht im Geschäft). Der Audi wurde mit einem Buchwert von Fr. 10’000.- in der letzten Bilanz der Einzelfirma ausgewiesen und nun zufolge der entschädigungslosen Übertragung vollständig abgeschrieben. Per Entnahmezeitpunkt hat der Audi einen Verkehrswert von Fr. 30'000.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Die Überführung von Geschäftsvermögen ins Privatvermögen ist der Veräusserung gleichgestellt und hat stets zum Verkehrswert zu erfolgen. \nKorrektur der Erfolgsrechnung:  \nAufrechnung Abschreibung Fr. 10'000 zuzüglich Buchgewinn Fr. 20'000; total 30'000 Aufrg.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196212"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196213]\n[%12]\n\nHerr und Frau Andermatt sind verheiratet und beide unselbständig erwerbstätig. Im Jahr 2020 verdiente Herr Andermatt Fr. 65'000 und Frau Andermatt Fr. 39'000. Wie hoch ist das Einkommen, das als Bemessungsgrundlage für das Jahr 2020 dient:\nbei der direkten Bundessteuer;\nbei Vollsplitting;\nbei Teilsplitting mit 20 %-Abzug?\n\nNutzen Sie als Hilfestellung das StG des Kanton Aargau (im Lernraum).\n===\n[$Das Einkommen, welches als Berechnungsgrundlage für die Einkommenssteuer des Jahres 2020 dient, errechnet sich bei der direkten Bundessteuer und bei der kantonalen Einkommenssteuer - ohne Berücksichtigung von Abzügen im vorliegenden Fall - wie folgt:\n\nBestandteile Einkommen und Aufwendungen \t\t\nNettolohn Herr Andermatt: Fr. 65'000\nNettolohn Frau Andermatt: Fr. 39‘000\nTotal der Einkünfte: Fr. 104‘000\nAufwendungen (in diesem Beispiel hypothetisch): Fr. - \nReineinkommen: Fr. 104‘000\n\nBei der direkten Bundessteuer besteht ein Doppeltarif. Siehe dazu Art. 36 DBG, wobei Abs. 1 für Alleinstehende ohne Kinder und Abs. 2 für Ehegatten, die in rechtlich und tatsächlich ungetrennter Ehe leben, sowie für verwitwete, gerichtlich oder tatsächlich getrennt lebende, geschiedene und ledige steuerpflichtige Personen gilt, die mit Kindern oder unterstützungsbedürftigen Personen im gleichen Haushalt zusammenleben und deren Unterhalt zur Hauptsache bestreiten. \nDer entsprechend ermittelte Steuerbetrag ermässigt sich um Fr. 251 für jedes Kind oder jede  unterstützungsbedürftige Person. \nBeim Vollsplitting-Verfahren werden die Ehegatten für Fr. 104'000 zum Steuersatz von Fr. 52'000 besteuert. \nSiehe als Beispiel § 43 Abs. 1 und 2 StG AG.\n\nBei einem Teilsplitting-Verfahren mit 20 %-Abzug werden Herr und Frau Andermatt steuerpflichtig für das Reineinkommen von Fr. 104'000 zum Steuersatz von Fr. 83 '200.\n\nDer Steuersatz berechnet sich dabei wie folgt:\nSatzbestimmendes Einkommen \nSteuerbares Einkommen: Fr. 104‘000\n.I 20 %-Abzug: Fr. 20‘800\nTotal satzbestimmendes Einkommen: Fr. 83‘200\n\nDer Kanton Aargau kannte bis 31. Dezember 2000 gemäss § 17 Abs. 2 aStG AG ein Teilsplitting-Verfahren mit einem Abzug von 37.5 %.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "12",
+      "instruction": "",
+      "body": "Herr und Frau Andermatt sind verheiratet und beide unselbständig erwerbstätig. Im Jahr 2020 verdiente Herr Andermatt Fr. 65'000 und Frau Andermatt Fr. 39'000. Wie hoch ist das Einkommen, das als Bemessungsgrundlage für das Jahr 2020 dient:\nbei der direkten Bundessteuer;\nbei Vollsplitting;\nbei Teilsplitting mit 20 %-Abzug?\n\nNutzen Sie als Hilfestellung das StG des Kanton Aargau (im Lernraum).",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Das Einkommen, welches als Berechnungsgrundlage für die Einkommenssteuer des Jahres 2020 dient, errechnet sich bei der direkten Bundessteuer und bei der kantonalen Einkommenssteuer - ohne Berücksichtigung von Abzügen im vorliegenden Fall - wie folgt:\n\nBestandteile Einkommen und Aufwendungen \t\t\nNettolohn Herr Andermatt: Fr. 65'000\nNettolohn Frau Andermatt: Fr. 39‘000\nTotal der Einkünfte: Fr. 104‘000\nAufwendungen (in diesem Beispiel hypothetisch): Fr. - \nReineinkommen: Fr. 104‘000\n\nBei der direkten Bundessteuer besteht ein Doppeltarif. Siehe dazu Art. 36 DBG, wobei Abs. 1 für Alleinstehende ohne Kinder und Abs. 2 für Ehegatten, die in rechtlich und tatsächlich ungetrennter Ehe leben, sowie für verwitwete, gerichtlich oder tatsächlich getrennt lebende, geschiedene und ledige steuerpflichtige Personen gilt, die mit Kindern oder unterstützungsbedürftigen Personen im gleichen Haushalt zusammenleben und deren Unterhalt zur Hauptsache bestreiten. \nDer entsprechend ermittelte Steuerbetrag ermässigt sich um Fr. 251 für jedes Kind oder jede  unterstützungsbedürftige Person. \nBeim Vollsplitting-Verfahren werden die Ehegatten für Fr. 104'000 zum Steuersatz von Fr. 52'000 besteuert. \nSiehe als Beispiel § 43 Abs. 1 und 2 StG AG.\n\nBei einem Teilsplitting-Verfahren mit 20 %-Abzug werden Herr und Frau Andermatt steuerpflichtig für das Reineinkommen von Fr. 104'000 zum Steuersatz von Fr. 83 '200.\n\nDer Steuersatz berechnet sich dabei wie folgt:\nSatzbestimmendes Einkommen \nSteuerbares Einkommen: Fr. 104‘000\n.I 20 %-Abzug: Fr. 20‘800\nTotal satzbestimmendes Einkommen: Fr. 83‘200\n\nDer Kanton Aargau kannte bis 31. Dezember 2000 gemäss § 17 Abs. 2 aStG AG ein Teilsplitting-Verfahren mit einem Abzug von 37.5 %.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196213"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196214]\n[%13]\n[!Findet in diesem Fall die Familienbesteuerung mit Faktorenaddition noch statt oder werden die beiden Ehegatten getrennt besteuert?]\nIm vorliegenden Fall steht fest, dass der Beschwerdeführer und seine Ehegattin während der Woche getrennt leben bzw. über keine dauernd gemeinsam benutzte Wohnstätte verfügen, an der ehelichen Gemeinschaft aber festhalten. Auch wenn nach der Heirat die Ehefrau ihre bisherige Wohnung in K und der Beschwerdeführer\nsein Haus in H beibehalten hat, die Ehegatten in den gleichen Stellen weiter arbeiten, für ihren Lebensunterhalt je selber aufkommen und offenbar auch nicht über gemeinschaftliche Mittel verfügen.\n===\n[$Ein selbständiger Wohnsitz und damit die räumliche Aufteilung eines gemeinsamen Haushaltes unter Ehegatten bedeutet noch nicht das Vorliegen einer getrennten Ehe im steuerrechtlichen Sinn. Eine Faktorenaddition findet deshalb auch dann statt, wenn zwei Eheleute nach der Heirat bewusst räumlich voneinander getrennt leben und keine finanziellen Mittel für eine gemeinsame Haushaltführung oder für eine gegenseitige Unterstützung im Sinne von Art. 163 ff ZGB erbracht werden.\n\nEine getrennte bzw. selbständige Besteuerung von Ehegatten erfordert nach Art. 9 Abs. 1 DBG (e contrario) zunächst, dass die Gatten in (rechtlich oder tatsächlich) getrennter Ehe leben: Beide Ehegatten müssen gestützt auf Art.23 ZGB einen eigenen Wohnsitz begründen bzw. über getrennte Wohnstätten verfügen. Unterhalten die Ehegatten einen gemeinsamen Wohnsitz bzw. eine dauernde gemeinsame Wohnstätte, kann von vornherein keine Trennung im Sinn von Art. 9 Abs. 1 DGB angenommen werden.\n\nEine getrennte Ehe im Sinne von Art. 9 Abs. 1 DBG setzt sodann voraus, dass die Ehegatten die eheliche Gemeinschaft aufgehoben haben. Das ergibt sich aus dem Zusammenhang von Art. 9 Abs. 1 DBG mit Art. 45 Bst. a aDBG, wonach bei gerichtlicher oder dauernder tatsächlicher Trennung der Ehegatten eine Zwischenveranlagung vorgenommen wird. Eine getrennte Besteuerung, zu welcher die Zwischenveranlagung führt, setzt demnach eine dauernde Trennung und damit eine Aufhebung des gemeinsamen Haushalts bzw. ein Getrenntleben im Sinn von Art. 137 und Art. 175 f ZGB oder ein Einvernehmen darüber voraus, dass die eheliche Gemeinschaft aufgehoben wird. Solange die Ehegatten (wie etwa bei einer \"Wochenendehe'') nur über getrennte Wohnsitze bzw. Wohnstätten verfügen, an der ehelichen Gemeinschaft aber festhalten, liegt demnach keine getrennte Ehe im Sinn von Art. 9 Abs. 1 bzw. keine dauernde Trennung im Sinn von Art. 45 Est. a aDBG vor. Zum gleichen Ergebnis führen auch die Materialien, wird doch in der Botschaft zur Steuerharmonisierungsvorlage ausgeführt, dass Ehegatten getrennt veranlagt werden, wenn die eheliche Gemeinschaft aufgehoben wird (BBl 1983 111, S. 30 – siehe Lernraum) bzw. \"wenn die Ehe zwar rechtlich noch besteht, die Eheleute aber getrennt leben\" (ebenda S. 159). Eine ungetrennte Ehe im Sinn von Art 9 Abs. 1 DBG liegt somit vor, solange die Ehegatten die eheliche Gemeinschaft aufrechterhalten.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "13",
+      "instruction": "Findet in diesem Fall die Familienbesteuerung mit Faktorenaddition noch statt oder werden die beiden Ehegatten getrennt besteuert?",
+      "body": "Im vorliegenden Fall steht fest, dass der Beschwerdeführer und seine Ehegattin während der Woche getrennt leben bzw. über keine dauernd gemeinsam benutzte Wohnstätte verfügen, an der ehelichen Gemeinschaft aber festhalten. Auch wenn nach der Heirat die Ehefrau ihre bisherige Wohnung in K und der Beschwerdeführer\nsein Haus in H beibehalten hat, die Ehegatten in den gleichen Stellen weiter arbeiten, für ihren Lebensunterhalt je selber aufkommen und offenbar auch nicht über gemeinschaftliche Mittel verfügen.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Ein selbständiger Wohnsitz und damit die räumliche Aufteilung eines gemeinsamen Haushaltes unter Ehegatten bedeutet noch nicht das Vorliegen einer getrennten Ehe im steuerrechtlichen Sinn. Eine Faktorenaddition findet deshalb auch dann statt, wenn zwei Eheleute nach der Heirat bewusst räumlich voneinander getrennt leben und keine finanziellen Mittel für eine gemeinsame Haushaltführung oder für eine gegenseitige Unterstützung im Sinne von Art. 163 ff ZGB erbracht werden.\n\nEine getrennte bzw. selbständige Besteuerung von Ehegatten erfordert nach Art. 9 Abs. 1 DBG (e contrario) zunächst, dass die Gatten in (rechtlich oder tatsächlich) getrennter Ehe leben: Beide Ehegatten müssen gestützt auf Art.23 ZGB einen eigenen Wohnsitz begründen bzw. über getrennte Wohnstätten verfügen. Unterhalten die Ehegatten einen gemeinsamen Wohnsitz bzw. eine dauernde gemeinsame Wohnstätte, kann von vornherein keine Trennung im Sinn von Art. 9 Abs. 1 DGB angenommen werden.\n\nEine getrennte Ehe im Sinne von Art. 9 Abs. 1 DBG setzt sodann voraus, dass die Ehegatten die eheliche Gemeinschaft aufgehoben haben. Das ergibt sich aus dem Zusammenhang von Art. 9 Abs. 1 DBG mit Art. 45 Bst. a aDBG, wonach bei gerichtlicher oder dauernder tatsächlicher Trennung der Ehegatten eine Zwischenveranlagung vorgenommen wird. Eine getrennte Besteuerung, zu welcher die Zwischenveranlagung führt, setzt demnach eine dauernde Trennung und damit eine Aufhebung des gemeinsamen Haushalts bzw. ein Getrenntleben im Sinn von Art. 137 und Art. 175 f ZGB oder ein Einvernehmen darüber voraus, dass die eheliche Gemeinschaft aufgehoben wird. Solange die Ehegatten (wie etwa bei einer \"Wochenendehe'') nur über getrennte Wohnsitze bzw. Wohnstätten verfügen, an der ehelichen Gemeinschaft aber festhalten, liegt demnach keine getrennte Ehe im Sinn von Art. 9 Abs. 1 bzw. keine dauernde Trennung im Sinn von Art. 45 Est. a aDBG vor. Zum gleichen Ergebnis führen auch die Materialien, wird doch in der Botschaft zur Steuerharmonisierungsvorlage ausgeführt, dass Ehegatten getrennt veranlagt werden, wenn die eheliche Gemeinschaft aufgehoben wird (BBl 1983 111, S. 30 – siehe Lernraum) bzw. \"wenn die Ehe zwar rechtlich noch besteht, die Eheleute aber getrennt leben\" (ebenda S. 159). Eine ungetrennte Ehe im Sinn von Art 9 Abs. 1 DBG liegt somit vor, solange die Ehegatten die eheliche Gemeinschaft aufrechterhalten.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196214"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196215]\n[%14]\n[!Wie sind diese beiden Tarife unter dem Aspekt des Grundsatzes der Besteuerung nach der wirtschaftlichen Leistungsfähigkeit zu beurteilen?]\nAm 14. Oktober 2005 erliess der Kantonsrat Obwalden einen Nachtrag zum Steuergesetz vom 30. Oktober 1994 (StG/OW), der für Einkommen ab Fr. 300'000 und Vermögen ab Fr. 5'000'000 degressive Steuertarife vorsieht. Gleichzeitig wurden die Einkommen im unteren Bereich deutlich entlastet. Art. 3 8 Abs. 1 und 5 5 Abs. 1 des Nachtrags zum Steuergesetz lauten: \n\nArt. 38 Abs. StG OW\n0,0 Prozent fur die ersten Fr. 5'000\n0,9 Prozent fur die weiteren Fr. 6'000\n1,3 Prozent fur die weiteren Fr. 5'000\n1,6 Prozent fur die weiteren Fr. 7'000\n2,2 Prozent für die weiteren Fr. 15'000\n2,3 Prozent für die weiteren Fr. 32'000\n2,35 Prozent fur die weiteren Fr. 230'000\n2,0 Prozent für die weiteren Fr. 40'000\n1,5 Prozent fur die weiteren Fr. 40'000\n1,2 Prozent fur die weiteren Fr. 40'000\n1,0 Prozent für die weiteren Fr. 130'000\n1,2 Prozent fur die weiteren Fr. 50'000\n1,6 Prozent fur die weiteren Fr. 40'0000\n1,65 Prozent fur die weiteren Fr. 1'000'000\nArt. 55 Abs. 1 StG OW\n0,35 Promille fur die ersten Fr. 500'000\n0,2 Promille fur Vermögensteile über Fr. 500'000\n===\nLesen Sie dazu auch den Artikel „Kantonale Abgaben Obwalden“ im Lernraum.\n[$Verstoss gegen das Leistungsfähigkeitsprinzip durch degressive Einkommens- und Vermögenstarife. Zur Erhebung der staatsrechtlichen Beschwerde gegen einen kantonalen Erlass befugt ist, wer durch die\nangefochtenen Bestimmungen zumindest virtuell in seinen rechtlich geschützten Interessen betroffen ist. Die AVLOCA-Praxis trägt den Besonderheiten der Anfechtung von Steuertarifen nicht genügend Rechnung. Der Steuertarif bildet ein unteilbares Ganzes und muss den verfassungsrechtlichen Steuererhebungsprinzipien entsprechen. Deren Missachtung muss jeder Steuerpflichtige im Verfahren der abstrakten Normenkontrolle rügen können. Die Beschwerdeführer haben zwar insbesondere den Einkommenssteuertarif nur teilweise angefochten, weil sie sich vom unangefochtenen Teil für die betreffende Bevölkerungsgruppe einen Vorteil versprechen. Der Tarif kann indes nicht bloss in Teilen aufgehoben werden. Die Beschwerdebegehren sind im Interesse eines vernünftigen Verfahrensergebnisses dahingehend zu interpretieren, dass die Tarife auch als Ganzes zu kassieren sind. \nFür die Einkommenssteuer lässt sich dem Leistungsfähigkeitsprinzip unmittelbar entnehmen, dass Personen und Personengruppen gleicher Einkommensschichten gleich viele Steuern zu bezahlen haben. Personen\nmit verschieden hohen Einkommen sind unterschiedlich zu belasten. Es darf nicht sein, dass jemand mit niedrigerem Einkommen gleich viele Steuern zahlen muss wie jemand mit hohem Einkommen. Erst recht geht es nicht an, dass jemand Steuern zu bezahlen hat, obschon er dazu nicht in der Lage ist. Aus dem Leistungsfähigkeitsprinzip nicht direkt hervor geht jedoch, um wie viel die Steuer zunehmen muss, wenn das Einkommen um einen bestimmten Betrag steigt. \n\nDem kantonalen Gesetzgeber kommt hier eine grosse Gestaltungsfreiheit zu. Unzulässig sind indes degressive Tarife, die per definitionem eine Besteuerung entgegen der wirtschaftlichen Leistungsfähigkeit bewirken und zu Wertungswidersprüchen führen. Das gilt auch für die Vermögenssteuertarife. Die angefochtenen Tarife verstossen somit, soweit sie für höhere Einkommen und Vermögen einen niedrigeren  Durchschnittssteuersatz vorsehen als für tiefere Einkommen und Vermögen, gegen das Leistungsfähigkeitsprinzip und gegen den  allgemeinen Gleichheitssatz.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "14",
+      "instruction": "Wie sind diese beiden Tarife unter dem Aspekt des Grundsatzes der Besteuerung nach der wirtschaftlichen Leistungsfähigkeit zu beurteilen?",
+      "body": "Am 14. Oktober 2005 erliess der Kantonsrat Obwalden einen Nachtrag zum Steuergesetz vom 30. Oktober 1994 (StG/OW), der für Einkommen ab Fr. 300'000 und Vermögen ab Fr. 5'000'000 degressive Steuertarife vorsieht. Gleichzeitig wurden die Einkommen im unteren Bereich deutlich entlastet. Art. 3 8 Abs. 1 und 5 5 Abs. 1 des Nachtrags zum Steuergesetz lauten: \n\nArt. 38 Abs. StG OW\n0,0 Prozent fur die ersten Fr. 5'000\n0,9 Prozent fur die weiteren Fr. 6'000\n1,3 Prozent fur die weiteren Fr. 5'000\n1,6 Prozent fur die weiteren Fr. 7'000\n2,2 Prozent für die weiteren Fr. 15'000\n2,3 Prozent für die weiteren Fr. 32'000\n2,35 Prozent fur die weiteren Fr. 230'000\n2,0 Prozent für die weiteren Fr. 40'000\n1,5 Prozent fur die weiteren Fr. 40'000\n1,2 Prozent fur die weiteren Fr. 40'000\n1,0 Prozent für die weiteren Fr. 130'000\n1,2 Prozent fur die weiteren Fr. 50'000\n1,6 Prozent fur die weiteren Fr. 40'0000\n1,65 Prozent fur die weiteren Fr. 1'000'000\nArt. 55 Abs. 1 StG OW\n0,35 Promille fur die ersten Fr. 500'000\n0,2 Promille fur Vermögensteile über Fr. 500'000",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Lesen Sie dazu auch den Artikel „Kantonale Abgaben Obwalden“ im Lernraum.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Verstoss gegen das Leistungsfähigkeitsprinzip durch degressive Einkommens- und Vermögenstarife. Zur Erhebung der staatsrechtlichen Beschwerde gegen einen kantonalen Erlass befugt ist, wer durch die\nangefochtenen Bestimmungen zumindest virtuell in seinen rechtlich geschützten Interessen betroffen ist. Die AVLOCA-Praxis trägt den Besonderheiten der Anfechtung von Steuertarifen nicht genügend Rechnung. Der Steuertarif bildet ein unteilbares Ganzes und muss den verfassungsrechtlichen Steuererhebungsprinzipien entsprechen. Deren Missachtung muss jeder Steuerpflichtige im Verfahren der abstrakten Normenkontrolle rügen können. Die Beschwerdeführer haben zwar insbesondere den Einkommenssteuertarif nur teilweise angefochten, weil sie sich vom unangefochtenen Teil für die betreffende Bevölkerungsgruppe einen Vorteil versprechen. Der Tarif kann indes nicht bloss in Teilen aufgehoben werden. Die Beschwerdebegehren sind im Interesse eines vernünftigen Verfahrensergebnisses dahingehend zu interpretieren, dass die Tarife auch als Ganzes zu kassieren sind. \nFür die Einkommenssteuer lässt sich dem Leistungsfähigkeitsprinzip unmittelbar entnehmen, dass Personen und Personengruppen gleicher Einkommensschichten gleich viele Steuern zu bezahlen haben. Personen\nmit verschieden hohen Einkommen sind unterschiedlich zu belasten. Es darf nicht sein, dass jemand mit niedrigerem Einkommen gleich viele Steuern zahlen muss wie jemand mit hohem Einkommen. Erst recht geht es nicht an, dass jemand Steuern zu bezahlen hat, obschon er dazu nicht in der Lage ist. Aus dem Leistungsfähigkeitsprinzip nicht direkt hervor geht jedoch, um wie viel die Steuer zunehmen muss, wenn das Einkommen um einen bestimmten Betrag steigt. \n\nDem kantonalen Gesetzgeber kommt hier eine grosse Gestaltungsfreiheit zu. Unzulässig sind indes degressive Tarife, die per definitionem eine Besteuerung entgegen der wirtschaftlichen Leistungsfähigkeit bewirken und zu Wertungswidersprüchen führen. Das gilt auch für die Vermögenssteuertarife. Die angefochtenen Tarife verstossen somit, soweit sie für höhere Einkommen und Vermögen einen niedrigeren  Durchschnittssteuersatz vorsehen als für tiefere Einkommen und Vermögen, gegen das Leistungsfähigkeitsprinzip und gegen den  allgemeinen Gleichheitssatz.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196215"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196216]\n[%15]\n[!In welchem Zeitpunkt sind die Bonuszahlungen unter dem Aspekt der beherrschenden Stellung der beiden Empfänger realisiert worden?]\nMariano ist Eigentümer von 75 Prozent des Aktienbestandes der Yera AG. Er ist Präsident der Gesellschaft, seine Ehefrau Fabienne zeichnet als Mitglied des Verwaltungsrates. Im Geschäftsabschluss 1998 verbuchte die Yera AG unter der Bezeichnung \"Lohnnachträge, Bonus\" den Betrag von Fr. 191'500 erfolgswirksam (Gegenkonto: Transitorische Passiven), zahlte hingegen Mariano den Betrag von brutto Fr. 105'600 und Fabienne denjenigen von brutto Fr. 85'600 erst am 31. März 1999 aus.\n\nNachdem diese Zahlungen in die ordentliche Veranlagungsverfügung 1999/2000 (Bemessungsjahre 1997 und 1998) des Ehepaares keinen Eingang gefunden hatten, erliess die kantonale Verwaltung für die direkte Bundessteuer eine Nachsteuerverfügung. Gegenstand dieser Verfügung bildete neben den Salärnachzahlungen auch ein unversteuerter Autoprivatanteil. Die steuerpflichtigen Ehegatten Mariano und Fabienne wurden ferner wegen vollendeter Steuerhinterziehung gebüsst. Die von Mariano und Fabienne gegen die Nachsteuer- und Steuerstrafverfügung erhobene Einsprache wurde von der kantonalen Verwaltung für die direkte Bundessteuer abgewiesen. \nDas Verwaltungsgericht des Kantons Schwyz wies die Beschwerde hinsichtlich des Autoprivatanteils ab, betrachtete die Lohnnachzahlungen dagegen als im Jahr 1999 realisiert und hiess die Beschwerde insoweit gut.\n===\nLesen Sie dazu auch das Urteil vom 17. Oktober 2012 sowie den BGE 105 I b 238 im Lernraum.\n[$Kann eine unselbständig erwerbende Person dank ihrer beherrschenden Stellung in der Arbeitgeberfirma den Zeitpunkt der Auszahlung ihres Arbeitsentgelts nach Belieben bestimmen, so kann von dem für unselbständiges Erwerbseinkommen geltenden Grundsatz der Besteuerung im Auszahlungszeitpunkt nur in eigentlichen Missbrauchsfällen abgewichen werden. Fehlen in einem solchen Fall unternehmerische Gründe für eine Auszahlung erst nach dem Zeitraum, für den die Arbeitsleistung erbracht wurde, so ist dieser wirtschaftlich nicht einleuchtende Zeitpunkt irrelevant. Das Salär kann indes auch bei beherrschender Stellung nicht vor dem Zeitpunkt besteuert werden, in welchem der Unselbstständigerwerbende einen hinreichend qualifizierbaren Rechtsanspruch darauf erworben hat. \n\nGrundsätzlich ist für die Einkommensbesteuerung der Zeitpunkt entscheidend, in welchem die steuerpflichtige Person einen festen Rechtsanspruch auf die Leistung erwirbt, über den sie tatsächlich verfügen kann. Nicht massgebend ist der Forderungserwerb, wenn die Befriedigung des Anspruchs unsicher ist; in diesem Fall ist mit der Besteuerung bis zur tatsächlichen Erfüllung zuzuwarten (BGE 105 I b 238 E. 4a, S. 242, mit Hinweisen). Bei Geldleistungen wird allerdings regelmässig auf den Zeitpunkt der Auszahlung abgestellt, so insbesondere für unselbständiges Erwerbseinkommen (Urteil 2A.388/1998 vom 3. Mai 2000 E. 3c, pub/. in: StR 55, 509, mit Hinweis). Kann hingegen eine unselbständig erwerbende Person dank ihrer beherrschenden Stellung in der Arbeitgeberfirma den Zeitpunkt der Auszahlung oder Gutschrift ihres Arbeitsentgelts nach Belieben bestimmen, und fehlen in einem solchen Fall unternehmerische Gründe für eine Auszahlung oder Gutschrift erst nach dem Zeitraum, für den die Arbeitsleistung erbracht wurde, so ist dieser wirtschaftlich nicht einleuchtende Zeitpunkt irrelevant (Urteil 2A.471/2003 vom 16. Juni 2004 E. 2.3). Denn es ist an sich einleuchtend, dass eine aufgrund des Geschäftsergebnisses festgesetzte Salär nach- bzw. Bonuszahlung erst nach dessen definitiver  Kenntnisnahme konkretisiert werden kann. Entsprechend wurden diese Zahlungen in der Yera AG als transitorische Passiven (recte: antizipative Passiven, nämlich Aufwand des alten Jahres, der erst im neuen Jahr ausbezahlt wird, vgl. Schweizer Handbuch der Wirtschaftsprüfung, Bd. 1, 1998, S. 167, unter Hinweis darauf, dass die Rechnungslegungspraxis die Unterscheidung zwischen transitorischen und antizipativen Aktien bzw. Passiven nicht macht) verbucht. \nAus dieser - korrekten - Verbuchung darf aber nicht abgeleitet werden, die Beschwerdegegner hätten schon Ende 1998 hinreichend quantifizierbare Rechtsansprüche gehabt, über die sie tatsächlich verfügen konnten. Entsprechend vermag die Auffassung der Eidgenössischen Steuerverwaltung in ihrer Stellungnahme zuhanden der Vorinstanz vom 24. August 2007 nicht zu überzeugen, wonach in solchen Fällen das Erfordernis der Bestimmtheit oder Bestimmbarkeit des Arbeitsentgelts durch die beherrschende Stellung des Empfängers ersetzt werde. Die Antwort, wie ein solcherart quantifizierter Anspruch abtretbar sein soll, bleibt sie jedenfalls schuldig (vgl. auch die Bemerkungen von M Simonek, in: Die steuerrechtliche Rechtsprechung\ndes Bundesgerichts im Jahre 2004, ASA 75 (2006/07) 3f zum Urteil 2A.47 l/2003 vom 16. Juni 2004). Im Urteil 2A. 113/2007 vom 8. November 2007 (E. 3.1.2) wurde sogar bei zugesicherten Boni, über die vor der Fälligkeit nicht verfügt werden konnte, die Realisierung im Zeitpunkt der Auszahlung angenommen.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "15",
+      "instruction": "In welchem Zeitpunkt sind die Bonuszahlungen unter dem Aspekt der beherrschenden Stellung der beiden Empfänger realisiert worden?",
+      "body": "Mariano ist Eigentümer von 75 Prozent des Aktienbestandes der Yera AG. Er ist Präsident der Gesellschaft, seine Ehefrau Fabienne zeichnet als Mitglied des Verwaltungsrates. Im Geschäftsabschluss 1998 verbuchte die Yera AG unter der Bezeichnung \"Lohnnachträge, Bonus\" den Betrag von Fr. 191'500 erfolgswirksam (Gegenkonto: Transitorische Passiven), zahlte hingegen Mariano den Betrag von brutto Fr. 105'600 und Fabienne denjenigen von brutto Fr. 85'600 erst am 31. März 1999 aus.\n\nNachdem diese Zahlungen in die ordentliche Veranlagungsverfügung 1999/2000 (Bemessungsjahre 1997 und 1998) des Ehepaares keinen Eingang gefunden hatten, erliess die kantonale Verwaltung für die direkte Bundessteuer eine Nachsteuerverfügung. Gegenstand dieser Verfügung bildete neben den Salärnachzahlungen auch ein unversteuerter Autoprivatanteil. Die steuerpflichtigen Ehegatten Mariano und Fabienne wurden ferner wegen vollendeter Steuerhinterziehung gebüsst. Die von Mariano und Fabienne gegen die Nachsteuer- und Steuerstrafverfügung erhobene Einsprache wurde von der kantonalen Verwaltung für die direkte Bundessteuer abgewiesen. \nDas Verwaltungsgericht des Kantons Schwyz wies die Beschwerde hinsichtlich des Autoprivatanteils ab, betrachtete die Lohnnachzahlungen dagegen als im Jahr 1999 realisiert und hiess die Beschwerde insoweit gut.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Lesen Sie dazu auch das Urteil vom 17. Oktober 2012 sowie den BGE 105 I b 238 im Lernraum.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Kann eine unselbständig erwerbende Person dank ihrer beherrschenden Stellung in der Arbeitgeberfirma den Zeitpunkt der Auszahlung ihres Arbeitsentgelts nach Belieben bestimmen, so kann von dem für unselbständiges Erwerbseinkommen geltenden Grundsatz der Besteuerung im Auszahlungszeitpunkt nur in eigentlichen Missbrauchsfällen abgewichen werden. Fehlen in einem solchen Fall unternehmerische Gründe für eine Auszahlung erst nach dem Zeitraum, für den die Arbeitsleistung erbracht wurde, so ist dieser wirtschaftlich nicht einleuchtende Zeitpunkt irrelevant. Das Salär kann indes auch bei beherrschender Stellung nicht vor dem Zeitpunkt besteuert werden, in welchem der Unselbstständigerwerbende einen hinreichend qualifizierbaren Rechtsanspruch darauf erworben hat. \n\nGrundsätzlich ist für die Einkommensbesteuerung der Zeitpunkt entscheidend, in welchem die steuerpflichtige Person einen festen Rechtsanspruch auf die Leistung erwirbt, über den sie tatsächlich verfügen kann. Nicht massgebend ist der Forderungserwerb, wenn die Befriedigung des Anspruchs unsicher ist; in diesem Fall ist mit der Besteuerung bis zur tatsächlichen Erfüllung zuzuwarten (BGE 105 I b 238 E. 4a, S. 242, mit Hinweisen). Bei Geldleistungen wird allerdings regelmässig auf den Zeitpunkt der Auszahlung abgestellt, so insbesondere für unselbständiges Erwerbseinkommen (Urteil 2A.388/1998 vom 3. Mai 2000 E. 3c, pub/. in: StR 55, 509, mit Hinweis). Kann hingegen eine unselbständig erwerbende Person dank ihrer beherrschenden Stellung in der Arbeitgeberfirma den Zeitpunkt der Auszahlung oder Gutschrift ihres Arbeitsentgelts nach Belieben bestimmen, und fehlen in einem solchen Fall unternehmerische Gründe für eine Auszahlung oder Gutschrift erst nach dem Zeitraum, für den die Arbeitsleistung erbracht wurde, so ist dieser wirtschaftlich nicht einleuchtende Zeitpunkt irrelevant (Urteil 2A.471/2003 vom 16. Juni 2004 E. 2.3). Denn es ist an sich einleuchtend, dass eine aufgrund des Geschäftsergebnisses festgesetzte Salär nach- bzw. Bonuszahlung erst nach dessen definitiver  Kenntnisnahme konkretisiert werden kann. Entsprechend wurden diese Zahlungen in der Yera AG als transitorische Passiven (recte: antizipative Passiven, nämlich Aufwand des alten Jahres, der erst im neuen Jahr ausbezahlt wird, vgl. Schweizer Handbuch der Wirtschaftsprüfung, Bd. 1, 1998, S. 167, unter Hinweis darauf, dass die Rechnungslegungspraxis die Unterscheidung zwischen transitorischen und antizipativen Aktien bzw. Passiven nicht macht) verbucht. \nAus dieser - korrekten - Verbuchung darf aber nicht abgeleitet werden, die Beschwerdegegner hätten schon Ende 1998 hinreichend quantifizierbare Rechtsansprüche gehabt, über die sie tatsächlich verfügen konnten. Entsprechend vermag die Auffassung der Eidgenössischen Steuerverwaltung in ihrer Stellungnahme zuhanden der Vorinstanz vom 24. August 2007 nicht zu überzeugen, wonach in solchen Fällen das Erfordernis der Bestimmtheit oder Bestimmbarkeit des Arbeitsentgelts durch die beherrschende Stellung des Empfängers ersetzt werde. Die Antwort, wie ein solcherart quantifizierter Anspruch abtretbar sein soll, bleibt sie jedenfalls schuldig (vgl. auch die Bemerkungen von M Simonek, in: Die steuerrechtliche Rechtsprechung\ndes Bundesgerichts im Jahre 2004, ASA 75 (2006/07) 3f zum Urteil 2A.47 l/2003 vom 16. Juni 2004). Im Urteil 2A. 113/2007 vom 8. November 2007 (E. 3.1.2) wurde sogar bei zugesicherten Boni, über die vor der Fälligkeit nicht verfügt werden konnte, die Realisierung im Zeitpunkt der Auszahlung angenommen.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196216"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196217]\n[%16]\n[!Wann sind die folgenden Einkommen zugeflossen?]\n===\nDer gemäss Arbeitsvertrag vereinbarte 13. Monatslohn für 2018 wird erst im Januar 2019 ausbezahlt.\n[$Der Rechtsanspruch besteht bereits 2013. Demzufolge ist der 13. Monatslohn dem Erwerbseinkommen 2018 zuzurechnen.]\n===\nDie Gratifikation, welche eine freiwillige Leistung des Arbeitgebers darstellt und für die 2018 geleistete Arbeit ausgerichtet wird, wird erst im Januar 2019 beschlossen und ausbezahlt.\n[$Der Rechtsanspruch entsteht erst 2019. Die Gratifikation 2018 ist dem Erwerbseinkommen 2019 zuzurechnen.]\n===\nDer Antrag über die Verwendung des Bilanzgewinnes 2018 mit einer Dividende wird an der Generalversammlung 2019 gutgeheissen und die Dividende anschliessend ausbezahlt.\n[$Der Rechtsanspruch auf die Dividende entsteht erst mit dem GV Beschluss. Es handelt sich um Einkommen 2019.]\n===\nEin Maurer hat 2018 und 2019 an seinem Haus eigenhändig Arbeiten im Wert von Fr. 30'000 vorgenommen. 2020 verkauft er das Haus, wobei ihm der Erwerber den Wert der Arbeiten im Rahmen des Kaufpreises vergütet.\n[$Der Unselbständigerwerbende, der ein Haus zur Selbstnutzung mit Eigenleistungen baut, übt bei dessen Erstellung keine auf geldwerten Erwerb ausgerichtete Tätigkeit aus und erzielt somit kein Einkommen. Hingegen betreibt der Unselbständigerwerbende, der ein Haus für den Weiterverkauf mit Eigenleistungen baut, einen der Einkommenssteuer unterliegenden Nebenerwerb. Das Einkommen wird jedoch erst im Zeitpunkt der  Veräusserung erzielt, wenn der Mehrwert in einen Geldwert umgewandelt wird.\nSiehe dazu BGE 108 lb 227 im Lernraum. ]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "16",
+      "instruction": "Wann sind die folgenden Einkommen zugeflossen?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Der gemäss Arbeitsvertrag vereinbarte 13. Monatslohn für 2018 wird erst im Januar 2019 ausbezahlt.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Der Rechtsanspruch besteht bereits 2013. Demzufolge ist der 13. Monatslohn dem Erwerbseinkommen 2018 zuzurechnen.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Die Gratifikation, welche eine freiwillige Leistung des Arbeitgebers darstellt und für die 2018 geleistete Arbeit ausgerichtet wird, wird erst im Januar 2019 beschlossen und ausbezahlt.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Der Rechtsanspruch entsteht erst 2019. Die Gratifikation 2018 ist dem Erwerbseinkommen 2019 zuzurechnen.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Der Antrag über die Verwendung des Bilanzgewinnes 2018 mit einer Dividende wird an der Generalversammlung 2019 gutgeheissen und die Dividende anschliessend ausbezahlt.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Der Rechtsanspruch auf die Dividende entsteht erst mit dem GV Beschluss. Es handelt sich um Einkommen 2019.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ein Maurer hat 2018 und 2019 an seinem Haus eigenhändig Arbeiten im Wert von Fr. 30'000 vorgenommen. 2020 verkauft er das Haus, wobei ihm der Erwerber den Wert der Arbeiten im Rahmen des Kaufpreises vergütet.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Der Unselbständigerwerbende, der ein Haus zur Selbstnutzung mit Eigenleistungen baut, übt bei dessen Erstellung keine auf geldwerten Erwerb ausgerichtete Tätigkeit aus und erzielt somit kein Einkommen. Hingegen betreibt der Unselbständigerwerbende, der ein Haus für den Weiterverkauf mit Eigenleistungen baut, einen der Einkommenssteuer unterliegenden Nebenerwerb. Das Einkommen wird jedoch erst im Zeitpunkt der  Veräusserung erzielt, wenn der Mehrwert in einen Geldwert umgewandelt wird.\nSiehe dazu BGE 108 lb 227 im Lernraum.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196217"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196218]\n[%17]\n[!Welche der folgenden Aufwendungen sind Gewinnungskosten? ]\nSiehe dazu Gewinnungskosten Art. 26 und 32 DBG, Art. 9 Abs. 1 und 3 StHG und die entsprechenden kantonalen Bestimmungen.\n===\nZimmerabzug eines Lehrers in dessen Privatwohnung.\n[$Sofern folgende Voraussetzungen erfüllt sind, handelt es sich beim Arbeitszimmer des Lehrers um Gewinnungskosten:\n✓ Am Arbeitsort steht kein Raum zur Verfügung;\n✓ der Raum muss in der Wohnstätte ausgeschieden sein.]\n===\nErneuerung der Fassade einer Liegenschaft.\n[$Es handelt sich dabei um typische Unterhaltskosten, mithin Gewinnungskosten.]\n===\nErstellung von neuen Garagen anstelle der bisherigen Parkplätze zwecks Erzielung eines höheren Mietertrages.\n[$Es handelt sich bei den Garagen um wertvermehrende Anlagekosten, die keine Gewinnungskosten darstellen.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "17",
+      "instruction": "Welche der folgenden Aufwendungen sind Gewinnungskosten?",
+      "body": "Siehe dazu Gewinnungskosten Art. 26 und 32 DBG, Art. 9 Abs. 1 und 3 StHG und die entsprechenden kantonalen Bestimmungen.[$Sofern folgende Voraussetzungen erfüllt sind, handelt es sich beim Arbeitszimmer des Lehrers um Gewinnungskosten:\n✓ Am Arbeitsort steht kein Raum zur Verfügung;\n✓ der Raum muss in der Wohnstätte ausgeschieden sein.]",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Zimmerabzug eines Lehrers in dessen Privatwohnung.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Sofern folgende Voraussetzungen erfüllt sind, handelt es sich beim Arbeitszimmer des Lehrers um Gewinnungskosten:\n Am Arbeitsort steht kein Raum zur Verfügung;\n der Raum muss in der Wohnstätte ausgeschieden sein.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Erneuerung der Fassade einer Liegenschaft.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Es handelt sich dabei um typische Unterhaltskosten, mithin Gewinnungskosten.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Erstellung von neuen Garagen anstelle der bisherigen Parkplätze zwecks Erzielung eines höheren Mietertrages.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Es handelt sich bei den Garagen um wertvermehrende Anlagekosten, die keine Gewinnungskosten darstellen.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196218"
+      ]
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '✓'",
+        "line": 9,
+        "column": 0,
+        "errorLine": "✓ Am Arbeitsort steht kein Raum zur Verfügung;"
+      },
+      {
+        "message": "token recognition error at: '✓'",
+        "line": 10,
+        "column": 0,
+        "errorLine": "✓ der Raum muss in der Wohnstätte ausgeschieden sein.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196219]\n[%18]\n[!Sind die Kostenabziehbar, und ggf. in welchem Umfang?]\nLeon ist Handelsschullehrer bei der AKAD. In seiner Steuererklärung macht er nebst den üblichen Berufsauslagen (Pauschalabzug, auswärtige Verpflegung, Fahrtkosten) folgende Auslagen geltend:\n\n12'000 Fotokopien von Texten a 10 Rappen: Fr . 1'200\n10 Ordner a Fr. 5: Fr . 50\nSchreibmaterial gemäss Belegen: Fr . 195\nallgemeines Büromaterial gemäss Belegen: Fr . 655\nfinanzmathematischer Rechner: Fr . 150\nPC inkl. Software und Drucker: Fr. 2'000\nExterner Speicher für Datensicherung: Fr. 200\nArbeitsraum in der Wohnung inkl. NK pro Jahr: Fr. 3'000\n===\n[$Nur die zur Erzielung des Einkommens unmittelbar notwendigen Aufwendungen können abgezogen werden. Indizien sind die Notwendigkeit einer Ausgabe zur Einkommenserzielung, die Verursachung der Ausgabe durch die Einkommenserzielung, die Intensität des Kausalzusammenhangs zwischen einer Ausgabe und der Einkommenserzielung und die Adäquanz des Zusammenhangs zwischen einer Ausgabe und der  Einkommenserzielung.\n\nBezüglich des Abzugs oben erwähnter Kosten für Fotokopien, Ordner usw. ist analog dem für privatrechtliche Arbeitsverhältnisse geltenden Art. 327a OR vom Grundsatz auszugehen, dass der Arbeitgeber dem\nArbeitnehmer alle durch die Ausführung der Arbeit notwendig entstehenden Auslagen zu ersetzen hat.\n\nGestützt auf diese arbeitsrechtliche Regelung wird Lehrern nach der Rechtsprechung kein Abzug für Materialaufwendungen gewährt.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "18",
+      "instruction": "Sind die Kostenabziehbar, und ggf. in welchem Umfang?",
+      "body": "Leon ist Handelsschullehrer bei der AKAD. In seiner Steuererklärung macht er nebst den üblichen Berufsauslagen (Pauschalabzug, auswärtige Verpflegung, Fahrtkosten) folgende Auslagen geltend:\n\n12'000 Fotokopien von Texten a 10 Rappen: Fr . 1'200\n10 Ordner a Fr. 5: Fr . 50\nSchreibmaterial gemäss Belegen: Fr . 195\nallgemeines Büromaterial gemäss Belegen: Fr . 655\nfinanzmathematischer Rechner: Fr . 150\nPC inkl. Software und Drucker: Fr. 2'000\nExterner Speicher für Datensicherung: Fr. 200\nArbeitsraum in der Wohnung inkl. NK pro Jahr: Fr. 3'000",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Nur die zur Erzielung des Einkommens unmittelbar notwendigen Aufwendungen können abgezogen werden. Indizien sind die Notwendigkeit einer Ausgabe zur Einkommenserzielung, die Verursachung der Ausgabe durch die Einkommenserzielung, die Intensität des Kausalzusammenhangs zwischen einer Ausgabe und der Einkommenserzielung und die Adäquanz des Zusammenhangs zwischen einer Ausgabe und der  Einkommenserzielung.\n\nBezüglich des Abzugs oben erwähnter Kosten für Fotokopien, Ordner usw. ist analog dem für privatrechtliche Arbeitsverhältnisse geltenden Art. 327a OR vom Grundsatz auszugehen, dass der Arbeitgeber dem\nArbeitnehmer alle durch die Ausführung der Arbeit notwendig entstehenden Auslagen zu ersetzen hat.\n\nGestützt auf diese arbeitsrechtliche Regelung wird Lehrern nach der Rechtsprechung kein Abzug für Materialaufwendungen gewährt.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196219"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196220]\n[%19]\n[!Stellen diese Auslagen abzugsfähige Gewinnungskosten dar?]\nDer Geschäftsführer eines Hotels macht geltend, angesichts des gehobenen Stils des Hauses habe er beruflich bedingt einen höheren Kleideraufwand. Er weist sich mit Quittungen über den Kauf von Anzügen, Hemden, Krawatten, Socken und Schuhen von jährlich Fr. 9'000 aus.\n===\n[$Siehe dazu auch BGE 100 lb 480 im Lernraum \n(Abgrenzung zwischen Gewinnungskosten und Kosten des Unterhalts des Steuerpflichtigen und seiner Familie).\n\nIm Umfang, da die Kleiderkosten für die Arbeit des Geschäftsführers des Hotels berufsbedingt notwendig sind, stellen sie abzugsfähige Berufsauslagen dar. Darüber hinausgehende Auslagen stellen sog. Standesauslagen dar, die nicht als Gewinnungskosten geltend gemacht werden können. Zu den nicht abzugsfähigen Unterhaltskosten gehören auch Mehrauslagen, die durch eine gehobene, besonders aufwendige Lebensführung\ndes Steuerpflichtigen entstehen; sie können auch dann nicht zu den Gewinnungskosten gerechnet werden, wenn der Steuerpflichtige glaubt, sie wegen seiner beruflichen Stellung auf sich nehmen zu müssen.\nVergleichbar ist u.a. die Situation eines Rechtsanwalts, von dem während seiner beruflichen Tätigkeit angemessene Kleidung erwartet wird.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "19",
+      "instruction": "Stellen diese Auslagen abzugsfähige Gewinnungskosten dar?",
+      "body": "Der Geschäftsführer eines Hotels macht geltend, angesichts des gehobenen Stils des Hauses habe er beruflich bedingt einen höheren Kleideraufwand. Er weist sich mit Quittungen über den Kauf von Anzügen, Hemden, Krawatten, Socken und Schuhen von jährlich Fr. 9'000 aus.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Siehe dazu auch BGE 100 lb 480 im Lernraum \n(Abgrenzung zwischen Gewinnungskosten und Kosten des Unterhalts des Steuerpflichtigen und seiner Familie).\n\nIm Umfang, da die Kleiderkosten für die Arbeit des Geschäftsführers des Hotels berufsbedingt notwendig sind, stellen sie abzugsfähige Berufsauslagen dar. Darüber hinausgehende Auslagen stellen sog. Standesauslagen dar, die nicht als Gewinnungskosten geltend gemacht werden können. Zu den nicht abzugsfähigen Unterhaltskosten gehören auch Mehrauslagen, die durch eine gehobene, besonders aufwendige Lebensführung\ndes Steuerpflichtigen entstehen; sie können auch dann nicht zu den Gewinnungskosten gerechnet werden, wenn der Steuerpflichtige glaubt, sie wegen seiner beruflichen Stellung auf sich nehmen zu müssen.\nVergleichbar ist u.a. die Situation eines Rechtsanwalts, von dem während seiner beruflichen Tätigkeit angemessene Kleidung erwartet wird.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196220"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196221]\n[%20]\n[!Welche Berufsauslagen sind ihm zu gewähren?]\nBruno Siegental verheiratet, wohnhaft in Kloten, Betriebsbuchhalter in einem Industriebetrieb in Dietikon, macht folgende Berufsauslagen geltend:\n\n- Pauschalabzug (3 Prozent vom Nettolohn von Fr. 80'000): Fr. 2‘400\n- Autokilometer: 4 Fahrten a 20 km an 220 Tagen =: Fr. 11'800\n17'600 km zu 70 bzw. 50 Rappen\n- Arbeitszimmer in der eigenen Wohnung: Fr. 2'000\n- Anschaffungskosten eines PC: Fr. 3'000\n\nTotal Berufsauslagen: Fr. 19'200\n\nDen Abzug für die Autokosten begründet er damit, dass ihm das Mittagessen in einem Restaurant zu teuer sei und er einen kurzen Mittagsschlaf zur Erholung brauche. Ausserdem sei es vom erzieherischen Standpunkt aus wichtig, dass er seine Kinder über Mittag sehen könne. Das Arbeitszimmer benötige er, weil er in einem hektischen Betrieb arbeite und daher häufig Arbeiten zuhause erledige, wo er die notwendige Ruhe dazu finde. \n\nDazu sei er auch auf einen privaten PC angewiesen, an welchem ihm der Arbeitgeber keinen Beitrag geleistet habe. Dass der Büroraum ausschliesslich für berufliche Zwecke genutzt werde, könne ohne weiteres belegt werden. Ein Bahnabonnement der SBB mit Halbtax würde Fr. 2'000 pro Jahr kosten.\n===\n[$Pauschalabzug: \nDie Pauschale kann ohne Nachweis abgezogen werden. \n\nAutokosten: \nZu den Gewinnungskosten unselbständig Erwerbender zählen unter anderem die notwendigen Kosten der Fahrt zwischen Wohn- und Arbeitsort. Aufwendungen bzw. Mehrkosten für die Fahrten mit dem eigenen Privatwagen sind nach fester Praxis nur dann abzugsfähige (notwendige) Berufsauslagen, wenn dem Beschwerdeführer die Benützung eines öffentlichen Verkehrsmittels nicht zugemutet werden kann. Dies trifft insbesondere dann zu, wenn der Steuerpflichtige gebrechlich oder kränklich ist, die nächste Haltestelle eines öffentlichen Verkehrsmittels weit von der Wohn- oder Arbeitsstätte entfernt ist, Arbeitsbeginn und Arbeitsschluss zu nicht-fahrplanmässigen Zeiten erfolgen oder der Steuerpflichtige für seine Berufsausübung auf ein Motorfahrzeug angewiesen ist. Im Weiteren wird die Frage der Zumutbarkeit der Benützung öffentlicher Verkehrsmittel von der erzielten täglichen Zeitersparnis abhängig gemacht: Voraussetzung für den Einsatz des Autos für den Weg zur Arbeit ist für Steuerpflichtige ein Zeitgewinn von einer Stunde pro Tag. In anderen Kantonen muss die Zeitersparnis 1 ½ oder sogar 2 Stunden betragen. \n• Siehe dazu auch „Wegleitung zur Steuererklärung 2020“ im Lernraum\n\nDem Steuerpflichtigen werden im vorliegenden Sachverhalt lediglich die Kosten für das öffentliche Verkehrsmittel (SBB) zwischen Kloten und Dietikon von Fr. 2 '000 als Gewinnungskosten zugestanden. Arbeitszimmer und privater PC: Vorliegend ist unbestritten, dass dem Steuerpflichtigen von seiner Arbeitgeberin ein für seine Tätigkeit geeignetes Büro zur Verfügung gestellt wird. Wenn der Steuerpflichtige aus Rücksicht auf seine Familie oder wegen des hektischen Arbeitsklimas bestrebt ist, gewisse geschäftliche Arbeiten zu Hause zu erledigen, so ist das sein gutes Recht und auch ohne weiteres verständlich. Da der am Abend und an Wochenenden geleistete Teil der Berufsarbeit aber ausschliesslich aus persönlichen Gründen zu Hause verrichtet, besteht kein Anspruch auf einen Arbeitszimmerabzug.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "20",
+      "instruction": "Welche Berufsauslagen sind ihm zu gewähren?",
+      "body": "Bruno Siegental verheiratet, wohnhaft in Kloten, Betriebsbuchhalter in einem Industriebetrieb in Dietikon, macht folgende Berufsauslagen geltend:\n\n- Pauschalabzug (3 Prozent vom Nettolohn von Fr. 80'000): Fr. 2‘400\n- Autokilometer: 4 Fahrten a 20 km an 220 Tagen =: Fr. 11'800\n17'600 km zu 70 bzw. 50 Rappen\n- Arbeitszimmer in der eigenen Wohnung: Fr. 2'000\n- Anschaffungskosten eines PC: Fr. 3'000\n\nTotal Berufsauslagen: Fr. 19'200\n\nDen Abzug für die Autokosten begründet er damit, dass ihm das Mittagessen in einem Restaurant zu teuer sei und er einen kurzen Mittagsschlaf zur Erholung brauche. Ausserdem sei es vom erzieherischen Standpunkt aus wichtig, dass er seine Kinder über Mittag sehen könne. Das Arbeitszimmer benötige er, weil er in einem hektischen Betrieb arbeite und daher häufig Arbeiten zuhause erledige, wo er die notwendige Ruhe dazu finde. \n\nDazu sei er auch auf einen privaten PC angewiesen, an welchem ihm der Arbeitgeber keinen Beitrag geleistet habe. Dass der Büroraum ausschliesslich für berufliche Zwecke genutzt werde, könne ohne weiteres belegt werden. Ein Bahnabonnement der SBB mit Halbtax würde Fr. 2'000 pro Jahr kosten.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Pauschalabzug: \nDie Pauschale kann ohne Nachweis abgezogen werden. \n\nAutokosten: \nZu den Gewinnungskosten unselbständig Erwerbender zählen unter anderem die notwendigen Kosten der Fahrt zwischen Wohn- und Arbeitsort. Aufwendungen bzw. Mehrkosten für die Fahrten mit dem eigenen Privatwagen sind nach fester Praxis nur dann abzugsfähige (notwendige) Berufsauslagen, wenn dem Beschwerdeführer die Benützung eines öffentlichen Verkehrsmittels nicht zugemutet werden kann. Dies trifft insbesondere dann zu, wenn der Steuerpflichtige gebrechlich oder kränklich ist, die nächste Haltestelle eines öffentlichen Verkehrsmittels weit von der Wohn- oder Arbeitsstätte entfernt ist, Arbeitsbeginn und Arbeitsschluss zu nicht-fahrplanmässigen Zeiten erfolgen oder der Steuerpflichtige für seine Berufsausübung auf ein Motorfahrzeug angewiesen ist. Im Weiteren wird die Frage der Zumutbarkeit der Benützung öffentlicher Verkehrsmittel von der erzielten täglichen Zeitersparnis abhängig gemacht: Voraussetzung für den Einsatz des Autos für den Weg zur Arbeit ist für Steuerpflichtige ein Zeitgewinn von einer Stunde pro Tag. In anderen Kantonen muss die Zeitersparnis 1 ½ oder sogar 2 Stunden betragen. \n• Siehe dazu auch „Wegleitung zur Steuererklärung 2020“ im Lernraum\n\nDem Steuerpflichtigen werden im vorliegenden Sachverhalt lediglich die Kosten für das öffentliche Verkehrsmittel (SBB) zwischen Kloten und Dietikon von Fr. 2 '000 als Gewinnungskosten zugestanden. Arbeitszimmer und privater PC: Vorliegend ist unbestritten, dass dem Steuerpflichtigen von seiner Arbeitgeberin ein für seine Tätigkeit geeignetes Büro zur Verfügung gestellt wird. Wenn der Steuerpflichtige aus Rücksicht auf seine Familie oder wegen des hektischen Arbeitsklimas bestrebt ist, gewisse geschäftliche Arbeiten zu Hause zu erledigen, so ist das sein gutes Recht und auch ohne weiteres verständlich. Da der am Abend und an Wochenenden geleistete Teil der Berufsarbeit aber ausschliesslich aus persönlichen Gründen zu Hause verrichtet, besteht kein Anspruch auf einen Arbeitszimmerabzug.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196221"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:196222]\n[%21]\n[!Welche Kosten für die folgenden Bildungsmassnahmen bei Unselbständigerwerbenden sind steuerlich abzugsfähig?]\n===\nEine Primarschullehrerin bildet sich zur Kantonsschullehrerin aus\n[$Die Auslagen der Primarschullehrerin, welche sich zur Mittelschullehrerin ausbildet, stellen Aus- und nicht Weiterbildungskosten dar und sind folglich steuerlich nicht abzugsfähig.]\n===\nEine Primarschullehrerin besucht einen Sprachkurs in England.\n[$Wenn Englisch kein Unterrichtsfach ist, dann handelt es sich um Ausbildungskosten, andernfalls um Weiterbildungskosten.]\n===\nEin Maler besucht kaufmännische Kurse im Zusammenhang mit seiner Tätigkeit als technischer Kaufmann.\n[$Entscheidend ist die tatsächliche Stellung des Malers im Beruf. Wenn für einen gelernten Maler die Vertiefung des kaufmännischen Wissens im Hinblick auf den Aufgabenbereich eines technischen Kaufmanns notwendig ist, um den gesteigerten Anforderungen des Arbeitgebers zu entsprechen, liegen Weiterbildungskosten vor.]\n===\nEin Prokurist kauft einen PC mit Software.\n[$Die Kosten können teilweise als Gewinnungskosten abgezogen werden. Ein Drittel der Kosten wird in der Regel als Privatanteil nicht zum Abzug zugelassen.]\n===\nEine Hausfrau hat regelmässige Auftritte als Sängerin, für welche sie eine steuerpflichtige Gage erhält und damit einkommenssteuerpflichtig im Nebenerwerb ist. Im Zusammenhang mit ihrer Erwerbstätigkeit nimmt sie Gesangsunterricht.\n[$Es handelt sich um Weiterbildungskosten, welche als Gewinnungskosten abzugsfähig sind.]\n===\nEin kaufmännischer Lehrling nimmt Tennisunterricht mit dem Ziel, Tennisprofi zu werden\n[$Es handelt sich um Ausbildungskosten, welche nicht als Gewinnungskosten abzugsfähig sind. Kosten für eine sportliche Betätigung, die dem Hobbybereich zuzurechnen sind, stellen keine abzugsfähigen Ausbildungskosten dar.\nSiehe dazu auch  im Weiteren das Kreisschreiben 42 zum Bundesgesetz über die steuerliche Behandlung berufsorientierter Aus- und Weiterbildungskosten im Lernraum, welches auf den 1. Januar 2016 in Kraft tritt und dem Ziel der Förderung der beruflichen Bildung dient. Damit werden auch bestehende Abgrenzungsschwierigkeiten zwischen Aus- und Weiterbildung behoben.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "21",
+      "instruction": "Welche Kosten für die folgenden Bildungsmassnahmen bei Unselbständigerwerbenden sind steuerlich abzugsfähig?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Eine Primarschullehrerin bildet sich zur Kantonsschullehrerin aus",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Die Auslagen der Primarschullehrerin, welche sich zur Mittelschullehrerin ausbildet, stellen Aus- und nicht Weiterbildungskosten dar und sind folglich steuerlich nicht abzugsfähig.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Eine Primarschullehrerin besucht einen Sprachkurs in England.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wenn Englisch kein Unterrichtsfach ist, dann handelt es sich um Ausbildungskosten, andernfalls um Weiterbildungskosten.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ein Maler besucht kaufmännische Kurse im Zusammenhang mit seiner Tätigkeit als technischer Kaufmann.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Entscheidend ist die tatsächliche Stellung des Malers im Beruf. Wenn für einen gelernten Maler die Vertiefung des kaufmännischen Wissens im Hinblick auf den Aufgabenbereich eines technischen Kaufmanns notwendig ist, um den gesteigerten Anforderungen des Arbeitgebers zu entsprechen, liegen Weiterbildungskosten vor.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ein Prokurist kauft einen PC mit Software.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Die Kosten können teilweise als Gewinnungskosten abgezogen werden. Ein Drittel der Kosten wird in der Regel als Privatanteil nicht zum Abzug zugelassen.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Eine Hausfrau hat regelmässige Auftritte als Sängerin, für welche sie eine steuerpflichtige Gage erhält und damit einkommenssteuerpflichtig im Nebenerwerb ist. Im Zusammenhang mit ihrer Erwerbstätigkeit nimmt sie Gesangsunterricht.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Es handelt sich um Weiterbildungskosten, welche als Gewinnungskosten abzugsfähig sind.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ein kaufmännischer Lehrling nimmt Tennisunterricht mit dem Ziel, Tennisprofi zu werden",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Es handelt sich um Ausbildungskosten, welche nicht als Gewinnungskosten abzugsfähig sind. Kosten für eine sportliche Betätigung, die dem Hobbybereich zuzurechnen sind, stellen keine abzugsfähigen Ausbildungskosten dar.\nSiehe dazu auch  im Weiteren das Kreisschreiben 42 zum Bundesgesetz über die steuerliche Behandlung berufsorientierter Aus- und Weiterbildungskosten im Lernraum, welches auf den 1. Januar 2016 in Kraft tritt und dem Ziel der Förderung der beruflichen Bildung dient. Damit werden auch bestehende Abgrenzungsschwierigkeiten zwischen Aus- und Weiterbildung behoben.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "196222"
+      ]
+    }
+  }
+]

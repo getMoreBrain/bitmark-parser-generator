@@ -1,0 +1,635 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:231023]\n[#Adjektive und ihr Gegenteil]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/card2brain/adjektive_gegenteil/web-resources/images/card2brain_adjektive_cover.png]\n[@externalId:e-adjektive-und-ihr-gegenteil_j8w9e1wgpxdm]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231023"
+      ],
+      "title": "Adjektive und ihr Gegenteil",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/card2brain/adjektive_gegenteil/web-resources/images/card2brain_adjektive_cover.png"
+      ],
+      "externalId": [
+        "e-adjektive-und-ihr-gegenteil_j8w9e1wgpxdm"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231024]\n==\ngross\n==\nklein\n==",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "==\ngross\n==\nklein\n==",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231024"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '\\n==\n'",
+        "line": 4,
+        "column": 5,
+        "errorLine": "gross"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231025]\nspitz\n==\nstumpf",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "spitz\n==\nstumpf",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231025"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231026]\nsauber\n==\nschmutzig",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "sauber\n==\nschmutzig",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231026"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231027]\nrund\n==\neckig",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "rund\n==\neckig",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231027"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231028]\nganz\n==\nkaputt",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "ganz\n==\nkaputt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231028"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231029]\nleise\n==\nlaut",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "leise\n==\nlaut",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231029"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231030]\nweich\n==\nhart",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "weich\n==\nhart",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231030"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231031]\nhell\n==\ndunkel",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "hell\n==\ndunkel",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231031"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231032]\nvoll\n==\nleer",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "voll\n==\nleer",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231032"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231033]\nnah\n==\nfern",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "nah\n==\nfern",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231033"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231034]\ntrocken\n==\nnass",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "trocken\n==\nnass",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231034"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231035]\ngross\n==\nklein",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "gross\n==\nklein",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231035"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231036]\nneu\n==\nalt",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "neu\n==\nalt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231036"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231037]\nleicht\n==\nschwer",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "leicht\n==\nschwer",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231037"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231038]\ndick\n==\ndünn",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "dick\n==\ndünn",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231038"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231039]\nglänzend\n==\nmatt",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "glänzend\n==\nmatt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231039"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231040]\ngesund\n==\nkrank",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "gesund\n==\nkrank",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231040"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231041]\nschwierig\n==\neinfach",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "schwierig\n==\neinfach",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231041"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231042]\ngrosszügig\n==\ngeizig",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "grosszügig\n==\ngeizig",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231042"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231043]\nrichtig\n==\nfalsch",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "richtig\n==\nfalsch",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231043"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231044]\nlangsam\n==\nschnell",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "langsam\n==\nschnell",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231044"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231045]\nspannend\n==\nlangweilig",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "spannend\n==\nlangweilig",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231045"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231046]\nnotwendig\n==\nüberflüssig",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "notwendig\n==\nüberflüssig",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231046"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231047]\ngut\n==\nschlecht",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "gut\n==\nschlecht",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231047"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231048]\ntraurig\n==\nfröhlich",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "traurig\n==\nfröhlich",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231048"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231049]\nsatt\n==\nhungrig",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "satt\n==\nhungrig",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231049"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231050]\nstark\n==\nschwach",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "stark\n==\nschwach",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231050"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231051]\nhoch\n==\ntief",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "hoch\n==\ntief",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231051"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231052]\nkrumm\n==\ngerade",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "krumm\n==\ngerade",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231052"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231053]\nklar\n==\ntrüb",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "klar\n==\ntrüb",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231053"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231054]\nschmal\n==\nbreit",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "schmal\n==\nbreit",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231054"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231055]\noffen\n==\ngeschlossen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "offen\n==\ngeschlossen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231055"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231056]\nfest\n==\nflüssig",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "fest\n==\nflüssig",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231056"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231057]\nhässlich\n==\nschön",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "hässlich\n==\nschön",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231057"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231058]\nbequem\n==\nunbequem",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "bequem\n==\nunbequem",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231058"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231059]\nriesig\n==\nwinzig",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "riesig\n==\nwinzig",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231059"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231060]\nbillig\n==\nteuer",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "billig\n==\nteuer",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231060"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231061]\nreich\n==\narm",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "reich\n==\narm",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231061"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231062]\nmodern\n==\naltmodisch",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "modern\n==\naltmodisch",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231062"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231063]\npraktisch\n==\nunpraktisch",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "praktisch\n==\nunpraktisch",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231063"
+      ]
+    }
+  }
+]

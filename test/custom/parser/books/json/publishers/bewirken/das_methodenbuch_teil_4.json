@@ -1,0 +1,827 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:234988]\n[#Das Methodenbuch für digitalen Unterricht Teil 4]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_cover.png]\n[@externalId:e-teil-4-umsetzung-und-nchste-s_oziwvpwrmemj]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234988"
+      ],
+      "title": "Das Methodenbuch für digitalen Unterricht Teil 4",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_cover.png"
+      ],
+      "externalId": [
+        "e-teil-4-umsetzung-und-nchste-s_oziwvpwrmemj"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:234989]\n[#Deine Umsetzung in der Praxis\nAgendabeispiel — Inhaltlicher Einstieg]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "234989"
+      ],
+      "title": "Deine Umsetzung in der Praxis\nAgendabeispiel — Inhaltlicher Einstieg"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:234990]\n[%][%Methoden sinnvoll im Unterricht einsetzen]\nDu hast nun eine Menge Methoden an der Hand, die du für Online-Unterricht nutzen und natürlich auch beliebig abwandeln kannst. Doch Methoden allein machen noch keinen guten Unterricht. Zu Beginn dieses Buches haben wir dir bereits eine kleine Einführung gegeben, was du bei Aufbau und Rahmung für den Online-Unterricht beachten solltest. Um das Ganze etwas konkreter werden zu lassen, stellen wir dir im Folgenden zwei beispielhafte Stundenabläufe vor. Um nicht komplett auf der Metaebene zu verbleiben, haben wir sie anhand von zwei konkreten Anwendungen dargestellt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Du hast nun eine Menge Methoden an der Hand, die du für Online-Unterricht nutzen und natürlich auch beliebig abwandeln kannst. Doch Methoden allein machen noch keinen guten Unterricht. Zu Beginn dieses Buches haben wir dir bereits eine kleine Einführung gegeben, was du bei Aufbau und Rahmung für den Online-Unterricht beachten solltest. Um das Ganze etwas konkreter werden zu lassen, stellen wir dir im Folgenden zwei beispielhafte Stundenabläufe vor. Um nicht komplett auf der Metaebene zu verbleiben, haben wir sie anhand von zwei konkreten Anwendungen dargestellt.",
+      "id": [
+        "234990"
+      ],
+      "lead": "Methoden sinnvoll im Unterricht einsetzen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:234991]\nUm die Lernenden in den Kontakt miteinander zu bringen, gehören für uns eigentlich zu jeder guten Lerneinheit auch Phasen in Breakout-Räumen, also Kleingruppen dazu. Nach dem Einstieg und der Vertiefung oder Reflexion in Breakout-Räumen können Phasen der Kollektivierung im Klassenkontext folgen, um einen gemeinsamen Bezug und eine gemeinsame Ergebnissicherung zu ermöglichen. Diese Struktur findest du auch in unseren Beispiel-Sessions wieder. Diese Beispiele dienen dir dazu, ein paar konkrete Gedanken für die Verwendung der Methoden im Lernkontext zu haben. Es sind viele andere und veränderte Anwendungen denkbar. Die Methoden in diesem Buch sind ansonsten sehr flexibel auch in diversen Lernkonzepten und Prozessen einsetzbar, die auf Eigenverantwortung, Kreativität, Reflexionsprozessen, Flipped-Classroom Ansätzen und ähnlichen Prämissen basieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Um die Lernenden in den Kontakt miteinander zu bringen, gehören für uns eigentlich zu jeder guten Lerneinheit auch Phasen in Breakout-Räumen, also Kleingruppen dazu. Nach dem Einstieg und der Vertiefung oder Reflexion in Breakout-Räumen können Phasen der Kollektivierung im Klassenkontext folgen, um einen gemeinsamen Bezug und eine gemeinsame Ergebnissicherung zu ermöglichen. Diese Struktur findest du auch in unseren Beispiel-Sessions wieder. Diese Beispiele dienen dir dazu, ein paar konkrete Gedanken für die Verwendung der Methoden im Lernkontext zu haben. Es sind viele andere und veränderte Anwendungen denkbar. Die Methoden in diesem Buch sind ansonsten sehr flexibel auch in diversen Lernkonzepten und Prozessen einsetzbar, die auf Eigenverantwortung, Kreativität, Reflexionsprozessen, Flipped-Classroom Ansätzen und ähnlichen Prämissen basieren.",
+      "id": [
+        "234991"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:234992]\n[%][%LernSessions zu inhaltlichem Einstieg & Vertiefung]\nEine gute Anwendungsmöglichkeit für die Methoden in diesem Buch sind inhaltliche Sessions, die dazu anregen, sich mit dem Thema aus der eigenen Perspektive auseinanderzusetzen. Diese Form von Unterrichts- oder Workshopstruktur ist geeignet, einen Einstieg in einen neuen Themenkomplex zu gestalten oder das Selbstlernen mit einer inhaltlich vertiefenden Session zu unterstützen. Gerade bei Einheiten, in denen du Inhalte vermitteln willst, ist es wichtig, Motivation zu erzeugen oder Relevanz zu vermitteln, warum dieses Thema in der Lebenswelt der Schüler*innen oder anderer Menschen von Bedeutung ist. Im besten Fall entsteht dabei früh ein Diskurs oder ein Austausch der Schüler*innen untereinander, dabei werden direkt die unterschiedlichen Blickwinkel deutlich, die dann im Folgenden dazu einladen, erforscht und untersucht zu werden. Wichtig ist es für sich zu entscheiden, ob die Session für sich steht oder ob du im Vorfeld bereits Lernmaterialien oder Impulse nutzt, etwa um die Schüler*innen bereits mit dem Thema vertraut zu machen oder sie mit Reflexionsfragen einzuladen, über etwas nachzudenken. Außerdem solltest du im Vorfeld entscheiden, wie stark die Stunde einen Prozess einläuten oder begleiten soll, der danach weiterläuft. Sollten die Schüler*innen an dem Thema weiterarbeiten, bietet es sich an, in der Stunde bereits Lerngruppen zu formen, Themenblöcke zuzuordnen oder erste Schritte in den Prozess zu gehen, dann steht die Stunde nicht für sich, sondern ist besser in dein Lernkonzept eingebettet.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Eine gute Anwendungsmöglichkeit für die Methoden in diesem Buch sind inhaltliche Sessions, die dazu anregen, sich mit dem Thema aus der eigenen Perspektive auseinanderzusetzen. Diese Form von Unterrichts- oder Workshopstruktur ist geeignet, einen Einstieg in einen neuen Themenkomplex zu gestalten oder das Selbstlernen mit einer inhaltlich vertiefenden Session zu unterstützen. Gerade bei Einheiten, in denen du Inhalte vermitteln willst, ist es wichtig, Motivation zu erzeugen oder Relevanz zu vermitteln, warum dieses Thema in der Lebenswelt der Schüler*innen oder anderer Menschen von Bedeutung ist. Im besten Fall entsteht dabei früh ein Diskurs oder ein Austausch der Schüler*innen untereinander, dabei werden direkt die unterschiedlichen Blickwinkel deutlich, die dann im Folgenden dazu einladen, erforscht und untersucht zu werden. Wichtig ist es für sich zu entscheiden, ob die Session für sich steht oder ob du im Vorfeld bereits Lernmaterialien oder Impulse nutzt, etwa um die Schüler*innen bereits mit dem Thema vertraut zu machen oder sie mit Reflexionsfragen einzuladen, über etwas nachzudenken. Außerdem solltest du im Vorfeld entscheiden, wie stark die Stunde einen Prozess einläuten oder begleiten soll, der danach weiterläuft. Sollten die Schüler*innen an dem Thema weiterarbeiten, bietet es sich an, in der Stunde bereits Lerngruppen zu formen, Themenblöcke zuzuordnen oder erste Schritte in den Prozess zu gehen, dann steht die Stunde nicht für sich, sondern ist besser in dein Lernkonzept eingebettet.",
+      "id": [
+        "234992"
+      ],
+      "lead": "LernSessions zu inhaltlichem Einstieg & Vertiefung"
+    }
+  },
+  {
+    "bitmark": "[.remark]\n[@id:234993]\n[%][%Agendabeispiel 1: Inhaltlicher Einstieg – Beispielthema: Einnerungskultur & Deutsche Geschichte]\n**09:50 Uhr** – Ankommen (bei Onlinesession Videokonferenzraum öffnen)\n**10:00 Uhr** – Gemeinsamer Start\n• Check-In/Warm-Up – z.B. mit __Drei Hashtags__: Welche nationalen/internationalen Gedenktage kennst du?\n**10:05 Uhr** – Einstieg ins Thema\n• Austausch in __Breakout-Räumen__ (3er bis 4er Gruppen). Leitenden Fragen z.B.:\n• Welche Formen gibt es, um an historische Ereignisse zu erinnern?\n• Wie habt ihr selbst verschiedene Formen der Erinnerung erlebt?\n• An welche historischen Ereignisse wird in Deutschland besonders viel erinnert und auf welche Art?\n• Wichtige Stichpunkte werden von den Schüler*innen auf einem Board-Tool oder in einem Dokument gesammelt.\n• Im Anschluss gemeinsam auf die Ergebnisse blicken. Du kannst Punkte herausgreifen, nachfragen oder ergänzen.\n**10:30 Uhr** – Thema vertiefen & Inhalte erarbeiten\n• __Breakout-Räume__: Schüler*innen erhalten Material (z.B. Videoschnipsel, Texte) und erarbeiten in ihren Gruppen eine Definition von Erinnerungskultur und halten diese auf einem Board-Tool fest.\n**11:00 Uhr** – Kurze Pause oder Energizer\n**11:05 Uhr** – Kritische Auseinandersetzung\n• Mit einer __stillen Diskussion__ erörtern die Schüler*innen die Vor- und Nachteile der jeweiligen Definitionen.\n**11:20 Uhr** – Zusammenfassung (durch dich oder Schüler*innen)\n**11:25 Uhr** – Reflexion & Check-Out\n• __Klebezettel-Methode__: Was möchte ich für mich mitnehmen?\n**11:30 Uhr** – ENDE",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "**09:50 Uhr** – Ankommen (bei Onlinesession Videokonferenzraum öffnen)\n**10:00 Uhr** – Gemeinsamer Start\n• Check-In/Warm-Up – z.B. mit __Drei Hashtags__: Welche nationalen/internationalen Gedenktage kennst du?\n**10:05 Uhr** – Einstieg ins Thema\n• Austausch in __Breakout-Räumen__ (3er bis 4er Gruppen). Leitenden Fragen z.B.:\n• Welche Formen gibt es, um an historische Ereignisse zu erinnern?\n• Wie habt ihr selbst verschiedene Formen der Erinnerung erlebt?\n• An welche historischen Ereignisse wird in Deutschland besonders viel erinnert und auf welche Art?\n• Wichtige Stichpunkte werden von den Schüler*innen auf einem Board-Tool oder in einem Dokument gesammelt.\n• Im Anschluss gemeinsam auf die Ergebnisse blicken. Du kannst Punkte herausgreifen, nachfragen oder ergänzen.\n**10:30 Uhr** – Thema vertiefen & Inhalte erarbeiten\n• __Breakout-Räume__: Schüler*innen erhalten Material (z.B. Videoschnipsel, Texte) und erarbeiten in ihren Gruppen eine Definition von Erinnerungskultur und halten diese auf einem Board-Tool fest.\n**11:00 Uhr** – Kurze Pause oder Energizer\n**11:05 Uhr** – Kritische Auseinandersetzung\n• Mit einer __stillen Diskussion__ erörtern die Schüler*innen die Vor- und Nachteile der jeweiligen Definitionen.\n**11:20 Uhr** – Zusammenfassung (durch dich oder Schüler*innen)\n**11:25 Uhr** – Reflexion & Check-Out\n• __Klebezettel-Methode__: Was möchte ich für mich mitnehmen?\n**11:30 Uhr** – ENDE",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234993"
+      ],
+      "lead": "Agendabeispiel 1: Inhaltlicher Einstieg – Beispielthema: Einnerungskultur & Deutsche Geschichte"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:234994]\n[#Deine Umsetzung in der Praxis\nAgendabeispiel — Reflexion]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "234994"
+      ],
+      "title": "Deine Umsetzung in der Praxis\nAgendabeispiel — Reflexion"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:234995]\n[%][%Reflexionssessions in einem Lernprozess]\nWenn du eine Session gestaltest, die sehr stark in einen selbstgesteuerten Lernprozess eingebettet ist oder die mit einem Flipped-Classroom Ansatz verknüpft ist, solltest du vor allem für einen guten Austausch und Kontextualisierung sorgen. Dabei bieten sich vor allem Reflexionsfragen oder Aufgaben in kleineren Gruppen an, eine Diskussion in der Großgruppe oder visuelle Kollektivierungen sowie Lernpräsentationen können aber auch dazu beitragen, Inhalte für alle sichtbar zu machen und vorher fragmentiertes Wissen für alle verständlich sichtbar zu machen. Unser zweites Anwendungsbeispiel zeigt, wie die vorgestellten Methoden sinnvoll in einer solchen Session genutzt werden können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn du eine Session gestaltest, die sehr stark in einen selbstgesteuerten Lernprozess eingebettet ist oder die mit einem Flipped-Classroom Ansatz verknüpft ist, solltest du vor allem für einen guten Austausch und Kontextualisierung sorgen. Dabei bieten sich vor allem Reflexionsfragen oder Aufgaben in kleineren Gruppen an, eine Diskussion in der Großgruppe oder visuelle Kollektivierungen sowie Lernpräsentationen können aber auch dazu beitragen, Inhalte für alle sichtbar zu machen und vorher fragmentiertes Wissen für alle verständlich sichtbar zu machen. Unser zweites Anwendungsbeispiel zeigt, wie die vorgestellten Methoden sinnvoll in einer solchen Session genutzt werden können.",
+      "id": [
+        "234995"
+      ],
+      "lead": "Reflexionssessions in einem Lernprozess"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:234996]\n[%][%Was ist vor der Session passiert?]\nDie Lernenden hatten im Vorfeld die Aufgabe, sich eine kurze (vorgegebene) Dokumentation auf YouTube zum Thema „Poetry Slam“ anzuschauen und zu wichtigen Fragestellungen ihre Antworten in einem kollaborativen Lernboard oder Dokument zu sammeln (z.B.: Welche Regeln gibt es beim Poetry Slam? Welche Texte hört man bei einem Poetry Slam? Wer tritt bei einem Poetry Slam auf?). Darüber hinaus sollten sie sich selbstständig auf YouTube einige Poetry-Slam-Performances anschauen und ihre Lieblings-Performance auf einem BoardTool verankern und dort begründen, warum sie diesen Clip ausgewählt haben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Lernenden hatten im Vorfeld die Aufgabe, sich eine kurze (vorgegebene) Dokumentation auf YouTube zum Thema „Poetry Slam“ anzuschauen und zu wichtigen Fragestellungen ihre Antworten in einem kollaborativen Lernboard oder Dokument zu sammeln (z.B.: Welche Regeln gibt es beim Poetry Slam? Welche Texte hört man bei einem Poetry Slam? Wer tritt bei einem Poetry Slam auf?). Darüber hinaus sollten sie sich selbstständig auf YouTube einige Poetry-Slam-Performances anschauen und ihre Lieblings-Performance auf einem BoardTool verankern und dort begründen, warum sie diesen Clip ausgewählt haben.",
+      "id": [
+        "234996"
+      ],
+      "lead": "Was ist vor der Session passiert?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:234997]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_11/bewirken_kapitel11_1.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_11/bewirken_kapitel11_1.png|",
+      "id": [
+        "234997"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.statement]\n[@id:234998]\nHaltepunkt in einem Lernprozess mit Elementen von Selbstorganisation & Flipped Classroom",
+    "bit": {
+      "type": "statement",
+      "format": "bitmark--",
+      "body": "Haltepunkt in einem Lernprozess mit Elementen von Selbstorganisation & Flipped Classroom",
+      "id": [
+        "234998"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.remark]\n[@id:234999]\n[%][%Agendabeispiel 2: Reflexion & Austausch bei selbstorganisiertem Lernen – Beispielthema: Poetry Slam]\n**09:50 – Ankommen** (bei Onlinesession Videokonferenzraum öffnen)\n**10:00 – Check-In in Breakout-Räumen**\n• Was ist dir beim Schauen der Poetry Slams aufgefallen?\n• Wie ging es dir dabei/welche Texte haben dich berührt?\n**10:15 – Lerninhalte/Erkenntnisse aus selbstständiger Arbeitsphase kollektivieren**\n• Das Board/Dokument mit wichtigen Aspekten von Poetry Slams gemeinsam anschauen – Fragen klären, Ergänzungen machen.\n**10:20 – Verknüpfung mit bestehendem Wissen und kritische Auseinandersetzung**\n• __Fishbowl-Diskussion__: Welche Unterschiede bestehen zwischen Poetry Slam und klassischer Lyrik? Welche Vor- und Nachteile bieten die verschiedenen Formen?\n**10:35 – Organisatorisches**\n• Es werden vertiefende Themen in der Klasse verteilt, zu denen kleine Präsentationen für einen __Gallery Walk__ erarbeitet werden sollen (z.B. Geschichte des Slams, verschiedene Formate von Slams, Kritik an der Poetry-Slam-Kultur).\n**10:40 – Check-Out**\n• Blitzlicht zum Ankreuzen\n**10:45 – ENDE**",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "**09:50 – Ankommen** (bei Onlinesession Videokonferenzraum öffnen)\n**10:00 – Check-In in Breakout-Räumen**\n• Was ist dir beim Schauen der Poetry Slams aufgefallen?\n• Wie ging es dir dabei/welche Texte haben dich berührt?\n**10:15 – Lerninhalte/Erkenntnisse aus selbstständiger Arbeitsphase kollektivieren**\n• Das Board/Dokument mit wichtigen Aspekten von Poetry Slams gemeinsam anschauen – Fragen klären, Ergänzungen machen.\n**10:20 – Verknüpfung mit bestehendem Wissen und kritische Auseinandersetzung**\n• __Fishbowl-Diskussion__: Welche Unterschiede bestehen zwischen Poetry Slam und klassischer Lyrik? Welche Vor- und Nachteile bieten die verschiedenen Formen?\n**10:35 – Organisatorisches**\n• Es werden vertiefende Themen in der Klasse verteilt, zu denen kleine Präsentationen für einen __Gallery Walk__ erarbeitet werden sollen (z.B. Geschichte des Slams, verschiedene Formate von Slams, Kritik an der Poetry-Slam-Kultur).\n**10:40 – Check-Out**\n• Blitzlicht zum Ankreuzen\n**10:45 – ENDE**",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "234999"
+      ],
+      "lead": "Agendabeispiel 2: Reflexion & Austausch bei selbstorganisiertem Lernen – Beispielthema: Poetry Slam"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:301678]\n[#Gemeinsam Schule verändern\nDeine nächsten Schritte …]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "301678"
+      ],
+      "title": "Gemeinsam Schule verändern\nDeine nächsten Schritte …"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301679]\n[%][%Auf dem Weg, Schule zu verändern]\nWenn du diese Seite liest, hast du dich vielleicht einmal durch unser Buch gearbeitet und viele neue Ideen gesammelt oder du bist neugierig direkt hier hingesprungen. Diese Neugierde ist es auch, die uns jeden Tag antreibt und uns Mut macht, dass sich Bildung und Lernen verändern können.\nDein Mut und Engagement können einen Unterschied machen und wir hoffen, dass ein paar Impulse oder Gedanken aus diesem Buch auch dir auf deinem Weg ein Stück weiterhelfen. Wir möchten hier noch ein paar Tipps und Erfahrungen für deine nächsten Schritte mit dir teilen. Darunter vier konkrete Anlässe, jetzt in deinem Unterricht und deiner Schule Veränderung anzustoßen sowie acht ganz konkrete Tipps aus unserer Erfahrung mit Veränderungsprozessen in Schulen und Organisationen, die dir auf deiner Reise helfen können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn du diese Seite liest, hast du dich vielleicht einmal durch unser Buch gearbeitet und viele neue Ideen gesammelt oder du bist neugierig direkt hier hingesprungen. Diese Neugierde ist es auch, die uns jeden Tag antreibt und uns Mut macht, dass sich Bildung und Lernen verändern können.\nDein Mut und Engagement können einen Unterschied machen und wir hoffen, dass ein paar Impulse oder Gedanken aus diesem Buch auch dir auf deinem Weg ein Stück weiterhelfen. Wir möchten hier noch ein paar Tipps und Erfahrungen für deine nächsten Schritte mit dir teilen. Darunter vier konkrete Anlässe, jetzt in deinem Unterricht und deiner Schule Veränderung anzustoßen sowie acht ganz konkrete Tipps aus unserer Erfahrung mit Veränderungsprozessen in Schulen und Organisationen, die dir auf deiner Reise helfen können.",
+      "id": [
+        "301679"
+      ],
+      "lead": "Auf dem Weg, Schule zu verändern"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301680]\n[%][%]Deine Heldenreise\nVielleicht erinnerst du dich an die Methode „Story Pitchen“, bei der die Idee der „Heldenreise“ zum Erzählen einer guten Geschichte genutzt wird? Die vielen Veränderungen, die sich durch online und hybriden Unterricht ergeben haben, legen den Grundstein für eine ganz eigene Geschichte. Zum ersten Mal seit vielen Jahrzenten stehen wir und viele Schulen vor einer echten Bedrohung und Herausforderung von außen. Um diese Herausforderung zu bestehen, hast du dich auf den Weg gemacht, Dinge ausprobiert, Lösungen gefunden, dein Bestes gegeben und bist jetzt an diesem Punkt mit unserem Buch in deinen Händen gelandet. Vielleicht erinnerst du dich an gute Geschichten, in denen die Protagonisten durch Krisen gehen, über sich hinauswachsen und dann in ihre alte Heimat zurückkehren. Wenn sie dort ankommen, hat sich vieles verändert und ihre Heimat ist nicht mehr wie vorher, aber auch sie selbst haben sich verändert und sind an den Herausforderungen gewachsen. Das Gleiche können wir alle in Schule erleben, wenn es heißt, nach der Krisenzeit wieder in einen normalen Alltag zu finden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Deine Heldenreise\nVielleicht erinnerst du dich an die Methode „Story Pitchen“, bei der die Idee der „Heldenreise“ zum Erzählen einer guten Geschichte genutzt wird? Die vielen Veränderungen, die sich durch online und hybriden Unterricht ergeben haben, legen den Grundstein für eine ganz eigene Geschichte. Zum ersten Mal seit vielen Jahrzenten stehen wir und viele Schulen vor einer echten Bedrohung und Herausforderung von außen. Um diese Herausforderung zu bestehen, hast du dich auf den Weg gemacht, Dinge ausprobiert, Lösungen gefunden, dein Bestes gegeben und bist jetzt an diesem Punkt mit unserem Buch in deinen Händen gelandet. Vielleicht erinnerst du dich an gute Geschichten, in denen die Protagonisten durch Krisen gehen, über sich hinauswachsen und dann in ihre alte Heimat zurückkehren. Wenn sie dort ankommen, hat sich vieles verändert und ihre Heimat ist nicht mehr wie vorher, aber auch sie selbst haben sich verändert und sind an den Herausforderungen gewachsen. Das Gleiche können wir alle in Schule erleben, wenn es heißt, nach der Krisenzeit wieder in einen normalen Alltag zu finden.",
+      "id": [
+        "301680"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.statement]\n[@id:301681]\n4 Anlässe für Veränderung & 8 konkrete Tipps für deine Reise …",
+    "bit": {
+      "type": "statement",
+      "format": "bitmark--",
+      "body": "4 Anlässe für Veränderung & 8 konkrete Tipps für deine Reise …",
+      "id": [
+        "301681"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&audio-link]\n[@id:301682]\nDas sprechende Buch\n[&audio-link:https://bewirken.org/buch-audioplayer/?file=26&title=Gemeinsam%20Schule%20ver%C3%A4ndern]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Das sprechende Buch",
+      "id": [
+        "301682"
+      ],
+      "resource": {
+        "type": "audio-link",
+        "audioLink": {
+          "provider": "org/buch-audioplayer/?file=26&title=Gemeinsam%20Schule%20ver%C3%A4ndern",
+          "url": "https://bewirken.org/buch-audioplayer/?file=26&title=Gemeinsam%20Schule%20ver%C3%A4ndern",
+          "duration": "",
+          "autoplay": true
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301683]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_12/bewirken_kapitel12_1.png|@width:200|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_12/bewirken_kapitel12_1.png|@width:200|",
+      "id": [
+        "301683"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301684]\n[%][%Feier deinen Erfolg]\nDu und deine Kolleg*innen seid die Held*innen dieser Geschichte. Nur durch euch haben eure Schüler*innen durch diese Zeit gefunden und ihr habt es ermöglicht, dass Schule und Raum für sozialen Austausch weiterhin möglich waren. Feiert diesen Erfolg, ihr habt es euch verdient. Nehmt alle Erfahrungen, Erlebnisse und Geschichten aus dieser Zeit mit in euren großen Rucksack, damit ihr für den weiteren Weg gut ausgerüstet seid. Ihr habt euch verändert, Schule hat sich verändert, ihr könnt nicht mehr in den selben Modus zurückkehren, den es einmal gab. Auch eure Schüler*innen sind andere, sie haben Erfahrungen gemacht, Dinge über das Lernen gelernt, die jetzt im neuen Normalzustand wichtig werden. Eine gute Chance, gemeinsam ein neues Abenteuer zu erleben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Du und deine Kolleg*innen seid die Held*innen dieser Geschichte. Nur durch euch haben eure Schüler*innen durch diese Zeit gefunden und ihr habt es ermöglicht, dass Schule und Raum für sozialen Austausch weiterhin möglich waren. Feiert diesen Erfolg, ihr habt es euch verdient. Nehmt alle Erfahrungen, Erlebnisse und Geschichten aus dieser Zeit mit in euren großen Rucksack, damit ihr für den weiteren Weg gut ausgerüstet seid. Ihr habt euch verändert, Schule hat sich verändert, ihr könnt nicht mehr in den selben Modus zurückkehren, den es einmal gab. Auch eure Schüler*innen sind andere, sie haben Erfahrungen gemacht, Dinge über das Lernen gelernt, die jetzt im neuen Normalzustand wichtig werden. Eine gute Chance, gemeinsam ein neues Abenteuer zu erleben.",
+      "id": [
+        "301684"
+      ],
+      "lead": "Feier deinen Erfolg"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301685]\n[%][%Lerne aus deinen Fehlern]\nHeld*innen sind nicht perfekt, sie machen Fehler, sie erkennen ihre Schwächen an und nutzen dieses Wissen, um am Ende die Herausforderung zu meistern. Egal wo du gerade stehst in deiner eigenen Geschichte, vergiss nicht, dass du gemeinsam mit deinen Schüler*innen lernen kannst. Schule kann und muss nicht perfekt sein, auch dein Unterricht nicht, je mehr Raum für Neues und auch für Fehler da ist, desto eher bist du auf dem richtigen Weg, deinen Schüler*innen vorzuleben, was es heißt zu lernen. Denk immer daran: Auch Held*innen haben Wegbegleiter*innen, die ihnen helfen, Orientierung zu finden, Ideen zu entwickeln oder neuen Mut zu fassen. Suche dir solche Menschen. Auch wir möchten dich auf deinem Weg begleiten und stehen gern an deiner Seite.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Held*innen sind nicht perfekt, sie machen Fehler, sie erkennen ihre Schwächen an und nutzen dieses Wissen, um am Ende die Herausforderung zu meistern. Egal wo du gerade stehst in deiner eigenen Geschichte, vergiss nicht, dass du gemeinsam mit deinen Schüler*innen lernen kannst. Schule kann und muss nicht perfekt sein, auch dein Unterricht nicht, je mehr Raum für Neues und auch für Fehler da ist, desto eher bist du auf dem richtigen Weg, deinen Schüler*innen vorzuleben, was es heißt zu lernen. Denk immer daran: Auch Held*innen haben Wegbegleiter*innen, die ihnen helfen, Orientierung zu finden, Ideen zu entwickeln oder neuen Mut zu fassen. Suche dir solche Menschen. Auch wir möchten dich auf deinem Weg begleiten und stehen gern an deiner Seite.",
+      "id": [
+        "301685"
+      ],
+      "lead": "Lerne aus deinen Fehlern"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:301686]\n[#Gemeinsam Schule verändern\nVier Abenteuer für Veränderung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "301686"
+      ],
+      "title": "Gemeinsam Schule verändern\nVier Abenteuer für Veränderung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:301687]\n[%1.]\n[##Neue Hard- & Software als Chance für ein neues Schulkonzept nutzen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "301687"
+      ],
+      "title": "Neue Hard- & Software als Chance für ein neues Schulkonzept nutzen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301688]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_12/bewirken_kapitel12_2.png|@width:200|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_12/bewirken_kapitel12_2.png|@width:200|",
+      "id": [
+        "301688"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301689]\nViele Schulen haben vor allem in den letzten Monaten angefangen, Unterrichtsräume, Schulorganisation und auch die Werkzeuge des Lernens zu digitalisieren. Tablet-Klassen, Schul-Clouds und digitale Stundenpläne werden langsam in vielen Schulen etabliert. Eine Entwicklung, die längst überfällig ist, aber vor der auch viele Sorge haben. Auf der einen Seite gibt es Bedenken zur praktischen technischen Umsetzung, den Umgang mit dieser Hard- und Software, dem Datenschutz und anderen Fragen der Administration und auf der anderen Seite steht die Frage, wie diese Veränderung das Lernen selbst verändert. Dabei wird schnell deutlich, dass es auf einige der ersten Fragen einfache Antworten gibt, auch wenn die Umsetzung Zeit und Ressourcen benötigt. Auf die Fragen nach der Veränderung des Lernens gibt es allerdings keine einfache Antwort. Deshalb erleben wir leider in vielen Schulen, dass diese Frage überhaupt nicht diskutiert wird. Zum Thema Digitalisierung wird gerne gesagt: „Wenn schlechte Prozesse digitalisiert werden, können auch nur schlechte digitale Prozesse entstehen.“ Für Schule bedeutet das übersetzt, dass digitale Tools alleine noch keine tiefgreifende (positive) Veränderung für das Lernen mit sich bringen. Wir haben zu Beginn des Buches über die veränderten Anforderungen an Lernen in einer digitalen Gesellschaft gesprochen. Dieses Abenteuer, für das wir gerade in vielen Schulen die Werkzeuge bekommen, beginnt jetzt und braucht neue Held*innen, die bereit sind, die Veränderung auch auf pädagogischer Ebene mitzugestalten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Viele Schulen haben vor allem in den letzten Monaten angefangen, Unterrichtsräume, Schulorganisation und auch die Werkzeuge des Lernens zu digitalisieren. Tablet-Klassen, Schul-Clouds und digitale Stundenpläne werden langsam in vielen Schulen etabliert. Eine Entwicklung, die längst überfällig ist, aber vor der auch viele Sorge haben. Auf der einen Seite gibt es Bedenken zur praktischen technischen Umsetzung, den Umgang mit dieser Hard- und Software, dem Datenschutz und anderen Fragen der Administration und auf der anderen Seite steht die Frage, wie diese Veränderung das Lernen selbst verändert. Dabei wird schnell deutlich, dass es auf einige der ersten Fragen einfache Antworten gibt, auch wenn die Umsetzung Zeit und Ressourcen benötigt. Auf die Fragen nach der Veränderung des Lernens gibt es allerdings keine einfache Antwort. Deshalb erleben wir leider in vielen Schulen, dass diese Frage überhaupt nicht diskutiert wird. Zum Thema Digitalisierung wird gerne gesagt: „Wenn schlechte Prozesse digitalisiert werden, können auch nur schlechte digitale Prozesse entstehen.“ Für Schule bedeutet das übersetzt, dass digitale Tools alleine noch keine tiefgreifende (positive) Veränderung für das Lernen mit sich bringen. Wir haben zu Beginn des Buches über die veränderten Anforderungen an Lernen in einer digitalen Gesellschaft gesprochen. Dieses Abenteuer, für das wir gerade in vielen Schulen die Werkzeuge bekommen, beginnt jetzt und braucht neue Held*innen, die bereit sind, die Veränderung auch auf pädagogischer Ebene mitzugestalten.",
+      "id": [
+        "301689"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301690]\n[%][%Fragen, die dir bei diesem Abenteuer helfen können:]\n• Wie können diese Werkzeuge den Schüler*innen ein selbstbestimmteres Lernen ermöglichen?\n• Wie kann ich externe und digitale Lernangebote als festen Bestandteil des Lernprozesses einbauen?\n• Wie können wir interaktiver an Themen und auch an dem gemeinsamen Wissen arbeiten?\n• Wie kann ich den Lernprozess oder Lernpfad der Schüler*-innen oder Gruppen digital besser sichtbar machen und damit auch besser unterstützen?\n• Wie können diese Werkzeuge und Möglichkeiten die Unterrichtsstruktur und vielleicht auch die Klassenstruktur aufbrechen?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Wie können diese Werkzeuge den Schüler*innen ein selbstbestimmteres Lernen ermöglichen?\n• Wie kann ich externe und digitale Lernangebote als festen Bestandteil des Lernprozesses einbauen?\n• Wie können wir interaktiver an Themen und auch an dem gemeinsamen Wissen arbeiten?\n• Wie kann ich den Lernprozess oder Lernpfad der Schüler*-innen oder Gruppen digital besser sichtbar machen und damit auch besser unterstützen?\n• Wie können diese Werkzeuge und Möglichkeiten die Unterrichtsstruktur und vielleicht auch die Klassenstruktur aufbrechen?",
+      "id": [
+        "301690"
+      ],
+      "lead": "Fragen, die dir bei diesem Abenteuer helfen können:"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:301691]\n[%2.]\n[## Neue Rollenerfahrungen & Erlebnisse von Lehrenden und Lernenden nutzen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "301691"
+      ],
+      "title": "Neue Rollenerfahrungen & Erlebnisse von Lehrenden und Lernenden nutzen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301692]\nDie Rolle als Lehrkraft ist schon immer eine sehr facettenreiche gewesen, die eigentlich viele verschiedene Rollen in einer großen Aufgabe vereint. Wissensvermittlung, Erziehung, Aufsicht und Betreuung, soziale und psychologische Unterstützung, Aufbereitung von Fachwissen, Beurteilung von Leistung und vieles mehr. In den letzten Monaten hat sich diese Rolle in vielen Fällen verändert und auch die Schwerpunkte haben sich stark verschoben. Auf einmal kamen auch digitale Administration, Entwickeln von neuen Unterrichts- und Schulkonzepten und die Begleitung der Selbstorganisation der Schüler*innen zu hause dazu. Auch für Schüler*innen und Eltern haben sich die Rollen verändert. Diese ungewollte Situation hat uns allen Erfahrungen ermöglicht, die uns in Zukunft helfen können, unsere Rollen neu oder anders zu definieren. Die Digitalisierung unserer Gesellschaft bringt es mit sich, dass die Rolle der Wissensvermittlung ein Auslaufmodell ist. Dies bedeutet auch, dass aus psychologischer und didaktischer Sicht die Bewertung von Leistung nicht alleine in unseren Händen liegen kann. Im Gegenteil – wir könnten die Eigenverantwortung und Selbstorganisation von Schüler*innen fördern, um uns den Druck von alleiniger Aufsicht und Koordination des Lernerfolgs zu nehmen und mehr Raum für andere Rollenaspekte zu erhalten (z.B. persönliche Begleitung). Ein spannender Versuch, bei dem wir dich gerne begleiten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Rolle als Lehrkraft ist schon immer eine sehr facettenreiche gewesen, die eigentlich viele verschiedene Rollen in einer großen Aufgabe vereint. Wissensvermittlung, Erziehung, Aufsicht und Betreuung, soziale und psychologische Unterstützung, Aufbereitung von Fachwissen, Beurteilung von Leistung und vieles mehr. In den letzten Monaten hat sich diese Rolle in vielen Fällen verändert und auch die Schwerpunkte haben sich stark verschoben. Auf einmal kamen auch digitale Administration, Entwickeln von neuen Unterrichts- und Schulkonzepten und die Begleitung der Selbstorganisation der Schüler*innen zu hause dazu. Auch für Schüler*innen und Eltern haben sich die Rollen verändert. Diese ungewollte Situation hat uns allen Erfahrungen ermöglicht, die uns in Zukunft helfen können, unsere Rollen neu oder anders zu definieren. Die Digitalisierung unserer Gesellschaft bringt es mit sich, dass die Rolle der Wissensvermittlung ein Auslaufmodell ist. Dies bedeutet auch, dass aus psychologischer und didaktischer Sicht die Bewertung von Leistung nicht alleine in unseren Händen liegen kann. Im Gegenteil – wir könnten die Eigenverantwortung und Selbstorganisation von Schüler*innen fördern, um uns den Druck von alleiniger Aufsicht und Koordination des Lernerfolgs zu nehmen und mehr Raum für andere Rollenaspekte zu erhalten (z.B. persönliche Begleitung). Ein spannender Versuch, bei dem wir dich gerne begleiten.",
+      "id": [
+        "301692"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301693]\n[%][%Fragen, die dir bei diesem Abenteuer helfen können:]\n• Welche Aspekte meiner Rolle haben sich verändert?\n• Was habe ich daraus bisher lernen können?\n• Wo haben Schüler*innen Teile meiner alten Rolle mit übernommen?\n• Bei welchen Aufgaben fühle ich mich wohl und wo brauche ich Unterstützung?\n• Was hat mir geholfen, die Eigenverantwortung meiner Schüler*innen zu erhöhen?\n• Was kann ich in Zukunft tun, um die Erwartungen an den Lernerfolg auch auf die Schüler*innen zu übertragen?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Welche Aspekte meiner Rolle haben sich verändert?\n• Was habe ich daraus bisher lernen können?\n• Wo haben Schüler*innen Teile meiner alten Rolle mit übernommen?\n• Bei welchen Aufgaben fühle ich mich wohl und wo brauche ich Unterstützung?\n• Was hat mir geholfen, die Eigenverantwortung meiner Schüler*innen zu erhöhen?\n• Was kann ich in Zukunft tun, um die Erwartungen an den Lernerfolg auch auf die Schüler*innen zu übertragen?",
+      "id": [
+        "301693"
+      ],
+      "lead": "Fragen, die dir bei diesem Abenteuer helfen können:"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:301694]\n[%3.]\n[##Selbstorganisation stärken und weiterentwickeln]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "301694"
+      ],
+      "title": "Selbstorganisation stärken und weiterentwickeln"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301695]\nSchule in der Corona Pandemie zu meistern, mutet wie der größte Schulversuch an, den wir in unserem Land (vielleicht sogar weltweit) je gesehen haben. Das Funktionieren von Schule und Lernen hatte auf einmal viele neue Voraussetzungen und verteilte sich auf neue Schultern und Prozesse, die erst erkundet, definiert und ausprobiert werden mussten. Viele Rückmeldungen aus den Schulen und von Lehrenden in unserer digitalen Schulakademie zeigen, dass die Schulverwaltungen und auch die Organisation Schule auf diese Krise nicht vorbereitet war und deshalb massiv überfordert ist mit der Gestaltung dieser herausfordernden Situation, die noch lange nach Ende der Pandemie spürbare Folgen hinterlassen wird.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Schule in der Corona Pandemie zu meistern, mutet wie der größte Schulversuch an, den wir in unserem Land (vielleicht sogar weltweit) je gesehen haben. Das Funktionieren von Schule und Lernen hatte auf einmal viele neue Voraussetzungen und verteilte sich auf neue Schultern und Prozesse, die erst erkundet, definiert und ausprobiert werden mussten. Viele Rückmeldungen aus den Schulen und von Lehrenden in unserer digitalen Schulakademie zeigen, dass die Schulverwaltungen und auch die Organisation Schule auf diese Krise nicht vorbereitet war und deshalb massiv überfordert ist mit der Gestaltung dieser herausfordernden Situation, die noch lange nach Ende der Pandemie spürbare Folgen hinterlassen wird.",
+      "id": [
+        "301695"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301696]\nEine große Welle der Schulentwicklung wird in den nächsten Monaten und Jahren einsetzen, wenn wir Zeit und Kraft haben, neues Wissen zu festigen. Ein zentraler Punkt, den wir überall als Erfolgsfaktor beobachtet haben, ist die Selbstorganisation und Eigenverantwortung der Schüler*innen. Dabei sehen wir Selbstorganisation nicht nur als Lernmodell und wichtigsten Faktor für das Lernen im digitalen Zeitalter, sondern auch als Voraussetzung für gute Schulentwicklung. Das heißt, es braucht Entscheidungskompetenz und Ressourcen vor Ort sowie gute Begleitung, um Veränderungen auch umsetzen zu können. Es ist also Zeit für eine Emanzipation im Lernen und in der Gestaltung von Schule vor Ort. Gemeinsam und partizipativ mit der ganzen Schulfamilie.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Eine große Welle der Schulentwicklung wird in den nächsten Monaten und Jahren einsetzen, wenn wir Zeit und Kraft haben, neues Wissen zu festigen. Ein zentraler Punkt, den wir überall als Erfolgsfaktor beobachtet haben, ist die Selbstorganisation und Eigenverantwortung der Schüler*innen. Dabei sehen wir Selbstorganisation nicht nur als Lernmodell und wichtigsten Faktor für das Lernen im digitalen Zeitalter, sondern auch als Voraussetzung für gute Schulentwicklung. Das heißt, es braucht Entscheidungskompetenz und Ressourcen vor Ort sowie gute Begleitung, um Veränderungen auch umsetzen zu können. Es ist also Zeit für eine Emanzipation im Lernen und in der Gestaltung von Schule vor Ort. Gemeinsam und partizipativ mit der ganzen Schulfamilie.",
+      "id": [
+        "301696"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301697]\n[%][%Fragen, die dir bei diesem Abenteuer helfen können:]\nWie hoch ist die Eigenverantwortung meiner Schüler*innen und wie unterstützen sie mich in meiner Aufgabe als Lehrkraft oder Lernbegleitung?\n• Was habe ich in den letzten Monaten selbst auf die Beine gestellt und geschafft?\n• Welche Möglichkeiten habe ich, Dinge zu verändern?\n• Wann und wie habe ich diese Möglichkeiten und Grenzen meines Gestaltungsspielraums das letzte Mal wirklich getestet?\n• Wo handeln und agieren wir als Kollegium selbstständig und wo reagieren wir nur auf Anforderungen oder Vorgaben von außen?\n• Welche Ressourcen haben wir, um Veränderung in Schule umzusetzen und wer kann uns dabei helfen?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wie hoch ist die Eigenverantwortung meiner Schüler*innen und wie unterstützen sie mich in meiner Aufgabe als Lehrkraft oder Lernbegleitung?\n• Was habe ich in den letzten Monaten selbst auf die Beine gestellt und geschafft?\n• Welche Möglichkeiten habe ich, Dinge zu verändern?\n• Wann und wie habe ich diese Möglichkeiten und Grenzen meines Gestaltungsspielraums das letzte Mal wirklich getestet?\n• Wo handeln und agieren wir als Kollegium selbstständig und wo reagieren wir nur auf Anforderungen oder Vorgaben von außen?\n• Welche Ressourcen haben wir, um Veränderung in Schule umzusetzen und wer kann uns dabei helfen?",
+      "id": [
+        "301697"
+      ],
+      "lead": "Fragen, die dir bei diesem Abenteuer helfen können:"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301698]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_12/bewirken_kapitel12_3.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_12/bewirken_kapitel12_3.png|",
+      "id": [
+        "301698"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:301699]\n[%4.]\n[##Schule als sozialer Treffpunkt & gemeinsamer Reflexionsraum]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "301699"
+      ],
+      "title": "Schule als sozialer Treffpunkt & gemeinsamer Reflexionsraum"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301700]\nEs gibt seit vielen Jahren Kritiker, die fragen, ob und warum es Schule als gemeinsamen Ort braucht, wenn Informationen und Lernen doch orts- und zeitunabhängig möglich ist. Die Pandemie und damit die umfassende Veränderung von Schule weg von einem gemeinsamen Lernort hat allerdings gezeigt, dass dies zu großen sozialen und didaktischen Problemen führt, die wir jedenfalls nicht kurzfristig mit den bisherigen technischen Mitteln lösen können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Es gibt seit vielen Jahren Kritiker, die fragen, ob und warum es Schule als gemeinsamen Ort braucht, wenn Informationen und Lernen doch orts- und zeitunabhängig möglich ist. Die Pandemie und damit die umfassende Veränderung von Schule weg von einem gemeinsamen Lernort hat allerdings gezeigt, dass dies zu großen sozialen und didaktischen Problemen führt, die wir jedenfalls nicht kurzfristig mit den bisherigen technischen Mitteln lösen können.",
+      "id": [
+        "301700"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301701]\nDiese Probleme (Vereinsamung, Verstärkung von sozialer Ungleichheit) wurden 2020 bereits durch verschiedene Jugendstudien bestätigt und zeigen, dass es reale Orte des sozialen Miteinanders, Austausches und der Diskussion braucht. In den letzten Monaten ist allerdings auch deutlich geworden, dass Lernen nicht nur in der Schule möglich ist. Es braucht also vielleicht neue Definition des räumlichen Ortes Schule. Was passiert an diesem gemeinsamen physischen Ort, was kann und muss zu hause oder an anderen Lernorten passieren? Daraus ergeben sich auch Fragen nach der baulichen Gestaltung von Schule sowie der zeitlichen Struktur, in der wir lernen. Wofür wird Zeit eingeräumt, wie ist sie strukturiert und welchen Raum gibt es für Selbstorganisation? Ein spannendes Abenteuer, das uns in den nächsten Jahren beschäftigen wird.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Diese Probleme (Vereinsamung, Verstärkung von sozialer Ungleichheit) wurden 2020 bereits durch verschiedene Jugendstudien bestätigt und zeigen, dass es reale Orte des sozialen Miteinanders, Austausches und der Diskussion braucht. In den letzten Monaten ist allerdings auch deutlich geworden, dass Lernen nicht nur in der Schule möglich ist. Es braucht also vielleicht neue Definition des räumlichen Ortes Schule. Was passiert an diesem gemeinsamen physischen Ort, was kann und muss zu hause oder an anderen Lernorten passieren? Daraus ergeben sich auch Fragen nach der baulichen Gestaltung von Schule sowie der zeitlichen Struktur, in der wir lernen. Wofür wird Zeit eingeräumt, wie ist sie strukturiert und welchen Raum gibt es für Selbstorganisation? Ein spannendes Abenteuer, das uns in den nächsten Jahren beschäftigen wird.",
+      "id": [
+        "301701"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301702]\n[%][%Fragen, die dir bei diesem Abenteuer helfen können:]\nWas ist für Schüler*innen am bedeutsamsten am Ort Schule und in der Zeit, die sie dort verbringen?\n• Welche Vorteile hat oder hatte der hybride oder online Unterricht für meine Schüler*innen?\n• Was muss wirklich in Präsenz passieren und wo können meine Schüler*innnen selbstständig agieren?\n• Wie groß ist der Anteil an Interaktion, also dem direkten Austausch untereinander, in meinem Unterricht?\n• Wie viel Zeit haben die Schüler*innen an einem Schultag für den informellen sozialen Austausch?\n• Wie hoch ist der Zeitanteil, in dem unsere Schüler*innen ihren Schultag selbst einteilen oder gestalten können?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Was ist für Schüler*innen am bedeutsamsten am Ort Schule und in der Zeit, die sie dort verbringen?\n• Welche Vorteile hat oder hatte der hybride oder online Unterricht für meine Schüler*innen?\n• Was muss wirklich in Präsenz passieren und wo können meine Schüler*innnen selbstständig agieren?\n• Wie groß ist der Anteil an Interaktion, also dem direkten Austausch untereinander, in meinem Unterricht?\n• Wie viel Zeit haben die Schüler*innen an einem Schultag für den informellen sozialen Austausch?\n• Wie hoch ist der Zeitanteil, in dem unsere Schüler*innen ihren Schultag selbst einteilen oder gestalten können?",
+      "id": [
+        "301702"
+      ],
+      "lead": "Fragen, die dir bei diesem Abenteuer helfen können:"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-9]\n[@id:301703]\n[#Acht Tipps für deine Reise]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "301703"
+      ],
+      "title": "Acht Tipps für deine Reise"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301704]\n[%][%Gute Veränderungsbausteine für deine Reise hin zu neuen Lern- und Lehrformen für eine Schule der Zukunft]\nDer Weg der Veränderung ist immer ein Marathon und kein Sprint, bei dem es viele tolle Momente zu feiern gibt, aber auch Widerstand und Zeiten von Herausforderungen und Rückschlägen gemeistert werden wollen. Ein Veränderungsprozess ist immer ein Lernprozess, in dem wir aus Fehlern lernen können, um uns gemeinsam Schrittweise nach vorne zu bewegen. In diesem Buch wollen wir das Thema Schulentwicklung nicht ausführlich vertiefen, dir aber mit den folgenden acht Tipps für Veränderung ein paar wichtige Erfolgskriterien für gute Schulentwicklung mit auf den Weg geben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Weg der Veränderung ist immer ein Marathon und kein Sprint, bei dem es viele tolle Momente zu feiern gibt, aber auch Widerstand und Zeiten von Herausforderungen und Rückschlägen gemeistert werden wollen. Ein Veränderungsprozess ist immer ein Lernprozess, in dem wir aus Fehlern lernen können, um uns gemeinsam Schrittweise nach vorne zu bewegen. In diesem Buch wollen wir das Thema Schulentwicklung nicht ausführlich vertiefen, dir aber mit den folgenden acht Tipps für Veränderung ein paar wichtige Erfolgskriterien für gute Schulentwicklung mit auf den Weg geben.",
+      "id": [
+        "301704"
+      ],
+      "lead": "Gute Veränderungsbausteine für deine Reise hin zu neuen Lern- und Lehrformen für eine Schule der Zukunft"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301705]\nDiese Tipps sind kein konkretes Veränderungsmodell und kein fertiges Rezept für deine Schulentwicklung, haben sich aber aus unserer Erfahrung bewährt und es sind praktische Hinweise, die sich aus vielen Transformationsmodellen ableiten lassen. Wir beschäftigen uns in unserer Arbeit auch mit Veränderung in Organisationen außerhalb von Schule und möchten dazu beitragen, dass Wissen aus diesen Veränderungsprozessen auch deiner Schulentwicklung helfen kann. Falls du das Thema vertiefen möchtest, begleiten wir dich gerne. Wir helfen mit Workshops, Coachings und Fortbildungsangeboten in der digitalen Schulakademie für deine konkrete Situation. Melde dich gerne bei uns.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Diese Tipps sind kein konkretes Veränderungsmodell und kein fertiges Rezept für deine Schulentwicklung, haben sich aber aus unserer Erfahrung bewährt und es sind praktische Hinweise, die sich aus vielen Transformationsmodellen ableiten lassen. Wir beschäftigen uns in unserer Arbeit auch mit Veränderung in Organisationen außerhalb von Schule und möchten dazu beitragen, dass Wissen aus diesen Veränderungsprozessen auch deiner Schulentwicklung helfen kann. Falls du das Thema vertiefen möchtest, begleiten wir dich gerne. Wir helfen mit Workshops, Coachings und Fortbildungsangeboten in der digitalen Schulakademie für deine konkrete Situation. Melde dich gerne bei uns.",
+      "id": [
+        "301705"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-10]\n[@id:301706]\n[%1.]\n[##Klein anfangen & ausprobieren]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-10",
+      "id": [
+        "301706"
+      ],
+      "title": "Klein anfangen & ausprobieren"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301707]\nIn kleinen Schritten kannst du lernen und Erfahrungen sammeln, ohne in Gefahr zu geraten, direkt Widerstand zu erzeugen. Vielleicht findest du so auch hilfreiche Mitstreiter*innen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In kleinen Schritten kannst du lernen und Erfahrungen sammeln, ohne in Gefahr zu geraten, direkt Widerstand zu erzeugen. Vielleicht findest du so auch hilfreiche Mitstreiter*innen.",
+      "id": [
+        "301707"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-11]\n[@id:301708]\n[%2.]\n[##Allianzen bauen (Mitstreiter*innen finden)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-11",
+      "id": [
+        "301708"
+      ],
+      "title": "Allianzen bauen (Mitstreiter*innen finden)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301709]\nFinde andere, die mit dir gemeinsam auf die Reise gehen, mit denen du dich austauschen kannst und die dich unterstützen. Gemeinsam seid ihr stärker.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Finde andere, die mit dir gemeinsam auf die Reise gehen, mit denen du dich austauschen kannst und die dich unterstützen. Gemeinsam seid ihr stärker.",
+      "id": [
+        "301709"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-12]\n[@id:301710]\n[%3.]\n[##Unterstützung & Begleitung holen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-12",
+      "id": [
+        "301710"
+      ],
+      "title": "Unterstützung & Begleitung holen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301711]\nFür viele Herausforderungen gibt es passende Hilfsangebote und Tipps, die dir helfen können. Wir empfehlen dir auch eine externe Begleitung und Moderation für deine Schulentwicklung.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Für viele Herausforderungen gibt es passende Hilfsangebote und Tipps, die dir helfen können. Wir empfehlen dir auch eine externe Begleitung und Moderation für deine Schulentwicklung.",
+      "id": [
+        "301711"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-13]\n[@id:301712]\n[%4.]\n[##Abstand vom Alltag gewinnen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-13",
+      "id": [
+        "301712"
+      ],
+      "title": "Abstand vom Alltag gewinnen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301713]\nVeränderung braucht Distanz, um neue Perspektiven zu erhalten und Zusammenhänge zu erkennen. Schulentwicklung ist daher erfolgreich, wenn wir ganzheitlich und systemisch denken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Veränderung braucht Distanz, um neue Perspektiven zu erhalten und Zusammenhänge zu erkennen. Schulentwicklung ist daher erfolgreich, wenn wir ganzheitlich und systemisch denken.",
+      "id": [
+        "301713"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-14]\n[@id:301714]\n[%5.]\n[## Schüler*innen & Schulfamilie einbinden]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "5.",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-14",
+      "id": [
+        "301714"
+      ],
+      "title": "Schüler*innen & Schulfamilie einbinden"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301715]\nUm eine konstruktive und nachhaltige Veränderung zu erreichen, ist es wichtig, alle Beteiligten der Schulfamilie in den Prozess mit einzubeziehen und immer wieder die Perspektive zu wechseln.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Um eine konstruktive und nachhaltige Veränderung zu erreichen, ist es wichtig, alle Beteiligten der Schulfamilie in den Prozess mit einzubeziehen und immer wieder die Perspektive zu wechseln.",
+      "id": [
+        "301715"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-15]\n[@id:301716]\n[%6.]\n[## Eine gemeinsame Vision & Strategie entwickeln]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "6.",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-15",
+      "id": [
+        "301716"
+      ],
+      "title": "Eine gemeinsame Vision & Strategie entwickeln"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301717]\nDeine Schule braucht ein gemeinsames Bild der Zukunft, eine Vision und eine Strategie, wo ihr in 3-5 Jahren stehen wollt. Dabei geht es nicht um jedes Detail, sondern um ein grobes Ziel.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Deine Schule braucht ein gemeinsames Bild der Zukunft, eine Vision und eine Strategie, wo ihr in 3-5 Jahren stehen wollt. Dabei geht es nicht um jedes Detail, sondern um ein grobes Ziel.",
+      "id": [
+        "301717"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-16]\n[@id:301718]\n[%7.]\n[##Veränderung als Prozess denken]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "7.",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-16",
+      "id": [
+        "301718"
+      ],
+      "title": "Veränderung als Prozess denken"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301719]\nDie Schulentwicklung ist kein Projekt mit klarem Anfang und Ende, das exakt planbar ist, sondern vielmehr ein Prozess des gemeinsamen Lernens, der einen guten Rahmen braucht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Schulentwicklung ist kein Projekt mit klarem Anfang und Ende, das exakt planbar ist, sondern vielmehr ein Prozess des gemeinsamen Lernens, der einen guten Rahmen braucht.",
+      "id": [
+        "301719"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-17]\n[@id:301720]\n[%8.]\n[##Transformation führen & gestalten]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "8.",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-17",
+      "id": [
+        "301720"
+      ],
+      "title": "Transformation führen & gestalten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301721]\nEin guter Prozess braucht Führung. Also Personen und Gremien, die dafür sorgen, dass der Rahmen stimmig ist, der Prozess nicht stehen bleibt und Menschen in ihre (neuen) Rollen finden können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ein guter Prozess braucht Führung. Also Personen und Gremien, die dafür sorgen, dass der Rahmen stimmig ist, der Prozess nicht stehen bleibt und Menschen in ihre (neuen) Rollen finden können.",
+      "id": [
+        "301721"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301722]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_12/bewirken_kapitel12_4.png|@width:200|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_12/bewirken_kapitel12_4.png|@width:200|",
+      "id": [
+        "301722"
+      ]
+    }
+  }
+]

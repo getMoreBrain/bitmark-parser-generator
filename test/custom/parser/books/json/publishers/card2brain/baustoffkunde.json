@@ -1,0 +1,1227 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:231976]\n[#Baustoffkunde]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/card2brain/baustoffkunde/web-resources/images/card2brain_baustoff_cover.png]\n[@externalId:e-baustoffkunde_uawy2_e10ydy]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231976"
+      ],
+      "title": "Baustoffkunde",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/card2brain/baustoffkunde/web-resources/images/card2brain_baustoff_cover.png"
+      ],
+      "externalId": [
+        "e-baustoffkunde_uawy2_e10ydy"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231977]\nNenne Einwirkungen auf ein Bauwerk,welche die Technischen Kriterien mitbestimmen.\n==\nWärme/Frost\n--\nNiederschlag\n--\nWind\n--\nFeuchtigkeit\n--\nLärm-Schall\n--\nDampf\n--\nFeuer-Hitze\n--\nAbgase",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne Einwirkungen auf ein Bauwerk,welche die Technischen Kriterien mitbestimmen.\n==\nWärme/Frost\n--\nNiederschlag\n--\nWind\n--\nFeuchtigkeit\n--\nLärm-Schall\n--\nDampf\n--\nFeuer-Hitze\n--\nAbgase",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231977"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232057]\nZähle natürlich-Mineralische Baustoffe auf, welche anorganisch sind.\n==\nNaturstein\n--\nSand\n--\nTon\n--\nLehm",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zähle natürlich-Mineralische Baustoffe auf, welche anorganisch sind.\n==\nNaturstein\n--\nSand\n--\nTon\n--\nLehm",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232057"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231979]\nNenne die Eigenschaften von Kalkstein.\n==\nWetterbeständig\n--\nFeuerempfindlich\n--\nBearbeitbar",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne die Eigenschaften von Kalkstein.\n==\nWetterbeständig\n--\nFeuerempfindlich\n--\nBearbeitbar",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231979"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231980]\nZähle Ablagerungsgesteine auf.\n==\nKalksand\n--\nSandstein\n--\nTravertin",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zähle Ablagerungsgesteine auf.\n==\nKalksand\n--\nSandstein\n--\nTravertin",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231980"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231981]\nWo kann man Porphyr anwenden?\n==\nBruchsteinmauerwerk\n--\nSchotter\n--\nPflastersteine",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wo kann man Porphyr anwenden?\n==\nBruchsteinmauerwerk\n--\nSchotter\n--\nPflastersteine",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231981"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231982]\nZähle Eigenschaften vom Porphyr auf.\n==\nHart\n--\nWetterbeständig\n--\nDruckfest\n--\nDicht",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zähle Eigenschaften vom Porphyr auf.\n==\nHart\n--\nWetterbeständig\n--\nDruckfest\n--\nDicht",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231982"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231983]\nZähle zwei Erstarrungsgesteine auf.\n==\nGranit\n--\nPorphyr",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zähle zwei Erstarrungsgesteine auf.\n==\nGranit\n--\nPorphyr",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231983"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231984]\nZähle Anwendungsbeispiele für Granit auf.\n==\nFensterbänke\n--\nStützmauern\n--\nRandsteine\n--\nKüchenabdeckungen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zähle Anwendungsbeispiele für Granit auf.\n==\nFensterbänke\n--\nStützmauern\n--\nRandsteine\n--\nKüchenabdeckungen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231984"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231985]\nNenne vier Eigenschaften von Granit.\n==\nHart\n--\nSäurebeständig\n--\nDruckfest\n--\nFrost und Witterungsbeständig",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne vier Eigenschaften von Granit.\n==\nHart\n--\nSäurebeständig\n--\nDruckfest\n--\nFrost und Witterungsbeständig",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231985"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231986]\nZähle anorganische Baustoffe auf,welche thermisch behandelt wurden.\n==\nBackstein\n--\nSchaumglas",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zähle anorganische Baustoffe auf,welche thermisch behandelt wurden.\n==\nBackstein\n--\nSchaumglas",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231986"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231987]\nZähle anorganische Baustoffe auf,welche mit Bindemittel gebunden sind.\n==\nBeton\n--\nKalksandstein",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zähle anorganische Baustoffe auf,welche mit Bindemittel gebunden sind.\n==\nBeton\n--\nKalksandstein",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231987"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231988]\nNenne vier organische Baustoffe.\n==\nHolz\n--\nKork\n--\nBaumwolle\n--\nKunststoff",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne vier organische Baustoffe.\n==\nHolz\n--\nKork\n--\nBaumwolle\n--\nKunststoff",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231988"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231989]\nErkläre die Anomalie des Wassers.\n==\nWasser hat seine grösste Dichte bei 4%C.\n--\nKühlt das Wasser ab, dehnt sich das Wasser wieder aus.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Erkläre die Anomalie des Wassers.\n==\nWasser hat seine grösste Dichte bei 4%C.\n--\nKühlt das Wasser ab, dehnt sich das Wasser wieder aus.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231989"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231990]\nNenne drei Eigenschaften welche unter dem Architektonischer Aspekt berücksichtigt werden.\n==\nFormat\n--\nStruktur\n--\nFarbe\n--\nAlterung",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne drei Eigenschaften welche unter dem Architektonischer Aspekt berücksichtigt werden.\n==\nFormat\n--\nStruktur\n--\nFarbe\n--\nAlterung",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231990"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231991]\nNenne anorganische Metalle.\n==\nStahl\n--\nKupfer\n--\nAluminium",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne anorganische Metalle.\n==\nStahl\n--\nKupfer\n--\nAluminium",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231991"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231992]\nNenne vier technische Aspekte welche Baustoffe erfüllen können.\n==\nTragfähigkeit\n--\nWärmeleitfähigkeit\n--\nBrennbarkeit\n--\nWasserfestigkeit",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne vier technische Aspekte welche Baustoffe erfüllen können.\n==\nTragfähigkeit\n--\nWärmeleitfähigkeit\n--\nBrennbarkeit\n--\nWasserfestigkeit",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231992"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231993]\nNenne vier Aspekte welche bei Baustoffen beachtet werden müssen.\n==\nUmweltbelastung\n--\nArt der Rohstoffe\n--\nGesundheitsschädigung\n--\nWiederverwertbarkeit",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne vier Aspekte welche bei Baustoffen beachtet werden müssen.\n==\nUmweltbelastung\n--\nArt der Rohstoffe\n--\nGesundheitsschädigung\n--\nWiederverwertbarkeit",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231993"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231994]\nWas wird bei einem Baustoff unter wirtschaftlichem Aspekt berücksichtigt?\n==\nPreis\n--\nLebensdauer\n--\nUnterhalt",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was wird bei einem Baustoff unter wirtschaftlichem Aspekt berücksichtigt?\n==\nPreis\n--\nLebensdauer\n--\nUnterhalt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231994"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231995]\nWas heisst quellen und schwinden?\n==\nQuellen : trockenes Holz nimmt in feuchter Umgebung Wasser auf.\n--\nSchwinden : nasses Holz gibt in trockener Umgebung Wasser ab.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was heisst quellen und schwinden?\n==\nQuellen : trockenes Holz nimmt in feuchter Umgebung Wasser auf.\n--\nSchwinden : nasses Holz gibt in trockener Umgebung Wasser ab.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231995"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231996]\nErkläre den Begriff Elektrochemische Korrosion.\n==\nEine Autobatterie besteht aus zwei Metallen und einer Flüssigkeit.\n--\nDurch diese Verbindung entsteht Strom.\n--\nJedoch zersetzt das edlere Metall (Kupfer) das unedlere Metall (Alluminium).",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Erkläre den Begriff Elektrochemische Korrosion.\n==\nEine Autobatterie besteht aus zwei Metallen und einer Flüssigkeit.\n--\nDurch diese Verbindung entsteht Strom.\n--\nJedoch zersetzt das edlere Metall (Kupfer) das unedlere Metall (Alluminium).",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231996"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231997]\nNenne drei Beispeile von künstlichen Baustoffen.\n==\n--\n- Beton\n\n- Kalkstein\n\n- Stahl",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne drei Beispeile von künstlichen Baustoffen.\n==\n--\n- Beton\n\n- Kalkstein\n\n- Stahl",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231997"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231998]\nNenne Beispiele von Anforderungen und Eigenschaften von Baustoffen.\n==\n--\nArchitektonisch\n--\nTechnische Eigenschaften\n--\nUmwelt\n--\nWirtschaftlichkeit",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne Beispiele von Anforderungen und Eigenschaften von Baustoffen.\n==\n--\nArchitektonisch\n--\nTechnische Eigenschaften\n--\nUmwelt\n--\nWirtschaftlichkeit",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231998"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:231999]\nErkläre die graue Energie.\n==\n--\nIst die Energiemenge welche für :\nHerstellung\n--\nTransport\n--\nLagerung\n--\nVerkauf und Entsorgung eines Produktes benötigt wird.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Erkläre die graue Energie.\n==\n--\nIst die Energiemenge welche für :\nHerstellung\n--\nTransport\n--\nLagerung\n--\nVerkauf und Entsorgung eines Produktes benötigt wird.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "231999"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232000]\nNenne drei Aggregatszustände.\n==\nFest\n--\nFlüssig\n--\nGasförmig",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne drei Aggregatszustände.\n==\nFest\n--\nFlüssig\n--\nGasförmig",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232000"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232001]\nWelchen Einfluss hat die Änderung des Aggregatszustandes eines Stoffes?\n==\nVolumen\n--\nEnergiegehalt",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welchen Einfluss hat die Änderung des Aggregatszustandes eines Stoffes?\n==\nVolumen\n--\nEnergiegehalt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232001"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232002]\nWas passiert beim Übergang von fest in Gasförmig mit einem Stoff?\n==\nDas Volumen ändert sich und der Stoff dehnt sich aus.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was passiert beim Übergang von fest in Gasförmig mit einem Stoff?\n==\nDas Volumen ändert sich und der Stoff dehnt sich aus.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232002"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232003]\nWas passiert beim Übergang von Gasförmig in Fest mit einem Stoff?\n==\nDas Volumen vermindert sich.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was passiert beim Übergang von Gasförmig in Fest mit einem Stoff?\n==\nDas Volumen vermindert sich.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232003"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232004]\nWas wird einem Stoff zugeführt wenn ich Ihn erwärme?\n==\nEnergie",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was wird einem Stoff zugeführt wenn ich Ihn erwärme?\n==\nEnergie",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232004"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232005]\nWas passiert mit der Energie wenn man einen Stoff abkühlt?\n==\nDie Energie wird freigesetzt.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was passiert mit der Energie wenn man einen Stoff abkühlt?\n==\nDie Energie wird freigesetzt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232005"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232006]\nWann hat Zement die Normfestigkeit erreicht?\n==\nNach ca. 28Tagen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wann hat Zement die Normfestigkeit erreicht?\n==\nNach ca. 28Tagen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232006"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232007]\nZähle Rohstoffe auf welche zur Herstellung von Zemnt benötigt werden.\n==\nKalkstein\n--\nSand\n--\nTon\n--\nEisenerz",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zähle Rohstoffe auf welche zur Herstellung von Zemnt benötigt werden.\n==\nKalkstein\n--\nSand\n--\nTon\n--\nEisenerz",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232007"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232008]\nZähle vier Bindemittel auf.\n==\nZement\n--\nKalk\n--\nGips\n--\nMörtel",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zähle vier Bindemittel auf.\n==\nZement\n--\nKalk\n--\nGips\n--\nMörtel",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232008"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232009]\nZähle drei Kunststoffbindemittel für Baustoffe auf.\n==\nDispersionsfarbe\n--\nDispersionsputz\n--\nBitumen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zähle drei Kunststoffbindemittel für Baustoffe auf.\n==\nDispersionsfarbe\n--\nDispersionsputz\n--\nBitumen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232009"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232010]\nWas bedeutet nicht Hydraulische Bindemittel?\n==\nNicht wasserbeständig\n--\nz.B Kalk , Gips",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was bedeutet nicht Hydraulische Bindemittel?\n==\nNicht wasserbeständig\n--\nz.B Kalk , Gips",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232010"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232011]\nWas bedeutet Hydraulische Bindemittel?\n==\nSind wasserbeständig\n--\nz.B. Zement",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was bedeutet Hydraulische Bindemittel?\n==\nSind wasserbeständig\n--\nz.B. Zement",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232011"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232012]\nZähle drei Mineralische Bindemittel auf.\n==\nZement\n--\nGips\n--\nTon",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zähle drei Mineralische Bindemittel auf.\n==\nZement\n--\nGips\n--\nTon",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232012"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232013]\nNenne Anwendungsmöglichkeiten für Bindemittel.\n==\nFarben\n--\nBaustoffe\n--\nHolz\n--\nPapier",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne Anwendungsmöglichkeiten für Bindemittel.\n==\nFarben\n--\nBaustoffe\n--\nHolz\n--\nPapier",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232013"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232014]\nWas sind Bindemittel?\n==\nBindemittel sind Stoffe durch die Feststoffe miteinander verklebt werden.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was sind Bindemittel?\n==\nBindemittel sind Stoffe durch die Feststoffe miteinander verklebt werden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232014"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232015]\nGehört Ton zu den Sedimentgesteinen?\n==\nJa",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Gehört Ton zu den Sedimentgesteinen?\n==\nJa",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232015"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232016]\nWas heisst metamorphes Gestein?\n==\nUmwandlungsgestein\n--\nGestein welches infolge des erhöten Umgebungsdruckes bzw. Temperatur tief in der Erdkruste entsteht.\n--\nz.B. Schiefer",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was heisst metamorphes Gestein?\n==\nUmwandlungsgestein\n--\nGestein welches infolge des erhöten Umgebungsdruckes bzw. Temperatur tief in der Erdkruste entsteht.\n--\nz.B. Schiefer",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232016"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232017]\nWas sind Sedimentgesteine?\n==\nAblagerungs oder Schichtgesteine.\n--\nAlso die Ablagerung von Material.\n--\nz.B. Ton",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was sind Sedimentgesteine?\n==\nAblagerungs oder Schichtgesteine.\n--\nAlso die Ablagerung von Material.\n--\nz.B. Ton",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232017"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232018]\nWas heisst Magmatisches Gestein?\n==\nGestein das durch Kristillation beim erkalten glutflüssigem Gestein entstanden ist.\n--\nz.B Granit , Quarzit",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was heisst Magmatisches Gestein?\n==\nGestein das durch Kristillation beim erkalten glutflüssigem Gestein entstanden ist.\n--\nz.B Granit , Quarzit",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232018"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232019]\nSind Erstarrungsgesteine gegenüber Säuren und Laugen empfindlich?\n==\nNein ,  sie sind säurefst und Lösungsmittel unempfindlich.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Sind Erstarrungsgesteine gegenüber Säuren und Laugen empfindlich?\n==\nNein ,  sie sind säurefst und Lösungsmittel unempfindlich.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232019"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232020]\nNenne Eigenschaften von Sandstein als Baustoff.\n==\ngut zu bearbeiten\n--\nsäureempfindlich\n--\ngut ritzbar",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne Eigenschaften von Sandstein als Baustoff.\n==\ngut zu bearbeiten\n--\nsäureempfindlich\n--\ngut ritzbar",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232020"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232021]\nIst Beton ein Kunststein?\n==\nJa",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Ist Beton ein Kunststein?\n==\nJa",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232021"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232022]\nNenne zwei Erstarrungsgesteine.\n==\nGranit\n--\nBasalt\n--\nQuarzit",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne zwei Erstarrungsgesteine.\n==\nGranit\n--\nBasalt\n--\nQuarzit",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232022"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232023]\nNenne zwei Ablagerungsgesteine.\n==\nSandstein\n--\nKalkstein",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne zwei Ablagerungsgesteine.\n==\nSandstein\n--\nKalkstein",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232023"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232024]\nNenne zwei Umwandlungsgesteine.\n==\nSchiefer\n--\nMarmor\n--\nGneis",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne zwei Umwandlungsgesteine.\n==\nSchiefer\n--\nMarmor\n--\nGneis",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232024"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232025]\nIst Ton ein Lockergestein?\n==\nJa",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Ist Ton ein Lockergestein?\n==\nJa",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232025"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232026]\nWas versteht man unter dem Begriff Korngrösse?\n==\nBeschreibt die Grösse einzelner Körner in einem Gemenge.\n--\nz.B 2-63mm / 8-10mm",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was versteht man unter dem Begriff Korngrösse?\n==\nBeschreibt die Grösse einzelner Körner in einem Gemenge.\n--\nz.B 2-63mm / 8-10mm",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232026"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232027]\nWas ist der Unterschied zwischen Schotter und Geröll?\n==\nSchotter sind maschinell gebrochenes Gestein.\n--\nGeröll sind natürliche Gesteine meist geschliffen.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was ist der Unterschied zwischen Schotter und Geröll?\n==\nSchotter sind maschinell gebrochenes Gestein.\n--\nGeröll sind natürliche Gesteine meist geschliffen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232027"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232028]\nIst ein Kalkhaltiger Kunststein gegen Lösungsmittel empfindlich?\n==\nNein",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Ist ein Kalkhaltiger Kunststein gegen Lösungsmittel empfindlich?\n==\nNein",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232028"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232029]\nKönnen Kalkhaltige Beläge Kristallisiert werden?\n==\nJa.\n--\nBei der Kristillation wird der Kalk umgewandelt.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Können Kalkhaltige Beläge Kristallisiert werden?\n==\nJa.\n--\nBei der Kristillation wird der Kalk umgewandelt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232029"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232030]\nNenne Beispiele von einem Betonwerkstein.\n==\nTerrazzo\n--\nWaschbeton",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne Beispiele von einem Betonwerkstein.\n==\nTerrazzo\n--\nWaschbeton",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232030"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232031]\nNenne die drei Gesteinshauptgruppen.\n==\nSedimentgesteine\n--\nMetamorphesgestein\n--\nMagmatischesgestein",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne die drei Gesteinshauptgruppen.\n==\nSedimentgesteine\n--\nMetamorphesgestein\n--\nMagmatischesgestein",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232031"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232032]\nNenne fünf Hartholzarten?\n==\nBuche\n--\nEiche\n--\nEsche\n--\nNussbaum\n--\nAhorn",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne fünf Hartholzarten?\n==\nBuche\n--\nEiche\n--\nEsche\n--\nNussbaum\n--\nAhorn",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232032"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232033]\nNenne drei Weichholzarten?\n==\nFichte\n--\nTanne\n--\nLärche\n--\nLinde",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne drei Weichholzarten?\n==\nFichte\n--\nTanne\n--\nLärche\n--\nLinde",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232033"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232034]\nNenne Stoffe bei welchen Metalle korrodieren können?\n==\nSäuren\n--\nfeuchte Luft\n--\nWasser\n--\nGase",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne Stoffe bei welchen Metalle korrodieren können?\n==\nSäuren\n--\nfeuchte Luft\n--\nWasser\n--\nGase",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232034"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232035]\nNenne zwei nicht metallische Korrosionsschutzverfahren für Metalle?\n==\nEmaillieren\n--\nBeschichten mit Rostschutzfarbe",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne zwei nicht metallische Korrosionsschutzverfahren für Metalle?\n==\nEmaillieren\n--\nBeschichten mit Rostschutzfarbe",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232035"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232036]\nWelche verfahren von verzimken gibt es?\n==\nFeuerverzinken\n--\nGalvanisches Verfahren\n--\nMetallspritzen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche verfahren von verzimken gibt es?\n==\nFeuerverzinken\n--\nGalvanisches Verfahren\n--\nMetallspritzen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232036"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232037]\nWie nennt man die mit der Zeit entstehende grünliche Schicht auf Kupfer?\n==\nPatina (Grünspahn)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wie nennt man die mit der Zeit entstehende grünliche Schicht auf Kupfer?\n==\nPatina (Grünspahn)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232037"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232038]\nWas versteht man unter einer Legierung und wiso werden solche hergestellt?\n==\nLegierung ist ein Metallischer Werkstoff der aus mind. zwei Elementen besteht.\n--\nUm die Werkstoffeigenschaften anzupassen und zu verbessern.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was versteht man unter einer Legierung und wiso werden solche hergestellt?\n==\nLegierung ist ein Metallischer Werkstoff der aus mind. zwei Elementen besteht.\n--\nUm die Werkstoffeigenschaften anzupassen und zu verbessern.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232038"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232039]\nWas versteht man unter der Legierung CNS?\n==\nChrom-Nickel-Stahl",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was versteht man unter der Legierung CNS?\n==\nChrom-Nickel-Stahl",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232039"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232040]\nNenne zwei leicht Metalle.\n==\nAluminium\n--\nMagnesium",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne zwei leicht Metalle.\n==\nAluminium\n--\nMagnesium",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232040"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232041]\nNenne drei Buntmetalle.\n==\nKupfer\n--\nZinn\n--\nBlei\n--\nNickel\n--\nZink",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne drei Buntmetalle.\n==\nKupfer\n--\nZinn\n--\nBlei\n--\nNickel\n--\nZink",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232041"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232042]\nWie wird Stahl hergestellt?\n==\nDurch verbrennen der Fremdstoffe im Roheisen.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wie wird Stahl hergestellt?\n==\nDurch verbrennen der Fremdstoffe im Roheisen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232042"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232043]\nWo findet syntetischer Kautschuk Anwendung?\n==\nAbdichtungsfolien\n--\nDichtungsbänder",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wo findet syntetischer Kautschuk Anwendung?\n==\nAbdichtungsfolien\n--\nDichtungsbänder",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232043"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232044]\nNenne anwendungsmöglichkeiten von Weichgummi.\n==\nBodenbeläge\n--\nSchläuche\n--\nDichtungsmaterialien",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne anwendungsmöglichkeiten von Weichgummi.\n==\nBodenbeläge\n--\nSchläuche\n--\nDichtungsmaterialien",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232044"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232045]\nAus was besteht Gummi?\n==\nNaturkautschuk",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Aus was besteht Gummi?\n==\nNaturkautschuk",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232045"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232046]\nWas ist beim chemischen Holzschutz zu achten?\n==\nNotwendigkeit\n--\nGiftigkeit\n--\nEntsorgung\n--\nSchutzmassnahmen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was ist beim chemischen Holzschutz zu achten?\n==\nNotwendigkeit\n--\nGiftigkeit\n--\nEntsorgung\n--\nSchutzmassnahmen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232046"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232047]\nNenne einheimische Nadelhölzer\n==\nWeisstanne\n--\nFichte\n--\nLärche\n--\nFöhre\n--\nArve",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne einheimische Nadelhölzer\n==\nWeisstanne\n--\nFichte\n--\nLärche\n--\nFöhre\n--\nArve",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232047"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232048]\nNenne Vorzüge zum Baustoff Holz.\n==\nEinheimischer Rohstoff\n--\ngrosse Verfügbarkeit\n--\nNachwachsend\n--\ngeringes Gewicht\n--\ngute Wärmedämmung\n--\ngute verarbeitkeit",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne Vorzüge zum Baustoff Holz.\n==\nEinheimischer Rohstoff\n--\ngrosse Verfügbarkeit\n--\nNachwachsend\n--\ngeringes Gewicht\n--\ngute Wärmedämmung\n--\ngute verarbeitkeit",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232048"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232049]\nWieso werden Hölzer zu Verbundwerkstoffen weiterverarbeitet?\n==\nUm die Werkstoffeigenschaften anzupassen und zu verbessern.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wieso werden Hölzer zu Verbundwerkstoffen weiterverarbeitet?\n==\nUm die Werkstoffeigenschaften anzupassen und zu verbessern.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232049"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232050]\nWelches sind günstige Voraussetzungen für einen Pilzbefall bei Holz?\n==\nHolzfeuchtigkeit\n--\nNahrung\n--\ngünstige Temperaturen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welches sind günstige Voraussetzungen für einen Pilzbefall bei Holz?\n==\nHolzfeuchtigkeit\n--\nNahrung\n--\ngünstige Temperaturen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232050"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232051]\nWelche Voraussetzungen sind massgebend für das schwinden und quellen von Holz?\n==\nHolzart\n--\nWassergehalt des Holzes",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche Voraussetzungen sind massgebend für das schwinden und quellen von Holz?\n==\nHolzart\n--\nWassergehalt des Holzes",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232051"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232052]\nWann ist der richtige zeitpunkt um Holz zu fällen?\n==\num die kürzesten Tage\n--\nabnehmender Mond\n--\nzunehmender Mond",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wann ist der richtige zeitpunkt um Holz zu fällen?\n==\num die kürzesten Tage\n--\nabnehmender Mond\n--\nzunehmender Mond",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232052"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232053]\nBei einer Aussenwandkonstruktion fehlt die Isolation (abgesackt).\nWelche Auswirkungen hat dies zur Folge?\n==\nWärmeverlust (Energieverlust)\n--\nDämmung ist schlecht\n--\nTaupunkt Verschiebung der Wandkonstruktion",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Bei einer Aussenwandkonstruktion fehlt die Isolation (abgesackt).\nWelche Auswirkungen hat dies zur Folge?\n==\nWärmeverlust (Energieverlust)\n--\nDämmung ist schlecht\n--\nTaupunkt Verschiebung der Wandkonstruktion",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232053"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232054]\nWelche Garantiearten und Fristen kennen sie bei Bauwerken?\n==\n2 Jahre Garantiefrist (Rügefrist)\n--\n5 Jahre auf verdeckte Mängel\n--\nAbsichtlich verschwiegende Mängel (10Jahre)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche Garantiearten und Fristen kennen sie bei Bauwerken?\n==\n2 Jahre Garantiefrist (Rügefrist)\n--\n5 Jahre auf verdeckte Mängel\n--\nAbsichtlich verschwiegende Mängel (10Jahre)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232054"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232055]\nWie heissen die Leistungen welche beim Baugewerbe (je nach Vereinbarung) vergütet werden?\n==\nEinheitspreis - (Akordpreis)\n--\nGlobalpreis - Fester Betrag für eine Leistung (mit allf. Teuerung)\n--\nPauschalpreis - Wie Globalpreis aber ohne Teuerung\n--\nRegie - Material und Zeit",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wie heissen die Leistungen welche beim Baugewerbe (je nach Vereinbarung) vergütet werden?\n==\nEinheitspreis - (Akordpreis)\n--\nGlobalpreis - Fester Betrag für eine Leistung (mit allf. Teuerung)\n--\nPauschalpreis - Wie Globalpreis aber ohne Teuerung\n--\nRegie - Material und Zeit",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232055"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232056]\nWie gehen sie als Hauswart bei Bauschäden vor?\nWelche Arbeitsschritte unternehmen sie?\n==\nEinleitung von vorsorglichen Massnahmen\n--\nSchadendokumentation erstellen\n--\nMeldung an Verwaltung/Eigentümer\n--\nSchadenuntersuchung\n--\nFestlegen der Sanierungsmassnahmen\n--\nMeldung über die ausgeführten Reparaturen an Verwaltung/Eigentümer",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wie gehen sie als Hauswart bei Bauschäden vor?\nWelche Arbeitsschritte unternehmen sie?\n==\nEinleitung von vorsorglichen Massnahmen\n--\nSchadendokumentation erstellen\n--\nMeldung an Verwaltung/Eigentümer\n--\nSchadenuntersuchung\n--\nFestlegen der Sanierungsmassnahmen\n--\nMeldung über die ausgeführten Reparaturen an Verwaltung/Eigentümer",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232056"
+      ]
+    }
+  }
+]

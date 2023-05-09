@@ -1,0 +1,2530 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:290955]\n[@externalId:e-5_5-lebenswichtige-regeln-im-u_q1lnhytywgrx]\n[@language:de]\n[@publisher:Electrosuisse]\n[@theme:electrosuisse_wbt]\n[@coverImage:https://docs.bitmark.cloud/bit-books/electrosuisse/cover_electrosuisse3.png]\n\n[#5+5 Lebenswichtige Regeln im Umgang mit Elektrizität]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290955"
+      ],
+      "externalId": [
+        "e-5_5-lebenswichtige-regeln-im-u_q1lnhytywgrx"
+      ],
+      "language": [
+        "de"
+      ],
+      "publisher": [
+        "Electrosuisse"
+      ],
+      "theme": [
+        "electrosuisse_wbt"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/electrosuisse/cover_electrosuisse3.png"
+      ],
+      "title": "5+5 Lebenswichtige Regeln im Umgang mit Elektrizität"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:290956]\nDie Gefahren der Elektrizität werden oft unterschätzt. Das Risiko, bei einem Elektrounfall das Leben zu verlieren, ist 50-mal höher als bei anderen Unfällen. Wer die «5+5 lebenswichtigen Regeln im Umgang mit Elektrizität» konsequent einhält, kann Unfälle und damit viel menschliches Leid verhindern. Bei der Umsetzung der Sicherheitsregeln und der lebenswichtigen Regeln gilt null Toleranz. Mit diesem Lernprogramm, lernen sie die 5+5 lebenswichtigen Regeln im Umgang der Elektrizität kennen. Mit dem Test, können Sie ihr Wissen testen. Nach einem erfolgreich durchgeführten Test, erhalten sie ein Zertifikat, welches sie ausdrucken können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Gefahren der Elektrizität werden oft unterschätzt. Das Risiko, bei einem Elektrounfall das Leben zu verlieren, ist 50-mal höher als bei anderen Unfällen. Wer die «5+5 lebenswichtigen Regeln im Umgang mit Elektrizität» konsequent einhält, kann Unfälle und damit viel menschliches Leid verhindern. Bei der Umsetzung der Sicherheitsregeln und der lebenswichtigen Regeln gilt null Toleranz. Mit diesem Lernprogramm, lernen sie die 5+5 lebenswichtigen Regeln im Umgang der Elektrizität kennen. Mit dem Test, können Sie ihr Wissen testen. Nach einem erfolgreich durchgeführten Test, erhalten sie ein Zertifikat, welches sie ausdrucken können.",
+      "id": [
+        "290956"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:290957]\n[▼ch-1]\n[#Lernen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "290957"
+      ],
+      "anchor": "ch-1",
+      "title": "Lernen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:290958]\n[▼ch-2]\n[%Regel 1]\n[##Wir arbeiten nur mit klarem Auftrag und wissen wer die Verantwortung trägt]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Regel 1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "290958"
+      ],
+      "anchor": "ch-2",
+      "title": "Wir arbeiten nur mit klarem Auftrag und wissen wer die Verantwortung trägt"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:290959]\n[%][%Video]\n[&video-link:https://www.youtube.com/watch?v=VesJIDff1Gs]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "290959"
+      ],
+      "lead": "Video",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=VesJIDff1Gs",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:290960]\n[%][%Rollen]\nFür das Arbeiten mit klarem Auftrag müssen alle Beteiligten den Leitsatz ihrer Rolle kennen und sich daran halten.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Für das Arbeiten mit klarem Auftrag müssen alle Beteiligten den Leitsatz ihrer Rolle kennen und sich daran halten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290960"
+      ],
+      "lead": "Rollen"
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:291507]\nIch führe Arbeiten nur aus, für die ich geschult und berechtigt bin. Sonst sage ich Stopp und informiere meinen Vorgesetzten.\n[@quotedPerson:Arbeitnehmer]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Ich führe Arbeiten nur aus, für die ich geschult und berechtigt bin. Sonst sage ich Stopp und informiere meinen Vorgesetzten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291507"
+      ],
+      "quotedPerson": "Arbeitnehmer"
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:291508]\nIch setze geschultes und berechtigtes Personal ein.Ich fordere meine Mitarbeitenden auf, bei Unsicherheiten die Arbeit einzustellen und mich zu informieren.\n[@quotedPerson:Vorgesetzter]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Ich setze geschultes und berechtigtes Personal ein.Ich fordere meine Mitarbeitenden auf, bei Unsicherheiten die Arbeit einzustellen und mich zu informieren.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291508"
+      ],
+      "quotedPerson": "Vorgesetzter"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:290961]\n[%][%Instruktionstipps]\nFür das Erteilen klarer Arbeitsaufträge braucht es eine gründliche Arbeitsvorbereitung mit Beurteilung der Risiken. Dadurch vermeiden Sie Missverständnisse und verbessern die Sicherheit und Effizienz. Kann nicht in spannungsfreiem Zustand gearbeitet werden, ist dies schriftlich zu begründen.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Für das Erteilen klarer Arbeitsaufträge braucht es eine gründliche Arbeitsvorbereitung mit Beurteilung der Risiken. Dadurch vermeiden Sie Missverständnisse und verbessern die Sicherheit und Effizienz. Kann nicht in spannungsfreiem Zustand gearbeitet werden, ist dies schriftlich zu begründen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290961"
+      ],
+      "lead": "Instruktionstipps"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark++]\n[@id:290962]\n[%][%Erteilen von Aufträgen]\nAufträge werden grundsätzlich schriftlich erteilt. \nAusnahmen für eine mündliche Auftragserteilung sind: \n• Arbeiten an einfachen Niederspannungsanlagen\n• Einfache Arbeiten Beheben von Betriebsstörungen",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark++",
+      "body": "Aufträge werden grundsätzlich schriftlich erteilt. \nAusnahmen für eine mündliche Auftragserteilung sind: \n• Arbeiten an einfachen Niederspannungsanlagen\n• Einfache Arbeiten Beheben von Betriebsstörungen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290962"
+      ],
+      "lead": "Erteilen von Aufträgen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:291404]\nArbeiten unter Spannung dürfen nur zu zweitund nur mit entsprechender Ausbildung ausgeführt werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Arbeiten unter Spannung dürfen nur zu zweitund nur mit entsprechender Ausbildung ausgeführt werden.",
+      "id": [
+        "291404"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:291405]\nFolgende Punkte gehören in jeden Auftrag: verantwortliche Person für die notwendigen Schutz-Massnahmen und die sichere Ausführung der Arbeiten vor Ort auszuführende Arbeiten Arbeitsmethode Arbeitsstelle (Lage der einzelnen Anlageteile, z.B. mit Situationsplänen schriftlicher Arbeitsablauf, Checkliste persönliche Schutzausrüstung besondere Gefahren, zu treffende Schutzmassnahmen)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Folgende Punkte gehören in jeden Auftrag: verantwortliche Person für die notwendigen Schutz-Massnahmen und die sichere Ausführung der Arbeiten vor Ort auszuführende Arbeiten Arbeitsmethode Arbeitsstelle (Lage der einzelnen Anlageteile, z.B. mit Situationsplänen schriftlicher Arbeitsablauf, Checkliste persönliche Schutzausrüstung besondere Gefahren, zu treffende Schutzmassnahmen)",
+      "id": [
+        "291405"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark++]\n[@id:290963]\n[%][%Auftragsabwicklung]\nWorauf kommt es bei der Auftragsabwicklung besonders an? \n• Keine unnötigen Risiken eingehen. Arbeitsstelle vor Arbeitsbeginn sichern. \n• Bei unklaren Aufträgen oder fehlenden Dokumenten STOPP sagen, Arbeiten einstellen und Vorgesetzten informieren. \n• Erledigte Arbeitsschritte dokumentieren (abhaken, visieren). \n• Beteiligte Mitarbeitende über den Stand der Arbeiten informieren. \n• Nach Abschluss der Arbeiten Visum des Verantwortliche für die fachgerechte Ausführung.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark++",
+      "body": "Worauf kommt es bei der Auftragsabwicklung besonders an? \n• Keine unnötigen Risiken eingehen. Arbeitsstelle vor Arbeitsbeginn sichern. \n• Bei unklaren Aufträgen oder fehlenden Dokumenten STOPP sagen, Arbeiten einstellen und Vorgesetzten informieren. \n• Erledigte Arbeitsschritte dokumentieren (abhaken, visieren). \n• Beteiligte Mitarbeitende über den Stand der Arbeiten informieren. \n• Nach Abschluss der Arbeiten Visum des Verantwortliche für die fachgerechte Ausführung.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290963"
+      ],
+      "lead": "Auftragsabwicklung"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:290964]\n[%][%Das Wichtigste für die Umsetzung]\nSituation im Betrieb: \nGibt es Arbeitsorte, an denen nicht nach den Vorgaben gearbeitet wird? Fragen Sie die Mitarbeitenden danach und suchen Sie gemeinsam nach Lösungen. \n\nAnsprechperson: \nSagen Sie, an wen sich die Mitarbei­tenden bei Problemen wenden müssen. \n\nKontrolle: Machen Sie klar, dass Sie die Arbeitsaufträge regelmässig überprüfen und die Arbeiten vor Ort über­wachen werden. Informieren Sie auch über die vorgese­henen Konsequenzen.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Situation im Betrieb: \nGibt es Arbeitsorte, an denen nicht nach den Vorgaben gearbeitet wird? Fragen Sie die Mitarbeitenden danach und suchen Sie gemeinsam nach Lösungen. \n\nAnsprechperson: \nSagen Sie, an wen sich die Mitarbei­tenden bei Problemen wenden müssen. \n\nKontrolle: Machen Sie klar, dass Sie die Arbeitsaufträge regelmässig überprüfen und die Arbeiten vor Ort über­wachen werden. Informieren Sie auch über die vorgese­henen Konsequenzen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290964"
+      ],
+      "lead": "Das Wichtigste für die Umsetzung"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark++]\n[@id:290965]\n[%][%Wahl der Arbeitsmethode]\n• Wenn möglich, muss nach der Arbeitsmethode 1 gearbeitet werden.\n• Es muss im spannungsfreien Zustand oder ausserhalb der Annäherungszone gearbeitet werden können\n• Es können die 5 Sicherheitsregeln für spannungsfreies Arbeiten angewendet werden.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark++",
+      "body": "• Wenn möglich, muss nach der Arbeitsmethode 1 gearbeitet werden.\n• Es muss im spannungsfreien Zustand oder ausserhalb der Annäherungszone gearbeitet werden können\n• Es können die 5 Sicherheitsregeln für spannungsfreies Arbeiten angewendet werden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290965"
+      ],
+      "lead": "Wahl der Arbeitsmethode"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:291406]\nIst es nicht möglich im spannungsfreien Zustand (Arbeitsmethode 1) zu arbeiten, so wird eine schriftliche Begründung (Risikoanalyse) benötigt. \n\n• Die Begründung muss unter anderem folgender Inhalt erhalten: \n• Warum kann nicht im spannungsfreien Zustand gearbeitet werden. \n• Wie gross ist der Schaden, der durch einen technischen Defekt oder durch menschliches Versagen entstehen kann. \n• Regelung von der Kostenübernahme bei einem Schaden.\n• Gemeinsame Unterzeichnung der Begründung vom Auftraggeber und Auftragnehmer.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Ist es nicht möglich im spannungsfreien Zustand (Arbeitsmethode 1) zu arbeiten, so wird eine schriftliche Begründung (Risikoanalyse) benötigt. \n\n• Die Begründung muss unter anderem folgender Inhalt erhalten: \n• Warum kann nicht im spannungsfreien Zustand gearbeitet werden. \n• Wie gross ist der Schaden, der durch einen technischen Defekt oder durch menschliches Versagen entstehen kann. \n• Regelung von der Kostenübernahme bei einem Schaden.\n• Gemeinsame Unterzeichnung der Begründung vom Auftraggeber und Auftragnehmer.",
+      "id": [
+        "291406"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:291430]\nIst ein Eindringen in die Gefahrenzone nicht auszuschliessen so muss nach der Arbeitsmethode 3 gearbeitet werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ist ein Eindringen in die Gefahrenzone nicht auszuschliessen so muss nach der Arbeitsmethode 3 gearbeitet werden.",
+      "id": [
+        "291430"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:290966]\n[▼ch-3]\n[%Regel 2]\n[##Wir führen Arbeiten nur aus, wenn wir dafür geschult und berechtigt sind]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Regel 2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "290966"
+      ],
+      "anchor": "ch-3",
+      "title": "Wir führen Arbeiten nur aus, wenn wir dafür geschult und berechtigt sind"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:290967]\n[%][%Video]\n[&video-link:https://www.youtube.com/watch?v=Tn-FsaF20A4]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "290967"
+      ],
+      "lead": "Video",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=Tn-FsaF20A4",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:290968]\n[%][%Rollen]\nFür die Ausführung von Arbeiten müssen alle Beteiligten den Leitsatz ihrer Rolle kennen und sich daran halten.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Für die Ausführung von Arbeiten müssen alle Beteiligten den Leitsatz ihrer Rolle kennen und sich daran halten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290968"
+      ],
+      "lead": "Rollen"
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:291509]\nIch führe Arbeiten nur aus, für die ich geschult und berechtigt bin. Sonst sage ich Stopp und informiere meinen Vorgesetzten.\n[@quotedPerson:Arbeitnehmer]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Ich führe Arbeiten nur aus, für die ich geschult und berechtigt bin. Sonst sage ich Stopp und informiere meinen Vorgesetzten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291509"
+      ],
+      "quotedPerson": "Arbeitnehmer"
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:291519]\nIch setze geschultes und berechtigtes Personal ein. Ich fordere meine Mitarbeitenden auf, bei Unsicherheiten die Arbeit einzustellen und mich zu informieren.\n[@quotedPerson:Arbeitgeber]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Ich setze geschultes und berechtigtes Personal ein. Ich fordere meine Mitarbeitenden auf, bei Unsicherheiten die Arbeit einzustellen und mich zu informieren.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291519"
+      ],
+      "quotedPerson": "Arbeitgeber"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:290969]\n[%][%Instruktionstipps]\nArbeiten an elektrischen Anlagen sind anspruchsvoll und erfordern höchste Konzentration. Deshalb müssen die Mitarbeitenden für jeden Auftrag über die notwendige Ausbildung verfügen und die erforderlichen körperlichen sowie geistigen Voraussetzungen erfüllen.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Arbeiten an elektrischen Anlagen sind anspruchsvoll und erfordern höchste Konzentration. Deshalb müssen die Mitarbeitenden für jeden Auftrag über die notwendige Ausbildung verfügen und die erforderlichen körperlichen sowie geistigen Voraussetzungen erfüllen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290969"
+      ],
+      "lead": "Instruktionstipps"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark++]\n[@id:290970]\n[%][%Berechtigungen]\n• Berechtigungen Elektrische Betriebsbereiche (Betriebsräume, Hauptverteilungen, Traforäume usw.) müssen mit einem Schliesssystem gesichert sein. \n\t• Diese Bereiche dürfen nur von sachverständigen oder instruierten Personen betreten werden, die im Sicherheitskonzept namentlich genannt sind. \n• Sachverständige Person (Elektrofachkraft) Person mit elektrotechnischer Grundausbildung und mit Erfahrung im Umgang mit elektrotechnischen Einrichtungen.\n\t• Sie kann Gefahren, die von der Elektrizität ausgehen, erkennen und vermeiden. Die Sachverständigkeit gilt nur für definierte Arbeitsgebiete. \n• Instruierte Person Person mit oder ohne elektrotechnische Grundausbildung, die begrenzte, genau umschriebene Tätigkeiten in Starkstromanlagen aus führen kann und die örtlichen Verhältnisse und die zu treffenden Schutzmassnahmen kennt.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark++",
+      "body": "• Berechtigungen Elektrische Betriebsbereiche (Betriebsräume, Hauptverteilungen, Traforäume usw.) müssen mit einem Schliesssystem gesichert sein. \n\t• Diese Bereiche dürfen nur von sachverständigen oder instruierten Personen betreten werden, die im Sicherheitskonzept namentlich genannt sind. \n• Sachverständige Person (Elektrofachkraft) Person mit elektrotechnischer Grundausbildung und mit Erfahrung im Umgang mit elektrotechnischen Einrichtungen.\n\t• Sie kann Gefahren, die von der Elektrizität ausgehen, erkennen und vermeiden. Die Sachverständigkeit gilt nur für definierte Arbeitsgebiete. \n• Instruierte Person Person mit oder ohne elektrotechnische Grundausbildung, die begrenzte, genau umschriebene Tätigkeiten in Starkstromanlagen aus führen kann und die örtlichen Verhältnisse und die zu treffenden Schutzmassnahmen kennt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290970"
+      ],
+      "lead": "Berechtigungen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:290971]\nFür Tätigkeiten an elektrischen Anlagen gilt: Für die Beaufsichtigung sachverständige Personen einsetzen. Für die Aufgaben instruierte Personen einsetzen. Die Mitarbeitenden müssen den Aufgaben fachlich und körperlich gewachsen sein. Für das Arbeiten unter Spannung oder in der Nähe von spannungsführenden Teilen braucht es eine besondere Ausbildung. Die elektrischen Gefahren und die zu treffenden Schutzmassnahmen müssen bekannt sein. Unberechtigte Personen sind aus dem Arbeitsbereich wegzuweisen. Die Mitarbeitenden haben das Recht, STOPP zu sagen und einen Auftrag nicht auszuführen, wenn sie sich dazu nicht in der Lage fühlen oder Zweifel bezüglich Sicherheit haben. Mögliche Bedenken sind zu akzeptieren. Mitarbeitende im Zweifelsfall aktiv ansprechen (z. B. bei Verdacht auf Drogen, Alkohol, Krankheit, Unwohlsein, Übermüdung usw.)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Für Tätigkeiten an elektrischen Anlagen gilt: Für die Beaufsichtigung sachverständige Personen einsetzen. Für die Aufgaben instruierte Personen einsetzen. Die Mitarbeitenden müssen den Aufgaben fachlich und körperlich gewachsen sein. Für das Arbeiten unter Spannung oder in der Nähe von spannungsführenden Teilen braucht es eine besondere Ausbildung. Die elektrischen Gefahren und die zu treffenden Schutzmassnahmen müssen bekannt sein. Unberechtigte Personen sind aus dem Arbeitsbereich wegzuweisen. Die Mitarbeitenden haben das Recht, STOPP zu sagen und einen Auftrag nicht auszuführen, wenn sie sich dazu nicht in der Lage fühlen oder Zweifel bezüglich Sicherheit haben. Mögliche Bedenken sind zu akzeptieren. Mitarbeitende im Zweifelsfall aktiv ansprechen (z. B. bei Verdacht auf Drogen, Alkohol, Krankheit, Unwohlsein, Übermüdung usw.)",
+      "id": [
+        "290971"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.warning:bitmark++]\n[@id:290972]\n[%][%Notfall]\nDie wichtigsten Punkte im Notfall\n• Maschine/Anlage ausschalten\n• Alarmieren (Notfallnummern immer bei sich tragen)\n• Erste Hilfe leisten\n• Evakuieren (Fluchtwege befolgen, auf Sammelplatz hinweisen)",
+    "bit": {
+      "type": "warning",
+      "format": "bitmark++",
+      "body": "Die wichtigsten Punkte im Notfall\n• Maschine/Anlage ausschalten\n• Alarmieren (Notfallnummern immer bei sich tragen)\n• Erste Hilfe leisten\n• Evakuieren (Fluchtwege befolgen, auf Sammelplatz hinweisen)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290972"
+      ],
+      "lead": "Notfall"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\n[@id:290973]\n[%][%Das Wichtigste für die Umsetzung]\nSituation im Betrieb: \n• Ist das Elektro-Sicherheitskonzept den Mitarbeitenden bekannt? \n• Sind die Mitarbeitenden entsprechend geschult, berechtigt und werden die In­struktionen periodisch wiederholt?\n\nAnsprechperson: \nSagen Sie, an wen sich die Mitarbeitenden bei Schwierigkeiten oder im Zweifelsfall wenden sollen. \n\nKontrolle: Machen Sie klar, dass Sie Arbeitnehmende, welche die Voraussetzungen und Anforderungen nicht erfüllen, ansprechen und wenn nötig vom Arbeitsplatz wegweisen werden.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "Situation im Betrieb: \n• Ist das Elektro-Sicherheitskonzept den Mitarbeitenden bekannt? \n• Sind die Mitarbeitenden entsprechend geschult, berechtigt und werden die In­struktionen periodisch wiederholt?\n\nAnsprechperson: \nSagen Sie, an wen sich die Mitarbeitenden bei Schwierigkeiten oder im Zweifelsfall wenden sollen. \n\nKontrolle: Machen Sie klar, dass Sie Arbeitnehmende, welche die Voraussetzungen und Anforderungen nicht erfüllen, ansprechen und wenn nötig vom Arbeitsplatz wegweisen werden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290973"
+      ],
+      "lead": "Das Wichtigste für die Umsetzung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:290974]\n[▼ch-4]\n[%Regel 3]\n[##Wir arbeiten mit sicheren und intakten Arbeitsmitteln]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Regel 3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "290974"
+      ],
+      "anchor": "ch-4",
+      "title": "Wir arbeiten mit sicheren und intakten Arbeitsmitteln"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:290975]\n[%][%Video]\n[&video-link:https://www.youtube.com/watch?v=1QfcgrW231Y]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "290975"
+      ],
+      "lead": "Video",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=1QfcgrW231Y",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:290976]\n[%][%Rollen]\nFür das Arbeiten mit sicheren und intakten Arbeitsmitteln müssen alle Beteiligten den Leitsatz ihrer Rolle kennen und sich daran halten.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Für das Arbeiten mit sicheren und intakten Arbeitsmitteln müssen alle Beteiligten den Leitsatz ihrer Rolle kennen und sich daran halten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290976"
+      ],
+      "lead": "Rollen"
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:291511]\nIch verwende nur Arbeitsmittel, die geeignet, intakt und isoliert sind. Defekte Arbeitsmittel repariere ich sofort oder melde sie dem Vorgesetzten.\n[@quotedPerson:Arbeitnehmer]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Ich verwende nur Arbeitsmittel, die geeignet, intakt und isoliert sind. Defekte Arbeitsmittel repariere ich sofort oder melde sie dem Vorgesetzten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291511"
+      ],
+      "quotedPerson": "Arbeitnehmer"
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:291512]\nIch sorge dafür, dass die Mitarbeitenden sichere und intakte Arbeitsmittel benutzen. Ich kümmere mich auch um die regelmässige Wartung.\n[@quotedPerson:Vorgesetzter]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Ich sorge dafür, dass die Mitarbeitenden sichere und intakte Arbeitsmittel benutzen. Ich kümmere mich auch um die regelmässige Wartung.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291512"
+      ],
+      "quotedPerson": "Vorgesetzter"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:290977]\n[%][%Instruktionstipps]\nErklären Sie, wie die Instandhaltung und -setzung der Arbeitsmittel betriebsintern geregelt ist.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Erklären Sie, wie die Instandhaltung und -setzung der Arbeitsmittel betriebsintern geregelt ist.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290977"
+      ],
+      "lead": "Instruktionstipps"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark++]\n[@id:290978]\n[%][%Sicheres Arbeiten]\nFür sicheres Arbeiten gilt: \n• Nur mit isoliertem Werkzeug arbeiten.\n• Vor jedem Gebrauch überprüfen, ob das Arbeitsmittel gewartet wurde und keine Schäden aufweist.\n• Defekte Arbeitsmittel nicht mehr verwenden, sofort reparieren oder ersetzen.\n• Mängel sofort dem Vorgesetzten melden.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark++",
+      "body": "Für sicheres Arbeiten gilt: \n• Nur mit isoliertem Werkzeug arbeiten.\n• Vor jedem Gebrauch überprüfen, ob das Arbeitsmittel gewartet wurde und keine Schäden aufweist.\n• Defekte Arbeitsmittel nicht mehr verwenden, sofort reparieren oder ersetzen.\n• Mängel sofort dem Vorgesetzten melden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290978"
+      ],
+      "lead": "Sicheres Arbeiten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:291411]\nFI- Schutzschalter (RCD): Vor Ort muss geprüft werden, ob eine Fehlerstrom- Schutzeinrichtung vorhanden ist. Falls nicht, mobile FI-Schutzschalter einsetzen. Bei Renovationen und Erweiterungsbauten besonders darauf achten, dass FI-Schutzschalter eingesetzt werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "FI- Schutzschalter (RCD): Vor Ort muss geprüft werden, ob eine Fehlerstrom- Schutzeinrichtung vorhanden ist. Falls nicht, mobile FI-Schutzschalter einsetzen. Bei Renovationen und Erweiterungsbauten besonders darauf achten, dass FI-Schutzschalter eingesetzt werden.",
+      "id": [
+        "291411"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:291412]\n**Achtung:** Arbeitsmittel wie Werkzeuge, Maschinen und Geräte müssen regelmässig kontrolliert und gemäss Herstellerangaben instand gehalten werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Achtung:** Arbeitsmittel wie Werkzeuge, Maschinen und Geräte müssen regelmässig kontrolliert und gemäss Herstellerangaben instand gehalten werden.",
+      "id": [
+        "291412"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.warning:bitmark++]\n[@id:290979]\n[%][%Notfall]\nDie wichtigsten Punkte im Notfall\n• Maschine/Anlage ausschalten\n• Alarmieren (Notfallnummern immer bei sich tragen)\n• Erste Hilfe leisten\n• Evakuieren (Fluchtwege befolgen, auf Sammelplatz hinweisen).",
+    "bit": {
+      "type": "warning",
+      "format": "bitmark++",
+      "body": "Die wichtigsten Punkte im Notfall\n• Maschine/Anlage ausschalten\n• Alarmieren (Notfallnummern immer bei sich tragen)\n• Erste Hilfe leisten\n• Evakuieren (Fluchtwege befolgen, auf Sammelplatz hinweisen).",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290979"
+      ],
+      "lead": "Notfall"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\n[@id:290980]\n[%][%Das Wichtigste für die Umsetzung]\nSituation im Betrieb: \n• Gibt es defekte Arbeitsmittel?\n• Wird der FI-Schutzschalter konsequent eingesetzt?\n• Fragen Sie die Mitarbeitenden danach und suchen Sie gemeinsam nach Lösungen.\n\nAnsprechperson:\nSagen Sie, an wen sich die Mitarbeitenden bei Mängeln oder fehlendem FI-Schutzschalter wenden sollen.\n\nKontrolle:\n• Machen Sie klar, dass Sie kontrollieren werden, ob sichere und intakte Arbeitsmittel eingesetzt werden.\n• Informieren Sie auch über die vorgesehenen Konsequenzen.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "Situation im Betrieb: \n• Gibt es defekte Arbeitsmittel?\n• Wird der FI-Schutzschalter konsequent eingesetzt?\n• Fragen Sie die Mitarbeitenden danach und suchen Sie gemeinsam nach Lösungen.\n\nAnsprechperson:\nSagen Sie, an wen sich die Mitarbeitenden bei Mängeln oder fehlendem FI-Schutzschalter wenden sollen.\n\nKontrolle:\n• Machen Sie klar, dass Sie kontrollieren werden, ob sichere und intakte Arbeitsmittel eingesetzt werden.\n• Informieren Sie auch über die vorgesehenen Konsequenzen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290980"
+      ],
+      "lead": "Das Wichtigste für die Umsetzung"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark++]\n[@id:290981]\n[%][%Praktisches]\nIch stelle mir folgende Fragen:\n• Verwendung von isoliertem Werkzeug\n• Nur geprüfte und intakte Geräte benutzen.\n• Vor jeder Nutzung, das Gerät und Werkzeug auf Beschädigungen kontrollieren.\n• Mobilen FI- Schutz (RCD) verwenden.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark++",
+      "body": "Ich stelle mir folgende Fragen:\n• Verwendung von isoliertem Werkzeug\n• Nur geprüfte und intakte Geräte benutzen.\n• Vor jeder Nutzung, das Gerät und Werkzeug auf Beschädigungen kontrollieren.\n• Mobilen FI- Schutz (RCD) verwenden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290981"
+      ],
+      "lead": "Praktisches"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:290982]\n[▼ch-5]\n[%Regel 4]\n[##Wir tragen die persönliche Schutzausrüstung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Regel 4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "290982"
+      ],
+      "anchor": "ch-5",
+      "title": "Wir tragen die persönliche Schutzausrüstung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:290983]\n[%][%Video]\n[&video-link:https://www.youtube.com/watch?v=U8beh5mwf4A]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "290983"
+      ],
+      "lead": "Video",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=U8beh5mwf4A",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:290984]\n[%][%Rollen]\nFür das tragen einer persönlichen Schutzausrüstung müssen alle Beteiligten den Leitsatz ihrer Rolle kennen und sich daran halten.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Für das tragen einer persönlichen Schutzausrüstung müssen alle Beteiligten den Leitsatz ihrer Rolle kennen und sich daran halten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290984"
+      ],
+      "lead": "Rollen"
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:291513]\nIch trage eine intakte, für die aktuelle Arbeit geeignete Schutzausrüstung gemäss Vorgaben des Vorgesetzten.\n[@quotedPerson:Arbeitnehmer]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Ich trage eine intakte, für die aktuelle Arbeit geeignete Schutzausrüstung gemäss Vorgaben des Vorgesetzten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291513"
+      ],
+      "quotedPerson": "Arbeitnehmer"
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:291514]\nIch sorge dafür, dass die Mitarbeitenden die erforderliche Schutzausrüstung erhalten und richtig anwenden.\n[@quotedPerson:Vorgesetzter]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Ich sorge dafür, dass die Mitarbeitenden die erforderliche Schutzausrüstung erhalten und richtig anwenden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291514"
+      ],
+      "quotedPerson": "Vorgesetzter"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:290985]\n[%][%Instruktionstipps]\nGehen Sie als Vorgesetzter mit gutem Beispiel voran. Tragen Sie konsequent und je nach Arbeitssituation die notwendige persönliche Schutzausrüstung (PSA).",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Gehen Sie als Vorgesetzter mit gutem Beispiel voran. Tragen Sie konsequent und je nach Arbeitssituation die notwendige persönliche Schutzausrüstung (PSA).",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290985"
+      ],
+      "lead": "Instruktionstipps"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:290986]\n[%][%Anwendung]\nBei Arbeiten mit hohem Risiko von Störlichtbogen und Durchströmung muss die persönliche Schutzausrüstung getragen werden. Diese Arbeiten dürfen nur ausgeführt werden, wenn es keine Alternativen gibt.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Bei Arbeiten mit hohem Risiko von Störlichtbogen und Durchströmung muss die persönliche Schutzausrüstung getragen werden. Diese Arbeiten dürfen nur ausgeführt werden, wenn es keine Alternativen gibt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290986"
+      ],
+      "lead": "Anwendung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:290987]\nAnwendung der PSA Sprechen Sie über die Gefahren und über die Gründe, warum die PSA zu tragen ist. Erklären Sie, wann, welche PSA getragen werden muss: bei Arbeiten in der Annäherungs- und Gefahrenzone, z.B. bei Messungen, Abdeckarbeiten und beim Erstellen von Spannungsfreiheit. Jeder Mitarbeiter benützt seine eigene, für ihn persönlich bestimmte Schutzausrüstung und trägt dazu Sorge (eigener Helm, eigene Handschuhe usw.). Ist dies nicht der Fall, nutzen Sie die Gelegenheit und geben Sie jedem Mitarbeiter seine individuelle PSA.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Anwendung der PSA Sprechen Sie über die Gefahren und über die Gründe, warum die PSA zu tragen ist. Erklären Sie, wann, welche PSA getragen werden muss: bei Arbeiten in der Annäherungs- und Gefahrenzone, z.B. bei Messungen, Abdeckarbeiten und beim Erstellen von Spannungsfreiheit. Jeder Mitarbeiter benützt seine eigene, für ihn persönlich bestimmte Schutzausrüstung und trägt dazu Sorge (eigener Helm, eigene Handschuhe usw.). Ist dies nicht der Fall, nutzen Sie die Gelegenheit und geben Sie jedem Mitarbeiter seine individuelle PSA.",
+      "id": [
+        "290987"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark++]\n[@id:290988]\n[%][%Instandhaltung]\n• Defekte oder abgenutzte PSA umgehend ersetzen.\n• Unhygienische, verschmutzte PSA gemäss Pflegehinweisen des Herstellers reinigen.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark++",
+      "body": "• Defekte oder abgenutzte PSA umgehend ersetzen.\n• Unhygienische, verschmutzte PSA gemäss Pflegehinweisen des Herstellers reinigen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290988"
+      ],
+      "lead": "Instandhaltung"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\n[@id:290989]\n[%][%Das Wichtigste für die Umsetzung]\nSituation im Betrieb: \n• Ist die verwendete PSA in gutem Zustand?\n• Was für Probleme gibt es im Zusammenhang mit dem Tragen von PSA?\n\nFragen Sie die Mitarbeitenden danach. Bereiten Sie sich auf mögliche Einwände vor und wie Sie darauf reagieren können.\n\nAnsprechperson:\n• Defekte oder abgenutzte PSA ist umgehend zu erneuern.\n• Sagen Sie, wer die Ansprechperson ist.\n\nKontrolle:\n• Machen Sie klar, dass Sie überprüfen werden, ob die PSA konsequent getragen wird und intakt ist.\n• Informieren Sie auch über die vorgesehenen Konsequenzen.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "Situation im Betrieb: \n• Ist die verwendete PSA in gutem Zustand?\n• Was für Probleme gibt es im Zusammenhang mit dem Tragen von PSA?\n\nFragen Sie die Mitarbeitenden danach. Bereiten Sie sich auf mögliche Einwände vor und wie Sie darauf reagieren können.\n\nAnsprechperson:\n• Defekte oder abgenutzte PSA ist umgehend zu erneuern.\n• Sagen Sie, wer die Ansprechperson ist.\n\nKontrolle:\n• Machen Sie klar, dass Sie überprüfen werden, ob die PSA konsequent getragen wird und intakt ist.\n• Informieren Sie auch über die vorgesehenen Konsequenzen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290989"
+      ],
+      "lead": "Das Wichtigste für die Umsetzung"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark++]\n[@id:290990]\n[%][%Praktisches]\nIch stelle mir folgende Fragen:\n• Wie ist der Zustand meiner PSA? Defekte PSA ersetzen Verschmutze PSA nach Herstellerangaben reinigen.\n• Habe ich die PSA bei allen Arbeiten, bei denen ein Lichtbogen entstehen kann oder ein Kontakt mit einem spannungsführenden Teil nicht ausgeschlossen werden kann getragen?\n• Warum habe ich sie nicht getragen?\n• Was für eine Auswirkung hätte eine Durchströmung oder ein Lichtbogen auf mich gehabt?",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark++",
+      "body": "Ich stelle mir folgende Fragen:\n• Wie ist der Zustand meiner PSA? Defekte PSA ersetzen Verschmutze PSA nach Herstellerangaben reinigen.\n• Habe ich die PSA bei allen Arbeiten, bei denen ein Lichtbogen entstehen kann oder ein Kontakt mit einem spannungsführenden Teil nicht ausgeschlossen werden kann getragen?\n• Warum habe ich sie nicht getragen?\n• Was für eine Auswirkung hätte eine Durchströmung oder ein Lichtbogen auf mich gehabt?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290990"
+      ],
+      "lead": "Praktisches"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:290991]\n[▼ch-6]\n[%Regel 5]\n[##Wir nehmen Anlagen nur in Betrieb, wenn die vorgeschriebenen Kontrollen vorgenommen wurden]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Regel 5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "290991"
+      ],
+      "anchor": "ch-6",
+      "title": "Wir nehmen Anlagen nur in Betrieb, wenn die vorgeschriebenen Kontrollen vorgenommen wurden"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:290992]\n[%][%Video]\n[&video-link:https://www.youtube.com/watch?v=wbh5mQzwUeY]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "290992"
+      ],
+      "lead": "Video",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=wbh5mQzwUeY",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:290993]\n[%][%Rollen]\nFür die Inbetriebnahme von Anlagen müssen alle Beteiligten den Leitsatz ihrer Rolle kennen und sich daran halten.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Für die Inbetriebnahme von Anlagen müssen alle Beteiligten den Leitsatz ihrer Rolle kennen und sich daran halten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290993"
+      ],
+      "lead": "Rollen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:290994]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "290994"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:291515]\nBevor ich eine Anlage einschalte, stelle ich sicher, dass die vorgeschriebenen Kontrollen vorgenommen und dokumentiert wurden.\n[@quotedPerson:Arbeitnehmer]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Bevor ich eine Anlage einschalte, stelle ich sicher, dass die vorgeschriebenen Kontrollen vorgenommen und dokumentiert wurden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291515"
+      ],
+      "quotedPerson": "Arbeitnehmer"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:290995]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "290995"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:291516]\nIch stelle sicher, dass meine Mitarbeitenden die vorgeschriebenen Kontrollen vornehmen und dokumentieren. Vor dem Einschalten der Anlage überprüfe ich die Vollständigkeit der Kontrolldokumente.\n[@quotedPerson:Vorgesetzter]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Ich stelle sicher, dass meine Mitarbeitenden die vorgeschriebenen Kontrollen vornehmen und dokumentieren. Vor dem Einschalten der Anlage überprüfe ich die Vollständigkeit der Kontrolldokumente.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291516"
+      ],
+      "quotedPerson": "Vorgesetzter"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:290996]\n[%][%Instruktionstipps]\nNach jeder bedeutenden Änderung und Erweiterung von elektrischen Anlagen muss vor Inbetriebnahme geprüft werden, ob der Schutz von Personen und Sachen erfüllt ist. Diese Prüfung umfasst Besichtigen, Erproben (Funktionsprüfung) und Messen.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Nach jeder bedeutenden Änderung und Erweiterung von elektrischen Anlagen muss vor Inbetriebnahme geprüft werden, ob der Schutz von Personen und Sachen erfüllt ist. Diese Prüfung umfasst Besichtigen, Erproben (Funktionsprüfung) und Messen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290996"
+      ],
+      "lead": "Instruktionstipps"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark++]\n[@id:290997]\n[%][%Prüfung]\nBei der Prüfung alle Sinne einsetzen:\n• Wärme spüren -> heisse Oberflächen Berührungsschutz\n• visuell überprüfen\n• Brummen eines Transformators hören\n• Überhitzung riechen",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark++",
+      "body": "Bei der Prüfung alle Sinne einsetzen:\n• Wärme spüren -> heisse Oberflächen Berührungsschutz\n• visuell überprüfen\n• Brummen eines Transformators hören\n• Überhitzung riechen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290997"
+      ],
+      "lead": "Prüfung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:290998]\nDie folgenden Prüfungen und Messungen müssen in jedem Fall durchgeführt werden:\n• Leitfähigkeit des Schutzleiters und des Schutz-Potenzialausgleichsleiters\n• Schutz durch automatische Abschaltung der Stromversorgung / Kurzschlussstrommessung \n• Isolationsmessung \n• Drehsinn- und Polaritätsprüfung \n• Funktion der Fehlerstrom-Schutzeinrichtung \n\nDas Wichtigste für die Umsetzung: Prüfung des Spannungsfalls\n\nDie Ergebnisse sind zu protokollieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die folgenden Prüfungen und Messungen müssen in jedem Fall durchgeführt werden:\n• Leitfähigkeit des Schutzleiters und des Schutz-Potenzialausgleichsleiters\n• Schutz durch automatische Abschaltung der Stromversorgung / Kurzschlussstrommessung \n• Isolationsmessung \n• Drehsinn- und Polaritätsprüfung \n• Funktion der Fehlerstrom-Schutzeinrichtung \n\nDas Wichtigste für die Umsetzung: Prüfung des Spannungsfalls\n\nDie Ergebnisse sind zu protokollieren.",
+      "id": [
+        "290998"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:290999]\n[%][%Schlusskontrolle]\nSchlusskontrolle Funktionen der eingesetzten Schutzeinrichtungen und Betriebsmittel überprüfen. \nBei Installationen nach NIV muss die Schlusskontrolle durch eine fachkundige oder kontrollberechtigte Person, bei Starkstromanlagen durch die für die Arbeit verantwortliche Person durchgeführt werden.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Schlusskontrolle Funktionen der eingesetzten Schutzeinrichtungen und Betriebsmittel überprüfen. \nBei Installationen nach NIV muss die Schlusskontrolle durch eine fachkundige oder kontrollberechtigte Person, bei Starkstromanlagen durch die für die Arbeit verantwortliche Person durchgeführt werden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "290999"
+      ],
+      "lead": "Schlusskontrolle"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\n[@id:291000]\n[%][%Das Wichtigste für die Umsetzung]\nSituation im Betrieb:\n• Werden alle von uns erstellten elektrischen Anlagen geprüft und die Ergebnisse protokolliert?\n\t• Wenn nicht, ist die Erstprüfung umgehend nachzuholen. \n\t• Legen Sie fest, durch wen. \n\t\nAnsprechperson: \nSagen Sie, an wen sich die Mitarbeitenden bei Unklarheiten über die Erstprüfung wenden sollen.\n\nKontrolle:\n• Machen Sie klar, dass Sie kontrollieren werden, ob vor Inbetriebnahme jeweils eine Erstprüfung gemacht wird.\n• Informieren Sie auch über die vorgesehenen Konsequenzen.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "Situation im Betrieb:\n• Werden alle von uns erstellten elektrischen Anlagen geprüft und die Ergebnisse protokolliert?\n\t• Wenn nicht, ist die Erstprüfung umgehend nachzuholen. \n\t• Legen Sie fest, durch wen. \n\t\nAnsprechperson: \nSagen Sie, an wen sich die Mitarbeitenden bei Unklarheiten über die Erstprüfung wenden sollen.\n\nKontrolle:\n• Machen Sie klar, dass Sie kontrollieren werden, ob vor Inbetriebnahme jeweils eine Erstprüfung gemacht wird.\n• Informieren Sie auch über die vorgesehenen Konsequenzen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291000"
+      ],
+      "lead": "Das Wichtigste für die Umsetzung"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:291001]\n[%][%Praktisches]\nIch stelle mir folgende Fragen:\n• Welche Kontrollen muss ich durchführen, wenn ich eine Elektroinstallation in Betrieb nehme?\n\t• Sichtprüfung (Prüfung mit allen Sinnen) Prüfung durch Messen\n• Welche fünf Messungen muss ich durchführen?\n• Kenne ich die zu erwartenden Messresultate?\n\t• Wenn ich nicht alle Messungen kenne oder nicht weiss, was die Messresultate aussagen muss ich mich vom Vorgesetzten schulen lassen.\n• Leitfähigkeit des Schutzleiters und des Schutz-Potenzialausgleichsleiters\n• Schutz durch automatische Abschaltung der Stromversorgung / Kurzschlussstrommessung\n• Isolationsmessung \n• Drehsinn- und Polaritätsprüfung\n• Funktion der Fehlerstrom-Schutzeinrichtung\n• Welche Kontrolle muss der fachkundige Leiter oder die kontrollberechtigte Person durchführen?\n• Habe ich auch schon Anlagen in Betrieb genommen, ohne diese zu prüfen?\n\t• Warum habe ich das getan?\n\t• Was wäre wohl passiert, wenn die Installation fehlerhaft war und eine Person sich verletzte?",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Ich stelle mir folgende Fragen:\n• Welche Kontrollen muss ich durchführen, wenn ich eine Elektroinstallation in Betrieb nehme?\n\t• Sichtprüfung (Prüfung mit allen Sinnen) Prüfung durch Messen\n• Welche fünf Messungen muss ich durchführen?\n• Kenne ich die zu erwartenden Messresultate?\n\t• Wenn ich nicht alle Messungen kenne oder nicht weiss, was die Messresultate aussagen muss ich mich vom Vorgesetzten schulen lassen.\n• Leitfähigkeit des Schutzleiters und des Schutz-Potenzialausgleichsleiters\n• Schutz durch automatische Abschaltung der Stromversorgung / Kurzschlussstrommessung\n• Isolationsmessung \n• Drehsinn- und Polaritätsprüfung\n• Funktion der Fehlerstrom-Schutzeinrichtung\n• Welche Kontrolle muss der fachkundige Leiter oder die kontrollberechtigte Person durchführen?\n• Habe ich auch schon Anlagen in Betrieb genommen, ohne diese zu prüfen?\n\t• Warum habe ich das getan?\n\t• Was wäre wohl passiert, wenn die Installation fehlerhaft war und eine Person sich verletzte?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291001"
+      ],
+      "lead": "Praktisches"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:291002]\n[▼ch-7]\n[##+5 Regel]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291002"
+      ],
+      "anchor": "ch-7",
+      "title": "+5 Regel"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:291003]\n[%][%Video]\n[&video-link:https://www.youtube.com/watch?v=PTDckyBG4aI]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "291003"
+      ],
+      "lead": "Video",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=PTDckyBG4aI",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:291004]\n[%][%Rollen]\nWir halten uns konsequent an die 5 Sicherheitsregeln für spannungsfreies Arbeiten.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Wir halten uns konsequent an die 5 Sicherheitsregeln für spannungsfreies Arbeiten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291004"
+      ],
+      "lead": "Rollen"
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:291517]\nIch wende die 5 Sicherheitsregeln konsequent an.\n[@quotedPerson:Arbeitnehmer]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Ich wende die 5 Sicherheitsregeln konsequent an.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291517"
+      ],
+      "quotedPerson": "Arbeitnehmer"
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:291518]\nIch sorge dafür, dass die Mitarbeitenden die 5 Sicherheitsregeln kennen und richtig anwenden. Ich stelle die nötigen Mittel zur Verfügung.\n[@quotedPerson:Vorgesetzter]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Ich sorge dafür, dass die Mitarbeitenden die 5 Sicherheitsregeln kennen und richtig anwenden. Ich stelle die nötigen Mittel zur Verfügung.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291518"
+      ],
+      "quotedPerson": "Vorgesetzter"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:291007]\n[%][%Instruktionstipps]\nUm in spannungsfreiem Zustand arbeiten zu können, müssen die 5 Sicherheitsregeln angewendet werden. Dabei tragen wir konsequent die erforderliche persönliche Schutzausrüstung (PSA). Zeigen Sie die Anwendung der 5 Sicherheitsregeln (Fünf-Fingerregel) an einem praktischen Beispiel vor Ort.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Um in spannungsfreiem Zustand arbeiten zu können, müssen die 5 Sicherheitsregeln angewendet werden. Dabei tragen wir konsequent die erforderliche persönliche Schutzausrüstung (PSA). Zeigen Sie die Anwendung der 5 Sicherheitsregeln (Fünf-Fingerregel) an einem praktischen Beispiel vor Ort.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291007"
+      ],
+      "lead": "Instruktionstipps"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:291425]\n[▼ch-1-BIF]\n[%Regel +1]\n[##Freischalten und allseitig trennen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Regel +1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291425"
+      ],
+      "anchor": "ch-1-BIF",
+      "title": "Freischalten und allseitig trennen"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:291008]\n[%a][%Freischalten]\nFreischalten und allseitig trennen. Elektrische Anlage vor dem Arbeiten freischalten, d.h. allpolig von spannungsführenden Teilen trennen.\nBeispiel: Anlage ausschalten und Sicherungen entfernen.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Freischalten und allseitig trennen. Elektrische Anlage vor dem Arbeiten freischalten, d.h. allpolig von spannungsführenden Teilen trennen.\nBeispiel: Anlage ausschalten und Sicherungen entfernen.",
+      "item": "a",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291008"
+      ],
+      "lead": "Freischalten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:291009]\nBei welchen Sicherungstypen benötigte ich eine PSA zum Schalten? Niederspannungs-Hochleistungssicherungen (NHS) / Gefahr durch Lichtbogen Leistungsschalter / Gefahr durch Lichtbogen. Bei der Diazed-Sicherungen wird ein Handschuh empfohlen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bei welchen Sicherungstypen benötigte ich eine PSA zum Schalten? Niederspannungs-Hochleistungssicherungen (NHS) / Gefahr durch Lichtbogen Leistungsschalter / Gefahr durch Lichtbogen. Bei der Diazed-Sicherungen wird ein Handschuh empfohlen.",
+      "id": [
+        "291009"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:291426]\n[▼ch-2--GL]\n[%Regel +2]\n[##Gegen Wiedereinschalten sichern]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Regel +2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291426"
+      ],
+      "anchor": "ch-2--GL",
+      "title": "Gegen Wiedereinschalten sichern"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:291010]\n[%b][%Sichern]\nGegen Wiedereinschalten sichern. Verhindern Sie, dass man eine Anlage, an der gearbeitet wird, irrtümlich wieder einschaltet. Beispiele: Sicherung mitnehmen, Schalter abschliessen, Trennstelle abschliessen, Verbotsschild anbringen.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Gegen Wiedereinschalten sichern. Verhindern Sie, dass man eine Anlage, an der gearbeitet wird, irrtümlich wieder einschaltet. Beispiele: Sicherung mitnehmen, Schalter abschliessen, Trennstelle abschliessen, Verbotsschild anbringen.",
+      "item": "b",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291010"
+      ],
+      "lead": "Sichern"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:291427]\n[▼ch-3-m8S]\n[%Regel +3]\n[##Auf Spannungsfreiheit prüfen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Regel +3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291427"
+      ],
+      "anchor": "ch-3-m8S",
+      "title": "Auf Spannungsfreiheit prüfen"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:291011]\n[%c][%Prüfen]\nAuf Spannungsfreiheit prüfen. Der Arbeitsverantwortliche muss die Anlage mit einem Spannungsprüfer auf allpolige Spannungsfreiheit prüfen. Der Spannungsprüfer muss der EN- Norm 61243-3 entsprechen. Die Funktionsfähigkeit des Messgeräts ist mit einer 3-Punkte Messung vorgängig zu prüfen.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Auf Spannungsfreiheit prüfen. Der Arbeitsverantwortliche muss die Anlage mit einem Spannungsprüfer auf allpolige Spannungsfreiheit prüfen. Der Spannungsprüfer muss der EN- Norm 61243-3 entsprechen. Die Funktionsfähigkeit des Messgeräts ist mit einer 3-Punkte Messung vorgängig zu prüfen.",
+      "item": "c",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291011"
+      ],
+      "lead": "Prüfen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:291428]\n[▼ch-4-Ubb]\n[%Regel +4]\n[##Erden und Kurzschliessen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Regel +4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291428"
+      ],
+      "anchor": "ch-4-Ubb",
+      "title": "Erden und Kurzschliessen"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:291012]\n[%d][%Erden/Kurzschliessen]\nErden und Kurzschliessen. Sämtliche spannungsführenden Teile mit kurzschlussfesten Erdungs- und Kurzschliessvorrichtungen erden.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Erden und Kurzschliessen. Sämtliche spannungsführenden Teile mit kurzschlussfesten Erdungs- und Kurzschliessvorrichtungen erden.",
+      "item": "d",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291012"
+      ],
+      "lead": "Erden/Kurzschliessen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:291013]\nAn Niederspannungsanlagen kann auf das Erden und Kurzschliessen verzichtet werden, wenn keine Gefahr von Spannungsübertragung oder Rückspeisung besteht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "An Niederspannungsanlagen kann auf das Erden und Kurzschliessen verzichtet werden, wenn keine Gefahr von Spannungsübertragung oder Rückspeisung besteht.",
+      "id": [
+        "291013"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:291014]\nVorsicht bei Rückspeisung (z.B. Solaranlagen, Ringschaltung, Notstromanlagen)!",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Vorsicht bei Rückspeisung (z.B. Solaranlagen, Ringschaltung, Notstromanlagen)!",
+      "id": [
+        "291014"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:291429]\n[▼ch-5-Tri]\n[%Regel +5]\n[##Gegen benachbarte, unter Spannung stehende Teile schützen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Regel +5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291429"
+      ],
+      "anchor": "ch-5-Tri",
+      "title": "Gegen benachbarte, unter Spannung stehende Teile schützen"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:291015]\n[%e][%Schützen]\nGegen benachbarte, unter Spannung stehende Teile schützen. Wenn benachbarte, unter Spannung stehende Teile nicht ausgeschaltet werden können, sind diese abzudecken oder zu isolieren. Beispiele: Isoliermatten, Isolierschläuche, Isolierplatten.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Gegen benachbarte, unter Spannung stehende Teile schützen. Wenn benachbarte, unter Spannung stehende Teile nicht ausgeschaltet werden können, sind diese abzudecken oder zu isolieren. Beispiele: Isoliermatten, Isolierschläuche, Isolierplatten.",
+      "item": "e",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291015"
+      ],
+      "lead": "Schützen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:291016]\n[▼ch-8]\n[#Testen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291016"
+      ],
+      "anchor": "ch-8",
+      "title": "Testen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291017]\n[!Welche Aussage zur Regel 1 ist richtig?]\n[-Ich beginne erst mit der Arbeit, wenn ich den Auftrag klar verstanden habe. Bei Unklarheiten wende ich mich an den Vorgesetzten.]\n[+Ich beginne erst mit der Arbeit, wenn ich den Auftrag klar verstanden habe und die Verantwortlichkeiten bekannt sind. Bei Unklarheiten wende ich mich an den Vorgesetzten.]\n[-Ich beginne erst mit der Arbeit, wenn ich die komplette PSA angezogen habe und der Chef mir den Auftrag gegeben hat. Bei Unklarheiten wende ich mich an meinen Arbeitskollegen.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welche Aussage zur Regel 1 ist richtig?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Ich beginne erst mit der Arbeit, wenn ich den Auftrag klar verstanden habe. Bei Unklarheiten wende ich mich an den Vorgesetzten.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ich beginne erst mit der Arbeit, wenn ich den Auftrag klar verstanden habe und die Verantwortlichkeiten bekannt sind. Bei Unklarheiten wende ich mich an den Vorgesetzten.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ich beginne erst mit der Arbeit, wenn ich die komplette PSA angezogen habe und der Chef mir den Auftrag gegeben hat. Bei Unklarheiten wende ich mich an meinen Arbeitskollegen.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291017"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291520]\n[!Welche Aussage ist falsch?]\n[-Mängel an Werkzeugen melde ich sofort dem Vorgesetzten]\n[-Ich überprüfte Arbeitsmittel vor jedem Gebrauch auf Wartung und Schäden]\n[-Ich überprüfe defekte Arbeitsmittel. Bei Defekten Arbeitsmittel repariere ich sie sofort oder ersetzte diese Arbeitsmittel]\n[-Immer hinter einem Stromkreis, der mit einem RCD geschützt ist arbeiten]\n[+Wenn der Stromkreis mit einem RCD 30 mA geschützt ist, kann auf die Überprüfung vom Apparat verzichtet werden]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welche Aussage ist falsch?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Mängel an Werkzeugen melde ich sofort dem Vorgesetzten",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ich überprüfte Arbeitsmittel vor jedem Gebrauch auf Wartung und Schäden",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ich überprüfe defekte Arbeitsmittel. Bei Defekten Arbeitsmittel repariere ich sie sofort oder ersetzte diese Arbeitsmittel",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Immer hinter einem Stromkreis, der mit einem RCD geschützt ist arbeiten",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Wenn der Stromkreis mit einem RCD 30 mA geschützt ist, kann auf die Überprüfung vom Apparat verzichtet werden",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291520"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291521]\n[!Wann muss ich keine Elektro PSA tragen?]\n[-Arbeiten mit Risiko von Störlichtbögen]\n[-Arbeiten bei denen eine Durchströmung nicht ausgeschlossen werden kann]\n[+Bei Arbeiten nach der Arbeitsmethode 1]\n[-Arbeiten in der Annäherungszone]\n[-Arbeiten in der Gefahrenzone]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Wann muss ich keine Elektro PSA tragen?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Arbeiten mit Risiko von Störlichtbögen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Arbeiten bei denen eine Durchströmung nicht ausgeschlossen werden kann",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Bei Arbeiten nach der Arbeitsmethode 1",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Arbeiten in der Annäherungszone",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Arbeiten in der Gefahrenzone",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291521"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291522]\n[!Wann muss das Erden- und Kurzschliessen angewendet werden?]\n[-Bei Niederspannungsanlagen muss diese Regel nie angewendet werden.]\n[+Wenn die Gefahr von Spannungsübertragung oder Rückspeisung besteht.]\n[-Bei allen Starkstromanlagen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Wann muss das Erden- und Kurzschliessen angewendet werden?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Bei Niederspannungsanlagen muss diese Regel nie angewendet werden.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Wenn die Gefahr von Spannungsübertragung oder Rückspeisung besteht.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Bei allen Starkstromanlagen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291522"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291523]\n[!Was muss ich beachten, wenn ich eine Anlage einschalte?]\n[-Dass mein Vorgesetzter möglichst schnell die Erstprüfung mit dem SINA und Mess- und Prüfprotokoll durchführt]\n[-Dass meine Arbeiten möglichst rasch durch ein unabhängiges Kontrollorgan abgenommen werden]\n[+Dass ich vor dem Einschalten die vorgeschriebene Kontrolle (Erstprüfung) durchgeführt und dokumentiert habe]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Was muss ich beachten, wenn ich eine Anlage einschalte?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Dass mein Vorgesetzter möglichst schnell die Erstprüfung mit dem SINA und Mess- und Prüfprotokoll durchführt",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Dass meine Arbeiten möglichst rasch durch ein unabhängiges Kontrollorgan abgenommen werden",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Dass ich vor dem Einschalten die vorgeschriebene Kontrolle (Erstprüfung) durchgeführt und dokumentiert habe",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291523"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291524]\n[!Welches ist der korrekte Ablauf bei der Überprüfung der Spannungslosigkeit?]\n[-1. Ich sperre den Arbeitsbereich ab 2. Ziehe die PSA an 3. Messe die Spannungsfreiheit]\n[+Ich wende die 3 – Punkte Regel zur Spannungsfreiheit an: 1. Prüfen Sie zuerst an einem Stromkreis, von dem Sie sicher sind, dass er Spannung führt. 2. Prüfen Sie den Zielstromkreis. 3. Prüfen Sie vor dem direkten Berühren noch einmal, ob der Spannungsprüfer auch die richtigen Werte anzeigt.]\n[-1. Ich verwende das NIV- Prüfgerät 2. Ich stelle das Messgerät auf Spannungsprüfung um 3. Ich messe die Spannung]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welches ist der korrekte Ablauf bei der Überprüfung der Spannungslosigkeit?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "1. Ich sperre den Arbeitsbereich ab 2. Ziehe die PSA an 3. Messe die Spannungsfreiheit",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ich wende die 3 – Punkte Regel zur Spannungsfreiheit an: 1. Prüfen Sie zuerst an einem Stromkreis, von dem Sie sicher sind, dass er Spannung führt. 2. Prüfen Sie den Zielstromkreis. 3. Prüfen Sie vor dem direkten Berühren noch einmal, ob der Spannungsprüfer auch die richtigen Werte anzeigt.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "1. Ich verwende das NIV- Prüfgerät 2. Ich stelle das Messgerät auf Spannungsprüfung um 3. Ich messe die Spannung",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291524"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291525]\n[!Welche Voraussetzung ist nicht zwingend nötig, um Arbeiten an elektrischen Anlagen auszuführen?]\n[-Ich muss nüchtern sein]\n[-Aufgaben fachlich und körperlich gewachsen sein]\n[-Dafür ausgebildet sein]\n[+Abgeschlossene Berufslehre]\n[-Die elektrischen Gefahren müssen bekannt sein]\n[-Die zu treffenden Schutzmassnahmen müssen bekannt sein]\n[-Unberechtigte Personen sind aus dem Arbeitsbereich wegzuweisen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welche Voraussetzung ist nicht zwingend nötig, um Arbeiten an elektrischen Anlagen auszuführen?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Ich muss nüchtern sein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Aufgaben fachlich und körperlich gewachsen sein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Dafür ausgebildet sein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Abgeschlossene Berufslehre",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Die elektrischen Gefahren müssen bekannt sein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Die zu treffenden Schutzmassnahmen müssen bekannt sein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Unberechtigte Personen sind aus dem Arbeitsbereich wegzuweisen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291525"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291526]\n[!Wer ist für die Erstprüfung verantwortlich?]\n[-Bauherr]\n[-Architekt]\n[-Bauleiter]\n[-Der lernende Elektroinstallateur]\n[+Elektroinstallateur EFZ]\n[-Sicherheitsberater]\n[-Fachkundige Leiter]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Wer ist für die Erstprüfung verantwortlich?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Bauherr",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Architekt",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Bauleiter",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Der lernende Elektroinstallateur",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Elektroinstallateur EFZ",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Sicherheitsberater",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Fachkundige Leiter",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291526"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291527]\n[!Wann muss die Erstprüfung durchgeführt werden?]\n[-Kurz bevor das Objekt dem Eigentümer übergeben wird]\n[-Bei der Erstellung vom SINA]\n[-Sobald die Drähte eingezogen sind]\n[+Beim ersten Einschalten von einem Stromkreis]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Wann muss die Erstprüfung durchgeführt werden?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Kurz bevor das Objekt dem Eigentümer übergeben wird",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Bei der Erstellung vom SINA",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Sobald die Drähte eingezogen sind",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Beim ersten Einschalten von einem Stromkreis",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291527"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text]\n[@id:291528]\n[!Wie ist die korrekte Reihenfolge +5 Regel?]\n[-1][+2][-3][-4][-5]Gegen Wiedereinschalten sichern\n[+1][-2][-3][-4][-5]Freischalten und allseitig trennen \n[-1][-2][-3][+4][-5]Erden und Kurzschliessen\n[-1][-2][-3][-4][+5]Gegen benachbarte, unter Spannung stehende Teile schützen\n[-1][-2][+3][-4][-5]Auf Spannungsfreiheit prüfen",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "{0}Gegen Wiedereinschalten sichern\n{1}Freischalten und allseitig trennen \n{2}Erden und Kurzschliessen\n{3}Gegen benachbarte, unter Spannung stehende Teile schützen\n{4}Auf Spannungsfreiheit prüfen",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "2",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "3",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "4",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "5",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "2",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "3",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "4",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "5",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "2",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "3",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "4",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "5",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "2",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "3",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "4",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "5",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "2",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "3",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "4",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "5",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "291528"
+      ],
+      "instruction": "Wie ist die korrekte Reihenfolge +5 Regel?"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291529]\n[!Was wird unter der Arbeitsmethode 1 verstanden?]\n[-Arbeiten innerhalb der Gefahrenzone]\n[-Arbeiten innerhalb der Annäherungszone]\n[+Spannungsfreies Arbeiten oder ausserhalb der Annäherungszone]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Was wird unter der Arbeitsmethode 1 verstanden?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Arbeiten innerhalb der Gefahrenzone",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Arbeiten innerhalb der Annäherungszone",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Spannungsfreies Arbeiten oder ausserhalb der Annäherungszone",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291529"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291530]\n[!Wann sind benachbarte, unter Spannung stehende Teile zu schützen?]\n[-Wenn die Ausschaltung der Anlage zu viel Zeit in Anspruch nimmt.]\n[+Wenn die spannungsführenden Teile nicht ausgeschaltet werden können und ein zufälliges Berühren nicht ausgeschlossen werden kann.]\n[-Wenn die Gefahr besteht, bei der Arbeit abgelenkt zu werden.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Wann sind benachbarte, unter Spannung stehende Teile zu schützen?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Wenn die Ausschaltung der Anlage zu viel Zeit in Anspruch nimmt.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Wenn die spannungsführenden Teile nicht ausgeschaltet werden können und ein zufälliges Berühren nicht ausgeschlossen werden kann.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Wenn die Gefahr besteht, bei der Arbeit abgelenkt zu werden.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291530"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291531]\n[!Wie verhalte ich mich richtig, wenn ich Arbeiten ausführen sollte, für die ich nicht geschult oder nicht berechtigt bin.]\n[+Ich sage Stopp und informiere meinen Vorgesetzten]\n[-Ich löse das Problem selbständig]\n[-Wenn ich sicher bin, dass ich diese Arbeiten ohne Risiko ausführen kann, führe ich sie aus]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Wie verhalte ich mich richtig, wenn ich Arbeiten ausführen sollte, für die ich nicht geschult oder nicht berechtigt bin.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Ich sage Stopp und informiere meinen Vorgesetzten",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ich löse das Problem selbständig",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Wenn ich sicher bin, dass ich diese Arbeiten ohne Risiko ausführen kann, führe ich sie aus",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291531"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291532]\n[!Was wird unter der Arbeitsmethode 2 verstanden?]\n[-Arbeiten innerhalb der Gefahrenzone]\n[+Arbeiten innerhalb der Annäherungszone]\n[-Spannungsfreies Arbeiten oder ausserhalb der Annäherungszone]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Was wird unter der Arbeitsmethode 2 verstanden?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Arbeiten innerhalb der Gefahrenzone",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Arbeiten innerhalb der Annäherungszone",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Spannungsfreies Arbeiten oder ausserhalb der Annäherungszone",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291532"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291533]\n[!Bei welcher Arbeitsmethode wird keine schriftliche Begründung (Risikoanalyse) benötigt?]\n[+Arbeitsmethode 1]\n[-Arbeitsmethode 2]\n[-Arbeitsmethode 3]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Bei welcher Arbeitsmethode wird keine schriftliche Begründung (Risikoanalyse) benötigt?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Arbeitsmethode 1",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Arbeitsmethode 2",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Arbeitsmethode 3",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291533"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291534]\n[!Welche Aussage ist für das Freischalten falsch?]\n[-Allpolig trennen]\n[+Nur mit einem Schutzhelm mit Visier arbeiten]\n[-Schutzausrüstung tragen, bei Gefahr von Lichtbogen]\n[-Schutzausrüstung tragen, bei Gefahr von Durchströmung]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welche Aussage ist für das Freischalten falsch?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Allpolig trennen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Nur mit einem Schutzhelm mit Visier arbeiten",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Schutzausrüstung tragen, bei Gefahr von Lichtbogen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Schutzausrüstung tragen, bei Gefahr von Durchströmung",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291534"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291535]\n[!Welche Prüfung muss vor- oder unmittelbar nach dem Einschalten der Anlage im Normalfall nicht durchgeführt werden?]\n[-Überprüfung vom Basisschutz (Fingersicher)]\n[-Überprüfung der Leitfähigkeit vom Schutzleiter]\n[-Überprüfung der richtigen Einstellung der Schutzeinrichtungen]\n[+Überprüfen der Wohnzimmertemperatur]\n[-Überprüfe die automatische Abschaltung der Stromversorgung]\n[-Überprüfung der Funktion vom RCD]\n[-Überprüfung der Isolationsmessung]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welche Prüfung muss vor- oder unmittelbar nach dem Einschalten der Anlage im Normalfall nicht durchgeführt werden?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Überprüfung vom Basisschutz (Fingersicher)",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Überprüfung der Leitfähigkeit vom Schutzleiter",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Überprüfung der richtigen Einstellung der Schutzeinrichtungen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Überprüfen der Wohnzimmertemperatur",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Überprüfe die automatische Abschaltung der Stromversorgung",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Überprüfung der Funktion vom RCD",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Überprüfung der Isolationsmessung",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291535"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291536]\n[!Aufträge werden grundsätzlich schriftlich erteilt. Ausnahmen für eine mündliche Auftragserteilung sind:]\n[-Arbeiten an Hochspannungsanlagen wenn sie einfach zu bewerkstelligen sind Beheben von Betriebsstörungen.]\n[+Arbeiten an Niederspannungsanlagen einfache Arbeiten Beheben von Betriebsstörungen]\n[-Arbeiten an Niederspannungsanlagen Arbeiten bei neuen Anlagen Beheben von Betriebsstörungen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Aufträge werden grundsätzlich schriftlich erteilt. Ausnahmen für eine mündliche Auftragserteilung sind:",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Arbeiten an Hochspannungsanlagen wenn sie einfach zu bewerkstelligen sind Beheben von Betriebsstörungen.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Arbeiten an Niederspannungsanlagen einfache Arbeiten Beheben von Betriebsstörungen",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Arbeiten an Niederspannungsanlagen Arbeiten bei neuen Anlagen Beheben von Betriebsstörungen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291536"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291537]\n[!Gegen Wiedereinschalten sichern. Welche Aussage ist falsch?]\n[+Ich klebe das ausgeschaltete Sicherungselement mit einem beschrifteten Isolierband ab]\n[-Ich verwende einen Isolierstopfen für Diazed Sicherungen]\n[-Der Leitungsschutzschalter schliesse ich mit einem dafür vorgesehenen Schloss ab]\n[-Ich hänge den Abgang beim ausgeschalteten Sicherungselement ab und isoliere die Drähte]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Gegen Wiedereinschalten sichern. Welche Aussage ist falsch?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Ich klebe das ausgeschaltete Sicherungselement mit einem beschrifteten Isolierband ab",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ich verwende einen Isolierstopfen für Diazed Sicherungen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Der Leitungsschutzschalter schliesse ich mit einem dafür vorgesehenen Schloss ab",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ich hänge den Abgang beim ausgeschalteten Sicherungselement ab und isoliere die Drähte",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291537"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291538]\n[!Sie müssen eine Arbeit unter Spannung (AuS2) ausführen. Welche der Aussagen ist falsch?]\n[-Ich benötige eine entsprechende Ausbildung]\n[-Ich benötige eine Persönliche Schutzausrüstung]\n[+Im muss immer eine PSA der Schutzstufe 2 für AuS2 anziehen]\n[-Ich muss Ausgelernt sein]\n[-Ich arbeite immer zu zweit]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Sie müssen eine Arbeit unter Spannung (AuS2) ausführen. Welche der Aussagen ist falsch?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Ich benötige eine entsprechende Ausbildung",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ich benötige eine Persönliche Schutzausrüstung",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Im muss immer eine PSA der Schutzstufe 2 für AuS2 anziehen",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ich muss Ausgelernt sein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ich arbeite immer zu zweit",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291538"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291539]\n[!Welche Aussage zur Regel 1 ist richtig?]\n[-Ich erteile Befehle. Ich überprüfe regelmässig, ob die lebenswichtige Regeln eingehalten werden.]\n[-Ich erteile Anweisungen und dulde keine Improvisationen. Ich überprüfe regelmässig, ob die lebenswichtige Regeln eingehalten werden.]\n[+Ich erteile klare Aufträge und dulde keine Improvisationen. Ich überprüfe regelmässig, ob die lebenswichtige Regeln eingehalten werden.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welche Aussage zur Regel 1 ist richtig?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Ich erteile Befehle. Ich überprüfe regelmässig, ob die lebenswichtige Regeln eingehalten werden.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ich erteile Anweisungen und dulde keine Improvisationen. Ich überprüfe regelmässig, ob die lebenswichtige Regeln eingehalten werden.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ich erteile klare Aufträge und dulde keine Improvisationen. Ich überprüfe regelmässig, ob die lebenswichtige Regeln eingehalten werden.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291539"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:291540]\n[!Wer führt nach der Erstprüfung die Schlusskontrolle durch?]\n[-Elektroinstallateur]\n[-Elektroinstallateur EFZ]\n[-Montageelektriker EFZ]\n[+Der fachkundige Leiter]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Wer führt nach der Erstprüfung die Schlusskontrolle durch?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Elektroinstallateur",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Elektroinstallateur EFZ",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Montageelektriker EFZ",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Der fachkundige Leiter",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291540"
+      ]
+    }
+  }
+]

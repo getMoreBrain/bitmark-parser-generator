@@ -1,0 +1,888 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:112660]\n[#Töne und Klänge in der Musik]\n[@language:de]\n[@coverImage:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/cover_sofatutor_physik.png]\n[@externalId:e-tne-und-klnge-in-der-musik_qokt8gj42xer]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "112660"
+      ],
+      "title": "Töne und Klänge in der Musik",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/cover_sofatutor_physik.png"
+      ],
+      "externalId": [
+        "e-tne-und-klnge-in-der-musik_qokt8gj42xer"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:112661]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik3.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "112661"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:112662]\n[%Aufgabenübersicht]\n1 Entscheide, welche Art von akustischem Signal dargestellt ist.\n2 Gib an, wie die verschiedenen Musikinstrumente Schallwellen erzeugen.\n3 Entscheide, welche Körper Töne, Klänge oder Geräusche erzeugen.\n4 Erkläre, wie der Mensch akustische Signale wahrnehmen kann.\n5 Vergleiche C-Dur- und C-Moll-Dreiklang miteinander.\n6 Erkläre, wie die beschriebenen Veränderungen am Oszilloskopbild zustande gekommen sein könnten.\n+ mit vielen Tipps, Lösungsschlüsseln und Lösungswegen zu allen Aufgaben",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "1 Entscheide, welche Art von akustischem Signal dargestellt ist.\n2 Gib an, wie die verschiedenen Musikinstrumente Schallwellen erzeugen.\n3 Entscheide, welche Körper Töne, Klänge oder Geräusche erzeugen.\n4 Erkläre, wie der Mensch akustische Signale wahrnehmen kann.\n5 Vergleiche C-Dur- und C-Moll-Dreiklang miteinander.\n6 Erkläre, wie die beschriebenen Veränderungen am Oszilloskopbild zustande gekommen sein könnten.\n+ mit vielen Tipps, Lösungsschlüsseln und Lösungswegen zu allen Aufgaben",
+      "id": [
+        "112662"
+      ],
+      "item": "Aufgabenübersicht"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--&image]\n[@id:112663]\n[%1 von 6]\n[!Entscheide, welche Art von akustischem Signal dargestellt ist.\nWähle die richtige Antwort aus.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik4.png]\nDer Bildschirm des Oszilloskops zeigt die Informationen eines angeschlossenen Mikrofons.\n\nWelcher Art von akustischem Signal wird eine solche Kurve zugeordnet?\n[-Geräusch]\n[-Überlagerung Ton/Geräusch]\n[+Ton]\n[-Klang]\n[-Überlagerung Klang/Geräusch]\n\n[$Das Mikrofon hat einen Ton, möglicherweise von einer Stimmgabel, aufgezeichnet.\n\nAm Oszilloskopbild erkennt man dies daran, dass die Kurve gleichmäßig und periodisch ist.\n\nMit Hilfe der Daten vom Oszilloskop könnte man nun beispielsweise die Frequenz des Tons (seine Höhe) oder auch seine Amplitude (seine Lautstärke) bestimmen.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "1 von 6",
+      "instruction": "Entscheide, welche Art von akustischem Signal dargestellt ist.\nWähle die richtige Antwort aus.",
+      "body": "Der Bildschirm des Oszilloskops zeigt die Informationen eines angeschlossenen Mikrofons.\n\nWelcher Art von akustischem Signal wird eine solche Kurve zugeordnet?\n\n\n\n\n\n\n[$Das Mikrofon hat einen Ton, möglicherweise von einer Stimmgabel, aufgezeichnet.\n\nAm Oszilloskopbild erkennt man dies daran, dass die Kurve gleichmäßig und periodisch ist.\n\nMit Hilfe der Daten vom Oszilloskop könnte man nun beispielsweise die Frequenz des Tons (seine Höhe) oder auch seine Amplitude (seine Lautstärke) bestimmen.]",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Geräusch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Überlagerung Ton/Geräusch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ton",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Klang",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Überlagerung Klang/Geräusch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "112663"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[",
+        "line": 16,
+        "column": 0,
+        "errorLine": "[$Das Mikrofon hat einen Ton, möglicherweise von einer Stimmgabel, aufgezeichnet."
+      },
+      {
+        "message": "Unexpected input 'Am Oszilloskopbild erkennt man dies daran, dass die Kurve gleichmäßig und periodisch ist.'",
+        "line": 18,
+        "column": 0,
+        "errorLine": "Am Oszilloskopbild erkennt man dies daran, dass die Kurve gleichmäßig und periodisch ist."
+      },
+      {
+        "message": "Unexpected input 'Mit Hilfe der Daten vom Oszilloskop könnte man nun beispielsweise die Frequenz des Tons (seine Höhe) oder auch seine Amplitude (seine Lautstärke) bestimmen.'",
+        "line": 20,
+        "column": 0,
+        "errorLine": "Mit Hilfe der Daten vom Oszilloskop könnte man nun beispielsweise die Frequenz des Tons (seine Höhe) oder auch seine Amplitude (seine Lautstärke) bestimmen.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--&image]\n[@id:112664]\n[%2 von 6]\n[!Gib an, wie die verschiedenen Musikinstrumente Schallwellen erzeugen.\nOrdne die Wörter zu dem passenden Zentralelement.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik5.png]\nEgal, welchen Musikgeschmack jeder Einzelne hat, eins ist allen Formen von Musik gemein: Sie besteht aus einer Vielzahl von Tönen. Töne sind Schallwellen, die wir hören können. Diese Schallwellen entstehen, wenn ein Körper schnelle Schwingungen erzeugt.\n\nMusikinstrumente erzeugen Töne auf ganz unterschiedliche Arten. Je nach schwingendem Körper können die Instrumente in verschiedene Gruppen eingeteilt werden. Zu welchem schwingenden Körper gehören die genannten Instrumente jeweils?\n\n===\n[!Saite]\n[-Orgel]\n[-Flöte]\n[+Klavier]\n[+Gitarre]\n[+Violine]\n[-Trompete]\n[-Mundharmonika]\n[-Akkordeon]\n[-Stimmgabel]\n===\n[!Luftsäule]\n[+Orgel]\n[+Flöte]\n[-Klavier]\n[-Gitarre]\n[-Violine]\n[+Trompete]\n[-Mundharmonika]\n[-Akkordeon]\n[-Stimmgabel]\n===\n[!Zunge]\n[-Orgel]\n[-Flöte]\n[-Klavier]\n[-Gitarre]\n[-Violine]\n[-Trompete]\n[+Mundharmonika]\n[+Akkordeon]\n[+Stimmgabel]\n===\n\n[$Saiteninstrumente erzeugen Töne durch das schnelle Schwingen ihrer Saiten. Gitarrensaiten werden meistens von Hand gezupft. Bei Streichinstrumenten wie Violinen, Bratschen und Kontrabässen werden die Saiten mit einem Bogen in Schwingungen versetzt. Beim Klavier oder auch beim Flügel befinden sich die Saiten unter dem Deckel und werden durch die Tasten angeschlagen.\n\nEine Zunge wird bei Stimmgabeln durch Anschlagen, bei Mundharmonika und Akkordeon durch einen Luftstrom, in schnelle Schwingungen versetzt.\n\nLuftsäulen werden bei Blasinstrumenten in schnelle Schwingungen versetzt. In Flöten, Trompeten, Klarinetten oder Fagotten erzeugt der Musiker diese Schwingungen mithilfe eines Mundstücks durch seinen eigenen Atem. Bei Orgeln kommt eine kompliziertere Mechanik zum Einsatz.]",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "2 von 6",
+      "instruction": "Gib an, wie die verschiedenen Musikinstrumente Schallwellen erzeugen.\nOrdne die Wörter zu dem passenden Zentralelement.",
+      "body": "Egal, welchen Musikgeschmack jeder Einzelne hat, eins ist allen Formen von Musik gemein: Sie besteht aus einer Vielzahl von Tönen. Töne sind Schallwellen, die wir hören können. Diese Schallwellen entstehen, wenn ein Körper schnelle Schwingungen erzeugt.\n\nMusikinstrumente erzeugen Töne auf ganz unterschiedliche Arten. Je nach schwingendem Körper können die Instrumente in verschiedene Gruppen eingeteilt werden. Zu welchem schwingenden Körper gehören die genannten Instrumente jeweils?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n[$Saiteninstrumente erzeugen Töne durch das schnelle Schwingen ihrer Saiten. Gitarrensaiten werden meistens von Hand gezupft. Bei Streichinstrumenten wie Violinen, Bratschen und Kontrabässen werden die Saiten mit einem Bogen in Schwingungen versetzt. Beim Klavier oder auch beim Flügel befinden sich die Saiten unter dem Deckel und werden durch die Tasten angeschlagen.\n\nEine Zunge wird bei Stimmgabeln durch Anschlagen, bei Mundharmonika und Akkordeon durch einen Luftstrom, in schnelle Schwingungen versetzt.\n\nLuftsäulen werden bei Blasinstrumenten in schnelle Schwingungen versetzt. In Flöten, Trompeten, Klarinetten oder Fagotten erzeugt der Musiker diese Schwingungen mithilfe eines Mundstücks durch seinen eigenen Atem. Bei Orgeln kommt eine kompliziertere Mechanik zum Einsatz.]",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "Saite",
+          "responses": [
+            {
+              "response": "Orgel",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Flöte",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Klavier",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gitarre",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Violine",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Trompete",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Mundharmonika",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Akkordeon",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Stimmgabel",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Luftsäule",
+          "responses": [
+            {
+              "response": "Orgel",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Flöte",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Klavier",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gitarre",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Violine",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Trompete",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Mundharmonika",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Akkordeon",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Stimmgabel",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Zunge",
+          "responses": [
+            {
+              "response": "Orgel",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Flöte",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Klavier",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Gitarre",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Violine",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Trompete",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Mundharmonika",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Akkordeon",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Stimmgabel",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "112664"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '[",
+        "line": 46,
+        "column": 0,
+        "errorLine": "[$Saiteninstrumente erzeugen Töne durch das schnelle Schwingen ihrer Saiten. Gitarrensaiten werden meistens von Hand gezupft. Bei Streichinstrumenten wie Violinen, Bratschen und Kontrabässen werden die Saiten mit einem Bogen in Schwingungen versetzt. Beim Klavier oder auch beim Flügel befinden sich die Saiten unter dem Deckel und werden durch die Tasten angeschlagen."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--&image]\n[@id:112665]\n[%3 von 6]\n[!Entscheide, welche Körper Töne, Klänge oder Geräusche erzeugen.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik6.png]\n===\n[!Ton]\n[-1]\n[-2]\n[-3]\n[-4]\n[-5]\n[+6]\n[+7]\n[-8]\n===\n[!Klang]\n[+1]\n[+2]\n[-3]\n[+4]\n[-5]\n[-6]\n[-7]\n[-8]\n===\n[!Geräusch]\n[-1]\n[-2]\n[+3]\n[-4]\n[+5]\n[-6]\n[-7]\n[+8]\n===\n[$Töne sind gleichmäßige und periodische Schwingungen. Sie werden nur von wenigen Objekten erzeugt.\nDazu gehören Stimmgabeln oder beispielsweise Oszilloskope, an die ein Lautsprecher angeschlossen ist.\n\nKlänge sind die Überlagerung mehrerer Töne. Sie treten bei Musikinstrumenten auf, da neben der Grundschwingung auch immer Oberschwingungen mit angeregt werden.\n\nDie meisten Dinge, die wir im Alltag hören, sind Geräusche. Das Plätschern von Wasser, der Donner bei einem Gewitter oder auch der Lärm von Fahrzeugen gehören dazu.]",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "3 von 6",
+      "instruction": "Entscheide, welche Körper Töne, Klänge oder Geräusche erzeugen.",
+      "body": "[$Töne sind gleichmäßige und periodische Schwingungen. Sie werden nur von wenigen Objekten erzeugt.\nDazu gehören Stimmgabeln oder beispielsweise Oszilloskope, an die ein Lautsprecher angeschlossen ist.\n\nKlänge sind die Überlagerung mehrerer Töne. Sie treten bei Musikinstrumenten auf, da neben der Grundschwingung auch immer Oberschwingungen mit angeregt werden.\n\nDie meisten Dinge, die wir im Alltag hören, sind Geräusche. Das Plätschern von Wasser, der Donner bei einem Gewitter oder auch der Lärm von Fahrzeugen gehören dazu.]",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "Ton",
+          "responses": [
+            {
+              "response": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "4",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "5",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "6",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "7",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "8",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Klang",
+          "responses": [
+            {
+              "response": "1",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "2",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "5",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "6",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "7",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "8",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Geräusch",
+          "responses": [
+            {
+              "response": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "3",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "4",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "5",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "6",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "7",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "8",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "112665"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '[",
+        "line": 37,
+        "column": 0,
+        "errorLine": "[$Töne sind gleichmäßige und periodische Schwingungen. Sie werden nur von wenigen Objekten erzeugt."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-response-1:bitmark--&image]\n[@id:112666]\n[%4 von 6]\n[!Erkläre, wie der Mensch akustische Signale wahrnehmen kann.\nWähle die richtigen Antworten aus.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik7.png]\nDer Mensch nimmt die akustischen Signale aus seiner Umwelt über die Ohren wahr.\n\nDie Schallwellen werden dabei vom Außenohr mit der Hörmuschel gesammelt und gebündelt, im Mittelohr verstärkt und von dort an das Innnenohr weitergeleitet.\n\nIm Innenohr erfolgt dann die eigentliche Wahrnehmung der akustischen Signale, also die Entschlüsselung der Informationen aus den Schallwellen. Dafür dient die Gehörschnecke (grün und orange in der Abbildung dargestellt). Welche Informationen über das akustische Signal entschlüsselt die Gehörschnecke dabei in den dargestellten Bereichen?\n\n[-Amplitude der Schwingung]\n[+Höhe des Tons]\n[-Ton/Klang/Geräusch]\n[+Frequenz der Schwingung]\n[-Lautstärke des Tons]\n\n[$Vorderer, mittlerer und hinterer Teil der Gehörschnecke nehmen verschiedenen Frequenzen wahr.\n\nSchwingungen mit hohen Frequenzen reizen besonders den vorderen Teil der Gehörschnecke. Das erkennt man im Diagramm an der hohen Dichte der Schwingungen. Geringe Frequenzen reizen hingegen den hinteren Teil der Schnecke besonders stark. Die Schwingungen im Diagramm sind weniger dicht.\n\nNimmt die Gehörschnecke damit ein akustisches Signal wahr, das eher ihren vorderen Bereich reizt, so handelt es sich dabei um hohe Töne. Umgekehrt bedeutet eine Reizung im hinteren Bereich, dass das Signal aus tiefen Tönen besteht. Somit kann die Gehörschnecke die Tonhöhe der eingehenden Schallwellen analysieren. Man kann sagen: Je nachdem, wo die Nervenzellen gereizt werden, ermittelt die Gehörschnecke die Tonhöhe.\n\nDie Lautstärke des Signals, codiert in der Amplitude der eingehenden Schallwellen, wird direkt durch die Stärke der Reizung der Nervenzellen ermittelt. Eine starke Reizung im vorderen Bereich der Schnecke bedeutet beispielsweise einen lauten hohen Ton, eine schwache Reizung im hinteren Teil einen leisen tiefen Ton.]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "4 von 6",
+      "instruction": "Erkläre, wie der Mensch akustische Signale wahrnehmen kann.\nWähle die richtigen Antworten aus.",
+      "body": "Der Mensch nimmt die akustischen Signale aus seiner Umwelt über die Ohren wahr.\n\nDie Schallwellen werden dabei vom Außenohr mit der Hörmuschel gesammelt und gebündelt, im Mittelohr verstärkt und von dort an das Innnenohr weitergeleitet.\n\nIm Innenohr erfolgt dann die eigentliche Wahrnehmung der akustischen Signale, also die Entschlüsselung der Informationen aus den Schallwellen. Dafür dient die Gehörschnecke (grün und orange in der Abbildung dargestellt). Welche Informationen über das akustische Signal entschlüsselt die Gehörschnecke dabei in den dargestellten Bereichen?\n\n\n\n\n\n\n\n[$Vorderer, mittlerer und hinterer Teil der Gehörschnecke nehmen verschiedenen Frequenzen wahr.\n\nSchwingungen mit hohen Frequenzen reizen besonders den vorderen Teil der Gehörschnecke. Das erkennt man im Diagramm an der hohen Dichte der Schwingungen. Geringe Frequenzen reizen hingegen den hinteren Teil der Schnecke besonders stark. Die Schwingungen im Diagramm sind weniger dicht.\n\nNimmt die Gehörschnecke damit ein akustisches Signal wahr, das eher ihren vorderen Bereich reizt, so handelt es sich dabei um hohe Töne. Umgekehrt bedeutet eine Reizung im hinteren Bereich, dass das Signal aus tiefen Tönen besteht. Somit kann die Gehörschnecke die Tonhöhe der eingehenden Schallwellen analysieren. Man kann sagen: Je nachdem, wo die Nervenzellen gereizt werden, ermittelt die Gehörschnecke die Tonhöhe.\n\nDie Lautstärke des Signals, codiert in der Amplitude der eingehenden Schallwellen, wird direkt durch die Stärke der Reizung der Nervenzellen ermittelt. Eine starke Reizung im vorderen Bereich der Schnecke bedeutet beispielsweise einen lauten hohen Ton, eine schwache Reizung im hinteren Teil einen leisen tiefen Ton.]",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Amplitude der Schwingung",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Höhe des Tons",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Ton/Klang/Geräusch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Frequenz der Schwingung",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Lautstärke des Tons",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "112666"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik7.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '[",
+        "line": 19,
+        "column": 0,
+        "errorLine": "[$Vorderer, mittlerer und hinterer Teil der Gehörschnecke nehmen verschiedenen Frequenzen wahr."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\n[@id:112667]\n[%5 von 6]\n[!Vergleiche C-Dur- und C-Moll-Dreiklang miteinander.\nTrage den gesuchten Zahlenwerte, gerundet als ganze Zahl, in die Lücken ein.]\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik1.png\n::\nBeim Dreiklang unterscheidet man Dur- und Moll-Dreiklänge. Beide umfassen insgesamt eine Quinte. Sie unterscheiden sich in der Lage des mittleren Tons. Beim Dur-Dreiklang liegt zwischen dem ersten und zweiten Ton eine große Terz, zwischen dem zweiten und dritten Ton eine kleine Terz. Der Moll-Dreiklang hingegen beginnt mit einer kleinen Terz, gefolgt von einer großen. Eine kleine Terz entspricht dabei einem Frequenzverhältnis von 6 : 5 von zweitem Ton : erstem Ton, eine große Terz entspricht einem Verhältnis von 5 : 4.\n\nDer C-Dur-Dreiklang besitzt die Frequenzen 264 Hz (c`) - 330 Hz (e`) - 396 Hz (g ́).\nDer C-Moll-Dreiklang besitzt die Frequenzen [_264] Hz (c`) - [_317] Hz (es`) - [_396] Hz (g ́).\n\n[$\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik2.png\n::\nAnfangs- und Endton der beiden Dreiklänge sind identisch. Die Frequenz des mittleren Tons liegt eine kleine Terz vom Anfangston entfernt, das heißt, teilt man die Frequenz des mittleren Tons durch die Frequenz des Anfangstons, so erhält man den Wert 1,2. Das bedeutet, die Frequenz des mittleren Tons beträgt 120% der Frequenz des Anfangstons, ist also 20% größer. Um den Wert für die mittlere Frequenz zu berechnen, multipliziert man demnach 264 Hz mit dem Faktor 1,2. Damit erhält man für den mittleren Ton im C-Moll- Dreiklang den Frequenzwert von rund 317 Hz.\n\nDie Frequenz des mittleren Tons x kann man ausführlich auch wie in der Formel gezeigt berechnen.]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik1.png\n::\nBeim Dreiklang unterscheidet man Dur- und Moll-Dreiklänge. Beide umfassen insgesamt eine Quinte. Sie unterscheiden sich in der Lage des mittleren Tons. Beim Dur-Dreiklang liegt zwischen dem ersten und zweiten Ton eine große Terz, zwischen dem zweiten und dritten Ton eine kleine Terz. Der Moll-Dreiklang hingegen beginnt mit einer kleinen Terz, gefolgt von einer großen. Eine kleine Terz entspricht dabei einem Frequenzverhältnis von 6 : 5 von zweitem Ton : erstem Ton, eine große Terz entspricht einem Verhältnis von 5 : 4.\n\nDer C-Dur-Dreiklang besitzt die Frequenzen 264 Hz (c`) - 330 Hz (e`) - 396 Hz (g ́).\nDer C-Moll-Dreiklang besitzt die Frequenzen {0} Hz (c`) - {1} Hz (es`) - {2} Hz (g ́).\n\n[$\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik2.png\n::\nAnfangs- und Endton der beiden Dreiklänge sind identisch. Die Frequenz des mittleren Tons liegt eine kleine Terz vom Anfangston entfernt, das heißt, teilt man die Frequenz des mittleren Tons durch die Frequenz des Anfangstons, so erhält man den Wert 1,2. Das bedeutet, die Frequenz des mittleren Tons beträgt 120% der Frequenz des Anfangstons, ist also 20% größer. Um den Wert für die mittlere Frequenz zu berechnen, multipliziert man demnach 264 Hz mit dem Faktor 1,2. Damit erhält man für den mittleren Ton im C-Moll- Dreiklang den Frequenzwert von rund 317 Hz.\n\nDie Frequenz des mittleren Tons x kann man ausführlich auch wie in der Formel gezeigt berechnen.]",
+      "item": "5 von 6",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "112667"
+      ],
+      "instruction": "Vergleiche C-Dur- und C-Moll-Dreiklang miteinander.\nTrage den gesuchten Zahlenwerte, gerundet als ganze Zahl, in die Lücken ein.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "264"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "317"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "396"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '`'",
+        "line": 11,
+        "column": 52,
+        "errorLine": "Der C-Dur-Dreiklang besitzt die Frequenzen 264 Hz (c`) - 330 Hz (e`) - 396 Hz (g ́)."
+      },
+      {
+        "message": "token recognition error at: '`'",
+        "line": 11,
+        "column": 66,
+        "errorLine": "Der C-Dur-Dreiklang besitzt die Frequenzen 264 Hz (c`) - 330 Hz (e`) - 396 Hz (g ́)."
+      },
+      {
+        "message": "token recognition error at: '`'",
+        "line": 12,
+        "column": 56,
+        "errorLine": "Der C-Moll-Dreiklang besitzt die Frequenzen [_264] Hz (c`) - [_317] Hz (es`) - [_396] Hz (g ́)."
+      },
+      {
+        "message": "token recognition error at: '`'",
+        "line": 12,
+        "column": 74,
+        "errorLine": "Der C-Moll-Dreiklang besitzt die Frequenzen [_264] Hz (c`) - [_317] Hz (es`) - [_396] Hz (g ́)."
+      },
+      {
+        "message": "Rule violation around '[",
+        "line": 14,
+        "column": 0,
+        "errorLine": "[$"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-response-1:bitmark--&image]\n[@id:112668]\n[%6 von 6]\n[!Erkläre, wie die beschriebenen Veränderungen am Oszilloskopbild zustande gekommen sein könnten.\nWähle die richtigen Antworten aus.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik4.png]\nDer Bildschirm des Oszilloskops zeigt zunächst folgende Informationen eines angeschlossenen Mikrofons.\n\nAnschließend verändert sich das Bild des Oszilloskops: Die Wellen werden kleiner und rücken dichter zusammen.\n\nWas könnte passiert sein?\n\n[+Frequenz und Amplitude des eingehenden Signals haben sich verändert.]\n[-Das Mikrofon empfängt einen höheren und lauteren Klang.][+Das Mikrofon empfängt ein höheres und leiseres Geräusch.]\n[+Die Skaleneinteilungen am Oszilloskop wurde verändert.]\n[+Die Quelle des akustischen Signals wurde ausgetauscht.]\n\n[$Die beschriebene Veränderung des Oszilloskopbildes kann verschiedenen Ursachen haben.\nWahrscheinlich haben sich das akustische Signal der Quelle oder die Quelle selbst geändert. Das Oszilloskop registriert eine Zunahme der Frequenz und eine Abnahme der Amplitude der Schwingung. Da es sich bei der dargestellten Kurve um einen Ton handelt, bedeutet dies, dass nun ein höherer, aber leiserer Ton vom Mikrofon registriert wird. Beispielsweise wurde eine andere Stimmgabel angeschlagen oder die Quelle des Tons wurde verändert.\n\nDie Veränderung muss aber nicht zwangsläufig bei der Quelle des akustischen Signals liegen. Auch Änderungen an den Messbereich-Einstellungen im Oszilloskop können die beschriebene Veränderung bewirken: Die Skalen für die Zeitachse (x-Achse) und die Amplitudenachse (y-Achse) könnten gestauscht worden sein.]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "6 von 6",
+      "instruction": "Erkläre, wie die beschriebenen Veränderungen am Oszilloskopbild zustande gekommen sein könnten.\nWähle die richtigen Antworten aus.",
+      "body": "Der Bildschirm des Oszilloskops zeigt zunächst folgende Informationen eines angeschlossenen Mikrofons.\n\nAnschließend verändert sich das Bild des Oszilloskops: Die Wellen werden kleiner und rücken dichter zusammen.\n\nWas könnte passiert sein?\n\n\n\n\n\n\n[$Die beschriebene Veränderung des Oszilloskopbildes kann verschiedenen Ursachen haben.\nWahrscheinlich haben sich das akustische Signal der Quelle oder die Quelle selbst geändert. Das Oszilloskop registriert eine Zunahme der Frequenz und eine Abnahme der Amplitude der Schwingung. Da es sich bei der dargestellten Kurve um einen Ton handelt, bedeutet dies, dass nun ein höherer, aber leiserer Ton vom Mikrofon registriert wird. Beispielsweise wurde eine andere Stimmgabel angeschlagen oder die Quelle des Tons wurde verändert.\n\nDie Veränderung muss aber nicht zwangsläufig bei der Quelle des akustischen Signals liegen. Auch Änderungen an den Messbereich-Einstellungen im Oszilloskop können die beschriebene Veränderung bewirken: Die Skalen für die Zeitachse (x-Achse) und die Amplitudenachse (y-Achse) könnten gestauscht worden sein.]",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Frequenz und Amplitude des eingehenden Signals haben sich verändert.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Das Mikrofon empfängt einen höheren und lauteren Klang.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Das Mikrofon empfängt ein höheres und leiseres Geräusch.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Die Skaleneinteilungen am Oszilloskop wurde verändert.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Die Quelle des akustischen Signals wurde ausgetauscht.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "112668"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_physik4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '[",
+        "line": 18,
+        "column": 0,
+        "errorLine": "[$Die beschriebene Veränderung des Oszilloskopbildes kann verschiedenen Ursachen haben."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:112669]\n[%Unsere Tipps für die Aufgaben]\n**Entscheide, welche Art von akustischem Signal dargestellt ist.**\n1. Tipp\nWelche Eigenschaften besitzt die Kurve?\n2. Tipp\nIst sie gleichmäßig oder ungleichmäßig?\n3. Tipp\nIst sie periodisch oder nicht periodisch?\n\n**Gib an, wie die verschiedenen Musikinstrumente Schallwellen erzeugen.**\n1. Tipp\nWelche Instrumente besitzen Saiten, Zungen oder einen großen Hohlraum, in dem sich Luftsäulen befinden?\n\n**Entscheide, welche Körper Töne, Klänge oder Geräusche erzeugen.**\n1. Tipp\nTöne sind gleichmäßig und periodisch.\n2. Tipp\nKlänge werden von Instrumenten erzeugt.\n3. Tipp\nFast alle akustischen Wahrnehmungen in unserer Umwelt sind Geräusche.\n\n**Erkläre, wie der Mensch akustische Signale wahrnehmen kann.**\n1. Tipp\nWorin unterscheiden sich die Schwingungen in den drei gezeigten Diagrammen?\n2. Tipp\nWelche Information über die Schwingung wird je nach Intensität der Wahrnehmung in den drei Bereichen der Gehörschnecke damit ermittelt?\n3. Tipp\nWelche Eigenschaft des jeweiligen Tons ist damit verknüpft?\n\n**Vergleiche C-Dur- und C-Moll-Dreiklang miteinander.** \n1. Tipp\nAnfangs- und Endton der Dreiklänge sind identisch.\n2. Tipp\nDer mittlere Ton ist eine kleine Terz vom Anfangston entfernt.\n3. Tipp\nDer erste Ton besitzt eine Frequenz von 264 Hz, der zweite Tone besitzt eine Frequenz, die 20% größer ist.\n4. Tipp\nMultipliziere die gegebene Frequenz mit 1,2.\n\n**Erkläre, wie die beschriebenen Veränderungen am Oszilloskopbild zustande gekommen sein könnten.**\n1. Tipp\nZiehe alle Möglichkeiten in Betracht, warum sich das Bild ändern kann.\n2. Tipp\nWas ist in dem Bild dargestellt?\n3. Tipp\nWas verändert sich, was nicht?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Entscheide, welche Art von akustischem Signal dargestellt ist.**\n1. Tipp\nWelche Eigenschaften besitzt die Kurve?\n2. Tipp\nIst sie gleichmäßig oder ungleichmäßig?\n3. Tipp\nIst sie periodisch oder nicht periodisch?\n\n**Gib an, wie die verschiedenen Musikinstrumente Schallwellen erzeugen.**\n1. Tipp\nWelche Instrumente besitzen Saiten, Zungen oder einen großen Hohlraum, in dem sich Luftsäulen befinden?\n\n**Entscheide, welche Körper Töne, Klänge oder Geräusche erzeugen.**\n1. Tipp\nTöne sind gleichmäßig und periodisch.\n2. Tipp\nKlänge werden von Instrumenten erzeugt.\n3. Tipp\nFast alle akustischen Wahrnehmungen in unserer Umwelt sind Geräusche.\n\n**Erkläre, wie der Mensch akustische Signale wahrnehmen kann.**\n1. Tipp\nWorin unterscheiden sich die Schwingungen in den drei gezeigten Diagrammen?\n2. Tipp\nWelche Information über die Schwingung wird je nach Intensität der Wahrnehmung in den drei Bereichen der Gehörschnecke damit ermittelt?\n3. Tipp\nWelche Eigenschaft des jeweiligen Tons ist damit verknüpft?\n\n**Vergleiche C-Dur- und C-Moll-Dreiklang miteinander.** \n1. Tipp\nAnfangs- und Endton der Dreiklänge sind identisch.\n2. Tipp\nDer mittlere Ton ist eine kleine Terz vom Anfangston entfernt.\n3. Tipp\nDer erste Ton besitzt eine Frequenz von 264 Hz, der zweite Tone besitzt eine Frequenz, die 20% größer ist.\n4. Tipp\nMultipliziere die gegebene Frequenz mit 1,2.\n\n**Erkläre, wie die beschriebenen Veränderungen am Oszilloskopbild zustande gekommen sein könnten.**\n1. Tipp\nZiehe alle Möglichkeiten in Betracht, warum sich das Bild ändern kann.\n2. Tipp\nWas ist in dem Bild dargestellt?\n3. Tipp\nWas verändert sich, was nicht?",
+      "id": [
+        "112669"
+      ],
+      "item": "Unsere Tipps für die Aufgaben"
+    }
+  }
+]

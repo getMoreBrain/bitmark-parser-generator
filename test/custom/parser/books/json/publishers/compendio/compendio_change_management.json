@@ -1,0 +1,2591 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:270088]\n[#Change Management]\n[@language:de]\n[@coverImage:https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_veraenderung.png]\n[@externalId:e-change-management_cix2_tsjmqqg]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "270088"
+      ],
+      "title": "Change Management",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_veraenderung.png"
+      ],
+      "externalId": [
+        "e-change-management_cix2_tsjmqqg"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270089]\n[▼ch-1]\n[%1]\n[#Veränderungen erkennen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270089"
+      ],
+      "anchor": "ch-1",
+      "title": "Veränderungen erkennen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270090]\n[▼ch-2]\n[%1.1]\n[##Ursachen für Veränderungen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270090"
+      ],
+      "anchor": "ch-2",
+      "title": "Ursachen für Veränderungen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270091]\n[▼ch-3]\n[%1.2]\n[##Veränderungsdimensionen im Unternehmen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270091"
+      ],
+      "anchor": "ch-3",
+      "title": "Veränderungsdimensionen im Unternehmen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270092]\n[▼ch-4]\n[%1.3]\n[##Ebenen der Veränderung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270092"
+      ],
+      "anchor": "ch-4",
+      "title": "Ebenen der Veränderung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270093]\n[▼ch-5]\n[####Zusammenfassung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270093"
+      ],
+      "anchor": "ch-5",
+      "title": "Zusammenfassung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270094]\n[▼ch-6]\n[####Repetitionsfragen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270094"
+      ],
+      "anchor": "ch-6",
+      "title": "Repetitionsfragen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270095]\n[▼ch-7]\n[%2]\n[#Veränderungen beurteilen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270095"
+      ],
+      "anchor": "ch-7",
+      "title": "Veränderungen beurteilen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270096]\n[▼ch-8]\n[%2.1]\n[##Voraussetzungen für Veränderungen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270096"
+      ],
+      "anchor": "ch-8",
+      "title": "Voraussetzungen für Veränderungen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270097]\n[▼ch-9]\n[%2.2]\n[##Veränderungsbedarf]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270097"
+      ],
+      "anchor": "ch-9",
+      "title": "Veränderungsbedarf"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270098]\n[▼ch-10]\n[%2.3]\n[##Veränderungsbereitschaft]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270098"
+      ],
+      "anchor": "ch-10",
+      "title": "Veränderungsbereitschaft"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270099]\n[▼ch-11]\n[%2.4]\n[##Veränderungsfähigkeit]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270099"
+      ],
+      "anchor": "ch-11",
+      "title": "Veränderungsfähigkeit"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270100]\n[▼ch-12]\n[%2.5]\n[##Change Management]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270100"
+      ],
+      "anchor": "ch-12",
+      "title": "Change Management"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270101]\n[▼ch-13]\n[####Zusammenfassung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270101"
+      ],
+      "anchor": "ch-13",
+      "title": "Zusammenfassung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270102]\n[▼ch-14]\n[####Repetitionsfragen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270102"
+      ],
+      "anchor": "ch-14",
+      "title": "Repetitionsfragen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270103]\n[▼ch-15]\n[%3]\n[#Umgang mit Veränderungen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270103"
+      ],
+      "anchor": "ch-15",
+      "title": "Umgang mit Veränderungen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270104]\n[▼ch-16]\n[%3.1]\n[##Emotionen und Widerstand in Veränderungen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270104"
+      ],
+      "anchor": "ch-16",
+      "title": "Emotionen und Widerstand in Veränderungen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270105]\n[▼ch-17]\n[%3.2]\n[##Veränderungskurve]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270105"
+      ],
+      "anchor": "ch-17",
+      "title": "Veränderungskurve"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270106]\n[▼ch-18]\n[%3.3]\n[##Vier-Zimmer-Modell der Veränderung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270106"
+      ],
+      "anchor": "ch-18",
+      "title": "Vier-Zimmer-Modell der Veränderung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270107]\n[▼ch-19]\n[%3.4]\n[##Vier-Zimmer-Modell und Veränderungskurve]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270107"
+      ],
+      "anchor": "ch-19",
+      "title": "Vier-Zimmer-Modell und Veränderungskurve"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270108]\n[▼ch-20]\n[####Zusammenfassung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270108"
+      ],
+      "anchor": "ch-20",
+      "title": "Zusammenfassung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270109]\n[▼ch-21]\n[####Repetitionsfragen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270109"
+      ],
+      "anchor": "ch-21",
+      "title": "Repetitionsfragen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270110]\n[▼ch-22]\n[%4]\n[#Veränderungsprozesse planen und steuern]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270110"
+      ],
+      "anchor": "ch-22",
+      "title": "Veränderungsprozesse planen und steuern"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270111]\n[%Lernziele]\nNach der Bearbeitung dieses Kapitels können Sie ...\n\n• die zentralen Erfolgsfaktoren im Leading-Change-Modell nach Kotter beschreiben.\n• die drei Phasen der Begleitung von Veränderungsprozessen nach Lewin beschreiben.\n• den Zusammenhang zwischen dem methodischen Vorgehen im Projektmanagement und dem methodischen Vorgehen im Change Management erklären.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Nach der Bearbeitung dieses Kapitels können Sie ...\n\n• die zentralen Erfolgsfaktoren im Leading-Change-Modell nach Kotter beschreiben.\n• die drei Phasen der Begleitung von Veränderungsprozessen nach Lewin beschreiben.\n• den Zusammenhang zwischen dem methodischen Vorgehen im Projektmanagement und dem methodischen Vorgehen im Change Management erklären.",
+      "id": [
+        "270111"
+      ],
+      "item": "Lernziele"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270112]\n[%Schlüsselbegriffe]\nBefähigung, Change-Architektur, Drei-Phasen-Modell (Lewin), Dringlichkeit, Führungskoalition, Intervention, iteraktives Vorgehen, Kernteam, Kommunikation, Konsolidierung, Kultur, Leading-Change-Modell (Kotter), Move, Phasenkonzept, Projektmanagement, Projektteam, Refreeze, schnelle Erfolge, Sounding Board, systemische Schleife, Unfreeze, Vision, Vorgehensstrategie, Zukunftsbild",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Befähigung, Change-Architektur, Drei-Phasen-Modell (Lewin), Dringlichkeit, Führungskoalition, Intervention, iteraktives Vorgehen, Kernteam, Kommunikation, Konsolidierung, Kultur, Leading-Change-Modell (Kotter), Move, Phasenkonzept, Projektmanagement, Projektteam, Refreeze, schnelle Erfolge, Sounding Board, systemische Schleife, Unfreeze, Vision, Vorgehensstrategie, Zukunftsbild",
+      "id": [
+        "270112"
+      ],
+      "item": "Schlüsselbegriffe"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270113]\nDie Gestaltung und Begleitung von Veränderungsprozessen überlässt man besser nicht dem Zufall oder dem Prinzip Hoffnung. Eine solche Nachlässigkeit kann sich nämlich rasch zu einem Bumerang entwickeln, wenn sich aus den anfänglichen Bedenken gegen die bevorstehende Veränderung allmählich eine Widerstandskraft aufbaut, die das Vorhaben empfindlich stören oder gar ganz zum Scheitern bringen kann.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Gestaltung und Begleitung von Veränderungsprozessen überlässt man besser nicht dem Zufall oder dem Prinzip Hoffnung. Eine solche Nachlässigkeit kann sich nämlich rasch zu einem Bumerang entwickeln, wenn sich aus den anfänglichen Bedenken gegen die bevorstehende Veränderung allmählich eine Widerstandskraft aufbaut, die das Vorhaben empfindlich stören oder gar ganz zum Scheitern bringen kann.",
+      "id": [
+        "270113"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270114]\nUm solche Probleme zu verhindern oder zumindest zu verringern, ist daher eine **sorgfältige Planung** des Vorgehens und der flankierenden Massnahmen durch ein kompetentes und engagiertes Team notwendig. In diesem Sinne ist Change Management kein «Nebenjob», sondern muss professionell angegangen werden. Gut erprobte Methoden und Werkzeuge helfen dabei.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Um solche Probleme zu verhindern oder zumindest zu verringern, ist daher eine **sorgfältige Planung** des Vorgehens und der flankierenden Massnahmen durch ein kompetentes und engagiertes Team notwendig. In diesem Sinne ist Change Management kein «Nebenjob», sondern muss professionell angegangen werden. Gut erprobte Methoden und Werkzeuge helfen dabei.",
+      "id": [
+        "270114"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270115]\nErfahrungsgemäss laufen Veränderungsprozesse trotz der unterschiedlichsten Ausprägungen ähnlich ab. Auch reagieren die betroffenen Personen auf die mit Veränderungen verbundene Verunsicherung mit typischen Verhaltensmustern. Mit einer **umsichtigen Begleitung** und **gezielten Interventionen** lassen sich deshalb viele Stolpersteine umgehen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Erfahrungsgemäss laufen Veränderungsprozesse trotz der unterschiedlichsten Ausprägungen ähnlich ab. Auch reagieren die betroffenen Personen auf die mit Veränderungen verbundene Verunsicherung mit typischen Verhaltensmustern. Mit einer **umsichtigen Begleitung** und **gezielten Interventionen** lassen sich deshalb viele Stolpersteine umgehen.",
+      "id": [
+        "270115"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270116]\nIn diesem Kapitel stellen wir drei Modelle vor, die einen unterschiedlichen Blickwinkel auf die Planung und Umsetzung eines solchen Veränderungsvorhabens werfen:\n\n• Das **Leading-Change-Modell nach Kotter** beschreibt acht Erfolgsfaktoren für Veränderungsprozesse im Unternehmen. Es setzt bei den Rahmenbedingungen an, die für das Gelingen bzw. Misslingen solcher Vorhaben entscheidend sind.\n• Das **Drei-Phasen-Modell nach Lewin** beleuchtet die Gestaltung der **psychosozialen** Ebene, deren treibende und behindernde Kräfte eine zentrale Rolle bei Veränderungsprozessen spielen.\n• Das **Projektmanagement** unterstützt das Change Management bei der inhaltlichen und **der zeitlichen Strukturierung** des Veränderungsvorhabens. Darüber hinaus braucht es eine unterstützende **Begleitung** der Entwicklungs- und Veränderungsprozesse auf der Beziehungsebene und ein flexibles Vorgehen, das Spielraum für **Anpassungen** offenlässt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "In diesem Kapitel stellen wir drei Modelle vor, die einen unterschiedlichen Blickwinkel auf die Planung und Umsetzung eines solchen Veränderungsvorhabens werfen:\n\n• Das **Leading-Change-Modell nach Kotter** beschreibt acht Erfolgsfaktoren für Veränderungsprozesse im Unternehmen. Es setzt bei den Rahmenbedingungen an, die für das Gelingen bzw. Misslingen solcher Vorhaben entscheidend sind.\n• Das **Drei-Phasen-Modell nach Lewin** beleuchtet die Gestaltung der **psychosozialen** Ebene, deren treibende und behindernde Kräfte eine zentrale Rolle bei Veränderungsprozessen spielen.\n• Das **Projektmanagement** unterstützt das Change Management bei der inhaltlichen und **der zeitlichen Strukturierung** des Veränderungsvorhabens. Darüber hinaus braucht es eine unterstützende **Begleitung** der Entwicklungs- und Veränderungsprozesse auf der Beziehungsebene und ein flexibles Vorgehen, das Spielraum für **Anpassungen** offenlässt.",
+      "id": [
+        "270116"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270117]\n[▼ch-23]\n[%4.1]\n[##Leading-Change-Modell nach Kotter]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270117"
+      ],
+      "anchor": "ch-23",
+      "title": "Leading-Change-Modell nach Kotter"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270118]\nJohn P. Kotter, Professor an der Harvard Business School, entwickelte in den 1990er-Jahren mit dem **«Leading Change»** eines der bekanntesten Modelle für das Change Management[1]. Es umfasst **acht Stufen** und soll den Verantwortlichen helfen, das Unternehmen erfolgreich durch ein Veränderungsvorhaben zu führen und dabei die häufigsten Fehler aus der Praxis zu vermeiden.\n\n[1] Kotter, John P.: Leading Change, München 2018.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "John P. Kotter, Professor an der Harvard Business School, entwickelte in den 1990er-Jahren mit dem **«Leading Change»** eines der bekanntesten Modelle für das Change Management[1]. Es umfasst **acht Stufen** und soll den Verantwortlichen helfen, das Unternehmen erfolgreich durch ein Veränderungsvorhaben zu führen und dabei die häufigsten Fehler aus der Praxis zu vermeiden.\n\n[1] Kotter, John P.: Leading Change, München 2018.",
+      "id": [
+        "270118"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:270119]\n[%Leading Change – acht Stufen eines Veränderungsvorhabens nach Kotter]\n[&image:https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter7.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "270119"
+      ],
+      "item": "Leading Change – acht Stufen eines Veränderungsvorhabens nach Kotter",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter7.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270120]\nJede der acht Stufen muss umsichtig **geplant** und bei Bedarf auch mehrmals **wiederholt** werden. Gemäss dem «Leading Change» soll eine nächste Stufe also erst dann genommen werden, wenn das Erreichte auf der aktuellen Stufe stabil genug ist.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Jede der acht Stufen muss umsichtig **geplant** und bei Bedarf auch mehrmals **wiederholt** werden. Gemäss dem «Leading Change» soll eine nächste Stufe also erst dann genommen werden, wenn das Erreichte auf der aktuellen Stufe stabil genug ist.",
+      "id": [
+        "270120"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270121]\nIst dies nicht der Fall oder werden einzelne Stufen gar übersprungen, rächen sich diese Fehler. Im weiteren Verlauf kann unnötig viel Zeit und Energie durch umständliche Korrekturen verloren gehen und schlimmstenfalls droht das Vorhaben zu scheitern.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ist dies nicht der Fall oder werden einzelne Stufen gar übersprungen, rächen sich diese Fehler. Im weiteren Verlauf kann unnötig viel Zeit und Energie durch umständliche Korrekturen verloren gehen und schlimmstenfalls droht das Vorhaben zu scheitern.",
+      "id": [
+        "270121"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270122]\n[▼ch-24]\n[%4.1.1]\n[###Ein Gefühl für die Dringlichkeit erzeugen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.1.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270122"
+      ],
+      "anchor": "ch-24",
+      "title": "Ein Gefühl für die Dringlichkeit erzeugen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270123]\nDie **Veränderungsbereitschaft** lässt sich nicht verordnen. Sie entwickelt sich erst aus der Einsicht, dass jetzt eine Veränderung notwendig ist. Nur wenn die Betroffenen den Sinn (warum?) und die Notwendigkeit (warum jetzt?) der Veränderung verstehen, können sie das Vorhaben mittragen. Oder anders ausgedrückt: Die Betroffenen müssen sich auch wirklich betroffen fühlen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die **Veränderungsbereitschaft** lässt sich nicht verordnen. Sie entwickelt sich erst aus der Einsicht, dass jetzt eine Veränderung notwendig ist. Nur wenn die Betroffenen den Sinn (warum?) und die Notwendigkeit (warum jetzt?) der Veränderung verstehen, können sie das Vorhaben mittragen. Oder anders ausgedrückt: Die Betroffenen müssen sich auch wirklich betroffen fühlen.",
+      "id": [
+        "270123"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270124]\nDazu müssen die Verantwortlichen unter anderem die folgenden **Warum-Fragen** nachvollziehbar und glaubwürdig beantworten:\n\n• Warum brauchen wir diese Veränderung?\n• Warum ist jetzt der richtige Zeitpunkt für diese Veränderung?\n• Warum ist diese Veränderung für uns alle wichtig?\n• Warum streben wir eine Veränderung in diese (und nicht in eine andere) Richtung an?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Dazu müssen die Verantwortlichen unter anderem die folgenden **Warum-Fragen** nachvollziehbar und glaubwürdig beantworten:\n\n• Warum brauchen wir diese Veränderung?\n• Warum ist jetzt der richtige Zeitpunkt für diese Veränderung?\n• Warum ist diese Veränderung für uns alle wichtig?\n• Warum streben wir eine Veränderung in diese (und nicht in eine andere) Richtung an?",
+      "id": [
+        "270124"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270125]\nEine nachvollziehbare und glaubwürdige Botschaft ist gut zu begründen und sollte berechtigten Zweifeln oder kritischen Fragen standhalten. Für die Vermittlung der Dringlichkeit und Wichtigkeit des Vorhabens sind daher die folgenden Aspekte wichtig:\n\n• Die **Einflüsse** oder Entwicklungen im Umfeld des Unternehmens veranschaulichen, die eine Veränderung unausweichlich machen, z. B. neue Märkte, Konkurrenten, Geschäftsmodelle, regulatorische Vorgaben, Akquisitionen usw.\n• Die **Krise** und deren Hintergründe und Auswirkungen erläutern, z. B. schlechte Kundenzufriedenheitswerte, sinkende Erträge, Schwächen im eigenen Angebot, Probleme in der Zusammenarbeit, verpasste Chancen im Markt durch Selbstzufriedenheit usw.\n• Das **«Was wäre, wenn ...?»** ansprechen: Was geschieht, wenn wir nichts bzw. nicht jetzt etwas ändern?\n• Die **Ziele** offenlegen, die mit der Veränderung erreicht werden müssen und / oder sollen.\n• Den **positiven Nutzen** bzw. die Chancen, aber auch die schwierigen Konsequenzen bzw. die Risiken der Veränderung aufzeigen, z. B. die Effizienzsteigerung durch Bündelung von Know-how und Ressourcen, die unausweichliche Verlegung von Arbeitsplätzen oder die Reorganisation bestehender Prozesse usw.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Eine nachvollziehbare und glaubwürdige Botschaft ist gut zu begründen und sollte berechtigten Zweifeln oder kritischen Fragen standhalten. Für die Vermittlung der Dringlichkeit und Wichtigkeit des Vorhabens sind daher die folgenden Aspekte wichtig:\n\n• Die **Einflüsse** oder Entwicklungen im Umfeld des Unternehmens veranschaulichen, die eine Veränderung unausweichlich machen, z. B. neue Märkte, Konkurrenten, Geschäftsmodelle, regulatorische Vorgaben, Akquisitionen usw.\n• Die **Krise** und deren Hintergründe und Auswirkungen erläutern, z. B. schlechte Kundenzufriedenheitswerte, sinkende Erträge, Schwächen im eigenen Angebot, Probleme in der Zusammenarbeit, verpasste Chancen im Markt durch Selbstzufriedenheit usw.\n• Das **«Was wäre, wenn ...?»** ansprechen: Was geschieht, wenn wir nichts bzw. nicht jetzt etwas ändern?\n• Die **Ziele** offenlegen, die mit der Veränderung erreicht werden müssen und / oder sollen.\n• Den **positiven Nutzen** bzw. die Chancen, aber auch die schwierigen Konsequenzen bzw. die Risiken der Veränderung aufzeigen, z. B. die Effizienzsteigerung durch Bündelung von Know-how und Ressourcen, die unausweichliche Verlegung von Arbeitsplätzen oder die Reorganisation bestehender Prozesse usw.",
+      "id": [
+        "270125"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270126]\n[▼ch-25]\n[%4.1.2]\n[###Eine Führungskoalition aufbauen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.1.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270126"
+      ],
+      "anchor": "ch-25",
+      "title": "Eine Führungskoalition aufbauen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270127]\nTief greifende und umfassende Veränderungsvorhaben können in der Regel nicht durch eine «starke» Person allein, beispielsweise durch den Unternehmensleiter, vorangetrieben werden. Meist sind die Umstände und Auswirkungen dieser Vorhaben sehr komplex und es fallen viele unterschiedliche Aufgaben gleichzeitig an. Ein einziger Verantwortlicher würde sich damit überlasten und überfordern.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Tief greifende und umfassende Veränderungsvorhaben können in der Regel nicht durch eine «starke» Person allein, beispielsweise durch den Unternehmensleiter, vorangetrieben werden. Meist sind die Umstände und Auswirkungen dieser Vorhaben sehr komplex und es fallen viele unterschiedliche Aufgaben gleichzeitig an. Ein einziger Verantwortlicher würde sich damit überlasten und überfordern.",
+      "id": [
+        "270127"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270128]\nDeshalb hat ein Veränderungsvorhaben die besten Erfolgsaussichten, wenn sich ein kompetentes **Kernteam** als **Projektteam** bildet, das diese Veränderung vorantreiben und das gemeinsame Ziel erreichen will.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Deshalb hat ein Veränderungsvorhaben die besten Erfolgsaussichten, wenn sich ein kompetentes **Kernteam** als **Projektteam** bildet, das diese Veränderung vorantreiben und das gemeinsame Ziel erreichen will.",
+      "id": [
+        "270128"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270129]\nDie **Grösse** dieses Teams sollte sich nach der **Reichweite der angestrebten Veränderung** richten. Wenn alle direkt betroffenen Unternehmensbereiche oder Stakeholder ein Mitglied ins Kernteam berufen können, übernehmen sie Mitverantwortung für das Vorhaben. Grundsätzlich gilt: Je mehr Personen aus unterschiedlichen Bereichen sich im Kernteam zusammenfinden, desto stärker ist seine Ausstrahlung. Trotzdem sollte das Kernteam aus einer beschränkten Anzahl Mitglieder bestehen, damit es **entscheidungs- und handlungsfähig** ist und das Vorhaben gezielt vorantreiben und steuern kann.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die **Grösse** dieses Teams sollte sich nach der **Reichweite der angestrebten Veränderung** richten. Wenn alle direkt betroffenen Unternehmensbereiche oder Stakeholder ein Mitglied ins Kernteam berufen können, übernehmen sie Mitverantwortung für das Vorhaben. Grundsätzlich gilt: Je mehr Personen aus unterschiedlichen Bereichen sich im Kernteam zusammenfinden, desto stärker ist seine Ausstrahlung. Trotzdem sollte das Kernteam aus einer beschränkten Anzahl Mitglieder bestehen, damit es **entscheidungs- und handlungsfähig** ist und das Vorhaben gezielt vorantreiben und steuern kann.",
+      "id": [
+        "270129"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270130]\nDazu braucht das Kernteam die nötigen **Befugnisse** und **Freiheiten**. Es muss alle relevanten Themen angehen, das Vorgehen selbstständig gestalten und zweckmässig entscheiden dürfen. Zugleich soll es ein **gemeinsames Verständnis** für die angestrebte Veränderung sowie **gemeinsame Werte** entwickeln, damit es bei dieser anspruchsvollen Aufgabe geeint auftritt und die nötige Aussenwirkung erzielt. Zu diesen gemeinsamen Werten zählen vor allem Offenheit, gegenseitiges Vertrauen und Loyalität.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dazu braucht das Kernteam die nötigen **Befugnisse** und **Freiheiten**. Es muss alle relevanten Themen angehen, das Vorgehen selbstständig gestalten und zweckmässig entscheiden dürfen. Zugleich soll es ein **gemeinsames Verständnis** für die angestrebte Veränderung sowie **gemeinsame Werte** entwickeln, damit es bei dieser anspruchsvollen Aufgabe geeint auftritt und die nötige Aussenwirkung erzielt. Zu diesen gemeinsamen Werten zählen vor allem Offenheit, gegenseitiges Vertrauen und Loyalität.",
+      "id": [
+        "270130"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270131]\nEin optimal zusammengesetztes, kompetentes und umsetzungsfähiges Kernteam sollte daher die folgenden Voraussetzungen erfüllen:\n\n• **Hierarchische Bedeutung:** Genügend Schlüsselpersonen – Führungspersonen in der Linie – mit grossem Einfluss müssen im Kernteam vertreten sein.\n• **Expertise:** Ein professionelles Vorgehen erfordert fachliche und methodische Kompetenz, aber auch den bewussten Einbezug anderer Sichtweisen.\n• **Glaubwürdigkeit:** Die Mitglieder des Kernteams müssen im Unternehmen gut verankert sein und das nötige Vertrauen geniessen, damit sie allseits ernst genommen werden.\n• **Leadership:** Es erfordert viel Einfühlungsvermögen, Fingerspitzengefühl und Erfahrung, um die Betroffenen durch einen anspruchsvollen, nicht alltäglichen Prozess zu begleiten und schwierige Situationen und Konflikte konstruktiv zu lösen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Ein optimal zusammengesetztes, kompetentes und umsetzungsfähiges Kernteam sollte daher die folgenden Voraussetzungen erfüllen:\n\n• **Hierarchische Bedeutung:** Genügend Schlüsselpersonen – Führungspersonen in der Linie – mit grossem Einfluss müssen im Kernteam vertreten sein.\n• **Expertise:** Ein professionelles Vorgehen erfordert fachliche und methodische Kompetenz, aber auch den bewussten Einbezug anderer Sichtweisen.\n• **Glaubwürdigkeit:** Die Mitglieder des Kernteams müssen im Unternehmen gut verankert sein und das nötige Vertrauen geniessen, damit sie allseits ernst genommen werden.\n• **Leadership:** Es erfordert viel Einfühlungsvermögen, Fingerspitzengefühl und Erfahrung, um die Betroffenen durch einen anspruchsvollen, nicht alltäglichen Prozess zu begleiten und schwierige Situationen und Konflikte konstruktiv zu lösen.",
+      "id": [
+        "270131"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270132]\n[▼ch-26]\n[%4.1.3]\n[###Vision und Strategie entwickeln]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.1.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270132"
+      ],
+      "anchor": "ch-26",
+      "title": "Vision und Strategie entwickeln"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270133]\nDas Kernteam entwickelt ein richtungsweisendes und visionäres **Zukunfts- oder Zielbild**. Man bezeichnet diese Vision des Wandels oft auch als das «big picture». Es vermittelt möglichst **anschaulich** den anzustrebenden Soll-Zustand und wirkt **motivierend**.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Kernteam entwickelt ein richtungsweisendes und visionäres **Zukunfts- oder Zielbild**. Man bezeichnet diese Vision des Wandels oft auch als das «big picture». Es vermittelt möglichst **anschaulich** den anzustrebenden Soll-Zustand und wirkt **motivierend**.",
+      "id": [
+        "270133"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270134]\nEin wirksames Zukunftsbild erfüllt die folgenden sechs Kriterien:\n\n1. **Vorstellbar:** Ein klares Bild aufzeigen, wie die Zukunft aussehen könnte.\n2. **Erstrebenswert:** Perspektiven aufzeigen und begründen, weshalb es sich lohnt, an diesem Zukunftsbild mitzuwirken.\n3. **Machbar:** Realistische und erreichbare Ziele setzen.\n4. **Klar:** Eine möglichst konkrete Orientierung geben, «wohin die Reise geht».\n5. **Verständlich:** Einfach und prägnant die Stossrichtung der Veränderung erklären.\n6. **Flexibel:** Spielraum für die konkrete Ausgestaltung und für Anpassungen bei sich verändernden Umständen erlauben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ein wirksames Zukunftsbild erfüllt die folgenden sechs Kriterien:\n\n1. **Vorstellbar:** Ein klares Bild aufzeigen, wie die Zukunft aussehen könnte.\n2. **Erstrebenswert:** Perspektiven aufzeigen und begründen, weshalb es sich lohnt, an diesem Zukunftsbild mitzuwirken.\n3. **Machbar:** Realistische und erreichbare Ziele setzen.\n4. **Klar:** Eine möglichst konkrete Orientierung geben, «wohin die Reise geht».\n5. **Verständlich:** Einfach und prägnant die Stossrichtung der Veränderung erklären.\n6. **Flexibel:** Spielraum für die konkrete Ausgestaltung und für Anpassungen bei sich verändernden Umständen erlauben.",
+      "id": [
+        "270134"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270135]\nNebst einem motivierenden Ziel brauchen die Betroffenen die Gewissheit, dass dieses auch tatsächlich erreichbar ist. Die Vorgehensstrategie zeigt die Machbarkeit des Vorhabens anhand von nachvollziehbaren **Vorgehensschritten** und bewältigbaren **Aufgaben** oder **Arbeitspaketen** auf.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Nebst einem motivierenden Ziel brauchen die Betroffenen die Gewissheit, dass dieses auch tatsächlich erreichbar ist. Die Vorgehensstrategie zeigt die Machbarkeit des Vorhabens anhand von nachvollziehbaren **Vorgehensschritten** und bewältigbaren **Aufgaben** oder **Arbeitspaketen** auf.",
+      "id": [
+        "270135"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270136]\n[▼ch-27]\n[%4.1.4]\n[###Die Vision des Wandels kommunizieren]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.1.4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270136"
+      ],
+      "anchor": "ch-27",
+      "title": "Die Vision des Wandels kommunizieren"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270137]\nDie Betroffenen wollen wissen, was die Veränderung für sie persönlich bedeutet. Sie müssen Fragen dazu stellen oder ihre Bedenken äussern können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Betroffenen wollen wissen, was die Veränderung für sie persönlich bedeutet. Sie müssen Fragen dazu stellen oder ihre Bedenken äussern können.",
+      "id": [
+        "270137"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270138]\nDie Vision des Wandels sollte daher über möglichst viele **verfügbare Kommunikationskanäle** vermittelt werden und die folgenden Kriterien für eine **gelungene Kommunikation** erfüllen:\n\n• **Einfachheit:** In der Sprache der Betroffenen kommunizieren. Die Botschaft klar, knapp, einfach und für jedermann auf Anhieb verständlich formulieren. Auf komplizierte Fachausdrücke und lange Erklärungen verzichten.\n• **Kraft der Bilder:** Die Botschaft mithilfe von eindrücklichen Bildern, Metaphern (Redewendungen) und Analogien (Vergleiche / Beispiele zur Veranschaulichung) vermitteln. Dadurch wird die Botschaft leichter verständlich und bleibt besser haften.\n• **Wiederholen:** Die Botschaft verbreiten und nachhaltig verankern. Nebst Intranet, Foren, Newslettern usw. regelmässig auch mündlich in Teamsitzungen oder informellen Gesprächen thematisieren.\n• **Unstimmigkeiten auflösen:** Allfällige Widersprüche zwischen dem Zielbild und konkreten Entscheidungen oder Verhaltensweisen offen ansprechen und nachvollziehbar begründen. Für die Glaubwürdigkeit des Zielbilds ist diese Transparenz wichtig, ebenso das bereitwillige Entgegennehmen von Feedbacks.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die Vision des Wandels sollte daher über möglichst viele **verfügbare Kommunikationskanäle** vermittelt werden und die folgenden Kriterien für eine **gelungene Kommunikation** erfüllen:\n\n• **Einfachheit:** In der Sprache der Betroffenen kommunizieren. Die Botschaft klar, knapp, einfach und für jedermann auf Anhieb verständlich formulieren. Auf komplizierte Fachausdrücke und lange Erklärungen verzichten.\n• **Kraft der Bilder:** Die Botschaft mithilfe von eindrücklichen Bildern, Metaphern (Redewendungen) und Analogien (Vergleiche / Beispiele zur Veranschaulichung) vermitteln. Dadurch wird die Botschaft leichter verständlich und bleibt besser haften.\n• **Wiederholen:** Die Botschaft verbreiten und nachhaltig verankern. Nebst Intranet, Foren, Newslettern usw. regelmässig auch mündlich in Teamsitzungen oder informellen Gesprächen thematisieren.\n• **Unstimmigkeiten auflösen:** Allfällige Widersprüche zwischen dem Zielbild und konkreten Entscheidungen oder Verhaltensweisen offen ansprechen und nachvollziehbar begründen. Für die Glaubwürdigkeit des Zielbilds ist diese Transparenz wichtig, ebenso das bereitwillige Entgegennehmen von Feedbacks.",
+      "id": [
+        "270138"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270139]\nDie Führungspersonen und insbesondere das Kernteam vermitteln das Zielbild glaubwürdig, indem sie **vorbildlich vorangehen** und ein **positives Klima** der Veränderung schaffen. Vorbildlichkeit bedeutet:\n\n• Die angestrebte Veränderung als **persönliche Haltung und Einstellung** vorleben.\n• Das angestrebte Verhalten im **Alltag umsetzen**, dadurch glaubwürdig bleiben und Orientierung bieten.\n• **Wertschätzung** gegenüber den bisherigen Leistungen zeigen.\n• Den Mitarbeitenden aufmerksam **zuhören**, ihre Anliegen und Bedenken aufnehmen und ihre Emotionen verstehen.\n• Widerstand **konstruktiv angehen** und ihn als Chance für Verbesserungen nutzen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die Führungspersonen und insbesondere das Kernteam vermitteln das Zielbild glaubwürdig, indem sie **vorbildlich vorangehen** und ein **positives Klima** der Veränderung schaffen. Vorbildlichkeit bedeutet:\n\n• Die angestrebte Veränderung als **persönliche Haltung und Einstellung** vorleben.\n• Das angestrebte Verhalten im **Alltag umsetzen**, dadurch glaubwürdig bleiben und Orientierung bieten.\n• **Wertschätzung** gegenüber den bisherigen Leistungen zeigen.\n• Den Mitarbeitenden aufmerksam **zuhören**, ihre Anliegen und Bedenken aufnehmen und ihre Emotionen verstehen.\n• Widerstand **konstruktiv angehen** und ihn als Chance für Verbesserungen nutzen.",
+      "id": [
+        "270139"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270140]\n[▼ch-28]\n[%4.1.5]\n[###Mitarbeitende auf breiter Basis befähigen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.1.5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270140"
+      ],
+      "anchor": "ch-28",
+      "title": "Mitarbeitende auf breiter Basis befähigen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270141]\nMöglichst viele Betroffene müssen daran glauben, dass sie die Herausforderungen meistern und das Zielbild erreichen können. Erst dann sind sie bereit, am Vorhaben aktiv mitzumachen. Das Ziel der Stufe 5 ist daher, das **Vertrauen in die Veränderungsfähigkeit** zu festigen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Möglichst viele Betroffene müssen daran glauben, dass sie die Herausforderungen meistern und das Zielbild erreichen können. Erst dann sind sie bereit, am Vorhaben aktiv mitzumachen. Das Ziel der Stufe 5 ist daher, das **Vertrauen in die Veränderungsfähigkeit** zu festigen.",
+      "id": [
+        "270141"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270142]\nMit den folgenden Massnahmen unterstützt das Kernteam die Befähigung der Mitarbeitenden auf breiter Basis:\n\n• **Hindernisse aus dem Weg räumen**, insbesondere strukturelle Schranken, blockierende Ressourcen und schlechte Gewohnheiten in der Organisation wie z. B. das Abteilungsdenken, ineffiziente Prozesse und Systeme, Statusdenken usw.\n• **Spielraum schaffen** für die Ausgestaltung der einzelnen Veränderungsschritte und dadurch die Handlungs- und Entscheidungsfähigkeit fördern.\n• **Lernprozesse fördern**, damit die Mitarbeitenden die neuen Fähigkeiten und Fertigkeiten rascher und gezielter entwickeln, z. B. durch Schulungen und Workshops.\n• Den persönlichen **Umgang mit Veränderungen aktiv unterstützen**, z. B. durch persönliches Coaching, Teamentwicklungs-Workshops usw.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Mit den folgenden Massnahmen unterstützt das Kernteam die Befähigung der Mitarbeitenden auf breiter Basis:\n\n• **Hindernisse aus dem Weg räumen**, insbesondere strukturelle Schranken, blockierende Ressourcen und schlechte Gewohnheiten in der Organisation wie z. B. das Abteilungsdenken, ineffiziente Prozesse und Systeme, Statusdenken usw.\n• **Spielraum schaffen** für die Ausgestaltung der einzelnen Veränderungsschritte und dadurch die Handlungs- und Entscheidungsfähigkeit fördern.\n• **Lernprozesse fördern**, damit die Mitarbeitenden die neuen Fähigkeiten und Fertigkeiten rascher und gezielter entwickeln, z. B. durch Schulungen und Workshops.\n• Den persönlichen **Umgang mit Veränderungen aktiv unterstützen**, z. B. durch persönliches Coaching, Teamentwicklungs-Workshops usw.",
+      "id": [
+        "270142"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270143]\n[▼ch-29]\n[%4.1.6]\n[###Schnelle Erfolge erzielen (Quick Wins)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.1.6",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270143"
+      ],
+      "anchor": "ch-29",
+      "title": "Schnelle Erfolge erzielen (Quick Wins)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270144]\nDie anfängliche Begeisterung für die angestrebte Veränderung kann leicht in Ernüchterung oder gar Enttäuschung umschlagen, wenn ungeahnte **Schwierigkeiten** das Vorwärtskommen behindern und Geduld verlangen. Daraus erwachsen neue **Zweifel**, ob sich das Ganze lohnt und die Vorgehensstrategie richtig ist.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die anfängliche Begeisterung für die angestrebte Veränderung kann leicht in Ernüchterung oder gar Enttäuschung umschlagen, wenn ungeahnte **Schwierigkeiten** das Vorwärtskommen behindern und Geduld verlangen. Daraus erwachsen neue **Zweifel**, ob sich das Ganze lohnt und die Vorgehensstrategie richtig ist.",
+      "id": [
+        "270144"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270145]\nSichtbare Erfolge zerstreuen Zweifel oder Kritik am Vorhaben am besten und spornen zum Weitermachen an. Auf dem Weg zum eigentlichen Ziel braucht es daher viele kleine, kurzfristig erreichbare **Zwischenziele**. Dies ermöglicht schnelle Erfolgserlebnisse in regelmässigen Zeitabständen. Die Beteiligten werten sie als **positives Zeichen** und als **Belohnung** für ihre Anstrengungen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Sichtbare Erfolge zerstreuen Zweifel oder Kritik am Vorhaben am besten und spornen zum Weitermachen an. Auf dem Weg zum eigentlichen Ziel braucht es daher viele kleine, kurzfristig erreichbare **Zwischenziele**. Dies ermöglicht schnelle Erfolgserlebnisse in regelmässigen Zeitabständen. Die Beteiligten werten sie als **positives Zeichen** und als **Belohnung** für ihre Anstrengungen.",
+      "id": [
+        "270145"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270146]\nSchnelle Erfolge beweisen, dass\n\n• das Zielbild mit geeigneten Massnahmen **erreichbar** ist.\n• jede Einzelne bzw. jeder Einzelne aus eigenen Kräften **viel bewirken** kann.\n• der **Zusammenhalt** und die gegenseitige Unterstützung wichtig sind.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Schnelle Erfolge beweisen, dass\n\n• das Zielbild mit geeigneten Massnahmen **erreichbar** ist.\n• jede Einzelne bzw. jeder Einzelne aus eigenen Kräften **viel bewirken** kann.\n• der **Zusammenhalt** und die gegenseitige Unterstützung wichtig sind.",
+      "id": [
+        "270146"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270147]\nDie ausdrückliche **Wertschätzung** und **Anerkennung** für das Geleistete tragen ausserdem dazu bei, allfällige noch vorhandene Widerstände oder Schwierigkeiten zu beseitigen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die ausdrückliche **Wertschätzung** und **Anerkennung** für das Geleistete tragen ausserdem dazu bei, allfällige noch vorhandene Widerstände oder Schwierigkeiten zu beseitigen.",
+      "id": [
+        "270147"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270148]\n[▼ch-30]\n[%4.1.7]\n[###Erfolge konsolidieren und weitere Veränderungen einleiten]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.1.7",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270148"
+      ],
+      "anchor": "ch-30",
+      "title": "Erfolge konsolidieren und weitere Veränderungen einleiten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270149]\nKurzfristige Erfolge stärken den Glauben an die Veränderung. Jedes erreichte Zwischenziel bringt das Vorhaben ein Stück weiter und rückt das Gesamtziel näher. Diese positiven Zeichen sollten jedoch keinesfalls dazu verleiten, sich auf seinen Lorbeeren auszuruhen oder gar frühzeitig das gesamte Veränderungsvorhaben als vollen Erfolg zu verbuchen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Kurzfristige Erfolge stärken den Glauben an die Veränderung. Jedes erreichte Zwischenziel bringt das Vorhaben ein Stück weiter und rückt das Gesamtziel näher. Diese positiven Zeichen sollten jedoch keinesfalls dazu verleiten, sich auf seinen Lorbeeren auszuruhen oder gar frühzeitig das gesamte Veränderungsvorhaben als vollen Erfolg zu verbuchen.",
+      "id": [
+        "270149"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270150]\nVielmehr gilt es, das **bereits Erreichte zu festigen** und die positive Kraft daraus gezielt zu nutzen, um **grössere und anspruchsvollere Veränderungsmassnahmen** in Angriff zu nehmen. Nun müssen etwa die Geschäftsprozesse, Strukturen und Systeme vollumfänglich auf die Veränderung angepasst und überholte Gewohnheiten oder störende Verhaltensweisen endgültig abgeschafft werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Vielmehr gilt es, das **bereits Erreichte zu festigen** und die positive Kraft daraus gezielt zu nutzen, um **grössere und anspruchsvollere Veränderungsmassnahmen** in Angriff zu nehmen. Nun müssen etwa die Geschäftsprozesse, Strukturen und Systeme vollumfänglich auf die Veränderung angepasst und überholte Gewohnheiten oder störende Verhaltensweisen endgültig abgeschafft werden.",
+      "id": [
+        "270150"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270151]\nDas Kernteam muss deshalb auf dieser Stufe auch dafür sorgen, dass die **Dringlichkeit und Notwendigkeit** des Vorhabens sowie die Disziplin im Vorgehen aufrechterhalten bleiben.\n\nZusammengefasst kann die angestrebte Veränderung nachhaltig bestärkt werden durch\n\n• **konsequentes Anpassen** der Organisation (Prozesse, Strukturen und Systeme) auf allen Ebenen.\n• **Aufdecken und Auflösen** von veralteten Prozessen oder Arbeitsweisen und von unerwünschten oder störenden Verhaltensweisen.\n• **Ermutigung** der Mitarbeitenden, neue Ideen zu entwickeln und weitere Veränderungen auszulösen.\n• Gewinn von **neuen Mitarbeitenden**, um mit frischen Kräften die Veränderung weiter voranzutreiben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Das Kernteam muss deshalb auf dieser Stufe auch dafür sorgen, dass die **Dringlichkeit und Notwendigkeit** des Vorhabens sowie die Disziplin im Vorgehen aufrechterhalten bleiben.\n\nZusammengefasst kann die angestrebte Veränderung nachhaltig bestärkt werden durch\n\n• **konsequentes Anpassen** der Organisation (Prozesse, Strukturen und Systeme) auf allen Ebenen.\n• **Aufdecken und Auflösen** von veralteten Prozessen oder Arbeitsweisen und von unerwünschten oder störenden Verhaltensweisen.\n• **Ermutigung** der Mitarbeitenden, neue Ideen zu entwickeln und weitere Veränderungen auszulösen.\n• Gewinn von **neuen Mitarbeitenden**, um mit frischen Kräften die Veränderung weiter voranzutreiben.",
+      "id": [
+        "270151"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270152]\n[▼ch-31]\n[%4.1.8]\n[###Neue Ansätze in der Kultur verankern]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.1.8",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270152"
+      ],
+      "anchor": "ch-31",
+      "title": "Neue Ansätze in der Kultur verankern"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270153]\nWenn die durch die Veränderung ausgelösten neuen Arbeitsweisen und Umgangsformen nicht ganz bewusst gepflegt und gefestigt werden, besteht die Gefahr, dass sich alte Gewohnheiten wieder ausbreiten, sobald der Alltag als «business as usual» einkehrt. Dann gehen die positiven Veränderungskräfte schnell wieder verloren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn die durch die Veränderung ausgelösten neuen Arbeitsweisen und Umgangsformen nicht ganz bewusst gepflegt und gefestigt werden, besteht die Gefahr, dass sich alte Gewohnheiten wieder ausbreiten, sobald der Alltag als «business as usual» einkehrt. Dann gehen die positiven Veränderungskräfte schnell wieder verloren.",
+      "id": [
+        "270153"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270154]\nMenschen prägen eine Kultur. Daher ändert man die Kultur nicht durch ein paar einfache oder schnelle Massnahmen. Im Gegenteil, es braucht viel **Entschlossenheit** und **Beharrlichkeit**, damit sich die gemeinsamen Werte, Einstellungen und Verhaltensgrundsätze in die gewünschte Richtung entwickeln und sich eine neue Kultur der Zusammenarbeit verankert.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Menschen prägen eine Kultur. Daher ändert man die Kultur nicht durch ein paar einfache oder schnelle Massnahmen. Im Gegenteil, es braucht viel **Entschlossenheit** und **Beharrlichkeit**, damit sich die gemeinsamen Werte, Einstellungen und Verhaltensgrundsätze in die gewünschte Richtung entwickeln und sich eine neue Kultur der Zusammenarbeit verankert.",
+      "id": [
+        "270154"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270155]\nDie Führungspersonen und insbesondere auch die oberste Unternehmensleitung tragen mit ihrer **Vorbildwirkung** stark dazu bei. Dazu gehört, bewusst «alte Zöpfe abzuschneiden», d. h., der neuen Kultur **zuwiderlaufende Privilegien** und **überholte Rituale** konsequent abzuschaffen. Allenfalls ist eine **Trennung von Schlüsselpersonen** nötig, die nicht bereit sind, die Veränderung mitzutragen. Auch bei der Gewinnung von neuen Mitarbeitenden und Nachwuchskräften ist darauf zu achten, dass sie persönlich zur Neuausrichtung passen und diese auch nach aussen verkörpern.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Führungspersonen und insbesondere auch die oberste Unternehmensleitung tragen mit ihrer **Vorbildwirkung** stark dazu bei. Dazu gehört, bewusst «alte Zöpfe abzuschneiden», d. h., der neuen Kultur **zuwiderlaufende Privilegien** und **überholte Rituale** konsequent abzuschaffen. Allenfalls ist eine **Trennung von Schlüsselpersonen** nötig, die nicht bereit sind, die Veränderung mitzutragen. Auch bei der Gewinnung von neuen Mitarbeitenden und Nachwuchskräften ist darauf zu achten, dass sie persönlich zur Neuausrichtung passen und diese auch nach aussen verkörpern.",
+      "id": [
+        "270155"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270156]\nDie beste Überzeugungsarbeit für die neue Kultur leistet der **Erfolg**. Er beweist, dass sich die Anstrengungen lohnen. Deshalb trägt die **Kommunikation** entscheidend zu einer Kulturveränderung bei. Dies geschieht unter anderem durch\n\n• die Verankerung einer **Feedbackkultur**, bei der offen über die Rollenverteilung, die Arbeitsweisen und den Umgang miteinander in der täglichen Zusammenarbeit gesprochen wird.\n• die regelmässige **Information über Leistungserfolge** (Kundenzufriedenheit, Unternehmensergebnisse, Kosteneinsparungen usw.), die dank der Veränderung erreicht wurden.\n• den regelmässigen **Austausch** im grösseren Kreis (Retrospektive) über die erzielten Fortschritte und Erfolge, aber auch über die Gründe für allfällige Rückschritte und Anregungen für Verbesserungen.\n• **Coaching und Schulung** der Führungspersonen und Mitarbeitenden in der Verankerung der neuen Arbeitsweisen und Umgangsformen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die beste Überzeugungsarbeit für die neue Kultur leistet der **Erfolg**. Er beweist, dass sich die Anstrengungen lohnen. Deshalb trägt die **Kommunikation** entscheidend zu einer Kulturveränderung bei. Dies geschieht unter anderem durch\n\n• die Verankerung einer **Feedbackkultur**, bei der offen über die Rollenverteilung, die Arbeitsweisen und den Umgang miteinander in der täglichen Zusammenarbeit gesprochen wird.\n• die regelmässige **Information über Leistungserfolge** (Kundenzufriedenheit, Unternehmensergebnisse, Kosteneinsparungen usw.), die dank der Veränderung erreicht wurden.\n• den regelmässigen **Austausch** im grösseren Kreis (Retrospektive) über die erzielten Fortschritte und Erfolge, aber auch über die Gründe für allfällige Rückschritte und Anregungen für Verbesserungen.\n• **Coaching und Schulung** der Führungspersonen und Mitarbeitenden in der Verankerung der neuen Arbeitsweisen und Umgangsformen.",
+      "id": [
+        "270156"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270157]\n[▼ch-32]\n[%4.2]\n[##Drei-Phasen-Modell nach Lewin]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270157"
+      ],
+      "anchor": "ch-32",
+      "title": "Drei-Phasen-Modell nach Lewin"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270158]\nEin klassisches Vorgehensmodell zur **Gestaltung von Veränderungsprozessen** auf der psychosozialen Ebene (Beziehungsebene) entwickelte der Psychologe Kurt Lewin in den 1940er-Jahren. Es umfasst drei Phasen: das Auftauen (Unfreeze), das Bewegen (Move) und das Festigen (Refreeze).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ein klassisches Vorgehensmodell zur **Gestaltung von Veränderungsprozessen** auf der psychosozialen Ebene (Beziehungsebene) entwickelte der Psychologe Kurt Lewin in den 1940er-Jahren. Es umfasst drei Phasen: das Auftauen (Unfreeze), das Bewegen (Move) und das Festigen (Refreeze).",
+      "id": [
+        "270158"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270159]\nBei jedem Veränderungsvorhaben wirken sowohl **treibende** als auch **behindernde Kräfte**. Wenn die behindernden Kräfte zu stark sind, scheitert das Veränderungsvorhaben am Widerstand. Wenn jedoch die treibenden Kräfte überwiegen, werden zu viele Veränderungen gleichzeitig angestossen und vorangetrieben, die das Unternehmen überfordern. Hektik und Chaos herrschen, wodurch die Bemühungen oft bald wieder zum Erliegen gebracht werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bei jedem Veränderungsvorhaben wirken sowohl **treibende** als auch **behindernde Kräfte**. Wenn die behindernden Kräfte zu stark sind, scheitert das Veränderungsvorhaben am Widerstand. Wenn jedoch die treibenden Kräfte überwiegen, werden zu viele Veränderungen gleichzeitig angestossen und vorangetrieben, die das Unternehmen überfordern. Hektik und Chaos herrschen, wodurch die Bemühungen oft bald wieder zum Erliegen gebracht werden.",
+      "id": [
+        "270159"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270160]\nGemäss dem Drei-Phasen-Modell nach Lewin muss daher das vorhandene Kräfteverhältnis zunächst aufgebrochen und in die angestrebte Richtung bewegt werden. Danach muss es sich wieder stabilisieren können, damit ein neues **Gleichgewicht der Kräfte** herrscht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Gemäss dem Drei-Phasen-Modell nach Lewin muss daher das vorhandene Kräfteverhältnis zunächst aufgebrochen und in die angestrebte Richtung bewegt werden. Danach muss es sich wieder stabilisieren können, damit ein neues **Gleichgewicht der Kräfte** herrscht.",
+      "id": [
+        "270160"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:270161]\n[%Drei-Phasen-Modell der Veränderung nach Lewin]\n[&image:https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter1.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "270161"
+      ],
+      "item": "Drei-Phasen-Modell der Veränderung nach Lewin",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270162]\n[▼ch-33]\n[%4.2.1]\n[###Auftauen (Unfreeze)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.2.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270162"
+      ],
+      "anchor": "ch-33",
+      "title": "Auftauen (Unfreeze)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270163]\nDas Ziel der ersten Phase ist, die Betroffenen **auf die Veränderung vorzubereiten** und somit auch ihre Veränderungsbereitschaft aktiv zu fördern.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Ziel der ersten Phase ist, die Betroffenen **auf die Veränderung vorzubereiten** und somit auch ihre Veränderungsbereitschaft aktiv zu fördern.",
+      "id": [
+        "270163"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270164]\nDer Erfolg des Veränderungsvorhabens hängt stark davon ab, wie gut es gelingt, den Ist- Zustand aufzubrechen und die Betroffenen von Anfang an **als fördernde Kraft zu gewinnen**. Sie müssen die Notwendigkeit und den Sinn des Vorhabens einsehen, damit sie zu einer Veränderung bereit sind. Zu einer **offenen und glaubwürdigen Kommunikation** gehört auch, dass die Situation der Betroffenen gewürdigt, ihre Bedürfnisse und Anliegen ernst genommen und in die weiteren Überlegungen einbezogen werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Erfolg des Veränderungsvorhabens hängt stark davon ab, wie gut es gelingt, den Ist- Zustand aufzubrechen und die Betroffenen von Anfang an **als fördernde Kraft zu gewinnen**. Sie müssen die Notwendigkeit und den Sinn des Vorhabens einsehen, damit sie zu einer Veränderung bereit sind. Zu einer **offenen und glaubwürdigen Kommunikation** gehört auch, dass die Situation der Betroffenen gewürdigt, ihre Bedürfnisse und Anliegen ernst genommen und in die weiteren Überlegungen einbezogen werden.",
+      "id": [
+        "270164"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270165]\nJede unfreiwillige Veränderung löst zunächst **Unsicherheiten** aus. Diese zeigen sich typischerweise als **ablehnende Haltung** und **Widerstand**. Die Betroffenen sehen die Notwendigkeit oder den Sinn nicht ein oder wehren sich dagegen, dass jetzt etwas geschehen muss. Vielfach hängt diese Weigerung mit der eingeschränkten **selektiven Wahrnehmung** zusammen (vgl. Kap. 2.2.1, S. 16).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Jede unfreiwillige Veränderung löst zunächst **Unsicherheiten** aus. Diese zeigen sich typischerweise als **ablehnende Haltung** und **Widerstand**. Die Betroffenen sehen die Notwendigkeit oder den Sinn nicht ein oder wehren sich dagegen, dass jetzt etwas geschehen muss. Vielfach hängt diese Weigerung mit der eingeschränkten **selektiven Wahrnehmung** zusammen (vgl. Kap. 2.2.1, S. 16).",
+      "id": [
+        "270165"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270166]\nAuf die Veränderung vorbereiten bedeutet daher auch, die Betroffenen über die **negativen Konsequenzen** aufzuklären, die das **Festhalten am heutigen Zustand** haben könnte. Ihr Problembewusstsein wird dadurch geschärft und Ablehnung und Widerstand als hemmende oder blockierende Kräfte gegen eine Veränderung nehmen ab.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Auf die Veränderung vorbereiten bedeutet daher auch, die Betroffenen über die **negativen Konsequenzen** aufzuklären, die das **Festhalten am heutigen Zustand** haben könnte. Ihr Problembewusstsein wird dadurch geschärft und Ablehnung und Widerstand als hemmende oder blockierende Kräfte gegen eine Veränderung nehmen ab.",
+      "id": [
+        "270166"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270167]\nIn der Praxis scheitern viele Veränderungsvorhaben daran, dass dem Auftauen zu wenig Beachtung geschenkt oder diese Phase gar übersprungen wird.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In der Praxis scheitern viele Veränderungsvorhaben daran, dass dem Auftauen zu wenig Beachtung geschenkt oder diese Phase gar übersprungen wird.",
+      "id": [
+        "270167"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270168]\n[▼ch-34]\n[%4.2.2]\n[###Bewegen (Move)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.2.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270168"
+      ],
+      "anchor": "ch-34",
+      "title": "Bewegen (Move)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270169]\nDas Ziel der zweiten Phase ist, **neue Einstellungen und Verhaltensweisen zu entwickeln**. Um dies zu ermöglichen, müssen die Veränderungsbereitschaft in dieser zukunftsgerichteten Phase weiter gestärkt und die Veränderungsfähigkeit aufgebaut und erweitert werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Ziel der zweiten Phase ist, **neue Einstellungen und Verhaltensweisen zu entwickeln**. Um dies zu ermöglichen, müssen die Veränderungsbereitschaft in dieser zukunftsgerichteten Phase weiter gestärkt und die Veränderungsfähigkeit aufgebaut und erweitert werden.",
+      "id": [
+        "270169"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270170]\nFür nachhaltige Veränderungen müssen alte Muster bewusst aufgebrochen und verlernt sowie neue Muster eingeübt und gefestigt werden. Dieser Ablösungsprozess kann **schmerzhaft** und **langwierig** sein. Die Betroffenen unterziehen sich ihm nur freiwillig, wenn sie überzeugt sind, dass sich die Anstrengungen tatsächlich lohnen. **Schnelle Erfolgserlebnisse** (sog. **Quick Wins**) ermöglichen eine solche Bestätigung. Die Betroffenen stellen z. B. fest, dass sich die Zusammenarbeit über die Abteilungen hinweg bereits spürbar verbessert hat, dass es heute viel einfacher ist, offen über Fehler zu diskutieren, dass wichtige Informationen sofort weitergereicht werden, dass sie bei bestimmten Aufgaben merklich Zeit einsparen usw. Diese positiven Signale bestärken sie, dass sie auf dem richtigen Weg sind.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Für nachhaltige Veränderungen müssen alte Muster bewusst aufgebrochen und verlernt sowie neue Muster eingeübt und gefestigt werden. Dieser Ablösungsprozess kann **schmerzhaft** und **langwierig** sein. Die Betroffenen unterziehen sich ihm nur freiwillig, wenn sie überzeugt sind, dass sich die Anstrengungen tatsächlich lohnen. **Schnelle Erfolgserlebnisse** (sog. **Quick Wins**) ermöglichen eine solche Bestätigung. Die Betroffenen stellen z. B. fest, dass sich die Zusammenarbeit über die Abteilungen hinweg bereits spürbar verbessert hat, dass es heute viel einfacher ist, offen über Fehler zu diskutieren, dass wichtige Informationen sofort weitergereicht werden, dass sie bei bestimmten Aufgaben merklich Zeit einsparen usw. Diese positiven Signale bestärken sie, dass sie auf dem richtigen Weg sind.",
+      "id": [
+        "270170"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270171]\nEin weiterer wichtiger Baustein für den Veränderungserfolg ist die Möglichkeit zur **aktiven Mitgestaltung**. Wenn die Betroffenen spüren, dass ihre Meinung und ihr Engagement geschätzt werden, übernehmen sie **Mitverantwortung für das Gelingen** des Vorhabens. Vielfach wissen sie auch am besten, was es für eine erfolgreiche Umsetzung tatsächlich braucht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ein weiterer wichtiger Baustein für den Veränderungserfolg ist die Möglichkeit zur **aktiven Mitgestaltung**. Wenn die Betroffenen spüren, dass ihre Meinung und ihr Engagement geschätzt werden, übernehmen sie **Mitverantwortung für das Gelingen** des Vorhabens. Vielfach wissen sie auch am besten, was es für eine erfolgreiche Umsetzung tatsächlich braucht.",
+      "id": [
+        "270171"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270172]\n[▼ch-35]\n[%4.2.3]\n[###Festigen (Refreeze)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.2.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270172"
+      ],
+      "anchor": "ch-35",
+      "title": "Festigen (Refreeze)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270173]\nDas Ziel der dritten Phase ist, **das Erreichte zu stabilisieren**.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Ziel der dritten Phase ist, **das Erreichte zu stabilisieren**.",
+      "id": [
+        "270173"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270174]\nDas Stabilisieren bezweckt, die nötige **Sicherheit** und **Ordnung** zurückzugewinnen, um die Veränderung im Unternehmen dauerhaft verankern zu können. Gleichzeitig sollen die Erfahrungen aus der Bewegungsphase als positive Kraft für eine **stetige Weiterentwicklung** genutzt werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Stabilisieren bezweckt, die nötige **Sicherheit** und **Ordnung** zurückzugewinnen, um die Veränderung im Unternehmen dauerhaft verankern zu können. Gleichzeitig sollen die Erfahrungen aus der Bewegungsphase als positive Kraft für eine **stetige Weiterentwicklung** genutzt werden.",
+      "id": [
+        "270174"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270175]\nBesonders bei einschneidenden Veränderungen gibt es auch in dieser Festigungsphase nicht nur Fortschritte und Erfolgserlebnisse. Nach der ersten Euphorie und sobald der Druck der Veränderungsbestrebungen nachlässt, besteht nach wie vor die Gefahr, dass das vermeintlich Erreichte infrage gestellt und neuer Widerstand entfacht wird. Solche **zeitweiligen Rückschritte** gehören zum gesamten Veränderungsprozess. Es ist daher besonders wichtig, der Verankerungsphase **ausreichend Zeit** und ebenso **viel Aufmerksamkeit** zu geben wie der Auftauphase.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Besonders bei einschneidenden Veränderungen gibt es auch in dieser Festigungsphase nicht nur Fortschritte und Erfolgserlebnisse. Nach der ersten Euphorie und sobald der Druck der Veränderungsbestrebungen nachlässt, besteht nach wie vor die Gefahr, dass das vermeintlich Erreichte infrage gestellt und neuer Widerstand entfacht wird. Solche **zeitweiligen Rückschritte** gehören zum gesamten Veränderungsprozess. Es ist daher besonders wichtig, der Verankerungsphase **ausreichend Zeit** und ebenso **viel Aufmerksamkeit** zu geben wie der Auftauphase.",
+      "id": [
+        "270175"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270176]\n[▼ch-36]\n[%4.3]\n[##Drei-Phasen-Modell und Leading-Change-Modell]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270176"
+      ],
+      "anchor": "ch-36",
+      "title": "Drei-Phasen-Modell und Leading-Change-Modell"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270177]\nWenn man die drei Phasen der Gestaltung eines Veränderungsprozesses nach Lewin den acht Stufen des Leading-Change-Modells nach Kotter gegenüberstellt, ergibt sich in etwa die nachfolgend abgebildete Zuordnung.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn man die drei Phasen der Gestaltung eines Veränderungsprozesses nach Lewin den acht Stufen des Leading-Change-Modells nach Kotter gegenüberstellt, ergibt sich in etwa die nachfolgend abgebildete Zuordnung.",
+      "id": [
+        "270177"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270178]\n[%Drei-Phasen-Modell nach Lewin und Leading-Change-Modell nach Kotter]\n[&image:https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter2.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "270178"
+      ],
+      "item": "Drei-Phasen-Modell nach Lewin und Leading-Change-Modell nach Kotter"
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "png",
+          "src": "https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter2.png"
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270179]\n[▼ch-37]\n[%4.4]\n[##Methodisches Vorgehen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270179"
+      ],
+      "anchor": "ch-37",
+      "title": "Methodisches Vorgehen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270180]\nEin Veränderungsvorhaben zu planen und durchzuführen, ist kein «daily business». Es bedeutet für alle Beteiligten eine aussergewöhnliche Situation. Diese erfolgreich zu meistern, erfordert ein gut durchdachtes und geordnetes Vorgehen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ein Veränderungsvorhaben zu planen und durchzuführen, ist kein «daily business». Es bedeutet für alle Beteiligten eine aussergewöhnliche Situation. Diese erfolgreich zu meistern, erfordert ein gut durchdachtes und geordnetes Vorgehen.",
+      "id": [
+        "270180"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270181]\nUnabhängig von der verwendeten Vorgehensmethode verlaufen Veränderungsprozesse in verschiedenen Phasen sowohl auf der Sach- als auch auf der Beziehungsebene. Die Entwicklungen auf diesen beiden Ebenen beeinflussen sich gegenseitig und können daher auch nicht voneinander getrennt behandelt werden. Ein methodisches Vorgehen im Change Management berücksichtigt daher beide Ebenen:\n\n• **Sachebene:** Die zu bearbeitenden **Inhalte** lassen sich vergleichsweise klar bestimmen und durch ein **systematisches Vorgehen** planen und steuern. Dafür eignen sich die Instrumente aus dem Projektmanagement.\n• **Beziehungsebene:** Ein systematisches Vorgehen allein bewirkt noch keine echte «Veränderung in den Köpfen». Die betroffenen Personen müssen auch in ihrem **Veränderungsprozess begleitet** werden. Weil die damit zusammenhängenden Anforderungen oft nur ansatzweise erkenn- und fassbar sind, werden begleitende Interventionsmassnahmen entworfen, aber nicht fix bestimmt oder geplant.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Unabhängig von der verwendeten Vorgehensmethode verlaufen Veränderungsprozesse in verschiedenen Phasen sowohl auf der Sach- als auch auf der Beziehungsebene. Die Entwicklungen auf diesen beiden Ebenen beeinflussen sich gegenseitig und können daher auch nicht voneinander getrennt behandelt werden. Ein methodisches Vorgehen im Change Management berücksichtigt daher beide Ebenen:\n\n• **Sachebene:** Die zu bearbeitenden **Inhalte** lassen sich vergleichsweise klar bestimmen und durch ein **systematisches Vorgehen** planen und steuern. Dafür eignen sich die Instrumente aus dem Projektmanagement.\n• **Beziehungsebene:** Ein systematisches Vorgehen allein bewirkt noch keine echte «Veränderung in den Köpfen». Die betroffenen Personen müssen auch in ihrem **Veränderungsprozess begleitet** werden. Weil die damit zusammenhängenden Anforderungen oft nur ansatzweise erkenn- und fassbar sind, werden begleitende Interventionsmassnahmen entworfen, aber nicht fix bestimmt oder geplant.",
+      "id": [
+        "270181"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270182]\nDie bewusste Trennung zwischen dem Vorgehen auf der Sachebene und dem Vorgehen auf der Beziehungsebene, wie sie nachfolgend gemacht wird, widerspiegelt somit nicht das tatsächliche Vorgehen bei einem Veränderungsvorhaben. Sie dient lediglich dazu, die unterschiedliche Ausgestaltung der beiden Ebenen besser verständlich zu machen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die bewusste Trennung zwischen dem Vorgehen auf der Sachebene und dem Vorgehen auf der Beziehungsebene, wie sie nachfolgend gemacht wird, widerspiegelt somit nicht das tatsächliche Vorgehen bei einem Veränderungsvorhaben. Sie dient lediglich dazu, die unterschiedliche Ausgestaltung der beiden Ebenen besser verständlich zu machen.",
+      "id": [
+        "270182"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270183]\n[▼ch-38]\n[%4.4.1]\n[###Projektmanagement]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.4.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270183"
+      ],
+      "anchor": "ch-38",
+      "title": "Projektmanagement"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270184]\nVeränderungsvorhaben weisen typische **Merkmale eines Projekts** auf:\n\n• **Zeitlich befristet:** Es gibt einen definierten Start und ein definiertes Ende für das Vorhaben.\n• **Komplexität:** Viele Einflussfaktoren müssen gleichzeitig und gleichermassen berücksichtigt werden.\n• **Einmaligkeit:** Die spezifischen Bedingungen, die Ausgangslage und die anzustrebenden Ziele sind einmalig, d. h., sie waren genau so noch nie vorhanden.\n• **Begrenzte Ressourcen:** Es stehen nur beschränkt personelle, zeitliche und finanzielle Ressourcen für die Umsetzung des Vorhabens zur Verfügung.\n• **Innovativ:** Mit dem Vorhaben soll etwas Neues entstehen.\n• **Risikobehaftet:** Wenn etwas Neues entstehen soll, ist manches noch unklar und besteht somit auch ein gewisses Risiko des Misserfolgs.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Veränderungsvorhaben weisen typische **Merkmale eines Projekts** auf:\n\n• **Zeitlich befristet:** Es gibt einen definierten Start und ein definiertes Ende für das Vorhaben.\n• **Komplexität:** Viele Einflussfaktoren müssen gleichzeitig und gleichermassen berücksichtigt werden.\n• **Einmaligkeit:** Die spezifischen Bedingungen, die Ausgangslage und die anzustrebenden Ziele sind einmalig, d. h., sie waren genau so noch nie vorhanden.\n• **Begrenzte Ressourcen:** Es stehen nur beschränkt personelle, zeitliche und finanzielle Ressourcen für die Umsetzung des Vorhabens zur Verfügung.\n• **Innovativ:** Mit dem Vorhaben soll etwas Neues entstehen.\n• **Risikobehaftet:** Wenn etwas Neues entstehen soll, ist manches noch unklar und besteht somit auch ein gewisses Risiko des Misserfolgs.",
+      "id": [
+        "270184"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270185]\nDas Projektmanagement liefert das **methodische Werkzeug** für ein systematisches Vorgehen bei der **Planung und Durchführung von Projekten:** die Gliederung in klar abgegrenzte Teilprojekte und Arbeitspakete, die Projektorganisation, das phasenweise Vorgehen, fixe Zeitpläne, das Projektcontrolling zur Überprüfung des Projektfortschritts usw. Ein gutes Projektmanagement erleichtert es den Projektbeteiligten, sich auf die inhaltliche Projektarbeit zu konzentrieren und diese effizient zu bewältigen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Projektmanagement liefert das **methodische Werkzeug** für ein systematisches Vorgehen bei der **Planung und Durchführung von Projekten:** die Gliederung in klar abgegrenzte Teilprojekte und Arbeitspakete, die Projektorganisation, das phasenweise Vorgehen, fixe Zeitpläne, das Projektcontrolling zur Überprüfung des Projektfortschritts usw. Ein gutes Projektmanagement erleichtert es den Projektbeteiligten, sich auf die inhaltliche Projektarbeit zu konzentrieren und diese effizient zu bewältigen.",
+      "id": [
+        "270185"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270186]\nDie Instrumente des Projektmanagements sind zweckmässig, wenn der **Projektinhalt weitgehend klar** und der **Projektablauf gut planbar** ist. Diese Voraussetzungen sind beispielsweise bei Bauprojekten, Produktentwicklungen, Veranstaltungen, bei der Neugestaltung der Firmenwebsite, aber auch bei der Expansion in einen neuen Markt oder bei der Schliessung einer Zweigstelle weitgehend erfüllt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Instrumente des Projektmanagements sind zweckmässig, wenn der **Projektinhalt weitgehend klar** und der **Projektablauf gut planbar** ist. Diese Voraussetzungen sind beispielsweise bei Bauprojekten, Produktentwicklungen, Veranstaltungen, bei der Neugestaltung der Firmenwebsite, aber auch bei der Expansion in einen neuen Markt oder bei der Schliessung einer Zweigstelle weitgehend erfüllt.",
+      "id": [
+        "270186"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270187]\n[▼ch-39]\n[%4.4.2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.4.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270187"
+      ],
+      "anchor": "ch-39"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270188]\nSorgfältig geplant werden muss auch ein Veränderungsvorhaben, das beispielsweise auf die Entwicklung einer neuen Führungs- oder Arbeitskultur und somit auf eine **nachhaltige qualitative Veränderung** abzielt. Allerdings verlaufen solche Veränderungsprozesse selten nach Plan. Dies unter anderem deshalb, weil das «echte Leben» innerhalb und ausserhalb des Unternehmens unabhängig davon irgendwie weitergeht. Viele Einflüsse lassen sich nicht steuern und menschliche Reaktionen entwickeln eine aussergewöhnliche und nicht vorhersehbare **Dynamik** auf der Beziehungsebene.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Sorgfältig geplant werden muss auch ein Veränderungsvorhaben, das beispielsweise auf die Entwicklung einer neuen Führungs- oder Arbeitskultur und somit auf eine **nachhaltige qualitative Veränderung** abzielt. Allerdings verlaufen solche Veränderungsprozesse selten nach Plan. Dies unter anderem deshalb, weil das «echte Leben» innerhalb und ausserhalb des Unternehmens unabhängig davon irgendwie weitergeht. Viele Einflüsse lassen sich nicht steuern und menschliche Reaktionen entwickeln eine aussergewöhnliche und nicht vorhersehbare **Dynamik** auf der Beziehungsebene.",
+      "id": [
+        "270188"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270189]\nWeil viele Veränderungsprozesse nicht reibungslos verlaufen, müssen die Verantwortlichen für das Change Management auch dem Druck widerstehen, ihren Plan durchzuziehen, um «endlich» das Ziel zu erreichen. Nebst einiger **Geduld** ist von ihnen ausreichend **Flexibilität** für Anpassungen an veränderte Umstände und neue Gegebenheiten gefragt, ohne dass sie dabei das Gesamtziel aus den Augen verlieren. Daher wird im Change Management lediglich ein **Grundgerüst für das phasenweise Vorgehen** und für die mit dem Vorhaben verbundenen Schlüsselaufgaben entworfen. Man bezeichnet dieses Vorgehenskonzept daher auch als Change-Architektur oder als Masterplan.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Weil viele Veränderungsprozesse nicht reibungslos verlaufen, müssen die Verantwortlichen für das Change Management auch dem Druck widerstehen, ihren Plan durchzuziehen, um «endlich» das Ziel zu erreichen. Nebst einiger **Geduld** ist von ihnen ausreichend **Flexibilität** für Anpassungen an veränderte Umstände und neue Gegebenheiten gefragt, ohne dass sie dabei das Gesamtziel aus den Augen verlieren. Daher wird im Change Management lediglich ein **Grundgerüst für das phasenweise Vorgehen** und für die mit dem Vorhaben verbundenen Schlüsselaufgaben entworfen. Man bezeichnet dieses Vorgehenskonzept daher auch als Change-Architektur oder als Masterplan.",
+      "id": [
+        "270189"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270190]\nDas nachfolgend gezeigte Vorgehenskonzept unterteilt das Veränderungsvorhaben in fünf Phasen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das nachfolgend gezeigte Vorgehenskonzept unterteilt das Veränderungsvorhaben in fünf Phasen.",
+      "id": [
+        "270190"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:270191]\n[%Phasenkonzept bei Veränderungsvorhaben]\n[&image:https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter3.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "270191"
+      ],
+      "item": "Phasenkonzept bei Veränderungsvorhaben",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270192]\nIn der **Initialisierungsphase** werden der Veränderungsbedarf und die potenziellen Auswirkungen der angestrebten Veränderung beurteilt sowie die Rahmenbedingungen für das Vorhaben geklärt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In der **Initialisierungsphase** werden der Veränderungsbedarf und die potenziellen Auswirkungen der angestrebten Veränderung beurteilt sowie die Rahmenbedingungen für das Vorhaben geklärt.",
+      "id": [
+        "270192"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270193]\nIn der **Diagnosephase** werden die Ergebnisse aus der Initialisierungsphase vertieft analysiert, ein Zukunftsbild und die Vorgehensstrategie entworfen. Ausserdem wird das Kernteam als Hauptträger der Veränderung bestimmt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In der **Diagnosephase** werden die Ergebnisse aus der Initialisierungsphase vertieft analysiert, ein Zukunftsbild und die Vorgehensstrategie entworfen. Ausserdem wird das Kernteam als Hauptträger der Veränderung bestimmt.",
+      "id": [
+        "270193"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270194]\nIn der **Planungsphase** werden das Veränderungskonzept (Vorgehens-, Change-Management-, Kommunikations- und Risikomanagementkonzept) sowie die Rollenverteilung im Kernteam und die weiteren Gremien für das Vorhaben bestimmt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In der **Planungsphase** werden das Veränderungskonzept (Vorgehens-, Change-Management-, Kommunikations- und Risikomanagementkonzept) sowie die Rollenverteilung im Kernteam und die weiteren Gremien für das Vorhaben bestimmt.",
+      "id": [
+        "270194"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270195]\nIn der **Durchführungsphase** werden das Veränderungskonzept kommuniziert, konkrete Veränderungsmassnahmen eingeführt und die begleitenden Kommunikations- und Interventionsmassnahmen bedürfnisgerecht umgesetzt. Zugleich werden die Fortschritte im Veränderungsprozess laufend überprüft und allfällige Anpassungen vorgenommen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In der **Durchführungsphase** werden das Veränderungskonzept kommuniziert, konkrete Veränderungsmassnahmen eingeführt und die begleitenden Kommunikations- und Interventionsmassnahmen bedürfnisgerecht umgesetzt. Zugleich werden die Fortschritte im Veränderungsprozess laufend überprüft und allfällige Anpassungen vorgenommen.",
+      "id": [
+        "270195"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270196]\nIn der **Verankerungsphase** werden die bereits erreichten Veränderungen im Alltag gefestigt und weitere Veränderungen angestossen, um eine kontinuierliche Weiterentwicklung zu ermöglichen. Das Veränderungsvorhaben wird somit offiziell beendigt, das Kernteam aufgelöst und die Verantwortung für die Weiterentwicklung in den «normalen» Betrieb überführt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In der **Verankerungsphase** werden die bereits erreichten Veränderungen im Alltag gefestigt und weitere Veränderungen angestossen, um eine kontinuierliche Weiterentwicklung zu ermöglichen. Das Veränderungsvorhaben wird somit offiziell beendigt, das Kernteam aufgelöst und die Verantwortung für die Weiterentwicklung in den «normalen» Betrieb überführt.",
+      "id": [
+        "270196"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:270197]\n[%Typische Aufgaben bei einem Veränderungsvorhaben]\n[&image:https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter4.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "270197"
+      ],
+      "item": "Typische Aufgaben bei einem Veränderungsvorhaben",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270198]\n[▼ch-40]\n[%4.4.3]\n[###Iteratives Vorgehen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.4.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270198"
+      ],
+      "anchor": "ch-40",
+      "title": "Iteratives Vorgehen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270199]\nDas Unternehmen ist ein **komplexes soziales System** (vgl. Kap. 1.3, S. 11). Es wird wesentlich von den Menschen geprägt, die im Unternehmen tätig sind. Dies betrifft insbesondere auch die Veränderungsfähigkeit. Deshalb muss bei wichtigen Entscheiden immer wieder von Neuem überprüft werden, wie das System als Ganzes und wie die Menschen in diesem System auf einzelne Massnahmen reagieren könnten und was dies für das weitere Vorgehen bedeutet.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Unternehmen ist ein **komplexes soziales System** (vgl. Kap. 1.3, S. 11). Es wird wesentlich von den Menschen geprägt, die im Unternehmen tätig sind. Dies betrifft insbesondere auch die Veränderungsfähigkeit. Deshalb muss bei wichtigen Entscheiden immer wieder von Neuem überprüft werden, wie das System als Ganzes und wie die Menschen in diesem System auf einzelne Massnahmen reagieren könnten und was dies für das weitere Vorgehen bedeutet.",
+      "id": [
+        "270199"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270200]\nBei **Veränderungsvorhaben** wird oftmals die **Komplexität unterschätzt**. Beispielsweise denken die Entscheidungsträger, dass es sich bei der Veränderung eigentlich um «keine grosse Sache» handelt, und beschliessen ein effizientes Vorgehen nach der Projektmanagementlogik. Wenn das Vorhaben nicht wie gewünscht vorankommt oder eine ungeahnte Dynamik entwickelt, reagieren sie ratlos. In einer solchen kritischen Situation neigt man umso mehr dazu, am eingeschlagenen Weg zu lange festzuhalten. Auch die Angst, ein Kurswechsel würde als Zeichen der Schwäche angesehen, kann zu Fehlentscheidungen führen, die möglicherweise das ganze Vorhaben gefährden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bei **Veränderungsvorhaben** wird oftmals die **Komplexität unterschätzt**. Beispielsweise denken die Entscheidungsträger, dass es sich bei der Veränderung eigentlich um «keine grosse Sache» handelt, und beschliessen ein effizientes Vorgehen nach der Projektmanagementlogik. Wenn das Vorhaben nicht wie gewünscht vorankommt oder eine ungeahnte Dynamik entwickelt, reagieren sie ratlos. In einer solchen kritischen Situation neigt man umso mehr dazu, am eingeschlagenen Weg zu lange festzuhalten. Auch die Angst, ein Kurswechsel würde als Zeichen der Schwäche angesehen, kann zu Fehlentscheidungen führen, die möglicherweise das ganze Vorhaben gefährden.",
+      "id": [
+        "270200"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270201]\nAus diesem Grund verfolgt die Systemtheorie einen Lösungsansatz, der ein **flexibles** und **auf die Situation angepasstes Vorgehen** ermöglicht. Neue Erkenntnisse sollen dabei direkt in die Ausgestaltung der nächsten Schritte einfliessen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Aus diesem Grund verfolgt die Systemtheorie einen Lösungsansatz, der ein **flexibles** und **auf die Situation angepasstes Vorgehen** ermöglicht. Neue Erkenntnisse sollen dabei direkt in die Ausgestaltung der nächsten Schritte einfliessen.",
+      "id": [
+        "270201"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270202]\nDie **systemische Schleife** in Form einer Spirale veranschaulicht dieses prozessorientierte Vorgehen. Sie setzt sich aus vier sich wiederholenden Schritten zusammen:\n\n1. Informationen sammeln.\n2. Informationen interpretieren und Hypothesen (Annahmen) bilden.\n3. Interventionen (gezielte unterstützende Eingriffe) planen.\n4. Interventionen durchführen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die **systemische Schleife** in Form einer Spirale veranschaulicht dieses prozessorientierte Vorgehen. Sie setzt sich aus vier sich wiederholenden Schritten zusammen:\n\n1. Informationen sammeln.\n2. Informationen interpretieren und Hypothesen (Annahmen) bilden.\n3. Interventionen (gezielte unterstützende Eingriffe) planen.\n4. Interventionen durchführen.",
+      "id": [
+        "270202"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:270203]\n[%Systemische Schleife und iteratives Vorgehen]\n[&image:https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter5.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "270203"
+      ],
+      "item": "Systemische Schleife und iteratives Vorgehen",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270204]\nDie **Wiederholung** der vier Schritte in den systemischen Schleifen entspricht dem iterativen **Vorgehen**. Dieses berücksichtigt die Komplexität und auch ein gewisses Mass an Unplanbarkeit. Ausserdem baut es immer wieder eine Art «Zwischenhalt» ein, bei dem die Wirkung von Massnahmen kritisch überprüft wird. Erst danach wird das konkrete weitere Vorgehen beschlossen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die **Wiederholung** der vier Schritte in den systemischen Schleifen entspricht dem iterativen **Vorgehen**. Dieses berücksichtigt die Komplexität und auch ein gewisses Mass an Unplanbarkeit. Ausserdem baut es immer wieder eine Art «Zwischenhalt» ein, bei dem die Wirkung von Massnahmen kritisch überprüft wird. Erst danach wird das konkrete weitere Vorgehen beschlossen.",
+      "id": [
+        "270204"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270205]\nBei einer Veränderung kann dies auch heissen, dass sich das **Zielbild** («Morgen») im Verlauf des Veränderungsprozesses verschiebt. Dann sind **Anpassungen** bei den Massnahmen unumgänglich.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bei einer Veränderung kann dies auch heissen, dass sich das **Zielbild** («Morgen») im Verlauf des Veränderungsprozesses verschiebt. Dann sind **Anpassungen** bei den Massnahmen unumgänglich.",
+      "id": [
+        "270205"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270206]\n[▼ch-41]\n[%4.4.4]\n[###Projekt- oder Kernteam und Sounding Board]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.4.4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270206"
+      ],
+      "anchor": "ch-41",
+      "title": "Projekt- oder Kernteam und Sounding Board"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270207]\nDie Verantwortlichen sollten einen Grossteil ihrer Zeit und Energie für das Veränderungsvorhaben einsetzen können und es nicht «nebenbei» auch noch erledigen müssen. Ein **optimal zusammengesetztes Projekt- oder Kernteam** vergrössert die Erfolgschancen für das Vorhaben. Damit sind nicht nur die nötigen Fähigkeiten und zeitlichen Ressourcen der einzelnen Teammitglieder gemeint. Die persönliche Haltung und Ausstrahlung auf andere ist ebenso massgeblich (vgl. Kap. 4.1.2, S. 41).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Verantwortlichen sollten einen Grossteil ihrer Zeit und Energie für das Veränderungsvorhaben einsetzen können und es nicht «nebenbei» auch noch erledigen müssen. Ein **optimal zusammengesetztes Projekt- oder Kernteam** vergrössert die Erfolgschancen für das Vorhaben. Damit sind nicht nur die nötigen Fähigkeiten und zeitlichen Ressourcen der einzelnen Teammitglieder gemeint. Die persönliche Haltung und Ausstrahlung auf andere ist ebenso massgeblich (vgl. Kap. 4.1.2, S. 41).",
+      "id": [
+        "270207"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270208]\nDer Grundsatz **«Betroffene zu Beteiligten machen»** gilt bei Veränderungsvorhaben ganz besonders. Die betroffenen Mitarbeitenden sollten von Anfang an in dessen Planung und Gestaltung aktiv einbezogen werden. Idealerweise wirken sie direkt im Projektteam mit und übernehmen eine Mitverantwortung für das Gelingen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Grundsatz **«Betroffene zu Beteiligten machen»** gilt bei Veränderungsvorhaben ganz besonders. Die betroffenen Mitarbeitenden sollten von Anfang an in dessen Planung und Gestaltung aktiv einbezogen werden. Idealerweise wirken sie direkt im Projektteam mit und übernehmen eine Mitverantwortung für das Gelingen.",
+      "id": [
+        "270208"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270209]\nDie **Opinionleader** (Meinungsmachenden) können einen besonders wertvollen Beitrag leisten, wenn sie als Fürsprecherinnen und Fürsprecher für die Veränderung auftreten und dank ihrer Ausstrahlung die Akzeptanz bei anderen Betroffenen fördern. Die Führungspersonen sind allerdings nicht automatisch auch die Opinionleader.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die **Opinionleader** (Meinungsmachenden) können einen besonders wertvollen Beitrag leisten, wenn sie als Fürsprecherinnen und Fürsprecher für die Veränderung auftreten und dank ihrer Ausstrahlung die Akzeptanz bei anderen Betroffenen fördern. Die Führungspersonen sind allerdings nicht automatisch auch die Opinionleader.",
+      "id": [
+        "270209"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270210]\nEine weitere Möglichkeit, die Akzeptanz für das Veränderungsvorhaben auf breiter Basis zu erhöhen, ist das **Sounding Board**. In diesem Gremium äussern sich Betroffene aus unterschiedlichen Bereichen und Hierarchiestufen stellvertretend für ihre Kolleginnen und Kollegen zu den Meinungen, Stimmungen und Befürchtungen bezüglich der Veränderung. Ausserdem geben sie **Empfehlungen** zum Vorgehen oder **Feedbacks** zu den Fortschritten im Veränderungsvorhaben. Das Sounding Board hat aber keine Weisungsbefugnisse gegenüber dem Kernteam und darf deshalb nicht mit dem Steuerungsgremium (Steering Board) verwechselt werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Eine weitere Möglichkeit, die Akzeptanz für das Veränderungsvorhaben auf breiter Basis zu erhöhen, ist das **Sounding Board**. In diesem Gremium äussern sich Betroffene aus unterschiedlichen Bereichen und Hierarchiestufen stellvertretend für ihre Kolleginnen und Kollegen zu den Meinungen, Stimmungen und Befürchtungen bezüglich der Veränderung. Ausserdem geben sie **Empfehlungen** zum Vorgehen oder **Feedbacks** zu den Fortschritten im Veränderungsvorhaben. Das Sounding Board hat aber keine Weisungsbefugnisse gegenüber dem Kernteam und darf deshalb nicht mit dem Steuerungsgremium (Steering Board) verwechselt werden.",
+      "id": [
+        "270210"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270211]\n[▼ch-42]\n[####Zusammenfassung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270211"
+      ],
+      "anchor": "ch-42",
+      "title": "Zusammenfassung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270212]\n\nGemäss dem **Leading-Change-Modell** nach Kotter muss ein erfolgreiches Veränderungsvorhaben acht Stufen bewältigen:\n\n1. Ein **Gefühl der Dringlichkeit** erzeugen: Einsicht in die Notwendigkeit einer Veränderung vermitteln.\n2. Eine **Führungskoalition** aufbauen: Ein optimales Kernteam mit ausreichend Einfluss, Kompetenzen, Erfahrungen und einem guten Zusammenhalt für das Vorhaben einsetzen.\n3. Eine richtungsweisende **Vision** als motivierendes Zukunfts- oder Zielbild und eine ausgereifte **Vorgehensstrategie** entwickeln.\n4. Die Vision des Wandels für alle klar verständlich und anschaulich **kommunizieren**.\n5. Mitarbeitende **auf breiter Basis befähigen:** Hindernisse aus dem Weg räumen, Spielräume gewähren, aktiv unterstützen und begleiten.\n6. **Schnelle Erfolge** (Quick Wins) erzielen: Zwischenziele als positive Zeichen nutzen.\n7. **Erfolge konsolidieren** und weitere Veränderungen einleiten, um das Gesamtziel zu erreichen.\n8. Neue Ansätze **in der Kultur verankern** durch Erfolg, Kommunikation, Entschlossenheit und allenfalls auch die Trennung von Personen, die sich gegen die Veränderung stellen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Gemäss dem **Leading-Change-Modell** nach Kotter muss ein erfolgreiches Veränderungsvorhaben acht Stufen bewältigen:\n\n1. Ein **Gefühl der Dringlichkeit** erzeugen: Einsicht in die Notwendigkeit einer Veränderung vermitteln.\n2. Eine **Führungskoalition** aufbauen: Ein optimales Kernteam mit ausreichend Einfluss, Kompetenzen, Erfahrungen und einem guten Zusammenhalt für das Vorhaben einsetzen.\n3. Eine richtungsweisende **Vision** als motivierendes Zukunfts- oder Zielbild und eine ausgereifte **Vorgehensstrategie** entwickeln.\n4. Die Vision des Wandels für alle klar verständlich und anschaulich **kommunizieren**.\n5. Mitarbeitende **auf breiter Basis befähigen:** Hindernisse aus dem Weg räumen, Spielräume gewähren, aktiv unterstützen und begleiten.\n6. **Schnelle Erfolge** (Quick Wins) erzielen: Zwischenziele als positive Zeichen nutzen.\n7. **Erfolge konsolidieren** und weitere Veränderungen einleiten, um das Gesamtziel zu erreichen.\n8. Neue Ansätze **in der Kultur verankern** durch Erfolg, Kommunikation, Entschlossenheit und allenfalls auch die Trennung von Personen, die sich gegen die Veränderung stellen.",
+      "id": [
+        "270212"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270213]\nDas **Drei-Phasen-Modell** nach Lewin beschreibt die Gestaltung von Veränderungsprozessen bei den betroffenen Personen:\n1. **Auftauen** (Unfreeze): Von der Notwendigkeit des Wandels überzeugen, die negativen Konsequenzen des Nichtveränderns aufzeigen.\n2. **Bewegen** (Move): Neue Einstellungen und Verhaltensweisen entwickeln.\n3. **Festigen** (Refreeze): Erreichtes stabilisieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das **Drei-Phasen-Modell** nach Lewin beschreibt die Gestaltung von Veränderungsprozessen bei den betroffenen Personen:\n1. **Auftauen** (Unfreeze): Von der Notwendigkeit des Wandels überzeugen, die negativen Konsequenzen des Nichtveränderns aufzeigen.\n2. **Bewegen** (Move): Neue Einstellungen und Verhaltensweisen entwickeln.\n3. **Festigen** (Refreeze): Erreichtes stabilisieren.",
+      "id": [
+        "270213"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270214]\nVeränderungsvorhaben weisen typische Merkmale eines Projekts auf. Das **Projektmanagement** liefert das methodische Werkzeug für ein systematisches Vorgehen bei der Bearbeitung der sachbezogenen Projektinhalte. Darüber hinaus erfordert ein umfassendes Veränderungsvorhaben die Begleitung der betroffenen Personen in ihrem **Veränderungsprozess**.\n\nDazu müssen die betroffenen Personen in ihrem **Veränderungsprozess begleitet** werden. Weil die damit zusammenhängenden Anforderungen oft nur ansatzweise erkenn- und fassbar sind, werden diese **Interventionsmassnahmen** auf der Beziehungsebene entworfen, aber nicht fix bestimmt oder geplant.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Veränderungsvorhaben weisen typische Merkmale eines Projekts auf. Das **Projektmanagement** liefert das methodische Werkzeug für ein systematisches Vorgehen bei der Bearbeitung der sachbezogenen Projektinhalte. Darüber hinaus erfordert ein umfassendes Veränderungsvorhaben die Begleitung der betroffenen Personen in ihrem **Veränderungsprozess**.\n\nDazu müssen die betroffenen Personen in ihrem **Veränderungsprozess begleitet** werden. Weil die damit zusammenhängenden Anforderungen oft nur ansatzweise erkenn- und fassbar sind, werden diese **Interventionsmassnahmen** auf der Beziehungsebene entworfen, aber nicht fix bestimmt oder geplant.",
+      "id": [
+        "270214"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:270215]\nDie **Change-Architektur** bildet das Grundgerüst für das phasenweise Vorgehen im Veränderungsvorhaben:\n[&image:https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter6.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die **Change-Architektur** bildet das Grundgerüst für das phasenweise Vorgehen im Veränderungsvorhaben:",
+      "id": [
+        "270215"
+      ]
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "png",
+          "src": "https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter6.png"
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270216]\nDas **iterative Vorgehen** erlaubt ein möglichst flexibles und auf die jeweilige Situation und Entwicklung angepasstes Vorgehen, indem es die laufenden Erkenntnisse aus dem Veränderungsprozess mitberücksichtigt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das **iterative Vorgehen** erlaubt ein möglichst flexibles und auf die jeweilige Situation und Entwicklung angepasstes Vorgehen, indem es die laufenden Erkenntnisse aus dem Veränderungsprozess mitberücksichtigt.",
+      "id": [
+        "270216"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270217]\nEs baut auf der **systemischen Schleife** auf, die aus vier Schritten besteht:\n\n1. Informationen sammeln.\n2. Informationen interpretieren und Hypothesen (Annahmen) bilden.\n3. Interventionen (Massnahmen) planen.\n4. Interventionen durchführen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Es baut auf der **systemischen Schleife** auf, die aus vier Schritten besteht:\n\n1. Informationen sammeln.\n2. Informationen interpretieren und Hypothesen (Annahmen) bilden.\n3. Interventionen (Massnahmen) planen.\n4. Interventionen durchführen.",
+      "id": [
+        "270217"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:270218]\nDie Akzeptanz einer Veränderung und somit die Erfolgsaussichten für das Veränderungsvorhaben steigen, wenn die Betroffenen aktiv in das Vorhaben eingebunden werden. Deshalb sollte viel Wert auf die **Zusammensetzung des Projektteams** (Kernteams) gelegt werden.\n\nFür die aktive Mitwirkung in Veränderungsvorhaben wird oft auch ein **Sounding Board** eingerichtet. In diesem Gremium tauschen sich ausgewählte Betroffene über den Veränderungsprozess, das Vorgehen und die Fortschritte aus.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Akzeptanz einer Veränderung und somit die Erfolgsaussichten für das Veränderungsvorhaben steigen, wenn die Betroffenen aktiv in das Vorhaben eingebunden werden. Deshalb sollte viel Wert auf die **Zusammensetzung des Projektteams** (Kernteams) gelegt werden.\n\nFür die aktive Mitwirkung in Veränderungsvorhaben wird oft auch ein **Sounding Board** eingerichtet. In diesem Gremium tauschen sich ausgewählte Betroffene über den Veränderungsprozess, das Vorgehen und die Fortschritte aus.",
+      "id": [
+        "270218"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270219]\n[▼ch-43]\n[####Repetitionsfragen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270219"
+      ],
+      "anchor": "ch-43",
+      "title": "Repetitionsfragen"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:270220]\n[%16]\n[!Warum braucht es für die erfolgreiche Planung und Durchführung eines umfassenden Veränderungsvorhabens mehr als ein systematisches Projektmanagement?]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Warum braucht es für die erfolgreiche Planung und Durchführung eines umfassenden Veränderungsvorhabens mehr als ein systematisches Projektmanagement?",
+      "partialAnswer": "",
+      "body": "",
+      "item": "16",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "270220"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:270221]\n[%17]\n[!Welcher Phase im Vorgehenskonzept des Change Managements ordnen Sie die folgenden Aufgaben zu?]\n**Aufgabe**\nPersonelle und finanzielle Ressourcen planen. [_Diagnose][!Phase]\nPromotoren für die Veränderung identifizieren. [_Diagnose][!Phase]\nNotwendigkeit einer Veränderung beurteilen. [_Diagnose][!Phase]\nRisikomanagement für das Veränderungsvorhaben bestimmen. [_Diagnose][!Phase]\nWorkshops mit dem Betroffenen durchführen. [_Diagnose][!Phase]\nKonsequenzen des Veränderungsvorhabens den Betroffenen kommunizieren. [_Diagnose][!Phase]\nBetroffenheitsanalyse durchführen. [_Diagnose][!Phase]\nWeiterentwicklungsmassnahmen bestimmen. [_Diagnose][!Phase]\nErste Erfolge feiern. [_Diagnose][!Phase]\nKernteam des Veränderungsvorhabens auflösen. [_Diagnose][!Phase]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**Aufgabe**\nPersonelle und finanzielle Ressourcen planen. {0}\nPromotoren für die Veränderung identifizieren. {1}\nNotwendigkeit einer Veränderung beurteilen. {2}\nRisikomanagement für das Veränderungsvorhaben bestimmen. {3}\nWorkshops mit dem Betroffenen durchführen. {4}\nKonsequenzen des Veränderungsvorhabens den Betroffenen kommunizieren. {5}\nBetroffenheitsanalyse durchführen. {6}\nWeiterentwicklungsmassnahmen bestimmen. {7}\nErste Erfolge feiern. {8}\nKernteam des Veränderungsvorhabens auflösen. {9}",
+      "item": "17",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "270221"
+      ],
+      "instruction": "Welcher Phase im Vorgehenskonzept des Change Managements ordnen Sie die folgenden Aufgaben zu?",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Diagnose"
+          ],
+          "hint": "",
+          "instruction": "Phase",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Diagnose"
+          ],
+          "hint": "",
+          "instruction": "Phase",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Diagnose"
+          ],
+          "hint": "",
+          "instruction": "Phase",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Diagnose"
+          ],
+          "hint": "",
+          "instruction": "Phase",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Diagnose"
+          ],
+          "hint": "",
+          "instruction": "Phase",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Diagnose"
+          ],
+          "hint": "",
+          "instruction": "Phase",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Diagnose"
+          ],
+          "hint": "",
+          "instruction": "Phase",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Diagnose"
+          ],
+          "hint": "",
+          "instruction": "Phase",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Diagnose"
+          ],
+          "hint": "",
+          "instruction": "Phase",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Diagnose"
+          ],
+          "hint": "",
+          "instruction": "Phase",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:270222]\n[%18]\n[!Nennen Sie mindestens drei Anforderungen, die das Kernteam erfüllen muss, damit es ein Veränderungsvorhaben erfolgreich durchführen kann.]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Nennen Sie mindestens drei Anforderungen, die das Kernteam erfüllen muss, damit es ein Veränderungsvorhaben erfolgreich durchführen kann.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "18",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "270222"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:270223]\n[%19]\n[!Drei Führungspersonen tauschen ihre Erfahrungen mit Veränderungsvorhaben aus.\nWelche der folgenden Aussagen bezieht sich auf die Stufe 6 des Acht-Stufen-Modells nach Kotter?]\n===\nA]«Wir haben den Faktor Zeit total unterschätzt! Nach der anfänglichen Begeisterung kippte die Stimmung in Enttäuschung um, weil wir nur das Endziel hervorhoben. Ein nächstes Mal würde ich viel kürzere Etappenziele setzen ...»\n===\nB]«Wir wollten unser Zielbild besonders gut formulieren und haben dann viel zu viele Aspekte hineingepackt. Ich fürchte, ausser uns im Kernteam verstand niemand, um was es uns eigentlich ging. Ein nächstes Mal würde ich möglichst knapp, dafür klar bleiben ...»\n===\nC]«Wir haben uns durch die Zustimmung einiger wichtiger Führungspersonen blenden lassen und dabei übersehen, dass sich eine solche Veränderung nur verwirklichen lässt, wenn sie möglichst viele Mitarbeitende mittragen. Ein nächstes Mal würde ich die Betroffenen viel früher aktiv miteinbeziehen ...»\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "19",
+      "instruction": "Drei Führungspersonen tauschen ihre Erfahrungen mit Veränderungsvorhaben aus.\nWelche der folgenden Aussagen bezieht sich auf die Stufe 6 des Acht-Stufen-Modells nach Kotter?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "A]«Wir haben den Faktor Zeit total unterschätzt! Nach der anfänglichen Begeisterung kippte die Stimmung in Enttäuschung um, weil wir nur das Endziel hervorhoben. Ein nächstes Mal würde ich viel kürzere Etappenziele setzen ...»",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "B]«Wir wollten unser Zielbild besonders gut formulieren und haben dann viel zu viele Aspekte hineingepackt. Ich fürchte, ausser uns im Kernteam verstand niemand, um was es uns eigentlich ging. Ein nächstes Mal würde ich möglichst knapp, dafür klar bleiben ...»",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "C]«Wir haben uns durch die Zustimmung einiger wichtiger Führungspersonen blenden lassen und dabei übersehen, dass sich eine solche Veränderung nur verwirklichen lässt, wenn sie möglichst viele Mitarbeitende mittragen. Ein nächstes Mal würde ich die Betroffenen viel früher aktiv miteinbeziehen ...»",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "270223"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:270224]\n[%20]\n[!Beantworten Sie die folgenden beiden Fragen zum Drei-Phasen-Modell nach Lewin.]\n===\nA] Was soll mit der Phase des Festigens (Refreeze) erreicht werden?[@shortAnswer]\n===\nB] Warum sollten in der Phase des Auftauens (Unfreeze) auch die negativen Folgen des Festhaltens an der jetzigen Situation ausdrücklich behandelt werden?[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "20",
+      "instruction": "Beantworten Sie die folgenden beiden Fragen zum Drei-Phasen-Modell nach Lewin.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "A] Was soll mit der Phase des Festigens (Refreeze) erreicht werden?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "B] Warum sollten in der Phase des Auftauens (Unfreeze) auch die negativen Folgen des Festhaltens an der jetzigen Situation ausdrücklich behandelt werden?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "270224"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270225]\n[▼ch-44]\n[%5]\n[#Veränderungsprozesse begleiten]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270225"
+      ],
+      "anchor": "ch-44",
+      "title": "Veränderungsprozesse begleiten"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270226]\n[▼ch-45]\n[%5.1]\n[##Führungsrollen in Veränderungsprozessen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "5.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270226"
+      ],
+      "anchor": "ch-45",
+      "title": "Führungsrollen in Veränderungsprozessen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270227]\n[▼ch-46]\n[%5.2]\n[##Durch die vier Zimmer der Veränderung führen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "5.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270227"
+      ],
+      "anchor": "ch-46",
+      "title": "Durch die vier Zimmer der Veränderung führen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270228]\n[▼ch-47]\n[%5.3]\n[##Emotionen und Widerstand konstruktiv begegnen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "5.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270228"
+      ],
+      "anchor": "ch-47",
+      "title": "Emotionen und Widerstand konstruktiv begegnen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270229]\n[▼ch-48]\n[%5.4]\n[##Mit der eigenen Betroffenheit umgehen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "5.4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270229"
+      ],
+      "anchor": "ch-48",
+      "title": "Mit der eigenen Betroffenheit umgehen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270230]\n[▼ch-49]\n[####Zusammenfassung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270230"
+      ],
+      "anchor": "ch-49",
+      "title": "Zusammenfassung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270231]\n[▼ch-50]\n[####Repetitionsfragen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270231"
+      ],
+      "anchor": "ch-50",
+      "title": "Repetitionsfragen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270232]\n[▼ch-51]\n[%6]\n[#Veränderungsvorhaben im Team umsetzen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "6",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270232"
+      ],
+      "anchor": "ch-51",
+      "title": "Veränderungsvorhaben im Team umsetzen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270233]\n[▼ch-52]\n[%6.1]\n[##Kommunikationsmassnahmen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "6.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270233"
+      ],
+      "anchor": "ch-52",
+      "title": "Kommunikationsmassnahmen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270234]\n[▼ch-53]\n[%6.2]\n[##Entwicklungsmassnahmen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "6.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270234"
+      ],
+      "anchor": "ch-53",
+      "title": "Entwicklungsmassnahmen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270235]\n[▼ch-54]\n[%6.3]\n[##Mitwirkungsmassnahmen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "6.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270235"
+      ],
+      "anchor": "ch-54",
+      "title": "Mitwirkungsmassnahmen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270236]\n[▼ch-55]\n[%6.4]\n[##Teamentwicklungsmassnahmen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "6.4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270236"
+      ],
+      "anchor": "ch-55",
+      "title": "Teamentwicklungsmassnahmen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270237]\n[▼ch-56]\n[%6.5]\n[##Veränderungsfortschritte beurteilen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "6.5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270237"
+      ],
+      "anchor": "ch-56",
+      "title": "Veränderungsfortschritte beurteilen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270238]\n[▼ch-57]\n[%6.6]\n[##Veränderungsprozesse verankern]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "6.6",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270238"
+      ],
+      "anchor": "ch-57",
+      "title": "Veränderungsprozesse verankern"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270239]\n[▼ch-58]\n[####Zusammenfassung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270239"
+      ],
+      "anchor": "ch-58",
+      "title": "Zusammenfassung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270240]\n[▼ch-59]\n[####Repetitionsfragen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270240"
+      ],
+      "anchor": "ch-59",
+      "title": "Repetitionsfragen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270241]\n[▼ch-60]\n[#Anhang]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270241"
+      ],
+      "anchor": "ch-60",
+      "title": "Anhang"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270242]\n[▼ch-61]\n[##Antworten zu den Repetitionsfragen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270242"
+      ],
+      "anchor": "ch-61",
+      "title": "Antworten zu den Repetitionsfragen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:270243]\n[▼ch-62]\n[##Stichwortverzeichnis]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "270243"
+      ],
+      "anchor": "ch-62",
+      "title": "Stichwortverzeichnis"
+    }
+  }
+]

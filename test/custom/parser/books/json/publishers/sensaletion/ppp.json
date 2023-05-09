@@ -1,0 +1,883 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:293013]\n[@externalId:e-e-academy_bczmwfzyn5t3]\n[#E-Academy]\n[@language:en]\n[@coverImage:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/sensaletion_ppp_cover.png]\n[##More customers from your leads]\n[@publisher:sensaletion]\n[@theme:sensaletion_ppp]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "293013"
+      ],
+      "externalId": [
+        "e-e-academy_bczmwfzyn5t3"
+      ],
+      "title": "E-Academy",
+      "language": [
+        "en"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/sensaletion_ppp_cover.png"
+      ],
+      "subtitle": "More customers from your leads",
+      "publisher": [
+        "sensaletion"
+      ],
+      "theme": [
+        "sensaletion_ppp"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:293014]\n[▼ch-1]\n[%VI]\n[#A Story to Commit]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "VI",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "293014"
+      ],
+      "anchor": "ch-1",
+      "title": "A Story to Commit"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293015]\n[%][%Micro-commitments]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_1.png][@width:792]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293015"
+      ],
+      "lead": "Micro-commitments",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "792",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293016]\n•+ Engagement\n•+ Time\n•+ Action\n•+ Emotion\n•- Objections\n•+ Win",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•+ Engagement\n•+ Time\n•+ Action\n•+ Emotion\n•- Objections\n•+ Win",
+      "id": [
+        "293016"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293017]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_2.png][@width:568]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293017"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "568",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293018]\n•+ Next step\n•- “I’ll call you next week”\n•- No commitment\n•- Time?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•+ Next step\n•- “I’ll call you next week”\n•- No commitment\n•- Time?",
+      "id": [
+        "293018"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293019]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_3.png][@width:370]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293019"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "370",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293020]\n•+ You\n•+ Prospect\n•+ Date\n•+ Who\n•+ What\n•+ When",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•+ You\n•+ Prospect\n•+ Date\n•+ Who\n•+ What\n•+ When",
+      "id": [
+        "293020"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293021]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_4.png][@width:594]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293021"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "594",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293022]\n•+ Create Yes moments\n\n• Do I speak with X?\n• Shall I summarize our discussions for you to share?\n• Let me give you an example.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•+ Create Yes moments\n\n• Do I speak with X?\n• Shall I summarize our discussions for you to share?\n• Let me give you an example.",
+      "id": [
+        "293022"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293023]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_5.png][@width:416]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293023"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "416",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293025]\n•+ Trade Value\n\n• Every time\n• Go deep\n• Explain\n\n•+ Provide Vision",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•+ Trade Value\n\n• Every time\n• Go deep\n• Explain\n\n•+ Provide Vision",
+      "id": [
+        "293025"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293027]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_6.png][@width:622]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293027"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "622",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293028]\n•+ Because statement\n•+ Provide reason\n•+ Their language\n•- Not yours",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•+ Because statement\n•+ Provide reason\n•+ Their language\n•- Not yours",
+      "id": [
+        "293028"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293029]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_7.png][@width:584]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293029"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_7.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "584",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293030]\n[%][%Storytelling]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_8.png][@width:758]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293030"
+      ],
+      "lead": "Storytelling",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_8.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "758",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.statement:bitmark--]\n[@id:293031]\nPeople don’t think in language but in pictures",
+    "bit": {
+      "type": "statement",
+      "format": "bitmark--",
+      "body": "People don’t think in language but in pictures",
+      "id": [
+        "293031"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293032]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_9.png][@width:690]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293032"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_9.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "690",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293033]\n•- Facts\n•+ Emotions\n•+ Pictures\n•+ Memorable",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Facts\n•+ Emotions\n•+ Pictures\n•+ Memorable",
+      "id": [
+        "293033"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark--]\n[@id:293034]\nWe are, as a species, addicted to story.\nEven when the body goes to sleep,\nthe mind stays up all night,\ntelling itself stories.\n[@quotedPerson:(Jonathan Gottschall)]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "We are, as a species, addicted to story.\nEven when the body goes to sleep,\nthe mind stays up all night,\ntelling itself stories.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "293034"
+      ],
+      "quotedPerson": "(Jonathan Gottschall)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293035]\n• Trust\n• Empathy\n\n•- Features & Benefits\n•+ Tell a story",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Trust\n• Empathy\n\n•- Features & Benefits\n•+ Tell a story",
+      "id": [
+        "293035"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293037]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_10.png][@width:588]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293037"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_10.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "588",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293038]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_11.png][@width:556]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293038"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_11.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "556",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293039]\n•1 Answer your own questions\n•1 Problem\n•1 Evaluation and Implementation\n•1 Outcome\n•1 Moral",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•1 Answer your own questions\n•1 Problem\n•1 Evaluation and Implementation\n•1 Outcome\n•1 Moral",
+      "id": [
+        "293039"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293040]\n• Sensory words\n• Concrete language\n• Metaphors\n• Adjectives & Adverbs",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Sensory words\n• Concrete language\n• Metaphors\n• Adjectives & Adverbs",
+      "id": [
+        "293040"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293041]\n[%][%Summary]\n• Micro-commitments\n\t• Engagement\n\t• You - Customer - Date → Who - What - When\n\t• Provide reason\n• Sell a story\n\t• Emotional bonding\n\t• Trust\n\t• Memorized",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Micro-commitments\n\t• Engagement\n\t• You - Customer - Date → Who - What - When\n\t• Provide reason\n• Sell a story\n\t• Emotional bonding\n\t• Trust\n\t• Memorized",
+      "id": [
+        "293041"
+      ],
+      "lead": "Summary"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:293042]\n[▼ch-2]\n[%VII]\n[#Follow-up]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "VII",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "293042"
+      ],
+      "anchor": "ch-2",
+      "title": "Follow-up"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293043]\n• Email\n• Text\n• Note\n• Phone\n\n•+ Video",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Email\n• Text\n• Note\n• Phone\n\n•+ Video",
+      "id": [
+        "293043"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293045]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_12.png][@width:664]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293045"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_12.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "664",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293046]\n•- Risks\n•- Concerns\n•+ Tailor",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Risks\n•- Concerns\n•+ Tailor",
+      "id": [
+        "293046"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293047]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_13.png][@width:580]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293047"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_13.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "580",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\n[@id:293048]\n[!Review sessions]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "293048"
+      ],
+      "instruction": "Review sessions"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293049]\n•1 Starting commitment\n•1 Ending commitment\n•1 Tailor together",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•1 Starting commitment\n•1 Ending commitment\n•1 Tailor together",
+      "id": [
+        "293049"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.message:bitmark--]\n[@id:293050]\n[%][%Starting commitment]\n“Thank you for meeting me today. I'm going to demonstrate X during this meeting, which should last no longer than an hour.\n__At the end of this meeting, we'll schedule a second meeting to address all of your concerns and make sure you are completely confident in your decision to proceed__.”\n\n•+ Clarity\n•+ Direction\n•+ Security",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "“Thank you for meeting me today. I'm going to demonstrate X during this meeting, which should last no longer than an hour.\n__At the end of this meeting, we'll schedule a second meeting to address all of your concerns and make sure you are completely confident in your decision to proceed__.”\n\n•+ Clarity\n•+ Direction\n•+ Security",
+      "id": [
+        "293050"
+      ],
+      "lead": "Starting commitment"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293052]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_3.png][@width:370]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293052"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "370",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293053]\n[%][%Ending commitment]\n• “You are undoubtedly going to have questions and concerns. I want to be sure that I am available to answer your queries and allay your worries. What do you think about this time next week?”\n• “As you look at other proposals, you may see different ideas that you like. Let’s schedule a quick session to address and answer any questions to confidently move forward.”\n\n•+ Concerns\n•+ Credibility",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• “You are undoubtedly going to have questions and concerns. I want to be sure that I am available to answer your queries and allay your worries. What do you think about this time next week?”\n• “As you look at other proposals, you may see different ideas that you like. Let’s schedule a quick session to address and answer any questions to confidently move forward.”\n\n•+ Concerns\n•+ Credibility",
+      "id": [
+        "293053"
+      ],
+      "lead": "Ending commitment"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293055]\n[%][%Tailor]\n• What would you like to be changed?\n• “What else is required to complete this exactly as you want it?”\n•  \"How can we improve this even more?\"\n\n•+ Modify\n•+ Tailor\n•+ Together",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• What would you like to be changed?\n• “What else is required to complete this exactly as you want it?”\n•  \"How can we improve this even more?\"\n\n•+ Modify\n•+ Tailor\n•+ Together",
+      "id": [
+        "293055"
+      ],
+      "lead": "Tailor"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293057]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_14.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293057"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_14.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293058]\n• Contract\n• Start date\n• Changes",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Contract\n• Start date\n• Changes",
+      "id": [
+        "293058"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293059]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_15.png][@width:654]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293059"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_15.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "654",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.message:bitmark--]\n[@id:293060]\n“Even though we discussed the steps to take and the necessary adjustments that must be made, I believe we underestimated how challenging it would be.\n\nCan we discuss how to help and see if there is anything I can do on our end to make it simpler?”",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "“Even though we discussed the steps to take and the necessary adjustments that must be made, I believe we underestimated how challenging it would be.\n\nCan we discuss how to help and see if there is anything I can do on our end to make it simpler?”",
+      "id": [
+        "293060"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293061]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_16.png][@width:586]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293061"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_16.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "586",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293062]\n[%][%Tips & Tricks]\n• You & Your\n• Working together\n• Relate to the topic\n• Proof\n• Urgency",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• You & Your\n• Working together\n• Relate to the topic\n• Proof\n• Urgency",
+      "id": [
+        "293062"
+      ],
+      "lead": "Tips & Tricks"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293063]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_17.png][@width:678]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293063"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_17.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "678",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293064]\n•+ Numbers -We’ve already sold 1000 of these!\n•+ Deadline -Ends by next Friday!\n•+ Scarcity -Only 3 rooms left!\n•+ Incentive -Book today and get $25,- cashback!",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•+ Numbers -We’ve already sold 1000 of these!\n•+ Deadline -Ends by next Friday!\n•+ Scarcity -Only 3 rooms left!\n•+ Incentive -Book today and get $25,- cashback!",
+      "id": [
+        "293064"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293065]\n[&image:https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_18.png][@width:602]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293065"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/sensaletion/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_18.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "602",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:293066]\n[%][%Message]\n[&image:https://docs.bitmark.cloud/bit-books/senselation/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_19.png][@width:836]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "293066"
+      ],
+      "lead": "Message",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/senselation/ppp_sample_episode_6/web-resources/images/senselation_ppp_episode_6_19.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "836",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:293067]\nAlways do what you say!",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Always do what you say!",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "293067"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:293068]\n[%][%Summary]\n• Essential\n• Start\n• End\n• Tailor\n• Urgency",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Essential\n• Start\n• End\n• Tailor\n• Urgency",
+      "id": [
+        "293068"
+      ],
+      "lead": "Summary"
+    }
+  }
+]

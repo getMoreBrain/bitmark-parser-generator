@@ -1,0 +1,1298 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:136443]\n[#Inform@21 - Lehrerkommentar]\n[@language:de]\n[@externalId:e-lehrmittelverlag_0f7upctxy9bo]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136443"
+      ],
+      "title": "Inform@21 - Lehrerkommentar",
+      "language": [
+        "de"
+      ],
+      "externalId": [
+        "e-lehrmittelverlag_0f7upctxy9bo"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:136444]\n[#Ich im Netz]\n[%3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "136444"
+      ],
+      "title": "Ich im Netz"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:136445]\n[##Medien: Meine persönlichen Daten]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "136445"
+      ],
+      "title": "Medien: Meine persönlichen Daten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136446]\n[%Ziele]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg6.png]\n1. Ich überblicke, welche Informationen\nich mit welchen Personen im Netz teile.\n\n2. Ich kann benennen, welche persönlichen Daten ich auf meinem Online-Profil teilen kann und welche besser nicht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "1. Ich überblicke, welche Informationen\nich mit welchen Personen im Netz teile.\n\n2. Ich kann benennen, welche persönlichen Daten ich auf meinem Online-Profil teilen kann und welche besser nicht.",
+      "id": [
+        "136446"
+      ],
+      "item": "Ziele",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chat:bitmark--&image]\n[@id:136447]\n[%Achtung privat!]\n[!Dot postet ein Bild von Byte\nund sich öffentlich im Netz.]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon1.png]\nNun ist deine Hilfe gefragt.\nWas hätte Dot anders machen müssen, damit das Bild nicht für alle sichtbar ist? Bist du auch auf einer Plattform aktiv? Kannst du erklären, welche Einstellungen dort vorgenommen werden können?\n===\n[#Byte]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg7.png]\n===\n[#Dot]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg12.png]\n===\nHey Dot! Ich habe gerade gesehen, dass du ein Bild von mir gepostet hast. Das ist ein blödes Foto von mir. Ich will nicht, dass das online ist. Würdest du die Einstellungen bitte so ändern, dass es nur deine Freunde sehen können und nicht die ganze Welt?\n===\nIst doch nicht so schlimm, wenn es alle Leute sehen!\n===",
+    "bit": {
+      "type": "chat",
+      "format": "bitmark--",
+      "item": "Achtung privat!",
+      "instruction": "Dot postet ein Bild von Byte\nund sich öffentlich im Netz.",
+      "hint": "",
+      "initiator": {
+        "name": "Byte",
+        "avatarImage": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg7.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "partner": {
+        "name": "Dot",
+        "avatarImage": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg12.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "chat": [
+        {
+          "name": "Byte",
+          "alt": "",
+          "text": "Hey Dot! Ich habe gerade gesehen, dass du ein Bild von mir gepostet hast. Das ist ein blödes Foto von mir. Ich will nicht, dass das online ist. Würdest du die Einstellungen bitte so ändern, dass es nur deine Freunde sehen können und nicht die ganze Welt?",
+          "initiator": true
+        },
+        {
+          "name": "Byte",
+          "alt": "",
+          "text": "Ist doch nicht so schlimm, wenn es alle Leute sehen!",
+          "initiator": true
+        }
+      ],
+      "body": "Nun ist deine Hilfe gefragt.\nWas hätte Dot anders machen müssen, damit das Bild nicht für alle sichtbar ist? Bist du auch auf einer Plattform aktiv? Kannst du erklären, welche Einstellungen dort vorgenommen werden können?",
+      "id": [
+        "136447"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark++&document]\n[@id:136448]\n[%Privatsphäre im Internet]\n[!Überlege dir gut, welche Informationen für welche Personen bestimmt sind. Schreibe die Begriffe, die ihr in der Klasse besprochen habt.\n\nDiskutiere mit anderen Kindern deine Lösung und passe die Zuordnung der Begriffe anschliessend an.]\n[&document:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_schueler/3.1/privatsphaere_im_internet.pdf]\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon5.png|\n===\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg29.png|\n**privat**\nAngaben, die nur für mich bestimmt sind\n===\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg3.png|\n**halböffentlich**\nAngaben, die ich nur mit meinen Freunden teile\n===\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg2.png|\n**öffentlich**\nAngaben, die ich mit allen Personen teile; Angaben, die öffentlich im Internet verfügbar sind\n===\n||changed instr: in die entsprechenden Kreise.||",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark++",
+      "item": "Privatsphäre im Internet",
+      "instruction": "Überlege dir gut, welche Informationen für welche Personen bestimmt sind. Schreibe die Begriffe, die ihr in der Klasse besprochen habt.\n\nDiskutiere mit anderen Kindern deine Lösung und passe die Zuordnung der Begriffe anschliessend an.",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon5.png|",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg29.png|\n**privat**\nAngaben, die nur für mich bestimmt sind",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg3.png|\n**halböffentlich**\nAngaben, die ich nur mit meinen Freunden teile",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg2.png|\n**öffentlich**\nAngaben, die ich mit allen Personen teile; Angaben, die öffentlich im Internet verfügbar sind",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136448"
+      ],
+      "resource": {
+        "type": "document",
+        "document": {
+          "url": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_schueler/3.1/privatsphaere_im_internet.pdf",
+          "provider": "docs.bitmark.cloud"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark++&document]\n[@id:136449]\n[%Online-Profil]\n[!Finde möglichst viele Informationen über die beiden Personen in den unten abgedruckten öffentlichen Online-Profilen heraus und sammle diese auf dem Arbeitsblatt «Online-Profile». Entscheide, ob die Veröffentlichung der einzelnen Informationen positiv oder negativ zu bewerten ist.]\n[&document:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_schueler/3.1/online_profil_ab.pdf]\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon2.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg14.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg20.png|",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon2.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg14.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg20.png|",
+      "item": "Online-Profil",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136449"
+      ],
+      "instruction": "Finde möglichst viele Informationen über die beiden Personen in den unten abgedruckten öffentlichen Online-Profilen heraus und sammle diese auf dem Arbeitsblatt «Online-Profile». Entscheide, ob die Veröffentlichung der einzelnen Informationen positiv oder negativ zu bewerten ist.",
+      "resource": {
+        "type": "document",
+        "document": {
+          "url": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_schueler/3.1/online_profil_ab.pdf",
+          "provider": "docs.bitmark.cloud"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:136450]\n[%Was hast du gelernt?]\n[!Schreibe in Stichworten auf, was du zum Erreichen der Ziele gemacht hast.]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png]\n===\nIch überblicke, welche Informationen ich mit welchen Personen im Netz teile.\nDas kann ich jetzt./Hier muss ich noch üben.\n===\nIch kann benennen, welche persönlichen Daten ich auf meinem Online-Profil teilen kann und welche besser nicht.\nDas kann ich jetzt./Hier muss ich noch üben.\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Was hast du gelernt?",
+      "instruction": "Schreibe in Stichworten auf, was du zum Erreichen der Ziele gemacht hast.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Ich überblicke, welche Informationen ich mit welchen Personen im Netz teile.\nDas kann ich jetzt./Hier muss ich noch üben.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ich kann benennen, welche persönlichen Daten ich auf meinem Online-Profil teilen kann und welche besser nicht.\nDas kann ich jetzt./Hier muss ich noch üben.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136450"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark++]\n[@id:136451]\n[%Profi-Aufgabe]\n[!Auf welche Einstellungen würdest du achten, wenn du ein Online-Profil erstellen würdest? Notiere in Stichworten.]\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg16.png|",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark++",
+      "instruction": "Auf welche Einstellungen würdest du achten, wenn du ein Online-Profil erstellen würdest? Notiere in Stichworten.",
+      "partialAnswer": "",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg16.png|",
+      "item": "Profi-Aufgabe",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136451"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:136452]\n[##Informatik: Codiert – gehackt]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "136452"
+      ],
+      "title": "Informatik: Codiert – gehackt"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136453]\n[%Ziele]\n•. Ich kann Nachrichten mit einer eigenen Geheimsprache oder mit dem Caesar-Code\ncodieren und decodieren.\n•. Ich kann Zahlen mit Hilfe des Binärsystems\nschreiben und lesen und weiss, wo das System eingesetzt wird.\n•. Ich kann sichere Passwörter erstellen und kenne Hilfsmittel, um mir diese Passwörter zu merken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "•. Ich kann Nachrichten mit einer eigenen Geheimsprache oder mit dem Caesar-Code\ncodieren und decodieren.\n•. Ich kann Zahlen mit Hilfe des Binärsystems\nschreiben und lesen und weiss, wo das System eingesetzt wird.\n•. Ich kann sichere Passwörter erstellen und kenne Hilfsmittel, um mir diese Passwörter zu merken.",
+      "id": [
+        "136453"
+      ],
+      "item": "Ziele"
+    }
+  },
+  {
+    "bitmark": "[.chat:bitmark--]\n[@id:136454]\n[%Streng geheim!]\n[!Dot will Byte die Lösungen für die Hausaufgaben via Chat zukommen lassen, ohne dass ihr Lehrer dies mitbekommt. Sie vereinbaren eine Geheimsprache und Dot sendet Byte den verschlüsselten Lösungssatz:]\n===\n[#Byte]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg1.png]\n===\n[#Dot]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg4.png]\n===\nUps! Unser Lehrer hat sofort gemerkt, dass wir uns Lösungen schreiben. Ich glaube, unsere Ver­ schlüsselung war nicht so toll!\n===\nDei Lusöng für dei Uafgeba iens leatut: Wir heban huete Onfirmitak­ entirrucht.\n===",
+    "bit": {
+      "type": "chat",
+      "format": "bitmark--",
+      "item": "Streng geheim!",
+      "instruction": "Dot will Byte die Lösungen für die Hausaufgaben via Chat zukommen lassen, ohne dass ihr Lehrer dies mitbekommt. Sie vereinbaren eine Geheimsprache und Dot sendet Byte den verschlüsselten Lösungssatz:",
+      "hint": "",
+      "initiator": {
+        "name": "Byte",
+        "avatarImage": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "partner": {
+        "name": "Dot",
+        "avatarImage": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "chat": [
+        {
+          "name": "Byte",
+          "alt": "",
+          "text": "Ups! Unser Lehrer hat sofort gemerkt, dass wir uns Lösungen schreiben. Ich glaube, unsere Ver­ schlüsselung war nicht so toll!",
+          "initiator": true
+        }
+      ],
+      "body": "Dei Lusöng für dei Uafgeba iens leatut: Wir heban huete Onfirmitak­ entirrucht.",
+      "id": [
+        "136454"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n===\n'",
+        "line": 14,
+        "column": 79,
+        "errorLine": "Dei Lusöng für dei Uafgeba iens leatut: Wir heban huete Onfirmitak­ entirrucht."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&image]\n[@id:136455]\n[%Der Caesar­-Code A]\n[!Lies auf dem Arbeitsblatt den Text zum Caesar-Code und zur Caesar-Codierscheibe. Stelle selbst eine Caesar-Codierscheibe her.]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon10.png]\n|info: **Der Caesar­-Code**\nDie Caesar-Verschlüsselung ist eine einfache Verschlüsselungsmethode, welche im römischen Reich in der Zeit Caesars eingesetzt wurde. Caesar nutzte diese Technik, um die Kommunikation zwischen ihm und seinen Truppen zu verschlüsseln. Auch wenn man auf den ersten Blick die mit dem Caesar-Code verschlüsselten Botschaften nicht lesen kann, lassen sich diese relativ einfach entschlüsseln.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "|info: **Der Caesar­-Code**\nDie Caesar-Verschlüsselung ist eine einfache Verschlüsselungsmethode, welche im römischen Reich in der Zeit Caesars eingesetzt wurde. Caesar nutzte diese Technik, um die Kommunikation zwischen ihm und seinen Truppen zu verschlüsseln. Auch wenn man auf den ersten Blick die mit dem Caesar-Code verschlüsselten Botschaften nicht lesen kann, lassen sich diese relativ einfach entschlüsseln.",
+      "item": "Der Caesar­-Code A",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136455"
+      ],
+      "instruction": "Lies auf dem Arbeitsblatt den Text zum Caesar-Code und zur Caesar-Codierscheibe. Stelle selbst eine Caesar-Codierscheibe her.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon10.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\n[@id:136456]\n[%Der Caesar­-Code B]\n[!Versuche die untenstehenden Begriffe mit Hilfe der Caesar-Codierscheibe zu entschlüsseln. Die abgedruckten Bilder geben dir einen Hinweis, um welche Begriffe es sich handeln könnte. Verbinde die Bilder mit dem entsprechenden Begriff.]\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon8.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg23.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg15.png|\n[_E][!R][@example][_b][!O][_a][!N][_n][!A][_k][!X][_i][!V][_n][!A][_g][!T]\n\n[_E][!K][@example][_][!S][_M][!G][_a][!O][_i][!R][_l][!B][_v][!K][_e][!X][_r][!Y][_s][!G][_a][!T][_n][!J]\n||Solve this||\n\n[_C][!W][@example][_h][!B][_a][!U][_t][!N][_g][!A][_e][!Y][_s][!M][_p][!J][_r][!L][_a][!U][_e][!Y][_c][!W][_h][!B]\n\n[_O][!W][@example][_n][!V][_l][!T][_i][!Q][_n][!V][_e][!M][_s][!A][_h][!P][_o][!W][_p][!X]\n\n[_C][!O][@example][_l][!X][_o][!A][_u][!G][_d][!P][_s][!E][_p][!B][_e][!Q][_i][!U][_c][!O][_h][!T][_e][!Q][_r][!D]\n\n|info:Verschlüsselte Internetseiten\nIm Browser ist eine verschlüsselte Webseite am «https» am Anfang der Internetadresse zu erkennen. Ausserdem werden je nach Browser verschiedene Symbole zur Kennzeichnung verwendet. Mit einem Klick auf das Symbol wird das Zertifikat für die Verschlüsselung angezeigt. Ein Zertifikat ist eine Art Ausweis, mit welchem die korrekte Verschlüsselung überprüft werden kann.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon8.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg23.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg15.png|\n{0}\n\n{1}\n\n\n{2}\n\n{3}\n\n{4}\n\n|info:Verschlüsselte Internetseiten\nIm Browser ist eine verschlüsselte Webseite am «https» am Anfang der Internetadresse zu erkennen. Ausserdem werden je nach Browser verschiedene Symbole zur Kennzeichnung verwendet. Mit einem Klick auf das Symbol wird das Zertifikat für die Verschlüsselung angezeigt. Ein Zertifikat ist eine Art Ausweis, mit welchem die korrekte Verschlüsselung überprüft werden kann.",
+      "item": "Der Caesar­-Code B",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136456"
+      ],
+      "instruction": "Versuche die untenstehenden Begriffe mit Hilfe der Caesar-Codierscheibe zu entschlüsseln. Die abgedruckten Bilder geben dir einen Hinweis, um welche Begriffe es sich handeln könnte. Verbinde die Bilder mit dem entsprechenden Begriff.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "E",
+            "b",
+            "a",
+            "n",
+            "k",
+            "i",
+            "n",
+            "g"
+          ],
+          "hint": "",
+          "instruction": "T",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "E",
+            "M",
+            "a",
+            "i",
+            "l",
+            "v",
+            "e",
+            "r",
+            "s",
+            "a",
+            "n"
+          ],
+          "hint": "",
+          "instruction": "J",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "C",
+            "h",
+            "a",
+            "t",
+            "g",
+            "e",
+            "s",
+            "p",
+            "r",
+            "a",
+            "e",
+            "c",
+            "h"
+          ],
+          "hint": "",
+          "instruction": "B",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "O",
+            "n",
+            "l",
+            "i",
+            "n",
+            "e",
+            "s",
+            "h",
+            "o",
+            "p"
+          ],
+          "hint": "",
+          "instruction": "X",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "C",
+            "l",
+            "o",
+            "u",
+            "d",
+            "s",
+            "p",
+            "e",
+            "i",
+            "c",
+            "h",
+            "e",
+            "r"
+          ],
+          "hint": "",
+          "instruction": "D",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.match-reverse:bitmark--]\n[@id:136457]\n[%Zählen wie ein Computer A 1]\n[!Übersetze die folgenden Zahlen in das jeweils andere Zahlensystem. Trage die Lösungen in die Felder ein.]\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg35.png|\n===\n[#Dezimalsystem]\n==\n[#Binärsystem]\n===\n\n==\n01011\n===\n\n==\n10000\n===\n\n==\n00010\n===\n\n==\n00101\n===\n\n==\n00111\n===",
+    "bit": {
+      "type": "match-reverse",
+      "format": "bitmark--",
+      "item": "Zählen wie ein Computer A 1",
+      "heading": {
+        "forKeys": "Dezimalsystem",
+        "forValues": "Binärsystem"
+      },
+      "pairs": [
+        {
+          "key": "",
+          "values": [
+            "01011"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "10000"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "00010"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "00101"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "00111"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg35.png|",
+      "id": [
+        "136457"
+      ],
+      "instruction": "Übersetze die folgenden Zahlen in das jeweils andere Zahlensystem. Trage die Lösungen in die Felder ein."
+    }
+  },
+  {
+    "bitmark": "[.match:bitmark--&image]\n[@id:136458]\n[%Zählen wie ein Computer A 2]\n[!Übersetze die folgenden Zahlen in das jeweils andere Zahlensystem. Trage die Lösungen in die Felder ein.]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png]\n===\n[#Dezimalsystem]\n==\n[#Binärsystem]\n===\n0\n==\n\n===\n12\n==\n\n===\n8\n==\n\n===\n3\n==\n\n===\n15\n==\n\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "Zählen wie ein Computer A 2",
+      "heading": {
+        "forKeys": "Dezimalsystem",
+        "forValues": "Binärsystem"
+      },
+      "pairs": [
+        {
+          "key": "0",
+          "values": [
+            ""
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "12",
+          "values": [
+            ""
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "8",
+          "values": [
+            ""
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "3",
+          "values": [
+            ""
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "15",
+          "values": [
+            ""
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136458"
+      ],
+      "instruction": "Übersetze die folgenden Zahlen in das jeweils andere Zahlensystem. Trage die Lösungen in die Felder ein.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&image]\n[@id:136459]\n[%Zählen wie ein Computer B]\n[!Trainiere das Zählen im Binärsystem. Dabei helfen dir ein Arbeitsblatt oder ein Film. Zeige den anderen Kindern, wie schnell du zählen kannst.]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon9.png]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Zählen wie ein Computer B",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136459"
+      ],
+      "instruction": "Trainiere das Zählen im Binärsystem. Dabei helfen dir ein Arbeitsblatt oder ein Film. Zeige den anderen Kindern, wie schnell du zählen kannst.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon9.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&image]\n[@id:136460]\n[%Das Passwort A]\n[!Lies den Text zum Thema «Das sichere Passwort» auf dem Infoblatt.]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon6.png]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Das Passwort A",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136460"
+      ],
+      "instruction": "Lies den Text zum Thema «Das sichere Passwort» auf dem Infoblatt.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:136461]\n[%Das Passwort B]\n[!Entwickle Regeln für sichere Passwörter und schreibe deine wichtigsten Regeln auf.]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon5.png]\n===\n[@shortAnswer]\n===\n[@shortAnswer]\n===\n[@shortAnswer]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Das Passwort B",
+      "instruction": "Entwickle Regeln für sichere Passwörter und schreibe deine wichtigsten Regeln auf.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136461"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:136462]\n[%Was hast du gelernt?]\n[!Schreibe in Stichworten auf, was du zum Erreichen der Ziele gemacht hast.]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png]\n===\nIch kann Nachrichten mit einer eigenen Geheimsprache oder mit dem Caesar-Code codieren und decodieren.\nDas kann ich jetzt./Hier muss ich noch üben.\n===\nIch kann Zahlen mit Hilfe des Binärsystems schreiben und lesen und weiss, wo das System eingesetzt wird.\nDas kann ich jetzt./Hier muss ich noch üben.\n===\nIch kann sichere Passwörter erstellen und kenne Hilfsmittel, um mir diese Passwörter zu merken.\nDas kann ich jetzt./Hier muss ich noch üben.\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Was hast du gelernt?",
+      "instruction": "Schreibe in Stichworten auf, was du zum Erreichen der Ziele gemacht hast.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Ich kann Nachrichten mit einer eigenen Geheimsprache oder mit dem Caesar-Code codieren und decodieren.\nDas kann ich jetzt./Hier muss ich noch üben.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ich kann Zahlen mit Hilfe des Binärsystems schreiben und lesen und weiss, wo das System eingesetzt wird.\nDas kann ich jetzt./Hier muss ich noch üben.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ich kann sichere Passwörter erstellen und kenne Hilfsmittel, um mir diese Passwörter zu merken.\nDas kann ich jetzt./Hier muss ich noch üben.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136462"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&image]\n[@id:136463]\n[!Bringe einem Familienmitglied oder einem Bekannten bei, wie man mit den Fingern im Binärsystem zählt.\n\nFrage in deiner Familie nach, wann sie das letzte Mal das Passwort für den E-Mail-Account geändert haben.]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon12.png]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136463"
+      ],
+      "instruction": "Bringe einem Familienmitglied oder einem Bekannten bei, wie man mit den Fingern im Binärsystem zählt.\n\nFrage in deiner Familie nach, wann sie das letzte Mal das Passwort für den E-Mail-Account geändert haben.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon12.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter:bitmark--]\n[@id:136464]\n[##Anwendung: Unsere Netiquette]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "136464"
+      ],
+      "title": "Anwendung: Unsere Netiquette"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136465]\n[%Ziele]\n•. Ich kann bei einer Unterhaltung im Netz die Verhaltens- und Sicherheitsregeln einhalten.\n•. Ich kann Onlineplattformen für das Brainstorming oder das gemeinsame Erstellen von Dokumenten nutzen.\n•. Ich kann mit Hilfe eines PCs/ Tablets einen Audioclip aufnehmen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "•. Ich kann bei einer Unterhaltung im Netz die Verhaltens- und Sicherheitsregeln einhalten.\n•. Ich kann Onlineplattformen für das Brainstorming oder das gemeinsame Erstellen von Dokumenten nutzen.\n•. Ich kann mit Hilfe eines PCs/ Tablets einen Audioclip aufnehmen.",
+      "id": [
+        "136465"
+      ],
+      "item": "Ziele"
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark++]\n[@id:136466]\n[%Wie kommunizierst du?]\n[!Dot und Byte unterhalten sich im Netz. Lars mischt sich ein und bietet seine Hilfe an. Er will in der realen Welt Kontakt mit ihnen aufnehmen. Lars erzählt spannende Dinge, die er beiden zeigen will. Was denkst du dazu?]\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon1.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg31.png|",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon1.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg31.png|",
+      "item": "Wie kommunizierst du?",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136466"
+      ],
+      "instruction": "Dot und Byte unterhalten sich im Netz. Lars mischt sich ein und bietet seine Hilfe an. Er will in der realen Welt Kontakt mit ihnen aufnehmen. Lars erzählt spannende Dinge, die er beiden zeigen will. Was denkst du dazu?"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark++]\n[@id:136467]\n[%Wie kommunizierst du?]\n[!Was wäre eine mögliche Fortsetzung für diese Unterhaltung? Wie sollen Dot und Byte auf das Angebot von Lars reagieren? Schreibe deine Fortsetzung in die Sprechblasen.]\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg24.png|\n===\n[!Byte:][@shortAnswer]\n===\n[@shortAnswer]\n===\n[@shortAnswer]\n===\n[@shortAnswer]\n===\n[@shortAnswer]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark++",
+      "item": "Wie kommunizierst du?",
+      "instruction": "Was wäre eine mögliche Fortsetzung für diese Unterhaltung? Wie sollen Dot und Byte auf das Angebot von Lars reagieren? Schreibe deine Fortsetzung in die Sprechblasen.",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg24.png|",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "Byte:",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136467"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--&image]\n[@id:136468]\n[%Netiquette: Regeln zur Kommunikation im Internet A]\n[!Überlege dir, welche Regeln nötig sind, damit die Kommunikation im Internet für alle fair und reibungslos funktioniert. Schreibe deine Vorschläge auf.]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon11.png]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Überlege dir, welche Regeln nötig sind, damit die Kommunikation im Internet für alle fair und reibungslos funktioniert. Schreibe deine Vorschläge auf.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "Netiquette: Regeln zur Kommunikation im Internet A",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136468"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon11.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark++]\n[@id:136469]\n[%Netiquette: Regeln zur Kommunikation im Internet B]\n[!Diskutiere und bewerte die gefundenen Regeln in der Klasse. Verabschiedet in der Klasse eine Netiquette, also eine Vereinbarung, wie ihr euch in der Kommunikation im Netz verhalten sollt.]\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon1.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg25.png|",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon1.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg25.png|",
+      "item": "Netiquette: Regeln zur Kommunikation im Internet B",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136469"
+      ],
+      "instruction": "Diskutiere und bewerte die gefundenen Regeln in der Klasse. Verabschiedet in der Klasse eine Netiquette, also eine Vereinbarung, wie ihr euch in der Kommunikation im Netz verhalten sollt."
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark++]\n[@id:136470]\n[%Netiquette: Einen Audioclip produzieren]\n[!Du hast nun schon einiges gelernt, was du bei der Kommunikation im Internet beachten musst. Jetzt geht es darum, dein Wissen umzusetzen. Plane dazu einen Audioclip. Beantwortet die folgenden Fragen in Stichworten.]\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon13.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg26.png|\n===\n**Inhalt:** Welche Inhalte werden in der Sendung erwähnt?\n===\n**Form:** Wer spricht die Informationen? Spricht eine Fachperson zum Thema? Wird ein Interview geführt?\n===\n**Geräusche:** Welche Geräusche sind für den Audioclip nötig?\n===\n**Einstieg:** Wie beginnt der Audioclip? Was erzählt die Moderatorin/der Moderator am Anfang, damit die Hörerinnen und Hörer weiter zuhören?\n===\n**Musik:** Welche Musik wird im Hintergrund abgespielt? Welche Musik wird zwischen den Sprechabschnitten abgespielt?\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark++",
+      "item": "Netiquette: Einen Audioclip produzieren",
+      "instruction": "Du hast nun schon einiges gelernt, was du bei der Kommunikation im Internet beachten musst. Jetzt geht es darum, dein Wissen umzusetzen. Plane dazu einen Audioclip. Beantwortet die folgenden Fragen in Stichworten.",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon13.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg26.png|",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "**Inhalt:** Welche Inhalte werden in der Sendung erwähnt?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Form:** Wer spricht die Informationen? Spricht eine Fachperson zum Thema? Wird ein Interview geführt?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Geräusche:** Welche Geräusche sind für den Audioclip nötig?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Einstieg:** Wie beginnt der Audioclip? Was erzählt die Moderatorin/der Moderator am Anfang, damit die Hörerinnen und Hörer weiter zuhören?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Musik:** Welche Musik wird im Hintergrund abgespielt? Welche Musik wird zwischen den Sprechabschnitten abgespielt?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136470"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:136471]\n[%Was hast du gelernt?]\n[!Schreibe in Stichworten auf, was du zum Erreichen der Ziele gemacht hast.]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png]\n===\nIch kann bei einer Unterhaltung im Netz die Verhaltens- und Sicherheitsregeln einhalten.\nDas kann ich jetzt./Hier muss ich noch üben.\n===\nIch kann Onlineplattformen für das Brainstorming oder das gemeinsame Erstellen von Dokumenten nutzen.\nDas kann ich jetzt./Hier muss ich noch üben.\n===\nIch kann mit Hilfe eines PCs/Tablets einen Audioclip aufnehmen.\nDas kann ich jetzt./Hier muss ich noch üben.\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Was hast du gelernt?",
+      "instruction": "Schreibe in Stichworten auf, was du zum Erreichen der Ziele gemacht hast.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Ich kann bei einer Unterhaltung im Netz die Verhaltens- und Sicherheitsregeln einhalten.\nDas kann ich jetzt./Hier muss ich noch üben.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ich kann Onlineplattformen für das Brainstorming oder das gemeinsame Erstellen von Dokumenten nutzen.\nDas kann ich jetzt./Hier muss ich noch üben.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ich kann mit Hilfe eines PCs/Tablets einen Audioclip aufnehmen.\nDas kann ich jetzt./Hier muss ich noch üben.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136471"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark++]\n[@id:136472]\n[%Profi-Aufgabe]\n[!Wähle die drei für dich wichtigsten Regeln aus eurer Netiquette aus und erkläre deiner Banknachbarin oder deinem Banknachbarn, warum du dich für diese Regeln entschieden hast.\nErkläre die drei Regeln auch deiner Familie zu Hause.]\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon1.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg27.png|",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon1.png|\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg27.png|",
+      "item": "Profi-Aufgabe",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136472"
+      ],
+      "instruction": "Wähle die drei für dich wichtigsten Regeln aus eurer Netiquette aus und erkläre deiner Banknachbarin oder deinem Banknachbarn, warum du dich für diese Regeln entschieden hast.\nErkläre die drei Regeln auch deiner Familie zu Hause."
+    }
+  }
+]

@@ -1,0 +1,633 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:183605]\n[@language:de]\n[#UNTERRICHTS MATERIALIEN]\n\n[##Analytische Geometrie]\n[###Flächenverhältnisse bei einer Dreieckspyramide]\n[####Berechnungen am Tetraeder]\n[@externalId:e-unterrichts-materialien_y-ecoti08gqi]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "183605"
+      ],
+      "language": [
+        "de"
+      ],
+      "title": "UNTERRICHTS MATERIALIEN",
+      "subtitle": "Berechnungen am Tetraeder",
+      "externalId": [
+        "e-unterrichts-materialien_y-ecoti08gqi"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:183606]\n[&image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_0.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "183606"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_0.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:183607]\n[#Flächenverhältnisse bei einer Dreieckspyramide]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "183607"
+      ],
+      "title": "Flächenverhältnisse bei einer Dreieckspyramide"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183608]\nEin Tetraeder hat, wenn er passend in einem räumlichen Koordinatensystem\nliegt, die Eckpunkte A (4|0|0), B (0|4|0), C (4|4|4) und D (0|0|4).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ein Tetraeder hat, wenn er passend in einem räumlichen Koordinatensystem\nliegt, die Eckpunkte A (4|0|0), B (0|4|0), C (4|4|4) und D (0|0|4).",
+      "id": [
+        "183608"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\n[@id:183609]\n[%1a]\n[!Bestimmen Sie die Gleichung der Seitenhalbierenden a der Pyramidengrund fläche ABC.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1a",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "183609"
+      ],
+      "instruction": "Bestimmen Sie die Gleichung der Seitenhalbierenden a der Pyramidengrund fläche ABC."
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\n[@id:183610]\n[%1b]\n[!Geben Sie die Gleichung der Parallelen gp, zur Seitenhalbierenden sa durch D an.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1b",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "183610"
+      ],
+      "instruction": "Geben Sie die Gleichung der Parallelen gp, zur Seitenhalbierenden sa durch D an."
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\n[@id:183611]\n[%2]\n[!Es sei P ein beliebiger Punkt auf der Parallelen gp.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "183611"
+      ],
+      "instruction": "Es sei P ein beliebiger Punkt auf der Parallelen gp."
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\n[@id:183612]\n[%a]\n[!Zeigen Sie, dass das Dreieck BCP gleichschenklig ist.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "a",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "183612"
+      ],
+      "instruction": "Zeigen Sie, dass das Dreieck BCP gleichschenklig ist."
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\n[@id:183613]\n[%b]\n[!Zeigen Sie, dass die Dreiecke ABP und ACP kongruent sind.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "b",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "183613"
+      ],
+      "instruction": "Zeigen Sie, dass die Dreiecke ABP und ACP kongruent sind."
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\n[@id:183614]\n[%c]\n[!Bestimmen Sie P so, dass der Flächeninhalt der Dreiecke ABP und BCP gleich groß ist.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "c",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "183614"
+      ],
+      "instruction": "Bestimmen Sie P so, dass der Flächeninhalt der Dreiecke ABP und BCP gleich groß ist."
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\n[@id:183615]\n[%3]\n[!Der Ortsvektor von P sei abhängig von einem Parameter r. Die Funktion v(r) gibt das Verhältnis der Flächeninhalte der Dreiecke ABP und BCP an.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "183615"
+      ],
+      "instruction": "Der Ortsvektor von P sei abhängig von einem Parameter r. Die Funktion v(r) gibt das Verhältnis der Flächeninhalte der Dreiecke ABP und BCP an."
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\n[@id:183616]\n[%a]\n[!Bestimmen Sie die Grenzwerte der Funktion v(r) für r > ±0.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "a",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "183616"
+      ],
+      "instruction": "Bestimmen Sie die Grenzwerte der Funktion v(r) für r > ±0."
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\n[@id:183617]\n[%b]\n[!Berechnen Sie das Maximum des Flächenverhältnisses.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "b",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "183617"
+      ],
+      "instruction": "Berechnen Sie das Maximum des Flächenverhältnisses."
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183618]\n**Kompetenzprofil**\n\n\n• Niveau: grundlegend/weiterführend\n• Fachlicher Bezug: Geometrie\n• Kommunikation: Vermutungen äußern; Ergebnisse vorstellen\n• Problemlösen: Beweis führen, vernetztes Denken\n• Modellierung: Modell entwickeln\n• Medien: GTR/CAS\n• Methode: Einzel-/Partnerarbeit\n• Inhalt in Stichworten: Tetraeder, Seitenhalbierende, Parallele, Kongruenzsätze,\n• Flächeninhalt Dreieck, Abstand Punkt - Gerade, Vektorprodukt, gebrochen-rationale\n• Funktionen, Grenzwertverhalten, Extremwertproblem\n**Autor:** Günther Weber",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Kompetenzprofil**\n\n\n• Niveau: grundlegend/weiterführend\n• Fachlicher Bezug: Geometrie\n• Kommunikation: Vermutungen äußern; Ergebnisse vorstellen\n• Problemlösen: Beweis führen, vernetztes Denken\n• Modellierung: Modell entwickeln\n• Medien: GTR/CAS\n• Methode: Einzel-/Partnerarbeit\n• Inhalt in Stichworten: Tetraeder, Seitenhalbierende, Parallele, Kongruenzsätze,\n• Flächeninhalt Dreieck, Abstand Punkt - Gerade, Vektorprodukt, gebrochen-rationale\n• Funktionen, Grenzwertverhalten, Extremwertproblem\n**Autor:** Günther Weber",
+      "id": [
+        "183618"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:183619]\n[#Lösung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "183619"
+      ],
+      "title": "Lösung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183620]\n1. a) Die Seitenhalbierende sa verläuft durch den Punkt A und den Mittelpunkt MBC der gegenüberliegenden Dreieckseite.\nDie Koordinaten des Mittelpunktes einer Strecke sind gleich dem Mittelwert der Koordinaten der Eckpunkte der Strecke.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "1. a) Die Seitenhalbierende sa verläuft durch den Punkt A und den Mittelpunkt MBC der gegenüberliegenden Dreieckseite.\nDie Koordinaten des Mittelpunktes einer Strecke sind gleich dem Mittelwert der Koordinaten der Eckpunkte der Strecke.",
+      "id": [
+        "183620"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:183621]\n[&image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_1.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "183621"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183622]\nb) Die Parallele gp zur Seitenhalbierenden durch den Punkt D hat z. B. den Punkt D als Anbindungspunkt und den gleichen Richtungsvektor wie die Seitenhalbierende.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "b) Die Parallele gp zur Seitenhalbierenden durch den Punkt D hat z. B. den Punkt D als Anbindungspunkt und den gleichen Richtungsvektor wie die Seitenhalbierende.",
+      "id": [
+        "183622"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:183623]\nMit CAS:\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_2.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Mit CAS:\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_2.png|",
+      "id": [
+        "183623"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183624]\n2. a) Da die Länge von AB fest ist, muss gezeigt werden, dass für einen beliebigen Punkt auf der Geraden gp, |BP| = |CP| ist.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "2. a) Da die Länge von AB fest ist, muss gezeigt werden, dass für einen beliebigen Punkt auf der Geraden gp, |BP| = |CP| ist.",
+      "id": [
+        "183624"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183625]\nDas Dreieck BCP ist gleichschenklig.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Dreieck BCP ist gleichschenklig.",
+      "id": [
+        "183625"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:183626]\nMit CAS:\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_3.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Mit CAS:\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_3.png|",
+      "id": [
+        "183626"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183627]\nb) Es ist:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "b) Es ist:",
+      "id": [
+        "183627"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183628]\nDreiecke, die in den 3 Seitenlängen übereinstimmen, sind kongruent (sss).\nDie Dreiecke ABP und ACP sind daher kongruent.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dreiecke, die in den 3 Seitenlängen übereinstimmen, sind kongruent (sss).\nDie Dreiecke ABP und ACP sind daher kongruent.",
+      "id": [
+        "183628"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:183629]\nGeometrische Begründung von Aufgabe 2a und 2b:\n\nDie Seitenhalbierende Sa und der Punkt D bilden eine Symmetrieebene des Tetraeder. Die Parallele g, und mit ihr der beliebige Punkt P liegen in dieser Ebene. Die Strecken BP und CP liegen symmetrisch zur Ebene und sind somit gleich lang. Das Dreieck BCP ist daher gleichschenklig.\n\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_4.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Geometrische Begründung von Aufgabe 2a und 2b:\n\nDie Seitenhalbierende Sa und der Punkt D bilden eine Symmetrieebene des Tetraeder. Die Parallele g, und mit ihr der beliebige Punkt P liegen in dieser Ebene. Die Strecken BP und CP liegen symmetrisch zur Ebene und sind somit gleich lang. Das Dreieck BCP ist daher gleichschenklig.\n\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_4.png|",
+      "id": [
+        "183629"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183630]\nc) Da die Grundfläche des Tetraeders ein gleichseitiges Dreieck ist, stimmen die Flächeninhalte der Dreiecke dann überein, wenn die Höhen gleich sind. Die Höhe des Dreiecks ABP entspricht dem Abstand des Punktes P von der Geraden gAB. Diese hat die Gleichung:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "c) Da die Grundfläche des Tetraeders ein gleichseitiges Dreieck ist, stimmen die Flächeninhalte der Dreiecke dann überein, wenn die Höhen gleich sind. Die Höhe des Dreiecks ABP entspricht dem Abstand des Punktes P von der Geraden gAB. Diese hat die Gleichung:",
+      "id": [
+        "183630"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183631]\nEine Ebene EH senkrecht zur Geraden gAB durch den Punkt P hat die Punkt-Normalenform:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Eine Ebene EH senkrecht zur Geraden gAB durch den Punkt P hat die Punkt-Normalenform:",
+      "id": [
+        "183631"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183632]\nund die Koordinatenform -x + y = 6r.\nDie Gerade gAB und die Ebene En schneiden sich im Lotfußpunkt des Lotes von P auf die Gerade.\nEinsetzen der Koordinatengleichungen der Geraden gAB in die Koordinatenform der Ebene Er ergibt die Gleichung:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "und die Koordinatenform -x + y = 6r.\nDie Gerade gAB und die Ebene En schneiden sich im Lotfußpunkt des Lotes von P auf die Gerade.\nEinsetzen der Koordinatengleichungen der Geraden gAB in die Koordinatenform der Ebene Er ergibt die Gleichung:",
+      "id": [
+        "183632"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183633]\nDurch Einsetzen von t = 3r + 2 in die Geradengleichung erhält man den Ortsvektor des Lotfußpunktes.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Durch Einsetzen von t = 3r + 2 in die Geradengleichung erhält man den Ortsvektor des Lotfußpunktes.",
+      "id": [
+        "183633"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183634]\nDas Dreieck BCP ist gleichschenklig. Die Höhe zur Grundseite BC ist gleich dem Abstand des Punktes P zum Mittelpunkt MBC (2|4|2) der Grundseite.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Dreieck BCP ist gleichschenklig. Die Höhe zur Grundseite BC ist gleich dem Abstand des Punktes P zum Mittelpunkt MBC (2|4|2) der Grundseite.",
+      "id": [
+        "183634"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183635]\nGleichsetzen der Höhen und Quadrieren führt zur Gleichung:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Gleichsetzen der Höhen und Quadrieren führt zur Gleichung:",
+      "id": [
+        "183635"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183636]\nFür r = 0 ist P = D.\nDiese Lösung war ersichtlich, denn die Seitenflächen des Tetraeder sind gleich große gleichseitige Dreiecke.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Für r = 0 ist P = D.\nDiese Lösung war ersichtlich, denn die Seitenflächen des Tetraeder sind gleich große gleichseitige Dreiecke.",
+      "id": [
+        "183636"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183637]\nFür",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Für",
+      "id": [
+        "183637"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:183638]\nMit CAS:\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_5.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Mit CAS:\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_5.png|",
+      "id": [
+        "183638"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183639]\nAlternativer Lösungsweg mithilfe des Vektorproduktes:\nWird ein Dreieck ausgehend vom Punkt P durch die Vektoren u und v aufgespannt, so ist der Flächeninhalt des Dreiecks gleich dem halben Betrag des Vektorprodukts der Vektoren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Alternativer Lösungsweg mithilfe des Vektorproduktes:\nWird ein Dreieck ausgehend vom Punkt P durch die Vektoren u und v aufgespannt, so ist der Flächeninhalt des Dreiecks gleich dem halben Betrag des Vektorprodukts der Vektoren.",
+      "id": [
+        "183639"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183640]\nDas Dreieck ABP wird aufgespannt von den Vektoren AB und AP.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Dreieck ABP wird aufgespannt von den Vektoren AB und AP.",
+      "id": [
+        "183640"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183641]\nDas Dreieck BCP wird aufgespannt von den Vektoren BC und BP.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Dreieck BCP wird aufgespannt von den Vektoren BC und BP.",
+      "id": [
+        "183641"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183642]\nGleichsetzen der Höhen und Quadrieren führt zur Gleichung:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Gleichsetzen der Höhen und Quadrieren führt zur Gleichung:",
+      "id": [
+        "183642"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:183643]\nMit CAS:\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_6.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Mit CAS:\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_6.png|",
+      "id": [
+        "183643"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:183644]\nMit CAS:\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_7.png|\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_8.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Mit CAS:\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_7.png|\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_8.png|",
+      "id": [
+        "183644"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183645]\nb) Eine Wurzel wird extremal, wenn der Radikand extremal wird. Die Funktion, die den Radikand angibt, lautet:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "b) Eine Wurzel wird extremal, wenn der Radikand extremal wird. Die Funktion, die den Radikand angibt, lautet:",
+      "id": [
+        "183645"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183646]\nDie notwendige Bedingung für eine Extremstelle ist h'(r) = 0.\nEine Ableitung mithilfe der Quotientenregel ergibt:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die notwendige Bedingung für eine Extremstelle ist h'(r) = 0.\nEine Ableitung mithilfe der Quotientenregel ergibt:",
+      "id": [
+        "183646"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183647]\nEin Bruch nimmt den Wert 0 an, wenn der Zähler 0 wird.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ein Bruch nimmt den Wert 0 an, wenn der Zähler 0 wird.",
+      "id": [
+        "183647"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:183648]\nDie hinreichende Bedingung für eine Maximumstelle ist h' (r)=0 und an der möglichen Extremstelle liegt ein +/- Vorzeichenwechsel vor.\n\n\n\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_9.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die hinreichende Bedingung für eine Maximumstelle ist h' (r)=0 und an der möglichen Extremstelle liegt ein +/- Vorzeichenwechsel vor.\n\n\n\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_9.png|",
+      "id": [
+        "183648"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183649]\nDie Stelle",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Stelle",
+      "id": [
+        "183649"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:183650]\nDie Fläche des Dreiecks ABP wird maximal ca. 1,16 mal so groß wie die Fläche des Dreiecks BCP.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Fläche des Dreiecks ABP wird maximal ca. 1,16 mal so groß wie die Fläche des Dreiecks BCP.",
+      "id": [
+        "183650"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:183651]\nMit CAS:\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_10.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Mit CAS:\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_10.png|",
+      "id": [
+        "183651"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:183652]\nGraphische Lösung:\nZeichnen des Graphen der Funktion v(r) und Analyse des Graphen ergibt:\n\nDas Verhältnis der Flächeninhalte wird maximal für r = 0,562. Das maximale Flächeninhaltsverhältnis beträgt 1,16.\n\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_11.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Graphische Lösung:\nZeichnen des Graphen der Funktion v(r) und Analyse des Graphen ergibt:\n\nDas Verhältnis der Flächeninhalte wird maximal für r = 0,562. Das maximale Flächeninhaltsverhältnis beträgt 1,16.\n\n|image:https://docs.bitmark.cloud/bit-books/raabe/dreieckspyramide/raabe_dreieckspyramide_11.png|",
+      "id": [
+        "183652"
+      ]
+    }
+  }
+]

@@ -1,0 +1,3903 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:218397]\n[@externalId:e-artikel-grammatikbungen--engl_ky86u07t1a7q]\n[#Artikel – Grammatikübungen – Englisch]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/englisch-hilfen/web-resources/images/englischhilfen_grammatik_cover.png]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "218397"
+      ],
+      "externalId": [
+        "e-artikel-grammatikbungen--engl_ky86u07t1a7q"
+      ],
+      "title": "Artikel – Grammatikübungen – Englisch",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/englisch-hilfen/web-resources/images/englischhilfen_grammatik_cover.png"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:218398]\n[%Nr. 1212]\n[!Wie wird der Artikel **the** ausgesprochen? Wähle die richte Form aus.]\n\n1. the uniform - [+ðə][-ði:]\n2. the answer - [-ðə][+ði:]\n3. the man - [+ðə][-ði:]\n4. the idea - [-ðə][+ði:]\n5. the old school - [-ðə][+ði:]\n6. the USA - [+ðə][-ði:]\n7. the hospital - [+ðə][-ði:]\n8. the eagle - [-ðə][+ði:]\n9. the university - [+ðə][-ði:]\n10. the umbrella - [-ðə][+ði:]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. the uniform - {0}{1}\n2. the answer - {2}{3}\n3. the man - {4}{5}\n4. the idea - {6}{7}\n5. the old school - {8}{9}\n6. the USA - {10}{11}\n7. the hospital - {12}{13}\n8. the eagle - {14}{15}\n9. the university - {16}{17}\n10. the umbrella - {18}{19}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ðə",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ði:",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ðə",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ði:",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ðə",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ði:",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ðə",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ði:",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ðə",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ði:",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ðə",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ði:",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ðə",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ði:",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ðə",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{15}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ði:",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{16}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ðə",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{17}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ði:",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{18}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ðə",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{19}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ði:",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "218398"
+      ],
+      "item": "Nr. 1212",
+      "instruction": "Wie wird der Artikel **the** ausgesprochen? Wähle die richte Form aus."
+    },
+    "errors": [
+      {
+        "message": "Unexpected input ':'",
+        "line": 6,
+        "column": 26,
+        "errorLine": "1. the uniform - [+ðə][-ði:]"
+      },
+      {
+        "message": "Unexpected input ':'",
+        "line": 7,
+        "column": 25,
+        "errorLine": "2. the answer - [-ðə][+ði:]"
+      },
+      {
+        "message": "Unexpected input ':'",
+        "line": 8,
+        "column": 22,
+        "errorLine": "3. the man - [+ðə][-ði:]"
+      },
+      {
+        "message": "Unexpected input ':'",
+        "line": 9,
+        "column": 23,
+        "errorLine": "4. the idea - [-ðə][+ði:]"
+      },
+      {
+        "message": "Unexpected input ':'",
+        "line": 10,
+        "column": 29,
+        "errorLine": "5. the old school - [-ðə][+ði:]"
+      },
+      {
+        "message": "Unexpected input ':'",
+        "line": 11,
+        "column": 22,
+        "errorLine": "6. the USA - [+ðə][-ði:]"
+      },
+      {
+        "message": "Unexpected input ':'",
+        "line": 12,
+        "column": 27,
+        "errorLine": "7. the hospital - [+ðə][-ði:]"
+      },
+      {
+        "message": "Unexpected input ':'",
+        "line": 13,
+        "column": 24,
+        "errorLine": "8. the eagle - [-ðə][+ði:]"
+      },
+      {
+        "message": "Unexpected input ':'",
+        "line": 14,
+        "column": 29,
+        "errorLine": "9. the university - [+ðə][-ði:]"
+      },
+      {
+        "message": "Unexpected input ':'",
+        "line": 15,
+        "column": 28,
+        "errorLine": "10. the umbrella - [-ðə][+ði:]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:218399]\n[%Nr. 1210]\n[!Entscheide, ob du den bestimmten Artikel **the** einsetzen musst oder nicht. Wähle aus den Vorgaben aus.]\n\n1. My grandmother likes [+flowers][-the flowers].\n2. I love [-flowers][+the flowers] in your garden.\n3. See you on [+Wednesday][-the Wednesday].\n4. I always listen to [-radio][+the radio] in the morning.\n5. Alex goes to work by [+bus][-the bus].\n6. Don't be late for [+school][-the school].\n7. Listen! Dennis is playing [-trumpet][+the trumpet].\n8. We often see our cousins over [+Easter][-the Easter].\n9. She has never been to [-Alps][+the Alps]\n10. What about going to Australia in [+February][-the February]?",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. My grandmother likes {0}.\n2. I love {1} in your garden.\n3. See you on {2}.\n4. I always listen to {3} in the morning.\n5. Alex goes to work by {4}.\n6. Don't be late for {5}.\n7. Listen! Dennis is playing {6}.\n8. We often see our cousins over {7}.\n9. She has never been to {8}\n10. What about going to Australia in {9}?",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "flowers",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the flowers",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "flowers",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the flowers",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Wednesday",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the Wednesday",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "radio",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the radio",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "bus",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the bus",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "school",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the school",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "trumpet",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the trumpet",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Easter",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the Easter",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Alps",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the Alps",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "February",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the February",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "218399"
+      ],
+      "item": "Nr. 1210",
+      "instruction": "Entscheide, ob du den bestimmten Artikel **the** einsetzen musst oder nicht. Wähle aus den Vorgaben aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:218400]\n[%Nr. 1220]\n[!Entscheide, ob du den bestimmten Artikel **the** einsetzen musst oder nicht. Wähle aus den Vorgaben aus.]\n\n1. Last year we visited [+St. Paul's Cathedral][-the St. Paul's Cathedral] and [-Tower][+the Tower].\n2. [+Mount Everest][-The Mount Everest] is [+the highest mountain][-highest mountain] on earth.\n3. [+Loch Ness][-The Loch Ness] is [-most famous lake][+the most famous lake] in Scotland.\n4. [+Most][-The most] children like [+sweets][-the sweets].\n5. [-Summer of 2003][+The summer of 2003] was hot and dry.\n6. [+Plaza Hotel][-The Plaza Hotel] is on the corner of [+59th Street][-the 59th Street] and [+5th Avenue][-The 5th Avenue] in Manhattan.\n7. My sister often stays at [+Uncle Tim's][-the Uncle Tim's].\n8. Our friends [-Millers][+the Millers] moved to Florida last August.\n9. [+Smog][-The Smog] is a problem in [+big cities][-the big cities].\n10. Our children go to [+school][-the school] by [+bus][-the bus].",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Last year we visited {0} and {1}.\n2. {2} is {3} on earth.\n3. {4} is {5} in Scotland.\n4. {6} children like {7}.\n5. {8} was hot and dry.\n6. {9} is on the corner of {10} and {11} in Manhattan.\n7. My sister often stays at {12}.\n8. Our friends {13} moved to Florida last August.\n9. {14} is a problem in {15}.\n10. Our children go to {16} by {17}.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "St. Paul's Cathedral",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the St. Paul's Cathedral",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Tower",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the Tower",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Mount Everest",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "The Mount Everest",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the highest mountain",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "highest mountain",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Loch Ness",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "The Loch Ness",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "most famous lake",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the most famous lake",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Most",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "The most",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "sweets",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the sweets",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Summer of 2003",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "The summer of 2003",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Plaza Hotel",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "The Plaza Hotel",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "59th Street",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the 59th Street",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "5th Avenue",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "The 5th Avenue",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Uncle Tim's",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the Uncle Tim's",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Millers",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the Millers",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Smog",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "The Smog",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{15}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "big cities",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the big cities",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{16}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "school",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the school",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{17}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "bus",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the bus",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "218400"
+      ],
+      "item": "Nr. 1220",
+      "instruction": "Entscheide, ob du den bestimmten Artikel **the** einsetzen musst oder nicht. Wähle aus den Vorgaben aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:218401]\n[%Nr. 1222]\n[!Entscheide, ob du den bestimmten Artikel **the** einsetzen musst oder nicht. Wenn du keinen Artikel einsetzen möchtest, tipp ein **x** in die Lücke.]\n\nHi John,\n\nI arrived in [+the][-x] USA last Monday. We left [-the][+x] Rome, flew over [-the][+x] Alps and made a quick stop in [-the][+x] London. There we went shopping at [-the][+x] Harrods, visited [+the][-x] Tower and enjoyed a sunny afternoon in [-the][+x] Hyde Park. On the following day we left for [-the][+x] New York. [+the][-x] time on board wasn't boring as there were two films to watch on [+the][-x] monitor. [+the][-x] people on [+the][-x] plane were all [-the][+x] Italian. Before we landed at [-the][+x] JFK airport, we saw [+the][-x] Statue of Liberty, [-the][+x] Ellis Island and [+the][-x] Empire State Building. [+the][-x] hotel I stayed in was on [+the][-x] corner of [-the][+x] 42nd Street and [+the][-x] 5th Avenue. I don't like [+the][-x] hotels very much, but I didn't have [-the][+x] time to rent an apartment.\n\nPlease say hello to Peter and Mandy.\n\nYours,\nPeter",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "Hi John,\n\nI arrived in {0} USA last Monday. We left {1} Rome, flew over {2} Alps and made a quick stop in {3} London. There we went shopping at {4} Harrods, visited {5} Tower and enjoyed a sunny afternoon in {6} Hyde Park. On the following day we left for {7} New York. {8} time on board wasn't boring as there were two films to watch on {9} monitor. {10} people on {11} plane were all {12} Italian. Before we landed at {13} JFK airport, we saw {14} Statue of Liberty, {15} Ellis Island and {16} Empire State Building. {17} hotel I stayed in was on {18} corner of {19} 42nd Street and {20} 5th Avenue. I don't like {21} hotels very much, but I didn't have {22} time to rent an apartment.\n\nPlease say hello to Peter and Mandy.\n\nYours,\nPeter",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{15}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{16}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{17}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{18}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{19}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{20}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{21}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{22}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "218401"
+      ],
+      "item": "Nr. 1222",
+      "instruction": "Entscheide, ob du den bestimmten Artikel **the** einsetzen musst oder nicht. Wenn du keinen Artikel einsetzen möchtest, tipp ein **x** in die Lücke."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:218402]\n[%Nr. 1228]\n[!Entscheide, ob du den bestimmten Artikel **the** einsetzen musst oder nicht. Wähle aus den Vorgaben aus.]\n\n1. [-Danube][+The Danube] is Austria's longest river.\n2. Our uncle lives in [-Philippines][+the Philippines].\n3. [+Jamaica][-The Jamaica] belongs to the Carribean islands.\n4. [-Statue of Liberty][+The Statue of Liberty] was dedicated in 1886.\n5. [-Taj Mahal][+The Taj Mahal] is one of India's most popular attractions.\n6. [-Dead Sea][+The Dead Sea] lies below sea level.\n7. [+Everglades National Park][-The Everglades National Park] is in Florida.\n8. Aconcagua is [-highest mountain][+the highest mountain] outside Asia.\n9. [+Mount Fuji][-The Mount Fuji] is one of Japan's __Three Holy Mountains.__\n10. [+Lake Superior][-The Lake Superior] is [-largest][+the larges hour t] of [-Great Lakes][+the Great Lakes].",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. {0} is Austria's longest river.\n2. Our uncle lives in {1}.\n3. {2} belongs to the Carribean islands.\n4. {3} was dedicated in 1886.\n5. {4} is one of India's most popular attractions.\n6. {5} lies below sea level.\n7. {6} is in Florida.\n8. Aconcagua is {7} outside Asia.\n9. {8} is one of Japan's __Three Holy Mountains.__\n10. {9} is {10} of {11}.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Danube",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "The Danube",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Philippines",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the Philippines",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Jamaica",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "The Jamaica",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Statue of Liberty",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "The Statue of Liberty",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Taj Mahal",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "The Taj Mahal",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Dead Sea",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "The Dead Sea",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Everglades National Park",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "The Everglades National Park",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "highest mountain",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the highest mountain",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Mount Fuji",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "The Mount Fuji",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Lake Superior",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "The Lake Superior",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "largest",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the larges hour t",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Great Lakes",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the Great Lakes",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "218402"
+      ],
+      "item": "Nr. 1228",
+      "instruction": "Entscheide, ob du den bestimmten Artikel **the** einsetzen musst oder nicht. Wähle aus den Vorgaben aus."
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:218403]\n[%Nr. 1214]\n[!Entscheide, ob du **a** oder **an** einsetzen musst. Schreibe die richtigen Formen des unbestimmten Artikels in die Lücken.]\n\n0. We are reading [_a][@example] book.\n1. Lucy has [_a] dog.\n2. Let's sing [_a] song.\n3. Emily needs [_a] new desk in her room.\n4. I need [_a] blue pen.\n5. Ben has [_an] old bike.\n6. Peter has [_an] aunt in Berlin.\n7. We listen to [_an] English CD.\n8. She has [_an] exercise book in her school bag.\n9. The speed of this car was 160 miles [_an] hour.\n10. They finished [_a] unit.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. We are reading {0} book.\n1. Lucy has {1} dog.\n2. Let's sing {2} song.\n3. Emily needs {3} new desk in her room.\n4. I need {4} blue pen.\n5. Ben has {5} old bike.\n6. Peter has {6} aunt in Berlin.\n7. We listen to {7} English CD.\n8. She has {8} exercise book in her school bag.\n9. The speed of this car was 160 miles {9} hour.\n10. They finished {10} unit.",
+      "item": "Nr. 1214",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "218403"
+      ],
+      "instruction": "Entscheide, ob du **a** oder **an** einsetzen musst. Schreibe die richtigen Formen des unbestimmten Artikels in die Lücken.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "an"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "an"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "an"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "an"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "an"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:218404]\n[%Nr. 1216]\n[!Entscheide, ob du **a** oder **an** einsetzen musst. Schreibe die richtigen Formen des unbestimmten Artikels in die Lücken.]\n\n0. We are reading [_a][@example] book.\n1. There is [_a] green English book on the desk.\n2. She's reading [_an] old comic.\n3. They've got [_an] idea.\n4. He is drinking [_a] cup of coffee.\n5. The girl is [_a] pilot.\n6. Leipzig has [_an] airport.\n7. This is  [_an] expensive bike.\n8. Look! There's [_a] bird flying.\n9. My father is [_an] honest person.\n10. My friend likes to be [_an] astronaut.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. We are reading {0} book.\n1. There is {1} green English book on the desk.\n2. She's reading {2} old comic.\n3. They've got {3} idea.\n4. He is drinking {4} cup of coffee.\n5. The girl is {5} pilot.\n6. Leipzig has {6} airport.\n7. This is  {7} expensive bike.\n8. Look! There's {8} bird flying.\n9. My father is {9} honest person.\n10. My friend likes to be {10} astronaut.",
+      "item": "Nr. 1216",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "218404"
+      ],
+      "instruction": "Entscheide, ob du **a** oder **an** einsetzen musst. Schreibe die richtigen Formen des unbestimmten Artikels in die Lücken.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "an"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "an"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "an"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "an"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "an"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "an"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:218405]\n[%Nr. 1230 Aufgabe]\n[!Entscheide, ob bei den folgenden Wörtern oder Wortgruppen der unbestimmte Artikel **a** oder **an** davorstehen kann.]\n\n1. [-a][+an] outdoor activity\n2. [+a][-an] thousand times\n3. [-a][+an] exercise book\n4. [-a][+an] action\n5. [-a][+an] eagle\n6. [-a][+an] apple\n7. [-a][+an] animal\n8. [-a][+an] expensive bike\n9. [-a][+an] old comic\n10. [+a][-an] daughter",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. {0} outdoor activity\n2. {1} thousand times\n3. {2} exercise book\n4. {3} action\n5. {4} eagle\n6. {5} apple\n7. {6} animal\n8. {7} expensive bike\n9. {8} old comic\n10. {9} daughter",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "218405"
+      ],
+      "item": "Nr. 1230 Aufgabe",
+      "instruction": "Entscheide, ob bei den folgenden Wörtern oder Wortgruppen der unbestimmte Artikel **a** oder **an** davorstehen kann."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:218406]\n[%Nr. 1218]\n[!Entscheide, ob du den unbestimmten Artikel **a/an** oder die Mengenangabe **some** verwenden musst. Achte darauf, ob die Substantive/Nomen zählbar sind oder nicht.\nWähle aus den Vorgaben entweder **a, an** oder **some** aus.]\n\n1. I have [+a][-an][-some] good idea.\n2. That's [-a][+an][-some] interesting job!\n3. They have found [-a][-an][+some] gold in that old mine.\n4. Do the Smiths have [+a][-an][-some] yellow van?\n5. Look! He's having [-a][-an][+some] water.\n6. He always likes [+a][-an][-some] piece of chocolate.\n7. I have [-a][-an][+some] homework to do for tomorrow.\n8. There's [+a][-an][-some] nice girl in the red car.\n9. Would you like [-a][-an][+some] milk with your cookies?\n10. How about [-a][-an][+some] grapes?",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. I have {0} good idea.\n2. That's {1} interesting job!\n3. They have found {2} gold in that old mine.\n4. Do the Smiths have {3} yellow van?\n5. Look! He's having {4} water.\n6. He always likes {5} piece of chocolate.\n7. I have {6} homework to do for tomorrow.\n8. There's {7} nice girl in the red car.\n9. Would you like {8} milk with your cookies?\n10. How about {9} grapes?",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "some",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "some",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "some",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "some",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "some",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "some",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "some",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "some",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "some",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "some",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "218406"
+      ],
+      "item": "Nr. 1218",
+      "instruction": "Entscheide, ob du den unbestimmten Artikel **a/an** oder die Mengenangabe **some** verwenden musst. Achte darauf, ob die Substantive/Nomen zählbar sind oder nicht.\nWähle aus den Vorgaben entweder **a, an** oder **some** aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:218407]\n[%Nr. 1224]\n[!Entscheide, ob du den Artikel **a, an** oder **the** einsetzen musst. Wenn du keinen Artikel einsetzen möchtest, dann wähle das **x**.]\n\n1. I like [-a][-an][+the][-x] blue T-shirt over there better than [-a][-an][+the][-x] red one.\n2. Their car does 150 miles [-a][+an][-the][-x] hour.\n3. Where's [-a][-an][+the][-x] USB drive I lent you last week?\n4. Do you still live in [-a][-an][-the][+x] Bristol?\n5. Is your mother working in [-a][+an][-the][-x] old office building?\n6. Carol's father works as [-a][+an][-the][-x] electrician.\n7. The tomatoes are 99 pence [+a][-an][-the][-x] kilo.\n8. What do you usually have for [-a][-an][-the][+x] breakfast?\n9. Ben has [+a][-an][-the][-x] terrible headache.\n10. After this tour you have [-a][-an][+the][-x] whole afternoon free to explore the city.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. I like {0} blue T-shirt over there better than {1} red one.\n2. Their car does 150 miles {2} hour.\n3. Where's {3} USB drive I lent you last week?\n4. Do you still live in {4} Bristol?\n5. Is your mother working in {5} old office building?\n6. Carol's father works as {6} electrician.\n7. The tomatoes are 99 pence {7} kilo.\n8. What do you usually have for {8} breakfast?\n9. Ben has {9} terrible headache.\n10. After this tour you have {10} whole afternoon free to explore the city.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "218407"
+      ],
+      "item": "Nr. 1224",
+      "instruction": "Entscheide, ob du den Artikel **a, an** oder **the** einsetzen musst. Wenn du keinen Artikel einsetzen möchtest, dann wähle das **x**."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:218408]\n[%Nr. 1232]\n[!Entscheide, ob du den Artikel **a, an** oder **the** einsetzen musst. Wenn du keinen Artikel einsetzen möchtest, dann wähle das **x.**]\n\n0. We have [-a][-an][-the][+x][@example] lunch at two in [-a][-an][+the][-x][@example] afternoon.\n1. Look at [-a][-an][+the][-x] sea!\n2. Who is [-a][-an][+the][-x] lady in [-a][-an][+the][-x] picture?\n3. I visited  [-a][-an][-the][+x] South Africa last summer.\n4. The book is about [+a][-an][-the][-x] man who lives on [+a][-an][-the][-x] small island.\n5. I work as [-a][-an][+the][-x] only English teacher at this school.\n6. Harry fixed [-a][-an][+the][-x] car, so we can go to [-a][-an][+the][-x] lake.\n7. She goes to work by [-a][-an][-the][+x] bike.\n8. Jamy likes [-a][-an][-the][+x] music, he plays [-a][+an][-the][-x] instrument.\n9. Marie enjoys eating [-a][-an][-the][+x] Swiss cheese.\n10. We have [+a][-an][-the][-x] small house in [+a][-an][-the][-x] village in [-a][-an][+the][-x] Netherlands.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "0. We have {0} lunch at two in {1} afternoon.\n1. Look at {2} sea!\n2. Who is {3} lady in {4} picture?\n3. I visited  {5} South Africa last summer.\n4. The book is about {6} man who lives on {7} small island.\n5. I work as {8} only English teacher at this school.\n6. Harry fixed {9} car, so we can go to {10} lake.\n7. She goes to work by {11} bike.\n8. Jamy likes {12} music, he plays {13} instrument.\n9. Marie enjoys eating {14} Swiss cheese.\n10. We have {15} small house in {16} village in {17} Netherlands.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{15}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{16}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{17}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "an",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "x",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "218408"
+      ],
+      "item": "Nr. 1232",
+      "instruction": "Entscheide, ob du den Artikel **a, an** oder **the** einsetzen musst. Wenn du keinen Artikel einsetzen möchtest, dann wähle das **x.**"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:218409]\n[%Nr. 1226]\n[!Verwenden wir den bestimmen Artikel the mit den folgenden Substantiven?]\n1. Flüsse - [+mit Artikel][-ohne Artikel]\n2. Ländernamen im Plural - [+mit Artikel][-ohne Artikel]\n3. Kontinente - [-mit Artikel][+ohne Artikel]\n4. Straßen - [-mit Artikel][+ohne Artikel]\n5. Verwandtschaftsbezeichnungen - [-mit Artikel][+ohne Artikel]\n6. Musikinstrumente - [+mit Artikel][-ohne Artikel]\n7. Städte - [-mit Artikel][+ohne Artikel]\n8. Gebirge - [+mit Artikel][-ohne Artikel]\n9. Ländernamen im Singular - [-mit Artikel][+ohne Artikel]\n10. Familiennamen im Plural - [+mit Artikel][-ohne Artikel]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Flüsse - {0}\n2. Ländernamen im Plural - {1}\n3. Kontinente - {2}\n4. Straßen - {3}\n5. Verwandtschaftsbezeichnungen - {4}\n6. Musikinstrumente - {5}\n7. Städte - {6}\n8. Gebirge - {7}\n9. Ländernamen im Singular - {8}\n10. Familiennamen im Plural - {9}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mit Artikel",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ohne Artikel",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mit Artikel",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ohne Artikel",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mit Artikel",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ohne Artikel",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mit Artikel",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ohne Artikel",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mit Artikel",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ohne Artikel",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mit Artikel",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ohne Artikel",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mit Artikel",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ohne Artikel",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mit Artikel",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ohne Artikel",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mit Artikel",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ohne Artikel",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mit Artikel",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ohne Artikel",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "218409"
+      ],
+      "item": "Nr. 1226",
+      "instruction": "Verwenden wir den bestimmen Artikel the mit den folgenden Substantiven?"
+    }
+  }
+]

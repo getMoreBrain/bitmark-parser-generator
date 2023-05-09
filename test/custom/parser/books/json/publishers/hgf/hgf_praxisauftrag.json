@@ -1,0 +1,1321 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:166482]\n[#Praxisauftrag]\n[##Pochierte und gratinierte Eier auf Blattspinat]\n[@coverImage:https://docs.bitmark.cloud/bit-books/hgf/praxisauftrag/web-resources/images/hgf_praxisauftrag_cover.png]\n[@language:de]\n[@externalId:e-praxisauftrag_h2qyyyubljzc]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166482"
+      ],
+      "title": "Praxisauftrag",
+      "subtitle": "Pochierte und gratinierte Eier auf Blattspinat",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/hgf/praxisauftrag/web-resources/images/hgf_praxisauftrag_cover.png"
+      ],
+      "language": [
+        "de"
+      ],
+      "externalId": [
+        "e-praxisauftrag_h2qyyyubljzc"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166483]\n===\nName Lernende/r:[@shortAnswer]\n===\nSemester:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Name Lernende/r:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Semester:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166483"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:166587]\n[#Auftrag]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "166587"
+      ],
+      "title": "Auftrag"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166588]\n- Kochen Sie das Referenzgericht \"pochierte und gratinierte Eier auf Blattspinat\".\n- Reflektieren Sie danach das Gelingen und die Umsetzung.\n- Erläutern Sie, welche Schritte eine Herausforderung darstellten und was Sie für zukünftige Umsetzungen gelernt haben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "- Kochen Sie das Referenzgericht \"pochierte und gratinierte Eier auf Blattspinat\".\n- Reflektieren Sie danach das Gelingen und die Umsetzung.\n- Erläutern Sie, welche Schritte eine Herausforderung darstellten und was Sie für zukünftige Umsetzungen gelernt haben.",
+      "id": [
+        "166588"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:166589]\n[##Vorgaben]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "166589"
+      ],
+      "title": "Vorgaben"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166590]\n**Zeitvorgabe: 1h**\n**Hilfsmittel: Küche, Messer, Pfanne**\n\n**Sie müssen das Referenzgericht selbständig umsetzen.**\n\n**Eine ansprechende Präsentation inklusive Storytelling wird erwartet.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Zeitvorgabe: 1h**\n**Hilfsmittel: Küche, Messer, Pfanne**\n\n**Sie müssen das Referenzgericht selbständig umsetzen.**\n\n**Eine ansprechende Präsentation inklusive Storytelling wird erwartet.**",
+      "id": [
+        "166590"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:166484]\nBeachten Sie die Hygiene Vorschriften.\n[&video-link:https://www.youtube.com/watch?v=lW9Qn2qREk8]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Beachten Sie die Hygiene Vorschriften.",
+      "id": [
+        "166484"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=lW9Qn2qREk8",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:166591]\n[##Ablauf]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "166591"
+      ],
+      "title": "Ablauf"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image-link]\n[@id:166604]\n[&image-link:https://docs.bitmark.cloud/bit-books/hgf/praxisauftrag/web-resources/images/ablauf.png][@width:739]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "166604"
+      ],
+      "resource": {
+        "type": "image-link",
+        "imageLink": {
+          "provider": "",
+          "url": "https://docs.bitmark.cloud/bit-books/hgf/praxisauftrag/web-resources/images/ablauf.png",
+          "format": "png",
+          "width": "739"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:166592]\n[#Referenzgericht]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "166592"
+      ],
+      "title": "Referenzgericht"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image-link]\n[@id:166605]\nPochierte und gratinierte Eier auf Blattspinat\n[&image-link:https://docs.bitmark.cloud/bit-books/hgf/praxisauftrag/web-resources/images/gericht.jpg][@width:1200]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Pochierte und gratinierte Eier auf Blattspinat",
+      "id": [
+        "166605"
+      ],
+      "resource": {
+        "type": "image-link",
+        "imageLink": {
+          "provider": "",
+          "url": "https://docs.bitmark.cloud/bit-books/hgf/praxisauftrag/web-resources/images/gericht.jpg",
+          "format": "jpg",
+          "width": "1200"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:166593]\n[##Zutaten]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "166593"
+      ],
+      "title": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166594]\n**Zutaten**\n- Eier\n- Blattspinat\n- Essig\n- Öl\n- Gewürze",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Zutaten**\n- Eier\n- Blattspinat\n- Essig\n- Öl\n- Gewürze",
+      "id": [
+        "166594"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:166595]\n[##Kompetenzen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "166595"
+      ],
+      "title": "Kompetenzen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image-link]\n[@id:166596]\n[&image-link:https://docs.bitmark.cloud/bit-books/hgf/praxisauftrag/web-resources/images/kompetenzen.png][@width:1057]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "166596"
+      ],
+      "resource": {
+        "type": "image-link",
+        "imageLink": {
+          "provider": "",
+          "url": "https://docs.bitmark.cloud/bit-books/hgf/praxisauftrag/web-resources/images/kompetenzen.png",
+          "format": "png",
+          "width": "1057"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:166597]\n[#Selbstreflexion]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "166597"
+      ],
+      "title": "Selbstreflexion"
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:166487]\n[!]Beschreiben Sie Ihre Erfahrungen während der Zubereitung.",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "",
+      "partialAnswer": "",
+      "body": "[!]Beschreiben Sie Ihre Erfahrungen während der Zubereitung.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166487"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:166488]\n[!]Nennen Sie die grössten Herausforderungen",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "",
+      "partialAnswer": "",
+      "body": "[!]Nennen Sie die grössten Herausforderungen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166488"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:166489]\n[!]Was sind Ihre Haupterkenntnisse?",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "",
+      "partialAnswer": "",
+      "body": "[!]Was sind Ihre Haupterkenntnisse?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166489"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:166598]\n[#Fremdeinschätzung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "166598"
+      ],
+      "title": "Fremdeinschätzung"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--]\n[@id:166490]\n[!Beurteilung\nPositiv (1)     Negativ(4)]\n===\n[%1][!Richtige Wahl des Kochgeschirrs]\n[-1]\n[-2]\n[-3]\n[+4]\n===\n[%2][!Überwachung der Gerichte]\n[-1]\n[-2]\n[-3]\n[+4]\n===\n[%3][!Mise en Place]\n[-1]\n[-2]\n[-3]\n[+4]\n===\n[%4][!Arbeitstechnik / Vorgehen]\n[-1]\n[-2]\n[-3]\n[+4]\n===\n[%5][!Grundzubereitungsarten (fachlich korrekte Umsetzung)]\n[-1]\n[-2]\n[-3]\n[+4]\n===\n[%6][!Planung / Zeitmanagement]\n[-1]\n[-2]\n[-3]\n[+4]\n===\n[%7][!Rezeptumsetzung / Rezepteinhaltung]\n[-1]\n[-2]\n[-3]\n[+4]\n===\n[%8][!Hygiene (Umgang mit Lebensmitteln)]\n[-1]\n[-2]\n[-3]\n[+4]\n===\n[%9][!Sauberkeit am Arbeitsplatz]\n[-1]\n[-2]\n[-3]\n[+4]\n===\n[%10][!Verkaufbarkeit des Gerichtes]\n[-1]\n[-2]\n[-3]\n[+4]\n===\n[%11][!Entspricht die Temperatur dem Gericht]\n[-1]\n[-2]\n[-3]\n[+4]\n===\n[%12][!Ökonomie bzgl. Lebensmittel (bedacht – verschwenderisch)]\n[-1]\n[-2]\n[-3]\n[+4]\n===\n[%13][!Endpräsentation des Gerichts]\n[-1]\n[-2]\n[-3]\n[+4]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Beurteilung\nPositiv (1)     Negativ(4)",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "1",
+          "instruction": "Richtige Wahl des Kochgeschirrs",
+          "choices": [
+            {
+              "choice": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "2",
+          "instruction": "Überwachung der Gerichte",
+          "choices": [
+            {
+              "choice": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "3",
+          "instruction": "Mise en Place",
+          "choices": [
+            {
+              "choice": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "4",
+          "instruction": "Arbeitstechnik / Vorgehen",
+          "choices": [
+            {
+              "choice": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "5",
+          "instruction": "Grundzubereitungsarten (fachlich korrekte Umsetzung)",
+          "choices": [
+            {
+              "choice": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "6",
+          "instruction": "Planung / Zeitmanagement",
+          "choices": [
+            {
+              "choice": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "7",
+          "instruction": "Rezeptumsetzung / Rezepteinhaltung",
+          "choices": [
+            {
+              "choice": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "8",
+          "instruction": "Hygiene (Umgang mit Lebensmitteln)",
+          "choices": [
+            {
+              "choice": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "9",
+          "instruction": "Sauberkeit am Arbeitsplatz",
+          "choices": [
+            {
+              "choice": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "10",
+          "instruction": "Verkaufbarkeit des Gerichtes",
+          "choices": [
+            {
+              "choice": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "11",
+          "instruction": "Entspricht die Temperatur dem Gericht",
+          "choices": [
+            {
+              "choice": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "12",
+          "instruction": "Ökonomie bzgl. Lebensmittel (bedacht – verschwenderisch)",
+          "choices": [
+            {
+              "choice": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "13",
+          "instruction": "Endpräsentation des Gerichts",
+          "choices": [
+            {
+              "choice": "1",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "2",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "3",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "4",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "166490"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-9]\n[@id:166599]\n[##Kompetenznachweis]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "166599"
+      ],
+      "title": "Kompetenznachweis"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:166491]\n[!Kompetenznachweis inhaltlich:]\n[+vollständig]\n[-teilweise]\n[-mangelhaft]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Kompetenznachweis inhaltlich:",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "vollständig",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "teilweise",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "mangelhaft",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166491"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:166492]\n[!Kompetenznachweis zeitlich:]\n[+termingerecht]\n[-verspätet]\n[-nicht ausgeführt]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Kompetenznachweis zeitlich:",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "termingerecht",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "verspätet",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "nicht ausgeführt",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166492"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-10]\n[@id:166600]\n[##Arbeitsrapport]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-10",
+      "id": [
+        "166600"
+      ],
+      "title": "Arbeitsrapport"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:166493]\n[!Arbeitsrapport inhaltlich:]\n[+vollständig]\n[-teilweise]\n[-mangelhaft]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Arbeitsrapport inhaltlich:",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "vollständig",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "teilweise",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "mangelhaft",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166493"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:166494]\n[!Arbeitsrapport zeitlich:]\n[+termingerecht]\n[-verspätet]\n[-nicht ausgeführt]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Arbeitsrapport zeitlich:",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "termingerecht",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "verspätet",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "nicht ausgeführt",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166494"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-11]\n[@id:166601]\n[##Gesamtbeurteilung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-11",
+      "id": [
+        "166601"
+      ],
+      "title": "Gesamtbeurteilung"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:166495]\n[!Gesamtbeurteilung Probekochen:]\n[+ sehr gut]\n[- gut]\n[- genügend]\n[- ungenügend]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Gesamtbeurteilung Probekochen:",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "sehr gut",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "gut",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "genügend",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "ungenügend",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166495"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-12]\n[@id:166602]\n[##Optimerungsmassnahmen & Ziele]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-12",
+      "id": [
+        "166602"
+      ],
+      "title": "Optimerungsmassnahmen & Ziele"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166496]\n===\nZu optimieren / Massnahmen / Ziele:\nZieldatum:[@shortAnswer]\n===\nZu optimieren / Massnahmen / Ziele:\nZieldatum:[@shortAnswer]\n===\nZu optimieren / Massnahmen / Ziele:\nZieldatum:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Zu optimieren / Massnahmen / Ziele:\nZieldatum:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Zu optimieren / Massnahmen / Ziele:\nZieldatum:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Zu optimieren / Massnahmen / Ziele:\nZieldatum:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166496"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166497]\n===\nDatum:[@shortAnswer]\n===\nUnterschrift Berufsbildner/in:[@shortAnswer]\n===\nUnterschrift Lernende/r:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Datum:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Unterschrift Berufsbildner/in:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Unterschrift Lernende/r:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166497"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-13]\n[@id:166603]\n[#Formular]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-13",
+      "id": [
+        "166603"
+      ],
+      "title": "Formular"
+    }
+  },
+  {
+    "bitmark": "[.page:bitmark++&image]\n[@id:166498]\n[%1]\n[&image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/webp/e-praxisauftrag-pochierte-und-gratinierte-_eo3rlezakhbg/e-praxisauftrag-pochierte-und-gratinierte-_eo3rlezakhbg-1.webp]\n[@thumbImage:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/thumbs/e-praxisauftrag-pochierte-und-gratinierte-_eo3rlezakhbg/e-praxisauftrag-pochierte-und-gratinierte-_eo3rlezakhbg.jpg]\n\n\nBewertung-Probekochen Koch/Köchin EFZ\nProbekochen Koch-Köchin EFZ.doc\nName Lernende/r: __________________________________ Semester: ____________________\nVorgaben\n1. Lehrjahr vorgegebene Gerichte ohne Zeitlimite nach Rezeptvorgabe selbständig herstellen\n2. Lehrjahr vorgegebene Gerichte für ein 3 tlg. Menü mit Zeitlimite nach Rezeptvorgabe selbständig herstellen\n3. Lehrjahr vorgegebene Gerichte für ein 5 tlg. Menü mit Zeitlimite nach Rezeptvorgabe selbständig herstellen\nBeurteilung P o s i t i v N e g a t i v\n++ + - --\n1. Richtige Wahl des Kochgeschirrs\n2. Überwachung der Gerichte\n3. Mise en Place\n4. Arbeitstechnik / Vorgehen\n5. Grundzubereitungsarten (fachlich korrekte Umsetzung)\n6. Planung / Zeitmanagement\n7. Rezeptumsetzung / Rezepteinhaltung\n8. Hygiene (Umgang mit Lebensmitteln)\n9. Sauberkeit am Arbeitsplatz\n10. Verkaufbarkeit des Gerichtes\n11. Entspricht die Temperatur dem Gericht\n12. Ökonomie bzgl. Lebensmittel (bedacht – verschwenderisch)\n13. Endpräsentation des Gerichts\n14. Kompetenznachweis\nInhaltlich: vollständig teilweise mangelhaft\nZeitlich: termingerecht verspätet nicht ausgeführt\n15. Arbeitsrapport\nInhaltlich: vollständig teilweise mangelhaft\nZeitlich: termingerecht verspätet nicht ausgeführt\nZu optimieren / Massnahmen / Ziele: Zieldatum:\nGesamtbeurteilung Probekochen: sehr gut gut genügend ungenügend\nDatum: Unterschrift Berufsbildner/in: Unterschrift Lernende/r:\n____________________ ______________________________ _______________________________",
+    "bit": {
+      "type": "page",
+      "format": "bitmark++",
+      "body": "Bewertung-Probekochen Koch/Köchin EFZ\nProbekochen Koch-Köchin EFZ.doc\nName Lernende/r: __________________________________ Semester: ____________________\nVorgaben\n1. Lehrjahr vorgegebene Gerichte ohne Zeitlimite nach Rezeptvorgabe selbständig herstellen\n2. Lehrjahr vorgegebene Gerichte für ein 3 tlg. Menü mit Zeitlimite nach Rezeptvorgabe selbständig herstellen\n3. Lehrjahr vorgegebene Gerichte für ein 5 tlg. Menü mit Zeitlimite nach Rezeptvorgabe selbständig herstellen\nBeurteilung P o s i t i v N e g a t i v\n++ + - --\n1. Richtige Wahl des Kochgeschirrs\n2. Überwachung der Gerichte\n3. Mise en Place\n4. Arbeitstechnik / Vorgehen\n5. Grundzubereitungsarten (fachlich korrekte Umsetzung)\n6. Planung / Zeitmanagement\n7. Rezeptumsetzung / Rezepteinhaltung\n8. Hygiene (Umgang mit Lebensmitteln)\n9. Sauberkeit am Arbeitsplatz\n10. Verkaufbarkeit des Gerichtes\n11. Entspricht die Temperatur dem Gericht\n12. Ökonomie bzgl. Lebensmittel (bedacht – verschwenderisch)\n13. Endpräsentation des Gerichts\n14. Kompetenznachweis\nInhaltlich: vollständig teilweise mangelhaft\nZeitlich: termingerecht verspätet nicht ausgeführt\n15. Arbeitsrapport\nInhaltlich: vollständig teilweise mangelhaft\nZeitlich: termingerecht verspätet nicht ausgeführt\nZu optimieren / Massnahmen / Ziele: Zieldatum:\nGesamtbeurteilung Probekochen: sehr gut gut genügend ungenügend\nDatum: Unterschrift Berufsbildner/in: Unterschrift Lernende/r:\n____________________ ______________________________ _______________________________",
+      "id": [
+        "166498"
+      ],
+      "item": "1",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/webp/e-praxisauftrag-pochierte-und-gratinierte-_eo3rlezakhbg/e-praxisauftrag-pochierte-und-gratinierte-_eo3rlezakhbg-1.webp",
+          "showInIndex": false,
+          "format": "webp",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "thumbImage": [
+        "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/thumbs/e-praxisauftrag-pochierte-und-gratinierte-_eo3rlezakhbg/e-praxisauftrag-pochierte-und-gratinierte-_eo3rlezakhbg.jpg"
+      ]
+    }
+  }
+]

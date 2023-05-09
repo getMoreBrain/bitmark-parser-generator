@@ -1,0 +1,46 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:134554][#Email Lektion 29]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "134554"
+      ],
+      "title": "Email Lektion 29"
+    }
+  },
+  {
+    "bitmark": "[.page&image]\n[@id:134555]\n[&image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/webp/emailtext-nr_29-convertedpdf_k6xz-rbbmbrn/emailtext-nr_29-convertedpdf_k6xz-rbbmbrn-1.webp]\n[@thumbImage:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/thumbs/emailtext-nr_29-convertedpdf_k6xz-rbbmbrn-thumbs-1/emailtext-nr_29-convertedpdf_k6xz-rbbmbrn-thumbs-1.jpg]\n\nAnrede\n\n\nviel zu viele Menschen sind heute so konditioniert, dass alles, was Spaß macht, nur am\nWochenende stattzufinden hat. Unter der Woche haben wir mit ernster Miene unseren Pflichten\nnachzugehen. Halten Sie es nicht so. Beschließen Sie, das Gute wahrzunehmen. Allem\nKrisengerede zum Trotz, es ist viel besser, als uns die Medien vorgaukeln. Lesen Sie Sie in der\nfolgenden Lehreinheit warum.\n\n\nViel Erfolg beim Vermehren der neu gewonnenen Einsichten.\nIn diesem Sinne freundliche Grüsse aus Visp\n\n\nDie Bankleitung",
+    "bit": {
+      "type": "page",
+      "format": "bitmark--",
+      "body": "Anrede\n\n\nviel zu viele Menschen sind heute so konditioniert, dass alles, was Spaß macht, nur am\nWochenende stattzufinden hat. Unter der Woche haben wir mit ernster Miene unseren Pflichten\nnachzugehen. Halten Sie es nicht so. Beschließen Sie, das Gute wahrzunehmen. Allem\nKrisengerede zum Trotz, es ist viel besser, als uns die Medien vorgaukeln. Lesen Sie Sie in der\nfolgenden Lehreinheit warum.\n\n\nViel Erfolg beim Vermehren der neu gewonnenen Einsichten.\nIn diesem Sinne freundliche Grüsse aus Visp\n\n\nDie Bankleitung",
+      "id": [
+        "134555"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/webp/emailtext-nr_29-convertedpdf_k6xz-rbbmbrn/emailtext-nr_29-convertedpdf_k6xz-rbbmbrn-1.webp",
+          "showInIndex": false,
+          "format": "webp",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "thumbImage": [
+        "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/thumbs/emailtext-nr_29-convertedpdf_k6xz-rbbmbrn-thumbs-1/emailtext-nr_29-convertedpdf_k6xz-rbbmbrn-thumbs-1.jpg"
+      ]
+    }
+  }
+]

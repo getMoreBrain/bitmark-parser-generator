@@ -1,0 +1,350 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:198268]\n[@language:de]\n[#Mehrwertsteuer Gruppenbesteuerung]\n[##Ausgabe 2021/04 – Daniel Bugnon]\n[@coverImage:]\n[@externalId:e-mehrwertsteuer-gruppenbesteuerung_e3g7vjo3v2b7]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "198268"
+      ],
+      "language": [
+        "de"
+      ],
+      "title": "Mehrwertsteuer Gruppenbesteuerung",
+      "subtitle": "Ausgabe 2021/04 – Daniel Bugnon",
+      "coverImage": [
+        "undefined"
+      ],
+      "externalId": [
+        "e-mehrwertsteuer-gruppenbesteuerung_e3g7vjo3v2b7"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Rule violation around ']'",
+        "line": 6,
+        "column": 13,
+        "errorLine": "[@coverImage:]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:198269]\n[▼ch-1]\n[%1]\n[#Ausgangslage]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "198269"
+      ],
+      "anchor": "ch-1",
+      "title": "Ausgangslage"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198270]\nDas Schweizerische Steuerrecht kennt kein Konzernsteuerrecht. Das bedeutet, dass in einer Unternehmensgruppe (Konzern, etc.) jede Gesellschaft als unabhängiges Steuersubjekt betrachtet wird. Obwohl dieses Verdikt sich insbesondere bei den direkten Steuern sowie der Verrechnungssteuer niederschlägt, gilt das gleiche Prinzip auch bei der Mehrwertsteuer. So besagt Art. 24 II MWSTG, dass bei Leistungen gegenüber eng verbundenen Personen als Entgelt der Wert gilt, der unter unabhängigen Dritten vereinbart würde (Drittvergleich). Soweit ausschliesslich steuerbare Leistungen zwischen Gruppengesellschaften erbracht werden, resultiert für die Unternehmen daraus kein Nachteil, hat doch der Leistungserbringer die Leistung zu versteuern, während der Leistungsempfänger die bezahlte Vorsteuer zurückfordern kann. Nachteilig wirkt sich dieses System dann aus, wenn der Leistungserbringer die Leistung versteuern muss, der Empfänger aber kein Vorsteuerabzugsrecht hat, weil er seinerseits überwiegend oder ausschliesslich ausgenommene Leistungen erbringt. In diesem Fall führt dies zu einer Schattensteuer (Taxe occulte), welche für die Unternehmen verloren ist. Beispiel: AKAD Business AG bezieht als Schulungsinstitut Lehrmittel aus dem Compendio Verlag AG für gesamthaft CHF 102'500 inkl. 2,50% MWST. Compendio muss die CHF 2'500 als Umsatzsteuer an die ESTV abliefern, während AKAD Business AG diese Lehrmittel für Schulungsleistungen verwendet, welche gemäss Art. 21 II 11 MWSTG von der Steuer ausgenommen sind, und daher gemäss Art. 29 I MWSTG nicht zum Vorsteuerabzug berechtigen. In diesem Fall sind die CHF 2'500 Vorsteuern für AKAD Business AG verloren und müssen auf die Studienhonorare kalkulatorisch zugeschlagen werden. Um Diesen Nachteil auszugleichen sieht Art. 13 MWSTG vor, dass Unternehmensgruppen sich als ein einziges Steuersubjekt registrieren lassen können und Leistungen innerhalb dieser Gruppe als Innenumsätze (analog einer Umsatzkonsolidierung in der Rechnungslegung) ohne Mehrwertsteuer erbracht werden können. Damit wird erreicht, dass sich die Vorsteuerquote einer Unternehmensgruppe gegenüber der einzelnen Steuerpflicht optimieren lässt. Im Umkehrschluss bedeutet dies aber auch, dass Unternehmensgruppen, die nach aussen ausschliesslich steuerbare oder steuerbefreite Leistungen erbringen, bereits eine 100%-ige Vorsteuerquote aufweisen und daher mit der Gruppenbesteuerung keinen weiteren Optimierungseffekt erzielen können. In diesem Fall ist von der Gruppenbesteuerung abzusehen, da diese doch einige administrative Mehraufwendungen nach sich zieht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Schweizerische Steuerrecht kennt kein Konzernsteuerrecht. Das bedeutet, dass in einer Unternehmensgruppe (Konzern, etc.) jede Gesellschaft als unabhängiges Steuersubjekt betrachtet wird. Obwohl dieses Verdikt sich insbesondere bei den direkten Steuern sowie der Verrechnungssteuer niederschlägt, gilt das gleiche Prinzip auch bei der Mehrwertsteuer. So besagt Art. 24 II MWSTG, dass bei Leistungen gegenüber eng verbundenen Personen als Entgelt der Wert gilt, der unter unabhängigen Dritten vereinbart würde (Drittvergleich). Soweit ausschliesslich steuerbare Leistungen zwischen Gruppengesellschaften erbracht werden, resultiert für die Unternehmen daraus kein Nachteil, hat doch der Leistungserbringer die Leistung zu versteuern, während der Leistungsempfänger die bezahlte Vorsteuer zurückfordern kann. Nachteilig wirkt sich dieses System dann aus, wenn der Leistungserbringer die Leistung versteuern muss, der Empfänger aber kein Vorsteuerabzugsrecht hat, weil er seinerseits überwiegend oder ausschliesslich ausgenommene Leistungen erbringt. In diesem Fall führt dies zu einer Schattensteuer (Taxe occulte), welche für die Unternehmen verloren ist. Beispiel: AKAD Business AG bezieht als Schulungsinstitut Lehrmittel aus dem Compendio Verlag AG für gesamthaft CHF 102'500 inkl. 2,50% MWST. Compendio muss die CHF 2'500 als Umsatzsteuer an die ESTV abliefern, während AKAD Business AG diese Lehrmittel für Schulungsleistungen verwendet, welche gemäss Art. 21 II 11 MWSTG von der Steuer ausgenommen sind, und daher gemäss Art. 29 I MWSTG nicht zum Vorsteuerabzug berechtigen. In diesem Fall sind die CHF 2'500 Vorsteuern für AKAD Business AG verloren und müssen auf die Studienhonorare kalkulatorisch zugeschlagen werden. Um Diesen Nachteil auszugleichen sieht Art. 13 MWSTG vor, dass Unternehmensgruppen sich als ein einziges Steuersubjekt registrieren lassen können und Leistungen innerhalb dieser Gruppe als Innenumsätze (analog einer Umsatzkonsolidierung in der Rechnungslegung) ohne Mehrwertsteuer erbracht werden können. Damit wird erreicht, dass sich die Vorsteuerquote einer Unternehmensgruppe gegenüber der einzelnen Steuerpflicht optimieren lässt. Im Umkehrschluss bedeutet dies aber auch, dass Unternehmensgruppen, die nach aussen ausschliesslich steuerbare oder steuerbefreite Leistungen erbringen, bereits eine 100%-ige Vorsteuerquote aufweisen und daher mit der Gruppenbesteuerung keinen weiteren Optimierungseffekt erzielen können. In diesem Fall ist von der Gruppenbesteuerung abzusehen, da diese doch einige administrative Mehraufwendungen nach sich zieht.",
+      "id": [
+        "198270"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:198271]\n[▼ch-2]\n[%2]\n[#Gruppenmitglieder]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "198271"
+      ],
+      "anchor": "ch-2",
+      "title": "Gruppenmitglieder"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198272]\nAls Mitglieder kommen alle unter einheitlicher Leitung stehenden Unternehmen (Kapitalgesellschaften, Personengesellschaften und natürliche Personen in Betracht. Entschliesst sich eine Unternehmensgruppe, eine Mehrwertsteuergruppe zu bilden, können sich sämtliche Unternehmen, welche unter einheitlicher Leitung stehen, dieser Gruppe anschliessen. Voraussetzung ist jedoch, dass diese Sitz im Inland haben oder als ausländische Unternehmen in der Schweiz eine oder mehrere Betriebsstätten unterhalten. Nicht in schweizerische Mehrwertsteuergruppen integierbar sind liechtensteinische Unternehmen, welche in der Schweiz können aussen vor gelassen werden. Zudem ist die Bildung von Untergruppen möglich.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Als Mitglieder kommen alle unter einheitlicher Leitung stehenden Unternehmen (Kapitalgesellschaften, Personengesellschaften und natürliche Personen in Betracht. Entschliesst sich eine Unternehmensgruppe, eine Mehrwertsteuergruppe zu bilden, können sich sämtliche Unternehmen, welche unter einheitlicher Leitung stehen, dieser Gruppe anschliessen. Voraussetzung ist jedoch, dass diese Sitz im Inland haben oder als ausländische Unternehmen in der Schweiz eine oder mehrere Betriebsstätten unterhalten. Nicht in schweizerische Mehrwertsteuergruppen integierbar sind liechtensteinische Unternehmen, welche in der Schweiz können aussen vor gelassen werden. Zudem ist die Bildung von Untergruppen möglich.",
+      "id": [
+        "198272"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:198273]\n[▼ch-3]\n[%2.1]\n[##Beginn und Ende der Gruppenbesteuerung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "198273"
+      ],
+      "anchor": "ch-3",
+      "title": "Beginn und Ende der Gruppenbesteuerung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198274]\nDie Begründung einer Mehrwertsteuergruppe ist auf den Beginn einer Steuerperiode (Kalenderjahr gemäss Art. 34 MWSTG) möglich. Wird eine Tochtergesellschaft veräussert oder eine neue erworben, stellt dies eine Änderung im Gruppenbestand dar, welche jeweils unverzüglich der ESTV zu melden sind. Somit sind in diesen Fällen Ein- und Austritte auch während des Geschäftsjahres möglich.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Begründung einer Mehrwertsteuergruppe ist auf den Beginn einer Steuerperiode (Kalenderjahr gemäss Art. 34 MWSTG) möglich. Wird eine Tochtergesellschaft veräussert oder eine neue erworben, stellt dies eine Änderung im Gruppenbestand dar, welche jeweils unverzüglich der ESTV zu melden sind. Somit sind in diesen Fällen Ein- und Austritte auch während des Geschäftsjahres möglich.",
+      "id": [
+        "198274"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:198275]\n[▼ch-4]\n[%3]\n[#Wirkung der Gruppenbesteuerung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "198275"
+      ],
+      "anchor": "ch-4",
+      "title": "Wirkung der Gruppenbesteuerung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:198276]\n[▼ch-5]\n[%3.1]\n[##Gruppenvertretung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "198276"
+      ],
+      "anchor": "ch-5",
+      "title": "Gruppenvertretung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198277]\nGegenüber der ESTV tritt nur eine Gruppengesellschaft als Vertreterin auf. Dies muss nicht die oberste Gesellschaft sein. Es muss sich nur um eine in der Schweiz ansässige Vertreterin handeln. Grundsätzlich kann auch eine Steuervertreterin die Gruppenvertretung wahrnehmen (Treuhandgesellschaft), in diesem Fall muss aber zusätzlich eine Gruppengesellschaft ernannt werden, welche die Rechte und Pflichten der Gruppe (Zahlungen, etc.) wahrnimmt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Gegenüber der ESTV tritt nur eine Gruppengesellschaft als Vertreterin auf. Dies muss nicht die oberste Gesellschaft sein. Es muss sich nur um eine in der Schweiz ansässige Vertreterin handeln. Grundsätzlich kann auch eine Steuervertreterin die Gruppenvertretung wahrnehmen (Treuhandgesellschaft), in diesem Fall muss aber zusätzlich eine Gruppengesellschaft ernannt werden, welche die Rechte und Pflichten der Gruppe (Zahlungen, etc.) wahrnimmt.",
+      "id": [
+        "198277"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:198278]\n[▼ch-6]\n[%3.2]\n[##Abrechnung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "198278"
+      ],
+      "anchor": "ch-6",
+      "title": "Abrechnung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198279]\nSämtliche Gruppenmitglieder erstellen eine eigene Mehrwertsteuerabrechnung, welche anschliessend konsolidiert wird. Die Buchhaltungen sind entsprechend zu organisieren, dass insbesondere Innenumsätze separat ermittelt werden können. Die Umsätze sind nach den gleichen Kriterien zu verbuchen wie bei ordentlicher Abrechnung, ergänzt jedoch um die internen Umsätze. Für die Vorsteuern erfolgt die Erfassung grundsätzlichen ebenfalls wie üblich, d.h. die direkten Vorsteuern sind aufgrund ihrer Verwendung in rückforderbare und nicht rückforderbare Positionen aufzuteilen. Zusätzlich bestehen aufgrund der Innenumsätze jedoch aus Vorsteueransprüche im Umfang der Verwendung durch die Gruppengesellschaften, welche die Leistungen nach aussen weiterverrechnen. Hierbei wird von indirekten Vorsteueransprüchen gesprochen, da diese sich aufgrund der endlichen Verwendung nach aussen ergeben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Sämtliche Gruppenmitglieder erstellen eine eigene Mehrwertsteuerabrechnung, welche anschliessend konsolidiert wird. Die Buchhaltungen sind entsprechend zu organisieren, dass insbesondere Innenumsätze separat ermittelt werden können. Die Umsätze sind nach den gleichen Kriterien zu verbuchen wie bei ordentlicher Abrechnung, ergänzt jedoch um die internen Umsätze. Für die Vorsteuern erfolgt die Erfassung grundsätzlichen ebenfalls wie üblich, d.h. die direkten Vorsteuern sind aufgrund ihrer Verwendung in rückforderbare und nicht rückforderbare Positionen aufzuteilen. Zusätzlich bestehen aufgrund der Innenumsätze jedoch aus Vorsteueransprüche im Umfang der Verwendung durch die Gruppengesellschaften, welche die Leistungen nach aussen weiterverrechnen. Hierbei wird von indirekten Vorsteueransprüchen gesprochen, da diese sich aufgrund der endlichen Verwendung nach aussen ergeben.",
+      "id": [
+        "198279"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.example:bitmark--]\n[@id:198280]\nBeispiel:\n\nEin Schulungsinstitut (steuerbare Umsätze 20% / von der Steuer ausgenommen Umsätze 80%) bezieht beim konzerninternen Verlag Lehrmittel. Der Verlag wiederum tätigt steuerbare Umsätze mit Dritten im Umfang von 50% und interne Umsätze mit dem Schulungsinstitut im Höhe von 50% der Leistungen. Die Vorsteuern auf Lehrmitteln beim Verlag betragen für die Steuerperiode CHF 20'000. Somit kann das Schulungsinstitut aufgrund der bezogenen Lehrmittel CHF 2'000 an indirekten Vorsteuern geltend machen. Die Berechnung ergibt sich wie folgt: Vorsteuern Verlag: CHF 20'000 -> davon 50% an Schulungsinstitut = CHF 10'000; Vorsteuerquote beim Schulungsinstitut: 20% aufgrund der Verwendung = CHF 10'000 * 20% = CHF 2'000 (oder alternativ: CHF 20'000 * 50% * 20% = CHF 2'000). Problematisch ist die Vorsteuerberechnung bei Mehrwertsteuergruppen, wenn die einzelnen Gruppenmitglieder einander wechselseitig Leistungen erbringen. In diesem Fall muss die indirekte Vorsteuerquote mittels Iteration (Tabellenkalkulationsprogramme) ermittelt werden.",
+    "bit": {
+      "type": "example",
+      "format": "bitmark--",
+      "body": "Beispiel:\n\nEin Schulungsinstitut (steuerbare Umsätze 20% / von der Steuer ausgenommen Umsätze 80%) bezieht beim konzerninternen Verlag Lehrmittel. Der Verlag wiederum tätigt steuerbare Umsätze mit Dritten im Umfang von 50% und interne Umsätze mit dem Schulungsinstitut im Höhe von 50% der Leistungen. Die Vorsteuern auf Lehrmitteln beim Verlag betragen für die Steuerperiode CHF 20'000. Somit kann das Schulungsinstitut aufgrund der bezogenen Lehrmittel CHF 2'000 an indirekten Vorsteuern geltend machen. Die Berechnung ergibt sich wie folgt: Vorsteuern Verlag: CHF 20'000 -> davon 50% an Schulungsinstitut = CHF 10'000; Vorsteuerquote beim Schulungsinstitut: 20% aufgrund der Verwendung = CHF 10'000 * 20% = CHF 2'000 (oder alternativ: CHF 20'000 * 50% * 20% = CHF 2'000). Problematisch ist die Vorsteuerberechnung bei Mehrwertsteuergruppen, wenn die einzelnen Gruppenmitglieder einander wechselseitig Leistungen erbringen. In diesem Fall muss die indirekte Vorsteuerquote mittels Iteration (Tabellenkalkulationsprogramme) ermittelt werden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "198280"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:198281]\n[▼ch-7]\n[%3.3]\n[##Mithaftung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "198281"
+      ],
+      "anchor": "ch-7",
+      "title": "Mithaftung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198282]\nGegenüber der ESTV haften sämtliche Gruppenmitglieder für die gesamten Steuerschulden solidarisch. In der Mithaftung eingeschlossen sind auch Zins- und Kostenforderungen seitens der ESTV. Tritt ein Gruppenmitglied aus der Mehrwertsteuergruppe aus, haftet es nur noch für die Schulden, die sich aus seiner Zeit als Mitglied für dessen Tätigkeiten ergeben. Damit entfällt die Solidarhaftung für allfällige Schulden der übrigen Gruppenmitglieder.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Gegenüber der ESTV haften sämtliche Gruppenmitglieder für die gesamten Steuerschulden solidarisch. In der Mithaftung eingeschlossen sind auch Zins- und Kostenforderungen seitens der ESTV. Tritt ein Gruppenmitglied aus der Mehrwertsteuergruppe aus, haftet es nur noch für die Schulden, die sich aus seiner Zeit als Mitglied für dessen Tätigkeiten ergeben. Damit entfällt die Solidarhaftung für allfällige Schulden der übrigen Gruppenmitglieder.",
+      "id": [
+        "198282"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:198283]\n[▼ch-8]\n[%4]\n[#Administrative Erfordernisse]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "198283"
+      ],
+      "anchor": "ch-8",
+      "title": "Administrative Erfordernisse"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198284]\nAlle Gruppenmitglieder müssen nach der gleichen Abrechnungsart und -methode abrechnen. Das Geschäftsjahr muss mit Ausnahme der Holdinggesellschaft bei allen Mitgliedern identisch sein. Zudem ist die Abrechnung nach Saldosteuersatzmethode nicht möglich.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Alle Gruppenmitglieder müssen nach der gleichen Abrechnungsart und -methode abrechnen. Das Geschäftsjahr muss mit Ausnahme der Holdinggesellschaft bei allen Mitgliedern identisch sein. Zudem ist die Abrechnung nach Saldosteuersatzmethode nicht möglich.",
+      "id": [
+        "198284"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:198285]\n[▼ch-9]\n[%5]\n[#Risiken und Nebenwirkungen (RTV-Abgabe)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "198285"
+      ],
+      "anchor": "ch-9",
+      "title": "Risiken und Nebenwirkungen (RTV-Abgabe)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198286]\nUnternehmen mit einem Umsatz ab jährlich CHF 500'000 unterliegen der Radio- und TV-Abgabe (RTV). Diese Abgabe wird durch die ESTV erhoben. Für Steuerpflichtigen, welche die Gruppenbesteuerung anwenden, wird die RTV-Abgabe aufgrund des gesamten Gruppenumsatzes (ohne Innenumsätze) erhoben. Dies führt unter Umständen zu einem Wechsel der Tarifstufte. Allerdings dürfte in der Praxis der Tarifstufenwechsel sowie die erhöhte RTV-Abgabe eine zu vernachlässigende Zusatzbelastung darstellen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Unternehmen mit einem Umsatz ab jährlich CHF 500'000 unterliegen der Radio- und TV-Abgabe (RTV). Diese Abgabe wird durch die ESTV erhoben. Für Steuerpflichtigen, welche die Gruppenbesteuerung anwenden, wird die RTV-Abgabe aufgrund des gesamten Gruppenumsatzes (ohne Innenumsätze) erhoben. Dies führt unter Umständen zu einem Wechsel der Tarifstufte. Allerdings dürfte in der Praxis der Tarifstufenwechsel sowie die erhöhte RTV-Abgabe eine zu vernachlässigende Zusatzbelastung darstellen.",
+      "id": [
+        "198286"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:198287]\n[▼ch-10]\n[%6]\n[#Schlussbemerkungen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "6",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "198287"
+      ],
+      "anchor": "ch-10",
+      "title": "Schlussbemerkungen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:198288]\nDetaillierte und weitergehende Informationen sind der Infobroschüre 03 Gruppenbesteuerung zu entnehmen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Detaillierte und weitergehende Informationen sind der Infobroschüre 03 Gruppenbesteuerung zu entnehmen.",
+      "id": [
+        "198288"
+      ]
+    }
+  }
+]

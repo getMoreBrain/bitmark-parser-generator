@@ -1,0 +1,434 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:166104]\n[#Bildungsbericht]\n[@externalId:e-bildungsbericht_e4bbg4hgzroc]\n[@coverImage:https://docs.bitmark.cloud/bit-books/hgf/bildungsbericht/web-resources/images/hgf_bildungsbericht_kuean_cover2.png]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166104"
+      ],
+      "title": "Bildungsbericht",
+      "externalId": [
+        "e-bildungsbericht_e4bbg4hgzroc"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/hgf/bildungsbericht/web-resources/images/hgf_bildungsbericht_kuean_cover2.png"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166105]\n===\nKüchenangestellte/r EBA[@shortAnswer]\n===\nName:[@shortAnswer]\n===\nBetrieb:[@shortAnswer]\n===\nKlasse:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Küchenangestellte/r EBA",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Name:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Betrieb:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Klasse:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166105"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:166106]\n[#Probekochen / Kompetenznachweis]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "166106"
+      ],
+      "title": "Probekochen / Kompetenznachweis"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166107]\n[!Vorgabe: 1 x pro Semester\n1. Semester Aug. - Jan.]\nSpeisefette und Öle / Gemüse\nMilch und Milchprodukte \nEier und Eierspeisen\n===\nProbekochen\n[@shortAnswer]\n[!Zieldatum\nErfüllt per]\n===\nKompetenznachweis\n[@shortAnswer]\n[!Zieldatum\nErfüllt per]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Vorgabe: 1 x pro Semester\n1. Semester Aug. - Jan.",
+      "body": "Speisefette und Öle / Gemüse\nMilch und Milchprodukte \nEier und Eierspeisen",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Probekochen",
+          "instruction": "Zieldatum\nErfüllt per",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Kompetenznachweis",
+          "instruction": "Zieldatum\nErfüllt per",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166107"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166108]\n[!Vorgabe: 1 x pro Semester\n2. Semester Feb. - Jul.]\nFische / Kartoffeln / Getreide / Getreideprodukte\n===\nProbekochen\n[@shortAnswer]\n[!Zieldatum\nErfüllt per]\n===\nKompetenznachweis\n[@shortAnswer]\n[!Zieldatum\nErfüllt per]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Vorgabe: 1 x pro Semester\n2. Semester Feb. - Jul.",
+      "body": "Fische / Kartoffeln / Getreide / Getreideprodukte",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Probekochen",
+          "instruction": "Zieldatum\nErfüllt per",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Kompetenznachweis",
+          "instruction": "Zieldatum\nErfüllt per",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166108"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166109]\n[!Vorgabe: 1 x pro Semester\n3. Semester Aug. - Jan.]\nSchlachtfleisch / Geflügel / Salz / Kräuter / Pilze\n===\nProbekochen\n[@shortAnswer]\n[!Zieldatum\nErfüllt per]\n===\nKompetenznachweis\n[@shortAnswer]\n[!Zieldatum\nErfüllt per]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Vorgabe: 1 x pro Semester\n3. Semester Aug. - Jan.",
+      "body": "Schlachtfleisch / Geflügel / Salz / Kräuter / Pilze",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Probekochen",
+          "instruction": "Zieldatum\nErfüllt per",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Kompetenznachweis",
+          "instruction": "Zieldatum\nErfüllt per",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166109"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166110]\n[!Vorgabe: 1 x pro Semester\n4. Semester Feb. - Jul.]\nObst / Süss-Speisen / Repetieren / Vertiefen / Weiterbildung\n===\nProbekochen\n[@shortAnswer]\n[!Zieldatum\nErfüllt per]\n===\nKompetenznachweis\n[@shortAnswer]\n[!Zieldatum\nErfüllt per]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Vorgabe: 1 x pro Semester\n4. Semester Feb. - Jul.",
+      "body": "Obst / Süss-Speisen / Repetieren / Vertiefen / Weiterbildung",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Probekochen",
+          "instruction": "Zieldatum\nErfüllt per",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Kompetenznachweis",
+          "instruction": "Zieldatum\nErfüllt per",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166110"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:166111]\n[#Bildungsbericht]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "166111"
+      ],
+      "title": "Bildungsbericht"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166112]\n[!Vorgabe: 1 x pro Semester]\n===\n1. Semester Aug. - Jan.[@shortAnswer]\n[!Zieldatum\nErfüllt per]\n===\n2. Semester Feb. - Jul.[@shortAnswer]\n[!Zieldatum\nErfüllt per]\n===\n3. Semester Aug. - Jan.[@shortAnswer]\n[!Zieldatum\nErfüllt per]\n===\n4. Semester Feb. - Jul.[@shortAnswer]\n[!Zieldatum\nErfüllt per]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Vorgabe: 1 x pro Semester",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. Semester Aug. - Jan.",
+          "instruction": "Zieldatum\nErfüllt per",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2. Semester Feb. - Jul.",
+          "instruction": "Zieldatum\nErfüllt per",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "3. Semester Aug. - Jan.",
+          "instruction": "Zieldatum\nErfüllt per",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "4. Semester Feb. - Jul.",
+          "instruction": "Zieldatum\nErfüllt per",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166112"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:166113]\n[#Arbeitsrapport]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "166113"
+      ],
+      "title": "Arbeitsrapport"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166114]\n[!Vorgabe:  \nmind. 1 x pro Monat\nmind. 6 x pro Semester]\n===\n1. Semester Aug. - Jan.[@shortAnswer]\n[!Erfüllt\n1/2/3/4/5/6]\n===\n2. Semester Feb. - Jul.[@shortAnswer]\n[!Erfüllt\n1/2/3/4/5/6]\n===\n3. Semester Aug. - Jan.[@shortAnswer]\n[!Erfüllt\n1/2/3/4/5/6]\n===\n4. Semester Feb. - Jul.[@shortAnswer]\n[!Erfüllt\n1/2/3/4/5/6]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Vorgabe:  \nmind. 1 x pro Monat\nmind. 6 x pro Semester",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. Semester Aug. - Jan.",
+          "instruction": "Erfüllt\n1/2/3/4/5/6",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2. Semester Feb. - Jul.",
+          "instruction": "Erfüllt\n1/2/3/4/5/6",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "3. Semester Aug. - Jan.",
+          "instruction": "Erfüllt\n1/2/3/4/5/6",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "4. Semester Feb. - Jul.",
+          "instruction": "Erfüllt\n1/2/3/4/5/6",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166114"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166115]\nUnsere Empfehlung:\nWir empfehlen, pro Semester für jedes Leistungsziel (gemäss Gesamtübersicht Arbeitsrapport in Register 5) einen Arbeitsrapport zu erstellen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Unsere Empfehlung:\nWir empfehlen, pro Semester für jedes Leistungsziel (gemäss Gesamtübersicht Arbeitsrapport in Register 5) einen Arbeitsrapport zu erstellen.",
+      "id": [
+        "166115"
+      ]
+    }
+  }
+]

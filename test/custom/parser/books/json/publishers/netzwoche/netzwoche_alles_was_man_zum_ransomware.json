@@ -1,0 +1,260 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:164666]\n[#Alles, was man zu Ransomware wissen sollte]\n[@coverImage:https://docs.bitmark.cloud/bit-books/netzwoche/alles_was_man_zu_ransomware_wissen_sollte/web-resources/images/netzwoche_ransom_cover.png]\n[@language:de]\n[@author:Cornelia Lehle, Sales Director, G Data Schweiz]\n[@externalId:e-alles-was-man-zu-ransomware-wissen-sollt_rn07lus_pydx]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "164666"
+      ],
+      "title": "Alles, was man zu Ransomware wissen sollte",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/netzwoche/alles_was_man_zu_ransomware_wissen_sollte/web-resources/images/netzwoche_ransom_cover.png"
+      ],
+      "language": [
+        "de"
+      ],
+      "author": [
+        "Cornelia Lehle, Sales Director, G Data Schweiz"
+      ],
+      "externalId": [
+        "e-alles-was-man-zu-ransomware-wissen-sollt_rn07lus_pydx"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:164667]\nRansomware-Angriffe mit Lösegeldforderungen in Millionenhöhe sorgen wiederholt für Schlagzeilen. Cyberkriminelle verfeinern ihre Angriffe laufend und profitieren davon, dass Unternehmen immer noch allzu sorglos mit dem Schutz kritischer Daten und dem eigenen Netzwerk umgehen. Eine Bestandsaufnahme.\n|image:https://docs.bitmark.cloud/bit-books/netzwoche/alles_was_man_zu_ransomware_wissen_sollte/web-resources/images/netzwoche_alles_was_man_zu_ransomware_wissen_sollte_1.png|\n|image:https://docs.bitmark.cloud/bit-books/netzwoche/alles_was_man_zu_ransomware_wissen_sollte/web-resources/images/netzwoche_alles_was_man_zu_ransomware_wissen_sollte_2.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Ransomware-Angriffe mit Lösegeldforderungen in Millionenhöhe sorgen wiederholt für Schlagzeilen. Cyberkriminelle verfeinern ihre Angriffe laufend und profitieren davon, dass Unternehmen immer noch allzu sorglos mit dem Schutz kritischer Daten und dem eigenen Netzwerk umgehen. Eine Bestandsaufnahme.\n|image:https://docs.bitmark.cloud/bit-books/netzwoche/alles_was_man_zu_ransomware_wissen_sollte/web-resources/images/netzwoche_alles_was_man_zu_ransomware_wissen_sollte_1.png|\n|image:https://docs.bitmark.cloud/bit-books/netzwoche/alles_was_man_zu_ransomware_wissen_sollte/web-resources/images/netzwoche_alles_was_man_zu_ransomware_wissen_sollte_2.png|",
+      "id": [
+        "164667"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164668]\nDie erste Ransomware erschien bereits vor über 30 Jahren – getarnt als Programm zum Thema AIDS / HIV. Mehr als 10'000 Rechner wurden damals per Diskette infiziert. Insbesondere in den letzten zehn Jahren haben Sicherheitsexperten einen rasanten Anstieg von Ransomware-Attacken verzeichnet und werden nicht müde, davor zu warnen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die erste Ransomware erschien bereits vor über 30 Jahren – getarnt als Programm zum Thema AIDS / HIV. Mehr als 10'000 Rechner wurden damals per Diskette infiziert. Insbesondere in den letzten zehn Jahren haben Sicherheitsexperten einen rasanten Anstieg von Ransomware-Attacken verzeichnet und werden nicht müde, davor zu warnen.",
+      "id": [
+        "164668"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:164669]\n[##Was ist Ransomware?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "164669"
+      ],
+      "title": "Was ist Ransomware?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164670]\nZu Ransomware gehört jedes Schadprogramm, das Lösegeld erpresst und dabei den Zugriff auf Daten, Teile des Systems oder das gesamte System verhindert, oder vorgibt, dies zu tun. Der Begriff Ransomware wird oft synonym für Malware verwendet, die Dateien verschlüsselt und Lösegeld erpresst, sogenannte File-Encrypter. Allerdings gibt es weitere Arten wie etwa Disk-Encrypter, die den Master-Boot-Record verschlüsseln und damit den Start des Betriebssystems verhindern. Oder Fake-Encrypter: Sie täuschen lediglich vor, dass sie Dateien verschlüsseln. Eine weitere Unterart sind Screenlocker, die den Bildschirm sperren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Zu Ransomware gehört jedes Schadprogramm, das Lösegeld erpresst und dabei den Zugriff auf Daten, Teile des Systems oder das gesamte System verhindert, oder vorgibt, dies zu tun. Der Begriff Ransomware wird oft synonym für Malware verwendet, die Dateien verschlüsselt und Lösegeld erpresst, sogenannte File-Encrypter. Allerdings gibt es weitere Arten wie etwa Disk-Encrypter, die den Master-Boot-Record verschlüsseln und damit den Start des Betriebssystems verhindern. Oder Fake-Encrypter: Sie täuschen lediglich vor, dass sie Dateien verschlüsseln. Eine weitere Unterart sind Screenlocker, die den Bildschirm sperren.",
+      "id": [
+        "164670"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:164671]\n[##Ransomware – Die Entwicklung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "164671"
+      ],
+      "title": "Ransomware – Die Entwicklung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164672]\nWenig überraschend haben die Cyberkriminellen in der Corona-Pandemie ihre Angriffsbemühungen verstärkt. Laut IT-Sicherheitsforschern stieg die Anzahl von Ransomware-Angriffen seither deutlich. Und auch die Höhe der Lösegeldforderungen ist gestiegen - so nahm der durchschnittlich geforderte Betrag innerhalb 2021 von etwa 110'000 US-Dollar im ersten Quartal auf 170'000 Dollar im dritten Quartal zu. Dabei ist eine Tendenz zu beobachten: Kriminelle passen die Lösegeldforderungen an die wirtschaftliche Zahlungsfähigkeit ihrer Opfer an.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenig überraschend haben die Cyberkriminellen in der Corona-Pandemie ihre Angriffsbemühungen verstärkt. Laut IT-Sicherheitsforschern stieg die Anzahl von Ransomware-Angriffen seither deutlich. Und auch die Höhe der Lösegeldforderungen ist gestiegen - so nahm der durchschnittlich geforderte Betrag innerhalb 2021 von etwa 110'000 US-Dollar im ersten Quartal auf 170'000 Dollar im dritten Quartal zu. Dabei ist eine Tendenz zu beobachten: Kriminelle passen die Lösegeldforderungen an die wirtschaftliche Zahlungsfähigkeit ihrer Opfer an.",
+      "id": [
+        "164672"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:164673]\n2021 war die Ransomware STOP besonders aktiv. Sie war im Sommer für mehr als die Hälfte aller Erpressungsversuche verantwortlich. Die Entwickler vertrieben STOP als Ransomware-as-a-Service. Das bedeutet, dass Angreifer die Malware nach ihren eigenen Wünschen konfigurieren können. Typischerweise haben sie die Möglichkeit, die zu verschlüsselnden Dateien und die Höhe der Lösegeldforderung festzulegen. Die Konfigurationsmöglichkeiten erschweren die Identifizierung der Ransomware, weil Verwechslungsgefahr mit anderer Ransomware besteht.\n|image:https://docs.bitmark.cloud/bit-books/netzwoche/alles_was_man_zu_ransomware_wissen_sollte/web-resources/images/netzwoche_alles_was_man_zu_ransomware_wissen_sollte_3.png|\n|image:https://docs.bitmark.cloud/bit-books/netzwoche/alles_was_man_zu_ransomware_wissen_sollte/web-resources/images/netzwoche_alles_was_man_zu_ransomware_wissen_sollte_4.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "2021 war die Ransomware STOP besonders aktiv. Sie war im Sommer für mehr als die Hälfte aller Erpressungsversuche verantwortlich. Die Entwickler vertrieben STOP als Ransomware-as-a-Service. Das bedeutet, dass Angreifer die Malware nach ihren eigenen Wünschen konfigurieren können. Typischerweise haben sie die Möglichkeit, die zu verschlüsselnden Dateien und die Höhe der Lösegeldforderung festzulegen. Die Konfigurationsmöglichkeiten erschweren die Identifizierung der Ransomware, weil Verwechslungsgefahr mit anderer Ransomware besteht.\n|image:https://docs.bitmark.cloud/bit-books/netzwoche/alles_was_man_zu_ransomware_wissen_sollte/web-resources/images/netzwoche_alles_was_man_zu_ransomware_wissen_sollte_3.png|\n|image:https://docs.bitmark.cloud/bit-books/netzwoche/alles_was_man_zu_ransomware_wissen_sollte/web-resources/images/netzwoche_alles_was_man_zu_ransomware_wissen_sollte_4.png|",
+      "id": [
+        "164673"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:164674]\n[##Anatomie einer Attacke]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "164674"
+      ],
+      "title": "Anatomie einer Attacke"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164675]\nDie meisten Cyberattacken folgen einem festen Muster: Zunächst spähen die Angreifer ihr Opfer aus und sammeln Informationen. Dazu analysieren sie die Netzwerkinfrastruktur und suchen gezielt nach offenen Ports oder Access Points. Gleichzeitig sammeln sie mit professionellen Analysetools Informationen zu aktiven Maschinen, Betriebssystemen und Services. So erfahren sie den aktuellen Patch-Status oder finden möglicherweise Lücken wie ein ungepatchtes Citrix-System oder einen noch aktiven Windows-7-Rechner. Die Kriminellen werten auch Social-Media-Accounts aus, um mittels Social Engineering einen Weg in das fremde Netz zu finden. Die gefundenen Schwachstellen nutzen die Angreifer aus und schleusen den Schadcode direkt in das Zielsystem oder verschicken Mails mit Malware an Mitarbeitende des anvisierten Unternehmens.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die meisten Cyberattacken folgen einem festen Muster: Zunächst spähen die Angreifer ihr Opfer aus und sammeln Informationen. Dazu analysieren sie die Netzwerkinfrastruktur und suchen gezielt nach offenen Ports oder Access Points. Gleichzeitig sammeln sie mit professionellen Analysetools Informationen zu aktiven Maschinen, Betriebssystemen und Services. So erfahren sie den aktuellen Patch-Status oder finden möglicherweise Lücken wie ein ungepatchtes Citrix-System oder einen noch aktiven Windows-7-Rechner. Die Kriminellen werten auch Social-Media-Accounts aus, um mittels Social Engineering einen Weg in das fremde Netz zu finden. Die gefundenen Schwachstellen nutzen die Angreifer aus und schleusen den Schadcode direkt in das Zielsystem oder verschicken Mails mit Malware an Mitarbeitende des anvisierten Unternehmens.",
+      "id": [
+        "164675"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164676]\nDies alles passiert unbemerkt – ebenso wie die nächsten Schritte, in denen die Cyberkriminellen sukzessive die Kontrolle über die Systeme übernehmen. Dazu verbreiten sie das Schadprogramm immer weiter im Netzwerk und etablieren einen Rückkanal zu einem Command-and-Control-Server, mit dem sie ständig Informationen austauschen. Die Angreifer laden automatisiert einerseits neuen Schadcode nach, andererseits leiten sie die für die Täter interessanten Daten aus dem Unternehmen aus. Erst dann setzen sie zum finalen Schlag an und verschlüsseln das System beziehungsweise die wichtigsten Dateien. Dann werden die Bildschirme im Unternehmen schwarz und eine Lösegeldforderung erscheint. Die Erfahrungen zeigen, dass zwischen der Erstinfektion und dem Auftauchen eines Schadens im Schnitt 180 Tage vergehen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dies alles passiert unbemerkt – ebenso wie die nächsten Schritte, in denen die Cyberkriminellen sukzessive die Kontrolle über die Systeme übernehmen. Dazu verbreiten sie das Schadprogramm immer weiter im Netzwerk und etablieren einen Rückkanal zu einem Command-and-Control-Server, mit dem sie ständig Informationen austauschen. Die Angreifer laden automatisiert einerseits neuen Schadcode nach, andererseits leiten sie die für die Täter interessanten Daten aus dem Unternehmen aus. Erst dann setzen sie zum finalen Schlag an und verschlüsseln das System beziehungsweise die wichtigsten Dateien. Dann werden die Bildschirme im Unternehmen schwarz und eine Lösegeldforderung erscheint. Die Erfahrungen zeigen, dass zwischen der Erstinfektion und dem Auftauchen eines Schadens im Schnitt 180 Tage vergehen.",
+      "id": [
+        "164676"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:164677]\n[##Wie entferne ich Ransomware?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "164677"
+      ],
+      "title": "Wie entferne ich Ransomware?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164678]\nWer Opfer einer Attacke geworden ist, steht vor der zentralen Frage: Wie entferne ich den Schädling aus meinen Systemen? Das Problem: In der Regel löscht sich die Ransomware, nachdem sie ihr Werk vollbracht hat. Hier sind Unternehmen auf jeden Fall auf die Hilfe von Fachleuten angewiesen. Um die befallene IT-Infrastruktur restlos vom schadhaften Code zu befreien, analysieren Malware-Experten die Systeme zunächst mit speziellen Tools. Im ersten Schritt gilt es, das Problem einzugrenzen sowie den bereits entstandenen Schaden abzuschätzen, die genutzte Schadsoftware zu identifizieren und zu prüfen, ob die Täter weitere Werkzeuge eingesetzt haben. Ein wesentlicher Punkt ist die Wiederherstellung der Daten. Diese hängt unmittelbar mit der Backup-Strategie des Unternehmens zusammen. Hat eine Firma die Sicherung getrennt vom Netzwerk aufbewahrt, können die Incident-Response-Fachleute auf eine unverschlüsselte Datenbasis zugreifen und das Unternehmen schnell wieder vollständig arbeitsfähig machen. Komplizierter ist es, wenn beim Angriff die Backups ebenfalls verschlüsselt wurden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wer Opfer einer Attacke geworden ist, steht vor der zentralen Frage: Wie entferne ich den Schädling aus meinen Systemen? Das Problem: In der Regel löscht sich die Ransomware, nachdem sie ihr Werk vollbracht hat. Hier sind Unternehmen auf jeden Fall auf die Hilfe von Fachleuten angewiesen. Um die befallene IT-Infrastruktur restlos vom schadhaften Code zu befreien, analysieren Malware-Experten die Systeme zunächst mit speziellen Tools. Im ersten Schritt gilt es, das Problem einzugrenzen sowie den bereits entstandenen Schaden abzuschätzen, die genutzte Schadsoftware zu identifizieren und zu prüfen, ob die Täter weitere Werkzeuge eingesetzt haben. Ein wesentlicher Punkt ist die Wiederherstellung der Daten. Diese hängt unmittelbar mit der Backup-Strategie des Unternehmens zusammen. Hat eine Firma die Sicherung getrennt vom Netzwerk aufbewahrt, können die Incident-Response-Fachleute auf eine unverschlüsselte Datenbasis zugreifen und das Unternehmen schnell wieder vollständig arbeitsfähig machen. Komplizierter ist es, wenn beim Angriff die Backups ebenfalls verschlüsselt wurden.",
+      "id": [
+        "164678"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:164679]\n[##Lösegeld – zahlen oder nicht?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "164679"
+      ],
+      "title": "Lösegeld – zahlen oder nicht?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164680]\nWenn es um die Frage geht \"Zahlen oder nicht?\", galt bisher immer der Grundsatz \"Niemals zahlen\". Der Grund dafür: Wenn Opfer von Ransomware-Angriffen die geforderten Lösegelder zahlen, bekommt das Geschäftsmodell weiter Auftrieb. Wer die richtigen Vorkehrungen getroffen hat, ist auf der sicheren Seite. Einfach das Backup zurückspielen und im schlimmsten Fall vielleicht ein paar Stunden Arbeit zu verlieren, ist grundsätzlich das Mittel der Wahl. Doch die Erfahrung hat auch gezeigt, dass nicht jedes Unternehmen für den Ernstfall vorgesorgt hat. In diesem Worst Case ist guter Rat sehr teuer. Dann geht es darum, ob die Unternehmensleitung das Lösegeld zahlt – oder ob die Firma untergeht. Wenn es allerdings so weit kommt, muss das Unternehmen eine Entscheidung treffen – auch mit Unterstützung von Polizei und Sachverständigen. Steht fest, um welche Ransomware es sich handelt, und dass die Zahlung auch wirklich zu einer Entschlüsselung führt, dann ist die Zahlung des Lösegeldes hier vielleicht das kleinere Übel – und womöglich die letzte Hoffnung für das betroffene Unternehmen. Allerdings ist die Lösegeld-Zahlung keine Garantie, dass Unternehmen ihre Daten zurückerhalten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn es um die Frage geht \"Zahlen oder nicht?\", galt bisher immer der Grundsatz \"Niemals zahlen\". Der Grund dafür: Wenn Opfer von Ransomware-Angriffen die geforderten Lösegelder zahlen, bekommt das Geschäftsmodell weiter Auftrieb. Wer die richtigen Vorkehrungen getroffen hat, ist auf der sicheren Seite. Einfach das Backup zurückspielen und im schlimmsten Fall vielleicht ein paar Stunden Arbeit zu verlieren, ist grundsätzlich das Mittel der Wahl. Doch die Erfahrung hat auch gezeigt, dass nicht jedes Unternehmen für den Ernstfall vorgesorgt hat. In diesem Worst Case ist guter Rat sehr teuer. Dann geht es darum, ob die Unternehmensleitung das Lösegeld zahlt – oder ob die Firma untergeht. Wenn es allerdings so weit kommt, muss das Unternehmen eine Entscheidung treffen – auch mit Unterstützung von Polizei und Sachverständigen. Steht fest, um welche Ransomware es sich handelt, und dass die Zahlung auch wirklich zu einer Entschlüsselung führt, dann ist die Zahlung des Lösegeldes hier vielleicht das kleinere Übel – und womöglich die letzte Hoffnung für das betroffene Unternehmen. Allerdings ist die Lösegeld-Zahlung keine Garantie, dass Unternehmen ihre Daten zurückerhalten.",
+      "id": [
+        "164680"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:164681]\n[##Unternehmen schützen! Aber wie?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "164681"
+      ],
+      "title": "Unternehmen schützen! Aber wie?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164682]\nWenn Unternehmen sich dem Thema IT-Sicherheit verweigern, handeln sie fahrlässig und gefährden die Existenz des Unternehmens. Dabei können sie das Risiko einer Ransomware-Attacke durch zahlreiche Massnahmen deutlich reduzieren:\n\n• Der aktuelle Status der technologischen IT-Schutzmassnahmen lässt sich etwa durch einen Penetrationstest prüfen. Damit lassen sich mögliche Lücken in der IT-Sicherheit aufdecken und mit entsprechenden Massnahmen schliessen. Wichtig dabei ist: Dieser Test sollte regelmässig stattfinden, da sie nur eine Momentaufnahme des aktuellen Status abbilden. Neue Geräte, Anwendungen oder Updates verändern den Status wieder.\n• Selbstverständlich gehören eine Firewall und Endpoint-Schutz zur grundlegenden Absicherung.\n• Viel entscheidender ist aber eine Backup-Strategie sowie ein regelmässiger Test, ob die Backups auch funktionsfähig sind.\n• Passwörter sind ebenfalls ein wichtiger Baustein für die IT-Sicherheit. Insbesondere lange und komplexe Passwort-Phrasen sind besonders sicher. Der Vorteil dabei: Sichere Kennwörter müssen nicht so häufig getauscht werden.\n• Natürlich gehört auch die Schulung der Mitarbeitenden über Cybergefahren in das Massnahmenbündel. So lässt sich das Bewusstsein der Angestellten für die IT-Sicherheit schärfen, sodass sie künftig umsichtiger handeln und eine Ransomware-Attacke im besten Fall verhindern.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn Unternehmen sich dem Thema IT-Sicherheit verweigern, handeln sie fahrlässig und gefährden die Existenz des Unternehmens. Dabei können sie das Risiko einer Ransomware-Attacke durch zahlreiche Massnahmen deutlich reduzieren:\n\n• Der aktuelle Status der technologischen IT-Schutzmassnahmen lässt sich etwa durch einen Penetrationstest prüfen. Damit lassen sich mögliche Lücken in der IT-Sicherheit aufdecken und mit entsprechenden Massnahmen schliessen. Wichtig dabei ist: Dieser Test sollte regelmässig stattfinden, da sie nur eine Momentaufnahme des aktuellen Status abbilden. Neue Geräte, Anwendungen oder Updates verändern den Status wieder.\n• Selbstverständlich gehören eine Firewall und Endpoint-Schutz zur grundlegenden Absicherung.\n• Viel entscheidender ist aber eine Backup-Strategie sowie ein regelmässiger Test, ob die Backups auch funktionsfähig sind.\n• Passwörter sind ebenfalls ein wichtiger Baustein für die IT-Sicherheit. Insbesondere lange und komplexe Passwort-Phrasen sind besonders sicher. Der Vorteil dabei: Sichere Kennwörter müssen nicht so häufig getauscht werden.\n• Natürlich gehört auch die Schulung der Mitarbeitenden über Cybergefahren in das Massnahmenbündel. So lässt sich das Bewusstsein der Angestellten für die IT-Sicherheit schärfen, sodass sie künftig umsichtiger handeln und eine Ransomware-Attacke im besten Fall verhindern.",
+      "id": [
+        "164682"
+      ]
+    }
+  }
+]

@@ -1,0 +1,752 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:232658]\n[#5. Semester - Psychiatrie Geschichte]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/card2brain/psychiatrie_geschichte/web-resources/images/card2brain_psychiatrische_cover.png]\n[@externalId:e-5-semester-psychiatrie-geschi_kc1gcu82q6uh]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232658"
+      ],
+      "title": "5. Semester - Psychiatrie Geschichte",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/card2brain/psychiatrie_geschichte/web-resources/images/card2brain_psychiatrische_cover.png"
+      ],
+      "externalId": [
+        "e-5-semester-psychiatrie-geschi_kc1gcu82q6uh"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:232659]\n[#Osteopathie]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "232659"
+      ],
+      "title": "Osteopathie"
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232660]\nWelche antiken therapeutischen Mittel gab es?\n==\nGebete, Hydrotherapie, Bäder und Massagen, Gymnastik (Griechenland, 1. Jh. v. Chr.), Evakuierungsmittel(Erbrechen), Waschungen, Blutungsspülungen (seit 2000 Jahren)\n--\nGeisselungen, Fesseln, Ketten, Kalte Dusche, Trepanationen und Lobotomien Kunst, Musik,Beschäftigungstherapie, Psychotherapie, Psychopharmaka, EKT, Intrakranielle Stimulation",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche antiken therapeutischen Mittel gab es?\n==\nGebete, Hydrotherapie, Bäder und Massagen, Gymnastik (Griechenland, 1. Jh. v. Chr.), Evakuierungsmittel(Erbrechen), Waschungen, Blutungsspülungen (seit 2000 Jahren)\n--\nGeisselungen, Fesseln, Ketten, Kalte Dusche, Trepanationen und Lobotomien Kunst, Musik,Beschäftigungstherapie, Psychotherapie, Psychopharmaka, EKT, Intrakranielle Stimulation",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232660"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232661]\nNenne die 7 philosophischen Ärzte.\n==\nVorsakratiker: Thales bis Demokrit\n--\nHippokrates 460-377 v. Chr.\n--\nSokrates 470-399 v. Chr.\n--\nPlaton 428-348 v. Chr. \n--\nAristoteles 382-322 v. Chr.\n--\nGalen 129-200\n--\nCelsus II.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne die 7 philosophischen Ärzte.\n==\nVorsakratiker: Thales bis Demokrit\n--\nHippokrates 460-377 v. Chr.\n--\nSokrates 470-399 v. Chr.\n--\nPlaton 428-348 v. Chr. \n--\nAristoteles 382-322 v. Chr.\n--\nGalen 129-200\n--\nCelsus II.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232661"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232662]\nWas ist die Aussage der Vorsakratiker (Thales bis Demokrit)?\n==\n1. Kein Unterschied zwischen lebenden und rohen Körpern: Physiologische Konzepte der Materie angewandt auf die Physiologie\n--\n2. Die Welt besteht aus 4 Elementen: Doktrin der 4 Stimmungen und 4 Temperamente *\n--\n3. Die Welt ist ein ständiger Austausch zwischen dem Menschen und dem Universum.\n--\n4. Alles entwickelt sich mit der Zeit: Prognose Theorie * oder Geschichte der Krankheit \"geprägte Form die sich lebend entwickelt\" Goethe",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was ist die Aussage der Vorsakratiker (Thales bis Demokrit)?\n==\n1. Kein Unterschied zwischen lebenden und rohen Körpern: Physiologische Konzepte der Materie angewandt auf die Physiologie\n--\n2. Die Welt besteht aus 4 Elementen: Doktrin der 4 Stimmungen und 4 Temperamente *\n--\n3. Die Welt ist ein ständiger Austausch zwischen dem Menschen und dem Universum.\n--\n4. Alles entwickelt sich mit der Zeit: Prognose Theorie * oder Geschichte der Krankheit \"geprägte Form die sich lebend entwickelt\" Goethe",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232662"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232663]\nWer war Hippokrates und was ist seine Aussage?\n==\nGroßer Reisender, Pragmatischer Naturforscher, Dogmatiker, für den die Ursachen von Krankheiten natürlich waren und durch Getränke und Essen geheilt werden konnten und die \"Phobien\" auf das Ungleichgewicht der Stimmungen zurückzuführen waren, die sich in den Organen ansammeln.\n--> humorale Theorie",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer war Hippokrates und was ist seine Aussage?\n==\nGroßer Reisender, Pragmatischer Naturforscher, Dogmatiker, für den die Ursachen von Krankheiten natürlich waren und durch Getränke und Essen geheilt werden konnten und die \"Phobien\" auf das Ungleichgewicht der Stimmungen zurückzuführen waren, die sich in den Organen ansammeln.\n--> humorale Theorie",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232663"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark++]\n[@id:232664]\nWas besagt die humorale Theorie von Hippokrates?\n==\nPhysische Krankheitsursachen\n--\nDas Ungleichgewicht der 4 Körpersäfte (Flüssigkeiten), die sich in den Organen ansammeln, wie **gelbe Galle** (heiß und trocken wie Feuer), **schwarze Galle** (kalt und trocken wie Erde), **Schleim** (kalt und nass wie Wasser) und **Blut** (heiß und nass wie Luft).\n--\nEs gäbe zwei Arten von Wahnsinn:\ndas Göttliche (schöpferisch und inspiriert) und das Böse (Manie) in 3 Formen oder Ordnungen von Geisteskrankheiten:*\n• **Phoenitis** mit akutem fiebrigen Delirium.\n• **Manie** mit Erregung ohne Fieber\n• **Chronische Melancholie** ohne Unruhe und Fieber",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark++",
+      "body": "Was besagt die humorale Theorie von Hippokrates?\n==\nPhysische Krankheitsursachen\n--\nDas Ungleichgewicht der 4 Körpersäfte (Flüssigkeiten), die sich in den Organen ansammeln, wie **gelbe Galle** (heiß und trocken wie Feuer), **schwarze Galle** (kalt und trocken wie Erde), **Schleim** (kalt und nass wie Wasser) und **Blut** (heiß und nass wie Luft).\n--\nEs gäbe zwei Arten von Wahnsinn:\ndas Göttliche (schöpferisch und inspiriert) und das Böse (Manie) in 3 Formen oder Ordnungen von Geisteskrankheiten:*\n• **Phoenitis** mit akutem fiebrigen Delirium.\n• **Manie** mit Erregung ohne Fieber\n• **Chronische Melancholie** ohne Unruhe und Fieber",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232664"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232665]\nWer war Sokrates und was war seine Aussage?\n==\nFür ihn ist der Wahnsinn mystisch-poetischer Natur, verbunden mit Wandern und Gewalt, der durch \"Erkenne dich selbst\" (vorgetäuschte Unwissenheit) über \"Dialog\" und Infragestellung, genannt die Kunst der \"Maieutik\", bewältigt wird, vgl. Maïa aîné des pléiades, die durch Induktion und mit Ironie die Geburt von Ideen im Gesprächspartner (Metakognition) und das Lernen begünstigt, indem sie ihn aktiv macht.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer war Sokrates und was war seine Aussage?\n==\nFür ihn ist der Wahnsinn mystisch-poetischer Natur, verbunden mit Wandern und Gewalt, der durch \"Erkenne dich selbst\" (vorgetäuschte Unwissenheit) über \"Dialog\" und Infragestellung, genannt die Kunst der \"Maieutik\", bewältigt wird, vgl. Maïa aîné des pléiades, die durch Induktion und mit Ironie die Geburt von Ideen im Gesprächspartner (Metakognition) und das Lernen begünstigt, indem sie ihn aktiv macht.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232665"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark++]\n[@id:232666]\nWer war Platon und was war seine Aussage?\n==\nAristokrat von Athen (Schüler von Sokrates, Idealist), dessen Ideal dieses universelle und unveränderliche \"vollkommene Wesen\" ist, wo etwas vom Göttlichen in der unvollkommenen Kopie des Menschen wäre, geordnet in 3 Ordnungen:\n• Das Wir\n• Die unsterbliche Seele, Gefangener des Körpers, dazu bestimmt, gerichtet zu werden\n• Göttlich-prophetische oder physische Verrücktheit\n--\nIn seinem dialogischen Werk bezeichnet der dialektische \"himmlische\" Logos gegenüber der \"irdischen\" Lüge einen Schritt und einen Weg, einen fortschreitenden Aufstieg zum Wahren, weit entfernt von Illusionen der Sinne und Überzeugungen rein sensibler oder phantasievoller Natur, um die Wirklichkeit durch Ideen besser zu erfassen. Der Gedanke erhebt sich also aus der Meinung (die \"Doxa\").\n--\n**Das (absolute) Gute**, das gemeinsame Ziel, das das Göttliche bezeichnet: höchstes Prinzip, das der Existenz und dem Wesen überlegen ist und sie in Würde und Macht bei weitem übertrifft, Ursache alles Guten und Schönen, das seine Wahrheit und sein Leben allen erkennbaren Objekten vermittelt.\n--\nNoch bevor der Demiurg den Körper bildet, stellt er die Seele in den Mittelpunkt des Universums, so dass sie sich überall ausbreitet und den Körper selbst umfasst. Um ihn zu schaffen, kombiniert er 3 Elemente.\n--\n**Die Seele der Welt** (__L’âme du monde__) hätte also eine mathematische und musikalische Struktur, die sich uns in der Natur und insbesondere im Modell der Sterne offenbart, ein Kosmos, der durch die Proportionen \"harmonisiert\" wird, die ihm seine Vollkommenheit und Schönheit verleihen.\n--\nIntellektualisierte und disziplinierte Liebe verschmilzt mit der Dialektik, deren Dynamik und Leben, welches sie verkörpert: mächtiges Instrument des Zugangs zum Wahren durch Knappheit, Mangel & Armut, das auf unsere Unvollständigkeit und Leere hinweist und einen liebevollen Impuls zu dem provoziert, was wir nicht besitzen, ein Streben nach Schönheit selbst",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark++",
+      "body": "Wer war Platon und was war seine Aussage?\n==\nAristokrat von Athen (Schüler von Sokrates, Idealist), dessen Ideal dieses universelle und unveränderliche \"vollkommene Wesen\" ist, wo etwas vom Göttlichen in der unvollkommenen Kopie des Menschen wäre, geordnet in 3 Ordnungen:\n• Das Wir\n• Die unsterbliche Seele, Gefangener des Körpers, dazu bestimmt, gerichtet zu werden\n• Göttlich-prophetische oder physische Verrücktheit\n--\nIn seinem dialogischen Werk bezeichnet der dialektische \"himmlische\" Logos gegenüber der \"irdischen\" Lüge einen Schritt und einen Weg, einen fortschreitenden Aufstieg zum Wahren, weit entfernt von Illusionen der Sinne und Überzeugungen rein sensibler oder phantasievoller Natur, um die Wirklichkeit durch Ideen besser zu erfassen. Der Gedanke erhebt sich also aus der Meinung (die \"Doxa\").\n--\n**Das (absolute) Gute**, das gemeinsame Ziel, das das Göttliche bezeichnet: höchstes Prinzip, das der Existenz und dem Wesen überlegen ist und sie in Würde und Macht bei weitem übertrifft, Ursache alles Guten und Schönen, das seine Wahrheit und sein Leben allen erkennbaren Objekten vermittelt.\n--\nNoch bevor der Demiurg den Körper bildet, stellt er die Seele in den Mittelpunkt des Universums, so dass sie sich überall ausbreitet und den Körper selbst umfasst. Um ihn zu schaffen, kombiniert er 3 Elemente.\n--\n**Die Seele der Welt** (__L’âme du monde__) hätte also eine mathematische und musikalische Struktur, die sich uns in der Natur und insbesondere im Modell der Sterne offenbart, ein Kosmos, der durch die Proportionen \"harmonisiert\" wird, die ihm seine Vollkommenheit und Schönheit verleihen.\n--\nIntellektualisierte und disziplinierte Liebe verschmilzt mit der Dialektik, deren Dynamik und Leben, welches sie verkörpert: mächtiges Instrument des Zugangs zum Wahren durch Knappheit, Mangel & Armut, das auf unsere Unvollständigkeit und Leere hinweist und einen liebevollen Impuls zu dem provoziert, was wir nicht besitzen, ein Streben nach Schönheit selbst",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232666"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark++]\n[@id:232667]\nWer war Aristoteles und was ar seine Aussage?\n==\nTutor von Alexander dem Großen und Schüler von Platon, aber realistischer und konkreter, über den gesprochen wird:\n• Individualität und Macht\n• Eroberung von Liebe und gegenseitiger Freundschaft - jenseits von Unvollkommenheiten\n• Lebensformen von zunehmender Komplexität vgl. vergleichende Anatomie (Herzwärme, Puls, Pneuma & 3 Seelen* (3 Seelentheorie)).\n• Gesundheit durch Ernährung und Bewegung\n• Allopathie: Medikamente mit gegenteiliger Wirkung zu pathologischen Phänomenen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark++",
+      "body": "Wer war Aristoteles und was ar seine Aussage?\n==\nTutor von Alexander dem Großen und Schüler von Platon, aber realistischer und konkreter, über den gesprochen wird:\n• Individualität und Macht\n• Eroberung von Liebe und gegenseitiger Freundschaft - jenseits von Unvollkommenheiten\n• Lebensformen von zunehmender Komplexität vgl. vergleichende Anatomie (Herzwärme, Puls, Pneuma & 3 Seelen* (3 Seelentheorie)).\n• Gesundheit durch Ernährung und Bewegung\n• Allopathie: Medikamente mit gegenteiliger Wirkung zu pathologischen Phänomenen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232667"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232668]\nNenne die 3 Seelen der 3-Seelentheorie von Aristoteles.\n==\nRational (Verstand, Vernunft, Sprache) --> Zeitwahrnehmung, moralische Entscheidung\n--\nSensibel (wie die der Tiere) --> Wahrnehmungen, Wünsche, Appetit, Mobilität, Phantasie, Gedächtnis, soziales Leben\n--\nVegetativ (wie Pflanzen) --> Ernährung, Wachstum, Fortpflanzung, Absterben",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne die 3 Seelen der 3-Seelentheorie von Aristoteles.\n==\nRational (Verstand, Vernunft, Sprache) --> Zeitwahrnehmung, moralische Entscheidung\n--\nSensibel (wie die der Tiere) --> Wahrnehmungen, Wünsche, Appetit, Mobilität, Phantasie, Gedächtnis, soziales Leben\n--\nVegetativ (wie Pflanzen) --> Ernährung, Wachstum, Fortpflanzung, Absterben",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232668"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark++]\n[@id:232669]\nNenne und definiere die 4 Temperamente aus der Theorie von Galen (angelehnt an humorale Theorie).\n==\n**Phlegmatisch**\n• träge Lymphgefäße\n• Hypophysärer Schleim (Phlegma)\n• Kalt und nass (Wasser)\n--\n**Melancholisch**\n• traurig atrabilär\n• schwarze Galle der Milz (colera nigra)\n• \"galle\" hypochondrische Anfälle von Melancholie.\n• Kalt und trocken (Erde)\n• Saturn\n--\n**Blut**\n• Heiter\n• Überschüssiges Blut (Sanguis)\n• Heiß und feucht (Luft)\n--\n**Gallenartig**\n• wütend\n• gelbe Galle (lateinisch: colera)\n• Heiß und trocken (Feuer)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark++",
+      "body": "Nenne und definiere die 4 Temperamente aus der Theorie von Galen (angelehnt an humorale Theorie).\n==\n**Phlegmatisch**\n• träge Lymphgefäße\n• Hypophysärer Schleim (Phlegma)\n• Kalt und nass (Wasser)\n--\n**Melancholisch**\n• traurig atrabilär\n• schwarze Galle der Milz (colera nigra)\n• \"galle\" hypochondrische Anfälle von Melancholie.\n• Kalt und trocken (Erde)\n• Saturn\n--\n**Blut**\n• Heiter\n• Überschüssiges Blut (Sanguis)\n• Heiß und feucht (Luft)\n--\n**Gallenartig**\n• wütend\n• gelbe Galle (lateinisch: colera)\n• Heiß und trocken (Feuer)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232669"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232670]\nNenne die 3 Visionen nach Celsus II.\n==\n**Occidentale/ Westliche Auffassung***: hellenistisch, hippokratisch, ernährungswissenschaftlich, Locator\n--\n**Orientalisches Design***:Chinesisch und Ayurvedisch, Temporal, Ernährungswissenschaftler\n--\n**Stimmungstheorie***: Kosmogonische Darstellung, die abwegig, irrational und ideologisch ist und nicht auf Beobachtung beruht.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne die 3 Visionen nach Celsus II.\n==\n**Occidentale/ Westliche Auffassung***: hellenistisch, hippokratisch, ernährungswissenschaftlich, Locator\n--\n**Orientalisches Design***:Chinesisch und Ayurvedisch, Temporal, Ernährungswissenschaftler\n--\n**Stimmungstheorie***: Kosmogonische Darstellung, die abwegig, irrational und ideologisch ist und nicht auf Beobachtung beruht.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232670"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232671]\nWas ist die Hexenjagd? Wann wurde sie Entkriminalisiert?\n==\n1. Im 14. Jahrhundert verlagerte sich der Kampf gegen religiöse Irrlehren allmählich vom Kampf gegen religiöse Irrlehren auf den Kampf gegen Hexerei, der einen bösen Inhalt anzunehmen begann.\n--\n2. Im folgenden Jahrhundert wird der Stereotyp der modernen Hexe und des Sabbats etabliert und die ersten großen Scheiterhaufen werden angezündet.\n--\n3. Die Jahre 1570 bis 1620 sind der Höhepunkt der Verfolgungen und Repressionen in Europa.\n--\n4. Schrittweise Entkriminalisierung der Hexerei * seit den 1680er Jahren und im Laufe der Aufklärung.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was ist die Hexenjagd? Wann wurde sie Entkriminalisiert?\n==\n1. Im 14. Jahrhundert verlagerte sich der Kampf gegen religiöse Irrlehren allmählich vom Kampf gegen religiöse Irrlehren auf den Kampf gegen Hexerei, der einen bösen Inhalt anzunehmen begann.\n--\n2. Im folgenden Jahrhundert wird der Stereotyp der modernen Hexe und des Sabbats etabliert und die ersten großen Scheiterhaufen werden angezündet.\n--\n3. Die Jahre 1570 bis 1620 sind der Höhepunkt der Verfolgungen und Repressionen in Europa.\n--\n4. Schrittweise Entkriminalisierung der Hexerei * seit den 1680er Jahren und im Laufe der Aufklärung.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232671"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark++]\n[@id:232672]\nWas war im Mittelalter der Karneval? Wie wurde es genannt und was würde getragen?\n==\nallegorischer Spass\n--\nBis vor einigen Jahren war die Fasnacht in einigen Krankenhäusern in Deutschland und der Schweiz \"das Fest der Narren\".\n--\nDer einzige Tag, an dem sie zum Lachen herausgeputzt in einer Maskenparade auf den Straßen vor neugierigen und etwas verlegenen Zuschauern verrückt werden konnten.\n--\nMasken* des Hofnarren des Königs:\n• \"Unsere Könige im Leben sind Mauern zwischen Menschen: wer sie niederreißt, macht entweder die Revolution oder den Karneval.\n• Das maskierte Gesicht entgeht uns wie Wasser, die Substanz der Dummheit: Komplize des Wahnsinns, aber auch ambivalent.\n• Die Karnevalssimulation verbirgt die Wahrheit, die die Realität nicht zeigen kann.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark++",
+      "body": "Was war im Mittelalter der Karneval? Wie wurde es genannt und was würde getragen?\n==\nallegorischer Spass\n--\nBis vor einigen Jahren war die Fasnacht in einigen Krankenhäusern in Deutschland und der Schweiz \"das Fest der Narren\".\n--\nDer einzige Tag, an dem sie zum Lachen herausgeputzt in einer Maskenparade auf den Straßen vor neugierigen und etwas verlegenen Zuschauern verrückt werden konnten.\n--\nMasken* des Hofnarren des Königs:\n• \"Unsere Könige im Leben sind Mauern zwischen Menschen: wer sie niederreißt, macht entweder die Revolution oder den Karneval.\n• Das maskierte Gesicht entgeht uns wie Wasser, die Substanz der Dummheit: Komplize des Wahnsinns, aber auch ambivalent.\n• Die Karnevalssimulation verbirgt die Wahrheit, die die Realität nicht zeigen kann.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232672"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232673]\nWas waren im Mittelalter die Werke der Nächstenliebe?\n==\nDie Klöster und Hospitäler (III) sammeln die Armen und Pilger durch Geschenke und Vermächtnisse um 25.\n--\nDas erste Krankenhaus * wurde 374 von Bischof Basilius von Cäsarea in Kappadokien für Leprakranke gebaut.\n--\n* Die Großen Hospitalorden (XII.) übernahmen die Herrenhäuser der Templer",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was waren im Mittelalter die Werke der Nächstenliebe?\n==\nDie Klöster und Hospitäler (III) sammeln die Armen und Pilger durch Geschenke und Vermächtnisse um 25.\n--\nDas erste Krankenhaus * wurde 374 von Bischof Basilius von Cäsarea in Kappadokien für Leprakranke gebaut.\n--\n* Die Großen Hospitalorden (XII.) übernahmen die Herrenhäuser der Templer",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232673"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232674]\nWas war die Hospitalität im Mittelalter für ein Ort im Mittelalter? Was passierte da?\n==\nKein Platz für Verrückte, nicht einmal das Krankenhaus!\n--\nDer Kodex Justinians (534) unterstellt die byzantinischen Krankenhäuser der Autorität des Bischofs.\n--\nDie Regel des heiligen Benedikt (540) befürwortet medizinische Hilfe, Exorzismus gegen Hexerei, Demut und Buße.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was war die Hospitalität im Mittelalter für ein Ort im Mittelalter? Was passierte da?\n==\nKein Platz für Verrückte, nicht einmal das Krankenhaus!\n--\nDer Kodex Justinians (534) unterstellt die byzantinischen Krankenhäuser der Autorität des Bischofs.\n--\nDie Regel des heiligen Benedikt (540) befürwortet medizinische Hilfe, Exorzismus gegen Hexerei, Demut und Buße.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232674"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232675]\nWas besagt das römische Recht im Mittelalter?\n==\nZiviler Arbeitsunfähigkeitsstatus aufgrund von Geisteskrankheit\n--\nStraferlassungsverfahren mit dem Begriff der Verantwortungslosigkeit angesichts der begangenen Straftaten\n--\nBeschlagnahme von Eigentum Vormundschaft und lebenslange Gefangenschaft\n-- \n\"alienatio mentis\"\n--\nKorrespondenzen und Dissonanzen auf medizinischer, juristischer und theologischer Ebene zur Definition des psychisch Kranken: Der Inkompetente, der Geisteskranke/ Narr, der Furiosus, der Dummkopf/ Verrückte.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was besagt das römische Recht im Mittelalter?\n==\nZiviler Arbeitsunfähigkeitsstatus aufgrund von Geisteskrankheit\n--\nStraferlassungsverfahren mit dem Begriff der Verantwortungslosigkeit angesichts der begangenen Straftaten\n--\nBeschlagnahme von Eigentum Vormundschaft und lebenslange Gefangenschaft\n-- \n\"alienatio mentis\"\n--\nKorrespondenzen und Dissonanzen auf medizinischer, juristischer und theologischer Ebene zur Definition des psychisch Kranken: Der Inkompetente, der Geisteskranke/ Narr, der Furiosus, der Dummkopf/ Verrückte.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232675"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232676]\nIn der arabisch-muslimischen Medizin würde das erste Asyl errichtet. Wann und wo?\n==\n705 in Bagdad\n--\nAndere Irrenhäuser wie das Bimaristan von Aleppo sind das Leprosarium von Damaskus, Fes und Kairo im Jahr 800\n--\nDie Betreuung war kostenlos, aber im Falle des Todes durch einen staatlich kontrollierten Tod von Dienstmädchen wurde Eigentum zurückgehalten. Den Familien wurde geholfen & die Kranken erhielten bei der Entlassung eine Barauszahlung.\n--\nNächstenliebe im Herzen der Stadt",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "In der arabisch-muslimischen Medizin würde das erste Asyl errichtet. Wann und wo?\n==\n705 in Bagdad\n--\nAndere Irrenhäuser wie das Bimaristan von Aleppo sind das Leprosarium von Damaskus, Fes und Kairo im Jahr 800\n--\nDie Betreuung war kostenlos, aber im Falle des Todes durch einen staatlich kontrollierten Tod von Dienstmädchen wurde Eigentum zurückgehalten. Den Familien wurde geholfen & die Kranken erhielten bei der Entlassung eine Barauszahlung.\n--\nNächstenliebe im Herzen der Stadt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232676"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232677]\nWer war Avicenna* oder Abu Ali al-Hussein ibn-Abdullah Ibn-Sina 980- 1037?\n==\n\"Scheich el-Raïs\" Prinz der Gelehrten, der größte aller Ärzte, der dritte Meister (nach Aristoteles und Al-Fârâbî) beendete den Hund der Medizin (Kitab Al Qanûn fi Al-Tibb) in 1020 Gründung der Medizin vom 12. -17. (Beginn der Renaissance)\n--\nZwischen 1150 und 1187 von Gerard von Cremona ins Lateinische übersetzt, 1473 in Mailand in hebräischer Sprache gedruckt, 1527 in Venedig und 1593 in Rom.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer war Avicenna* oder Abu Ali al-Hussein ibn-Abdullah Ibn-Sina 980- 1037?\n==\n\"Scheich el-Raïs\" Prinz der Gelehrten, der größte aller Ärzte, der dritte Meister (nach Aristoteles und Al-Fârâbî) beendete den Hund der Medizin (Kitab Al Qanûn fi Al-Tibb) in 1020 Gründung der Medizin vom 12. -17. (Beginn der Renaissance)\n--\nZwischen 1150 und 1187 von Gerard von Cremona ins Lateinische übersetzt, 1473 in Mailand in hebräischer Sprache gedruckt, 1527 in Venedig und 1593 in Rom.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232677"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232678]\nWer war Al-Tabar oder Ali Ibn Sahl 838-870 * und was hat er erstellt?\n==\nErste Enzyklopädie der Medizin*\n--\n\"Firdous al-Hikmab.\"\n--\n(360 Kapitel: Pädiatrie, Soziologie, Psychologie, Psychotherapie, Wahnvorstellungen und imaginäre Übel), dessen Autor der Arzt des Kalifen ist, ein konvertierter Jude, Sohn eines bekannten persischen Astrologen aus Tabaristan.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer war Al-Tabar oder Ali Ibn Sahl 838-870 * und was hat er erstellt?\n==\nErste Enzyklopädie der Medizin*\n--\n\"Firdous al-Hikmab.\"\n--\n(360 Kapitel: Pädiatrie, Soziologie, Psychologie, Psychotherapie, Wahnvorstellungen und imaginäre Übel), dessen Autor der Arzt des Kalifen ist, ein konvertierter Jude, Sohn eines bekannten persischen Astrologen aus Tabaristan.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232678"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232679]\nWer war Ibn Khaldun*Abd al-Rahman 1332-1406? (12. Jahrhundert)\n==\nHofarzt (Fèz, Tlemcen), Historiker und Soziologe, geboren in Tunis und gestorben in Kairo, für den **die Umwelt einen entscheidenden Einfluss auf das Individuum hat mit der Dominanz* des erworbenen Wissens über das Angeborene, des gelebten Geschehens über die Vererbung, der Kultur über die Natur.**\n--\nBekannt für seine Prolegomena gegen irrationale, nichtwissenschaftliche magische, horoskopische und kabbalistische Praktiken.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer war Ibn Khaldun*Abd al-Rahman 1332-1406? (12. Jahrhundert)\n==\nHofarzt (Fèz, Tlemcen), Historiker und Soziologe, geboren in Tunis und gestorben in Kairo, für den **die Umwelt einen entscheidenden Einfluss auf das Individuum hat mit der Dominanz* des erworbenen Wissens über das Angeborene, des gelebten Geschehens über die Vererbung, der Kultur über die Natur.**\n--\nBekannt für seine Prolegomena gegen irrationale, nichtwissenschaftliche magische, horoskopische und kabbalistische Praktiken.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232679"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232680]\nWo wurde die erste medizinische Schule im 13. Jahrhundert errichtet?\n==\nMontpellier\n--\nDie älteste in Betrieb befindliche Anlage der Welt\n--\nIm Jahre 1181 beschloss Guilhelm VIII., Herr von Montpellier, dass die Fakultät allen offen stehen sollte, ohne Einschränkung und ohne Unterschied der Konfession oder Herkunft.\n--\nDennoch behielt die Kirche die Kontrolle über die neue Universität, aber Vormundschaft war verständnisvoller\n--\nAm 26. Oktober 1289 richtete Papst Nikolaus IV. von Rom aus die Apostolische Konstitution \"Quia Sapientia\" an alle Ärzte und Studenten der Stadt Montpellier und schuf damit offiziell die Universität Montpellier, in der Jura, Medizin, Kunst und Theologie vereint sind.\n--\nDie Medizinische Fakultät empfängt Studenten aus ganz Europa, die großes Ansehen genießen und den Ruf haben, das Wissen von Arabern und Juden durch den doppelten Beitrag geerbt zu haben: jüdisch und spanisch-maurisch auf der einen Seite und italienisch-salernitisch auf der anderen.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wo wurde die erste medizinische Schule im 13. Jahrhundert errichtet?\n==\nMontpellier\n--\nDie älteste in Betrieb befindliche Anlage der Welt\n--\nIm Jahre 1181 beschloss Guilhelm VIII., Herr von Montpellier, dass die Fakultät allen offen stehen sollte, ohne Einschränkung und ohne Unterschied der Konfession oder Herkunft.\n--\nDennoch behielt die Kirche die Kontrolle über die neue Universität, aber Vormundschaft war verständnisvoller\n--\nAm 26. Oktober 1289 richtete Papst Nikolaus IV. von Rom aus die Apostolische Konstitution \"Quia Sapientia\" an alle Ärzte und Studenten der Stadt Montpellier und schuf damit offiziell die Universität Montpellier, in der Jura, Medizin, Kunst und Theologie vereint sind.\n--\nDie Medizinische Fakultät empfängt Studenten aus ganz Europa, die großes Ansehen genießen und den Ruf haben, das Wissen von Arabern und Juden durch den doppelten Beitrag geerbt zu haben: jüdisch und spanisch-maurisch auf der einen Seite und italienisch-salernitisch auf der anderen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232680"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232681]\nRenaissance: 14. Jh. - Ära der Spezialisierung\nWas besagt Sébastien Brant mit \"Narrenschiff oder das Schiff der Narren\"?\n==\nSatirisches Werk, das 1494 von Sébastien Brant aus Straßburg in Basel auf Deutsch veröffentlicht wurde.\n--\nPhilosophische Studie der Welt, ihrer Paradoxien und Laster (symbolisches Schiff, in dem menschliche Torheiten und Schwächen zur Schau gestellt werden: Scharlatanerie, \nUmherirren, Geiz, Wucher, Völlerei, Wollust, Trunkenheit, Tanz).\n--\nFreiheit von Bequemlichkeit Satirische Allegorie (Karneval)\n--\nMoralisierende antiklerikale Kritik",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Renaissance: 14. Jh. - Ära der Spezialisierung\nWas besagt Sébastien Brant mit \"Narrenschiff oder das Schiff der Narren\"?\n==\nSatirisches Werk, das 1494 von Sébastien Brant aus Straßburg in Basel auf Deutsch veröffentlicht wurde.\n--\nPhilosophische Studie der Welt, ihrer Paradoxien und Laster (symbolisches Schiff, in dem menschliche Torheiten und Schwächen zur Schau gestellt werden: Scharlatanerie, \nUmherirren, Geiz, Wucher, Völlerei, Wollust, Trunkenheit, Tanz).\n--\nFreiheit von Bequemlichkeit Satirische Allegorie (Karneval)\n--\nMoralisierende antiklerikale Kritik",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232681"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232682]\nWas passierte grob in der Renaissance 16.-17. Jh.?\n==\n1525: Übersetzung von Hippokrates,\n--\n1550: Neuausgabe von Galen in Venedig\n--\n1570: medizinischer Status und Toleranz\n--\nChirurgie, Alchimie (Ambroise Paré, André Vésale)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was passierte grob in der Renaissance 16.-17. Jh.?\n==\n1525: Übersetzung von Hippokrates,\n--\n1550: Neuausgabe von Galen in Venedig\n--\n1570: medizinischer Status und Toleranz\n--\nChirurgie, Alchimie (Ambroise Paré, André Vésale)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232682"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232683]\nWofür war Descartes bekannt?\n==\nBekannt für seinen Dualismus* (kartesianisch):\n--\nTrennung von Seele (res cogitans) und Körper (res extensa).\n--\nWahnsinn ist eine natürliche Krankheit",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wofür war Descartes bekannt?\n==\nBekannt für seinen Dualismus* (kartesianisch):\n--\nTrennung von Seele (res cogitans) und Körper (res extensa).\n--\nWahnsinn ist eine natürliche Krankheit",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232683"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232684]\nWarum gingen in der Renaissance die Krankenhäuser Bankrott? Was passierte mit den Verrückten?\n==\nMaisons de force (1764): Private Einrichtungen werden geschlossen.\n--\nWahnsinn gilt nach gesundem Menschenverstand als gefährlich und empörend *\n--\n15% der Verrückten werden unter Zwang durch Siegelschreiben* eingesperrt (Le Roy Louis XV)\n--\nBedingte Ausreise in Begleitung der Familie",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Warum gingen in der Renaissance die Krankenhäuser Bankrott? Was passierte mit den Verrückten?\n==\nMaisons de force (1764): Private Einrichtungen werden geschlossen.\n--\nWahnsinn gilt nach gesundem Menschenverstand als gefährlich und empörend *\n--\n15% der Verrückten werden unter Zwang durch Siegelschreiben* eingesperrt (Le Roy Louis XV)\n--\nBedingte Ausreise in Begleitung der Familie",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232684"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232685]\nWas passierte im 18. Jahrhundert (Aufklärung)?\n==\nKlassifikationen* (Linne in der Botanik, Cuvier und Lamarck in der Zoologie)\n--\nPsychische Störungen identifiziert*, aber nicht getrennt* von körperlichen Störungen\n--\nNosographien von François Boissier de Sauvage, 1763\n--\nKrankenhausversorgung* noch nach der Humortheorie der alten Griechen\n--\nPsychologische Behandlung*: moralisch, sanft und fürsorglich, Vertrauen fördernd.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was passierte im 18. Jahrhundert (Aufklärung)?\n==\nKlassifikationen* (Linne in der Botanik, Cuvier und Lamarck in der Zoologie)\n--\nPsychische Störungen identifiziert*, aber nicht getrennt* von körperlichen Störungen\n--\nNosographien von François Boissier de Sauvage, 1763\n--\nKrankenhausversorgung* noch nach der Humortheorie der alten Griechen\n--\nPsychologische Behandlung*: moralisch, sanft und fürsorglich, Vertrauen fördernd.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232685"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232686]\nWer war Philippe Pinel 1745-1826?\n==\nStammt aus Chirurgenfamilie aus Toulouse, praktizierte in Montpellier, zog nach Paris und arbeitete 1786 in der Pension Belhomme, 1793 Abteilung Bicêtre, wo er den Aufseher Pussin **bat, die Ketten von den Patienten zu entfernen***.\n--\n1795 wurde er an die Salpetrière berufen und 1800 veröffentlichte er eine medizinisch-psychologische Abhandlung, in der er die Emotionen, Leidenschaften, Wahnsinn und Störungen der Eingeweide des Unterleibs beschrieb, deren Ursachen äußerlich (umweltbedingt)* sind und eine **\"moralische\" Behandlung*** erfordern würden (psychologische Konsequenzen)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer war Philippe Pinel 1745-1826?\n==\nStammt aus Chirurgenfamilie aus Toulouse, praktizierte in Montpellier, zog nach Paris und arbeitete 1786 in der Pension Belhomme, 1793 Abteilung Bicêtre, wo er den Aufseher Pussin **bat, die Ketten von den Patienten zu entfernen***.\n--\n1795 wurde er an die Salpetrière berufen und 1800 veröffentlichte er eine medizinisch-psychologische Abhandlung, in der er die Emotionen, Leidenschaften, Wahnsinn und Störungen der Eingeweide des Unterleibs beschrieb, deren Ursachen äußerlich (umweltbedingt)* sind und eine **\"moralische\" Behandlung*** erfordern würden (psychologische Konsequenzen)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232686"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232687]\nWas besagt das Gesetz über entfremdete Personen? 1838\n==\nFrankreich erlebt einen öffentlichen und privaten Asylar-Boom cf Hospitäler, Gefängnisse, Häuser der Repression\n--\nPro Abteilung wird ein Asyl mit einem vom Minister ernannten Arzt eröffnet.\n--\nKranke, die auf Antrag der Familien eingesperrt werden, werden nach ihren klinischen Symptomen klassifiziert, wobei ihre Unterbringung entweder freiwillig oder auf Anordnung des Präfekten mit Unterstützung aus Nächstenliebe erfolgt\n--\nUnter Geisteskranken findet eine wichtige Debatte über den Platz des Richters statt.\n--\nEinige verteidigen die Beibehaltung der Stellung des Richters als Hüter der individuellen Freiheiten*. Andere, wie Esquirol, es vorziehen, dass die Entscheidungsgewalt einer medizinisch-administrativen Instanz übertragen wird. Esquirol gewinnt.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was besagt das Gesetz über entfremdete Personen? 1838\n==\nFrankreich erlebt einen öffentlichen und privaten Asylar-Boom cf Hospitäler, Gefängnisse, Häuser der Repression\n--\nPro Abteilung wird ein Asyl mit einem vom Minister ernannten Arzt eröffnet.\n--\nKranke, die auf Antrag der Familien eingesperrt werden, werden nach ihren klinischen Symptomen klassifiziert, wobei ihre Unterbringung entweder freiwillig oder auf Anordnung des Präfekten mit Unterstützung aus Nächstenliebe erfolgt\n--\nUnter Geisteskranken findet eine wichtige Debatte über den Platz des Richters statt.\n--\nEinige verteidigen die Beibehaltung der Stellung des Richters als Hüter der individuellen Freiheiten*. Andere, wie Esquirol, es vorziehen, dass die Entscheidungsgewalt einer medizinisch-administrativen Instanz übertragen wird. Esquirol gewinnt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232687"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232688]\n19. Jahrhundert - Jahrhhundert des Alienismus\nWas besagt **Jean Martin Charcot* (1825-1893)**?\n==\nNeuropathologe der Salpêtrière, für den **Epilepsie mit Läsionen verbunden** ist und nicht Hysterie mit der Intuition des Unbewussten, die sein Schüler Freud übernehmen wird.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "19. Jahrhundert - Jahrhhundert des Alienismus\nWas besagt **Jean Martin Charcot* (1825-1893)**?\n==\nNeuropathologe der Salpêtrière, für den **Epilepsie mit Läsionen verbunden** ist und nicht Hysterie mit der Intuition des Unbewussten, die sein Schüler Freud übernehmen wird.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232688"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232689]\n20. Jahrhundert - Ära der Psychotherapien\nWas besagt **Sigmund Freund* (1856-1939)**?\n==\nInspiriert von Nietzsche und Carl Gustav Carus (Psyche) veröffentlichte der Wiener Neurologe 1900 **\"Die Deutung von Träumen\" und 1921 \"Das Unbewusste\"**.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "20. Jahrhundert - Ära der Psychotherapien\nWas besagt **Sigmund Freund* (1856-1939)**?\n==\nInspiriert von Nietzsche und Carl Gustav Carus (Psyche) veröffentlichte der Wiener Neurologe 1900 **\"Die Deutung von Träumen\" und 1921 \"Das Unbewusste\"**.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232689"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark++]\n[@id:232690]\nWas ist der Ödipaler Komplex* Einfluss der Sexualität bei Kindern und Erwachsenen?\n==\nAnalyse und Interpretation von Widerständen, Übertragungen und Träumen\n--\nTrauma-Theorie\n--\nNeurose versus Psychose\n--\n**Ego-Abwehrmechanismen***:\n• Die Verdrängung von angstauslösenden Gedanken, Ideen oder Erinnerungen kehrte zurück oder blieb im Unbewussten.\n• Regression und Rückkehr zu einem früheren Niveau zu einer vereinfachten Struktur\n• Projektion von externalisierten und unterstellten Wünschen und Gefühlen\n• Leugnung der traumatischen Realität\n--\nRationalisierung: Durch Intellektualisierung entfernte bedrohliche Inhalte\n--\nUmwandlung in das Gegenteil: Verlegenheit statt unterdrückter inakzeptabler Wünsche\n--\nIdentifikation: Konflikte, die durch die Annahme von Normen gelöst werden, Meinungen einer bedeutenden Person (Vater, Mutter).\n--\nSublimation: Umwandlung von sexuellen Impulsen in Nichtsexuelle, um Erfüllung in einem akzeptierten Bereich zu erreichen.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark++",
+      "body": "Was ist der Ödipaler Komplex* Einfluss der Sexualität bei Kindern und Erwachsenen?\n==\nAnalyse und Interpretation von Widerständen, Übertragungen und Träumen\n--\nTrauma-Theorie\n--\nNeurose versus Psychose\n--\n**Ego-Abwehrmechanismen***:\n• Die Verdrängung von angstauslösenden Gedanken, Ideen oder Erinnerungen kehrte zurück oder blieb im Unbewussten.\n• Regression und Rückkehr zu einem früheren Niveau zu einer vereinfachten Struktur\n• Projektion von externalisierten und unterstellten Wünschen und Gefühlen\n• Leugnung der traumatischen Realität\n--\nRationalisierung: Durch Intellektualisierung entfernte bedrohliche Inhalte\n--\nUmwandlung in das Gegenteil: Verlegenheit statt unterdrückter inakzeptabler Wünsche\n--\nIdentifikation: Konflikte, die durch die Annahme von Normen gelöst werden, Meinungen einer bedeutenden Person (Vater, Mutter).\n--\nSublimation: Umwandlung von sexuellen Impulsen in Nichtsexuelle, um Erfüllung in einem akzeptierten Bereich zu erreichen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232690"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232691]\nWas besagt der **Begriff der Pulsion*** (Laplanche & Pontalis 1967)?\n==\nAktiv und mobilisierend, hätte der Impuls eine Größe und eine Richtung oder impulsive Bewegung (Vektor).\n--\nSie **hängt von Erfahrungen und Interaktionen ab**.\n--\nSeine Quelle wäre eine sexuelle oder sich selbst erhaltende körperliche Erregung.\n--\nDas Ziel ist die Unterdrückung des Spannungs- und Zufriedenheitszustandes durch das Objekt.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was besagt der **Begriff der Pulsion*** (Laplanche & Pontalis 1967)?\n==\nAktiv und mobilisierend, hätte der Impuls eine Größe und eine Richtung oder impulsive Bewegung (Vektor).\n--\nSie **hängt von Erfahrungen und Interaktionen ab**.\n--\nSeine Quelle wäre eine sexuelle oder sich selbst erhaltende körperliche Erregung.\n--\nDas Ziel ist die Unterdrückung des Spannungs- und Zufriedenheitszustandes durch das Objekt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232691"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232692]\nWelches sind die Stadien der Entwicklung?\n==\n**Orales Stadium** bis zu 1 Jahr Saugvergnügen, erogene Öffnungen\n--\nPhallusstadium zwischen 3 und 5 Jahren ödipaler Komplex, Geschlechtsunterschiede, Kastrationsangst, narzisstische Verletzung\n--\n**Analstadium** zwischen 1 und 3 Jahren Schließmuskelkontrolle\n--\n**Latentes** Stadium zwischen 6 und 14 Jahren\n--\n**Genitalstadium**: 14 Jahre bis Erwachsene Interesse am anderen Geschlecht",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welches sind die Stadien der Entwicklung?\n==\n**Orales Stadium** bis zu 1 Jahr Saugvergnügen, erogene Öffnungen\n--\nPhallusstadium zwischen 3 und 5 Jahren ödipaler Komplex, Geschlechtsunterschiede, Kastrationsangst, narzisstische Verletzung\n--\n**Analstadium** zwischen 1 und 3 Jahren Schließmuskelkontrolle\n--\n**Latentes** Stadium zwischen 6 und 14 Jahren\n--\n**Genitalstadium**: 14 Jahre bis Erwachsene Interesse am anderen Geschlecht",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232692"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232693]\nWas sind die Manifestationen des Unbewussten*?\n==\nTräume (unbewusstes Begehren)\n--\nDie versäumten Taten\n--\nLapsus (unlogische Unterbrechung)\n--\nWorte der Geister (maskierte Feindseligkeit)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was sind die Manifestationen des Unbewussten*?\n==\nTräume (unbewusstes Begehren)\n--\nDie versäumten Taten\n--\nLapsus (unlogische Unterbrechung)\n--\nWorte der Geister (maskierte Feindseligkeit)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232693"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232694]\nWer war Alfred Adler (1879-1837) und seine Aussage?\n==\nDer Ursprung der Neurose ist nicht die Sexualität, sondern der Minderwertigkeitskomplex.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer war Alfred Adler (1879-1837) und seine Aussage?\n==\nDer Ursprung der Neurose ist nicht die Sexualität, sondern der Minderwertigkeitskomplex.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232694"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232695]\nWer war Carl Gustav Jung* (1875 – 1961) und was war seine Aussage?\n==\ngeboren in Kesswil, gestorben in Küsnach Freund von Freud, weniger pessimistisch\n--\nVater der **psychodynamischen Theorien**\n--\nArchetypen des \"kollektiven Unbewussten\" (Extro-/Introvertiertheit; Einheit von Welt & Sein) stehen am Ursprung der Neurosen.\n--\nVgl. Assoziative Tests",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer war Carl Gustav Jung* (1875 – 1961) und was war seine Aussage?\n==\ngeboren in Kesswil, gestorben in Küsnach Freund von Freud, weniger pessimistisch\n--\nVater der **psychodynamischen Theorien**\n--\nArchetypen des \"kollektiven Unbewussten\" (Extro-/Introvertiertheit; Einheit von Welt & Sein) stehen am Ursprung der Neurosen.\n--\nVgl. Assoziative Tests",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232695"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232696]\nWie funktioniert die didaktische Analyse?\n==\nAlle Psychoanalytiker sollten sich **von einem Kollegen psychoanalysieren lassen**, um Widerstände, die Symptome der Repression sind, zu beseitigen.\n--\nDie Analytiker sollten daher die **Aussagen der Patienten objektiver interpretieren und ohne emotionale Behinderung** zu den letztendlichen Ursachen der Störungen gelangen.\n--\nJung & andere wurden dann von Kollegen psychoanalysiert. Freud unterstützte das Prinzip, weigerte sich aber, sich dieser \"psychologischen Reinigung\" zu unterwerfen, indem er erklärte, er brauche nicht von jemand anderem analysiert zu werden, da er bereits seine eigene \"Selbstanalyse\" durchgeführt & damit seine wichtigsten Entdeckungen gemacht habe.\n--\nJung lehnte diese Haltung ab, und als Freud ihn als \"neurotisch\" bezeichnete, antwortete er in einem Brief, was das Ende ihrer Beziehung beschleunigte:\n--\n\"Ich bin ganz und gar nicht neurotisch, ich bin sehr glücklich. Tatsächlich habe ich mich lege artis und sehr bescheiden analysieren lassen, was mir sehr gut passte. Sie wissen sehr gut, wie weit der Patient in seiner Selbstanalyse gehen kann, er kommt nicht wie Sie aus seiner Neurose heraus. Lieben Sie Neurotiker, die so sehr mit Ihnen übereinstimmen?\"",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wie funktioniert die didaktische Analyse?\n==\nAlle Psychoanalytiker sollten sich **von einem Kollegen psychoanalysieren lassen**, um Widerstände, die Symptome der Repression sind, zu beseitigen.\n--\nDie Analytiker sollten daher die **Aussagen der Patienten objektiver interpretieren und ohne emotionale Behinderung** zu den letztendlichen Ursachen der Störungen gelangen.\n--\nJung & andere wurden dann von Kollegen psychoanalysiert. Freud unterstützte das Prinzip, weigerte sich aber, sich dieser \"psychologischen Reinigung\" zu unterwerfen, indem er erklärte, er brauche nicht von jemand anderem analysiert zu werden, da er bereits seine eigene \"Selbstanalyse\" durchgeführt & damit seine wichtigsten Entdeckungen gemacht habe.\n--\nJung lehnte diese Haltung ab, und als Freud ihn als \"neurotisch\" bezeichnete, antwortete er in einem Brief, was das Ende ihrer Beziehung beschleunigte:\n--\n\"Ich bin ganz und gar nicht neurotisch, ich bin sehr glücklich. Tatsächlich habe ich mich lege artis und sehr bescheiden analysieren lassen, was mir sehr gut passte. Sie wissen sehr gut, wie weit der Patient in seiner Selbstanalyse gehen kann, er kommt nicht wie Sie aus seiner Neurose heraus. Lieben Sie Neurotiker, die so sehr mit Ihnen übereinstimmen?\"",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232696"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark++]\n[@id:232697]\nWann und wie wurde erstmals die Schizophrenie beschrieben?\n==\n1911\n--\nEhemals \"Frühe Demenz\" (Kraepelin)\n--\nSpaltung dissoziatives Syndrom:\n• Fragmentierung, Spaltung, Ambivalenz...\n• Fragmentierung der Persönlichkeit\n• Enge Bewusstheit (Freud)\n--\nPrimäre & sekundäre Anzeichen des Kampfes: Autismus, Rückzug, Halluzinationen, paranoide Wahnvorstellungen, etc.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark++",
+      "body": "Wann und wie wurde erstmals die Schizophrenie beschrieben?\n==\n1911\n--\nEhemals \"Frühe Demenz\" (Kraepelin)\n--\nSpaltung dissoziatives Syndrom:\n• Fragmentierung, Spaltung, Ambivalenz...\n• Fragmentierung der Persönlichkeit\n• Enge Bewusstheit (Freud)\n--\nPrimäre & sekundäre Anzeichen des Kampfes: Autismus, Rückzug, Halluzinationen, paranoide Wahnvorstellungen, etc.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232697"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232698]\nWie funktioniert die Daseinanalyse* - existenzielle Anthropologie?\n==\nPhänomenologie, die 1927 von Husserl und dem deutschen Philosophen Martin Heidegger (1889-1976) in seinem Buch \"Sein und Zeit oder Sein und Zeit\" entwickelt wurde.\n--\n\"Zweck der Analyse ist es, die Bedingungen der Manifestation von psychischen Störungen in den Strukturen zu identifizieren, die den Menschen als 'Wesen in der Welt' (Dasein) charakterisieren.\n-- \nPierre Janet: Vater der wissenschaftlichen Psychologie\n--\nJean Piaget: psychologische Entwicklung",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wie funktioniert die Daseinanalyse* - existenzielle Anthropologie?\n==\nPhänomenologie, die 1927 von Husserl und dem deutschen Philosophen Martin Heidegger (1889-1976) in seinem Buch \"Sein und Zeit oder Sein und Zeit\" entwickelt wurde.\n--\n\"Zweck der Analyse ist es, die Bedingungen der Manifestation von psychischen Störungen in den Strukturen zu identifizieren, die den Menschen als 'Wesen in der Welt' (Dasein) charakterisieren.\n-- \nPierre Janet: Vater der wissenschaftlichen Psychologie\n--\nJean Piaget: psychologische Entwicklung",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232698"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark++]\n[@id:232699]\nWas waren umfangreiche Behandlungen, die durchgeführt wurden?\n==\nEinige Behandlungen waren zu gefährlich oder unwirksam, wie z.B. die Injektion des Malariaparasiten, die Sakel-Kur mit Insulin (zwischen den 30er und 60er Jahren), die Lobotomie und die Schlafkur.\n--\nChirurgische Behandlungen\n--\nAnhaltende Behandlungen*:\n• ECT-Elektrokonvulstherapie oder Seismotherapie*(1938)\n• Pack* mit nasser Wäsche oder Verpackung für Autisten cf Winnicott",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark++",
+      "body": "Was waren umfangreiche Behandlungen, die durchgeführt wurden?\n==\nEinige Behandlungen waren zu gefährlich oder unwirksam, wie z.B. die Injektion des Malariaparasiten, die Sakel-Kur mit Insulin (zwischen den 30er und 60er Jahren), die Lobotomie und die Schlafkur.\n--\nChirurgische Behandlungen\n--\nAnhaltende Behandlungen*:\n• ECT-Elektrokonvulstherapie oder Seismotherapie*(1938)\n• Pack* mit nasser Wäsche oder Verpackung für Autisten cf Winnicott",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232699"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232700]\nWer war Lacan* 1901 - 1981 und was besagt er?\n==\nFranzösischer Psychiater und Psychoanalytiker\n--\nSeine Doktorarbeit von 1932 befasste sich mit dem Fall Aimée:\nParanoide Psychose im Zusammenhang mit der Persönlichkeit.\n--\n**Die Definition und Kausalität von Paranoia ist eher eine dynamische als eine organische Perspektive.**\n--\nIdee einer Mehrfachbestimmung, die das spinozianische Konzept der Diskordanz näher an Freuds Konzept der Spaltung des Selbst heranbringt",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer war Lacan* 1901 - 1981 und was besagt er?\n==\nFranzösischer Psychiater und Psychoanalytiker\n--\nSeine Doktorarbeit von 1932 befasste sich mit dem Fall Aimée:\nParanoide Psychose im Zusammenhang mit der Persönlichkeit.\n--\n**Die Definition und Kausalität von Paranoia ist eher eine dynamische als eine organische Perspektive.**\n--\nIdee einer Mehrfachbestimmung, die das spinozianische Konzept der Diskordanz näher an Freuds Konzept der Spaltung des Selbst heranbringt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232700"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232701]\nWas passiert im Spiegel- Stadium?\n==\nAusbilder der Fachfunktion, das \"Ich\",\n--\nKind im Alter von 6 bis 18 Monaten\n--\nEr fährt fort, über die Struktur der Sprache nachzudenken",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was passiert im Spiegel- Stadium?\n==\nAusbilder der Fachfunktion, das \"Ich\",\n--\nKind im Alter von 6 bis 18 Monaten\n--\nEr fährt fort, über die Struktur der Sprache nachzudenken",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232701"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark++]\n[@id:232702]\nWelche pharmakologischen Entdeckungen wurden im 19. Jh. gemacht?\n==\n**Chlorpromazin*** (Largacril): Phenothiazin, ein anthelmintisches Insektizid (Tierärzte), das 1951 von Henri Laborit zur Beruhigung bei der Vorbeugung eines chirurgischen Schocks eingesetzt wurde.\n--\n1952 P. Deniker & J. Delay, französische Neuropsychiater\n• **Typische antipsychotische Wirkungen***\n• Bei Schizophrenen\n• Antagonist nur der Dopamin-D2-Rezeptoren, nicht aber der Serotonin-5HT2A-Rezeptoren, die für neuere atypische Antipsychotika charakteristisch sind.\n• (100mg Chlorpromazin entspricht 2mg Haloperidol, einem weiteren typischen Butyrophenon-Antipsychotikum).\n--\n1954: Erstes nicht barbituriertes Anxiolytikum.\n--\n1957: Premiere Benzodiazepin , Iproniazid (IMAO)\n--\n1967: Präventive Rolle von **Lithium*** bei bipolaren Patienten",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark++",
+      "body": "Welche pharmakologischen Entdeckungen wurden im 19. Jh. gemacht?\n==\n**Chlorpromazin*** (Largacril): Phenothiazin, ein anthelmintisches Insektizid (Tierärzte), das 1951 von Henri Laborit zur Beruhigung bei der Vorbeugung eines chirurgischen Schocks eingesetzt wurde.\n--\n1952 P. Deniker & J. Delay, französische Neuropsychiater\n• **Typische antipsychotische Wirkungen***\n• Bei Schizophrenen\n• Antagonist nur der Dopamin-D2-Rezeptoren, nicht aber der Serotonin-5HT2A-Rezeptoren, die für neuere atypische Antipsychotika charakteristisch sind.\n• (100mg Chlorpromazin entspricht 2mg Haloperidol, einem weiteren typischen Butyrophenon-Antipsychotikum).\n--\n1954: Erstes nicht barbituriertes Anxiolytikum.\n--\n1957: Premiere Benzodiazepin , Iproniazid (IMAO)\n--\n1967: Präventive Rolle von **Lithium*** bei bipolaren Patienten",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232702"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232703]\nInwiefern waren die 60er Jahre die Öffnung des Landes?\n==\nPlegenetzwerke: Krankenhäuser, Präventionsstrukturen\n--\nPsychosoziale Zentren",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Inwiefern waren die 60er Jahre die Öffnung des Landes?\n==\nPlegenetzwerke: Krankenhäuser, Präventionsstrukturen\n--\nPsychosoziale Zentren",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232703"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark++]\n[@id:232704]\nWelche bekannten Verhaltentheorien sind wann erschienen?\n==\n**1920*: Verhaltensmodell (Ivan Pavlovs Arbeit mit Tieren - Konditionierung)**\n• Bedeutung der Verpackung beim Menschen\n--\n**1940*: HUMANISTISCHE Strömung**, die einseitige Praktiken anprangert\n• **Kognitives Modell***: Verhalten, das gemäß Gewohnheiten und Denkmustern erworben wurde",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark++",
+      "body": "Welche bekannten Verhaltentheorien sind wann erschienen?\n==\n**1920*: Verhaltensmodell (Ivan Pavlovs Arbeit mit Tieren - Konditionierung)**\n• Bedeutung der Verpackung beim Menschen\n--\n**1940*: HUMANISTISCHE Strömung**, die einseitige Praktiken anprangert\n• **Kognitives Modell***: Verhalten, das gemäß Gewohnheiten und Denkmustern erworben wurde",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232704"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232705]\nWas besagt der bio-psychosoziale Ansatz?\n==\nNetzwerk-Organisation\n--\nSpezialisierte Strukturen\n--\nAktive Suche\n--\nOrganische Therapeutika\n--\nPsychologisch\n--\nSoziale Betreuung\n--\nMobile Teams",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was besagt der bio-psychosoziale Ansatz?\n==\nNetzwerk-Organisation\n--\nSpezialisierte Strukturen\n--\nAktive Suche\n--\nOrganische Therapeutika\n--\nPsychologisch\n--\nSoziale Betreuung\n--\nMobile Teams",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232705"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232706]\nWas besagt die zerebrale Asymmetrie?\n==\nDie Hemisphären sind nicht vollkommen symmetrisch\n--\nDie Sprache, die hauptsächlich in der Hemisphäre G verarbeitet wird, soll dominant sein (3% der Fälle, nach Hemisphäre D).\n--\nVisuell-räumliche Fähigkeiten (wie z.B. mentale Rotation) werden am besten von der rechten Hemisphäre ausgeführt, ebenso wie die Wahrnehmung von Gesichtern.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was besagt die zerebrale Asymmetrie?\n==\nDie Hemisphären sind nicht vollkommen symmetrisch\n--\nDie Sprache, die hauptsächlich in der Hemisphäre G verarbeitet wird, soll dominant sein (3% der Fälle, nach Hemisphäre D).\n--\nVisuell-räumliche Fähigkeiten (wie z.B. mentale Rotation) werden am besten von der rechten Hemisphäre ausgeführt, ebenso wie die Wahrnehmung von Gesichtern.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232706"
+      ]
+    }
+  }
+]

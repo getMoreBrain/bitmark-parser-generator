@@ -1,0 +1,2334 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:136485]\n[#Schubert SCORM]\n[@externalId:e-schubert-scorm_a5cq0jh2tdyi]\n[@publisher:schubert]\n[@language:de]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136485"
+      ],
+      "title": "Schubert SCORM",
+      "externalId": [
+        "e-schubert-scorm_a5cq0jh2tdyi"
+      ],
+      "publisher": [
+        "schubert"
+      ],
+      "language": [
+        "de"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:136486]\n[%1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "136486"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.match-matrix]\n[@id:136487]\n[%1a]\n[!Ergänzen Sie die Tabelle.\nComplete the table.\n\nRegelmäßige Verben\nRegular verbs]\n\n===\n[#Infinitiv]\n==\n[#Präsens]\n==\n[#Präteritum]\n===\nsuchen\n==\n[!ich]suche[@example]\n==\n[!ich]suchte[@example]\n===\n[%1]arbeiten\n==\n[!er] arbeitet\n==\n[!er] arbeitete\n===\n[%2]begrüßen\n==\n[!wir] begrüßen\n==\n[!wir] begrüßten\n===\n[%3]telefonieren\n==\n[!sie (Sg.)] telefoniert\n==\n[!sie (Sg.)] telefonierte\n===\n[%4]bezahlen\n==\n[!du] bezahlst\n==\n[!du] bezahltest\n===\n[%5]lösen\n==\n[!er] löst\n==\n[!er] löste\n===\n[%6]sammeln\n==\n[!ich] sammle\n==\n[!ich] sammelte\n===\n[%7]öffnen\n==\n[!sie (Pl.)] öffnen\n==\n[!sie (Pl.)] öffneten\n===\n[%8]tanzen\n==\n[!ihr] tanzt\n==\n[!ihr] tanztet\n===\n[%9]präsentieren\n==\n[!du] präsentierst\n==\n[!du] präsentiertest\n===",
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": "1a",
+      "heading": {
+        "forKeys": "Infinitiv",
+        "forValues": [
+          "Präsens",
+          "Präteritum"
+        ]
+      },
+      "matrix": [
+        {
+          "key": "suchen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "ich",
+              "values": [
+                "suche"
+              ],
+              "example": "",
+              "isExample": true
+            },
+            {
+              "item": "",
+              "instruction": "ich",
+              "values": [
+                "suchte"
+              ],
+              "example": "",
+              "isExample": true
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "arbeiten",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "er",
+              "values": [
+                "arbeitet"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "er",
+              "values": [
+                "arbeitete"
+              ]
+            }
+          ],
+          "item": "1",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "begrüßen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "wir",
+              "values": [
+                "begrüßen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "wir",
+              "values": [
+                "begrüßten"
+              ]
+            }
+          ],
+          "item": "2",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "telefonieren",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "sie (Sg.)",
+              "values": [
+                "telefoniert"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "sie (Sg.)",
+              "values": [
+                "telefonierte"
+              ]
+            }
+          ],
+          "item": "3",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "bezahlen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "du",
+              "values": [
+                "bezahlst"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "du",
+              "values": [
+                "bezahltest"
+              ]
+            }
+          ],
+          "item": "4",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "lösen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "er",
+              "values": [
+                "löst"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "er",
+              "values": [
+                "löste"
+              ]
+            }
+          ],
+          "item": "5",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "sammeln",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "ich",
+              "values": [
+                "sammle"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "ich",
+              "values": [
+                "sammelte"
+              ]
+            }
+          ],
+          "item": "6",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "öffnen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "sie (Pl.)",
+              "values": [
+                "öffnen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "sie (Pl.)",
+              "values": [
+                "öffneten"
+              ]
+            }
+          ],
+          "item": "7",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "tanzen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "ihr",
+              "values": [
+                "tanzt"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "ihr",
+              "values": [
+                "tanztet"
+              ]
+            }
+          ],
+          "item": "8",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "präsentieren",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "du",
+              "values": [
+                "präsentierst"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "du",
+              "values": [
+                "präsentiertest"
+              ]
+            }
+          ],
+          "item": "9",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136487"
+      ],
+      "instruction": "Ergänzen Sie die Tabelle.\nComplete the table.\n\nRegelmäßige Verben\nRegular verbs"
+    }
+  },
+  {
+    "bitmark": "[.match-matrix]\n[@id:136488]\n[%1b]\n[!Ergänzen Sie die Tabelle.\nComplete the table.\n\nUnregelmäßige Verben\nIrregular verbs]\n===\nInfinitiv\n==\nPräsens\n==\nPräteritum\n===\n[%1]beginnen\n==\nes beginnt\n==\n[!es] begann[@example]\n===\n[%2]gehen\n==\n[!er] geht[@example]\n==\ner ging\n===\n[%3]gewinnen\n==\nwir gewinnen\n==\n[!wir] gewannen\n===\n[%4]fahren\n==\n[!du] fährst\n==\ndu fuhrst\n===\n[%5]verlassen\n==\ner verlässt\n==\n[!er] verließ[@example]\n===\n[%6]schießen\n==\nsie schießt\n==\n[!sie] schoss[@example]\n===\n[%7]kommen\n==\n[!wir] kommen[@example]\n==\nwir kamen\n===\n[%8]geben\n==\nsie geben\n==\n[!sie] gaben[@example]\n===\n[%9]finden\n==\nwir finden\n==\n[!wir] fanden[@example]\n===\n[%10]sprechen\n==\nsie spricht\n==\n[!sie] sprach[@example]\n===\n[%11]lesen\n==\n[!du] liest\n==\ndu last\n===\n[%12]fliegen\n==\nwir fliegen\n==\n[!wir] flogen[@example]\n===\n\n||not right bit type||",
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": "1b",
+      "heading": {
+        "forKeys": "",
+        "forValues": []
+      },
+      "matrix": [
+        {
+          "key": "Infinitiv",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Präsens"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Präteritum"
+              ],
+              "example": "",
+              "isExample": true
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "beginnen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "es beginnt"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "es",
+              "values": [
+                "begann"
+              ]
+            }
+          ],
+          "item": "1",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "gehen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "er",
+              "values": [
+                "geht"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "er ging"
+              ]
+            }
+          ],
+          "item": "2",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "gewinnen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "wir gewinnen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "wir",
+              "values": [
+                "gewannen"
+              ]
+            }
+          ],
+          "item": "3",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "fahren",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "du",
+              "values": [
+                "fährst"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "du fuhrst"
+              ]
+            }
+          ],
+          "item": "4",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "verlassen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "er verlässt"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "er",
+              "values": [
+                "verließ"
+              ]
+            }
+          ],
+          "item": "5",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "schießen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "sie schießt"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "sie",
+              "values": [
+                "schoss"
+              ]
+            }
+          ],
+          "item": "6",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "kommen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "wir",
+              "values": [
+                "kommen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "wir kamen"
+              ]
+            }
+          ],
+          "item": "7",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "geben",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "sie geben"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "sie",
+              "values": [
+                "gaben"
+              ]
+            }
+          ],
+          "item": "8",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "finden",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "wir finden"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "wir",
+              "values": [
+                "fanden"
+              ]
+            }
+          ],
+          "item": "9",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "sprechen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "sie spricht"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "sie",
+              "values": [
+                "sprach"
+              ]
+            }
+          ],
+          "item": "10",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "lesen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "du",
+              "values": [
+                "liest"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "du last"
+              ]
+            }
+          ],
+          "item": "11",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "fliegen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "wir fliegen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "wir",
+              "values": [
+                "flogen"
+              ]
+            }
+          ],
+          "item": "12",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136488"
+      ],
+      "instruction": "Ergänzen Sie die Tabelle.\nComplete the table.\n\nUnregelmäßige Verben\nIrregular verbs"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&imageWithAudio]\n[@id:136489]\n[%2]\n[!Wie heißt der Infinitiv?\nAussprachehilfe: Hören Sie den Text auf CD.\nGive the infinitive. Pronunciation help: Listen to the CD.]\n\nFranz Beckenbauer **wurde** (1) 1945 in München geboren. Schon früh **interessierte** (2) er sich für Fußball und **spielte** (3) als Jugendlicher beim Sportklub 1906 München. 1958 **plante** (4) der 13-jährige Franz den Wechsel zum größten Klub in München, dem TSV 1860. Bei einem Spiel gegen den TSV **bekam** (5) er von einem TSV Spieler eine Ohrfeige. Deshalb **änderte** (6) Franz seine Pläne und **wechselte** (7) zum FC Bayern München. Mit 19 Jahren **machte** (8) er sein erstes Spiel und **schoss** (9) sein erstes Tor für den FC Bayern. Franz Beckenbauer **gewann** (10) mit seinem Klub viele Pokale und wurde mehrmals Deutscher Meister. 1974 **war** (11) sein erfolgreichstes Jahr. Der FC Bayern **holte** (12) den deutschen Meistertitel und den Europapokal der Landesmeister. Mit der Nationalmannschaft **feierte** (13) er 1974 den Gewinn der Weltmeisterschaft. 1982 **beendete** (14) er seine Fußballerkarriere.\nFranz Beckenbauer **absolvierte** (15) insgesamt 424 Spiele für die Bundesliga und 103 Spiele für die deutsche Nationalmannschaft. Von 1984 bis 1990 **arbeitete** (16) er als Trainer und Teamchef für Deutschland und **führte** (17) die deutsche Nationalmannschaft 1990 zum Weltmeistertitel.\n\n1. [_werden][@example]\n2. [_interessieren]\n3. [_spielen]\n4. [_planen]\n5. [_bekommen]\n6. [_ändern]\n7. [_wechseln]\n8. [_machen]\n9. [_schießen]\n10. [_gewinnen]\n11. [_sein]\n12. [_holen]\n13. [_feiern]\n14. [_beenden]\n15. [_absolvieren]\n16. [_arbeiten]\n17. [_führen]\n[&image:https://docs.bitmark.cloud/bit-books/schubert/scorm/web-resources/images/fussball.png]\n[&audio:https://docs.bitmark.cloud/bit-books/schubert/scorm/web-resources/audio/schub_scorm_2.mp3]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Franz Beckenbauer **wurde** (1) 1945 in München geboren. Schon früh **interessierte** (2) er sich für Fußball und **spielte** (3) als Jugendlicher beim Sportklub 1906 München. 1958 **plante** (4) der 13-jährige Franz den Wechsel zum größten Klub in München, dem TSV 1860. Bei einem Spiel gegen den TSV **bekam** (5) er von einem TSV Spieler eine Ohrfeige. Deshalb **änderte** (6) Franz seine Pläne und **wechselte** (7) zum FC Bayern München. Mit 19 Jahren **machte** (8) er sein erstes Spiel und **schoss** (9) sein erstes Tor für den FC Bayern. Franz Beckenbauer **gewann** (10) mit seinem Klub viele Pokale und wurde mehrmals Deutscher Meister. 1974 **war** (11) sein erfolgreichstes Jahr. Der FC Bayern **holte** (12) den deutschen Meistertitel und den Europapokal der Landesmeister. Mit der Nationalmannschaft **feierte** (13) er 1974 den Gewinn der Weltmeisterschaft. 1982 **beendete** (14) er seine Fußballerkarriere.\nFranz Beckenbauer **absolvierte** (15) insgesamt 424 Spiele für die Bundesliga und 103 Spiele für die deutsche Nationalmannschaft. Von 1984 bis 1990 **arbeitete** (16) er als Trainer und Teamchef für Deutschland und **führte** (17) die deutsche Nationalmannschaft 1990 zum Weltmeistertitel.\n\n1. {0}\n2. {1}\n3. {2}\n4. {3}\n5. {4}\n6. {5}\n7. {6}\n8. {7}\n9. {8}\n10. {9}\n11. {10}\n12. {11}\n13. {12}\n14. {13}\n15. {14}\n16. {15}\n17. {16}",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136489"
+      ],
+      "instruction": "Wie heißt der Infinitiv?\nAussprachehilfe: Hören Sie den Text auf CD.\nGive the infinitive. Pronunciation help: Listen to the CD.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "werden"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "interessieren"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "spielen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "planen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "bekommen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ändern"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wechseln"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "machen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "schießen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "gewinnen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sein"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "holen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "feiern"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "beenden"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "absolvieren"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{15}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "arbeiten"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{16}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "führen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/schubert/scorm/web-resources/images/fussball.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitmark.cloud/bit-books/schubert/scorm/web-resources/audio/schub_scorm_2.mp3"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 23,
+        "errorLine": "[.cloze:bitmark--&imageWithAudio]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.match:bitmark--]\n[@id:136490]\n[%3]\n[!Bilden Sie aus den vorgegebenen Wörtern Sätze im Präteritum.\nUse the given words to build sentences in the preterite.]\n===\nMartin – früher – gern Fußball – spielen\n==\n[@example:Martin spielte früher gern Fußball]\n===\n[%1.] er – mit 20 Jahren – sein erstes Länderspiel – machen\n==\nEr machte mit 20 Jahren sein erstes Länderspiel\n===\n[%2.] er – mit seinem Hamburger Klub – viele Pokale und Meistertitel – holen\n==\nEr holte mit seinem Hamburger Klub viele Pokale und Meistertitel\n===\n[%3.] vor vier Jahren – er – seine sportliche Karriere – beenden\n==\nVor vier Jahren beendete er seine sportliche Karriere\n===\n[%4.] Martine – ein Praktikum – in Hamburg – absolvieren\n==\nMartine absolvierte ein Praktikum in Hamburg\n===\n[%5.] dort – sie – Deutsch – lernen\n==\nDort lernte sie Deutsch\n===\n[%6.] sie – danach – drei Jahre – bei einer Bank – arbeiten\n==\nSie arbeitete danach drei Jahre bei einer Bank\n===\n[%7.] sie – eine kleine Abteilung – leiten\n==\nSie leitete eine kleine Abteilung\n===\n[%8.] im letzten Jahr – Martin und Martine – heiraten\n==\nIm letzten Jahr heirateten Martin und Martine\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "3",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Martin – früher – gern Fußball – spielen",
+          "values": [
+            ""
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": "Martin spielte früher gern Fußball",
+          "isLongAnswer": false
+        },
+        {
+          "key": " er – mit 20 Jahren – sein erstes Länderspiel – machen",
+          "values": [
+            "Er machte mit 20 Jahren sein erstes Länderspiel"
+          ],
+          "item": "1.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": " er – mit seinem Hamburger Klub – viele Pokale und Meistertitel – holen",
+          "values": [
+            "Er holte mit seinem Hamburger Klub viele Pokale und Meistertitel"
+          ],
+          "item": "2.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": " vor vier Jahren – er – seine sportliche Karriere – beenden",
+          "values": [
+            "Vor vier Jahren beendete er seine sportliche Karriere"
+          ],
+          "item": "3.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": " Martine – ein Praktikum – in Hamburg – absolvieren",
+          "values": [
+            "Martine absolvierte ein Praktikum in Hamburg"
+          ],
+          "item": "4.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": " dort – sie – Deutsch – lernen",
+          "values": [
+            "Dort lernte sie Deutsch"
+          ],
+          "item": "5.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": " sie – danach – drei Jahre – bei einer Bank – arbeiten",
+          "values": [
+            "Sie arbeitete danach drei Jahre bei einer Bank"
+          ],
+          "item": "6.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": " sie – eine kleine Abteilung – leiten",
+          "values": [
+            "Sie leitete eine kleine Abteilung"
+          ],
+          "item": "7.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": " im letzten Jahr – Martin und Martine – heiraten",
+          "values": [
+            "Im letzten Jahr heirateten Martin und Martine"
+          ],
+          "item": "8.",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136490"
+      ],
+      "instruction": "Bilden Sie aus den vorgegebenen Wörtern Sätze im Präteritum.\nUse the given words to build sentences in the preterite."
+    }
+  },
+  {
+    "bitmark": "[.mark:bitmark--imageWithAudio]\n[@id:136491]\n[%4.1]\n[!Lesen Sie den folgenden Text und markieren Sie alle Verben im Präteritum.\nAussprachehilfe: Hören Sie den Text auf CD.\nRead the following text and mark all preterite forms. Pronunciation help: Listen to the CD.]\n**Die Anfänge der Motorisierung**\n\n1668 ['konstruierte][@mark:blue] der Belgier Ferdinand Verbiest das erste Auto. Das etwa 60 Zentimeter lange Modell ['lief][@mark:blue] mit Dampf. Allerdings weiß heute niemand, ob dieses Auto überhaupt ['fuhr][@mark:blue].\n\nDen ersten Dampf-Straßenwagen ['baute][@mark:blue] 1769 der Franzose Nicolas Joseph Cugnot (1725–1804). Er ['transportierte][@mark:blue] mit dem Auto Kanonen für das französische Militär. Das Fahrzeug ['erreichte][@mark:blue] eine Geschwindigkeit von vier Kilometern pro Stunde, es ['brauchte][@mark:blue] aber alle 15 Minuten eine Pause. Ab 1780 ['nutzte][@mark:blue] man in England Dampf-Traktoren zur Feldarbeit. Im Straßenverkehr ['funktionierten][@mark:blue] die Traktoren nicht, sie ['waren][@mark:blue] zu groß und zu schwer.\n\nUm 1825 ['entwickelte][@mark:blue] der Engländer Samuel Brown die ersten mobilen Gasverbrennungsmotoren. Er ['bekam][@mark:blue] 1826 für ein Fahrzeug mit einem vier PS starken Motor ein Patent. Ab 1900 ['experimentierten][@mark:blue] die Konstrukteure mit verschiedenen Antriebssystemen. Der große Erfolg ['kam][@mark:blue] mit der Nutzung der Elektrizität. 1899 ['erreichte][@mark:blue] ein Renn-Elektromobil bereits 100 Kilometer pro Stunde, das Elektromobil ['kam][@mark:blue] aber nur 30 Kilometer weit.\n\n[&image:https://docs.bitmark.cloud/bit-books/schubert/scorm/web-resources/images/auto.png]\n[&audio:https://docs.bitmark.cloud/bit-books/schubert/scorm/web-resources/audio/schub_scorm_4_1.mp3]",
+    "bit": {
+      "type": "mark",
+      "format": "bitmark--",
+      "item": "4.1",
+      "instruction": "Lesen Sie den folgenden Text und markieren Sie alle Verben im Präteritum.\nAussprachehilfe: Hören Sie den Text auf CD.\nRead the following text and mark all preterite forms. Pronunciation help: Listen to the CD.",
+      "hint": "",
+      "body": "**Die Anfänge der Motorisierung**\n\n1668  der Belgier Ferdinand Verbiest das erste Auto. Das etwa 60 Zentimeter lange Modell  mit Dampf. Allerdings weiß heute niemand, ob dieses Auto überhaupt .\n\nDen ersten Dampf-Straßenwagen  1769 der Franzose Nicolas Joseph Cugnot (1725–1804). Er  mit dem Auto Kanonen für das französische Militär. Das Fahrzeug  eine Geschwindigkeit von vier Kilometern pro Stunde, es  aber alle 15 Minuten eine Pause. Ab 1780  man in England Dampf-Traktoren zur Feldarbeit. Im Straßenverkehr  die Traktoren nicht, sie  zu groß und zu schwer.\n\nUm 1825  der Engländer Samuel Brown die ersten mobilen Gasverbrennungsmotoren. Er  1826 für ein Fahrzeug mit einem vier PS starken Motor ein Patent. Ab 1900  die Konstrukteure mit verschiedenen Antriebssystemen. Der große Erfolg  mit der Nutzung der Elektrizität. 1899  ein Renn-Elektromobil bereits 100 Kilometer pro Stunde, das Elektromobil  aber nur 30 Kilometer weit.",
+      "marks": {
+        "{konstruierte:0}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{lief:1}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{fuhr:2}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{baute:3}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{transportierte:4}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{erreichte:5}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{brauchte:6}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{nutzte:7}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{funktionierten:8}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{waren:9}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{entwickelte:10}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{bekam:11}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{experimentierten:12}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{kam:13}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{erreichte:14}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{kam:15}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        }
+      },
+      "id": [
+        "136491"
+      ]
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "png",
+          "src": "https://docs.bitmark.cloud/bit-books/schubert/scorm/web-resources/images/auto.png"
+        },
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitmark.cloud/bit-books/schubert/scorm/web-resources/audio/schub_scorm_4_1.mp3"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'imageWithAudio'",
+        "line": 1,
+        "column": 16,
+        "errorLine": "[.mark:bitmark--imageWithAudio]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:136492]\n[%4.2]\n[!Lesen Sie den Text noch einmal und ergänzen Sie die Tabelle.\nRead the text once again and complete the table. ]\n**Die Anfänge der Motorisierung**\n\n1668 konstruierte der Belgier Ferdinand Verbiest das erste Auto. Das etwa 60 Zentimeter lange Modell  lief mit Dampf. Allerdings weiß heute niemand, ob dieses Auto überhaupt fuhr.\n\nDen ersten Dampf-Straßenwagen baute 1769 der Franzose Nicolas Joseph Cugnot (1725–1804). Er transportierte mit dem Auto Kanonen für das französische Militär. Das Fahrzeug erreichte eine Geschwindigkeit von vier Kilometern pro Stunde, es brauchte aber alle 15 Minuten eine Pause. Ab 1780 nutzte man in England Dampf-Traktoren zur Feldarbeit. Im Straßenverkehr funktionierten die Traktoren nicht, sie waren zu groß und zu schwer.\n\nUm 1825 entwickelte der Engländer Samuel Brown die ersten mobilen Gasverbrennungsmotoren. Er bekam 1826 für ein Fahrzeug mit einem vier PS starken Motor ein Patent. Ab 1900 experimentierten die Konstrukteure mit verschiedenen Antriebssystemen. Der große Erfolg kam mit der Nutzung der Elektrizität. 1899 erreichte ein Renn-Elektromobil bereits 100 Kilometer pro Stunde, das Elektromobil kam aber nur 30 Kilometer weit.\n\n**Präteritum regelmäßige Verben - Infinitiv**\n[_Ferdinand Verbiest konstruierte][@example] - [_konstruieren][@example]\n[_Nicolas Joseph Cugnot baute] - [_bauen]\n[_er transportierte] - [_transportieren]\n[_das Fahrzeug erreichte] - [_erreichen]||issue||\n[_es brauchte] - [_brauchen]\n[_man nutzte] - [_nutzen]\n[_die Traktoren funktionierten nicht] - [_funktionieren]\n[_Samuel Brown entwickelte] - [_entwickeln]\n[_die Konstrukteure experimentierten] - [_experimentieren]\n[_ein Renn-Elektromobil erreichte] - [_erreichen]\n\n\n**Präteritum unregelmäßige Verben - Infinitiv**\n[_das Modell lief][@example] - [_laufen][@example]\n[_das Auto fuhr] - [_fahren]\n[_sie waren] - [_sein]\n[_er bekam] - [_bekommen]\n[_der Erfolg kam] - [_kommen]\n[_das Elektromobil kam] - [_kommen]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**Die Anfänge der Motorisierung**\n\n1668 konstruierte der Belgier Ferdinand Verbiest das erste Auto. Das etwa 60 Zentimeter lange Modell  lief mit Dampf. Allerdings weiß heute niemand, ob dieses Auto überhaupt fuhr.\n\nDen ersten Dampf-Straßenwagen baute 1769 der Franzose Nicolas Joseph Cugnot (1725–1804). Er transportierte mit dem Auto Kanonen für das französische Militär. Das Fahrzeug erreichte eine Geschwindigkeit von vier Kilometern pro Stunde, es brauchte aber alle 15 Minuten eine Pause. Ab 1780 nutzte man in England Dampf-Traktoren zur Feldarbeit. Im Straßenverkehr funktionierten die Traktoren nicht, sie waren zu groß und zu schwer.\n\nUm 1825 entwickelte der Engländer Samuel Brown die ersten mobilen Gasverbrennungsmotoren. Er bekam 1826 für ein Fahrzeug mit einem vier PS starken Motor ein Patent. Ab 1900 experimentierten die Konstrukteure mit verschiedenen Antriebssystemen. Der große Erfolg kam mit der Nutzung der Elektrizität. 1899 erreichte ein Renn-Elektromobil bereits 100 Kilometer pro Stunde, das Elektromobil kam aber nur 30 Kilometer weit.\n\n**Präteritum regelmäßige Verben - Infinitiv**\n{0} - {1}\n{2} - {3}\n{4} - {5}\n{6} - {7}\n{8} - {9}\n{10} - {11}\n{12} - {13}\n{14} - {15}\n{16} - {17}\n{18} - {19}\n\n\n**Präteritum unregelmäßige Verben - Infinitiv**\n{20} - {21}\n{22} - {23}\n{24} - {25}\n{26} - {27}\n{28} - {29}\n{30} - {31}",
+      "item": "4.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136492"
+      ],
+      "instruction": "Lesen Sie den Text noch einmal und ergänzen Sie die Tabelle.\nRead the text once again and complete the table.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Ferdinand Verbiest konstruierte"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "konstruieren"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Nicolas Joseph Cugnot baute"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "bauen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "er transportierte"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "transportieren"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "das Fahrzeug erreichte"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "erreichen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "es brauchte"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "brauchen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "man nutzte"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "nutzen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "die Traktoren funktionierten nicht"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "funktionieren"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Samuel Brown entwickelte"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{15}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "entwickeln"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{16}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "die Konstrukteure experimentierten"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{17}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "experimentieren"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{18}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ein Renn-Elektromobil erreichte"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{19}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "erreichen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{20}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "das Modell lief"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{21}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "laufen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{22}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "das Auto fuhr"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{23}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "fahren"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{24}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sie waren"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{25}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sein"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{26}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "er bekam"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{27}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "bekommen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{28}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "der Erfolg kam"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{29}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "kommen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{30}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "das Elektromobil kam"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{31}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "kommen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&audio]\n[@id:136493]\n[%5]\n[!Ergänzen Sie in den folgenden Nachrichten die Verben im Präteritum. 20\nAussprachehilfe: Hören Sie die Lösungen auf CD.\nComplete the following press cuttings with the verbs in the preterite. Pronunciation help: Check your answers with the CD.]\n\n1. In der Nähe von Rom [_landete][!landen] heute Nachmittag ein Flugzeug auf der Autobahn. Das Flugzeug [_hatte][!haben] keinen Treibstoff mehr. Die Passagiere [_verließen][!verlassen] die Maschine über die Notausgänge. Schon zehn Minuten nach der Landung [_waren][!sein] Polizei und Feuerwehr an der Landestelle.\n\n2. Deutsche Wissenschaftler [_entdeckten][!entdecken] auf der Insel Madagaskar zahlreiche neue Tierarten. Die Biologen der Universität Hamburg [_fanden][!finden] elf neue Insekten. Einige Insektenarten [_lebten][!leben] bereits zur Zeit der Dinosaurier.\n\n3. Das [_war][!sein] ein gutes Jahr für die Kultur in Deutschland! Es [_gab][!geben] einige große Erfolge: Herta Müller [_erhielt][!erhalten] den Literatur-Nobelpreis. Die weltbekannte Nofretete [_kam][!kommen] nach 70 Jahren in das neu gebaute Berliner Neue Museum zurück. Und in Wuppertal [_bewunderten][!bewundern] viele Besucher die Gemälde in der weltgrößten Monet-Ausstellung.\n\n4. Wie [_war][!sein] die Preisentwicklung im letzten Jahr? Diese Frage [_beantworteten][!beantworten] heute Mitarbeiter des Statistischen Bundesamtes. Insgesamt [_war][!sein] die Inflationsrate sehr niedrig. Öl und Lebensmittel [_wurden][!werden] deutlich billiger. Besonders preiswert [_konnte][!können] man Milch und Eier kaufen.\n\n5. Der Autokonzern [_geriet][!geraten] im letzten Jahr in eine Krise. Die Konzernleitung [_sprach][!sprechen] heute mit der Regierung über finanzielle Hilfe. Am Abend [_trat][!treten] der Finanzminister vor die Presse und [_gab][!geben] positive Resultat der Verhandlungen bekannt.\n\n6. Gestern Abend [_spielte][!spielen] Manchester United gegen den FC Barcelona im Endspiel der UEFA Champions League. Die Spanier [_gewannen][!gewinnen] das Spiel mit 2:0. Hunderttausende Fans [_feierten][!feiern] in Barcelona den Sieg.\n\n7. Frauen können nicht einparken? Wirklich? Forscher an der Ruhr-Universität Bochum [_wollten][!wollen] es genau wissen und [_überprüften][!überprüfen] diese These. 65 Männer und Frauen [_mussten][!müssen] ein großes Auto in eine Parklücke fahren. Das schockierende Ergebnis: Ja, es ist wahr! Die Frauen [_brauchten][!brauchen] 20 Sekunden länger als die Männer und ihre Autos [_standen][!stehen] danach schiefer in der Parklücke.\n\n8. Heute [_fiel][!fallen] in Deutschland der erste Schnee. Auf den Autobahnen [_kam][!kommen] es zu einigen Unfällen. Viele Autofahrer [_standen][!stehen] im Stau. Auch im Zugverkehr [_gab][!geben] es Verspätungen. Reisende [_mussten][!müssen] mehr als eine Stunde auf ihre Züge warten.\n\n[&audio:https://docs.bitmark.cloud/bit-books/schubert/scorm/web-resources/audio/schub_scorm_5.mp3]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "1. In der Nähe von Rom {0} heute Nachmittag ein Flugzeug auf der Autobahn. Das Flugzeug {1} keinen Treibstoff mehr. Die Passagiere {2} die Maschine über die Notausgänge. Schon zehn Minuten nach der Landung {3} Polizei und Feuerwehr an der Landestelle.\n\n2. Deutsche Wissenschaftler {4} auf der Insel Madagaskar zahlreiche neue Tierarten. Die Biologen der Universität Hamburg {5} elf neue Insekten. Einige Insektenarten {6} bereits zur Zeit der Dinosaurier.\n\n3. Das {7} ein gutes Jahr für die Kultur in Deutschland! Es {8} einige große Erfolge: Herta Müller {9} den Literatur-Nobelpreis. Die weltbekannte Nofretete {10} nach 70 Jahren in das neu gebaute Berliner Neue Museum zurück. Und in Wuppertal {11} viele Besucher die Gemälde in der weltgrößten Monet-Ausstellung.\n\n4. Wie {12} die Preisentwicklung im letzten Jahr? Diese Frage {13} heute Mitarbeiter des Statistischen Bundesamtes. Insgesamt {14} die Inflationsrate sehr niedrig. Öl und Lebensmittel {15} deutlich billiger. Besonders preiswert {16} man Milch und Eier kaufen.\n\n5. Der Autokonzern {17} im letzten Jahr in eine Krise. Die Konzernleitung {18} heute mit der Regierung über finanzielle Hilfe. Am Abend {19} der Finanzminister vor die Presse und {20} positive Resultat der Verhandlungen bekannt.\n\n6. Gestern Abend {21} Manchester United gegen den FC Barcelona im Endspiel der UEFA Champions League. Die Spanier {22} das Spiel mit 2:0. Hunderttausende Fans {23} in Barcelona den Sieg.\n\n7. Frauen können nicht einparken? Wirklich? Forscher an der Ruhr-Universität Bochum {24} es genau wissen und {25} diese These. 65 Männer und Frauen {26} ein großes Auto in eine Parklücke fahren. Das schockierende Ergebnis: Ja, es ist wahr! Die Frauen {27} 20 Sekunden länger als die Männer und ihre Autos {28} danach schiefer in der Parklücke.\n\n8. Heute {29} in Deutschland der erste Schnee. Auf den Autobahnen {30} es zu einigen Unfällen. Viele Autofahrer {31} im Stau. Auch im Zugverkehr {32} es Verspätungen. Reisende {33} mehr als eine Stunde auf ihre Züge warten.",
+      "item": "5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136493"
+      ],
+      "instruction": "Ergänzen Sie in den folgenden Nachrichten die Verben im Präteritum. 20\nAussprachehilfe: Hören Sie die Lösungen auf CD.\nComplete the following press cuttings with the verbs in the preterite. Pronunciation help: Check your answers with the CD.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "landete"
+          ],
+          "hint": "",
+          "instruction": "landen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "hatte"
+          ],
+          "hint": "",
+          "instruction": "haben",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "verließen"
+          ],
+          "hint": "",
+          "instruction": "verlassen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "waren"
+          ],
+          "hint": "",
+          "instruction": "sein",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "entdeckten"
+          ],
+          "hint": "",
+          "instruction": "entdecken",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "fanden"
+          ],
+          "hint": "",
+          "instruction": "finden",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "lebten"
+          ],
+          "hint": "",
+          "instruction": "leben",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "war"
+          ],
+          "hint": "",
+          "instruction": "sein",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "gab"
+          ],
+          "hint": "",
+          "instruction": "geben",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "erhielt"
+          ],
+          "hint": "",
+          "instruction": "erhalten",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "kam"
+          ],
+          "hint": "",
+          "instruction": "kommen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "bewunderten"
+          ],
+          "hint": "",
+          "instruction": "bewundern",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "war"
+          ],
+          "hint": "",
+          "instruction": "sein",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "beantworteten"
+          ],
+          "hint": "",
+          "instruction": "beantworten",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{14}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "war"
+          ],
+          "hint": "",
+          "instruction": "sein",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{15}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wurden"
+          ],
+          "hint": "",
+          "instruction": "werden",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{16}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "konnte"
+          ],
+          "hint": "",
+          "instruction": "können",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{17}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "geriet"
+          ],
+          "hint": "",
+          "instruction": "geraten",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{18}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sprach"
+          ],
+          "hint": "",
+          "instruction": "sprechen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{19}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "trat"
+          ],
+          "hint": "",
+          "instruction": "treten",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{20}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "gab"
+          ],
+          "hint": "",
+          "instruction": "geben",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{21}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "spielte"
+          ],
+          "hint": "",
+          "instruction": "spielen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{22}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "gewannen"
+          ],
+          "hint": "",
+          "instruction": "gewinnen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{23}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "feierten"
+          ],
+          "hint": "",
+          "instruction": "feiern",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{24}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wollten"
+          ],
+          "hint": "",
+          "instruction": "wollen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{25}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "überprüften"
+          ],
+          "hint": "",
+          "instruction": "überprüfen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{26}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "mussten"
+          ],
+          "hint": "",
+          "instruction": "müssen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{27}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "brauchten"
+          ],
+          "hint": "",
+          "instruction": "brauchen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{28}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "standen"
+          ],
+          "hint": "",
+          "instruction": "stehen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{29}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "fiel"
+          ],
+          "hint": "",
+          "instruction": "fallen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{30}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "kam"
+          ],
+          "hint": "",
+          "instruction": "kommen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{31}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "standen"
+          ],
+          "hint": "",
+          "instruction": "stehen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{32}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "gab"
+          ],
+          "hint": "",
+          "instruction": "geben",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{33}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "mussten"
+          ],
+          "hint": "",
+          "instruction": "müssen",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitmark.cloud/bit-books/schubert/scorm/web-resources/audio/schub_scorm_5.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.match:bitmark--]\n[@id:136494]\n[%6]\n[!Schreiben Sie die Sätze im Präteritum.\nRewrite the sentences in the preterite.]\n===\nKeiner kommt zu Emils Party!\n==\n[@example:Keiner kam zu Emils Party!]\n===\n1. Fritz steht im Stau.\n==\nFritz stand im Stau.\n===\n2. Erikas Motorrad fährt nicht.\n==\nErikas Motorrad fuhr nicht.\n===\n3. Klaus hat Bauchschmerzen.\n==\nKlaus hatte Bauchschmerzen.\n===\n4. Tante Frieda ist im Krankenhaus.\n==\nTante Frieda war im Krankenhaus.\n===\n5. Gregor und Karl spielen noch Golf.\n==\nGregor und Karl spielten noch Golf.\n===\n6. Franzi muss noch arbeiten.\n==\nFranzi musste noch arbeiten.\n===\n7. Gustav feiert auf einer anderen Party.\n==\nGustav feierte auf einer anderen Party.\n===\n8. Frau Krüger bekommt keine Einladung.\n==\nFrau Krüger bekam keine Einladung.\n===\n9. Die Nachbarin will nicht kommen.\n==\nDie Nachbarin wollte nicht kommen.\n===\n10. Karin geht ins Kino.\n==\nKarin ging ins Kino.\n===\n11. Der Chef fliegt nach Rom.\n== \nDer Chef flog nach Rom.\n===\n12. Oskar kann nicht laufen.\n==\nOskar konnte nicht laufen.\n===\n13. Petra wird plötzlich krank.\n==\nPetra wurde plötzlich krank.\n===\n14. Nina besucht ihren Freund.\n==\nNina besuchte ihren Freund.\n===\n15. Oskar lernt für eine Prüfung.\n==\nOskar lernte für eine Prüfung.\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "6",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Keiner kommt zu Emils Party!",
+          "values": [
+            ""
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": "Keiner kam zu Emils Party!",
+          "isLongAnswer": false
+        },
+        {
+          "key": "1. Fritz steht im Stau.",
+          "values": [
+            "Fritz stand im Stau."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2. Erikas Motorrad fährt nicht.",
+          "values": [
+            "Erikas Motorrad fuhr nicht."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "3. Klaus hat Bauchschmerzen.",
+          "values": [
+            "Klaus hatte Bauchschmerzen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "4. Tante Frieda ist im Krankenhaus.",
+          "values": [
+            "Tante Frieda war im Krankenhaus."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "5. Gregor und Karl spielen noch Golf.",
+          "values": [
+            "Gregor und Karl spielten noch Golf."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "6. Franzi muss noch arbeiten.",
+          "values": [
+            "Franzi musste noch arbeiten."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "7. Gustav feiert auf einer anderen Party.",
+          "values": [
+            "Gustav feierte auf einer anderen Party."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "8. Frau Krüger bekommt keine Einladung.",
+          "values": [
+            "Frau Krüger bekam keine Einladung."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "9. Die Nachbarin will nicht kommen.",
+          "values": [
+            "Die Nachbarin wollte nicht kommen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "10. Karin geht ins Kino.",
+          "values": [
+            "Karin ging ins Kino."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "11. Der Chef fliegt nach Rom. \nDer Chef flog nach Rom.12. Oskar kann nicht laufen.Oskar konnte nicht laufen.13. Petra wird plötzlich krank.Petra wurde plötzlich krank.14. Nina besucht ihren Freund.Nina besuchte ihren Freund.15. Oskar lernt für eine Prüfung.Oskar lernte für eine Prüfung.",
+      "id": [
+        "136494"
+      ],
+      "instruction": "Schreiben Sie die Sätze im Präteritum.\nRewrite the sentences in the preterite."
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '==='",
+        "line": 54,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '12. Oskar kann nicht laufen.'",
+        "line": 55,
+        "column": 0,
+        "errorLine": "12. Oskar kann nicht laufen."
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 56,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'Oskar konnte nicht laufen.'",
+        "line": 57,
+        "column": 0,
+        "errorLine": "Oskar konnte nicht laufen."
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 58,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '13. Petra wird plötzlich krank.'",
+        "line": 59,
+        "column": 0,
+        "errorLine": "13. Petra wird plötzlich krank."
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 60,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'Petra wurde plötzlich krank.'",
+        "line": 61,
+        "column": 0,
+        "errorLine": "Petra wurde plötzlich krank."
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 62,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '14. Nina besucht ihren Freund.'",
+        "line": 63,
+        "column": 0,
+        "errorLine": "14. Nina besucht ihren Freund."
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 64,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'Nina besuchte ihren Freund.'",
+        "line": 65,
+        "column": 0,
+        "errorLine": "Nina besuchte ihren Freund."
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 66,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '15. Oskar lernt für eine Prüfung.'",
+        "line": 67,
+        "column": 0,
+        "errorLine": "15. Oskar lernt für eine Prüfung."
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 68,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'Oskar lernte für eine Prüfung.'",
+        "line": 69,
+        "column": 0,
+        "errorLine": "Oskar lernte für eine Prüfung."
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 70,
+        "column": 0,
+        "errorLine": "==="
+      }
+    ]
+  }
+]

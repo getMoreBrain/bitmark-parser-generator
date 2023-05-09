@@ -1,0 +1,3022 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:136154]\n[#Beginners' German: Food and drink]\n[@externalId:e-lV4UUIIKgGqv]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136154"
+      ],
+      "title": "Beginners' German: Food and drink",
+      "externalId": [
+        "e-lV4UUIIKgGqv"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:136155]\n[#Introduction]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "136155"
+      ],
+      "title": "Introduction"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136156]\nThis course focuses on expressing your own food and drink preferences, and explores meal times and eating habits in German-speaking countries. You will read and hear about a range of types of food and drink.\n\nYou will also find out how to order and pay for things in cafes and restaurants.\n\nMost importantly, you will find out what it’s like to read and listen to German in real contexts, and about developing strategies and studying useful phrases, which will help you to cope in a range of situations.\n\nThis OpenLearn course is an adapted extract from the Open University course **L193 Rundblick: beginners' German**.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This course focuses on expressing your own food and drink preferences, and explores meal times and eating habits in German-speaking countries. You will read and hear about a range of types of food and drink.\n\nYou will also find out how to order and pay for things in cafes and restaurants.\n\nMost importantly, you will find out what it’s like to read and listen to German in real contexts, and about developing strategies and studying useful phrases, which will help you to cope in a range of situations.\n\nThis OpenLearn course is an adapted extract from the Open University course **L193 Rundblick: beginners' German**.",
+      "id": [
+        "136156"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:136157]\n[#Learning outcomes]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "136157"
+      ],
+      "title": "Learning outcomes"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136158]\nAfter studying this course, you should be able to:\n\n• speak about personal preferences with regard to food and drink\n• order and pay for food and drink in a restaurant\n• use the verbs essen and trinken\n• demonstrate an awareness of different types of snacks, different meal times and different places to eat in German-speaking countries\n• recognise the distinct pronunciation of German native speakers from Austria.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "After studying this course, you should be able to:\n\n• speak about personal preferences with regard to food and drink\n• order and pay for food and drink in a restaurant\n• use the verbs essen and trinken\n• demonstrate an awareness of different types of snacks, different meal times and different places to eat in German-speaking countries\n• recognise the distinct pronunciation of German native speakers from Austria.",
+      "id": [
+        "136158"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:136159]\n[#Breakfast foods]\n[%1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "136159"
+      ],
+      "title": "Breakfast foods"
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark++]\n[@id:136160]\n[%Activity 1]\n[!This is a picture of a breakfast table with typical German breakfast foods. Look at the image and then match the label numbers to the correct food names.]\n===\n1 \n==\ndas Brötchen\n===\n2 \n==\nder Kaffee\n===\n3 \n==\nder Schinken\n===\n4 \n==\ndie Wurst\n===\n5 \n==\ndie Milch\n===\n6 \n==\nder Pfeffer\n===\n7 \n==\ndas Salz\n===\n8 \n==\nder Orangensaft\n===\n9 \n==\nder Käse\n===\n10\n==\nder Toast\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193r_b1_u3_f002.jpg]",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark++",
+      "item": "Activity 1",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "1 ",
+          "values": [
+            "das Brötchen"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2 ",
+          "values": [
+            "der Kaffee"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "3 ",
+          "values": [
+            "der Schinken"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "4 ",
+          "values": [
+            "die Wurst"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "5 ",
+          "values": [
+            "die Milch"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "6 ",
+          "values": [
+            "der Pfeffer"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "7 ",
+          "values": [
+            "das Salz"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "8 ",
+          "values": [
+            "der Orangensaft"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "9 ",
+          "values": [
+            "der Käse"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "10",
+          "values": [
+            "der Toast"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136160"
+      ],
+      "instruction": "This is a picture of a breakfast table with typical German breakfast foods. Look at the image and then match the label numbers to the correct food names."
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "jpg",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193r_b1_u3_f002.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136161]\n[%Skills: Memorising nouns with pictures]\nA useful strategy for memorising nouns is to learn the words in connection with pictures until you can cover the words and name each of the items with its correct article using just the picture.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "A useful strategy for memorising nouns is to learn the words in connection with pictures until you can cover the words and name each of the items with its correct article using just the picture.",
+      "id": [
+        "136161"
+      ],
+      "item": "Skills: Memorising nouns with pictures"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136162]\n[%Language: Using \"der, die, das\" and \"ein, eine\"]\n\nIn the first activity you came across some of the German articles __der, die, das__ (the). Here is how they work:\nThese articles identify the grammatical gender of a noun. All German nouns have a grammatical gender. They are either masculine, feminine or neuter. Sometimes the gender is predictable, for example the word for man, __Mann__, is masculine and the word for woman, __Frau__, is feminine. But this is not true for a lot of nouns. They just happen to be either masculine or feminine or neuter. The article for each gender is different. The German for ‘the’ can be either der, die or das depending on the gender of the noun. Similarly, the German for ‘a/an’ can be ein or eine depending on the gender.\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/table1.png]\nYou can also see that all German nouns begin with a capital letter. Note that you may come across articles other than the ones above.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In the first activity you came across some of the German articles __der, die, das__ (the). Here is how they work:\nThese articles identify the grammatical gender of a noun. All German nouns have a grammatical gender. They are either masculine, feminine or neuter. Sometimes the gender is predictable, for example the word for man, __Mann__, is masculine and the word for woman, __Frau__, is feminine. But this is not true for a lot of nouns. They just happen to be either masculine or feminine or neuter. The article for each gender is different. The German for ‘the’ can be either der, die or das depending on the gender of the noun. Similarly, the German for ‘a/an’ can be ein or eine depending on the gender.\n\nYou can also see that all German nouns begin with a capital letter. Note that you may come across articles other than the ones above.",
+      "id": [
+        "136162"
+      ],
+      "item": "Language: Using \"der, die, das\" and \"ein, eine\""
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "png",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/table1.png"
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&audio]\n[@id:136163]\n[%Activity 2]\n[!Now listen to three people talking about what they usually eat __(essen)__ and drink __(trinken)__ for breakfast __(Frühstück)__. Don’t reach for the dictionary yet – see how much you can understand first. Note down the breakfast items you hear each person mention.]\n\n===\n[@shortAnswer]\n===\nMann 1:[@shortAnswer]\n[$Milch, Müsli, Toast, Brot, Käse, Marmelade]\n===\nMann 2:[@shortAnswer]\n[$Kaffee, Toast, Brötchen, Käse, Marmelade]\n===\nFrau:[@shortAnswer]\n[$Kaffee, Müsli, Ei, Toast, Brot, Brötchen, Schinken, Käse, Marmelade, Jogurt]\n===\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud001.mp3]\n|note:Transcript\n__Hören Sie bitte.__\n\n**Interviewerin** Und was essen Sie zum Frühstück?\n**Mann 1** Ähm, Brot, Toast und Marmelade, Käse, manchmal auch Milch mit Müsli … Ja, das ist es eigentlich.\n**Interviewerin** Und was essen Sie da zum Frühstück?\n**Mann 2** Brötchen, Toast mit Marmelade, Käse, ja …\n**Interviewerin** Und trinken Sie dazu was?\n**Mann 2** Kaffee.\n**Interviewerin** Sie trinken Kaffee?\n**Mann 2** Ja.\n**Interviewerin** Und was essen und trinken Sie zum Frühstück?\n**Frau** Ein Ei, Marmelade, Käse, Schinken, Müsli, Toast, Brötchen, Kaffee, Brot, und Jogurt.",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Activity 2",
+      "instruction": "Now listen to three people talking about what they usually eat __(essen)__ and drink __(trinken)__ for breakfast __(Frühstück)__. Don’t reach for the dictionary yet – see how much you can understand first. Note down the breakfast items you hear each person mention.",
+      "body": "",
+      "footer": "[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud001.mp3]|note:Transcript\n__Hören Sie bitte.__\n\n**Interviewerin** Und was essen Sie zum Frühstück?\n**Mann 1** Ähm, Brot, Toast und Marmelade, Käse, manchmal auch Milch mit Müsli … Ja, das ist es eigentlich.\n**Interviewerin** Und was essen Sie da zum Frühstück?\n**Mann 2** Brötchen, Toast mit Marmelade, Käse, ja …\n**Interviewerin** Und trinken Sie dazu was?\n**Mann 2** Kaffee.\n**Interviewerin** Sie trinken Kaffee?\n**Mann 2** Ja.\n**Interviewerin** Und was essen und trinken Sie zum Frühstück?\n**Frau** Ein Ei, Marmelade, Käse, Schinken, Müsli, Toast, Brötchen, Kaffee, Brot, und Jogurt.",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mann 1:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Milch, Müsli, Toast, Brot, Käse, Marmelade",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mann 2:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Kaffee, Toast, Brötchen, Käse, Marmelade",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Frau:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Kaffee, Müsli, Ei, Toast, Brot, Brötchen, Schinken, Käse, Marmelade, Jogurt",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136163"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud001.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136164]\n[%Culture: Traditional German breakfast foods]\nDid you notice that none of the interviewees in the audio clip mentioned a cup of tea? Although the couple pictured here are drinking tea, coffee is much more popular at breakfast time. Slices of cold meat or slicing sausage __(Aufschnitt, Wurst)__, ham __(Schinken)__ and cheese __(Käse)__ are also very common breakfast foods, as well as hard-boiled eggs __(gekochte Eier)__ and __Marmelade__, which is not just marmalade __(Orangenmarmelade)__ but any kind of jam.\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f003.jpg]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Did you notice that none of the interviewees in the audio clip mentioned a cup of tea? Although the couple pictured here are drinking tea, coffee is much more popular at breakfast time. Slices of cold meat or slicing sausage __(Aufschnitt, Wurst)__, ham __(Schinken)__ and cheese __(Käse)__ are also very common breakfast foods, as well as hard-boiled eggs __(gekochte Eier)__ and __Marmelade__, which is not just marmalade __(Orangenmarmelade)__ but any kind of jam.",
+      "id": [
+        "136164"
+      ],
+      "item": "Culture: Traditional German breakfast foods",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f003.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136165]\n[%Language: Personal pronouns]\nHere is a list of German pronouns.\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/table3.png]\nNote that sie with a small ‘s’ means ‘she’ and also ‘they’. Sie with a capital ‘S’ means ‘you’. There are several ways of saying ‘you’ in German (__du, ihr__ and __Sie__) but Sie is the most useful for talking to German-speaking people when you meet them.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Here is a list of German pronouns.\n\nNote that sie with a small ‘s’ means ‘she’ and also ‘they’. Sie with a capital ‘S’ means ‘you’. There are several ways of saying ‘you’ in German (__du, ihr__ and __Sie__) but Sie is the most useful for talking to German-speaking people when you meet them.",
+      "id": [
+        "136165"
+      ],
+      "item": "Language: Personal pronouns",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/table3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136166]\n[%Language: The verbs essen and trinken]\nHere is the present tense of the irregular verb __essen__ (to eat) and the regular verb __trinken__ (to drink). You will see that the ending of the verb changes depending on whether it follows __ich, du__ etc. Only the second and third person singular (__du__ and __er/sie/es__) forms of __essen__ are irregular, with a change in the vowel sound.\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/table4.png]\n**Vokabeln** (vocabulary)\nCornflakes (pl.) __cornflakes__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Here is the present tense of the irregular verb __essen__ (to eat) and the regular verb __trinken__ (to drink). You will see that the ending of the verb changes depending on whether it follows __ich, du__ etc. Only the second and third person singular (__du__ and __er/sie/es__) forms of __essen__ are irregular, with a change in the vowel sound.\n\n**Vokabeln** (vocabulary)\nCornflakes (pl.) __cornflakes__",
+      "id": [
+        "136166"
+      ],
+      "item": "Language: The verbs essen and trinken",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/table4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&imageWithAudio]\n[@id:136167]\n[%Activity 3]\n[!Listen to the clip below, with five recorded questions about what various people have for breakfast. In the gap after the questions, answer according to the picture prompts below, replacing the person’s name each time with the appropriate personal pronoun. You may want to use the transcript to help you.]\n**Beispiel** (example)\nYou hear: __Was isst Sara zum Frühstück?__\nYou say: __Sie isst Brötchen.__\nYou hear: __Sie isst Brötchen.__\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud002.mp3]\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193r_b1_u3_f007_9_4_10_11.jpg]\n|note: Transcript\n__Bitte hören Sie und sprechen Sie.__\n\n**Nummer 1**\nWas isst Sara zum Frühstück?\n➜ Sie isst Brötchen.\n\n**Nummer 2**\nUnd was trinkt sie?\n➜ Sie trinkt Kaffee.\n\n**Nummer 3**\nWas essen Herr und Frau Stehmann zum Frühstück?\n➜Sie essen Käse.\n\n**Nummer 4**\nWas isst John zum Frühstück?\n➜Er isst Cornflakes.\n\n**Nummer 5**\nUnd was trinkt er?\n➜Er trinkt Orangensaft.",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Activity 3",
+      "instruction": "Listen to the clip below, with five recorded questions about what various people have for breakfast. In the gap after the questions, answer according to the picture prompts below, replacing the person’s name each time with the appropriate personal pronoun. You may want to use the transcript to help you.",
+      "body": "**Beispiel** (example)\nYou hear: __Was isst Sara zum Frühstück?__\nYou say: __Sie isst Brötchen.__\nYou hear: __Sie isst Brötchen.__\n\n\n|note: Transcript\n__Bitte hören Sie und sprechen Sie.__\n\n**Nummer 1**\nWas isst Sara zum Frühstück?\n➜ Sie isst Brötchen.\n\n**Nummer 2**\nUnd was trinkt sie?\n➜ Sie trinkt Kaffee.\n\n**Nummer 3**\nWas essen Herr und Frau Stehmann zum Frühstück?\n➜Sie essen Käse.\n\n**Nummer 4**\nWas isst John zum Frühstück?\n➜Er isst Cornflakes.\n\n**Nummer 5**\nUnd was trinkt er?\n➜Er trinkt Orangensaft.",
+      "footer": "",
+      "hint": "",
+      "questions": [],
+      "id": [
+        "136167"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193r_b1_u3_f007_9_4_10_11.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud002.mp3"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 27,
+        "errorLine": "[.interview:bitmark--&imageWithAudio]"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 16,
+        "column": 0,
+        "errorLine": "➜ Sie isst Brötchen."
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 20,
+        "column": 0,
+        "errorLine": "➜ Sie trinkt Kaffee."
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 24,
+        "column": 0,
+        "errorLine": "➜Sie essen Käse."
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 28,
+        "column": 0,
+        "errorLine": "➜Er isst Cornflakes."
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 32,
+        "column": 0,
+        "errorLine": "➜Er trinkt Orangensaft."
+      },
+      {
+        "message": "Unexpected input '\\nUnd was trinkt er?\nEr trinkt Orangensaft.\n\n'",
+        "line": 34,
+        "column": 0,
+        "errorLine": ""
+      },
+      {
+        "message": "Unexpected input 'Und was trinkt er?'",
+        "line": 31,
+        "column": 0,
+        "errorLine": "Und was trinkt er?"
+      },
+      {
+        "message": "Unexpected input 'Er trinkt Orangensaft.'",
+        "line": 32,
+        "column": 1,
+        "errorLine": "➜Er trinkt Orangensaft."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:136168]\n[#Ordering breakfast]\n[%2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "136168"
+      ],
+      "title": "Ordering breakfast"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:136169]\n[%Activity 4]\n[!Here is a chance to practise the forms of essen you learned in the previous section. Write down the missing forms of the verbs to complete the sentences. Try it from memory first – but you can check back if you need.]\n1. Was [_essen] Sie zum Frühstück?\n2. Ich [_esse] Brötchen mit Schinken.\n3. Was [_isst] du zum Frühstück?\n4. Ich [_esse] Müsli und Jogurt.\n5. Was [_esst] ihr zum Frühstück?\n6. Wir [_essen] Brot mit Butter und Käse.\n7. Und was [_isst] Andreas?\n8. Er [_isst] Toast mit Marmelade.\n||[?] with picture?||\n\n**Vokabeln**\nSorten (f. pl.) __kinds, sorts__",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "1. Was {0} Sie zum Frühstück?\n2. Ich {1} Brötchen mit Schinken.\n3. Was {2} du zum Frühstück?\n4. Ich {3} Müsli und Jogurt.\n5. Was {4} ihr zum Frühstück?\n6. Wir {5} Brot mit Butter und Käse.\n7. Und was {6} Andreas?\n8. Er {7} Toast mit Marmelade.\n\n\n**Vokabeln**\nSorten (f. pl.) __kinds, sorts__",
+      "item": "Activity 4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136169"
+      ],
+      "instruction": "Here is a chance to practise the forms of essen you learned in the previous section. Write down the missing forms of the verbs to complete the sentences. Try it from memory first – but you can check back if you need.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "essen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "esse"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "isst"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "esse"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "esst"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "essen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "isst"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "isst"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark--&audio]\n[@id:136170]\n[%Activity 5]\n[!It’s breakfast time at a hotel in Munich. Listen to the recording, then list the following items in the order in which the restaurant supervisor, Frau Vogt, mentions them. You don’t need to understand everything she says. Just focus on the items listed below.]\n\n===\n[%1]\n==\nBrot\n===\n[%2]\n==\nObst\n===\n[%3]\n==\nKäse\n===\n[%4]\n==\nWurst\n===\n[%5]\n==\nJogurt\n===\n[%6]\n==\nMarmeladen\n===\n[%7]\n==\nKaffee\n===\n[%8]\n==\nVollkornbrötchen\n===\n\nNote: One of the words, __Marmeladen__ (jams), is a plural.\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud003.mp3]\n|note: Transcript\n__Hören Sie bitte.__\n\n**Interviewerin** Sie haben hier ein tolles Frühstücksbüffet. Könnten Sie kurz erklären, was es da alles gibt?\n**Frau Vogt** Ja, bei uns gibt es verschiedene Brotsorten. Dann gibt’s, äh, frisches Obst, wie zum Beispiel Weintrauben, Erdbeeren, Äpfel, Birnen, Orangen, Kiwis. Äh, des Weiteren haben wir, äh, Käse und verschiedene Wurstsorten. Dann haben wir verschiedene Sorten Jogurt – Pfirsichjogurt, Kirschjogurt und Erdbeerjogurt. Danach Marmeladen, drei verschiedene Sorten, und heut’ haben wir Erdbeer-, Ananas- und Aprikosenmarmelade.\n**Interviewerin** Und was trinken die meisten Gäste zum Frühstück?\n**Frau Vogt** Kaffee eigentlich oder Tee, aber die meisten trinken Kaffee.\n**Interviewerin** Und Sie persönlich, was trinken Sie zum Frühstück?\n**Frau Vogt** Kaffee.\n**Interviewerin** Und was essen Sie zum Frühstück?\n**Frau Vogt** Mhm. Vollkornbrötchen mit Käse meistens.",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "Activity 5",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "",
+          "values": [
+            "Brot"
+          ],
+          "item": "1",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "Obst"
+          ],
+          "item": "2",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "Käse"
+          ],
+          "item": "3",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "Wurst"
+          ],
+          "item": "4",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "Jogurt"
+          ],
+          "item": "5",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "Marmeladen"
+          ],
+          "item": "6",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "Kaffee"
+          ],
+          "item": "7",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "Vollkornbrötchen"
+          ],
+          "item": "8",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "Note: One of the words, __Marmeladen__ (jams), is a plural.\n\n|note: Transcript\n__Hören Sie bitte.__\n\n**Interviewerin** Sie haben hier ein tolles Frühstücksbüffet. Könnten Sie kurz erklären, was es da alles gibt?\n**Frau Vogt** Ja, bei uns gibt es verschiedene Brotsorten. Dann gibt’s, äh, frisches Obst, wie zum Beispiel Weintrauben, Erdbeeren, Äpfel, Birnen, Orangen, Kiwis. Äh, des Weiteren haben wir, äh, Käse und verschiedene Wurstsorten. Dann haben wir verschiedene Sorten Jogurt – Pfirsichjogurt, Kirschjogurt und Erdbeerjogurt. Danach Marmeladen, drei verschiedene Sorten, und heut’ haben wir Erdbeer-, Ananas- und Aprikosenmarmelade.\n**Interviewerin** Und was trinken die meisten Gäste zum Frühstück?\n**Frau Vogt** Kaffee eigentlich oder Tee, aber die meisten trinken Kaffee.\n**Interviewerin** Und Sie persönlich, was trinken Sie zum Frühstück?\n**Frau Vogt** Kaffee.\n**Interviewerin** Und was essen Sie zum Frühstück?\n**Frau Vogt** Mhm. Vollkornbrötchen mit Käse meistens.",
+      "id": [
+        "136170"
+      ],
+      "instruction": "It’s breakfast time at a hotel in Munich. Listen to the recording, then list the following items in the order in which the restaurant supervisor, Frau Vogt, mentions them. You don’t need to understand everything she says. Just focus on the items listed below.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud003.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136171]\n[%Culture: German bread]\nYou may have heard Frau Vogt say that she liked to eat __Vollkornbrötchen__ (wholemeal rolls). She also said, __‘Bei uns gibt es verschiedene Brotsorten.’__ Over 300 different varieties of bread are produced in Germany, with many regional specialities. These include various types of __Schwarzbrot__ (wholegrain rye bread), crusty bread from the Black Forest __(Schwarzwälder Krustenbrot)__, dark rye bread from Westphalia __(Westfälischer Pumpernickel)__, and many varieties of bread roll __(Brötchen)__, which are known as Schrippen in and around Berlin, __Semmeln__ or __Weckerl__ in southern Germany and Austria, and __Rundstücke__ in northern Germany.\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f012.jpg]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You may have heard Frau Vogt say that she liked to eat __Vollkornbrötchen__ (wholemeal rolls). She also said, __‘Bei uns gibt es verschiedene Brotsorten.’__ Over 300 different varieties of bread are produced in Germany, with many regional specialities. These include various types of __Schwarzbrot__ (wholegrain rye bread), crusty bread from the Black Forest __(Schwarzwälder Krustenbrot)__, dark rye bread from Westphalia __(Westfälischer Pumpernickel)__, and many varieties of bread roll __(Brötchen)__, which are known as Schrippen in and around Berlin, __Semmeln__ or __Weckerl__ in southern Germany and Austria, and __Rundstücke__ in northern Germany.",
+      "id": [
+        "136171"
+      ],
+      "item": "Culture: German bread",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f012.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark--&imageWithAudio]\n[@id:136172]\n[%Activity 6]\n[!Now see how much of the new vocabulary you remember. In the audio clip below, you’ll hear two hotel guests being asked what they are having for breakfast. Notice the use of the verb __frühstücken__ (to have breakfast). Then list the pictures (a)–(d) beneath the audio clip, in the order in which they are mentioned.]\n===\n[%1]\n==\nPicture (a)\n===\n[%2]\n==\nPicture (c)\n===\n[%3]\n==\nPicture (d)\n===\n[%4]\n==\nPicture (b)\n===\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud004.mp3]\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193r_b1_u3_f007_8_6.jpg]\n|note:Transcript\n__Bitte hören Sie.__\n\n**Interviewerin** Was frühstücken Sie?\n**Mann 1** Ja, wir frühstücken Brötchen, Marmelade, verschiedene Wurstsorten, trinken dazu Tee, Kaffee.\n**Interviewerin** Was essen Sie zum Frühstück?\n**Mann 2** Cornflakes, Müsli.\n**Interviewerin** Und was trinken Sie?\n**Mann 2** Einen Orangensaft oder Kaffee.",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "Activity 6",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "",
+          "values": [
+            "Picture (a)"
+          ],
+          "item": "1",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "Picture (c)"
+          ],
+          "item": "2",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "Picture (d)"
+          ],
+          "item": "3",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "",
+          "values": [
+            "Picture (b)"
+          ],
+          "item": "4",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "|note:Transcript\n__Bitte hören Sie.__\n\n**Interviewerin** Was frühstücken Sie?\n**Mann 1** Ja, wir frühstücken Brötchen, Marmelade, verschiedene Wurstsorten, trinken dazu Tee, Kaffee.\n**Interviewerin** Was essen Sie zum Frühstück?\n**Mann 2** Cornflakes, Müsli.\n**Interviewerin** Und was trinken Sie?\n**Mann 2** Einen Orangensaft oder Kaffee.",
+      "id": [
+        "136172"
+      ],
+      "instruction": "Now see how much of the new vocabulary you remember. In the audio clip below, you’ll hear two hotel guests being asked what they are having for breakfast. Notice the use of the verb __frühstücken__ (to have breakfast). Then list the pictures (a)–(d) beneath the audio clip, in the order in which they are mentioned.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193r_b1_u3_f007_8_6.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud004.mp3"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 40,
+        "errorLine": "[.match-solution-grouped:bitmark--&imageWithAudio]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136173]\n[%Skills: Learning vocabulary by saying it out loud]\n\nYou might like to try the following strategy for learning new words and phrases:\n\n•. Look at the word or phrase.\n•. Check its pronunciation using recordings, if available.\n•. Speak it out loud.\n•. Cover the text.\n•. Speak it out loud again.\n•. Write it down from memory.\n•. Check your spelling.\n\nIf you want a really challenging word to learn, try __Frühstücksbüffet__!",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You might like to try the following strategy for learning new words and phrases:\n\n•. Look at the word or phrase.\n•. Check its pronunciation using recordings, if available.\n•. Speak it out loud.\n•. Cover the text.\n•. Speak it out loud again.\n•. Write it down from memory.\n•. Check your spelling.\n\nIf you want a really challenging word to learn, try __Frühstücksbüffet__!",
+      "id": [
+        "136173"
+      ],
+      "item": "Skills: Learning vocabulary by saying it out loud"
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&audio]\n[@id:136174]\n[%Activity 7]\n[!Here you review the expressions you have come across so far. You are playing the part of a member of the hotel staff. Listen to the questions and answers, and practise saying the answers yourself. You may want to use the transcript to help you.]\nHow would you have answered the last two questions? Practise giving your own answers out loud.\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud005.mp3]\n|note:Transcript\n__Bitte hören Sie und sprechen Sie.__\n\nWas frühstücken die meisten Gäste?\n➜Sie essen Brötchen und verschiedene Sorten Wurst oder Marmelade.\n\nUnd was gibt es zum Trinken?\n➜Es gibt Orangensaft und Kaffee.\n\nUnd Sie? Was trinken Sie?\n➜Ich trinke Tee oder Kaffee.\n\nWas essen Sie meistens?\n➜Ich esse Cornflakes oder Müsli.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "How would you have answered the last two questions? Practise giving your own answers out loud.\n\n|note:Transcript\n__Bitte hören Sie und sprechen Sie.__\n\nWas frühstücken die meisten Gäste?\n➜Sie essen Brötchen und verschiedene Sorten Wurst oder Marmelade.\n\nUnd was gibt es zum Trinken?\n➜Es gibt Orangensaft und Kaffee.\n\nUnd Sie? Was trinken Sie?\n➜Ich trinke Tee oder Kaffee.\n\nWas essen Sie meistens?\n➜Ich esse Cornflakes oder Müsli.",
+      "item": "Activity 7",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136174"
+      ],
+      "instruction": "Here you review the expressions you have come across so far. You are playing the part of a member of the hotel staff. Listen to the questions and answers, and practise saying the answers yourself. You may want to use the transcript to help you.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud005.mp3"
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 11,
+        "column": 0,
+        "errorLine": "➜Sie essen Brötchen und verschiedene Sorten Wurst oder Marmelade."
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 14,
+        "column": 0,
+        "errorLine": "➜Es gibt Orangensaft und Kaffee."
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 17,
+        "column": 0,
+        "errorLine": "➜Ich trinke Tee oder Kaffee."
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 20,
+        "column": 0,
+        "errorLine": "➜Ich esse Cornflakes oder Müsli."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:136175]\n[#Likes and dislikes]\n[%3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "136175"
+      ],
+      "title": "Likes and dislikes"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136176]\n[%Language: Expressing likes and dislikes]\n\nIf you want to say what you like to do in German, you just add gern after the verb (you may also hear people say __gerne__), and the verb (__esse, trinke__) stays the same. Think of __gern__ as meaning ‘with pleasure’.\n\nFlorian isst Fleisch.\n__Florian eats meat.__\n\nFlorian isst **gern** Fleisch.\t\n__Florian__ **likes** __to eat meat. (lit. ‘Florian eats__ **with pleasure** __meat.’)__\n\nAnna trinkt Kakao.\n__Anna drinks cocoa.__\n\nAnna trinkt **gern** Kakao.\t\n__Anna__ **likes** __to drink cocoa.__\n\nTo say you like it very much, add __sehr gern__; to say you don’t like something, add __nicht gern.__\n\nIch trinke sehr gern Wein.\t\n__I like (to drink) wine very much.__\n\nEr isst nicht gern Gemüse.\t\n__He doesn’t like (to eat) vegetables.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If you want to say what you like to do in German, you just add gern after the verb (you may also hear people say __gerne__), and the verb (__esse, trinke__) stays the same. Think of __gern__ as meaning ‘with pleasure’.\n\nFlorian isst Fleisch.\n__Florian eats meat.__\n\nFlorian isst **gern** Fleisch.\t\n__Florian__ **likes** __to eat meat. (lit. ‘Florian eats__ **with pleasure** __meat.’)__\n\nAnna trinkt Kakao.\n__Anna drinks cocoa.__\n\nAnna trinkt **gern** Kakao.\t\n__Anna__ **likes** __to drink cocoa.__\n\nTo say you like it very much, add __sehr gern__; to say you don’t like something, add __nicht gern.__\n\nIch trinke sehr gern Wein.\t\n__I like (to drink) wine very much.__\n\nEr isst nicht gern Gemüse.\t\n__He doesn’t like (to eat) vegetables.__",
+      "id": [
+        "136176"
+      ],
+      "item": "Language: Expressing likes and dislikes"
+    }
+  },
+  {
+    "bitmark": "[.assignment&imageWithAudio]\n[@id:136177]\n[%Activity 8]\n[!In this activity you will practise talking about the food and drink you like or dislike.\nThere are four audio questions below. Each clip is followed by a text prompt to use in your answer. Use these prompts to answer aloud in a full sentence, before playing the model answer. You may want to use the transcript to help you. If you like, you can repeat the exercise, giving your own personal answers instead of the ones suggested.]\nQuestion 1: Was essen Sie gern?\nPrompt: Sachertorte\n[?Model answer: Ich esse gern Sachertorte.]\n\nQuestion 2: Was essen Sie nicht so gern?\nPrompt: Käse\n[?Model answer: Ich esse nicht so gern Käse.]\n\nQuestion 3: Was trinken Sie sehr gern?\nPrompt: Kaffee\n[?Model answer: Ich trinke sehr gern Kaffee.]\n\nQuestion 4: Was trinken Sie überhaupt nicht gern?\nPrompt: Tee mit Zitrone\n[?Model answer: Ich trinke überhaupt nicht gern Tee mit Zitrone.]\n||8x audio or written questions?||\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/193r_vle_u3sp_fig001.jpg]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Question 1: Was essen Sie gern?\nPrompt: Sachertorte\n\n\nQuestion 2: Was essen Sie nicht so gern?\nPrompt: Käse\n\n\nQuestion 3: Was trinken Sie sehr gern?\nPrompt: Kaffee\n\n\nQuestion 4: Was trinken Sie überhaupt nicht gern?\nPrompt: Tee mit Zitrone",
+      "item": "Activity 8",
+      "hint": "Model answer: Ich trinke überhaupt nicht gern Tee mit Zitrone.",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136177"
+      ],
+      "instruction": "In this activity you will practise talking about the food and drink you like or dislike.\nThere are four audio questions below. Each clip is followed by a text prompt to use in your answer. Use these prompts to answer aloud in a full sentence, before playing the model answer. You may want to use the transcript to help you. If you like, you can repeat the exercise, giving your own personal answers instead of the ones suggested.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/193r_vle_u3sp_fig001.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 18,
+        "errorLine": "[.assignment&imageWithAudio]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.assignment]\n[@id:136178]\n[%Skills: Recording yourself]\n\nTo practise and improve your German fluency and pronunciation you can try recording yourself and comparing your way of speaking with that of the speakers you hear in these materials. There are a number of free online recording tools available – you may have recording software on your computer, or you could use a mobile phone. The best approach to this kind of practice is that you do the speaking activities in these materials and record your responses. Then listen again to your response and re-record until you are happy with it. Finally, listen again to the recording in the activity and compare it with your own recording.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "To practise and improve your German fluency and pronunciation you can try recording yourself and comparing your way of speaking with that of the speakers you hear in these materials. There are a number of free online recording tools available – you may have recording software on your computer, or you could use a mobile phone. The best approach to this kind of practice is that you do the speaking activities in these materials and record your responses. Then listen again to your response and re-record until you are happy with it. Finally, listen again to the recording in the activity and compare it with your own recording.",
+      "item": "Skills: Recording yourself",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136178"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay&audio]\n[@id:136179]\n[%Activity 9]\n[!Listen to Herr Schuster and Frau Georg talking about what they like to eat and drink. Make some notes about what they each like/dislike, and how much they like/dislike it. You can check the transcript for any wording.]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud006.mp3]\n**Vokabeln**\ndas Gemüse __vegetables__\n|note: Transcript\n__Hören Sie bitte.__\n\n**Herr Schuster:** Ja, ich trinke gern Apfelsaft. Ich esse sehr gern Käse. Müsli esse ich überhaupt nicht gern!\n\n**Frau Georg:** Nein, ich trinke nicht gern Kaffee. Ich koche besonders gern griechisch. Ich arbeite gar nicht gern im Restaurant.",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Listen to Herr Schuster and Frau Georg talking about what they like to eat and drink. Make some notes about what they each like/dislike, and how much they like/dislike it. You can check the transcript for any wording.",
+      "partialAnswer": "",
+      "body": "**Vokabeln**\ndas Gemüse __vegetables__\n|note: Transcript\n__Hören Sie bitte.__\n\n**Herr Schuster:** Ja, ich trinke gern Apfelsaft. Ich esse sehr gern Käse. Müsli esse ich überhaupt nicht gern!\n\n**Frau Georg:** Nein, ich trinke nicht gern Kaffee. Ich koche besonders gern griechisch. Ich arbeite gar nicht gern im Restaurant.",
+      "item": "Activity 9",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136179"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud006.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:136180]\n[%Activity 10]\n[!Practise what you have learned about expressing likes and dislikes by writing sentences to say what you and other people like or don’t like, using the cues below. Then write a few more sentences about your own personal preferences.]\n\n☺︎ gern\t\n☹︎ nicht so gern\n \n☺︎☺︎ sehr gern\t  \n☹︎☹︎ nicht gern\n  \n☺︎☺︎☺︎ besonders gern\n☹︎☹︎☹︎ überhaupt nicht gern\n\n**Beispiel**\n(Thomas/essen) Gemüse ☹︎; Obst ☺︎☺︎; Pfirsiche ☺︎☺︎☺︎ \nThomas isst nicht gern Gemüse.\nEr isst sehr gern Obst.\nEr isst besonders gern Pfirsiche.\n\n===\n1. (Frau Meyer/trinken) Saft ☺︎☺︎; Wein ☺︎; Rotwein ☹︎☹︎☹︎\n[$Frau Meyer trinkt sehr gern Saft. Sie trinkt gern Wein. Sie trinkt überhaupt nicht gern Rotwein.]\n===\n2. (ich/kochen) italienisch ☺︎; mexikanisch ☺︎☺︎☺︎; chinesisch ☹︎\n[$Ich koche gern italienisch. Ich koche besonders gern mexikanisch. Ich koche nicht so gern chinesisch.]\n===\n3. (wir/essen) Weißbrot ☹︎☹︎; Krustenbrot ☺︎☺︎; Vollkornbrot ☺︎☺︎\n[$Wir essen nicht gern Weißbrot. Wir essen gern Krustenbrot. Wir essen sehr gern Vollkornbrot.]\n===\n4. Und Sie ... ? Was essen Sie gern? Was trinken Sie gern? Was kochen Sie gern?\n[$Make sure your own sentences have the right verb forms: __ich esse, ich trinke, ich koche.__]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Activity 10",
+      "instruction": "Practise what you have learned about expressing likes and dislikes by writing sentences to say what you and other people like or don’t like, using the cues below. Then write a few more sentences about your own personal preferences.",
+      "body": "☺︎ gern\t\n☹︎ nicht so gern\n \n☺︎☺︎ sehr gern\t  \n☹︎☹︎ nicht gern\n  \n☺︎☺︎☺︎ besonders gern\n☹︎☹︎☹︎ überhaupt nicht gern\n\n**Beispiel**\n(Thomas/essen) Gemüse ☹︎; Obst ☺︎☺︎; Pfirsiche ☺︎☺︎☺︎ \nThomas isst nicht gern Gemüse.\nEr isst sehr gern Obst.\nEr isst besonders gern Pfirsiche.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. (Frau Meyer/trinken) Saft ☺︎☺︎; Wein ☺︎; Rotwein ☹︎☹︎☹︎",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Frau Meyer trinkt sehr gern Saft. Sie trinkt gern Wein. Sie trinkt überhaupt nicht gern Rotwein.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2. (ich/kochen) italienisch ☺︎; mexikanisch ☺︎☺︎☺︎; chinesisch ☹︎",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Ich koche gern italienisch. Ich koche besonders gern mexikanisch. Ich koche nicht so gern chinesisch.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "3. (wir/essen) Weißbrot ☹︎☹︎; Krustenbrot ☺︎☺︎; Vollkornbrot ☺︎☺︎",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Wir essen nicht gern Weißbrot. Wir essen gern Krustenbrot. Wir essen sehr gern Vollkornbrot.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "4. Und Sie ... ? Was essen Sie gern? Was trinken Sie gern? Was kochen Sie gern?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Make sure your own sentences have the right verb forms: __ich esse, ich trinke, ich koche.__",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136180"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136181]\nComment\nNotice the letter __ß__ in __Weißbrot__. This is pronounced like __s__ and is used instead of double- __s__ after long vowel sounds in words like __Weißbrot__ (white bread) and __Straße__ (street).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Comment\nNotice the letter __ß__ in __Weißbrot__. This is pronounced like __s__ and is used instead of double- __s__ after long vowel sounds in words like __Weißbrot__ (white bread) and __Straße__ (street).",
+      "id": [
+        "136181"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&audio]\n[@id:136182]\n[%Activity 11]\n[!You have come across quite a few words containing __ch__ in the previous activities, such as __Milch__ and __Brötchen__. This __ch__ should sound like the ‘h’ in ‘human’. Practise your pronunciation as you listen and repeat what you hear in the recording. You may find it useful to record yourself in order to check that you are distinguishing the German __ch__ from the English sounds ‘sh’ and ‘ck’.]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud007.mp3]\n|note: Transcript\n__Hören Sie und sprechen Sie nach.__\n\nich – mich – dich ➜\nIch trinke Milch. ➜\nTrinkst du Milch? ➜\nJa, Milch für mich. ➜\nUnd für dich? ➜\nIch trinke nichts. ➜\nNimmst du ein Brötchen? ➜\nNatürlich! ➜\nIsst du gern griechisch? ➜\nNein, überhaupt nicht. ➜\nAber ich esse sehr gern chinesisch. ➜",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "|note: Transcript\n__Hören Sie und sprechen Sie nach.__\n\nich – mich – dich ➜\nIch trinke Milch. ➜\nTrinkst du Milch? ➜\nJa, Milch für mich. ➜\nUnd für dich? ➜\nIch trinke nichts. ➜\nNimmst du ein Brötchen? ➜\nNatürlich! ➜\nIsst du gern griechisch? ➜\nNein, überhaupt nicht. ➜\nAber ich esse sehr gern chinesisch. ➜",
+      "item": "Activity 11",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136182"
+      ],
+      "instruction": "You have come across quite a few words containing __ch__ in the previous activities, such as __Milch__ and __Brötchen__. This __ch__ should sound like the ‘h’ in ‘human’. Practise your pronunciation as you listen and repeat what you hear in the recording. You may find it useful to record yourself in order to check that you are distinguishing the German __ch__ from the English sounds ‘sh’ and ‘ck’.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud007.mp3"
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 9,
+        "column": 18,
+        "errorLine": "ich – mich – dich ➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 10,
+        "column": 18,
+        "errorLine": "Ich trinke Milch. ➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 11,
+        "column": 18,
+        "errorLine": "Trinkst du Milch? ➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 12,
+        "column": 20,
+        "errorLine": "Ja, Milch für mich. ➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 13,
+        "column": 14,
+        "errorLine": "Und für dich? ➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 14,
+        "column": 19,
+        "errorLine": "Ich trinke nichts. ➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 15,
+        "column": 24,
+        "errorLine": "Nimmst du ein Brötchen? ➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 16,
+        "column": 11,
+        "errorLine": "Natürlich! ➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 17,
+        "column": 25,
+        "errorLine": "Isst du gern griechisch? ➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 18,
+        "column": 23,
+        "errorLine": "Nein, überhaupt nicht. ➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 19,
+        "column": 36,
+        "errorLine": "Aber ich esse sehr gern chinesisch. ➜"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:136183]\n[#Where to eat]\n[%4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "136183"
+      ],
+      "title": "Where to eat"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136184]\n[%Culture: Meals and snacks in German-speaking countries]\n\nThe three main meals __(Hauptmahlzeiten)__ are __das Frühstück__, __das Mittagessen__ and __das Abendessen__. Although some working patterns make it more convenient to have a hot meal in the evening, traditionally the main cooked meal in Germany, Austria and Switzerland is taken at lunchtime, with the evening meal often consisting of bread with a selection of cheeses, cold cooked meats and salads, hence the alternative name of __das Abendbrot__.\nThere are many different regional names for snack times between meals __(Zwischenmahlzeiten)__. These include __die Brotzeit__ in Bavaria, __die Jause__ in Austria and das __z’Nüni__ in Switzerland.\nIn many parts of Germany there is a tradition known as __der Frühschoppen__, where locals get together in a bar or inn __(das Wirtshaus)__ after church on a Sunday morning for a chat over a glass of beer or wine. As regular customers, they will often have a table __(der Stammtisch)__ which is always reserved for them.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The three main meals __(Hauptmahlzeiten)__ are __das Frühstück__, __das Mittagessen__ and __das Abendessen__. Although some working patterns make it more convenient to have a hot meal in the evening, traditionally the main cooked meal in Germany, Austria and Switzerland is taken at lunchtime, with the evening meal often consisting of bread with a selection of cheeses, cold cooked meats and salads, hence the alternative name of __das Abendbrot__.\nThere are many different regional names for snack times between meals __(Zwischenmahlzeiten)__. These include __die Brotzeit__ in Bavaria, __die Jause__ in Austria and das __z’Nüni__ in Switzerland.\nIn many parts of Germany there is a tradition known as __der Frühschoppen__, where locals get together in a bar or inn __(das Wirtshaus)__ after church on a Sunday morning for a chat over a glass of beer or wine. As regular customers, they will often have a table __(der Stammtisch)__ which is always reserved for them.",
+      "id": [
+        "136184"
+      ],
+      "item": "Culture: Meals and snacks in German-speaking countries"
+    }
+  },
+  {
+    "bitmark": "[.match-picture]\n[@id:136185]\n[%Activity 12]\n[!You can buy food and drink in many different places. Match photos 1–6 to the descriptions beneath.]\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f023.jpg]\n==\nHier kann man japanisch essen.\n===\n\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg]\n==\nHier kann man Kaffee trinken.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f059.jpg]\n==\nHier kann man Bratwurst kaufen.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f022.jpg]\n==\nHier kann man ein Schinkenbrötchen kaufen.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f025.jpg]\n==\nHier kann man Obst und Gemüse kaufen.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f021.jpg]\n==\nHier kann man Brot kaufen.\n===",
+    "bit": {
+      "type": "match-picture",
+      "format": "bitmark--",
+      "item": "Activity 12",
+      "heading": {},
+      "pairs": [
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f023.jpg"
+          },
+          "values": [
+            "Hier kann man japanisch essen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg"
+          },
+          "values": [
+            "Hier kann man Kaffee trinken."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f059.jpg"
+          },
+          "values": [
+            "Hier kann man Bratwurst kaufen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f022.jpg"
+          },
+          "values": [
+            "Hier kann man ein Schinkenbrötchen kaufen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f025.jpg"
+          },
+          "values": [
+            "Hier kann man Obst und Gemüse kaufen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f021.jpg"
+          },
+          "values": [
+            "Hier kann man Brot kaufen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136185"
+      ],
+      "instruction": "You can buy food and drink in many different places. Match photos 1–6 to the descriptions beneath."
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136186]\n[%Language: Making generalisations using man]\n__Man__ is often translated into English as ‘one’. When you are talking about people in general in English, you might say ‘you’, ‘they’ or ‘people’ rather than the formal-sounding ‘one’, but __man__ doesn’t have the same formal ring to it in German. Compare the following sentences, for example:\n\n__Was isst man hier?__\nWhat do people eat here? / What do they eat here?\n\nTo talk about what is on offer at certain places, you can combine __man__ with __kann__:\n\n__Was kann man hier trinken?__\nWhat can you drink here? (lit. ‘What can one drink here?’)\n\nThe verb used with man takes the same verb form as with __er/sie/es__ (e.g. __man isst, man kann__).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Man__ is often translated into English as ‘one’. When you are talking about people in general in English, you might say ‘you’, ‘they’ or ‘people’ rather than the formal-sounding ‘one’, but __man__ doesn’t have the same formal ring to it in German. Compare the following sentences, for example:\n\n__Was isst man hier?__\nWhat do people eat here? / What do they eat here?\n\nTo talk about what is on offer at certain places, you can combine __man__ with __kann__:\n\n__Was kann man hier trinken?__\nWhat can you drink here? (lit. ‘What can one drink here?’)\n\nThe verb used with man takes the same verb form as with __er/sie/es__ (e.g. __man isst, man kann__).",
+      "id": [
+        "136186"
+      ],
+      "item": "Language: Making generalisations using man"
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1&video]\n[@id:136187]\n[%Activity 13]\n[!Read the following list of words for places to eat, and say them out loud. Then, watch the video clip beneath the list, in which three people recommend places to eat out in Graz. Then, looking at the list again, select all of the locations named by the speakers. (Note that in the list, the plural form is given in brackets.)]\n[+die Bar (-s)]\n[+das Café (-s)]\n[+das Gasthaus (die Gasthäuser)]\n[-der Gasthof (die Gasthöfe)]\n[-die Gaststätte (-n)]\n[+das Hotel (-s)]\n[-die Imbissstube (-n)]\n[-die Kneipe (-n)]\n[+das Lokal (-e)]\n[+das Restaurant (-s)]\n[&video:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/video/l193r_u3_vid001-640x360.mp4]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "Activity 13",
+      "instruction": "Read the following list of words for places to eat, and say them out loud. Then, watch the video clip beneath the list, in which three people recommend places to eat out in Graz. Then, looking at the list again, select all of the locations named by the speakers. (Note that in the list, the plural form is given in brackets.)",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "die Bar (-s)",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "das Café (-s)",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "das Gasthaus (die Gasthäuser)",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "der Gasthof (die Gasthöfe)",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "die Gaststätte (-n)",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "das Hotel (-s)",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "die Imbissstube (-n)",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "die Kneipe (-n)",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "das Lokal (-e)",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "das Restaurant (-s)",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136187"
+      ],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/video/l193r_u3_vid001-640x360.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "",
+            "format": "",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1&video]\n[@id:136188]\n[%Activity 14]\n[!Read the following list of adjectives referring to various international foods, and repeat them out loud. Then watch the video again, and select all the adjectives used.]\n[+chinesisch]\n[-deutsch]\n[-französisch]\n[+griechisch]\n[+indisch]\n[+italienisch]\n[-österreichisch]\n[-spanisch]\n[+thailändisch]\n[&video:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/video/l193r_u3_vid001-640x360.mp4]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "Activity 14",
+      "instruction": "Read the following list of adjectives referring to various international foods, and repeat them out loud. Then watch the video again, and select all the adjectives used.",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "chinesisch",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "deutsch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "französisch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "griechisch",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "indisch",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "italienisch",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "österreichisch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "spanisch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "thailändisch",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136188"
+      ],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/video/l193r_u3_vid001-640x360.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "",
+            "format": "",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136189]\n[%Language: Saying what you would like]\n\nYou may be asked __Möchten Sie …?__ (Would you like …?) to establish what you would like. To respond, use the verb form __ich möchte__ (I would like) or __wir möchten__ (we would like).\n\nMöchten Sie etwas zu essen bestellen? __Would you like to order something to eat?__\n\nAs you listen to these expressions in the recordings, pay particular attention to the __ö__ and __ch__ sounds and try to copy them.\n\n**Vokabeln**\nbestellt etwas zu essen __orders something to eat__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You may be asked __Möchten Sie …?__ (Would you like …?) to establish what you would like. To respond, use the verb form __ich möchte__ (I would like) or __wir möchten__ (we would like).\n\nMöchten Sie etwas zu essen bestellen? __Would you like to order something to eat?__\n\nAs you listen to these expressions in the recordings, pay particular attention to the __ö__ and __ch__ sounds and try to copy them.\n\n**Vokabeln**\nbestellt etwas zu essen __orders something to eat__",
+      "id": [
+        "136189"
+      ],
+      "item": "Language: Saying what you would like"
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark--&imageWithAudio]\n[@id:136190]\n[%Activity 15]\n[!Read the introduction to the recording below and then listen to the conversation between Thomas and a waitress. Then match the German and English phrases underneath – if you don't know all the words, try to work out the meanings from the context.]\n__Thomas und Heike sitzen im Café. Thomas bestellt etwas zu essen und zu trinken.__\n===\nEntschuldigung!\n==\nExcuse me!\n===\nwir möchten\n==\nwe’d like\n===\nein Kännchen Kaffee\n==\na pot of coffee\n===\nein Glas Tee\n==\na glass of tea\n===\nmit Zitrone\n==\nwith lemon\n===\nmit Sahne\n==\nwith cream\n===\nSonst noch etwas?\n==\nAnything else?\n===\nzwei Stück Apfelkuchen\n==\ntwo pieces of apple cake\n===\n\nNotice that Thomas asks for __ein Glas Tee__ – tea is often served in a glass.\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud011.mp3]\n|note: Transcript\n__Hören Sie bitte.__\n\n**Thomas** Entschuldigung!\n**Kellnerin** Bitte schön?\n**Thomas** Äh, wir möchten ein Kännchen Kaffee und ein Glas Tee, bitte.\n**Kellnerin** Tee mit Zitrone oder mit Sahne?\n**Thomas** Mit Zitrone, bitte.\n**Kellnerin** Sonst noch etwas?\n**Thomas** Zwei Stück Apfelkuchen, bitte.\n**Kellnerin** Bitte schön, ein Kännchen Kaffee, ein Glas Tee und zwei Stück Apfelkuchen.\n**Thomas** Vielen Dank.",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "Activity 15",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Entschuldigung!",
+          "values": [
+            "Excuse me!"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "wir möchten",
+          "values": [
+            "we’d like"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "ein Kännchen Kaffee",
+          "values": [
+            "a pot of coffee"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "ein Glas Tee",
+          "values": [
+            "a glass of tea"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "mit Zitrone",
+          "values": [
+            "with lemon"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "mit Sahne",
+          "values": [
+            "with cream"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Sonst noch etwas?",
+          "values": [
+            "Anything else?"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "zwei Stück Apfelkuchen",
+          "values": [
+            "two pieces of apple cake"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "__Thomas und Heike sitzen im Café. Thomas bestellt etwas zu essen und zu trinken.__\nNotice that Thomas asks for __ein Glas Tee__ – tea is often served in a glass.\n\n|note: Transcript\n__Hören Sie bitte.__\n\n**Thomas** Entschuldigung!\n**Kellnerin** Bitte schön?\n**Thomas** Äh, wir möchten ein Kännchen Kaffee und ein Glas Tee, bitte.\n**Kellnerin** Tee mit Zitrone oder mit Sahne?\n**Thomas** Mit Zitrone, bitte.\n**Kellnerin** Sonst noch etwas?\n**Thomas** Zwei Stück Apfelkuchen, bitte.\n**Kellnerin** Bitte schön, ein Kännchen Kaffee, ein Glas Tee und zwei Stück Apfelkuchen.\n**Thomas** Vielen Dank.",
+      "id": [
+        "136190"
+      ],
+      "instruction": "Read the introduction to the recording below and then listen to the conversation between Thomas and a waitress. Then match the German and English phrases underneath – if you don't know all the words, try to work out the meanings from the context."
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud011.mp3"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 40,
+        "errorLine": "[.match-solution-grouped:bitmark--&imageWithAudio]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136191]\n[%Culture: Kaffee und Kuchen]\n\nHaving coffee and cakes (__Kaffee und Kuchen__) with friends in a café or at home is a very popular way to take a late afternoon break in German-speaking countries. Some cafés specialise in what could be called the fourth meal of the day, serving coffee and a range of delicious cakes, such as cheesecake (__Käsekuchen__) or Austrian chocolate cake (__Sachertorte__). When visiting friends in the afternoon you may be offered a cup of coffee (eine Tasse Kaffee) and a piece of cake (__ein Stück Kuchen__). Notice that in these expressions there is no German equivalent for the English ‘of’.\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f028.jpg]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Having coffee and cakes (__Kaffee und Kuchen__) with friends in a café or at home is a very popular way to take a late afternoon break in German-speaking countries. Some cafés specialise in what could be called the fourth meal of the day, serving coffee and a range of delicious cakes, such as cheesecake (__Käsekuchen__) or Austrian chocolate cake (__Sachertorte__). When visiting friends in the afternoon you may be offered a cup of coffee (eine Tasse Kaffee) and a piece of cake (__ein Stück Kuchen__). Notice that in these expressions there is no German equivalent for the English ‘of’.",
+      "id": [
+        "136191"
+      ],
+      "item": "Culture: Kaffee und Kuchen",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f028.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:136192]\n[#Placing an order]\n[%5]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "136192"
+      ],
+      "title": "Placing an order"
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&audio]\n[@id:136193]\n[%Activity 16]\nWhen visiting friends or colleagues in Germany, you will normally be offered something to drink. In this audio clip, you will hear people offering a number of things to drink. Practice your responses out loud. It is up to you to choose whether to accept (ja, bitte) or decline (nein, danke) based on your preferences, so there are no right or wrong answers to this activity.]\n\n**Beispiel**\nYou hear: __Möchten Sie eine Tasse Kaffee?__\nYou say: __Ja, bitte. / Nein, danke.__\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud012.mp3]\n|note: Transcript\n__Hören Sie und sprechen Sie.__\nMöchten Sie eine Tasse Kaffee?➜\nMöchten Sie einen Tee mit Zitrone?➜\nMöchten Sie einen Orangensaft?➜\nMöchten Sie ein Glas Bier?➜\nMöchten Sie eine Cola?➜\nMöchten Sie ein Glas Milch?➜\nMöchten Sie einen Schnaps?➜",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "When visiting friends or colleagues in Germany, you will normally be offered something to drink. In this audio clip, you will hear people offering a number of things to drink. Practice your responses out loud. It is up to you to choose whether to accept (ja, bitte) or decline (nein, danke) based on your preferences, so there are no right or wrong answers to this activity.]\n\n**Beispiel**\nYou hear: __Möchten Sie eine Tasse Kaffee?__\nYou say: __Ja, bitte. / Nein, danke.__\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud012.mp3]\n|note: Transcript\n__Hören Sie und sprechen Sie.__\nMöchten Sie eine Tasse Kaffee?➜\nMöchten Sie einen Tee mit Zitrone?➜\nMöchten Sie einen Orangensaft?➜\nMöchten Sie ein Glas Bier?➜\nMöchten Sie eine Cola?➜\nMöchten Sie ein Glas Milch?➜\nMöchten Sie einen Schnaps?➜",
+      "item": "Activity 16",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136193"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input ']'",
+        "line": 4,
+        "column": 374,
+        "errorLine": "When visiting friends or colleagues in Germany, you will normally be offered something to drink. In this audio clip, you will hear people offering a number of things to drink. Practice your responses out loud. It is up to you to choose whether to accept (ja, bitte) or decline (nein, danke) based on your preferences, so there are no right or wrong answers to this activity.]"
+      },
+      {
+        "message": "Unexpected input '[&audio'",
+        "line": 9,
+        "column": 0,
+        "errorLine": "[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud012.mp3]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 9,
+        "column": 139,
+        "errorLine": "[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud012.mp3]"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 12,
+        "column": 30,
+        "errorLine": "Möchten Sie eine Tasse Kaffee?➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 13,
+        "column": 34,
+        "errorLine": "Möchten Sie einen Tee mit Zitrone?➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 14,
+        "column": 30,
+        "errorLine": "Möchten Sie einen Orangensaft?➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 15,
+        "column": 26,
+        "errorLine": "Möchten Sie ein Glas Bier?➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 16,
+        "column": 22,
+        "errorLine": "Möchten Sie eine Cola?➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 17,
+        "column": 27,
+        "errorLine": "Möchten Sie ein Glas Milch?➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 18,
+        "column": 26,
+        "errorLine": "Möchten Sie einen Schnaps?➜"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136194]\n[%Language: Speaking politely]\n\nWhen you are offered something you tend to say more than just __ja__ and __nein__, for example ‘yes, please’ (__ja, bitte__) or ‘no, thank you’ (__nein, danke__). Danke on its own in this context is usually understood to mean __nein, danke.__\n\nIn the audio clip in Activity 15 you may have noticed that the waitress used __bitte schön__ in two different ways. First she used the phrase as a question: __Bitte schön?__ meaning ‘Yes, please?’ to ask what the customers wanted. Later she said __Bitte schön__ meaning ‘Here you are’ as she served the items.\n\nThere is a third situation where __Bitte schön__ commonly occurs: in response to __Danke schön__ it means ‘Don’t mention it’ or ‘You’re welcome’. Listen out for these three uses of __Bitte schön__ and take particular note of the intonation used in each case.\n\n**Vokabeln**\ndie Speisekarte __menu__ \ndie Kellnerin __waitress__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "When you are offered something you tend to say more than just __ja__ and __nein__, for example ‘yes, please’ (__ja, bitte__) or ‘no, thank you’ (__nein, danke__). Danke on its own in this context is usually understood to mean __nein, danke.__\n\nIn the audio clip in Activity 15 you may have noticed that the waitress used __bitte schön__ in two different ways. First she used the phrase as a question: __Bitte schön?__ meaning ‘Yes, please?’ to ask what the customers wanted. Later she said __Bitte schön__ meaning ‘Here you are’ as she served the items.\n\nThere is a third situation where __Bitte schön__ commonly occurs: in response to __Danke schön__ it means ‘Don’t mention it’ or ‘You’re welcome’. Listen out for these three uses of __Bitte schön__ and take particular note of the intonation used in each case.\n\n**Vokabeln**\ndie Speisekarte __menu__ \ndie Kellnerin __waitress__",
+      "id": [
+        "136194"
+      ],
+      "item": "Language: Speaking politely"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:136195]\n[%Activity 17]\n[!Here is a written extract from a café conversation with a few key words missing. Use some of the language you have just learned to fill in the gaps. You can note your answers in the box beneath the text.\n\nIn the previous activity you might have noticed the change of the indefinite article __ein__ to __einen__. This is an indication of the use of the accusative case with masculine nouns that functions as an object in a sentence. The same happens when the definite article __der__ becomes __den__.]\n**Gast**\tEntschuldigung! Die Speisekarte, bitte!\n**Kellnerin**\tJa, sofort. … Bitte [_schön].\n\n**(später)**\t\n**Kellnerin**\tMöchten [_Sie] bestellen?\n**Gast**\tJa, ich [_möchte] einen Kaffee, bitte.\n**Kellnerin**\tEine Tasse oder ein [_Kännchen]?\n**Gast**\tEine Tasse, bitte.\n**Kellnerin**\tSonst noch [_etwas]?\n**Gast**\tNein, danke.\n\nNote: make sure you use capital letters in the right places.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**Gast**\tEntschuldigung! Die Speisekarte, bitte!\n**Kellnerin**\tJa, sofort. … Bitte {0}.\n\n**(später)**\t\n**Kellnerin**\tMöchten {1} bestellen?\n**Gast**\tJa, ich {2} einen Kaffee, bitte.\n**Kellnerin**\tEine Tasse oder ein {3}?\n**Gast**\tEine Tasse, bitte.\n**Kellnerin**\tSonst noch {4}?\n**Gast**\tNein, danke.\n\nNote: make sure you use capital letters in the right places.",
+      "item": "Activity 17",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136195"
+      ],
+      "instruction": "Here is a written extract from a café conversation with a few key words missing. Use some of the language you have just learned to fill in the gaps. You can note your answers in the box beneath the text.\n\nIn the previous activity you might have noticed the change of the indefinite article __ein__ to __einen__. This is an indication of the use of the accusative case with masculine nouns that functions as an object in a sentence. The same happens when the definite article __der__ becomes __den__.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "schön"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Sie"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "möchte"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kännchen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "etwas"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark++&audio]\n[@id:136196]\n[%Activity 18]\n[!Now it’s your turn to play the customer’s part, using the script put together in the previous activity. You may want to refer to the audio transcript below to guide you, or just to help recall some of the phrases. You will start the dialogue by calling for the menu.]\n\n**Beispiel**\n\nYou say: __Entschuldigung! Die Speisekarte, bitte.__\nYou hear: __Entschuldigung! Die Speisekarte, bitte.__\n\n|info\n**Gast**\tEntschuldigung! Die Speisekarte, bitte!\n**Kellnerin**\tJa, sofort. … Bitte schön.\n\n**(später)**\t\n**Kellnerin**\tMöchten Sie bestellen?\n**Gast**\tJa, ich möchte einen Kaffee, bitte.\n**Kellnerin**\tEine Tasse oder ein Kännchen?\n**Gast**\tEine Tasse, bitte.\n**Kellnerin**\tSonst noch etwas?\n**Gast**\tNein, danke.\n\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud013.mp3]\n|note: Transcript\n__Hören Sie und sprechen Sie. Bitte beginnen Sie jetzt.__\n\n➜\n**Gast**\nEntschuldigung! Die Speisekarte, bitte!\n**Kellnerin** Ja, sofort. … Bitte schön.\n**Kellnerin** Möchten Sie bestellen?\n➜\n**Gast**\nJa, ich möchte einen Kaffee, bitte.\n**Kellnerin**\nEine Tasse oder ein Kännchen?\n➜\n**Gast**\nEine Tasse, bitte.\n**Kellnerin**\nSonst noch etwas?\n➜\n**Gast**\nNein, danke.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "**Beispiel**\n\nYou say: __Entschuldigung! Die Speisekarte, bitte.__\nYou hear: __Entschuldigung! Die Speisekarte, bitte.__\n\n|info\n**Gast**\tEntschuldigung! Die Speisekarte, bitte!\n**Kellnerin**\tJa, sofort. … Bitte schön.\n\n**(später)**\t\n**Kellnerin**\tMöchten Sie bestellen?\n**Gast**\tJa, ich möchte einen Kaffee, bitte.\n**Kellnerin**\tEine Tasse oder ein Kännchen?\n**Gast**\tEine Tasse, bitte.\n**Kellnerin**\tSonst noch etwas?\n**Gast**\tNein, danke.\n\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud013.mp3]\n|note: Transcript\n__Hören Sie und sprechen Sie. Bitte beginnen Sie jetzt.__\n\n➜\n**Gast**\nEntschuldigung! Die Speisekarte, bitte!\n**Kellnerin** Ja, sofort. … Bitte schön.\n**Kellnerin** Möchten Sie bestellen?\n➜\n**Gast**\nJa, ich möchte einen Kaffee, bitte.\n**Kellnerin**\nEine Tasse oder ein Kännchen?\n➜\n**Gast**\nEine Tasse, bitte.\n**Kellnerin**\nSonst noch etwas?\n➜\n**Gast**\nNein, danke.",
+      "item": "Activity 18",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136196"
+      ],
+      "instruction": "Now it’s your turn to play the customer’s part, using the script put together in the previous activity. You may want to refer to the audio transcript below to guide you, or just to help recall some of the phrases. You will start the dialogue by calling for the menu.",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 27,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 32,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 37,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 42,
+        "column": 0,
+        "errorLine": "➜"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.assignment:Bitmark--&imageWithAudio]\n[@id:278202]\n[%Activity 19]\n[!Here is a menu from a specialist fish restaurant. Read this menu, which will be used in the second part of this activity. You don’t need to understand every word but try to get a rough idea of what the items mean.]\n\nNow listen to the audio clip below, and practise ordering a main course by following the whispered prompts you hear. You will start by calling (rufen) the waitress.\n\n**Beispiel**\nYou hear: __Rufen Sie die Kellnerin.__\nYou say: __Entschuldigung!__\nYou hear: __Entschuldigung!__\n||add audio and img||\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193r_b1_u3_f029.jpg]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud014.mp3]\n|note: Transcript\n__Bitte hören Sie und sprechen Sie.__\n(Rufen Sie die Kellnerin.)\n\n➜\n**Gast** Entschuldigung!\n**Kellnerin** Bitte schön? (Speisekarte)\n➜\n**Gast** Die Speisekarte, bitte.\n**Kellnerin** Bitte schön? Was hätten Sie gern? (Bratheringe)\n➜\n**Gast** Ich möchte Bratheringe, bitte.\n**Kellnerin** Einmal Bratheringe. Und was möchten Sie trinken? (ein Glas Weißbier)\n➜\n**Gast** Ich möchte ein Glas Weißbier, bitte.\n**Kellnerin** Ein Glas Weißbier. Sonst noch etwas? (Nein)\n➜\n**Gast** Nein, danke.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "[@id:278202]\n[%Activity 19]\n[!Here is a menu from a specialist fish restaurant. Read this menu, which will be used in the second part of this activity. You don’t need to understand every word but try to get a rough idea of what the items mean.]\n\nNow listen to the audio clip below, and practise ordering a main course by following the whispered prompts you hear. You will start by calling (rufen) the waitress.\n\n**Beispiel**\nYou hear: __Rufen Sie die Kellnerin.__\nYou say: __Entschuldigung!__\nYou hear: __Entschuldigung!__\n\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193r_b1_u3_f029.jpg]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud014.mp3]\n|note: Transcript\n__Bitte hören Sie und sprechen Sie.__\n(Rufen Sie die Kellnerin.)\n\n➜\n**Gast** Entschuldigung!\n**Kellnerin** Bitte schön? (Speisekarte)\n➜\n**Gast** Die Speisekarte, bitte.\n**Kellnerin** Bitte schön? Was hätten Sie gern? (Bratheringe)\n➜\n**Gast** Ich möchte Bratheringe, bitte.\n**Kellnerin** Einmal Bratheringe. Und was möchten Sie trinken? (ein Glas Weißbier)\n➜\n**Gast** Ich möchte ein Glas Weißbier, bitte.\n**Kellnerin** Ein Glas Weißbier. Sonst noch etwas? (Nein)\n➜\n**Gast** Nein, danke.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Rule violation around ':'",
+        "line": 1,
+        "column": 12,
+        "errorLine": "[.assignment:Bitmark--&imageWithAudio]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 1,
+        "column": 37,
+        "errorLine": "[.assignment:Bitmark--&imageWithAudio]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 2,
+        "column": 0,
+        "errorLine": "[@id:278202]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 2,
+        "column": 11,
+        "errorLine": "[@id:278202]"
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 3,
+        "column": 0,
+        "errorLine": "[%Activity 19]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 3,
+        "column": 13,
+        "errorLine": "[%Activity 19]"
+      },
+      {
+        "message": "Unexpected input '[!'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[!Here is a menu from a specialist fish restaurant. Read this menu, which will be used in the second part of this activity. You don’t need to understand every word but try to get a rough idea of what the items mean.]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 4,
+        "column": 215,
+        "errorLine": "[!Here is a menu from a specialist fish restaurant. Read this menu, which will be used in the second part of this activity. You don’t need to understand every word but try to get a rough idea of what the items mean.]"
+      },
+      {
+        "message": "Unexpected input '[&image'",
+        "line": 13,
+        "column": 0,
+        "errorLine": "[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193r_b1_u3_f029.jpg]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 13,
+        "column": 138,
+        "errorLine": "[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193r_b1_u3_f029.jpg]"
+      },
+      {
+        "message": "Unexpected input '[&audio'",
+        "line": 14,
+        "column": 0,
+        "errorLine": "[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud014.mp3]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 14,
+        "column": 139,
+        "errorLine": "[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud014.mp3]"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 19,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 22,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 25,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 28,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 31,
+        "column": 0,
+        "errorLine": "➜"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:136198]\n[#Paying the bill]\n[%6]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "6",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "136198"
+      ],
+      "title": "Paying the bill"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&audio]\n[@id:136199]\n[%Activity 20]\n[!Listen to this customer paying his bill, then use the vocabulary below to write four German phrases corresponding to the English prompts. Each word should only be used once.]\n\ndas • getrennt • ich • macht • möchte • oder • so • stimmt • zahlen • zusammen\n===\n1. I’d like to pay. (3 words)[@shortAnswer]\n[$Ich möchte zahlen.]\n===\n2. Together or separately? (3 words)[@shortAnswer]\n[$Zusammen oder getrennt?]\n===\n3. That comes to … (2 words)[@shortAnswer]\n[$Das macht ...]\n===\n4. Keep the change. (2 words)[@shortAnswer]\n[$Stimmt so. (literally ‘It’s correct like that.’)]\n===\n\n**Vokabeln**\nich hatte __I had __\nkosten __cost__\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud015.mp3]\n\n|note: Transcript\n__Hören Sie bitte.__\n\n**Gast** Entschuldigung! Ich möchte zahlen, bitte.\n**Kellnerin** Zusammen oder getrennt?\n**Gast** Zusammen.\n**Kellnerin** Das macht, ähm, €9,15, bitte.\n**Gast** Zehn Euro, bitte schön – stimmt so.\n**Kellnerin** Danke schön.",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Activity 20",
+      "instruction": "Listen to this customer paying his bill, then use the vocabulary below to write four German phrases corresponding to the English prompts. Each word should only be used once.",
+      "body": "das • getrennt • ich • macht • möchte • oder • so • stimmt • zahlen • zusammen",
+      "footer": "**Vokabeln**\nich hatte __I had __\nkosten __cost__[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud015.mp3]|note: Transcript\n__Hören Sie bitte.__\n\n**Gast** Entschuldigung! Ich möchte zahlen, bitte.\n**Kellnerin** Zusammen oder getrennt?\n**Gast** Zusammen.\n**Kellnerin** Das macht, ähm, €9,15, bitte.\n**Gast** Zehn Euro, bitte schön – stimmt so.\n**Kellnerin** Danke schön.",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. I’d like to pay. (3 words)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Ich möchte zahlen.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2. Together or separately? (3 words)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Zusammen oder getrennt?",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "3. That comes to … (2 words)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Das macht ...",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "4. Keep the change. (2 words)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Stimmt so. (literally ‘It’s correct like that.’)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136199"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud015.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&audio]\n[@id:136200]\n[%Activity 21]\n[!Listen to this conversation between a diner and the waitress. Pay particular attention to the prices mentioned, then answer the questions below.]\n===\n1. What is the price of the salmon steak?[@shortAnswer]\n[$€10.75]\n===\n2. Which item costs €3.25?[@shortAnswer]\n[$the beer]\n===\n3. How much is the herring?[@shortAnswer]\n[$€9.25]\n===\n4. What does the corrected bill come to?[@shortAnswer]\n[$€12.50]\n===\n5. How much does the diner give the waitress altogether?[@shortAnswer]\n[$€13.00]\n===\n\nNow listen again, concentrating on the language used by the customer querying the bill. Practise using this language by reading aloud the customer’s part from the transcript as you play the clip.\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud016.mp3]\n|note: Transcript\n__Hören Sie bitte.__\n\n**Gast** Entschuldigung!\n**Kellnerin** Ich komme gleich … Ja, bitte schön?\n**Gast** Zahlen, bitte!\n**Kellnerin** Moment, bitte. … Ähm, bitte schön – hier ist Ihre Rechnung.\n**Gast** Entschuldigung, stimmt das hier?\n**Kellnerin** Ja, das stimmt. Das Lachssteak kostet €10.75, und das Bier €3,25. Zusammen 14 Euro.\n**Gast** Aber ich hatte Bratheringe!\n**Kellnerin** Bratheringe? Ach, es tut mir leid! Die Bratheringe kosten nur €9,25 und das Bier €3,25. Das macht, ähm, €12,50.\n**Gast** Okay, 13 Euro, – stimmt so.",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Activity 21",
+      "instruction": "Listen to this conversation between a diner and the waitress. Pay particular attention to the prices mentioned, then answer the questions below.",
+      "body": "",
+      "footer": "Now listen again, concentrating on the language used by the customer querying the bill. Practise using this language by reading aloud the customer’s part from the transcript as you play the clip.[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud016.mp3]|note: Transcript\n__Hören Sie bitte.__\n\n**Gast** Entschuldigung!\n**Kellnerin** Ich komme gleich … Ja, bitte schön?\n**Gast** Zahlen, bitte!\n**Kellnerin** Moment, bitte. … Ähm, bitte schön – hier ist Ihre Rechnung.\n**Gast** Entschuldigung, stimmt das hier?\n**Kellnerin** Ja, das stimmt. Das Lachssteak kostet €10.75, und das Bier €3,25. Zusammen 14 Euro.\n**Gast** Aber ich hatte Bratheringe!\n**Kellnerin** Bratheringe? Ach, es tut mir leid! Die Bratheringe kosten nur €9,25 und das Bier €3,25. Das macht, ähm, €12,50.\n**Gast** Okay, 13 Euro, – stimmt so.",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. What is the price of the salmon steak?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "€10.75",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2. Which item costs €3.25?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "the beer",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "3. How much is the herring?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "€9.25",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "4. What does the corrected bill come to?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "€12.50",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "5. How much does the diner give the waitress altogether?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "€13.00",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136200"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud016.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark++&audio]\n[@id:136201]\n[%Activity 22]\n[!Use some of the language you have been learning by taking part in a dialogue that might take place at the end of a meal with a colleague in a restaurant. You want to pay separately, and you round your own bill up to €20. Begin by calling the waiter and follow the other prompts in the recording. Again, you may want to use the transcript to guide you.]\n\n|note: Transcript\n__Hören Sie und sprechen Sie.__\n(Rufen Sie den Kellner)\n\n➜\n**Gast** Bedienung, bitte.\n**Kellner** Bitte schön? (zahlen)\n➜\n**Gast** Wir möchten zahlen, bitte.\n**Kellner** Zusammen oder getrennt? (getrennt)\n➜\n**Gast** Getrennt, bitte.\n**Kellner** Also, Sie hatten Zanderfilet, €12,50, eine Flasche Bier, €3,25, und eine Tasse Kaffee, zwei Euro. Das macht €17,75. (Sie zahlen 20 Euro.)\n➜\n**Gast** Zwanzig Euro, stimmt so.\n**Kellner** Vielen Dank.\n\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud017.mp3]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "|note: Transcript\n__Hören Sie und sprechen Sie.__\n(Rufen Sie den Kellner)\n\n➜\n**Gast** Bedienung, bitte.\n**Kellner** Bitte schön? (zahlen)\n➜\n**Gast** Wir möchten zahlen, bitte.\n**Kellner** Zusammen oder getrennt? (getrennt)\n➜\n**Gast** Getrennt, bitte.\n**Kellner** Also, Sie hatten Zanderfilet, €12,50, eine Flasche Bier, €3,25, und eine Tasse Kaffee, zwei Euro. Das macht €17,75. (Sie zahlen 20 Euro.)\n➜\n**Gast** Zwanzig Euro, stimmt so.\n**Kellner** Vielen Dank.",
+      "item": "Activity 22",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136201"
+      ],
+      "instruction": "Use some of the language you have been learning by taking part in a dialogue that might take place at the end of a meal with a colleague in a restaurant. You want to pay separately, and you round your own bill up to €20. Begin by calling the waiter and follow the other prompts in the recording. Again, you may want to use the transcript to guide you.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud017.mp3"
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 10,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 13,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 16,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 19,
+        "column": 0,
+        "errorLine": "➜"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.match:bitmark--]\n[@id:136202]\n[%Activity 23]\n[!Now listen to some customers paying separately, and note down the price of each item listed below.]\n===\nTee mit Zitrone[@shortAnswer]\n==\n€2,20\n===\nTasse Kaffee[@shortAnswer]\n==\n€2,50\n===\nKännchen Kaffee[@shortAnswer]\n==\n€3,80\n===\nKuchen[@shortAnswer]\n==\n€2,50\n===\nWasser[@shortAnswer]\n==\nnichts\n===\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud019.mp3]",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "Activity 23",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Tee mit Zitrone",
+          "values": [
+            "€2,20"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Tasse Kaffee",
+          "values": [
+            "€2,50"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Kännchen Kaffee",
+          "values": [
+            "€3,80"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Kuchen",
+          "values": [
+            "€2,50"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Wasser",
+          "values": [
+            "nichts"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136202"
+      ],
+      "instruction": "Now listen to some customers paying separately, and note down the price of each item listed below."
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud019.mp3"
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136203]\n[%Language: Numbers 1–100]\n\nYou have heard some of the numbers from 1 to 100 in the recordings. Here are the numbers 1–10 in writing:\n\n0 – null\n1 – eins\n2 – zwei\n3 – drei\n4 – vier\n5 – fünf\n6 – sechs\n7 – sieben\n8 – acht\n9 – neun\n10 – zehn\n\nThe numbers from 11 to 20 are very similar to English:\n\n11 – elf\n12 – zwölf\n13 – dreizehn\n14 – vierzehn\n15 – fünfzehn\n16 – sechzehn\n17 – siebzehn\n18 – achtzehn\n19 – neunzehn\n20 – zwanzig\n\nFrom 20 onwards, numbers follow a regular pattern:\n\n21 – einundzwanzig\n22 – zweiundzwanzig\n23 – dreiundzwanzig\n24 – vierundzwanzig\n30 – dreißig\n40 – vierzig\n50 – fünfzig\n60 – sechzig\n70 – siebzig\n80 – achtzig\n90 – neunzig\n100 – hundert or einhundert\n\nNote how you say ‘one-and-twenty’ in German rather than ‘twenty-one’.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You have heard some of the numbers from 1 to 100 in the recordings. Here are the numbers 1–10 in writing:\n\n0 – null\n1 – eins\n2 – zwei\n3 – drei\n4 – vier\n5 – fünf\n6 – sechs\n7 – sieben\n8 – acht\n9 – neun\n10 – zehn\n\nThe numbers from 11 to 20 are very similar to English:\n\n11 – elf\n12 – zwölf\n13 – dreizehn\n14 – vierzehn\n15 – fünfzehn\n16 – sechzehn\n17 – siebzehn\n18 – achtzehn\n19 – neunzehn\n20 – zwanzig\n\nFrom 20 onwards, numbers follow a regular pattern:\n\n21 – einundzwanzig\n22 – zweiundzwanzig\n23 – dreiundzwanzig\n24 – vierundzwanzig\n30 – dreißig\n40 – vierzig\n50 – fünfzig\n60 – sechzig\n70 – siebzig\n80 – achtzig\n90 – neunzig\n100 – hundert or einhundert\n\nNote how you say ‘one-and-twenty’ in German rather than ‘twenty-one’.",
+      "id": [
+        "136203"
+      ],
+      "item": "Language: Numbers 1–100"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-9]\n[@id:136204]\n[#Snack foods]\n[%7]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "7",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "136204"
+      ],
+      "title": "Snack foods"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136205]\n[%Culture: Imbissbuden]\n\nYou can buy different sausages, such as __Bockwurst, Bratwurst__ and __Currywurst__, throughout the German-speaking countries in snack bars __(Imbissbuden)__, and there are over 40 different regional varieties of __Bockwurst__ alone. The sausages may be served in a bread roll __(Brötchen)__, with potato salad __(Kartoffelsalat)__, __Sauerkraut__ or chips __(Pommes frites__ or __Fritten)__, and of course a little mustard __(Senf)__.\n\nSnack bars may be located in a mobile stand, a kiosk or a small shop, and many take the form of a __Stehcafé__ or __Stehimbiss__, which provides no seating, just a few tall tables that customers can stand at while they eat their snacks. The Austrian __Würstlstand__ pictured here is in Vienna __(Wien)__.\n\n**Vokabeln**\nihr zu Ehren __in its honour__\nhat … erfunden __invented__\nhat … angeboten __offered__\nnicht nur __not only__\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f059.jpg]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You can buy different sausages, such as __Bockwurst, Bratwurst__ and __Currywurst__, throughout the German-speaking countries in snack bars __(Imbissbuden)__, and there are over 40 different regional varieties of __Bockwurst__ alone. The sausages may be served in a bread roll __(Brötchen)__, with potato salad __(Kartoffelsalat)__, __Sauerkraut__ or chips __(Pommes frites__ or __Fritten)__, and of course a little mustard __(Senf)__.\n\nSnack bars may be located in a mobile stand, a kiosk or a small shop, and many take the form of a __Stehcafé__ or __Stehimbiss__, which provides no seating, just a few tall tables that customers can stand at while they eat their snacks. The Austrian __Würstlstand__ pictured here is in Vienna __(Wien)__.\n\n**Vokabeln**\nihr zu Ehren __in its honour__\nhat … erfunden __invented__\nhat … angeboten __offered__\nnicht nur __not only__",
+      "id": [
+        "136205"
+      ],
+      "item": "Culture: Imbissbuden",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f059.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.true-false:bitmark++]\n[@id:136206]\n[%Activity 24]\n[!This is a text about two of the most popular snacks in Germany: the Currywurst and the Döner. You do not have to understand every word but try to get the gist of the two paragraphs. Then decide whether the six statements beneath are richtig (true) or falsch (false) according to the text.]\n**Täglich lockt die Currywurst**\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_u3ol_fig003.jpg]\nDie Berliner Imbiss-Spezialität gibt es in vielen Variationen. In Berlin gibt es sogar ein Museum ihr zu Ehren: die „Currywurst“. Man sagt, Herta Heuwer hat die Currywurst am 4. September 1949 erfunden. An ihrem Imbissstand an der Ecke Kant-/Kaiser-Friedrich-Straße in Charlottenburg hat sie gebratene Brühwurst mit einer Soße aus Tomatenmark, Currypulver, Worcestershiresauce und weiteren Zutaten angeboten. Heute gibt es viele traditionelle Imbisse, wo man die Spezialität kaufen kann.\n\n**Döner + Falafel: Der Berliner Kultsnack**\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_u3ol_fig003a.jpg]\nWas ist fast noch typischer für Berlin als die Currywurst? Der Döner! Der Döner ist das beliebteste Fast Food-Gericht in Deutschland, und wo kann man das besser essen als Berlin? Nicht nur in Kreuzberg findet man an jeder Ecke einen Imbiss mit Döner und Falafel. Einige haben Kultstatus wie das Habibi am Winterfeldtplatz.\n===\n[-1. Es gibt nur wenige Sorten Currywurst.]\n===\n[-2. In München gibt es ein Currywurst-Museum.]\n===\n[+3. Man sagt, Herta Heuwer hat die Currywurst erfunden.]\n===\n[+4. Man sagt, die erste Currywurst war an einem Imbissstand in Berlin-Charlottenburg.]\n===\n[+5. Der Döner ist in Berlin auch sehr beliebt.]\n===\n[-6. Döner kann man nur in Kreuzberg kaufen.]\n===\n\n**Comment**\n__Brühwurst__ is not a specific type of sausage, but a category of uncooked sausage, usually of finely minced pork or beef, which has undergone some kind of heat treatment during the manufacturing process. Further cooking is then necessary prior to serving. 60% of all sausages in Germany fall into this category.\n\n**Vokabeln**\neinmal __once, one portion__\nzweimal __twice, two portions__\ndreimal __three times, three portions__\ndas Grillhähnchen __grilled chicken__\nPommes frites (pl.) __chips__\neine Portion __Pommes one portion of chips (colloquial)__",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark++",
+      "item": "Activity 24",
+      "lead": "",
+      "instruction": "This is a text about two of the most popular snacks in Germany: the Currywurst and the Döner. You do not have to understand every word but try to get the gist of the two paragraphs. Then decide whether the six statements beneath are richtig (true) or falsch (false) according to the text.",
+      "hint": "",
+      "labelTrue": "",
+      "labelFalse": "",
+      "statements": [
+        {
+          "statement": "1. Es gibt nur wenige Sorten Currywurst.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "2. In München gibt es ein Currywurst-Museum.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "3. Man sagt, Herta Heuwer hat die Currywurst erfunden.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "4. Man sagt, die erste Currywurst war an einem Imbissstand in Berlin-Charlottenburg.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "5. Der Döner ist in Berlin auch sehr beliebt.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "6. Döner kann man nur in Kreuzberg kaufen.",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": "**Täglich lockt die Currywurst**\n\nDie Berliner Imbiss-Spezialität gibt es in vielen Variationen. In Berlin gibt es sogar ein Museum ihr zu Ehren: die „Currywurst“. Man sagt, Herta Heuwer hat die Currywurst am 4. September 1949 erfunden. An ihrem Imbissstand an der Ecke Kant-/Kaiser-Friedrich-Straße in Charlottenburg hat sie gebratene Brühwurst mit einer Soße aus Tomatenmark, Currypulver, Worcestershiresauce und weiteren Zutaten angeboten. Heute gibt es viele traditionelle Imbisse, wo man die Spezialität kaufen kann.\n\n**Döner + Falafel: Der Berliner Kultsnack**\n\nWas ist fast noch typischer für Berlin als die Currywurst? Der Döner! Der Döner ist das beliebteste Fast Food-Gericht in Deutschland, und wo kann man das besser essen als Berlin? Nicht nur in Kreuzberg findet man an jeder Ecke einen Imbiss mit Döner und Falafel. Einige haben Kultstatus wie das Habibi am Winterfeldtplatz.\n**Comment**\n__Brühwurst__ is not a specific type of sausage, but a category of uncooked sausage, usually of finely minced pork or beef, which has undergone some kind of heat treatment during the manufacturing process. Further cooking is then necessary prior to serving. 60% of all sausages in Germany fall into this category.\n\n**Vokabeln**\neinmal __once, one portion__\nzweimal __twice, two portions__\ndreimal __three times, three portions__\ndas Grillhähnchen __grilled chicken__\nPommes frites (pl.) __chips__\neine Portion __Pommes one portion of chips (colloquial)__",
+      "id": [
+        "136206"
+      ]
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "jpg",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_u3ol_fig003.jpg"
+        },
+        {
+          "type": "image",
+          "format": "jpg",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_u3ol_fig003a.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--&imageWithAudio]\n[@id:136207]\n[%Activity 25]\n[!Now practise ordering some items at an Imbissstube. The items you want are indicated on the following price list. Ask for each item separately in response to the questions you hear in the recording.]\n||image, audio||\n**Vokabeln**\nbeliebteste __most popular__\nbevorzugen __prefer__\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193r_b1_u3_f050.jpg]\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud029.mp3]\n|note:Transcript\n__Bitte hören Sie und sprechen Sie.__\n\n**Imbissverkäuferin** Guten Tag, bitte schön?\n➜\n**Kundin** Zweimal Bratwurst, bitte.\n**Imbissverkäuferin** Sonst noch etwas?\n➜\n**Kundin** Einmal Brathering, bitte.\n**Imbissverkäuferin** Mit Pommes?\n➜\n**Kundin** Ja, eine Portion Pommes, bitte.\n**Imbissverkäuferin** Möchten Sie auch etwas zu trinken?\n➜\n**Kundin** Ja, bitte. Dreimal Mineralwasser.\n**Imbissverkäuferin** Bitte schön. … Auf Wiedersehen.\n➜\n**Kundin** Danke. Auf Wiedersehen.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "**Vokabeln**\nbeliebteste __most popular__\nbevorzugen __prefer__\n\n\n|note:Transcript\n__Bitte hören Sie und sprechen Sie.__\n\n**Imbissverkäuferin** Guten Tag, bitte schön?\n➜\n**Kundin** Zweimal Bratwurst, bitte.\n**Imbissverkäuferin** Sonst noch etwas?\n➜\n**Kundin** Einmal Brathering, bitte.\n**Imbissverkäuferin** Mit Pommes?\n➜\n**Kundin** Ja, eine Portion Pommes, bitte.\n**Imbissverkäuferin** Möchten Sie auch etwas zu trinken?\n➜\n**Kundin** Ja, bitte. Dreimal Mineralwasser.\n**Imbissverkäuferin** Bitte schön. … Auf Wiedersehen.\n➜\n**Kundin** Danke. Auf Wiedersehen.",
+      "item": "Activity 25",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136207"
+      ],
+      "instruction": "Now practise ordering some items at an Imbissstube. The items you want are indicated on the following price list. Ask for each item separately in response to the questions you hear in the recording.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193r_b1_u3_f050.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud029.mp3"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 28,
+        "errorLine": "[.assignment:bitmark--&imageWithAudio]"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 15,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 18,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 21,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 24,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 27,
+        "column": 0,
+        "errorLine": "➜"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.assignment:bitmark++&audio]\n[@id:136208]\n[%Activity 26]\n[!Here is a chance to practise using some numbers. Read the following statistical information collected in a __Süddeutsche Zeitung__ survey about people’s favourite snacks, and then answer the questions you hear in the recording. There is no need for complete sentences here; just answer in short phrases.]\n\n|info\n**Was für Snacks essen die Deutschen gern?**\n\nWenn der kleine Hunger kommt, ist die Pizza für viele der beliebteste Snack. 71 Prozent der Deutschen bevorzugen das italienische Gericht, wenn sie sich unterwegs etwas zu essen kaufen.\n\nAuf Platz zwei ist mit 61 Prozent der Befragten ganz klassisch das belegte Brötchen.\n\n59 Prozent der Deutschen kaufen am Imbissstand Grillhähnchen.\n\nAuf Platz vier mit 54 Prozent kommt der Klassiker an der Imbissbude – die Bratwurst.\n\nVor allem die 14- bis 29-Jährigen essen besonders gern Hamburger mit Pommes. Wenn man aber das Ergebnis nach Frauen und Männern trennt, ist es ganz anders. Frauen essen mehr fleischlose Speisen, besonders Sushi. Und auch mal einen vegetarischen Burger.\n\n(shortened and adapted from: http://www.sueddeutsche.de/ leben/ fastfood-die-beliebtesten-snacks-der-deutschen-1.534483 )\n\n\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud033.mp3]\n|note:Transcript\n__Bitte hören Sie und sprechen Sie.__\n\nWie viel Prozent der Deutschen essen am liebsten Pizza?\n➜\nEinundsiebzig Prozent.\n\nWelcher Snack kommt auf Platz zwei mit einundsechsig Prozent?\n➜\nDas belegte Brötchen.\n\nWie viel Prozent kaufen Grillhähnchen am Imbissstand?\n➜\nNeunundfünfzig Prozent.\n\nUnd wie viel Prozent bevorzugen die Bratwurst?\n➜\nVierundfünfzig Prozent.\n\nWelche Altersgruppe isst gern Hamburger mit Pommes?\n➜\nDie Vierzehn- bis Neunundzwanzigjährigen.\n\nUnd was essen die Frauen besonders gern?\n➜\nSushi oder vielleicht einen vegetarischen Burger.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "|info\n**Was für Snacks essen die Deutschen gern?**\n\nWenn der kleine Hunger kommt, ist die Pizza für viele der beliebteste Snack. 71 Prozent der Deutschen bevorzugen das italienische Gericht, wenn sie sich unterwegs etwas zu essen kaufen.\n\nAuf Platz zwei ist mit 61 Prozent der Befragten ganz klassisch das belegte Brötchen.\n\n59 Prozent der Deutschen kaufen am Imbissstand Grillhähnchen.\n\nAuf Platz vier mit 54 Prozent kommt der Klassiker an der Imbissbude – die Bratwurst.\n\nVor allem die 14- bis 29-Jährigen essen besonders gern Hamburger mit Pommes. Wenn man aber das Ergebnis nach Frauen und Männern trennt, ist es ganz anders. Frauen essen mehr fleischlose Speisen, besonders Sushi. Und auch mal einen vegetarischen Burger.\n\n(shortened and adapted from: http://www.sueddeutsche.de/ leben/ fastfood-die-beliebtesten-snacks-der-deutschen-1.534483 )\n\n\n[&audio:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/audio/l193r_b1_u3_aud033.mp3]\n|note:Transcript\n__Bitte hören Sie und sprechen Sie.__\n\nWie viel Prozent der Deutschen essen am liebsten Pizza?\n➜\nEinundsiebzig Prozent.\n\nWelcher Snack kommt auf Platz zwei mit einundsechsig Prozent?\n➜\nDas belegte Brötchen.\n\nWie viel Prozent kaufen Grillhähnchen am Imbissstand?\n➜\nNeunundfünfzig Prozent.\n\nUnd wie viel Prozent bevorzugen die Bratwurst?\n➜\nVierundfünfzig Prozent.\n\nWelche Altersgruppe isst gern Hamburger mit Pommes?\n➜\nDie Vierzehn- bis Neunundzwanzigjährigen.\n\nUnd was essen die Frauen besonders gern?\n➜\nSushi oder vielleicht einen vegetarischen Burger.",
+      "item": "Activity 26",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136208"
+      ],
+      "instruction": "Here is a chance to practise using some numbers. Read the following statistical information collected in a __Süddeutsche Zeitung__ survey about people’s favourite snacks, and then answer the questions you hear in the recording. There is no need for complete sentences here; just answer in short phrases.",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 27,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 31,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 35,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 39,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 43,
+        "column": 0,
+        "errorLine": "➜"
+      },
+      {
+        "message": "token recognition error at: '➜'",
+        "line": 47,
+        "column": 0,
+        "errorLine": "➜"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.match-solution-grouped]\n[@id:136209]\n[%Activity 27]\n[!Look at the following image which demonstrates the various terms shown on a typical German wine label. Some of the vocabulary is quite specialised, but before reaching for your dictionary, see how many of them you can match to the English translations below.]\n===\n1 - Erzeuger\n==\nProducer\n===\n2 - Jahrgang\n==\nYear\n===\n3 - Ort, Lage\n==\nLocation\n===\n4 - Rebsorte\n==\nGrape variety\n===\n5 - Qualitätsstufe\n==\nQuality\n===\n6 - Geschmacksrichtung\n==\nFlavour\n===\n7 - Prädikat\n==\nQuality\n===\n8 - offizielle A.P.-Nummer\n==\nOfficial control number\n===\n9 - Abfüller\n==\nBottler\n===\n10 - Weinbaugebiet (1 von 13)\n==\nWine-producing region (1 of 13)\n===\n11 - Füllvolumen\n==\nVolume\n===\n12 - Alkoholgehalt\n==\nAlcohol content\n===\n13 - Erzeugeradresse\n==\nProducer's address\n===\n14 - Weinbaubereich\n==\nWine-producing area\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_u3ol_fig004b.jpg]",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "Activity 27",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "1 - Erzeuger",
+          "values": [
+            "Producer"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2 - Jahrgang",
+          "values": [
+            "Year"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "3 - Ort, Lage",
+          "values": [
+            "Location"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "4 - Rebsorte",
+          "values": [
+            "Grape variety"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "5 - Qualitätsstufe",
+          "values": [
+            "Quality"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "6 - Geschmacksrichtung",
+          "values": [
+            "Flavour"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "7 - Prädikat",
+          "values": [
+            "Quality"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "8 - offizielle A.P.-Nummer",
+          "values": [
+            "Official control number"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "9 - Abfüller",
+          "values": [
+            "Bottler"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "10 - Weinbaugebiet (1 von 13)",
+          "values": [
+            "Wine-producing region (1 of 13)"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "11 - Füllvolumen",
+          "values": [
+            "Volume"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "12 - Alkoholgehalt",
+          "values": [
+            "Alcohol content"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "13 - Erzeugeradresse",
+          "values": [
+            "Producer's address"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "14 - Weinbaubereich",
+          "values": [
+            "Wine-producing area"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136209"
+      ],
+      "instruction": "Look at the following image which demonstrates the various terms shown on a typical German wine label. Some of the vocabulary is quite specialised, but before reaching for your dictionary, see how many of them you can match to the English translations below."
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "jpg",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_u3ol_fig004b.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136210]\n[%Skills: Developing confidence in using numbers]\n\nContinue to review numbers until you feel confident to use and understand them. Whenever you see phone numbers, statistics, and so on, try to say the number to yourself in German. Write down some large numbers, record yourself saying them out loud, come back later to listen and write them down, then compare what you’ve written with the original list.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Continue to review numbers until you feel confident to use and understand them. Whenever you see phone numbers, statistics, and so on, try to say the number to yourself in German. Write down some large numbers, record yourself saying them out loud, come back later to listen and write them down, then compare what you’ve written with the original list.",
+      "id": [
+        "136210"
+      ],
+      "item": "Skills: Developing confidence in using numbers"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136211]\n**Comment**\n\nGerman bureaucracy requires many things to have an official number, and that includes bottles of wine. Therefore every German quality wine has a control number or __A.P.Nr (Amtliche Prüfungsnummer)__ on the label. This shows that the wine has been officially tested against legal minimum standards. The various components of the number identify the testing station __(die Prüfstelle)__, location (Ort) of the producer, the producer __(der Erzeuger)__, the batch __(die geprüfte Partie)__ and the year __(das Jahr)__ when it was tested.\n\nSource of information: http://weinverkostungen.de/ die-amtliche-prufungsnummer-bei-wein-a-p-nr   (Accessed December 2019)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Comment**\n\nGerman bureaucracy requires many things to have an official number, and that includes bottles of wine. Therefore every German quality wine has a control number or __A.P.Nr (Amtliche Prüfungsnummer)__ on the label. This shows that the wine has been officially tested against legal minimum standards. The various components of the number identify the testing station __(die Prüfstelle)__, location (Ort) of the producer, the producer __(der Erzeuger)__, the batch __(die geprüfte Partie)__ and the year __(das Jahr)__ when it was tested.\n\nSource of information: http://weinverkostungen.de/ die-amtliche-prufungsnummer-bei-wein-a-p-nr   (Accessed December 2019)",
+      "id": [
+        "136211"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136212]\n[%Skills: Making connections with German]\n\nThe German and the English languages are very closely related. You will notice this in the large number of words that are either spelled the same, as in __Computer, Radio, Taxi__ or __Institution__, or where words are very similar in spelling and pronunciation, as in __Wein, Glas, Haus, Lampe, trinken__.\n\nHowever, there are also many other cultural parallels which can help you understand written German. Using the example of the wine label you will see that wine labels are very similar in German speaking countries and many other countries, with the items printed in identical positions etc. Such similarities also apply to many other contexts in everyday life. Just think of conventions for signs at train or bus stations, road signs, telephone books, emails etc.\n\nSo do trust your instincts and look for connections to support your understanding of the German language.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The German and the English languages are very closely related. You will notice this in the large number of words that are either spelled the same, as in __Computer, Radio, Taxi__ or __Institution__, or where words are very similar in spelling and pronunciation, as in __Wein, Glas, Haus, Lampe, trinken__.\n\nHowever, there are also many other cultural parallels which can help you understand written German. Using the example of the wine label you will see that wine labels are very similar in German speaking countries and many other countries, with the items printed in identical positions etc. Such similarities also apply to many other contexts in everyday life. Just think of conventions for signs at train or bus stations, road signs, telephone books, emails etc.\n\nSo do trust your instincts and look for connections to support your understanding of the German language.",
+      "id": [
+        "136212"
+      ],
+      "item": "Skills: Making connections with German"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-10]\n[@id:136213]\n[#Conclusion]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-10",
+      "id": [
+        "136213"
+      ],
+      "title": "Conclusion"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136214]\nWe hope you have enjoyed this course. Now that you know how to talk about what food you like and dislike, and you have learned how to order food and pay for it, you may wish to try this language out on your next visit to a German-speaking country!\n\nIf you enjoyed this OpenLearn course, you might be interested in the Open University course **L193 Rundblick:** __beginners’ German.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "We hope you have enjoyed this course. Now that you know how to talk about what food you like and dislike, and you have learned how to order food and pay for it, you may wish to try this language out on your next visit to a German-speaking country!\n\nIf you enjoyed this OpenLearn course, you might be interested in the Open University course **L193 Rundblick:** __beginners’ German.__",
+      "id": [
+        "136214"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-11]\n[@id:136215]\n[#Acknowledgements]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-11",
+      "id": [
+        "136215"
+      ],
+      "title": "Acknowledgements"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136216]\nThis course was written by the **L193 Rundblick: beginners’ German** course team.\n\nSome branded products may be illustrated for the language teaching and learning purposes of this course only. The Open University does not endorse or recommend any of these products of which many variations would be available. See terms and conditions.\n\nExcept for third party materials and otherwise stated (see **terms and conditions**), this content is made available under a **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Licence**.\n\nCourse image: **Sascha Kohlmann**  in Flickr made available under **Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Licence**.\n\nThe material acknowledged below is Proprietary and used under licence (not subject to Creative Commons Licence). Grateful acknowledgement is made to the following sources for permission to reproduce material in this course:\n\n© Elena Kouptsova-Vasic/dreamstime.com\n\nAll photos © The Open University except:\nFigure 3 (composite, image 3): © Anpet2000(Andriy Petrenko) / Dreamstime\nFigure 6: © Elizabeth Clifford\nFigure 8: © Maren Oredein\nFigure 9: Kind permission given to use from Hotel Sacher / Sacher.com\nFigure 11: © Capitan Jen / Flickr\nFigure 12: © visitBerlin / Philip Koschel\nFigure 13: © visitBerlin / Philip Koschel\nFigure 15: © Weingutschaetzle.de\nAudio material produced by The Open University.\nVideo material produced for The Open University by Salon Deluxe, Graz, Austria.\n\nEvery effort has been made to contact copyright owners. If any have been inadvertently overlooked, the publishers will be pleased to make the necessary arrangements at the first opportunity.\n\n**Don't miss out:**\nIf reading this text has inspired you to learn more, you may be interested in joining the millions of people who discover our free learning resources and qualifications by visiting The Open University - **www.open.edu/ openlearn/ free-courses**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This course was written by the **L193 Rundblick: beginners’ German** course team.\n\nSome branded products may be illustrated for the language teaching and learning purposes of this course only. The Open University does not endorse or recommend any of these products of which many variations would be available. See terms and conditions.\n\nExcept for third party materials and otherwise stated (see **terms and conditions**), this content is made available under a **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Licence**.\n\nCourse image: **Sascha Kohlmann**  in Flickr made available under **Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Licence**.\n\nThe material acknowledged below is Proprietary and used under licence (not subject to Creative Commons Licence). Grateful acknowledgement is made to the following sources for permission to reproduce material in this course:\n\n© Elena Kouptsova-Vasic/dreamstime.com\n\nAll photos © The Open University except:\nFigure 3 (composite, image 3): © Anpet2000(Andriy Petrenko) / Dreamstime\nFigure 6: © Elizabeth Clifford\nFigure 8: © Maren Oredein\nFigure 9: Kind permission given to use from Hotel Sacher / Sacher.com\nFigure 11: © Capitan Jen / Flickr\nFigure 12: © visitBerlin / Philip Koschel\nFigure 13: © visitBerlin / Philip Koschel\nFigure 15: © Weingutschaetzle.de\nAudio material produced by The Open University.\nVideo material produced for The Open University by Salon Deluxe, Graz, Austria.\n\nEvery effort has been made to contact copyright owners. If any have been inadvertently overlooked, the publishers will be pleased to make the necessary arrangements at the first opportunity.\n\n**Don't miss out:**\nIf reading this text has inspired you to learn more, you may be interested in joining the millions of people who discover our free learning resources and qualifications by visiting The Open University - **www.open.edu/ openlearn/ free-courses**",
+      "id": [
+        "136216"
+      ]
+    }
+  }
+]

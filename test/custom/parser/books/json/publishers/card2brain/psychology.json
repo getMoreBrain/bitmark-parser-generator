@@ -1,0 +1,512 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:232707]\n[#Psychology of Economic Decision-Making]\n[@language:en]\n[@coverImage:https://docs.bitmark.cloud/bit-books/card2brain/psychology/web-resources/images/card2brain_decision_cover.png]\n[@externalId:e-psychology-of-economic-decisio_tqjeekrumcbd]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232707"
+      ],
+      "title": "Psychology of Economic Decision-Making",
+      "language": [
+        "en"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/card2brain/psychology/web-resources/images/card2brain_decision_cover.png"
+      ],
+      "externalId": [
+        "e-psychology-of-economic-decisio_tqjeekrumcbd"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:232708]\n[#Psychology of Economic Decision-Making Q&A]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "232708"
+      ],
+      "title": "Psychology of Economic Decision-Making Q&A"
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232709]\nWhich of the following statement/s is/are true for the multi-attribute utility (MAU) model?\n==\nIt is a compensatory model of decision-making.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Which of the following statement/s is/are true for the multi-attribute utility (MAU) model?\n==\nIt is a compensatory model of decision-making.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232709"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232710]\nWhich of the decision-models listed below are non-compensatory models?\n==\nElimination-by-aspect heuristic\n--\nConjunctive model",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Which of the decision-models listed below are non-compensatory models?\n==\nElimination-by-aspect heuristic\n--\nConjunctive model",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232710"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232711]\nThe elimination-by-aspects heuristic is typically followed by ...\n==\nthe satisficing heuristic\n--\nthe MAU model\n--\nthe additive difference model",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "The elimination-by-aspects heuristic is typically followed by ...\n==\nthe satisficing heuristic\n--\nthe MAU model\n--\nthe additive difference model",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232711"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232712]\nHuman decision-making is characterized by bounded rationality. Bounded rationality is due to humans’...\n==\nLimited time\n--\nLimited information\n--\nLimited information-processing capacity",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Human decision-making is characterized by bounded rationality. Bounded rationality is due to humans’...\n==\nLimited time\n--\nLimited information\n--\nLimited information-processing capacity",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232712"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232713]\nWhich of these terms below do NOT describe a type of consumer decision?\n==\nCompulsive",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Which of these terms below do NOT describe a type of consumer decision?\n==\nCompulsive",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232713"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232714]\nWhich of the following statements about the conjunctive model are true?\n==\nIt is used when numerous alternatives are available.\n--\nThis model is used to quickly eliminate many of the available options.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Which of the following statements about the conjunctive model are true?\n==\nIt is used when numerous alternatives are available.\n--\nThis model is used to quickly eliminate many of the available options.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232714"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232715]\nWhich term describes the misjudgment of the likelihood of a specific person belonging to a particular group due to not paying attention to the proportion of people in general belonging to this particular group?\n==\nBase rate fallacy",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Which term describes the misjudgment of the likelihood of a specific person belonging to a particular group due to not paying attention to the proportion of people in general belonging to this particular group?\n==\nBase rate fallacy",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232715"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232716]\nWhich of the following is an example of the anchoring-and-adjustment heuristic?\n==\nJudging a potential mate’s attractiveness based on the attractiveness of one’s previous mate.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Which of the following is an example of the anchoring-and-adjustment heuristic?\n==\nJudging a potential mate’s attractiveness based on the attractiveness of one’s previous mate.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232716"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232717]\nWhich of the following statements is most likely to describe Tracy’s life after completing her degree in gender studies?\n==\nTracy becomes a bank teller",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Which of the following statements is most likely to describe Tracy’s life after completing her degree in gender studies?\n==\nTracy becomes a bank teller",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232717"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232718]\nWhich of the following fallacies/biases are NOT attributed to the representativeness heuristic?\n==\nConfirmation bias",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Which of the following fallacies/biases are NOT attributed to the representativeness heuristic?\n==\nConfirmation bias",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232718"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232719]\nWhat is the gambler's fallacy?\n==\nThe belief that the probability of something happening either improves or decreases based upon recent occurrences.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "What is the gambler's fallacy?\n==\nThe belief that the probability of something happening either improves or decreases based upon recent occurrences.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232719"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232720]\nRecognizing that a currently very successful football player will probably perform less outstanding in the future implies some understanding of what?\n==\nRegression to the mean",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Recognizing that a currently very successful football player will probably perform less outstanding in the future implies some understanding of what?\n==\nRegression to the mean",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232720"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232721]\nJohn believes that planes are more dangerous than cars. What might the availability heuristic tell us about John?\n==\nJohn has probably seen vivid news stories about plane crashes.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "John believes that planes are more dangerous than cars. What might the availability heuristic tell us about John?\n==\nJohn has probably seen vivid news stories about plane crashes.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232721"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232722]\nImagine you are trying to buy something on the flea market. Initially making a low offer in order to get a bargain on a second-hand item is an example of you using the:\n==\nanchoring-and-adjustment effect",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Imagine you are trying to buy something on the flea market. Initially making a low offer in order to get a bargain on a second-hand item is an example of you using the:\n==\nanchoring-and-adjustment effect",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232722"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232723]\nSeveral news outlets report extensively about two people experiencing really bad side effects after being vaccinated against Corona. Which heuristic explains that the general population overestimates the dangers of the vaccine after reading these reports.\n==\navailability heuristic",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Several news outlets report extensively about two people experiencing really bad side effects after being vaccinated against Corona. Which heuristic explains that the general population overestimates the dangers of the vaccine after reading these reports.\n==\navailability heuristic",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232723"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232724]\nWhich heuristic/bias leads us to assess the risk of suffering an injury while playing soccer as lower than the risk of suffering an injury while skiing?\n==\nAvailability heuristic",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Which heuristic/bias leads us to assess the risk of suffering an injury while playing soccer as lower than the risk of suffering an injury while skiing?\n==\nAvailability heuristic",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232724"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232725]\nAnother name for hindsight bias is ...\n==\nI-knew-it-all-along",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Another name for hindsight bias is ...\n==\nI-knew-it-all-along",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232725"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232726]\nAfter a stock market rebound in May/June 2020 after its crash in March 2020 (due to Corona), a friend tells you he has known for months that this would happen. This is an example of ...\n==\nHindsight bias",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "After a stock market rebound in May/June 2020 after its crash in March 2020 (due to Corona), a friend tells you he has known for months that this would happen. This is an example of ...\n==\nHindsight bias",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232726"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232727]\nInitially making a low offer in order to get a good deal on that vintage stamp you were searching for is an example of ...\n==\nAnchoring-and-adjustment heuristic",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Initially making a low offer in order to get a good deal on that vintage stamp you were searching for is an example of ...\n==\nAnchoring-and-adjustment heuristic",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232727"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232728]\nYou ask for CHF 70’000 in a salary negotiation. You would have accepted CHF 55’000. Your new employer tells you that your request is a bit high. He offers you CHF 65’000. Originally, he wanted to offer you no more than CHF 60’000. This is an example of ...\n==\nAnchoring-and-adjustment heuristic",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "You ask for CHF 70’000 in a salary negotiation. You would have accepted CHF 55’000. Your new employer tells you that your request is a bit high. He offers you CHF 65’000. Originally, he wanted to offer you no more than CHF 60’000. This is an example of ...\n==\nAnchoring-and-adjustment heuristic",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232728"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232729]\nYou can choose (A) You roll the dice. An even number means you win 160 CHF. An odd number means you don’t win anything. (B) You don’t roll the dice and simply get 75 CHF.\nWhich of the following statements are true?\n==\nMost people will choose option B.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "You can choose (A) You roll the dice. An even number means you win 160 CHF. An odd number means you don’t win anything. (B) You don’t roll the dice and simply get 75 CHF.\nWhich of the following statements are true?\n==\nMost people will choose option B.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232729"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232730]\nWhat are the three principles of the prospect theory?\n==\nDecreasing sensitivity when judging gains and losses\n--\nReference point from which gains and losses are assessed\n--\nLoss aversion",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "What are the three principles of the prospect theory?\n==\nDecreasing sensitivity when judging gains and losses\n--\nReference point from which gains and losses are assessed\n--\nLoss aversion",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232730"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232731]\nWhich statements regarding hedonic framing are true?\n==\nYou should integrate smaller losses with larger gains to offset the loss aversion you would feel due to the small loss.\n--\nYou should segregate small gains from larger losses because the positive utility experienced from a small gain can exceed the utility of slightly reducing the negative utility of a large loss.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Which statements regarding hedonic framing are true?\n==\nYou should integrate smaller losses with larger gains to offset the loss aversion you would feel due to the small loss.\n--\nYou should segregate small gains from larger losses because the positive utility experienced from a small gain can exceed the utility of slightly reducing the negative utility of a large loss.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232731"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232732]\nWhich statements regarding the status quo bias are true?\n==\nStatus quo bias means favoring a current option to avoid losses that might occur when changing the status quo.\n--\nStatus quo bias can be caused by the sunk cost fallacy.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Which statements regarding the status quo bias are true?\n==\nStatus quo bias means favoring a current option to avoid losses that might occur when changing the status quo.\n--\nStatus quo bias can be caused by the sunk cost fallacy.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232732"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232733]\nA person with comprehensive cover car insurance (i.e., with deductible) is more likely to be careful with their car to ensure there is no damage compared to somebody with a car insurance without deductible. This effect is an example of:\n==\nmoral hazard",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "A person with comprehensive cover car insurance (i.e., with deductible) is more likely to be careful with their car to ensure there is no damage compared to somebody with a car insurance without deductible. This effect is an example of:\n==\nmoral hazard",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232733"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232734]\nIn contrast to prospect theory, the cumulative prospect theory posits that:\n==\nLow probabilities are overweighted by most people.\n--\nPeople are not always risk averse when facing gains.\n--\nHow people are dealing with the prospect of a gain or a loss depends on the probability of the event.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "In contrast to prospect theory, the cumulative prospect theory posits that:\n==\nLow probabilities are overweighted by most people.\n--\nPeople are not always risk averse when facing gains.\n--\nHow people are dealing with the prospect of a gain or a loss depends on the probability of the event.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232734"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232735]\nWhen choosing an insurance policy, the following applies:\n==\nPeople prefer policies covering specific and easy-to-imagine events rather than generic events.\n--\nBecause of loss aversion, people prefer policies without a deductible.\n--\nInsurance companies prefer to sell insurance policies with a deductible to reduce the effect of the moral hazard.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "When choosing an insurance policy, the following applies:\n==\nPeople prefer policies covering specific and easy-to-imagine events rather than generic events.\n--\nBecause of loss aversion, people prefer policies without a deductible.\n--\nInsurance companies prefer to sell insurance policies with a deductible to reduce the effect of the moral hazard.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232735"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232736]\nThe prospect theory proposed that people consider potential gains and losses when making decisions and, therefore, people’s preferences are sensitive to the ___ of information.\n==\nframing",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "The prospect theory proposed that people consider potential gains and losses when making decisions and, therefore, people’s preferences are sensitive to the ___ of information.\n==\nframing",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232736"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232737]\nAccording to the cumulative prospect theory,\n==\npeople are risk averse when there is a low probability of a loss.\n--\npeople are risk seeking when there is a high probability of a loss.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "According to the cumulative prospect theory,\n==\npeople are risk averse when there is a low probability of a loss.\n--\npeople are risk seeking when there is a high probability of a loss.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232737"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232738]\nEmma is willing to pay $1 for a lottery ticket that has an expected utility of $0.85. This proves that Emma is:\n==\nrisk seeking",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Emma is willing to pay $1 for a lottery ticket that has an expected utility of $0.85. This proves that Emma is:\n==\nrisk seeking",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232738"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232739]\nBob is perfectly healthy. He nevertheless decides to pay for a full body scan just to be sure that everything is ok. This shows that Bob is:\n==\nrisk averse",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Bob is perfectly healthy. He nevertheless decides to pay for a full body scan just to be sure that everything is ok. This shows that Bob is:\n==\nrisk averse",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232739"
+      ]
+    }
+  }
+]

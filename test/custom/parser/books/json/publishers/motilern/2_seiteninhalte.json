@@ -1,0 +1,291 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:304918]\n[@externalId:e-seiten-inhalte_lll-4fjf9gc7]\n\n[#Seiten-Inhalte]\n[@language:de]\n[##Voraussetzungen, Slider, Hinweisboxen, Ausklapp-Text, Multiple-Choice.]\n[@coverImage:https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/cover_motilern_bedienung.png]\n[@publisher:motilern]\n[@theme:motilern]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304918"
+      ],
+      "externalId": [
+        "e-seiten-inhalte_lll-4fjf9gc7"
+      ],
+      "title": "Seiten-Inhalte",
+      "language": [
+        "de"
+      ],
+      "subtitle": "Voraussetzungen, Slider, Hinweisboxen, Ausklapp-Text, Multiple-Choice.",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/cover_motilern_bedienung.png"
+      ],
+      "publisher": [
+        "motilern"
+      ],
+      "theme": [
+        "motilern"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter:bitmark++]\n[@id:304919]\n[▼ch-3]\n[#Seiten-Inhalte]\n[▼Ref_Seiten-Inhalte]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark++",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304919"
+      ],
+      "anchor": "Ref_Seiten-Inhalte",
+      "title": "Seiten-Inhalte"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304920]\n[▼ch-4]\n[##Voraussetzungen, Slider, Hinweisboxen, Ausklapp-Text, Multiple-Choice]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304920"
+      ],
+      "anchor": "ch-4",
+      "title": "Voraussetzungen, Slider, Hinweisboxen, Ausklapp-Text, Multiple-Choice"
+    }
+  },
+  {
+    "bitmark": "[.internal-link:bitmark--]\n[@id:304921]\n[!Navigation]\n[►Ref_Navigation]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304921"
+      ],
+      "instruction": "Navigation",
+      "reference": "Ref_Navigation"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark--]\n[@id:304922]\n“Willst du dich am Ganzen erquicken, so musst du das Ganze im Kleinsten erblicken.” [@quotedPerson: Johann Wolfgang von Goethe]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "“Willst du dich am Ganzen erquicken, so musst du das Ganze im Kleinsten erblicken.”",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304922"
+      ],
+      "quotedPerson": "Johann Wolfgang von Goethe"
+    }
+  },
+  {
+    "bitmark": "[.video-link]\n[@id:304923]\n[&video-link:https://player.vimeo.com/video/702095800]",
+    "bit": {
+      "type": "video-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304923"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/702095800",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark--]\n[@id:304924]\n[!Transkript]\nGratuliere. Du hast die Seite zwei gefunden. Also die Navigation beherrscht schon einmal! Schaun wir uns jetzt einmal an, welche Inhalte du auf jeder Seite von MotiLern finden kannst.\n\nDer erste Punkt, den du auf vielen Seiten findest, ist: **\"Hier wird das Wissen folgender Seiten vorausgesetzt.\"** Und dann eine mehr oder weniger lange Liste. Warum ist das wichtig? Wichtig ist es deswegen, weil MotLern dich niemals dazu zwingt, erst mal eine Seite anzuschauen, bevor du eine andere kriegst. Du kannst die Seiten in jeder beliebigen Reihenfolge aufrufen, auch wenn sich der Autor natürlich was dabei gedacht hat, dass es in dieser Reihenfolge hergibt. Aber du kannst - wenn du Lust hast, mit Seite 27 anzufangen - dann mach das. Und wir helfen dir dabei sogar noch und schreiben hin: \"Das und das und das setzten wir aber hier voraus. Wenn du das noch nicht gemacht hast, kann es sein, dass du das eine oder andere nicht verstehst. Wenn du dann Lust hast, es zu machen, klickst einfach oben drauf und verzweigst auf die Seite mit dem Vorwissen und machst die zuerst durch. Und wir helfen dir sogar dabei, denn in dem Ring vor dem Seitennamen siehst du entweder einen Haken, wenn du die Seite schon gemacht hast oder eben nichts, wenn es noch fehlt.\n\nAls nächstes bekommst du einen **Impuls**. Und den Impuls bekommst du als Video oder Transkript. Schau mal oben drüber über dem Video ist so ein kleiner Reiter. Da kannst du hin und herschalten zwischen Video und Transkript. Warum ist das wichtig? Na ja, nicht jeder hat Lust, sich etwas erzählen zu lassen. Manche lesen lieber. Und manche lesen heute lieber und morgen schauen sie lieber ein Video. Also es ist bei jedem ein bisschen anders. Außerdem hast du damit die Möglichkeit, du kannst das Transkript erst einmal überfliegen und kannst dir anschauen: \"Worüber redet er da gerade?\"Und dann erst entscheiden, ob du dir das Video gibst. Das heißt, wir zwingen dich auch nicht dazu, ewiglange Videos anzuschauen, nur um dann drauf zu kommen: Das hättest du eh nicht gebraucht. Also hat viele Vorteile.\n\nUnter dem Video findest du manchmal **Hinweis-Boxen**. Die roten Boxen sind Hinweis-Boxen, die dir besondere Informationen, die besondere Gewichtung haben, zeigen.\n\nUnd dann gibt es noch blaue Boxen mit einer **Übungs-Anleitung**. Da steht dann meistens drin, was du jetzt ganz konkret tun sollst, um eigene Erfahrungen mit dem Impuls zu sammeln, um an deinem konkreten Projekt weiterzuarbeiten.\n\nDann gibt es noch **Slider-Elemente**. Schau mal runter. Unter der Übungs Anleitung findest du auch ein Slider Element. Das sind eigentlich mehrere Seiten, die jeweils Bild oder Text enthalten können. Und du kannst weiterblättern. Und die Punkte oben zeigen dir erstens einmal, wie viele Seiten es gibt. Und dann zeigen sie dir, auf welcher Seite du gerade bist. Und du kannst auch auf die Punkte draufklicken und dadurch direkt auf eine Seite verzweigen.\n\nDann gibt es noch **Ausklapp-Texte**. Das sind die Texte mit dem kleinen Dreieck am Anfang. Schau mal weiter runter, da habe ich deinen rein gebaut. Wenn du dort drauf klickst, geht ein Text auf und zeigt erst dann die Information. Und wenn du noch mal draufklickst, verschwindet er wieder. Wofür ist das wichtig? Das kann man verwenden, zum Beispiel um hier Texte einzubauen, die nicht für jeden wichtig sind, oder um Texte einzubauen, die noch weiter ins Detail gehen würden nur für die, die sich dann interessieren und sagen: \"Okay, zu dem Punkt möchte ich gern mehr haben.\" Die können das anschauen und dann kann man diese Texte natürlich auch perfekt für Quizzes benutzen. Schau mal die letzte Seite dieses Kapitels. Da findest ein Quiz und dort findest auch einen Ausklapp-Text und siehst, wie man das zum zum Abfragen des Wissens verwenden kann.\n\nUnd dann gibt es noch **Multiple Choice Elemente**, die findest auch auf der letzten Seite. Und da kannst ein bisschen spielen und kannst dein Wissen testen. Wichtig ist: In MotiLern wird **NICHTS** gespeichert. Das heißt, wenn du die Seite mit dem Test verlässt und wieder aufrufst ... erstens Mal sind alle Eingaben von dir wieder gelöscht und du kannst nochmal anfangen und kannst dein Wissen nochmal testen. Und zweitens kommen die Fragen alle aus einem Pool. Das heißt, du bekommst dann ein bissel andere Fragen und kannst dadurch mehrmals spielen. Und diese Tests dienen ausschließlich dazu, dir zu helfen, dein Wissen zu festigen, alles nochmal zu wiederholen und vielleicht nochmal zu schauen: \"Kann ich das schon? Kann ich das nicht? Wo muss ich noch nachbessern?\"\n\nSo. Jetzt probier es gleich mal aus. Probier unten den Aufklapp-Text aus. Probiert den Slider aus. Und probier auch auf der letzten Seite die Multiple Choice Fragen aus.\n\nViel Spaß dabei.",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark--",
+      "body": "Gratuliere. Du hast die Seite zwei gefunden. Also die Navigation beherrscht schon einmal! Schaun wir uns jetzt einmal an, welche Inhalte du auf jeder Seite von MotiLern finden kannst.\n\nDer erste Punkt, den du auf vielen Seiten findest, ist: **\"Hier wird das Wissen folgender Seiten vorausgesetzt.\"** Und dann eine mehr oder weniger lange Liste. Warum ist das wichtig? Wichtig ist es deswegen, weil MotLern dich niemals dazu zwingt, erst mal eine Seite anzuschauen, bevor du eine andere kriegst. Du kannst die Seiten in jeder beliebigen Reihenfolge aufrufen, auch wenn sich der Autor natürlich was dabei gedacht hat, dass es in dieser Reihenfolge hergibt. Aber du kannst - wenn du Lust hast, mit Seite 27 anzufangen - dann mach das. Und wir helfen dir dabei sogar noch und schreiben hin: \"Das und das und das setzten wir aber hier voraus. Wenn du das noch nicht gemacht hast, kann es sein, dass du das eine oder andere nicht verstehst. Wenn du dann Lust hast, es zu machen, klickst einfach oben drauf und verzweigst auf die Seite mit dem Vorwissen und machst die zuerst durch. Und wir helfen dir sogar dabei, denn in dem Ring vor dem Seitennamen siehst du entweder einen Haken, wenn du die Seite schon gemacht hast oder eben nichts, wenn es noch fehlt.\n\nAls nächstes bekommst du einen **Impuls**. Und den Impuls bekommst du als Video oder Transkript. Schau mal oben drüber über dem Video ist so ein kleiner Reiter. Da kannst du hin und herschalten zwischen Video und Transkript. Warum ist das wichtig? Na ja, nicht jeder hat Lust, sich etwas erzählen zu lassen. Manche lesen lieber. Und manche lesen heute lieber und morgen schauen sie lieber ein Video. Also es ist bei jedem ein bisschen anders. Außerdem hast du damit die Möglichkeit, du kannst das Transkript erst einmal überfliegen und kannst dir anschauen: \"Worüber redet er da gerade?\"Und dann erst entscheiden, ob du dir das Video gibst. Das heißt, wir zwingen dich auch nicht dazu, ewiglange Videos anzuschauen, nur um dann drauf zu kommen: Das hättest du eh nicht gebraucht. Also hat viele Vorteile.\n\nUnter dem Video findest du manchmal **Hinweis-Boxen**. Die roten Boxen sind Hinweis-Boxen, die dir besondere Informationen, die besondere Gewichtung haben, zeigen.\n\nUnd dann gibt es noch blaue Boxen mit einer **Übungs-Anleitung**. Da steht dann meistens drin, was du jetzt ganz konkret tun sollst, um eigene Erfahrungen mit dem Impuls zu sammeln, um an deinem konkreten Projekt weiterzuarbeiten.\n\nDann gibt es noch **Slider-Elemente**. Schau mal runter. Unter der Übungs Anleitung findest du auch ein Slider Element. Das sind eigentlich mehrere Seiten, die jeweils Bild oder Text enthalten können. Und du kannst weiterblättern. Und die Punkte oben zeigen dir erstens einmal, wie viele Seiten es gibt. Und dann zeigen sie dir, auf welcher Seite du gerade bist. Und du kannst auch auf die Punkte draufklicken und dadurch direkt auf eine Seite verzweigen.\n\nDann gibt es noch **Ausklapp-Texte**. Das sind die Texte mit dem kleinen Dreieck am Anfang. Schau mal weiter runter, da habe ich deinen rein gebaut. Wenn du dort drauf klickst, geht ein Text auf und zeigt erst dann die Information. Und wenn du noch mal draufklickst, verschwindet er wieder. Wofür ist das wichtig? Das kann man verwenden, zum Beispiel um hier Texte einzubauen, die nicht für jeden wichtig sind, oder um Texte einzubauen, die noch weiter ins Detail gehen würden nur für die, die sich dann interessieren und sagen: \"Okay, zu dem Punkt möchte ich gern mehr haben.\" Die können das anschauen und dann kann man diese Texte natürlich auch perfekt für Quizzes benutzen. Schau mal die letzte Seite dieses Kapitels. Da findest ein Quiz und dort findest auch einen Ausklapp-Text und siehst, wie man das zum zum Abfragen des Wissens verwenden kann.\n\nUnd dann gibt es noch **Multiple Choice Elemente**, die findest auch auf der letzten Seite. Und da kannst ein bisschen spielen und kannst dein Wissen testen. Wichtig ist: In MotiLern wird **NICHTS** gespeichert. Das heißt, wenn du die Seite mit dem Test verlässt und wieder aufrufst ... erstens Mal sind alle Eingaben von dir wieder gelöscht und du kannst nochmal anfangen und kannst dein Wissen nochmal testen. Und zweitens kommen die Fragen alle aus einem Pool. Das heißt, du bekommst dann ein bissel andere Fragen und kannst dadurch mehrmals spielen. Und diese Tests dienen ausschließlich dazu, dir zu helfen, dein Wissen zu festigen, alles nochmal zu wiederholen und vielleicht nochmal zu schauen: \"Kann ich das schon? Kann ich das nicht? Wo muss ich noch nachbessern?\"\n\nSo. Jetzt probier es gleich mal aus. Probier unten den Aufklapp-Text aus. Probiert den Slider aus. Und probier auch auf der letzten Seite die Multiple Choice Fragen aus.\n\nViel Spaß dabei.",
+      "id": [
+        "304924"
+      ],
+      "instruction": "Transkript"
+    }
+  },
+  {
+    "bitmark": "[.warning:bitmark--]\n[@id:304925]\n[%][%Hinweis-Box]\nDas ist ein ganz wichtiger Hinweis.",
+    "bit": {
+      "type": "warning",
+      "format": "bitmark--",
+      "body": "Das ist ein ganz wichtiger Hinweis.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304925"
+      ],
+      "lead": "Hinweis-Box"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\n[@id:304926]\n[%][%Übungsanleitung]\n• Probiere den Slider aus.\n\t• Beachte dabei die Punkte oben.\n• Probiere unten den Aufklapp-Text aus.\n• Und dann blätter dreimal weiter bis zur Seite 5 des Kapitels und probier dort die Multiple-Choice-Fragen aus.\n• Weiter geht es dann auf der Seite \"Orientierung\"",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "• Probiere den Slider aus.\n\t• Beachte dabei die Punkte oben.\n• Probiere unten den Aufklapp-Text aus.\n• Und dann blätter dreimal weiter bis zur Seite 5 des Kapitels und probier dort die Multiple-Choice-Fragen aus.\n• Weiter geht es dann auf der Seite \"Orientierung\"",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304926"
+      ],
+      "lead": "Übungsanleitung"
+    }
+  },
+  {
+    "bitmark": "[.image]\n[@id:304927]\n[&image:https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/motilern_bedienungsanleitung_1.png][@width:1934]\n\nErste Seite",
+    "bit": {
+      "type": "image",
+      "format": "bitmark--",
+      "body": "Erste Seite",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304927"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/motilern_bedienungsanleitung_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "1934",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.image]\n[@id:304928]\n[&image:https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/motilern_bedienungsanleitung_2.png][@width:1934]\n\nZweite Seite",
+    "bit": {
+      "type": "image",
+      "format": "bitmark--",
+      "body": "Zweite Seite",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304928"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/motilern_bedienungsanleitung_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "1934",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.image]\n[@id:304929]\n[&image:https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/motilern_bedienungsanleitung_3.png][@width:1934]\n\nDritte Seite",
+    "bit": {
+      "type": "image",
+      "format": "bitmark--",
+      "body": "Dritte Seite",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304929"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/motilern_bedienungsanleitung_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "1934",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark++]\n[@id:304930]\n[!Hier klicken, um den geheimen Text anzuzeigen.]\n\nBravo, du hast mich gefunden. Jetzt verstecke den Text schnell wieder, indem du nochmal auf den Titel klickst!\n\nDas hier Gelernte brauchst du schon bald auf folgenden Seiten dieses Kurses:\n• Orientierung > Sternebewertung, Fortschritt, persönliche Notizen, Lern-Tagebuch, Suche.\n• Motivation > Warum erfolgreiche Selbstlernkurse ihre Lernenden bestmöglich motivieren.\n• Metaprogramme >Wie du die Lernvorlieben deiner Teilnehmer für deren Lernerfolg nutzt.",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark++",
+      "body": "Bravo, du hast mich gefunden. Jetzt verstecke den Text schnell wieder, indem du nochmal auf den Titel klickst!\n\nDas hier Gelernte brauchst du schon bald auf folgenden Seiten dieses Kurses:\n• Orientierung > Sternebewertung, Fortschritt, persönliche Notizen, Lern-Tagebuch, Suche.\n• Motivation > Warum erfolgreiche Selbstlernkurse ihre Lernenden bestmöglich motivieren.\n• Metaprogramme >Wie du die Lernvorlieben deiner Teilnehmer für deren Lernerfolg nutzt.",
+      "id": [
+        "304930"
+      ],
+      "instruction": "Hier klicken, um den geheimen Text anzuzeigen."
+    }
+  },
+  {
+    "bitmark": "[.side-note:bitmark++]\n[@id:304931]\n[%][%Fazit]\n• Die **Voraussetzungen** helfen dir, wenn du die Seiten in DEINER Reihenfolge aufrufst.\n• Du kannst jederzeit entscheiden, ob du lieber ein Video konsumierst oder das **Transkript** liest.\n\t• Überfliege doch erst das Transkript und entscheide DANN, ob du das Video überhaut ansehen willst.\n• **Hinweisboxen** versorgen dich mit besonderen Informationen.\n• In **Slidern** werden mehrere Info-Blöcke übersichtlich dargestellt.\n• **Ausklapp-Texte** zeigen Infos nur jenen, die das wirklich möchten.\n• **Multiple-Choice-Fragen** dienen **AUSSCHLIEßLICH** zum Spielen, damit du dein Wissen festigen kannst.",
+    "bit": {
+      "type": "side-note",
+      "format": "bitmark++",
+      "body": "• Die **Voraussetzungen** helfen dir, wenn du die Seiten in DEINER Reihenfolge aufrufst.\n• Du kannst jederzeit entscheiden, ob du lieber ein Video konsumierst oder das **Transkript** liest.\n\t• Überfliege doch erst das Transkript und entscheide DANN, ob du das Video überhaut ansehen willst.\n• **Hinweisboxen** versorgen dich mit besonderen Informationen.\n• In **Slidern** werden mehrere Info-Blöcke übersichtlich dargestellt.\n• **Ausklapp-Texte** zeigen Infos nur jenen, die das wirklich möchten.\n• **Multiple-Choice-Fragen** dienen **AUSSCHLIEßLICH** zum Spielen, damit du dein Wissen festigen kannst.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304931"
+      ],
+      "lead": "Fazit"
+    }
+  }
+]
