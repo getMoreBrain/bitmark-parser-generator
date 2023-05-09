@@ -1811,21 +1811,29 @@ class BitmarkParserHelper {
   }
 
   processPossibleCardLine(value: unknown) {
+    let isCardDivider = false;
     let isSideDivider = false;
     let isVariantDivider = false;
 
     if (Array.isArray(value) && value.length === 2) {
       value = value[0];
+      isCardDivider = value === '===';
       isSideDivider = value === '==';
       isVariantDivider = value === '--';
     }
 
     // This card section has no lines, so it's a special case blank
     const emptyCardOrSideOrVariant = this.cardSectionLineCount === 0;
+    const currentCardIndex = this.cardIndex;
     const currentSideIndex = this.cardSideIndex;
     const currentVariantIndex = this.cardVariantIndex;
 
-    if (isSideDivider) {
+    if (isCardDivider) {
+      this.cardIndex++;
+      this.cardSideIndex = 0;
+      this.cardVariantIndex = 0;
+      this.cardSectionLineCount = 0;
+    } else if (isSideDivider) {
       this.cardSideIndex++;
       this.cardVariantIndex = 0;
       this.cardSectionLineCount = 0;
@@ -1841,7 +1849,7 @@ class BitmarkParserHelper {
       return {
         type: TypeKey.Card,
         value: {
-          cardIndex: this.cardIndex,
+          cardIndex: currentCardIndex,
           cardSideIndex: currentSideIndex,
           cardVariantIndex: currentVariantIndex,
           value: '',

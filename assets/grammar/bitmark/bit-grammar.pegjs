@@ -120,13 +120,15 @@ BodyChar
 
 // CardSet
 CardSet
-  = value: (CardSetStart Card* CardSetEnd) { return { type: TypeKey.CardSet, value: value[1].flat() } }
+  = value: (CardSetStart Cards* CardSetEnd) { return { type: TypeKey.CardSet, value: value[1].flat() } }
 
 CardSetStart
-  = NL &("===" NL) { helper.processCardSetStart(); }
+  = NL "===" NL { helper.processCardSetStart(); }
 
 CardSetEnd
   = ("===" &EOL) { helper.processCardSetEnd(); }
+  // = !("===" NL .* "===" EOF) ("===" &EOL) { helper.processCardSetEnd(); }
+  // = Anything
 
 Card
   = value: ("===" NL CardContent) { helper.processCard(); return value[2]; }
@@ -138,10 +140,16 @@ CardContent
   };
 
 PossibleCardLine
-  = value: ("===" NL / "==" NL / "--" NL / CardLine) { return helper.processPossibleCardLine(value); }
+  = value: ("===" NL / "==" NL / "--" NL / CardLine) { console.log(`PossibleCardLine: ${JSON.stringify(value)}`); return helper.processPossibleCardLine(value); }
 
 CardLine
  = value: $(Line NL) { return helper.processCardLine(value); }
+
+Cards
+  // = value: ("===" NL / "==" NL / "--" NL / CardLine) { return helper.processPossibleCardLine(value); }
+  = !("===" (!(NL "===") .)* EOF) value: PossibleCardLine { console.log(`Cards: ${JSON.stringify(value)}`); }
+// Comment_Value
+//   = value: $(!"||" .)* { return value }
 
 
 //
