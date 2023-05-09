@@ -3,18 +3,22 @@ import path from 'path';
 import peggy, { SourceBuildOptions } from 'peggy';
 
 type SourceOptions = SourceBuildOptions<'source'> & {
-  tspegjs: {
-    customHeader?: string;
-    returnTypes?: unknown;
-  };
+  // tspegjs: {
+  //   customHeader?: string;
+  //   returnTypes?: unknown;
+  // };
 };
 
-const customHeader = `
-import { BitmarkParserHelper, TypeKey } from '../../../parser/bitmark/BitmarkParserHelper';
-`;
+// const customHeader = `
+// import { TypeKey } from '../../../parser/bitmark/pegHelpers/BitmarkPegParserTypes'
+// import { BitmarkParserProcessor } from '../../../parser/bitmark/pegHelpers/BitmarkPegParserProcessor';
+// import { BitmarkPegParserBuilder } from '../../../parser/bitmark/pegHelpers/BitmarkPegParserBuilder';
+// `;
 
 const dependencies = {
-  '{ BitmarkParserHelper, TypeKey }': '../../../parser/bitmark/BitmarkParserHelper',
+  '{ TypeKey }': '../../../parser/bitmark/pegHelpers/BitmarkPegParserTypes',
+  '{ BitmarkPegParserProcessor }': '../../../parser/bitmark/pegHelpers/BitmarkPegParserProcessor',
+  '{ BitmarkPegParserBuilder }': '../../../parser/bitmark/pegHelpers/BitmarkPegParserBuilder',
 };
 
 const inputTextPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'text-grammar.pegjs');
@@ -55,10 +59,10 @@ const options: SourceOptions = {
   allowedStartRules,
   plugins: [],
   dependencies,
-  tspegjs: {
-    customHeader,
-    // returnTypes: TODO,
-  },
+  // tspegjs: {
+  //   customHeader,
+  //   // returnTypes: TODO,
+  // },
 };
 
 // Generate parser source

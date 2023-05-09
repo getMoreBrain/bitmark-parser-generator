@@ -6,7 +6,7 @@
  * (c) 2023 Get More Brain AG
  * All rights reserved.
  *
- * For details of opertation, see the comments in BitmarkParserHelper.ts
+ * For details of opertation, see the comments in BitmarkPegParserBuilder.ts
  */
 
 {{ // GLOBAL JS
@@ -27,7 +27,13 @@
 // Instance variables
 //
 
-const helper = new BitmarkParserHelper({
+const processor = new BitmarkPegParserProcessor({
+  parse: peg$parse,
+  parserText: text,
+  parserLocation: location,
+});
+
+const builder = new BitmarkPegParserBuilder({
   parse: peg$parse,
   parserText: text,
   parserLocation: location,
@@ -48,8 +54,8 @@ bitmark
   = BM_Bitmark
 
 BM_Bitmark
-  = (WS / CommentTag)* firstBit: BM_FirstBit bits: BM_Bits { return helper.buildBits([ firstBit, ...bits]) }
-  / (WS / CommentTag)* bit: $Anything { return helper.buildBits([ bit ]) }
+  = (WS / CommentTag)* firstBit: BM_FirstBit bits: BM_Bits { return builder.buildBits([ firstBit, ...bits]) }
+  / (WS / CommentTag)* bit: $Anything { return builder.buildBits([ bit ]) }
 
 // First bit (matches any content before the first bit header that starts with a NL)
 BM_FirstBit
@@ -72,6 +78,10 @@ BM_BodyLine
   = NL !BitHeader / Char+
 
 
+//
+// Bit
+//
+
 // Root bit rule
 // - parses a single bit
 bit
@@ -79,32 +89,32 @@ bit
 
 // A single bit
 Bit
- = bitHeader: BitHeader bitContent: BitContent { return helper.buildBit(bitHeader, bitContent) }
- / bit: $Anything { return helper.invalidBit(bit) }
+ = bitHeader: BitHeader bitContent: BitContent { return builder.buildBit(bitHeader, bitContent) }
+ / bit: $Anything { return builder.invalidBit(bit) }
 
 // The bit header, e.g. [.interview&image:bitmark++], [.interview:bitmark--&image], [.cloze]
 BitHeader
-  = "[." bitType: Bit_Value formatAndResource: TextFormatAndResourceType? "]" { return helper.buildBitHeader(bitType, formatAndResource) }
+  = "[." bitType: Bit_Value formatAndResource: TextFormatAndResourceType? "]" { return builder.buildBitHeader(bitType, formatAndResource) }
 
 // Text format and resource type
 TextFormatAndResourceType
-  = value1: (TextFormat / ResourceType)? value2: (TextFormat / ResourceType)? { return helper.buildTextAndResourceType(value1, value2) }
+  = value1: (TextFormat / ResourceType)? value2: (TextFormat / ResourceType)? { return builder.buildTextAndResourceType(value1, value2) }
 
 // Text format
 TextFormat
-  = ":" value: Bit_Value { return { type: TypeKey.TextFormat, value } }
+  = ":" value: Bit_Value { return processor.processTextFormat(value) }
 
 // Resource type
 ResourceType
-  = "&" value: Bit_Value { return { type: TypeKey.ResourceType, value } }
+  = "&" value: Bit_Value { return processor.processResourceType(value) }
 
 // All bit content (tags, body, cards)
 BitContent
-  = value: (CardSet / GapTagsChain / TrueFalseTagsChain / StandardTagsChain / BodyChar)* { return helper.reduceToArrayOfTypes(value) }
+  = value: (CardSet / GapTagsChain / TrueFalseTagsChain / StandardTagsChain / BodyChar)* { return processor.processBitContent(value) }
 
 // Standard bit tags chain
 StandardTagsChain
-  = value: (BitTag ChainedBitTag*) { return helper.reduceToArrayOfTypes(value) }
+  = value: (BitTag ChainedBitTag*) { return processor.processStandardTagsChain(value) }
 
 // Chained bit tag
 ChainedBitTag
@@ -112,32 +122,32 @@ ChainedBitTag
 
 // Bit tag
 BitTag
-  = value: (CommentTag / RemarkTag / TitleTag / AnchorTag / ReferenceTag / PropertyTag / ItemLeadTag / InstructionTag / HintTag / ResourceTags) { return value }
+  = value: (CommentTag / RemarkTag / TitleTag / AnchorTag / ReferenceTag / PropertyTag / ItemLeadTag / InstructionTag / HintTag / ResourceTagsChain) { return processor.processBitTag(value) }
 
-// Line of Body of the bit
+// Character of Body of the bit - parse directly and don't add location information for performance
 BodyChar
   = value: . { return { type: TypeKey.BodyChar, value: value } }
 
 // CardSet
 CardSet
-  = value: (CardSetStart Cards* CardSetEnd) { return { type: TypeKey.CardSet, value: value[1].flat() } }
+  = value: (CardSetStart Cards* CardSetEnd) { return processor.processCardSet(value[1].flat()); }
 
 CardSetStart
-  = NL &("===" NL) { helper.processCardSetStart(); }
+  = NL &("===" NL) { processor.processCardSetStart(); }
 
 CardSetEnd
-  = ("===" &EOL) { helper.processCardSetEnd(); }
+  = ("===" &EOL) { processor.processCardSetEnd(); }
 
 // Matches anything that is NOT '===' followed by anything except a '===' to the EOF, so matches the rest of the card
 // set without consuming the final '===' which is consumed by the CardSetEnd rule
 Cards
-  = !("===" (!(NL "===") .)* EOF) value: CardLineOrDivider { return value; }
+  = !("===" (!(NL "===") .)* EOF) value: CardLineOrDivider { return processor.processCards(value); }
 
 CardLineOrDivider
-  = value: ("===" NL / "==" NL / "--" NL / CardLine) { return helper.processCardLineOrDivider(value); }
+  = value: ("===" NL / "==" NL / "--" NL / CardLine) { return processor.processCardLineOrDivider(value); }
 
 CardLine
- = value: $(Line NL) { return helper.processCardLine(value); }
+ = value: $(Line NL) { return processor.processCardLine(value); }
 
 
 //
@@ -146,13 +156,12 @@ CardLine
 
 // Root cardContent rule
 cardContent
-  = value: (CardContentTags / CardChar)* { return value; }
+  = value: (CardContentTags / CardChar)* { return processor.processCardContent(value); }
 
 CardContentTags
-  // = value: (CommentTag / ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueTag / FalseTag / PropertyTag / TitleTag / ResourceTags) { return value; }
-  = value: (CommentTag / ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueFalseTagsChain / PropertyTag / TitleTag / ResourceTags) { return value; }
+  = value: (CommentTag / ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueFalseTagsChain / PropertyTag / TitleTag / ResourceTagsChain) { return processor.processCardTags(value); }
 
-// Line of Body of the card
+// Line of Body of the card - parse directly and don't add location information for performance
 CardChar
   = value: . { return { type: TypeKey.CardChar, value: value } }
 
@@ -160,16 +169,18 @@ CardChar
 //
 // Resource
 //
-ResourceTags
-  = value: ResourceTag props: ResourcePropertyTag* { return helper.processResourceTags(value, props); }
 
-// The bit header, e.g. [.interview&image:bitmark++], [.interview:bitmark--&image], [.cloze]
+// Resource tag with chained properties
+ResourceTagsChain
+  = value: ResourceTag props: ResourcePropertyTag* { return processor.processResourceTagsChain(value, props); }
+
+// The resource tag
 ResourceTag
-  = "[&" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Resource, key, value } }
+  = "[&" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return processor.processReourceTag(key, value); }
 
 // Resource Extra Data Tag
 ResourcePropertyTag
-  = "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.ResourceProperty, key, value } }
+  = "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return processor.processReourcePropertyTag(key, value); }
 
 
 //
@@ -178,11 +189,11 @@ ResourcePropertyTag
 
 // Gap tags chain
 GapTagsChain
-  = value: ClozeTag+ others: (ClozeTag / ItemLeadTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.GapChain, value: [...value, ...others] }; }
+  = value: ClozeTag+ others: (ClozeTag / ItemLeadTag / InstructionTag / HintTag / PropertyTag)* { return processor.processGapChainTags([...value, ...others]); }
 
 // True/False tags chain
 TrueFalseTagsChain
-  = value: (TrueTag / FalseTag)+ others: (ItemLeadTag / InstructionTag / HintTag / PropertyTag)* { return { type: TypeKey.TrueFalseChain, value: [...value, ...others] } }
+  = value: (TrueTag / FalseTag)+ others: (ItemLeadTag / InstructionTag / HintTag / PropertyTag)* { return processor.processTrueFalseChainTags([...value, ...others]); }
 
 
 //
@@ -191,55 +202,55 @@ TrueFalseTagsChain
 
 // Title tag
 TitleTag
-  = "[" level: "#"+ title: Tag_Value "]" { return { type: TypeKey.Title, value: { level, title } } }
+  = "[" level: "#"+ title: Tag_Value "]" { return processor.processTag(TypeKey.Title, { level, title }) }
 
 // Anchor tag
 AnchorTag
-  = "[▼" value: Tag_Value "]" { return { type: TypeKey.Anchor, value } }
+  = "[▼" value: Tag_Value "]" { return processor.processTag(TypeKey.Anchor, value) }
 
 // Reference tag
 ReferenceTag
-  = "[►" value: Tag_Value "]" { return { type: TypeKey.Reference, value } }
+  = "[►" value: Tag_Value "]" { return processor.processTag(TypeKey.Reference, value) }
 
 // Property (@) tag
 PropertyTag
-  = "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return { type: TypeKey.Property, key, value } }
+  = "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return processor.processPropertyTag(key, value) }
 
 // Item / Lead (%) tag
 ItemLeadTag
-  = "[%" value: Tag_Value "]" { return { type: TypeKey.ItemLead, value } }
+  = "[%" value: Tag_Value "]" { return processor.processTag(TypeKey.ItemLead, value) }
 
 // Instruction (!) tag
 InstructionTag
-  = "[!" value: Tag_Value ("]" / (WS* EOF)) { return { type: TypeKey.Instruction, value } }
+  = "[!" value: Tag_Value ("]" / (WS* EOF)) { return processor.processTag(TypeKey.Instruction, value) }
 
 // Hint (?) tag
 HintTag
-  = "[?" value: Tag_Value "]" { return { type: TypeKey.Hint, value } }
+  = "[?" value: Tag_Value "]" { return processor.processTag(TypeKey.Hint, value) }
 
 // True (+) tag
 TrueTag
-  = "[+" value: Tag_Value "]" { return { type: TypeKey.True, value } }
+  = "[+" value: Tag_Value "]" { return processor.processTag(TypeKey.True, value) }
 
 // False (-) tag
 FalseTag
-  = "[-" value: Tag_Value "]" { return { type: TypeKey.False, value } }
+  = "[-" value: Tag_Value "]" { return processor.processTag(TypeKey.False, value) }
 
 // Sample Solution tag
 SampleSolutionTag
-  = "[$" value: Tag_Value "]" { return { type: TypeKey.SampleSolution, value } }
+  = "[$" value: Tag_Value "]" { return processor.processTag(TypeKey.SampleSolution, value) }
 
 // Cloze tag
 ClozeTag
-  = "[_" value: Tag_Value "]" { return { type: TypeKey.Cloze, value } }
+  = "[_" value: Tag_Value "]" { return processor.processTag(TypeKey.Cloze, value) }
 
 // Remark (unparsed body)
 RemarkTag
-  = value: $("::" RemarkTag_Key "::" RemarkTag_Value "::") { return { type: TypeKey.BodyText, value } }
+  = value: $("::" RemarkTag_Key "::" RemarkTag_Value "::") { return processor.processTag(TypeKey.BodyText, value); }
 
 // Comment Tag
 CommentTag
-  = "||" value: Comment_Value "||" { return { type: TypeKey.Comment, value } }
+  = "||" value: Comment_Value "||" { return processor.processTag(TypeKey.Comment, value); }
 
 
 //

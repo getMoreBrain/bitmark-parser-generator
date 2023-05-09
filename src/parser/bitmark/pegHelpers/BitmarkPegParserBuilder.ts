@@ -1,5 +1,5 @@
 /**
- * BitmarkParserHelper.ts
+ * BitmarkPegParserBuilder.ts
  * v0.0.1
  * RA Sewell
  *
@@ -60,30 +60,27 @@
  * - To build the parser, run 'yarn build-grammar-bit'
  * - Modify the bitmark in '_simple.bit' to test the parser (this will be parsed after building the parser)
  * - To undersand the operation and to help debug and develop, use the DEBUG_XXX flags in the code below.
- *
+ *   and in BitmarkPegParserProcessor.ts
  */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { EnumType, superenum } from '@ncoderz/superenum';
 
-import { Builder } from '../../ast/Builder';
-import { CardSet } from '../../model/ast/CardSet';
-import { BitType, BitTypeType } from '../../model/enum/BitType';
-import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
-import { ResourcePropertyKey } from '../../model/enum/ResourcePropertyKey';
-import { ResourceType, ResourceTypeType } from '../../model/enum/ResourceType';
-import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
-import { ParserError } from '../../model/parser/ParserError';
-import { ParserInfo } from '../../model/parser/ParserInfo';
-import { BitUtils } from '../../utils/BitUtils';
-import { BooleanUtils } from '../../utils/BooleanUtils';
-import { NumberUtils } from '../../utils/NumberUtils';
-import { StringUtils } from '../../utils/StringUtils';
+import { Builder } from '../../../ast/Builder';
+import { CardSet } from '../../../model/ast/CardSet';
+import { BitType, BitTypeType } from '../../../model/enum/BitType';
+import { PropertyKey, PropertyKeyMetadata } from '../../../model/enum/PropertyKey';
+import { ResourceType } from '../../../model/enum/ResourceType';
+import { TextFormat } from '../../../model/enum/TextFormat';
+import { ParserError } from '../../../model/parser/ParserError';
+import { ParserInfo } from '../../../model/parser/ParserInfo';
+import { BitUtils } from '../../../utils/BitUtils';
+import { BooleanUtils } from '../../../utils/BooleanUtils';
+import { NumberUtils } from '../../../utils/NumberUtils';
+import { StringUtils } from '../../../utils/StringUtils';
 
 import {
   Bit,
   BitmarkAst,
   BodyPart,
-  Body,
   Gap,
   Select,
   SelectOption,
@@ -99,12 +96,29 @@ import {
   AudioResource,
   ImageResource,
   MatrixCell,
-  FooterText,
   BodyText,
   HighlightText,
   Highlight,
   BotResponse,
-} from '../../model/ast/Nodes';
+} from '../../../model/ast/Nodes';
+
+import {
+  BitContent,
+  BitHeader,
+  BitSpecificCards,
+  BitSpecificTitles,
+  CardData,
+  ParseFunction,
+  ParserHelperOptions,
+  StatementsOrChoicesOrResponses,
+  SubParserResult,
+  TypeKey,
+  TypeKeyParseResult,
+  TypeKeyResource,
+  TypeKeyType,
+  TypeKeyValue,
+  TypeValue,
+} from './BitmarkPegParserTypes';
 
 // Debugging flags for helping develop and debug the parser
 const ENABLE_DEBUG = true;
@@ -132,159 +146,12 @@ const DEBUG_CARD_TAGS = true; // Print the tags extracted from the card content
 // DO NOT EDIT THIS LINE. Ensures no debug in production in case ENABLE_DEBUG is accidentally left on
 const DEBUG = ENABLE_DEBUG && process.env.NODE_ENV === 'development';
 
-const CARD_DIVIDER = '===';
-const CARD_SIDE_DIVIDER = '==';
-const CARD_VARIANT_DIVIDER = '--';
-
-export interface ParseOptions {
-  filename?: string;
-  startRule?: string;
-  tracer?: any;
-  [key: string]: any;
-}
-export type ParseFunction = (input: string, options?: ParseOptions) => any;
-
-export interface ParserHelperOptions {
-  parse: ParseFunction;
-  parserText: () => ParserError['text'];
-  parserLocation: () => ParserError['location'];
-}
-
-interface SubParserResult<T> {
-  value?: T;
-  errors?: ParserError[];
-}
-
-interface BitHeader {
-  bitType?: BitTypeType;
-  textFormat?: TextFormatType;
-  resourceType?: ResourceTypeType;
-}
-
-interface TrueFalseValue {
-  text: string;
-  isCorrect: boolean;
-}
-
-interface CardData {
-  cardIndex: number;
-  cardSideIndex: number;
-  cardVariantIndex: number;
-  value: string;
-}
-
-export interface TypeKeyParseResult {
-  cardSet?: TypeValue[];
-  cardBody?: string;
-  body?: Body;
-  footer?: FooterText;
-  trueFalse?: TrueFalseValue[];
-  example?: string;
-  isCorrect: boolean;
-  solutions?: string[];
-  statement?: Statement;
-  statements?: Statement[];
-  choices?: Choice[];
-  responses?: Response[];
-  title?: string[];
-  subtitle?: string;
-  resources?: Resource[];
-  item?: string;
-  lead?: string;
-  instruction?: string;
-  hint?: string;
-  anchor?: string;
-  reference?: string;
-  sampleSolution?: string;
-  isShortAnswer?: boolean;
-  isCaseSensitive?: boolean;
-  reaction?: string;
-  extraProperties?: any;
-}
-
-interface BitSpecificTitles {
-  title?: string;
-  subtitle?: string;
-  level?: number;
-}
-
-interface StatementsOrChoicesOrResponses {
-  statements?: Statement[];
-  choices?: Choice[];
-  responses?: Response[];
-}
-
-interface BitSpecificCards {
-  sampleSolution?: string | string[];
-  elements?: string[];
-  statements?: Statement[];
-  responses?: Response[];
-  quizzes?: Quiz[];
-  heading?: Heading;
-  pairs?: Pair[];
-  matrix?: Matrix[];
-  choices?: Choice[];
-  questions?: Question[];
-  botResponses?: BotResponse[];
-}
-
-type BitContent = TypeValue | TypeKeyValue;
-
-interface TypeValue {
-  type: string;
-  value?: unknown;
-}
-
-interface TypeKeyValue {
-  type: string;
-  key: string;
-  value?: unknown;
-}
-
-interface TypeKeyResource {
-  type: string;
-  key: string;
-  url: string;
-}
-
-const TypeKey = superenum({
-  TextFormat: 'TextFormat',
-  ResourceType: 'ResourceType',
-  Resource: 'Resource',
-  ResourceProperty: 'ResourceProperty',
-  Title: 'Title',
-  Anchor: 'Anchor',
-  Reference: 'Reference',
-  Property: 'Property',
-  ItemLead: 'ItemLead',
-  Instruction: 'Instruction',
-  Hint: 'Hint',
-  True: 'True',
-  False: 'False',
-  GapChain: 'GapChain',
-  TrueFalseChain: 'TrueFalseChain',
-  Cloze: 'Cloze',
-  SampleSolution: 'SampleSolution',
-  BodyChar: 'BodyChar',
-  BodyText: 'BodyText',
-  CardSet: 'CardSet',
-  Card: 'Card',
-  CardChar: 'CardChar',
-  CardText: 'CardText',
-  Comment: 'Comment',
-});
-
-export type TypeKeyType = EnumType<typeof TypeKey>;
-
 const builder = new Builder();
 
-class BitmarkParserHelper {
+class BitmarkPegParserBuilder {
   private nonFatalErrors: ParserError[] = [];
   private parser: ParserInfo = {};
-  private cardIndex = 0;
-  private cardSideIndex = 0;
-  private cardVariantIndex = 0;
-  private cardSectionLineCount = 0;
+
   private parse: ParseFunction;
   private parserText: () => ParserError['text'];
   private parserLocation: () => ParserError['location'];
@@ -1614,7 +1481,14 @@ class BitmarkParserHelper {
             const val = `${bodyText.value ?? ''}${c.value ?? ''}`;
             bodyText.value = val;
           } else {
-            bodyText = { type: TypeKey.BodyText, value: c.value ?? '' };
+            bodyText = {
+              type: TypeKey.BodyText,
+              value: c.value ?? '',
+              parser: {
+                text: this.parserText(),
+                location: this.parserLocation(),
+              },
+            };
           }
           break;
         }
@@ -1624,7 +1498,14 @@ class BitmarkParserHelper {
             const val = `${cardText.value ?? ''}${c.value ?? ''}`;
             cardText.value = val;
           } else {
-            cardText = { type: TypeKey.CardText, value: c.value ?? '' };
+            cardText = {
+              type: TypeKey.CardText,
+              value: c.value ?? '',
+              parser: {
+                text: this.parserText(),
+                location: this.parserLocation(),
+              },
+            };
           }
           break;
         }
@@ -1657,27 +1538,6 @@ class BitmarkParserHelper {
   //
   // Util functions
   //
-
-  /**
-   * Returns true if a value is a TypeKeyValue or TypeKey type with a type in the given types
-   *
-   * @param value The value to check
-   * @param validType The type or types to check, or undefined to check for any type
-   * @returns True if the value is a TypeKeyValue or TypeKey type with a type in the given types, otherwise False.
-   */
-  private isType(value: unknown, validType?: TypeKeyType | TypeKeyType[]): boolean {
-    if (!value) return false;
-    const { type } = value as TypeValue;
-
-    if (!validType) {
-      return !!TypeKey.fromValue(type as TypeKeyType);
-    }
-    if (Array.isArray(validType)) {
-      return validType.indexOf(type as TypeKeyType) >= 0;
-    }
-
-    return validType === type;
-  }
 
   /**
    * Trim the body parts, removing any whitespace only parts at start and end of body
@@ -1751,150 +1611,6 @@ class BitmarkParserHelper {
       console.log(`===== END: ${header} =====`);
     }
   }
-
-  //
-  // Resource parsing
-  //
-
-  processResourceTags(resourceValue: any, extraProps: any[]) {
-    const invalidResourceExtraProperties = ['type', 'key', 'value'];
-
-    // Merge extra properties into the resource type (TODO = check if valid??)
-    for (const p of extraProps) {
-      if (!invalidResourceExtraProperties.includes(p.key)) {
-        switch (p.key) {
-          case ResourcePropertyKey.license:
-          case ResourcePropertyKey.copyright:
-          case ResourcePropertyKey.provider:
-          case ResourcePropertyKey.caption:
-          case ResourcePropertyKey.src1x:
-          case ResourcePropertyKey.src2x:
-          case ResourcePropertyKey.src3x:
-          case ResourcePropertyKey.src4x:
-          case ResourcePropertyKey.alt:
-          case ResourcePropertyKey.duration:
-            // Trim specific string properties - It might be better NOT to do this, but ANTLR parser does it
-            resourceValue[p.key] = `${p.value ?? ''}`.trim();
-            break;
-
-          default:
-            resourceValue[p.key] = p.value;
-        }
-      }
-    }
-
-    return resourceValue;
-  }
-
-  //
-  // Card parsing
-  //
-
-  processCardSetStart() {
-    this.cardIndex = -1;
-    this.cardSideIndex = 0;
-    this.cardVariantIndex = 0;
-    // console.log('CardSetStart');
-  }
-
-  processCardSetEnd() {
-    this.cardIndex = 0;
-    this.cardSideIndex = 0;
-    this.cardVariantIndex = 0;
-    // console.log('CardSetEnd');
-  }
-
-  processCardLineOrDivider(value: unknown) {
-    let isCardDivider = false;
-    let isSideDivider = false;
-    let isVariantDivider = false;
-
-    if (Array.isArray(value) && value.length === 2) {
-      value = value[0];
-      isCardDivider = value === CARD_DIVIDER;
-      isSideDivider = value === CARD_SIDE_DIVIDER;
-      isVariantDivider = value === CARD_VARIANT_DIVIDER;
-    }
-
-    if (isCardDivider) {
-      this.cardIndex++;
-      this.cardSideIndex = 0;
-      this.cardVariantIndex = 0;
-    } else if (isSideDivider) {
-      this.cardSideIndex++;
-      this.cardVariantIndex = 0;
-      // console.log(`Card ${this.cardIndex} Side: ${value}`);
-    } else if (isVariantDivider) {
-      this.cardVariantIndex++;
-      // console.log(`Card ${this.cardIndex}, Side ${this.cardSideIndex}, Variant: ${this.cardVariantIndex}`);
-    }
-
-    if (this.isType(value, TypeKey.Card)) return value;
-
-    return {
-      type: TypeKey.Card,
-      value: {
-        cardIndex: this.cardIndex,
-        cardSideIndex: this.cardSideIndex,
-        cardVariantIndex: this.cardVariantIndex,
-        value: '',
-      } as CardData,
-    };
-  }
-
-  processCardLine(value: unknown) {
-    // console.log(
-    //   `CardLine (Card ${this.cardIndex}, Side ${this.cardSideIndex}, Variant: ${this.cardVariantIndex}): ${value}`,
-    // );
-    return {
-      type: TypeKey.Card,
-      value: {
-        cardIndex: this.cardIndex,
-        cardSideIndex: this.cardSideIndex,
-        cardVariantIndex: this.cardVariantIndex,
-        value,
-      } as CardData,
-    };
-  }
-
-  /**
-   * Reduce the data to type objects.
-   *
-   * The input data can have any structure. It will be reduced to an array of BitContent objects.
-   *
-   * @param data the data to reduce
-   * @param validTypes types include in the reduced data
-   * @param recurseIntoTypes set to true to reduce types which have array values
-   * @returns an array of BitContent objects reduced from the input data
-   */
-  reduceToArrayOfTypes(data: unknown, validTypes?: TypeKeyType[], recurseIntoTypes?: boolean): BitContent[] {
-    if (!Array.isArray(data)) return [];
-
-    const res = data.reduce((acc, content, _index) => {
-      if (content == null) return acc;
-      const { type, value } = content as TypeValue;
-
-      if (Array.isArray(content)) {
-        // Not a TypeKeyValue - recurse
-        const subValues = this.reduceToArrayOfTypes(content, validTypes);
-        acc.push(...subValues);
-      } else {
-        if (!this.isType(content, validTypes)) return acc;
-
-        if (recurseIntoTypes && Array.isArray(value)) {
-          // Not a TypeKeyValue - recurse
-          const subValues = this.reduceToArrayOfTypes(value, validTypes);
-          acc.push(...subValues);
-        } else if (type) {
-          acc.push(content);
-        }
-      }
-
-      return acc;
-    }, [] as BitContent[]);
-
-    return res;
-  }
 }
 
-export { BitmarkParserHelper, TypeKey };
+export { BitmarkPegParserBuilder };

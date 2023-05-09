@@ -1,14 +1,10 @@
+import { ParserLocation } from './ParserLocation';
+
 export interface ParserError {
   message: string;
   text?: string;
   location?: {
-    start: ErrorLocation;
-    end: ErrorLocation;
+    start: ParserLocation;
+    end: ParserLocation;
   };
-}
-
-export interface ErrorLocation {
-  offset: number;
-  line: number;
-  column: number;
 }
