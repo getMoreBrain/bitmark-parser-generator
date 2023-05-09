@@ -123,33 +123,21 @@ CardSet
   = value: (CardSetStart Cards* CardSetEnd) { return { type: TypeKey.CardSet, value: value[1].flat() } }
 
 CardSetStart
-  = NL "===" NL { helper.processCardSetStart(); }
+  = NL &("===" NL) { helper.processCardSetStart(); }
 
 CardSetEnd
   = ("===" &EOL) { helper.processCardSetEnd(); }
-  // = !("===" NL .* "===" EOF) ("===" &EOL) { helper.processCardSetEnd(); }
-  // = Anything
 
-Card
-  = value: ("===" NL CardContent) { helper.processCard(); return value[2]; }
+// Matches anything that is NOT '===' followed by anything except a '===' to the EOF, so matches the rest of the card
+// set without consuming the final '===' which is consumed by the CardSetEnd rule
+Cards
+  = !("===" (!(NL "===") .)* EOF) value: CardLineOrDivider { return value; }
 
-CardContent
-  = value: ((PossibleCardLine !("===" EOL))* PossibleCardLine !EOL) {
-    const cards = helper.reduceToArrayOfTypes(value, [TypeKey.Card]);
-    return cards;
-  };
-
-PossibleCardLine
-  = value: ("===" NL / "==" NL / "--" NL / CardLine) { console.log(`PossibleCardLine: ${JSON.stringify(value)}`); return helper.processPossibleCardLine(value); }
+CardLineOrDivider
+  = value: ("===" NL / "==" NL / "--" NL / CardLine) { return helper.processCardLineOrDivider(value); }
 
 CardLine
  = value: $(Line NL) { return helper.processCardLine(value); }
-
-Cards
-  // = value: ("===" NL / "==" NL / "--" NL / CardLine) { return helper.processPossibleCardLine(value); }
-  = !("===" (!(NL "===") .)* EOF) value: PossibleCardLine { console.log(`Cards: ${JSON.stringify(value)}`); }
-// Comment_Value
-//   = value: $(!"||" .)* { return value }
 
 
 //
