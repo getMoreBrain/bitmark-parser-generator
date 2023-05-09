@@ -17,11 +17,11 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // Failed:
 // - 0: akad_2_aufgabenset_1 (.interview missing last ===)
 
-// const SINGLE_FILE_START = 6;
-// const SINGLE_FILE_COUNT = 1;
+const SINGLE_FILE_START = 55;
+const SINGLE_FILE_COUNT = 1;
 
-const SINGLE_FILE_START = 0;
-const SINGLE_FILE_COUNT = 1000;
+// const SINGLE_FILE_START = 0;
+// const SINGLE_FILE_COUNT = 1000;
 
 // Use the following flag to test against the ANTLR parser. This is a slow process.
 const TEST_AGAINST_ANTLR_PARSER = false;

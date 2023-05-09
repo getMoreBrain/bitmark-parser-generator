@@ -67,7 +67,7 @@ export interface BitJson {
   statement: string;
   isCorrect: boolean;
   statements: StatementJson[];
-  responses: ResponseJson[];
+  responses: ResponseJson[] | BotResponseJson[];
   quizzes: QuizJson[];
   heading: HeadingJson;
   pairs: PairJson[];
@@ -180,4 +180,13 @@ export interface QuestionJson {
   example: string;
   isCaseSensitive: boolean;
   isShortAnswer: boolean;
+}
+
+export interface BotResponseJson {
+  response: string;
+  reaction: string;
+  feedback: string;
+  item: string;
+  lead: string;
+  hint: string;
 }

@@ -47,9 +47,11 @@ const PropertyKey = superenum({
   progress: 'progress', // single, chapter only
   level: 'level', // single, chapter only
 
+  // Only in cards
   shortAnswer: 'shortAnswer', // single
   longAnswer: 'longAnswer', // single
   caseSensitive: 'caseSensitive', // single
+  reaction: 'reaction', // single - botResponse
 });
 
 // Set metadata on the property keys to describe specific behaviour
@@ -136,7 +138,7 @@ PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.duration, {
   isTrimmedString: true,
 });
 PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.reference, {
-  isSingle: true,
+  isSingle: false,
   isTrimmedString: true,
   astKey: 'referenceProperty',
 });
@@ -193,6 +195,10 @@ PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.caseSensitive, {
   isBoolean: true,
   astKey: 'isCaseSensitive',
   jsonKey: 'isCaseSensitive',
+});
+PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.reaction, {
+  isSingle: true,
+  isTrimmedString: true,
 });
 
 export type PropertyKeyType = EnumType<typeof PropertyKey>;

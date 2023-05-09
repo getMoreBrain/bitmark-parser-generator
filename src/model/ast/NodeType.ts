@@ -47,6 +47,8 @@ const NodeType = superenum({
   cellsValue: 'cellsValue',
   questions: 'questions',
   questionsValue: 'questionsValue',
+  botResponses: 'botResponses',
+  botResponsesValue: 'botResponsesValue',
 
   resource: 'resource',
   resourceType: 'resourceType',
@@ -162,6 +164,8 @@ const NodeType = superenum({
   propertyValue: 'propertyValue',
   keyAudio: 'keyAudio',
   keyImage: 'keyImage',
+  response: 'response',
+  feedback: 'feedback',
 
   // Resources
   type: 'type',

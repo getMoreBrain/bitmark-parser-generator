@@ -103,6 +103,7 @@ import {
   BodyText,
   HighlightText,
   Highlight,
+  BotResponse,
 } from '../../model/ast/Nodes';
 
 // Debugging flags for helping develop and debug the parser
@@ -193,6 +194,7 @@ export interface TypeKeyParseResult {
   sampleSolution?: string;
   isShortAnswer?: boolean;
   isCaseSensitive?: boolean;
+  reaction?: string;
   extraProperties?: any;
 }
 
@@ -219,6 +221,7 @@ interface BitSpecificCards {
   matrix?: Matrix[];
   choices?: Choice[];
   questions?: Question[];
+  botResponses?: BotResponse[];
 }
 
 type BitContent = TypeValue | TypeKeyValue;
@@ -711,6 +714,9 @@ class BitmarkParserHelper {
         // ==> heading / matrix
         return this.parseMatchMatrix(bitType, cardSet);
 
+      case BitType.botActionResponse:
+        return this.parseBotResponses(bitType, cardSet);
+
       default:
       // Return default empty object
     }
@@ -1145,6 +1151,51 @@ class BitmarkParserHelper {
     return {
       heading,
       matrix: matrix.length > 0 ? matrix : undefined,
+    };
+  }
+
+  parseBotResponses(bitType: BitTypeType, cardSet: CardSet): BitSpecificCards {
+    const botResponses: BotResponse[] = [];
+
+    for (const card of cardSet.cards) {
+      for (const side of card.sides) {
+        for (const rawContent of side.variants) {
+          let content = this.parse(rawContent, {
+            startRule: 'cardContent',
+          }) as BitContent[];
+
+          content = this.mergeCharToText(content);
+
+          if (DEBUG_CARD_PARSED) this.debugPrint('parsedCardContent (botResponses)', content);
+
+          const {
+            instruction,
+            reaction,
+            cardBody: feedback,
+            ...tags
+          } = this.typeKeyValueProcessor(bitType, content, [
+            TypeKey.CardText,
+            TypeKey.Property,
+            TypeKey.ItemLead,
+            TypeKey.Instruction,
+            TypeKey.Hint,
+          ]);
+
+          if (DEBUG_CARD_TAGS) this.debugPrint('card tags (botResponses)', tags);
+
+          const botResponse = builder.botResponse({
+            response: instruction ?? '',
+            reaction: reaction ?? '',
+            feedback: feedback ?? '',
+            ...tags,
+          });
+          botResponses.push(botResponse);
+        }
+      }
+    }
+
+    return {
+      botResponses: botResponses.length > 0 ? botResponses : undefined,
     };
   }
 
