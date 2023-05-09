@@ -132,6 +132,10 @@ const DEBUG_CARD_TAGS = true; // Print the tags extracted from the card content
 // DO NOT EDIT THIS LINE. Ensures no debug in production in case ENABLE_DEBUG is accidentally left on
 const DEBUG = ENABLE_DEBUG && process.env.NODE_ENV === 'development';
 
+const CARD_DIVIDER = '===';
+const CARD_SIDE_DIVIDER = '==';
+const CARD_VARIANT_DIVIDER = '--';
+
 export interface ParseOptions {
   filename?: string;
   startRule?: string;
@@ -1787,75 +1791,58 @@ class BitmarkParserHelper {
   //
 
   processCardSetStart() {
-    this.cardIndex = 0;
+    this.cardIndex = -1;
     this.cardSideIndex = 0;
     this.cardVariantIndex = 0;
-    this.cardSectionLineCount = 0;
-    // console.log('CardSetStart');
+    console.log('CardSetStart');
   }
 
   processCardSetEnd() {
     this.cardIndex = 0;
     this.cardSideIndex = 0;
     this.cardVariantIndex = 0;
-    this.cardSectionLineCount = 0;
-    // console.log('CardSetEnd');
+    console.log('CardSetEnd');
   }
 
-  processCard() {
-    this.cardIndex++;
-    this.cardSideIndex = 0;
-    this.cardVariantIndex = 0;
-    this.cardSectionLineCount = 0;
-    // console.log('processCard');
-  }
-
-  processPossibleCardLine(value: unknown) {
+  processCardLineOrDivider(value: unknown) {
+    let isCardDivider = false;
     let isSideDivider = false;
     let isVariantDivider = false;
 
     if (Array.isArray(value) && value.length === 2) {
       value = value[0];
-      isSideDivider = value === '==';
-      isVariantDivider = value === '--';
+      isCardDivider = value === CARD_DIVIDER;
+      isSideDivider = value === CARD_SIDE_DIVIDER;
+      isVariantDivider = value === CARD_VARIANT_DIVIDER;
     }
 
-    // This card section has no lines, so it's a special case blank
-    const emptyCardOrSideOrVariant = this.cardSectionLineCount === 0;
-    const currentSideIndex = this.cardSideIndex;
-    const currentVariantIndex = this.cardVariantIndex;
-
-    if (isSideDivider) {
+    if (isCardDivider) {
+      this.cardIndex++;
+      this.cardSideIndex = 0;
+      this.cardVariantIndex = 0;
+    } else if (isSideDivider) {
       this.cardSideIndex++;
       this.cardVariantIndex = 0;
-      this.cardSectionLineCount = 0;
       // console.log(`Card ${this.cardIndex} Side: ${value}`);
     } else if (isVariantDivider) {
       this.cardVariantIndex++;
-      this.cardSectionLineCount = 0;
       // console.log(`Card ${this.cardIndex}, Side ${this.cardSideIndex}, Variant: ${this.cardVariantIndex}`);
-    }
-
-    if (emptyCardOrSideOrVariant) {
-      // This card section has no lines, so it's a special case blank
-      return {
-        type: TypeKey.Card,
-        value: {
-          cardIndex: this.cardIndex,
-          cardSideIndex: currentSideIndex,
-          cardVariantIndex: currentVariantIndex,
-          value: '',
-        } as CardData,
-      };
     }
 
     if (this.isType(value, TypeKey.Card)) return value;
 
-    return undefined;
+    return {
+      type: TypeKey.Card,
+      value: {
+        cardIndex: this.cardIndex,
+        cardSideIndex: this.cardSideIndex,
+        cardVariantIndex: this.cardVariantIndex,
+        value: '',
+      } as CardData,
+    };
   }
 
   processCardLine(value: unknown) {
-    this.cardSectionLineCount++;
     // console.log(
     //   `CardLine (Card ${this.cardIndex}, Side ${this.cardSideIndex}, Variant: ${this.cardVariantIndex}): ${value}`,
     // );

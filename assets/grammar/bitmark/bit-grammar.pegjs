@@ -120,7 +120,7 @@ BodyChar
 
 // CardSet
 CardSet
-  = value: (CardSetStart Card* CardSetEnd) { return { type: TypeKey.CardSet, value: value[1].flat() } }
+  = value: (CardSetStart Cards* CardSetEnd) { return { type: TypeKey.CardSet, value: value[1].flat() } }
 
 CardSetStart
   = NL &("===" NL) { helper.processCardSetStart(); }
@@ -128,17 +128,13 @@ CardSetStart
 CardSetEnd
   = ("===" &EOL) { helper.processCardSetEnd(); }
 
-Card
-  = value: ("===" NL CardContent) { helper.processCard(); return value[2]; }
+// Matches anything that is NOT '===' followed by anything except a '===' to the EOF, so matches the rest of the card
+// set without consuming the final '===' which is consumed by the CardSetEnd rule
+Cards
+  = !("===" (!(NL "===") .)* EOF) value: CardLineOrDivider { return value; }
 
-CardContent
-  = value: ((PossibleCardLine !("===" EOL))* PossibleCardLine !EOL) {
-    const cards = helper.reduceToArrayOfTypes(value, [TypeKey.Card]);
-    return cards;
-  };
-
-PossibleCardLine
-  = value: ("===" NL / "==" NL / "--" NL / CardLine) { return helper.processPossibleCardLine(value); }
+CardLineOrDivider
+  = value: ("===" NL / "==" NL / "--" NL / CardLine) { return helper.processCardLineOrDivider(value); }
 
 CardLine
  = value: $(Line NL) { return helper.processCardLine(value); }
