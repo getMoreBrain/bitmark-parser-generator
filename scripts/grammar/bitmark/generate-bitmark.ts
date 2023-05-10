@@ -17,8 +17,8 @@ type SourceOptions = SourceBuildOptions<'source'> & {
 
 const dependencies = {
   '{ TypeKey }': '../../../parser/bitmark/pegHelpers/BitmarkPegParserTypes',
+  '{ BitmarkPegParserHelper }': '../../../parser/bitmark/pegHelpers/BitmarkPegParserHelper',
   '{ BitmarkPegParserProcessor }': '../../../parser/bitmark/pegHelpers/BitmarkPegParserProcessor',
-  '{ BitmarkPegParserBuilder }': '../../../parser/bitmark/pegHelpers/BitmarkPegParserBuilder',
 };
 
 const inputTextPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'text-grammar.pegjs');

@@ -15,6 +15,7 @@ import { ResourceTypeType } from '../../../model/enum/ResourceType';
 import { TextFormatType } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
+import { ParserInfo } from '../../../model/parser/ParserInfo';
 
 import {
   Body,
@@ -72,14 +73,14 @@ export interface CardData {
   value: string;
 }
 
-export interface TypeKeyParseResult {
+export interface BitContentProcessorResult {
   cardSet?: TypeValue[];
   cardBody?: string;
   body?: Body;
   footer?: FooterText;
   trueFalse?: TrueFalseValue[];
   example?: string;
-  isCorrect: boolean;
+  isCorrect?: boolean;
   solutions?: string[];
   statement?: Statement;
   statements?: Statement[];
@@ -175,4 +176,59 @@ const TypeKey = superenum({
 
 export type TypeKeyType = EnumType<typeof TypeKey>;
 
-export { TypeKey, CARD_DIVIDER, CARD_SIDE_DIVIDER, CARD_VARIANT_DIVIDER };
+const BitContentLevel = superenum({
+  Bit: 'Bit',
+  Statement: 'Statement',
+  Choice: 'Choice',
+  Response: 'Response',
+  GapChain: 'GapChain',
+  HighlightChain: 'HighlightChain',
+  SelectChain: 'SelectChain',
+  CardElement: 'CardElement',
+  CardStatements: 'CardStatements',
+  CardQuiz: 'CardQuiz',
+  CardQuestion: 'CardQuestion',
+  CardMatch: 'CardMatch',
+  CardMatrix: 'CardMatrix',
+  CardBotResponse: 'CardBotResponse',
+});
+
+export type BitContentLevelType = EnumType<typeof BitContentLevel>;
+
+export interface BitmarkPegParserContext {
+  DEBUG_BIT_RAW: boolean;
+  DEBUG_BIT_CONTENT_RAW: boolean;
+  DEBUG_BIT_CONTENT: boolean;
+  DEBUG_BIT_TAGS: boolean;
+  DEBUG_BODY: boolean;
+  DEBUG_FOOTER: boolean;
+  DEBUG_GAP_CONTENT: boolean;
+  DEBUG_GAP_TAGS: boolean;
+  DEBUG_SELECT_CONTENT: boolean;
+  DEBUG_SELECT_TAGS: boolean;
+  DEBUG_HIGHLIGHT_CONTENT: boolean;
+  DEBUG_HIGHLIGHT_TAGS: boolean;
+  DEBUG_TRUE_FALSE_V1_CONTENT: boolean;
+  DEBUG_TRUE_FALSE_V1_TAGS: boolean;
+  DEBUG_CHOICE_RESPONSE_V1_CONTENT: boolean;
+  DEBUG_CHOICE_RESPONSE_V1_TAGS: boolean;
+  DEBUG_CARD_SET_CONTENT: boolean;
+  DEBUG_CARD_SET: boolean;
+  DEBUG_CARD_PARSED: boolean;
+  DEBUG_CARD_TAGS: boolean;
+
+  parser: ParserInfo;
+
+  parse: ParseFunction;
+  bitContentProcessor(
+    bitLevel: BitContentLevelType,
+    bitType: BitTypeType,
+    data: BitContent[],
+    validTypes: TypeKeyType[],
+  ): BitContentProcessorResult;
+  splitBitContent(bitContent: BitContent[], types: TypeKeyType[]): BitContent[][];
+  addError(message: string): void;
+  debugPrint(header: string, data: unknown): void;
+}
+
+export { TypeKey, BitContentLevel, CARD_DIVIDER, CARD_SIDE_DIVIDER, CARD_VARIANT_DIVIDER };
