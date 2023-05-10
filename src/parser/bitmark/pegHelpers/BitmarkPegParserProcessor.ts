@@ -71,13 +71,17 @@ import { ResourceType } from '../../../model/enum/ResourceType';
 import { TextFormat } from '../../../model/enum/TextFormat';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
-import { StringUtils } from '../../../utils/StringUtils';
 
 import { buildCards } from './contentProcessors/CardContentProcessor';
+import { clozeTagContentProcessor } from './contentProcessors/ClozeTagContentProcessor';
+import { defaultTagContentProcessor } from './contentProcessors/DefaultTagContentProcessor';
 import { gapChainContentProcessor } from './contentProcessors/GapChainContentProcessor';
+import { itemLeadTagContentProcessor } from './contentProcessors/ItemLeadTagContentProcessor';
 import { propertyContentProcessor } from './contentProcessors/PropertyContentProcessor';
 import { buildResource, resourceContentProcessor } from './contentProcessors/ResourceContentProcessor';
+import { titleTagContentProcessor } from './contentProcessors/TitleTagContentProcessor';
 import { trueFalseChainContentProcessor } from './contentProcessors/TrueFalseChainContentProcessor';
+import { trueFalseTagContentProcessor } from './contentProcessors/TrueFalseTagContentProcessor';
 
 import {
   BitContent,
@@ -405,19 +409,21 @@ class BitmarkPegParserProcessor {
     validTypes: TypeKeyType[],
   ): BitContentProcessorResult {
     const result: BitContentProcessorResult = {};
-    let seenItem = false;
-    const bodyParts: BodyPart[] = [];
-    let bodyPart = '';
-    let footer = '';
-    let inFooter = false;
-    let cardBody = '';
-    const solutions: string[] = [];
-    const extraProperties: any = {};
-
+    result.title = [];
+    result.solutions = [];
     result.statements = [];
     result.choices = [];
     result.responses = [];
     result.resources = [];
+    result.trueFalse = [];
+    result.extraProperties = {};
+
+    let seenItem = false;
+    let inFooter = false;
+    const bodyParts: BodyPart[] = [];
+    let bodyPart = '';
+    let footer = '';
+    let cardBody = '';
 
     // Helper for building the body text
     const addBodyText = () => {
@@ -436,82 +442,40 @@ class BitmarkPegParserProcessor {
     data.forEach((content, _index) => {
       const { type, value } = content as TypeKeyValue;
 
-      // Only parse valid types
+      // Only parse requested types
       if (validTypes.indexOf(type as TypeKeyType) === -1) return;
 
-      const trimmedStringValue = StringUtils.trimmedString(value);
-
       switch (type) {
-        case TypeKey.Title: {
-          // Parse the title and its level
-          if (!result.title) result.title = [];
-          const titleValue: { title: string; level: string[] } = value as any;
-          // console.log(titleValue);
-          const title = StringUtils.trimmedString(titleValue.title);
-          const level = titleValue.level.length;
-          result.title[level] = title;
-          break;
-        }
-
-        case TypeKey.Anchor: {
-          result.anchor = trimmedStringValue;
-          break;
-        }
-
-        case TypeKey.Reference: {
-          result.reference = trimmedStringValue;
-          break;
-        }
-
-        case TypeKey.Property:
-          propertyContentProcessor(this.context, bitLevel, bitType, content, result, extraProperties);
-          break;
-
         case TypeKey.ItemLead: {
-          if (!seenItem) {
-            result.item = trimmedStringValue;
-          } else {
-            result.lead = trimmedStringValue;
-          }
+          itemLeadTagContentProcessor(this.context, bitLevel, bitType, content, result, seenItem);
           seenItem = true;
           break;
         }
 
-        case TypeKey.Instruction: {
-          result.instruction = trimmedStringValue;
+        case TypeKey.Instruction:
+        case TypeKey.Hint:
+        case TypeKey.Anchor:
+        case TypeKey.Reference:
+        case TypeKey.SampleSolution:
+          defaultTagContentProcessor(this.context, bitLevel, bitType, content, result);
           break;
-        }
 
-        case TypeKey.Hint: {
-          result.hint = trimmedStringValue;
+        case TypeKey.Title:
+          titleTagContentProcessor(this.context, bitLevel, bitType, content, result);
           break;
-        }
+
+        case TypeKey.Property:
+          propertyContentProcessor(this.context, bitLevel, bitType, content, result);
+          break;
 
         case TypeKey.Cloze: {
-          if (StringUtils.isString(value)) {
-            solutions.push(trimmedStringValue);
-          }
-          break;
-        }
-
-        case TypeKey.SampleSolution: {
-          result.sampleSolution = trimmedStringValue;
+          clozeTagContentProcessor(this.context, bitLevel, bitType, content, result);
           break;
         }
 
         case TypeKey.True:
         case TypeKey.False: {
-          if (!Array.isArray(result.trueFalse)) result.trueFalse = [];
-          result.trueFalse.push({
-            text: trimmedStringValue,
-            isCorrect: type === TypeKey.True,
-          });
-          break;
-        }
-
-        case TypeKey.CardSet: {
-          result.cardSet = value as TypeValue[];
-          inFooter = true; // After the card set, body lines should be written to the footer rather than the body
+          trueFalseTagContentProcessor(this.context, bitLevel, bitType, content, result);
           break;
         }
 
@@ -528,6 +492,12 @@ class BitmarkPegParserProcessor {
           addBodyText();
           trueFalseChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
           break;
+
+        case TypeKey.CardSet: {
+          result.cardSet = value as TypeValue[];
+          inFooter = true; // After the card set, body lines should be written to the footer rather than the body
+          break;
+        }
 
         case TypeKey.BodyText: {
           if (inFooter) {
@@ -548,10 +518,6 @@ class BitmarkPegParserProcessor {
       }
     });
 
-    if (Object.keys(extraProperties).length > 0) {
-      result.extraProperties = extraProperties;
-    }
-
     // Add the last body text part, and trim the body text parts
     addBodyText();
 
@@ -564,14 +530,17 @@ class BitmarkPegParserProcessor {
     cardBody = cardBody.trim();
     if (cardBody) result.cardBody = cardBody;
 
-    // Remove the solutions, statement, statements, choices and responses if they are empty
-    if (solutions.length > 0) result.solutions = solutions;
-    if (result.statements.length === 0) result.statements = undefined;
-    if (result.choices.length === 0) result.choices = undefined;
-    if (result.responses.length === 0) result.responses = undefined;
+    // Remove the extra properties if there are none
+    if (Object.keys(result.extraProperties).length === 0) delete result.extraProperties;
 
-    // Remove the resources if they are empty
-    if (result.resources.length === 0) result.resources = undefined;
+    // Remove the unwanted empty arrays.
+    if (result.title.length === 0) delete result.title;
+    if (result.solutions.length === 0) delete result.solutions;
+    if (result.statements.length === 0) delete result.statements;
+    if (result.choices.length === 0) delete result.choices;
+    if (result.responses.length === 0) delete result.responses;
+    if (result.trueFalse.length === 0) delete result.trueFalse;
+    if (result.resources.length === 0) delete result.resources;
 
     return result;
   }

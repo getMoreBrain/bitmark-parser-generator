@@ -1,17 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Builder } from '../../../../ast/Builder';
-import { BodyPart, Gap, Resource } from '../../../../model/ast/Nodes';
+import { Resource } from '../../../../model/ast/Nodes';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
 import { BitUtils } from '../../../../utils/BitUtils';
 
 import {
   BitContent,
-  BitContentLevel,
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
-  TypeKey,
   TypeKeyResource,
 } from '../BitmarkPegParserTypes';
 

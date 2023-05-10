@@ -19,7 +19,6 @@ function propertyContentProcessor(
   bitType: BitTypeType,
   content: BitContent,
   target: BitContentProcessorResult,
-  extraPropertiesTarget: any,
 ): void {
   const { key, value } = content as TypeKeyValue;
 
@@ -53,7 +52,7 @@ function propertyContentProcessor(
     addProperty(target, key, value);
   } else {
     // Unknown (extra) property
-    addProperty(extraPropertiesTarget, key, value);
+    addProperty(target.extraProperties, key, value);
   }
 }
 
