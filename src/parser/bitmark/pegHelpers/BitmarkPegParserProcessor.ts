@@ -1,6 +1,5 @@
 /**
  * BitmarkPegParserProcessor.ts
- * v0.0.1
  * RA Sewell
  *
  * (c) 2023 Get More Brain AG
@@ -60,7 +59,7 @@
  * - To build the parser, run 'yarn build-grammar-bit'
  * - Modify the bitmark in '_simple.bit' to test the parser (this will be parsed after building the parser)
  * - To undersand the operation and to help debug and develop, use the DEBUG_XXX flags in the code below.
- *   and in BitmarkPegParserProcessor.ts
+ *   and in BitmarkPegParserHelper.ts
  */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -69,9 +68,11 @@ import { Bit, BitmarkAst, BodyPart, BodyText } from '../../../model/ast/Nodes';
 import { BitType, BitTypeType } from '../../../model/enum/BitType';
 import { ResourceType } from '../../../model/enum/ResourceType';
 import { TextFormat } from '../../../model/enum/TextFormat';
+import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
 
+import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
 import { buildCards } from './contentProcessors/CardContentProcessor';
 import { clozeTagContentProcessor } from './contentProcessors/ClozeTagContentProcessor';
 import { defaultTagContentProcessor } from './contentProcessors/DefaultTagContentProcessor';
@@ -79,7 +80,7 @@ import { gapChainContentProcessor } from './contentProcessors/GapChainContentPro
 import { itemLeadTagContentProcessor } from './contentProcessors/ItemLeadTagContentProcessor';
 import { propertyContentProcessor } from './contentProcessors/PropertyContentProcessor';
 import { buildResource, resourceContentProcessor } from './contentProcessors/ResourceContentProcessor';
-import { titleTagContentProcessor } from './contentProcessors/TitleTagContentProcessor';
+import { buildTitles, titleTagContentProcessor } from './contentProcessors/TitleTagContentProcessor';
 import { trueFalseChainContentProcessor } from './contentProcessors/TrueFalseChainContentProcessor';
 import { trueFalseTagContentProcessor } from './contentProcessors/TrueFalseTagContentProcessor';
 
@@ -88,7 +89,6 @@ import {
   BitContentLevel,
   BitContentLevelType,
   BitHeader,
-  BitSpecificTitles,
   ParseFunction,
   ParserHelperOptions,
   SubParserResult,
@@ -132,6 +132,7 @@ const builder = new Builder();
 
 class BitmarkPegParserProcessor {
   private context: BitmarkPegParserContext;
+  private nonFatalWarnings: ParserError[] = [];
   private nonFatalErrors: ParserError[] = [];
   private parser: ParserInfo = {};
 
@@ -172,6 +173,7 @@ class BitmarkPegParserProcessor {
       parse: this.parse,
       bitContentProcessor: this.bitContentProcessor.bind(this),
       splitBitContent: this.splitBitContent.bind(this),
+      addWarning: this.addWarning.bind(this),
       addError: this.addError.bind(this),
       debugPrint: this.debugPrint.bind(this),
     };
@@ -183,10 +185,6 @@ class BitmarkPegParserProcessor {
     let errors: ParserError[] = [];
 
     for (const bitStr of bitStrs) {
-      // Trim the bit string to remove any leading or trailing whitespace
-      // Actually, let's do this in the parser otherwise we'll lose correct error locations
-      // bitStr = bitStr.trim();
-
       if (DEBUG_BIT_RAW) this.debugPrint('RAW BIT', bitStr.trim());
 
       // Parse the raw bit
@@ -210,7 +208,6 @@ class BitmarkPegParserProcessor {
     }
 
     const res = builder.bitmark({
-      // bits: bits.filter((bit) => !!bit) as Bit[],
       bits,
       errors: errors.length > 0 ? errors : undefined,
     });
@@ -231,72 +228,43 @@ class BitmarkPegParserProcessor {
     const isMultipleChoiceV1 = bitType === BitType.multipleChoice1;
     const isMultipleResponseV1 = bitType === BitType.multipleResponse1;
 
-    // Merge the BodyChar to BodyText
-    // bitContent = this.mergeCharToText(bitContent);
-
     if (DEBUG_BIT_CONTENT) this.debugPrint('BIT CONTENT', bitContent);
 
     // Parse the bit content into a an object with the appropriate keys
-    const {
-      // body: unparsedBody,
-      // footer: unparsedFooter,
-      body,
-      footer,
-      cardSet,
-      title,
-      statement,
-      statements,
-      choices,
-      responses,
-      resources,
-      ...tags
-    } = this.bitContentProcessor(BitContentLevel.Bit, bitType, bitContent, [
-      TypeKey.Title,
-      TypeKey.Anchor,
-      TypeKey.Reference,
-      TypeKey.Property,
-      TypeKey.ItemLead,
-      TypeKey.Instruction,
-      TypeKey.Hint,
-      TypeKey.GapChain,
-      TypeKey.TrueFalseChain,
-      TypeKey.Resource,
-      TypeKey.BodyText,
-      TypeKey.CardSet,
-    ]);
+    const { body, footer, cardSet, title, statement, statements, choices, responses, resources, ...tags } =
+      this.bitContentProcessor(BitContentLevel.Bit, bitType, bitContent, [
+        TypeKey.Title,
+        TypeKey.Anchor,
+        TypeKey.Reference,
+        TypeKey.Property,
+        TypeKey.ItemLead,
+        TypeKey.Instruction,
+        TypeKey.Hint,
+        TypeKey.GapChain,
+        TypeKey.TrueFalseChain,
+        TypeKey.Resource,
+        TypeKey.BodyText,
+        TypeKey.CardSet,
+      ]);
 
     if (DEBUG_BIT_TAGS) this.debugPrint('BIT TAGS', tags);
     if (DEBUG_BODY) this.debugPrint('BIT BODY', body);
     if (DEBUG_FOOTER) this.debugPrint('BIT FOOTER', footer);
 
-    // if (DEBUG_BODY_UNPARSED) this.debugPrint('unparsedBody', unparsedBody);
-    // if (DEBUG_FOOTER_UNPARSED) this.debugPrint('unparsedFooter', unparsedBody);
-
-    // Parse the body
-    // const parsedBody = this.parse(unparsedBody ?? '', {
-    //   startRule: 'body',
-    // });
-
-    // if (DEBUG_BODY_PARSED) this.debugPrint('parsedBody', parsedBody);
-
     // Build the titles for the specific bit type
-    const titles = this.buildTitles(bitType, title ?? []);
+    const titles = buildTitles(this.context, bitType, title);
 
     // Build the card data for the specific bit type
     const bitSpecificCards = buildCards(this.context, bitType, cardSet, statement, statements, choices, responses);
 
-    // // Build the body (parts and placeholders)
-    // const body = this.buildBody(bitType, parsedBody);
-
-    // // Build the footer
-    // const footer = this.buildFooter(bitType, unparsedFooter);
-
     // Build the resources
     const resource = buildResource(this.context, bitType, resourceType, resources);
 
-    // Build the errors
-    const errors = this.buildErrors();
-    this.parser.errors = errors;
+    // Build the warnings and errors
+    const warnings = this.buildBitLevelWarnings();
+    const errors = this.buildBitLevelErrors();
+    if (warnings) this.parser.warnings = warnings;
+    if (errors) this.parser.errors = errors;
 
     // Build the final bit
     const bit = builder.bit({
@@ -315,9 +283,6 @@ class BitmarkPegParserProcessor {
       parser: this.parser,
     });
 
-    // (bit as any).bitSpecificCards = bitSpecificCards;
-    // (bit as any).cardSet = cardSet;
-
     return { value: bit };
   }
 
@@ -326,9 +291,16 @@ class BitmarkPegParserProcessor {
     // Create the error
     this.addError('Invalid bit');
 
-    return {
-      errors: this.nonFatalErrors,
-    };
+    // Build the errors
+    this.parser.errors = this.buildBitLevelErrors();
+
+    // Build the error bit
+    const bit = builder.bit({
+      bitType: BitType._error,
+      parser: this.parser,
+    });
+
+    return { value: bit };
   }
 
   // Build bit header
@@ -336,7 +308,7 @@ class BitmarkPegParserProcessor {
     // Get / check bit type
     const validBitType = BitType.fromValue(bitType);
     if (!validBitType) {
-      this.addError(`Invalid bit type: ${bitType}`);
+      this.addError(`Invalid bit type: '${bitType}'`);
     }
 
     return {
@@ -354,14 +326,14 @@ class BitmarkPegParserProcessor {
           // Parse text format, adding default if not set / invalid
           res.textFormat = TextFormat.fromValue(value.value);
           if (value.value && !res.textFormat) {
-            this.addError(`Invalid text format '${value.value}', defaulting to '${TextFormat.bitmarkMinusMinus}'`);
+            this.addWarning(`Invalid text format '${value.value}', defaulting to '${TextFormat.bitmarkMinusMinus}'`);
           }
           res.textFormat = res.textFormat ?? TextFormat.bitmarkMinusMinus;
         } else {
           // Parse resource type, adding error if invalid
           res.resourceType = ResourceType.fromValue(value.value);
           if (value.value && !res.resourceType) {
-            this.addError(`Invalid resource type '${value.value}'`);
+            this.addWarning(`Invalid resource type '${value.value}', it will be ignored`);
           }
         }
       }
@@ -372,28 +344,6 @@ class BitmarkPegParserProcessor {
     return res;
   }
 
-  buildTitles(bitType: BitTypeType, title: string[]): BitSpecificTitles {
-    switch (bitType) {
-      case BitType.chapter: {
-        let t: string | undefined;
-        if (title.length > 0) t = title[title.length - 1];
-
-        return {
-          title: t,
-          level: title.length > 0 ? title.length - 1 : undefined,
-        };
-      }
-
-      case BitType.book:
-      default: {
-        return {
-          title: title[1] ?? undefined,
-          subtitle: title[2] ?? undefined,
-        };
-      }
-    }
-  }
-
   /**
    * Process Type/Key/Value data, building the bit parts as AST nodes.
    *
@@ -402,7 +352,7 @@ class BitmarkPegParserProcessor {
    * @param validTypes
    * @returns
    */
-  bitContentProcessor(
+  private bitContentProcessor(
     bitLevel: BitContentLevelType,
     bitType: BitTypeType,
     data: BitContent[],
@@ -425,10 +375,16 @@ class BitmarkPegParserProcessor {
     let footer = '';
     let cardBody = '';
 
+    // Validate the bit content
+    BitmarkPegParserValidator.validateBitContent(this.context, bitLevel, bitType, data);
+
     // Helper for building the body text
     const addBodyText = () => {
       if (bodyPart) {
         if (bodyPart) {
+          // Check the body part for common potential mistakes
+          BitmarkPegParserValidator.checkBodyForCommonPotentialMistakes(this.context, bitLevel, bitType, bodyPart);
+
           const bodyText = builder.bodyText({
             text: bodyPart,
           });
@@ -524,11 +480,19 @@ class BitmarkPegParserProcessor {
     // Build the body and footer, trimming both
     result.body = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
     footer = footer.trim();
-    result.footer = footer ? builder.footerText({ text: footer }) : undefined;
+    if (footer) {
+      // Check the body part for common potential mistakes
+      BitmarkPegParserValidator.checkBodyForCommonPotentialMistakes(this.context, bitLevel, bitType, footer);
+      result.footer = builder.footerText({ text: footer });
+    }
 
     // Add card body
     cardBody = cardBody.trim();
-    if (cardBody) result.cardBody = cardBody;
+    if (cardBody) {
+      // Check the body part for common potential mistakes
+      BitmarkPegParserValidator.checkBodyForCommonPotentialMistakes(this.context, bitLevel, bitType, cardBody);
+      result.cardBody = cardBody;
+    }
 
     // Remove the extra properties if there are none
     if (Object.keys(result.extraProperties).length === 0) delete result.extraProperties;
@@ -545,7 +509,16 @@ class BitmarkPegParserProcessor {
     return result;
   }
 
-  private buildErrors(): ParserError[] | undefined {
+  private buildBitLevelWarnings(): ParserError[] | undefined {
+    let warnings: ParserError[] | undefined;
+    if (this.nonFatalWarnings.length > 0) {
+      warnings = this.nonFatalWarnings;
+      this.nonFatalWarnings = [];
+    }
+    return warnings;
+  }
+
+  private buildBitLevelErrors(): ParserError[] | undefined {
     let errors: ParserError[] | undefined;
     if (this.nonFatalErrors.length > 0) {
       errors = this.nonFatalErrors;
@@ -628,15 +601,38 @@ class BitmarkPegParserProcessor {
   }
 
   /**
+   * Add an warning to the list of non-fatal warnings
+   * @param message The error message
+   * @param parserData Parser data - if not set, the current parser data will be used
+   * @param parserDataOriginal Parser data of the original instance of a duplicate error
+   */
+  private addWarning(message: string, parserData?: ParserData, parserDataOriginal?: ParserData) {
+    const warning: ParserError = {
+      message,
+      text: parserData?.parser.text ?? this.parserText(),
+      location: parserData?.parser.location ?? this.parserLocation(),
+      original: parserDataOriginal?.parser ?? undefined,
+    };
+    if (!warning.original) delete warning.original;
+
+    this.nonFatalWarnings.push(warning);
+  }
+
+  /**
    * Add an error to the list of non-fatal errors
    * @param message The error message
+   * @param parserData Parser data - if not set, the current parser data will be used
+   * @param parserDataOriginal Parser data of the original instance of a duplicate error
    */
-  addError(message: string) {
+  private addError(message: string, parserData?: ParserData, parserDataOriginal?: ParserData) {
     const error: ParserError = {
       message,
-      text: this.parserText(),
-      location: this.parserLocation(),
+      text: parserData?.parser.text ?? this.parserText(),
+      location: parserData?.parser.location ?? this.parserLocation(),
+      original: parserDataOriginal?.parser ?? undefined,
     };
+    if (!error.original) delete error.original;
+
     this.nonFatalErrors.push(error);
   }
 
@@ -646,7 +642,7 @@ class BitmarkPegParserProcessor {
    * @param header
    * @param data
    */
-  debugPrint(header: string, data: unknown): void {
+  private debugPrint(header: string, data: unknown): void {
     if (DEBUG) {
       if (DEBUG_DATA) {
         // Strip 'parser' out of the data, otherwise it is too verbose

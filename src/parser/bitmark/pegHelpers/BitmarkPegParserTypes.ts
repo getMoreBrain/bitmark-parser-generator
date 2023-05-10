@@ -1,6 +1,5 @@
 /**
  * BitmarPegParserTypes.ts
- * v0.0.1
  * RA Sewell
  *
  * (c) 2023 Get More Brain AG
@@ -16,6 +15,8 @@ import { TextFormatType } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
+
+import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
 
 import {
   Body,
@@ -227,7 +228,8 @@ export interface BitmarkPegParserContext {
     validTypes: TypeKeyType[],
   ): BitContentProcessorResult;
   splitBitContent(bitContent: BitContent[], types: TypeKeyType[]): BitContent[][];
-  addError(message: string): void;
+  addWarning(message: string, parserData?: ParserData, parserDataOriginal?: ParserData): void;
+  addError(message: string, parserData?: ParserData, parserDataOriginal?: ParserData): void;
   debugPrint(header: string, data: unknown): void;
 }
 

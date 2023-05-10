@@ -1,6 +1,7 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 const BitTypeRaw = {
+  _error: '_error', // Used for error handling to indicate a bit type that is not supported or a bit parse error
   anchor: 'anchor',
   article: 'article',
   articleAttachment: 'article-attachment',

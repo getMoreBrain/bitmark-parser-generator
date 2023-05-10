@@ -1,6 +1,5 @@
 /**
  * BitmarkPegParserProcessor.ts
- * v0.0.1
  * RA Sewell
  *
  * (c) 2023 Get More Brain AG
@@ -200,6 +199,10 @@ class BitmarkPegParserHelper {
         cardVariantIndex: this.cardVariantIndex,
         value: '',
       } as CardData,
+      parser: {
+        text: this.parserText(),
+        location: this.parserLocation(),
+      },
     };
   }
 
@@ -219,6 +222,10 @@ class BitmarkPegParserHelper {
         cardVariantIndex: this.cardVariantIndex,
         value,
       } as CardData,
+      parser: {
+        text: this.parserText(),
+        location: this.parserLocation(),
+      },
     };
   }
 
@@ -469,7 +476,7 @@ class BitmarkPegParserHelper {
    * @param recurseIntoTypes set to true to reduce types which have array values
    * @returns an array of BitContent objects reduced from the input data
    */
-  reduceToArrayOfTypes(data: unknown, validTypes?: TypeKeyType[], recurseIntoTypes?: boolean): BitContent[] {
+  private reduceToArrayOfTypes(data: unknown, validTypes?: TypeKeyType[], recurseIntoTypes?: boolean): BitContent[] {
     if (!Array.isArray(data)) return [];
 
     const res = data.reduce((acc, content, _index) => {
@@ -504,7 +511,7 @@ class BitmarkPegParserHelper {
    * @param header
    * @param data
    */
-  debugPrint(header: string, data?: unknown): void {
+  private debugPrint(header: string, data?: unknown): void {
     if (DEBUG) {
       if (DEBUG_DATA) {
         // Strip 'parser' out of the data, otherwise it is too verbose

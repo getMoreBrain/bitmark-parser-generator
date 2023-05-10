@@ -1,6 +1,5 @@
 /**
  * Bitmark parser grammar
- * v0.0.1
  * RA Sewell
  *
  * (c) 2023 Get More Brain AG

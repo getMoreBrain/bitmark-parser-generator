@@ -63,6 +63,7 @@ interface RemoveUnwantedPropertiesOptions {
   ignoreFalse?: string[];
   ignoreEmptyString?: string[];
   ignoreEmptyArrays?: string[];
+  ignoreEmptyObjects?: string[];
 }
 
 /**
@@ -1703,6 +1704,7 @@ class Builder {
     ObjectUtils.removeFalseProperties(obj, options.ignoreFalse);
     ObjectUtils.removeEmptyStringProperties(obj, options.ignoreEmptyString);
     ObjectUtils.removeEmptyArrayProperties(obj, options.ignoreEmptyArrays);
+    ObjectUtils.removeEmptyObjectProperties(obj, options.ignoreEmptyObjects);
   }
 
   private parseExtraProperties(extraProperties: { [key: string]: unknown } | undefined): ExtraProperties | undefined {

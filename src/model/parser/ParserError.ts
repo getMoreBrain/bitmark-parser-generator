@@ -7,4 +7,11 @@ export interface ParserError {
     start: ParserLocation;
     end: ParserLocation;
   };
+  original?: {
+    text?: string;
+    location?: {
+      start: ParserLocation;
+      end: ParserLocation;
+    };
+  };
 }

@@ -3,6 +3,7 @@ import { Builder } from '../../../../ast/Builder';
 import { CardSet } from '../../../../model/ast/CardSet';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
+import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
 import {
   AudioResource,
@@ -84,19 +85,26 @@ function buildCards(
   if (context.DEBUG_CARD_SET) context.debugPrint('card set', cardSet);
 
   // Parse the card contents
+  let result: BitSpecificCards = {};
+  let requireCardSet = true;
+
   switch (bitType) {
     case BitType.sequence:
-      return parseElements(context, bitType, cardSet);
+      result = parseElements(context, bitType, cardSet);
+      break;
 
     case BitType.trueFalse:
-      return parseStatements(context, bitType, cardSet, statementV1, statementsV1);
+      result = parseStatements(context, bitType, cardSet, statementV1, statementsV1);
+      break;
 
     case BitType.multipleChoice:
     case BitType.multipleResponse:
-      return parseQuiz(context, bitType, cardSet, choicesV1, responsesV1);
+      result = parseQuiz(context, bitType, cardSet, choicesV1, responsesV1);
+      break;
 
     case BitType.interview:
-      return parseQuestions(context, bitType, cardSet);
+      result = parseQuestions(context, bitType, cardSet);
+      break;
 
     case BitType.match:
     case BitType.matchSolutionGrouped:
@@ -104,20 +112,33 @@ function buildCards(
     case BitType.matchAudio:
     case BitType.matchPicture:
       // ==> heading / pairs
-      return parseMatchPairs(context, bitType, cardSet);
+      result = parseMatchPairs(context, bitType, cardSet);
+      break;
 
     case BitType.matchMatrix:
       // ==> heading / matrix
-      return parseMatchMatrix(context, bitType, cardSet);
+      result = parseMatchMatrix(context, bitType, cardSet);
+      break;
 
     case BitType.botActionResponse:
-      return parseBotResponses(context, bitType, cardSet);
+      result = parseBotResponses(context, bitType, cardSet);
+      break;
 
     default:
+      requireCardSet = false;
     // Return default empty object
   }
 
-  return {};
+  // Validate card set required and present, or not required and not present
+  BitmarkPegParserValidator.validateCardSetRequired(
+    context,
+    BitContentLevel.Bit,
+    bitType,
+    cardSetContent,
+    requireCardSet,
+  );
+
+  return result;
 }
 
 function parseElements(context: BitmarkPegParserContext, bitType: BitTypeType, cardSet: CardSet): BitSpecificCards {
