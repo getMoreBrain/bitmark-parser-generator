@@ -28,7 +28,7 @@ module.exports = {
       require.resolve('jest-html-reporter'),
       {
         outputPath: '<rootDir>/test/custom/generator/books/results/test-report.html',
-        pageTitle: 'bitmark-generator Books Test Report',
+        pageTitle: 'bitmark-parser-generator Books Test Report',
         includeFailureMsg: false,
       },
     ],

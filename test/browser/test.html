@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <head>
   <title>bonaroo-able test</title>
-  <script src="../../dist/browser/bitmark-generator.min.js"></script>
+  <script src="../../dist/browser/bitmark-parser-generator.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      console.log('bitmark-generator Browser Test');
+      console.log('bitmark-parser-generator Browser Test');
 
-      const { BitmarkTool } = window.bitmarkGenerator;
-      const tool = new BitmarkTool();
+      const { BitmarkParserGenerator } = window.bitmarkParserGenerator;
+      const bpg = new BitmarkParserGenerator();
 
       const defaultMarkup = `[.cloze]
 [@id:131331][%92]
@@ -43,7 +43,7 @@ Hier [_dürfen][@example]Sie nicht spielen. Es ist verboten.
           const json = dom.json.value;
 
           performance.mark('Start');
-          const bitmark = await tool.convert(json);
+          const bitmark = await bpg.convert(json);
           performance.mark('End');
 
           bitmarkTimeSecs = Math.round(performance.measure('Generator', 'Start', 'End').duration) / 1000;
@@ -64,10 +64,10 @@ Hier [_dürfen][@example]Sie nicht spielen. Es ist verboten.
           const bitmark = dom.bitmark.value;
 
           performance.mark('Start');
-          const json = await tool.convert(bitmark);
+          const json = await bpg.convert(bitmark);
           performance.mark('End');
 
-          // const ast = await tool.convert(bitmark, {
+          // const ast = await bpg.convert(bitmark, {
           //   outputFormat: 'ast',
           // });
 
@@ -91,7 +91,7 @@ Hier [_dürfen][@example]Sie nicht spielen. Es ist verboten.
           const bitmark = dom.bitmark.value;
 
           performance.mark('Start');
-          const json = await tool.convert(bitmark, {
+          const json = await bpg.convert(bitmark, {
             bitmarkParserType: 'antlr',
           });
           performance.mark('End');

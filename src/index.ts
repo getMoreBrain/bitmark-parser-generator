@@ -1,4 +1,4 @@
-export { BitmarkTool, Output } from './BitmarkTool';
+export { BitmarkParserGenerator, Output } from './BitmarkParserGenerator';
 
 export { Builder } from './ast/Builder';
 
@@ -29,7 +29,7 @@ export { BitmarkParserType } from './model/enum/BitmarkParserType';
 // Type only exports
 //
 
-export type { ConvertOptions, OutputType } from './BitmarkTool';
+export type { ConvertOptions, OutputType } from './BitmarkParserGenerator';
 export type { FileOptions } from './ast/writer/FileWriter';
 export type { BitmarkOptions } from './generator/bitmark/BitmarkGenerator';
 export type { JsonOptions } from './generator/json/JsonGenerator';

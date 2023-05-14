@@ -1551,9 +1551,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@getmorebrain/bitmark-generator@workspace:.":
+"@getmorebrain/bitmark-parser-generator@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@getmorebrain/bitmark-generator@workspace:."
+  resolution: "@getmorebrain/bitmark-parser-generator@workspace:."
   dependencies:
     "@ncoderz/superenum": ^0.2.0
     "@types/eslint-plugin-prettier": ^3.1.0

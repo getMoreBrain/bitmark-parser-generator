@@ -69,16 +69,12 @@ export type OutputType = EnumType<typeof Output>;
  * Bitmark tool for manipulating bitmark in all its formats.
  *
  */
-class BitmarkTool {
+class BitmarkParserGenerator {
   protected ast = new Ast();
   protected jsonParser = new JsonParser();
   protected bitmarkParser = new BitmarkParser();
 
   /**
-   * TODO
-   * - put all the conversions in functions to make code clearer
-   * - implement conversions that are 'not supported' using bitmark parser
-   *
    * Convert bitmark from bitmark to JSON, or JSON to bitmark.
    *
    * Input type is detected automatically and may be string, object (JSON or AST), or file
@@ -324,4 +320,4 @@ class BitmarkTool {
   }
 }
 
-export { BitmarkTool, Output };
+export { BitmarkParserGenerator, Output };

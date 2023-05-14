@@ -22,10 +22,10 @@ const config: Configuration = {
   entry,
   output: {
     path: outputFilename,
-    filename: 'bitmark-generator.min.js',
+    filename: 'bitmark-parser-generator.min.js',
     library: {
       type: 'umd',
-      name: 'bitmarkGenerator',
+      name: 'bitmarkParserGenerator',
     },
     // prevent error: `Uncaught ReferenceError: self is not define`
     globalObject: 'this',

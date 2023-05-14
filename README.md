@@ -1,7 +1,7 @@
-@bitmark-standard/bitmark-generator
+@getmorebrain/bitmark-parser-generator
 ================
 
-![Build & Test](https://github.com/getMoreBrain/bitmark-generator/actions/workflows/build-test.yml/badge.svg?branch=main)
+![Build & Test](https://github.com/getMoreBrain/bitmark-parser-generator/actions/workflows/build-test.yml/badge.svg?branch=main)
 
 NOTE: THIS PROJECT IS NOT YET PRODUCTION READY.
 
@@ -18,12 +18,12 @@ Use this package to:
 
 Using yarn:
 ```
-$ yarn add @bitmark-standard/bitmark-generator
+$ yarn add @getmorebrain/bitmark-parser-generator
 ```
 
 Using npm:
 ```
-$ npm install @bitmark-standard/bitmark-generator
+$ npm install @getmorebrain/bitmark-parser-generator
 ```
 
 ### CDN
@@ -31,13 +31,13 @@ $ npm install @bitmark-standard/bitmark-generator
 Using jsDelivr CDN (ES5 UMD module):
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@bitmark-standard/bitmark-generator@0.0.1/dist/browser/bitmark-generator.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@getmorebrain/bitmark-parser-generator@<version>/dist/browser/bitmark-parser-generator.min.js"></script>
 ```
 
 Using unpkg CDN:
 
 ```html
-<script src="https://unpkg.com/@bitmark-standard/bitmark-generator@0.0.1/dist/bitmark-generator.min.js"></script>
+<script src="https://unpkg.com/@getmorebrain/bitmark-parser-generator@<version>/dist/bitmark-parser-generator.min.js"></script>
 ```
 
 ## Basic Usage
@@ -47,38 +47,38 @@ Using unpkg CDN:
 
 ```ts
 // Modules
-import { BitmarkTool } from 'bitmark-generator';
+import { BitmarkParserGenerator } from 'bitmark-parser-generator';
 
 // CommonJS
-const { BitmarkTool } = require('bitmark-generator');
+const { BitmarkParserGenerator } = require('bitmark-parser-generator');
 
 // Browser UMD
-const { BitmarkTool } = window.bitmarkGenerator;
+const { BitmarkParserGenerator } = window.bitmarkParserGenerator;
 ```
 
 ### Conversion
 
 ```ts
-const tool = new BitmarkTool();
+const bpg = new BitmarkParserGenerator();
 
 // Convert bitmark markup to bitmark JSON
-const json = await tool.convert("[.article] Hello World");
+const json = await bpg.convert("[.article] Hello World");
 
 // Convert bitmark JSON to bitmark markuo
-const bitmark = await tool.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "body": "Hello World" }}]');
+const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "body": "Hello World" }}]');
 
 // Convert bitmark markup file to bitmark JSON
-await tool.convert("./input.bit", { output: "./output.json" });
+await bpg.convert("./input.bit", { output: "./output.json" });
 
 // Convert bitmark JSON to bitmark markup
-await tool.convert("./input.json", { output: "./output.bit" });
+await bpg.convert("./input.json", { output: "./output.bit" });
 ```
 
 ### Convertion Options
 
 ```ts
 // Convert bitmark JSON to bitmark markup with options
-await tool.convert("./input.json", {
+await bpg.convert("./input.json", {
   output: "./output.ast.json", // Output to file rather than <stdout>
   outputFormat: 'ast'          // Output AST rather than the default output
   fileOptions: {
@@ -96,9 +96,9 @@ await tool.convert("./input.json", {
 ### Programmatic Bitmark Creation
 
 ```ts
-import { BitmarkTool, Builder, Ast, BitType, TextFormat } from 'bitmark-generator';
+import { BitmarkParserGenerator, Builder, Ast, BitType, TextFormat } from 'bitmark-parser-generator';
 
-const tool = new BitmarkTool();
+const bpg = new BitmarkParserGenerator();
 const builder = new Builder();
 
 // Create bitmark AST programatically
@@ -119,10 +119,10 @@ const ast = builder.bitmark({
 });
 
 // Write the AST to bitmark markup
-tool.convert(ast, { output: "./output.bit" });
+bpg.convert(ast, { output: "./output.bit" });
 
 // Write the AST to bitmark JSON
-tool.convert(ast, { output: "./output.json", outputFormat: 'json' });
+bpg.convert(ast, { output: "./output.json", outputFormat: 'json' });
 ```
 
 

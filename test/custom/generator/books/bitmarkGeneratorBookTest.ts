@@ -79,7 +79,7 @@ function getTestFilenames(): string[] {
   return files;
 }
 
-describe('bitmark-generator', () => {
+describe('bitmark-parser-generator', () => {
   describe('Markup (Books) => JSON => Markup => JSON', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);

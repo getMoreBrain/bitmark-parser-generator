@@ -377,7 +377,7 @@ function getTestFilenames(): string[] {
   return files;
 }
 
-describe('bitmark-generator', () => {
+describe('bitmark-parser-generator', () => {
   describe('Markup (ANTLR Tests) => JSON => Markup => JSON', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);

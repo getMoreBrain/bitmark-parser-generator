@@ -1,10 +1,10 @@
 {
-  "name": "@getmorebrain/bitmark-generator",
+  "name": "@getmorebrain/bitmark-parser-generator",
   "version": "0.0.1",
   "description": "A bitmark generator",
   "author": "Richard Sewell",
   "license": "ISC",
-  "homepage": "https://github.com/bitmark-standard/bitmark-generator#readme",
+  "homepage": "https://github.com/getMoreBrain/bitmark-parser-generator#readme",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
@@ -15,7 +15,7 @@
     "start": "node -r esbuild-register ./test/custom/dev/bmgDevJson.ts",
     "start-bit": "node -r esbuild-register ./test/custom/dev/bmgDevBitmark.ts",
     "start-bit-antlr": "node -r esbuild-register ./test/custom/dev/bmgDevBitmarkAntlr.ts",
-    "build": "run build-cjs && run build-esm && webpack",
+    "build": "run build-grammar-bit && run build-cjs && run build-esm && webpack",
     "build-cjs": "tsc",
     "build-esm": "tsc --module ES6 --outDir 'dist/esm'",
     "build-umd": "tsc && webpack",
@@ -51,7 +51,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bitmark-standard/bmg.git"
+    "url": "git+https://github.com/getMoreBrain/bitmark-parser-generator.git"
   },
   "browserslist": {
     "modern": [
@@ -59,8 +59,8 @@
       "last 5 firefox versions"
     ]
   },
-  "jsdelivr": "dist/browser/bitmark-generator.min.js",
-  "unpkg": "dist/browser/bitmark-generator.min.js",
+  "jsdelivr": "dist/browser/bitmark-parser-generator.min.js",
+  "unpkg": "dist/browser/bitmark-parser-generator.min.js",
   "contributors": [
     "Richard Sewell (https://github.com/zx-ncoderz)"
   ],

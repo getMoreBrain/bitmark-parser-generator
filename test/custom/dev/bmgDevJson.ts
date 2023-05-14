@@ -9,7 +9,7 @@ Copyright ©2023 Get More Brain
 import * as fs from 'fs-extra';
 import path from 'path';
 
-import { BitmarkTool } from '../../../src/BitmarkTool';
+import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
 import { Ast } from '../../../src/ast/Ast';
 // import { BitmarkFileGenerator } from '../../..src/generator/bitmark/BitmarkFileGenerator';
 import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
@@ -17,7 +17,7 @@ import { JsonParser } from '../../../src/parser/json/JsonParser';
 
 const jsonParser = new JsonParser();
 const ast = new Ast();
-const bitmarkTool = new BitmarkTool();
+const bitmarkParserGenerator = new BitmarkParserGenerator();
 
 class BmgDevJson {
   async test(debug?: boolean): Promise<void> {
@@ -61,7 +61,7 @@ class BmgDevJson {
       const res = await generator.generate(bitmarkAst);
       console.log(res);
     } else {
-      const res = await bitmarkTool.convert(filename);
+      const res = await bitmarkParserGenerator.convert(filename);
       // BitmarkGenerator.convert(json);
       console.log(res);
     }
