@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / Highlight
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Highlight
 
 # Interface: Highlight
 
@@ -29,4 +29,4 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:346](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L346)
+[model/ast/Nodes.ts:380](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L380)

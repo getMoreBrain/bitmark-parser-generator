@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / AudioLinkResourceJson
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / AudioLinkResourceJson
 
 # Interface: AudioLinkResourceJson
 
@@ -18,9 +18,12 @@
 - [copyright](AudioLinkResourceJson.md#copyright)
 - [provider](AudioLinkResourceJson.md#provider)
 - [showInIndex](AudioLinkResourceJson.md#showInIndex)
+- [caption](AudioLinkResourceJson.md#caption)
 - [format](AudioLinkResourceJson.md#format)
 - [src](AudioLinkResourceJson.md#src)
 - [url](AudioLinkResourceJson.md#url)
+- [duration](AudioLinkResourceJson.md#duration)
+- [autoplay](AudioLinkResourceJson.md#autoplay)
 
 ## Properties
 
@@ -34,7 +37,7 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:116](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L116)
+[model/json/ResourceJson.ts:121](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L121)
 
 ___
 
@@ -48,7 +51,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:117](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L117)
+[model/json/ResourceJson.ts:122](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L122)
 
 ___
 
@@ -62,7 +65,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:118](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L118)
+[model/json/ResourceJson.ts:123](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L123)
 
 ___
 
@@ -76,7 +79,21 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L119)
+[model/json/ResourceJson.ts:124](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L124)
+
+___
+
+### caption
+
+• **caption**: `string`
+
+#### Inherited from
+
+[LinkResourceJson](LinkResourceJson.md).[caption](LinkResourceJson.md#caption)
+
+#### Defined in
+
+[model/json/ResourceJson.ts:125](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L125)
 
 ___
 
@@ -90,7 +107,7 @@ AudioLikeResourceJson.format
 
 #### Defined in
 
-[model/json/ResourceJson.ts:141](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L141)
+[model/json/ResourceJson.ts:146](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L146)
 
 ___
 
@@ -104,7 +121,7 @@ AudioLikeResourceJson.src
 
 #### Defined in
 
-[model/json/ResourceJson.ts:143](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L143)
+[model/json/ResourceJson.ts:148](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L148)
 
 ___
 
@@ -118,4 +135,24 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:187](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L187)
+[model/json/ResourceJson.ts:192](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L192)
+
+___
+
+### duration
+
+• **duration**: `string`
+
+#### Defined in
+
+[model/json/ResourceJson.ts:193](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L193)
+
+___
+
+### autoplay
+
+• **autoplay**: `boolean`
+
+#### Defined in
+
+[model/json/ResourceJson.ts:194](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L194)

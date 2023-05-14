@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / AppLinkResourceJson
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / AppLinkResourceJson
 
 # Interface: AppLinkResourceJson
 
@@ -18,6 +18,7 @@
 - [copyright](AppLinkResourceJson.md#copyright)
 - [provider](AppLinkResourceJson.md#provider)
 - [showInIndex](AppLinkResourceJson.md#showInIndex)
+- [caption](AppLinkResourceJson.md#caption)
 - [app](AppLinkResourceJson.md#app)
 - [url](AppLinkResourceJson.md#url)
 
@@ -33,7 +34,7 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:116](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L116)
+[model/json/ResourceJson.ts:121](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L121)
 
 ___
 
@@ -47,7 +48,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:117](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L117)
+[model/json/ResourceJson.ts:122](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L122)
 
 ___
 
@@ -61,7 +62,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:118](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L118)
+[model/json/ResourceJson.ts:123](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L123)
 
 ___
 
@@ -75,7 +76,21 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L119)
+[model/json/ResourceJson.ts:124](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L124)
+
+___
+
+### caption
+
+• **caption**: `string`
+
+#### Inherited from
+
+[LinkResourceJson](LinkResourceJson.md).[caption](LinkResourceJson.md#caption)
+
+#### Defined in
+
+[model/json/ResourceJson.ts:125](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L125)
 
 ___
 
@@ -89,7 +104,7 @@ AppLikeResourceJson.app
 
 #### Defined in
 
-[model/json/ResourceJson.ts:170](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L170)
+[model/json/ResourceJson.ts:175](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L175)
 
 ___
 
@@ -103,4 +118,4 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:225](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L225)
+[model/json/ResourceJson.ts:236](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L236)

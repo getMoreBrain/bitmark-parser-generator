@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / VideoResourceWrapperJson
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / VideoResourceWrapperJson
 
 # Interface: VideoResourceWrapperJson
 
@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:58](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L58)
+[model/json/ResourceJson.ts:58](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L58)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:59](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L59)
+[model/json/ResourceJson.ts:59](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L59)

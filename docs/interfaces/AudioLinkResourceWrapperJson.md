@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / AudioLinkResourceWrapperJson
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / AudioLinkResourceWrapperJson
 
 # Interface: AudioLinkResourceWrapperJson
 
@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:53](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L53)
+[model/json/ResourceJson.ts:53](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L53)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:54](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L54)
+[model/json/ResourceJson.ts:54](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L54)

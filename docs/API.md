@@ -1,13 +1,13 @@
-@bitmark-standard/bitmark-generator / [Exports](modules.md)
+@getmorebrain/bitmark-parser-generator / [Exports](modules.md)
 
-[@bitmark-standard/bitmark-generator](../README.md)
+[@getmorebrain/bitmark-parser-generator](../README.md)
 ================
 
 A bitmark generator.
 
 ## API
 
-- [`BitmarkTool.convert(input, options)`](./classes/BitmarkTool.md)
+- [`BitmarkParserGenerator.convert(input, options)`](./classes/BitmarkParserGenerator.md)
 - [`Builder`](./classes/Builder.md)
 - [`JsonParser.toAst(input)`](./classes/JsonParser.md)
 - [`BitmarkParser.toAst(input)`](./classes/BitmarkParser.md)

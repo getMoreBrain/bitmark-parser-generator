@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / Builder
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Builder
 
 # Class: Builder
 
@@ -16,6 +16,7 @@ Builder to build bitmark AST node programmatically
 - [bit](Builder.md#bit)
 - [choice](Builder.md#choice)
 - [response](Builder.md#response)
+- [botResponse](Builder.md#botResponse)
 - [quiz](Builder.md#quiz)
 - [heading](Builder.md#heading)
 - [pair](Builder.md#pair)
@@ -44,6 +45,7 @@ Builder to build bitmark AST node programmatically
 - [articleLinkResource](Builder.md#articleLinkResource)
 - [documentResource](Builder.md#documentResource)
 - [documentLinkResource](Builder.md#documentLinkResource)
+- [documentDownloadResource](Builder.md#documentDownloadResource)
 - [appResource](Builder.md#appResource)
 - [appLinkResource](Builder.md#appLinkResource)
 - [websiteLinkResource](Builder.md#websiteLinkResource)
@@ -68,6 +70,7 @@ Build bitmark node
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
 | `data.bits?` | [`Bit`](../interfaces/Bit.md)[] | - |
+| `data.errors?` | `ParserError`[] | - |
 
 #### Returns
 
@@ -75,7 +78,7 @@ Build bitmark node
 
 #### Defined in
 
-[ast/Builder.ts:65](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L65)
+[ast/Builder.ts:79](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L79)
 
 ___
 
@@ -92,49 +95,58 @@ Build bit node
 | `data` | `Object` | data for the node |
 | `data.bitType` | [`BitTypeType`](../modules.md#BitTypeType) | - |
 | `data.textFormat?` | [`TextFormatType`](../modules.md#TextFormatType) | - |
-| `data.ids?` | `string` \| `string`[] | - |
-| `data.externalIds?` | `string` \| `string`[] | - |
-| `data.ageRanges?` | `number` \| `number`[] | - |
-| `data.languages?` | `string` \| `string`[] | - |
-| `data.computerLanguages?` | `string` \| `string`[] | - |
-| `data.coverImages?` | `string` \| `string`[] | - |
-| `data.publishers?` | `string` \| `string`[] | - |
+| `data.resourceType?` | [`ResourceTypeType`](../modules.md#ResourceTypeType) | - |
+| `data.id?` | `string` \| `string`[] | - |
+| `data.externalId?` | `string` \| `string`[] | - |
+| `data.ageRange?` | `number` \| `number`[] | - |
+| `data.language?` | `string` \| `string`[] | - |
+| `data.computerLanguage?` | `string` \| `string`[] | - |
+| `data.coverImage?` | `string` \| `string`[] | - |
+| `data.publisher?` | `string` \| `string`[] | - |
 | `data.publications?` | `string` \| `string`[] | - |
-| `data.authors?` | `string` \| `string`[] | - |
-| `data.dates?` | `string` \| `string`[] | - |
-| `data.locations?` | `string` \| `string`[] | - |
-| `data.themes?` | `string` \| `string`[] | - |
-| `data.kinds?` | `string` \| `string`[] | - |
-| `data.actions?` | `string` \| `string`[] | - |
-| `data.thumbImages?` | `string` \| `string`[] | - |
-| `data.durations?` | `string` \| `string`[] | - |
-| `data.deepLinks?` | `string` \| `string`[] | - |
-| `data.externalLink?` | `string` | - |
-| `data.externalLinkText?` | `string` | - |
-| `data.videoCallLinks?` | `string` \| `string`[] | - |
-| `data.bots?` | `string` \| `string`[] | - |
-| `data.lists?` | `string` \| `string`[] | - |
-| `data.labelTrue?` | `string` | - |
-| `data.labelFalse?` | `string` | - |
-| `data.quotedPerson?` | `string` | - |
+| `data.author?` | `string` \| `string`[] | - |
+| `data.subject?` | `string` \| `string`[] | - |
+| `data.date?` | `string` \| `string`[] | - |
+| `data.location?` | `string` \| `string`[] | - |
+| `data.theme?` | `string` \| `string`[] | - |
+| `data.kind?` | `string` \| `string`[] | - |
+| `data.action?` | `string` \| `string`[] | - |
+| `data.thumbImage?` | `string` \| `string`[] | - |
+| `data.focusX?` | `number` \| `number`[] | - |
+| `data.focusY?` | `number` \| `number`[] | - |
+| `data.duration?` | `string` \| `string`[] | - |
+| `data.referenceProperty?` | `string` \| `string`[] | - |
+| `data.deeplink?` | `string` \| `string`[] | - |
+| `data.externalLink?` | `string` \| `string`[] | - |
+| `data.externalLinkText?` | `string` \| `string`[] | - |
+| `data.videoCallLink?` | `string` \| `string`[] | - |
+| `data.bot?` | `string` \| `string`[] | - |
+| `data.list?` | `string` \| `string`[] | - |
+| `data.labelTrue?` | `string` \| `string`[] | - |
+| `data.labelFalse?` | `string` \| `string`[] | - |
+| `data.quotedPerson?` | `string` \| `string`[] | - |
+| `data.partialAnswer?` | `string` \| `string`[] | - |
+| `data.levelProperty?` | `string` \| `string`[] | - |
 | `data.book?` | `string` | - |
 | `data.title?` | `string` | - |
 | `data.subtitle?` | `string` | - |
-| `data.level?` | `number` | - |
+| `data.level?` | `string` \| `number` | - |
 | `data.toc?` | `boolean` | - |
 | `data.progress?` | `boolean` | - |
 | `data.anchor?` | `string` | - |
-| `data.reference?` | `string` \| `string`[] | - |
+| `data.reference?` | `string` | - |
 | `data.referenceEnd?` | `string` | - |
 | `data.item?` | `string` | - |
 | `data.lead?` | `string` | - |
 | `data.hint?` | `string` | - |
 | `data.instruction?` | `string` | - |
 | `data.example?` | `string` \| `boolean` | - |
+| `data.extraProperties?` | `Object` | - |
 | `data.resource?` | [`Resource`](../interfaces/Resource.md) | - |
 | `data.body?` | [`Body`](../modules.md#Body) | - |
-| `data.sampleSolutions` | `string` \| `string`[] | - |
+| `data.sampleSolution?` | `string` \| `string`[] | - |
 | `data.elements?` | `string`[] | - |
+| `data.statement?` | [`Statement`](../interfaces/Statement.md) | - |
 | `data.statements?` | [`Statement`](../interfaces/Statement.md)[] | - |
 | `data.responses?` | [`Response`](../interfaces/Response.md)[] | - |
 | `data.quizzes?` | [`Quiz`](../interfaces/Quiz.md)[] | - |
@@ -143,7 +155,10 @@ Build bit node
 | `data.matrix?` | [`Matrix`](../interfaces/Matrix.md)[] | - |
 | `data.choices?` | [`Choice`](../interfaces/Choice.md)[] | - |
 | `data.questions?` | [`Question`](../interfaces/Question.md)[] | - |
+| `data.botResponses?` | `BotResponse`[] | - |
 | `data.footer?` | [`FooterText`](../interfaces/FooterText.md) | - |
+| `data.bitmark?` | `string` | - |
+| `data.parser?` | `ParserInfo` | - |
 
 #### Returns
 
@@ -151,7 +166,7 @@ Build bit node
 
 #### Defined in
 
-[ast/Builder.ts:80](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L80)
+[ast/Builder.ts:96](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L96)
 
 ___
 
@@ -181,7 +196,7 @@ Build choice node
 
 #### Defined in
 
-[ast/Builder.ts:267](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L267)
+[ast/Builder.ts:324](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L324)
 
 ___
 
@@ -211,7 +226,35 @@ Build response node
 
 #### Defined in
 
-[ast/Builder.ts:302](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L302)
+[ast/Builder.ts:359](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L359)
+
+___
+
+### botResponse
+
+▸ **botResponse**(`data`): `BotResponse`
+
+Build bot response node
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `data` | `Object` | data for the node |
+| `data.response` | `string` | - |
+| `data.reaction` | `string` | - |
+| `data.feedback` | `string` | - |
+| `data.item?` | `string` | - |
+| `data.lead?` | `string` | - |
+| `data.hint?` | `string` | - |
+
+#### Returns
+
+`BotResponse`
+
+#### Defined in
+
+[ast/Builder.ts:394](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L394)
 
 ___
 
@@ -240,7 +283,7 @@ Build quiz node
 
 #### Defined in
 
-[ast/Builder.ts:337](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L337)
+[ast/Builder.ts:425](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L425)
 
 ___
 
@@ -264,7 +307,7 @@ Build heading node
 
 #### Defined in
 
-[ast/Builder.ts:370](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L370)
+[ast/Builder.ts:458](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L458)
 
 ___
 
@@ -289,7 +332,7 @@ Build pair node
 | `data.instruction?` | `string` | - |
 | `data.example?` | `string` \| `boolean` | - |
 | `data.isCaseSensitive?` | `boolean` | - |
-| `data.isLongAnswer?` | `boolean` | - |
+| `data.isShortAnswer?` | `boolean` | - |
 
 #### Returns
 
@@ -297,7 +340,7 @@ Build pair node
 
 #### Defined in
 
-[ast/Builder.ts:391](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L391)
+[ast/Builder.ts:479](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L479)
 
 ___
 
@@ -320,7 +363,7 @@ Build matrix node
 | `data.instruction?` | `string` | - |
 | `data.example?` | `string` \| `boolean` | - |
 | `data.isCaseSensitive?` | `boolean` | - |
-| `data.isLongAnswer?` | `boolean` | - |
+| `data.isShortAnswer?` | `boolean` | - |
 
 #### Returns
 
@@ -328,7 +371,7 @@ Build matrix node
 
 #### Defined in
 
-[ast/Builder.ts:433](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L433)
+[ast/Builder.ts:521](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L521)
 
 ___
 
@@ -356,7 +399,7 @@ Build matrixCell node
 
 #### Defined in
 
-[ast/Builder.ts:470](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L470)
+[ast/Builder.ts:558](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L558)
 
 ___
 
@@ -388,7 +431,7 @@ Build question node
 
 #### Defined in
 
-[ast/Builder.ts:501](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L501)
+[ast/Builder.ts:589](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L589)
 
 ___
 
@@ -411,7 +454,7 @@ Build body node
 
 #### Defined in
 
-[ast/Builder.ts:553](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L553)
+[ast/Builder.ts:639](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L639)
 
 ___
 
@@ -434,7 +477,7 @@ Build bodyText node
 
 #### Defined in
 
-[ast/Builder.ts:566](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L566)
+[ast/Builder.ts:652](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L652)
 
 ___
 
@@ -457,7 +500,7 @@ Build footer node
 
 #### Defined in
 
-[ast/Builder.ts:582](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L582)
+[ast/Builder.ts:668](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L668)
 
 ___
 
@@ -486,7 +529,7 @@ Build gap node
 
 #### Defined in
 
-[ast/Builder.ts:598](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L598)
+[ast/Builder.ts:684](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L684)
 
 ___
 
@@ -517,7 +560,7 @@ Build select node
 
 #### Defined in
 
-[ast/Builder.ts:633](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L633)
+[ast/Builder.ts:719](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L719)
 
 ___
 
@@ -547,7 +590,7 @@ Build selectOption node
 
 #### Defined in
 
-[ast/Builder.ts:672](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L672)
+[ast/Builder.ts:758](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L758)
 
 ___
 
@@ -578,7 +621,7 @@ Build highlight node
 
 #### Defined in
 
-[ast/Builder.ts:707](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L707)
+[ast/Builder.ts:793](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L793)
 
 ___
 
@@ -609,7 +652,7 @@ Build highlightText node
 
 #### Defined in
 
-[ast/Builder.ts:746](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L746)
+[ast/Builder.ts:832](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L832)
 
 ___
 
@@ -639,7 +682,7 @@ Build statement node
 
 #### Defined in
 
-[ast/Builder.ts:783](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L783)
+[ast/Builder.ts:869](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L869)
 
 ___
 
@@ -655,7 +698,7 @@ Build resource node
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
 | `data.type` | [`ResourceTypeType`](../modules.md#ResourceTypeType) | - |
-| `data.url?` | `string` | - |
+| `data.value?` | `string` | - |
 | `data.format?` | `string` | - |
 | `data.src1x?` | `string` | - |
 | `data.src2x?` | `string` | - |
@@ -672,10 +715,8 @@ Build resource node
 | `data.posterImage?` | [`ImageResource`](../interfaces/ImageResource.md) | - |
 | `data.thumbnails?` | [`ImageResource`](../interfaces/ImageResource.md)[] | - |
 | `data.siteName?` | `string` | - |
-| `data.body?` | `string` | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -685,7 +726,7 @@ Build resource node
 
 #### Defined in
 
-[ast/Builder.ts:818](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L818)
+[ast/Builder.ts:904](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L904)
 
 ___
 
@@ -701,7 +742,7 @@ Build imageResource node
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
 | `data.format` | `string` | - |
-| `data.url` | `string` | - |
+| `data.value` | `string` | - |
 | `data.src1x?` | `string` | - |
 | `data.src2x?` | `string` | - |
 | `data.src3x?` | `string` | - |
@@ -711,7 +752,6 @@ Build imageResource node
 | `data.alt?` | `string` | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -721,7 +761,7 @@ Build imageResource node
 
 #### Defined in
 
-[ast/Builder.ts:946](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L946)
+[ast/Builder.ts:1035](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1035)
 
 ___
 
@@ -737,7 +777,7 @@ Build imageLinkResource node
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
 | `data.format` | `string` | - |
-| `data.url` | `string` | - |
+| `data.value` | `string` | - |
 | `data.src1x?` | `string` | - |
 | `data.src2x?` | `string` | - |
 | `data.src3x?` | `string` | - |
@@ -747,7 +787,6 @@ Build imageLinkResource node
 | `data.alt?` | `string` | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -757,7 +796,7 @@ Build imageLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:976](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L976)
+[ast/Builder.ts:1064](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1064)
 
 ___
 
@@ -773,10 +812,9 @@ Build audioResource node
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
 | `data.format` | `string` | - |
-| `data.url` | `string` | - |
+| `data.value` | `string` | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -786,7 +824,7 @@ Build audioResource node
 
 #### Defined in
 
-[ast/Builder.ts:1006](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L1006)
+[ast/Builder.ts:1093](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1093)
 
 ___
 
@@ -802,10 +840,9 @@ Build audioLinkResource node
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
 | `data.format` | `string` | - |
-| `data.url` | `string` | - |
+| `data.value` | `string` | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -815,7 +852,7 @@ Build audioLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1029](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L1029)
+[ast/Builder.ts:1115](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1115)
 
 ___
 
@@ -831,7 +868,7 @@ Build videoResource node
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
 | `data.format` | `string` | - |
-| `data.url` | `string` | - |
+| `data.value` | `string` | - |
 | `data.width?` | `number` | - |
 | `data.height?` | `number` | - |
 | `data.duration?` | `number` | - |
@@ -844,7 +881,6 @@ Build videoResource node
 | `data.thumbnails?` | [`ImageResource`](../interfaces/ImageResource.md)[] | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -854,7 +890,7 @@ Build videoResource node
 
 #### Defined in
 
-[ast/Builder.ts:1052](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L1052)
+[ast/Builder.ts:1137](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1137)
 
 ___
 
@@ -870,7 +906,7 @@ Build videoLinkResource node
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
 | `data.format` | `string` | - |
-| `data.url` | `string` | - |
+| `data.value` | `string` | - |
 | `data.width?` | `number` | - |
 | `data.height?` | `number` | - |
 | `data.duration?` | `number` | - |
@@ -883,7 +919,6 @@ Build videoLinkResource node
 | `data.thumbnails?` | [`ImageResource`](../interfaces/ImageResource.md)[] | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -893,7 +928,7 @@ Build videoLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1085](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L1085)
+[ast/Builder.ts:1169](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1169)
 
 ___
 
@@ -909,7 +944,7 @@ Build stillImageFilmResource node
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
 | `data.format` | `string` | - |
-| `data.url` | `string` | - |
+| `data.value` | `string` | - |
 | `data.width?` | `number` | - |
 | `data.height?` | `number` | - |
 | `data.duration?` | `number` | - |
@@ -922,7 +957,6 @@ Build stillImageFilmResource node
 | `data.thumbnails?` | [`ImageResource`](../interfaces/ImageResource.md)[] | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -932,7 +966,7 @@ Build stillImageFilmResource node
 
 #### Defined in
 
-[ast/Builder.ts:1118](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L1118)
+[ast/Builder.ts:1201](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1201)
 
 ___
 
@@ -948,7 +982,7 @@ Build stillImageFilmLinkResource node
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
 | `data.format` | `string` | - |
-| `data.url` | `string` | - |
+| `data.value` | `string` | - |
 | `data.width?` | `number` | - |
 | `data.height?` | `number` | - |
 | `data.duration?` | `number` | - |
@@ -961,7 +995,6 @@ Build stillImageFilmLinkResource node
 | `data.thumbnails?` | [`ImageResource`](../interfaces/ImageResource.md)[] | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -971,7 +1004,7 @@ Build stillImageFilmLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1151](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L1151)
+[ast/Builder.ts:1233](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1233)
 
 ___
 
@@ -987,11 +1020,9 @@ Build articleResource node
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
 | `data.format` | `string` | - |
-| `data.href?` | `string` | - |
-| `data.body?` | `string` | - |
+| `data.value` | `string` | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -1001,7 +1032,7 @@ Build articleResource node
 
 #### Defined in
 
-[ast/Builder.ts:1184](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L1184)
+[ast/Builder.ts:1265](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1265)
 
 ___
 
@@ -1017,10 +1048,9 @@ Build articleLinkResource node
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
 | `data.format` | `string` | - |
-| `data.url` | `string` | - |
+| `data.value` | `string` | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -1030,7 +1060,7 @@ Build articleLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1208](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L1208)
+[ast/Builder.ts:1287](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1287)
 
 ___
 
@@ -1050,7 +1080,6 @@ Build documentResource node
 | `data.body?` | `string` | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -1060,7 +1089,7 @@ Build documentResource node
 
 #### Defined in
 
-[ast/Builder.ts:1231](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L1231)
+[ast/Builder.ts:1309](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1309)
 
 ___
 
@@ -1076,10 +1105,9 @@ Build documentLinkResource node
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
 | `data.format` | `string` | - |
-| `data.url` | `string` | - |
+| `data.value` | `string` | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -1089,7 +1117,35 @@ Build documentLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1255](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L1255)
+[ast/Builder.ts:1332](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1332)
+
+___
+
+### documentDownloadResource
+
+▸ **documentDownloadResource**(`data`): `DocumentDownloadResource`
+
+Build documentDownloadResource node
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `data` | `Object` | data for the node |
+| `data.format` | `string` | - |
+| `data.value` | `string` | - |
+| `data.license?` | `string` | - |
+| `data.copyright?` | `string` | - |
+| `data.showInIndex?` | `boolean` | - |
+| `data.caption?` | `string` | - |
+
+#### Returns
+
+`DocumentDownloadResource`
+
+#### Defined in
+
+[ast/Builder.ts:1354](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1354)
 
 ___
 
@@ -1104,10 +1160,9 @@ Build appResource node
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
-| `data.url` | `string` | - |
+| `data.value` | `string` | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -1117,7 +1172,7 @@ Build appResource node
 
 #### Defined in
 
-[ast/Builder.ts:1278](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L1278)
+[ast/Builder.ts:1376](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1376)
 
 ___
 
@@ -1132,10 +1187,9 @@ Build appLinkResource node
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
-| `data.url` | `string` | - |
+| `data.value` | `string` | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -1145,7 +1199,7 @@ Build appLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1300](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L1300)
+[ast/Builder.ts:1397](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1397)
 
 ___
 
@@ -1160,11 +1214,10 @@ Build websiteLinkResource node
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
-| `data.url` | `string` | - |
+| `data.value` | `string` | - |
 | `data.siteName?` | `string` | - |
 | `data.license?` | `string` | - |
 | `data.copyright?` | `string` | - |
-| `data.provider?` | `string` | - |
 | `data.showInIndex?` | `boolean` | - |
 | `data.caption?` | `string` | - |
 
@@ -1174,4 +1227,4 @@ Build websiteLinkResource node
 
 #### Defined in
 
-[ast/Builder.ts:1322](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Builder.ts#L1322)
+[ast/Builder.ts:1418](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Builder.ts#L1418)

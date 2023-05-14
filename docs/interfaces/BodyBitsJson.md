@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / BodyBitsJson
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BodyBitsJson
 
 # Interface: BodyBitsJson
 

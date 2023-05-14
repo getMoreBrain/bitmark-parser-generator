@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / Writer
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Writer
 
 # Interface: Writer
 
@@ -36,7 +36,7 @@ Must be called before any calls to writeXXX();
 
 #### Defined in
 
-[ast/writer/Writer.ts:10](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/Writer.ts#L10)
+[ast/writer/Writer.ts:10](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/Writer.ts#L10)
 
 ___
 
@@ -54,7 +54,7 @@ Must be called after any calls to writeXXX();
 
 #### Defined in
 
-[ast/writer/Writer.ts:17](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/Writer.ts#L17)
+[ast/writer/Writer.ts:17](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/Writer.ts#L17)
 
 ___
 
@@ -76,7 +76,7 @@ Writes a string value to the output.
 
 #### Defined in
 
-[ast/writer/Writer.ts:23](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/Writer.ts#L23)
+[ast/writer/Writer.ts:23](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/Writer.ts#L23)
 
 ___
 
@@ -98,7 +98,7 @@ Writes a new line to the output. The line is indented automatically. The line is
 
 #### Defined in
 
-[ast/writer/Writer.ts:29](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/Writer.ts#L29)
+[ast/writer/Writer.ts:29](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/Writer.ts#L29)
 
 ___
 
@@ -121,7 +121,7 @@ Writes a collection of lines to the output. Each line is indented automatically 
 
 #### Defined in
 
-[ast/writer/Writer.ts:36](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/Writer.ts#L36)
+[ast/writer/Writer.ts:36](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/Writer.ts#L36)
 
 ___
 
@@ -137,4 +137,4 @@ Writes a single whitespace character to the output.
 
 #### Defined in
 
-[ast/writer/Writer.ts:41](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/Writer.ts#L41)
+[ast/writer/Writer.ts:41](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/Writer.ts#L41)

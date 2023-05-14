@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / ArticleLinkResourceWrapperJson
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / ArticleLinkResourceWrapperJson
 
 # Interface: ArticleLinkResourceWrapperJson
 
@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:83](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L83)
+[model/json/ResourceJson.ts:83](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L83)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:84](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L84)
+[model/json/ResourceJson.ts:84](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L84)

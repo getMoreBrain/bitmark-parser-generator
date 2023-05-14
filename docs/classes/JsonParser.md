@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / JsonParser
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / JsonParser
 
 # Class: JsonParser
 
@@ -48,7 +48,7 @@ bitmark AST
 
 #### Defined in
 
-[parser/json/JsonParser.ts:73](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/parser/json/JsonParser.ts#L73)
+[parser/json/JsonParser.ts:78](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/parser/json/JsonParser.ts#L78)
 
 ___
 
@@ -73,7 +73,7 @@ bitmark JSON in a standard format (BitWrapperJson[] object)
 
 #### Defined in
 
-[parser/json/JsonParser.ts:101](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/parser/json/JsonParser.ts#L101)
+[parser/json/JsonParser.ts:106](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/parser/json/JsonParser.ts#L106)
 
 ___
 
@@ -97,7 +97,7 @@ true if BitWrapper JSON, otherwise false
 
 #### Defined in
 
-[parser/json/JsonParser.ts:144](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/parser/json/JsonParser.ts#L144)
+[parser/json/JsonParser.ts:149](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/parser/json/JsonParser.ts#L149)
 
 ___
 
@@ -121,7 +121,7 @@ true if Bit JSON, otherwise false
 
 #### Defined in
 
-[parser/json/JsonParser.ts:158](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/parser/json/JsonParser.ts#L158)
+[parser/json/JsonParser.ts:163](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/parser/json/JsonParser.ts#L163)
 
 ___
 
@@ -145,4 +145,4 @@ the Bit wrapper in a BitWrapper
 
 #### Defined in
 
-[parser/json/JsonParser.ts:172](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/parser/json/JsonParser.ts#L172)
+[parser/json/JsonParser.ts:177](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/parser/json/JsonParser.ts#L177)

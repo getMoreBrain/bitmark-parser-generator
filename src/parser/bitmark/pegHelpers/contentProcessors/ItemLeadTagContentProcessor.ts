@@ -11,14 +11,14 @@ import {
 } from '../BitmarkPegParserTypes';
 
 function itemLeadTagContentProcessor(
-  context: BitmarkPegParserContext,
-  bitLevel: BitContentLevelType,
-  bitType: BitTypeType,
+  _context: BitmarkPegParserContext,
+  _bitLevel: BitContentLevelType,
+  _bitType: BitTypeType,
   content: BitContent,
   target: BitContentProcessorResult,
   isLead: boolean,
 ): void {
-  const { type, value } = content as TypeValue;
+  const { value } = content as TypeValue;
 
   const trimmedStringValue = StringUtils.trimmedString(value);
 

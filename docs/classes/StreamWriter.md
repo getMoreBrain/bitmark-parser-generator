@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / StreamWriter
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / StreamWriter
 
 # Class: StreamWriter
 
@@ -51,7 +51,7 @@ Writer to write to a stream.
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:10](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/StreamWriter.ts#L10)
+[ast/writer/StreamWriter.ts:10](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/StreamWriter.ts#L10)
 
 ## Accessors
 
@@ -67,7 +67,7 @@ Get the current write stream
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:15](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/StreamWriter.ts#L15)
+[ast/writer/StreamWriter.ts:15](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/StreamWriter.ts#L15)
 
 • `set` **stream**(`stream`): `void`
 
@@ -85,7 +85,7 @@ Set the current write stream
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:22](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/StreamWriter.ts#L22)
+[ast/writer/StreamWriter.ts:22](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/StreamWriter.ts#L22)
 
 ## Methods
 
@@ -107,7 +107,7 @@ Must be called before any calls to writeXXX();
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:26](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/StreamWriter.ts#L26)
+[ast/writer/StreamWriter.ts:26](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/StreamWriter.ts#L26)
 
 ___
 
@@ -129,7 +129,7 @@ Must be called after any calls to writeXXX();
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:28](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/StreamWriter.ts#L28)
+[ast/writer/StreamWriter.ts:28](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/StreamWriter.ts#L28)
 
 ___
 
@@ -155,7 +155,7 @@ Writes a new line to the output. The line is indented automatically. The line is
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:30](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/StreamWriter.ts#L30)
+[ast/writer/StreamWriter.ts:30](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/StreamWriter.ts#L30)
 
 ___
 
@@ -182,7 +182,7 @@ Writes a collection of lines to the output. Each line is indented automatically 
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:41](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/StreamWriter.ts#L41)
+[ast/writer/StreamWriter.ts:41](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/StreamWriter.ts#L41)
 
 ___
 
@@ -208,7 +208,7 @@ Writes a string value to the output.
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:56](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/StreamWriter.ts#L56)
+[ast/writer/StreamWriter.ts:56](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/StreamWriter.ts#L56)
 
 ___
 
@@ -228,4 +228,4 @@ Writes a single whitespace character to the output.
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:63](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/writer/StreamWriter.ts#L63)
+[ast/writer/StreamWriter.ts:63](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/writer/StreamWriter.ts#L63)

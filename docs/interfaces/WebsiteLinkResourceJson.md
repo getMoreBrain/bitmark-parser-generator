@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / WebsiteLinkResourceJson
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / WebsiteLinkResourceJson
 
 # Interface: WebsiteLinkResourceJson
 
@@ -16,6 +16,8 @@
 - [copyright](WebsiteLinkResourceJson.md#copyright)
 - [provider](WebsiteLinkResourceJson.md#provider)
 - [showInIndex](WebsiteLinkResourceJson.md#showInIndex)
+- [caption](WebsiteLinkResourceJson.md#caption)
+- [url](WebsiteLinkResourceJson.md#url)
 - [siteName](WebsiteLinkResourceJson.md#siteName)
 
 ## Properties
@@ -30,7 +32,7 @@ BaseResourceJson.license
 
 #### Defined in
 
-[model/json/ResourceJson.ts:116](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L116)
+[model/json/ResourceJson.ts:121](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L121)
 
 ___
 
@@ -44,7 +46,7 @@ BaseResourceJson.copyright
 
 #### Defined in
 
-[model/json/ResourceJson.ts:117](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L117)
+[model/json/ResourceJson.ts:122](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L122)
 
 ___
 
@@ -58,7 +60,7 @@ BaseResourceJson.provider
 
 #### Defined in
 
-[model/json/ResourceJson.ts:118](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L118)
+[model/json/ResourceJson.ts:123](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L123)
 
 ___
 
@@ -72,7 +74,31 @@ BaseResourceJson.showInIndex
 
 #### Defined in
 
-[model/json/ResourceJson.ts:119](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L119)
+[model/json/ResourceJson.ts:124](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L124)
+
+___
+
+### caption
+
+• **caption**: `string`
+
+#### Inherited from
+
+BaseResourceJson.caption
+
+#### Defined in
+
+[model/json/ResourceJson.ts:125](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L125)
+
+___
+
+### url
+
+• **url**: `string`
+
+#### Defined in
+
+[model/json/ResourceJson.ts:240](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L240)
 
 ___
 
@@ -82,4 +108,4 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:229](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/ResourceJson.ts#L229)
+[model/json/ResourceJson.ts:241](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L241)

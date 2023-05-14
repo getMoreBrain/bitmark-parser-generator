@@ -17,10 +17,10 @@ const builder = new Builder();
 
 function gapChainContentProcessor(
   context: BitmarkPegParserContext,
-  bitLevel: BitContentLevelType,
+  _bitLevel: BitContentLevelType,
   bitType: BitTypeType,
   content: BitContent,
-  target: BitContentProcessorResult,
+  _target: BitContentProcessorResult,
   bodyParts: BodyPart[],
 ): void {
   const { value } = content as TypeValue;

@@ -103,7 +103,7 @@ class BitmarkPegParserValidator {
 
   validateCardSetRequired(
     context: BitmarkPegParserContext,
-    bitLevel: BitContentLevelType,
+    _bitLevel: BitContentLevelType,
     bitType: BitTypeType,
     cardSet: BitContent[] | undefined,
     required: boolean,
@@ -118,7 +118,7 @@ class BitmarkPegParserValidator {
 
   checkBodyForCommonPotentialMistakes(
     context: BitmarkPegParserContext,
-    bitLevel: BitContentLevelType,
+    _bitLevel: BitContentLevelType,
     bitType: BitTypeType,
     body: string,
   ): void {
@@ -275,8 +275,8 @@ class BitmarkPegParserValidator {
 
   private checkForUnallowedDuplicates(
     context: BitmarkPegParserContext,
-    bitLevel: BitContentLevelType,
-    bitType: BitTypeType,
+    _bitLevel: BitContentLevelType,
+    _bitType: BitTypeType,
     data: BitContent[],
   ): void {
     const foundTypes: { [key: string]: BitContent } = {};

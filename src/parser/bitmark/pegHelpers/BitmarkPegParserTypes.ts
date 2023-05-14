@@ -16,8 +16,6 @@ import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
 
-import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
-
 import {
   Body,
   Statement,

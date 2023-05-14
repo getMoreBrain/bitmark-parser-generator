@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / SelectOption
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / SelectOption
 
 # Interface: SelectOption
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:334](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L334)
+[model/ast/Nodes.ts:368](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L368)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:335](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L335)
+[model/ast/Nodes.ts:369](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L369)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:336](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L336)
+[model/ast/Nodes.ts:370](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L370)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:337](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L337)
+[model/ast/Nodes.ts:371](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L371)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:338](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L338)
+[model/ast/Nodes.ts:372](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L372)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:339](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L339)
+[model/ast/Nodes.ts:373](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L373)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:340](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L340)
+[model/ast/Nodes.ts:374](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L374)

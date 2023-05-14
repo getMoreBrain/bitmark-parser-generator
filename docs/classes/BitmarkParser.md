@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / BitmarkParser
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BitmarkParser
 
 # Class: BitmarkParser
 
@@ -23,27 +23,34 @@
 
 ### toAst
 
-▸ **toAst**(`bitmark`): [`BitmarkAst`](../interfaces/BitmarkAst.md)
+▸ **toAst**(`bitmark`, `options?`): [`BitmarkAst`](../interfaces/BitmarkAst.md)
+
+Convert Bitmark markup to AST.
+
+The Bitmark markup should be a string.
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `bitmark` | `unknown` |
+| `bitmark` | `string` |
+| `options?` | `BitmarkParserOptions` |
 
 #### Returns
 
 [`BitmarkAst`](../interfaces/BitmarkAst.md)
 
+bitmark AST
+
 #### Defined in
 
-[parser/bitmark/BitmarkParser.ts:9](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/parser/bitmark/BitmarkParser.ts#L9)
+[parser/bitmark/BitmarkParser.ts:25](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/parser/bitmark/BitmarkParser.ts#L25)
 
 ___
 
 ### parse
 
-▸ **parse**(`pathOrMarkup`): `string`
+▸ **parse**(`pathOrMarkup`): [`BitWrapperJson`](../interfaces/BitWrapperJson.md)[]
 
 #### Parameters
 
@@ -53,8 +60,8 @@ ___
 
 #### Returns
 
-`string`
+[`BitWrapperJson`](../interfaces/BitWrapperJson.md)[]
 
 #### Defined in
 
-[parser/bitmark/BitmarkParser.ts:15](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/parser/bitmark/BitmarkParser.ts#L15)
+[parser/bitmark/BitmarkParser.ts:35](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/parser/bitmark/BitmarkParser.ts#L35)

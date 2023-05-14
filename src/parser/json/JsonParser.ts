@@ -251,8 +251,8 @@ class JsonParser {
     //+-statement
     const statementNodes = this.statementBitsToAst(statement, isCorrect, statements);
 
-    //+-response
-    const responseNodes = this.responseBitsToAst(responses);
+    //+-response - TODO - handle BotResponse[]
+    const responseNodes = this.responseBitsToAst(responses as ResponseJson[]);
 
     // quizzes
     const quizNodes = this.quizBitsToAst(quizzes);

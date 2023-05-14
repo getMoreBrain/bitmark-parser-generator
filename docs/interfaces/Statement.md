@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / Statement
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Statement
 
 # Interface: Statement
 
@@ -32,7 +32,7 @@ Decision.text
 
 #### Defined in
 
-[model/ast/Nodes.ts:379](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L379)
+[model/ast/Nodes.ts:413](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L413)
 
 ___
 
@@ -46,7 +46,7 @@ Decision.isCorrect
 
 #### Defined in
 
-[model/ast/Nodes.ts:380](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L380)
+[model/ast/Nodes.ts:414](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L414)
 
 ___
 
@@ -60,7 +60,7 @@ Decision.itemLead
 
 #### Defined in
 
-[model/ast/Nodes.ts:381](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L381)
+[model/ast/Nodes.ts:415](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L415)
 
 ___
 
@@ -74,7 +74,7 @@ Decision.hint
 
 #### Defined in
 
-[model/ast/Nodes.ts:382](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L382)
+[model/ast/Nodes.ts:416](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L416)
 
 ___
 
@@ -88,7 +88,7 @@ Decision.instruction
 
 #### Defined in
 
-[model/ast/Nodes.ts:383](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L383)
+[model/ast/Nodes.ts:417](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L417)
 
 ___
 
@@ -102,7 +102,7 @@ Decision.example
 
 #### Defined in
 
-[model/ast/Nodes.ts:384](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L384)
+[model/ast/Nodes.ts:418](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L418)
 
 ___
 
@@ -116,4 +116,4 @@ Decision.isCaseSensitive
 
 #### Defined in
 
-[model/ast/Nodes.ts:385](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L385)
+[model/ast/Nodes.ts:419](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L419)

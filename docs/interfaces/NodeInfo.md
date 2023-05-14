@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / NodeInfo
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / NodeInfo
 
 # Interface: NodeInfo
 
@@ -22,7 +22,7 @@ Child index of the node
 
 #### Defined in
 
-[ast/Ast.ts:12](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Ast.ts#L12)
+[ast/Ast.ts:12](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Ast.ts#L12)
 
 ___
 
@@ -34,7 +34,7 @@ Node key
 
 #### Defined in
 
-[ast/Ast.ts:16](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Ast.ts#L16)
+[ast/Ast.ts:16](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Ast.ts#L16)
 
 ___
 
@@ -46,4 +46,4 @@ Node value (if any)
 
 #### Defined in
 
-[ast/Ast.ts:20](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/ast/Ast.ts#L20)
+[ast/Ast.ts:20](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Ast.ts#L20)

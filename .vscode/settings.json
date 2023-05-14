@@ -28,7 +28,8 @@
     "**/.yarn": true,
     "**/dist": true,
     "**/docs": true
-  }
+  },
   // "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
   // "jest.jestCommandLine": "yarn test"
+  "jest.autoRun": "off"
 }

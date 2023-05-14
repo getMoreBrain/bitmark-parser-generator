@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / MatrixCellJson
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / MatrixCellJson
 
 # Interface: MatrixCellJson
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[model/json/BitJson.ts:152](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/BitJson.ts#L152)
+[model/json/BitJson.ts:162](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L162)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:153](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/BitJson.ts#L153)
+[model/json/BitJson.ts:163](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L163)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:154](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/BitJson.ts#L154)
+[model/json/BitJson.ts:164](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L164)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:155](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/BitJson.ts#L155)
+[model/json/BitJson.ts:165](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L165)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:156](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/BitJson.ts#L156)
+[model/json/BitJson.ts:166](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L166)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:157](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/BitJson.ts#L157)
+[model/json/BitJson.ts:167](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L167)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:158](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/json/BitJson.ts#L158)
+[model/json/BitJson.ts:168](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L168)

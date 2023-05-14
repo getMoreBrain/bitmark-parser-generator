@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / Gap
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Gap
 
 # Interface: Gap
 
@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:308](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L308)
+[model/ast/Nodes.ts:342](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L342)

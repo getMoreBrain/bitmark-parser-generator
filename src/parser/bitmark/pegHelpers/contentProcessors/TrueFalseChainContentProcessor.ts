@@ -27,7 +27,7 @@ const builder = new Builder();
 
 function trueFalseChainContentProcessor(
   context: BitmarkPegParserContext,
-  bitLevel: BitContentLevelType,
+  _bitLevel: BitContentLevelType,
   bitType: BitTypeType,
   content: BitContent,
   target: BitContentProcessorResult,

@@ -64,9 +64,9 @@ function buildResource(
 }
 
 function resourceContentProcessor(
-  context: BitmarkPegParserContext,
-  bitLevel: BitContentLevelType,
-  bitType: BitTypeType,
+  _context: BitmarkPegParserContext,
+  _bitLevel: BitContentLevelType,
+  _bitType: BitTypeType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {

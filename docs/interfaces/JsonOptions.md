@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / JsonOptions
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / JsonOptions
 
 # Interface: JsonOptions
 
@@ -25,7 +25,7 @@ If a positive integer, JSON will be prettified with an indent of this number.
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:39](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/generator/json/JsonGenerator.ts#L39)
+[generator/json/JsonGenerator.ts:96](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/generator/json/JsonGenerator.ts#L96)
 
 ___
 
@@ -38,4 +38,4 @@ Generate debug information in the output.
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:45](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/generator/json/JsonGenerator.ts#L45)
+[generator/json/JsonGenerator.ts:102](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/generator/json/JsonGenerator.ts#L102)

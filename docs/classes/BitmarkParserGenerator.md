@@ -1,6 +1,6 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / BitmarkTool
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BitmarkParserGenerator
 
-# Class: BitmarkTool
+# Class: BitmarkParserGenerator
 
 Bitmark tool for manipulating bitmark in all its formats.
 
@@ -8,28 +8,24 @@ Bitmark tool for manipulating bitmark in all its formats.
 
 ### Constructors
 
-- [constructor](BitmarkTool.md#constructor)
+- [constructor](BitmarkParserGenerator.md#constructor)
 
 ### Methods
 
-- [convert](BitmarkTool.md#convert)
-- [createAst](BitmarkTool.md#createAst)
+- [convert](BitmarkParserGenerator.md#convert)
+- [createAst](BitmarkParserGenerator.md#createAst)
 
 ## Constructors
 
 ### constructor
 
-• **new BitmarkTool**()
+• **new BitmarkParserGenerator**()
 
 ## Methods
 
 ### convert
 
 ▸ **convert**(`input`, `options?`): `Promise`<`unknown`\>
-
-TODO
-- put all the conversions in functions to make code clearer
-- implement conversions that are 'not supported' using bitmark parser
 
 Convert bitmark from bitmark to JSON, or JSON to bitmark.
 
@@ -63,7 +59,7 @@ void if writing to a file
 
 #### Defined in
 
-[BitmarkTool.ts:94](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/BitmarkTool.ts#L94)
+[BitmarkParserGenerator.ts:97](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/BitmarkParserGenerator.ts#L97)
 
 ___
 
@@ -93,4 +89,4 @@ bitmark AST
 
 #### Defined in
 
-[BitmarkTool.ts:214](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/BitmarkTool.ts#L214)
+[BitmarkParserGenerator.ts:289](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/BitmarkParserGenerator.ts#L289)

@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / Heading
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Heading
 
 # Interface: Heading
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:126](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L126)
+[model/ast/Nodes.ts:158](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L158)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:127](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L127)
+[model/ast/Nodes.ts:159](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L159)

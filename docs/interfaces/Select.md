@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / Select
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Select
 
 # Interface: Select
 
@@ -29,4 +29,4 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:321](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L321)
+[model/ast/Nodes.ts:355](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L355)

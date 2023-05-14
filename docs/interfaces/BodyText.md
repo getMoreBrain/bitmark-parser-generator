@@ -1,4 +1,4 @@
-[@bitmark-standard/bitmark-generator](../API.md) / [Exports](../modules.md) / BodyText
+[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BodyText
 
 # Interface: BodyText
 
@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:296](https://github.com/getMoreBrain/bitmark-generator/blob/de39d9c/src/model/ast/Nodes.ts#L296)
+[model/ast/Nodes.ts:330](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L330)
