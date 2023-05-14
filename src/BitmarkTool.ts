@@ -131,101 +131,150 @@ class BitmarkTool {
     const isJson = !!ast?.bits;
     const isBitmark = !isJson && !isAst; // Assume bitmark since not AST or JSON
 
+    // Helper conversion functions
+    const bitmarkToBitmark = async (bitmarkStr: string) => {
+      // Return the original bitmark (TODO - validate it)
+      res = bitmarkStr;
+    };
+
+    const bitmarkToAst = async (bitmarkStr: string) => {
+      res = this.bitmarkParser.toAst(bitmarkStr, {
+        parserType: bitmarkParserType,
+      });
+    };
+
+    const bitmarkToJSON = async (bitmarkStr: string) => {
+      if (bitmarkParserType === BitmarkParserType.antlr) {
+        // Convert the bitmark to JSON using the antlr parser
+        const json = this.bitmarkParser.parse(bitmarkStr);
+
+        if (opts.outputFile) {
+          const jsonStr = JSON.stringify(json, undefined, jsonPrettifySpace);
+
+          // Write JSON to file
+          const flag = fileOptions.append ? 'a' : 'w';
+          fs.ensureDirSync(path.dirname(opts.outputFile.toString()));
+          fs.writeFileSync(opts.outputFile, jsonStr, {
+            flag,
+          });
+        } else {
+          // Return JSON as object
+          res = json;
+        }
+      } else {
+        // Convert the bitmark to JSON using the peggy parser
+
+        // Generate AST from the Bitmark markup
+        ast = this.bitmarkParser.toAst(bitmarkStr, {
+          parserType: bitmarkParserType,
+        });
+
+        // Convert the AST to JSON
+        if (opts.outputFile) {
+          // Write JSON file
+          const generator = new JsonFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
+          await generator.generate(ast);
+        } else {
+          // Generate JSON object
+          const generator = new JsonObjectGenerator(bitmarkOptions);
+          res = await generator.generate(ast);
+        }
+      }
+    };
+
+    const astToBitmark = async (astJson: BitmarkAst) => {
+      // Convert the AST to bitmark
+      if (opts.outputFile) {
+        // Write markup file
+        const generator = new BitmarkFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
+        await generator.generate(astJson);
+      } else {
+        // Generate markup string
+        const generator = new BitmarkStringGenerator(bitmarkOptions);
+        res = await generator.generate(astJson);
+      }
+    };
+
+    const astToAst = async (astJson: BitmarkAst) => {
+      res = astJson;
+    };
+
+    const astToJSON = async (astJson: BitmarkAst) => {
+      // Convert the AST to JSON
+      if (opts.outputFile) {
+        // Write JSON file
+        const generator = new JsonFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
+        await generator.generate(astJson);
+      } else {
+        // Generate JSON object
+        const generator = new JsonObjectGenerator(bitmarkOptions);
+        res = await generator.generate(astJson);
+      }
+    };
+
+    const jsonToBitmark = async (astJson: BitmarkAst) => {
+      // We already have the ast from detecting the input type, so use the AST we already have
+
+      // Convert the JSON to bitmark
+      if (opts.outputFile) {
+        // Write markup file
+        const generator = new BitmarkFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
+        await generator.generate(astJson);
+      } else {
+        // Generate markup string
+        const generator = new BitmarkStringGenerator(bitmarkOptions);
+        res = await generator.generate(astJson);
+      }
+    };
+
+    const jsonToAst = async (astJson: BitmarkAst) => {
+      // We already have the ast from detecting the input type, so just return the AST we already have
+      res = astJson;
+    };
+
+    const jsonToJSON = async (jsonStr: string) => {
+      // Return the original input as JSON (TODO - validate it)
+      res = this.jsonParser.preprocessJson(jsonStr);
+    };
+
     // Convert
     if (isBitmark) {
       // Input was Bitmark
       if (outputBitmark) {
         // Bitmark ==> Bitmark
-        // Return the original bitmark (TODO - validate it)
-        res = inStr;
+        await bitmarkToBitmark(inStr);
       } else if (outputAst) {
         // Bitmark ==> AST
-        res = this.bitmarkParser.toAst(inStr, {
-          parserType: bitmarkParserType,
-        });
+        await bitmarkToAst(inStr);
       } else {
         // Bitmark ==> JSON
-        if (bitmarkParserType === BitmarkParserType.antlr) {
-          // Convert the bitmark to JSON using the antlr parser
-          const json = this.bitmarkParser.parse(inStr);
-
-          if (opts.outputFile) {
-            const jsonStr = JSON.stringify(json, undefined, jsonPrettifySpace);
-
-            // Write JSON to file
-            const flag = fileOptions.append ? 'a' : 'w';
-            fs.ensureDirSync(path.dirname(opts.outputFile.toString()));
-            fs.writeFileSync(opts.outputFile, jsonStr, {
-              flag,
-            });
-          } else {
-            // Return JSON as object
-            res = json;
-          }
-        } else {
-          // Convert the bitmark to JSON using the peggy parser
-
-          // Generate AST from the Bitmark markup
-          ast = this.bitmarkParser.toAst(inStr, {
-            parserType: bitmarkParserType,
-          });
-
-          // Convert the JSON to bitmark
-          if (opts.outputFile) {
-            // Write JSON file
-            const generator = new JsonFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
-            await generator.generate(ast);
-          } else {
-            // Generate JSON object
-            const generator = new JsonObjectGenerator(bitmarkOptions);
-            res = await generator.generate(ast);
-          }
-        }
+        await bitmarkToJSON(inStr);
       }
     } else if (isAst) {
       // Input was AST
       ast = ast as BitmarkAst;
       if (outputAst) {
         // AST ==> AST
-        res = ast;
+        await astToAst(ast);
       } else if (outputJson) {
         // AST ==> JSON
-        throw new Error('Converting AST to JSON is not yet supported');
+        await astToJSON(ast);
       } else {
         // AST ==> Bitmark
-        // Convert the AST to bitmark
-        if (opts.outputFile) {
-          // Write markup file
-          const generator = new BitmarkFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
-          await generator.generate(ast);
-        } else {
-          // Generate markup string
-          const generator = new BitmarkStringGenerator(bitmarkOptions);
-          res = await generator.generate(ast);
-        }
+        await astToBitmark(ast);
       }
     } else {
       // Input was JSON
       ast = ast as BitmarkAst;
       if (outputJson) {
         // JSON ==> JSON
-        // Return the original input as JSON (TODO - validate it)
-        res = this.jsonParser.preprocessJson(inStr);
+        await jsonToJSON(inStr);
       } else if (outputAst) {
         // JSON ==> AST
-        res = ast;
+        await jsonToAst(ast);
       } else {
         // JSON ==> Bitmark
-        // Convert the JSON to bitmark
-        if (opts.outputFile) {
-          // Write markup file
-          const generator = new BitmarkFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
-          await generator.generate(ast);
-        } else {
-          // Generate markup string
-          const generator = new BitmarkStringGenerator(bitmarkOptions);
-          res = await generator.generate(ast);
-        }
+        await jsonToBitmark(ast);
       }
     }
 

@@ -3,9 +3,14 @@
 
 ![Build & Test](https://github.com/getMoreBrain/bitmark-generator/actions/workflows/build-test.yml/badge.svg?branch=main)
 
-A bitmark generator using an Abstract Syntax Tree (AST).
+NOTE: THIS PROJECT IS NOT YET PRODUCTION READY.
 
-Use this package to programmatically create bitmark or convert between bitmark formats.
+A bitmark parser and generator using an Abstract Syntax Tree (AST) and Peggy.js.
+
+Use this package to:
+- parse bitmark markup in NodeJS or the browser.
+- programmatically create or modify bitmark.
+- validate and prettify bitmark.
 
 ## Installation
 
