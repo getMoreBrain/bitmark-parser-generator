@@ -6,6 +6,7 @@ import * as fs from 'fs-extra';
 import path from 'path';
 
 import { BitmarkFileGenerator } from '../../../../src/generator/bitmark/BitmarkFileGenerator';
+import { JsonFileGenerator } from '../../../../src/generator/json/JsonFileGenerator';
 import { BitmarkParser } from '../../../../src/parser/bitmark/BitmarkParser';
 import { JsonParser } from '../../../../src/parser/json/JsonParser';
 import { FileUtils } from '../../../../src/utils/FileUtils';
@@ -51,7 +52,13 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // - 249: wiss_aufgabensammlung_business_engineering (parser error, [.interview] Body is incorrect - has the first question attached to it.)
 
 const SINGLE_FILE_START = 0;
-const SINGLE_FILE_COUNT = 1;
+const SINGLE_FILE_COUNT = 1000;
+
+// Set to true to test against the ANTLR parser rather than static JSON This is a slow process.
+const TEST_AGAINST_ANTLR_PARSER = false;
+
+// Set to true to generate performance debug output
+const DEBUG_PERFORMANCE = true;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, '../../../../assets/test/books/bits');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, 'results/output');
@@ -72,31 +79,8 @@ function getTestFilenames(): string[] {
   return files;
 }
 
-// function writeTestJsonAndBitmark(json: unknown, fullFolder: string, id: string): void {
-//   // // Write original JSON
-//   const jsonFile = path.resolve(fullFolder, `${id}.json`);
-//   fs.writeFileSync(jsonFile, JSON.stringify(json, null, 2));
-
-//   // Write original Bitmark
-//   const bitwrappers = BitmarkJson.preprocessJson(json);
-
-//   const markupFile = path.resolve(fullFolder, `${id}.bit`);
-//   let markup = '';
-//   for (let i = 0, len = bitwrappers.length; i < len; i++) {
-//     const bw = bitwrappers[i];
-//     const first = i === 0;
-
-//     if (!first && bw.bitmark) {
-//       markup += '\n\n\n';
-//     }
-
-//     markup += bw.bitmark || '';
-//   }
-//   fs.writeFileSync(markupFile, markup);
-// }
-
 describe('bitmark-generator', () => {
-  describe('JSON => Markup => JSON: Books', () => {
+  describe('Markup (Books) => JSON => Markup => JSON', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
 
@@ -112,9 +96,14 @@ describe('bitmark-generator', () => {
     //   test('JSON ==> Markup ==> JSON', async () => {
 
     allTestFiles.forEach((testFile: string) => {
+      performance.clearMarks();
+      performance.clearMeasures();
+
       const partFolderAndFile = testFile.replace(TEST_INPUT_DIR, '');
       const partFolder = path.dirname(partFolderAndFile);
       const fullFolder = path.join(TEST_OUTPUT_DIR, partFolder);
+      // const fullJsonInputFolder = path.join(JSON_INPUT_DIR, partFolder);
+      const fileId = testFile.replace(TEST_INPUT_DIR + '/', '');
       const id = path.basename(partFolderAndFile, '.bit');
 
       // console.log('partFolderAndFile', partFolderAndFile);
@@ -126,10 +115,12 @@ describe('bitmark-generator', () => {
         fs.ensureDirSync(fullFolder);
 
         // Calculate the filenames
+        // const testJsonFile = path.resolve(fullJsonInputFolder, `${id}.json`);
         const originalMarkupFile = path.resolve(fullFolder, `${id}.bit`);
         const originalJsonFile = path.resolve(fullFolder, `${id}.json`);
         const generatedMarkupFile = path.resolve(fullFolder, `${id}.gen.bit`);
         const generatedJsonFile = path.resolve(fullFolder, `${id}.gen.json`);
+        const generatedAstFile = path.resolve(fullFolder, `${id}.ast.json`);
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);
 
         // Copy the original test markup file to the output folder
@@ -138,13 +129,34 @@ describe('bitmark-generator', () => {
         // Read in the test markup file
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
-        // Generate JSON from generated bitmark markup using the parser
-        const originalJson = bitmarkParser.parse(originalMarkup);
+        // Generate JSON from original bitmark markup using the parser
+        let originalJson: unknown;
 
-        // Write the new JSON
-        fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {
-          encoding: 'utf8',
-        });
+        if (TEST_AGAINST_ANTLR_PARSER) {
+          // Generate JSON from original bitmark markup using the ANTLR parser
+          performance.mark('ANTLR:Start');
+          originalJson = bitmarkParser.parse(originalMarkup);
+
+          // Write the new JSON
+          fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {
+            encoding: 'utf8',
+          });
+
+          performance.mark('ANTLR:End');
+        } else {
+          // Generate JSON from original bitmark markup using the PEG parser
+          const bitmarkAst = bitmarkParser.toAst(originalMarkup);
+
+          // Generate JSON from AST
+          const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
+            prettify: true,
+          });
+
+          await generator.generate(bitmarkAst);
+
+          // Read in the test JSON file
+          originalJson = fs.readJsonSync(generatedJsonFile, 'utf8');
+        }
 
         // Remove uninteresting JSON items
         BitJsonUtils.cleanupJson(originalJson, { removeParser: true, removeErrors: true });
@@ -153,7 +165,13 @@ describe('bitmark-generator', () => {
         // writeTestJsonAndBitmark(originalJson, fullFolder, id);
 
         // Convert the bitmark JSON to bitmark AST
+        performance.mark('GEN:Start');
         const bitmarkAst = jsonParser.toAst(originalJson);
+
+        // Write the new AST
+        fs.writeFileSync(generatedAstFile, JSON.stringify(bitmarkAst, null, 2), {
+          encoding: 'utf8',
+        });
 
         // Generate markup code from AST
         const generator = new BitmarkFileGenerator(generatedMarkupFile, undefined, {
@@ -162,15 +180,41 @@ describe('bitmark-generator', () => {
 
         await generator.generate(bitmarkAst);
 
+        performance.mark('GEN:End');
+
+        // Read in the generated markup file
         const newMarkup = fs.readFileSync(generatedMarkupFile, 'utf8');
 
         // Generate JSON from generated bitmark markup using the parser
-        const newJson = bitmarkParser.parse(newMarkup);
+        let newJson: unknown;
 
-        // Write the new JSON
-        fs.writeFileSync(generatedJsonFile, JSON.stringify(newJson, null, 2), {
-          encoding: 'utf8',
-        });
+        if (TEST_AGAINST_ANTLR_PARSER) {
+          // Generate JSON from generated bitmark markup using the ANTLR parser
+          newJson = bitmarkParser.parse(newMarkup);
+
+          // Write the new JSON
+          fs.writeFileSync(generatedJsonFile, JSON.stringify(newJson, null, 2), {
+            encoding: 'utf8',
+          });
+        } else {
+          // Generate JSON from generated bitmark markup using the PEG parser
+          const bitmarkAst = bitmarkParser.toAst(newMarkup);
+
+          // Write the new AST
+          fs.writeFileSync(generatedAstFile, JSON.stringify(bitmarkAst, null, 2), {
+            encoding: 'utf8',
+          });
+
+          // Generate JSON from AST
+          const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
+            prettify: true,
+          });
+
+          await generator.generate(bitmarkAst);
+
+          // Read in the generated JSON file
+          newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
+        }
 
         // Remove uninteresting JSON items
         BitJsonUtils.cleanupJson(originalJson, { removeMarkup: true });
@@ -185,6 +229,12 @@ describe('bitmark-generator', () => {
         fs.writeFileSync(jsonDiffFile, JSON.stringify(diffMap, null, 2), {
           encoding: 'utf8',
         });
+
+        // Print performance information
+        if (DEBUG_PERFORMANCE) {
+          const genTimeSecs = Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
+          console.log(`'${fileId}' timing; GEN: ${genTimeSecs} s`);
+        }
 
         expect(newJson).toEqual(originalJson);
 

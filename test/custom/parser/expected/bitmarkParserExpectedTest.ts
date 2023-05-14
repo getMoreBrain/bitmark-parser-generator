@@ -20,10 +20,11 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 // const SINGLE_FILE_START = 6;
 // const SINGLE_FILE_COUNT = 1;
 
+// Set to configure the start file index and the number of files to test
 const SINGLE_FILE_START = 0;
 const SINGLE_FILE_COUNT = 1000;
 
-// Use the following flag to test against the ANTLR parser. This is a slow process.
+// Set to true to test against the ANTLR parser rather than static JSON This is a slow process.
 const TEST_AGAINST_ANTLR_PARSER = false;
 
 // Set to true to generate performance debug output
@@ -35,6 +36,7 @@ const TEST_INPUT_DIR = path.resolve(BITMARK_GRAMMAR_DIR, 'src/tests');
 const JSON_INPUT_DIR = path.resolve(__dirname, 'json');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, 'results/output');
 
+// Enable or disable testing of specific files
 const TEST_FILES = [
   // 'annotate1.bit',
   'appresource.bit',
@@ -366,38 +368,15 @@ const bitmarkParser = new BitmarkParser();
  */
 function getTestFilenames(): string[] {
   const files = FileUtils.getFilenamesSync(TEST_INPUT_DIR, {
-    // match: new RegExp('.+.bit'),
+    // match: new RegExp('.+\\.bit$'),
     recursive: true,
   });
 
   return files;
 }
 
-// function writeTestJsonAndBitmark(json: unknown, fullFolder: string, id: string): void {
-//   // // Write original JSON
-//   const jsonFile = path.resolve(fullFolder, `${id}.json`);
-//   fs.writeFileSync(jsonFile, JSON.stringify(json, null, 2));
-
-//   // Write original Bitmark
-//   const bitwrappers = BitmarkJson.preprocessJson(json);
-
-//   const markupFile = path.resolve(fullFolder, `${id}.bit`);
-//   let markup = '';
-//   for (let i = 0, len = bitwrappers.length; i < len; i++) {
-//     const bw = bitwrappers[i];
-//     const first = i === 0;
-
-//     if (!first && bw.bitmark) {
-//       markup += '\n\n\n';
-//     }
-
-//     markup += bw.bitmark || '';
-//   }
-//   fs.writeFileSync(markupFile, markup);
-// }
-
 describe('bitmark-parser', () => {
-  describe('Markup => JSON: Books', () => {
+  describe('Markup (ANTLR Tests) => JSON', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
 
@@ -411,7 +390,7 @@ describe('bitmark-parser', () => {
         return true;
       } else {
         // FOR DEBUG
-        // console.log(`Skipping test file: ${partFolderAndFile}`);
+        // console.log(`Skipping test file: ${fileId}`);
       }
     });
 
@@ -420,9 +399,6 @@ describe('bitmark-parser', () => {
     }
 
     console.info(`Tests found: ${allTestFiles.length}`);
-
-    // describe.each(allTestFiles)('Test file: %s', (testFile: string) => {
-    //   test('JSON ==> Markup ==> JSON', async () => {
 
     allTestFiles.forEach((testFile: string) => {
       performance.clearMarks();

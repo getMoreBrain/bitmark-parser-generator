@@ -1,0 +1,412 @@
+[
+  {
+    "bitmark": "[.match:bitmark--]\n[@id:197919]\n[!Verfallene Verluste per 01.01.2018]\n===\n[#Jahr]\n==\n[#CHF]\n===\n2008\n==\n- 150'000.00\n===\n2009\n==\n- 70'000.00\n===\n2010\n==\n0\n===\n2011\n==\n0\n===\n2012\n==\n0\n===\n2013\n==\n0\n===\n2014\n==\n0\n===\n2015\n==\n0\n===\n2016\n==\n0\n===\n2017\n==\n0\n===\nTotal\n==\n- 220'000.00\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "",
+      "heading": {
+        "forKeys": "Jahr",
+        "forValues": "CHF"
+      },
+      "pairs": [
+        {
+          "key": "2008",
+          "values": [
+            "- 150'000.00"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2009",
+          "values": [
+            "- 70'000.00"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2010",
+          "values": [
+            "0"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2011",
+          "values": [
+            "0"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2012",
+          "values": [
+            "0"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2013",
+          "values": [
+            "0"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2014",
+          "values": [
+            "0"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2015",
+          "values": [
+            "0"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2016",
+          "values": [
+            "0"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2017",
+          "values": [
+            "0"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Total",
+          "values": [
+            "- 220'000.00"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "197919"
+      ],
+      "instruction": "Verfallene Verluste per 01.01.2018"
+    }
+  },
+  {
+    "bitmark": "[.match:bitmark--]\n[@id:213782]\n[%1][%Geschlossene Fragen]\n[!Ordnen Sie die Bedürfnisse gemäss den fünf Arten nach Maslow den Aussagen zu. Mehrfachzuweisungen sind möglich.]\n\nA. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung\n===\n[#Aussage]\n==\n[#Bedürfnis]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n===\nAls Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.\n==\nE\n===\nMarcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.\n==\nC\n===\nCorinne bildet sich mit Abendkursen weiter.\n==\nE\n===\nZwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.\n==\nC\n===\nStefan freut sich über ein Lob seiner Vorgesetzten.\n==\nD\n===\nDaniel Gerber verbringt den Abend vor dem Computer, um zu chatten.\n==\nC\n===\nEin Ehepaar installiert eine Alarmanlage im Haus.\n==\nB\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "1",
+      "heading": {
+        "forKeys": "Aussage",
+        "forValues": "Bedürfnis"
+      },
+      "pairs": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "values": [
+            "A"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Als Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.",
+          "values": [
+            "E"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Marcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.",
+          "values": [
+            "C"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Corinne bildet sich mit Abendkursen weiter.",
+          "values": [
+            "E"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Zwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.",
+          "values": [
+            "C"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Stefan freut sich über ein Lob seiner Vorgesetzten.",
+          "values": [
+            "D"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Daniel Gerber verbringt den Abend vor dem Computer, um zu chatten.",
+          "values": [
+            "C"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Ein Ehepaar installiert eine Alarmanlage im Haus.",
+          "values": [
+            "B"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "A. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung",
+      "id": [
+        "213782"
+      ],
+      "lead": "Geschlossene Fragen",
+      "instruction": "Ordnen Sie die Bedürfnisse gemäss den fünf Arten nach Maslow den Aussagen zu. Mehrfachzuweisungen sind möglich."
+    }
+  },
+  {
+    "bitmark": "[.match:bitmark--]\n[@id:208467]\n[%1][%Geschlossene Fragen]\n[!Ordnen Sie die Bedürfnisse gemäss den fünf Arten nach Maslow den Aussagen zu. Mehrfachzuweisungen sind möglich.]\n\nA. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung\n===\n[#Aussage]\n==\n[#Bedürfnis]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n===\nAls Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.\n==\nE\n===\nMarcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.\n==\nC\n===\nCorinne bildet sich mit Abendkursen weiter.\n==\nE\n===\nZwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.\n==\nC\n===\nStefan freut sich über ein Lob seiner Vorgesetzten.\n==\nD\n===\nDaniel Gerber verbringt den Abend vor dem Computer, um zu chatten.\n==\nC\n===\nEin Ehepaar installiert eine Alarmanlage im Haus.\n==\nB\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "1",
+      "heading": {
+        "forKeys": "Aussage",
+        "forValues": "Bedürfnis"
+      },
+      "pairs": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "values": [
+            "A"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Als Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.",
+          "values": [
+            "E"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Marcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.",
+          "values": [
+            "C"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Corinne bildet sich mit Abendkursen weiter.",
+          "values": [
+            "E"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Zwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.",
+          "values": [
+            "C"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Stefan freut sich über ein Lob seiner Vorgesetzten.",
+          "values": [
+            "D"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Daniel Gerber verbringt den Abend vor dem Computer, um zu chatten.",
+          "values": [
+            "C"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Ein Ehepaar installiert eine Alarmanlage im Haus.",
+          "values": [
+            "B"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "A. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung",
+      "id": [
+        "208467"
+      ],
+      "lead": "Geschlossene Fragen",
+      "instruction": "Ordnen Sie die Bedürfnisse gemäss den fünf Arten nach Maslow den Aussagen zu. Mehrfachzuweisungen sind möglich."
+    }
+  }
+]

@@ -224,29 +224,6 @@ function getTestFilenames(): string[] {
   return files;
 }
 
-// function writeTestJsonAndBitmark(json: unknown, fullFolder: string, id: string): void {
-//   // // Write original JSON
-//   const jsonFile = path.resolve(fullFolder, `${id}.json`);
-//   fs.writeFileSync(jsonFile, JSON.stringify(json, null, 2));
-
-//   // Write original Bitmark
-//   const bitwrappers = BitmarkJson.preprocessJson(json);
-
-//   const markupFile = path.resolve(fullFolder, `${id}.bit`);
-//   let markup = '';
-//   for (let i = 0, len = bitwrappers.length; i < len; i++) {
-//     const bw = bitwrappers[i];
-//     const first = i === 0;
-
-//     if (!first && bw.bitmark) {
-//       markup += '\n\n\n';
-//     }
-
-//     markup += bw.bitmark || '';
-//   }
-//   fs.writeFileSync(markupFile, markup);
-// }
-
 describe('bitmark-parser', () => {
   describe('Markup => JSON: Books', () => {
     // Ensure required folders

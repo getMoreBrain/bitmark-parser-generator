@@ -1,0 +1,32 @@
+[
+  {
+    "bitmark": "[.info:bitmark++]\n[@id:287895]\n**Assignment** is very close to an ==article==|link:https://docs.bitmark.cloud/quizzes/#article|. The difference is, that this is a \"quiz\" and therefore has an instruction property. The distinction is important for display, sharing, ...",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "**Assignment** is very close to an ==article==|link:https://docs.bitmark.cloud/quizzes/#article|. The difference is, that this is a \"quiz\" and therefore has an instruction property. The distinction is important for display, sharing, ...",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "287895"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:287886]\n__Simple true/false image quiz__",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "__Simple true/false image quiz__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "287886"
+      ]
+    }
+  }
+]

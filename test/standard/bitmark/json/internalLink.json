@@ -1,0 +1,53 @@
+[
+  {
+    "bitmark": "[.internal-link]\n[@id:192356]\n[!Überprüfe deine Antwort nach dem Lesen:]\n[►Ref_Starbucks]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "192356"
+      ],
+      "instruction": "Überprüfe deine Antwort nach dem Lesen:",
+      "reference": "Ref_Starbucks"
+    }
+  },
+  {
+    "bitmark": "[.internal-link]\n[@id:192374]\n[!Überprüfe deine Antwort nach dem Lesen:]\n[►Ref_Emmi]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "192374"
+      ],
+      "instruction": "Überprüfe deine Antwort nach dem Lesen:",
+      "reference": "Ref_Emmi"
+    }
+  },
+  {
+    "bitmark": "[.internal-link]\n[@id:192383]\n[!Überprüfe deine Antwort nach dem Lesen:]\n[►Ref_Globus]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "192383"
+      ],
+      "instruction": "Überprüfe deine Antwort nach dem Lesen:",
+      "reference": "Ref_Globus"
+    }
+  }
+]
