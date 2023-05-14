@@ -1,0 +1,2404 @@
+[
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[!Beispiel: \nPaolo ___ Italiener.]\n[-a) sind] [-b) seid] [+c) ist][@example] [-d) bin]\n \nStufe eins:",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Beispiel: \nPaolo ___ Italiener.",
+      "body": "Stufe eins:",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) sind",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) seid",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) ist",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) bin",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": ""
+    },
+    "example": "",
+    "errors": [
+      {
+        "message": "Unexpected input 'Stufe eins'",
+        "line": 6,
+        "column": 0,
+        "errorLine": "Stufe eins: "
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%1.]\n[!Hallo! Ich ________________ Ralf Müller.]\n[-a) ist]\n[-b) Name]\n[+c) bin]\n[-d) von]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "1.",
+      "instruction": "Hallo! Ich ________________ Ralf Müller.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) ist",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Name",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) bin",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) von",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '  '",
+        "line": 8,
+        "column": 0,
+        "errorLine": "  "
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%2.]\n[!________________ ist das? Das ist der Lehrer.]\n[-a)Was ]\n[-b)Wo]\n[-c) Wie]\n[+d) Wer]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "2.",
+      "instruction": "________________ ist das? Das ist der Lehrer.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a)Was",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b)Wo",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Wie",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) Wer",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '  '",
+        "line": 8,
+        "column": 0,
+        "errorLine": "  "
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%3.]\n[!Das ist mein Laptop. Das sind ________________ E-Mails.]\n[-a) mein]\n[+b) meine]\n[-c) meines]\n[-d) meinen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "3.",
+      "instruction": "Das ist mein Laptop. Das sind ________________ E-Mails.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) mein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) meine",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) meines",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) meinen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '  '",
+        "line": 8,
+        "column": 0,
+        "errorLine": "  "
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%4.]\n[!Haben Sie ________________? Ja, ich habe einen Bruder.]\n[-a) einen Mann]\n[-b) Kinder]\n[+c) Geschwister]\n[-d) einen Sohn]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "4.",
+      "instruction": "Haben Sie ________________? Ja, ich habe einen Bruder.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) einen Mann",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Kinder",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Geschwister",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) einen Sohn",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '  '",
+        "line": 8,
+        "column": 0,
+        "errorLine": "  "
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%5.]\n[!Wie spät ist es? 19.30 Uhr.]\n[+a) halb acht]\n[-b) neun Uhr dreißig]\n[-c) neunzehn Uhr dreizehn]\n[-d) halb zehn]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "5.",
+      "instruction": "Wie spät ist es? 19.30 Uhr.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) halb acht",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) neun Uhr dreißig",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) neunzehn Uhr dreizehn",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) halb zehn",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '  '",
+        "line": 8,
+        "column": 0,
+        "errorLine": "  "
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%6.]\n[!Wo steht der Fernseher? Er steht ________________ dem Tisch.]\n[-a) ein]\n[-b) zwischen]\n[-c) durch]\n[+d) auf]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "6.",
+      "instruction": "Wo steht der Fernseher? Er steht ________________ dem Tisch.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) ein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) zwischen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) durch",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) auf",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '  '",
+        "line": 8,
+        "column": 0,
+        "errorLine": "  "
+      },
+      {
+        "message": "Unexpected input '  '",
+        "line": 9,
+        "column": 0,
+        "errorLine": "  "
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%7.]\n[!Wohin fährst du? Ich fahre ________________ Berlin.]\n[-a) zu]\n[+b) nach]\n[-c) auf]\n[-d) hin]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "7.",
+      "instruction": "Wohin fährst du? Ich fahre ________________ Berlin.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) zu",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) nach",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) auf",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) hin",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '  '",
+        "line": 8,
+        "column": 0,
+        "errorLine": "  "
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%8.]\n[!Als ________________ nehme ich eine Suppe.]\n[+a) Vorspeise]\n[-b) Nachspeise]\n[-c) Salat]\n[-d) Getränk]\n \n \n \nStufe 2",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "8.",
+      "instruction": "Als ________________ nehme ich eine Suppe.",
+      "body": "Stufe 2",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "a) Vorspeise",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "b) Nachspeise",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "c) Salat",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "d) Getränk",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'Stufe 2 '",
+        "line": 11,
+        "column": 0,
+        "errorLine": "Stufe 2 "
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%9.]\n[!Das Buch gehört ________________!]\na) mich  \nb) meinen Bruder  \nc) meine Schwester \nd) mir",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "9.",
+      "instruction": "Das Buch gehört ________________!",
+      "body": "a) mich  \nb) meinen Bruder  \nc) meine Schwester \nd) mir",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%10.]\n[!Welche ________________ haben Sie? Bei Hosen habe ich 40.]\na) Zahl  \nb) Hose  \nc) Größe \nd) Jacke",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "10.",
+      "instruction": "Welche ________________ haben Sie? Bei Hosen habe ich 40.",
+      "body": "a) Zahl  \nb) Hose  \nc) Größe \nd) Jacke",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%11.]\n[!Der Arzt schreibt mich krank. Ich bin ________________.]\na) krankschreiben  \nb) krankenschrift  \nc) krankenschreiben \nd) krankgeschrieben",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "11.",
+      "instruction": "Der Arzt schreibt mich krank. Ich bin ________________.",
+      "body": "a) krankschreiben  \nb) krankenschrift  \nc) krankenschreiben \nd) krankgeschrieben",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%12.]\n[!Ich möchte mich für die Prüfung ________________.]\na) beantragen  \nb) ablegen  \nc) anmelden \nd) finden",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "12.",
+      "instruction": "Ich möchte mich für die Prüfung ________________.",
+      "body": "a) beantragen  \nb) ablegen  \nc) anmelden \nd) finden",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%13.]\n[!Ich möchte wissen, ________________ der Bahnhof ist.]\na) wann  \nb) wo  \nc) wer \nd) ob",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "13.",
+      "instruction": "Ich möchte wissen, ________________ der Bahnhof ist.",
+      "body": "a) wann  \nb) wo  \nc) wer \nd) ob",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%14.]\n[!Frau Friedrich ________________ das Fenster ________________.]\na) hast/zumachen  \nb) hat/zumacht  \nc) hat/zugemacht \nd) habe/zumachst",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "14.",
+      "instruction": "Frau Friedrich ________________ das Fenster ________________.",
+      "body": "a) hast/zumachen  \nb) hat/zumacht  \nc) hat/zugemacht \nd) habe/zumachst",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%15.]\n[!Das sind die ________________ Modelle.]\na) aktuellen  \nb) aktuelles  \nc) aktuelle \nd) aktueller",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "15.",
+      "instruction": "Das sind die ________________ Modelle.",
+      "body": "a) aktuellen  \nb) aktuelles  \nc) aktuelle \nd) aktueller",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%16.]\n[!Erholen Sie sich in unserem ________________ Wellnessbereich.]\na) neuen  \nb) neuem  \nc) neuer \nd) neues \n \n \n \n \nStufe drei",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "16.",
+      "instruction": "Erholen Sie sich in unserem ________________ Wellnessbereich.",
+      "body": "a) neuen  \nb) neuem  \nc) neuer \nd) neues \n \n \n \n \nStufe drei",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 13,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%17.]\n[!Das Haus hat nicht nur einen Balkon, ________________ auch einen Garten.]\na) aber  \nb) sondern  \nc) oder  \nd) mit",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "17.",
+      "instruction": "Das Haus hat nicht nur einen Balkon, ________________ auch einen Garten.",
+      "body": "a) aber  \nb) sondern  \nc) oder  \nd) mit",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%18.]\n[!Ich brauche einen Hammer, ________________ Nägel in die Wand ________________ schlagen.]\na) und/für  \nb) zwei/von  \nc) für/zu \nd) um/zu",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "18.",
+      "instruction": "Ich brauche einen Hammer, ________________ Nägel in die Wand ________________ schlagen.",
+      "body": "a) und/für  \nb) zwei/von  \nc) für/zu \nd) um/zu",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 11,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%19.]\n[!________________ Tag ist heute?]\na) Welcher  \nb) Was für eine  \nc) Was \nd) Wann",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "19.",
+      "instruction": "________________ Tag ist heute?",
+      "body": "a) Welcher  \nb) Was für eine  \nc) Was \nd) Wann",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%20.]\n[!________________ es regnet, bleibe ich zu Hause.]\na) Wann  \nb) Als  \nc) So \nd) Wenn",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "20.",
+      "instruction": "________________ es regnet, bleibe ich zu Hause.",
+      "body": "a) Wann  \nb) Als  \nc) So \nd) Wenn",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%21.]\n[!Das Buch ist spannender ________________ der Film.]\na) wie  \nb) als  \nc) als wie \nd) wie als",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "21.",
+      "instruction": "Das Buch ist spannender ________________ der Film.",
+      "body": "a) wie  \nb) als  \nc) als wie \nd) wie als",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%22.]\n[!Es liegt hinter ________________.]\na) mir  \nb) dich  \nc) sie \nd) ihn",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "22.",
+      "instruction": "Es liegt hinter ________________.",
+      "body": "a) mir  \nb) dich  \nc) sie \nd) ihn",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%23.]\n[!Ich bin mit ________________ einverstanden.]\na) alle  \nb) alles  \nc) allem \nd) aller",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "23.",
+      "instruction": "Ich bin mit ________________ einverstanden.",
+      "body": "a) alle  \nb) alles  \nc) allem \nd) aller",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%24.]\n[!Ich freue mich ________________ den Urlaub.]\na) an  \nb) auf  \nc) über \nd) für \n \n \n \nStufe vier",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "24.",
+      "instruction": "Ich freue mich ________________ den Urlaub.",
+      "body": "a) an  \nb) auf  \nc) über \nd) für \n \n \n \nStufe vier",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 12,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%25.]\n[!Schön, dich zu ______________!]\na) nennen  \nb) kennenlernen  \nc) sehen \nd) gehen",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "25.",
+      "instruction": "Schön, dich zu ______________!",
+      "body": "a) nennen  \nb) kennenlernen  \nc) sehen \nd) gehen",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%26.]\n[!Der Verkäufer zeigt ________ Mann ______ Uhr.]\na) das/der  \nb) den/das  \nc) dem/den \nd) dem/die",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "26.",
+      "instruction": "Der Verkäufer zeigt ________ Mann ______ Uhr.",
+      "body": "a) das/der  \nb) den/das  \nc) dem/den \nd) dem/die",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%27.]\n[!Ein Haus in Japan kostet im Vergleich zu Deutschland ________________.]\na) jede zweite  \nb) ungefähr  \nc) halb  \nd) das Doppelte",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "27.",
+      "instruction": "Ein Haus in Japan kostet im Vergleich zu Deutschland ________________.",
+      "body": "a) jede zweite  \nb) ungefähr  \nc) halb  \nd) das Doppelte",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%28.]\n[!Die Werbung ist ________________.]\na) schnellsten  \nb) einfallsreich  \nc) neue  \nd) günstigere",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "28.",
+      "instruction": "Die Werbung ist ________________.",
+      "body": "a) schnellsten  \nb) einfallsreich  \nc) neue  \nd) günstigere",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%29.]\n[!Ich bin an einer Mitarbeit in Ihrer Firma interessiert, ________________ bewerbe ich mich bei Ihnen.]\na) deshalb  \nb) damit  \nc) sodass \nd) denn",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "29.",
+      "instruction": "Ich bin an einer Mitarbeit in Ihrer Firma interessiert, ________________ bewerbe ich mich bei Ihnen.",
+      "body": "a) deshalb  \nb) damit  \nc) sodass \nd) denn",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 11,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%30.]\n[!Während ________________ Ferien habe ich gelesen.]\na) den  \nb) die  \nc) der \nd) denen",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "30.",
+      "instruction": "Während ________________ Ferien habe ich gelesen.",
+      "body": "a) den  \nb) die  \nc) der \nd) denen",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%31.]\n[!Kannst du ________________ sehen?]\na) irgendetwas  \nb) irgendwo  \nc) irgendwer \nd) irgendein",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "31.",
+      "instruction": "Kannst du ________________ sehen?",
+      "body": "a) irgendetwas  \nb) irgendwo  \nc) irgendwer \nd) irgendein",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%32.]\n[!Bevor er sie heiratete, ________________ er sich in sie verliebt.]\na) hat  \nb) ist  \nc) war \nd) hatte \n  \n  \n  \n  \n \nStufe fünf",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "32.",
+      "instruction": "Bevor er sie heiratete, ________________ er sich in sie verliebt.",
+      "body": "a) hat  \nb) ist  \nc) war \nd) hatte \n  \n  \n  \n  \n \nStufe fünf",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 14,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%33.]\n[!Die Bedienungsanleitung ________________ noch gedruckt.]\na) ist  \nb) kann  \nc) wird  \nd) soll",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "33.",
+      "instruction": "Die Bedienungsanleitung ________________ noch gedruckt.",
+      "body": "a) ist  \nb) kann  \nc) wird  \nd) soll",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%34. ]\n[!Der Mann, ________________ das Auto gehört, heißt Paul.]\na) der  \nb) dem  \nc) des  \nd) den",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "34.",
+      "instruction": "Der Mann, ________________ das Auto gehört, heißt Paul.",
+      "body": "a) der  \nb) dem  \nc) des  \nd) den",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%35.]\n[!Das ist ________________ Wagen, aber nicht ________________.]\na) derselbe/der gleiche  \nb) denselben/den gleichen  \nc) den gleichen/denselben  \nd) der gleiche/derselbe",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "35.",
+      "instruction": "Das ist ________________ Wagen, aber nicht ________________.",
+      "body": "a) derselbe/der gleiche  \nb) denselben/den gleichen  \nc) den gleichen/denselben  \nd) der gleiche/derselbe",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%36.]\n[!Ich ________________ mich gerne verkleiden ________________.]\na) ware/haben  \nb) würde/können  \nc) wurde/gehabt  \nd) war/sein",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "36.",
+      "instruction": "Ich ________________ mich gerne verkleiden ________________.",
+      "body": "a) ware/haben  \nb) würde/können  \nc) wurde/gehabt  \nd) war/sein",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%37.]\n[!________________ Sie noch so nett, sich frei zu machen, damit ich Ihre Lunge abhören kann?]\na) Hätten  \nb) Wären  \nc) Könnten  \nd) Sollten",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "37.",
+      "instruction": "________________ Sie noch so nett, sich frei zu machen, damit ich Ihre Lunge abhören kann?",
+      "body": "a) Hätten  \nb) Wären  \nc) Könnten  \nd) Sollten",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%38. ]\n[!Ich muss sie ________________ kennen, ________________ muss ich sie mögen.]\na) eigentlich/aber  \nb) nicht nur/sondern auch  \nc) sowohl/als auch  \nd) weder/noch",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "38.",
+      "instruction": "Ich muss sie ________________ kennen, ________________ muss ich sie mögen.",
+      "body": "a) eigentlich/aber  \nb) nicht nur/sondern auch  \nc) sowohl/als auch  \nd) weder/noch",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%39. ]\n[!Du findest es sicher toll, alle Sehenswürdigkeiten ________________.]\na) zu besichtigen  \nb) zu beschichten  \nc) zu beschützen \nd) zu berichten",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "39.",
+      "instruction": "Du findest es sicher toll, alle Sehenswürdigkeiten ________________.",
+      "body": "a) zu besichtigen  \nb) zu beschichten  \nc) zu beschützen \nd) zu berichten",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%40. ]\nWir leben kurz außerhalb ________________. \na) die Stadt  \nb) zur Stadt  \nc) der Stadt \nd) vom Stadt \n \n \n \nStufe sechs",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "40.",
+      "instruction": "",
+      "body": "Wir leben kurz außerhalb ________________. \na) die Stadt  \nb) zur Stadt  \nc) der Stadt \nd) vom Stadt \n \n \n \nStufe sechs",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 12,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%41.]\n[!Ich hatte Glück, ________________ ich den Job bekommen habe.]\na) ob  \nb) dass  \nc) wie \nd) wo",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "41.",
+      "instruction": "Ich hatte Glück, ________________ ich den Job bekommen habe.",
+      "body": "a) ob  \nb) dass  \nc) wie \nd) wo",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%42.]\n[!Trotz ________________ geht er spazieren.]\na) dem starken Regen  \nb) der starke Regen  \nc) des starken Regens \nd) den starken Regen",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "42.",
+      "instruction": "Trotz ________________ geht er spazieren.",
+      "body": "a) dem starken Regen  \nb) der starke Regen  \nc) des starken Regens \nd) den starken Regen",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%43.]\n[!Warum fällt das Konzert aus? __________ der Sänger erkrankt ist.]\na) Darum  \nb) Denn  \nc) Deshalb \nd) Weil",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "43.",
+      "instruction": "Warum fällt das Konzert aus? __________ der Sänger erkrankt ist.",
+      "body": "a) Darum  \nb) Denn  \nc) Deshalb \nd) Weil",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%44.]\n[!Komm‘ bitte rauf! Ja, ich komme gleich ________________.]\na) hoch  \nb) unten \nc) draußen \nd) oben",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "44.",
+      "instruction": "Komm‘ bitte rauf! Ja, ich komme gleich ________________.",
+      "body": "a) hoch  \nb) unten \nc) draußen \nd) oben",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%45.]\n[!Vorher ________________.]\na) kauf ich mir ein Auto  \nb) ich mir ein Auto kauf  \nc) ich kauf mir ein Auto \nd) ich mir kauf ein Auto",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "45.",
+      "instruction": "Vorher ________________.",
+      "body": "a) kauf ich mir ein Auto  \nb) ich mir ein Auto kauf  \nc) ich kauf mir ein Auto \nd) ich mir kauf ein Auto",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%46.]\n[!Vielleicht ________________.]\na) bist du Recht  \nb) hast du Richtig \nc) hast du Recht \nd) liegst du Recht",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "46.",
+      "instruction": "Vielleicht ________________.",
+      "body": "a) bist du Recht  \nb) hast du Richtig \nc) hast du Recht \nd) liegst du Recht",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%47.]\n[!Wo haben Sie sich die Haare schneiden ________________?]\na) machen  \nb) färben  \nc) werden \nd) lassen",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "47.",
+      "instruction": "Wo haben Sie sich die Haare schneiden ________________?",
+      "body": "a) machen  \nb) färben  \nc) werden \nd) lassen",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%48.]\n[!________ Absender schickt__________ Empfänger ___________ Brief.]\na) der/den/dem  \nb) der/dem/dem  \nc) den/den/der  \nd) der/dem/den \n \n \nStufe sieben:",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "48.",
+      "instruction": "________ Absender schickt__________ Empfänger ___________ Brief.",
+      "body": "a) der/den/dem  \nb) der/dem/dem  \nc) den/den/der  \nd) der/dem/den \n \n \nStufe sieben:",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 12,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%49.]\n[!Ich freue mich sehr, Sie ________________.]\na) zu kennenlernen  \nb) kennen zu lernen  \nc) kennenlernen  \nd) zu lernenkennen",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "49.",
+      "instruction": "Ich freue mich sehr, Sie ________________.",
+      "body": "a) zu kennenlernen  \nb) kennen zu lernen  \nc) kennenlernen  \nd) zu lernenkennen",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%50.]\n[!Die Familie wohnt ________________ einem Supermarkt.]\na) gegenüber  \nb) zu  \nc) durch  \nd) ohne",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "50.",
+      "instruction": "Die Familie wohnt ________________ einem Supermarkt.",
+      "body": "a) gegenüber  \nb) zu  \nc) durch  \nd) ohne",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%51.]\n[!Der alte Mann, ________________ Wohnung im 3. Stock liegt, ist hilfebedürftig.]\na) dem  \nb) dessen  \nc) die \nd) sein",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "51.",
+      "instruction": "Der alte Mann, ________________ Wohnung im 3. Stock liegt, ist hilfebedürftig.",
+      "body": "a) dem  \nb) dessen  \nc) die \nd) sein",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%52.]\n[!Ich kenne einen ________________, der drei Schwestern hat.]\nd) Junges \na) Jungen  \nb) Jung  \nc) Junge",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "52.",
+      "instruction": "Ich kenne einen ________________, der drei Schwestern hat.",
+      "body": "d) Junges \na) Jungen  \nb) Jung  \nc) Junge",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%53.]\n[!Nach ________________ Arbeit gehe ich in die Stadt.]\na) die  \nb) der  \nc) des \nd) den",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "53.",
+      "instruction": "Nach ________________ Arbeit gehe ich in die Stadt.",
+      "body": "a) die  \nb) der  \nc) des \nd) den",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%54.]\n[!Das müssen wir machen! Das ________________ wir nächste Woche in Angriff.]\na) sehen  \nb) machen  \nc) legen \nd) nehmen",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "54.",
+      "instruction": "Das müssen wir machen! Das ________________ wir nächste Woche in Angriff.",
+      "body": "a) sehen  \nb) machen  \nc) legen \nd) nehmen",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%55.]\n[!Ich liebe ______________ Steak mit ________________ Salat.]\na) gegrillte/frische  \nb) gegrilltes/frischem  \nc) gegrillter/frischem \nd) gegrilltes/frisches",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "55.",
+      "instruction": "Ich liebe ______________ Steak mit ________________ Salat.",
+      "body": "a) gegrillte/frische  \nb) gegrilltes/frischem  \nc) gegrillter/frischem \nd) gegrilltes/frisches",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%56.]\n[!Eine Fußballmannschaft __________ aus 11 Spielern.]\na) versteht  \nb) gesteht  \nc) steht \nd) besteht \n \n \nStufe acht",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "56.",
+      "instruction": "Eine Fußballmannschaft __________ aus 11 Spielern.",
+      "body": "a) versteht  \nb) gesteht  \nc) steht \nd) besteht \n \n \nStufe acht",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 11,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%57.]\n[!Er kann das Problem lösen = Er ist ________________, das Problem zu lösen.]\na) stetig  \nb) fertig  \nc) nötig  \nd) fähig",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "57.",
+      "instruction": "Er kann das Problem lösen = Er ist ________________, das Problem zu lösen.",
+      "body": "a) stetig  \nb) fertig  \nc) nötig  \nd) fähig",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%58.]\n[!Er soll an dem Banküberfall ________________.]\na) beteiligt gewesen sein  \nb) begangen worden sein  \nc) verteilt haben  \nd) gefahndet werden haben",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "58.",
+      "instruction": "Er soll an dem Banküberfall ________________.",
+      "body": "a) beteiligt gewesen sein  \nb) begangen worden sein  \nc) verteilt haben  \nd) gefahndet werden haben",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%59.]\n[!Man kann den Termin auch verschieben, ________________ man einen neuen Termin finden kann.]\na) sodass  \nb) sofern  \nc) inwiefern  \nd) damit",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "59.",
+      "instruction": "Man kann den Termin auch verschieben, ________________ man einen neuen Termin finden kann.",
+      "body": "a) sodass  \nb) sofern  \nc) inwiefern  \nd) damit",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%60.]\n[!“Ich bin jeden Montag im Kino”. Er sagt, er ________________ jeden Montag im Kino.]\na) ist  \nb) wäre  \nc) sei  \nd) war",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "60.",
+      "instruction": "“Ich bin jeden Montag im Kino”. Er sagt, er ________________ jeden Montag im Kino.",
+      "body": "a) ist  \nb) wäre  \nc) sei  \nd) war",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%61.]\n[!Auf der Strecke ist es nicht leicht, einen Stau ________________.]\na) um zu fahren  \nb) umfahren  \nc) umzufahren  \nd) zu umfahren",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "61.",
+      "instruction": "Auf der Strecke ist es nicht leicht, einen Stau ________________.",
+      "body": "a) um zu fahren  \nb) umfahren  \nc) umzufahren  \nd) zu umfahren",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%62.]\n[!Wenn es weniger Verkehr ______________, ___________ die Belastung durch Abgase weniger.]\na) gibt / würde  \nb) gab / wird  \nc) gaben / wurde  \nd) gäbe / wäre",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "62.",
+      "instruction": "Wenn es weniger Verkehr ______________, ___________ die Belastung durch Abgase weniger.",
+      "body": "a) gibt / würde  \nb) gab / wird  \nc) gaben / wurde  \nd) gäbe / wäre",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%63.]\n[!________________ wäre gerne Passagier auf einer Kreuzfahrt.]\na) Mancher  \nb) Manches  \nc) Manchen  \nd) Manch ein",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "63.",
+      "instruction": "________________ wäre gerne Passagier auf einer Kreuzfahrt.",
+      "body": "a) Mancher  \nb) Manches  \nc) Manchen  \nd) Manch ein",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%64.]\n[!________________ sie zur Völkerverständigung beitragen, können die Olympischen Spiele keinen universellen Frieden schaffen.]\na) Trotz  \nb) Weil  \nc) Obwohl  \nd) Desto \n \n \n \nStufe neun",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "64.",
+      "instruction": "________________ sie zur Völkerverständigung beitragen, können die Olympischen Spiele keinen universellen Frieden schaffen.",
+      "body": "a) Trotz  \nb) Weil  \nc) Obwohl  \nd) Desto \n \n \n \nStufe neun",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 12,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n  \n[%65.]\n[!Es ist manchmal schwer, bei Großveranstaltungen die Sicherheit der Gäste zu ________________.]\na) gewähren  \nb) gewährleisten  \nc) gelingen  \nd) gehören",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "65.",
+      "instruction": "Es ist manchmal schwer, bei Großveranstaltungen die Sicherheit der Gäste zu ________________.",
+      "body": "a) gewähren  \nb) gewährleisten  \nc) gelingen  \nd) gehören",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%66.]\n[!Du kannst das Buch behalten, ich habe es ________________.]\na) zwei  \nb) doppel  \nc) doppelt  \nd) zu zweit",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "66.",
+      "instruction": "Du kannst das Buch behalten, ich habe es ________________.",
+      "body": "a) zwei  \nb) doppel  \nc) doppelt  \nd) zu zweit",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%67.]\n[!________________ des Arbeitskräftemangels nach dem Krieg wurden Gastarbeiter angeworben.]\na) Denn  \nb) Deswegen  \nc) Da  \nd) Aufgrund",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "67.",
+      "instruction": "________________ des Arbeitskräftemangels nach dem Krieg wurden Gastarbeiter angeworben.",
+      "body": "a) Denn  \nb) Deswegen  \nc) Da  \nd) Aufgrund",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%68. ]\n[!Raumschiffe mit Lichtgeschwindigkeit werden ________________ werden.]\na) geflogen haben  \nb) gebaut  \nc) hergestellt sind  \nd) beigelegt worden",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "68.",
+      "instruction": "Raumschiffe mit Lichtgeschwindigkeit werden ________________ werden.",
+      "body": "a) geflogen haben  \nb) gebaut  \nc) hergestellt sind  \nd) beigelegt worden",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%69. ]\n[!Auf der Buchmesse habe ich ________________ erfolgreichsten Schriftsteller kennengelernt.]\na) einen der  \nb) einer der  \nc) eine der  \nd) eines der",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "69.",
+      "instruction": "Auf der Buchmesse habe ich ________________ erfolgreichsten Schriftsteller kennengelernt.",
+      "body": "a) einen der  \nb) einer der  \nc) eine der  \nd) eines der",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%70.]\n[!________________, ________ meine Facebook-Seite nicht gefällt, muss sie nicht lesen.]\na) Derjenigen/dem  \nb) Diejenige/des  \nc) Denjenigen/der  \nd) Derjenige/dem",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "70.",
+      "instruction": "________________, ________ meine Facebook-Seite nicht gefällt, muss sie nicht lesen.",
+      "body": "a) Derjenigen/dem  \nb) Diejenige/des  \nc) Denjenigen/der  \nd) Derjenige/dem",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%71.]\n[!Das Haus + die Tür + der Schlüssel = ________________ Haustürschlüssel.]\na) Das  \nb) Die  \nc) Der  \nd) Dem",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "71.",
+      "instruction": "Das Haus + die Tür + der Schlüssel = ________________ Haustürschlüssel.",
+      "body": "a) Das  \nb) Die  \nc) Der  \nd) Dem",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%72.]\n[!________________ mag ich ihn ja, aber ________________ finde ich ihn nervig.]\na) Diesseits/jenseits  \nb) Hierseits/daseits  \nc) Einerseits/andererseits  \nd) Aufseits/abseits \n \n \nStufe zehn",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "72.",
+      "instruction": "________________ mag ich ihn ja, aber ________________ finde ich ihn nervig.",
+      "body": "a) Diesseits/jenseits  \nb) Hierseits/daseits  \nc) Einerseits/andererseits  \nd) Aufseits/abseits \n \n \nStufe zehn",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 11,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%73. ]\n[!Der Chirurg behauptete, ________________ Patientin gehe es heute blendend.]\na) ihrer  \nb) seiner  \nc) dessen  \nd) dem",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "73.",
+      "instruction": "Der Chirurg behauptete, ________________ Patientin gehe es heute blendend.",
+      "body": "a) ihrer  \nb) seiner  \nc) dessen  \nd) dem",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%74. ]\n[!Kleine Schäden lassen sich ________________ regulieren, ________________ eine Versicherung ist trotzdem sinnvoll.]\na) zwar/aber  \nb) sowohl/als auch  \nc) zu/um  \nd) entweder/oder",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "74.",
+      "instruction": "Kleine Schäden lassen sich ________________ regulieren, ________________ eine Versicherung ist trotzdem sinnvoll.",
+      "body": "a) zwar/aber  \nb) sowohl/als auch  \nc) zu/um  \nd) entweder/oder",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%75.]\n[!Könnten Sie mir ________________ eine Infobroschüre schicken?]\na) ruhig  \nb) aber  \nc) genau  \nd) vielleicht",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "75.",
+      "instruction": "Könnten Sie mir ________________ eine Infobroschüre schicken?",
+      "body": "a) ruhig  \nb) aber  \nc) genau  \nd) vielleicht",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%76.]\n[!Es war ein ________________ und ________________ Ausflug.]\na) ereignis/abwechslung  \nb) ereignisreiches/abwechslungsreiches  \nc) ereignisreicher/abwechslungsreicher  \nd) ereignisreicher/abwechselnd",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "76.",
+      "instruction": "Es war ein ________________ und ________________ Ausflug.",
+      "body": "a) ereignis/abwechslung  \nb) ereignisreiches/abwechslungsreiches  \nc) ereignisreicher/abwechslungsreicher  \nd) ereignisreicher/abwechselnd",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%77.]\n[!Die Oper gestern war nichts ________________.]\na) Besonders  \nb) besonders  \nc) besonder  \nd) Besonderes",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "77.",
+      "instruction": "Die Oper gestern war nichts ________________.",
+      "body": "a) Besonders  \nb) besonders  \nc) besonder  \nd) Besonderes",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%78.]\n[!Viele Leute schwärmen von den vielen Brotsorten hier. Ich tue ________________ auch.]\na) diesen  \nb) es  \nc) dessen  \nd) diese",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "78.",
+      "instruction": "Viele Leute schwärmen von den vielen Brotsorten hier. Ich tue ________________ auch.",
+      "body": "a) diesen  \nb) es  \nc) dessen  \nd) diese",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%79.]\n[!Er sagt jedem immer gleich seine Meinung. Er ________________.]\na) nimmt kein Blatt vor den Mund.  \nb) redet um den heißen Brei herum.  \nc) dreht einem das Wort im Mund um.  \nd) redet wie ein Wasserfall.",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "79.",
+      "instruction": "Er sagt jedem immer gleich seine Meinung. Er ________________.",
+      "body": "a) nimmt kein Blatt vor den Mund.  \nb) redet um den heißen Brei herum.  \nc) dreht einem das Wort im Mund um.  \nd) redet wie ein Wasserfall.",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%80.]\n[!Das Buch ________________ Wissenschaftlers war innerhalb weniger Tage ausverkauft.]\na) dem bekannten  \nb) der bekannten  \nc) des bekannten  \nd) dieses bekannte \n  \n  \n \nStufe elf",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "80.",
+      "instruction": "Das Buch ________________ Wissenschaftlers war innerhalb weniger Tage ausverkauft.",
+      "body": "a) dem bekannten  \nb) der bekannten  \nc) des bekannten  \nd) dieses bekannte \n  \n  \n \nStufe elf",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 12,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%81. ]\n[!Außerhalb der Sprechstunde wählen Sie bitte folgende Notrufnummer zwecks ________________.]\na) dem Bereitschaftsdienstplan  \nb) der Bereitschaftsdienstplan \nc) den Bereitschaftsdienstplan  \nd) des Bereitschaftsdienstplans",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "81.",
+      "instruction": "Außerhalb der Sprechstunde wählen Sie bitte folgende Notrufnummer zwecks ________________.",
+      "body": "a) dem Bereitschaftsdienstplan  \nb) der Bereitschaftsdienstplan \nc) den Bereitschaftsdienstplan  \nd) des Bereitschaftsdienstplans",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%82. ]\n[!Für die feierliche Abendveranstaltung beachten Sie bitte folgenden Kleidungsstil: ________________.]\na) bequem und geschmacklos  \nb) salopp und ungemütlich  \nc) festlich und elegant  \nd) korrekt und neutral",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "82.",
+      "instruction": "Für die feierliche Abendveranstaltung beachten Sie bitte folgenden Kleidungsstil: ________________.",
+      "body": "a) bequem und geschmacklos  \nb) salopp und ungemütlich  \nc) festlich und elegant  \nd) korrekt und neutral",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%83.]\n[!Die Männer misstrauten den Frauen völlig und die Frauen reagierten ________________.]\na) entsprechend  \nb) bindend  \nc) folgend  \nd) aufsteigend",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "83.",
+      "instruction": "Die Männer misstrauten den Frauen völlig und die Frauen reagierten ________________.",
+      "body": "a) entsprechend  \nb) bindend  \nc) folgend  \nd) aufsteigend",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%84. ]\n[!Nach langem Hin und Her ________________ er zu ________________, dass er doch einen Fehler gemacht haben könnte.]\na) beschloss/den Zeitpunkt  \nb) fand/die Erkenntnis  \nc) gelangte/der Überzeugung  \nd) kam/den Beschluss",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "84.",
+      "instruction": "Nach langem Hin und Her ________________ er zu ________________, dass er doch einen Fehler gemacht haben könnte.",
+      "body": "a) beschloss/den Zeitpunkt  \nb) fand/die Erkenntnis  \nc) gelangte/der Überzeugung  \nd) kam/den Beschluss",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%85.]\n[!Eine Fortsetzung des Projektes kam ________________.]\na) zum Vorschein  \nb) unter Anklage  \nc) zur Sprache  \nd) in Abhängigkeit",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "85.",
+      "instruction": "Eine Fortsetzung des Projektes kam ________________.",
+      "body": "a) zum Vorschein  \nb) unter Anklage  \nc) zur Sprache  \nd) in Abhängigkeit",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%86.]\n[!Er ging ________________ Labor und befand sich in ________________ Rauchwolke.]\na) ins/einer  \nb) in dem/eine  \nc) ins/eine  \nd) in dem/einer",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "86.",
+      "instruction": "Er ging ________________ Labor und befand sich in ________________ Rauchwolke.",
+      "body": "a) ins/einer  \nb) in dem/eine  \nc) ins/eine  \nd) in dem/einer",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%87.]\n[!Stelle das Paket bitte vor ________________ Regal, vor ________________ der Computer steht.]\na) dem/dem  \nb) das/dem \nc) das/das  \nd) dem/das",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "87.",
+      "instruction": "Stelle das Paket bitte vor ________________ Regal, vor ________________ der Computer steht.",
+      "body": "a) dem/dem  \nb) das/dem \nc) das/das  \nd) dem/das",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%88.]\n[!Da wird der Hund ________________.]\na) zum Schuh \nb) in der Pfanne verrückt  \nc) von dem Elch geknutschtd) vor die Säue geworfen \nd) vor die Säue geworfen \n \n \n \nStufe zwölf",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "88.",
+      "instruction": "Da wird der Hund ________________.",
+      "body": "a) zum Schuh \nb) in der Pfanne verrückt  \nc) von dem Elch geknutschtd) vor die Säue geworfen \nd) vor die Säue geworfen \n \n \n \nStufe zwölf",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 13,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%89. ]\n[!Alle Männer tragen Rüstungen aus Leder und Metall; es _______________]\na) soll  \nb) darf  \nc) muss  \nd) mag",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "89.",
+      "instruction": "Alle Männer tragen Rüstungen aus Leder und Metall; es _______________",
+      "body": "a) soll  \nb) darf  \nc) muss  \nd) mag",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%90.]\n[!Man will ein Produkt verkaufen. Der angebotene Gegenstand sollte vom ________________ des Kunden aus begehrenswert sein.]\na) Grund  \nb) Anlass  \nc) Standpunkt  \nd) Stand",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "90.",
+      "instruction": "Man will ein Produkt verkaufen. Der angebotene Gegenstand sollte vom ________________ des Kunden aus begehrenswert sein.",
+      "body": "a) Grund  \nb) Anlass  \nc) Standpunkt  \nd) Stand",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%91.]\n[!Darauf ________________ der Regierungssprecher, man solle doch vor der eigenen Tür kehren, schließlich sei das eine böswillige Unterstellung.]\na) fragte  \nb) entgegnete  \nc) hoffte  \nd) erörterte",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "91.",
+      "instruction": "Darauf ________________ der Regierungssprecher, man solle doch vor der eigenen Tür kehren, schließlich sei das eine böswillige Unterstellung.",
+      "body": "a) fragte  \nb) entgegnete  \nc) hoffte  \nd) erörterte",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%92.]\n[!Im Ausland ist die Deutsche Welle der bekannteste deutsche Sender. \nEr strahlt ________________ seine Programme auf allen fünf Kontinenten aus.]\na) hoffentlich  \nb) deshalb  \nc) öffentlich  \nd) nämlich",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "92.",
+      "instruction": "Im Ausland ist die Deutsche Welle der bekannteste deutsche Sender. \nEr strahlt ________________ seine Programme auf allen fünf Kontinenten aus.",
+      "body": "a) hoffentlich  \nb) deshalb  \nc) öffentlich  \nd) nämlich",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 10,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%93.]\n[!Der Einsatz der Technik hat uns zweifellos einen hohen Lebensstandard gebracht, für den wir gern manchen Nachteil ________________.]\na) zum Kauf nehmen  \nb) in Rechnung stellen  \nc) auf Rechnung setzen  \nd) in Kauf nehmen",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "93.",
+      "instruction": "Der Einsatz der Technik hat uns zweifellos einen hohen Lebensstandard gebracht, für den wir gern manchen Nachteil ________________.",
+      "body": "a) zum Kauf nehmen  \nb) in Rechnung stellen  \nc) auf Rechnung setzen  \nd) in Kauf nehmen",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%94.]\n[!Im Handwerk bleiben die Männer häufig ________________, weibliche Lehrlinge sind dagegen in vielen kaufmännischen Berufen in der Mehrzahl.]\na) für sich  \nb) miteinander  \nc) unter sich  \nd) beieinander",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "94.",
+      "instruction": "Im Handwerk bleiben die Männer häufig ________________, weibliche Lehrlinge sind dagegen in vielen kaufmännischen Berufen in der Mehrzahl.",
+      "body": "a) für sich  \nb) miteinander  \nc) unter sich  \nd) beieinander",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%95.]\n[!General Motors in Detroit ________________ den größten Automobilkonzernen der Welt und stellt auch viele andere Produkte her.]\na) macht aus  \nb) gehört in  \nc) liegt in  \nd) zählt zu",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "95.",
+      "instruction": "General Motors in Detroit ________________ den größten Automobilkonzernen der Welt und stellt auch viele andere Produkte her.",
+      "body": "a) macht aus  \nb) gehört in  \nc) liegt in  \nd) zählt zu",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 9,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[%96.]\n[!Texte in neuer Rechtschreibung sind weder unlesbar noch unverständlich. \nFür das Urteil der Bundesverfassungsrichter hat dies erkennbar ________________ gegeben.]\na) den Ausschlag  \nb) den Auftrag  \nc) die Entscheidung  \nd) die Begründung",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "96.",
+      "instruction": "Texte in neuer Rechtschreibung sind weder unlesbar noch unverständlich. \nFür das Urteil der Bundesverfassungsrichter hat dies erkennbar ________________ gegeben.",
+      "body": "a) den Ausschlag  \nb) den Auftrag  \nc) die Entscheidung  \nd) die Begründung",
+      "hint": "",
+      "choices": [],
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '<EOF>'",
+        "line": 16,
+        "column": 0,
+        "errorLine": ""
+      }
+    ]
+  }
+]

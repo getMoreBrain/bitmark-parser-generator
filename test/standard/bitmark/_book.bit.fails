@@ -1,0 +1,18 @@
+[.book]
+|| Invalid coverImage: - ANTLR parser adds "undefined" to result as string ||
+[@id:198777]
+[#Aufgabenset 1]
+[@language:de]
+[@coverImage:]
+[@externalId:e-aufgabenset-1_038--gjgmwjs]
+
+[.book]
+|| One too many levels for the title - ANTLR parser overwrites subtitle with '50 method...' ||
+[@id:239751]
+[@language:de]
+[@coverImage:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_cover.png]
+[#Das Methodenbuch für digitalen Unterricht]
+[##Dein Praxisbegleiter für gute digitale Lernräume]
+[###50 Methoden aus der Praxis mit Tipps, Tricks & Vorlagen von 12 Expert*innen]
+[@externalId:e-das-methodenbuch-fr-digitalen-_uoxzqhzapncw]
+

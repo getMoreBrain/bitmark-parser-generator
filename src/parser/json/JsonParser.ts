@@ -54,6 +54,11 @@ import {
   HighlightJson,
 } from '../../model/json/BodyBitJson';
 
+interface ReferenceAndReferenceProperty {
+  reference?: string;
+  referenceProperty?: string | string[];
+}
+
 // const BODY_SPLIT_REGEX = new RegExp('{[0-9]+}', 'g');
 
 const builder = new Builder();
@@ -211,7 +216,7 @@ class JsonParser {
       toc,
       progress,
       anchor,
-      reference,
+      reference: referenceIn,
       referenceEnd,
       item,
       lead,
@@ -270,32 +275,36 @@ class JsonParser {
     // footer
     const footerNode = this.footerToAst(footer);
 
+    // Convert reference to referenceProperty
+    const { reference, referenceProperty } = this.referenceToAst(referenceIn);
+
     // Build bit
     const bitNode = builder.bit({
       bitType: type as BitTypeType,
       textFormat: format as TextFormatType | undefined,
-      ids: id,
-      externalIds: externalId,
-      ageRanges: ageRange,
-      languages: language,
-      computerLanguages: computerLanguage,
-      coverImages: coverImage,
-      publishers: publisher,
+      id,
+      externalId,
+      ageRange,
+      language,
+      computerLanguage,
+      coverImage,
+      publisher,
       publications,
-      authors: author,
-      dates: date,
-      locations: location,
-      themes: theme,
-      kinds: kind,
-      actions: action,
-      durations: duration,
-      thumbImages: thumbImage,
-      deepLinks: deeplink,
+      author,
+      date,
+      location,
+      theme,
+      kind,
+      action,
+      duration,
+      referenceProperty,
+      thumbImage,
+      deeplink,
       externalLink,
       externalLinkText,
-      videoCallLinks: videoCallLink,
-      bots: bot,
-      lists: list,
+      videoCallLink,
+      bot,
+      list,
       labelTrue,
       labelFalse,
       quotedPerson,
@@ -315,7 +324,7 @@ class JsonParser {
       example: example || isExample,
       resource: resourceNode,
       body: bodyNode,
-      sampleSolutions: sampleSolution,
+      sampleSolution: sampleSolution,
       elements,
       statements: statementNodes,
       responses: responseNodes,
@@ -526,7 +535,7 @@ class JsonParser {
           instruction,
           example: example || isExample,
           isCaseSensitive,
-          isLongAnswer,
+          isShortAnswer: !isLongAnswer,
         });
         nodes.push(node);
       }
@@ -551,7 +560,7 @@ class JsonParser {
           instruction,
           example: example || isExample,
           isCaseSensitive,
-          isLongAnswer,
+          isShortAnswer: !isLongAnswer,
         });
         nodes.push(node);
       }
@@ -658,7 +667,7 @@ class JsonParser {
       const dataAsString: string | undefined = StringUtils.isString(data) ? (data as string) : undefined;
 
       // url / src / href / app
-      const url = data.url || data.src || data.href || data.app || dataAsString;
+      const url = data.url || data.src || data.href || data.app || data.body || dataAsString;
 
       // Sub resources
       const posterImage = this.resourceDataToAst(ResourceType.image, data.posterImage) as ImageResource;
@@ -673,7 +682,7 @@ class JsonParser {
         type,
 
         // Generic (except Article / Document)
-        url,
+        value: url,
 
         // ImageLikeResource / AudioLikeResource / VideoLikeResource / Article / Document
         format: data.format,
@@ -686,8 +695,8 @@ class JsonParser {
         caption: data.caption,
 
         // ImageLikeResource / VideoLikeResource
-        width: data.width,
-        height: data.height,
+        width: data.width ?? undefined,
+        height: data.height ?? undefined,
         alt: data.alt,
 
         // VideoLikeResource
@@ -702,13 +711,9 @@ class JsonParser {
         // WebsiteLinkResource
         siteName: data.siteName,
 
-        // ArticleLikeResource
-        body: data.body,
-
         // Generic Resource
         license: data.license,
         copyright: data.copyright,
-        provider: data.provider,
         showInIndex: data.showInIndex,
       });
     }
@@ -787,6 +792,20 @@ class JsonParser {
       return builder.footerText({ text: footerText });
     }
     return undefined;
+  }
+
+  private referenceToAst(reference: string | string[]): ReferenceAndReferenceProperty {
+    if (Array.isArray(reference) && reference.length > 0) {
+      return {
+        reference: undefined,
+        referenceProperty: reference,
+      };
+    }
+
+    return {
+      reference: reference as string,
+      referenceProperty: undefined,
+    };
   }
 
   private gapBitToAst(bit: GapJson): Gap {

@@ -1,0 +1,66 @@
+[
+  {
+    "bitmark": "[.highlight-text]\nShe went to the [+mall][-sea] and ate [+breakfast][-fish][-trees].",
+    "bit": {
+      "type": "highlight-text",
+      "format": "bitmark--",
+      "body": "She went to the {0} and ate {1}.",
+      "placeholders": {
+        "{0}": {
+          "type": "highlight",
+          "item": "",
+          "texts": [
+            {
+              "text": "mall",
+              "instruction": "",
+              "isHighlighted": false,
+              "isCorrect": true
+            },
+            {
+              "text": "sea",
+              "instruction": "",
+              "isHighlighted": false,
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "highlight",
+          "item": "",
+          "texts": [
+            {
+              "text": "breakfast",
+              "instruction": "",
+              "isHighlighted": false,
+              "isCorrect": true
+            },
+            {
+              "text": "fish",
+              "instruction": "",
+              "isHighlighted": false,
+              "isCorrect": false
+            },
+            {
+              "text": "trees",
+              "instruction": "",
+              "isHighlighted": false,
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  }
+]

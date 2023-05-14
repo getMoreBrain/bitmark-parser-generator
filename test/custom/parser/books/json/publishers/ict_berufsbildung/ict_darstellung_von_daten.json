@@ -1,0 +1,406 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:148102]\n\n[#Darstellung von Daten]\n[@language:de]\n[@externalId:e-datstellung-von-daten_bzsysn_8wrji]\n[@coverImage:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_daten_darstellen.png]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "148102"
+      ],
+      "title": "Darstellung von Daten",
+      "language": [
+        "de"
+      ],
+      "externalId": [
+        "e-datstellung-von-daten_bzsysn_8wrji"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_daten_darstellen.png"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:148103]\n\n[#Informationen für Lehrpersonen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "148103"
+      ],
+      "title": "Informationen für Lehrpersonen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:148104]\n\n**Arbeitsauftrag**\n\nDie SuS ordnen Darstellungsmöglichkeiten und deren Kurzbeschreibung korrekt zu.\n\nDie SuS machen sich Gedanken, wofür sich die einzelnen Darstellungsformen am ehesten eigenen (Multiple-Choice).\n\nDie SuS erstellen unter Anleitung eine eigene Tabelle und sortieren diese und / oder ein Kreisdiagramm.\n\n**Ziel**\n\n• Die SuS lernen eine Auswahl von Darstellungsmöglichkeiten für Daten kennen und können diese zuordnen.\n• Die SuS können einige Darstellungsformen konkret anwenden und wissen, wie diese funktionieren.\n\n**Lehrplanbezug**\n\n• Die SuS können unterschiedliche Darstellungsformen für Daten verwenden (z.B. Symbole, Tabellen, Grafiken).\n• Die SuS können Daten aus ihrer Umwelt darstellen, strukturieren und auswerten. (MI.2.1)\n\n**Material**\n\n• AB «Verschiedene Formen von Daten»\n• AB «Welche Form passt?»\n• AB «Anwendungen»\n• PC / Laptop mit MS-Office (Excel)\n\n**Sozialform**\n\nEA, PA, GA\n\n**Zeit**\n\n45`\n\n\n\n**Zusätzliche Informationen:**\n• QR-Codes selbst erstellen: https://www.qrcode-generator.ch/\n• Strichcodes u.v.m. online selbst erstellen: https://barcode.tec-it.com/de",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Arbeitsauftrag**\n\nDie SuS ordnen Darstellungsmöglichkeiten und deren Kurzbeschreibung korrekt zu.\n\nDie SuS machen sich Gedanken, wofür sich die einzelnen Darstellungsformen am ehesten eigenen (Multiple-Choice).\n\nDie SuS erstellen unter Anleitung eine eigene Tabelle und sortieren diese und / oder ein Kreisdiagramm.\n\n**Ziel**\n\n• Die SuS lernen eine Auswahl von Darstellungsmöglichkeiten für Daten kennen und können diese zuordnen.\n• Die SuS können einige Darstellungsformen konkret anwenden und wissen, wie diese funktionieren.\n\n**Lehrplanbezug**\n\n• Die SuS können unterschiedliche Darstellungsformen für Daten verwenden (z.B. Symbole, Tabellen, Grafiken).\n• Die SuS können Daten aus ihrer Umwelt darstellen, strukturieren und auswerten. (MI.2.1)\n\n**Material**\n\n• AB «Verschiedene Formen von Daten»\n• AB «Welche Form passt?»\n• AB «Anwendungen»\n• PC / Laptop mit MS-Office (Excel)\n\n**Sozialform**\n\nEA, PA, GA\n\n**Zeit**\n\n45`\n\n\n\n**Zusätzliche Informationen:**\n• QR-Codes selbst erstellen: https://www.qrcode-generator.ch/\n• Strichcodes u.v.m. online selbst erstellen: https://barcode.tec-it.com/de",
+      "id": [
+        "148104"
+      ]
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '`'",
+        "line": 35,
+        "column": 2,
+        "errorLine": "45`"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:148105]\n\n[#Arbeitsmaterial]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "148105"
+      ],
+      "title": "Arbeitsmaterial"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:148106]\n\n[%Verschiedene Formen von Daten]\n[!Daten können ganz unterschiedlich dargestellt werden. Bestimmt kennst du einige der unten abgebildeten Formen bereits. Kannst du sie der korrekten Beschreibung zuordnen?]\n[&image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten1.png]\n\n[_2] **Symbole** können Wörter oder sogar ganze Sätze ersetzen. Sie für alle verständlich, unabhängig von der Sprache. Darum werden Symbole auch oft für Beschriftungen und Kennzeichnungen verwendet (z. B. für Standorte von öffentlichen Toiletten, an Bahnhöfen oder Flughäfen).\n\n[_4] **Tabellenform** werden Daten untereinander und nebeneinander dargestellt. So können diese übersichtlich vermittelt werden.\nTypische Tabellen sind z.B. Fahrpläne wie man sie an Bushaltestellen oder Bahnhöfen findet.\n\n[_5] Eine neue Form von Datendarstellung ist der **QR-Code**. Das QR steht für «Quick Response», also «schnelle Antwort». Durch das Einscannen des Codes wird man direkt zu den gesuchten Informationen geleitet. So wird das mühsame Eintippen einer langen Internet-Adresse überflüssig.\n\n[_3] Eine **Kuchen- oder Tortengrafik oder auch Kreisdiagramm** benutzt man, wenn man zeigen will, wie gross einzelne Teile eines Ganzen sind.\nDu könntest damit z. B. aufzeigen, welche Muttersprachen von wie vielen Kindern in deiner Klasse gesprochen werden.\n\n[_1] Früher mussten in Geschäften die Preise der Waren einzeln in die Kasse eingetippt werden. Heutzutage helfen hier die **Barcodes / Strichcodes**. Hinter den dünnen und dicken Linien verbergen sich viele Informationen über die betreffenden Produkte, nicht nur der Preis.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "{0} **Symbole** können Wörter oder sogar ganze Sätze ersetzen. Sie für alle verständlich, unabhängig von der Sprache. Darum werden Symbole auch oft für Beschriftungen und Kennzeichnungen verwendet (z. B. für Standorte von öffentlichen Toiletten, an Bahnhöfen oder Flughäfen).\n\n{1} **Tabellenform** werden Daten untereinander und nebeneinander dargestellt. So können diese übersichtlich vermittelt werden.\nTypische Tabellen sind z.B. Fahrpläne wie man sie an Bushaltestellen oder Bahnhöfen findet.\n\n{2} Eine neue Form von Datendarstellung ist der **QR-Code**. Das QR steht für «Quick Response», also «schnelle Antwort». Durch das Einscannen des Codes wird man direkt zu den gesuchten Informationen geleitet. So wird das mühsame Eintippen einer langen Internet-Adresse überflüssig.\n\n{3} Eine **Kuchen- oder Tortengrafik oder auch Kreisdiagramm** benutzt man, wenn man zeigen will, wie gross einzelne Teile eines Ganzen sind.\nDu könntest damit z. B. aufzeigen, welche Muttersprachen von wie vielen Kindern in deiner Klasse gesprochen werden.\n\n{4} Früher mussten in Geschäften die Preise der Waren einzeln in die Kasse eingetippt werden. Heutzutage helfen hier die **Barcodes / Strichcodes**. Hinter den dünnen und dicken Linien verbergen sich viele Informationen über die betreffenden Produkte, nicht nur der Preis.",
+      "item": "Verschiedene Formen von Daten",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "148106"
+      ],
+      "instruction": "Daten können ganz unterschiedlich dargestellt werden. Bestimmt kennst du einige der unten abgebildeten Formen bereits. Kannst du sie der korrekten Beschreibung zuordnen?",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "2"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "5"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "3"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "1"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--]\n[@id:148107]\n\n[%Welche Form passt?]\n[!Entscheide bei den nachfolgenden Beschreibungen, mit welcher Form du arbeiten würdest.\nDiskutiert zu zweit, wie ihr die Daten am anschaulichsten darstellen könntet.]\n===\n[!Ihr möchtet eine Geburtstagsliste für die ganze Klasse erstellen.\nDie Geburtstage sollen nach Datum geordnet sein, so dass man schnell und einfach sehen kann, wer als nächstes feiert.]\n[-Kreisdiagramm]\n[-Symbole]\n[+Tabelle]\n[-Strichcode]\n===\n[!Die Schulleitung will ein neues Recycling-Konzept an der Schule.\nIhr sollt Plakate gestalten, welche auf die neuen Recycling-Behälter hinweisen. Wie kann man das einfach und für alle verständlich darstellen?]\n[-QR-Code]\n[+Symbole]\n[-Tabelle]\n[-Kreisdiagramm]\n===\n[!Ihr findet, dass eure Schule mehr Velo-Parkplätze zur Verfügung stellen müsste. Darum wollt ihr aufzeigen, wie viele Schülerinnen und Schüler mit dem Fahrrad, einem Kickboard, zu Fuss oder per Bus zur Schule kommen.]\n[-QR-Code]\n[-Barcode]\n[-Tabelle]\n[+Kreisdiagramm]\n===\n[!Eure Lehrperson hat eine neue Klassenhomepage erstellt. In einem Brief soll diese nun an die Eltern kommuniziert werden. Der Link zur Homepage ist aber etwas lange und kompliziert.]\n[+QR-Code]\n[-Symbole]\n[-Strichcode]\n[-Tabelle]\n===\n[!Beim Sporttag werden die schnellsten Schülerinnen und Schüler gesucht.\nDie gestoppten Zeiten müssen verglichen und geordnet werden, so dass eine Rangliste erstellt werden kann.]\n[-Barcode]\n[-Symbole]\n[+Tabelle]\n[-Kreisdiagramm]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "Welche Form passt?",
+      "instruction": "Entscheide bei den nachfolgenden Beschreibungen, mit welcher Form du arbeiten würdest.\nDiskutiert zu zweit, wie ihr die Daten am anschaulichsten darstellen könntet.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "Ihr möchtet eine Geburtstagsliste für die ganze Klasse erstellen.\nDie Geburtstage sollen nach Datum geordnet sein, so dass man schnell und einfach sehen kann, wer als nächstes feiert.",
+          "choices": [
+            {
+              "choice": "Kreisdiagramm",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Symbole",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Tabelle",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Strichcode",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Die Schulleitung will ein neues Recycling-Konzept an der Schule.\nIhr sollt Plakate gestalten, welche auf die neuen Recycling-Behälter hinweisen. Wie kann man das einfach und für alle verständlich darstellen?",
+          "choices": [
+            {
+              "choice": "QR-Code",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Symbole",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Tabelle",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Kreisdiagramm",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Ihr findet, dass eure Schule mehr Velo-Parkplätze zur Verfügung stellen müsste. Darum wollt ihr aufzeigen, wie viele Schülerinnen und Schüler mit dem Fahrrad, einem Kickboard, zu Fuss oder per Bus zur Schule kommen.",
+          "choices": [
+            {
+              "choice": "QR-Code",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Barcode",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Tabelle",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Kreisdiagramm",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Eure Lehrperson hat eine neue Klassenhomepage erstellt. In einem Brief soll diese nun an die Eltern kommuniziert werden. Der Link zur Homepage ist aber etwas lange und kompliziert.",
+          "choices": [
+            {
+              "choice": "QR-Code",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Symbole",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Strichcode",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Tabelle",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "Beim Sporttag werden die schnellsten Schülerinnen und Schüler gesucht.\nDie gestoppten Zeiten müssen verglichen und geordnet werden, so dass eine Rangliste erstellt werden kann.",
+          "choices": [
+            {
+              "choice": "Barcode",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Symbole",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Tabelle",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Kreisdiagramm",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "148107"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark++]\n[@id:148108]\n\n[%Anwendungen]\n[!Nachfolgend findest du Anleitungen und Tipps zum eigenen Darstellen von Daten in den gewünschten Formen. Bestimmt kannst du einige davon in Zukunft privat oder in der Schule gebrauchen.]\n**Eine Tabelle erstellen und sortieren**\n\nTabellen mit Stift und Papier zu erstellen, ist problemlos möglich. Allerdings kann man diese anschliessend nicht mehr verändern, sortieren oder Daten ergänzen.\nHier lohnt es sich, ein Computer-Programm zur Hilfe zu nehmen, z. B. Excel.\n\n1. Öffne das Programm und wähle eine leere Arbeitsmappe aus.\n\n2. Als Übung werden wir nun eine Geburtstagsliste erstellen. Du kannst auswählen, ob du deine Mitschülerinnen und Mitschüler oder lieber die Familienmitglieder eintragen möchtest.\n\n3. Trage nun die Namen und die Geburtstage nebeneinander in je eine Spalte ein. Das könnte dann etwa so aussehen:\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten2.png|\n\n4. Nun wollen wir die Liste gerne nach dem Datum sortieren. Dazu markieren wir die gesamte Liste und klicken anschliessend auf «Daten» (oben links).\n\n5. Nun wählen wir «Sortieren». Im Menü kannst du nun festlegen, nach welchen Kriterien du sortieren möchtest. Entweder nach Name (alphabetisch) oder nach Geburtstag.\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten3.png|\n\n6. Anschliessend erhältst du eine sortierte Liste, so dass du auf einen Blick erkennst, wer als nächstes Geburtstag hat.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "**Eine Tabelle erstellen und sortieren**\n\nTabellen mit Stift und Papier zu erstellen, ist problemlos möglich. Allerdings kann man diese anschliessend nicht mehr verändern, sortieren oder Daten ergänzen.\nHier lohnt es sich, ein Computer-Programm zur Hilfe zu nehmen, z. B. Excel.\n\n1. Öffne das Programm und wähle eine leere Arbeitsmappe aus.\n\n2. Als Übung werden wir nun eine Geburtstagsliste erstellen. Du kannst auswählen, ob du deine Mitschülerinnen und Mitschüler oder lieber die Familienmitglieder eintragen möchtest.\n\n3. Trage nun die Namen und die Geburtstage nebeneinander in je eine Spalte ein. Das könnte dann etwa so aussehen:\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten2.png|\n\n4. Nun wollen wir die Liste gerne nach dem Datum sortieren. Dazu markieren wir die gesamte Liste und klicken anschliessend auf «Daten» (oben links).\n\n5. Nun wählen wir «Sortieren». Im Menü kannst du nun festlegen, nach welchen Kriterien du sortieren möchtest. Entweder nach Name (alphabetisch) oder nach Geburtstag.\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten3.png|\n\n6. Anschliessend erhältst du eine sortierte Liste, so dass du auf einen Blick erkennst, wer als nächstes Geburtstag hat.",
+      "item": "Anwendungen",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "148108"
+      ],
+      "instruction": "Nachfolgend findest du Anleitungen und Tipps zum eigenen Darstellen von Daten in den gewünschten Formen. Bestimmt kannst du einige davon in Zukunft privat oder in der Schule gebrauchen."
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:148109]\n\n[%Anwendungen]\n**Ein Kreisdiagramm erstellen**\n\nEin Kreisdiagramm kann man von Hand zeichnen, was aber schwierig und aufwändig ist.\nViel einfacher funktioniert es mit dem Programm Excel. Wenn du bereits weisst, wie man eine Tabelle erstellt, perfekt! Falls du hier noch Hilfe brauchst, schaue im Kapitel oberhalb «Tabellen erstellen, sortieren und filtern» nach.\n\nTrage als Übung folgende Werte in eine leere Arbeitsmappe im Excel ein: Welche Muttersprachen sind in deiner Klasse vertreten?\n\nDies könnte dann etwa so aussehen:\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten4.png|\nDas Total am Ende kann auch weggelassen werden. Zur Überprüfung, ob du alle Schülerinnen und Schüler erfasst hast, ist es aber gar nicht so schlecht.\n\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten5.png|\nMarkiere anschliessend alle Sprachen und die dazugehörigen Anzahlen.\n\nNun kannst du diese Daten als Diagramm darstellen lassen.\nKlicke dazu auf «Einfügen» (oben rechts) und wähle anschliessend die gewünschte Diagramm-Art aus.\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten6.png|\n\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten7.png|\nSo könnte dein Diagramm aussehen.\n\nNatürlich kannst du jederzeit noch Änderungen daran vornehmen.\n\nDu kannst auch noch Titel hinzufügen, Elemente löschen oder ergänzen.\n\nNutze dazu die drei Symbole auf der rechten Seite (+, Pinsel, Trichter).\n\nEs gibt auch weitere Diagramm-Arten, welche du nutzen kannst.\nBalkendiagramm\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten8.png|\n\nKacheldiagramm (auch Treemap)\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten9.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Ein Kreisdiagramm erstellen**\n\nEin Kreisdiagramm kann man von Hand zeichnen, was aber schwierig und aufwändig ist.\nViel einfacher funktioniert es mit dem Programm Excel. Wenn du bereits weisst, wie man eine Tabelle erstellt, perfekt! Falls du hier noch Hilfe brauchst, schaue im Kapitel oberhalb «Tabellen erstellen, sortieren und filtern» nach.\n\nTrage als Übung folgende Werte in eine leere Arbeitsmappe im Excel ein: Welche Muttersprachen sind in deiner Klasse vertreten?\n\nDies könnte dann etwa so aussehen:\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten4.png|\nDas Total am Ende kann auch weggelassen werden. Zur Überprüfung, ob du alle Schülerinnen und Schüler erfasst hast, ist es aber gar nicht so schlecht.\n\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten5.png|\nMarkiere anschliessend alle Sprachen und die dazugehörigen Anzahlen.\n\nNun kannst du diese Daten als Diagramm darstellen lassen.\nKlicke dazu auf «Einfügen» (oben rechts) und wähle anschliessend die gewünschte Diagramm-Art aus.\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten6.png|\n\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten7.png|\nSo könnte dein Diagramm aussehen.\n\nNatürlich kannst du jederzeit noch Änderungen daran vornehmen.\n\nDu kannst auch noch Titel hinzufügen, Elemente löschen oder ergänzen.\n\nNutze dazu die drei Symbole auf der rechten Seite (+, Pinsel, Trichter).\n\nEs gibt auch weitere Diagramm-Arten, welche du nutzen kannst.\nBalkendiagramm\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten8.png|\n\nKacheldiagramm (auch Treemap)\n|image:https://docs.bitmark.cloud/bit-books/ict_berufsbildung/darstellung_von_daten/web-resources/images/ict_darstellung_von_daten9.png|",
+      "id": [
+        "148109"
+      ],
+      "item": "Anwendungen"
+    }
+  }
+]

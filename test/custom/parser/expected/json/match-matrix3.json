@@ -1,0 +1,478 @@
+[
+  {
+    "bitmark": "[.match-matrix]\n[%C4.1]\n[!Ergänzen Sie die Bezeichnungen für die Einwohner der folgenden Länder.]\n===\n[#Land]\n==\n[#männliche Einwohner]\n==\n[#Einwohnerin]\n==\n[#Einwohner (Plural)]\n===\n1. der Sudan\n==\nder Sudanese\n==\ndie Sudanesin\n==\ndie Sudanesen\n===\n2. der Iran\n==\nder Iraner\n==\ndie Iranerin\n==\ndie Iraner\n==\n3. Peru\n==\nder Peruaner\n==\ndie Peruanerin\n==\ndie Peruaner\n==\n4. Chile\n==\nder Chilene\n==\ndie Chilenin\n==\ndie Chilenen\n==\n5. Kanada\n==\nder Kanadier\n==\ndie Kanadierin\n==\ndie Kanadier\n==\n6. die Türkei\n==\nder Türke\n==\ndie Türkin\n==\ndie Türken\n==\n7. China\n==\nder Chinese\n==\ndie Chinesin\n==\ndie Chinesen\n==\n8. Japan\n==\nder Japaner\n==\ndie Japanerin\n==\ndie Japaner\n==\n9. Mexiko\n==\nder Mexikaner\n==\ndie Mexikanerin\n==\ndie Mexikaner\n==\n10. Russland\n==\nder Russe\n==\ndie Russin\n==\ndie Russen\n==\n11. Indien\n==\nder Inder\n==\ndie Inderin\n==\ndie Inder\n==\n12. Thailand\n==\nder Thailänder\n==\ndie Thailänderin\n==\ndie Thailänder\n==\n13. Ukraine\n==\nder Ukrainer\n==\ndie Ukrainerin\n==\ndie Ukrainer\n==\n14. die Schweiz\n==\nder Schweizer\n==\ndie Schweizerin\n==\ndie Schweizer\n==\n15. Marokko\n==\nder Marokkaner\n==\ndie Marokkanerin\n==\ndie Marokkaner\n==\n16. Jordanien\n==\nder Jordanier\n==\ndie Jordanierin\n==\ndie Jordanier\n===",
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": "C4.1",
+      "heading": {
+        "forKeys": "Land",
+        "forValues": [
+          "männliche Einwohner",
+          "Einwohnerin",
+          "Einwohner (Plural)"
+        ]
+      },
+      "matrix": [
+        {
+          "key": "1. der Sudan",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Sudanese"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Sudanesin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Sudanesen"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "2. der Iran",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Iraner"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Iranerin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Iraner"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "3. Peru"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Peruaner"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Peruanerin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Peruaner"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "4. Chile"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Chilene"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Chilenin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Chilenen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "5. Kanada"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Kanadier"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Kanadierin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Kanadier"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "6. die Türkei"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Türke"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Türkin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Türken"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "7. China"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Chinese"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Chinesin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Chinesen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "8. Japan"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Japaner"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Japanerin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Japaner"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "9. Mexiko"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Mexikaner"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Mexikanerin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Mexikaner"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "10. Russland"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Russe"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Russin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Russen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "11. Indien"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Inder"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Inderin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Inder"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "12. Thailand"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Thailänder"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Thailänderin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Thailänder"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "13. Ukraine"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Ukrainer"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Ukrainerin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Ukrainer"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "14. die Schweiz"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Schweizer"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Schweizerin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Schweizer"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "15. Marokko"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Marokkaner"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Marokkanerin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Marokkaner"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "16. Jordanien"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "der Jordanier"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Jordanierin"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "die Jordanier"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "instruction": "Ergänzen Sie die Bezeichnungen für die Einwohner der folgenden Länder."
+    }
+  }
+]

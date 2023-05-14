@@ -1,4 +1,5 @@
 [.flashcard-1]
+|| Fails to parse in ANTLR parser - format looks OLD ||
 [@id:231024]
 ==
 gross
@@ -7,6 +8,7 @@ klein
 ==
 
 [.flashcard-1]
+|| Parses as body only in ANTLR parser - format looks OLD ||
 [@id:231025]
 spitz
 ==
@@ -52,6 +54,7 @@ Wie heisst der Vulkan von Sizilien?
 Ätna
 
 [.flashcard-1:bitmark--]
+|| Parses as body only in ANTLR parser - format looks OLD ||
 [@id:232737]
 According to the cumulative prospect theory,
 ==

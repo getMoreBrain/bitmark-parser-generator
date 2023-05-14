@@ -1,0 +1,586 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:166911]\n[#Aufgabensammlung 1472-2 Qualitätsmanagement HF, 5. Semester]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_qualitaetsmanagement/web-resources/images/wiss_qualitaetsm_cover.png]\n[@externalId:e-aufgabensammlung-1472-2-qualittsmanageme_agulbk-ikzlb]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166911"
+      ],
+      "title": "Aufgabensammlung 1472-2 Qualitätsmanagement HF, 5. Semester",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_qualitaetsmanagement/web-resources/images/wiss_qualitaetsm_cover.png"
+      ],
+      "externalId": [
+        "e-aufgabensammlung-1472-2-qualittsmanageme_agulbk-ikzlb"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166917]\nDieses Dokument beschreibt die Aufgaben zum Fach __Qualitätsmanagement (5. Semester)__ im Rahmen des Lehrgangs zum __Dipl. Wirtschaftsinformatiker HF__.\n\nAls Basis für die Aufgabenstellungen und Lieferobjekte gilt, sofern nicht anderweitig beschrieben, ihr eigenes Unternehmen/Arbeitgeber und der Bereich/Organisationseinheit/Abteilung/Gruppe, wo sie tätig sind. Wenn z.B. das Lieferobjekt für die Aufgabe lautet „Erstellen sie ein Qualitätssicherungskonzept für einen Geschäftsprozess ihrer Wahl“, so ist ein Prozess zu wählen, die sie in ihrem eigenen Arbeitsbereich (täglich) einsetzen bzw. nutzen oder für die sie selber zuständig/verantwortlich sind (als Prozessverantwortlicher, Projektleiter, Application Manager, Führungsperson etc.).\n\nDie Aufgaben 1 und 2 sind Einstiegs-Aufgaben in die Thematik des EFQM Modell. In der Transferarbeit erfolgt anschliessend eine Selbstbewertung (der eigenen Unternehmung / Arbeitsbereich) aller EFQM-Kriterien (Befähiger-Kriterien und Ergebnisse).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieses Dokument beschreibt die Aufgaben zum Fach __Qualitätsmanagement (5. Semester)__ im Rahmen des Lehrgangs zum __Dipl. Wirtschaftsinformatiker HF__.\n\nAls Basis für die Aufgabenstellungen und Lieferobjekte gilt, sofern nicht anderweitig beschrieben, ihr eigenes Unternehmen/Arbeitgeber und der Bereich/Organisationseinheit/Abteilung/Gruppe, wo sie tätig sind. Wenn z.B. das Lieferobjekt für die Aufgabe lautet „Erstellen sie ein Qualitätssicherungskonzept für einen Geschäftsprozess ihrer Wahl“, so ist ein Prozess zu wählen, die sie in ihrem eigenen Arbeitsbereich (täglich) einsetzen bzw. nutzen oder für die sie selber zuständig/verantwortlich sind (als Prozessverantwortlicher, Projektleiter, Application Manager, Führungsperson etc.).\n\nDie Aufgaben 1 und 2 sind Einstiegs-Aufgaben in die Thematik des EFQM Modell. In der Transferarbeit erfolgt anschliessend eine Selbstbewertung (der eigenen Unternehmung / Arbeitsbereich) aller EFQM-Kriterien (Befähiger-Kriterien und Ergebnisse).",
+      "id": [
+        "166917"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:166820]\n[&image:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_qualitaetsmanagement/web-resources/images/wiss_aufgabensammlung_1472_1.jpg]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "166820"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_qualitaetsmanagement/web-resources/images/wiss_aufgabensammlung_1472_1.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:166821]\n[&image:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_qualitaetsmanagement/web-resources/images/wiss_aufgabensammlung_1472_3.jpg]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "166821"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_qualitaetsmanagement/web-resources/images/wiss_aufgabensammlung_1472_3.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:166822]\n[&image:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_qualitaetsmanagement/web-resources/images/wiss_aufgabensammlung_1472_2.jpg]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "166822"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_qualitaetsmanagement/web-resources/images/wiss_aufgabensammlung_1472_2.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:166823]\n[%1]\n[#Aufgabe 1: Befähigung im eigenen Unternehmen, 18 Punkte]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "166823"
+      ],
+      "title": "Aufgabe 1: Befähigung im eigenen Unternehmen, 18 Punkte"
+    }
+  },
+  {
+    "bitmark": "[.article]\n[@id:166824]\nWählen Sie aus dem EFQM-Modell 3 Befähiger-Kriterien aus und führen Sie diese konkret aus für ihr eigenes Unternehmen / Arbeitsbereich (Gruppe, Abteilung etc.).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wählen Sie aus dem EFQM-Modell 3 Befähiger-Kriterien aus und führen Sie diese konkret aus für ihr eigenes Unternehmen / Arbeitsbereich (Gruppe, Abteilung etc.).",
+      "id": [
+        "166824"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:166825]\n[%1.1]\n[##Auftragsbeschreibung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "166825"
+      ],
+      "title": "Auftragsbeschreibung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166826]\nWählen Sie aus den Voraussetzungen bzw. Befähiger-Kriterien (Enablers) des EFQM-Modells 3 Hauptkriterien aus. Die 5 Befähiger-Hauptkriterien aus EFQM sind:\n\n•. Führung\n•. Strategie\n•. Mitarbeitende\n•. Partnerschaften und Ressourcen\n•. Prozesse, Produkte und Dienstleistungen\n\nPro Hauptkriterium definieren Sie jeweils 1 Teilkriterium und führen dieses konkret aus, d.h. Sie liefern ein konkretes Beispiel (aus ihrem Unternehmen gemäss IST-Zustand oder ein Beispiel, dass Sie selber erarbeiten/erfinden).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wählen Sie aus den Voraussetzungen bzw. Befähiger-Kriterien (Enablers) des EFQM-Modells 3 Hauptkriterien aus. Die 5 Befähiger-Hauptkriterien aus EFQM sind:\n\n•. Führung\n•. Strategie\n•. Mitarbeitende\n•. Partnerschaften und Ressourcen\n•. Prozesse, Produkte und Dienstleistungen\n\nPro Hauptkriterium definieren Sie jeweils 1 Teilkriterium und führen dieses konkret aus, d.h. Sie liefern ein konkretes Beispiel (aus ihrem Unternehmen gemäss IST-Zustand oder ein Beispiel, dass Sie selber erarbeiten/erfinden).",
+      "id": [
+        "166826"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.example:bitmark--]\n[@id:166827]\n**Beispiel:** Hauptkriterium „Führung“, Teilkriterium 1 „Visionäre Führung: Führungskräfte entwickeln die Vision, Mission, und die Werte einer Organisation Sie halten sich an ethische Grundsätze und handeln vorbildlich.“\n\nBeispiel: Die Führungskräfte des Unternehmen X ziehen sich jährlich während 2 Tagen zurück und führen einen Workshop zur Vision und Mission des Unternehmens durch. Dabei werden die Werte und deren Einhaltung/Umsetzung im Betrieb durch die Geschäftsleitung bewertet und die Ergebnisse anschliessend den Mitarbeitern vorgestellt. Die Mitarbeiter sind dabei explizit aufgefordert, Abweichungen zur Bewertung, die von den einzelnen Mitarbeitern empfunden werden, dem Management mitzuteilen (während der Vorstellung oder anonym).",
+    "bit": {
+      "type": "example",
+      "format": "bitmark--",
+      "body": "**Beispiel:** Hauptkriterium „Führung“, Teilkriterium 1 „Visionäre Führung: Führungskräfte entwickeln die Vision, Mission, und die Werte einer Organisation Sie halten sich an ethische Grundsätze und handeln vorbildlich.“\n\nBeispiel: Die Führungskräfte des Unternehmen X ziehen sich jährlich während 2 Tagen zurück und führen einen Workshop zur Vision und Mission des Unternehmens durch. Dabei werden die Werte und deren Einhaltung/Umsetzung im Betrieb durch die Geschäftsleitung bewertet und die Ergebnisse anschliessend den Mitarbeitern vorgestellt. Die Mitarbeiter sind dabei explizit aufgefordert, Abweichungen zur Bewertung, die von den einzelnen Mitarbeitern empfunden werden, dem Management mitzuteilen (während der Vorstellung oder anonym).",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166827"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:166828]\n[%1.2]\n[##Lösungsblatt]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "166828"
+      ],
+      "title": "Lösungsblatt"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166829]\n===\nHauptkriterium 1[@shortAnswer]\n===\nTeilkriterium 1[@shortAnswer]\n===\nBeispiel[@shortAnswer]\n===\nHauptkriterium 2[@shortAnswer]\n===\nTeilkriterium 2[@shortAnswer]\n===\nBeispiel[@shortAnswer]\n===\nHauptkriterium 3[@shortAnswer]\n===\nTeilkriterium 3[@shortAnswer]\n===\nBeispiel[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Hauptkriterium 1",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Teilkriterium 1",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Beispiel",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Hauptkriterium 2",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Teilkriterium 2",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Beispiel",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Hauptkriterium 3",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Teilkriterium 3",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Beispiel",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166829"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:166830]\n[%1.3]\n[##Bewertungsskala]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "166830"
+      ],
+      "title": "Bewertungsskala"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166831]\nPro gültiges Hauptkriterium: 2 Punkte\nPro gültiges Teilkriterium: 2 Punkte\nPro verständliches, sinnvolles Beispiel: 2 Punkte\n\nPro Antwortgruppe sind 6 Punkte möglich, total 18 Punkte.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Pro gültiges Hauptkriterium: 2 Punkte\nPro gültiges Teilkriterium: 2 Punkte\nPro verständliches, sinnvolles Beispiel: 2 Punkte\n\nPro Antwortgruppe sind 6 Punkte möglich, total 18 Punkte.",
+      "id": [
+        "166831"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:166832]\n[%2]\n[#Aufgabe 2: Ergebnisse der Befähigung, 18 Punkte]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "166832"
+      ],
+      "title": "Aufgabe 2: Ergebnisse der Befähigung, 18 Punkte"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166833]\nAufbauend auf Aufgabe 1, wird in Aufgabe 2 die Wirkung der Befähiger-Kriterien auf die Ergebnis-Kriterien des EFQM-Modell beschrieben und eine konkrete Möglichkeit zur Messung dieser Wirkung (positive / negative Beeinflussung) ermittelt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Aufbauend auf Aufgabe 1, wird in Aufgabe 2 die Wirkung der Befähiger-Kriterien auf die Ergebnis-Kriterien des EFQM-Modell beschrieben und eine konkrete Möglichkeit zur Messung dieser Wirkung (positive / negative Beeinflussung) ermittelt.",
+      "id": [
+        "166833"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:166834]\n[%2.1]\n[##Auftragsbeschreibung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "166834"
+      ],
+      "title": "Auftragsbeschreibung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166835]\nBeschreiben Sie stichwortartig oder mit ganzen Sätzen, wie sich die von Ihnen in Aufgabe 1 beschriebenen Teilkriterien auf die Ergebnis-Kriterien (aus dem EFQM-Modell) auswirken. Die Ergebnis-Kriterien sind:\n\n•. Kundenbezogene Ergebnisse\n•. Mitarbeiterbezogene Ergebnisse\n•. Gesellschaftsbezogene Ergebnisse\n•. Schlüsselergebnisse\n\nAuf Basis der von Ihnen in Aufgabe 1 identifizierten Haupt- und Teilkriterien beschreiben Sie für jedes Teilkriterium, wie sich das (von Ihnen in Aufgabe 1 beschriebene) Beispiel auf eines oder mehrere dieser Ergebnis-Kriterien auswirkt (positiv oder negativ).\n\nBeschreiben Sie in einem zweiten Schritt, wie Sie die Veränderung eines der bezeichneten Ergebnis-Kriterien messen und bewerten (Vorgehen der Messung/Methode, Erwartete Ergebnisse / Einheiten).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Beschreiben Sie stichwortartig oder mit ganzen Sätzen, wie sich die von Ihnen in Aufgabe 1 beschriebenen Teilkriterien auf die Ergebnis-Kriterien (aus dem EFQM-Modell) auswirken. Die Ergebnis-Kriterien sind:\n\n•. Kundenbezogene Ergebnisse\n•. Mitarbeiterbezogene Ergebnisse\n•. Gesellschaftsbezogene Ergebnisse\n•. Schlüsselergebnisse\n\nAuf Basis der von Ihnen in Aufgabe 1 identifizierten Haupt- und Teilkriterien beschreiben Sie für jedes Teilkriterium, wie sich das (von Ihnen in Aufgabe 1 beschriebene) Beispiel auf eines oder mehrere dieser Ergebnis-Kriterien auswirkt (positiv oder negativ).\n\nBeschreiben Sie in einem zweiten Schritt, wie Sie die Veränderung eines der bezeichneten Ergebnis-Kriterien messen und bewerten (Vorgehen der Messung/Methode, Erwartete Ergebnisse / Einheiten).",
+      "id": [
+        "166835"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:166836]\n[%2.2]\n[##Lösungsblatt]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "166836"
+      ],
+      "title": "Lösungsblatt"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166837]\n===\nTeilkriterium 1 (aus Aufgabe 1)[@shortAnswer]\n===\nAuswirkung auf (auswählen)[@shortAnswer]\n• Kundenbezogene Ergebnisse\n• Mitarbeiterbezogene Ergebnisse\n• Gesellschaftsbezogene Ergebnisse\n• Schlüsselergebnisse\n===\nMessung, Bewertung:[@shortAnswer]\n===\nTeilkriterium 2 (aus Aufgabe 1)[@shortAnswer]\n===\nAuswirkung auf (auswählen)[@shortAnswer]\n• Kundenbezogene Ergebnisse\n• Mitarbeiterbezogene Ergebnisse\n• Gesellschaftsbezogene Ergebnisse\n• Schlüsselergebnisse\n===\nMessung, Bewertung:[@shortAnswer]\n===\nTeilkriterium 3 (aus Aufgabe 1)[@shortAnswer]\n===\nAuswirkung auf (auswählen)[@shortAnswer]\n• Kundenbezogene Ergebnisse\n• Mitarbeiterbezogene Ergebnisse\n• Gesellschaftsbezogene Ergebnisse\n• Schlüsselergebnisse\n===\nMessung, Bewertung:[@shortAnswer]\n===\n||changed instruction from ankreuzen zu auswählen||",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Teilkriterium 1 (aus Aufgabe 1)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Auswirkung auf (auswählen)• Kundenbezogene Ergebnisse\n• Mitarbeiterbezogene Ergebnisse\n• Gesellschaftsbezogene Ergebnisse\n• Schlüsselergebnisse",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Messung, Bewertung:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Teilkriterium 2 (aus Aufgabe 1)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Auswirkung auf (auswählen)• Kundenbezogene Ergebnisse\n• Mitarbeiterbezogene Ergebnisse\n• Gesellschaftsbezogene Ergebnisse\n• Schlüsselergebnisse",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Messung, Bewertung:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Teilkriterium 3 (aus Aufgabe 1)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Auswirkung auf (auswählen)• Kundenbezogene Ergebnisse\n• Mitarbeiterbezogene Ergebnisse\n• Gesellschaftsbezogene Ergebnisse\n• Schlüsselergebnisse",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Messung, Bewertung:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166837"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:166838]\n[%2.3]\n[##Bewertungsskala]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "166838"
+      ],
+      "title": "Bewertungsskala"
+    }
+  },
+  {
+    "bitmark": "[.article]\n[@id:166839]\nPro Teilkriterium: 1 Punkt\nRichtiges ankreuzen der Auswirkung: 1 Punkt\nAngemessene, vollständige und verständliche Beschreibung der Messung / Bewertung: 4 Punkte\n\nPro Antwortgruppe sind 6 Punkte möglich, total: 18 Punkte.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Pro Teilkriterium: 1 Punkt\nRichtiges ankreuzen der Auswirkung: 1 Punkt\nAngemessene, vollständige und verständliche Beschreibung der Messung / Bewertung: 4 Punkte\n\nPro Antwortgruppe sind 6 Punkte möglich, total: 18 Punkte.",
+      "id": [
+        "166839"
+      ]
+    }
+  }
+]

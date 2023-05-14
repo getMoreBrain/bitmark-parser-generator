@@ -1,0 +1,55 @@
+[
+  {
+    "bitmark": "[.cloze&image][&image:http://some-url.jpg] This sentence is a [_cloze][_gap text][!noun] with [_2][?1 or 2] gaps including an instruction for the first and a hint for the second gap.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "This sentence is a {0} with {1} gaps including an instruction for the first and a hint for the second gap.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "http://some-url.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cloze",
+            "gap text"
+          ],
+          "hint": "",
+          "instruction": "noun",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "2"
+          ],
+          "hint": "1 or 2",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  }
+]

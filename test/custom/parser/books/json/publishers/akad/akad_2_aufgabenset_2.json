@@ -1,0 +1,372 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:198420]\n[#Aufgabenset 2]\n[##Steuerpflicht]\n[@language:de]\n[@coverImage:]\n[@externalId:e-aufgabenset-2_qumdy3eundja]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "198420"
+      ],
+      "title": "Aufgabenset 2",
+      "subtitle": "Steuerpflicht",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "undefined"
+      ],
+      "externalId": [
+        "e-aufgabenset-2_qumdy3eundja"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Rule violation around ']'",
+        "line": 6,
+        "column": 13,
+        "errorLine": "[@coverImage:]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198421]\n[%1]\n[!Welcher der beiden ist persönlich, welcher wirtschaftlich zugehörig zum Bund in Bezug auf die direkte Bundessteuer? \nWie ist der Umfang der Steuerpflicht in diesen beiden Fällen?\nUntermauern Sie Ihre Argumentation mit Verweisen auf die entsprechenden DBG Artikel. ]\n===\nSamir hat in der Schweiz seinen Wohnsitz und ist angestellt bei der Lava AG. \nPeter ist Deutscher, wohnt in Köln, ist dort selbständiger Unternehmer und hat hier in der Schweiz einige Grundstücke.\n[$Samir ist gemäss Art. 3 DBG in der Schweiz infolge seines Wohnsitzes kraft persönlicher Zugehörigkeit steuerpflichtig. Nach Art. 4 Abs. 1 Bst. c DBG sind natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz aufgrund wirtschaftlicher Zugehörigkeit steuerpflichtig, wenn sie an Grundstücken\nin der Schweiz Eigentum, dingliche Rechte oder diesen wirtschaftlich gleichkommende persönliche Nutzungsrechte haben. \n\nDer Grundbesitz in der Schweiz begründet die wirtschaftliche Zugehörigkeit von Peter in der Schweiz.\nGemäss Art. 6 Abs. 1 DBG ist die Steuerpflicht bei persönlicher Zugehörigkeit unbeschränkt, erstreckt sich aber nicht auf Geschäftsbetriebe, Betriebsstätten und Grundstücke im Ausland. \nBei wirtschaftlicher Zugehörigkeit beschränkt sich die Steuerpflicht laut Art. 6 Abs. 2 DBG auf diejenigen Teile des Einkommens, für die nach Art. 4 und 5 DBG eine Steuerpflicht in der Schweiz besteht, wobei mindestens das in der Schweiz erzielte Einkommen zu versteuern ist.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "1",
+      "instruction": "Welcher der beiden ist persönlich, welcher wirtschaftlich zugehörig zum Bund in Bezug auf die direkte Bundessteuer? \nWie ist der Umfang der Steuerpflicht in diesen beiden Fällen?\nUntermauern Sie Ihre Argumentation mit Verweisen auf die entsprechenden DBG Artikel.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Samir hat in der Schweiz seinen Wohnsitz und ist angestellt bei der Lava AG. \nPeter ist Deutscher, wohnt in Köln, ist dort selbständiger Unternehmer und hat hier in der Schweiz einige Grundstücke.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Samir ist gemäss Art. 3 DBG in der Schweiz infolge seines Wohnsitzes kraft persönlicher Zugehörigkeit steuerpflichtig. Nach Art. 4 Abs. 1 Bst. c DBG sind natürliche Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz aufgrund wirtschaftlicher Zugehörigkeit steuerpflichtig, wenn sie an Grundstücken\nin der Schweiz Eigentum, dingliche Rechte oder diesen wirtschaftlich gleichkommende persönliche Nutzungsrechte haben. \n\nDer Grundbesitz in der Schweiz begründet die wirtschaftliche Zugehörigkeit von Peter in der Schweiz.\nGemäss Art. 6 Abs. 1 DBG ist die Steuerpflicht bei persönlicher Zugehörigkeit unbeschränkt, erstreckt sich aber nicht auf Geschäftsbetriebe, Betriebsstätten und Grundstücke im Ausland. \nBei wirtschaftlicher Zugehörigkeit beschränkt sich die Steuerpflicht laut Art. 6 Abs. 2 DBG auf diejenigen Teile des Einkommens, für die nach Art. 4 und 5 DBG eine Steuerpflicht in der Schweiz besteht, wobei mindestens das in der Schweiz erzielte Einkommen zu versteuern ist.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198421"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198422]\n[%2]\n[!In welchen Kantonen ist Schmid subjektiv steuerpflichtig und was für eine Steuerpflicht begründet er dort gegebenenfalls (Begründung mit Hinweis auf das Gesetz)?]\n\nHerbert Schmid wohnt in Herisau (AR)  und arbeitet als Angestellter in St. Gallen. Er ist Kommanditär einer Kommanditgesellschaft im Kanton Bern und Eigentümer einer Liegenschaft im Kanton Thurgau. Ferner ist er Mehrheitsaktionär der Samba AG in Lugano.\n===\n[$\nKanton\tBegründung\tSteuerpflicht\t  Artikel\nAR\tWohnort.                unbeschränkt\tDBG 3\nBE\tGesellschafter\tbeschränkt\tDBG 4\nTG\tLiegenschaft\t        beschränkt\tDBG 4\nTI \t\tkeine\nSG \t\tkeine\n]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "2",
+      "instruction": "In welchen Kantonen ist Schmid subjektiv steuerpflichtig und was für eine Steuerpflicht begründet er dort gegebenenfalls (Begründung mit Hinweis auf das Gesetz)?",
+      "body": "Herbert Schmid wohnt in Herisau (AR)  und arbeitet als Angestellter in St. Gallen. Er ist Kommanditär einer Kommanditgesellschaft im Kanton Bern und Eigentümer einer Liegenschaft im Kanton Thurgau. Ferner ist er Mehrheitsaktionär der Samba AG in Lugano.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Kanton\tBegründung\tSteuerpflicht\t  Artikel\nAR\tWohnort.                unbeschränkt\tDBG 3\nBE\tGesellschafter\tbeschränkt\tDBG 4\nTG\tLiegenschaft\t        beschränkt\tDBG 4\nTI \t\tkeine\nSG \t\tkeine",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198422"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198423]\n[%3]\n[!Wann beginnt für Kerstin Meier die Steuerpflicht in er Schweiz?]\nKerstin Meier kehrt nach mehrjährigem Auslandaufenthalt am 01.07.2020 in die Schweiz zurück. Sie nimmt am 01.10.2020 eine Tätigkeit bei der Kantonalbank auf. Die Entschädigung beträgt monatlich CHF 8’000 (netto) zuzüglich CHF 500 (steuerlich anerkannte) Spesen. Am 20. Dezember 2020 wird ihr eine Gratifikation von CHF 5’000 ausgerichtet. Zudem verkauft sie am 5. Dezember 2020 ihre Beteiligung an Hupps AG, Aargau und erzielt einen Gewinn von CHF 50’000.\n===\n[$Mit Zuzug in die Schweiz beginnt die Steuerpflicht, somit am 01.07.2020 (Art. 3 DBG).]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "3",
+      "instruction": "Wann beginnt für Kerstin Meier die Steuerpflicht in er Schweiz?",
+      "body": "Kerstin Meier kehrt nach mehrjährigem Auslandaufenthalt am 01.07.2020 in die Schweiz zurück. Sie nimmt am 01.10.2020 eine Tätigkeit bei der Kantonalbank auf. Die Entschädigung beträgt monatlich CHF 8’000 (netto) zuzüglich CHF 500 (steuerlich anerkannte) Spesen. Am 20. Dezember 2020 wird ihr eine Gratifikation von CHF 5’000 ausgerichtet. Zudem verkauft sie am 5. Dezember 2020 ihre Beteiligung an Hupps AG, Aargau und erzielt einen Gewinn von CHF 50’000.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Mit Zuzug in die Schweiz beginnt die Steuerpflicht, somit am 01.07.2020 (Art. 3 DBG).",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198423"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198424]\n[%4]\n[!In welchen Kantonen sind Hans und Esther Hauri subjektiv steuerpflichtig und was für eine Steuerpflicht begründen sie dort gegebenenfalls?]\nHans Hauri ist mit Esther verheiratet. Sie haben zusammen zwei Söhne. Silvan ist 21-jährig und Sandro 16-jährig. Die Familie wohnt in Zürich im Eigenheim. Zusätzlich besitzen sie ein Ferienhaus im Tessin und eine 50%ige Beteiligung an der Topolo AG, Zürich. Hans Hauri ist Geschäftsführer der Handelsgenossenschaft in Frauenfeld (TG). Frau Hauri ist im Rahmen einer Einzelfirma als Ernährungsberaterin in Baden (AG) tätig.\n===\n[$Unbeschränkte Steuerpflicht in Zürich (Wohnort) und beschränkte Steuerpflichten im Tessin (Liegenschaft) und in Baden (Geschäftsbetrieb).]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "4",
+      "instruction": "In welchen Kantonen sind Hans und Esther Hauri subjektiv steuerpflichtig und was für eine Steuerpflicht begründen sie dort gegebenenfalls?",
+      "body": "Hans Hauri ist mit Esther verheiratet. Sie haben zusammen zwei Söhne. Silvan ist 21-jährig und Sandro 16-jährig. Die Familie wohnt in Zürich im Eigenheim. Zusätzlich besitzen sie ein Ferienhaus im Tessin und eine 50%ige Beteiligung an der Topolo AG, Zürich. Hans Hauri ist Geschäftsführer der Handelsgenossenschaft in Frauenfeld (TG). Frau Hauri ist im Rahmen einer Einzelfirma als Ernährungsberaterin in Baden (AG) tätig.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Unbeschränkte Steuerpflicht in Zürich (Wohnort) und beschränkte Steuerpflichten im Tessin (Liegenschaft) und in Baden (Geschäftsbetrieb).",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198424"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198425]\n[%5]\n[!Wird Maximilian Vorstadt damit in der Schweiz steuerpflichtig? ]\nMaximilian Vorstadt aus Bremen (Deutschland) spielt an einem Golfturnier in Reiden (Luzern) und gewinnt ein Preisgeld von CHF 200.000. \n\nBegründen Sie Ihre Antwort mit Hinweis auf das DBG.\n===\n[$Ja, gemäss Art. 5 I a DBG stellt dies eine Erwerbstätigkeit dar, welche eine beschränkte Steuerpflicht im Sinne von Art. 6 II DBG darstellt. Er muss das Preisgeld in CH versteuern.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "5",
+      "instruction": "Wird Maximilian Vorstadt damit in der Schweiz steuerpflichtig?",
+      "body": "Maximilian Vorstadt aus Bremen (Deutschland) spielt an einem Golfturnier in Reiden (Luzern) und gewinnt ein Preisgeld von CHF 200.000. \n\nBegründen Sie Ihre Antwort mit Hinweis auf das DBG.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Ja, gemäss Art. 5 I a DBG stellt dies eine Erwerbstätigkeit dar, welche eine beschränkte Steuerpflicht im Sinne von Art. 6 II DBG darstellt. Er muss das Preisgeld in CH versteuern.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198425"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198426]\n[%6]\n[!Ist die Familie Köpke in der Schweiz steuerpflichtig?]\nMartin Lopf ist verheiratet und wohnt mit seiner Frau und seinen zwei Kindern in Stuttagart (DE). Er besitzt ein Ferienhaus in Flims (GR) und ist Verwaltungsratspräsident der in Baar (ZG) ansässigen Miso AG. \n\nBegründen sie Ihre Antwort mit Hinweis auf das DBG. \n===\n[$Ja, aufgrund des Grundbesitzes (Art. 4 DBG) sowie der Verwaltungsratstätigkeit (Art. 5 DBG) begründet Martin Lopf eine beschränkte Steuerpflicht in der Schweiz.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "6",
+      "instruction": "Ist die Familie Köpke in der Schweiz steuerpflichtig?",
+      "body": "Martin Lopf ist verheiratet und wohnt mit seiner Frau und seinen zwei Kindern in Stuttagart (DE). Er besitzt ein Ferienhaus in Flims (GR) und ist Verwaltungsratspräsident der in Baar (ZG) ansässigen Miso AG. \n\nBegründen sie Ihre Antwort mit Hinweis auf das DBG.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Ja, aufgrund des Grundbesitzes (Art. 4 DBG) sowie der Verwaltungsratstätigkeit (Art. 5 DBG) begründet Martin Lopf eine beschränkte Steuerpflicht in der Schweiz.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198426"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198427]\n[%7]\n[!Wo ist der steuerrechtliche Wohnsitz von Dario Di Luca?]\nDer steuerpflichtige Dario Di Luca ist als Geschäftsführer bei einem Zürcher Unternehmen angestellt. Er bewohnt in Zürich, zusammen mit seiner Frau, ein Einfamilienhaus. Im Steuerjahr 2020 machte er geltend, er habe per 15. Mai 2019 sein Steuerdomizil in den Kanton Waadt verlegt. Als Beleg legte er seinen Wohnsitz-Ausweis der Stadt Bern vor, woraus hervorgeht, dass Herr Di Luca seine Schriften dort deponiert hat.\n\nBegründen Sie Ihre Antwort.\t\n===\n[$Den steuerrechtlichen Wohnsitz hat eine Person an dem Ort, an dem sie sich mit der Absicht des dauernden Verbleibens aufhält (DBG Art. 3 Abs. 2). Das heisst am Mittelpunkt seines Lebensinteressen. Der steuerrechtliche Wohnsitz entspricht in der Regel dem zivilrechtlichen Wohnsitz. Er stellt wie dieser grundsätzlich auf zwei Momente ab, auf die Tatsache des Aufenthalts und die Absicht des dauernden Verbleibens. Massgebend ist die Gesamtheit der Umstände. Dabei kommt es auf die tatsächlichen Verhältnisse und nicht auf rein formelle Handlungen an. Die polizeiliche Anmeldung und die Hinterlegung der Schriften sind gewichtige Anhaltspunkte, für die Wohnsitzbegründung allein aber nicht entscheiden. \nDa sich sowohl der Arbeits- oder aus der Familienort von Herr di Luca in Zürich befindet, gilt Zürich als Mittelpunkt seines Lebens und ist somit nach wie vor sein steuerrechtlicher Wohnsitz. ]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "7",
+      "instruction": "Wo ist der steuerrechtliche Wohnsitz von Dario Di Luca?",
+      "body": "Der steuerpflichtige Dario Di Luca ist als Geschäftsführer bei einem Zürcher Unternehmen angestellt. Er bewohnt in Zürich, zusammen mit seiner Frau, ein Einfamilienhaus. Im Steuerjahr 2020 machte er geltend, er habe per 15. Mai 2019 sein Steuerdomizil in den Kanton Waadt verlegt. Als Beleg legte er seinen Wohnsitz-Ausweis der Stadt Bern vor, woraus hervorgeht, dass Herr Di Luca seine Schriften dort deponiert hat.\n\nBegründen Sie Ihre Antwort.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Den steuerrechtlichen Wohnsitz hat eine Person an dem Ort, an dem sie sich mit der Absicht des dauernden Verbleibens aufhält (DBG Art. 3 Abs. 2). Das heisst am Mittelpunkt seines Lebensinteressen. Der steuerrechtliche Wohnsitz entspricht in der Regel dem zivilrechtlichen Wohnsitz. Er stellt wie dieser grundsätzlich auf zwei Momente ab, auf die Tatsache des Aufenthalts und die Absicht des dauernden Verbleibens. Massgebend ist die Gesamtheit der Umstände. Dabei kommt es auf die tatsächlichen Verhältnisse und nicht auf rein formelle Handlungen an. Die polizeiliche Anmeldung und die Hinterlegung der Schriften sind gewichtige Anhaltspunkte, für die Wohnsitzbegründung allein aber nicht entscheiden. \nDa sich sowohl der Arbeits- oder aus der Familienort von Herr di Luca in Zürich befindet, gilt Zürich als Mittelpunkt seines Lebens und ist somit nach wie vor sein steuerrechtlicher Wohnsitz.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198427"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198428]\n[%8]\n[!Prüfen Sie die Art und den Umfang der persönlichen Steuerpflicht bei der Einkommensbesteuerung von Franz Hollenstein fürs Jahr 2019 und 2020. ]\n\nFranz Hollenstein lebt seit mehreren Jahren mit seiner Frau Tanja Hollenstein und seinem Sohn Leon und seiner Tochter Selina in einem Eigentums-Reihenhaus in Zürich. Die Kinder gehen in Zürich zur Schule. Franz Hollenstein arbeitet im Verwaltungsrat eines Zürcher Produktionsunternehmens. Familie Hollenstein unterhält viel Freundschaften in Zürich und hat in Zürich auch weitere Verwandtschaft. \nAus beruflichen Gründen verbringt Franz Hollenstein im Jahr 2019 viel Zeit in Hamburg. Insgesamt 7 Monate, da er dort eine Zweigstelle des Unternehmens übergangsweise leitet. In dieser Zeit mietet sich Franz in Hamburg eine kleine Wohnung. An den Wochenende reist er regelmässig zu seiner Familie nach Zürich. \n\nAm 4. Mai 2020 zieht Franz mit seiner Familie nach Hamburg um, um dort dauerhaft eine neue Arbeitsstelle anzutreten. Das Reihenhaus in Zürich vermietet Familie Hollenstein ab diesem Zeitpunkt unbefristet. \n===\n[$Art und Umfang der persönlichen Steuerpflicht bestimmen sich nach den Art. 3ff DBG, wobei zwischen persönlicher bzw. wirtschaftlicher Zugehörigkeit unterschieden wird, mit den Rechtsfolgen der unbeschränkten bzw. beschränkten Steuerpflicht. \n\nNach Art. 3 Abs. 1 DBG setzt die persönliche Zugehörigkeit einen steuerrechtlichen Wohnsitz oder Aufenthalt voraus. Der Wohnsitz setzt einen Aufenthalt in der Schweiz und die Absicht des dauernden Verbleibens voraus. Grundsätzlich hat Franz Hollenstein mit seiner Familie seinen Wohnsitz in der Schweiz, jedoch hält er sich im Jahr 2019 für einen längeren Zeitraum nicht in der Schweiz auf. Es ist aber auch nicht erforderlich, sich ausschliesslich an seinem Wohnort aufzuhalten; tatsächlich kann trotz längerer Abwesenheit der steuerrechtliche Tatbestand des „Aufenthalts“ weiterbestehen, wenn die Abwesenheit absehbar vorübergehend ist. \nOb zudem weiterhin die „Absicht des dauernden Verbleibens“ unterstellt werden kann, richtet sich nach der Gesamtheit der Umstände. Abzustellen ist auf den Mittelpunkt der persönlichen und wirtschaftlichen Lebensinteresse des Steuerpflichtigen. Soweit die Familie sich weiterhin am bisherigen Wohnsitz aufhält und eine regelmässige Rückkehr für den Fortbestand der Familienbande spricht, ist die Absicht allgemein zu bejahen. Franz ist damit im 2019 in der Schweiz gem. Art. 3 Abs. 1 und 2 DBG persönlich zugehörig und unterliegt damit der unbeschränkten Steuerpflicht nach Art. 6. Abs. 1 DBG. \n\nIm Jahr 2020 sprechen der Arbeitsstellenwechsel und der Umzug der ganzen Familie nach Hamburg für eine deutliche Verlagerung des Lebensinteressen und des Aufenthalts. Da zudem in Deutschland ein neuer Wohnsitz gegründet wurde, ist eine persönliche Zugehörigkeit zur Schweiz ab dem Zeitpunkt des Wegzugs nicht mehr gegeben und damit endet auch die unbeschränkte Steuerpflicht. Er kann aber noch wirtschaftlich zugehörig sein, da er weiterhin ein Reihenhaus in Zürich besitzt und diese vermietet – gem. Art 4 Abs. 1c DBG ist der dadurch wirtschaftlich zugehörig und unterliegt mit den Mieteinkünften der beschränkten Steuerpflicht in der Schweiz gem. Art. 6 Abs. 2 DBG.\n]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "8",
+      "instruction": "Prüfen Sie die Art und den Umfang der persönlichen Steuerpflicht bei der Einkommensbesteuerung von Franz Hollenstein fürs Jahr 2019 und 2020.",
+      "body": "Franz Hollenstein lebt seit mehreren Jahren mit seiner Frau Tanja Hollenstein und seinem Sohn Leon und seiner Tochter Selina in einem Eigentums-Reihenhaus in Zürich. Die Kinder gehen in Zürich zur Schule. Franz Hollenstein arbeitet im Verwaltungsrat eines Zürcher Produktionsunternehmens. Familie Hollenstein unterhält viel Freundschaften in Zürich und hat in Zürich auch weitere Verwandtschaft. \nAus beruflichen Gründen verbringt Franz Hollenstein im Jahr 2019 viel Zeit in Hamburg. Insgesamt 7 Monate, da er dort eine Zweigstelle des Unternehmens übergangsweise leitet. In dieser Zeit mietet sich Franz in Hamburg eine kleine Wohnung. An den Wochenende reist er regelmässig zu seiner Familie nach Zürich. \n\nAm 4. Mai 2020 zieht Franz mit seiner Familie nach Hamburg um, um dort dauerhaft eine neue Arbeitsstelle anzutreten. Das Reihenhaus in Zürich vermietet Familie Hollenstein ab diesem Zeitpunkt unbefristet.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Art und Umfang der persönlichen Steuerpflicht bestimmen sich nach den Art. 3ff DBG, wobei zwischen persönlicher bzw. wirtschaftlicher Zugehörigkeit unterschieden wird, mit den Rechtsfolgen der unbeschränkten bzw. beschränkten Steuerpflicht. \n\nNach Art. 3 Abs. 1 DBG setzt die persönliche Zugehörigkeit einen steuerrechtlichen Wohnsitz oder Aufenthalt voraus. Der Wohnsitz setzt einen Aufenthalt in der Schweiz und die Absicht des dauernden Verbleibens voraus. Grundsätzlich hat Franz Hollenstein mit seiner Familie seinen Wohnsitz in der Schweiz, jedoch hält er sich im Jahr 2019 für einen längeren Zeitraum nicht in der Schweiz auf. Es ist aber auch nicht erforderlich, sich ausschliesslich an seinem Wohnort aufzuhalten; tatsächlich kann trotz längerer Abwesenheit der steuerrechtliche Tatbestand des „Aufenthalts“ weiterbestehen, wenn die Abwesenheit absehbar vorübergehend ist. \nOb zudem weiterhin die „Absicht des dauernden Verbleibens“ unterstellt werden kann, richtet sich nach der Gesamtheit der Umstände. Abzustellen ist auf den Mittelpunkt der persönlichen und wirtschaftlichen Lebensinteresse des Steuerpflichtigen. Soweit die Familie sich weiterhin am bisherigen Wohnsitz aufhält und eine regelmässige Rückkehr für den Fortbestand der Familienbande spricht, ist die Absicht allgemein zu bejahen. Franz ist damit im 2019 in der Schweiz gem. Art. 3 Abs. 1 und 2 DBG persönlich zugehörig und unterliegt damit der unbeschränkten Steuerpflicht nach Art. 6. Abs. 1 DBG. \n\nIm Jahr 2020 sprechen der Arbeitsstellenwechsel und der Umzug der ganzen Familie nach Hamburg für eine deutliche Verlagerung des Lebensinteressen und des Aufenthalts. Da zudem in Deutschland ein neuer Wohnsitz gegründet wurde, ist eine persönliche Zugehörigkeit zur Schweiz ab dem Zeitpunkt des Wegzugs nicht mehr gegeben und damit endet auch die unbeschränkte Steuerpflicht. Er kann aber noch wirtschaftlich zugehörig sein, da er weiterhin ein Reihenhaus in Zürich besitzt und diese vermietet – gem. Art 4 Abs. 1c DBG ist der dadurch wirtschaftlich zugehörig und unterliegt mit den Mieteinkünften der beschränkten Steuerpflicht in der Schweiz gem. Art. 6 Abs. 2 DBG.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198428"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198429]\n[%9]\n[!Prüfen Sie die Art und den Umfang der persönlichen Steuerpflicht für Herr Bootimcello in den Jahren 2019 und 2020 sowie für die Variante.]\nDer Opernsänger Marco Bootimcello lebt in New York und hat ein dort ein langfristiges Engagement am Broadway. Da Herr Bootimcello der stets im Rampenlicht steht, bereits „etwas in die Jahre gekommen“ ist möchte er sich einigen ästhetischen Eingriffen in einer Klink für Schönheitschirurgie in Gstaad unterziehen. Da die Eingriffe sehr umfangreich sind, verbringt Herr Bootimcello im Jahr 2019 insgesamt 91 Tage stationär im Spital in Gstaad bevor er in die USA zurückreist. \n\nWährend seinem Aufenthalt in Gstaad lerne Herr Bootimcello einen Eventorganisator kennen, welcher ihm einen Gastauftritt am Opernfestival 2020 in Neuchâtel vermittelt. Für diesen Gastauftritt reist Herr Bootimcello im Jahr 2020 für 29 Tage nach Neuchâtel.  \n\nVariante: Angenommen ein US Kamerateam begleitet Herr Bootimcello in den Klink Aufenthalt und produziert daraus eine Reality Show. Herr Bootimcello kassiert dafür eine Gage von CHF 250‘000. \n\n===\n[$Herr Bootimcello hat in der Schweiz keinen steuerlichen Wohnsitz, jedoch könnte er einen steuerlichen Aufenthalt nach Art. 3 Abs. 3 DBG begründet haben. Übt er keine Erwerbstätigkeit aus, müsste er sich länger als 90 Tage im Inland aufgehalten haben, während bei Ausübung einer Erwerbstätigkeit 30 Aufenthaltstage ausreichen. \nIm Jahr 2019 überschreitet er die maximale Aufenthaltsdauer von 90 Tagen, so dass Art. 3 Abs. 3 DBG grundsätzlich erfüllt wäre. Unter den Bedingungen von Art. 3 Abs. 4 DBG unterliegt er aber einer Ausnahmeregelung, so dass er trotz des qualifizierten Aufenthaltes nicht persönlich zugehörig wird. Da auch keine Anhaltspunkte für eine wirtschaftliche Zugehörigkeit gegeben sind, besteht insgesamt im Jahr 2019 keine Steuerpflicht in der Schweiz. \nVariante: Da er sich nun nicht ausschliesslich für die Operation in einer Heilanstalt in der Schweiz aufhält, wird er gemäss Art. 3 Abs. 3a DBG persönlich zugehörig und damit gem. Art. 6 Abs. 6 1 DBG unbeschränkt steuerpflichtig. \n\nIm Jahr 2020 erreicht er die Grenze von 30 Aufenthaltstagen nicht, so dass er ebenfalls nicht persönlich zugehörig ist. Da er aber eine Erwerbstätigkeit in der Schweiz ausübt, ist er wirtschaftlich zugehörig gem. Art. 5 Abs. 1 a DBG, so dass er mit der Gage aus dem Auftritt beschränkt Steuerpflichtig wird (Quellenbesteuerung gem. Art. 92 DBG)]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "9",
+      "instruction": "Prüfen Sie die Art und den Umfang der persönlichen Steuerpflicht für Herr Bootimcello in den Jahren 2019 und 2020 sowie für die Variante.",
+      "body": "Der Opernsänger Marco Bootimcello lebt in New York und hat ein dort ein langfristiges Engagement am Broadway. Da Herr Bootimcello der stets im Rampenlicht steht, bereits „etwas in die Jahre gekommen“ ist möchte er sich einigen ästhetischen Eingriffen in einer Klink für Schönheitschirurgie in Gstaad unterziehen. Da die Eingriffe sehr umfangreich sind, verbringt Herr Bootimcello im Jahr 2019 insgesamt 91 Tage stationär im Spital in Gstaad bevor er in die USA zurückreist. \n\nWährend seinem Aufenthalt in Gstaad lerne Herr Bootimcello einen Eventorganisator kennen, welcher ihm einen Gastauftritt am Opernfestival 2020 in Neuchâtel vermittelt. Für diesen Gastauftritt reist Herr Bootimcello im Jahr 2020 für 29 Tage nach Neuchâtel.  \n\nVariante: Angenommen ein US Kamerateam begleitet Herr Bootimcello in den Klink Aufenthalt und produziert daraus eine Reality Show. Herr Bootimcello kassiert dafür eine Gage von CHF 250‘000.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Herr Bootimcello hat in der Schweiz keinen steuerlichen Wohnsitz, jedoch könnte er einen steuerlichen Aufenthalt nach Art. 3 Abs. 3 DBG begründet haben. Übt er keine Erwerbstätigkeit aus, müsste er sich länger als 90 Tage im Inland aufgehalten haben, während bei Ausübung einer Erwerbstätigkeit 30 Aufenthaltstage ausreichen. \nIm Jahr 2019 überschreitet er die maximale Aufenthaltsdauer von 90 Tagen, so dass Art. 3 Abs. 3 DBG grundsätzlich erfüllt wäre. Unter den Bedingungen von Art. 3 Abs. 4 DBG unterliegt er aber einer Ausnahmeregelung, so dass er trotz des qualifizierten Aufenthaltes nicht persönlich zugehörig wird. Da auch keine Anhaltspunkte für eine wirtschaftliche Zugehörigkeit gegeben sind, besteht insgesamt im Jahr 2019 keine Steuerpflicht in der Schweiz. \nVariante: Da er sich nun nicht ausschliesslich für die Operation in einer Heilanstalt in der Schweiz aufhält, wird er gemäss Art. 3 Abs. 3a DBG persönlich zugehörig und damit gem. Art. 6 Abs. 6 1 DBG unbeschränkt steuerpflichtig. \n\nIm Jahr 2020 erreicht er die Grenze von 30 Aufenthaltstagen nicht, so dass er ebenfalls nicht persönlich zugehörig ist. Da er aber eine Erwerbstätigkeit in der Schweiz ausübt, ist er wirtschaftlich zugehörig gem. Art. 5 Abs. 1 a DBG, so dass er mit der Gage aus dem Auftritt beschränkt Steuerpflichtig wird (Quellenbesteuerung gem. Art. 92 DBG)",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198429"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198430]\n[%10]\n[!Sind die beiden Ehegatten Steuersolidarschuldner für das betreffende Steuerrechtsverhältnis und falls ja in welchem Verhältnis? ]\nEin Ehepaar hat ein Kind. Beide Ehegatten sind erwerbstätig, wobei die Ehegattin in Teilzeit. Sie werden gemeinsam besteuert für Einkommen und Vermögen nach dem Prinzip der Familienbesteuerung.\nSiehe dazu Art. 9 Abs. 1 und 2 DBG, Art. 3 Abs. 3 StHG und die entsprechenden kantonalen Bestimmungen.\n\nDie Gesamtsteuer dieser Familie beträgt \t\t\tFr. 30'000\nDas steuerbare Einkommen der Ehefrau beträgt\t\tFr. 99'000\nDas steuerbare Einkommen des Ehemanns beträgt\t\tFr. 45'000\nDer steuerbare Vermögensertrag des Kindes beträgt\t\tFr. 6'000\n\nBerücksichtigen Sie dazu Art. 13 DBG, § 22 StG AG und § 12 StG ZH.\n===\n[$Gemeinsam steuerpflichtige Ehegatten haften gemäss den erwähnten Normen im Grundsatz solidarisch für die Gesamtsteuer (uneingeschränkte Solidarhaftung). Jeder Ehegatte haftet jedoch nur für seinen Anteil an der Gesamtsteuer, wenn der andere zahlungsunfähig ist. Ferner haften sie solidarisch für denjenigen Teil an der Gesamtsteuer, der auf das Kindereinkommen und -vermögen entfällt (beschränkte Solidarhaftung).\n\nMinderjährige Kinder unter elterlicher Sorge haften solidarisch für die Steuerschuld der Eltern bis zum Betrag des Steueranteils, der auf ihr eigenes Einkommen und Vermögen entfällt.\n\nEs ergeben sich folgende Haftungsanteile:\n\nsteuerbares Einkommen der Ehefrau\t\tFr. 99'000 \t66 %\nsteuerbares Einkommen des Ehemanns\t\tFr. 45'000 \t30 %\nsteuerbarer Vermögensertrag des Kindes\t\tFr. 6'000 \t4 %\n\nTotal steuerbares Einkommen\t\t\tFr. 150'000\t100 %\n\nBeide Ehegatten haften für die Gesamtsteuer von Fr. 30'000. Bei Zahlungsunfähigkeit des einen Ehegatten, haftet der andere für seinen Anteil an der Gesamtsteuer, d.h. der Ehegatte für Fr. 19'800, die Ehegattin\nfür Fr. 9'000 und zudem je beide für Fr. 1 '200 Anteil an der Steuer des Kindes. Das Kind selber haftet für seinen Anteil von Fr. l '200 an der Gesamtsteuer. ]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "10",
+      "instruction": "Sind die beiden Ehegatten Steuersolidarschuldner für das betreffende Steuerrechtsverhältnis und falls ja in welchem Verhältnis?",
+      "body": "Ein Ehepaar hat ein Kind. Beide Ehegatten sind erwerbstätig, wobei die Ehegattin in Teilzeit. Sie werden gemeinsam besteuert für Einkommen und Vermögen nach dem Prinzip der Familienbesteuerung.\nSiehe dazu Art. 9 Abs. 1 und 2 DBG, Art. 3 Abs. 3 StHG und die entsprechenden kantonalen Bestimmungen.\n\nDie Gesamtsteuer dieser Familie beträgt \t\t\tFr. 30'000\nDas steuerbare Einkommen der Ehefrau beträgt\t\tFr. 99'000\nDas steuerbare Einkommen des Ehemanns beträgt\t\tFr. 45'000\nDer steuerbare Vermögensertrag des Kindes beträgt\t\tFr. 6'000\n\nBerücksichtigen Sie dazu Art. 13 DBG, § 22 StG AG und § 12 StG ZH.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Gemeinsam steuerpflichtige Ehegatten haften gemäss den erwähnten Normen im Grundsatz solidarisch für die Gesamtsteuer (uneingeschränkte Solidarhaftung). Jeder Ehegatte haftet jedoch nur für seinen Anteil an der Gesamtsteuer, wenn der andere zahlungsunfähig ist. Ferner haften sie solidarisch für denjenigen Teil an der Gesamtsteuer, der auf das Kindereinkommen und -vermögen entfällt (beschränkte Solidarhaftung).\n\nMinderjährige Kinder unter elterlicher Sorge haften solidarisch für die Steuerschuld der Eltern bis zum Betrag des Steueranteils, der auf ihr eigenes Einkommen und Vermögen entfällt.\n\nEs ergeben sich folgende Haftungsanteile:\n\nsteuerbares Einkommen der Ehefrau\t\tFr. 99'000 \t66 %\nsteuerbares Einkommen des Ehemanns\t\tFr. 45'000 \t30 %\nsteuerbarer Vermögensertrag des Kindes\t\tFr. 6'000 \t4 %\n\nTotal steuerbares Einkommen\t\t\tFr. 150'000\t100 %\n\nBeide Ehegatten haften für die Gesamtsteuer von Fr. 30'000. Bei Zahlungsunfähigkeit des einen Ehegatten, haftet der andere für seinen Anteil an der Gesamtsteuer, d.h. der Ehegatte für Fr. 19'800, die Ehegattin\nfür Fr. 9'000 und zudem je beide für Fr. 1 '200 Anteil an der Steuer des Kindes. Das Kind selber haftet für seinen Anteil von Fr. l '200 an der Gesamtsteuer.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198430"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198431]\n[%11]\n[!Wo war Xaver in den Jahren 2018 bis 2020 aufgrund welcher Zugehörigkeit steuerpflichtig? ]\nDer in Baden wohnhafte Xaver kauft am 1. April 2018 eine Liegenschaft im Kanton Zürich. Am 1. Oktober 2018 verlegt er den Wohnsitz nach Zürich. Die Liegenschaft in Baden wird am 1. Februar 2019 verkauft. Am 1. April 2020 verlegt Xaver den Wohnsitz ins Ausland, behält jedoch die Liegenschaft in Zürich zu Eigentum.\n\nZu beantworten ist die Frage für die direkte Bundessteuer und die kantonalen Steuern.\n===\n[$Steuerpflicht Bund:\nXaver ist bis zu seinem Wegzug ins Ausland am 31. März 2018 gemäss Art. 3 Abs. 1 DBG kraft persönlicher Zugehörigkeit steuerpflichtig in der Schweiz. Danach hat er in der Schweiz keine Steuerpflicht mehr aufgrund persönlicher Zugehörigkeit. Nach dem Wegzug verfügt Xaver laut Art. 4 Abs. 1 Bst. c DBG in der Schweiz kraft wirtschaftlicher Zugehörigkeit über ein Nebensteuerdomizil aufgrund der Liegenschaft im Kanton Zürich.\nIm Zeitablauf präsentiert sich die Steuerpflicht beim Bund folgendermassen:\n\nZeitraum \t\tSteuerpflicht\nbis 31.03.2020\tHauptsteuerdomizil in der Schweiz; unbeschränkte Steuerpflichtkraft persönlicher Zugehörigkeit\n\nab 01.04.2020 \tNebensteuerdomizil in der Schweiz; beschränkte Steuerpflicht kraft wirtschaftlicher Zugehörigkeit\n\nSteuerpflicht Kanton AG:\nXaver ist in Baden gemäss § 16 Abs. 1 StG AG kraft persönlicher Zugehörigkeit steuerpflichtig. Durch die Verlegung des Wohnsitzes per 1. Oktober 2018 wird Baden laut§ 17 Abs. 1 lit. b StG AG vom  Hauptsteuerdomizil zum Nebensteuerdomizil und Zürich nach § 3 Abs. 1 StG ZH zum Hauptsteuerdomizil.\nDurch den Verkauf der Liegenschaft Baden per 1. Februar 2019 erlischt die Steuerpflicht aufgrund wirtschaftlicher Zugehörigkeit im Kanton Aargau.\n\nIm Zeitablauf präsentiert sich die Steuerpflicht folgendermassen:\n\nZeitraum \t\tSteuerpflicht\nbis 30.09.2018 \tHauptsteuerdomizil im Kanton AG,· unbeschränkte Steuerpflicht kraft persönlicher Zugehörigkeit\n\n01. 10.2018 bis \t\tNebensteuerdomizil im Kanton AG; beschränkte Steuerpflicht kraft wirtschaftlicher \n31.01.2019 \t\tZugehörigkeit\n\n01.02.2019 \t\tKeine Steuerpflicht mehr im Kanton AG\n\nSteuerpflicht Kanton ZH:\nDurch den Erwerb der Liegenschaft in Zürich am 1. April 2018 begründet X im Kanton Zürich ein Nebensteuerdomizil und wird gestützt auf§ 4 Abs. 1 lit. b StG ZH kraft wirtschaftlicher Zugehörigkeit\nsteuerpflichtig. Durch den Wohnsitzwechsel per 1. Oktober 2018 wird das Nebensteuerdomizil\nzum Hauptsteuerdomizil von X, und er wird gemäss § 3 Abs. 1 StG ZH kraft persönlicher Zugehörigkeit steuerpflichtig. Durch den Wegzug ins Ausland per 1. April 2020 wird Zürich wieder zum Nebensteuerdomizil, und X wird kraft wirtschaftlicher Zugehörigkeit steuerpflichtig.\n\nIm Zeitablauf präsentiert sich die Steuerpflicht folgendermassen:\n\nZeitraum \t\tSteuerpflicht\nbis 01.04.2013 \t\tKeine Steuerpflicht im Kanton ZH\n\n01.04.2013 bis \t\tNebensteuerdomizil im Kanton ZH; beschränkte Steuerpflicht kraft wirtschaftlicher \n30.09.2013 \t\tZugehörigkeit\n\n01.10.2013 bis \t\tHauptsteuerdomizil im Kanton ZH; unbeschränkte Steuerpflicht kraft persönlicher \n31.03.2015 \t\tZugehörigkeit\n\nab 01.04.2015 \tNebensteuerdomizil im Kanton ZH; beschränkte Steuerpflicht kraft wirtschaftlicher Zugehörigkeit]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "11",
+      "instruction": "Wo war Xaver in den Jahren 2018 bis 2020 aufgrund welcher Zugehörigkeit steuerpflichtig?",
+      "body": "Der in Baden wohnhafte Xaver kauft am 1. April 2018 eine Liegenschaft im Kanton Zürich. Am 1. Oktober 2018 verlegt er den Wohnsitz nach Zürich. Die Liegenschaft in Baden wird am 1. Februar 2019 verkauft. Am 1. April 2020 verlegt Xaver den Wohnsitz ins Ausland, behält jedoch die Liegenschaft in Zürich zu Eigentum.\n\nZu beantworten ist die Frage für die direkte Bundessteuer und die kantonalen Steuern.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Steuerpflicht Bund:\nXaver ist bis zu seinem Wegzug ins Ausland am 31. März 2018 gemäss Art. 3 Abs. 1 DBG kraft persönlicher Zugehörigkeit steuerpflichtig in der Schweiz. Danach hat er in der Schweiz keine Steuerpflicht mehr aufgrund persönlicher Zugehörigkeit. Nach dem Wegzug verfügt Xaver laut Art. 4 Abs. 1 Bst. c DBG in der Schweiz kraft wirtschaftlicher Zugehörigkeit über ein Nebensteuerdomizil aufgrund der Liegenschaft im Kanton Zürich.\nIm Zeitablauf präsentiert sich die Steuerpflicht beim Bund folgendermassen:\n\nZeitraum \t\tSteuerpflicht\nbis 31.03.2020\tHauptsteuerdomizil in der Schweiz; unbeschränkte Steuerpflichtkraft persönlicher Zugehörigkeit\n\nab 01.04.2020 \tNebensteuerdomizil in der Schweiz; beschränkte Steuerpflicht kraft wirtschaftlicher Zugehörigkeit\n\nSteuerpflicht Kanton AG:\nXaver ist in Baden gemäss § 16 Abs. 1 StG AG kraft persönlicher Zugehörigkeit steuerpflichtig. Durch die Verlegung des Wohnsitzes per 1. Oktober 2018 wird Baden laut§ 17 Abs. 1 lit. b StG AG vom  Hauptsteuerdomizil zum Nebensteuerdomizil und Zürich nach § 3 Abs. 1 StG ZH zum Hauptsteuerdomizil.\nDurch den Verkauf der Liegenschaft Baden per 1. Februar 2019 erlischt die Steuerpflicht aufgrund wirtschaftlicher Zugehörigkeit im Kanton Aargau.\n\nIm Zeitablauf präsentiert sich die Steuerpflicht folgendermassen:\n\nZeitraum \t\tSteuerpflicht\nbis 30.09.2018 \tHauptsteuerdomizil im Kanton AG,· unbeschränkte Steuerpflicht kraft persönlicher Zugehörigkeit\n\n01. 10.2018 bis \t\tNebensteuerdomizil im Kanton AG; beschränkte Steuerpflicht kraft wirtschaftlicher \n31.01.2019 \t\tZugehörigkeit\n\n01.02.2019 \t\tKeine Steuerpflicht mehr im Kanton AG\n\nSteuerpflicht Kanton ZH:\nDurch den Erwerb der Liegenschaft in Zürich am 1. April 2018 begründet X im Kanton Zürich ein Nebensteuerdomizil und wird gestützt auf§ 4 Abs. 1 lit. b StG ZH kraft wirtschaftlicher Zugehörigkeit\nsteuerpflichtig. Durch den Wohnsitzwechsel per 1. Oktober 2018 wird das Nebensteuerdomizil\nzum Hauptsteuerdomizil von X, und er wird gemäss § 3 Abs. 1 StG ZH kraft persönlicher Zugehörigkeit steuerpflichtig. Durch den Wegzug ins Ausland per 1. April 2020 wird Zürich wieder zum Nebensteuerdomizil, und X wird kraft wirtschaftlicher Zugehörigkeit steuerpflichtig.\n\nIm Zeitablauf präsentiert sich die Steuerpflicht folgendermassen:\n\nZeitraum \t\tSteuerpflicht\nbis 01.04.2013 \t\tKeine Steuerpflicht im Kanton ZH\n\n01.04.2013 bis \t\tNebensteuerdomizil im Kanton ZH; beschränkte Steuerpflicht kraft wirtschaftlicher \n30.09.2013 \t\tZugehörigkeit\n\n01.10.2013 bis \t\tHauptsteuerdomizil im Kanton ZH; unbeschränkte Steuerpflicht kraft persönlicher \n31.03.2015 \t\tZugehörigkeit\n\nab 01.04.2015 \tNebensteuerdomizil im Kanton ZH; beschränkte Steuerpflicht kraft wirtschaftlicher Zugehörigkeit",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198431"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:198432]\n[%12]\n[!Ist Yousef in der Schweiz steuerpflichtig?]\nYousef zieht am 11. Dezember 2018 aus dem Ausland in Zürich zu. Er wohnt im Hotel. Nach 28 Tagen fliegt Yousef nach Kairo, wo er rund 2 Monate lang seiner Erwerbstätigkeit als Ingenieur nachgeht. Am 12. März 2019 kehrt er in die Schweiz zurück. Er wohnt 25 Tage in einem Hotel in Basel. Anschliessend fährt er zur Überwachung einer Montage (voraussichtliche Dauer des Aufenthaltes zwei Jahre) nach Paraguay.\n===\n[$Nach Art. 3 Abs. 1 DBG wird eine natürliche Person aufgrund persönlicher Zugehörigkeit steuerpflichtig, wenn sie ihren steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz hat. Die natürliche Person muss für die Begründung des steuerrechtlichen Wohnsitzes die Absicht des dauernden Verbleihens haben (Art. 3 Abs. 2 \n\nDBG). Einen steuerrechtlichen Aufenthalt in der Schweiz hat eine Person, wenn sie in der Schweiz ungeachtet vorübergehender Unterbrechung entweder während mindestens 30 Tagen verweilt und eine Erwerbstätigkeit\nausübt oder während mindestens 90 Tagen verweilt und keine Erwerbstätigkeit ausübt (Art. 3 Abs. 3 DBG).\nYousef zieht am 11. Dezember 2018 aus dem Ausland in Zürich zu, wohnt im Hotel und zieht nach 28 Tagen weg. Da die dauernde Absicht des Verbleihens fehlt, begründet Yousef keine Steuerpflicht in der Schweiz. Der erneute Zuzug im März 2019 löst die Steuerpflicht ebenfalls nicht aus, da die Absicht des dauernden Verbleihens wiederum nicht gegeben ist.\n\nEinen steuerrechtlichen Wohnsitz hat Yousef also nicht. Er erfüllt auch die beiden Bedingungen des Aufenthalts nicht, indem er weder in der Schweiz eine Erwerbstätigkeit ausübt noch während mindestens 90 Tagen in der Schweiz verweilt.]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "12",
+      "instruction": "Ist Yousef in der Schweiz steuerpflichtig?",
+      "body": "Yousef zieht am 11. Dezember 2018 aus dem Ausland in Zürich zu. Er wohnt im Hotel. Nach 28 Tagen fliegt Yousef nach Kairo, wo er rund 2 Monate lang seiner Erwerbstätigkeit als Ingenieur nachgeht. Am 12. März 2019 kehrt er in die Schweiz zurück. Er wohnt 25 Tage in einem Hotel in Basel. Anschliessend fährt er zur Überwachung einer Montage (voraussichtliche Dauer des Aufenthaltes zwei Jahre) nach Paraguay.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Nach Art. 3 Abs. 1 DBG wird eine natürliche Person aufgrund persönlicher Zugehörigkeit steuerpflichtig, wenn sie ihren steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz hat. Die natürliche Person muss für die Begründung des steuerrechtlichen Wohnsitzes die Absicht des dauernden Verbleihens haben (Art. 3 Abs. 2 \n\nDBG). Einen steuerrechtlichen Aufenthalt in der Schweiz hat eine Person, wenn sie in der Schweiz ungeachtet vorübergehender Unterbrechung entweder während mindestens 30 Tagen verweilt und eine Erwerbstätigkeit\nausübt oder während mindestens 90 Tagen verweilt und keine Erwerbstätigkeit ausübt (Art. 3 Abs. 3 DBG).\nYousef zieht am 11. Dezember 2018 aus dem Ausland in Zürich zu, wohnt im Hotel und zieht nach 28 Tagen weg. Da die dauernde Absicht des Verbleihens fehlt, begründet Yousef keine Steuerpflicht in der Schweiz. Der erneute Zuzug im März 2019 löst die Steuerpflicht ebenfalls nicht aus, da die Absicht des dauernden Verbleihens wiederum nicht gegeben ist.\n\nEinen steuerrechtlichen Wohnsitz hat Yousef also nicht. Er erfüllt auch die beiden Bedingungen des Aufenthalts nicht, indem er weder in der Schweiz eine Erwerbstätigkeit ausübt noch während mindestens 90 Tagen in der Schweiz verweilt.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "198432"
+      ]
+    }
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "bitmark": "[.interview]\n[@id:92573]\n[%C12]\n[!Wortschatzwiederholung: Fluggast- und Reiserechte\n\nBilden Sie aus den vorgegebenen Wörtern Sätze. Achten Sie auf die fehlenden Präpositionen und den richtigen Kasus der Ergänzungen und Angaben.]\n===\n◇ (...) Urlaubszeit – es – gehäuft – (...) Verspätungen oder (Flugausfälle) – kommen \n[@example: Zur Urlaubszeit kommt es gehäuft zu Verspätungen oder Flugausfällen.][@shortAnswer]\n===\n[%6] (ein) Anspruch (...) Ausgleichszahlung – alle Passagiere – haben, – die – (...) (eine europäische) Fluggesellschaft – fliegen – oder – (...) (ein europäischer) Flughafen – starten\n[$Einen Anspruch auf Ausgleichszahlung haben alle Passagiere, die mit einer europäischen Fluggesellschaft fliegen oder von einem europäischen Flughafen starten.][@shortAnswer]\n===\n\n||\nproblem:\n(ein) after item. It is ok when there is a string before (ein).\n||",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "C12",
+      "instruction": "Wortschatzwiederholung: Fluggast- und Reiserechte\n\nBilden Sie aus den vorgegebenen Wörtern Sätze. Achten Sie auf die fehlenden Präpositionen und den richtigen Kasus der Ergänzungen und Angaben.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "◇ (...) Urlaubszeit – es – gehäuft – (...) Verspätungen oder (Flugausfälle) – kommen",
+          "instruction": "",
+          "hint": "",
+          "isExample": true,
+          "example": "Zur Urlaubszeit kommt es gehäuft zu Verspätungen oder Flugausfällen.",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "6",
+          "question": "(ein) Anspruch (...) Ausgleichszahlung – alle Passagiere – haben, – die – (...) (eine europäische) Fluggesellschaft – fliegen – oder – (...) (ein europäischer) Flughafen – starten",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "Einen Anspruch auf Ausgleichszahlung haben alle Passagiere, die mit einer europäischen Fluggesellschaft fliegen oder von einem europäischen Flughafen starten.",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "92573"
+      ]
+    }
+  }
+]

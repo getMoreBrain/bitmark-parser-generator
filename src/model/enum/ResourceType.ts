@@ -15,6 +15,7 @@ const ResourceTypeRaw = {
   articleLink: 'article-link',
   document: 'document',
   documentLink: 'document-link',
+  documentDownload: 'document-download',
   app: 'app',
   appLink: 'app-link',
   websiteLink: 'website-link',

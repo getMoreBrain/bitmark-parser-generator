@@ -1,0 +1,39 @@
+[
+  {
+    "bitmark": "[.true-false]\n\n[!What colors can cows have in Switzerland?]\n===\n[+brown ]\n===\n[+purple, but only in chocolate ads][@example:we are the world]\n===\n[-blue ]\n===\n[-green ]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "",
+      "lead": "",
+      "instruction": "What colors can cows have in Switzerland?",
+      "hint": "",
+      "labelTrue": "",
+      "labelFalse": "",
+      "statements": [
+        {
+          "statement": "brown",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "purple, but only in chocolate ads",
+          "isCorrect": true,
+          "isExample": true,
+          "example": "we are the world"
+        },
+        {
+          "statement": "blue",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "green",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": ""
+    }
+  }
+]

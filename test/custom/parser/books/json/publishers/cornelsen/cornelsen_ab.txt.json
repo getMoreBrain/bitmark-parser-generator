@@ -1,0 +1,768 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:136521]\n[#Cornelsen Arbeitsblatt]\n[@externalId:cornelsenAB]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136521"
+      ],
+      "title": "Cornelsen Arbeitsblatt",
+      "externalId": [
+        "cornelsenAB"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:136522]\n[%1a]\n[!Sammeln Sie zu zweit Wörter zum Thema „Fußball-Weltmeisterschaft“. Welches Team hat zuerst 15 Wörter gefunden?][?Beispiele: der Fan, der Ball, das Spiel, die Pause, der Sportplatz, der Fußballspieler, die \nMannschaft, das Team, das Training, der Star, berühmt, spannend, trainieren, gewinnen, verlieren, sich \nverletzen]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Sammeln Sie zu zweit Wörter zum Thema „Fußball-Weltmeisterschaft“. Welches Team hat zuerst 15 Wörter gefunden?",
+      "partialAnswer": "",
+      "body": "",
+      "item": "1a",
+      "hint": "Beispiele: der Fan, der Ball, das Spiel, die Pause, der Sportplatz, der Fußballspieler, die \nMannschaft, das Team, das Training, der Star, berühmt, spannend, trainieren, gewinnen, verlieren, sich \nverletzen",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136522"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:136523]\n[%1b]\n[!Welche Wörter sind für das Thema (Fußball) noch wichtig? Suchen Sie fünf Wörter im Wörterbuch.]\n[? Beispiele: das Stadion, das Tor, der Torwart, der Schiedsrichter, der Pokal, die Enttäuschung, die Freude, der Sieg]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Welche Wörter sind für das Thema (Fußball) noch wichtig? Suchen Sie fünf Wörter im Wörterbuch.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "1b",
+      "hint": "Beispiele: das Stadion, das Tor, der Torwart, der Schiedsrichter, der Pokal, die Enttäuschung, die Freude, der Sieg",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136523"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:136524]\n[&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]\n[%2a]\n[!Forum „Fußball-WM 2018“. Welcher Beitrag passt zu welchem Foto? Lesen Sie und ordnen Sie zu. (Zu einem Text gibt es kein Foto. Schreiben Sie dann X.)]\n  \nWo und mit wem seht ihr die Spiele der Fußball-WM? Schreibt uns! \n[_c] ThomasK: Ich will auf jeden Fall alle Spiele mit der deutschen Nationalmannschaft sehen. Ich sehe die Spiele am liebsten in meinem Lieblingslokal. Das mache ich schon lange so. Dort treffe ich dann immer einige Nachbarn und Bekannte – und wir haben immer Spaß zusammen. Ich sehe ein Fußballspiel nie allein zu Hause. Das finde ich super langweilig. Man muss doch mit jemandem über alles reden können! \n  \n[_x] Nina85: Ich schaue Fußballspiele am liebsten mit meiner Familie. Mein Mann und die Kinder sind große Fußballfans. Wenn das Wetter gut ist, stellen wir den Fernseher in den Garten und grillen. Wenn Deutschland spielt, tragen wir natürlich alle Schals in Schwarz, Rot und Gold . In der Pause spielen die Kinder Fußball – dann sehen wir die besten Momente aus dem Spiel noch einmal.☺Mir ist Fußball nicht so wichtig. Aber die WM- Spiele sind wirklich toll, weil mein Mann und die Kinder so viel Spaß haben. \n  \n[_a] RafaelS: Ich habe Tickets für zwei WM-Spiele gekauft! Ich sehe große Länder-spiele super gern im Stadion – zusammen mit Fußballfans aus der ganzen Welt. Wir singen und feiern zusammen! Mir ist auch egal, welches Team dann spielt. Ich bin gern live dabei. Und im Stadion ist es einfach toll! Okay, die Tickets sind nicht billig und die Reise kostet auch Geld. Aber das muss einfach sein! Die WM ist ja nur alle vier Jahre. \n  \n[_b] JasMini: Ich schaue nur Fußball, wenn die deutsche Nationalmannschaft spielt. Die anderen Mannschaften interessieren mich nicht. Wenn Deutschland spielt, dann lade ich meine Freundin zu mir nach Hause ein. Das ist immer cool. Unsere Männer gehen zum Public Viewing auf den Marktplatz. Aber da sind mir zu viele Menschen und es ist sehr laut. Das mag ich nicht. Ich finde es in unserem Wohnzimmer einfach schöner.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Wo und mit wem seht ihr die Spiele der Fußball-WM? Schreibt uns! \n{0} ThomasK: Ich will auf jeden Fall alle Spiele mit der deutschen Nationalmannschaft sehen. Ich sehe die Spiele am liebsten in meinem Lieblingslokal. Das mache ich schon lange so. Dort treffe ich dann immer einige Nachbarn und Bekannte – und wir haben immer Spaß zusammen. Ich sehe ein Fußballspiel nie allein zu Hause. Das finde ich super langweilig. Man muss doch mit jemandem über alles reden können! \n  \n{1} Nina85: Ich schaue Fußballspiele am liebsten mit meiner Familie. Mein Mann und die Kinder sind große Fußballfans. Wenn das Wetter gut ist, stellen wir den Fernseher in den Garten und grillen. Wenn Deutschland spielt, tragen wir natürlich alle Schals in Schwarz, Rot und Gold . In der Pause spielen die Kinder Fußball – dann sehen wir die besten Momente aus dem Spiel noch einmal.☺Mir ist Fußball nicht so wichtig. Aber die WM- Spiele sind wirklich toll, weil mein Mann und die Kinder so viel Spaß haben. \n  \n{2} RafaelS: Ich habe Tickets für zwei WM-Spiele gekauft! Ich sehe große Länder-spiele super gern im Stadion – zusammen mit Fußballfans aus der ganzen Welt. Wir singen und feiern zusammen! Mir ist auch egal, welches Team dann spielt. Ich bin gern live dabei. Und im Stadion ist es einfach toll! Okay, die Tickets sind nicht billig und die Reise kostet auch Geld. Aber das muss einfach sein! Die WM ist ja nur alle vier Jahre. \n  \n{3} JasMini: Ich schaue nur Fußball, wenn die deutsche Nationalmannschaft spielt. Die anderen Mannschaften interessieren mich nicht. Wenn Deutschland spielt, dann lade ich meine Freundin zu mir nach Hause ein. Das ist immer cool. Unsere Männer gehen zum Public Viewing auf den Marktplatz. Aber da sind mir zu viele Menschen und es ist sehr laut. Das mag ich nicht. Ich finde es in unserem Wohnzimmer einfach schöner.",
+      "item": "2a",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136524"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "instruction": "Forum „Fußball-WM 2018“. Welcher Beitrag passt zu welchem Foto? Lesen Sie und ordnen Sie zu. (Zu einem Text gibt es kein Foto. Schreiben Sie dann X.)",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "c"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "x"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "b"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text]\n[@id:136525]\n[%2b]\n[!Was passt zusammen? Lesen Sie noch einmal und verbinden Sie.]\n1. Thomas sieht die WM-Spiele \n[-über die Spiele sprechen.][-welche Mannschaft gerade spielt.][-weil er die Spiele live schauen möchte.][-eine Freundin eingeladen.][-weil sie keine sehr großen Gruppen mag.][+nie allein in seiner Wohnung.][-weil ihre Familie sich über die Spiele freut.][-wenn die deutsche Nationalmannschaft spielt.]\n\n2. Er möchte mit anderen Menschen \n[+über die Spiele sprechen.][-welche Mannschaft gerade spielt.][-weil er die Spiele live schauen möchte.][-eine Freundin eingeladen.][-weil sie keine sehr großen Gruppen mag.][-nie allein in seiner Wohnung.][-weil ihre Familie sich über die Spiele freut.][-wenn die deutsche Nationalmannschaft spielt.]\n\n3. Nina trägt einen Fan-Schal, \n[-über die Spiele sprechen.][-welche Mannschaft gerade spielt.][-weil er die Spiele live schauen möchte.][-eine Freundin eingeladen.][-weil sie keine sehr großen Gruppen mag.][-nie allein in seiner Wohnung.][-weil ihre Familie sich über die Spiele freut.][+wenn die deutsche Nationalmannschaft spielt.]\n\n4. Sie findet die WM-Abende schön, \n[-über die Spiele sprechen.][-welche Mannschaft gerade spielt.][-weil er die Spiele live schauen möchte.][-eine Freundin eingeladen.][-weil sie keine sehr großen Gruppen mag.][-nie allein in seiner Wohnung.][+weil ihre Familie sich über die Spiele freut.][-wenn die deutsche Nationalmannschaft spielt.]\n\n5. Rafael gibt Geld für Tickets aus, \n[-über die Spiele sprechen.][-welche Mannschaft gerade spielt.][+weil er die Spiele live schauen möchte.][-eine Freundin eingeladen.][-weil sie keine sehr großen Gruppen mag.][-nie allein in seiner Wohnung.][-weil ihre Familie sich über die Spiele freut.][-wenn die deutsche Nationalmannschaft spielt.]\n\n6. Er findet es nicht wichtig, \n[-über die Spiele sprechen.][+welche Mannschaft gerade spielt.][-weil er die Spiele live schauen möchte.][-eine Freundin eingeladen.][-weil sie keine sehr großen Gruppen mag.][-nie allein in seiner Wohnung.][-weil ihre Familie sich über die Spiele freut.][-wenn die deutsche Nationalmannschaft spielt.]\n\n7. Jasmin hat zu den WM-Spielen \n[-über die Spiele sprechen.][-welche Mannschaft gerade spielt.][-weil er die Spiele live schauen möchte.][+eine Freundin eingeladen.][-weil sie keine sehr großen Gruppen mag.][-nie allein in seiner Wohnung.][-weil ihre Familie sich über die Spiele freut.][-wenn die deutsche Nationalmannschaft spielt.]\n\n8 Sie geht nicht zum Public Viewing, [-über die Spiele sprechen.][-welche Mannschaft gerade spielt.][-weil er die Spiele live schauen möchte.][-eine Freundin eingeladen.][+weil sie keine sehr großen Gruppen mag.][-nie allein in seiner Wohnung.][-weil ihre Familie sich über die Spiele freut.][-wenn die deutsche Nationalmannschaft spielt.]\n||TODO: adapt instructions||",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Thomas sieht die WM-Spiele \n{0}\n\n2. Er möchte mit anderen Menschen \n{1}\n\n3. Nina trägt einen Fan-Schal, \n{2}\n\n4. Sie findet die WM-Abende schön, \n{3}\n\n5. Rafael gibt Geld für Tickets aus, \n{4}\n\n6. Er findet es nicht wichtig, \n{5}\n\n7. Jasmin hat zu den WM-Spielen \n{6}\n\n8 Sie geht nicht zum Public Viewing, {7}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "über die Spiele sprechen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "welche Mannschaft gerade spielt.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil er die Spiele live schauen möchte.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "eine Freundin eingeladen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil sie keine sehr großen Gruppen mag.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "nie allein in seiner Wohnung.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "weil ihre Familie sich über die Spiele freut.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "wenn die deutsche Nationalmannschaft spielt.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "über die Spiele sprechen.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "welche Mannschaft gerade spielt.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil er die Spiele live schauen möchte.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "eine Freundin eingeladen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil sie keine sehr großen Gruppen mag.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "nie allein in seiner Wohnung.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil ihre Familie sich über die Spiele freut.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "wenn die deutsche Nationalmannschaft spielt.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "über die Spiele sprechen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "welche Mannschaft gerade spielt.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil er die Spiele live schauen möchte.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "eine Freundin eingeladen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil sie keine sehr großen Gruppen mag.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "nie allein in seiner Wohnung.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil ihre Familie sich über die Spiele freut.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "wenn die deutsche Nationalmannschaft spielt.",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "über die Spiele sprechen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "welche Mannschaft gerade spielt.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil er die Spiele live schauen möchte.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "eine Freundin eingeladen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil sie keine sehr großen Gruppen mag.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "nie allein in seiner Wohnung.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil ihre Familie sich über die Spiele freut.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "wenn die deutsche Nationalmannschaft spielt.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "über die Spiele sprechen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "welche Mannschaft gerade spielt.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil er die Spiele live schauen möchte.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "eine Freundin eingeladen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil sie keine sehr großen Gruppen mag.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "nie allein in seiner Wohnung.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil ihre Familie sich über die Spiele freut.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "wenn die deutsche Nationalmannschaft spielt.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "über die Spiele sprechen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "welche Mannschaft gerade spielt.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "weil er die Spiele live schauen möchte.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "eine Freundin eingeladen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil sie keine sehr großen Gruppen mag.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "nie allein in seiner Wohnung.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil ihre Familie sich über die Spiele freut.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "wenn die deutsche Nationalmannschaft spielt.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "über die Spiele sprechen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "welche Mannschaft gerade spielt.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil er die Spiele live schauen möchte.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "eine Freundin eingeladen.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "weil sie keine sehr großen Gruppen mag.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "nie allein in seiner Wohnung.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil ihre Familie sich über die Spiele freut.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "wenn die deutsche Nationalmannschaft spielt.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "über die Spiele sprechen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "welche Mannschaft gerade spielt.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil er die Spiele live schauen möchte.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "eine Freundin eingeladen.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil sie keine sehr großen Gruppen mag.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "nie allein in seiner Wohnung.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "weil ihre Familie sich über die Spiele freut.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "wenn die deutsche Nationalmannschaft spielt.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "136525"
+      ],
+      "item": "2b",
+      "instruction": "Was passt zusammen? Lesen Sie noch einmal und verbinden Sie."
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:136526]\n[%2c]\n[!Wer sieht Fußballspiele wo und mit wem? Ergänzen Sie und vergleichen Sie im Kurs.]\n===\n**ThomasK** \nWo?[@shortAnswer]\n[?in seinem Lieblingslokal]\n===\nMit wem?[@shortAnswer]\n[?mit Nachbarn und Bekannten]\n===\n**Nina85** \nWo?[@shortAnswer]\n[?zu Hause / im Garten]\n===\nMit wem?[@shortAnswer]\n[?mit ihrer Familie (Mann und Kinder)]\n===\n**RafaelS** \nWo?[@shortAnswer]\n[?im Stadion]\n===\nMit wem?[@shortAnswer]\n[?mit Fußballfans aus der ganzen Welt]\n===\n**JasMini** \nWo?[@shortAnswer]\n[?zu Hause / im Wohnzimmer]\n===\nMit wem?[@shortAnswer]\n[?mit einer/ihrer Freundin]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "2c",
+      "instruction": "Wer sieht Fußballspiele wo und mit wem? Ergänzen Sie und vergleichen Sie im Kurs.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "**ThomasK** \nWo?",
+          "instruction": "",
+          "hint": "in seinem Lieblingslokal",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mit wem?",
+          "instruction": "",
+          "hint": "mit Nachbarn und Bekannten",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Nina85** \nWo?",
+          "instruction": "",
+          "hint": "zu Hause / im Garten",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mit wem?",
+          "instruction": "",
+          "hint": "mit ihrer Familie (Mann und Kinder)",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**RafaelS** \nWo?",
+          "instruction": "",
+          "hint": "im Stadion",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mit wem?",
+          "instruction": "",
+          "hint": "mit Fußballfans aus der ganzen Welt",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**JasMini** \nWo?",
+          "instruction": "",
+          "hint": "zu Hause / im Wohnzimmer",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mit wem?",
+          "instruction": "",
+          "hint": "mit einer/ihrer Freundin",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "136526"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview]\n[@id:136527]\n[%2d]\n[!Wo und mit wem sehen Sie (oder Ihre Bekannten) Fußballspiele gern? Sprechen Sie im Kurs.]\nallein – mit der Familie – mit Freuden / Kollegen – mit vielen (fremden) Menschen – ... \n\nim Fernsehen – (live) im Stadion – auf dem Handy – ... \n\nzu Hause – in einem Lokal – beim Public Viewing – auf einem großen Platz – ... \n  \n===\n[@example:Ich sehe keine Fußballspiele. Aber meine Kollegen sind oft beim Public Viewing. \nIch schaue Fußballspiele gern mit meinen Freunden. Wir treffen uns dann ...]\n===\n[@longAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "2d",
+      "instruction": "Wo und mit wem sehen Sie (oder Ihre Bekannten) Fußballspiele gern? Sprechen Sie im Kurs.",
+      "body": "allein – mit der Familie – mit Freuden / Kollegen – mit vielen (fremden) Menschen – ... \n\nim Fernsehen – (live) im Stadion – auf dem Handy – ... \n\nzu Hause – in einem Lokal – beim Public Viewing – auf einem großen Platz – ...",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": true,
+          "example": "Ich sehe keine Fußballspiele. Aber meine Kollegen sind oft beim Public Viewing. \nIch schaue Fußballspiele gern mit meinen Freunden. Wir treffen uns dann ...",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": false
+        }
+      ],
+      "id": [
+        "136527"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[@id:136528]\n[&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]\n[%3a]\n[!Wählen Sie eine Person auf den Fotos in Aufgabe 2. Schreiben Sie einen kurzen Text in Ihrer Rolle und beantworten Sie die Fragen.]\nWarum bist du hier? Wie fühlst du dich? Was denkst du gerade? \n===\n[@longAnswer]\n===\n||adapt instructions||",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "3a",
+      "instruction": "Wählen Sie eine Person auf den Fotos in Aufgabe 2. Schreiben Sie einen kurzen Text in Ihrer Rolle und beantworten Sie die Fragen.",
+      "body": "Warum bist du hier? Wie fühlst du dich? Was denkst du gerade?",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": false
+        }
+      ],
+      "id": [
+        "136528"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\n[@id:136529]\n[%3b]\n[!Lesen Sie Ihren Text im Kurs vor. Die anderen raten, welche Person das ist.]\n__Ist das die Frau mit dem grün-gelben T-Shirt auf Foto A? \nIch glaube, das ist der Mann hinten in der Mitte auf Foto C.__",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "__Ist das die Frau mit dem grün-gelben T-Shirt auf Foto A? \nIch glaube, das ist der Mann hinten in der Mitte auf Foto C.__",
+      "item": "3b",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136529"
+      ],
+      "instruction": "Lesen Sie Ihren Text im Kurs vor. Die anderen raten, welche Person das ist."
+    }
+  }
+]

@@ -1,0 +1,2256 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:194045]\n[@language:en]\n[#Cybersecurity Guide]\n[##How to Secure Your Corporation]\n[@externalId:e-cybersecurity-guide_yzlxuad_xp6c]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194045"
+      ],
+      "language": [
+        "en"
+      ],
+      "title": "Cybersecurity Guide",
+      "subtitle": "How to Secure Your Corporation",
+      "externalId": [
+        "e-cybersecurity-guide_yzlxuad_xp6c"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\n[@id:194046]\n__This is one of many primers on crucial technology issues built for ==we.st==|link:https://we.st/| alongside hundreds of resources to help you grow your career and company.__",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "__This is one of many primers on crucial technology issues built for ==we.st==|link:https://we.st/| alongside hundreds of resources to help you grow your career and company.__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194046"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194047]\nMore than three billion people use the internet. Some are connecting with their smartphone and others on laptops. Regardless of the device, we are constantly sending personal information up into the cloud. Bank accounts, social security numbers, location history, contact information — you name it — are all being transmitted to companies and platforms alike.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "More than three billion people use the internet. Some are connecting with their smartphone and others on laptops. Regardless of the device, we are constantly sending personal information up into the cloud. Bank accounts, social security numbers, location history, contact information — you name it — are all being transmitted to companies and platforms alike.",
+      "id": [
+        "194047"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194048]\nConsider the latest investigation into how much data major platforms store. Dylan Curran, an IT consultant, ==looked into how much data was being collected==|link:https://www.theguardian.com/commentisfree/2018/mar/28/all-the-data-facebook-google-has-on-you-privacy| on him by Facebook and Google. The result: over 5GB of downloadable data from Google and around 600mb of data from Facebook. Looking beyond the creep factor, do we trust these platforms to keep all of this data safe?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Consider the latest investigation into how much data major platforms store. Dylan Curran, an IT consultant, ==looked into how much data was being collected==|link:https://www.theguardian.com/commentisfree/2018/mar/28/all-the-data-facebook-google-has-on-you-privacy| on him by Facebook and Google. The result: over 5GB of downloadable data from Google and around 600mb of data from Facebook. Looking beyond the creep factor, do we trust these platforms to keep all of this data safe?",
+      "id": [
+        "194048"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194049]\nAs we’ve seen from the #DeleteFacebook movement, trust is a differentiating factor in products. Corporations not only have to be transparent about what data they collect, but also how that data is secured. Just look at Equifax for an example of how lapses in cybersecurity can put millions of customers at risk and destroy a company.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "As we’ve seen from the #DeleteFacebook movement, trust is a differentiating factor in products. Corporations not only have to be transparent about what data they collect, but also how that data is secured. Just look at Equifax for an example of how lapses in cybersecurity can put millions of customers at risk and destroy a company.",
+      "id": [
+        "194049"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194050]\nA reasonable amount of fear and skepticism is healthy when using platforms and applications. However, becoming a digital hermit is no solution. The same technologies that are responsible for the great innovations of our time are also responsible for a growing vulnerability to cyberattacks. As things become more connected, they become more valuable for the consumer. At the same time, they become more complex and more vulnerable.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "A reasonable amount of fear and skepticism is healthy when using platforms and applications. However, becoming a digital hermit is no solution. The same technologies that are responsible for the great innovations of our time are also responsible for a growing vulnerability to cyberattacks. As things become more connected, they become more valuable for the consumer. At the same time, they become more complex and more vulnerable.",
+      "id": [
+        "194050"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194051]\nLooking forward, what can we do?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Looking forward, what can we do?",
+      "id": [
+        "194051"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194052]\nWe have a responsibility to improve cybersecurity practices at both a personal and enterprise level. The issue is not just an ethical one — corporations have a financial incentive to make sure that consumer information (in addition to corporate information) remains secure and protected. Data breaches impact consumer confidence.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "We have a responsibility to improve cybersecurity practices at both a personal and enterprise level. The issue is not just an ethical one — corporations have a financial incentive to make sure that consumer information (in addition to corporate information) remains secure and protected. Data breaches impact consumer confidence.",
+      "id": [
+        "194052"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194053]\nAccording to ==Juniper research==|link:https://www.juniperresearch.com/press/cybercrime-cost-businesses-over-2trillion-by-2019|, “The average cost of a data breach in 2020 will exceed $150 million by 2020, as more business infrastructure gets connected.” Attacks are not only becoming costlier, they’re also becoming more frequent. According to ==a recent IBM report==|link:https://www.ibm.com/common/ssi/cgi-bin/ssialias?subtype=WH&infotype=SA&htmlfid=SEL03074USEN&attachment=SEL03074USEN.PDF|, 94 percent of C-Suite respondents “believe it’s probable their companies will experience a significant cybersecurity incident in the next two years.” Findings from an ==A.T. Kearney survey==|link:https://www.kearney.com/documents/10192/13419412/2017+views+from+the+c+suite.pdf/| echo this sentiment: “85 percent of [executives] of the belief that cyber attacks will become more frequent and costly.” And 71 percent of C-Suite respondents to a Bae Systems survey cited cybersecurity as their most significant business challenge.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "According to ==Juniper research==|link:https://www.juniperresearch.com/press/cybercrime-cost-businesses-over-2trillion-by-2019|, “The average cost of a data breach in 2020 will exceed $150 million by 2020, as more business infrastructure gets connected.” Attacks are not only becoming costlier, they’re also becoming more frequent. According to ==a recent IBM report==|link:https://www.ibm.com/common/ssi/cgi-bin/ssialias?subtype=WH&infotype=SA&htmlfid=SEL03074USEN&attachment=SEL03074USEN.PDF|, 94 percent of C-Suite respondents “believe it’s probable their companies will experience a significant cybersecurity incident in the next two years.” Findings from an ==A.T. Kearney survey==|link:https://www.kearney.com/documents/10192/13419412/2017+views+from+the+c+suite.pdf/| echo this sentiment: “85 percent of [executives] of the belief that cyber attacks will become more frequent and costly.” And 71 percent of C-Suite respondents to a Bae Systems survey cited cybersecurity as their most significant business challenge.",
+      "id": [
+        "194053"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194054]\nWith the increased volume and severity of attacks, corporations are compelled to face this problem head on.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "With the increased volume and severity of attacks, corporations are compelled to face this problem head on.",
+      "id": [
+        "194054"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194055]\n[▼ch-1]\n[#The Need for Cybersecurity Awareness]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194055"
+      ],
+      "anchor": "ch-1",
+      "title": "The Need for Cybersecurity Awareness"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194056]\nDespite the severity of the problem, many decision makers know little about cybersecurity:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Despite the severity of the problem, many decision makers know little about cybersecurity:",
+      "id": [
+        "194056"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194057]\n“70% of business executives — not 70% of CTOs, CSOs, CIOs — but 70% of business executives in general, in any industry, have made a cybersecurity decision for their company despite the fact that no major MBA program teaches it as part of your normal business management training and responsibility.”\n__==-”Cybersecurity and Cyberwar: What Everyone Needs to Know.”==|link:https://www.youtube.com/watch?v=h0SXO5KUZIo| Peter Warren Singer, Feb. 2014__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“70% of business executives — not 70% of CTOs, CSOs, CIOs — but 70% of business executives in general, in any industry, have made a cybersecurity decision for their company despite the fact that no major MBA program teaches it as part of your normal business management training and responsibility.”\n__==-”Cybersecurity and Cyberwar: What Everyone Needs to Know.”==|link:https://www.youtube.com/watch?v=h0SXO5KUZIo| Peter Warren Singer, Feb. 2014__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194057"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194058]\n“91% of non-executive directors at the highly vulnerable companies cannot read a cybersecurity report, preventing them from asking the right questions and validating the data that technical leadership provides.”\n__==-”Bridging the Accountability Gap: Why We Need to Adopt a Culture of Responsibility.”==|link:https://blog.tanium.com/cybersecurity-accountability-gap/index.html| Orion Hindawi, Apr. 2016__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“91% of non-executive directors at the highly vulnerable companies cannot read a cybersecurity report, preventing them from asking the right questions and validating the data that technical leadership provides.”\n__==-”Bridging the Accountability Gap: Why We Need to Adopt a Culture of Responsibility.”==|link:https://blog.tanium.com/cybersecurity-accountability-gap/index.html| Orion Hindawi, Apr. 2016__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194058"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194059]\n“2 out of 5 respondents across non-executive directors, C-level, and CIO/CISO-level respondents who admitted they don’t feel responsible for the repercussions of a cyberattack, it’s easy to see why the Accountability Gap is growing.”\n__==-”Bridging the Accountability Gap: Why We Need to Adopt a Culture of Responsibility.”==|link:https://blog.tanium.com/cybersecurity-accountability-gap/index.html| Orion Hindawi, Apr. 2016__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“2 out of 5 respondents across non-executive directors, C-level, and CIO/CISO-level respondents who admitted they don’t feel responsible for the repercussions of a cyberattack, it’s easy to see why the Accountability Gap is growing.”\n__==-”Bridging the Accountability Gap: Why We Need to Adopt a Culture of Responsibility.”==|link:https://blog.tanium.com/cybersecurity-accountability-gap/index.html| Orion Hindawi, Apr. 2016__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194059"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194060]\n[%][%Resource: How much do you know about cybersecurity?]\n• ==“Cybersecurity Knowledge Quiz.”==|link:https://www.pewresearch.org/internet/quiz/cybersecurity-knowledge/| Pew Research Center",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==“Cybersecurity Knowledge Quiz.”==|link:https://www.pewresearch.org/internet/quiz/cybersecurity-knowledge/| Pew Research Center",
+      "id": [
+        "194060"
+      ],
+      "lead": "Resource: How much do you know about cybersecurity?"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194061]\n[▼ch-2]\n[#Not My Job]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194061"
+      ],
+      "anchor": "ch-2",
+      "title": "Not My Job"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194062]\nWho’s responsible for cybersecurity? The Board? The CEO? The CSO? The CISO? The IT department? Company managers?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Who’s responsible for cybersecurity? The Board? The CEO? The CSO? The CISO? The IT department? Company managers?",
+      "id": [
+        "194062"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194063]\nIn the HBR article, ==“Is Anyone Really Responsible for Your Company’s Data Security?”==|link:https://hbr.org/2013/06/is-anyone-really-responsible-for-your-companys-data-security| Joel Brenner puts it eloquently: “Cyber security involves legal issues, human resources practices and policies, operational configurations, and technical expertise. But while each of these silo chieftains — the general counsel, the HR director, the chief operations officer, and the IT director — owns a piece of the problem, some of them don’t know it, and none of them owns the whole thing.”",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "In the HBR article, ==“Is Anyone Really Responsible for Your Company’s Data Security?”==|link:https://hbr.org/2013/06/is-anyone-really-responsible-for-your-companys-data-security| Joel Brenner puts it eloquently: “Cyber security involves legal issues, human resources practices and policies, operational configurations, and technical expertise. But while each of these silo chieftains — the general counsel, the HR director, the chief operations officer, and the IT director — owns a piece of the problem, some of them don’t know it, and none of them owns the whole thing.”",
+      "id": [
+        "194063"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194064]\nWe make the case that __everyone__ is responsible. For security to play the foundational role it must in order to be effective, it needs to have champions across and within every department, not just IT. While the IT department certainly has __some__ control over security practices across the company, rarely do cyberbreaches originate from a hole in a firewall or breakdown of similar safeguards.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "We make the case that __everyone__ is responsible. For security to play the foundational role it must in order to be effective, it needs to have champions across and within every department, not just IT. While the IT department certainly has __some__ control over security practices across the company, rarely do cyberbreaches originate from a hole in a firewall or breakdown of similar safeguards.",
+      "id": [
+        "194064"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194065]\n__“only 28% of critical breaches are due to inadequate technology — 72% of critical breaches are due to organizational, process and people failures.”__\n__==“Building a Cyberresilient Organization.”==|link:https://www.bcgperspectives.com/content/articles/technology-digital-building-a-cyberresilient-organization/| Stefan Deutscher, Walter Bohmayr and Alex Asen, Jan. 2017__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "__“only 28% of critical breaches are due to inadequate technology — 72% of critical breaches are due to organizational, process and people failures.”__\n__==“Building a Cyberresilient Organization.”==|link:https://www.bcgperspectives.com/content/articles/technology-digital-building-a-cyberresilient-organization/| Stefan Deutscher, Walter Bohmayr and Alex Asen, Jan. 2017__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194065"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194066]\n(That being said, when a company suffers a breach, the spotlight generally falls on the tech.)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "(That being said, when a company suffers a breach, the spotlight generally falls on the tech.)",
+      "id": [
+        "194066"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194067]\nIf you leave this article remembering only one thing, it should be that cybersecurity silos need to be dismantled and responsibility should be spread company-wide. Alright, maybe another thing we want to leave you with above all others: use non-SMS two-factor authentication and a password manager!",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If you leave this article remembering only one thing, it should be that cybersecurity silos need to be dismantled and responsibility should be spread company-wide. Alright, maybe another thing we want to leave you with above all others: use non-SMS two-factor authentication and a password manager!",
+      "id": [
+        "194067"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194068]\n[▼ch-3]\n[#How this primer is organized:]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194068"
+      ],
+      "anchor": "ch-3",
+      "title": "How this primer is organized:"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194069]\nThis guide is meant to provide a foundation for decision makers and employees on the security issues surrounding the platforms we use and the products we make. For ease of reference, this piece is broken up into the following sections:\n\n• **Significant Cyberattacks of the 21st Century**: To provide context for cybersecurity analysis, it’s important to look at some of the major attacks that have been at the forefront of media coverage.\n• **Attacker Characteristics**: Attacks can truly come from anywhere. Any misguided assumption of threat origin impedes an organization’s ability to prepare for an attack.\n• **Targeted Industries**: Understand the characteristics that make an organization attractive to cyberattackers.\n• **Common Types of Cyberattacks**: Cyberattacks come in many shapes and sizes. Despite the ever-evolving variants of attacks, the methods can generally be distilled down to nine different mechanisms.\n• **Vulnerabilities**: The first step in combating cyberattacks is awareness. This section illuminates vulnerable areas in your firm’s security and your personal security.\n• **Prevention**: A look at the people, process, and technology solutions that can be implemented to prevent attacks.\n• **Response**: Given the ubiquity of cyberattacks, firms must assume a breach will occur. This section goes over considerations for responding to an attack.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This guide is meant to provide a foundation for decision makers and employees on the security issues surrounding the platforms we use and the products we make. For ease of reference, this piece is broken up into the following sections:\n\n• **Significant Cyberattacks of the 21st Century**: To provide context for cybersecurity analysis, it’s important to look at some of the major attacks that have been at the forefront of media coverage.\n• **Attacker Characteristics**: Attacks can truly come from anywhere. Any misguided assumption of threat origin impedes an organization’s ability to prepare for an attack.\n• **Targeted Industries**: Understand the characteristics that make an organization attractive to cyberattackers.\n• **Common Types of Cyberattacks**: Cyberattacks come in many shapes and sizes. Despite the ever-evolving variants of attacks, the methods can generally be distilled down to nine different mechanisms.\n• **Vulnerabilities**: The first step in combating cyberattacks is awareness. This section illuminates vulnerable areas in your firm’s security and your personal security.\n• **Prevention**: A look at the people, process, and technology solutions that can be implemented to prevent attacks.\n• **Response**: Given the ubiquity of cyberattacks, firms must assume a breach will occur. This section goes over considerations for responding to an attack.",
+      "id": [
+        "194069"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\n[@id:194070]\n__What are you doing to grow your career and company?__\n\n__We spent 15k hours researching best practice. ==Visit our website==|link:https://we.st/|, explore hundreds of resources, and learn how to get things done.__",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "__What are you doing to grow your career and company?__\n\n__We spent 15k hours researching best practice. ==Visit our website==|link:https://we.st/|, explore hundreds of resources, and learn how to get things done.__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194070"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194071]\n[▼ch-4]\n[#Significant Cyberattacks of the 21st Century]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194071"
+      ],
+      "anchor": "ch-4",
+      "title": "Significant Cyberattacks of the 21st Century"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194072]\n“97% of Fortune 500 companies know that they’ve been hacked. And the other 3% have been, too, they just aren’t willing to admit it to themselves.”\n__==“Cybersecurity and Cyberwar: What Everyone Needs to Know.”==|link:https://www.youtube.com/watch?v=h0SXO5KUZIo| Peter Warren Singer, Feb. 2014__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“97% of Fortune 500 companies know that they’ve been hacked. And the other 3% have been, too, they just aren’t willing to admit it to themselves.”\n__==“Cybersecurity and Cyberwar: What Everyone Needs to Know.”==|link:https://www.youtube.com/watch?v=h0SXO5KUZIo| Peter Warren Singer, Feb. 2014__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194072"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194073]\nData breaches that end up in the media spotlight are a small fraction of total breaches. A quick web search finds that companies that are commonly seen as impenetrable (Google, Amazon, Apple, etc.) have all been breached (and these are only the few that have been reported).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Data breaches that end up in the media spotlight are a small fraction of total breaches. A quick web search finds that companies that are commonly seen as impenetrable (Google, Amazon, Apple, etc.) have all been breached (and these are only the few that have been reported).",
+      "id": [
+        "194073"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194074]\nTo provide context for cybersecurity analysis, it’s important to look at some of the ==major attacks==|link:https://www.csoonline.com/article/2130877/the-biggest-data-breaches-of-the-21st-century.html| (according to Taylor Armerding in a September 2017 assessment) that have been at the forefront of media coverage.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "To provide context for cybersecurity analysis, it’s important to look at some of the ==major attacks==|link:https://www.csoonline.com/article/2130877/the-biggest-data-breaches-of-the-21st-century.html| (according to Taylor Armerding in a September 2017 assessment) that have been at the forefront of media coverage.",
+      "id": [
+        "194074"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194075]\n• **Yahoo**\n• Date: 2013–14\n• Impact: 1.5 billion user accounts\n• Method: unknown/undisclosed\n• **Adult Friend Finder**\n• Date: Oct. 2016\n• Impact: > 412.2 million user accounts\n• Method: Local File Inclusion vulnerability exploited\n• **eBay**\n• Date: May 2014\n• Impact: 145 million users compromised\n• Method: stolen corporate employee credentials\n• **Heartland Payment Systems**\n• Date: Mar. 2008\n• Impact: 134 million credit cards exposed\n• Method: SQL injection to install spyware on Heartland’s data systems\n• **Target Stores.**\n• Date: Dec. 2013\n• Impact: credit/debit card information and/or contact information of up to 110 million people compromised\n• Method: hackers had gained access through a third-party HVAC vendor to its point-of-sale (POS) payment card readers\n• **TJX Companies, Inc**\n• Date: Dec. 2006\n• Impact: 94 million credit cards exposed\n• Method: weak data encryption or in-store job application kiosks exploited\n• **JP Morgan Chase**\n• Date: Jul. 2014\n• Impact: 76 million households and seven million small businesses\n• Method: hackers gained “root” privileges on more than 90 of the bank’s servers\n• **US Office of Personnel Management**\n• Date: 2012–14\n• Impact: personal information of 22 million current and former federal employees.\n• Method: hackers, said to be from China, were inside the OPM system starting in 2012, but were not detected until Mar. 20, 2014. A second hacker, or group, gained access to OPM through a third-party contractor in May 2014, but was not discovered until nearly a year later.\n• **Sony’s PlayStation Network**\n• Date: Apr. 20, 2011\n• Impact: 77 million PlayStation Network accounts hacked, with estimated losses of $171 million while the site was down for a month\n• **Anthem**\n• Date: Feb. 2015\n• Impact: theft of personal information on up to 78.8 million current and former customers\n• Method: phishing attack\n• **RSA Security**\n• Date: Mar. 2011\n• Impact: possibly 40 million employee records stolen\n• Method: phishing attack\n• **Stuxnet**\n• Date: sometime in 2010, but origins date to 2005\n• Impact: meant to attack Iran’s nuclear power program, but also served as a template for real-world intrusion and service disruption of power grids, water supplies, or public transportation systems\n• Method: malware\n• **Verisign**\n• Date: throughout 2010\n• Impact: undisclosed information stolen\n• Method: undisclosed\n• **Home Depot**\n• Date: Sept. 2014\n• Impact: theft of credit/debit card information of 56 million customers\n• Method: POS systems targeted with malware\n• **Adobe**\n• Date: Oct. 2013\n• Impact: 38 million user records",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• **Yahoo**\n• Date: 2013–14\n• Impact: 1.5 billion user accounts\n• Method: unknown/undisclosed\n• **Adult Friend Finder**\n• Date: Oct. 2016\n• Impact: > 412.2 million user accounts\n• Method: Local File Inclusion vulnerability exploited\n• **eBay**\n• Date: May 2014\n• Impact: 145 million users compromised\n• Method: stolen corporate employee credentials\n• **Heartland Payment Systems**\n• Date: Mar. 2008\n• Impact: 134 million credit cards exposed\n• Method: SQL injection to install spyware on Heartland’s data systems\n• **Target Stores.**\n• Date: Dec. 2013\n• Impact: credit/debit card information and/or contact information of up to 110 million people compromised\n• Method: hackers had gained access through a third-party HVAC vendor to its point-of-sale (POS) payment card readers\n• **TJX Companies, Inc**\n• Date: Dec. 2006\n• Impact: 94 million credit cards exposed\n• Method: weak data encryption or in-store job application kiosks exploited\n• **JP Morgan Chase**\n• Date: Jul. 2014\n• Impact: 76 million households and seven million small businesses\n• Method: hackers gained “root” privileges on more than 90 of the bank’s servers\n• **US Office of Personnel Management**\n• Date: 2012–14\n• Impact: personal information of 22 million current and former federal employees.\n• Method: hackers, said to be from China, were inside the OPM system starting in 2012, but were not detected until Mar. 20, 2014. A second hacker, or group, gained access to OPM through a third-party contractor in May 2014, but was not discovered until nearly a year later.\n• **Sony’s PlayStation Network**\n• Date: Apr. 20, 2011\n• Impact: 77 million PlayStation Network accounts hacked, with estimated losses of $171 million while the site was down for a month\n• **Anthem**\n• Date: Feb. 2015\n• Impact: theft of personal information on up to 78.8 million current and former customers\n• Method: phishing attack\n• **RSA Security**\n• Date: Mar. 2011\n• Impact: possibly 40 million employee records stolen\n• Method: phishing attack\n• **Stuxnet**\n• Date: sometime in 2010, but origins date to 2005\n• Impact: meant to attack Iran’s nuclear power program, but also served as a template for real-world intrusion and service disruption of power grids, water supplies, or public transportation systems\n• Method: malware\n• **Verisign**\n• Date: throughout 2010\n• Impact: undisclosed information stolen\n• Method: undisclosed\n• **Home Depot**\n• Date: Sept. 2014\n• Impact: theft of credit/debit card information of 56 million customers\n• Method: POS systems targeted with malware\n• **Adobe**\n• Date: Oct. 2013\n• Impact: 38 million user records",
+      "id": [
+        "194075"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194076]\nThis is just the tip of the iceberg. The breaches outlined above are bad, but they have been surpassed in severity by one of the most recent breaches — the Equifax breach.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This is just the tip of the iceberg. The breaches outlined above are bad, but they have been surpassed in severity by one of the most recent breaches — the Equifax breach.",
+      "id": [
+        "194076"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194077]\nIn September of 2017, Equifax reported a breach that affected 143 million U.S. consumers. While this breach was not the largest, it is one of the most severe attacks due to the depth of personal information compromised. ==As reported in Ars Technica==|link:https://arstechnica.com/information-technology/2017/09/why-the-equifax-breach-is-very-possibly-the-worst-leak-of-personal-info-ever/|, “By providing full names, Social Security numbers, birth dates, addresses, and, in some cases, driver license numbers, it provided most of the information banks, insurance companies, and other businesses use to confirm consumers are who they claim to be.”",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "In September of 2017, Equifax reported a breach that affected 143 million U.S. consumers. While this breach was not the largest, it is one of the most severe attacks due to the depth of personal information compromised. ==As reported in Ars Technica==|link:https://arstechnica.com/information-technology/2017/09/why-the-equifax-breach-is-very-possibly-the-worst-leak-of-personal-info-ever/|, “By providing full names, Social Security numbers, birth dates, addresses, and, in some cases, driver license numbers, it provided most of the information banks, insurance companies, and other businesses use to confirm consumers are who they claim to be.”",
+      "id": [
+        "194077"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194078]\nHow does a breach of this size happen? To understand the situation, we start by understanding the attackers.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "How does a breach of this size happen? To understand the situation, we start by understanding the attackers.",
+      "id": [
+        "194078"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194079]\n[%][%Resource: Major Cyberattacks in Recent History]\n• ==Cyber Attacks on U.S. Companies in 2016==|link:https://www.heritage.org/defense/report/cyber-attacks-us-companies-2016|: List of major cyberattacks reported in 2016 complete with impact and cause. (==2014 List==|link:https://www.heritage.org/defense/report/cyber-attacks-us-companies-2014|, ==2015 List==|link:https://www.heritage.org/cybersecurity/report/continued-federal-cyber-breaches-2015|)\n• ==World’s Biggest Data Breaches==|link:https://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/|: A regularly updated visualization of the world’s biggest data breaches and descriptions for most. Can be sorted by organization type and method of leak.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==Cyber Attacks on U.S. Companies in 2016==|link:https://www.heritage.org/defense/report/cyber-attacks-us-companies-2016|: List of major cyberattacks reported in 2016 complete with impact and cause. (==2014 List==|link:https://www.heritage.org/defense/report/cyber-attacks-us-companies-2014|, ==2015 List==|link:https://www.heritage.org/cybersecurity/report/continued-federal-cyber-breaches-2015|)\n• ==World’s Biggest Data Breaches==|link:https://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/|: A regularly updated visualization of the world’s biggest data breaches and descriptions for most. Can be sorted by organization type and method of leak.",
+      "id": [
+        "194079"
+      ],
+      "lead": "Resource: Major Cyberattacks in Recent History"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194080]\n[▼ch-5]\n[#Understanding the Attacker]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194080"
+      ],
+      "anchor": "ch-5",
+      "title": "Understanding the Attacker"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194081]\n[▼ch-6]\n[##Who are they?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194081"
+      ],
+      "anchor": "ch-6",
+      "title": "Who are they?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194082]\nAttacks can come from two distinct groups: insiders or outsiders. The chart below illustrates this dichotomy.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Attacks can come from two distinct groups: insiders or outsiders. The chart below illustrates this dichotomy.",
+      "id": [
+        "194082"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194083]\n[&image:https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_1.png][@caption:==“Q&A. What Motivates Cyber-Attackers?”==|link:https://timreview.ca/article/838| Chen Han and Rituja Dongre, Oct. 2014]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194083"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "==“Q&A. What Motivates Cyber-Attackers?”==|link:https",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194084]\nDespite the commonly held image of external hacker teams in hoodies, research suggests that the majority of attacks originate from the “insiders” group.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Despite the commonly held image of external hacker teams in hoodies, research suggests that the majority of attacks originate from the “insiders” group.",
+      "id": [
+        "194084"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194085]\n[&image:https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_2.jpeg][@caption:==“Most Cyber Attacks Are An Inside Job.”==|link:https://www.statista.com/chart/4994/most-cyber-attacks-are-an-inside-job/| Martin Armstrong, Jun 2016]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194085"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_2.jpeg",
+          "showInIndex": false,
+          "format": "jpeg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "==“Most Cyber Attacks Are An Inside Job.”==|link:https",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194086]\n__Within the insiders’ category, there are three basic groups:__\n\n“i) disgruntled employees, who may launch retaliatory attacks or threaten the safety of internal systems\nii) financially motivated insiders, who may misuse company assets or manipulate the system for personal gain (although some insiders may be acting on ethical grounds or for other reasons);\niii) unintentional insiders, who may unwittingly facilitate outside attacks, but are not strictly speaking primary attackers.”\n\n==“Cyber Warfare: Techniques, Tactics and Tools for Security Practitioners.”==|link:http://index-of.es/Hack/Cyber%20Warfare.pdf| Jason Andress and Steve Winterfeld, 2011",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "__Within the insiders’ category, there are three basic groups:__\n\n“i) disgruntled employees, who may launch retaliatory attacks or threaten the safety of internal systems\nii) financially motivated insiders, who may misuse company assets or manipulate the system for personal gain (although some insiders may be acting on ethical grounds or for other reasons);\niii) unintentional insiders, who may unwittingly facilitate outside attacks, but are not strictly speaking primary attackers.”\n\n==“Cyber Warfare: Techniques, Tactics and Tools for Security Practitioners.”==|link:http://index-of.es/Hack/Cyber%20Warfare.pdf| Jason Andress and Steve Winterfeld, 2011",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194086"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194087]\nHowever, this representation doesn’t provide the whole picture. A closer look shows a huge variance of attack origin based on industry sectors.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "However, this representation doesn’t provide the whole picture. A closer look shows a huge variance of attack origin based on industry sectors.",
+      "id": [
+        "194087"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194088]\n[&image:https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_3.png][@caption:==“IBM X-Force Threat Intelligence Index 2017,”==|link:https://public.dhe.ibm.com/common/ssi/ecm/wg/en/wgl03140usen/WGL03140USEN.PDF| IBM, 2017]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194088"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "==“IBM X-Force Threat Intelligence Index 2017,”==|link:https",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194089]\nAttacks can truly come from anywhere. Any misguided assumption of threat origin, whether internal or external, impedes an organization’s ability to prepare for an attack. For more insights on threat origins from cybersecurity experts, explore the following resource:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Attacks can truly come from anywhere. Any misguided assumption of threat origin, whether internal or external, impedes an organization’s ability to prepare for an attack. For more insights on threat origins from cybersecurity experts, explore the following resource:",
+      "id": [
+        "194089"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194090]\n[%][%Resource: Expert Perspectives on Threat Origin]\n• ==Insider vs. Outsider Data Security Threats: What’s the Greater Risk?==|link:https://digitalguardian.com/blog/insider-outsider-data-security-threats|: 47 data security experts compare the risks of insider threats vs. outsider threats via Digital Guardian.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==Insider vs. Outsider Data Security Threats: What’s the Greater Risk?==|link:https://digitalguardian.com/blog/insider-outsider-data-security-threats|: 47 data security experts compare the risks of insider threats vs. outsider threats via Digital Guardian.",
+      "id": [
+        "194090"
+      ],
+      "lead": "Resource: Expert Perspectives on Threat Origin"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194091]\n[▼ch-7]\n[##What are their motivations?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194091"
+      ],
+      "anchor": "ch-7",
+      "title": "What are their motivations?"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194092]\n__“The single greatest motivator for cyberattacks in today’s world is, arguably, profit.”__\n==“Know Your Enemy: Understanding the Motivation Behind Cyberattacks.”==|link:https://securityintelligence.com/know-your-enemy-understanding-the-motivation-behind-cyberattacks/| Lyndon Sutherland, Mar. 2016",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "__“The single greatest motivator for cyberattacks in today’s world is, arguably, profit.”__\n==“Know Your Enemy: Understanding the Motivation Behind Cyberattacks.”==|link:https://securityintelligence.com/know-your-enemy-understanding-the-motivation-behind-cyberattacks/| Lyndon Sutherland, Mar. 2016",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194092"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194093]\nIn the U.S., there has been a lot of recent news about purported espionage and foreign meddling in our elections. These stories make it easy to overlook the fact that the majority of attacks are cybercrimes for the sake of profit.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In the U.S., there has been a lot of recent news about purported espionage and foreign meddling in our elections. These stories make it easy to overlook the fact that the majority of attacks are cybercrimes for the sake of profit.",
+      "id": [
+        "194093"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194094]\n[&image:https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_4.png][@caption:==“2016 Cyber Attacks Statistics.”==|link:https://www.hackmageddon.com/2017/01/19/2016-cyber-attacks-statistics/| Paolo Passeri, Jan. 2017]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194094"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "==“2016 Cyber Attacks Statistics.”==|link:https",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194095]\nHowever, deeper motivations may be more nuanced. Despite being focused on monetary gain attacks aren’t always orchestrated and premeditated. Many attacks are not some sort of powerhouse attack but rather an attacker exploiting a simple vulnerability. As described in an IBM Information Security report:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "However, deeper motivations may be more nuanced. Despite being focused on monetary gain attacks aren’t always orchestrated and premeditated. Many attacks are not some sort of powerhouse attack but rather an attacker exploiting a simple vulnerability. As described in an IBM Information Security report:",
+      "id": [
+        "194095"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194096]\n“Many intrusion attempts are executed by attackers who are operating opportunistically, to exploit “doors left unlocked.” These are still remarkably common and they can make life easy for criminals: they include basic security lapses caused by lack of discipline and poor adherence to process controls, as well as system misconfigurations that can remain unrecognized and uncorrected for an extended time”\n==“The challenge of digital security.”==|link:https://informationsecurity.report/Resources/Whitepapers/09faae97-245d-4e7e-a983-35d539b6233d_The%20Challenge%20of%20Digital%20Security%20What%20Will%20it%20Take%20for%20Retailers%20to%20Protect%20Themselves.PDF| IBM Information Security, Jul. 2014",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“Many intrusion attempts are executed by attackers who are operating opportunistically, to exploit “doors left unlocked.” These are still remarkably common and they can make life easy for criminals: they include basic security lapses caused by lack of discipline and poor adherence to process controls, as well as system misconfigurations that can remain unrecognized and uncorrected for an extended time”\n==“The challenge of digital security.”==|link:https://informationsecurity.report/Resources/Whitepapers/09faae97-245d-4e7e-a983-35d539b6233d_The%20Challenge%20of%20Digital%20Security%20What%20Will%20it%20Take%20for%20Retailers%20to%20Protect%20Themselves.PDF| IBM Information Security, Jul. 2014",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194096"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194097]\n[%][%Resource: Motivations Underlying Cybercriminal Attacks]\n• In order to understand the full spectrum of attacks and vulnerabilities, these motivations are useful to explore. In ==“Know Your Cyber Enemy”==|link:https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=WH&infotype=SA&htmlfid=SEL03089USEN&attachment=SEL03089USEN.PDF| IBM provides a detailed look at common cybercriminal motivations (profit, politics or social justice, patriotic or ideological motives, sabotage, extortion, ego or vanity, revenge.) This is a great resource to reference when performing an audit of your security capabilities.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• In order to understand the full spectrum of attacks and vulnerabilities, these motivations are useful to explore. In ==“Know Your Cyber Enemy”==|link:https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=WH&infotype=SA&htmlfid=SEL03089USEN&attachment=SEL03089USEN.PDF| IBM provides a detailed look at common cybercriminal motivations (profit, politics or social justice, patriotic or ideological motives, sabotage, extortion, ego or vanity, revenge.) This is a great resource to reference when performing an audit of your security capabilities.",
+      "id": [
+        "194097"
+      ],
+      "lead": "Resource: Motivations Underlying Cybercriminal Attacks"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194098]\n[▼ch-8]\n[#Targeted Industries]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194098"
+      ],
+      "anchor": "ch-8",
+      "title": "Targeted Industries"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194099]\n“95 percent of breached records came from three industries in 2016: Government, retail, and technology.”\n__==“Forrester: What can we learn from a disastrous year of hacks and breaches?”==|link:https://www.techrepublic.com/article/forrester-what-can-we-learn-from-a-disastrous-year-of-hacks-and-breaches/|== Brandon Vigliarolo, Jan. 2017__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“95 percent of breached records came from three industries in 2016: Government, retail, and technology.”\n__==“Forrester: What can we learn from a disastrous year of hacks and breaches?”==|link:https://www.techrepublic.com/article/forrester-what-can-we-learn-from-a-disastrous-year-of-hacks-and-breaches/|== Brandon Vigliarolo, Jan. 2017__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194099"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194100]\nGiven the common cybersecurity motivations (profit combined with opportunity), the most affected industries are not surprising. According to the United Midwest Security Alliance, the following industries provide both opportunities for cyberattacks in addition to financial incentives:\n\n• **Financial institutions**\n• Financial institutions and banks are particularly vulnerable to cyber attacks and data breaches because hackers can gain access to credit card information, bank account information, etc., and this can result in money takeovers.\n\n• **Hospitals**\n• In general, hospitals are some of the most vulnerable intuitions because of general lack of necessary funding. Additionally, medical facilities can be seen by attackers as cyber goldmines with a hodgepodge of outdated systems and understaffed employees with little cyber training. Additionally, if attacked, hospitals generally have more of an incentive to quickly pay cybercriminals so they can get back to the data held hostage by ransomware. Especially, when dealing with people’s lives and their medical data.\n\n• **Schools and universities**\n• What makes academic institutions vulnerable is their lack of general cybersecurity measures. One study by Tifoil Security tested the networks of 557 state universities with a cross-site scripting (XSS) attack. The results found that a whopping 25% of universities were vulnerable. Also, schools tend to keep most of their information publicly available, specifically about the people they employ, with online access to email addresses and this makes schools prime targets for phishing schemes.\n\n• **Retailers**\n• Retailers collecting and protecting data through a variety of sources, from point of sale machines to tap to pay terminals, can prove to be quite challenging. The massive amount of data to protect across multiple endpoints is no easy task. Additionally, card data collected at the time of purchase is often fed into vulnerable analytic systems used by marketers to track customer buying habits.”\n\n==“Mission & Vision.”==|link:https://umsa-security.org/mission-vision/| United Midwest Security Alliance, Mar. 2017",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Given the common cybersecurity motivations (profit combined with opportunity), the most affected industries are not surprising. According to the United Midwest Security Alliance, the following industries provide both opportunities for cyberattacks in addition to financial incentives:\n\n• **Financial institutions**\n• Financial institutions and banks are particularly vulnerable to cyber attacks and data breaches because hackers can gain access to credit card information, bank account information, etc., and this can result in money takeovers.\n\n• **Hospitals**\n• In general, hospitals are some of the most vulnerable intuitions because of general lack of necessary funding. Additionally, medical facilities can be seen by attackers as cyber goldmines with a hodgepodge of outdated systems and understaffed employees with little cyber training. Additionally, if attacked, hospitals generally have more of an incentive to quickly pay cybercriminals so they can get back to the data held hostage by ransomware. Especially, when dealing with people’s lives and their medical data.\n\n• **Schools and universities**\n• What makes academic institutions vulnerable is their lack of general cybersecurity measures. One study by Tifoil Security tested the networks of 557 state universities with a cross-site scripting (XSS) attack. The results found that a whopping 25% of universities were vulnerable. Also, schools tend to keep most of their information publicly available, specifically about the people they employ, with online access to email addresses and this makes schools prime targets for phishing schemes.\n\n• **Retailers**\n• Retailers collecting and protecting data through a variety of sources, from point of sale machines to tap to pay terminals, can prove to be quite challenging. The massive amount of data to protect across multiple endpoints is no easy task. Additionally, card data collected at the time of purchase is often fed into vulnerable analytic systems used by marketers to track customer buying habits.”\n\n==“Mission & Vision.”==|link:https://umsa-security.org/mission-vision/| United Midwest Security Alliance, Mar. 2017",
+      "id": [
+        "194100"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194101]\nThese industries share a few key characteristics: they house high-value customer data, they have many different consumer touchpoints, they have complex and interweaving offerings, and they often allocate budgets to key value-creating activities.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "These industries share a few key characteristics: they house high-value customer data, they have many different consumer touchpoints, they have complex and interweaving offerings, and they often allocate budgets to key value-creating activities.",
+      "id": [
+        "194101"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194102]\nTo further understand targeted industries, refer to the ==IBM X-Force Threat Intelligence Index 2017==|link:https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WGL03140USEN&|: an in-depth look into five industries (financial services, information and communications, manufacturing, retail, and healthcare) that reveal major trends and vulnerabilities. These industries are all vulnerable to SQLi and OS CMDi attacks, which is a huge opportunity for cybercriminals.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "To further understand targeted industries, refer to the ==IBM X-Force Threat Intelligence Index 2017==|link:https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WGL03140USEN&|: an in-depth look into five industries (financial services, information and communications, manufacturing, retail, and healthcare) that reveal major trends and vulnerabilities. These industries are all vulnerable to SQLi and OS CMDi attacks, which is a huge opportunity for cybercriminals.",
+      "id": [
+        "194102"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194103]\n[▼ch-9]\n[#Common Types of Cyberattacks]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194103"
+      ],
+      "anchor": "ch-9",
+      "title": "Common Types of Cyberattacks"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194104]\nCyberattacks come in many shapes and sizes. Despite the ever-evolving variants of attacks, the methods can generally be distilled down to nine different mechanisms. According to the MITRE Corporation’s ==“Common Attack Pattern Enumeration and Classification”==|link:https://capec.mitre.org/| (sponsored by the U.S. Department of Homeland Security), the nine general mechanisms are:\n\n• **Collect and analyze information**: Attack patterns within this category focus on the gathering, collection, and theft of information by an adversary. These are often used in preparation for another type of attack.\n• **Inject unexpected items**: Attack patterns within this category focus on the ability to control or disrupt the behavior of a target, either through crafted data submitted via an interface for data input or the installation and execution of malicious code on the target system.\n• **Engage in deceptive interactions**: Attack patterns within this category focus on malicious interactions with a target in an attempt to deceive and convince the target that it is interacting with some other principal — and then to drive actions based on the level of trust that exists between the target and the other principal.\n• **Manipulate timing and state**: An attacker exploits weakness in timing or state, maintaining functions to perform actions that would otherwise be prevented by the execution flow of the target code and processes.\n• **Abuse existing functionality**: An adversary uses or manipulates one or more functions of an application in order to achieve a malicious objective — one not originally intended by the application — or to deplete a resource to the point that the target’s functionality is affected.\n• **Employ probabilistic techniques**: An attacker utilizes probabilistic techniques to explore and overcome security properties of the target that are based on an assumption of strength due to the extremely low mathematical probability that an attacker would be able to identify and exploit the very rare specific conditions under which those security properties do not hold.\n• **Subvert access control**: An attacker actively targets exploitation of weaknesses, limitations, and assumptions in the mechanisms a target utilizes to manage identity and authentication, as well as manage access to its resources or authorize functionality.\n• **Manipulate data structures**: Attack patterns in this category manipulate and exploit characteristics of system data structures in order to violate the intended usage and protections of these structures.\n• **Manipulate system resources**: Attack patterns within this category focus on the adversary’s ability to manipulate one or more resources in order to achieve a desired outcome.\n\n==“CAPEC CATEGORY: Collect and Analyze Information.”==|link:https://capec.mitre.org/data/definitions/118.html| CAPEC Content Team, Jan. 2017",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Cyberattacks come in many shapes and sizes. Despite the ever-evolving variants of attacks, the methods can generally be distilled down to nine different mechanisms. According to the MITRE Corporation’s ==“Common Attack Pattern Enumeration and Classification”==|link:https://capec.mitre.org/| (sponsored by the U.S. Department of Homeland Security), the nine general mechanisms are:\n\n• **Collect and analyze information**: Attack patterns within this category focus on the gathering, collection, and theft of information by an adversary. These are often used in preparation for another type of attack.\n• **Inject unexpected items**: Attack patterns within this category focus on the ability to control or disrupt the behavior of a target, either through crafted data submitted via an interface for data input or the installation and execution of malicious code on the target system.\n• **Engage in deceptive interactions**: Attack patterns within this category focus on malicious interactions with a target in an attempt to deceive and convince the target that it is interacting with some other principal — and then to drive actions based on the level of trust that exists between the target and the other principal.\n• **Manipulate timing and state**: An attacker exploits weakness in timing or state, maintaining functions to perform actions that would otherwise be prevented by the execution flow of the target code and processes.\n• **Abuse existing functionality**: An adversary uses or manipulates one or more functions of an application in order to achieve a malicious objective — one not originally intended by the application — or to deplete a resource to the point that the target’s functionality is affected.\n• **Employ probabilistic techniques**: An attacker utilizes probabilistic techniques to explore and overcome security properties of the target that are based on an assumption of strength due to the extremely low mathematical probability that an attacker would be able to identify and exploit the very rare specific conditions under which those security properties do not hold.\n• **Subvert access control**: An attacker actively targets exploitation of weaknesses, limitations, and assumptions in the mechanisms a target utilizes to manage identity and authentication, as well as manage access to its resources or authorize functionality.\n• **Manipulate data structures**: Attack patterns in this category manipulate and exploit characteristics of system data structures in order to violate the intended usage and protections of these structures.\n• **Manipulate system resources**: Attack patterns within this category focus on the adversary’s ability to manipulate one or more resources in order to achieve a desired outcome.\n\n==“CAPEC CATEGORY: Collect and Analyze Information.”==|link:https://capec.mitre.org/data/definitions/118.html| CAPEC Content Team, Jan. 2017",
+      "id": [
+        "194104"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194105]\nThe following resources provide more examples of different types of attacks.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The following resources provide more examples of different types of attacks.",
+      "id": [
+        "194105"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194106]\n[%][%Resources: Overviews of Common Attacks]\n• ==IBM X-Force Threat Intelligence Index 2017==|link:https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WGL03140USEN&|: The 2017 IBM X-Force Threat Intelligence Index chronicles 2016 data breaches, attack vectors, targeted industries, and perpetrators.\n• ==Nopsec — The Top Cyber Security Threats of 2017==|link:http://s3.amazonaws.com/arena-attachments/894140/728c179da862203545f399519d4c07c2.pdf?1487764926|: This report outlines five of the biggest cyberthreats that NopSec expects to see in 2017: nation-state cyberattacks; ransomware, DDoS attacks, the Internet of Things, social engineering, and human error.\n• ==Common Threats to be Aware of==|link:https://www.getcybersafe.gc.ca/en/resources|: The Government of Canada’s overview of common security threats relevant to individual users and firms.\n• ==Microsoft — Common Types of Network Attacks==|link:https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc959354(v=technet.10)?redirectedfrom=MSDN|: Brief overview of the most common type of network attacks.\n• ==Open Web Application Security Project — Top 10 Mobile Risks==|link:https://owasp.org/www-project-mobile-top-10/|\n• ==Open Web Application Security Project — Top 10 Web Risks==|link:https://owasp.org/www-project-top-ten/#tab=Main|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==IBM X-Force Threat Intelligence Index 2017==|link:https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WGL03140USEN&|: The 2017 IBM X-Force Threat Intelligence Index chronicles 2016 data breaches, attack vectors, targeted industries, and perpetrators.\n• ==Nopsec — The Top Cyber Security Threats of 2017==|link:http://s3.amazonaws.com/arena-attachments/894140/728c179da862203545f399519d4c07c2.pdf?1487764926|: This report outlines five of the biggest cyberthreats that NopSec expects to see in 2017: nation-state cyberattacks; ransomware, DDoS attacks, the Internet of Things, social engineering, and human error.\n• ==Common Threats to be Aware of==|link:https://www.getcybersafe.gc.ca/en/resources|: The Government of Canada’s overview of common security threats relevant to individual users and firms.\n• ==Microsoft — Common Types of Network Attacks==|link:https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc959354(v=technet.10)?redirectedfrom=MSDN|: Brief overview of the most common type of network attacks.\n• ==Open Web Application Security Project — Top 10 Mobile Risks==|link:https://owasp.org/www-project-mobile-top-10/|\n• ==Open Web Application Security Project — Top 10 Web Risks==|link:https://owasp.org/www-project-top-ten/#tab=Main|",
+      "id": [
+        "194106"
+      ],
+      "lead": "Resources: Overviews of Common Attacks"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194107]\nAttacks tend to come in bursts; they also follow trends. The figure from the ==IBM X-Force Threat Intelligence Index 2017==|link:https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WGL03140USEN&|, below, illustrates the more common types of attacks and their frequencies. Note the burst of misconfiguration exploitations in mid-2015 — every disclosed attack can act as a canary in a coal mine and firms should prepare accordingly.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Attacks tend to come in bursts; they also follow trends. The figure from the ==IBM X-Force Threat Intelligence Index 2017==|link:https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WGL03140USEN&|, below, illustrates the more common types of attacks and their frequencies. Note the burst of misconfiguration exploitations in mid-2015 — every disclosed attack can act as a canary in a coal mine and firms should prepare accordingly.",
+      "id": [
+        "194107"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194108]\n[&image:https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_5.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194108"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194109]\nThe attacks described above (misconfiguration, SQLi) can be confusing and hard to follow. Their solutions can be even more wordy. The following resources can help you navigate the dense jargon surrounding cybersecurity.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The attacks described above (misconfiguration, SQLi) can be confusing and hard to follow. Their solutions can be even more wordy. The following resources can help you navigate the dense jargon surrounding cybersecurity.",
+      "id": [
+        "194109"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194110]\n[%][%Resources: Understanding Cybersecurity Jargon]\n• ==The Motherboard e-Glossary of Cyber Terms and Hacking Lingo==|link:https://www.vice.com/en/article/mg79v4/hacking-glossary|\n• ==National Initiative for Cybersecurity Careers and Studies Glossary==|link:https://niccs.cisa.gov/about-niccs/cybersecurity-glossary|: The NICCS glossary contains key cybersecurity terms that enable clear communication and a common understanding of cybersecurity definitions.\n• ==From Antivirus to Zero-Day Attack==|link:https://xconomy.com/national/2016/04/29/from-antivirus-to-zero-day-attack-a-cybersecurity-glossary/|: A Cybersecurity Glossary outlines 35 of the top cybersecurity terms of which you should be aware.\n• ==Hacker Lexicon==|link:https://www.wired.com/tag/hacker-lexicon/|: WIRED’s explainer series seeks to demystify the jargon of information security, surveillance, and privacy.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==The Motherboard e-Glossary of Cyber Terms and Hacking Lingo==|link:https://www.vice.com/en/article/mg79v4/hacking-glossary|\n• ==National Initiative for Cybersecurity Careers and Studies Glossary==|link:https://niccs.cisa.gov/about-niccs/cybersecurity-glossary|: The NICCS glossary contains key cybersecurity terms that enable clear communication and a common understanding of cybersecurity definitions.\n• ==From Antivirus to Zero-Day Attack==|link:https://xconomy.com/national/2016/04/29/from-antivirus-to-zero-day-attack-a-cybersecurity-glossary/|: A Cybersecurity Glossary outlines 35 of the top cybersecurity terms of which you should be aware.\n• ==Hacker Lexicon==|link:https://www.wired.com/tag/hacker-lexicon/|: WIRED’s explainer series seeks to demystify the jargon of information security, surveillance, and privacy.",
+      "id": [
+        "194110"
+      ],
+      "lead": "Resources: Understanding Cybersecurity Jargon"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194111]\n[▼ch-10]\n[#Vulnerabilities]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194111"
+      ],
+      "anchor": "ch-10",
+      "title": "Vulnerabilities"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194112]\n“No company’s cyberdefenses, no matter how well constructed and maintained, are 100% impenetrable”\n__==“Building a Cyberresilient Organization.”==|link:https://www.bcgperspectives.com/content/articles/technology-digital-building-a-cyberresilient-organization/| Stefan Deutscher, Walter Bohmayr and Alex Asen, Jan. 2017__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“No company’s cyberdefenses, no matter how well constructed and maintained, are 100% impenetrable”\n__==“Building a Cyberresilient Organization.”==|link:https://www.bcgperspectives.com/content/articles/technology-digital-building-a-cyberresilient-organization/| Stefan Deutscher, Walter Bohmayr and Alex Asen, Jan. 2017__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194112"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194113]\nThe first step in combating cyberattacks is awareness. The next sections will illuminate vulnerable areas in your firm’s security and your personal security. Please note: these are only examples used to create a mindset of awareness that can be applied to your specific circumstances.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The first step in combating cyberattacks is awareness. The next sections will illuminate vulnerable areas in your firm’s security and your personal security. Please note: these are only examples used to create a mindset of awareness that can be applied to your specific circumstances.",
+      "id": [
+        "194113"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194114]\n[▼ch-11]\n[#Domains of Attack]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194114"
+      ],
+      "anchor": "ch-11",
+      "title": "Domains of Attack"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194115]\nAs illustrated above, the majority of cybercriminals are opportunistic and attack where corporations are vulnerable. These vulnerabilities don’t exist solely in the digital world — there are vulnerabilities in the physical world, as well. Looking at the CAPEC framework referenced earlier, there are six “domains” in which attacks take place:\n\n• **Social engineering**: Attack patterns within this category focus on the manipulation and exploitation of people.\n• **Supply chain**: Attack patterns within this category focus on the disruption of the supply chain lifecycle by manipulating computer system hardware, software or services for the purpose of espionage, theft of critical data or technology, or the disruption of mission-critical operations or infrastructure.\n• **Communications**: Attack patterns within this category focus on the exploitation of communications and related protocols.\n• **Software**: Attack patterns within this category focus on the exploitation of software applications. The techniques defined by each pattern are used to exploit weaknesses in the application’s design or implementation in an attempt to achieve a desired negative technical impact.\n• **Physical security**: Attack patterns within this category focus on physical security. The techniques defined by each pattern are used to exploit weaknesses in the physical security of a system in an attempt to achieve a desired negative technical impact.\n• **Hardware**: Attack patterns within this category focus on the exploitation of the physical hardware used in computing systems.\n\n__==“CAPEC VIEW: Domains of Attack.”==|link:https://capec.mitre.org/data/definitions/3000.html| CAPEC Content Team, Jun. 2014__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "As illustrated above, the majority of cybercriminals are opportunistic and attack where corporations are vulnerable. These vulnerabilities don’t exist solely in the digital world — there are vulnerabilities in the physical world, as well. Looking at the CAPEC framework referenced earlier, there are six “domains” in which attacks take place:\n\n• **Social engineering**: Attack patterns within this category focus on the manipulation and exploitation of people.\n• **Supply chain**: Attack patterns within this category focus on the disruption of the supply chain lifecycle by manipulating computer system hardware, software or services for the purpose of espionage, theft of critical data or technology, or the disruption of mission-critical operations or infrastructure.\n• **Communications**: Attack patterns within this category focus on the exploitation of communications and related protocols.\n• **Software**: Attack patterns within this category focus on the exploitation of software applications. The techniques defined by each pattern are used to exploit weaknesses in the application’s design or implementation in an attempt to achieve a desired negative technical impact.\n• **Physical security**: Attack patterns within this category focus on physical security. The techniques defined by each pattern are used to exploit weaknesses in the physical security of a system in an attempt to achieve a desired negative technical impact.\n• **Hardware**: Attack patterns within this category focus on the exploitation of the physical hardware used in computing systems.\n\n__==“CAPEC VIEW: Domains of Attack.”==|link:https://capec.mitre.org/data/definitions/3000.html| CAPEC Content Team, Jun. 2014__",
+      "id": [
+        "194115"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194116]\nIf any “domain” within a corporation is unsecure, it will likely become a target for a cyberattack. Many companies take the approach of throwing technology at their vulnerabilities, but the truth is that only 28 percent of critical breaches are due to inadequate technology — 72 percent of critical breaches are due to organizational, process, and people failures (which will be addressed in the next piece, “Prevention”).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If any “domain” within a corporation is unsecure, it will likely become a target for a cyberattack. Many companies take the approach of throwing technology at their vulnerabilities, but the truth is that only 28 percent of critical breaches are due to inadequate technology — 72 percent of critical breaches are due to organizational, process, and people failures (which will be addressed in the next piece, “Prevention”).",
+      "id": [
+        "194116"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194117]\n[&image:https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_6.png][@caption:==“Building a Cyberresilient Organization.”==|link:https://www.bcgperspectives.com/content/articles/technology-digital-building-a-cyberresilient-organization/| Stefan Deutscher, Walter Bohmayr and Alex Asen, Jan. 2017]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194117"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "==“Building a Cyberresilient Organization.”==|link:https",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194118]\n[▼ch-12]\n[#System Complexity]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194118"
+      ],
+      "anchor": "ch-12",
+      "title": "System Complexity"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194119]\nAs companies integrate new technologies and increase consumer choice, infrastructure will become inherently more complex. A more complex system provides a host of opportunities for cybercriminals to exploit.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "As companies integrate new technologies and increase consumer choice, infrastructure will become inherently more complex. A more complex system provides a host of opportunities for cybercriminals to exploit.",
+      "id": [
+        "194119"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194120]\n“To give a sense for the range of access points a retailer must identify and secure, at a minimum these will likely include:\n\n• __Point-of-sale (POS) terminals in stores__\n• Mobile POS access points\n• Customer-facing e-commerce websites\n• Links with each third-party vendor, supply-chain vendor, ecosystem partner and contractor\n• Employee-facing access points — including those that may utilize employee-owned mobile devices — and the social workplace\n• Links to connected data centers via the cloud\n• Links to financial institutions and payment processors\n• Links to managed service providers\n• Links to delivery services\n• Links to all other contractors who are provided with network access\n• B2B, intranet and extranet portals\n• In-store wireless routers, kiosks and networks\n• The expanding “Internet of Things”: IP-based printers, IP-linked surveillance cameras and similar devices”\n\n__==“The challenge of digital security.”==|link:https://informationsecurity.report/Resources/Whitepapers/09faae97-245d-4e7e-a983-35d539b6233d_The%20Challenge%20of%20Digital%20Security%20What%20Will%20it%20Take%20for%20Retailers%20to%20Protect%20Themselves.PDF| IBM Sales and Distribution, Jul. 2014__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“To give a sense for the range of access points a retailer must identify and secure, at a minimum these will likely include:\n\n• __Point-of-sale (POS) terminals in stores__\n• Mobile POS access points\n• Customer-facing e-commerce websites\n• Links with each third-party vendor, supply-chain vendor, ecosystem partner and contractor\n• Employee-facing access points — including those that may utilize employee-owned mobile devices — and the social workplace\n• Links to connected data centers via the cloud\n• Links to financial institutions and payment processors\n• Links to managed service providers\n• Links to delivery services\n• Links to all other contractors who are provided with network access\n• B2B, intranet and extranet portals\n• In-store wireless routers, kiosks and networks\n• The expanding “Internet of Things”: IP-based printers, IP-linked surveillance cameras and similar devices”\n\n__==“The challenge of digital security.”==|link:https://informationsecurity.report/Resources/Whitepapers/09faae97-245d-4e7e-a983-35d539b6233d_The%20Challenge%20of%20Digital%20Security%20What%20Will%20it%20Take%20for%20Retailers%20to%20Protect%20Themselves.PDF| IBM Sales and Distribution, Jul. 2014__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194120"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194121]\nThese vulnerabilities affect retailers disproportionately. Take Target, for example. The company recently settled the case regarding their 2014 data breach. The investigation, which ended with a ==$18.5 million Target settlement==|link:https://www.nytimes.com/2017/05/23/business/target-security-breach-settlement.html| (in addition to around $200 million in legal fees), concluded that “attackers had stolen credentials from a third-party vendor that they used to access a customer database.” This wasn’t from a point-of-sale system breach or from malware.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "These vulnerabilities affect retailers disproportionately. Take Target, for example. The company recently settled the case regarding their 2014 data breach. The investigation, which ended with a ==$18.5 million Target settlement==|link:https://www.nytimes.com/2017/05/23/business/target-security-breach-settlement.html| (in addition to around $200 million in legal fees), concluded that “attackers had stolen credentials from a third-party vendor that they used to access a customer database.” This wasn’t from a point-of-sale system breach or from malware.",
+      "id": [
+        "194121"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194122]\nThe breadth of vulnerabilities a retailer has to keep track of is intimidating, and the exposure to risk will only increase:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The breadth of vulnerabilities a retailer has to keep track of is intimidating, and the exposure to risk will only increase:",
+      "id": [
+        "194122"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194123]\n“The retail industry’s inherent exposure to security risk is increasing steadily, for many reasons. Most obvious is the vastly increased pervasiveness of network connectivity, as more and more sensitive information is held on networked and distributed systems that are accessible to a widening array of entry points.\n\n“The broad adoption of mobile applications by retailers adds many other new points of vulnerability. Enterprise applications and data must, in some cases, be made accessible to employee-owned mobile devices.\n\n“Then add today’s complex supply chains, where more access and data is given to vendors and external partners, and where global expansion may require retailers to expand distribution of their own information around the world.”\n\n__==“The challenge of digital security.”==|link:https://informationsecurity.report/Resources/Whitepapers/09faae97-245d-4e7e-a983-35d539b6233d_The%20Challenge%20of%20Digital%20Security%20What%20Will%20it%20Take%20for%20Retailers%20to%20Protect%20Themselves.PDF| IBM Sales and Distribution, Jul. 2014__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“The retail industry’s inherent exposure to security risk is increasing steadily, for many reasons. Most obvious is the vastly increased pervasiveness of network connectivity, as more and more sensitive information is held on networked and distributed systems that are accessible to a widening array of entry points.\n\n“The broad adoption of mobile applications by retailers adds many other new points of vulnerability. Enterprise applications and data must, in some cases, be made accessible to employee-owned mobile devices.\n\n“Then add today’s complex supply chains, where more access and data is given to vendors and external partners, and where global expansion may require retailers to expand distribution of their own information around the world.”\n\n__==“The challenge of digital security.”==|link:https://informationsecurity.report/Resources/Whitepapers/09faae97-245d-4e7e-a983-35d539b6233d_The%20Challenge%20of%20Digital%20Security%20What%20Will%20it%20Take%20for%20Retailers%20to%20Protect%20Themselves.PDF| IBM Sales and Distribution, Jul. 2014__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194123"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194124]\nWe will outline possible solutions to system complexity in the section: “prevention.”",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "We will outline possible solutions to system complexity in the section: “prevention.”",
+      "id": [
+        "194124"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194125]\n[▼ch-13]\n[#Internet of Things]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194125"
+      ],
+      "anchor": "ch-13",
+      "title": "Internet of Things"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194126]\nThe internet of things is one of the most exciting modern innovations. However, the sheer number of connected devices leads to many problems when it comes to cybersecurity.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The internet of things is one of the most exciting modern innovations. However, the sheer number of connected devices leads to many problems when it comes to cybersecurity.",
+      "id": [
+        "194126"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194127]\nA sample of connected device predictions:\n\n• __2010, IBM: “A world of 1 trillion connected devices” by 2015.__\n• 2011, Ericsson’s CEO Hans Vestberg: “50 billion connected devices” by 2020.\n• 2013, Cisco: “50 billion things will be connected to the internet by 2020.”\n• 2013, ABI Research report: “30 billion” by 2020.\n• 2013, Morgan Stanley report: “75 billion devices connected to the IoT” by 2020.\n• 2014, an Intel infographic: “31 billion devices connected to internet” by 2020.\n• 2014, ABI Research updated report: “41 billion active wireless connected devices” by 2020.\n• 2015, Gartner Research: “4.9 billion connected things in use in 2015 … and will reach 20.8 billion by 2020.”\n\n__==“Reality Check: 50B IoT devices connected by 2020 — beyond the hype and into reality.”==|link:https://www.rcrwireless.com/20160628/opinion/reality-check-50b-iot-devices-connected-2020-beyond-hype-reality-tag10| Syed Zaeem Hosain, Jun. 2016__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "A sample of connected device predictions:\n\n• __2010, IBM: “A world of 1 trillion connected devices” by 2015.__\n• 2011, Ericsson’s CEO Hans Vestberg: “50 billion connected devices” by 2020.\n• 2013, Cisco: “50 billion things will be connected to the internet by 2020.”\n• 2013, ABI Research report: “30 billion” by 2020.\n• 2013, Morgan Stanley report: “75 billion devices connected to the IoT” by 2020.\n• 2014, an Intel infographic: “31 billion devices connected to internet” by 2020.\n• 2014, ABI Research updated report: “41 billion active wireless connected devices” by 2020.\n• 2015, Gartner Research: “4.9 billion connected things in use in 2015 … and will reach 20.8 billion by 2020.”\n\n__==“Reality Check: 50B IoT devices connected by 2020 — beyond the hype and into reality.”==|link:https://www.rcrwireless.com/20160628/opinion/reality-check-50b-iot-devices-connected-2020-beyond-hype-reality-tag10| Syed Zaeem Hosain, Jun. 2016__",
+      "id": [
+        "194127"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194128]\nRegardless of the prediction used, the message is clear: the already substantial number of connected devices is continuing to rise. Each additional device represents a potential vulnerability, and with each additional device, the impact of an attack is increased due to network effects.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Regardless of the prediction used, the message is clear: the already substantial number of connected devices is continuing to rise. Each additional device represents a potential vulnerability, and with each additional device, the impact of an attack is increased due to network effects.",
+      "id": [
+        "194128"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194129]\n“70 Percent of Internet of Things Devices Vulnerable to Attack. IoT devices averaged 25 vulnerabilities per product, indicating expanding attack surface for adversaries.”\n__==“HP Study Reveals 70 Percent of Internet of Things Devices Vulnerable to Attack.”==|link:https://www.hp.com/us-en/hp-news/press-release.html?id=1744676#.WdQqvciGPIX| HP, 2014__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“70 Percent of Internet of Things Devices Vulnerable to Attack. IoT devices averaged 25 vulnerabilities per product, indicating expanding attack surface for adversaries.”\n__==“HP Study Reveals 70 Percent of Internet of Things Devices Vulnerable to Attack.”==|link:https://www.hp.com/us-en/hp-news/press-release.html?id=1744676#.WdQqvciGPIX| HP, 2014__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194129"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194130]\nBut vulnerabilities extend far beyond the sheer number of these devices. Each connected device has its own operating system. Unlike personal devices, updates and patches on these connected devices aren’t nearly as visible. The result: “hundreds of millions of devices that have been sitting on the Internet, unpatched and insecure, for the last five to ten years.” (==“The internet of things is wildly insecure — and often unpatchable.”==|link:https://www.wired.com/2014/01/theres-no-good-way-to-patch-the-internet-of-things-and-thats-a-huge-problem/| Bruce Schneier, Jan. 2014)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "But vulnerabilities extend far beyond the sheer number of these devices. Each connected device has its own operating system. Unlike personal devices, updates and patches on these connected devices aren’t nearly as visible. The result: “hundreds of millions of devices that have been sitting on the Internet, unpatched and insecure, for the last five to ten years.” (==“The internet of things is wildly insecure — and often unpatchable.”==|link:https://www.wired.com/2014/01/theres-no-good-way-to-patch-the-internet-of-things-and-thats-a-huge-problem/| Bruce Schneier, Jan. 2014)",
+      "id": [
+        "194130"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194131]\nFor now, it may seem like unpatched devices are not a priority, but let’s be clear — more activities are moving to connected devices every day. Voice commerce is expected to be a ==$40 billion market by 2022==|link:https://wwd.com/business-news/retail/voice-commerce-projected-growth-to-40b-by-2022-mobile-amazon-google-artificial-intelligence-ai-virtual-reality-vr-retail-1202599255/|. As IoT encroaches on sensitive data, peripheral connected home devices need to be secured.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "For now, it may seem like unpatched devices are not a priority, but let’s be clear — more activities are moving to connected devices every day. Voice commerce is expected to be a ==$40 billion market by 2022==|link:https://wwd.com/business-news/retail/voice-commerce-projected-growth-to-40b-by-2022-mobile-amazon-google-artificial-intelligence-ai-virtual-reality-vr-retail-1202599255/|. As IoT encroaches on sensitive data, peripheral connected home devices need to be secured.",
+      "id": [
+        "194131"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194132]\n[▼ch-14]\n[#Prevention]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194132"
+      ],
+      "anchor": "ch-14",
+      "title": "Prevention"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194133]\nComplex software design and organizational process frameworks have been created to deal with this problem. The complexity and technicality of these approaches can be alienating to some; nevertheless, here are some resources with which to start.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Complex software design and organizational process frameworks have been created to deal with this problem. The complexity and technicality of these approaches can be alienating to some; nevertheless, here are some resources with which to start.",
+      "id": [
+        "194133"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194134]\n[%][%Resource: Standard Frameworks]\n\n• ==NIST Cybersecurity Framework==|link:https://www.nist.gov/cyberframework|\n• ==C2M2==|link:https://www.energy.gov/ceser/cybersecurity-capability-maturity-model-c2m2|\n• ==ISO 27001/27002==|link:https://www.iso.org/isoiec-27001-information-security.html|\n• ==RFC 2196==|link:https://www.ietf.org/rfc/rfc2196.txt|\n• ==Information Security Forum Standard of Good Practice==|link:https://www.securityforum.org/tool/the-isf-standardrmation-security/|\n• ==IASME==|link:https://iasme.co.uk/where-to-start/|\n• ==Common Criteria for Information Technology Security Evaluation==|link:https://www.ssi.gouv.fr/uploads/2015/01/ccpart1v3.1r5.pdf|\n• ==GRC Red Book==|link:https://go.oceg.org/grc-capability-model-red-book|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==NIST Cybersecurity Framework==|link:https://www.nist.gov/cyberframework|\n• ==C2M2==|link:https://www.energy.gov/ceser/cybersecurity-capability-maturity-model-c2m2|\n• ==ISO 27001/27002==|link:https://www.iso.org/isoiec-27001-information-security.html|\n• ==RFC 2196==|link:https://www.ietf.org/rfc/rfc2196.txt|\n• ==Information Security Forum Standard of Good Practice==|link:https://www.securityforum.org/tool/the-isf-standardrmation-security/|\n• ==IASME==|link:https://iasme.co.uk/where-to-start/|\n• ==Common Criteria for Information Technology Security Evaluation==|link:https://www.ssi.gouv.fr/uploads/2015/01/ccpart1v3.1r5.pdf|\n• ==GRC Red Book==|link:https://go.oceg.org/grc-capability-model-red-book|",
+      "id": [
+        "194134"
+      ],
+      "lead": "Resource: Standard Frameworks"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194135]\nWhile technically sound and thorough, these frameworks only speak to a small group within a corporation. As previously mentioned, cybersecurity is largely a people issue.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "While technically sound and thorough, these frameworks only speak to a small group within a corporation. As previously mentioned, cybersecurity is largely a people issue.",
+      "id": [
+        "194135"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194136]\n[▼ch-15]\n[#People]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194136"
+      ],
+      "anchor": "ch-15",
+      "title": "People"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194137]\n[▼ch-16]\n[##Training]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194137"
+      ],
+      "anchor": "ch-16",
+      "title": "Training"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194138]\n“When you’re in the boardroom, maybe the most important question you’d be asking is: Have you trained your employees on how to address the most common cyber threats?”\n__==“a16z Podcast: Cybersecurity in the Boardroom vs. the Situation Room.”==|link:https://a16z.com/2017/06/17/cybersecurity-boardroom-situationroom/| David Damato, Herb Lin, Matt Spence and Sonal Chokshi, Jun. 2017__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“When you’re in the boardroom, maybe the most important question you’d be asking is: Have you trained your employees on how to address the most common cyber threats?”\n__==“a16z Podcast: Cybersecurity in the Boardroom vs. the Situation Room.”==|link:https://a16z.com/2017/06/17/cybersecurity-boardroom-situationroom/| David Damato, Herb Lin, Matt Spence and Sonal Chokshi, Jun. 2017__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194138"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194139]\nPeople are what make companies great — and cybersecurity is no different. According to a ==survey by Netwrix==|link:https://blog.netwrix.com/2017/08/22/infographics-top-cybersecurity-risks-in-government/|, “100% of government IT workers said employees are biggest threat to cybersecurity.” So how can this vulnerability be addressed? Basic training to address a lack of general cybersecurity knowledge.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "People are what make companies great — and cybersecurity is no different. According to a ==survey by Netwrix==|link:https://blog.netwrix.com/2017/08/22/infographics-top-cybersecurity-risks-in-government/|, “100% of government IT workers said employees are biggest threat to cybersecurity.” So how can this vulnerability be addressed? Basic training to address a lack of general cybersecurity knowledge.",
+      "id": [
+        "194139"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194140]\n[&image:https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_7.png][@caption:==“What the Public Knows About Cybersecurity.”==|link:https://www.pewresearch.org/internet/2017/03/22/what-the-public-knows-about-cybersecurity/| Kenneth Olmstead and Aaron Smith, Mar. 2017]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194140"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/cybersecurity_guide/web-resources/images/medium_cybersecurity_guide_7.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "==“What the Public Knows About Cybersecurity.”==|link:https",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194141]\nIf that isn’t enough of a scare, check out highlights from the 2017 ==Dell End-User Security Survey==|link:https://www.dell.com/learn/us/en/id/press-releases/2017-04-20-dell-end-user-security-survey-highlights-unsafe-data-security-practices-in-the-workplace|:\n\n• “Three in four employees say they would share sensitive, confidential or regulated company information under certain circumstances for a wide range of reasons including:\n• Being directed to do so by management (43 percent)\n• Sharing with a person authorized to receive it (37 percent)\n• Determining that the risk to their company is very low and the potential benefit of sharing information is high (23 percent)\n• Feeling it will help them do their job more effectively (22 percent)\n• Feeling it will help the recipient do their job more effectively (13 percent)\n• Four in five employees in financial services (81 percent) would share confidential information, and employees in education (75 percent), healthcare (68 percent) and federal government (68 percent) are also open to disclosing confidential or regulated data at alarmingly high rates.”\n• “Forty-five percent of employees admit to engaging in unsafe behaviors throughout the work day\n• These behaviors include connecting to public Wi-Fi to access confidential information (46 percent), using personal email accounts for work (49 percent), or losing a company-issued device (17 percent)\n• One in three employees (35 percent) say it is common to take corporate information with them when leaving a company\n• Employees take on unnecessary risk when storing and sharing their work, with 56 percent using public cloud services such as Dropbox, Google Drive, iCloud and others to share or backup their work\n• Forty-five percent of employees will use email to share confidential files with third-party vendors or consultants”\n• “Nearly two in three employees (65 percent) feel it is their responsibility to protect confidential information, including educating themselves on possible risks and behaving in a way that protects their company\n• Thirty-six percent of employees feel very confident in their knowledge of how to protect sensitive company information\n• Twenty-one percent feel it is difficult to keep up with changing security guidelines and policies, and 22 percent say they are worried that someday they will do something by mistake and cause damage to their company\n• Nearly two in three (63 percent) employees are required to complete cybersecurity training on protecting sensitive data. However, of those who received cybersecurity training, 18 percent still conducted unsafe behavior without realizing what they were doing was wrong, whereas 24 percent conducted unsafe behavior anyway in order to complete a task”",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "If that isn’t enough of a scare, check out highlights from the 2017 ==Dell End-User Security Survey==|link:https://www.dell.com/learn/us/en/id/press-releases/2017-04-20-dell-end-user-security-survey-highlights-unsafe-data-security-practices-in-the-workplace|:\n\n• “Three in four employees say they would share sensitive, confidential or regulated company information under certain circumstances for a wide range of reasons including:\n• Being directed to do so by management (43 percent)\n• Sharing with a person authorized to receive it (37 percent)\n• Determining that the risk to their company is very low and the potential benefit of sharing information is high (23 percent)\n• Feeling it will help them do their job more effectively (22 percent)\n• Feeling it will help the recipient do their job more effectively (13 percent)\n• Four in five employees in financial services (81 percent) would share confidential information, and employees in education (75 percent), healthcare (68 percent) and federal government (68 percent) are also open to disclosing confidential or regulated data at alarmingly high rates.”\n• “Forty-five percent of employees admit to engaging in unsafe behaviors throughout the work day\n• These behaviors include connecting to public Wi-Fi to access confidential information (46 percent), using personal email accounts for work (49 percent), or losing a company-issued device (17 percent)\n• One in three employees (35 percent) say it is common to take corporate information with them when leaving a company\n• Employees take on unnecessary risk when storing and sharing their work, with 56 percent using public cloud services such as Dropbox, Google Drive, iCloud and others to share or backup their work\n• Forty-five percent of employees will use email to share confidential files with third-party vendors or consultants”\n• “Nearly two in three employees (65 percent) feel it is their responsibility to protect confidential information, including educating themselves on possible risks and behaving in a way that protects their company\n• Thirty-six percent of employees feel very confident in their knowledge of how to protect sensitive company information\n• Twenty-one percent feel it is difficult to keep up with changing security guidelines and policies, and 22 percent say they are worried that someday they will do something by mistake and cause damage to their company\n• Nearly two in three (63 percent) employees are required to complete cybersecurity training on protecting sensitive data. However, of those who received cybersecurity training, 18 percent still conducted unsafe behavior without realizing what they were doing was wrong, whereas 24 percent conducted unsafe behavior anyway in order to complete a task”",
+      "id": [
+        "194141"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194142]\nCybersecurity awareness should be a priority for the modern corporation. However, corporations can’t just throw an educational course at their employees and consider it done. A culture of security must be created from the top down.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Cybersecurity awareness should be a priority for the modern corporation. However, corporations can’t just throw an educational course at their employees and consider it done. A culture of security must be created from the top down.",
+      "id": [
+        "194142"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194143]\n“Cybersecurity education needs to be an integral part of the workplace culture. It must be built around a practical, ongoing dialog in which employees are empowered and incentivized to speak up when they’re unsure about the implications of a decision. Cybersecurity education doesn’t mean hosting a one-time course or seminar; it means making security a collaborative, continuous cultural initiative.”\n__==“Dell End-User Security Survey Highlights Unsafe Data Security Practices in the Workplace.”==|link:https://www.dell.com/learn/us/en/id/press-releases/2017-04-20-dell-end-user-security-survey-highlights-unsafe-data-security-practices-in-the-workplace| Dell, Apr. 2017__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“Cybersecurity education needs to be an integral part of the workplace culture. It must be built around a practical, ongoing dialog in which employees are empowered and incentivized to speak up when they’re unsure about the implications of a decision. Cybersecurity education doesn’t mean hosting a one-time course or seminar; it means making security a collaborative, continuous cultural initiative.”\n__==“Dell End-User Security Survey Highlights Unsafe Data Security Practices in the Workplace.”==|link:https://www.dell.com/learn/us/en/id/press-releases/2017-04-20-dell-end-user-security-survey-highlights-unsafe-data-security-practices-in-the-workplace| Dell, Apr. 2017__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194143"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194144]\n[▼ch-17]\n[###Characteristics of Effective Cybersecurity Training]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194144"
+      ],
+      "anchor": "ch-17",
+      "title": "Characteristics of Effective Cybersecurity Training"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194145]\n“Most people look at the cyber training video like they do the airline safety video when you board your flight. And you’re like ‘Well I fly 1000 miles a year — I know there’s an airbag, I know about the window seat’ and you just ignore it.”\n__==“a16z Podcast: Cybersecurity in the Boardroom vs. the Situation Room.”==|link:https://a16z.com/2017/06/17/cybersecurity-boardroom-situationroom/| David Damato, Herb Lin, Matt Spence and Sonal Chokshi, Jun. 2017__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“Most people look at the cyber training video like they do the airline safety video when you board your flight. And you’re like ‘Well I fly 1000 miles a year — I know there’s an airbag, I know about the window seat’ and you just ignore it.”\n__==“a16z Podcast: Cybersecurity in the Boardroom vs. the Situation Room.”==|link:https://a16z.com/2017/06/17/cybersecurity-boardroom-situationroom/| David Damato, Herb Lin, Matt Spence and Sonal Chokshi, Jun. 2017__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194145"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194146]\nAs with any corporate training program, one of the hardest problems revolves around getting employees to care.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "As with any corporate training program, one of the hardest problems revolves around getting employees to care.",
+      "id": [
+        "194146"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194147]\n__“An annual 90-minute refresher video is unlikely to be the most effective way to reiterate the importance of data protection. Might it be more effective to call in the experts and target phishing attacks on individuals or whole departments? Shock tactics quickly demonstrate to employees that cybercrime happens quickly and without warning. And that’s surely a more effective training tool than another video.”__\n__==“Cybersecurity. Who’s actually responsible?”==|link:http://www.nttcomsecurity.com/uploads/documentdatabase/Global_Thought_Leadership_Cybersecurity_Responsibility_UEA_v4.pdf| NTT Security, 2016__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "__“An annual 90-minute refresher video is unlikely to be the most effective way to reiterate the importance of data protection. Might it be more effective to call in the experts and target phishing attacks on individuals or whole departments? Shock tactics quickly demonstrate to employees that cybercrime happens quickly and without warning. And that’s surely a more effective training tool than another video.”__\n__==“Cybersecurity. Who’s actually responsible?”==|link:http://www.nttcomsecurity.com/uploads/documentdatabase/Global_Thought_Leadership_Cybersecurity_Responsibility_UEA_v4.pdf| NTT Security, 2016__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194147"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194148]\nThe quote above highlights one unique aspect of cybersecurity training — the shock value also has an impact on practices and behaviors in the personal lives of employees. Hearing about the multitude of vulnerabilities can ignite change in the employee’s own cyberhygiene which is beneficial for all parties. But how does one design a cybersecurity training program?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The quote above highlights one unique aspect of cybersecurity training — the shock value also has an impact on practices and behaviors in the personal lives of employees. Hearing about the multitude of vulnerabilities can ignite change in the employee’s own cyberhygiene which is beneficial for all parties. But how does one design a cybersecurity training program?",
+      "id": [
+        "194148"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194149]\nWe’ve collected existing models to help jumpstart this process.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "We’ve collected existing models to help jumpstart this process.",
+      "id": [
+        "194149"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194150]\n[%][%Resources: Cybersecurity Training Guidelines and Frameworks]\n• ==Designing and Developing an Effective Security Awareness and Training Program:==|link:https://csrc.nist.gov/projects/fissea/conferences/archived-conference|\n• ==The Components of Top Security Awareness Programs:==|link:https://resources.infosecinstitute.com/topic/components-top-security-awareness-programs/#gref|\n• ==Game of Threats==|link:https://www.pwc.co.uk/issues/cyber-security-services.html|: An example of gamification of cybersecurity education.\n• ==Creating a Culture of Awareness:==|link:https://staysafeonline.org/re-cyber/creating-a-culture-of-awareness/|\n• ==National Initiative for Cybersecurity Education Cybersecurity Workforce Framework:==|link:https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-181.pdf|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==Designing and Developing an Effective Security Awareness and Training Program:==|link:https://csrc.nist.gov/projects/fissea/conferences/archived-conference|\n• ==The Components of Top Security Awareness Programs:==|link:https://resources.infosecinstitute.com/topic/components-top-security-awareness-programs/#gref|\n• ==Game of Threats==|link:https://www.pwc.co.uk/issues/cyber-security-services.html|: An example of gamification of cybersecurity education.\n• ==Creating a Culture of Awareness:==|link:https://staysafeonline.org/re-cyber/creating-a-culture-of-awareness/|\n• ==National Initiative for Cybersecurity Education Cybersecurity Workforce Framework:==|link:https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-181.pdf|",
+      "id": [
+        "194150"
+      ],
+      "lead": "Resources: Cybersecurity Training Guidelines and Frameworks"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194151]\nFor smaller firms without the budget or time for custom training offerings, there are a few free open-source options that provide basic cybersecurity training.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "For smaller firms without the budget or time for custom training offerings, there are a few free open-source options that provide basic cybersecurity training.",
+      "id": [
+        "194151"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194152]\n[%][%Resources: Free, Open Source Cybersecurity Training Programs]\n• ==SANS Cyber Aces Online Courses==|link:https://www.cyberaces.org/courses/|: SANS Cyber Aces Online makes available free online courses from the professional development curriculum offered by The SANS Institute, the global leader in cybersecurity training.\n• ==Cybrary.it==|link:https://www.cybrary.it/|: Open-source option for cybersecurity learning. Free for everyone, forever.\n• ==Open Security Training — External Resources==|link:https://opensecuritytraining.info/External_Resources.html|: Slightly out of date but a great repository of open-source classes.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==SANS Cyber Aces Online Courses==|link:https://www.cyberaces.org/courses/|: SANS Cyber Aces Online makes available free online courses from the professional development curriculum offered by The SANS Institute, the global leader in cybersecurity training.\n• ==Cybrary.it==|link:https://www.cybrary.it/|: Open-source option for cybersecurity learning. Free for everyone, forever.\n• ==Open Security Training — External Resources==|link:https://opensecuritytraining.info/External_Resources.html|: Slightly out of date but a great repository of open-source classes.",
+      "id": [
+        "194152"
+      ],
+      "lead": "Resources: Free, Open Source Cybersecurity Training Programs"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194153]\n[▼ch-18]\n[##Hiring]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194153"
+      ],
+      "anchor": "ch-18",
+      "title": "Hiring"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194154]\n__“Cybersecurity Ventures predicts there will be 3.5 million cybersecurity job openings by 2021.__\n\n__Cybercrime will more than triple the number of job openings over the next 5 years.”__\n\n__==“Our Team.”==|link:https://cybersecurityventures.com/our-team/| Steve Morgan__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "__“Cybersecurity Ventures predicts there will be 3.5 million cybersecurity job openings by 2021.__\n\n__Cybercrime will more than triple the number of job openings over the next 5 years.”__\n\n__==“Our Team.”==|link:https://cybersecurityventures.com/our-team/| Steve Morgan__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194154"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194155]\nThere is a severe shortage of cybersecurity talent. The reason is clear: the severity and publicity of recent attacks are driving corporations to scramble for new talent to support their security efforts.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "There is a severe shortage of cybersecurity talent. The reason is clear: the severity and publicity of recent attacks are driving corporations to scramble for new talent to support their security efforts.",
+      "id": [
+        "194155"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194156]\n[%][%Resource: Addressing the Talent Shortage]\n==Cybersecurity Has a Serious Talent Shortage. Here’s How to Fix it==|link:https://hbr.org/2017/05/cybersecurity-has-a-serious-talent-shortage-heres-how-to-fix-it|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "==Cybersecurity Has a Serious Talent Shortage. Here’s How to Fix it==|link:https://hbr.org/2017/05/cybersecurity-has-a-serious-talent-shortage-heres-how-to-fix-it|",
+      "id": [
+        "194156"
+      ],
+      "lead": "Resource: Addressing the Talent Shortage"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194157]\nSuggestions from article:\n\n• __“Re-examine your workforce strategy: Do you know what skills you need today and tomorrow to run a successful security program? Realize that skills and experience can come from a variety of places, and adjust your hiring efforts accordingly.__\n• __Improve your engagement and outreach: Don’t limit yourself to the same old career fairs and recruiting programs of yesteryear. Get involved in community colleges, P-TECH schools, and other educational programs to start building your recruiting base.__\n• Build a local cybersecurity ecosystem: Connect with government organizations, educational institutions, and other groups. Sponsor Capture the Flag security events, and work with local middle and high schools to generate interest in the field. These groups are always looking for willing experts and mentors.\n• Have a robust support program for new hires: Mentorships, rotational assignments, shadowing, and other opportunities help new cybersecurity hires gain experience and learn. Remember, not everyone knows what they want to do right away. Keep new hires engaged by giving them the creative freedom to work on different projects and explore new technologies and services.\n• Focus on continuous learning and upskilling: To retain your new talent, keep employees current on the latest skill sets through classes, certifications, and conferences. Cybersecurity is a highly dynamic field, requiring ongoing education and exploration. And be open to employees from other areas of your business who express interest in cybersecurity career paths. Remember that AI provides employees with more intelligence and contextual recommendations at a speed and scale previously unimagined, so upskilling your workforce is a completely different ballgame these days.”",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Suggestions from article:\n\n• __“Re-examine your workforce strategy: Do you know what skills you need today and tomorrow to run a successful security program? Realize that skills and experience can come from a variety of places, and adjust your hiring efforts accordingly.__\n• __Improve your engagement and outreach: Don’t limit yourself to the same old career fairs and recruiting programs of yesteryear. Get involved in community colleges, P-TECH schools, and other educational programs to start building your recruiting base.__\n• Build a local cybersecurity ecosystem: Connect with government organizations, educational institutions, and other groups. Sponsor Capture the Flag security events, and work with local middle and high schools to generate interest in the field. These groups are always looking for willing experts and mentors.\n• Have a robust support program for new hires: Mentorships, rotational assignments, shadowing, and other opportunities help new cybersecurity hires gain experience and learn. Remember, not everyone knows what they want to do right away. Keep new hires engaged by giving them the creative freedom to work on different projects and explore new technologies and services.\n• Focus on continuous learning and upskilling: To retain your new talent, keep employees current on the latest skill sets through classes, certifications, and conferences. Cybersecurity is a highly dynamic field, requiring ongoing education and exploration. And be open to employees from other areas of your business who express interest in cybersecurity career paths. Remember that AI provides employees with more intelligence and contextual recommendations at a speed and scale previously unimagined, so upskilling your workforce is a completely different ballgame these days.”",
+      "id": [
+        "194157"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194158]\nIn addition, outside of specific cybersecurity talent, firms should look for hires that are digitally literate. For more on the hiring process, read our article ==“Hiring for Innovation.”==|link:https://weststringfellow.com/department-best-practice/human-resources/hiring-innovation/|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "In addition, outside of specific cybersecurity talent, firms should look for hires that are digitally literate. For more on the hiring process, read our article ==“Hiring for Innovation.”==|link:https://weststringfellow.com/department-best-practice/human-resources/hiring-innovation/|",
+      "id": [
+        "194158"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194159]\n[▼ch-19]\n[#Process]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194159"
+      ],
+      "anchor": "ch-19",
+      "title": "Process"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194160]\n[▼ch-20]\n[##Cyber Hygiene]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194160"
+      ],
+      "anchor": "ch-20",
+      "title": "Cyber Hygiene"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194161]\n“We continue to focus on [cyber security] things that are sexy, right? It’s things like hygiene that are the issue. Basic solutions are things like better security for IoT devices, network segmentation, preventing things from being accessible from the internet — these are not complex topics…. You get into these board rooms and these topics are overly complex… Board members are very high-level they’re simply interested in what’s happening in the news [Russia, China]… To be honest with you, that something that’s not typically helpful. That’s a distraction from the real conversation.”\n__==“a16z Podcast: Cybersecurity in the Boardroom vs. the Situation Room.”==|link:https://a16z.com/2017/06/17/cybersecurity-boardroom-situationroom/| David Damato, Herb Lin, Matt Spence and Sonal Chokshi, Jun. 2017__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“We continue to focus on [cyber security] things that are sexy, right? It’s things like hygiene that are the issue. Basic solutions are things like better security for IoT devices, network segmentation, preventing things from being accessible from the internet — these are not complex topics…. You get into these board rooms and these topics are overly complex… Board members are very high-level they’re simply interested in what’s happening in the news [Russia, China]… To be honest with you, that something that’s not typically helpful. That’s a distraction from the real conversation.”\n__==“a16z Podcast: Cybersecurity in the Boardroom vs. the Situation Room.”==|link:https://a16z.com/2017/06/17/cybersecurity-boardroom-situationroom/| David Damato, Herb Lin, Matt Spence and Sonal Chokshi, Jun. 2017__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194161"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194162]\nThe importance of simple cybersecurity hygiene cannot be emphasized enough. These tasks aren’t groundbreaking nor are they complex. These basic steps are so often overlooked and underestimated that it has become a national policy issue. Bills have been introduced in both the House and the Senate in order to “provide for the identification and documentation of best practices for cyber hygiene by the National Institute of Standards and Technology.”",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The importance of simple cybersecurity hygiene cannot be emphasized enough. These tasks aren’t groundbreaking nor are they complex. These basic steps are so often overlooked and underestimated that it has become a national policy issue. Bills have been introduced in both the House and the Senate in order to “provide for the identification and documentation of best practices for cyber hygiene by the National Institute of Standards and Technology.”",
+      "id": [
+        "194162"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194163]\nTopics include:\n\n1. Multi-factor authentication\n2. Data loss prevention\n3. Micro-segmentation\n4. Data encryption\n5. Cloud services\n6. Anonymization\n7. Software patching and maintenance;\n8. Phishing education; and\n9. Other standard cybersecurity measures to achieve trusted security in the infrastructure.\n\n==“S.1475 — Promoting Good Cyber Hygiene Act of 2017.”==|link:https://www.congress.gov/bill/115th-congress/senate-bill/1475/text| U.S. Congress, Jun. 2017",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Topics include:\n\n1. Multi-factor authentication\n2. Data loss prevention\n3. Micro-segmentation\n4. Data encryption\n5. Cloud services\n6. Anonymization\n7. Software patching and maintenance;\n8. Phishing education; and\n9. Other standard cybersecurity measures to achieve trusted security in the infrastructure.\n\n==“S.1475 — Promoting Good Cyber Hygiene Act of 2017.”==|link:https://www.congress.gov/bill/115th-congress/senate-bill/1475/text| U.S. Congress, Jun. 2017",
+      "id": [
+        "194163"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194164]\n[%][%Resources: Frameworks for Cyber Hygiene]\n• ==Technology Checklists for Businesses==|link:https://staysafeonline.org/resource/technology-checklist-businesses/|: National Cyber Security Alliance’s basic checklist for businesses, along with cyber hygiene best practices.\n• ==Cyber Hygiene: 11 Essential Practices==|link:https://insights.sei.cmu.edu/blog/cyber-hygiene-11-essential-practices/|: 11 practices from Carnegie Mellon’s Software Engineering Institute.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==Technology Checklists for Businesses==|link:https://staysafeonline.org/resource/technology-checklist-businesses/|: National Cyber Security Alliance’s basic checklist for businesses, along with cyber hygiene best practices.\n• ==Cyber Hygiene: 11 Essential Practices==|link:https://insights.sei.cmu.edu/blog/cyber-hygiene-11-essential-practices/|: 11 practices from Carnegie Mellon’s Software Engineering Institute.",
+      "id": [
+        "194164"
+      ],
+      "lead": "Resources: Frameworks for Cyber Hygiene"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194165]\n[▼ch-21]\n[#Technology]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194165"
+      ],
+      "anchor": "ch-21",
+      "title": "Technology"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194166]\n[▼ch-22]\n[##Enterprise Systems/Tools]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194166"
+      ],
+      "anchor": "ch-22",
+      "title": "Enterprise Systems/Tools"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194167]\nBeyond a culture of security and proper training, firms need to have a security system. Every technology solution has a place and implementation should be tailored to firm structure, industry, product type, etc. We won’t be making any technology recommendations in the section; we instead aim to increase awareness of the tools available.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Beyond a culture of security and proper training, firms need to have a security system. Every technology solution has a place and implementation should be tailored to firm structure, industry, product type, etc. We won’t be making any technology recommendations in the section; we instead aim to increase awareness of the tools available.",
+      "id": [
+        "194167"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194168]\nClassifications of external security solutions:\n\n• Antivirus/anti-malware\n• Advanced persistent threat detection/prevention\n• Authentication/authorization\n• Content security appliances (web and email filtering, and anti-spam)\n• Data loss prevention\n• Digital forensics\n• Encryption/credit card tokenization\n• Firewalls\n• Governance risk and compliance products\n• Identity management and access management (IDAM)\n• Log/security event monitoring (SIEM)\n• Managed security services (MSSP)\n• Network access control (NAC)\n• Secure code development\n• Vulnerability management/assessment",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Classifications of external security solutions:\n\n• Antivirus/anti-malware\n• Advanced persistent threat detection/prevention\n• Authentication/authorization\n• Content security appliances (web and email filtering, and anti-spam)\n• Data loss prevention\n• Digital forensics\n• Encryption/credit card tokenization\n• Firewalls\n• Governance risk and compliance products\n• Identity management and access management (IDAM)\n• Log/security event monitoring (SIEM)\n• Managed security services (MSSP)\n• Network access control (NAC)\n• Secure code development\n• Vulnerability management/assessment",
+      "id": [
+        "194168"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194169]\nSee Lawrence Pingree’s ==“Security Vendor Shortlist”==|link:https://www.lawrencepingree.com/security/security-vendors/| for further classification as well as vendors within each segment.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "See Lawrence Pingree’s ==“Security Vendor Shortlist”==|link:https://www.lawrencepingree.com/security/security-vendors/| for further classification as well as vendors within each segment.",
+      "id": [
+        "194169"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194170]\n[%][%Resource: Understand the Range of Technology Offerings]\n==Mindmap of Security Technologies and Markets==|link:https://www.mindmeister.com/137280416/information-security-technologies-markets-by-lawrence-pingree|: Lawrence Pingree has put together a visualization of information security technologies and markets. Click nodes to expand the web and spend some time absorbing how complex this segment is.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "==Mindmap of Security Technologies and Markets==|link:https://www.mindmeister.com/137280416/information-security-technologies-markets-by-lawrence-pingree|: Lawrence Pingree has put together a visualization of information security technologies and markets. Click nodes to expand the web and spend some time absorbing how complex this segment is.",
+      "id": [
+        "194170"
+      ],
+      "lead": "Resource: Understand the Range of Technology Offerings"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194171]\nPingree’s mind map puts the scope of technology into perspective. Many companies won’t be able to implement every single piece of technology into their security program. Companies need to do an analysis of their most valuable assets and compare the costs of securing those assets. The Gordon-Loeb model for cybersecurity is a great tool to use when determining cybersecurity budgets:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Pingree’s mind map puts the scope of technology into perspective. Many companies won’t be able to implement every single piece of technology into their security program. Companies need to do an analysis of their most valuable assets and compare the costs of securing those assets. The Gordon-Loeb model for cybersecurity is a great tool to use when determining cybersecurity budgets:",
+      "id": [
+        "194171"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194172]\n“Based on the model, it is shown that that the amount a firm spends to protect information should generally be only a small fraction of the expected loss resulting from an information security (cybersecurity) breach. More specifically, the model shows that it is generally uneconomical to invest in information security activities more than 37 percent (37%) of the expected loss that would occur from a security breach. The model also shows that, for a given level of potential loss, the optimal amount to spend to protect an information set does not always increase with increases in the information set’s vulnerability.”\n__==“ACES Faculty Member Interviewed by ActiveCyber.”==|link:https://aces.umd.edu/aces-faculty-member-interviewed-by-activecyber| Larry Gordon and Chris Daly, Mar. 2016__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“Based on the model, it is shown that that the amount a firm spends to protect information should generally be only a small fraction of the expected loss resulting from an information security (cybersecurity) breach. More specifically, the model shows that it is generally uneconomical to invest in information security activities more than 37 percent (37%) of the expected loss that would occur from a security breach. The model also shows that, for a given level of potential loss, the optimal amount to spend to protect an information set does not always increase with increases in the information set’s vulnerability.”\n__==“ACES Faculty Member Interviewed by ActiveCyber.”==|link:https://aces.umd.edu/aces-faculty-member-interviewed-by-activecyber| Larry Gordon and Chris Daly, Mar. 2016__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194172"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194173]\nWhen calculating any cybersecurity investment, it’s important to understand vulnerable assets and their values. We’ve collected resources to aid in the risk assessment process.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "When calculating any cybersecurity investment, it’s important to understand vulnerable assets and their values. We’ve collected resources to aid in the risk assessment process.",
+      "id": [
+        "194173"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194174]\n[%][%Resources: Risk Assessment]\n• ==Infosec—Risk Management Concepts==|link:http://resources.infosecinstitute.com/certification/risk-management-concepts/#gref|: Risk management concepts based on the Certified Information Systems Security Professional (CISSP) certification. Four main goals of risk analysis:\n\n1. Identify assets and their values.\n2. Identify vulnerabilities and threats.\n3. Quantify the probability and business impact of these potential threats.\n4. Provide an economic balance between the impact of the threat and the cost of the countermeasure.\n\n• ==Skillset.com — Risk Assessment==|link:https://www.youtube.com/watch?v=jB3Ka0x3TCo|: Also based on the CISSP certification, Skillset.com offers a clear video explanation of the process.\n• ==Smith Business School — Gordon-Loeb Model for Cybersecurity Investments==|link:https://www.youtube.com/watch?v=cd8dT0FuqQ4|: Larry Gordon explains the Gordon-Loeb model for cybersecurity investment in an easy to understand video. __“The fundamental principle underlying the Gordon-Loeb model is that, when making cybersecurity investments, the benefits should outweigh the costs.”__\n• ==Lawrence A. Gordon, Martin P. Loeb, Lei Zhou — Investing in Cybersecurity: Insights from the Gordon-Loeb Model==|link:https://file.scirp.org/pdf/JIS_2016032315382494.pdf| (Advanced): In depth analysis of the Gordon-Loeb model directly from its creators.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==Infosec—Risk Management Concepts==|link:http://resources.infosecinstitute.com/certification/risk-management-concepts/#gref|: Risk management concepts based on the Certified Information Systems Security Professional (CISSP) certification. Four main goals of risk analysis:\n\n1. Identify assets and their values.\n2. Identify vulnerabilities and threats.\n3. Quantify the probability and business impact of these potential threats.\n4. Provide an economic balance between the impact of the threat and the cost of the countermeasure.\n\n• ==Skillset.com — Risk Assessment==|link:https://www.youtube.com/watch?v=jB3Ka0x3TCo|: Also based on the CISSP certification, Skillset.com offers a clear video explanation of the process.\n• ==Smith Business School — Gordon-Loeb Model for Cybersecurity Investments==|link:https://www.youtube.com/watch?v=cd8dT0FuqQ4|: Larry Gordon explains the Gordon-Loeb model for cybersecurity investment in an easy to understand video. __“The fundamental principle underlying the Gordon-Loeb model is that, when making cybersecurity investments, the benefits should outweigh the costs.”__\n• ==Lawrence A. Gordon, Martin P. Loeb, Lei Zhou — Investing in Cybersecurity: Insights from the Gordon-Loeb Model==|link:https://file.scirp.org/pdf/JIS_2016032315382494.pdf| (Advanced): In depth analysis of the Gordon-Loeb model directly from its creators.",
+      "id": [
+        "194174"
+      ],
+      "lead": "Resources: Risk Assessment"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194175]\n[▼ch-23]\n[##Security by Design]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194175"
+      ],
+      "anchor": "ch-23",
+      "title": "Security by Design"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194176]\nThe solutions outlined above mostly deal with security tools that act as infrastructure. On the other side of the coin, product managers and software engineers must build security into their systems. After all, the most secure systems are those with security in mind from the start.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The solutions outlined above mostly deal with security tools that act as infrastructure. On the other side of the coin, product managers and software engineers must build security into their systems. After all, the most secure systems are those with security in mind from the start.",
+      "id": [
+        "194176"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194177]\nThe basic principles of security by design originate from the Jerome H. Saltzer and Michael D. Schroeder’s 1975 work, ==“The Protection of Information in Computer Systems.”==|link:https://www.cs.virginia.edu/~evans/cs551/saltzer/|\n\n1. Economy of mechanism: Keep the design as simple and small as possible.\n2. Fail-safe defaults: Base access decisions on permission rather than exclusion.\n3. Complete mediation: Every access to every object must be checked for authority.\n4. Open design: The design should not be secret.\n5. Separation of privilege: It’s safer if it takes two parties to agree to launch a missile than it is if just one can do it.\n6. Least privilege: Operation with the minimal set of powers needed to get the job done.\n7. Least-common mechanism: Minimize subsystems shared between or relied upon by mutually distrusting users.\n8. Psychological acceptability: Design systems for ease of use.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "The basic principles of security by design originate from the Jerome H. Saltzer and Michael D. Schroeder’s 1975 work, ==“The Protection of Information in Computer Systems.”==|link:https://www.cs.virginia.edu/~evans/cs551/saltzer/|\n\n1. Economy of mechanism: Keep the design as simple and small as possible.\n2. Fail-safe defaults: Base access decisions on permission rather than exclusion.\n3. Complete mediation: Every access to every object must be checked for authority.\n4. Open design: The design should not be secret.\n5. Separation of privilege: It’s safer if it takes two parties to agree to launch a missile than it is if just one can do it.\n6. Least privilege: Operation with the minimal set of powers needed to get the job done.\n7. Least-common mechanism: Minimize subsystems shared between or relied upon by mutually distrusting users.\n8. Psychological acceptability: Design systems for ease of use.",
+      "id": [
+        "194177"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194178]\nThese guidelines benefit greatly from context. We’ve collected resources for those wanting to explore these principles directly from the experts.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "These guidelines benefit greatly from context. We’ve collected resources for those wanting to explore these principles directly from the experts.",
+      "id": [
+        "194178"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194179]\n[%][%Resource: Revisiting Saltzer and Schroeder]\n• ==Design Principles for Security-conscious systems==|link:https://people.eecs.berkeley.edu/~daw/teaching/cs261-f07/slides-aug30.pdf|: Berkeley Professor David Wagner provides a more modern look into these eight principles, complete with case studies and critiques.\n\n**Further Reading: Security by Design Principles and Guidelines**\n\n• ==Open Web Application Security Project: Security by Design==|link:https://wiki.owasp.org/index.php/Security_by_Design_Principles|\n• ==Open Web Application Security Project: Software Assurance Maturity Model==|link:https://github.com/OWASP/samm/blob/master/v1.5/Final/SAMM_Core_V1-5_FINAL.pdf|: A guide to building security into software development.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==Design Principles for Security-conscious systems==|link:https://people.eecs.berkeley.edu/~daw/teaching/cs261-f07/slides-aug30.pdf|: Berkeley Professor David Wagner provides a more modern look into these eight principles, complete with case studies and critiques.\n\n**Further Reading: Security by Design Principles and Guidelines**\n\n• ==Open Web Application Security Project: Security by Design==|link:https://wiki.owasp.org/index.php/Security_by_Design_Principles|\n• ==Open Web Application Security Project: Software Assurance Maturity Model==|link:https://github.com/OWASP/samm/blob/master/v1.5/Final/SAMM_Core_V1-5_FINAL.pdf|: A guide to building security into software development.",
+      "id": [
+        "194179"
+      ],
+      "lead": "Resource: Revisiting Saltzer and Schroeder"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194180]\n[▼ch-24]\n[##Response]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194180"
+      ],
+      "anchor": "ch-24",
+      "title": "Response"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194181]\nAny current security breach provides insight into what you should and shouldn’t do after an attack.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Any current security breach provides insight into what you should and shouldn’t do after an attack.",
+      "id": [
+        "194181"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194182]\nSearch Twitter for “Equifax” if you want to see an example of one type of security response. From a PR standpoint, this is a total nightmare. If you’d like to read more about responding to crises from a PR perspective, read “[blahblah.]” From a technical standpoint, this is a surgical operation.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Search Twitter for “Equifax” if you want to see an example of one type of security response. From a PR standpoint, this is a total nightmare. If you’d like to read more about responding to crises from a PR perspective, read “[blahblah.]” From a technical standpoint, this is a surgical operation.",
+      "id": [
+        "194182"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194183]\n[▼ch-25]\n[#Damage Control]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194183"
+      ],
+      "anchor": "ch-25",
+      "title": "Damage Control"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194184]\n“In addition to spending money to prevent attacks, companies must have the mindset that breaches are inevitable.”\n__==“Companies ‘must see cyber attacks as inevitable.’”==|link:https://www.newsweek.com/companies-must-see-cyber-attacks-inevitable-307111| Hayley Richardson, Feb. 2015__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“In addition to spending money to prevent attacks, companies must have the mindset that breaches are inevitable.”\n__==“Companies ‘must see cyber attacks as inevitable.’”==|link:https://www.newsweek.com/companies-must-see-cyber-attacks-inevitable-307111| Hayley Richardson, Feb. 2015__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194184"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194185]\nThe reality of cybersecurity is that no matter how protected a company is, a breach is likely to occur at one point or another. And after a breach, a company needs to focus on minimizing damage.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The reality of cybersecurity is that no matter how protected a company is, a breach is likely to occur at one point or another. And after a breach, a company needs to focus on minimizing damage.",
+      "id": [
+        "194185"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark++]\n[@id:194186]\n“While many intrusion attempts will be defeated, the prudent approach is to assume that barrier walls can never be high enough. The questions then become, ‘How quickly can we identify and counter each successful entry?’ and ‘Will we be able spot intruders immediately, before harm is done, or only much later, after a disastrous disruption or loss of data?’”\n__==“The challenge of digital security.”==|link:https://informationsecurity.report/Resources/Whitepapers/09faae97-245d-4e7e-a983-35d539b6233d_The%20Challenge%20of%20Digital%20Security%20What%20Will%20it%20Take%20for%20Retailers%20to%20Protect%20Themselves.PDF| IBM Sales and Distribution, Jul. 2014__",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark++",
+      "body": "“While many intrusion attempts will be defeated, the prudent approach is to assume that barrier walls can never be high enough. The questions then become, ‘How quickly can we identify and counter each successful entry?’ and ‘Will we be able spot intruders immediately, before harm is done, or only much later, after a disastrous disruption or loss of data?’”\n__==“The challenge of digital security.”==|link:https://informationsecurity.report/Resources/Whitepapers/09faae97-245d-4e7e-a983-35d539b6233d_The%20Challenge%20of%20Digital%20Security%20What%20Will%20it%20Take%20for%20Retailers%20to%20Protect%20Themselves.PDF| IBM Sales and Distribution, Jul. 2014__",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194186"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194187]\nDamage control favors modularity. Returning to the Target example, attackers were able access consumer data via a third-party vendor. Retailers like Target, as we’ve previously discussed, have a seemingly endless number of touchpoints an attacker could use. Each of these points should have its own moat — separating it from the valuable and sensitive consumer data. Companies using this approach will be able to quarantine breeches to fringe touchpoints, greatly reducing damage.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Damage control favors modularity. Returning to the Target example, attackers were able access consumer data via a third-party vendor. Retailers like Target, as we’ve previously discussed, have a seemingly endless number of touchpoints an attacker could use. Each of these points should have its own moat — separating it from the valuable and sensitive consumer data. Companies using this approach will be able to quarantine breeches to fringe touchpoints, greatly reducing damage.",
+      "id": [
+        "194187"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194188]\nBut how does a company detect these attacks in the first place?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "But how does a company detect these attacks in the first place?",
+      "id": [
+        "194188"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194189]\n[▼ch-26]\n[#Analytics]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194189"
+      ],
+      "anchor": "ch-26",
+      "title": "Analytics"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194190]\n[▼ch-27]\n[##Detecting Attacks]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194190"
+      ],
+      "anchor": "ch-27",
+      "title": "Detecting Attacks"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194191]\nSerious financial damage has been caused by security breaches, but because there is no standard model for estimating the cost of an incident, the only data available is that which is made public by the organizations involved.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Serious financial damage has been caused by security breaches, but because there is no standard model for estimating the cost of an incident, the only data available is that which is made public by the organizations involved.",
+      "id": [
+        "194191"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194192]\nSeveral computer security consulting firms produce estimates of total worldwide losses attributable to virus and worm attacks, and to hostile digital acts in general. Reasonable estimates of the financial cost of security breaches can actually help organizations make rational investment decisions.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Several computer security consulting firms produce estimates of total worldwide losses attributable to virus and worm attacks, and to hostile digital acts in general. Reasonable estimates of the financial cost of security breaches can actually help organizations make rational investment decisions.",
+      "id": [
+        "194192"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194193]\nAccess point and data-specific safeguards notwithstanding, companies should expect that intruders will breech their system. For that reason, analytics must be in place to watch for patterns that could indicate an intruder in the system and to issue alerts so counter-actions can be taken quickly.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Access point and data-specific safeguards notwithstanding, companies should expect that intruders will breech their system. For that reason, analytics must be in place to watch for patterns that could indicate an intruder in the system and to issue alerts so counter-actions can be taken quickly.",
+      "id": [
+        "194193"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194194]\n==According to Larry Ponemon==|link:https://securityintelligence.com/cost-of-a-data-breach-2016/|, founder of the Ponemon Institute, “Organizations recognize that the longer it takes to detect and contain a data breach, the more costly it becomes to resolve. Over the years, detection and escalation costs in our research have increased. This suggests investments are being made in technologies and in-house expertise to reduce the time to detect and contain a threat.”",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "==According to Larry Ponemon==|link:https://securityintelligence.com/cost-of-a-data-breach-2016/|, founder of the Ponemon Institute, “Organizations recognize that the longer it takes to detect and contain a data breach, the more costly it becomes to resolve. Over the years, detection and escalation costs in our research have increased. This suggests investments are being made in technologies and in-house expertise to reduce the time to detect and contain a threat.”",
+      "id": [
+        "194194"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194195]\nThe following resources introduce methods to detect attacks early:\n\n• ==Detecting and Mitigating Cyber Threats and Attacks==|link:https://www.coursera.org/learn/detecting-cyber-attacks|: This course from the University of Colorado looks at detection and mitigation of threats and attack vectors and discusses how to use tools and principles to protect information.\n• ==Active Breach Detection: The Next-Generation Security Technology?==|link:https://www.sans.org/reading-room/white-papers/analyst/active-breach-detection-next-generation-security-technology-36812|: This SANS Institute whitepaper introduces “active breach detection,” a tool that can be used to improve the response time when faced with a breach.\n• ==Key Indicators of Compromise==|link:https://www.isdecisions.com/key-indicators-of-compromise-to-prevent-breach/|: This whitepaper investigates different indicators of data breaches and determines that corporate logons are the most important indicator of a breach. __(Note: IS Decisions is a security software vendor)__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "The following resources introduce methods to detect attacks early:\n\n• ==Detecting and Mitigating Cyber Threats and Attacks==|link:https://www.coursera.org/learn/detecting-cyber-attacks|: This course from the University of Colorado looks at detection and mitigation of threats and attack vectors and discusses how to use tools and principles to protect information.\n• ==Active Breach Detection: The Next-Generation Security Technology?==|link:https://www.sans.org/reading-room/white-papers/analyst/active-breach-detection-next-generation-security-technology-36812|: This SANS Institute whitepaper introduces “active breach detection,” a tool that can be used to improve the response time when faced with a breach.\n• ==Key Indicators of Compromise==|link:https://www.isdecisions.com/key-indicators-of-compromise-to-prevent-breach/|: This whitepaper investigates different indicators of data breaches and determines that corporate logons are the most important indicator of a breach. __(Note: IS Decisions is a security software vendor)__",
+      "id": [
+        "194195"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194196]\n[▼ch-28]\n[##Measuring Damage from Attacks]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194196"
+      ],
+      "anchor": "ch-28",
+      "title": "Measuring Damage from Attacks"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194197]\nMeasuring damage from cyberattacks is difficult. There is no standard for assessing damage and some affected assets are ephemeral (brand reputation).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Measuring damage from cyberattacks is difficult. There is no standard for assessing damage and some affected assets are ephemeral (brand reputation).",
+      "id": [
+        "194197"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194198]\nA brief look at damage assessments from the retailer perspective:\n\n• “According to a recent IBM research, data breaches significantly impact consumer confidence. In the case of one major breach, for example, the company saw a 46 percent drop in profit the quarter after the breach occurred.”\n• “The financial and reputational damage that can be inflicted on a retailer by a major security breach can be so severe, and so destructive, as to approach the financial and reputational damage a commercial airline might suffer from a serious accident”\n(==“Cyber Security Challenges: How Do Retailers Protect the Bottom Line?”==|link:https://securityintelligence.com/cyber-security-challenges-how-do-retailers-protect-the-bottom-line/| Douglas Bonderud, Jul. 2014)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "A brief look at damage assessments from the retailer perspective:\n\n• “According to a recent IBM research, data breaches significantly impact consumer confidence. In the case of one major breach, for example, the company saw a 46 percent drop in profit the quarter after the breach occurred.”\n• “The financial and reputational damage that can be inflicted on a retailer by a major security breach can be so severe, and so destructive, as to approach the financial and reputational damage a commercial airline might suffer from a serious accident”\n(==“Cyber Security Challenges: How Do Retailers Protect the Bottom Line?”==|link:https://securityintelligence.com/cyber-security-challenges-how-do-retailers-protect-the-bottom-line/| Douglas Bonderud, Jul. 2014)",
+      "id": [
+        "194198"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194199]\nAssessing damage is important for many reasons beyond bookkeeping. Damage assessments help firms plan their cybersecurity investments. Reasonable estimates of the financial cost of security breaches can help organizations make rational investment decisions.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Assessing damage is important for many reasons beyond bookkeeping. Damage assessments help firms plan their cybersecurity investments. Reasonable estimates of the financial cost of security breaches can help organizations make rational investment decisions.",
+      "id": [
+        "194199"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194200]\n[%][%Resources Measuring the Impact of Data Breaches]\n• ==Deloitte — Beneath the surface of a cyberattack: a deeper look at business impacts:==|link:https://www2.deloitte.com/content/dam/Deloitte/us/Documents/risk/us-risk-beneath-the-surface-of-a-cyber-attack.pdf| A 14-point framework to measure the impact of a cyberattack.\n• ==IBM Data Breach Cost Calculator==|link:https://databreachcalculator.mybluemix.net/|: An estimation tool based on Ponemon’s annual “Cost of a Data Breach” survey.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==Deloitte — Beneath the surface of a cyberattack: a deeper look at business impacts:==|link:https://www2.deloitte.com/content/dam/Deloitte/us/Documents/risk/us-risk-beneath-the-surface-of-a-cyber-attack.pdf| A 14-point framework to measure the impact of a cyberattack.\n• ==IBM Data Breach Cost Calculator==|link:https://databreachcalculator.mybluemix.net/|: An estimation tool based on Ponemon’s annual “Cost of a Data Breach” survey.",
+      "id": [
+        "194200"
+      ],
+      "lead": "Resources Measuring the Impact of Data Breaches"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194201]\n[▼ch-29]\n[#Wrapping things up]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194201"
+      ],
+      "anchor": "ch-29",
+      "title": "Wrapping things up"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194202]\nWe get to be front and center during an exciting and fast-paced time for technology. The more choices we have as consumers, the more vulnerable our data becomes. We can help protect each other’s data by committing to improving our cybersecurity practices — in the context of both our personal and professional lives.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "We get to be front and center during an exciting and fast-paced time for technology. The more choices we have as consumers, the more vulnerable our data becomes. We can help protect each other’s data by committing to improving our cybersecurity practices — in the context of both our personal and professional lives.",
+      "id": [
+        "194202"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194203]\nWe’ll get there by improving communication around cyber security. If this guide helped you, please share it. If you’ve experienced a breach, please report it.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "We’ll get there by improving communication around cyber security. If this guide helped you, please share it. If you’ve experienced a breach, please report it.",
+      "id": [
+        "194203"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194204]\nWe’ll leave you with some of the best resources on reporting cyberattacks.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "We’ll leave you with some of the best resources on reporting cyberattacks.",
+      "id": [
+        "194204"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:194205]\n[%][%Resources: Information Sharing Hubs]\n• ==Arbor Networks Google Attack Map==|link:https://isc.sans.edu/|\n• http://www.digitalattackmap.com/\n• http://www.fireeye.com/cyber-map/threat-map.html\n• https://isc.sans.edu/\n• www.team-cymru.org\n• http://cybermap.kaspersky.com/\n• http://map.ipviking.com/\n• http://www.dshield.org/countryreport.html\n• http://www.sicherheitstacho.eu/\n• http://www.wordfence.com/",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• ==Arbor Networks Google Attack Map==|link:https://isc.sans.edu/|\n• http://www.digitalattackmap.com/\n• http://www.fireeye.com/cyber-map/threat-map.html\n• https://isc.sans.edu/\n• www.team-cymru.org\n• http://cybermap.kaspersky.com/\n• http://map.ipviking.com/\n• http://www.dshield.org/countryreport.html\n• http://www.sicherheitstacho.eu/\n• http://www.wordfence.com/",
+      "id": [
+        "194205"
+      ],
+      "lead": "Resources: Information Sharing Hubs"
+    }
+  }
+]

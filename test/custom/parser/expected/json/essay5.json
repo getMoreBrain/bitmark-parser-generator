@@ -1,0 +1,30 @@
+[
+  {
+    "bitmark": "[.essay&image]\n[%05_Ablauf und Termine_022 (Freitext) ]\n[!Berechnen Sie aufgrund des & folgenden Projektablaufplans die Projektdauer in Monaten. \nHinweis: In den Spalten «Vorgänger» und «Nachfolger» ist jeweils nur eine Nummer aufgeführt.][?Korrekte Lösung \n18 Monate. (Hinweis: Für die Berechnung kann das Zeichnen eines Gantt-Diagramms hilfreich sein.)]\n[&audio-link:https://docs.bitbook.education/bit-books/compendio/schubert_erkundungen_c1/web-resources/cover/compendio_uebungen/web_resources/images/05_ablauf_und_termine_022.mp3]\n[&video-link:https://docs.bitbook.education/bit-books/compendio/schubert_erkundungen_c1/web-resources/cover/compendio_uebungen/web_resources/images/05_ablauf_und_termine_022.wmv]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Berechnen Sie aufgrund des & folgenden Projektablaufplans die Projektdauer in Monaten. \nHinweis: In den Spalten «Vorgänger» und «Nachfolger» ist jeweils nur eine Nummer aufgeführt.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "05_Ablauf und Termine_022 (Freitext)",
+      "hint": "Korrekte Lösung \n18 Monate. (Hinweis: Für die Berechnung kann das Zeichnen eines Gantt-Diagramms hilfreich sein.)",
+      "isExample": false,
+      "example": ""
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio-link",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/compendio/schubert_erkundungen_c1/web-resources/cover/compendio_uebungen/web_resources/images/05_ablauf_und_termine_022.mp3"
+        },
+        {
+          "type": "video-link",
+          "format": "wmv",
+          "src": "https://docs.bitbook.education/bit-books/compendio/schubert_erkundungen_c1/web-resources/cover/compendio_uebungen/web_resources/images/05_ablauf_und_termine_022.wmv"
+        }
+      ]
+    }
+  }
+]

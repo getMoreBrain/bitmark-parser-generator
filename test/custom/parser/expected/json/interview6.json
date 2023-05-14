@@ -1,0 +1,137 @@
+[
+  {
+    "bitmark": "[.interview:bitmark--]\n**Eine CSR-Strategie sollte auf einer Stakeholder-Analyse aufbauen.**\nEs stellt sich die Frage, wem gegenüber Unternehmen tatsächlich verantwortlich sind. Anspruchsgruppen werden häufig etwas diffus als Stakeholder zusammengefasst. Zu ihnen können Mitarbeiter, Kunden, Lieferanten, Investoren, Kommunen, Gewerkschaften, NGOs oder der Staat gehören. Teils zählen die Öffentlichkeit oder die Medien dazu, aber auch Führungskräfte und Eigentümer. Unternehmen, die sich um Corporate Social Responsibility bemühen, sollten zunächst eine Stakeholder-Analyse durchführen. Diese erfolgt in vier Schritten:\n===\n**1. Identifikation:** Identifizieren Sie die relevanten Stakeholder und notieren Sie diese:\n===\n**2. Analyse:** Analysieren Sie die Ansprüche, Ziele, Motive, Mittel und Strategien der Stakeholder. Untersuchen Sie, wie fundiert die von ihnen geäußerten Befürchtungen sind und inwieweit Ihr Unternehmen zu möglichen negativen Auswirkungen beiträgt.\nAnsprüche:[@shortAnswer]\n===\nZiele:[@shortAnswer]\n===\nMotive:[@shortAnswer]\n===\nMittel:[@shortAnswer]\n===\nStrategien:[@shortAnswer]\n===\n**3. Prognose:** Versuchen Sie vorherzusagen, wie sich die Anliegen der Stakeholder weiterentwickeln werden. Nehmen Sie die Prognosen umso ernster, je schwerwiegender die Auswirkungen für die Betroffenen sind, je mehr Macht die Stakeholder haben, je schwächer die Position Ihres Unternehmens ist und je deutlicher es gegen zentrale Werte verstößt.\nMeine Vorhersage:\n===\n**4. Bewertung:** Bewerten Sie die Ansprüche der Stakeholder. Sie können hier ökonomisch-strategisch vorgehen, indem Sie Kosten und Nutzen Ihres Verhaltens abwägen: Was würde geschehen, wenn Sie auf die Ansprüche der Stakeholder eingehen? Welche potenziellen Schäden würden Sie hervorrufen, wenn Sie die Ansprüche ignorieren? Sie können aber auch ethisch handeln. Dann erkennen Sie die Verantwortung Ihres Unternehmens an und bemühen sich um einen gerechten Ausgleich der verschiedenen, möglicherweise miteinander kollidierenden Ansprüche.\nAnspruch 1[@shortAnswer]\n===\nBewertung[@shortAnswer]\n===\nAnspruch 2[@shortAnswer]\n===\nBewertung[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "**Eine CSR-Strategie sollte auf einer Stakeholder-Analyse aufbauen.**\nEs stellt sich die Frage, wem gegenüber Unternehmen tatsächlich verantwortlich sind. Anspruchsgruppen werden häufig etwas diffus als Stakeholder zusammengefasst. Zu ihnen können Mitarbeiter, Kunden, Lieferanten, Investoren, Kommunen, Gewerkschaften, NGOs oder der Staat gehören. Teils zählen die Öffentlichkeit oder die Medien dazu, aber auch Führungskräfte und Eigentümer. Unternehmen, die sich um Corporate Social Responsibility bemühen, sollten zunächst eine Stakeholder-Analyse durchführen. Diese erfolgt in vier Schritten:",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "**1. Identifikation:** Identifizieren Sie die relevanten Stakeholder und notieren Sie diese:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**2. Analyse:** Analysieren Sie die Ansprüche, Ziele, Motive, Mittel und Strategien der Stakeholder. Untersuchen Sie, wie fundiert die von ihnen geäußerten Befürchtungen sind und inwieweit Ihr Unternehmen zu möglichen negativen Auswirkungen beiträgt.\nAnsprüche:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Ziele:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Motive:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Mittel:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Strategien:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**3. Prognose:** Versuchen Sie vorherzusagen, wie sich die Anliegen der Stakeholder weiterentwickeln werden. Nehmen Sie die Prognosen umso ernster, je schwerwiegender die Auswirkungen für die Betroffenen sind, je mehr Macht die Stakeholder haben, je schwächer die Position Ihres Unternehmens ist und je deutlicher es gegen zentrale Werte verstößt.\nMeine Vorhersage:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**4. Bewertung:** Bewerten Sie die Ansprüche der Stakeholder. Sie können hier ökonomisch-strategisch vorgehen, indem Sie Kosten und Nutzen Ihres Verhaltens abwägen: Was würde geschehen, wenn Sie auf die Ansprüche der Stakeholder eingehen? Welche potenziellen Schäden würden Sie hervorrufen, wenn Sie die Ansprüche ignorieren? Sie können aber auch ethisch handeln. Dann erkennen Sie die Verantwortung Ihres Unternehmens an und bemühen sich um einen gerechten Ausgleich der verschiedenen, möglicherweise miteinander kollidierenden Ansprüche.\nAnspruch 1",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Bewertung",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Anspruch 2",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Bewertung",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ]
+    }
+  }
+]

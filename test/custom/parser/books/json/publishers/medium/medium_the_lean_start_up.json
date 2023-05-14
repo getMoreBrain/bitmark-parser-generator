@@ -1,0 +1,1136 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:194370]\n[@language:en]\n[#The Lean Start-up Method Is Outdated - Try This Instead]\n[##Stop building your MVP and start growing your MVA.]\n[@externalId:e-the-lean-start-up-method-is-outdated--tr_ddx82tuttonx]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194370"
+      ],
+      "language": [
+        "en"
+      ],
+      "title": "The Lean Start-up Method Is Outdated - Try This Instead",
+      "subtitle": "Stop building your MVP and start growing your MVA.",
+      "externalId": [
+        "e-the-lean-start-up-method-is-outdated--tr_ddx82tuttonx"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194371]\n[&image:https://docs.bitmark.cloud/bit-books/medium/lean_startup/web-resources/images/lean_startup_1.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194371"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/lean_startup/web-resources/images/lean_startup_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194372]\nLast week I had the honor to speak at Investorweek 2021, a global investor and startup event.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Last week I had the honor to speak at Investorweek 2021, a global investor and startup event.",
+      "id": [
+        "194372"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194373]\nBesides pitching once at a startup event, I have little to no experience with investors. If so, my work is based on avoiding investors as much as possible.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Besides pitching once at a startup event, I have little to no experience with investors. If so, my work is based on avoiding investors as much as possible.",
+      "id": [
+        "194373"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194374]\nSo what do I tell a global bunch of tech investors waiting for the next big unicorn?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "So what do I tell a global bunch of tech investors waiting for the next big unicorn?",
+      "id": [
+        "194374"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194375]\nAfter breaking my head about it and feeling the imposter syndrome kicking in, the only reasonable thing for me was to share what I am passionate about.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "After breaking my head about it and feeling the imposter syndrome kicking in, the only reasonable thing for me was to share what I am passionate about.",
+      "id": [
+        "194375"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194376]\nSo I shared what I want every startup founder to know and what I think investors should look at in their potential investment.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "So I shared what I want every startup founder to know and what I think investors should look at in their potential investment.",
+      "id": [
+        "194376"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194377]\nIt’s building your MVA before building your MVP.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "It’s building your MVA before building your MVP.",
+      "id": [
+        "194377"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194378]\nEric Ries’ Lean Startup Method is a genius approach to building a business: Built, Measure, Learn, Repeat.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Eric Ries’ Lean Startup Method is a genius approach to building a business: Built, Measure, Learn, Repeat.",
+      "id": [
+        "194378"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194379]\nIt is simple, affordable, and highly effective.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "It is simple, affordable, and highly effective.",
+      "id": [
+        "194379"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194380]\nBut also highly ready for an update.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "But also highly ready for an update.",
+      "id": [
+        "194380"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194381]\nThe lean startup method requires you to have a hypothesis about your business idea. An assumption of how people react, how they behave, or what the future will bring.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The lean startup method requires you to have a hypothesis about your business idea. An assumption of how people react, how they behave, or what the future will bring.",
+      "id": [
+        "194381"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194382]\nThen, based on that hypothesis, you build your Minimum Viable Product, your MVP.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Then, based on that hypothesis, you build your Minimum Viable Product, your MVP.",
+      "id": [
+        "194382"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194383]\nOnly with your MVP, you get outside surveying real potential customers to find out whether your hypothesis is true or not. Then, with the information you measured and the feedback you learned, you set up a new hypothesis.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Only with your MVP, you get outside surveying real potential customers to find out whether your hypothesis is true or not. Then, with the information you measured and the feedback you learned, you set up a new hypothesis.",
+      "id": [
+        "194383"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194384]\nThis is a lot of guessing if you ask me.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This is a lot of guessing if you ask me.",
+      "id": [
+        "194384"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194385]\nBut why guess if you can just ask?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "But why guess if you can just ask?",
+      "id": [
+        "194385"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194386]\nWith social media nowadays, you don’t have to make assumptions. Just ask, listen and find out what’s really going on before making up assumptions in your head.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "With social media nowadays, you don’t have to make assumptions. Just ask, listen and find out what’s really going on before making up assumptions in your head.",
+      "id": [
+        "194386"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194387]\nBuilt your MVA before building your MVP.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Built your MVA before building your MVP.",
+      "id": [
+        "194387"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194388]\nDon’t start with an assumption; begin with a question. Then, ask people on social media and share what you learn.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Don’t start with an assumption; begin with a question. Then, ask people on social media and share what you learn.",
+      "id": [
+        "194388"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194389]\nContent is our new currency. And social media is where the magic happens.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Content is our new currency. And social media is where the magic happens.",
+      "id": [
+        "194389"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194390]\nYour Minimum Viable Audience exists of your very first listeners, readers, and followership in general, that feel attracted to what you want to start. With their help, you can develop your Minimum Viable Product.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Your Minimum Viable Audience exists of your very first listeners, readers, and followership in general, that feel attracted to what you want to start. With their help, you can develop your Minimum Viable Product.",
+      "id": [
+        "194390"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194391]\nYou ask first and then create, not the other way around.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You ask first and then create, not the other way around.",
+      "id": [
+        "194391"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194392]\nSeth Godin, the King of marketing, calls this approach “Smallest Viable Audience” and says:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Seth Godin, the King of marketing, calls this approach “Smallest Viable Audience” and says:",
+      "id": [
+        "194392"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194393]\n\"Marketing is the first thing we do, not the last.\"",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "\"Marketing is the first thing we do, not the last.\"",
+      "id": [
+        "194393"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194394]\nnote\nDo you know what I have learned about how to start a business? 1. Have a multi-million dollar idea\n2. Write a Business Plan\n3. Get investment\n4. Market your Business\nChances are high you learned that too.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "note\nDo you know what I have learned about how to start a business? 1. Have a multi-million dollar idea\n2. Write a Business Plan\n3. Get investment\n4. Market your Business\nChances are high you learned that too.",
+      "id": [
+        "194394"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194395]\nIsn’t this the exact opposite of what most successful marketer, entrepreneurs, and business gurus of our time, Seth Godin, says?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Isn’t this the exact opposite of what most successful marketer, entrepreneurs, and business gurus of our time, Seth Godin, says?",
+      "id": [
+        "194395"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194396]\nAnd he is by far not the only one.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "And he is by far not the only one.",
+      "id": [
+        "194396"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194397]\nCEO & Founder of WildAudience, Bastian Ernst calls it “Audience First, Startup Second Strategy”. Many successful entrepreneurs, bloggers, and content creators follow this “Audience First” approach to build highly successful businesses. Entrepreneurs like Rand Fishkin, founder of MOZ, Jason Fried, founder of Basecamp and Morgan Brown, VP of Growth at Shopify who tweeted this:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "CEO & Founder of WildAudience, Bastian Ernst calls it “Audience First, Startup Second Strategy”. Many successful entrepreneurs, bloggers, and content creators follow this “Audience First” approach to build highly successful businesses. Entrepreneurs like Rand Fishkin, founder of MOZ, Jason Fried, founder of Basecamp and Morgan Brown, VP of Growth at Shopify who tweeted this:",
+      "id": [
+        "194397"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194398]\n[&image:https://docs.bitmark.cloud/bit-books/medium/lean_startup/web-resources/images/lean_startup_2.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194398"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/lean_startup/web-resources/images/lean_startup_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194399]\nSo maybe we have done it wrong all the time, or times have changed — nevertheless, our way of building a startup is outdated, and it’s time to get the update in the schoolbooks.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "So maybe we have done it wrong all the time, or times have changed — nevertheless, our way of building a startup is outdated, and it’s time to get the update in the schoolbooks.",
+      "id": [
+        "194399"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194400]\nBecause starting with an MVA is not only beneficial, it’s crucial. Here is why:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Because starting with an MVA is not only beneficial, it’s crucial. Here is why:",
+      "id": [
+        "194400"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194401]\nWe all know the crushing statistics that 9 out of 10 startups fail.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "We all know the crushing statistics that 9 out of 10 startups fail.",
+      "id": [
+        "194401"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194402]\n==A survey by Fortune Magazine states==|link:https://fortune.com/2014/09/25/why-startups-fail-according-to-their-founders/|=, with 42%, the number one reason for startup failure is “no market need” of the product.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "==A survey by Fortune Magazine states==|link:https://fortune.com/2014/09/25/why-startups-fail-according-to-their-founders/|=, with 42%, the number one reason for startup failure is “no market need” of the product.",
+      "id": [
+        "194402"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194403]\nSo what if it’s not the startups that fail but their products.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "So what if it’s not the startups that fail but their products.",
+      "id": [
+        "194403"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194404]\n[&image:https://docs.bitmark.cloud/bit-books/medium/lean_startup/web-resources/images/lean_startup_3.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194404"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/lean_startup/web-resources/images/lean_startup_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194405]\nBy focusing so much on the hypothesis, we get blind to see the reality — no market need.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "By focusing so much on the hypothesis, we get blind to see the reality — no market need.",
+      "id": [
+        "194405"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194406]\nThe assumption made up in your head about your startup might not be the solution needed.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The assumption made up in your head about your startup might not be the solution needed.",
+      "id": [
+        "194406"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194407]\nYes, it’s crushing, but it also has a good side.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Yes, it’s crushing, but it also has a good side.",
+      "id": [
+        "194407"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194408]\nIt doesn’t mean your business has failed. It just means your product isn’t needed.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "It doesn’t mean your business has failed. It just means your product isn’t needed.",
+      "id": [
+        "194408"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194409]\n[▼ch-1]\n[#Go ask your MVA and try again.]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194409"
+      ],
+      "anchor": "ch-1",
+      "title": "Go ask your MVA and try again."
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194410]\nFounders get way too attached to the assumption of the right product.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Founders get way too attached to the assumption of the right product.",
+      "id": [
+        "194410"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194411]\nBut as Eckhart Tolle taught us, the most essential lesson of human time:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "But as Eckhart Tolle taught us, the most essential lesson of human time:",
+      "id": [
+        "194411"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194412]\nYou are not your thoughts.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You are not your thoughts.",
+      "id": [
+        "194412"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194413]\nAnd your product is not your Business.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "And your product is not your Business.",
+      "id": [
+        "194413"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194414]\nThat’s why you need a Minimal Viable Audience before you build your Minimal Viable Product: Your MVA helps you test, research, innovate and transform your products, so if the product does not find a market, you toss the product, not the startup.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "That’s why you need a Minimal Viable Audience before you build your Minimal Viable Product: Your MVA helps you test, research, innovate and transform your products, so if the product does not find a market, you toss the product, not the startup.",
+      "id": [
+        "194414"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194415]\nWhat can happen if you don’t start with an MVA?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "What can happen if you don’t start with an MVA?",
+      "id": [
+        "194415"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194416]\n[▼ch-2]\n[#May I Introduce: Pinky Gloves]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194416"
+      ],
+      "anchor": "ch-2",
+      "title": "May I Introduce: Pinky Gloves"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194417]\nThe (male) founders of ==Pinky Gloves==|link:https://pinkygloves.de|== set up the hypothesis that women need help to dispose of their period product.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The (male) founders of ==Pinky Gloves==|link:https://pinkygloves.de|== set up the hypothesis that women need help to dispose of their period product.",
+      "id": [
+        "194417"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194418]\nAs a result of this assumption they “invented” a pink plastic glove to wrap the tampon in, so nobody would be disturbed by the appearance of a used menstrual product.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "As a result of this assumption they “invented” a pink plastic glove to wrap the tampon in, so nobody would be disturbed by the appearance of a used menstrual product.",
+      "id": [
+        "194418"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194419]\nWhat a great idea they must have thought, as they pitched their idea to the investors of the TV show “Höhle des Löwen,” the German version of “Shark Tank.”",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "What a great idea they must have thought, as they pitched their idea to the investors of the TV show “Höhle des Löwen,” the German version of “Shark Tank.”",
+      "id": [
+        "194419"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194420]\nThe left with a 30.000 Euros investment. Pinky Gloves seemed like a great success story.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The left with a 30.000 Euros investment. Pinky Gloves seemed like a great success story.",
+      "id": [
+        "194420"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194421]\nBear with me.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bear with me.",
+      "id": [
+        "194421"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194422]\nBut all of a sudden, the pink, single-use plastic glove aiming to solve women’s menstrual problems was exposed to 2 million viewers.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "But all of a sudden, the pink, single-use plastic glove aiming to solve women’s menstrual problems was exposed to 2 million viewers.",
+      "id": [
+        "194422"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194423]\nAnd Female viewers were in a rage about this period-shaming and environmental-unfriendly product. In fact, the reaction was so intense all there is left of Pinky Gate is this statement on their website:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "And Female viewers were in a rage about this period-shaming and environmental-unfriendly product. In fact, the reaction was so intense all there is left of Pinky Gate is this statement on their website:",
+      "id": [
+        "194423"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194424]\nnote\n“...we have decided that Pinky Gloves will be withdrawn from the market and have initiated all necessary measures accordingly. We are stopping all purchasing and distribution activities. We apologize to everyone whose feelings and emotions have been hurt. We can understand that very many are upset about this. We continue to welcome the fact that an important debate has been initiated, where a factual and constructive debate culture will hopefully regain the upper hand.”",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "note\n“...we have decided that Pinky Gloves will be withdrawn from the market and have initiated all necessary measures accordingly. We are stopping all purchasing and distribution activities. We apologize to everyone whose feelings and emotions have been hurt. We can understand that very many are upset about this. We continue to welcome the fact that an important debate has been initiated, where a factual and constructive debate culture will hopefully regain the upper hand.”",
+      "id": [
+        "194424"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194425]\nA very embarrassing outcome for the founders, for the investor, and clearly for the still tabooed topic of menstruation.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "A very embarrassing outcome for the founders, for the investor, and clearly for the still tabooed topic of menstruation.",
+      "id": [
+        "194425"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194426]\nAll of this could have been easily prevented.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "All of this could have been easily prevented.",
+      "id": [
+        "194426"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194427]\nPinky Gate failed because they never actually wanted to support women with a menstrual product. Instead, they were solely interested in selling their own solution.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Pinky Gate failed because they never actually wanted to support women with a menstrual product. Instead, they were solely interested in selling their own solution.",
+      "id": [
+        "194427"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194428]\nHere it comes back to the unhealthy attachment founders have with their products. I see this issue way too often.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Here it comes back to the unhealthy attachment founders have with their products. I see this issue way too often.",
+      "id": [
+        "194428"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194429]\n[▼ch-3]\n[#Simply put, business is a spectrum with two extremes:]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194429"
+      ],
+      "anchor": "ch-3",
+      "title": "Simply put, business is a spectrum with two extremes:"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194430]\nThere are Product-based companies, and there are Vision-based companies.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "There are Product-based companies, and there are Vision-based companies.",
+      "id": [
+        "194430"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194431]\n[&image:https://docs.bitmark.cloud/bit-books/medium/lean_startup/web-resources/images/lean_startup_4.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194431"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/lean_startup/web-resources/images/lean_startup_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194432]\n[▼ch-4]\n[#The Product-Based Company]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194432"
+      ],
+      "anchor": "ch-4",
+      "title": "The Product-Based Company"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194433]\nAs the name suggests, some companies are solely based on one product. However, the primary purpose of the companys existence is the product, and its mission is to sell this one solution.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "As the name suggests, some companies are solely based on one product. However, the primary purpose of the companys existence is the product, and its mission is to sell this one solution.",
+      "id": [
+        "194433"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194434]\nWhatever may come.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Whatever may come.",
+      "id": [
+        "194434"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194435]\nThis product is most probably a reaction to an already existing market. So the companys focus is winning customers, grow as much as possible and cut out their competition.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This product is most probably a reaction to an already existing market. So the companys focus is winning customers, grow as much as possible and cut out their competition.",
+      "id": [
+        "194435"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194436]\nEverything stands and falls with one product. When the market demand changes, the whole company fails.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Everything stands and falls with one product. When the market demand changes, the whole company fails.",
+      "id": [
+        "194436"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194437]\nPinky Gate is a prime example of product-based companies whose only purpose is to sell the assumption they made up in their minds. But they are by far not the only ones.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Pinky Gate is a prime example of product-based companies whose only purpose is to sell the assumption they made up in their minds. But they are by far not the only ones.",
+      "id": [
+        "194437"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194438]\nRemember, 42% of startups fail because of no market need.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Remember, 42% of startups fail because of no market need.",
+      "id": [
+        "194438"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194439]\nBut if you start your startup based on a vision, it’s a totally different game.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "But if you start your startup based on a vision, it’s a totally different game.",
+      "id": [
+        "194439"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194440]\n[▼ch-5]\n[#The Vision-Based Company]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194440"
+      ],
+      "anchor": "ch-5",
+      "title": "The Vision-Based Company"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194441]\nThe intention of vision-based companys is to solve a specific problem, not selling its own solution.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The intention of vision-based companys is to solve a specific problem, not selling its own solution.",
+      "id": [
+        "194441"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194442]\nIt starts with an open mind and a visionary instinct. These qualities help them be so innovative that they create a whole new market.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "It starts with an open mind and a visionary instinct. These qualities help them be so innovative that they create a whole new market.",
+      "id": [
+        "194442"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194443]\nInstead of looking for the right customer, it is looking for a sustainable business model first.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Instead of looking for the right customer, it is looking for a sustainable business model first.",
+      "id": [
+        "194443"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194444]\nVision-based companies don’t primarily want to get bigger. Instead, they want to get better.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Vision-based companies don’t primarily want to get bigger. Instead, they want to get better.",
+      "id": [
+        "194444"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194445]\nThose companies have an infinite character as they continuously improve to stay on the market and fulfill their vision.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Those companies have an infinite character as they continuously improve to stay on the market and fulfill their vision.",
+      "id": [
+        "194445"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194446]\nThis reminds me of what Enzo Ferarri always said:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This reminds me of what Enzo Ferarri always said:",
+      "id": [
+        "194446"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194447]\nThe next Ferrari is the best Ferrari.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The next Ferrari is the best Ferrari.",
+      "id": [
+        "194447"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194448]\nAnd therefore, they never fail because it’s based on a vision and not a specific product.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "And therefore, they never fail because it’s based on a vision and not a specific product.",
+      "id": [
+        "194448"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194449]\nLike Thomas Edison said after inventing the lightbulb: I never failed; I just found 1000 ways how it didn’t work.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Like Thomas Edison said after inventing the lightbulb: I never failed; I just found 1000 ways how it didn’t work.",
+      "id": [
+        "194449"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194450]\nFirm on the goal, flexible on the methods.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Firm on the goal, flexible on the methods.",
+      "id": [
+        "194450"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194451]\nVision-based companies are detached from their products. Products are just vehicles that bring them to their vision.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Vision-based companies are detached from their products. Products are just vehicles that bring them to their vision.",
+      "id": [
+        "194451"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194452]\nThey are built upon a Minimum Viable Audience, as they know they don’t know.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "They are built upon a Minimum Viable Audience, as they know they don’t know.",
+      "id": [
+        "194452"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194453]\nSo, it doesn’t matter in which stadium you are on your startup journey, it’s never too late to start with an MVA, and it’s certainly never too late to start listening.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "So, it doesn’t matter in which stadium you are on your startup journey, it’s never too late to start with an MVA, and it’s certainly never too late to start listening.",
+      "id": [
+        "194453"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194454]\nThe best time to start your MVA is yesterday. The second-best time is now.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The best time to start your MVA is yesterday. The second-best time is now.",
+      "id": [
+        "194454"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:194455]\n[▼ch-6]\n[#How To Create and Cultivate A Minimum Viable Audience]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "194455"
+      ],
+      "anchor": "ch-6",
+      "title": "How To Create and Cultivate A Minimum Viable Audience"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194456]\nAsk questions and listen without the intent to reply, learn with an open mind, share what you know through content, and repeat. Then, when the time is ready, you can offer your audience a solution they really need.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ask questions and listen without the intent to reply, learn with an open mind, share what you know through content, and repeat. Then, when the time is ready, you can offer your audience a solution they really need.",
+      "id": [
+        "194456"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194457]\n1. Start with a vision, a passion, or an intention but without expectations or assumptions. Only with an open mind can you fully listen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "1. Start with a vision, a passion, or an intention but without expectations or assumptions. Only with an open mind can you fully listen.",
+      "id": [
+        "194457"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194458]\n2. Instead of a product idea or a concrete solution, start with a question. Google does it with their “How might we ..” questions. Instead of assuming women want a single-use plastic glove to remove their tampons, ask: How might we make menstrual products more convenient for women?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "2. Instead of a product idea or a concrete solution, start with a question. Google does it with their “How might we ..” questions. Instead of assuming women want a single-use plastic glove to remove their tampons, ask: How might we make menstrual products more convenient for women?",
+      "id": [
+        "194458"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194459]\n3. Create a social channel and start asking people about their opinion",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "3. Create a social channel and start asking people about their opinion",
+      "id": [
+        "194459"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194460]\n4. Listen, learn, and educate others with what you learned. Through content creation, you’ll find the sweet spot of listening and presenting yourself as an authority.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "4. Listen, learn, and educate others with what you learned. Through content creation, you’ll find the sweet spot of listening and presenting yourself as an authority.",
+      "id": [
+        "194460"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194461]\n5. And then find the suitable business model to serve your audience — not the other way around. Because only if we listen can we understand. When we understand, we can serve, and only when we serve can we sell successfully.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "5. And then find the suitable business model to serve your audience — not the other way around. Because only if we listen can we understand. When we understand, we can serve, and only when we serve can we sell successfully.",
+      "id": [
+        "194461"
+      ]
+    }
+  }
+]

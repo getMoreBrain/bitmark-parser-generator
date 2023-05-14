@@ -1,0 +1,46 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:134546][#Email Lektion 2]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "134546"
+      ],
+      "title": "Email Lektion 2"
+    }
+  },
+  {
+    "bitmark": "[.page&image]\n[@id:134547]\n[&image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/webp/emailtext-nr_2-convertedpdf_efrfkhz8ldp2/emailtext-nr_2-convertedpdf_efrfkhz8ldp2-1.webp]\n[@thumbImage:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/thumbs/emailtext-nr_2-convertedpdf_efrfkhz8ldp2-thumbs-1/emailtext-nr_2-convertedpdf_efrfkhz8ldp2-thumbs-1.jpg]\n\nAnrede\n\n\nmit der heutigen Trainingseinheit „Willkommen in einer unbegrenzten Welt von Chancen“\nerkennen Sie, dass es zwischen Himmel und Erde deutlich mehr gibt, als unser Verstand\nerfassen kann. Albert Einstein formulierte es einst so:\n\n\n„Jedem tiefen Naturforscher muss eine Art religiösen Gefühls nahe liegen, weil er sich nicht\nvorstellen mag, dass die ungemein feinen Zusammenhänge, die er erschaut von ihm zum ersten\nMal gedacht werden. Im unbegreiflichen Weltall offenbart sich eine grenzenlos überlegene\nVernunft. Die gängige Vorstellung, ich sei ein Atheist, beruht auf einem großen Irrtum. Wer sie\naus meinen wissenschaftlichen Theorien herausliest, hat sie kaum begriffen...“\n\n\nIn diesem Sinne freundliche Grüsse aus ...\n\n\nDie Bankleitung",
+    "bit": {
+      "type": "page",
+      "format": "bitmark--",
+      "body": "Anrede\n\n\nmit der heutigen Trainingseinheit „Willkommen in einer unbegrenzten Welt von Chancen“\nerkennen Sie, dass es zwischen Himmel und Erde deutlich mehr gibt, als unser Verstand\nerfassen kann. Albert Einstein formulierte es einst so:\n\n\n„Jedem tiefen Naturforscher muss eine Art religiösen Gefühls nahe liegen, weil er sich nicht\nvorstellen mag, dass die ungemein feinen Zusammenhänge, die er erschaut von ihm zum ersten\nMal gedacht werden. Im unbegreiflichen Weltall offenbart sich eine grenzenlos überlegene\nVernunft. Die gängige Vorstellung, ich sei ein Atheist, beruht auf einem großen Irrtum. Wer sie\naus meinen wissenschaftlichen Theorien herausliest, hat sie kaum begriffen...“\n\n\nIn diesem Sinne freundliche Grüsse aus ...\n\n\nDie Bankleitung",
+      "id": [
+        "134547"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/webp/emailtext-nr_2-convertedpdf_efrfkhz8ldp2/emailtext-nr_2-convertedpdf_efrfkhz8ldp2-1.webp",
+          "showInIndex": false,
+          "format": "webp",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "thumbImage": [
+        "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/thumbs/emailtext-nr_2-convertedpdf_efrfkhz8ldp2-thumbs-1/emailtext-nr_2-convertedpdf_efrfkhz8ldp2-thumbs-1.jpg"
+      ]
+    }
+  }
+]

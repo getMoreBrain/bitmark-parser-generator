@@ -1,0 +1,530 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:185155]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/emission/nachhaltiges_investieren/web-resources/images/emission_cover.png]\n[#Warum nachhaltiges Investie­ren ­die Welt verändert]\n[@externalId:e-warum-nachhaltiges-investieren-die-welt-_xompgm7iqxxo]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "185155"
+      ],
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/emission/nachhaltiges_investieren/web-resources/images/emission_cover.png"
+      ],
+      "title": "Warum nachhaltiges Investie­ren ­die Welt verändert",
+      "externalId": [
+        "e-warum-nachhaltiges-investieren-die-welt-_xompgm7iqxxo"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:185329]\n[&video-link:https://vimeo.com/585450701]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "185329"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "vimeo.com",
+          "url": "https://vimeo.com/585450701",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:185330]\n\n[&video-link:https://vimeo.com/585457783]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "185330"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "vimeo.com",
+          "url": "https://vimeo.com/585457783",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:185331]\n\n\n[&video-link:https://vimeo.com/585451312]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "185331"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "vimeo.com",
+          "url": "https://vimeo.com/585451312",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:185332]\n\n\n\n[&video-link:https://vimeo.com/585451927]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "185332"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "vimeo.com",
+          "url": "https://vimeo.com/585451927",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:185333]\n\n[&video-link:https://vimeo.com/642689507]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "185333"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "vimeo.com",
+          "url": "https://vimeo.com/642689507",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:185334]\n[&video-link:https://vimeo.com/643021630]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "185334"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "vimeo.com",
+          "url": "https://vimeo.com/643021630",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:185335]\n[&video-link:https://vimeo.com/642711657]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "185335"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "vimeo.com",
+          "url": "https://vimeo.com/642711657",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze]\n[@id:185336]\n\nESG betrachtet Nachhaltigkeit holistisch. Es geht im wesentlichen um [_Umweltthemen], welche die ökologischen Aspekte beleuchten. Außerdem schaut man auf [_Gute Unternehmensführung], wo man sich unter anderem mit der Frage beschäftigt, wie das Management einer Firma aufgestellt ist und in welcher Form Strategien aufgesetzt werden. Darüberhinaus betrachtet man im ESG Kontext, ebenfalls [_Soziale Themen], wo man auf auf Arbeitsrechte schaut oder auch auf Themen wie Gleichberechtigung und Diversität.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "ESG betrachtet Nachhaltigkeit holistisch. Es geht im wesentlichen um {0}, welche die ökologischen Aspekte beleuchten. Außerdem schaut man auf {1}, wo man sich unter anderem mit der Frage beschäftigt, wie das Management einer Firma aufgestellt ist und in welcher Form Strategien aufgesetzt werden. Darüberhinaus betrachtet man im ESG Kontext, ebenfalls {2}, wo man auf auf Arbeitsrechte schaut oder auch auf Themen wie Gleichberechtigung und Diversität.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "185336"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Umweltthemen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Gute Unternehmensführung"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Soziale Themen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:185337]\n\n[!Welche Anlegertypen gibt es laut einer Studie des FNG?]\n[+Idealisten, Risikoscheue, Verantwortungsbewusste mit Gewinnerwartung]\n[-Idealisten, nachhaltig Orientierte, Erbengeneration, Risikofreudige, Ertragsorientierte]\n[-Idealisten, Renditefokussierte, Ertragsinteressierte ohne ethische Orientierung, Risikoscheue, die Verantwortungsbewusste mit Nachhaltigserwartung]\n[-Futuristen, Renditefokussierte, Ertragsinteressierte, Risikoscheue, Verantwortungslose mit Gewinnfokus]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welche Anlegertypen gibt es laut einer Studie des FNG?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Idealisten, Risikoscheue, Verantwortungsbewusste mit Gewinnerwartung",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Idealisten, nachhaltig Orientierte, Erbengeneration, Risikofreudige, Ertragsorientierte",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Idealisten, Renditefokussierte, Ertragsinteressierte ohne ethische Orientierung, Risikoscheue, die Verantwortungsbewusste mit Nachhaltigserwartung",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Futuristen, Renditefokussierte, Ertragsinteressierte, Risikoscheue, Verantwortungslose mit Gewinnfokus",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "185337"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:185338]\n\nWenn wir so weitermachen, wie bisher, ist es wahrscheinlich, dass wir bis Ende dieses Jahrhunderts eine durchschnittliche Erderwärmung von [-0][-1][-2][-3][-4][-5][-6] erreichen.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "Wenn wir so weitermachen, wie bisher, ist es wahrscheinlich, dass wir bis Ende dieses Jahrhunderts eine durchschnittliche Erderwärmung von {0} erreichen.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "0",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "1",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "2",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "3",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "4",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "5",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "6",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "185338"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:185339]\n\n[!Wodurch können sogenannte “Stranded Assets” entstehen?]\n[+durch technologischen Wandel]\n[+durch eine Neuausrichtung der Nachfrage]\n[+durch neue staatliche Regulierungen]\n[-durch neue Produkt- und Serviceangebote]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Wodurch können sogenannte “Stranded Assets” entstehen?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "durch technologischen Wandel",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "durch eine Neuausrichtung der Nachfrage",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "durch neue staatliche Regulierungen",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "durch neue Produkt- und Serviceangebote",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "185339"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false]\n[@id:185340]\n\n[@labelTrue:physisches Risiko][@labelFalse:Transaktionsrisko]\n===\n[-Neue Regulatorik]\n===\n[+Überschwemmungen]\n===\n[+Stürme]\n===\n[-Technologietrends]\n===\n[-veränderte Verbraucherpräferenzen]\n===\n[+Brände]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "",
+      "lead": "",
+      "instruction": "",
+      "hint": "",
+      "labelTrue": "physisches Risiko",
+      "labelFalse": "Transaktionsrisko",
+      "statements": [
+        {
+          "statement": "Neue Regulatorik",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Überschwemmungen",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Stürme",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Technologietrends",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "veränderte Verbraucherpräferenzen",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Brände",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "185340"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze]\n[@id:185341]\n\nArbeitsbedingungen, Löhne, die Produktsicherheit und die Überwachung der [_Lieferkette] stellen ein erhebliches [_Risiko] für den Ruf eines Unternehmens, die [_Kundenbindung] und eventuelle Schadensersatzforderungen dar, ganz zu schweigen von möglichen behördlichen Bußgeldern.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Arbeitsbedingungen, Löhne, die Produktsicherheit und die Überwachung der {0} stellen ein erhebliches {1} für den Ruf eines Unternehmens, die {2} und eventuelle Schadensersatzforderungen dar, ganz zu schweigen von möglichen behördlichen Bußgeldern.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "185341"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Lieferkette"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Risiko"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Kundenbindung"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.true-false]\n[@id:185342]\n\n[@labelTrue:Solziales][@labelFalse:Gute Unternehmensführung]\n===\n[+Mitarbeiter Produktivität]\n===\n[-ESG Berichterstattung]\n===\n[-Vergütungsstruktur]\n===\n[+Diversität]\n===\n[+Arbeitsbedingungen]\n===\n[-Risikomanagement]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "",
+      "lead": "",
+      "instruction": "",
+      "hint": "",
+      "labelTrue": "Solziales",
+      "labelFalse": "Gute Unternehmensführung",
+      "statements": [
+        {
+          "statement": "Mitarbeiter Produktivität",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "ESG Berichterstattung",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Vergütungsstruktur",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Diversität",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Arbeitsbedingungen",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Risikomanagement",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "185342"
+      ]
+    }
+  }
+]

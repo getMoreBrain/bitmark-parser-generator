@@ -1,0 +1,157 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:304382]\n[@externalId:e-gmb-test-book-utf8_7elk9pglcod5]\n[# GMB Test Book UTF8]\n[@authors.name:Get More Brain]\n[@language:en]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304382"
+      ],
+      "externalId": [
+        "e-gmb-test-book-utf8_7elk9pglcod5"
+      ],
+      "title": "GMB Test Book UTF8",
+      "authors.name": [
+        "Get More Brain"
+      ],
+      "language": [
+        "en"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article]\n[@id:304383]\nÇ ç Ä Ö Ü ä ö ü è é ` '' â ô û ê Â Ô Û Ê « » 'a' À È É à",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ç ç Ä Ö Ü ä ö ü è é ` '' â ô û ê Â Ô Û Ê « » 'a' À È É à",
+      "id": [
+        "304383"
+      ]
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '`'",
+        "line": 3,
+        "column": 20,
+        "errorLine": "Ç ç Ä Ö Ü ä ö ü è é ` '' â ô û ê Â Ô Û Ê « » 'a' À È É à"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article]\n[@id:304384]\n**Konkretisieren Sie ein unklares «Ja»**\nBekommen Sie ein nicht ganz klares «Ja», sollten Sie versuchen, diese noch nicht vollständige Überzeugung durch Nachfragen über z.B. Ausstattung oder Modalitäten zu konkretisieren: «In welcher Ausführung möchten Sie es denn haben?» Wenn Ihr Gegenüber daraufhin seine Wünsche äussert, bestätigt er dadurch sein «Ja». Der Vorteil für Sie: Sie müssen die Abschlussfrage nicht noch einmal stellen und dabei eventuell einen Rückzieher riskieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Konkretisieren Sie ein unklares «Ja»**\nBekommen Sie ein nicht ganz klares «Ja», sollten Sie versuchen, diese noch nicht vollständige Überzeugung durch Nachfragen über z.B. Ausstattung oder Modalitäten zu konkretisieren: «In welcher Ausführung möchten Sie es denn haben?» Wenn Ihr Gegenüber daraufhin seine Wünsche äussert, bestätigt er dadurch sein «Ja». Der Vorteil für Sie: Sie müssen die Abschlussfrage nicht noch einmal stellen und dabei eventuell einen Rückzieher riskieren.",
+      "id": [
+        "304384"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article]\n[@id:304385]\n[%][%Résiliation du contrat]\nLa durée des contrats d’assurance est souvent très longue et il est extrêmement difficile de prévoir, lors de leur conclusion, tous les événements susceptibles d’exercer une influence sur la solvabilité du client. Et c’est souvent en raison de difficultés financières que le client souhaite dénoncer le contrat. Par ailleurs, la Loi sur le contrat d’assurance autorise le preneur d’assurance à demander la transformation (libération du service des primes) ou résilier unilatéralement le contrat (rachat). Le versement en espéces de la valeur de rachat des polices du pilier 3a est soumis à des restrictions.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "La durée des contrats d’assurance est souvent très longue et il est extrêmement difficile de prévoir, lors de leur conclusion, tous les événements susceptibles d’exercer une influence sur la solvabilité du client. Et c’est souvent en raison de difficultés financières que le client souhaite dénoncer le contrat. Par ailleurs, la Loi sur le contrat d’assurance autorise le preneur d’assurance à demander la transformation (libération du service des primes) ou résilier unilatéralement le contrat (rachat). Le versement en espéces de la valeur de rachat des polices du pilier 3a est soumis à des restrictions.",
+      "id": [
+        "304385"
+      ],
+      "lead": "Résiliation du contrat"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:304386]\n[%][%Übersicht gesetzliche Dokumente]\n[&image:https://docs.bitmark.cloud/bit-books/swiss_life_select/vms/web-resources/images/25_uebersicht_gesetzliche_dokumente.jpg][@caption:Tabelle 25 - Übersicht gesetzliche Dokumente]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "304386"
+      ],
+      "lead": "Übersicht gesetzliche Dokumente",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/swiss_life_select/vms/web-resources/images/25_uebersicht_gesetzliche_dokumente.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Tabelle 25 - Übersicht gesetzliche Dokumente",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.side-note:bitmark++]\n[@id:304387]\n[%][%Caisses appliquant le système de la primauté des cotisations]\nDans les caisses pratiquant la primauté des cotisations (lorsqu’il s’agit de compagnies d’assurance, on parle de primauté des primes), les cotisations d’épargne définies dans le règlement ou dans le plan d’assurance sont individuellement créditées à l’assuré. Les montants épargnés et les intérêts constituent l’avoir de vieillesse, lequel permet de déterminer le montant de la rente au moyen du taux de conversion. En cas d’invalidité, on ajoute à l'avoir de libre passage à la date de la survenance de l’invalidité la somme des bonifications de vieillesse afférentes aux années futures, sans intérêts. On calcule alors la rente d’invalidité en multipliant cette somme par le taux de conversion. Dans la pratique, les caisses en primauté des cotisations dominent en matière de prestation vieillesse avec 94% de toutes les caisses de pension.",
+    "bit": {
+      "type": "side-note",
+      "format": "bitmark++",
+      "body": "Dans les caisses pratiquant la primauté des cotisations (lorsqu’il s’agit de compagnies d’assurance, on parle de primauté des primes), les cotisations d’épargne définies dans le règlement ou dans le plan d’assurance sont individuellement créditées à l’assuré. Les montants épargnés et les intérêts constituent l’avoir de vieillesse, lequel permet de déterminer le montant de la rente au moyen du taux de conversion. En cas d’invalidité, on ajoute à l'avoir de libre passage à la date de la survenance de l’invalidité la somme des bonifications de vieillesse afférentes aux années futures, sans intérêts. On calcule alors la rente d’invalidité en multipliant cette somme par le taux de conversion. Dans la pratique, les caisses en primauté des cotisations dominent en matière de prestation vieillesse avec 94% de toutes les caisses de pension.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304387"
+      ],
+      "lead": "Caisses appliquant le système de la primauté des cotisations"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304388]\n• en cas de départ de nombreux assurés, ce qui entraîne une liquidation partielle, il est possible que ceux-ci ne reçoivent pas la totalité de leur avoir (et qu’ils doivent conformément procéder à des rachats dans la nouvelle caisse de pensions)\n• le délai de paiement d’un versement anticipé pour l’encouragement à la propriété du logement peut être porté à 12 mois; le versement peut être refusé pour l’amortissement d’une hypothèque.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• en cas de départ de nombreux assurés, ce qui entraîne une liquidation partielle, il est possible que ceux-ci ne reçoivent pas la totalité de leur avoir (et qu’ils doivent conformément procéder à des rachats dans la nouvelle caisse de pensions)\n• le délai de paiement d’un versement anticipé pour l’encouragement à la propriété du logement peut être porté à 12 mois; le versement peut être refusé pour l’amortissement d’une hypothèque.",
+      "id": [
+        "304388"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article]\n[@id:304389]\nCette progression montre bien qu’il faut commencer à se constituer un 3ème pilier le plus tôt possible grâce au «sponsor que constitue l’intérêt composé». La prévoyance vieillesse doit se construire tout au long de la période d’activité (âge 25-65 ans) et non seulement vers la fin de celle-ci, lorsque l’âge de la retraite approche.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Cette progression montre bien qu’il faut commencer à se constituer un 3ème pilier le plus tôt possible grâce au «sponsor que constitue l’intérêt composé». La prévoyance vieillesse doit se construire tout au long de la période d’activité (âge 25-65 ans) et non seulement vers la fin de celle-ci, lorsque l’âge de la retraite approche.",
+      "id": [
+        "304389"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article]\n[@id:304390]\n[%][%Indépendants]\nLes indépendants constituent un groupe-cible important pour la prévoyance privée. Ils ne sont en effet, à la différence des salariés, soumis ni à la prévoyance professionnelle obligatoire ni à l’assurance-accidents. Ils présentent de ce fait des lacunes considérables dans le domaine de la prévoyance vieillesse et dans celui de la garantie du revenu, tant dans le domaine du court terme que du long terme. Le 3ème pilier permet de les combler de manière idéale. Il peut être adapté aux besoins individuels et constitue donc un substitut idéal à une caisse de pensions.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Les indépendants constituent un groupe-cible important pour la prévoyance privée. Ils ne sont en effet, à la différence des salariés, soumis ni à la prévoyance professionnelle obligatoire ni à l’assurance-accidents. Ils présentent de ce fait des lacunes considérables dans le domaine de la prévoyance vieillesse et dans celui de la garantie du revenu, tant dans le domaine du court terme que du long terme. Le 3ème pilier permet de les combler de manière idéale. Il peut être adapté aux besoins individuels et constitue donc un substitut idéal à une caisse de pensions.",
+      "id": [
+        "304390"
+      ],
+      "lead": "Indépendants"
+    }
+  },
+  {
+    "bitmark": "[.article]\n[@id:304391]\n[%][%Frontaliers]\nLes personnes titulaires de l’autorisation de séjour ou livret B (sans autorisation d’établissement ou livret C) sont soumises à l’impôt à la source sur les revenus de leur activité salariée [cela vaut en principe également pour les frontaliers et les résidents à la semaine]; l’impôt à la source progressif est calculé sur le revenu brut. En fonction de l’état civil, du nombre d’enfants et de la confession, on applique le barème cantonal de l’impôt à la source correspondant. Pour les revenus supérieurs à CHF 120'000 (ou fortune imposable, bien-fonds), la taxation ordinaire s’applique. É",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Les personnes titulaires de l’autorisation de séjour ou livret B (sans autorisation d’établissement ou livret C) sont soumises à l’impôt à la source sur les revenus de leur activité salariée [cela vaut en principe également pour les frontaliers et les résidents à la semaine]; l’impôt à la source progressif est calculé sur le revenu brut. En fonction de l’état civil, du nombre d’enfants et de la confession, on applique le barème cantonal de l’impôt à la source correspondant. Pour les revenus supérieurs à CHF 120'000 (ou fortune imposable, bien-fonds), la taxation ordinaire s’applique. É",
+      "id": [
+        "304391"
+      ],
+      "lead": "Frontaliers"
+    }
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "bitmark": "[.assignment]\n[!Read the following text.]\nOnce upon a time...",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Once upon a time...",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Read the following text."
+    }
+  }
+]

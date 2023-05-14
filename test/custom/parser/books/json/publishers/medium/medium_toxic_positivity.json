@@ -1,0 +1,800 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:193473]\n[#How the Toxic Positivity of LinkedIn Serves the Status Quo]\n[@language:en]\n[@coverImage:https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_coverimage.png][@caption:They Live On LinkedIn, a digital collage by ==Joel Nihlean==|link:https://twitter.com/JoelNihlean|]\n[@externalId:e-how-the-toxic-positivity-of-linkedin-ser_oh4lg0cx4ayc]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "[@caption:They Live On LinkedIn, a digital collage by ==Joel Nihlean==|link:https://twitter.com/JoelNihlean|]\n[@externalId:e-how-the-toxic-positivity-of-linkedin-ser_oh4lg0cx4ayc]",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "193473"
+      ],
+      "title": "How the Toxic Positivity of LinkedIn Serves the Status Quo",
+      "language": [
+        "en"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_coverimage.png"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n[@coverImage:https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_coverimage.png][@caption:'",
+        "line": 5,
+        "column": 152,
+        "errorLine": "[@coverImage:https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_coverimage.png][@caption:They Live On LinkedIn, a digital collage by ==Joel Nihlean==|link:https://twitter.com/JoelNihlean|]"
+      },
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 5,
+        "column": 152,
+        "errorLine": "[@coverImage:https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_coverimage.png][@caption:They Live On LinkedIn, a digital collage by ==Joel Nihlean==|link:https://twitter.com/JoelNihlean|]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 260,
+        "errorLine": "[@coverImage:https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_coverimage.png][@caption:They Live On LinkedIn, a digital collage by ==Joel Nihlean==|link:https://twitter.com/JoelNihlean|]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 6,
+        "column": 0,
+        "errorLine": "[@externalId:e-how-the-toxic-positivity-of-linkedin-ser_oh4lg0cx4ayc]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 6,
+        "column": 68,
+        "errorLine": "[@externalId:e-how-the-toxic-positivity-of-linkedin-ser_oh4lg0cx4ayc]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:193474]\nThe poisonous online spectacle of hustle and grind threatens our mental health and forecloses the possibility of real change.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "The poisonous online spectacle of hustle and grind threatens our mental health and forecloses the possibility of real change.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "193474"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:193475]\n__“The Spectacle cannot be understood as a mere visual deception produced by mass-media technologies. It’s a worldview that has actually been materialized, a view of a world that has become objective.”__ — Guy Debord, ==Society of the Spectacle==|link:https://www.marxists.org/reference/archive/debord/society.htm|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "__“The Spectacle cannot be understood as a mere visual deception produced by mass-media technologies. It’s a worldview that has actually been materialized, a view of a world that has become objective.”__ — Guy Debord, ==Society of the Spectacle==|link:https://www.marxists.org/reference/archive/debord/society.htm|",
+      "id": [
+        "193475"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193476]\nIn theory, Facebook made it easier to connect with friends, family, and people you never intended to know after high school. Instagram lets you curate a highlight reel of your life, sharing beautiful photos and videos of your best moments with friends, family, and people you didn’t intend to know after high school. LinkedIn… uh.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In theory, Facebook made it easier to connect with friends, family, and people you never intended to know after high school. Instagram lets you curate a highlight reel of your life, sharing beautiful photos and videos of your best moments with friends, family, and people you didn’t intend to know after high school. LinkedIn… uh.",
+      "id": [
+        "193476"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193477]\nLinkedIn isn’t as much about connecting and sharing with any of those people as it is about masking the transactional and often cutthroat nature of at-will employment. LinkedIn feeds are a runoff stream of personal branding, full of professional connections posting inspirational quotes, motivational image macros, course completion certificates, life mantras, employee anniversary celebrations, and unintentional corporate cringe galore. It sometimes feels like every post on the world’s top professional networking site is an unintentional meme.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "LinkedIn isn’t as much about connecting and sharing with any of those people as it is about masking the transactional and often cutthroat nature of at-will employment. LinkedIn feeds are a runoff stream of personal branding, full of professional connections posting inspirational quotes, motivational image macros, course completion certificates, life mantras, employee anniversary celebrations, and unintentional corporate cringe galore. It sometimes feels like every post on the world’s top professional networking site is an unintentional meme.",
+      "id": [
+        "193477"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193478]\n[&image:https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_1.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193478"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193479]\nIf you stop wincing and dig into LinkedIn’s paid options, you’ll find easy evidence in the descriptions of the plans you can purchase that points toward why the site is so unbearable:\n\n• Career — Get hired and get ahead\n• Business — Grow and nurture your network\n• Sales Navigator Core — Unlock sales opportunities\n• Recruiter Lite — Find and hire talent",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If you stop wincing and dig into LinkedIn’s paid options, you’ll find easy evidence in the descriptions of the plans you can purchase that points toward why the site is so unbearable:\n\n• Career — Get hired and get ahead\n• Business — Grow and nurture your network\n• Sales Navigator Core — Unlock sales opportunities\n• Recruiter Lite — Find and hire talent",
+      "id": [
+        "193479"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193480]\nThough all social media is ultimately about self-validation to one extent or another, these options all transparently focus first on what a user gains. LinkedIn doesn’t frame itself as being about sharing beautiful photos or status updates. It’s about using social capital to advance your career.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Though all social media is ultimately about self-validation to one extent or another, these options all transparently focus first on what a user gains. LinkedIn doesn’t frame itself as being about sharing beautiful photos or status updates. It’s about using social capital to advance your career.",
+      "id": [
+        "193480"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193481]\nThat transparent nature of LinkedIn’s purpose — the me-first factor — helps us more easily see the structure of the spectacle inherent in all social media. The humble brags, irritating corporate buzzwords and faux-optimism make LinkedIn insufferable. But why is LinkedIn full of so much cringe?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "That transparent nature of LinkedIn’s purpose — the me-first factor — helps us more easily see the structure of the spectacle inherent in all social media. The humble brags, irritating corporate buzzwords and faux-optimism make LinkedIn insufferable. But why is LinkedIn full of so much cringe?",
+      "id": [
+        "193481"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193482]\n[▼ch-1]\n[#Cringe on LinkedIn is Debord’s spectacle at work]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193482"
+      ],
+      "anchor": "ch-1",
+      "title": "Cringe on LinkedIn is Debord’s spectacle at work"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:193483]\nFrench philosopher, filmmaker, and critic of work, Guy Debord, said that late capitalism has ==**transformed us all into a society of constant spectacle**==|link:https://modernmythology.net/the-society-of-the-spectacle-22175bafc78a|. Mere appearances — our most superficial understanding of things — are changing how we act and react, effectively remaking the world.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "French philosopher, filmmaker, and critic of work, Guy Debord, said that late capitalism has ==**transformed us all into a society of constant spectacle**==|link:https://modernmythology.net/the-society-of-the-spectacle-22175bafc78a|. Mere appearances — our most superficial understanding of things — are changing how we act and react, effectively remaking the world.",
+      "id": [
+        "193483"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193484]\nBut he said that way back in the 1960s, long before the phrase “growing your personal brand.” Now, the phenomenon Debord called the spectacle has metastasized across social networks nearly unrestrained.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "But he said that way back in the 1960s, long before the phrase “growing your personal brand.” Now, the phenomenon Debord called the spectacle has metastasized across social networks nearly unrestrained.",
+      "id": [
+        "193484"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193485]\nBecause of its more straightforward transactional nature, the spectacle may be easiest to see on LinkedIn. It’s an iteration of hustle culture — sometimes called burnout culture and grind culture. But it exists in different ways on every social media site. You’ve no doubt seen those Instagram influencer accounts or Tai Lopez YouTube ads with flashy, waxed new Lamborghinis and materialistic signifiers of wealth.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Because of its more straightforward transactional nature, the spectacle may be easiest to see on LinkedIn. It’s an iteration of hustle culture — sometimes called burnout culture and grind culture. But it exists in different ways on every social media site. You’ve no doubt seen those Instagram influencer accounts or Tai Lopez YouTube ads with flashy, waxed new Lamborghinis and materialistic signifiers of wealth.",
+      "id": [
+        "193485"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193486]\nPosts on LinkedIn are more insufferable and insincere because of how closely the site is tied to work — the key to food, shelter, clothing and the other basic necessities of life. Because many of us find we have little time for life outside the office (and commute to and from), work and life feel synonymous. In fact, many of LinkedIn’s power users have tied their identity to their work, hitching their self-worth entirely to their career.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Posts on LinkedIn are more insufferable and insincere because of how closely the site is tied to work — the key to food, shelter, clothing and the other basic necessities of life. Because many of us find we have little time for life outside the office (and commute to and from), work and life feel synonymous. In fact, many of LinkedIn’s power users have tied their identity to their work, hitching their self-worth entirely to their career.",
+      "id": [
+        "193486"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193487]\nIf it weren’t for a global pandemic exerting some counter pressure at times, there’s no telling where it might have taken us over the past few years. The future is wide open.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If it weren’t for a global pandemic exerting some counter pressure at times, there’s no telling where it might have taken us over the past few years. The future is wide open.",
+      "id": [
+        "193487"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193488]\n[▼ch-2]\n[#LinkedIn influencers project the image of success]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193488"
+      ],
+      "anchor": "ch-2",
+      "title": "LinkedIn influencers project the image of success"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193489]\nFor the live-to-work influencers of LinkedIn, the grind never stops. These visionary productivity “ninjas” and “gurus” are always hacking and optimizing themselves to crush it like a pro as they climb the corporate ladder. Each hustle bro and girlboss aspires to be the next Jeff Bezos, Elon Musk, Sheryl Sandberg, or the next Shark Tank guy.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "For the live-to-work influencers of LinkedIn, the grind never stops. These visionary productivity “ninjas” and “gurus” are always hacking and optimizing themselves to crush it like a pro as they climb the corporate ladder. Each hustle bro and girlboss aspires to be the next Jeff Bezos, Elon Musk, Sheryl Sandberg, or the next Shark Tank guy.",
+      "id": [
+        "193489"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193490]\nThey post about getting up earlier, staying later, working harder, failing smart, and never ever quitting. And somehow they work, too. They thrive on an audience that accepts the motivational quotes and inspirational posts of their online persona at face value.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "They post about getting up earlier, staying later, working harder, failing smart, and never ever quitting. And somehow they work, too. They thrive on an audience that accepts the motivational quotes and inspirational posts of their online persona at face value.",
+      "id": [
+        "193490"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193491]\nThe collective spectacle of hustle culture social media—primarily signaled with images, short videos, and status updates — is not a lie so much as a distortion of reality. The posts are a fish-eye lens focused on warping a narrow slice of life in such a way that pushes everything else to the margins.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The collective spectacle of hustle culture social media—primarily signaled with images, short videos, and status updates — is not a lie so much as a distortion of reality. The posts are a fish-eye lens focused on warping a narrow slice of life in such a way that pushes everything else to the margins.",
+      "id": [
+        "193491"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193492]\nThese posts represent a largely aspirational and unattainable reality. The implied social and economic status of the posters — success defined by a workaholic hustle and grind that glorifies burnout and materialism — is their substantive reality.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "These posts represent a largely aspirational and unattainable reality. The implied social and economic status of the posters — success defined by a workaholic hustle and grind that glorifies burnout and materialism — is their substantive reality.",
+      "id": [
+        "193492"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:193493]\nAnd the wildest thing is that ==“influencer” is now a career==|link:https://www.cnbc.com/2021/04/30/how-much-money-you-can-make-off-social-media-following-calculator.html|. Pantomiming entrepreneurial success is enough to bring real wealth and status.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "And the wildest thing is that ==“influencer” is now a career==|link:https://www.cnbc.com/2021/04/30/how-much-money-you-can-make-off-social-media-following-calculator.html|. Pantomiming entrepreneurial success is enough to bring real wealth and status.",
+      "id": [
+        "193493"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193494]\n[&image:https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_2.png][@caption:This is an image of success whether or not the person pictured owns these cars or is actually employed or not.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193494"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "This is an image of success whether or not the person pictured owns these cars or is actually employed or not.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193495]\nThese symbols of wealth are the message. In the online displays of hustle culture, the appearance of success and your proximity to signs of success are more important than who you are. Fancy clothes, high-end cars, and expensive boats — the wealth, luxury, excess, and conspicuous consumption they symbolize — are the real subject of these pictures. Humanity is incidental.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "These symbols of wealth are the message. In the online displays of hustle culture, the appearance of success and your proximity to signs of success are more important than who you are. Fancy clothes, high-end cars, and expensive boats — the wealth, luxury, excess, and conspicuous consumption they symbolize — are the real subject of these pictures. Humanity is incidental.",
+      "id": [
+        "193495"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193496]\n[▼ch-3]\n[#The spectacle of positivity culture]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193496"
+      ],
+      "anchor": "ch-3",
+      "title": "The spectacle of positivity culture"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193497]\nObviously, not all of LinkedIn is inspirational quotes, motivational images, and celebrations of success. But the majority of social media posts—whatever the platform — amount to little more than a highly curated set of moments in the otherwise mundane and normal lives of regular people.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Obviously, not all of LinkedIn is inspirational quotes, motivational images, and celebrations of success. But the majority of social media posts—whatever the platform — amount to little more than a highly curated set of moments in the otherwise mundane and normal lives of regular people.",
+      "id": [
+        "193497"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:193498]\nThe ==cargo cult==|link:https://calteches.library.caltech.edu/51/2/CargoCult.htm| of success depends on a spectacle of positivity, a curated simulacra of our lives using the best angle. The implication in each post is that these people worked hard and made it, so nobody who works has an excuse if they’re unsuccessful, unhappy or not have made it.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "The ==cargo cult==|link:https://calteches.library.caltech.edu/51/2/CargoCult.htm| of success depends on a spectacle of positivity, a curated simulacra of our lives using the best angle. The implication in each post is that these people worked hard and made it, so nobody who works has an excuse if they’re unsuccessful, unhappy or not have made it.",
+      "id": [
+        "193498"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193499]\nThey have everything they’ve ever wanted, why don’t you? We hustle, we grind, we work hard and play hard. We insist that we are achieving everything we’ve ever wanted.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "They have everything they’ve ever wanted, why don’t you? We hustle, we grind, we work hard and play hard. We insist that we are achieving everything we’ve ever wanted.",
+      "id": [
+        "193499"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193500]\nWho doesn’t want to show themselves as smart, well-liked, as thought leaders, and astute professionals — worth following, worth hiring? Most LinkedIn users are simply responding to that market pressure to be the ideal image, so they craft the online persona needed to establish it.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Who doesn’t want to show themselves as smart, well-liked, as thought leaders, and astute professionals — worth following, worth hiring? Most LinkedIn users are simply responding to that market pressure to be the ideal image, so they craft the online persona needed to establish it.",
+      "id": [
+        "193500"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193501]\nThis toxic positivity trend is algorithmically reinforced. The most positive posts, pictures, and shareable inspirational quotes get the most attention, likes, shares, and comments on sites like LinkedIn.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This toxic positivity trend is algorithmically reinforced. The most positive posts, pictures, and shareable inspirational quotes get the most attention, likes, shares, and comments on sites like LinkedIn.",
+      "id": [
+        "193501"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193502]\n[&image:https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_3.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193502"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193503]\nAnd this distorted version of positivity is perhaps the most dangerous spectacle of all.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "And this distorted version of positivity is perhaps the most dangerous spectacle of all.",
+      "id": [
+        "193503"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193504]\nThis notion that positivity begets success helps reinforce the ideological status quo that all problems are personal problems. Everything can be solved with hard work. If you are shabby, sick, tired, or having trouble making ends meet, that’s __a you problem__.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This notion that positivity begets success helps reinforce the ideological status quo that all problems are personal problems. Everything can be solved with hard work. If you are shabby, sick, tired, or having trouble making ends meet, that’s __a you problem__.",
+      "id": [
+        "193504"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193505]\nWe’re not supposed to question why we’ve structured society so that most people have little or no time to get ready in the morning, little or no money for nice clothes, little or no time to spend at the gym, and little or no meaningful leisure time to post captioned pictures about the grind while standing in front of a sports car or on a yacht. Nor can the very real problems that face us be solved alone.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "We’re not supposed to question why we’ve structured society so that most people have little or no time to get ready in the morning, little or no money for nice clothes, little or no time to spend at the gym, and little or no meaningful leisure time to post captioned pictures about the grind while standing in front of a sports car or on a yacht. Nor can the very real problems that face us be solved alone.",
+      "id": [
+        "193505"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193506]\nEven those of us who are only posting on LinkedIn to celebrate a new job, promotion, or the completion of some project end up affirming the status quo. __I worked hard and got promoted. I hustled hard, endured stress and long days and nights to launch this big project, and it was worth it. I am proud of the work I’ve done. I live for my company’s mission__. And most importantly, __I feel positive__.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Even those of us who are only posting on LinkedIn to celebrate a new job, promotion, or the completion of some project end up affirming the status quo. __I worked hard and got promoted. I hustled hard, endured stress and long days and nights to launch this big project, and it was worth it. I am proud of the work I’ve done. I live for my company’s mission__. And most importantly, __I feel positive__.",
+      "id": [
+        "193506"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193507]\n[▼ch-4]\n[#The spectacle protects the status quo]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193507"
+      ],
+      "anchor": "ch-4",
+      "title": "The spectacle protects the status quo"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193508]\nThe point of the spectacle is to affirm the rightness and naturalness of the status quo. If we say we’re happy, then there’s no need to change anything. Even if any of us find ourselves individually unhappy, we imagine we are the exception. That’s how the spectacle protects the status quo.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The point of the spectacle is to affirm the rightness and naturalness of the status quo. If we say we’re happy, then there’s no need to change anything. Even if any of us find ourselves individually unhappy, we imagine we are the exception. That’s how the spectacle protects the status quo.",
+      "id": [
+        "193508"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193509]\nThe spectacle soothes our discontent, too. It tells us what we want to hear. It whispers, __you can accomplish anything__, or __you’re already happy where you’re at__. As soon as we buy into, carry with us, and repeat the messages of the spectacle, we’re enabling what Debord called “the omnipresent affirmation of the choice already made.”",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The spectacle soothes our discontent, too. It tells us what we want to hear. It whispers, __you can accomplish anything__, or __you’re already happy where you’re at__. As soon as we buy into, carry with us, and repeat the messages of the spectacle, we’re enabling what Debord called “the omnipresent affirmation of the choice already made.”",
+      "id": [
+        "193509"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193510]\n[&image:https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_4.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193510"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193511]\nThat’s why our curated LinkedIn feeds — focused on successes, celebrations, brand building, and the glory of the grind — suggest that we’re all already living our best lives in the best possible world. By focusing only on our wins, we reinforce the power of the spectacle and its assertion that nothing needs to change.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "That’s why our curated LinkedIn feeds — focused on successes, celebrations, brand building, and the glory of the grind — suggest that we’re all already living our best lives in the best possible world. By focusing only on our wins, we reinforce the power of the spectacle and its assertion that nothing needs to change.",
+      "id": [
+        "193511"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193512]\nChange would disrupt the status quo — something we all agree, through our participation in the spectacle, is unnecessary. And for those already at the top of the pyramid — the wealthy for whom the system works well — change to the status quo is definitely not necessary. Money, power, and all manner of material success are already flowing to them.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Change would disrupt the status quo — something we all agree, through our participation in the spectacle, is unnecessary. And for those already at the top of the pyramid — the wealthy for whom the system works well — change to the status quo is definitely not necessary. Money, power, and all manner of material success are already flowing to them.",
+      "id": [
+        "193512"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193513]\n[▼ch-5]\n[#The social media spectacle causes real mental health issues]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193513"
+      ],
+      "anchor": "ch-5",
+      "title": "The social media spectacle causes real mental health issues"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193514]\nThe image of what a successful life should look like, that spectacle we’re collectively projecting online — the one where we all have it together, we’re excelling at our careers and we’re working hard and playing hard, grinding 24/7 — is bad for us, because it becomes a part of us. We’re measuring our real lives against that fantasy.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The image of what a successful life should look like, that spectacle we’re collectively projecting online — the one where we all have it together, we’re excelling at our careers and we’re working hard and playing hard, grinding 24/7 — is bad for us, because it becomes a part of us. We’re measuring our real lives against that fantasy.",
+      "id": [
+        "193514"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193515]\nSocial media feeds don’t reflect our actual lived experiences. The meticulously curated spectacle seeps like water into every corner of our lives, warping our sense of what is normal and what everyone else is actually doing. It shapes our real lives by changing the norms and expectations we try to live up to. This false impression of the world has incredibly negative effects on mental health and wellbeing.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Social media feeds don’t reflect our actual lived experiences. The meticulously curated spectacle seeps like water into every corner of our lives, warping our sense of what is normal and what everyone else is actually doing. It shapes our real lives by changing the norms and expectations we try to live up to. This false impression of the world has incredibly negative effects on mental health and wellbeing.",
+      "id": [
+        "193515"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193516]\nBecause this funhouse mirror version of normal — in terms of appearance and success — is something most of us will never be able to live up to, we’re left to feel simply not good enough. A ==recent study==|link:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5067824/#:~:text=However%2C%20it%20is%20also%20possible,measure%20up%20to%20others'%20accomplishments.| found that “people who use LinkedIn frequently may also feel increased depression and/or anxiety for a number of reasons, including feeling guilty for the time ‘wasted’ and feeling unable to measure up to others’ accomplishments.”",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Because this funhouse mirror version of normal — in terms of appearance and success — is something most of us will never be able to live up to, we’re left to feel simply not good enough. A ==recent study==|link:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5067824/#:~:text=However%2C%20it%20is%20also%20possible,measure%20up%20to%20others'%20accomplishments.| found that “people who use LinkedIn frequently may also feel increased depression and/or anxiety for a number of reasons, including feeling guilty for the time ‘wasted’ and feeling unable to measure up to others’ accomplishments.”",
+      "id": [
+        "193516"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193517]\nWe might think it’s just us struggling to catch up, let alone skill up and work harder. The spectacle creates a sort of smokescreen because it precludes the knowledge that anyone is unhappy — that anything is less than perfect. The pure fiction of everyone’s career highlight reel only fuels ==the imposter syndrome eight in 10 adults experience==|link:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7174434/|.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "We might think it’s just us struggling to catch up, let alone skill up and work harder. The spectacle creates a sort of smokescreen because it precludes the knowledge that anyone is unhappy — that anything is less than perfect. The pure fiction of everyone’s career highlight reel only fuels ==the imposter syndrome eight in 10 adults experience==|link:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7174434/|.",
+      "id": [
+        "193517"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:193518]\n[▼ch-6]\n[#The social media spectacle feeds on your desire]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "193518"
+      ],
+      "anchor": "ch-6",
+      "title": "The social media spectacle feeds on your desire"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193519]\nFor Debord, this is the message of the spectacle:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "For Debord, this is the message of the spectacle:",
+      "id": [
+        "193519"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193520]\n__‘What is good appears.’ The passive acceptance it demands is already effectively imposed by its monopoly of appearances. Its manner of appearing without allowing any reply.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__‘What is good appears.’ The passive acceptance it demands is already effectively imposed by its monopoly of appearances. Its manner of appearing without allowing any reply.__",
+      "id": [
+        "193520"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193521]\nLinkedIn has a near-monopoly as the largest professional networking social media platform. All that’s needed to succeed on this platform is an audience that desires that which they don’t have.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "LinkedIn has a near-monopoly as the largest professional networking social media platform. All that’s needed to succeed on this platform is an audience that desires that which they don’t have.",
+      "id": [
+        "193521"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193522]\nAt its core, to appear to live a desirable life is really all that’s needed to influence others, to be an influencer. LinkedIn users’ posts about their successes make them objects of desire. When we post online, want to show ourselves as adventurous, well-liked, attractive, and worth following online — in short, desirable.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "At its core, to appear to live a desirable life is really all that’s needed to influence others, to be an influencer. LinkedIn users’ posts about their successes make them objects of desire. When we post online, want to show ourselves as adventurous, well-liked, attractive, and worth following online — in short, desirable.",
+      "id": [
+        "193522"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193523]\nThe tragic logic of LinkedIn — and all social media, really — is that we curate a feed of successes and even reframe our failures as a success to establish an image of a desirable life and career. That desire — which is only possible because we feel we lack something — makes both us and our audience feel forever incomplete.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The tragic logic of LinkedIn — and all social media, really — is that we curate a feed of successes and even reframe our failures as a success to establish an image of a desirable life and career. That desire — which is only possible because we feel we lack something — makes both us and our audience feel forever incomplete.",
+      "id": [
+        "193523"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193524]\nWe chase after an unattainable version of success we see online to fill some absence in us. And we also want to seem successful and have the adoration of others — what is ultimately the desire of an online audience — another attempt to fill the void. This what makes social media so profitable.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "We chase after an unattainable version of success we see online to fill some absence in us. And we also want to seem successful and have the adoration of others — what is ultimately the desire of an online audience — another attempt to fill the void. This what makes social media so profitable.",
+      "id": [
+        "193524"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193525]\nLike an ouroboros, the loop is never-ending.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Like an ouroboros, the loop is never-ending.",
+      "id": [
+        "193525"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193526]\nEach post is another point on the event horizon that orbits the emptiness at the center of our desire. There are always more inspirational and motivational posts to make, more moments of success to share, more desire to be accrued.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Each post is another point on the event horizon that orbits the emptiness at the center of our desire. There are always more inspirational and motivational posts to make, more moments of success to share, more desire to be accrued.",
+      "id": [
+        "193526"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:193527]\nThis is what ==keeps the spectacle going==|link:https://modernmythology.net/nothing-will-fill-this-void-e094d3d1e153|.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This is what ==keeps the spectacle going==|link:https://modernmythology.net/nothing-will-fill-this-void-e094d3d1e153|.",
+      "id": [
+        "193527"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:193528]\n[&image:https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_5.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "193528"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/toxic_positivity_linkedin/web-resources/images/medium_toxic_positivity_linkedin_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:193529]\n__Follow Joel Nihlean on ==Twitter==|link:https://twitter.com/JoelNihlean| or ==sign up==|link:https://joelnihlean.medium.com/subscribe| to get an email whenever he publishes. Read more from Joel.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "__Follow Joel Nihlean on ==Twitter==|link:https://twitter.com/JoelNihlean| or ==sign up==|link:https://joelnihlean.medium.com/subscribe| to get an email whenever he publishes. Read more from Joel.__",
+      "id": [
+        "193529"
+      ]
+    }
+  }
+]

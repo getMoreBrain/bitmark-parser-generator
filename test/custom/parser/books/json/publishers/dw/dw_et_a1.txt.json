@@ -1,0 +1,2163 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:107934]\n[#Einstufungstest A1]\n[@language:de]\n[@externalId:e-dw-einstufungstest_nxchlfpiajcs]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107934"
+      ],
+      "title": "Einstufungstest A1",
+      "language": [
+        "de"
+      ],
+      "externalId": [
+        "e-dw-einstufungstest_nxchlfpiajcs"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:107935]\n[%1]\n[!Du kommst um 18 Uhr in deinem Hotel in Berlin an. Die Empfangsdame grüßt dich. Du antwortest. Wähl richtig aus.]\n[-Guten Morgen.]\n[+Guten Abend.]\n[-Gute Nacht.]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "1",
+      "instruction": "Du kommst um 18 Uhr in deinem Hotel in Berlin an. Die Empfangsdame grüßt dich. Du antwortest. Wähl richtig aus.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Guten Morgen.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Guten Abend.",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Gute Nacht.",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107935"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1&audio]\n[@id:107936]\n[%3]\n[!Die Empfangsdame gibt dir den Zimmerschlüssel. Die Empfangsdame sagt dir deine Zimmernummer. Hör dir das Audio an und\nwähl die richtige Antwort.\nWelche Zimmernummer hast du?]\n[&audio:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_03_dwdownload.mp3]\n\n[-204]\n[+224]\n[-240]\n[-242]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "3",
+      "instruction": "Die Empfangsdame gibt dir den Zimmerschlüssel. Die Empfangsdame sagt dir deine Zimmernummer. Hör dir das Audio an und\nwähl die richtige Antwort.\nWelche Zimmernummer hast du?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "204",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "224",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "240",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "242",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107936"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_03_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1&audio]\n[@id:107937]\n[%4]\n[!Du fragst die Empfangsdame nach den Frühstückszeiten. Hör dir den Dialog an und wähl die richtige Antwort. Um wie viel\nUhr kannst du frühstücken?]\n[&audio:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_04_dwdownload.mp3]\n[+06.30 – 09.30 Uhr]\n[-07.30 – 09.30 Uhr]\n[-07.30 – 10.30 Uhr]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "4",
+      "instruction": "Du fragst die Empfangsdame nach den Frühstückszeiten. Hör dir den Dialog an und wähl die richtige Antwort. Um wie viel\nUhr kannst du frühstücken?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "06.30 – 09.30 Uhr",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "07.30 – 09.30 Uhr",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "07.30 – 10.30 Uhr",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107937"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_04_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze-instruction-grouped]\n[@id:107938]\n[%5]\n[!In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.]\n[_Woher][!woher] kommen Sie?\n[_Wo][!wo] wohnen Sie?\n[_Was][!was] studieren Sie?\n[_Welche][!welche] Sprachen sprechen Sie?",
+    "bit": {
+      "type": "cloze-instruction-grouped",
+      "format": "bitmark--",
+      "body": "{0} kommen Sie?\n{1} wohnen Sie?\n{2} studieren Sie?\n{3} Sprachen sprechen Sie?",
+      "item": "5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107938"
+      ],
+      "instruction": "In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Woher"
+          ],
+          "hint": "",
+          "instruction": "woher",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Wo"
+          ],
+          "hint": "",
+          "instruction": "wo",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Was"
+          ],
+          "hint": "",
+          "instruction": "was",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Welche"
+          ],
+          "hint": "",
+          "instruction": "welche",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text]\n[@id:107939]\n[%6]\n[!Du stehst am Bahnhof. Ein Fremder spricht dich an. Wähl die passenden Antworten.]\n\"Kann ich Ihnen helfen?\"\n[-\"Danke schön.\"][+\"Ja, gerne.\"][-\"Sehr gut.\"]\n\n\"Sie sprechen sehr gut Deutsch.\"\n[+\"Danke schön.\"][-\"Ja, gerne.\"][-\"Sehr gut.\"]\n\n\"Wie gefällt es Ihnen hier?\"\n[-\"Danke schön.\"][-\"Ja, gerne.\"][+\"Sehr gut.\"]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "\"Kann ich Ihnen helfen?\"\n{0}\n\n\"Sie sprechen sehr gut Deutsch.\"\n{1}\n\n\"Wie gefällt es Ihnen hier?\"\n{2}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "\"Danke schön.\"",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "\"Ja, gerne.\"",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "\"Sehr gut.\"",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "\"Danke schön.\"",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "\"Ja, gerne.\"",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "\"Sehr gut.\"",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "\"Danke schön.\"",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "\"Ja, gerne.\"",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "\"Sehr gut.\"",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "107939"
+      ],
+      "item": "6",
+      "instruction": "Du stehst am Bahnhof. Ein Fremder spricht dich an. Wähl die passenden Antworten."
+    }
+  },
+  {
+    "bitmark": "[.cloze&audio]\n[@id:107940]\n[%7]\n[&audio:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_07_dwdownload.mp3]\n[!Du möchtest einen Deutschkurs besuchen und bittest einen Bekannten um die Telefonnummer einer Sprachschule in der\nNähe. Schreib die richtige Telefonnummer in die Lücke.\nWie lautet die Telefonnummer der Sprachschule?]\nDie Telefonnummer lautet [_843709]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Die Telefonnummer lautet {0}",
+      "item": "7",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107940"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_07_dwdownload.mp3"
+        }
+      },
+      "instruction": "Du möchtest einen Deutschkurs besuchen und bittest einen Bekannten um die Telefonnummer einer Sprachschule in der\nNähe. Schreib die richtige Telefonnummer in die Lücke.\nWie lautet die Telefonnummer der Sprachschule?",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "843709"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text]\n[@id:107941]\n[%8]\n\n\n[!Du bist in einer Sprachschule und tauschst mit anderen Mitschülern Telefonnummern aus. Wähl das richtige Wort.\n\nWelches Wort passt?]\n\"Welche Nummer hat Marisa?\" \"[+Ihre][-Seine] Nummer ist 465230.\"\n\"Und Peter?\" \"[-Ihre][+Seine] Nummer ist 862098.\"\n\"Und Brigitte und David?\" \"[+Ihre][-Seine] Nummer ist 756066.\"",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "\"Welche Nummer hat Marisa?\" \"{0} Nummer ist 465230.\"\n\"Und Peter?\" \"{1} Nummer ist 862098.\"\n\"Und Brigitte und David?\" \"{2} Nummer ist 756066.\"",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Ihre",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Seine",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Ihre",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Seine",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Ihre",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Seine",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "107941"
+      ],
+      "item": "8",
+      "instruction": "Du bist in einer Sprachschule und tauschst mit anderen Mitschülern Telefonnummern aus. Wähl das richtige Wort.\n\nWelches Wort passt?"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice&image]\n[@id:107942]\n[%9]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-9.png]\n[!Es ist Samstagnachmittag. Du gehst zur Post, um Briefmarken zu kaufen. Kannst du die Briefmarken jetzt bekommen? Wähl\nrichtig aus.\nKannst du die Briefmarken jetzt kaufen?]\n[-Ja]\n[+Nein]",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "9",
+      "instruction": "Es ist Samstagnachmittag. Du gehst zur Post, um Briefmarken zu kaufen. Kannst du die Briefmarken jetzt bekommen? Wähl\nrichtig aus.\nKannst du die Briefmarken jetzt kaufen?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Ja",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Nein",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "107942"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-9.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1&audio]\n[@id:107943]\n[%10]\n[&audio:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_10_dwdownload.mp3]\n[!Du bist am Flughafen in München und hörst eine Durchsage. Du möchtest den Flug LH 872 nehmen. Ist die Durchsage\nwichtig für dich? Wähl aus.\nIst die Durchsage wichtig für dich?]\n[+Ja]\n[-Nein]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "10",
+      "instruction": "Du bist am Flughafen in München und hörst eine Durchsage. Du möchtest den Flug LH 872 nehmen. Ist die Durchsage\nwichtig für dich? Wähl aus.\nIst die Durchsage wichtig für dich?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Ja",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Nein",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107943"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_10_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text]\n[@id:107944]\n[%11]\n\n[!Du sprichst mit einer Bekannten über Maria aus deinem Sprachkurs. Du erzählst deiner Bekannten von Maria. Wähl die\nrichtige Form.\n\nWelche Form ist richtig?]\n\"Maria [-komme][-kommen][+ kommt] aus Brasilien.\"\n\"Sie [+kann][-können][-kannst] nicht viel Deutsch.\"\n\"Sie [-spreche][-sprechen][+spricht] sehr langsam.\"",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "\"Maria {0} aus Brasilien.\"\n\"Sie {1} nicht viel Deutsch.\"\n\"Sie {2} sehr langsam.\"",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "komme",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "kommen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "kommt",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "kann",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "können",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "kannst",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "spreche",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sprechen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "spricht",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "107944"
+      ],
+      "item": "11",
+      "instruction": "Du sprichst mit einer Bekannten über Maria aus deinem Sprachkurs. Du erzählst deiner Bekannten von Maria. Wähl die\nrichtige Form.\n\nWelche Form ist richtig?"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text]\n[@id:107945]\n[%12]\n\n[!Du sprichst mit einer Bekannten über Probleme, die du manchmal hast, wenn Deutsch gesprochen wird. Was sagt man am\nbesten bei welchem Problem? Wähl die richtige Antwort.]\n\nDu möchtest, dass der Gesprächspartner alles wiederholt.\n[-\"Entschuldigung, was bedeutet ...?\"][-\"Können Sie das aufschreiben bitte?\"][+\"Entschuldigung, noch einmal bitte.\"]\n\nDu möchtest eine wichtige Information, die du nicht genau verstehst, lesen.\n[-\"Stimmt das?\"][+\"Können Sie das aufschreiben bitte?\"][-\"Entschuldigung, noch einmal bitte.\"]\n\nManchmal kennst du ein Wort nicht.\n[+\"Entschuldigung, was bedeutet ...?\"][-\"Können Sie das aufschreiben bitte?\"][-\"Entschuldigung, können Sie das\nwiederholen.\"]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "Du möchtest, dass der Gesprächspartner alles wiederholt.\n{0}\n\nDu möchtest eine wichtige Information, die du nicht genau verstehst, lesen.\n{1}\n\nManchmal kennst du ein Wort nicht.\n{2}[-\"Entschuldigung, können Sie das\nwiederholen.\"]",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "\"Entschuldigung, was bedeutet ...?\"",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "\"Können Sie das aufschreiben bitte?\"",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "\"Entschuldigung, noch einmal bitte.\"",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "\"Stimmt das?\"",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "\"Können Sie das aufschreiben bitte?\"",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "\"Entschuldigung, noch einmal bitte.\"",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "\"Entschuldigung, was bedeutet ...?\"",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "\"Können Sie das aufschreiben bitte?\"",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "107945"
+      ],
+      "item": "12",
+      "instruction": "Du sprichst mit einer Bekannten über Probleme, die du manchmal hast, wenn Deutsch gesprochen wird. Was sagt man am\nbesten bei welchem Problem? Wähl die richtige Antwort."
+    },
+    "errors": [
+      {
+        "message": "missing CL at '\\n'",
+        "line": 15,
+        "column": 110,
+        "errorLine": "[+\"Entschuldigung, was bedeutet ...?\"][-\"Können Sie das aufschreiben bitte?\"][-\"Entschuldigung, können Sie das"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 16,
+        "column": 13,
+        "errorLine": "wiederholen.\"]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-1&image]\n[@id:107946]\n[%13]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-13.png]\n[!Du planst einen Urlaub in Deutschland und findest zwei Anzeigen in einer Zeitschrift. Du möchtest mit der Bahn durch\nDeutschland reisen. Welche der beiden Internetseiten gibt dir die Informationen, die du brauchst? Wähl aus.\n\nWo findest du die benötigten Informationen?\n]\n\n[+www.urlaub-in-de.de]\n[-www.reisehilfe.com]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "13",
+      "instruction": "Du planst einen Urlaub in Deutschland und findest zwei Anzeigen in einer Zeitschrift. Du möchtest mit der Bahn durch\nDeutschland reisen. Welche der beiden Internetseiten gibt dir die Informationen, die du brauchst? Wähl aus.\n\nWo findest du die benötigten Informationen?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "www.urlaub-in-de.de",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "www.reisehilfe.com",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107946"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-13.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text]\n[@id:107947]\n[%14]\n[!Du bist in einem Restaurant und möchtest bestellen. Wähl den richtigen Artikel.]\nWähl richtig aus.\n\nIch hätte gerne [-ein][+eine][-einen] Tomatensuppe\nund [+ein][-eine][-einen] Wiener Schnitzel.\nUnd zum Trinken nehme ich [-ein][-eine][+einen] Apfelsaft.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "Wähl richtig aus.\n\nIch hätte gerne {0} Tomatensuppe\nund {1} Wiener Schnitzel.\nUnd zum Trinken nehme ich {2} Apfelsaft.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ein",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "eine",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "einen",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ein",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "eine",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "einen",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "ein",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "eine",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "einen",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "107947"
+      ],
+      "item": "14",
+      "instruction": "Du bist in einem Restaurant und möchtest bestellen. Wähl den richtigen Artikel."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1&audio]\n[@id:107948]\n[%15]\n[&audio:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_15_dwdownload.mp3]\n[!Du bist am Hauptbahnhof in Frankfurt am Main. Du möchtest mit dem Zug um 13.30 Uhr nach Brüssel fahren. Von welchem\nGleis fährt der Zug ab? Hör dir die Durchsage an und wähl die richtige Antwort.\n\nVon welchem Gleis fährt der Zug ab?]\n\n[-Gleis 6]\n[-Gleis 10]\n[+Gleis 16]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "15",
+      "instruction": "Du bist am Hauptbahnhof in Frankfurt am Main. Du möchtest mit dem Zug um 13.30 Uhr nach Brüssel fahren. Von welchem\nGleis fährt der Zug ab? Hör dir die Durchsage an und wähl die richtige Antwort.\n\nVon welchem Gleis fährt der Zug ab?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Gleis 6",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Gleis 10",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Gleis 16",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107948"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_15_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text&image]\n[@id:107949]\n[%16]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-16.png]\n[!Ein Bekannter von dir ist noch nicht lange in Deutschland. Du erklärst ihm wichtige Verkehrsschilder. Wähl das\nrichtige Modalverb zur Erklärung.]\n\nWähl das richtige Wort.\nA) Hier [+dürfen][-müssen] Sie nicht parken.\nB) Hier [+können][-müssen] Sie über die Straße gehen.\nC) Hier [-dürfen][+müssen] Sie warten.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "Wähl das richtige Wort.\nA) Hier {0} Sie nicht parken.\nB) Hier {1} Sie über die Straße gehen.\nC) Hier {2} Sie warten.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "dürfen",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "müssen",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "können",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "müssen",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "dürfen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "müssen",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "107949"
+      ],
+      "item": "16",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-16.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "instruction": "Ein Bekannter von dir ist noch nicht lange in Deutschland. Du erklärst ihm wichtige Verkehrsschilder. Wähl das\nrichtige Modalverb zur Erklärung."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text]\n[@id:107950]\n[%17]\n\n[!Du bist in der Sprachschule und sprichst mit deiner Lehrerin im Café. Deine Lehrerin sagt einige Sätze. Wie antwortest\ndu deiner Lehrerin? Wähl aus.]\n\n\"Ich kann leider nicht zur Feier gehen. Ich habe keine Zeit.\"\n[-\"Hoffentlich!\"][-\"Ja, gerne.\"][+\"Schade.\"]\n\n\"Möchten Sie noch eine Tasse Kaffee?\"\n[-\"Hoffentlich!\"][+\"Ja, gerne.\"][-\"Schade.\"]\n\n\"Morgen ist das Wetter besser als heute.\"\n[+\"Hoffentlich!\"][-\"Ja, gerne.\"][-\"Schade.\"]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "\"Ich kann leider nicht zur Feier gehen. Ich habe keine Zeit.\"\n{0}\n\n\"Möchten Sie noch eine Tasse Kaffee?\"\n{1}\n\n\"Morgen ist das Wetter besser als heute.\"\n{2}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "\"Hoffentlich!\"",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "\"Ja, gerne.\"",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "\"Schade.\"",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "\"Hoffentlich!\"",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "\"Ja, gerne.\"",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "\"Schade.\"",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "\"Hoffentlich!\"",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "\"Ja, gerne.\"",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "\"Schade.\"",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "107950"
+      ],
+      "item": "17",
+      "instruction": "Du bist in der Sprachschule und sprichst mit deiner Lehrerin im Café. Deine Lehrerin sagt einige Sätze. Wie antwortest\ndu deiner Lehrerin? Wähl aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice&audio]\n[@id:107951]\n[%18]\n[&audio:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_18_dwdownload.mp3]\n[!Du bist am Flughafen in München und wartest auf deinen Flug nach Hamburg. Du hörst eine Durchsage für deinen Flug LH\n782 nach Hamburg. Was sollst du machen? Wähl die richtige Antwort.]\n[-Geh zum Informationsschalter.]\n[+Geh zum Flugsteig.]\n[-Warte auf weitere Informationen.]",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "18",
+      "instruction": "Du bist am Flughafen in München und wartest auf deinen Flug nach Hamburg. Du hörst eine Durchsage für deinen Flug LH\n782 nach Hamburg. Was sollst du machen? Wähl die richtige Antwort.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Geh zum Informationsschalter.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Geh zum Flugsteig.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Warte auf weitere Informationen.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "107951"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_18_dwdownload.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text]\n[@id:107952]\n[%19]\n[!Du hast deine Geldbörse verloren und rufst das Fundbüro an. Wähl die richtige Form.]\nWähl das richtige Wort aus.\nKönnen Sie [-mich][+mir] helfen?\nIch habe [+mein][-meine][-meinen] Portemonnaie verloren.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "Wähl das richtige Wort aus.\nKönnen Sie {0} helfen?\nIch habe {1} Portemonnaie verloren.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mich",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mir",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mein",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "meine",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "meinen",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "107952"
+      ],
+      "item": "19",
+      "instruction": "Du hast deine Geldbörse verloren und rufst das Fundbüro an. Wähl die richtige Form."
+    }
+  },
+  {
+    "bitmark": "[.cloze&audio]\n[@id:107953]\n[%20.1]\n[&audio:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_20a_dwdownload.mp3]\n[!Du hast zwei Nachrichten auf deiner Mailbox. Schreib die fehlenden Informationen in die Kästchen.\nWie lautet die Nachricht auf deiner Mailbox?]\nNachricht 1: neues Treffen um [_20] Uhr",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Nachricht 1: neues Treffen um {0} Uhr",
+      "item": "20.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107953"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_20a_dwdownload.mp3"
+        }
+      },
+      "instruction": "Du hast zwei Nachrichten auf deiner Mailbox. Schreib die fehlenden Informationen in die Kästchen.\nWie lautet die Nachricht auf deiner Mailbox?",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "20"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze&audio]\n[@id:107954]\n[%20.2]\n[&audio:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_20b_dwdownload.mp3]\n[!Du hast zwei Nachrichten auf deiner Mailbox. Schreib die fehlenden Informationen in die Kästchen.\nWie lautet die Nachricht auf deiner Mailbox?]\nNachricht 2: Flug für [_453] Euro",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Nachricht 2: Flug für {0} Euro",
+      "item": "20.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107954"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_20b_dwdownload.mp3"
+        }
+      },
+      "instruction": "Du hast zwei Nachrichten auf deiner Mailbox. Schreib die fehlenden Informationen in die Kästchen.\nWie lautet die Nachricht auf deiner Mailbox?",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "453"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice&image]\n[@id:107955]\n[%21]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-21.png]\n[!Du bekommst eine E-Mail von deinem Freund Detlef. Warum hat Detlef dir eine E-Mail geschickt? Lies die E-Mail und wähl\ndie richtige Antwort.]\n[-Er möchte dich einladen.]\n[-Er möchte dir danken.]\n[+Er möchte dir Grüße schicken.]",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "21",
+      "instruction": "Du bekommst eine E-Mail von deinem Freund Detlef. Warum hat Detlef dir eine E-Mail geschickt? Lies die E-Mail und wähl\ndie richtige Antwort.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Er möchte dich einladen.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Er möchte dir danken.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Er möchte dir Grüße schicken.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "107955"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-21.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice]\n[@id:107956]\n[%22]\n[!Du willst deine Freundin Julia anrufen. Du rufst an und ein Mann antwortet. Was sagst du? Wähl die beste Antwort.]\n[-Hallo, Julia.]\n[+Hallo, ist Julia da?]\n[-Moment bitte.]",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "22",
+      "instruction": "Du willst deine Freundin Julia anrufen. Du rufst an und ein Mann antwortet. Was sagst du? Wähl die beste Antwort.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Hallo, Julia.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Hallo, ist Julia da?",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Moment bitte.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "107956"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text]\n[@id:107957]\n[%23]\n[!Du und dein Freund Nico fahren nächstes Wochenende nach Berlin. Deine Deutschlehrerin fragt, wie du und Nico nach\nBerlin fahren. Wähl das richtige Wort.]\nIch fahre [-auf][+mit][-bei] [-dem][-die][+der] Bahn.\nNico fährt [+mit][-in][-durch] [-der][-das][+dem] Auto.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "Ich fahre {0} {1} Bahn.\nNico fährt {2} {3} Auto.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "auf",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mit",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "bei",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "dem",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "die",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mit",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "in",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "durch",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "der",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "das",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "dem",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "107957"
+      ],
+      "item": "23",
+      "instruction": "Du und dein Freund Nico fahren nächstes Wochenende nach Berlin. Deine Deutschlehrerin fragt, wie du und Nico nach\nBerlin fahren. Wähl das richtige Wort."
+    }
+  },
+  {
+    "bitmark": "[.assignment]\n[@id:107958]\n[%24]\n[!Du sprichst mit einer Bekannten über Probleme, die du manchmal hast, wenn du Deutsch sprichst. Wähl die richtige\nAntwort aus.]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "24",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107958"
+      ],
+      "instruction": "Du sprichst mit einer Bekannten über Probleme, die du manchmal hast, wenn du Deutsch sprichst. Wähl die richtige\nAntwort aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:107959]\n[%24.1]\n[!Dir fällt ein Wort nicht ein. ]\n\n[-\"Bitte buchstabieren Sie das.\"][+\"Wie sagt man das auf Deutsch?\"][-\"Stimmt das?\"]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "24.1",
+      "instruction": "Dir fällt ein Wort nicht ein.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "\"Bitte buchstabieren Sie das.\"",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "\"Wie sagt man das auf Deutsch?\"",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "\"Stimmt das?\"",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107959"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:107960]\n[%24.2]\n[!Du denkst, dass du einen Fehler gemacht hast.]\n\n[-\"Bitte buchstabieren Sie das.\"]\n[-\"Wie sagt man das auf Deutsch?\"]\n[+\"Ist das richtig?\"]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "24.2",
+      "instruction": "Du denkst, dass du einen Fehler gemacht hast.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "\"Bitte buchstabieren Sie das.\"",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "\"Wie sagt man das auf Deutsch?\"",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "\"Ist das richtig?\"",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107960"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:107961]\n[%24.3]\n[!Du möchtest wissen, wie das Wort geschrieben wird.]\n\n[+\"Bitte buchstabieren Sie das.\"]\n[-\"Können Sie das wiederholen?\"]\n[-\"Ist das richtig?\"]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "24.3",
+      "instruction": "Du möchtest wissen, wie das Wort geschrieben wird.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "\"Bitte buchstabieren Sie das.\"",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "\"Können Sie das wiederholen?\"",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "\"Ist das richtig?\"",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107961"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1&audio&image]\n[@id:107962]\n[! Du bist in Düsseldorf und suchst die Polizeiwache. Du fragst einen Passanten. Schau dir den Stadtplan an. Hör dir\ndann den Dialog an. Welches der drei Gebäude A, B oder C ist die Polizeiwache?]\n[%25]\n[&audio:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_25_dwdownload.mp3]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-25.png]\n[+Gebäude A]\n[-Gebäude B]\n[-Gebäude C]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "25",
+      "instruction": "Du bist in Düsseldorf und suchst die Polizeiwache. Du fragst einen Passanten. Schau dir den Stadtplan an. Hör dir\ndann den Dialog an. Welches der drei Gebäude A, B oder C ist die Polizeiwache?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Gebäude A",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Gebäude B",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Gebäude C",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107962"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-25.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_25_dwdownload.mp3"
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.sequence]\n[@id:107963]\n[%26]\n[!Ein Freund besucht dich in München. Du möchtest wissen, wann sein Zug in München ankommt. Wähl die Wörter in der\nrichtigen Reihenfolge aus, um die Frage zu formulieren.]\n---\nWann\n---\nkommt\n---\ndein\n---\nZug\n---\nan\n---\n?\n---",
+    "bit": {
+      "type": "sequence",
+      "format": "bitmark--",
+      "instruction": "Ein Freund besucht dich in München. Du möchtest wissen, wann sein Zug in München ankommt. Wähl die Wörter in der\nrichtigen Reihenfolge aus, um die Frage zu formulieren.",
+      "body": "WannkommtdeinZugan?",
+      "elements": [],
+      "item": "26",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107963"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 5,
+        "column": 56,
+        "errorLine": "richtigen Reihenfolge aus, um die Frage zu formulieren.]"
+      },
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 7,
+        "column": 4,
+        "errorLine": "Wann"
+      },
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 9,
+        "column": 5,
+        "errorLine": "kommt"
+      },
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 11,
+        "column": 4,
+        "errorLine": "dein"
+      },
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 13,
+        "column": 3,
+        "errorLine": "Zug"
+      },
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 15,
+        "column": 2,
+        "errorLine": "an"
+      },
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 17,
+        "column": 1,
+        "errorLine": "?"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.multiple-choice-text&image]\n[@id:107964]\n[%27]\n[!Du bist in einem Kaufhaus und möchtest folgende Artikel kaufen. Wo findest du die Gegenstände?]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-27.png]\nWörterbuch: [+1. Etage][-2. Etage]\nPullover: [-1. Etage][+2. Etage]\nMineralwasser: [+Erdgeschoss][-2. Etage]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "Wörterbuch: {0}\nPullover: {1}\nMineralwasser: {2}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1. Etage",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "2. Etage",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1. Etage",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "2. Etage",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Erdgeschoss",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "2. Etage",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "107964"
+      ],
+      "item": "27",
+      "instruction": "Du bist in einem Kaufhaus und möchtest folgende Artikel kaufen. Wo findest du die Gegenstände?",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-27.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:107965]\n[%28]\n[!Dein Bekannter George Harvey bittet dich, ihm beim Ausfüllen einer Online-Anmeldung für einen Sprachkurs zu helfen.\nLies den Text und wähl die richtigen Wörter.]\n\nGeorge kann kein Deutsch und möchte im Sommer zwei Wochen lang einen Sprachkurs in Deutschland machen. Während des\nKurses möchte er bei einer Familie wohnen. Er möchte gerne in einer Kleingruppe Deutsch lernen.\n\nPRIMA-Sprachschule, Berliner Straße 56, 40234 Düsseldorf\nAnmeldung zum Sprachkurs\nName, Vorname: Harvey, George\nAnschrift: 25 Fleet Street, Leeds, LS15 2GH, United Kingdom\n\nTermin: [-April][+Juni][-Oktober]\nDauer: [-8 Tage][+14 Tage][-1 Monat]\nKursstufe: [+Anfängerstufe][-Mittelstufe][-Abschlussstufe]\nKurs: [-Einzelunterricht][+Gruppe mit 4–6 Personen][-Gruppe mit 10–12 Personen]\nUnterkunft: [-Hotel][+Privat]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "George kann kein Deutsch und möchte im Sommer zwei Wochen lang einen Sprachkurs in Deutschland machen. Während des\nKurses möchte er bei einer Familie wohnen. Er möchte gerne in einer Kleingruppe Deutsch lernen.\n\nPRIMA-Sprachschule, Berliner Straße 56, 40234 Düsseldorf\nAnmeldung zum Sprachkurs\nName, Vorname: Harvey, George\nAnschrift: 25 Fleet Street, Leeds, LS15 2GH, United Kingdom\n\nTermin: {0}\nDauer: {1}\nKursstufe: {2}\nKurs: {3}\nUnterkunft: {4}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "April",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Juni",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Oktober",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "8 Tage",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "14 Tage",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "1 Monat",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Anfängerstufe",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Mittelstufe",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Abschlussstufe",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Einzelunterricht",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Gruppe mit 4–6 Personen",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Gruppe mit 10–12 Personen",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Hotel",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Privat",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "107965"
+      ],
+      "item": "28",
+      "instruction": "Dein Bekannter George Harvey bittet dich, ihm beim Ausfüllen einer Online-Anmeldung für einen Sprachkurs zu helfen.\nLies den Text und wähl die richtigen Wörter."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text&image]\n[@id:107966]\n[%29]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-29.png]\n[!Am Ende deines Deutschkurses möchte deine Lehrerin eine kleine Feier organisieren. Sind die folgenden Sätze richtig?\nWähl Ja oder Nein.]\n\nDie Feier ist in der Schule.[-Ja][+Nein]\nSie müssen Ihrer Lehrerin eine E-Mail schicken.[+Ja][-Nein]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "Die Feier ist in der Schule.{0}\nSie müssen Ihrer Lehrerin eine E-Mail schicken.{1}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Ja",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Nein",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Ja",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Nein",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "107966"
+      ],
+      "item": "29",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-29.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "instruction": "Am Ende deines Deutschkurses möchte deine Lehrerin eine kleine Feier organisieren. Sind die folgenden Sätze richtig?\nWähl Ja oder Nein."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:107967]\n[%30]\n[!Am Ende deines A1-Kurses gibt es einen Test. Alle Schüler deiner Klasse bestehen den Test. Was sagt ihr zueinander,\nwenn ihr hört, dass alle bestanden haben?]\n\nWähl die richtige Antwort.\n\n[+Herzlichen Glückwunsch!]\n[-Alles Gute!]\n[-Ja, gern!]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "30",
+      "instruction": "Am Ende deines A1-Kurses gibt es einen Test. Alle Schüler deiner Klasse bestehen den Test. Was sagt ihr zueinander,\nwenn ihr hört, dass alle bestanden haben?",
+      "body": "Wähl die richtige Antwort.",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Herzlichen Glückwunsch!",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Alles Gute!",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ja, gern!",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107967"
+      ]
+    }
+  }
+]

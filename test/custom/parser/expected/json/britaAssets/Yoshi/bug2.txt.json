@@ -1,0 +1,78 @@
+[
+  {
+    "bitmark": "[.interview:bitmark++&image]\n[%A4a]\n[!Textarbeit]\n\n==bitmark Website==\n@src2x:http://cdn.bitbook.education/images/cat3_big_image.jpg\n==\n\n===\n1. Nennen Sie einige wichtige Risikofaktoren, die Krankheiten auslösen können.[@shortAnswer]\n===\n2. Was sind Zivilisationskrankheiten? Nennen Sie Beispiele.[@shortAnswer]\n===\n3. Lassen sich Zivilisationskrankheiten vermeiden? Wenn ja, wie?[@shortAnswer]\n===\n4. Was wird über das Körpergewicht der Deutschen im Text gesagt?[@shortAnswer]\n===\n5. Bewegen sich die deutschen Erwachsenen genug?[@shortAnswer]\n===\n\n==bitmark Website==\n(:https://www.bitbook.education)\n==",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark++",
+      "item": "A4a",
+      "instruction": "Textarbeit",
+      "body": "==bitmark Website==\n@src2x:http://cdn.bitbook.education/images/cat3_big_image.jpg\n==",
+      "footer": "==bitmark Website==\n(:https://www.bitbook.education)\n==",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "1. Nennen Sie einige wichtige Risikofaktoren, die Krankheiten auslösen können.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "2. Was sind Zivilisationskrankheiten? Nennen Sie Beispiele.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "3. Lassen sich Zivilisationskrankheiten vermeiden? Wenn ja, wie?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "4. Was wird über das Körpergewicht der Deutschen im Text gesagt?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "5. Bewegen sich die deutschen Erwachsenen genug?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Missing resource(s) for &image",
+        "line": 0,
+        "column": 0
+      }
+    ]
+  }
+]

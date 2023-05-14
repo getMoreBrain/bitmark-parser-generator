@@ -1,0 +1,692 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:232204]\n[#English 1]\n[@language:en]\n[@coverImage:https://docs.bitmark.cloud/bit-books/card2brain/business_english/web-resources/images/card2brain_businessenglish_cover.png]\n[@externalId:e-english-1_5snxjdxte-hc]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232204"
+      ],
+      "title": "English 1",
+      "language": [
+        "en"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/card2brain/business_english/web-resources/images/card2brain_businessenglish_cover.png"
+      ],
+      "externalId": [
+        "e-english-1_5snxjdxte-hc"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:232205]\n[#Business English 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "232205"
+      ],
+      "title": "Business English 1"
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232206]\nBedingungen\n==\nProvisions",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Bedingungen\n==\nProvisions",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232206"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232207]\nFest gebunden\n==\nTied up",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Fest gebunden\n==\nTied up",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232207"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232208]\nProblem lösen\n==\nwork out",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Problem lösen\n==\nwork out",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232208"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232209]\nein Problem im Weg\n==\nObstacle",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "ein Problem im Weg\n==\nObstacle",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232209"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232210]\netwas unternehmen was negative folgen haben könnte\n==\nSet yourself up",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "etwas unternehmen was negative folgen haben könnte\n==\nSet yourself up",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232210"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232211]\nbevorzugen\n==\nopt",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "bevorzugen\n==\nopt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232211"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232212]\nMuster\n==\npattern",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Muster\n==\npattern",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232212"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232213]\nzentraler Punkt\n==\nthe key",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "zentraler Punkt\n==\nthe key",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232213"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232214]\nschaden begrenzen\n==\ncut the losses",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "schaden begrenzen\n==\ncut the losses",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232214"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232215]\nsich starr festlegen\n==\nstick with",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "sich starr festlegen\n==\nstick with",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232215"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232216]\nproblem haben\n==\nbe in a bind",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "problem haben\n==\nbe in a bind",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232216"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232217]\nBesitz\n==\npossession",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Besitz\n==\npossession",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232217"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232218]\nzu den Besten gehörend\n==\ntop-tier",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "zu den Besten gehörend\n==\ntop-tier",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232218"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232219]\nsehr bekannter namen\n==\nhousehold name",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "sehr bekannter namen\n==\nhousehold name",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232219"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232220]\netwas auf's Spiel setzten\n==\njeopardize",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "etwas auf's Spiel setzten\n==\njeopardize",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232220"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232221]\nstabil, kontinuierlich\n==\nsteady",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "stabil, kontinuierlich\n==\nsteady",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232221"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232222]\nerneuern\n==\nfreshen up",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "erneuern\n==\nfreshen up",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232222"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232223]\neine besondere Bedeutung beimessen\n==\nemphasize",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "eine besondere Bedeutung beimessen\n==\nemphasize",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232223"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232224]\nwichtigste zusammenfassen\n==\noutline",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "wichtigste zusammenfassen\n==\noutline",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232224"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232225]\nvorteilhaft\n==\nfavorable",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "vorteilhaft\n==\nfavorable",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232225"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232226]\nerwerben\n==\nacquire",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "erwerben\n==\nacquire",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232226"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232227]\nausgereift, völlig entwickelt\n==\nmature",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "ausgereift, völlig entwickelt\n==\nmature",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232227"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232228]\nkleiner werden\n==\nshrink",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "kleiner werden\n==\nshrink",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232228"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232229]\nkleinen/grossen Gewinn erzielen\n==\nlow/high return",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "kleinen/grossen Gewinn erzielen\n==\nlow/high return",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232229"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232230]\nreduzieren\n==\ncut back",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "reduzieren\n==\ncut back",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232230"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232231]\nreduzieren\n==\ncut back\n||the same entry twice||",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "reduzieren\n==\ncut back",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232231"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232232]\ndas negative Ergebnis einer Handlung\n==\ndownside",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "das negative Ergebnis einer Handlung\n==\ndownside",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232232"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232233]\nbei dem tempo\n==\nat this rate",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "bei dem tempo\n==\nat this rate",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232233"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232234]\nkultiviert, hochentwickelt\n==\nsophisticated",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "kultiviert, hochentwickelt\n==\nsophisticated",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232234"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232235]\nmarken loyalität\n==\nbrand loyality",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "marken loyalität\n==\nbrand loyality",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232235"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232236]\nnachhacken\n==\nfollow up on",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "nachhacken\n==\nfollow up on",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232236"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232237]\nMarktforschungsgruppe\n==\nfocus group",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Marktforschungsgruppe\n==\nfocus group",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232237"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232238]\ngrundlich\n==\nthorough",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "grundlich\n==\nthorough",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232238"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232239]\nfremdfinanzieren\n==\nleverage",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "fremdfinanzieren\n==\nleverage",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232239"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232240]\nMarkenwert\n==\nbrand-equity",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Markenwert\n==\nbrand-equity",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232240"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232241]\nzögernd\n==\nhesitant",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "zögernd\n==\nhesitant",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232241"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232242]\nverschrotten\n==\nscrap",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "verschrotten\n==\nscrap",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232242"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232243]\npreisempfindlich\n==\nprice sensitive",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "preisempfindlich\n==\nprice sensitive",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232243"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232244]\nHauptgang\n==\nentree",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptgang\n==\nentree",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232244"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232245]\naufgeben\n==\npass up",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "aufgeben\n==\npass up",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232245"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232246]\nbeleidigen\n==\noffend",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "beleidigen\n==\noffend",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232246"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232247]\nrechnung für andere bezahlen\n==\npick up the tab",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "rechnung für andere bezahlen\n==\npick up the tab",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232247"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232248]\neinladen und bezahlen\n==\ntreat",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "einladen und bezahlen\n==\ntreat",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232248"
+      ]
+    }
+  }
+]

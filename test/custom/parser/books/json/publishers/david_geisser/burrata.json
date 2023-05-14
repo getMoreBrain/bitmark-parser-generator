@@ -1,0 +1,127 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:299099]\n[@externalId:e-burrata-mit-sautierten-artisch_xim01xatgvhk]\n[@publisher:david_geisser]\n[@theme:einkaufsliste]\n[@language:de]\n[@coverImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/cover_dg_menu1.png]\n[#Burrata mit sautierten Artischockenböden, Rucolapesto und frischem Rucola]\n[##Einkaufsliste]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299099"
+      ],
+      "externalId": [
+        "e-burrata-mit-sautierten-artisch_xim01xatgvhk"
+      ],
+      "publisher": [
+        "david_geisser"
+      ],
+      "theme": [
+        "einkaufsliste"
+      ],
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/cover_dg_menu1.png"
+      ],
+      "title": "Burrata mit sautierten Artischockenböden, Rucolapesto und frischem Rucola",
+      "subtitle": "Einkaufsliste"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:300350]\n[▼ch-1]\n[#Rucolapesto]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "300350"
+      ],
+      "anchor": "ch-1",
+      "title": "Rucolapesto"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299100]\n•- 1 Stk Knoblauchzehen\n•- 1 Prise Salz\n•- 180 ml Olivenöl, kalt gepresst\n•- 50 g Parmesan, frisch\n•- 1 Pfeffer aus der Mühle\n•- 40 g Pinienkerne\n•- 1 Zitrone\n•- 150 g Rucola",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- 1 Stk Knoblauchzehen\n•- 1 Prise Salz\n•- 180 ml Olivenöl, kalt gepresst\n•- 50 g Parmesan, frisch\n•- 1 Pfeffer aus der Mühle\n•- 40 g Pinienkerne\n•- 1 Zitrone\n•- 150 g Rucola",
+      "id": [
+        "299100"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:300351]\n[▼ch-2]\n[#Artischockenragout]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "300351"
+      ],
+      "anchor": "ch-2",
+      "title": "Artischockenragout"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299101]\n•- 4 grosse Artischocken (oder 400 g Artischockenböden)\n•- 3 Zitronen (2 für das Zitronenwasser, 1 für das Rezept)\n•- 1 Schalotte\n•- 1 Knoblauchzehe\n•- 3 El Olivenöl\n•- 50 ml Weisswein, trocken\n•- 50 ml Geflügelfond\n•- Salz\n•- 10 g Pinienkerne\n•- 40 g getrocknete Tomaten",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- 4 grosse Artischocken (oder 400 g Artischockenböden)\n•- 3 Zitronen (2 für das Zitronenwasser, 1 für das Rezept)\n•- 1 Schalotte\n•- 1 Knoblauchzehe\n•- 3 El Olivenöl\n•- 50 ml Weisswein, trocken\n•- 50 ml Geflügelfond\n•- Salz\n•- 10 g Pinienkerne\n•- 40 g getrocknete Tomaten",
+      "id": [
+        "299101"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:300352]\n[▼ch-3]\n[#Fertigstellung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "300352"
+      ],
+      "anchor": "ch-3",
+      "title": "Fertigstellung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299102]\n•- 4 Burrate\n•- 200 g Rucola\n•- Kaltgepresstes Olivenöl zum marinieren\n•- Etwas Aceto Balsamico\n•- Salz\n•- Pfeffer aus der Mühle",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- 4 Burrate\n•- 200 g Rucola\n•- Kaltgepresstes Olivenöl zum marinieren\n•- Etwas Aceto Balsamico\n•- Salz\n•- Pfeffer aus der Mühle",
+      "id": [
+        "299102"
+      ]
+    }
+  }
+]

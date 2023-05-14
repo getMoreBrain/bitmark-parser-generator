@@ -1,0 +1,1641 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:304418]\n[@externalId:e-k-2-tag-1_szl-fbpnhxoh]\n[@language:de]\n[#üK 2 Tag 1]\n[##Rezepturen der Gerichte und Komponenten des üK Programmes]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304418"
+      ],
+      "externalId": [
+        "e-k-2-tag-1_szl-fbpnhxoh"
+      ],
+      "language": [
+        "de"
+      ],
+      "title": "üK 2 Tag 1",
+      "subtitle": "Rezepturen der Gerichte und Komponenten des üK Programmes"
+    }
+  },
+  {
+    "bitmark": "[.image]\n[@id:304419]\n[&image:https://docs.bitmark.cloud/bit-books/uk_rezepte/uk_rezepte_1/web-resources/images/uk_rezepte1_1.png][@width:200]",
+    "bit": {
+      "type": "image",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304419"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/uk_rezepte/uk_rezepte_1/web-resources/images/uk_rezepte1_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "200",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304420]\n[▼ch-1]\n[#Weisse-Bohnen-Suppe \nPotage aux haricots blancs]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304420"
+      ],
+      "anchor": "ch-1",
+      "title": "Weisse-Bohnen-Suppe \nPotage aux haricots blancs"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304421]\nAnzahl 1 Liter\nAutor Carlos Egli\nQuelle Pauli\nGruppe 2.1 Suppen und Kaltschalen",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 1 Liter\nAutor Carlos Egli\nQuelle Pauli\nGruppe 2.1 Suppen und Kaltschalen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304421"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304422]\n[%][%Zutaten]\n•- Butter 12.00 g\n•- Zwiebeln , geschält 32.00 g\n•- Lauch, gebleicht, gerüstet 32.00 g\n•- Knollensellerie, geschält 16.00 g\n•- Karotten, geschält 16.00 g\n•- Bohnen, weiss getrocknet 120.00 g\n•- Speckschwarten 20.00 g\n•- Kartoffeln , Typ C , gesch‰lt 100.00 g\n•- Weisswein 80.00 g\n•- Bouillon 1.00 Liter\n•- Salz, Pfeffer, weiss aus der Mühle 1.00 x\n•- Vollrahm 35% 60.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Butter 12.00 g\n•- Zwiebeln , geschält 32.00 g\n•- Lauch, gebleicht, gerüstet 32.00 g\n•- Knollensellerie, geschält 16.00 g\n•- Karotten, geschält 16.00 g\n•- Bohnen, weiss getrocknet 120.00 g\n•- Speckschwarten 20.00 g\n•- Kartoffeln , Typ C , gesch‰lt 100.00 g\n•- Weisswein 80.00 g\n•- Bouillon 1.00 Liter\n•- Salz, Pfeffer, weiss aus der Mühle 1.00 x\n•- Vollrahm 35% 60.00 g",
+      "id": [
+        "304422"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304423]\n[%][%Einlage]\n•- Englischbrot, entrindet 40.00 g\n•- Butter 12.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Englischbrot, entrindet 40.00 g\n•- Butter 12.00 g",
+      "id": [
+        "304423"
+      ],
+      "lead": "Einlage"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304424]\n[%][%Vorbereitung]\n• Bohnen 4 Stunden in kaltem Wasser quellen lassen und abschütten. \n• Lauch längs halbieren und waschen.\n• Gemüse in Matignon schneiden.\n• Kartoffeln in kleine Würfel schneiden.\n• Speckschwarten mit Bindfaden zusammenbinden.\n• Bouillon aufkochen.\n• Englischbrot in kleine Würfel (Croûtons) schneiden und in Butter goldgelb rösten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Bohnen 4 Stunden in kaltem Wasser quellen lassen und abschütten. \n• Lauch längs halbieren und waschen.\n• Gemüse in Matignon schneiden.\n• Kartoffeln in kleine Würfel schneiden.\n• Speckschwarten mit Bindfaden zusammenbinden.\n• Bouillon aufkochen.\n• Englischbrot in kleine Würfel (Croûtons) schneiden und in Butter goldgelb rösten.",
+      "id": [
+        "304424"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304425]\n[%][%Zubereitung]\n• Matignon in Butter dünsten.\n• Weiße Bohnen beigeben und mitdünsten.\n• Kartoffelwürfel und Speckschwarten beigeben.\n• Mit Weißwein ablöschen und mit heißer Bouillon auffüllen.\n• Zum Siedepunkt bringen.\n• Mit Salz und Pfeffer würzen, des Öfteren abschäumen.\n• 2 Stunden sieden, anschließend Speckschwarten herausnehmen. \n• Suppe pürieren und durch ein Spitzsieb passieren.\n• Nochmals aufkochen, mit Vollrahm verfeinern und abschmecken. \n• Anrichten und die Brotcroûtons separat dazu servieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Matignon in Butter dünsten.\n• Weiße Bohnen beigeben und mitdünsten.\n• Kartoffelwürfel und Speckschwarten beigeben.\n• Mit Weißwein ablöschen und mit heißer Bouillon auffüllen.\n• Zum Siedepunkt bringen.\n• Mit Salz und Pfeffer würzen, des Öfteren abschäumen.\n• 2 Stunden sieden, anschließend Speckschwarten herausnehmen. \n• Suppe pürieren und durch ein Spitzsieb passieren.\n• Nochmals aufkochen, mit Vollrahm verfeinern und abschmecken. \n• Anrichten und die Brotcroûtons separat dazu servieren.",
+      "id": [
+        "304425"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304426]\n[▼ch-2]\n[#Pollo a la chilindrón \nPollo a la chilindrón]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304426"
+      ],
+      "anchor": "ch-2",
+      "title": "Pollo a la chilindrón \nPollo a la chilindrón"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304427]\nAnzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 6.1 Fleischgerichte, Geflügelgerichte, Wildgerichte",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 6.1 Fleischgerichte, Geflügelgerichte, Wildgerichte",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304427"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304428]\n[%][%Zutaten]\n•- Poulet, frisch, pfannenfertig 1'400.00 g\n•- Gewürzsalzmischung für Geflügel 8.00 g\n•- Olivenöl Extra Vergine 40.00 g\n•- Zwiebeln, geschält 80.00 g\n•- Peperoncini, rot, frisch 12.00 g\n•- Knoblauch, geschält 8.00 g\n•- Tomaten, geschält, entkernt 360.00 g\n•- Rohschinken 40.00 g\n•- Oliven, grün, entsteint 40.00 g\n•- Salz, Pfeffer, scwarz aus der Mühle 1.00 x",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Poulet, frisch, pfannenfertig 1'400.00 g\n•- Gewürzsalzmischung für Geflügel 8.00 g\n•- Olivenöl Extra Vergine 40.00 g\n•- Zwiebeln, geschält 80.00 g\n•- Peperoncini, rot, frisch 12.00 g\n•- Knoblauch, geschält 8.00 g\n•- Tomaten, geschält, entkernt 360.00 g\n•- Rohschinken 40.00 g\n•- Oliven, grün, entsteint 40.00 g\n•- Salz, Pfeffer, scwarz aus der Mühle 1.00 x",
+      "id": [
+        "304428"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304429]\n[%][%Vorbereitung]\n• Die Poulets wie für Sauté in 8 Stücke zerlegen.\n• Die Zwiebeln emincieren (in Streifen schneiden). \n• Peperoncini in feine Streifen schneiden.\n• Knoblauch fein hacken.\n• Tomaten in 1 cm große Würfel schneiden.\n• Rohschinken in 5 mm große Würfel schneiden.\n• Die Oliven halbieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Die Poulets wie für Sauté in 8 Stücke zerlegen.\n• Die Zwiebeln emincieren (in Streifen schneiden). \n• Peperoncini in feine Streifen schneiden.\n• Knoblauch fein hacken.\n• Tomaten in 1 cm große Würfel schneiden.\n• Rohschinken in 5 mm große Würfel schneiden.\n• Die Oliven halbieren.",
+      "id": [
+        "304429"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304430]\n[%][%Zubereitung]\n• Die Pouletstücke würzen, im Olivenöl zu ¾ fertig sautieren und herausnehmen.\n• Zwiebeln, Peperoncini und Knoblauch im restlichen Öl leicht ansautieren.\n• Die Tomatenwürfel und die Pouletstücke beigeben und weich dünsten.\n• Kurz vor Ende der Kochzeit die Rohschinkenwürfel und die Oliven zufügen und abschmecken. \n• Die Pouletstücke anrichten und die Sauce und die Garnitur darüber verteilen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Die Pouletstücke würzen, im Olivenöl zu ¾ fertig sautieren und herausnehmen.\n• Zwiebeln, Peperoncini und Knoblauch im restlichen Öl leicht ansautieren.\n• Die Tomatenwürfel und die Pouletstücke beigeben und weich dünsten.\n• Kurz vor Ende der Kochzeit die Rohschinkenwürfel und die Oliven zufügen und abschmecken. \n• Die Pouletstücke anrichten und die Sauce und die Garnitur darüber verteilen.",
+      "id": [
+        "304430"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304431]\n[%][%Hinweis für die Praxis]\n• Anstelle von Pouletst ̧cken kann das Gericht auch mit Pouletschenkeln zubereitet werden. Statt mit Poulet kann das Gericht auch mit Kaninchen zubereitet werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Anstelle von Pouletst ̧cken kann das Gericht auch mit Pouletschenkeln zubereitet werden. Statt mit Poulet kann das Gericht auch mit Kaninchen zubereitet werden.",
+      "id": [
+        "304431"
+      ],
+      "lead": "Hinweis für die Praxis"
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '̧'",
+        "line": 4,
+        "column": 24,
+        "errorLine": "• Anstelle von Pouletst ̧cken kann das Gericht auch mit Pouletschenkeln zubereitet werden. Statt mit Poulet kann das Gericht auch mit Kaninchen zubereitet werden."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304432]\n[▼ch-3]\n[#Duchesse-Kartoffeln \nPommes duchesse]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304432"
+      ],
+      "anchor": "ch-3",
+      "title": "Duchesse-Kartoffeln \nPommes duchesse"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304433]\nAnzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 5.2 Kartoffelgerichte",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 5.2 Kartoffelgerichte",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304433"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304434]\n[%][%Zutaten]\n•- Kartoffeln, Typ C, geschält 500.00 g\n•- Salz 4.00 g\n•- Eigelb, pasteurisiert 26.00 g\n•- Butter 10.00 g\n•- Salz 1.00 x\n•- Muskatnuss, gerieben 1.00 x\n•- Eigelb, pasteurisiert 8.00 g\n•- Milch 8.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Kartoffeln, Typ C, geschält 500.00 g\n•- Salz 4.00 g\n•- Eigelb, pasteurisiert 26.00 g\n•- Butter 10.00 g\n•- Salz 1.00 x\n•- Muskatnuss, gerieben 1.00 x\n•- Eigelb, pasteurisiert 8.00 g\n•- Milch 8.00 g",
+      "id": [
+        "304434"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304435]\n[%][%Vorbereitung]\n• Kartoffeln in gleichmäßig große Würfel schneiden. \n• Backblech mit Backtrennpapier auslegen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Kartoffeln in gleichmäßig große Würfel schneiden. \n• Backblech mit Backtrennpapier auslegen.",
+      "id": [
+        "304435"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304436]\n[%][%Zubereitung]\n• Kartoffelwürfel im Steamer garen.\n• Etwas ausdampfen lassen und pürieren.\n• Eigelb und Butter unter die Kartoffelmasse mischen und abschmecken.\n• Mit Dressiersack und Sterntülle Rosetten auf das Backblech dressieren und auskühlen lassen. \n• Mit Eigelb-Milch-Gemisch bestreichen und im heißen Backofen goldgelb backen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Kartoffelwürfel im Steamer garen.\n• Etwas ausdampfen lassen und pürieren.\n• Eigelb und Butter unter die Kartoffelmasse mischen und abschmecken.\n• Mit Dressiersack und Sterntülle Rosetten auf das Backblech dressieren und auskühlen lassen. \n• Mit Eigelb-Milch-Gemisch bestreichen und im heißen Backofen goldgelb backen.",
+      "id": [
+        "304436"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304437]\n[%][%Hinweis für die Praxis]\n• Mit der Duchesse-Masse können auch Kartoffelnestchen oder Bordüren gespritzt werden, die nach dem Backen mit einer beliebigen Füllung gefüllt werden können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Mit der Duchesse-Masse können auch Kartoffelnestchen oder Bordüren gespritzt werden, die nach dem Backen mit einer beliebigen Füllung gefüllt werden können.",
+      "id": [
+        "304437"
+      ],
+      "lead": "Hinweis für die Praxis"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304438]\n[▼ch-4]\n[#Geschmorter Lattich mit Gemüsen \nLaitue braisée aux légumes]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304438"
+      ],
+      "anchor": "ch-4",
+      "title": "Geschmorter Lattich mit Gemüsen \nLaitue braisée aux légumes"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304439]\nAnzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 5.1 Gemüse- und Pilzgerichte",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 5.1 Gemüse- und Pilzgerichte",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304439"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304440]\n[%][%Zutaten]\n•- Lattich, gerüstet 600.00 g\n•- Salz 4.00 g\n•- Butter\n•- Zwiebeln, geschält 20.00 g\n•- Karotten, geschält 20.00 g\n•- Pfälzer Rüben, geschält 20.00 g\n•- Knollensellerie, geschält 20.00 g\n•- Salz, Pfeffer, weiss aus der Mühle 1.00 x\n•- Gemüsefond 0.20 Liter",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Lattich, gerüstet 600.00 g\n•- Salz 4.00 g\n•- Butter\n•- Zwiebeln, geschält 20.00 g\n•- Karotten, geschält 20.00 g\n•- Pfälzer Rüben, geschält 20.00 g\n•- Knollensellerie, geschält 20.00 g\n•- Salz, Pfeffer, weiss aus der Mühle 1.00 x\n•- Gemüsefond 0.20 Liter",
+      "id": [
+        "304440"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304441]\n[%][%Vorbereitung]\n• Lattich gründlich waschen und am Stielansatz kreuzweise einschneiden.\n• Im Salzwasser blanchieren, im Eiswasser abkühlen und gut abtropfen lassen. \n• Zwiebeln hacken.\n• Gemüse in Jardinière (kleinwürfelig) schneiden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Lattich gründlich waschen und am Stielansatz kreuzweise einschneiden.\n• Im Salzwasser blanchieren, im Eiswasser abkühlen und gut abtropfen lassen. \n• Zwiebeln hacken.\n• Gemüse in Jardinière (kleinwürfelig) schneiden.",
+      "id": [
+        "304441"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304442]\n[%][%Zubereitung]\n• Butter in einem Schmorpfanne erhitzen, Zwiebeln und Gemüsejardiniere beigeben und dünsten. \n• Lattich nebeneinander einlegen und mit Salz und Pfeffer würzen.\n• Mit Gemüsefond ablöschen und zum Siedepunkt bringen.\n• Mit Silikonpapier abdecken und mit einem Deckel zudecken.\n• Im Ofen bei einer Temperatur von ca. 160°C weichschmoren.\n• Lattich herausnehmen und im Fond erkalten lassen.\n• Lattich der Länge nach halbieren, flachdrücken und den Strunk wegschneiden.\n• Gemüsewürfel und Schmorflüssigkeit in eine Sauteuse umleeren und einkochen. \n• Gemüse auf dem flachgedrückten Lattich verteilen.\n• Lattich dressieren (einschlagen) und portionieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Butter in einem Schmorpfanne erhitzen, Zwiebeln und Gemüsejardiniere beigeben und dünsten. \n• Lattich nebeneinander einlegen und mit Salz und Pfeffer würzen.\n• Mit Gemüsefond ablöschen und zum Siedepunkt bringen.\n• Mit Silikonpapier abdecken und mit einem Deckel zudecken.\n• Im Ofen bei einer Temperatur von ca. 160°C weichschmoren.\n• Lattich herausnehmen und im Fond erkalten lassen.\n• Lattich der Länge nach halbieren, flachdrücken und den Strunk wegschneiden.\n• Gemüsewürfel und Schmorflüssigkeit in eine Sauteuse umleeren und einkochen. \n• Gemüse auf dem flachgedrückten Lattich verteilen.\n• Lattich dressieren (einschlagen) und portionieren.",
+      "id": [
+        "304442"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304443]\n[%][%Hinweis für die Praxis]\n• Weil am Schluss die Schmorflüssikeit eingekocht wird, sollte der Gemüsefond und der Lattich nur leicht gesalzen werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Weil am Schluss die Schmorflüssikeit eingekocht wird, sollte der Gemüsefond und der Lattich nur leicht gesalzen werden.",
+      "id": [
+        "304443"
+      ],
+      "lead": "Hinweis für die Praxis"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304444]\n[▼ch-5]\n[#Bayerische Creme \nCrème bavaroise]\n[▼Ref_Bayerische]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304444"
+      ],
+      "anchor": "Ref_Bayerische",
+      "title": "Bayerische Creme \nCrème bavaroise"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304445]\nAnzahl 0.5 Kg.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 8.2 Cremen (Grundlagen für die Patisserie)",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 0.5 Kg.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 8.2 Cremen (Grundlagen für die Patisserie)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304445"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304446]\n[%][%Zutaten]\n•- Vollmilch 192.50 g\n•- Vanilleschote 0.50 Stk\n•- Salz 0.50 g\n•- Eigelb, pasteurisiert 40.00 g\n•- Zucker 67.50 g\n•- Gelatine 6.00 g\n•- Vollrahm 35% 192.50 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Vollmilch 192.50 g\n•- Vanilleschote 0.50 Stk\n•- Salz 0.50 g\n•- Eigelb, pasteurisiert 40.00 g\n•- Zucker 67.50 g\n•- Gelatine 6.00 g\n•- Vollrahm 35% 192.50 g",
+      "id": [
+        "304446"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304447]\n[%][%Vorbereitung]\n• Gelatine in kaltem Wasser quellen lassen.\n• Vollrahm zu 90% steif schlagen und kalt stellen.\n• Vanilleschote längs halbieren und Mark auskratzen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Gelatine in kaltem Wasser quellen lassen.\n• Vollrahm zu 90% steif schlagen und kalt stellen.\n• Vanilleschote längs halbieren und Mark auskratzen.",
+      "id": [
+        "304447"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304448]\n[%][%Zubereitung]\n• Milch, Vanilleschote, Vanillemark und Salz aufkochen.\n• Vanilleschote herausnehmen.\n• Eigelb und Zucker in einer Schüssel cremig rühren.\n• Aufgekochte Milch unter ständigem Rühren in die Eigelbmasse gießen. \n• In die Kasserolle zurückgießen.\n• Bei schwacher Hitze unter ständigem Rühren mit Rührspatel vorsichtig zur Rose erhitzen (höchstens 85°C).\n• Creme vom Herd ziehen und in eine Schüssel umleeren.\n• Ausgepresste Gelatine darin auflösen und sofort durch Sieb passieren.\n• Auf Eiswasser kalt rühren, bis die Creme leicht zu stocken beginnt.\n• Geschlagenen Vollrahm vorsichtig unter die Creme ziehen.\n• Sofort abfüllen oder weiter verarbeiten und im Kühlschrank fest werden lassen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Milch, Vanilleschote, Vanillemark und Salz aufkochen.\n• Vanilleschote herausnehmen.\n• Eigelb und Zucker in einer Schüssel cremig rühren.\n• Aufgekochte Milch unter ständigem Rühren in die Eigelbmasse gießen. \n• In die Kasserolle zurückgießen.\n• Bei schwacher Hitze unter ständigem Rühren mit Rührspatel vorsichtig zur Rose erhitzen (höchstens 85°C).\n• Creme vom Herd ziehen und in eine Schüssel umleeren.\n• Ausgepresste Gelatine darin auflösen und sofort durch Sieb passieren.\n• Auf Eiswasser kalt rühren, bis die Creme leicht zu stocken beginnt.\n• Geschlagenen Vollrahm vorsichtig unter die Creme ziehen.\n• Sofort abfüllen oder weiter verarbeiten und im Kühlschrank fest werden lassen.",
+      "id": [
+        "304448"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304449]\n[%][%Hinweis für die Praxis]\n• Wird die bayerische Creme in Gläser gefüllt, kann die Gelatinemenge auf 2/3 reduziert werden. \n\nAbleitungen\nBayerische Schokoladencreme: In der noch warmen Creme 200 g gehackte oder flüßige dunkle Couverture auflösen.\nBayerische Kaffeecreme: In der gekochten Milch 10 g Instant-Kaffee auflösen.\nBayerische Himbeercreme: 200 g Himbeeren durch Sieb streichen und mit der noch warmen Creme vermischen (Gelatinmenge auf 15g erhöhen).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Wird die bayerische Creme in Gläser gefüllt, kann die Gelatinemenge auf 2/3 reduziert werden. \n\nAbleitungen\nBayerische Schokoladencreme: In der noch warmen Creme 200 g gehackte oder flüßige dunkle Couverture auflösen.\nBayerische Kaffeecreme: In der gekochten Milch 10 g Instant-Kaffee auflösen.\nBayerische Himbeercreme: 200 g Himbeeren durch Sieb streichen und mit der noch warmen Creme vermischen (Gelatinmenge auf 15g erhöhen).",
+      "id": [
+        "304449"
+      ],
+      "lead": "Hinweis für die Praxis"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304450]\n[▼ch-6]\n[#Dörrzwetschgenkompott \nCompote de pruneaux]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304450"
+      ],
+      "anchor": "ch-6",
+      "title": "Dörrzwetschgenkompott \nCompote de pruneaux"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304451]\nAnzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 9.1 Kalte Süssspeisen",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 9.1 Kalte Süssspeisen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304451"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304452]\n[%][%Zutaten]\n•- Dörrzwetschgen, ohne Stein 80.00 g\n•- Rotwein 50.00 g\n•- Wasser 50.00 g\n•- Zucker 8.00 g\n•- Bienenhonig 5.00 g\n•- Zimtstange 0.40 Stk\n•- Zitronensaft, frisch 1.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Dörrzwetschgen, ohne Stein 80.00 g\n•- Rotwein 50.00 g\n•- Wasser 50.00 g\n•- Zucker 8.00 g\n•- Bienenhonig 5.00 g\n•- Zimtstange 0.40 Stk\n•- Zitronensaft, frisch 1.00 g",
+      "id": [
+        "304452"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304453]\n[%][%Vorbereitung]\n• Dörrzwetschgen einige Stunden in kaltem Wasser einweichen",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Dörrzwetschgen einige Stunden in kaltem Wasser einweichen",
+      "id": [
+        "304453"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304454]\n[%][%Zubereitung]\n• Alle Zutaten aufkochen und absieben\n• Dörrzwetschgen dazugeben und etwa 10 Minuten weichkochen \n• Im Sirup erkalten lassen",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Alle Zutaten aufkochen und absieben\n• Dörrzwetschgen dazugeben und etwa 10 Minuten weichkochen \n• Im Sirup erkalten lassen",
+      "id": [
+        "304454"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304455]\n[▼ch-7]\n[#Linsensuppe \nPotage aux lentilles]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304455"
+      ],
+      "anchor": "ch-7",
+      "title": "Linsensuppe \nPotage aux lentilles"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304456]\nAnzahl 1 Liter\nAutor Carlos Egli\nQuelle Pauli\nGruppe 2.1 Suppen und Kaltschalen",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 1 Liter\nAutor Carlos Egli\nQuelle Pauli\nGruppe 2.1 Suppen und Kaltschalen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304456"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304457]\n[%][%Zutaten]\n•- Rapsöl 16.00 g\n•- Zwiebeln, geschält 40.00 g\n•- Lauch, grün, gerüstet 40.00 g\n•- Knollensellerie, geschält 16.00 g\n•- Kartoffeln, Typ C, geschält 80.00 g\n•- Linsen, braun, getrocknet 140.00 g\n•- Gemüsefond 1.40 Liter\n•- Salz, Pfeffer, weiss aus der Mühle 1.00 x\n•- Butter 12.00 g\n•- Kerbel, frisch 0.80 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Rapsöl 16.00 g\n•- Zwiebeln, geschält 40.00 g\n•- Lauch, grün, gerüstet 40.00 g\n•- Knollensellerie, geschält 16.00 g\n•- Kartoffeln, Typ C, geschält 80.00 g\n•- Linsen, braun, getrocknet 140.00 g\n•- Gemüsefond 1.40 Liter\n•- Salz, Pfeffer, weiss aus der Mühle 1.00 x\n•- Butter 12.00 g\n•- Kerbel, frisch 0.80 g",
+      "id": [
+        "304457"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304458]\n[%][%Einlage]\n•- Englischbrot, entrindet 40.00 g\n•- Butter 12.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Englischbrot, entrindet 40.00 g\n•- Butter 12.00 g",
+      "id": [
+        "304458"
+      ],
+      "lead": "Einlage"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304459]\n[%][%Vorbereitung]\n• Linsen 4 Stunden in kaltem Wasser quellen lassen.\n• Lauch längs halbieren und waschen.\n• Zwiebeln, Lauch und Knollensellerie in Matignon (kleinw ̧rfelig) schneiden. \n• Kartoffeln in kleine Würfel schneiden.\n• Gemüsefond aufkochen.\n• Kerbel waschen, trockentupfen und zupfen.\n• Englischbrot in Würfel (Croûtons) schneiden und in Butter goldgelb rösten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Linsen 4 Stunden in kaltem Wasser quellen lassen.\n• Lauch längs halbieren und waschen.\n• Zwiebeln, Lauch und Knollensellerie in Matignon (kleinw ̧rfelig) schneiden. \n• Kartoffeln in kleine Würfel schneiden.\n• Gemüsefond aufkochen.\n• Kerbel waschen, trockentupfen und zupfen.\n• Englischbrot in Würfel (Croûtons) schneiden und in Butter goldgelb rösten.",
+      "id": [
+        "304459"
+      ],
+      "lead": "Vorbereitung"
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '̧'",
+        "line": 6,
+        "column": 58,
+        "errorLine": "• Zwiebeln, Lauch und Knollensellerie in Matignon (kleinw ̧rfelig) schneiden. "
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304460]\n[%][%Zubereitung]\n• Rapsöl erhitzen und das Matignon dünsten.\n• Abgetropfte Linsen beigeben und mitdünsten.\n• Mit heißem Gemüsefond auffüllen.\n• Aufkochen, mit Salz und Pfeffer abschmecken.\n• Des Öfteren abschäumen.\n• Nach 1 ½ Stunden Kochzeit die Kartoffelwürfel beigeben.\n• Nochmals ½ Stunde sieden.\n• Suppe pürieren und durch ein Spitzsieb passieren.\n• Nochmals aufkochen, abschmecken und mit Butterflocken verfeinern. \n• Anrichten und mit gezupften Kerbelblättchen garnieren.\n• Brot-Croûtons separat dazu servieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Rapsöl erhitzen und das Matignon dünsten.\n• Abgetropfte Linsen beigeben und mitdünsten.\n• Mit heißem Gemüsefond auffüllen.\n• Aufkochen, mit Salz und Pfeffer abschmecken.\n• Des Öfteren abschäumen.\n• Nach 1 ½ Stunden Kochzeit die Kartoffelwürfel beigeben.\n• Nochmals ½ Stunde sieden.\n• Suppe pürieren und durch ein Spitzsieb passieren.\n• Nochmals aufkochen, abschmecken und mit Butterflocken verfeinern. \n• Anrichten und mit gezupften Kerbelblättchen garnieren.\n• Brot-Croûtons separat dazu servieren.",
+      "id": [
+        "304460"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304461]\n[%][%Hinweis für die Praxis]\n• Am Schluss kann auch ein wenig saurer Vollrahm in die Suppe gegeben werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Am Schluss kann auch ein wenig saurer Vollrahm in die Suppe gegeben werden.",
+      "id": [
+        "304461"
+      ],
+      "lead": "Hinweis für die Praxis"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304462]\n[▼ch-8]\n[#Grilliertes Hähnchen Teufelsart \nPoulet grillé diable]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304462"
+      ],
+      "anchor": "ch-8",
+      "title": "Grilliertes Hähnchen Teufelsart \nPoulet grillé diable"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304463]\nAnzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 6.1 Fleischgerichte, Geflügelgerichte, Wildgerichte",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 6.1 Fleischgerichte, Geflügelgerichte, Wildgerichte",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304463"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304464]\n[%][%Zutaten]\n•- Poulet, frisch, pfannenfertig 1'400.00 g\n•- Gewürzsalzmischung für Geflügel 8.00 g\n•- Erdnussöl 40.00 g\n•- Senfpulver 12.00 g\n•- Weisswein 20.00 g\n•- Englischbrot, entrindet 60.00 g\n•- Butter 8.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Poulet, frisch, pfannenfertig 1'400.00 g\n•- Gewürzsalzmischung für Geflügel 8.00 g\n•- Erdnussöl 40.00 g\n•- Senfpulver 12.00 g\n•- Weisswein 20.00 g\n•- Englischbrot, entrindet 60.00 g\n•- Butter 8.00 g",
+      "id": [
+        "304464"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304465]\n[%][%Sauce]\n•- Weisswein 40.00 g\n•- Schalotten, geschält 30.00 g\n•- Pfefferkörner, weiss, zerdrückt 2.00 g\n•- Geflügeljus, gebunden 160.00 g\n•- Tomatensauce 0.04 Liter\n•- Cayenne-Pfeffer, gemahlen 1.00 x\n•- Küchenkräuter, frisch 8.00 g\n•- Brunnenkresse, gerüstet 40.00 g\n•- Zitronen 2.00 Stk",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Weisswein 40.00 g\n•- Schalotten, geschält 30.00 g\n•- Pfefferkörner, weiss, zerdrückt 2.00 g\n•- Geflügeljus, gebunden 160.00 g\n•- Tomatensauce 0.04 Liter\n•- Cayenne-Pfeffer, gemahlen 1.00 x\n•- Küchenkräuter, frisch 8.00 g\n•- Brunnenkresse, gerüstet 40.00 g\n•- Zitronen 2.00 Stk",
+      "id": [
+        "304465"
+      ],
+      "lead": "Sauce"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304466]\n[%][%Vorbereitung]\n• Rückenknochen der Poulets (5 Stk.) herausschneiden und Brustknorpel entfernen • Poulet auseinanderdrücken und leicht plattieren\n• Haut beim Brustknochen leicht einschneiden und die Beine durchstecken\n• Senfpulver mit Weisswein anr ̧hren\n• Englischbrot entrinden und fein reiben\n• Schalotten rösten und fein hacken\n• Pfefferkörner zerdrücken\n• Küchenkräuter waschen, zupfen und fein hacken \n• Brunnenkresse waschen, Zitronen halbieren",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Rückenknochen der Poulets (5 Stk.) herausschneiden und Brustknorpel entfernen • Poulet auseinanderdrücken und leicht plattieren\n• Haut beim Brustknochen leicht einschneiden und die Beine durchstecken\n• Senfpulver mit Weisswein anr ̧hren\n• Englischbrot entrinden und fein reiben\n• Schalotten rösten und fein hacken\n• Pfefferkörner zerdrücken\n• Küchenkräuter waschen, zupfen und fein hacken \n• Brunnenkresse waschen, Zitronen halbieren",
+      "id": [
+        "304466"
+      ],
+      "lead": "Vorbereitung"
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '̧'",
+        "line": 6,
+        "column": 31,
+        "errorLine": "• Senfpulver mit Weisswein anr ̧hren"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304467]\n[%][%Zubereitung]\n• Poulets würzen, einölen und mit der Hautseite auf den heissen Grill legen \n• Unter zeitweisem Wenden beidseitig gitterartig grillieren\n• Hautseite mit dem Senf einstreichen\n• Mit Mie de pain bestreuen und mit Butter beträufeln\n• Im Ofen bei starker Oberhitze  ̧berkrusten und gleichzeitig fertig braten\n• Für die Sauce Weisswein mit den Schalotten und Pfefferkörnern stark einkochen lassen \n• Mit gebundenem Geflügeljus und Tomatensauce auffüllen, kurz durchkochen lassen und passieren\n• Mit Cayenne und den Küchenkräutern abschmecken\n• Poulets halbieren, anrichten, mit Brunnenkresse und Zitronen garnieren\n• Sauce separat dazu servieren",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Poulets würzen, einölen und mit der Hautseite auf den heissen Grill legen \n• Unter zeitweisem Wenden beidseitig gitterartig grillieren\n• Hautseite mit dem Senf einstreichen\n• Mit Mie de pain bestreuen und mit Butter beträufeln\n• Im Ofen bei starker Oberhitze  ̧berkrusten und gleichzeitig fertig braten\n• Für die Sauce Weisswein mit den Schalotten und Pfefferkörnern stark einkochen lassen \n• Mit gebundenem Geflügeljus und Tomatensauce auffüllen, kurz durchkochen lassen und passieren\n• Mit Cayenne und den Küchenkräutern abschmecken\n• Poulets halbieren, anrichten, mit Brunnenkresse und Zitronen garnieren\n• Sauce separat dazu servieren",
+      "id": [
+        "304467"
+      ],
+      "lead": "Zubereitung"
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '̧'",
+        "line": 8,
+        "column": 33,
+        "errorLine": "• Im Ofen bei starker Oberhitze  ̧berkrusten und gleichzeitig fertig braten"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304468]\n[▼ch-9]\n[#Tomatensauce\nSauce tomate]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304468"
+      ],
+      "anchor": "ch-9",
+      "title": "Tomatensauce\nSauce tomate"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304469]\nAnzahl 0.1 Liter\nAutor Carlos Egli\nQuelle Pauli Fachbuchverlag AG\nGruppe 1.4 Saucen und Chutneys (Grundlagen für die warme und kalte Küche)",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 0.1 Liter\nAutor Carlos Egli\nQuelle Pauli Fachbuchverlag AG\nGruppe 1.4 Saucen und Chutneys (Grundlagen für die warme und kalte Küche)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304469"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304470]\n[%][%Zutaten]\n•- Butter 8.00 g\n•- Matignon, bunt 15.00 g\n•- Knoblauch, geschält 0.50 g\n•- Speck, geräuchert 3.00 g\n•- Tomaten, getrocknet 5.00 g\n•- Tomatenpüree 25.00 g\n•- Tomaten, Peretti 80.00 g\n•- Gemüsefond 70.00 g\n•- Gewürzsäcklein 0.10 Stück\n•- Rohzucker\n•- Meersalz, fein\n•- Pfeffer, weiß, aus der Mühle",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Butter 8.00 g\n•- Matignon, bunt 15.00 g\n•- Knoblauch, geschält 0.50 g\n•- Speck, geräuchert 3.00 g\n•- Tomaten, getrocknet 5.00 g\n•- Tomatenpüree 25.00 g\n•- Tomaten, Peretti 80.00 g\n•- Gemüsefond 70.00 g\n•- Gewürzsäcklein 0.10 Stück\n•- Rohzucker\n•- Meersalz, fein\n•- Pfeffer, weiß, aus der Mühle",
+      "id": [
+        "304470"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304471]\n[%][%Vorbereitung]\n• Knoblauch hacken.\n• Speck in Würfel schneiden.\n• Getrocknete Tomaten in Würfel schneiden.\n• Vollreife Peretti-Tomaten waschen, entkernen und in grobe Würfel schneiden. \n• Gewürzsäcklein (Basilikum, Origano, Lorbeerblatt, Pfefferkörner) bereitstellen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Knoblauch hacken.\n• Speck in Würfel schneiden.\n• Getrocknete Tomaten in Würfel schneiden.\n• Vollreife Peretti-Tomaten waschen, entkernen und in grobe Würfel schneiden. \n• Gewürzsäcklein (Basilikum, Origano, Lorbeerblatt, Pfefferkörner) bereitstellen.",
+      "id": [
+        "304471"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304472]\n[%][%Zubereitung]\n• Matignon in Butter and ̧nsten.\n• Knoblauch, Speckwürfel und getrocknete Tomaten beigeben und dünsten.\n• Tomatenpüree und Tomatenwürfel beigeben und mitdünsten.\n• Mit Gemüsefond auffüllen und zum Siedepunkt bringen.\n• Gewürzsäcklein beigeben, abschmecken und 30 Minuten sieden.\n• Des Öfteren abschäumen.\n• Sauce durch ein Drahtspitzsieb passieren und mit Meersalz, Pfeffer und Rohzucker abschmecken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Matignon in Butter and ̧nsten.\n• Knoblauch, Speckwürfel und getrocknete Tomaten beigeben und dünsten.\n• Tomatenpüree und Tomatenwürfel beigeben und mitdünsten.\n• Mit Gemüsefond auffüllen und zum Siedepunkt bringen.\n• Gewürzsäcklein beigeben, abschmecken und 30 Minuten sieden.\n• Des Öfteren abschäumen.\n• Sauce durch ein Drahtspitzsieb passieren und mit Meersalz, Pfeffer und Rohzucker abschmecken.",
+      "id": [
+        "304472"
+      ],
+      "lead": "Zubereitung"
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '̧'",
+        "line": 4,
+        "column": 25,
+        "errorLine": "• Matignon in Butter and ̧nsten."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304473]\n[%][%Hinweis für die Praxis]\nFür vegetarische Zubereitungen den Speck weglassen. Außerhalb der Saison am besten Peretti-Tomaten aus der Dose verwenden, da diese in optimalem Reifezustand geerntet und verarbeitet werden. Getrocknete Tomaten sind häufig unterschiedlich gesalzen; je nachdem kann die Salzzugabe variieren. Wird eine konsistentere Tomatensauce gewünscht, kann sie mit wenig angerührtem Stärkemehl ergänzt werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Für vegetarische Zubereitungen den Speck weglassen. Außerhalb der Saison am besten Peretti-Tomaten aus der Dose verwenden, da diese in optimalem Reifezustand geerntet und verarbeitet werden. Getrocknete Tomaten sind häufig unterschiedlich gesalzen; je nachdem kann die Salzzugabe variieren. Wird eine konsistentere Tomatensauce gewünscht, kann sie mit wenig angerührtem Stärkemehl ergänzt werden.",
+      "id": [
+        "304473"
+      ],
+      "lead": "Hinweis für die Praxis"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304474]\n[▼ch-10]\n[#Dauphine-Kartoffeln \nPommes dauphine]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304474"
+      ],
+      "anchor": "ch-10",
+      "title": "Dauphine-Kartoffeln \nPommes dauphine"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304475]\nAnzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 5.2 Kartoffelgerichte",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 5.2 Kartoffelgerichte",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304475"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304476]\n•- Kartoffeln, Typ A, geschält 440.00 g\n•- Gesalzener Brandteig 148.00 g\n•- Salz 4.00 g\n•- Muskatnuss, gerieben 1.00 x\n•- Erdnussöl 20.00 g\n•- Ölverlust beim fritieren 54.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Kartoffeln, Typ A, geschält 440.00 g\n•- Gesalzener Brandteig 148.00 g\n•- Salz 4.00 g\n•- Muskatnuss, gerieben 1.00 x\n•- Erdnussöl 20.00 g\n•- Ölverlust beim fritieren 54.00 g",
+      "id": [
+        "304476"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304477]\n[%][%Vorbereitung]\n• Kartoffeln in gleichmäßige Würfel schneiden. \n• Pergamentpapierstreifen mit Öl einstreichen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Kartoffeln in gleichmäßige Würfel schneiden. \n• Pergamentpapierstreifen mit Öl einstreichen.",
+      "id": [
+        "304477"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304478]\n[%][%Zubereitung]\n• Kartoffelwürfel im Steamer garen oder in Salzwasser sieden.\n• Kartoffeln ausdampfen lassen und pürieren.\n• Kartoffelmasse mit dem Brandteig gut vermischen, mit Salz und Muskat abschmecken.\n• Mit zwei Esslöffeln exakte, sauber geformte Klöße auf die Pergamentpapierstreifen setzen.\n• Papierstreifen mit den Kartoffelklößen in die 165-170°C heiße Frittüre eintauchen und die Klöße vom Papier gleiten lassen.\n• Dauphine-Kartoffeln goldgelb und knusprig frittieren.\n• Auf Küchenpapier gut abtropfen lassen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Kartoffelwürfel im Steamer garen oder in Salzwasser sieden.\n• Kartoffeln ausdampfen lassen und pürieren.\n• Kartoffelmasse mit dem Brandteig gut vermischen, mit Salz und Muskat abschmecken.\n• Mit zwei Esslöffeln exakte, sauber geformte Klöße auf die Pergamentpapierstreifen setzen.\n• Papierstreifen mit den Kartoffelklößen in die 165-170°C heiße Frittüre eintauchen und die Klöße vom Papier gleiten lassen.\n• Dauphine-Kartoffeln goldgelb und knusprig frittieren.\n• Auf Küchenpapier gut abtropfen lassen.",
+      "id": [
+        "304478"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304479]\n[%][%Hinweis für die Praxis]\n• Die geölten Pergamentpapierstreifen so zurechtschneiden, dass jeweils 1-2 Portionen Dauphine-Kartoffeln darauf Platz finden. Kartoffeln wegen der Bildung von Acrylamid bei höchstens 165-170°C frittieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Die geölten Pergamentpapierstreifen so zurechtschneiden, dass jeweils 1-2 Portionen Dauphine-Kartoffeln darauf Platz finden. Kartoffeln wegen der Bildung von Acrylamid bei höchstens 165-170°C frittieren.",
+      "id": [
+        "304479"
+      ],
+      "lead": "Hinweis für die Praxis"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304480]\n[▼ch-11]\n[#Brandteig (gesalzen) \nPâte à choux (salée)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304480"
+      ],
+      "anchor": "ch-11",
+      "title": "Brandteig (gesalzen) \nPâte à choux (salée)"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304481]\nAnzahl 0.2 Kg.\nAutor Carlos Egli\nQuelle 8.1 Teige, Massen und Produktions-Mise-en-Place (Gründlagen für die Patisserie)",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 0.2 Kg.\nAutor Carlos Egli\nQuelle 8.1 Teige, Massen und Produktions-Mise-en-Place (Gründlagen für die Patisserie)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304481"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304482]\n[%][%Zutaten]\n•- Vollmilch 37.00 g\n•- Wasser 38.00 g\n•- Butter 22.00 g\n•- Weißmehl, Typ 550 37.00 g\n•- Salz 1.20 g\n•- Pfeffer, weiß, gemahlen\n•- Muskatnuss, gerieben\n•- Vollei, pasteurisiert 65.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Vollmilch 37.00 g\n•- Wasser 38.00 g\n•- Butter 22.00 g\n•- Weißmehl, Typ 550 37.00 g\n•- Salz 1.20 g\n•- Pfeffer, weiß, gemahlen\n•- Muskatnuss, gerieben\n•- Vollei, pasteurisiert 65.00 g",
+      "id": [
+        "304482"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304483]\n[%][%Vorbereitung]\n• Butter aus dem Kühlschrank nehmen.\n• Weißmehl sieben und Salz, Pfeffer und Muskat beigeben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Butter aus dem Kühlschrank nehmen.\n• Weißmehl sieben und Salz, Pfeffer und Muskat beigeben.",
+      "id": [
+        "304483"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304484]\n[%][%Zubereitung]\n• Vollmilch, Wasser und Butter zusammen aufkochen.\n• Weißmehl, Salz und Gewu2rze im Sturz auf einmal beigeben und mit einem Spatel bei etwas reduzierter Hitze gründlich abrühren, bis sich die Masse vom Pfannenboden löst.\n• Die Masse vom Herd nehmen, in einen Rührkessel geben und leicht abkühlen lassen.\n• In der Rührmaschine die Eier nach und nach unter die Masse geben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Vollmilch, Wasser und Butter zusammen aufkochen.\n• Weißmehl, Salz und Gewu2rze im Sturz auf einmal beigeben und mit einem Spatel bei etwas reduzierter Hitze gründlich abrühren, bis sich die Masse vom Pfannenboden löst.\n• Die Masse vom Herd nehmen, in einen Rührkessel geben und leicht abkühlen lassen.\n• In der Rührmaschine die Eier nach und nach unter die Masse geben.",
+      "id": [
+        "304484"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304485]\n[▼ch-12]\n[#Gedünsteter Blattspinat mit Pinienkerne \nEpinards étuvés aux pignons]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304485"
+      ],
+      "anchor": "ch-12",
+      "title": "Gedünsteter Blattspinat mit Pinienkerne \nEpinards étuvés aux pignons"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304486]\nAnzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 5.1 Gemüse- und Pilzgerichte",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 5.1 Gemüse- und Pilzgerichte",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304486"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304487]\n[%][%Zutaten]\n•- Blattspinat, frisch, gerüstet 480.00 g\n•- Butter 10.00 g\n•- Schalotten, geschält 16.00 g\n•- Knoblauch, geschält 4.00 g\n•- Salz 4.00 g\n•- Pfeffer, weiss, aus der Mühle 1.00 x\n•- Muskatnuss, gerieben 1.00 x\n•- Baumnussöl 8.00 g\n•- Pinienkerne, geschält 12.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Blattspinat, frisch, gerüstet 480.00 g\n•- Butter 10.00 g\n•- Schalotten, geschält 16.00 g\n•- Knoblauch, geschält 4.00 g\n•- Salz 4.00 g\n•- Pfeffer, weiss, aus der Mühle 1.00 x\n•- Muskatnuss, gerieben 1.00 x\n•- Baumnussöl 8.00 g\n•- Pinienkerne, geschält 12.00 g",
+      "id": [
+        "304487"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304488]\n[%][%Vorbereitung]\n• Blattspinat gründlich waschen, im Salzwasser blanchieren, im Eiswasser abkühlen und abschütten.\n• Blanchierter Spinat auspressen.\n• Schalotten fein hacken.\n• Knoblauch durch die Knoblauchpresse drücken. \n• Pinienkerne im Baumnussöl goldgelb rösten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Blattspinat gründlich waschen, im Salzwasser blanchieren, im Eiswasser abkühlen und abschütten.\n• Blanchierter Spinat auspressen.\n• Schalotten fein hacken.\n• Knoblauch durch die Knoblauchpresse drücken. \n• Pinienkerne im Baumnussöl goldgelb rösten.",
+      "id": [
+        "304488"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304489]\n[%][%Zubereitung]\n• Schalotten und Knoblauch in Butter andünsten.\n• Blattspinat beigeben und mitdünsten.\n• Mit Salz, Pfeffer und Muskatnuss abschmecken.\n• Blattspinat anrichten und mit den gerösteten Pinienkernen bestreuen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Schalotten und Knoblauch in Butter andünsten.\n• Blattspinat beigeben und mitdünsten.\n• Mit Salz, Pfeffer und Muskatnuss abschmecken.\n• Blattspinat anrichten und mit den gerösteten Pinienkernen bestreuen.",
+      "id": [
+        "304489"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.internal-link]\n[@id:305575]\n[!Bayerische Creme]\n[►Ref_Bayerische]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "305575"
+      ],
+      "instruction": "Bayerische Creme",
+      "reference": "Ref_Bayerische"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304496]\n[%][%Zubereitungsvorschlag eingelegte Melonenkugeln]\n• Melonen halbieren\n• Samen entfernen\n• mit einem Ausstecher 1 cm grosse Kugeln ausstechen\n• Weisswein, Zucker, Ingwer und Sternanis aufkochen\n• 15 Minuten ziehen lassen und passieren.\n• Melonenkugeln zum Sirup geben und erkalten lassen.\n• Vacumieren und ca. 3h kühl stellen\n\nNach Bedarf mit Pfefferminze, Vanille, Spirituosen etc. parfümieren",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Melonen halbieren\n• Samen entfernen\n• mit einem Ausstecher 1 cm grosse Kugeln ausstechen\n• Weisswein, Zucker, Ingwer und Sternanis aufkochen\n• 15 Minuten ziehen lassen und passieren.\n• Melonenkugeln zum Sirup geben und erkalten lassen.\n• Vacumieren und ca. 3h kühl stellen\n\nNach Bedarf mit Pfefferminze, Vanille, Spirituosen etc. parfümieren",
+      "id": [
+        "304496"
+      ],
+      "lead": "Zubereitungsvorschlag eingelegte Melonenkugeln"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304497]\n[▼ch-14]\n[#Gelbersensuppe\nPurée de pois jaunes]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304497"
+      ],
+      "anchor": "ch-14",
+      "title": "Gelbersensuppe\nPurée de pois jaunes"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304498]\nAnzahl 1 Liter\nAutor Carlos Egli\nQuelle Pauli\nGruppe 2.1 Suppen und Kaltschalen",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 1 Liter\nAutor Carlos Egli\nQuelle Pauli\nGruppe 2.1 Suppen und Kaltschalen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304498"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304499]\n[%][%Zutaten]\n•- Butter 12.00 g\n•- Zwiebeln, geschält 32.00 g\n•- Lauch, gebleicht, gerüstet 32.00 g\n•- Knollensellerie, geschält 16.00 g\n•- Karotten, geschält 16.00 g\n•- Speckschwarten 20.00 g\n•- Erbsen, gelbe, getrocknet 120.00 g\n•- Kartoffeln, Typ A, geschält 140.00 g\n•- Bouillon 1.00 Liter\n•- Salz, Pfeffer, weiss aus der Mühle 1.00 x",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Butter 12.00 g\n•- Zwiebeln, geschält 32.00 g\n•- Lauch, gebleicht, gerüstet 32.00 g\n•- Knollensellerie, geschält 16.00 g\n•- Karotten, geschält 16.00 g\n•- Speckschwarten 20.00 g\n•- Erbsen, gelbe, getrocknet 120.00 g\n•- Kartoffeln, Typ A, geschält 140.00 g\n•- Bouillon 1.00 Liter\n•- Salz, Pfeffer, weiss aus der Mühle 1.00 x",
+      "id": [
+        "304499"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304500]\n[%][%Einlage]\n•- Englischbrot, entrindet 40.00 g\n•- Butter 12.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Englischbrot, entrindet 40.00 g\n•- Butter 12.00 g",
+      "id": [
+        "304500"
+      ],
+      "lead": "Einlage"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304501]\n[%][%Vorbereitung]\n• Erbsen 4 Stunden in kaltem Wasser quellen lassen und abschütten. \n• Lauch längs halbieren und waschen.\n• Gemüse in Matignon (kleinwürfelig) schneiden.\n• Kartoffeln in 1 cm große Würfel schneiden.\n• Speckschwarten mit Bindfaden zusammenbinden.\n• Bouillon aufkochen.\n• Englischbrot in kleine Würfel (Croûtons) schneiden und in Butter goldgelb rösten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Erbsen 4 Stunden in kaltem Wasser quellen lassen und abschütten. \n• Lauch längs halbieren und waschen.\n• Gemüse in Matignon (kleinwürfelig) schneiden.\n• Kartoffeln in 1 cm große Würfel schneiden.\n• Speckschwarten mit Bindfaden zusammenbinden.\n• Bouillon aufkochen.\n• Englischbrot in kleine Würfel (Croûtons) schneiden und in Butter goldgelb rösten.",
+      "id": [
+        "304501"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304502]\n[%][%Zubereitung]\n• Matigon in Butter andünsten.\n• Erbsen beigeben und mit dünsten.\n• Kartoffelwürfel und Speckschwarten beigeben.\n• Mit heißer Bouillon auffüllen.\n• Zum Siedepunkt bringen.\n• Mit Salz und Pfeffer würzen, des Öfteren abschäumen.\n• 2 Stunden sieden, anschließend Speckschwarten herausnehmen. \n• Pürieren und durch Spitzsieb passieren.\n• Nochmals aufkochen und abschmecken.\n• Anrichten und Brot-Croûtons separat dazu servieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Matigon in Butter andünsten.\n• Erbsen beigeben und mit dünsten.\n• Kartoffelwürfel und Speckschwarten beigeben.\n• Mit heißer Bouillon auffüllen.\n• Zum Siedepunkt bringen.\n• Mit Salz und Pfeffer würzen, des Öfteren abschäumen.\n• 2 Stunden sieden, anschließend Speckschwarten herausnehmen. \n• Pürieren und durch Spitzsieb passieren.\n• Nochmals aufkochen und abschmecken.\n• Anrichten und Brot-Croûtons separat dazu servieren.",
+      "id": [
+        "304502"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304503]\n[%][%Hinweis für die Praxis]\n• Die Suppe kann auch mit wenig Vollrahm verfeinert werden.\nGelberbsensuppe mit Gnagi: 1 kg Gnagi in der Suppe weich kochen (Salzzugabe reduzieren), auslösen, in Würfel schneiden und als Suppeneinlage servieren.\nAls weitere Suppeneinlage eignen sich Quarkklößchen mit Speck.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Die Suppe kann auch mit wenig Vollrahm verfeinert werden.\nGelberbsensuppe mit Gnagi: 1 kg Gnagi in der Suppe weich kochen (Salzzugabe reduzieren), auslösen, in Würfel schneiden und als Suppeneinlage servieren.\nAls weitere Suppeneinlage eignen sich Quarkklößchen mit Speck.",
+      "id": [
+        "304503"
+      ],
+      "lead": "Hinweis für die Praxis"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304504]\n[▼ch-15]\n[#Wiener Backhendl \nPoulet viennoise]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304504"
+      ],
+      "anchor": "ch-15",
+      "title": "Wiener Backhendl \nPoulet viennoise"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304505]\nAnzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 6.1 Fleischgerichte, Geflügelgerichte, Wildgerichte",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 6.1 Fleischgerichte, Geflügelgerichte, Wildgerichte",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304505"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304506]\n[%][%Zutaten]\n•- Poulet, frisch, pfannenfertig 1'000.00 g\n•- Geflügelleber, pariert 120.00 g\n•- Gewürzsalzmischung für Geflügel 12.00 g\n•- Weissmehl 60.00 g\n•- Vollei pasteruisiert 120.00 g\n•- Mie de pain / weisses Paniermehl 100.00 g\n•- Ölverlust beim fritieren 120.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Poulet, frisch, pfannenfertig 1'000.00 g\n•- Geflügelleber, pariert 120.00 g\n•- Gewürzsalzmischung für Geflügel 12.00 g\n•- Weissmehl 60.00 g\n•- Vollei pasteruisiert 120.00 g\n•- Mie de pain / weisses Paniermehl 100.00 g\n•- Ölverlust beim fritieren 120.00 g",
+      "id": [
+        "304506"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304507]\n[%][%Granitur]\n•- Zitronen 240.00 g\n•- Brunnenkresse, gerüstet 40.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Zitronen 240.00 g\n•- Brunnenkresse, gerüstet 40.00 g",
+      "id": [
+        "304507"
+      ],
+      "lead": "Granitur"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304508]\n[%][%Vorbereitung]\n• Pouletbrüste ausbeinen, Flügelknochen entfernen und jede Brust in zwei gleich große Teile schneiden.\n• Pouletschenkel ausbeinen und jeden Schenkel halbieren.\n• Zitronen halbieren (eine halbe Zitrone pro Person).\n• Brunnenkresse waschen und trockenschleudern.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Pouletbrüste ausbeinen, Flügelknochen entfernen und jede Brust in zwei gleich große Teile schneiden.\n• Pouletschenkel ausbeinen und jeden Schenkel halbieren.\n• Zitronen halbieren (eine halbe Zitrone pro Person).\n• Brunnenkresse waschen und trockenschleudern.",
+      "id": [
+        "304508"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304509]\n[%][%Zubereitung]\n• Pouletstücke und Geflügelleber würzen, im Weißmehl wenden und gut abklopfen.\n• Zuerst im Ei, anschließend in Mie de pain wenden und nur leicht andrücken.\n• Bei 160°C goldgelb frittieren und auf Küchenpapier gut abtropfen lassen (die Geflügelleber hat eine kurze Garzeit).\n• Auf Papierserviette anrichten und mit halben Zitronen und Brunnenkresse garnieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Pouletstücke und Geflügelleber würzen, im Weißmehl wenden und gut abklopfen.\n• Zuerst im Ei, anschließend in Mie de pain wenden und nur leicht andrücken.\n• Bei 160°C goldgelb frittieren und auf Küchenpapier gut abtropfen lassen (die Geflügelleber hat eine kurze Garzeit).\n• Auf Papierserviette anrichten und mit halben Zitronen und Brunnenkresse garnieren.",
+      "id": [
+        "304509"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304510]\n[%][%Hinweis für die Praxis]\n• Statt Brunnenkresse kann auch frittierte Petersilie dazu serviert werden. Als Beilage passt Kartoffelsalat und Remouladensauce.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Statt Brunnenkresse kann auch frittierte Petersilie dazu serviert werden. Als Beilage passt Kartoffelsalat und Remouladensauce.",
+      "id": [
+        "304510"
+      ],
+      "lead": "Hinweis für die Praxis"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304511]\n[▼ch-16]\n[#Remouladensauce\nSauce rémoulade]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304511"
+      ],
+      "anchor": "ch-16",
+      "title": "Remouladensauce\nSauce rémoulade"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304512]\nAnzahl 0.3 Liter\nAutor Carlos Egli\nQuelle Pauli\nGruppe 1.4 Saucen und Chutneys (Grundlagen für die warme und kalte Küche)",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 0.3 Liter\nAutor Carlos Egli\nQuelle Pauli\nGruppe 1.4 Saucen und Chutneys (Grundlagen für die warme und kalte Küche)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304512"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304513]\n[%][%Zutaten]\n•- Mayonnaise 228.00 g\n•- Sardellenfilets, abgetropft 3.00 g\n•- Zwiebeln, geschält 15.00 g\n•- Kapern, abgetropft 12.00 g\n•- Schnittlauch, frisch 6.00 g\n•- Petersilie, gekraust, frisch 3.00 g\n•- Estragon, frisch 3.00 g\n•- Quark, mager 30.00 g\n•- Salz 1.00 x\n•- Cayenne-Pfeffer, gemahlen 1.00 x",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Mayonnaise 228.00 g\n•- Sardellenfilets, abgetropft 3.00 g\n•- Zwiebeln, geschält 15.00 g\n•- Kapern, abgetropft 12.00 g\n•- Schnittlauch, frisch 6.00 g\n•- Petersilie, gekraust, frisch 3.00 g\n•- Estragon, frisch 3.00 g\n•- Quark, mager 30.00 g\n•- Salz 1.00 x\n•- Cayenne-Pfeffer, gemahlen 1.00 x",
+      "id": [
+        "304513"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304514]\n[%][%Vorbereitung]\n• Sardellenfilets sehr fein hacken.\n• Zwiebeln und Kapern fein hacken.\n• Schnittlauch fein schneiden.\n• Petersilie und Estragon waschen, zupfen, trocken tupfen und fein hacken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Sardellenfilets sehr fein hacken.\n• Zwiebeln und Kapern fein hacken.\n• Schnittlauch fein schneiden.\n• Petersilie und Estragon waschen, zupfen, trocken tupfen und fein hacken.",
+      "id": [
+        "304514"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304515]\n[%][%Zubereitung]\n• Alle Zutaten mit der Mayonnaise vermischen.\n• Mit Salz und Cayenne pikant abschmecken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Alle Zutaten mit der Mayonnaise vermischen.\n• Mit Salz und Cayenne pikant abschmecken.",
+      "id": [
+        "304515"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304516]\n[%][%Hinweis für die Praxis]\n• Die gehackten Zwiebeln und den Schnittlauch erst unmittelbar vor Gebrauch beigeben. Durch die Zugabe von Essigzwiebeln wird die Sauce länger haltbar.\nVerwendung: Hauptsächlich zu frittierten Fischen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Die gehackten Zwiebeln und den Schnittlauch erst unmittelbar vor Gebrauch beigeben. Durch die Zugabe von Essigzwiebeln wird die Sauce länger haltbar.\nVerwendung: Hauptsächlich zu frittierten Fischen.",
+      "id": [
+        "304516"
+      ],
+      "lead": "Hinweis für die Praxis"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304517]\n[▼ch-17]\n[#Mayonnaise-Sauce\nSauce mayonnaise]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304517"
+      ],
+      "anchor": "ch-17",
+      "title": "Mayonnaise-Sauce\nSauce mayonnaise"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304518]\nAnzahl 0.2 Liter\nAutor Carlos Egli\nQuelle Pauli Fachbuchverlag AG\nGruppe 1.4 Saucen und Chutneys (Grunlagen für die warme und kalte Küche)",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 0.2 Liter\nAutor Carlos Egli\nQuelle Pauli Fachbuchverlag AG\nGruppe 1.4 Saucen und Chutneys (Grunlagen für die warme und kalte Küche)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304518"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304519]\n[%][%Zutaten]\n•- Eigelb, pasteurisiert 20.00 g\n•- Wasser 3.00 g\n•- Senf, mild 3.00 g\n•- Sonnenblumenöl 170.00 g\n•- Weißweinessig 6.00 g\n•- Salz\n•- Pfeffer, weiß, aus der Mühle\n•- Zitronensaft, frisch",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Eigelb, pasteurisiert 20.00 g\n•- Wasser 3.00 g\n•- Senf, mild 3.00 g\n•- Sonnenblumenöl 170.00 g\n•- Weißweinessig 6.00 g\n•- Salz\n•- Pfeffer, weiß, aus der Mühle\n•- Zitronensaft, frisch",
+      "id": [
+        "304519"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304520]\n[%][%Zubereitung]\n• Eigelb und Öl auf Zimmertemperatur erwärmen.\n• Eigelb, Wasser und Senf in Schüssel gut schaumig rühren.\n• Öl in feinem Faden unter Rühren mit dem Schneebesen unter die Masse rühren.\n• Am Schluss den Essig beifügen.\n• Mit Salz, Pfeffer und Zitronensaft abschmecken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Eigelb und Öl auf Zimmertemperatur erwärmen.\n• Eigelb, Wasser und Senf in Schüssel gut schaumig rühren.\n• Öl in feinem Faden unter Rühren mit dem Schneebesen unter die Masse rühren.\n• Am Schluss den Essig beifügen.\n• Mit Salz, Pfeffer und Zitronensaft abschmecken.",
+      "id": [
+        "304520"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304521]\n[%][%Hinweis für die Praxis]\nAnstelle von Sonnenblumenöl kann auch Rapsöl verwendet werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Anstelle von Sonnenblumenöl kann auch Rapsöl verwendet werden.",
+      "id": [
+        "304521"
+      ],
+      "lead": "Hinweis für die Praxis"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304522]\n[▼ch-18]\n[#Kartoffelsalat mit Mayonnaise \nSalade de pommes de terre à la mayonnais]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304522"
+      ],
+      "anchor": "ch-18",
+      "title": "Kartoffelsalat mit Mayonnaise \nSalade de pommes de terre à la mayonnais"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304523]\nAnzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 3.1 Salate",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 3.1 Salate",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304523"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304524]\n[%][%Zutaten]\n•- Kartoffeln, Typ B/C, in Schale 320.00 g\n•- Salz 4.00 g\n•- Schnittlauch, frisch 2.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Kartoffeln, Typ B/C, in Schale 320.00 g\n•- Salz 4.00 g\n•- Schnittlauch, frisch 2.00 g",
+      "id": [
+        "304524"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304525]\n[%][%Sauce]\n•- Zwiebeln, geschält 40.00 g\n•- Bouillon 0.10 Liter\n•- Sonnenblumenöl, high oleic 12.00 g\n•- Kräuteressig 20.00 g\n•- Salz, Pfeffer, weiss aus der Mühle 1.00 x\n•- Mayonnaise 80.00 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Zwiebeln, geschält 40.00 g\n•- Bouillon 0.10 Liter\n•- Sonnenblumenöl, high oleic 12.00 g\n•- Kräuteressig 20.00 g\n•- Salz, Pfeffer, weiss aus der Mühle 1.00 x\n•- Mayonnaise 80.00 g",
+      "id": [
+        "304525"
+      ],
+      "lead": "Sauce"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304526]\n[%][%Vorbereitung]\n• Kartoffeln in der Schale in Salzwasser sieden oder dämpfen.\n• Kartoffeln im warmen Zustand schälen und in 2-4 mm dicke Scheiben schneiden. \n• Schnittlauch fein schneiden.\n• Zwiebeln fein hacken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Kartoffeln in der Schale in Salzwasser sieden oder dämpfen.\n• Kartoffeln im warmen Zustand schälen und in 2-4 mm dicke Scheiben schneiden. \n• Schnittlauch fein schneiden.\n• Zwiebeln fein hacken.",
+      "id": [
+        "304526"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304527]\n[%][%Zubereitung]\n• Die gehackten Zwiebeln mit wenig Sonnenblumenöl andünsten und mit der Bouillon ablöschen. \n• Das restliche Sonnenblumenöl und den Essig beigeben und aufkochen.\n• Mit Salz und Pfeffer würzen und über die Kartoffelscheiben geben.\n• Sauce während 15 Minuten einziehen lassen.\n• Mayonnaise beigeben, gut vermengen und abschmecken.\n• Kartoffelsalat stets lauwarm servieren und vor dem Servieren mit Schnittlauch bestreuen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Die gehackten Zwiebeln mit wenig Sonnenblumenöl andünsten und mit der Bouillon ablöschen. \n• Das restliche Sonnenblumenöl und den Essig beigeben und aufkochen.\n• Mit Salz und Pfeffer würzen und über die Kartoffelscheiben geben.\n• Sauce während 15 Minuten einziehen lassen.\n• Mayonnaise beigeben, gut vermengen und abschmecken.\n• Kartoffelsalat stets lauwarm servieren und vor dem Servieren mit Schnittlauch bestreuen.",
+      "id": [
+        "304527"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304528]\n[%][%Hinweis für die Praxis]\n• Kartoffelsalat nie kalt aus dem K ̧hlschrank servieren und nur für den Tagesgebrauch herstellen. Kartoffelsalat kann auch ohne Mayonnaise zubereitet werden. Saucenzutaten: Bouillon, Sonnenblumenöl, Essig, Senf, Salz und Pfeffer (Menge Sonnenblumenöl und Essig entsprechend erhöhen).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Kartoffelsalat nie kalt aus dem K ̧hlschrank servieren und nur für den Tagesgebrauch herstellen. Kartoffelsalat kann auch ohne Mayonnaise zubereitet werden. Saucenzutaten: Bouillon, Sonnenblumenöl, Essig, Senf, Salz und Pfeffer (Menge Sonnenblumenöl und Essig entsprechend erhöhen).",
+      "id": [
+        "304528"
+      ],
+      "lead": "Hinweis für die Praxis"
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '̧'",
+        "line": 4,
+        "column": 36,
+        "errorLine": "• Kartoffelsalat nie kalt aus dem K ̧hlschrank servieren und nur für den Tagesgebrauch herstellen. Kartoffelsalat kann auch ohne Mayonnaise zubereitet werden. Saucenzutaten: Bouillon, Sonnenblumenöl, Essig, Senf, Salz und Pfeffer (Menge Sonnenblumenöl und Essig entsprechend erhöhen)."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304529]\n[▼ch-19]\n[#Grillierte Auberginenscheiben \nTranches d'aubergines grillées]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304529"
+      ],
+      "anchor": "ch-19",
+      "title": "Grillierte Auberginenscheiben \nTranches d'aubergines grillées"
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:304530]\nAnzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 5.1 Gemüse- und Pilzgerichte",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Anzahl 4 Port.\nAutor Carlos Egli\nQuelle Pauli\nGruppe 5.1 Gemüse- und Pilzgerichte",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304530"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304531]\n[%][%Zutaten]\n•- Auberginen, gerüstet 480.00 g\n•- Sonnenblumenöl, high oleic 8.00 g\n•- Salz 4.00 g\n•- Pfeffer, weiss, gemahlen 0.40 g\n•- Rosmarin, frisch 0.40 g",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•- Auberginen, gerüstet 480.00 g\n•- Sonnenblumenöl, high oleic 8.00 g\n•- Salz 4.00 g\n•- Pfeffer, weiss, gemahlen 0.40 g\n•- Rosmarin, frisch 0.40 g",
+      "id": [
+        "304531"
+      ],
+      "lead": "Zutaten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304532]\n[%][%Vorbereitung]\n• Auberginen waschen und in 1 cm dicke, ca. 30 g schwere Scheiben schneiden.\n• Rosmarin waschen, trockentupfen und Nadeln ablösen.\n• Auberginenscheiben mit Sonnenblumenöl bepinseln und mit den Rosmarinnadeln bestreuen. \n• 30 Minuten marinieren, anschließend Rosmarinnadeln entfernen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Auberginen waschen und in 1 cm dicke, ca. 30 g schwere Scheiben schneiden.\n• Rosmarin waschen, trockentupfen und Nadeln ablösen.\n• Auberginenscheiben mit Sonnenblumenöl bepinseln und mit den Rosmarinnadeln bestreuen. \n• 30 Minuten marinieren, anschließend Rosmarinnadeln entfernen.",
+      "id": [
+        "304532"
+      ],
+      "lead": "Vorbereitung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304533]\n[%][%Zubereitung]\n• Auberginenscheiben auf dem heißen Grill gitterförmig grillieren. \n• Mit Salz und Pfeffer würzen und anrichten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Auberginenscheiben auf dem heißen Grill gitterförmig grillieren. \n• Mit Salz und Pfeffer würzen und anrichten.",
+      "id": [
+        "304533"
+      ],
+      "lead": "Zubereitung"
+    }
+  },
+  {
+    "bitmark": "[.internal-link]\n[@id:305576]\n[!Bayerische Creme]\n[►Ref_Bayerische]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "305576"
+      ],
+      "instruction": "Bayerische Creme",
+      "reference": "Ref_Bayerische"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:304540]\n[%][%Weissweinbirnen mit Caramel]\n50g Zucker Caramelisieren \nMit etwas Wasser ablöschen\n4dl Weisswein dazugeben 20g Zitronensaft\n50g Zucker\nSirupartig einreduzieren\n\n• 5 Stück kleine geschälte Birnen (Stückgewicht ca. 60 g) beigeben \n• Vacumieren\n• Bei 96°C ca. 18 min im Volldampf garen (Fingerdruck Kontrolle)\n\nAuspacken, beliebig in Form bringen",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "50g Zucker Caramelisieren \nMit etwas Wasser ablöschen\n4dl Weisswein dazugeben 20g Zitronensaft\n50g Zucker\nSirupartig einreduzieren\n\n• 5 Stück kleine geschälte Birnen (Stückgewicht ca. 60 g) beigeben \n• Vacumieren\n• Bei 96°C ca. 18 min im Volldampf garen (Fingerdruck Kontrolle)\n\nAuspacken, beliebig in Form bringen",
+      "id": [
+        "304540"
+      ],
+      "lead": "Weissweinbirnen mit Caramel"
+    }
+  }
+]

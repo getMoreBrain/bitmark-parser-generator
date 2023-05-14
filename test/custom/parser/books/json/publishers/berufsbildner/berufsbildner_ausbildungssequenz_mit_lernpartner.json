@@ -1,0 +1,109 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:187225]\n[#Ausbildungssequenz mit meinem/meiner Lernpartner/in]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_ausbildungseq.png]\n[@externalId:e-ausbildungssequenz-mit-meinemmeiner-lern_e-nedd_clyca]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187225"
+      ],
+      "title": "Ausbildungssequenz mit meinem/meiner Lernpartner/in",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_ausbildungseq.png"
+      ],
+      "externalId": [
+        "e-ausbildungssequenz-mit-meinemmeiner-lern_e-nedd_clyca"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187226]\n[%][%Ausgangslage]\n**Überlege dir eine kurze Sequenz aus deinem Berufsfeld, in welcher du deinem/er Lernpartner/in etwas\nbeibringst. Du kannst auch ein Thema aus deinem Hobby oder Geschäftsalltag wählen.**\nMögliche Beispiele: Schnittarten in der Küche, Holzarten erkennen, Hände desinfizieren, ein Kartenspiel\nerklären, eine andere Sprache lernen, Knotenarten mit Seil etc. In der Ausbildungssequenz geht es darum,\ndem Gegenüber etwas Praktisches beizubringen. (Instruktion)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Überlege dir eine kurze Sequenz aus deinem Berufsfeld, in welcher du deinem/er Lernpartner/in etwas\nbeibringst. Du kannst auch ein Thema aus deinem Hobby oder Geschäftsalltag wählen.**\nMögliche Beispiele: Schnittarten in der Küche, Holzarten erkennen, Hände desinfizieren, ein Kartenspiel\nerklären, eine andere Sprache lernen, Knotenarten mit Seil etc. In der Ausbildungssequenz geht es darum,\ndem Gegenüber etwas Praktisches beizubringen. (Instruktion)",
+      "id": [
+        "187226"
+      ],
+      "lead": "Ausgangslage"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187227]\n[%][% Ziel]\nVorbereiten und durchführen einer 10-minütigen Ausbildungssequenz über Zoom.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Vorbereiten und durchführen einer 10-minütigen Ausbildungssequenz über Zoom.",
+      "id": [
+        "187227"
+      ],
+      "lead": "Ziel"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187228]\n[%][% Auftrag]\nBereite dich persönlich auf die Umsetzung vor: Welches Material braucht es (Achtung, die\nAusbildungssequenz läuft über Zoom, das Material kann also nicht geteilt werden). Im kommenden digitalen\nTag führst du diese Ausbildungssequenz über Zoom durch. Anschliessend gibt es ein Feedback\nzu deiner Instruktion durch deinen Lernpartner/deine Lernpartnerin. Was hat ihm/ihr gefallen (Lob)? Was\nwäre auch noch möglich gewesen (konstruktive Kritik).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bereite dich persönlich auf die Umsetzung vor: Welches Material braucht es (Achtung, die\nAusbildungssequenz läuft über Zoom, das Material kann also nicht geteilt werden). Im kommenden digitalen\nTag führst du diese Ausbildungssequenz über Zoom durch. Anschliessend gibt es ein Feedback\nzu deiner Instruktion durch deinen Lernpartner/deine Lernpartnerin. Was hat ihm/ihr gefallen (Lob)? Was\nwäre auch noch möglich gewesen (konstruktive Kritik).",
+      "id": [
+        "187228"
+      ],
+      "lead": "Auftrag"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:187229]\n[%][%Dauer der einzelnen Schritte]\n40 Min Vorbereitung\n10 Min Durchführung\n5 Min Feedback am Kurstag",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "40 Min Vorbereitung\n10 Min Durchführung\n5 Min Feedback am Kurstag",
+      "id": [
+        "187229"
+      ],
+      "lead": "Dauer der einzelnen Schritte"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:187230]\n[! 1. Notizen zur Vorbereitung]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "1. Notizen zur Vorbereitung",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187230"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:187231]\n[! 2. Benötigte Materialien]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "2. Benötigte Materialien",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "187231"
+      ]
+    }
+  }
+]

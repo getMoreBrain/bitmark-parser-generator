@@ -1,0 +1,37 @@
+[
+  {
+    "bitmark": "[.message&website] Have a look at http://www.apple.com\n[&website:https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript]\n[&audio:https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript.mp3]\n[&video:https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript.mp4]\n[&document:https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript]\n\n[!this is a mesage]",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "Have a look at http://www.apple.com",
+      "resource": {
+        "type": "website",
+        "website": "https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript",
+        "siteName": [
+          "https://stackoverflow.com/",
+          "stackoverflow.com"
+        ],
+        "private": {}
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript.mp3"
+        },
+        {
+          "type": "video",
+          "format": "mp4",
+          "src": "https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript.mp4"
+        },
+        {
+          "type": "document",
+          "src": "https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,1104 @@
+[
+  {
+    "bitmark": "[.book]\r\n[@id:294981]\r\n[@externalId:e-bedienungsanleitung_2unbtbnxgmnz]\r\n[#Bedienungsanleitung]\r\n[@language:de]\r\n[##Navigation, Seiteninhalte, Orientierung und Kommunikation]\r\n[@coverImage:https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/cover_motilern_bedienung.png]\r\n[@publisher:motilern]\r\n[@theme:motilern]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "294981"
+      ],
+      "externalId": [
+        "e-bedienungsanleitung_2unbtbnxgmnz"
+      ],
+      "title": "Bedienungsanleitung",
+      "language": [
+        "de"
+      ],
+      "subtitle": "Navigation, Seiteninhalte, Orientierung und Kommunikation",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/cover_motilern_bedienung.png"
+      ],
+      "publisher": [
+        "motilern"
+      ],
+      "theme": [
+        "motilern"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter:bitmark++]\r\n[@id:294982]\r\n[▼ch-1]\r\n[#Navigation]\r\n[▼Ref_Navigation]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark++",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "294982"
+      ],
+      "anchor": "Ref_Navigation",
+      "title": "Navigation"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:294983]\r\n[▼ch-2]\r\n[##Kapitel und Seiten aufrufen, vor- / zurückblättern, Kurs- und Kapitelübersicht.]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "294983"
+      ],
+      "anchor": "ch-2",
+      "title": "Kapitel und Seiten aufrufen, vor- / zurückblättern, Kurs- und Kapitelübersicht."
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark--]\r\n[@id:294984]\r\n“Bildung ist nicht, was man hineinstopft. Bildung ist, was man herausholt.” [@quotedPerson:Ludwig Hasler]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "“Bildung ist nicht, was man hineinstopft. Bildung ist, was man herausholt.”",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "294984"
+      ],
+      "quotedPerson": "Ludwig Hasler"
+    }
+  },
+  {
+    "bitmark": "[.video-link]\r\n[@id:294985]\r\n[&video-link:https://player.vimeo.com/video/702078703]",
+    "bit": {
+      "type": "video-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "294985"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/702078703",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark--]\r\n[@id:294986]\r\n[!Transkript]\r\nWillkommen bei MotiLern, jenem Lern-Management-System, bei dem die Motivation des Lernenden, deinen Kurs bis zum Ende durchzumachen, ganz im Fokus steht.\r\n\r\nMein Name ist Michael Smetana und ich habe dieses Tool entwickelt. Und ich zeig dir jetzt gleich mal, wie einfach du hier in diesem Tool deine einzelnen Seiten aufrufen und navigieren kannst.\r\n\r\nDass man ein Kapitel aufruft, indem man auf die **Kachel** des Kapitels drauf klickt, das hast du schon entdeckt. Und dass man dann in der Kapitel-Übersicht, die einzelnen Seiten anklicken kann, das hast du auch schon entdeckt, sonst wärst du ja gar nicht da.\r\n\r\nJetzt zeig ich dir, wie du auf die **nächste Seite** weiterblätterst. Dazu gibt es rechts oben im Menü in einem runden Kreis so einen Pfeil nach rechts. Da kannst du draufklicken, dann kommst auf die nächste Seite. Und damit's besonders leicht wird für dich und für jeden Lernenden hast du den gleichen Button am Ende jeder Seite nochmal. Links daneben findest dann einen runden Kreis mit dem Pfeil nach links. Das ist natürlich zum **Zurückblättern** und den gleichen Button hast am Ende der Seite auch noch.\r\n\r\nWie kommst du jetzt zurück in die **Kapitel-Übersicht**? Da gibt es zwei Möglichkeiten. Die eine Möglichkeit ist: Du klickst oben im Menü auf das aufgeschlagene Buch auf den Button. So kommst su zurück zur Kapitel-Übersicht, wo du alle Seiten des Kapitels siehst. Oder du klickst oben im Header auf den Namen des Kapitels drauf. Dann bist auch gleich dort.\r\n\r\nWie kommst du jetzt aus einer Seite zurück zur gesamten Kurs-Übersicht, wo du dann alle Kapitel siehst? Auch das ist sehr einfach. Da klickst entweder im Menü oben auf den Button mit dem Lesezeichen oder du kannst auch direkt oben im Header auf den Namen des ganzen Kurses klicken. Dann bist schon da.\r\n\r\nJetzt ist noch die Frage Wie komme ich dann wieder zurück? Ganz auf die **Startseite von MotiLern**. Auch das ist recht einfach. Du hast im Menü das kleine Häuschen. Wenn du darauf klickst, bist du ganz an der Einstiegsseite und kannst deine Kurse auswählen. Oder natürlich auch wenn du auf das Logo draufklickst ... dann geht es auch.\r\n\r\nSo, das war jetzt einmal das Wichtigste zur Navigation. Jetzt spiel ein bisschen rum, klick' mal auf die nächste Seite, klick' zurück auf die letzte Seite, navigiert wieder rauf in die Kapitel-Übersicht in die Kurs-Übersicht, vielleicht auch noch auf die Startseite von MotiLern. Geh wieder hinein und mach dich einmal vertraut mit der Steuerung.\r\n\r\nViel Freude dabei.",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark--",
+      "body": "Willkommen bei MotiLern, jenem Lern-Management-System, bei dem die Motivation des Lernenden, deinen Kurs bis zum Ende durchzumachen, ganz im Fokus steht.\r\n\r\nMein Name ist Michael Smetana und ich habe dieses Tool entwickelt. Und ich zeig dir jetzt gleich mal, wie einfach du hier in diesem Tool deine einzelnen Seiten aufrufen und navigieren kannst.\r\n\r\nDass man ein Kapitel aufruft, indem man auf die **Kachel** des Kapitels drauf klickt, das hast du schon entdeckt. Und dass man dann in der Kapitel-Übersicht, die einzelnen Seiten anklicken kann, das hast du auch schon entdeckt, sonst wärst du ja gar nicht da.\r\n\r\nJetzt zeig ich dir, wie du auf die **nächste Seite** weiterblätterst. Dazu gibt es rechts oben im Menü in einem runden Kreis so einen Pfeil nach rechts. Da kannst du draufklicken, dann kommst auf die nächste Seite. Und damit's besonders leicht wird für dich und für jeden Lernenden hast du den gleichen Button am Ende jeder Seite nochmal. Links daneben findest dann einen runden Kreis mit dem Pfeil nach links. Das ist natürlich zum **Zurückblättern** und den gleichen Button hast am Ende der Seite auch noch.\r\n\r\nWie kommst du jetzt zurück in die **Kapitel-Übersicht**? Da gibt es zwei Möglichkeiten. Die eine Möglichkeit ist: Du klickst oben im Menü auf das aufgeschlagene Buch auf den Button. So kommst su zurück zur Kapitel-Übersicht, wo du alle Seiten des Kapitels siehst. Oder du klickst oben im Header auf den Namen des Kapitels drauf. Dann bist auch gleich dort.\r\n\r\nWie kommst du jetzt aus einer Seite zurück zur gesamten Kurs-Übersicht, wo du dann alle Kapitel siehst? Auch das ist sehr einfach. Da klickst entweder im Menü oben auf den Button mit dem Lesezeichen oder du kannst auch direkt oben im Header auf den Namen des ganzen Kurses klicken. Dann bist schon da.\r\n\r\nJetzt ist noch die Frage Wie komme ich dann wieder zurück? Ganz auf die **Startseite von MotiLern**. Auch das ist recht einfach. Du hast im Menü das kleine Häuschen. Wenn du darauf klickst, bist du ganz an der Einstiegsseite und kannst deine Kurse auswählen. Oder natürlich auch wenn du auf das Logo draufklickst ... dann geht es auch.\r\n\r\nSo, das war jetzt einmal das Wichtigste zur Navigation. Jetzt spiel ein bisschen rum, klick' mal auf die nächste Seite, klick' zurück auf die letzte Seite, navigiert wieder rauf in die Kapitel-Übersicht in die Kurs-Übersicht, vielleicht auch noch auf die Startseite von MotiLern. Geh wieder hinein und mach dich einmal vertraut mit der Steuerung.\r\n\r\nViel Freude dabei.",
+      "id": [
+        "294986"
+      ],
+      "instruction": "Transkript"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\r\n[@id:294987]\r\n[%][%Übungsanleitung]\r\n• Mach dich mit der Navigation vertaut.\r\n\t• Klick' mal auf die nächste Seite. Oben und am Ende der Seite.\r\n\t• Klick' zurück auf die letzte Seite. Oben und am Ende der Seite.\r\n\t• Navigiere wieder rauf in die Kapitel-Übersicht.\r\n\t• Geh zurück zur Kurs-Übersicht.\r\n• Kehre zur Startseite von MotiLern zurück.\r\n\t• Geh wieder in den Einführungskurs hinein und spiel einfach ein bisschen rum.\r\n• Wenn du das Gefühl hast, dass du sattelfest bist, dann mach weiter mit der nächsten Seite.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "• Mach dich mit der Navigation vertaut.\r\n\t• Klick' mal auf die nächste Seite. Oben und am Ende der Seite.\r\n\t• Klick' zurück auf die letzte Seite. Oben und am Ende der Seite.\r\n\t• Navigiere wieder rauf in die Kapitel-Übersicht.\r\n\t• Geh zurück zur Kurs-Übersicht.\r\n• Kehre zur Startseite von MotiLern zurück.\r\n\t• Geh wieder in den Einführungskurs hinein und spiel einfach ein bisschen rum.\r\n• Wenn du das Gefühl hast, dass du sattelfest bist, dann mach weiter mit der nächsten Seite.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "294987"
+      ],
+      "lead": "Übungsanleitung"
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark++]\r\n[@id:294988]\r\n[!Das hier Gelernte brauchst du schon bald auf folgenden Seiten dieses Kurses:]\r\n• Seiten-Inhalte > Voraussetzungen, Slider, Hinweisboxen, Ausklapp-Text, Multiple-Choice\r\n• Orientierung > Sternebewertung, Fortschritt, persönliche Notizen, Lern-Tagebuch, Suche.\r\n• Motivation > Warum erfolgreiche Selbstlernkurse ihre Lernenden bestmöglich motivieren.",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark++",
+      "body": "• Seiten-Inhalte > Voraussetzungen, Slider, Hinweisboxen, Ausklapp-Text, Multiple-Choice\r\n• Orientierung > Sternebewertung, Fortschritt, persönliche Notizen, Lern-Tagebuch, Suche.\r\n• Motivation > Warum erfolgreiche Selbstlernkurse ihre Lernenden bestmöglich motivieren.",
+      "id": [
+        "294988"
+      ],
+      "instruction": "Das hier Gelernte brauchst du schon bald auf folgenden Seiten dieses Kurses:"
+    }
+  },
+  {
+    "bitmark": "[.side-note:bitmark++]\r\n[@id:294989]\r\n[%][%Fazit]\r\n• **Blättern** geht im Hauptmenü und am Ende jeder Seite.\r\n• **Kurs-Übersicht**: Symbol \"Lesezeichen\" oder Name des Kapitels im Header.\r\n• **Kurs-Übersicht**: Symbol \"offenes Buch\" oder Kursname im Header.",
+    "bit": {
+      "type": "side-note",
+      "format": "bitmark++",
+      "body": "• **Blättern** geht im Hauptmenü und am Ende jeder Seite.\r\n• **Kurs-Übersicht**: Symbol \"Lesezeichen\" oder Name des Kapitels im Header.\r\n• **Kurs-Übersicht**: Symbol \"offenes Buch\" oder Kursname im Header.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "294989"
+      ],
+      "lead": "Fazit"
+    }
+  },
+  {
+    "bitmark": "[.chapter:bitmark++]\r\n[@id:294990]\r\n[▼ch-3]\r\n[#Seiten-Inhalte]\r\n[▼Ref_Seiten-Inhalte]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark++",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "294990"
+      ],
+      "anchor": "Ref_Seiten-Inhalte",
+      "title": "Seiten-Inhalte"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:294991]\r\n[▼ch-4]\r\n[##Voraussetzungen, Slider, Hinweisboxen, Ausklapp-Text, Multiple-Choice]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "294991"
+      ],
+      "anchor": "ch-4",
+      "title": "Voraussetzungen, Slider, Hinweisboxen, Ausklapp-Text, Multiple-Choice"
+    }
+  },
+  {
+    "bitmark": "[.internal-link:bitmark--]\r\n[@id:294992]\r\n[!Navigation]\r\n[►Ref_Navigation]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "294992"
+      ],
+      "instruction": "Navigation",
+      "reference": "Ref_Navigation"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark--]\r\n[@id:294993]\r\n“Willst du dich am Ganzen erquicken, so musst du das Ganze im Kleinsten erblicken.” [@quotedPerson: Johann Wolfgang von Goethe]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "“Willst du dich am Ganzen erquicken, so musst du das Ganze im Kleinsten erblicken.”",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "294993"
+      ],
+      "quotedPerson": "Johann Wolfgang von Goethe"
+    }
+  },
+  {
+    "bitmark": "[.video-link]\r\n[@id:294994]\r\n[&video-link:https://player.vimeo.com/video/702095800]",
+    "bit": {
+      "type": "video-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "294994"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/702095800",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark--]\r\n[@id:294995]\r\n[!Transkript]\r\nGratuliere. Du hast die Seite zwei gefunden. Also die Navigation beherrscht schon einmal! Schaun wir uns jetzt einmal an, welche Inhalte du auf jeder Seite von MotiLern finden kannst.\r\n\r\nDer erste Punkt, den du auf vielen Seiten findest, ist: **\"Hier wird das Wissen folgender Seiten vorausgesetzt.\"** Und dann eine mehr oder weniger lange Liste. Warum ist das wichtig? Wichtig ist es deswegen, weil MotLern dich niemals dazu zwingt, erst mal eine Seite anzuschauen, bevor du eine andere kriegst. Du kannst die Seiten in jeder beliebigen Reihenfolge aufrufen, auch wenn sich der Autor natürlich was dabei gedacht hat, dass es in dieser Reihenfolge hergibt. Aber du kannst - wenn du Lust hast, mit Seite 27 anzufangen - dann mach das. Und wir helfen dir dabei sogar noch und schreiben hin: \"Das und das und das setzten wir aber hier voraus. Wenn du das noch nicht gemacht hast, kann es sein, dass du das eine oder andere nicht verstehst. Wenn du dann Lust hast, es zu machen, klickst einfach oben drauf und verzweigst auf die Seite mit dem Vorwissen und machst die zuerst durch. Und wir helfen dir sogar dabei, denn in dem Ring vor dem Seitennamen siehst du entweder einen Haken, wenn du die Seite schon gemacht hast oder eben nichts, wenn es noch fehlt.\r\n\r\nAls nächstes bekommst du einen **Impuls**. Und den Impuls bekommst du als Video oder Transkript. Schau mal oben drüber über dem Video ist so ein kleiner Reiter. Da kannst du hin und herschalten zwischen Video und Transkript. Warum ist das wichtig? Na ja, nicht jeder hat Lust, sich etwas erzählen zu lassen. Manche lesen lieber. Und manche lesen heute lieber und morgen schauen sie lieber ein Video. Also es ist bei jedem ein bisschen anders. Außerdem hast du damit die Möglichkeit, du kannst das Transkript erst einmal überfliegen und kannst dir anschauen: \"Worüber redet er da gerade?\"Und dann erst entscheiden, ob du dir das Video gibst. Das heißt, wir zwingen dich auch nicht dazu, ewiglange Videos anzuschauen, nur um dann drauf zu kommen: Das hättest du eh nicht gebraucht. Also hat viele Vorteile.\r\n\r\nUnter dem Video findest du manchmal **Hinweis-Boxen**. Die roten Boxen sind Hinweis-Boxen, die dir besondere Informationen, die besondere Gewichtung haben, zeigen.\r\n\r\nUnd dann gibt es noch blaue Boxen mit einer **Übungs-Anleitung**. Da steht dann meistens drin, was du jetzt ganz konkret tun sollst, um eigene Erfahrungen mit dem Impuls zu sammeln, um an deinem konkreten Projekt weiterzuarbeiten.\r\n\r\nDann gibt es noch **Slider-Elemente**. Schau mal runter. Unter der Übungs Anleitung findest du auch ein Slider Element. Das sind eigentlich mehrere Seiten, die jeweils Bild oder Text enthalten können. Und du kannst weiterblättern. Und die Punkte oben zeigen dir erstens einmal, wie viele Seiten es gibt. Und dann zeigen sie dir, auf welcher Seite du gerade bist. Und du kannst auch auf die Punkte draufklicken und dadurch direkt auf eine Seite verzweigen.\r\n\r\nDann gibt es noch **Ausklapp-Texte**. Das sind die Texte mit dem kleinen Dreieck am Anfang. Schau mal weiter runter, da habe ich deinen rein gebaut. Wenn du dort drauf klickst, geht ein Text auf und zeigt erst dann die Information. Und wenn du noch mal draufklickst, verschwindet er wieder. Wofür ist das wichtig? Das kann man verwenden, zum Beispiel um hier Texte einzubauen, die nicht für jeden wichtig sind, oder um Texte einzubauen, die noch weiter ins Detail gehen würden nur für die, die sich dann interessieren und sagen: \"Okay, zu dem Punkt möchte ich gern mehr haben.\" Die können das anschauen und dann kann man diese Texte natürlich auch perfekt für Quizzes benutzen. Schau mal die letzte Seite dieses Kapitels. Da findest ein Quiz und dort findest auch einen Ausklapp-Text und siehst, wie man das zum zum Abfragen des Wissens verwenden kann.\r\n\r\nUnd dann gibt es noch **Multiple Choice Elemente**, die findest auch auf der letzten Seite. Und da kannst ein bisschen spielen und kannst dein Wissen testen. Wichtig ist: In MotiLern wird **NICHTS** gespeichert. Das heißt, wenn du die Seite mit dem Test verlässt und wieder aufrufst ... erstens Mal sind alle Eingaben von dir wieder gelöscht und du kannst nochmal anfangen und kannst dein Wissen nochmal testen. Und zweitens kommen die Fragen alle aus einem Pool. Das heißt, du bekommst dann ein bissel andere Fragen und kannst dadurch mehrmals spielen. Und diese Tests dienen ausschließlich dazu, dir zu helfen, dein Wissen zu festigen, alles nochmal zu wiederholen und vielleicht nochmal zu schauen: \"Kann ich das schon? Kann ich das nicht? Wo muss ich noch nachbessern?\"\r\n\r\nSo. Jetzt probier es gleich mal aus. Probier unten den Aufklapp-Text aus. Probiert den Slider aus. Und probier auch auf der letzten Seite die Multiple Choice Fragen aus.\r\n\r\nViel Spaß dabei.",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark--",
+      "body": "Gratuliere. Du hast die Seite zwei gefunden. Also die Navigation beherrscht schon einmal! Schaun wir uns jetzt einmal an, welche Inhalte du auf jeder Seite von MotiLern finden kannst.\r\n\r\nDer erste Punkt, den du auf vielen Seiten findest, ist: **\"Hier wird das Wissen folgender Seiten vorausgesetzt.\"** Und dann eine mehr oder weniger lange Liste. Warum ist das wichtig? Wichtig ist es deswegen, weil MotLern dich niemals dazu zwingt, erst mal eine Seite anzuschauen, bevor du eine andere kriegst. Du kannst die Seiten in jeder beliebigen Reihenfolge aufrufen, auch wenn sich der Autor natürlich was dabei gedacht hat, dass es in dieser Reihenfolge hergibt. Aber du kannst - wenn du Lust hast, mit Seite 27 anzufangen - dann mach das. Und wir helfen dir dabei sogar noch und schreiben hin: \"Das und das und das setzten wir aber hier voraus. Wenn du das noch nicht gemacht hast, kann es sein, dass du das eine oder andere nicht verstehst. Wenn du dann Lust hast, es zu machen, klickst einfach oben drauf und verzweigst auf die Seite mit dem Vorwissen und machst die zuerst durch. Und wir helfen dir sogar dabei, denn in dem Ring vor dem Seitennamen siehst du entweder einen Haken, wenn du die Seite schon gemacht hast oder eben nichts, wenn es noch fehlt.\r\n\r\nAls nächstes bekommst du einen **Impuls**. Und den Impuls bekommst du als Video oder Transkript. Schau mal oben drüber über dem Video ist so ein kleiner Reiter. Da kannst du hin und herschalten zwischen Video und Transkript. Warum ist das wichtig? Na ja, nicht jeder hat Lust, sich etwas erzählen zu lassen. Manche lesen lieber. Und manche lesen heute lieber und morgen schauen sie lieber ein Video. Also es ist bei jedem ein bisschen anders. Außerdem hast du damit die Möglichkeit, du kannst das Transkript erst einmal überfliegen und kannst dir anschauen: \"Worüber redet er da gerade?\"Und dann erst entscheiden, ob du dir das Video gibst. Das heißt, wir zwingen dich auch nicht dazu, ewiglange Videos anzuschauen, nur um dann drauf zu kommen: Das hättest du eh nicht gebraucht. Also hat viele Vorteile.\r\n\r\nUnter dem Video findest du manchmal **Hinweis-Boxen**. Die roten Boxen sind Hinweis-Boxen, die dir besondere Informationen, die besondere Gewichtung haben, zeigen.\r\n\r\nUnd dann gibt es noch blaue Boxen mit einer **Übungs-Anleitung**. Da steht dann meistens drin, was du jetzt ganz konkret tun sollst, um eigene Erfahrungen mit dem Impuls zu sammeln, um an deinem konkreten Projekt weiterzuarbeiten.\r\n\r\nDann gibt es noch **Slider-Elemente**. Schau mal runter. Unter der Übungs Anleitung findest du auch ein Slider Element. Das sind eigentlich mehrere Seiten, die jeweils Bild oder Text enthalten können. Und du kannst weiterblättern. Und die Punkte oben zeigen dir erstens einmal, wie viele Seiten es gibt. Und dann zeigen sie dir, auf welcher Seite du gerade bist. Und du kannst auch auf die Punkte draufklicken und dadurch direkt auf eine Seite verzweigen.\r\n\r\nDann gibt es noch **Ausklapp-Texte**. Das sind die Texte mit dem kleinen Dreieck am Anfang. Schau mal weiter runter, da habe ich deinen rein gebaut. Wenn du dort drauf klickst, geht ein Text auf und zeigt erst dann die Information. Und wenn du noch mal draufklickst, verschwindet er wieder. Wofür ist das wichtig? Das kann man verwenden, zum Beispiel um hier Texte einzubauen, die nicht für jeden wichtig sind, oder um Texte einzubauen, die noch weiter ins Detail gehen würden nur für die, die sich dann interessieren und sagen: \"Okay, zu dem Punkt möchte ich gern mehr haben.\" Die können das anschauen und dann kann man diese Texte natürlich auch perfekt für Quizzes benutzen. Schau mal die letzte Seite dieses Kapitels. Da findest ein Quiz und dort findest auch einen Ausklapp-Text und siehst, wie man das zum zum Abfragen des Wissens verwenden kann.\r\n\r\nUnd dann gibt es noch **Multiple Choice Elemente**, die findest auch auf der letzten Seite. Und da kannst ein bisschen spielen und kannst dein Wissen testen. Wichtig ist: In MotiLern wird **NICHTS** gespeichert. Das heißt, wenn du die Seite mit dem Test verlässt und wieder aufrufst ... erstens Mal sind alle Eingaben von dir wieder gelöscht und du kannst nochmal anfangen und kannst dein Wissen nochmal testen. Und zweitens kommen die Fragen alle aus einem Pool. Das heißt, du bekommst dann ein bissel andere Fragen und kannst dadurch mehrmals spielen. Und diese Tests dienen ausschließlich dazu, dir zu helfen, dein Wissen zu festigen, alles nochmal zu wiederholen und vielleicht nochmal zu schauen: \"Kann ich das schon? Kann ich das nicht? Wo muss ich noch nachbessern?\"\r\n\r\nSo. Jetzt probier es gleich mal aus. Probier unten den Aufklapp-Text aus. Probiert den Slider aus. Und probier auch auf der letzten Seite die Multiple Choice Fragen aus.\r\n\r\nViel Spaß dabei.",
+      "id": [
+        "294995"
+      ],
+      "instruction": "Transkript"
+    }
+  },
+  {
+    "bitmark": "[.warning:bitmark--]\r\n[@id:294996]\r\n[%][%Hinweis-Box]\r\nDas ist ein ganz wichtiger Hinweis.",
+    "bit": {
+      "type": "warning",
+      "format": "bitmark--",
+      "body": "Das ist ein ganz wichtiger Hinweis.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "294996"
+      ],
+      "lead": "Hinweis-Box"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\r\n[@id:294997]\r\n[%][%Übungsanleitung]\r\n• Probiere den Slider aus.\r\n\t• Beachte dabei die Punkte oben.\r\n• Probiere unten den Aufklapp-Text aus.\r\n• Und dann blätter dreimal weiter bis zur Seite 5 des Kapitels und probier dort die Multiple-Choice-Fragen aus.\r\n• Weiter geht es dann auf der Seite \"Orientierung\"",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "• Probiere den Slider aus.\r\n\t• Beachte dabei die Punkte oben.\r\n• Probiere unten den Aufklapp-Text aus.\r\n• Und dann blätter dreimal weiter bis zur Seite 5 des Kapitels und probier dort die Multiple-Choice-Fragen aus.\r\n• Weiter geht es dann auf der Seite \"Orientierung\"",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "294997"
+      ],
+      "lead": "Übungsanleitung"
+    }
+  },
+  {
+    "bitmark": "[.image]\r\n[@id:294998]\r\n[&image:https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/motilern_bedienungsanleitung_1.png][@width:1934]\r\n\r\nErste Seite",
+    "bit": {
+      "type": "image",
+      "format": "bitmark--",
+      "body": "Erste Seite",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "294998"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/motilern_bedienungsanleitung_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "1934",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.image]\r\n[@id:294999]\r\n[&image:https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/motilern_bedienungsanleitung_2.png][@width:1934]\r\n\r\nZweite Seite",
+    "bit": {
+      "type": "image",
+      "format": "bitmark--",
+      "body": "Zweite Seite",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "294999"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/motilern_bedienungsanleitung_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "1934",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.image]\r\n[@id:295000]\r\n[&image:https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/motilern_bedienungsanleitung_3.png][@width:1934]\r\n\r\nDritte Seite",
+    "bit": {
+      "type": "image",
+      "format": "bitmark--",
+      "body": "Dritte Seite",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295000"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/motilern_bedienungsanleitung_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "1934",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark++]\r\n[@id:295001]\r\n[!Hier klicken, um den geheimen Text anzuzeigen.]\r\n\r\nBravo, du hast mich gefunden. Jetzt verstecke den Text schnell wieder, indem du nochmal auf den Titel klickst!\r\n\r\nDas hier Gelernte brauchst du schon bald auf folgenden Seiten dieses Kurses:\r\n• Orientierung > Sternebewertung, Fortschritt, persönliche Notizen, Lern-Tagebuch, Suche.\r\n• Motivation > Warum erfolgreiche Selbstlernkurse ihre Lernenden bestmöglich motivieren.\r\n• Metaprogramme >Wie du die Lernvorlieben deiner Teilnehmer für deren Lernerfolg nutzt.",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark++",
+      "body": "Bravo, du hast mich gefunden. Jetzt verstecke den Text schnell wieder, indem du nochmal auf den Titel klickst!\r\n\r\nDas hier Gelernte brauchst du schon bald auf folgenden Seiten dieses Kurses:\r\n• Orientierung > Sternebewertung, Fortschritt, persönliche Notizen, Lern-Tagebuch, Suche.\r\n• Motivation > Warum erfolgreiche Selbstlernkurse ihre Lernenden bestmöglich motivieren.\r\n• Metaprogramme >Wie du die Lernvorlieben deiner Teilnehmer für deren Lernerfolg nutzt.",
+      "id": [
+        "295001"
+      ],
+      "instruction": "Hier klicken, um den geheimen Text anzuzeigen."
+    }
+  },
+  {
+    "bitmark": "[.side-note:bitmark++]\r\n[@id:295002]\r\n[%][%Fazit]\r\n• Die **Voraussetzungen** helfen dir, wenn du die Seiten in DEINER Reihenfolge aufrufst.\r\n• Du kannst jederzeit entscheiden, ob du lieber ein Video konsumierst oder das **Transkript** liest.\r\n\t• Überfliege doch erst das Transkript und entscheide DANN, ob du das Video überhaut ansehen willst.\r\n• **Hinweisboxen** versorgen dich mit besonderen Informationen.\r\n• In **Slidern** werden mehrere Info-Blöcke übersichtlich dargestellt.\r\n• **Ausklapp-Texte** zeigen Infos nur jenen, die das wirklich möchten.\r\n• **Multiple-Choice-Fragen** dienen **AUSSCHLIEßLICH** zum Spielen, damit du dein Wissen festigen kannst.",
+    "bit": {
+      "type": "side-note",
+      "format": "bitmark++",
+      "body": "• Die **Voraussetzungen** helfen dir, wenn du die Seiten in DEINER Reihenfolge aufrufst.\r\n• Du kannst jederzeit entscheiden, ob du lieber ein Video konsumierst oder das **Transkript** liest.\r\n\t• Überfliege doch erst das Transkript und entscheide DANN, ob du das Video überhaut ansehen willst.\r\n• **Hinweisboxen** versorgen dich mit besonderen Informationen.\r\n• In **Slidern** werden mehrere Info-Blöcke übersichtlich dargestellt.\r\n• **Ausklapp-Texte** zeigen Infos nur jenen, die das wirklich möchten.\r\n• **Multiple-Choice-Fragen** dienen **AUSSCHLIEßLICH** zum Spielen, damit du dein Wissen festigen kannst.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295002"
+      ],
+      "lead": "Fazit"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295003]\r\n[▼ch-5]\r\n[#Orientierung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295003"
+      ],
+      "anchor": "ch-5",
+      "title": "Orientierung"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295004]\r\n[▼ch-6]\r\n[##Sternebewertung, Fortschritt, persönliche Notizen, Lern-Tagebuch, Suche.]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295004"
+      ],
+      "anchor": "ch-6",
+      "title": "Sternebewertung, Fortschritt, persönliche Notizen, Lern-Tagebuch, Suche."
+    }
+  },
+  {
+    "bitmark": "[.internal-link:bitmark--]\r\n[@id:295005]\r\n[!Navigation]\r\n[►Ref_Navigation]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295005"
+      ],
+      "instruction": "Navigation",
+      "reference": "Ref_Navigation"
+    }
+  },
+  {
+    "bitmark": "[.internal-link:bitmark--]\r\n[@id:295006]\r\n[!Seiten-Inhalte]\r\n[►Ref_Seiten-Inhalte]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295006"
+      ],
+      "instruction": "Seiten-Inhalte",
+      "reference": "Ref_Seiten-Inhalte"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark--]\r\n[@id:295007]\r\n“Die Lösung ist immer einfach, man muss sie nur finden.” [@quotedPerson: Alexander Solschenizyn]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "“Die Lösung ist immer einfach, man muss sie nur finden.”",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295007"
+      ],
+      "quotedPerson": "Alexander Solschenizyn"
+    }
+  },
+  {
+    "bitmark": "[.video-link]\r\n[@id:303472]\r\n[&video-link:https://player.vimeo.com/video/702114835]",
+    "bit": {
+      "type": "video-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "303472"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/702114835",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark--]\r\n[@id:295009]\r\n[!Transkript]\r\nHast du schon entdeckt, dass du in MotiLern jede Seite am Ende mit bis zu **fünf Sternen** bewerten kannst? Was bewirkt das denn? Nun, den ersten Vorteil davon hast du. Denn eine Seite bewerten kannst du natürlich erst dann, wenn sie durchgearbeitet hast. Und dadurch erkennt MotiLern automatisch: Eine bewertete Seite ist durchgearbeitet. Und zeigt dir diese Seite in allen Kursfortschritten auch als durchgearbeitet an.\r\n\r\nKursfortschritt ist ein gutes Stichwort. Den **Fortschritt** siehst du zum Beispiel rechts oben im Menü dazu eine Torte. Und der zeigt dir an, wie viel Prozent von dem Kurs du schon erledigt hast. Den Kursfortschritt siehst du aber auch in der Kurs-Übersicht, wo du die einzelnen Kapiteln hast. Und bei jedem Kapitel siehst du in der Kachel rechts unten im Bild auch eine Torte und die zeigt dir, wie viel Prozent von dem Kapitel du erledigt hast. Und wenn du da drauf klickst und in der Kapitel-Übersicht bist, wo du die einzelnen Seiten siehst, siehst du bei jeder Seite entweder einen Haken oder einen leeren Kreis. Und damit siehst du auch: \"Aha. Welche Seiten habe ich schon und welche sind noch offen?\"\r\n\r\nUnd es gibt noch eine weitere Funktion. Wenn du oben im Hauptmenü auf den Kreis mit der Torte drauf klickst, mit der Fortschrittstorte drauf klickst, dann bekommst du eine übersichtliche Liste angezeigt, wo alle Seiten drin sind, die du noch nicht bewertet hast, **die für dich noch offen sind**.\r\n\r\nDas zweite, was wir uns jetzt anschauen könnten, sind die **persönlichen Notizen**. Du findest weiter unten ein Feld für persönliche Notizen. Da kannst du das eintragen, was dir besonders wichtig erscheint. Und zwar nicht irgendwo, sondern da, wo du gerade bist, auf der Seite, wo du lernst. Genau dort kannst du auch deine Notizen machen. Du brauchst nicht irgendwas anderes aufrufen und woanders hingehen. Genau dort wo du bist, kannst du auch eintragen. Und du kannst dann rechts oben aufs **Lern-Tagebuch** klicken, wenn du was eingetragen hast und kriegst dort einmal - übersichtlich dargestellt - alle Seiten, auf denen du etwas eingetragen hast und was du dort eingetragen hast. Das heißt, auf einen Klick - auf einen Blick - hast du die wichtigste Essenz aus jedem Kurs hier oben im Lern-Tagebuch vor dir.\r\n\r\nUnd das letzte, was ich dann noch zeigen möchte, hier ist die **Suchfunktion**. Bei der Suchfunktion kannst du einen beliebigen Begriff eingeben und kannst diesen Begriff im ganzen Kurs suchen. Und zwar nachdem wir hier Transkripte haben, findet die Suchfunktion auch Wörter, die ich im Video gesagt habe, weil es ja im Transkript steht.\r\n\r\nSo, jetzt probier's mal aus, spiel mal ein bisschen rum, bewertet diese Seite einmal mit 1-2-3-4-5 Sternen. Blätter auch noch zurück, bitte auf die vorderen zwei Seiten und bewerte auch diese Seiten und schau dir oben an im Kurs-Fortschritt, wie sich der jeweils verändert. Dann kannst du mal etwas ins persönliche Notizfeld hineinschreiben und schau dir mal an, wie das Lern-Tagebuch jetzt ausschaut. Und dann spiel auch noch mit ein bisschen mit der Suchfunktion herum. Gib einen Suchbegriff ein und lass dir anzeigen, wo dieser Begriff in diesem Kurs vorkommt. Viel Spaß beim Suchen.\r\n\r\nViel Spaß beim Ausprobieren.",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark--",
+      "body": "Hast du schon entdeckt, dass du in MotiLern jede Seite am Ende mit bis zu **fünf Sternen** bewerten kannst? Was bewirkt das denn? Nun, den ersten Vorteil davon hast du. Denn eine Seite bewerten kannst du natürlich erst dann, wenn sie durchgearbeitet hast. Und dadurch erkennt MotiLern automatisch: Eine bewertete Seite ist durchgearbeitet. Und zeigt dir diese Seite in allen Kursfortschritten auch als durchgearbeitet an.\r\n\r\nKursfortschritt ist ein gutes Stichwort. Den **Fortschritt** siehst du zum Beispiel rechts oben im Menü dazu eine Torte. Und der zeigt dir an, wie viel Prozent von dem Kurs du schon erledigt hast. Den Kursfortschritt siehst du aber auch in der Kurs-Übersicht, wo du die einzelnen Kapiteln hast. Und bei jedem Kapitel siehst du in der Kachel rechts unten im Bild auch eine Torte und die zeigt dir, wie viel Prozent von dem Kapitel du erledigt hast. Und wenn du da drauf klickst und in der Kapitel-Übersicht bist, wo du die einzelnen Seiten siehst, siehst du bei jeder Seite entweder einen Haken oder einen leeren Kreis. Und damit siehst du auch: \"Aha. Welche Seiten habe ich schon und welche sind noch offen?\"\r\n\r\nUnd es gibt noch eine weitere Funktion. Wenn du oben im Hauptmenü auf den Kreis mit der Torte drauf klickst, mit der Fortschrittstorte drauf klickst, dann bekommst du eine übersichtliche Liste angezeigt, wo alle Seiten drin sind, die du noch nicht bewertet hast, **die für dich noch offen sind**.\r\n\r\nDas zweite, was wir uns jetzt anschauen könnten, sind die **persönlichen Notizen**. Du findest weiter unten ein Feld für persönliche Notizen. Da kannst du das eintragen, was dir besonders wichtig erscheint. Und zwar nicht irgendwo, sondern da, wo du gerade bist, auf der Seite, wo du lernst. Genau dort kannst du auch deine Notizen machen. Du brauchst nicht irgendwas anderes aufrufen und woanders hingehen. Genau dort wo du bist, kannst du auch eintragen. Und du kannst dann rechts oben aufs **Lern-Tagebuch** klicken, wenn du was eingetragen hast und kriegst dort einmal - übersichtlich dargestellt - alle Seiten, auf denen du etwas eingetragen hast und was du dort eingetragen hast. Das heißt, auf einen Klick - auf einen Blick - hast du die wichtigste Essenz aus jedem Kurs hier oben im Lern-Tagebuch vor dir.\r\n\r\nUnd das letzte, was ich dann noch zeigen möchte, hier ist die **Suchfunktion**. Bei der Suchfunktion kannst du einen beliebigen Begriff eingeben und kannst diesen Begriff im ganzen Kurs suchen. Und zwar nachdem wir hier Transkripte haben, findet die Suchfunktion auch Wörter, die ich im Video gesagt habe, weil es ja im Transkript steht.\r\n\r\nSo, jetzt probier's mal aus, spiel mal ein bisschen rum, bewertet diese Seite einmal mit 1-2-3-4-5 Sternen. Blätter auch noch zurück, bitte auf die vorderen zwei Seiten und bewerte auch diese Seiten und schau dir oben an im Kurs-Fortschritt, wie sich der jeweils verändert. Dann kannst du mal etwas ins persönliche Notizfeld hineinschreiben und schau dir mal an, wie das Lern-Tagebuch jetzt ausschaut. Und dann spiel auch noch mit ein bisschen mit der Suchfunktion herum. Gib einen Suchbegriff ein und lass dir anzeigen, wo dieser Begriff in diesem Kurs vorkommt. Viel Spaß beim Suchen.\r\n\r\nViel Spaß beim Ausprobieren.",
+      "id": [
+        "295009"
+      ],
+      "instruction": "Transkript"
+    }
+  },
+  {
+    "bitmark": "[.warning:bitmark--]\r\n[@id:295010]\r\n[%][%Hinweis]\r\nTeste jetzt mal nur die persönliche Notiz.\r\n\r\nÜber das Forum und die Kommunikation mit dem Autor verrate ich dir mehr auf der nächsten Seite.",
+    "bit": {
+      "type": "warning",
+      "format": "bitmark--",
+      "body": "Teste jetzt mal nur die persönliche Notiz.\r\n\r\nÜber das Forum und die Kommunikation mit dem Autor verrate ich dir mehr auf der nächsten Seite.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295010"
+      ],
+      "lead": "Hinweis"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\r\n[@id:295011]\r\n[%][%Übungsanleitung]\r\n• Bewerte diese Seite (recht unten über den Blätter-Pfeilen) mit 1 bis 5 Sternen.\r\n• Blättere zurück auf die ersten beiden Seiten dieses Kurses und bewerte auch die.\r\n\t• Beobachte, wie sich danach beim Weiterblättern dein Kurs-Fortschritt (Der Kreis rechts oben im Hauptmenü) verändert.\r\n• Schreib etwas ins persönliche Notizfeld auf dieser Seite\r\n\t• Denk' daran, rechts auf [speichern] zu klicken!\r\n\t• Klicke dann im Hauptmenü aufs Lern-Tagebuch und schau dir an, was dort nun angezeigt wird.\r\n• Probier die Such-Funktion aus\r\n\t• Gib einen Suchbegriff ein und lass dir anzeigen, auf welchen Seiten der vorkommt. Viel Spaß beim Ausprobieren.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "• Bewerte diese Seite (recht unten über den Blätter-Pfeilen) mit 1 bis 5 Sternen.\r\n• Blättere zurück auf die ersten beiden Seiten dieses Kurses und bewerte auch die.\r\n\t• Beobachte, wie sich danach beim Weiterblättern dein Kurs-Fortschritt (Der Kreis rechts oben im Hauptmenü) verändert.\r\n• Schreib etwas ins persönliche Notizfeld auf dieser Seite\r\n\t• Denk' daran, rechts auf [speichern] zu klicken!\r\n\t• Klicke dann im Hauptmenü aufs Lern-Tagebuch und schau dir an, was dort nun angezeigt wird.\r\n• Probier die Such-Funktion aus\r\n\t• Gib einen Suchbegriff ein und lass dir anzeigen, auf welchen Seiten der vorkommt. Viel Spaß beim Ausprobieren.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295011"
+      ],
+      "lead": "Übungsanleitung"
+    }
+  },
+  {
+    "bitmark": "[.side-note:bitmark++]\r\n[@id:295012]\r\n[%][%Fazit]\r\n• Bewerte **JEDE** Seite mit 1-5 Sternen, sobald du sie durchgearbeitet hast.\r\n\t• Dein **Kurs-Fortschritt** wird danach berechnet.\r\n\t• Der Autor bekommt anonymisiertes Feedback über die einzelnen Seiten des Kurses.\r\n\t• Klicke auf die Fortschritts-Torte im Hauptmenü um **alle noch offenen Seiten** dieses Kurses zu sehen.\r\n• nutze das **Notizfeld**, um deine wichtigsten Erkenntnisse festzuhalten.\r\n\t• Du siehst dann im Lerntagebuch auf einen Blick alles, was für dich besonders wichtig oder wertvoll war.\r\n• Nutze die **Suchfunktion**, um punktgenau Antworten auf deine wichtigsten Fragen zu bekommen.\r\n\t• zusammen mit den Voraussetzungen auf jeder Seite wird jeder Kurs damit für dich zu einem individuellen Ratgeber.",
+    "bit": {
+      "type": "side-note",
+      "format": "bitmark++",
+      "body": "• Bewerte **JEDE** Seite mit 1-5 Sternen, sobald du sie durchgearbeitet hast.\r\n\t• Dein **Kurs-Fortschritt** wird danach berechnet.\r\n\t• Der Autor bekommt anonymisiertes Feedback über die einzelnen Seiten des Kurses.\r\n\t• Klicke auf die Fortschritts-Torte im Hauptmenü um **alle noch offenen Seiten** dieses Kurses zu sehen.\r\n• nutze das **Notizfeld**, um deine wichtigsten Erkenntnisse festzuhalten.\r\n\t• Du siehst dann im Lerntagebuch auf einen Blick alles, was für dich besonders wichtig oder wertvoll war.\r\n• Nutze die **Suchfunktion**, um punktgenau Antworten auf deine wichtigsten Fragen zu bekommen.\r\n\t• zusammen mit den Voraussetzungen auf jeder Seite wird jeder Kurs damit für dich zu einem individuellen Ratgeber.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295012"
+      ],
+      "lead": "Fazit"
+    }
+  },
+  {
+    "bitmark": "[.chapter:bitmark++]\r\n[@id:295013]\r\n[▼ch-7]\r\n[#Kommunikation]\r\n[▼Ref_Kommunikation]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark++",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295013"
+      ],
+      "anchor": "Ref_Kommunikation",
+      "title": "Kommunikation"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295014]\r\n[▼ch-8]\r\n[##Forum, beobachten, Likes, Kommunikation mit dem Autor]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295014"
+      ],
+      "anchor": "ch-8",
+      "title": "Forum, beobachten, Likes, Kommunikation mit dem Autor"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark--]\r\n[@id:295015]\r\n“Es genügt nicht, zur Sache zu reden, man muss zu den Menschen reden.” [@quotedPerson: Stanislaw Jerzy Lec]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "“Es genügt nicht, zur Sache zu reden, man muss zu den Menschen reden.”",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295015"
+      ],
+      "quotedPerson": "Stanislaw Jerzy Lec"
+    }
+  },
+  {
+    "bitmark": "[.video-link]\r\n[@id:295016]\r\n[&video-link:https://player.vimeo.com/video/702136935]",
+    "bit": {
+      "type": "video-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295016"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/702136935",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark--]\r\n[@id:295017]\r\n[!Transkript]\r\nUnd damit sind wir auch schon auf der letzten Seite dieses Kapitels angelangt. Kommunikation. Du findest in MotiLern auf vielen Seiten direkt in die Seite integriert ein **Forum**. Also brauchst nicht irgendeine andere App aufrufen oder irgendwas suchen oder irgendwo hier klicken. Nix. Genau da wo du bist. Genau da wo du lernst. Genau da wo du übst, kannst du dich auch austauschen mit anderen Gleichgesinnten.\r\n\r\nNachdem dieses hier der Einführungskurs ein offener Kursus ist, das Forum hier **moderiert**. Also wenn da irgendjemand Werbung reinschreibt oder irgendwo spammt oder Hacker-Codes reinschreibt, ... das wird nicht freigegeben. Ansonsten werden alle anderen Beiträge von mir freigegeben. Ob das Forum im Kurs dann moderiert ist oder ob alles sofort angezeigt wird, das entscheidet dann der jeweilige Autor.\r\n\r\nWenn du etwas ins Forum eingegeben hast, kannst du das auch nachträglich wieder **ändern**, indem du auf den Bleistift klickst. Hier beim Eintrag kannst du nachträglich auch wieder was ändern. Und du kannst deinen Beitrag auch nachträglich wieder **löschen**, wenn du draufkommst: Das war doch nicht so g'scheit. netzk. Dann tust ihn wieder raus.\r\n\r\nBeim Eingeben des Eintrags bitte denk dran, dass du rechts auf **Speichern** klickst, sonst ist es natürlich nicht da.\r\n\r\nAlso beim Eingeben des Beitrags, kannst du links auch die **Checkbox \"beobachten\"** anklicken. Was bedeutet das? Das bedeutet, dass du per eMail informiert wirst, sobald der Nächste etwas in dieses Forum hineinschreibt. Denn das könnte ja eine Antwort sein auf das, was du hineingeschrieben hast. Also wenn du möchtest, dass du informiert wirst, hakt die Checkbox an, dann kriegst die Info. Und in jeder Mail, die du kriegst, kannst du diese Info auch wieder abbestellen. Also keine Sorge, das geht nur so lang, wie du magst.\r\n\r\nRechts bei jedem Beitrag findest du ein Herz. Auf dieses Herz kannst du draufklicken und diesem Beitrag ein **Like** vergeben. Vergibt diese Likes für besonders schöne Beiträge, besonders nützliche Beiträge, für Beiträge, die dich besonders ansprechen und die dich berühren vielleicht - und einfach, um dem Beitraggeber - um dem Schreiber zu zeigen, du findest das gut. Und rechts oben im Menü siehst du auch wieder ein Herz und kannst in dem Herz sehen, **wie viel Likes** du schon in diesem Kurs bekommen hast.\r\n\r\nUnd dann ist in dieser Kommunikationsprozess rechts noch ein Reiter für den **Autor** - für die Kommunikation mit dem Autor. Wofür ist die da? Die ist dafür da, um dem Autor direkte Rückmeldungen über diese Seite zu geben. Also wenn irgendwas technisch nicht funktioniert, kannst ihm das hineinschreiben. Wenn du einen Rechtschreibfehler findest, kannst das reinschreiben - dem Autor. Wenn irgendetwas undeutlich formuliert ist, wenn man irgendwas nicht versteht, dann kannst du den Autor kontaktieren. Und bitte macht es auf jeden Fall immer dann, wenn du - sagen wir mal weniger als vier Sterne für eine Seite vergeben hast - dann wäre es ganz nett, wenn du dem Autor auch schreiben würdest, warum dir das denn nicht gefallen hat, weil sonst fängt der nichts an mit der Information. Also dafür ist das Feld da.\r\n\r\nSo! Dann probier's einmal aus. Spiel' ein bisschen rum. Gib einmal was ins Forum rein. Es ist nur ein Einführungskurs. Also das ist völlig wurscht, was da drin steht, da erwartet keiner nobelpreisverdächtige Meldungen, schreib' einfach irgendwas ins Forum rein. Es wird so schnell wie möglich freigegeben. Und schau dir dann auch an, was die anderen eingetragen haben und vergib ein paar Likes für die Beiträge der anderen.\r\n\r\nUnd dann kannst vielleicht in ein paar Tagen wiederkommen und kannst einmal schauen, wie viele Likes du inzwischen bekommen hast. Viel Spaß dabei.",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark--",
+      "body": "Und damit sind wir auch schon auf der letzten Seite dieses Kapitels angelangt. Kommunikation. Du findest in MotiLern auf vielen Seiten direkt in die Seite integriert ein **Forum**. Also brauchst nicht irgendeine andere App aufrufen oder irgendwas suchen oder irgendwo hier klicken. Nix. Genau da wo du bist. Genau da wo du lernst. Genau da wo du übst, kannst du dich auch austauschen mit anderen Gleichgesinnten.\r\n\r\nNachdem dieses hier der Einführungskurs ein offener Kursus ist, das Forum hier **moderiert**. Also wenn da irgendjemand Werbung reinschreibt oder irgendwo spammt oder Hacker-Codes reinschreibt, ... das wird nicht freigegeben. Ansonsten werden alle anderen Beiträge von mir freigegeben. Ob das Forum im Kurs dann moderiert ist oder ob alles sofort angezeigt wird, das entscheidet dann der jeweilige Autor.\r\n\r\nWenn du etwas ins Forum eingegeben hast, kannst du das auch nachträglich wieder **ändern**, indem du auf den Bleistift klickst. Hier beim Eintrag kannst du nachträglich auch wieder was ändern. Und du kannst deinen Beitrag auch nachträglich wieder **löschen**, wenn du draufkommst: Das war doch nicht so g'scheit. netzk. Dann tust ihn wieder raus.\r\n\r\nBeim Eingeben des Eintrags bitte denk dran, dass du rechts auf **Speichern** klickst, sonst ist es natürlich nicht da.\r\n\r\nAlso beim Eingeben des Beitrags, kannst du links auch die **Checkbox \"beobachten\"** anklicken. Was bedeutet das? Das bedeutet, dass du per eMail informiert wirst, sobald der Nächste etwas in dieses Forum hineinschreibt. Denn das könnte ja eine Antwort sein auf das, was du hineingeschrieben hast. Also wenn du möchtest, dass du informiert wirst, hakt die Checkbox an, dann kriegst die Info. Und in jeder Mail, die du kriegst, kannst du diese Info auch wieder abbestellen. Also keine Sorge, das geht nur so lang, wie du magst.\r\n\r\nRechts bei jedem Beitrag findest du ein Herz. Auf dieses Herz kannst du draufklicken und diesem Beitrag ein **Like** vergeben. Vergibt diese Likes für besonders schöne Beiträge, besonders nützliche Beiträge, für Beiträge, die dich besonders ansprechen und die dich berühren vielleicht - und einfach, um dem Beitraggeber - um dem Schreiber zu zeigen, du findest das gut. Und rechts oben im Menü siehst du auch wieder ein Herz und kannst in dem Herz sehen, **wie viel Likes** du schon in diesem Kurs bekommen hast.\r\n\r\nUnd dann ist in dieser Kommunikationsprozess rechts noch ein Reiter für den **Autor** - für die Kommunikation mit dem Autor. Wofür ist die da? Die ist dafür da, um dem Autor direkte Rückmeldungen über diese Seite zu geben. Also wenn irgendwas technisch nicht funktioniert, kannst ihm das hineinschreiben. Wenn du einen Rechtschreibfehler findest, kannst das reinschreiben - dem Autor. Wenn irgendetwas undeutlich formuliert ist, wenn man irgendwas nicht versteht, dann kannst du den Autor kontaktieren. Und bitte macht es auf jeden Fall immer dann, wenn du - sagen wir mal weniger als vier Sterne für eine Seite vergeben hast - dann wäre es ganz nett, wenn du dem Autor auch schreiben würdest, warum dir das denn nicht gefallen hat, weil sonst fängt der nichts an mit der Information. Also dafür ist das Feld da.\r\n\r\nSo! Dann probier's einmal aus. Spiel' ein bisschen rum. Gib einmal was ins Forum rein. Es ist nur ein Einführungskurs. Also das ist völlig wurscht, was da drin steht, da erwartet keiner nobelpreisverdächtige Meldungen, schreib' einfach irgendwas ins Forum rein. Es wird so schnell wie möglich freigegeben. Und schau dir dann auch an, was die anderen eingetragen haben und vergib ein paar Likes für die Beiträge der anderen.\r\n\r\nUnd dann kannst vielleicht in ein paar Tagen wiederkommen und kannst einmal schauen, wie viele Likes du inzwischen bekommen hast. Viel Spaß dabei.",
+      "id": [
+        "295017"
+      ],
+      "instruction": "Transkript"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\r\n[@id:295018]\r\n[%][%Übungsanleitung]\r\n• Gib etwas ins Forum ein.\r\n\t• Es ist nur ein Einführungskurs - niemand erwartet da nobelpreisverdächtige Meldungen. Schreib' einfach irgendwas.\r\n\t• Ich werde deine Meldung so schnell wie möglich freigeben.\r\n• Schau dir an, was die anderen eingetragen haben und vergib ein paar Likes für die Beiträge der anderen.\r\n• Komm nach ein paar Tagen wieder in den Einführungs-Kurs und schau', wie viele Likes du inzwischen bekommen hast. Viel Spaß dabei.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "• Gib etwas ins Forum ein.\r\n\t• Es ist nur ein Einführungskurs - niemand erwartet da nobelpreisverdächtige Meldungen. Schreib' einfach irgendwas.\r\n\t• Ich werde deine Meldung so schnell wie möglich freigeben.\r\n• Schau dir an, was die anderen eingetragen haben und vergib ein paar Likes für die Beiträge der anderen.\r\n• Komm nach ein paar Tagen wieder in den Einführungs-Kurs und schau', wie viele Likes du inzwischen bekommen hast. Viel Spaß dabei.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295018"
+      ],
+      "lead": "Übungsanleitung"
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark++]\r\n[@id:295019]\r\n[!Das hier Gelernte brauchst du schon bald auf folgenden Seiten dieses Kurses:]\r\n• Metaprogramme > Wie du die Lernvorlieben deiner Teilnehmer für deren Lernerfolg nutzt.",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark++",
+      "body": "• Metaprogramme > Wie du die Lernvorlieben deiner Teilnehmer für deren Lernerfolg nutzt.",
+      "id": [
+        "295019"
+      ],
+      "instruction": "Das hier Gelernte brauchst du schon bald auf folgenden Seiten dieses Kurses:"
+    }
+  },
+  {
+    "bitmark": "[.side-note:bitmark++]\r\n[@id:295020]\r\n[%][%Fazit]\r\n• Im **Forum** kannst du deine Erkentnisse und Erfahrungen direkt mit Gleichgesinnten austauschen.\r\n\t• Denk daran, immer auf [speichern] zu klicken.\r\n\t• Deine Einträge kannst du auch nachträglich ändern oder löschen.\r\n• Wähle die Checkbox \"beobachten\", wenn du per eMail informiert werden möchtest, sobald der Nächste etwas ins gleiche Forum schreibt.\r\n\t• In jeder eMail, die du bekommst, kannst du weitere Beobachtungen dieses Forums auch wieder abbestellen.\r\n• Likes\r\n\t• vergb fleißig Likes für insteressante, lehrreiche, berührende oder spannende Meldungen anderer Lernender.\r\n\t• Schreib nicht nur viel ins Forum, sondern auch viel Nützliches.\r\n\t• rechts oben im Hauptmenü siehst du, wie viele Likes du schon in diessem Kurs bekommen hast.\r\n• Kommunikation mit dem Autor\r\n\t• wenn du einen Fehler auf der Seite gefunden hast.\r\n\t• wenn etwas unklar formuliert ist.\r\n\t• wenn du für eine Seite weniger als 4 Sterne vergeben hast.",
+    "bit": {
+      "type": "side-note",
+      "format": "bitmark++",
+      "body": "• Im **Forum** kannst du deine Erkentnisse und Erfahrungen direkt mit Gleichgesinnten austauschen.\r\n\t• Denk daran, immer auf [speichern] zu klicken.\r\n\t• Deine Einträge kannst du auch nachträglich ändern oder löschen.\r\n• Wähle die Checkbox \"beobachten\", wenn du per eMail informiert werden möchtest, sobald der Nächste etwas ins gleiche Forum schreibt.\r\n\t• In jeder eMail, die du bekommst, kannst du weitere Beobachtungen dieses Forums auch wieder abbestellen.\r\n• Likes\r\n\t• vergb fleißig Likes für insteressante, lehrreiche, berührende oder spannende Meldungen anderer Lernender.\r\n\t• Schreib nicht nur viel ins Forum, sondern auch viel Nützliches.\r\n\t• rechts oben im Hauptmenü siehst du, wie viele Likes du schon in diessem Kurs bekommen hast.\r\n• Kommunikation mit dem Autor\r\n\t• wenn du einen Fehler auf der Seite gefunden hast.\r\n\t• wenn etwas unklar formuliert ist.\r\n\t• wenn du für eine Seite weniger als 4 Sterne vergeben hast.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295020"
+      ],
+      "lead": "Fazit"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295021]\r\n[▼ch-9]\r\n[#Teste dein Wissen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295021"
+      ],
+      "anchor": "ch-9",
+      "title": "Teste dein Wissen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295022]\r\n[▼ch-10]\r\n[##Wie gut beherrsche ich die Bedienung von MotiLern?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295022"
+      ],
+      "anchor": "ch-10",
+      "title": "Wie gut beherrsche ich die Bedienung von MotiLern?"
+    }
+  },
+  {
+    "bitmark": "[.warning:bitmark--]\r\n[@id:295023]\r\n[%][%ACHTUNG]\r\nDer Quiz auf dieser Seite dient **ausschließlich** der Vertiefung deiner Lernerfahrung. Deine Antworten werden nicht gespeichert. Sobald du die Seite verlässt, sind damit auch deine angeklickten Ergebnisse wieder weg. Bei einem erneuten Aufruf bekommst du zufällige Fragen aus einem Fragen-Pool gestellt und kannst dann dein Wissen erneut testen.",
+    "bit": {
+      "type": "warning",
+      "format": "bitmark--",
+      "body": "Der Quiz auf dieser Seite dient **ausschließlich** der Vertiefung deiner Lernerfahrung. Deine Antworten werden nicht gespeichert. Sobald du die Seite verlässt, sind damit auch deine angeklickten Ergebnisse wieder weg. Bei einem erneuten Aufruf bekommst du zufällige Fragen aus einem Fragen-Pool gestellt und kannst dann dein Wissen erneut testen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295023"
+      ],
+      "lead": "ACHTUNG"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\r\n[@id:295024]\r\n[%A01]\r\n[!Was ist die wichtigste Aufgabe eines Lern-Management-Systems?]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Was ist die wichtigste Aufgabe eines Lern-Management-Systems?",
+      "partialAnswer": "",
+      "body": "",
+      "item": "A01",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295024"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark--]\r\n[@id:295025]\r\n[%][%Lösung]\r\nEs muss so einfach zu bedienen sein, dass der Lernende sich voll auf den Inhalt konzentrieren kann.",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark--",
+      "body": "Es muss so einfach zu bedienen sein, dass der Lernende sich voll auf den Inhalt konzentrieren kann.",
+      "id": [
+        "295025"
+      ],
+      "lead": "Lösung"
+    }
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--]\r\n[@id:295026]\r\n[%A02]\r\n[!Wo kannst du auf die nächste Seite blättern?]\r\n===\r\n[-durch Wischen mit dem Finger]\r\n[-mit der Pfeiltaste (->)]\r\n[+Im Hauptmenü oben]\r\n[-über Sprachsteuerung]\r\n[+am Ende jeder Seite]\r\n===",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "A02",
+      "instruction": "Wo kannst du auf die nächste Seite blättern?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "responses": [
+            {
+              "response": "durch Wischen mit dem Finger",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "mit der Pfeiltaste (->)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Im Hauptmenü oben",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "über Sprachsteuerung",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "am Ende jeder Seite",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "295026"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--]\r\n[@id:295027]\r\n[%A03]\r\n[!Wozu werden auf jeder Seite die Voraussetzungen angezeigt?]\r\n===\r\n[+Durch einen Klick auf die Voraussetzungen rufst du die jeweiligen Erklärungen auf.]\r\n[-Wenn du die Voraussetzungen nicht erfüllst, darfst du diese Seite nicht lesen.]\r\n[+Sie zeigen dir auf einen Blick, welche notwendigen Seiten zu bereits durchgearbeitet hast.]\r\n[+Sie zeigen, welches notwendige Wissen hier vorausgesetzt und nicht mehr erneut erklärt wird.]\r\n[-Die angeführten Punkte sind Pflicht für das Erlangen eines Zertifikates.]\r\n===",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "A03",
+      "instruction": "Wozu werden auf jeder Seite die Voraussetzungen angezeigt?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "responses": [
+            {
+              "response": "Durch einen Klick auf die Voraussetzungen rufst du die jeweiligen Erklärungen auf.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Wenn du die Voraussetzungen nicht erfüllst, darfst du diese Seite nicht lesen.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Sie zeigen dir auf einen Blick, welche notwendigen Seiten zu bereits durchgearbeitet hast.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Sie zeigen, welches notwendige Wissen hier vorausgesetzt und nicht mehr erneut erklärt wird.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Die angeführten Punkte sind Pflicht für das Erlangen eines Zertifikates.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "295027"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--]\r\n[@id:295028]\r\n[%A04]\r\n[!Wozu gibt es auf jeder Seite die Möglichkeit für persönliche Notizen?]\r\n===\r\n[+Damit du dir neue Erkenntnisse sofort festhalten kannst.]\r\n[-Damit die einzelnen Seiten künstlich verlängert werden.]\r\n[+Damit du nicht durch den Aufruf anderer Tools abgelenkt wirst.]\r\n[-Damit du deinem Chef beweisen kannst, dass du wirklich etwas gearbeitet hast.]\r\n[+Damit du im Lerntagebuch auf einen Blick alles Wichtige siehst.]\r\n[-Damit du zwischendurch auch mal was tippst - sonst rostet das Keyboard ein.]\r\n===",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "A04",
+      "instruction": "Wozu gibt es auf jeder Seite die Möglichkeit für persönliche Notizen?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "responses": [
+            {
+              "response": "Damit du dir neue Erkenntnisse sofort festhalten kannst.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Damit die einzelnen Seiten künstlich verlängert werden.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Damit du nicht durch den Aufruf anderer Tools abgelenkt wirst.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Damit du deinem Chef beweisen kannst, dass du wirklich etwas gearbeitet hast.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Damit du im Lerntagebuch auf einen Blick alles Wichtige siehst.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "Damit du zwischendurch auch mal was tippst - sonst rostet das Keyboard ein.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "295028"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response:bitmark--]\r\n[@id:295029]\r\n[%A05]\r\n[!An den Autor wendest du dich, ...]\r\n===\r\n[+wenn du einen Rechtschreib- oder sonstigen Fehler auf dieser Seite gefunden hast.]\r\n[-um ihn zu einer Party einzuladen.]\r\n[-wenn dir seine Frisur oder Kleidung nicht - oder besonders gut gefällt.]\r\n[-wenn dein Comuter immer wieder abstürzt.]\r\n[+wenn du eine Erklärung nicht verstanden hast und auch das Forum dabei nicht weiterhilft.]\r\n[+bei techischen Problemen.]\r\n[+wenn dir eine Seite besonders gut gefallen hat.]\r\n[+wenn du mal weniger als 4 Sterne vergeben hast.]\r\n[-wenn dein Hund gestorben ist und du jemanden zum Quatschen brauchst.]\r\n===",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "A05",
+      "instruction": "An den Autor wendest du dich, ...",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "responses": [
+            {
+              "response": "wenn du einen Rechtschreib- oder sonstigen Fehler auf dieser Seite gefunden hast.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "um ihn zu einer Party einzuladen.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "wenn dir seine Frisur oder Kleidung nicht - oder besonders gut gefällt.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "wenn dein Comuter immer wieder abstürzt.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "wenn du eine Erklärung nicht verstanden hast und auch das Forum dabei nicht weiterhilft.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "bei techischen Problemen.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "wenn dir eine Seite besonders gut gefallen hat.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "wenn du mal weniger als 4 Sterne vergeben hast.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "wenn dein Hund gestorben ist und du jemanden zum Quatschen brauchst.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "295029"
+      ]
+    }
+  }
+]

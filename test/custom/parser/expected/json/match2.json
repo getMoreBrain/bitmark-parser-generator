@@ -1,0 +1,64 @@
+[
+  {
+    "bitmark": "[.match]\n[!Wie heißen die passenden Nomen?]\nI ran this code [ eay good.\n===\n[#Adjektiv]\n==\n[#Nomen]\n===\ntalentiert[@example]\n==\ndeb-][ [[ugger\n===\nausdauernd\n==\ndie Ausdauer\n===\nfleißig[&exec\n==\nder Fleiß\n===\nkämpferisch\n==\nder Kampf\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "",
+      "heading": {
+        "forKeys": "Adjektiv",
+        "forValues": "Nomen"
+      },
+      "pairs": [
+        {
+          "key": "talentiert",
+          "values": [
+            "deb-][ ["
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "ausdauernd",
+          "values": [
+            "die Ausdauer"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "I ran this code [ eay good.[uggerfleißig[&execder Fleißkämpferischder Kampf",
+      "instruction": "Wie heißen die passenden Nomen?"
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '['",
+        "line": 3,
+        "column": 16,
+        "errorLine": "I ran this code [ eay good."
+      },
+      {
+        "message": "Unexpected input '[ugger'",
+        "line": 11,
+        "column": 8,
+        "errorLine": "deb-][ [[ugger"
+      },
+      {
+        "message": "Rule violation around '['",
+        "line": 17,
+        "column": 7,
+        "errorLine": "fleißig[&exec"
+      }
+    ]
+  }
+]

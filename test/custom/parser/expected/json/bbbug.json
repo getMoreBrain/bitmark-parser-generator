@@ -1,0 +1,34 @@
+[
+  {
+    "bitmark": "[.assignment:bitmark--]\n\n[%16 Zusätzliche Situationen und Aufgaben]\n\n[!Die Lehrperson stellt Ihnen verschiedene Produkte zur Verfügung (Produkte, die möglichst keine Wirkstoffe enthalten, z. B. Gel, hydrophile Creme, Salbe oder Vaseline, Paste, Lotion).\nBilden Sie Gruppen und testen Sie die unterschiedlichen Produkte, erstellen Sie eine vergleichende Tabelle:",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "[%16 Zusätzliche Situationen und Aufgaben]\n\n[!Die Lehrperson stellt Ihnen verschiedene Produkte zur Verfügung (Produkte, die möglichst keine Wirkstoffe enthalten, z. B. Gel, hydrophile Creme, Salbe oder Vaseline, Paste, Lotion).\nBilden Sie Gruppen und testen Sie die unterschiedlichen Produkte, erstellen Sie eine vergleichende Tabelle:",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[%16 Zusätzliche Situationen und Aufgaben]\\n\n[!Die Lehrperson stellt Ihnen verschiedene Produkte zur Verfügung (Produkte, die möglichst keine Wirkstoffe enthalten, z. B. Gel, hydrophile Creme, Salbe oder Vaseline, Paste, Lotion).\nBilden Sie Gruppen und testen Sie die unterschiedlichen Produkte, erstellen Sie eine vergleichende Tabelle:\n'",
+        "line": 7,
+        "column": 0,
+        "errorLine": ""
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 3,
+        "column": 41,
+        "errorLine": "[%16 Zusätzliche Situationen und Aufgaben]"
+      },
+      {
+        "message": "Unexpected input '[!'",
+        "line": 5,
+        "column": 0,
+        "errorLine": "[!Die Lehrperson stellt Ihnen verschiedene Produkte zur Verfügung (Produkte, die möglichst keine Wirkstoffe enthalten, z. B. Gel, hydrophile Creme, Salbe oder Vaseline, Paste, Lotion)."
+      }
+    ]
+  }
+]

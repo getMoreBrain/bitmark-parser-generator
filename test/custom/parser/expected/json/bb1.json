@@ -1,0 +1,54 @@
+[
+  {
+    "bitmark": "[.essay]\n[&app::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l]\n[&document::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l]\n[&website::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "",
+      "partialAnswer": "",
+      "body": "[&app::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l]\n[&document::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l]\n[&website::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l]",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[&app::'",
+        "line": 2,
+        "column": 5,
+        "errorLine": "[&app::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 2,
+        "column": 71,
+        "errorLine": "[&app::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l]"
+      },
+      {
+        "message": "Unexpected input '[&document'",
+        "line": 3,
+        "column": 0,
+        "errorLine": "[&document::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 3,
+        "column": 76,
+        "errorLine": "[&document::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l]"
+      },
+      {
+        "message": "Unexpected input '[&website'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[&website::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 4,
+        "column": 75,
+        "errorLine": "[&website::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l]"
+      }
+    ]
+  }
+]

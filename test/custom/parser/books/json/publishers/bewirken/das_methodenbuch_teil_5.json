@@ -1,0 +1,863 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:301723]\n[#Das Methodenbuch für digitalen Unterricht Teil 5]\n[@coverImage:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_cover.png]\n[@externalId:e-kapitel-13-check-out_pvovrvlakmfi]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301723"
+      ],
+      "title": "Das Methodenbuch für digitalen Unterricht Teil 5",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_cover.png"
+      ],
+      "externalId": [
+        "e-kapitel-13-check-out_pvovrvlakmfi"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:235531]\n[#Check-Out\nDeine Erfahrung mit dem Buch]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "235531"
+      ],
+      "title": "Check-Out\nDeine Erfahrung mit dem Buch"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:235532]\nDu hast es geschafft! Wir sind am Ende unseres Buches angekommen – du mit Sicherheit jedoch noch nicht am Ende deiner Entdeckungsreise. Denn gleichzeitig signalisiert ein Ende auch immer den Anfang für etwas Neues. Wir hoffen, unsere bunte Methodensammlung mit Praxisbeispielen hat dich inspiriert und dir Kraft und Mut geschenkt, einiges gleich mal auszuprobieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Du hast es geschafft! Wir sind am Ende unseres Buches angekommen – du mit Sicherheit jedoch noch nicht am Ende deiner Entdeckungsreise. Denn gleichzeitig signalisiert ein Ende auch immer den Anfang für etwas Neues. Wir hoffen, unsere bunte Methodensammlung mit Praxisbeispielen hat dich inspiriert und dir Kraft und Mut geschenkt, einiges gleich mal auszuprobieren.",
+      "id": [
+        "235532"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:235533]\nZum Abschluss möchten wir dir den Raum geben, einmal kurz inne zu halten und über deine Gedanken zu den Impulsen aus diesem Buch zu reflektieren. Gerne kannst du deine Erfahrungen für dich notieren und in einem Notizbuch oder ähnlichem festhalten. Vielleicht hast du mittlerweile auch ein kleines „Tagebuch“ der Veränderung für dich angelegt, um deine Schritte auf dieser Reise festzuhalten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Zum Abschluss möchten wir dir den Raum geben, einmal kurz inne zu halten und über deine Gedanken zu den Impulsen aus diesem Buch zu reflektieren. Gerne kannst du deine Erfahrungen für dich notieren und in einem Notizbuch oder ähnlichem festhalten. Vielleicht hast du mittlerweile auch ein kleines „Tagebuch“ der Veränderung für dich angelegt, um deine Schritte auf dieser Reise festzuhalten.",
+      "id": [
+        "235533"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.remark]\n[@id:235534]\n• Was war das **erste Highlight**, das ich mit einer Methode aus diesem Buch erlebt habe?\n• Was habe ich aus dem Experiment mitgenommen?\n• Mit **Rückblick auf den Check-In** – wie fühle ich mich jetzt? Was hat sich verändert?\n• Was will ich **ab morgen ausprobieren** oder anders machen mit meinen Schüler*innen?\n• **Welche Methoden** haben mir am besten gefallen?\n• **Warum** konnte ich genau diese so gut einsetzen, was hat es für mich und meine Lernbegleitung verändert?\n• **Wie werde ich meine Schüler*innen** in die digitale Unterrichtsgestaltung mit **einbeziehen**?\n• **Wie hole ich mir Feedback** zu den ausprobierten Methoden von meinen Lernenden?\n• **Welche Kolleg*innen hole ich mit ins Boot** und welches digitale Projekt könnten wir als nächstes gemeinsam und fächerübergreifend starten?\n• **Was könnte sich an meiner Schule verändern?** Wäre es interessant, mit Kolleg*innen **ein neues Schulkonzept** zu entwickeln?\n• Und zum Schluss: **Warum liebe ich meinen Beruf**?",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "• Was war das **erste Highlight**, das ich mit einer Methode aus diesem Buch erlebt habe?\n• Was habe ich aus dem Experiment mitgenommen?\n• Mit **Rückblick auf den Check-In** – wie fühle ich mich jetzt? Was hat sich verändert?\n• Was will ich **ab morgen ausprobieren** oder anders machen mit meinen Schüler*innen?\n• **Welche Methoden** haben mir am besten gefallen?\n• **Warum** konnte ich genau diese so gut einsetzen, was hat es für mich und meine Lernbegleitung verändert?\n• **Wie werde ich meine Schüler*innen** in die digitale Unterrichtsgestaltung mit **einbeziehen**?\n• **Wie hole ich mir Feedback** zu den ausprobierten Methoden von meinen Lernenden?\n• **Welche Kolleg*innen hole ich mit ins Boot** und welches digitale Projekt könnten wir als nächstes gemeinsam und fächerübergreifend starten?\n• **Was könnte sich an meiner Schule verändern?** Wäre es interessant, mit Kolleg*innen **ein neues Schulkonzept** zu entwickeln?\n• Und zum Schluss: **Warum liebe ich meinen Beruf**?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "235534"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio-link]\n[@id:235535]\nDas sprechende Buch\n[&audio-link:https://bewirken.org/buch-audioplayer/?file=27&title=Reflexion%20%E2%80%93%20Check-Out]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das sprechende Buch",
+      "id": [
+        "235535"
+      ],
+      "resource": {
+        "type": "audio-link",
+        "audioLink": {
+          "provider": "org/buch-audioplayer/?file=27&title=Reflexion%20%E2%80%93%20Check-Out",
+          "url": "https://bewirken.org/buch-audioplayer/?file=27&title=Reflexion%20%E2%80%93%20Check-Out",
+          "duration": "",
+          "autoplay": true
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:235536]\n[#Reflexion\nCkeck-Out]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "235536"
+      ],
+      "title": "Reflexion\nCkeck-Out"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--&image]\n[@id:235537]\nHalte deine Gedanken in einem Notizbuch oder auf Klebezetteln fest. Du kannst sie auch auf diese Seite im Buch heften und später zurückkommen, um zu sehen, wie sich deine Perspektive über die Zeit verändert.\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_13/bewirken_kapitel13_1.png][@width:200]",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Halte deine Gedanken in einem Notizbuch oder auf Klebezetteln fest. Du kannst sie auch auf diese Seite im Buch heften und später zurückkommen, um zu sehen, wie sich deine Perspektive über die Zeit verändert.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "235537"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_13/bewirken_kapitel13_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "200",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:301724]\n[▼ch-3]\n[#Wer steht hinter diesem Buch\nEin Team mit Leidenschaft]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "301724"
+      ],
+      "anchor": "ch-3",
+      "title": "Wer steht hinter diesem Buch\nEin Team mit Leidenschaft"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301725]\n[%][%Viele Perspektiven mit einer gemeinsamen Mission]\nDieses Buch ist aus den gemeinsamen Erfahrungen im Rahmen der digitalen Schulakademie, spannenden Workshopformaten und der eigenen jahrelangen Lehrpraxis in Schule und Fortbildung entstanden. Dabei sind die Autor*innen sowie die vielen Impulsgeber*innen für Methoden in diesem Buch ein Beispiel für Vielfalt und Kollaboration, ohne die das Werk in dieser Form nicht möglich gewesen wäre. Auch wenn dieses Buch im Kern ein Begleiter für gute Methoden sein möchte, haben wir auch unsere Erfahrungen mit persönlichen Lernprozessen und dem Thema Schulentwicklung mit eingebracht, um deine persönliche Reise in dieser Zeit zu unterstützen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieses Buch ist aus den gemeinsamen Erfahrungen im Rahmen der digitalen Schulakademie, spannenden Workshopformaten und der eigenen jahrelangen Lehrpraxis in Schule und Fortbildung entstanden. Dabei sind die Autor*innen sowie die vielen Impulsgeber*innen für Methoden in diesem Buch ein Beispiel für Vielfalt und Kollaboration, ohne die das Werk in dieser Form nicht möglich gewesen wäre. Auch wenn dieses Buch im Kern ein Begleiter für gute Methoden sein möchte, haben wir auch unsere Erfahrungen mit persönlichen Lernprozessen und dem Thema Schulentwicklung mit eingebracht, um deine persönliche Reise in dieser Zeit zu unterstützen.",
+      "id": [
+        "301725"
+      ],
+      "lead": "Viele Perspektiven mit einer gemeinsamen Mission"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301726]\n[%][%Kooperationen für mehr Wirkung]\nWo möglich suchen wir die Kooperation mit tollen Menschen, Expert*innen und Organisationen. In der digitalen Schulakademie arbeiten wir intensiv mit Trainer*innen und anderen Organisationen zusammen. Einige der Methoden sind daher durch Gastbeiträge oder Impulse der Social Web macht Schule gGmbH und von Team:werk in diesem Buch gelandet.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wo möglich suchen wir die Kooperation mit tollen Menschen, Expert*innen und Organisationen. In der digitalen Schulakademie arbeiten wir intensiv mit Trainer*innen und anderen Organisationen zusammen. Einige der Methoden sind daher durch Gastbeiträge oder Impulse der Social Web macht Schule gGmbH und von Team:werk in diesem Buch gelandet.",
+      "id": [
+        "301726"
+      ],
+      "lead": "Kooperationen für mehr Wirkung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301727]\n**Social Web macht Schule gGmbH** setzt sich online und analog für einen mündigen Umgang von Schüler*innen und Erwachsenen mit digitalen Medien, insbesondere sozialen Netzwerken, ein. Immer auf Augenhöhe für ein selbstbestimmtes und aufgeklärtes Miteinander im Internet – gegen Cybermobbing, Desinformation und Datenmissbrauch.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Social Web macht Schule gGmbH** setzt sich online und analog für einen mündigen Umgang von Schüler*innen und Erwachsenen mit digitalen Medien, insbesondere sozialen Netzwerken, ein. Immer auf Augenhöhe für ein selbstbestimmtes und aufgeklärtes Miteinander im Internet – gegen Cybermobbing, Desinformation und Datenmissbrauch.",
+      "id": [
+        "301727"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301728]\n**Team:werk** steht für innovative und kollaborative Formate im Bildungsbereich. Anna und Andrea von Team:werk verstehen sich als Thinktank und Antreiberinnen für zukunftsorientierte Veränderungen in unserem Bildungssystem. Mit einer Vielzahl an digitalen und analogen Angeboten unterstützen sie darin, mithilfe von Teamarbeit und innovativen Praktiken Weiterentwicklungen anzustoßen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Team:werk** steht für innovative und kollaborative Formate im Bildungsbereich. Anna und Andrea von Team:werk verstehen sich als Thinktank und Antreiberinnen für zukunftsorientierte Veränderungen in unserem Bildungssystem. Mit einer Vielzahl an digitalen und analogen Angeboten unterstützen sie darin, mithilfe von Teamarbeit und innovativen Praktiken Weiterentwicklungen anzustoßen.",
+      "id": [
+        "301728"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:301729]\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_1.png][@width:400]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "301729"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "400",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:301730]\n[%][%Deine Methoden in diesem Buch?]\nFalls du Methoden oder Tipps hast, die Kolleg*innen und Lehrende in ihrer Arbeit unterstützen können, melde dich gerne. Vielleicht sind sie schon in einer nächsten Ausgabe Teil dieses Buches oder können auf unserem Fortbildungsangebot, auf **digitale-schulakademie.de** als Tipp aufgenommen werden. Wir freuen uns über deine Ideen und Erfahrungen!",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Falls du Methoden oder Tipps hast, die Kolleg*innen und Lehrende in ihrer Arbeit unterstützen können, melde dich gerne. Vielleicht sind sie schon in einer nächsten Ausgabe Teil dieses Buches oder können auf unserem Fortbildungsangebot, auf **digitale-schulakademie.de** als Tipp aufgenommen werden. Wir freuen uns über deine Ideen und Erfahrungen!",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301730"
+      ],
+      "lead": "Deine Methoden in diesem Buch?"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:301731]\n[##Die Autor*innen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "301731"
+      ],
+      "title": "Die Autor*innen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301732]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_2.png|@caption:Björn Adam Mitgründer & Geschäftsführer von beWirken|@width:200|\n**Björn** ist systemischer Organisationsentwickler und begleitet Organisationen und Schulen in Veränderung. Er ist Jurist und hat über zwölf Jahre Erfahrung als Unternehmer und Coach für Führungskräfte.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_2.png|@caption:Björn Adam Mitgründer & Geschäftsführer von beWirken|@width:200|\n**Björn** ist systemischer Organisationsentwickler und begleitet Organisationen und Schulen in Veränderung. Er ist Jurist und hat über zwölf Jahre Erfahrung als Unternehmer und Coach für Führungskräfte.",
+      "id": [
+        "301732"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301733]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_3.png|@caption:Franziska Köpnick Leitung Akademie von beWirken|@width:200|\n**Franziska** ist als Expertin für Education Design verantwortlich für die transformationellen Lernangebote und Formate und die Entwicklung von neuen Rollen und Haltung in der Akademie von beWirken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_3.png|@caption:Franziska Köpnick Leitung Akademie von beWirken|@width:200|\n**Franziska** ist als Expertin für Education Design verantwortlich für die transformationellen Lernangebote und Formate und die Entwicklung von neuen Rollen und Haltung in der Akademie von beWirken.",
+      "id": [
+        "301733"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301734]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_4.png|@caption:Judith Holle Pädagogische Leitung von beWirken|@width:200|\n**Judith** hat berufliche Bildung und Sozialpädagogik studiert und entwickelt als pädagogische Leitung didaktische Konzepte von beWirken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_4.png|@caption:Judith Holle Pädagogische Leitung von beWirken|@width:200|\n**Judith** hat berufliche Bildung und Sozialpädagogik studiert und entwickelt als pädagogische Leitung didaktische Konzepte von beWirken.",
+      "id": [
+        "301734"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:301735]\n[##Gastbeiträge & Kooperationen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "301735"
+      ],
+      "title": "Gastbeiträge & Kooperationen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301736]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_5.png|@caption:Marcel Burghardt Geschäftsführer von Social Web macht Schule gGmbH|@width:200|\n**Marcel** ist Geschäftsführer der Social Web macht Schule gGmbH, als Kommunikations- und Medienexperte setzt er sich für erfolgreiche Mediendidaktik und den Umgang in und mit sozialen Netzwerken ein.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_5.png|@caption:Marcel Burghardt Geschäftsführer von Social Web macht Schule gGmbH|@width:200|\n**Marcel** ist Geschäftsführer der Social Web macht Schule gGmbH, als Kommunikations- und Medienexperte setzt er sich für erfolgreiche Mediendidaktik und den Umgang in und mit sozialen Netzwerken ein.",
+      "id": [
+        "301736"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301737]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_6.png|@caption:Anna Ginkel & Andrea Seitz, Gründerinnen von Team:werk|@width:400|\n**Anna** ist Dozentin für Lehrkräfte und leitet das Projekt Lehr:werkstatt. Sie hat gemeinsam mit Andrea Team:werk gegründet, um die Fortbildung von Lehrer*innen zu verändern.\n**Andrea** treibt mit ihrem Hintergrund des Lehramtsstudiums und als Projektleitung der Lehr:werkstatt sowie als Mitgründer*in von Team:werk Bildungsinnovationen voran.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_6.png|@caption:Anna Ginkel & Andrea Seitz, Gründerinnen von Team:werk|@width:400|\n**Anna** ist Dozentin für Lehrkräfte und leitet das Projekt Lehr:werkstatt. Sie hat gemeinsam mit Andrea Team:werk gegründet, um die Fortbildung von Lehrer*innen zu verändern.\n**Andrea** treibt mit ihrem Hintergrund des Lehramtsstudiums und als Projektleitung der Lehr:werkstatt sowie als Mitgründer*in von Team:werk Bildungsinnovationen voran.",
+      "id": [
+        "301737"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:301738]\n[#Gastbeiträge & Tipps]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "301738"
+      ],
+      "title": "Gastbeiträge & Tipps"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301739]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_7.png|@caption:Marius Räbiger Teach First Fellow & Trainer bei beWirken|@width:200|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_7.png|@caption:Marius Räbiger Teach First Fellow & Trainer bei beWirken|@width:200|",
+      "id": [
+        "301739"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301740]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_8.png|@caption:Johannes Kaiser Lehrer & Trainer bei beWirken|@width:200|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_8.png|@caption:Johannes Kaiser Lehrer & Trainer bei beWirken|@width:200|",
+      "id": [
+        "301740"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301741]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_9.png|@caption:Marla Kaupmann, Trainerin & Dozentin bei beWirken|@width:200|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_9.png|@caption:Marla Kaupmann, Trainerin & Dozentin bei beWirken|@width:200|",
+      "id": [
+        "301741"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301742]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_10.png|@caption:Jonas Lohse Dozent & Trainer bei beWirken|@width:200|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_10.png|@caption:Jonas Lohse Dozent & Trainer bei beWirken|@width:200|",
+      "id": [
+        "301742"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301743]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_11.png|@caption:Christiane Wellmann Dozentin & Teammitglied bei beWirken|@width:200|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_11.png|@caption:Christiane Wellmann Dozentin & Teammitglied bei beWirken|@width:200|",
+      "id": [
+        "301743"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:301744]\n[##Illustrationen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "301744"
+      ],
+      "title": "Illustrationen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301745]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_12.png|@caption:Andra Krogmann Trainerin bei beWirken & Illustratorin dieses Buches|@width:200|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_14/bewirken_kapitel14_12.png|@caption:Andra Krogmann Trainerin bei beWirken & Illustratorin dieses Buches|@width:200|",
+      "id": [
+        "301745"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:301746]\n[#Austausch & Feedback\nWir freuen uns, dich wiederzusehen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "301746"
+      ],
+      "title": "Austausch & Feedback\nWir freuen uns, dich wiederzusehen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301747]\n[%][%Deine Rückmeldung hilft uns, dich besser zu begleiten]\nWir freuen uns, von deinen Erfahrungen mit diesem Buch zu hören und zu lernen, wie du es für dich einsetzen konntest. Deine Rückmeldung hilft uns auch, dieses Buch oder andere Angebote von uns zu verbessern, damit wir dich noch besser in deiner Arbeit und deinem Engagement unterstützen können. Vielleicht hast du ja Lust und Zeit, uns ein paar Fragen zu beantworten, wir würden uns freuen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wir freuen uns, von deinen Erfahrungen mit diesem Buch zu hören und zu lernen, wie du es für dich einsetzen konntest. Deine Rückmeldung hilft uns auch, dieses Buch oder andere Angebote von uns zu verbessern, damit wir dich noch besser in deiner Arbeit und deinem Engagement unterstützen können. Vielleicht hast du ja Lust und Zeit, uns ein paar Fragen zu beantworten, wir würden uns freuen.",
+      "id": [
+        "301747"
+      ],
+      "lead": "Deine Rückmeldung hilft uns, dich besser zu begleiten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301748]\n[%][%Austausch und gemeinsames Lernen]\nWenn du nach diesem Buch Lust bekommen hast, dich mit anderen Lehrenden über deine Erfahrungen, Methoden oder die Veränderung von Schule auszutauschen, besuche doch die Austauschformate unserer **digitalen-schulakademie.de**, beispiels-weise das „Digitale Lehrerzimmer“, das regelmäßig kostenlos stattfindet.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn du nach diesem Buch Lust bekommen hast, dich mit anderen Lehrenden über deine Erfahrungen, Methoden oder die Veränderung von Schule auszutauschen, besuche doch die Austauschformate unserer **digitalen-schulakademie.de**, beispiels-weise das „Digitale Lehrerzimmer“, das regelmäßig kostenlos stattfindet.",
+      "id": [
+        "301748"
+      ],
+      "lead": "Austausch und gemeinsames Lernen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio-link]\n[@id:301749]\nDas sprechende Buch\n[&audio-link:https://bewirken.org/buch-audioplayer/?file=28&title=Wir%20freuen%20uns%20dich%20wiederzusehen]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das sprechende Buch",
+      "id": [
+        "301749"
+      ],
+      "resource": {
+        "type": "audio-link",
+        "audioLink": {
+          "provider": "org/buch-audioplayer/?file=28&title=Wir%20freuen%20uns%20dich%20wiederzusehen",
+          "url": "https://bewirken.org/buch-audioplayer/?file=28&title=Wir%20freuen%20uns%20dich%20wiederzusehen",
+          "duration": "",
+          "autoplay": true
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark++]\n[@id:301750]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_15/bewirken_kapitel15_1.png|@width:150|\n[%][%Dein Feedback]\nWenn du fünf Minuten Zeit hast, freuen wir uns, wenn du uns deine Erfahrungen mitteilen kannst. Wir haben ein paar Fragen vorbereitet, die du einfach und schnell am Rechner oder per Handy beantworten kannst. Probier es doch einfach direkt aus. Wir danken dir für dein Feedback!",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_15/bewirken_kapitel15_1.png|@width:150|\n\nWenn du fünf Minuten Zeit hast, freuen wir uns, wenn du uns deine Erfahrungen mitteilen kannst. Wir haben ein paar Fragen vorbereitet, die du einfach und schnell am Rechner oder per Handy beantworten kannst. Probier es doch einfach direkt aus. Wir danken dir für dein Feedback!",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301750"
+      ],
+      "lead": "Dein Feedback"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301751]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_15/bewirken_kapitel15_2.png|@width:400|\n[%][%Die digitale Schulakademie]\nist ein Aus- und Fortbildungsangebot **von beWirken** für Lehrende, Schulleitungen und alle Akteure rund um Schule in Kooperation mit anderen Organisationen und Expert*innen",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_15/bewirken_kapitel15_2.png|@width:400|\n\nist ein Aus- und Fortbildungsangebot **von beWirken** für Lehrende, Schulleitungen und alle Akteure rund um Schule in Kooperation mit anderen Organisationen und Expert*innen",
+      "id": [
+        "301751"
+      ],
+      "lead": "Die digitale Schulakademie"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301752]\n[%][%Spannende digitale Seminare, Learning Journeys, Workshops & Impulse in der digitalen Schulakademie]\nWahrscheinlich warst du bereits auf der Seite der digitalen Schulakademie und vielleicht haben wir uns bereits in einem Format dort gesehen. Falls du zum ersten Mal davon hörst oder in diesem Buch darauf gestoßen bist, freuen wir uns, dich dort bald begrüßen zu dürfen. Mit dem Angebot auf der Online-Plattform möchten wir dich in deiner Arbeit unterstützen. Du findest dort kurze Formate genauso wie längere Reihen mit mehreren Modulen und Begleitung zwischen den Terminen. Alle Seminare an der digitalen Schulakademie drehen sich um die Weiterentwicklung von Schule und Unterricht. Dazu gehören digitale Themen, Haltung und Rolle, Methoden und Tools, Führung als Schulleitung, Schulentwicklung, Inklusion und viele weitere Aspekte. Wir freuen uns auf deinen Besuch.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wahrscheinlich warst du bereits auf der Seite der digitalen Schulakademie und vielleicht haben wir uns bereits in einem Format dort gesehen. Falls du zum ersten Mal davon hörst oder in diesem Buch darauf gestoßen bist, freuen wir uns, dich dort bald begrüßen zu dürfen. Mit dem Angebot auf der Online-Plattform möchten wir dich in deiner Arbeit unterstützen. Du findest dort kurze Formate genauso wie längere Reihen mit mehreren Modulen und Begleitung zwischen den Terminen. Alle Seminare an der digitalen Schulakademie drehen sich um die Weiterentwicklung von Schule und Unterricht. Dazu gehören digitale Themen, Haltung und Rolle, Methoden und Tools, Führung als Schulleitung, Schulentwicklung, Inklusion und viele weitere Aspekte. Wir freuen uns auf deinen Besuch.",
+      "id": [
+        "301752"
+      ],
+      "lead": "Spannende digitale Seminare, Learning Journeys, Workshops & Impulse in der digitalen Schulakademie"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-9]\n[@id:301753]\n[#Austausch & Feedback\nFördermitglied werden]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "301753"
+      ],
+      "title": "Austausch & Feedback\nFördermitglied werden"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301754]\n[%][%Mit deiner Unterstützung gemeinsam großes bewirken]\nAls gemeinnützige Organisation erhalten wir keine laufende Finanzierung oder institutionelle Förderung. Unsere Angebote sind daher nur durch eure Unterstützung und die Beiträge in Seminaren oder Workshops möglich. Sie entstehen häufig mit großem Aufwand und viel Leidenschaft, aber leider ohne finanzielle Mittel. Daher freuen wir uns, wenn du Fördermitglied wirst und unsere Arbeit langfristig unterstützt. Mit deiner Fördermitgliedschaft unterstützt du unser Engagement und unsere Angebote für gute Bildung und Schulentwicklung und machst es damit erst möglich, dass wir Schulen und vielleicht auch dich direkt begleiten können. Unseren Fördermitgliedern bieten wir als Dankeschön viele kostenlose und vergünstigte digitale Seminar-angebote an unserer digitalen Schulakademie an. Wir möchten euch regelmäßig neue Impulse ermöglichen und gute Materialien und Workshopangebote entwickeln ‒ für euer Engagement in der Veränderung von Schule und Unterricht. Die Fördermitgliedschaft gibt es auch für Schulen, so kannst du deinem Kollegium die Chance geben, an unseren Fortbildungsangeboten teilzunehmen. Gemeinsam können wir großes beWirken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Als gemeinnützige Organisation erhalten wir keine laufende Finanzierung oder institutionelle Förderung. Unsere Angebote sind daher nur durch eure Unterstützung und die Beiträge in Seminaren oder Workshops möglich. Sie entstehen häufig mit großem Aufwand und viel Leidenschaft, aber leider ohne finanzielle Mittel. Daher freuen wir uns, wenn du Fördermitglied wirst und unsere Arbeit langfristig unterstützt. Mit deiner Fördermitgliedschaft unterstützt du unser Engagement und unsere Angebote für gute Bildung und Schulentwicklung und machst es damit erst möglich, dass wir Schulen und vielleicht auch dich direkt begleiten können. Unseren Fördermitgliedern bieten wir als Dankeschön viele kostenlose und vergünstigte digitale Seminar-angebote an unserer digitalen Schulakademie an. Wir möchten euch regelmäßig neue Impulse ermöglichen und gute Materialien und Workshopangebote entwickeln ‒ für euer Engagement in der Veränderung von Schule und Unterricht. Die Fördermitgliedschaft gibt es auch für Schulen, so kannst du deinem Kollegium die Chance geben, an unseren Fortbildungsangeboten teilzunehmen. Gemeinsam können wir großes beWirken.",
+      "id": [
+        "301754"
+      ],
+      "lead": "Mit deiner Unterstützung gemeinsam großes bewirken"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301755]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_15/bewirken_kapitel15_3.png|@width:400|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_15/bewirken_kapitel15_3.png|@width:400|",
+      "id": [
+        "301755"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301756]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_15/bewirken_kapitel15_4.png|@width:200|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_15/bewirken_kapitel15_4.png|@width:200|",
+      "id": [
+        "301756"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301757]\nFördermitglied werden\nhttps://bewirken.org/angebot/bewirken-foerdermitgliedschaft/",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Fördermitglied werden\nhttps://bewirken.org/angebot/bewirken-foerdermitgliedschaft/",
+      "id": [
+        "301757"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--]\n[@id:301758]\n[%][%Verfügbar auf allen Podcast-Plattformen]\nEinfach den QR-Code scannen oder den Link eingeben und du landest auf unserer Podcastseite. Abonniere den Podcast und sag es weiter. Probier es doch direkt hier aus und hör einfach mal rein!",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Einfach den QR-Code scannen oder den Link eingeben und du landest auf unserer Podcastseite. Abonniere den Podcast und sag es weiter. Probier es doch direkt hier aus und hör einfach mal rein!",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301758"
+      ],
+      "lead": "Verfügbar auf allen Podcast-Plattformen"
+    }
+  },
+  {
+    "bitmark": "[.chapter:bitmark--]\n[@id:301759]\n[##==Mutmacher Schule==|link:https://bewirken.org/podcast/|]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "301759"
+      ],
+      "title": "==Mutmacher Schule==|link:https://bewirken.org/podcast/|"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301760]\n[%][%Der Podcast für Inspiration, Tipps und Tricks rund um die Veränderung von Unterricht und Schule.]\nUm euer Engagement und eure Arbeit gut zu begleiten, sprechen wir im Podcast über spannende Geschichten aus der Praxis, laden interessante Gäste ein und geben Tipps und Inspiration für eure persönliche Reise in der Veränderung von Schule und Unterricht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Um euer Engagement und eure Arbeit gut zu begleiten, sprechen wir im Podcast über spannende Geschichten aus der Praxis, laden interessante Gäste ein und geben Tipps und Inspiration für eure persönliche Reise in der Veränderung von Schule und Unterricht.",
+      "id": [
+        "301760"
+      ],
+      "lead": "Der Podcast für Inspiration, Tipps und Tricks rund um die Veränderung von Unterricht und Schule."
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301761]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_15/bewirken_kapitel15_5.png|@width:300|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_15/bewirken_kapitel15_5.png|@width:300|",
+      "id": [
+        "301761"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-10]\n[@id:301762]\n[#Weiterführend & Literatur\nTipps zum Schmökern & Nachlesen …]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-10",
+      "id": [
+        "301762"
+      ],
+      "title": "Weiterführend & Literatur\nTipps zum Schmökern & Nachlesen …"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301763]\n[%][%Gedanken-Anker und Empfehlungen zum Nachlesen oder Vertiefen der Impulse aus diesem Buch]\n**Arnold, Rolf (2018):** Ich lerne, also bin ich. Eine systemischkonstruktivistische Didaktik, Carl-Auer Verlag.\n**Arnold, Rolf u.a. (2017):** Ermöglichungsdidaktik konkret: Didaktische Rekonstruktion ausgewählter Lernszenarien. Hohengehren, Schneider Verlag.\n**Erpenbeck, John & Sauter, Werner (2013):** So werden wir lernen! Kompetenzentwicklung in einer Welt fühlender Computer, kluger Wolken und sinnsuchender Netze. Berlin, Heidelberg, Springer Gabler.\n**Erpenbeck, John, Sauter, Werner (2019):** Stoppt die Kompetenzkatastrophe! Wege in eine neue Bildungswelt. Berlin, Springer.\n**Fadel, Charles u.a. (2017):** Die vier Dimensionen der Bildung. Was Schülerinnen und Schüler im 21. Jahrhundert lernen müssen. Hamburg, Verlag ZLL21 e.V.\n**Kantereit, Tim (Hrsg.) (2020):** Hybrid-Unterricht 101. Ein Leitfaden zum Blended Learning für angehende Lehrer:innen. Karlsruhe, Visual Ink Publishing.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Arnold, Rolf (2018):** Ich lerne, also bin ich. Eine systemischkonstruktivistische Didaktik, Carl-Auer Verlag.\n**Arnold, Rolf u.a. (2017):** Ermöglichungsdidaktik konkret: Didaktische Rekonstruktion ausgewählter Lernszenarien. Hohengehren, Schneider Verlag.\n**Erpenbeck, John & Sauter, Werner (2013):** So werden wir lernen! Kompetenzentwicklung in einer Welt fühlender Computer, kluger Wolken und sinnsuchender Netze. Berlin, Heidelberg, Springer Gabler.\n**Erpenbeck, John, Sauter, Werner (2019):** Stoppt die Kompetenzkatastrophe! Wege in eine neue Bildungswelt. Berlin, Springer.\n**Fadel, Charles u.a. (2017):** Die vier Dimensionen der Bildung. Was Schülerinnen und Schüler im 21. Jahrhundert lernen müssen. Hamburg, Verlag ZLL21 e.V.\n**Kantereit, Tim (Hrsg.) (2020):** Hybrid-Unterricht 101. Ein Leitfaden zum Blended Learning für angehende Lehrer:innen. Karlsruhe, Visual Ink Publishing.",
+      "id": [
+        "301763"
+      ],
+      "lead": "Gedanken-Anker und Empfehlungen zum Nachlesen oder Vertiefen der Impulse aus diesem Buch"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301764]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_16/bewirken_kapitel16_1.png|@width:200|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_16/bewirken_kapitel16_1.png|@width:200|",
+      "id": [
+        "301764"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301765]\n**Klee, Wanda u.a. (Hrsg.) (2021):** Hybrides Lernen: Zur Theorie und Praxis von Präsenz- und Distanzlernen. Weinheim, Basel, Beltz.\n**Krommer, Axel u.a. (2019):** Routenplaner #digitaleBildung: Auf dem Weg zu zeitgemäßem Lernen. Eine Orientierungshilfe im digitalen Wandel, Booklink.\n**Scharmer, Otto (2019):** Essentials der Theorie U. Grundprinzipien und Anwendungen, Carl-Auer Verlag.\n**Stalder, Felix (2019):** Kultur der Digitalität. Berlin, Suhrkamp Verlag.\n**Wildt, Michael (2011):** Lernlandkarten als Arbeitsmittel zur Selbststeuerung beim Lernen im Mathematikunterricht in individuellen und kooperativen Arbeitsformen. In: Maass, Jürgen; Siller, Hans-Stefan (Hrsg.): Mathe vernetzt. Anregungen und Materialien für einen vernetzenden Mathematikunterricht, Aulis Verlag.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Klee, Wanda u.a. (Hrsg.) (2021):** Hybrides Lernen: Zur Theorie und Praxis von Präsenz- und Distanzlernen. Weinheim, Basel, Beltz.\n**Krommer, Axel u.a. (2019):** Routenplaner #digitaleBildung: Auf dem Weg zu zeitgemäßem Lernen. Eine Orientierungshilfe im digitalen Wandel, Booklink.\n**Scharmer, Otto (2019):** Essentials der Theorie U. Grundprinzipien und Anwendungen, Carl-Auer Verlag.\n**Stalder, Felix (2019):** Kultur der Digitalität. Berlin, Suhrkamp Verlag.\n**Wildt, Michael (2011):** Lernlandkarten als Arbeitsmittel zur Selbststeuerung beim Lernen im Mathematikunterricht in individuellen und kooperativen Arbeitsformen. In: Maass, Jürgen; Siller, Hans-Stefan (Hrsg.): Mathe vernetzt. Anregungen und Materialien für einen vernetzenden Mathematikunterricht, Aulis Verlag.",
+      "id": [
+        "301765"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301766]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_16/bewirken_kapitel16_2.png|@width:200|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_16/bewirken_kapitel16_2.png|@width:200|",
+      "id": [
+        "301766"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-11]\n[@id:301767]\n[#Weiterführend & Literatur\nÜberblick über alle Methoden]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-11",
+      "id": [
+        "301767"
+      ],
+      "title": "Weiterführend & Literatur\nÜberblick über alle Methoden"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301768]\n[%][%Meta-Methode]\n1. Break-Out & Kleingruppen – S. 50",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "1. Break-Out & Kleingruppen – S. 50",
+      "id": [
+        "301768"
+      ],
+      "lead": "Meta-Methode"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301769]\n[%][%Check-In – Methoden zum Einstieg]\n2. Lagerfeuer – S. 70\n3. Wissensrucksack – S. 72\n4. Superpower – S. 74\n5. Blick in die Kamera – S. 76\n6. Team-Bingo – S. 78\n7. Smart-Kiss-Lernziele – S. 80\n8. Zufallsdate zu zweit – S. 82\n9. Lerngeschichte – S. 84\n10. Die Kompetenzfigur – S. 88\n11. Jacke ablegen – S. 90\n12. Drei Hashtags – S. 92\n13. Buchstabenassoziation – S. 94\n14. Bilderassoziation – S. 96\n15. Digitale Umfrage – S. 98",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "2. Lagerfeuer – S. 70\n3. Wissensrucksack – S. 72\n4. Superpower – S. 74\n5. Blick in die Kamera – S. 76\n6. Team-Bingo – S. 78\n7. Smart-Kiss-Lernziele – S. 80\n8. Zufallsdate zu zweit – S. 82\n9. Lerngeschichte – S. 84\n10. Die Kompetenzfigur – S. 88\n11. Jacke ablegen – S. 90\n12. Drei Hashtags – S. 92\n13. Buchstabenassoziation – S. 94\n14. Bilderassoziation – S. 96\n15. Digitale Umfrage – S. 98",
+      "id": [
+        "301769"
+      ],
+      "lead": "Check-In – Methoden zum Einstieg"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301770]\n[%][%Lernmethoden – Methoden zur thematischen Arbeit]\n16. Webquest – S. 104\n17. Stille Diskussion – S. 106\n18. Selbst entscheiden – S. 108\n19. Perspektivwechsel-Interview – S. 110\n20. Fish-Bowl-Diskussion – S. 112\n21. Gallery Walk – S. 114\n22. Didaktischer Spaziergang – S. 116\n23. Digitale Mindmap – S. 118\n24. Brainwriting – S. 120\n25. Lernboard #Kanban – S. 122\n26. Glücksrad – S. 126\n27. Projekt-Canvas – S. 128",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "16. Webquest – S. 104\n17. Stille Diskussion – S. 106\n18. Selbst entscheiden – S. 108\n19. Perspektivwechsel-Interview – S. 110\n20. Fish-Bowl-Diskussion – S. 112\n21. Gallery Walk – S. 114\n22. Didaktischer Spaziergang – S. 116\n23. Digitale Mindmap – S. 118\n24. Brainwriting – S. 120\n25. Lernboard #Kanban – S. 122\n26. Glücksrad – S. 126\n27. Projekt-Canvas – S. 128",
+      "id": [
+        "301770"
+      ],
+      "lead": "Lernmethoden – Methoden zur thematischen Arbeit"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301771]\n[%][%Check-Out – Methoden zum Abschluss für Reflexion & Transfer]\n28. Audio-Feedback – S. 136\n29. Blitzlicht – S. 138\n30. E-Portfolio – S. 140\n31. Eine-Minute-Bericht – S. 142\n32. Fünf-Finger-Feedback – S. 144\n33. Gesicht zeigen – S. 146\n34. Klebezettel-Methode – S. 148\n35. Lerntagebuch – S. 150\n36. Skala-Aufstellung – S. 152\n37. Tagesschau – S. 154\n38. Team-Rakete – S. 156\n39. Story Pitchen – S. 158",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "28. Audio-Feedback – S. 136\n29. Blitzlicht – S. 138\n30. E-Portfolio – S. 140\n31. Eine-Minute-Bericht – S. 142\n32. Fünf-Finger-Feedback – S. 144\n33. Gesicht zeigen – S. 146\n34. Klebezettel-Methode – S. 148\n35. Lerntagebuch – S. 150\n36. Skala-Aufstellung – S. 152\n37. Tagesschau – S. 154\n38. Team-Rakete – S. 156\n39. Story Pitchen – S. 158",
+      "id": [
+        "301771"
+      ],
+      "lead": "Check-Out – Methoden zum Abschluss für Reflexion & Transfer"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:301772]\n[%][%Energizer – Methoden für Motivation & Gruppendynamik]\n40. Assoziationsball – S. 166\n41. Wochen-Challenge – S. 168\n42. Buchstabensalat – S. 170\n43. Durchzählen – S. 172\n44. Eine Wahrheit, eine Lüge – S. 174\n45. Gegenstände holen – S. 176\n46. Leuchtturm – S. 178\n47. Spiegel-Tanz – S. 180\n48. Wo in der Welt ist … – S. 182\n49. Warm-up-Feuerwerk – S. 184\n50. Emoji-Stimmungsbild – S. 186",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "40. Assoziationsball – S. 166\n41. Wochen-Challenge – S. 168\n42. Buchstabensalat – S. 170\n43. Durchzählen – S. 172\n44. Eine Wahrheit, eine Lüge – S. 174\n45. Gegenstände holen – S. 176\n46. Leuchtturm – S. 178\n47. Spiegel-Tanz – S. 180\n48. Wo in der Welt ist … – S. 182\n49. Warm-up-Feuerwerk – S. 184\n50. Emoji-Stimmungsbild – S. 186",
+      "id": [
+        "301772"
+      ],
+      "lead": "Energizer – Methoden für Motivation & Gruppendynamik"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:301773]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_16/bewirken_kapitel16_3.png|@width:200|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_16/bewirken_kapitel16_3.png|@width:200|",
+      "id": [
+        "301773"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.statement]\n[@id:301774]\nEnde des Buches …\nDeine Reise geht weiter",
+    "bit": {
+      "type": "statement",
+      "format": "bitmark--",
+      "body": "Ende des Buches …\nDeine Reise geht weiter",
+      "id": [
+        "301774"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.statement:bitmark++]\n[@id:301775]\nWir stehen an deiner Seite,\nwenn du Unterstützung brauchst.\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_16/bewirken_kapitel16_4.png|@width:200|",
+    "bit": {
+      "type": "statement",
+      "format": "bitmark++",
+      "body": "Wir stehen an deiner Seite,\nwenn du Unterstützung brauchst.\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/kapitel_16/bewirken_kapitel16_4.png|@width:200|",
+      "id": [
+        "301775"
+      ]
+    }
+  }
+]

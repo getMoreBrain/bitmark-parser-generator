@@ -1,0 +1,38 @@
+[
+  {
+    "bitmark": "[.multiple-choice-1]\n[!What color is milk]\n[+white]\n[-red]\n[-blue]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "What color is milk",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "white",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "red",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "blue",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": ""
+    }
+  }
+]

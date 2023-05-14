@@ -1,0 +1,1886 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:232588]\n[#Länder und Hauptstädte]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/card2brain/laender/web-resources/images/card2brain_laender_cover.png]\n[@externalId:e-lnder-und-hauptstdte_cdpesprn4zlw]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232588"
+      ],
+      "title": "Länder und Hauptstädte",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/card2brain/laender/web-resources/images/card2brain_laender_cover.png"
+      ],
+      "externalId": [
+        "e-lnder-und-hauptstdte_cdpesprn4zlw"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232589]\nSchottland gehört zu welchem Land?\n==\nGrossbritannien",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Schottland gehört zu welchem Land?\n==\nGrossbritannien",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232589"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232590]\nIn welcher  Stadt  fliesst  die Seine hindurch ?\n==\nParis",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "In welcher  Stadt  fliesst  die Seine hindurch ?\n==\nParis",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232590"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232591]\n[!Hauptstadt von Angola]\n[-Astana]\n[+Luanda]\n[-Mogadischu]\n[-Male]\n[-Islamabad]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Hauptstadt von Angola",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Astana",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Luanda",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Mogadischu",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Male",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Islamabad",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232591"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1&image-link]\n[@id:232592]\nWie heisst der Vulkan von Sizilien?\n[&image-link:https://card2brain.ch/c2b-images/card/1400881.jpg?v=1654533791905][@caption:Lizenzierung: ==Namensnennung (CC BY)==|link:https://creativecommons.org/licenses/by/3.0/ch/| Ätna spuckt 5000 Meter hohe Aschesäule]\n==\nÄtna",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wie heisst der Vulkan von Sizilien?\n\n==\nÄtna",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232592"
+      ],
+      "resource": {
+        "type": "image-link",
+        "imageLink": {
+          "provider": "",
+          "url": "https://card2brain.ch/c2b-images/card/1400881.jpg?v=1654533791905",
+          "format": "jpg?v=1654533791905",
+          "caption": "Lizenzierung: ==Namensnennung (CC BY)==|link"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232593]\nNenne die Nachbarländer von Serbien.\n==\nUngarn, Rumänien, Bulgarien, Mazedonien, Albanien, Montenegro, Bosnien, Kroatien",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne die Nachbarländer von Serbien.\n==\nUngarn, Rumänien, Bulgarien, Mazedonien, Albanien, Montenegro, Bosnien, Kroatien",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232593"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232594]\n[!Hauptstadt von Bolvien]\n[-Maskat]\n[-Tiflis]\n[-Nuuk]\n[-Moskau]\n[+Sucre]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Hauptstadt von Bolvien",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Maskat",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Tiflis",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Nuuk",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Moskau",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Sucre",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232594"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232595]\nWelcher Fluss fliesst durch Wien?\n==\nDonau",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welcher Fluss fliesst durch Wien?\n==\nDonau",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232595"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232596]\nAn welchem Meer liegt Griechenland?\n==\nÄgäisches Meer",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "An welchem Meer liegt Griechenland?\n==\nÄgäisches Meer",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232596"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232597]\nWelche zwei grosse Flüsse entspringen in der Schweiz?\n==\nder Rhein und die Rhone",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche zwei grosse Flüsse entspringen in der Schweiz?\n==\nder Rhein und die Rhone",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232597"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232598]\nWelche zwei Meere grenzen an Spanien?\n==\nMittelmeer und Golf von Biscaya",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche zwei Meere grenzen an Spanien?\n==\nMittelmeer und Golf von Biscaya",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232598"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232599]\nHauptstadt von Italien\n==\nRom",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Italien\n==\nRom",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232599"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232600]\n[!Hauptstadt von Montenegro]\n[-Valletta]\n[-Nikosia]\n[+Podgorica]\n[-Riga]\n[-Zagreb]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Hauptstadt von Montenegro",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Valletta",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Nikosia",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Podgorica",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Riga",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Zagreb",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232600"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232601]\nDublin ist die Hauptstadt von ...\n==\nIrland",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Dublin ist die Hauptstadt von ...\n==\nIrland",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232601"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1]\n[@id:232602]\n[!Welches sind Nachbarländer von Polen?]\n[-Rumänien]\n[+Weissrussland]\n[+Ukraine]\n[-Ungarn]\n[+Slowakei]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welches sind Nachbarländer von Polen?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Rumänien",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Weissrussland",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Ukraine",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Ungarn",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Slowakei",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232602"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232603]\nWie heisst der Fluss, welcher durch Bern fliesst?\n==\nAare",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wie heisst der Fluss, welcher durch Bern fliesst?\n==\nAare",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232603"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232604]\nHauptstadt von Zypern\n==\nNikosia",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Zypern\n==\nNikosia",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232604"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232605]\nNenne das Land, das an die Länder Albanien,Mazedonien und Bulgarien grenzt.\n==\nGriechenland",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne das Land, das an die Länder Albanien,Mazedonien und Bulgarien grenzt.\n==\nGriechenland",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232605"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232606]\nHauptstadt von Tschechien\n==\nPrag",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Tschechien\n==\nPrag",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232606"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232607]\nWelches Land liegt zwischen der Schweiz und Österreich ?\n==\nLichtenstein",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welches Land liegt zwischen der Schweiz und Österreich ?\n==\nLichtenstein",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232607"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232608]\n[!Hauptstadt von Mazedonien]\n[-Nairobi]\n[-Belgrad]\n[+Skopje]\n[-Kinshasa]\n[-Sofia]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Hauptstadt von Mazedonien",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Nairobi",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Belgrad",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Skopje",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Kinshasa",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Sofia",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232608"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232609]\nHauptstadt von Bulgarien\n==\nSofia",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Bulgarien\n==\nSofia",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232609"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1&image-link]\n[@id:232610]\nZu welchem Land gehört Grönland?\n[&image-link:https://card2brain.ch/c2b-images/card/1400945-answer.jpg?v=1654534408490][@caption:Lizenzierung: ==Kein Urheberrechtsschutz (CC0)==|link:https://creativecommons.org/publicdomain/zero/1.0/deed.de|]\n==\nDänemark",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zu welchem Land gehört Grönland?\n\n==\nDänemark",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232610"
+      ],
+      "resource": {
+        "type": "image-link",
+        "imageLink": {
+          "provider": "",
+          "url": "https://card2brain.ch/c2b-images/card/1400945-answer.jpg?v=1654534408490",
+          "format": "jpg?v=1654534408490",
+          "caption": "Lizenzierung: ==Kein Urheberrechtsschutz (CC0)==|link"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232611]\nWelche Länder grenzen an die Schweiz?\n==\nItalien, Österreich, Deutschland, Lichtenstein und Frankreich",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche Länder grenzen an die Schweiz?\n==\nItalien, Österreich, Deutschland, Lichtenstein und Frankreich",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232611"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232612]\nHauptstadt von Israel\n==\nJerusalem",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Israel\n==\nJerusalem",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232612"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232613]\nWelcher Fluss verbindet die Schweiz mit den Niederlanden?\n==\nRhein",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welcher Fluss verbindet die Schweiz mit den Niederlanden?\n==\nRhein",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232613"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232614]\n[!Hauptstadt von Polen]\n[+Warschau]\n[-Berlin]\n[-Prag]\n[-Tegucigalpa]\n[-Rabat]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Hauptstadt von Polen",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Warschau",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Berlin",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Prag",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Tegucigalpa",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Rabat",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232614"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232615]\nAn welchem Fluss liegt Prag?\n==\nMoldau",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "An welchem Fluss liegt Prag?\n==\nMoldau",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232615"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232616]\nIn welchem Land entspringt und mündet der Ebro?\n==\nSpanien",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "In welchem Land entspringt und mündet der Ebro?\n==\nSpanien",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232616"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1&image-link]\n[@id:232617]\n[!Hauptstadt von Sri Lanka]\n[&image-link:https://card2brain.ch/c2b-images/card/1399684-answer.jpg?v=1654534534510]\n[-Islamabad]\n[-Montevideo]\n[-Dakar]\n[+Colombo]\n[-Peking]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Hauptstadt von Sri Lanka",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Islamabad",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Montevideo",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Dakar",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Colombo",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Peking",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232617"
+      ],
+      "resource": {
+        "type": "image-link",
+        "imageLink": {
+          "provider": "",
+          "url": "https://card2brain.ch/c2b-images/card/1399684-answer.jpg?v=1654534534510",
+          "format": "jpg?v=1654534534510"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232618]\nHauptstadt von Kroatien\n==\nZagreb",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Kroatien\n==\nZagreb",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232618"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232619]\nHauptstadt von Schweiz\n==\nBern",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Schweiz\n==\nBern",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232619"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1]\n[@id:232620]\n[!Welche Länder an Tschechien?]\n||Frage ohne Verb||\n[+Polen]\n[+Deutschland]\n[+Österreich]\n[-Ungarn]\n[+Slowakei]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welche Länder an Tschechien?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Polen",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Deutschland",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Österreich",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Ungarn",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Slowakei",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232620"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232621]\nHauptstadt von Weissrussland\n==\nMinsk",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Weissrussland\n==\nMinsk",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232621"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232622]\nDurch welche Länder fliesst die Donau?\n==\nDeutschland, Österreich, Slowakei, Ungarn, Kroatien, Serbien, Rumänien, Bulgarien, Ukraine, Moldawien",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Durch welche Länder fliesst die Donau?\n==\nDeutschland, Österreich, Slowakei, Ungarn, Kroatien, Serbien, Rumänien, Bulgarien, Ukraine, Moldawien",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232622"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232623]\nHauptstadt von Luxemburg\n==\nLuxemburg",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Luxemburg\n==\nLuxemburg",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232623"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232624]\n[!Hauptstadt von Moldawien]\n[-Kingston]\n[-Lima]\n[-Canberra]\n[+Chișinău]\n[-Buenos Aires]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Hauptstadt von Moldawien",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Kingston",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Lima",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Canberra",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Chișinău",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Buenos Aires",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232624"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232625]\nLissabon ist die Hauptstadt von ...\n==\nPortugal",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Lissabon ist die Hauptstadt von ...\n==\nPortugal",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232625"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232626]\n[!Hauptstadt von Elfenbeinküste]\n[-Freetown]\n[-Banjul]\n[-Lusaka]\n[+Yamoussoukro]\n[-Kampala]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Hauptstadt von Elfenbeinküste",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Freetown",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Banjul",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Lusaka",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Yamoussoukro",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Kampala",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232626"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232627]\nWelche Länder grenzen an Frankreich?\n==\nSchweiz, Italien, Spanien, Deutschland, Belgien, Luxemburg",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche Länder grenzen an Frankreich?\n==\nSchweiz, Italien, Spanien, Deutschland, Belgien, Luxemburg",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232627"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232628]\nWelches ist das nördlichste Meer von Europa?\n==\nBarentsee",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welches ist das nördlichste Meer von Europa?\n==\nBarentsee",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232628"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232629]\n[!Hauptstadt von Indien]\n[-Yaoundé]\n[-Astana]\n[-Bogotá]\n[+Neu-Delhi]\n[-Beirut]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Hauptstadt von Indien",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Yaoundé",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Astana",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Bogotá",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Neu-Delhi",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Beirut",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232629"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232630]\nHauptstadt von Norwegen\n==\nOslo",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Norwegen\n==\nOslo",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232630"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232631]\n[!Hauptstadt von Türkei]\n[-Wien]\n[-Riga]\n[+Ankara]\n[-Wilna]\n[-Minsk]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Hauptstadt von Türkei",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Wien",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Riga",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ankara",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Wilna",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Minsk",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232631"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232632]\nTirana ist die Hauptstadt vom...\n==\nAlbanien",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Tirana ist die Hauptstadt vom...\n==\nAlbanien",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232632"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232633]\n[!Hauptstadt von Indonesien]\n[-Jerusalem]\n[-Reykjavík]\n[+Jakarta]\n[-Kopenhagen]\n[-Stockholm]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Hauptstadt von Indonesien",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Jerusalem",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Reykjavík",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Jakarta",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Kopenhagen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Stockholm",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232633"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232634]\nHauptstadt von Finnland\n==\nHelsinki",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Finnland\n==\nHelsinki",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232634"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232635]\nKleinstaat zwischen Spanien und Frankreich\n==\nAndorra",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Kleinstaat zwischen Spanien und Frankreich\n==\nAndorra",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232635"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232636]\nHauptstadt von Ägypten\n==\nKairo",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Ägypten\n==\nKairo",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232636"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232637]\n[!Hauptstadt von Marokko]\n[+Rabat]\n[-Tunis]\n[-Moroni]\n[-Kairo]\n[-Accra]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Hauptstadt von Marokko",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Rabat",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Tunis",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Moroni",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Kairo",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Accra",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232637"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232638]\nWelcher Fluss fliesst durch London?\n==\nThemse",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welcher Fluss fliesst durch London?\n==\nThemse",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232638"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232639]\nWelche zwei Meere grenzen an die Ukraine?\n==\nSchwarzes Meer, Asowsches Meer",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche zwei Meere grenzen an die Ukraine?\n==\nSchwarzes Meer, Asowsches Meer",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232639"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232640]\nWie heisst der höchste Berg Europas?\n==\nMont Blanc",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wie heisst der höchste Berg Europas?\n==\nMont Blanc",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232640"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232641]\nWelche Länder grenzen an Polen?\n==\nDeutschland, Tschechien, Slowakei, Ukraine, Weissrussland, Litauen, Russland",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche Länder grenzen an Polen?\n==\nDeutschland, Tschechien, Slowakei, Ukraine, Weissrussland, Litauen, Russland",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232641"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232642]\nWie heisst der längste Fluss in Europa?\n==\nWolga",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wie heisst der längste Fluss in Europa?\n==\nWolga",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232642"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1]\n[@id:232643]\n[!Welche Flüsse entspringen in Frankreich?]\n[+Maas]\n[+Loire]\n[+Seine]\n[-Garonne]\n[+Mosel]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welche Flüsse entspringen in Frankreich?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Maas",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Loire",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Seine",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Garonne",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Mosel",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232643"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232644]\nWelches ist das grösste Nachbarland der Schweiz?\n==\nFrankreich",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welches ist das grösste Nachbarland der Schweiz?\n==\nFrankreich",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232644"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232645]\n[!Wie heisst die Hauptstadt von den Philippinen]\n[-Bratislava]\n[-Rabat]\n[+Manila]\n[-Minsk]\n[-Usbekistan]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Wie heisst die Hauptstadt von den Philippinen",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Bratislava",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Rabat",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Manila",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Minsk",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Usbekistan",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232645"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232646]\nWelche Länder grenzen an das schwarze Meer?\n==\nTürkei, Ukraine, Georgien, Russland, Rumänien, Bulgarien",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche Länder grenzen an das schwarze Meer?\n==\nTürkei, Ukraine, Georgien, Russland, Rumänien, Bulgarien",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232646"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232647]\nAn welches Meer grenzt Schweden?\n==\nOstsee",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "An welches Meer grenzt Schweden?\n==\nOstsee",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232647"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232648]\nLondon ist die Hauptstadt von...\n==\nGrossbritanien",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "London ist die Hauptstadt von...\n==\nGrossbritanien",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232648"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232649]\n[!Wie heisst die Hauptstadt von Saudi-Arabien?]\n[-Dubai]\n[-Medina]\n[+Riad]\n[-Mekka]\n[-Harad]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Wie heisst die Hauptstadt von Saudi-Arabien?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Dubai",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Medina",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Riad",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Mekka",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Harad",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232649"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232650]\nWie heisst das Gebirge, das das europäische Russland vom asiatischen Russland trennt?\n==\nUral",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wie heisst das Gebirge, das das europäische Russland vom asiatischen Russland trennt?\n==\nUral",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232650"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232651]\nHauptstadt von Spanien\n==\nMadrid",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Spanien\n==\nMadrid",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232651"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1]\n[@id:232652]\n[!Welche Gebirge sind in der Türkei?]\n[+Pontisches Gebirge]\n[-Pindos]\n[+Taurus]\n[-Karpaten]\n[-Dinarisches Gebirge]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welche Gebirge sind in der Türkei?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Pontisches Gebirge",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Pindos",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Taurus",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Karpaten",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Dinarisches Gebirge",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232652"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232653]\n[!Hauptstadt von Lichtenstein]\n[-Wien]\n[+Vaduz]\n[-Amsterdam]\n[-Bangkok]\n[-Ottawa]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Hauptstadt von Lichtenstein",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Wien",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Vaduz",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Amsterdam",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Bangkok",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Ottawa",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232653"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232654]\nHauptstadt von Griechenland\n==\nAthen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Hauptstadt von Griechenland\n==\nAthen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232654"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232655]\nValletta ist die Hauptstadt von ...\n==\nMalta",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Valletta ist die Hauptstadt von ...\n==\nMalta",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232655"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232656]\n[!Bukarest  ist die Hauptstadt von ...]\n[+Rumänien]\n[-Griechenland]\n[-Litauen]\n[-Portugal]\n[-Tschechien]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Bukarest  ist die Hauptstadt von ...",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Rumänien",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Griechenland",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Litauen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Portugal",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Tschechien",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232656"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:232657]\n[!Welche Länder grenzen an das Schwarzes Meer?]\n[+Rumänien]\n[-Weissrussland]\n[+Bulgarien]\n[+Türkei]\n[-Armenien]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welche Länder grenzen an das Schwarzes Meer?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Rumänien",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Weissrussland",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Bulgarien",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Türkei",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Armenien",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232657"
+      ]
+    }
+  }
+]

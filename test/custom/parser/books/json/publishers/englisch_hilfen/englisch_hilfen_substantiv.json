@@ -1,0 +1,5806 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:216239]\n[@externalId:e-substantive-plural-mehrzahl--_hlbcdyylmstl]\n[#Substantive, Plural (Mehrzahl), s-Genitiv – Grammatikübungen – Englisch]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/englisch-hilfen/web-resources/images/englischhilfen_grammatik_cover.png]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216239"
+      ],
+      "externalId": [
+        "e-substantive-plural-mehrzahl--_hlbcdyylmstl"
+      ],
+      "title": "Substantive, Plural (Mehrzahl), s-Genitiv – Grammatikübungen – Englisch",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/englisch-hilfen/web-resources/images/englischhilfen_grammatik_cover.png"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216240]\n[%Nr. 3454]\n[!Schreibe die richtige Pluralform in die Lücke.]\n\n0. car - [_cars][@example]\n1. ox - [_oxen]\n2. roof - [_roofs]\n3. potato - [_potatoes]\n4. party - [_parties]\n5. deer - [_deer]\n6. chief - [_chiefs]\n7. photo - [_photos]\n8. series - [_series]\n9. wife - [_wives]\n10. brother-in-law - [_brothers-in-law]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. car - {0}\n1. ox - {1}\n2. roof - {2}\n3. potato - {3}\n4. party - {4}\n5. deer - {5}\n6. chief - {6}\n7. photo - {7}\n8. series - {8}\n9. wife - {9}\n10. brother-in-law - {10}",
+      "item": "Nr. 3454",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216240"
+      ],
+      "instruction": "Schreibe die richtige Pluralform in die Lücke.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cars"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "oxen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "roofs"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "potatoes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "parties"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "deer"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "chiefs"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "photos"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "series"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wives"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "brothers-in-law"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216241]\n[%Nr. 3466]\n[!Schreibe die richtige Pluralform in die Lücke.]\n\n0. box - [_boxes][@example]\n1. tomato - [_tomatoes]\n2. tooth - [_teeth]\n3. aircraft - [_aircraft]\n4. logo - [_logos]\n5. mouse - [_mice]\n6. crisis - [_crises]\n7. passer-by - [_passers-by]\n8. radius - [_radii]\n9. grown-up - [_grown-ups]\n10. crossroads - [_crossroads]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. box - {0}\n1. tomato - {1}\n2. tooth - {2}\n3. aircraft - {3}\n4. logo - {4}\n5. mouse - {5}\n6. crisis - {6}\n7. passer-by - {7}\n8. radius - {8}\n9. grown-up - {9}\n10. crossroads - {10}",
+      "item": "Nr. 3466",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216241"
+      ],
+      "instruction": "Schreibe die richtige Pluralform in die Lücke.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "boxes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "tomatoes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "teeth"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "aircraft"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "logos"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "mice"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "crises"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "passers-by"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "radii"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "grown-ups"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "crossroads"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216242]\n[%Nr. 3436]\n[!Wie viele Personen besitzen wie viele Sachen? Wähle aus den Vorgaben aus.]\n\n1. our teacher's tablet = [+1 Lehrer und 1 Tablet][-1 Lehrer und mehrere Tablets][-mehrere Lehrer und 1 Tablet][-mehrere Lehrer und mehrere Tablets]\n2. the dogs' hut = [-1 Hund und die 1 Hütte][-1 Hund und mehrere Hütten][+mehrere Hunde und 1 Hütte][-mehrere Hunde und mehrere Hütten]\n3. the men's sandwiches = [-1 Mann und 1 Sandwich][-1 Hund und mehrere Sandwiches][-mehrere Männer und 1 Sandwich][+mehrere Männer und mehrere Sandwiches]\n4. the woman's budgies = [-1 Frau und 1 Wellensittich][+1 Frau und mehrere Wellensittiche][-mehrere Frauen und 1 Wellensittich][-mehrere Frauen und mehrere Wellensittiche]\n5. our baby's toys = [-1 Baby und 1 Spielzeug][+1 Baby und mehrere Spielzeuge][-mehrere Babys und 1 Spielzeug][-mehrere Babys und mehrere Spielzeuge]\n6. the mice's cage = [-1 Maus und 1 Käfig][-1 Maus und mehrere Käfige][+mehrere Mäuse und 1 Käfig][-mehrere Mäuse und mehrere Käfige]\n7. my friend's car = [+1 Freund und 1 Auto][-1 Freund und mehrere Autos][-mehrere Freunde und 1 Auto][-mehrere Freunde und mehrere Autos]\n8. my friend's cars = [-1 Freund und 1 Auto][+1 Freund und mehrere Autos][-mehrere Freunde und 1 Auto][-mehrere Freunde und mehrere Autos]\n9. my friends' car = [-1 Freund und 1 Auto][-1 Freund und mehrere Autos][+mehrere Freunde und 1 Auto][-mehrere Freunde und mehrere Autos]\n10. my friends' cars = [-1 Freund und 1 Auto][-1 Freund und mehrere Autos][-mehrere Freunde und 1 Auto][+mehrere Freunde und mehrere Autos]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. our teacher's tablet = {0}\n2. the dogs' hut = {1}\n3. the men's sandwiches = {2}\n4. the woman's budgies = {3}\n5. our baby's toys = {4}\n6. the mice's cage = {5}\n7. my friend's car = {6}\n8. my friend's cars = {7}\n9. my friends' car = {8}\n10. my friends' cars = {9}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1 Lehrer und 1 Tablet",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "1 Lehrer und mehrere Tablets",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Lehrer und 1 Tablet",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Lehrer und mehrere Tablets",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1 Hund und die 1 Hütte",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "1 Hund und mehrere Hütten",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Hunde und 1 Hütte",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "mehrere Hunde und mehrere Hütten",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1 Mann und 1 Sandwich",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "1 Hund und mehrere Sandwiches",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Männer und 1 Sandwich",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Männer und mehrere Sandwiches",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1 Frau und 1 Wellensittich",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "1 Frau und mehrere Wellensittiche",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "mehrere Frauen und 1 Wellensittich",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Frauen und mehrere Wellensittiche",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1 Baby und 1 Spielzeug",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "1 Baby und mehrere Spielzeuge",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "mehrere Babys und 1 Spielzeug",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Babys und mehrere Spielzeuge",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1 Maus und 1 Käfig",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "1 Maus und mehrere Käfige",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Mäuse und 1 Käfig",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "mehrere Mäuse und mehrere Käfige",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1 Freund und 1 Auto",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "1 Freund und mehrere Autos",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Freunde und 1 Auto",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Freunde und mehrere Autos",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1 Freund und 1 Auto",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "1 Freund und mehrere Autos",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "mehrere Freunde und 1 Auto",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Freunde und mehrere Autos",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1 Freund und 1 Auto",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "1 Freund und mehrere Autos",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Freunde und 1 Auto",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "mehrere Freunde und mehrere Autos",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "1 Freund und 1 Auto",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "1 Freund und mehrere Autos",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Freunde und 1 Auto",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mehrere Freunde und mehrere Autos",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216242"
+      ],
+      "item": "Nr. 3436",
+      "instruction": "Wie viele Personen besitzen wie viele Sachen? Wähle aus den Vorgaben aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216243]\n[%Nr. 3438]\n[!Hängt man '**s** an das Substantiv an oder nur '? Wähle aus den Vorgaben aus.]\n\n1. This is [+Julian's ][-Julians'] book.\n2. He is [+Laura's][-Lauras'] brother.\n3. The [+children's][-childrens'] room is nice.\n4. Where is [+Nick's][-Nicks'] football?\n5. Our [-parent's][+parents'] van is big.\n6. My [+aunt's][-aunts'] family lives in Scotland.\n7. The [-Baker's][+Bakers'] house is green.\n8. My [+grandma's][-grandmas'] watch is always slow.\n9. These are my [+mum's][-mums'] keys.\n10. The [-secretaries's][+secretaries'] laptops are brand new.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. This is {0} book.\n2. He is {1} brother.\n3. The {2} room is nice.\n4. Where is {3} football?\n5. Our {4} van is big.\n6. My {5} family lives in Scotland.\n7. The {6} house is green.\n8. My {7} watch is always slow.\n9. These are my {8} keys.\n10. The {9} laptops are brand new.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Julian's",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Julians'",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Laura's",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Lauras'",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "children's",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "childrens'",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Nick's",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Nicks'",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "parent's",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "parents'",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "aunt's",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "aunts'",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Baker's",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bakers'",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "grandma's",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "grandmas'",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mum's",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "mums'",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "secretaries's",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "secretaries'",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216243"
+      ],
+      "item": "Nr. 3438",
+      "instruction": "Hängt man '**s** an das Substantiv an oder nur '? Wähle aus den Vorgaben aus."
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216244]\n[%Nr. 3450]\n[!Schreibe die englische Entsprechung des s-Genitivs in die Lücke.]\n\n0. I met [_Mandy's][@example] sister yesterday. __(Mandy)__\n1. This is [_Peter's][!Peter] book.\n2. Let's go to the [_Smiths'][!Smiths].\n3. The [_children's][!children] room is upstairs.\n4. [_John's][!John] sister is twelve years old.\n5. [_ Susan] and [_Steve's][!Susan – Steve] school is old.\n6. [_Men's][!men] shoes are on the second floor.\n7. My [_parents'][!parents] car was not expensive.\n8. [_Charles's][!Charles] CD player is new.\n9. This is the [_boy's][!boy] bike.\n10. These are the [_boys'][!boys] pencils.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. I met {0} sister yesterday. __(Mandy)__\n1. This is {1} book.\n2. Let's go to the {2}.\n3. The {3} room is upstairs.\n4. {4} sister is twelve years old.\n5. {5} and {6} school is old.\n6. {7} shoes are on the second floor.\n7. My {8} car was not expensive.\n8. {9} CD player is new.\n9. This is the {10} bike.\n10. These are the {11} pencils.",
+      "item": "Nr. 3450",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216244"
+      ],
+      "instruction": "Schreibe die englische Entsprechung des s-Genitivs in die Lücke.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Mandy's"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Peter's"
+          ],
+          "hint": "",
+          "instruction": "Peter",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Smiths'"
+          ],
+          "hint": "",
+          "instruction": "Smiths",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "children's"
+          ],
+          "hint": "",
+          "instruction": "children",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "John's"
+          ],
+          "hint": "",
+          "instruction": "John",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Susan"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Steve's"
+          ],
+          "hint": "",
+          "instruction": "Susan – Steve",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Men's"
+          ],
+          "hint": "",
+          "instruction": "men",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "parents'"
+          ],
+          "hint": "",
+          "instruction": "parents",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Charles's"
+          ],
+          "hint": "",
+          "instruction": "Charles",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "boy's"
+          ],
+          "hint": "",
+          "instruction": "boy",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "boys'"
+          ],
+          "hint": "",
+          "instruction": "boys",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216245]\n[%Nr. 3452]\n[!Schreibe die richtig Form des s-Genitivs in die Lücke.]\n\n0. We have two [_weeks'][@example] holiday in October. __(week)__\n1. Sarah is [_Emily's][!Emily] aunt.\n2. These are our [_friends'][!friends] cats.\n3. Let's meet at [_Giovanni's][!Giovanni] for lunch.\n4. Where is the [_ladies'][!ladies] shower?\n5. This is our [_boss's][!boss] car.\n6. My [_cousin's][!cousin] dad is my uncle.\n7. Did you read [_yesterday's][!yesterday] newspaper?\n8. [_Jack's] and [_Joe's][!Jack – Joe] bags are black.\n9. Our grandparents live in an old [_people's][!people] home.\n10. That sandwich would not be to [_everyone's][!everyone] taste.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. We have two {0} holiday in October. __(week)__\n1. Sarah is {1} aunt.\n2. These are our {2} cats.\n3. Let's meet at {3} for lunch.\n4. Where is the {4} shower?\n5. This is our {5} car.\n6. My {6} dad is my uncle.\n7. Did you read {7} newspaper?\n8. {8} and {9} bags are black.\n9. Our grandparents live in an old {10} home.\n10. That sandwich would not be to {11} taste.",
+      "item": "Nr. 3452",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216245"
+      ],
+      "instruction": "Schreibe die richtig Form des s-Genitivs in die Lücke.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "weeks'"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Emily's"
+          ],
+          "hint": "",
+          "instruction": "Emily",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "friends'"
+          ],
+          "hint": "",
+          "instruction": "friends",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Giovanni's"
+          ],
+          "hint": "",
+          "instruction": "Giovanni",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ladies'"
+          ],
+          "hint": "",
+          "instruction": "ladies",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "boss's"
+          ],
+          "hint": "",
+          "instruction": "boss",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cousin's"
+          ],
+          "hint": "",
+          "instruction": "cousin",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "yesterday's"
+          ],
+          "hint": "",
+          "instruction": "yesterday",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Jack's"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Joe's"
+          ],
+          "hint": "",
+          "instruction": "Jack – Joe",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "people's"
+          ],
+          "hint": "",
+          "instruction": "people",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "everyone's"
+          ],
+          "hint": "",
+          "instruction": "everyone",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216246]\n[%Nr. 3440]\n[!Entscheide, ob das **fettgedruckte Wort** im Satz ein Substantiv oder ein Verb ist.\nBeachte die Endung -s.]\n\n1. We read **books.** - [+Substantiv][-Verb]\n2. She **rides a horse.** - [-Substantiv][+Verb]\n3. My **parents** are nice. - [+Substantiv][-Verb]\n4. They play the **drums.** - [+Substantiv][-Verb]\n5. He often **helps** his brother. - [-Substantiv][+Verb]\n6. Frank never **has** lunch at school. - [-Substantiv][+Verb]\n7. I don't like **carrots.** - [+Substantiv][-Verb]\n8. Her **friends** live in a flat. - [+Substantiv][-Verb]\n9. John often **gets up** late. - [-Substantiv][+Verb]\n10. Peggy **comes** home from school at 3.30 pm. [-Substantiv][+Verb]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. We read **books.** - {0}\n2. She **rides a horse.** - {1}\n3. My **parents** are nice. - {2}\n4. They play the **drums.** - {3}\n5. He often **helps** his brother. - {4}\n6. Frank never **has** lunch at school. - {5}\n7. I don't like **carrots.** - {6}\n8. Her **friends** live in a flat. - {7}\n9. John often **gets up** late. - {8}\n10. Peggy **comes** home from school at 3.30 pm. {9}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216246"
+      ],
+      "item": "Nr. 3440",
+      "instruction": "Entscheide, ob das **fettgedruckte Wort** im Satz ein Substantiv oder ein Verb ist.\nBeachte die Endung -s."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216247]\n[%Nr. 3478]\n[!In welchem Satz oder in welcher Frage wird die Groß- und Kleinschreibung richtig verwendet?]\n\n1. my birthday is next friday.\n[-My birthday is next friday.][+My birthday is next Friday.][-My Birthday is next Friday.]\n2. he loves italian food.\n[-He loves italian food.][+He loves Italian food.][-He loves Italian Food.]\n3. independence day is celebrated on july 4.\n[-Independence day is celebrated on july 4.][-Independence day is celebrated on July 4.][+Independence Day is celebrated on July 4.]\n4. gerry speaks english, french and spanish.\n[-Gerry speaks english, french and spanish.][+Gerry speaks English, French and Spanish.]\n5. the highest mountain is mount everest.\n[-The highest mountain is mount Everest.][+The highest mountain is Mount Everest.]\n6. his favourite season is summer.\n[+His favourite season is summer.][-His favourite season is Summer.]\n7. she lives in london and i live in paris.\n[-She lives in london and I live in paris.][-She lives in London and i live in Paris.][+She lives in London and I live in Paris.]\n8. do they like shakespearean sonnets?\n[-Do they like shakespearean sonnets?][+Do they like Shakespearean sonnets?][-Do they like Shakespearean Sonnets?]\n9. the nobel prize in literature was first awarded in 1901.\n[-The Nobel prize in literature was first awarded in 1901][-The Nobel Prize in literature was first awarded in 1901][+The Nobel Prize in Literature was first awarded in 1901.]\n10. we spent our holidays in the south of france and stayed at a nice hotel.\n[-We spent our holidays in the south of France and stayed at a nice hotel.][+We spent our holidays in the South of France and stayed at a nice hotel.][-We spent our holidays in the South Of France and stayed at a nice hotel.]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. my birthday is next friday.\n{0}\n2. he loves italian food.\n{1}\n3. independence day is celebrated on july 4.\n{2}\n4. gerry speaks english, french and spanish.\n{3}\n5. the highest mountain is mount everest.\n{4}\n6. his favourite season is summer.\n{5}\n7. she lives in london and i live in paris.\n{6}\n8. do they like shakespearean sonnets?\n{7}\n9. the nobel prize in literature was first awarded in 1901.\n{8}\n10. we spent our holidays in the south of france and stayed at a nice hotel.\n{9}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "My birthday is next friday.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "My birthday is next Friday.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "My Birthday is next Friday.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "He loves italian food.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "He loves Italian food.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "He loves Italian Food.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Independence day is celebrated on july 4.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Independence day is celebrated on July 4.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Independence Day is celebrated on July 4.",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Gerry speaks english, french and spanish.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Gerry speaks English, French and Spanish.",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "The highest mountain is mount Everest.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "The highest mountain is Mount Everest.",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "His favourite season is summer.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "His favourite season is Summer.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "She lives in london and I live in paris.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "She lives in London and i live in Paris.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "She lives in London and I live in Paris.",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Do they like shakespearean sonnets?",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Do they like Shakespearean sonnets?",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Do they like Shakespearean Sonnets?",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "The Nobel prize in literature was first awarded in 1901",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "The Nobel Prize in literature was first awarded in 1901",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "The Nobel Prize in Literature was first awarded in 1901.",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "We spent our holidays in the south of France and stayed at a nice hotel.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "We spent our holidays in the South of France and stayed at a nice hotel.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "We spent our holidays in the South Of France and stayed at a nice hotel.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216247"
+      ],
+      "item": "Nr. 3478",
+      "instruction": "In welchem Satz oder in welcher Frage wird die Groß- und Kleinschreibung richtig verwendet?"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216248]\n[%Nr. 3474]\n[!Wähle aus den Vorgaben die richtige Form (**one** oder **ones**) aus.]\n\n0. This glass is dirty. Can I have a clean [+one][-ones][@example]?\n1. This bag is very old. I need a new [+one][-ones].\n2. Small pineapples are sweeter than big [-one][+ones].\n3. The new smartphones are much faster than the old [-one][+ones].\n4. Which is your car, the black [+one][-ones] or the white [+one][-ones]?\n5. She needs new shoes, the old [-one][+ones] are too small.\n6. If you buy two bottles of water, you get a third [+one][-ones] free.\n7. These dresses are expensive. Are there any cheap [-one][+ones]?\n8. Jack has three pens – a red [+one][-ones] and two green [-one][+ones].\n9. I would like to have a cupcake – the red [+one][-ones] looks great.\n10. I would like to have some cupcakes – the green [-one][+ones] look great.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "0. This glass is dirty. Can I have a clean {0}?\n1. This bag is very old. I need a new {1}.\n2. Small pineapples are sweeter than big {2}.\n3. The new smartphones are much faster than the old {3}.\n4. Which is your car, the black {4} or the white {5}?\n5. She needs new shoes, the old {6} are too small.\n6. If you buy two bottles of water, you get a third {7} free.\n7. These dresses are expensive. Are there any cheap {8}?\n8. Jack has three pens – a red {9} and two green {10}.\n9. I would like to have a cupcake – the red {11} looks great.\n10. I would like to have some cupcakes – the green {12} look great.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216248"
+      ],
+      "item": "Nr. 3474",
+      "instruction": "Wähle aus den Vorgaben die richtige Form (**one** oder **ones**) aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216249]\n[%Nr. 3476]\n[!Wähle aus den Vorgaben die richtige Form (**one** oder **ones**) aus.]\n\n0. Dad bought five pens yesterday – four black [-one][+ones][@example] and a green [+one][-ones][@example].\n1. The black suit is nicer than the brown [+one][-ones].\n2. There are lots of books here – which [-one][+ones] are yours?\n3. These are the new machines. What happened to the old [-one][+ones]?\n4. I lost my iPad and bought a new [+one][-ones].\n5. We have American cars – they have Japanese [-one][+ones]?\n6. Which cookies would you like? – The chocolate [-one][+ones] , please.\n7. Can I have the red apples, please? I don't like the green [-one][+ones].\n8. Which is your suitcase, Madam? This [+one][-ones] , or that [+one][-ones] over there?\n9. Dad bought five pens yesterday – three black [-one][+ones] and two green [-one][+ones].\n10. I like these hoodies – which [+one][-ones] is cheaper?",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "0. Dad bought five pens yesterday – four black {0} and a green {1}.\n1. The black suit is nicer than the brown {2}.\n2. There are lots of books here – which {3} are yours?\n3. These are the new machines. What happened to the old {4}?\n4. I lost my iPad and bought a new {5}.\n5. We have American cars – they have Japanese {6}?\n6. Which cookies would you like? – The chocolate {7} , please.\n7. Can I have the red apples, please? I don't like the green {8}.\n8. Which is your suitcase, Madam? This {9} , or that {10} over there?\n9. Dad bought five pens yesterday – three black {11} and two green {12}.\n10. I like these hoodies – which {13} is cheaper?",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{11}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{12}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{13}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "one",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ones",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216249"
+      ],
+      "item": "Nr. 3476",
+      "instruction": "Wähle aus den Vorgaben die richtige Form (**one** oder **ones**) aus."
+    }
+  },
+  {
+    "bitmark": "[.match:bitmark--]\n[@id:216250]\n[%Nr. 3434]\n[!Finde zu den vorgegebenen Substantiven die richtigen Pluralformen.]\n\n===\n[#Singular]\n==\n[#Plural]\n===\nkitten\n==\nkittens\n===\nfarmer\n==\nfarmers\n===\nriver\n==\nrivers\n===\nbridge\n==\nbridges\n===\nteacher\n==\nteachers\n===\nfork\n==\nforks\n===\ntree\n==\ntrees\n===\nbush\n==\nbushes\n===\ncloud\n==\nclouds\n===\nsky\n==\nskies\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "Nr. 3434",
+      "heading": {
+        "forKeys": "Singular",
+        "forValues": "Plural"
+      },
+      "pairs": [
+        {
+          "key": "kitten",
+          "values": [
+            "kittens"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "farmer",
+          "values": [
+            "farmers"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "river",
+          "values": [
+            "rivers"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "bridge",
+          "values": [
+            "bridges"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "teacher",
+          "values": [
+            "teachers"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "fork",
+          "values": [
+            "forks"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "tree",
+          "values": [
+            "trees"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "bush",
+          "values": [
+            "bushes"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "cloud",
+          "values": [
+            "clouds"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "sky",
+          "values": [
+            "skies"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "216250"
+      ],
+      "instruction": "Finde zu den vorgegebenen Substantiven die richtigen Pluralformen."
+    }
+  },
+  {
+    "bitmark": "[.match:bitmark--]\n[@id:216251]\n[%Nr. 3456]\n[!Finde zu den vorgegebenen Substantiven die richtigen Pluralformen.]\n\n===\n[#Singular]\n==\n[#Plural]\n===\nhorse\n==\nhorses\n===\ncity\n==\ncities\n===\nprize\n==\nprizes\n===\nboy\n==\nboys\n===\nbelief\n==\nbeliefs\n===\ntomato\n==\ntomatoes\n===\nchurch\n==\nchurches\n===\npotato\n==\npotatoes\n===\ncloud\n==\nclouds\n===\nthirty\n==\nthirties\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "Nr. 3456",
+      "heading": {
+        "forKeys": "Singular",
+        "forValues": "Plural"
+      },
+      "pairs": [
+        {
+          "key": "horse",
+          "values": [
+            "horses"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "city",
+          "values": [
+            "cities"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "prize",
+          "values": [
+            "prizes"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "boy",
+          "values": [
+            "boys"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "belief",
+          "values": [
+            "beliefs"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "tomato",
+          "values": [
+            "tomatoes"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "church",
+          "values": [
+            "churches"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "potato",
+          "values": [
+            "potatoes"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "cloud",
+          "values": [
+            "clouds"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "thirty",
+          "values": [
+            "thirties"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "216251"
+      ],
+      "instruction": "Finde zu den vorgegebenen Substantiven die richtigen Pluralformen."
+    }
+  },
+  {
+    "bitmark": "[.match:bitmark--]\n[@id:216252]\n[%Nr. 3468]\n[!Finde zu den vorgegebenen Substantiven die richtigen Pluralformen.]\n\n===\n[#Singular]\n==\n[#Plural]\n===\nhoof\n==\nhooves\n===\nstory\n==\nstories\n===\npatch\n==\npatches\n===\ncrisis\n==\ncrises\n===\nknife\n==\nknives\n===\nshop\n==\nshops\n===\nbrandy\n==\nbrandies\n===\nseries\n==\nseries\n==\ntake-off\n==\ntake-offs\n===\npen\n==\npens\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "Nr. 3468",
+      "heading": {
+        "forKeys": "Singular",
+        "forValues": "Plural"
+      },
+      "pairs": [
+        {
+          "key": "hoof",
+          "values": [
+            "hooves"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "story",
+          "values": [
+            "stories"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "patch",
+          "values": [
+            "patches"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "crisis",
+          "values": [
+            "crises"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "knife",
+          "values": [
+            "knives"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "shop",
+          "values": [
+            "shops"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "brandy",
+          "values": [
+            "brandies"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "series",
+          "values": [
+            "series"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "take-off",
+          "values": [
+            "take-offs"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "pen",
+          "values": [
+            "pens"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "216252"
+      ],
+      "instruction": "Finde zu den vorgegebenen Substantiven die richtigen Pluralformen."
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '=='",
+        "line": 42,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'take-off'",
+        "line": 43,
+        "column": 0,
+        "errorLine": "take-off"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216253]\n[%Nr. 3410]\n[!Schreibe die richtige Pluralform in die Lücke.]\n\n0. school → [_schools][@example]\n1. desk - [_desks]\n2. pencil - [_pencils]\n3. bike - [_bikes]\n4. cat - [_cats]\n5. invitation - [_invitations]\n6. watch - [_watches]\n7. game - [_games]\n8. cage - [_cages]\n9. cake - [_cakes]\n10. box - [_boxes]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. school → {0}\n1. desk - {1}\n2. pencil - {2}\n3. bike - {3}\n4. cat - {4}\n5. invitation - {5}\n6. watch - {6}\n7. game - {7}\n8. cage - {8}\n9. cake - {9}\n10. box - {10}",
+      "item": "Nr. 3410",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216253"
+      ],
+      "instruction": "Schreibe die richtige Pluralform in die Lücke.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "schools"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "desks"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "pencils"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "bikes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cats"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "invitations"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "watches"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "games"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cages"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cakes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "boxes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216254]\n[%Nr. 3412]\n[!Schreibe die richtige englische Pluralform in die Lücke.]\n\n0. school → [_schools][@example]\n1. life - [_lives]\n2. family - [_families]\n3. boy - [_boys]\n4. house - [_houses]\n5. city - [_cities]\n6. man - [_men]\n7. child - [_children]\n8. sandwich - [_sandwiches]\n9. nurse - [_nurses]\n10. shelf - [_shelves]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. school → {0}\n1. life - {1}\n2. family - {2}\n3. boy - {3}\n4. house - {4}\n5. city - {5}\n6. man - {6}\n7. child - {7}\n8. sandwich - {8}\n9. nurse - {9}\n10. shelf - {10}",
+      "item": "Nr. 3412",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216254"
+      ],
+      "instruction": "Schreibe die richtige englische Pluralform in die Lücke.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "schools"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "lives"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "families"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "boys"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "houses"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cities"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "men"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "children"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sandwiches"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "nurses"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "shelves"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216255]\n[%Nr. 3442]\n[!Schreibe den Apostroph **'s** oder die **of-phrase** in die Lücken.]\n\n0. (Mandy) sister → [_Mandy's sister][@example]\n1. (a glass) milk - [_a glass of milk]\n2. (my friend) bike - [_my friend's bike]\n3. (the window) room - [_the window of the room]\n4. (Mr Smith) car - [_Mr Smith's car]\n5. (ten minutes) walk - [_ten minutes' walk]\n6. (the headteacher) office - [_the headteacher's office]\n7. (the number) house - [_the number of the house]\n8. (two days) work - [_two days' work]\n9. (the waiter) shoes - [_the waiter's shoes]\n10. (Britain) economy - [_the economy of Britain]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. (Mandy) sister → {0}\n1. (a glass) milk - {1}\n2. (my friend) bike - {2}\n3. (the window) room - {3}\n4. (Mr Smith) car - {4}\n5. (ten minutes) walk - {5}\n6. (the headteacher) office - {6}\n7. (the number) house - {7}\n8. (two days) work - {8}\n9. (the waiter) shoes - {9}\n10. (Britain) economy - {10}",
+      "item": "Nr. 3442",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216255"
+      ],
+      "instruction": "Schreibe den Apostroph **'s** oder die **of-phrase** in die Lücken.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Mandy's sister"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a glass of milk"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "my friend's bike"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "the window of the room"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Mr Smith's car"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ten minutes' walk"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "the headteacher's office"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "the number of the house"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "two days' work"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "the waiter's shoes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "the economy of Britain"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216256]\n[%Nr. 3414]\n[!Die vorgegebenen englischen Substantive stehen im Plural. Schreibe die dazugehörigen Singularformen in die Lücken.]\n\n0. cups → [_cup][@example]\n1. roses - [_rose]\n2. boys - [_boy]\n3. families - [_family]\n4. potatoes -[_potato]\n5. wives - [_wife]\n6. photos - [_photo]\n7. children - [_child]\n8. sandwiches - [_sandwich]\n9. fish - [_fish]\n10. feet - [_foot]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. cups → {0}\n1. roses - {1}\n2. boys - {2}\n3. families - {3}\n4. potatoes -{4}\n5. wives - {5}\n6. photos - {6}\n7. children - {7}\n8. sandwiches - {8}\n9. fish - {9}\n10. feet - {10}",
+      "item": "Nr. 3414",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216256"
+      ],
+      "instruction": "Die vorgegebenen englischen Substantive stehen im Plural. Schreibe die dazugehörigen Singularformen in die Lücken.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cup"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "rose"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "boy"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "family"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "potato"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "wife"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "photo"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "child"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sandwich"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "fish"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "foot"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216257]\n[%Nr. 3444]\n[!Die vorgegebenen englischen Substantive stehen im Plural. Schreibe die dazugehörigen Singularformen in die Lücken.]\n\n0. mice → [_mouse][@example]\n1. lamps - [_lamp]\n2. cities - [_city]\n3. sheep - [_sheep]\n4. cliffs - [_cliff]\n5. roofs - [_roof]\n6. thieves - [_thief]\n7. pence - [_penny]\n8. pianos - [_piano]\n9. teeth - [_tooth]\n10. bases - [_base]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. mice → {0}\n1. lamps - {1}\n2. cities - {2}\n3. sheep - {3}\n4. cliffs - {4}\n5. roofs - {5}\n6. thieves - {6}\n7. pence - {7}\n8. pianos - {8}\n9. teeth - {9}\n10. bases - {10}",
+      "item": "Nr. 3444",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216257"
+      ],
+      "instruction": "Die vorgegebenen englischen Substantive stehen im Plural. Schreibe die dazugehörigen Singularformen in die Lücken.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "mouse"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "lamp"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "city"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sheep"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cliff"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "roof"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "thief"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "penny"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "piano"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "tooth"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "base"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216258]\n[%Nr. 3458]\n[!Die vorgegebenen englischen Substantive stehen im Plural. Schreibe die dazugehörigen Singularformen in die Lücken.]\n\n0. geese → [_goose][@example]\n1. boxes - [_box]\n2. ladies - [_lady]\n3. men - [_man]\n4. days - [_day]\n5. sheriffs - [_sheriff]\n6. shelves - [_shelf]\n7. heroes - [_hero]\n8. oxen - [_ox]\n9. diagnoses - [_diagnosis]\n10. criteria - [_criterion]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. geese → {0}\n1. boxes - {1}\n2. ladies - {2}\n3. men - {3}\n4. days - {4}\n5. sheriffs - {5}\n6. shelves - {6}\n7. heroes - {7}\n8. oxen - {8}\n9. diagnoses - {9}\n10. criteria - {10}",
+      "item": "Nr. 3458",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216258"
+      ],
+      "instruction": "Die vorgegebenen englischen Substantive stehen im Plural. Schreibe die dazugehörigen Singularformen in die Lücken.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "goose"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "box"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "lady"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "man"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "day"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sheriff"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "shelf"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "hero"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ox"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "diagnosis"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "criterion"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216259]\n[%Nr. 3416]\n[!Vervollständige die Sätze mit der Singular- oder Pluralform.]\n\n1. The cat is sitting on my [+bed][-beds].\n2. There are five [-pencil][+pencils] on my desk.\n3. I have two [-sister][+sisters].\n4. They are riding their [-bike][+bikes].\n5. We have a [+dog][-dogs].\n6. How many [-book][+books] do you have in your bag?\n7. My mother has a new [+computer][-computers].\n8. There are three windows in the [+room][-rooms].\n9. Susan has four [-poster][+posters].\n10. There is one [+pen][-pens] on the floor.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. The cat is sitting on my {0}.\n2. There are five {1} on my desk.\n3. I have two {2}.\n4. They are riding their {3}.\n5. We have a {4}.\n6. How many {5} do you have in your bag?\n7. My mother has a new {6}.\n8. There are three windows in the {7}.\n9. Susan has four {8}.\n10. There is one {9} on the floor.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "bed",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "beds",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "pencil",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "pencils",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "sister",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sisters",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "bike",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bikes",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "dog",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "dogs",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "book",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "books",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "computer",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "computers",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "room",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "rooms",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "poster",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "posters",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "pen",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "pens",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216259"
+      ],
+      "item": "Nr. 3416",
+      "instruction": "Vervollständige die Sätze mit der Singular- oder Pluralform."
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216260]\n[%Nr. 3460]\n[!Schreibe die richtige englische Pluralform in die Lücke.]\n\n0. schöne Möbel → nice [_furniture][@example]\n1. meine neue Brille - my new [_glasses]\n2. die alte Treppe - the old [_stairs]\n3. ihre schwarzen Haare - her black [_hair]\n4. eine blaue Hose - a pair of blue [_trousers]\n5. nützliche Informationen - useful [_information]\n6. gute Nachrichten - good [_news]\n7. schreckliche Hausaufgaben - terrible [_homework]\n8. moderne Kleidung - modern [_clothes]\n9. Die Polizei kommt gerade. - The [_police] are coming.\n10. Politik ist interessant. - [_Politics] is interesting.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. schöne Möbel → nice {0}\n1. meine neue Brille - my new {1}\n2. die alte Treppe - the old {2}\n3. ihre schwarzen Haare - her black {3}\n4. eine blaue Hose - a pair of blue {4}\n5. nützliche Informationen - useful {5}\n6. gute Nachrichten - good {6}\n7. schreckliche Hausaufgaben - terrible {7}\n8. moderne Kleidung - modern {8}\n9. Die Polizei kommt gerade. - The {9} are coming.\n10. Politik ist interessant. - {10} is interesting.",
+      "item": "Nr. 3460",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216260"
+      ],
+      "instruction": "Schreibe die richtige englische Pluralform in die Lücke.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "furniture"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "glasses"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "stairs"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "hair"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "trousers"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "information"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "news"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "homework"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "clothes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "police"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Politics"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216261]\n[%Nr. 3462]\n[!Entscheide, ob der Satz im Singular oder im Plural steht und wähle das richtige Verb aus.]\n\n1. Ladies and gentlemen. Here [+is][-are] the news.\n2. Where [-is][+are] my jeans.\n3. Further information [+is][-are] available in the office.\n4. The stairs [-is][+are] over there, Sir.\n5. The furniture in our classroom [+is][-are] uncomfortable.          \n6. The USA [+is][-are] a very nice country.\n7. Your sunglasses [-is][+are] on the table.\n8. Homework [+is][-are] boring.\n9. The scissors on the table [-is][+are] mine.\n10. Physics [+is][-are] not easy.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Ladies and gentlemen. Here {0} the news.\n2. Where {1} my jeans.\n3. Further information {2} available in the office.\n4. The stairs {3} over there, Sir.\n5. The furniture in our classroom {4} uncomfortable.          \n6. The USA {5} a very nice country.\n7. Your sunglasses {6} on the table.\n8. Homework {7} boring.\n9. The scissors on the table {8} mine.\n10. Physics {9} not easy.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216261"
+      ],
+      "item": "Nr. 3462",
+      "instruction": "Entscheide, ob der Satz im Singular oder im Plural steht und wähle das richtige Verb aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216262]\n[%Nr. 3422]\n[!Entscheide, ob das **fettgedruckte Wort** im Satz ein Substantiv oder ein Verb ist.]\n\n1. I **like** your computer. - [-Substantiv][+Verb]\n2. We live in a small **town.** - [+Substantiv][-Verb]\n3. They **play** handball. - [-Substantiv][+Verb]\n4. His **friend** has a pet. - [+Substantiv][-Verb]\n5. I **go** to bed at 9 o'clock. - [-Substantiv][+Verb]\n6. My **bedroom** is upstairs. - [+Substantiv][-Verb]\n7. Let's listen to this CD. - [-Substantiv][+Verb]\n8. Sam and Tom **watch** TV. - [-Substantiv][+Verb]\n9. They **swim** in a lake. - [-Substantiv][+Verb]\n10. I always feed my **hamster.** - [+Substantiv][-Verb]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. I **like** your computer. - {0}\n2. We live in a small **town.** - {1}\n3. They **play** handball. - {2}\n4. His **friend** has a pet. - {3}\n5. I **go** to bed at 9 o'clock. - {4}\n6. My **bedroom** is upstairs. - {5}\n7. Let's listen to this CD. - {6}\n8. Sam and Tom **watch** TV. - {7}\n9. They **swim** in a lake. - {8}\n10. I always feed my **hamster.** - {9}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Substantiv",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Verb",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216262"
+      ],
+      "item": "Nr. 3422",
+      "instruction": "Entscheide, ob das **fettgedruckte Wort** im Satz ein Substantiv oder ein Verb ist."
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:216263]\n[%Nr. 3418]\n[!Schreibe die richtige englische Pluralform in die Lücke.]\n\n0. car → [_cars][@example]\n1. half - [_halves]\n2. kilo - [_kilos]\n3. woman - [_women]\n4. mouth - [_mouths]\n5. foot - [_feet]\n6. sheep - [_sheep]\n7. penny - [_pence]\n8. bus - [_buses]\n9. day - [_days]\n10. fish - [_fish]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. car → {0}\n1. half - {1}\n2. kilo - {2}\n3. woman - {3}\n4. mouth - {4}\n5. foot - {5}\n6. sheep - {6}\n7. penny - {7}\n8. bus - {8}\n9. day - {9}\n10. fish - {10}",
+      "item": "Nr. 3418",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216263"
+      ],
+      "instruction": "Schreibe die richtige englische Pluralform in die Lücke.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cars"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "halves"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "kilos"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "women"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "mouths"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "feet"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sheep"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "pence"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "buses"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "days"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "fish"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze-solution-grouped:bitmark--]\n[@id:216264]\n[%Nr. 3420]\n[!Setze die folgenden Wörter so in die Lücken ein, dass sinnvolle Verbindungen entstehen.]\n\n0. a cube of [_sugar][@example]\n1. a piece of [_advice]\n2. a packet of [_rice]\n3. a bar of [_chocolate]\n4. a glass of [_milk]\n5. a cup of [_tea]\n6. a bottle of [_lemonade]\n7. a slice of  [_meat]\n8. a barrel of [_oil]\n9. a game of [_tennis]\n10. a jar of [_jam]",
+    "bit": {
+      "type": "cloze-solution-grouped",
+      "format": "bitmark--",
+      "body": "0. a cube of {0}\n1. a piece of {1}\n2. a packet of {2}\n3. a bar of {3}\n4. a glass of {4}\n5. a cup of {5}\n6. a bottle of {6}\n7. a slice of  {7}\n8. a barrel of {8}\n9. a game of {9}\n10. a jar of {10}",
+      "item": "Nr. 3420",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "216264"
+      ],
+      "instruction": "Setze die folgenden Wörter so in die Lücken ein, dass sinnvolle Verbindungen entstehen.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sugar"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "advice"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "rice"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "chocolate"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "milk"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "tea"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "lemonade"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "meat"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "oil"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "tennis"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "jam"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216265]\n[%Nr. 3446]\n[!Kann man die nachfolgenden englischen Substantive/Nomen zählen oder nicht? Wähle aus den Vorgaben entweder **zählbar** oder **unzählbar** aus.]\n\n1. milk - [+unzählbar][-zählbar]\n2. room - [-unzählbar][+zählbar]\n3. butter - [+unzählbar][-zählbar]\n4. song - [-unzählbar][+zählbar]\n5. music - [+unzählbar][-zählbar]\n6. minute - [-unzählbar][+zählbar]\n7. tea - [+unzählbar][-zählbar]\n8. child - [-unzählbar][+zählbar]\n9. homework - [+unzählbar][-zählbar]\n10. key - [-unzählbar][+zählbar]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. milk - {0}\n2. room - {1}\n3. butter - {2}\n4. song - {3}\n5. music - {4}\n6. minute - {5}\n7. tea - {6}\n8. child - {7}\n9. homework - {8}\n10. key - {9}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216265"
+      ],
+      "item": "Nr. 3446",
+      "instruction": "Kann man die nachfolgenden englischen Substantive/Nomen zählen oder nicht? Wähle aus den Vorgaben entweder **zählbar** oder **unzählbar** aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216266]\n[%Nr. 3448]\n[!Sind die folgenden englischen Substantive/Nomen zählbar oder nicht? Suche dir die richtige Antwort aus.]\n\n1. rice - [+unzählbar][-zählbar]\n2. potato - [-unzählbar][+zählbar]\n3. information - [+unzählbar][-zählbar]\n4. man - [-unzählbar][+zählbar]\n5. bread - [+unzählbar][-zählbar]\n6. poetry - [+unzählbar][-zählbar]\n7. mile - [-unzählbar][+zählbar]\n8. vegetable - [-unzählbar][+zählbar]\n9. weather - [+unzählbar][-zählbar]\n10. sheep - [-unzählbar][+zählbar]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. rice - {0}\n2. potato - {1}\n3. information - {2}\n4. man - {3}\n5. bread - {4}\n6. poetry - {5}\n7. mile - {6}\n8. vegetable - {7}\n9. weather - {8}\n10. sheep - {9}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216266"
+      ],
+      "item": "Nr. 3448",
+      "instruction": "Sind die folgenden englischen Substantive/Nomen zählbar oder nicht? Suche dir die richtige Antwort aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216267]\n[%Nr. 3464]\n[!Entscheide, ob die folgenden Substantive/Nomen zählbar sind oder nicht. Wähle aus den Vorgaben entweder **zählbar** oder **unzählbar** aus.]\n\n1. confusion - [+unzählbar][-zählbar]\n2. roof - [-unzählbar][+zählbar]\n3. traffic - [+unzählbar][-zählbar]\n4. pain - [+unzählbar][-zählbar]\n5. behaviour - [+unzählbar][-zählbar]\n6. knife - [-unzählbar][+zählbar]\n7. cutlery - [+unzählbar][-zählbar]\n8. freedom - [+unzählbar][-zählbar]\n9. mouth - [-unzählbar][+zählbar]\n10. peace - [+unzählbar][-zählbar]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. confusion - {0}\n2. roof - {1}\n3. traffic - {2}\n4. pain - {3}\n5. behaviour - {4}\n6. knife - {5}\n7. cutlery - {6}\n8. freedom - {7}\n9. mouth - {8}\n10. peace - {9}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216267"
+      ],
+      "item": "Nr. 3464",
+      "instruction": "Entscheide, ob die folgenden Substantive/Nomen zählbar sind oder nicht. Wähle aus den Vorgaben entweder **zählbar** oder **unzählbar** aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:216268]\n[%Nr. 3470]\n[!Sind die nachfolgenden Substantive/Nomen zählbar oder nicht? Wähle **zählbar** oder **unzählbar.**]\n\n1. luck - [+unzählbar][-zählbar]\n2. permission - [+unzählbar][-zählbar]\n3. ox - [-unzählbar][+zählbar]\n4. work - [+unzählbar][-zählbar]\n5. salmon - [-unzählbar][+zählbar]\n6. crisis - [-unzählbar][+zählbar]\n7. baggage - [+unzählbar][-zählbar]\n8. research - [+unzählbar][-zählbar]\n9. aircraft - [-unzählbar][+zählbar]\n10. rubbish - [+unzählbar][-zählbar]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. luck - {0}\n2. permission - {1}\n3. ox - {2}\n4. work - {3}\n5. salmon - {4}\n6. crisis - {5}\n7. baggage - {6}\n8. research - {7}\n9. aircraft - {8}\n10. rubbish - {9}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unzählbar",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "zählbar",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "216268"
+      ],
+      "item": "Nr. 3470",
+      "instruction": "Sind die nachfolgenden Substantive/Nomen zählbar oder nicht? Wähle **zählbar** oder **unzählbar.**"
+    }
+  }
+]

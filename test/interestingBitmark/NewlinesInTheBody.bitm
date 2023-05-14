@@ -1,0 +1,23 @@
+[.cloze]
+[%][%lead]
+I am coffee toast[_cloze]
+[!BREAK][_cloze2] There should be the same count of newlines between here,
+[?BREAK]
+
+and here, but there isn't
+
+
+[.cloze]
+[%][%lead]
+I am coffee toast[_cloze]
+[!BREAK][_cloze2] There should be the same count of newlines between here,
+
+and here, but there isn't
+
+
+[.cloze]
+[%][%lead]
+I am coffee toast[_cloze]
+[!BREAK][?BREAK][_cloze2] You would expect this still to work as a cloze
+
+but it doesn't in the ANTLR parser

@@ -1,0 +1,44 @@
+[
+  {
+    "bitmark": "[.match-picture&image]\n[!Listen to the audio and name the animal you are hearing.]\n\n===\n[#Audio file url]\n==\n[#Object]\n===\n[&image:http://cdn.bitbook.education/publishers/3/books/26363/miau.jpg]\n==\ncat\n===",
+    "bit": {
+      "type": "match-picture",
+      "format": "bitmark--",
+      "item": "",
+      "heading": {
+        "forKeys": "Audio file url",
+        "forValues": "Object"
+      },
+      "pairs": [
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "http://cdn.bitbook.education/publishers/3/books/26363/miau.jpg"
+          },
+          "values": [
+            "cat"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "instruction": "Listen to the audio and name the animal you are hearing.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "provider": "",
+          "url": "",
+          "src": "http://cdn.bitbook.education/publishers/3/books/26363/miau.jpg",
+          "format": "jpg"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,991 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:166857]\n[#Aufgabensammlung – Business-Engineering]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_business_engineering/web-resources/images/wiss_business_cover.png]\n[@externalId:e-aufgabensammlung--business-engineering_oqgj3omaaxtm]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166857"
+      ],
+      "title": "Aufgabensammlung – Business-Engineering",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_business_engineering/web-resources/images/wiss_business_cover.png"
+      ],
+      "externalId": [
+        "e-aufgabensammlung--business-engineering_oqgj3omaaxtm"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:166858]\n[%1]\n[#Evaluation (167)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "166858"
+      ],
+      "title": "Evaluation (167)"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:166859]\n[%1.1]\n[##Aufgabe «Fenstech»]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "166859"
+      ],
+      "title": "Aufgabe «Fenstech»"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166860]\n[%Ausgangslage]\nDie Firma Fenstech AG beschäftigt sich mit der Herstellung und Montage von Fenstern aus Holz und Aluminium. Die Firma betreut über regionale Filialen 13 Verkaufsregionen in der ganzen Schweiz. Die Produktion ist zentral an einem Standort. Insgesamt werden 300 Mitarbeiter beschäftigt. Es gibt keine eigentliche EDV-Abteilung. Die heutige Informatik weist folgende Hauptprobleme auf:\n\nDie einzelnen Applikationen sind nicht integriert. Daten müssen somit vielfach erfasst werden, was Aufwand verursacht und immer eine potenzielle Fehlerquelle darstellt.\n• Die Wartung der heutigen Lösung ist sehr teuer. \n• Die Anwendungssoftware ist am Ende des Lebenszyklus und es besteht eine grosse Abhängigkeit vom Lieferanten dieses Produktes.\nFür CHF  1'500'000.-- sollen folgende Ziele erreicht werden:\n• Beschaffung einer integrierten Gesamtlösung, welche vorwiegend aus Standardapplikationen bestehen muss.\n• Es sollen folgende Bereiche abgedeckt werden:\n• Technische Auftragsabwicklung (PPS)\n• Kaufmännische Auftragsabwicklung (Einkauf, Materialwirtschaft, Verkauf)\n• Rechnungswesen (Finanz-, Debitoren und Kreditorenbuchhaltung, Kostenrechnung)\n• Interneteinbindung (E-Mail, eigene Homepage)\n\nDie Lösung soll zukunftsweisend sein. Die Informatikstrategie der Firma Fenstech AG besagt, dass man innovativ sein möchte und die Informatik stets flexibel im Dienste der Benutzer stehen soll.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Firma Fenstech AG beschäftigt sich mit der Herstellung und Montage von Fenstern aus Holz und Aluminium. Die Firma betreut über regionale Filialen 13 Verkaufsregionen in der ganzen Schweiz. Die Produktion ist zentral an einem Standort. Insgesamt werden 300 Mitarbeiter beschäftigt. Es gibt keine eigentliche EDV-Abteilung. Die heutige Informatik weist folgende Hauptprobleme auf:\n\nDie einzelnen Applikationen sind nicht integriert. Daten müssen somit vielfach erfasst werden, was Aufwand verursacht und immer eine potenzielle Fehlerquelle darstellt.\n• Die Wartung der heutigen Lösung ist sehr teuer. \n• Die Anwendungssoftware ist am Ende des Lebenszyklus und es besteht eine grosse Abhängigkeit vom Lieferanten dieses Produktes.\nFür CHF  1'500'000.-- sollen folgende Ziele erreicht werden:\n• Beschaffung einer integrierten Gesamtlösung, welche vorwiegend aus Standardapplikationen bestehen muss.\n• Es sollen folgende Bereiche abgedeckt werden:\n• Technische Auftragsabwicklung (PPS)\n• Kaufmännische Auftragsabwicklung (Einkauf, Materialwirtschaft, Verkauf)\n• Rechnungswesen (Finanz-, Debitoren und Kreditorenbuchhaltung, Kostenrechnung)\n• Interneteinbindung (E-Mail, eigene Homepage)\n\nDie Lösung soll zukunftsweisend sein. Die Informatikstrategie der Firma Fenstech AG besagt, dass man innovativ sein möchte und die Informatik stets flexibel im Dienste der Benutzer stehen soll.",
+      "id": [
+        "166860"
+      ],
+      "item": "Ausgangslage"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166861]\n[%Teilauftrag a)]\n**Marktanalyse (6min)**\nAls erstes geht es für die Firma Fenstech AG darum, zu erfahren, was der Markt im Moment zu bieten hat. Es gibt verschiedene Möglichkeiten, sich einen Überblick über die Marktsituation zu verschaffen. Bei unserer Firma stehen 3 Varianten im Raum:\n[!Nennen Sie zu jeder Variante stichwortartig je zwei Vor- und Nachteile.]\n===\na) Besuch der Orbit-iEX in Zürich[@shortAnswer]\n===\nb) Zusammenarbeit mit einem externen Berater[@shortAnswer]\n===\nc) Internet[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Teilauftrag a)",
+      "instruction": "Nennen Sie zu jeder Variante stichwortartig je zwei Vor- und Nachteile.",
+      "body": "**Marktanalyse (6min)**\nAls erstes geht es für die Firma Fenstech AG darum, zu erfahren, was der Markt im Moment zu bieten hat. Es gibt verschiedene Möglichkeiten, sich einen Überblick über die Marktsituation zu verschaffen. Bei unserer Firma stehen 3 Varianten im Raum:",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "a) Besuch der Orbit-iEX in Zürich",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "b) Zusammenarbeit mit einem externen Berater",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "c) Internet",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166861"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:166862]\n[%Teilauftrag b)]\n**Pflichtenheft (10min)**\nAnlässlich der Aufwand- und Zeitschätzung für das Pflichtenheft entsteht eine Diskussion. Der Projektleiter schätzt einen Aufwand von einigen Personenwochen und eine Dauer von 4 Monaten, um das Pflichtenheft zu erstellen. Der Geschäftsleiter hatte sich vorgestellt, dass so ein Pflichtenheft innert 2 Wochen erstellt sei, schliesslich wisse man ja, was man wolle. \n\nGehen Sie von der Annahme aus, dass der Projektauftrag entsprechend der Fallbeschreibung (siehe vorne) erteilt wurde. Inzwischen wurden Vorarbeiten geleistet und es liegen folgende Ergebnisse vor:\n\n- Marktbericht über die Situation bezüglich Anbieter, Angebot von Standardlösungen, technologische Entwicklung und Trends, der mit Unterstützung eines externen Beraters erstellt wurde.\n\n- Grobbudget\n\n- Stärken-/Schwäche-Kataloge der heutigen Informatiklösung, die von den Abteilungsverantwortlichen erarbeitet wurden.\n\n**Lösungselemente**\nNehmen Sie in 2 Sätzen Stellung zu den Aufwand- und Zeitschätzungen, die im Raum stehen (2 Wochen versus Aufwand von mehreren Personenwochen innert 4 Monaten).\n\nPlanen Sie 4 Hauptaktivitäten, um zu einem detaillierten Pflichtenheft zu gelangen. Beschreiben Sie stichwortartig die Aktivitäten und nennen Sie das Ziel bzw. die Ergebnisse der Aktivität.",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "",
+      "partialAnswer": "",
+      "body": "**Pflichtenheft (10min)**\nAnlässlich der Aufwand- und Zeitschätzung für das Pflichtenheft entsteht eine Diskussion. Der Projektleiter schätzt einen Aufwand von einigen Personenwochen und eine Dauer von 4 Monaten, um das Pflichtenheft zu erstellen. Der Geschäftsleiter hatte sich vorgestellt, dass so ein Pflichtenheft innert 2 Wochen erstellt sei, schliesslich wisse man ja, was man wolle. \n\nGehen Sie von der Annahme aus, dass der Projektauftrag entsprechend der Fallbeschreibung (siehe vorne) erteilt wurde. Inzwischen wurden Vorarbeiten geleistet und es liegen folgende Ergebnisse vor:\n\n- Marktbericht über die Situation bezüglich Anbieter, Angebot von Standardlösungen, technologische Entwicklung und Trends, der mit Unterstützung eines externen Beraters erstellt wurde.\n\n- Grobbudget\n\n- Stärken-/Schwäche-Kataloge der heutigen Informatiklösung, die von den Abteilungsverantwortlichen erarbeitet wurden.\n\n**Lösungselemente**\nNehmen Sie in 2 Sätzen Stellung zu den Aufwand- und Zeitschätzungen, die im Raum stehen (2 Wochen versus Aufwand von mehreren Personenwochen innert 4 Monaten).\n\nPlanen Sie 4 Hauptaktivitäten, um zu einem detaillierten Pflichtenheft zu gelangen. Beschreiben Sie stichwortartig die Aktivitäten und nennen Sie das Ziel bzw. die Ergebnisse der Aktivität.",
+      "item": "Teilauftrag b)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166862"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.take-picture:bitmark++]\n[@id:166863]\n[%Teilauftrag c)]\n**Bewertungsdokumente/Dekomposition (12min)**\nDie Anforderungen werden sachgerecht in einer Dekomposition gegliedert und dargestellt. Unten aufgeführt sehen Sie einen Ausschnitt dieser Dekomposition. Die eingetragenen Prozentzahlen entsprechen den relativen Gewichten.\n|image:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_business_engineering/web-resources/images/wiss_aufgabensammlung_business_engineering_1.png|\na)  Übertragen Sie die dick eingerahmten Teile in den auf den Lösungsblättern aufgeführten Kriterienkatalog mit den relativen Gewichten.\n\nb) Berechnen Sie die absoluten Gewichte und tragen Sie diese in die Spalte «Gewichtsfaktor» ein (auf 2 Dezimalstellen runden).\n\nc) Erstellen Sie für den Bereich «Debitoren» eine Bewertungsliste (s. Lösungsblätter) mit 5 Einzelkriterien. Falls Sie sich in diesem Fachgebiet gar nicht auskennen, können Sie statt debitorenspezifischen Einzelkriterien allgemeine Kriterien zur Beurteilung von Anwendungssoftware nehmen. Nehmen Sie auf der Bewertungsliste auch eine fiktive Bewertung für den Anbieter A vor.\n\nd) Übertragen Sie die Resultate der Bewertungsliste Debitoren auf den Kriterienkatalog, den Sie bereits bei a) und b) bearbeitet haben.\nVervollständigen Sie den Kriterienkatalog:\nFibu: Sollpunkte = 54 Ist-Punkte Anbieter A = 40\nKreditoren: Sollpunkte = 88 Ist-Punkte Anbieter A = 70\nKostenrechnung: Sollpunkte = 102 Ist-Punkte Anbieter A = 96\n\nBerechnen Sie je den Erfüllungsgrad aller 4 Teilkriterien sowie des Hauptkriteriums «Rechnungswesen» (auf 2 Dezimalstellen runden)\n\n[!Vervollständigen Sie gemäss Aufgabenstellung die Listen / Kataloge auf den Lösungsblättern.]",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark++",
+      "body": "**Bewertungsdokumente/Dekomposition (12min)**\nDie Anforderungen werden sachgerecht in einer Dekomposition gegliedert und dargestellt. Unten aufgeführt sehen Sie einen Ausschnitt dieser Dekomposition. Die eingetragenen Prozentzahlen entsprechen den relativen Gewichten.\n|image:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_business_engineering/web-resources/images/wiss_aufgabensammlung_business_engineering_1.png|\na)  Übertragen Sie die dick eingerahmten Teile in den auf den Lösungsblättern aufgeführten Kriterienkatalog mit den relativen Gewichten.\n\nb) Berechnen Sie die absoluten Gewichte und tragen Sie diese in die Spalte «Gewichtsfaktor» ein (auf 2 Dezimalstellen runden).\n\nc) Erstellen Sie für den Bereich «Debitoren» eine Bewertungsliste (s. Lösungsblätter) mit 5 Einzelkriterien. Falls Sie sich in diesem Fachgebiet gar nicht auskennen, können Sie statt debitorenspezifischen Einzelkriterien allgemeine Kriterien zur Beurteilung von Anwendungssoftware nehmen. Nehmen Sie auf der Bewertungsliste auch eine fiktive Bewertung für den Anbieter A vor.\n\nd) Übertragen Sie die Resultate der Bewertungsliste Debitoren auf den Kriterienkatalog, den Sie bereits bei a) und b) bearbeitet haben.\nVervollständigen Sie den Kriterienkatalog:\nFibu: Sollpunkte = 54 Ist-Punkte Anbieter A = 40\nKreditoren: Sollpunkte = 88 Ist-Punkte Anbieter A = 70\nKostenrechnung: Sollpunkte = 102 Ist-Punkte Anbieter A = 96\n\nBerechnen Sie je den Erfüllungsgrad aller 4 Teilkriterien sowie des Hauptkriteriums «Rechnungswesen» (auf 2 Dezimalstellen runden)",
+      "item": "Teilauftrag c)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166863"
+      ],
+      "instruction": "Vervollständigen Sie gemäss Aufgabenstellung die Listen / Kataloge auf den Lösungsblättern."
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:166864]\n[%Teilauftrag d)]\n**Entscheid (7min)**\nDas Angebot, das gemäss Bewertung am besten abschneidet, zeichnet sich durch eine ansprechende Funktionalität, insbesondere durch eine moderne Softwaretechnologie und hohe Flexibilität aus. Leider hat dieser Anbieter mit diesem Produkt noch keine Referenzen. Er hat eine etablierte Vorgängerlösung und geniesst einen guten Ruf auf dem Markt. Die neue Lösung ist aber erst beim ersten Pilotkunden in der Einführung und bei einem weiteren Kunden wird in Kürze mit der Einführung begonnen.\n\nKönnen Sie als verantwortlicher Projektleiter des Beschaffungsprojektes diese Lösung empfehlen? Worauf achten Sie speziell in dieser Konstellation? \n\n[!Nehmen Sie in drei bis vier ganzen Sätzen Stellung.]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Nehmen Sie in drei bis vier ganzen Sätzen Stellung.",
+      "partialAnswer": "",
+      "body": "**Entscheid (7min)**\nDas Angebot, das gemäss Bewertung am besten abschneidet, zeichnet sich durch eine ansprechende Funktionalität, insbesondere durch eine moderne Softwaretechnologie und hohe Flexibilität aus. Leider hat dieser Anbieter mit diesem Produkt noch keine Referenzen. Er hat eine etablierte Vorgängerlösung und geniesst einen guten Ruf auf dem Markt. Die neue Lösung ist aber erst beim ersten Pilotkunden in der Einführung und bei einem weiteren Kunden wird in Kürze mit der Einführung begonnen.\n\nKönnen Sie als verantwortlicher Projektleiter des Beschaffungsprojektes diese Lösung empfehlen? Worauf achten Sie speziell in dieser Konstellation?",
+      "item": "Teilauftrag d)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166864"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166865]\n[%Teilauftrag e)]\n**Ergebnisanalyse (10min)**\nDa das Bewertungs-Ergebnis nach Nutzen- und Kostenermittlung zwei Angebote sehr nahe beieinander zeigt, haben Sie eine Sensitivitätsanalyse vorgenommen. Sie stellen dabei fest, dass je nach Gewichtung der Kriterien einmal der eine Anbieter und einmal der andere Anbieter als bester hervorgeht.\n\n===\na) Welche Aussagen können Sie bei dieser Konstellation über die Aussagekraft Ihres ursprünglichen Bewertungsergebnisses machen?\n===\nb) Welche weiteren Massnahmen kommen für Sie als Projektleiter dieser Evaluation nun in Frage?\n===\nLösungselemente\na) Erläutern Sie stichwortartig zwei Möglichkeiten von allfälligen Tatsachen oder Fehlern betreffend Ihrer Bewertung.\n===\nb) Erläutern Sie stichwortartig zwei mögliche Massnahmen, indem Sie die Massnahmen jeweils kurz beschreiben und begründen.\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Teilauftrag e)",
+      "instruction": "",
+      "body": "**Ergebnisanalyse (10min)**\nDa das Bewertungs-Ergebnis nach Nutzen- und Kostenermittlung zwei Angebote sehr nahe beieinander zeigt, haben Sie eine Sensitivitätsanalyse vorgenommen. Sie stellen dabei fest, dass je nach Gewichtung der Kriterien einmal der eine Anbieter und einmal der andere Anbieter als bester hervorgeht.\na) Welche Aussagen können Sie bei dieser Konstellation über die Aussagekraft Ihres ursprünglichen Bewertungsergebnisses machen?b) Welche weiteren Massnahmen kommen für Sie als Projektleiter dieser Evaluation nun in Frage?\na) Erläutern Sie stichwortartig zwei Möglichkeiten von allfälligen Tatsachen oder Fehlern betreffend Ihrer Bewertung.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "a) Welche Aussagen können Sie bei dieser Konstellation über die Aussagekraft Ihres ursprünglichen Bewertungsergebnisses machen?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "b) Welche weiteren Massnahmen kommen für Sie als Projektleiter dieser Evaluation nun in Frage?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "a) Erläutern Sie stichwortartig zwei Möglichkeiten von allfälligen Tatsachen oder Fehlern betreffend Ihrer Bewertung.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "b) Erläutern Sie stichwortartig zwei mögliche Massnahmen, indem Sie die Massnahmen jeweils kurz beschreiben und begründen.",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166865"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:166866]\n[##Aufgabe «Global Media»]\n[%1.3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "166866"
+      ],
+      "title": "Aufgabe «Global Media»"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166867]\nDer Medienkonzern GlobalMedia ist ein weltweit tätiges Unternehmen mit Sitz in der Schweiz und verschiedenen Tochterfirmen in der Schweiz und im Ausland. Die Firma beschäftigt insgesamt rund 8'000 vorwiegend im Journalismus tätige Mitarbeiter. Rund 60 % der Mitarbeiter sind im Teilzeitverhältnis oder gelten als «freie Mitarbeiter».\n\nDie GlobalMedia hat ihr Wachstum im Laufe der letzten Jahre vor allem durch Firmenakquisitionen erlangt. Die in den zugekauften Firmen vorhandenen Systeme im Bereich von Hardware und Software wurden mitübernommen. Über alle Firmen zusammengefasst ist somit eine extrem heterogene Informatikumgebung entstanden. Dieser Zustand ist im Hinblick auf eine konzernweite Kommunikation und einen entsprechenden Datenaustausch mit etlichen Problemen verbunden.\n\nIm Zuge einer sukzessiven Vereinheitlichung der Informationstechnologie (IT) hat die Konzernleitung beschlossen, in möglichst vielen Bereichen (wo dies als möglich eingeschätzt wurde) für die gesamte Gruppe Standardanwendersoftware einzusetzen. \n\nAls erstes soll das Personalwesen optimiert und standardisiert werden. Dazu gehört in einem ersten Schritt die Lohnverarbeitung. In einer zweiten Phase soll auch das Personal-Informationssystem daran angeschlossen werden. \n\nDas neue Lohnsystem soll mit Hilfe einer methodisch gestützten Evaluation beschafft werden.\n\nDie Konzernleitung hat zur Beseitigung der eingangs erwähnten Probleme folgende Ziele und Forderungen für das neue System formuliert:\na) möglichst grosser Investitionsschutz auf bestehender Hardware-Infrastruktur, d.h. bestehende Komponenten sind, soweit sinnvoll und möglich, zu integrieren\n\nb) offen und flexibel in Bezug auf Datenkommunikation (Datenaustausch, Reporting, Konsolidierung etc.)\n\nc) möglichst hoher Automatisierungsgrad\n\nd) Integre, konsistente sowie einheitliche Datenbestände\n\ne) Moderne Benutzeroberfläche und einfache Nutzung von Office-Applikationen sowie kurze Antwortzeiten\n\nf) Wesentlich breitere Informationsbasis, damit jederzeit Führungs- und Entscheidungsinformationen bereitgestellt werden können\n\ng) Organisatorische Durchlaufzeiten sind zu verschnellern\n\nh) Überlegungen zu Kosten / Nutzen sind aufzuzeigen\n\n**Heutige Situation**\n\nDie heute eingesetzten Lohnapplikationen sind teilweise noch DOS-basierende Programme. Durch die Komplexität der Abrechnungen und der anzahlmässigen Begrenzung definierbarer Lohnarten werden rund 5 % der Abrechnungen gänzlich manuell vorgenommen, da eine Automatisierung in diesen Spezialfällen zu aufwändig wäre.\n\nDie Stammdaten werden sowohl in den Aussenstellen als auch in der Zentrale geführt. Wöchentlich findet ein manueller Abgleich der Mutationen statt, welcher in der Regel zwei Personen 1 Tag lang beschäftigt.\n\nDie Bewegungsdaten (Lohnjournale) werden zurzeit nur in den Aussenstellen verarbeitet und archiviert. Die Zentrale erhält lediglich eine Journal-Rekapitulation der Lohnarten in Papierform. Diese wird dann im zentralen Finanz- und Rechnungswesen-System manuell verbucht.\n\nDie Zuteilung auf die Kostenstellen ist fix (Stammdatenfeld). Es kommt jedoch bei rund 10% der Mitarbeiter monatlich vor, dass sie für andere Kostenstellen als die eigene arbeiten. In diesen Fällen erfolgt eine manuelle Umbuchung direkt im Kostenrechnungsmodul der Finanzapplikation.\n\nDie übrigen variablen Daten werden mittels eines modernen Zeiterfassungssystems über eine ASCII-Schnittstelle in die Lohnbuchhaltung zur weiteren Verarbeitung eingespiesen. \n\nDie Tochtergesellschaften werden auf dem zentralen System finanzbuchhalterisch als Mandanten geführt und über mehrere Stufen konsolidiert. Eine Konsolidierung der Lohnbuchhaltung ist nicht vorhanden. Die Archivierung der Lohndaten erfolgt dezentral.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Medienkonzern GlobalMedia ist ein weltweit tätiges Unternehmen mit Sitz in der Schweiz und verschiedenen Tochterfirmen in der Schweiz und im Ausland. Die Firma beschäftigt insgesamt rund 8'000 vorwiegend im Journalismus tätige Mitarbeiter. Rund 60 % der Mitarbeiter sind im Teilzeitverhältnis oder gelten als «freie Mitarbeiter».\n\nDie GlobalMedia hat ihr Wachstum im Laufe der letzten Jahre vor allem durch Firmenakquisitionen erlangt. Die in den zugekauften Firmen vorhandenen Systeme im Bereich von Hardware und Software wurden mitübernommen. Über alle Firmen zusammengefasst ist somit eine extrem heterogene Informatikumgebung entstanden. Dieser Zustand ist im Hinblick auf eine konzernweite Kommunikation und einen entsprechenden Datenaustausch mit etlichen Problemen verbunden.\n\nIm Zuge einer sukzessiven Vereinheitlichung der Informationstechnologie (IT) hat die Konzernleitung beschlossen, in möglichst vielen Bereichen (wo dies als möglich eingeschätzt wurde) für die gesamte Gruppe Standardanwendersoftware einzusetzen. \n\nAls erstes soll das Personalwesen optimiert und standardisiert werden. Dazu gehört in einem ersten Schritt die Lohnverarbeitung. In einer zweiten Phase soll auch das Personal-Informationssystem daran angeschlossen werden. \n\nDas neue Lohnsystem soll mit Hilfe einer methodisch gestützten Evaluation beschafft werden.\n\nDie Konzernleitung hat zur Beseitigung der eingangs erwähnten Probleme folgende Ziele und Forderungen für das neue System formuliert:\na) möglichst grosser Investitionsschutz auf bestehender Hardware-Infrastruktur, d.h. bestehende Komponenten sind, soweit sinnvoll und möglich, zu integrieren\n\nb) offen und flexibel in Bezug auf Datenkommunikation (Datenaustausch, Reporting, Konsolidierung etc.)\n\nc) möglichst hoher Automatisierungsgrad\n\nd) Integre, konsistente sowie einheitliche Datenbestände\n\ne) Moderne Benutzeroberfläche und einfache Nutzung von Office-Applikationen sowie kurze Antwortzeiten\n\nf) Wesentlich breitere Informationsbasis, damit jederzeit Führungs- und Entscheidungsinformationen bereitgestellt werden können\n\ng) Organisatorische Durchlaufzeiten sind zu verschnellern\n\nh) Überlegungen zu Kosten / Nutzen sind aufzuzeigen\n\n**Heutige Situation**\n\nDie heute eingesetzten Lohnapplikationen sind teilweise noch DOS-basierende Programme. Durch die Komplexität der Abrechnungen und der anzahlmässigen Begrenzung definierbarer Lohnarten werden rund 5 % der Abrechnungen gänzlich manuell vorgenommen, da eine Automatisierung in diesen Spezialfällen zu aufwändig wäre.\n\nDie Stammdaten werden sowohl in den Aussenstellen als auch in der Zentrale geführt. Wöchentlich findet ein manueller Abgleich der Mutationen statt, welcher in der Regel zwei Personen 1 Tag lang beschäftigt.\n\nDie Bewegungsdaten (Lohnjournale) werden zurzeit nur in den Aussenstellen verarbeitet und archiviert. Die Zentrale erhält lediglich eine Journal-Rekapitulation der Lohnarten in Papierform. Diese wird dann im zentralen Finanz- und Rechnungswesen-System manuell verbucht.\n\nDie Zuteilung auf die Kostenstellen ist fix (Stammdatenfeld). Es kommt jedoch bei rund 10% der Mitarbeiter monatlich vor, dass sie für andere Kostenstellen als die eigene arbeiten. In diesen Fällen erfolgt eine manuelle Umbuchung direkt im Kostenrechnungsmodul der Finanzapplikation.\n\nDie übrigen variablen Daten werden mittels eines modernen Zeiterfassungssystems über eine ASCII-Schnittstelle in die Lohnbuchhaltung zur weiteren Verarbeitung eingespiesen. \n\nDie Tochtergesellschaften werden auf dem zentralen System finanzbuchhalterisch als Mandanten geführt und über mehrere Stufen konsolidiert. Eine Konsolidierung der Lohnbuchhaltung ist nicht vorhanden. Die Archivierung der Lohndaten erfolgt dezentral.",
+      "id": [
+        "166867"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166868]\n[%Auftrag 1]\n**Anforderungen**\nEin für die Bewertung der Offerten fundamentaler Bestandteil des Pflichtenheftes ist das Kapitel der Anforderungsspezifikation bzw. des Fragenkataloges. Aus dem Szenariobeschrieb lassen sich einige Probleme herleiten, welche mit einem neuen System gelöst werden könnten.\n\n[!Erstellen Sie einen Katalog mit 6 relevanten Problemen.]\n\nFormulieren Sie zu jedem Problem die entsprechende(n) Anforderung(en), welche durch das neue System abgedeckt sein muss(müssen), um das genannte jeweilige Problem zu lösen. Führen Sie auch für jede Anforderung die möglichen Anbieterantworten auf, welche Sie zur Bewertung der später eingehenden Offerten zulassen wollen. Heben Sie dabei die von Ihnen für eine optimale Beurteilung favorisierte Antwort klar hervor. Benützen Sie für Ihre Antwort den beiliegenden Darstellungsraster.\n\n**Zeitbudget**\n45 Minuten\n===\nProblem 1 (Stichwort)\n- Kurzbeschrieb (des Problems)\n- Anforderungen zur Problemlösung \n- Mögliche Anbieterantworten (favorisierte Antwort klar hervorheben)\n===\nProblem 2 (Stichwort)\n- Kurzbeschrieb (des Problems)\n- Anforderungen zur Problemlösung \n- Mögliche Anbieterantworten (favorisierte Antwort klar hervorheben)\n===\nProblem 3 (Stichwort)\n- Kurzbeschrieb (des Problems)\n- Anforderungen zur Problemlösung \n- Mögliche Anbieterantworten (favorisierte Antwort klar hervorheben)\n===\nProblem 4 (Stichwort)\n- Kurzbeschrieb (des Problems)\n- Anforderungen zur Problemlösung \n- Mögliche Anbieterantworten (favorisierte Antwort klar hervorheben)\n===\nProblem 5 (Stichwort)\n- Kurzbeschrieb (des Problems)\n- Anforderungen zur Problemlösung \n- Mögliche Anbieterantworten (favorisierte Antwort klar hervorheben)\n===\nProblem 6 (Stichwort)\n- Kurzbeschrieb (des Problems)\n- Anforderungen zur Problemlösung \n- Mögliche Anbieterantworten (favorisierte Antwort klar hervorheben)\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Auftrag 1",
+      "instruction": "Erstellen Sie einen Katalog mit 6 relevanten Problemen.",
+      "body": "**Anforderungen**\nEin für die Bewertung der Offerten fundamentaler Bestandteil des Pflichtenheftes ist das Kapitel der Anforderungsspezifikation bzw. des Fragenkataloges. Aus dem Szenariobeschrieb lassen sich einige Probleme herleiten, welche mit einem neuen System gelöst werden könnten.\n\n\n\nFormulieren Sie zu jedem Problem die entsprechende(n) Anforderung(en), welche durch das neue System abgedeckt sein muss(müssen), um das genannte jeweilige Problem zu lösen. Führen Sie auch für jede Anforderung die möglichen Anbieterantworten auf, welche Sie zur Bewertung der später eingehenden Offerten zulassen wollen. Heben Sie dabei die von Ihnen für eine optimale Beurteilung favorisierte Antwort klar hervor. Benützen Sie für Ihre Antwort den beiliegenden Darstellungsraster.\n\n**Zeitbudget**\n45 Minuten",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Problem 1 (Stichwort)\n- Kurzbeschrieb (des Problems)\n- Anforderungen zur Problemlösung \n- Mögliche Anbieterantworten (favorisierte Antwort klar hervorheben)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Problem 2 (Stichwort)\n- Kurzbeschrieb (des Problems)\n- Anforderungen zur Problemlösung \n- Mögliche Anbieterantworten (favorisierte Antwort klar hervorheben)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Problem 3 (Stichwort)\n- Kurzbeschrieb (des Problems)\n- Anforderungen zur Problemlösung \n- Mögliche Anbieterantworten (favorisierte Antwort klar hervorheben)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Problem 4 (Stichwort)\n- Kurzbeschrieb (des Problems)\n- Anforderungen zur Problemlösung \n- Mögliche Anbieterantworten (favorisierte Antwort klar hervorheben)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Problem 5 (Stichwort)\n- Kurzbeschrieb (des Problems)\n- Anforderungen zur Problemlösung \n- Mögliche Anbieterantworten (favorisierte Antwort klar hervorheben)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Problem 6 (Stichwort)\n- Kurzbeschrieb (des Problems)\n- Anforderungen zur Problemlösung \n- Mögliche Anbieterantworten (favorisierte Antwort klar hervorheben)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166868"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.take-picture:bitmark--]\n[@id:166869]\n[%Auftrag 2]\n**Kriterienkatalog**\nSie als Projektleiter sind nun mit der Leitung und Durchführung der Evaluation betraut. \n\nNachdem Sie das Pflichtenheft erstellt haben, ist es Ihre Aufgabe die Bewertungsdokumente zu erarbeiten und dem Projektlenkungsausschuss zu präsentieren. Dieser ist aus einem Mitglied der Konzernleitung, dem Leiter der Informatikabteilung und Fachleuten aus der Linie und der Informatikabteilung zusammengesetzt.\n\n[!Erstellen Sie anhand der geschilderten Ausgangslage einen Kriterienkatalog.]\nDer Kriterienkatalog soll aus 6 in der Ausgangslage erwähnten Hauptkriterien bestehen. Die Hauptkriterien sind in einem zweiten Schritt in zwei bewertbare bzw. messbare Einzelkriterien weiter aufzuteilen. Die Einzelkriterien müssen in der Ausgangslage nicht erwähnt worden sein und können somit frei gewählt werden. Darüber hinaus sind die jeweiligen Einzelkriterien mit Messgrössen (z.B. ‚in Prozent’) zu versehen.\n\nEs werden nur jene Hauptkriterien bewertet, die auch in der Ausgangslage erwähnt wurden.\n\n**Zeitbudget**\n35 Minuten",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark--",
+      "body": "**Kriterienkatalog**\nSie als Projektleiter sind nun mit der Leitung und Durchführung der Evaluation betraut. \n\nNachdem Sie das Pflichtenheft erstellt haben, ist es Ihre Aufgabe die Bewertungsdokumente zu erarbeiten und dem Projektlenkungsausschuss zu präsentieren. Dieser ist aus einem Mitglied der Konzernleitung, dem Leiter der Informatikabteilung und Fachleuten aus der Linie und der Informatikabteilung zusammengesetzt.\n\n\nDer Kriterienkatalog soll aus 6 in der Ausgangslage erwähnten Hauptkriterien bestehen. Die Hauptkriterien sind in einem zweiten Schritt in zwei bewertbare bzw. messbare Einzelkriterien weiter aufzuteilen. Die Einzelkriterien müssen in der Ausgangslage nicht erwähnt worden sein und können somit frei gewählt werden. Darüber hinaus sind die jeweiligen Einzelkriterien mit Messgrössen (z.B. ‚in Prozent’) zu versehen.\n\nEs werden nur jene Hauptkriterien bewertet, die auch in der Ausgangslage erwähnt wurden.\n\n**Zeitbudget**\n35 Minuten",
+      "item": "Auftrag 2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166869"
+      ],
+      "instruction": "Erstellen Sie anhand der geschilderten Ausgangslage einen Kriterienkatalog."
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:166870]\n[%1.5]\n[##Aufgabe «Neue Telefonanlage»]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "166870"
+      ],
+      "title": "Aufgabe «Neue Telefonanlage»"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166871]\n**Fallstudienthema**\nAnforderungen für den Einsatz von Informatikmitteln formulieren sowie den Evaluationsprozess einleiten und durchführen\nBezug zu Handlungsziel(e) Nr. 1 - 8\n\n**Ausgangslage**\nDie Firma Sigvoni hat ihren Hauptsitz mit Produktion und Handel in St. Gallen. In Deutschland und Österreich sind Handelsniederlassungen (Tochterfirmen) niedergelassen.\n\nIn St. Gallen sind nebst der gruppenweiten Produktion (medizinische Hilfsmittel) die zentralen Dienste (Personalwesen, Gruppencontrolling, IT), die Marktbearbeitung Schweiz, das Finanz- und Rechnungswesen sowie die Marktbearbeitung für die Exportländer angesiedelt. Insgesamt arbeiten hier 250 Mitarbeiter, davon rund 100 mit einem PC-Arbeitsplatz. \n\nDie IT-Infrastruktur besteht aus Windows 2000 und Windows 2003-Servern. Auf diesen wird eine Citrix-Arbeitsumgebung betrieben. Als Groupewaretool steht Lotus Notes im Einsatz, als ERP-System wird SAP verwendet. Die Betriebssysteme auf den eingesetzten PC’s und Laptops sind Windows NT, Windows 2000 und Windows XP. \n\nIn Deutschland erfolgt die Marktbearbeitung für Deutschland und Österreich sowie das Marketing für die ganze Gruppe. Hier arbeiten rund 60 Mitarbeiter, davon 20 im Aussendienst. In Österreich schliesslich arbeitet der Verkaufsleiter für Österreich. Drei Aussendienstmitarbeiter und ein administrativer Mitarbeiter stehen ihm zur Verfügung.\n\nAn den drei Standorten sind heute unterschiedliche Telefonanlagen im Betrieb, welche alle im Laufe dieses Jahres ersetzt werden müssen.\n\nIn Deutschland und der Schweiz  erfolgt heute die Entgegennahme der Kundenbestellungen in den Kundendienstcentern, die Aufteilung der Anrufe erfolgt statisch (Verteilung nach Sprachen resp. geografischen Gesichtspunkten). Die Kunden aus Österreich werden direkt nach Deutschland verbunden.\n\nDie Kundendienstcenter werden neu organisiert. Die Kunden werden neu nach Auftragsvolumen und Geschäftspotential bewertet und Key-Kunden sollen in Zukunft priorisiert bedient werden. Die Leiter der Kundendienste sind nun an die Geschäftsleitung gelangt mit neuen Bedürfnissen, welche mit den bestehenden Telefonanlagen nicht mehr abgedeckt werden können. \n\nDa die Mitarbeiter der Niederlassungen und des Hauptsitzes viel untereinander telefonieren ist es ein Anliegen der Geschäftsleitung, in Zukunft die Verbindungen der Datennetzwerke auch für die Telefonie nutzen zu können.\n\nZudem sind oft Telefon- und Videokonferenzen zwischen den Niederlassungen aber auch mit Schwesterfirmen innerhalb der Sigvoni-Gruppe in Frankreich und den USA erforderlich. Die Geschäftsleitung legt Wert auf eine gute Sprachqualität, vor allem bei der Beantwortung der Kundengespräche.\n\nAls Projektleiter bei der Sigvoni haben sie nun den Auftrag erhalten, eine Ablösung der drei bestehenden Telefonanlagen vorzubereiten unter Berücksichtigung der neuen Anforderungen an eine moderne, firmenweite Kommunikation.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Fallstudienthema**\nAnforderungen für den Einsatz von Informatikmitteln formulieren sowie den Evaluationsprozess einleiten und durchführen\nBezug zu Handlungsziel(e) Nr. 1 - 8\n\n**Ausgangslage**\nDie Firma Sigvoni hat ihren Hauptsitz mit Produktion und Handel in St. Gallen. In Deutschland und Österreich sind Handelsniederlassungen (Tochterfirmen) niedergelassen.\n\nIn St. Gallen sind nebst der gruppenweiten Produktion (medizinische Hilfsmittel) die zentralen Dienste (Personalwesen, Gruppencontrolling, IT), die Marktbearbeitung Schweiz, das Finanz- und Rechnungswesen sowie die Marktbearbeitung für die Exportländer angesiedelt. Insgesamt arbeiten hier 250 Mitarbeiter, davon rund 100 mit einem PC-Arbeitsplatz. \n\nDie IT-Infrastruktur besteht aus Windows 2000 und Windows 2003-Servern. Auf diesen wird eine Citrix-Arbeitsumgebung betrieben. Als Groupewaretool steht Lotus Notes im Einsatz, als ERP-System wird SAP verwendet. Die Betriebssysteme auf den eingesetzten PC’s und Laptops sind Windows NT, Windows 2000 und Windows XP. \n\nIn Deutschland erfolgt die Marktbearbeitung für Deutschland und Österreich sowie das Marketing für die ganze Gruppe. Hier arbeiten rund 60 Mitarbeiter, davon 20 im Aussendienst. In Österreich schliesslich arbeitet der Verkaufsleiter für Österreich. Drei Aussendienstmitarbeiter und ein administrativer Mitarbeiter stehen ihm zur Verfügung.\n\nAn den drei Standorten sind heute unterschiedliche Telefonanlagen im Betrieb, welche alle im Laufe dieses Jahres ersetzt werden müssen.\n\nIn Deutschland und der Schweiz  erfolgt heute die Entgegennahme der Kundenbestellungen in den Kundendienstcentern, die Aufteilung der Anrufe erfolgt statisch (Verteilung nach Sprachen resp. geografischen Gesichtspunkten). Die Kunden aus Österreich werden direkt nach Deutschland verbunden.\n\nDie Kundendienstcenter werden neu organisiert. Die Kunden werden neu nach Auftragsvolumen und Geschäftspotential bewertet und Key-Kunden sollen in Zukunft priorisiert bedient werden. Die Leiter der Kundendienste sind nun an die Geschäftsleitung gelangt mit neuen Bedürfnissen, welche mit den bestehenden Telefonanlagen nicht mehr abgedeckt werden können. \n\nDa die Mitarbeiter der Niederlassungen und des Hauptsitzes viel untereinander telefonieren ist es ein Anliegen der Geschäftsleitung, in Zukunft die Verbindungen der Datennetzwerke auch für die Telefonie nutzen zu können.\n\nZudem sind oft Telefon- und Videokonferenzen zwischen den Niederlassungen aber auch mit Schwesterfirmen innerhalb der Sigvoni-Gruppe in Frankreich und den USA erforderlich. Die Geschäftsleitung legt Wert auf eine gute Sprachqualität, vor allem bei der Beantwortung der Kundengespräche.\n\nAls Projektleiter bei der Sigvoni haben sie nun den Auftrag erhalten, eine Ablösung der drei bestehenden Telefonanlagen vorzubereiten unter Berücksichtigung der neuen Anforderungen an eine moderne, firmenweite Kommunikation.",
+      "id": [
+        "166871"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:166872]\n**Ergänzende Informationen**\n|image:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_business_engineering/web-resources/images/wiss_aufgabensammlung_business_engineering_2.png|\n|image:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_business_engineering/web-resources/images/wiss_aufgabensammlung_business_engineering_3.png|\n|image:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_business_engineering/web-resources/images/wiss_aufgabensammlung_business_engineering_5.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Ergänzende Informationen**\n|image:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_business_engineering/web-resources/images/wiss_aufgabensammlung_business_engineering_2.png|\n|image:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_business_engineering/web-resources/images/wiss_aufgabensammlung_business_engineering_3.png|\n|image:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_business_engineering/web-resources/images/wiss_aufgabensammlung_business_engineering_5.png|",
+      "id": [
+        "166872"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166873]\n[%Auftrag 1 – Projektauftrag]\nDie Projektphasen der Evaluation für den Ersatz der Telefonanlagen sind festzulegen.  \nUm starten zu können benötigen wir einen Auftrag für das Beschaffungsprojekt «Evaluation neue Telefonanlagen». \n\n**Lösungselemente:** Definieren Sie 6-8 Punkte für den Projektauftrag, bezogen auf das Fallbeispiel.  2 Grafiken sollen die Übersicht über das Evaluationsprojekt erleichtern (keine Projektpläne).\n**Zeit:** 40 Minuten, Präsentation in Gruppen\n===\n[!Arbeitsschritt Nr. &  Beschreibung /Erläuterung][@shortAnswer]\n===\n[!Arbeitsschritt Nr. &  Beschreibung /Erläuterung][@shortAnswer]\n===\n[!Arbeitsschritt Nr. &  Beschreibung /Erläuterung][@shortAnswer]\n===\n[!Arbeitsschritt Nr. &  Beschreibung /Erläuterung][@shortAnswer]\n===\n[!Arbeitsschritt Nr. &  Beschreibung /Erläuterung][@shortAnswer]\n===\n[!Arbeitsschritt Nr. &  Beschreibung /Erläuterung][@shortAnswer]\n===\n[!Arbeitsschritt Nr. &  Beschreibung /Erläuterung][@shortAnswer]\n===\n[!Arbeitsschritt Nr. &  Beschreibung /Erläuterung][@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Auftrag 1 – Projektauftrag",
+      "instruction": "",
+      "body": "Die Projektphasen der Evaluation für den Ersatz der Telefonanlagen sind festzulegen.  \nUm starten zu können benötigen wir einen Auftrag für das Beschaffungsprojekt «Evaluation neue Telefonanlagen». \n\n**Lösungselemente:** Definieren Sie 6-8 Punkte für den Projektauftrag, bezogen auf das Fallbeispiel.  2 Grafiken sollen die Übersicht über das Evaluationsprojekt erleichtern (keine Projektpläne).\n**Zeit:** 40 Minuten, Präsentation in Gruppen",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "Arbeitsschritt Nr. &  Beschreibung /Erläuterung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "Arbeitsschritt Nr. &  Beschreibung /Erläuterung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "Arbeitsschritt Nr. &  Beschreibung /Erläuterung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "Arbeitsschritt Nr. &  Beschreibung /Erläuterung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "Arbeitsschritt Nr. &  Beschreibung /Erläuterung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "Arbeitsschritt Nr. &  Beschreibung /Erläuterung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "Arbeitsschritt Nr. &  Beschreibung /Erläuterung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "Arbeitsschritt Nr. &  Beschreibung /Erläuterung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166873"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.take-picture]\n[@id:166874]\nGrafiken",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark--",
+      "body": "Grafiken",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166874"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.take-picture:bitmark--]\n[@id:166875]\n[%Auftrag 2 – Zieldefinition]\nFühren Sie insgesamt 10 – 15 Ziele auf. Diese müssen sinnvoll gruppiert werden. Unterteilen Sie nach Anforderungskategorien (Zielort). Die Kann-Anforderungen (Zielintensität) sollen gewichtet werden. Die Zielhierarchie muss dabei ersichtlich sein.\n\n**Lösungselemente:** Ausgefüllte Tabelle gemäss Lösungsblatt.\n**Zeit:** 40 Minuten",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark--",
+      "body": "Führen Sie insgesamt 10 – 15 Ziele auf. Diese müssen sinnvoll gruppiert werden. Unterteilen Sie nach Anforderungskategorien (Zielort). Die Kann-Anforderungen (Zielintensität) sollen gewichtet werden. Die Zielhierarchie muss dabei ersichtlich sein.\n\n**Lösungselemente:** Ausgefüllte Tabelle gemäss Lösungsblatt.\n**Zeit:** 40 Minuten",
+      "item": "Auftrag 2 – Zieldefinition",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166875"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.take-picture:bitmark--]\n[@id:166876]\n[%Auftrag 3 – Planung der Meilensteine]\nFür die Evaluationsphase muss ein Meilensteinplan erstellt werden. Der Plan muss mehrere Aufgaben und 2-3 Meilensteintermine beinhalten. Die Dauer der gesamten Evaluationsphase muss realistisch dargestellt werden. Externe Aktivitäten müssen mit der Dauer ebenfalls ersichtlich sein.\n\n**Lösungselemente:** Raster: Gant-Plan\n**Zeit:** 40 Minuten",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark--",
+      "body": "Für die Evaluationsphase muss ein Meilensteinplan erstellt werden. Der Plan muss mehrere Aufgaben und 2-3 Meilensteintermine beinhalten. Die Dauer der gesamten Evaluationsphase muss realistisch dargestellt werden. Externe Aktivitäten müssen mit der Dauer ebenfalls ersichtlich sein.\n\n**Lösungselemente:** Raster: Gant-Plan\n**Zeit:** 40 Minuten",
+      "item": "Auftrag 3 – Planung der Meilensteine",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166876"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.take-picture:bitmark--]\n[@id:166877]\n[%Auftrag 4 – Erstellung des Pflichtenheftes]\n**Elemente des Pflichtenheftes**\nDefinieren Sie die verschiedenen Elemente des Pflichtenheftes. Bilden Sie dazu Hauptgruppen und entsprechende Details.\n**Zeit:** 40 Minuten\n\n**Anforderungen**\nDie Anforderungen sollen nach mindestens 3 Hauptgruppen gegliedert werden. Jede Anforderungsgruppe soll ebenfalls Untergruppen enthalten. Eine der Anforderungen soll ausformuliert werden.\nZeit: 40 Minuten\n\n**Aufbau der Offerte**\nLegen Sie die Vorgaben für den Aufbau und die Elemente der Offerte fest. Definieren Sie den Raster für die Gestaltung.\n**Zeit:** 20 Minuten\n\n**Evaluation der Anbieter**\nWie werden die Anbieter evaluiert? Zählen Sie 4 Möglichkeiten auf. Welche Methode verspricht den grössten Erfolg?\n**Zeit:** 15 Minuten",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark--",
+      "body": "**Elemente des Pflichtenheftes**\nDefinieren Sie die verschiedenen Elemente des Pflichtenheftes. Bilden Sie dazu Hauptgruppen und entsprechende Details.\n**Zeit:** 40 Minuten\n\n**Anforderungen**\nDie Anforderungen sollen nach mindestens 3 Hauptgruppen gegliedert werden. Jede Anforderungsgruppe soll ebenfalls Untergruppen enthalten. Eine der Anforderungen soll ausformuliert werden.\nZeit: 40 Minuten\n\n**Aufbau der Offerte**\nLegen Sie die Vorgaben für den Aufbau und die Elemente der Offerte fest. Definieren Sie den Raster für die Gestaltung.\n**Zeit:** 20 Minuten\n\n**Evaluation der Anbieter**\nWie werden die Anbieter evaluiert? Zählen Sie 4 Möglichkeiten auf. Welche Methode verspricht den grössten Erfolg?\n**Zeit:** 15 Minuten",
+      "item": "Auftrag 4 – Erstellung des Pflichtenheftes",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166877"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.take-picture:bitmark--]\n[@id:166878]\n[%Auftrag 5 – Anforderungsliste, Bewertungsschema]\n**Anforderungsliste**\nErstellen Sie zuerst eine Anforderungsliste von je 2 Untergruppen für jede der 3 Hauptgruppen aus Auftrag 4 - Anforderungen. \n**Zeit:** 45 Minuten\n\n**Bewertungsschema**\nErstellen Sie nun unter Berücksichtigung der vorher erstellten Anforderungsliste ein Bewertungsschema.\n**Zeit:** 90 Minuten",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark--",
+      "body": "**Anforderungsliste**\nErstellen Sie zuerst eine Anforderungsliste von je 2 Untergruppen für jede der 3 Hauptgruppen aus Auftrag 4 - Anforderungen. \n**Zeit:** 45 Minuten\n\n**Bewertungsschema**\nErstellen Sie nun unter Berücksichtigung der vorher erstellten Anforderungsliste ein Bewertungsschema.\n**Zeit:** 90 Minuten",
+      "item": "Auftrag 5 – Anforderungsliste, Bewertungsschema",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166878"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:166879]\n[%2]\n[#Geschäftsprozesse modellieren (168)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "166879"
+      ],
+      "title": "Geschäftsprozesse modellieren (168)"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:166880]\n[%2.1]\n[##Aufgabe «Prozessarten Interlog»]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "166880"
+      ],
+      "title": "Aufgabe «Prozessarten Interlog»"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166881]\n**Szenario**\nDie InterLog Gruppe ist ein Distributor von Hard- und Software-Lösungen auf PC-Basis mit Sitz in der Schweiz. Eine der Spezialitäten der InterLog ist die Assemblierung von Rechnern für den Fachhandel nach individuellen Kundenwünschen. Die InterLog-Gruppe besteht aus elf europäischen Länderorganisationen und drei Dienstleistungs-Tochtergesellschaften. Über rund 20.000 Fachhändler, Value Added Reseller, Systemhäuser und Retailer vermarktet InterLog eine Palette innovativer Hard- und Software-Lösungen und Dienstleistungen.\n\nZur Steuerung des Warenflusses von den Beschaffungsmärkten hin zum Kunden unterhält InterLog eine Mischform aus zentraler und dezentraler Lagerstruktur: Kleine dezentrale Auslieferungslager in elf europäischen Staaten und zwei europaweit agierende Zentrallager in Rotterdam (NL) und Eulendorf (D). \n\nDie dezentralen Auslieferungslager sind eng an die einzelnen Filialen gekoppelt und erlauben es, den regelmässigen täglichen Bedarf der Kunden innerhalb von 24 Stunden zu erfüllen. In Rotterdam verfügt InterLog über ein grosses Einfuhrlager, in dem importierte Ware aus der ganzen Welt umgeschlagen und auf die einzelnen europäischen Auslieferungslager verteilt wird. Zwei dedizierte Produktionslager an den Fertigungsstandorten Eulendorf (D) und Luegiswil (CH) ergänzen das Lagerkonzept.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Szenario**\nDie InterLog Gruppe ist ein Distributor von Hard- und Software-Lösungen auf PC-Basis mit Sitz in der Schweiz. Eine der Spezialitäten der InterLog ist die Assemblierung von Rechnern für den Fachhandel nach individuellen Kundenwünschen. Die InterLog-Gruppe besteht aus elf europäischen Länderorganisationen und drei Dienstleistungs-Tochtergesellschaften. Über rund 20.000 Fachhändler, Value Added Reseller, Systemhäuser und Retailer vermarktet InterLog eine Palette innovativer Hard- und Software-Lösungen und Dienstleistungen.\n\nZur Steuerung des Warenflusses von den Beschaffungsmärkten hin zum Kunden unterhält InterLog eine Mischform aus zentraler und dezentraler Lagerstruktur: Kleine dezentrale Auslieferungslager in elf europäischen Staaten und zwei europaweit agierende Zentrallager in Rotterdam (NL) und Eulendorf (D). \n\nDie dezentralen Auslieferungslager sind eng an die einzelnen Filialen gekoppelt und erlauben es, den regelmässigen täglichen Bedarf der Kunden innerhalb von 24 Stunden zu erfüllen. In Rotterdam verfügt InterLog über ein grosses Einfuhrlager, in dem importierte Ware aus der ganzen Welt umgeschlagen und auf die einzelnen europäischen Auslieferungslager verteilt wird. Zwei dedizierte Produktionslager an den Fertigungsstandorten Eulendorf (D) und Luegiswil (CH) ergänzen das Lagerkonzept.",
+      "id": [
+        "166881"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166882]\n[%Aufgabe]\n[!Teilen Sie die aufgelisteten Prozesse der Interlog den drei Kategorien Management-, Support- bzw. Wertschöpfungsprozess zu. Begründen Sie Ihre Zuordnung in Stichworten.]\n===\nControlling[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nDebitorenbuchhhaltung[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nDisposition[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nEinkauf[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nExecutive Information System[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nFakturierung[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nHaupt- und Anlagenbuchhaltung[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nKostenrechnung[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nKreditorenbuchhaltung[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nLager[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nMarketing[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nPersonalwirtschaft[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nProduktion (PC-Assemblierung)[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nRechnungsprüfung[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nUnternehmensplanung[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nVerkauf[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nWarenausgang[@shortAnswer]\n[!M/S/W\nBegründung]\n===\nWareneingang[@shortAnswer]\n[!M/S/W\nBegründung]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Aufgabe",
+      "instruction": "Teilen Sie die aufgelisteten Prozesse der Interlog den drei Kategorien Management-, Support- bzw. Wertschöpfungsprozess zu. Begründen Sie Ihre Zuordnung in Stichworten.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Controlling",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Debitorenbuchhhaltung",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Disposition",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Einkauf",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Executive Information System",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Fakturierung",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Haupt- und Anlagenbuchhaltung",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Kostenrechnung",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Kreditorenbuchhaltung",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Lager",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Marketing",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Personalwirtschaft",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Produktion (PC-Assemblierung)",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Rechnungsprüfung",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Unternehmensplanung",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Verkauf",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Warenausgang",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Wareneingang",
+          "instruction": "M/S/W\nBegründung",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166882"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:166883]\n[%2.2]\n[##Aufgabe «Ablauf Kulturwochenende»]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "166883"
+      ],
+      "title": "Aufgabe «Ablauf Kulturwochenende»"
+    }
+  },
+  {
+    "bitmark": "[.take-picture:bitmark--]\n[@id:166884]\nZeit: 30 Minuten\nSituation: Die Service GmbH bietet die neue Dienstleistung «Kulturwochenende» an, die aus einem Gesamtpaket an kulturellen Leistungsangeboten besteht. Der Kunde wird am Samstagnachmittag von der Service GmbH zu Hause abgeholt und in die gewünschte Stadt gebracht. Dort wurde bereits ein Hotel reserviert. Für den Samstagabend kann der Kunde zwischen einem Theaterbesuch, einem Opernbesuch und gegebenenfalls einem Konzert auswählen. Nach der Veranstaltung wird der Kunde ins Hotel gebracht, wo er übernachtet. Zur Gestaltung des Sonntagmorgens kann der Kunde zwischen den folgenden Angeboten auswählen: entweder er nimmt an einer Stadtrundfahrt teil oder er besucht die ansässigen Museen. Am Sonntagnachmittag wird der Kunde wieder nach Hause gefahren.\n\nDie Service GmbH steht vor dem Problem, ihre Dienstleistungen abzubilden. \n\nRolle: Sie sind Geschäftsführer der Service GmbH und erinnern sich an die im Fach Prozessmanagement verwendeten Methoden.\n\n[!Modellieren Sie den Dienstleistungsprozess als ereignisgesteuerte Prozesskette.]",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark--",
+      "body": "Zeit: 30 Minuten\nSituation: Die Service GmbH bietet die neue Dienstleistung «Kulturwochenende» an, die aus einem Gesamtpaket an kulturellen Leistungsangeboten besteht. Der Kunde wird am Samstagnachmittag von der Service GmbH zu Hause abgeholt und in die gewünschte Stadt gebracht. Dort wurde bereits ein Hotel reserviert. Für den Samstagabend kann der Kunde zwischen einem Theaterbesuch, einem Opernbesuch und gegebenenfalls einem Konzert auswählen. Nach der Veranstaltung wird der Kunde ins Hotel gebracht, wo er übernachtet. Zur Gestaltung des Sonntagmorgens kann der Kunde zwischen den folgenden Angeboten auswählen: entweder er nimmt an einer Stadtrundfahrt teil oder er besucht die ansässigen Museen. Am Sonntagnachmittag wird der Kunde wieder nach Hause gefahren.\n\nDie Service GmbH steht vor dem Problem, ihre Dienstleistungen abzubilden. \n\nRolle: Sie sind Geschäftsführer der Service GmbH und erinnern sich an die im Fach Prozessmanagement verwendeten Methoden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166884"
+      ],
+      "instruction": "Modellieren Sie den Dienstleistungsprozess als ereignisgesteuerte Prozesskette."
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:166885]\n[%2.3]\n[##Aufgabe «Modell-Review Auftrag»]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "166885"
+      ],
+      "title": "Aufgabe «Modell-Review Auftrag»"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:166886]\nZeit: 20 Minuten\nRolle: Sie sind Methoden-Experte und kennen insbesondere die Ereignisgesteuerte Prozesskette (EPK) zur Darstellung von Prozessabläufen.\nSituation: Folgendes Modell ist erstellt worden:\n|image:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_business_engineering/web-resources/images/wiss_aufgabensammlung_business_engineering_4.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Zeit: 20 Minuten\nRolle: Sie sind Methoden-Experte und kennen insbesondere die Ereignisgesteuerte Prozesskette (EPK) zur Darstellung von Prozessabläufen.\nSituation: Folgendes Modell ist erstellt worden:\n|image:https://docs.bitmark.cloud/bit-books/wiss/aufgabensammlung_business_engineering/web-resources/images/wiss_aufgabensammlung_business_engineering_4.png|",
+      "id": [
+        "166886"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:166887]\n[%Auftrag 1]\n[!Beschreiben Sie kurz die drei formalen Fehler, die in dem gegebenen Geschäftsprozessmodell enthalten sind.]\n\n**Auftragsbeschreibung**\nListen Sie die Fehler auf. Sie können sich auf formale Fehler beschränken.\n===\n[@shortAnswer]\n===\n[@shortAnswer]\n===\n[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Auftrag 1",
+      "instruction": "Beschreiben Sie kurz die drei formalen Fehler, die in dem gegebenen Geschäftsprozessmodell enthalten sind.",
+      "body": "**Auftragsbeschreibung**\nListen Sie die Fehler auf. Sie können sich auf formale Fehler beschränken.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "166887"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.take-picture:bitmark--]\n[@id:166888]\n[%Auftrag 2]\n[!Machen Sie einen Verbesserungsvorschlag.]\n\n**Auftragsbeschreibung**\nZeichnen Sie die EPK neu.",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark--",
+      "body": "**Auftragsbeschreibung**\nZeichnen Sie die EPK neu.",
+      "item": "Auftrag 2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166888"
+      ],
+      "instruction": "Machen Sie einen Verbesserungsvorschlag."
+    }
+  }
+]

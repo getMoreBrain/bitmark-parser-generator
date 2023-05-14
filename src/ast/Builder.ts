@@ -1,7 +1,16 @@
 import { BitTypeType } from '../model/enum/BitType';
+import { PropertyKey, PropertyKeyMetadata, PropertyKeyType } from '../model/enum/PropertyKey';
 import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
 import { TextFormatType, TextFormat } from '../model/enum/TextFormat';
+import { ParserError } from '../model/parser/ParserError';
+import { ParserInfo } from '../model/parser/ParserInfo';
+import { ArrayUtils } from '../utils/ArrayUtils';
+import { BitUtils } from '../utils/BitUtils';
+import { BooleanUtils } from '../utils/BooleanUtils';
+import { NumberUtils } from '../utils/NumberUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
+import { StringUtils } from '../utils/StringUtils';
+import { UrlUtils } from '../utils/UrlUtils';
 
 import { NodeValidator } from './rules/NodeValidator';
 
@@ -43,6 +52,10 @@ import {
   AppLinkResource,
   WebsiteLinkResource,
   ItemLead,
+  ExtraProperties,
+  DocumentDownloadResource,
+  Property,
+  BotResponse,
 } from '../model/ast/Nodes';
 
 interface RemoveUnwantedPropertiesOptions {
@@ -50,6 +63,7 @@ interface RemoveUnwantedPropertiesOptions {
   ignoreFalse?: string[];
   ignoreEmptyString?: string[];
   ignoreEmptyArrays?: string[];
+  ignoreEmptyObjects?: string[];
 }
 
 /**
@@ -62,10 +76,12 @@ class Builder {
    * @param data - data for the node
    * @returns
    */
-  bitmark(data: { bits?: Bit[] }): BitmarkAst {
-    const { bits } = data;
+  bitmark(data: { bits?: Bit[]; errors?: ParserError[] }): BitmarkAst {
+    const { bits, errors } = data;
+
     const node: BitmarkAst = {
-      bits: bits,
+      bits,
+      errors,
     };
 
     return node;
@@ -80,49 +96,62 @@ class Builder {
   bit(data: {
     bitType: BitTypeType;
     textFormat?: TextFormatType;
-    ids?: string | string[];
-    externalIds?: string | string[];
-    ageRanges?: number | number[];
-    languages?: string | string[];
-    computerLanguages?: string | string[];
-    coverImages?: string | string[];
-    publishers?: string | string[];
+    resourceType?: ResourceTypeType; // This is optional, it will be inferred from the resource
+    id?: string | string[];
+    externalId?: string | string[];
+    ageRange?: number | number[];
+    language?: string | string[];
+    computerLanguage?: string | string[];
+    coverImage?: string | string[];
+    publisher?: string | string[];
     publications?: string | string[];
-    authors?: string | string[];
-    dates?: string | string[];
-    locations?: string | string[];
-    themes?: string | string[];
-    kinds?: string | string[];
-    actions?: string | string[];
-    thumbImages?: string | string[];
-    durations?: string | string[];
-    deepLinks?: string | string[];
-    externalLink?: string;
-    externalLinkText?: string;
-    videoCallLinks?: string | string[];
-    bots?: string | string[];
-    lists?: string | string[];
-    labelTrue?: string;
-    labelFalse?: string;
-    quotedPerson?: string;
+    author?: string | string[];
+    subject?: string | string[];
+    date?: string | string[];
+    location?: string | string[];
+    theme?: string | string[];
+    kind?: string | string[];
+    action?: string | string[];
+    thumbImage?: string | string[];
+    focusX?: number | number[];
+    focusY?: number | number[];
+    duration?: string | string[];
+    referenceProperty?: string | string[];
+    deeplink?: string | string[];
+    externalLink?: string | string[];
+    externalLinkText?: string | string[];
+    videoCallLink?: string | string[];
+    bot?: string | string[];
+    list?: string | string[];
+    labelTrue?: string | string[];
+    labelFalse?: string | string[];
+    quotedPerson?: string | string[];
+    partialAnswer?: string | string[];
+    levelProperty?: string | string[];
     book?: string;
     title?: string;
     subtitle?: string;
-    level?: number;
+    level?: number | string;
     toc?: boolean;
     progress?: boolean;
     anchor?: string;
-    reference?: string | string[];
+    // If an array is passed to reference, it will be considered an "[@reference:Some text]" property
+    // If a string is passed to reference, it will be considered a "[►Reference]" tag
+    reference?: string;
     referenceEnd?: string;
     item?: string;
     lead?: string;
     hint?: string;
     instruction?: string;
     example?: string | boolean;
+    extraProperties?: {
+      [key: string]: unknown | unknown[];
+    };
     resource?: Resource;
     body?: Body;
-    sampleSolutions: string | string[];
+    sampleSolution?: string | string[];
     elements?: string[];
+    statement?: Statement;
     statements?: Statement[];
     responses?: Response[];
     quizzes?: Quiz[];
@@ -131,37 +160,48 @@ class Builder {
     matrix?: Matrix[];
     choices?: Choice[];
     questions?: Question[];
+    botResponses?: BotResponse[];
     footer?: FooterText;
+
+    bitmark?: string;
+    parser?: ParserInfo;
   }): Bit | undefined {
     const {
       bitType,
       textFormat,
-      ids,
-      externalIds,
-      ageRanges,
-      languages,
-      computerLanguages,
-      coverImages,
-      publishers,
+      resourceType,
+      id,
+      externalId,
+      ageRange,
+      language,
+      computerLanguage,
+      coverImage,
+      publisher,
       publications,
-      authors,
-      dates,
-      locations,
-      themes,
-      kinds,
-      actions,
-      thumbImages,
-      durations,
-      deepLinks,
+      author,
+      subject,
+      date,
+      location,
+      theme,
+      kind,
+      action,
+      thumbImage,
+      focusX,
+      focusY,
+      duration,
+      referenceProperty,
+      deeplink,
       externalLink,
       externalLinkText,
-      videoCallLinks,
-      bots,
-      lists,
+      videoCallLink,
+      bot,
+      list,
       labelTrue,
       labelFalse,
       book,
       quotedPerson,
+      partialAnswer,
+      levelProperty,
       title,
       subtitle,
       level,
@@ -175,10 +215,12 @@ class Builder {
       hint,
       instruction,
       example,
+      extraProperties,
       resource,
       body,
-      sampleSolutions,
+      sampleSolution,
       elements,
+      statement,
       statements,
       responses,
       quizzes,
@@ -187,56 +229,67 @@ class Builder {
       matrix,
       choices,
       questions,
+      botResponses,
       footer,
+
+      bitmark,
+      parser,
     } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Bit = {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
-      ids: this.asArray(ids),
-      externalIds: this.asArray(externalIds),
+      resourceType: BitUtils.calculateResourceType(bitType, resourceType, resource),
+      id: this.toAstProperty(PropertyKey.id, id),
+      externalId: this.toAstProperty(PropertyKey.externalId, externalId),
       book,
-      ageRanges: this.asArray(ageRanges),
-      languages: this.asArray(languages),
-      computerLanguages: this.asArray(computerLanguages),
-      coverImages: this.asArray(coverImages),
-      publishers: this.asArray(publishers),
-      publications: this.asArray(publications),
-      authors: this.asArray(authors),
-      dates: this.asArray(dates),
-      locations: this.asArray(locations),
-      themes: this.asArray(themes),
-      kinds: this.asArray(kinds),
-      actions: this.asArray(actions),
-      thumbImages: this.asArray(thumbImages),
-      deepLinks: this.asArray(deepLinks),
-      externalLink,
-      externalLinkText,
-      videoCallLinks: this.asArray(videoCallLinks),
-      bots: this.asArray(bots),
-      durations: this.asArray(durations),
-      referenceProperties: undefined, // Important for property order, do not remove
-      lists: this.asArray(lists),
-      labelTrue,
-      labelFalse,
-      quotedPerson,
+      ageRange: this.toAstProperty(PropertyKey.ageRange, ageRange),
+      language: this.toAstProperty(PropertyKey.language, language),
+      computerLanguage: this.toAstProperty(PropertyKey.computerLanguage, computerLanguage),
+      coverImage: this.toAstProperty(PropertyKey.coverImage, coverImage),
+      publisher: this.toAstProperty(PropertyKey.publisher, publisher),
+      publications: this.toAstProperty(PropertyKey.publications, publications),
+      author: this.toAstProperty(PropertyKey.author, author),
+      subject: this.toAstProperty(PropertyKey.subject, subject),
+      date: this.toAstProperty(PropertyKey.date, date),
+      location: this.toAstProperty(PropertyKey.location, location),
+      theme: this.toAstProperty(PropertyKey.theme, theme),
+      kind: this.toAstProperty(PropertyKey.kind, kind),
+      action: this.toAstProperty(PropertyKey.action, action),
+      thumbImage: this.toAstProperty(PropertyKey.thumbImage, thumbImage),
+      focusX: this.toAstProperty(PropertyKey.focusX, focusX),
+      focusY: this.toAstProperty(PropertyKey.focusY, focusY),
+      deeplink: this.toAstProperty(PropertyKey.deeplink, deeplink),
+      externalLink: this.toAstProperty(PropertyKey.externalLink, externalLink),
+      externalLinkText: this.toAstProperty(PropertyKey.externalLinkText, externalLinkText),
+      videoCallLink: this.toAstProperty(PropertyKey.videoCallLink, videoCallLink),
+      bot: this.toAstProperty(PropertyKey.bot, bot),
+      duration: this.toAstProperty(PropertyKey.duration, duration),
+      referenceProperty: this.toAstProperty(PropertyKey.reference, referenceProperty),
+      list: this.toAstProperty(PropertyKey.list, list),
+      labelTrue: this.toAstProperty(PropertyKey.labelTrue, labelTrue),
+      labelFalse: this.toAstProperty(PropertyKey.labelFalse, labelFalse),
+      quotedPerson: this.toAstProperty(PropertyKey.quotedPerson, quotedPerson),
+      partialAnswer: this.toAstProperty(PropertyKey.partialAnswer, partialAnswer),
+      levelProperty: this.toAstProperty(PropertyKey.level, levelProperty),
       title,
       subtitle,
-      level,
-      toc,
-      progress,
+      level: NumberUtils.asNumber(level),
+      toc: this.toAstProperty(PropertyKey.toc, toc),
+      progress: this.toAstProperty(PropertyKey.progress, progress),
       anchor,
-      reference: undefined, // Important for property order, do not remove
+      reference,
       referenceEnd,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example,
+      example: this.toAstProperty(PropertyKey.example, example),
       resource,
       body,
-      sampleSolutions: this.asArray(sampleSolutions),
+      sampleSolution: ArrayUtils.asArray(sampleSolution),
       elements,
+      statement,
       statements,
       responses,
       quizzes,
@@ -245,11 +298,15 @@ class Builder {
       matrix,
       choices,
       questions,
+      botResponses,
       footer,
-    };
 
-    // Handle special case properties
-    this.handleBitReference(node, reference);
+      bitmark,
+      parser,
+
+      // Must always be last in the AST so key clashes are avoided correctly with other properties
+      extraProperties: this.parseExtraProperties(extraProperties),
+    };
 
     // Remove Unset Optionals
     this.removeUnwantedProperties(node);
@@ -329,6 +386,37 @@ class Builder {
   }
 
   /**
+   * Build bot response node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  botResponse(data: {
+    response: string;
+    reaction: string;
+    feedback: string;
+    item?: string;
+    lead?: string;
+    hint?: string;
+  }): BotResponse {
+    const { response, reaction, feedback, item, lead, hint } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: BotResponse = {
+      response,
+      reaction,
+      feedback,
+      itemLead: this.itemLead(item, lead),
+      hint,
+    };
+
+    // Remove Unset Optionals
+    this.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
    * Build quiz node
    *
    * @param data - data for the node
@@ -373,7 +461,7 @@ class Builder {
     // NOTE: Node order is important and is defined here
     const node: Heading = {
       forKeys: forKeys || '',
-      forValues: this.asArray(forValues) ?? [],
+      forValues: ArrayUtils.asArray(forValues) ?? [],
     };
 
     // Remove Unset Optionals
@@ -399,9 +487,9 @@ class Builder {
     instruction?: string;
     example?: string | boolean;
     isCaseSensitive?: boolean;
-    isLongAnswer?: boolean;
+    isShortAnswer?: boolean;
   }): Pair {
-    const { key, keyAudio, keyImage, values, item, lead, hint, instruction, example, isCaseSensitive, isLongAnswer } =
+    const { key, keyAudio, keyImage, values, item, lead, hint, instruction, example, isCaseSensitive, isShortAnswer } =
       data;
 
     // NOTE: Node order is important and is defined here
@@ -414,7 +502,7 @@ class Builder {
       instruction,
       example,
       isCaseSensitive,
-      isLongAnswer,
+      isShortAnswer,
       values,
     };
 
@@ -439,9 +527,9 @@ class Builder {
     instruction?: string;
     example?: string | boolean;
     isCaseSensitive?: boolean;
-    isLongAnswer?: boolean;
+    isShortAnswer?: boolean;
   }): Matrix {
-    const { key, cells, item, lead, hint, instruction, example, isCaseSensitive, isLongAnswer } = data;
+    const { key, cells, item, lead, hint, instruction, example, isCaseSensitive, isShortAnswer } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Matrix = {
@@ -451,7 +539,7 @@ class Builder {
       instruction,
       example,
       isCaseSensitive,
-      isLongAnswer,
+      isShortAnswer,
       cells,
     };
 
@@ -519,7 +607,7 @@ class Builder {
       instruction,
       example,
       isCaseSensitive,
-      // isShortAnswer,
+      isShortAnswer,
       sampleSolution,
     } = data;
 
@@ -532,14 +620,12 @@ class Builder {
       instruction,
       example,
       isCaseSensitive,
-      // Writing [@shortAnswer] after the 'question' causes newlines in the body to change.
-      // This is likely a parser bug.
-      // isShortAnswer,
+      isShortAnswer,
       sampleSolution,
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    this.removeUnwantedProperties(node, { ignoreEmptyString: ['question'], ignoreFalse: ['isShortAnswer'] });
 
     return node;
   }
@@ -819,8 +905,8 @@ class Builder {
     data: {
       type: ResourceTypeType;
 
-      // Generic (except Article / Document)
-      url?: string; // url / src / href / app
+      // Generic part (value of bit tag)
+      value?: string; // url / src / href / app / body
 
       // ImageLikeResource / AudioLikeResource / VideoLikeResource / Article / Document
       format?: string;
@@ -849,12 +935,11 @@ class Builder {
       siteName?: string;
 
       // ArticleLikeResource
-      body?: string;
+      // body?: string;
 
       // Generic Resource
       license?: string;
       copyright?: string;
-      provider?: string;
       showInIndex?: boolean;
       caption?: string;
     },
@@ -862,10 +947,10 @@ class Builder {
   ): Resource | undefined {
     let node: Resource | undefined;
 
-    const { type, url: urlIn, format: formatIn, ...rest } = data;
+    const { type, value: valueIn, format: formatIn, ...rest } = data;
     const finalData = {
       type,
-      url: urlIn ?? '',
+      value: valueIn ?? '',
       format: formatIn ?? '',
       ...rest,
     };
@@ -919,6 +1004,10 @@ class Builder {
         node = this.documentLinkResource(finalData);
         break;
 
+      case ResourceType.documentDownload:
+        node = this.documentDownloadResource(finalData);
+        break;
+
       case ResourceType.app:
         node = this.appResource(finalData);
         break;
@@ -945,7 +1034,7 @@ class Builder {
    */
   imageResource(data: {
     format: string;
-    url: string; //src
+    value: string; //src
     src1x?: string;
     src2x?: string;
     src3x?: string;
@@ -955,7 +1044,6 @@ class Builder {
     alt?: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): ImageResource {
@@ -975,7 +1063,7 @@ class Builder {
    */
   imageLinkResource(data: {
     format: string;
-    url: string;
+    value: string;
     src1x?: string;
     src2x?: string;
     src3x?: string;
@@ -985,7 +1073,6 @@ class Builder {
     alt?: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): ImageLinkResource {
@@ -1005,10 +1092,9 @@ class Builder {
    */
   audioResource(data: {
     format: string;
-    url: string; // src
+    value: string; // src
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AudioResource {
@@ -1028,10 +1114,9 @@ class Builder {
    */
   audioLinkResource(data: {
     format: string;
-    url: string;
+    value: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AudioLinkResource {
@@ -1051,7 +1136,7 @@ class Builder {
    */
   videoResource(data: {
     format: string;
-    url: string; // src
+    value: string; // src
     width?: number;
     height?: number;
     duration?: number; // string?
@@ -1064,7 +1149,6 @@ class Builder {
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): VideoResource {
@@ -1084,7 +1168,7 @@ class Builder {
    */
   videoLinkResource(data: {
     format: string;
-    url: string;
+    value: string;
     width?: number;
     height?: number;
     duration?: number; // string?
@@ -1097,7 +1181,6 @@ class Builder {
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): VideoLinkResource {
@@ -1117,7 +1200,7 @@ class Builder {
    */
   stillImageFilmResource(data: {
     format: string;
-    url: string; // src
+    value: string; // src
     width?: number;
     height?: number;
     duration?: number; // string?
@@ -1130,7 +1213,6 @@ class Builder {
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): StillImageFilmResource {
@@ -1150,7 +1232,7 @@ class Builder {
    */
   stillImageFilmLinkResource(data: {
     format: string;
-    url: string;
+    value: string;
     width?: number;
     height?: number;
     duration?: number; // string?
@@ -1163,7 +1245,6 @@ class Builder {
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): StillImageFilmLinkResource {
@@ -1183,11 +1264,9 @@ class Builder {
    */
   articleResource(data: {
     format: string;
-    href?: string;
-    body?: string;
+    value: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): ArticleResource {
@@ -1207,10 +1286,9 @@ class Builder {
    */
   articleLinkResource(data: {
     format: string;
-    url: string;
+    value: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): ArticleLinkResource {
@@ -1234,7 +1312,6 @@ class Builder {
     body?: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): DocumentResource {
@@ -1254,10 +1331,9 @@ class Builder {
    */
   documentLinkResource(data: {
     format: string;
-    url: string;
+    value: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): DocumentLinkResource {
@@ -1270,16 +1346,37 @@ class Builder {
   }
 
   /**
+   * Build documentDownloadResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  documentDownloadResource(data: {
+    format: string;
+    value: string;
+    license?: string;
+    copyright?: string;
+    showInIndex?: boolean;
+    caption?: string;
+  }): DocumentDownloadResource {
+    const node: DocumentDownloadResource = this.articleLikeResource({
+      type: ResourceType.documentDownload,
+      ...data,
+    }) as DocumentDownloadResource;
+
+    return node;
+  }
+
+  /**
    * Build appResource node
    *
    * @param data - data for the node
    * @returns
    */
   appResource(data: {
-    url: string; // app
+    value: string; // app
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AppResource {
@@ -1298,10 +1395,9 @@ class Builder {
    * @returns
    */
   appLinkResource(data: {
-    url: string;
+    value: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AppLinkResource {
@@ -1320,24 +1416,22 @@ class Builder {
    * @returns
    */
   websiteLinkResource(data: {
-    url: string;
+    value: string;
     siteName?: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): WebsiteLinkResource | undefined {
-    const { url, siteName, license, copyright, provider, showInIndex, caption } = data;
+    const { value, siteName, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: WebsiteLinkResource = {
       type: ResourceType.websiteLink,
-      url,
+      value,
       siteName,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     };
@@ -1363,22 +1457,13 @@ class Builder {
     return node;
   }
 
-  private handleBitReference(bit: Bit, reference: string | string[] | undefined) {
-    if (Array.isArray(reference) && reference.length > 0) {
-      bit.referenceProperties = reference;
-    } else if (reference) {
-      bit.reference = reference as string;
-    }
-  }
-
   //
   // Private
   //
 
   private imageLikeResource(data: {
     type: 'image' | 'image-link';
-    format: string;
-    url: string;
+    value: string;
     src1x?: string;
     src2x?: string;
     src3x?: string;
@@ -1388,33 +1473,18 @@ class Builder {
     alt?: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): ImageResource | ImageLinkResource | undefined {
-    const {
-      type,
-      format,
-      url,
-      src1x,
-      src2x,
-      src3x,
-      src4x,
-      width,
-      height,
-      alt,
-      license,
-      copyright,
-      provider,
-      showInIndex,
-      caption,
-    } = data;
+    const { type, value, src1x, src2x, src3x, src4x, width, height, alt, license, copyright, showInIndex, caption } =
+      data;
 
     // NOTE: Node order is important and is defined here
     const node: ImageResource | ImageLinkResource = {
       type,
-      format,
-      url,
+      format: UrlUtils.fileExtensionFromUrl(value),
+      provider: UrlUtils.domainFromUrl(value),
+      value,
       src1x,
       src2x,
       src3x,
@@ -1424,7 +1494,6 @@ class Builder {
       alt,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     };
@@ -1438,24 +1507,22 @@ class Builder {
 
   private audioLikeResource(data: {
     type: 'audio' | 'audio-link';
-    format: string;
-    url: string;
+    value: string;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AudioResource | AudioLinkResource | undefined {
-    const { type, format, url, license, copyright, provider, showInIndex, caption } = data;
+    const { type, value, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioResource | AudioLinkResource = {
       type,
-      format,
-      url,
+      format: UrlUtils.fileExtensionFromUrl(value),
+      provider: UrlUtils.domainFromUrl(value),
+      value,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     };
@@ -1469,8 +1536,7 @@ class Builder {
 
   private videoLikeResource(data: {
     type: 'video' | 'video-link' | 'still-image-film' | 'still-image-film-link';
-    format: string;
-    url: string;
+    value: string;
     width?: number;
     height?: number;
     duration?: number; // string?
@@ -1483,14 +1549,12 @@ class Builder {
     thumbnails?: ImageResource[];
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource | undefined {
     const {
       type,
-      format,
-      url,
+      value,
       width,
       height,
       duration,
@@ -1503,7 +1567,6 @@ class Builder {
       thumbnails,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     } = data;
@@ -1511,8 +1574,9 @@ class Builder {
     // NOTE: Node order is important and is defined here
     const node: VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource = {
       type,
-      format,
-      url,
+      format: UrlUtils.fileExtensionFromUrl(value),
+      provider: UrlUtils.domainFromUrl(value),
+      value,
       width,
       height,
       duration,
@@ -1525,7 +1589,6 @@ class Builder {
       thumbnails,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     };
@@ -1538,27 +1601,35 @@ class Builder {
   }
 
   private articleLikeResource(data: {
-    type: 'article' | 'article-link' | 'document' | 'document-link';
-    format: string | undefined;
-    url?: string; // url / href
+    type: 'article' | 'article-link' | 'document' | 'document-link' | 'document-download';
+    value?: string; // url / href
     body?: string | undefined;
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
-  }): ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource | undefined {
-    const { type, format, url, body, license, copyright, provider, showInIndex, caption } = data;
+  }):
+    | ArticleResource
+    | ArticleLinkResource
+    | DocumentResource
+    | DocumentLinkResource
+    | DocumentDownloadResource
+    | undefined {
+    const { type, value, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: ArticleResource | ArticleLinkResource | DocumentResource | DocumentLinkResource = {
+    const node:
+      | ArticleResource
+      | ArticleLinkResource
+      | DocumentResource
+      | DocumentLinkResource
+      | DocumentDownloadResource = {
       type,
-      format,
-      url,
-      body,
+      format: UrlUtils.fileExtensionFromUrl(value),
+      provider: UrlUtils.domainFromUrl(value),
+      value,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     };
@@ -1572,22 +1643,20 @@ class Builder {
 
   private appLikeResource(data: {
     type: 'app' | 'app-link';
-    url: string; // url / app
+    value: string; // url / app
     license?: string;
     copyright?: string;
-    provider?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AppResource | AppLinkResource | undefined {
-    const { type, url, license, copyright, provider, showInIndex, caption } = data;
+    const { type, value, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AppResource | AppLinkResource = {
       type,
-      url,
+      value,
       license,
       copyright,
-      provider,
       showInIndex,
       caption,
     };
@@ -1599,6 +1668,34 @@ class Builder {
     return NodeValidator.validateResource(node);
   }
 
+  private toAstProperty(key: PropertyKeyType, value: unknown | unknown[] | undefined): Property | undefined {
+    const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(key) ?? {};
+
+    if (value == null) return undefined;
+
+    // if (key === 'progress') debugger;
+
+    // Convert property as needed
+    const processValue = (v: unknown) => {
+      if (v == null) return undefined;
+      if (meta.isTrimmedString) v = StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
+      if (meta.isNumber) v = NumberUtils.asNumber(v);
+      if (meta.isBoolean) v = BooleanUtils.asBoolean(v, true);
+      if (meta.isInvertedBoolean) v = !BooleanUtils.asBoolean(v, true);
+      return v;
+    };
+    if (Array.isArray(value)) {
+      const valueArray = value as unknown[];
+      for (let i = 0, len = valueArray.length; i < len; i++) {
+        valueArray[i] = processValue(valueArray[i]);
+      }
+    } else {
+      value = processValue(value);
+    }
+
+    return ArrayUtils.asArray(value);
+  }
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private removeUnwantedProperties(obj: unknown, options?: RemoveUnwantedPropertiesOptions): void {
     options = Object.assign({}, options);
@@ -1607,12 +1704,22 @@ class Builder {
     ObjectUtils.removeFalseProperties(obj, options.ignoreFalse);
     ObjectUtils.removeEmptyStringProperties(obj, options.ignoreEmptyString);
     ObjectUtils.removeEmptyArrayProperties(obj, options.ignoreEmptyArrays);
+    ObjectUtils.removeEmptyObjectProperties(obj, options.ignoreEmptyObjects);
   }
 
-  private asArray<T>(val: T | T[] | undefined): T[] | undefined {
-    if (val == null) return undefined;
-    if (Array.isArray(val)) return val;
-    return [val];
+  private parseExtraProperties(extraProperties: { [key: string]: unknown } | undefined): ExtraProperties | undefined {
+    if (!extraProperties) return undefined;
+
+    const entries = Object.entries(extraProperties);
+    if (entries.length === 0) return undefined;
+
+    const res: ExtraProperties = {};
+
+    for (const [key, value] of entries) {
+      res[key] = ArrayUtils.asArray(value) || [value];
+    }
+
+    return res;
   }
 }
 

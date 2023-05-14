@@ -1,0 +1,99 @@
+[
+  {
+    "bitmark": "[.mark:bitmark--]\n[!Please mark all ==verbs==(blue)== and ==nouns==(red)==.]\n[%  A128]\n\nWhen ['Diaz][@mark  :  red  ][%256][!My instruction][? myhint] ['  returned][@mark:blue] and ['seated][@mark:blue] himself to ['play][@mark:blue] the ['Berceuse][@mark:red], I ['saw][@mark:blue] that he ['could][@mark:blue] ['look][@mark:blue] at me without ['turning][@mark:blue] his ['head][@mark:red].",
+    "bit": {
+      "type": "mark",
+      "format": "bitmark--",
+      "item": "A128",
+      "instruction": "My instruction",
+      "hint": "myhint",
+      "body": "When ['Diaz]  and  himself to  the , I  that he   at me without  his .",
+      "marks": {
+        "{returned:0}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{seated:1}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{play:2}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{Berceuse:3}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "red",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{saw:4}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{could:5}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{look:6}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{turning:7}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{head:8}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "red",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        }
+      },
+      "mark": [
+        "red"
+      ]
+    }
+  }
+]

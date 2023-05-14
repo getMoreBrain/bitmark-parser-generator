@@ -1,0 +1,516 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:164683]\n[@language:de]\n[@author:Coen Kaat]\n[@coverImage:https://docs.bitmark.cloud/bit-books/netzwoche/wie_ein_passwort_nicht_nur_stark_sondern_auch_sicher_ist/web-resources/images/netzwoche_passwoerter_cover.png]\n[#Wie ein Passwort nicht nur stark, sondern auch sicher ist]\n[@externalId:e-wie-ein-passwort-nicht-nur-stark-sondern_6iiddql3fiw9]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "164683"
+      ],
+      "language": [
+        "de"
+      ],
+      "author": [
+        "Coen Kaat"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/netzwoche/wie_ein_passwort_nicht_nur_stark_sondern_auch_sicher_ist/web-resources/images/netzwoche_passwoerter_cover.png"
+      ],
+      "title": "Wie ein Passwort nicht nur stark, sondern auch sicher ist",
+      "externalId": [
+        "e-wie-ein-passwort-nicht-nur-stark-sondern_6iiddql3fiw9"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164684]\nM@q$P3LH, 12345 oder einfach nur \"Ineinemlochimbodendalebteeinhobbit\"? Wann ist ein Passwort wirklich sicher? Ein mittlerweile fast 20 Jahre altes Regelwerk zeigt, wie man starke Passwörter formuliert. Aber ein starkes Passwort ist nicht zwingend auch ein gutes.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "M@q$P3LH, 12345 oder einfach nur \"Ineinemlochimbodendalebteeinhobbit\"? Wann ist ein Passwort wirklich sicher? Ein mittlerweile fast 20 Jahre altes Regelwerk zeigt, wie man starke Passwörter formuliert. Aber ein starkes Passwort ist nicht zwingend auch ein gutes.",
+      "id": [
+        "164684"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:164685]\n[&image:https://docs.bitmark.cloud/bit-books/netzwoche/wie_ein_passwort_nicht_nur_stark_sondern_auch_sicher_ist/web-resources/images/netzwoche_wie_ein_passwort_nicht_nur_stark_sondern_auch_sicher_ist_1.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "164685"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/netzwoche/wie_ein_passwort_nicht_nur_stark_sondern_auch_sicher_ist/web-resources/images/netzwoche_wie_ein_passwort_nicht_nur_stark_sondern_auch_sicher_ist_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164686]\nAllein das Rezept klingt schon sehr kompliziert. Gross und klein geschrieben soll es sein, mit reichlich Sonderzeichen und Zahlen dazwischen gestreut. Möglichst lang und möglichst willkürlich soll die Aneinanderreihung von Symbolen werden und möglichst oft soll man sie auch wieder ändern. Ein richtig starkes Passwort zu setzen, ist nicht so einfach; sich daran zu erinnern, ist noch viel schwieriger.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Allein das Rezept klingt schon sehr kompliziert. Gross und klein geschrieben soll es sein, mit reichlich Sonderzeichen und Zahlen dazwischen gestreut. Möglichst lang und möglichst willkürlich soll die Aneinanderreihung von Symbolen werden und möglichst oft soll man sie auch wieder ändern. Ein richtig starkes Passwort zu setzen, ist nicht so einfach; sich daran zu erinnern, ist noch viel schwieriger.",
+      "id": [
+        "164686"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164687]\nDie Regeln für starke Passwörter gehen auf Bill Burr zurück. Burr, inzwischen pensioniert, war früher für das National Institute of Standards and Technology (NIST) tätig. Vor fast 20 Jahren erhielt er den Auftrag, Regeln für Regierungsangestellte zu formulieren, die die Sicherheit erhöhen. Seitdem gilt er als Vater des starken Passworts.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Regeln für starke Passwörter gehen auf Bill Burr zurück. Burr, inzwischen pensioniert, war früher für das National Institute of Standards and Technology (NIST) tätig. Vor fast 20 Jahren erhielt er den Auftrag, Regeln für Regierungsangestellte zu formulieren, die die Sicherheit erhöhen. Seitdem gilt er als Vater des starken Passworts.",
+      "id": [
+        "164687"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.message:bitmark++&document-link]\n[@id:164688]\n[&document-link:https://web.archive.org/web/20040712152833/http://csrc.nist.gov/publications/nistpubs/800-63/SP800-63v6_3_3.pdf]\n[!Electronic Authentication Guideline - Recommendations of NIST]\n\nIn diesem Dokument schlug Burr damals folgende Regeln vor.\n\n• Das Passwort soll aus mindestens 8 Zeichen bestehen\n• Es muss mindestens einen Grossbuchstaben und einen Kleinbuchstaben haben.\n• Zudem muss das Passwort mindestens eine Nummer und ein Sonderzeichen enthalten.\n• Eine Prüfung mit dem Wörterbuch soll zudem ausschliessen, dass es sich dabei um ein häufig vorkommendes Wort handelt\n• Zudem darf es keine Permutation des Benutzernamens sein.",
+    "bit": {
+      "type": "message",
+      "format": "bitmark++",
+      "body": "In diesem Dokument schlug Burr damals folgende Regeln vor.\n\n• Das Passwort soll aus mindestens 8 Zeichen bestehen\n• Es muss mindestens einen Grossbuchstaben und einen Kleinbuchstaben haben.\n• Zudem muss das Passwort mindestens eine Nummer und ein Sonderzeichen enthalten.\n• Eine Prüfung mit dem Wörterbuch soll zudem ausschliessen, dass es sich dabei um ein häufig vorkommendes Wort handelt\n• Zudem darf es keine Permutation des Benutzernamens sein.",
+      "id": [
+        "164688"
+      ],
+      "resource": {
+        "type": "document-link",
+        "documentLink": {
+          "url": "https://web.archive.org/web/20040712152833/http",
+          "provider": "web.archive.org"
+        }
+      },
+      "instruction": "Electronic Authentication Guideline - Recommendations of NIST"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&web-link]\n[@id:302409]\n[&web-link:https://web.archive.org/web/20040712152833/http://csrc.nist.gov/publications/nistpubs/800-63/SP800-63v6_3_3.pdf]\n[!Electronic Authentication Guideline - Recommendations of NIST]\n\nIn diesem Dokument schlug Burr damals folgende Regeln vor.\n\n• Das Passwort soll aus mindestens 8 Zeichen bestehen\n• Es muss mindestens einen Grossbuchstaben und einen Kleinbuchstaben haben.\n• Zudem muss das Passwort mindestens eine Nummer und ein Sonderzeichen enthalten.\n• Eine Prüfung mit dem Wörterbuch soll zudem ausschliessen, dass es sich dabei um ein häufig vorkommendes Wort handelt\n• Zudem darf es keine Permutation des Benutzernamens sein.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "[@id:302409]\n[&web-link:https://web.archive.org/web/20040712152833/http://csrc.nist.gov/publications/nistpubs/800-63/SP800-63v6_3_3.pdf]\n[!Electronic Authentication Guideline - Recommendations of NIST]\n\nIn diesem Dokument schlug Burr damals folgende Regeln vor.\n\n• Das Passwort soll aus mindestens 8 Zeichen bestehen\n• Es muss mindestens einen Grossbuchstaben und einen Kleinbuchstaben haben.\n• Zudem muss das Passwort mindestens eine Nummer und ein Sonderzeichen enthalten.\n• Eine Prüfung mit dem Wörterbuch soll zudem ausschliessen, dass es sich dabei um ein häufig vorkommendes Wort handelt\n• Zudem darf es keine Permutation des Benutzernamens sein."
+    },
+    "errors": [
+      {
+        "message": "missing CL at '&'",
+        "line": 1,
+        "column": 19,
+        "errorLine": "[.article:bitmark++&web-link]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 1,
+        "column": 28,
+        "errorLine": "[.article:bitmark++&web-link]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 2,
+        "column": 0,
+        "errorLine": "[@id:302409]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 2,
+        "column": 11,
+        "errorLine": "[@id:302409]"
+      },
+      {
+        "message": "token recognition error at: '[&web-'",
+        "line": 3,
+        "column": 0,
+        "errorLine": "[&web-link:https://web.archive.org/web/20040712152833/http://csrc.nist.gov/publications/nistpubs/800-63/SP800-63v6_3_3.pdf]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 3,
+        "column": 122,
+        "errorLine": "[&web-link:https://web.archive.org/web/20040712152833/http://csrc.nist.gov/publications/nistpubs/800-63/SP800-63v6_3_3.pdf]"
+      },
+      {
+        "message": "Unexpected input '[!'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[!Electronic Authentication Guideline - Recommendations of NIST]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 4,
+        "column": 63,
+        "errorLine": "[!Electronic Authentication Guideline - Recommendations of NIST]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164689]\nDiese Regeln dürften wohl auch heute noch jedem bekannt vorkommen. Schliesslich verwenden zahlreiche Webshops, Portale und Dienstleistungen noch immer dieselben Regeln - unverändert.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Diese Regeln dürften wohl auch heute noch jedem bekannt vorkommen. Schliesslich verwenden zahlreiche Webshops, Portale und Dienstleistungen noch immer dieselben Regeln - unverändert.",
+      "id": [
+        "164689"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:164690]\n[##Kritik vom Vater]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "164690"
+      ],
+      "title": "Kritik vom Vater"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164691]\nAber machen diese Regeln Passwörter wirklich sicherer oder einfach nur komplizierter? Unterdessen wird dieses bekannte Regelwerk längst nicht mehr universell befürwortet. Die wohl überraschendste Kritik kommt ausgerechnet vom Vater des starken Passworts selbst: Bill Burr.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Aber machen diese Regeln Passwörter wirklich sicherer oder einfach nur komplizierter? Unterdessen wird dieses bekannte Regelwerk längst nicht mehr universell befürwortet. Die wohl überraschendste Kritik kommt ausgerechnet vom Vater des starken Passworts selbst: Bill Burr.",
+      "id": [
+        "164691"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164692]\nIn einem Interview mit dem US-amerikanischen Medienkonzern CBS sagte Burr 2017, dass er es bereue, diese Regeln aufgestellt zu haben. Die Regeln würden doch bloss jeden frustrieren - auch ihn selbst. Und zwar grundlos, denn die Sicherheit wird dadurch nicht zwingend erhöht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In einem Interview mit dem US-amerikanischen Medienkonzern CBS sagte Burr 2017, dass er es bereue, diese Regeln aufgestellt zu haben. Die Regeln würden doch bloss jeden frustrieren - auch ihn selbst. Und zwar grundlos, denn die Sicherheit wird dadurch nicht zwingend erhöht.",
+      "id": [
+        "164692"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:164693]\n[&video-link:https://www.youtube.com/watch?v=A4CjWXF-xI8]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "164693"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=A4CjWXF-xI8",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164694]\nDie eine Seite des Problems ist menschlicher Natur: Weil man sich die komplizierten, zufälligen Ansammlungen von Buchstaben, Zahlen und Sonderzeichen nicht merken kann, schreibt man sich die Passwörter auf. Entweder auf Fresszetteln neben dem Rechner oder in Dokumenten digital auf dem Rechner. So oder so: Was aufgeschrieben wird, kann auch von anderen gelesen werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die eine Seite des Problems ist menschlicher Natur: Weil man sich die komplizierten, zufälligen Ansammlungen von Buchstaben, Zahlen und Sonderzeichen nicht merken kann, schreibt man sich die Passwörter auf. Entweder auf Fresszetteln neben dem Rechner oder in Dokumenten digital auf dem Rechner. So oder so: Was aufgeschrieben wird, kann auch von anderen gelesen werden.",
+      "id": [
+        "164694"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164695]\nDie andere Seite ist mathematischer Natur. Um ein Passwort zu knacken, nutzt man einen sogenannten Brute-Force-Angriff. Im Wesentlichen werden dabei sämtliche möglichen Kombinationen ausprobiert, bis die richtige gefunden wurde. Daraus folgt: Je mehr mögliche Kombinationen es gibt, desto mehr Zeit braucht man, um das Passwort zu knacken und desto sicherer ist es.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die andere Seite ist mathematischer Natur. Um ein Passwort zu knacken, nutzt man einen sogenannten Brute-Force-Angriff. Im Wesentlichen werden dabei sämtliche möglichen Kombinationen ausprobiert, bis die richtige gefunden wurde. Daraus folgt: Je mehr mögliche Kombinationen es gibt, desto mehr Zeit braucht man, um das Passwort zu knacken und desto sicherer ist es.",
+      "id": [
+        "164695"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:164696]\n[##208’827’064'576 Möglichkeiten]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "164696"
+      ],
+      "title": "208’827’064'576 Möglichkeiten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164697]\nBei einem vierstelligen Passwort, das nur aus den 26 Buchstaben des lateinischen Alphabets besteht - Gross- und Kleinschreibung spielt keine Rolle - gibt es insgesamt 26 mal 26 mal 26 mal 26, also 456'976 mögliche Kombinationen. Ein Computer hätte dieses Passwort wohl in unter einer Sekunde geknackt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bei einem vierstelligen Passwort, das nur aus den 26 Buchstaben des lateinischen Alphabets besteht - Gross- und Kleinschreibung spielt keine Rolle - gibt es insgesamt 26 mal 26 mal 26 mal 26, also 456'976 mögliche Kombinationen. Ein Computer hätte dieses Passwort wohl in unter einer Sekunde geknackt.",
+      "id": [
+        "164697"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164698]\nWenn man Sonderzeichen, Zahlen sowie Gross- und Kleinschreibung hinzuzieht, erhöht sich die Anzahl möglicher Kombinationen auf 95 mal 95 mal 95 mal 95 beziehungsweise 81'450'625 Kombinationen. Aber: Da in der Regel vorgeschrieben wird, dass das Passwort mindestens einen Gross-, einen Kleinbuchstaben, eine Zahl sowie ein Sonderzeichen hat, bleiben effektiv noch 5'353'920 mögliche Passwörter. Auch diese lassen sich daher in weniger als einer Sekunde knacken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn man Sonderzeichen, Zahlen sowie Gross- und Kleinschreibung hinzuzieht, erhöht sich die Anzahl möglicher Kombinationen auf 95 mal 95 mal 95 mal 95 beziehungsweise 81'450'625 Kombinationen. Aber: Da in der Regel vorgeschrieben wird, dass das Passwort mindestens einen Gross-, einen Kleinbuchstaben, eine Zahl sowie ein Sonderzeichen hat, bleiben effektiv noch 5'353'920 mögliche Passwörter. Auch diese lassen sich daher in weniger als einer Sekunde knacken.",
+      "id": [
+        "164698"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:164699]\n[&video-link:https://www.youtube.com/watch?v=rERApU26PcA]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "164699"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=rERApU26PcA",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164700]\nDie Anzahl möglicher Passwörter steigt im Vergleich zur ersten Option um den Faktor 10. Wenn man jedoch bei Buchstaben bleibt und lediglich die Länge des Passworts verdoppelt, hat man 26 mal 26 mal 26 mal 26 mal 26 mal 26 mal 26 mal 26 also über 208 Milliarden Möglichkeiten (208'827'064'576). Das Passwort wird folglich deutlich sicherer, ohne dass sich die Komplexität dabei stark erhöht. Bei so einem Passwort braucht ein Rechner immerhin schon 5 Sekunden, um den Schutz zu durchbrechen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Anzahl möglicher Passwörter steigt im Vergleich zur ersten Option um den Faktor 10. Wenn man jedoch bei Buchstaben bleibt und lediglich die Länge des Passworts verdoppelt, hat man 26 mal 26 mal 26 mal 26 mal 26 mal 26 mal 26 mal 26 also über 208 Milliarden Möglichkeiten (208'827'064'576). Das Passwort wird folglich deutlich sicherer, ohne dass sich die Komplexität dabei stark erhöht. Bei so einem Passwort braucht ein Rechner immerhin schon 5 Sekunden, um den Schutz zu durchbrechen.",
+      "id": [
+        "164700"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:164701]\n[##Länger, nicht komplizierter]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "164701"
+      ],
+      "title": "Länger, nicht komplizierter"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164702]\nDas NIST verabschiedete sich daher mittlerweile von Burrs ursprünglichen Regeln. Dessen Nachfolger, Paul Grassi, erarbeite eine neue Empfehlung - in Zusammenarbeit mit Burr. Sonderzeichen seien nicht nötig. Stattdessen solle man möglichst lange Passwörter oder besser Passwortphrasen verwenden. So könne man sich die Codes viel leichter merken und sie seien auch schwieriger zu knacken, als kürzere, die dafür voller Sonderzeichen seien.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das NIST verabschiedete sich daher mittlerweile von Burrs ursprünglichen Regeln. Dessen Nachfolger, Paul Grassi, erarbeite eine neue Empfehlung - in Zusammenarbeit mit Burr. Sonderzeichen seien nicht nötig. Stattdessen solle man möglichst lange Passwörter oder besser Passwortphrasen verwenden. So könne man sich die Codes viel leichter merken und sie seien auch schwieriger zu knacken, als kürzere, die dafür voller Sonderzeichen seien.",
+      "id": [
+        "164702"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164703]\nGanz so einfach ist es aber nun auch wieder nicht. Denn neben der Anzahl möglicher Kombinationen gibt es noch eine weitere Dimension, die bestimmt, wie sicher ein Passwort ist: die Popularität der gewählten Kombination.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ganz so einfach ist es aber nun auch wieder nicht. Denn neben der Anzahl möglicher Kombinationen gibt es noch eine weitere Dimension, die bestimmt, wie sicher ein Passwort ist: die Popularität der gewählten Kombination.",
+      "id": [
+        "164703"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164704]\nEigentlich sollte ein Brute-Force-Angriff 15 Milliarden Jahre brauchen, um eine Passwortphrase aus 20 Kleinbuchstaben zu überlisten. Schliesslich gibt es mehrere Hundert Trillionen Möglichkeiten. Das spezifische Passwort \"maytheforcebewithyou\" wird es aber wohl kaum so lange schaffen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Eigentlich sollte ein Brute-Force-Angriff 15 Milliarden Jahre brauchen, um eine Passwortphrase aus 20 Kleinbuchstaben zu überlisten. Schliesslich gibt es mehrere Hundert Trillionen Möglichkeiten. Das spezifische Passwort \"maytheforcebewithyou\" wird es aber wohl kaum so lange schaffen.",
+      "id": [
+        "164704"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:164705]\n[##Gegen den Strom schwimmen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "164705"
+      ],
+      "title": "Gegen den Strom schwimmen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164706]\nStatt alle möglichen Buchstaben- und Zahlenkombinationen zu testen, kann man mit einer Brute-Force-Attacke auch sämtliche Einträge einer zuvor bestimmten Liste ausprobieren. Also etwa eine Liste mit häufigen Passwörtern oder Phrasen - zu denen wohl auch das bekannte Zitat aus den Star-Wars-Filmen gehört. Zudem könnte man so ein Passwort wohl auch einfach erraten, wenn man die dazugehörige Person kennt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Statt alle möglichen Buchstaben- und Zahlenkombinationen zu testen, kann man mit einer Brute-Force-Attacke auch sämtliche Einträge einer zuvor bestimmten Liste ausprobieren. Also etwa eine Liste mit häufigen Passwörtern oder Phrasen - zu denen wohl auch das bekannte Zitat aus den Star-Wars-Filmen gehört. Zudem könnte man so ein Passwort wohl auch einfach erraten, wenn man die dazugehörige Person kennt.",
+      "id": [
+        "164706"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164707]\nDas Passwort sollte also möglichst einzigartig sein, oder noch besser, gar keine Wörter enthalten. So kann man etwa einen Merkspruch, beispielsweise \"Lesen Sie jeden Tag die spannendsten News hier auf IT-Markt.ch\", auf die Anfangsbuchstaben \"LSJTDSNHAI\" reduzieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Passwort sollte also möglichst einzigartig sein, oder noch besser, gar keine Wörter enthalten. So kann man etwa einen Merkspruch, beispielsweise \"Lesen Sie jeden Tag die spannendsten News hier auf IT-Markt.ch\", auf die Anfangsbuchstaben \"LSJTDSNHAI\" reduzieren.",
+      "id": [
+        "164707"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164708]\nWenn man ein sicheres Passwort haben will, sollte man sich jedoch einen etwas längeren Merkspruch aussuchen. Ein Passwort aus 10 Buchstaben wird nämlich in unter einer Stunde gehackt. Bei 15 Buchstaben benötigen heutige Rechner allerdings schon rund 1000 Jahre und bei 18 Buchstaben etwa 23 Millionen Jahre.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wenn man ein sicheres Passwort haben will, sollte man sich jedoch einen etwas längeren Merkspruch aussuchen. Ein Passwort aus 10 Buchstaben wird nämlich in unter einer Stunde gehackt. Bei 15 Buchstaben benötigen heutige Rechner allerdings schon rund 1000 Jahre und bei 18 Buchstaben etwa 23 Millionen Jahre.",
+      "id": [
+        "164708"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:164709]\nWie lange Ihr Passwort einer Brute-Force-Attacke widerstehen kann, zeigt Ihnen diese Tabelle:\n\n|image:https://docs.bitmark.cloud/bit-books/netzwoche/wie_ein_passwort_nicht_nur_stark_sondern_auch_sicher_ist/web-resources/images/netzwoche_wie_ein_passwort_nicht_nur_stark_sondern_auch_sicher_ist_2.png|\n\n__(Source: Netzmedien mit Daten von Hive Systems)__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Wie lange Ihr Passwort einer Brute-Force-Attacke widerstehen kann, zeigt Ihnen diese Tabelle:\n\n|image:https://docs.bitmark.cloud/bit-books/netzwoche/wie_ein_passwort_nicht_nur_stark_sondern_auch_sicher_ist/web-resources/images/netzwoche_wie_ein_passwort_nicht_nur_stark_sondern_auch_sicher_ist_2.png|\n\n__(Source: Netzmedien mit Daten von Hive Systems)__",
+      "id": [
+        "164709"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:164710]\n[##Wechseln oder sein lassen?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "164710"
+      ],
+      "title": "Wechseln oder sein lassen?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164711]\nUnd wie oft soll man das Passwort wechseln? Burr schlug damals vor, das Passwort halbjährlich zu wechseln. Aber auch von dieser Idee scheinen zumindest gewisse Experten sich langsam wieder zu verabschieden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Und wie oft soll man das Passwort wechseln? Burr schlug damals vor, das Passwort halbjährlich zu wechseln. Aber auch von dieser Idee scheinen zumindest gewisse Experten sich langsam wieder zu verabschieden.",
+      "id": [
+        "164711"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164712]\nDer sogenannte Weisenrat für Cybersicherheit in Deutschland etwa bezeichnete diese Vorgabe als \"problematisch\". In einem ==Bericht aus 2020==|:https://www.netzwoche.ch/news/2020-06-28/weisenrat-fuer-cybersicherheit-will-keine-starken-passwoerter-mehr| heisst es, \"es ist viel gefährlicher, dasselbe Passwort für mehrere Dienste einzusetzen, als bei einem Dienst das Passwort nicht regelmässig zu wechseln\". Stattdessen solle man nur dann das Passwort ändern, wenn man davon ausgehen muss, dass es in fremde Hände gelangt ist.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der sogenannte Weisenrat für Cybersicherheit in Deutschland etwa bezeichnete diese Vorgabe als \"problematisch\". In einem ==Bericht aus 2020==|:https://www.netzwoche.ch/news/2020-06-28/weisenrat-fuer-cybersicherheit-will-keine-starken-passwoerter-mehr| heisst es, \"es ist viel gefährlicher, dasselbe Passwort für mehrere Dienste einzusetzen, als bei einem Dienst das Passwort nicht regelmässig zu wechseln\". Stattdessen solle man nur dann das Passwort ändern, wenn man davon ausgehen muss, dass es in fremde Hände gelangt ist.",
+      "id": [
+        "164712"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164713]\nDer Weisenrat wurde übrigens 2019 formiert. Darin arbeiten Unternehmen wie Bechtle, Deutsche Telekom, IBM, Deutsche Post und DHL mit wissenschaftlichen Einrichtungen wie verschiedenen Fraunhofer-Instituten sowie öffentlichen Stellen zusammen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Weisenrat wurde übrigens 2019 formiert. Darin arbeiten Unternehmen wie Bechtle, Deutsche Telekom, IBM, Deutsche Post und DHL mit wissenschaftlichen Einrichtungen wie verschiedenen Fraunhofer-Instituten sowie öffentlichen Stellen zusammen.",
+      "id": [
+        "164713"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:164714]\nNatürlich bietet aber auch das stärkste Passwort keinen Schutz mehr, wenn man es mit anderen teilt, es sichtbar irgendwo aufschreibt, es auf dem Computer in Klartext speichert oder man auf eine Phishing-E-Mail hereinfällt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Natürlich bietet aber auch das stärkste Passwort keinen Schutz mehr, wenn man es mit anderen teilt, es sichtbar irgendwo aufschreibt, es auf dem Computer in Klartext speichert oder man auf eine Phishing-E-Mail hereinfällt.",
+      "id": [
+        "164714"
+      ]
+    }
+  }
+]

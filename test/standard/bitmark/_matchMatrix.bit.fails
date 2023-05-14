@@ -1,0 +1,170 @@
+[.match-matrix]
+[@id:203675]
+[!Das Hexadezimalsystem baut auf der Basis 16 auf und hat 16 Ziffern. Jede Stelle hat gegenüber der rechts von ihr stehenden den 16-fachen Wert. Ergänzen Sie die folgende Hexadezimal-Darstellung:]
+===
+[#Stelle von rechts]
+==
+[#Hexadezimalsystem Ziffern: 0123456789ABCDEF]
+==
+[#Dezimalwert]
+===
+1.
+==
+16⁰ = [@example]
+==
+1 [@example]
+===
+2.
+==
+16¹ = 16 = [@example]
+==
+16 [@example]
+===
+3.
+==
+16² = 16 × 16 = [@example]
+==
+256 [@example]
+===
+4.
+==
+16³ = 16 × 16 × 16 =
+==
+4096
+===
+5.
+==
+16⁴ = 16 × 16 × 16 × 16 =
+==
+65 536
+===
+6.
+==
+16⁵ = 16 × 16 × 16 × 16 × 16 =
+==
+1 048 576
+===
+7.
+==
+16⁶ = 16 × 16 × 16 × 16 × 16 × 16 =
+==
+16 777 216
+===
+
+
+[.match-matrix:bitmark--]
+[@id:203904]
+[%42]
+[!Schreiben Sie zu den untenstehenden technischen Daten die zugehörigen Begriffe (Komponenten):]
+Betriebssysteme
+Laufwerke
+Prozessor (CPU)
+Systembus
+Festplatte
+Grafikkarte
+Netz-Anschlüsse
+Audio
+Arbeitsspeicher
+Schnittstellen (Ports)
+===
+[#Computer 1]
+==
+[#Komponenten]
+==
+[#Computer 2]
+===
+AMD Sempron mit 2,2 GHz 64 bit 1024 KB L2 Cache
+==
+Prozessor (CPU)
+==
+Intel Core 2 i7 2,33 GHz 64 bit 4 MB Level 2 Cache [@example]
+===
+1600-MHz-Systembus
+==
+Systembus
+==
+667-MHz-Systembus [@example]
+===
+8 GB SDRAM (667 MHz) DDR2
+==
+Arbeitsspeicher (RAM)
+==
+8 GB 667 MHz DDR2 SDRAM [@example]
+===
+250 GB Serial-ATA
+==
+Festplatte
+==
+250 GB 7.200 U/ Min. Serial-ATA [@example]
+===
+DVD-ROM, CD-RW DVD-R, DVD-RW dual Layer
+==
+Laufwerke
+==
+SuperDrive DVD-R dual layer, DVD-RW/CD-RW [@example]
+===
+NVIDIA Geforce 7300 GT 128 MB Video-RAM, DVI und VGA
+==
+Grafikkarte
+==
+ATI Radeon X1600 128 MB Video-RAM, DVI und VGA [@example]
+===
+10/100 Mbps LAN integriert (RJ-45) 56 K V.90 Modem (RJ-11)
+==
+Netz-Anschlüsse
+==
+10/100/1000 Base-T-Ethernet (RJ-45) 56 k V.90 Modem (RJ-11) [@example]
+===
+-
+==
+Wireless LAN
+==
+W-LAN: AirPort (54 Mb/s) + Bluetooth [@example]
+===
+1 COM-Port 6 USB2-Ports
+==
+Schnittstellen (Ports)
+==
+Zwei 400-Mbps FireWire-Ports Drei USB2 Ports [@example]
+===
+Audio analog + digital in/out
+==
+Audio
+==
+Integrierte Lautsprecher + Mikrofon digital-Audio in/out über USB Kopfhöreranschluss (16 bit) [@example]
+===
+Windows 7 oder SuSE Linux (UNIX)
+==
+Betriebssysteme
+==
+MacOs X 10.6 (UNIX) optional Windows 7 (xp) [@example]
+===
+
+
+
+
+[.match-matrix]
+[@id:287966]
+[%][%match-matrix]
+[!Bring the german verbs into the correct tense.]
+
+===
+[#Verb]
+==
+[#Future, 1st Person, Singular]
+==
+[#Past, 3rd Person, Plural]
+===
+gehen
+==
+ich werde gehen[@example] [!Instruction]
+==
+sie gingen[@example]
+===
+sprechen
+==
+ich werde sprechen
+==
+sie sprachen
+===
+

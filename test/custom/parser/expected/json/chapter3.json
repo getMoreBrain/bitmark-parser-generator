@@ -1,0 +1,18 @@
+[
+  {
+    "bitmark": "[.chapter]\n[##☕️=📚👩‍🏫+📱🤖]\n{\"toc\":true,\"body\":\"[##:☕️=📚👩‍🏫+📱🤖]\",\",\"type\":\"chapter\",\"level\":1,\"format\":\"text\",\"progress\":true,\"subtitle\":\"\"}",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "{\"toc\":true,\"body\":\"\",\",\"type\":\"chapter\",\"level\":1,\"format\":\"text\",\"progress\":true,\"subtitle\":\"\"}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "title": ":☕️=📚👩‍🏫+📱🤖"
+    }
+  }
+]

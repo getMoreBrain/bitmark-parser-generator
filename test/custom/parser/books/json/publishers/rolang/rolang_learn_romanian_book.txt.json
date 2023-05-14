@@ -1,0 +1,3332 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:136051]\n[#LEARN ROMANIAN\nMANUAL]\n[##Third Edition (Revised)]\n[@authors.name:Mona Moldoveanu Pologea, Ph.D.]\n[English Review:\nBrian Imhoff, Ph.D.\nTexas A&M University, USA]\n[Scientific Review:\nSimona Irimescu Banciu, Ph.D.\nIrina Duciu\nCătălina Ungureanu\nDan Pologea, Ph.D.]\n[@externalId:e-learn-romanian-manual_rhhdmufcjonx]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "[English Review:\nBrian Imhoff, Ph.D.\nTexas A&M University, USA]\n[Scientific Review:\nSimona Irimescu Banciu, Ph.D.\nIrina Duciu\nCătălina Ungureanu\nDan Pologea, Ph.D.]",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136051"
+      ],
+      "title": "LEARN ROMANIAN\nMANUAL",
+      "subtitle": "Third Edition (Revised)",
+      "authors.name": [
+        "Mona Moldoveanu Pologea, Ph.D."
+      ],
+      "externalId": [
+        "e-learn-romanian-manual_rhhdmufcjonx"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:136052]\n[#FOREWORD]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "136052"
+      ],
+      "title": "FOREWORD"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136053]\nDr. Moldoveanu Pologea's **Learn Romanian** is a comprehensive manual for classroom use and independent study designed to develop listening, speaking, reading and writing skills in Romanian consistent with the beginning, intermediate and advanced levels of European Language Passport (A1, A2, B1, B2, C1, C2). An exercise book and easy-to-use audio recordings (__https://rolang.ro/manual-audio__) provide a wide variety of targeted application and supplemental information. The manual is fully translated to facilitate independent learning for speakers of English.\n\nThe manual incorporates the latest trends in foreign language pedagogy. Students and teachers alike will benefit from greatly expanded vocabulary sections in this third edition, which include common phrases designed to increase the learner’s pragmatic competence, and more detailed presentations of key grammatical concepts and difficulties that include commentary on usage and common errors. The real-world dialogues and texts provide examples of everyday Romanian and incorporate increasingly more cultural information as the learner progresses. The appendix provides fourteen texts about Romania and Romanian cultural life for advanced textual analysis.\n\nThis book will serve as an excellent resource and practical manual for\nteachers and learners of Romanian at all levels.\n\n**Brian Imhoff, Ph.D.\nTexas A&M University, USA**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dr. Moldoveanu Pologea's **Learn Romanian** is a comprehensive manual for classroom use and independent study designed to develop listening, speaking, reading and writing skills in Romanian consistent with the beginning, intermediate and advanced levels of European Language Passport (A1, A2, B1, B2, C1, C2). An exercise book and easy-to-use audio recordings (__https://rolang.ro/manual-audio__) provide a wide variety of targeted application and supplemental information. The manual is fully translated to facilitate independent learning for speakers of English.\n\nThe manual incorporates the latest trends in foreign language pedagogy. Students and teachers alike will benefit from greatly expanded vocabulary sections in this third edition, which include common phrases designed to increase the learner’s pragmatic competence, and more detailed presentations of key grammatical concepts and difficulties that include commentary on usage and common errors. The real-world dialogues and texts provide examples of everyday Romanian and incorporate increasingly more cultural information as the learner progresses. The appendix provides fourteen texts about Romania and Romanian cultural life for advanced textual analysis.\n\nThis book will serve as an excellent resource and practical manual for\nteachers and learners of Romanian at all levels.\n\n**Brian Imhoff, Ph.D.\nTexas A&M University, USA**",
+      "id": [
+        "136053"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:136054]\n[#INTRODUCTION]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "136054"
+      ],
+      "title": "INTRODUCTION"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136055]\nRomanian, like all languages, is full of difficulties for a foreign learner. This\nbook, now in its 3rd edition, is intended for all language levels. It covers relatively simple topics through advanced language difficulties.\n\nThe purpose of this book is to give learners the most important vocabulary, useful phrases and grammar in order to deal with common language use. The lessons contain dialogues, vocabulary sections, common phrases used in everyday life, grammar explanations, and examples of correct usage. The 3rd edition also adopts a “teach yourself ” approach, with all dialogues and grammar explanations translated into English. The exercise book contains applications for all lessons and offers an\nin-depth presentation of each grammatical topic.\n\nThe division into chapters corresponds to the language levels described in the European Language Passport (A1, A2, B1, B2, C1, C2).\n\nThe book is based on my 10 years of experience teaching Romanian to foreigners and functions as a usage guide, a conversation manual and a guide to structure and grammar. I hope that it is also useful for teachers who are looking for explanations of language difficulties.\n\nI would like to express my gratitude to all of the people who have helped me with the preparation of this third edition. A large number of foreign students suggested topics and brought to light difficulties with Romanian for consideration.\n\nI would like to thank Dr. Brian Imhoff, Dr. Simona Irimescu Banciu, Irina Duciu, Cătălina Ungureanu, Dr. Dan Pologea for their editorial and translating assistance, proofreading, and suggestions regarding the presentation of particular entries.\n\nI am grateful that this book is cited in academic bibliographies and I hope that you find this 3rd edition useful as a comprehensive guide to common vocabulary problems and to most of the grammar difficulties associated with the Romanian language.\n\n**Mona Moldoveanu Pologea, Ph.D.**\n\n[@levelCEFR:A1]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Romanian, like all languages, is full of difficulties for a foreign learner. This\nbook, now in its 3rd edition, is intended for all language levels. It covers relatively simple topics through advanced language difficulties.\n\nThe purpose of this book is to give learners the most important vocabulary, useful phrases and grammar in order to deal with common language use. The lessons contain dialogues, vocabulary sections, common phrases used in everyday life, grammar explanations, and examples of correct usage. The 3rd edition also adopts a “teach yourself ” approach, with all dialogues and grammar explanations translated into English. The exercise book contains applications for all lessons and offers an\nin-depth presentation of each grammatical topic.\n\nThe division into chapters corresponds to the language levels described in the European Language Passport (A1, A2, B1, B2, C1, C2).\n\nThe book is based on my 10 years of experience teaching Romanian to foreigners and functions as a usage guide, a conversation manual and a guide to structure and grammar. I hope that it is also useful for teachers who are looking for explanations of language difficulties.\n\nI would like to express my gratitude to all of the people who have helped me with the preparation of this third edition. A large number of foreign students suggested topics and brought to light difficulties with Romanian for consideration.\n\nI would like to thank Dr. Brian Imhoff, Dr. Simona Irimescu Banciu, Irina Duciu, Cătălina Ungureanu, Dr. Dan Pologea for their editorial and translating assistance, proofreading, and suggestions regarding the presentation of particular entries.\n\nI am grateful that this book is cited in academic bibliographies and I hope that you find this 3rd edition useful as a comprehensive guide to common vocabulary problems and to most of the grammar difficulties associated with the Romanian language.\n\n**Mona Moldoveanu Pologea, Ph.D.**",
+      "id": [
+        "136055"
+      ],
+      "levelCEFR": [
+        "A1"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:136056]\n[#LECȚIA* 1\nAlfabetul și expresii uzuale \nThe alphabet and common phrases]\n[%1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "136056"
+      ],
+      "title": "LECȚIA* 1\nAlfabetul și expresii uzuale \nThe alphabet and common phrases"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136057]\n• Lecție = lesson; Lecția = the lesson;",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Lecție = lesson; Lecția = the lesson;",
+      "id": [
+        "136057"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&imageWithAudio]\n[@id:136058]\n[%Alfabetul (The alphabet)]\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l01-1alfabetul.mp3]\n[&image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png]\nAa [a] alfabet (alphabet)\nĂă [ă] mamă (mother)\nÂâ [â din a] vânt (wind)\nBb [be] bravo (bravo)\nCc [ce] comedie (comedy)\nDd [de] dinozaur (dinosaur)\nEe [e] elefant (elephant)\nFf [ef] final (final)\nGg [ge] golf (golf)\nHh [haș] hotel (hotel)\nIi [i] idiot (idiot)\nÎî [î din i] în (in)\nJj [je] justiție (justice)\nKk [ca] kilogram (kilogram)\nLl [el] larg (large)\nMm [em] minus (minus)\nNn [en] nativ (native)\nOo [o] ordine (order)\nPp [pe] pagină (page)\nQq [qü] quartet (quartet)\nRr [er] radio (radio)\nSs [es] sens (sense)\nȘș [șe] și (and)\nTt [te] taxi (taxi)\nȚț [țe] țar (tsar)\nUu [u] univers (universe)\nVv [ve] voce (voice)\nWw [dublu ve] watt (watt)\nXx [ics] xerox (xerox)\nYy [i grec] yală (lock)\nZz [zet] zinc (zinc)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Aa [a] alfabet (alphabet)\nĂă [ă] mamă (mother)\nÂâ [â din a] vânt (wind)\nBb [be] bravo (bravo)\nCc [ce] comedie (comedy)\nDd [de] dinozaur (dinosaur)\nEe [e] elefant (elephant)\nFf [ef] final (final)\nGg [ge] golf (golf)\nHh [haș] hotel (hotel)\nIi [i] idiot (idiot)\nÎî [î din i] în (in)\nJj [je] justiție (justice)\nKk [ca] kilogram (kilogram)\nLl [el] larg (large)\nMm [em] minus (minus)\nNn [en] nativ (native)\nOo [o] ordine (order)\nPp [pe] pagină (page)\nQq [qü] quartet (quartet)\nRr [er] radio (radio)\nSs [es] sens (sense)\nȘș [șe] și (and)\nTt [te] taxi (taxi)\nȚț [țe] țar (tsar)\nUu [u] univers (universe)\nVv [ve] voce (voice)\nWw [dublu ve] watt (watt)\nXx [ics] xerox (xerox)\nYy [i grec] yală (lock)\nZz [zet] zinc (zinc)",
+      "id": [
+        "136058"
+      ],
+      "item": "Alfabetul (The alphabet)",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l01-1alfabetul.mp3"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 25,
+        "errorLine": "[.article:bitmark--&imageWithAudio]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136059]\n[%Litere (Letters)]\nLimba română utilizează alfabetul latin, cu cinci litere speciale. Aceste litere speciale sunt:\n__The Romanian language uses the Latin alphabet, with five special letters. These special letters are:__\n\nă, Ă: fată – pronunțat ca articolul nehotărât din engleză „a”.\n__ă, Ă: fată (girl) – pronounced like the English indefinite article “a”.__\n\nâ, Â: când – fără un echivalent în limba engleză\n__â, Â: când (when) – without an English equivalent__\n\nî, Î: începe – același sunet ca „â”, fără un echivalent în limba engleză.\n__î, Î: începe (he starts) – the same sound as “â”, without an English equivalent.__\n\nș, Ș: știe – sunet similar cu începutul cuvântului din limba engleză „she”. \n__ș, Ș: știe (he knows) – similar to the sound beginning the English word “she”.__\n\nț, Ț: ține – sunet similar cu începutul cuvântului „tsunami”.\n__ț, Ț: ține (he keeps) – similar to the sound beginning the word “tsunami”.__\n\nDiferența dintre „â” și „î” constă în faptul că „â” este utilizat în interiorul cuvântului (de exemplu: c**â**nd, c**â**t), iar „î” la începutul și la finalul cuvântului (de exemplu: a **î**ncepe, a hotăr**î**).\n__The difference between “â” and “î” is that “â” is used only in the middle of the word (e.g. “când”: when, “cât”: how much), and “î” at the beginning or at the end of the word (e.g. “a începe”: to begin, “a hotărî”: to decide).__\n\nÎn cazul cuvintelor compuse (prefix + cuvânt), litera „î” se păstrează dacă reprezintă prima literă a cuvântului de bază, deoarece prefixul poate fi eliminat:\n\n__In the case of compound words (prefix + word), the letter “î” is still kept if it represents the first letter of the word root because the prefix can be removed:__\n\na re**î**ncepe (re + începe) – __to start again__\na re**î**nchide (re + închide) – __to close again__\n\nNu există reguli speciale de pronunție în română; toate literele trebuie să fie citite.\n__There are no special pronunciation rules in Romanian; all letters must be read.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Limba română utilizează alfabetul latin, cu cinci litere speciale. Aceste litere speciale sunt:\n__The Romanian language uses the Latin alphabet, with five special letters. These special letters are:__\n\nă, Ă: fată – pronunțat ca articolul nehotărât din engleză „a”.\n__ă, Ă: fată (girl) – pronounced like the English indefinite article “a”.__\n\nâ, Â: când – fără un echivalent în limba engleză\n__â, Â: când (when) – without an English equivalent__\n\nî, Î: începe – același sunet ca „â”, fără un echivalent în limba engleză.\n__î, Î: începe (he starts) – the same sound as “â”, without an English equivalent.__\n\nș, Ș: știe – sunet similar cu începutul cuvântului din limba engleză „she”. \n__ș, Ș: știe (he knows) – similar to the sound beginning the English word “she”.__\n\nț, Ț: ține – sunet similar cu începutul cuvântului „tsunami”.\n__ț, Ț: ține (he keeps) – similar to the sound beginning the word “tsunami”.__\n\nDiferența dintre „â” și „î” constă în faptul că „â” este utilizat în interiorul cuvântului (de exemplu: c**â**nd, c**â**t), iar „î” la începutul și la finalul cuvântului (de exemplu: a **î**ncepe, a hotăr**î**).\n__The difference between “â” and “î” is that “â” is used only in the middle of the word (e.g. “când”: when, “cât”: how much), and “î” at the beginning or at the end of the word (e.g. “a începe”: to begin, “a hotărî”: to decide).__\n\nÎn cazul cuvintelor compuse (prefix + cuvânt), litera „î” se păstrează dacă reprezintă prima literă a cuvântului de bază, deoarece prefixul poate fi eliminat:\n\n__In the case of compound words (prefix + word), the letter “î” is still kept if it represents the first letter of the word root because the prefix can be removed:__\n\na re**î**ncepe (re + începe) – __to start again__\na re**î**nchide (re + închide) – __to close again__\n\nNu există reguli speciale de pronunție în română; toate literele trebuie să fie citite.\n__There are no special pronunciation rules in Romanian; all letters must be read.__",
+      "id": [
+        "136059"
+      ],
+      "item": "Litere (Letters)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136060]\n[%Grupuri de litere (Groups of letters)]\n**ce** ceai __(tea)__\n**ci** cine __(who)__\n**che** cheamă __(he calls)__ \n**chi** ochi __(eye)__\n**ge** geam __(window)__\n**gi** frigider __(fridge)__\n**ghe** înghețată __(ice cream)__\n**ghi** ghinion __(bad luck)__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l01-2alfabetul - grupuri_de_litere.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**ce** ceai __(tea)__\n**ci** cine __(who)__\n**che** cheamă __(he calls)__ \n**chi** ochi __(eye)__\n**ge** geam __(window)__\n**gi** frigider __(fridge)__\n**ghe** înghețată __(ice cream)__\n**ghi** ghinion __(bad luck)__",
+      "id": [
+        "136060"
+      ],
+      "item": "Grupuri de litere (Groups of letters)",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l01-2alfabetul - grupuri_de_litere.mp3"
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input ' - grupuri_de_litere.mp3'",
+        "line": 12,
+        "column": 76,
+        "errorLine": "[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l01-2alfabetul - grupuri_de_litere.mp3]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136061]\n[%Formule de salut (Greetings)]\n• Bună dimineața! __Good morning!__\n• Bună ziua! __Good afternoon / good day!__\n• Bună seara! __Good evening!__\n• Bună! __Hi!__\n• Salut! __Hi!__\n• La revedere! __Goodbye!__\n• Pa! __Bye!__\n• O zi bună! __Have a good day!__\n• O seară bună! __Have a good evening!__\n• Pe curând! __See you soon!__\n• Pe mai târziu! __See you later!__\n• Pe mâine! __See you tomorrow!__\n• Pe mâine dimineață! __See you tomorrow morning!__\n• Pe mâine seară! __See you tomorrow evening!__\n• Pe diseară! __See you this evening!__\n• Noapte bună! __Good night!__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l01-3alfabetul-formule_de_salut.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Bună dimineața! __Good morning!__\n• Bună ziua! __Good afternoon / good day!__\n• Bună seara! __Good evening!__\n• Bună! __Hi!__\n• Salut! __Hi!__\n• La revedere! __Goodbye!__\n• Pa! __Bye!__\n• O zi bună! __Have a good day!__\n• O seară bună! __Have a good evening!__\n• Pe curând! __See you soon!__\n• Pe mai târziu! __See you later!__\n• Pe mâine! __See you tomorrow!__\n• Pe mâine dimineață! __See you tomorrow morning!__\n• Pe mâine seară! __See you tomorrow evening!__\n• Pe diseară! __See you this evening!__\n• Noapte bună! __Good night!__",
+      "id": [
+        "136061"
+      ],
+      "item": "Formule de salut (Greetings)",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l01-3alfabetul-formule_de_salut.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136062]\n[%Vocabular (Vocabulary)]\n===\nbun, bună\n[@language:ro]\n[@pos:adj]\n==\ngood\n[@language:en]\n===\ncurând\n[@language:ro]\n[@pos:adv]\n==\nsoon\n[@language:en]\n===\ndimineață, dimineți\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nmorning\n[@language:en]\n===\ndiseară\n[@language:ro]\n[@pos:adv]\n==\ntonight / this evening\n[@language:en]\n===\nmâine\n[@language:ro]\n[@pos:adv]\n==\ntomorrow\n[@language:en]\n===\nnoapte, nopți\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nnight\n[@language:en]\n===\nseară, seri\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nevening\n[@language:en]\n===\ntârziu\n[@language:ro]\n[@pos:adv]\n==\nlate\n[@language:en]\n===\nzi, zile\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nday\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\nbun, bună\n\n\n==\ngood\n\n===\ncurând\n\n\n==\nsoon\n\n===\ndimineață, dimineți\n\n\n\n==\nmorning\n\n===\ndiseară\n\n\n==\ntonight / this evening\n\n===\nmâine\n\n\n==\ntomorrow\n\n===\nnoapte, nopți\n\n\n\n==\nnight\n\n===\nseară, seri\n\n\n\n==\nevening\n\n===\ntârziu\n\n\n==\nlate\n\n===\nzi, zile\n\n\n\n==\nday\n\n===",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136062"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "adj",
+        "adv",
+        "noun",
+        "adv",
+        "adv",
+        "noun",
+        "noun",
+        "adv",
+        "noun"
+      ],
+      "gender": [
+        "f",
+        "f",
+        "f",
+        "f"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136063]\n[%Expresii comune (Common phrases)]\n• Ce faci / ce mai faci? (informal) __How are you?__\n• Ce faceți / ce mai faceți? (formal) __How are you?__\n• Bine, mulțumesc. __Fine, thank you.__\n• Scuză-mă, te rog! (informal) __Excuse me, please!__\n• Scuzați-mă, vă rog! (formal) __Excuse me, please!__\n• Nicio problemă. __No problem.__\n• Nu este nicio problemă. __There is no problem.__\n• Nu face nimic / nu-i nimic. __That's fine.__\n• Mulțumesc mult / mulțumesc frumos. __Many thanks.__\n• Mulțumesc foarte mult. __Thank you very much.__\n• Mersi. __Thanks.__\n• Cu plăcere. __You are welcome / with pleasure.__\n• Bine ai venit! (informal) __Welcome!__\n• Bine ați venit! (formal) __Welcome!__\n• Bine te-am găsit! (informal) __It's nice to be here!__\n• Bine v-am găsit! (formal) __It's nice to be here!__\n• Ia loc! (informal) __Have a seat!__\n• Luați loc! (formal) __Have a seat!__\n• Noroc! __Cheers!__\n• Succes / baftă! __Good luck!__\n• La mulți ani! __Happy birthday!__\n• Felicitări! __Congratulations!__\n• Weekend plăcut! __Have a nice weekend!__\n• Călătorie plăcută! __Have a nice journey!__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l01-4alfabetul-expresii_comune.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Ce faci / ce mai faci? (informal) __How are you?__\n• Ce faceți / ce mai faceți? (formal) __How are you?__\n• Bine, mulțumesc. __Fine, thank you.__\n• Scuză-mă, te rog! (informal) __Excuse me, please!__\n• Scuzați-mă, vă rog! (formal) __Excuse me, please!__\n• Nicio problemă. __No problem.__\n• Nu este nicio problemă. __There is no problem.__\n• Nu face nimic / nu-i nimic. __That's fine.__\n• Mulțumesc mult / mulțumesc frumos. __Many thanks.__\n• Mulțumesc foarte mult. __Thank you very much.__\n• Mersi. __Thanks.__\n• Cu plăcere. __You are welcome / with pleasure.__\n• Bine ai venit! (informal) __Welcome!__\n• Bine ați venit! (formal) __Welcome!__\n• Bine te-am găsit! (informal) __It's nice to be here!__\n• Bine v-am găsit! (formal) __It's nice to be here!__\n• Ia loc! (informal) __Have a seat!__\n• Luați loc! (formal) __Have a seat!__\n• Noroc! __Cheers!__\n• Succes / baftă! __Good luck!__\n• La mulți ani! __Happy birthday!__\n• Felicitări! __Congratulations!__\n• Weekend plăcut! __Have a nice weekend!__\n• Călătorie plăcută! __Have a nice journey!__",
+      "id": [
+        "136063"
+      ],
+      "item": "Expresii comune (Common phrases)",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l01-4alfabetul-expresii_comune.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136064]\n[%Vocabular (Vocabulary)\n===\nan, ani\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\nyear\n[@language:en]\n===\nbine\n[@language:ro]\n[@pos:adv]\n==\nwell\n[@language:en]\n===\ncălătorie, călătorii\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\njourney\n[@language:en]\n===\na face\n[@language:ro]\n[@pos:verb]\n==\nto do\n[@language:en]\n===\na găsi\n[@language:ro]\n[@pos:verb]\n==\nto find\n[@language:en]\n===\nloc, locuri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nseat\n[@language:en]\n===\na lua\n[@language:ro]\n[@pos:verb]\n==\nto take\n[@language:en]\n===\na mulțumi\n[@language:ro]\n[@pos:verb]\n==\nto thank\n[@language:en]\n===\nnimic (pron. negativ)\n[@language:ro]\n[@pos:pron]\n==\nnothing\n[@language:en]\n===\nplăcut, plăcută\n[@language:ro]\n[@pos:adj]\n==\npleasant\n[@language:en]\n===\nproblemă, probleme\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nproblem\n[@language:en]\n===\na scuza\n[@language:ro]\n[@pos:verb]\n==\nto excuse\n[@language:en]\n===\n||pron negativ||",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "[%Vocabular (Vocabulary)\n===\nan, ani\n\n\n\n==\nyear\n\n===\nbine\n\n\n==\nwell\n\n===\ncălătorie, călătorii\n\n\n\n==\njourney\n\n===\na face\n\n\n==\nto do\n\n===\na găsi\n\n\n==\nto find\n\n===\nloc, locuri\n\n\n\n==\nseat\n\n===\na lua\n\n\n==\nto take\n\n===\na mulțumi\n\n\n==\nto thank\n\n===\nnimic (pron. negativ)\n\n\n==\nnothing\n\n===\nplăcut, plăcută\n\n\n==\npleasant\n\n===\nproblemă, probleme\n\n\n\n==\nproblem\n\n===\na scuza\n\n\n==\nto excuse\n\n===",
+      "item": "Vocabular (Vocabulary)\n===\nan, ani<missing '",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136064"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "noun",
+        "adv",
+        "noun",
+        "verb",
+        "verb",
+        "noun",
+        "verb",
+        "verb",
+        "pron",
+        "adj",
+        "noun",
+        "verb"
+      ],
+      "gender": [
+        "m",
+        "f",
+        "n",
+        "f"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n===\n'",
+        "line": 3,
+        "column": 24,
+        "errorLine": "[%Vocabular (Vocabulary)"
+      },
+      {
+        "message": "Unexpected input '\\n'",
+        "line": 5,
+        "column": 7,
+        "errorLine": "an, ani"
+      },
+      {
+        "message": "Unexpected input '\\n[@gender:m]\n==\n'",
+        "line": 8,
+        "column": 11,
+        "errorLine": "[@gender:m]"
+      },
+      {
+        "message": "Unexpected input '\\n==\n'",
+        "line": 8,
+        "column": 11,
+        "errorLine": "[@gender:m]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136065]\n[%Dialoguri (Dialogues) Dialogul 1]\n**Ion Popescu:** Bună dimineața, doamnă! __Good morning, madam!__\n**Alexandra Dumitrescu:** Bună dimineața, domnule! __Good morning, sir!__\n**Ion Popescu:** Ce mai faceți? __How are you?__\n**Alexandra Dumitrescu:** Bine, mulțumesc. Și dumneavoastră? __Fine, thank you. And you?__\n**Ion Popescu:** Și eu bine, mulțumesc. __I'm also fine, thank you.__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l01-5alfabetul-dialog1.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Ion Popescu:** Bună dimineața, doamnă! __Good morning, madam!__\n**Alexandra Dumitrescu:** Bună dimineața, domnule! __Good morning, sir!__\n**Ion Popescu:** Ce mai faceți? __How are you?__\n**Alexandra Dumitrescu:** Bine, mulțumesc. Și dumneavoastră? __Fine, thank you. And you?__\n**Ion Popescu:** Și eu bine, mulțumesc. __I'm also fine, thank you.__",
+      "id": [
+        "136065"
+      ],
+      "item": "Dialoguri (Dialogues) Dialogul 1",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l01-5alfabetul-dialog1.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136066]\n[%Vocabular (Vocabulary)]\n===\ndoamnă, doamne\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nmadam / lady\n[@language:en]\n===\ndomn, domni\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\nsir / mister\n[@language:en]\n===\ndumneavoastră\n[@language:ro]\n[@pos:pron]\n==\nyou\n[@language:en]\n===\na face\n[@language:ro]\n[@pos:verb]\n==\nto do\n[@language:en]\n===\nși\n[@language:ro]\n[@pos:conj]\n==\nand\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\ndoamnă, doamne\n\n\n\n==\nmadam / lady\n\n===\ndomn, domni\n\n\n\n==\nsir / mister\n\n===\ndumneavoastră\n\n\n==\nyou\n\n===\na face\n\n\n==\nto do\n\n===\nși\n\n\n==\nand\n\n===",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136066"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "noun",
+        "noun",
+        "pron",
+        "verb",
+        "conj"
+      ],
+      "gender": [
+        "f",
+        "m"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136067]\n[%Dialogul 2]\n**George:** Bună, Maria! __Hi, Maria!__\n**Maria:** Salut, George! Ce mai faci? __Hi, George! How are you?__\n**George:** Bine, mersi! Și tu? __Fine, thanks! And you?__\n**Maria:** Excelent! __Excellent!__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l01-6alfabetul-dialog2.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**George:** Bună, Maria! __Hi, Maria!__\n**Maria:** Salut, George! Ce mai faci? __Hi, George! How are you?__\n**George:** Bine, mersi! Și tu? __Fine, thanks! And you?__\n**Maria:** Excelent! __Excellent!__",
+      "id": [
+        "136067"
+      ],
+      "item": "Dialogul 2",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l01-6alfabetul-dialog2.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136068]\n[%Vocabular (Vocabulary)]\n===\nexcelent\n[@language:ro]\n[@pos:adv]\n==\nexcellent\n[@language:en]\n===\na face\n[@language:ro]\n[@pos:verb]\n==\nto do\n[@language:en]\n===\nși\n[@language:ro]\n[@pos:conj]\n==\nand\n[@language:en]\n===\ntu\n[@language:ro]\n[@pos:pron]\n==\nyou\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\nexcelent\n\n\n==\nexcellent\n\n===\na face\n\n\n==\nto do\n\n===\nși\n\n\n==\nand\n\n===\ntu\n\n\n==\nyou\n\n===",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136068"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "adv",
+        "verb",
+        "conj",
+        "pron"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136069]\n[%Dialogul 3]\n**Ioana Ardeleanu:** Bună ziua! Bine ați venit! __Hello! Welcome!__\n**Andrei Popescu:** Bună ziua! Bine v-am găsit! Hello! __It's nice to be here!__\n**Ioana Ardeleanu:** Intrați, vă rog! Luați loc! __Enter, please! Have a seat!__\n**Andrei Popescu:** Mulțumesc. __Thank you.__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/ll01-7alfabetul-dialog3.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Ioana Ardeleanu:** Bună ziua! Bine ați venit! __Hello! Welcome!__\n**Andrei Popescu:** Bună ziua! Bine v-am găsit! Hello! __It's nice to be here!__\n**Ioana Ardeleanu:** Intrați, vă rog! Luați loc! __Enter, please! Have a seat!__\n**Andrei Popescu:** Mulțumesc. __Thank you.__",
+      "id": [
+        "136069"
+      ],
+      "item": "Dialogul 3",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/ll01-7alfabetul-dialog3.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136070]\n[%Vocabular (Vocabulary)]\n===\na găsi\n[@language:ro]\n[@pos:verb]\n==\nto find\n[@language:en]\n===\na intra\n[@language:ro]\n[@pos:verb]\n==\nto enter\n[@language:en]\n===\nloc, locuri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nseat\n[@language:en]\n===\na lua\n[@language:ro]\n[@pos:verb]\n==\nto take\n[@language:en]\n===\na veni\n[@language:ro]\n[@pos:verb]\n==\nto come\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\na găsi\n\n\n==\nto find\n\n===\na intra\n\n\n==\nto enter\n\n===\nloc, locuri\n\n\n\n==\nseat\n\n===\na lua\n\n\n==\nto take\n\n===\na veni\n\n\n==\nto come\n\n===",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136070"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "verb",
+        "verb",
+        "noun",
+        "verb",
+        "verb"
+      ],
+      "gender": [
+        "n"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:136071]\n[#LECȚIA 2\nSă facem cunoștință! Let's introduce ourselves!]\n[%2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "136071"
+      ],
+      "title": "LECȚIA 2\nSă facem cunoștință! Let's introduce ourselves!"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136072]\n[%Acte de vorbire (Speech acts)]\n• Cum te numești? / cum te cheamă? / care este numele tău? (informal) __What is your name?__\n• Cum vă numiți? / cum vă cheamă? / care este numele dumneavoastră? (formal) __What is your name?__\n• Mă numesc Mihai / mă cheamă Mihai / numele meu este Mihai. __My name is Mihai.__\n• Sunt Mihai. __I am Mihai.__\n• Îmi pare bine de cunoștință / îmi pare bine! __Nice / pleased to meet you!__\n• Încântat(ă) de cunoștință / încântat(ă)! __Nice / pleased to meet you!__\n• Cum se numește el? __What is his name?__\n• Cum se numește ea? __What is her name?__\n• Cine sunteți? __Who are you?__\n• Dumneavoastră sunteți domnul Popescu? __Are you Mr. Popescu?__\n• Dumneavoastră sunteți doamna Popescu? __Are you Mr. Popescu?__\n• Cred că ești Gabriela. (informal) __I think you are Gabriela.__\n• Cred că sunteți doamna Gabriela. (formal) __I think you are Mrs. Gabriela.__\n• Spune-mi Gabi! (informal) __Call me Gabi!__\n• Spuneți-mi Gabi! (formal) __Call me Gabi!__\n• Mă bucur să te cunosc! (informal) __I'm glad to meet you!__\n• Mă bucur să vă cunosc! (formal) __I'm glad to meet you!__\n• Ce îți face familia? (informal) __How is your family?__\n• Ce vă face familia? (formal) __How is your family?__\n• Ce face soțul tău / soția ta? (informal) __How is your husband / your wife?__\n• Ce face soțul dumneavoastră / soția dumneavoastră? (formal) __How is your husband / your wife?__\n• Ce fac copiii tăi / părinții tăi / prietenii tăi? (informal) __How are your children / your parents / your friends?__\n• Ce fac copiii dumneavoastră / părinții dumneavoastră / prietenii dumneavoastră? (formal) __How are your children / your parents / your friends?__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l02-1sa_facem_cunostinta-acte_de_vorbire.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Cum te numești? / cum te cheamă? / care este numele tău? (informal) __What is your name?__\n• Cum vă numiți? / cum vă cheamă? / care este numele dumneavoastră? (formal) __What is your name?__\n• Mă numesc Mihai / mă cheamă Mihai / numele meu este Mihai. __My name is Mihai.__\n• Sunt Mihai. __I am Mihai.__\n• Îmi pare bine de cunoștință / îmi pare bine! __Nice / pleased to meet you!__\n• Încântat(ă) de cunoștință / încântat(ă)! __Nice / pleased to meet you!__\n• Cum se numește el? __What is his name?__\n• Cum se numește ea? __What is her name?__\n• Cine sunteți? __Who are you?__\n• Dumneavoastră sunteți domnul Popescu? __Are you Mr. Popescu?__\n• Dumneavoastră sunteți doamna Popescu? __Are you Mr. Popescu?__\n• Cred că ești Gabriela. (informal) __I think you are Gabriela.__\n• Cred că sunteți doamna Gabriela. (formal) __I think you are Mrs. Gabriela.__\n• Spune-mi Gabi! (informal) __Call me Gabi!__\n• Spuneți-mi Gabi! (formal) __Call me Gabi!__\n• Mă bucur să te cunosc! (informal) __I'm glad to meet you!__\n• Mă bucur să vă cunosc! (formal) __I'm glad to meet you!__\n• Ce îți face familia? (informal) __How is your family?__\n• Ce vă face familia? (formal) __How is your family?__\n• Ce face soțul tău / soția ta? (informal) __How is your husband / your wife?__\n• Ce face soțul dumneavoastră / soția dumneavoastră? (formal) __How is your husband / your wife?__\n• Ce fac copiii tăi / părinții tăi / prietenii tăi? (informal) __How are your children / your parents / your friends?__\n• Ce fac copiii dumneavoastră / părinții dumneavoastră / prietenii dumneavoastră? (formal) __How are your children / your parents / your friends?__",
+      "id": [
+        "136072"
+      ],
+      "item": "Acte de vorbire (Speech acts)",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l02-1sa_facem_cunostinta-acte_de_vorbire.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary]\n[@id:136073]\n[%Vocabular (Vocabulary)]\n===\na se bucura (vb.)\n[@language:ro]\n[@pos:verb]\n==\nto be glad\n[@language:en]\n===\na se chema (vb.)\n[@language:ro]\n[@pos:verb]\n==\nto call\n[@language:en]\n===\ncopil, copii (s.m.)\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\nchild\n[@language:en]\n===\na crede (vb.)\n[@language:ro]\n[@pos:verb]\n==\nto think\n[@language:en]\n===\na cunoaște (vb.)\n[@language:ro]\n[@pos:verb]\n==\nto meet / to know\n[@language:en]\n===\ndoamnă, doamne (s.f.)\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nmadam / lady\n[@language:en]\n===\ndomn, domni (s.m.)\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\nmister / sir\n[@language:en]\n===\nea (pron.)\n[@language:ro]\n[@pos:pron]\n==\nshe\n[@language:en]\n===\nel (pron.)\n[@language:ro]\n[@pos:pron]\n==\nhe\n[@language:en]\n===\na face (vb.)\n[@language:ro]\n[@pos:verb]\n==\nto do\n[@language:en]\n===\nfamilie, familii (s.f.)\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nfamily\n[@language:en]\n===\nîncântat, încântată (adj.)\n[@language:ro]\n[@pos:adj]\n===\npleased / delighted\n[@language:en]\n===\nmeu, mea (adj. posesiv)\n[@language:ro]\n[@pos:adj]\n==\nmy\n[@language:en]\n===\nnume, nume (s.n.)\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nname\n[@language:en]\n===\na se numi (vb.)\n[@language:ro]\n[@pos:verb]\n==\nto name\n[@language:en]\n===\na părea bine de cunoștință (expr.)\n[@language:ro]\n==\nto be pleased to meet (someone)\n[@language:en]\n===\npărinte, părinți (s.m.)\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\nparent\n[@language:en]\n===\nprieten, prieteni (s.m.)\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\nfriend\n[@language:en]\n===\nsoț, soți (s.m.)\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\nhusband\n[@language:en]\n===\nsoție, soții (s.f.)\n[@language:ro]\n[@pos:]\n==\nwife\n[@language:en]\n===\na spune (vb.)\n[@language:ro]\n[@pos:]\n==\nto say\n[@language:en]\n===\nsunteți (vb.)\n[@language:ro]\n[@pos:]\n==\nyou are\n[@language:en]\n===\ntău / ta (adj. posesiv)\n[@language:ro]\n[@pos:]\n==\nyour\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\na se bucura (vb.)\n\n\n==\nto be glad\n\n===\na se chema (vb.)\n\n\n==\nto call\n\n===\ncopil, copii (s.m.)\n\n\n\n==\nchild\n\n===\na crede (vb.)\n\n\n==\nto think\n\n===\na cunoaște (vb.)\n\n\n==\nto meet / to know\n\n===\ndoamnă, doamne (s.f.)\n\n\n\n==\nmadam / lady\n\n===\ndomn, domni (s.m.)\n\n\n\n==\nmister / sir\n\n===\nea (pron.)\n\n\n==\nshe\n\n===\nel (pron.)\n\n\n==\nhe\n\n===\na face (vb.)\n\n\n==\nto do\n\n===\nfamilie, familii (s.f.)\n\n\n\n==\nfamily\n\n===\nîncântat, încântată (adj.)\n\n\n===\npleased / delighted\n\n===\nmeu, mea (adj. posesiv)\n\n\n==\nmy\n\n===\nnume, nume (s.n.)\n\n\n\n==\nname\n\n===\na se numi (vb.)\n\n\n==\nto name\n\n===\na părea bine de cunoștință (expr.)\n\n==\nto be pleased to meet (someone)\n\n===\npărinte, părinți (s.m.)\n\n\n\n==\nparent\n\n===\nprieten, prieteni (s.m.)\n\n\n\n==\nfriend\n\n===\nsoț, soți (s.m.)\n\n\n\n==\nhusband\n\n===\nsoție, soții (s.f.)\n[@language:ro]\n[@pos:]\n==\nwife\n[@language:en]\n===\na spune (vb.)\n[@language:ro]\n[@pos:]\n==\nto say\n[@language:en]\n===\nsunteți (vb.)\n[@language:ro]\n[@pos:]\n==\nyou are\n[@language:en]\n===\ntău / ta (adj. posesiv)\n[@language:ro]\n[@pos:]\n==\nyour\n[@language:en]\n===",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136073"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "verb",
+        "verb",
+        "noun",
+        "verb",
+        "verb",
+        "noun",
+        "noun",
+        "pron",
+        "pron",
+        "verb",
+        "noun",
+        "adj",
+        "adj",
+        "noun",
+        "verb",
+        "noun",
+        "noun",
+        "noun"
+      ],
+      "gender": [
+        "m",
+        "f",
+        "m",
+        "f",
+        "n",
+        "m",
+        "m",
+        "m"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n===\nsoție, soții (s.f.)\n[@language:ro]\n[@pos:]'",
+        "line": 147,
+        "column": 6,
+        "errorLine": "[@pos:]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 146,
+        "column": 0,
+        "errorLine": "[@language:ro]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 147,
+        "column": 0,
+        "errorLine": "[@pos:]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 150,
+        "column": 0,
+        "errorLine": "[@language:en]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 153,
+        "column": 0,
+        "errorLine": "[@language:ro]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 154,
+        "column": 0,
+        "errorLine": "[@pos:]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 157,
+        "column": 0,
+        "errorLine": "[@language:en]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 160,
+        "column": 0,
+        "errorLine": "[@language:ro]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 161,
+        "column": 0,
+        "errorLine": "[@pos:]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 164,
+        "column": 0,
+        "errorLine": "[@language:en]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 167,
+        "column": 0,
+        "errorLine": "[@language:ro]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 168,
+        "column": 0,
+        "errorLine": "[@pos:]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 171,
+        "column": 0,
+        "errorLine": "[@language:en]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136074]\n[%Dialoguri (Dialogues) - Dialogul 1]\n**Mihai Rădulescu:** Bună ziua! __Hello!__\n**Rodica Ionescu:** Bună ziua! __Hello!__\n**Mihai Rădulescu:** Mă numesc Mihai Rădulescu. __My name is Mihai Rădulescu.__\n**Rodica Ionescu:** Îmi pare bine de cunoștință! Numele meu este Rodica Ionescu. __Nice to meet you! My name is Rodica Ionescu.__\n**Mihai Rădulescu:** Încântat de cunoștință! Sunteți studentă la Universitate? __Nice to meet you! Are you a student at the university?__\n**Rodica Ionescu:** Da! Și dumneavoastră la fel? __Yes! And you too?__\n**Mihai Rădulescu:** Da! __Yes!__\n**Rodica Ionescu:** Îmi pare bine! __Nice to meet you!__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l02-2sa_facem_cunostinta-dialog1.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Mihai Rădulescu:** Bună ziua! __Hello!__\n**Rodica Ionescu:** Bună ziua! __Hello!__\n**Mihai Rădulescu:** Mă numesc Mihai Rădulescu. __My name is Mihai Rădulescu.__\n**Rodica Ionescu:** Îmi pare bine de cunoștință! Numele meu este Rodica Ionescu. __Nice to meet you! My name is Rodica Ionescu.__\n**Mihai Rădulescu:** Încântat de cunoștință! Sunteți studentă la Universitate? __Nice to meet you! Are you a student at the university?__\n**Rodica Ionescu:** Da! Și dumneavoastră la fel? __Yes! And you too?__\n**Mihai Rădulescu:** Da! __Yes!__\n**Rodica Ionescu:** Îmi pare bine! __Nice to meet you!__",
+      "id": [
+        "136074"
+      ],
+      "item": "Dialoguri (Dialogues) - Dialogul 1",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l02-2sa_facem_cunostinta-dialog1.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136075]\n[%Vocabular (Vocabulary)]\n===\ndumneavoastră (pron.)\n[@language:ro]\n[@pos:pron]\n==\nyou (formal)\n[@language:en]\n===\nla fel (expr.)\n[@language:ro]\n==\nthe same\n[@language:en]\n===\nnume, nume (s.n.)\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nname\n[@language:en]\n===\nstudentă, studente (s.f.)\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nstudent\n[@language:en]\n===\nsunteți (vb.)\n[@language:ro]\n[@pos:verb]\n==\nyou are\n[@language:en]\n===\nuniversitate, universități (s.f.)\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nuniversity\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\ndumneavoastră (pron.)\n\n\n==\nyou (formal)\n\n===\nla fel (expr.)\n\n==\nthe same\n\n===\nnume, nume (s.n.)\n\n\n\n==\nname\n\n===\nstudentă, studente (s.f.)\n\n\n\n==\nstudent\n\n===\nsunteți (vb.)\n\n\n==\nyou are\n\n===\nuniversitate, universități (s.f.)\n\n\n\n==\nuniversity\n\n===",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136075"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "pron",
+        "noun",
+        "noun",
+        "verb",
+        "noun"
+      ],
+      "gender": [
+        "n",
+        "f",
+        "f"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136076]\n[%Dialogul 2]\n**Alexandru:** Bună! Ce faci? __Hi! How are you?__\n**Irina:** Bine, mulțumesc. Merg la curs. Tu ce faci? __Fine, thanks. I am going to class. How are you?__\n**Alexandru:** Foarte bine! Azi sunt liber. Merg la o plimbare acum. __Very good! I am free today. I am going for a walk now.__\n**Irina:** Ce bine! O zi bună! __How good! Have a nice day!__\n**Alexandru:** Mulțumesc, la fel! __Thank you, you too!__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l02-3sa_facem_cunostinta-dialog_2.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Alexandru:** Bună! Ce faci? __Hi! How are you?__\n**Irina:** Bine, mulțumesc. Merg la curs. Tu ce faci? __Fine, thanks. I am going to class. How are you?__\n**Alexandru:** Foarte bine! Azi sunt liber. Merg la o plimbare acum. __Very good! I am free today. I am going for a walk now.__\n**Irina:** Ce bine! O zi bună! __How good! Have a nice day!__\n**Alexandru:** Mulțumesc, la fel! __Thank you, you too!__",
+      "id": [
+        "136076"
+      ],
+      "item": "Dialogul 2",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l02-3sa_facem_cunostinta-dialog_2.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136077]\n[%Vocabular (Vocabulary)]\n===\nacum\n[@language:ro]\n[@pos:adv]\n==\nnow\n[@language:en]\n===\nazi\n[@language:ro]\n[@pos:adv]\n==\ntoday\n[@language:en]\n===\nbine\n[@language:ro]\n[@pos:adv]\n==\nwell\n[@language:en]\n===\nbun, bună\n[@language:ro]\n[@pos:adj]\n==\ngood\n[@language:en]\n===\ncurs, cursuri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\ncourse\n[@language:en]\n===\nfoarte\n[@language:ro]\n[@pos:adv]\n==\nvery\n[@language:en]\n===\nliber, liberă\n[@language:ro]\n[@pos:adj]\n==\nfree\n[@language:en]\n===\na merge\n[@language:ro]\n[@pos:verb]\n==\nto go\n[@language:en]\n===\nplimbare, plimbări\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nwalk\n[@language:en]\n===\nsunt\n[@language:ro]\n[@pos:verb]\n==\nI am\n[@language:en]\n===\nzi, zile\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nday\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\nacum\n\n\n==\nnow\n\n===\nazi\n\n\n==\ntoday\n\n===\nbine\n\n\n==\nwell\n\n===\nbun, bună\n\n\n==\ngood\n\n===\ncurs, cursuri\n\n\n\n==\ncourse\n\n===\nfoarte\n\n\n==\nvery\n\n===\nliber, liberă\n\n\n==\nfree\n\n===\na merge\n\n\n==\nto go\n\n===\nplimbare, plimbări\n\n\n\n==\nwalk\n\n===\nsunt\n\n\n==\nI am\n\n===\nzi, zile\n\n\n\n==\nday\n\n===",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136077"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "adv",
+        "adv",
+        "adv",
+        "adj",
+        "noun",
+        "adv",
+        "adj",
+        "verb",
+        "noun",
+        "verb",
+        "noun"
+      ],
+      "gender": [
+        "n",
+        "f",
+        "f"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&imageWithAudio]\n[@id:136078]\n[%Dialogul 3]\n**Gabriel:** Bună! __Hi!__\n**Maria:** Bună! Eu sunt Maria Ionescu. __Hi! I am Maria Ionescu.__\n**Gabriel:** Îmi pare bine! Mă numesc Gabriel Popescu. __Nice to meet you! My name is Gabriel Popescu.__\n**Maria:** Suntem colegi. Ești la Departamentul de Management Public? __We are colleagues. Are you in the Department of Public Management?__\n**Gabriel:** Da! __Yes!__\n**Maria:** Și eu la fel! __So am I!__\n**Gabriel:** Mă bucur! __I am glad!__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l02-4sa_facem_cunostinta-dialog 3.mp3]\n[&image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Gabriel:** Bună! __Hi!__\n**Maria:** Bună! Eu sunt Maria Ionescu. __Hi! I am Maria Ionescu.__\n**Gabriel:** Îmi pare bine! Mă numesc Gabriel Popescu. __Nice to meet you! My name is Gabriel Popescu.__\n**Maria:** Suntem colegi. Ești la Departamentul de Management Public? __We are colleagues. Are you in the Department of Public Management?__\n**Gabriel:** Da! __Yes!__\n**Maria:** Și eu la fel! __So am I!__\n**Gabriel:** Mă bucur! __I am glad!__",
+      "id": [
+        "136078"
+      ],
+      "item": "Dialogul 3",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l02-4sa_facem_cunostinta-dialog 3.mp3"
+        }
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 25,
+        "errorLine": "[.article:bitmark--&imageWithAudio]"
+      },
+      {
+        "message": "Unexpected input ' 3.mp3'",
+        "line": 11,
+        "column": 93,
+        "errorLine": "[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l02-4sa_facem_cunostinta-dialog 3.mp3]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136079]\n[%Vocabular (Vocabulary)]\n===\na se bucura\n[@language:ro]\n[@pos:verb]\n==\nto be glad\n[@language:en]\n===\ncoleg, colegi\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\ncolleague\n[@language:en]\n===\ndepartament, departamente\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\ndepartment\n[@language:en]\n===\nești\n[@language:ro]\n[@pos:verb]\n==\nyou are\n[@language:en]\n===\neu\n[@language:ro]\n[@pos:pron]\n==\nI\n[@language:en]\n===\nsunt\n[@language:ro]\n[@pos:verb]\n==\nI am\n[@language:en]\n===\nsuntem\n[@language:ro]\n[@pos:verb]\n==\nwe are\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\na se bucura\n\n\n==\nto be glad\n\n===\ncoleg, colegi\n\n\n\n==\ncolleague\n\n===\ndepartament, departamente\n\n\n\n==\ndepartment\n\n===\nești\n\n\n==\nyou are\n\n===\neu\n\n\n==\nI\n\n===\nsunt\n\n\n==\nI am\n\n===\nsuntem\n\n\n==\nwe are\n\n===",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136079"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "verb",
+        "noun",
+        "noun",
+        "verb",
+        "pron",
+        "verb",
+        "verb"
+      ],
+      "gender": [
+        "m",
+        "n"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136080]\n[%Gramatică (Grammar)]\n[&image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "136080"
+      ],
+      "item": "Gramatică (Grammar)",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136081]\n[%Pronumele „dumneavoastră” (The pronoun “dumneavoastră”)]\n\nPronumele de politețe „dumneavoastră” este echivalentul lui „you”, dar este utilizat într-un context formal (în locul lui „tu” sau „voi”). Are aceeași formă la masculin și feminin, singular și plural, iar verbul este utilizat la plural.\n\n__The politeness pronoun “dumneavoastră” is an equivalent of “you”, but it is used in a formal context (instead of “tu” or “voi”). It has the same form in the masculine and feminine, singular and plural, and the verb is used in the plural.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Pronumele de politețe „dumneavoastră” este echivalentul lui „you”, dar este utilizat într-un context formal (în locul lui „tu” sau „voi”). Are aceeași formă la masculin și feminin, singular și plural, iar verbul este utilizat la plural.\n\n__The politeness pronoun “dumneavoastră” is an equivalent of “you”, but it is used in a formal context (instead of “tu” or “voi”). It has the same form in the masculine and feminine, singular and plural, and the verb is used in the plural.__",
+      "id": [
+        "136081"
+      ],
+      "item": "Pronumele „dumneavoastră” (The pronoun “dumneavoastră”)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136082]\n[%Indicativul prezent (Present Indicative)]\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|",
+      "id": [
+        "136082"
+      ],
+      "item": "Indicativul prezent (Present Indicative)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136083]\n[%Substantive comune (Common nouns)]\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|\nArticolul nehotărât este „o” pentru un substantiv feminin și „un” pentru un substantiv masculin și neutru:\n__The indefinite article is “o” for a feminine noun, and “un” for a masculine and a neuter noun:__\n\n**o** carte (__a book__), **o** masă (__a table__), **un** pix (__a pen__), **un** telefon (__a phone__)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|\nArticolul nehotărât este „o” pentru un substantiv feminin și „un” pentru un substantiv masculin și neutru:\n__The indefinite article is “o” for a feminine noun, and “un” for a masculine and a neuter noun:__\n\n**o** carte (__a book__), **o** masă (__a table__), **un** pix (__a pen__), **un** telefon (__a phone__)",
+      "id": [
+        "136083"
+      ],
+      "item": "Substantive comune (Common nouns)"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:136084]\n[#LECȚIA 3\nNaționalități\nNationalities]\n[%3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "136084"
+      ],
+      "title": "LECȚIA 3\nNaționalități\nNationalities"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136085]\n**Acte de vorbire (Speech acts)\nÎntrebări (Questions)**\n\n• De unde ești? (informal) __Where are you from?__\n• De unde sunteți? (formal) __Where are you from?__\n• De unde vii? (informal) __Where do you come from?__\n• De unde veniți? (formal) __Where do you come from?__\n• Din ce țară ești? (informal) __What country are you from?__\n• Din ce țară sunteți? (formal) __What country are you from?__\n• Ce limbă vorbești? (informal) __What language do you speak?__\n• Ce limbă vorbiți? (formal) __What language do you speak?__\n• Câte limbi vorbești? (informal) __How many languages do you speak?__\n• Câte limbi vorbiți? (formal) __How many languages do you speak?__\n• Vorbesc trei limbi. __I speak three languages.__\n\n• Vorbești engleza / franceza / germana / româna / italiana / spaniola? (informal)\n__Do you speak English / French / German / Romanian / Italian / Spanish?__\n• Vorbiți engleza / franceza / germana / româna / italiana / spaniola? (formal)\n__Do you speak English / French / German / Romanian / Italian / Spanish?__\n• Care este limba ta nativă? (informal) __What is your mother tongue?__\n• Care este limba dumneavoastră nativă? (formal) __What is your mother tongue?__\n• Unde locuiești în România? (informal) __Where do you live in Romania?__\n• Unde locuiți în România? (formal) __Where do you live in Romania?__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l03-1_nationalitati_acte_de_vorbire_intrebari.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Acte de vorbire (Speech acts)\nÎntrebări (Questions)**\n\n• De unde ești? (informal) __Where are you from?__\n• De unde sunteți? (formal) __Where are you from?__\n• De unde vii? (informal) __Where do you come from?__\n• De unde veniți? (formal) __Where do you come from?__\n• Din ce țară ești? (informal) __What country are you from?__\n• Din ce țară sunteți? (formal) __What country are you from?__\n• Ce limbă vorbești? (informal) __What language do you speak?__\n• Ce limbă vorbiți? (formal) __What language do you speak?__\n• Câte limbi vorbești? (informal) __How many languages do you speak?__\n• Câte limbi vorbiți? (formal) __How many languages do you speak?__\n• Vorbesc trei limbi. __I speak three languages.__\n\n• Vorbești engleza / franceza / germana / româna / italiana / spaniola? (informal)\n__Do you speak English / French / German / Romanian / Italian / Spanish?__\n• Vorbiți engleza / franceza / germana / româna / italiana / spaniola? (formal)\n__Do you speak English / French / German / Romanian / Italian / Spanish?__\n• Care este limba ta nativă? (informal) __What is your mother tongue?__\n• Care este limba dumneavoastră nativă? (formal) __What is your mother tongue?__\n• Unde locuiești în România? (informal) __Where do you live in Romania?__\n• Unde locuiți în România? (formal) __Where do you live in Romania?__",
+      "id": [
+        "136085"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l03-1_nationalitati_acte_de_vorbire_intrebari.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136086]\n**Răspunsuri (Answers)**\n\n• Sunt din Marea Britanie. __I am from Great Britain.__\n• Sunt englez. __I am English.__\n• Vorbesc engleza. __I speak English.__\n• Sunt vorbitor nativ de limba engleză. __I am an English native speaker.__\n• Limba mea nativă este engleza. __My mother tongue is English.__\n• Nu vorbesc foarte bine româna. __I don't speak Romanian very well.__\n• Vorbesc puțin limba română. __I speak a little Romanian.__\n• Înțeleg limba română, dar nu pot să vorbesc. __I understand Romanian, but I cannot speak.__\n• Vorbesc trei limbi străine. __I speak three foreign languages.__\n• Locuiesc în capitală, în București. __I live in the capital, in Bucharest.__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l03-2_nationalitati_acte_de_vorbire_raspunsuri.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Răspunsuri (Answers)**\n\n• Sunt din Marea Britanie. __I am from Great Britain.__\n• Sunt englez. __I am English.__\n• Vorbesc engleza. __I speak English.__\n• Sunt vorbitor nativ de limba engleză. __I am an English native speaker.__\n• Limba mea nativă este engleza. __My mother tongue is English.__\n• Nu vorbesc foarte bine româna. __I don't speak Romanian very well.__\n• Vorbesc puțin limba română. __I speak a little Romanian.__\n• Înțeleg limba română, dar nu pot să vorbesc. __I understand Romanian, but I cannot speak.__\n• Vorbesc trei limbi străine. __I speak three foreign languages.__\n• Locuiesc în capitală, în București. __I live in the capital, in Bucharest.__",
+      "id": [
+        "136086"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l03-2_nationalitati_acte_de_vorbire_raspunsuri.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136087]\n[%Vocabular (Vocabulary)]\n===\ncapitală, capitale\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\ncapital\n[@language:en]\n===\ncare\n[@language:ro]\n[@pos:adj]\n[@pos:pron]\n==\nwhich / what\n[@language:en]\n===\ncâte, câți\n[@language:ro]\n[@pos:adj]\n==\nhow many\n[@language:en]\n===\nce\n[@language:ro]\n[@pos:adj]\n[@pos:pron]\n==\nwhat\n[@language:en]\n===\na înțelege\n[@language:ro]\n[@pos:verb]\n==\nto understand\n[@language:en]\n===\nlimbă, limbi\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nlanguage\n[@language:en]\n===\na locui\n[@language:ro]\n[@pos:verb]\n==\nto live\n[@language:en]\n===\nnativ, nativă\n[@language:ro]\n[@pos:adj]\n==\nnative\n[@language:en]\n===\na putea\n[@language:ro]\n[@pos:verb]\n==\nto be able\n[@language:en]\n===\npuțin\n[@language:ro]\n[@pos:adv]\n==\nlittle\n[@language:en]\n===\nstrăin, străină\n[@language:ro]\n[@pos:adj]\n==\nforeign\n[@language:en]\n===\ntrei\n[@language:ro]\n[@pos:num]\n==\nthree\n[@language:en]\n===\nțară, țări\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\ncountry\n[@language:en]\n===\nunde\n[@language:ro]\n[@pos:adv]\n==\nwhere\n[@language:en]\n===\na veni\n[@language:ro]\n[@pos:verb]\n==\nto come\n[@language:en]\n===\na vorbi\n[@language:ro]\n[@pos:verb]\n==\nto speak\n[@language:en]\n===\nvorbitor, vorbitori\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\nspeaker\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\ncapitală, capitale\n\n\n\n==\ncapital\n\n===\ncare\n\n\n\n==\nwhich / what\n\n===\ncâte, câți\n\n\n==\nhow many\n\n===\nce\n\n\n\n==\nwhat\n\n===\na înțelege\n\n\n==\nto understand\n\n===\nlimbă, limbi\n\n\n\n==\nlanguage\n\n===\na locui\n\n\n==\nto live\n\n===\nnativ, nativă\n\n\n==\nnative\n\n===\na putea\n\n\n==\nto be able\n\n===\npuțin\n\n\n==\nlittle\n\n===\nstrăin, străină\n\n\n==\nforeign\n\n===\ntrei\n\n\n==\nthree\n\n===\nțară, țări\n\n\n\n==\ncountry\n\n===\nunde\n\n\n==\nwhere\n\n===\na veni\n\n\n==\nto come\n\n===\na vorbi\n\n\n==\nto speak\n\n===\nvorbitor, vorbitori\n\n\n\n==\nspeaker\n\n===",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136087"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "noun",
+        "adj",
+        "pron",
+        "adj",
+        "adj",
+        "pron",
+        "verb",
+        "noun",
+        "verb",
+        "adj",
+        "verb",
+        "adv",
+        "adj",
+        "num",
+        "noun",
+        "adv",
+        "verb",
+        "verb",
+        "noun"
+      ],
+      "gender": [
+        "f",
+        "f",
+        "f",
+        "m"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136088]\n**Întrebări frecvente (Frequent questions)**\n\nCine? = __who?__\nCum? = __how?__\nCe? = __what?__\nCât? = __how much?__\nUnde? = __where?__\nCare? = __which? / what?__\nCând? = __when?__\nDe ce?= __why?__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l03-3_nationalitati_intrebari_frecvente.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Întrebări frecvente (Frequent questions)**\n\nCine? = __who?__\nCum? = __how?__\nCe? = __what?__\nCât? = __how much?__\nUnde? = __where?__\nCare? = __which? / what?__\nCând? = __when?__\nDe ce?= __why?__",
+      "id": [
+        "136088"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l03-3_nationalitati_intrebari_frecvente.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&audio]\n[@id:136089]\n**Naționalități (Nationalities)**\n\nAdjectivele care desemnează naționalități au întotdeauna o formă diferită la\nmasculin și la feminin. În română, toate substantivele referitoare la\nlimbi sunt cuvinte feminine, având terminația __„-ă”.\nAdjectives designating nationalities always have different forms in the masculine\nand in the feminine. In Romanian, all the nouns referring to languages are\nfeminine words, having the ending “-ă”.__\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t1.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_chef.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_english_guard.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_mime.png|\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l03-4_nationalitati_tabel.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Naționalități (Nationalities)**\n\nAdjectivele care desemnează naționalități au întotdeauna o formă diferită la\nmasculin și la feminin. În română, toate substantivele referitoare la\nlimbi sunt cuvinte feminine, având terminația __„-ă”.\nAdjectives designating nationalities always have different forms in the masculine\nand in the feminine. In Romanian, all the nouns referring to languages are\nfeminine words, having the ending “-ă”.__\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t1.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_chef.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_english_guard.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_mime.png|",
+      "id": [
+        "136089"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l03-4_nationalitati_tabel.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136090]\n**Acte de vorbire (Speech acts)\nExpresii de înțelegere (Phrases of understanding)**\n\n• Nu înțeleg. __I don't understand.__\n• Mă înțelegi? (informal) __Do you understand me?__\n• Mă înțelegeți? (formal) __Do you understand me?__\n• Cum se pronunță acest cuvânt? __How do you pronounce this word?__\n• Cum se spune la asta în română? __How do you say it in Romanian?__\n• Poți să repeți? (informal) __Can you repeat?__\n• Puteți să repetați? (formal) __Could you repeat?__\n• Îmi pare rău, tot nu înțeleg. __I am sorry, I still don't understand.__\n• Vorbește mai rar, te rog! (informal) __Speak more slowly, please!__\n• Vorbiți mai rar, vă rog! (formal) __Speak more slowly, please!__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l03-5_nationalitati_acte_de_vorbire_expresii_de_intelegere.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Acte de vorbire (Speech acts)\nExpresii de înțelegere (Phrases of understanding)**\n\n• Nu înțeleg. __I don't understand.__\n• Mă înțelegi? (informal) __Do you understand me?__\n• Mă înțelegeți? (formal) __Do you understand me?__\n• Cum se pronunță acest cuvânt? __How do you pronounce this word?__\n• Cum se spune la asta în română? __How do you say it in Romanian?__\n• Poți să repeți? (informal) __Can you repeat?__\n• Puteți să repetați? (formal) __Could you repeat?__\n• Îmi pare rău, tot nu înțeleg. __I am sorry, I still don't understand.__\n• Vorbește mai rar, te rog! (informal) __Speak more slowly, please!__\n• Vorbiți mai rar, vă rog! (formal) __Speak more slowly, please!__",
+      "id": [
+        "136090"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l03-5_nationalitati_acte_de_vorbire_expresii_de_intelegere.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136091]\n[%Vocabular (Vocabulary)]\n===\nacest\n[@language:ro]\n[@pos:adj]\n[@pos:pron]\n==\nthis\n[@language:en]\n===\ncuvânt, cuvinte\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nword\n[@language:en]\n===\na înțelege\n[@language:ro]\n[@pos:verb]\n==\nto understand\n[@language:en]\n===\na pronunța\n[@language:ro]\n[@pos:verb]\n==\nto pronounce\n[@language:en]\n===\na putea\n[@language:ro]\n[@pos:verb]\n==\nto be able\n[@language:en]\n===\nrar\n[@language:ro]\n[@pos:adv]\n==\nslowly\n[@language:en]\n===\na repeta\n[@language:ro]\n[@pos:verb]\n==\nto repeat\n[@language:en]\n===\na spune\n[@language:ro]\n[@pos:verb]\n==\nto say\n[@language:en]\n===\ntot\n[@language:ro]\n[@pos:adv]\n==\nstill\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\nacest\n\n\n\n==\nthis\n\n===\ncuvânt, cuvinte\n\n\n\n==\nword\n\n===\na înțelege\n\n\n==\nto understand\n\n===\na pronunța\n\n\n==\nto pronounce\n\n===\na putea\n\n\n==\nto be able\n\n===\nrar\n\n\n==\nslowly\n\n===\na repeta\n\n\n==\nto repeat\n\n===\na spune\n\n\n==\nto say\n\n===\ntot\n\n\n==\nstill\n===",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136091"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro"
+      ],
+      "pos": [
+        "adj",
+        "pron",
+        "noun",
+        "verb",
+        "verb",
+        "verb",
+        "adv",
+        "verb",
+        "verb",
+        "adv"
+      ],
+      "gender": [
+        "n"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136092]\n**Punctele cardinale (Cardinal points of the compass)**\n\nNord __North__\nSud __South__\nEst __East__\nVest __West__\n\nNord-vest __North-West__\nNord-est __North-East__\nSud-vest __South-West__\nSud-est __South-East__\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l03-6_nationalitati_punctele_cardinale.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Punctele cardinale (Cardinal points of the compass)**\n\nNord __North__\nSud __South__\nEst __East__\nVest __West__\n\nNord-vest __North-West__\nNord-est __North-East__\nSud-vest __South-West__\nSud-est __South-East__",
+      "id": [
+        "136092"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l03-6_nationalitati_punctele_cardinale.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136093]\n**Gramatică (Grammar)\nNumeralele cardinale simple (Simple cardinal numerals)**\n\n0 – zero\n1 – unu\n2 – doi\n3 – trei \n4 – patru \n5 – cinci\n6 – șase\n7 – șapte\n8 – opt\n9 – nouă\n10 – zece\n[&audio:https://docs.bitbook.education/bit-books/rolang/audio/l03-7_nationalitati_gramatica_numeralele_cardinale_simple.mp3]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Gramatică (Grammar)\nNumeralele cardinale simple (Simple cardinal numerals)**\n\n0 – zero\n1 – unu\n2 – doi\n3 – trei \n4 – patru \n5 – cinci\n6 – șase\n7 – șapte\n8 – opt\n9 – nouă\n10 – zece",
+      "id": [
+        "136093"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/rolang/audio/l03-7_nationalitati_gramatica_numeralele_cardinale_simple.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136094]\n**Verbe la indicativ prezent (Verbs in the Present Indicative)**\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t2.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Verbe la indicativ prezent (Verbs in the Present Indicative)**\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t2.png|\n|image:https://docs.bitbook.education/bit-books/rolang/learn_romanian_book/web-resources/images/l3_t3.png|",
+      "id": [
+        "136094"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:136095]\n[#LECȚIA 4\nOrientare\nGetting directions]\n[%4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "136095"
+      ],
+      "title": "LECȚIA 4\nOrientare\nGetting directions"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&imageWithAudio]\n[@id:136096]\n[%Dialog (Dialogue) L04-1]\n**Ioana Popescu:** Bună ziua!\n__Hello!__\n**Mihai Alexandrescu:** Bună ziua!\n__Hello!__\n**Ioana Popescu:** Îmi cer scuze, vreau să știu cum se numește piața asta.\n__I apologize, I want to know what the name of this square is.__\n**Mihai Alexandrescu:** Se numește Piața Universității. Unde vreți să mergeți?\n__It is called Piața Universității. Where do you want to go?__\n**Ioana Popescu:** La Piața Unirii.\n__To Piața Unirii.__\n**Mihai Alexandrescu:** Trebuie să mergeți o stație cu metroul sau pe jos.\n__You have to take the metro for one stop or walk.__\n**Ioana Popescu:** Este departe?\n__Is it far?__\n**Mihai Alexandrescu:** Nu, este aproape, în maximum zece minute ajungeți.\n__No, it's close, you'll arrive in a maximum of ten minutes.__\n**Ioana Popescu:** Vă mulțumesc, sunteți foarte amabil! O zi bună!\n__Thank you, you are very kind! Have a nice day!__\n**Mihai Alexandrescu:** O zi bună și dumneavoastră!\n__Have a nice day, too!__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Ioana Popescu:** Bună ziua!\n__Hello!__\n**Mihai Alexandrescu:** Bună ziua!\n__Hello!__\n**Ioana Popescu:** Îmi cer scuze, vreau să știu cum se numește piața asta.\n__I apologize, I want to know what the name of this square is.__\n**Mihai Alexandrescu:** Se numește Piața Universității. Unde vreți să mergeți?\n__It is called Piața Universității. Where do you want to go?__\n**Ioana Popescu:** La Piața Unirii.\n__To Piața Unirii.__\n**Mihai Alexandrescu:** Trebuie să mergeți o stație cu metroul sau pe jos.\n__You have to take the metro for one stop or walk.__\n**Ioana Popescu:** Este departe?\n__Is it far?__\n**Mihai Alexandrescu:** Nu, este aproape, în maximum zece minute ajungeți.\n__No, it's close, you'll arrive in a maximum of ten minutes.__\n**Ioana Popescu:** Vă mulțumesc, sunteți foarte amabil! O zi bună!\n__Thank you, you are very kind! Have a nice day!__\n**Mihai Alexandrescu:** O zi bună și dumneavoastră!\n__Have a nice day, too!__",
+      "id": [
+        "136096"
+      ],
+      "item": "Dialog (Dialogue) L04-1",
+      "resource": {
+        "type": "image",
+        "image": {}
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 25,
+        "errorLine": "[.article:bitmark--&imageWithAudio]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136097]\n[%Vocabular (Vocabulary)]\n===\na ajunge\n[@language:ro]\n[@pos:verb]\n==\nto arrive / to get\n[@language:en]\n===\namabil, amabilă\n[@language:ro]\n[@pos:adj]\n==\nkind\n[@language:en]\n===\naproape\n[@language:ro]\n[@pos:adv]\n==\nnear / close\n[@language:en]\n===\na cere scuze (expr.)\n[@language:ro]\n==\nto apologize\n[@language:en]\n===\ndeparte\n[@language:ro]\n[@pos:adv]\n==\nfar\n[@language:en]\n===\na merge\n[@language:ro]\n[@pos:verb]\n==\nto go\n[@language:en]\n===\nmetrou, metrouri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nsubway\n[@language:en]\n===\nminut, minute\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nminute\n[@language:en]\n===\npe jos (expr.)\n[@language:ro]\n==\non foot\n[@language:en]\n===\npiață, piețe\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nsquare\n[@language:en]\n===\nstație, stații\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nstation\n[@language:en]\n===\na ști\n[@language:ro]\n[@pos:verb]\n==\nto know\n[@language:en]\n===\na vrea\n[@language:ro]\n[@pos:verb]\n==\nto want\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\na ajunge\n\n\n==\nto arrive / to get\n\n===\namabil, amabilă\n\n\n==\nkind\n\n===\naproape\n\n\n==\nnear / close\n\n===\na cere scuze (expr.)\n\n==\nto apologize\n\n===\ndeparte\n\n\n==\nfar\n\n===\na merge\n\n\n==\nto go\n\n===\nmetrou, metrouri\n\n\n\n==\nsubway\n\n===\nminut, minute\n\n\n\n==\nminute\n\n===\npe jos (expr.)\n\n==\non foot\n\n===\npiață, piețe\n\n\n\n==\nsquare\n\n===\nstație, stații\n\n\n\n==\nstation\n\n===\na ști\n\n\n==\nto know\n\n===\na vrea\n\n\n==\nto want\n\n===",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136097"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "verb",
+        "adj",
+        "adv",
+        "adv",
+        "verb",
+        "noun",
+        "noun",
+        "noun",
+        "noun",
+        "verb",
+        "verb"
+      ],
+      "gender": [
+        "n",
+        "n",
+        "f",
+        "f"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136098]\n[%Acte de vorbire (Speech acts) L04-2 - Cum întrebăm? (How do we ask?)]\n• Scuzați-mă / mă scuzați … __Excuse me …__\n• Îmi cer scuze … __I apologize …__\n• Fiți amabil / fiți amabilă … __Be kind …__\n• Cum pot să ajung la Piața Universității? __How can I get to Piața Universității?__\n• Puteți să-mi spuneți cum să ajung la Piața Universității? __Could you tell me how to get to Piața Universității?__\n• Este departe? __Is it far?__\n• Este aproape? __Is it near?__\n• Trebuie să ajung la această adresă. __I have to arrive at this address.__\n• Mă puteți ajuta / puteți să mă ajutați? __Could you help me?__\n• Cât de departe este de aici? __How far is it from here?__\n• Cum se numește piața aceasta în care suntem? __What is the name of this square\nwhere we are?__\n• Cum se numește strada aceasta? __What is the name of this street?__\n• Puteți să îmi spuneți unde este strada Lipscani? __Could you tell me where Lipscani\nstreet is?__\n• Puteți să îmi spuneți cum să ajung înapoi în centru, vă rog? __Could you tell me how to get back downtown, please?__\n• Știți unde este: __Do you know where:__\n– gara? – __the railway station is?__\n– poșta? – __the post-office is?__\n– banca? – __the bank is?__\n– o casă de schimb valutar? – __an exchange office is?__\n– Muzeul de Artă? – __the Art Museum is?__\n– cea mai apropiată stație de metrou? – __the nearest metro station is?__\n• Cum ajung acolo? __How do I get there?__\n• Acesta este drumul spre Piața Romană? __Is this the way to Piața Romană?__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Scuzați-mă / mă scuzați … __Excuse me …__\n• Îmi cer scuze … __I apologize …__\n• Fiți amabil / fiți amabilă … __Be kind …__\n• Cum pot să ajung la Piața Universității? __How can I get to Piața Universității?__\n• Puteți să-mi spuneți cum să ajung la Piața Universității? __Could you tell me how to get to Piața Universității?__\n• Este departe? __Is it far?__\n• Este aproape? __Is it near?__\n• Trebuie să ajung la această adresă. __I have to arrive at this address.__\n• Mă puteți ajuta / puteți să mă ajutați? __Could you help me?__\n• Cât de departe este de aici? __How far is it from here?__\n• Cum se numește piața aceasta în care suntem? __What is the name of this square\nwhere we are?__\n• Cum se numește strada aceasta? __What is the name of this street?__\n• Puteți să îmi spuneți unde este strada Lipscani? __Could you tell me where Lipscani\nstreet is?__\n• Puteți să îmi spuneți cum să ajung înapoi în centru, vă rog? __Could you tell me how to get back downtown, please?__\n• Știți unde este: __Do you know where:__\n– gara? – __the railway station is?__\n– poșta? – __the post-office is?__\n– banca? – __the bank is?__\n– o casă de schimb valutar? – __an exchange office is?__\n– Muzeul de Artă? – __the Art Museum is?__\n– cea mai apropiată stație de metrou? – __the nearest metro station is?__\n• Cum ajung acolo? __How do I get there?__\n• Acesta este drumul spre Piața Romană? __Is this the way to Piața Romană?__",
+      "id": [
+        "136098"
+      ],
+      "item": "Acte de vorbire (Speech acts) L04-2 - Cum întrebăm? (How do we ask?)",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136099]\n[%Vocabular (Vocabulary)]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "136099"
+      ],
+      "item": "Vocabular (Vocabulary)"
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136100]\n[%Vocabular (Vocabulary)]\n===\naceastă\n[@language:ro]\n[@pos:adj]\n[@pos:pron]\n==\nthis\n[@language:en]\n===\nacolo\n[@language:ro]\n[@pos:adv]\n==\nthere\n[@language:en]\n===\nadresă, adrese\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\naddress\n[@language:en]\n===\na ajunge\n[@language:ro]\n[@pos:verb]\n==\nto arrive\n[@language:en]\n===\na ajuta\n[@language:ro]\n[@pos:verb]\n==\nto help\n[@language:en]\n===\namabil, amabilă\n[@language:ro]\n[@pos:adj]\n==\nkind\n[@language:en]\n===\naproape\n[@language:ro]\n[@pos:adv]\n==\nnear / close\n[@language:en]\n===\nautobuz, autobuze\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nbus\n[@language:en]\n===\nbancă, bănci\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nbank\n[@language:en]\n===\ncasă de schimb valutar (expr.)\n[@language:ro]\n==\nexchange office\n[@language:en]\n===\ncea mai apropiată (expr.)\n[@language:ro]\n==\nthe nearest\n[@language:en]\n===\ndeparte\n[@language:ro]\n[@pos:adv]\n==\nfar\n[@language:en]\n===\ndrum, drumuri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nway\n[@language:en]\n===\ngară, gări\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nrailway station\n[@language:en]\n===\na întreba\n[@language:ro]\n[@pos:verb]\n==\nto ask a question\n[@language:en]\n===\nmuzeu, muzee\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nmuseum\n[@language:en]\n===\npoștă, poște\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\npost-office\n[@language:en]\n===\na putea\n[@language:ro]\n[@pos:verb]\n==\nto be able\n[@language:en]\n===\na scuza\n[@language:ro]\n[@pos:verb]\n==\nto excuse\n[@language:en]\n===\na spune\n[@language:ro]\n[@pos:verb]\n==\nto say\n[@language:en]\n===\nstație, stații\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\n(bus) stop / station\n[@language:en]\n===\nstradă, străzi\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nstreet\n[@language:en]\n===\na ști\n[@language:ro]\n[@pos:verb]\n==\nto know\n[@language:en]\n===\na trebui\n[@language:ro]\n[@pos:verb]\n==\nto have to\n[@language:en]\n===\nunde\n[@language:ro]\n[@pos:adv]\n==\nwhere\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\naceastă\n\n\n\n==\nthis\n\n===\nacolo\n\n\n==\nthere\n\n===\nadresă, adrese\n\n\n\n==\naddress\n\n===\na ajunge\n\n\n==\nto arrive\n\n===\na ajuta\n\n\n==\nto help\n\n===\namabil, amabilă\n\n\n==\nkind\n\n===\naproape\n\n\n==\nnear / close\n\n===\nautobuz, autobuze\n\n\n\n==\nbus\n\n===\nbancă, bănci\n\n\n\n==\nbank\n\n===\ncasă de schimb valutar (expr.)\n\n==\nexchange office\n\n===\ncea mai apropiată (expr.)\n\n==\nthe nearest\n\n===\ndeparte\n\n\n==\nfar\n\n===\ndrum, drumuri\n\n\n\n==\nway\n\n===\ngară, gări\n\n\n\n==\nrailway station\n\n===\na întreba\n\n\n==\nto ask a question\n\n===\nmuzeu, muzee\n\n\n\n==\nmuseum\n\n===\npoștă, poște\n\n\n\n==\npost-office\n\n===\na putea\n\n\n==\nto be able\n\n===\na scuza\n\n\n==\nto excuse\n\n===\na spune\n\n\n==\nto say\n\n===\nstație, stații\n\n\n\n==\n(bus) stop / station\n\n===\nstradă, străzi\n\n\n\n==\nstreet\n\n===\na ști\n\n\n==\nto know\n\n===\na trebui\n\n\n==\nto have to\n\n===\nunde\n\n\n==\nwhere\n\n===",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136100"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "adj",
+        "pron",
+        "adv",
+        "noun",
+        "verb",
+        "verb",
+        "adj",
+        "adv",
+        "noun",
+        "noun",
+        "adv",
+        "noun",
+        "noun",
+        "verb",
+        "noun",
+        "noun",
+        "verb",
+        "verb",
+        "verb",
+        "noun",
+        "noun",
+        "verb",
+        "verb",
+        "adv"
+      ],
+      "gender": [
+        "f",
+        "n",
+        "f",
+        "n",
+        "f",
+        "n",
+        "f",
+        "f",
+        "f"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136101]\n[%Cum răspundem? (How do we answer?) L04-3]\n• Mergeți drept înainte! Go straight ahead!\n• Mergeți pe această stradă până ajungeți la semafor! __Go on this street until you reach the traffic light!__\n• Trebuie să o luați la dreapta / la stânga! __You have to turn right / left!__\n• Traversați strada! __Cross the street!__\n• Aveți mult de mers. __It's a long way.__\n• Nu puteți să mergeți pe jos. __You cannot walk.__\n• Luați autobuzul și coborâți la a treia stație! __Take the bus and get off at the third\nstop!__\n• Mergeți drept înainte până când ajungeți la Piața Universității și\nîntrebați din nou! __Go straight on till you get to Piața Universității and ask again!__\n• La colț. __On the corner.__\n• După colț. __Round the corner.__\n• Chiar în fața dumneavoastră. __Right in front of you.__\n• La 200 de metri de aici. __200 meters from here.__\n• Urmați acest drum până la intersecție! __Follow this road up to the intersection!__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Mergeți drept înainte! Go straight ahead!\n• Mergeți pe această stradă până ajungeți la semafor! __Go on this street until you reach the traffic light!__\n• Trebuie să o luați la dreapta / la stânga! __You have to turn right / left!__\n• Traversați strada! __Cross the street!__\n• Aveți mult de mers. __It's a long way.__\n• Nu puteți să mergeți pe jos. __You cannot walk.__\n• Luați autobuzul și coborâți la a treia stație! __Take the bus and get off at the third\nstop!__\n• Mergeți drept înainte până când ajungeți la Piața Universității și\nîntrebați din nou! __Go straight on till you get to Piața Universității and ask again!__\n• La colț. __On the corner.__\n• După colț. __Round the corner.__\n• Chiar în fața dumneavoastră. __Right in front of you.__\n• La 200 de metri de aici. __200 meters from here.__\n• Urmați acest drum până la intersecție! __Follow this road up to the intersection!__",
+      "id": [
+        "136101"
+      ],
+      "item": "Cum răspundem? (How do we answer?) L04-3",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136102]\n[%Vocabular (Vocabulary)\n===\naici\n[@language:ro]\n[@pos:adv]\n==\nhere\n[@language:en]\n===\nchiar\n[@language:ro]\n[@pos:adv]\n==\nright / just\n[@language:en]\n===\na coborî\n[@language:ro]\n[@pos:verb]\n==\nto get off\n[@language:en]\n===\ncolț, colțuri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\ncorner\n[@language:en]\n===\ndin nou (expr.)\n[@language:ro]\n==\nagain\n[@language:en]\n===\ndrept\n[@language:ro]\n[@pos:adv]\n==\nstraight\n[@language:en]\n===\nintersecție, intersecții\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nintersection / crossroad\n[@language:en]\n===\nînainte\n[@language:ro]\n[@pos:adv]\n==\nahead / on\n[@language:en]\n===\nîn fața (expr.)\n[@language:ro]\n==\nin front of\n[@language:en]\n===\na întreba\n[@language:ro]\n[@pos:verb]\n==\nto ask a question\n[@language:en]\n===\na lua\n[@language:ro]\n[@pos:verb]\n==\nto take\n[@language:en]\n===\na o lua (expr.)\n[@language:ro]\n==\nto turn\n[@language:en]\n===\na merge\n[@language:ro]\n[@pos:verb]\n==\nto go\n[@language:en]\n===\nmetru, metri\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\nmeter\n[@language:en]\n===\na răspunde\n[@language:ro]\n[@pos:verb]\n==\nto answer\n[@language:en]\n===\nsemafor, semafoare\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\ntraffic light\n[@language:en]\n===\nstradă, străzi\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nstreet\n[@language:en]\n===\na traversa\n[@language:ro]\n[@pos:verb]\n==\nto cross\n[@language:en]\n===\ntrei\n[@language:ro]\n[@pos:num]\n==\nthree\n[@language:en]\n===\na treia\n[@language:ro]\n[@pos:num]\n==\nthird\n[@language:en]\n===\na urma\n[@language:ro]\n[@pos:verb]\n==\nto follow\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\naici\n\n\n==\nhere\n\n===\nchiar\n\n\n==\nright / just\n\n===\na coborî\n\n\n==\nto get off\n\n===\ncolț, colțuri\n\n\n\n==\ncorner\n\n===\ndin nou (expr.)\n\n==\nagain\n\n===\ndrept\n\n\n==\nstraight\n\n===\nintersecție, intersecții\n\n\n\n==\nintersection / crossroad\n\n===\nînainte\n\n\n==\nahead / on\n\n===\nîn fața (expr.)\n\n==\nin front of\n\n===\na întreba\n\n\n==\nto ask a question\n\n===\na lua\n\n\n==\nto take\n\n===\na o lua (expr.)\n\n==\nto turn\n\n===\na merge\n\n\n==\nto go\n\n===\nmetru, metri\n\n\n\n==\nmeter\n\n===\na răspunde\n\n\n==\nto answer\n\n===\nsemafor, semafoare\n\n\n\n==\ntraffic light\n\n===\nstradă, străzi\n\n\n\n==\nstreet\n\n===\na traversa\n\n\n==\nto cross\n\n===\ntrei\n\n\n==\nthree\n\n===\na treia\n\n\n==\nthird\n\n===\na urma\n\n\n==\nto follow\n\n===",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136102"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "adv",
+        "adv",
+        "verb",
+        "noun",
+        "adv",
+        "noun",
+        "adv",
+        "verb",
+        "verb",
+        "verb",
+        "noun",
+        "verb",
+        "noun",
+        "noun",
+        "verb",
+        "num",
+        "num",
+        "verb"
+      ],
+      "gender": [
+        "n",
+        "f",
+        "m",
+        "n",
+        "f"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '\\n===\n'",
+        "line": 3,
+        "column": 24,
+        "errorLine": "[%Vocabular (Vocabulary)"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136103]\n[%Panouri și indicatoare (Billboards and signs) L04-4]\n• Atenție! __Pay attention!__\n• Interzis cu animale! __No pets!__\n• Accesul interzis! __No access!__\n• Fumatul interzis! __No smoking!__\n• Focul interzis! __No fire!__\n• Oprirea interzisă! __No stopping!__\n• Parcarea interzisă! __No parking!__\n• Scăldatul interzis! __No swimming!__\n• Intrarea interzisă persoanelor neautorizate! __Authorized personnel only!__\n• Nu atingeți! __Do not touch!__\n• Nu călcați iarba! __Do not walk on the grass!__\n• Nu deranjați! __Do not disturb!__\n• Nu parcați! __Do not park / no parking!__\n• Deschis __Open__\n• Închis __Closed__\n• Lift defect! __Lift out of order!__\n• Apăsați pe buton! __Press the button!__\n• Împingeți! __Push!__\n• Trageți! __Pull!__\n• Pericol! __Danger!__\n• Pericol de moarte! __Danger of death!__\n• Ieșire de urgență __Emergency exit__\n• Sosiri __Arrivals__\n• Plecări __Departures__\n• Intrare liberă __Free entrance__\n• Apă potabilă __Drinking water__\n• Proprietate privată __Private property__\n• Birou de informații __Information office__\n• Închirieri auto __Car rental__\n• Parcare fără plată __Free parking__\n• Stație de autobuz __Bus stop__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Atenție! __Pay attention!__\n• Interzis cu animale! __No pets!__\n• Accesul interzis! __No access!__\n• Fumatul interzis! __No smoking!__\n• Focul interzis! __No fire!__\n• Oprirea interzisă! __No stopping!__\n• Parcarea interzisă! __No parking!__\n• Scăldatul interzis! __No swimming!__\n• Intrarea interzisă persoanelor neautorizate! __Authorized personnel only!__\n• Nu atingeți! __Do not touch!__\n• Nu călcați iarba! __Do not walk on the grass!__\n• Nu deranjați! __Do not disturb!__\n• Nu parcați! __Do not park / no parking!__\n• Deschis __Open__\n• Închis __Closed__\n• Lift defect! __Lift out of order!__\n• Apăsați pe buton! __Press the button!__\n• Împingeți! __Push!__\n• Trageți! __Pull!__\n• Pericol! __Danger!__\n• Pericol de moarte! __Danger of death!__\n• Ieșire de urgență __Emergency exit__\n• Sosiri __Arrivals__\n• Plecări __Departures__\n• Intrare liberă __Free entrance__\n• Apă potabilă __Drinking water__\n• Proprietate privată __Private property__\n• Birou de informații __Information office__\n• Închirieri auto __Car rental__\n• Parcare fără plată __Free parking__\n• Stație de autobuz __Bus stop__",
+      "id": [
+        "136103"
+      ],
+      "item": "Panouri și indicatoare (Billboards and signs) L04-4",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136104]\n[%Vocabular (Vocabulary)\n===\nacces\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\naccess\n[@language:en]\n===\na apăsa\n[@language:ro]\n[@pos:verb]\n==\nto press\n[@language:en]\n===\natenție, atenții\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nattention\n[@language:en]\n===\na atinge\n[@language:ro]\n[@pos:verb]\n==\nto touch\n[@language:en]\n===\nbuton, butoane\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nbutton\n[@language:en]\n===\ndefect, defectă\n[@language:ro]\n[@pos:adj]\n==\nout of order\n[@language:en]\n===\na deranja\n[@language:ro]\n[@pos:verb]\n==\nto disturb\n[@language:en]\n===\ndeschis, deschisă\n[@language:ro]\n[@pos:adj]\n==\nopen\n[@language:en]\n===\nfoc, focuri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nfire\n[@language:en]\n===\nfumat\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nsmoking\n[@language:en]\n===\niarbă\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\ngrass\n[@language:en]\n===\nieșire, ieșiri\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nexit\n[@language:en]\n===\ninformație, informații\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\ninformation\n===\ninterzis, interzisă\n[@language:ro]\n[@pos:adj]\n==\nforbidden\n[@language:en]\n===\nintrare, intrări\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nentrance\n[@language:en]\n===\na împinge\n[@language:ro]\n[@pos:verb]\n==\nto push\n[@language:en]\n===\nînchiriere, închirieri\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nrental\n[@language:en]\n===\nînchis, închisă\n[@language:ro]\n[@pos:adj]\n==\nclosed\n[@language:en]\n===\nliber, liberă\n[@language:ro]\n[@pos:adj]\n==\nfree\n[@language:en]\n===\nmoarte, morți\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\ndeath\n[@language:en]\n===\na parca\n[@language:ro]\n[@pos:verb]\n==\nto park\n[@language:en]\n===\nparcare, parcări\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nparking\n[@language:en]\n===\npericol, pericole\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\ndanger\n[@language:en]\n===\nplecare, plecări\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\ndeparture\n[@language:en]\n===\npotabil, potabilă\n[@language:ro]\n[@pos:adj]\n==\ndrinking\n[@language:en]\n===\nprivat, privată\n[@language:ro]\n[@pos:adj]\n==\nprivate\n[@language:en]\n===\nproprietate, proprietăți\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nproperty\n[@language:en]\n===\nscăldat\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nswimming\n[@language:en]\n===\nsosire, sosiri\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\narrival\n[@language:en]\n===\na trage\n[@language:ro]\n[@pos:verb]\n==\nto pull\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\nacces\n\n\n\n==\naccess\n\n===\na apăsa\n\n\n==\nto press\n\n===\natenție, atenții\n\n\n\n==\nattention\n\n===\na atinge\n\n\n==\nto touch\n\n===\nbuton, butoane\n\n\n\n==\nbutton\n\n===\ndefect, defectă\n\n\n==\nout of order\n\n===\na deranja\n\n\n==\nto disturb\n\n===\ndeschis, deschisă\n\n\n==\nopen\n\n===\nfoc, focuri\n\n\n\n==\nfire\n\n===\nfumat\n\n\n\n==\nsmoking\n\n===\niarbă\n\n\n\n==\ngrass\n\n===\nieșire, ieșiri\n\n\n\n==\nexit\n\n===\ninformație, informații\n\n\n\n==\ninformation\n===\ninterzis, interzisă\n\n\n==\nforbidden\n\n===\nintrare, intrări\n\n\n\n==\nentrance\n\n===\na împinge\n\n\n==\nto push\n\n===\nînchiriere, închirieri\n\n\n\n==\nrental\n\n===\nînchis, închisă\n\n\n==\nclosed\n\n===\nliber, liberă\n\n\n==\nfree\n\n===\nmoarte, morți\n\n\n\n==\ndeath\n\n===\na parca\n\n\n==\nto park\n\n===\nparcare, parcări\n\n\n\n==\nparking\n\n===\npericol, pericole\n\n\n\n==\ndanger\n\n===\nplecare, plecări\n\n\n\n==\ndeparture\n\n===\npotabil, potabilă\n\n\n==\ndrinking\n\n===\nprivat, privată\n\n\n==\nprivate\n\n===\nproprietate, proprietăți\n\n\n\n==\nproperty\n\n===\nscăldat\n\n\n\n==\nswimming\n\n===\nsosire, sosiri\n\n\n\n==\narrival\n\n===\na trage\n\n\n==\nto pull\n\n===",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136104"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "noun",
+        "verb",
+        "noun",
+        "verb",
+        "noun",
+        "adj",
+        "verb",
+        "adj",
+        "noun",
+        "noun",
+        "noun",
+        "noun",
+        "noun",
+        "adj",
+        "noun",
+        "verb",
+        "noun",
+        "adj",
+        "adj",
+        "noun",
+        "verb",
+        "noun",
+        "noun",
+        "noun",
+        "adj",
+        "adj",
+        "noun",
+        "noun",
+        "noun",
+        "verb"
+      ],
+      "gender": [
+        "n",
+        "f",
+        "n",
+        "n",
+        "n",
+        "f",
+        "f",
+        "f",
+        "f",
+        "f",
+        "f",
+        "f",
+        "n",
+        "f",
+        "f",
+        "n",
+        "f"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '\\n===\n'",
+        "line": 3,
+        "column": 24,
+        "errorLine": "[%Vocabular (Vocabulary)"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136105]\n[%Acte de vorbire (Speech acts) - Expresii pentru scuze (Asking for apologies) L04-5]\n• Îmi cer scuze! __I apologize!__\n• Scuză-mă / mă scuzi! (informal) __Excuse me!__\n• Scuzați-mă / mă scuzați! (formal) __Excuse me!__\n• Îmi pare rău! __I am sorry!__\n• Pardon! __Sorry!__\n• Scuză-mă că te deranjez! (informal) __Excuse me for disturbing you!__\n• Scuzați-mă că vă deranjez! (formal) __Excuse me for disturbing you!__\n• Scuză-mă, o clipă / scuză-mă, un moment! (informal) __Excuse me for a moment!__\n• Scuzați-mă, o clipă / scuzați-mă, un moment! (formal) __Excuse me for a moment!__\n• Acceptă, te rog, scuzele mele! (informal) __Please accept my apologies!__\n• Acceptați, vă rog, scuzele mele! (formal) __Please accept my apologies!__\n• Te rog să mă scuzi! (informal) __Please excuse me!__\n• Vă rog să mă scuzați! (formal) __Please excuse me!__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Îmi cer scuze! __I apologize!__\n• Scuză-mă / mă scuzi! (informal) __Excuse me!__\n• Scuzați-mă / mă scuzați! (formal) __Excuse me!__\n• Îmi pare rău! __I am sorry!__\n• Pardon! __Sorry!__\n• Scuză-mă că te deranjez! (informal) __Excuse me for disturbing you!__\n• Scuzați-mă că vă deranjez! (formal) __Excuse me for disturbing you!__\n• Scuză-mă, o clipă / scuză-mă, un moment! (informal) __Excuse me for a moment!__\n• Scuzați-mă, o clipă / scuzați-mă, un moment! (formal) __Excuse me for a moment!__\n• Acceptă, te rog, scuzele mele! (informal) __Please accept my apologies!__\n• Acceptați, vă rog, scuzele mele! (formal) __Please accept my apologies!__\n• Te rog să mă scuzi! (informal) __Please excuse me!__\n• Vă rog să mă scuzați! (formal) __Please excuse me!__",
+      "id": [
+        "136105"
+      ],
+      "item": "Acte de vorbire (Speech acts) - Expresii pentru scuze (Asking for apologies) L04-5",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136106]\n[%Vocabular (Vocabulary)\n===\na accepta (vb.\n[@language:ro]\n[@pos:verb]\n==\nto accept\n[@language:en]\n===\na cere scuze (expr.)\n[@language:ro]\n==\nto apologize\n[@language:en]\n===\nclipă, clipe (s.f.\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nmoment / instant\n[@language:en]\n===\na deranja (vb.\n[@language:ro]\n[@pos:verb]\n==\nto disturb\n[@language:en]\n===\na scuza (vb.\n[@language:ro]\n[@pos:verb]\n==\nto excuse\n[@language:en]\n===\nscuză, scuze (s.f.\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nexcuse\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "[%Vocabular (Vocabulary)\n===\na accepta (vb.\n\n\n==\nto accept\n\n===\na cere scuze (expr.)\n\n==\nto apologize\n\n===\nclipă, clipe (s.f.\n\n\n\n==\nmoment / instant\n\n===\na deranja (vb.\n\n\n==\nto disturb\n\n===\na scuza (vb.\n\n\n==\nto excuse\n\n===\nscuză, scuze (s.f.\n\n\n\n==\nexcuse\n\n===",
+      "item": "Vocabular (Vocabulary)\n===\na accepta (vb.<missing '",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136106"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "verb",
+        "noun",
+        "verb",
+        "verb",
+        "noun"
+      ],
+      "gender": [
+        "f",
+        "f"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n===\n'",
+        "line": 3,
+        "column": 24,
+        "errorLine": "[%Vocabular (Vocabulary)"
+      },
+      {
+        "message": "Unexpected input '\\n'",
+        "line": 5,
+        "column": 14,
+        "errorLine": "a accepta (vb."
+      },
+      {
+        "message": "Unexpected input '\\n[@pos:verb]\n==\n'",
+        "line": 7,
+        "column": 11,
+        "errorLine": "[@pos:verb]"
+      },
+      {
+        "message": "Unexpected input '\\n==\n'",
+        "line": 7,
+        "column": 11,
+        "errorLine": "[@pos:verb]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136107]\n[%Gramatică (Grammar) - Verbe la indicativ prezent (Verbs in the Present Indicative)]\n|image:\n\n|image:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:\n\n|image:",
+      "id": [
+        "136107"
+      ],
+      "item": "Gramatică (Grammar) - Verbe la indicativ prezent (Verbs in the Present Indicative)"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:136108]\n[#LECȚIA 5\nO convorbire\nA conversation]\n[%5]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "136108"
+      ],
+      "title": "LECȚIA 5\nO convorbire\nA conversation"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&imageWithAudio]\n[@id:136109]\n[%Dialog (Dialogue) L05-1]\n**Mihai:** Bună, Maria!\n__Hi, Maria!__\n**Maria:** Bună, Mihai! Ce mai faci?\n__Hi, Mihai! How are you?__\n**Mihai:** Bine, mulțumesc! Tu?\n__Fine, thanks! You?__\n**Maria:** Și eu sunt bine. Vin de la serviciu.\n__Me too, I am well. I'm coming from work.__\n**Mihai:** Unde lucrezi?\n__Where do you work?__\n**Maria:** La o școală, predau limba franceză. Sunt profesoară.\n__At a school, I teach French. I am a teacher.__\n**Mihai:** De cât timp lucrezi aici?\n__How long have you been working here?__\n**Maria:** De două luni. Tu unde lucrezi?\n__Two months. Where do you work?__\n**Mihai:** Eu lucrez la ziarul „Cotidianul”. Sunt jurnalist.\n__I work for the newspaper “Cotidianul”. I am a journalist.__\n**Maria:** Ce frumos! Presupun că este interesantă profesia de jurnalist.\n__How nice! I suppose the profession of journalism is interesting.__\n**Mihai:** Da, este, îmi place foarte mult. Colegii mei sunt persoane foarte\ndinamice și mă simt bine acolo.\n__Yes, it is, I like it very much. My colleagues are very dynamic people, and I feel\ngood there.__\n**Maria:** Mă bucur!\n__I am glad!__\n**Mihai:** Eu trebuie să plec acum. Te rog să îmi trimiți un mesaj prin e-mail și poate ne vedem într-o zi la o cafea.\n__I have to leave now. Please send me an e-mail message, and maybe we can get\ntogether someday for a coffee.__\n**Maria:** Sigur, îmi face mare plăcere să ne vedem.\n__Sure, it's a great pleasure for me to see you.__\n**Mihai:** O zi bună!\n__Have a nice day!__\n**Maria:** O zi bună și ție!\n__Have a nice day, too!__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Mihai:** Bună, Maria!\n__Hi, Maria!__\n**Maria:** Bună, Mihai! Ce mai faci?\n__Hi, Mihai! How are you?__\n**Mihai:** Bine, mulțumesc! Tu?\n__Fine, thanks! You?__\n**Maria:** Și eu sunt bine. Vin de la serviciu.\n__Me too, I am well. I'm coming from work.__\n**Mihai:** Unde lucrezi?\n__Where do you work?__\n**Maria:** La o școală, predau limba franceză. Sunt profesoară.\n__At a school, I teach French. I am a teacher.__\n**Mihai:** De cât timp lucrezi aici?\n__How long have you been working here?__\n**Maria:** De două luni. Tu unde lucrezi?\n__Two months. Where do you work?__\n**Mihai:** Eu lucrez la ziarul „Cotidianul”. Sunt jurnalist.\n__I work for the newspaper “Cotidianul”. I am a journalist.__\n**Maria:** Ce frumos! Presupun că este interesantă profesia de jurnalist.\n__How nice! I suppose the profession of journalism is interesting.__\n**Mihai:** Da, este, îmi place foarte mult. Colegii mei sunt persoane foarte\ndinamice și mă simt bine acolo.\n__Yes, it is, I like it very much. My colleagues are very dynamic people, and I feel\ngood there.__\n**Maria:** Mă bucur!\n__I am glad!__\n**Mihai:** Eu trebuie să plec acum. Te rog să îmi trimiți un mesaj prin e-mail și poate ne vedem într-o zi la o cafea.\n__I have to leave now. Please send me an e-mail message, and maybe we can get\ntogether someday for a coffee.__\n**Maria:** Sigur, îmi face mare plăcere să ne vedem.\n__Sure, it's a great pleasure for me to see you.__\n**Mihai:** O zi bună!\n__Have a nice day!__\n**Maria:** O zi bună și ție!\n__Have a nice day, too!__",
+      "id": [
+        "136109"
+      ],
+      "item": "Dialog (Dialogue) L05-1",
+      "resource": {
+        "type": "image",
+        "image": {}
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 25,
+        "errorLine": "[.article:bitmark--&imageWithAudio]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136110]\n[%Vocabular (Vocabulary)\n===\nacum\n[@language:ro]\n[@pos:adv]\n==\nnow\n[@language:en]\n===\nacolo\n[@language:ro]\n[@pos:adv]\n==\nthere\n[@language:en]\n===\na se bucura\n[@language:ro]\n[@pos:verb]\n==\nto be glad\n[@language:en]\n===\ncafea, cafele\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\ncoffee\n[@language:en]\n===\ncoleg, colegi\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\ncolleague\n[@language:en]\n===\ndinamic, dinamică\n[@language:ro]\n[@pos:adj]\n==\ndynamic\n[@language:en]\n===\ninteresant, interesantă\n[@language:ro]\n[@pos:adj]\n==\ninteresting\n[@language:en]\n===\nîntr-o zi (expr.)\n[@language:ro]\n==\nsome day\n[@language:en]\n===\njurnalist, jurnaliști\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\njournalist\n[@language:en]\n===\nlimbă, limbi\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nlanguage\n[@language:en]\n===\na lucra\n[@language:ro]\n[@pos:verb]\n==\nto work\n[@language:en]\n===\nlună, luni\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nmonth\n[@language:en]\n===\nmesaj, mesaje\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nmessage\n[@language:en]\n===\npersoană, persoane\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nperson\n[@language:en]\n===\na-i plăcea\n[@language:ro]\n[@pos:verb]\n==\nto like\n[@language:en]\n===\na pleca\n[@language:ro]\n[@pos:verb]\n==\nto leave\n[@language:en]\n===\npoate\n[@language:ro]\n[@pos:adv]\n==\nmaybe\n[@language:en]\n===\na preda\n[@language:ro]\n[@pos:verb]\n==\nto teach\n[@language:en]\n===\na presupune\n[@language:ro]\n[@pos:verb]\n==\nto suppose\n[@language:en]\n===\nprofesie, profesii\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nprofession\n[@language:en]\n===\nprofesoară, profesoare\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nteacher\n[@language:en]\n===\nserviciu, servicii\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nwork\n[@language:en]\n===\nsigur\n[@language:ro]\n[@pos:adv]\n==\nsure\n[@language:en]\n===\na se simți\n[@language:ro]\n[@pos:verb]\n==\nto feel\n[@language:en]\n===\nșcoală, școli\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nschool\n[@language:en]\n===\na trebui\n[@language:ro]\n[@pos:verb]\n==\nto have to\n[@language:en]\n===\na trimite\n[@language:ro]\n[@pos:verb]\n==\nto send\n[@language:en]\n===\na vedea\n[@language:ro]\n[@pos:verb]\n==\nto see\n[@language:en]\n===\na veni\n[@language:ro]\n[@pos:verb]\n==\nto come\n[@language:en]\n===\nziar, ziare\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nnewspaper\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\nacum\n\n\n==\nnow\n\n===\nacolo\n\n\n==\nthere\n\n===\na se bucura\n\n\n==\nto be glad\n\n===\ncafea, cafele\n\n\n\n==\ncoffee\n\n===\ncoleg, colegi\n\n\n\n==\ncolleague\n\n===\ndinamic, dinamică\n\n\n==\ndynamic\n\n===\ninteresant, interesantă\n\n\n==\ninteresting\n\n===\nîntr-o zi (expr.)\n\n==\nsome day\n\n===\njurnalist, jurnaliști\n\n\n\n==\njournalist\n\n===\nlimbă, limbi\n\n\n\n==\nlanguage\n\n===\na lucra\n\n\n==\nto work\n\n===\nlună, luni\n\n\n\n==\nmonth\n\n===\nmesaj, mesaje\n\n\n\n==\nmessage\n\n===\npersoană, persoane\n\n\n\n==\nperson\n\n===\na-i plăcea\n\n\n==\nto like\n\n===\na pleca\n\n\n==\nto leave\n\n===\npoate\n\n\n==\nmaybe\n\n===\na preda\n\n\n==\nto teach\n\n===\na presupune\n\n\n==\nto suppose\n\n===\nprofesie, profesii\n\n\n\n==\nprofession\n\n===\nprofesoară, profesoare\n\n\n\n==\nteacher\n\n===\nserviciu, servicii\n\n\n\n==\nwork\n\n===\nsigur\n\n\n==\nsure\n\n===\na se simți\n\n\n==\nto feel\n\n===\nșcoală, școli\n\n\n\n==\nschool\n\n===\na trebui\n\n\n==\nto have to\n\n===\na trimite\n\n\n==\nto send\n\n===\na vedea\n\n\n==\nto see\n\n===\na veni\n\n\n==\nto come\n\n===\nziar, ziare\n\n\n\n==\nnewspaper\n\n===",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136110"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "adv",
+        "adv",
+        "verb",
+        "noun",
+        "noun",
+        "adj",
+        "adj",
+        "noun",
+        "noun",
+        "verb",
+        "noun",
+        "noun",
+        "noun",
+        "verb",
+        "verb",
+        "adv",
+        "verb",
+        "verb",
+        "noun",
+        "noun",
+        "noun",
+        "adv",
+        "verb",
+        "noun",
+        "verb",
+        "verb",
+        "verb",
+        "verb",
+        "noun"
+      ],
+      "gender": [
+        "f",
+        "m",
+        "m",
+        "f",
+        "f",
+        "n",
+        "f",
+        "f",
+        "f",
+        "n",
+        "f",
+        "n"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '\\n===\n'",
+        "line": 3,
+        "column": 24,
+        "errorLine": "[%Vocabular (Vocabulary)"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136111]\n[%Profesii (Professions)]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "",
+      "id": [
+        "136111"
+      ],
+      "item": "Profesii (Professions)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136112]\n[%Acte de vorbire (Speech acts) L05-3]\n• Care este profesia ta? / Care este profesia dumneavoastră? __What is your profession?__\n• Care este profesia ta preferată? / Care este profesia dumneavoastră preferată? __What is your favorite profession?__\n• Ce îți place să faci? (informal) __What do you like to do?__\n• Ce vă place să faceți? (formal) __What do you like to do?__\n• Profesia mea este jurnalismul. __My profession is journalism.__\n• Sunt jurnalist. __I am a journalist.__\n• Unde lucrezi? (informal) __Where do you work?__\n• Unde lucrați? (formal) __Where do you work?__\n• Lucrez: __I work:__\n– într-un birou – __in an office__\n– la universitate – __at the university__\n– la o firmă / companie – __in a company__\n– la o bancă – __in a bank__\n– într-un spital. – __in a hospital.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Care este profesia ta? / Care este profesia dumneavoastră? __What is your profession?__\n• Care este profesia ta preferată? / Care este profesia dumneavoastră preferată? __What is your favorite profession?__\n• Ce îți place să faci? (informal) __What do you like to do?__\n• Ce vă place să faceți? (formal) __What do you like to do?__\n• Profesia mea este jurnalismul. __My profession is journalism.__\n• Sunt jurnalist. __I am a journalist.__\n• Unde lucrezi? (informal) __Where do you work?__\n• Unde lucrați? (formal) __Where do you work?__\n• Lucrez: __I work:__\n– într-un birou – __in an office__\n– la universitate – __at the university__\n– la o firmă / companie – __in a company__\n– la o bancă – __in a bank__\n– într-un spital. – __in a hospital.__",
+      "id": [
+        "136112"
+      ],
+      "item": "Acte de vorbire (Speech acts) L05-3",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136113]\n[%Vocabular (Vocabulary)\n===\nbancă, bănci\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nbank\n[@language:en]\n===\nbirou, birouri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\noffice\n[@language:en]\n===\ncare\n[@language:ro]\n[@pos:pron]\n==\nwhat / which\n[@language:en]\n===\ncompanie, companii\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\ncompany\n[@language:en]\n===\na face\n[@language:ro]\n[@pos:verb]\n==\nto do\n[@language:en]\n===\nfirmă, firme\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\ncompany\n[@language:en]\n===\na lucra\n[@language:ro]\n[@pos:verb]\n==\nto work\n[@language:en]\n===\na-i plăcea\n[@language:ro]\n[@pos:verb]\n==\nto like\n[@language:en]\n===\npreferat, preferată\n[@language:ro]\n[@pos:adj]\n==\nfavorite\n[@language:en]\n===\nprofesie, profesii\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nprofession\n[@language:en]\n===\nspital, spitale\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nhospital\n[@language:en]\n===\nuniversitate, universități\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nuniversity\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "[%Vocabular (Vocabulary)\n===\nbancă, bănci\n\n\n\n==\nbank\n\n===\nbirou, birouri\n\n\n\n==\noffice\n\n===\ncare\n\n\n==\nwhat / which\n\n===\ncompanie, companii\n\n\n\n==\ncompany\n\n===\na face\n\n\n==\nto do\n\n===\nfirmă, firme\n\n\n\n==\ncompany\n\n===\na lucra\n\n\n==\nto work\n\n===\na-i plăcea\n\n\n==\nto like\n\n===\npreferat, preferată\n\n\n==\nfavorite\n\n===\nprofesie, profesii\n\n\n\n==\nprofession\n\n===\nspital, spitale\n\n\n\n==\nhospital\n\n===\nuniversitate, universități\n\n\n\n==\nuniversity\n\n===",
+      "item": "Vocabular (Vocabulary)\n===\nbancă, bănci<missing '",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136113"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "noun",
+        "noun",
+        "pron",
+        "noun",
+        "verb",
+        "noun",
+        "verb",
+        "verb",
+        "adj",
+        "noun",
+        "noun",
+        "noun"
+      ],
+      "gender": [
+        "f",
+        "n",
+        "f",
+        "f",
+        "f",
+        "n",
+        "f"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n===\n'",
+        "line": 3,
+        "column": 24,
+        "errorLine": "[%Vocabular (Vocabulary)"
+      },
+      {
+        "message": "Unexpected input '\\n'",
+        "line": 5,
+        "column": 12,
+        "errorLine": "bancă, bănci"
+      },
+      {
+        "message": "Unexpected input '\\n[@gender:f]\n==\n'",
+        "line": 8,
+        "column": 11,
+        "errorLine": "[@gender:f]"
+      },
+      {
+        "message": "Unexpected input '\\n==\n'",
+        "line": 8,
+        "column": 11,
+        "errorLine": "[@gender:f]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136114]\n[%Locuri comune (Common places) L05-4]\n• Aeroport __Airport__\n• Bancă __Bank__\n• Bar __Pub__\n• Casă de schimb valutar __Exchange office__\n• Centru comercial __Shopping center__\n• Coafor __Hairdresser__\n• Farmacie __Pharmacy__\n• Hotel __Hotel__\n• Magazin __Shop__\n• Piață __Market__\n• Piață publică __Square__\n• Poștă Post __office__\n• Restaurant __Restaurant__\n• Secție de poliție __Police station__\n• Spital __Hospital__\n• Supermarket __Supermarket__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Aeroport __Airport__\n• Bancă __Bank__\n• Bar __Pub__\n• Casă de schimb valutar __Exchange office__\n• Centru comercial __Shopping center__\n• Coafor __Hairdresser__\n• Farmacie __Pharmacy__\n• Hotel __Hotel__\n• Magazin __Shop__\n• Piață __Market__\n• Piață publică __Square__\n• Poștă Post __office__\n• Restaurant __Restaurant__\n• Secție de poliție __Police station__\n• Spital __Hospital__\n• Supermarket __Supermarket__",
+      "id": [
+        "136114"
+      ],
+      "item": "Locuri comune (Common places) L05-4",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136115]\n[%Expresii de despărțire (Farewell phrases) L05-5]\n• O zi bună! __Have a good day!__\n• O seară bună! __Have a good evening!__\n• Noapte bună! __Good night!__\n• Somn ușor! __Have a good sleep!__\n• Vacanță plăcută! / concediu plăcut! __Have a nice holiday!__\n• Drum bun! __Have a nice trip!__\n• Zbor plăcut! __Have a good flight!__\n• Călătorie plăcută! __Have a nice trip!__\n• Abia aștept să te revăd! (informal) __I am looking forward to seeing you again!__\n• Abia aștept să vă revăd! (formal) __I am looking forward to seeing you again!__\n• Ai grijă de tine! (informal) __Take care of yourself!__\n• Aveți grijă de dumneavoastră! (formal) __Take care of yourself!__\n• Ne vedem în curând! __See you soon!__\n• Ne vedem mâine! __See you tomorrow!__\n• Ne vedem săptămâna viitoare! __See you next week!__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• O zi bună! __Have a good day!__\n• O seară bună! __Have a good evening!__\n• Noapte bună! __Good night!__\n• Somn ușor! __Have a good sleep!__\n• Vacanță plăcută! / concediu plăcut! __Have a nice holiday!__\n• Drum bun! __Have a nice trip!__\n• Zbor plăcut! __Have a good flight!__\n• Călătorie plăcută! __Have a nice trip!__\n• Abia aștept să te revăd! (informal) __I am looking forward to seeing you again!__\n• Abia aștept să vă revăd! (formal) __I am looking forward to seeing you again!__\n• Ai grijă de tine! (informal) __Take care of yourself!__\n• Aveți grijă de dumneavoastră! (formal) __Take care of yourself!__\n• Ne vedem în curând! __See you soon!__\n• Ne vedem mâine! __See you tomorrow!__\n• Ne vedem săptămâna viitoare! __See you next week!__",
+      "id": [
+        "136115"
+      ],
+      "item": "Expresii de despărțire (Farewell phrases) L05-5",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136116]\n[%Vocabular (Vocabulary)\n===\nabia aștept (expr.)\n[@language:ro]\n==\nI am looking forward\n[@language:en]\n===\na aștepta\n[@language:ro]\n[@pos:verb]\n==\nto wait\n[@language:en]\n===\na avea grijă (expr.)\n[@language:ro]\n==\nto take care\n[@language:en]\n===\nbun, bună (adj.\n[@language:ro]\n[@pos:adj]\n==\ngood\n[@language:en]\n===\ncălătorie, călătorii\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\ntrip / journey\n[@language:en]\n===\nconcediu, concedii\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nholiday\n[@language:en]\n===\ncurând\n[@language:ro]\n[@pos:adv]\n==\nsoon\n[@language:en]\n===\nmâine\n[@language:ro]\n[@pos:adv]\n==\ntomorrow\n[@language:en]\n===\nnoapte, nopți\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nnight\n[@language:en]\n===\nplăcut, plăcută\n[@language:ro]\n[@pos:adj]\n==\npleasant\n[@language:en]\n===\na revedea\n[@language:ro]\n[@pos:verb]\n==\nto see again\n[@language:en]\n===\nsăptămână, săptămâni\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nweek\n[@language:en]\n===\nseară, seri\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nevening\n[@language:en]\n===\nsomn\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nsleep\n[@language:en]\n===\nușor, ușoară (adj.\n[@language:ro]\n[@pos:adj]\n==\neasy\n[@language:en]\n===\nvacanță, vacanțe\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nholidays\n[@language:en]\n===\na vedea\n[@language:ro]\n[@pos:verb]\n==\nto see\n[@language:en]\n===\nviitor, viitoare\n[@language:ro]\n[@pos:adj]\n==\nnext\n[@language:en]\n===\nzbor, zboruri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nflight\n[@language:en]\n===\nzi, zile\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nday\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "[%Vocabular (Vocabulary)\n===\nabia aștept (expr.)\n\n==\nI am looking forward\n\n===\na aștepta\n\n\n==\nto wait\n\n===\na avea grijă (expr.)\n\n==\nto take care\n\n===\nbun, bună (adj.\n\n\n==\ngood\n\n===\ncălătorie, călătorii\n\n\n\n==\ntrip / journey\n\n===\nconcediu, concedii\n\n\n\n==\nholiday\n\n===\ncurând\n\n\n==\nsoon\n\n===\nmâine\n\n\n==\ntomorrow\n\n===\nnoapte, nopți\n\n\n\n==\nnight\n\n===\nplăcut, plăcută\n\n\n==\npleasant\n\n===\na revedea\n\n\n==\nto see again\n\n===\nsăptămână, săptămâni\n\n\n\n==\nweek\n\n===\nseară, seri\n\n\n\n==\nevening\n\n===\nsomn\n\n\n\n==\nsleep\n\n===\nușor, ușoară (adj.\n\n\n==\neasy\n\n===\nvacanță, vacanțe\n\n\n\n==\nholidays\n\n===\na vedea\n\n\n==\nto see\n\n===\nviitor, viitoare\n\n\n==\nnext\n\n===\nzbor, zboruri\n\n\n\n==\nflight\n\n===\nzi, zile\n\n\n\n==\nday\n\n===",
+      "item": "Vocabular (Vocabulary)\n===\nabia aștept (expr.)<missing '",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136116"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "verb",
+        "adj",
+        "noun",
+        "noun",
+        "adv",
+        "adv",
+        "noun",
+        "adj",
+        "verb",
+        "noun",
+        "noun",
+        "noun",
+        "adj",
+        "noun",
+        "verb",
+        "adj",
+        "noun",
+        "noun"
+      ],
+      "gender": [
+        "f",
+        "n",
+        "f",
+        "f",
+        "f",
+        "n",
+        "f",
+        "n",
+        "f"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n===\n'",
+        "line": 3,
+        "column": 24,
+        "errorLine": "[%Vocabular (Vocabulary)"
+      },
+      {
+        "message": "Unexpected input '\\n'",
+        "line": 5,
+        "column": 19,
+        "errorLine": "abia aștept (expr.)"
+      },
+      {
+        "message": "Unexpected input '\\n==\n'",
+        "line": 6,
+        "column": 14,
+        "errorLine": "[@language:ro]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark++&audio]\n[@id:136117]\n[%Culori (Colors) L05-6]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "",
+      "id": [
+        "136117"
+      ],
+      "item": "Culori (Colors) L05-6",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&audio]\n[@id:136118]\n[%Culoarea părului și a ochilor (Hair and eye color) L05-7]\nUrmătoarele adjective sunt folosite pentru culoarea părului și a ochilor:\n__The following adjectives are used for hair and eye color:__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Următoarele adjective sunt folosite pentru culoarea părului și a ochilor:\n__The following adjectives are used for hair and eye color:__",
+      "id": [
+        "136118"
+      ],
+      "item": "Culoarea părului și a ochilor (Hair and eye color) L05-7",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136119]\n[%Acte de vorbire (Speech acts) L05-8 - Culori (Colors)]\n• Verde deschis __Light green__\n• Verde închis __Dark green__\n• O nuanță deschisă de verde __A light shade of green__\n• O nuanță mai deschisă de verde __A lighter shade of green__\n• O nuanță închisă de verde __A dark shade of green__\n• O nuanță mai închisă de verde __A darker shade of green__\n• Care este culoarea ta preferată? (informal) __What is your favorite color?__\n• Care este culoarea dumneavoastră preferată? (formal) __What is your favorite color?__\n• Culoarea mea preferată este albastru. __My favorite color is blue.__\n• Nu îmi place această culoare. __I don't like this color.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Verde deschis __Light green__\n• Verde închis __Dark green__\n• O nuanță deschisă de verde __A light shade of green__\n• O nuanță mai deschisă de verde __A lighter shade of green__\n• O nuanță închisă de verde __A dark shade of green__\n• O nuanță mai închisă de verde __A darker shade of green__\n• Care este culoarea ta preferată? (informal) __What is your favorite color?__\n• Care este culoarea dumneavoastră preferată? (formal) __What is your favorite color?__\n• Culoarea mea preferată este albastru. __My favorite color is blue.__\n• Nu îmi place această culoare. __I don't like this color.__",
+      "id": [
+        "136119"
+      ],
+      "item": "Acte de vorbire (Speech acts) L05-8 - Culori (Colors)",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&image]\n[@id:136120]\n[%Gramatică (Grammar)]\n**Verbul „a lucra” la indicativ prezent\n(The verb “to work” in the Present Indicative)**\n|image:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Verbul „a lucra” la indicativ prezent\n(The verb “to work” in the Present Indicative)**\n|image:",
+      "id": [
+        "136120"
+      ],
+      "item": "Gramatică (Grammar)",
+      "resource": {
+        "type": "image",
+        "image": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136121]\n[%Acordul adjectivului cu substantivul (Adjective-noun agreement)]\nÎn română, adjectivele se acordă întotdeauna cu substantivele în număr, gen și caz. Substantivul este cel mai important element și ocupă prima poziție într-o expresie. Dacă substantivul este, de exemplu, la forma de masculin singular, adjectivul va fi la fel (masculin singular). Dacă substantivul este la feminin singular, adjectivul va fi, de asemenea, la feminin singular.\n__In Romanian, adjectives always agree with nouns in number, gender and case.\nThe noun is the most important element and occupies the first position in a phrase. If the noun is, for instance, in the masculine singular form, the adjective will be the same (masculine singular). If the noun is feminine singular, the adjective will also be in the feminine singular.__\n\nBărbat **dinamic** __(dynamic man)__\nFemeie **dinamică** __(dynamic woman)__\nZiarist **bun** __(good journalist)__\nZiaristă **bună** __(good journalist)__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "În română, adjectivele se acordă întotdeauna cu substantivele în număr, gen și caz. Substantivul este cel mai important element și ocupă prima poziție într-o expresie. Dacă substantivul este, de exemplu, la forma de masculin singular, adjectivul va fi la fel (masculin singular). Dacă substantivul este la feminin singular, adjectivul va fi, de asemenea, la feminin singular.\n__In Romanian, adjectives always agree with nouns in number, gender and case.\nThe noun is the most important element and occupies the first position in a phrase. If the noun is, for instance, in the masculine singular form, the adjective will be the same (masculine singular). If the noun is feminine singular, the adjective will also be in the feminine singular.__\n\nBărbat **dinamic** __(dynamic man)__\nFemeie **dinamică** __(dynamic woman)__\nZiarist **bun** __(good journalist)__\nZiaristă **bună** __(good journalist)__",
+      "id": [
+        "136121"
+      ],
+      "item": "Acordul adjectivului cu substantivul (Adjective-noun agreement)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136122]\n[%Adjective (Adjectives)]\nLitera „-ă” reprezintă terminația unui adjectiv feminin.\n__The letter “-ă” represents the ending of a feminine adjective.__\n|image:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Litera „-ă” reprezintă terminația unui adjectiv feminin.\n__The letter “-ă” represents the ending of a feminine adjective.__\n|image:",
+      "id": [
+        "136122"
+      ],
+      "item": "Adjective (Adjectives)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136123]\n[%Remarcă (Remark)]\nTerminațiile masculine „-os” și „-or” se transformă în „-oasă” și „-oară” la\nfeminin:\n__Masculine endings “-os” and “-or” become “-oasă” and “-oară” in the feminine.__\n\nfrum**o**s – frum**oa**să; uș**o**r – uș**oa**ră.\n|image:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Terminațiile masculine „-os” și „-or” se transformă în „-oasă” și „-oară” la\nfeminin:\n__Masculine endings “-os” and “-or” become “-oasă” and “-oară” in the feminine.__\n\nfrum**o**s – frum**oa**să; uș**o**r – uș**oa**ră.\n|image:",
+      "id": [
+        "136123"
+      ],
+      "item": "Remarcă (Remark)"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:136124]\n[#LECȚIA 6\nAnotimpurile, lunile anului și zilele săptămânii\nSeasons, months and days of the week]\n[%6]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "6",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "136124"
+      ],
+      "title": "LECȚIA 6\nAnotimpurile, lunile anului și zilele săptămânii\nSeasons, months and days of the week"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136125]\n[%Anotimpurile anului (The seasons of the year) L06-1]\n|image:\n\n|image:\n\n|image:\n\n|image:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:\n\n|image:\n\n|image:\n\n|image:",
+      "id": [
+        "136125"
+      ],
+      "item": "Anotimpurile anului (The seasons of the year) L06-1"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136126]\n[%Lunile anului (The months of the year) L06-2]\n• ianuarie __January__\n• februarie __February__\n• martie __March__\n• aprilie __April__\n• mai __May__\n• iunie __June__\n• iulie __July__\n• august __August__\n• septembrie __September__\n• octombrie __October__\n• noiembrie __November__\n• decembrie __December__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• ianuarie __January__\n• februarie __February__\n• martie __March__\n• aprilie __April__\n• mai __May__\n• iunie __June__\n• iulie __July__\n• august __August__\n• septembrie __September__\n• octombrie __October__\n• noiembrie __November__\n• decembrie __December__",
+      "id": [
+        "136126"
+      ],
+      "item": "Lunile anului (The months of the year) L06-2",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136127]\n[%Zilele săptămânii (The days of the week)]\n• luni __Monday__\n• marți __Tuesday__\n• miercuri __Wednesday__\n• joi __Thursday__\n• vineri __Friday__\n• sâmbătă __Saturday__\n• duminică __Sunday__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• luni __Monday__\n• marți __Tuesday__\n• miercuri __Wednesday__\n• joi __Thursday__\n• vineri __Friday__\n• sâmbătă __Saturday__\n• duminică __Sunday__",
+      "id": [
+        "136127"
+      ],
+      "item": "Zilele săptămânii (The days of the week)",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136128]\n[%Părțile unei zile (The parts of the day) L06-4]\n• Dimineață __Morning__\n• Dimineața __In the morning__\n• Dis-de-dimineață __Early in the morning__\n• Prânz __Noon__\n• La prânz __At noon__\n• După-amiază __Afternoon__\n• După-amiaza __In the afternoon__\n• Seară __Evening__\n• Seara __In the evening__\n• Noapte __Night__\n• Noaptea __At night__\n• La miezul nopții __At midnight__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Dimineață __Morning__\n• Dimineața __In the morning__\n• Dis-de-dimineață __Early in the morning__\n• Prânz __Noon__\n• La prânz __At noon__\n• După-amiază __Afternoon__\n• După-amiaza __In the afternoon__\n• Seară __Evening__\n• Seara __In the evening__\n• Noapte __Night__\n• Noaptea __At night__\n• La miezul nopții __At midnight__",
+      "id": [
+        "136128"
+      ],
+      "item": "Părțile unei zile (The parts of the day) L06-4",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136129]\n[%Acte de vorbire (Speech acts)]\n• Anul acesta / anul ăsta __This year__\n• Anul trecut __Last year__\n• Anul viitor / anul următor __Next year__\n• Primăvara __In spring__\n• Iarna __In winter__\n• În februarie __In February__\n• În septembrie __In September__\n• Din ianuarie până în iunie __From January until June__\n• Din septembrie până în decembrie __From September until December__\n• Din iulie __From / since July__\n• Peste o lună __In one month__\n• Luna aceasta / luna asta __This month__\n• Luna trecută __Last month__\n• Luna viitoare / luna următoare __Next month__\n• De luni până vineri __From Monday until Friday__\n• De marți până joi __From Tuesday until Thursday__\n• Peste două zile __In two days__\n• În weekend __On weekends__\n• Zilnic __Daily__\n• Astăzi / azi __Today__\n• Mâine __Tomorrow__\n• Poimâine __The day after tomorrow__\n• Ieri __Yesterday__\n• Alaltăieri __The day before yesterday__\n• Săptămâna aceasta / săptămâna asta __This week__\n• Săptămâna trecută __Last week__\n• Săptămâna viitoare / săptămâna următoare __Next week__\n• Acum o săptămână / cu o săptămână în urmă __One week ago__\n• Acum trei zile / cu trei zile în urmă __Three days ago__\n• Din când în când __From time to time__\n• Ieri seară __Yesterday evening__\n• Mâine dimineață __Tomorrow morning__\n• Mâine seară __Tomorrow evening__\n• În fiecare dimineață __Every morning__\n• În fiecare seară __Every evening__\n• În fiecare zi __Every day__\n• În fiecare săptămână __Every week__\n• În fiecare lună __Every month__\n• Înainte de sfârșitul săptămânii __Before the end of the week__\n• O dată pe săptămână __Once a week__\n• De două ori pe săptămână __Twice a week__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Anul acesta / anul ăsta __This year__\n• Anul trecut __Last year__\n• Anul viitor / anul următor __Next year__\n• Primăvara __In spring__\n• Iarna __In winter__\n• În februarie __In February__\n• În septembrie __In September__\n• Din ianuarie până în iunie __From January until June__\n• Din septembrie până în decembrie __From September until December__\n• Din iulie __From / since July__\n• Peste o lună __In one month__\n• Luna aceasta / luna asta __This month__\n• Luna trecută __Last month__\n• Luna viitoare / luna următoare __Next month__\n• De luni până vineri __From Monday until Friday__\n• De marți până joi __From Tuesday until Thursday__\n• Peste două zile __In two days__\n• În weekend __On weekends__\n• Zilnic __Daily__\n• Astăzi / azi __Today__\n• Mâine __Tomorrow__\n• Poimâine __The day after tomorrow__\n• Ieri __Yesterday__\n• Alaltăieri __The day before yesterday__\n• Săptămâna aceasta / săptămâna asta __This week__\n• Săptămâna trecută __Last week__\n• Săptămâna viitoare / săptămâna următoare __Next week__\n• Acum o săptămână / cu o săptămână în urmă __One week ago__\n• Acum trei zile / cu trei zile în urmă __Three days ago__\n• Din când în când __From time to time__\n• Ieri seară __Yesterday evening__\n• Mâine dimineață __Tomorrow morning__\n• Mâine seară __Tomorrow evening__\n• În fiecare dimineață __Every morning__\n• În fiecare seară __Every evening__\n• În fiecare zi __Every day__\n• În fiecare săptămână __Every week__\n• În fiecare lună __Every month__\n• Înainte de sfârșitul săptămânii __Before the end of the week__\n• O dată pe săptămână __Once a week__\n• De două ori pe săptămână __Twice a week__",
+      "id": [
+        "136129"
+      ],
+      "item": "Acte de vorbire (Speech acts)",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136130]\n[%Vocabular (Vocabulary)\n===\nacest, această\n[@language:ro]\n[@pos:adj]\n[@pos:pron]\n==\nthis\n[@language:en]\n===\nan, ani\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\nyear\n[@language:en]\n===\năsta, asta\n[@language:ro]\n[@pos:adj]\n[@pos:pron]\n==\nthis\n[@language:en]\n===\ndimineață, dimineți\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nmorning\n[@language:en]\n===\nfiecare\n[@language:ro]\n[@pos:adj]\n[@pos:pron]\n==\nevery / each\n[@language:en]\n===\nlună, luni\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nmonth\n[@language:en]\n===\nsăptămână, săptămâni\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nweek\n[@language:en]\n===\nseară, seri\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nevening\n[@language:en]\n===\nsfârșit, sfârșituri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nend\n[@language:en]\n===\ntrecut, trecută\n[@language:ro]\n[@pos:adj]\n==\nlast\n[@language:en]\n===\nurmător, următoare\n[@language:ro]\n[@pos:adj]\n==\nnext\n[@language:en]\n===\nviitor, viitoare\n[@language:ro]\n[@pos:adj]\n==\nnext\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "[%Vocabular (Vocabulary)\n===\nacest, această\n\n\n\n==\nthis\n\n===\nan, ani\n\n\n\n==\nyear\n\n===\năsta, asta\n\n\n\n==\nthis\n\n===\ndimineață, dimineți\n\n\n\n==\nmorning\n\n===\nfiecare\n\n\n\n==\nevery / each\n\n===\nlună, luni\n\n\n\n==\nmonth\n\n===\nsăptămână, săptămâni\n\n\n\n==\nweek\n\n===\nseară, seri\n\n\n\n==\nevening\n\n===\nsfârșit, sfârșituri\n\n\n\n==\nend\n\n===\ntrecut, trecută\n\n\n==\nlast\n\n===\nurmător, următoare\n\n\n==\nnext\n\n===\nviitor, viitoare\n\n\n==\nnext\n\n===",
+      "item": "Vocabular (Vocabulary)\n===\nacest, această<missing '",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136130"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "adj",
+        "pron",
+        "noun",
+        "adj",
+        "pron",
+        "noun",
+        "adj",
+        "pron",
+        "noun",
+        "noun",
+        "noun",
+        "noun",
+        "adj",
+        "adj",
+        "adj"
+      ],
+      "gender": [
+        "m",
+        "f",
+        "f",
+        "f",
+        "f",
+        "n"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n===\n'",
+        "line": 3,
+        "column": 24,
+        "errorLine": "[%Vocabular (Vocabulary)"
+      },
+      {
+        "message": "Unexpected input '\\n'",
+        "line": 5,
+        "column": 14,
+        "errorLine": "acest, această"
+      },
+      {
+        "message": "Unexpected input '\\n[@pos:pron]\n==\n'",
+        "line": 8,
+        "column": 11,
+        "errorLine": "[@pos:pron]"
+      },
+      {
+        "message": "Unexpected input '\\n==\n'",
+        "line": 8,
+        "column": 11,
+        "errorLine": "[@pos:pron]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--&imageWithAudio]\n[@id:136131]\n[%Dialoguri (Dialogues)]\n**Mihai:** Ce zi e azi? __What day is today?__\n**Ioana:** Azi e duminică. __Today is Sunday.__\n**Mihai:** Ce dată este azi? __What date is today?__\n**Ioana:** Azi este 10 septembrie. __Today is the 10th of September.__\n**Mihai:** Ce zi este mâine? __What day is tomorrow?__\n**Ioana:** Mâine este luni. __Tomorrow is Monday.__\n**Mihai:** Avem examen, așa este? __We have an exam, right?__\n**Ioana:** Da, din păcate. __Yes, unfortunately.__\n**Mihai:** În ce dată suntem poimâine? __What date is the day after tomorrow?__\n**Ioana:** Poimâine este 12 septembrie. __The day after tomorrow is the 12th of September.__\n**Mihai:** Ce zi a fost ieri? __What day was yesterday?__\n**Ioana:** Ieri a fost sâmbătă, 9 septembrie. __Yesterday was Saturday, the 9th of September.__\n**Mihai:** Ce zi a fost alaltăieri? __What day was the day before yesterday?__\n**Ioana:** Alaltăieri a fost vineri, 8 septembrie. __The day before yesterday was Friday, the 8th of September.__\n**Mihai:** Când este ziua ta de naștere? __When is your birthday?__\n**Ioana:** Pe 6 iulie. __On the 6th of July.__\n[&image",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Mihai:** Ce zi e azi? __What day is today?__\n**Ioana:** Azi e duminică. __Today is Sunday.__\n**Mihai:** Ce dată este azi? __What date is today?__\n**Ioana:** Azi este 10 septembrie. __Today is the 10th of September.__\n**Mihai:** Ce zi este mâine? __What day is tomorrow?__\n**Ioana:** Mâine este luni. __Tomorrow is Monday.__\n**Mihai:** Avem examen, așa este? __We have an exam, right?__\n**Ioana:** Da, din păcate. __Yes, unfortunately.__\n**Mihai:** În ce dată suntem poimâine? __What date is the day after tomorrow?__\n**Ioana:** Poimâine este 12 septembrie. __The day after tomorrow is the 12th of September.__\n**Mihai:** Ce zi a fost ieri? __What day was yesterday?__\n**Ioana:** Ieri a fost sâmbătă, 9 septembrie. __Yesterday was Saturday, the 9th of September.__\n**Mihai:** Ce zi a fost alaltăieri? __What day was the day before yesterday?__\n**Ioana:** Alaltăieri a fost vineri, 8 septembrie. __The day before yesterday was Friday, the 8th of September.__\n**Mihai:** Când este ziua ta de naștere? __When is your birthday?__\n**Ioana:** Pe 6 iulie. __On the 6th of July.__",
+      "id": [
+        "136131"
+      ],
+      "item": "Dialoguri (Dialogues)",
+      "resource": {
+        "type": "",
+        "image": {
+          "provider": "",
+          "url": "",
+          "src": "[&image",
+          "format": "[&image"
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input 'WithAudio'",
+        "line": 1,
+        "column": 25,
+        "errorLine": "[.article:bitmark--&imageWithAudio]"
+      },
+      {
+        "message": "Rule violation around '\\n'",
+        "line": 20,
+        "column": 7,
+        "errorLine": "[&image"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136132]\n[%Vocabular (Vocabulary)\n===\na fost\n[@language:ro]\n[@pos:verb]\n==\nit was\n[@language:en]\n===\nalaltăieri\n[@language:ro]\n[@pos:adv]\n==\nthe day before yesterday\n[@language:en]\n===\nazi\n[@language:ro]\n[@pos:adv]\n==\ntoday\n[@language:en]\n===\ncând\n[@language:ro]\n[@pos:adv]\n==\nwhen\n[@language:en]\n===\ndată, date\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\ndate\n[@language:en]\n===\ndin păcate (expr.)\n[@language:ro]\n==\nunfortunately\n[@language:en]\n===\nduminică, duminici\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nSunday\n[@language:en]\n===\nexamen, examene\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nexam\n[@language:en]\n===\nieri\n[@language:ro]\n[@pos:adv]\n==\nyesterday\n[@language:en]\n===\nmâine\n[@language:ro]\n[@pos:adv]\n==\ntomorrow\n[@language:en]\n===\npoimâine\n[@language:ro]\n[@pos:adv]\n==\nthe day after tomorrow\n[@language:en]\n===\nsâmbătă, sâmbete\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nSaturday\n[@language:en]\n===\nzi, zile\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nday\n[@language:en]\n===\nzi de naștere (expr.)\n[@language:ro]\n==\nbirthday\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "[%Vocabular (Vocabulary)\n===\na fost\n\n\n==\nit was\n\n===\nalaltăieri\n\n\n==\nthe day before yesterday\n\n===\nazi\n\n\n==\ntoday\n\n===\ncând\n\n\n==\nwhen\n\n===\ndată, date\n\n\n\n==\ndate\n\n===\ndin păcate (expr.)\n\n==\nunfortunately\n\n===\nduminică, duminici\n\n\n\n==\nSunday\n\n===\nexamen, examene\n\n\n\n==\nexam\n\n===\nieri\n\n\n==\nyesterday\n\n===\nmâine\n\n\n==\ntomorrow\n\n===\npoimâine\n\n\n==\nthe day after tomorrow\n\n===\nsâmbătă, sâmbete\n\n\n\n==\nSaturday\n\n===\nzi, zile\n\n\n\n==\nday\n\n===\nzi de naștere (expr.)\n\n==\nbirthday\n\n===",
+      "item": "Vocabular (Vocabulary)\n===\na fost<missing '",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136132"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "verb",
+        "adv",
+        "adv",
+        "adv",
+        "noun",
+        "noun",
+        "noun",
+        "adv",
+        "adv",
+        "adv",
+        "noun",
+        "noun"
+      ],
+      "gender": [
+        "f",
+        "f",
+        "n",
+        "f",
+        "f"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n===\n'",
+        "line": 3,
+        "column": 24,
+        "errorLine": "[%Vocabular (Vocabulary)"
+      },
+      {
+        "message": "Unexpected input '\\n'",
+        "line": 5,
+        "column": 6,
+        "errorLine": "a fost"
+      },
+      {
+        "message": "Unexpected input '\\n[@pos:verb]\n==\n'",
+        "line": 7,
+        "column": 11,
+        "errorLine": "[@pos:verb]"
+      },
+      {
+        "message": "Unexpected input '\\n==\n'",
+        "line": 7,
+        "column": 11,
+        "errorLine": "[@pos:verb]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136133]\n[%Acte de vorbire (Speech acts) L06-7 Exprimarea opiniei (Expressing opinions)]\n• Cred că ... __I think that ...__\n• Consider că ... __I consider that ...__\n• Personal, cred că ... __Personally, I think that ...__\n• În opinia mea ... __In my opinion ...__\n• Mi se pare că ... __It seems to me that ...__\n• Înțeleg. __I understand.__\n• După cum văd lucrurile ... __As I see things ...__\n• Asta e și convingerea mea. __That's my conviction too.__\n• Și eu cred la fel. __I'm of the same opinion.__\n• Și eu văd lucrurile la fel. __I see things in the same way.__\n• Sunt de aceeași părere / opinie. __I'm of the same opinion.__\n• Sunt de acord că ... __I agree that ...__\n• Sunt de acord cu tine. (informal) __I agree with you.__\n• Sunt de acord cu dumneavoastră. (formal) __I agree with you.__\n• Opinia / părerea mea este că ... __My opinion is that ...__\n• Nu știu ce crezi tu, dar eu ... (informal) __I don't know what you think, but I ...\n__\n• Nu știu ce credeți dumneavoastră, dar eu ..(formal) __I don't know what you think, but I ...\n__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Cred că ... __I think that ...__\n• Consider că ... __I consider that ...__\n• Personal, cred că ... __Personally, I think that ...__\n• În opinia mea ... __In my opinion ...__\n• Mi se pare că ... __It seems to me that ...__\n• Înțeleg. __I understand.__\n• După cum văd lucrurile ... __As I see things ...__\n• Asta e și convingerea mea. __That's my conviction too.__\n• Și eu cred la fel. __I'm of the same opinion.__\n• Și eu văd lucrurile la fel. __I see things in the same way.__\n• Sunt de aceeași părere / opinie. __I'm of the same opinion.__\n• Sunt de acord că ... __I agree that ...__\n• Sunt de acord cu tine. (informal) __I agree with you.__\n• Sunt de acord cu dumneavoastră. (formal) __I agree with you.__\n• Opinia / părerea mea este că ... __My opinion is that ...__\n• Nu știu ce crezi tu, dar eu ... (informal) __I don't know what you think, but I ...\n__\n• Nu știu ce credeți dumneavoastră, dar eu ..(formal) __I don't know what you think, but I ...\n__",
+      "id": [
+        "136133"
+      ],
+      "item": "Acte de vorbire (Speech acts) L06-7 Exprimarea opiniei (Expressing opinions)",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136134]\n[%Vocabular (Vocabulary)\n===\naceeași\n[@language:ro]\n[@pos:adj]\n[@pos:pron]\n==\nthe same\n[@language:en]\n===\ncă\n[@language:ro]\n[@pos:sconj]\n==\nthat\n[@language:en]\n===\na considera\n[@language:ro]\n[@pos:verb]\n==\nto consider\n[@language:en]\n===\nconvingere, convingeri\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n===\nconviction\n[@language:en]\n===\na crede\n[@language:ro]\n[@pos:verb]\n==\nto think / to believe\n[@language:en]\n===\ndar\n[@language:ro]\n[@pos:cconj]\n==\nbut\n[@language:en]\n===\na fi de acord (expr.)\n[@language:ro]\n==\nto agree\n[@language:en]\n===\na înțelege\n[@language:ro]\n[@pos:verb]\n==\nto understand\n[@language:en]\n===\nlucru, lucruri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nthing\n[@language:en]\n===\nopinie, opinii\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nopinion\n[@language:en]\n===\na se părea\n[@language:ro]\n[@pos:verb]\n==\nto seem\n[@language:en]\n===\npărere, păreri\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nopinion\n[@language:en]\n===\npersonal\n[@language:ro]\n[@pos:adv]\n==\npersonally\n[@language:en]\n===\na ști\n[@language:ro]\n[@pos:verb]\n==\nto know\n[@language:en]\n===\na vedea\n[@language:ro]\n[@pos:verb]\n==\nto see\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\naceeași\n\n\n\n==\nthe same\n\n===\ncă\n\n\n==\nthat\n\n===\na considera\n\n\n==\nto consider\n\n===\nconvingere, convingeri\n\n\n\n===\nconviction\n\n===\na crede\n\n\n==\nto think / to believe\n\n===\ndar\n\n\n==\nbut\n\n===\na fi de acord (expr.)\n\n==\nto agree\n\n===\na înțelege\n\n\n==\nto understand\n\n===\nlucru, lucruri\n\n\n\n==\nthing\n\n===\nopinie, opinii\n\n\n\n==\nopinion\n\n===\na se părea\n\n\n==\nto seem\n\n===\npărere, păreri\n\n\n\n==\nopinion\n\n===\npersonal\n\n\n==\npersonally\n\n===\na ști\n\n\n==\nto know\n\n===\na vedea\n\n\n==\nto see\n\n===",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136134"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "adj",
+        "pron",
+        "sconj",
+        "verb",
+        "noun",
+        "verb",
+        "cconj",
+        "verb",
+        "noun",
+        "noun",
+        "verb",
+        "noun",
+        "adv",
+        "verb",
+        "verb"
+      ],
+      "gender": [
+        "f",
+        "n",
+        "f",
+        "f"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '\\n===\n'",
+        "line": 3,
+        "column": 24,
+        "errorLine": "[%Vocabular (Vocabulary)"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136135]\n**Gramatică (Grammar) \nNumeralele cardinale (Cardinal numerals) \nNumeralele cardinale de la 0 la 10 (The cardinal numerals from 0 to 10)**\n\n0 zero băieți / fete\n1 unu (un băiat / o fată)\n2 doi băieți / două fete\n3 trei băieți / fete\n4 patru băieți / fete\n5 cinci băieți / fete\n6 șase băieți / fete\n7 șapte băieți / fete\n8 opt băieți / fete\n9 nouă băieți / fete\n10 zece băieți / fete",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Gramatică (Grammar) \nNumeralele cardinale (Cardinal numerals) \nNumeralele cardinale de la 0 la 10 (The cardinal numerals from 0 to 10)**\n\n0 zero băieți / fete\n1 unu (un băiat / o fată)\n2 doi băieți / două fete\n3 trei băieți / fete\n4 patru băieți / fete\n5 cinci băieți / fete\n6 șase băieți / fete\n7 șapte băieți / fete\n8 opt băieți / fete\n9 nouă băieți / fete\n10 zece băieți / fete",
+      "id": [
+        "136135"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136136]\n[%Numeralele cardinale de la 11 la 20 (The cardinal numerals from 11 to 20) L06-8]\nunitate + spre + zece (unit + spre + zece)\n• 11 unsprezece băieți / fete\n• 12 doisprezece băieți / douăsprezece fete\n• 13 treisprezece băieți / fete\n• 14 paisprezece băieți / fete\n• 15 cincisprezece băieți / fete\n• 16 șaisprezece băieți / fete\n• 17 șaptesprezece băieți / fete\n• 18 optsprezece băieți / fete\n• 19 nouăsprezece băieți / fete\n• 20 douăzeci **de** băieți / **de** fete",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "unitate + spre + zece (unit + spre + zece)\n• 11 unsprezece băieți / fete\n• 12 doisprezece băieți / douăsprezece fete\n• 13 treisprezece băieți / fete\n• 14 paisprezece băieți / fete\n• 15 cincisprezece băieți / fete\n• 16 șaisprezece băieți / fete\n• 17 șaptesprezece băieți / fete\n• 18 optsprezece băieți / fete\n• 19 nouăsprezece băieți / fete\n• 20 douăzeci **de** băieți / **de** fete",
+      "id": [
+        "136136"
+      ],
+      "item": "Numeralele cardinale de la 11 la 20 (The cardinal numerals from 11 to 20) L06-8",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136137]\n[%Remarci (Remarks)]\nÎn limba vorbită, terminația „-sprezece” este pronunțată „-șpe” (dar această formă nu este scrisă):\n__In the spoken language, the ending “-sprezece” is pronounced “-șpe” (but this form is not written):__\n\n• unsprezece = unșpe\n• doisprezece / douăsprezece = doișpe / douășpe\n• treisprezece = treișpe\n• paisprezece = paișpe\n• cincisprezece = cinșpe\n• șaisprezece = șaișpe\n• șaptesprezece = șaptișpe\n• optsprezece = optișpe\n• nouăsprezece= nouășpe",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "În limba vorbită, terminația „-sprezece” este pronunțată „-șpe” (dar această formă nu este scrisă):\n__In the spoken language, the ending “-sprezece” is pronounced “-șpe” (but this form is not written):__\n\n• unsprezece = unșpe\n• doisprezece / douăsprezece = doișpe / douășpe\n• treisprezece = treișpe\n• paisprezece = paișpe\n• cincisprezece = cinșpe\n• șaisprezece = șaișpe\n• șaptesprezece = șaptișpe\n• optsprezece = optișpe\n• nouăsprezece= nouășpe",
+      "id": [
+        "136137"
+      ],
+      "item": "Remarci (Remarks)",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136138]\n[%Numeralele cardinale **de** la 21 la 99 (The cardinal numerals from 21 to 99)]\n• 21 douăzeci și unu **de** băieți / douăzeci și una **de** fete\n• 22 douăzeci și doi **de** băieți / douăzeci și două **de** fete\n• 23 douăzeci și trei **de** băieți / douăzeci și trei **de** fete\n• 29 douăzeci și nouă **de** băieți / douăzeci și nouă **de** fete\n• 30 treizeci **de** băieți / treizeci **de** fete\n• 31 treizeci și unu **de** băieți / treizeci și una **de** fete\n• 32 treizeci și doi **de** băieți / treizeci și două **de** fete\n• 39 treizeci și nouă **de** băieți / treizeci și nouă **de** fete\n• 40 patruzeci **de** băieți / patruzeci **de** fete\n• 41 patruzeci și unu **de** băieți / patruzeci și una **de** fete\n• 42 patruzeci și doi **de** băieți / patruzeci și două **de** fete\n• 49 patruzeci și nouă **de** băieți / patruzeci și nouă **de** fete\n• 50 cincizeci **de** băieți / cincizeci **de** fete\n• 51 cincizeci și unu **de** băieți / cincizeci și una **de** fete\n• 52 cincizeci și doi **de** băieți / cincizeci și două **de** fete\n• 59 cincizeci și nouă **de** băieți / cincizeci și nouă **de** fete\n• 60 șaizeci **de** băieți / șaizeci **de** fete\n• 61 șaizeci și unu **de** băieți / șaizeci și una **de** fete\n• 62 șaizeci și doi **de** băieți / șaizeci și două **de** fete\n• 69 șaizeci și nouă **de** băieți / șaizeci și nouă **de** fete\n• 70 șaptezeci **de** băieți / șaptezeci **de** fete\n• 71 șaptezeci și unu **de** băieți / șaptezeci și una **de** fete\n• 72 șaptezeci și doi **de** băieți / șaptezeci și două **de** fete\n• 79 șaptezeci și nouă **de** băieți / șaptezeci și nouă **de** fete\n• 80 optzeci **de** băieți / optzeci **de** fete\n• 81 optzeci și unu **de** băieți / optzeci și una **de** fete\n• 82 optzeci și doi **de** băieți / optzeci și două **de** fete\n• 89 optzeci și nouă **de** băieți / optzeci și nouă **de** fete\n• 90 nouăzeci **de** băieți / nouăzeci **de** fete\n• 91 nouăzeci și unu **de** băieți / nouăzeci și una **de** fete\n• 92 nouăzeci și doi **de** băieți / nouăzeci și două **de** fete\n• 99 nouăzeci și nouă **de** băieți / nouăzeci și nouă **de** fete",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• 21 douăzeci și unu **de** băieți / douăzeci și una **de** fete\n• 22 douăzeci și doi **de** băieți / douăzeci și două **de** fete\n• 23 douăzeci și trei **de** băieți / douăzeci și trei **de** fete\n• 29 douăzeci și nouă **de** băieți / douăzeci și nouă **de** fete\n• 30 treizeci **de** băieți / treizeci **de** fete\n• 31 treizeci și unu **de** băieți / treizeci și una **de** fete\n• 32 treizeci și doi **de** băieți / treizeci și două **de** fete\n• 39 treizeci și nouă **de** băieți / treizeci și nouă **de** fete\n• 40 patruzeci **de** băieți / patruzeci **de** fete\n• 41 patruzeci și unu **de** băieți / patruzeci și una **de** fete\n• 42 patruzeci și doi **de** băieți / patruzeci și două **de** fete\n• 49 patruzeci și nouă **de** băieți / patruzeci și nouă **de** fete\n• 50 cincizeci **de** băieți / cincizeci **de** fete\n• 51 cincizeci și unu **de** băieți / cincizeci și una **de** fete\n• 52 cincizeci și doi **de** băieți / cincizeci și două **de** fete\n• 59 cincizeci și nouă **de** băieți / cincizeci și nouă **de** fete\n• 60 șaizeci **de** băieți / șaizeci **de** fete\n• 61 șaizeci și unu **de** băieți / șaizeci și una **de** fete\n• 62 șaizeci și doi **de** băieți / șaizeci și două **de** fete\n• 69 șaizeci și nouă **de** băieți / șaizeci și nouă **de** fete\n• 70 șaptezeci **de** băieți / șaptezeci **de** fete\n• 71 șaptezeci și unu **de** băieți / șaptezeci și una **de** fete\n• 72 șaptezeci și doi **de** băieți / șaptezeci și două **de** fete\n• 79 șaptezeci și nouă **de** băieți / șaptezeci și nouă **de** fete\n• 80 optzeci **de** băieți / optzeci **de** fete\n• 81 optzeci și unu **de** băieți / optzeci și una **de** fete\n• 82 optzeci și doi **de** băieți / optzeci și două **de** fete\n• 89 optzeci și nouă **de** băieți / optzeci și nouă **de** fete\n• 90 nouăzeci **de** băieți / nouăzeci **de** fete\n• 91 nouăzeci și unu **de** băieți / nouăzeci și una **de** fete\n• 92 nouăzeci și doi **de** băieți / nouăzeci și două **de** fete\n• 99 nouăzeci și nouă **de** băieți / nouăzeci și nouă **de** fete",
+      "id": [
+        "136138"
+      ],
+      "item": "Numeralele cardinale **de** la 21 la 99 (The cardinal numerals from 21 to 99)",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136139]\n[%Numeralele cardinale de la 100 la 1.000.000.000 (The cardinal numerals from 100 to 1.000.000.000)]\n• 100 o sută\n• 200 două sute\n• 300 trei sute\n• 400 patru sute\n• 500 cinci sute\n• 600 șase sute\n• 700 șapte sute\n• 800 opt sute\n• 900 nouă sute\n• 1.000 o mie\n• 2.000 două mii\n• 3.000 trei mii\n• 10.000 zece mii\n• 20.000 douăzeci de mii \n• 30.000 treizeci de mii \n• 100.000 o sută de mii \n• 200.000 două sute de mii \n• 300.000 trei sute de mii \n• 1.000.000 un milion \n• 2.000.000 două milioane \n• 3.000.000 trei milioane \n• 10.000.000 zece milioane \n• 20.000.000 douăzeci de milioane \n• 30.000.000 treizeci de milioane\n• 1.000.000.000 un miliard\n• 2.000.000.000 două miliarde\n• 3.000.000.000 trei miliarde",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• 100 o sută\n• 200 două sute\n• 300 trei sute\n• 400 patru sute\n• 500 cinci sute\n• 600 șase sute\n• 700 șapte sute\n• 800 opt sute\n• 900 nouă sute\n• 1.000 o mie\n• 2.000 două mii\n• 3.000 trei mii\n• 10.000 zece mii\n• 20.000 douăzeci de mii \n• 30.000 treizeci de mii \n• 100.000 o sută de mii \n• 200.000 două sute de mii \n• 300.000 trei sute de mii \n• 1.000.000 un milion \n• 2.000.000 două milioane \n• 3.000.000 trei milioane \n• 10.000.000 zece milioane \n• 20.000.000 douăzeci de milioane \n• 30.000.000 treizeci de milioane\n• 1.000.000.000 un miliard\n• 2.000.000.000 două miliarde\n• 3.000.000.000 trei miliarde",
+      "id": [
+        "136139"
+      ],
+      "item": "Numeralele cardinale de la 100 la 1.000.000.000 (The cardinal numerals from 100 to 1.000.000.000)",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136140]\n[%Exemple (Examples) L06-13]\n• 33 treizeci și trei\n• 289 două sute optzeci și nouă\n• 2.450 două mii patru sute cincizeci\n• 5.670 cinci mii șase sute șaptezeci\n• 9.999 nouă mii nouă sute nouăzeci și nouă\n• 149.000 o sută patruzeci și nouă de mii\n• 125.000 o sută douăzeci și cinci de mii\n• 4.000.000 patru milioane",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• 33 treizeci și trei\n• 289 două sute optzeci și nouă\n• 2.450 două mii patru sute cincizeci\n• 5.670 cinci mii șase sute șaptezeci\n• 9.999 nouă mii nouă sute nouăzeci și nouă\n• 149.000 o sută patruzeci și nouă de mii\n• 125.000 o sută douăzeci și cinci de mii\n• 4.000.000 patru milioane",
+      "id": [
+        "136140"
+      ],
+      "item": "Exemple (Examples) L06-13",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136141]\n[%Remarci (Remarks)]\n**„O/una” și „un/unu”**\nFormele „o” și „un” precedă substantivul: __un băiat – o fată__. Forma „unu” (pentru un substantiv masculin sau neutru) și „una” (pentru un substantiv feminin) sunt utilizate independent, ca răspuns la o întrebare:\n__The forms “o” and “un” precede a noun: un băiat (one boy) – o fată (one girl). The forms “unu” (for a masculine or a neuter noun), and “una” (for a feminine noun) are used independently, as an answer to a question:__\n– Câte cărți vreți? (__How many books do you want?__)\n– **O** carte / **Una**. (__One book / One.__)\n– Câte telefoane vrei? (__How many phones do you want?__) \n– **Un** telefon / **Unu**. (__One phone / One.__)\n\n\n\nIncorect: *una carte, *unu telefon (Aceste structuri nu există).\n__Incorrect: *una carte and *unu telefon (These structures do not exist).__\n\n**„Doi / două”, „doisprezece / douăsprezece”, „douăzeci și doi / douăzeci și două”**\nFormele „doi / doisprezece / douăzeci și doi” sunt utilizate pentru un substantiv masculin, iar „două / douăsprezece / douăzeci și două” pentru un substantiv feminin sau unul neutru:\n__The forms “doi / doisprezece / douăzeci și doi” are used for a masculine noun, and “două / douăsprezece / douăzeci și două” for a feminine or a neuter noun:__\n**doi** băieți / **doi**sprezece băieți / douăzeci și **doi** de băieți (__two boys / twelve boys / twenty two boys__)\n__două__ fete / __două__sprezece fete / douăzeci și __două__ de fete (two girls / twelve girls / twenty two girls).\n__două__ telefoane / __două__sprezece telefoane / douăzeci și __două__ de telefoane (two phones / twelve phones / twenty two phones).\n\n**Prepoziția „de” (The preposition “de”)**\nNumeralele de la 20 la 100 sunt conectate cu substantivul următor prin prepoziția „de”:\n__Numerals from 20 to 100 are connected to the following noun by the preposition “de”:__\n20 **de** lei, 21 **de** lei, 99 **de** lei, 100 **de** lei.\n\nDacă numeralul este complex, numai ultimele două cifre sunt importante. Dacă ultimele două cifre sunt între 0 și 19, prepoziția „de” nu este utilizată. Dacă ultimele două cifre sunt între 20 și 100, prepoziția „de” este obligatorie. Toate numeralele terminate în „00” sunt urmate de prepoziția „de”.\n__If a numeral is complex, only the last two digits are important. If the last two digits are between 0 and 19, the preposition “de” is not used. If the last two digits are between 20 and 99, the preposition “de” is mandatory. All numerals ending in “00” are followed by the preposition “de”.__\n101 lei, 119 lei, 120 **de** lei, 199 **de** lei, 200 **de** lei, 1.000 **de** lei, 1.000.000 **de** lei.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**„O/una” și „un/unu”**\nFormele „o” și „un” precedă substantivul: __un băiat – o fată__. Forma „unu” (pentru un substantiv masculin sau neutru) și „una” (pentru un substantiv feminin) sunt utilizate independent, ca răspuns la o întrebare:\n__The forms “o” and “un” precede a noun: un băiat (one boy) – o fată (one girl). The forms “unu” (for a masculine or a neuter noun), and “una” (for a feminine noun) are used independently, as an answer to a question:__\n– Câte cărți vreți? (__How many books do you want?__)\n– **O** carte / **Una**. (__One book / One.__)\n– Câte telefoane vrei? (__How many phones do you want?__) \n– **Un** telefon / **Unu**. (__One phone / One.__)\n\n\n\nIncorect: *una carte, *unu telefon (Aceste structuri nu există).\n__Incorrect: *una carte and *unu telefon (These structures do not exist).__\n\n**„Doi / două”, „doisprezece / douăsprezece”, „douăzeci și doi / douăzeci și două”**\nFormele „doi / doisprezece / douăzeci și doi” sunt utilizate pentru un substantiv masculin, iar „două / douăsprezece / douăzeci și două” pentru un substantiv feminin sau unul neutru:\n__The forms “doi / doisprezece / douăzeci și doi” are used for a masculine noun, and “două / douăsprezece / douăzeci și două” for a feminine or a neuter noun:__\n**doi** băieți / **doi**sprezece băieți / douăzeci și **doi** de băieți (__two boys / twelve boys / twenty two boys__)\n__două__ fete / __două__sprezece fete / douăzeci și __două__ de fete (two girls / twelve girls / twenty two girls).\n__două__ telefoane / __două__sprezece telefoane / douăzeci și __două__ de telefoane (two phones / twelve phones / twenty two phones).\n\n**Prepoziția „de” (The preposition “de”)**\nNumeralele de la 20 la 100 sunt conectate cu substantivul următor prin prepoziția „de”:\n__Numerals from 20 to 100 are connected to the following noun by the preposition “de”:__\n20 **de** lei, 21 **de** lei, 99 **de** lei, 100 **de** lei.\n\nDacă numeralul este complex, numai ultimele două cifre sunt importante. Dacă ultimele două cifre sunt între 0 și 19, prepoziția „de” nu este utilizată. Dacă ultimele două cifre sunt între 20 și 100, prepoziția „de” este obligatorie. Toate numeralele terminate în „00” sunt urmate de prepoziția „de”.\n__If a numeral is complex, only the last two digits are important. If the last two digits are between 0 and 19, the preposition “de” is not used. If the last two digits are between 20 and 99, the preposition “de” is mandatory. All numerals ending in “00” are followed by the preposition “de”.__\n101 lei, 119 lei, 120 **de** lei, 199 **de** lei, 200 **de** lei, 1.000 **de** lei, 1.000.000 **de** lei.",
+      "id": [
+        "136141"
+      ],
+      "item": "Remarci (Remarks)"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-9]\n[@id:136142]\n[#LECȚIA 7\nActivități zilnice \nDaily activities]\n[%7]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "7",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "136142"
+      ],
+      "title": "LECȚIA 7\nActivități zilnice \nDaily activities"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&audio]\n[@id:136143]\n**Ce activități zilnice are George?**\n__What daily activities does George have?__\n\nLuni: merg la serviciu, beau o cafea, scriu niște e-mailuri, fac sport.\n__On Monday: I go to work, I have a coffee, I write some e-mails, I play sports.__\n|image:\n\nMarți: am cursul de franceză, lucrez la computer, mă întâlnesc cu niște prieteni.\n__On Tuesday: I have the French class, I work on the computer, I meet with some friends.__\nMiercuri: am niște întâlniri de afaceri, merg la un curs de dans, iau cina cu niște colegi.\n__On Wednesday: I have some business meetings, I go to a dance class, I have dinner with some colleagues.__\nJoi: merg la birou, scriu un raport, merg la un bar cu niște prieteni.\n__On Thursday: I go to the office, I write a report, I go to a bar with some friends.__\nVineri: plec din București, merg la munte, admir natura, mă plimb.\n__On Friday: I leave Bucharest, I go to the mountains, I admire nature, I walk.__\nSâmbătă: vizitez castelul Bran, iau masa la un restaurant, mă pregătesc să revin în București.\n__On Saturday: I visit Bran castle, I eat in a restaurant, I prepare to return to Bucharest.__\nDuminică: revin în București, merg patru ore cu mașina, mă pregătesc pentru săptămâna următoare.\n__On Sunday: I come back to Bucharest, I go four hours by car, I prepare for next week.__\n|image:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Ce activități zilnice are George?**\n__What daily activities does George have?__\n\nLuni: merg la serviciu, beau o cafea, scriu niște e-mailuri, fac sport.\n__On Monday: I go to work, I have a coffee, I write some e-mails, I play sports.__\n|image:\n\nMarți: am cursul de franceză, lucrez la computer, mă întâlnesc cu niște prieteni.\n__On Tuesday: I have the French class, I work on the computer, I meet with some friends.__\nMiercuri: am niște întâlniri de afaceri, merg la un curs de dans, iau cina cu niște colegi.\n__On Wednesday: I have some business meetings, I go to a dance class, I have dinner with some colleagues.__\nJoi: merg la birou, scriu un raport, merg la un bar cu niște prieteni.\n__On Thursday: I go to the office, I write a report, I go to a bar with some friends.__\nVineri: plec din București, merg la munte, admir natura, mă plimb.\n__On Friday: I leave Bucharest, I go to the mountains, I admire nature, I walk.__\nSâmbătă: vizitez castelul Bran, iau masa la un restaurant, mă pregătesc să revin în București.\n__On Saturday: I visit Bran castle, I eat in a restaurant, I prepare to return to Bucharest.__\nDuminică: revin în București, merg patru ore cu mașina, mă pregătesc pentru săptămâna următoare.\n__On Sunday: I come back to Bucharest, I go four hours by car, I prepare for next week.__\n|image:",
+      "id": [
+        "136143"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136144]\n[%Vocabular (Vocabulary)\n===\nactivitate, activități\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nactivity\n[@language:en]\n===\na admira\n[@language:ro]\n[@pos:verb]\n==\nto admire\n[@language:en]\n===\nafacere, afaceri\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nbusiness\n[@language:en]\n===\nbar, baruri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nbar\n[@language:en]\n===\na bea\n[@language:ro]\n[@pos:verb]\n==\nto drink\n[@language:en]\n===\nbirou, birouri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\noffice\n[@language:en]\n===\ncastel, castele\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\ncastle\n[@language:en]\n===\ncină, cine\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\ndinner\n[@language:en]\n===\ncurs, cursuri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\ncourse\n[@language:en]\n===\ndans, dansuri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\ndance\n[@language:en]\n===\ne-mail, e-mailuri\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\ne-mail\n[@language:en]\n===\nîntâlnire, întâlniri\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nmeeting\n[@language:en]\n===\nîntâlnire de afaceri (expr.)\n[@language:ro]\n==\nbusiness meeting\n[@language:en]\n===\na lucra\n[@language:ro]\n[@pos:verb]\n==\nto work\n[@language:en]\n===\na lua cina (expr.)\n[@language:ro]\n==\nto have dinner\n[@language:en]\n===\nmașină, mașini\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\ncar\n[@language:en]\n===\na merge\n[@language:ro]\n[@pos:verb]\n==\nto go\n[@language:en]\n===\nnatură\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nnature\n[@language:en]\n===\nniște (articol)\n[@language:ro]\n||||\n==\nsome\n[@language:en]\n===\na pleca\n[@language:ro]\n[@pos:verb]\n==\nto leave\n[@language:en]\n===\na se plimba\n[@language:ro]\n[@pos:verb]\n==\nto take a walk\n[@language:en]\n===\na se pregăti\n[@language:ro]\n[@pos:verb]\n==\nto prepare\n[@language:en]\n===\nprieten, prieteni\n[@language:ro]\n[@pos:noun]\n[@gender:m]\n==\nfriend\n[@language:en]\n===\nraport, rapoarte\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nreport\n[@language:en]\n===\na reveni\n[@language:ro]\n[@pos:verb]\n==\nto return / to come back\n[@language:en]\n===\nsăptămână, săptămâni\n[@language:ro]\n[@pos:noun]\n[@gender:f]\n==\nweek\n[@language:en]\n===\na scrie\n[@language:ro]\n[@pos:verb]\n==\nto write\n[@language:en]\n===\nsport, sporturi\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nsport\n[@language:en]\n===\nurmător, următoare\n[@language:ro]\n[@pos:adj]\n==\nnext\n[@language:en]\n===\na vizita\n[@language:ro]\n[@pos:verb]\n==\nto visit\n[@language:en]\n===\nzilnic, zilnică\n[@language:ro]\n[@pos:adj]\n==\ndaily\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "[%Vocabular (Vocabulary)\n===\nactivitate, activități\n\n\n\n==\nactivity\n\n===\na admira\n\n\n==\nto admire\n\n===\nafacere, afaceri\n\n\n\n==\nbusiness\n\n===\nbar, baruri\n\n\n\n==\nbar\n\n===\na bea\n\n\n==\nto drink\n\n===\nbirou, birouri\n\n\n\n==\noffice\n\n===\ncastel, castele\n\n\n\n==\ncastle\n\n===\ncină, cine\n\n\n\n==\ndinner\n\n===\ncurs, cursuri\n\n\n\n==\ncourse\n\n===\ndans, dansuri\n\n\n\n==\ndance\n\n===\ne-mail, e-mailuri\n\n\n\n==\ne-mail\n\n===\nîntâlnire, întâlniri\n\n\n\n==\nmeeting\n\n===\nîntâlnire de afaceri (expr.)\n\n==\nbusiness meeting\n\n===\na lucra\n\n\n==\nto work\n\n===\na lua cina (expr.)\n\n==\nto have dinner\n\n===\nmașină, mașini\n\n\n\n==\ncar\n\n===\na merge\n\n\n==\nto go\n\n===\nnatură\n\n\n\n==\nnature\n\n===\nniște (articol)\n\n\n==\nsome\n\n===\na pleca\n\n\n==\nto leave\n\n===\na se plimba\n\n\n==\nto take a walk\n\n===\na se pregăti\n\n\n==\nto prepare\n\n===\nprieten, prieteni\n\n\n\n==\nfriend\n\n===\nraport, rapoarte\n\n\n\n==\nreport\n\n===\na reveni\n\n\n==\nto return / to come back\n\n===\nsăptămână, săptămâni\n\n\n\n==\nweek\n\n===\na scrie\n\n\n==\nto write\n\n===\nsport, sporturi\n\n\n\n==\nsport\n\n===\nurmător, următoare\n\n\n==\nnext\n\n===\na vizita\n\n\n==\nto visit\n\n===\nzilnic, zilnică\n\n\n==\ndaily\n\n===",
+      "item": "Vocabular (Vocabulary)\n===\nactivitate, activități<missing '",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136144"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "noun",
+        "verb",
+        "noun",
+        "noun",
+        "verb",
+        "noun",
+        "noun",
+        "noun",
+        "noun",
+        "noun",
+        "noun",
+        "noun",
+        "verb",
+        "noun",
+        "verb",
+        "noun",
+        "verb",
+        "verb",
+        "verb",
+        "noun",
+        "noun",
+        "verb",
+        "noun",
+        "verb",
+        "noun",
+        "adj",
+        "verb",
+        "adj"
+      ],
+      "gender": [
+        "f",
+        "f",
+        "n",
+        "n",
+        "n",
+        "f",
+        "n",
+        "n",
+        "n",
+        "f",
+        "f",
+        "f",
+        "m",
+        "n",
+        "f",
+        "n"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n===\n'",
+        "line": 3,
+        "column": 24,
+        "errorLine": "[%Vocabular (Vocabulary)"
+      },
+      {
+        "message": "Unexpected input '\\n'",
+        "line": 5,
+        "column": 22,
+        "errorLine": "activitate, activități"
+      },
+      {
+        "message": "Unexpected input '\\n[@gender:f]\n==\n'",
+        "line": 8,
+        "column": 11,
+        "errorLine": "[@gender:f]"
+      },
+      {
+        "message": "Unexpected input '\\n==\n'",
+        "line": 8,
+        "column": 11,
+        "errorLine": "[@gender:f]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136145]\n[%Acte de vorbire (Speech acts)]\n• La ce oră mergi la serviciu? __What time do you go to work?__\n• Încep lucrul la ora nouă dimineața. __I start work at nine o'clock in the morning.__\n• Care sunt orele tale de lucru? / Care sunt orele dumneavoastră de lucru? __What are your work hours?__\n• Lucrez de la nouă dimineața la cinci seara. __I work from 9 am to 5 pm.__\n• Lucrez opt ore pe zi. __I work eight hours a day.__\n• La prânz avem o pauză. __At noon we have a break.__\n• Sunt în vacanță. __I am on holiday.__\n• Ce faci duminica? __What do you do on Sundays?__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• La ce oră mergi la serviciu? __What time do you go to work?__\n• Încep lucrul la ora nouă dimineața. __I start work at nine o'clock in the morning.__\n• Care sunt orele tale de lucru? / Care sunt orele dumneavoastră de lucru? __What are your work hours?__\n• Lucrez de la nouă dimineața la cinci seara. __I work from 9 am to 5 pm.__\n• Lucrez opt ore pe zi. __I work eight hours a day.__\n• La prânz avem o pauză. __At noon we have a break.__\n• Sunt în vacanță. __I am on holiday.__\n• Ce faci duminica? __What do you do on Sundays?__",
+      "id": [
+        "136145"
+      ],
+      "item": "Acte de vorbire (Speech acts)",
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.vocabulary:bitmark--]\n[@id:136146]\n[%Vocabular (Vocabulary)]\n===\na începe\n[@language:ro]\n[@pos:verb]\n==\nto start\n[@language:en]\n===\na prânz\n[@language:ro]\n==\nat noon\n[@language:en]\n===\na lucra\n[@language:ro]\n[@pos:verb]\n==\nto work\n[@language:en]\n===\nlucru\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nwork\n[@language:en]\n===\npauză, pauze\n[@pos:noun]\n[@gender:f]\n==\nbreak\n[@language:en]\n===\nserviciu, servicii\n[@language:ro]\n[@pos:noun]\n[@gender:n]\n==\nwork\n[@language:en]\n===",
+    "bit": {
+      "type": "vocabulary",
+      "format": "bitmark--",
+      "body": "===\na începe\n\n\n==\nto start\n\n===\na prânz\n\n==\nat noon\n\n===\na lucra\n\n\n==\nto work\n\n===\nlucru\n\n\n\n==\nwork\n\n===\npauză, pauze\n\n\n==\nbreak\n\n===\nserviciu, servicii\n\n\n\n==\nwork\n\n===",
+      "item": "Vocabular (Vocabulary)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136146"
+      ],
+      "language": [
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "ro",
+        "en",
+        "en",
+        "ro",
+        "en"
+      ],
+      "pos": [
+        "verb",
+        "verb",
+        "noun",
+        "noun",
+        "noun"
+      ],
+      "gender": [
+        "n",
+        "f",
+        "n"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&audio]\n[@id:136147]\n[",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[",
+      "id": [
+        "136147"
+      ],
+      "resource": {
+        "type": "audio",
+        "audio": {}
+      }
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '[\\n'",
+        "line": 3,
+        "column": 0,
+        "errorLine": "["
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136148]\n[%",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "136148"
+      ],
+      "item": ""
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[%\\n'",
+        "line": 3,
+        "column": 2,
+        "errorLine": "[%"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136149]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "136149"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136150]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "136150"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-10]\n[@id:136151]\n[#LECȚIA 8\nO convorbire\nA conversation]\n[%8]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "8",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-10",
+      "id": [
+        "136151"
+      ],
+      "title": "LECȚIA 8\nO convorbire\nA conversation"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-11]\n[@id:136152]\n[#LECȚIA 9\nO convorbire\nA conversation]\n[%9]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "9",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-11",
+      "id": [
+        "136152"
+      ],
+      "title": "LECȚIA 9\nO convorbire\nA conversation"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-12]\n[@id:136153]\n[#LECȚIA 10\nO convorbire\nA conversation]\n[%10]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "10",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-12",
+      "id": [
+        "136153"
+      ],
+      "title": "LECȚIA 10\nO convorbire\nA conversation"
+    }
+  }
+]

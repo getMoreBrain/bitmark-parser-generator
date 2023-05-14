@@ -1,0 +1,67 @@
+[
+  {
+    "bitmark": "[.true-false:bitmark--&image]\n[%A14]\n[!Hören Sie die Nachrichten.\n\nWas ist richtig, was ist falsch? Kreuzen Sie an.]\n[&image::https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/audio/12_erkundungen_b2_3a.ipg][@src2x::https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/audio/12_erkundungen_b2_3aa.ipg]\n[@label-true:richtig][@label-false:falsch]\n===\n**Doping**\n[+1. Der langjährige deutsche Olympia-Arzt Georg Huber hat zugegeben, dass er Sportlern Dopingmittel gegeben hat.]\n===\n[-2. Er ist der erste Arzt, der das Schweigen über Doping bricht. ]\n===\n**Frauenquote**\n[-3. In Zukunft müssen in großen Unternehmen 30 Prozent Frauen arbeiten.]\n===\n[-4. Wenn ein börsennotiertes Unternehmen für den Aufsichtsrat keine geeigneten Frauen findet, können die Posten weiterhin mit Männern besetzt werden.]\n===\n**Telekom**\n[+5. Um den Streit mit den Mitarbeitern schneller zu beenden, bot der Telekom-Chef den Mitarbeitern eine Erfolgsbeteiligung an.]\n===\n**Klimawandel**\n[+6. Der Klimawandel wird Folgen für die gesamte Erde haben.]\n===\n[+7. Am meisten wird Afrika vom Klimawandel betroffen sein.]\n===\n[-8. Der Anstieg des Meeresspiegels bedroht vor allem die afrikanischen Wüstengebiete.]\n===\n**Giftmüll**\n[-9. Obwohl Australien seinen Giftmüll selber entsorgen kann, exportiert es den Müll nach Deutschland.]\n===\n**Unwetter**\n[-10. Unwetter haben in ganz Deutschland großen Schaden verursacht.]\n===\n[+11. In Berlin war die Feuerwehr am Freitag ca. 500-mal unterwegs, um Schäden zu beseitigen.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "A14",
+      "lead": "",
+      "instruction": "Hören Sie die Nachrichten.\n\nWas ist richtig, was ist falsch? Kreuzen Sie an.",
+      "hint": "",
+      "labelTrue": "",
+      "labelFalse": "",
+      "statements": [],
+      "body": "[&image::https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/audio/12_erkundungen_b2_3a.ipg][@src2x::https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/audio/12_erkundungen_b2_3aa.ipg]\n[@label-true:richtig][@label-false:falsch]\n===\n**Doping**\n[+1. Der langjährige deutsche Olympia-Arzt Georg Huber hat zugegeben, dass er Sportlern Dopingmittel gegeben hat.]\n===\n[-2. Er ist der erste Arzt, der das Schweigen über Doping bricht. ]\n===\n**Frauenquote**\n[-3. In Zukunft müssen in großen Unternehmen 30 Prozent Frauen arbeiten.]\n===\n[-4. Wenn ein börsennotiertes Unternehmen für den Aufsichtsrat keine geeigneten Frauen findet, können die Posten weiterhin mit Männern besetzt werden.]\n===\n**Telekom**\n[+5. Um den Streit mit den Mitarbeitern schneller zu beenden, bot der Telekom-Chef den Mitarbeitern eine Erfolgsbeteiligung an.]\n===\n**Klimawandel**\n[+6. Der Klimawandel wird Folgen für die gesamte Erde haben.]\n===\n[+7. Am meisten wird Afrika vom Klimawandel betroffen sein.]\n===\n[-8. Der Anstieg des Meeresspiegels bedroht vor allem die afrikanischen Wüstengebiete.]\n===\n**Giftmüll**\n[-9. Obwohl Australien seinen Giftmüll selber entsorgen kann, exportiert es den Müll nach Deutschland.]\n===\n**Unwetter**\n[-10. Unwetter haben in ganz Deutschland großen Schaden verursacht.]\n===\n[+11. In Berlin war die Feuerwehr am Freitag ca. 500-mal unterwegs, um Schäden zu beseitigen.]\n==="
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[&image::'",
+        "line": 6,
+        "column": 7,
+        "errorLine": "[&image::https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/audio/12_erkundungen_b2_3a.ipg][@src2x::https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/audio/12_erkundungen_b2_3aa.ipg]"
+      },
+      {
+        "message": "Unexpected input '[@'",
+        "line": 7,
+        "column": 0,
+        "errorLine": "[@label-true:richtig][@label-false:falsch]"
+      },
+      {
+        "message": "Unexpected input '[+'",
+        "line": 10,
+        "column": 0,
+        "errorLine": "[+1. Der langjährige deutsche Olympia-Arzt Georg Huber hat zugegeben, dass er Sportlern Dopingmittel gegeben hat.]"
+      },
+      {
+        "message": "Unexpected input '[-'",
+        "line": 15,
+        "column": 0,
+        "errorLine": "[-3. In Zukunft müssen in großen Unternehmen 30 Prozent Frauen arbeiten.]"
+      },
+      {
+        "message": "Unexpected input '[+'",
+        "line": 20,
+        "column": 0,
+        "errorLine": "[+5. Um den Streit mit den Mitarbeitern schneller zu beenden, bot der Telekom-Chef den Mitarbeitern eine Erfolgsbeteiligung an.]"
+      },
+      {
+        "message": "Unexpected input '[+'",
+        "line": 23,
+        "column": 0,
+        "errorLine": "[+6. Der Klimawandel wird Folgen für die gesamte Erde haben.]"
+      },
+      {
+        "message": "Unexpected input '[-'",
+        "line": 30,
+        "column": 0,
+        "errorLine": "[-9. Obwohl Australien seinen Giftmüll selber entsorgen kann, exportiert es den Müll nach Deutschland.]"
+      },
+      {
+        "message": "Unexpected input '[-'",
+        "line": 33,
+        "column": 0,
+        "errorLine": "[-10. Unwetter haben in ganz Deutschland großen Schaden verursacht.]"
+      }
+    ]
+  }
+]

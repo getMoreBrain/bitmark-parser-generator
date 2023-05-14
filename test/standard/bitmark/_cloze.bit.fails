@@ -1,0 +1,32 @@
+[.cloze:bitmark--]
+|| Square brackets confuse the ANTLR parser ||
+[@id:136392]
+[%05_Ablauf und Termine_023 (Freitext) ]
+[!Ordnen Sie die folgenden Aufgaben den einzelnen Projektphasen zu.]
+A] Stakeholder-Analyse
+B] Erstellen eines Projektstrukturplans
+C] Projektführung
+D] Machbarkeitsanalyse
+E] Projektabschlussbericht
+F] Erstellen eines Aufwandsplans
+G] Auflösung der Projektorganisation
+H] Controlling
+
+**Projektphase**
+Initialisierung [_a][_A] [_d][_D]
+Planung [_b][_B] [_f][_F]
+Realisierung [_c][_C] [_h][_H]
+Abschluss [_e][_E] [_g][_G]
+
+||TODO: should the number of possible answer appear? are they interchangable?||
+
+
+[.cloze:bitmark--]
+0. young → [_younger]  [@example] → [_youngest]  [_youngerer!][@example]
+
+[.cloze:bitmark--]
+|| Chaining of [?HINT?] does not work because of the space and it ends up at the top level ||
+[@id:272904]
+[%34]
+[!Füllen Sie den Lückentext zum Vertriebssystem mit den passenden Begriffen aus.]
+Beim [_direkten Vertrieb][_direkten Vertrieb2][?Hint] verkauft eigene [_Verkaufsstellen] einrichten, [_Verkaufsmitarbeitende] einstellen. Beim [_indirekten Vertrieb][_indirekten Vertrieb2] [?HINT?] läuft den [_Grosshandel] [_NOT Grosshandel2] und / oder den [_Einzelhandel].

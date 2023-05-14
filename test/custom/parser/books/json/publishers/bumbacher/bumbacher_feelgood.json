@@ -1,0 +1,553 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:191150]\n[#FEEL GOOD MANAGER]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/bumbacher/primepool_cover2.png]\n[@externalId:e-feel-good-manager_myje3zj5at8o]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191150"
+      ],
+      "title": "FEEL GOOD MANAGER",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/bumbacher/primepool_cover2.png"
+      ],
+      "externalId": [
+        "e-feel-good-manager_myje3zj5at8o"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191151]\n[▼ch-1]\n[#Arbeit 4.0: Chefs werden zu Feelgood Managern]\nQuelle: Studie Telekom/Uni St. Gallen",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "Quelle: Studie Telekom/Uni St. Gallen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191151"
+      ],
+      "anchor": "ch-1",
+      "title": "Arbeit 4.0: Chefs werden zu Feelgood Managern"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191152]\nErste Ausbildung zum Feelgood Manager in der Schweiz\nwww.feelgoodmanager.ch",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Erste Ausbildung zum Feelgood Manager in der Schweiz\nwww.feelgoodmanager.ch",
+      "id": [
+        "191152"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.statement]\n[@id:191153]\nIn wenigen Jahren bildet die Generation Y bereits 80% der Erwerbstätigen.",
+    "bit": {
+      "type": "statement",
+      "format": "bitmark--",
+      "body": "In wenigen Jahren bildet die Generation Y bereits 80% der Erwerbstätigen.",
+      "id": [
+        "191153"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191154]\n[▼ch-2]\n[#Neu und exklusiv bei primepool: Ausbildung Feelgood Manager]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191154"
+      ],
+      "anchor": "ch-2",
+      "title": "Neu und exklusiv bei primepool: Ausbildung Feelgood Manager"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191155]\n«Generation Y» steht für die jüngste Generation der Arbeitnehmenden. Sie sind mit dem Internet aufgewachsen, gut gebildet und lieben die Freiheit. Freude, ethische Werte und Sinn in der beruflichen Tätigkeit sind für sie zentral. Doch auch Ältere verlangen im Beruf je länger je mehr, was im Privaten selbstverständlich ist: Erfüllung und Lebensglück. Diese Ansprüche prägen die berufstätige Bevölkerung unserer Zeit; sie führen zwangsläufig zu einem Wertewandel in der Arbeitswelt. Dies zwingt die Unternehmen nicht nur aus Gründen der Menschlichkeit, sondern auch aus betriebswirtschaftlicher Sicht umzudenken und mehr für das Wohlergehen der Mitarbeitenden zu tun.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "«Generation Y» steht für die jüngste Generation der Arbeitnehmenden. Sie sind mit dem Internet aufgewachsen, gut gebildet und lieben die Freiheit. Freude, ethische Werte und Sinn in der beruflichen Tätigkeit sind für sie zentral. Doch auch Ältere verlangen im Beruf je länger je mehr, was im Privaten selbstverständlich ist: Erfüllung und Lebensglück. Diese Ansprüche prägen die berufstätige Bevölkerung unserer Zeit; sie führen zwangsläufig zu einem Wertewandel in der Arbeitswelt. Dies zwingt die Unternehmen nicht nur aus Gründen der Menschlichkeit, sondern auch aus betriebswirtschaftlicher Sicht umzudenken und mehr für das Wohlergehen der Mitarbeitenden zu tun.",
+      "id": [
+        "191155"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191156]\nZukunftsorientierte, dynamische Menschen mit hoher Sozialkompetenz profitieren im Lehrgang zum Feelgood Manager doppelt: Sie entwickeln die nötigen Fertigkeiten, um diesen Wertewandel in den Unternehmen aktiv\nzu vollziehen und verbessern zugleich deren Personalmarketing. Ausgebildete Feelgood Manager sind in der Lage, ein Arbeitsumfeld zu schaffen, in dem die Mitarbeitenden ...",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Zukunftsorientierte, dynamische Menschen mit hoher Sozialkompetenz profitieren im Lehrgang zum Feelgood Manager doppelt: Sie entwickeln die nötigen Fertigkeiten, um diesen Wertewandel in den Unternehmen aktiv\nzu vollziehen und verbessern zugleich deren Personalmarketing. Ausgebildete Feelgood Manager sind in der Lage, ein Arbeitsumfeld zu schaffen, in dem die Mitarbeitenden ...",
+      "id": [
+        "191156"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191157]\n• sich engagieren\n• sich der Stärken der Firma bewusst sind\n• die Unternehmensvision stolz mittragen\n• gefördert werden\n• Wertschätzung erfahren\n• inspiriert sind\n• Sinn finden\n• gerne zur Arbeit kommen",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• sich engagieren\n• sich der Stärken der Firma bewusst sind\n• die Unternehmensvision stolz mittragen\n• gefördert werden\n• Wertschätzung erfahren\n• inspiriert sind\n• Sinn finden\n• gerne zur Arbeit kommen",
+      "id": [
+        "191157"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191158]\n[▼ch-3]\n[#Feelgood Management ist Berufung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191158"
+      ],
+      "anchor": "ch-3",
+      "title": "Feelgood Management ist Berufung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191159]\n[%][%Was ist Feelgood Management?]\nFeelgood Management umfasst sämtliche Aktivitäten, die zum Wohlergehen der Mitarbeitenden und dadurch zur Verbesserung der Arbeitsleistung beitragen. Nur wenn diese sich am Arbeitsplatz wohlfühlen, können sie ihr Potenzial entfalten. In den USA und in Deutschland bereits etabliert, ist Feelgood Management in der Schweiz ein neues Berufsfeld, das zunehmend an Profil gewinnt. Denn aufgrund des Fachkräftemangels werden Schweizer Unternehmen auf diesem Gebiet zunehmend aktiv. Sie können so ihre Produktivität steigern, sie erweitern ihren Pool an Bewerberinnen und Bewerbern und verringern zugleich die Personalfluktuation.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Feelgood Management umfasst sämtliche Aktivitäten, die zum Wohlergehen der Mitarbeitenden und dadurch zur Verbesserung der Arbeitsleistung beitragen. Nur wenn diese sich am Arbeitsplatz wohlfühlen, können sie ihr Potenzial entfalten. In den USA und in Deutschland bereits etabliert, ist Feelgood Management in der Schweiz ein neues Berufsfeld, das zunehmend an Profil gewinnt. Denn aufgrund des Fachkräftemangels werden Schweizer Unternehmen auf diesem Gebiet zunehmend aktiv. Sie können so ihre Produktivität steigern, sie erweitern ihren Pool an Bewerberinnen und Bewerbern und verringern zugleich die Personalfluktuation.",
+      "id": [
+        "191159"
+      ],
+      "lead": "Was ist Feelgood Management?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191160]\n[%][%Was machen Feelgood Manager?]\nFeelgood Manager gestalten und fördern eine positive Unternehmenskultur. Sie bauen Strukturen und ein Arbeitsumfeld auf, in dem sich die Mitarbeitenden wohlfühlen. So entsteht ein gutes Klima, das effizientes, kreatives und stressfreies Arbeiten ermöglicht. Der Alltag von Feelgood Managern wird durch den Kontakt mit den Menschen im Unternehmen bereichert. Denn diese geben die Hinweise auf nötige Massnahmen, die der Feelgood Manager konzipiert wie umsetzt. Er bringt so mehr Freude in den Arbeitsalltag und kann Menschen durch seine Arbeit glücklich und erfolgreich machen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Feelgood Manager gestalten und fördern eine positive Unternehmenskultur. Sie bauen Strukturen und ein Arbeitsumfeld auf, in dem sich die Mitarbeitenden wohlfühlen. So entsteht ein gutes Klima, das effizientes, kreatives und stressfreies Arbeiten ermöglicht. Der Alltag von Feelgood Managern wird durch den Kontakt mit den Menschen im Unternehmen bereichert. Denn diese geben die Hinweise auf nötige Massnahmen, die der Feelgood Manager konzipiert wie umsetzt. Er bringt so mehr Freude in den Arbeitsalltag und kann Menschen durch seine Arbeit glücklich und erfolgreich machen.",
+      "id": [
+        "191160"
+      ],
+      "lead": "Was machen Feelgood Manager?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191161]\n[%][%Wo arbeiten Feelgood Manager?]\nFeelgood Manager sind in Unternehmen verschiedener Grössen und Branchen tätig. Was ihre Position betrifft, sind sie zum Beispiel mit Nachhaltigkeitsbeauftragten vergleichbar, die oft zusätzliche thematisch verwandte Verantwortung haben. Für Feelgood Manager sind dies oft Tätigkeiten im Personalwesen. Feelgood Manager arbeiten nicht selten in Teilzeitpensen. Dies ist besonders für Frauen und Männer interessant, die zum Beispiel aus familiären Gründen reduziert arbeiten möchten. Auch wer sich altershalber schrittweise aus dem Berufsleben zurückziehen möchte, hat als Feelgood Manager mit seinen wertvollen Erfahrungen gute Möglichkeiten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Feelgood Manager sind in Unternehmen verschiedener Grössen und Branchen tätig. Was ihre Position betrifft, sind sie zum Beispiel mit Nachhaltigkeitsbeauftragten vergleichbar, die oft zusätzliche thematisch verwandte Verantwortung haben. Für Feelgood Manager sind dies oft Tätigkeiten im Personalwesen. Feelgood Manager arbeiten nicht selten in Teilzeitpensen. Dies ist besonders für Frauen und Männer interessant, die zum Beispiel aus familiären Gründen reduziert arbeiten möchten. Auch wer sich altershalber schrittweise aus dem Berufsleben zurückziehen möchte, hat als Feelgood Manager mit seinen wertvollen Erfahrungen gute Möglichkeiten.",
+      "id": [
+        "191161"
+      ],
+      "lead": "Wo arbeiten Feelgood Manager?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191162]\n[%][%Wer eignet sich als Feelgood Manager?]\nAls erfolgreiche Feelgood Manager eignen sich Fachpersonen oder Quereinsteiger mit hoher Service-Mentalität und Kreativität. Sie sind gefestigte, lebenserfahrene und belastbare Persönlichkeiten. Sie verfügen über eine hohe emotionale Intelligenz und haben Einfühlungsvermögen. Sie sind gute Kommunikatoren und Konfliktlöser, kennen sich jedoch auch in betriebswirtschaftlichen Themen aus. Dank ihrem souveränen Auftritt und dem nötigen Fingerspitzengefühl geniessen sie das Vertrauen der Mitarbeitenden wie auch der Mitglieder der Geschäftsleitung. Auf diesen persönlichen Qualitäten baut der Lehrgang zum Feelgood Manager auf und vermittelt das fachlichtechnische Know-how.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Als erfolgreiche Feelgood Manager eignen sich Fachpersonen oder Quereinsteiger mit hoher Service-Mentalität und Kreativität. Sie sind gefestigte, lebenserfahrene und belastbare Persönlichkeiten. Sie verfügen über eine hohe emotionale Intelligenz und haben Einfühlungsvermögen. Sie sind gute Kommunikatoren und Konfliktlöser, kennen sich jedoch auch in betriebswirtschaftlichen Themen aus. Dank ihrem souveränen Auftritt und dem nötigen Fingerspitzengefühl geniessen sie das Vertrauen der Mitarbeitenden wie auch der Mitglieder der Geschäftsleitung. Auf diesen persönlichen Qualitäten baut der Lehrgang zum Feelgood Manager auf und vermittelt das fachlichtechnische Know-how.",
+      "id": [
+        "191162"
+      ],
+      "lead": "Wer eignet sich als Feelgood Manager?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191163]\n[%][%Wozu braucht es Feelgood Management?]\nKünftig müssen die Unternehmen wie auch die Berufstätigen den sogenannten weichen Faktoren mehr Beachtung schenken. Soziale Kompetenz, Kreativität und die Bereitschaft, sich für eine Sache voll einzusetzen, werden je länger je mehr zu Erfolgsfaktoren. Durch resignierte und psychisch kranke Mitarbeiter entstehen jährlich direkte und indirekte Kosten in der Höhe von 15 Milliarden Schweizer Franken. Zurzeit sind nur gerade 10 Prozent der Berufstätigen weltweit glücklich in ihrem Job – Tendenz stagnierend, wie der Kelly Global Workforce Index zeigt. Fehlen Motivation und «Drive», kann die Produktivität bis auf ein Fünftel fallen, so die Studie «Quarterly 2013» von McKinsey. In den kommenden Jahren werden in der Schweiz rund 400’000 Fachleute fehlen. Wenn die Unternehmen auch in Zukunft qualifizierte Mitarbeitende gewinnen und halten wollen, so ist es jetzt an der Zeit, dem Faktor Menschlichkeit und Wohlergehen Priorität einzuräumen. Das heisst: Feelgood Management als festen Bestandteil in die Unternehmensstrategie aufzunehmen und umzusetzen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Künftig müssen die Unternehmen wie auch die Berufstätigen den sogenannten weichen Faktoren mehr Beachtung schenken. Soziale Kompetenz, Kreativität und die Bereitschaft, sich für eine Sache voll einzusetzen, werden je länger je mehr zu Erfolgsfaktoren. Durch resignierte und psychisch kranke Mitarbeiter entstehen jährlich direkte und indirekte Kosten in der Höhe von 15 Milliarden Schweizer Franken. Zurzeit sind nur gerade 10 Prozent der Berufstätigen weltweit glücklich in ihrem Job – Tendenz stagnierend, wie der Kelly Global Workforce Index zeigt. Fehlen Motivation und «Drive», kann die Produktivität bis auf ein Fünftel fallen, so die Studie «Quarterly 2013» von McKinsey. In den kommenden Jahren werden in der Schweiz rund 400’000 Fachleute fehlen. Wenn die Unternehmen auch in Zukunft qualifizierte Mitarbeitende gewinnen und halten wollen, so ist es jetzt an der Zeit, dem Faktor Menschlichkeit und Wohlergehen Priorität einzuräumen. Das heisst: Feelgood Management als festen Bestandteil in die Unternehmensstrategie aufzunehmen und umzusetzen.",
+      "id": [
+        "191163"
+      ],
+      "lead": "Wozu braucht es Feelgood Management?"
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:191164]\n«Es geht um Freude an der Arbeit. Es gibt kein größeres Glück als die Erkenntnis, dass wir etwas erreicht haben.»\n[@quotedPerson: Henry Ford]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "«Es geht um Freude an der Arbeit. Es gibt kein größeres Glück als die Erkenntnis, dass wir etwas erreicht haben.»",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191164"
+      ],
+      "quotedPerson": "Henry Ford"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191165]\n[▼ch-4]\n[#Module und Themen im Überblick]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191165"
+      ],
+      "anchor": "ch-4",
+      "title": "Module und Themen im Überblick"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191166]\n[%][%Modul 1: Einführung strategisches und operatives Feelgood Management]\n• Megatrends und Zukunftsforschung\n• Künftige Arbeits- und Lebensmodelle\n• Ziel, Nutzen und Wirksamkeit von Feelgood Management\n• Visionäre Feelgood Leitbilder\n• Etablieren und Umsetzen des Feelgood Managements\n• Rolle und Vorbildfunktion des Feelgood Managers",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Megatrends und Zukunftsforschung\n• Künftige Arbeits- und Lebensmodelle\n• Ziel, Nutzen und Wirksamkeit von Feelgood Management\n• Visionäre Feelgood Leitbilder\n• Etablieren und Umsetzen des Feelgood Managements\n• Rolle und Vorbildfunktion des Feelgood Managers",
+      "id": [
+        "191166"
+      ],
+      "lead": "Modul 1: Einführung strategisches und operatives Feelgood Management"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191167]\n[%][%Modul 2: Mein persönliches Feelgood Management]\n• Positive Psychologie als Führungsinstrument\n• Emotionale Intelligenz (Mein EQ-Wert)\n• Persönlichkeitsmanagement\n• Individuelle Analysen und Tools (SWOT, Transaktion usw.)\n• Erkenntnisse der Hirnforschung",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Positive Psychologie als Führungsinstrument\n• Emotionale Intelligenz (Mein EQ-Wert)\n• Persönlichkeitsmanagement\n• Individuelle Analysen und Tools (SWOT, Transaktion usw.)\n• Erkenntnisse der Hirnforschung",
+      "id": [
+        "191167"
+      ],
+      "lead": "Modul 2: Mein persönliches Feelgood Management"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191168]\n[%][%Modul 3: Feelgood Gruppendynamik]\n2-tägiges externes Seminar mit versch. Lernformen (Workshops, Barcamps, Rollenspiele usw.)\n• Teambildungsprozesse\n• Positiver Umgang mit Ideen und Leistungen anderer (Not-Invented-Here-Syndrom)\n• Ermittlung und Nutzen von Stärken Einzelner und ganzer Gruppen (Appreciative Inquiry)\n• Prinzip der fairen Gegenseitigkeit als Grundlage der Kooperation (Reziprozität)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "2-tägiges externes Seminar mit versch. Lernformen (Workshops, Barcamps, Rollenspiele usw.)\n• Teambildungsprozesse\n• Positiver Umgang mit Ideen und Leistungen anderer (Not-Invented-Here-Syndrom)\n• Ermittlung und Nutzen von Stärken Einzelner und ganzer Gruppen (Appreciative Inquiry)\n• Prinzip der fairen Gegenseitigkeit als Grundlage der Kooperation (Reziprozität)",
+      "id": [
+        "191168"
+      ],
+      "lead": "Modul 3: Feelgood Gruppendynamik"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191169]\n[%][%Modul 4: Unternehmenskultur und Führung 3.0]\n• Entwicklung einer Vision («Machen Sie Ihre Mitarbeitenden zu Fans.»)\n• Stärken des Unternehmens im Bewusstsein der Mitarbeitenden\n• Zukunftsorientiertes Management\n• Rahmenbedingungen der Motivation (Transparenz, Reflexionskultur usw.)\n• Optimierung von Arbeits- und Informationsprozessen",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Entwicklung einer Vision («Machen Sie Ihre Mitarbeitenden zu Fans.»)\n• Stärken des Unternehmens im Bewusstsein der Mitarbeitenden\n• Zukunftsorientiertes Management\n• Rahmenbedingungen der Motivation (Transparenz, Reflexionskultur usw.)\n• Optimierung von Arbeits- und Informationsprozessen",
+      "id": [
+        "191169"
+      ],
+      "lead": "Modul 4: Unternehmenskultur und Führung 3.0"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191170]\n[%][%Modul 5: Employer Branding und Social Media]\n• Kommunikation online und offline\n• Nutzung von Netzwerken\n• Einführung neuer Mitarbeitender (Inplacement), u. a. aus dem Ausland (Expatriats)\n• Vermittlung von Mitarbeitenden an andere Unternehmen (Outplacement)\n• Soziale Integration neuer Mitarbeitender (Onboarding)\n• Erfolgsfaktor ehemalige Mitarbeitende",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Kommunikation online und offline\n• Nutzung von Netzwerken\n• Einführung neuer Mitarbeitender (Inplacement), u. a. aus dem Ausland (Expatriats)\n• Vermittlung von Mitarbeitenden an andere Unternehmen (Outplacement)\n• Soziale Integration neuer Mitarbeitender (Onboarding)\n• Erfolgsfaktor ehemalige Mitarbeitende",
+      "id": [
+        "191170"
+      ],
+      "lead": "Modul 5: Employer Branding und Social Media"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191171]\n[%][%Modul 6: Kreativitäts- und Ideenmanagement]\n• Innerbetriebliches Ideenmanagement\n• Feelgood Management Kopfkino\n• Kreativitätstechniken (Walt-Disney-Strategie, Phantasiereise usw.)\n• Kreativitätshemmer (z.B. Alternativblindheit)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Innerbetriebliches Ideenmanagement\n• Feelgood Management Kopfkino\n• Kreativitätstechniken (Walt-Disney-Strategie, Phantasiereise usw.)\n• Kreativitätshemmer (z.B. Alternativblindheit)",
+      "id": [
+        "191171"
+      ],
+      "lead": "Modul 6: Kreativitäts- und Ideenmanagement"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191172]\n[%][%Modul 7: Feelgood Kommunikation und Coaching]\n• Das 1 x 1 des Coachings\n• Meine Rolle als Feelgood Coach\n• Konfliktmanagement\n• Mediation und Meditation\n• Supervision und kollegiale Beratung",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Das 1 x 1 des Coachings\n• Meine Rolle als Feelgood Coach\n• Konfliktmanagement\n• Mediation und Meditation\n• Supervision und kollegiale Beratung",
+      "id": [
+        "191172"
+      ],
+      "lead": "Modul 7: Feelgood Kommunikation und Coaching"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191173]\n[%][%Modul 8: Physische und Psychische Gesundheit]\n• Lebensqualität im Job\n• Arbeit und Geborgenheit\n• Mind Fitness Training\n• Überforderung/Unterforderung\n• Austausch mit ehemaligen Burnout-Patienten\n• Mobbing und «Herdentrieb» (Prinzip der sozialen Bewährtheit)\n• Suchtprävention",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Lebensqualität im Job\n• Arbeit und Geborgenheit\n• Mind Fitness Training\n• Überforderung/Unterforderung\n• Austausch mit ehemaligen Burnout-Patienten\n• Mobbing und «Herdentrieb» (Prinzip der sozialen Bewährtheit)\n• Suchtprävention",
+      "id": [
+        "191173"
+      ],
+      "lead": "Modul 8: Physische und Psychische Gesundheit"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191174]\n[%][%Modul 9: Der begeisternde Auftritt]\n• Der Feelgood Auftritt\n• Verbale und nonverbale Kommunikation\n• Motivierende Botschaften\n• Präsentationstraining\n• Storytelling\n• Quantitative und qualitative Argumente für Feelgood Management",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Der Feelgood Auftritt\n• Verbale und nonverbale Kommunikation\n• Motivierende Botschaften\n• Präsentationstraining\n• Storytelling\n• Quantitative und qualitative Argumente für Feelgood Management",
+      "id": [
+        "191174"
+      ],
+      "lead": "Modul 9: Der begeisternde Auftritt"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191175]\n[%][%Modul 10: Transfer]\n• Präsentation der Diplomarbeiten\n• Q& A der Umsetzung im eigenen Unternehmen\n• Erfahrungsaustausch\n• Feelgood Manager Plattform\n• Feedback- und Reflexionskultur\n• Controlling und lernende Organisation",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Präsentation der Diplomarbeiten\n• Q& A der Umsetzung im eigenen Unternehmen\n• Erfahrungsaustausch\n• Feelgood Manager Plattform\n• Feedback- und Reflexionskultur\n• Controlling und lernende Organisation",
+      "id": [
+        "191175"
+      ],
+      "lead": "Modul 10: Transfer"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191176]\n**Die Kurstage sind jeweils Freitag und Samstag von 9.00 Uhr bis 17.00 Uhr**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Die Kurstage sind jeweils Freitag und Samstag von 9.00 Uhr bis 17.00 Uhr**",
+      "id": [
+        "191176"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191177]\n**Modul 1** 12./13. August 2016\n**Modul 2** 23./24. September 2016\n**Modul 3** 28./29. Oktober 2016\n**Modul 4** 18./19. November 2016\n**Modul 5** 2./3. Dezember 2016\n\n**Modul 6** 27./28. Januar 2017\n**Modul 7** 24./25. Februar 2017\n**Modul 8** 24./25. März 2017\n**Modul 9** 28./29. April 2017\n**Modul 10** 23./24. Juni 2017",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Modul 1** 12./13. August 2016\n**Modul 2** 23./24. September 2016\n**Modul 3** 28./29. Oktober 2016\n**Modul 4** 18./19. November 2016\n**Modul 5** 2./3. Dezember 2016\n\n**Modul 6** 27./28. Januar 2017\n**Modul 7** 24./25. Februar 2017\n**Modul 8** 24./25. März 2017\n**Modul 9** 28./29. April 2017\n**Modul 10** 23./24. Juni 2017",
+      "id": [
+        "191177"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191178]\n**Gerne nehmen wir Ihre Anmeldung entgegen.**\n\nSara Bumbacher, Geschäftsführerin primepool AG\nSeminarleitung und -organisation\ninfo@primepool.ch, +41 (0)41 720 24 44\n\n**Wir freuen uns auf Sie!**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Gerne nehmen wir Ihre Anmeldung entgegen.**\n\nSara Bumbacher, Geschäftsführerin primepool AG\nSeminarleitung und -organisation\ninfo@primepool.ch, +41 (0)41 720 24 44\n\n**Wir freuen uns auf Sie!**",
+      "id": [
+        "191178"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191179]\n[▼ch-5]\n[#Eckdaten zum Lehrgang]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191179"
+      ],
+      "anchor": "ch-5",
+      "title": "Eckdaten zum Lehrgang"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:191180]\n[%][%Zielpublikum]\nDer Lehrgang erfolgt in einer überschaubaren Gruppe von max. 12 Teilnehmenden und richtet sich an Fachpersonen verschiedener Branchen sowie an Quereinsteiger, die ihre Kompetenzen in Feelgood Management auf- oder ausbauen wollen. Ebenso profitieren erfahrene Personalverantwortliche, Führungskräfte oder Stabsmitarbeitende, die mit Feelgood Management...\n\n• einen positiven Beitrag zur Unternehmenskultur und zu einer optimalen Arbeitsatmosphäre leisten wollen.\n• die Kommunikation und den Arbeitsfluss verbessern wollen.\n• erfolgreiches Employer Branding betreiben wollen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Der Lehrgang erfolgt in einer überschaubaren Gruppe von max. 12 Teilnehmenden und richtet sich an Fachpersonen verschiedener Branchen sowie an Quereinsteiger, die ihre Kompetenzen in Feelgood Management auf- oder ausbauen wollen. Ebenso profitieren erfahrene Personalverantwortliche, Führungskräfte oder Stabsmitarbeitende, die mit Feelgood Management...\n\n• einen positiven Beitrag zur Unternehmenskultur und zu einer optimalen Arbeitsatmosphäre leisten wollen.\n• die Kommunikation und den Arbeitsfluss verbessern wollen.\n• erfolgreiches Employer Branding betreiben wollen.",
+      "id": [
+        "191180"
+      ],
+      "lead": "Zielpublikum"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191181]\n[%][%Dauer des Lehrgangs]\nDer Lehrgang besteht aus 10 Modulen à 2 Tagen. Die Module finden jeweils einmal monatlich am Freitag\nund Samstag statt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Lehrgang besteht aus 10 Modulen à 2 Tagen. Die Module finden jeweils einmal monatlich am Freitag\nund Samstag statt.",
+      "id": [
+        "191181"
+      ],
+      "lead": "Dauer des Lehrgangs"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191182]\n[%][%Prüfung]\nDie Prüfung besteht aus einer Diplomarbeit, die den Praxistransfer und den Aufbau von Feelgood Management möglichst im eigenen Unternehmen thematisiert.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Prüfung besteht aus einer Diplomarbeit, die den Praxistransfer und den Aufbau von Feelgood Management möglichst im eigenen Unternehmen thematisiert.",
+      "id": [
+        "191182"
+      ],
+      "lead": "Prüfung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191183]\n[%][%Diplom]\nDie Studierenden erhalten nach erfolgreicher Präsentation ihrer Diplomarbeit das Diplom zum Feelgood Manager.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Studierenden erhalten nach erfolgreicher Präsentation ihrer Diplomarbeit das Diplom zum Feelgood Manager.",
+      "id": [
+        "191183"
+      ],
+      "lead": "Diplom"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191184]\n[%][%Räumlichkeiten]\nDer Seminarraum ist zentral gelegen – 2 Gehminuten vom Bahnhof Zug entfernt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Seminarraum ist zentral gelegen – 2 Gehminuten vom Bahnhof Zug entfernt.",
+      "id": [
+        "191184"
+      ],
+      "lead": "Räumlichkeiten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191185]\n[%][%Preise]\nDer Preis des Lehrgangs beträgt CHF 8’900 ohne MWSt.\nDie Prüfungsgebühr beträgt CHF 950 ohne MWSt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Preis des Lehrgangs beträgt CHF 8’900 ohne MWSt.\nDie Prüfungsgebühr beträgt CHF 950 ohne MWSt.",
+      "id": [
+        "191185"
+      ],
+      "lead": "Preise"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191186]\n[%][%Methodik]\nDie Themen werden mit verschiedenen didaktischen Methoden praxisnah vermittelt. Die Studierenden gestalten aktiv mit und bringen ihre Erfahrungen ein. Zusätzlich zu den Trainern von primepool werden bei ausgewählten Themen externe Referenten aus der Praxis eingesetzt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Themen werden mit verschiedenen didaktischen Methoden praxisnah vermittelt. Die Studierenden gestalten aktiv mit und bringen ihre Erfahrungen ein. Zusätzlich zu den Trainern von primepool werden bei ausgewählten Themen externe Referenten aus der Praxis eingesetzt.",
+      "id": [
+        "191186"
+      ],
+      "lead": "Methodik"
+    }
+  },
+  {
+    "bitmark": "[.quote]\n[@id:191187]\n«10% der Berufstätigen sind in ihrem Job glücklich – Tendenz stagnierend.»\n[@quotedPerson: Kelly Global Workforce Index]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "«10% der Berufstätigen sind in ihrem Job glücklich – Tendenz stagnierend.»",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191187"
+      ],
+      "quotedPerson": "Kelly Global Workforce Index"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:191188]\n[▼ch-6]\n[#Wer primepool ist]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "191188"
+      ],
+      "anchor": "ch-6",
+      "title": "Wer primepool ist"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191189]\nprimepool bringt Weiterbildung in Ihr Unternehmen. Mit durchdachten Lehrveranstaltungen zu verschiedenen Management-Themen erweitern Kadermitarbeitende ihre Kompetenzen in Führungs- und Fachfragen. Sämtliche Bildungsangebote adaptieren wir auf die speziellen Gegebenheiten Ihres Unternehmens; oder wir konzipieren und setzen Lehrveranstaltungen ganz nach Ihren individuellen Bedürfnissen um. Das ist 360° Bildung.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "primepool bringt Weiterbildung in Ihr Unternehmen. Mit durchdachten Lehrveranstaltungen zu verschiedenen Management-Themen erweitern Kadermitarbeitende ihre Kompetenzen in Führungs- und Fachfragen. Sämtliche Bildungsangebote adaptieren wir auf die speziellen Gegebenheiten Ihres Unternehmens; oder wir konzipieren und setzen Lehrveranstaltungen ganz nach Ihren individuellen Bedürfnissen um. Das ist 360° Bildung.",
+      "id": [
+        "191189"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:191190]\nMit unterschiedlichen didaktischen Methoden, Business Coachings und Lernformen erleichtert primepool Ihren Mitarbeitenden den Transfer des Gelernten in die Praxis. Dazu stehen erfahrene interne Dozenten zur Verfügung wie auch namhafte Persönlichkeiten aus Führung, Sport, Kultur und Medien.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Mit unterschiedlichen didaktischen Methoden, Business Coachings und Lernformen erleichtert primepool Ihren Mitarbeitenden den Transfer des Gelernten in die Praxis. Dazu stehen erfahrene interne Dozenten zur Verfügung wie auch namhafte Persönlichkeiten aus Führung, Sport, Kultur und Medien.",
+      "id": [
+        "191190"
+      ]
+    }
+  }
+]

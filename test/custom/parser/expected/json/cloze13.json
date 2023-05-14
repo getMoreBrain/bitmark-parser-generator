@@ -1,0 +1,36 @@
+[
+  {
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "item": "cl13",
+      "hint": "",
+      "example": "",
+      "isExample": true,
+      "body": "This sentence is a {0} with {1} gaps including an instruction for the first and a hint for the second ] gap means the start of bit [.match]\n::remark::\n[&audio:https://cdn.bitbook.education/cat.wmv]\nEND\n::",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "solutions": ["cloze", "gap text"],
+          "item": "",
+          "hint": "",
+          "instruction": "noun",
+          "isExample": false,
+          "example": "",
+          "isCaseSensitive": true
+        },
+        "{1}": {
+          "type": "gap",
+          "solutions": ["4"],
+          "item": "",
+          "hint": "1 or 2",
+          "instruction": "",
+          "isExample": false,
+          "example": "",
+          "isCaseSensitive": true
+        }
+      }
+    },
+    "bitmark": "[.cloze][%cl13] This sentence is a [_cloze][_gap text][!noun] with [_4][?1 or 2] gaps including an instruction for the first and a hint for the second ] gap means the start of bit [.match][@example]\n::remark::\n[&audio:https://cdn.bitbook.education/cat.wmv]\nEND\n::"
+  }
+]

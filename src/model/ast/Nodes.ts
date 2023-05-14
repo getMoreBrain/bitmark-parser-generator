@@ -1,6 +1,8 @@
 import { BitTypeType } from '../enum/BitType';
 import { ResourceTypeType } from '../enum/ResourceType';
 import { TextFormatType } from '../enum/TextFormat';
+import { ParserError } from '../parser/ParserError';
+import { ParserInfo } from '../parser/ParserInfo';
 
 // Node
 
@@ -30,6 +32,7 @@ export type Node =
 
 export interface BitmarkAst {
   bits?: Bit[];
+  errors?: ParserError[];
 }
 
 // Bit
@@ -37,49 +40,57 @@ export interface BitmarkAst {
 export interface Bit {
   bitType: BitTypeType;
   textFormat: TextFormatType;
-  ids?: string[];
-  externalIds?: string[];
-  ageRanges?: number[];
-  languages?: string[];
-  computerLanguages?: string[];
-  coverImages?: string[];
-  publishers?: string[];
-  publications?: string[];
-  authors?: string[];
-  dates?: string[];
-  locations?: string[];
-  themes?: string[];
-  kinds?: string[];
-  actions?: string[];
-  thumbImages?: string[];
-  durations?: string[];
-  deepLinks?: string[];
-  externalLink?: string;
-  externalLinkText?: string;
-  videoCallLinks?: string[];
-  bots?: string[];
-  referenceProperties?: string[];
-  lists?: string[];
-  labelTrue?: string;
-  labelFalse?: string;
-  quotedPerson?: string;
+  resourceType?: ResourceTypeType;
+  id?: Property;
+  externalId?: Property;
+  ageRange?: Property;
+  language?: Property;
+  computerLanguage?: Property;
+  coverImage?: Property;
+  publisher?: Property;
+  publications?: Property;
+  author?: Property;
+  subject?: Property;
+  date?: Property;
+  location?: Property;
+  theme?: Property;
+  kind?: Property;
+  action?: Property;
+  thumbImage?: Property;
+  focusX?: Property;
+  focusY?: Property;
+  duration?: Property;
+  deeplink?: Property;
+  externalLink?: Property;
+  externalLinkText?: Property;
+  videoCallLink?: Property;
+  bot?: Property;
+  referenceProperty?: Property;
+  list?: Property;
+  labelTrue?: Property;
+  labelFalse?: Property;
+  quotedPerson?: Property;
+  partialAnswer?: Property;
+  extraProperties?: ExtraProperties;
   book?: string;
   title?: string;
   subtitle?: string;
-  level?: number;
-  toc?: boolean;
-  progress?: boolean;
+  levelProperty?: Property; // 'level' can be a property [@level:2] - string
+  level?: number; // 'level' can either the subtitle level [##subtitle]
+  toc?: Property;
+  progress?: Property;
   anchor?: string;
   reference?: string;
   referenceEnd?: string;
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
+  example?: Property;
   resource?: Resource;
   body?: Body;
-  sampleSolutions?: string[];
+  sampleSolution?: string[];
   elements?: string[];
+  statement?: Statement;
   statements?: Statement[];
   choices?: Choice[];
   responses?: Response[];
@@ -88,8 +99,20 @@ export interface Bit {
   pairs?: Pair[];
   matrix?: Matrix[];
   questions?: Question[];
+  botResponses?: BotResponse[];
   footer?: FooterText;
+
+  bitmark?: string;
+  parser?: ParserInfo;
 }
+
+// Extra Properties
+
+export interface ExtraProperties {
+  [key: string]: Property;
+}
+
+export type Property = string[] | number[] | boolean[] | unknown[];
 
 // Statement
 
@@ -107,6 +130,15 @@ export interface Choice extends Decision {
 
 export interface Response extends Decision {
   //
+}
+
+// Bot Response
+export interface BotResponse {
+  response: string;
+  reaction: string;
+  feedback: string;
+  itemLead?: ItemLead;
+  hint?: string;
 }
 
 // Quiz
@@ -138,7 +170,7 @@ export interface Pair {
   instruction?: string;
   example?: Example;
   isCaseSensitive?: boolean;
-  isLongAnswer?: boolean;
+  isShortAnswer?: boolean;
   values?: string[];
 }
 
@@ -149,7 +181,7 @@ export interface Matrix {
   instruction?: string;
   example?: Example;
   isCaseSensitive?: boolean;
-  isLongAnswer?: boolean;
+  isShortAnswer?: boolean;
   cells: MatrixCell[];
 }
 
@@ -180,7 +212,7 @@ export interface Question {
 export interface Resource {
   type: ResourceTypeType;
   format?: string;
-  url?: string;
+  value?: string; // url / src / body / etc
   license?: string;
   copyright?: string;
   provider?: string;
@@ -218,8 +250,7 @@ export interface VideoLikeResource extends Resource {
 }
 
 export interface ArticleLikeResource extends Resource {
-  type: 'article' | 'article-link' | 'document' | 'document-link';
-  body?: string;
+  type: 'article' | 'article-link' | 'document' | 'document-link' | 'document-download';
 }
 
 export interface AppLikeResource extends Resource {
@@ -274,6 +305,9 @@ export interface DocumentLinkResource extends ArticleLikeResource {
   type: 'document-link';
 }
 
+export interface DocumentDownloadResource extends ArticleLikeResource {
+  type: 'document-download';
+}
 export interface AppResource extends AppLikeResource {
   type: 'app';
 }

@@ -1,0 +1,613 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:301448]\n[@externalId:e-deep-dive-pesto-herstellen_e7bkfidbwdf9]\n\n[@publisher:david_geisser]\n[@theme:kochbuch]\n[@language:de]\n[@coverImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/cover_inside_pesto.png]\n[#Deep Dive - Pesto herstellen]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301448"
+      ],
+      "externalId": [
+        "e-deep-dive-pesto-herstellen_e7bkfidbwdf9"
+      ],
+      "publisher": [
+        "david_geisser"
+      ],
+      "theme": [
+        "kochbuch"
+      ],
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/cover_inside_pesto.png"
+      ],
+      "title": "Deep Dive - Pesto herstellen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:301449]\n[▼ch-1]\n[##Schritt 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "301449"
+      ],
+      "anchor": "ch-1",
+      "title": "Schritt 1"
+    }
+  },
+  {
+    "bitmark": "[.video]\n[@id:301450]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0290.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
+    "bit": {
+      "type": "video",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301450"
+      ],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0290.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "format": "png",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:301451]\n[▼ch-2]\n[##Schritt 2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "301451"
+      ],
+      "anchor": "ch-2",
+      "title": "Schritt 2"
+    }
+  },
+  {
+    "bitmark": "[.video]\n[@id:301452]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0291.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
+    "bit": {
+      "type": "video",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301452"
+      ],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0291.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "format": "png",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:301453]\n[▼ch-3]\n[##Schritt 3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "301453"
+      ],
+      "anchor": "ch-3",
+      "title": "Schritt 3"
+    }
+  },
+  {
+    "bitmark": "[.video]\n[@id:301454]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
+    "bit": {
+      "type": "video",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301454"
+      ],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "format": "png",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:301455]\n[▼ch-4]\n[##Schritt 4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "301455"
+      ],
+      "anchor": "ch-4",
+      "title": "Schritt 4"
+    }
+  },
+  {
+    "bitmark": "[.video]\n[@id:301456]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0293.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
+    "bit": {
+      "type": "video",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301456"
+      ],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0293.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "format": "png",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:301457]\n[▼ch-5]\n[##Schritt 5]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "301457"
+      ],
+      "anchor": "ch-5",
+      "title": "Schritt 5"
+    }
+  },
+  {
+    "bitmark": "[.video]\n[@id:301458]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0294.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
+    "bit": {
+      "type": "video",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301458"
+      ],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0294.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "format": "png",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:301459]\n[▼ch-6]\n[##Schritt 6]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "301459"
+      ],
+      "anchor": "ch-6",
+      "title": "Schritt 6"
+    }
+  },
+  {
+    "bitmark": "[.video]\n[@id:301460]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
+    "bit": {
+      "type": "video",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301460"
+      ],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "format": "png",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:301461]\n[▼ch-7]\n[##Schritt 7]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "301461"
+      ],
+      "anchor": "ch-7",
+      "title": "Schritt 7"
+    }
+  },
+  {
+    "bitmark": "[.video]\n[@id:301462]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0296.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
+    "bit": {
+      "type": "video",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301462"
+      ],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0296.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "format": "png",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:301463]\n[▼ch-8]\n[##Schritt 8]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "301463"
+      ],
+      "anchor": "ch-8",
+      "title": "Schritt 8"
+    }
+  },
+  {
+    "bitmark": "[.video]\n[@id:301464]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0297.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
+    "bit": {
+      "type": "video",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301464"
+      ],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0297.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "format": "png",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:301465]\n[▼ch-9]\n[##Schritt 9]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "301465"
+      ],
+      "anchor": "ch-9",
+      "title": "Schritt 9"
+    }
+  },
+  {
+    "bitmark": "[.video]\n[@id:301466]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0298.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
+    "bit": {
+      "type": "video",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301466"
+      ],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0298.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "format": "png",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:301467]\n[▼ch-10]\n[##Schritt 10]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "301467"
+      ],
+      "anchor": "ch-10",
+      "title": "Schritt 10"
+    }
+  },
+  {
+    "bitmark": "[.video]\n[@id:301468]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0299.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
+    "bit": {
+      "type": "video",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "301468"
+      ],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0299.mp4",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "format": "png",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  }
+]

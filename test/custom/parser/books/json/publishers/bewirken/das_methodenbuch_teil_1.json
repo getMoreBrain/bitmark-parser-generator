@@ -1,0 +1,921 @@
+[
+  {
+    "bitmark": "[.book]\r\n[@id:239751]\r\n[@language:de]\r\n[@coverImage:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_cover.png]\r\n[#Das Methodenbuch für digitalen Unterricht]\r\n[##Dein Praxisbegleiter für gute digitale Lernräume]\r\n[###50 Methoden aus der Praxis mit Tipps, Tricks & Vorlagen von 12 Expert*innen]\r\n[@externalId:e-das-methodenbuch-fr-digitalen-_uoxzqhzapncw]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "239751"
+      ],
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_cover.png"
+      ],
+      "title": "Das Methodenbuch für digitalen Unterricht",
+      "subtitle": "50 Methoden aus der Praxis mit Tipps, Tricks & Vorlagen von 12 Expert*innen",
+      "externalId": [
+        "e-das-methodenbuch-fr-digitalen-_uoxzqhzapncw"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:239752]\r\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_1.png][@width:400]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "239752"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "400",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239753]\r\n[%][%Widmung ...]\r\nDieses Buch ist euch gewidmet. Allen mutigen Lehrenden, die mit viel Kraft, Leidenschaft und Engagement einen großen Beitrag dazu leisten, dass unsere Kinder einen Raum zur Entfaltung und zum Lernen erhalten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieses Buch ist euch gewidmet. Allen mutigen Lehrenden, die mit viel Kraft, Leidenschaft und Engagement einen großen Beitrag dazu leisten, dass unsere Kinder einen Raum zur Entfaltung und zum Lernen erhalten.",
+      "id": [
+        "239753"
+      ],
+      "lead": "Widmung ..."
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239754]\r\n[%][%Das Methodenbuch für digitalen Unterricht von beWirken]\r\nDanke, dass du dieses Buch gekauft hast. Wir haben viel Zeit, Geld und Ehrenamt in dieses Buch gesteckt. Bitte unterstütze uns und unsere Arbeit, indem du dieses Buch weiter empfiehlst, damit viele Kolleg*innen davon profitieren und wir auch in Zukunft euer Engagement für die Veränderung von Schule unterstützen können.\r\n\r\n**Autor*innen:** Björn Adam, Judith Holle, Franziska Köpnick\r\n**Mit Methodenbeiträgen von:** Marcel Burghardt, Anna Ginkel, Johannes Kaiser, Andra Krogmann, Marla\r\nKaupmann, Jonas Lohse, Marius Räbiger, Andrea Seitz, Christiane Wellmann \r\n**Illustrationen:** Andra Krogmann\r\n**In Kooperation** mit dem Team von Team:werk und Social Web macht Schule gGmbH",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Danke, dass du dieses Buch gekauft hast. Wir haben viel Zeit, Geld und Ehrenamt in dieses Buch gesteckt. Bitte unterstütze uns und unsere Arbeit, indem du dieses Buch weiter empfiehlst, damit viele Kolleg*innen davon profitieren und wir auch in Zukunft euer Engagement für die Veränderung von Schule unterstützen können.\r\n\r\n**Autor*innen:** Björn Adam, Judith Holle, Franziska Köpnick\r\n**Mit Methodenbeiträgen von:** Marcel Burghardt, Anna Ginkel, Johannes Kaiser, Andra Krogmann, Marla\r\nKaupmann, Jonas Lohse, Marius Räbiger, Andrea Seitz, Christiane Wellmann \r\n**Illustrationen:** Andra Krogmann\r\n**In Kooperation** mit dem Team von Team:werk und Social Web macht Schule gGmbH",
+      "id": [
+        "239754"
+      ],
+      "lead": "Das Methodenbuch für digitalen Unterricht von beWirken"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-1]\r\n[@id:239755]\r\n[##Für wen ist dieses Buch geschrieben?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "239755"
+      ],
+      "title": "Für wen ist dieses Buch geschrieben?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239756]\r\nDu bist Lehrkraft, Lernbegleiter*in, Dozent*in, Trainer*in, Coach, oder du leitest eine Schule oder Bildungsinstitution? Du hast wie wir die Chancen und Herausforderungen von digitalen und hybriden Lernsettings im Unterricht erlebt und möchtest deinen Unterricht oder Workshops digital und abwechslungsreich gestalten?\r\n\r\nDu suchst nach neuen Ideen und Impulsen, wie digitaler Unterricht oder Fernunterricht interaktiv, mit Freude und Erfolg gelingen kann? Du hast Zweifel daran, ob die digitale Unterrichtsgestaltung online wirklich das Gleiche leisten kann, wie in Präsenz?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Du bist Lehrkraft, Lernbegleiter*in, Dozent*in, Trainer*in, Coach, oder du leitest eine Schule oder Bildungsinstitution? Du hast wie wir die Chancen und Herausforderungen von digitalen und hybriden Lernsettings im Unterricht erlebt und möchtest deinen Unterricht oder Workshops digital und abwechslungsreich gestalten?\r\n\r\nDu suchst nach neuen Ideen und Impulsen, wie digitaler Unterricht oder Fernunterricht interaktiv, mit Freude und Erfolg gelingen kann? Du hast Zweifel daran, ob die digitale Unterrichtsgestaltung online wirklich das Gleiche leisten kann, wie in Präsenz?",
+      "id": [
+        "239756"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239757]\r\n[%][%Wenn du auch nur eine der Fragen mit „Ja“ beantworten kannst, haben wir dieses Buch für dich geschrieben!]\r\nDieses Buch ist für alle Bildungsakteur*innen und Bildungsenthusiast*innen, die ihre Schule und digitalen Unterricht zu einem Ort des gemeinsamen Lernens auf Augenhöhe machen wollen. Die Impulse, Methoden und Tipps wollen einen Anstoß leisten zum Übergang in eine neue Zeit, in der digital, online und hybrid Teil des neuen „Normal“ werden.\r\n\r\n**Mach dich gemeinsam mit uns auf den Weg!**\r\n\r\n**Dein beWirken-Team**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieses Buch ist für alle Bildungsakteur*innen und Bildungsenthusiast*innen, die ihre Schule und digitalen Unterricht zu einem Ort des gemeinsamen Lernens auf Augenhöhe machen wollen. Die Impulse, Methoden und Tipps wollen einen Anstoß leisten zum Übergang in eine neue Zeit, in der digital, online und hybrid Teil des neuen „Normal“ werden.\r\n\r\n**Mach dich gemeinsam mit uns auf den Weg!**\r\n\r\n**Dein beWirken-Team**",
+      "id": [
+        "239757"
+      ],
+      "lead": "Wenn du auch nur eine der Fragen mit „Ja“ beantworten kannst, haben wir dieses Buch für dich geschrieben!"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:239758]\r\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_2.png][@width:500]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "239758"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "500",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-2]\r\n[@id:239759]\r\n[##Das Sprechende Buch]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "239759"
+      ],
+      "title": "Das Sprechende Buch"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239760]\r\n[%][%Dieses Buch möchte dich, wenn du magst, intensiv und vertrauensvoll durch deine Lernreise begleiten.]\r\nManche von uns sind begeisterte Zuhörer*innen und lieben es, gute Geschichten zu hören und Tipps und Tricks aus der Praxis von echten Menschen. Daher möchten wir dich an einigen Stellen in diesem Buch einladen, zuzuhören und noch tiefer einzutauchen, als das geschriebene Wort es möglich macht.\r\n\r\nDieses Buch möchte auch ein Beispiel sein für die Verknüpfung verschiedener Sinne und den sinnvollen Einsatz von digitalen Möglichkeiten, soweit dies in einem Buch möglich ist. Wir hoffen, du kannst auch aus unseren Audiobeiträgen etwas mitnehmen und würden uns freuen, bald auch deine Stimme zu hören, wenn wir uns in einem digitalen Lehrerzimmer oder Workshop sehen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Manche von uns sind begeisterte Zuhörer*innen und lieben es, gute Geschichten zu hören und Tipps und Tricks aus der Praxis von echten Menschen. Daher möchten wir dich an einigen Stellen in diesem Buch einladen, zuzuhören und noch tiefer einzutauchen, als das geschriebene Wort es möglich macht.\r\n\r\nDieses Buch möchte auch ein Beispiel sein für die Verknüpfung verschiedener Sinne und den sinnvollen Einsatz von digitalen Möglichkeiten, soweit dies in einem Buch möglich ist. Wir hoffen, du kannst auch aus unseren Audiobeiträgen etwas mitnehmen und würden uns freuen, bald auch deine Stimme zu hören, wenn wir uns in einem digitalen Lehrerzimmer oder Workshop sehen.",
+      "id": [
+        "239760"
+      ],
+      "lead": "Dieses Buch möchte dich, wenn du magst, intensiv und vertrauensvoll durch deine Lernreise begleiten."
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--&image]\r\n[@id:239761]\r\n[%][%Audiobeiträge]\r\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_3.png][@width:200]\r\nEinfach den QR-Code scannen oder den Link eingeben und du landest direkt in den Audiobeiträgen. Probier es doch direkt hier aus!",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Einfach den QR-Code scannen oder den Link eingeben und du landest direkt in den Audiobeiträgen. Probier es doch direkt hier aus!",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "239761"
+      ],
+      "lead": "Audiobeiträge",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "200",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:239762]\r\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_4.png][@width:350]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "239762"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "350",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-3]\r\n[@id:239763]\r\n[##Bevor es losgeht]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "239763"
+      ],
+      "title": "Bevor es losgeht"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239764]\r\n[%][%Wer hätte das gedacht? — Von der größten Krise zur größten Chance für Schule]\r\nEine weltweite Krise, ausgelöst durch eine Pandemie, veränderte 2020 binnen kürzester Zeit die Art und Weise, wie wir arbeiten und lernen und stellte auch unsere Bildungswelt auf den Kopf. Mitarbeitende wurden, da wo es möglich war, ins Homeoffice geschickt, Schulen geschlossen und Lehrende und Lernende mussten sich gleichermaßen an „Homeschooling“ und digitale Lernräume gewöhnen. Eine Form des Lernens, die zuvor meistens unvorstellbar gewesen wäre.\r\n\r\nFür dich als Lehrkraft brachte die Pandemie gleich eine doppelte Herausforderung mit sich: Auf einmal musstest du nicht nur digital, sondern sogar auch noch auf Distanz unterrichten, ohne direkten Kontakt zu den Lernenden. Wenn man sich mit dem Thema beschäftigt, wird schnell deutlich: Hier geht es um mehr als die Integration von digitalen Endgeräten in den Lernprozess und Unterricht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Eine weltweite Krise, ausgelöst durch eine Pandemie, veränderte 2020 binnen kürzester Zeit die Art und Weise, wie wir arbeiten und lernen und stellte auch unsere Bildungswelt auf den Kopf. Mitarbeitende wurden, da wo es möglich war, ins Homeoffice geschickt, Schulen geschlossen und Lehrende und Lernende mussten sich gleichermaßen an „Homeschooling“ und digitale Lernräume gewöhnen. Eine Form des Lernens, die zuvor meistens unvorstellbar gewesen wäre.\r\n\r\nFür dich als Lehrkraft brachte die Pandemie gleich eine doppelte Herausforderung mit sich: Auf einmal musstest du nicht nur digital, sondern sogar auch noch auf Distanz unterrichten, ohne direkten Kontakt zu den Lernenden. Wenn man sich mit dem Thema beschäftigt, wird schnell deutlich: Hier geht es um mehr als die Integration von digitalen Endgeräten in den Lernprozess und Unterricht.",
+      "id": [
+        "239764"
+      ],
+      "lead": "Wer hätte das gedacht? — Von der größten Krise zur größten Chance für Schule"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:239765]\r\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_5.png][@width:300]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "239765"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "300",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239766]\r\n[%][%Denn die Frage nach digitalem Lernen hängt immer auch damit zusammen, wie wir zeitgemäßes Lernen verstehen.]\r\nWir haben gelernt, dass Schule ein Ort des sozialen Miteinanders ist und dass Lernen nur durch guten Austausch und Reflexion auf Dauer erfolgreich sein kann. Wir haben erlebt, wie wir uns als Lehrende in eine neue Rolle entwickeln und Schüler*innen eine viel höhere Verantwortung für Ihren Lernprozess tragen können. Wir haben online, hybride und digitale Lernräume erlebt, die uns neben vielen Problemen auch neue Chancen und Möglichkeiten eröffnen.\r\n\r\nDiese unvorbereitete und rasante Veränderung des gemeinsamen Lernens und Lehrens hat viele von euch zunächst mit großen technischen Herausforderungen konfrontiert, weil der Unterricht auf einmal in die Kontexte von Schul-Clouds, digitalen Tools und Videokonferenzen verlagert wurde. Aber es kamen auch ganz neue Fragen auf: Wie gestalte ich Lernen unter diesen Umständen? Welche Methoden funktionieren online? Wie binde ich die Schüler*innen ein? Wie unterscheidet sich der Unterricht in einer Videokonferenz vom Präsenzunterricht? Viele dieser Fragen erreichten uns von Lehrkräften und Schulen seit Beginn der Pandemie im Frühjahr 2020.\r\n\r\nUm Lehrende und Schulen in diesen Zeiten von Veränderung bei der Entwicklung von neuen Lernkontexten zu begleiten, gründeten wir kurzerhand und in einem Kraftakt die digitale Schulakademie, die schon zwei Wochen nach dem ersten Lockdown im März 2020 online ging. In unseren Online-Seminaren schaffen wir seitdem Lern- und Erfahrungsräume für digitales und zeitgemäßes Lernen. Ob Konzepte, Tipps, Methoden, Erfahrungsaustausch oder Reflexion ‒ mit unseren Angeboten begleiten wir dich auf deinem Lernweg und stoßen gemeinsam auch unabhängig vom digitalen Unterricht einen Wandel der Lernkultur in Schule an.\r\n\r\nUnsere Erfahrungen aus der digitalen Schulakademie und die Tipps von Kolleg*innen und Lehrenden aus dem ganzen Bundesgebiet möchten wir nun in diesem Buch mit dir teilen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wir haben gelernt, dass Schule ein Ort des sozialen Miteinanders ist und dass Lernen nur durch guten Austausch und Reflexion auf Dauer erfolgreich sein kann. Wir haben erlebt, wie wir uns als Lehrende in eine neue Rolle entwickeln und Schüler*innen eine viel höhere Verantwortung für Ihren Lernprozess tragen können. Wir haben online, hybride und digitale Lernräume erlebt, die uns neben vielen Problemen auch neue Chancen und Möglichkeiten eröffnen.\r\n\r\nDiese unvorbereitete und rasante Veränderung des gemeinsamen Lernens und Lehrens hat viele von euch zunächst mit großen technischen Herausforderungen konfrontiert, weil der Unterricht auf einmal in die Kontexte von Schul-Clouds, digitalen Tools und Videokonferenzen verlagert wurde. Aber es kamen auch ganz neue Fragen auf: Wie gestalte ich Lernen unter diesen Umständen? Welche Methoden funktionieren online? Wie binde ich die Schüler*innen ein? Wie unterscheidet sich der Unterricht in einer Videokonferenz vom Präsenzunterricht? Viele dieser Fragen erreichten uns von Lehrkräften und Schulen seit Beginn der Pandemie im Frühjahr 2020.\r\n\r\nUm Lehrende und Schulen in diesen Zeiten von Veränderung bei der Entwicklung von neuen Lernkontexten zu begleiten, gründeten wir kurzerhand und in einem Kraftakt die digitale Schulakademie, die schon zwei Wochen nach dem ersten Lockdown im März 2020 online ging. In unseren Online-Seminaren schaffen wir seitdem Lern- und Erfahrungsräume für digitales und zeitgemäßes Lernen. Ob Konzepte, Tipps, Methoden, Erfahrungsaustausch oder Reflexion ‒ mit unseren Angeboten begleiten wir dich auf deinem Lernweg und stoßen gemeinsam auch unabhängig vom digitalen Unterricht einen Wandel der Lernkultur in Schule an.\r\n\r\nUnsere Erfahrungen aus der digitalen Schulakademie und die Tipps von Kolleg*innen und Lehrenden aus dem ganzen Bundesgebiet möchten wir nun in diesem Buch mit dir teilen.",
+      "id": [
+        "239766"
+      ],
+      "lead": "Denn die Frage nach digitalem Lernen hängt immer auch damit zusammen, wie wir zeitgemäßes Lernen verstehen."
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:239767]\r\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_6.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "239767"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--&image]\r\n[@id:239768]\r\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_7.png][@width:200]\r\n**Digitale Schulakademie:** Wir haben mit tollen Menschen, Trainer*innen und Kooperationspartner*innen ein transformatives Fortbildungsangebot aufgebaut. Schwerpunkt sind die Digitalisierung von Lernen, die Lernbegleiterrolle, innovative Lernmethoden sowie Schulentwicklungsthemen. Vielleicht sehen wir uns demnächst in einem unserer zahlreichen Online-Angebote? **digitale-schulakademie.de**",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "**Digitale Schulakademie:** Wir haben mit tollen Menschen, Trainer*innen und Kooperationspartner*innen ein transformatives Fortbildungsangebot aufgebaut. Schwerpunkt sind die Digitalisierung von Lernen, die Lernbegleiterrolle, innovative Lernmethoden sowie Schulentwicklungsthemen. Vielleicht sehen wir uns demnächst in einem unserer zahlreichen Online-Angebote? **digitale-schulakademie.de**",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "239768"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_7.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "200",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239769]\r\n[%][%Dieses Buch unterstützt dich dabei, online, hybrid und in Präsenz mit deinen Lernenden gemeinsam einen guten digitalen Lernraum zu gestalten.]\r\nWir möchten Mut machen, niemals aufzuhören neue Dinge auszuprobieren. Diese Zeit wird uns alle verändern. Lasst uns die Chance nutzen, um gemeinsam zu Lernen.\r\n\r\nViel Spaß beim Schmökern und Ausprobieren wünscht dir dein beWirken-Team.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wir möchten Mut machen, niemals aufzuhören neue Dinge auszuprobieren. Diese Zeit wird uns alle verändern. Lasst uns die Chance nutzen, um gemeinsam zu Lernen.\r\n\r\nViel Spaß beim Schmökern und Ausprobieren wünscht dir dein beWirken-Team.",
+      "id": [
+        "239769"
+      ],
+      "lead": "Dieses Buch unterstützt dich dabei, online, hybrid und in Präsenz mit deinen Lernenden gemeinsam einen guten digitalen Lernraum zu gestalten."
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239770]\r\n**Das sprechende Buch**\r\nbewirken.org/a2",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Das sprechende Buch**\r\nbewirken.org/a2",
+      "id": [
+        "239770"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-4]\r\n[@id:239771]\r\n[##Wer hinter diesem Buch steht]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "239771"
+      ],
+      "title": "Wer hinter diesem Buch steht"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239772]\r\n[%][%Gemeinsam Veränderung in Schule beWirken]\r\nMit dieser Mission begleiten wir Menschen und Schulen beim Ausprobieren und Gestalten neuer Ideen zur Veränderung von Schule und Bildung. Wir sind eine junge gemeinnützige Organisation, ein Social-Start-Up. Wir sind ein buntes Team von Pädagog*innen, Organisationsentwickler*innen, IT-Spezialist*innen und Lehrenden, die eines eint: Die Überzeugung, dass gute Bildung der Schlüssel ist, um gemeinsam die Herausforderungen unserer Zeit zu gestalten und die Leidenschaft, den Bildungswandel mit vielen Ideen und Engagement aktiv mitzugestalten.\r\n\r\nSeit vielen Jahren zeigen Modellprojekte, pädagogische Forschung und Praxis sowie psychologische und neurophysiologische Erkenntnisse, wie erfolgreich neue strukturelle und methodische Ansätze von Lernen sein können. Viele tolle Menschen und Organisationen haben sich deshalb bereits auf den Weg gemacht, neue Formen von Schule und Lernen auszuprobieren. Wir möchten mit innovativen Impulsen, Methoden, digitalen Formaten und transformationellen Aus- und Fortbildungsformaten deine eigene Veränderungsreise begleiten und deine Schule auf diesem Weg unterstützen.\r\n\r\nMit der digitalen Schulakademie, unserer Online-Plattform zur Weiterbildung von Lehrkräften und Pädagog*innen, schaffen wir daher Lernräume für die Weiterentwicklung deiner professionellen Rolle. Unsere Lernmaterialien und Angebote für Coaching, Begleitung, Austausch und Schulentwicklung sind Anstöße, die dir helfen können, den nächsten Schritt zu gehen. Wir stehen an deiner Seite und begleiten dich in dieser spannenden Zeit.\r\n\r\nGemeinsam mit dir wollen wir digitales, zeitge- mäßes Lernen voranbringen und partizipativ die Schule der Zukunft gestalten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Mit dieser Mission begleiten wir Menschen und Schulen beim Ausprobieren und Gestalten neuer Ideen zur Veränderung von Schule und Bildung. Wir sind eine junge gemeinnützige Organisation, ein Social-Start-Up. Wir sind ein buntes Team von Pädagog*innen, Organisationsentwickler*innen, IT-Spezialist*innen und Lehrenden, die eines eint: Die Überzeugung, dass gute Bildung der Schlüssel ist, um gemeinsam die Herausforderungen unserer Zeit zu gestalten und die Leidenschaft, den Bildungswandel mit vielen Ideen und Engagement aktiv mitzugestalten.\r\n\r\nSeit vielen Jahren zeigen Modellprojekte, pädagogische Forschung und Praxis sowie psychologische und neurophysiologische Erkenntnisse, wie erfolgreich neue strukturelle und methodische Ansätze von Lernen sein können. Viele tolle Menschen und Organisationen haben sich deshalb bereits auf den Weg gemacht, neue Formen von Schule und Lernen auszuprobieren. Wir möchten mit innovativen Impulsen, Methoden, digitalen Formaten und transformationellen Aus- und Fortbildungsformaten deine eigene Veränderungsreise begleiten und deine Schule auf diesem Weg unterstützen.\r\n\r\nMit der digitalen Schulakademie, unserer Online-Plattform zur Weiterbildung von Lehrkräften und Pädagog*innen, schaffen wir daher Lernräume für die Weiterentwicklung deiner professionellen Rolle. Unsere Lernmaterialien und Angebote für Coaching, Begleitung, Austausch und Schulentwicklung sind Anstöße, die dir helfen können, den nächsten Schritt zu gehen. Wir stehen an deiner Seite und begleiten dich in dieser spannenden Zeit.\r\n\r\nGemeinsam mit dir wollen wir digitales, zeitge- mäßes Lernen voranbringen und partizipativ die Schule der Zukunft gestalten.",
+      "id": [
+        "239772"
+      ],
+      "lead": "Gemeinsam Veränderung in Schule beWirken"
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark--&image]\r\n[@id:239773]\r\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_8.png][@width:200]\r\n**beWirken – Jugendbildung auf Augenhöhe:**\r\nWenn du mehr über unsere Impulsangebote und Work-shops wissen möchtest oder Begleitung für deine Schulentwicklung suchst, schau doch mal auf unserer Webseite oder unseren Social-Media-Kanälen vorbei. Wir haben von Materialien, über Workshops bis hin zu unserer digitalen Schulakademie viele Unterstützungsangebote für deine nächste Schritte. Unter anderem ein regelmäßiges digitales Lehrer*-innenzimmer.\r\n\r\n**bewirken.org**",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "**beWirken – Jugendbildung auf Augenhöhe:**\r\nWenn du mehr über unsere Impulsangebote und Work-shops wissen möchtest oder Begleitung für deine Schulentwicklung suchst, schau doch mal auf unserer Webseite oder unseren Social-Media-Kanälen vorbei. Wir haben von Materialien, über Workshops bis hin zu unserer digitalen Schulakademie viele Unterstützungsangebote für deine nächste Schritte. Unter anderem ein regelmäßiges digitales Lehrer*-innenzimmer.\r\n\r\n**bewirken.org**",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "239773"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_8.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "200",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:239774]\r\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_9.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "239774"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_intro_9.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-5]\r\n[@id:239775]\r\n[#Teil 1 — Zum Start des Buches]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "239775"
+      ],
+      "title": "Teil 1 — Zum Start des Buches"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-6]\r\n[@id:239776]\r\n[%1]\r\n[##Wie du dieses Buch lesen kannst]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "239776"
+      ],
+      "title": "Wie du dieses Buch lesen kannst"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239777]\r\n[%][%Einführung]\r\nDieses Buch will dich bei der Gestaltung deines Online-Unterrichts unterstützen. Vieles, was du in diesem Buch findest, lässt sich aber auch auf den digitalen Unterricht in Präsenz übertragen. Im Folgenden möchten wir dir zeigen, wie du dieses Buch lesen und für dich nutzen kannst.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieses Buch will dich bei der Gestaltung deines Online-Unterrichts unterstützen. Vieles, was du in diesem Buch findest, lässt sich aber auch auf den digitalen Unterricht in Präsenz übertragen. Im Folgenden möchten wir dir zeigen, wie du dieses Buch lesen und für dich nutzen kannst.",
+      "id": [
+        "239777"
+      ],
+      "lead": "Einführung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:239778]\r\n[%][%... Entdeckungsreise]\r\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_1.png|\r\nEgal, ob du schon seit einiger Zeit digital und online unterrichtest oder gerade deine ersten Schritte in diesem Feld machst: Mit diesem Buch kannst du dich auf deine persönliche Entdeckungsreise machen. Wir führen dich durch die wichtigen Grundlagen, geben dir Methoden an die Hand und laden dich ein, dich und deine Praxis Stück für Stück weiterzuentwickeln. Lies dieses Buch am besten von Anfang an und nutze auch Check-In und Check-Out, um dich auf deinen individuellen Lernweg zu machen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_1.png|\r\nEgal, ob du schon seit einiger Zeit digital und online unterrichtest oder gerade deine ersten Schritte in diesem Feld machst: Mit diesem Buch kannst du dich auf deine persönliche Entdeckungsreise machen. Wir führen dich durch die wichtigen Grundlagen, geben dir Methoden an die Hand und laden dich ein, dich und deine Praxis Stück für Stück weiterzuentwickeln. Lies dieses Buch am besten von Anfang an und nutze auch Check-In und Check-Out, um dich auf deinen individuellen Lernweg zu machen.",
+      "id": [
+        "239778"
+      ],
+      "lead": "... Entdeckungsreise"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:239779]\r\n[%][%... Orientierungshilfe]\r\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_2.png|@width:300|\r\nWenn du noch unsicher bist, wie du deinen digitalen oder Online-Unterricht am besten gestalten kannst, bietet dir dieses Buch eine Orientierungshilfe. Je nachdem, wo du dich noch unsicher fühlst: Wir unterstützen dich mit konkreten Tipps und Erfahrungen aus der Praxis, um einen guten Rahmen zu schaffen und deinen Online-Unterricht abwechslungsreich und interaktiv aufzubauen. Ob von vorne bis hinten oder kapitelweise ‒ nimm dir das, was du für deine Praxis brauchst. Im hinteren Teil haben wir auch beispielhafte Stunden skizziert.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_2.png|@width:300|\r\nWenn du noch unsicher bist, wie du deinen digitalen oder Online-Unterricht am besten gestalten kannst, bietet dir dieses Buch eine Orientierungshilfe. Je nachdem, wo du dich noch unsicher fühlst: Wir unterstützen dich mit konkreten Tipps und Erfahrungen aus der Praxis, um einen guten Rahmen zu schaffen und deinen Online-Unterricht abwechslungsreich und interaktiv aufzubauen. Ob von vorne bis hinten oder kapitelweise ‒ nimm dir das, was du für deine Praxis brauchst. Im hinteren Teil haben wir auch beispielhafte Stunden skizziert.",
+      "id": [
+        "239779"
+      ],
+      "lead": "... Orientierungshilfe"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:239780]\r\n[%][%... Nachschlagewerk]\r\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_3.png|\r\nDu bist schon ganz gut dabei, was deinen Online-Unterricht angeht, aber manchmal fehlt noch die zündende Idee oder das I-Tüpfelchen? Nutze dieses Buch als Nachschlagewerk für die konkrete Ausgestaltung deines Lernraums. Je nachdem, wo du auf der Suche bist: In unseren Methodenkapiteln findest du Methoden und Tipps für diverse Unterrichtsphasen und Anlässe. Wir haben alle Methoden in vier Kategorien eingeteilt, damit du schneller und übersichtlicher den richtigen Input für deinen konkreten Bedarf finden kannst.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_3.png|\r\nDu bist schon ganz gut dabei, was deinen Online-Unterricht angeht, aber manchmal fehlt noch die zündende Idee oder das I-Tüpfelchen? Nutze dieses Buch als Nachschlagewerk für die konkrete Ausgestaltung deines Lernraums. Je nachdem, wo du auf der Suche bist: In unseren Methodenkapiteln findest du Methoden und Tipps für diverse Unterrichtsphasen und Anlässe. Wir haben alle Methoden in vier Kategorien eingeteilt, damit du schneller und übersichtlicher den richtigen Input für deinen konkreten Bedarf finden kannst.",
+      "id": [
+        "239780"
+      ],
+      "lead": "... Nachschlagewerk"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:239781]\r\n[%][%... Inspirationsquelle]\r\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_4.png|\r\nDigitales Lernen und Online-Unterricht sind für dich nichts Besonderes mehr? Dann nutze dieses Buch als Inspirationsquelle und Ideen-Buffet, an dem du dich nach Lust und Laune bedienen kannst. Ob die ein oder andere Methode, ein interessanter Gedanke oder ein kleiner Tipp – schnapp dir einen Kaffee und einen gemütlichen Sessel und lass deinen Unterricht um ein paar Ideen reicher werden. Unsere Reflexionsseiten bieten dir auch den Raum, dieses Buch als eine kleine eigene Veränderungsreise zu nutzen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_4.png|\r\nDigitales Lernen und Online-Unterricht sind für dich nichts Besonderes mehr? Dann nutze dieses Buch als Inspirationsquelle und Ideen-Buffet, an dem du dich nach Lust und Laune bedienen kannst. Ob die ein oder andere Methode, ein interessanter Gedanke oder ein kleiner Tipp – schnapp dir einen Kaffee und einen gemütlichen Sessel und lass deinen Unterricht um ein paar Ideen reicher werden. Unsere Reflexionsseiten bieten dir auch den Raum, dieses Buch als eine kleine eigene Veränderungsreise zu nutzen.",
+      "id": [
+        "239781"
+      ],
+      "lead": "... Inspirationsquelle"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:239782]\r\n[%][%Kapitelübersicht]\r\nDieses Buch besteht aus fünf Teilen, die dir in verschiedener Form Anregung für deine Praxis geben.\r\n● **Im ersten Teil - Zum Start des Buches**, in dem du dich gerade befindest, klären wir die Frage, wie du das Buch für dich am besten nutzen kannst.\r\n● **Im zweiten Teil - Grundlagen und Tools für digitalen Unterricht** bekommst du einen Einblick in die didaktischen Fragen digitalen Lernens und was diese für deinen Unterricht im Allgemeinen und speziell für deine Gestaltungsmöglichkeiten im Online-Unterricht bedeuten. Wir werfen außerdem einen Blick auf gute Grundlagen und Tipps für digitale und hybride Lernsettings.\r\n● **Im Hauptteil, dem dritten Teil - Methoden für digitalen Unterricht**, findest du unsere vier Methodenkapitel, in denen dich eine Vielzahl an Methoden erwartet. Diese sind unterteilt in verschiedene Unterrichtsphasen (Check-In, Lernmethoden, Check-Out, Energizer). Auf der nächsten Seite siehst du, aus welchen Elementen die Methodenseiten aufgebaut sind, um die Informationen zu finden, die du brauchst.\r\n● **Im vierten Teil - Umsetzung und nächste Schritte** findest du einen Ausblick auf mögliche Praxisbeispiele für den Einsatz der Methoden, einen Anstoß für deine nächsten Schritte und Einblick in die großen Schulentwicklungsthemen, die hinter den kleineren und methodischen Fragen des digitalen Lernens stehen: Wie schaffen wir den Wandel in Schule hin zu zeitgemäßer Bildung?\r\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_8.png|@width:250|\r\n● **Im fünften und letzten Teil - Zum Abschluss des Buches** stellen wir dir das Team hinter dem Buch vor und  sammeln weiterführende Impulse.\r\n● **Über das gesamte Buch verteilt** findest du Anregungen zur Reflexion und vertiefende Anstöße im Rahmen des sprechenden Buches. Denn wenn wir Neues ausprobieren, gehört dazu auch, sich Zeit zu nehmen und mit etwas Abstand und Ruhe auf Dinge zu blicken – etwas das für uns als Pädagog*in besonders wichtig ist. Wir möchten dich einladen, dieses Angebot auszuprobieren und dieses Buch als deine persönliche kleine Lernreise zu nutzen. Unsere Reflexionsseiten erkennst du am orangefarbenen Hintergrund.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Dieses Buch besteht aus fünf Teilen, die dir in verschiedener Form Anregung für deine Praxis geben.\r\n● **Im ersten Teil - Zum Start des Buches**, in dem du dich gerade befindest, klären wir die Frage, wie du das Buch für dich am besten nutzen kannst.\r\n● **Im zweiten Teil - Grundlagen und Tools für digitalen Unterricht** bekommst du einen Einblick in die didaktischen Fragen digitalen Lernens und was diese für deinen Unterricht im Allgemeinen und speziell für deine Gestaltungsmöglichkeiten im Online-Unterricht bedeuten. Wir werfen außerdem einen Blick auf gute Grundlagen und Tipps für digitale und hybride Lernsettings.\r\n● **Im Hauptteil, dem dritten Teil - Methoden für digitalen Unterricht**, findest du unsere vier Methodenkapitel, in denen dich eine Vielzahl an Methoden erwartet. Diese sind unterteilt in verschiedene Unterrichtsphasen (Check-In, Lernmethoden, Check-Out, Energizer). Auf der nächsten Seite siehst du, aus welchen Elementen die Methodenseiten aufgebaut sind, um die Informationen zu finden, die du brauchst.\r\n● **Im vierten Teil - Umsetzung und nächste Schritte** findest du einen Ausblick auf mögliche Praxisbeispiele für den Einsatz der Methoden, einen Anstoß für deine nächsten Schritte und Einblick in die großen Schulentwicklungsthemen, die hinter den kleineren und methodischen Fragen des digitalen Lernens stehen: Wie schaffen wir den Wandel in Schule hin zu zeitgemäßer Bildung?\r\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_8.png|@width:250|\r\n● **Im fünften und letzten Teil - Zum Abschluss des Buches** stellen wir dir das Team hinter dem Buch vor und  sammeln weiterführende Impulse.\r\n● **Über das gesamte Buch verteilt** findest du Anregungen zur Reflexion und vertiefende Anstöße im Rahmen des sprechenden Buches. Denn wenn wir Neues ausprobieren, gehört dazu auch, sich Zeit zu nehmen und mit etwas Abstand und Ruhe auf Dinge zu blicken – etwas das für uns als Pädagog*in besonders wichtig ist. Wir möchten dich einladen, dieses Angebot auszuprobieren und dieses Buch als deine persönliche kleine Lernreise zu nutzen. Unsere Reflexionsseiten erkennst du am orangefarbenen Hintergrund.",
+      "id": [
+        "239782"
+      ],
+      "lead": "Kapitelübersicht"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239783]\r\n[%][%Das sprechende Buch]\r\n==bewirken.org/a3==|link:https://bewirken.org/buch-audioplayer/?file=3&title=Kapitel%C3%BCbersicht|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "==bewirken.org/a3==|link:https://bewirken.org/buch-audioplayer/?file=3&title=Kapitel%C3%BCbersicht|",
+      "id": [
+        "239783"
+      ],
+      "lead": "Das sprechende Buch"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:239784]\r\n[%][%LEGENDE Methodenseiten]\r\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_5.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_5.png|",
+      "id": [
+        "239784"
+      ],
+      "lead": "LEGENDE Methodenseiten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239785]\r\n[%][%Material zum Download\r\nVorlagen und weiterführendes Material online]\r\nFür einige Methoden haben wir Vorlagen vorbereitet, die ihr nutzen könnt sowie schöne Grafiken zum freien Einsatz auf Board-Tools. Wichtig ist uns dabei: Du kannst diese für dich frei und unbeschränkt nutzen, auch verändern und an Kollegen*innen weitergeben. Bitte unterstütze uns aber, indem du immer dieses Buch und beWirken als Quelle angibst.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Für einige Methoden haben wir Vorlagen vorbereitet, die ihr nutzen könnt sowie schöne Grafiken zum freien Einsatz auf Board-Tools. Wichtig ist uns dabei: Du kannst diese für dich frei und unbeschränkt nutzen, auch verändern und an Kollegen*innen weitergeben. Bitte unterstütze uns aber, indem du immer dieses Buch und beWirken als Quelle angibst.",
+      "id": [
+        "239785"
+      ],
+      "item": "Material zum Download\r\nVorlagen und weiterführendes Material online"
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\r\\n'",
+        "line": 3,
+        "column": 26,
+        "errorLine": "[%][%Material zum Download\r"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:239786]\r\nDie Vorlagen und Grafiken, die du auf der Materialseite zum Download findest, fallen daher, falls nicht anders gekennzeichnet, unter die Creative Commons Lizenz BY-NC-SA. Diese erlaubt eine nichtkommerzielle Nutzung mit Namensnennung und die Weitergabe unter gleichen Bedingungen (CC BY-NC-SA 3.0 DE). Diese gilt allerdings nicht für das Buch oder Texte und Grafiken im Buch selbst. Wir bitten dich, falls du das digitale Buch nutzt, dieses nicht einfach an Kolleg*innen weiterzugeben. Bitte die Kolleg*innen doch, unsere Arbeit und die Produktion dieses Buchs mit einem Kauf zu unterstützen. Wir sind darauf angewiesen und können die Kosten des Buches nur durch den Verkauf wieder refinanzieren. Wir bieten als gemeinnützige Organisation auch eine Fördermitgliedschaft an, wenn du unsere Arbeit als Begleiter*in für Veränderung von Schule langfristig unterstützen möchtest.\r\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_6.png|@width:400|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die Vorlagen und Grafiken, die du auf der Materialseite zum Download findest, fallen daher, falls nicht anders gekennzeichnet, unter die Creative Commons Lizenz BY-NC-SA. Diese erlaubt eine nichtkommerzielle Nutzung mit Namensnennung und die Weitergabe unter gleichen Bedingungen (CC BY-NC-SA 3.0 DE). Diese gilt allerdings nicht für das Buch oder Texte und Grafiken im Buch selbst. Wir bitten dich, falls du das digitale Buch nutzt, dieses nicht einfach an Kolleg*innen weiterzugeben. Bitte die Kolleg*innen doch, unsere Arbeit und die Produktion dieses Buchs mit einem Kauf zu unterstützen. Wir sind darauf angewiesen und können die Kosten des Buches nur durch den Verkauf wieder refinanzieren. Wir bieten als gemeinnützige Organisation auch eine Fördermitgliedschaft an, wenn du unsere Arbeit als Begleiter*in für Veränderung von Schule langfristig unterstützen möchtest.\r\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_6.png|@width:400|",
+      "id": [
+        "239786"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.remark:bitmark++]\r\n[@id:239787]\r\n[%][%Einfacher Zugang und Download für dich]\r\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_7.png\r\nUm auf die Materialseite zu gelangen, musst du lediglich die hier angegebene Webseite besuchen und dich mit dem Zugangscode einloggen. Beim ersten Mal richtest du dir einen Zugang ein. Sobald du dies einmal gemacht hast, ist es in Zukunft nicht mehr nötig. Auf der Seite findest du dann die einzelnen Dateien, Audiobeiträge sowie eine Datei, um alles gesammelt herunterzuladen.\r\n==bewirken.org/buch-material==|link:https://bewirken.org/buch-materialsammlung-registrierung/|\r\nZugangscode: mfdu-bewirken",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_7.png\r\nUm auf die Materialseite zu gelangen, musst du lediglich die hier angegebene Webseite besuchen und dich mit dem Zugangscode einloggen. Beim ersten Mal richtest du dir einen Zugang ein. Sobald du dies einmal gemacht hast, ist es in Zukunft nicht mehr nötig. Auf der Seite findest du dann die einzelnen Dateien, Audiobeiträge sowie eine Datei, um alles gesammelt herunterzuladen.\r\n==bewirken.org/buch-material==|link:https://bewirken.org/buch-materialsammlung-registrierung/|\r\nZugangscode: mfdu-bewirken",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "239787"
+      ],
+      "lead": "Einfacher Zugang und Download für dich"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:239788]\r\n[%][%Beispiel: Boardgrafik]\r\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_9.png|\r\nDie Vorlagen aus diesem buch kannst du auf einem Board-Tool nutzen oder sie helfen dir, die Methoden umzusetzen",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k1_9.png|\r\nDie Vorlagen aus diesem buch kannst du auf einem Board-Tool nutzen oder sie helfen dir, die Methoden umzusetzen",
+      "id": [
+        "239788"
+      ],
+      "lead": "Beispiel: Boardgrafik"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239789]\r\n[%][%Das sprechende Buch]\r\n==bewirken.org/a4==|link:https://bewirken.org/buch-audioplayer/?file=4&title=Material%20zum%20Download|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "==bewirken.org/a4==|link:https://bewirken.org/buch-audioplayer/?file=4&title=Material%20zum%20Download|",
+      "id": [
+        "239789"
+      ],
+      "lead": "Das sprechende Buch"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-7]\r\n[@id:239790]\r\n[%2]\r\n[##Check-In]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "239790"
+      ],
+      "title": "Check-In"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239791]\r\n[%][%Im Buch ankommen]\r\nZunächst einmal möchten wir dir danken, dass du hier bist. Bevor es aber weiter geht und du eintauchst in das vielseitige und praxisorientierte Methodenkapitel, möchten wir dir die Gelegenheit geben, dir selbst ein paar Minuten Zeit zu nehmen, wirklich anzukommen. Hol dir etwas zu schreiben, wenn du deine Gedanken festhalten möchtest, wahlweise etwas Kühles oder Warmes zu trinken und schon kann es los gehen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Zunächst einmal möchten wir dir danken, dass du hier bist. Bevor es aber weiter geht und du eintauchst in das vielseitige und praxisorientierte Methodenkapitel, möchten wir dir die Gelegenheit geben, dir selbst ein paar Minuten Zeit zu nehmen, wirklich anzukommen. Hol dir etwas zu schreiben, wenn du deine Gedanken festhalten möchtest, wahlweise etwas Kühles oder Warmes zu trinken und schon kann es los gehen.",
+      "id": [
+        "239791"
+      ],
+      "lead": "Im Buch ankommen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239792]\r\nSo wie dich und deine Lernenden zukünftig in digitalen Unterrichtseinheiten wahrscheinlich der Check-In und auch der Check-Out begleiten wird, haben wir auch in diesem Buch einen Check-In sowie einen Check-Out für dich eingeplant. Nimm dir nun gerne etwas Zeit, um die Fragen auf der nächsten Seite zu beantworten. Wenn du möchtest, gibt es für den Check-In auch eine erweiterte und ausführlichere Audiobegleitung, die du dir anhöhren kannst (s.u.). Hier findest du am Ende des Audio-Check-Ins auch eine kurze 10-minütige Sitzmeditation mit einer kleinen Traumreise.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "So wie dich und deine Lernenden zukünftig in digitalen Unterrichtseinheiten wahrscheinlich der Check-In und auch der Check-Out begleiten wird, haben wir auch in diesem Buch einen Check-In sowie einen Check-Out für dich eingeplant. Nimm dir nun gerne etwas Zeit, um die Fragen auf der nächsten Seite zu beantworten. Wenn du möchtest, gibt es für den Check-In auch eine erweiterte und ausführlichere Audiobegleitung, die du dir anhöhren kannst (s.u.). Hier findest du am Ende des Audio-Check-Ins auch eine kurze 10-minütige Sitzmeditation mit einer kleinen Traumreise.",
+      "id": [
+        "239792"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239793]\r\n[%][%Das sprechende Buch]\r\nhttps://bewirken.org/buch-audioplayer/?file=5&title=Reflexion-Check-In%20und%20Gedankenreise",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "https://bewirken.org/buch-audioplayer/?file=5&title=Reflexion-Check-In%20und%20Gedankenreise",
+      "id": [
+        "239793"
+      ],
+      "lead": "Das sprechende Buch"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:239794]\r\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k2_1.png][@width:600]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "239794"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k2_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "600",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-8]\r\n[@id:239795]\r\n[###Reflexion]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "239795"
+      ],
+      "title": "Reflexion"
+    }
+  },
+  {
+    "bitmark": "[.remark]\r\n[@id:239796]\r\nHalte deine Gedanken in einem Notizbuch oder auf Klebezetteln fest, du kannst diese auch auf diese Seite im Buch heften und später zurückkommen, um für dich zu sehen, was sich über die Zeit an deiner Perspektive verändert.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Halte deine Gedanken in einem Notizbuch oder auf Klebezetteln fest, du kannst diese auch auf diese Seite im Buch heften und später zurückkommen, um für dich zu sehen, was sich über die Zeit an deiner Perspektive verändert.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "239796"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:239797]\r\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k2_2.png][@width:350]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "239797"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k2_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "350",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:239798]\r\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k2_3.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "239798"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k2_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[▼ch-9]\r\n[@id:239799]\r\n[%Kapitel 2]\r\n[##Check-In]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "Kapitel 2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "239799"
+      ],
+      "title": "Check-In"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239800]\r\n[%][%Im Buch ankommen]\r\nZunächst einmal möchten wir dir danken, dass du hier bist. Bevor es aber weiter geht und du eintauchst in das vielseitige und praxisorientierte Methodenkapitel, möchten wir dir die Gelegenheit geben, dir selbst ein paar Minuten Zeit zu nehmen, wirklich anzukommen. Hol dir etwas zu schreiben, wenn du deine Gedanken festhalten möchtest, wahlweise etwas Kühles oder Warmes zu trinken und schon kann es los gehen.\r\n\r\nSo wie dich und deine Lernenden zukünftig in digitalen Unterrichtseinheiten wahrscheinlich der Check-In und auch der Check-Out begleiten wird, haben wir auch in diesem Buch einen Check-In sowie einen Check-Out für dich eingeplant. Nimm dir nun gerne etwas Zeit, um die Fragen auf der nächsten Seite zu beantworten. Wenn du möchtest, gibt es für den Check-In auch eine erweiterte und ausführlichere Audiobegleitung, die du dir anhöhren kannst (s.u.). Hier findest du am Ende des Audio-Check-Ins auch eine kurze 10-minütige Sitzmeditation mit einer kleinen Traumreise.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Zunächst einmal möchten wir dir danken, dass du hier bist. Bevor es aber weiter geht und du eintauchst in das vielseitige und praxisorientierte Methodenkapitel, möchten wir dir die Gelegenheit geben, dir selbst ein paar Minuten Zeit zu nehmen, wirklich anzukommen. Hol dir etwas zu schreiben, wenn du deine Gedanken festhalten möchtest, wahlweise etwas Kühles oder Warmes zu trinken und schon kann es los gehen.\r\n\r\nSo wie dich und deine Lernenden zukünftig in digitalen Unterrichtseinheiten wahrscheinlich der Check-In und auch der Check-Out begleiten wird, haben wir auch in diesem Buch einen Check-In sowie einen Check-Out für dich eingeplant. Nimm dir nun gerne etwas Zeit, um die Fragen auf der nächsten Seite zu beantworten. Wenn du möchtest, gibt es für den Check-In auch eine erweiterte und ausführlichere Audiobegleitung, die du dir anhöhren kannst (s.u.). Hier findest du am Ende des Audio-Check-Ins auch eine kurze 10-minütige Sitzmeditation mit einer kleinen Traumreise.",
+      "id": [
+        "239800"
+      ],
+      "lead": "Im Buch ankommen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:239801]\r\n[%][%Das sprechende Buch]\r\nhttps://bewirken.org/buch-audioplayer/?file=5&title=Reflexion-Check-In%20und%20Gedankenreise\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k3_5.png||@width:350|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "https://bewirken.org/buch-audioplayer/?file=5&title=Reflexion-Check-In%20und%20Gedankenreise\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k3_5.png||@width:350|",
+      "id": [
+        "239801"
+      ],
+      "lead": "Das sprechende Buch"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:239802]\r\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k2_1.png][@width:600]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "239802"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k2_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "600",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.remark]\r\n[@id:239803]\r\n[%][%Reflexion]\r\nHalte deine Gedanken in einem Notizbuch oder auf Klebezetteln fest, du kannst diese auch auf diese Seite im Buch heften und später zurückkommen, um für dich zu sehen, was sich über die Zeit an deiner Perspektive verändert.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "Halte deine Gedanken in einem Notizbuch oder auf Klebezetteln fest, du kannst diese auch auf diese Seite im Buch heften und später zurückkommen, um für dich zu sehen, was sich über die Zeit an deiner Perspektive verändert.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "239803"
+      ],
+      "lead": "Reflexion"
+    }
+  }
+]

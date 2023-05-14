@@ -1,0 +1,198 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:166271]\n[#SCHULORDNUNG]\n[@externalId:e-schulordnung_1ybfm0b62lsi]\n[@coverImage:https://docs.bitmark.cloud/bit-books/hgf/schulordnung/web-resources/images/hgf_schulordnung_bitmark_cover.png]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "166271"
+      ],
+      "title": "SCHULORDNUNG",
+      "externalId": [
+        "e-schulordnung_1ybfm0b62lsi"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/hgf/schulordnung/web-resources/images/hgf_schulordnung_bitmark_cover.png"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:166272]\n[#Generelle Informationen zu den Kursen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "166272"
+      ],
+      "title": "Generelle Informationen zu den Kursen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:166273]\n[%2.1]\n[##Besuchspflicht – Verantwortung der Lehrbetriebe]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "166273"
+      ],
+      "title": "Besuchspflicht – Verantwortung der Lehrbetriebe"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166274]\nGemäss Reglement ist der Besuch der überbetrieblichen Kurse (ÜK) für die Lernenden obligatorisch. Die Lehrbetriebe sind verantwortlich, dass ihre Lernenden an den überbetrieblichen Kursen teilnehmen können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Gemäss Reglement ist der Besuch der überbetrieblichen Kurse (ÜK) für die Lernenden obligatorisch. Die Lehrbetriebe sind verantwortlich, dass ihre Lernenden an den überbetrieblichen Kursen teilnehmen können.",
+      "id": [
+        "166274"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:166275]\n[%2.2]\n[##Kursübersicht nach Semestern]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "166275"
+      ],
+      "title": "Kursübersicht nach Semestern"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:166276]\n|image:https://docs.bitmark.cloud/bit-books/hgf/schulordnung/web-resources/images/hgf_schulordnung_1.png|\n1 Zusammengefasst in einen Kurs à 4 Tage\n2 2 Kurse à 4 Tage\n3 Für die Berufe Koch/Köchin EFZ, Restaurationsfachfrau/mann EFZ sowie Hotelfachmann/frau EFZ (diese Kurse sind freiwillig und\nnicht obligatorisch)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/hgf/schulordnung/web-resources/images/hgf_schulordnung_1.png|\n1 Zusammengefasst in einen Kurs à 4 Tage\n2 2 Kurse à 4 Tage\n3 Für die Berufe Koch/Köchin EFZ, Restaurationsfachfrau/mann EFZ sowie Hotelfachmann/frau EFZ (diese Kurse sind freiwillig und\nnicht obligatorisch)",
+      "id": [
+        "166276"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:166277]\n[%2.3 Kursdaten]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2.3 Kursdaten",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "166277"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166278]\n• Die Kursdaten sind jeweils zu Beginn des Schuljahrs auf der Homepage www.hgf.ch publiziert und am Anschlagbrett im Kurszentrum aufgehängt. Die Kurse sind nach Berufen und Klassen sortiert.\n• Die KursteilnehmerInnen erhalten jeweils mindestens 4 Wochen vor Kursbeginn ein persönliches Aufgebot, welches an ihre Privatadresse zugestellt wird.\n• Die Bildungsverantwortlichen im Lehrbetrieb verfügen jeweils ab September über eine Gesamtübersicht der Kurse, welche im laufenden Schuljahr besucht werden müssen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Die Kursdaten sind jeweils zu Beginn des Schuljahrs auf der Homepage www.hgf.ch publiziert und am Anschlagbrett im Kurszentrum aufgehängt. Die Kurse sind nach Berufen und Klassen sortiert.\n• Die KursteilnehmerInnen erhalten jeweils mindestens 4 Wochen vor Kursbeginn ein persönliches Aufgebot, welches an ihre Privatadresse zugestellt wird.\n• Die Bildungsverantwortlichen im Lehrbetrieb verfügen jeweils ab September über eine Gesamtübersicht der Kurse, welche im laufenden Schuljahr besucht werden müssen.",
+      "id": [
+        "166278"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:166279]\n[%7]\n[#Ihre Ansprechpartner während der Lehre]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "7",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "166279"
+      ],
+      "title": "Ihre Ansprechpartner während der Lehre"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166280]\n**Mittelschul- und Berufsbildungsamt**\ndes Kantons Zürich\nAbteilung Betriebliche Bildung Ausstellungsstrasse 80\n8090 Zürich\nwww.mba.zh.ch\n(Merkblätter, Berufsbildungslexikon, Beratungsstellen, etc.)\n\nMarcus Schmid, Berufsinspektor\nE-Mail marcus.schmid@mba.zh.ch \nTel. 043/259 77 20\nFax 043/259 77 49\n\nSachbearbeiterIn\nTel. 043/259 77 21\n\n**Allgemeine Berufsschule Zürich**\nAllgemeine Abteilung Ausstellungsstrasse 60 8005 Zürich\nwww.a-b-z.ch\nE-Mail info@a-b-z.ch \nTel. 044/446 94 46 \nFax 044/446 94 44\n\n**Berufsverbände**\nGastroSuisse\nNachwuchsmarketing\nBlumenfeldstrasse\n20 8046 Zürich\nwww.gastrosuisse.ch\nwww.berufehotelgastro.ch\nE-Mail nachwuchsmarketing@gastrosuisse.ch \nTel. 0848 377 111\nFax 0848 377 112\n\nSHV Schweiz. Hotelierverein Lehrlingsausbildung \nMonbijoustrasse 130\n3001 Bern\nwww.hotelleriesuisse.ch \nwww.berufehotelgastro.ch\nE-Mail nachwuchsmarketing@hotelleriesuisse.ch \nTel. 031/370 41 11\nFax 031/370 44 44\n\nHotel & Gastro Union \nPostfach 3027\n6002 Luzern\nwww.hotelgastrounion.ch\nE-Mail info@hotelgastrounion.ch \nTel. 041/418 22 22\nFax 041/412 03 72\n\nCafetierSuisse \nBleicherweg 54 8002 Zürich\nwww.cafetier.ch\nE-Mail info@cafetier.ch \nTel. 044/201 67 77\nFax 044/201 68 77\n\nHotel & Gastro __formation__ \nEichistrasse 20\n6353 Weggis\nwww.hotelgastro.ch\nE-Mail schulzentrum@hotelgastro.ch\nTel. 041/392 77 77\nFax 041/392 77 70\n__(Download von Arbeitsblättern, Modell- Lehrgängen, Bildungsplänen etc.)__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Mittelschul- und Berufsbildungsamt**\ndes Kantons Zürich\nAbteilung Betriebliche Bildung Ausstellungsstrasse 80\n8090 Zürich\nwww.mba.zh.ch\n(Merkblätter, Berufsbildungslexikon, Beratungsstellen, etc.)\n\nMarcus Schmid, Berufsinspektor\nE-Mail marcus.schmid@mba.zh.ch \nTel. 043/259 77 20\nFax 043/259 77 49\n\nSachbearbeiterIn\nTel. 043/259 77 21\n\n**Allgemeine Berufsschule Zürich**\nAllgemeine Abteilung Ausstellungsstrasse 60 8005 Zürich\nwww.a-b-z.ch\nE-Mail info@a-b-z.ch \nTel. 044/446 94 46 \nFax 044/446 94 44\n\n**Berufsverbände**\nGastroSuisse\nNachwuchsmarketing\nBlumenfeldstrasse\n20 8046 Zürich\nwww.gastrosuisse.ch\nwww.berufehotelgastro.ch\nE-Mail nachwuchsmarketing@gastrosuisse.ch \nTel. 0848 377 111\nFax 0848 377 112\n\nSHV Schweiz. Hotelierverein Lehrlingsausbildung \nMonbijoustrasse 130\n3001 Bern\nwww.hotelleriesuisse.ch \nwww.berufehotelgastro.ch\nE-Mail nachwuchsmarketing@hotelleriesuisse.ch \nTel. 031/370 41 11\nFax 031/370 44 44\n\nHotel & Gastro Union \nPostfach 3027\n6002 Luzern\nwww.hotelgastrounion.ch\nE-Mail info@hotelgastrounion.ch \nTel. 041/418 22 22\nFax 041/412 03 72\n\nCafetierSuisse \nBleicherweg 54 8002 Zürich\nwww.cafetier.ch\nE-Mail info@cafetier.ch \nTel. 044/201 67 77\nFax 044/201 68 77\n\nHotel & Gastro __formation__ \nEichistrasse 20\n6353 Weggis\nwww.hotelgastro.ch\nE-Mail schulzentrum@hotelgastro.ch\nTel. 041/392 77 77\nFax 041/392 77 70\n__(Download von Arbeitsblättern, Modell- Lehrgängen, Bildungsplänen etc.)__",
+      "id": [
+        "166280"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:166281]\n[%7]\n[#Ihre Ansprechpartner während der Lehre (Fortsetzung)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "7",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "166281"
+      ],
+      "title": "Ihre Ansprechpartner während der Lehre (Fortsetzung)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:166282]\nBundesamt für Berufsbildung: www.bbt.admin.ch.\nInformationen über das Qualifikationsverfahren (LAP): www.lap.ch\nInformationen über den L-GAV: www.l-gav.ch\nArbeitnehmerschutz: www.arbeitnehmerschutz.zh.ch\nBeratungsstellen im Kanton Zürich: www.lotse.zh.ch\nLehrstellennachweis: www.lena.zh.ch, www.berufsberatung.ch\nInformationen über die Berufsbildung: www.berufsbildung.ch\nLexikon über die Berufsbildung: www.dbk.ch\nLehrlingsaustausch nach Deutschland, Österreich, Italien: www.xchange-info.net",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bundesamt für Berufsbildung: www.bbt.admin.ch.\nInformationen über das Qualifikationsverfahren (LAP): www.lap.ch\nInformationen über den L-GAV: www.l-gav.ch\nArbeitnehmerschutz: www.arbeitnehmerschutz.zh.ch\nBeratungsstellen im Kanton Zürich: www.lotse.zh.ch\nLehrstellennachweis: www.lena.zh.ch, www.berufsberatung.ch\nInformationen über die Berufsbildung: www.berufsbildung.ch\nLexikon über die Berufsbildung: www.dbk.ch\nLehrlingsaustausch nach Deutschland, Österreich, Italien: www.xchange-info.net",
+      "id": [
+        "166282"
+      ]
+    }
+  }
+]

@@ -1,0 +1,229 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:186253]\n[#Quiz Bewerten und Beurteilen]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_quiz_bewerten.png]\n[@externalId:e-quiz-bewerten-und-beurteilen_mxpssnavcbsq]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186253"
+      ],
+      "title": "Quiz Bewerten und Beurteilen",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/berufsbildner_quiz_bewerten.png"
+      ],
+      "externalId": [
+        "e-quiz-bewerten-und-beurteilen_mxpssnavcbsq"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:186254]\n[!Warum Bewerten/Beurteilen wir?]\n[+Die Lernenden erhalten eine Rückmeldung zu ihrem Lernstand und die Auszubildenden erkennen entwickelte Stärken und noch vorhandene Lücken]\n[-Die Lernenden erhalten eine Rückmeldung zu ihrer Persönlichkeit, damit sie sich persönlich weiterentwickeln können]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Warum Bewerten/Beurteilen wir?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Die Lernenden erhalten eine Rückmeldung zu ihrem Lernstand und die Auszubildenden erkennen entwickelte Stärken und noch vorhandene Lücken",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Die Lernenden erhalten eine Rückmeldung zu ihrer Persönlichkeit, damit sie sich persönlich weiterentwickeln können",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186254"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1:bitmark--]\n[@id:186255]\n[!Was ist der Unterschied zwischen Beurteilen und Bewerten?]\n[+Beurteilen bedeutet ich gebe ein Urteil über die geleistete Arbeit ab -> eher subjektiv]\n[+Bewerten geschieht oft in der Form von Noten/Punkten -> auf die Leistungskriterien bezogen -> eher objektiv]\n[-Es gibt keinen Unterschied]\n||corrected, original: geleistete arbeit||",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Was ist der Unterschied zwischen Beurteilen und Bewerten?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Beurteilen bedeutet ich gebe ein Urteil über die geleistete Arbeit ab -> eher subjektiv",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Bewerten geschieht oft in der Form von Noten/Punkten -> auf die Leistungskriterien bezogen -> eher objektiv",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Es gibt keinen Unterschied",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186255"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1:bitmark--]\n[@id:186256]\n[!Fair beurteilen heisst...]\n[-das Aussehen und den Charme eines Lernenden beurteilen]\n[+Tageszeit berücksichtigen]\n[+Differenzieren zwischen der Leistung und Person]\n[-Aufgrund von eigenen Eindrücken beurteilen]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Fair beurteilen heisst...",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "das Aussehen und den Charme eines Lernenden beurteilen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Tageszeit berücksichtigen",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Differenzieren zwischen der Leistung und Person",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Aufgrund von eigenen Eindrücken beurteilen",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186256"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1:bitmark--]\n[@id:186257]\n[!Was heisst Halo Effekt?]\n[-Ein einzelnes positives oder negatives Merkmal überstrahlt alle anderen Merkmale]\n[-Die Leistung eines Lernenden wird ausgesprochen mild oder gegenteilig beurteilt]\n[+Eine verbreitete Wahrnehmungsverzerrung bei unserer Einschätzung von Menschen]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Was heisst Halo Effekt?",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Ein einzelnes positives oder negatives Merkmal überstrahlt alle anderen Merkmale",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Die Leistung eines Lernenden wird ausgesprochen mild oder gegenteilig beurteilt",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Eine verbreitete Wahrnehmungsverzerrung bei unserer Einschätzung von Menschen",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186257"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-response-1:bitmark--]\n[@id:186258]\n[!Wie gelingt dir eine objektive Beurteilung?]\n[-Nicht den Mut verlieren]\n[+Nur die Leistung/das Verhalten beurteilen, nicht die Person]\n[+Sachlich bleiben]\n[+Sich auf Facts, Beispiele beziehen]",
+    "bit": {
+      "type": "multiple-response-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Wie gelingt dir eine objektive Beurteilung?",
+      "body": "",
+      "hint": "",
+      "responses": [
+        {
+          "response": "Nicht den Mut verlieren",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Nur die Leistung/das Verhalten beurteilen, nicht die Person",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Sachlich bleiben",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "response": "Sich auf Facts, Beispiele beziehen",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186258"
+      ]
+    }
+  }
+]

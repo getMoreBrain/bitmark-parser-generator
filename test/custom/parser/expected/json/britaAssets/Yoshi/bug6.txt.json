@@ -1,0 +1,56 @@
+[
+  {
+    "bitmark": "[.chapter]\n[#Chapter Title]\n[%1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "title": "Chapter Title"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[##Teil A]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "title": "Teil A"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[###Sich kennenlernen]\n[@leave.context:personal]\n[@leave.subject:Sich kennenlernen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "title": "Sich kennenlernen",
+      "leave.context": [
+        "personal"
+      ],
+      "leave.subject": [
+        "Sich kennenlernen"
+      ]
+    }
+  }
+]

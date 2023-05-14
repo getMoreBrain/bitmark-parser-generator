@@ -1,0 +1,669 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:131636][#Ich kann (nicht)]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/cover3.jpg]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "131636"
+      ],
+      "title": "Ich kann (nicht)",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/cover3.jpg"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:131638]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_10.png]\n\n||Nutzungsrechte: VITOGAZ Schweiz\nJede kostenlose Weitergabe ist untersagt.||",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "131638"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_10.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:131639]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_38.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "131639"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_38.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:131640]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_8.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "131640"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_8.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131641]\nStellen Sie sich einen Versagertyp vor. Was immer er anpackt, es geht buchstäblich in die Hose. Eines Tages fasst er den Entschluss, erfolgreich zu werden. Dazu bestellt er im Internet fünf Bücher mit vielversprechenden Inhalten, die ihn lehren sollen, erfolgreich zu werden. Weil sein Bankkonto noch nicht ganz leergeräumt ist, kauft er sich gleich noch die passende CD mit dem interessanten Titel „Du bist motiviert und erfolgreich“. Einige Tage später wird die Ware geliefert. Der Paketbote hat noch nicht das Haus verlassen, da rupft er die CD aus der Verpackung, knallt sich aufs Bett, packt die CD in den CD-Player, setzt die Kopfhörer auf und hört nun stundenlang Erfolgsbotschaften: __„Ich bin motiviert und erfolgreich. Ich bin motiviert und erfolgreich. Ich bin motiviert und erfolgreich. Ich bin motiviert und erfolgreich.“__ Können Sie sich vorstellen, was nach kurzer Zeit passiert? Richtig, dieser Kandidat ist motiviert und wird erfolgreich. Er wird der erfolgreichste motivierte Versager aller Zeiten! Ob er sich darüber freut?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Stellen Sie sich einen Versagertyp vor. Was immer er anpackt, es geht buchstäblich in die Hose. Eines Tages fasst er den Entschluss, erfolgreich zu werden. Dazu bestellt er im Internet fünf Bücher mit vielversprechenden Inhalten, die ihn lehren sollen, erfolgreich zu werden. Weil sein Bankkonto noch nicht ganz leergeräumt ist, kauft er sich gleich noch die passende CD mit dem interessanten Titel „Du bist motiviert und erfolgreich“. Einige Tage später wird die Ware geliefert. Der Paketbote hat noch nicht das Haus verlassen, da rupft er die CD aus der Verpackung, knallt sich aufs Bett, packt die CD in den CD-Player, setzt die Kopfhörer auf und hört nun stundenlang Erfolgsbotschaften: __„Ich bin motiviert und erfolgreich. Ich bin motiviert und erfolgreich. Ich bin motiviert und erfolgreich. Ich bin motiviert und erfolgreich.“__ Können Sie sich vorstellen, was nach kurzer Zeit passiert? Richtig, dieser Kandidat ist motiviert und wird erfolgreich. Er wird der erfolgreichste motivierte Versager aller Zeiten! Ob er sich darüber freut?",
+      "id": [
+        "131641"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131642]\nDas Problem liegt darin, dass die negativen Programme, Glaubenssätze und Überzeugungen nicht gelöscht, sondern noch verstärkt werden. Es ist so, als würde man den schiefen Turm von Pisa aufstocken wollen, um das Fundament ins Gleichgewicht zu bringen. Jedermann weiß, dass ein solches Vorhaben ernste Folgen haben wird. Der Turm wird kippen bzw. in sich zusammenfallen. Wenn das Fundament nicht verändert wird, ist alles, was darauf gebaut wird, dem Untergang geweiht. Kein Mensch würde daran zweifeln, dass dieser Turm von Pisa umstürzt, sobald jemand die Spitze erhöht. Das sehen wir, das glauben wir. Doch sobald jemand daherkommt und sagt: „Hey Junge, wenn du dein Leben verändern willst, dann musst du hinabsteigen in die Tiefe deines Geistes, dem Fundament des Lebens. Wenn du dort angekommen bist, arbeite so lange am Fundament, bis es stabil genug ist, um ein neues, interessanteres und schöneres Leben darauf zu errichten.“ „Ein Schmarrn“ hört man sie dann rufen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Problem liegt darin, dass die negativen Programme, Glaubenssätze und Überzeugungen nicht gelöscht, sondern noch verstärkt werden. Es ist so, als würde man den schiefen Turm von Pisa aufstocken wollen, um das Fundament ins Gleichgewicht zu bringen. Jedermann weiß, dass ein solches Vorhaben ernste Folgen haben wird. Der Turm wird kippen bzw. in sich zusammenfallen. Wenn das Fundament nicht verändert wird, ist alles, was darauf gebaut wird, dem Untergang geweiht. Kein Mensch würde daran zweifeln, dass dieser Turm von Pisa umstürzt, sobald jemand die Spitze erhöht. Das sehen wir, das glauben wir. Doch sobald jemand daherkommt und sagt: „Hey Junge, wenn du dein Leben verändern willst, dann musst du hinabsteigen in die Tiefe deines Geistes, dem Fundament des Lebens. Wenn du dort angekommen bist, arbeite so lange am Fundament, bis es stabil genug ist, um ein neues, interessanteres und schöneres Leben darauf zu errichten.“ „Ein Schmarrn“ hört man sie dann rufen.",
+      "id": [
+        "131642"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131643]\nMan kann ihnen diese Antworten nachsehen, ganz im Sinne des Kultfilms von James Dean: __„Denn sie wissen nicht, was sie tun.“__ Tatsächlich haben nur die wenigsten Menschen eine Vorstellung davon, welche Kräfte in ihnen schlummern, die nur darauf warten, freigesetzt zu werden. Statt sich dieser Kräfte bewusst zu werden, hadern sie mit ihrem Schicksal und laufen 40 Jahre einer Arbeit hinterher, die ihnen keine Freude macht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Man kann ihnen diese Antworten nachsehen, ganz im Sinne des Kultfilms von James Dean: __„Denn sie wissen nicht, was sie tun.“__ Tatsächlich haben nur die wenigsten Menschen eine Vorstellung davon, welche Kräfte in ihnen schlummern, die nur darauf warten, freigesetzt zu werden. Statt sich dieser Kräfte bewusst zu werden, hadern sie mit ihrem Schicksal und laufen 40 Jahre einer Arbeit hinterher, die ihnen keine Freude macht.",
+      "id": [
+        "131643"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131644]\nUm im positiven Sinne erfolgreich zu werden, müssen die alten „Daten“ gelöscht und gegen neue ersetzt werden. Erst dann darf man zu den Erfolgs-CDs greifen. Solange die alten Programme (bei den Ziegelsteinen der alte Bauplan, siehe vorherige Trainingseinheit) erhalten bleiben, solange kann es keine Veränderung geben. Veränderungen müssen buchstäblich am Fundament vorgenommen werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Um im positiven Sinne erfolgreich zu werden, müssen die alten „Daten“ gelöscht und gegen neue ersetzt werden. Erst dann darf man zu den Erfolgs-CDs greifen. Solange die alten Programme (bei den Ziegelsteinen der alte Bauplan, siehe vorherige Trainingseinheit) erhalten bleiben, solange kann es keine Veränderung geben. Veränderungen müssen buchstäblich am Fundament vorgenommen werden.",
+      "id": [
+        "131644"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131645]\nWollen wir Veränderungen in unserem Leben, dann ist es von größter Wichtigkeit, davon eine klare Vorstellung zu haben. Statt sich auf die negativen Umstände zu konzentrieren, ist die „geistige Vorwegnahme“ dessen, was man gerne hätte, wichtig. Allerdings lässt sich damit allein kein zufriedenstellendes Ergebnis erzielen. Ansonsten wären alle Krankheiten ausgerottet. Gedanken können unter bestimmten Umständen Krankheiten heilen. Das ist inzwischen wissenschaftlich eindrucksvoll nachgewiesen. Es ist aber – leider – die Ausnahme von der Regel. Die meisten Krankheiten verschwinden eben nicht allein durch bloße Gedankenkraft. Erst, wenn jede Faser unseres Körpers von diesen neuen Gedanken erfasst wurde, ja geradezu beseelt ist, erreichen wir alles, sowohl Erfolg wie Heilung.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wollen wir Veränderungen in unserem Leben, dann ist es von größter Wichtigkeit, davon eine klare Vorstellung zu haben. Statt sich auf die negativen Umstände zu konzentrieren, ist die „geistige Vorwegnahme“ dessen, was man gerne hätte, wichtig. Allerdings lässt sich damit allein kein zufriedenstellendes Ergebnis erzielen. Ansonsten wären alle Krankheiten ausgerottet. Gedanken können unter bestimmten Umständen Krankheiten heilen. Das ist inzwischen wissenschaftlich eindrucksvoll nachgewiesen. Es ist aber – leider – die Ausnahme von der Regel. Die meisten Krankheiten verschwinden eben nicht allein durch bloße Gedankenkraft. Erst, wenn jede Faser unseres Körpers von diesen neuen Gedanken erfasst wurde, ja geradezu beseelt ist, erreichen wir alles, sowohl Erfolg wie Heilung.",
+      "id": [
+        "131645"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131646]\nKörper, Geist und Seele bilden eine Einheit, sind untrennbar miteinander verbunden. Deshalb kommt es darauf an, bei allem, was Sie vorhaben, alle Ebenen anzusprechen. Bezogen auf das Hausbeispiel (Trainingseinheit 2) wird jeder Architekt scheitern, wenn sein Bauplan (Geist) falsch ausgearbeitet wurde. Ist er mit dem Gefühl (Seele) bei der Sache, folgt ihm die Hand (Körper), um seine Ideen zu Papier zu bringen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Körper, Geist und Seele bilden eine Einheit, sind untrennbar miteinander verbunden. Deshalb kommt es darauf an, bei allem, was Sie vorhaben, alle Ebenen anzusprechen. Bezogen auf das Hausbeispiel (Trainingseinheit 2) wird jeder Architekt scheitern, wenn sein Bauplan (Geist) falsch ausgearbeitet wurde. Ist er mit dem Gefühl (Seele) bei der Sache, folgt ihm die Hand (Körper), um seine Ideen zu Papier zu bringen.",
+      "id": [
+        "131646"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131647]\nEine der ältesten Vorstellungen in der chinesischen Philosophie ist der Gedanke von Yin und Yang. Dargestellt durch das nebenstehende Symbol. Das Prinzip Yin und Yang beschreibt eine Beziehung zwischen zwei Elementen, die auf einer langen Tradition beruht und inzwischen einen festen Platz in allen möglichen Bereichen der Wissenschaft und Kunst gefunden hat. Zwei Elemente entspringen jeweils einem Ursprung. Das können zwei der unterschiedlichsten Dinge von zahlreichen Existenzformen sein, die es im Universum gibt. Diese bringen dann wieder ihrerseits eine enorme Vielfalt an Erscheinungsformen hervor. Die beiden Worte für sich genommen haben ihre eigene Bedeutung: Yang bedeutet eigentlich __„Banner, die in der Sonne wehen“__, und Yin heißt soviel wie wolkig. Zwei Kräfte, wie sie unterschiedlicher nicht sein können und die nicht direkt wahrnehmbar, aber doch immer unter uns sind und direkten Einfluss auf unser Leben haben können. Sofern wir uns darauf einlassen. Wohin wir auch schauen. Überall finden sich Yin und Yang, auch oder gerade in der Natur. Nehmen wir z. B. die Sonne. Sie kommt von oben, vom Himmel, ist warm, hell und strahlt Licht und Energie ab. Doch nur mit Hilfe von Wasser und Luft können die Sonnenstrahlen überleben. Das Yang der Sonnenstrahlen benötigt also Yin-Elemente, um wirksam zu werden. Sonne und Wasser müssen in einem ausgewogenen Verhältnis zueinander stehen. Trotz ihrer Verschiedenheit sind sie gemeinsam stark. Ausgeglichenheit und Harmonie zwischen diesen beiden verschiedenen Kräften sind in der chinesischen Philosophie der zentralste Punkt. Durch Yin und Yang bekommt Ihr Leben die Möglichkeit dazu.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Eine der ältesten Vorstellungen in der chinesischen Philosophie ist der Gedanke von Yin und Yang. Dargestellt durch das nebenstehende Symbol. Das Prinzip Yin und Yang beschreibt eine Beziehung zwischen zwei Elementen, die auf einer langen Tradition beruht und inzwischen einen festen Platz in allen möglichen Bereichen der Wissenschaft und Kunst gefunden hat. Zwei Elemente entspringen jeweils einem Ursprung. Das können zwei der unterschiedlichsten Dinge von zahlreichen Existenzformen sein, die es im Universum gibt. Diese bringen dann wieder ihrerseits eine enorme Vielfalt an Erscheinungsformen hervor. Die beiden Worte für sich genommen haben ihre eigene Bedeutung: Yang bedeutet eigentlich __„Banner, die in der Sonne wehen“__, und Yin heißt soviel wie wolkig. Zwei Kräfte, wie sie unterschiedlicher nicht sein können und die nicht direkt wahrnehmbar, aber doch immer unter uns sind und direkten Einfluss auf unser Leben haben können. Sofern wir uns darauf einlassen. Wohin wir auch schauen. Überall finden sich Yin und Yang, auch oder gerade in der Natur. Nehmen wir z. B. die Sonne. Sie kommt von oben, vom Himmel, ist warm, hell und strahlt Licht und Energie ab. Doch nur mit Hilfe von Wasser und Luft können die Sonnenstrahlen überleben. Das Yang der Sonnenstrahlen benötigt also Yin-Elemente, um wirksam zu werden. Sonne und Wasser müssen in einem ausgewogenen Verhältnis zueinander stehen. Trotz ihrer Verschiedenheit sind sie gemeinsam stark. Ausgeglichenheit und Harmonie zwischen diesen beiden verschiedenen Kräften sind in der chinesischen Philosophie der zentralste Punkt. Durch Yin und Yang bekommt Ihr Leben die Möglichkeit dazu.",
+      "id": [
+        "131647"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:134524]\nDas Yin- und Yang-Symbol ist weit mehr als nur ein Zeichen der Dualität. Letztlich verbinden sich Geist und Seele zum großen Ganzen, nämlich zum Körper und darüber hinaus zum so genannten kollektiven Unbewussten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Yin- und Yang-Symbol ist weit mehr als nur ein Zeichen der Dualität. Letztlich verbinden sich Geist und Seele zum großen Ganzen, nämlich zum Körper und darüber hinaus zum so genannten kollektiven Unbewussten.",
+      "id": [
+        "134524"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:131648]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_4.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "131648"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131649]\nDie Bezeichnung „das kollektive Unbewusste“ geht zurück auf den Schweizer Mediziner und Begründer der analytischen Psychologie, Carl Gustav Jung (1875-1961). Nach C. G. Jung ist das kollektive Unbewusste eine Art Lagerstätte des psychischen Erbes der Menschheitsgeschichte, welches sich, ähnlich wie der biologische Körper, durch die Evolution hindurch entwickelt habe und von verschiedenen Erfahrungen geprägt worden sei. Alles, was irgendwann einmal von der individuellen Psyche eines Menschen ausgedrückt wurde, werde zu einem Bestandteil der psychischen Grundkonstitution eines Menschen und ebenso auf einer kollektiven Ebene zu einem Bestandteil der ganzen Gattung und damit zu einem Bestandteil des kollektiven Unbewussten. Unter Wissenschaftlern war diese Meinung sehr umstritten. Das könnte sich nun ändern.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Bezeichnung „das kollektive Unbewusste“ geht zurück auf den Schweizer Mediziner und Begründer der analytischen Psychologie, Carl Gustav Jung (1875-1961). Nach C. G. Jung ist das kollektive Unbewusste eine Art Lagerstätte des psychischen Erbes der Menschheitsgeschichte, welches sich, ähnlich wie der biologische Körper, durch die Evolution hindurch entwickelt habe und von verschiedenen Erfahrungen geprägt worden sei. Alles, was irgendwann einmal von der individuellen Psyche eines Menschen ausgedrückt wurde, werde zu einem Bestandteil der psychischen Grundkonstitution eines Menschen und ebenso auf einer kollektiven Ebene zu einem Bestandteil der ganzen Gattung und damit zu einem Bestandteil des kollektiven Unbewussten. Unter Wissenschaftlern war diese Meinung sehr umstritten. Das könnte sich nun ändern.",
+      "id": [
+        "131649"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131650]\nNaturwissenschaftler sind sich inzwischen sicher, dass es eine physikalisch beschreibbare Seele gibt. Das Fundament für die interessante These liefert das quantenphysikalische Phänomen der Verschränkung, das bereits von Albert Einstein „entdeckt“ wurde. Er hielt es aber für eine spukhafte Erscheinung, weshalb seine Aufzeichnungen zu den Akten gelegt wurden. Inzwischen aber beweisen immer mehr Naturwissenschaftler, dass es tatsächlich so etwas gibt wie die „verschränkten Welten“. Das dahinter stehende Verschränkungsprinzip besagt, dass, treten zwei Quantensysteme miteinander in Wechselwirkung, diese fortan ein Gesamtsystem bilden – auch dann, wenn der Zeitpunkt der Wechselwirkung längst vergangen ist und die zwei Systeme inzwischen über große Distanzen getrennt sind. In verständlichen Worten ausgedrückt:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Naturwissenschaftler sind sich inzwischen sicher, dass es eine physikalisch beschreibbare Seele gibt. Das Fundament für die interessante These liefert das quantenphysikalische Phänomen der Verschränkung, das bereits von Albert Einstein „entdeckt“ wurde. Er hielt es aber für eine spukhafte Erscheinung, weshalb seine Aufzeichnungen zu den Akten gelegt wurden. Inzwischen aber beweisen immer mehr Naturwissenschaftler, dass es tatsächlich so etwas gibt wie die „verschränkten Welten“. Das dahinter stehende Verschränkungsprinzip besagt, dass, treten zwei Quantensysteme miteinander in Wechselwirkung, diese fortan ein Gesamtsystem bilden – auch dann, wenn der Zeitpunkt der Wechselwirkung längst vergangen ist und die zwei Systeme inzwischen über große Distanzen getrennt sind. In verständlichen Worten ausgedrückt:",
+      "id": [
+        "131650"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131651]\nEine Testperson führt an einem x-beliebigen Ort eine Messung an einem Teilchen A durch. Ist Teilchen A mit Teilchen B „verschränkt“, so wird B durch diese Messung ohne Zeitverzögerung beeinflusst. Das allein ist schon sensationell. Doch es kommt noch besser. Physiker behaupten, dass dieses Phänomen auch dann auftritt, wenn die Teilchen A und B 1000 Lichtjahre voneinander entfernt sind! Daraus schließen die Naturwissenschaftler, dass Teile der belebten und unbelebten Welt miteinander verschränkt sind und auf subtile Weise miteinander kommunizieren. Diese Feststellungen sind bahnbrechend, widersprechen sie doch dem „Weltbild“ der Naturwissenschaftler, dass Objekte nicht an zwei Orten zugleich sein können. Dazu meinte der im April 2008 verstorbene amerikanische Physiker Prof. Dr. John A. Wheeler1:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Eine Testperson führt an einem x-beliebigen Ort eine Messung an einem Teilchen A durch. Ist Teilchen A mit Teilchen B „verschränkt“, so wird B durch diese Messung ohne Zeitverzögerung beeinflusst. Das allein ist schon sensationell. Doch es kommt noch besser. Physiker behaupten, dass dieses Phänomen auch dann auftritt, wenn die Teilchen A und B 1000 Lichtjahre voneinander entfernt sind! Daraus schließen die Naturwissenschaftler, dass Teile der belebten und unbelebten Welt miteinander verschränkt sind und auf subtile Weise miteinander kommunizieren. Diese Feststellungen sind bahnbrechend, widersprechen sie doch dem „Weltbild“ der Naturwissenschaftler, dass Objekte nicht an zwei Orten zugleich sein können. Dazu meinte der im April 2008 verstorbene amerikanische Physiker Prof. Dr. John A. Wheeler1:",
+      "id": [
+        "131651"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:131652]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_39.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "131652"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_39.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131653]\nEiner der renommiertesten Quantenphysiker der Gegenwart, Professor Dr. Hans-Peter Dürr, ehemaliger Leiter des Max-Planck-Instituts für Physik in München, vertritt heute die Auffassung, dass der Dualismus kleinster Teilchen nicht auf die subatomare Welt beschränkt, sondern vielmehr allgegenwärtig ist. Seiner Meinung nach existiert auch ein universeller Quantencode, in den die gesamte lebende und tote Materie eingebunden ist. Dieser Quantencode soll sich seit dem Urknall über den gesamten Kosmos erstrecken. Deshalb glaubt Prof. Dr. Dürr auch an eine Existenz nach dem Tode:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Einer der renommiertesten Quantenphysiker der Gegenwart, Professor Dr. Hans-Peter Dürr, ehemaliger Leiter des Max-Planck-Instituts für Physik in München, vertritt heute die Auffassung, dass der Dualismus kleinster Teilchen nicht auf die subatomare Welt beschränkt, sondern vielmehr allgegenwärtig ist. Seiner Meinung nach existiert auch ein universeller Quantencode, in den die gesamte lebende und tote Materie eingebunden ist. Dieser Quantencode soll sich seit dem Urknall über den gesamten Kosmos erstrecken. Deshalb glaubt Prof. Dr. Dürr auch an eine Existenz nach dem Tode:",
+      "id": [
+        "131653"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:131654]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_40.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "131654"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_40.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131655]\nMit seiner Meinung steht Dürr schon lange nicht mehr allein auf weiter Flur. Auch der Heidelberger Physiker, Prof. Dr. Markolf H. Niemz, stellt Erstaunliches fest. Er glaubt, dass sich nach dem Tod eines Menschen die Seele mit Lichtgeschwindigkeit verabschiedet. Und der Wissenschaftler am Max-Planck-Institut für biophysikalische Chemie in Göttingen, Dr. Christian Hellweg, ist von dem Quantenzustand des Geistes überzeugt: __„Die Eigenschaften des Geistigen entsprechen haargenau denjenigen Charakteristika, die die äußerst rätselhaften und wunderlichen Erscheinungen der Quantenwelt auszeichnen.“__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Mit seiner Meinung steht Dürr schon lange nicht mehr allein auf weiter Flur. Auch der Heidelberger Physiker, Prof. Dr. Markolf H. Niemz, stellt Erstaunliches fest. Er glaubt, dass sich nach dem Tod eines Menschen die Seele mit Lichtgeschwindigkeit verabschiedet. Und der Wissenschaftler am Max-Planck-Institut für biophysikalische Chemie in Göttingen, Dr. Christian Hellweg, ist von dem Quantenzustand des Geistes überzeugt: __„Die Eigenschaften des Geistigen entsprechen haargenau denjenigen Charakteristika, die die äußerst rätselhaften und wunderlichen Erscheinungen der Quantenwelt auszeichnen.“__",
+      "id": [
+        "131655"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131656]\nUnd wenn es noch eines weiteren Beweises gebraucht hätte, dass es eben doch mehr gibt zwischen Himmel und Erde, was unser Verstand kaum erklären kann, dann ist es die Feststellung des bekannten britischen Kernphysikers und Molekularbiologen Dr. Jeremy Hayward von der Universität Cambridge:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Und wenn es noch eines weiteren Beweises gebraucht hätte, dass es eben doch mehr gibt zwischen Himmel und Erde, was unser Verstand kaum erklären kann, dann ist es die Feststellung des bekannten britischen Kernphysikers und Molekularbiologen Dr. Jeremy Hayward von der Universität Cambridge:",
+      "id": [
+        "131656"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:131657]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_41.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "131657"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_41.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131658]\nDa staunt der Laie und der Fachmann wundert sich. Oder wie Albert Einstein sagte: __„Es gibt zwei Arten, sein Leben zu leben: entweder so, als wäre nichts ein Wunder, oder so, als wäre alles eines. Ich glaube an Letzteres“__.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Da staunt der Laie und der Fachmann wundert sich. Oder wie Albert Einstein sagte: __„Es gibt zwei Arten, sein Leben zu leben: entweder so, als wäre nichts ein Wunder, oder so, als wäre alles eines. Ich glaube an Letzteres“__.",
+      "id": [
+        "131658"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131659]\nDieser kleine Exkurs in die Welt der Physik und Gedanken war notwendig, um Ihnen zu zeigen, dass Sie und niemand anders für sich verantwortlich sind. Sie allein erzeugen durch Ihre Gedanken die Lebensumstände. Wenn Sie glauben, die Welt ist schlecht, dann wird sie genau das sein. Denken Sie und sehen das Gute in der Welt, dann werden Sie es genauso erleben. Sie brauchen Beweise? Dann lesen Sie diese Trainingseinheit ein zweites Mal und Sie werden wissen, worum es geht. Oder lesen Sie einfach weiter...",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieser kleine Exkurs in die Welt der Physik und Gedanken war notwendig, um Ihnen zu zeigen, dass Sie und niemand anders für sich verantwortlich sind. Sie allein erzeugen durch Ihre Gedanken die Lebensumstände. Wenn Sie glauben, die Welt ist schlecht, dann wird sie genau das sein. Denken Sie und sehen das Gute in der Welt, dann werden Sie es genauso erleben. Sie brauchen Beweise? Dann lesen Sie diese Trainingseinheit ein zweites Mal und Sie werden wissen, worum es geht. Oder lesen Sie einfach weiter...",
+      "id": [
+        "131659"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131660]\n__Ein alter Mann saß unter einem großen Baum und hielt einen Mittagsschlaf. Plötzlich trat ein junger Mann an ihn heran und bat um eine Auskunft. „Guter Mann, kannst du mir sagen, wie weit es noch ist bis zur nächsten Stadt?“, fragte er den inzwischen aus dem Schlaf erwachten alten Mann. „Gut eine Stunde Fußmarsch von hier“, sagte der Alte. Der junge Mann bedankte sich. Er war bereits im Begriff zu gehen, da drehte er sich noch einmal um und fragte: „Kannst du mir auch sagen, auf was für Menschen ich dort treffen werde? Sind sie reich oder arm? Sind sie dumm oder schlau? Sind sie nett?“ – „Nun“, fragte der alte Mann, „welche Menschen leben in deiner Heimat?“ – „Betrüger, Gauner, Diebe, Gesindel und Verbrecher“, antwortete der junge Mann wütend. „Genau diese Menschen leben auch in dieser Stadt“, belehrte ihn der Alte. Der junge Mann drehte sich um und lief laut fluchend in Richtung Stadt, wohl wissend, was ihn dort erwarten würde. Der alte Mann legte sich wieder hin und schlief weiter. Es dauerte nicht lange, da hielt ein Bauer mit seinem Esel-Fuhrwerk und bat ebenfalls um Auskunft. Der alte Mann erklärte auch ihm, dass er etwa eine Stunde benötigen würde, um die große Stadt zu erreichen. Der Bauer kam von weit her und kannte diese Gegend nicht. Nun wollte er noch wissen, welche Menschen in dieser schönen Stadt lebten. Der alte Mann fragte den Bauern: „Welche Menschen leben in deiner Heimatstadt?“. Die Augen des Bauern leuchteten, als er von all den wunderbaren Menschen aus seiner Heimat berichtete. „Dort leben lauter ehrbare nette Leute. Jeder achtet jeden. Wir haben viel Spaß miteinander.“ Der alte Mann schaute in das Gesicht des Bauern und antwortete: „Genau diese Menschen wirst du in dieser Stadt treffen. Ich wünsche dir viel Freude.“ Der Bauer bedankte sich und trottete fröhlich pfeifend mit dem Esel in Richtung Stadt. Ein kleiner Junge, der in der Nähe des Baumes mit seinen Murmeln im Sand spielte, wurde unfreiwillig Zeuge dieser Gespräche. Ihn irritierten die Antworten des alten Mannes so sehr, dass er all seinen Mut nahm und auf den alten Mann zuging, obwohl seine Eltern ihm verboten hatten, Fremde anzusprechen. Mit schlotternden Knien stand er vor dem alten Mann unter dem großen Baum und fragte mit zittriger Stimme: „Dir haben zwei Männer die gleiche Frage gestellt, aber du hast zweimal unterschiedlich geantwortet. Warum?“ – „Nun“, sagte der Mann, „wir sehen immer nur das, was wir sehen wollen, und schaffen uns damit unsere eigene Welt. Wenn wir glauben, dass die Welt nur aus Betrügern besteht, dann werden wir betrogen. Wenn wir, so wie der Bauer, an das Gute im Menschen glauben, dann werden um uns herum nur nette Menschen sein. Du allein hast die Wahl.“ Der Junge verstand und ging wieder spielen, weil der alte Mann noch dringend eine Portion Schlaf nachzuholen hatte.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Ein alter Mann saß unter einem großen Baum und hielt einen Mittagsschlaf. Plötzlich trat ein junger Mann an ihn heran und bat um eine Auskunft. „Guter Mann, kannst du mir sagen, wie weit es noch ist bis zur nächsten Stadt?“, fragte er den inzwischen aus dem Schlaf erwachten alten Mann. „Gut eine Stunde Fußmarsch von hier“, sagte der Alte. Der junge Mann bedankte sich. Er war bereits im Begriff zu gehen, da drehte er sich noch einmal um und fragte: „Kannst du mir auch sagen, auf was für Menschen ich dort treffen werde? Sind sie reich oder arm? Sind sie dumm oder schlau? Sind sie nett?“ – „Nun“, fragte der alte Mann, „welche Menschen leben in deiner Heimat?“ – „Betrüger, Gauner, Diebe, Gesindel und Verbrecher“, antwortete der junge Mann wütend. „Genau diese Menschen leben auch in dieser Stadt“, belehrte ihn der Alte. Der junge Mann drehte sich um und lief laut fluchend in Richtung Stadt, wohl wissend, was ihn dort erwarten würde. Der alte Mann legte sich wieder hin und schlief weiter. Es dauerte nicht lange, da hielt ein Bauer mit seinem Esel-Fuhrwerk und bat ebenfalls um Auskunft. Der alte Mann erklärte auch ihm, dass er etwa eine Stunde benötigen würde, um die große Stadt zu erreichen. Der Bauer kam von weit her und kannte diese Gegend nicht. Nun wollte er noch wissen, welche Menschen in dieser schönen Stadt lebten. Der alte Mann fragte den Bauern: „Welche Menschen leben in deiner Heimatstadt?“. Die Augen des Bauern leuchteten, als er von all den wunderbaren Menschen aus seiner Heimat berichtete. „Dort leben lauter ehrbare nette Leute. Jeder achtet jeden. Wir haben viel Spaß miteinander.“ Der alte Mann schaute in das Gesicht des Bauern und antwortete: „Genau diese Menschen wirst du in dieser Stadt treffen. Ich wünsche dir viel Freude.“ Der Bauer bedankte sich und trottete fröhlich pfeifend mit dem Esel in Richtung Stadt. Ein kleiner Junge, der in der Nähe des Baumes mit seinen Murmeln im Sand spielte, wurde unfreiwillig Zeuge dieser Gespräche. Ihn irritierten die Antworten des alten Mannes so sehr, dass er all seinen Mut nahm und auf den alten Mann zuging, obwohl seine Eltern ihm verboten hatten, Fremde anzusprechen. Mit schlotternden Knien stand er vor dem alten Mann unter dem großen Baum und fragte mit zittriger Stimme: „Dir haben zwei Männer die gleiche Frage gestellt, aber du hast zweimal unterschiedlich geantwortet. Warum?“ – „Nun“, sagte der Mann, „wir sehen immer nur das, was wir sehen wollen, und schaffen uns damit unsere eigene Welt. Wenn wir glauben, dass die Welt nur aus Betrügern besteht, dann werden wir betrogen. Wenn wir, so wie der Bauer, an das Gute im Menschen glauben, dann werden um uns herum nur nette Menschen sein. Du allein hast die Wahl.“ Der Junge verstand und ging wieder spielen, weil der alte Mann noch dringend eine Portion Schlaf nachzuholen hatte.__",
+      "id": [
+        "131660"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:134346]\n[#To do]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "134346"
+      ],
+      "title": "To do"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:134347]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_5.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "134347"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131661]Streichen Sie bitte sofort diesen Satz aus Ihrem Wortschatz: „Ich kann nicht!“",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Streichen Sie bitte sofort diesen Satz aus Ihrem Wortschatz: „Ich kann nicht!“",
+      "id": [
+        "131661"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:134348]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_67.png]\n\nAuch wenn Sie es schon tausendmal gelesen haben – an dieser Stelle sei noch einmal die Geschichte mit der Hummel erzählt. Die Hummel hat 0,7 cm2 Flügelfläche bei 1,2 g Gewicht. Nach den Gesetzen der Aerodynamik ist es unmöglich, bei diesem Verhältnis zu fliegen. Die Hummel weiß das aber nicht und fliegt trotzdem! Stellen Sie sich vor, die Hummel würde sagen: __„Ich kann nicht“__.\nMan kann. Das ist die zentrale Botschaft aus dieser Trainingseinheit. Die Geschichtsbücher sind voller Beispiele, wie Menschen aus einfachsten Verhältnissen Großartiges geschafft haben. Sie haben ihre Chancen genutzt, auch wenn es alles andere als einfach war. So wie Nick Vujic. Schauen Sie sich an, was er über sich und sein Leben sagt:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Auch wenn Sie es schon tausendmal gelesen haben – an dieser Stelle sei noch einmal die Geschichte mit der Hummel erzählt. Die Hummel hat 0,7 cm2 Flügelfläche bei 1,2 g Gewicht. Nach den Gesetzen der Aerodynamik ist es unmöglich, bei diesem Verhältnis zu fliegen. Die Hummel weiß das aber nicht und fliegt trotzdem! Stellen Sie sich vor, die Hummel würde sagen: __„Ich kann nicht“__.\nMan kann. Das ist die zentrale Botschaft aus dieser Trainingseinheit. Die Geschichtsbücher sind voller Beispiele, wie Menschen aus einfachsten Verhältnissen Großartiges geschafft haben. Sie haben ihre Chancen genutzt, auch wenn es alles andere als einfach war. So wie Nick Vujic. Schauen Sie sich an, was er über sich und sein Leben sagt:",
+      "id": [
+        "134348"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_67.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:131662][&video-link:https://www.youtube.com/watch?v=kOdxq9na28Q&feature=related]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "131662"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=kOdxq9na28Q&feature=related",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131663]Erfolgreiche Menschen haben immer eine klare Vorstellung (eine Vision, einen Traum, einen Glauben). Ohne das Wollen und Können dieser Menschen wäre die Welt heute eine andere. Wenn auch nur einer von ihnen gesagt hätte: __„Ich würde ja gern wollen, aber ich kann nicht“__, sähe vieles anders aus. Es gab zu jeder Zeit Menschen, die anfänglich in einer sehr viel schlechteren Ausgangsposition steckten.\nWinston Churchill soll auf einer Vortragsrede, die mit großer Spannung von hunderten Zuhörern erwartet wurde, auf die Frage: „Was ist das Geheimnis Ihres Erfolges?“ mit nur einem Satz geantwortet haben:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Erfolgreiche Menschen haben immer eine klare Vorstellung (eine Vision, einen Traum, einen Glauben). Ohne das Wollen und Können dieser Menschen wäre die Welt heute eine andere. Wenn auch nur einer von ihnen gesagt hätte: __„Ich würde ja gern wollen, aber ich kann nicht“__, sähe vieles anders aus. Es gab zu jeder Zeit Menschen, die anfänglich in einer sehr viel schlechteren Ausgangsposition steckten.\nWinston Churchill soll auf einer Vortragsrede, die mit großer Spannung von hunderten Zuhörern erwartet wurde, auf die Frage: „Was ist das Geheimnis Ihres Erfolges?“ mit nur einem Satz geantwortet haben:",
+      "id": [
+        "131663"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:134349]\n[&image:https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_73.png]\n\nNach diesem einen Satz, so wird erzählt, verließ Churchill das Rednerpult.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Nach diesem einen Satz, so wird erzählt, verließ Churchill das Rednerpult.",
+      "id": [
+        "134349"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/f1rst/lehrgang/web_resources/images/f1rst_lehrgang_1-5_73.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:131664]===\nWas können Sie nun tun, um Ihre Vision zu leben?\n===\nWenn Sie alle Zeit der Welt hätten, über unbegrenzte Mittel verfügen würden und frei wählen könnten – was würden Sie dann tun wollen, um eine Spur auf der Welt zu hinterlassen?\n===\nWenn es das Risiko des Fehlschlags nicht geben würde, welche Art von Leben würden Sie führen wollen?\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Was können Sie nun tun, um Ihre Vision zu leben?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Wenn Sie alle Zeit der Welt hätten, über unbegrenzte Mittel verfügen würden und frei wählen könnten – was würden Sie dann tun wollen, um eine Spur auf der Welt zu hinterlassen?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Wenn es das Risiko des Fehlschlags nicht geben würde, welche Art von Leben würden Sie führen wollen?",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "131664"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:134525]\nWarum tun Sie es denn nicht? Denken Sie daran: Ihr Leben ist endlich, es währt nicht ewig. Also fangen Sie an.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Warum tun Sie es denn nicht? Denken Sie daran: Ihr Leben ist endlich, es währt nicht ewig. Also fangen Sie an.",
+      "id": [
+        "134525"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:133749]\n[#Impressum]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "133749"
+      ],
+      "title": "Impressum"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131666]Das Werk, einschließlich aller seiner Teile, ist urheberrechtlich geschützt. Jede Verwertung außerhalb des Urhebergesetzes ist ohne Zustimmung des Verlages unzulässig und strafbar. Das gilt im Besonderen für Vervielfältigungen, Übersetzungen, Mikroverfilmungen und die Einspeicherung und Verarbeitung in elektronische Systeme. Es ist deshalb nicht gestattet, Abbildungen und Texte zu verändern oder zu manipulieren. Auch die Weitergabe an Dritte ist ohne Zustimmung des Verlages nicht erlaubt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Werk, einschließlich aller seiner Teile, ist urheberrechtlich geschützt. Jede Verwertung außerhalb des Urhebergesetzes ist ohne Zustimmung des Verlages unzulässig und strafbar. Das gilt im Besonderen für Vervielfältigungen, Übersetzungen, Mikroverfilmungen und die Einspeicherung und Verarbeitung in elektronische Systeme. Es ist deshalb nicht gestattet, Abbildungen und Texte zu verändern oder zu manipulieren. Auch die Weitergabe an Dritte ist ohne Zustimmung des Verlages nicht erlaubt.",
+      "id": [
+        "131666"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131667]Alle Rechenbeispiele, Informationen, Anregungen und Tipps in dieser Lektion basieren auf den Erkenntnissen sowie der Gesetzeslage zum Zeitpunkt der Drucklegung und wurden mit der größtmöglichen Sorgfalt zusammengestellt. Dabei wurde darauf geachtet, dass die gewählten Beispiele allgemein übertragbar sind. Trotz aller Sorgfalt sind Fehler jedoch nicht ganz auszuschließen. Weil sich in Einzelfällen und durch Änderungen von Gesetzen und Vorschriften eventuell andere Umstände ergeben können, ist jedoch eine Haftung von Verlag und Autor für Schäden aller Art aus der Anwendung der hier erteilten Ratschläge ausgeschlossen. Auch können Autor und Verlag weder eine Garantie noch irgendeine Haftung für Personen-, Sach- oder Vermögensschäden, die auf fehlerhafte Angaben in dieser Lektion zurückzuführen sind, übernehmen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Alle Rechenbeispiele, Informationen, Anregungen und Tipps in dieser Lektion basieren auf den Erkenntnissen sowie der Gesetzeslage zum Zeitpunkt der Drucklegung und wurden mit der größtmöglichen Sorgfalt zusammengestellt. Dabei wurde darauf geachtet, dass die gewählten Beispiele allgemein übertragbar sind. Trotz aller Sorgfalt sind Fehler jedoch nicht ganz auszuschließen. Weil sich in Einzelfällen und durch Änderungen von Gesetzen und Vorschriften eventuell andere Umstände ergeben können, ist jedoch eine Haftung von Verlag und Autor für Schäden aller Art aus der Anwendung der hier erteilten Ratschläge ausgeschlossen. Auch können Autor und Verlag weder eine Garantie noch irgendeine Haftung für Personen-, Sach- oder Vermögensschäden, die auf fehlerhafte Angaben in dieser Lektion zurückzuführen sind, übernehmen.",
+      "id": [
+        "131667"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131668]Alle in diesem Buch vorgestellten Geschäftsmodelle sind Beispiele. Deshalb übernehmen Verlag und Autoren keine Erfolgsgarantien oder jede andere Form von Gewährleistungen. Der Leser ist für sein Handeln ausschließlich selbst verantwortlich und sollte sich in jedem Fall steuerlich und juristisch beraten lassen, bevor er den Schritt in die Selbstständigkeit geht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Alle in diesem Buch vorgestellten Geschäftsmodelle sind Beispiele. Deshalb übernehmen Verlag und Autoren keine Erfolgsgarantien oder jede andere Form von Gewährleistungen. Der Leser ist für sein Handeln ausschließlich selbst verantwortlich und sollte sich in jedem Fall steuerlich und juristisch beraten lassen, bevor er den Schritt in die Selbstständigkeit geht.",
+      "id": [
+        "131668"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131669]Die UrheberInnen der in diesem Buch enthaltenen Sprüche, Zitate und Aphorismen sind genannt. Fehlen sie, dann waren sie nicht eindeutig feststellbar. Das gilt auch für Spruchweisheiten aus dem Volksmund und für Neuformulierungen alter oder zu langer Sprüche.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die UrheberInnen der in diesem Buch enthaltenen Sprüche, Zitate und Aphorismen sind genannt. Fehlen sie, dann waren sie nicht eindeutig feststellbar. Das gilt auch für Spruchweisheiten aus dem Volksmund und für Neuformulierungen alter oder zu langer Sprüche.",
+      "id": [
+        "131669"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131670]Dieser Text ist Eigentum oder im Besitz der Vermarkungsrechte von Beat Ambord. Jede Vervielfältigung oder Weiterverarbeitung der Inhalte ist untersagt. Sollten Sie dieses Dokument dennoch außerhalb von Internetseiten der Beat Ambord erhalten haben, melden Sie dies uns bitte sofort. Das Eigentum bezieht sich nicht auf die Bilder. Sie wurden in Lizenz erworben von: www.shutterstock.de (Deckblatt) sowie www.fotolia.com (Textseite nach Deckblatt).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieser Text ist Eigentum oder im Besitz der Vermarkungsrechte von Beat Ambord. Jede Vervielfältigung oder Weiterverarbeitung der Inhalte ist untersagt. Sollten Sie dieses Dokument dennoch außerhalb von Internetseiten der Beat Ambord erhalten haben, melden Sie dies uns bitte sofort. Das Eigentum bezieht sich nicht auf die Bilder. Sie wurden in Lizenz erworben von: www.shutterstock.de (Deckblatt) sowie www.fotolia.com (Textseite nach Deckblatt).",
+      "id": [
+        "131670"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:131671]Alle Rechte vorbehalten. Nachdruck – auch auszugsweise – nur mit Genehmigung des Verlages. Mit dem Erwerb dieses Lektion haben Sie ausschließlich Leserechte erworben. Jede kostenlose Weitergabe ist untersagt.\n© Beat Ambord (Under licence 2013); All rights reserved",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Alle Rechte vorbehalten. Nachdruck – auch auszugsweise – nur mit Genehmigung des Verlages. Mit dem Erwerb dieses Lektion haben Sie ausschließlich Leserechte erworben. Jede kostenlose Weitergabe ist untersagt.\n© Beat Ambord (Under licence 2013); All rights reserved",
+      "id": [
+        "131671"
+      ]
+    }
+  }
+]

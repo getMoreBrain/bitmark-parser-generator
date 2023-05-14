@@ -1,0 +1,462 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:136495]\n[#Infor@21 - Schüler Version]\n[@language:de]\n[@externalId:e-st-gallen_4bbdxl84sdnb]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136495"
+      ],
+      "title": "Infor@21 - Schüler Version",
+      "language": [
+        "de"
+      ],
+      "externalId": [
+        "e-st-gallen_4bbdxl84sdnb"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:136496]\n[#Ich im Netz]\n[%3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "136496"
+      ],
+      "title": "Ich im Netz"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:136497]\n[##Medien: Meine persönlichen Daten]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "136497"
+      ],
+      "title": "Medien: Meine persönlichen Daten"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136498]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg16.png]\n**Beschreibung**\n• Personen, die Informationen über mich besitzen, erkennen\n• Informationen ordnen nach privat, halböffentlich, öffentlich\n• Online-Profile bewerten\n• Tipps zu einem Online-Profil erhalten\n• Musterprofil erstellen\n\n**Produkt/Ergebnis**\n• Mein Musterprofil",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Beschreibung**\n• Personen, die Informationen über mich besitzen, erkennen\n• Informationen ordnen nach privat, halböffentlich, öffentlich\n• Online-Profile bewerten\n• Tipps zu einem Online-Profil erhalten\n• Musterprofil erstellen\n\n**Produkt/Ergebnis**\n• Mein Musterprofil",
+      "id": [
+        "136498"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg16.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136499]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg28.png]\n[%Zentrale Ziele]\n•. Ich überblicke, welche Informationen ich mit welchen Personen im Netz teile.\n•. Ich kann benennen, welche persönlichen Daten ich auf meinem Online-Profil teilen kann und welche besser nicht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "•. Ich überblicke, welche Informationen ich mit welchen Personen im Netz teile.\n•. Ich kann benennen, welche persönlichen Daten ich auf meinem Online-Profil teilen kann und welche besser nicht.",
+      "id": [
+        "136499"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg28.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "item": "Zentrale Ziele"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136500]\n[%Lehrplanbezug]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg17.png]\n**Kompetenzstufen**\nDie Schülerinnen und Schüler...\n\n...können Folgen medialer und virtueller Handlungen erkennen und benennen (z. B. Identitätsbildung, Beziehungspflege, Cybermobbing). [MI.1.1.c]\n\n...können in ihren Medienbeiträgen die Sicherheitsregeln im Umgang mit persönlichen Daten einbeziehen (z. B. Angaben zur Person, Passwort, Nickname). [MI.1.3.d]\n\n**Querverweis**\nGestalten\n\n**Zeitbedarf**\n3 – 4 Lektionen\n\n**Material/Infrastruktur**\nPC, Beamer, Kamera\n\n**Voraussetzungen**\nkeine\n\n**Autor**\nArmin Lüchinger",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Kompetenzstufen**\nDie Schülerinnen und Schüler...\n\n...können Folgen medialer und virtueller Handlungen erkennen und benennen (z. B. Identitätsbildung, Beziehungspflege, Cybermobbing). [MI.1.1.c]\n\n...können in ihren Medienbeiträgen die Sicherheitsregeln im Umgang mit persönlichen Daten einbeziehen (z. B. Angaben zur Person, Passwort, Nickname). [MI.1.3.d]\n\n**Querverweis**\nGestalten\n\n**Zeitbedarf**\n3 – 4 Lektionen\n\n**Material/Infrastruktur**\nPC, Beamer, Kamera\n\n**Voraussetzungen**\nkeine\n\n**Autor**\nArmin Lüchinger",
+      "id": [
+        "136500"
+      ],
+      "item": "Lehrplanbezug"
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "png",
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg17.png"
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136501]\nThema: **Meine persönlichen Daten**\nDauer: **3 – 4 Lektionen**\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg17.png|\n**Lernphase: **V\n**Zeit in min: **10\n**Aktivität:** \n\n**Konfrontationsaufgabe – Achtung privat!**\n• Die SuS lesen die Aufgabe im FB durch.\n**Sozialform:** EA\n• Sie diskutieren, was Dot anders hätte machen müssen.\nHinweis: Eine mögliche Lösung ist unter «Hinweise und Lösungen» aufgeführt.\n**Sozialform:** KA",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Thema: **Meine persönlichen Daten**\nDauer: **3 – 4 Lektionen**\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg17.png|\n**Lernphase: **V\n**Zeit in min: **10\n**Aktivität:** \n\n**Konfrontationsaufgabe – Achtung privat!**\n• Die SuS lesen die Aufgabe im FB durch.\n**Sozialform:** EA\n• Sie diskutieren, was Dot anders hätte machen müssen.\nHinweis: Eine mögliche Lösung ist unter «Hinweise und Lösungen» aufgeführt.\n**Sozialform:** KA",
+      "id": [
+        "136501"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&document]\n[@id:136502]\n**Lernphase: **V\n**Zeit in min: **15\n**Aktivität:**\n\n**Zugang zu persönlichen Informationen**\nDiese Aufgabe ist nicht im FB enthalten.\n• Die LP druckt die Vorlage «Zugang zu persönlichen Informationen» auf A3-Blätter aus und legt diese auf den Boden.\n**Medien/Material:** Vorlage «Zugang zu persönlichen Informationen»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n[&document:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_lehrer/3.1/zugang_persoenliche_informationen.pdf]\n• Gemeinsam schreiben die SuS auf leere Kärtchen, welche KA Personen und Gruppen Informationen über sie besitzen\n(z.B. Eltern, Geschwister, Kollegen, Verwandte, Lehrpersonen, Nachbarn, Leitende im Verein, Chat-Gruppe, Gruppe auf Onlineportal usw.) und positionieren die Kärtchen auf den A3-Vorlagen (privat, halböffentlich, öffentlich).\n**Sozialform:** KA\n• Die Positionierung der Kärtchen wird diskutiert. \n**Sozialform:** KA",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Lernphase: **V\n**Zeit in min: **15\n**Aktivität:**\n\n**Zugang zu persönlichen Informationen**\nDiese Aufgabe ist nicht im FB enthalten.\n• Die LP druckt die Vorlage «Zugang zu persönlichen Informationen» auf A3-Blätter aus und legt diese auf den Boden.\n**Medien/Material:** Vorlage «Zugang zu persönlichen Informationen»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n\n• Gemeinsam schreiben die SuS auf leere Kärtchen, welche KA Personen und Gruppen Informationen über sie besitzen\n(z.B. Eltern, Geschwister, Kollegen, Verwandte, Lehrpersonen, Nachbarn, Leitende im Verein, Chat-Gruppe, Gruppe auf Onlineportal usw.) und positionieren die Kärtchen auf den A3-Vorlagen (privat, halböffentlich, öffentlich).\n**Sozialform:** KA\n• Die Positionierung der Kärtchen wird diskutiert. \n**Sozialform:** KA",
+      "id": [
+        "136502"
+      ],
+      "resource": {
+        "type": "document",
+        "document": {
+          "url": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_lehrer/3.1/zugang_persoenliche_informationen.pdf",
+          "provider": "docs.bitmark.cloud"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&document]\n[@id:136503]\n**Lernphase:** A\n**Zeit in min:** 30\n**Aktivität:**\n\n**Privatsphäre im Internet**\n• Die Lehrperson zeigt die Vorlage «Privatsphäre im Internet». KA Die Klasse ergänzt die Liste mit eigenen Begriffen.\n**Sozialform:** KA\n**Medien/Material: **Vorlage «Privatsphäre im Internet»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n[&document:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_lehrer/3.1/oline_profil_check.pdf]\n• Die SuS entscheiden sich, in welchen Kreis (privat, halbprivat EA oder öffentlich) sie die Begriffe positionieren würden. Sie\nschreiben diese mit Bleistift in die entsprechenden Kreise\nim FB.\n**Sozialform:** EA\n• Sie diskutieren in Gruppen oder in der Klasse ihren GA/KA Lösungsvorschlag.\n**Sozialform:** GA/KA\n• Die SuS passen nach der Diskussion die Positionierung der EA Begriffe an.\n**Sozialform:** EA\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg12.png|\n\n\n|info:**Abkürzungen**\nSuS Schülerinnen und Schüler\nLP Lehrperson\nFB Faltblatt für Schülerinnen und Schüler\nAB Arbeitsblatt (Arbeitsmaterial zu den Aufgaben)\nEA Einzelarbeit \nPA Partnerarbeit \nGA Gruppenarbeit \nKA Klassenarbeit",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Lernphase:** A\n**Zeit in min:** 30\n**Aktivität:**\n\n**Privatsphäre im Internet**\n• Die Lehrperson zeigt die Vorlage «Privatsphäre im Internet». KA Die Klasse ergänzt die Liste mit eigenen Begriffen.\n**Sozialform:** KA\n**Medien/Material: **Vorlage «Privatsphäre im Internet»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n\n• Die SuS entscheiden sich, in welchen Kreis (privat, halbprivat EA oder öffentlich) sie die Begriffe positionieren würden. Sie\nschreiben diese mit Bleistift in die entsprechenden Kreise\nim FB.\n**Sozialform:** EA\n• Sie diskutieren in Gruppen oder in der Klasse ihren GA/KA Lösungsvorschlag.\n**Sozialform:** GA/KA\n• Die SuS passen nach der Diskussion die Positionierung der EA Begriffe an.\n**Sozialform:** EA\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg12.png|\n\n\n|info:**Abkürzungen**\nSuS Schülerinnen und Schüler\nLP Lehrperson\nFB Faltblatt für Schülerinnen und Schüler\nAB Arbeitsblatt (Arbeitsmaterial zu den Aufgaben)\nEA Einzelarbeit \nPA Partnerarbeit \nGA Gruppenarbeit \nKA Klassenarbeit",
+      "id": [
+        "136503"
+      ],
+      "resource": {
+        "type": "document",
+        "document": {
+          "url": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_lehrer/3.1/oline_profil_check.pdf",
+          "provider": "docs.bitmark.cloud"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&document]\n[@id:136504]\n**Lernphase:** D,Ü\n**Zeit in min:** 50\n**Aktivität:**\n\n**Online-Profil**\n• Damit die Kinder wissen, was ein Online-Profil ist, kann die Präsentation «Online-Profil» gezeigt werden. Dies ist ein fiktives Beispiel eines Online-Profils.\n**Sozialform:** KA\n**Medien/Material:** Präsentation «Online-Profil», Notizen «Präsentation Online-Profil»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n[&document:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_lehrer/3.1/oline_profil_check.pdf]\n• Die SuS versuchen mit den im FB abgedruckten Profilen möglichst viel über die beiden fiktiven Personen herauszufinden und ergänzen das Arbeitsblatt «Online-Profil».\n**Sozialform:** EA\n**Medien/Material:** AB «Online-Profil»\n• Die Informationen werden anschliessend gemeinsam diskutiert.\n**Sozialform:** KA\n• Die SuS bewerten in Gruppen die Informationen auf dem Arbeitsblatt «Online-Profil». Die Bewertung stellt dar, ob es gut ist, dass die Information öffentlich online gestellt wird oder nicht. Die Diskussion soll die SuS zum Nachdenken anregen, welche Informationen sie in Online-Profilen bzw. im Internet im Allgemeinen preisgeben und welche besser nicht.\n**Sozialform:** GA\n• Die Resultate der Bewertung werden in der Klasse diskutiert.\n**Sozialform:** KA",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Lernphase:** D,Ü\n**Zeit in min:** 50\n**Aktivität:**\n\n**Online-Profil**\n• Damit die Kinder wissen, was ein Online-Profil ist, kann die Präsentation «Online-Profil» gezeigt werden. Dies ist ein fiktives Beispiel eines Online-Profils.\n**Sozialform:** KA\n**Medien/Material:** Präsentation «Online-Profil», Notizen «Präsentation Online-Profil»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n\n• Die SuS versuchen mit den im FB abgedruckten Profilen möglichst viel über die beiden fiktiven Personen herauszufinden und ergänzen das Arbeitsblatt «Online-Profil».\n**Sozialform:** EA\n**Medien/Material:** AB «Online-Profil»\n• Die Informationen werden anschliessend gemeinsam diskutiert.\n**Sozialform:** KA\n• Die SuS bewerten in Gruppen die Informationen auf dem Arbeitsblatt «Online-Profil». Die Bewertung stellt dar, ob es gut ist, dass die Information öffentlich online gestellt wird oder nicht. Die Diskussion soll die SuS zum Nachdenken anregen, welche Informationen sie in Online-Profilen bzw. im Internet im Allgemeinen preisgeben und welche besser nicht.\n**Sozialform:** GA\n• Die Resultate der Bewertung werden in der Klasse diskutiert.\n**Sozialform:** KA",
+      "id": [
+        "136504"
+      ],
+      "resource": {
+        "type": "document",
+        "document": {
+          "url": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_lehrer/3.1/oline_profil_check.pdf",
+          "provider": "docs.bitmark.cloud"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&document]\n[@id:136505]\n**Lernphase:** T\n**Zeit in min:** 10\n**Aktivität:**\n\n**Online-Profil-Check**\nDiese Aufgabe ist nicht im FB enthalten.\n• Die LP zeigt mit Hilfe der Präsentation «Online-Profil-Check» Tipps zum Umgang mit Online-Profilen.\n**Sozialform:** KA\n**Medien/Material: **Präsentation «Online-Profil-Check»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon7.png|\n[&document:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_lehrer/3.1/oline_profil_check.pdf]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Lernphase:** T\n**Zeit in min:** 10\n**Aktivität:**\n\n**Online-Profil-Check**\nDiese Aufgabe ist nicht im FB enthalten.\n• Die LP zeigt mit Hilfe der Präsentation «Online-Profil-Check» Tipps zum Umgang mit Online-Profilen.\n**Sozialform:** KA\n**Medien/Material: **Präsentation «Online-Profil-Check»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon7.png|",
+      "id": [
+        "136505"
+      ],
+      "resource": {
+        "type": "document",
+        "document": {
+          "url": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_lehrer/3.1/oline_profil_check.pdf",
+          "provider": "docs.bitmark.cloud"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&document]\n[@id:136506]\n**Lernphase:** T\n**Zeit in min:** 60\n**Aktivität:**\n\n**Mein Musterprofil**\nDiese Aufgabe ist nicht im FB enthalten.\n• Die SuS erstellen am Computer ihr eigenes Musterprofil. Sie können dazu die Vorlage «Mein Musterprofil» benutzen und diese mit ihren Informationen anreichern oder sie gestalten ihr eigenes Musterprofil.\nFotos für das Profil können die SuS im Internet suchen und einfügen oder selber Fotos mit der Kamera machen.\nDie SuS beachten bei der Erstellung des Musterprofils die Tipps aus der Präsentation «Online-Profil-Check».\n**Sozialform:** EA/PA\n**Medien/Material:** Vorlage «Mein Musterprofil», PC, Kamera\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon7.png|\n[&document:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_lehrer/3.1/mein_musterprofil_beurteilung.pdf]\n• In Partnerarbeit geben sich die SuS eine Rückmeldung zu ihrem Musterprofil.\n**Sozialform:** PA",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Lernphase:** T\n**Zeit in min:** 60\n**Aktivität:**\n\n**Mein Musterprofil**\nDiese Aufgabe ist nicht im FB enthalten.\n• Die SuS erstellen am Computer ihr eigenes Musterprofil. Sie können dazu die Vorlage «Mein Musterprofil» benutzen und diese mit ihren Informationen anreichern oder sie gestalten ihr eigenes Musterprofil.\nFotos für das Profil können die SuS im Internet suchen und einfügen oder selber Fotos mit der Kamera machen.\nDie SuS beachten bei der Erstellung des Musterprofils die Tipps aus der Präsentation «Online-Profil-Check».\n**Sozialform:** EA/PA\n**Medien/Material:** Vorlage «Mein Musterprofil», PC, Kamera\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon7.png|\n\n• In Partnerarbeit geben sich die SuS eine Rückmeldung zu ihrem Musterprofil.\n**Sozialform:** PA",
+      "id": [
+        "136506"
+      ],
+      "resource": {
+        "type": "document",
+        "document": {
+          "url": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/ab_lehrer/3.1/mein_musterprofil_beurteilung.pdf",
+          "provider": "docs.bitmark.cloud"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&document]\n[@id:136507]\n**Lernphase:** R\n**Zeit in min:** 10\n**Aktivität:**\n\n**Profi-Aufgabe**\n• Die SuS beantworten die Aufgabe. Sie notieren sich in Stichworten ihre Gedanken.\n**Sozialform:** EA/GA\n\n**Hinweise zur Beurteilung**\nDie von den SuS gestalteten Musterprofile werden durch die LP mithilfe des Beurteilungsbogens «Mein Musterprofil» bewertet.\nBeurteilungsbogen «Mein Musterprofil»",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Lernphase:** R\n**Zeit in min:** 10\n**Aktivität:**\n\n**Profi-Aufgabe**\n• Die SuS beantworten die Aufgabe. Sie notieren sich in Stichworten ihre Gedanken.\n**Sozialform:** EA/GA\n\n**Hinweise zur Beurteilung**\nDie von den SuS gestalteten Musterprofile werden durch die LP mithilfe des Beurteilungsbogens «Mein Musterprofil» bewertet.\nBeurteilungsbogen «Mein Musterprofil»",
+      "id": [
+        "136507"
+      ],
+      "resource": {
+        "type": "document",
+        "document": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136508]\n[%Hinweise und Lösungen zu den Aufgaben]\n**Konfrontationsaufgabe – Achtung privat!**\n\nℹ️Der LP ergibt sich die Möglichkeit, mehr über die Aktivitäten der SuS im Netz zu erfahren. Die SuS sollen ihr Wissen zu den Sicherheitseinstellungen austauschen können. Eventuell können die Sicherheitseinstellungen einer Plattform gemeinsam angeschaut werden.\n\n🔑Dot hätte Byte fragen müssen, ob das Bild veröffentlicht werden darf. Ein Bild darf nur mit Zustimmung der darauf abgebildeten Personen veröffentlicht werden. Bei Minderjährigen muss auch die Zustimmung der Erziehungsberechtigten vorliegen. Diese gesetzliche Regelung schränkt die Möglichkeiten des Bilderuploads deutlich ein.\n\n🔑Dot könnte in den Einstellungen der Plattform bzw. des Posts die Sichtbarkeit für andere einschränken. Je nach Plattform werden diese Einstellungen unterschiedlich vorgenommen. Auch lassen nicht alle Plattformen detaillierte und auf das einzelne Bild bezogene Einstellungen zu.\n\n**Privatsphäre im Internet**\n\nℹ️Die Positionierung der Begriffe geschieht individuell. Das heisst, in der GA muss keine gemeinsame Lösung gefunden werden.\n\nℹ️Die Positionierung der Begriffe wird in der Klasse diskutiert. Es sind verschiedene Lösungen möglich.\n\n**Online-Profil**\n\nℹ️Als Pendant zum Online-Profil kann das Freundschaftsbuch angesehen werden. Dort sammeln die SuS ebenfalls Informationen über ihre Freunde. Bei der Weitergabe des Buches werden die Informationen mit weiteren Personen geteilt.\n\nℹ️In sozialen Netzwerken existieren in der Regel Richtlinien mit einem Mindestalter. Viele Kinder unterschreiten bei der Nutzung dieses Alter, häufig mit Einwilligung der Eltern.\n\nℹ️Zur Sicherheit eines Profils gehört auch ein sicheres Passwort. Dieses Thema wird in diesem Kapitel, im Bereich «Informatik – Codiert – gehackt», behandelt.\n\n**Mein Musterprofil**\n\nℹ️Die Musterprofile sollen öffentlichen Profilen entsprechen. Das heisst, dass die Informationen für alle Personen zugänglich wären. Wichtig bei der Gestaltung des Musterprofils ist es daher, dass die SuS darauf achten, welche Informationen sie aufführen oder weglassen.\n\nℹ️Die SuS können auch ein zweites Musterprofil erstellen, welches die Informationen enthält, welche für Freunde zugänglich wären.\n\nℹ️Die Gestaltung des Profils sowie auch die Erstellung der Profilfotos können im Fachbereich Gestalten durchgeführt werden. Dabei können gestalterische Elemente wie Farbgebung, Fokus usw. besprochen werden.\n\n**Profi-Aufgabe**\n🔑Mögliche Stichworte:\n• Privatsphäre-Einstellungen überprüfen und\nStandardeinstellungen anpassen\n• Einsicht in die Angaben zur eigenen Person einschränken\n(nicht öffentlich zugänglich machen)\n• Einstellungen regelmässig überprüfen\n• Weniger ist mehr: nur absolut nötige Angaben eingeben – Fotos nicht öffentlich zugänglich machen\n• Freunde nicht automatisch hinzufügen, sondern mit\nBedacht wählen\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg8.png|\n\nRessourcen und weitere Ideen sind auf der Webseite zum Lehrmittel zu finden: ==www.inform21.ch==",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Konfrontationsaufgabe – Achtung privat!**\n\nℹ️Der LP ergibt sich die Möglichkeit, mehr über die Aktivitäten der SuS im Netz zu erfahren. Die SuS sollen ihr Wissen zu den Sicherheitseinstellungen austauschen können. Eventuell können die Sicherheitseinstellungen einer Plattform gemeinsam angeschaut werden.\n\n🔑Dot hätte Byte fragen müssen, ob das Bild veröffentlicht werden darf. Ein Bild darf nur mit Zustimmung der darauf abgebildeten Personen veröffentlicht werden. Bei Minderjährigen muss auch die Zustimmung der Erziehungsberechtigten vorliegen. Diese gesetzliche Regelung schränkt die Möglichkeiten des Bilderuploads deutlich ein.\n\n🔑Dot könnte in den Einstellungen der Plattform bzw. des Posts die Sichtbarkeit für andere einschränken. Je nach Plattform werden diese Einstellungen unterschiedlich vorgenommen. Auch lassen nicht alle Plattformen detaillierte und auf das einzelne Bild bezogene Einstellungen zu.\n\n**Privatsphäre im Internet**\n\nℹ️Die Positionierung der Begriffe geschieht individuell. Das heisst, in der GA muss keine gemeinsame Lösung gefunden werden.\n\nℹ️Die Positionierung der Begriffe wird in der Klasse diskutiert. Es sind verschiedene Lösungen möglich.\n\n**Online-Profil**\n\nℹ️Als Pendant zum Online-Profil kann das Freundschaftsbuch angesehen werden. Dort sammeln die SuS ebenfalls Informationen über ihre Freunde. Bei der Weitergabe des Buches werden die Informationen mit weiteren Personen geteilt.\n\nℹ️In sozialen Netzwerken existieren in der Regel Richtlinien mit einem Mindestalter. Viele Kinder unterschreiten bei der Nutzung dieses Alter, häufig mit Einwilligung der Eltern.\n\nℹ️Zur Sicherheit eines Profils gehört auch ein sicheres Passwort. Dieses Thema wird in diesem Kapitel, im Bereich «Informatik – Codiert – gehackt», behandelt.\n\n**Mein Musterprofil**\n\nℹ️Die Musterprofile sollen öffentlichen Profilen entsprechen. Das heisst, dass die Informationen für alle Personen zugänglich wären. Wichtig bei der Gestaltung des Musterprofils ist es daher, dass die SuS darauf achten, welche Informationen sie aufführen oder weglassen.\n\nℹ️Die SuS können auch ein zweites Musterprofil erstellen, welches die Informationen enthält, welche für Freunde zugänglich wären.\n\nℹ️Die Gestaltung des Profils sowie auch die Erstellung der Profilfotos können im Fachbereich Gestalten durchgeführt werden. Dabei können gestalterische Elemente wie Farbgebung, Fokus usw. besprochen werden.\n\n**Profi-Aufgabe**\n🔑Mögliche Stichworte:\n• Privatsphäre-Einstellungen überprüfen und\nStandardeinstellungen anpassen\n• Einsicht in die Angaben zur eigenen Person einschränken\n(nicht öffentlich zugänglich machen)\n• Einstellungen regelmässig überprüfen\n• Weniger ist mehr: nur absolut nötige Angaben eingeben – Fotos nicht öffentlich zugänglich machen\n• Freunde nicht automatisch hinzufügen, sondern mit\nBedacht wählen\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg8.png|\n\nRessourcen und weitere Ideen sind auf der Webseite zum Lehrmittel zu finden: ==www.inform21.ch==",
+      "id": [
+        "136508"
+      ],
+      "item": "Hinweise und Lösungen zu den Aufgaben"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:136509]\n[##Informatik: Codiert – gehackt]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "136509"
+      ],
+      "title": "Informatik: Codiert – gehackt"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136510]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg33.png]\n**Beschreibung**\n• Eine eigene Geheimschrift entwickeln – Caesar-Code anwenden\n• Binärsystem verstehen und anwenden – Sichere Passwörter entwickeln\n\n**Produkt/Ergebnis**\n• Wörter codieren – Passwortregeln",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Beschreibung**\n• Eine eigene Geheimschrift entwickeln – Caesar-Code anwenden\n• Binärsystem verstehen und anwenden – Sichere Passwörter entwickeln\n\n**Produkt/Ergebnis**\n• Wörter codieren – Passwortregeln",
+      "id": [
+        "136510"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg33.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136511]\n[%Zentrale Ziele]\n•. Ich kann Nachrichten mit einer eigenen Geheimsprache oder mit der Caesar-Codierscheibe codieren und decodieren.\n•. Ich kann Zahlen mithilfe des Binärsystems schreiben und lesen und weiss, wo das System eingesetzt wird.\n•. Ich kann sichere Passwörter erstellen und kenne Hilfsmittel, um mir diese Passwörter zu merken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "•. Ich kann Nachrichten mit einer eigenen Geheimsprache oder mit der Caesar-Codierscheibe codieren und decodieren.\n•. Ich kann Zahlen mithilfe des Binärsystems schreiben und lesen und weiss, wo das System eingesetzt wird.\n•. Ich kann sichere Passwörter erstellen und kenne Hilfsmittel, um mir diese Passwörter zu merken.",
+      "id": [
+        "136511"
+      ],
+      "item": "Zentrale Ziele"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136512]\n[%Lehrplanbezug]\n**Kompetenzstufen**\nDie Schülerinnen und Schüler...\n\n... können Daten mittels selbstentwickelter Geheimschriften verschlüsseln. [MI.2.1.c]\n\n...kennen analoge und digitale Darstellungen\nvon Daten (Text, Zahl, Bild und Ton) und können die entsprechenden Dateitypen zuordnen. [MI.2.1.d]\n\n...können erklären, wie Daten verloren gehen können und kennen die wichtigsten Massnahmen, sich davor zu schützen. [MI.2.3.h]\n\n**Zeitbedarf**\n3 – 4 Lektionen\n\n**Material/Infrastruktur**\nPC/Tablet mit Internetzugang, evtl. Kamera, Beamer\n\n**Voraussetzungen**\nkeine\n\n**Autor**\nArmin Lüchinger",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Kompetenzstufen**\nDie Schülerinnen und Schüler...\n\n... können Daten mittels selbstentwickelter Geheimschriften verschlüsseln. [MI.2.1.c]\n\n...kennen analoge und digitale Darstellungen\nvon Daten (Text, Zahl, Bild und Ton) und können die entsprechenden Dateitypen zuordnen. [MI.2.1.d]\n\n...können erklären, wie Daten verloren gehen können und kennen die wichtigsten Massnahmen, sich davor zu schützen. [MI.2.3.h]\n\n**Zeitbedarf**\n3 – 4 Lektionen\n\n**Material/Infrastruktur**\nPC/Tablet mit Internetzugang, evtl. Kamera, Beamer\n\n**Voraussetzungen**\nkeine\n\n**Autor**\nArmin Lüchinger",
+      "id": [
+        "136512"
+      ],
+      "item": "Lehrplanbezug"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136513]\nThema: **Codiert – gehackt**\nDauer: **3 – 4 Lektionen**\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg9.png|\n**Lernphase:** V\n**Zeit in min:** 10\n**Aktivität:**\n\n**Konfrontationsaufgabe – Streng geheim!**\n– In der Klasse wird die Einstiegsszene von Dot und Byte gelesen und die geheime Nachricht von Dot entschlüsselt.\nDen SuS sollte bewusst werden, dass sich Dot und Byte mit\neiner guten Verschlüsselung die Lösungen senden können,\nohne dass der Lehrer etwas gemerkt hätte.\n**Sozialform:** KA\n\n**Lernphase:** A\n**Zeit in min:** 30\n**Aktivität:**\n\n**Der Caesar-Code A und B**\n• Die SuS stellen nach der Vorlage «Caesar-Codierscheibe» EA eine Scheibe her und lesen die Anleitung zur Nutzung.\n**Sozialform:** EA\n**Medien/Material:** Vorlage «Caesar-Codierscheibe»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n• Die LP erklärt nötigenfalls das Vorgehen, wie Wörter KA codiert oder decodiert werden.\n**Sozialform:** KA\n• Die LP gibt ein einfaches verschlüsseltes Wort vor, welches KA die SuS zu decodieren versuchen.\n**Sozialform:** KA\n• Die SuS versuchen die Begriffe im FB zu entschlüsseln. Die GA Wörter wurden mit der Caesar-Codierscheibe verschlüsselt,\nwobei verschiedene Einstellungen zur Anwendung kamen.\nDer im FB abgedruckte Anfangsbuchstabe erleichtert die Entschlüsselung der Begriffe. Bei den Begriffen handelt es\nsich um Einsatzmöglichkeiten der Verschlüsselungstechnik.\n**Sozialform:** GA\n• Die LP bespricht mit den SuS die entschlüsselten Begriffe KA und warum die Verschlüsselung wichtig ist. Die SuS verbinden die Bilder mit den jeweiligen Begriffen.\n__Hinweis:__ Mögliche Erklärung siehe Hinweise und Lösungen\nzu den Aufgaben.\n**Sozialform:** KA\n• Die LP zeigt den SuS in einem Webbrowser die Symbole, KA welche die Verschlüsselung anzeigen (siehe Infoblatt «Verschlüsselte Webseiten»).\n**Sozialform:**KA\n**Medien/Material:** PC, Beamer, Infoblatt «Verschlüsselte Webseiten»\n\n**Lernphase:** A, D, Ü\n**Zeit in min:** 40\n**Aktivität:**\n\n**Zählen wie ein Computer A und B**\n• Die LP arbeitet mit den SuS die Präsentation «Das Binärsystem» durch, in welcher das Zählen im Binärsystem Schritt für\nSchritt erklärt wird.\n**Sozialform:** KA\n**Medien/Material:** Präsentation «Das Binärsystem», Notizen «Präsentation Das Binärsystem»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n__Aufgabe A__ EA – Die SuS übersetzen die Zahlen im FB in das jeweils andere\nZahlensystem. Den SuS soll dabei die Übersicht aus der Präsentation (Folie 28) als Hilfe zur Verfügung stehen.\n**Sozialform:** EA\n__Aufgabe B__ EA/GA – Die SuS trainieren das Zählen im Binärsystem. Für das\nErlernen steht den SuS ein Video oder das Arbeitsblatt «Zählen mit Fingern im Binärsystem» zur Verfügung.\n**Sozialform:** EA/GA\n**Medien/Material:**Video «Zählen mit Fingern», AB «Zählen mit Fingern im Binärsystem»\n|info:**Abkürzungen**\n**SuS** Schülerinnen und Schüler\n**LP** Lehrperson\n**FB** Faltblatt für Schülerinnen und Schüler\n**AB** Arbeitsblatt (Arbeitsmaterial zu den Aufgaben)\n**EA** Einzelarbeit \n**PA** Partnerarbeit \n**GA** Gruppenarbeit \n**KA** Klassenarbeit                               \n\n\n**Lernphase:** D, Ü\n**Zeit in min:** 30\n**Aktivität:**\n\n**Die Binär-Geheimschrift**\nDiese Aufgabe ist nicht im FB enthalten.\n• Die SuS entwickeln mit Hilfe der Vorlage «Die Binär-Geheimschrift» eine Geheimschrift, welche nur aus 0 und 1 besteht. Eine Codierung für einen Buchstaben darf nur einmal verwendet werden. Die SuS stellen dabei fest, dass ein Buchstabe mit mehreren 0 und 1 verschlüsselt werden muss, da sonst keine genügende Anzahl verschiedener Varianten zur Verfügung steht.\n**Sozialform:** GA/KA\n**Medien/Material:** AB «Die Binär-Geheimschrift»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n• Die SuS codieren anschliessend ein Wort, zum Beispiel ihren Vornamen oder eine kurze Nachricht.\n\n\n**Lernphase:** A, D\n**Zeit in min:** 40\n**Aktivität:**\n\n**Das Passwort A und B**\n• Die LP bereitet die Kärtchen aus der Vorlage «Passwortkärtchen» vor.\n**Medien/Material:** Vorlage «Passwortkärtchen», Lösung «Passwortkärtchen»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n• Die SuS sortieren die Kärtchen nach unterschiedlichen KA Kriterien: lang/kurz, sicher/unsicher, meistgenutzt, wenig\ngenutzt\n**Sozialform:** KA\n__Aufgabe A__\n• Die SuS lesen nun den Text auf dem Infoblatt\n«Das sichere Passwort».\n**Sozialform:** KA\n**Medien/Material:** Infoblatt «Das sichere Passwort»\n__Aufgabe B__\n• Die SuS machen in 4er-Gruppen ein Placemat zum Thema\n«Passwortregeln». Sie suchen zuerst für sich selber Regeln, welche im Zusammenhang mit Passwörtern verfolgt werden sollen und schreiben diese in die äusseren Felder des Placemats. Danach einigt sich die Gruppe auf eine oder mehrere gemeinsame Regeln, welche sie in das mittlere Feld des Placemats schreiben. Diese stellen sie den anderen Gruppen vor.\n**Sozialform:** GA\n**Medien/Material:** Vorlage «Placemat»\n• Die SuS schreiben ihre persönlichen Regeln zu sicheren Passwörtern in das FB.\n**Sozialform:** EA\n\n\n**Lernphase:** Ü, T\n**Zeit in min:** 20\n**Aktivität:**\n\n**Mein sicheres Passwort**\nDiese Aufgabe ist nicht im FB enthalten.\n• Die SuS lesen den Infotext auf dem Arbeitsblatt «Mein sicheres Passwort» und entwickeln Beispiele für sichere Passwörter.\n**Sozialform:** EA\n**Medien/Material:** AB «Mein sicheres Passwort»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n**Lernphase:** R\n**Zeit in min:** Hausaufgabe\n**Aktivität:**\n\n**Profi-Aufgabe**\n• Die SuS erledigen die beiden Aufgaben als Hausaufgabe.\n**Sozialform:** EA\n\n**Hinweise zur Beurteilung**\n• Die SuS können vorgegebene Passwörter auf deren Sicherheit überprüfen und begründen, warum diese sicher oder weniger sicher sind.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Thema: **Codiert – gehackt**\nDauer: **3 – 4 Lektionen**\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg9.png|\n**Lernphase:** V\n**Zeit in min:** 10\n**Aktivität:**\n\n**Konfrontationsaufgabe – Streng geheim!**\n– In der Klasse wird die Einstiegsszene von Dot und Byte gelesen und die geheime Nachricht von Dot entschlüsselt.\nDen SuS sollte bewusst werden, dass sich Dot und Byte mit\neiner guten Verschlüsselung die Lösungen senden können,\nohne dass der Lehrer etwas gemerkt hätte.\n**Sozialform:** KA\n\n**Lernphase:** A\n**Zeit in min:** 30\n**Aktivität:**\n\n**Der Caesar-Code A und B**\n• Die SuS stellen nach der Vorlage «Caesar-Codierscheibe» EA eine Scheibe her und lesen die Anleitung zur Nutzung.\n**Sozialform:** EA\n**Medien/Material:** Vorlage «Caesar-Codierscheibe»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n• Die LP erklärt nötigenfalls das Vorgehen, wie Wörter KA codiert oder decodiert werden.\n**Sozialform:** KA\n• Die LP gibt ein einfaches verschlüsseltes Wort vor, welches KA die SuS zu decodieren versuchen.\n**Sozialform:** KA\n• Die SuS versuchen die Begriffe im FB zu entschlüsseln. Die GA Wörter wurden mit der Caesar-Codierscheibe verschlüsselt,\nwobei verschiedene Einstellungen zur Anwendung kamen.\nDer im FB abgedruckte Anfangsbuchstabe erleichtert die Entschlüsselung der Begriffe. Bei den Begriffen handelt es\nsich um Einsatzmöglichkeiten der Verschlüsselungstechnik.\n**Sozialform:** GA\n• Die LP bespricht mit den SuS die entschlüsselten Begriffe KA und warum die Verschlüsselung wichtig ist. Die SuS verbinden die Bilder mit den jeweiligen Begriffen.\n__Hinweis:__ Mögliche Erklärung siehe Hinweise und Lösungen\nzu den Aufgaben.\n**Sozialform:** KA\n• Die LP zeigt den SuS in einem Webbrowser die Symbole, KA welche die Verschlüsselung anzeigen (siehe Infoblatt «Verschlüsselte Webseiten»).\n**Sozialform:**KA\n**Medien/Material:** PC, Beamer, Infoblatt «Verschlüsselte Webseiten»\n\n**Lernphase:** A, D, Ü\n**Zeit in min:** 40\n**Aktivität:**\n\n**Zählen wie ein Computer A und B**\n• Die LP arbeitet mit den SuS die Präsentation «Das Binärsystem» durch, in welcher das Zählen im Binärsystem Schritt für\nSchritt erklärt wird.\n**Sozialform:** KA\n**Medien/Material:** Präsentation «Das Binärsystem», Notizen «Präsentation Das Binärsystem»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n__Aufgabe A__ EA – Die SuS übersetzen die Zahlen im FB in das jeweils andere\nZahlensystem. Den SuS soll dabei die Übersicht aus der Präsentation (Folie 28) als Hilfe zur Verfügung stehen.\n**Sozialform:** EA\n__Aufgabe B__ EA/GA – Die SuS trainieren das Zählen im Binärsystem. Für das\nErlernen steht den SuS ein Video oder das Arbeitsblatt «Zählen mit Fingern im Binärsystem» zur Verfügung.\n**Sozialform:** EA/GA\n**Medien/Material:**Video «Zählen mit Fingern», AB «Zählen mit Fingern im Binärsystem»\n|info:**Abkürzungen**\n**SuS** Schülerinnen und Schüler\n**LP** Lehrperson\n**FB** Faltblatt für Schülerinnen und Schüler\n**AB** Arbeitsblatt (Arbeitsmaterial zu den Aufgaben)\n**EA** Einzelarbeit \n**PA** Partnerarbeit \n**GA** Gruppenarbeit \n**KA** Klassenarbeit                               \n\n\n**Lernphase:** D, Ü\n**Zeit in min:** 30\n**Aktivität:**\n\n**Die Binär-Geheimschrift**\nDiese Aufgabe ist nicht im FB enthalten.\n• Die SuS entwickeln mit Hilfe der Vorlage «Die Binär-Geheimschrift» eine Geheimschrift, welche nur aus 0 und 1 besteht. Eine Codierung für einen Buchstaben darf nur einmal verwendet werden. Die SuS stellen dabei fest, dass ein Buchstabe mit mehreren 0 und 1 verschlüsselt werden muss, da sonst keine genügende Anzahl verschiedener Varianten zur Verfügung steht.\n**Sozialform:** GA/KA\n**Medien/Material:** AB «Die Binär-Geheimschrift»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n• Die SuS codieren anschliessend ein Wort, zum Beispiel ihren Vornamen oder eine kurze Nachricht.\n\n\n**Lernphase:** A, D\n**Zeit in min:** 40\n**Aktivität:**\n\n**Das Passwort A und B**\n• Die LP bereitet die Kärtchen aus der Vorlage «Passwortkärtchen» vor.\n**Medien/Material:** Vorlage «Passwortkärtchen», Lösung «Passwortkärtchen»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n• Die SuS sortieren die Kärtchen nach unterschiedlichen KA Kriterien: lang/kurz, sicher/unsicher, meistgenutzt, wenig\ngenutzt\n**Sozialform:** KA\n__Aufgabe A__\n• Die SuS lesen nun den Text auf dem Infoblatt\n«Das sichere Passwort».\n**Sozialform:** KA\n**Medien/Material:** Infoblatt «Das sichere Passwort»\n__Aufgabe B__\n• Die SuS machen in 4er-Gruppen ein Placemat zum Thema\n«Passwortregeln». Sie suchen zuerst für sich selber Regeln, welche im Zusammenhang mit Passwörtern verfolgt werden sollen und schreiben diese in die äusseren Felder des Placemats. Danach einigt sich die Gruppe auf eine oder mehrere gemeinsame Regeln, welche sie in das mittlere Feld des Placemats schreiben. Diese stellen sie den anderen Gruppen vor.\n**Sozialform:** GA\n**Medien/Material:** Vorlage «Placemat»\n• Die SuS schreiben ihre persönlichen Regeln zu sicheren Passwörtern in das FB.\n**Sozialform:** EA\n\n\n**Lernphase:** Ü, T\n**Zeit in min:** 20\n**Aktivität:**\n\n**Mein sicheres Passwort**\nDiese Aufgabe ist nicht im FB enthalten.\n• Die SuS lesen den Infotext auf dem Arbeitsblatt «Mein sicheres Passwort» und entwickeln Beispiele für sichere Passwörter.\n**Sozialform:** EA\n**Medien/Material:** AB «Mein sicheres Passwort»\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon14.png|\n**Lernphase:** R\n**Zeit in min:** Hausaufgabe\n**Aktivität:**\n\n**Profi-Aufgabe**\n• Die SuS erledigen die beiden Aufgaben als Hausaufgabe.\n**Sozialform:** EA\n\n**Hinweise zur Beurteilung**\n• Die SuS können vorgegebene Passwörter auf deren Sicherheit überprüfen und begründen, warum diese sicher oder weniger sicher sind.",
+      "id": [
+        "136513"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136514]\n[%Hinweise und Lösungen zu den Aufgaben]\n**Konfrontationsaufgabe – Streng geheim!**\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg10.png|\n🔑Der verschlüsselte Satz von Dot lautet: Wir haben heute Informatikunterricht.\n\n**Der Caesar-Code**\n\n🔑**RONAXVAT**\nLösung: Ebanking (Verschiebung +13 Buchstaben)\nOhne Verschlüsselung könnten Cracker1 die Kommunikation\nzwischen dem Computer zu Hause und dem Bankenserver abfangen und verändern, ohne dass der Benutzer etwas bemerkt. Dadurch könnten Zahlungen umgeleitet werden.\n\n🔑**KSGORBKXYGTJ**\nLösung: E-Mailversand (Verschiebung: +6 Buchstaben)\nDie Daten einer unverschlüsselten E-Mail könnten von Crackern\nabgefangen und gelesen werden. Eine E-Mail ist sicherheitstechnisch mit einer Ansichtskarte zu vergleichen. Das heisst, sensible und geheime Daten dürfen nicht unverschlüsselt per Mail versandt werden.\n\n🔑**WBUNAYMJLUYWB**\nLösung: Chatgespraech (Verschiebung: + 20 Buchstaben)\nIm Chat werden oft persönliche Dinge ausgetauscht. Wäre die Kommunikation nicht verschlüsselt, könnten Cracker die Kommu-\nnikation abfangen und mitlesen.\n\n🔑**WVTQVMAPWX**\nLösung: Onlineshop (Verschiebung: +8 Buchstaben)\nAls Bezahlvariante wird in Onlineshops oft die Kreditkarte\neingesetzt. Unverschlüsselt übermittelt könnten die Kreditkartendaten abgefangen und für andere Zwecke missbraucht werden.\n\n🔑**OXAGPEBQUOTQD**\nLösung: Cloudspeicher (Verschiebung: +12 Buchstaben)\nAuf Onlinespeichern lagern auch persönliche Dokumente.\nBeim Abgleich oder beim Öffnen des Dokumentes werden die Daten via Internet zum eigenen Computer übertragen. Das Dokument könnte ohne Verschlüsselung abgefangen und geöffnet werden.\n\nℹ️Im Internet finden sich Webseiten, welche die Caesar-Codierscheibe als Online-Programm anbieten. Damit können auch längere Texte mit dieser Technik ver- und entschlüsselt werden.\n\n**Das Binärsystem**\n\n🔑|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg13.png|\nℹ️Um das Zählen im Binärsystem mit den Fingern zu erleichtern, können die SuS ihre Finger mit den jeweiligen Werten beschriften.\n\nℹ️Ziel ist nicht, dass alle SuS das Zählen im Binärsystem beherrschen.\n\n**Das Passwort**\n\nℹ️Die LP weist darauf hin, dass in dieser Phase keine echten Passwörter der SuS diskutiert werden sollen.\n\nℹ️Idealerweise wird die Vorlage «Placemat» auf A3 ausgedruckt.\n\nℹ️Die Lösung zu den «Passwortkärtchen» steht im Download zur Verfügung.\n\n**Mein sicheres Passwort**\n\nℹ️Placemat:\nBei dieser Methode können mit Hilfe einer grafischen Struktur Ergebnisse in einer Gruppe erarbeitet werden.\n\nℹ️Im Internet gibt es diverse Webseiten, auf welchen Passwörter auf deren Stärke überprüft werden können. Wichtig dabei ist, dass keine echten Passwörter verwendet werden. Aufbau und Struktur sollen jedoch ähnlich sein.\n\nRessourcen und weitere Ideen sind auf der Webseite zum Lehrmittel zu finden:\n==www.inform21.ch==",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Konfrontationsaufgabe – Streng geheim!**\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg10.png|\n🔑Der verschlüsselte Satz von Dot lautet: Wir haben heute Informatikunterricht.\n\n**Der Caesar-Code**\n\n🔑**RONAXVAT**\nLösung: Ebanking (Verschiebung +13 Buchstaben)\nOhne Verschlüsselung könnten Cracker1 die Kommunikation\nzwischen dem Computer zu Hause und dem Bankenserver abfangen und verändern, ohne dass der Benutzer etwas bemerkt. Dadurch könnten Zahlungen umgeleitet werden.\n\n🔑**KSGORBKXYGTJ**\nLösung: E-Mailversand (Verschiebung: +6 Buchstaben)\nDie Daten einer unverschlüsselten E-Mail könnten von Crackern\nabgefangen und gelesen werden. Eine E-Mail ist sicherheitstechnisch mit einer Ansichtskarte zu vergleichen. Das heisst, sensible und geheime Daten dürfen nicht unverschlüsselt per Mail versandt werden.\n\n🔑**WBUNAYMJLUYWB**\nLösung: Chatgespraech (Verschiebung: + 20 Buchstaben)\nIm Chat werden oft persönliche Dinge ausgetauscht. Wäre die Kommunikation nicht verschlüsselt, könnten Cracker die Kommu-\nnikation abfangen und mitlesen.\n\n🔑**WVTQVMAPWX**\nLösung: Onlineshop (Verschiebung: +8 Buchstaben)\nAls Bezahlvariante wird in Onlineshops oft die Kreditkarte\neingesetzt. Unverschlüsselt übermittelt könnten die Kreditkartendaten abgefangen und für andere Zwecke missbraucht werden.\n\n🔑**OXAGPEBQUOTQD**\nLösung: Cloudspeicher (Verschiebung: +12 Buchstaben)\nAuf Onlinespeichern lagern auch persönliche Dokumente.\nBeim Abgleich oder beim Öffnen des Dokumentes werden die Daten via Internet zum eigenen Computer übertragen. Das Dokument könnte ohne Verschlüsselung abgefangen und geöffnet werden.\n\nℹ️Im Internet finden sich Webseiten, welche die Caesar-Codierscheibe als Online-Programm anbieten. Damit können auch längere Texte mit dieser Technik ver- und entschlüsselt werden.\n\n**Das Binärsystem**\n\n🔑|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg13.png|\nℹ️Um das Zählen im Binärsystem mit den Fingern zu erleichtern, können die SuS ihre Finger mit den jeweiligen Werten beschriften.\n\nℹ️Ziel ist nicht, dass alle SuS das Zählen im Binärsystem beherrschen.\n\n**Das Passwort**\n\nℹ️Die LP weist darauf hin, dass in dieser Phase keine echten Passwörter der SuS diskutiert werden sollen.\n\nℹ️Idealerweise wird die Vorlage «Placemat» auf A3 ausgedruckt.\n\nℹ️Die Lösung zu den «Passwortkärtchen» steht im Download zur Verfügung.\n\n**Mein sicheres Passwort**\n\nℹ️Placemat:\nBei dieser Methode können mit Hilfe einer grafischen Struktur Ergebnisse in einer Gruppe erarbeitet werden.\n\nℹ️Im Internet gibt es diverse Webseiten, auf welchen Passwörter auf deren Stärke überprüft werden können. Wichtig dabei ist, dass keine echten Passwörter verwendet werden. Aufbau und Struktur sollen jedoch ähnlich sein.\n\nRessourcen und weitere Ideen sind auf der Webseite zum Lehrmittel zu finden:\n==www.inform21.ch==",
+      "id": [
+        "136514"
+      ],
+      "item": "Hinweise und Lösungen zu den Aufgaben"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:136515]\n[##Anwendung: Unsere Netiquette]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "136515"
+      ],
+      "title": "Anwendung: Unsere Netiquette"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136516]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg22.png]\n**Beschreibung**\n• Mögliche Reaktionen auf Anfragen in einem Chat diskutieren\n• Eine Onlineplattform für kollaboratives Arbeiten nutzen\n• Wichtige Regeln für das Kommunizieren im Netz gemeinsam festlegen (Netiquette)\n\n**Produkt/Ergebnis**\n• Audioclip über Verhaltensregeln zur Kommunikation im Netz",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Beschreibung**\n• Mögliche Reaktionen auf Anfragen in einem Chat diskutieren\n• Eine Onlineplattform für kollaboratives Arbeiten nutzen\n• Wichtige Regeln für das Kommunizieren im Netz gemeinsam festlegen (Netiquette)\n\n**Produkt/Ergebnis**\n• Audioclip über Verhaltensregeln zur Kommunikation im Netz",
+      "id": [
+        "136516"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg22.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136517]\n[%Zentrale Ziele]\n[&image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg19.png]\n•. Ich kann bei einer Unterhaltung im Netz die Verhaltens- und Sicherheitsregeln einhalten.\n•. Ich kann Onlineplattformen für das Brainstorming oder das gemeinsame Erstellen von Dokumenten nutzen.\n•. Ich kann mit Hilfe eines PCs/Tablets einen Audioclip aufnehmen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "•. Ich kann bei einer Unterhaltung im Netz die Verhaltens- und Sicherheitsregeln einhalten.\n•. Ich kann Onlineplattformen für das Brainstorming oder das gemeinsame Erstellen von Dokumenten nutzen.\n•. Ich kann mit Hilfe eines PCs/Tablets einen Audioclip aufnehmen.",
+      "id": [
+        "136517"
+      ],
+      "item": "Zentrale Ziele",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg19.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136518]\n[%Lehrplanbezug]\n**Kompetenzstufen**\nDie Schülerinnen und Schüler...\n\n... können Medien zum Erstellen und Präsentieren ihrer Arbeiten einsetzen (z.B. Klassenzeitung, Klassenblog, Hörspiel, Videoclip). [MI.1.3.c]\n\n... können Medien für gemeinsames Arbeiten und für Meinungsaustausch einsetzen und dabei die Sicherheitsregeln befolgen. [MI.1.4.b]\n\n... können mittels Medien kommunizieren und dabei die Sicherheits- und Verhaltensregeln befolgen. [MI.1.4.c]\n\n**Zeitbedarf**\n3 Lektionen\n\n**Material/Infrastruktur**\nPC/Tablet mit Internetzugang, Plattform zur kollaborativen Erstellung eines Dokumentes (inkl. entsprechende Zugänge)\n\n**Voraussetzungen**\nkeine\n\n**Autor**\nArmin Lüchinger",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Kompetenzstufen**\nDie Schülerinnen und Schüler...\n\n... können Medien zum Erstellen und Präsentieren ihrer Arbeiten einsetzen (z.B. Klassenzeitung, Klassenblog, Hörspiel, Videoclip). [MI.1.3.c]\n\n... können Medien für gemeinsames Arbeiten und für Meinungsaustausch einsetzen und dabei die Sicherheitsregeln befolgen. [MI.1.4.b]\n\n... können mittels Medien kommunizieren und dabei die Sicherheits- und Verhaltensregeln befolgen. [MI.1.4.c]\n\n**Zeitbedarf**\n3 Lektionen\n\n**Material/Infrastruktur**\nPC/Tablet mit Internetzugang, Plattform zur kollaborativen Erstellung eines Dokumentes (inkl. entsprechende Zugänge)\n\n**Voraussetzungen**\nkeine\n\n**Autor**\nArmin Lüchinger",
+      "id": [
+        "136518"
+      ],
+      "item": "Lehrplanbezug"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136519]\nThema: **Unsere Netiquette**\nDauer: **3 Lektionen**\n\n**Lernphase:**  V\n**Zeit in min:**30\n**Aktivität:**\n\n**Konfrontationsaufgabe: Wie kommunizierst du?**\n• Die SuS lesen die Aufgabe und überlegen sich eine mögliche Fortsetzung.\n**Sozialform:** GA/KA\n• Sie halten ihre Fortsetzung im FB fest.\n**Sozialform:** GA\n• Die SuS präsentieren den Dialog inkl. Fortsetzung als Lesetheater.\n**Sozialform:** KA\n• In der Klasse werden die verschiedenen Dialoge diskutiert.\n**Sozialform:** KA\n\n**Lernphase:** A\n**Zeit in min:** 40\n**Aktivität:**\n\n**Netiquette: Regeln zur Kommunikation im Internet A und B**\n• Die LP bereitet mit Hilfe der Anleitung «Brainstormingplattform» eine Plattform vor, damit Regeln für die «Kommunikation im Internet – Netiquette» in Form eines Brainstormings gesammelt werden können.\n**Medien/Material:** Anleitung «Brainstormingplattform» PC/Tablet mit Internetzugang, Plattform für Brainstorming\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon7.png|\n__Aufgabe A__ \n– Die SuS werden in die Nutzung der Plattform eingeführt und\ntragen Regeln ein.\nHinweis: Das Sammeln von Regeln kann auch als Hausaufgabe fortgeführt werden.\n**Sozialform:** GA\n__Aufgabe B__\n– Die SuS treffen gemeinsam eine Auswahl aus den gesam-\nmelten Regeln. Dies geschieht je nach Wahl der genutzten Plattform online oder offline. Nach deren Auswahl und dem Besprechen der Regeln wird die Netiquette in der Klasse gemeinsam verabschiedet und festgehalten.\n**Sozialform:** KA\n• Die LP reflektiert mit den SuS die Nutzung der Onlineplattform für das Brainstorming. Die Vor- und Nachteile werden\nin der Klasse diskutiert.\n**Sozialform:** KA\n\n**Lernphase:** Ü, T\n**Zeit in min:** 75\n**Aktivität:**\n\n**Netiquette: Einen Audioclip produzieren**\n• Die SuS stellen in Gruppen einen Audioclip zu den vereinbarten Verhaltensregeln (Netiquette) her. Sie füllen dazu\nals Planungshilfe die vorgegebenen Felder im FB aus. Die\nSuS schreiben anschliessend ein kurzes Drehbuch für den geplanten Audioclip.\n**Sozialform:** GA\n• Die Aufnahme erfolgt mit einem PC oder mit einem mobilen Gerät als sogenannter «OneTake». Dies bedeutet, dass die Aufnahme am Stück gemacht wird und keine Nachbearbeitung notwendig ist.\n**Sozialform:** GA\n**Medien/Material:** Gerät für Tonaufnahme (z.B. PC/ Tablet), evtl. Gerät für das Abspielen von Musik\n• Die SuS teilen sich verschiedene Rollen zu, wie z. B. Sprecher, DJ, Geräuschmacher, Gerätebediener...\n**Sozialform:** GA\n• Die Ergebnisse werden in der Klasse präsentiert.\n**Sozialform:** KA\n\n\n**Lernphase:** R\n**Zeit in min:** 5\n**Aktivität:**\n\n**Profi-Aufgabe**\n• Die SuS bearbeiten die Aufgabe im FB und besprechen die EA/GA ausgewählten Regeln.\n**Sozialform:** EA/GA\n• Die zweite Aufgabe erledigen die SuS als Hausaufgabe.\n**Sozialform:** EA\n\n**Hinweise zur Beurteilung**\nDer Audioclip wird durch die LP mit Hilfe folgender Kriterien bewertet:\n• Einstieg (ansprechend/informativ)\n• Inhalt (sinnvolle Abfolge/verständliche Regeln)\n• Produktion (passendes Signet/flüssige Produktion/abwechslungsreich/passende Geräusche und Stimmen/Musik)\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg34.png|\n|info:**Abkürzungen**\n**SuS** Schülerinnen und Schüler\n**LP** Lehrperson\n**FB** Faltblatt für Schülerinnen und Schüler\n**AB** Arbeitsblatt (Arbeitsmaterial zu den Aufgaben)\n**EA** Einzelarbeit \n**PA** Partnerarbeit \n**GA** Gruppenarbeit \n**KA** Klassenarbeit",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Thema: **Unsere Netiquette**\nDauer: **3 Lektionen**\n\n**Lernphase:**  V\n**Zeit in min:**30\n**Aktivität:**\n\n**Konfrontationsaufgabe: Wie kommunizierst du?**\n• Die SuS lesen die Aufgabe und überlegen sich eine mögliche Fortsetzung.\n**Sozialform:** GA/KA\n• Sie halten ihre Fortsetzung im FB fest.\n**Sozialform:** GA\n• Die SuS präsentieren den Dialog inkl. Fortsetzung als Lesetheater.\n**Sozialform:** KA\n• In der Klasse werden die verschiedenen Dialoge diskutiert.\n**Sozialform:** KA\n\n**Lernphase:** A\n**Zeit in min:** 40\n**Aktivität:**\n\n**Netiquette: Regeln zur Kommunikation im Internet A und B**\n• Die LP bereitet mit Hilfe der Anleitung «Brainstormingplattform» eine Plattform vor, damit Regeln für die «Kommunikation im Internet – Netiquette» in Form eines Brainstormings gesammelt werden können.\n**Medien/Material:** Anleitung «Brainstormingplattform» PC/Tablet mit Internetzugang, Plattform für Brainstorming\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/icon7.png|\n__Aufgabe A__ \n– Die SuS werden in die Nutzung der Plattform eingeführt und\ntragen Regeln ein.\nHinweis: Das Sammeln von Regeln kann auch als Hausaufgabe fortgeführt werden.\n**Sozialform:** GA\n__Aufgabe B__\n– Die SuS treffen gemeinsam eine Auswahl aus den gesam-\nmelten Regeln. Dies geschieht je nach Wahl der genutzten Plattform online oder offline. Nach deren Auswahl und dem Besprechen der Regeln wird die Netiquette in der Klasse gemeinsam verabschiedet und festgehalten.\n**Sozialform:** KA\n• Die LP reflektiert mit den SuS die Nutzung der Onlineplattform für das Brainstorming. Die Vor- und Nachteile werden\nin der Klasse diskutiert.\n**Sozialform:** KA\n\n**Lernphase:** Ü, T\n**Zeit in min:** 75\n**Aktivität:**\n\n**Netiquette: Einen Audioclip produzieren**\n• Die SuS stellen in Gruppen einen Audioclip zu den vereinbarten Verhaltensregeln (Netiquette) her. Sie füllen dazu\nals Planungshilfe die vorgegebenen Felder im FB aus. Die\nSuS schreiben anschliessend ein kurzes Drehbuch für den geplanten Audioclip.\n**Sozialform:** GA\n• Die Aufnahme erfolgt mit einem PC oder mit einem mobilen Gerät als sogenannter «OneTake». Dies bedeutet, dass die Aufnahme am Stück gemacht wird und keine Nachbearbeitung notwendig ist.\n**Sozialform:** GA\n**Medien/Material:** Gerät für Tonaufnahme (z.B. PC/ Tablet), evtl. Gerät für das Abspielen von Musik\n• Die SuS teilen sich verschiedene Rollen zu, wie z. B. Sprecher, DJ, Geräuschmacher, Gerätebediener...\n**Sozialform:** GA\n• Die Ergebnisse werden in der Klasse präsentiert.\n**Sozialform:** KA\n\n\n**Lernphase:** R\n**Zeit in min:** 5\n**Aktivität:**\n\n**Profi-Aufgabe**\n• Die SuS bearbeiten die Aufgabe im FB und besprechen die EA/GA ausgewählten Regeln.\n**Sozialform:** EA/GA\n• Die zweite Aufgabe erledigen die SuS als Hausaufgabe.\n**Sozialform:** EA\n\n**Hinweise zur Beurteilung**\nDer Audioclip wird durch die LP mit Hilfe folgender Kriterien bewertet:\n• Einstieg (ansprechend/informativ)\n• Inhalt (sinnvolle Abfolge/verständliche Regeln)\n• Produktion (passendes Signet/flüssige Produktion/abwechslungsreich/passende Geräusche und Stimmen/Musik)\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg34.png|\n|info:**Abkürzungen**\n**SuS** Schülerinnen und Schüler\n**LP** Lehrperson\n**FB** Faltblatt für Schülerinnen und Schüler\n**AB** Arbeitsblatt (Arbeitsmaterial zu den Aufgaben)\n**EA** Einzelarbeit \n**PA** Partnerarbeit \n**GA** Gruppenarbeit \n**KA** Klassenarbeit",
+      "id": [
+        "136519"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136520]\n[%Hinweise und Lösungen zu den Aufgaben]\n**Konfrontationsaufgabe – Wie kommunizierst du?**\n\n🔑Byte sollte an dieser Stelle den Chat abbrechen und Lars darauf hinweisen, dass er ihn nicht kenne und darum nicht vorbeikomme. Möchte Byte die Nachhilfe von Lars in Anspruch nehmen, muss Byte seine Eltern informieren und dann zusammen mit ihnen Kontakt zu Lars aufnehmen. Ein Treffen mit einer Internetbekanntschaft darf niemals alleine, ohne das Wissen der Eltern stattfinden.\n\nℹ️Das Chatten kann gemeinsam mit der Klasse erprobt werden. Dafür bringen die SuS ihre eigenen Geräte mit und chatten gemeinsam auf einer ihrer Plattformen. Dabei halten sie die Verhaltensregeln, welche sie zu diesem Thema vereinbaren, ein.\n\n**Netiquette: Regeln zur Kommunikation im Internet**\n\nℹ️Mögliche Plattformen für das Brainstorming bzw. das kollaborative Schreiben sind auf der Webseite aufgeführt. Es steht auch eine Anleitung zur Verfügung.\n\n**Netiquette: Einen Audioclip produzieren**\n\nℹ️Die Grobplanung für den Audioclip erstellen die SuS im FB. Im Audioclip müssen nicht zwingend alle Regeln vorkommen. In einem Drehbuch werden die Rollen und Texte, sowie die Musik festgelegt. Da die Aufnahmequalität der Musik sekundär ist, kann sie auf einem separaten Gerät abgespielt und mit dem Aufnahmegerät aufgenommen werden. Die SuS können auch ihre eigenen Geräte zum Abspielen der Musik mitbringen.\n\nℹ️Die Aufnahme kann mit verschiedenen Gerätetypen erfolgen, da sie als sogenannter «OneTake» (eine Aufnahme am Stück, welche nicht bearbeitet wird) ausgeführt wird. Dies erleichtert die Aufnahme aus technischer Sicht.\n\nℹ️Ein Ausbau des Projektes ist möglich, wenn die Aufnahme mit Audioprogrammen bearbeitet wird.\n\nℹ️Von einer Veröffentlichung des Audioclips wird abgeraten, falls rechtlich geschützte Musik eingespielt wird.\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg5.png|\nRessourcen und weitere Ideen sind auf der Webseite zum Lehrmittel zu finden: ==www.inform21.ch==",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Konfrontationsaufgabe – Wie kommunizierst du?**\n\n🔑Byte sollte an dieser Stelle den Chat abbrechen und Lars darauf hinweisen, dass er ihn nicht kenne und darum nicht vorbeikomme. Möchte Byte die Nachhilfe von Lars in Anspruch nehmen, muss Byte seine Eltern informieren und dann zusammen mit ihnen Kontakt zu Lars aufnehmen. Ein Treffen mit einer Internetbekanntschaft darf niemals alleine, ohne das Wissen der Eltern stattfinden.\n\nℹ️Das Chatten kann gemeinsam mit der Klasse erprobt werden. Dafür bringen die SuS ihre eigenen Geräte mit und chatten gemeinsam auf einer ihrer Plattformen. Dabei halten sie die Verhaltensregeln, welche sie zu diesem Thema vereinbaren, ein.\n\n**Netiquette: Regeln zur Kommunikation im Internet**\n\nℹ️Mögliche Plattformen für das Brainstorming bzw. das kollaborative Schreiben sind auf der Webseite aufgeführt. Es steht auch eine Anleitung zur Verfügung.\n\n**Netiquette: Einen Audioclip produzieren**\n\nℹ️Die Grobplanung für den Audioclip erstellen die SuS im FB. Im Audioclip müssen nicht zwingend alle Regeln vorkommen. In einem Drehbuch werden die Rollen und Texte, sowie die Musik festgelegt. Da die Aufnahmequalität der Musik sekundär ist, kann sie auf einem separaten Gerät abgespielt und mit dem Aufnahmegerät aufgenommen werden. Die SuS können auch ihre eigenen Geräte zum Abspielen der Musik mitbringen.\n\nℹ️Die Aufnahme kann mit verschiedenen Gerätetypen erfolgen, da sie als sogenannter «OneTake» (eine Aufnahme am Stück, welche nicht bearbeitet wird) ausgeführt wird. Dies erleichtert die Aufnahme aus technischer Sicht.\n\nℹ️Ein Ausbau des Projektes ist möglich, wenn die Aufnahme mit Audioprogrammen bearbeitet wird.\n\nℹ️Von einer Veröffentlichung des Audioclips wird abgeraten, falls rechtlich geschützte Musik eingespielt wird.\n|image:https://docs.bitmark.cloud/bit-books/lehrmittelverlag_st_gallen/informa21/web-resources/images/lsg5.png|\nRessourcen und weitere Ideen sind auf der Webseite zum Lehrmittel zu finden: ==www.inform21.ch==",
+      "id": [
+        "136520"
+      ],
+      "item": "Hinweise und Lösungen zu den Aufgaben"
+    }
+  }
+]

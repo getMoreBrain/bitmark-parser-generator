@@ -1,0 +1,735 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:136228]\n[#Introducing Virgil’s Aeneid]\n[@externalId:e-s9ack-xmG7eY]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136228"
+      ],
+      "title": "Introducing Virgil’s Aeneid",
+      "externalId": [
+        "e-s9ack-xmG7eY"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:136229]\n[#Introduction]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "136229"
+      ],
+      "title": "Introduction"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136230]\nIn this free course, you will learn about Virgil’s __Aeneid__, an epic poem about the origins of the Roman people. The Romans regarded the __Aeneid__ as their great national epic, and it had enormous influence over later writers and thinkers. As well as being powerful literature, the __Aeneid__ tells us a great deal about how the Romans saw themselves and their culture, and what it meant to be a Roman.\n\nI’ll begin by introducing the genre of epic poetry in which the __Aeneid__ was written, and by looking at what happens in the poem, and how it relates to the events of Virgil’s own day. (Virgil lived between 70 and 19 BCE, and wrote the __Aeneid__ at the end of his life.) We’ll then go on to look in detail at some sections of the poem, looking in particular at how it presents Roman values. The discussion will introduce you to a small number of key Latin words used to express these values, though it doesn’t expect or require any knowledge of the Latin language.\n\nThis OpenLearn course is an adapted extract from the Open University course **A276 Classical Latin: the language of ancient Rome**.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In this free course, you will learn about Virgil’s __Aeneid__, an epic poem about the origins of the Roman people. The Romans regarded the __Aeneid__ as their great national epic, and it had enormous influence over later writers and thinkers. As well as being powerful literature, the __Aeneid__ tells us a great deal about how the Romans saw themselves and their culture, and what it meant to be a Roman.\n\nI’ll begin by introducing the genre of epic poetry in which the __Aeneid__ was written, and by looking at what happens in the poem, and how it relates to the events of Virgil’s own day. (Virgil lived between 70 and 19 BCE, and wrote the __Aeneid__ at the end of his life.) We’ll then go on to look in detail at some sections of the poem, looking in particular at how it presents Roman values. The discussion will introduce you to a small number of key Latin words used to express these values, though it doesn’t expect or require any knowledge of the Latin language.\n\nThis OpenLearn course is an adapted extract from the Open University course **A276 Classical Latin: the language of ancient Rome**.",
+      "id": [
+        "136230"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:136231]\n[#Learning outcomes]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "136231"
+      ],
+      "title": "Learning outcomes"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136232]\nAfter studying this course you should have:\n• gained a deeper understanding of ‘epic poetry’ in the ancient world\n• explored the Aeneid’s central themes, in particular Roman values\n• read in detail some passages of the Aeneid and investigated how Virgil uses language to enhance the impact of the poem\n• considered some issues involved in reading poetry which was originally written in a different language.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "After studying this course you should have:\n• gained a deeper understanding of ‘epic poetry’ in the ancient world\n• explored the Aeneid’s central themes, in particular Roman values\n• read in detail some passages of the Aeneid and investigated how Virgil uses language to enhance the impact of the poem\n• considered some issues involved in reading poetry which was originally written in a different language.",
+      "id": [
+        "136232"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:136233]\n[#Epic poetry and the Aeneid]\n[%1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "136233"
+      ],
+      "title": "Epic poetry and the Aeneid"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136234]\nI don’t know what your immediate associations are when you hear the word ‘epic’, but to me, the English word immediately suggests something big and grand. For example, if someone describes a Hollywood film as being an ‘epic’, I’d assume that the film deals with important and world-changing events, perhaps over a prolonged time period, and probably that it goes on for a long time. The idea of theme and scope is also relevant to ancient epic. Epic poems are usually narratives about the great deeds of heroes, often involving war, dangerous journeys, or adventures. They also tend to be long: the __Aeneid__, for example, is nearly 10,000 lines of verse. In antiquity ‘epic’ suggested a certain type of metrical form, the dactylic hexameter, which is a type of verse particularly suited to telling narratives. Ancient epic also comes with certain other expectations: for example, it tends to be set in the past and deals with the deeds of ancestors. It describes a world in which people were stronger, more impressive, and closer to the gods, and indeed the gods often play an important role in epic poetry.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "I don’t know what your immediate associations are when you hear the word ‘epic’, but to me, the English word immediately suggests something big and grand. For example, if someone describes a Hollywood film as being an ‘epic’, I’d assume that the film deals with important and world-changing events, perhaps over a prolonged time period, and probably that it goes on for a long time. The idea of theme and scope is also relevant to ancient epic. Epic poems are usually narratives about the great deeds of heroes, often involving war, dangerous journeys, or adventures. They also tend to be long: the __Aeneid__, for example, is nearly 10,000 lines of verse. In antiquity ‘epic’ suggested a certain type of metrical form, the dactylic hexameter, which is a type of verse particularly suited to telling narratives. Ancient epic also comes with certain other expectations: for example, it tends to be set in the past and deals with the deeds of ancestors. It describes a world in which people were stronger, more impressive, and closer to the gods, and indeed the gods often play an important role in epic poetry.",
+      "id": [
+        "136234"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:136235]\n[##Epic poetry before Virgil]\n[%1.1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "136235"
+      ],
+      "title": "Epic poetry before Virgil"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136236]\nTo an educated Roman, epic poetry was a Greek invention, and its most famous examples were Homer’s __Iliad__ and __Odyssey__, which told stories of the Greek heroes involved in the Trojan War. Although early Italians may well have had their own native traditions of heroic song, no traces of these survive, and the earliest attempt to write epic poetry in Latin was a translation of the __Odyssey__ into the Latin language by Livius Andronicus in the mid third century bce. Although only fragments of this survive, the fact that Livius chose to translate a Greek epic poem shows the strong association between the genre and Greek culture. However, it wasn’t long before Roman poets began to tell the stories of their own society. The first to do so was Naevius, who wrote a poem on the Punic War with Carthage (also in the third century bce), followed by the second-century-bce poet Ennius, whose __Annals__ told the history of Rome to his own day, though as with Livius, only fragments of these are preserved. However, Virgil’s masterpiece, the __Aeneid__, eclipsed both these poems, becoming the greatest example of Latin epic and a cornerstone of Roman identity, which has continued to inspire writers and artists for over two thousand years.\n|image:Figure 1 __Virgil and the Muses__, from Sousse, third century ce, mosaic, 122 ×122.5 cm. Musee National du Bardo, Le Bardo, Tunisia. Photo: Musee National du Bardo/Bridgeman Images.\nhttps://docs.bitbook.education/bit-books/open_university/introducing_virgils_aeneid/web-resources/images/a276_b2_fig3.jpg|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "To an educated Roman, epic poetry was a Greek invention, and its most famous examples were Homer’s __Iliad__ and __Odyssey__, which told stories of the Greek heroes involved in the Trojan War. Although early Italians may well have had their own native traditions of heroic song, no traces of these survive, and the earliest attempt to write epic poetry in Latin was a translation of the __Odyssey__ into the Latin language by Livius Andronicus in the mid third century bce. Although only fragments of this survive, the fact that Livius chose to translate a Greek epic poem shows the strong association between the genre and Greek culture. However, it wasn’t long before Roman poets began to tell the stories of their own society. The first to do so was Naevius, who wrote a poem on the Punic War with Carthage (also in the third century bce), followed by the second-century-bce poet Ennius, whose __Annals__ told the history of Rome to his own day, though as with Livius, only fragments of these are preserved. However, Virgil’s masterpiece, the __Aeneid__, eclipsed both these poems, becoming the greatest example of Latin epic and a cornerstone of Roman identity, which has continued to inspire writers and artists for over two thousand years.\n|image:Figure 1 __Virgil and the Muses__, from Sousse, third century ce, mosaic, 122 ×122.5 cm. Musee National du Bardo, Le Bardo, Tunisia. Photo: Musee National du Bardo/Bridgeman Images.\nhttps://docs.bitbook.education/bit-books/open_university/introducing_virgils_aeneid/web-resources/images/a276_b2_fig3.jpg|",
+      "id": [
+        "136236"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:136237]\n[##Virgil and his predecessors]\n[%1.2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "136237"
+      ],
+      "title": "Virgil and his predecessors"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136238]\nUnlike Livy (a contemporary of Virgil, and author of a multi-volume history of Rome) or Ennius, who tell a series of stories that occur over a long period of time, Virgil chooses to focus on one individual, the Trojan hero Aeneas. The __Aeneid__ tells the story of how Aeneas escaped the fall of Troy and led a band of survivors to Italy, where their destiny was to mix with the native population and create a new chosen race. The story is therefore set long before the foundation of Rome, which Virgil tells his readers was established 333 years after the __Aeneid__ ends. In Virgil’s poem, Romulus and the other early kings of Rome are the distant descendants of Aeneas’ marriage to a native Italian princess, Lavinia; this mixed heritage allows the Romans both to claim a link to the famous Greek myths and to affirm their native roots and their connection to the land of Italy. Setting the __Aeneid__ in the aftermath of the Trojan War helps Virgil to show that he is trying to rival the epic poems of Homer, usually considered the greatest poet of all. The __Aeneid__ is made up of twelve books of about 700 lines each: the first six deal with the travels of Aeneas after the fall of Troy, and the second six with the war he is forced to fight in Italy. This means that the first half of the poem is designed to remind the reader of Homer’s __Odyssey__, which narrates the wanderings of Odysseus, and the second half reflects the Iliad, which is set during the Trojan War. By combining the travel theme and the military theme in a single poem (with only 12 books, rather than the 24 in each of the __Iliad__ and __Odyssey__) Virgil could imply that he was outdoing Homer, and that his poem contained all the themes of a heroic epic.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Unlike Livy (a contemporary of Virgil, and author of a multi-volume history of Rome) or Ennius, who tell a series of stories that occur over a long period of time, Virgil chooses to focus on one individual, the Trojan hero Aeneas. The __Aeneid__ tells the story of how Aeneas escaped the fall of Troy and led a band of survivors to Italy, where their destiny was to mix with the native population and create a new chosen race. The story is therefore set long before the foundation of Rome, which Virgil tells his readers was established 333 years after the __Aeneid__ ends. In Virgil’s poem, Romulus and the other early kings of Rome are the distant descendants of Aeneas’ marriage to a native Italian princess, Lavinia; this mixed heritage allows the Romans both to claim a link to the famous Greek myths and to affirm their native roots and their connection to the land of Italy. Setting the __Aeneid__ in the aftermath of the Trojan War helps Virgil to show that he is trying to rival the epic poems of Homer, usually considered the greatest poet of all. The __Aeneid__ is made up of twelve books of about 700 lines each: the first six deal with the travels of Aeneas after the fall of Troy, and the second six with the war he is forced to fight in Italy. This means that the first half of the poem is designed to remind the reader of Homer’s __Odyssey__, which narrates the wanderings of Odysseus, and the second half reflects the Iliad, which is set during the Trojan War. By combining the travel theme and the military theme in a single poem (with only 12 books, rather than the 24 in each of the __Iliad__ and __Odyssey__) Virgil could imply that he was outdoing Homer, and that his poem contained all the themes of a heroic epic.",
+      "id": [
+        "136238"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:136239]\n[##Politics and Roman identity]\n[%1.3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "136239"
+      ],
+      "title": "Politics and Roman identity"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136240]\nHowever, as we’ll see, Virgil’s story doesn’t only deal with the heroic past, but looks forward to his own time. Virgil had lived through a generation of violence, as successive warlords had torn the Roman Republic apart in their struggles for power. This culminated in the rise of the young Octavian, the adopted son of Julius Caesar, who defeated his rivals Antony and Cleopatra at the Battle of Actium (31 bce) and established himself as ruler of Rome, with the new name Augustus. Virgil was working on the __Aeneid__ throughout the 20s bce, by which time Augustus had imposed stability, but the traumas of the past were still a recent memory. Several passages in the __Aeneid__ use prophecy or supernatural knowledge to refer directly to historical events of Virgil’s own day. These passages identify and praise Augustus himself, and Virgil hopes for a new era of peace under his rule. However, the Roman future is not limited to these passages; rather, Virgil uses his mythological setting and characters to reflect upon what it means to be a Roman, and draws links between the past and the present. Thus the struggles that Aeneas and his companions face in Italy are relevant to the broad questions of how a good Roman should live, the values he should hold, and how he should deal with difficult situations.\n\nIn this course I’ll be guiding you through some of the crucial passages in the __Aeneid__ that deal with these ideas, and I’ll be encouraging you to reflect on how Virgil handles them. First though, it will be useful for you to read a short summary of the plot of the __Aeneid__.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "However, as we’ll see, Virgil’s story doesn’t only deal with the heroic past, but looks forward to his own time. Virgil had lived through a generation of violence, as successive warlords had torn the Roman Republic apart in their struggles for power. This culminated in the rise of the young Octavian, the adopted son of Julius Caesar, who defeated his rivals Antony and Cleopatra at the Battle of Actium (31 bce) and established himself as ruler of Rome, with the new name Augustus. Virgil was working on the __Aeneid__ throughout the 20s bce, by which time Augustus had imposed stability, but the traumas of the past were still a recent memory. Several passages in the __Aeneid__ use prophecy or supernatural knowledge to refer directly to historical events of Virgil’s own day. These passages identify and praise Augustus himself, and Virgil hopes for a new era of peace under his rule. However, the Roman future is not limited to these passages; rather, Virgil uses his mythological setting and characters to reflect upon what it means to be a Roman, and draws links between the past and the present. Thus the struggles that Aeneas and his companions face in Italy are relevant to the broad questions of how a good Roman should live, the values he should hold, and how he should deal with difficult situations.\n\nIn this course I’ll be guiding you through some of the crucial passages in the __Aeneid__ that deal with these ideas, and I’ll be encouraging you to reflect on how Virgil handles them. First though, it will be useful for you to read a short summary of the plot of the __Aeneid__.",
+      "id": [
+        "136240"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:136241]\n[#A brief summary of the Aeneid]\n[%2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "136241"
+      ],
+      "title": "A brief summary of the Aeneid"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136242]\n[&image:https://docs.bitbook.education/bit-books/open_university/introducing_virgils_aeneid/web-resources/images/map-for-a276-openlearn-unit.jpg]\nFigure 2 Map showing key places mentioned in Virgil’s Aeneid\n\nThe poem opens with the Trojan fleet sailing towards Italy, when they are shipwrecked by a storm on the coast of north Africa, caused by Juno, queen of the gods, who hates them and is trying to prevent them reaching Italy and fulfilling their destiny. Here they encounter Queen Dido, leader of the Carthaginians, who are recent immigrants from Phoenicia (modern Lebanon and Syria), and are founding a new city, Carthage (Book 1). (The map in Figure 2 shows the key places mentioned in the poem.) Aeneas tells Dido of the destruction of Troy (Book 2), and his subsequent travels around the Mediterranean (Book 3). He and Dido soon fall in love, but Aeneas is in danger of forgetting his mission in Italy, so the king of the gods, Jupiter, sends his messenger Mercury to remind him of his duty. Aeneas’ sudden departure leaves Dido devastated, and she commits suicide and pronounces eternal hatred between the future Romans and the Carthaginians (Book 4). After a stop in Sicily (Book 5), Aeneas travels to the underworld to speak to the ghost of his father, and he sees there the souls of the future great Romans (Book 6). He is then finally able to arrive in Italy, where he is initially welcomed by the local king Latinus, who promises him his daughter Lavinia’s hand in marriage to seal peace between Trojans and Latins. However, other Italians resent this arrangement, including Latinus’ wife Amata and the Italian prince Turnus, who hoped to marry Lavinia himself. War soon breaks out between the Trojans and the Italians, to Aeneas’ dismay (Book 7). Aeneas visits another local king, Evander, whose city is built on the site of the future Rome, and Evander agrees to ally his people with the Trojans and sends his son Pallas with Aeneas for his first experience of war. Pallas is presented as a sympathetic character: a brave young man whose life is just beginning, and Aeneas feels a strong affection for him (Book 8). The war in Italy continues to rage (Book 9) and Pallas is killed by Turnus, causing a furious response in Aeneas (Book 10). Aeneas agrees to a temporary truce, and suggests he and Turnus should meet in a duel, to avoid any more loss of life, but while the Italians are debating this, war breaks out again (Book 11). Turnus finally agrees to meet Aeneas in single combat, but Juno arranges for the truce to be broken. However, when Jupiter persuades Juno to give up her hatred of the Trojans and accept the Roman destiny, she removes her protection from Turnus. He and Aeneas meet again on the battlefield, and Aeneas wounds Turnus, who begs for mercy. Aeneas is on the point of sparing him when he sees that Turnus is wearing the belt of Pallas, and kills him in a fit of rage (Book 12).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Figure 2 Map showing key places mentioned in Virgil’s Aeneid\n\nThe poem opens with the Trojan fleet sailing towards Italy, when they are shipwrecked by a storm on the coast of north Africa, caused by Juno, queen of the gods, who hates them and is trying to prevent them reaching Italy and fulfilling their destiny. Here they encounter Queen Dido, leader of the Carthaginians, who are recent immigrants from Phoenicia (modern Lebanon and Syria), and are founding a new city, Carthage (Book 1). (The map in Figure 2 shows the key places mentioned in the poem.) Aeneas tells Dido of the destruction of Troy (Book 2), and his subsequent travels around the Mediterranean (Book 3). He and Dido soon fall in love, but Aeneas is in danger of forgetting his mission in Italy, so the king of the gods, Jupiter, sends his messenger Mercury to remind him of his duty. Aeneas’ sudden departure leaves Dido devastated, and she commits suicide and pronounces eternal hatred between the future Romans and the Carthaginians (Book 4). After a stop in Sicily (Book 5), Aeneas travels to the underworld to speak to the ghost of his father, and he sees there the souls of the future great Romans (Book 6). He is then finally able to arrive in Italy, where he is initially welcomed by the local king Latinus, who promises him his daughter Lavinia’s hand in marriage to seal peace between Trojans and Latins. However, other Italians resent this arrangement, including Latinus’ wife Amata and the Italian prince Turnus, who hoped to marry Lavinia himself. War soon breaks out between the Trojans and the Italians, to Aeneas’ dismay (Book 7). Aeneas visits another local king, Evander, whose city is built on the site of the future Rome, and Evander agrees to ally his people with the Trojans and sends his son Pallas with Aeneas for his first experience of war. Pallas is presented as a sympathetic character: a brave young man whose life is just beginning, and Aeneas feels a strong affection for him (Book 8). The war in Italy continues to rage (Book 9) and Pallas is killed by Turnus, causing a furious response in Aeneas (Book 10). Aeneas agrees to a temporary truce, and suggests he and Turnus should meet in a duel, to avoid any more loss of life, but while the Italians are debating this, war breaks out again (Book 11). Turnus finally agrees to meet Aeneas in single combat, but Juno arranges for the truce to be broken. However, when Jupiter persuades Juno to give up her hatred of the Trojans and accept the Roman destiny, she removes her protection from Turnus. He and Aeneas meet again on the battlefield, and Aeneas wounds Turnus, who begs for mercy. Aeneas is on the point of sparing him when he sees that Turnus is wearing the belt of Pallas, and kills him in a fit of rage (Book 12).",
+      "id": [
+        "136242"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/introducing_virgils_aeneid/web-resources/images/map-for-a276-openlearn-unit.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:136243]\n[#Roman values in the Aeneid]\n[%3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "136243"
+      ],
+      "title": "Roman values in the Aeneid"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136244]\nNow that you know a bit more about what happens in the __Aeneid__, we can turn to look at some passages from the poem in more detail. The activities here will show you how Virgil uses the figure of Aeneas to explore Roman values, and to think about what it takes to be a good Roman.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Now that you know a bit more about what happens in the __Aeneid__, we can turn to look at some passages from the poem in more detail. The activities here will show you how Virgil uses the figure of Aeneas to explore Roman values, and to think about what it takes to be a good Roman.",
+      "id": [
+        "136244"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-9]\n[@id:136245]\n[##What is 'pietas'?]\n[%3.1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "136245"
+      ],
+      "title": "What is 'pietas'?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136246]\nIn order to understand Virgil’s depiction of Roman values we need to look at some of the original Latin terms which the Romans used to express moral ideas. The particular quality associated with Aeneas is the abstract Latin noun __pietas__ (whose adjective is __pius__). In the earliest lines of the poem, Aeneas is described as ‘famous for his __pietas__’ and throughout he is called ‘__pius__ Aeneas’. I deliberately haven’t translated __pietas__ and __pius__, because they are difficult concepts to find a single English word for. You might assume that __pietas__ means ‘piety’, and it’s true that this English word derives from the Latin. But while __pietas__ certainly does involve respect for the gods and religious observation, it’s a much broader concept than English ‘piety’.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In order to understand Virgil’s depiction of Roman values we need to look at some of the original Latin terms which the Romans used to express moral ideas. The particular quality associated with Aeneas is the abstract Latin noun __pietas__ (whose adjective is __pius__). In the earliest lines of the poem, Aeneas is described as ‘famous for his __pietas__’ and throughout he is called ‘__pius__ Aeneas’. I deliberately haven’t translated __pietas__ and __pius__, because they are difficult concepts to find a single English word for. You might assume that __pietas__ means ‘piety’, and it’s true that this English word derives from the Latin. But while __pietas__ certainly does involve respect for the gods and religious observation, it’s a much broader concept than English ‘piety’.",
+      "id": [
+        "136246"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\n[@id:136247]\n[%Activity 1]\nHere is the definition of __pietas__ given in the __Pocket Oxford Latin Dictionary__:\n\npiety; dutifulness; affection, love; loyalty; gratitude\n\nConsider the relationship between these different aspects of __pietas__. How similar do you think these concepts are? Can you think of other English words that cover some of the concepts associated with the Latin? Can you find a single English word that you think reflects the range of the Latin, or do you think it is a word that will need translating differently in different contexts?\n\n|note:Discussion\nYou’ll notice that as well as religious duty – conveyed by our English word ‘piety’ - , __pietas__ also incorporates a range of more secular qualities, such as a sense of duty and affection. These might be felt towards one’s family or country, for example. In the __Aeneid, pietas__ is also associated with self-control, compassion and tolerance, as well as with good leadership. It’s hard to find an English word that has exactly the same range of meanings, and ‘piety’ is certainly not right, since its associations are primarily religious. Perhaps the closest might be something like ‘duty’ or ‘dutiful’, but this doesn’t cover all of the meanings of __pietas__. This means that translators have to choose an English word which they feel best brings out the particular force that __pietas__ or pius has in context. Translation can be particularly difficult when dealing with words that reflect a culture’s moral values, since these do not necessarily map neatly across different societies.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Here is the definition of __pietas__ given in the __Pocket Oxford Latin Dictionary__:\n\npiety; dutifulness; affection, love; loyalty; gratitude\n\nConsider the relationship between these different aspects of __pietas__. How similar do you think these concepts are? Can you think of other English words that cover some of the concepts associated with the Latin? Can you find a single English word that you think reflects the range of the Latin, or do you think it is a word that will need translating differently in different contexts?\n\n|note:Discussion\nYou’ll notice that as well as religious duty – conveyed by our English word ‘piety’ - , __pietas__ also incorporates a range of more secular qualities, such as a sense of duty and affection. These might be felt towards one’s family or country, for example. In the __Aeneid, pietas__ is also associated with self-control, compassion and tolerance, as well as with good leadership. It’s hard to find an English word that has exactly the same range of meanings, and ‘piety’ is certainly not right, since its associations are primarily religious. Perhaps the closest might be something like ‘duty’ or ‘dutiful’, but this doesn’t cover all of the meanings of __pietas__. This means that translators have to choose an English word which they feel best brings out the particular force that __pietas__ or pius has in context. Translation can be particularly difficult when dealing with words that reflect a culture’s moral values, since these do not necessarily map neatly across different societies.",
+      "item": "Activity 1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136247"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-10]\n[@id:136248]\n[##'Pietas' vs 'furor']\n[%3.2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-10",
+      "id": [
+        "136248"
+      ],
+      "title": "'Pietas' vs 'furor'"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136249]\nA very different quality from __pietas__ is __furor__, from which we derive the English words ‘fury’ and ‘furious’. In the __Aeneid__, __furor__ is found when emotions or other violent forces are allowed to run uncontrolled. Thus, for example, when people act out of passionate love or anger, their behaviour is associated with __furor__. War always runs the risk of lapsing into __furor__ because of the emotions involved and the devastation it causes, and civil war in particular, which is presented as irrational and hate-filled, is a particular evil caused by __furor__. Throughout the poem, Virgil uses imagery of powerful forces of nature to describe __furor__; for example, fire, storm winds and darkness, and lashing waves.\n|image:Figure 3 Bartolomeo Pinelli, Neptune Stilling the Waves, colour lithograph from Church, A.J. (1882) Stories from Virgil, London, Seeley Jackson & Halliday Fleet Street. Photo: Private Collection/© Look and Learn/Bridgeman Images.\nhttps://docs.bitbook.education/bit-books/open_university/introducing_virgils_aeneid/web-resources/images/a276_b2_fig5.jpg|\n\n\nThe clash between __furor__ and pietas is set up in symbolic terms near the start of the poem, when the sea-god Neptune calms the storm sent by Juno (who with her passionate hatred of the Roman destiny embodies the forces of __furor__). I’ve given you the text below, and have indicated where the words __furor__ and pietas occur in the original Latin.\n\nAs often, when rebellion breaks out in a great nation,\nand the common rabble rage with passion [__furor__], and soon stones\nand fiery torches fly (frenzy supplying weapons),\nif they then see a man of great virtue [__pietas__], and weighty service,\nthey are silent, and stand there listening attentively:\nhe sways their passions with his words and soothes their hearts:\nso all the uproar of the ocean died, as soon as their father,\ngazing over the water, carried through the clear sky, wheeled\nhis horses, and gave them their head, flying behind in his chariot.\n(Aeneid 1.148–56)\n\nThe symbolism of this passage is made clear: we are told that the crowd is influenced by __furor__, which is causing their anger to boil over into violence. Conversely, the wise statesman is a man of __pietas__ who uses this to calm their anger and return them to their senses. Virgil here switches the usual set of conventions: rather than using imagery from the natural world to describe human passions (e.g. anger is like a storm), he uses imagery from political life to describe a natural phenomenon (a storm is like political discord). This is the passage that first sets up the idea that __pietas__ can overcome __furor__, and so it’s significant that Virgil chooses the sphere of politics and civil discord as a frame. This will be relevant throughout the __Aeneid__, as we see Aeneas trying to be a good leader, and it becomes especially relevant in the second half of the poem, in which we see __furor__ causing hatred and war in Italy. It’s also relevant to Virgil’s contemporary readers, who may think of the conflicts they have lived through. One possibility is that we are meant to identify the statesman of __pietas__ in this passage with Augustus, who also imposed order after a time of chaos. Alternatively, the statesman could just be an abstract idealised figure, and a model for all leaders to aspire to.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "A very different quality from __pietas__ is __furor__, from which we derive the English words ‘fury’ and ‘furious’. In the __Aeneid__, __furor__ is found when emotions or other violent forces are allowed to run uncontrolled. Thus, for example, when people act out of passionate love or anger, their behaviour is associated with __furor__. War always runs the risk of lapsing into __furor__ because of the emotions involved and the devastation it causes, and civil war in particular, which is presented as irrational and hate-filled, is a particular evil caused by __furor__. Throughout the poem, Virgil uses imagery of powerful forces of nature to describe __furor__; for example, fire, storm winds and darkness, and lashing waves.\n|image:Figure 3 Bartolomeo Pinelli, Neptune Stilling the Waves, colour lithograph from Church, A.J. (1882) Stories from Virgil, London, Seeley Jackson & Halliday Fleet Street. Photo: Private Collection/© Look and Learn/Bridgeman Images.\nhttps://docs.bitbook.education/bit-books/open_university/introducing_virgils_aeneid/web-resources/images/a276_b2_fig5.jpg|\n\n\nThe clash between __furor__ and pietas is set up in symbolic terms near the start of the poem, when the sea-god Neptune calms the storm sent by Juno (who with her passionate hatred of the Roman destiny embodies the forces of __furor__). I’ve given you the text below, and have indicated where the words __furor__ and pietas occur in the original Latin.\n\nAs often, when rebellion breaks out in a great nation,\nand the common rabble rage with passion {0}, and soon stones\nand fiery torches fly (frenzy supplying weapons),\nif they then see a man of great virtue {1}, and weighty service,\nthey are silent, and stand there listening attentively:\nhe sways their passions with his words and soothes their hearts:\nso all the uproar of the ocean died, as soon as their father,\ngazing over the water, carried through the clear sky, wheeled\nhis horses, and gave them their head, flying behind in his chariot.\n(Aeneid 1.148–56)\n\nThe symbolism of this passage is made clear: we are told that the crowd is influenced by __furor__, which is causing their anger to boil over into violence. Conversely, the wise statesman is a man of __pietas__ who uses this to calm their anger and return them to their senses. Virgil here switches the usual set of conventions: rather than using imagery from the natural world to describe human passions (e.g. anger is like a storm), he uses imagery from political life to describe a natural phenomenon (a storm is like political discord). This is the passage that first sets up the idea that __pietas__ can overcome __furor__, and so it’s significant that Virgil chooses the sphere of politics and civil discord as a frame. This will be relevant throughout the __Aeneid__, as we see Aeneas trying to be a good leader, and it becomes especially relevant in the second half of the poem, in which we see __furor__ causing hatred and war in Italy. It’s also relevant to Virgil’s contemporary readers, who may think of the conflicts they have lived through. One possibility is that we are meant to identify the statesman of __pietas__ in this passage with Augustus, who also imposed order after a time of chaos. Alternatively, the statesman could just be an abstract idealised figure, and a model for all leaders to aspire to.",
+      "id": [
+        "136249"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "_furor__"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "_pietas__"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-11]\n[@id:136250]\n[##Aeneas and pietas]\n[%3.3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-11",
+      "id": [
+        "136250"
+      ],
+      "title": "Aeneas and pietas"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:136251]\n[&image:https://docs.bitbook.education/bit-books/open_university/introducing_virgils_aeneid/web-resources/images/a276_b2_fig6.jpg]\n\nFigure 4 Federico Barocci, Aeneas' Flight from Troy, 1598, oil on canvas, 179 × 253 cm. Galleria Borghese, Rome, Italy. Photo: Galleria Borghese/Bridgeman Images.\n\nOne might expect that Aeneas, the man of destiny, embodies __pietas__ and battles __furor__ wherever he finds it, but Virgil is far too sophisticated a poet to present his story as a simple battle of good versus evil. Aeneas is in many ways an exemplar of __pietas__. He loves and respects his father Anchises, and is a devoted father to his young son Ascanius.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Figure 4 Federico Barocci, Aeneas' Flight from Troy, 1598, oil on canvas, 179 × 253 cm. Galleria Borghese, Rome, Italy. Photo: Galleria Borghese/Bridgeman Images.\n\nOne might expect that Aeneas, the man of destiny, embodies __pietas__ and battles __furor__ wherever he finds it, but Virgil is far too sophisticated a poet to present his story as a simple battle of good versus evil. Aeneas is in many ways an exemplar of __pietas__. He loves and respects his father Anchises, and is a devoted father to his young son Ascanius.",
+      "id": [
+        "136251"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/open_university/introducing_virgils_aeneid/web-resources/images/a276_b2_fig6.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:136252]\n[%Activity 2]\n[!As Aeneas flees Troy in Book 2, Virgil describes him carrying his elderly father on his back while leading his son by the hand. Read Aeneas’ speech below, in which he gives instructions to his family on how to escape Troy, and note down the ways in which you think Aeneas demonstrates pietas here.]\n‘Come then, dear father, clasp my neck: I will\ncarry you on my shoulders: that task won’t weigh on me.\nWhatever may happen, it will be for us both, the same shared risk,\nand the same salvation. Let little Iulus come with me,\nand let my wife follow our footsteps at a distance.\nYou servants, give your attention to what I’m saying.\nAt the entrance to the city there’s a mound, an ancient temple\nof forsaken Ceres, and a venerable cypress nearby,\nprotected through the years by the reverence of our fathers:\nlet’s head to that one place by diverse paths.\nYou, father, take the sacred objects, and our country’s gods,\nin your hands: until I’ve washed in running water,\nit would be a sin for me, coming from such fighting\nand recent slaughter, to touch them.’\n\n(__Aeneid__ 2.707−20)\n\n|note:Discussion\nAeneas’ love for his father comes through strongly in this passage, and the image of the three generations leaving Troy in this fashion became a famous symbol of pietas and family-mindedness. It was a popular theme in Roman art, and became a favourite subject for later European painters, as you can see from the image used to illustrate this section (Figure 4).\n\nYou might have also noticed that Aeneas does not forget the slaves of the household, for whose well-being he is responsible, and gives them instructions as to how to escape and where to meet. Aeneas’ pietas is also shown by his concern for the religious artefacts and statues of the household gods, which he instructs Anchises to carry with him. (In Figure 4 you can see them in Anchises’ right hand.) The gods are the symbol of the Trojan people, and must be kept safe until they can find a new home. Even in the midst of the chaos, Aeneas remembers to observe appropriate religious scruples. Because he is covered with blood, he might defile the holy objects by touching them before he can purify himself, so he makes sure that they are instead carried by Anchises, who as a non-combatant is religiously pure. However, Aeneas’ behaviour towards his wife is perhaps more troubling. Whereas he keeps his father and son close to him, he tells his wife to walk behind ‘at a distance’. Shortly afterwards we find out that Aeneas loses track of her, and that by the time he realises she is not with him, it is too late. Is this simply a tragic accident in the chaos of war, or is Aeneas to blame for what happens?",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "As Aeneas flees Troy in Book 2, Virgil describes him carrying his elderly father on his back while leading his son by the hand. Read Aeneas’ speech below, in which he gives instructions to his family on how to escape Troy, and note down the ways in which you think Aeneas demonstrates pietas here.",
+      "partialAnswer": "",
+      "body": "‘Come then, dear father, clasp my neck: I will\ncarry you on my shoulders: that task won’t weigh on me.\nWhatever may happen, it will be for us both, the same shared risk,\nand the same salvation. Let little Iulus come with me,\nand let my wife follow our footsteps at a distance.\nYou servants, give your attention to what I’m saying.\nAt the entrance to the city there’s a mound, an ancient temple\nof forsaken Ceres, and a venerable cypress nearby,\nprotected through the years by the reverence of our fathers:\nlet’s head to that one place by diverse paths.\nYou, father, take the sacred objects, and our country’s gods,\nin your hands: until I’ve washed in running water,\nit would be a sin for me, coming from such fighting\nand recent slaughter, to touch them.’\n\n(__Aeneid__ 2.707−20)\n\n|note:Discussion\nAeneas’ love for his father comes through strongly in this passage, and the image of the three generations leaving Troy in this fashion became a famous symbol of pietas and family-mindedness. It was a popular theme in Roman art, and became a favourite subject for later European painters, as you can see from the image used to illustrate this section (Figure 4).\n\nYou might have also noticed that Aeneas does not forget the slaves of the household, for whose well-being he is responsible, and gives them instructions as to how to escape and where to meet. Aeneas’ pietas is also shown by his concern for the religious artefacts and statues of the household gods, which he instructs Anchises to carry with him. (In Figure 4 you can see them in Anchises’ right hand.) The gods are the symbol of the Trojan people, and must be kept safe until they can find a new home. Even in the midst of the chaos, Aeneas remembers to observe appropriate religious scruples. Because he is covered with blood, he might defile the holy objects by touching them before he can purify himself, so he makes sure that they are instead carried by Anchises, who as a non-combatant is religiously pure. However, Aeneas’ behaviour towards his wife is perhaps more troubling. Whereas he keeps his father and son close to him, he tells his wife to walk behind ‘at a distance’. Shortly afterwards we find out that Aeneas loses track of her, and that by the time he realises she is not with him, it is too late. Is this simply a tragic accident in the chaos of war, or is Aeneas to blame for what happens?",
+      "item": "Activity 2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136252"
+      ]
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '−'",
+        "line": 20,
+        "column": 17,
+        "errorLine": "(__Aeneid__ 2.707−20)"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-12]\n[@id:136253]\n[##A conflicted hero]\n[%3.4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-12",
+      "id": [
+        "136253"
+      ],
+      "title": "A conflicted hero"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136254]\nYou’ve now seen how the behaviour of Aeneas is characterised by two important components of __pietas__: family and the gods. His __pietas__ is also shown by his concern for the well-being of his followers. His first act when he lands safely in north Africa after surviving the storm in Book 1 is to find high ground to see if he can spot any survivors from the other ships in his fleet; next he goes hunting, making sure that he shoots enough meat for all those with him. He is aware that his followers are in low spirits, and makes efforts to comfort them and to conceal his own anxieties. Thus in many ways Aeneas appears to be the ideal Roman leader: able to take charge yet concerned with the greater good of the group rather than his own personal self-interest. If you have time, you might like to explore this section of the __Aeneid__ further and think about how Aeneas is presented. You can find Book 1 of the Aeneid via the ‘**Poetry in Translation**’ website. To read the section we’ve been discussing here, you will need to click on the link ‘Bk1:157–222 Shelter on the Libyan coast’.\n\nYet despite Aeneas’ inherent __pietas__, he often falls prey to his own strong emotions and succumbs to __furor__. During the sack of Troy, despite repeated messages from the gods, he is frequently overcome by battle-lust and desire to take vengeance on the Greeks, and it is not until his goddess mother intervenes that he accepts his destiny to save the survivors of his people and find a new home. Similarly, in north Africa he falls passionately in love with the Carthiginian Queen Dido, and it is the ‘madness’ of love that makes Aeneas temporarily forget his journey and stay in Carthage. Aeneas and Dido’s love affair is described in terms that evoke __furor__, with imagery of fire and storms. But the greatest clash in the poem between __furor__ and __pietas__ comes at the very end, and we will explore this in the next section.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You’ve now seen how the behaviour of Aeneas is characterised by two important components of __pietas__: family and the gods. His __pietas__ is also shown by his concern for the well-being of his followers. His first act when he lands safely in north Africa after surviving the storm in Book 1 is to find high ground to see if he can spot any survivors from the other ships in his fleet; next he goes hunting, making sure that he shoots enough meat for all those with him. He is aware that his followers are in low spirits, and makes efforts to comfort them and to conceal his own anxieties. Thus in many ways Aeneas appears to be the ideal Roman leader: able to take charge yet concerned with the greater good of the group rather than his own personal self-interest. If you have time, you might like to explore this section of the __Aeneid__ further and think about how Aeneas is presented. You can find Book 1 of the Aeneid via the ‘**Poetry in Translation**’ website. To read the section we’ve been discussing here, you will need to click on the link ‘Bk1:157–222 Shelter on the Libyan coast’.\n\nYet despite Aeneas’ inherent __pietas__, he often falls prey to his own strong emotions and succumbs to __furor__. During the sack of Troy, despite repeated messages from the gods, he is frequently overcome by battle-lust and desire to take vengeance on the Greeks, and it is not until his goddess mother intervenes that he accepts his destiny to save the survivors of his people and find a new home. Similarly, in north Africa he falls passionately in love with the Carthiginian Queen Dido, and it is the ‘madness’ of love that makes Aeneas temporarily forget his journey and stay in Carthage. Aeneas and Dido’s love affair is described in terms that evoke __furor__, with imagery of fire and storms. But the greatest clash in the poem between __furor__ and __pietas__ comes at the very end, and we will explore this in the next section.",
+      "id": [
+        "136254"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-13]\n[@id:136255]\n[#Book 12 of the Aeneid]\n[%4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-13",
+      "id": [
+        "136255"
+      ],
+      "title": "Book 12 of the Aeneid"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136256]\nWhen Aeneas arrives in Italy, he initially receives a warm welcome from the local people (the Latins), whose king, Latinus, recognises that it is Aeneas’ destiny to marry his daughter Lavinia. However, another Italian prince, Turnus, who also wishes to marry Lavinia, is furious at the Trojans’ arrival, and, urged on by the goddess Juno, he stirs up war between the Italians and the Trojans. The second part of the __Aeneid__ narrates the events of this war, and by the time we get to the final book of the poem (Book 12), we have encountered many sympathetic young characters who have lost their lives. At this point in the poem, Turnus has killed Aeneas’ young friend Pallas, and Aeneas has been overcome with fury and grief. In Book 11, there has been a brief truce between the two sides, to allow them to gather the dead bodies and mourn them, and Aeneas has proposed that he and Turnus should meet in single combat to settle the conflict, but the truce broke down before a decision could be reached.\n\nAt the start of Book 12, Turnus decides to face Aeneas in single combat, and a solemn treaty is drawn up that both sides will abide by the result of the duel. However, Turnus’ followers are unhappy with this arrangement, and are urged on by Turnus’ sister, the goddess Juturna, to break the treaty and attack the Trojans while they are off guard. Aeneas tries to prevent his men joining in the fighting but is wounded by a stray arrow, while Turnus enthusiastically joins in the battle. But when Aeneas is magically healed by his mother, the goddess Venus, and returns to the fray, Turnus realises he must spare his people more suffering and so agrees to a duel again. The king and queen of the gods, Jupiter and Juno, who have been watching events from the heavens, agree between themselves that the war must now end, and Juno agrees to give up her support for Turnus and her hatred of the Trojans, who will now marry the Italians and become Romans.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "When Aeneas arrives in Italy, he initially receives a warm welcome from the local people (the Latins), whose king, Latinus, recognises that it is Aeneas’ destiny to marry his daughter Lavinia. However, another Italian prince, Turnus, who also wishes to marry Lavinia, is furious at the Trojans’ arrival, and, urged on by the goddess Juno, he stirs up war between the Italians and the Trojans. The second part of the __Aeneid__ narrates the events of this war, and by the time we get to the final book of the poem (Book 12), we have encountered many sympathetic young characters who have lost their lives. At this point in the poem, Turnus has killed Aeneas’ young friend Pallas, and Aeneas has been overcome with fury and grief. In Book 11, there has been a brief truce between the two sides, to allow them to gather the dead bodies and mourn them, and Aeneas has proposed that he and Turnus should meet in single combat to settle the conflict, but the truce broke down before a decision could be reached.\n\nAt the start of Book 12, Turnus decides to face Aeneas in single combat, and a solemn treaty is drawn up that both sides will abide by the result of the duel. However, Turnus’ followers are unhappy with this arrangement, and are urged on by Turnus’ sister, the goddess Juturna, to break the treaty and attack the Trojans while they are off guard. Aeneas tries to prevent his men joining in the fighting but is wounded by a stray arrow, while Turnus enthusiastically joins in the battle. But when Aeneas is magically healed by his mother, the goddess Venus, and returns to the fray, Turnus realises he must spare his people more suffering and so agrees to a duel again. The king and queen of the gods, Jupiter and Juno, who have been watching events from the heavens, agree between themselves that the war must now end, and Juno agrees to give up her support for Turnus and her hatred of the Trojans, who will now marry the Italians and become Romans.",
+      "id": [
+        "136256"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-14]\n[@id:136257]\n[##The death of Turnus]\n[%4.1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-14",
+      "id": [
+        "136257"
+      ],
+      "title": "The death of Turnus"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:136258]\nThe summary given in the previous section takes us to the final lines of the poem, in which Aeneas and Turnus finally meet in single combat.\n\n|image:Figure 5 Luca Giordano, Aeneas defeats Turnus, seventeenth century, oil on canvas, 176 × 236 cm. Galleria Corsini, Florence. Photo: De Agostini Editore/L Pedicini\nhttps://docs.bitbook.education/bit-books/open_university/introducing_virgils_aeneid/web-resources/images/a276_b2_fig8.jpg|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "The summary given in the previous section takes us to the final lines of the poem, in which Aeneas and Turnus finally meet in single combat.\n\n|image:Figure 5 Luca Giordano, Aeneas defeats Turnus, seventeenth century, oil on canvas, 176 × 236 cm. Galleria Corsini, Florence. Photo: De Agostini Editore/L Pedicini\nhttps://docs.bitbook.education/bit-books/open_university/introducing_virgils_aeneid/web-resources/images/a276_b2_fig8.jpg|",
+      "id": [
+        "136258"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark++]\n[@id:136259]\n[%Activity 3]\nI’d now like you to read the poem’s last lines, which you can find by going to the section on Virgil’s Aeneid on the ==‘Poetry in Translation's==\n(:https://www.poetryintranslation.com/PITBR/Latin/VirgilAeneidXII.php)==\n website. You can find the relevant passage in Book 12 of the poem by clicking on the link ‘Bk XII:887–952 The Death of Turnus’.\n\nRead this passage carefully and make some notes on the following issues:\n\n• How is Turnus presented at this point in the poem?\n• Do you think Aeneas should have spared Turnus’ life?\n• What do you think of Aeneas’ motivations when he decides to kill Turnus?\n• Are you surprised that Virgil ends the poem so abruptly here? What do you think of the ending?",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark++",
+      "instruction": "",
+      "partialAnswer": "",
+      "body": "I’d now like you to read the poem’s last lines, which you can find by going to the section on Virgil’s Aeneid on the ==‘Poetry in Translation's==\n(:https://www.poetryintranslation.com/PITBR/Latin/VirgilAeneidXII.php)==\n website. You can find the relevant passage in Book 12 of the poem by clicking on the link ‘Bk XII:887–952 The Death of Turnus’.\n\nRead this passage carefully and make some notes on the following issues:\n\n• How is Turnus presented at this point in the poem?\n• Do you think Aeneas should have spared Turnus’ life?\n• What do you think of Aeneas’ motivations when he decides to kill Turnus?\n• Are you surprised that Virgil ends the poem so abruptly here? What do you think of the ending?",
+      "item": "Activity 3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136259"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-15]\n[@id:136260]\n[##Vengeance and mercy in the Aeneid]\n[%4.2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-15",
+      "id": [
+        "136260"
+      ],
+      "title": "Vengeance and mercy in the Aeneid"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136261]\nVirgil makes it clear that the rational side of Aeneas is on the brink of sparing Turnus, and it is only the sight of Pallas’ belt that changes his mind. Let’s look at the lines that describe Aeneas’ reaction here:\n\nAs soon as his eyes took in the trophy, a memory of cruel grief,\nAeneas, blazing with fury [__furor__], and terrible in his anger, cried:\n‘Shall you be snatched from my grasp, wearing the spoils\nof one who was my own?’\n(__Aeneid__ 12.946–9)\n\nAeneas acts in impulsive anger, and he acts from __furor__ rather than a considered sense of what is right: indeed, he is ‘blazing’ with it. As we have seen, __furor__ is often associated with fire imagery. Even if Aeneas makes a valid decision in killing Turnus, he seems to be doing it for the wrong reasons, and it’s troubling that the foundational act that will found the Roman race is one of __furor__ and anger.\n\nVirgil has already referred to the issue of vengeance and mercy earlier in the poem, in a scene in which Aeneas is visiting the underworld in Book 6 to consult the ghost of his father, Anchises. Virgil’s underworld contains the souls of those not yet born as well as those of the dead, and Aeneas is allowed to see a parade of future heroes of Rome, including Romulus, Julius Caesar, and Augustus himself. Anchises makes a speech to Aeneas predicting the glory of Rome and introduces the individuals who will make it great; at the end, he turns to the more general question of what it means to be a good Roman, and addresses the hypothetical future Roman:\n\n‘Remember, Roman, it is for you to rule the nations with your power,\n(that will be your skill) to crown peace with law,\nto spare the conquered, and subdue the proud’.\n(__Aeneid__ 6.851–3)\n\nAnchises claims that war is an essential part of the Roman mission, and that peace will come through military conflict. His final words refer to how a good Roman should balance mercy and retribution. In Anchises’ model it is easy to tell where to draw the line: only those who show arrogance should be crushed, while those who have been crushed should be spared. In reality, however, it is harder to tell the difference, and we might well recall his words as we read the final scene, and wonder which category Turnus fits into. His previous actions in the poem have been arrogant, but he is certainly now defeated: does that mean that Aeneas has failed to live up to his father’s advice when he refuses to pardon him?\n\nThe fact that the poem ends so abruptly makes this scene even starker. We might expect Virgil to end his poem by describing the end of the war, the reconciliation between the two peoples, perhaps even Aeneas’ marriage to Lavinia or the foundation of Lavinium. Instead, we’re left on a bleak note, as our final image is of the dying Turnus, unmitigated by any of the positive consequences of his death in the future.\n\nScholars have debated for many years how best to interpret the poem’s ending. We know that Virgil was unhappy with the __Aeneid__ as it stood, and requested on his deathbed that it should be burned, and scholars have sometimes suggested that this is because he wanted to alter the ending. On the other hand, there’s no particular reason to suppose that the ending was the part that Virgil felt was incomplete, and there may have been other aspects that he wanted to change. Indeed, there are other ways in which the __Aeneid__ is obviously unfinished, for example missing parts of lines. In any case, since we have the ending that we have, we need to engage with the poem as it stands, and try to interpret how it works in literary terms.\n\nFor some scholars, Aeneas’ killing of Turnus is an act which undermines the Roman future, and calls Augustus’ own achievements into question. For others, Aeneas’ actions show that the world is a complicated place in which idealistic models do not work: killing Turnus may be disagreeable, but it is part of the necessary price for establishing peace.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Virgil makes it clear that the rational side of Aeneas is on the brink of sparing Turnus, and it is only the sight of Pallas’ belt that changes his mind. Let’s look at the lines that describe Aeneas’ reaction here:\n\nAs soon as his eyes took in the trophy, a memory of cruel grief,\nAeneas, blazing with fury {0}, and terrible in his anger, cried:\n‘Shall you be snatched from my grasp, wearing the spoils\nof one who was my own?’\n(__Aeneid__ 12.946–9)\n\nAeneas acts in impulsive anger, and he acts from __furor__ rather than a considered sense of what is right: indeed, he is ‘blazing’ with it. As we have seen, __furor__ is often associated with fire imagery. Even if Aeneas makes a valid decision in killing Turnus, he seems to be doing it for the wrong reasons, and it’s troubling that the foundational act that will found the Roman race is one of __furor__ and anger.\n\nVirgil has already referred to the issue of vengeance and mercy earlier in the poem, in a scene in which Aeneas is visiting the underworld in Book 6 to consult the ghost of his father, Anchises. Virgil’s underworld contains the souls of those not yet born as well as those of the dead, and Aeneas is allowed to see a parade of future heroes of Rome, including Romulus, Julius Caesar, and Augustus himself. Anchises makes a speech to Aeneas predicting the glory of Rome and introduces the individuals who will make it great; at the end, he turns to the more general question of what it means to be a good Roman, and addresses the hypothetical future Roman:\n\n‘Remember, Roman, it is for you to rule the nations with your power,\n(that will be your skill) to crown peace with law,\nto spare the conquered, and subdue the proud’.\n(__Aeneid__ 6.851–3)\n\nAnchises claims that war is an essential part of the Roman mission, and that peace will come through military conflict. His final words refer to how a good Roman should balance mercy and retribution. In Anchises’ model it is easy to tell where to draw the line: only those who show arrogance should be crushed, while those who have been crushed should be spared. In reality, however, it is harder to tell the difference, and we might well recall his words as we read the final scene, and wonder which category Turnus fits into. His previous actions in the poem have been arrogant, but he is certainly now defeated: does that mean that Aeneas has failed to live up to his father’s advice when he refuses to pardon him?\n\nThe fact that the poem ends so abruptly makes this scene even starker. We might expect Virgil to end his poem by describing the end of the war, the reconciliation between the two peoples, perhaps even Aeneas’ marriage to Lavinia or the foundation of Lavinium. Instead, we’re left on a bleak note, as our final image is of the dying Turnus, unmitigated by any of the positive consequences of his death in the future.\n\nScholars have debated for many years how best to interpret the poem’s ending. We know that Virgil was unhappy with the __Aeneid__ as it stood, and requested on his deathbed that it should be burned, and scholars have sometimes suggested that this is because he wanted to alter the ending. On the other hand, there’s no particular reason to suppose that the ending was the part that Virgil felt was incomplete, and there may have been other aspects that he wanted to change. Indeed, there are other ways in which the __Aeneid__ is obviously unfinished, for example missing parts of lines. In any case, since we have the ending that we have, we need to engage with the poem as it stands, and try to interpret how it works in literary terms.\n\nFor some scholars, Aeneas’ killing of Turnus is an act which undermines the Roman future, and calls Augustus’ own achievements into question. For others, Aeneas’ actions show that the world is a complicated place in which idealistic models do not work: killing Turnus may be disagreeable, but it is part of the necessary price for establishing peace.",
+      "id": [
+        "136261"
+      ],
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "_furor__"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-16]\n[@id:136262]\n[#Conclusion]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-16",
+      "id": [
+        "136262"
+      ],
+      "title": "Conclusion"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136263]\nWe have come to the end of this free course on Virgil’s __Aeneid__, and I hope you have enjoyed your first taste of the poem. As you can see, the Aeneid is not a simple poem to study. Virgil expects his reader to work hard, and we are expected to know about Roman myth and history, and to make connections across the poem between recurring patterns of imagery and word choice. While this makes the __Aeneid__ a challenging text to study, it certainly makes it rewarding, and it’s possible to find new things to appreciate in it every time you read it. The __Aeneid__ is set in the world of myth, but it engages directly with ethical and political issues relevant to Virgil’s own day – and indeed our own – such as what it means to be a good leader, and how moral beliefs work in practice in the messy situations of real life. The fact that the __Aeneid__ does not give straightforward answers but invites us to come to our own conclusions is part of what makes it such powerful literature, and has inspired readers for over two thousand years.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "We have come to the end of this free course on Virgil’s __Aeneid__, and I hope you have enjoyed your first taste of the poem. As you can see, the Aeneid is not a simple poem to study. Virgil expects his reader to work hard, and we are expected to know about Roman myth and history, and to make connections across the poem between recurring patterns of imagery and word choice. While this makes the __Aeneid__ a challenging text to study, it certainly makes it rewarding, and it’s possible to find new things to appreciate in it every time you read it. The __Aeneid__ is set in the world of myth, but it engages directly with ethical and political issues relevant to Virgil’s own day – and indeed our own – such as what it means to be a good leader, and how moral beliefs work in practice in the messy situations of real life. The fact that the __Aeneid__ does not give straightforward answers but invites us to come to our own conclusions is part of what makes it such powerful literature, and has inspired readers for over two thousand years.",
+      "id": [
+        "136263"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-17]\n[@id:136264]\n[#References]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-17",
+      "id": [
+        "136264"
+      ],
+      "title": "References"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136265]\nVirgil, The Aeneid, trans. A.S. Kline (2002) Poetry in Translation. Available online via the ‘==Poetry in Translation==\n(https://www.poetryintranslation.com/PITBR/Latin/Virgilhome.php)==’  website. (Accessed 29 October 2015).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Virgil, The Aeneid, trans. A.S. Kline (2002) Poetry in Translation. Available online via the ‘==Poetry in Translation==\n(https://www.poetryintranslation.com/PITBR/Latin/Virgilhome.php)==’  website. (Accessed 29 October 2015).",
+      "id": [
+        "136265"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-18]\n[@id:136266]\n[#Further reading]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-18",
+      "id": [
+        "136266"
+      ],
+      "title": "Further reading"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136267]\nIf you would like to read the whole of the Aeneid in translation, a free online translation can be found on the ‘**Poetry in Translation’ website**.\n\nIf you are interested in learning more about the Latin language, the free course Discovering Ancient Greek and Latin will soon be available on OpenLearn.\n\nIf you are interested in studying Latin or Roman culture more formally, you might be interested in the following Open University courses: **A276 Classical Latin: the language of Ancient Rome, A219 Exploring the classical world and A340 The Roman Empire**.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If you would like to read the whole of the Aeneid in translation, a free online translation can be found on the ‘**Poetry in Translation’ website**.\n\nIf you are interested in learning more about the Latin language, the free course Discovering Ancient Greek and Latin will soon be available on OpenLearn.\n\nIf you are interested in studying Latin or Roman culture more formally, you might be interested in the following Open University courses: **A276 Classical Latin: the language of Ancient Rome, A219 Exploring the classical world and A340 The Roman Empire**.",
+      "id": [
+        "136267"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-19]\n[@id:136268]\n[#Acknowledgements]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-19",
+      "id": [
+        "136268"
+      ],
+      "title": "Acknowledgements"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:136269]\nThis OpenLearn course was written by Laura Swift, with contributions from Joanna Paul.\n\nExcept for third party materials and otherwise stated (see **terms and conditions**), this content is made available under a **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Licence**.\n\nThe material acknowledged below is Proprietary and used under licence (not subject to Creative Commons Licence). Grateful acknowledgement is made to the following sources for permission to reproduce material in this free course:\n\n**Course image:**\n\nPhoto: De Agostini Editore/L Pedicini\n\n**Text:**\n\nAll Virgil translations by A.S. Kline. © Copyright 2002 All Rights Reserved. (This work may be freely reproduced, stored, and transmitted, electronically or otherwise, for any non-commercial purpose.)\n\n**Images:**\n\nFigure 1: Photo: Musee National du Bardo/Bridgeman Images.\n\nFigure 3: Photo: Private Collection/© Look and Learn/Bridgeman Images.\n\nFigure 4: Photo: Galleria Borghese/Bridgeman Images.\n\nFigure 5: Photo: De Agostini Editore/L Pedicini\n\nEvery effort has been made to contact copyright owners. If any have been inadvertently overlooked, the publishers will be pleased to make the necessary arrangements at the first opportunity.\n\n**Don't miss out**:\n\nIf reading this text has inspired you to learn more, you may be interested in joining the millions of people who discover our free learning resources and qualifications by visiting The Open University - **www.open.edu/openlearn/free-courses**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This OpenLearn course was written by Laura Swift, with contributions from Joanna Paul.\n\nExcept for third party materials and otherwise stated (see **terms and conditions**), this content is made available under a **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Licence**.\n\nThe material acknowledged below is Proprietary and used under licence (not subject to Creative Commons Licence). Grateful acknowledgement is made to the following sources for permission to reproduce material in this free course:\n\n**Course image:**\n\nPhoto: De Agostini Editore/L Pedicini\n\n**Text:**\n\nAll Virgil translations by A.S. Kline. © Copyright 2002 All Rights Reserved. (This work may be freely reproduced, stored, and transmitted, electronically or otherwise, for any non-commercial purpose.)\n\n**Images:**\n\nFigure 1: Photo: Musee National du Bardo/Bridgeman Images.\n\nFigure 3: Photo: Private Collection/© Look and Learn/Bridgeman Images.\n\nFigure 4: Photo: Galleria Borghese/Bridgeman Images.\n\nFigure 5: Photo: De Agostini Editore/L Pedicini\n\nEvery effort has been made to contact copyright owners. If any have been inadvertently overlooked, the publishers will be pleased to make the necessary arrangements at the first opportunity.\n\n**Don't miss out**:\n\nIf reading this text has inspired you to learn more, you may be interested in joining the millions of people who discover our free learning resources and qualifications by visiting The Open University - **www.open.edu/openlearn/free-courses**",
+      "id": [
+        "136269"
+      ]
+    }
+  }
+]

@@ -1,0 +1,1830 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:255479]\n[@language:de]\n[#Learning & Development: Staying Relevant]\n[@coverImage:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_relevant_cover.png]\n[@externalId:e-learning-development--staying_fkwqyfqu51kd]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "255479"
+      ],
+      "language": [
+        "de"
+      ],
+      "title": "Learning & Development: Staying Relevant",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_relevant_cover.png"
+      ],
+      "externalId": [
+        "e-learning-development--staying_fkwqyfqu51kd"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:255480]\n[▼ch-1]\n[##Develop Lifelong Learning Mindsets]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "255480"
+      ],
+      "anchor": "ch-1",
+      "title": "Develop Lifelong Learning Mindsets"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:255481]\n[▼ch-2]\n[#ABOUT THE AUTHORS]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "255481"
+      ],
+      "anchor": "ch-2",
+      "title": "ABOUT THE AUTHORS"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255482]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_2.png]\n\n**PROF. DR. NICK VAN DAM** is full professor CORPORATE LEARNING & LEADERSHIP DEVELOPMENT.\n\nNick has a passion for people development and is excited about helping individuals to reach their full potential. He strongly believes that lifelong learners are more successful professionally and lead happier, more fulfilling lives. Nick is keenly interested in the emerging insights from the fields of positive development including: Psychology, Sociology, Cognitive Neuroscience, Andragogy and Philosophy. These all have enormous potential to transform people development and to lead to the creation of healthy, humanly sustainable organizations. Nick studied Economics, Business Economics and Pedagogy (Vrije Leergangen – Vrije Universiteit van Amsterdam), Organizational Sociology (Universiteit van Amsterdam) and earned his Doctorate of Philosophy (Ph.D., Human Capital Development).\n\nHe started his career in 1986 as a training consultant at (Siemens-) Nixdorf. In 1995, he joined Deloitte Consulting in the USA and served for 19 years in international Consulting/ Learning & Development/Human Resources executive roles. Currently he is a partner, Global Chief Learning Officer and Client Advisor at McKinsey & Company. Nick is a visiting professor and advisory board member at the University of Pennsylvania’s, PennCLO Executive Doctorate Program. In 2016, he joined the Corporate Advisory Board of edX which is a non-profit organization founded by Harvard and MIT, with a mission to bridge the gap between education and employment.\n\nNick has (co)authored 17 books and is an internationally known thought leader in Human Capital Development. His latest book: YOU! The Positive Force in Change. Nick has written many articles and has been quoted by __The Financial Times, The Wall Street Journal, Fortune Magazine, Business Week, Harvard Business Review, The India Times, Information Week, Management Consulting, CLO Magazine, and T+D Magazine. Under the patrons of the European Parliament Federal Ministry of Education & Research, he received ‘The 2013 Leonardo European Corporate Learning Award’ for shaping the future of organizational learning and leadership development.__\n\nHe is the Founder and Chairman of e-Learning for Kids (www.e-learningforkids.org), a global non-profit foundation that offers free, digital lessons for underserved elementary school aged children worldwide.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**PROF. DR. NICK VAN DAM** is full professor CORPORATE LEARNING & LEADERSHIP DEVELOPMENT.\n\nNick has a passion for people development and is excited about helping individuals to reach their full potential. He strongly believes that lifelong learners are more successful professionally and lead happier, more fulfilling lives. Nick is keenly interested in the emerging insights from the fields of positive development including: Psychology, Sociology, Cognitive Neuroscience, Andragogy and Philosophy. These all have enormous potential to transform people development and to lead to the creation of healthy, humanly sustainable organizations. Nick studied Economics, Business Economics and Pedagogy (Vrije Leergangen – Vrije Universiteit van Amsterdam), Organizational Sociology (Universiteit van Amsterdam) and earned his Doctorate of Philosophy (Ph.D., Human Capital Development).\n\nHe started his career in 1986 as a training consultant at (Siemens-) Nixdorf. In 1995, he joined Deloitte Consulting in the USA and served for 19 years in international Consulting/ Learning & Development/Human Resources executive roles. Currently he is a partner, Global Chief Learning Officer and Client Advisor at McKinsey & Company. Nick is a visiting professor and advisory board member at the University of Pennsylvania’s, PennCLO Executive Doctorate Program. In 2016, he joined the Corporate Advisory Board of edX which is a non-profit organization founded by Harvard and MIT, with a mission to bridge the gap between education and employment.\n\nNick has (co)authored 17 books and is an internationally known thought leader in Human Capital Development. His latest book: YOU! The Positive Force in Change. Nick has written many articles and has been quoted by __The Financial Times, The Wall Street Journal, Fortune Magazine, Business Week, Harvard Business Review, The India Times, Information Week, Management Consulting, CLO Magazine, and T+D Magazine. Under the patrons of the European Parliament Federal Ministry of Education & Research, he received ‘The 2013 Leonardo European Corporate Learning Award’ for shaping the future of organizational learning and leadership development.__\n\nHe is the Founder and Chairman of e-Learning for Kids (www.e-learningforkids.org), a global non-profit foundation that offers free, digital lessons for underserved elementary school aged children worldwide.",
+      "id": [
+        "255482"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&image]\n[@id:255483]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_3.png]\n**DR. JACQUI BRASSEY**\n\nJacqui considers herself very fortunate to be a true Lifelong Learner – throughout her professional career she has been working on quite a few ‘Greenfield’ projects, building a strong ‘M-profile’ within her overall field of expertise as ‘practitioner-academic’, living and working in multiple countries experiencing many different cultures and organizations.\n\nShe brings about 20 years of professional experience in Human Resources (Org. Effectiveness, Leadership Development and Learning, Employee Engagement, Diversity & Inclusion and HR Analytics), Customer Development, Sustainability (NGO) and Academia.\n\nA large part of her business career she has been in global HR Expertise roles at Unilever, leading Employee Engagement, People & Organization Insight, Organizational Diagnostics, Learning and Leadership Development.\n\nFollowing her passion for leadership and talent development, she also has been a career development advisor and a lecturer in Diversity and Inclusion for International MBA students at Luiss Business School in Rome, Italy.\n\nShe joined McKinsey & Company in 2013 as an Expert Consultant in the Organization Practice where she specialized in Transformational Change, Diversity and Inclusion, Human Capital and Leadership Development; Currently she is responsible for the Leadership Development and Learning of their most Senior Partners and is Client Advisor. Over her career, she has been based in the Netherlands, Belgium, Italy and the UK.\n\nShe holds a B.C. in International Business & Languages (Avans University of Applied Sciences), a Cum Laude M.A in Organization Studies (Tilburg University) and has complemented her business experience with related applied academic research through her Ph.D. study in Economics & Business at Groningen University.\n\nNext to her role at McKinsey & Company, she also an Assistant Professor at the School of Governance of Tilburg University. In her current research she focuses on Authentic Confidence and Emotional Flexibility in leaders and organizations. Together with other senior business professionals, she founded ‘The Confidence Project’ in January 2016 to raise awareness on this topic in the professional context.\n\nLast but not least, she is a very passionate and proud member of the Supervisory Board of\nSave the Children in the Netherlands.\n\nShe has (Co-)authored a number of scientific and practitioner books and articles.\n\nDr. Nick van Dam and Dr. Jacqui Brassey are continuously developing, through their research and experience, the following diagnostic instruments to help you grow and develop:\n\n• MINDSETS FOR LIFELONG LEARNERS and\n• AUTHENTIC PROFESSIONAL CONFIDENCE.\n\nTake our free assessments at: www.reachingyourpotential.org",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**DR. JACQUI BRASSEY**\n\nJacqui considers herself very fortunate to be a true Lifelong Learner – throughout her professional career she has been working on quite a few ‘Greenfield’ projects, building a strong ‘M-profile’ within her overall field of expertise as ‘practitioner-academic’, living and working in multiple countries experiencing many different cultures and organizations.\n\nShe brings about 20 years of professional experience in Human Resources (Org. Effectiveness, Leadership Development and Learning, Employee Engagement, Diversity & Inclusion and HR Analytics), Customer Development, Sustainability (NGO) and Academia.\n\nA large part of her business career she has been in global HR Expertise roles at Unilever, leading Employee Engagement, People & Organization Insight, Organizational Diagnostics, Learning and Leadership Development.\n\nFollowing her passion for leadership and talent development, she also has been a career development advisor and a lecturer in Diversity and Inclusion for International MBA students at Luiss Business School in Rome, Italy.\n\nShe joined McKinsey & Company in 2013 as an Expert Consultant in the Organization Practice where she specialized in Transformational Change, Diversity and Inclusion, Human Capital and Leadership Development; Currently she is responsible for the Leadership Development and Learning of their most Senior Partners and is Client Advisor. Over her career, she has been based in the Netherlands, Belgium, Italy and the UK.\n\nShe holds a B.C. in International Business & Languages (Avans University of Applied Sciences), a Cum Laude M.A in Organization Studies (Tilburg University) and has complemented her business experience with related applied academic research through her Ph.D. study in Economics & Business at Groningen University.\n\nNext to her role at McKinsey & Company, she also an Assistant Professor at the School of Governance of Tilburg University. In her current research she focuses on Authentic Confidence and Emotional Flexibility in leaders and organizations. Together with other senior business professionals, she founded ‘The Confidence Project’ in January 2016 to raise awareness on this topic in the professional context.\n\nLast but not least, she is a very passionate and proud member of the Supervisory Board of\nSave the Children in the Netherlands.\n\nShe has (Co-)authored a number of scientific and practitioner books and articles.\n\nDr. Nick van Dam and Dr. Jacqui Brassey are continuously developing, through their research and experience, the following diagnostic instruments to help you grow and develop:\n\n• MINDSETS FOR LIFELONG LEARNERS and\n• AUTHENTIC PROFESSIONAL CONFIDENCE.\n\nTake our free assessments at: www.reachingyourpotential.org",
+      "id": [
+        "255483"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:255484]\n[▼ch-3]\n[#LIFELONG LEARNING]\n[%1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "255484"
+      ],
+      "anchor": "ch-3",
+      "title": "LIFELONG LEARNING"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255485]\nOrganizations around the world are experiencing sweeping, rapid changes in what they do, how they do it, and even why they do it. Mastering current and future realities requires deep learning capabilities. The people who will thrive and flourish in the 21st century are those who embrace lifelong learning and are motivated to up-skill and re-skill themselves during their lifetime.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Organizations around the world are experiencing sweeping, rapid changes in what they do, how they do it, and even why they do it. Mastering current and future realities requires deep learning capabilities. The people who will thrive and flourish in the 21st century are those who embrace lifelong learning and are motivated to up-skill and re-skill themselves during their lifetime.",
+      "id": [
+        "255485"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255486]\nLifelong learning can be defined as: __lifelong, voluntary and self-motivated pursuit of knowledge for personal or professional reasons__. The overall aim of learning is to improve knowledge, skills and competencies.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Lifelong learning can be defined as: __lifelong, voluntary and self-motivated pursuit of knowledge for personal or professional reasons__. The overall aim of learning is to improve knowledge, skills and competencies.",
+      "id": [
+        "255486"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255487]\nOne motivator for a need to keep learning are the changes in pension policies around the world caused by a continuing growth in life expectancy. Existing data suggests that since 1840 there has been an increase in life expectancy of three months for every year.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "One motivator for a need to keep learning are the changes in pension policies around the world caused by a continuing growth in life expectancy. Existing data suggests that since 1840 there has been an increase in life expectancy of three months for every year.",
+      "id": [
+        "255487"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255488]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k1_1.png]\n[@caption:**FIGURE 1:** OLDEST AGE AT WHICH 50% OF BABIES BORN IN 2007 ARE PREDICTED TO STILL BE ALIVE\nSource: Gratton, 2016.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption:**FIGURE 1:** OLDEST AGE AT WHICH 50% OF BABIES BORN IN 2007 ARE PREDICTED TO STILL BE ALIVE\nSource: Gratton, 2016.]",
+      "id": [
+        "255488"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k1_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption:**FIGURE 1:** OLDEST AGE AT WHICH 50% OF BABIES BORN IN 2007 ARE PREDICTED TO STILL BE ALIVE"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 22,
+        "errorLine": "Source: Gratton, 2016.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255489]\nNick van Dam’s son, Yannick, who was born in 1997, has a 50 percent probability of reaching the age of 100 or 101. The factors behind the increase of life expectancy are: better health; earlier diagnoses; better nutrition; better medical care; better education; and tackling the diseases of old age.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Nick van Dam’s son, Yannick, who was born in 1997, has a 50 percent probability of reaching the age of 100 or 101. The factors behind the increase of life expectancy are: better health; earlier diagnoses; better nutrition; better medical care; better education; and tackling the diseases of old age.",
+      "id": [
+        "255489"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:255490]\n[▼ch-4]\n[#INDIVIDUALS: BECOME LIFELONG LEARNERS]\n[%2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "255490"
+      ],
+      "anchor": "ch-4",
+      "title": "INDIVIDUALS: BECOME LIFELONG LEARNERS"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255491]\nStudies show that people who maintain their ability to learn, outpace others professionally. When people are learning they feel the effects of dopamine (which is a neurotransmitter) in their brain which give them a good feeling and makes them want to engage in more of these learning experiences. It is noticed that people flourish when they learn and connect with other people.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Studies show that people who maintain their ability to learn, outpace others professionally. When people are learning they feel the effects of dopamine (which is a neurotransmitter) in their brain which give them a good feeling and makes them want to engage in more of these learning experiences. It is noticed that people flourish when they learn and connect with other people.",
+      "id": [
+        "255491"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255492]\nLifelong learning starts and ends with the individual. In the following section we will introduce and discuss six distinctive mindsets and practices which support people in becoming lifelong learners.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Lifelong learning starts and ends with the individual. In the following section we will introduce and discuss six distinctive mindsets and practices which support people in becoming lifelong learners.",
+      "id": [
+        "255492"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255493]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k2_1.png]\n[@caption:**FIGURE 2:** MINDSETS FOR LIFELONG LEARNERS\nSource: van Dam, 2016.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption:**FIGURE 2:** MINDSETS FOR LIFELONG LEARNERS\nSource: van Dam, 2016.]",
+      "id": [
+        "255493"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k2_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption:**FIGURE 2:** MINDSETS FOR LIFELONG LEARNERS"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 22,
+        "errorLine": "Source: van Dam, 2016.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:255494]\n[▼ch-5]\n[#MINDSET: FOCUS ON GROWTH]\n[%3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "255494"
+      ],
+      "anchor": "ch-5",
+      "title": "MINDSET: FOCUS ON GROWTH"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255495]\nLearning starts and ends with the individual, and this takes us to an important question: __Is intelligence static and fixed at birth or can it be developed?__ One way to answer this question is to compare people’s Intelligence Quotients (IQ) test scores over a longer period of time.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Learning starts and ends with the individual, and this takes us to an important question: __Is intelligence static and fixed at birth or can it be developed?__ One way to answer this question is to compare people’s Intelligence Quotients (IQ) test scores over a longer period of time.",
+      "id": [
+        "255495"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255496]\nAn illustration of this is a research study which started in 1932. The entire population of Scottish 11-year olds (87,498) children took an IQ test which was repeated over 60 years later and included 500 people of the original population.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "An illustration of this is a research study which started in 1932. The entire population of Scottish 11-year olds (87,498) children took an IQ test which was repeated over 60 years later and included 500 people of the original population.",
+      "id": [
+        "255496"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255497]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_development_staying_relevant_k3_3.png]\n[@caption:**FIGURE 3:** IQ TEST SCOTTISH PEOPLE AT AGE 11 AND 80\nSource: Deary, Whalley, Mackintoch et al., 2011.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption:**FIGURE 3:** IQ TEST SCOTTISH PEOPLE AT AGE 11 AND 80\nSource: Deary, Whalley, Mackintoch et al., 2011.]",
+      "id": [
+        "255497"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_development_staying_relevant_k3_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption:**FIGURE 3:** IQ TEST SCOTTISH PEOPLE AT AGE 11 AND 80"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 48,
+        "errorLine": "Source: Deary, Whalley, Mackintoch et al., 2011.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255498]\nThe vertical line in the visual shows the perfect positive (1.0) correlation between IQ scores at age of 11 compared with IQ scores at 80. The results show a high (0.66), but not a perfect, positive correlation. All people who are plotted above the line have increased their IQ during their lifetime, versus the people plotted below the line who have experienced a decline in their IQ test scores.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The vertical line in the visual shows the perfect positive (1.0) correlation between IQ scores at age of 11 compared with IQ scores at 80. The results show a high (0.66), but not a perfect, positive correlation. All people who are plotted above the line have increased their IQ during their lifetime, versus the people plotted below the line who have experienced a decline in their IQ test scores.",
+      "id": [
+        "255498"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255499]\nThere are many possible reasons for this, including health-related reasons like dementia. However on average, individual scores at age 80 are much higher than scores at age 11.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "There are many possible reasons for this, including health-related reasons like dementia. However on average, individual scores at age 80 are much higher than scores at age 11.",
+      "id": [
+        "255499"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255500]\nIn 2008, researchers asked the 10 best chess players in the world to take an IQ test. They discovered that 3 out of 10 had a below-average IQ. Since playing chess at the top level in the world is undoubtedly commonly associated with highest levels of IQ – they wondered how this was possible. They learned that those people had played between 10.000 and 50.000 hours of chess. Many studies have confirmed that it is not necessarily intelligence that makes people experts but it is all about effort and practice (= hard work). The most successful people devote the most hours to deliberate practice, practice that focuses on tasks beyond one’s current level of competence and comfort. This means continually observing results of your practice and making appropriate adjustments, and doing that for hours every day.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In 2008, researchers asked the 10 best chess players in the world to take an IQ test. They discovered that 3 out of 10 had a below-average IQ. Since playing chess at the top level in the world is undoubtedly commonly associated with highest levels of IQ – they wondered how this was possible. They learned that those people had played between 10.000 and 50.000 hours of chess. Many studies have confirmed that it is not necessarily intelligence that makes people experts but it is all about effort and practice (= hard work). The most successful people devote the most hours to deliberate practice, practice that focuses on tasks beyond one’s current level of competence and comfort. This means continually observing results of your practice and making appropriate adjustments, and doing that for hours every day.",
+      "id": [
+        "255500"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255501]\nIn summary, many studies have confirmed that intelligence can definitely be developed and that there are __no limitations__ in what people can learn throughout their lives. According to the psychologist Jesper Mogensen, __“our brain is like a muscle that gets stronger with use and that learning prompts neurons in the brain to grow new connections.”__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In summary, many studies have confirmed that intelligence can definitely be developed and that there are __no limitations__ in what people can learn throughout their lives. According to the psychologist Jesper Mogensen, __“our brain is like a muscle that gets stronger with use and that learning prompts neurons in the brain to grow new connections.”__",
+      "id": [
+        "255501"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255502]\nOver the last 30 years, Carol Dweck, a psychologist from Stanford University, has studied learners intensively. She concluded that people’s mindset about learning will have a significant impact on how much they will learn. Dweck has defined a mindset as: __“how people view their own intelligence and abilities to learn.”__ This view will affect the effort put forward, the risk taken, how failures and criticism are perceived and willingness to accept and learn from these.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Over the last 30 years, Carol Dweck, a psychologist from Stanford University, has studied learners intensively. She concluded that people’s mindset about learning will have a significant impact on how much they will learn. Dweck has defined a mindset as: __“how people view their own intelligence and abilities to learn.”__ This view will affect the effort put forward, the risk taken, how failures and criticism are perceived and willingness to accept and learn from these.",
+      "id": [
+        "255502"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255503]\nDweck differentiates mindsets into __fixed mindsets__ and __growth mindsets__.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dweck differentiates mindsets into __fixed mindsets__ and __growth mindsets__.",
+      "id": [
+        "255503"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255504]\nPeople with fixed mindsets believe that their potential is fixed based on their genes or heritage, socio-economic background, or opportunities available to them. Those people tell themselves and others, e.g.: __“I can’t do public speaking so I should avoid it”__ or __“I am not a good learner and therefore I should not take courses offered by my company.”__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "People with fixed mindsets believe that their potential is fixed based on their genes or heritage, socio-economic background, or opportunities available to them. Those people tell themselves and others, e.g.: __“I can’t do public speaking so I should avoid it”__ or __“I am not a good learner and therefore I should not take courses offered by my company.”__",
+      "id": [
+        "255504"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255505]\nPeople with a growth mindset believe that their true potential is unknown because it is impossible to foresee what can happen over the years as a result of passion, effort and practice. They love challenges because they see this as an opportunity for tremendous personal growth.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "People with a growth mindset believe that their true potential is unknown because it is impossible to foresee what can happen over the years as a result of passion, effort and practice. They love challenges because they see this as an opportunity for tremendous personal growth.",
+      "id": [
+        "255505"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255506]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k3_2.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "255506"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k3_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255507]\nAs a result – people with a fixed mindset may plateau early and achieve less of their full potential, whereas people with a growth mindset reach even higher levels of achievement.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "As a result – people with a fixed mindset may plateau early and achieve less of their full potential, whereas people with a growth mindset reach even higher levels of achievement.",
+      "id": [
+        "255507"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:255508]\nDweck suggests that minds are context specific. For example a person can have a growth mindset in one area and a fixed mindset in another area. Nearly everyone has at least one fixed mindset but there is a lot one can do about this, including:\n\nBecome aware of fixed mindsets and understand what has triggered this.\n\n• Learn to hear and reject the fixed mindset voice.\n• Recognize that there is a choice.\n• Refocus with a growth mindset voice\n• Take growth mindset actions.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Dweck suggests that minds are context specific. For example a person can have a growth mindset in one area and a fixed mindset in another area. Nearly everyone has at least one fixed mindset but there is a lot one can do about this, including:\n\nBecome aware of fixed mindsets and understand what has triggered this.\n\n• Learn to hear and reject the fixed mindset voice.\n• Recognize that there is a choice.\n• Refocus with a growth mindset voice\n• Take growth mindset actions.",
+      "id": [
+        "255508"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255509]\nIn conclusion, in order to become lifelong learners – people need to focus on a growth mindset.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In conclusion, in order to become lifelong learners – people need to focus on a growth mindset.",
+      "id": [
+        "255509"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:255510]\n[▼ch-6]\n[#MINDSET: BECOME A SERIAL MASTER]\n[%4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "255510"
+      ],
+      "anchor": "ch-6",
+      "title": "MINDSET: BECOME A SERIAL MASTER"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255511]\nMany forces are currently having an impact on employability including: digitization; automation; robotization; globalization; demographic changes; legislation; changing relationship between employer and employee; competitive forces; climate changes; complexity of work; etc., which makes it challenging to predict the future of work.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Many forces are currently having an impact on employability including: digitization; automation; robotization; globalization; demographic changes; legislation; changing relationship between employer and employee; competitive forces; climate changes; complexity of work; etc., which makes it challenging to predict the future of work.",
+      "id": [
+        "255511"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255512]\nAlthough a number of trends in workforce can be identified. A 2016 McKinsey research report concluded that 20–30 percent of the working age population in Europe and the US engage in some kind of independent work. US employers indicate that they plan to increase the number of contingent or part-time workers. Sociologist Richard Greenwald estimates that up to half of all workers in the US may become freelancers in the next decade.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Although a number of trends in workforce can be identified. A 2016 McKinsey research report concluded that 20–30 percent of the working age population in Europe and the US engage in some kind of independent work. US employers indicate that they plan to increase the number of contingent or part-time workers. Sociologist Richard Greenwald estimates that up to half of all workers in the US may become freelancers in the next decade.",
+      "id": [
+        "255512"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255513]\nIn the 19th century, work was done by craftsman from home and by people in agriculture. Workers (skilled and unskilled) moved to factories at the end of the 19th and early 20th century to work on assembly lines. The work was broken down in smaller tasks and could be done with an unskilled workforce. Over the last 80 years organizations have employed more and more non-specialist managers who understood the culture; how decisions were made; and had unique insights on how their company functioned. Their skills and competencies where unique to the organization and this worked well because they were rewarded with a lifetime of employment.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In the 19th century, work was done by craftsman from home and by people in agriculture. Workers (skilled and unskilled) moved to factories at the end of the 19th and early 20th century to work on assembly lines. The work was broken down in smaller tasks and could be done with an unskilled workforce. Over the last 80 years organizations have employed more and more non-specialist managers who understood the culture; how decisions were made; and had unique insights on how their company functioned. Their skills and competencies where unique to the organization and this worked well because they were rewarded with a lifetime of employment.",
+      "id": [
+        "255513"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255514]\nIn her book __The Shift__, London Business School professor Lynda Gratton argues that the age of the __shallow generalist__, who knows a little about lots of different topics, is over. Being a __jack of all trades and master of none__ means jack (little or nothing) in a world of Wikipedia with instant accessible information at our fingertips. It is not a surprise that the number of managers with __generic expertise__ has declined in many countries around the world.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In her book __The Shift__, London Business School professor Lynda Gratton argues that the age of the __shallow generalist__, who knows a little about lots of different topics, is over. Being a __jack of all trades and master of none__ means jack (little or nothing) in a world of Wikipedia with instant accessible information at our fingertips. It is not a surprise that the number of managers with __generic expertise__ has declined in many countries around the world.",
+      "id": [
+        "255514"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255515]\nThe 21st century depends on people’s ability to build intellectual capital as this will be the foundation for value. People need to master multiple domains over the lifespan of their careers and become serial masters. We suggest that a __T-profile or T-Shape__, in which people develop deep expertise in one discipline early in their career and supplement this with on-the-job development of integrative competencies, is not sustainable.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The 21st century depends on people’s ability to build intellectual capital as this will be the foundation for value. People need to master multiple domains over the lifespan of their careers and become serial masters. We suggest that a __T-profile or T-Shape__, in which people develop deep expertise in one discipline early in their career and supplement this with on-the-job development of integrative competencies, is not sustainable.",
+      "id": [
+        "255515"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255516]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k4_1.png]\n[@caption: **FIGURE 4:** TRADITIONAL T-PROFILE KNOWLEDGE WORKER\nSource: Guest, 1991.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption: **FIGURE 4:** TRADITIONAL T-PROFILE KNOWLEDGE WORKER\nSource: Guest, 1991.]",
+      "id": [
+        "255516"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k4_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption: **FIGURE 4:** TRADITIONAL T-PROFILE KNOWLEDGE WORKER"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 20,
+        "errorLine": "Source: Guest, 1991.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255517]\nGenerations who might live over 100 years and won’t retire until their late 70s or early 80s, need to develop different deep areas of expertise during their life supplemented with targeted on the-job-development.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Generations who might live over 100 years and won’t retire until their late 70s or early 80s, need to develop different deep areas of expertise during their life supplemented with targeted on the-job-development.",
+      "id": [
+        "255517"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255518]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k4_2.png]\n[@caption:**FIGURE 5:** M-PROFILE OF THE NEW KNOWLEDGE WORKER\nSource: van Dam, 2016]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption:**FIGURE 5:** M-PROFILE OF THE NEW KNOWLEDGE WORKER\nSource: van Dam, 2016]",
+      "id": [
+        "255518"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k4_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption:**FIGURE 5:** M-PROFILE OF THE NEW KNOWLEDGE WORKER"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 21,
+        "errorLine": "Source: van Dam, 2016]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255519]\nFor example – you may start in the workforce as a journalist with a master’s degree in journalism. Later on you might specialize in financial journalism and pursue a master’s degree in Business Economics during your thirties. And you may continue to develop by taking various in-depth masterclasses on related topics, such as digitization, etc., throughout your 40s, 50s and 60s.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "For example – you may start in the workforce as a journalist with a master’s degree in journalism. Later on you might specialize in financial journalism and pursue a master’s degree in Business Economics during your thirties. And you may continue to develop by taking various in-depth masterclasses on related topics, such as digitization, etc., throughout your 40s, 50s and 60s.",
+      "id": [
+        "255519"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255520]\nAchieving excellence in any field requires developing higher levels of expertise. Willyerd and Mistick have defined five levels of expertise:\n\n•. __Initiate__ : Minimal or no exposure.\n•. __Novice__ : Some introductory instruction; may have taken formal courses, but little applied experience.\n•. __Competent__ : Actively learning and working in the field; usually has five or fewer years’ experience; in complex fields may take up to 12 years; relies on others for complex problem solving advice.\n•. __Professional__ : Able to work with little or no direction at a high level; recognized with awards and recognition for outstanding contribution in the field; often has assumed substantial responsibility for decision making.\n•. __Expert or Master__ : Highly regarded by others; can handle difficult, rare situations; skilled across subdomains; offers ground breaking solutions; rarely has less than a decade working in the field.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Achieving excellence in any field requires developing higher levels of expertise. Willyerd and Mistick have defined five levels of expertise:\n\n•. __Initiate__ : Minimal or no exposure.\n•. __Novice__ : Some introductory instruction; may have taken formal courses, but little applied experience.\n•. __Competent__ : Actively learning and working in the field; usually has five or fewer years’ experience; in complex fields may take up to 12 years; relies on others for complex problem solving advice.\n•. __Professional__ : Able to work with little or no direction at a high level; recognized with awards and recognition for outstanding contribution in the field; often has assumed substantial responsibility for decision making.\n•. __Expert or Master__ : Highly regarded by others; can handle difficult, rare situations; skilled across subdomains; offers ground breaking solutions; rarely has less than a decade working in the field.",
+      "id": [
+        "255520"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255521]\nRelevant skills have become the currency in the workplace. It is obvious that contractors only get work due to the fact that they have deep skillsets and expertise for jobs which are in high demand. People need to develop these skillsets that create value and are noticed by others. Because these skillsets are rare, the demand for these skills exceeds supply, and it is difficult for others to develop or imitate this.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Relevant skills have become the currency in the workplace. It is obvious that contractors only get work due to the fact that they have deep skillsets and expertise for jobs which are in high demand. People need to develop these skillsets that create value and are noticed by others. Because these skillsets are rare, the demand for these skills exceeds supply, and it is difficult for others to develop or imitate this.",
+      "id": [
+        "255521"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255522]\nIn conclusion, the 21st Century worker must develop new expertise and become a serial master. This requires a continuous reflection and evaluation of personal skills due to the fact that certain skillsets have a __sell by date__ and other skillsets become more valued.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In conclusion, the 21st Century worker must develop new expertise and become a serial master. This requires a continuous reflection and evaluation of personal skills due to the fact that certain skillsets have a __sell by date__ and other skillsets become more valued.",
+      "id": [
+        "255522"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:255523]\n[▼ch-7]\n[#MINDSET:  STRETCH]\n[%5]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "255523"
+      ],
+      "anchor": "ch-7",
+      "title": "MINDSET:  STRETCH"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255524]\nAs discussed, the world is changing fast and it is mandatory to continue developing new competencies. Many researchers have suggested that learning only takes place outside of people’s so called comfort zone, it happens when they stretch themselves. The comfort zone can be defined as __“a behavioral space where people’s activities and behaviors fit a routine and pattern that minimize stress and risk, which provide mental security and typically steady performance”__. People who stay in their comfort zone hold themselves back instead of challenging themselves to try new things and grow.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "As discussed, the world is changing fast and it is mandatory to continue developing new competencies. Many researchers have suggested that learning only takes place outside of people’s so called comfort zone, it happens when they stretch themselves. The comfort zone can be defined as __“a behavioral space where people’s activities and behaviors fit a routine and pattern that minimize stress and risk, which provide mental security and typically steady performance”__. People who stay in their comfort zone hold themselves back instead of challenging themselves to try new things and grow.",
+      "id": [
+        "255524"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255525]\nTasks outside of people’s comfort zone move people into their __learning zone__, where they acquire new knowledge, develop and practice new skills. After a while people develop a new level of proficiency, and their learning zone becomes part of their comfort zone. At this stage people can pursue developing new skills by moving into a new learning zone.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Tasks outside of people’s comfort zone move people into their __learning zone__, where they acquire new knowledge, develop and practice new skills. After a while people develop a new level of proficiency, and their learning zone becomes part of their comfort zone. At this stage people can pursue developing new skills by moving into a new learning zone.",
+      "id": [
+        "255525"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255526]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k5_1.png]\n[@caption:**FIGURE 6:** COMFORT AND LEARNING ZONE\nSource: Yerkes & Dodson.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption:**FIGURE 6:** COMFORT AND LEARNING ZONE\nSource: Yerkes & Dodson.]",
+      "id": [
+        "255526"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k5_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption:**FIGURE 6:** COMFORT AND LEARNING ZONE"
+      },
+      {
+        "message": "Unexpected input ' Dodson.]'",
+        "line": 5,
+        "column": 24,
+        "errorLine": "Source: Yerkes & Dodson.]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 24,
+        "errorLine": "Source: Yerkes & Dodson.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255527]\nPeople are exposed to risk and more stress when they are executing tasks in the learning zone. Research on comfort zones from the Harvard Psychologists Robert Yerkes and John Dodson suggest that there is a strong relationship between an increase in stress and the enhancement of performance (__the Yerkes-Dodson Law__). Initially, executing new tasks will increase (good) stress which will lead to a higher level of performance. However, an increase of stress beyond a certain level can cause anxiety (bad stress) and will have a negative impact on performance.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "People are exposed to risk and more stress when they are executing tasks in the learning zone. Research on comfort zones from the Harvard Psychologists Robert Yerkes and John Dodson suggest that there is a strong relationship between an increase in stress and the enhancement of performance (__the Yerkes-Dodson Law__). Initially, executing new tasks will increase (good) stress which will lead to a higher level of performance. However, an increase of stress beyond a certain level can cause anxiety (bad stress) and will have a negative impact on performance.",
+      "id": [
+        "255527"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255528]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k5_2.png]\n[@caption:**FIGURE 7:** YERKES – DODSON LAW\nSource: Yerkes & Dodson, 1908.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption:**FIGURE 7:** YERKES – DODSON LAW\nSource: Yerkes & Dodson, 1908.]",
+      "id": [
+        "255528"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k5_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption:**FIGURE 7:** YERKES – DODSON LAW"
+      },
+      {
+        "message": "Unexpected input ' Dodson, 1908.]'",
+        "line": 5,
+        "column": 30,
+        "errorLine": "Source: Yerkes & Dodson, 1908.]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 30,
+        "errorLine": "Source: Yerkes & Dodson, 1908.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255529]\nTheir research shows that performance will increase with a moderate amount of stress but if stress gets too high, performance will suffer. Therefore, it is important to expand one’s comfort zone with the right new tasks and at the right pace, which differs by person.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Their research shows that performance will increase with a moderate amount of stress but if stress gets too high, performance will suffer. Therefore, it is important to expand one’s comfort zone with the right new tasks and at the right pace, which differs by person.",
+      "id": [
+        "255529"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255530]\nPeople have opportunities to __stretch__ themselves while doing their work but it depends on the kind of work that they have been assigned.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "People have opportunities to __stretch__ themselves while doing their work but it depends on the kind of work that they have been assigned.",
+      "id": [
+        "255530"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255531]\nNew work assignments can be assessed based on two criteria:\n\n•. To what extent the new tasks are outside their comfort zone\n•. To what extent the new tasks are relevant to one’s development for a (potential) future role",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "New work assignments can be assessed based on two criteria:\n\n•. To what extent the new tasks are outside their comfort zone\n•. To what extent the new tasks are relevant to one’s development for a (potential) future role",
+      "id": [
+        "255531"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255532]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k5_3.png]\n[@caption:**FIGURE 8:** ASSESSING WORK ASSIGNMENTS\nSource: van Dam, revised 2016.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption:**FIGURE 8:** ASSESSING WORK ASSIGNMENTS\nSource: van Dam, revised 2016.]",
+      "id": [
+        "255532"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k5_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption:**FIGURE 8:** ASSESSING WORK ASSIGNMENTS"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 30,
+        "errorLine": "Source: van Dam, revised 2016.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:255533]\n• __Skill Growth__: work that challenges people to complete tasks outside of their comfort zone and can develop them for a potential future role.\n• __Skill Enhancement__: work that places people outside their comfort zone. The new tasks are part of the scope of their existing role and therefore doesn’t provide the opportunity to develop them for a different future role. For example, an administrative assistant learns to work with new technologies to support his/her daily work. This is important for the existing role but doesn’t position the person for a very different role.\n• __Skill Deepening__: work that is within peoples’ comfort zone but can be relevant in a future role. This is typically a deepening of an existing skillset. For example, a computer programmer deepens his/her programming skills and could be promoted in the future as senior computer specialist.\n• __Skills Freeze__: work is completely in one’s comfort zone and can be done almost on autopilot. This work doesn’t help the person to get ready for a potential future role.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• __Skill Growth__: work that challenges people to complete tasks outside of their comfort zone and can develop them for a potential future role.\n• __Skill Enhancement__: work that places people outside their comfort zone. The new tasks are part of the scope of their existing role and therefore doesn’t provide the opportunity to develop them for a different future role. For example, an administrative assistant learns to work with new technologies to support his/her daily work. This is important for the existing role but doesn’t position the person for a very different role.\n• __Skill Deepening__: work that is within peoples’ comfort zone but can be relevant in a future role. This is typically a deepening of an existing skillset. For example, a computer programmer deepens his/her programming skills and could be promoted in the future as senior computer specialist.\n• __Skills Freeze__: work is completely in one’s comfort zone and can be done almost on autopilot. This work doesn’t help the person to get ready for a potential future role.",
+      "id": [
+        "255533"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255534]\nFinally, we would like to introduce the so-called __S-curve model__ which is a career model that can be used to drive reflection on personal growth and development. The S-Curve guides people on the timing of personal renewal. This model is used by McKinsey as an instrument to support the learning and development agenda, the performance dialogue, as well as the career progression of its consultants and partners globally. The S-curve model was developed in the 60s and shows how, why, and at what rate ideas and products spread throughout societies.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Finally, we would like to introduce the so-called __S-curve model__ which is a career model that can be used to drive reflection on personal growth and development. The S-Curve guides people on the timing of personal renewal. This model is used by McKinsey as an instrument to support the learning and development agenda, the performance dialogue, as well as the career progression of its consultants and partners globally. The S-curve model was developed in the 60s and shows how, why, and at what rate ideas and products spread throughout societies.",
+      "id": [
+        "255534"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255535]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k5_4.png]\n[@caption:**FIGURE 9:** S-CURVE\nSource: Johnson, 2015.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption:**FIGURE 9:** S-CURVE\nSource: Johnson, 2015.]",
+      "id": [
+        "255535"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k5_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption:**FIGURE 9:** S-CURVE"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 22,
+        "errorLine": "Source: Johnson, 2015.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255536]\nWhen people try something new such as starting a new job, or receiving a promotion, or making a lateral move, they start their next S-curve and are faced with many new demands in the role such as leadership, colleagues, stakeholders, processes, information systems, organization culture, expectations, etc. At the beginning of the new curve, people are going through a steep learning curve in which they rapidly increase their knowledge and skills. Their progress and the business impact of their performance during this first stage of the S-curve is limited.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "When people try something new such as starting a new job, or receiving a promotion, or making a lateral move, they start their next S-curve and are faced with many new demands in the role such as leadership, colleagues, stakeholders, processes, information systems, organization culture, expectations, etc. At the beginning of the new curve, people are going through a steep learning curve in which they rapidly increase their knowledge and skills. Their progress and the business impact of their performance during this first stage of the S-curve is limited.",
+      "id": [
+        "255536"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255537]\nThis stage reaches an inflection point where people’s understanding, competence and confidence in the role suddenly accelerate very quickly and in which they have progressive impact on the business.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This stage reaches an inflection point where people’s understanding, competence and confidence in the role suddenly accelerate very quickly and in which they have progressive impact on the business.",
+      "id": [
+        "255537"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255538]\nAfter being in a role for a certain time, people reach the upper flat part of the S-curve. At this stage, people have lost the excitement of the challenges of the role, personal learning and development has stalled, tasks and activities have become habits or are completed automatically, boredom has kicked in and their impact on the business has slowed down significantly.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "After being in a role for a certain time, people reach the upper flat part of the S-curve. At this stage, people have lost the excitement of the challenges of the role, personal learning and development has stalled, tasks and activities have become habits or are completed automatically, boredom has kicked in and their impact on the business has slowed down significantly.",
+      "id": [
+        "255538"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255539]\nIf people continue to stay in a role where they are no longer emotionally charged and motivated, there is a risk that they start doing a poor job, and as a consequence might be replaced.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If people continue to stay in a role where they are no longer emotionally charged and motivated, there is a risk that they start doing a poor job, and as a consequence might be replaced.",
+      "id": [
+        "255539"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255540]\nThe S-model suggests that people need to reflect on where they are in their S-curve and determine when it is time to move on and launch their new S-Curve, __or catch the next wave__.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The S-model suggests that people need to reflect on where they are in their S-curve and determine when it is time to move on and launch their new S-Curve, __or catch the next wave__.",
+      "id": [
+        "255540"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:255541]\nSeven variables have been identified that can speed up or slow down the movement of individuals along the S-curve, including:\n\n• Take the right risks\n• Play to your distinctive strengths\n• Embrace constraints\n• Battle entitlement\n• Step back to grow\n• Give failure its due\n• Be discovery-driven",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Seven variables have been identified that can speed up or slow down the movement of individuals along the S-curve, including:\n\n• Take the right risks\n• Play to your distinctive strengths\n• Embrace constraints\n• Battle entitlement\n• Step back to grow\n• Give failure its due\n• Be discovery-driven",
+      "id": [
+        "255541"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255542]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k5_5.png]\n[@caption:**FIGURE 10:** VARIABLES THAT IMPACT MOVEMENT ON THE S-CURVE\nSource: Johnson, 2015.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption:**FIGURE 10:** VARIABLES THAT IMPACT MOVEMENT ON THE S-CURVE\nSource: Johnson, 2015.]",
+      "id": [
+        "255542"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k5_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption:**FIGURE 10:** VARIABLES THAT IMPACT MOVEMENT ON THE S-CURVE"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 22,
+        "errorLine": "Source: Johnson, 2015.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255543]\nFinally, a number of barriers may exist that might hinder people from stretching and as a consequence prevent them from unlocking their full potential. For example a low level of self-confidence will have a huge negative impact on people’s ability to grow or learn. Low confidence is caused by a combination of harsh self-judgement, excessive expectations, a preoccupation with fear, or through a lack of experience or skills. The key to authentic confidence is building __emotional flexibility__ which can be increased by practicing dimensions from an __emotional flexibility model__ based on ACT (Acceptance and Commitment Theory based on work from Steven C. Hayes et al.) which includes: mindfulness; purpose and values; committed action; self in context/self-compassion; defusion; and acceptance.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Finally, a number of barriers may exist that might hinder people from stretching and as a consequence prevent them from unlocking their full potential. For example a low level of self-confidence will have a huge negative impact on people’s ability to grow or learn. Low confidence is caused by a combination of harsh self-judgement, excessive expectations, a preoccupation with fear, or through a lack of experience or skills. The key to authentic confidence is building __emotional flexibility__ which can be increased by practicing dimensions from an __emotional flexibility model__ based on ACT (Acceptance and Commitment Theory based on work from Steven C. Hayes et al.) which includes: mindfulness; purpose and values; committed action; self in context/self-compassion; defusion; and acceptance.",
+      "id": [
+        "255543"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255544]\nWharton professor Peter Cappelli suggests that companies invest in people’s development when they are new in their role. As a result the productivity of people will grow and the value of human capital will increase. However, if the costs of labour grow out of line with growth in productivity – companies will experience losses and try to offer lower salaries or replace people with lower cost individuals.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wharton professor Peter Cappelli suggests that companies invest in people’s development when they are new in their role. As a result the productivity of people will grow and the value of human capital will increase. However, if the costs of labour grow out of line with growth in productivity – companies will experience losses and try to offer lower salaries or replace people with lower cost individuals.",
+      "id": [
+        "255544"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255545]\nIndividuals will consider changing jobs if their human capital value exceeds the level of compensation or choose to stay in a role if their human capital value in the market is lower than their current compensation level.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Individuals will consider changing jobs if their human capital value exceeds the level of compensation or choose to stay in a role if their human capital value in the market is lower than their current compensation level.",
+      "id": [
+        "255545"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255546]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k5_6.png]\n[@caption:**FIGURE 11:** COSTS AND PRODUCTIVITY WITHIN AN S-CURVE\nSource: Cappelli, 2013.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption:**FIGURE 11:** COSTS AND PRODUCTIVITY WITHIN AN S-CURVE\nSource: Cappelli, 2013.]",
+      "id": [
+        "255546"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k5_6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption:**FIGURE 11:** COSTS AND PRODUCTIVITY WITHIN AN S-CURVE"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 23,
+        "errorLine": "Source: Cappelli, 2013.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:255547]\n[▼ch-8]\n[#MINDSET: BUILD YOUR PERSONAL BRAND & NETWORK]\n[%6]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "6",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "255547"
+      ],
+      "anchor": "ch-8",
+      "title": "MINDSET: BUILD YOUR PERSONAL BRAND & NETWORK"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255548]\nHaving a brand that defines a person’s best elements and identifies what differentiates them from others in a positive way, is key to achieving career goals and aspirations.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Having a brand that defines a person’s best elements and identifies what differentiates them from others in a positive way, is key to achieving career goals and aspirations.",
+      "id": [
+        "255548"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255549]\nEverybody has a professional brand based on the impressions they leave behind. Brands communicate the value a person offers. Key elements of a personal brand include: authenticity; clear value proposition; your story; expertise; consistency; visibility; and connections.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Everybody has a professional brand based on the impressions they leave behind. Brands communicate the value a person offers. Key elements of a personal brand include: authenticity; clear value proposition; your story; expertise; consistency; visibility; and connections.",
+      "id": [
+        "255549"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255550]\nIn their book, __Leadership Brand: Developing Customer-Focused Leaders to Drive Performance and Build Lasting Value__, authors Dave Ulrich and Norm Smallwood describe 5 steps for shaping people’s brand:\n\n•. Determine the results you want to achieve in the next year\n•. Decide what you wish to be known for\n•. Define your identity\n•. Construct your personal brand statement and test it\n•. Make your brand identity real",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In their book, __Leadership Brand: Developing Customer-Focused Leaders to Drive Performance and Build Lasting Value__, authors Dave Ulrich and Norm Smallwood describe 5 steps for shaping people’s brand:\n\n•. Determine the results you want to achieve in the next year\n•. Decide what you wish to be known for\n•. Define your identity\n•. Construct your personal brand statement and test it\n•. Make your brand identity real",
+      "id": [
+        "255550"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255551]\nPersonal brands are everything but static and should evolve during people’s careers. One of the challenges is that __“others judge us by what we have done, versus we judge ourselves by what we feel capable of doing.”__ As it is expected that many people will develop different skillsets and play different professional roles in their life, they need to __rebrand__ themselves multiple times. Since expertise has become the new currency, people increasingly display their qualifications on social media sites such as LinkedIn through the use of __digital badges__. These are the electronic equivalent of paper certificates. Valuable digital badges can be earned from online learning vendors such as Coursera, edX, Linda.com, and Udemy, among others.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Personal brands are everything but static and should evolve during people’s careers. One of the challenges is that __“others judge us by what we have done, versus we judge ourselves by what we feel capable of doing.”__ As it is expected that many people will develop different skillsets and play different professional roles in their life, they need to __rebrand__ themselves multiple times. Since expertise has become the new currency, people increasingly display their qualifications on social media sites such as LinkedIn through the use of __digital badges__. These are the electronic equivalent of paper certificates. Valuable digital badges can be earned from online learning vendors such as Coursera, edX, Linda.com, and Udemy, among others.",
+      "id": [
+        "255551"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255552]\nIt is suggested that the hidden job market accounts for nearly 80 percent of total vacancies. Typically, before a job gets advertised, hiring managers have reached out to their network whether they know of anyone who is a good fit. Thus, finding a future job or new assignment is one of the reasons why people are building strong networks often supported by social media platforms like LinkedIn which has over 450 million members.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "It is suggested that the hidden job market accounts for nearly 80 percent of total vacancies. Typically, before a job gets advertised, hiring managers have reached out to their network whether they know of anyone who is a good fit. Thus, finding a future job or new assignment is one of the reasons why people are building strong networks often supported by social media platforms like LinkedIn which has over 450 million members.",
+      "id": [
+        "255552"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255553]\nIn addition, good networks are beneficial in keeping people informed, make them more innovative, and provide a platform where they can learn new things and gain a sounding board, among others.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In addition, good networks are beneficial in keeping people informed, make them more innovative, and provide a platform where they can learn new things and gain a sounding board, among others.",
+      "id": [
+        "255553"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255554]\nIt is argued that people should develop diverse networks because diverse people can provide different connections, insights and career opportunities.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "It is argued that people should develop diverse networks because diverse people can provide different connections, insights and career opportunities.",
+      "id": [
+        "255554"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:255555]\n[▼ch-9]\n[#MINDSET: OWN YOUR DEVELOPMENT]\n[%7]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "7",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "255555"
+      ],
+      "anchor": "ch-9",
+      "title": "MINDSET: OWN YOUR DEVELOPMENT"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255556]\nThe relationship between the employer and employee has been redefined in the 21st Century. The days of job security and lifelong employment don’t exist anymore and it is expected that people will work for many organizations and/or will be self-employed. Also gone are the days that an employer would prescribe people’s personal development paths and careers.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The relationship between the employer and employee has been redefined in the 21st Century. The days of job security and lifelong employment don’t exist anymore and it is expected that people will work for many organizations and/or will be self-employed. Also gone are the days that an employer would prescribe people’s personal development paths and careers.",
+      "id": [
+        "255556"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255557]\nAs stated before – investing in personal development and growth make people more valuable, set them up for future roles, and provide pay-offs that will enrich people’s lives.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "As stated before – investing in personal development and growth make people more valuable, set them up for future roles, and provide pay-offs that will enrich people’s lives.",
+      "id": [
+        "255557"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255558]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k7_1.png]\n[@caption:**FIGURE 12:** OWN YOUR DEVELOPMENT\nSource: van Dam, 2016.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption:**FIGURE 12:** OWN YOUR DEVELOPMENT\nSource: van Dam, 2016.]",
+      "id": [
+        "255558"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k7_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption:**FIGURE 12:** OWN YOUR DEVELOPMENT"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 22,
+        "errorLine": "Source: van Dam, 2016.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:255559]\nConditions for owning your development include:\n\n• __Create and execute learning goals__\nIn order to become continually successful, people need to ask themselves: __“How can I ensure that I am more valuable at the end of a year than I was at the beginning?”__ When creating your learning goals, you start by assessing your current knowledge and expertise, and identify competency gaps. Second, people should plan to execute relentlessly on the most important learning goals because this is a competitive advantage. Unfortunately, too many people focus only on quick wins.\n\n• __Work with mentors and seek feedback__\nMentors are mostly people who guide a less experienced person by building trust and modeling positive behaviors. Mentors are interested in one’s long-term personal and professional development and it is critical to have mentors inside and outside of a company. Additionally, feedback from supervisors, peers, direct reports, customers/clients is a critical component of professional development. Mention to different stakeholders that you are open for feedback and set up formal check-ins to review your work and collect feedback.\n\n• __Stay vital__\nOne important component that can contribute significantly to people’s development is their ability to stay vital and make this a priority. It is strongly recommended that people should start early in life to pay attention to: exercise; nutrition; relaxation (e.g. mindfulness, yoga, etc.); and sleep. Sufficient sleep has a huge impact on our ability to acquire, retain and retrieve knowledge. Other areas that sleep affects include: attention and concentration; creativity; development of insight; pattern recognition; decision making; emotional reactivity; socio-emotional processing; and developing trusted relationships.\n\n• __Measure progress__\nIt is important that people periodically reflect and assess the progress that they are making periodically. Learning journals or logs where people track what they are learning has been found to be extremely valuable.\n\n• __Make personal investments__\nAs discussed in this book, there is a lot of evidence that the required learning for individuals, who want to retain a market relevant skillset, exceeds the amount of funded formal and informal learning hours that most people receive from many organizations. Therefore, we argue that people need to make (more) personal time and financial investments in their growth and development.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Conditions for owning your development include:\n\n• __Create and execute learning goals__\nIn order to become continually successful, people need to ask themselves: __“How can I ensure that I am more valuable at the end of a year than I was at the beginning?”__ When creating your learning goals, you start by assessing your current knowledge and expertise, and identify competency gaps. Second, people should plan to execute relentlessly on the most important learning goals because this is a competitive advantage. Unfortunately, too many people focus only on quick wins.\n\n• __Work with mentors and seek feedback__\nMentors are mostly people who guide a less experienced person by building trust and modeling positive behaviors. Mentors are interested in one’s long-term personal and professional development and it is critical to have mentors inside and outside of a company. Additionally, feedback from supervisors, peers, direct reports, customers/clients is a critical component of professional development. Mention to different stakeholders that you are open for feedback and set up formal check-ins to review your work and collect feedback.\n\n• __Stay vital__\nOne important component that can contribute significantly to people’s development is their ability to stay vital and make this a priority. It is strongly recommended that people should start early in life to pay attention to: exercise; nutrition; relaxation (e.g. mindfulness, yoga, etc.); and sleep. Sufficient sleep has a huge impact on our ability to acquire, retain and retrieve knowledge. Other areas that sleep affects include: attention and concentration; creativity; development of insight; pattern recognition; decision making; emotional reactivity; socio-emotional processing; and developing trusted relationships.\n\n• __Measure progress__\nIt is important that people periodically reflect and assess the progress that they are making periodically. Learning journals or logs where people track what they are learning has been found to be extremely valuable.\n\n• __Make personal investments__\nAs discussed in this book, there is a lot of evidence that the required learning for individuals, who want to retain a market relevant skillset, exceeds the amount of funded formal and informal learning hours that most people receive from many organizations. Therefore, we argue that people need to make (more) personal time and financial investments in their growth and development.",
+      "id": [
+        "255559"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:255560]\nIn their book, __Immunity to Change: How to Overcome It and Unlock Potential in Yourself and Your Organization (1996)__, Harvard Professor Robert Kegan and Lisa Lahey suggest that you will know that people are taking ownership of their development if they can tell you: __“What is one thing you are working on that will require that you grow to accomplish it?”__ :\n\n• How they are working on it?\n• Who else knows and cares about it?\n• Why does this matter to them?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "In their book, __Immunity to Change: How to Overcome It and Unlock Potential in Yourself and Your Organization (1996)__, Harvard Professor Robert Kegan and Lisa Lahey suggest that you will know that people are taking ownership of their development if they can tell you: __“What is one thing you are working on that will require that you grow to accomplish it?”__ :\n\n• How they are working on it?\n• Who else knows and cares about it?\n• Why does this matter to them?",
+      "id": [
+        "255560"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:255561]\n[▼ch-10]\n[#MINDSET: DO WHAT YOU LOVE]\n[%8]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "8",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "255561"
+      ],
+      "anchor": "ch-10",
+      "title": "MINDSET: DO WHAT YOU LOVE"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255562]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k8_1.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "255562"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k8_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255563]\nPeople spend a large portion of their day at work and will be active in the workforce for 40–50 years. It is invaluable that people do what they love because this has a huge impact on their health and well-being.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "People spend a large portion of their day at work and will be active in the workforce for 40–50 years. It is invaluable that people do what they love because this has a huge impact on their health and well-being.",
+      "id": [
+        "255563"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255564]\n__Ikigai__ is a Japanese concept meaning __a reason for being or a life worth living__, which represents all elements of life including: work; career; hobbies; relationships; friendships; spirituality; and so on. The discovery of one’s ikigai brings satisfaction and provides a meaning to live. A study among 43,391 Japanese adults showed that the risk from all-cause mortality was significantly higher among people who did not find a sense of ikigai as compared with people who found a sense of ikigai.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Ikigai__ is a Japanese concept meaning __a reason for being or a life worth living__, which represents all elements of life including: work; career; hobbies; relationships; friendships; spirituality; and so on. The discovery of one’s ikigai brings satisfaction and provides a meaning to live. A study among 43,391 Japanese adults showed that the risk from all-cause mortality was significantly higher among people who did not find a sense of ikigai as compared with people who found a sense of ikigai.",
+      "id": [
+        "255564"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255565]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k8_2.png]\n[@caption:**FIGURE 13:** IKIGAI: THE REASON YOU GET UP IN THE MORNING\nSource: Sone et al., 2008.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption:**FIGURE 13:** IKIGAI: THE REASON YOU GET UP IN THE MORNING\nSource: Sone et al., 2008.]",
+      "id": [
+        "255565"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k8_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption:**FIGURE 13:** IKIGAI: THE REASON YOU GET UP IN THE MORNING"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 26,
+        "errorLine": "Source: Sone et al., 2008.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255566]\nIkigai can be achieved by answering four distinctive questions:\n\n•. __What do you love?__\nIrrespective of all other factors, what are the things you love to do? You probably are aware of these already, though you may not know what to do about it quite yet.\n•. __What does the world needs?__\nA lot when you think about it. There are many problems across the world that need to be solved. If you can find one that interests you, it will guide you.\n•. __What can you be paid for?__\nPretty much anything. You just need to find people who need what you are selling. You may need to get a bit creative, but there is something of value within the things you love and what the world needs.\n•. __What are you good at?__\nFinally, everyone typically has some traits or skills they excel at. It is critical to know your unique strengths as well as areas for personal growth and development.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ikigai can be achieved by answering four distinctive questions:\n\n•. __What do you love?__\nIrrespective of all other factors, what are the things you love to do? You probably are aware of these already, though you may not know what to do about it quite yet.\n•. __What does the world needs?__\nA lot when you think about it. There are many problems across the world that need to be solved. If you can find one that interests you, it will guide you.\n•. __What can you be paid for?__\nPretty much anything. You just need to find people who need what you are selling. You may need to get a bit creative, but there is something of value within the things you love and what the world needs.\n•. __What are you good at?__\nFinally, everyone typically has some traits or skills they excel at. It is critical to know your unique strengths as well as areas for personal growth and development.",
+      "id": [
+        "255566"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:255567]\nThe intersection of all these insights is where people achieve ikigai. Of course, this is a journey in itself and it may take quite some time for people to realize their passion. The meaning of work depends on how we view our work, our motivation for work as well as the objective of the work. The following table shows three different ways to look at meaning of work.\n\n|image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k8_3.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "The intersection of all these insights is where people achieve ikigai. Of course, this is a journey in itself and it may take quite some time for people to realize their passion. The meaning of work depends on how we view our work, our motivation for work as well as the objective of the work. The following table shows three different ways to look at meaning of work.\n\n|image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k8_3.png|",
+      "id": [
+        "255567"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255568]\nAlthough organizations have a great responsibility to provide a context for meaning, there is so much an individual can do by creating a calling for themselves.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Although organizations have a great responsibility to provide a context for meaning, there is so much an individual can do by creating a calling for themselves.",
+      "id": [
+        "255568"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255569]\nAs suggested, exploring our career purpose, meaning and passion is not easy. Stanford faculty Dave Adams and Bill Burnell (2016) have been applying the popular design thinking approach to lives and careers in their book __Design Your Life__. The content of this book has been taught and researched at Stanford. They have identified five things that people can do to better design their life.\n\n•. __Be curious__ – Studies have shown that curiosity primes our brain for learning new things.\n•. __Try stuff__ – Experimentation of prototyping will test assumptions.\n•. Reframe problems – Cognitive biases can limit people’s thinking and as a consequence restrict choices. By reframing problems people can often look at situations in a new light and come up with better solutions.\n•. __Know it is a process__ – A focus on process versus outcome will allow people to gain something from every eventuality, good or bad.\n•. __Ask for help__ – Design and invention are increasingly collaborative processes, and designing your life is not different.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "As suggested, exploring our career purpose, meaning and passion is not easy. Stanford faculty Dave Adams and Bill Burnell (2016) have been applying the popular design thinking approach to lives and careers in their book __Design Your Life__. The content of this book has been taught and researched at Stanford. They have identified five things that people can do to better design their life.\n\n•. __Be curious__ – Studies have shown that curiosity primes our brain for learning new things.\n•. __Try stuff__ – Experimentation of prototyping will test assumptions.\n•. Reframe problems – Cognitive biases can limit people’s thinking and as a consequence restrict choices. By reframing problems people can often look at situations in a new light and come up with better solutions.\n•. __Know it is a process__ – A focus on process versus outcome will allow people to gain something from every eventuality, good or bad.\n•. __Ask for help__ – Design and invention are increasingly collaborative processes, and designing your life is not different.",
+      "id": [
+        "255569"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255570]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k8_4.png]\n[@caption:FIGURE 14: DESIGN THINKING METHODOLOGY\nSource: dschool.stanford.edu.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "[@caption:FIGURE 14: DESIGN THINKING METHODOLOGY\nSource: dschool.stanford.edu.]",
+      "id": [
+        "255570"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_k8_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[@caption:'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[@caption:FIGURE 14: DESIGN THINKING METHODOLOGY"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 29,
+        "errorLine": "Source: dschool.stanford.edu.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:255571]\n[▼ch-11]\n[#BOOKS FROM THE AUTHORS]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "255571"
+      ],
+      "anchor": "ch-11",
+      "title": "BOOKS FROM THE AUTHORS"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255572]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_1.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "255572"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255573]\n[%][%Books in English]\n\nVan Dam, N.H.M. (2017). Staying Relevant In the Workforce: Developing Lifelong Learning Mindsets; The Fourth Industrial Revolution and The Future of Jobs; 21st Century Corporate L&D Practices. Copenhagen, Bookboon.\n\nIñiguez de Onzoño, S. (2016) Cosmopolitan Managers: Executive Education that Works. Chapter: The Future of Leadership Development (pp. vii– xiii). London: Palgrave Macmillan.\n\nRogers, E., & van Dam, N.H.M. (2015). You: The Positive Force in Change. Raleigh (NC): Lulu\n\nMarcus, J.A., & van Dam, N.H.M. (2015). Organisation & Management, an International Approach. 3rd Edition. (520 p.) Groningen: Noordhoff.\n\nRademakers, M.F., editor. (2014). Corporate Universities, Drivers of the Learning Organization (Chapter: Deloitte University: pp. 68–76) London: Routledge.\n\nvan Dam, N.H.M. (2012). Next Learning Unwrapped. Raleigh (NC): Lulu Publishing. Mandarin edition by Shanghai Jiao Tong University Press, 2012.\n\nvan Dam, N.H.M. (2008). 25 Best Practices In Learning & Talent Development. Raleigh (NC): Lulu Publishing. Mandarin edition by Shanghai Jiao Tong University Press, 2008. Portuguese edition by Qualitymark Editora, Sao Paulo 2009.\n\nvan Dam, N.H.M. (2005). The Business Impact of e-Learning. Nyenrode Business Universiteit.\n\nvan Dam, N.H.M. (2003). The e-Learning Fieldbook. New York: McGraw Hill. Mandarin edition by Shanghai Jiao Tong University Press, 2004.\n\n**Brassey, J.** (2011). Leadership and Diversity Effectiveness in a Large Multinational Organisation. __PhD dissertation series of the Research School SOM, Faculty of Economics and Business, University of Groningen, the Netherlands.__\n\nDutch Ministry of Economic Affairs and McKinsey & Company (2014). Stimulating Post-crisis Growth in the Dutch SME Segment, Perspective. Presented to the Minister of Economic Affairs in 2014.\n\nWitteloostuijn, Arjen van, Dejardin, M., Hermans, J., Ramdani, D., Vanderstraeten, J., **Schouten, Jacqueline**, & Slabbinck, H. (2015). Ajuster les Complexités Entrepreneuriales Pour De Meilleures Performances: Résultats d’études Sur Données Belges.: Belspo\n\nvan Witteloostuijn, A., M. Dejardin, J. Hermans, D. Ramdani, J. Vanderstraeten, **J. Brassey** and H. Slabbinck (2015), Fitting entrepreneurial, firm-level and environmental contingencies for better performance, Universiteit Antwerpen, 253 p. ISBN: 978-9057-284-70-0\n\nVan Dam, N., Brassey, J. (2016). Designing the next generation of corporate academies. Published in the September edition of TVOO (a Dutch journal for Development in Organizations).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Van Dam, N.H.M. (2017). Staying Relevant In the Workforce: Developing Lifelong Learning Mindsets; The Fourth Industrial Revolution and The Future of Jobs; 21st Century Corporate L&D Practices. Copenhagen, Bookboon.\n\nIñiguez de Onzoño, S. (2016) Cosmopolitan Managers: Executive Education that Works. Chapter: The Future of Leadership Development (pp. vii– xiii). London: Palgrave Macmillan.\n\nRogers, E., & van Dam, N.H.M. (2015). You: The Positive Force in Change. Raleigh (NC): Lulu\n\nMarcus, J.A., & van Dam, N.H.M. (2015). Organisation & Management, an International Approach. 3rd Edition. (520 p.) Groningen: Noordhoff.\n\nRademakers, M.F., editor. (2014). Corporate Universities, Drivers of the Learning Organization (Chapter: Deloitte University: pp. 68–76) London: Routledge.\n\nvan Dam, N.H.M. (2012). Next Learning Unwrapped. Raleigh (NC): Lulu Publishing. Mandarin edition by Shanghai Jiao Tong University Press, 2012.\n\nvan Dam, N.H.M. (2008). 25 Best Practices In Learning & Talent Development. Raleigh (NC): Lulu Publishing. Mandarin edition by Shanghai Jiao Tong University Press, 2008. Portuguese edition by Qualitymark Editora, Sao Paulo 2009.\n\nvan Dam, N.H.M. (2005). The Business Impact of e-Learning. Nyenrode Business Universiteit.\n\nvan Dam, N.H.M. (2003). The e-Learning Fieldbook. New York: McGraw Hill. Mandarin edition by Shanghai Jiao Tong University Press, 2004.\n\n**Brassey, J.** (2011). Leadership and Diversity Effectiveness in a Large Multinational Organisation. __PhD dissertation series of the Research School SOM, Faculty of Economics and Business, University of Groningen, the Netherlands.__\n\nDutch Ministry of Economic Affairs and McKinsey & Company (2014). Stimulating Post-crisis Growth in the Dutch SME Segment, Perspective. Presented to the Minister of Economic Affairs in 2014.\n\nWitteloostuijn, Arjen van, Dejardin, M., Hermans, J., Ramdani, D., Vanderstraeten, J., **Schouten, Jacqueline**, & Slabbinck, H. (2015). Ajuster les Complexités Entrepreneuriales Pour De Meilleures Performances: Résultats d’études Sur Données Belges.: Belspo\n\nvan Witteloostuijn, A., M. Dejardin, J. Hermans, D. Ramdani, J. Vanderstraeten, **J. Brassey** and H. Slabbinck (2015), Fitting entrepreneurial, firm-level and environmental contingencies for better performance, Universiteit Antwerpen, 253 p. ISBN: 978-9057-284-70-0\n\nVan Dam, N., Brassey, J. (2016). Designing the next generation of corporate academies. Published in the September edition of TVOO (a Dutch journal for Development in Organizations).",
+      "id": [
+        "255573"
+      ],
+      "lead": "Books in English"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255574]\n[%][%Books in Dutch]\nGarten, D., Grimbergen, J., Sherman, P., van Dam, N.H.M. (2017). Ga doen wat je echt belangrijk vindt! Positieve Psychologie in de Praktijk. Deventer, Vakmedianet.\n\nRogers, E., & van Dam, N.H.M. (July 2015). De verandering begint bij jou! Meer succes in je werk met positieve psychologie. Amsterdam: Business Contact.\n\nMarcus, J.A., & van Dam, N.H.M (2015). Een praktijkgerichte benadering van Organisatie & Management, 8e editie. (536 p.) Groningen: Noordhoff.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Garten, D., Grimbergen, J., Sherman, P., van Dam, N.H.M. (2017). Ga doen wat je echt belangrijk vindt! Positieve Psychologie in de Praktijk. Deventer, Vakmedianet.\n\nRogers, E., & van Dam, N.H.M. (July 2015). De verandering begint bij jou! Meer succes in je werk met positieve psychologie. Amsterdam: Business Contact.\n\nMarcus, J.A., & van Dam, N.H.M (2015). Een praktijkgerichte benadering van Organisatie & Management, 8e editie. (536 p.) Groningen: Noordhoff.",
+      "id": [
+        "255574"
+      ],
+      "lead": "Books in Dutch"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:255575]\n[▼ch-12]\n[##THE E-LEARNING FOR KIDS FOUNDATION]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "255575"
+      ],
+      "anchor": "ch-12",
+      "title": "THE E-LEARNING FOR KIDS FOUNDATION"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255576]\n|image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_4.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_4.png|",
+      "id": [
+        "255576"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255577]\nAll royalties from this book will be donated by the author to the e-learning for kids foundation. A non-profit , global foundation that provides free, high quality digital learning to all children around the world.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "All royalties from this book will be donated by the author to the e-learning for kids foundation. A non-profit , global foundation that provides free, high quality digital learning to all children around the world.",
+      "id": [
+        "255577"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255578]\ne-Learning for Kids is dedicated to fun and free learning on the internet or offline for children ages 5–12. The foundation offers best in class digital lessons in math, science, language arts, health and computer skills. Over 17 million children in 190 countries have benefitted from our digital lessons.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "e-Learning for Kids is dedicated to fun and free learning on the internet or offline for children ages 5–12. The foundation offers best in class digital lessons in math, science, language arts, health and computer skills. Over 17 million children in 190 countries have benefitted from our digital lessons.",
+      "id": [
+        "255578"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255579]\nFee access: www.e-learningforkids.org",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Fee access: www.e-learningforkids.org",
+      "id": [
+        "255579"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255580]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_5.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "255580"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:255581]\n[&image:https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_6.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "255581"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/bookboon/learning_and_development_staying_relevant/web-resources/images/bookboon_learning_and_development_staying_relevant_6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255582]\n[%][%HELP US TO OPEN MORE DOORS FOR CHILDREN]\ne-Learning for Kids is actively seeking collaboration with organizations and individuals who can help us to accelerate our vision to provide more children with high quality education.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "e-Learning for Kids is actively seeking collaboration with organizations and individuals who can help us to accelerate our vision to provide more children with high quality education.",
+      "id": [
+        "255582"
+      ],
+      "lead": "HELP US TO OPEN MORE DOORS FOR CHILDREN"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255583]\n**How can you help?**\n- Visit our website and learning and introduce your children to our digital lessons\n- Tell others about e-learning for kids: parents; teachers, schools and organizations\n- Offer your support: make a financial donation through our website\n- Become a corporate sponsor: fund the translation of a curriculum or the development of new digital lessons.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**How can you help?**\n- Visit our website and learning and introduce your children to our digital lessons\n- Tell others about e-learning for kids: parents; teachers, schools and organizations\n- Offer your support: make a financial donation through our website\n- Become a corporate sponsor: fund the translation of a curriculum or the development of new digital lessons.",
+      "id": [
+        "255583"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255584]\n**For more information**\nVisit our learning portal: www.e-learningforkids.org or send an email to: info@e-learningforkids.org",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**For more information**\nVisit our learning portal: www.e-learningforkids.org or send an email to: info@e-learningforkids.org",
+      "id": [
+        "255584"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:255585]\n[▼ch-13]\n[#REFERENCES]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "255585"
+      ],
+      "anchor": "ch-13",
+      "title": "REFERENCES"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:255586]\nHarris, R. (2011). The Confidence Gap: A Guide to Overcoming Fear and Self-Doubt. Trumpeter; 1 edition.\n\nUS Bureau of Labor Statistics: 1972–2010.\n\nVarious press reports; McKinsey Global Institute Analysis, 2015.\n\nWorld Economic Forum. (2016) __The Future of Jobs: employment, Skills, and Workforce Strategy or the Fourth Industrial Revolution.__\n\nWorld Economic Forum. (2015) __Deep Shift – Technology Tipping Points and Societal Impact__, Survey Report, Global Agenda Council on the Future of Software and Society.\n\nMcKinsey Global Institute. (2013). __Disruptive technologies: Advances that will transform life, business, and the global economy.__\n\nBrynjolfsson, E. McAfee. (2014). The Second Machine Age. New York, NY: W.W. Norton & Company.\n\nStatistic Brain. (2015) __Job Oversea Outsourcing Statistics__. https://www.statisticbrain.com/outsourcing-statistics-by-country\n\nBrown, Clair; Sturgeon, Timothy; and Cole, Connor. (2013) __The 2010 National Organizations Survey: Examining the Relationships Between Job Quality and the Domestic and International Sourcing of Business Functions by United States Organizations__. IRLE Working Paper No. 156–13.\n\nKeynes, J.M. (1933). __Economic possibilities for our grandchildren__ (1930). Essays in Persuasion, pp. 358–73.\n\nArntz, M., T. Gregory and U. Zierahn (2016), __The Risk of Automation for Jobs in OECD Countries: A Comparative Analysis__, OECD Social, Employment and Migration Working Papers, No. 189, OECD Publishing, Paris.\n\nChui, M., Manyika, J., Miremadi, M. (2015). __Four fundamentals of workplace automation. New York: McKinsey Quarterly__.\n\nChui, M., Manyika, J., Miremadi, M. (2016) __Where machines could replace humans – and where they can’t (yet)__. New York: McKinsey Quarterly.\n\nChui, M., Manyika, J., Miremadi, M. (2016) __Where machines could replace humans – and where they can’t (yet). New York: McKinsey Quarterly__.\n||appears 2x in the original||\nMcLeaod, Scott and Karl Fisch, __Shift happens__, ||https://shifthappens.wikispaces.com||\n\nVuorikari, R., Punie, Y., Carretero, S., Van den Branden, L. (2016). __DigComp 2.0: The Digital Competence Framework for Citizens__. EC, EUR 27948 EN.\n\nDESI indicator on digital skills (2015). Eurostat data: https://digital-agenda-data.eu/\n\n__A Common European and Digital Competence Framework for Citizens__ (2014) EU, www. ecvet-info.de/_media/DIGCOMP_brochure_2014_.pdf\n\nVuorikari, R., Punie, Y., Carretero, S., Van den Branden, L. (2016). __DigComp 2.0: The Digital Competence Framework for Citizens__. EC, EUR 27948 EN.\n\nEurostat. (2016). __Glossary Lifelong learning__. https://ec.europa.eu/eurostat/home\n\nGratton, L., Scott, A. (2016). __The 100 Year Life: Living and working in the age of longevity__. London: Bloomsbury.\n\nWRR. (2013). __Towards a Learning Economy__. Amsterdam: Amsterdam University Press. \n\nWerkverkenners: __Een leven lang leren en werken__, FD, 24th November 2015.\n\nWEF. (2016). __The Human Capital Report__. Geneva: WRR. UWV. (2016) Arbeidsprognose. Amsterdam.\n\nLeupen. J. (2016) __Honderdduizenden LBO’ers en MBO’ers dreigen onbemiddelbaar te blijven__. FD, 29.06.2016.\n\nKooter, M. (2016). __Nederlandse Beroepsbevolking doet weinig aan scholing.__ Intelligence Group.\n\nLeupen., J. ( 2016). __Geld zat voor opleidingen, maar de werknemer bedankt ervoor__. FD, 19.06.2016.\n\nTvOO. (2016). __Organisaties maken opleidingsbudget niet op__.\n\nBrekelmans, R. (2015) __Investeer nu in Professional Education en bedrijfsonderwijs__. FD, 10 October 2015, p. 13.\n\nWRR. (2013). __Towards a Learning Economy__. Amsterdam: Amsterdam University Press.\n\nGvaramadze, I. (2010). __Low-skilled workers and adult vocational skills-upgrading strategies in Denmark and South Korea__. Journal of Vocational Education and Training, vol. 62, no.1, 2010, pp. 51–61.\n\nHartgers, M., Pleyers, A. (2016). __Een leven lang leren in Nederland: een overzicht__. Den Haag: CBS.\n\nLeupen, J. (2015). __Bedrijven verbruiken kant-en-klaartalent.__ Interview with Henk Volberda., FD, 27.05.2015.\n\nLeupen, J. (2016) __Banken worstelen met ouderen die niet bijleren__. FD, 30.03.2016. Capital Assett Management. (2009). Tactical HR evolves into strategic capital management.\n\nOrganizational Health Index database (2004); __Return on Leadership__. report by Egon Zehnder and McKinsey.\n\nMcKinsey & Co. (2009). __Global transformational change survey__. New York, NY: McKinsey Quarterly.\n\nBecker, G.S. (1962). __Investment in human capital: A theoretical analyses__. Journal of Political Economy, jg.70, nr.5, deel 2, p. 9–49.\n\nCentraal en Cultureel Planbureau. (2016). __Aanbod van Arbeid__.\n\nSalanova, M., Agut, S., Peiro, J.M. (2005). __Linking organizational resources and work engagement to employee performance and customer loyalty: the mediation of service climate__. Journal of Applied Psychology, (90(6), 1217.\n\nBartel, A.P., F.R. Lichtenberg (1987). The comparative advantage of educated workers in implementing new technology. Review of Economics and Statistics. Jg 69, nr.1, p. 1–11.\n\nvan Dam, N.H.M. (2013). __The 21st Century Learning Organization__, Dialogue.\n\nRademakers, M.F., editor. (2014). __Corporate Universities: Drivers of the Learning Organization__ (pp. 68–76) London: Routledge.\n\nThijssen, J.G.L. (2000). __Employability in het brandpunt. Aanzet tot verheldering van een diffuus fenomeen__. Tijdschrift voor HRM, editie 2000, nr. 1, p. 7–34.\n\nNordmann, C., Rijkers, Y., Seeling, A., Sisolefsky, J., Sudheff, A. (2015). CLO __The lonely gatekeeper: the bridge between learning and the business__. Universiteit van Maastricht & CrossKnowledge.\n\nRademakers, M.F., editor. (2014). __Corporate Universities: Drivers of the learning organization__ (pp. 68–76) London: Routledge.\n\nBenson-Armer, R., Otto, S.S., Webster, G. (2014) __Building capabilities for performance__. New York, NY: McKinsey Quarterly.\n\nBersin. J. (2016). __Global Human Capital Trends.__ Dallas. TX: Deloitte University Press. The Conference Board. (2016). The Conference Board CEO Challenge 2016. Publication 6071. McKinsey Corporate Academy Global Survey, 2015.\n\nBenson-Armer, R., Gast, A., van Dam, N.H.M. (2016). __Learning at the Speed of Business__. New York: McKinsey Quarterly. McKinsey Corporate Academy Survey, 2015.\n\nCrawford, D. (2004) __The Role of Aging in Adult Learning: Implications for Instructors in Higher Education__. John Hopkins University, School of Education. ||https://education.jhu.edu/research/new-horizons-for-learning/lifelong-learning/||\n\nKegan, R., Lahey, L.L. (2016, p. 60), __An Everyone Culture__. Boston, MA: Harvard Business Publishing.\n\nVan Dam, N.H.M. (2013). __Inside the Learning Brain__. TD Magazine, April 2013.\n\nMarsick, V.J., Watkins, K.E. (2003). __Demonstrating The Value of an Organization’s Learning Culture: The Dimensions of the Learning Organization Questionnaire__. Advances in Developing Human Resources Vol 5, No.2 May 2003, 131–151.\n\nVerdonschot, S, Spruyt, M. (2015, p. 10). __Nieuwsgierigheid op werk__. Utrecht: Kessels & Smit Publishers.\n\nThe Royal Society (02-2011) __The Brain Waves Module 2: Neuroscience: Implications for Education and Lifelong Learning__.\n\nOrganization for Economic Corporation and Development. (2007) __Understanding the Brain: The Birth of a Learning Science__. Paris: OECD Publishing.\n\nVan Dam, N.H.M, van der Helm, E. __The organizational impact of no sleep__. (2016) McKinsey Quarterly.\n\nMaas, J., Robbins R. (2011). __Sleep for Success__. Bloomington, IN: Authorhouse.\n\nHallowell, E. (2005). __Overloaded circuits: Why smart people underperform.__ Boston: MA: Harvard Business Review.\n\nReilly, E., Buskist, C., Gross, M.K. (2012). __Movement in the classroom: Boosting Brain power, fighting obesity__. Kappa Delta Pi Record, 84(2), pp. 62–66.\n\nCotman, C., BerchTold, W., Christie, L.A. (2007). __Corrigendum: Exercise builds brain health: Key roles of growth factor cascades and inflammation__. Trends in Neurosciences, 30(10) p. 483.\n\nRatey, J. (2008). __Spark: The revolutionary new science of exercise and the brain__. New York, NY, Little Brown.\n\nvan Dam, N.H.M. (2013). __Inside the Learning Brain: Cognitive Neuroscience will shape the future of corporate learning practices__, TD Magazine.\n\nGeng L., Zhang L., Zhang D., __Improving spatial abilities through mindfulness: effects on the mental rotation task__. Conscious Cognition. 2011 Sep20(3):801-6.\n\nBaram, T., Chen, Y., Burgdorff, C. (2008, March 13). __Short term stress can affect learning and memory__. ScienceDaily.\n\nMedina, J. (2008). __Brain Rules__. Seattle, WA: Pear Press.\n\nJezzard. P., Matthews, P.M., Smith. S.M. (2001). __Functional MRI an Introduction to methods__. Oxford University Press.\n\nGazzaniga, M.S., Ivry, R.B., Mangun, G.R. (2009). __Cognitive neuroscience: The biology of the mind__. New York, NY: W.W. Norton.\n\nDoyle, T. (2008). __Helping students learn in a learner-centered environment: A guide to facilitating learning in higher education__. Sterling, VA: Stylus.\n\nShams, L., Seitz, A. (2008). __Benefits of multisensory learning__. Trends in Cognitive Science. 12(11), pp. 411–417.\n\nNajjar, L.J. (1998). __Principles of educational multimedia user interface design__. Human factors, 40(2), pp. 311–323.\n\nSousa, D.A. __Primacy/Recency Effect How the Brain Learns__. https://brainbasedee.wordpress.com/2012/10/12/the-primacy-recency-effect/\n\nSperling, J. (2015). __How to Separate Learning Myths from Reality__. New York, NY: McKinsey Quarterly.\n\nChamorro-Premuzic, T. (04-01-2016). __Strengths-Based Coaching can Actually Weaken You__. Boston: MA, Harvard Business Review.\n\nSeligman, Martin E.P.; Csikszentmihalyi, Mihaly (2000). __Positive Psychology: An Introduction__. American Psychologist 55 (1): 5–14.\n\nMaslow, A. (1954). __Motivation & Personality__. New York, NY: Harper & Brothers. https://en.wikipedia.org/wiki/Synapse\n\nJeppson, J., Myers-Walls, A.M. (1997). __Dee Love, Brain Development__. North Carolina State University Extension Services, 1997.\n\nShunkoff, J., Bruer, J. (2002) __Adolescent Brains are a Work in Progress__. WGBH Educational Foundation.\n\nZenger, J.H., Folkman, R.J., Sherwin, R.H., Steel, B.A. (2012) __How to be exceptional. Drive Leadership Success by Magnifying your Strengths__. New York, NY: McGraw-Hill.\n\nRogers, E., & van Dam, N.H.M. (2015). __You! The Positive Force in Change.__ Raleigh, NC: Lulu Publishing.\n\nvan Dam, N.H.M. (2012). __Designing Learning for a 21st Century Workforce__, TD Magazine. \n\nCentraal en Cultureel Planbureau. (2016). __Aanbod van Arbeid__.\n\nLombardo, M.M., Eichinger, R.A. (2010, 5th edition). Career Architect Development Planner. New York, NY, Lominger.\n\nCentraal en Cultureel Planbureau. (2016). __Aanbod van Arbeid__.\n\nUS Department of Education. (2010) __Evaluation of Evidence-Based Practices in Online Learning A Meta-Analysis and Review of Online Learning Studies.__\n\nBenson-Armer, R., van Dam, N.H.M., Gast, A., (2016) __Learning at the speed of business. What digital means for the next generation of corporate academies__. McKinsey Quarterly.\n\nZhenghao, C., Alcorn, B., Christensen, G., Koller, D., Emanuel, E.J. (22 September 2015) __Who is benefiting from MOOCs, and Why__. Boston, MA, Harvard Business Publishing.\n\nSonwalkar, N. (2015). __The First Adaptive MOOC: A Case Study on Pedagogy Framework and Scalable Cloud Architecture__ – part 1. MOOCs Forum 27.\n\nDigital Trends. (17, July 2016). __Microsoft launches data science curriculum.__ https://www.digitaltrends.com/computing/microsoft-launches-data-science-curriculum/\n\nWillyerd, K., Mistick, B. (2016, p. 11). Stretch. Hoboken, NJ: John Wiley & Sons.\nMackintosh,\n\nN.J. (1998) __IQ and Human Intelligence__. New York, NY: Oxford University Press. Colvin, G. (2006, October 19). What it takes to be great. Fortune Magazine.\n\nEricsson, K.A., Prietula, M.J., Cokely, E.T. (2007–July). __Making of an Expert__. Boston, MA: Harvard Business Review.\n\nMogenson, J. (2012) __Cognitive recovery and rehabilitation after brain injury__. Brain injury: functional aspects, rehabilitation and prevention (pp. 121–150).\n\nDweck, C.S. (2006) __Mindset: The psychology of success.__ New York, NY: Random House. 101 Dweck, C.S. (2009) __Mindset: Powerful Insights.__ Positive Coaching Alliance.\n\nManyika,J., Lund, S., Bughin, J., Robinson, K., Mischke, J., Mahajan, D. (2016). __Independent work: choice, necessity, and the gig economy__. McKinsey Global Institute.\n\nGreenwald, R. (November 26, 2012). __A freelance economy can be good for workers: let’s make it better__. The Atlantic.\n\nCBS (2016) Werkzame beroepsbevolking. https://statline.cbs.nl/",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Harris, R. (2011). The Confidence Gap: A Guide to Overcoming Fear and Self-Doubt. Trumpeter; 1 edition.\n\nUS Bureau of Labor Statistics: 1972–2010.\n\nVarious press reports; McKinsey Global Institute Analysis, 2015.\n\nWorld Economic Forum. (2016) __The Future of Jobs: employment, Skills, and Workforce Strategy or the Fourth Industrial Revolution.__\n\nWorld Economic Forum. (2015) __Deep Shift – Technology Tipping Points and Societal Impact__, Survey Report, Global Agenda Council on the Future of Software and Society.\n\nMcKinsey Global Institute. (2013). __Disruptive technologies: Advances that will transform life, business, and the global economy.__\n\nBrynjolfsson, E. McAfee. (2014). The Second Machine Age. New York, NY: W.W. Norton & Company.\n\nStatistic Brain. (2015) __Job Oversea Outsourcing Statistics__. https://www.statisticbrain.com/outsourcing-statistics-by-country\n\nBrown, Clair; Sturgeon, Timothy; and Cole, Connor. (2013) __The 2010 National Organizations Survey: Examining the Relationships Between Job Quality and the Domestic and International Sourcing of Business Functions by United States Organizations__. IRLE Working Paper No. 156–13.\n\nKeynes, J.M. (1933). __Economic possibilities for our grandchildren__ (1930). Essays in Persuasion, pp. 358–73.\n\nArntz, M., T. Gregory and U. Zierahn (2016), __The Risk of Automation for Jobs in OECD Countries: A Comparative Analysis__, OECD Social, Employment and Migration Working Papers, No. 189, OECD Publishing, Paris.\n\nChui, M., Manyika, J., Miremadi, M. (2015). __Four fundamentals of workplace automation. New York: McKinsey Quarterly__.\n\nChui, M., Manyika, J., Miremadi, M. (2016) __Where machines could replace humans – and where they can’t (yet)__. New York: McKinsey Quarterly.\n\nChui, M., Manyika, J., Miremadi, M. (2016) __Where machines could replace humans – and where they can’t (yet). New York: McKinsey Quarterly__.\n\nMcLeaod, Scott and Karl Fisch, __Shift happens__, \n\nVuorikari, R., Punie, Y., Carretero, S., Van den Branden, L. (2016). __DigComp 2.0: The Digital Competence Framework for Citizens__. EC, EUR 27948 EN.\n\nDESI indicator on digital skills (2015). Eurostat data: https://digital-agenda-data.eu/\n\n__A Common European and Digital Competence Framework for Citizens__ (2014) EU, www. ecvet-info.de/_media/DIGCOMP_brochure_2014_.pdf\n\nVuorikari, R., Punie, Y., Carretero, S., Van den Branden, L. (2016). __DigComp 2.0: The Digital Competence Framework for Citizens__. EC, EUR 27948 EN.\n\nEurostat. (2016). __Glossary Lifelong learning__. https://ec.europa.eu/eurostat/home\n\nGratton, L., Scott, A. (2016). __The 100 Year Life: Living and working in the age of longevity__. London: Bloomsbury.\n\nWRR. (2013). __Towards a Learning Economy__. Amsterdam: Amsterdam University Press. \n\nWerkverkenners: __Een leven lang leren en werken__, FD, 24th November 2015.\n\nWEF. (2016). __The Human Capital Report__. Geneva: WRR. UWV. (2016) Arbeidsprognose. Amsterdam.\n\nLeupen. J. (2016) __Honderdduizenden LBO’ers en MBO’ers dreigen onbemiddelbaar te blijven__. FD, 29.06.2016.\n\nKooter, M. (2016). __Nederlandse Beroepsbevolking doet weinig aan scholing.__ Intelligence Group.\n\nLeupen., J. ( 2016). __Geld zat voor opleidingen, maar de werknemer bedankt ervoor__. FD, 19.06.2016.\n\nTvOO. (2016). __Organisaties maken opleidingsbudget niet op__.\n\nBrekelmans, R. (2015) __Investeer nu in Professional Education en bedrijfsonderwijs__. FD, 10 October 2015, p. 13.\n\nWRR. (2013). __Towards a Learning Economy__. Amsterdam: Amsterdam University Press.\n\nGvaramadze, I. (2010). __Low-skilled workers and adult vocational skills-upgrading strategies in Denmark and South Korea__. Journal of Vocational Education and Training, vol. 62, no.1, 2010, pp. 51–61.\n\nHartgers, M., Pleyers, A. (2016). __Een leven lang leren in Nederland: een overzicht__. Den Haag: CBS.\n\nLeupen, J. (2015). __Bedrijven verbruiken kant-en-klaartalent.__ Interview with Henk Volberda., FD, 27.05.2015.\n\nLeupen, J. (2016) __Banken worstelen met ouderen die niet bijleren__. FD, 30.03.2016. Capital Assett Management. (2009). Tactical HR evolves into strategic capital management.\n\nOrganizational Health Index database (2004); __Return on Leadership__. report by Egon Zehnder and McKinsey.\n\nMcKinsey & Co. (2009). __Global transformational change survey__. New York, NY: McKinsey Quarterly.\n\nBecker, G.S. (1962). __Investment in human capital: A theoretical analyses__. Journal of Political Economy, jg.70, nr.5, deel 2, p. 9–49.\n\nCentraal en Cultureel Planbureau. (2016). __Aanbod van Arbeid__.\n\nSalanova, M., Agut, S., Peiro, J.M. (2005). __Linking organizational resources and work engagement to employee performance and customer loyalty: the mediation of service climate__. Journal of Applied Psychology, (90(6), 1217.\n\nBartel, A.P., F.R. Lichtenberg (1987). The comparative advantage of educated workers in implementing new technology. Review of Economics and Statistics. Jg 69, nr.1, p. 1–11.\n\nvan Dam, N.H.M. (2013). __The 21st Century Learning Organization__, Dialogue.\n\nRademakers, M.F., editor. (2014). __Corporate Universities: Drivers of the Learning Organization__ (pp. 68–76) London: Routledge.\n\nThijssen, J.G.L. (2000). __Employability in het brandpunt. Aanzet tot verheldering van een diffuus fenomeen__. Tijdschrift voor HRM, editie 2000, nr. 1, p. 7–34.\n\nNordmann, C., Rijkers, Y., Seeling, A., Sisolefsky, J., Sudheff, A. (2015). CLO __The lonely gatekeeper: the bridge between learning and the business__. Universiteit van Maastricht & CrossKnowledge.\n\nRademakers, M.F., editor. (2014). __Corporate Universities: Drivers of the learning organization__ (pp. 68–76) London: Routledge.\n\nBenson-Armer, R., Otto, S.S., Webster, G. (2014) __Building capabilities for performance__. New York, NY: McKinsey Quarterly.\n\nBersin. J. (2016). __Global Human Capital Trends.__ Dallas. TX: Deloitte University Press. The Conference Board. (2016). The Conference Board CEO Challenge 2016. Publication 6071. McKinsey Corporate Academy Global Survey, 2015.\n\nBenson-Armer, R., Gast, A., van Dam, N.H.M. (2016). __Learning at the Speed of Business__. New York: McKinsey Quarterly. McKinsey Corporate Academy Survey, 2015.\n\nCrawford, D. (2004) __The Role of Aging in Adult Learning: Implications for Instructors in Higher Education__. John Hopkins University, School of Education. \n\nKegan, R., Lahey, L.L. (2016, p. 60), __An Everyone Culture__. Boston, MA: Harvard Business Publishing.\n\nVan Dam, N.H.M. (2013). __Inside the Learning Brain__. TD Magazine, April 2013.\n\nMarsick, V.J., Watkins, K.E. (2003). __Demonstrating The Value of an Organization’s Learning Culture: The Dimensions of the Learning Organization Questionnaire__. Advances in Developing Human Resources Vol 5, No.2 May 2003, 131–151.\n\nVerdonschot, S, Spruyt, M. (2015, p. 10). __Nieuwsgierigheid op werk__. Utrecht: Kessels & Smit Publishers.\n\nThe Royal Society (02-2011) __The Brain Waves Module 2: Neuroscience: Implications for Education and Lifelong Learning__.\n\nOrganization for Economic Corporation and Development. (2007) __Understanding the Brain: The Birth of a Learning Science__. Paris: OECD Publishing.\n\nVan Dam, N.H.M, van der Helm, E. __The organizational impact of no sleep__. (2016) McKinsey Quarterly.\n\nMaas, J., Robbins R. (2011). __Sleep for Success__. Bloomington, IN: Authorhouse.\n\nHallowell, E. (2005). __Overloaded circuits: Why smart people underperform.__ Boston: MA: Harvard Business Review.\n\nReilly, E., Buskist, C., Gross, M.K. (2012). __Movement in the classroom: Boosting Brain power, fighting obesity__. Kappa Delta Pi Record, 84(2), pp. 62–66.\n\nCotman, C., BerchTold, W., Christie, L.A. (2007). __Corrigendum: Exercise builds brain health: Key roles of growth factor cascades and inflammation__. Trends in Neurosciences, 30(10) p. 483.\n\nRatey, J. (2008). __Spark: The revolutionary new science of exercise and the brain__. New York, NY, Little Brown.\n\nvan Dam, N.H.M. (2013). __Inside the Learning Brain: Cognitive Neuroscience will shape the future of corporate learning practices__, TD Magazine.\n\nGeng L., Zhang L., Zhang D., __Improving spatial abilities through mindfulness: effects on the mental rotation task__. Conscious Cognition. 2011 Sep20(3):801-6.\n\nBaram, T., Chen, Y., Burgdorff, C. (2008, March 13). __Short term stress can affect learning and memory__. ScienceDaily.\n\nMedina, J. (2008). __Brain Rules__. Seattle, WA: Pear Press.\n\nJezzard. P., Matthews, P.M., Smith. S.M. (2001). __Functional MRI an Introduction to methods__. Oxford University Press.\n\nGazzaniga, M.S., Ivry, R.B., Mangun, G.R. (2009). __Cognitive neuroscience: The biology of the mind__. New York, NY: W.W. Norton.\n\nDoyle, T. (2008). __Helping students learn in a learner-centered environment: A guide to facilitating learning in higher education__. Sterling, VA: Stylus.\n\nShams, L., Seitz, A. (2008). __Benefits of multisensory learning__. Trends in Cognitive Science. 12(11), pp. 411–417.\n\nNajjar, L.J. (1998). __Principles of educational multimedia user interface design__. Human factors, 40(2), pp. 311–323.\n\nSousa, D.A. __Primacy/Recency Effect How the Brain Learns__. https://brainbasedee.wordpress.com/2012/10/12/the-primacy-recency-effect/\n\nSperling, J. (2015). __How to Separate Learning Myths from Reality__. New York, NY: McKinsey Quarterly.\n\nChamorro-Premuzic, T. (04-01-2016). __Strengths-Based Coaching can Actually Weaken You__. Boston: MA, Harvard Business Review.\n\nSeligman, Martin E.P.; Csikszentmihalyi, Mihaly (2000). __Positive Psychology: An Introduction__. American Psychologist 55 (1): 5–14.\n\nMaslow, A. (1954). __Motivation & Personality__. New York, NY: Harper & Brothers. https://en.wikipedia.org/wiki/Synapse\n\nJeppson, J., Myers-Walls, A.M. (1997). __Dee Love, Brain Development__. North Carolina State University Extension Services, 1997.\n\nShunkoff, J., Bruer, J. (2002) __Adolescent Brains are a Work in Progress__. WGBH Educational Foundation.\n\nZenger, J.H., Folkman, R.J., Sherwin, R.H., Steel, B.A. (2012) __How to be exceptional. Drive Leadership Success by Magnifying your Strengths__. New York, NY: McGraw-Hill.\n\nRogers, E., & van Dam, N.H.M. (2015). __You! The Positive Force in Change.__ Raleigh, NC: Lulu Publishing.\n\nvan Dam, N.H.M. (2012). __Designing Learning for a 21st Century Workforce__, TD Magazine. \n\nCentraal en Cultureel Planbureau. (2016). __Aanbod van Arbeid__.\n\nLombardo, M.M., Eichinger, R.A. (2010, 5th edition). Career Architect Development Planner. New York, NY, Lominger.\n\nCentraal en Cultureel Planbureau. (2016). __Aanbod van Arbeid__.\n\nUS Department of Education. (2010) __Evaluation of Evidence-Based Practices in Online Learning A Meta-Analysis and Review of Online Learning Studies.__\n\nBenson-Armer, R., van Dam, N.H.M., Gast, A., (2016) __Learning at the speed of business. What digital means for the next generation of corporate academies__. McKinsey Quarterly.\n\nZhenghao, C., Alcorn, B., Christensen, G., Koller, D., Emanuel, E.J. (22 September 2015) __Who is benefiting from MOOCs, and Why__. Boston, MA, Harvard Business Publishing.\n\nSonwalkar, N. (2015). __The First Adaptive MOOC: A Case Study on Pedagogy Framework and Scalable Cloud Architecture__ – part 1. MOOCs Forum 27.\n\nDigital Trends. (17, July 2016). __Microsoft launches data science curriculum.__ https://www.digitaltrends.com/computing/microsoft-launches-data-science-curriculum/\n\nWillyerd, K., Mistick, B. (2016, p. 11). Stretch. Hoboken, NJ: John Wiley & Sons.\nMackintosh,\n\nN.J. (1998) __IQ and Human Intelligence__. New York, NY: Oxford University Press. Colvin, G. (2006, October 19). What it takes to be great. Fortune Magazine.\n\nEricsson, K.A., Prietula, M.J., Cokely, E.T. (2007–July). __Making of an Expert__. Boston, MA: Harvard Business Review.\n\nMogenson, J. (2012) __Cognitive recovery and rehabilitation after brain injury__. Brain injury: functional aspects, rehabilitation and prevention (pp. 121–150).\n\nDweck, C.S. (2006) __Mindset: The psychology of success.__ New York, NY: Random House. 101 Dweck, C.S. (2009) __Mindset: Powerful Insights.__ Positive Coaching Alliance.\n\nManyika,J., Lund, S., Bughin, J., Robinson, K., Mischke, J., Mahajan, D. (2016). __Independent work: choice, necessity, and the gig economy__. McKinsey Global Institute.\n\nGreenwald, R. (November 26, 2012). __A freelance economy can be good for workers: let’s make it better__. The Atlantic.\n\nCBS (2016) Werkzame beroepsbevolking. https://statline.cbs.nl/",
+      "id": [
+        "255586"
+      ]
+    }
+  }
+]

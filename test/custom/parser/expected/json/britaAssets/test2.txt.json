@@ -1,0 +1,71 @@
+[
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:94058]\n[%Erwerbsbevölkerung]\n\nIm erwähnten Referenzszenario wird davon ausgegangen, dass die Erwerbsbevölkerung (Personen ab Alter 15) von 5,039 Mio. auf 5,604 Mio. zunehmen wird. Gleichzeitig verharrt die Erwerbsquote (Anzahl Erwerbstätige an der Erwerbsbevölkerung) bei den 15 bis 64-Jährigen mit gut 84% auf einem konstanten Wert. Somit resultiert absolut eine zunehmende Anzahl Personen als Lohnempfänger.\n\nZusätzlich zeichnet sich ab, dass eine steigende Anzahl Personen auch nach dem Erreichen des ordentlichen Pensionierungsalters weiterhin erwerbstätig bleibt, häufig in einem Teilzeitpensum.\n\nErwerbsquoten (mit den drei Szenarien der Bevölkerungsentwicklung ab 2020)\n\n::image::\nhttps://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/swiss_life_grundausbildung_altersvorsorge3.png\n::",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Im erwähnten Referenzszenario wird davon ausgegangen, dass die Erwerbsbevölkerung (Personen ab Alter 15) von 5,039 Mio. auf 5,604 Mio. zunehmen wird. Gleichzeitig verharrt die Erwerbsquote (Anzahl Erwerbstätige an der Erwerbsbevölkerung) bei den 15 bis 64-Jährigen mit gut 84% auf einem konstanten Wert. Somit resultiert absolut eine zunehmende Anzahl Personen als Lohnempfänger.\n\nZusätzlich zeichnet sich ab, dass eine steigende Anzahl Personen auch nach dem Erreichen des ordentlichen Pensionierungsalters weiterhin erwerbstätig bleibt, häufig in einem Teilzeitpensum.\n\nErwerbsquoten (mit den drei Szenarien der Bevölkerungsentwicklung ab 2020)\n\n::image::\nhttps://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/swiss_life_grundausbildung_altersvorsorge3.png\n::",
+      "id": [
+        "94058"
+      ],
+      "item": "Erwerbsbevölkerung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:94046]\n[%Finanzplanung]\n\nDie Vorsorgeberatung ist Bestandteil einer umfassenden Finanzplanung, welche die oben abgebildeten Bereiche behandelt. Der Ablauf einer Finanzplanung basiert grundsätzlich auf den folgenden drei Schritten:\n::image::\nhttps://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/swiss_life_grundausbildung_altersvorsorge43.png\n::    \nEine Finanzberatung im Bereich der Altersvorsorge verfolgt im Wesentlichen folgende zwei Ziele:\n\n**1. Optimale Bedarfserkennung durch die Finanzanalyse (Datenerhebung):**\nDie Analyse soll zunächst Auskunft über die aktuell bestehende Vorsorge für den Ruhestand (und üblicherweise auch bei Invalidität und im Todesfall) des Kunden geben.\n\n**2. Optimale Bedarfsdeckung durch die Beratung:**\nWird bei einem Kunden eine Vorsorgelücke und damit ein Vorsorgebedarf ermittelt, so bleibt zu überlegen, welche Finanzprodukte zur Deckung dieses Bedarfs bzw. zur Schliessung der Vorsorgelücke geeignet und dem Kunden zu empfehlen sind.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die Vorsorgeberatung ist Bestandteil einer umfassenden Finanzplanung, welche die oben abgebildeten Bereiche behandelt. Der Ablauf einer Finanzplanung basiert grundsätzlich auf den folgenden drei Schritten:\n::image::\nhttps://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/swiss_life_grundausbildung_altersvorsorge43.png\n::    \nEine Finanzberatung im Bereich der Altersvorsorge verfolgt im Wesentlichen folgende zwei Ziele:\n\n**1. Optimale Bedarfserkennung durch die Finanzanalyse (Datenerhebung):**\nDie Analyse soll zunächst Auskunft über die aktuell bestehende Vorsorge für den Ruhestand (und üblicherweise auch bei Invalidität und im Todesfall) des Kunden geben.\n\n**2. Optimale Bedarfsdeckung durch die Beratung:**\nWird bei einem Kunden eine Vorsorgelücke und damit ein Vorsorgebedarf ermittelt, so bleibt zu überlegen, welche Finanzprodukte zur Deckung dieses Bedarfs bzw. zur Schliessung der Vorsorgelücke geeignet und dem Kunden zu empfehlen sind.",
+      "id": [
+        "94046"
+      ],
+      "item": "Finanzplanung"
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '::'",
+        "line": 6,
+        "column": 0,
+        "errorLine": "::image::"
+      },
+      {
+        "message": "Unexpected input '::'",
+        "line": 6,
+        "column": 7,
+        "errorLine": "::image::"
+      },
+      {
+        "message": "Unexpected input '::'",
+        "line": 8,
+        "column": 0,
+        "errorLine": "::    "
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:94063]\n[&image:https://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/logo_swiss_life.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "94063"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/swiss_life_select/grundausbildung_altersvorsorge/web-resources/images/logo_swiss_life.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  }
+]

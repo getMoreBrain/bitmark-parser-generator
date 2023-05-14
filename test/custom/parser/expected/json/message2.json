@@ -1,0 +1,10 @@
+[
+  {
+    "bitmark": "[.message:bitmark--]\nHave a look at this **cute** cat! 😻",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "Have a look at this **cute** cat! 😻"
+    }
+  }
+]

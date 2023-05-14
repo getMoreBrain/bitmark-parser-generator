@@ -1,0 +1,520 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:111261]\n[#Achsensymmetrische Figuren]\n[@language:de]\n[@coverImage:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/cover_sofatutor_mathe.png]\n[@externalId:e-achsensymmetrische-figuren_g1k2gbotz2_f]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "111261"
+      ],
+      "title": "Achsensymmetrische Figuren",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/cover_sofatutor_mathe.png"
+      ],
+      "externalId": [
+        "e-achsensymmetrische-figuren_g1k2gbotz2_f"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:111262]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe2.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "111262"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:111263]\n[%Aufgabenübersicht]\n1 Ergänze die Aussagen über achsensymmetrische Figuren.\n2 Schildere, was achsensymmetrische Figuren sind.\n3 Gib an, wie sich ein Sechseck mithilfe eines Bogens Papier und einer Schere basteln lässt.\n4 Entscheide, welche geometrische Figur durch zweimalige Achsenspiegelung entsteht.\n+ mit vielen Tipps, Lösungsschlüsseln und Lösungswegen zu allen Aufgaben",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "1 Ergänze die Aussagen über achsensymmetrische Figuren.\n2 Schildere, was achsensymmetrische Figuren sind.\n3 Gib an, wie sich ein Sechseck mithilfe eines Bogens Papier und einer Schere basteln lässt.\n4 Entscheide, welche geometrische Figur durch zweimalige Achsenspiegelung entsteht.\n+ mit vielen Tipps, Lösungsschlüsseln und Lösungswegen zu allen Aufgaben",
+      "id": [
+        "111263"
+      ],
+      "item": "Aufgabenübersicht"
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark--&image]\n[@id:111264]\n[%1 von 4]\n[!Ergänze die Aussagen über achsensymmetrische Figuren.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe3.png]\n===\nDer Abstand eines Punktes zur Spiegelachse ist ...\n==\n... der gleiche wie der Abstand von seinem Bildpunkt zur Spiegelachse.\n===\nWenn sich auf der anderen Seite der Achse B das Gleiche, nur gespiegelt, befindet, ...\n==\n... spricht man von Achsensymmetrie.\n===\nEine achsensymmetrische Figur kann aus ...\n==\n... einem einmal gefalteten Papier ausgeschnitten werden.\n===\nDie Faltungslinie, an welcher geschnitten wird, ...\n==\n... entspricht gerade der Symmetrieachse.\n===\nEin Beispiel für eine achsensymmetrische Figur ...\n==\n... ist eine Raute.\n===\n[$Du hast bestimmt schon ganz viele Dinge gesehen, die irgendwie regelmäßig aussehen. \n===\n\nWas heißt das?\n\nWenn du morgens in den Spiegel schaust, kannst du feststellen, dass deine beiden Gesichtshälften fast gleich aussehen. Dass sie das nun nicht tun, kann uns aber nur fröhlich stimmen, da Gesichter viel interessanter sind, wenn sie nicht achsensymmetrisch sind.\n\nIn der Antike sah man dies allerdings anders. Das Schönheitsideal der alten Ägypter sah ein gleichmäßiges Gesicht vor. Noch heute erkennen wir dies in der Darstellung der Königin Kleopatra, welche häufig mit spiegelgleichem Gesicht dargestellt wird. Mathematisch nennen wir dies Achsensymmetrie.\n\nAchsensymmetrische Figuren kannst du auch mit Schere und Papier basteln: Die Faltungslinie ist dann gerade die Symmetrieachse. Und an dieser schneidest du eine Figur aus. Schnell das Papier wieder aufgeklappt und du siehst die ausgeschnittene Figur doppelt, aber gespiegelt.\nEin schönes Beispiel hierfür ist das Herz oder eine Raute.]",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "1 von 4",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Der Abstand eines Punktes zur Spiegelachse ist ...",
+          "values": [
+            "... der gleiche wie der Abstand von seinem Bildpunkt zur Spiegelachse."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Wenn sich auf der anderen Seite der Achse B das Gleiche, nur gespiegelt, befindet, ...",
+          "values": [
+            "... spricht man von Achsensymmetrie."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Eine achsensymmetrische Figur kann aus ...",
+          "values": [
+            "... einem einmal gefalteten Papier ausgeschnitten werden."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Die Faltungslinie, an welcher geschnitten wird, ...",
+          "values": [
+            "... entspricht gerade der Symmetrieachse."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Ein Beispiel für eine achsensymmetrische Figur ...",
+          "values": [
+            "... ist eine Raute."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "[$Du hast bestimmt schon ganz viele Dinge gesehen, die irgendwie regelmäßig aussehen. \nWas heißt das?\n\nWenn du morgens in den Spiegel schaust, kannst du feststellen, dass deine beiden Gesichtshälften fast gleich aussehen. Dass sie das nun nicht tun, kann uns aber nur fröhlich stimmen, da Gesichter viel interessanter sind, wenn sie nicht achsensymmetrisch sind.\n\nIn der Antike sah man dies allerdings anders. Das Schönheitsideal der alten Ägypter sah ein gleichmäßiges Gesicht vor. Noch heute erkennen wir dies in der Darstellung der Königin Kleopatra, welche häufig mit spiegelgleichem Gesicht dargestellt wird. Mathematisch nennen wir dies Achsensymmetrie.\n\nAchsensymmetrische Figuren kannst du auch mit Schere und Papier basteln: Die Faltungslinie ist dann gerade die Symmetrieachse. Und an dieser schneidest du eine Figur aus. Schnell das Papier wieder aufgeklappt und du siehst die ausgeschnittene Figur doppelt, aber gespiegelt.\nEin schönes Beispiel hierfür ist das Herz oder eine Raute.]",
+      "id": [
+        "111264"
+      ],
+      "instruction": "Ergänze die Aussagen über achsensymmetrische Figuren.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[$Du hast bestimmt schon ganz viele Dinge gesehen, die irgendwie regelmäßig aussehen. \\n==='",
+        "line": 28,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 28,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input 'Was heißt das?'",
+        "line": 30,
+        "column": 0,
+        "errorLine": "Was heißt das?"
+      },
+      {
+        "message": "Unexpected input 'Wenn du morgens in den Spiegel schaust, kannst du feststellen, dass deine beiden Gesichtshälften fast gleich aussehen. Dass sie das nun nicht tun, kann uns aber nur fröhlich stimmen, da Gesichter viel interessanter sind, wenn sie nicht achsensymmetrisch sind.'",
+        "line": 32,
+        "column": 0,
+        "errorLine": "Wenn du morgens in den Spiegel schaust, kannst du feststellen, dass deine beiden Gesichtshälften fast gleich aussehen. Dass sie das nun nicht tun, kann uns aber nur fröhlich stimmen, da Gesichter viel interessanter sind, wenn sie nicht achsensymmetrisch sind."
+      },
+      {
+        "message": "Unexpected input 'In der Antike sah man dies allerdings anders. Das Schönheitsideal der alten Ägypter sah ein gleichmäßiges Gesicht vor. Noch heute erkennen wir dies in der Darstellung der Königin Kleopatra, welche häufig mit spiegelgleichem Gesicht dargestellt wird. Mathematisch nennen wir dies Achsensymmetrie.'",
+        "line": 34,
+        "column": 0,
+        "errorLine": "In der Antike sah man dies allerdings anders. Das Schönheitsideal der alten Ägypter sah ein gleichmäßiges Gesicht vor. Noch heute erkennen wir dies in der Darstellung der Königin Kleopatra, welche häufig mit spiegelgleichem Gesicht dargestellt wird. Mathematisch nennen wir dies Achsensymmetrie."
+      },
+      {
+        "message": "Unexpected input 'Achsensymmetrische Figuren kannst du auch mit Schere und Papier basteln'",
+        "line": 36,
+        "column": 0,
+        "errorLine": "Achsensymmetrische Figuren kannst du auch mit Schere und Papier basteln: Die Faltungslinie ist dann gerade die Symmetrieachse. Und an dieser schneidest du eine Figur aus. Schnell das Papier wieder aufgeklappt und du siehst die ausgeschnittene Figur doppelt, aber gespiegelt."
+      },
+      {
+        "message": "Unexpected input 'Ein schönes Beispiel hierfür ist das Herz oder eine Raute.'",
+        "line": 37,
+        "column": 0,
+        "errorLine": "Ein schönes Beispiel hierfür ist das Herz oder eine Raute.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:111265]\n[%2 von 4]\n[!Schildere, was achsensymmetrische Figuren sind.\nTrage die fehlenden Begriffe in die Lücken ein.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe4.png]\nDieses Herz ist achsensymmetrisch, denn es besitzt eine senkrechte Symmetrieachse.\n\nDurch diese wird das Herz in zwei Hälften geteilt. Die eine Hälfte ist das Spiegelbild der anderen und andersherum.\n\nZu verwendende Begriffe:\nachsensymmetrisch • Symmetriezentum • Symmetrieachse • zerlegt • Teile • Spiegelbild • Spiegelung • Bild • Spiegelpunkt • Spiegelachse\n\n1. Durch die Achse werden die Figuren in zwei [_Teile] geteilt. Der eine Teil entsteht durch [_Spiegelung] aus dem anderen. Links ist das [_Spiegelbild][_Bild] und rechts ist das [_Spiegelbild][_Bild] oder andersherum.\n\n2. Eine Figur heißt [_achsensymmetrisch] wenn sie in Bild und Spiegelbild [_zerlegt] werden kann.\n\n3. Die Achse heißt [_Symmetrieachse][_Spiegelachse] kann aber auch als [_Symmetrieachse][_Spiegelachse] bezeichnet werden.\n\n[$Jede Antwort darf nur einmal eingesetzt werden. Die Reihenfolge ist frei wählbar.\n\nDu kannst eine **achsensymmetrische** Figur daran erkennen, dass sie irgendwie links und rechts oder oben und unten gleich aussieht. Sicher fällt dir das eine oder andere Beispiel ein.\n\nDie Teilung in rechts und links oder oben und unten erfolgt durch eine Achse. Wenn du einen Bogen Papier faltest und auf der Seite, an welcher sich die Faltung befindet, ein Muster einschneidest, kannst du den Bogen aufklappen. Du wirst merken, dass die Faltlinie der Achse entspricht, an welcher dein Muster gespiegelt wird.\n\nDie eine Hälfte, das **Spiegelbild**, entsteht aus der anderen, dem **Bild**, durch **Spiegelung**.\n\nDie Achse, welche die Figur teilt, heißt **Symmetrieachse** oder auch **Spiegelachse**, da ja an ihr gespiegelt wird.]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Dieses Herz ist achsensymmetrisch, denn es besitzt eine senkrechte Symmetrieachse.\n\nDurch diese wird das Herz in zwei Hälften geteilt. Die eine Hälfte ist das Spiegelbild der anderen und andersherum.\n\nZu verwendende Begriffe:\nachsensymmetrisch • Symmetriezentum • Symmetrieachse • zerlegt • Teile • Spiegelbild • Spiegelung • Bild • Spiegelpunkt • Spiegelachse\n\n1. Durch die Achse werden die Figuren in zwei {0} geteilt. Der eine Teil entsteht durch {1} aus dem anderen. Links ist das {2} und rechts ist das {3} oder andersherum.\n\n2. Eine Figur heißt {4} wenn sie in Bild und Spiegelbild {5} werden kann.\n\n3. Die Achse heißt {6} kann aber auch als {7} bezeichnet werden.\n\n[$Jede Antwort darf nur einmal eingesetzt werden. Die Reihenfolge ist frei wählbar.\n\nDu kannst eine **achsensymmetrische** Figur daran erkennen, dass sie irgendwie links und rechts oder oben und unten gleich aussieht. Sicher fällt dir das eine oder andere Beispiel ein.\n\nDie Teilung in rechts und links oder oben und unten erfolgt durch eine Achse. Wenn du einen Bogen Papier faltest und auf der Seite, an welcher sich die Faltung befindet, ein Muster einschneidest, kannst du den Bogen aufklappen. Du wirst merken, dass die Faltlinie der Achse entspricht, an welcher dein Muster gespiegelt wird.\n\nDie eine Hälfte, das **Spiegelbild**, entsteht aus der anderen, dem **Bild**, durch **Spiegelung**.\n\nDie Achse, welche die Figur teilt, heißt **Symmetrieachse** oder auch **Spiegelachse**, da ja an ihr gespiegelt wird.]",
+      "item": "2 von 4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "111265"
+      ],
+      "instruction": "Schildere, was achsensymmetrische Figuren sind.\nTrage die fehlenden Begriffe in die Lücken ein.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Teile"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Spiegelung"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Spiegelbild",
+            "Bild"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Spiegelbild",
+            "Bild"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "achsensymmetrisch"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "zerlegt"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Symmetrieachse",
+            "Spiegelachse"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Symmetrieachse",
+            "Spiegelachse"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '[",
+        "line": 20,
+        "column": 0,
+        "errorLine": "[$Jede Antwort darf nur einmal eingesetzt werden. Die Reihenfolge ist frei wählbar."
+      }
+    ]
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n[@id:111266]\n[%3 von 4]\n[!Gib an, wie sich ein Sechseck mithilfe eines Bogens Papier und einer Schere basteln lässt.\nSortiere die einzelnen Schritte.]\nA. Nun faltest du das Blatt in der Mitte.\nB. Letztlich kannst du noch entlang der Faltungslinie eine Symmetrieachse einzeichnen.\nC. Du besorgst dir ein Blatt Papier und eine Schere.\nD. Jetzt kannst du das Blatt wieder auffalten, und das, was du erhältst, ist ein Sechseck.\nE. Dann schneidest du an der Faltungslinie ein Viereck aus, sodass sich ein halbes Sechseck ergibt.\nRICHTIGE REIHENFOLGE: [_C] [_A] [_E] [_D] [_B]\n\n[$\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe6.png\n::\nDu kannst achsensymmetrische Figuren auch aus einem Blatt Papier ausschneiden.\n\nBei geometrischen Figuren ist dies sicher etwas leichter als zum Beispiel bei einer komplexeren Form, wie einem Schmetterling.\n\n•. Du benötigst ein Blatt Papier und eine Schere.\n•. Du faltest das Blatt Papier in der Mitte.\n•. Mit der Schere schneidest du an der Faltungslinie ein Trapez aus.\nBei diesem Trapez sind alle Seiten gleich lang, davon zwei schräg und eine Seite parallel zur Faltungslinie. Du kannst dir ruhig am Bild klarmachen, wie das genau aussehen soll.\n•. Nun kannst du die ausgeschnittene Form herausnehmen und aufklappen.\n•. Das Ergebnis deiner Arbeit ist ein regelmäßiges Sechseck. Dort wo die Faltungslinie ist, kann die Symmetrieachse markiert werden.\nEin regelmäßiges Sechseck hat 6 Symmetrieachsen. Findest du sie alle?]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "A. Nun faltest du das Blatt in der Mitte.\nB. Letztlich kannst du noch entlang der Faltungslinie eine Symmetrieachse einzeichnen.\nC. Du besorgst dir ein Blatt Papier und eine Schere.\nD. Jetzt kannst du das Blatt wieder auffalten, und das, was du erhältst, ist ein Sechseck.\nE. Dann schneidest du an der Faltungslinie ein Viereck aus, sodass sich ein halbes Sechseck ergibt.\nRICHTIGE REIHENFOLGE: {0} {1} {2} {3} {4}\n\n[$\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe6.png\n::\nDu kannst achsensymmetrische Figuren auch aus einem Blatt Papier ausschneiden.\n\nBei geometrischen Figuren ist dies sicher etwas leichter als zum Beispiel bei einer komplexeren Form, wie einem Schmetterling.\n\n•. Du benötigst ein Blatt Papier und eine Schere.\n•. Du faltest das Blatt Papier in der Mitte.\n•. Mit der Schere schneidest du an der Faltungslinie ein Trapez aus.\nBei diesem Trapez sind alle Seiten gleich lang, davon zwei schräg und eine Seite parallel zur Faltungslinie. Du kannst dir ruhig am Bild klarmachen, wie das genau aussehen soll.\n•. Nun kannst du die ausgeschnittene Form herausnehmen und aufklappen.\n•. Das Ergebnis deiner Arbeit ist ein regelmäßiges Sechseck. Dort wo die Faltungslinie ist, kann die Symmetrieachse markiert werden.\nEin regelmäßiges Sechseck hat 6 Symmetrieachsen. Findest du sie alle?]",
+      "item": "3 von 4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "111266"
+      ],
+      "instruction": "Gib an, wie sich ein Sechseck mithilfe eines Bogens Papier und einer Schere basteln lässt.\nSortiere die einzelnen Schritte.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "C"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "A"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "E"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "D"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "B"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '[",
+        "line": 13,
+        "column": 0,
+        "errorLine": "[$"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:111267]\n[%4 von 4]\n[!Entscheide, welche geometrische Figur durch zweimalige Achsenspiegelung entsteht.\nFülle die Lücken mit den richtigen Angaben.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe5.png]\nDiese Figur wird einmal an ihrer unteren Kante gespiegelt. Die bereits gespiegelte Figur wird nun nochmals an der rechten Kante gespiegelt.\n\nNach der ersten Spiegelung besitzt meine Figur [_5][_fünf] Ecken und neben einer langen Seite noch [_4][_vier] gleich lange, aber kürzere Seiten.\nWenn ich nun noch einmal spiegele, erhalte ich ein regelmäßiges [_Achteck][_Oktagon].\n\n[$image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe1.png\nUnd so sieht die Figur nach zweimaligem Spiegeln aus.\n\nWenn du die Ausgangsfigur an einer waagerechten Symmetrieachse, der unteren Kante, spiegelst, erhältst du die linke Hälfte dieses Achtecks. Diese besitzt fünf Ecken und neben einer langen auch vier kürzere, aber gleich lange Seiten.\n\nDie zweite Spiegelung an einer senkrechten Achse, der rechten Kante, ergänzt die Figur zu einem kompletten Achteck.\n\nEin regelmäßiges Achteck, das auch Oktagon genannt wird, besitzt vier Symmetrieachsen durch die einzelnen Ecken und vier weitere Symmetrieachsen durch die gegenüberliegenden Seiten.]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Diese Figur wird einmal an ihrer unteren Kante gespiegelt. Die bereits gespiegelte Figur wird nun nochmals an der rechten Kante gespiegelt.\n\nNach der ersten Spiegelung besitzt meine Figur {0} Ecken und neben einer langen Seite noch {1} gleich lange, aber kürzere Seiten.\nWenn ich nun noch einmal spiegele, erhalte ich ein regelmäßiges {2}.\n\n[$image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe1.png\nUnd so sieht die Figur nach zweimaligem Spiegeln aus.\n\nWenn du die Ausgangsfigur an einer waagerechten Symmetrieachse, der unteren Kante, spiegelst, erhältst du die linke Hälfte dieses Achtecks. Diese besitzt fünf Ecken und neben einer langen auch vier kürzere, aber gleich lange Seiten.\n\nDie zweite Spiegelung an einer senkrechten Achse, der rechten Kante, ergänzt die Figur zu einem kompletten Achteck.\n\nEin regelmäßiges Achteck, das auch Oktagon genannt wird, besitzt vier Symmetrieachsen durch die einzelnen Ecken und vier weitere Symmetrieachsen durch die gegenüberliegenden Seiten.]",
+      "item": "4 von 4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "111267"
+      ],
+      "instruction": "Entscheide, welche geometrische Figur durch zweimalige Achsenspiegelung entsteht.\nFülle die Lücken mit den richtigen Angaben.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "5",
+            "fünf"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "4",
+            "vier"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Achteck",
+            "Oktagon"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '[",
+        "line": 12,
+        "column": 0,
+        "errorLine": "[$image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe1.png"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:111268]\n[%Unsere Tipps für die Aufgaben]\n**Ergänze die Aussagen über achsensymmetrische Figuren.**\n1. Tipp\nWenn du eine achsensymmetrische Figur genau an der Achse faltest, decken sich die beiden Teile ab.\n2. Tipp\nEin Sechseck lässt sich mithilfe eines Bogens Papier leicht erstellen.\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe6.png\n::\n\n**Schildere, was achsensymmetrische Figuren sind.**\n1. Tipp\nEine Figur heißt achsensymmetrisch, wenn sie einen Teil besitzt und dieser an einer Faltlinie gespiegel wird.\n2. Tipp\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe7.png\n::\nHier siehst du den achsensymmetrischen Buchstaben „M“ mit der zugehörigen Symmetrieachse.\n3. Tipp\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe8.png\n::\nAuch dieser Drache ist achsensymmetrisch.\n\n**Gib an, wie sich ein Sechseck mithilfe eines Bogens Papier und einer Schere basteln lässt.**\n1. Tipp\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe6.png\n::\nWenn du dieses Sechseck im Geiste faltest, erhältst du jene Form, welche es auszuschneiden gilt.\n2. Tipp\nFalte zuerst, bevor du die Schere benutzt und achte darauf, auf der richtigen Seite die Form auszuschneiden.\n\n**Entscheide, welche geometrische Figur durch zweimalige Achsenspiegelung entsteht.**\n1. Tipp\nDu kannst diese Figur auf ein Blatt Papier übertragen und sie zweimal spiegeln.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Ergänze die Aussagen über achsensymmetrische Figuren.**\n1. Tipp\nWenn du eine achsensymmetrische Figur genau an der Achse faltest, decken sich die beiden Teile ab.\n2. Tipp\nEin Sechseck lässt sich mithilfe eines Bogens Papier leicht erstellen.\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe6.png\n::\n\n**Schildere, was achsensymmetrische Figuren sind.**\n1. Tipp\nEine Figur heißt achsensymmetrisch, wenn sie einen Teil besitzt und dieser an einer Faltlinie gespiegel wird.\n2. Tipp\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe7.png\n::\nHier siehst du den achsensymmetrischen Buchstaben „M“ mit der zugehörigen Symmetrieachse.\n3. Tipp\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe8.png\n::\nAuch dieser Drache ist achsensymmetrisch.\n\n**Gib an, wie sich ein Sechseck mithilfe eines Bogens Papier und einer Schere basteln lässt.**\n1. Tipp\n::image::\nhttps://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_mathe6.png\n::\nWenn du dieses Sechseck im Geiste faltest, erhältst du jene Form, welche es auszuschneiden gilt.\n2. Tipp\nFalte zuerst, bevor du die Schere benutzt und achte darauf, auf der richtigen Seite die Form auszuschneiden.\n\n**Entscheide, welche geometrische Figur durch zweimalige Achsenspiegelung entsteht.**\n1. Tipp\nDu kannst diese Figur auf ein Blatt Papier übertragen und sie zweimal spiegeln.",
+      "id": [
+        "111268"
+      ],
+      "item": "Unsere Tipps für die Aufgaben"
+    }
+  }
+]

@@ -1,0 +1,166 @@
+[
+  {
+    "bitmark": "[.multiple-choice]\n[%A9a]\n[!Textarbeit\n\nEntscheiden Sie, welche der Antworten a), b) oder c) passt. Es gibt jeweils nur eine richtige Lösung.]\n===\n[%1][!Die Nachrichten werden beeinflusst ]\n[-a) vom Programmdirektor.][%100][!000000000][?hint]\n[+b) von der Auswahl verschiedener Leute.][%110][!111111111111][?hintX]\n[-c) vom Nachrichtensprecher.][%120][!22222222222][?hintZ]\n===\n[%2][!Objektivität]\n[+a) ist nach wie vor das Ziel aller.]\n[-b)bedeutet die richtige Auswahl der Themen.]\n[-c)ist in den meisten Nachrichten vorhanden.]\n===\n[%3][!Die Nachrichtenwertforschung untersucht,]\n[-a) was das Kriterium für eine Neuigkeit ist.]\n[+b)was das Kriterium für eine Nachricht ist.]\n[-c)welche Kriterien die Redakteure bei der Auswahl nicht berücksichtigen.]\n===\n[%4][!.Nachrichtenredakteure orientieren sich bei der Auswahl der Nachrichten]\n[-a) an der Meinung der Regierung.]\n[-b)an wissenschaftlichen Erkenntnissen.]\n[+c)an ihrem eigenen Interesse und dem Interesse des Publikums.]\n===\n[%5][!Eine typische „Themenkarriere“ heißt,]\n[+a) ein neues Thema wird eingeführt, setzt sich langsam bei vielen Nachrichtenredaktionen durch und wird so zum allgemeinen Gesprächsthema.]\n[-b)ein neues Thema kommt direkt ins Fernsehen und wird dann von allen anderen Medien übernommen.]\n[-c)ein neues Thema wird in die Nachrichten aufgenommen und verschwindet nach kurzer Zeit wieder.]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "A9a",
+      "instruction": "Textarbeit\n\nEntscheiden Sie, welche der Antworten a), b) oder c) passt. Es gibt jeweils nur eine richtige Lösung.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "1",
+          "instruction": "Die Nachrichten werden beeinflusst",
+          "choices": [
+            {
+              "choice": "a) vom Programmdirektor.",
+              "item": "100",
+              "isCorrect": false,
+              "instruction": "000000000",
+              "hint": "hint"
+            },
+            {
+              "choice": "b) von der Auswahl verschiedener Leute.",
+              "item": "110",
+              "isCorrect": true,
+              "instruction": "111111111111",
+              "hint": "hintX"
+            },
+            {
+              "choice": "c) vom Nachrichtensprecher.",
+              "item": "120",
+              "isCorrect": false,
+              "instruction": "22222222222",
+              "hint": "hintZ"
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "2",
+          "instruction": "Objektivität",
+          "choices": [
+            {
+              "choice": "a) ist nach wie vor das Ziel aller.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "b)bedeutet die richtige Auswahl der Themen.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "c)ist in den meisten Nachrichten vorhanden.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "3",
+          "instruction": "Die Nachrichtenwertforschung untersucht,",
+          "choices": [
+            {
+              "choice": "a) was das Kriterium für eine Neuigkeit ist.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "b)was das Kriterium für eine Nachricht ist.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "c)welche Kriterien die Redakteure bei der Auswahl nicht berücksichtigen.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "4",
+          "instruction": ".Nachrichtenredakteure orientieren sich bei der Auswahl der Nachrichten",
+          "choices": [
+            {
+              "choice": "a) an der Meinung der Regierung.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "b)an wissenschaftlichen Erkenntnissen.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "c)an ihrem eigenen Interesse und dem Interesse des Publikums.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "5",
+          "instruction": "Eine typische „Themenkarriere“ heißt,",
+          "choices": [
+            {
+              "choice": "a) ein neues Thema wird eingeführt, setzt sich langsam bei vielen Nachrichtenredaktionen durch und wird so zum allgemeinen Gesprächsthema.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "b)ein neues Thema kommt direkt ins Fernsehen und wird dann von allen anderen Medien übernommen.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "c)ein neues Thema wird in die Nachrichten aufgenommen und verschwindet nach kurzer Zeit wieder.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ]
+    }
+  }
+]

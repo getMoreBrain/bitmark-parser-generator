@@ -95,6 +95,11 @@ export interface DocumentLinkResourceWrapperJson extends ResourceWrapperJson {
   documentLink: DocumentLinkResourceJson;
 }
 
+export interface DocumentDownloadResourceWrapperJson extends ResourceWrapperJson {
+  type: 'document-download'; // resource type
+  documentDownload: DocumentDownloadResourceJson;
+}
+
 export interface AppResourceWrapperJson extends ResourceWrapperJson {
   type: 'app'; // resource type
   app: AppResourceJson;
@@ -117,6 +122,7 @@ export interface BaseResourceJson {
   copyright: string;
   provider: string;
   showInIndex: boolean;
+  caption: string;
 }
 
 export interface LinkResourceJson extends BaseResourceJson {
@@ -131,10 +137,9 @@ export interface ImageLikeResourceJson extends BaseResourceJson {
   src2x: string;
   src3x: string;
   src4x: string;
-  width: number;
-  height: number;
+  width: number | null;
+  height: number | null;
   alt: string;
-  caption: string;
 }
 
 export interface AudioLikeResourceJson extends BaseResourceJson {
@@ -147,8 +152,8 @@ export interface VideoLikeResourceJson extends BaseResourceJson {
   format: string;
   url: string;
   src: string;
-  width: number;
-  height: number;
+  width: number | null;
+  height: number | null;
   duration: number; // string?
   mute: boolean;
   autoplay: boolean;
@@ -185,6 +190,8 @@ export interface AudioResourceJson extends AudioLikeResourceJson {
 
 export interface AudioLinkResourceJson extends LinkResourceJson, AudioLikeResourceJson {
   url: string;
+  duration: string; // Has a default value in JSON, never comes from the bitmark
+  autoplay: boolean; // Has a default value in JSON, never comes from the bitmark
 }
 
 export interface VideoResourceJson extends VideoLikeResourceJson {
@@ -219,6 +226,10 @@ export interface DocumentLinkResourceJson extends LinkResourceJson, ArticleLikeR
   url: string;
 }
 
+export interface DocumentDownloadResourceJson extends LinkResourceJson, ArticleLikeResourceJson {
+  url: string;
+}
+
 export type AppResourceJson = string;
 
 export interface AppLinkResourceJson extends LinkResourceJson, AppLikeResourceJson {
@@ -226,5 +237,6 @@ export interface AppLinkResourceJson extends LinkResourceJson, AppLikeResourceJs
 }
 
 export interface WebsiteLinkResourceJson extends BaseResourceJson {
+  url: string;
   siteName: string;
 }

@@ -1,0 +1,2227 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:152334]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_future_learning.png]\n[@externalId:e-future-learning-und-new-work_44b-syhv4bnm]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "152334"
+      ],
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_future_learning.png"
+      ],
+      "externalId": [
+        "e-future-learning-und-new-work_44b-syhv4bnm"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152335]\n[#Future Learning und New Work]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152335"
+      ],
+      "title": "Future Learning und New Work"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152336]\n• Die Planung personalisierter Lernprozesse erfolgt selbstorganisiert durch Mitarbeiter.\n• Die Lernprozesse werden durch die Herausforderungen in der Praxis und in Praxisprojekten bestimmt, die kollaborativ bearbeitet werden.\n• Die Ermöglichung des Lernens in der Praxis durch die Führungskräfte (Mentoring) sowie die Begleitung selbstorganisierter Lernprozesse durch Lernpartner (Co Coaching) und Lernbegleiter (Coaches) flankieren die Lernprozesse.\n• Wissen und Qualifizierung sind nicht mehr das Ziel, sondern notwendige Voraussetzung für die Werte- und Kompetenzentwicklung und werden bei Bedarf, on demand, aufgebaut.\n• Neben kuratierten Informationen und formellem Wissen werden Erfahrungen anderer Mitarbeiter im Rahmen des werte- und kompetenzorientierten Wissensmanagements genutzt (vgl. Scholz, Sauter 2015).\n• Grundlagenwissen und Basisqualifikationen werden in formellen E-Learning- und Blended-Learning-Arrangements selbstgesteuert mithilfe von Lernprogrammen oder in Workshops aufgebaut.\n• Digitale Lerntechnologien ermöglichen Lernen unabhängig von Ort und Zeit.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Die Planung personalisierter Lernprozesse erfolgt selbstorganisiert durch Mitarbeiter.\n• Die Lernprozesse werden durch die Herausforderungen in der Praxis und in Praxisprojekten bestimmt, die kollaborativ bearbeitet werden.\n• Die Ermöglichung des Lernens in der Praxis durch die Führungskräfte (Mentoring) sowie die Begleitung selbstorganisierter Lernprozesse durch Lernpartner (Co Coaching) und Lernbegleiter (Coaches) flankieren die Lernprozesse.\n• Wissen und Qualifizierung sind nicht mehr das Ziel, sondern notwendige Voraussetzung für die Werte- und Kompetenzentwicklung und werden bei Bedarf, on demand, aufgebaut.\n• Neben kuratierten Informationen und formellem Wissen werden Erfahrungen anderer Mitarbeiter im Rahmen des werte- und kompetenzorientierten Wissensmanagements genutzt (vgl. Scholz, Sauter 2015).\n• Grundlagenwissen und Basisqualifikationen werden in formellen E-Learning- und Blended-Learning-Arrangements selbstgesteuert mithilfe von Lernprogrammen oder in Workshops aufgebaut.\n• Digitale Lerntechnologien ermöglichen Lernen unabhängig von Ort und Zeit.",
+      "id": [
+        "152336"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152337]\n[##Didaktik für Future Learning]\n[%3.5]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152337"
+      ],
+      "title": "Didaktik für Future Learning"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152338]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_1.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152338"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152339]\nWie ein Entwicklungsarrangement auf einen Lernenden wirkt, wie er den Input aufnimmt und interpretiert, wie er verarbeitet, was er wahrgenommen hat, und wie viel er davon später, wenn er sein Wissen anwenden möchte, überhaupt noch zur Verfügung hat, kann nicht geplant werden (vgl. dazu im Folgenden Schüßler 2007).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wie ein Entwicklungsarrangement auf einen Lernenden wirkt, wie er den Input aufnimmt und interpretiert, wie er verarbeitet, was er wahrgenommen hat, und wie viel er davon später, wenn er sein Wissen anwenden möchte, überhaupt noch zur Verfügung hat, kann nicht geplant werden (vgl. dazu im Folgenden Schüßler 2007).",
+      "id": [
+        "152339"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152340]\n**Wissen und Werte sowie Kompetenzen können nicht vermittelt werden.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Wissen und Werte sowie Kompetenzen können nicht vermittelt werden.**",
+      "id": [
+        "152340"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152341]\nDie Bedeutung des Arbeitsplatzes als Lernort blieb in der erziehungswissenschaftlichen Reflexion lange Zeit weitgehend unbeachtet. In der aktuellen Diskussion über Future Learning bildet aber die Werte- und Kompetenzentwicklung einen Schwerpunkt bei der Frage, was das Ziel der Lernprozesse im betrieblichen Kontext ist. Erfahrungslernen, informelles und selbstorganisiertes Lernen, situatives Lernen am Arbeitsplatz (Workplace Learning) und im Netz (Social Learning) gewinnen deshalb an Bedeutung.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Bedeutung des Arbeitsplatzes als Lernort blieb in der erziehungswissenschaftlichen Reflexion lange Zeit weitgehend unbeachtet. In der aktuellen Diskussion über Future Learning bildet aber die Werte- und Kompetenzentwicklung einen Schwerpunkt bei der Frage, was das Ziel der Lernprozesse im betrieblichen Kontext ist. Erfahrungslernen, informelles und selbstorganisiertes Lernen, situatives Lernen am Arbeitsplatz (Workplace Learning) und im Netz (Social Learning) gewinnen deshalb an Bedeutung.",
+      "id": [
+        "152341"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152342]\n[###Neurodidaktik]\n[%3.5.1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.5.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152342"
+      ],
+      "title": "Neurodidaktik"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152343]\n**Bundesministerium für Bildung und Forschung**\n\n»Die häufig geäußerte Vorstellung, wonach die Hirnforschung zur Klärung theoretischer Kontroversen in der Pädagogik beitragen könnte, trifft nicht zu.« (BMBF 2007, S. 7)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Bundesministerium für Bildung und Forschung**\n\n»Die häufig geäußerte Vorstellung, wonach die Hirnforschung zur Klärung theoretischer Kontroversen in der Pädagogik beitragen könnte, trifft nicht zu.« (BMBF 2007, S. 7)",
+      "id": [
+        "152343"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152344]\nDurch die großen Erfolge von Neurobiologie und Neuropsychologie haben sich ziemlich unumstößliche Einsichten für das Lernen und Lehren herausgebildet, die frontal mit traditionellen Vorstellungen kollidieren. Der Hirnforscher Gerhard Roth hat durch sein gemeinsam mit Kollegen erarbeitetes Schichtenmodell des Gehirns eine Sicht erarbeitet, die vielleicht in Details noch korrigiert werden mag, die aber durch Pädagogenwünsche nicht mehr ausgehebelt werden kann und die, wohlverstanden, den Spielraum von Pädagogen und Weiterbildnern sogar beträchtlich erweitert (vgl. im Folgenden Roth 2013).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Durch die großen Erfolge von Neurobiologie und Neuropsychologie haben sich ziemlich unumstößliche Einsichten für das Lernen und Lehren herausgebildet, die frontal mit traditionellen Vorstellungen kollidieren. Der Hirnforscher Gerhard Roth hat durch sein gemeinsam mit Kollegen erarbeitetes Schichtenmodell des Gehirns eine Sicht erarbeitet, die vielleicht in Details noch korrigiert werden mag, die aber durch Pädagogenwünsche nicht mehr ausgehebelt werden kann und die, wohlverstanden, den Spielraum von Pädagogen und Weiterbildnern sogar beträchtlich erweitert (vgl. im Folgenden Roth 2013).",
+      "id": [
+        "152344"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152345]\nAus gegenwärtiger neuro-biologisch-psychiatrischer Sicht entstehen und wirken Persönlichkeitsmerkmale auf vier strukturell-funktionalen Ebenen des Gehirns: drei limbischen Ebenen und einer kognitiven Ebene. Diese Ebenen haben einen unterschiedlichen Einfluss auf Persönlichkeit und Verhalten (vgl. ebenda, Henning 2016).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Aus gegenwärtiger neuro-biologisch-psychiatrischer Sicht entstehen und wirken Persönlichkeitsmerkmale auf vier strukturell-funktionalen Ebenen des Gehirns: drei limbischen Ebenen und einer kognitiven Ebene. Diese Ebenen haben einen unterschiedlichen Einfluss auf Persönlichkeit und Verhalten (vgl. ebenda, Henning 2016).",
+      "id": [
+        "152345"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152346]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_29.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152346"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_29.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152347]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_3.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152347"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152348]\nVerstärkend erklärt Roth an anderer Stelle: __»Die kognitiv-sprachlich-rationale Ebene hat die Eigentümlichkeit, dass sie […] überhaupt nicht direkt mit den eigentlich handelnden, steuernden Ebenen interagiert. Sie interagiert mit der rechten Hemisphäre, aber mit den tieferliegenden Ebenen überhaupt nicht. Die drei geben diesem kognitiv-kommunikativen Ich den Takt vor. Es kann etwas interagieren, aber nur mit der rechten Hemisphäre. Also: Worte sind nicht ganz unnütz, aber sie alleine bewirken nichts, sondern immer nur mit bewussten Emotionen und noch besser mit unbewussten Emotionen.« (Roth 2017 o. S.)__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Verstärkend erklärt Roth an anderer Stelle: __»Die kognitiv-sprachlich-rationale Ebene hat die Eigentümlichkeit, dass sie […] überhaupt nicht direkt mit den eigentlich handelnden, steuernden Ebenen interagiert. Sie interagiert mit der rechten Hemisphäre, aber mit den tieferliegenden Ebenen überhaupt nicht. Die drei geben diesem kognitiv-kommunikativen Ich den Takt vor. Es kann etwas interagieren, aber nur mit der rechten Hemisphäre. Also: Worte sind nicht ganz unnütz, aber sie alleine bewirken nichts, sondern immer nur mit bewussten Emotionen und noch besser mit unbewussten Emotionen.« (Roth 2017 o. S.)__",
+      "id": [
+        "152348"
+      ]
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '[…'",
+        "line": 3,
+        "column": 122,
+        "errorLine": "Verstärkend erklärt Roth an anderer Stelle: __»Die kognitiv-sprachlich-rationale Ebene hat die Eigentümlichkeit, dass sie […] überhaupt nicht direkt mit den eigentlich handelnden, steuernden Ebenen interagiert. Sie interagiert mit der rechten Hemisphäre, aber mit den tieferliegenden Ebenen überhaupt nicht. Die drei geben diesem kognitiv-kommunikativen Ich den Takt vor. Es kann etwas interagieren, aber nur mit der rechten Hemisphäre. Also: Worte sind nicht ganz unnütz, aber sie alleine bewirken nichts, sondern immer nur mit bewussten Emotionen und noch besser mit unbewussten Emotionen.« (Roth 2017 o. S.)__"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 3,
+        "column": 124,
+        "errorLine": "Verstärkend erklärt Roth an anderer Stelle: __»Die kognitiv-sprachlich-rationale Ebene hat die Eigentümlichkeit, dass sie […] überhaupt nicht direkt mit den eigentlich handelnden, steuernden Ebenen interagiert. Sie interagiert mit der rechten Hemisphäre, aber mit den tieferliegenden Ebenen überhaupt nicht. Die drei geben diesem kognitiv-kommunikativen Ich den Takt vor. Es kann etwas interagieren, aber nur mit der rechten Hemisphäre. Also: Worte sind nicht ganz unnütz, aber sie alleine bewirken nichts, sondern immer nur mit bewussten Emotionen und noch besser mit unbewussten Emotionen.« (Roth 2017 o. S.)__"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152349]\n**Lernen auf der kognitiv-sprachlichen Ebene kann das Handeln der Menschen nur in Verbindung mit sozial-emotionalem Lernen verändern.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Lernen auf der kognitiv-sprachlichen Ebene kann das Handeln der Menschen nur in Verbindung mit sozial-emotionalem Lernen verändern.**",
+      "id": [
+        "152349"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152350]\nImmer wieder erklären Hirnforscher in häufig populärwissenschaftlichen Werken, wie neurobiologische Erkenntnisse angeblich dazu beitragen, Lernprozesse zu verstehen (vgl. u.a. Spitzer 2012, Hüther 2006). Leider ist diese »Neurodidaktik« nicht in der Lage, individuelle Lernprozesse zu erklären.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Immer wieder erklären Hirnforscher in häufig populärwissenschaftlichen Werken, wie neurobiologische Erkenntnisse angeblich dazu beitragen, Lernprozesse zu verstehen (vgl. u.a. Spitzer 2012, Hüther 2006). Leider ist diese »Neurodidaktik« nicht in der Lage, individuelle Lernprozesse zu erklären.",
+      "id": [
+        "152350"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152351]\nLernen ist im Endeffekt eine Entwicklung der Handlungsweisen der Menschen und damit kein Vorgang, der auf das Gehirn beschränkt ist.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Lernen ist im Endeffekt eine Entwicklung der Handlungsweisen der Menschen und damit kein Vorgang, der auf das Gehirn beschränkt ist.",
+      "id": [
+        "152351"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152352]\n**Nicht das Gehirn lernt, sondern der Mensch.**\n\nDas Gehirn ist also nur ein, wenn auch entscheidendes, Teilsystem, das um weitere Faktoren, z.B. das Vorwissen und die Emotionen aus Erfahrungen, erweitert werden muss, um Lernen zu verstehen. Es ist deshalb kurzfristig nicht zu erwarten, dass Lernen mithilfe der Gehirnforschung optimiert werden kann. Realistisch können wir gerade einmal davon ausgehen, dass wir zukünftig typische Hirnfunktionen besser verstehen können (vgl. BMBF 2005, S. 126).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Nicht das Gehirn lernt, sondern der Mensch.**\n\nDas Gehirn ist also nur ein, wenn auch entscheidendes, Teilsystem, das um weitere Faktoren, z.B. das Vorwissen und die Emotionen aus Erfahrungen, erweitert werden muss, um Lernen zu verstehen. Es ist deshalb kurzfristig nicht zu erwarten, dass Lernen mithilfe der Gehirnforschung optimiert werden kann. Realistisch können wir gerade einmal davon ausgehen, dass wir zukünftig typische Hirnfunktionen besser verstehen können (vgl. BMBF 2005, S. 126).",
+      "id": [
+        "152352"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152353]\nGerhard Roth hat diese Erkenntnis in einem Interview deutlich hervorgehoben: __»Die Neurobiologie kann diesem (psychologisch, didaktisch-pädagogischem) Wissen nur wenig neue Inhalte hinzufügen; erst recht kann sie nicht aus sich heraus Pädagogik und Didaktik ersetzen«__.27",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Gerhard Roth hat diese Erkenntnis in einem Interview deutlich hervorgehoben: __»Die Neurobiologie kann diesem (psychologisch, didaktisch-pädagogischem) Wissen nur wenig neue Inhalte hinzufügen; erst recht kann sie nicht aus sich heraus Pädagogik und Didaktik ersetzen«__.27",
+      "id": [
+        "152353"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152354]\n[###Lerntheorien und zukünftiges Lernen]\n[%3.5.2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.5.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152354"
+      ],
+      "title": "Lerntheorien und zukünftiges Lernen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152355]\nMenschen müssen sich ihre Welt durch Lernen aneignen. Dieses Lernen beruht auf Probieren, Imitieren und Reflektieren, es baut auf bereits Gelerntem auf und bildet die Grundlage für weiteres Lernen. Lernen lässt sich dabei als eine Vorbereitung darauf beschreiben, ein bestimmtes Wissen und Können zu praktizieren. Umstritten ist die Frage, wie dieser Prozess erfolgen kann (vgl. Hackl 2017).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Menschen müssen sich ihre Welt durch Lernen aneignen. Dieses Lernen beruht auf Probieren, Imitieren und Reflektieren, es baut auf bereits Gelerntem auf und bildet die Grundlage für weiteres Lernen. Lernen lässt sich dabei als eine Vorbereitung darauf beschreiben, ein bestimmtes Wissen und Können zu praktizieren. Umstritten ist die Frage, wie dieser Prozess erfolgen kann (vgl. Hackl 2017).",
+      "id": [
+        "152355"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152356]\nJeder Mensch ist einzigartig. Dies gilt auch für das Lernen. Wir müssen uns deswegen bei der Erklärung von Lernvorgängen vor allem auf die Erkenntnisse der Pädagogik und der Entwicklungspsychologie konzentrieren. Analysiert man die Pädagogik der aktuellen betrieblichen Bildung, zeigt es sich, dass dort heute im Wesentlichen Elemente aus vier Lerntheorien eine Rolle spielen (vgl. Kuhlmann, Sauter 2008, S. 43ff.).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Jeder Mensch ist einzigartig. Dies gilt auch für das Lernen. Wir müssen uns deswegen bei der Erklärung von Lernvorgängen vor allem auf die Erkenntnisse der Pädagogik und der Entwicklungspsychologie konzentrieren. Analysiert man die Pädagogik der aktuellen betrieblichen Bildung, zeigt es sich, dass dort heute im Wesentlichen Elemente aus vier Lerntheorien eine Rolle spielen (vgl. Kuhlmann, Sauter 2008, S. 43ff.).",
+      "id": [
+        "152356"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152357]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_4.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152357"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152358]\n**Verhalten** bezeichnet ein Agieren mit niedriger Komplexitätsstufe ohne direkte oder indirekte Intention (Absicht, Ziel) und ohne Reflexivität (vgl. Wahl 2002, S. 229). Der Behaviorismus postuliert, dass das Verhalten der Menschen vor allem durch die Konsequenzen bestimmt wird, die ihr Verhalten erzeugen. Positive Konsequenzen wirken verstärkend, negative Konsequenzen führen zu einer Reduktion eines zuvor gelernten Verhaltens. Verhalten, das keine Reaktion bewirkt, wird nicht aufrechterhalten, es wird gelöscht. __E-Learning-Programme__ der ersten Generationen basieren ebenfalls auf dem behavioristischen Ansatz, da sie überwiegend das Ziel der Instruktion verfolgen. In diesen Web Based Trainings (WBT) werden die Lernziele in kleinste Schritte zergliedert. Richtige Antworten schlagen sich in einem Scoring, evtl. verbunden mit Belohnungen, nieder. Bei zu hohen Fehlerzahlen wird empfohlen, die Lektion zu wiederholen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Verhalten** bezeichnet ein Agieren mit niedriger Komplexitätsstufe ohne direkte oder indirekte Intention (Absicht, Ziel) und ohne Reflexivität (vgl. Wahl 2002, S. 229). Der Behaviorismus postuliert, dass das Verhalten der Menschen vor allem durch die Konsequenzen bestimmt wird, die ihr Verhalten erzeugen. Positive Konsequenzen wirken verstärkend, negative Konsequenzen führen zu einer Reduktion eines zuvor gelernten Verhaltens. Verhalten, das keine Reaktion bewirkt, wird nicht aufrechterhalten, es wird gelöscht. __E-Learning-Programme__ der ersten Generationen basieren ebenfalls auf dem behavioristischen Ansatz, da sie überwiegend das Ziel der Instruktion verfolgen. In diesen Web Based Trainings (WBT) werden die Lernziele in kleinste Schritte zergliedert. Richtige Antworten schlagen sich in einem Scoring, evtl. verbunden mit Belohnungen, nieder. Bei zu hohen Fehlerzahlen wird empfohlen, die Lektion zu wiederholen.",
+      "id": [
+        "152358"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152359]\nDer behavioristische Ansatz ist für Future Learning als kritisch zu sehen, weil er die Motivation und Emotion des einzelnen Lerners nicht beachtet. Das Modell orientiert sich nur am Ergebnis und erklärt nicht, wie neues Verhalten entsteht. Deshalb wird dieser Ansatz im Future Learning nur eine sehr untergeordnete Rolle spielen können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der behavioristische Ansatz ist für Future Learning als kritisch zu sehen, weil er die Motivation und Emotion des einzelnen Lerners nicht beachtet. Das Modell orientiert sich nur am Ergebnis und erklärt nicht, wie neues Verhalten entsteht. Deshalb wird dieser Ansatz im Future Learning nur eine sehr untergeordnete Rolle spielen können.",
+      "id": [
+        "152359"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152360]\n**Zukünftiges Lernen ermöglicht gezieltes, selbstorganisiertes Handeln.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Zukünftiges Lernen ermöglicht gezieltes, selbstorganisiertes Handeln.**",
+      "id": [
+        "152360"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152361]\n**Handeln** ist dabei eine Form des Agierens, die zielgerichtet (intentional) und bewusst ist (vgl. Wahl, 3. erw. Aufl. 2013, S. 17). Dies setzt Wissen sowie ein reflexives Bewusstsein des Lerners voraus. Um Handlungen zu trainieren, müssen die Lernmaßnahmen in situationsübergreifende Ziele und Pläne eingebettet sein und neben kognitiven und aktionalen Aspekten ganz ausdrücklich auch emotionale Veränderungen aktiv und nachhaltig unterstützen (vgl. Wahl 1991, Wahl 2002, S. 229 f.)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Handeln** ist dabei eine Form des Agierens, die zielgerichtet (intentional) und bewusst ist (vgl. Wahl, 3. erw. Aufl. 2013, S. 17). Dies setzt Wissen sowie ein reflexives Bewusstsein des Lerners voraus. Um Handlungen zu trainieren, müssen die Lernmaßnahmen in situationsübergreifende Ziele und Pläne eingebettet sein und neben kognitiven und aktionalen Aspekten ganz ausdrücklich auch emotionale Veränderungen aktiv und nachhaltig unterstützen (vgl. Wahl 1991, Wahl 2002, S. 229 f.)",
+      "id": [
+        "152361"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152362]\nSofern die Handlungssituationen, denen die Lerner ausgesetzt sind, von den ursprünglichen Lernsituationen abweichen, entsteht ein Transferproblem, da das erworbene Wissen »träge« ist und nicht einfach auf Anwendungskontexte übertragen werden kann (vgl. Gruber, Mandl, Renkl 2000). Der Erfolg hängt dabei vor allem von der Art der Informationsaufbereitung und -darbietung sowie von den kognitiven Aktivitäten der Lerner ab.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Sofern die Handlungssituationen, denen die Lerner ausgesetzt sind, von den ursprünglichen Lernsituationen abweichen, entsteht ein Transferproblem, da das erworbene Wissen »träge« ist und nicht einfach auf Anwendungskontexte übertragen werden kann (vgl. Gruber, Mandl, Renkl 2000). Der Erfolg hängt dabei vor allem von der Art der Informationsaufbereitung und -darbietung sowie von den kognitiven Aktivitäten der Lerner ab.",
+      "id": [
+        "152362"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152363]\n**Kognitive Lernansätze** konzentrieren sich deshalb auf die Lernprozesse sowie die Voraussetzungen und Beeinflussungsfaktoren des Lernens. Die menschliche Emotionalität und Situiertheit des Handelns der Lerner wird in dieser Lebenswelt ausgeblendet. Situiertes Handeln erfolgt dabei anhand möglichst authentischer Problemsituationen. Im Future Learning werden problemorientierte Dialoge im Rahmen des Coachings und des Co-Coachings eine wachsende Bedeutung erlangen, in naher Zukunft auch mit dem __Lernpartner Computer__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Kognitive Lernansätze** konzentrieren sich deshalb auf die Lernprozesse sowie die Voraussetzungen und Beeinflussungsfaktoren des Lernens. Die menschliche Emotionalität und Situiertheit des Handelns der Lerner wird in dieser Lebenswelt ausgeblendet. Situiertes Handeln erfolgt dabei anhand möglichst authentischer Problemsituationen. Im Future Learning werden problemorientierte Dialoge im Rahmen des Coachings und des Co-Coachings eine wachsende Bedeutung erlangen, in naher Zukunft auch mit dem __Lernpartner Computer__",
+      "id": [
+        "152363"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152364]\nIn **konstruktivistischen Lernansätzen** wird das Lernen am Arbeitsplatz gefördert, sodass Arbeiten und Lernen zusammenwachsen. Damit bildet diese Lerntheorie einewichtige Grundlage für Future Learning. Lernprozesse finden im Rahmen vereinbarter Entwicklungsziele statt und sind weitgehend selbstorganisiert. Die Lerner sind aktiv und werden von ihren Lernbegleitern unterstützt. Diese wechseln zwischen eher aktiven und eher begleitenden Phasen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In **konstruktivistischen Lernansätzen** wird das Lernen am Arbeitsplatz gefördert, sodass Arbeiten und Lernen zusammenwachsen. Damit bildet diese Lerntheorie einewichtige Grundlage für Future Learning. Lernprozesse finden im Rahmen vereinbarter Entwicklungsziele statt und sind weitgehend selbstorganisiert. Die Lerner sind aktiv und werden von ihren Lernbegleitern unterstützt. Diese wechseln zwischen eher aktiven und eher begleitenden Phasen.",
+      "id": [
+        "152364"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152365]\nDie Rollen der Beteiligten in diesen Lernprozessen können wie folgt beschrieben werden:\n\n• Lerner und Lernbegleiter vereinbaren Werte- und Kompetenzentwicklungsziele und kommunizieren gleichberechtigt,\n• der Lernbegleiter unterstützt die Identifizierung und Lösung von Problemen,\n• sie kooperieren mit den Lernern und flankieren und coachen die Entwicklungsprozesse.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die Rollen der Beteiligten in diesen Lernprozessen können wie folgt beschrieben werden:\n\n• Lerner und Lernbegleiter vereinbaren Werte- und Kompetenzentwicklungsziele und kommunizieren gleichberechtigt,\n• der Lernbegleiter unterstützt die Identifizierung und Lösung von Problemen,\n• sie kooperieren mit den Lernern und flankieren und coachen die Entwicklungsprozesse.",
+      "id": [
+        "152365"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152366]\nSocial Software ist für dieses kooperative und kollaborative Lernen die notwendige Voraussetzung, weil sie die aktive Teilnahme der Lerner an Kommunikationsprozessen im Netz fördert.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Social Software ist für dieses kooperative und kollaborative Lernen die notwendige Voraussetzung, weil sie die aktive Teilnahme der Lerner an Kommunikationsprozessen im Netz fördert.",
+      "id": [
+        "152366"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152367]\n**Netzwerke** sind die Verbindungen zwischen verschiedenen Elementen wie Menschen, Gruppen oder Computer. Deshalb erfordert Lernen in einem **konnektivistischen Lernsystem** eine offene Lernumgebung, in der zusätzlich effiziente Interaktionsmöglichkeiten mit Netzwerkpartnern geboten werden. Die Lerner benötigen Fähigkeiten, relevantes Wissen für den Lernprozess zu identifizieren, zu bewerten, zu beschreiben und in einem gemeinsamen Prozess mit Lernpartnern weiterzuentwickeln. Sie reflektieren nicht nur die Mittel und Methoden der Wissens- und Wertekommunikation, sondern schaffen bei Bedarf selbstorganisiert Entwicklungssituationen, in denen ein optimaler Wissensaufbau und eine Werteinteriorisation möglich werden. Die Lernbegleiter hören aktiv zu, beobachten, geben Feedback, beraten und flankieren. Sie fördern die Netzwerkbildung der Lerner und helfen ihnen durch ihr eigenes Netzwerk, sich in der Organisation zu integrieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Netzwerke** sind die Verbindungen zwischen verschiedenen Elementen wie Menschen, Gruppen oder Computer. Deshalb erfordert Lernen in einem **konnektivistischen Lernsystem** eine offene Lernumgebung, in der zusätzlich effiziente Interaktionsmöglichkeiten mit Netzwerkpartnern geboten werden. Die Lerner benötigen Fähigkeiten, relevantes Wissen für den Lernprozess zu identifizieren, zu bewerten, zu beschreiben und in einem gemeinsamen Prozess mit Lernpartnern weiterzuentwickeln. Sie reflektieren nicht nur die Mittel und Methoden der Wissens- und Wertekommunikation, sondern schaffen bei Bedarf selbstorganisiert Entwicklungssituationen, in denen ein optimaler Wissensaufbau und eine Werteinteriorisation möglich werden. Die Lernbegleiter hören aktiv zu, beobachten, geben Feedback, beraten und flankieren. Sie fördern die Netzwerkbildung der Lerner und helfen ihnen durch ihr eigenes Netzwerk, sich in der Organisation zu integrieren.",
+      "id": [
+        "152367"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152368]\n**Der pragmatische Lernansatz des Konnektivismus bildet die wesentliche Grundlage für Future Learning.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Der pragmatische Lernansatz des Konnektivismus bildet die wesentliche Grundlage für Future Learning.**",
+      "id": [
+        "152368"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152369]\nDie Herausforderung für die Gestaltung des Future Learning liegt darin, einen Lernraum zu schaffen, der selbstorganisierte Lernprozesse aller Mitarbeiter und Führungskräfte ermöglicht. Dabei spielt das Lernen aufgrund persönlicher Erfahrungen im Rahmen konstruktivistischer Lernansätze und im Netz(werk) durch kollaboratives Arbeiten eine zentrale Rolle. Damit werden letztendlich Werte- und Kompetenzziele angestrebt, die eine Kultur des selbstorganisierten Lernens erfordern. Behavioristische und kognitivistische Lernansätze spielen im Rahmen des selbstorganisierten Aufbaus von Wissen und der Qualifikation eine dagegen begrenzte Rolle.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Herausforderung für die Gestaltung des Future Learning liegt darin, einen Lernraum zu schaffen, der selbstorganisierte Lernprozesse aller Mitarbeiter und Führungskräfte ermöglicht. Dabei spielt das Lernen aufgrund persönlicher Erfahrungen im Rahmen konstruktivistischer Lernansätze und im Netz(werk) durch kollaboratives Arbeiten eine zentrale Rolle. Damit werden letztendlich Werte- und Kompetenzziele angestrebt, die eine Kultur des selbstorganisierten Lernens erfordern. Behavioristische und kognitivistische Lernansätze spielen im Rahmen des selbstorganisierten Aufbaus von Wissen und der Qualifikation eine dagegen begrenzte Rolle.",
+      "id": [
+        "152369"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152370]\n[###Lernpsychologie]\n[%3.5.3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.5.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152370"
+      ],
+      "title": "Lernpsychologie"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152371]\n__Generationen von Lehrern wurde eingebläut, dass zu Beginn eines Lernprozesses so wenig wie möglich vorweggenommen werden darf, um der Neugiermotivation, dem Überraschungseffekt und dem elementaren Bedürfnis aller Lernenden, sich jeden Inhalt mit hoher Anstrengungsbereitschaft selbst »erarbeiten« zu wollen, nicht entgegenzuwirken. Deshalb schwört die Welt der überzeugten Lehrenden häufig auf eine Motivationsphase beim Einstieg, ausgehend von der nicht hinterfragten Annahme, extrinsische Motivation sei der bedeutsamste Faktor im Lernprozess. Nach dem derzeitigen Stand der pädagogischen Forschung ist dies falsch (vgl. Wahl 2011).__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Generationen von Lehrern wurde eingebläut, dass zu Beginn eines Lernprozesses so wenig wie möglich vorweggenommen werden darf, um der Neugiermotivation, dem Überraschungseffekt und dem elementaren Bedürfnis aller Lernenden, sich jeden Inhalt mit hoher Anstrengungsbereitschaft selbst »erarbeiten« zu wollen, nicht entgegenzuwirken. Deshalb schwört die Welt der überzeugten Lehrenden häufig auf eine Motivationsphase beim Einstieg, ausgehend von der nicht hinterfragten Annahme, extrinsische Motivation sei der bedeutsamste Faktor im Lernprozess. Nach dem derzeitigen Stand der pädagogischen Forschung ist dies falsch (vgl. Wahl 2011).__",
+      "id": [
+        "152371"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152372]\nPädagogische Psychologie ist eine Teildisziplin der wissenschaftlichen Psychologie, die das Lernen und Lehren im pädagogischen Kontext erforscht und ihre Erkenntnisse anwendet, um Menschen praktisch aller Altersstufen auf der kognitiven, der sozialemotionalen und der Verhaltensebene in Richtung auf angestrebte Ziele zu fördern. Sie versucht, diese Prozesse zu beschreiben und zu erklären und auf Grundlage dieser Erkenntnisse das pädagogische Handeln von Lehrern, Dozenten, Trainern oder Eltern in die Wege zu leiten (vgl. Mietzel 2017).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Pädagogische Psychologie ist eine Teildisziplin der wissenschaftlichen Psychologie, die das Lernen und Lehren im pädagogischen Kontext erforscht und ihre Erkenntnisse anwendet, um Menschen praktisch aller Altersstufen auf der kognitiven, der sozialemotionalen und der Verhaltensebene in Richtung auf angestrebte Ziele zu fördern. Sie versucht, diese Prozesse zu beschreiben und zu erklären und auf Grundlage dieser Erkenntnisse das pädagogische Handeln von Lehrern, Dozenten, Trainern oder Eltern in die Wege zu leiten (vgl. Mietzel 2017).",
+      "id": [
+        "152372"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152373]\n\nDie pädagogisch-psychologische Lernforschung kommt zu einer eindeutigen Aussage über die Faktoren des Lernerfolges:\n\n**Der wichtigste Faktor für den Lernerfolg ist mit weitem Vorsprung die direkte Anknüpfung des Lernprozesses an den aktuellen Erfahrungs- und Wissensstand der Mitarbeiter** (vgl. Wahl 2013, S. 146$.).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die pädagogisch-psychologische Lernforschung kommt zu einer eindeutigen Aussage über die Faktoren des Lernerfolges:\n\n**Der wichtigste Faktor für den Lernerfolg ist mit weitem Vorsprung die direkte Anknüpfung des Lernprozesses an den aktuellen Erfahrungs- und Wissensstand der Mitarbeiter** (vgl. Wahl 2013, S. 146$.).",
+      "id": [
+        "152373"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152374]\nWerden diese Eingangsvoraussetzungen durch die treffsichere Wahl von Praxisaufgaben oder -projekten optimiert, wird sich der Lernerfolg nach vielen empirischen Untersuchungen deutlich steigern und die Orientierung der Lerner verbessern.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Werden diese Eingangsvoraussetzungen durch die treffsichere Wahl von Praxisaufgaben oder -projekten optimiert, wird sich der Lernerfolg nach vielen empirischen Untersuchungen deutlich steigern und die Orientierung der Lerner verbessern.",
+      "id": [
+        "152374"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152375]\n**Deshalb ist für den Lernerfolg die passgenaue Auswahl und verbindliche Vereinbarung der Herausforderungen in der Praxis, in denen die gezielte Werte- und Kompetenzentwicklung erfolgen soll, entscheidend.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Deshalb ist für den Lernerfolg die passgenaue Auswahl und verbindliche Vereinbarung der Herausforderungen in der Praxis, in denen die gezielte Werte- und Kompetenzentwicklung erfolgen soll, entscheidend.**",
+      "id": [
+        "152375"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152376]\nDies setzt die maßgebliche Mitwirkung des Mitarbeiters voraus, da er seinen Erfahrungs- und Wissensstand am besten einschätzen kann. Die Motivation der Lerner durch den Lehrer, Trainer oder Dozenten hat dagegen nur eine sehr bescheidene bis gar keine Auswirkung auf den Lernerfolg (ebenda).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dies setzt die maßgebliche Mitwirkung des Mitarbeiters voraus, da er seinen Erfahrungs- und Wissensstand am besten einschätzen kann. Die Motivation der Lerner durch den Lehrer, Trainer oder Dozenten hat dagegen nur eine sehr bescheidene bis gar keine Auswirkung auf den Lernerfolg (ebenda).",
+      "id": [
+        "152376"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152377]\n**Motivation entsteht durch Wertungen, die ein Mensch auf Basis seiner Bedürfnisse vornimmt** (nach Erpenbeck 1984, S. 59).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Motivation entsteht durch Wertungen, die ein Mensch auf Basis seiner Bedürfnisse vornimmt** (nach Erpenbeck 1984, S. 59).",
+      "id": [
+        "152377"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152378]\nGrundsätzlich werden zwei Formen der Motivation unterschieden (Becker 2019, s. 141):\n\n• **Extrinsische Motivation** wird durch positive Verstärker wie Lob oder Geld oder negative Anreize wie Rüge oder Bestrafung von außen bewirkt.\n• **Intrinsische Motivation** entsteht aus der Aufgabe und dem Erleben des Handelns selbst oder der Erwartung, dass diese Erfahrung eintritt. Man handelt, weil es einem Spaß macht, weil die Tätigkeit als sinnvoll oder herausfordernd empfunden wird oder weil sie einen einfach interessiert.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Grundsätzlich werden zwei Formen der Motivation unterschieden (Becker 2019, s. 141):\n\n• **Extrinsische Motivation** wird durch positive Verstärker wie Lob oder Geld oder negative Anreize wie Rüge oder Bestrafung von außen bewirkt.\n• **Intrinsische Motivation** entsteht aus der Aufgabe und dem Erleben des Handelns selbst oder der Erwartung, dass diese Erfahrung eintritt. Man handelt, weil es einem Spaß macht, weil die Tätigkeit als sinnvoll oder herausfordernd empfunden wird oder weil sie einen einfach interessiert.",
+      "id": [
+        "152378"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152379]\nIntrinsische Motivation kann dabei nur dann entwickelt werden, wenn die Lerner selbstorganisiert ihre Lernprozesse gestalten können. Im betrieblichen Lernen bieten sich insbesondere folgende Gestaltungselemente zur Förderung der Motivation an (vgl. Schiefele, Streblow 2006, S. 239$.):\n\n• **Ermöglichung aktiven, selbstorganisierten Handelns in selbst mit ausgewählten, realen Herausforderungen:** Kognitive und physische Aktivitäten fördern das Interesse, wenn die Lerner ihre Herausforderungen zum Aufbau ihrer Werte und Kompetenzen selbst mit auswählen können.\n• **Ermöglichungsräume anbieten:** Selbstorganisiertes Lernen wird durch Planungshilfen, durch Wissen, Kommunikations- und Kollaborationsmöglichkeiten und Feedback ermöglicht.\n• **Rückmeldungen und Bekräftigungen:** Auch kleinere Erfolge sollten zurückgemeldet werden, selbst wenn es nicht optimal läuft. Dagegen sind Tadel und Vorwürfe zu vermeiden.\n• **Soziales Lernen:** Die Lerner entwickeln kollaborativ Lösungen.\n• **Transparenz über die Entwicklungsfortschritte:** Dazu gehören die Rückmeldung von Lernpartnern, Lernbegleitern und Führungskräften sowie Werte- und Kompetenzerfassungen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Intrinsische Motivation kann dabei nur dann entwickelt werden, wenn die Lerner selbstorganisiert ihre Lernprozesse gestalten können. Im betrieblichen Lernen bieten sich insbesondere folgende Gestaltungselemente zur Förderung der Motivation an (vgl. Schiefele, Streblow 2006, S. 239$.):\n\n• **Ermöglichung aktiven, selbstorganisierten Handelns in selbst mit ausgewählten, realen Herausforderungen:** Kognitive und physische Aktivitäten fördern das Interesse, wenn die Lerner ihre Herausforderungen zum Aufbau ihrer Werte und Kompetenzen selbst mit auswählen können.\n• **Ermöglichungsräume anbieten:** Selbstorganisiertes Lernen wird durch Planungshilfen, durch Wissen, Kommunikations- und Kollaborationsmöglichkeiten und Feedback ermöglicht.\n• **Rückmeldungen und Bekräftigungen:** Auch kleinere Erfolge sollten zurückgemeldet werden, selbst wenn es nicht optimal läuft. Dagegen sind Tadel und Vorwürfe zu vermeiden.\n• **Soziales Lernen:** Die Lerner entwickeln kollaborativ Lösungen.\n• **Transparenz über die Entwicklungsfortschritte:** Dazu gehören die Rückmeldung von Lernpartnern, Lernbegleitern und Führungskräften sowie Werte- und Kompetenzerfassungen.",
+      "id": [
+        "152379"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152380]\nMitarbeiter, die aus intrinsischer Motivation lernen und handeln, sind im Vergleich zu extrinsisch motivierten Kollegen zufriedener, verfolgen die Ziele hartnäckiger, freuen sich mehr über ihre Erfolge und verkraften Misserfolge besser. Dies zeigt sich insbesondere an der Qualität der Ergebnisse. Extrinsische Motivation wirkt sich, wenn überhaupt, nur auf die Quantität der Ergebnisse aus (vgl.\"Becker 2019, S. 147).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Mitarbeiter, die aus intrinsischer Motivation lernen und handeln, sind im Vergleich zu extrinsisch motivierten Kollegen zufriedener, verfolgen die Ziele hartnäckiger, freuen sich mehr über ihre Erfolge und verkraften Misserfolge besser. Dies zeigt sich insbesondere an der Qualität der Ergebnisse. Extrinsische Motivation wirkt sich, wenn überhaupt, nur auf die Quantität der Ergebnisse aus (vgl.\"Becker 2019, S. 147).",
+      "id": [
+        "152380"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152381]\nDeshalb kommt im Rahmen der gezielten Werte- und Kompetenzentwicklung der Auswahl der geeigneten Herausforderungen in der Praxis, deren Bearbeitung zum angestrebten Werte- und Kompetenzaufbau führen soll, eine besondere Bedeutung zu. Neben dem Lernbegleiter übernimmt die jeweilige Führungskraft bei der Beratung der Lerner eine besondere Rolle.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Deshalb kommt im Rahmen der gezielten Werte- und Kompetenzentwicklung der Auswahl der geeigneten Herausforderungen in der Praxis, deren Bearbeitung zum angestrebten Werte- und Kompetenzaufbau führen soll, eine besondere Bedeutung zu. Neben dem Lernbegleiter übernimmt die jeweilige Führungskraft bei der Beratung der Lerner eine besondere Rolle.",
+      "id": [
+        "152381"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152382]\nEs hat sich bewährt, dabei auf folgende Merkmale zu achten (vgl.\"Becker 2019, S. 107):\n\n• Abwechslung: Wird die Aufgabe als Abwechslung empfunden, z. B. weil sie breiter wird (Job-Enlargement) oder einen neuen Charakter hat (Jobrotation)?\n• Ganzheitlichkeit: Haben die Mitarbeiter das Gefühl, für einen abgeschlossenen Teilprozess Verantwortung zu tragen?\n• Bedeutsamkeit: Ist die Aufgabe für die Mitarbeiter attraktiv und relevant?\n• Autonomie: Welche Freiräume erhalten die Mitarbeiter (Job-Enrichment)?\n• Rückmeldung: Bekommen die Mitarbeiter laufend Rückmeldung über ihren Entwicklungsstand?\n• Zeitrahmen: Ist der Arbeitsauftrag zeitlich realistisch gegliedert?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Es hat sich bewährt, dabei auf folgende Merkmale zu achten (vgl.\"Becker 2019, S. 107):\n\n• Abwechslung: Wird die Aufgabe als Abwechslung empfunden, z. B. weil sie breiter wird (Job-Enlargement) oder einen neuen Charakter hat (Jobrotation)?\n• Ganzheitlichkeit: Haben die Mitarbeiter das Gefühl, für einen abgeschlossenen Teilprozess Verantwortung zu tragen?\n• Bedeutsamkeit: Ist die Aufgabe für die Mitarbeiter attraktiv und relevant?\n• Autonomie: Welche Freiräume erhalten die Mitarbeiter (Job-Enrichment)?\n• Rückmeldung: Bekommen die Mitarbeiter laufend Rückmeldung über ihren Entwicklungsstand?\n• Zeitrahmen: Ist der Arbeitsauftrag zeitlich realistisch gegliedert?",
+      "id": [
+        "152382"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152383]\n[###Ermöglichungsdidaktik– die konzeptionelle Basis]\n[%3.5.4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.5.4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152383"
+      ],
+      "title": "Ermöglichungsdidaktik– die konzeptionelle Basis"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152384]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_5.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152384"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152385]\nHorst Siebert Zukünftiges Lernen in Organisationen erhebt nicht mehr den Anspruch, man könne Lernprozesse direkt beeinflussen (vgl. Wahl 2006, S. 206). Auch widerspricht diese »Erzeugungsdidaktik« dem Menschenbild, das im Kontext agiler Unternehmen zunehmend gefordert wird.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Horst Siebert Zukünftiges Lernen in Organisationen erhebt nicht mehr den Anspruch, man könne Lernprozesse direkt beeinflussen (vgl. Wahl 2006, S. 206). Auch widerspricht diese »Erzeugungsdidaktik« dem Menschenbild, das im Kontext agiler Unternehmen zunehmend gefordert wird.",
+      "id": [
+        "152385"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152386]\nEs ist absurd zu glauben, man könne die individuellen Lernprozesse der Mitarbeiter einer Organisation zentral steuern und damit auf die strategischen Ziele hin fokussieren. Die Lernprozesse im Unternehmen werden vielmehr durch Regeln, Normen und Werte, die von den Mitarbeitern verinnerlicht sind, koordiniert und synchronisiert. Deshalb ist Lernen kein linearer Prozess, wie es sich viel traditionelle Bildungsverantwortliche wünschen. Aus diesen Erkenntnissen heraus hat sich die Ermöglichungsdidaktik entwickelt (vgl.Arnold, Gomez Tutor 2007).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Es ist absurd zu glauben, man könne die individuellen Lernprozesse der Mitarbeiter einer Organisation zentral steuern und damit auf die strategischen Ziele hin fokussieren. Die Lernprozesse im Unternehmen werden vielmehr durch Regeln, Normen und Werte, die von den Mitarbeitern verinnerlicht sind, koordiniert und synchronisiert. Deshalb ist Lernen kein linearer Prozess, wie es sich viel traditionelle Bildungsverantwortliche wünschen. Aus diesen Erkenntnissen heraus hat sich die Ermöglichungsdidaktik entwickelt (vgl.Arnold, Gomez Tutor 2007).",
+      "id": [
+        "152386"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152387]\nDie didaktische Analyse der Bildungswirkung des Lehr- und Fachinhalts muss deshalb perspektivisch ersetzt oder gar abgelöst werden durch eine »didaktische Analyse des Lernsubjektes« (Arnold 2017, S. 18).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die didaktische Analyse der Bildungswirkung des Lehr- und Fachinhalts muss deshalb perspektivisch ersetzt oder gar abgelöst werden durch eine »didaktische Analyse des Lernsubjektes« (Arnold 2017, S. 18).",
+      "id": [
+        "152387"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152388]\n**Ermöglichungsdidaktik hat zum Ziel, den Mitarbeitern alles an die Hand zu geben, damit sie ihre personalisierten Entwicklungsprozesse lösungsorientiert und selbstorganisiert gestalten können** (nach ebenda).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Ermöglichungsdidaktik hat zum Ziel, den Mitarbeitern alles an die Hand zu geben, damit sie ihre personalisierten Entwicklungsprozesse lösungsorientiert und selbstorganisiert gestalten können** (nach ebenda).",
+      "id": [
+        "152388"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152389]\nDabei geht es nicht mehr darum, dass die Mitarbeiter vollständig alles erlernen. Vielmehr sollen sie in ausgewählten, repräsentativen Praxisaufgaben eigene Erfahrungen sammeln und Autonomie erleben. Die Lernautonomie liegt dabei grundsätzlich beim Mitarbeiter, dem zugetraut wird, Zugänge zu den notwendigen Themen zu erarbeiten, diese im Dialog zu vertiefen und mögliche Anwendungen zu üben (nach ebenda, S. 22).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dabei geht es nicht mehr darum, dass die Mitarbeiter vollständig alles erlernen. Vielmehr sollen sie in ausgewählten, repräsentativen Praxisaufgaben eigene Erfahrungen sammeln und Autonomie erleben. Die Lernautonomie liegt dabei grundsätzlich beim Mitarbeiter, dem zugetraut wird, Zugänge zu den notwendigen Themen zu erarbeiten, diese im Dialog zu vertiefen und mögliche Anwendungen zu üben (nach ebenda, S. 22).",
+      "id": [
+        "152389"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152390]\nDie Ermöglichungsdidaktik ist die pragmatische Antwort auf die wirtschafts- und bildungspolitisch propagierte Forderung nach lebenslangem Lernen und damit auch für agile Entwicklungskonzeptionen. Die vielbeschworene Vision des lebenslangen Lernens baut darauf auf, dass die Menschen die Motivation und die Kompetenz erwerben, eigenständig über ihre gesamte Lebensspanne hinweg zu lernen. Sie umfasst damit alle Gelegenheiten zum Lernen, in Seminaren, mit E-Learning, in Blended Learning- Arrangements oder in sozialen Netzwerken, am Arbeitsplatz, in Projekten oder in Communities of Practice, ein Leben lang (vgl.Schäfer 2017).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Ermöglichungsdidaktik ist die pragmatische Antwort auf die wirtschafts- und bildungspolitisch propagierte Forderung nach lebenslangem Lernen und damit auch für agile Entwicklungskonzeptionen. Die vielbeschworene Vision des lebenslangen Lernens baut darauf auf, dass die Menschen die Motivation und die Kompetenz erwerben, eigenständig über ihre gesamte Lebensspanne hinweg zu lernen. Sie umfasst damit alle Gelegenheiten zum Lernen, in Seminaren, mit E-Learning, in Blended Learning- Arrangements oder in sozialen Netzwerken, am Arbeitsplatz, in Projekten oder in Communities of Practice, ein Leben lang (vgl.Schäfer 2017).",
+      "id": [
+        "152390"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152391]\nDies bedeutet das Aufgeben von Mythen über das Lernen, liebgewonnener und vordergründig erfolgreicher Lehrkonzepte und jahrzehntelang entwickelter Lernmaterialien, einen grundlegenden Kulturwandel im betrieblichen Lernbereich und eine fundamental veränderte Rolle der Personalentwicklung, der Führungskräfte und der Mitarbeiter.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dies bedeutet das Aufgeben von Mythen über das Lernen, liebgewonnener und vordergründig erfolgreicher Lehrkonzepte und jahrzehntelang entwickelter Lernmaterialien, einen grundlegenden Kulturwandel im betrieblichen Lernbereich und eine fundamental veränderte Rolle der Personalentwicklung, der Führungskräfte und der Mitarbeiter.",
+      "id": [
+        "152391"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152392]\nDie Entwicklungssituation sollte deshalb nicht vom Inhalt, sondern aus dem Fokus des Lernenden als Lernraum gestaltet werden (vgl.\"Wahl 2006).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Entwicklungssituation sollte deshalb nicht vom Inhalt, sondern aus dem Fokus des Lernenden als Lernraum gestaltet werden (vgl.\"Wahl 2006).",
+      "id": [
+        "152392"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152393]\n\nDie Ermöglichungsdidaktik wird vor allem durch folgende Merkmale geprägt (vgl.Siebert 2019, S. 107):\n\n• **Situiertheit:** Die Herausforderungen sind auf realistische Herausforderungen und Anwendungen bezogen.\n• **Anschlussfähigkeit:** Neues Wissen und neue Kompetenzen knüpfen an den Vorkenntnissen sowie den bisherigen Kompetenzen bzw. Erfahrungen an.\n• **Selbstorganisation:** Personalisiertes Lernen wird ermöglicht.\n• **Biografieorientierung:** Die bisherigen Arbeits- und Lernerfahrungen werden berücksichtigt.\n• **Kontextabhängigkeit:** Lernen ist in das Arbeitsumfeld mit seinen individuellen, sozialen und kulturellen Aspekten eingebettet.\n• **Emotionalität:** Motive und Gefühle der Lerner fließen in die Lernprozesse ein.\n• **Prozessorientierung:** Lernen findet kontinuierlich statt (lebenslanges Lernen).\n• **Lernbegleitung:** Die Lernprozesse werden professionell begleitet und unterstützt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die Ermöglichungsdidaktik wird vor allem durch folgende Merkmale geprägt (vgl.Siebert 2019, S. 107):\n\n• **Situiertheit:** Die Herausforderungen sind auf realistische Herausforderungen und Anwendungen bezogen.\n• **Anschlussfähigkeit:** Neues Wissen und neue Kompetenzen knüpfen an den Vorkenntnissen sowie den bisherigen Kompetenzen bzw. Erfahrungen an.\n• **Selbstorganisation:** Personalisiertes Lernen wird ermöglicht.\n• **Biografieorientierung:** Die bisherigen Arbeits- und Lernerfahrungen werden berücksichtigt.\n• **Kontextabhängigkeit:** Lernen ist in das Arbeitsumfeld mit seinen individuellen, sozialen und kulturellen Aspekten eingebettet.\n• **Emotionalität:** Motive und Gefühle der Lerner fließen in die Lernprozesse ein.\n• **Prozessorientierung:** Lernen findet kontinuierlich statt (lebenslanges Lernen).\n• **Lernbegleitung:** Die Lernprozesse werden professionell begleitet und unterstützt.",
+      "id": [
+        "152393"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152394]\nEin ermöglichungsdidaktisches Vorgehen orientiert sich an den Lernenden und traut diesen grundsätzlich mehr zu, als wir gewohnt sind. Insbesondere können Lerner ihre Lernprozesse, genauso wie sie ihre Arbeitsprozesse zunehmend eigenverantwortlich gestalten, selbstorganisiert aufbauen. Dabei geben ihnen die strategischen Vorgaben Orientierung, die sie im Regelfall mit ihrer Führungskraft besprechen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ein ermöglichungsdidaktisches Vorgehen orientiert sich an den Lernenden und traut diesen grundsätzlich mehr zu, als wir gewohnt sind. Insbesondere können Lerner ihre Lernprozesse, genauso wie sie ihre Arbeitsprozesse zunehmend eigenverantwortlich gestalten, selbstorganisiert aufbauen. Dabei geben ihnen die strategischen Vorgaben Orientierung, die sie im Regelfall mit ihrer Führungskraft besprechen.",
+      "id": [
+        "152394"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152395]\nDen Emotionen und Motivationen für den Lernprozess kommt eine zentrale Bedeutung zu. Hier gilt in besonderem Maße das Wort des Hirnforschers Gerald Hüther (2009): __»Ohne Gefühl geht gar nichts.«__ Wenn sich also der Mitarbeiter in diesem Ermöglichungsraum selbstorganisiert entwickelt, dann wird er nicht nur im Sinne der Unternehmung »reifen«. Er wird sich dabei immer auch persönlich weiterentwickeln können, wenn auch sicherlich in einem begrenzten Umfang.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Den Emotionen und Motivationen für den Lernprozess kommt eine zentrale Bedeutung zu. Hier gilt in besonderem Maße das Wort des Hirnforschers Gerald Hüther (2009): __»Ohne Gefühl geht gar nichts.«__ Wenn sich also der Mitarbeiter in diesem Ermöglichungsraum selbstorganisiert entwickelt, dann wird er nicht nur im Sinne der Unternehmung »reifen«. Er wird sich dabei immer auch persönlich weiterentwickeln können, wenn auch sicherlich in einem begrenzten Umfang.",
+      "id": [
+        "152395"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152396]\nDeshalb bietet sich der Ansatz des Co-Working an, weil sich in diesen realen oder virtuellen Räumen Menschen auf flexibler und freiwilliger Basis treffen, die sich sonst unter Umständen nicht nähergekommen wären. Dabei profitieren alle voneinander. Wichtig ist, dass es zielgruppenspezifische, aber auch offene Arbeits- und Entwicklungsbereiche gibt, die die Kommunikation und Kollaboration untereinander ermöglichen. Begleitet werden können diese Prozesse von Coaches, d. h. Prozessbegleitern.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Deshalb bietet sich der Ansatz des Co-Working an, weil sich in diesen realen oder virtuellen Räumen Menschen auf flexibler und freiwilliger Basis treffen, die sich sonst unter Umständen nicht nähergekommen wären. Dabei profitieren alle voneinander. Wichtig ist, dass es zielgruppenspezifische, aber auch offene Arbeits- und Entwicklungsbereiche gibt, die die Kommunikation und Kollaboration untereinander ermöglichen. Begleitet werden können diese Prozesse von Coaches, d. h. Prozessbegleitern.",
+      "id": [
+        "152396"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152397]\nDie Ermöglichungsdidaktik hat zum Ziel, Möglichkeiten der selbstorganisierten Entwicklung mit den institutionellen und organisatorischen Rahmenbedingungen der Organisation zu verknüpfen. Dadurch entsteht ein entwicklungsförderndes Umfeld mit einer Vielzahl von Ansätzen, personalisierte Lernprozesse selbstorganisiert zu gestalten. Die Lernbegleiter schaffen ein emotional positives Umfeld für personalisierte, selbstorganisierte Lernprozesse auf allen Ebenen, regen die Mitarbeiter, die Teams und die gesamte Organisation zur Reflexion über die jeweiligen Entwicklungsziele an und ermutigen sie, ihre Ziele umzusetzen. Dabei unterstützen sie die Kollegen und die Führungskräfte als Coach.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Ermöglichungsdidaktik hat zum Ziel, Möglichkeiten der selbstorganisierten Entwicklung mit den institutionellen und organisatorischen Rahmenbedingungen der Organisation zu verknüpfen. Dadurch entsteht ein entwicklungsförderndes Umfeld mit einer Vielzahl von Ansätzen, personalisierte Lernprozesse selbstorganisiert zu gestalten. Die Lernbegleiter schaffen ein emotional positives Umfeld für personalisierte, selbstorganisierte Lernprozesse auf allen Ebenen, regen die Mitarbeiter, die Teams und die gesamte Organisation zur Reflexion über die jeweiligen Entwicklungsziele an und ermutigen sie, ihre Ziele umzusetzen. Dabei unterstützen sie die Kollegen und die Führungskräfte als Coach.",
+      "id": [
+        "152397"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152398]\n[###Singularitätsdidaktik]\n[%3.5.5]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.5.5",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152398"
+      ],
+      "title": "Singularitätsdidaktik"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152399]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_6.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152399"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152400]\nDie Spätmoderne fördert den Individualismus in Form einer Gesellschaft der Singularitäten immer stärker (vgl. Reckwitz, 5. Aufl. 2020). Der Pädagoge Rolf Arnold prognostiziert entsprechend, dass sich die Ermöglichungsdidaktik zu einer Singularitätsdidaktik weiterentwickeln wird (vgl.Arnold 2017, S. 108 $.).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Spätmoderne fördert den Individualismus in Form einer Gesellschaft der Singularitäten immer stärker (vgl. Reckwitz, 5. Aufl. 2020). Der Pädagoge Rolf Arnold prognostiziert entsprechend, dass sich die Ermöglichungsdidaktik zu einer Singularitätsdidaktik weiterentwickeln wird (vgl.Arnold 2017, S. 108 $.).",
+      "id": [
+        "152400"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152401]\n**Singularitätsdidaktik ist eine erweiterte Form der Ermöglichungsdidaktik mit dem Ziel, personalisierte Lernprozesse unter Nutzung der Möglichkeiten digitalisierter Lernorganisation zu ermöglichen.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Singularitätsdidaktik ist eine erweiterte Form der Ermöglichungsdidaktik mit dem Ziel, personalisierte Lernprozesse unter Nutzung der Möglichkeiten digitalisierter Lernorganisation zu ermöglichen.**",
+      "id": [
+        "152401"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152402]\nDamit soll erreicht werden, dass der Unterschiedlichkeit der Lernenden durch die Art der Bildungsorganisation und die Vielfalt der möglichen Lernwege wirksam Rechnung getragen wird. Sie ist damit eine **Ermöglichungsdidaktik plus**, die die didaktischen Modelle der Vergangenheit gewissermaßen auf den Kopf stellt (ebenda S. 110).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Damit soll erreicht werden, dass der Unterschiedlichkeit der Lernenden durch die Art der Bildungsorganisation und die Vielfalt der möglichen Lernwege wirksam Rechnung getragen wird. Sie ist damit eine **Ermöglichungsdidaktik plus**, die die didaktischen Modelle der Vergangenheit gewissermaßen auf den Kopf stellt (ebenda S. 110).",
+      "id": [
+        "152402"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152403]\n**Entscheidend ist zukünftig, dass sich das Lernarrangement dem Lernenden anpasst.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Entscheidend ist zukünftig, dass sich das Lernarrangement dem Lernenden anpasst.**",
+      "id": [
+        "152403"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152404]\nDieser Paradigmenwechsel schlägt sich in der Konzeption der Learning-Experience- Plattform, die konsequent aus dem Blickwinkel der Lernenden gestaltet wird, aber auch in den Rollen aller Beteiligten der Lernprozesse nieder.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieser Paradigmenwechsel schlägt sich in der Konzeption der Learning-Experience- Plattform, die konsequent aus dem Blickwinkel der Lernenden gestaltet wird, aber auch in den Rollen aller Beteiligten der Lernprozesse nieder.",
+      "id": [
+        "152404"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152405]\n[##Ermöglichungsraum– Learning-Experience-Plattform (LXP)]\n[%3.6]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.6",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152405"
+      ],
+      "title": "Ermöglichungsraum– Learning-Experience-Plattform (LXP)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152406]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_7.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152406"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_7.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152407]\n__In der Anfangsphase des E-Learning vor ca. drei Jahrzehnten wurden Lernprogramme meist ohne digitale Kommunikationsmöglichkeiten ins Intranet gestellt. Rasch entwickelten sich dann Learning-Management-Systeme (LMS) in Form virtueller Lern- und Kommunikationsplattformen, auf denen formelle Lernmodule bereitgestellt und administriert wurden, die auch den kursinternen Austausch über Foren und Chats ermöglichten. Als das Lernen in der Praxis zunehmend in die Lernarrangements integriert wurde, entwickelten sich soziale Lernplattformen, die nicht nur das formelle Lernen unterstützten, sondern auch gezielte Werte- und Kompetenzentwicklung ermöglichten. Deshalb wurden Tools wie Blogs, Wikis, E-Portfolio29 oder kollaborative Workspaces integriert (vgl.Sauter, Staudt 2016).__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__In der Anfangsphase des E-Learning vor ca. drei Jahrzehnten wurden Lernprogramme meist ohne digitale Kommunikationsmöglichkeiten ins Intranet gestellt. Rasch entwickelten sich dann Learning-Management-Systeme (LMS) in Form virtueller Lern- und Kommunikationsplattformen, auf denen formelle Lernmodule bereitgestellt und administriert wurden, die auch den kursinternen Austausch über Foren und Chats ermöglichten. Als das Lernen in der Praxis zunehmend in die Lernarrangements integriert wurde, entwickelten sich soziale Lernplattformen, die nicht nur das formelle Lernen unterstützten, sondern auch gezielte Werte- und Kompetenzentwicklung ermöglichten. Deshalb wurden Tools wie Blogs, Wikis, E-Portfolio29 oder kollaborative Workspaces integriert (vgl.Sauter, Staudt 2016).__",
+      "id": [
+        "152407"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152408]\nSelbstorganisierte Werte- und Kompetenzentwicklung ist nur ermöglichungsdidaktisch realisierbar, braucht also einen passenden Ermöglichungsraum, der\n• der Individualität und Eigenverantwortung der Mitarbeiter Rechnung trägt, indem diese ihre personalisierten Lernprozesse selbstorganisiert planen und umsetzen,\n• dem demografischen Wandel und der damit einhergehenden Heterogenität der Lernenden gerecht wird, indem vorhandene Lehr- und Lernkonzepte, Lernmaterialien, aber auch die Rolle der Lehrenden vom Lernenden her neu gedacht werden,\n• die Unterschiedlichkeit der Lebenswelten und die Vielfalt interkultureller Herausforderungen berücksichtigt, indem Werte- und Kompetenzentwicklung dort stattfindet, wo reale Herausforderungen zu bewältigen sind, diese aufgreift und damit die Kommunikation und das kollaborative Arbeiten und Lernen zwischen Menschen fördert,\n• den technologischen Wandel aktiv aufgreift, indem diese Lernwelt als Spiegelbild der zunehmend digitalisierten Arbeitswelt digitale Lernsysteme und -formate integriert,\n• als organisationales Netzwerk gestaltet wird, das in engem Austausch mit der Umwelt der Organisation steht,\n• eine dezentrale Steuerung durch die Mitarbeiter ermöglicht, indem externe Einflüsse, z. B. soziale Medien, Google oder LinkedIn integriert werden (vgl.\"Sauter, Sauter, Wölfing 2018, Schmitz, Foelsing 2021b).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Selbstorganisierte Werte- und Kompetenzentwicklung ist nur ermöglichungsdidaktisch realisierbar, braucht also einen passenden Ermöglichungsraum, der\n• der Individualität und Eigenverantwortung der Mitarbeiter Rechnung trägt, indem diese ihre personalisierten Lernprozesse selbstorganisiert planen und umsetzen,\n• dem demografischen Wandel und der damit einhergehenden Heterogenität der Lernenden gerecht wird, indem vorhandene Lehr- und Lernkonzepte, Lernmaterialien, aber auch die Rolle der Lehrenden vom Lernenden her neu gedacht werden,\n• die Unterschiedlichkeit der Lebenswelten und die Vielfalt interkultureller Herausforderungen berücksichtigt, indem Werte- und Kompetenzentwicklung dort stattfindet, wo reale Herausforderungen zu bewältigen sind, diese aufgreift und damit die Kommunikation und das kollaborative Arbeiten und Lernen zwischen Menschen fördert,\n• den technologischen Wandel aktiv aufgreift, indem diese Lernwelt als Spiegelbild der zunehmend digitalisierten Arbeitswelt digitale Lernsysteme und -formate integriert,\n• als organisationales Netzwerk gestaltet wird, das in engem Austausch mit der Umwelt der Organisation steht,\n• eine dezentrale Steuerung durch die Mitarbeiter ermöglicht, indem externe Einflüsse, z. B. soziale Medien, Google oder LinkedIn integriert werden (vgl.\"Sauter, Sauter, Wölfing 2018, Schmitz, Foelsing 2021b).",
+      "id": [
+        "152408"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152409]\n**Der Ermöglichungsraum ist eine digitale Plattform, die didaktische, methodische, materielle und mediale Aspekte so anordnet, dass die Wahrscheinlichkeit für die angestrebten Entwicklungsprozesse auf allen Ebenen möglichst hoch wird** (nach Wahl 2006, S. 206).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Der Ermöglichungsraum ist eine digitale Plattform, die didaktische, methodische, materielle und mediale Aspekte so anordnet, dass die Wahrscheinlichkeit für die angestrebten Entwicklungsprozesse auf allen Ebenen möglichst hoch wird** (nach Wahl 2006, S. 206).",
+      "id": [
+        "152409"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152410]\nDas Werte- und Kompetenzmanagement konzentriert sich deshalb nicht mehr auf die detaillierte Planung von Lehr-/Lernprozessen (Planungsfixierung), sondern auf die Ermöglichung des selbstorganisierten Aufbaus von Wissen, Qualifikation, Werten und Kompetenzen in personalisierten Lernprozessen (Realisierungsfixierung). In diesem systemischen Ansatz wird der Mitarbeiter als Ganzes gesehen und es werden sein Umfeld und seine individuellen Bedürfnisse, die immer eng mit den emotionalen Strukturen verknüpft sind, berücksichtigt. Der Prozessbegleiter schafft die Bedingungen für die selbstorganisierte Entwicklung der Mitarbeiter und ermöglicht damit Prozesse der selbsttätigen und selbstständigen Wissenserschließung und Wissensaneignung (vgl. Siebert 3. überarb. Aufl. 2011, S. 90).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das Werte- und Kompetenzmanagement konzentriert sich deshalb nicht mehr auf die detaillierte Planung von Lehr-/Lernprozessen (Planungsfixierung), sondern auf die Ermöglichung des selbstorganisierten Aufbaus von Wissen, Qualifikation, Werten und Kompetenzen in personalisierten Lernprozessen (Realisierungsfixierung). In diesem systemischen Ansatz wird der Mitarbeiter als Ganzes gesehen und es werden sein Umfeld und seine individuellen Bedürfnisse, die immer eng mit den emotionalen Strukturen verknüpft sind, berücksichtigt. Der Prozessbegleiter schafft die Bedingungen für die selbstorganisierte Entwicklung der Mitarbeiter und ermöglicht damit Prozesse der selbsttätigen und selbstständigen Wissenserschließung und Wissensaneignung (vgl. Siebert 3. überarb. Aufl. 2011, S. 90).",
+      "id": [
+        "152410"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152411]\nDer Mitarbeiter wird vom Objekt zum Subjekt seiner individuellen Entwicklung. Er erhält deshalb vielfältige Angebote, die es ihm ermöglichen, sein Wissen selbstorganisiert aufzubauen und zu sichern und bei der Bewältigung herausfordernder Aufgaben seine Kompetenzen zu entwickeln. Die Lerner müssen deshalb eine hohe Methoden-, Medien-, Selbstorganisations- und Selbstlernkompetenz entwickeln. Aus dem bisherigen »Lehrer« oder »Trainer« wird der »Prozessbegleiter«, der als Bildungsberater und Lerncoach die individuellen Entwicklungsprozesse ermöglicht und unterstützt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Mitarbeiter wird vom Objekt zum Subjekt seiner individuellen Entwicklung. Er erhält deshalb vielfältige Angebote, die es ihm ermöglichen, sein Wissen selbstorganisiert aufzubauen und zu sichern und bei der Bewältigung herausfordernder Aufgaben seine Kompetenzen zu entwickeln. Die Lerner müssen deshalb eine hohe Methoden-, Medien-, Selbstorganisations- und Selbstlernkompetenz entwickeln. Aus dem bisherigen »Lehrer« oder »Trainer« wird der »Prozessbegleiter«, der als Bildungsberater und Lerncoach die individuellen Entwicklungsprozesse ermöglicht und unterstützt.",
+      "id": [
+        "152411"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152412]\n[###Lern-Ökosystem– Learning-Experience-Plattform (LXP)]\n[%3.6.1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.6.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152412"
+      ],
+      "title": "Lern-Ökosystem– Learning-Experience-Plattform (LXP)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152413]\n__Im Zuge der Entwicklung zur Singularitätsdidaktik wandelte sich der Fokus, aus dem heraus Lernplattformen gestaltet wurden. Standen am Anfang die Bedürfnisse der Personalentwicklung wie vereinfachte Administration und Überprüfung des Lernerfolges im Vordergrund, ging der Blickwinkel immer mehr zum Mitarbeiter und seinen personalisierten Lernprozessen. Daraus entwickelte sich der Ansatz der Learning-Experience- Plattform (LXP), die als Lern-Ökosystem gestaltet wird, der von Josh Bersin (2019) bekannt gemacht wurde. Dabei verweist das »LX« auf ein Lernerlebnis, eine Lernreise (Learning Journey) oder allgemein nachhaltige Lernprozesse, die mithilfe künstlicher Intelligenz ermöglicht werden (vgl.Foelsing, Schmitz 2021b).__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Im Zuge der Entwicklung zur Singularitätsdidaktik wandelte sich der Fokus, aus dem heraus Lernplattformen gestaltet wurden. Standen am Anfang die Bedürfnisse der Personalentwicklung wie vereinfachte Administration und Überprüfung des Lernerfolges im Vordergrund, ging der Blickwinkel immer mehr zum Mitarbeiter und seinen personalisierten Lernprozessen. Daraus entwickelte sich der Ansatz der Learning-Experience- Plattform (LXP), die als Lern-Ökosystem gestaltet wird, der von Josh Bersin (2019) bekannt gemacht wurde. Dabei verweist das »LX« auf ein Lernerlebnis, eine Lernreise (Learning Journey) oder allgemein nachhaltige Lernprozesse, die mithilfe künstlicher Intelligenz ermöglicht werden (vgl.Foelsing, Schmitz 2021b).__",
+      "id": [
+        "152413"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152414]\nLearning-Experience-Plattformen weisen den Charakter eines Lern-Ökosystems (Learning Ecosystem30) auf.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Learning-Experience-Plattformen weisen den Charakter eines Lern-Ökosystems (Learning Ecosystem30) auf.",
+      "id": [
+        "152414"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152415]\n**Lern-Ökosysteme (Learning Ecosystems) sind hoch adaptive sozio-technische Systeme, die durch das dynamische Zusammenspiel interner und externer Partner, Communitys von Lernenden, Technologien, Daten, Formaten, Services, Räumen und Inhalten geprägt werden **(vgl.Foelsing, Schmitz 2021b).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Lern-Ökosysteme (Learning Ecosystems) sind hoch adaptive sozio-technische Systeme, die durch das dynamische Zusammenspiel interner und externer Partner, Communitys von Lernenden, Technologien, Daten, Formaten, Services, Räumen und Inhalten geprägt werden **(vgl.Foelsing, Schmitz 2021b).",
+      "id": [
+        "152415"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152416]\nDamit sind diese Systeme vor allem durch zwei Merkmale geprägt:\n\n• **Offener, antizipierender Austausch mit dem Umfeld** auf Augenhöhe, der kollaboratives Arbeiten und Lernen über die Funktionen und Organisationseinheiten hinweg ermöglicht.\n• **Verknüpfung aller Elemente des Systems**, sodass die Interaktion unterschiedlicher Akteure und Angebote unterstützt wird und die Lernenden eine klare Orientierung erhalten. Dies setzt voraus, dass neue Elemente möglichst schnell integrierbar und abkoppelbar sind und die Lernenden jederzeit und durchgängig, bedarfsorientiert und mit jedem Endgerät auf diese Ressourcen zugreifen können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Damit sind diese Systeme vor allem durch zwei Merkmale geprägt:\n\n• **Offener, antizipierender Austausch mit dem Umfeld** auf Augenhöhe, der kollaboratives Arbeiten und Lernen über die Funktionen und Organisationseinheiten hinweg ermöglicht.\n• **Verknüpfung aller Elemente des Systems**, sodass die Interaktion unterschiedlicher Akteure und Angebote unterstützt wird und die Lernenden eine klare Orientierung erhalten. Dies setzt voraus, dass neue Elemente möglichst schnell integrierbar und abkoppelbar sind und die Lernenden jederzeit und durchgängig, bedarfsorientiert und mit jedem Endgerät auf diese Ressourcen zugreifen können.",
+      "id": [
+        "152416"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152417]\nDer Ermöglichungsraum benötigt deshalb eine ganzheitliche Gestaltungsperspektive, mit der sich ein tragfähiger Rahmen für die Interaktion zwischen Menschen, Lernformaten, Inhalten und Technologie entwickeln lässt, sodass eine hohe Differenzierung und Anpassungsfähigkeit ermöglicht wird. Zukünftig können separate Plattformen überflüssig werden, indem Lernressourcen und -angebote primär über die genutzten Arbeitssysteme zur Verfügung gestellt werden, sodass Arbeiten und Lernen auch technologisch zusammenwachsen. In diesem Fall wird ein Hintergrundsystem im Sinne einer Integrated Learning __Ecosystem Platform__ benötigt, die als Integrations- und Distributions-Hub für internen und externen Content, Systeme und Daten fungiert (vgl.ebenda).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Ermöglichungsraum benötigt deshalb eine ganzheitliche Gestaltungsperspektive, mit der sich ein tragfähiger Rahmen für die Interaktion zwischen Menschen, Lernformaten, Inhalten und Technologie entwickeln lässt, sodass eine hohe Differenzierung und Anpassungsfähigkeit ermöglicht wird. Zukünftig können separate Plattformen überflüssig werden, indem Lernressourcen und -angebote primär über die genutzten Arbeitssysteme zur Verfügung gestellt werden, sodass Arbeiten und Lernen auch technologisch zusammenwachsen. In diesem Fall wird ein Hintergrundsystem im Sinne einer Integrated Learning __Ecosystem Platform__ benötigt, die als Integrations- und Distributions-Hub für internen und externen Content, Systeme und Daten fungiert (vgl.ebenda).",
+      "id": [
+        "152417"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152418]\nLearning-Experience-Plattformen sind digitale Ermöglichungsräume, mit denen die Lernprozesse der Mitarbeiter im Prozess der Arbeit und in Praxisprojekten aus deren Blickwinkel ermöglicht werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Learning-Experience-Plattformen sind digitale Ermöglichungsräume, mit denen die Lernprozesse der Mitarbeiter im Prozess der Arbeit und in Praxisprojekten aus deren Blickwinkel ermöglicht werden.",
+      "id": [
+        "152418"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152419]\n**Eine Learning-Experience-Plattform (LXP) ist eine KI-gesteuerte Lern- und Arbeitsumgebung, die konsequent aus dem Blickwinkel der Mitarbeiter gestaltet wird und personalisierte, selbstorganisierte Lernerlebnisse ermöglicht.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Eine Learning-Experience-Plattform (LXP) ist eine KI-gesteuerte Lern- und Arbeitsumgebung, die konsequent aus dem Blickwinkel der Mitarbeiter gestaltet wird und personalisierte, selbstorganisierte Lernerlebnisse ermöglicht.**",
+      "id": [
+        "152419"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152420]\nSie verknüpft vielfältige Funktionen miteinander, kuratiert Inhalte aus unterschiedlichen Quellen und ist über alle gängigen Endgeräte nutzbar.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Sie verknüpft vielfältige Funktionen miteinander, kuratiert Inhalte aus unterschiedlichen Quellen und ist über alle gängigen Endgeräte nutzbar.",
+      "id": [
+        "152420"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152421]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_28.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152421"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_28.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152422]\nMit künstlicher Intelligenz, Datenanalyse und dem automatischen Auswählen (Kuratieren) von Inhalten wird es über LXP möglich, personalisierte Lernangebote zusammenzustellen und die Lernprozesse individuell zu ermöglichen. Auf diese Weise können Lernangebote bedarfsgerecht __(Learning in the Moment of Need)__ und personalisiert __(Learning just for me)__ angeboten werden (vgl.Stoller-Schai 2021).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Mit künstlicher Intelligenz, Datenanalyse und dem automatischen Auswählen (Kuratieren) von Inhalten wird es über LXP möglich, personalisierte Lernangebote zusammenzustellen und die Lernprozesse individuell zu ermöglichen. Auf diese Weise können Lernangebote bedarfsgerecht __(Learning in the Moment of Need)__ und personalisiert __(Learning just for me)__ angeboten werden (vgl.Stoller-Schai 2021).",
+      "id": [
+        "152422"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152423]\nEine Studie der Hochschule Pforzheim (vgl.Foelsing, Schmitz 2021b) macht deutlich, warum diese Systeme sich in der Praxis immer mehr durchsetzen:\n\n• Klassische Ansätze der Personalentwicklung geraten an ihre Grenzen, weil sich die Rahmenbedingungen und die Anforderungen an die Mitarbeiterentwicklung immer schneller verändern.\n• Externe Einflüsse, z. B. aus sozialen Netzwerken, begrenzen zunehmend die Möglichkeiten, Lernen in der Organisation zentral zu steuern und zu kontrollieren.\n• Die Grenze zwischen Arbeiten und Lernen verschwimmt, das Lernen wird zunehmend, verstärkt durch die Coronapandemie, digital ermöglicht.\n• Digitale Lernsysteme und -formate existieren heute oftmals noch isoliert voneinander und sind nur über unterschiedliche Kanäle nutzbar.\n• Dezentral ausgerichtete Lernangebote führen zu Orientierungslosigkeit der Mitarbeiter.\n• Die Personalentwicklung zeigt sich oftmals wenig anpassungsfähig.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Eine Studie der Hochschule Pforzheim (vgl.Foelsing, Schmitz 2021b) macht deutlich, warum diese Systeme sich in der Praxis immer mehr durchsetzen:\n\n• Klassische Ansätze der Personalentwicklung geraten an ihre Grenzen, weil sich die Rahmenbedingungen und die Anforderungen an die Mitarbeiterentwicklung immer schneller verändern.\n• Externe Einflüsse, z. B. aus sozialen Netzwerken, begrenzen zunehmend die Möglichkeiten, Lernen in der Organisation zentral zu steuern und zu kontrollieren.\n• Die Grenze zwischen Arbeiten und Lernen verschwimmt, das Lernen wird zunehmend, verstärkt durch die Coronapandemie, digital ermöglicht.\n• Digitale Lernsysteme und -formate existieren heute oftmals noch isoliert voneinander und sind nur über unterschiedliche Kanäle nutzbar.\n• Dezentral ausgerichtete Lernangebote führen zu Orientierungslosigkeit der Mitarbeiter.\n• Die Personalentwicklung zeigt sich oftmals wenig anpassungsfähig.",
+      "id": [
+        "152423"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152424]\nDie Learning-Experience-Plattform sollte deshalb als Lern-Ökosystem gestaltet werden, das folgende Elemente umfasst (vgl.\"Sauter, Sauter, Wolfig 2018, Dückert 2017):\n\n|image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_9.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die Learning-Experience-Plattform sollte deshalb als Lern-Ökosystem gestaltet werden, das folgende Elemente umfasst (vgl.\"Sauter, Sauter, Wolfig 2018, Dückert 2017):\n\n|image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_9.png|",
+      "id": [
+        "152424"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152425]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_10.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152425"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_10.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152426]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_11.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152426"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_11.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152427]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_12.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152427"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_12.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152428]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_13.png]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_13_2.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152428"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_13_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152429]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_14.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152429"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_14.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152430]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_15.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152430"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_15.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152431]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_16.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152431"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_16.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152432]\nDieser Ansatz des Lern-Ökosystems wird bereits von Unternehmen wie Audi, Siemens oder IBM als aktiver Treiber der digitalen Transformation verfolgt (vgl.\"Sauter, Sauter, Wolfig 2018, S. 168ff., Foelsing, Schmitz 2021b).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieser Ansatz des Lern-Ökosystems wird bereits von Unternehmen wie Audi, Siemens oder IBM als aktiver Treiber der digitalen Transformation verfolgt (vgl.\"Sauter, Sauter, Wolfig 2018, S. 168ff., Foelsing, Schmitz 2021b).",
+      "id": [
+        "152432"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152433]\nLern-Ökosysteme können sich zu **Business-Ökosystemen** weiterentwickeln, bei denen drei oder mehr Unternehmen auf Augenhöhe miteinander interagieren, um gemeinsam einen Ermöglichungsraum bereitzustellen, den jedes Unternehmen für sich genommen nicht anbieten könnte. Dies wird möglich, weil die Transaktionskosten infolge der Digitalisierung sowie durch die Auflösung der Grenzen zwischen Branchen und einzelnen Unternehmen drastisch zurückgehen (vgl.\"Gackstatter 2019).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Lern-Ökosysteme können sich zu **Business-Ökosystemen** weiterentwickeln, bei denen drei oder mehr Unternehmen auf Augenhöhe miteinander interagieren, um gemeinsam einen Ermöglichungsraum bereitzustellen, den jedes Unternehmen für sich genommen nicht anbieten könnte. Dies wird möglich, weil die Transaktionskosten infolge der Digitalisierung sowie durch die Auflösung der Grenzen zwischen Branchen und einzelnen Unternehmen drastisch zurückgehen (vgl.\"Gackstatter 2019).",
+      "id": [
+        "152433"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152434]\nZusammengefasst ergeben sich folgende Anforderungen an die Gestaltung des Ermöglichungsraumes (vgl.Sauter, Sauter, Wolfig 2018, S. 168 $., Foelsing, Schmitz 2021b):\n\n|image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_17.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Zusammengefasst ergeben sich folgende Anforderungen an die Gestaltung des Ermöglichungsraumes (vgl.Sauter, Sauter, Wolfig 2018, S. 168 $., Foelsing, Schmitz 2021b):\n\n|image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_17.png|",
+      "id": [
+        "152434"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152435]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_18.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152435"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_18.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152436]\n[###Digitale Lernwerkzeuge]\n[%3.6.2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.6.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152436"
+      ],
+      "title": "Digitale Lernwerkzeuge"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152437]\n__Die Lernwelt muss ein Spiegelbild der Arbeitswelt sein, wenn die Mitarbeiter dort auf die Herausforderungen in der Praxis vorbereitet werden sollen. Deshalb ist es sinnvoll, für das Lernen im Netz die Tools zu nutzen, die auch in der Praxis für kollaboratives Arbeiten, das Netzwerken, die Kommunikation und für die Dokumentation eingesetzt werden. Deshalb geht der Trend dahin, einzelne Werkzeuge zu einem ganzheitlichen System – einem Lern-Ökosystem – zusammenzuführen.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Die Lernwelt muss ein Spiegelbild der Arbeitswelt sein, wenn die Mitarbeiter dort auf die Herausforderungen in der Praxis vorbereitet werden sollen. Deshalb ist es sinnvoll, für das Lernen im Netz die Tools zu nutzen, die auch in der Praxis für kollaboratives Arbeiten, das Netzwerken, die Kommunikation und für die Dokumentation eingesetzt werden. Deshalb geht der Trend dahin, einzelne Werkzeuge zu einem ganzheitlichen System – einem Lern-Ökosystem – zusammenzuführen.__",
+      "id": [
+        "152437"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152438]\nDie britische Bloggerin Jane Hart ermittelt jährlich die 200 wichtigsten Tools für das betriebliche Lernen (vgl. Hart 2021):\n\n|image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_19.png|\n\n|image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_20.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die britische Bloggerin Jane Hart ermittelt jährlich die 200 wichtigsten Tools für das betriebliche Lernen (vgl. Hart 2021):\n\n|image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_19.png|\n\n|image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_20.png|",
+      "id": [
+        "152438"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152439]\nAuf den weiteren Plätzen folgen Tools wie Wikipedia, Facebook, WordPress (Blogs), Google Classroom, Google Meet, Slack, Skype, Trello, Twitter und Articulate.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Auf den weiteren Plätzen folgen Tools wie Wikipedia, Facebook, WordPress (Blogs), Google Classroom, Google Meet, Slack, Skype, Trello, Twitter und Articulate.",
+      "id": [
+        "152439"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152440]\nDiese Instrumente haben eines gemeinsam: Sie werden nicht zu den klassischen Werkzeugen des medienunterstützten Lernens gerechnet. Diese Aufstellung macht vielmehr deutlich, dass die Welten des Arbeitens und des Lernens zusammenwachsen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Diese Instrumente haben eines gemeinsam: Sie werden nicht zu den klassischen Werkzeugen des medienunterstützten Lernens gerechnet. Diese Aufstellung macht vielmehr deutlich, dass die Welten des Arbeitens und des Lernens zusammenwachsen.",
+      "id": [
+        "152440"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152441]\nNach Jane Hart (ebenda) können Lernwerkzeuge wie folgt definiert werden:\n\n**Lernwerkzeuge sind Software, Onlinetools oder Dienste, die insbesondere für informelles Lernen im Prozess der Arbeit, aber auch für formelles Lernen genutzt werden.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Nach Jane Hart (ebenda) können Lernwerkzeuge wie folgt definiert werden:\n\n**Lernwerkzeuge sind Software, Onlinetools oder Dienste, die insbesondere für informelles Lernen im Prozess der Arbeit, aber auch für formelles Lernen genutzt werden.**",
+      "id": [
+        "152441"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152442]\nGrundsätzlich können hierbei folgende Bereiche der Lernwerkzeuge unterschieden werden (vgl.Dückert 2017, S. 81–92, Kerres 2018):\n|image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_26.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Grundsätzlich können hierbei folgende Bereiche der Lernwerkzeuge unterschieden werden (vgl.Dückert 2017, S. 81–92, Kerres 2018):\n|image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_26.png|",
+      "id": [
+        "152442"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152443]\nViele dieser Werkzeuge sind auch als Open-Source-Lösungen verfügbar. Sie werden immer mehr als Cloud-Computing gestaltet, bei dem Daten und Software zentral in Serverparks gespeichert, gewartet sowie betrieben werden und der Anwender über einfache Endgeräte auf deren Leistung zugreifen kann. Cloud-Computing eröffnet damit einen leichten und kostengünstigen Zugang zu IT-Ressourcen. Ein wachsender Bedarf kann durch zusätzliche Anmietungen beim Provider gedeckt werden (vgl.Scheer, 3. Aufl. 2018, S. 18).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Viele dieser Werkzeuge sind auch als Open-Source-Lösungen verfügbar. Sie werden immer mehr als Cloud-Computing gestaltet, bei dem Daten und Software zentral in Serverparks gespeichert, gewartet sowie betrieben werden und der Anwender über einfache Endgeräte auf deren Leistung zugreifen kann. Cloud-Computing eröffnet damit einen leichten und kostengünstigen Zugang zu IT-Ressourcen. Ein wachsender Bedarf kann durch zusätzliche Anmietungen beim Provider gedeckt werden (vgl.Scheer, 3. Aufl. 2018, S. 18).",
+      "id": [
+        "152443"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152444]\nDie technologische Entwicklung der Lernwerkzeuge weist eine sehr hohe Dynamik auf. Deshalb beschränken wir uns in diesem Rahmen darauf, zentrale Innovationen aus dem Blickwinkel der Lerner hervorzuheben, die für das Arbeiten und Lernen in der Zukunft von besonderer Bedeutung sind.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die technologische Entwicklung der Lernwerkzeuge weist eine sehr hohe Dynamik auf. Deshalb beschränken wir uns in diesem Rahmen darauf, zentrale Innovationen aus dem Blickwinkel der Lerner hervorzuheben, die für das Arbeiten und Lernen in der Zukunft von besonderer Bedeutung sind.",
+      "id": [
+        "152444"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152445]\n[####Virtuelle 3-D-Kommunikations- und Kollaborationsräume]\n[%3.6.2.1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.6.2.1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152445"
+      ],
+      "title": "Virtuelle 3-D-Kommunikations- und Kollaborationsräume"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152446]\n__Die Virtualisierung der gegenständlichen Welt hat bereits begonnen. Städte werden als 3-D-Modelle erfasst, neue Maschinen und Anlagen bringen ihren 3-D-Zwilling mit und Menschen werden zukünftig ganz selbstverständlich über eine virtuelle Repräsentanz über einen Avatar verfügen. Mit der sogenannten Extender-Reality-Technologie können sich die Menschen in einer virtuell-immersiven Welt begegnen, lernen und zusammenarbeiten. Diese Möglichkeiten werden zu einer weiteren Entgrenzung von Arbeit in räumlicher, zeitlicher und organisationaler Hinsicht führen (vgl. Tricat 2021).__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Die Virtualisierung der gegenständlichen Welt hat bereits begonnen. Städte werden als 3-D-Modelle erfasst, neue Maschinen und Anlagen bringen ihren 3-D-Zwilling mit und Menschen werden zukünftig ganz selbstverständlich über eine virtuelle Repräsentanz über einen Avatar verfügen. Mit der sogenannten Extender-Reality-Technologie können sich die Menschen in einer virtuell-immersiven Welt begegnen, lernen und zusammenarbeiten. Diese Möglichkeiten werden zu einer weiteren Entgrenzung von Arbeit in räumlicher, zeitlicher und organisationaler Hinsicht führen (vgl. Tricat 2021).__",
+      "id": [
+        "152446"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152447]\nVirtuelle 3-D Lern- und Arbeitswelten bieten den Rahmen für Routinemeetings mit einer virtuellen Präsenz, die relativ gleichwertig der realen Präsenz empfunden wird. Dies ermöglicht formelle Trainings im Netz, aber insbesondere soziale Interaktion, Reflexionen, kreative Prozesse, agile Kollaboration oder E-Coaching, jedoch mit deutlich mehr medialen Möglichkeiten. In diesen Räumen können somit auch Entwicklungsszenarien mit Herausforderungen, die als real empfunden werden, umgesetzt werden, um den Aufbau von Handlungssicherheit und Kompetenz im Team mit Lernbegleitung, synchron oder asynchron, zu ermöglichen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Virtuelle 3-D Lern- und Arbeitswelten bieten den Rahmen für Routinemeetings mit einer virtuellen Präsenz, die relativ gleichwertig der realen Präsenz empfunden wird. Dies ermöglicht formelle Trainings im Netz, aber insbesondere soziale Interaktion, Reflexionen, kreative Prozesse, agile Kollaboration oder E-Coaching, jedoch mit deutlich mehr medialen Möglichkeiten. In diesen Räumen können somit auch Entwicklungsszenarien mit Herausforderungen, die als real empfunden werden, umgesetzt werden, um den Aufbau von Handlungssicherheit und Kompetenz im Team mit Lernbegleitung, synchron oder asynchron, zu ermöglichen.",
+      "id": [
+        "152447"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152448]\nEin interaktiver Learning Space mit virtueller Realität __(Virtual Reality – VR)__ oder erweiterter Realität __(Augmented Reality– AR)__ entfernt Barrieren von Raum und Zeit für den Lerner und erweitert damit die methodischen Möglichkeiten (vgl. Fell 2021). Die Lerner stehen jetzt mitten im Geschehen, sodass ein Vor-Ort-Gefühl, ein Eintauchen in das Geschehen (Immersion), das bisher nicht vorstellbar war, entsteht (vgl. Petry, Jäger 2018, S. 49).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ein interaktiver Learning Space mit virtueller Realität __(Virtual Reality – VR)__ oder erweiterter Realität __(Augmented Reality– AR)__ entfernt Barrieren von Raum und Zeit für den Lerner und erweitert damit die methodischen Möglichkeiten (vgl. Fell 2021). Die Lerner stehen jetzt mitten im Geschehen, sodass ein Vor-Ort-Gefühl, ein Eintauchen in das Geschehen (Immersion), das bisher nicht vorstellbar war, entsteht (vgl. Petry, Jäger 2018, S. 49).",
+      "id": [
+        "152448"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152449]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_22.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152449"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_22.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152450]\n**Virtual Reality (VR) ist eine durch spezielle Hard- und Software erzeugte künstliche Wirklichkeit.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Virtual Reality (VR) ist eine durch spezielle Hard- und Software erzeugte künstliche Wirklichkeit.**",
+      "id": [
+        "152450"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152451]\nDer Kern moderner VR-Hardware ist die VR-Brille (oder Headset, Head-Mounted Display) mit zwei hochauflösenden Displays zur Darstellung künstlich erzeugter Bilder und einer damit gekoppelten Sensorik zur Erfassung von Lage und Position des Kopfes. Wenn zwischen Sensorik und Darstellung eines Bildes weniger als elf Millisekunden vergehen\"– die sogenannte Sensor-to-Photon-Latency\"–, entsteht der Eindruck, in der virtuellen Realität »präsent« zu sein (Presence) (vgl.zukunftsInstitut 2016a).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Kern moderner VR-Hardware ist die VR-Brille (oder Headset, Head-Mounted Display) mit zwei hochauflösenden Displays zur Darstellung künstlich erzeugter Bilder und einer damit gekoppelten Sensorik zur Erfassung von Lage und Position des Kopfes. Wenn zwischen Sensorik und Darstellung eines Bildes weniger als elf Millisekunden vergehen\"– die sogenannte Sensor-to-Photon-Latency\"–, entsteht der Eindruck, in der virtuellen Realität »präsent« zu sein (Presence) (vgl.zukunftsInstitut 2016a).",
+      "id": [
+        "152451"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152452]\nDieser so entstehende Raum kann unendlich groß sein. Er ist begehbar und die Objekte in ihm interaktiv gestaltbar. Andere Personen können hier abgebildet werden und man kann mit diesen in Kontakt treten und kommunizieren. Ort, Zeit und die Darstellung von Inhalten kann von der Realität abgekoppelt werden und wird zu einer neuen virtuellen Realität, zunehmend mit mehreren Sinnen und Feedbackmechanismen. Die Dimensionen sind unendlich groß. Dies bedarf neuer Konzepte und des Verständnisses, wie Lernen in einer virtuellen Umgebung möglich sein wird und kann. Auch Begleitungsprozesse in einer solchen virtuellen Welt ändern sich (vgl.Fell 2021).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dieser so entstehende Raum kann unendlich groß sein. Er ist begehbar und die Objekte in ihm interaktiv gestaltbar. Andere Personen können hier abgebildet werden und man kann mit diesen in Kontakt treten und kommunizieren. Ort, Zeit und die Darstellung von Inhalten kann von der Realität abgekoppelt werden und wird zu einer neuen virtuellen Realität, zunehmend mit mehreren Sinnen und Feedbackmechanismen. Die Dimensionen sind unendlich groß. Dies bedarf neuer Konzepte und des Verständnisses, wie Lernen in einer virtuellen Umgebung möglich sein wird und kann. Auch Begleitungsprozesse in einer solchen virtuellen Welt ändern sich (vgl.Fell 2021).",
+      "id": [
+        "152452"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152453]\n**Erweiterte Realität (Augmented Reality – AR) ist eine Erweiterung der Wirklichkeit um dreidimensionale, interaktive Elemente mit Zusatzinformationen zur realen Welt** (vgl. zukunftsInstitut 2016b)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Erweiterte Realität (Augmented Reality – AR) ist eine Erweiterung der Wirklichkeit um dreidimensionale, interaktive Elemente mit Zusatzinformationen zur realen Welt** (vgl. zukunftsInstitut 2016b)",
+      "id": [
+        "152453"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152454]\nMit AR wird die Wahrnehmung beschleunigt, weil Erkanntes durch weitere Informationen angereichert wird bis hin zu Kontakten mit Experten. Dazu benötigt man nur ein Smartphone oder, wenn man die Hände frei haben will, eine Brille – z. B. die Mixed- Reality-Brille Microsoft HoloLens.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Mit AR wird die Wahrnehmung beschleunigt, weil Erkanntes durch weitere Informationen angereichert wird bis hin zu Kontakten mit Experten. Dazu benötigt man nur ein Smartphone oder, wenn man die Hände frei haben will, eine Brille – z. B. die Mixed- Reality-Brille Microsoft HoloLens.",
+      "id": [
+        "152454"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152455]\nBei Lernkonzeptionen mit Virtual Reality und Augmented Reality steht das Handeln im Mittelpunkt und damit das Erwerben der Werte und Kompetenzen. Dabei taucht der Lerner in die Lernsituation ein und ist Teil der virtuellen Lernwelt, seine Wahrnehmung wird fokussiert und für ihn wird die wahrgenommene Welt die »echte«, auch wenn es ihm bewusst ist, dass er sich in einer virtuellen Welt bewegt. (vgl.\"Fell 2018)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bei Lernkonzeptionen mit Virtual Reality und Augmented Reality steht das Handeln im Mittelpunkt und damit das Erwerben der Werte und Kompetenzen. Dabei taucht der Lerner in die Lernsituation ein und ist Teil der virtuellen Lernwelt, seine Wahrnehmung wird fokussiert und für ihn wird die wahrgenommene Welt die »echte«, auch wenn es ihm bewusst ist, dass er sich in einer virtuellen Welt bewegt. (vgl.\"Fell 2018)",
+      "id": [
+        "152455"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152456]\nDamit werden in simulativen Lernumgebungen gezielte Werte- und Kompetenzentwicklungsprozesse möglich, weil realitätsgleiche Herausforderungen zu bearbeiten sind.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Damit werden in simulativen Lernumgebungen gezielte Werte- und Kompetenzentwicklungsprozesse möglich, weil realitätsgleiche Herausforderungen zu bearbeiten sind.",
+      "id": [
+        "152456"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152457]\n[####Künstliche Intelligenz und gezielte Mitarbeiterentwicklung]\n[%3.6.2.2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.6.2.2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152457"
+      ],
+      "title": "Künstliche Intelligenz und gezielte Mitarbeiterentwicklung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152458]\n__In einer 2020 durchgeführten Studie gaben Dreiviertel der befragten Unternehmen an, dass sie bereits Machine-Learning-Anwendungen verwenden oder diese gerade einführen. Das sind rund 20Prozent mehr als im Vorjahr und es zeigt, wie deutlich der Stellenwert dieser Technologie mittlerweile erkannt wurde. Dabei machen Systeme zur Spracherkennung und Assistenzsysteme mit 40Prozent den größten Anteil aus. Lösungen mit künstlicher Intelligenz und Machine Learning scheinen einen beachtlichen Reifegrad erreicht zu haben: Innerhalb von sechs Monaten nach der Einführung solcher Lösungen stellten rund 70Prozent der Befragten einen positiven E\"ekt fest. (vgl.\"IDG 2020)__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__In einer 2020 durchgeführten Studie gaben Dreiviertel der befragten Unternehmen an, dass sie bereits Machine-Learning-Anwendungen verwenden oder diese gerade einführen. Das sind rund 20Prozent mehr als im Vorjahr und es zeigt, wie deutlich der Stellenwert dieser Technologie mittlerweile erkannt wurde. Dabei machen Systeme zur Spracherkennung und Assistenzsysteme mit 40Prozent den größten Anteil aus. Lösungen mit künstlicher Intelligenz und Machine Learning scheinen einen beachtlichen Reifegrad erreicht zu haben: Innerhalb von sechs Monaten nach der Einführung solcher Lösungen stellten rund 70Prozent der Befragten einen positiven E\"ekt fest. (vgl.\"IDG 2020)__",
+      "id": [
+        "152458"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152459]\nDer Begriff __künstliche Intelligenz__ wurde bereits 1955 von John McCarthy kreiert. Danach sollen sich Maschinen so verhalten, als verfügten sie über menschliche Intelligenz. Dieser Ansatz hatte zunächst eine Blütephase, wurde dann wegen überzogener Erwartungen zurückgenommen und besitzt durch die inzwischen verbesserte Rechenleistung der Computer und weiterentwickelten Algorithmen eine neue Dynamik. (vgl.Scheer, 3. Aufl. 2018)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Begriff __künstliche Intelligenz__ wurde bereits 1955 von John McCarthy kreiert. Danach sollen sich Maschinen so verhalten, als verfügten sie über menschliche Intelligenz. Dieser Ansatz hatte zunächst eine Blütephase, wurde dann wegen überzogener Erwartungen zurückgenommen und besitzt durch die inzwischen verbesserte Rechenleistung der Computer und weiterentwickelten Algorithmen eine neue Dynamik. (vgl.Scheer, 3. Aufl. 2018)",
+      "id": [
+        "152459"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152460]\nKI-Verfahren werden zunehmend in digitalen Geschäftsprozessen eingesetzt. Die Massendaten aus Kundenkontakten oder Social Media sowie die Sensordaten aus dem Internet of Things können nicht mehr von Menschen bewältigt und analysiert werden, sodass automatische Verfahren eingesetzt werden müssen, um Daten in Wissen zu überführen. (vgl.ebenda, S. 17 f.) Auch im Lernbereich kann die künstliche Intelligenz dazu beitragen, Lernprozesse zu optimieren, z. B. durch die laufende Analyse von Lernprozessen oder durch die Kuratierung von Lerninhalten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "KI-Verfahren werden zunehmend in digitalen Geschäftsprozessen eingesetzt. Die Massendaten aus Kundenkontakten oder Social Media sowie die Sensordaten aus dem Internet of Things können nicht mehr von Menschen bewältigt und analysiert werden, sodass automatische Verfahren eingesetzt werden müssen, um Daten in Wissen zu überführen. (vgl.ebenda, S. 17 f.) Auch im Lernbereich kann die künstliche Intelligenz dazu beitragen, Lernprozesse zu optimieren, z. B. durch die laufende Analyse von Lernprozessen oder durch die Kuratierung von Lerninhalten.",
+      "id": [
+        "152460"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152461]\n**Künstliche Intelligenz (KI) entsteht durch algorithmische Verfahren, die menschliche kognitive Fähigkeiten imitieren und Handlungsweisen nachbilden, um eigenständig Probleme bearbeiten zu können** (nach Fraunhofer IKS; Petry, Jäger 2018, S. 46).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Künstliche Intelligenz (KI) entsteht durch algorithmische Verfahren, die menschliche kognitive Fähigkeiten imitieren und Handlungsweisen nachbilden, um eigenständig Probleme bearbeiten zu können** (nach Fraunhofer IKS; Petry, Jäger 2018, S. 46).",
+      "id": [
+        "152461"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152462]\nMit künstlichen neuronalen Netzen (KNN) wird z. B. versucht, Eigenschaften des menschlichen Gehirns nachzubilden. Diese Systeme ergänzen und stärken menschliche Fähigkeiten im Sehen, Hören, Analysieren, und Entscheiden. Beispiele hierfür sind u. a. Dienste zur Bild-, Audio-, Text-, Sprach- und Emotionserkennung (vgl.Microsoft 2020a). Zunehmende Bedeutung gewinnen Chatbots, text- und sprachbasierte Dialogsysteme, die in natürlicher Sprache die Kommunikation mit dem jeweiligen System ermöglichen. Es entstehen dabei Interaktionssysteme, die auch zu komplexen Themenstellungen Dialoge führen können (vgl.Nida-Rümelin, Weidenfeld 2018). Damit wird es möglich, dass **humanoide Computer** zukünftig zumindest in Teilbereichen die Rolle eines persönlichen Lernbegleiters übernehmen, der auch emotionale Reaktionen erkennt und darauf reagieren kann.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Mit künstlichen neuronalen Netzen (KNN) wird z. B. versucht, Eigenschaften des menschlichen Gehirns nachzubilden. Diese Systeme ergänzen und stärken menschliche Fähigkeiten im Sehen, Hören, Analysieren, und Entscheiden. Beispiele hierfür sind u. a. Dienste zur Bild-, Audio-, Text-, Sprach- und Emotionserkennung (vgl.Microsoft 2020a). Zunehmende Bedeutung gewinnen Chatbots, text- und sprachbasierte Dialogsysteme, die in natürlicher Sprache die Kommunikation mit dem jeweiligen System ermöglichen. Es entstehen dabei Interaktionssysteme, die auch zu komplexen Themenstellungen Dialoge führen können (vgl.Nida-Rümelin, Weidenfeld 2018). Damit wird es möglich, dass **humanoide Computer** zukünftig zumindest in Teilbereichen die Rolle eines persönlichen Lernbegleiters übernehmen, der auch emotionale Reaktionen erkennt und darauf reagieren kann.",
+      "id": [
+        "152462"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152463]\n**Wir nennen die zukünftigen, menschenähnlich agierenden Rechner humanoide Computer (auch Humancomputer, Human Computer, kognitive Computer)** (vgl.Erpenbeck, Sauter 2013, Nida-Rümelin, Weidenfeld 2018).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Wir nennen die zukünftigen, menschenähnlich agierenden Rechner humanoide Computer (auch Humancomputer, Human Computer, kognitive Computer)** (vgl.Erpenbeck, Sauter 2013, Nida-Rümelin, Weidenfeld 2018).",
+      "id": [
+        "152463"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152464]\nMit dieser Bezeichnung wollen wir ausdrücken, dass sie, ähnlich wie Menschen, Problemstellungen erfassen, analysieren, bewerten und unter Nutzung der Möglichkeiten des Netzes lösen können. Sie haben eigene Meinungen, die sie auch kritisch äußern, und entwickeln von sich aus Lösungsvorschläge. Dabei nutzen sie ihr Erfahrungswissen aus früheren Entscheidungen des Lerners, sodass sie im Laufe der Zeit auch dessen emotionale und motivationale Wertungen und dessen Wertesystem verinnerlichen und in ihre Vorschläge miteinbeziehen. Es wird dadurch möglich sein, Werteund Kompetenzentwicklung mithilfe des Lernpartners Computer auf einem bisher nicht möglichen Niveau zu optimieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Mit dieser Bezeichnung wollen wir ausdrücken, dass sie, ähnlich wie Menschen, Problemstellungen erfassen, analysieren, bewerten und unter Nutzung der Möglichkeiten des Netzes lösen können. Sie haben eigene Meinungen, die sie auch kritisch äußern, und entwickeln von sich aus Lösungsvorschläge. Dabei nutzen sie ihr Erfahrungswissen aus früheren Entscheidungen des Lerners, sodass sie im Laufe der Zeit auch dessen emotionale und motivationale Wertungen und dessen Wertesystem verinnerlichen und in ihre Vorschläge miteinbeziehen. Es wird dadurch möglich sein, Werteund Kompetenzentwicklung mithilfe des Lernpartners Computer auf einem bisher nicht möglichen Niveau zu optimieren.",
+      "id": [
+        "152464"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152465]\n**Humanoide Computer ermöglichen Werte- und Kompetenzentwicklung im Netz mit Computer-Co-Coaching.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Humanoide Computer ermöglichen Werte- und Kompetenzentwicklung im Netz mit Computer-Co-Coaching.**",
+      "id": [
+        "152465"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152466]\nDabei stehen dem einzelnen Mitarbeiter zwei Arten von Lernbegleitern zur Verfügung: Mensch und Human Computer. Eine neue Art von Lernhandeln etabliert sich. Diese Intelligenz basiert zunehmend auf maschinellem Lernen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dabei stehen dem einzelnen Mitarbeiter zwei Arten von Lernbegleitern zur Verfügung: Mensch und Human Computer. Eine neue Art von Lernhandeln etabliert sich. Diese Intelligenz basiert zunehmend auf maschinellem Lernen.",
+      "id": [
+        "152466"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152467]\n**Machine Learning (ML) basiert auf Algorithmen, die Muster und Gesetzmäßigkeiten in Datensätzen erkennen und daraus Lösungen entwickeln, sodass sie Wissen aus Erfahrungen generieren** (vgl.Microsoft 2020b).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Machine Learning (ML) basiert auf Algorithmen, die Muster und Gesetzmäßigkeiten in Datensätzen erkennen und daraus Lösungen entwickeln, sodass sie Wissen aus Erfahrungen generieren** (vgl.Microsoft 2020b).",
+      "id": [
+        "152467"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152468]\nZum Machine Learning gehört die Fähigkeit, Muster schnell zu vergleichen, Argumentationslinien zu definieren und Handlungen zu begründen. ML ermöglicht vertrauensbildende soziale Interaktionen mit menschlichen Benutzern sowie soziale Prozesse über ein Human Machine Interface (HMI, Mensch-Maschine-Schnittstelle), sodass das System kulturelle Normen in verschiedenen Kontexten versteht und entsprechend anwenden kann.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Zum Machine Learning gehört die Fähigkeit, Muster schnell zu vergleichen, Argumentationslinien zu definieren und Handlungen zu begründen. ML ermöglicht vertrauensbildende soziale Interaktionen mit menschlichen Benutzern sowie soziale Prozesse über ein Human Machine Interface (HMI, Mensch-Maschine-Schnittstelle), sodass das System kulturelle Normen in verschiedenen Kontexten versteht und entsprechend anwenden kann.",
+      "id": [
+        "152468"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152469]\nIn den vergangenen Jahren wurden vor allem im Bereich des maschinellen Lernens große Fortschritte gemacht. Dies liegt vor allem an der zunehmenden Verfügbarkeit von großen Datenmengen und hoher Rechenleistung, die eine Grundvoraussetzung für die komplexen Berechnungen von **Machine Learning**, einem Teilbereich der KI, sind.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In den vergangenen Jahren wurden vor allem im Bereich des maschinellen Lernens große Fortschritte gemacht. Dies liegt vor allem an der zunehmenden Verfügbarkeit von großen Datenmengen und hoher Rechenleistung, die eine Grundvoraussetzung für die komplexen Berechnungen von **Machine Learning**, einem Teilbereich der KI, sind.",
+      "id": [
+        "152469"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152470]\nEs wird dem Computer beim Machine Learning also kein Lösungsweg modelliert. Er orientiert sich vielmehr an vorgegebenen Gütekriterien und dem Informationsgehalt der Daten. Dabei lernt er, selbstständig die Struktur der Daten zu erkennen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Es wird dem Computer beim Machine Learning also kein Lösungsweg modelliert. Er orientiert sich vielmehr an vorgegebenen Gütekriterien und dem Informationsgehalt der Daten. Dabei lernt er, selbstständig die Struktur der Daten zu erkennen.",
+      "id": [
+        "152470"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152471]\nDeep Learning, ein Teilbereich des Machine Learning, geht noch einen Schritt weiter und nutzt hierarchische Schichten, um den Prozess des Machine Learning zu ermöglichen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Deep Learning, ein Teilbereich des Machine Learning, geht noch einen Schritt weiter und nutzt hierarchische Schichten, um den Prozess des Machine Learning zu ermöglichen.",
+      "id": [
+        "152471"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152472]\n**Deep Learning ist eine Methode der Informationsverarbeitung, die ohne Beeinflussung durch Menschen in der Lage ist zu lernen, indem sie das Erlernte immer wieder mit neuen Inhalten verknüpft und diese analysiert.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Deep Learning ist eine Methode der Informationsverarbeitung, die ohne Beeinflussung durch Menschen in der Lage ist zu lernen, indem sie das Erlernte immer wieder mit neuen Inhalten verknüpft und diese analysiert.**",
+      "id": [
+        "152472"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152473]\nDabei werden künstliche und mehrschichtige neuronale Netze aufgebaut, die nach dem Muster des menschlichen Gehirns gestaltet sind, laufend Daten auswerten und dabei ständig hinzulernen. Diese Lernalgorithmen ähneln deshalb Nervenzellenverbindungen im menschlichen Gehirn.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Dabei werden künstliche und mehrschichtige neuronale Netze aufgebaut, die nach dem Muster des menschlichen Gehirns gestaltet sind, laufend Daten auswerten und dabei ständig hinzulernen. Diese Lernalgorithmen ähneln deshalb Nervenzellenverbindungen im menschlichen Gehirn.",
+      "id": [
+        "152473"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152474]\nDer Mensch ist den Computern in seinen Fähigkeiten zur Kreativität, zur Analyse und Bewertung komplexer Situationen, in komplexen Kommunikationen und bei Bewältigung der meisten Alltagshandlungen immer noch voraus. Die künstliche Intelligenz rückt aber der natürlichen Intelligenz näher, weil sie zunehmend auch ethische Probleme bewerten kann (vgl.Heinke 2021, S. 30).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Mensch ist den Computern in seinen Fähigkeiten zur Kreativität, zur Analyse und Bewertung komplexer Situationen, in komplexen Kommunikationen und bei Bewältigung der meisten Alltagshandlungen immer noch voraus. Die künstliche Intelligenz rückt aber der natürlichen Intelligenz näher, weil sie zunehmend auch ethische Probleme bewerten kann (vgl.Heinke 2021, S. 30).",
+      "id": [
+        "152474"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152475]\n**Deshalb liegt die nahe Zukunft des Lernens in einer sinnvollen Kombination der menschlichen Lernbegleitung und des Computer-Co-Coachings.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Deshalb liegt die nahe Zukunft des Lernens in einer sinnvollen Kombination der menschlichen Lernbegleitung und des Computer-Co-Coachings.**",
+      "id": [
+        "152475"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152476]\n[####Personalisierung der Contents]\n[%3.6.2.3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.6.2.3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152476"
+      ],
+      "title": "Personalisierung der Contents"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152477]\n__Gibt man den Begriff »E-Learning« als Suchanfrage bei der Google-Suche ein, bekommt man etwa 2.920.000.000 Ergebnisse (Suchanfrage vom 07. 04. 2021). Das Problem in den Werte- und Kompetenzentwicklungsprozessen der Mitarbeiter ist deshalb, die passenden Informationen für die jeweilige spezifische Herausforderung, angepasst auf das Vorwissen und die Erfahrungen des Mitarbeiters, zur Verfügung zu stellen.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Gibt man den Begriff »E-Learning« als Suchanfrage bei der Google-Suche ein, bekommt man etwa 2.920.000.000 Ergebnisse (Suchanfrage vom 07. 04. 2021). Das Problem in den Werte- und Kompetenzentwicklungsprozessen der Mitarbeiter ist deshalb, die passenden Informationen für die jeweilige spezifische Herausforderung, angepasst auf das Vorwissen und die Erfahrungen des Mitarbeiters, zur Verfügung zu stellen.__",
+      "id": [
+        "152477"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152478]\nHinzukommt, dass heute viele Inhalte im Web zur Verfügung stehen, sodass es immer weniger darum geht, Content neu zu erschaffen, sondern interne und externe Inhalte nach Bedarf und für den Mitarbeiter zu kombinieren, also zu kuratieren. Es entwickelt sich damit eine neue Form der Content-Bereitstellung durch **Kuratierung** und Automatisierungsprinzipien. 34 Eine notwendige Voraussetzung für die Suche, Recherche, Analyse und Verarbeitung von digitalisierten Dokumenten sind dabei qualitativ hochwertig Texte.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Hinzukommt, dass heute viele Inhalte im Web zur Verfügung stehen, sodass es immer weniger darum geht, Content neu zu erschaffen, sondern interne und externe Inhalte nach Bedarf und für den Mitarbeiter zu kombinieren, also zu kuratieren. Es entwickelt sich damit eine neue Form der Content-Bereitstellung durch **Kuratierung** und Automatisierungsprinzipien. 34 Eine notwendige Voraussetzung für die Suche, Recherche, Analyse und Verarbeitung von digitalisierten Dokumenten sind dabei qualitativ hochwertig Texte.",
+      "id": [
+        "152478"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152479]\n**Digitale Kuratierungslösungen (Content Curation) wählen Inhalte bedarfsgerecht für einzelne Mitarbeiter aus, kombinieren, kommentieren und kommunizieren sie.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Digitale Kuratierungslösungen (Content Curation) wählen Inhalte bedarfsgerecht für einzelne Mitarbeiter aus, kombinieren, kommentieren und kommunizieren sie.**",
+      "id": [
+        "152479"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152480]\nKI-basierte Kuratierungslösungen sind aufgrund ihrer Erfahrungen mit dem einzelnen Mitarbeiter in der Lage, ihm regelmäßig jene Inhalte auszuwählen und aufzubereiten, die für seine Aufgaben und seine Interessen relevant sind. Das Entscheidende bei der Content Curation ist, dass der Content nicht einfach nur kopiert, sondern auf seine thematische Relevanz für den einzelnen Mitarbeiter geprüft und bedarfsgerecht aufbereitet wird. Dadurch können fachlich fundierte Inhalte zusammengestellt werden, die dem Mitarbeiter helfen, gezielt zu lernen und seine Performanz zu verbessern.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "KI-basierte Kuratierungslösungen sind aufgrund ihrer Erfahrungen mit dem einzelnen Mitarbeiter in der Lage, ihm regelmäßig jene Inhalte auszuwählen und aufzubereiten, die für seine Aufgaben und seine Interessen relevant sind. Das Entscheidende bei der Content Curation ist, dass der Content nicht einfach nur kopiert, sondern auf seine thematische Relevanz für den einzelnen Mitarbeiter geprüft und bedarfsgerecht aufbereitet wird. Dadurch können fachlich fundierte Inhalte zusammengestellt werden, die dem Mitarbeiter helfen, gezielt zu lernen und seine Performanz zu verbessern.",
+      "id": [
+        "152480"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152481]\nMit der Kuratierung von Inhalten wird es beispielweise möglich, jedem Mitarbeiter seine individuelle »Tages- oder Wochenzeitung« zu erstellen, die für ihn relevante Informationen bündelt. Eine wesentliche Grundlage dafür bilden intelligente Methoden und Verfahren auf Grundlage generischer Sprach- und Wissenstechnologien, künstlicher Intelligenz (KI) und deren Anwendung im Machine Learning (ML).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Mit der Kuratierung von Inhalten wird es beispielweise möglich, jedem Mitarbeiter seine individuelle »Tages- oder Wochenzeitung« zu erstellen, die für ihn relevante Informationen bündelt. Eine wesentliche Grundlage dafür bilden intelligente Methoden und Verfahren auf Grundlage generischer Sprach- und Wissenstechnologien, künstlicher Intelligenz (KI) und deren Anwendung im Machine Learning (ML).",
+      "id": [
+        "152481"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152482]\nDamit wird es möglich, viele klassische Aufgaben des Kuratierens von Inhalten zum größten Teil oder sogar vollständig automatisiert ausführen zu lassen. Beispiele dafür sind das Monitoring verschiedener Informationsquellen von der Google-Suche und Wikipedia-Abfragen bis zu Onlinerecherchen in weltweiten Datenbanken, aber auch das Katalogisieren und mit Anmerkungen versehener digitaler Archive, die automatisierte Zusammenstellung von themenspezifischen Dossiers oder das Storytelling35 für einen Fachblog. Analytic-Funktionen liefern Einblicke in das Nutzungsverhalten der Mitarbeiter und eröffnen die Möglichkeit, das Informationsangebot kontinuierlich an die Informationsbedarfe der Mitarbeiter anzupassen und zu optimieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Damit wird es möglich, viele klassische Aufgaben des Kuratierens von Inhalten zum größten Teil oder sogar vollständig automatisiert ausführen zu lassen. Beispiele dafür sind das Monitoring verschiedener Informationsquellen von der Google-Suche und Wikipedia-Abfragen bis zu Onlinerecherchen in weltweiten Datenbanken, aber auch das Katalogisieren und mit Anmerkungen versehener digitaler Archive, die automatisierte Zusammenstellung von themenspezifischen Dossiers oder das Storytelling35 für einen Fachblog. Analytic-Funktionen liefern Einblicke in das Nutzungsverhalten der Mitarbeiter und eröffnen die Möglichkeit, das Informationsangebot kontinuierlich an die Informationsbedarfe der Mitarbeiter anzupassen und zu optimieren.",
+      "id": [
+        "152482"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152483]\n[####Learning und Workforce Analytics]\n[%3.6.2.4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.6.2.4",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 4,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152483"
+      ],
+      "title": "Learning und Workforce Analytics"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152484]\n__Während ihrer Lernprozesse hinterlassen die Lerner, vor allem in technologiegestützten Lernprozessen, fortlaufend Datenspuren, quasi als Nebenprodukt bei der Nutzung von Web Based Trainings, Learning-Experience-Plattformen oder sozialen Medien. Dabei entstehen individuelle, personalisierte Lerndaten, z. B. über erledigte Aufgaben, gelöste Praxisherausforderungen, erreichte Kompetenzziele oder über die Kommunikation mit Lernpartnern, Lernbegleitern oder Experten.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Während ihrer Lernprozesse hinterlassen die Lerner, vor allem in technologiegestützten Lernprozessen, fortlaufend Datenspuren, quasi als Nebenprodukt bei der Nutzung von Web Based Trainings, Learning-Experience-Plattformen oder sozialen Medien. Dabei entstehen individuelle, personalisierte Lerndaten, z. B. über erledigte Aufgaben, gelöste Praxisherausforderungen, erreichte Kompetenzziele oder über die Kommunikation mit Lernpartnern, Lernbegleitern oder Experten.__",
+      "id": [
+        "152484"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152485]\nLearning-Analytics-Systeme werden vor allem im Bereich des formellen Lernens genutzt. Die Entwicklung von Systemen zur Analyse des informellen Lernens im Arbeitsprozess steht jedoch noch am Anfang.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Learning-Analytics-Systeme werden vor allem im Bereich des formellen Lernens genutzt. Die Entwicklung von Systemen zur Analyse des informellen Lernens im Arbeitsprozess steht jedoch noch am Anfang.",
+      "id": [
+        "152485"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152486]\n**Learning Analytics ist das Messen, Sammeln, Analysieren, Vergleichen und Berichten von Daten über Lernende und ihre Kontexte, um Lernen und dessen Umgebung zu verstehen und zu optimieren (nach Deutscher Bildungsserver 2021).**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Learning Analytics ist das Messen, Sammeln, Analysieren, Vergleichen und Berichten von Daten über Lernende und ihre Kontexte, um Lernen und dessen Umgebung zu verstehen und zu optimieren (nach Deutscher Bildungsserver 2021).**",
+      "id": [
+        "152486"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152487]\nFür die gezielte Werte- und Kompetenzentwicklung ist es im Bereich der Analyse der Lernprozesse erforderlich, den Erfassungsbereich um das Arbeiten und informelle Lernen zu erweitern. Unter dem Schlagwort People Analytics wird eine enorme Fülle an digitalen Spuren, die Mitarbeiter beim Arbeiten und Lernen hinterlassen, erfasst und ausgewertet, um personenbezogene Dossiers zu erstellen. Für die Auswertung durch People Analytics- Programme sind dabei nicht nur leistungsbezogene Daten nutzbar – wie etwa Umsatzlisten oder Zielvereinbarungsdokumente –, sondern auch qualitative Daten. Interessant sind insbesondere interne Kommunikations- und Kollaborationssysteme wie E-Mail oder Intranet. Dabei kann untersucht werden, wie eng die einzelnen Organisationsbereiche miteinander vernetzt sind, wie hoch der Wissenstransfer tatsächlich ist und wo die Meinungsbildner und Experten im Unternehmen zu finden sind. Mit zunehmender Intelligenz der Software und damit reichhaltigeren Anwendungsgebieten für Algorithmen und Cyberware wird der Computer damit immer mehr zum Lernpartner (vgl.zukunftsInstitut 2016c).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Für die gezielte Werte- und Kompetenzentwicklung ist es im Bereich der Analyse der Lernprozesse erforderlich, den Erfassungsbereich um das Arbeiten und informelle Lernen zu erweitern. Unter dem Schlagwort People Analytics wird eine enorme Fülle an digitalen Spuren, die Mitarbeiter beim Arbeiten und Lernen hinterlassen, erfasst und ausgewertet, um personenbezogene Dossiers zu erstellen. Für die Auswertung durch People Analytics- Programme sind dabei nicht nur leistungsbezogene Daten nutzbar – wie etwa Umsatzlisten oder Zielvereinbarungsdokumente –, sondern auch qualitative Daten. Interessant sind insbesondere interne Kommunikations- und Kollaborationssysteme wie E-Mail oder Intranet. Dabei kann untersucht werden, wie eng die einzelnen Organisationsbereiche miteinander vernetzt sind, wie hoch der Wissenstransfer tatsächlich ist und wo die Meinungsbildner und Experten im Unternehmen zu finden sind. Mit zunehmender Intelligenz der Software und damit reichhaltigeren Anwendungsgebieten für Algorithmen und Cyberware wird der Computer damit immer mehr zum Lernpartner (vgl.zukunftsInstitut 2016c).",
+      "id": [
+        "152487"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152488]\nIm Rahmen von Social-Blended-Learning- und Workplace-Learning-Prozessen werden mit Learning Analytics folgende Ziele verfolgt (vgl.Ebner 2019):\n\n• **Vorhersagen und Eingreifen**: Nicht direkt sichtbare Entwicklungen im Lernprozess sollen erkannt und prognostiziert werden.\n• **Empfehlungen**: Die Lerner und ihre Lernbegleiter erhalten konkrete Hinweise zur Gestaltung der personalisierten Lernprozesse.\n• **Personalisierung des Lernprozesses**: Die Lerner und ihre Lernbegleiter erhalten Hinweise zur Anpassung ihres individuellen Ermöglichungsraumes.\n• **Reflexion**: Die Lerner werden sich über die Konsequenzen ihres Lernhandelns klar.\n• **Vergleiche**: Im Abgleich zu Lernprozessen anderer oder der Vergangenheit können Ansätze zur Optimierung der Lernprozesse identifiziert werden.\n\nDamit entwickelt sich Learning Analytics zur Workforce Analytics.36",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Im Rahmen von Social-Blended-Learning- und Workplace-Learning-Prozessen werden mit Learning Analytics folgende Ziele verfolgt (vgl.Ebner 2019):\n\n• **Vorhersagen und Eingreifen**: Nicht direkt sichtbare Entwicklungen im Lernprozess sollen erkannt und prognostiziert werden.\n• **Empfehlungen**: Die Lerner und ihre Lernbegleiter erhalten konkrete Hinweise zur Gestaltung der personalisierten Lernprozesse.\n• **Personalisierung des Lernprozesses**: Die Lerner und ihre Lernbegleiter erhalten Hinweise zur Anpassung ihres individuellen Ermöglichungsraumes.\n• **Reflexion**: Die Lerner werden sich über die Konsequenzen ihres Lernhandelns klar.\n• **Vergleiche**: Im Abgleich zu Lernprozessen anderer oder der Vergangenheit können Ansätze zur Optimierung der Lernprozesse identifiziert werden.\n\nDamit entwickelt sich Learning Analytics zur Workforce Analytics.36",
+      "id": [
+        "152488"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152489]\n**Workforce Analytics analysiert Daten aus den personalisierten Arbeitsprozessen, um valide Informationen für die Aufgaben des Human Resources Management zu generieren und die persönlichen Arbeits- und Lernprozesse der Mitarbeiter durch Bereitstellung der dazu notwendigen Informationen und der personalisierten Aufbereitung zu optimieren.**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Workforce Analytics analysiert Daten aus den personalisierten Arbeitsprozessen, um valide Informationen für die Aufgaben des Human Resources Management zu generieren und die persönlichen Arbeits- und Lernprozesse der Mitarbeiter durch Bereitstellung der dazu notwendigen Informationen und der personalisierten Aufbereitung zu optimieren.**",
+      "id": [
+        "152489"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152490]\nDamit trägt Workforce Analytics dazu bei, Personalplanung, Recruiting, Werte- und Kompetenzentwicklung im Arbeitsprozess, Nachfolge- und Karriereplanung oder Performance Management laufend zu optimieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Damit trägt Workforce Analytics dazu bei, Personalplanung, Recruiting, Werte- und Kompetenzentwicklung im Arbeitsprozess, Nachfolge- und Karriereplanung oder Performance Management laufend zu optimieren.",
+      "id": [
+        "152490"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152491]\nAn Learning- und Workforce-Analytics-Systeme werden grundsätzlich folgende Anforderungen gestellt (vgl.Ebner 2019):\n\n• **Sicherheit:** Datensicherheit ist die Grundvoraussetzung für die Datensammlung.\n• **Genauigkeit:** Die Daten sollten den Lernprozess möglichst präzise beschreiben.\n• **Rahmenbedingungen:** Die Begrenzungen und Einflussfaktoren sollten klar definiert sein.\n• **Nutzer:** Es ist immer vorab zu klären, wem die Daten letztendlich gehören.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "An Learning- und Workforce-Analytics-Systeme werden grundsätzlich folgende Anforderungen gestellt (vgl.Ebner 2019):\n\n• **Sicherheit:** Datensicherheit ist die Grundvoraussetzung für die Datensammlung.\n• **Genauigkeit:** Die Daten sollten den Lernprozess möglichst präzise beschreiben.\n• **Rahmenbedingungen:** Die Begrenzungen und Einflussfaktoren sollten klar definiert sein.\n• **Nutzer:** Es ist immer vorab zu klären, wem die Daten letztendlich gehören.",
+      "id": [
+        "152491"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:152492]\nDer Prozess zur Optimierung selbstorganisierter Lernprozesse unter Nutzung von Learning und Workforce Analytics weist folgende Struktur auf (vgl. Ebner, Neuhold, Schön 2013):\n|image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_23.png|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Der Prozess zur Optimierung selbstorganisierter Lernprozesse unter Nutzung von Learning und Workforce Analytics weist folgende Struktur auf (vgl. Ebner, Neuhold, Schön 2013):\n|image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_23.png|",
+      "id": [
+        "152492"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:152493]\n[&image:https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_24.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "152493"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/haufe/future_learning/web-resources/images/haufe_24.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152494]\nWährend Learning Analytics in vielen Ansätzen als ein Instrument der Lehrenden gesehen wird, sehen wir die Möglichkeiten von Workforce Analytics vor allem in der selbstorganisierten Lernprozessoptimierung, also aus dem Blickwinkel der Mitarbeiter. Das System entwickelt individuelle Lernerprofile weiter, analysiert die Kommunikation, insbesondere in sozialen Netzwerken, identifiziert Signale, die auf Erfolge oder Misserfolge hinweisen und gibt damit wertvolle Hinweise für die Gestaltung des persönlichen Lernrahmens. Daraus ergeben sich Chancen für eine Optimierung der selbstorganisierten, personalisierten Werte- und Kompetenzentwicklung durch individuelle, zeitnahe, präzise, kompakte und anschauliche Rückmeldungen zu den einzelnen Lernhandlungen (vgl. Sauter, Sauter 2013, S. 170).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Während Learning Analytics in vielen Ansätzen als ein Instrument der Lehrenden gesehen wird, sehen wir die Möglichkeiten von Workforce Analytics vor allem in der selbstorganisierten Lernprozessoptimierung, also aus dem Blickwinkel der Mitarbeiter. Das System entwickelt individuelle Lernerprofile weiter, analysiert die Kommunikation, insbesondere in sozialen Netzwerken, identifiziert Signale, die auf Erfolge oder Misserfolge hinweisen und gibt damit wertvolle Hinweise für die Gestaltung des persönlichen Lernrahmens. Daraus ergeben sich Chancen für eine Optimierung der selbstorganisierten, personalisierten Werte- und Kompetenzentwicklung durch individuelle, zeitnahe, präzise, kompakte und anschauliche Rückmeldungen zu den einzelnen Lernhandlungen (vgl. Sauter, Sauter 2013, S. 170).",
+      "id": [
+        "152494"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152495]\nAktuell sind die Ergebnisse dieser Analyseinstrumente noch sehr eingeschränkt nutzbar, da sie letztendlich auf Daten, statistischen Analysen oder Mustern basieren, die Spielraum für Fehler beherbergen. Daher sollten die technischen Möglichkeiten immer nur als Hilfsmittel gesehen werden – nicht mehr, aber auch nicht weniger (vgl.Ebner 2019). Mit den wachsenden Möglichkeiten der künstlichen Intelligenz werden solche Systeme zunehmend leistungsfähiger und an Bedeutung gewinnen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Aktuell sind die Ergebnisse dieser Analyseinstrumente noch sehr eingeschränkt nutzbar, da sie letztendlich auf Daten, statistischen Analysen oder Mustern basieren, die Spielraum für Fehler beherbergen. Daher sollten die technischen Möglichkeiten immer nur als Hilfsmittel gesehen werden – nicht mehr, aber auch nicht weniger (vgl.Ebner 2019). Mit den wachsenden Möglichkeiten der künstlichen Intelligenz werden solche Systeme zunehmend leistungsfähiger und an Bedeutung gewinnen.",
+      "id": [
+        "152495"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:152496]\n[##Wissensaufbau in der Zukunft]\n[%3.7]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "3.7",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "152496"
+      ],
+      "title": "Wissensaufbau in der Zukunft"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152497]\n__Erste Versuche mit »Lernmaschinen« gab es bereits in der Renaissance, z. B. das Leserad von Agostino Ramelli, das als Vorläufer der Hypertext-Idee gilt (vgl. Niegemann et. al. 2008, S. 3 ff.). Bis 1936 gab es weitere ca. 700 Patente für »Übungsmaschinen«, jedoch alle mit eher unbefriedigenden Ergebnissen.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Erste Versuche mit »Lernmaschinen« gab es bereits in der Renaissance, z. B. das Leserad von Agostino Ramelli, das als Vorläufer der Hypertext-Idee gilt (vgl. Niegemann et. al. 2008, S. 3 ff.). Bis 1936 gab es weitere ca. 700 Patente für »Übungsmaschinen«, jedoch alle mit eher unbefriedigenden Ergebnissen.__",
+      "id": [
+        "152497"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152498]\n__E-Learning basiert vor allem auf der Idee des Fernlernens (Distance Education), dessen Anfänge bereits in der Mitte des 19. Jahrhunderts liegen. In den 1940er-Jahren folgte dann das Telelernen (Telelearning), das die TV-Technologie für das Lernen nutzte. In Deutschland wurde dieser Ansatz im Rahmen des Telekolleg umgesetzt.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__E-Learning basiert vor allem auf der Idee des Fernlernens (Distance Education), dessen Anfänge bereits in der Mitte des 19. Jahrhunderts liegen. In den 1940er-Jahren folgte dann das Telelernen (Telelearning), das die TV-Technologie für das Lernen nutzte. In Deutschland wurde dieser Ansatz im Rahmen des Telekolleg umgesetzt.__",
+      "id": [
+        "152498"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:152499]\n__Bei der Methode des programmierten Unterrichts (programmierte Unterweisung), die Burrhus Frederic Skinner Anfang der 50er-Jahre entwickelte, wird der Unterrichtsstoff in einzelne Teile zerlegt, die sich die Lernenden weitgehend selbstständig erarbeiten und__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Bei der Methode des programmierten Unterrichts (programmierte Unterweisung), die Burrhus Frederic Skinner Anfang der 50er-Jahre entwickelte, wird der Unterrichtsstoff in einzelne Teile zerlegt, die sich die Lernenden weitgehend selbstständig erarbeiten und__",
+      "id": [
+        "152499"
+      ]
+    }
+  }
+]

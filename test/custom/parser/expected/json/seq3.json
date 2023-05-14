@@ -1,0 +1,23 @@
+[
+  {
+    "bitmark": "[.sequence:bitmark--]\n\n===\n***zu oberst***\nDach\n--\n*oben*\n3. Stock\n--\n***in der Mitte***\n2. Stock\n--\n**in der Mitte**\n1. Stock\n--\n*unten*\nErdgeschoss\n--\n***zu unterst***\nKeller\n===",
+    "bit": {
+      "type": "sequence",
+      "format": "bitmark--",
+      "instruction": "",
+      "body": "",
+      "elements": [
+        "***zu oberst***\nDach",
+        "*oben*\n3. Stock",
+        "***in der Mitte***\n2. Stock",
+        "**in der Mitte**\n1. Stock",
+        "*unten*\nErdgeschoss",
+        "***zu unterst***\nKeller"
+      ],
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    }
+  }
+]

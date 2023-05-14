@@ -1,0 +1,2341 @@
+[
+  {
+    "bitmark": "[.book]\r\n[@id:295089]\r\n[@externalId:e-ielts-preparation-5_x5rq97mphah1]\r\n[@language:en]\r\n[#IELTS Preparation 5]\r\n[@coverImage:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_5.png]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295089"
+      ],
+      "externalId": [
+        "e-ielts-preparation-5_x5rq97mphah1"
+      ],
+      "language": [
+        "en"
+      ],
+      "title": "IELTS Preparation 5",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_5.png"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:295090]\r\nIELTS Exam Practice Tests provides extensive practice in the 4 modules at the level of the actual IELTS exam. Offering free practice materials for all major exam task types, this section provides guidance on how to approach each different task type. A variety of authentic reading texts cover the range of text types found in the actual exam. The answer key includes explanations as to why answers are correct, and model answers for all writing tasks.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "IELTS Exam Practice Tests provides extensive practice in the 4 modules at the level of the actual IELTS exam. Offering free practice materials for all major exam task types, this section provides guidance on how to approach each different task type. A variety of authentic reading texts cover the range of text types found in the actual exam. The answer key includes explanations as to why answers are correct, and model answers for all writing tasks.",
+      "id": [
+        "295090"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295091]\r\n[▼ch-1]\r\n[#IELTS Listening 5]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295091"
+      ],
+      "anchor": "ch-1",
+      "title": "IELTS Listening 5"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295092]\r\n[▼ch-2]\r\n[##Section 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295092"
+      ],
+      "anchor": "ch-2",
+      "title": "Section 1"
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:295093]\r\n[%][%IELTS Listening Tip]\r\nBecause you will hear each section once only you need to listen carefully to all parts of the test. Don’t lose careless marks in Section 1 and 2. If you are asked to write a word, listen to whether there is an ‘s’ at the end. Make sure you take the word from the recording. You won’t need to change the words.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Because you will hear each section once only you need to listen carefully to all parts of the test. Don’t lose careless marks in Section 1 and 2. If you are asked to write a word, listen to whether there is an ‘s’ at the end. Make sure you take the word from the recording. You won’t need to change the words.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295093"
+      ],
+      "lead": "IELTS Listening Tip"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:295094]\r\nYou will hear a number of different recordings and you have to answer questions on what you hear. There will be time for you to read the instructions and questions and you have a chance to check your work. All the recordings will be played **once only**. The test is in 4 Sections. At the end of the test you will be given **10 minutes** to transfer your answers to an answersheet.\r\n\r\n**Now turn to section 1**: You will hear a conversation between a student looking for a host family and a housing adviser. First you have some time to look at **Questions 1-10**.\r\n\r\nYou will see that there is an example which has been done for you. So **Jenny Chan** has been written on the form. Now we shall begin. You should answer the questions as you listen, because you will **NOT** hear the recording a second time.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You will hear a number of different recordings and you have to answer questions on what you hear. There will be time for you to read the instructions and questions and you have a chance to check your work. All the recordings will be played **once only**. The test is in 4 Sections. At the end of the test you will be given **10 minutes** to transfer your answers to an answersheet.\r\n\r\n**Now turn to section 1**: You will hear a conversation between a student looking for a host family and a housing adviser. First you have some time to look at **Questions 1-10**.\r\n\r\nYou will see that there is an example which has been done for you. So **Jenny Chan** has been written on the form. Now we shall begin. You should answer the questions as you listen, because you will **NOT** hear the recording a second time.",
+      "id": [
+        "295094"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\r\n[@id:295095]\r\n[!Listen carefully and answer Questions 1 to 10:]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295095"
+      ],
+      "instruction": "Listen carefully and answer Questions 1 to 10:"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&audio]\r\n[@id:295096]\r\n[%][%Questions 1-10]\r\n[!Complete the form below, using NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.]\r\n[&audio:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_5_ielts_mc_pt01.mp3]\r\n**HOST FAMILY APPLICATION**\r\n\r\n__Example - Answer__\r\n**Name**: [_Jenny Chan][@example]\r\n**Present address**: Sea View Guest House, [_14 Hill Road]\r\n**Daytime phone number**: 2237676\r\n(NB Best lime to contact is [_between 9 and 9.30][_9-9.30])\r\n**Age**: 19\r\n**Intended length of stay**: [_1 year][_one year]\r\n**Occupation while in UK**: student\r\n**General level of English**: [_intermediate]\r\n**Preferred location**: in the [_North-West]\r\n**Special diet**: [_vegetarian]\r\n**Other requirements:**\r\n- own facilities\r\n- own television\r\n- [_garden][_a garden][_a real garden][_real garden]\r\n- to be [_only guest][_the only guest]\r\n**Maximum price**: £[_100] a week\r\n**Preferred starting date**: [_23rd March][_Monday 23rd March]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**HOST FAMILY APPLICATION**\r\n\r\n__Example - Answer__\r\n**Name**: {0}\r\n**Present address**: Sea View Guest House, {1}\r\n**Daytime phone number**: 2237676\r\n(NB Best lime to contact is {2})\r\n**Age**: 19\r\n**Intended length of stay**: {3}\r\n**Occupation while in UK**: student\r\n**General level of English**: {4}\r\n**Preferred location**: in the {5}\r\n**Special diet**: {6}\r\n**Other requirements:**\r\n- own facilities\r\n- own television\r\n- {7}\r\n- to be {8}\r\n**Maximum price**: £{9} a week\r\n**Preferred starting date**: {10}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295096"
+      ],
+      "lead": "Questions 1-10",
+      "instruction": "Complete the form below, using NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_5_ielts_mc_pt01.mp3"
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Jenny Chan"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "14 Hill Road"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "between 9 and 9.30",
+            "9-9.30"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "1 year",
+            "one year"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "intermediate"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "North-West"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "vegetarian"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "garden",
+            "a garden",
+            "a real garden",
+            "real garden"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "only guest",
+            "the only guest"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "100"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "23rd March",
+            "Monday 23rd March"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295097]\r\n[▼ch-4]\r\n[##Section 2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295097"
+      ],
+      "anchor": "ch-4",
+      "title": "Section 2"
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:295098]\r\n[%][%Test Tip]\r\nIn the real test, you have time at the beginning of each section to look at the task. Use this time well to read the questions and think about the topics. The questions always follow the order of the recording. Don’t panic if you miss one question – look ahead and think about the next one.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "In the real test, you have time at the beginning of each section to look at the task. Use this time well to read the questions and think about the topics. The questions always follow the order of the recording. Don’t panic if you miss one question – look ahead and think about the next one.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295098"
+      ],
+      "lead": "Test Tip"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:295099]\r\n**Section 2**: You will hear a speech by an official at a meeting of a local football club at start of a new football season. First you have some time to look at **Questions 11-20**.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Section 2**: You will hear a speech by an official at a meeting of a local football club at start of a new football season. First you have some time to look at **Questions 11-20**.",
+      "id": [
+        "295099"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\r\n[@id:295100]\r\n[!Now Listen carefully and answer Questions 11 to 20:]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295100"
+      ],
+      "instruction": "Now Listen carefully and answer Questions 11 to 20:"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&audio]\r\n[@id:295101]\r\n[%][%Questions 11-13]\r\n[!Complete the sentences below.\r\n\r\nWrite NO MORE THAN TWO WORDS for each answer.]\r\n[&audio:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_5_ielts_mc_pt02.mp3]\r\n**11** The next meeting of the soccer club will be in the [_clubhouse] in King's Park on 2 July.\r\n\r\n**12** The first event is a [_picnic].\r\n\r\n**13** At the final dinner, players receive [_prizes].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**11** The next meeting of the soccer club will be in the {0} in King's Park on 2 July.\r\n\r\n**12** The first event is a {1}.\r\n\r\n**13** At the final dinner, players receive {2}.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295101"
+      ],
+      "lead": "Questions 11-13",
+      "instruction": "Complete the sentences below.\r\n\r\nWrite NO MORE THAN TWO WORDS for each answer.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_5_ielts_mc_pt02.mp3"
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "clubhouse"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "picnic"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "prizes"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze]\r\n[@id:295102]\r\n[%][%Questions 14-17]\r\n[!Complete the table below.\r\n\r\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.]\r\n\r\n**Competition\tNumber of Team\tGames Begin\t  Training Session (in King's Park)**\r\nJunior\t                 [_ten][_10]\t                 8.30 am\t               [_Wednesday afternoon][_Wednesday afternoons]\r\nSenior\t                [_four][_4]\t               2.00 pm\t               [_Sunday afternoon][_Sunday afternoons]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**Competition\tNumber of Team\tGames Begin\t  Training Session (in King's Park)**\r\nJunior\t                 {0}\t                 8.30 am\t               {1}\r\nSenior\t                {2}\t               2.00 pm\t               {3}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295102"
+      ],
+      "lead": "Questions 14-17",
+      "instruction": "Complete the table below.\r\n\r\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ten",
+            "10"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Wednesday afternoon",
+            "Wednesday afternoons"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "four",
+            "4"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Sunday afternoon",
+            "Sunday afternoons"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze]\r\n[@id:295103]\r\n[%][%Questions 18-20]\r\n[!Complete the table below.\r\n\r\nWrite NO MORE THAN THREE WORDS for each answer.]\r\n\r\n**Name of Office Bearer\t- Responsibility**\r\nRobert Young: President - to manage meetings\r\nGina Costello: Treasurer - to [_collect fees][_collect money][_collect the fees][_collect the money]\r\nDavid West: Secretary - to [_send newsletter][_send newsletters][_send out newsletter][_send out newsletters][_send the newsletter][_send the newsletters]\r\nJason Dokic: Head Coach - to [_supervise teams][_supervise the teams]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**Name of Office Bearer\t- Responsibility**\r\nRobert Young: President - to manage meetings\r\nGina Costello: Treasurer - to {0}\r\nDavid West: Secretary - to {1}\r\nJason Dokic: Head Coach - to {2}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295103"
+      ],
+      "lead": "Questions 18-20",
+      "instruction": "Complete the table below.\r\n\r\nWrite NO MORE THAN THREE WORDS for each answer.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "collect fees",
+            "collect money",
+            "collect the fees",
+            "collect the money"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "send newsletter",
+            "send newsletters",
+            "send out newsletter",
+            "send out newsletters",
+            "send the newsletter",
+            "send the newsletters"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "supervise teams",
+            "supervise the teams"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295104]\r\n[▼ch-6]\r\n[##Section 3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295104"
+      ],
+      "anchor": "ch-6",
+      "title": "Section 3"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:295105]\r\n[%][%IELTS Listening Section 3]\r\nSection three is concerned with educational or training contexts. You will hear a conversation among up to four people, for example, a discussion between a tutor and a student, or several students discussing an assignment. Some typical tasks that can be found in this section are summary completion, diagram labelling, and matching. This section may test a range of skills, such as listening for specific information, main ideas and supporting points, and understanding a speaker’s opinion. The following are examples of conversations you may hear in section three:\r\n\r\n•1 A conversation between a tutor and a student about completing an entry form for an engineer competition\r\n•1 A group of students giving a presentation on an academic topic\r\n•1 A job interview\r\n•1 A discussion between a student and a tutor on how to complete a project",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "Section three is concerned with educational or training contexts. You will hear a conversation among up to four people, for example, a discussion between a tutor and a student, or several students discussing an assignment. Some typical tasks that can be found in this section are summary completion, diagram labelling, and matching. This section may test a range of skills, such as listening for specific information, main ideas and supporting points, and understanding a speaker’s opinion. The following are examples of conversations you may hear in section three:\r\n\r\n•1 A conversation between a tutor and a student about completing an entry form for an engineer competition\r\n•1 A group of students giving a presentation on an academic topic\r\n•1 A job interview\r\n•1 A discussion between a student and a tutor on how to complete a project",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295105"
+      ],
+      "lead": "IELTS Listening Section 3"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:295106]\r\nYou will hear a tutor and two students discussing a business case study. First you have some time to look at **Questions 21-30**.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You will hear a tutor and two students discussing a business case study. First you have some time to look at **Questions 21-30**.",
+      "id": [
+        "295106"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\r\n[@id:295107]\r\n[!Now Listen carefully and answer Questions 21 to 30:]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295107"
+      ],
+      "instruction": "Now Listen carefully and answer Questions 21 to 30:"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&audio]\r\n[@id:295108]\r\n[%][%Questions 21-24]\r\n[!Complete the notes below.\r\n\r\nWrite NO MORE THAN THREE WORDS for each answer.]\r\n[&audio:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_5_ielts_mc_pt03.mp3]\r\n**Box Telecom**\r\n\r\n**Problem: been affected by**\r\n- drop in [_sales]\r\n- growing [_competition]\r\n- delays due to a strike\r\n\r\n**Causes of problems:**\r\n- high [_interest rates][_rates of interest]\r\n- lack of good [_training]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**Box Telecom**\r\n\r\n**Problem: been affected by**\r\n- drop in {0}\r\n- growing {1}\r\n- delays due to a strike\r\n\r\n**Causes of problems:**\r\n- high {2}\r\n- lack of good {3}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295108"
+      ],
+      "lead": "Questions 21-24",
+      "instruction": "Complete the notes below.\r\n\r\nWrite NO MORE THAN THREE WORDS for each answer.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_5_ielts_mc_pt03.mp3"
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sales"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "competition"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "interest rates",
+            "rates of interest"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "training"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice]\r\n[@id:295109]\r\n[%][%Questions 25-27]\r\n[!Choose the correct letter, A, B, or C.]\r\n===\r\n[!25 What does Karin think the company will do?]\r\n[+look for private investors]\r\n[-accept a takeover offer]\r\n[-issue some new shares]\r\n===\r\n[!26 How does the tutor suggest the company can recover?]\r\n[-by appointing a new managing director]\r\n[+by changing the way it is organised]\r\n[-by closing some of its retail outlets]\r\n===\r\n[!27 The tutor wants Jason and Karin to produce a report which]\r\n[+offers solutions to Box Telecom's problems.]\r\n[-analyses the UK market.]\r\n[-compares different companies.]\r\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Choose the correct letter, A, B, or C.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "25 What does Karin think the company will do?",
+          "choices": [
+            {
+              "choice": "look for private investors",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "accept a takeover offer",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "issue some new shares",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "26 How does the tutor suggest the company can recover?",
+          "choices": [
+            {
+              "choice": "by appointing a new managing director",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "by changing the way it is organised",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "by closing some of its retail outlets",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "27 The tutor wants Jason and Karin to produce a report which",
+          "choices": [
+            {
+              "choice": "offers solutions to Box Telecom's problems.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "analyses the UK market.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "compares different companies.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "295109"
+      ],
+      "lead": "Questions 25-27"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\r\n[@id:295110]\r\n[%][%Questions 28-30]\r\n[!Which opinion does each person express about Box Telecom?\r\n\r\nChoose your answers from the box and write the letters A-F next to questions 28-30.]\r\n\r\nA its workers are motivated\r\nB it has too little investment\r\nC it will overcome its problems\r\nD its marketing campaign needs improvement\r\nE it is old-fashioned\r\nF it has strong managers\r\n\r\n**28** Karin [_C]\r\n\r\n**29** Jason [_B]\r\n\r\n**30** The tutor [_D]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "A its workers are motivated\r\nB it has too little investment\r\nC it will overcome its problems\r\nD its marketing campaign needs improvement\r\nE it is old-fashioned\r\nF it has strong managers\r\n\r\n**28** Karin {0}\r\n\r\n**29** Jason {1}\r\n\r\n**30** The tutor {2}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295110"
+      ],
+      "lead": "Questions 28-30",
+      "instruction": "Which opinion does each person express about Box Telecom?\r\n\r\nChoose your answers from the box and write the letters A-F next to questions 28-30.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "C"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "B"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "D"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295111]\r\n[▼ch-8]\r\n[##Section 4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295111"
+      ],
+      "anchor": "ch-8",
+      "title": "Section 4"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:295112]\r\n[%][%IELTS Listening Section 4]\r\nSection four, which is also concerned with educational and training context, will feature a monologue, for example, a lecture or talk of general, non-specialist academic interest. Some typical question types found in this section are matching, classification and multiple choice. As there is no break during this section, you must look through all the questions in the time given at the beginning. It is also especially important to listen for words signalling a change from one part of the lecture to another. The following are examples of monologues you may hear in section four:\r\n\r\n•1 A lecture on the radio about a health problem\r\n•1 A university lecture about eclipse\r\n•1 A monologue on how to breed animals\r\n•1 A lecture about Neolithic Britain",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "Section four, which is also concerned with educational and training context, will feature a monologue, for example, a lecture or talk of general, non-specialist academic interest. Some typical question types found in this section are matching, classification and multiple choice. As there is no break during this section, you must look through all the questions in the time given at the beginning. It is also especially important to listen for words signalling a change from one part of the lecture to another. The following are examples of monologues you may hear in section four:\r\n\r\n•1 A lecture on the radio about a health problem\r\n•1 A university lecture about eclipse\r\n•1 A monologue on how to breed animals\r\n•1 A lecture about Neolithic Britain",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295112"
+      ],
+      "lead": "IELTS Listening Section 4"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:295113]\r\n**Section 4**: You will hear a university librarian given a talk to new students. First you have some time to look at **Questions 31-40**.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Section 4**: You will hear a university librarian given a talk to new students. First you have some time to look at **Questions 31-40**.",
+      "id": [
+        "295113"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark--]\r\n[@id:295114]\r\n[!Now Listen carefully and answer Questions 31 to 40:]",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295114"
+      ],
+      "instruction": "Now Listen carefully and answer Questions 31 to 40:"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--&audio]\r\n[@id:295115]\r\n[%][%Questions 31-36]\r\n[!Choose the correct letter, A, B, or C.]\r\n[&audio:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_5_ielts_mc_pt04.mp3]\r\n===\r\n[!31 During the first week of term, students are invited to]\r\n[-be shown round the library by the librarian.]\r\n[+listen to descriptions of library resources.]\r\n[-do an intensive course in the computer centre.]\r\n===\r\n[!32 The speaker warns the students that]\r\n[+Internet materials can be unreliable.]\r\n[-downloaded information must be acknowledged.]\r\n[-computer access may be limited at times.]\r\n===\r\n[!33 The library is acquiring more CDs as a resource because]\r\n[+they are a cheap source of information.]\r\n[-they take up very little space.]\r\n[-they are more up to date than the reference books.]\r\n===\r\n[!34 Students are encouraged to use journals online because]\r\n[-the articles do not need to be returned to the shelves.]\r\n[-reading online is cheaper than photocopying articles.]\r\n[+the stock of printed articles is to be reduced.]\r\n===\r\n[!35 Why might some students continue to use reference books?]\r\n[+they can be taken away from the library]\r\n[-they provide information unavailable elsewhere]\r\n[-they can be borrowed for an extended loan period]\r\n===\r\n[!36 What is the responsibility of the Training Supervisor?]\r\n[-to supervise and support library staff]\r\n[+to provide orientation to the library facilities]\r\n[-to identify needs and inform section managers]\r\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Choose the correct letter, A, B, or C.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "31 During the first week of term, students are invited to",
+          "choices": [
+            {
+              "choice": "be shown round the library by the librarian.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "listen to descriptions of library resources.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "do an intensive course in the computer centre.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "32 The speaker warns the students that",
+          "choices": [
+            {
+              "choice": "Internet materials can be unreliable.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "downloaded information must be acknowledged.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "computer access may be limited at times.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "33 The library is acquiring more CDs as a resource because",
+          "choices": [
+            {
+              "choice": "they are a cheap source of information.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "they take up very little space.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "they are more up to date than the reference books.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "34 Students are encouraged to use journals online because",
+          "choices": [
+            {
+              "choice": "the articles do not need to be returned to the shelves.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "reading online is cheaper than photocopying articles.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "the stock of printed articles is to be reduced.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "35 Why might some students continue to use reference books?",
+          "choices": [
+            {
+              "choice": "they can be taken away from the library",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "they provide information unavailable elsewhere",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "they can be borrowed for an extended loan period",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "36 What is the responsibility of the Training Supervisor?",
+          "choices": [
+            {
+              "choice": "to supervise and support library staff",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "to provide orientation to the library facilities",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "to identify needs and inform section managers",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "295115"
+      ],
+      "lead": "Questions 31-36",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_5_ielts_mc_pt04.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze++]\r\n[@id:295116]\r\n[%][%Questions 37-40]\r\n[!Which section of the university will help postgraduate students with their dissertations in the following ways?\r\n\r\nWrite the correct letter, A, B or C, next to questions 37-40]\r\n\r\nA the postgraduate's own department or tutor\r\nB library staff\r\nC another section of the university\r\n\r\n**37** training in specialised computer programs [_B]\r\n\r\n**38** advising on bibliography presentation [_A]\r\n\r\n**39** checking the draft of the dissertation [_B]\r\n\r\n**40** providing language support [_C]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "A the postgraduate's own department or tutor\r\nB library staff\r\nC another section of the university\r\n\r\n**37** training in specialised computer programs {0}\r\n\r\n**38** advising on bibliography presentation {1}\r\n\r\n**39** checking the draft of the dissertation {2}\r\n\r\n**40** providing language support {3}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295116"
+      ],
+      "lead": "Questions 37-40",
+      "instruction": "Which section of the university will help postgraduate students with their dissertations in the following ways?\r\n\r\nWrite the correct letter, A, B or C, next to questions 37-40",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "B"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "A"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "B"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "C"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '++'",
+        "line": 1,
+        "column": 7,
+        "errorLine": "[.cloze++]\r"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295117]\r\n[▼ch-1-4UN]\r\n[#IELTS Reading 5]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295117"
+      ],
+      "anchor": "ch-1-4UN",
+      "title": "IELTS Reading 5"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295118]\r\n[▼ch-10]\r\n[##Passage 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295118"
+      ],
+      "anchor": "ch-10",
+      "title": "Passage 1"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:295119]\r\n==Reading paper for this section==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_1.htm|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "==Reading paper for this section==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_1.htm|",
+      "id": [
+        "295119"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\r\n[@id:295120]\r\n[%][%Questions 1-3]\r\n[!The ==Reading Passage==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_1.htm| has three paragraphs A-C.\r\n\r\nChoose the correct heading for each paragraph from the list of headings below.\r\n\r\nWrite your answers in boxes 1-3 on your answer sheet.]\r\n**List of Headings**\r\n\r\ni The expansion of international tourism in recent years\r\nii How local communities can balance their own needs with the demands of wilderness tourism\r\niii Fragile regions and the reasons for the expansion of tourism there\r\niv Traditional methods of food-supply in fragile regions\r\nv Some of the disruptive effects of wilderness tourism\r\nvi The economic benefits of mass tourism\r\n\r\n**1** Section **A** [_iii]\r\n\r\n**2** Section **B** [_v]\r\n\r\n**3** Section **C** [_ii]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "**List of Headings**\r\n\r\ni The expansion of international tourism in recent years\r\nii How local communities can balance their own needs with the demands of wilderness tourism\r\niii Fragile regions and the reasons for the expansion of tourism there\r\niv Traditional methods of food-supply in fragile regions\r\nv Some of the disruptive effects of wilderness tourism\r\nvi The economic benefits of mass tourism\r\n\r\n**1** Section **A** {0}\r\n\r\n**2** Section **B** {1}\r\n\r\n**3** Section **C** {2}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295120"
+      ],
+      "lead": "Questions 1-3",
+      "instruction": "The ==Reading Passage==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_1.htm| has three paragraphs A-C.\r\n\r\nChoose the correct heading for each paragraph from the list of headings below.\r\n\r\nWrite your answers in boxes 1-3 on your answer sheet.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "iii"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "v"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ii"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:295121]\r\n[%][%Reading Tip]\r\nTo help you determine if something is **NOT GIVEN**, look for synonyms and paraphrases. If none appear, the answer will probably be **NOT GIVEN**. But even if you do find paraphrases, be careful: it may be that the topic is mentioned but not in relation to the statement.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "To help you determine if something is **NOT GIVEN**, look for synonyms and paraphrases. If none appear, the answer will probably be **NOT GIVEN**. But even if you do find paraphrases, be careful: it may be that the topic is mentioned but not in relation to the statement.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295121"
+      ],
+      "lead": "Reading Tip"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\r\n[@id:295122]\r\n[%][%Questions 4-9]\r\n[!Do the following statements agree with the information given in the ==Reading Passage==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_1.htm|?\r\n\r\nIn boxes 4-9 on your answer sheet, write]\r\n\r\n**YES** if the statement agrees with the writer's claims\r\n**NO** if the statement contradicts the writer's claims\r\n**NOT GIVEN** if there is impossible to say what the writer thinks about this\r\n\r\n**4** The low financial cost of setting up wilderness tourism makes it attractive to many countries.  [_YES]\r\n\r\n**5** Deserts, mountains and Arctic regions are examples of environments that are both ecologically and culturally fragile.  [_YES]\r\n\r\n**6** Wilderness tourism operates throughout the year in fragile areas.  [_NO]\r\n\r\n**7** The spread of tourism in certain hill-regions has resulted in a fall in the amount of food produced locally.  [_YES]\r\n\r\n**8** Traditional food-gathering in desert societies was distributed evenly over the year.  [_NO]\r\n\r\n**9** Government handouts do more damage than tourism does to traditional patterns of food-gathering.  [_NOT GIVEN]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "**YES** if the statement agrees with the writer's claims\r\n**NO** if the statement contradicts the writer's claims\r\n**NOT GIVEN** if there is impossible to say what the writer thinks about this\r\n\r\n**4** The low financial cost of setting up wilderness tourism makes it attractive to many countries.  {0}\r\n\r\n**5** Deserts, mountains and Arctic regions are examples of environments that are both ecologically and culturally fragile.  {1}\r\n\r\n**6** Wilderness tourism operates throughout the year in fragile areas.  {2}\r\n\r\n**7** The spread of tourism in certain hill-regions has resulted in a fall in the amount of food produced locally.  {3}\r\n\r\n**8** Traditional food-gathering in desert societies was distributed evenly over the year.  {4}\r\n\r\n**9** Government handouts do more damage than tourism does to traditional patterns of food-gathering.  {5}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295122"
+      ],
+      "lead": "Questions 4-9",
+      "instruction": "Do the following statements agree with the information given in the ==Reading Passage==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_1.htm|?\r\n\r\nIn boxes 4-9 on your answer sheet, write",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "YES"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "YES"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "NO"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "YES"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "NO"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "NOT GIVEN"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\r\n[@id:295123]\r\n[%][%Questions 10-13]\r\n[!Complete the table below.\r\n\r\nChoose ONE WORD from ==Reading Passage 1==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_1.htm| for each answer.]\r\n\r\n**The positive ways in which some local communities have responded to tourism**\r\n\r\n**People/Location - Activity**\r\nSwiss Pays d'Enhaut - Revived production of [_cheese]\r\nArctic communities - Operate [_tourism][_tourist][_tour] businesses\r\nAcoma and San Ildefonso - Produce and sell [_pottery]\r\nNavajo and Hopi Activity - Produce and sell [_jewellry][_jewelry]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "**The positive ways in which some local communities have responded to tourism**\r\n\r\n**People/Location - Activity**\r\nSwiss Pays d'Enhaut - Revived production of {0}\r\nArctic communities - Operate {1} businesses\r\nAcoma and San Ildefonso - Produce and sell {2}\r\nNavajo and Hopi Activity - Produce and sell {3}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295123"
+      ],
+      "lead": "Questions 10-13",
+      "instruction": "Complete the table below.\r\n\r\nChoose ONE WORD from ==Reading Passage 1==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_1.htm| for each answer.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cheese"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "tourism",
+            "tourist",
+            "tour"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "pottery"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "jewellry",
+            "jewelry"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295124]\r\n[▼ch-12]\r\n[##Passage 2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295124"
+      ],
+      "anchor": "ch-12",
+      "title": "Passage 2"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:295160]\r\n[%][%Task information: True / False / Not given]\r\n__True / False / Not given__ tasks require you to compare information given in a series of statements with information in the text and decide if they are the same.\r\n\r\nYou have to:\r\n\r\n• read statements that are in the same order as the information in the text.\r\n• scan read the text to find the part that you need.\r\n• decide if the information in each statement agrees with the text (True), contradicts the text (False) or does not appear in the text (Not given).",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "__True / False / Not given__ tasks require you to compare information given in a series of statements with information in the text and decide if they are the same.\r\n\r\nYou have to:\r\n\r\n• read statements that are in the same order as the information in the text.\r\n• scan read the text to find the part that you need.\r\n• decide if the information in each statement agrees with the text (True), contradicts the text (False) or does not appear in the text (Not given).",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295160"
+      ],
+      "lead": "Task information: True / False / Not given"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:295126]\r\n==Reading paper for this section==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_2.htm|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "==Reading paper for this section==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_2.htm|",
+      "id": [
+        "295126"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\r\n[@id:295127]\r\n[%][%Questions 14-17]\r\n[!Look at the following people and the list of statements below.\r\n\r\nMatch each person with the correct statement.\r\n\r\nWrite the correct letter, A-H in boxes 14-17]\r\n**List of Statements**\r\nA suggests that publicity about nickel sulphide failure has been suppressed\r\nB regularly sees cases of nickel sulphide failure\r\nC closely examined all the glass in one building\r\nD was involved with the construction of Bishops Walk\r\nE recommended the rebuilding of Waterfront Place\r\nF thinks the benefits of toughened glass are exaggerated\r\nG claims that nickel sulphide failure is very unusual\r\nH refers to the most extreme case of delayed failure\r\n\r\n**14** Brian Waldron [_G]\r\n\r\n**15** Trevor Ford [_A]\r\n\r\n**16** Graham Dodd [_H]\r\n\r\n**17** John Barry [_C]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**List of Statements**\r\nA suggests that publicity about nickel sulphide failure has been suppressed\r\nB regularly sees cases of nickel sulphide failure\r\nC closely examined all the glass in one building\r\nD was involved with the construction of Bishops Walk\r\nE recommended the rebuilding of Waterfront Place\r\nF thinks the benefits of toughened glass are exaggerated\r\nG claims that nickel sulphide failure is very unusual\r\nH refers to the most extreme case of delayed failure\r\n\r\n**14** Brian Waldron {0}\r\n\r\n**15** Trevor Ford {1}\r\n\r\n**16** Graham Dodd {2}\r\n\r\n**17** John Barry {3}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295127"
+      ],
+      "lead": "Questions 14-17",
+      "instruction": "Look at the following people and the list of statements below.\r\n\r\nMatch each person with the correct statement.\r\n\r\nWrite the correct letter, A-H in boxes 14-17",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "G"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "A"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "H"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "C"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\r\n[@id:295128]\r\n[%][%Questions 18-23]\r\n[!Complete the summary below using ONE WORD ONLY from the box for each answer.\r\n\r\nWrite your answers in boxes 18-23 on your answer sheet.]\r\nnumerous detected quickly agreed warm sharp expands slowly \r\ncalculated removed contracts disputed cold moved small unexpectedly\r\n\r\n**Toughened Glass**\r\n\r\nToughened glass is favoured by architects because it is much stronger than ordinary glass, and the fragments are not as [_sharp] when it breaks. However, it has one disadvantage: it can shatter [_unexpectedly]. This fault is a result of the manufacturing process. Ordinary glass is first heated, then cooled very [_quickly]. The outer layer [_contracts] before the inner layer, and the tension between the two layers which is created because of this makes the glass stronger. However, if the glass contains nickel sulphide impurities, crystals of nickel sulphide are formed. These are unstable, and can expand suddenly, particularly if the weather is [_warm]. If this happens, the pane of glass may break. The frequency with which such problems occur is [_disputed] by glass experts. Furthermore, the crystals cannot be detected without sophisticated equipment.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "numerous detected quickly agreed warm sharp expands slowly \r\ncalculated removed contracts disputed cold moved small unexpectedly\r\n\r\n**Toughened Glass**\r\n\r\nToughened glass is favoured by architects because it is much stronger than ordinary glass, and the fragments are not as {0} when it breaks. However, it has one disadvantage: it can shatter {1}. This fault is a result of the manufacturing process. Ordinary glass is first heated, then cooled very {2}. The outer layer {3} before the inner layer, and the tension between the two layers which is created because of this makes the glass stronger. However, if the glass contains nickel sulphide impurities, crystals of nickel sulphide are formed. These are unstable, and can expand suddenly, particularly if the weather is {4}. If this happens, the pane of glass may break. The frequency with which such problems occur is {5} by glass experts. Furthermore, the crystals cannot be detected without sophisticated equipment.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295128"
+      ],
+      "lead": "Questions 18-23",
+      "instruction": "Complete the summary below using ONE WORD ONLY from the box for each answer.\r\n\r\nWrite your answers in boxes 18-23 on your answer sheet.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sharp"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "unexpectedly"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "quickly"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "contracts"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "warm"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "disputed"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\r\n[@id:295129]\r\n[%][%Questions 24-26]\r\n[!Do the following statements agree with the information given in ==Reading Passage==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_2.htm|?\r\n\r\nIn boxes 24-26 on your answer sheet write]\r\n\r\n**TRUE** if the statement agrees with the information\r\n**FALSE** if the statement contradicts the information\r\n**NOT GIVEN** if there is no information on this\r\n\r\n**24** Little doubt was expressed about the reason for the Bishops Walk accident. [_TRUE]\r\n\r\n**25** Toughened glass has the same appearance as ordinary glass. [_NOT GIVEN]\r\n\r\n**26** There is plenty of documented evidence available about the incidence of nickel sulphide failure. [_FALSE]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "**TRUE** if the statement agrees with the information\r\n**FALSE** if the statement contradicts the information\r\n**NOT GIVEN** if there is no information on this\r\n\r\n**24** Little doubt was expressed about the reason for the Bishops Walk accident. {0}\r\n\r\n**25** Toughened glass has the same appearance as ordinary glass. {1}\r\n\r\n**26** There is plenty of documented evidence available about the incidence of nickel sulphide failure. {2}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295129"
+      ],
+      "lead": "Questions 24-26",
+      "instruction": "Do the following statements agree with the information given in ==Reading Passage==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_2.htm|?\r\n\r\nIn boxes 24-26 on your answer sheet write",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "TRUE"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "NOT GIVEN"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "FALSE"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295130]\r\n[▼ch-14]\r\n[##Passage 3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295130"
+      ],
+      "anchor": "ch-14",
+      "title": "Passage 3"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:295131]\r\n[%][%IELTS tip: True / False / Not given]\r\n• Look at the title and decide who or what the text is about.\r\n• Skim read the text very quickly to get an idea of the content and structure. Don't worry about words you don't understand.\r\n• Look at the questions and underline the locating words.\r\n• Find the part of the text that is relevant to the first question. Read it in detail and decide if the answer is True, False or Not given. Remember to look out for synonyms and paraphrases.\r\n• Now do the same for the other questions.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "• Look at the title and decide who or what the text is about.\r\n• Skim read the text very quickly to get an idea of the content and structure. Don't worry about words you don't understand.\r\n• Look at the questions and underline the locating words.\r\n• Find the part of the text that is relevant to the first question. Read it in detail and decide if the answer is True, False or Not given. Remember to look out for synonyms and paraphrases.\r\n• Now do the same for the other questions.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295131"
+      ],
+      "lead": "IELTS tip: True / False / Not given"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:295132]\r\n==Reading paper for this section==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_3.htm|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "==Reading paper for this section==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_3.htm|",
+      "id": [
+        "295132"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\r\n[@id:295133]\r\n[%][%Questions 27-33]\r\n[!Do the following statements agree with the information given in ==Reading Passage==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_3.htm|?\r\n\r\nIn boxes 27-33 on your answer sheet write]\r\n\r\n**TRUE** if the statement agrees with the information\r\n**FALSE** if the statement contradicts the information\r\n**NOT GIVEN** if there is no information on this\r\n\r\n**27** There is plenty of scientific evidence to support photoperiodism. [_TRUE]\r\n\r\n**28** Some types of bird can be encouraged to breed out of season. [_TRUE]\r\n\r\n**29** Photoperiodism is restricted to certain geographic areas. [_NOT GIVEN]\r\n\r\n**30** Desert annuals are examples of long-day plants. [_FALSE]\r\n\r\n**31** Bamboos flower several times during their life cycle. [_FALSE]\r\n\r\n**32** Scientists have yet to determine the cue for Chusquea abietifolia's seasonal rhythm. [_TRUE]\r\n\r\n**33** Eastern hemlock is a fast-growing plant. [_FALSE]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "**TRUE** if the statement agrees with the information\r\n**FALSE** if the statement contradicts the information\r\n**NOT GIVEN** if there is no information on this\r\n\r\n**27** There is plenty of scientific evidence to support photoperiodism. {0}\r\n\r\n**28** Some types of bird can be encouraged to breed out of season. {1}\r\n\r\n**29** Photoperiodism is restricted to certain geographic areas. {2}\r\n\r\n**30** Desert annuals are examples of long-day plants. {3}\r\n\r\n**31** Bamboos flower several times during their life cycle. {4}\r\n\r\n**32** Scientists have yet to determine the cue for Chusquea abietifolia's seasonal rhythm. {5}\r\n\r\n**33** Eastern hemlock is a fast-growing plant. {6}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295133"
+      ],
+      "lead": "Questions 27-33",
+      "instruction": "Do the following statements agree with the information given in ==Reading Passage==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_5_Passage_3.htm|?\r\n\r\nIn boxes 27-33 on your answer sheet write",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "TRUE"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "TRUE"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "NOT GIVEN"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "FALSE"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "FALSE"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "TRUE"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "FALSE"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\r\n[@id:295134]\r\n[%][%Questions 34-40]\r\n[!Complete the sentences below.\r\n\r\nWrite NO MORE THAN THREE WORDS for each answer.]\r\n\r\n34 Day length is a useful cue for breeding in areas where [_temperatures] are unpredictable.\r\n\r\n35 Plants which do not respond to light levels are referred to as [_day-neutral][_day-neutral plants].\r\n\r\n36 Birds in temperate climates associate longer days with nesting and the availability of [_food][_food resources][_adequate food resources].\r\n\r\n37 Plants that Bower when days are long often depend on [_insects][_fertilization by insects] to help them reproduce.\r\n\r\n38 Desert annuals respond to [_rainfall][_suitable rainfall] as a signal for reproduction.\r\n\r\n39 There is no limit to the photosynthetic rate in plants such as [_sugarcane] .\r\n\r\n40 Tolerance to shade is one criterion for the [_classification] of plants in forestry and horticulture.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "34 Day length is a useful cue for breeding in areas where {0} are unpredictable.\r\n\r\n35 Plants which do not respond to light levels are referred to as {1}.\r\n\r\n36 Birds in temperate climates associate longer days with nesting and the availability of {2}.\r\n\r\n37 Plants that Bower when days are long often depend on {3} to help them reproduce.\r\n\r\n38 Desert annuals respond to {4} as a signal for reproduction.\r\n\r\n39 There is no limit to the photosynthetic rate in plants such as {5} .\r\n\r\n40 Tolerance to shade is one criterion for the {6} of plants in forestry and horticulture.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295134"
+      ],
+      "lead": "Questions 34-40",
+      "instruction": "Complete the sentences below.\r\n\r\nWrite NO MORE THAN THREE WORDS for each answer.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "temperatures"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "day-neutral",
+            "day-neutral plants"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "food",
+            "food resources",
+            "adequate food resources"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "insects",
+            "fertilization by insects"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "rainfall",
+            "suitable rainfall"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sugarcane"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "classification"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295135]\r\n[▼ch-15]\r\n[#IELTS Writing 5]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295135"
+      ],
+      "anchor": "ch-15",
+      "title": "IELTS Writing 5"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295136]\r\n[▼ch-16]\r\n[##Task 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295136"
+      ],
+      "anchor": "ch-16",
+      "title": "Task 1"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:295137]\r\n[%][%Tables]\r\n• A table can contain data like pie charts, graphs and bar charts that are not related to a specific item in the past. Follow the steps described for these charts.\r\n• The presentation of information in tables can seem overwhelming. Don't panic! There is a simple way round this. If the table gives a lot of data over a number of years, at the end of the line draw a rough graph line to indicate the trend. Do this quickly for each item in the table. This means that you won't have to look at each number every time you want to analyse a line.\r\n• Because the numbers are given for each year, don't be tempted to include each individual piece of information.\r\n• Use general trends/statements, backed up by data as in the graphs. Sometimes highlight special changes/developments.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "• A table can contain data like pie charts, graphs and bar charts that are not related to a specific item in the past. Follow the steps described for these charts.\r\n• The presentation of information in tables can seem overwhelming. Don't panic! There is a simple way round this. If the table gives a lot of data over a number of years, at the end of the line draw a rough graph line to indicate the trend. Do this quickly for each item in the table. This means that you won't have to look at each number every time you want to analyse a line.\r\n• Because the numbers are given for each year, don't be tempted to include each individual piece of information.\r\n• Use general trends/statements, backed up by data as in the graphs. Sometimes highlight special changes/developments.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295137"
+      ],
+      "lead": "Tables"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:295138]\r\nYou should spend about 20 minutes on this task.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You should spend about 20 minutes on this task.",
+      "id": [
+        "295138"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--&image]\r\n[@id:295139]\r\n[!The take below gives information about the underground railway systems in six cities.\r\n\r\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\r\n\r\nWrite at least 150 words.]\r\n[&image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_5_9.png][@width:962]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "The take below gives information about the underground railway systems in six cities.\r\n\r\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\r\n\r\nWrite at least 150 words.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295139"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_5_9.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "962",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark--]\r\n[@id:295140]\r\n[!Candidate answer]\r\nThe table shows the details regarding the underground railway systems in six cities.\r\n\r\nLondon has the oldest underground railway systems among the six cities. It was opened in the year 1863, and it is already lye years old. Paris is the second oldest, in which it was opened in the year 1900. This was then followed by the opening of the railway systems in Tokyo, Washington DC and Kyoto. Los Angeles has the newest underground railway system, and was only opened in the year 2001. In terms of the size of the railway systems, London, For certain, has the largest underground railway systems. It has 394 kilometres of route in total, which is nearly twice as large as the system in Paris. Kyoto, in contrast, has the smallest system. It only has 11 kilometres of route, which is more than 30 times less than that of London.\r\n\r\nInterestingly, Tokyo, which only has 155 kilometres of route, serves the greatest number of passengers per year, at 1927 million passengers. The system in Paris has the second greatest number of passengers, at 1191 million passengers per year. The smallest underground railway system, Kyoto, serves the smallest number of passengers per year as predicted.\r\n\r\nIn conclusion, the underground railway systems in different cities vary a lot in the site of the system, the number of passengers served per year and in the age of the system.\r\n\r\n(233 words)",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark--",
+      "body": "The table shows the details regarding the underground railway systems in six cities.\r\n\r\nLondon has the oldest underground railway systems among the six cities. It was opened in the year 1863, and it is already lye years old. Paris is the second oldest, in which it was opened in the year 1900. This was then followed by the opening of the railway systems in Tokyo, Washington DC and Kyoto. Los Angeles has the newest underground railway system, and was only opened in the year 2001. In terms of the size of the railway systems, London, For certain, has the largest underground railway systems. It has 394 kilometres of route in total, which is nearly twice as large as the system in Paris. Kyoto, in contrast, has the smallest system. It only has 11 kilometres of route, which is more than 30 times less than that of London.\r\n\r\nInterestingly, Tokyo, which only has 155 kilometres of route, serves the greatest number of passengers per year, at 1927 million passengers. The system in Paris has the second greatest number of passengers, at 1191 million passengers per year. The smallest underground railway system, Kyoto, serves the smallest number of passengers per year as predicted.\r\n\r\nIn conclusion, the underground railway systems in different cities vary a lot in the site of the system, the number of passengers served per year and in the age of the system.\r\n\r\n(233 words)",
+      "id": [
+        "295140"
+      ],
+      "instruction": "Candidate answer"
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark--]\r\n[@id:295141]\r\n[!EXAMINER’S EXPLANATION]\r\nThis is an answer written by a candidate who achieved a **Band 7** score. Here is the examiner's comment:\r\n\r\nThis answer selects and describes the information well. Key features are clearly identified, while unexpected differences are highlighted and illustrated. The answer is relevant and accurate with a clear overview.\r\n\r\nInformation is well-organised using a good range of signals and link words. These are generally accurate and appropriate, although occasional errors occur.\r\n\r\nThe writer successfully uses some less common words. There is a clear awareness of style but there are occasional inaccuracies and there is some repetition. Grammar is well-controlled and sentences are varied and generally accurate with only minor errors.",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark--",
+      "body": "This is an answer written by a candidate who achieved a **Band 7** score. Here is the examiner's comment:\r\n\r\nThis answer selects and describes the information well. Key features are clearly identified, while unexpected differences are highlighted and illustrated. The answer is relevant and accurate with a clear overview.\r\n\r\nInformation is well-organised using a good range of signals and link words. These are generally accurate and appropriate, although occasional errors occur.\r\n\r\nThe writer successfully uses some less common words. There is a clear awareness of style but there are occasional inaccuracies and there is some repetition. Grammar is well-controlled and sentences are varied and generally accurate with only minor errors.",
+      "id": [
+        "295141"
+      ],
+      "instruction": "EXAMINER’S EXPLANATION"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295142]\r\n[▼ch-18]\r\n[##Task 2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295142"
+      ],
+      "anchor": "ch-18",
+      "title": "Task 2"
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:295143]\r\n[%][%IELTS Tip]\r\nMake sure your handwriting is clear - it doesn't have to be very neat or elegant but you must be sure that a reader can make sense of it. Don't worry about crossing out and rewriting words, as long as the reader can see what you intend.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Make sure your handwriting is clear - it doesn't have to be very neat or elegant but you must be sure that a reader can make sense of it. Don't worry about crossing out and rewriting words, as long as the reader can see what you intend.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295143"
+      ],
+      "lead": "IELTS Tip"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:295144]\r\nYou should spend about 40 minutes on this task.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You should spend about 40 minutes on this task.",
+      "id": [
+        "295144"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\r\n[@id:295145]\r\n[!Write about the following topic:\r\n\r\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\r\n\r\nWrite at least 250 words.]\r\n\r\nResearch indicates that the characteristics we are born with have much more influence on our personality and development than any experiences we may have in our life.\r\n\r\nWhich do you consider to be the major influence?",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Write about the following topic:\r\n\r\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\r\n\r\nWrite at least 250 words.",
+      "partialAnswer": "",
+      "body": "Research indicates that the characteristics we are born with have much more influence on our personality and development than any experiences we may have in our life.\r\n\r\nWhich do you consider to be the major influence?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295145"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark--]\r\n[@id:295146]\r\n[!Model answer]\r\nToday the way we consider human psychology and mental development is heavily influenced by the genetic sciences. We now understand the importance of inherited characteristics more than ever before. Yet we are still unable to decide whether an individual’s personality and development are more influenced by genetic factors (nature) or by the environment (nurture).\r\n\r\nResearch, relating to identical twins, has highlighted how significant inherited characteristics can be for an individual's life. But whether these characteristics are able to develop within the personality of an individual surely depends on whether the circumstances allow such a development. It seems that the experiences we have in life are so unpredictable and so powerful, that they can boost or over-ride other influences, and there seems to be plenty of research findings to confirm this.\r\n\r\nMy own view is that there is no one major influence in a person's life. Instead, the traits we inherit from our parents and the situation and experiences that we encounter in life are constantly interacting. It is the interaction of the two that shapes a person's personality and dictates how that personality develops. If this were not true, we would be able to predict the behavior and character of a person from the moment they were born.\r\n\r\nIn conclusion, I do not think that either nature or nurture is the major influence on a person, but that both have powerful effects. How these factors interact is still unknown today and they remain largely unpredictable in a person’s life.\r\n\r\n(250 words)",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark--",
+      "body": "Today the way we consider human psychology and mental development is heavily influenced by the genetic sciences. We now understand the importance of inherited characteristics more than ever before. Yet we are still unable to decide whether an individual’s personality and development are more influenced by genetic factors (nature) or by the environment (nurture).\r\n\r\nResearch, relating to identical twins, has highlighted how significant inherited characteristics can be for an individual's life. But whether these characteristics are able to develop within the personality of an individual surely depends on whether the circumstances allow such a development. It seems that the experiences we have in life are so unpredictable and so powerful, that they can boost or over-ride other influences, and there seems to be plenty of research findings to confirm this.\r\n\r\nMy own view is that there is no one major influence in a person's life. Instead, the traits we inherit from our parents and the situation and experiences that we encounter in life are constantly interacting. It is the interaction of the two that shapes a person's personality and dictates how that personality develops. If this were not true, we would be able to predict the behavior and character of a person from the moment they were born.\r\n\r\nIn conclusion, I do not think that either nature or nurture is the major influence on a person, but that both have powerful effects. How these factors interact is still unknown today and they remain largely unpredictable in a person’s life.\r\n\r\n(250 words)",
+      "id": [
+        "295146"
+      ],
+      "instruction": "Model answer"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295147]\r\n[▼ch-19]\r\n[#IELTS Speaking 5]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295147"
+      ],
+      "anchor": "ch-19",
+      "title": "IELTS Speaking 5"
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:295148]\r\n[%][%Speaking Tip]\r\nWhen you enter the test room, remember to smile and act confidently. Like all interviews, the first impression you make is extremely important. First, the examiner will ask for details about your identity for security reasons. The test starts when the examiner says: ‘Now in this first part, I’d like to ask you some questions about yourself’.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "When you enter the test room, remember to smile and act confidently. Like all interviews, the first impression you make is extremely important. First, the examiner will ask for details about your identity for security reasons. The test starts when the examiner says: ‘Now in this first part, I’d like to ask you some questions about yourself’.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295148"
+      ],
+      "lead": "Speaking Tip"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295149]\r\n[▼ch-20]\r\n[##Part 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295149"
+      ],
+      "anchor": "ch-20",
+      "title": "Part 1"
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark++]\r\n[@id:295150]\r\n[!Answer the questions:]\r\n• Where are you from?\r\n• Are you a student, or do you have a job?\r\n• What do you study? / What is your job?\r\n• Do you enjoy your job / your studies?\r\n\r\n• How important are clothes and fashion to you? [Why/Why not?]\r\n• What kind of clothes do you dislike? [Why?]\r\n• How different are the clothes you wear now from those you wore 10 years ago?\r\n• What do you think the clothes we wear say about us?",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "• Where are you from?\r\n• Are you a student, or do you have a job?\r\n• What do you study? / What is your job?\r\n• Do you enjoy your job / your studies?\r\n\r\n• How important are clothes and fashion to you? [Why/Why not?]\r\n• What kind of clothes do you dislike? [Why?]\r\n• How different are the clothes you wear now from those you wore 10 years ago?\r\n• What do you think the clothes we wear say about us?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295150"
+      ],
+      "instruction": "Answer the questions:"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295151]\r\n[▼ch-21]\r\n[##Part 2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295151"
+      ],
+      "anchor": "ch-21",
+      "title": "Part 2"
+    }
+  },
+  {
+    "bitmark": "[.assignment++]\r\n[@id:295152]\r\n[!You will have to talk about the topic for one to two minutes.\r\nYou have one minute to think about what you’re going to say.\r\nYou can make some notes to help you if you wish.]\r\n\r\nDescribe a festival that is important in your country.\r\n\r\nYou should say:\r\n\r\n• when the festival occurs\r\n• what you did during it\r\n• what you like or dislike about it\r\n\r\nand explain why this festival is important.",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark--",
+      "body": "Describe a festival that is important in your country.\r\n\r\nYou should say:\r\n\r\n• when the festival occurs\r\n• what you did during it\r\n• what you like or dislike about it\r\n\r\nand explain why this festival is important.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295152"
+      ],
+      "instruction": "You will have to talk about the topic for one to two minutes.\r\nYou have one minute to think about what you’re going to say.\r\nYou can make some notes to help you if you wish."
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '++'",
+        "line": 1,
+        "column": 12,
+        "errorLine": "[.assignment++]\r"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:295153]\r\n[▼ch-22]\r\n[##Part 3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "295153"
+      ],
+      "anchor": "ch-22",
+      "title": "Part 3"
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark++]\r\n[@id:295154]\r\n[!Answer these questions related to the topic:]\r\n**Purpose of festivals and celebrations**\r\n• Why do you think festivals are important events in the working year?\r\n• Would you agree that the original significance of festivals is often lost today? Is it good or bad, do you think?\r\n• Do you think that new festivals will be introduced in the future? What kind?\r\n\r\n**Festivals and the media**\r\n• What role does the media play in festivals, do you think?\r\n• Do you think it's good or bad to watch festivals on TV? Why?\r\n• How may globalisation affect different festivals around the world?",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "**Purpose of festivals and celebrations**\r\n• Why do you think festivals are important events in the working year?\r\n• Would you agree that the original significance of festivals is often lost today? Is it good or bad, do you think?\r\n• Do you think that new festivals will be introduced in the future? What kind?\r\n\r\n**Festivals and the media**\r\n• What role does the media play in festivals, do you think?\r\n• Do you think it's good or bad to watch festivals on TV? Why?\r\n• How may globalisation affect different festivals around the world?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "295154"
+      ],
+      "instruction": "Answer these questions related to the topic:"
+    }
+  }
+]

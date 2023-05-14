@@ -1,0 +1,29 @@
+[.true-false:bitmark--]
+|| The [%items] are interpreted by the ANTLR parser as being at the top level  ||
+|| The [%items] are ignored by the PEG parser ||
+|| The issue is the [%items] should be chained AFTER the T/F ||
+[@id:245958]
+[%][%Selbsttest Berufspraxis F.2]
+[@labelTrue:Richtig][@labelFalse:Falsch]
+===
+[%1]
+[-Gemeinsam mit dem Klienten plant die FaGe die Durchführung und Evaluation der Pflegeinterventionen.]
+===
+[%2]
+[+Damit die Klientin mit einer Schizophrenie ihr verändertes Erleben mit der Umwelt vergleichen kann, ist es wichtig, im Umgang klar, verlässlich und verbindlich zu sein.]
+===
+[%3]
+[+Bei Menschen mit einer Borderline-Störung ist ein offener Austausch der Mitarbeitenden im Team wichtig, da oft «Spaltungsversuche» von den Klienten unternommen werden.]
+===
+[%4]
+[-Klientinnen, die in einer manischen Phase Dinge tun, die anderen peinlich sind (z.B. in der Öffentlichkeit ausziehen), wissen davon in der depressiven Ohase nichts mehr.]
+===
+[%5]
+[+Wichtige pflegerische Massnahmen bei Klienten mit bipolarer Störung sind der Schutz vor Suizidalität und das Kommunizieren mit Ich-Botschaften.]
+===
+[%6]
+[-Ist man gerade anwesend, während die Klientin eine Panikattacke erlebt, ist es wichtig, Ruhe zu bewahren und Hilfe zu holen.]
+===
+[%7]
+[+Unter Skills versteht man Fähigkeiten und Bewältigungsstrategien, um aufkommende negative Gefühle zu regulieren und Spannungen abzubauen.]
+===

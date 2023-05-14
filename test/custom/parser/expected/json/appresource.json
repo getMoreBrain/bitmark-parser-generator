@@ -1,0 +1,16 @@
+[
+  {
+    "bitmark": "[.essay]\n[&app:https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l=en]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    }
+  }
+]

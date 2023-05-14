@@ -1,0 +1,674 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:299056]\n[@externalId:e-david-geisser-und-tristan-bran_iebdnllribjo]\n[@language:de]\n[@publisher:david_geisser]\n[@theme:kochbuch]\n[@coverImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/cover_dg_kochen.png]\n[#David Geisser und Tristan Brandt kochen]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299056"
+      ],
+      "externalId": [
+        "e-david-geisser-und-tristan-bran_iebdnllribjo"
+      ],
+      "language": [
+        "de"
+      ],
+      "publisher": [
+        "david_geisser"
+      ],
+      "theme": [
+        "kochbuch"
+      ],
+      "coverImage": [
+        "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/cover_dg_kochen.png"
+      ],
+      "title": "David Geisser und Tristan Brandt kochen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299057]\n[▼ch-1]\n[#Exposé\nDas neue Kochbuch von David Geisser und Tristan Brandt]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299057"
+      ],
+      "anchor": "ch-1",
+      "title": "Exposé\nDas neue Kochbuch von David Geisser und Tristan Brandt"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:299058]\n[%][%Um was geht es im neuen Kochbuch?]\nDas neue Kochbuch stellt zwei unterschiedliche Kochgrössen vor. Tristan Brandt als Sternekoch der gehobenen Gastronomie und David Geisser als bekannter Fernseh- und Eventkoch. In ihrem gemeinsamen Kochbuch greifen beide, je eigens die hohe Kunst der Gourmet-Küche auf und kreieren individuelle Gerichte, welchen drei gemeinsame Zutaten zu Grunde liegen. Fazit: gleiche Zutaten – verschiedene Ergebnisse. Daraus entstand ein Kochbuch mit 80 Gerichten, welche wiederum in mehrere Rezepte unterteilt sind. Das Kochbuch überzeugt dadurch, dass dem Leser bewusst wird, wie vielfältig und spannend dieselben Komponenten verarbeitet werden und welche kreativen Ergebnisse daraus entstehen können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Das neue Kochbuch stellt zwei unterschiedliche Kochgrössen vor. Tristan Brandt als Sternekoch der gehobenen Gastronomie und David Geisser als bekannter Fernseh- und Eventkoch. In ihrem gemeinsamen Kochbuch greifen beide, je eigens die hohe Kunst der Gourmet-Küche auf und kreieren individuelle Gerichte, welchen drei gemeinsame Zutaten zu Grunde liegen. Fazit: gleiche Zutaten – verschiedene Ergebnisse. Daraus entstand ein Kochbuch mit 80 Gerichten, welche wiederum in mehrere Rezepte unterteilt sind. Das Kochbuch überzeugt dadurch, dass dem Leser bewusst wird, wie vielfältig und spannend dieselben Komponenten verarbeitet werden und welche kreativen Ergebnisse daraus entstehen können.",
+      "id": [
+        "299058"
+      ],
+      "lead": "Um was geht es im neuen Kochbuch?"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299059]\n[▼ch-2]\n[##David im Interview]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299059"
+      ],
+      "anchor": "ch-2",
+      "title": "David im Interview"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299060]\n__Welchen Bezug haben Sie zur Welt am Herd?__\n\nMit achtzehn Jahren habe ich im Rahmen meiner schulischen Abschlussarbeit mein erstes Kochbuch veröffentlicht. Seitdem bin ich als Schweizer Spitzen- und Fernsehkoch mit einem eigenem Kochstudio und vielen spannenden Projekten im In- und Ausland unterwegs. Mittlerweile befindet sich schon das siebte Kochbuch auf dem internationalen Buchmarkt. Eine Übersicht über einen Teil meiner Kochbücher finden Sie ==hier==|link:https://davidgeisser.ch/de/ueber-mich/buecher.html|.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "__Welchen Bezug haben Sie zur Welt am Herd?__\n\nMit achtzehn Jahren habe ich im Rahmen meiner schulischen Abschlussarbeit mein erstes Kochbuch veröffentlicht. Seitdem bin ich als Schweizer Spitzen- und Fernsehkoch mit einem eigenem Kochstudio und vielen spannenden Projekten im In- und Ausland unterwegs. Mittlerweile befindet sich schon das siebte Kochbuch auf dem internationalen Buchmarkt. Eine Übersicht über einen Teil meiner Kochbücher finden Sie ==hier==|link:https://davidgeisser.ch/de/ueber-mich/buecher.html|.",
+      "id": [
+        "299060"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:299061]\n__Was macht das neue Kochbuch spannend?__\n\nWie schon oben erwähnt, habe ich bereits sieben Kochbücher veröffentlicht. Mit dem neuen Werk ist jedoch das erste Kochbuch entstanden, das ich zusammen mit einem anderen Koch geschaffen habe und dadurch gleich zwei verschiedene Kochstile in einem Buch vereine. Dadurch eröffnen sich dem Leser verschiedene Perspektiven. Es zeigt die enorme Vielfalt an Kreativität in unseren Küchen auf.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Was macht das neue Kochbuch spannend?__\n\nWie schon oben erwähnt, habe ich bereits sieben Kochbücher veröffentlicht. Mit dem neuen Werk ist jedoch das erste Kochbuch entstanden, das ich zusammen mit einem anderen Koch geschaffen habe und dadurch gleich zwei verschiedene Kochstile in einem Buch vereine. Dadurch eröffnen sich dem Leser verschiedene Perspektiven. Es zeigt die enorme Vielfalt an Kreativität in unseren Küchen auf.",
+      "id": [
+        "299061"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:299062]\n__Welchen Umfang hat das Buch?__\n\nAnzahl Wörter: ca. 30'000\nAnzahl Seiten: ca. 200",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Welchen Umfang hat das Buch?__\n\nAnzahl Wörter: ca. 30'000\nAnzahl Seiten: ca. 200",
+      "id": [
+        "299062"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:299063]\n__Wen sprechen Sie mit dem neuen Buch an?__\n\nDurch die unterschiedlichen Blickwinkel des neuen Buches sollen zum einen Personen angesprochen werden, welche die anspruchsvolle «Haute Cuisine» mögen. Zum anderen gehören aber auch Personen zur Zielgruppe, die ihre Küche mit wenig Aufwand betreiben, aber dennoch auf der Suche sind nach Rezepten, die sie einfach und schnell nachkochen können. Im Grunde genommen sind all diejenigen angesprochen, die mit Freude kochen und Lust haben zu experimentieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Wen sprechen Sie mit dem neuen Buch an?__\n\nDurch die unterschiedlichen Blickwinkel des neuen Buches sollen zum einen Personen angesprochen werden, welche die anspruchsvolle «Haute Cuisine» mögen. Zum anderen gehören aber auch Personen zur Zielgruppe, die ihre Küche mit wenig Aufwand betreiben, aber dennoch auf der Suche sind nach Rezepten, die sie einfach und schnell nachkochen können. Im Grunde genommen sind all diejenigen angesprochen, die mit Freude kochen und Lust haben zu experimentieren.",
+      "id": [
+        "299063"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:299064]\n__Welchen Nutzen vermittelt das neue Kochbuch?__\n\nMit dem neuen Werk ist nicht einfach ein neues, traditionelles Kochbuch entstanden, welches die Leserinnen und Leser mit irgendwelchen Rezepten und Ideen verwöhnen soll. Vielmehr ist es das Ziel, den Leserinnen und Lesern eine kunstvolle Sammlung von Gerichten zu präsentieren, die sowohl in Form der Gourmetküche wie auch durch einfache Gerichte unseren Küchenalltag bereichern können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Welchen Nutzen vermittelt das neue Kochbuch?__\n\nMit dem neuen Werk ist nicht einfach ein neues, traditionelles Kochbuch entstanden, welches die Leserinnen und Leser mit irgendwelchen Rezepten und Ideen verwöhnen soll. Vielmehr ist es das Ziel, den Leserinnen und Lesern eine kunstvolle Sammlung von Gerichten zu präsentieren, die sowohl in Form der Gourmetküche wie auch durch einfache Gerichte unseren Küchenalltag bereichern können.",
+      "id": [
+        "299064"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:299065]\n__Ihr Tipp für unsere kreativen Geister am Herd?__\n\nUnabhängig von Wissen und Fähigkeiten können alle Rezepte leicht nachgekocht werden. Dieses Prinzip zieht sich übrigens wie ein roter Faden durch all meine Kochbücher. Dadurch eröffnen die Rezepte allen die Möglichkeit, mit etwas mehr Aufwand auf das nächsthöhere Kochniveau zu gelangen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__Ihr Tipp für unsere kreativen Geister am Herd?__\n\nUnabhängig von Wissen und Fähigkeiten können alle Rezepte leicht nachgekocht werden. Dieses Prinzip zieht sich übrigens wie ein roter Faden durch all meine Kochbücher. Dadurch eröffnen die Rezepte allen die Möglichkeit, mit etwas mehr Aufwand auf das nächsthöhere Kochniveau zu gelangen.",
+      "id": [
+        "299065"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299066]\n__Wer ist verantwortlich für die stilvollen Bilder?__\n\nRoy Matter (https://www.roymatter.ch/)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "__Wer ist verantwortlich für die stilvollen Bilder?__\n\nRoy Matter (https://www.roymatter.ch/)",
+      "id": [
+        "299066"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299067]\n[▼ch-3]\n[##Und wer sind nun die beiden Köche?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299067"
+      ],
+      "anchor": "ch-3",
+      "title": "Und wer sind nun die beiden Köche?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:299068]\n[&image:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/kochbuch_1.png][@width:400]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299068"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/kochbuch_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "400",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299069]\n==David Geisser==|link:https://davidgeisser.ch/de/ueber-mich/|\n\nDavid Geisser hat mit achtzehn Jahren im Rahmen seiner schulischen Abschlussarbeit sein erstes Kochbuch «Mit 80 Tellern um die Welt» veröffentlicht und damit nationalen Erfolg erlangt. Während seiner Zeit bei der Päpstlichen Schweizergarde in Rom hat er das Kochbuch «Buon Appetito» veröffentlicht, welches unter anderem Lieblingsgerichte der während dieser Zeit amtierenden Päpste beinhaltet. 2018 hat David mit der Eröffnung seines eigenen Kochstudios in Wermatswil bei Uster seinen Traum verwirklicht. Seit 2019 betreibt der Koch beim Fernsehsender TVO zudem seine eigene Kochsendung «Choche & gnüsse mit David Geisser». 2020 durfte David den German Influencer Award, die grösste Auszeichnung für digitale Creators im deutschsprachigen Raum, entgegennehmen und war dadurch Influencer of the Year 2020. 2021 erhielt David einen weiteren Award: «Best Entertaining Cookbook 2021» welchen er für sein Kochbuch «The Vatican Christmas Cookbook» von den Gourmand World Cookbook Awards erhalten hat. Mit der Auszeichnung zählt dieses Kochbuch zu den weltbesten Kochbüchern. Die Award-Serie ging auch im 2022 mit dem Swiss Influencer Award in der Kategorie Food noch weiter.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "==David Geisser==|link:https://davidgeisser.ch/de/ueber-mich/|\n\nDavid Geisser hat mit achtzehn Jahren im Rahmen seiner schulischen Abschlussarbeit sein erstes Kochbuch «Mit 80 Tellern um die Welt» veröffentlicht und damit nationalen Erfolg erlangt. Während seiner Zeit bei der Päpstlichen Schweizergarde in Rom hat er das Kochbuch «Buon Appetito» veröffentlicht, welches unter anderem Lieblingsgerichte der während dieser Zeit amtierenden Päpste beinhaltet. 2018 hat David mit der Eröffnung seines eigenen Kochstudios in Wermatswil bei Uster seinen Traum verwirklicht. Seit 2019 betreibt der Koch beim Fernsehsender TVO zudem seine eigene Kochsendung «Choche & gnüsse mit David Geisser». 2020 durfte David den German Influencer Award, die grösste Auszeichnung für digitale Creators im deutschsprachigen Raum, entgegennehmen und war dadurch Influencer of the Year 2020. 2021 erhielt David einen weiteren Award: «Best Entertaining Cookbook 2021» welchen er für sein Kochbuch «The Vatican Christmas Cookbook» von den Gourmand World Cookbook Awards erhalten hat. Mit der Auszeichnung zählt dieses Kochbuch zu den weltbesten Kochbüchern. Die Award-Serie ging auch im 2022 mit dem Swiss Influencer Award in der Kategorie Food noch weiter.",
+      "id": [
+        "299069"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:299070]\n[&image:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/kochbuch_2.png][@width:400]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299070"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/kochbuch_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "400",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299071]\n==Tristan Brandt==|link:https://www.tristan-brandt.de/|\nTristan Brandt ist ehemaliger jüngster Zwei-Sterne-Koch in Deutschland. Bereits nach seiner Ausbildung fand er den Weg in die Sterneküche und ist seit daher in dieser Kategorie geblieben. Nach acht Jahren in der Drei-Sterne-Gastronomie, unter anderem auch im Ausland, erhielt Tristan die Chance, ein Restaurant der Zukunft zu gestalten und eröffnete das «OPUS V». Nur ein Jahr nach der Eröffnung erhielt er mit diesem bereits den ersten Michelin Stern und 16 Punkte im Gault Millaut. Zwei Jahre später folgte dann der zweite Michelin Stern und 18 Punkte im Gault Millaut. Dieses Restaurant blieb aber nicht das Einzige. Von 2020 bis Ende 2022 war Tristan Brandt Geschäftsführer des Restaurants 959 und Pino’s Bar in Heidelberg. Parallel fungiert er als Patron und Namensgeber für das «epoca» (2020, Gourmetrestaurant des Fünf-Sterne Superior Hotels Waldhaus in Flims), welches seit Oktober 2022 mit einem Michelin Stern dekoriert ist, für das «Riva» (2022, Gourmet-Restaurant in Pforzheim) und für das Tambourine Room (2022, Gourmet-Restaurant in Miami Beach, Florida).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "==Tristan Brandt==|link:https://www.tristan-brandt.de/|\nTristan Brandt ist ehemaliger jüngster Zwei-Sterne-Koch in Deutschland. Bereits nach seiner Ausbildung fand er den Weg in die Sterneküche und ist seit daher in dieser Kategorie geblieben. Nach acht Jahren in der Drei-Sterne-Gastronomie, unter anderem auch im Ausland, erhielt Tristan die Chance, ein Restaurant der Zukunft zu gestalten und eröffnete das «OPUS V». Nur ein Jahr nach der Eröffnung erhielt er mit diesem bereits den ersten Michelin Stern und 16 Punkte im Gault Millaut. Zwei Jahre später folgte dann der zweite Michelin Stern und 18 Punkte im Gault Millaut. Dieses Restaurant blieb aber nicht das Einzige. Von 2020 bis Ende 2022 war Tristan Brandt Geschäftsführer des Restaurants 959 und Pino’s Bar in Heidelberg. Parallel fungiert er als Patron und Namensgeber für das «epoca» (2020, Gourmetrestaurant des Fünf-Sterne Superior Hotels Waldhaus in Flims), welches seit Oktober 2022 mit einem Michelin Stern dekoriert ist, für das «Riva» (2022, Gourmet-Restaurant in Pforzheim) und für das Tambourine Room (2022, Gourmet-Restaurant in Miami Beach, Florida).",
+      "id": [
+        "299071"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:300309]\n[▼ch-1-noJ]\n[#Rezepte]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "300309"
+      ],
+      "anchor": "ch-1-noJ",
+      "title": "Rezepte"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299072]\n[▼ch-4]\n[##Burrata mit sautierten Artischockenböden, Rucolapesto und frischem Rucola]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299072"
+      ],
+      "anchor": "ch-4",
+      "title": "Burrata mit sautierten Artischockenböden, Rucolapesto und frischem Rucola"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299073]\n[▼ch-5]\n[###Rucolapesto]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299073"
+      ],
+      "anchor": "ch-5",
+      "title": "Rucolapesto"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299074]\n• 1 Stk Knoblauchzehen\n• 1 Prise Salz\n• 180 ml Olivenöl, kalt gepresst\n• 50 g Parmesan, frisch\n• 1 Pfeffer aus der Mühle\n• 40 g Pinienkerne\n• 1 Zitrone\n• 150 g Rucola",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• 1 Stk Knoblauchzehen\n• 1 Prise Salz\n• 180 ml Olivenöl, kalt gepresst\n• 50 g Parmesan, frisch\n• 1 Pfeffer aus der Mühle\n• 40 g Pinienkerne\n• 1 Zitrone\n• 150 g Rucola",
+      "id": [
+        "299074"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:299075]\nParmesan reiben. Pinienkerne in einer Pfanne ohne Fett anrösten bis sie leicht braun sind und duften. Knoblauch in einen Mixer pressen, Zitronenschale ebenfalls in das Mixergefäss reiben und Saft dazugeben. Parmesan, Salz, Olivenöl, Rucola und Pfeffer beigeben und nur kurz anmixen (bei zu langem Mixen wird es eine homogene Kräutersauce – dies gilt es zu vermeiden). Geröstete Pinienkerne beigeben und noch einmal ganz kurz anmixen, sodass die Masse noch eine schöne Textur hat und nicht komplett glatt ist.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Parmesan reiben. Pinienkerne in einer Pfanne ohne Fett anrösten bis sie leicht braun sind und duften. Knoblauch in einen Mixer pressen, Zitronenschale ebenfalls in das Mixergefäss reiben und Saft dazugeben. Parmesan, Salz, Olivenöl, Rucola und Pfeffer beigeben und nur kurz anmixen (bei zu langem Mixen wird es eine homogene Kräutersauce – dies gilt es zu vermeiden). Geröstete Pinienkerne beigeben und noch einmal ganz kurz anmixen, sodass die Masse noch eine schöne Textur hat und nicht komplett glatt ist.",
+      "id": [
+        "299075"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299076]\n[▼ch-6]\n[###Artischockenragout]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299076"
+      ],
+      "anchor": "ch-6",
+      "title": "Artischockenragout"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299077]\n• 4 grosse Artischocken (oder 400 g Artischockenböden)\n• 3 Zitronen (2 für das Zitronenwasser, 1 für das Rezept)\n• 1 Schalotte\n• 1 Knoblauchzehe\n• 3 El Olivenöl\n• 50 ml Weisswein, trocken\n• 50 ml Geflügelfond\n• Salz\n• 10 g Pinienkerne\n• 40 g getrocknete Tomaten",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• 4 grosse Artischocken (oder 400 g Artischockenböden)\n• 3 Zitronen (2 für das Zitronenwasser, 1 für das Rezept)\n• 1 Schalotte\n• 1 Knoblauchzehe\n• 3 El Olivenöl\n• 50 ml Weisswein, trocken\n• 50 ml Geflügelfond\n• Salz\n• 10 g Pinienkerne\n• 40 g getrocknete Tomaten",
+      "id": [
+        "299077"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:299078]\nEtwas Wasser in ein Gefäss geben und Saft von 2 Zitronen beigeben (die ausgedrückten Zitronen kann man ebenfalls dazugeben). Artischocken bis zum Artischockenboden rüsten, diese jeweils achteln und ins Zitronenwasser geben. Artischocken nun 2 Minuten in Salzwasser blanchieren, anschliessend abschütten und mit kaltem Wasser abspülen. Schalotten und Knoblauch schälen und fein hacken. Pinienkerne grob hacken. Olivenöl in einer Sauteuse oder Bratpfanne erhitzen und Schalotten und Knoblauch andünsten. Artischockenböden beigeben und mitdünsten. Getrocknete Tomaten beigeben, würzen und mit Weisswein und Geflügelfond ablöschen. Zugedeckt weichdünsten (sollte noch bissfest im Kern sein). Pinienkerne beigeben und abschmecken. Kalt oder warm\nservieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Etwas Wasser in ein Gefäss geben und Saft von 2 Zitronen beigeben (die ausgedrückten Zitronen kann man ebenfalls dazugeben). Artischocken bis zum Artischockenboden rüsten, diese jeweils achteln und ins Zitronenwasser geben. Artischocken nun 2 Minuten in Salzwasser blanchieren, anschliessend abschütten und mit kaltem Wasser abspülen. Schalotten und Knoblauch schälen und fein hacken. Pinienkerne grob hacken. Olivenöl in einer Sauteuse oder Bratpfanne erhitzen und Schalotten und Knoblauch andünsten. Artischockenböden beigeben und mitdünsten. Getrocknete Tomaten beigeben, würzen und mit Weisswein und Geflügelfond ablöschen. Zugedeckt weichdünsten (sollte noch bissfest im Kern sein). Pinienkerne beigeben und abschmecken. Kalt oder warm\nservieren.",
+      "id": [
+        "299078"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299079]\n[▼ch-7]\n[###Fertigstellung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299079"
+      ],
+      "anchor": "ch-7",
+      "title": "Fertigstellung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299080]\n• 4 Burrate\n• 200 g Rucola\n• Kaltgepresstes Olivenöl zum marinieren\n• Etwas Aceto Balsamico\n• Salz\n• Pfeffer aus der Mühle",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• 4 Burrate\n• 200 g Rucola\n• Kaltgepresstes Olivenöl zum marinieren\n• Etwas Aceto Balsamico\n• Salz\n• Pfeffer aus der Mühle",
+      "id": [
+        "299080"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:299081]\nRucola mit Olivenöl, Aceto Balsamico, wenig Salz und Pfeffer marinieren und mittig auf 4 Tellern aufteilen. Jeweils ein Burrata pro Teller mittig anrichten. Ausgekühlte Artischockenböden rundum auf dem Rucola aufteilen, mit Rucolapesto verfeinern und servieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Rucola mit Olivenöl, Aceto Balsamico, wenig Salz und Pfeffer marinieren und mittig auf 4 Tellern aufteilen. Jeweils ein Burrata pro Teller mittig anrichten. Ausgekühlte Artischockenböden rundum auf dem Rucola aufteilen, mit Rucolapesto verfeinern und servieren.",
+      "id": [
+        "299081"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299082]\n[▼ch-8]\n[##Flanksteak vom Holzkohlegrill mit Kräuterpesto, marinierte Cherrytomaten und Rucolasalat]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299082"
+      ],
+      "anchor": "ch-8",
+      "title": "Flanksteak vom Holzkohlegrill mit Kräuterpesto, marinierte Cherrytomaten und Rucolasalat"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299083]\n[▼ch-9]\n[###Kräutersauce]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299083"
+      ],
+      "anchor": "ch-9",
+      "title": "Kräutersauce"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299084]\n• 1 Knoblauchzehe\n• 1 Schalotte\n• ½ Bund Estragon\n• ½ Bund Petersilie, glatt\n• ½ Bund Basilikum\n• 1 Zitrone\n• 50 ml Olivenöl\n• 30 ml Sherryessig\n• 800 g Flanksteak\n• Salz\n• Fleur de Sel\n• Pfeffer aus der Mühle\n• 200 g Rucola\n• 100 g Cherrytomaten\n• 50 g getrocknete Tomaten, eingelegt\n• 60 g Parmesan",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• 1 Knoblauchzehe\n• 1 Schalotte\n• ½ Bund Estragon\n• ½ Bund Petersilie, glatt\n• ½ Bund Basilikum\n• 1 Zitrone\n• 50 ml Olivenöl\n• 30 ml Sherryessig\n• 800 g Flanksteak\n• Salz\n• Fleur de Sel\n• Pfeffer aus der Mühle\n• 200 g Rucola\n• 100 g Cherrytomaten\n• 50 g getrocknete Tomaten, eingelegt\n• 60 g Parmesan",
+      "id": [
+        "299084"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:299085]\nFlanksteak 1h vor der Zubereitung aus dem Kühlschrank nehmen.\nSchalotte und Knoblauch schälen und fein hacken. Kräuter vom Stiel zupfen und ebenfalls fein hacken und zu den Zwiebeln geben. Zitronenschale in die Kräuter-Zwiebelmasse reiben und anschliessend Saft ausdrücken. Olivenöl und Essig beigeben, abschmecken und gut umrühren.\nCherrytomaten halbieren und getrocknete Tomaten in Streifen schneiden. Beide Tomaten vermischen und mit etwas Olivenöl, Salz und Pfeffer verfeinern.\nHolzkohlegrill einheizen (220°C). Fleisch würzen und pro Seite auf dem heissen Grill ca. 1-2 Minuten braten, sodass eine Kruste entsteht, der Kern aber Medium Rare – Medium bleibt.\nFleisch vom Grill nehmen und in eine Alufolie einwickeln und 5 Minuten an einer warmen, aber nicht heissen Stelle des Grills ruhen lassen. Aufschneiden und mit Fleur de Sel würzen. Rucola ebenfalls mit etwas Oliven, Salz und Pfeffer marinieren. Kräutersauce auf die Flanksteakscheiben verteilen, marinierte Tomaten darüber geben und mit dem Rucola bedecken. Parmesanspähne darüber hobeln (mit einem Sparschäler oder einem Hobel) und servieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Flanksteak 1h vor der Zubereitung aus dem Kühlschrank nehmen.\nSchalotte und Knoblauch schälen und fein hacken. Kräuter vom Stiel zupfen und ebenfalls fein hacken und zu den Zwiebeln geben. Zitronenschale in die Kräuter-Zwiebelmasse reiben und anschliessend Saft ausdrücken. Olivenöl und Essig beigeben, abschmecken und gut umrühren.\nCherrytomaten halbieren und getrocknete Tomaten in Streifen schneiden. Beide Tomaten vermischen und mit etwas Olivenöl, Salz und Pfeffer verfeinern.\nHolzkohlegrill einheizen (220°C). Fleisch würzen und pro Seite auf dem heissen Grill ca. 1-2 Minuten braten, sodass eine Kruste entsteht, der Kern aber Medium Rare – Medium bleibt.\nFleisch vom Grill nehmen und in eine Alufolie einwickeln und 5 Minuten an einer warmen, aber nicht heissen Stelle des Grills ruhen lassen. Aufschneiden und mit Fleur de Sel würzen. Rucola ebenfalls mit etwas Oliven, Salz und Pfeffer marinieren. Kräutersauce auf die Flanksteakscheiben verteilen, marinierte Tomaten darüber geben und mit dem Rucola bedecken. Parmesanspähne darüber hobeln (mit einem Sparschäler oder einem Hobel) und servieren.",
+      "id": [
+        "299085"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299086]\n[▼ch-10]\n[##Kalbsrücken mit Sauce Béarnaise und glasierten weissen Spargeln]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299086"
+      ],
+      "anchor": "ch-10",
+      "title": "Kalbsrücken mit Sauce Béarnaise und glasierten weissen Spargeln"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299087]\n[▼ch-11]\n[###Kalbsrücken]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299087"
+      ],
+      "anchor": "ch-11",
+      "title": "Kalbsrücken"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299088]\n• 800 g Kalbsrücken (Mittelstück), pariert\n• Fleur de Sel\n• Salz\n• Pfeffer aus der Mühle",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• 800 g Kalbsrücken (Mittelstück), pariert\n• Fleur de Sel\n• Salz\n• Pfeffer aus der Mühle",
+      "id": [
+        "299088"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:299089]\nKalbsrücken vakuumieren und 2h bei 56°C im Wasserbad oder im Steamer bei Dampf sous-viden. Kalbsrücken aus dem Beutel nehmen, mit Salz und Pfeffer würzen und bei starker Hitze auf allen Seiten scharf anbraten. Mit einem scharfen Messer aufschneiden und mit Fleur de Sel würzen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Kalbsrücken vakuumieren und 2h bei 56°C im Wasserbad oder im Steamer bei Dampf sous-viden. Kalbsrücken aus dem Beutel nehmen, mit Salz und Pfeffer würzen und bei starker Hitze auf allen Seiten scharf anbraten. Mit einem scharfen Messer aufschneiden und mit Fleur de Sel würzen.",
+      "id": [
+        "299089"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:299090]\nTipp: Falls sie kein Vakuumiergerät haben übernimmt dies auch der Metzger. Falls sie keine Möglichkeit haben, zu sous-viden, kann man den Kalbrücken auch mit etwas Butter darauf niedergaren (je nach Dicke ca. 1h 15min bei 80°C – benutzen Sie hierbei ein Bratenthermometer, um auf die präzise Kerntemperatur zu gelangen).",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Tipp: Falls sie kein Vakuumiergerät haben übernimmt dies auch der Metzger. Falls sie keine Möglichkeit haben, zu sous-viden, kann man den Kalbrücken auch mit etwas Butter darauf niedergaren (je nach Dicke ca. 1h 15min bei 80°C – benutzen Sie hierbei ein Bratenthermometer, um auf die präzise Kerntemperatur zu gelangen).",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299090"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299091]\n[▼ch-12]\n[###Sauce Béarnaise]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299091"
+      ],
+      "anchor": "ch-12",
+      "title": "Sauce Béarnaise"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299092]\n• 40 g Wasser\n• 40 g Weissweinessig oder Estragonessig\n• 40 g Weisswein\n• 1 Stk Schalotten\n• ½ TL Pfefferkörner, zerdrückt\n• 7 g Estragon\n• 80 g Eigelb\n• 370 g Butter, geschmolzen, lauwarm (nicht zu heiss!)\n• 1 Stk Zitrone\n• Worcestershire Sauce\n• Salz\n• Pfeffer aus der Mühle",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• 40 g Wasser\n• 40 g Weissweinessig oder Estragonessig\n• 40 g Weisswein\n• 1 Stk Schalotten\n• ½ TL Pfefferkörner, zerdrückt\n• 7 g Estragon\n• 80 g Eigelb\n• 370 g Butter, geschmolzen, lauwarm (nicht zu heiss!)\n• 1 Stk Zitrone\n• Worcestershire Sauce\n• Salz\n• Pfeffer aus der Mühle",
+      "id": [
+        "299092"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:299093]\nSchalotten hacken. Alle Zutaten bis und mit Pfefferkörnern in einer Pfanne vermengen und 1/3 des Estragons beigeben. Auf ca. 2 EL reduzieren und in eine Chromstahlschüssel passieren. Eigelb beigeben und auf einem ca. 90°C heissen Wasserbad zu einer cremigen Masse schlagen. Butter in dünnem Faden langsam Stück für Stück beigeben bis die Sauce eine sämige Konsistenz aufweist. Sollte die Sauce zu dick sein, kann man die Konsistenz mit einem Esslöffel Wasser ergänzen. Den übrigen fein gehackten Estragon beigeben und mit Worcestershire Sauce, Zitronensaft und -abrieb, Salz und Pfeffer abschmecken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Schalotten hacken. Alle Zutaten bis und mit Pfefferkörnern in einer Pfanne vermengen und 1/3 des Estragons beigeben. Auf ca. 2 EL reduzieren und in eine Chromstahlschüssel passieren. Eigelb beigeben und auf einem ca. 90°C heissen Wasserbad zu einer cremigen Masse schlagen. Butter in dünnem Faden langsam Stück für Stück beigeben bis die Sauce eine sämige Konsistenz aufweist. Sollte die Sauce zu dick sein, kann man die Konsistenz mit einem Esslöffel Wasser ergänzen. Den übrigen fein gehackten Estragon beigeben und mit Worcestershire Sauce, Zitronensaft und -abrieb, Salz und Pfeffer abschmecken.",
+      "id": [
+        "299093"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299094]\n[▼ch-13]\n[###Glasierte weisse Spargeln]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299094"
+      ],
+      "anchor": "ch-13",
+      "title": "Glasierte weisse Spargeln"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299095]\n• 600 g Weisser Spargel\n• 30 g Butter\n• 1 Stk Zitrone\n• 100 ml Gemüsebrühe oder Wasser\n• Salz\n• Pfeffer aus der Mühle\n\nSpargeln bis zum Kopf schälen. Butter auf mittlerer Hitze schmelzen und Spargel darin andünsten. Salzen, Zitronenzesten darüber raffeln und Saft einer halben Zitrone beigeben. Gemüsebrühe beigeben und köcheln, bis eine schöne Glasage entsteht (eine Glasage entsteht wenn Butter und Flüssigkeit im richtig Verhältnis aufgekocht wird und zu einer homogenen Masse emulgiert. Dies ist die Grundlage der Garmethode «glasieren»). Ist die Glasage perfekt, doch die Spargel noch etwas zu bissfest, so gibt man einfach nochmal etwas Flüssigkeit bei und kocht sie wieder zur perfekten Glasage ein. Dies verlängert den Garprozess und man kann die Spargeln individuell nach den persönlichen Präferenzen zur Perfektion kochen. Mit Zucker, Salz und Pfeffer abschmecken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• 600 g Weisser Spargel\n• 30 g Butter\n• 1 Stk Zitrone\n• 100 ml Gemüsebrühe oder Wasser\n• Salz\n• Pfeffer aus der Mühle\n\nSpargeln bis zum Kopf schälen. Butter auf mittlerer Hitze schmelzen und Spargel darin andünsten. Salzen, Zitronenzesten darüber raffeln und Saft einer halben Zitrone beigeben. Gemüsebrühe beigeben und köcheln, bis eine schöne Glasage entsteht (eine Glasage entsteht wenn Butter und Flüssigkeit im richtig Verhältnis aufgekocht wird und zu einer homogenen Masse emulgiert. Dies ist die Grundlage der Garmethode «glasieren»). Ist die Glasage perfekt, doch die Spargel noch etwas zu bissfest, so gibt man einfach nochmal etwas Flüssigkeit bei und kocht sie wieder zur perfekten Glasage ein. Dies verlängert den Garprozess und man kann die Spargeln individuell nach den persönlichen Präferenzen zur Perfektion kochen. Mit Zucker, Salz und Pfeffer abschmecken.",
+      "id": [
+        "299095"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:299096]\n[▼ch-14]\n[##Schokoladen-Chili Mousse mit Chili Öl]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299096"
+      ],
+      "anchor": "ch-14",
+      "title": "Schokoladen-Chili Mousse mit Chili Öl"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:299097]\n• 1 grosses Ei (ca. 60g)\n• 20 g Zucker\n• 50 g Aeschbach Schokolade, braun oder dunkel\n• 50 g Blüemlisberg Ziegenmilch-Schokolade\n• 200 g Rahm\n• 1 EL Brandy\n• 1-2 Chilischoten (je nach Schärfe)\n• 2 g Gelatine\n• Chiliöl",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• 1 grosses Ei (ca. 60g)\n• 20 g Zucker\n• 50 g Aeschbach Schokolade, braun oder dunkel\n• 50 g Blüemlisberg Ziegenmilch-Schokolade\n• 200 g Rahm\n• 1 EL Brandy\n• 1-2 Chilischoten (je nach Schärfe)\n• 2 g Gelatine\n• Chiliöl",
+      "id": [
+        "299097"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:299098]\nGelatine in kaltem Wasser einlegen, bis sie quillt. Couverture in kleine Stücke schneiden und im Wasserbad schmelzen.\nVollrahm steif schlagen und kaltstellen. Chili längs halbieren, von den Kernen befreien und anschliessend in möglichst kleine Stücke hacken (danach nicht mehr ins Gesicht oder in die Augen fassen!). Das Ei mit dem Zucker und dem gehackten Chili vermischen und mit einer Rührmaschine oder einem Rührgerät schaumig schlagen. Geschmolzene und etwas abgekühlte Schokolade zur Eimasse dazugeben, gut verrühren und Cognac sowie Gelatine separat auf 40°C auflösen und ebenfalls beigeben. Nun direkt den geschlagenen Rahm, am besten mit einem Gummischaber, vorsichtig unterheben und in eine Schüssel, in Gläser oder ein sonstiges Geschirr abfüllen sowie optimalerweise über Nacht kühlstellen. Mit etwas Chiliöl servieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Gelatine in kaltem Wasser einlegen, bis sie quillt. Couverture in kleine Stücke schneiden und im Wasserbad schmelzen.\nVollrahm steif schlagen und kaltstellen. Chili längs halbieren, von den Kernen befreien und anschliessend in möglichst kleine Stücke hacken (danach nicht mehr ins Gesicht oder in die Augen fassen!). Das Ei mit dem Zucker und dem gehackten Chili vermischen und mit einer Rührmaschine oder einem Rührgerät schaumig schlagen. Geschmolzene und etwas abgekühlte Schokolade zur Eimasse dazugeben, gut verrühren und Cognac sowie Gelatine separat auf 40°C auflösen und ebenfalls beigeben. Nun direkt den geschlagenen Rahm, am besten mit einem Gummischaber, vorsichtig unterheben und in eine Schüssel, in Gläser oder ein sonstiges Geschirr abfüllen sowie optimalerweise über Nacht kühlstellen. Mit etwas Chiliöl servieren.",
+      "id": [
+        "299098"
+      ]
+    }
+  }
+]

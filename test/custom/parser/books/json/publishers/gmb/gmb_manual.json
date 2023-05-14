@@ -1,0 +1,3371 @@
+[
+  {
+    "bitmark": "[.book]\r\n[@id:299114]\r\n[@externalId:e-gmb-manual_ynu8zlgqorpd]\r\n[#GMB Manual]\r\n[@coverImage:https://bitbook-resources-prod.s3-eu-west-1.amazonaws.com/uploads/covers/1352/tx3jT5C-gmb_cover_pink_v2.png]\r\n[@language:en]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299114"
+      ],
+      "externalId": [
+        "e-gmb-manual_ynu8zlgqorpd"
+      ],
+      "title": "GMB Manual",
+      "coverImage": [
+        "https://bitbook-resources-prod.s3-eu-west-1.amazonaws.com/uploads/covers/1352/tx3jT5C-gmb_cover_pink_v2.png"
+      ],
+      "language": [
+        "en"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:300401]\r\n[▼ch-1]\r\n[#Overview]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "300401"
+      ],
+      "anchor": "ch-1",
+      "title": "Overview"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:300402]\r\nGet More Brain gives you many tools to set up a unique learning environment. The focus is on communication and collaboration as well as flexible, interactive learning content. Let’s get an overview over all features. Follow the links to learn more about working with our tools.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Get More Brain gives you many tools to set up a unique learning environment. The focus is on communication and collaboration as well as flexible, interactive learning content. Let’s get an overview over all features. Follow the links to learn more about working with our tools.",
+      "id": [
+        "300402"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\r\n[@id:299116]\r\n[%][%Contacts]\r\nIn Get More Brain you can build your personal Learning Network (PLN) and stay in touch with all your contacts.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "In Get More Brain you can build your personal Learning Network (PLN) and stay in touch with all your contacts.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299116"
+      ],
+      "lead": "Contacts"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--&image]\r\n[@id:299117]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_1.png][@caption:Get in touch with all your contacts or open the Workspace, the Library or the Academy.]",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299117"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Get in touch with all your contacts or open the Workspace, the Library or the Academy.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.internal-link]\r\n[@id:300394]\r\n[!Learn more about organizing your Contacts.]\r\n[►Ref_Contacts]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "300394"
+      ],
+      "instruction": "Learn more about organizing your Contacts.",
+      "reference": "Ref_Contacts"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\r\n[@id:299128]\r\n[%][%Messenger]\r\nThe Messenger is the place to talk to your contacts and work together on Learning Content. You can share your insights, send each other notes, or collaborate on quizzes.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "The Messenger is the place to talk to your contacts and work together on Learning Content. You can share your insights, send each other notes, or collaborate on quizzes.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299128"
+      ],
+      "lead": "Messenger"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--&image]\r\n[@id:299129]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_6.png][@caption:Follow all your conversations.]",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299129"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_6.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Follow all your conversations.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.internal-link]\r\n[@id:300395]\r\n[!Learn more about the Messenger.]\r\n[►Ref_Messenger]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "300395"
+      ],
+      "instruction": "Learn more about the Messenger.",
+      "reference": "Ref_Messenger"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\r\n[@id:299182]\r\n[%][%Workspace]\r\nUse the Workspace to create your personal notebooks, upload PDFs and collect multiple Learning-Bits from the Library.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Use the Workspace to create your personal notebooks, upload PDFs and collect multiple Learning-Bits from the Library.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299182"
+      ],
+      "lead": "Workspace"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--&image]\r\n[@id:299183]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_23.png][@caption:You can create your own Notebooks, upload a PDF or use the Basket to collect multiple items.]",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299183"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_23.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "You can create your own Notebooks, upload a PDF or use the Basket to collect multiple items.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.internal-link]\r\n[@id:300396]\r\n[!Learn more about personal notebooks.]\r\n[►Ref_Workspace]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "300396"
+      ],
+      "instruction": "Learn more about personal notebooks.",
+      "reference": "Ref_Workspace"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\r\n[@id:299224]\r\n[%][%Library]\r\nStart learning with all the content in your Library. Open books, navigate through the content and add your own annotations.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Start learning with all the content in your Library. Open books, navigate through the content and add your own annotations.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299224"
+      ],
+      "lead": "Library"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--&image]\r\n[@id:299225]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_38.png][@caption:Add a bookmark]",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299225"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_38.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Add a bookmark",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.internal-link]\r\n[@id:300397]\r\n[!Learn more about working with books in your Library]\r\n[►Ref_Library]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "300397"
+      ],
+      "instruction": "Learn more about working with books in your Library",
+      "reference": "Ref_Library"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\r\n[@id:299263]\r\n[%][%Academy]\r\nIs your Library still empty? Find professional learning content in the Academy. You can download it from free or buy it directly in the store.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Is your Library still empty? Find professional learning content in the Academy. You can download it from free or buy it directly in the store.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299263"
+      ],
+      "lead": "Academy"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--&image]\r\n[@id:299264]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_52.png][@caption:The Academy of Get More Brain]",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299264"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_52.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "The Academy of Get More Brain",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.internal-link]\r\n[@id:300398]\r\n[!Learn more about the Academy.]\r\n[►Ref_Academy]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "300398"
+      ],
+      "instruction": "Learn more about the Academy.",
+      "reference": "Ref_Academy"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\r\n[@id:299280]\r\n[%][%Profiles]\r\nMake your learning experience more personal and tell your Co-Learners something about yourself.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Make your learning experience more personal and tell your Co-Learners something about yourself.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299280"
+      ],
+      "lead": "Profiles"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--&image]\r\n[@id:299281]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_58.png][@caption:Change your profile picture to make learning and communication more personal.]",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299281"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_58.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Change your profile picture to make learning and communication more personal.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.internal-link]\r\n[@id:300399]\r\n[!Learn more about changing your Profile.]\r\n[►Ref_Profiles]",
+    "bit": {
+      "type": "internal-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "300399"
+      ],
+      "instruction": "Learn more about changing your Profile.",
+      "reference": "Ref_Profiles"
+    }
+  },
+  {
+    "bitmark": "[.chapter:bitmark++]\r\n[@id:299118]\r\n[▼ch-8]\r\n[▼Ref_Contacts]\r\n[#Contacts]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark++",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299118"
+      ],
+      "anchor": "Ref_Contacts",
+      "title": "Contacts"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299119]\r\n[%][%About your Contacts]\r\nThe learning experience of Get More Brain is based on communication and collaboration. That’s why we’ve included a ==messenger==|link:https://stage-gmb.wordpressmacher.ch/howto/messenger/| that allows you to communicate with your personal learning network.\r\n\r\nIn the contact list in the dashboard, you can see who is currently part of your network. You can add new contacts to your network, start learning dialogs with them, or block them if necessary.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "The learning experience of Get More Brain is based on communication and collaboration. That’s why we’ve included a ==messenger==|link:https://stage-gmb.wordpressmacher.ch/howto/messenger/| that allows you to communicate with your personal learning network.\r\n\r\nIn the contact list in the dashboard, you can see who is currently part of your network. You can add new contacts to your network, start learning dialogs with them, or block them if necessary.",
+      "id": [
+        "299119"
+      ],
+      "lead": "About your Contacts"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299120]\r\n[&video-link:https://youtu.be/ndCye7nA5pU][@caption:To start a new dialog with a contact, your invitation has to be accepted.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299120"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/ndCye7nA5pU",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "To start a new dialog with a contact, your invitation has to be accepted."
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299121]\r\n[%][%Add contacts]\r\nTo add a contact you need to know the email-address of the person\r\n\r\n•1 Tap the Plus icon at the bottom of the contact list\r\n•1 Insert the email address of the new contact in the “Connect to …”-Dialog\r\n•1 Tap “OK” to invite your new contact to Get More Brain.\r\n\r\nYour new contact will get a message to join a conversation with you. He or she has to accept the invitation to start the conversation. If the person is not yet registered to Get More Brain, he or she will receive a link to sign up to the platform and reply to your invitation.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "To add a contact you need to know the email-address of the person\r\n\r\n•1 Tap the Plus icon at the bottom of the contact list\r\n•1 Insert the email address of the new contact in the “Connect to …”-Dialog\r\n•1 Tap “OK” to invite your new contact to Get More Brain.\r\n\r\nYour new contact will get a message to join a conversation with you. He or she has to accept the invitation to start the conversation. If the person is not yet registered to Get More Brain, he or she will receive a link to sign up to the platform and reply to your invitation.",
+      "id": [
+        "299121"
+      ],
+      "lead": "Add contacts"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299122]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_3.png][@caption:Invite new contacts by email address.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299122"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Invite new contacts by email address.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299123]\r\n[%][%Search for contacts]\r\nOver time, your contact list can become very large. In this case, the search will help you quickly find the right contacts.\r\n\r\n•1 Type the name of a contact into the search field.\r\n•1 Choose a contact from the search results and write a message.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Over time, your contact list can become very large. In this case, the search will help you quickly find the right contacts.\r\n\r\n•1 Type the name of a contact into the search field.\r\n•1 Choose a contact from the search results and write a message.",
+      "id": [
+        "299123"
+      ],
+      "lead": "Search for contacts"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299124]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_4.png][@caption:You can search for specific contacts in your list.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299124"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "You can search for specific contacts in your list.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299125]\r\n[%][%Delete contacts]\r\nYou cannot delete contacts in Get More Brain. However, you can block contacts.\r\n\r\n•1 Choose a contact from the list to display the conversation\r\n•1 Click / tap the dot menu in the top-right corner\r\n•1 Choose “Block user”\r\n•1 Additionally, you can delete a whole chat / conversation",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "You cannot delete contacts in Get More Brain. However, you can block contacts.\r\n\r\n•1 Choose a contact from the list to display the conversation\r\n•1 Click / tap the dot menu in the top-right corner\r\n•1 Choose “Block user”\r\n•1 Additionally, you can delete a whole chat / conversation",
+      "id": [
+        "299125"
+      ],
+      "lead": "Delete contacts"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299126]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_5.png][@caption:You can block specific contacts or delete a conversation.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299126"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "You can block specific contacts or delete a conversation.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter:bitmark++]\r\n[@id:299130]\r\n[▼ch-9]\r\n[▼Ref_Messenger]\r\n[#Messenger]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark++",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299130"
+      ],
+      "anchor": "Ref_Messenger",
+      "title": "Messenger"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299131]\r\n[&video-link:https://vimeo.com/779582315][@caption:This is the Messenger in Get More Brain]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299131"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "vimeo.com",
+          "url": "https://vimeo.com/779582315",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "This is the Messenger in Get More Brain"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299132]\r\n[%][%About the Messenger]\r\nThe Messenger is the most important part of Get More Brain. In all learning processes, it is important for people to talk to each other. Coaches talk to learners. Learners talk to other learners. Learners talk to experts. All this happens in the Messenger.\r\n\r\nThe Messenger in Get More Brain is like every Messenger, but it is especially useful for sharing content and collaborating in learning processes. You can easily include learning content in your conversations, whether you are sending articles, quiz questions, or photos and videos.\r\n\r\nWith the Messenger in Get More Brain, you can make your learning process more efficient and productive.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The Messenger is the most important part of Get More Brain. In all learning processes, it is important for people to talk to each other. Coaches talk to learners. Learners talk to other learners. Learners talk to experts. All this happens in the Messenger.\r\n\r\nThe Messenger in Get More Brain is like every Messenger, but it is especially useful for sharing content and collaborating in learning processes. You can easily include learning content in your conversations, whether you are sending articles, quiz questions, or photos and videos.\r\n\r\nWith the Messenger in Get More Brain, you can make your learning process more efficient and productive.",
+      "id": [
+        "299132"
+      ],
+      "lead": "About the Messenger"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299133]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_7.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299133"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_7.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299134]\r\n[%][%Share Learning Content]\r\nThe Messenger in Get More Brain is made for learning: that’s why you can easily share any learning content from your library or notebooks. Send texts, images, videos or quizzes to your learning partners. They can view and edit the content directly in the Messenger. Solve quizzes directly in the chat and send back the answers. This keeps the learning conversation flowing.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The Messenger in Get More Brain is made for learning: that’s why you can easily share any learning content from your library or notebooks. Send texts, images, videos or quizzes to your learning partners. They can view and edit the content directly in the Messenger. Solve quizzes directly in the chat and send back the answers. This keeps the learning conversation flowing.",
+      "id": [
+        "299134"
+      ],
+      "lead": "Share Learning Content"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299135]\r\n[&video-link:https://youtu.be/TA_PAZ7KBzQ][@caption:Share Learning Content with others]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299135"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/TA_PAZ7KBzQ",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Share Learning Content with others"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299136]\r\n•1 Go to a title in your library and navigate to a bit you want to share\r\n•1 Click / tap on the dot menu and choose ‘Send’.\r\n•1 Choose a contact from your list\r\n•1 Click / tab ‘Send’\r\n\r\nThe content bit will be listed in your conversation.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•1 Go to a title in your library and navigate to a bit you want to share\r\n•1 Click / tap on the dot menu and choose ‘Send’.\r\n•1 Choose a contact from your list\r\n•1 Click / tab ‘Send’\r\n\r\nThe content bit will be listed in your conversation.",
+      "id": [
+        "299136"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:299137]\r\n[▼ch-10]\r\n[##Enrich your messages]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299137"
+      ],
+      "anchor": "ch-10",
+      "title": "Enrich your messages"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299138]\r\n[%][%Send links with previews]\r\nWhen you enter a URL into a message, it’s worth waiting a second after pasting the link. Get More Brain will fetch a rich preview of the link and embed it in the message you send to your chat buddy.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "When you enter a URL into a message, it’s worth waiting a second after pasting the link. Get More Brain will fetch a rich preview of the link and embed it in the message you send to your chat buddy.",
+      "id": [
+        "299138"
+      ],
+      "lead": "Send links with previews"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299139]\r\n[&video-link:https://youtu.be/u2fYB-r1Rko][@caption:Send links with rich previews]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299139"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/u2fYB-r1Rko",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Send links with rich previews"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299140]\r\n[%][%Add videos]\r\nVideos make learning so much easier and exciting. You can easily add videos to any conversation.\r\n\r\n•1 Click / tap on the plus symbol in the text input field\r\n•1 Choose ‘Video\r\n•1 Paste the URL of a video (Youtube, Vimeo, …)\r\n•1 Use the tab key to see a preview of the video\r\n•1 Click ‘Send’ to add the video to your conversation\r\n\r\nOf course, you can use local videos from your device instead of online videos.\r\n\r\n• In the Browser, choose ‘Document’ instead of ‘Video’ in the upload-menu.\r\n• On your smartphone or tablet, use ‘Photo Library’ instead of the video-upload.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Videos make learning so much easier and exciting. You can easily add videos to any conversation.\r\n\r\n•1 Click / tap on the plus symbol in the text input field\r\n•1 Choose ‘Video\r\n•1 Paste the URL of a video (Youtube, Vimeo, …)\r\n•1 Use the tab key to see a preview of the video\r\n•1 Click ‘Send’ to add the video to your conversation\r\n\r\nOf course, you can use local videos from your device instead of online videos.\r\n\r\n• In the Browser, choose ‘Document’ instead of ‘Video’ in the upload-menu.\r\n• On your smartphone or tablet, use ‘Photo Library’ instead of the video-upload.",
+      "id": [
+        "299140"
+      ],
+      "lead": "Add videos"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\r\n[@id:299141]\r\nit’s not yet possible to create a video directly with the camera of your smartphone.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "it’s not yet possible to create a video directly with the camera of your smartphone.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299141"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299142]\r\n[&video-link:https://youtu.be/hVn9b1XDeQY][@caption:The video can be played directly in the chat.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299142"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/hVn9b1XDeQY",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "The video can be played directly in the chat."
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299143]\r\n[%][%Add images]\r\nVisuals and images make it easy to understand a complex subject and are thus a great help in learning.\r\n\r\nsee: https://youtu.be/fI1hbaZbucI\r\n\r\n•1 Click / tap on the plus symbol in the text input field\r\n•1 Choose ‘Photo Library\r\n•1 Choose an image from your drive or photo library\r\n•1 You see a preview of the image\r\n•1 Click ‘Send’ to add the picture to your conversation",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Visuals and images make it easy to understand a complex subject and are thus a great help in learning.\r\n\r\nsee: https://youtu.be/fI1hbaZbucI\r\n\r\n•1 Click / tap on the plus symbol in the text input field\r\n•1 Choose ‘Photo Library\r\n•1 Choose an image from your drive or photo library\r\n•1 You see a preview of the image\r\n•1 Click ‘Send’ to add the picture to your conversation",
+      "id": [
+        "299143"
+      ],
+      "lead": "Add images"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\r\n[@id:299144]\r\nOn a smartphone or tablet, you can add a picture directly from camera or from any folder instead of the photo library. You have to give Get More Brain the permission to use photos from your device.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "On a smartphone or tablet, you can add a picture directly from camera or from any folder instead of the photo library. You have to give Get More Brain the permission to use photos from your device.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299144"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299145]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_11.png][@caption:See a preview of the uploaded image.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299145"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_11.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "See a preview of the uploaded image.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299146]\r\n[%][%Add audio files]\r\nIf you can add videos and pictures to a conversation, of course you can’t miss audio files. Use your device to make voice recordings and save them as MP3. Then you can easily upload them to Get More Brain and add them to a conversation. Your conversation partner can play the audio directly in the chat.\r\n\r\n•1 Click / tap on the plus symbol in the text input field\r\n•1 Choose ‘Audio\r\n•1 Choose any existing audio-file from your device\r\n•1 Send it to your chat-buddy",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "If you can add videos and pictures to a conversation, of course you can’t miss audio files. Use your device to make voice recordings and save them as MP3. Then you can easily upload them to Get More Brain and add them to a conversation. Your conversation partner can play the audio directly in the chat.\r\n\r\n•1 Click / tap on the plus symbol in the text input field\r\n•1 Choose ‘Audio\r\n•1 Choose any existing audio-file from your device\r\n•1 Send it to your chat-buddy",
+      "id": [
+        "299146"
+      ],
+      "lead": "Add audio files"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\r\n[@id:299147]\r\nUnfortunately, it is not yet possible to make an audio recording directly from the chat. But we will surely add this possibility.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Unfortunately, it is not yet possible to make an audio recording directly from the chat. But we will surely add this possibility.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299147"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299148]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_12.png][@caption:Upload and pre-hear your audio-files.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299148"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_12.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Upload and pre-hear your audio-files.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299149]\r\n[%][%Add documents]\r\nYou can insert any document in your conversation. Get More Brain can handle all common types of documents. You can use PDFs, Office files or any document for which you have installed the appropriate app.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You can insert any document in your conversation. Get More Brain can handle all common types of documents. You can use PDFs, Office files or any document for which you have installed the appropriate app.",
+      "id": [
+        "299149"
+      ],
+      "lead": "Add documents"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:299150]\r\nBe careful when sending large documents. It’s better to work with cloud storage and send only the corresponding link to the document in the chat.\r\n\r\nsee https://youtu.be/MHW7zgNK1pY",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "Be careful when sending large documents. It’s better to work with cloud storage and send only the corresponding link to the document in the chat.\r\n\r\nsee https://youtu.be/MHW7zgNK1pY",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299150"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299151]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_13.png][@caption:You can insert any document in your conversation.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299151"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_13.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "You can insert any document in your conversation.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299152]\r\n[%][%Paste and Send Bit]\r\nIf you have copied a message from another conversation, you can paste it here and send it to your current chat partner.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If you have copied a message from another conversation, you can paste it here and send it to your current chat partner.",
+      "id": [
+        "299152"
+      ],
+      "lead": "Paste and Send Bit"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299153]\r\n[%][%Send basket]\r\nIf you have copied multiple bits or messages from another conversation, you can paste them here and send it to your current chat partner.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If you have copied multiple bits or messages from another conversation, you can paste them here and send it to your current chat partner.",
+      "id": [
+        "299153"
+      ],
+      "lead": "Send basket"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299154]\r\n[%][%Emoji]\r\nYou can spice up your conversations with emojis. Choose one or more appropriate emojis to emphasize your messages.\r\n\r\n•1 Click / tap on the plus symbol in the text input field\r\n•1 Choose ‘Emoji\r\n•1 Insert one or multiple emojis",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "You can spice up your conversations with emojis. Choose one or more appropriate emojis to emphasize your messages.\r\n\r\n•1 Click / tap on the plus symbol in the text input field\r\n•1 Choose ‘Emoji\r\n•1 Insert one or multiple emojis",
+      "id": [
+        "299154"
+      ],
+      "lead": "Emoji"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299155]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_14.png][@caption:Spice up your conversations with emojis.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299155"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_14.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Spice up your conversations with emojis.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:299156]\r\n[▼ch-11]\r\n[##Working with messages]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299156"
+      ],
+      "anchor": "ch-11",
+      "title": "Working with messages"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299157]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_15.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299157"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_15.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299158]\r\n[%][%Reply]\r\nYou can reply to a message and continue the conversation at any time. It makes a difference whether you simply type a new message or use the ‘Reply’ command from the dot menu.\r\n\r\n•1 If you reply in the text box at the bottom of the screen, the conversation continues at the top level. If you use\r\n•1 the ‘Reply’ command, you reply specifically to the current message. This will open a new thread in the conversation, where you can discuss specifically the current topic.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "You can reply to a message and continue the conversation at any time. It makes a difference whether you simply type a new message or use the ‘Reply’ command from the dot menu.\r\n\r\n•1 If you reply in the text box at the bottom of the screen, the conversation continues at the top level. If you use\r\n•1 the ‘Reply’ command, you reply specifically to the current message. This will open a new thread in the conversation, where you can discuss specifically the current topic.",
+      "id": [
+        "299158"
+      ],
+      "lead": "Reply"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299159]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_16.png][@caption:You can reply on specific messages to open a thread.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299159"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_16.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "You can reply on specific messages to open a thread.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299160]\r\n[%][%Send]\r\nForward a message to someone else. You can choose the recipient from your list of contacts. This feature is especially useful when you want to forward videos, photos, audios, documents or quizzes.\r\n\r\nsee https://youtu.be/1EtjHUwP-ko",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Forward a message to someone else. You can choose the recipient from your list of contacts. This feature is especially useful when you want to forward videos, photos, audios, documents or quizzes.\r\n\r\nsee https://youtu.be/1EtjHUwP-ko",
+      "id": [
+        "299160"
+      ],
+      "lead": "Send"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299161]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_17.png][@caption:Forward a message to your contacts.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299161"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_17.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Forward a message to your contacts.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299162]\r\n[%][%Save to Notebook…]\r\nSave any message to one of your notebooks. This feature is especially useful when you want to save videos, photos, audios, documents or quizzes. Once they’re in your notebook, you can always refer back to them.\r\n\r\nsee https://youtu.be/biF2xgQt3FI",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Save any message to one of your notebooks. This feature is especially useful when you want to save videos, photos, audios, documents or quizzes. Once they’re in your notebook, you can always refer back to them.\r\n\r\nsee https://youtu.be/biF2xgQt3FI",
+      "id": [
+        "299162"
+      ],
+      "lead": "Save to Notebook…"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299163]\r\n[%][%Add to Basket]\r\nIf you want to forward or save several messages at once, you can use the Basket. The Basket works like a clipboard and allows you to copy multiple objects in one go.\r\n\r\nsee https://youtu.be/M‑54tVF3EhI",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "If you want to forward or save several messages at once, you can use the Basket. The Basket works like a clipboard and allows you to copy multiple objects in one go.\r\n\r\nsee https://youtu.be/M‑54tVF3EhI",
+      "id": [
+        "299163"
+      ],
+      "lead": "Add to Basket"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299164]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_18.png][@caption:The Basket lets you copy multiple bits and paste them into another conversation.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299164"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_18.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "The Basket lets you copy multiple bits and paste them into another conversation.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299165]\r\n[%][%Copy]\r\nWith Get More Brain, it’s easy to share good learning content with others. Just copy/paste it from one conversation to another.\r\n\r\nsee https://youtu.be/kgIDy7aKtVI",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "With Get More Brain, it’s easy to share good learning content with others. Just copy/paste it from one conversation to another.\r\n\r\nsee https://youtu.be/kgIDy7aKtVI",
+      "id": [
+        "299165"
+      ],
+      "lead": "Copy"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299166]\r\n[%][%Delete]\r\nSometimes it just happens: you send the wrong message to the wrong person. No worries: delete it as if it never happened.\r\n\r\nsee https://youtu.be/seRiFlPCGV8",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Sometimes it just happens: you send the wrong message to the wrong person. No worries: delete it as if it never happened.\r\n\r\nsee https://youtu.be/seRiFlPCGV8",
+      "id": [
+        "299166"
+      ],
+      "lead": "Delete"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:299167]\r\n[▼ch-12]\r\n[##Working with conversations]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299167"
+      ],
+      "anchor": "ch-12",
+      "title": "Working with conversations"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299168]\r\n[%][%Start a conversation]\r\nIt’s super easy to start a conversation with one of your contacts.\r\n\r\n•1 Start in your contact list and click / tap on a name.\r\n•1 The messenger will open with the latest message of your conversation.\r\n•1 Type a message in the text field at the bottom of the screen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "It’s super easy to start a conversation with one of your contacts.\r\n\r\n•1 Start in your contact list and click / tap on a name.\r\n•1 The messenger will open with the latest message of your conversation.\r\n•1 Type a message in the text field at the bottom of the screen.",
+      "id": [
+        "299168"
+      ],
+      "lead": "Start a conversation"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\r\n[@id:299169]\r\nYou can use the dictation feature of your smartphone instead of typing your message.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "You can use the dictation feature of your smartphone instead of typing your message.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299169"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299170]\r\n[%][%Browse the history]\r\nIf you have a conversation open in Messenger, you will see all past messages by scrolling up and down.\r\n\r\n•1 By default, you see the latest message at the bottom of the conversation.\r\n•1 Scroll / swipe up and down to see more messages.\r\n•1 Look out for the time stamps on every message.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "If you have a conversation open in Messenger, you will see all past messages by scrolling up and down.\r\n\r\n•1 By default, you see the latest message at the bottom of the conversation.\r\n•1 Scroll / swipe up and down to see more messages.\r\n•1 Look out for the time stamps on every message.",
+      "id": [
+        "299170"
+      ],
+      "lead": "Browse the history"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299171]\r\n[%][%Reading status]\r\nDo you want to know whether the other person has already read a message or not? Just check the status on each message. The timestamp shows you the chronology of all messages.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Do you want to know whether the other person has already read a message or not? Just check the status on each message. The timestamp shows you the chronology of all messages.",
+      "id": [
+        "299171"
+      ],
+      "lead": "Reading status"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299172]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_19.png][@caption:This message is being sent.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299172"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_19.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "This message is being sent.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299173]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_20.png][@caption:This message has been delivered but was not read yet.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299173"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_20.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "This message has been delivered but was not read yet.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299174]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_21.png][@caption:This message has been read.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299174"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_21.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "This message has been read.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299175]\r\n[%][%Search for messages (coming soon)]\r\nIf your conversation already includes quite a few messages, then it can be difficult to find a specific message. Our search function takes you quickly to the right place.\r\n\r\n•1 Click / tap the search button at the top.\r\n•1 Type in a keyword\r\n•1 Click / tap Return on your keyboard",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "If your conversation already includes quite a few messages, then it can be difficult to find a specific message. Our search function takes you quickly to the right place.\r\n\r\n•1 Click / tap the search button at the top.\r\n•1 Type in a keyword\r\n•1 Click / tap Return on your keyboard",
+      "id": [
+        "299175"
+      ],
+      "lead": "Search for messages (coming soon)"
+    }
+  },
+  {
+    "bitmark": "[.hint:bitmark--]\r\n[@id:299176]\r\nBy default, your search will start in the active conversation. By checking the box ‘All Users’ you can open your search to all your conversation with other users.",
+    "bit": {
+      "type": "hint",
+      "format": "bitmark--",
+      "body": "By default, your search will start in the active conversation. By checking the box ‘All Users’ you can open your search to all your conversation with other users.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299176"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299177]\r\n[%][%Mark all messages as read]\r\nIf you receive many messages at once, and you have read them, you can mark them all as read with one click / tab.\r\n\r\nsee https://youtu.be/brAwVGX3AXU\r\n\r\n•1 Open an existing conversation\r\n•1 Click / tab on the dot menu in the upper right\r\n•1 In the menu, choose ‘Mark all messages as read’.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "If you receive many messages at once, and you have read them, you can mark them all as read with one click / tab.\r\n\r\nsee https://youtu.be/brAwVGX3AXU\r\n\r\n•1 Open an existing conversation\r\n•1 Click / tab on the dot menu in the upper right\r\n•1 In the menu, choose ‘Mark all messages as read’.",
+      "id": [
+        "299177"
+      ],
+      "lead": "Mark all messages as read"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299178]\r\n[%][%Delete chat]\r\n•1 Open an existing conversation\r\n•1 Click / tab on the dot menu in the upper right\r\n•1 In the menu, choose ‘Delete chat",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•1 Open an existing conversation\r\n•1 Click / tab on the dot menu in the upper right\r\n•1 In the menu, choose ‘Delete chat",
+      "id": [
+        "299178"
+      ],
+      "lead": "Delete chat"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299179]\r\n[%][%Block user]\r\n•1 Open an existing conversation\r\n•1 Click / tab on the dot menu in the upper right\r\n•1 In the menu, choose ‘Block user",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "•1 Open an existing conversation\r\n•1 Click / tab on the dot menu in the upper right\r\n•1 In the menu, choose ‘Block user",
+      "id": [
+        "299179"
+      ],
+      "lead": "Block user"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299180]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_22.png][@caption:The dot menu: Mark all messages as read, delete chats, block users.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299180"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_22.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "The dot menu: Mark all messages as read, delete chats, block users.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:299184]\r\n[▼ch-13]\r\n[▼Ref_Workspace]\r\n[#Workspace]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299184"
+      ],
+      "anchor": "Ref_Workspace",
+      "title": "Workspace"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299185]\r\n[%][%About the Workspace]\r\n\r\nThe Workspace contains your personal Notebooks. You can create as many notebooks as you want. In a Notebook, you can collect different Bits from your Learning Content or create your own Bits. You can write down notes, insert links, upload videos and photos or create your own quizzes.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The Workspace contains your personal Notebooks. You can create as many notebooks as you want. In a Notebook, you can collect different Bits from your Learning Content or create your own Bits. You can write down notes, insert links, upload videos and photos or create your own quizzes.",
+      "id": [
+        "299185"
+      ],
+      "lead": "About the Workspace"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299186]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_24.png][@caption:You can create your own Notebooks, upload a PDF or use the Basket to collect multiple Bits.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299186"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_24.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "You can create your own Notebooks, upload a PDF or use the Basket to collect multiple Bits.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:299187]\r\n[▼ch-14]\r\n[##Edit a Notebook]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299187"
+      ],
+      "anchor": "ch-14",
+      "title": "Edit a Notebook"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299188]\r\n[%][%Create a Notebook]\r\nIn Get More Brain it is super easy to create a new notebook:\r\n\r\n•1 Click / tap on the Plus-Sign in the bottom-right corner of the Workspace\r\n•1 Choose “Notebook” from the menu\r\n•1 Change the name of the new notebook",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "In Get More Brain it is super easy to create a new notebook:\r\n\r\n•1 Click / tap on the Plus-Sign in the bottom-right corner of the Workspace\r\n•1 Choose “Notebook” from the menu\r\n•1 Change the name of the new notebook",
+      "id": [
+        "299188"
+      ],
+      "lead": "Create a Notebook"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299189]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_25.png][@caption:Add a new Notebook by clicking on the Plus-Sign.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299189"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_25.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Add a new Notebook by clicking on the Plus-Sign.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299190]\r\n[%][%Change the name]\r\nYou can change the name of a notebook at any time:\r\n\r\n•1 Click / tap on the dot-menu in the bottom-right corner of a notebook\r\n•1 Choose “Rename”\r\n•1 Type in a new name and hit the Return-Key",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "You can change the name of a notebook at any time:\r\n\r\n•1 Click / tap on the dot-menu in the bottom-right corner of a notebook\r\n•1 Choose “Rename”\r\n•1 Type in a new name and hit the Return-Key",
+      "id": [
+        "299190"
+      ],
+      "lead": "Change the name"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299191]\r\n[%][%Remove / add a cover]\r\nYou can change the cover of a notebook at any time:\r\n\r\n•1 Click / tap on the dot-menu in the bottom-right corner of a notebook\r\n•1 Choose “Set Cover…” if you want to change the generic cover\r\n•1 Choose “Remove Cover” if you would like to change it. Repeat step 2 to set a new cover.\r\n\r\nYou can use an existing image as a cover or create your own cover using Photoshop, Canva or another app. For optimal display, the image has the dimensions 700 x 1000px.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "You can change the cover of a notebook at any time:\r\n\r\n•1 Click / tap on the dot-menu in the bottom-right corner of a notebook\r\n•1 Choose “Set Cover…” if you want to change the generic cover\r\n•1 Choose “Remove Cover” if you would like to change it. Repeat step 2 to set a new cover.\r\n\r\nYou can use an existing image as a cover or create your own cover using Photoshop, Canva or another app. For optimal display, the image has the dimensions 700 x 1000px.",
+      "id": [
+        "299191"
+      ],
+      "lead": "Remove / add a cover"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299192]\r\n[&video-link:https://youtu.be/rYGsndPHZ-0][@caption:Change the cover of any notebook to fit your personal gusto.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299192"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/rYGsndPHZ-0",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Change the cover of any notebook to fit your personal gusto."
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299193]\r\n[%][%More Options]\r\nThe dot menu of each notebook offers you the following options:\r\n\r\n•1 Choose “Open” to open the notebook. Alternatively, you can just double-click it.\r\n•1 Choose “Duplicate” to make a copy of your notebook\r\n•1 Choose “Delete” to remove a notebook. Be aware that it’s gone forever after deleting it.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "The dot menu of each notebook offers you the following options:\r\n\r\n•1 Choose “Open” to open the notebook. Alternatively, you can just double-click it.\r\n•1 Choose “Duplicate” to make a copy of your notebook\r\n•1 Choose “Delete” to remove a notebook. Be aware that it’s gone forever after deleting it.",
+      "id": [
+        "299193"
+      ],
+      "lead": "More Options"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299194]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_27.png][@caption:Use the Dot Menu to open, duplicate, rename or delete a Notebook.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299194"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_27.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Use the Dot Menu to open, duplicate, rename or delete a Notebook.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:299195]\r\n[▼ch-15]\r\n[##Add content to your Notebooks]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299195"
+      ],
+      "anchor": "ch-15",
+      "title": "Add content to your Notebooks"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299196]\r\n[%][%The Power of Bits]\r\nLearning content in Get More Brain has a special feature: all content is built from so-called Bits.\r\n\r\nYou can use these individual Bits for learning. You can copy them into a notebook and add your personal notes. You can also share the Bits with your ==contacts==|link:https://stage-gmb.wordpressmacher.ch/howto/contacts/| and work together on the Bits in the ==Messenger==|link:https://stage-gmb.wordpressmacher.ch/howto/messenger/|.\r\n\r\nIf you download a title from the ==Academy==|link:https://stage-gmb.wordpressmacher.ch/howto/academy/| and read it in the ==Library==|link:https://stage-gmb.wordpressmacher.ch/howto/library/|, you can use individual text passages, images, videos or quizzes as Bits.\r\n\r\nIf you copy a Bit to a notebook, you can add your own content and notes to it. These notes are also saved as Bits, so you can share your content with others as well.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Learning content in Get More Brain has a special feature: all content is built from so-called Bits.\r\n\r\nYou can use these individual Bits for learning. You can copy them into a notebook and add your personal notes. You can also share the Bits with your ==contacts==|link:https://stage-gmb.wordpressmacher.ch/howto/contacts/| and work together on the Bits in the ==Messenger==|link:https://stage-gmb.wordpressmacher.ch/howto/messenger/|.\r\n\r\nIf you download a title from the ==Academy==|link:https://stage-gmb.wordpressmacher.ch/howto/academy/| and read it in the ==Library==|link:https://stage-gmb.wordpressmacher.ch/howto/library/|, you can use individual text passages, images, videos or quizzes as Bits.\r\n\r\nIf you copy a Bit to a notebook, you can add your own content and notes to it. These notes are also saved as Bits, so you can share your content with others as well.",
+      "id": [
+        "299196"
+      ],
+      "lead": "The Power of Bits"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299197]\r\n[%][%Structure your Notes]\r\nSince a notebook can hold an infinite amount of content, it makes sense to organize it. You have the option to create chapters, which are used to display the interactive table of contents.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Since a notebook can hold an infinite amount of content, it makes sense to organize it. You have the option to create chapters, which are used to display the interactive table of contents.",
+      "id": [
+        "299197"
+      ],
+      "lead": "Structure your Notes"
+    }
+  },
+  {
+    "bitmark": "[.hint:bitmark--]\r\n[@id:299198]\r\nKeep the names of the chapters short! This ensures that they are easy to read in the table of contents, even on small screens.",
+    "bit": {
+      "type": "hint",
+      "format": "bitmark--",
+      "body": "Keep the names of the chapters short! This ensures that they are easy to read in the table of contents, even on small screens.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299198"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299199]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_28.png][@caption:You can add multiple chapters to your notebooks to build a structured Table of Contents TOC.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299199"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_28.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "You can add multiple chapters to your notebooks to build a structured Table of Contents TOC.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299200]\r\nTo divide the content into hierarchical sections, you can choose a Level for each chapter:\r\n\r\n• The top Level is 1.\r\n• Levels 2, 3, etc. are subordinated",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "To divide the content into hierarchical sections, you can choose a Level for each chapter:\r\n\r\n• The top Level is 1.\r\n• Levels 2, 3, etc. are subordinated",
+      "id": [
+        "299200"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299201]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_29_v2.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299201"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_29_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299202]\r\nTo add a new chapter:\r\n\r\n•1 Click / tap the Plus-Button and choose “Add Chapter”.\r\n•1 Choose the right Level.\r\n•1 You can change the level of a Chapter at any time by clicking on the title.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "To add a new chapter:\r\n\r\n•1 Click / tap the Plus-Button and choose “Add Chapter”.\r\n•1 Choose the right Level.\r\n•1 You can change the level of a Chapter at any time by clicking on the title.",
+      "id": [
+        "299202"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299203]\r\n[%][%Add Bits]\r\nYour own notes and annotations are stored in Get More Brain as individual Bits, just like all content. This makes it possible to share your notes in the ==Messenger==|link:https://stage-gmb.wordpressmacher.ch/howto/messenger/| or easily move individual parts of your notes back and forth between Notebooks.\r\n\r\nTo add a new Bit to your notes, you simply click / tap the Plus-Sign and choose “Add”.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Your own notes and annotations are stored in Get More Brain as individual Bits, just like all content. This makes it possible to share your notes in the ==Messenger==|link:https://stage-gmb.wordpressmacher.ch/howto/messenger/| or easily move individual parts of your notes back and forth between Notebooks.\r\n\r\nTo add a new Bit to your notes, you simply click / tap the Plus-Sign and choose “Add”.",
+      "id": [
+        "299203"
+      ],
+      "lead": "Add Bits"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299204]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_30.png][@caption:You can add your own notes as Bits.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299204"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_30.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "You can add your own notes as Bits.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299205]\r\n[%][%Add Notes]\r\nWhen clicking / tapping on the Plus-Sign you can add different Bits to your Notebook. Most of the Bits are self-explanatory. As an example let’s have a closer look at the possibilities of the Notes-Bit, which in most cases helps you to capture your content.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "When clicking / tapping on the Plus-Sign you can add different Bits to your Notebook. Most of the Bits are self-explanatory. As an example let’s have a closer look at the possibilities of the Notes-Bit, which in most cases helps you to capture your content.",
+      "id": [
+        "299205"
+      ],
+      "lead": "Add Notes"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299206]\r\n[&video-link:https://youtu.be/W-RccsWjByU][@caption:Use different structures, titles and formats to create rich notes.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299206"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/W-RccsWjByU",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Use different structures, titles and formats to create rich notes."
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299207]\r\n[%][%Use the label-menu for quick options]\r\nWhen you add a notes-bit to your notebook, a colored area appears where you can paste text. As soon as you start writing, you’ll see a text-label on the right of the current section. Click on the label to change the function of the section. Every section can be:\r\n\r\n• a **title** to start a new note.\r\n• a **subtitle** to further organize the note.\r\n• a simple **text** to write down your ideas.\r\n\r\nAs a fourth option in the label-menu, you can delete the section.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "When you add a notes-bit to your notebook, a colored area appears where you can paste text. As soon as you start writing, you’ll see a text-label on the right of the current section. Click on the label to change the function of the section. Every section can be:\r\n\r\n• a **title** to start a new note.\r\n• a **subtitle** to further organize the note.\r\n• a simple **text** to write down your ideas.\r\n\r\nAs a fourth option in the label-menu, you can delete the section.",
+      "id": [
+        "299207"
+      ],
+      "lead": "Use the label-menu for quick options"
+    }
+  },
+  {
+    "bitmark": "[.warning:bitmark--]\r\n[@id:299208]\r\nYou will see these label menus quite often when working in a notebook. These menus give you access to the most important options for a selected object. For example: When you insert an image, the label menu gives you the option to align the image or make it zoomable.",
+    "bit": {
+      "type": "warning",
+      "format": "bitmark--",
+      "body": "You will see these label menus quite often when working in a notebook. These menus give you access to the most important options for a selected object. For example: When you insert an image, the label menu gives you the option to align the image or make it zoomable.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299208"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299209]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_32.png][@caption:Structure your Notes with different sections.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299209"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_32.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Structure your Notes with different sections.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299210]\r\n[%][%Use the context menu for formatting]\r\nAs you select a specific word, sentence or paragraph, a context menu appears. You can use this menu to format your text:\r\n\r\n• bold\r\n• italic\r\n• light\r\n• strike-through\r\n• highlight\r\n… more options (see below)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "As you select a specific word, sentence or paragraph, a context menu appears. You can use this menu to format your text:\r\n\r\n• bold\r\n• italic\r\n• light\r\n• strike-through\r\n• highlight\r\n… more options (see below)",
+      "id": [
+        "299210"
+      ],
+      "lead": "Use the context menu for formatting"
+    }
+  },
+  {
+    "bitmark": "[.hint:bitmark--]\r\n[@id:299211]\r\nThe eraser-icon removes any formatting of the selected text.",
+    "bit": {
+      "type": "hint",
+      "format": "bitmark--",
+      "body": "The eraser-icon removes any formatting of the selected text.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299211"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299212]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_33.png][@caption:There are plenty of options to format your Notes.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299212"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_33.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "There are plenty of options to format your Notes.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299213]\r\nIf you click / tap on the tree dots in the context menu, you get even more options to format your text:\r\n\r\n• make it a **title** (as in the label-menu)\r\n• make it a **subtitle** (as in the label-menu)\r\n• use it as **plain text** (as in the label-menu)\r\n• make a **list**\r\n• convert the text to **code**\r\n• insert a **mathematical formula** (with a special editor)\r\n• convert the text to a clickable **link**\r\n• insert an **image** from your device\r\n• add a **section** with a different background\r\n• use **subscript**\r\n• use **superscript**",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "If you click / tap on the tree dots in the context menu, you get even more options to format your text:\r\n\r\n• make it a **title** (as in the label-menu)\r\n• make it a **subtitle** (as in the label-menu)\r\n• use it as **plain text** (as in the label-menu)\r\n• make a **list**\r\n• convert the text to **code**\r\n• insert a **mathematical formula** (with a special editor)\r\n• convert the text to a clickable **link**\r\n• insert an **image** from your device\r\n• add a **section** with a different background\r\n• use **subscript**\r\n• use **superscript**",
+      "id": [
+        "299213"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299214]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_34.png][@caption:There are plenty of options to create rich notes with images, links and formulas.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299214"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_34.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "There are plenty of options to create rich notes with images, links and formulas.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299215]\r\n[%][%Working with your Bits]\r\nBesides the label-menu and the context menu, you will find a third menu in the notes-bit. Actually, you will find a dot-menu in the upper-right corner of every bit, where you can find different possibilities to work with a bit.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Besides the label-menu and the context menu, you will find a third menu in the notes-bit. Actually, you will find a dot-menu in the upper-right corner of every bit, where you can find different possibilities to work with a bit.",
+      "id": [
+        "299215"
+      ],
+      "lead": "Working with your Bits"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299216]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_35.png][@caption:You can edit all your own bits, add bookmarks and annotations or send it to your Contacts.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299216"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_35.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "You can edit all your own bits, add bookmarks and annotations or send it to your Contacts.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299217]\r\n• **Add to basket:** the basket helps you collect multiple Bits. Think of it as an internal clipboard. In the Messenger, you can send all Bits of your current basket to one of your contacts. Or you can drop all Bits of your Basket in any notebook.\r\n• **Send…:** sends the current bit to one of your contacts\r\n• **Save to another Notebook…:** this creates a copy of the current bit and drops it in another notebook. You can select an existing notebook or create a new one on the fly.\r\n• **Add Bookmark:** add a bookmark to get back to the current Bit.\r\n• **Add Favorite:** mark the current Bit as a Favorite.\r\n• **Add Note:** add a comment to the current Bit.\r\n• **Add Scribble:** add a handwritten note to the current Bit\r\n• **Copy:** copy the current Bit to the clipboard to paste it on another location\r\n• **Cut:** cut the current Bit to the clipboard to paste it on another location\r\n• **Copy Link to this Bit:** instead of copying the Bit you can copy the link to the current bit. Send this link to anybody in an email, a message, a Social Media-Post or a Slack-Notification. Anybody who knows the link can access your current Bit in Get More Brain.\r\n• **Delete:** delete the current Bit",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• **Add to basket:** the basket helps you collect multiple Bits. Think of it as an internal clipboard. In the Messenger, you can send all Bits of your current basket to one of your contacts. Or you can drop all Bits of your Basket in any notebook.\r\n• **Send…:** sends the current bit to one of your contacts\r\n• **Save to another Notebook…:** this creates a copy of the current bit and drops it in another notebook. You can select an existing notebook or create a new one on the fly.\r\n• **Add Bookmark:** add a bookmark to get back to the current Bit.\r\n• **Add Favorite:** mark the current Bit as a Favorite.\r\n• **Add Note:** add a comment to the current Bit.\r\n• **Add Scribble:** add a handwritten note to the current Bit\r\n• **Copy:** copy the current Bit to the clipboard to paste it on another location\r\n• **Cut:** cut the current Bit to the clipboard to paste it on another location\r\n• **Copy Link to this Bit:** instead of copying the Bit you can copy the link to the current bit. Send this link to anybody in an email, a message, a Social Media-Post or a Slack-Notification. Anybody who knows the link can access your current Bit in Get More Brain.\r\n• **Delete:** delete the current Bit",
+      "id": [
+        "299217"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299218]\r\n[%][%Upload PDFs]\r\nWhile you can add your personal notes Bit by Bit, uploading a PDF is a good starting point to continue the work on a notebook. Create a PDF from an existing content and create a new notebook with it.\r\n\r\nGenerate and upload PDFs from:\r\n\r\n• Text documents: Microsoft Word, Google Docs, Pages, …\r\n• Slideshows: Microsoft PowerPoint, Google Slides, Keynote, …\r\n• Graphics: Photoshop, Illustrator, Canva, …\r\n• InDesign, Affinity Designer, …\r\n• Notion, Obsidian, Roam, OneNote, …\r\n• Webpages\r\n• Emails, Messages\r\n• Slack-Conversations\r\n• …\r\n\r\nJust drop a PDF on the “Upload PDF”-field or click / tap on the field to choose a PDF from your device. Get More Brain converts the PDF into a new Bit-based notebook, which you can enrich with your own notes and other Bits.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "While you can add your personal notes Bit by Bit, uploading a PDF is a good starting point to continue the work on a notebook. Create a PDF from an existing content and create a new notebook with it.\r\n\r\nGenerate and upload PDFs from:\r\n\r\n• Text documents: Microsoft Word, Google Docs, Pages, …\r\n• Slideshows: Microsoft PowerPoint, Google Slides, Keynote, …\r\n• Graphics: Photoshop, Illustrator, Canva, …\r\n• InDesign, Affinity Designer, …\r\n• Notion, Obsidian, Roam, OneNote, …\r\n• Webpages\r\n• Emails, Messages\r\n• Slack-Conversations\r\n• …\r\n\r\nJust drop a PDF on the “Upload PDF”-field or click / tap on the field to choose a PDF from your device. Get More Brain converts the PDF into a new Bit-based notebook, which you can enrich with your own notes and other Bits.",
+      "id": [
+        "299218"
+      ],
+      "lead": "Upload PDFs"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299219]\r\n[&video-link:https://youtu.be/EX38VNDwsJY][@caption:Upload a PDF created from MS Word, InDesign, Google Docs or any other tool.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299219"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/EX38VNDwsJY",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Upload a PDF created from MS Word, InDesign, Google Docs or any other tool."
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299220]\r\n[%][%Check your current basket]\r\nIn addition to your notebooks, you will also find the reference to your current basket in the Workspace. Click / tap on the basket icon to see all Bits that are currently in your basket.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In addition to your notebooks, you will also find the reference to your current basket in the Workspace. Click / tap on the basket icon to see all Bits that are currently in your basket.",
+      "id": [
+        "299220"
+      ],
+      "lead": "Check your current basket"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299221]\r\n[%][%Search]\r\nOf course, you can search your workspace for content. Enter a search term in the dialog box. Get More Brain shows you all matching content in your notebooks.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Of course, you can search your workspace for content. Enter a search term in the dialog box. Get More Brain shows you all matching content in your notebooks.",
+      "id": [
+        "299221"
+      ],
+      "lead": "Search"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299222]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_37.png][@caption:Search all your Notebooks to find specific content in a blast.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299222"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_37.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Search all your Notebooks to find specific content in a blast.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:299226]\r\n[▼ch-16]\r\n[▼Ref_Library]\r\n[#Library]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299226"
+      ],
+      "anchor": "Ref_Library",
+      "title": "Library"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299227]\r\n[&video-link:https://vimeo.com/782584502][@caption:This is the Library in Get More Brain]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299227"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "vimeo.com",
+          "url": "https://vimeo.com/782584502",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "This is the Library in Get More Brain"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299228]\r\n[%][%About the Library]\r\nIn the library, you’ll find all the titles and learning content you’ve downloaded or purchased from the Academy. All the content you need for you and your learning journey at your fingertips! Open a title in the library and start learning. You can read, watch, listen, highlight, annotate, and edit learning content.\r\n\r\nSince the learning content in Get More Brain is built very modular, you can share individual content with your contacts or save it to a personal notebook.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In the library, you’ll find all the titles and learning content you’ve downloaded or purchased from the Academy. All the content you need for you and your learning journey at your fingertips! Open a title in the library and start learning. You can read, watch, listen, highlight, annotate, and edit learning content.\r\n\r\nSince the learning content in Get More Brain is built very modular, you can share individual content with your contacts or save it to a personal notebook.",
+      "id": [
+        "299228"
+      ],
+      "lead": "About the Library"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299229]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_39.png][@caption:At the top of the Library, you see the learning content you recently used.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299229"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_39.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "At the top of the Library, you see the learning content you recently used.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299230]\r\n[%][%Reading content]\r\nIf you want to read and edit your learning content, just click / tap on the corresponding book or course. Now the reader of Get More Brain opens, and you can fully focus on the content.\r\n\r\nTo close the reader, click / tap on the close-button in the upper-left corner. This will take you back to the Library.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If you want to read and edit your learning content, just click / tap on the corresponding book or course. Now the reader of Get More Brain opens, and you can fully focus on the content.\r\n\r\nTo close the reader, click / tap on the close-button in the upper-left corner. This will take you back to the Library.",
+      "id": [
+        "299230"
+      ],
+      "lead": "Reading content"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299231]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_40.png][@caption:The Reader in Get More Brain]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299231"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_40.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "The Reader in Get More Brain",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299232]\r\nTo give you a better orientation, you can always refer to the table of contents while reading.\r\n\r\n•1 Click / tap on the Icon of the sidebar in the top-right corner\r\n•1 The table of contents opens with the current chapter and all subheadings\r\n- Use the up arrow to jump to the previous chapter\r\n- Use the down arrow to jump to the next chapter\r\n•1 Click / tap on the title of the current chapter to open a jump list with all chapters.\r\n•1 Click / tab on a specific header to be directed to the corresponding content.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "To give you a better orientation, you can always refer to the table of contents while reading.\r\n\r\n•1 Click / tap on the Icon of the sidebar in the top-right corner\r\n•1 The table of contents opens with the current chapter and all subheadings\r\n- Use the up arrow to jump to the previous chapter\r\n- Use the down arrow to jump to the next chapter\r\n•1 Click / tap on the title of the current chapter to open a jump list with all chapters.\r\n•1 Click / tab on a specific header to be directed to the corresponding content.",
+      "id": [
+        "299232"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299233]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_41.png][@caption:The table of contents with the current chapter.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299233"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_41.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "The table of contents with the current chapter.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299234]\r\n[%][%Use the search function]\r\nNext to the icon of the table of contents, you find an icon of a magnifying glass. Click / Tap on it to start a search. This is the fastest way to find any content withing the title you are currently reading.\r\n\r\n•1 Click / Tap on the icon of the magnifying glass in the top-right corner\r\n•1 Enter a keyword and press / tab ‘Return’\r\n•1 Get More Brain shows you all results with a rich preview\r\n•1 Use the Dot Menu of every result to ‘find the content in the book’",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Next to the icon of the table of contents, you find an icon of a magnifying glass. Click / Tap on it to start a search. This is the fastest way to find any content withing the title you are currently reading.\r\n\r\n•1 Click / Tap on the icon of the magnifying glass in the top-right corner\r\n•1 Enter a keyword and press / tab ‘Return’\r\n•1 Get More Brain shows you all results with a rich preview\r\n•1 Use the Dot Menu of every result to ‘find the content in the book’",
+      "id": [
+        "299234"
+      ],
+      "lead": "Use the search function"
+    }
+  },
+  {
+    "bitmark": "[.hint:bitmark--]\r\n[@id:299235]\r\nUse the filter button to narrow your search. You can search for very specific bits — such as images, videos or quizzes. ‘Show all’ deletes the set filters.",
+    "bit": {
+      "type": "hint",
+      "format": "bitmark--",
+      "body": "Use the filter button to narrow your search. You can search for very specific bits — such as images, videos or quizzes. ‘Show all’ deletes the set filters.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299235"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299236]\r\n[&video-link:https://youtu.be/qp8Lr1RcAJM][@caption:Search for specific parts like pictures, quizzes, or assignments.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299236"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/qp8Lr1RcAJM",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Search for specific parts like pictures, quizzes, or assignments."
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299237]\r\n[%][%Sharing Content: What this means for your learning]\r\nIn Get More Brain, you can share content with others. You can also copy individual content to your notebook and add your own content there. This sounds obvious, but it’s not!\r\n\r\nWhen you read a printed book while learning, you don’t have this option. If you want to share content with someone, you have to re-write it or scan it by taking a picture. Even if the book is available as an e‑book, it is often difficult to copy individual elements of the content from the e‑book and use them in another app.\r\n\r\nIn Get More Brain, sharing content is explicitly allowed. For us, it is the core of learning that you continue to work with content, discuss it with others, add your own thoughts and ideas to it. That’s why the content in Get More Brain is modular. You don’t have to copy an entire chapter. You can use and work with individual passages, images, videos or quizzes.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In Get More Brain, you can share content with others. You can also copy individual content to your notebook and add your own content there. This sounds obvious, but it’s not!\r\n\r\nWhen you read a printed book while learning, you don’t have this option. If you want to share content with someone, you have to re-write it or scan it by taking a picture. Even if the book is available as an e‑book, it is often difficult to copy individual elements of the content from the e‑book and use them in another app.\r\n\r\nIn Get More Brain, sharing content is explicitly allowed. For us, it is the core of learning that you continue to work with content, discuss it with others, add your own thoughts and ideas to it. That’s why the content in Get More Brain is modular. You don’t have to copy an entire chapter. You can use and work with individual passages, images, videos or quizzes.",
+      "id": [
+        "299237"
+      ],
+      "lead": "Sharing Content: What this means for your learning"
+    }
+  },
+  {
+    "bitmark": "[.hint:bitmark--]\r\n[@id:299238]\r\nYou may wonder about copyright protection. Don’t worry, we’ve taken care of that: if you share a piece of content in Get More Brain with someone who doesn’t own the title, he or she will be taken directly to the Academy, where the title can be purchased. Only then can the shared content be edited.",
+    "bit": {
+      "type": "hint",
+      "format": "bitmark--",
+      "body": "You may wonder about copyright protection. Don’t worry, we’ve taken care of that: if you share a piece of content in Get More Brain with someone who doesn’t own the title, he or she will be taken directly to the Academy, where the title can be purchased. Only then can the shared content be edited.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299238"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299239]\r\n[%][%Sharing single Bits]\r\nAll learning content in Get More Brain is very modular. You can share individual sections, images, videos or quizzes with your learning partners or save them in your personal notebooks. There you can add your own content or make detailed notes.\r\n\r\nTo work with a single content bit, click on the small black dot at the top right of each module. A context menu opens, which offers you different possibilities.\r\n\r\n•1 Go to the Dot Menu of a Bit\r\n•1 Choose ‘Send’ or ‘Save to Notebook’\r\n•1 Choose a Contact or a Notebook to send the bit to",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "All learning content in Get More Brain is very modular. You can share individual sections, images, videos or quizzes with your learning partners or save them in your personal notebooks. There you can add your own content or make detailed notes.\r\n\r\nTo work with a single content bit, click on the small black dot at the top right of each module. A context menu opens, which offers you different possibilities.\r\n\r\n•1 Go to the Dot Menu of a Bit\r\n•1 Choose ‘Send’ or ‘Save to Notebook’\r\n•1 Choose a Contact or a Notebook to send the bit to",
+      "id": [
+        "299239"
+      ],
+      "lead": "Sharing single Bits"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299240]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_43.png][@caption:Share specific bits via the dot menu]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299240"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_43.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Share specific bits via the dot menu",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299241]\r\nThe dot menu of every bit gives you multiple options to work with a bit:\r\n• **Add to Basket:** Collect multiple Bits to a Clipboard / Basket and use them in you Notebook or in the Messenger\r\n• **Send…:** Send a single Bit to one of your contacts.\r\n• **Save to Notebook…:** Save a single Bit to one of your notebooks.\r\n• **Add Bookmark:** Add a Bookmark to easily find the Bit again later.\r\n• **Add Favorite:** Add a Favorite to mark important Bits.\r\n• **Add Note:** Add a Note to annotate a bit.\r\n• **Add Scribble:** Add a freeform scribble to the bit\r\n• **Copy:** Copy a single Bit to use it elsewhere.\r\n• **Copy Link to this Bit:** Copy the link to a single Bit to use it elsewhere.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "The dot menu of every bit gives you multiple options to work with a bit:\r\n• **Add to Basket:** Collect multiple Bits to a Clipboard / Basket and use them in you Notebook or in the Messenger\r\n• **Send…:** Send a single Bit to one of your contacts.\r\n• **Save to Notebook…:** Save a single Bit to one of your notebooks.\r\n• **Add Bookmark:** Add a Bookmark to easily find the Bit again later.\r\n• **Add Favorite:** Add a Favorite to mark important Bits.\r\n• **Add Note:** Add a Note to annotate a bit.\r\n• **Add Scribble:** Add a freeform scribble to the bit\r\n• **Copy:** Copy a single Bit to use it elsewhere.\r\n• **Copy Link to this Bit:** Copy the link to a single Bit to use it elsewhere.",
+      "id": [
+        "299241"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299242]\r\n[%][%Sharing multiple Bits]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_44.png][@caption:Share multiple Bits via the Basket]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299242"
+      ],
+      "lead": "Sharing multiple Bits",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_44.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Share multiple Bits via the Basket",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299243]\r\nIf you want to send not just one bit, but several to one of your contacts or transfer them to a notebook, Get More Brain has a handy feature for that: the Basket.\r\n\r\n•1 Go to the Dot Menu of a Bit\r\n•1 Choose ‘Add to Basket’\r\n•1 Go to another Bit and repeat the steps\r\n\r\nThis way you can store as many individual Bits as you like in the basket, a kind of clipboard. The Bits are saved one after the other. You can also merge Bits from different learning contents in the basket.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "If you want to send not just one bit, but several to one of your contacts or transfer them to a notebook, Get More Brain has a handy feature for that: the Basket.\r\n\r\n•1 Go to the Dot Menu of a Bit\r\n•1 Choose ‘Add to Basket’\r\n•1 Go to another Bit and repeat the steps\r\n\r\nThis way you can store as many individual Bits as you like in the basket, a kind of clipboard. The Bits are saved one after the other. You can also merge Bits from different learning contents in the basket.",
+      "id": [
+        "299243"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299244]\r\n[&video-link:https://youtu.be/X-9-7cDD5oM][@caption:The Basket is a handy tool to collect multiple Bits.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299244"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/X-9-7cDD5oM",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "The Basket is a handy tool to collect multiple Bits."
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299245]\r\nAfter you have filled the basket, you can check the contents of the basket by clicking on the sidebar / on the table of contents. In the upper-right corner, you can see how many objects are currently in the basket.\r\n\r\n•1 Click / Tap on the button to view the current contents of your Basket\r\n•1 Use the dot menu of every Bit to perform some actions\r\n•1 Use the menu in the top-right corner to:\r\n- Send all Bits in the Basket to one of your Contacts\r\n- Save all Bits in the Basket to a Notebook\r\n- Empty the current Basket",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "After you have filled the basket, you can check the contents of the basket by clicking on the sidebar / on the table of contents. In the upper-right corner, you can see how many objects are currently in the basket.\r\n\r\n•1 Click / Tap on the button to view the current contents of your Basket\r\n•1 Use the dot menu of every Bit to perform some actions\r\n•1 Use the menu in the top-right corner to:\r\n- Send all Bits in the Basket to one of your Contacts\r\n- Save all Bits in the Basket to a Notebook\r\n- Empty the current Basket",
+      "id": [
+        "299245"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299246]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_46.png][@caption:Use the Basket-Menu to send or save multiple Bits]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299246"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_46.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Use the Basket-Menu to send or save multiple Bits",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299247]\r\n[%][%Add a text highlight]\r\nAs in almost every screen reader, you can mark important parts of the text with color.\r\n\r\n•1 Select the text you want to colorize.\r\n•1 Select the highlighter icon in the popup menu.\r\n•1 To remove the highlight, click / tap the icon again.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "As in almost every screen reader, you can mark important parts of the text with color.\r\n\r\n•1 Select the text you want to colorize.\r\n•1 Select the highlighter icon in the popup menu.\r\n•1 To remove the highlight, click / tap the icon again.",
+      "id": [
+        "299247"
+      ],
+      "lead": "Add a text highlight"
+    }
+  },
+  {
+    "bitmark": "[.hint:bitmark--]\r\n[@id:299248]\r\nInstead of just marking a text with colors, you can add an annotation (Bookmark, Favorite, Note). The selected text will be copied to the annotation.",
+    "bit": {
+      "type": "hint",
+      "format": "bitmark--",
+      "body": "Instead of just marking a text with colors, you can add an annotation (Bookmark, Favorite, Note). The selected text will be copied to the annotation.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299248"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299249]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_47.png][@caption:Add a text highlight in the Reader.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299249"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_47.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Add a text highlight in the Reader.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:299250]\r\n[▼ch-17]\r\n[##Create and edit annotations]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299250"
+      ],
+      "anchor": "ch-17",
+      "title": "Create and edit annotations"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299251]\r\nWhen reading or watching your content, you can create Notes, Favorites and Bookmarks. These remain stored with your content.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "When reading or watching your content, you can create Notes, Favorites and Bookmarks. These remain stored with your content.",
+      "id": [
+        "299251"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299252]\r\n[%][%Bookmarks]\r\nBookmarks are important to remember the exact location of a specific Bit. You can build your own Table of Contents with your Bookmarks. You can add a comment. Every Bookmark has its own Dot Menu where you can change the color or delete the Bookmark.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Bookmarks are important to remember the exact location of a specific Bit. You can build your own Table of Contents with your Bookmarks. You can add a comment. Every Bookmark has its own Dot Menu where you can change the color or delete the Bookmark.",
+      "id": [
+        "299252"
+      ],
+      "lead": "Bookmarks"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299253]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_48.png][@caption:Add a bookmark]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299253"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_48.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Add a bookmark",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299254]\r\n[%][%Favorites]\r\nIf you like a content, you can add a Favorite to the specific Bit. The Favorite appears in your content. You can type in a brief comment. Every Favorite has its own Dot Menu where you can change the color or delete the Favorite.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If you like a content, you can add a Favorite to the specific Bit. The Favorite appears in your content. You can type in a brief comment. Every Favorite has its own Dot Menu where you can change the color or delete the Favorite.",
+      "id": [
+        "299254"
+      ],
+      "lead": "Favorites"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299255]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_49.png][@caption:Edit a favorite]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299255"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_49.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Edit a favorite",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299256]\r\n[%][%Notes]\r\nIf a Favorite with a brief comment is not enough to write down your thoughts, you can use a Note.\r\n\r\nIn a Note, you can place longer texts. You can create lists and work with titles. You can even insert images into your note. Every Note has its own Dot Menu where you can change the color or delete the Note.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If a Favorite with a brief comment is not enough to write down your thoughts, you can use a Note.\r\n\r\nIn a Note, you can place longer texts. You can create lists and work with titles. You can even insert images into your note. Every Note has its own Dot Menu where you can change the color or delete the Note.",
+      "id": [
+        "299256"
+      ],
+      "lead": "Notes"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299257]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_50.png][@caption:Edit a Note.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299257"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_50.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Edit a Note.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.hint:bitmark--]\r\n[@id:299258]\r\nFavorites, Notes and Bookmarks are convenient tools to annotate your learning content. That said, there is another way to create annotations. You can copy one or more bits into a personal Notebook. You can also use annotations there. But you have many more options because you can also create and add your own content in your Notebooks. It’s also possible to share notes from your Notebook with your Contacts. This feature is not offered by the simple Favorites, Notes and Bookmarks in the Library.",
+    "bit": {
+      "type": "hint",
+      "format": "bitmark--",
+      "body": "Favorites, Notes and Bookmarks are convenient tools to annotate your learning content. That said, there is another way to create annotations. You can copy one or more bits into a personal Notebook. You can also use annotations there. But you have many more options because you can also create and add your own content in your Notebooks. It’s also possible to share notes from your Notebook with your Contacts. This feature is not offered by the simple Favorites, Notes and Bookmarks in the Library.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299258"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299259]\r\n[%][%Scribbles]\r\nYou can add a freeform scribble to a bit. This works best on a convertible / tablet with a pencil.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You can add a freeform scribble to a bit. This works best on a convertible / tablet with a pencil.",
+      "id": [
+        "299259"
+      ],
+      "lead": "Scribbles"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299260]\r\n[%][%See all your Annotations]\r\nUse the sidebar to see all your favorites, notes and bookmarks. From there, you can jump directly to the places in the content where you made the annotation.\r\n\r\n•1 Click / Tab on the icon of the table of contents in the upper-right corner.\r\n•1 Open the jump list by clicking / tapping on the name of the current chapter.\r\n•1 On the bottom of the list you find links to see your Bookmarks, Favorites and Notes.\r\n•1 Choose one of them and see the list of all your annotations.\r\n•1 You can filter the list by color.\r\n•1 Click / Tap on one specific annotation to jump to its location in the content.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Use the sidebar to see all your favorites, notes and bookmarks. From there, you can jump directly to the places in the content where you made the annotation.\r\n\r\n•1 Click / Tab on the icon of the table of contents in the upper-right corner.\r\n•1 Open the jump list by clicking / tapping on the name of the current chapter.\r\n•1 On the bottom of the list you find links to see your Bookmarks, Favorites and Notes.\r\n•1 Choose one of them and see the list of all your annotations.\r\n•1 You can filter the list by color.\r\n•1 Click / Tap on one specific annotation to jump to its location in the content.",
+      "id": [
+        "299260"
+      ],
+      "lead": "See all your Annotations"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299261]\r\n[&video-link:https://youtu.be/4I2d7iSs0ws][@caption:You can find all your annotations within the table of contents.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299261"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/4I2d7iSs0ws",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "You can find all your annotations within the table of contents."
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:299265]\r\n[▼ch-18]\r\n[▼Ref_Academy]\r\n[#Academy]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299265"
+      ],
+      "anchor": "Ref_Academy",
+      "title": "Academy"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299266]\r\n[&video-link:https://vimeo.com/780328924][@caption:This is the Academy in Get More Brain]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299266"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "vimeo.com",
+          "url": "https://vimeo.com/780328924",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "This is the Academy in Get More Brain"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299267]\r\n[%][%About the Academy]\r\nThe Academy is the place where you will find learning content that will guide you on the path to your learning goals. Think of the Academy as a marketplace where authors, trainers, and publishers can post their content. All content uses Bitmark format, so it is modular and optimized for use in Get More Brains Messenger or notebooks. In the Academy you will find both free learning content and content that you can purchase with your credit card.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The Academy is the place where you will find learning content that will guide you on the path to your learning goals. Think of the Academy as a marketplace where authors, trainers, and publishers can post their content. All content uses Bitmark format, so it is modular and optimized for use in Get More Brains Messenger or notebooks. In the Academy you will find both free learning content and content that you can purchase with your credit card.",
+      "id": [
+        "299267"
+      ],
+      "lead": "About the Academy"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299268]\r\n[%][%Search for books]\r\nThe Academy contains learning content on a wide variety of topics. Search helps them find exactly the content they need.\r\n\r\n•1 Click the magnifying glass icon in the upper right corner.\r\n•1 Enter a keyword in the search field.\r\n•1 Press the Enter key to start the search.\r\n\r\nAll titles that match your search query will be displayed. You can simply click on the covers to get more information about the books. An arrow icon will take you back to your search results.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "The Academy contains learning content on a wide variety of topics. Search helps them find exactly the content they need.\r\n\r\n•1 Click the magnifying glass icon in the upper right corner.\r\n•1 Enter a keyword in the search field.\r\n•1 Press the Enter key to start the search.\r\n\r\nAll titles that match your search query will be displayed. You can simply click on the covers to get more information about the books. An arrow icon will take you back to your search results.",
+      "id": [
+        "299268"
+      ],
+      "lead": "Search for books"
+    }
+  },
+  {
+    "bitmark": "[.hint:bitmark--]\r\n[@id:299269]\r\nGet More Brain saves your search queries. You can repeat them at any time.",
+    "bit": {
+      "type": "hint",
+      "format": "bitmark--",
+      "body": "Get More Brain saves your search queries. You can repeat them at any time.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299269"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299270]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_53.png][@caption:Your search results in the Academy]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299270"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_53.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Your search results in the Academy",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299271]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_54.png][@caption:Your search results in the Academy]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299271"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_54.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Your search results in the Academy",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299272]\r\n[%][%Search for content]\r\nYou can also use the search function to find individual content / bits instead of entire books.\r\n\r\n• Start the search, but switch to “Contents of all books”.\r\n• Enter a search term and press Enter to start the search.\r\n• Browse the list of found content.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "You can also use the search function to find individual content / bits instead of entire books.\r\n\r\n• Start the search, but switch to “Contents of all books”.\r\n• Enter a search term and press Enter to start the search.\r\n• Browse the list of found content.",
+      "id": [
+        "299272"
+      ],
+      "lead": "Search for content"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299273]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_55.png][@caption:Don’t search for entire titles, search for individual content.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299273"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_55.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Don’t search for entire titles, search for individual content.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299274]\r\nGet More Brain displays all the matching content and you can use it immediately.\r\n\r\n• Send the content to their Messenger contacts\r\n• Save the contents in one of your personal notebooks\r\n• View the content in the context of the book / course",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Get More Brain displays all the matching content and you can use it immediately.\r\n\r\n• Send the content to their Messenger contacts\r\n• Save the contents in one of your personal notebooks\r\n• View the content in the context of the book / course",
+      "id": [
+        "299274"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.hint:bitmark--]\r\n[@id:299275]\r\nIf it is paid content, you will be guided through the purchase process.",
+    "bit": {
+      "type": "hint",
+      "format": "bitmark--",
+      "body": "If it is paid content, you will be guided through the purchase process.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299275"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299276]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_56.png][@caption:You can use the learning content you are looking for directly in Get More Brain.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299276"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_56.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "You can use the learning content you are looking for directly in Get More Brain.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299277]\r\n[%][%Download or buy content]\r\nOnce you have found the content you want, you can download it directly into Get More Brain. If it is paid content, use your credit card to purchase it. Just click / tap on the purchase price and you will be guided through the purchase process. A message confirms that you have downloaded or purchased the content. You will find your downloaded content in your ==Library==|link:https://stage-gmb.wordpressmacher.ch/howto/library/|.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Once you have found the content you want, you can download it directly into Get More Brain. If it is paid content, use your credit card to purchase it. Just click / tap on the purchase price and you will be guided through the purchase process. A message confirms that you have downloaded or purchased the content. You will find your downloaded content in your ==Library==|link:https://stage-gmb.wordpressmacher.ch/howto/library/|.",
+      "id": [
+        "299277"
+      ],
+      "lead": "Download or buy content"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299278]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_57_v2.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299278"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_57_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:299282]\r\n[▼ch-19]\r\n[▼Ref_Profiles]\r\n[#Profiles]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299282"
+      ],
+      "anchor": "Ref_Profiles",
+      "title": "Profiles"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299283]\r\n[%][%About your Profile]\r\nIn Get More Brain every user has a personal profile. The profile contains the email address and a password. Optionally, you can add a user picture and other information to make your learning experience more personal.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In Get More Brain every user has a personal profile. The profile contains the email address and a password. Optionally, you can add a user picture and other information to make your learning experience more personal.",
+      "id": [
+        "299283"
+      ],
+      "lead": "About your Profile"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\r\n[@id:299284]\r\n[&video-link:https://youtu.be/4sPXfnieeZs][@caption:Add your name and an image to your profile to make your learning experience more personal.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299284"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/4sPXfnieeZs",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Add your name and an image to your profile to make your learning experience more personal."
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299285]\r\n[%][%Login-Screen]\r\nUsing Get More Brain is fast, easy and secure: You just have to provide a valid email-address and a secure password to get Access to the best learning experience.\r\n\r\nSince Get More Brain is a lifelong learning experience, it is recommended to use a private mail address for login. This ensures that you can access Get More Brain even if you change employers.\r\n\r\nTo make logging in even easier, you can use an existing account on Google, Apple, or Facebook.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Using Get More Brain is fast, easy and secure: You just have to provide a valid email-address and a secure password to get Access to the best learning experience.\r\n\r\nSince Get More Brain is a lifelong learning experience, it is recommended to use a private mail address for login. This ensures that you can access Get More Brain even if you change employers.\r\n\r\nTo make logging in even easier, you can use an existing account on Google, Apple, or Facebook.",
+      "id": [
+        "299285"
+      ],
+      "lead": "Login-Screen"
+    }
+  },
+  {
+    "bitmark": "[.warning:bitmark--]\r\n[@id:299286]\r\nGet More Brain will only use your email details to manage your personal login. Personal information will never be used for promotional purposes or shared with third parties.",
+    "bit": {
+      "type": "warning",
+      "format": "bitmark--",
+      "body": "Get More Brain will only use your email details to manage your personal login. Personal information will never be used for promotional purposes or shared with third parties.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299286"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299287]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_60.png][@caption:You just need an email address and a password to get your secure access to our learning experience.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299287"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_60.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "You just need an email address and a password to get your secure access to our learning experience.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299288]\r\n[%][%Register]\r\nIf you use Get More Brain for the first time, you need to register with your email address and a secure password. We recommend using a private email address. This way, you will have access to your learning materials for life, even if you change employers.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If you use Get More Brain for the first time, you need to register with your email address and a secure password. We recommend using a private email address. This way, you will have access to your learning materials for life, even if you change employers.",
+      "id": [
+        "299288"
+      ],
+      "lead": "Register"
+    }
+  },
+  {
+    "bitmark": "[.warning:bitmark++]\r\n[@id:299289]\r\nUse a strong password to access your account. A strong password is at least 12 characters long but 14 or more is better. Use a combination of uppercase letters, lowercase letters, numbers, and symbols. Don’t use a word that can be found in a dictionary or the name of a person, character, product, or organization. Make your new password significantly different from your previous passwords.\r\n\r\n•1 Click / Tap on “Register” to create a new personal Profile\r\n•1 Enter a private email address to register to Get More Brain.\r\n•1 Alternatively, you can sign in with any existing Facebook‑, Google- or Apple-Account.\r\n•1 Enter a strong password. (You can show it to be sure about what you enter)\r\n•1 Provide your first and last name and choose your country to make your profile a bit more personal.\r\n•1 Click / Tap “Register” to continue.\r\n\r\nAfter your registration, we will email you a confirmation-link to the provided email address. Check your spam-folder if our mail does not appear withing a few minutes. In our mail you will see a link with which you can confirm your registration. Click / Tap on the link and your Registration is done.\r\n\r\nFrom now on, you can log into Get More Brain.",
+    "bit": {
+      "type": "warning",
+      "format": "bitmark++",
+      "body": "Use a strong password to access your account. A strong password is at least 12 characters long but 14 or more is better. Use a combination of uppercase letters, lowercase letters, numbers, and symbols. Don’t use a word that can be found in a dictionary or the name of a person, character, product, or organization. Make your new password significantly different from your previous passwords.\r\n\r\n•1 Click / Tap on “Register” to create a new personal Profile\r\n•1 Enter a private email address to register to Get More Brain.\r\n•1 Alternatively, you can sign in with any existing Facebook‑, Google- or Apple-Account.\r\n•1 Enter a strong password. (You can show it to be sure about what you enter)\r\n•1 Provide your first and last name and choose your country to make your profile a bit more personal.\r\n•1 Click / Tap “Register” to continue.\r\n\r\nAfter your registration, we will email you a confirmation-link to the provided email address. Check your spam-folder if our mail does not appear withing a few minutes. In our mail you will see a link with which you can confirm your registration. Click / Tap on the link and your Registration is done.\r\n\r\nFrom now on, you can log into Get More Brain.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "299289"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299290]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_61.png][@caption:Use a private email address and a secure password to register.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299290"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_61.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Use a private email address and a secure password to register.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299291]\r\n[%][%Reset Password]\r\nIf you forgot your password, you can reset it. We will email you to your email address.\r\n\r\n•1 Click / Tap on “Lost Password”\r\n•1 Open your mail app and look for a new email (Check your spam folder!)\r\n•1 Use the provided link in the email to set a new password.\r\n•1 Use the new password to log into Get More Brain",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "If you forgot your password, you can reset it. We will email you to your email address.\r\n\r\n•1 Click / Tap on “Lost Password”\r\n•1 Open your mail app and look for a new email (Check your spam folder!)\r\n•1 Use the provided link in the email to set a new password.\r\n•1 Use the new password to log into Get More Brain",
+      "id": [
+        "299291"
+      ],
+      "lead": "Reset Password"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299292]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_62.png][@caption:You can always reset your password.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299292"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_62.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "You can always reset your password.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299293]\r\n[%][%Login]\r\nIf you have used Get More Brain before, you can easily log in with your personal login.\r\n\r\n• Enter your email address and click / tap “Continue”\r\n• Enter your personal password and click / tap “Login”\r\n\r\nAlternatively, you can use an existing Facebook‑, Google- or Apple-Login.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "If you have used Get More Brain before, you can easily log in with your personal login.\r\n\r\n• Enter your email address and click / tap “Continue”\r\n• Enter your personal password and click / tap “Login”\r\n\r\nAlternatively, you can use an existing Facebook‑, Google- or Apple-Login.",
+      "id": [
+        "299293"
+      ],
+      "lead": "Login"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:299294]\r\n[▼ch-20]\r\n[##Profile Settings]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299294"
+      ],
+      "anchor": "ch-20",
+      "title": "Profile Settings"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299295]\r\nYou can change your profile settings at any time from your Get More Brain Dashboard. Just select “Profile” in the dot menu near your profile picture.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You can change your profile settings at any time from your Get More Brain Dashboard. Just select “Profile” in the dot menu near your profile picture.",
+      "id": [
+        "299295"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:299296]\r\n[&image:https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_63.png][@caption:Use the Menu in your Dashboard to edit your profile settings.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "299296"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/manual/web-resources/images/gmb_book_63.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Use the Menu in your Dashboard to edit your profile settings.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299297]\r\n[%][%Name]\r\nEnter your first and last name. This makes it easier to find you in the Messenger.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Enter your first and last name. This makes it easier to find you in the Messenger.",
+      "id": [
+        "299297"
+      ],
+      "lead": "Name"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299298]\r\n[%][%Email]\r\nYou can always change your email address. We will send you an email to confirm the new address.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "You can always change your email address. We will send you an email to confirm the new address.",
+      "id": [
+        "299298"
+      ],
+      "lead": "Email"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299299]\r\n[%][%Country]\r\nChoose the country you are from.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Choose the country you are from.",
+      "id": [
+        "299299"
+      ],
+      "lead": "Country"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:299300]\r\n[%][%Language]\r\nSelect any language you want to use in Get More Brain. At this time we support the following languages:\r\n\r\n• Deutsch\r\n• Italiano\r\n• Français\r\n• English\r\n• Românã\r\n• Español",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Select any language you want to use in Get More Brain. At this time we support the following languages:\r\n\r\n• Deutsch\r\n• Italiano\r\n• Français\r\n• English\r\n• Românã\r\n• Español",
+      "id": [
+        "299300"
+      ],
+      "lead": "Language"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299301]\r\n[%][%Mobile Phone]\r\nEnter your phone number to connect to your mobile.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Enter your phone number to connect to your mobile.",
+      "id": [
+        "299301"
+      ],
+      "lead": "Mobile Phone"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:299302]\r\n[▼ch-21]\r\n[##Business Profiles]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "299302"
+      ],
+      "anchor": "ch-21",
+      "title": "Business Profiles"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:299303]\r\nIf you use Get More Brain in an organization, you may get a login through your company’s single-login system. In this case, you can also add a private email address to your profile, which you can use to log in to Get More Brain if you leave the company.\r\n\r\nThis way, your learning content and notebooks remain accessible for a lifetime.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "If you use Get More Brain in an organization, you may get a login through your company’s single-login system. In this case, you can also add a private email address to your profile, which you can use to log in to Get More Brain if you leave the company.\r\n\r\nThis way, your learning content and notebooks remain accessible for a lifetime.",
+      "id": [
+        "299303"
+      ]
+    }
+  }
+]

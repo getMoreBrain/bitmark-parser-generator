@@ -1,0 +1,1386 @@
+[
+  {
+    "bitmark": "[.book]\r\n[@id:289169]\r\n[@externalId:e-psychologie-heute_jlq9b_pslm2m]\r\n[@language:de]\r\n[@publisher:preselect]\r\n[@theme:beltz_psychologie]\r\n[#Psychologie heute]\r\n[@coverImage:https://docs.bitmark.cloud/bit-books/preselect/beltz/psychologie_heute/web-resources/images/psychologie_heute_cover.png]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "289169"
+      ],
+      "externalId": [
+        "e-psychologie-heute_jlq9b_pslm2m"
+      ],
+      "language": [
+        "de"
+      ],
+      "publisher": [
+        "preselect"
+      ],
+      "theme": [
+        "beltz_psychologie"
+      ],
+      "title": "Psychologie heute",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/preselect/beltz/psychologie_heute/web-resources/images/psychologie_heute_cover.png"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289170]\r\n**Liebe Leserinnen und Leser**\r\nEs gibt etwas Schönes und Verbindendes am Thema dieser Compact Ausgabe: Klug durchs Leben kommt man nicht allein. Zwar begegnen wir den komplexen Problemen des Lebens mit unserem Verstand und unserem Wissen – und deswegen erzählen wir Ihnen in dieser Ausgabe von klassischen Denkfehlern, die man vermeiden sollte (S. 20), und fragen zum Beispiel, welche Ratschläge aus der Antike uns heute noch helfen (S. 72). Aber wir berichten auch davon, was echte Weisheit eigentlich ausmacht (S. 66). Und die hat nicht nur mit mir, sondern sehr viel mit meinen Mitmenschen zu tun. \r\n\r\nWeise Menschen, so erklärt mir Judith Glück, gleichen ihre eigenen Ziele und Bedürfnisse mit denen anderer Menschen ab. Judith Glück ist Professorin für Entwicklungspsychologie an der Universität Klagenfurt und renommierte Weisheitsforscherin. Sie sagt: „Eine weise Handlung dient nie nur dem eigenen Nutzen, sondern orientiert sich an breiteren guten Ergebnissen, am Gemeinwohl, wenn Sie so wollen.“ Weise Menschen, so erzählt die Wissenschaftlerin weiter, haben auch nicht immer gleich einen Ratschlag für andere parat, sondern sind gute Zuhörer. „Sie reagieren nicht impulsiv, sie denken intensiv nach und haben das Bedürfnis, insbesondere große Lebensthemen vertiefend zu verstehen. Das heißt auch, dass sie bereit sind, ihre eigenen Handlungen zu hinterfragen, selbst wenn dabei nicht nur Positives zum Vorschein kommt. Und im Zusammenhang damit haben sie eine generelle Bereitschaft, sich nicht so wichtig zu nehmen.“ \r\n\r\nWeisheit entwickelt sich im Laufe des Lebens und speist sich aus den Erfahrungen und Erkenntnissen, die wir sammeln. Interessanterweise sind es aber nicht nur meine eigenen – häufig schwierigen – Erlebnisse, die mich weiser werden lassen; es können auch die Geschichten anderer Menschen sein: „Wenn wir Menschen befragen, was ihre Erlebnisse waren, aus denen sie Erkenntnisse gewonnen haben, dann erzählen sie manchmal auch so etwas wie: ,Ich bin im Zug gefahren und dieser Mann hat etwas zu mir gesagt, und dann sind wir ins Gespräch gekommen, und dadurch habe ich eine ganz neue Perspektive entwickelt‘“, sagt Judith Glück. „Es sind nicht immer die großen Life-Events. Entscheidend ist, dass es mich auf einer emotionalen Ebene berührt, damit es mich verändert. Und dadurch werde ich auch weiser. Also ich glaube nicht, dass rein durch Bücherlesen oder Psychologiestudieren die Weisheit wirklich steigt“, sagt die Professorin und lacht. \r\n\r\nBerührbar sein, offen für andere, die eigenen Emotionen verstehen – diese psychologische Perspektive auf Weisheit finde ich tröstlich in Zeiten, in denen es manchen klug erscheint, Einzelkämpfer für die eigenen Interessen zu sein. Judith Glück hat mir noch vieles mehr erzählt – ob weise Menschen glücklicher sind zum Beispiel oder welche Weisheitshindernisse es im Berufsleben gibt. Das ganze Interview mit ihr finden Sie online unter psychologie heute.de/leben. Damit und mit den drei spannenden Kapiteln dieser Ausgabe – „Denkfallen vermeiden“, „Den Dingen auf den Grund gehen“ und „Weiser werden“ – wünsche ich Ihnen viel Vergnügen und viele gute Einsichten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Liebe Leserinnen und Leser**\r\nEs gibt etwas Schönes und Verbindendes am Thema dieser Compact Ausgabe: Klug durchs Leben kommt man nicht allein. Zwar begegnen wir den komplexen Problemen des Lebens mit unserem Verstand und unserem Wissen – und deswegen erzählen wir Ihnen in dieser Ausgabe von klassischen Denkfehlern, die man vermeiden sollte (S. 20), und fragen zum Beispiel, welche Ratschläge aus der Antike uns heute noch helfen (S. 72). Aber wir berichten auch davon, was echte Weisheit eigentlich ausmacht (S. 66). Und die hat nicht nur mit mir, sondern sehr viel mit meinen Mitmenschen zu tun. \r\n\r\nWeise Menschen, so erklärt mir Judith Glück, gleichen ihre eigenen Ziele und Bedürfnisse mit denen anderer Menschen ab. Judith Glück ist Professorin für Entwicklungspsychologie an der Universität Klagenfurt und renommierte Weisheitsforscherin. Sie sagt: „Eine weise Handlung dient nie nur dem eigenen Nutzen, sondern orientiert sich an breiteren guten Ergebnissen, am Gemeinwohl, wenn Sie so wollen.“ Weise Menschen, so erzählt die Wissenschaftlerin weiter, haben auch nicht immer gleich einen Ratschlag für andere parat, sondern sind gute Zuhörer. „Sie reagieren nicht impulsiv, sie denken intensiv nach und haben das Bedürfnis, insbesondere große Lebensthemen vertiefend zu verstehen. Das heißt auch, dass sie bereit sind, ihre eigenen Handlungen zu hinterfragen, selbst wenn dabei nicht nur Positives zum Vorschein kommt. Und im Zusammenhang damit haben sie eine generelle Bereitschaft, sich nicht so wichtig zu nehmen.“ \r\n\r\nWeisheit entwickelt sich im Laufe des Lebens und speist sich aus den Erfahrungen und Erkenntnissen, die wir sammeln. Interessanterweise sind es aber nicht nur meine eigenen – häufig schwierigen – Erlebnisse, die mich weiser werden lassen; es können auch die Geschichten anderer Menschen sein: „Wenn wir Menschen befragen, was ihre Erlebnisse waren, aus denen sie Erkenntnisse gewonnen haben, dann erzählen sie manchmal auch so etwas wie: ,Ich bin im Zug gefahren und dieser Mann hat etwas zu mir gesagt, und dann sind wir ins Gespräch gekommen, und dadurch habe ich eine ganz neue Perspektive entwickelt‘“, sagt Judith Glück. „Es sind nicht immer die großen Life-Events. Entscheidend ist, dass es mich auf einer emotionalen Ebene berührt, damit es mich verändert. Und dadurch werde ich auch weiser. Also ich glaube nicht, dass rein durch Bücherlesen oder Psychologiestudieren die Weisheit wirklich steigt“, sagt die Professorin und lacht. \r\n\r\nBerührbar sein, offen für andere, die eigenen Emotionen verstehen – diese psychologische Perspektive auf Weisheit finde ich tröstlich in Zeiten, in denen es manchen klug erscheint, Einzelkämpfer für die eigenen Interessen zu sein. Judith Glück hat mir noch vieles mehr erzählt – ob weise Menschen glücklicher sind zum Beispiel oder welche Weisheitshindernisse es im Berufsleben gibt. Das ganze Interview mit ihr finden Sie online unter psychologie heute.de/leben. Damit und mit den drei spannenden Kapiteln dieser Ausgabe – „Denkfallen vermeiden“, „Den Dingen auf den Grund gehen“ und „Weiser werden“ – wünsche ich Ihnen viel Vergnügen und viele gute Einsichten.",
+      "id": [
+        "289170"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:289264]\r\n[&image:https://docs.bitmark.cloud/bit-books/preselect/beltz/psychologie_heute/web-resources/images/preselect_psychologie_heute_4.png][@caption:Dorothea Siegle, Chefredakteurin]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "289264"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/preselect/beltz/psychologie_heute/web-resources/images/preselect_psychologie_heute_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Dorothea Siegle, Chefredakteurin",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.page:bitmark++&image]\r\n[@id:289171]\r\n[%6]\r\n[&image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-006.webp]\r\n[@thumbImage:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-006/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-006.jpg]\r\n\r\n\r\n6 PSYCHOLOGIE HEUTE compact\r\n\r\n\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-006-073-ppm-convert-gen.jpg|",
+    "bit": {
+      "type": "page",
+      "format": "bitmark++",
+      "body": "6 PSYCHOLOGIE HEUTE compact\r\n\r\n\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-006-073-ppm-convert-gen.jpg|",
+      "id": [
+        "289171"
+      ],
+      "item": "6",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-006.webp",
+          "showInIndex": false,
+          "format": "webp",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "thumbImage": [
+        "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-006/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-006.jpg"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.page:bitmark++&image]\r\n[@id:289172]\r\n[%7]\r\n[&image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-007.webp]\r\n[@thumbImage:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-007/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-007.jpg]\r\n\r\n\r\n7\r\nWAS IN\r\nUNSEREM\r\nKOPF\r\nVORGEHT\r\nWir alle verarbeiten permanent Informationen –\r\nbeim Sehen, Hören, Sprechen, Denken und Erinnern.\r\nWie genau machen wir das, was passiert dabei im Gehirn?\r\nMit Fragen wie diesen beschäftigt sich die\r\nkognitive Psychologie. Eine kleine Expedition in\r\ndie Welt des Denkens\r\nV O N J O C H E N P A U L U S\r\n\r\n\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-007-074-ppm-convert-gen.jpg|",
+    "bit": {
+      "type": "page",
+      "format": "bitmark++",
+      "body": "7\r\nWAS IN\r\nUNSEREM\r\nKOPF\r\nVORGEHT\r\nWir alle verarbeiten permanent Informationen –\r\nbeim Sehen, Hören, Sprechen, Denken und Erinnern.\r\nWie genau machen wir das, was passiert dabei im Gehirn?\r\nMit Fragen wie diesen beschäftigt sich die\r\nkognitive Psychologie. Eine kleine Expedition in\r\ndie Welt des Denkens\r\nV O N J O C H E N P A U L U S\r\n\r\n\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-007-074-ppm-convert-gen.jpg|",
+      "id": [
+        "289172"
+      ],
+      "item": "7",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-007.webp",
+          "showInIndex": false,
+          "format": "webp",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "thumbImage": [
+        "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-007/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-007.jpg"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:289173]\r\nUnser Gehirn leistet Beeindruckendes – aber wir können uns nicht immer auf es verlassen",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Unser Gehirn leistet Beeindruckendes – aber wir können uns nicht immer auf es verlassen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "289173"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289174]\r\nAls japanische Kampfflugzeuge am 7. Dezember 1941 den US-Stützpunkt Pearl Harbour auf Hawaii attackierten, saß ein fast 13-jähriger amerikanischer Junge im Wohnzimmer seiner Familie am Radio. Er verfolgte gerade ein Baseballspiel, als das Programm plötzlich für die Schreckensmeldung unterbrochen wurde. So machte es ihm danach jedenfalls viele Jahre lang sein Gedächtnis weis. Dann ging ihm auf: Es gibt keine Spiele einer Baseballliga mitten im Dezember. Etwas stimmte nicht mit seiner Erinnerung. Später fand er heraus: Wahrscheinlich hatte er die Übertragung eines Footballspiels gehört, das an diesem Tag tatsächlich ausgetragen worden war. Und womöglich, auch das wurde ihm klar, gab es einen Grund, warum sein Gedächtnis daraus ein Baseballmatch gemacht hatte.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Als japanische Kampfflugzeuge am 7. Dezember 1941 den US-Stützpunkt Pearl Harbour auf Hawaii attackierten, saß ein fast 13-jähriger amerikanischer Junge im Wohnzimmer seiner Familie am Radio. Er verfolgte gerade ein Baseballspiel, als das Programm plötzlich für die Schreckensmeldung unterbrochen wurde. So machte es ihm danach jedenfalls viele Jahre lang sein Gedächtnis weis. Dann ging ihm auf: Es gibt keine Spiele einer Baseballliga mitten im Dezember. Etwas stimmte nicht mit seiner Erinnerung. Später fand er heraus: Wahrscheinlich hatte er die Übertragung eines Footballspiels gehört, das an diesem Tag tatsächlich ausgetragen worden war. Und womöglich, auch das wurde ihm klar, gab es einen Grund, warum sein Gedächtnis daraus ein Baseballmatch gemacht hatte.",
+      "id": [
+        "289174"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289175]\r\n Der Junge war 1928 in Kiel geboren worden, als Ulrich Gustav Neisser. Er war noch nicht ganz fünf, da floh die Familie 1933 nach New York, der Vater war Jude. „Ulrich“ konnten die Freunde des Jungen nicht aussprechen, und so nannte er sich „Ulric“ oder einfach Dickie. Er wollte ein all-American boy sein. Der US-Nationalsport aber war Baseball, so wurde er zum großen Baseballfan. Kein Wunder, dass sich in seinem Gedächtnis das Football- in ein Baseballspiel verwandelte.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Der Junge war 1928 in Kiel geboren worden, als Ulrich Gustav Neisser. Er war noch nicht ganz fünf, da floh die Familie 1933 nach New York, der Vater war Jude. „Ulrich“ konnten die Freunde des Jungen nicht aussprechen, und so nannte er sich „Ulric“ oder einfach Dickie. Er wollte ein all-American boy sein. Der US-Nationalsport aber war Baseball, so wurde er zum großen Baseballfan. Kein Wunder, dass sich in seinem Gedächtnis das Football- in ein Baseballspiel verwandelte.",
+      "id": [
+        "289175"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289176]\r\nUlric Neisser wurde zu einem der größten Psychologen – nicht für das große Publikum, aber innerhalb der Fachwelt. Unter den vielen Phänomenen, die er erforschte, waren auch die Streiche, die das Gedächtnis und andere Abteilungen des Gehirns uns spielen. Er revolutionierte die Psychologie, wenn auch natürlich nicht im Alleingang.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Ulric Neisser wurde zu einem der größten Psychologen – nicht für das große Publikum, aber innerhalb der Fachwelt. Unter den vielen Phänomenen, die er erforschte, waren auch die Streiche, die das Gedächtnis und andere Abteilungen des Gehirns uns spielen. Er revolutionierte die Psychologie, wenn auch natürlich nicht im Alleingang.",
+      "id": [
+        "289176"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289177]\r\nAls Neisser studierte, dominierte vor allem in der US-amerikanischen Psychologie der Behaviorismus. Einer der berühmtesten – und für manche berüchtigtsten – Vertreter lehrte in der Person von Burrhus Frederic Skinner an Neissers Universität Harvard. Die Behavioristen forschten viel an Tauben und Ratten, denn für sie zählte nur Verhalten, das sich mit Belohnungen und Bestrafungen steuern ließ. Was sich im Kopf abspielte, hielten sie für unerforschlich.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Als Neisser studierte, dominierte vor allem in der US-amerikanischen Psychologie der Behaviorismus. Einer der berühmtesten – und für manche berüchtigtsten – Vertreter lehrte in der Person von Burrhus Frederic Skinner an Neissers Universität Harvard. Die Behavioristen forschten viel an Tauben und Ratten, denn für sie zählte nur Verhalten, das sich mit Belohnungen und Bestrafungen steuern ließ. Was sich im Kopf abspielte, hielten sie für unerforschlich.",
+      "id": [
+        "289177"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289178]\r\nNeisser war dieser Ansatz zuwider und er beschloss, „den guten Kampf gegen den Behaviorismus zu kämpfen“, wie er sich mit leichter Ironie in einem autobiografischen Aufsatz erinnert. Ihn interessierte die Welt in unseren Köpfen. In der Psychologie ließen sich viele von den damals aufkommenden Computern inspirieren und studierten, wie unser Gehirn Informationen verarbeitet. Neisser bündelte diese Forschung in einem Buch, das 1967 erschien: Cognitive Psychology. Es beschäftigte sich mit der Informationsverarbeitung beim Sehen, beim Hören, beim Sprechen, beim Denken und im Gedächtnis.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Neisser war dieser Ansatz zuwider und er beschloss, „den guten Kampf gegen den Behaviorismus zu kämpfen“, wie er sich mit leichter Ironie in einem autobiografischen Aufsatz erinnert. Ihn interessierte die Welt in unseren Köpfen. In der Psychologie ließen sich viele von den damals aufkommenden Computern inspirieren und studierten, wie unser Gehirn Informationen verarbeitet. Neisser bündelte diese Forschung in einem Buch, das 1967 erschien: Cognitive Psychology. Es beschäftigte sich mit der Informationsverarbeitung beim Sehen, beim Hören, beim Sprechen, beim Denken und im Gedächtnis.",
+      "id": [
+        "289178"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289179]\r\nNeisser wurde zum Star, sein Buch zur „Bibel der kognitiven Psychologie“, die die fünfzigjährige Vorherrschaft des Behaviorismus brach. Seither erforscht die Psychologie in großem Maßstab, was in unserem Kopf vorgeht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Neisser wurde zum Star, sein Buch zur „Bibel der kognitiven Psychologie“, die die fünfzigjährige Vorherrschaft des Behaviorismus brach. Seither erforscht die Psychologie in großem Maßstab, was in unserem Kopf vorgeht.",
+      "id": [
+        "289179"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289180]\r\nWie sich herausstellte, leistet unser Gehirn oft Beeindruckendes. Aber es ist kein perfektes Organ zur Erkennung der Wahrheit über die Welt. Es hat sich entwickelt, um unser Überleben zu sichern, und das möglichst gut.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Wie sich herausstellte, leistet unser Gehirn oft Beeindruckendes. Aber es ist kein perfektes Organ zur Erkennung der Wahrheit über die Welt. Es hat sich entwickelt, um unser Überleben zu sichern, und das möglichst gut.",
+      "id": [
+        "289180"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289181]\r\nDeshalb ist zwar einigermaßen Verlass auf das, was wir sehen. Aber es gibt Grenzen. Unser Gehirn blendet aus, was gerade nicht wichtig ist. Neisser hat das in einem berühmten und später oft variierten Experiment bewiesen: Er zeigte Versuchspersonen einen Film, in dem Aufnahmen von zwei Mannschaften übereinandergelegt waren, die sich Basketbälle zuspielen. Die Versuchspersonen sollten die Ballwechsel des einen Teams zählen. Dann passierte etwas Unerwartetes: Eine Frau mit einem aufgespannten Regenschirm spazierte mitten durchs Bild. Nur ungefähr ein Viertel der Versuchspersonen nahm sie wahr. Sie war in diesem Moment einfach nicht wichtig.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Deshalb ist zwar einigermaßen Verlass auf das, was wir sehen. Aber es gibt Grenzen. Unser Gehirn blendet aus, was gerade nicht wichtig ist. Neisser hat das in einem berühmten und später oft variierten Experiment bewiesen: Er zeigte Versuchspersonen einen Film, in dem Aufnahmen von zwei Mannschaften übereinandergelegt waren, die sich Basketbälle zuspielen. Die Versuchspersonen sollten die Ballwechsel des einen Teams zählen. Dann passierte etwas Unerwartetes: Eine Frau mit einem aufgespannten Regenschirm spazierte mitten durchs Bild. Nur ungefähr ein Viertel der Versuchspersonen nahm sie wahr. Sie war in diesem Moment einfach nicht wichtig.",
+      "id": [
+        "289181"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289182]\r\nNoch weit weniger Verlass als auf unsere Wahrnehmung ist auf unser Gedächtnis. Das gilt sogar für die Erinnerungen an dramatische Momente, die sich wie auf einer Fotoplatte eingebrannt zu haben scheinen. Und doch kann sich ein Footballspiel auf wundersame Weise in ein Baseballspiel verwandeln, wie Neisser aus erster Hand wusste.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Noch weit weniger Verlass als auf unsere Wahrnehmung ist auf unser Gedächtnis. Das gilt sogar für die Erinnerungen an dramatische Momente, die sich wie auf einer Fotoplatte eingebrannt zu haben scheinen. Und doch kann sich ein Footballspiel auf wundersame Weise in ein Baseballspiel verwandeln, wie Neisser aus erster Hand wusste.",
+      "id": [
+        "289182"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.page:bitmark++&image]\r\n[@id:289183]\r\n[%9]\r\n[&image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-009.webp]\r\n[@thumbImage:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-009/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-009.jpg]\r\n\r\n\r\n\r\n\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-009-075-ppm-convert-gen.jpg|",
+    "bit": {
+      "type": "page",
+      "format": "bitmark++",
+      "body": "|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-009-075-ppm-convert-gen.jpg|",
+      "id": [
+        "289183"
+      ],
+      "item": "9",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-009.webp",
+          "showInIndex": false,
+          "format": "webp",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "thumbImage": [
+        "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-009/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-009.jpg"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289184]\r\nIn einer klassischen Untersuchung erforschte er solche sogenannten „Blitzlicht-Erinnerungen“ später systematisch. Als die Raumfähre Challenger 1986 beim Start explodierte und alle sieben Besatzungsmitglieder in den Tod riss, hatte Neisser morgens unter der Dusche eine Idee für eine Studie. Sofort entwarf er einen Fragebogen, in dem Erstsemester beschreiben sollten, wie sie von der Katastrophe erfahren hatten. Er verteilte ihn noch am selben Morgen in einer Vorlesung.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "In einer klassischen Untersuchung erforschte er solche sogenannten „Blitzlicht-Erinnerungen“ später systematisch. Als die Raumfähre Challenger 1986 beim Start explodierte und alle sieben Besatzungsmitglieder in den Tod riss, hatte Neisser morgens unter der Dusche eine Idee für eine Studie. Sofort entwarf er einen Fragebogen, in dem Erstsemester beschreiben sollten, wie sie von der Katastrophe erfahren hatten. Er verteilte ihn noch am selben Morgen in einer Vorlesung.",
+      "id": [
+        "289184"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289185]\r\n[%][%Hat die Wahrheit noch eine andere Seite?]\r\nEinige Jahre später bekamen jene, die wieder kontaktiert werden  konnten, den Fragebogen noch einmal. Bei vielen hatten sich die Erinnerungen nun dramatisch verändert. Eine Studentin hatte zunächst sicherlich korrekt berichtet, dass sie die Nachricht bei einem Mittagessen von ihren Freunden erfahren habe. Später hatte sie ein ganz anderes Bild vor Augen: Ein Mädchen rannte schreiend durch ihr Wohnheim und brüllte: „Das Spaceshuttle ist explodiert.“ Neisser bewies so, dass selbst Blitzlicht-Erinnerungen, die bis dahin als offensichtlich verlässlich galten, es nicht sind.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Einige Jahre später bekamen jene, die wieder kontaktiert werden  konnten, den Fragebogen noch einmal. Bei vielen hatten sich die Erinnerungen nun dramatisch verändert. Eine Studentin hatte zunächst sicherlich korrekt berichtet, dass sie die Nachricht bei einem Mittagessen von ihren Freunden erfahren habe. Später hatte sie ein ganz anderes Bild vor Augen: Ein Mädchen rannte schreiend durch ihr Wohnheim und brüllte: „Das Spaceshuttle ist explodiert.“ Neisser bewies so, dass selbst Blitzlicht-Erinnerungen, die bis dahin als offensichtlich verlässlich galten, es nicht sind.",
+      "id": [
+        "289185"
+      ],
+      "lead": "Hat die Wahrheit noch eine andere Seite?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289186]\r\nEin anderes Mal ging Neisser den Erinnerungen von John Dean nach. Der Rechtsberater von US-Präsident Richard Nixon hatte sich den Titel „das menschliche Tonband“ erarbeitet, weil er 1973 vor einem US-Untersuchungsausschuss zur Verwicklung Nixons in die sogenannte Watergate-Affäre extrem detaillierte Aussagen gemacht hatte. Doch es stellte sich heraus, dass Nixon bei entscheidenden Beratungen ein wirkliches Tonband hatte mitlaufen lassen. Neisser verglich die Aufzeichnung mit den Aussagen des angeblichen menschlichen Tonbands Dean. Ergebnis: Viele der behaupteten Sätze hatte Nixon nicht gesagt. Deans Grundaussage allerdings stimmte: Nixon war über viele Machenschaften informiert gewesen und hatte sie gebilligt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Ein anderes Mal ging Neisser den Erinnerungen von John Dean nach. Der Rechtsberater von US-Präsident Richard Nixon hatte sich den Titel „das menschliche Tonband“ erarbeitet, weil er 1973 vor einem US-Untersuchungsausschuss zur Verwicklung Nixons in die sogenannte Watergate-Affäre extrem detaillierte Aussagen gemacht hatte. Doch es stellte sich heraus, dass Nixon bei entscheidenden Beratungen ein wirkliches Tonband hatte mitlaufen lassen. Neisser verglich die Aufzeichnung mit den Aussagen des angeblichen menschlichen Tonbands Dean. Ergebnis: Viele der behaupteten Sätze hatte Nixon nicht gesagt. Deans Grundaussage allerdings stimmte: Nixon war über viele Machenschaften informiert gewesen und hatte sie gebilligt.",
+      "id": [
+        "289186"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289187]\r\nSolche Studien lassen sich als Gleichnisse lesen. Ihre Botschaft: Wir sollten uns nicht zu sicher sein. Wir sollten uns fragen, ob das, was wir zu wissen glauben, wirklich stimmt oder ob die Wahrheit nicht noch eine andere Seite hat (siehe __Ich zweifle, also bin ich__, S. 56). Natürlich ist diese Erkenntnis nicht ganz neu. „Ich weiß, dass ich nicht (je nach Quelle: nichts) weiß“, gaben sich klassische Philosophen demütig. Was das aber im Alltag bedeutet, demonstriert die kognitive Psychologie an vielen Beispielen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Solche Studien lassen sich als Gleichnisse lesen. Ihre Botschaft: Wir sollten uns nicht zu sicher sein. Wir sollten uns fragen, ob das, was wir zu wissen glauben, wirklich stimmt oder ob die Wahrheit nicht noch eine andere Seite hat (siehe __Ich zweifle, also bin ich__, S. 56). Natürlich ist diese Erkenntnis nicht ganz neu. „Ich weiß, dass ich nicht (je nach Quelle: nichts) weiß“, gaben sich klassische Philosophen demütig. Was das aber im Alltag bedeutet, demonstriert die kognitive Psychologie an vielen Beispielen.",
+      "id": [
+        "289187"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289188]\r\nSo neigen wir dazu, uns die Welt in unserer Wahrnehmung so zurechtzubiegen, dass sie uns gefällt. Die meisten von uns sind unverbesserliche Optimisten und lassen sich auch von Enttäuschungen nicht bremsen. Eine zweite Ehe spiegele „den Triumph der Hoffnung über die Erfahrung“, spottete der englische Gelehrte Samuel Johnson im 18. Jahrhundert.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "So neigen wir dazu, uns die Welt in unserer Wahrnehmung so zurechtzubiegen, dass sie uns gefällt. Die meisten von uns sind unverbesserliche Optimisten und lassen sich auch von Enttäuschungen nicht bremsen. Eine zweite Ehe spiegele „den Triumph der Hoffnung über die Erfahrung“, spottete der englische Gelehrte Samuel Johnson im 18. Jahrhundert.",
+      "id": [
+        "289188"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289189]\r\nEin harmloses Beispiel lieferten amerikanische Footballfans, die eine Saison lang vor jedem Spiel prognostizierten, wie ihre Lieblingsmannschaft sich schlagen würde. Natürlich liegen die Siegeschancen aller Teams im Durchschnitt bei fünfzig Prozent, aber die Fans behaupteten vor gut zwei von drei Spieltagen, die eigenen Jungs würden gewinnen. Das war auch gegen Ende der Saison noch so, als bekannt war, welche Mannschaften auf Niederlagen abonniert waren. Glücklicherweise ist es oft – aber keineswegs immer – gar nicht so schlecht, die Welt schöner zu sehen, als sie ist, wie der Artikel __Wunderbares Wunschdenken__ (S. 14) zeigt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Ein harmloses Beispiel lieferten amerikanische Footballfans, die eine Saison lang vor jedem Spiel prognostizierten, wie ihre Lieblingsmannschaft sich schlagen würde. Natürlich liegen die Siegeschancen aller Teams im Durchschnitt bei fünfzig Prozent, aber die Fans behaupteten vor gut zwei von drei Spieltagen, die eigenen Jungs würden gewinnen. Das war auch gegen Ende der Saison noch so, als bekannt war, welche Mannschaften auf Niederlagen abonniert waren. Glücklicherweise ist es oft – aber keineswegs immer – gar nicht so schlecht, die Welt schöner zu sehen, als sie ist, wie der Artikel __Wunderbares Wunschdenken__ (S. 14) zeigt.",
+      "id": [
+        "289189"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289190]\r\nRecht gesund ist auch ein etwas zu rosiges Bild von sich selbst. Das bewies eine Auswertung von 299 Studien, an denen sich insgesamt 127 000 Menschen beteiligt hatten. Die von sich selbst Überzeugten waren zufriedener mit ihrem Leben, erlebten mehr positive und weniger negative Gefühle und litten seltener unter Depressionen. Nicht ganz so gut kommt dieses gesunde Selbstbewusstsein bei anderen an. Es hinterlässt einen guten ersten Eindruck, der jedoch nicht anhält.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Recht gesund ist auch ein etwas zu rosiges Bild von sich selbst. Das bewies eine Auswertung von 299 Studien, an denen sich insgesamt 127 000 Menschen beteiligt hatten. Die von sich selbst Überzeugten waren zufriedener mit ihrem Leben, erlebten mehr positive und weniger negative Gefühle und litten seltener unter Depressionen. Nicht ganz so gut kommt dieses gesunde Selbstbewusstsein bei anderen an. Es hinterlässt einen guten ersten Eindruck, der jedoch nicht anhält.",
+      "id": [
+        "289190"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289191]\r\nUm unser positives Selbstbild zu pflegen, hilft es natürlich, wenn wir die eigenen Entscheidungen jederzeit ohne allzu viel Rücksicht auf die Wirklichkeit rechtfertigen können… Ein schwedisch-amerikanisches Forscherteam zeigte 120 weiblichen und männlichen Versuchspersonen Fotos von jeweils zwei Frauen und fragte, welche sie attraktiver fänden. Bei einem Teil der Durchgänge erkundigten sich die Forschenden anschließend nach den Gründen. Was die Teilnehmenden nicht wussten: In dem kurzen Moment dazwischen hatte der Versuchsleiter die Bilder mit einem Kartentrick vertauscht. Die allermeisten merkten das nicht und begründeten nun, warum die gerade noch auf den zweiten Platz Verwiesene die Schönere sei. „Ich habe sie wegen ihres dunklen Haars gewählt“, behauptete eine Versuchsperson. Tatsächlich hatte sie sich für die Blondine entschieden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Um unser positives Selbstbild zu pflegen, hilft es natürlich, wenn wir die eigenen Entscheidungen jederzeit ohne allzu viel Rücksicht auf die Wirklichkeit rechtfertigen können… Ein schwedisch-amerikanisches Forscherteam zeigte 120 weiblichen und männlichen Versuchspersonen Fotos von jeweils zwei Frauen und fragte, welche sie attraktiver fänden. Bei einem Teil der Durchgänge erkundigten sich die Forschenden anschließend nach den Gründen. Was die Teilnehmenden nicht wussten: In dem kurzen Moment dazwischen hatte der Versuchsleiter die Bilder mit einem Kartentrick vertauscht. Die allermeisten merkten das nicht und begründeten nun, warum die gerade noch auf den zweiten Platz Verwiesene die Schönere sei. „Ich habe sie wegen ihres dunklen Haars gewählt“, behauptete eine Versuchsperson. Tatsächlich hatte sie sich für die Blondine entschieden.",
+      "id": [
+        "289191"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:289192]\r\nIn unserer Wahrnehmung biegen wir uns die Welt so zurecht, dass sie uns gefällt",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "In unserer Wahrnehmung biegen wir uns die Welt so zurecht, dass sie uns gefällt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "289192"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289193]\r\nJose Yong von der __Northumbria University__ und zwei Kollegen führen diese Untersuchung als einen der Belege für ihre steile These an: Der Mensch ist weniger ein rationales Tier als ein rationalisierendes: Wir basteln uns unbewusst eine Weltsicht zurecht, bei der alles einigermaßen zusammenpasst und wir selbst gut dastehen. Diese Gabe verdankten wir der Evolution, so das Trio: Die Wirklichkeit ist kompliziert, und nicht alles, was wir sehen, passt auf Anhieb gut zusammen. Wir brauchen aber ein klares Bild der Welt, damit wir handeln können, und zwar schnell.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Jose Yong von der __Northumbria University__ und zwei Kollegen führen diese Untersuchung als einen der Belege für ihre steile These an: Der Mensch ist weniger ein rationales Tier als ein rationalisierendes: Wir basteln uns unbewusst eine Weltsicht zurecht, bei der alles einigermaßen zusammenpasst und wir selbst gut dastehen. Diese Gabe verdankten wir der Evolution, so das Trio: Die Wirklichkeit ist kompliziert, und nicht alles, was wir sehen, passt auf Anhieb gut zusammen. Wir brauchen aber ein klares Bild der Welt, damit wir handeln können, und zwar schnell.",
+      "id": [
+        "289193"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289194]\r\n[%][%Auf der Suche nach Einordnung]\r\nBesonders eifrig sind wir bei der Suche nach Erklärungen und Ordnung, wenn wir verunsichert sind. Nachdem sich Versuchspersonen an eine unerfreuliche Erfahrung erinnert hatten, entdeckten sie in Bildern aus Punktwolken häufiger gar nicht vorhandene Muster und glaubten eher an Verschwörungen. „Optimismus, selbst wenn er ein bisschen wahnhaft ist, hilft den Leuten, sich weniger neurotisch zu fühlen, und liefert die Motivation, voranzugehen, neue Dinge auszuprobieren und laufende Aufgaben zu vollenden“, argumentieren Yong und seine Kollegen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Besonders eifrig sind wir bei der Suche nach Erklärungen und Ordnung, wenn wir verunsichert sind. Nachdem sich Versuchspersonen an eine unerfreuliche Erfahrung erinnert hatten, entdeckten sie in Bildern aus Punktwolken häufiger gar nicht vorhandene Muster und glaubten eher an Verschwörungen. „Optimismus, selbst wenn er ein bisschen wahnhaft ist, hilft den Leuten, sich weniger neurotisch zu fühlen, und liefert die Motivation, voranzugehen, neue Dinge auszuprobieren und laufende Aufgaben zu vollenden“, argumentieren Yong und seine Kollegen.",
+      "id": [
+        "289194"
+      ],
+      "lead": "Auf der Suche nach Einordnung"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289195]\r\nEine ordentliche Portion Realitätsverlust ist natürlich nicht das, was die Philosophen empfehlen. „Erkenne dich selbst“ stand schon über dem Orakel von Delphi, der Spruch soll von einem der „Sieben Weisen“ des klassischen Griechenlands stammen. Vor allem Bescheidenheit und Zurückhaltung werden empfohlen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Eine ordentliche Portion Realitätsverlust ist natürlich nicht das, was die Philosophen empfehlen. „Erkenne dich selbst“ stand schon über dem Orakel von Delphi, der Spruch soll von einem der „Sieben Weisen“ des klassischen Griechenlands stammen. Vor allem Bescheidenheit und Zurückhaltung werden empfohlen.",
+      "id": [
+        "289195"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289196]\r\nPsychologinnen und Psychologen haben versucht, Weisheit für ihre Forschungszwecke zu definieren. Weise Menschen wissen demnach um die Grenzen ihrer Erkenntnisfähigkeit, erkennen, dass die Welt sich stetig wandelt, wissen, dass verschiedene Sichten auf ein Problem möglich sind, und versuchen, sie zusammenzubringen. Sie fühlen mit, aber sie lassen sich nicht von Emotionen überwältigen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Psychologinnen und Psychologen haben versucht, Weisheit für ihre Forschungszwecke zu definieren. Weise Menschen wissen demnach um die Grenzen ihrer Erkenntnisfähigkeit, erkennen, dass die Welt sich stetig wandelt, wissen, dass verschiedene Sichten auf ein Problem möglich sind, und versuchen, sie zusammenzubringen. Sie fühlen mit, aber sie lassen sich nicht von Emotionen überwältigen.",
+      "id": [
+        "289196"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289197]\r\nVerkörpert wird Weisheit klassischerweise von einem alten Mann, gerne mit Bart. Er hat einen festen Platz in den Mythen vieler Kulturen, wie der US-amerikanische Mythenforscher Joseph Campbell in seinem Buch __Der Heros in tausend Gestalten__ gezeigt hat. Ein junger naiver Held bricht aus der vertrauten Heimat auf und begegnet einem Mentor, der ihn in die Geheimnisse der weiten, oft magischen Welt einweist. Der Zauberer Gandalf aus __Der Herr der Ringe__, der späte Obi-Wan Kenobi aus __Krieg der Sterne__, Albus Dumbledore aus __Harry Potter__ sind moderne Fassungen dieses Weisen, alle mit Bart. Selbst wer nach Bildern des Begründers der Psychoanalyse sucht, findet vor allem Porträts des bärtigen alten Freuds.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Verkörpert wird Weisheit klassischerweise von einem alten Mann, gerne mit Bart. Er hat einen festen Platz in den Mythen vieler Kulturen, wie der US-amerikanische Mythenforscher Joseph Campbell in seinem Buch __Der Heros in tausend Gestalten__ gezeigt hat. Ein junger naiver Held bricht aus der vertrauten Heimat auf und begegnet einem Mentor, der ihn in die Geheimnisse der weiten, oft magischen Welt einweist. Der Zauberer Gandalf aus __Der Herr der Ringe__, der späte Obi-Wan Kenobi aus __Krieg der Sterne__, Albus Dumbledore aus __Harry Potter__ sind moderne Fassungen dieses Weisen, alle mit Bart. Selbst wer nach Bildern des Begründers der Psychoanalyse sucht, findet vor allem Porträts des bärtigen alten Freuds.",
+      "id": [
+        "289197"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.info]\n[@id:289265]\r\nMenschen sind nicht schlechthin mehr oder weniger weise – es kommt auf das Problem und die Umstände an",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Menschen sind nicht schlechthin mehr oder weniger weise – es kommt auf das Problem und die Umstände an",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "289265"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289198]\r\nTatsächlich weisen aber vielleicht eher alte weise Frauen der Jugend den Weg. Das jedenfalls postuliert die „Großmutter-Hypothese“ der Weisheit, die der Psychiatrieprofessor Dilip Jeste von der __University of California__ in San Diego vertritt. Ihr zufolge können alte Frauen zwar keine Kinder mehr bekommen, leben aber oft noch Jahrzehnte weiter, um ihre gesammelte Lebenserfahrung an die Enkel weiterzugeben.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Tatsächlich weisen aber vielleicht eher alte weise Frauen der Jugend den Weg. Das jedenfalls postuliert die „Großmutter-Hypothese“ der Weisheit, die der Psychiatrieprofessor Dilip Jeste von der __University of California__ in San Diego vertritt. Ihr zufolge können alte Frauen zwar keine Kinder mehr bekommen, leben aber oft noch Jahrzehnte weiter, um ihre gesammelte Lebenserfahrung an die Enkel weiterzugeben.",
+      "id": [
+        "289198"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289199]\r\nWie auch der Artikel __Inneres Wachstum__ (S. 66) in diesem Heft zeigt, ist allerdings nicht einmal ganz klar, ob alte Menschen wirklich weiser sind. Das besagen zwar viele Studien, aber nicht alle. In einer Untersuchung der Universität Leipzig schnitten Jüngere sogar besser ab, wenn es um Ehekonflikte ging. Mit denen beschäftigten sie sich wohl mehr als die Älteren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Wie auch der Artikel __Inneres Wachstum__ (S. 66) in diesem Heft zeigt, ist allerdings nicht einmal ganz klar, ob alte Menschen wirklich weiser sind. Das besagen zwar viele Studien, aber nicht alle. In einer Untersuchung der Universität Leipzig schnitten Jüngere sogar besser ab, wenn es um Ehekonflikte ging. Mit denen beschäftigten sie sich wohl mehr als die Älteren.",
+      "id": [
+        "289199"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289200]\r\nAufgrund solcher Studien argumentiert der kanadische Psychologieprofessor Igor Grossmann: Ein Mensch ist nicht schlechthin mehr oder weniger weise. Es kommt immer auf das gerade anstehende Problem und auf die Umstände an. So liefern Menschen weisere Antworten, wenn sie nach den Problemen anderer gefragt werden, als wenn es um die eigenen geht, obwohl sie über die viel mehr wissen. Dass ihnen bei eigenen Problemen die eigenen Emotionen in die Quere kommen, wäre eine naheliegende Erklärung, aber Grossmann vermutet etwas anderes: Weisheit hat sich für die Lösung von Problemen der Gemeinschaft entwickelt, nicht für die persönlichen Sorgen. Tatsächlich scheinen wir mehr Weisheit an den Tag zu legen, wenn andere dabei sind oder uns ein Gespräch mit Vertrauten auf die Sprünge hilft.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Aufgrund solcher Studien argumentiert der kanadische Psychologieprofessor Igor Grossmann: Ein Mensch ist nicht schlechthin mehr oder weniger weise. Es kommt immer auf das gerade anstehende Problem und auf die Umstände an. So liefern Menschen weisere Antworten, wenn sie nach den Problemen anderer gefragt werden, als wenn es um die eigenen geht, obwohl sie über die viel mehr wissen. Dass ihnen bei eigenen Problemen die eigenen Emotionen in die Quere kommen, wäre eine naheliegende Erklärung, aber Grossmann vermutet etwas anderes: Weisheit hat sich für die Lösung von Problemen der Gemeinschaft entwickelt, nicht für die persönlichen Sorgen. Tatsächlich scheinen wir mehr Weisheit an den Tag zu legen, wenn andere dabei sind oder uns ein Gespräch mit Vertrauten auf die Sprünge hilft.",
+      "id": [
+        "289200"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289201]\r\nUlric Neisser jedenfalls war weise genug, seine Rolle nicht zu überschätzen und sich als einer unter vielen kognitiven Psychologen zu sehen: „Ich bin nicht der Vater der kognitiven Psychologie, nur der Taufpate, der ihr ihren Namen gegeben hat.“",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Ulric Neisser jedenfalls war weise genug, seine Rolle nicht zu überschätzen und sich als einer unter vielen kognitiven Psychologen zu sehen: „Ich bin nicht der Vater der kognitiven Psychologie, nur der Taufpate, der ihr ihren Namen gegeben hat.“",
+      "id": [
+        "289201"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.page:bitmark++&image]\r\n[@id:289202]\r\n[%12]\r\n[&image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-012.webp]\r\n[@thumbImage:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-012/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-012.jpg]\r\n\r\n\r\n\r\n\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-012-076-ppm-convert-gen.jpg|",
+    "bit": {
+      "type": "page",
+      "format": "bitmark++",
+      "body": "|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-012-076-ppm-convert-gen.jpg|",
+      "id": [
+        "289202"
+      ],
+      "item": "12",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-012.webp",
+          "showInIndex": false,
+          "format": "webp",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "thumbImage": [
+        "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-012/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-012.jpg"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:289203]\r\n[▼ch-1]\r\n[#DENKFALLEN VERMEIDEN]\r\n[%1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "289203"
+      ],
+      "anchor": "ch-1",
+      "title": "DENKFALLEN VERMEIDEN"
+    }
+  },
+  {
+    "bitmark": "[.quote]\r\n[@id:289204]\r\nManchmal halten wir zu lange an etwas fest, sehen uns selbst in allzu positivem Licht oder bilden uns ein, genau über etwas Bescheid zu wissen. Mit den richtigen Werkzeugen können wir lernen, solche Denkfehler zu umgehen",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Manchmal halten wir zu lange an etwas fest, sehen uns selbst in allzu positivem Licht oder bilden uns ein, genau über etwas Bescheid zu wissen. Mit den richtigen Werkzeugen können wir lernen, solche Denkfehler zu umgehen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "289204"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:289205]\r\n[▼ch-2]\r\n[##WUNDERBARES WUNSCHDENKEN]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "289205"
+      ],
+      "anchor": "ch-2",
+      "title": "WUNDERBARES WUNSCHDENKEN"
+    }
+  },
+  {
+    "bitmark": "[.page:bitmark++&image]\r\n[@id:289206]\r\n[%14]\r\n[&image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-014.webp]\r\n[@thumbImage:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-014/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-014.jpg]\r\n\r\n\r\n14 PSYCHOLOGIE HEUTE compact\r\nWUNDERBARES\r\nWUNSCHDENKEN\r\n\r\n\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-014-077-ppm-convert-gen.jpg|",
+    "bit": {
+      "type": "page",
+      "format": "bitmark++",
+      "body": "14 PSYCHOLOGIE HEUTE compact\r\nWUNDERBARES\r\nWUNSCHDENKEN\r\n\r\n\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-014-077-ppm-convert-gen.jpg|",
+      "id": [
+        "289206"
+      ],
+      "item": "14",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-014.webp",
+          "showInIndex": false,
+          "format": "webp",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "thumbImage": [
+        "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-014/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-014.jpg"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.quote]\r\n[@id:289207]\r\n„Mach dir doch nichts vor!“, sagen wir zu uns selbst, wenn wir uns mal wieder allzu positiven Illusionen hingeben. Doch vielleicht sollten wir nicht so streng mit uns sein. Denn hin und wieder die rosarote Brille aufzusetzen hat durchaus Vorteile\"[@quotedPerson:VON ANNETTE SCHÄFER]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "„Mach dir doch nichts vor!“, sagen wir zu uns selbst, wenn wir uns mal wieder allzu positiven Illusionen hingeben. Doch vielleicht sollten wir nicht so streng mit uns sein. Denn hin und wieder die rosarote Brille aufzusetzen hat durchaus Vorteile\"",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "289207"
+      ],
+      "quotedPerson": "VON ANNETTE SCHÄFER"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289208]\r\nStellen Sie sich vor, Sie wollen in ein altes, verwinkeltes Haus ein hochmodernes Bad einbauen lassen, und das möglichst schnell. Sie laden hintereinander zwei Handwerksmeister zur Besichtigung ein und fragen jeden der beiden, wie lange er für die Durchführung braucht. Der eine wägt sorgfältig die vielfältigen Hürden ab und schätzt vorsichtig: vier Wochen. Der andere stellt in Aussicht, das komplizierte Renovierungsprojekt innerhalb von vierzehn Tagen zu beenden, ein offenkundig illusorisches Versprechen. Welchen Handwerker wählen Sie?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Stellen Sie sich vor, Sie wollen in ein altes, verwinkeltes Haus ein hochmodernes Bad einbauen lassen, und das möglichst schnell. Sie laden hintereinander zwei Handwerksmeister zur Besichtigung ein und fragen jeden der beiden, wie lange er für die Durchführung braucht. Der eine wägt sorgfältig die vielfältigen Hürden ab und schätzt vorsichtig: vier Wochen. Der andere stellt in Aussicht, das komplizierte Renovierungsprojekt innerhalb von vierzehn Tagen zu beenden, ein offenkundig illusorisches Versprechen. Welchen Handwerker wählen Sie?",
+      "id": [
+        "289208"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289209]\r\nWer sich für den zweiten Kandidaten entscheidet, wird möglicherweise schneller zu einem neuen Badezimmer kommen, wenn man der Studie von zwei amerikanischen Forschern glaubt. Danach kann einem in schwierigen Situationen etwas Wunschdenken einen produktiven Schub verleihen. In der Untersuchung waren die optimistischsten Teilnehmenden zwar die am wenigsten akkuraten – sie brauchten für die Aufgabe (einen anspruchsvollen Test zum verbalen, mathematischen und logischen  Denken ausfüllen) deutlich länger, als sie prognostiziert hatten. Gleichzeitig gelangten sie aber schneller zum Ziel als Versuchspersonen, die ihren Zeitbedarf zutreffender eingeschätzt hatten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Wer sich für den zweiten Kandidaten entscheidet, wird möglicherweise schneller zu einem neuen Badezimmer kommen, wenn man der Studie von zwei amerikanischen Forschern glaubt. Danach kann einem in schwierigen Situationen etwas Wunschdenken einen produktiven Schub verleihen. In der Untersuchung waren die optimistischsten Teilnehmenden zwar die am wenigsten akkuraten – sie brauchten für die Aufgabe (einen anspruchsvollen Test zum verbalen, mathematischen und logischen  Denken ausfüllen) deutlich länger, als sie prognostiziert hatten. Gleichzeitig gelangten sie aber schneller zum Ziel als Versuchspersonen, die ihren Zeitbedarf zutreffender eingeschätzt hatten.",
+      "id": [
+        "289209"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289210]\r\nSelbstbetrug hat einen negativen Beigeschmack. Man denkt an Drogenabhängige, die behaupten, jederzeit aufhören zu können; an kriminelle Geschäftsleute, die im Gefängnis landen, weil sie sich für unantastbar hielten, oder an Opfer häuslicher Gewalt, die sich ihre Situation schönreden. In der Tat ging man in Psychologie und Psychiatrie lange Zeit davon aus, dass psychische Gesundheit einen engen Bezug zur Realität verlangt. Man glaubte, um erfolgreich und zufrieden durchs Leben zu gehen, müsse ein Mensch in der Lage sein, sich selbst nüchtern zu sehen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Selbstbetrug hat einen negativen Beigeschmack. Man denkt an Drogenabhängige, die behaupten, jederzeit aufhören zu können; an kriminelle Geschäftsleute, die im Gefängnis landen, weil sie sich für unantastbar hielten, oder an Opfer häuslicher Gewalt, die sich ihre Situation schönreden. In der Tat ging man in Psychologie und Psychiatrie lange Zeit davon aus, dass psychische Gesundheit einen engen Bezug zur Realität verlangt. Man glaubte, um erfolgreich und zufrieden durchs Leben zu gehen, müsse ein Mensch in der Lage sein, sich selbst nüchtern zu sehen.",
+      "id": [
+        "289210"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289211]\r\nIn den letzten Jahren aber haben die Psychologie, die Neurowissenschaft und die Verhaltensökonomie eine Reihe von Vorzügen der „rosaroten Brille“ entdeckt. In vielen Situationen, so belegen Studien, kann ein Schuss Schönfärberei durchaus vorteilhaft sein. Doch nicht nur das: Man weiß heute, dass wir alle uns manchmal selbst belügen, unterstreicht Caroline Keating von der Colgate-Universität im Bundesstaat New York, die seit mehr als fünfundzwanzig Jahren zu diesem Thema forscht. „Der Mensch scheint mit einem Hang zum Selbstbetrug geboren zu sein.“",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "In den letzten Jahren aber haben die Psychologie, die Neurowissenschaft und die Verhaltensökonomie eine Reihe von Vorzügen der „rosaroten Brille“ entdeckt. In vielen Situationen, so belegen Studien, kann ein Schuss Schönfärberei durchaus vorteilhaft sein. Doch nicht nur das: Man weiß heute, dass wir alle uns manchmal selbst belügen, unterstreicht Caroline Keating von der Colgate-Universität im Bundesstaat New York, die seit mehr als fünfundzwanzig Jahren zu diesem Thema forscht. „Der Mensch scheint mit einem Hang zum Selbstbetrug geboren zu sein.“",
+      "id": [
+        "289211"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289212]\r\nDie menschliche Fähigkeit, sich positive Illusionen zu machen, ist in der Tat phänomenal. Wir glauben, überdurchschnittlich gut Auto zu fahren, selbst wenn unsere Unfallbilanz dagegen spricht. Wir halten uns auch für besser aussehend, als wir tatsächlich sind. Wenn Leute aus einer Reihe von Fotos das Bild auswählen sollen, das sie am genauesten trifft, greifen die meisten zur attraktivsten Aufnahme, auch wenn diese künstlich aufgehübscht ist. Wir verklären unsere Vergangenheit und reden uns die Zukunft schön. Die Menschen in unserer Umgebung sehen wir ebenfalls in einem vorteilhaften Licht. Nicht nur unsere Liebsten, selbst zufällige Bekannte beziehen wir in unsere geschönte Weltsicht ein und sehen sie positiver als Leute, die nicht mit uns verbunden sind.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die menschliche Fähigkeit, sich positive Illusionen zu machen, ist in der Tat phänomenal. Wir glauben, überdurchschnittlich gut Auto zu fahren, selbst wenn unsere Unfallbilanz dagegen spricht. Wir halten uns auch für besser aussehend, als wir tatsächlich sind. Wenn Leute aus einer Reihe von Fotos das Bild auswählen sollen, das sie am genauesten trifft, greifen die meisten zur attraktivsten Aufnahme, auch wenn diese künstlich aufgehübscht ist. Wir verklären unsere Vergangenheit und reden uns die Zukunft schön. Die Menschen in unserer Umgebung sehen wir ebenfalls in einem vorteilhaften Licht. Nicht nur unsere Liebsten, selbst zufällige Bekannte beziehen wir in unsere geschönte Weltsicht ein und sehen sie positiver als Leute, die nicht mit uns verbunden sind.",
+      "id": [
+        "289212"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289213]\r\nDiese Neigung halten Forschende wie Keating für sinnvoll, weil sie uns hilft, Herausforderungen und Veränderungen zu bewältigen. Wahrnehmung, erläutert die Psychologin, sei kein objektiver Prozess. Wir füllen Lücken auf, denken uns Sachen aus. Aber die Art und Weise, wie wir dies tun, ist nicht zufällig, sondern so, dass wir selbst gut dabei wegkommen. „Diese besondere Art der Wahrnehmung verbessert unsere Leistungsfähigkeit“, so Keating, „insbesondere in stressigen Situationen. Würden wir uns realistischer sehen, könnten wir nicht so viel erreichen.“",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Diese Neigung halten Forschende wie Keating für sinnvoll, weil sie uns hilft, Herausforderungen und Veränderungen zu bewältigen. Wahrnehmung, erläutert die Psychologin, sei kein objektiver Prozess. Wir füllen Lücken auf, denken uns Sachen aus. Aber die Art und Weise, wie wir dies tun, ist nicht zufällig, sondern so, dass wir selbst gut dabei wegkommen. „Diese besondere Art der Wahrnehmung verbessert unsere Leistungsfähigkeit“, so Keating, „insbesondere in stressigen Situationen. Würden wir uns realistischer sehen, könnten wir nicht so viel erreichen.“",
+      "id": [
+        "289213"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:289214]\r\nSelbstbetrug: eine Art psychologisches Immunsystem?",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "Selbstbetrug: eine Art psychologisches Immunsystem?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "289214"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289215]\r\nDer amerikanische Sachbuchautor und Journalist Joseph Hallinan beschreibt Selbstbetrug als eine Art psychologisches Immunsystem: „Er hilft zum Beispiel, lähmende Depressionen abzuwehren.“ Der evolutionäre Auftrag sei, zu überleben und sich durchzusetzen. Selbsttäuschung könne entsprechendes Verhalten unterstützen, weil sie Hoffnung und ein Gefühl der Kontrolle verleihe. „Diese Eigenschaften sind so lebenswichtig, dass viele Forschende Selbstbetrug heute als Facette – und nicht als Fehler – unserer evolutionären Entwicklung ansehen“, erklärt Hallinan.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Der amerikanische Sachbuchautor und Journalist Joseph Hallinan beschreibt Selbstbetrug als eine Art psychologisches Immunsystem: „Er hilft zum Beispiel, lähmende Depressionen abzuwehren.“ Der evolutionäre Auftrag sei, zu überleben und sich durchzusetzen. Selbsttäuschung könne entsprechendes Verhalten unterstützen, weil sie Hoffnung und ein Gefühl der Kontrolle verleihe. „Diese Eigenschaften sind so lebenswichtig, dass viele Forschende Selbstbetrug heute als Facette – und nicht als Fehler – unserer evolutionären Entwicklung ansehen“, erklärt Hallinan.",
+      "id": [
+        "289215"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289216]\r\nWie wirkungsvoll Selbstbetrug ist, zeigt das Beispiel Schulnoten. Eine Reihe von Untersuchungen belegt, dass Menschen dazu neigen, ihre schulischen Leistungen im Rückblick schönzudenken. Man erinnert sich an jede Eins und Zwei, die man jemals hatte, aber Vieren und Fünfen scheinen wie von Geisterhand aus dem Gedächtnis zu verschwinden. In einer Studie konnten Versuchspersonen ihre Höchstnoten zu 98 Prozent richtig abrufen, schlechte Noten aber nur zu 29 Prozent. Das Resultat: ein deutlich geschöntes Bild der eigenen Fähigkeiten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Wie wirkungsvoll Selbstbetrug ist, zeigt das Beispiel Schulnoten. Eine Reihe von Untersuchungen belegt, dass Menschen dazu neigen, ihre schulischen Leistungen im Rückblick schönzudenken. Man erinnert sich an jede Eins und Zwei, die man jemals hatte, aber Vieren und Fünfen scheinen wie von Geisterhand aus dem Gedächtnis zu verschwinden. In einer Studie konnten Versuchspersonen ihre Höchstnoten zu 98 Prozent richtig abrufen, schlechte Noten aber nur zu 29 Prozent. Das Resultat: ein deutlich geschöntes Bild der eigenen Fähigkeiten.",
+      "id": [
+        "289216"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289217]\r\nAuf den ersten Blick könnte man diese Selbsttäuschung für kontraproduktiv halten: Wer sich für besser hält, als er ist, lässt es möglicherweise an Einsatz vermissen. Dies scheint aber nicht der Fall zu sein – ganz im Gegenteil. Britische und amerikanische Forschende befragten Studentinnen und Studenten, wie sie bislang in Schule und Universität abgeschnitten hatten, und verfolgten dann, wie sich ihre Noten in den nächsten Monaten entwickelten. Jene Studierenden, die ihr bisheriges Abschneiden hochgespielt hatten, konnten ihre Leistungen bis zum Ende des Semesters deutlich verbessern. Die Erhebung physiologischer Daten zeigte: Die positive Legendenbildung verhalf den Übertreibenden zu innerer Ruhe. Während der Interviews über ihre bisherigen Noten synchronisierten sich ihre Atmung und Herzfrequenz, ein Zeichen für emotionale Ausgeglichenheit. Auch neutralen Beobachtenden erschienen sie in sich ruhender als die realistischen Freiwilligen. Die eigenen Leistungen zu verklären, schlossen die Forschenden, stärkt Zuversicht und Motivation, was wiederum hilft, mit den Herausforderungen des Studiums umzugehen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Auf den ersten Blick könnte man diese Selbsttäuschung für kontraproduktiv halten: Wer sich für besser hält, als er ist, lässt es möglicherweise an Einsatz vermissen. Dies scheint aber nicht der Fall zu sein – ganz im Gegenteil. Britische und amerikanische Forschende befragten Studentinnen und Studenten, wie sie bislang in Schule und Universität abgeschnitten hatten, und verfolgten dann, wie sich ihre Noten in den nächsten Monaten entwickelten. Jene Studierenden, die ihr bisheriges Abschneiden hochgespielt hatten, konnten ihre Leistungen bis zum Ende des Semesters deutlich verbessern. Die Erhebung physiologischer Daten zeigte: Die positive Legendenbildung verhalf den Übertreibenden zu innerer Ruhe. Während der Interviews über ihre bisherigen Noten synchronisierten sich ihre Atmung und Herzfrequenz, ein Zeichen für emotionale Ausgeglichenheit. Auch neutralen Beobachtenden erschienen sie in sich ruhender als die realistischen Freiwilligen. Die eigenen Leistungen zu verklären, schlossen die Forschenden, stärkt Zuversicht und Motivation, was wiederum hilft, mit den Herausforderungen des Studiums umzugehen.",
+      "id": [
+        "289217"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289218]\r\n[%][%Negative Gedanken beiseiteschieben]\r\nDie „versteckten Reize des Selbstbetrugs“, wie Keating es formuliert, können in sehr unterschiedlichen Situationen auftreten. Sie selbst hat eine ganze Reihe davon erforscht. In einer Studie zeigte sich, dass Studentinnen, die auf dem Campus Führungsaufgaben übernommen hatten, stärker zum Selbstbetrug neigten als weniger exponierte Kommilitoninnen. In einer anderen nahmen sich junge Frauen als schlanker wahr, wenn sie an eine romantische Verabredung dachten. Wenn Frauen in Beruf oder Liebe erfolgreich sein wollen, so Keating, tun sie gut daran, eventuell auftauchende negative Gedanken beiseitezuschieben. Kleine Selbstlügen können dabei helfen. Ähnliches gilt auch im Sport. Der Selbstbetrug scheint nicht nur von Schmerzen abzulenken, was in Training und Wettbewerb entscheidend sein kann, sondern erlaubt Athletinnen und Athleten offenbar auch, Gedanken an ein mögliches Versagen zu blocken. In einem raffinierten Experiment untersuchten Keating und eine Kollegin Studierende, die dem Schwimmteam ihrer Universität angehörten. Mithilfe eines Stereoskops ließen sie vorm rechten und linken Auge der Sportler und Sportlerinnen jeweils ein unterschiedliches Wort auftauchen. Ein Paar bestand aus einem negativen und einem neutralen Begriff (zum Beispiel: fear – hear, lose – nose), und es wurden mehrere Runden durchgeführt. Die entscheidende Frage: Welches der beiden Wörter nimmt eine Versuchsperson wahr? Es stellte sich heraus, dass diejenigen, die zu nationalen Wettbewerben zugelassen waren, mehr dazu neigten, die neutralen Wörter zu sehen und die negativen auszublenden, als Schwimmerinnen und Schwimmer, die nicht so erfolgreich waren. Die Studie könne nichts über Kausalität aussagen, räumt Keating ein. „Aber die Ergebnisse sind mit der These vereinbar, dass Selbstbetrug Motivation und Leistung in kompetitiven Situationen erhöht.“",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Die „versteckten Reize des Selbstbetrugs“, wie Keating es formuliert, können in sehr unterschiedlichen Situationen auftreten. Sie selbst hat eine ganze Reihe davon erforscht. In einer Studie zeigte sich, dass Studentinnen, die auf dem Campus Führungsaufgaben übernommen hatten, stärker zum Selbstbetrug neigten als weniger exponierte Kommilitoninnen. In einer anderen nahmen sich junge Frauen als schlanker wahr, wenn sie an eine romantische Verabredung dachten. Wenn Frauen in Beruf oder Liebe erfolgreich sein wollen, so Keating, tun sie gut daran, eventuell auftauchende negative Gedanken beiseitezuschieben. Kleine Selbstlügen können dabei helfen. Ähnliches gilt auch im Sport. Der Selbstbetrug scheint nicht nur von Schmerzen abzulenken, was in Training und Wettbewerb entscheidend sein kann, sondern erlaubt Athletinnen und Athleten offenbar auch, Gedanken an ein mögliches Versagen zu blocken. In einem raffinierten Experiment untersuchten Keating und eine Kollegin Studierende, die dem Schwimmteam ihrer Universität angehörten. Mithilfe eines Stereoskops ließen sie vorm rechten und linken Auge der Sportler und Sportlerinnen jeweils ein unterschiedliches Wort auftauchen. Ein Paar bestand aus einem negativen und einem neutralen Begriff (zum Beispiel: fear – hear, lose – nose), und es wurden mehrere Runden durchgeführt. Die entscheidende Frage: Welches der beiden Wörter nimmt eine Versuchsperson wahr? Es stellte sich heraus, dass diejenigen, die zu nationalen Wettbewerben zugelassen waren, mehr dazu neigten, die neutralen Wörter zu sehen und die negativen auszublenden, als Schwimmerinnen und Schwimmer, die nicht so erfolgreich waren. Die Studie könne nichts über Kausalität aussagen, räumt Keating ein. „Aber die Ergebnisse sind mit der These vereinbar, dass Selbstbetrug Motivation und Leistung in kompetitiven Situationen erhöht.“",
+      "id": [
+        "289218"
+      ],
+      "lead": "Negative Gedanken beiseiteschieben"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:289219]\r\n[&image:https://docs.bitmark.cloud/bit-books/preselect/beltz/psychologie_heute/web-resources/images/preselect_psychologie_heute_1.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "289219"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/preselect/beltz/psychologie_heute/web-resources/images/preselect_psychologie_heute_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:289220]\r\nDie eigenen Leistungen zu verklären stärkt Zuversicht und Motivation. Das hilft uns bei Herausforderungen",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "Die eigenen Leistungen zu verklären stärkt Zuversicht und Motivation. Das hilft uns bei Herausforderungen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "289220"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289221]\r\n[%][%Wenn die Beschönigung uns schadet]\r\nAllerdings ist es keineswegs so, dass Selbstillusionen immer förderlich sind. Joseph Hallinan vermutet, dass Situationen, in denen Selbstbetrug schadet, sogar zahlreicher sind als Situationen, in denen er nützt. In seinem Buch __Kidding Ourselves__ schildert er beispielsweise die Gefahren in Machtpositionen. So neigen Leute an der Spitze dazu, systematisch zu überschätzen, inwieweit Untergebene sie respektieren und unterstützen. Auf dem Weg in die Chefetage scheinen sie zu vergessen, wie man subtile Signale anderer liest. In einem Experiment konnten Vorgesetzte, die einen Witz erzählten, nicht unterscheiden, ob die Zuhörer echt oder aufgesetzt lachten. Weil Macht die Sensitivität gegenüber anderen abstumpfen lässt, sei es nicht erstaunlich, so Hallinan, dass sie oft zu einem ignoranten, rüpelhaften und dummen Verhalten führt. Mit fatalen Folgen, wie zahlreiche Beispiele gescheiterter Topmanager und Politikerinnen zeigen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Allerdings ist es keineswegs so, dass Selbstillusionen immer förderlich sind. Joseph Hallinan vermutet, dass Situationen, in denen Selbstbetrug schadet, sogar zahlreicher sind als Situationen, in denen er nützt. In seinem Buch __Kidding Ourselves__ schildert er beispielsweise die Gefahren in Machtpositionen. So neigen Leute an der Spitze dazu, systematisch zu überschätzen, inwieweit Untergebene sie respektieren und unterstützen. Auf dem Weg in die Chefetage scheinen sie zu vergessen, wie man subtile Signale anderer liest. In einem Experiment konnten Vorgesetzte, die einen Witz erzählten, nicht unterscheiden, ob die Zuhörer echt oder aufgesetzt lachten. Weil Macht die Sensitivität gegenüber anderen abstumpfen lässt, sei es nicht erstaunlich, so Hallinan, dass sie oft zu einem ignoranten, rüpelhaften und dummen Verhalten führt. Mit fatalen Folgen, wie zahlreiche Beispiele gescheiterter Topmanager und Politikerinnen zeigen.",
+      "id": [
+        "289221"
+      ],
+      "lead": "Wenn die Beschönigung uns schadet"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289222]\r\nWenn es um die körperliche Gesundheit geht, kann Irrationalität sogar tödlich sein, man denke nur an Raucherinnen und Raucher, die sich vormachen, sie hätten eine Konstitution wie Ex-Bundeskanzler Helmut Schmidt, der – obwohl starker Raucher – stolze 96 Jahre alt wurde. Erstaunlicherweise sind auch Gesundheitsprofis vor solchen gefährlichen Selbstlügen nicht gefeit. Ärztinnen und Pfleger, so zeigen Studien, waschen ihre Hände im Schnitt nur halb so oft, wie es notwendig wäre. Der Grund: Sie glauben, Bakterien und Viren könnten ihnen weniger anhaben als anderen Leuten!",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Wenn es um die körperliche Gesundheit geht, kann Irrationalität sogar tödlich sein, man denke nur an Raucherinnen und Raucher, die sich vormachen, sie hätten eine Konstitution wie Ex-Bundeskanzler Helmut Schmidt, der – obwohl starker Raucher – stolze 96 Jahre alt wurde. Erstaunlicherweise sind auch Gesundheitsprofis vor solchen gefährlichen Selbstlügen nicht gefeit. Ärztinnen und Pfleger, so zeigen Studien, waschen ihre Hände im Schnitt nur halb so oft, wie es notwendig wäre. Der Grund: Sie glauben, Bakterien und Viren könnten ihnen weniger anhaben als anderen Leuten!",
+      "id": [
+        "289222"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:289223]\r\nIllusionen in der Familie:\r\nEhepartner idealisieren sich gegenseitig, Eltern ihre Kinder",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "Illusionen in der Familie:\r\nEhepartner idealisieren sich gegenseitig, Eltern ihre Kinder",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "289223"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289224]\r\nUnd doch gibt es Situationen, in denen Illusionen über körperliche Stärke geradezu lebensverlängernd wirken. In einer Studie mit Aidskranken, die nur eine geringe Lebenserwartung hatten, zeigten diejenigen, die ihr Leiden ignorierten und sich weigerten, einem potenziell nahen Tod ins Auge zu sehen, einen besseren Krankheitsverlauf als jene mit weniger illusionären Einstellungen. Wer realistisch war und seine Erkrankung akzeptierte, starb im Schnitt neun Monate früher als die übermäßig optimistischen Kranken. Vergleichbare Muster fanden sich bei HIV- und Brustkrebspatientinnen und -patienten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Und doch gibt es Situationen, in denen Illusionen über körperliche Stärke geradezu lebensverlängernd wirken. In einer Studie mit Aidskranken, die nur eine geringe Lebenserwartung hatten, zeigten diejenigen, die ihr Leiden ignorierten und sich weigerten, einem potenziell nahen Tod ins Auge zu sehen, einen besseren Krankheitsverlauf als jene mit weniger illusionären Einstellungen. Wer realistisch war und seine Erkrankung akzeptierte, starb im Schnitt neun Monate früher als die übermäßig optimistischen Kranken. Vergleichbare Muster fanden sich bei HIV- und Brustkrebspatientinnen und -patienten.",
+      "id": [
+        "289224"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289225]\r\nSelbstüberschätzung hilft offenbar, mit dem enormen psychischen Druck während einer lebensbedrohlichen Krankheit umzugehen, was den Körper entlastet. Wie dies funktioniert, zeigt eine Studie mit gesunden Menschen: Bei Versuchspersonen, die zu Selbstaufwertung neigten, stiegen während Stresstests (unter Zeitdruck rückwärts zählen, vor einer Kamera über schwierige Themen sprechen) Herzrate und Blutdruck deutlich weniger an und sie erholten sich schneller als Teilnehmende mit einem realistischeren Selbstbild.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Selbstüberschätzung hilft offenbar, mit dem enormen psychischen Druck während einer lebensbedrohlichen Krankheit umzugehen, was den Körper entlastet. Wie dies funktioniert, zeigt eine Studie mit gesunden Menschen: Bei Versuchspersonen, die zu Selbstaufwertung neigten, stiegen während Stresstests (unter Zeitdruck rückwärts zählen, vor einer Kamera über schwierige Themen sprechen) Herzrate und Blutdruck deutlich weniger an und sie erholten sich schneller als Teilnehmende mit einem realistischeren Selbstbild.",
+      "id": [
+        "289225"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289226]\r\nAuch in zwischenmenschlichen Beziehungen können positive Illusionen erstaunlich hilfreich sein. Es ist nicht nur ein Klischee, dass viele Eltern ihre Kinder für die hübschesten und intelligentesten halten. Unrealistisch positive Einschätzungen sind unter Müttern und Vätern weit verbreitet, insbesondere unter jenen, die sich selbst für überdurchschnittlich halten. In einer Studie mit Eltern von Zwei- bis Fünfjährigen gaben 90 Prozent an, ihr Nachwuchs habe mehr positive Eigenschaften als ein durchschnittliches Kind; 80 Prozent attestierten ihm weniger negative Attribute. Aussagen wie „Mein Kind ist nahezu perfekt“ hörten die Forschenden häufig. Das mag weltfremd sein, dennoch – oder gerade deshalb – tut es dem Familienleben gut. So zeigte sich eine interessante Dynamik: Je positiver die Eltern sich selbst sahen, desto mehr idealisierten sie auch ihr Kind. Wer ein geschöntes Bild von Sohn oder Tochter hatte, war wiederum zufriedener mit seiner Beziehung zum Kind – was der elterlichen Selbsteinschätzung weiteren Auftrieb verlieh. Ein positiver Teufelskreis.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Auch in zwischenmenschlichen Beziehungen können positive Illusionen erstaunlich hilfreich sein. Es ist nicht nur ein Klischee, dass viele Eltern ihre Kinder für die hübschesten und intelligentesten halten. Unrealistisch positive Einschätzungen sind unter Müttern und Vätern weit verbreitet, insbesondere unter jenen, die sich selbst für überdurchschnittlich halten. In einer Studie mit Eltern von Zwei- bis Fünfjährigen gaben 90 Prozent an, ihr Nachwuchs habe mehr positive Eigenschaften als ein durchschnittliches Kind; 80 Prozent attestierten ihm weniger negative Attribute. Aussagen wie „Mein Kind ist nahezu perfekt“ hörten die Forschenden häufig. Das mag weltfremd sein, dennoch – oder gerade deshalb – tut es dem Familienleben gut. So zeigte sich eine interessante Dynamik: Je positiver die Eltern sich selbst sahen, desto mehr idealisierten sie auch ihr Kind. Wer ein geschöntes Bild von Sohn oder Tochter hatte, war wiederum zufriedener mit seiner Beziehung zum Kind – was der elterlichen Selbsteinschätzung weiteren Auftrieb verlieh. Ein positiver Teufelskreis.",
+      "id": [
+        "289226"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289227]\r\nDen scheint es auch zu geben, wenn man den Gatten oder die Gattin ein wenig verklärt. Die Forscherin Sandra Murray von der Universität Buffalo und ihr Team verfolgten 220 frischverheiratete Paare über drei Jahre. Die Gefühle von Erfüllung ließen über diesen Zeitraum insgesamt erkennbar nach. Eine unvermeidliche Entwicklung nach den ersten euphorischen Wochen, könnte man meinen. Doch das Eheglück nahm nicht überall gleichermaßen ab. So schien die Idealisierung des oder der anderen aufkommende Unzufriedenheit abfedern zu können. Jene Probandinnen und Probanden, die ihre Liebsten zu Beginn am meisten schöngefärbt hatten, erlebten sogar keinerlei Abstieg von Wolke sieben. Mehr noch: Die Zufriedenheit färbte auf die in den Himmel Gehobenen ab. Wen der oder die Liebste idealisierte, war mit der Beziehung zufriedener als jene, die mit einer nüchternen Person zusammenlebten.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Den scheint es auch zu geben, wenn man den Gatten oder die Gattin ein wenig verklärt. Die Forscherin Sandra Murray von der Universität Buffalo und ihr Team verfolgten 220 frischverheiratete Paare über drei Jahre. Die Gefühle von Erfüllung ließen über diesen Zeitraum insgesamt erkennbar nach. Eine unvermeidliche Entwicklung nach den ersten euphorischen Wochen, könnte man meinen. Doch das Eheglück nahm nicht überall gleichermaßen ab. So schien die Idealisierung des oder der anderen aufkommende Unzufriedenheit abfedern zu können. Jene Probandinnen und Probanden, die ihre Liebsten zu Beginn am meisten schöngefärbt hatten, erlebten sogar keinerlei Abstieg von Wolke sieben. Mehr noch: Die Zufriedenheit färbte auf die in den Himmel Gehobenen ab. Wen der oder die Liebste idealisierte, war mit der Beziehung zufriedener als jene, die mit einer nüchternen Person zusammenlebten.",
+      "id": [
+        "289227"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289228]\r\nSelbstbetrug ist also eine Ressource. Forscherin Keating ermuntert, sich nicht zu scheuen, die rosarote Brille aufzusetzen. Negative Gedanken wegzudrängen könne einem in bestimmten Situationen helfen, mehr zu leisten. Allerdings warnt sie: „Wenn man sich dauerhaft und in wichtigen Fragen selbst belügt, kann das großen Ärger bringen.“ Hallinan sieht das lockerer. Ebenso wie der Körper reguliere sich die Psyche selbst, ohne dass man sich ständig hinterfragt. „Man braucht nicht immer und überall realistisch zu sein. Wenn man sich belügt, wie intelligent, attraktiv oder reich man ist, muss das nichts Schlechtes sein.“ Als faktenorientierter und überkritischer Journalist habe ihn diese Erkenntnis selbst überrascht, sagt er: „Aber der Glaube, überlegen zu sein, macht oft tatsächlich überlegen.“",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Selbstbetrug ist also eine Ressource. Forscherin Keating ermuntert, sich nicht zu scheuen, die rosarote Brille aufzusetzen. Negative Gedanken wegzudrängen könne einem in bestimmten Situationen helfen, mehr zu leisten. Allerdings warnt sie: „Wenn man sich dauerhaft und in wichtigen Fragen selbst belügt, kann das großen Ärger bringen.“ Hallinan sieht das lockerer. Ebenso wie der Körper reguliere sich die Psyche selbst, ohne dass man sich ständig hinterfragt. „Man braucht nicht immer und überall realistisch zu sein. Wenn man sich belügt, wie intelligent, attraktiv oder reich man ist, muss das nichts Schlechtes sein.“ Als faktenorientierter und überkritischer Journalist habe ihn diese Erkenntnis selbst überrascht, sagt er: „Aber der Glaube, überlegen zu sein, macht oft tatsächlich überlegen.“",
+      "id": [
+        "289228"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:289229]\r\n[&image:https://docs.bitmark.cloud/bit-books/preselect/beltz/psychologie_heute/web-resources/images/preselect_psychologie_heute_2.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "289229"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/preselect/beltz/psychologie_heute/web-resources/images/preselect_psychologie_heute_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:289230]\r\n[▼ch-3]\r\n[##Wie wir uns selbst belügen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "289230"
+      ],
+      "anchor": "ch-3",
+      "title": "Wie wir uns selbst belügen"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289231]\r\nDer Begriff „positive Illusionen“ geht auf die Sozialpsychologin Shelley Taylor zurück. In einem vielzitierten Artikel von 1988 beschrieben die mittlerweile emeritierte Professorin von der Universität Kalifornien (Los Angeles) und ihr Kollege Jonathan Brown drei verbreitete Formen von Selbstbetrug, bei denen Menschen sich und ihre Situation geschönt sehen:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Der Begriff „positive Illusionen“ geht auf die Sozialpsychologin Shelley Taylor zurück. In einem vielzitierten Artikel von 1988 beschrieben die mittlerweile emeritierte Professorin von der Universität Kalifornien (Los Angeles) und ihr Kollege Jonathan Brown drei verbreitete Formen von Selbstbetrug, bei denen Menschen sich und ihre Situation geschönt sehen:",
+      "id": [
+        "289231"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289232]\r\n**Unrealistisch positive Selbsteinschätzung:** Die meisten Leute schreiben ich eher positive als negative Eigenschaften zu. Sie halten sich für besser und leistungsfähiger als der Durchschnitt (above average effect) und erinnern ihre Erfolge leichter als ihre Misserfolge. Fähigkeiten, in denen sie nicht brillieren, spielen sie als unwichtig herunter und nehmen Fortschritte wahr, wo keine sind.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Unrealistisch positive Selbsteinschätzung:** Die meisten Leute schreiben ich eher positive als negative Eigenschaften zu. Sie halten sich für besser und leistungsfähiger als der Durchschnitt (above average effect) und erinnern ihre Erfolge leichter als ihre Misserfolge. Fähigkeiten, in denen sie nicht brillieren, spielen sie als unwichtig herunter und nehmen Fortschritte wahr, wo keine sind.",
+      "id": [
+        "289232"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289233]\r\n**Kontrollillusion:** Hierunter versteht man den Glauben, mehr Einfluss über eine Situation zu haben, als es der Realität entspricht. So meinen viele, sie schnitten bei einem Spiel besser ab, wenn sie selbst würfeln, anstatt jemand anderes für sich würfeln zu lassen, obwohl das eine Ergebnis genauso zufällig ist wie das andere.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Kontrollillusion:** Hierunter versteht man den Glauben, mehr Einfluss über eine Situation zu haben, als es der Realität entspricht. So meinen viele, sie schnitten bei einem Spiel besser ab, wenn sie selbst würfeln, anstatt jemand anderes für sich würfeln zu lassen, obwohl das eine Ergebnis genauso zufällig ist wie das andere.",
+      "id": [
+        "289233"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289234]\r\n**Übertriebener Optimismus:** Menschen neigen dazu, übermäßig zuversichtlich in ihre Zukunft zu blicken. So glauben sie, ihre Chance, positive Erfahrungen zu machen (den ersten Job zu mögen, ein gutes Gehalt zu erzielen, ein begabtes Kind zu haben), sei höher als bei anderen. Und andersherum halten sie es für weniger wahrscheinlich, dass ihnen etwas Unangenehmes passiert, sei es Opfer einer Straftat zu werden, in finanzielle Probleme zu geraten oder depressiv zu werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Übertriebener Optimismus:** Menschen neigen dazu, übermäßig zuversichtlich in ihre Zukunft zu blicken. So glauben sie, ihre Chance, positive Erfahrungen zu machen (den ersten Job zu mögen, ein gutes Gehalt zu erzielen, ein begabtes Kind zu haben), sei höher als bei anderen. Und andersherum halten sie es für weniger wahrscheinlich, dass ihnen etwas Unangenehmes passiert, sei es Opfer einer Straftat zu werden, in finanzielle Probleme zu geraten oder depressiv zu werden.",
+      "id": [
+        "289234"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289235]\r\nDiese Illusionen, argumentierten Taylor und Brown, sind nicht etwa ein Zeichen für mentale Probleme, sondern im Gegenteil charakteristisch für eine funktionierende Psyche. Als Indiz führten sie Studien an, nach denen Depressive und Menschen mit Selbstwertproblemen einen weniger positiv gefärbten Blick haben. Dies lasse Zweifel an der Vorstellung aufkommen, Realismus und mentale Gesundheit gingen zwingend Hand in Hand. Auch andere Belege sprächen dafür, dass positive Illusionen – sofern sie nicht in exzessivem Maß auftreten – förderlich sind. Sie erhöhten die Lebenszufriedenheit, erleichterten es, sich um andere zu kümmern, und förderten Kreativität und Produktivität im Beruf. Auch wenn diese Argumentation nicht unwidersprochen blieb, gilt die Veröffentlichung von Taylor und Brown bis heute als wegweisend und regte zahlreiche Studien über Selbstbetrug und seine Vor- und Nachteile an.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Diese Illusionen, argumentierten Taylor und Brown, sind nicht etwa ein Zeichen für mentale Probleme, sondern im Gegenteil charakteristisch für eine funktionierende Psyche. Als Indiz führten sie Studien an, nach denen Depressive und Menschen mit Selbstwertproblemen einen weniger positiv gefärbten Blick haben. Dies lasse Zweifel an der Vorstellung aufkommen, Realismus und mentale Gesundheit gingen zwingend Hand in Hand. Auch andere Belege sprächen dafür, dass positive Illusionen – sofern sie nicht in exzessivem Maß auftreten – förderlich sind. Sie erhöhten die Lebenszufriedenheit, erleichterten es, sich um andere zu kümmern, und förderten Kreativität und Produktivität im Beruf. Auch wenn diese Argumentation nicht unwidersprochen blieb, gilt die Veröffentlichung von Taylor und Brown bis heute als wegweisend und regte zahlreiche Studien über Selbstbetrug und seine Vor- und Nachteile an.",
+      "id": [
+        "289235"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.page:bitmark++&image]\r\n[@id:289236]\r\n[%20]\r\n[&image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-020.webp]\r\n[@thumbImage:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-020/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-020.jpg]\r\n\r\n\r\n20\r\n„Manchmal genügt\r\nschon ein wenig\r\nStatistik“\r\n\r\n\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-020-081-ppm-convert-gen.jpg|",
+    "bit": {
+      "type": "page",
+      "format": "bitmark++",
+      "body": "20\r\n„Manchmal genügt\r\nschon ein wenig\r\nStatistik“\r\n\r\n\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-020-081-ppm-convert-gen.jpg|",
+      "id": [
+        "289236"
+      ],
+      "item": "20",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-020.webp",
+          "showInIndex": false,
+          "format": "webp",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "thumbImage": [
+        "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-020/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-020.jpg"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:289237]\r\nWir alle begehen mehr oder minder häufig Denkfehler. Doch das ist gar nicht schlimm, sagt der Sozialpsychologe Richard Nisbett. Denn es gibt Techniken und Werkzeuge, die uns dabei helfen, weniger oft danebenzuliegen",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Wir alle begehen mehr oder minder häufig Denkfehler. Doch das ist gar nicht schlimm, sagt der Sozialpsychologe Richard Nisbett. Denn es gibt Techniken und Werkzeuge, die uns dabei helfen, weniger oft danebenzuliegen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "289237"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289238]\r\n**Herr Professor Nisbett, psychologische Studien über unser Alltagsdenken haben wenig Schmeichelhaftes ergeben. Wir scheinen Fehler über Fehler zu machen – sind wir vielleicht dümmer, als wir glauben?**\r\nWir irren uns häufig, sollten uns deshalb aber keine Sorgen machen. Schließlich begehen alle Menschen dieselben Denkfehler, auch wir Psychologen und Psychologinnen. Ich würde deshalb nicht sagen, dass die Leute dumm sind. Denn in vielen Situationen gibt es ja Werkzeuge, die uns helfen, etwas weniger oft danebenzuliegen. Manchmal genügt schon ein wenig Statistik – und zwar auf einem Niveau, das jeder verstehen und lernen kann.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Herr Professor Nisbett, psychologische Studien über unser Alltagsdenken haben wenig Schmeichelhaftes ergeben. Wir scheinen Fehler über Fehler zu machen – sind wir vielleicht dümmer, als wir glauben?**\r\nWir irren uns häufig, sollten uns deshalb aber keine Sorgen machen. Schließlich begehen alle Menschen dieselben Denkfehler, auch wir Psychologen und Psychologinnen. Ich würde deshalb nicht sagen, dass die Leute dumm sind. Denn in vielen Situationen gibt es ja Werkzeuge, die uns helfen, etwas weniger oft danebenzuliegen. Manchmal genügt schon ein wenig Statistik – und zwar auf einem Niveau, das jeder verstehen und lernen kann.",
+      "id": [
+        "289238"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289239]\r\n**Was meinen Sie mit „Statistik“? Reden wir jetzt über komplizierte Formeln?** \r\nNein, nein. Viele Menschen verwenden die Regeln der Statistik ja ganz automatisch. Sportfans haben zum Beispiel ein gutes Gespür dafür. Sie wissen, dass man einen Spieler oder eine Spielerin nicht vorschnell beurteilen sollte. Schließlich erwischen alle mal einen guten oder einen schlechten Tag. Man muss also mehrere Matches beobachten, um sich ein korrektes Bild zu machen. Ob man eine Spielerin in sein Team aufnimmt oder nicht – diese Entscheidung würde kein Trainer treffen, der die Athletin lediglich eine halbe Stunde lang beim Training beobachtet hat.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Was meinen Sie mit „Statistik“? Reden wir jetzt über komplizierte Formeln?** \r\nNein, nein. Viele Menschen verwenden die Regeln der Statistik ja ganz automatisch. Sportfans haben zum Beispiel ein gutes Gespür dafür. Sie wissen, dass man einen Spieler oder eine Spielerin nicht vorschnell beurteilen sollte. Schließlich erwischen alle mal einen guten oder einen schlechten Tag. Man muss also mehrere Matches beobachten, um sich ein korrektes Bild zu machen. Ob man eine Spielerin in sein Team aufnimmt oder nicht – diese Entscheidung würde kein Trainer treffen, der die Athletin lediglich eine halbe Stunde lang beim Training beobachtet hat.",
+      "id": [
+        "289239"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289240]\r\n**Man braucht eine größere Stichprobe?** \r\nRichtig. Man spricht auch vom „Gesetz der großen Zahl“ – je mehr Beobachtungen wir haben, desto wahrscheinlicher wird es, dass wir die Dinge so sehen, wie sie wirklich sind. Das verstehen alle. Allerdings scheitern wir im Alltag verblüffend oft daran, diese Regel anzuwenden. Manche Leute glauben zum Beispiel, dass ein 30-minütiges Vorstellungsgespräch genügt, um einen Bewerber einschätzen zu können. Dieselben Menschen, die so ein Vorgehen bei einer Sportlerin ablehnen, würden es im Geschäftsleben unwidersprochen akzeptieren. Aus statistischer Sicht ist jedoch klar, dass so eine kurze Begegnung fast gar nichts darüber aussagt, ob ein Bewerber geeignet ist oder nicht. Die Stichprobe ist viel zu klein.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Man braucht eine größere Stichprobe?** \r\nRichtig. Man spricht auch vom „Gesetz der großen Zahl“ – je mehr Beobachtungen wir haben, desto wahrscheinlicher wird es, dass wir die Dinge so sehen, wie sie wirklich sind. Das verstehen alle. Allerdings scheitern wir im Alltag verblüffend oft daran, diese Regel anzuwenden. Manche Leute glauben zum Beispiel, dass ein 30-minütiges Vorstellungsgespräch genügt, um einen Bewerber einschätzen zu können. Dieselben Menschen, die so ein Vorgehen bei einer Sportlerin ablehnen, würden es im Geschäftsleben unwidersprochen akzeptieren. Aus statistischer Sicht ist jedoch klar, dass so eine kurze Begegnung fast gar nichts darüber aussagt, ob ein Bewerber geeignet ist oder nicht. Die Stichprobe ist viel zu klein.",
+      "id": [
+        "289240"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289241]\r\n**Im Allgemeinen scheint es uns schwerzufallen, Statistiken im Alltag korrekt anzuwenden. Sie selbst haben dazu einige Studien durchgeführt. Das Ergebnis war immer dasselbe: Eine konkrete Geschichte, eine Anekdote, ein persönliches Gespräch beeinflussen uns stärker als jede Statistik.**\r\nDas stimmt. Ich gebe Ihnen ein Beispiel. In den USA werden Universitätsseminare von den Studierenden benotet. Diese Werte sind ziemlich aussagekräftig. Aber wir haben herausgefunden, dass die Studierenden jüngeren Semesters sich kaum darum kümmern. Wenn dagegen ein älterer Kommilitone ihnen erzählt: „Ich war in diesem Kurs, der war richtig toll“, dann reagieren die jüngeren Studierenden sofort und lassen sich sehr stark davon beeinflussen. Anders gesagt: Die zufällige Meinung eines Einzelnen scheint für uns wichtiger zu sein als das ausgewogene Urteil vieler. Dieses Muster haben wir immer wieder gefunden. In einem anderen Experiment ging es darum, wie viele Menschen sich in einer bestimmten Situation als hilfsbereit erweisen. Der Prozentsatz war übrigens nicht besonders hoch. Nur vier von zehn Teilnehmenden haben geholfen. Diese Zahlen haben wir unseren Versuchspersonen vorgelegt, ihnen danach wildfremde Menschen gezeigt und gefragt: Was meint ihr – werden die Leute helfen oder nicht?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Im Allgemeinen scheint es uns schwerzufallen, Statistiken im Alltag korrekt anzuwenden. Sie selbst haben dazu einige Studien durchgeführt. Das Ergebnis war immer dasselbe: Eine konkrete Geschichte, eine Anekdote, ein persönliches Gespräch beeinflussen uns stärker als jede Statistik.**\r\nDas stimmt. Ich gebe Ihnen ein Beispiel. In den USA werden Universitätsseminare von den Studierenden benotet. Diese Werte sind ziemlich aussagekräftig. Aber wir haben herausgefunden, dass die Studierenden jüngeren Semesters sich kaum darum kümmern. Wenn dagegen ein älterer Kommilitone ihnen erzählt: „Ich war in diesem Kurs, der war richtig toll“, dann reagieren die jüngeren Studierenden sofort und lassen sich sehr stark davon beeinflussen. Anders gesagt: Die zufällige Meinung eines Einzelnen scheint für uns wichtiger zu sein als das ausgewogene Urteil vieler. Dieses Muster haben wir immer wieder gefunden. In einem anderen Experiment ging es darum, wie viele Menschen sich in einer bestimmten Situation als hilfsbereit erweisen. Der Prozentsatz war übrigens nicht besonders hoch. Nur vier von zehn Teilnehmenden haben geholfen. Diese Zahlen haben wir unseren Versuchspersonen vorgelegt, ihnen danach wildfremde Menschen gezeigt und gefragt: Was meint ihr – werden die Leute helfen oder nicht?",
+      "id": [
+        "289241"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289242]\r\n**Das klingt nach einer leichten Aufgabe: Wenn die Statistik stimmt, dann werden vier von zehn Leuten helfen – und sechs eben nicht.**\r\nAber unsere Freiwilligen haben vollkommen anders entschieden. Sie haben sich eher davon leiten lassen, wie sympathisch ihnen die gezeigten Personen waren. Sie haben die wichtigste Information, die sogenannte „Basisrate“ kaum mit in ihr Urteil einbezogen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Das klingt nach einer leichten Aufgabe: Wenn die Statistik stimmt, dann werden vier von zehn Leuten helfen – und sechs eben nicht.**\r\nAber unsere Freiwilligen haben vollkommen anders entschieden. Sie haben sich eher davon leiten lassen, wie sympathisch ihnen die gezeigten Personen waren. Sie haben die wichtigste Information, die sogenannte „Basisrate“ kaum mit in ihr Urteil einbezogen.",
+      "id": [
+        "289242"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289243]\r\n**In Ihrem Buch Einfach denken! beschreiben Sie nicht nur Konzepte aus der Psychologie. Einige Ihrer Werkzeuge haben Sie zum Beispiel von der Ökonomie übernommen. So etwa das Modell der „versunkenen Kosten“. Das kommt etwa dann zum Tragen, wenn wir im Restaurant sitzen und das Essen nicht mögen, das uns serviert wurde.** \r\nDie meisten Menschen sagen in so einer Situation: „Ich habe für diesen Fisch bezahlt, deshalb werde ich ihn auch aufessen.“ Ich halte das für einen Fehler.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**In Ihrem Buch Einfach denken! beschreiben Sie nicht nur Konzepte aus der Psychologie. Einige Ihrer Werkzeuge haben Sie zum Beispiel von der Ökonomie übernommen. So etwa das Modell der „versunkenen Kosten“. Das kommt etwa dann zum Tragen, wenn wir im Restaurant sitzen und das Essen nicht mögen, das uns serviert wurde.** \r\nDie meisten Menschen sagen in so einer Situation: „Ich habe für diesen Fisch bezahlt, deshalb werde ich ihn auch aufessen.“ Ich halte das für einen Fehler.",
+      "id": [
+        "289243"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289244]\r\n**Geben Sie uns bitte eine Faustregel – wie kann uns das Konzept der versunkenen Kosten zu besseren Entscheidungen verhelfen?**\r\nIch empfehle ein Gedankenexperiment. Und zwar immer dann, wenn Sie etwas machen, das Ihnen keinerlei Freude bereitet, für das Sie aber schon Geld, Zeit oder Mühe aufgewendet haben. Fragen Sie sich: Würde ich das hier auch dann tun, wenn ich nichts dafür gezahlt hätte? Und wenn die ehrliche Antwort lautet: „Nein, das würde ich nicht“, dann sollten Sie schnell damit aufhören und stattdessen etwas anderes tun.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Geben Sie uns bitte eine Faustregel – wie kann uns das Konzept der versunkenen Kosten zu besseren Entscheidungen verhelfen?**\r\nIch empfehle ein Gedankenexperiment. Und zwar immer dann, wenn Sie etwas machen, das Ihnen keinerlei Freude bereitet, für das Sie aber schon Geld, Zeit oder Mühe aufgewendet haben. Fragen Sie sich: Würde ich das hier auch dann tun, wenn ich nichts dafür gezahlt hätte? Und wenn die ehrliche Antwort lautet: „Nein, das würde ich nicht“, dann sollten Sie schnell damit aufhören und stattdessen etwas anderes tun.",
+      "id": [
+        "289244"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289245]\r\n**Wie häufig kommt so etwas denn vor?** \r\nZiemlich häufig. Ich habe auf mein Buch eine Menge Zuschriften bekommen – und die meisten bezogen sich auf das Konzept der versunkenen Kosten. Die Leute schreiben: „Diese Art zu denken hat mein Leben verändert.“ Nach meiner Erfahrung gehören die Ökonominnen und Ökonomen und der Rest der Menschheit in solchen Fragen zu zwei verschiedenen Spezies. Die Wirtschaftsfachleute essen kein schlechtes Essen. Sie sehen sich keine schlechten Filme zu Ende an. Sie arbeiten nicht weiter an miesen Projekten, auch wenn sie schon viel Zeit damit verloren haben. Sie leben nach dem Motto: Der Rest meines Lebens beginnt genau jetzt. Und das halte ich für ausgesprochen vernünftig.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Wie häufig kommt so etwas denn vor?** \r\nZiemlich häufig. Ich habe auf mein Buch eine Menge Zuschriften bekommen – und die meisten bezogen sich auf das Konzept der versunkenen Kosten. Die Leute schreiben: „Diese Art zu denken hat mein Leben verändert.“ Nach meiner Erfahrung gehören die Ökonominnen und Ökonomen und der Rest der Menschheit in solchen Fragen zu zwei verschiedenen Spezies. Die Wirtschaftsfachleute essen kein schlechtes Essen. Sie sehen sich keine schlechten Filme zu Ende an. Sie arbeiten nicht weiter an miesen Projekten, auch wenn sie schon viel Zeit damit verloren haben. Sie leben nach dem Motto: Der Rest meines Lebens beginnt genau jetzt. Und das halte ich für ausgesprochen vernünftig.",
+      "id": [
+        "289245"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\r\n[@id:289246]\r\n[&image:https://docs.bitmark.cloud/bit-books/preselect/beltz/psychologie_heute/web-resources/images/preselect_psychologie_heute_3.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "289246"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/preselect/beltz/psychologie_heute/web-resources/images/preselect_psychologie_heute_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289247]\r\n**Ein weiteres Denkprinzip aus der Ökonomie ist das Konzept der „Opportunitätskosten“. Vereinfacht gesagt lautet es: Wenn ich eine Sache tue, kann ich zur selben Zeit alles andere nicht tun. Die Frage nach den Opportunitätskosten lautet in diesem Fall: Habe ich meine Zeit richtig und vernünftig investiert – oder hätte ich stattdessen lieber etwas anderes tun sollen?**\r\nDie meisten Menschen denken nicht auf diese Art, es widerspricht einfach ihrem Bauchgefühl. Meine Mutter ist früher durch die halbe Stadt gefahren, um einen Zwei-Dollar-Gutschein für Waschmittel einzulösen. Und auch ich habe so einen Fehler begangen. Vor vielen Jahren haben meine Frau und ich ein Ferienhaus gekauft, was uns an das absolute Limit unserer finanziellen Möglichkeiten gebracht hat. Wir hatten also kein Geld mehr für die Inneneinrichtung. Da kam mir eine Idee: Ich könnte die Möbel ja einfach selbst schreinern!",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Ein weiteres Denkprinzip aus der Ökonomie ist das Konzept der „Opportunitätskosten“. Vereinfacht gesagt lautet es: Wenn ich eine Sache tue, kann ich zur selben Zeit alles andere nicht tun. Die Frage nach den Opportunitätskosten lautet in diesem Fall: Habe ich meine Zeit richtig und vernünftig investiert – oder hätte ich stattdessen lieber etwas anderes tun sollen?**\r\nDie meisten Menschen denken nicht auf diese Art, es widerspricht einfach ihrem Bauchgefühl. Meine Mutter ist früher durch die halbe Stadt gefahren, um einen Zwei-Dollar-Gutschein für Waschmittel einzulösen. Und auch ich habe so einen Fehler begangen. Vor vielen Jahren haben meine Frau und ich ein Ferienhaus gekauft, was uns an das absolute Limit unserer finanziellen Möglichkeiten gebracht hat. Wir hatten also kein Geld mehr für die Inneneinrichtung. Da kam mir eine Idee: Ich könnte die Möbel ja einfach selbst schreinern!",
+      "id": [
+        "289247"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:289248]\r\nDas Unbewusste nimmt uns Teile unserer Arbeit ab. Wir müssen ihm nur ein wenig Zeit dafür lassen",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Das Unbewusste nimmt uns Teile unserer Arbeit ab. Wir müssen ihm nur ein wenig Zeit dafür lassen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "289248"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289249]\r\n**Klingt vernünftig.** \r\nIch habe dann also diesen Kurs besucht. Und nach sage und schreibe fünfzehn Unterrichtsstunden hatte ich nichts fertiggebracht als einen kleinen Holzkasten. Spätestens da wurde mir klar: So wird das nichts – ich bin einfach kein guter Handwerker. Die Opportunitätskosten waren deshalb enorm. So viel Zeit für so ein winziges Stück! Es wäre viel klüger, erst mal auf dem Fußboden zu schlafen und zu warten, bis wieder ein bisschen Geld reinkommt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Klingt vernünftig.** \r\nIch habe dann also diesen Kurs besucht. Und nach sage und schreibe fünfzehn Unterrichtsstunden hatte ich nichts fertiggebracht als einen kleinen Holzkasten. Spätestens da wurde mir klar: So wird das nichts – ich bin einfach kein guter Handwerker. Die Opportunitätskosten waren deshalb enorm. So viel Zeit für so ein winziges Stück! Es wäre viel klüger, erst mal auf dem Fußboden zu schlafen und zu warten, bis wieder ein bisschen Geld reinkommt.",
+      "id": [
+        "289249"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289250]\r\n**In Ihrem Buch beschreiben Sie, dass Sie im Alltag die Kraft des unbewussten Denkens nutzen. Wie funktioniert das?**\r\nIch mache das zum Beispiel, wenn ich meinen Unterricht vorbereite. Dafür sende ich meinen Studierenden immer vorab eine kleine Liste mit Fragen, die sie zum Nachdenken anregen sollen. Wenn ich mir diese Fragen ausdenke, verfahre ich so: Ich beschäftige mich eine Weile mit dem Stoff und lasse die Sache danach liegen, ohne sie beendet zu haben. Wenn ich mich dann ein oder zwei Tage später wieder an die Arbeit mache, kommen die Ideen wie von selbst. Es fühlt sich an, als würden mir die Sätze diktiert, als müsste ich sie mir gar nicht mühevoll ausdenken.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**In Ihrem Buch beschreiben Sie, dass Sie im Alltag die Kraft des unbewussten Denkens nutzen. Wie funktioniert das?**\r\nIch mache das zum Beispiel, wenn ich meinen Unterricht vorbereite. Dafür sende ich meinen Studierenden immer vorab eine kleine Liste mit Fragen, die sie zum Nachdenken anregen sollen. Wenn ich mir diese Fragen ausdenke, verfahre ich so: Ich beschäftige mich eine Weile mit dem Stoff und lasse die Sache danach liegen, ohne sie beendet zu haben. Wenn ich mich dann ein oder zwei Tage später wieder an die Arbeit mache, kommen die Ideen wie von selbst. Es fühlt sich an, als würden mir die Sätze diktiert, als müsste ich sie mir gar nicht mühevoll ausdenken.",
+      "id": [
+        "289250"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289251]\r\n**Bringen Sie diese Technik auch Ihren Studierenden bei?**\r\nIch versuche es. Ich sage: Fangt früh an mit euren Hausarbeiten. Am besten bereits bereits ein paar Wochen vor der Deadline. Das Unbewusste wird euch weite Teile der Arbeit abnehmen. Aber die meisten von ihnen kaufen es mir nicht ab. Sie warten bis kurz vor Abgabe, und dann machen sie alles auf den letzten Drücker.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Bringen Sie diese Technik auch Ihren Studierenden bei?**\r\nIch versuche es. Ich sage: Fangt früh an mit euren Hausarbeiten. Am besten bereits bereits ein paar Wochen vor der Deadline. Das Unbewusste wird euch weite Teile der Arbeit abnehmen. Aber die meisten von ihnen kaufen es mir nicht ab. Sie warten bis kurz vor Abgabe, und dann machen sie alles auf den letzten Drücker.",
+      "id": [
+        "289251"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289252]\r\n**In Ihrem Buch gibt es auch ein Kapitel, das sich mit den Denkfehlern von Forschenden beschäftigt. Sie werfen Ihren Kolleginnen und Kollegen vor, gelegentlich die falschen Methoden anzuwenden. Worum geht es da genau?**\r\nUm die Arbeit mit Korrelationen. Meiner Meinung nach haben viele Leute die Zusammenhänge nicht richtig verstanden. Das gilt auch für einige Wissenschaftlerinnen und Journalisten, die es eigentlich besser wissen sollten. Ein wenig Wissen über die Zusammenhänge könnte jeden von uns zu einem besseren Zeitungsleser machen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**In Ihrem Buch gibt es auch ein Kapitel, das sich mit den Denkfehlern von Forschenden beschäftigt. Sie werfen Ihren Kolleginnen und Kollegen vor, gelegentlich die falschen Methoden anzuwenden. Worum geht es da genau?**\r\nUm die Arbeit mit Korrelationen. Meiner Meinung nach haben viele Leute die Zusammenhänge nicht richtig verstanden. Das gilt auch für einige Wissenschaftlerinnen und Journalisten, die es eigentlich besser wissen sollten. Ein wenig Wissen über die Zusammenhänge könnte jeden von uns zu einem besseren Zeitungsleser machen.",
+      "id": [
+        "289252"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289253]\r\n**Geben Sie uns ein Beispiel!**\r\nVor einiger Zeit konnte man lesen: Menschen, die zusätzlich ein bestimmtes Vitamin schlucken, erkranken mit einer geringeren Wahrscheinlichkeit an Prostatakrebs.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Geben Sie uns ein Beispiel!**\r\nVor einiger Zeit konnte man lesen: Menschen, die zusätzlich ein bestimmtes Vitamin schlucken, erkranken mit einer geringeren Wahrscheinlichkeit an Prostatakrebs.",
+      "id": [
+        "289253"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289254]\r\n**Klingt wie eine gute Nachricht.**\r\nNein. Dieses Ergebnis hat nicht den geringsten Wert, nicht die geringste Aussagekraft. Denn wenn man im Labor untersucht, wie besagtes Vitamin eigentlich auf unseren Körper wirkt, dann stellt man fest, dass es den Prostatakrebs sogar begünstigen kann.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Klingt wie eine gute Nachricht.**\r\nNein. Dieses Ergebnis hat nicht den geringsten Wert, nicht die geringste Aussagekraft. Denn wenn man im Labor untersucht, wie besagtes Vitamin eigentlich auf unseren Körper wirkt, dann stellt man fest, dass es den Prostatakrebs sogar begünstigen kann.",
+      "id": [
+        "289254"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289255]\r\n**Die Studien scheinen einander zu widersprechen.\r\nWoran liegt das?**\r\nAn einem Phänomen, das die Epidemiologen den __healthy user bias__ nennen. Manche Leute nehmen Vitamine, weil sie glauben, das sei gut für ihre Gesundheit. Aber sie tun auch sonst eine Menge für ihr Wohlbefinden. Sie informieren sich, sie sind gebildet, sie verdienen gut, treiben Sport, ernähren sich ausgewogen, rauchen nicht, trinken nicht zu viel Alkohol und so weiter. Und natürlich kriegen diese Leute auch seltener Krebs. Das heißt: Wer Vitamine zu sich nimmt, bekommt tatsächlich seltener Krebs. Aber mit den Vitaminen selbst hat es gar nichts zu tun.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Die Studien scheinen einander zu widersprechen.\r\nWoran liegt das?**\r\nAn einem Phänomen, das die Epidemiologen den __healthy user bias__ nennen. Manche Leute nehmen Vitamine, weil sie glauben, das sei gut für ihre Gesundheit. Aber sie tun auch sonst eine Menge für ihr Wohlbefinden. Sie informieren sich, sie sind gebildet, sie verdienen gut, treiben Sport, ernähren sich ausgewogen, rauchen nicht, trinken nicht zu viel Alkohol und so weiter. Und natürlich kriegen diese Leute auch seltener Krebs. Das heißt: Wer Vitamine zu sich nimmt, bekommt tatsächlich seltener Krebs. Aber mit den Vitaminen selbst hat es gar nichts zu tun.",
+      "id": [
+        "289255"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289256]\r\n**Diese wissenschaftliche Methode, die Sie kritisieren, heißt in der Fachsprache\r\n„multiple Regressionsanalyse“. Sie haben in einem Interview gefordert, man solle solche Untersuchungen nur noch mit einem Warnhinweis veröffentlichen.**\r\nDas fordere ich in der Tat. Und es gibt viele solcher Studien – nicht nur in der Medizin, auch in den Sozialwissenschaften. Eine davon hat behauptet: Ein Volvo-Kombi ist nach den vorliegenden Daten sicherer als ein Ford-Pick-up, weil der Volvo statistisch gesehen seltener in Unfälle verwickelt ist. In Wahrheit hat das natürlich gar nichts mit dem Auto selbst zu tun, sondern damit, dass der Volvo vor allem von Familien aus der Vorstadt gefahren wird – und der Pritschenwagen von Cowboys mit einer Knarre auf dem Beifahrersitz.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Diese wissenschaftliche Methode, die Sie kritisieren, heißt in der Fachsprache\r\n„multiple Regressionsanalyse“. Sie haben in einem Interview gefordert, man solle solche Untersuchungen nur noch mit einem Warnhinweis veröffentlichen.**\r\nDas fordere ich in der Tat. Und es gibt viele solcher Studien – nicht nur in der Medizin, auch in den Sozialwissenschaften. Eine davon hat behauptet: Ein Volvo-Kombi ist nach den vorliegenden Daten sicherer als ein Ford-Pick-up, weil der Volvo statistisch gesehen seltener in Unfälle verwickelt ist. In Wahrheit hat das natürlich gar nichts mit dem Auto selbst zu tun, sondern damit, dass der Volvo vor allem von Familien aus der Vorstadt gefahren wird – und der Pritschenwagen von Cowboys mit einer Knarre auf dem Beifahrersitz.",
+      "id": [
+        "289256"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289257]\r\n**In Ihrem Buch ermutigen Sie Ihre Leserinnen und Leser dazu, auch im Privatleben Experimente nach wissenschaftlichen Standards zu machen. Wie geht das?** \r\nAngenommen Sie leiden unter Sodbrennen. Dann können Sie selbst herausfinden, ob es am Kaffee liegt, am Weißwein oder am scharfen Essen. Mein Rat lautet: Nehmen Sie sich die Hypothese, die Ihnen am wahrscheinlichsten erscheint. Beispielsweise den Kaffee. Was passiert, wenn Sie ihn weglassen? Werden die Beschwerden dann besser?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**In Ihrem Buch ermutigen Sie Ihre Leserinnen und Leser dazu, auch im Privatleben Experimente nach wissenschaftlichen Standards zu machen. Wie geht das?** \r\nAngenommen Sie leiden unter Sodbrennen. Dann können Sie selbst herausfinden, ob es am Kaffee liegt, am Weißwein oder am scharfen Essen. Mein Rat lautet: Nehmen Sie sich die Hypothese, die Ihnen am wahrscheinlichsten erscheint. Beispielsweise den Kaffee. Was passiert, wenn Sie ihn weglassen? Werden die Beschwerden dann besser?",
+      "id": [
+        "289257"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289258]\r\n**Ein wissenschaftliches Experiment arbeitet ja möglichst mit einer Kontrollgruppe. Man wirft eine Münze und ordnet die Versuchspersonen per Zufall in zwei Gruppen ein. Man sagt: Die eine Hälfte lässt den Kaffee weg, die andere macht weiter wie bisher. Nach einiger Zeit schaut man sich die Unterschiede an. So bekommt man das, was man eine „randomisierte kontrollierte Studie“ nennt. Wie kann ich das nun auf unser Beispiel mit dem Sodbrennen übertragen?**\r\nNa ja, wie Sie bereits sagten: Indem Sie eine Münze werfen. Sie entscheiden per Zufall, ob Sie in der kommenden Woche den Kaffee weglassen oder einfach weitermachen wie bisher. Das steigert die Aussagekraft Ihres Experiments ganz erheblich. Denn wenn Sie stattdessen nach Lust und Laune entscheiden, ob Sie heute Kaffee trinken oder nicht, kommen noch ganz viele andere Faktoren mit ins Spiel, die Sie gar nicht untersuchen wollten. Sie werden den Kaffee trinken, wenn Sie sich morgens ein bisschen schlapp fühlen. Das wiederum könnte damit zusammenhängen, was Sie am Abend zuvor so getrieben haben – und so weiter. Der Münzwurf sorgt also für eine größere Genauigkeit.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Ein wissenschaftliches Experiment arbeitet ja möglichst mit einer Kontrollgruppe. Man wirft eine Münze und ordnet die Versuchspersonen per Zufall in zwei Gruppen ein. Man sagt: Die eine Hälfte lässt den Kaffee weg, die andere macht weiter wie bisher. Nach einiger Zeit schaut man sich die Unterschiede an. So bekommt man das, was man eine „randomisierte kontrollierte Studie“ nennt. Wie kann ich das nun auf unser Beispiel mit dem Sodbrennen übertragen?**\r\nNa ja, wie Sie bereits sagten: Indem Sie eine Münze werfen. Sie entscheiden per Zufall, ob Sie in der kommenden Woche den Kaffee weglassen oder einfach weitermachen wie bisher. Das steigert die Aussagekraft Ihres Experiments ganz erheblich. Denn wenn Sie stattdessen nach Lust und Laune entscheiden, ob Sie heute Kaffee trinken oder nicht, kommen noch ganz viele andere Faktoren mit ins Spiel, die Sie gar nicht untersuchen wollten. Sie werden den Kaffee trinken, wenn Sie sich morgens ein bisschen schlapp fühlen. Das wiederum könnte damit zusammenhängen, was Sie am Abend zuvor so getrieben haben – und so weiter. Der Münzwurf sorgt also für eine größere Genauigkeit.",
+      "id": [
+        "289258"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:289259]\r\nWarum schlafe ich schlecht?\r\nFragen wie diese können wir mithilfe kleiner Experimente selbst beantworten",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Warum schlafe ich schlecht?\r\nFragen wie diese können wir mithilfe kleiner Experimente selbst beantworten",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "289259"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289260]\r\n**Welche eigenen Alltagsprobleme haben Sie mit Experimenten untersucht?**\r\nIch gebe zu: Ich selbst mache das viel seltener, als ich sollte. Trotzdem habe ich ein Beispiel für Sie. Als junger Student habe ich sehr unter Schlafstörungen gelitten. Also habe ich irgendwann Experimente darüber gemacht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Welche eigenen Alltagsprobleme haben Sie mit Experimenten untersucht?**\r\nIch gebe zu: Ich selbst mache das viel seltener, als ich sollte. Trotzdem habe ich ein Beispiel für Sie. Als junger Student habe ich sehr unter Schlafstörungen gelitten. Also habe ich irgendwann Experimente darüber gemacht.",
+      "id": [
+        "289260"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289261]\r\nDavon habe ich gelesen. Sie haben Leuten Placebos gegeben und behauptet, dass die Tabletten den Herzschlag erhöhen. Wenn die Versuchspersonen dann nachts wach wurden, haben sie das nicht auf ihre Sorgen geschoben, sondern eben auf die angeblichen Medikamente. Statt also ins Grübeln zu verfallen, konnten sie sich einfach umdrehen und weiterschlafen.**\r\nGenau. Mit meinen Freiwilligen hat dieser Trick ganz gut geklappt. Er funktioniert, wie man inzwischen weiß, aber nur bei denjenigen Leuten, die viel nachdenken. Bei schlichteren Versuchspersonen bekommt man leider kaum einen Effekt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Davon habe ich gelesen. Sie haben Leuten Placebos gegeben und behauptet, dass die Tabletten den Herzschlag erhöhen. Wenn die Versuchspersonen dann nachts wach wurden, haben sie das nicht auf ihre Sorgen geschoben, sondern eben auf die angeblichen Medikamente. Statt also ins Grübeln zu verfallen, konnten sie sich einfach umdrehen und weiterschlafen.**\r\nGenau. Mit meinen Freiwilligen hat dieser Trick ganz gut geklappt. Er funktioniert, wie man inzwischen weiß, aber nur bei denjenigen Leuten, die viel nachdenken. Bei schlichteren Versuchspersonen bekommt man leider kaum einen Effekt.",
+      "id": [
+        "289261"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:289262]\r\n**Und wie haben Sie selbst Ihre Schlafstörungen in den Griff bekommen?**\r\nIndem ich auf meine Mutter gehört habe (lacht). Sie hat mir damals einen Auszug aus einem Hausfrauenmagazin zugeschickt. Dort hieß es: Arbeiten Sie nicht bis kurz vor dem Einschlafen. Schlafen Sie in einem kühlen Raum. Halten Sie Ihre Füße warm. Sorgen Sie für regelmäßige Schlafzeiten. Das hat ganz wunderbar funktioniert.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Und wie haben Sie selbst Ihre Schlafstörungen in den Griff bekommen?**\r\nIndem ich auf meine Mutter gehört habe (lacht). Sie hat mir damals einen Auszug aus einem Hausfrauenmagazin zugeschickt. Dort hieß es: Arbeiten Sie nicht bis kurz vor dem Einschlafen. Schlafen Sie in einem kühlen Raum. Halten Sie Ihre Füße warm. Sorgen Sie für regelmäßige Schlafzeiten. Das hat ganz wunderbar funktioniert.",
+      "id": [
+        "289262"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:289266]\r\n**Richard Nisbett** ist emeritierter Professor für Sozialpsychologie an der University of Michigan. Er gehört zu den meistzitierten Psychologen der Welt. In seiner Forschung hat er untersucht, wie wir unsere eigenen Denkfehler nicht nur erkennen, sondern sie im täglichen Gebrauch unseres Verstands auch überwinden können",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**Richard Nisbett** ist emeritierter Professor für Sozialpsychologie an der University of Michigan. Er gehört zu den meistzitierten Psychologen der Welt. In seiner Forschung hat er untersucht, wie wir unsere eigenen Denkfehler nicht nur erkennen, sondern sie im täglichen Gebrauch unseres Verstands auch überwinden können",
+      "id": [
+        "289266"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:289267]\r\n[&image:https://docs.bitmark.cloud/bit-books/preselect/beltz/psychologie_heute/web-resources/images/preselect_psychologie_heute_5.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "289267"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/preselect/beltz/psychologie_heute/web-resources/images/preselect_psychologie_heute_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.page:bitmark++&image]\r\n[@id:289263]\r\n[%25]\r\n\r\n[@trimmedImages:true]\r\n[&image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025.webp]\r\n[@thumbImage:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-025/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-025.jpg]\r\n\r\n\r\n25\r\nIllustration:\r\nAnton\r\nHallman\r\nText:\r\nTabea\r\nVenrath\r\nVerweigerung\r\nInformationen können unangenehme Ge-\r\nfühle auslösen, Überzeugungen oder das\r\nSelbstbild bedrohen. Deswegen scheuen\r\nwir sie manchmal: Wir beschaffen manches\r\nWissen gar nicht erst, schenken ihm kaum\r\nAufmerksamkeit, interpretieren es voreinge-\r\nnommen oder vergessen es wieder\r\nSelbstzweifel\r\nJe geringer befragte Frauen ihre Fähigkeit\r\neinschätzten, mit Krankheit gut umzugehen,\r\ndesto niedriger war ihre Bereitschaft, ihr\r\nBrustkrebsrisiko zu erfahren. In einer\r\nanderen Studie wuchs die Offenheit\r\nfür Gesundheitsinformationen,\r\nwenn Menschen Unterstützung\r\nvon anderen erwarteten\r\nAngst\r\nAus Panik den Kopf in den Sand stecken?\r\nAuf verlustreiche Börsentage reagieren\r\nviele Anleger und Anlegerinnen mit einer\r\nStrategie des Nicht-wissen-Wollens,\r\nbenannt nach dem englischen Wort für\r\nden Strauß: „Ostrich-Effekt“. Zum\r\nBeispiel loggen sie sich seltener in\r\nihr Portfolio ein, laut einer Studie\r\num fast 10 Prozent\r\nBedrohung\r\n„Findest du mich attraktiv?“ In einem Experiment\r\nkonnten Studierende ihr Aussehen beurteilen las-\r\nsen. Die Einschätzung von Kindern oder Rentnern\r\nmieden sie zu 30, die Gleichaltriger hingegen zu\r\n60 Prozent. Deren Meinung sei bedrohlicher für\r\ndas Selbstbild, so die Erklärung der Forschenden\r\nFiltern\r\nWelche Informationen scheuen wir am ehesten?\r\nSelective exposure beschreibt das Phänomen, dass\r\nMenschen Informationen bevorzugen, die im\r\nEinklang mit ihren bestehenden Überzeugungen\r\nstehen – und Informationen ausblenden, die\r\ndiesen widersprechen\r\nVermeidung\r\nEine Studie ergab, dass 42 Prozent\r\nder werdenden Eltern das Geschlecht\r\nihres Kindes nicht wissen möchten.\r\n73 Prozent dieser Paare erklärten,\r\nsie wollten die Überraschung bei\r\nder Geburt „nicht ruinieren“.\r\nWir meiden Informationen also\r\nauch, um positive Gefühle zu\r\nverstärken\r\nDie Vogel-Strauß-Strategie\r\nManchmal wollen wir Dinge gar nicht so genau wissen.\r\nDas kann viele Gründe haben\r\n\r\n\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-109-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-110-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-111-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-112-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-113-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-114-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-115-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-116-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-117-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-118-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-119-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-120-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-121-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-122-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-123-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-124-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-125-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-126-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-127-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-128-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-129-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-130-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-131-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-132-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-133-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-134-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-135-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-136-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-137-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-138-ppm-convert-gen.jpg|",
+    "bit": {
+      "type": "page",
+      "format": "bitmark++",
+      "body": "25\r\nIllustration:\r\nAnton\r\nHallman\r\nText:\r\nTabea\r\nVenrath\r\nVerweigerung\r\nInformationen können unangenehme Ge-\r\nfühle auslösen, Überzeugungen oder das\r\nSelbstbild bedrohen. Deswegen scheuen\r\nwir sie manchmal: Wir beschaffen manches\r\nWissen gar nicht erst, schenken ihm kaum\r\nAufmerksamkeit, interpretieren es voreinge-\r\nnommen oder vergessen es wieder\r\nSelbstzweifel\r\nJe geringer befragte Frauen ihre Fähigkeit\r\neinschätzten, mit Krankheit gut umzugehen,\r\ndesto niedriger war ihre Bereitschaft, ihr\r\nBrustkrebsrisiko zu erfahren. In einer\r\nanderen Studie wuchs die Offenheit\r\nfür Gesundheitsinformationen,\r\nwenn Menschen Unterstützung\r\nvon anderen erwarteten\r\nAngst\r\nAus Panik den Kopf in den Sand stecken?\r\nAuf verlustreiche Börsentage reagieren\r\nviele Anleger und Anlegerinnen mit einer\r\nStrategie des Nicht-wissen-Wollens,\r\nbenannt nach dem englischen Wort für\r\nden Strauß: „Ostrich-Effekt“. Zum\r\nBeispiel loggen sie sich seltener in\r\nihr Portfolio ein, laut einer Studie\r\num fast 10 Prozent\r\nBedrohung\r\n„Findest du mich attraktiv?“ In einem Experiment\r\nkonnten Studierende ihr Aussehen beurteilen las-\r\nsen. Die Einschätzung von Kindern oder Rentnern\r\nmieden sie zu 30, die Gleichaltriger hingegen zu\r\n60 Prozent. Deren Meinung sei bedrohlicher für\r\ndas Selbstbild, so die Erklärung der Forschenden\r\nFiltern\r\nWelche Informationen scheuen wir am ehesten?\r\nSelective exposure beschreibt das Phänomen, dass\r\nMenschen Informationen bevorzugen, die im\r\nEinklang mit ihren bestehenden Überzeugungen\r\nstehen – und Informationen ausblenden, die\r\ndiesen widersprechen\r\nVermeidung\r\nEine Studie ergab, dass 42 Prozent\r\nder werdenden Eltern das Geschlecht\r\nihres Kindes nicht wissen möchten.\r\n73 Prozent dieser Paare erklärten,\r\nsie wollten die Überraschung bei\r\nder Geburt „nicht ruinieren“.\r\nWir meiden Informationen also\r\nauch, um positive Gefühle zu\r\nverstärken\r\nDie Vogel-Strauß-Strategie\r\nManchmal wollen wir Dinge gar nicht so genau wissen.\r\nDas kann viele Gründe haben\r\n\r\n\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-109-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-110-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-111-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-112-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-113-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-114-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-115-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-116-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-117-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-118-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-119-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-120-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-121-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-122-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-123-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-124-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-125-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-126-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-127-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-128-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-129-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-130-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-131-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-132-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-133-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-134-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-135-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-136-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-137-ppm-convert-gen.jpg|\r\n|image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/image-extract/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/extracted-img-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025-138-ppm-convert-gen.jpg|",
+      "id": [
+        "289263"
+      ],
+      "item": "25",
+      "trimmedImages": [
+        "true"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/webp/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-025.webp",
+          "showInIndex": false,
+          "format": "webp",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "thumbImage": [
+        "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-61e17351-5854-4f55-8262-57d4b0dd2d03pdf_a25zzlh8f2ed/thumbs/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-025/61e17351-5854-4f55-8262-57d4b0dd2d03pdf_ggwizbttvn1a-thumbs-025.jpg"
+      ]
+    }
+  }
+]

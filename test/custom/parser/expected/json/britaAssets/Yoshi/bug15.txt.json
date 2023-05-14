@@ -1,0 +1,100 @@
+[
+  {
+    "bitmark": "[.match]\n[%A29c]\n[!Konzessivangaben\n\nVerbinden Sie die Sätze mit obwohl und trotzdem. Analysieren Sie zuerst den Satzbau der Beispielsätze und die Funktion der Satzverbindungen. Arbeiten Sie zu zweit.]\n===\n◇ Die erste internationale Konferenz für Naturschutz fand schon 1913 in Bern statt. Der Zustand der Umwelt hat sich global weiter verschlechtert.\n\n==\na) Obwohl die erste internationale Konferenz für Naturschutz schon 1913 in Bern stattfand, hat sich der Zustand der Umwelt global weiter verschlechtert.[@example][@longAnswer]\n===\n\n==\nb) Die erste internationale Konferenz für Naturschutz fand schon 1913 in Bern statt, trotzdem hat sich der Zustand der Umwelt global weiter verschlechtert.[@example][@longAnswer]\n===\n[%1]Wasser ist die Existenzgrundlage für alles Leben auf diesem Planeten. Die Menschen gehen achtlos damit um. \n==\nObwohl Wasser die Existenzgrundlage für alles Leben auf diesem Planeten ist, gehen die Menschen achtlos damit um.\n[!a)]\n===",
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "A29c",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "",
+          "values": [],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "◇ Die erste internationale Konferenz für Naturschutz fand schon 1913 in Bern statt. Der Zustand der Umwelt hat sich global weiter verschlechtert.\na) Obwohl die erste internationale Konferenz für Naturschutz schon 1913 in Bern stattfand, hat sich der Zustand der Umwelt global weiter verschlechtert.[@example][@longAnswer]b) Die erste internationale Konferenz für Naturschutz fand schon 1913 in Bern statt, trotzdem hat sich der Zustand der Umwelt global weiter verschlechtert.[@example][@longAnswer][%1]Wasser ist die Existenzgrundlage für alles Leben auf diesem Planeten. Die Menschen gehen achtlos damit um. Obwohl Wasser die Existenzgrundlage für alles Leben auf diesem Planeten ist, gehen die Menschen achtlos damit um.\n[!a)]",
+      "instruction": "Konzessivangaben\n\nVerbinden Sie die Sätze mit obwohl und trotzdem. Analysieren Sie zuerst den Satzbau der Beispielsätze und die Funktion der Satzverbindungen. Arbeiten Sie zu zweit."
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '◇ Die erste internationale Konferenz für Naturschutz fand schon 1913 in Bern statt. Der Zustand der Umwelt hat sich global weiter verschlechtert.\\n\n=='",
+        "line": 9,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 9,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'a) Obwohl die erste internationale Konferenz für Naturschutz schon 1913 in Bern stattfand, hat sich der Zustand der Umwelt global weiter verschlechtert.'",
+        "line": 10,
+        "column": 0,
+        "errorLine": "a) Obwohl die erste internationale Konferenz für Naturschutz schon 1913 in Bern stattfand, hat sich der Zustand der Umwelt global weiter verschlechtert.[@example][@longAnswer]"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 11,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 13,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'b) Die erste internationale Konferenz für Naturschutz fand schon 1913 in Bern statt, trotzdem hat sich der Zustand der Umwelt global weiter verschlechtert.'",
+        "line": 14,
+        "column": 0,
+        "errorLine": "b) Die erste internationale Konferenz für Naturschutz fand schon 1913 in Bern statt, trotzdem hat sich der Zustand der Umwelt global weiter verschlechtert.[@example][@longAnswer]"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 15,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '[%'",
+        "line": 16,
+        "column": 0,
+        "errorLine": "[%1]Wasser ist die Existenzgrundlage für alles Leben auf diesem Planeten. Die Menschen gehen achtlos damit um. "
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 17,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'Obwohl Wasser die Existenzgrundlage für alles Leben auf diesem Planeten ist, gehen die Menschen achtlos damit um.'",
+        "line": 18,
+        "column": 0,
+        "errorLine": "Obwohl Wasser die Existenzgrundlage für alles Leben auf diesem Planeten ist, gehen die Menschen achtlos damit um."
+      },
+      {
+        "message": "Unexpected input '[!'",
+        "line": 19,
+        "column": 0,
+        "errorLine": "[!a)]"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 20,
+        "column": 0,
+        "errorLine": "==="
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "bitmark": "[.sequence:bitmark--]\n\n===\n***WATACHISI***\n***zu oberst***\n*oben*\n***in der Mitte***\n**in der Mitte**\n*unten*\n***zu unterst***\nKeller\n===",
+    "bit": {
+      "type": "sequence",
+      "format": "bitmark--",
+      "instruction": "",
+      "body": "",
+      "elements": [
+        "***WATACHISI***\n***zu oberst***\n*oben*\n***in der Mitte***\n**in der Mitte**\n*unten*\n***zu unterst***\nKeller"
+      ],
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    }
+  }
+]

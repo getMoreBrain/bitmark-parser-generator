@@ -1,0 +1,797 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:112670]\n[#Beschreibungen anfertigen – Überblick]\n[@language:de]\n[@coverImage:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/cover_sofatutor_deutsch.png]\n[@externalId:e-beschreibungen--anfertigen--berblick_3vumyhn-rlww]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "112670"
+      ],
+      "title": "Beschreibungen anfertigen – Überblick",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/cover_sofatutor_deutsch.png"
+      ],
+      "externalId": [
+        "e-beschreibungen--anfertigen--berblick_3vumyhn-rlww"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:112671]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_beschreibungen1.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "112671"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_beschreibungen1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:112672]\n[%Aufgabenübersicht]\n1 Gib die Merkmale einer Beschreibung an.\n2 Defniere die Eigenschaften einer Beschreibung.\n3 Bestimme den Inhalt der unterschiedlichen Textsorten.\n4 Ermittle, um welche Art der Beschreibung es sich bei den Abschnitten handelt.\n5 Entscheide dich für eine logisch aufgebaute Vorgangsbeschreibung.\n6 Prüfe, ob die Formulierungen passend für eine Beschreibung sind.\n+ mit vielen Tipps, Lösungsschlüsseln und Lösungswegen zu allen Aufgaben",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "1 Gib die Merkmale einer Beschreibung an.\n2 Defniere die Eigenschaften einer Beschreibung.\n3 Bestimme den Inhalt der unterschiedlichen Textsorten.\n4 Ermittle, um welche Art der Beschreibung es sich bei den Abschnitten handelt.\n5 Entscheide dich für eine logisch aufgebaute Vorgangsbeschreibung.\n6 Prüfe, ob die Formulierungen passend für eine Beschreibung sind.\n+ mit vielen Tipps, Lösungsschlüsseln und Lösungswegen zu allen Aufgaben",
+      "id": [
+        "112672"
+      ],
+      "item": "Aufgabenübersicht"
+    }
+  },
+  {
+    "bitmark": "[.true-false:bitmark--&image]\n[@id:112673]\n[%1 von 6]\n[!Gib die Merkmale einer Beschreibung an.\nWähle die richtigen Antworten aus.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_beschreibungen4.png]\n[@labelTrue:richtig][@labelFalse:falsch]\n===\n[+Eine logische bzw. systematische Darstellung ist wichtig.]\n===\n[+Du solltest auf eindeutige Formulierungen und eine übersichtliche Form achten.]\n===\n[-Du verwendest eine beschönigende Sprache.]\n===\n[-Es sollten möglichst viele Fremdwörter eingebaut werden.]\n===\n[-Die Zeitform einer Beschreibung ist immer das Präteritum.]\n===\n[?Die wichtigsten Merkmale der Beschreibung sind:\n• Eine logische bzw. systematische Darstellung. Das heißt, dass du von der Gesamterscheinung ins Detail\ngehst.\n• Wichtig sind außerdem eindeutige Formulierungen und eine übersichtliche Form.\n• Du solltest keine beschönigende Sprache verwenden. Dies würde vom informativen Charakter einer Beschreibung ablenken.\n• Es sollten möglichst wenige Fremdwörter eingebaut werden. Der Leser soll verstehen, was beschrieben wird.\n• Die Zeitform einer Beschreibung ist immer das Präsens und nicht das Präteritum.]",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "1 von 6",
+      "lead": "",
+      "instruction": "Gib die Merkmale einer Beschreibung an.\nWähle die richtigen Antworten aus.",
+      "hint": "Die wichtigsten Merkmale der Beschreibung sind:\n• Eine logische bzw. systematische Darstellung. Das heißt, dass du von der Gesamterscheinung ins Detail\ngehst.\n• Wichtig sind außerdem eindeutige Formulierungen und eine übersichtliche Form.\n• Du solltest keine beschönigende Sprache verwenden. Dies würde vom informativen Charakter einer Beschreibung ablenken.\n• Es sollten möglichst wenige Fremdwörter eingebaut werden. Der Leser soll verstehen, was beschrieben wird.\n• Die Zeitform einer Beschreibung ist immer das Präsens und nicht das Präteritum.",
+      "labelTrue": "richtig",
+      "labelFalse": "falsch",
+      "statements": [
+        {
+          "statement": "Eine logische bzw. systematische Darstellung ist wichtig.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Du solltest auf eindeutige Formulierungen und eine übersichtliche Form achten.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Du verwendest eine beschönigende Sprache.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Es sollten möglichst viele Fremdwörter eingebaut werden.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Die Zeitform einer Beschreibung ist immer das Präteritum.",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "112673"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_beschreibungen4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze-solution-grouped:bitmark--&image]\n[@id:112674]\n[%2 von 6]\n[!Definiere die Eigenschaften einer Beschreibung.\nSetze die Begriffe in die passenden Lücken ein.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_beschreibungen2.png]\n\nBei der Beschreibung handelt es sich um eine Darstellungsform, die [_informierend][_sachbetont][_wirklichkeitsnah], [_informierend][_sachbetont][_wirklichkeitsnah] und [_informierend][_sachbetont][_wirklichkeitsnah] sein soll.\n\nDas Ziel einer Beschreibung ist es, einen [_Gegenstand][_Vorgang] eine Person oder einen [_Gegenstand][_Vorgang] so zu vermitteln, dass der Leser, also der [_Adressat] sozusagen konkret [_vorstellen] können, worum oder um wen es sich handelt.\n\nEine Beschreibung erzählt keine [_Geschichte] was auch den wichtigsten Unterschied zur [_Erzählung] darstellt.\n\n[?Jede Antwort darf nur einmal eingesetzt werden. Die Reihenfolge ist frei wählbar.\n•. Die Beschreibung gibt keine Geschichte wieder wie eine Erzählung, sondern sie ist eine Darstellungsform, die über einen Vorgang sachbetont und wirklichkeitsnah informiert. Es steht also im Vordergrund, Dinge wirklichkeitsgetreu abzubilden, ohne Fantasie einzusetzen.\n•.Gegenstände,Personen und Vorgänge mit sprachlichen Mitteln darzustellen ist das Zieleiner Beschreibung. Der Adressat, also der Leser, soll eine genaue Vorstellung davon gewinnen. Er oder sie soll sich konkret vorstellen können, worum oder um wen es sich handelt. Dazu musst du sich in den Adressaten hineinversetzen und überlegen, wie es wäre, wenn du die beschriebene Sache gerade nicht vor Augen hättest.\n•. Eine Beschreibung erzählt keine Geschichte, was auch den wichtigsten Unterschied zur Erzählung darstellt. Deshalb ist bei einer Beschreibung weder Fantasie noch Lebhaftigkeit gefragt, sondern hauptsächlich Information.]",
+    "bit": {
+      "type": "cloze-solution-grouped",
+      "format": "bitmark--",
+      "body": "Bei der Beschreibung handelt es sich um eine Darstellungsform, die {0}, {1} und {2} sein soll.\n\nDas Ziel einer Beschreibung ist es, einen {3} eine Person oder einen {4} so zu vermitteln, dass der Leser, also der {5} sozusagen konkret {6} können, worum oder um wen es sich handelt.\n\nEine Beschreibung erzählt keine {7} was auch den wichtigsten Unterschied zur {8} darstellt.",
+      "item": "2 von 6",
+      "hint": "Jede Antwort darf nur einmal eingesetzt werden. Die Reihenfolge ist frei wählbar.\n•. Die Beschreibung gibt keine Geschichte wieder wie eine Erzählung, sondern sie ist eine Darstellungsform, die über einen Vorgang sachbetont und wirklichkeitsnah informiert. Es steht also im Vordergrund, Dinge wirklichkeitsgetreu abzubilden, ohne Fantasie einzusetzen.\n•.Gegenstände,Personen und Vorgänge mit sprachlichen Mitteln darzustellen ist das Zieleiner Beschreibung. Der Adressat, also der Leser, soll eine genaue Vorstellung davon gewinnen. Er oder sie soll sich konkret vorstellen können, worum oder um wen es sich handelt. Dazu musst du sich in den Adressaten hineinversetzen und überlegen, wie es wäre, wenn du die beschriebene Sache gerade nicht vor Augen hättest.\n•. Eine Beschreibung erzählt keine Geschichte, was auch den wichtigsten Unterschied zur Erzählung darstellt. Deshalb ist bei einer Beschreibung weder Fantasie noch Lebhaftigkeit gefragt, sondern hauptsächlich Information.",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "112674"
+      ],
+      "instruction": "Definiere die Eigenschaften einer Beschreibung.\nSetze die Begriffe in die passenden Lücken ein.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_beschreibungen2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "informierend",
+            "sachbetont",
+            "wirklichkeitsnah"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "informierend",
+            "sachbetont",
+            "wirklichkeitsnah"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "informierend",
+            "sachbetont",
+            "wirklichkeitsnah"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Gegenstand",
+            "Vorgang"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Gegenstand",
+            "Vorgang"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Adressat"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "vorstellen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Geschichte"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Erzählung"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:112675]\n[%3 von 6]\n[!Bestimme den Inhalt der unterschiedlichen Textsorten.\nWähle die passende Definition.]\n\nGegenstandsbeschreibung [-Dabei beschreibst du einen zeitlichen Ablauf einer Sache. Es handelt sich um Wiederholbares.][-Du beschreibst den zeitlichen Ablauf einer Sache.][-Dabei beschreibst du jemandem einen Weg.][+Du informierst über Eigenschaften und Merkmale. Fachbegriffe sind meist unvermeidbar.][-Dabei werden das Erscheinungsbild und die Verhaltensweisen eines Menschen beschrieben.][-Du beschreibst, wie etwas gebaut wird.]\n\nVorgangsbeschreibung [+Dabei beschreibst du einen zeitlichen Ablauf einer Sache. Es handelt sich um Wiederholbares.][-Du beschreibst den zeitlichen Ablauf einer Sache.][-Dabei beschreibst du jemandem einen Weg.][-Du informierst über Eigenschaften und Merkmale. Fachbegriffe sind meist unvermeidbar.][-Dabei werden das Erscheinungsbild und die Verhaltensweisen eines Menschen beschrieben.][-Du beschreibst, wie etwas gebaut wird.]\n\nPersonenbeschreibung [-Dabei beschreibst du einen zeitlichen Ablauf einer Sache. Es handelt sich um Wiederholbares.][-Du beschreibst den zeitlichen Ablauf einer Sache.][-Dabei beschreibst du jemandem einen Weg.][-Du informierst über Eigenschaften und Merkmale. Fachbegriffe sind meist unvermeidbar.][+Dabei werden das Erscheinungsbild und die Verhaltensweisen eines Menschen beschrieben.][-Du beschreibst, wie etwas gebaut wird.]\n\nBericht [-Dabei beschreibst du einen zeitlichen Ablauf einer Sache. Es handelt sich um Wiederholbares.][+Du beschreibst den zeitlichen Ablauf einer Sache.][-Dabei beschreibst du jemandem einen Weg.][-Du informierst über Eigenschaften und Merkmale. Fachbegriffe sind meist unvermeidbar.][-Dabei werden das Erscheinungsbild und die Verhaltensweisen eines Menschen beschrieben.][-Du beschreibst, wie etwas gebaut wird.]\n\n\n\n[?Bei der Beschreibung wird in Gegenstands-, Vorgangs- und Personenbeschreibung unterschieden. Die Beschreibung soll sachbetont und wirklichkeitsnah informieren. Der Adressat soll sich ein genaues Bild über das Beschriebene machen können.\n• Bei der __Gegenstandsbeschreibung__ informierst du häufig unter Verwendung von Fachbegriffen über Eigenschaften und Merkmale von Gegenständen. Das kann zum Beispiel die Beschreibung eines Automotors sein.\n• Die __Vorgangsbeschreibung__ beschreibt den zeitlichen Ablauf einer Sache. Hierbei handelt es sich um Wiederholbares. Ein Beispiel dafür wäre eine Bastelanleitung.\n• Das Erscheinungsbild und Verhaltensweisen einer Person werden bei der __Personenbeschreibung__ mit sprachlichen Mitteln so dargestellt, dass der Leser sich ein genaue Vorstellung von dieser Person machen kann.\n• In einem __Bericht__ wird wie bei einer Vorgangsbeschreibung ein zeitlicher Ablauf beschrieben. Es gibt jedoch einen bedeutenden Unterschied: Der Bericht beschreibt ein einmaliges Ereignis. Der Unfallbericht ist ein Beispiel dafür.]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "Gegenstandsbeschreibung {0}\n\nVorgangsbeschreibung {1}\n\nPersonenbeschreibung {2}\n\nBericht {3}",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Dabei beschreibst du einen zeitlichen Ablauf einer Sache. Es handelt sich um Wiederholbares.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Du beschreibst den zeitlichen Ablauf einer Sache.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Dabei beschreibst du jemandem einen Weg.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Du informierst über Eigenschaften und Merkmale. Fachbegriffe sind meist unvermeidbar.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Dabei werden das Erscheinungsbild und die Verhaltensweisen eines Menschen beschrieben.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Du beschreibst, wie etwas gebaut wird.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Dabei beschreibst du einen zeitlichen Ablauf einer Sache. Es handelt sich um Wiederholbares.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Du beschreibst den zeitlichen Ablauf einer Sache.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Dabei beschreibst du jemandem einen Weg.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Du informierst über Eigenschaften und Merkmale. Fachbegriffe sind meist unvermeidbar.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Dabei werden das Erscheinungsbild und die Verhaltensweisen eines Menschen beschrieben.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Du beschreibst, wie etwas gebaut wird.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Dabei beschreibst du einen zeitlichen Ablauf einer Sache. Es handelt sich um Wiederholbares.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Du beschreibst den zeitlichen Ablauf einer Sache.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Dabei beschreibst du jemandem einen Weg.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Du informierst über Eigenschaften und Merkmale. Fachbegriffe sind meist unvermeidbar.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Dabei werden das Erscheinungsbild und die Verhaltensweisen eines Menschen beschrieben.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Du beschreibst, wie etwas gebaut wird.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Dabei beschreibst du einen zeitlichen Ablauf einer Sache. Es handelt sich um Wiederholbares.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Du beschreibst den zeitlichen Ablauf einer Sache.",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Dabei beschreibst du jemandem einen Weg.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Du informierst über Eigenschaften und Merkmale. Fachbegriffe sind meist unvermeidbar.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Dabei werden das Erscheinungsbild und die Verhaltensweisen eines Menschen beschrieben.",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Du beschreibst, wie etwas gebaut wird.",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "112675"
+      ],
+      "item": "3 von 6",
+      "instruction": "Bestimme den Inhalt der unterschiedlichen Textsorten.\nWähle die passende Definition.",
+      "hint": "Bei der Beschreibung wird in Gegenstands-, Vorgangs- und Personenbeschreibung unterschieden. Die Beschreibung soll sachbetont und wirklichkeitsnah informieren. Der Adressat soll sich ein genaues Bild über das Beschriebene machen können.\n• Bei der __Gegenstandsbeschreibung__ informierst du häufig unter Verwendung von Fachbegriffen über Eigenschaften und Merkmale von Gegenständen. Das kann zum Beispiel die Beschreibung eines Automotors sein.\n• Die __Vorgangsbeschreibung__ beschreibt den zeitlichen Ablauf einer Sache. Hierbei handelt es sich um Wiederholbares. Ein Beispiel dafür wäre eine Bastelanleitung.\n• Das Erscheinungsbild und Verhaltensweisen einer Person werden bei der __Personenbeschreibung__ mit sprachlichen Mitteln so dargestellt, dass der Leser sich ein genaue Vorstellung von dieser Person machen kann.\n• In einem __Bericht__ wird wie bei einer Vorgangsbeschreibung ein zeitlicher Ablauf beschrieben. Es gibt jedoch einen bedeutenden Unterschied: Der Bericht beschreibt ein einmaliges Ereignis. Der Unfallbericht ist ein Beispiel dafür."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:112676]\n[%4 von 6]\n[!Ermittle, um welche Art der Beschreibung es sich bei den Abschnitten handelt.\nWähle den korrekten Begriff aus.]\n[-Bildbeschreibung][-Bericht][-Anleitung][-Vorgangsbeschreibung][+Gegenstandsbeschreibung][-Personenbeschreibung]\nZunächst sollte gesagt werden, dass es sich um ein Regal handelt. Es ist drei Meter lang und auch hoch. Außerdem besteht es aus 15 verschiedenen Fächern, die mit bunten Büchern gefüllt sind.\n\n[-Bildbeschreibung][-Bericht][-Anleitung][+Vorgangsbeschreibung][-Gegenstandsbeschreibung][-Personenbeschreibung]\nZuerst muss man sich den Bohrer, die Schrauben und einen Hammer bereitlegen. Danach nimmt man sich einen Bleistift und eine Wasserwaage und zeichnet Punkte an die Wand, die dann später die Bohrlöcher werden. Als nächstes bohrt man an den markierten Stellen die Löcher.\n\n[-Bildbeschreibung][-Bericht][-Anleitung][-Vorgangsbeschreibung][-Gegenstandsbeschreibung][+Personenbeschreibung]\nVor ihm steht eine große, schlanke Frau. Sie trägt schwarze Kleidung, eine rote\nMütze und über der rechten Schulter eine rote Handtasche.\n\n[?Beschreibungen sollen den Leser über etwas sachlich und klar informieren. Dabei kann es sich um einen Gegenstand, ein Lebewesen, eine Landschaft oder einen Vorgang handeln.\n• __Gegenstandsbeschreibung:__ Wie der Name schon sagt, wird bei der Gegenstandsbeschreibung ein Gegenstand beschrieben. Zunächst solltest du ihn genau betrachten, um anschließend die Beschreibung anzufertigen. Du kannst dabei vom Auffälligen zum Unauffälligen, vom Wichtigen zum weniger Wichtigen, von außen nach innen oder von unten nach oben vorgehen. Bei einem Regal handelt es sich um einen Gegenstand. Andere Gegenstände könnten ein Tisch, ein Haus oder eine Lampe sein. Es gibt unzählige Gegenstände, die beschrieben werden können.\n• __Vorgangsbeschreibung:__ Hierbei handelt es sich um die Darstellung eines Ablaufs. Dabei ist dieser Ablauf nicht nur eine einmalige Sache, sondern ein wiederholbarer Vorgang. Achte darauf, dass du die einzelnen Abläufe in der richtigen Reihenfolge und nachvollziehbar darstellst. Bei dem Text in der Aufgabe ist das Anbringen eines Regals ein Vorgang.\n• __Personenbeschreibung:__ Bei der Personenbeschreibung kannst du mit dem Gesamteindruck oder mit allgemeinen Angaben zur Person beginnen. Das Aussehen der Person solltest du in einer geordneten Reihenfolge beschreiben, z.B. von oben nach unten (Kopf, Haare, Gesicht, Kleidung, Schuhe). Vergiss nicht die wichtigen Eigenschaften einer Person, wie besondere Charaktereigenschaften (Mut, Angst, etc.) oder Verhaltensweisen (Freunde, Hobbies, Vorlieben etc.). Diese Eigenschaften machen die Person einzigartig.]",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "{0}\nZunächst sollte gesagt werden, dass es sich um ein Regal handelt. Es ist drei Meter lang und auch hoch. Außerdem besteht es aus 15 verschiedenen Fächern, die mit bunten Büchern gefüllt sind.\n\n{1}\nZuerst muss man sich den Bohrer, die Schrauben und einen Hammer bereitlegen. Danach nimmt man sich einen Bleistift und eine Wasserwaage und zeichnet Punkte an die Wand, die dann später die Bohrlöcher werden. Als nächstes bohrt man an den markierten Stellen die Löcher.\n\n{2}\nVor ihm steht eine große, schlanke Frau. Sie trägt schwarze Kleidung, eine rote\nMütze und über der rechten Schulter eine rote Handtasche.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Bildbeschreibung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bericht",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Anleitung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Vorgangsbeschreibung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Gegenstandsbeschreibung",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Personenbeschreibung",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Bildbeschreibung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bericht",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Anleitung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Vorgangsbeschreibung",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Gegenstandsbeschreibung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Personenbeschreibung",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Bildbeschreibung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Bericht",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Anleitung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Vorgangsbeschreibung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Gegenstandsbeschreibung",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Personenbeschreibung",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "112676"
+      ],
+      "item": "4 von 6",
+      "instruction": "Ermittle, um welche Art der Beschreibung es sich bei den Abschnitten handelt.\nWähle den korrekten Begriff aus.",
+      "hint": "Beschreibungen sollen den Leser über etwas sachlich und klar informieren. Dabei kann es sich um einen Gegenstand, ein Lebewesen, eine Landschaft oder einen Vorgang handeln.\n• __Gegenstandsbeschreibung:__ Wie der Name schon sagt, wird bei der Gegenstandsbeschreibung ein Gegenstand beschrieben. Zunächst solltest du ihn genau betrachten, um anschließend die Beschreibung anzufertigen. Du kannst dabei vom Auffälligen zum Unauffälligen, vom Wichtigen zum weniger Wichtigen, von außen nach innen oder von unten nach oben vorgehen. Bei einem Regal handelt es sich um einen Gegenstand. Andere Gegenstände könnten ein Tisch, ein Haus oder eine Lampe sein. Es gibt unzählige Gegenstände, die beschrieben werden können.\n• __Vorgangsbeschreibung:__ Hierbei handelt es sich um die Darstellung eines Ablaufs. Dabei ist dieser Ablauf nicht nur eine einmalige Sache, sondern ein wiederholbarer Vorgang. Achte darauf, dass du die einzelnen Abläufe in der richtigen Reihenfolge und nachvollziehbar darstellst. Bei dem Text in der Aufgabe ist das Anbringen eines Regals ein Vorgang.\n• __Personenbeschreibung:__ Bei der Personenbeschreibung kannst du mit dem Gesamteindruck oder mit allgemeinen Angaben zur Person beginnen. Das Aussehen der Person solltest du in einer geordneten Reihenfolge beschreiben, z.B. von oben nach unten (Kopf, Haare, Gesicht, Kleidung, Schuhe). Vergiss nicht die wichtigen Eigenschaften einer Person, wie besondere Charaktereigenschaften (Mut, Angst, etc.) oder Verhaltensweisen (Freunde, Hobbies, Vorlieben etc.). Diese Eigenschaften machen die Person einzigartig."
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&image]\n[@id:112677]\n[%5 von 6]\n[!Entscheide dich für eine logisch aufgebaute Vorgangsbeschreibung.\nBringe die Sätze in die richtige Reihenfolge.]\n[&image:https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_beschreibungen3.png]\nLaura liebt die Spaghetti mit Hackfleischsoße ihrer Oma. Beim Aufschreiben hat sie sich an die richtige Schreibweise einer Vorgangsbeschreibung gehalten. Leider sind ihr die Zettel mit ihren Notizen durcheinander geraten. Hilf ihr, die richtige Reihenfolge zu finden.\n\nA) Tipp: Geriebener Parmesan kann über die Spaghetti mit Soße geriebenen werden.\nB) Nun kann die Soße etwas köcheln. Währenddessen Wasser in einem Topf mit einer guten Prise Salz zum Kochen bringen.\nC) Die Zwiebeln in einer Pfanne mit etwas Öl anschwitzen. Nun das Hackfleisch hinzugeben und bei mittlerer Hitze braten. Die Tomaten, das Tomatenmark und die Gemüsebrühe unterrühren.\nD) Anschließend die Spaghetti zufügen und im Salzwasser bissfest garen. Das dauert ca. 12 Minuten.\nE) Zunächst die Soße zubereiten: Dafür Zwiebeln schälen und in Würfel schneiden.\nF) **Omas Spezialrezept für Spaghetti Bolognese**\nG) Guten Appetit!\nH) Die Soße nun noch mit den Gewürzen abschmecken und je nach Belieben salzen und pfeffern.\nI) Zutaten für 4 Personen: 1l Wasser, 1 Essl. Öl, 500g Spaghetti, 2 kleine Zwiebeln, 500g Hackfleisch, 6 Tomaten, 2 Essl. Tomatenmark, 1TL Zucker, 2TL Oregano, 2TL Basilikum, 1 Würfel Gemüsebrühe\n  \nRICHTIGE REIHENFOLGE [_F] [_I] [_E] [_C] [_H] [_B] [_D] [_A] [_G]\n[?Vorgänge, die wiederholt werden und stets in gleicher Weise ablaufen können, nennt man __Vorgangsbeschreibungen__. Sie informieren über wesentliche Merkmale eines Vorgangs. Dem Adressaten werden Teil- bzw. Einzelvorgänge genannt. Die einzelnen Teilvorgänge werden so geschrieben, dass der Zusammenhang von Ursache und Wirkung deutlich wird. Auch das zeitliche Mit- und Nebeneinander von Einzelvorgängen muss sichtbar werden.\n\nFolgende Vorgänge zählen zu den Vorgangsbeschreibungen: \n• Kochrezepte\n• Bastelanleitungen \n• Bauanleitungen \n• Gebrauchsanweisungen \n• Bedienungsanleitungen \n• Spielbeschreibungen\nDa das zeitliche Nebeneinander erfasst werden muss, sollte sich der Verfasser vor dem Schreiben folgende Fragen stellen: __Was wird zuerst gemacht? Was geschieht danach? Was läuft möglicherweise gleichzeitig ab?__\n\nDas Vertauschen oder Verwechseln der einzelnen Schritte kann zu einer falschen Vorgangsbeschreibung führen. Bei unserem Beispiel könnte es beim Vertauschen des 4. Schritts __(Die Zwiebeln in einer Pfanne mit etwas Öl anschwitzen. Nun das Hackfleisch hinzugeben und bei mittlerer Hitze braten. Die Tomaten, das Tomatenmark und die Gemüsebrühe unterrühren.)__ und des 6. Schritts __(Nun kann die Soße etwas köcheln. Währenddessen einen Topf mit Wasser und einer guten Prise Salz zum Kochen bringen.)__ dazu führen, dass das Hackfleisch seinen Geschmack nicht richtig entfaltet und im schlimmsten Fall roh bleibt.]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Laura liebt die Spaghetti mit Hackfleischsoße ihrer Oma. Beim Aufschreiben hat sie sich an die richtige Schreibweise einer Vorgangsbeschreibung gehalten. Leider sind ihr die Zettel mit ihren Notizen durcheinander geraten. Hilf ihr, die richtige Reihenfolge zu finden.\n\nA) Tipp: Geriebener Parmesan kann über die Spaghetti mit Soße geriebenen werden.\nB) Nun kann die Soße etwas köcheln. Währenddessen Wasser in einem Topf mit einer guten Prise Salz zum Kochen bringen.\nC) Die Zwiebeln in einer Pfanne mit etwas Öl anschwitzen. Nun das Hackfleisch hinzugeben und bei mittlerer Hitze braten. Die Tomaten, das Tomatenmark und die Gemüsebrühe unterrühren.\nD) Anschließend die Spaghetti zufügen und im Salzwasser bissfest garen. Das dauert ca. 12 Minuten.\nE) Zunächst die Soße zubereiten: Dafür Zwiebeln schälen und in Würfel schneiden.\nF) **Omas Spezialrezept für Spaghetti Bolognese**\nG) Guten Appetit!\nH) Die Soße nun noch mit den Gewürzen abschmecken und je nach Belieben salzen und pfeffern.\nI) Zutaten für 4 Personen: 1l Wasser, 1 Essl. Öl, 500g Spaghetti, 2 kleine Zwiebeln, 500g Hackfleisch, 6 Tomaten, 2 Essl. Tomatenmark, 1TL Zucker, 2TL Oregano, 2TL Basilikum, 1 Würfel Gemüsebrühe\n  \nRICHTIGE REIHENFOLGE {0} {1} {2} {3} {4} {5} {6} {7} {8}",
+      "item": "5 von 6",
+      "hint": "Vorgänge, die wiederholt werden und stets in gleicher Weise ablaufen können, nennt man __Vorgangsbeschreibungen__. Sie informieren über wesentliche Merkmale eines Vorgangs. Dem Adressaten werden Teil- bzw. Einzelvorgänge genannt. Die einzelnen Teilvorgänge werden so geschrieben, dass der Zusammenhang von Ursache und Wirkung deutlich wird. Auch das zeitliche Mit- und Nebeneinander von Einzelvorgängen muss sichtbar werden.\n\nFolgende Vorgänge zählen zu den Vorgangsbeschreibungen: \n• Kochrezepte\n• Bastelanleitungen \n• Bauanleitungen \n• Gebrauchsanweisungen \n• Bedienungsanleitungen \n• Spielbeschreibungen\nDa das zeitliche Nebeneinander erfasst werden muss, sollte sich der Verfasser vor dem Schreiben folgende Fragen stellen: __Was wird zuerst gemacht? Was geschieht danach? Was läuft möglicherweise gleichzeitig ab?__\n\nDas Vertauschen oder Verwechseln der einzelnen Schritte kann zu einer falschen Vorgangsbeschreibung führen. Bei unserem Beispiel könnte es beim Vertauschen des 4. Schritts __(Die Zwiebeln in einer Pfanne mit etwas Öl anschwitzen. Nun das Hackfleisch hinzugeben und bei mittlerer Hitze braten. Die Tomaten, das Tomatenmark und die Gemüsebrühe unterrühren.)__ und des 6. Schritts __(Nun kann die Soße etwas köcheln. Währenddessen einen Topf mit Wasser und einer guten Prise Salz zum Kochen bringen.)__ dazu führen, dass das Hackfleisch seinen Geschmack nicht richtig entfaltet und im schlimmsten Fall roh bleibt.",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "112677"
+      ],
+      "instruction": "Entscheide dich für eine logisch aufgebaute Vorgangsbeschreibung.\nBringe die Sätze in die richtige Reihenfolge.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/sofatutor/web-resources/images/sofatutor_beschreibungen3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "F"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "I"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "E"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "C"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "H"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "B"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "D"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "A"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "G"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.true-false:bitmark--&image]\n[@id:112678]\n[%6 von 6]\n[!Prüfe, ob die Formulierungen passend für eine Beschreibung sind.\nWähle die Formulierungen aus, die für eine Beschreibung verwendbar sind.]\n[@labelTrue:passend][@labelFalse:nicht passend]\n===\n[-Die elfenhaft anmutende Frau tanzte in der Ecke und schüttelte wild ihr Haar durch die Luft. Es schien, als hätte sie alles um sich herum vergessen.]\n===\n[+Der Schrank steht in der linken Ecke des Raumes und ist circa zwei Meter hoch und drei Meter breit. Er besteht aus dunkelbraunem Holz und hat drei Türen. Die Griffe sind silber.]\n===\n[+Zuerst sollte man sich Schere, Kleber, einen Stift und Papier bereitlegen. Danach sollte man die Form auf das Papier aufzeichnen und anschließend entlang der Linien ausschneiden. Schließlich können die Blumen an die Wand geklebt werden.]\n===\n[-Zum Schluss faltet man die Tiere so, dass die wie Käfer aussehen. Vorher muss man aber die richtigen Bestandteile aus rotem Papier ausschneiden und davor noch weiße Punkte, die dann am Ende aufgeklebt werden. Dafür benötigt man Kleber, eine Schere und bunten Tonkarton.]\n===\n[-Ein großer Mann stand mit den Händen in die Hüften gestemmt vor ihm. Sein Anblick war furchteinflößend und imposant. Man hatte das Gefühl, dass er ihm gleich einen Schlag ins Gesicht verpassen wolle.]\n===\n[+Die rote Lampe ist groß und in der linken Ecke des Raumes befindlich. Es handelt sich um eine Stehlampe. Ihre ovale Form lässt sie wie eine Nussschale aussehen. Grüne Verzierungen runden ihr Design ab.]\n===\n\n[?Diese Formulierungen sind zum Beispiel für eine Beschreibung brauchbar:\n• __Der Schrank steht in der linken Ecke des Raumes und ist circa zwei Meter hoch und drei Meter breit. Er besteht aus dunkelbraunem Holz und hat drei Türen. Die Griffe sind silbern.__\nDie Beschreibung ist logisch aufgebaut, sie geht vom Allgemeinen zum Detail und der Adressat hat am Ende ein Bild von dem Schrank vor Augen.\n• __Zuerst sollte man sich Schere, Kleber, einen Stift und Papier bereitlegen. Danach sollte man die Form auf das Papier aufzeichnen und anschließend entlang der Linien ausschneiden. Schließlich können die\nBlumen an die Wand geklebt werden.__\nMit dieser Vorgangsbeschreibung könntest du nachbasteln, was beschrieben wurde.\n• __Die rote Lampe ist groß und in der linken Ecke des Raumes befindlich. Es handelt sich um eine Stehlampe. Ihre ovale Form lässt sie wie eine Nussschale aussehen. Grüne Verzierungen runden ihr Design ab.__\nDiese Beschreibung klingt zwar etwas schwer verständlich, letztendlich ist sie aber eine passende Gegenstandsbeschreibung. Durch den Vergleich zu einer Nussschale bekommt der Leser auch ein klares Bild davon, welche Form die Lampe hat.\n\nNicht so gelungen sind die anderen beiden Beschreibungen:\n• __Die elfenhaft anmutende Frau tanzte in der Ecke und schüttelte wild ihr Haar durch die Luft. Es schien als hätte sie alles um sich herum vergessen.__\nDas klingt zwar poetisch, aber es wird nicht klar, wie die Person wirklich aussieht.\n• __Zum Schluss faltet man die Tiere so, dass die wie Käfer aussehen. Vorher muss man aber die richtigen Bestandteile aus rotem Papier ausschneiden und davor noch weiße Punkte, die dann am Ende aufgeklebt werden. Dafür benötigt man Kleber, eine Schere und bunten Tonkarton.__\nMit dieser Bastelanleitung bräuchtest du wesentlich länger zum Basteln, als wenn die Schritte systematisch beschrieben würden. Hier wurde nicht die richtige Reihenfolge eingehalten.]",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "6 von 6",
+      "lead": "",
+      "instruction": "Prüfe, ob die Formulierungen passend für eine Beschreibung sind.\nWähle die Formulierungen aus, die für eine Beschreibung verwendbar sind.",
+      "hint": "Diese Formulierungen sind zum Beispiel für eine Beschreibung brauchbar:\n• __Der Schrank steht in der linken Ecke des Raumes und ist circa zwei Meter hoch und drei Meter breit. Er besteht aus dunkelbraunem Holz und hat drei Türen. Die Griffe sind silbern.__\nDie Beschreibung ist logisch aufgebaut, sie geht vom Allgemeinen zum Detail und der Adressat hat am Ende ein Bild von dem Schrank vor Augen.\n• __Zuerst sollte man sich Schere, Kleber, einen Stift und Papier bereitlegen. Danach sollte man die Form auf das Papier aufzeichnen und anschließend entlang der Linien ausschneiden. Schließlich können die\nBlumen an die Wand geklebt werden.__\nMit dieser Vorgangsbeschreibung könntest du nachbasteln, was beschrieben wurde.\n• __Die rote Lampe ist groß und in der linken Ecke des Raumes befindlich. Es handelt sich um eine Stehlampe. Ihre ovale Form lässt sie wie eine Nussschale aussehen. Grüne Verzierungen runden ihr Design ab.__\nDiese Beschreibung klingt zwar etwas schwer verständlich, letztendlich ist sie aber eine passende Gegenstandsbeschreibung. Durch den Vergleich zu einer Nussschale bekommt der Leser auch ein klares Bild davon, welche Form die Lampe hat.\n\nNicht so gelungen sind die anderen beiden Beschreibungen:\n• __Die elfenhaft anmutende Frau tanzte in der Ecke und schüttelte wild ihr Haar durch die Luft. Es schien als hätte sie alles um sich herum vergessen.__\nDas klingt zwar poetisch, aber es wird nicht klar, wie die Person wirklich aussieht.\n• __Zum Schluss faltet man die Tiere so, dass die wie Käfer aussehen. Vorher muss man aber die richtigen Bestandteile aus rotem Papier ausschneiden und davor noch weiße Punkte, die dann am Ende aufgeklebt werden. Dafür benötigt man Kleber, eine Schere und bunten Tonkarton.__\nMit dieser Bastelanleitung bräuchtest du wesentlich länger zum Basteln, als wenn die Schritte systematisch beschrieben würden. Hier wurde nicht die richtige Reihenfolge eingehalten.",
+      "labelTrue": "passend",
+      "labelFalse": "nicht passend",
+      "statements": [
+        {
+          "statement": "Die elfenhaft anmutende Frau tanzte in der Ecke und schüttelte wild ihr Haar durch die Luft. Es schien, als hätte sie alles um sich herum vergessen.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Der Schrank steht in der linken Ecke des Raumes und ist circa zwei Meter hoch und drei Meter breit. Er besteht aus dunkelbraunem Holz und hat drei Türen. Die Griffe sind silber.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Zuerst sollte man sich Schere, Kleber, einen Stift und Papier bereitlegen. Danach sollte man die Form auf das Papier aufzeichnen und anschließend entlang der Linien ausschneiden. Schließlich können die Blumen an die Wand geklebt werden.",
+          "isCorrect": true,
+          "isExample": false
+        },
+        {
+          "statement": "Zum Schluss faltet man die Tiere so, dass die wie Käfer aussehen. Vorher muss man aber die richtigen Bestandteile aus rotem Papier ausschneiden und davor noch weiße Punkte, die dann am Ende aufgeklebt werden. Dafür benötigt man Kleber, eine Schere und bunten Tonkarton.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Ein großer Mann stand mit den Händen in die Hüften gestemmt vor ihm. Sein Anblick war furchteinflößend und imposant. Man hatte das Gefühl, dass er ihm gleich einen Schlag ins Gesicht verpassen wolle.",
+          "isCorrect": false,
+          "isExample": false
+        },
+        {
+          "statement": "Die rote Lampe ist groß und in der linken Ecke des Raumes befindlich. Es handelt sich um eine Stehlampe. Ihre ovale Form lässt sie wie eine Nussschale aussehen. Grüne Verzierungen runden ihr Design ab.",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "112678"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:112679]\n[%Unsere Tipps für die Aufgaben]\n**Gib die Merkmale einer Beschreibung an.**\n1. Tipp\nEine Beschreibung sollte für den Leser verständlich sein. Sind viele Fremdwörter sinnvoll?\n2. Tipp\nÜberlege noch einmal, wie man Verwirrung vermeiden kann.\n\n**Definiere die Eigenschaften einer Beschreibung.** \n1. Tipp\nÜberlege noch einmal, ob Fantasie beim Erstellen einer Beschreibung gefragt ist.\n2. Tipp\nWie sollte eine Beschreibung gestaltet sein? Bedenke, dass die beschriebenen Dinge in der Wirklichkeit zu finden sind.\n\n**Bestimme den Inhalt der unterschiedlichen Textsorten.** \n1. Tipp\nÜberlege noch einmal, was der Inhalt eines Berichts ist.\n2. Tipp\nFür die Beschreibung eines Automotors bräuchtest du Fachbegriffe. Zu welcher Kategorie gehört ein Automotor?\n\n**Ermittle, um welche Art der Beschreibung es sich bei den Abschnitten handelt.**\n1. Tipp\nBei einer Vorgangsbeschreibung wird etwas Wiederholbares beschrieben.\n2. Tipp\nEin Bericht ist eine sachlicher Wiedergabe oder Darstellung eines Geschehens.\n\n**Entscheide dich für eine logisch aufgebaute Vorgangsbeschreibung.**\n1. Tipp\nHandelt es sich bei einer Vorgangsbeschreibung um eine Anleitung, z. B. ein Bauanleitung, so benennst du zunächst genau das Material oder das Werkzeug, das benötigt wird.\n2. Tipp\nWörter wie zunächst, zuerst, bevor, anschließend, danach helfen dir, die zeitliche Abfolge in der Vorgangsbeschreibung richtig darzustellen.\n\n**Prüfe, ob die Formulierungen passend für eine Beschreibung sind.**\n1. Tipp\nDenke daran, dass Beschreibungen immer logisch bzw. systematisch aufgebaut sein sollten.\n2. Tipp\nAchte auch auf die Zeitformen. Sie geben dir ebenfalls einen Hinweis darauf, ob es sich um eine Beschreibung handelt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Gib die Merkmale einer Beschreibung an.**\n1. Tipp\nEine Beschreibung sollte für den Leser verständlich sein. Sind viele Fremdwörter sinnvoll?\n2. Tipp\nÜberlege noch einmal, wie man Verwirrung vermeiden kann.\n\n**Definiere die Eigenschaften einer Beschreibung.** \n1. Tipp\nÜberlege noch einmal, ob Fantasie beim Erstellen einer Beschreibung gefragt ist.\n2. Tipp\nWie sollte eine Beschreibung gestaltet sein? Bedenke, dass die beschriebenen Dinge in der Wirklichkeit zu finden sind.\n\n**Bestimme den Inhalt der unterschiedlichen Textsorten.** \n1. Tipp\nÜberlege noch einmal, was der Inhalt eines Berichts ist.\n2. Tipp\nFür die Beschreibung eines Automotors bräuchtest du Fachbegriffe. Zu welcher Kategorie gehört ein Automotor?\n\n**Ermittle, um welche Art der Beschreibung es sich bei den Abschnitten handelt.**\n1. Tipp\nBei einer Vorgangsbeschreibung wird etwas Wiederholbares beschrieben.\n2. Tipp\nEin Bericht ist eine sachlicher Wiedergabe oder Darstellung eines Geschehens.\n\n**Entscheide dich für eine logisch aufgebaute Vorgangsbeschreibung.**\n1. Tipp\nHandelt es sich bei einer Vorgangsbeschreibung um eine Anleitung, z. B. ein Bauanleitung, so benennst du zunächst genau das Material oder das Werkzeug, das benötigt wird.\n2. Tipp\nWörter wie zunächst, zuerst, bevor, anschließend, danach helfen dir, die zeitliche Abfolge in der Vorgangsbeschreibung richtig darzustellen.\n\n**Prüfe, ob die Formulierungen passend für eine Beschreibung sind.**\n1. Tipp\nDenke daran, dass Beschreibungen immer logisch bzw. systematisch aufgebaut sein sollten.\n2. Tipp\nAchte auch auf die Zeitformen. Sie geben dir ebenfalls einen Hinweis darauf, ob es sich um eine Beschreibung handelt.",
+      "id": [
+        "112679"
+      ],
+      "item": "Unsere Tipps für die Aufgaben"
+    }
+  }
+]

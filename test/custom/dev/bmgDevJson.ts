@@ -21,7 +21,7 @@ const bitmarkTool = new BitmarkTool();
 
 class BmgDevJson {
   async test(debug?: boolean): Promise<void> {
-    const filename = path.resolve(__dirname, '../../..', 'assets/test', 'test.json');
+    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.json');
 
     if (debug) {
       // Read in the test file

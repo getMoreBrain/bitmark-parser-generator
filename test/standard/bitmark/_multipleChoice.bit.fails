@@ -1,0 +1,131 @@
+[.multiple-choice-1]
+|| ANTLR parse error in the [!instruction] ||
+[@id:131476][%16]
+[!<Warum wolltest du wieder in die Schweiz zurück?>
+<<Weil ich keine Arbeit ....>> ]
+[-a) gefunden][+b) hatte][-c) war]
+
+
+
+[.multiple-choice:bitmark]
+|| Fails because bitmark format is missing -- or ++ ||
+[@id:190701]
+[!ICH BEVORZUGE …]
+===
+[!1. ]
+[+Bier]
+[-Wein]
+===
+[!2. ]
+[+Schokolade]
+[-Chips]
+===
+[!3. ]
+[+Ferien am Meer]
+[-Ferien in den Bergen]
+===
+[!4. ]
+[+Hund]
+[-Katze]
+===
+[!5. ]
+[+Sport treiben]
+[-TV schauen]
+===
+[!6. ]
+[+Kundenkontakt]
+[-Büroarbeit]
+===
+[!7. ]
+[+Kaffee]
+[-Tee]
+===
+[!8. ]
+[+Stadt]
+[-Land]
+===
+[!9. ]
+[+Selber Kochen]
+[-Im Restaurant Essen]
+===
+[!10. ]
+[+Weihnachten mit zu Hause mit der Familie]
+[-Weihnachten in die Ferien fahren]
+===
+[!11. ]
+[+Wellness]
+[-Fitness]
+===
+[!12. ]
+[+Spazieren]
+[-Velotour]
+===
+[!13. ]
+[+Sportliche Kleider ]
+[-Elegante Kleider]
+===
+[!14. ]
+[+Camping]
+[-5 Stern Hotel]
+===
+[!15. ]
+[+Schlager]
+[-Pop/Rock]
+===
+[!16. ]
+[+Tatort (Krimi)]
+[-Rosamunde Pilcher (Roman)]
+===
+[!17. ]
+[+Kultur]
+[-Sport]
+===
+[!18. ]
+[+Migros]
+[-Coop]
+===
+
+
+[.multiple-choice-1:bitmark--]
+|| Fails due to @example after first option. ANTLR parser incorrectly adds 'example' at the top JSON level, PEG parser just ignores tag||
+[@id:131330][!91. Das ist ___ Kind.]
+[+a) ein][@example] [-b) eine] [-c) einen]
+
+
+[.multiple-choice-1&image-link]
+[@id:232617]
+[!Hauptstadt von Sri Lanka]
+[&image-link:https://card2brain.ch/c2b-images/card/1399684-answer.jpg?v=1654534534510]
+[-Islamabad]
+[-Montevideo]
+[-Dakar]
+[+Colombo]
+[-Peking]
+
+
+[.multiple-choice-1:bitmark--]
+[@id:131345][%5]
+[!Herr Cimildoro ___ in der Schweiz.] [-a) wohnst] [?hint]
+[-b) Wohnung] [-c) wohnen] [+d) wohnt]
+
+
+[.multiple-choice-1&image-link]
+[@id:232617]
+[!Hauptstadt von Sri Lanka]
+[&image-link:https://card2brain.ch/c2b-images/card/1399684-answer.jpg?v=1654534534510]
+[-Islamabad]
+[-Montevideo]
+[-Dakar]
+[+Colombo]
+[-Peking]
+
+
+[.multiple-choice]
+[@id:197935]
+f) Kreuzen Sie an, ob ein allfälliger Kapitalgewinn aus dem Verkauf der Beteiligung A-AG in der Steuerperiode 2017 bei der Berechnung der Ermässigung auf Beteiligungserträgen bei der direkten Bundessteuer berücksichtigt wird.
+===
+Kapitalgewinn wird bei der Ermässigung auf Beteiligungserträgen berücksichtigt.
+[+Ja]
+[-Nein]
+===
+

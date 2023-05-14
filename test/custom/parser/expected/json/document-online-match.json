@@ -1,0 +1,85 @@
+[
+  {
+    "bitmark": "[.match-matrix&document]\n[!Bring the german verbs into the correct tense.]\n[&document-online::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l=en]\n::warning::\nUsing this like this is dangeroous\n::\n::code:JavaScript::\n// And a code block\nlet a = 3;\nlet b = 4;\n::\n::embed:LaTeX::\\f{x} = 3::\n::image:: Optional Picture Caption (Title)\n@2x:http://cdn.bitbook.education/images/cat3_big_image.jpg\n::\n===\n[#Verb]\n==\n[#Future, 1st Person, Singular]\n==\n[#Past, 3rd Person, Plural]\n===\ngehen\n==\nich werde gehen\n==\nsie gingen\n===\nsprechen\n==\nich werde sprechen\n==\nsie sprachen\n===",
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": "",
+      "heading": {
+        "forKeys": "Verb",
+        "forValues": [
+          "Future, 1st Person, Singular",
+          "Past, 3rd Person, Plural"
+        ]
+      },
+      "matrix": [
+        {
+          "key": "gehen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "ich werde gehen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "sie gingen"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "sprechen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "ich werde sprechen"
+              ]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "sie sprachen"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "-online::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l=en]\n::warning::\nUsing this like this is dangeroous\n::\n::code:JavaScript::\n// And a code block\nlet a = 3;\nlet b = 4;\n::\n::embed:LaTeX::\\f{x} = 3::\n::image:: Optional Picture Caption (Title)\n@2x:http://cdn.bitbook.education/images/cat3_big_image.jpg\n::",
+      "instruction": "Bring the german verbs into the correct tense."
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '-online'",
+        "line": 3,
+        "column": 10,
+        "errorLine": "[&document-online::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l=en]"
+      },
+      {
+        "message": "Unexpected input 'https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l=en'",
+        "line": 3,
+        "column": 19,
+        "errorLine": "[&document-online::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l=en]"
+      }
+    ]
+  }
+]

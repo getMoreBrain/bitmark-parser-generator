@@ -23,6 +23,7 @@ export { BitType } from './model/enum/BitType';
 export { TextFormat } from './model/enum/TextFormat';
 export { ResourceType } from './model/enum/ResourceType';
 export { NodeType } from './model/ast/NodeType';
+export { BitmarkParserType } from './model/enum/BitmarkParserType';
 
 //
 // Type only exports
@@ -36,6 +37,7 @@ export type { BitTypeType } from './model/enum/BitType';
 export type { TextFormatType } from './model/enum/TextFormat';
 export type { ResourceTypeType } from './model/enum/ResourceType';
 export type { NodeTypeType } from './model/ast/NodeType';
+export type { BitmarkParserTypeType } from './model/enum/BitmarkParserType';
 export type { Generator } from './generator/Generator';
 
 export type { NodeInfo, AstWalkCallbacks } from './ast/Ast';

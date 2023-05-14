@@ -1,3 +1,16 @@
+[.interview:bitmark--&image]
+[@id:136528]
+[&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]
+[%3a]
+[!Wählen Sie eine Person auf den Fotos in Aufgabe 2. Schreiben Sie einen kurzen Text in Ihrer Rolle und beantworten Sie die Fragen.]
+Warum bist du hier? Wie fühlst du dich? Was denkst du gerade?
+===
+[@longAnswer]
+===
+||adapt instructions||
+
+
+
 [.interview:bitmark--]
 [@id:198779]
 [%1]
@@ -5,15 +18,6 @@
 ===
 [$Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]
 ===
-
-[.interview:bitmark--]
-[@id:198780]
-[%2]
-[!Bei welchen Steuerarten des Bundes ist eine Überwälzung vorgesehen und wie funktioniert sie?]
-===
-[$- Bei der Verrechnungssteuer: Eine Bank überwälzt die Steuerzahllast, indem sie auf dem Zinsertrag 35% an die ESTV abliefert und dem Steuerträger nur 65% ausbezahlt
-- Bei der MWST, indem der MWST-Betrag auf dem Umsatz eingerechnet wird und dem Verbraucher / Konsumenten belastet wird
-(Annahme: Konsument ist nicht selbst MWSTpflichtig, sondern der Endverbraucher !)]
 
 [.interview:bitmark++]
 [@id:198781]
@@ -127,4 +131,51 @@ Prüfungsnummer:[@shortAnswer]
 ===
 Kantonsschule:[@shortAnswer]
 ===
+
+
+[.interview:bitmark--]
+[@id:198264]
+[!Aufgaben:]
+===
+Beurteilen Sie, ob sich die Geschwister im MWST-Register der ESTV eintragen lassen
+müssen? Begründen Sie Ihre Antwort mit Hinweis auf das MWSTG.
+[$Ja, die Eintragung ist zwingend, da die Geschwister eine unternehmerische Tätigkeit im Sinne von Art. 10 MWSTG ausüben und der Umsatz von CHF 100'000 mit dem Verkauf der Wohnung 1 (Verkauf vor Baubeginn stellt eine steuerbare Tätigkeit dar) überschritten wird.]
+===
+Erstellen Sie die MWST-Abrechnung (davon ausgehend, dass die Geschwister unabhängig Ihrer Antwort in Aufgabe 1 registriert sind) für die Baute. Der Einfachheit halber erstellen Sie nur eine Abrechnung über das gesamte Bauwerk (keine Quartalsabrechnungen).
+||correct answer as image||
+===
+
+[.interview:bitmark--]
+[@id:198267]
+[%Aufgabe 4][%Nutzungsänderung]
+
+Die Produktion AG wurde 2010 gegründet und hat zu diesem Zeitpunkt folgende zwei Liegenschaften erstellt:
+
+• Produktionsgebäude mit Lagerhalle, welches vollumfänglich für unternehmerische Tätigkeiten verwendet wird,
+• Verwaltungsgebäude, welches zu 50 % für die eigene Tätigkeit verwendet wird; die übrige Fläche – zwei Wohnungen – werden an Privatpersonen vermietet.
+
+Die Investitionen für die Liegenschaften beliefen sich 2010 auf folgende Werte inkl. 7,60 % MWST:
+
+• Produktionsgebäude                 CHF 4'842'000 (inkl. 7,60% MWST)
+• Verwaltungsgebäude inkl. Wohnungen CHF 5'380'000 (inkl. 7,60% MWST)
+• Landanteil für beide Gebäude       CHF 1'800'000
+
+Im Geschäftsjahr 2017 wurden infolge Wasserschadens das Verwaltungsgebäude saniert werden. Die Sanierungskosten haben sich auf 648'000 inkl. 8.0% MWST belaufen. Der Gebäudeversicherungswert hat zu diesem Zeitpunkt (vor Sanierung) CHF 6'000'000 betragen.
+
+Nachdem die Gesellschaft in letzter Zeit massive Verluste erlitten hat, wurde vom Verwaltungsrat im Rahmen einer Sanierung beschlossen, die beiden Liegenschaften zu veräussern. Die Immo Invest AG ist bereit, die Grundstücke auf den 30. Juni 2021 wie folgt zu erwerben:
+
+• Produktionsgebäude: CHF 6'500'000 (inkl. Land CHF 1'000'000)
+• Verwaltungsgebäude: CHF 7'500'000 (inkl. Land CHF 1'400'000)
+
+Der öffentlich beurkundete Kaufvertrag wurde am 20. Juli 2021 unterzeichnet.
+
+Zeigen Sie die mehrwertsteuerlichen Konsequenzen aus der Veräusserung der Grundstücke für jeder der drei folgenden Varianten auf:
+===
+Variante 1: Verkauf gemäss Art. 21 MWSTG
+===
+Variante 2: Verkauf mit Option gemäss Art. 22 MWSTG
+===
+Variante 3: Verkauf mittels Meldeverfahren gemäss Art. 38 MWSTG.
+===
+||correct answers as pictures||
 

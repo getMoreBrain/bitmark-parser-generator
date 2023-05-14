@@ -1,0 +1,76 @@
+[.article:bitmark--]
+|| Fails on unescaped square brackets '[Umgruppierung, Leichte Umformulierung:]' in ANTLR parser ||
+[@id:145773]
+Im Anfang war das Wort“, mit der das Evangelium des Johannes beginnt. Faust will das Wort bekanntlich nicht so hoch schätzen, und er schlägt andere Möglichkeiten vor – Sinn, Kraft oder Tat. Das war vor zweihundert Jahren. Heute würden wir die Stelle erneut anders übersetzen, nämlich mit unserem Schlüsselwort: Im Anfang war die Information. „It from Bit“, wie es die englische Sprache in wunderbarer Kürze und mit lässiger Eleganz unter Zuhilfenahme der wissenschaftlich messbaren Einheit der Information, des Bit, auszudrücken gestattet.]
+Die Formel „It from Bit“ stammt von dem kürzlich verstorbenen amerikanischen Physiker John A. Wheeler, der dadurch nicht nur andeutet, dass die plumpe Welt ihren Anfang einer Formbildung – einer In-formation – verdankt, sondern auch, dass wir selbst das Etwas durch die Informationen erzeugen, die wir von ihm bekommen.
+[Umgruppierung, Leichte Umformulierung:] Und wir erwerben Informationen, weil wir nach ihnen streben. Dies ist unsere Natur, was in der Metaphysik des Aristoteles nachzulesen ist: „Alle Menschen streben von Natur nach Wissen“.
+Heute sprechen wir weniger von Wissen als von Informationen. Wir benützen diesen Begriff mit größter Selbstverständlichkeit, aber wir können aber hoffen, dass wir am Ende der Suche nach Informationen über die Information schließlich über ein wenig mehr wirkliches Wissen verfügen – gemeint ist: ein Verständnis dafür, wie wir dazu gekommen sind, die Welt immer mehr als einen Kosmos von Informationen zu verstehen und was das für unser Verständnis der Welt bedeutet.
+Wir wollen sehen, zu was sie uns führt.
+
+
+[.article:bitmark--]
+|| Fails on unicode characters in the ANTLR parser ||
+[@id:145791]
+[%Eine Welt voller Informationen]
+Die erste Theorie der Information geht auf das Jahr 1948 zurück, als der Mathematiker Claude Shannon darüber nachdachte, wie sich die Übertragung von Nachrichten besser bewerkstelligen lässt. Shannon gelangte zu der Erkenntnis, dass dieses „besser“ bedeutet, sich nicht auf die inhaltliche Bedeutung der Nachricht zu konzentrieren. Er schränkt sich ein und klammert das Komplexe und Komplizierte erst einmal aus. Shannon schreibt: „ Das fundamentale Problem der Kommunikation besteht darin, an einem Punkt eine Nachricht, die an einem anderen Punkt ausgewählt wurde, exakt oder näherungsweise wiederzugeben. Oft haben Nachrichten eine __Bedeutung__, das heißt, sie beziehen sich auf ein System oder sind korreliert mit einem System, das bestimmte physikalische konzeptuelle Entitäten besitzt. Diese semantischen Aspekte der Kommunikation sind für das technische Problem irrelevant.“ Dank dieser Einschränkung gelingt es Shannon, eine vollständige mathematische Theorie der Information zu entwickeln. Sie bietet den Vorteil, unabhängig davon zu sein, in welcher Form die Information vorliegt – als Schrift, als Muster, als Bild oder wie auch immer. Die Information muss nur durch einen Code auf Nullen und Einsen zurückzuführen sein, und die dabei entstehenden Folgen gilt es dann zu zählen.
+Um die mathematische Darstellbarkeit der Informationen zu erreichen, schlägt er also vor, alle Zeichen in binärer Form darzustellen – also als Folge von 0 und 1 – und die Information einer solchen Zahlengruppe durch die Menge der benötigten Stellen festzulegen. Er sprach von „binary digits“, was als Bit abgekürzt wurde und in dieser Form Einzug in den sprachlichen Alltag hielt.
+Die Idee der binären – zweiwertigen – Darstellung ist uralter Stoff für Mathematiker und auch immer schon für den Bau von Rechenmaschinen im Gespräch gewesen. Bereits im 17. Jahrhundert hat der große Gottfried Wilhelm Leibniz über binäre Codes nachgedacht und die Möglichkeit erwogen, Zahlen dual darzustellen.
+Das Ziel von Shannon (in Kooperation mit Norbert Wiener) lag nicht nur darin, Möglichkeiten zu schaffen, mit denen Informationen gemessen werden konnten. Sie wollten Informationen auch in elektronischen Schaltkreisen als Nachrichten übermitteln, und genau dafür waren die binären Einheiten gut zu gebrauchen: Da floss ein Strom – das zählte als 1 – oder da floss kein Strom – das zählte als 0.
+In seinen zwei Arbeiten mit dem Originaltitel __A Mathematical Theory of Communication__ von 1948 (in der deutschen Übersetzung __Eine mathematische Theorie der Information__[!]) schlägt Shannon vor, den Informationsgehalt einer Nachricht dadurch zu bestimmen, dass man sie erst binär ausdrückt und dann die Anzahl der Nullen und Einsen ermittelt. Man kann die Ziffern, mit denen wir gewöhnlich rechnen – also 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 –, binär darstellen durch 0, 1, 10, 11, 100, 101, 110, 111, 1000, 1001, 1010. Man auch die Buchstaben, mit denen wir unsere Worte schreiben, binär darstellen, und zwar dadurch, dass man einen Code festlegt, nach dem dies geschieht. Unter einem Code versteht man eine Vorschrift, nach der zum Beispiel ein Zeichen (ein Buchstabe) in ein anderes Zeichen (eine Zahl) verwandelt wird, und den meisten fällt dabei der Morse-Code ein, bei dem aus Buchstaben eine Kombination aus langen und kurzen Impulsen wurde, mit denen telegrafiert werden konnte. In der modernen Computertechnologie wird häufig ein Code eingesetzt, der mit acht Bits operiert, weshalb man diese Einheit der Information aus historischen Gründen als Byte zusammenfasst. Wie sich nämlich herausstellte, reichen acht Bits (also 1 Byte) mit ihren 2 hoch acht, also 256 Möglichkeiten aus, um sämtliche Buchstaben und Zahlen nebst Sonderzeichen der Sprache (Anführungen, Doppelpunkte, …) zu kodieren, und damit können alle denkbaren Informationen einem Computer als elektrische Signale gegeben und von ihm empfangen werden. Damit war der Weg frei, den American Standard Code for Information Interchange – ASCII – zu konzipieren, der ab 1963 entwickelt und von 1967 an zum Standard wurde. (Abb. ASCII-Code). Genauer muss gesagt werden, dass anfänglich nur 128 Zeichen kodiert werden sollten, wofür ein 7-Bit-Code reichte, der aber bald erweitert wurde. Zu den ursprünglichen 128 Zeichen gehörten neben dem Leerzeichen noch folgende Symbole:
+! „ $ & ` ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ?
+@ A B C D E F G H I J K L M N O P Q R S T U
+V W X Y Z [ \ ] ^ _ ` 	a b c d e f g h i j k l m n o p q
+r s t u v w x y z { | } ~
+
+[.article:bitmark--&image]
+|| Fails on image format extraction in ANTLR parser ||
+[@id:295724]
+[&image:https://docs.bitmark.cloud/bit-books/axa/effektive_software-architekturen/web-resources/images/k2/axa_effektive_software_architekturen_k2_11]
+
+
+[.article:bitmark--]
+|| Fails on \u0002 unicode spaces in the ANTLR parser ||
+[@id:295962]
+Hierzu gehören die üblicherweise als Mengengerüste bezeichneten Informationen: Wie viele Benutzer bearbeiten wann wie viele Daten in welcher Zeit? Welche Reaktionszeiten oder Durchsätze soll das System erbringen, welche Prozessor- oder Datenbanklast darf dabei entstehen?
+
+
+[.article:bitmark--]
+|| Fails in ANTLR parser - strange control character in 'item' ||
+[@id:239785]
+[%][%Material zum Download
+Vorlagen und weiterführendes Material online]
+Für einige Methoden haben wir Vorlagen vorbereitet, die ihr nutzen könnt sowie schöne Grafiken zum freien Einsatz auf Board-Tools. Wichtig ist uns dabei: Du kannst diese für dich frei und unbeschränkt nutzen, auch verändern und an Kollegen*innen weitergeben. Bitte unterstütze uns aber, indem du immer dieses Buch und beWirken als Quelle angibst.
+
+[.article:bitmark--]
+|| Excess resources in ANTLR parser, success in new parser - what is best behaviour? ||
+[@id:240051]
+[%][%Ein Ohr für „Neues“ und „Unerwartetes“ — Umfragen im eigenen Umfeld]
+[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k8_3.png]
+Diese Methode ermöglicht es Schüler*innen, die eigene und kritische Perspektive auf Sachverhalte, die Gesellschaft oder Diskurse durch reale Begegnungen mit Personen zu erweitern, zu hinterfragen oder neu zu bilden. Zur Gestaltung einer anregenden Lernatmosphäre braucht es eine Kombination aus unterschiedlichen Lernorten, Impulsgebenden, Lernpartner*innen und Erwartungen. Gerade in sehr stark digital geprägten Lernkontexten ermöglicht diese Methode eine kreative Verzahnung von digitalen und analogen Lernformen.
+
+Schüler*innen kommen mit Menschen aus ihrem Umfeld ins Gespräch, bestenfalls im direkten Kontakt oder auch per Telefon oder Videokonferenz. Damit schlägt diese Methode die inhaltliche „Brücke“ zwischen analogem Selbstlernen und digitalem Online-Unterricht. Der soziale Austausch, die authentische Lernerfahrung und das Verlassen der eigenen mentalen und physischen „Vier-Wände“ ist der Trumpf dieser Methode. Das Interview zeigt Schüler*innen wie mächtig das Gespräch mit anderen Menschen sein kann.
+
+[.article:bitmark--]
+|| Excess resources in ANTLR parser, success in new parser - what is best behaviour? ||
+[@id:270178]
+[%Drei-Phasen-Modell nach Lewin und Leading-Change-Modell nach Kotter]
+[&image:https://docs.bitbook.education/bit-books/compendio/compendio_chapter/web-resources/images/compendio_chapter2.png]
+
+
+[.article:bitmark--]
+||Fails on comment at end of line containing https://www.gartner.com/it/page.jsp?id=2194315 - not sure if this should be considered a comment or not?! ||
+[@id:165455]
+
+Fuchs, G. (2006). The Vital BI Maintenance process. In S.B., __Business intelligence Implementation: Issues and perspectives__ (pp. 116–123). Hyderabad: ICFAI University Press.
+
+Gartner. (2012). __Gartner Forecasts Indian Business Intelligence Software Revenue On Pace to Grow 17.5 Percent in 2012 And Reach $101 Million.__ Retrieved november 17, 2012, from ||https://www.gartner.com/it/page.jsp?id=2194315||
+
+Gable, G., Rosemann, M., & Sedera, W. (2001). Critical Success Factors of Process Modelling For Enterprise Systems. __Proceedings of the 7th Americas Conference on Information Systems,__ (pp. 1128–1130). Boston.
+
+Gangadharan, G., & Swami, S. (2004). Business Intelligence Systems: Design and Implementation Strategies. __26th Int. Conf. Information Technology Interfaces IT1 2004.__ Cavtat, Croatia.
+
+
+[.article:bitmark--]
+|| Fails on ∑ unicode character in the ANTLR parser ||
+[@id:174351]
+__Der Wert von Humankapital: ∑ Ausbildung + akkumulierte Berufserfahrung__.

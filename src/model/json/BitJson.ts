@@ -15,12 +15,15 @@ export interface BitJson {
   publisher: string | string[];
   publications: string | string[];
   author: string | string[];
+  subject: string | string[];
   date: string | string[];
   location: string | string[];
   theme: string | string[];
   kind: string | string[];
   action: string | string[];
   thumbImage: string | string[];
+  focusX: number;
+  focusY: number;
   duration: string | string[];
   deeplink: string | string[];
   externalLink: string;
@@ -49,15 +52,22 @@ export interface BitJson {
   instruction: string;
   isExample: boolean;
   example: string;
+  isTracked: boolean; // only .learningPathExternalLink?
+  isInfoOnly: boolean; // only .learningPathExternalLink?
+  // NEW property - not in the ANTLR parser
+  extraProperties: {
+    [key: string]: unknown | unknown[];
+  };
   resource: ResourceJson;
   body: string;
 
   sampleSolution: string;
+  partialAnswer: string;
   elements: string[];
   statement: string;
   isCorrect: boolean;
   statements: StatementJson[];
-  responses: ResponseJson[];
+  responses: ResponseJson[] | BotResponseJson[];
   quizzes: QuizJson[];
   heading: HeadingJson;
   pairs: PairJson[];
@@ -170,4 +180,13 @@ export interface QuestionJson {
   example: string;
   isCaseSensitive: boolean;
   isShortAnswer: boolean;
+}
+
+export interface BotResponseJson {
+  response: string;
+  reaction: string;
+  feedback: string;
+  item: string;
+  lead: string;
+  hint: string;
 }

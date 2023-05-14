@@ -1,0 +1,780 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:144965]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/mendo/2002_wohneigentumsförderung_wef/web-resources/images/mendo_wohneigentumsfoerderung_cover.png]\n[#Wohneigentum-Förderungsprogramme]\n[@externalId:e-wohneigentum-frderungsprogramme_ian_emsdop5b]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "144965"
+      ],
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/mendo/2002_wohneigentumsförderung_wef/web-resources/images/mendo_wohneigentumsfoerderung_cover.png"
+      ],
+      "title": "Wohneigentum-Förderungsprogramme",
+      "externalId": [
+        "e-wohneigentum-frderungsprogramme_ian_emsdop5b"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144966]\nUm den schweizerischen Wohnbau bzw. die Quote an Wohneigentum zu fördern wurden über die Jahre verschiedene Förderungsprogramme gestartet. Diese bezwecken vorwiegend die Sicherung der Eigenfinanzierungsquote, da durch die hohen Bau-/Kaufkosten in der Schweiz, oft das benötigte Eigenkapital nicht nachgewiesen oder die Tragbarkeit nicht gesichert werden kann. Namentlich handelt es sich um nachfolgende Programme:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Um den schweizerischen Wohnbau bzw. die Quote an Wohneigentum zu fördern wurden über die Jahre verschiedene Förderungsprogramme gestartet. Diese bezwecken vorwiegend die Sicherung der Eigenfinanzierungsquote, da durch die hohen Bau-/Kaufkosten in der Schweiz, oft das benötigte Eigenkapital nicht nachgewiesen oder die Tragbarkeit nicht gesichert werden kann. Namentlich handelt es sich um nachfolgende Programme:",
+      "id": [
+        "144966"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144967]\n• Wohneigentumsförderung (WEF- 2. & 3. Säule)\n• Wohnbau- & Eigentumsförderung des Bundes (WEG)\n• Wohnbaueigentumsförderung mit Bürgschaftsgenossenschaften",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Wohneigentumsförderung (WEF- 2. & 3. Säule)\n• Wohnbau- & Eigentumsförderung des Bundes (WEG)\n• Wohnbaueigentumsförderung mit Bürgschaftsgenossenschaften",
+      "id": [
+        "144967"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:144968]\n[%1]\n[##Wohneigentumsförderung (WEF- 2. & 3. Säule)]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "144968"
+      ],
+      "title": "Wohneigentumsförderung (WEF- 2. & 3. Säule)"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144969]\nDie Wohneigentumsförderung (WEF) über das BVG wurde per 01.01.1995 in Kraft gesetzt. Durch diese wurde das selbstbewohnte Wohneigentum als Vorsorgeobjekt anerkannt und die beschränkte Verwendung angesammelter Mittel geregelt.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Wohneigentumsförderung (WEF) über das BVG wurde per 01.01.1995 in Kraft gesetzt. Durch diese wurde das selbstbewohnte Wohneigentum als Vorsorgeobjekt anerkannt und die beschränkte Verwendung angesammelter Mittel geregelt.",
+      "id": [
+        "144969"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144970]\nGrundsätzlich müssen folgende Überlegungen beim Einsatz von Vorsorgegeldern beachtet werden:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Grundsätzlich müssen folgende Überlegungen beim Einsatz von Vorsorgegeldern beachtet werden:",
+      "id": [
+        "144970"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144971]\n• Kürzung von Todes- und Invaliditätsleistungen, falls ein Beitragsprimatskassensystem vorliegt;",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Kürzung von Todes- und Invaliditätsleistungen, falls ein Beitragsprimatskassensystem vorliegt;",
+      "id": [
+        "144971"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144972]\n• Allfällige Leistungskürzungen sollten gedeckt werden. Die Kosten zur Schliessung dieser Deckungslücke gehen voll zu Lasten des Versicherungsnehmers;",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Allfällige Leistungskürzungen sollten gedeckt werden. Die Kosten zur Schliessung dieser Deckungslücke gehen voll zu Lasten des Versicherungsnehmers;",
+      "id": [
+        "144972"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144973]\n• Schriftliche Zustimmung des Ehegatten notwendig;",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Schriftliche Zustimmung des Ehegatten notwendig;",
+      "id": [
+        "144973"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144974]\n• Falls beide Vorsorgegelder vorbeziehen wollen, muss das Wohneigentum auf beide Namen im Grundbuch eingetragen sein;\n- Miteigentum: Hier beschränkt sich die Verfügbarkeit der Vorsorgemittel auf den Miteigentumsanteil\n- Gesamteigentum: Nur Ehegatten oder eingetragene Partner können  Vorsorgemittel bei Gesamteigentum einsetzen; Einsatz der Vorsorgemittel über das ganze Verhältnis möglich ( WEFV Art. 2.2.c)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Falls beide Vorsorgegelder vorbeziehen wollen, muss das Wohneigentum auf beide Namen im Grundbuch eingetragen sein;\n- Miteigentum: Hier beschränkt sich die Verfügbarkeit der Vorsorgemittel auf den Miteigentumsanteil\n- Gesamteigentum: Nur Ehegatten oder eingetragene Partner können  Vorsorgemittel bei Gesamteigentum einsetzen; Einsatz der Vorsorgemittel über das ganze Verhältnis möglich ( WEFV Art. 2.2.c)",
+      "id": [
+        "144974"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144975]\n• Kapitalleistungen aus der beruflichen Vorsorge werden unmittelbar beim Bezug besteuert. Es erfolgt eine Bruttoauszahlung der Kapitalleistung. Die Steuern werden also nicht direkt abgezogen und müssen vom Steuerpflichtigen aus dem übrigen Vermögen finanziert werden (Berücksichtigung bei Liquiditätsplanung, weil der Zeitpunkt der Kapitalauszahlung mit dem Zeitpunkt der Fälligkeit der Kapitalsteuer bis zu 12 Monaten auseinanderliegen können);",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Kapitalleistungen aus der beruflichen Vorsorge werden unmittelbar beim Bezug besteuert. Es erfolgt eine Bruttoauszahlung der Kapitalleistung. Die Steuern werden also nicht direkt abgezogen und müssen vom Steuerpflichtigen aus dem übrigen Vermögen finanziert werden (Berücksichtigung bei Liquiditätsplanung, weil der Zeitpunkt der Kapitalauszahlung mit dem Zeitpunkt der Fälligkeit der Kapitalsteuer bis zu 12 Monaten auseinanderliegen können);",
+      "id": [
+        "144975"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144976]\n• Kapitalbezug aus 2. Säule wird im Grundbuch eingetragen (Anmerkung);",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Kapitalbezug aus 2. Säule wird im Grundbuch eingetragen (Anmerkung);",
+      "id": [
+        "144976"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144977]\n• Bei Rückzahlung des vorbezogenen Betrages an die Pensionskasse, wird auf Verlangen die bezahlte Steuer ohne Zins zurückerstattet (Frist von 3 Jahren für Rückforderung; 3a keine Rückzahlungen möglich).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Bei Rückzahlung des vorbezogenen Betrages an die Pensionskasse, wird auf Verlangen die bezahlte Steuer ohne Zins zurückerstattet (Frist von 3 Jahren für Rückforderung; 3a keine Rückzahlungen möglich).",
+      "id": [
+        "144977"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144978]\n• Bei Verkauf des Wohneigentums vor Eintritt des Vorsorgefalls, muss das vorbezogene Kapital an die Pensionskasse zurückbezahlt werden. Erst dann wird das Eigentum grundbuchlich dem Erwerber übertragen; Falls die Vorsorgeeinrichtung keine Vorsorgeleistungen ausrichtet, sind die Erben zur Rückzahlung des Vorbezugs verpflichtet. Für 3a nicht relevant.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Bei Verkauf des Wohneigentums vor Eintritt des Vorsorgefalls, muss das vorbezogene Kapital an die Pensionskasse zurückbezahlt werden. Erst dann wird das Eigentum grundbuchlich dem Erwerber übertragen; Falls die Vorsorgeeinrichtung keine Vorsorgeleistungen ausrichtet, sind die Erben zur Rückzahlung des Vorbezugs verpflichtet. Für 3a nicht relevant.",
+      "id": [
+        "144978"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144979]\n• Bei einer Scheidung hat jeder Ehegatte Anspruch auf die Hälfte der für die Ehedauer zu ermittelnden Austrittsleistungen der Pensionskasse des andern. In Härtefällen (z.B. Vermeidung Zwangsverkauf) kann der Richter bei getätigten Vorbezügen eine andere Entschädigungsregelung vorsehen;",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Bei einer Scheidung hat jeder Ehegatte Anspruch auf die Hälfte der für die Ehedauer zu ermittelnden Austrittsleistungen der Pensionskasse des andern. In Härtefällen (z.B. Vermeidung Zwangsverkauf) kann der Richter bei getätigten Vorbezügen eine andere Entschädigungsregelung vorsehen;",
+      "id": [
+        "144979"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144980]\n• Infolge Schuldentilgung weniger abzugsfähige Schuldzinsen, falls keine Aufstockung der Hypothek mehr erfolgen sollte;",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Infolge Schuldentilgung weniger abzugsfähige Schuldzinsen, falls keine Aufstockung der Hypothek mehr erfolgen sollte;",
+      "id": [
+        "144980"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144981]\n• Das Bundesrecht lässt die vorzeitige Ausrichtung der Altersleistung durch Pensionskassen und durch Einrichtungen der gebundenen Selbstvorsorge für die Amortisation von Hypothekardarlehen auf dem selbstgenutzten Wohneigentum zu. Dabei spielt es keine Rolle, ob der amortisierte Hypothekarkredit vor dem Vorbezug der Altersleistung aufgestockt wurde oder anschliessend wieder erhöht wird. Das massgebende Bundesrecht stellt auch keine Bedingungen auf, wozu die durch die Aufstockung freigewordenen Mittel zu verwenden sind. Es stellt auch keine Steuerumgehung dar, wenn die Erhöhung der Hypothek auf dem privaten Wohnhaus zur Finanzierung des eigenen Unternehmens oder einer Lebensversicherung und damit wieder der Vorsorge dient. (Steuergericht Kanton Solothurn, 26.10.1998).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Das Bundesrecht lässt die vorzeitige Ausrichtung der Altersleistung durch Pensionskassen und durch Einrichtungen der gebundenen Selbstvorsorge für die Amortisation von Hypothekardarlehen auf dem selbstgenutzten Wohneigentum zu. Dabei spielt es keine Rolle, ob der amortisierte Hypothekarkredit vor dem Vorbezug der Altersleistung aufgestockt wurde oder anschliessend wieder erhöht wird. Das massgebende Bundesrecht stellt auch keine Bedingungen auf, wozu die durch die Aufstockung freigewordenen Mittel zu verwenden sind. Es stellt auch keine Steuerumgehung dar, wenn die Erhöhung der Hypothek auf dem privaten Wohnhaus zur Finanzierung des eigenen Unternehmens oder einer Lebensversicherung und damit wieder der Vorsorge dient. (Steuergericht Kanton Solothurn, 26.10.1998).",
+      "id": [
+        "144981"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144982]\n• Seit dem 01.01.2006 dürfen aber innerhalb von 3 Jahren nach dem Einkauf keine Kapitalbezüge getätigt werden. (Kapitalbezug bei Pensionierung, und für Wohneigentum etc.).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Seit dem 01.01.2006 dürfen aber innerhalb von 3 Jahren nach dem Einkauf keine Kapitalbezüge getätigt werden. (Kapitalbezug bei Pensionierung, und für Wohneigentum etc.).",
+      "id": [
+        "144982"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:144983]\n• Wurden Vorbezüge für Wohneigentumsförderung getätigt, so dürfen freiwillige Einkäufe erst vorgenommen werden, wenn die Vorbezüge zurückbezahlt sind.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Wurden Vorbezüge für Wohneigentumsförderung getätigt, so dürfen freiwillige Einkäufe erst vorgenommen werden, wenn die Vorbezüge zurückbezahlt sind.",
+      "id": [
+        "144983"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:144984]\n[&video-link:https://player.vimeo.com/video/346956817][@posterImage:https://docs.bitmark.cloud/bit-books/mendo/2002_wohneigentumsförderung_wef/web-resources/images/poster_images/2002–video1–wef-rechtsgrundlagen.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "144984"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/346956817",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "posterImage": "https://docs.bitmark.cloud/bit-books/mendo/2002_wohneigentumsförderung_wef/web-resources/images/poster_images/2002–video1–wef-rechtsgrundlagen.png"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:144985]\n[&video-link:https://player.vimeo.com/video/346956862][@posterImage:https://docs.bitmark.cloud/bit-books/mendo/2002_wohneigentumsförderung_wef/web-resources/images/poster_images/2002–video2–wef-eigentumsformen.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "144985"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/346956862",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "posterImage": "https://docs.bitmark.cloud/bit-books/mendo/2002_wohneigentumsförderung_wef/web-resources/images/poster_images/2002–video2–wef-eigentumsformen.png"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:144986]\n[&video-link:https://player.vimeo.com/video/346956918][@posterImage:https://docs.bitmark.cloud/bit-books/mendo/2002_wohneigentumsförderung_wef/web-resources/images/poster_images/2002–video3–wef_vorbezug_und_rückzahlung.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "144986"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/346956918",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "posterImage": "https://docs.bitmark.cloud/bit-books/mendo/2002_wohneigentumsförderung_wef/web-resources/images/poster_images/2002–video3–wef_vorbezug_und_rückzahlung.png"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:144987]\n[&video-link:https://player.vimeo.com/video/346956929][@posterImage:https://docs.bitmark.cloud/bit-books/mendo/2002_wohneigentumsförderung_wef/web-resources/images/poster_images/2002–video4–wef_verpfändung.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "144987"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/346956929",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "posterImage": "https://docs.bitmark.cloud/bit-books/mendo/2002_wohneigentumsförderung_wef/web-resources/images/poster_images/2002–video4–wef_verpfändung.png"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:144988]\n[#2002–Fragebogen–Wohneigentumsförderung WEF]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "144988"
+      ],
+      "title": "2002–Fragebogen–Wohneigentumsförderung WEF"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--]\n[@id:144989]\n[%1/12]\n[!Entscheiden Sie, welche Aussage bezüglich der WEF-Verpfändung von Pensionskassenguthaben korrekt ist.]\n===\n[-Dank der WEF-Verpfändung muss ein Käufer keine Eigenmittel bereitstellen.]\n[-Ein Vorsorgenehmer kann immer sein gesamtes Freizügigkeitsguthaben verpfänden.]\n[+Die Bank hat das Recht, die Verpfändung zu verwerten. Dies löst für den Vorsorgenehmer zudem eine Besteuerung aus.]\n[-Für den Vorsorgenehmer bleiben die Vorsorgeleistungen in jedem Fall erhalten.]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "1/12",
+      "instruction": "Entscheiden Sie, welche Aussage bezüglich der WEF-Verpfändung von Pensionskassenguthaben korrekt ist.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Dank der WEF-Verpfändung muss ein Käufer keine Eigenmittel bereitstellen.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Ein Vorsorgenehmer kann immer sein gesamtes Freizügigkeitsguthaben verpfänden.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Die Bank hat das Recht, die Verpfändung zu verwerten. Dies löst für den Vorsorgenehmer zudem eine Besteuerung aus.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Für den Vorsorgenehmer bleiben die Vorsorgeleistungen in jedem Fall erhalten.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "144989"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--]\n[@id:144990]\n[%2/12]\n[!Welche der folgenden Aussagen ist bezüglich eines möglichen WEF-Vorbezugs aus der 2. Säule ab Alter 50 korrekt?]\n===\n[-Das gesamte Vorsorgeguthaben kann bezogen werden.]\n[-Nur der Saldo per Alter 50 kann bezogen werden.]\n[-Die Hälfte des bestehenden Vorsorgeguthabens kann bezogen werden.]\n[+Maximalbetrag ist die Hälfte des bestehenden Vorsorgeguthabens oder der Saldo per Alter 50. Der höhere Betrag steht zur Verfügung.]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "2/12",
+      "instruction": "Welche der folgenden Aussagen ist bezüglich eines möglichen WEF-Vorbezugs aus der 2. Säule ab Alter 50 korrekt?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Das gesamte Vorsorgeguthaben kann bezogen werden.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Nur der Saldo per Alter 50 kann bezogen werden.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Die Hälfte des bestehenden Vorsorgeguthabens kann bezogen werden.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Maximalbetrag ist die Hälfte des bestehenden Vorsorgeguthabens oder der Saldo per Alter 50. Der höhere Betrag steht zur Verfügung.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "144990"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false]\n[@id:144991]\n[%3/12]\n[@labelTrue:richtig][@labelFalse:falsch]\n===\n[+Bevor ein Pensionskasseneinkauf getätigt werden kann (Kundin ist 45 jährig), muss ein bereits getätigter WEF-Vorbezug zurückbezahlt werden.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "3/12",
+      "lead": "",
+      "instruction": "",
+      "hint": "",
+      "labelTrue": "richtig",
+      "labelFalse": "falsch",
+      "statements": [
+        {
+          "statement": "Bevor ein Pensionskasseneinkauf getätigt werden kann (Kundin ist 45 jährig), muss ein bereits getätigter WEF-Vorbezug zurückbezahlt werden.",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "144991"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--]\n[@id:144992]\n[%4/12]\n[!Welche der nachfolgenden Aussagen trifft bei einer Rückzahlung eines WEF Vorbezugs hinsichtlich der beim Vorbezug bezahlten Steuern zu?]\n===\n[-Keine Rückforderung der bezahlten Steuern möglich]\n[+Rückforderung der bezahlten Steuern muss verlangt werden]\n[-Rückzahlung der bezahlten Steuern erfolgt automatisch]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "4/12",
+      "instruction": "Welche der nachfolgenden Aussagen trifft bei einer Rückzahlung eines WEF Vorbezugs hinsichtlich der beim Vorbezug bezahlten Steuern zu?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Keine Rückforderung der bezahlten Steuern möglich",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Rückforderung der bezahlten Steuern muss verlangt werden",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Rückzahlung der bezahlten Steuern erfolgt automatisch",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "144992"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--]\n[@id:144993]\n[%5/12]\n[!In welchem der folgenden Fälle muss ein WEF-Vorbezug an die Pensionskasse zurückbezahlt werden?]\n===\n[-Tod des Versicherten; Hinterlassene = Ehefrau und 1 Kind]\n[-Verkauf für CHF 750'000; Hypothek über CHF 780’000]\n[+Verkauf für CHF 750'000; Hypothek über 600’000]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "5/12",
+      "instruction": "In welchem der folgenden Fälle muss ein WEF-Vorbezug an die Pensionskasse zurückbezahlt werden?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Tod des Versicherten; Hinterlassene = Ehefrau und 1 Kind",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Verkauf für CHF 750'000; Hypothek über CHF 780’000",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Verkauf für CHF 750'000; Hypothek über 600’000",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "144993"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false]\n[@id:144994]\n[%6/12]\n[@labelTrue:richtig][@labelFalse:falsch]\n===\n[+Falls Ehegatten eine Liegenschaft im Gesamteigentum erwerben, kann einer der Ehegatten Mittel aus der beruflichen Vorsorge für einen WEF-Vorbezug einsetzen.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "6/12",
+      "lead": "",
+      "instruction": "",
+      "hint": "",
+      "labelTrue": "richtig",
+      "labelFalse": "falsch",
+      "statements": [
+        {
+          "statement": "Falls Ehegatten eine Liegenschaft im Gesamteigentum erwerben, kann einer der Ehegatten Mittel aus der beruflichen Vorsorge für einen WEF-Vorbezug einsetzen.",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "144994"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--]\n[@id:144995]\n[%7/12]\n[!Welche Aussage ist bezüglich WEF-Vorbezug aus der Pensionskasse untenstehend korrekt?]\n===\n[-Dies führt immer zu einer Einbusse bei allen Vorsorgeleistungen ]\n[+Dies führt nur zum Teil zu einer Einbusse bei allen Vorsorgeleistungen]\n[-Dies hat keinen Einfluss auf die Vorsorgeleistungen]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "7/12",
+      "instruction": "Welche Aussage ist bezüglich WEF-Vorbezug aus der Pensionskasse untenstehend korrekt?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Dies führt immer zu einer Einbusse bei allen Vorsorgeleistungen",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Dies führt nur zum Teil zu einer Einbusse bei allen Vorsorgeleistungen",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Dies hat keinen Einfluss auf die Vorsorgeleistungen",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "144995"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false]\n[@id:144996]\n[%8/12]\n[@labelTrue:richtig][@labelFalse:falsch]\n===\n[-Ein Vorsorgenehmer kann immer seine gesamte Freizügigkeitsleistung für einen WEF-Vorbezug nutzen.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "8/12",
+      "lead": "",
+      "instruction": "",
+      "hint": "",
+      "labelTrue": "richtig",
+      "labelFalse": "falsch",
+      "statements": [
+        {
+          "statement": "Ein Vorsorgenehmer kann immer seine gesamte Freizügigkeitsleistung für einen WEF-Vorbezug nutzen.",
+          "isCorrect": false,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "144996"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false]\n[@id:144997]\n[%9/12]\n[@labelTrue:richtig][@labelFalse:falsch]\n===\n[+Sowohl bei einem WEF-Vorbezug aus Mitteln der 2. Säule als auch bei einem solche aus der Säule 3a muss der Vorsorgenehmer im Anschluss eine einmalige Jahressteuer, getrennt vom übrigen Einkommen leisten.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "9/12",
+      "lead": "",
+      "instruction": "",
+      "hint": "",
+      "labelTrue": "richtig",
+      "labelFalse": "falsch",
+      "statements": [
+        {
+          "statement": "Sowohl bei einem WEF-Vorbezug aus Mitteln der 2. Säule als auch bei einem solche aus der Säule 3a muss der Vorsorgenehmer im Anschluss eine einmalige Jahressteuer, getrennt vom übrigen Einkommen leisten.",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "144997"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false]\n[@id:144998]\n[%10/12]\n[@labelTrue:richtig][@labelFalse:falsch]\n===\n[+Falls ein Kunde einen WEF-Vorbezug getätigt hat, so kann er im Anschluss erst wieder einen steuerlich abzugsfähigen Pensionskasseneinkauf tätigen, wenn er zuvor den Vorbezug zurückerstattet.]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "10/12",
+      "lead": "",
+      "instruction": "",
+      "hint": "",
+      "labelTrue": "richtig",
+      "labelFalse": "falsch",
+      "statements": [
+        {
+          "statement": "Falls ein Kunde einen WEF-Vorbezug getätigt hat, so kann er im Anschluss erst wieder einen steuerlich abzugsfähigen Pensionskasseneinkauf tätigen, wenn er zuvor den Vorbezug zurückerstattet.",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "144998"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark--]\n[@id:144999]\n[%11/12]\n[!Ein WEF-Vorbezug muss im Grundbuch angemerkt werden. In welchem der unteren Fälle?]\n===\n[+Nur bei Bezügen aus der 2. Säule ]\n[-Nur bei Bezügen aus der Säule 3a]\n[-Bei Bezügen aus der 2. Säule als auch aus der Säule 3a]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "11/12",
+      "instruction": "Ein WEF-Vorbezug muss im Grundbuch angemerkt werden. In welchem der unteren Fälle?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Nur bei Bezügen aus der 2. Säule",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Nur bei Bezügen aus der Säule 3a",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Bei Bezügen aus der 2. Säule als auch aus der Säule 3a",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "144999"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.true-false]\n[@id:145000]\n[%12/12]\n[@labelTrue:richtig][@labelFalse:falsch]\n===\n[+In der Regel ist es sinnvoller, ein Vorsorgeguthaben der Säule 3a vor einem Vorsorgeguthaben der 2. Säule zu verpfänden (WEF).]\n===",
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "item": "12/12",
+      "lead": "",
+      "instruction": "",
+      "hint": "",
+      "labelTrue": "richtig",
+      "labelFalse": "falsch",
+      "statements": [
+        {
+          "statement": "In der Regel ist es sinnvoller, ein Vorsorgeguthaben der Säule 3a vor einem Vorsorgeguthaben der 2. Säule zu verpfänden (WEF).",
+          "isCorrect": true,
+          "isExample": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "145000"
+      ]
+    }
+  }
+]

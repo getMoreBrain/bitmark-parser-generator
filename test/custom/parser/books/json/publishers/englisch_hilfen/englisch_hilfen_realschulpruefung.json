@@ -1,0 +1,4369 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:232964]\n[#Übungen für Englischprüfungen]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/englisch-hilfen/web-resources/images/englischhilfen_grammatik_cover.png]\n[@externalId:e-bungen-fr-englischprfungen_51ho1ccjndqw]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232964"
+      ],
+      "title": "Übungen für Englischprüfungen",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/englisch-hilfen/web-resources/images/englischhilfen_grammatik_cover.png"
+      ],
+      "externalId": [
+        "e-bungen-fr-englischprfungen_51ho1ccjndqw"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232965]\n[%Nr. 8610]\n[!Prüfung 1999/00 Realschule Sachsen]\n\n1. Rebecca thought if she didn't walk through the park, the girls [-stopped][-will stop][+would stop] picking on her.\n2. Let's hope Rebecca will find her way out of that [-bullies][-bully][+bullying].\n3. But unfortunately bullies do not easily give up [-cause][-caused][+causing] trouble.\n4. First the gang shouted names and then some empty cans of coke [-had thrown][-was thrown][+were thrown] by them.\n5. Rebecca is so worried [+about][-for][-of] the bullies that she [-don't make][+hasn't made][-haven't made] any friends yet.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Rebecca thought if she didn't walk through the park, the girls {0} picking on her.\n2. Let's hope Rebecca will find her way out of that {1}.\n3. But unfortunately bullies do not easily give up {2} trouble.\n4. First the gang shouted names and then some empty cans of coke {3} by them.\n5. Rebecca is so worried {4} the bullies that she {5} any friends yet.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "stopped",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "will stop",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "would stop",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "bullies",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bully",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bullying",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "cause",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "caused",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "causing",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "had thrown",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "was thrown",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "were thrown",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "about",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "for",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "of",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "don't make",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "hasn't made",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "haven't made",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232965"
+      ],
+      "item": "Nr. 8610",
+      "instruction": "Prüfung 1999/00 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232966]\n[%Nr. 8610]\n[!Prüfung 1997/98 Realschule Sachsen]\n1. Today there is a museum complex in Gretna Green [+which][-who][-whose] shows the anvil and [-wear][-we're][+where] nice souvenirs are sold.\n2. So the visitors only need a short time to look [-after][+for][-up] unusual gifts.\n3. Recently a fine art gallery [-opened][+was opened][-will be opened].\n4. After [-visit][-visited][+visiting] the tourists can [+watch][-watched][-watching] craftsmen at work.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Today there is a museum complex in Gretna Green {0} shows the anvil and {1} nice souvenirs are sold.\n2. So the visitors only need a short time to look {2} unusual gifts.\n3. Recently a fine art gallery {3}.\n4. After {4} the tourists can {5} craftsmen at work.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "which",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "who",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "whose",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "wear",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "we're",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "where",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "after",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "for",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "up",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "opened",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "was opened",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "will be opened",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "visit",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "visited",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "visiting",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "watch",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "watched",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "watching",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232966"
+      ],
+      "item": "Nr. 8610",
+      "instruction": "Prüfung 1997/98 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232967]\n[%Nr. 8610]\n[!Prüfung 2000/01 Realschule Sachsen]\n1. Mrs Dursley was thin and her neck had nearly twice the [-unusual][+usual][-usually] length.\n2. He seemed to be the living opposite of his [-husband][-woman][+wife].\n3. In the [-Dursleys][+Dursleys'][-Dursley's] view, their son Dudley was [-a good][-better than][+the best] boy of all.\n4. Mr and Mrs Dursley, Harry's foster parents, were a funny-looking couple. Mr Dursley was a big man with a large moustache and [-hard][-harder][+hardly] any neck.\n5. However, one morning they found a bundle on their doorstep with a baby-boy in it: Harry Potter. So Harry [+became][-become][-get][-got] the unwanted son of the Dursleyfamily.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Mrs Dursley was thin and her neck had nearly twice the {0} length.\n2. He seemed to be the living opposite of his {1}.\n3. In the {2} view, their son Dudley was {3} boy of all.\n4. Mr and Mrs Dursley, Harry's foster parents, were a funny-looking couple. Mr Dursley was a big man with a large moustache and {4} any neck.\n5. However, one morning they found a bundle on their doorstep with a baby-boy in it: Harry Potter. So Harry {5} the unwanted son of the Dursleyfamily.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "unusual",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "usual",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "usually",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "husband",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "woman",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "wife",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Dursleys",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Dursleys'",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Dursley's",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a good",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "better than",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the best",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "hard",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "harder",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "hardly",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "became",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "become",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "get",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "got",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232967"
+      ],
+      "item": "Nr. 8610",
+      "instruction": "Prüfung 2000/01 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232968]\n[%Nr. 8610]\n[!Prüfung 1998/99 Realschule Sachsen]\n1. The music people present there varies [-enormous][+enormously][-more enormous] from region to region.\n2. However, even in Germany it is no problem to [-become][+get][-hold] some Irish beer.\n3. Here many tourists spend [+their][-there][-they're] holidays.\n4. Millions of people all over the world [-had seen][+have seen][-will see] the fabulous dance performance since 1994.\n5. If you [+go][-will go][-would go] to Ireland you can experience Irish music pubs.\n6. Today Ireland is one of the [-fashionably][+most fashionable][-most fashionably] corners in Europe.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. The music people present there varies {0} from region to region.\n2. However, even in Germany it is no problem to {1} some Irish beer.\n3. Here many tourists spend {2} holidays.\n4. Millions of people all over the world {3} the fabulous dance performance since 1994.\n5. If you {4} to Ireland you can experience Irish music pubs.\n6. Today Ireland is one of the {5} corners in Europe.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "enormous",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "enormously",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "more enormous",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "become",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "get",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "hold",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "there",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they're",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "had seen",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "have seen",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "will see",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "go",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "will go",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "would go",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "fashionably",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "most fashionable",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "most fashionably",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232968"
+      ],
+      "item": "Nr. 8610",
+      "instruction": "Prüfung 1998/99 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232969]\n[%Nr. 8612]\n[!Prüfung 2002/03 Realschule Sachsen]\n1. It may have been my idea to go as a stuffed olive but Jas didn't stop me [+as][-how][-than][-then][-when] a good pal should do.\n2. I blame my friend Jas entirely - because I went to a party [-carried][-dotted][+dressed][-undressed][-worn] as a stuffed olive!\n3. [-Anything][+Everyone][-Nowhere][-Somehow][-Something] laughed at first but then they more or [-few][-fewer][-least][+less][-little] ignored me. In the end I was at the gate for about an hour before David arrived.\n4. In fact, she encouraged me! While we [-are doing][-have been doing][-have been making][-were doing][+were making] the costume it was quite funny at the time.The difficulty came when I tried to get out of my room with my costume out of chicken wire and green crêpe paper I had to go sideways.\n5. At the party I had a [+horrible][-horribleness][-horribly][-horrify][-most horribly] time.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. It may have been my idea to go as a stuffed olive but Jas didn't stop me {0} a good pal should do.\n2. I blame my friend Jas entirely - because I went to a party {1} as a stuffed olive!\n3. {2} laughed at first but then they more or {3} ignored me. In the end I was at the gate for about an hour before David arrived.\n4. In fact, she encouraged me! While we {4} the costume it was quite funny at the time.The difficulty came when I tried to get out of my room with my costume out of chicken wire and green crêpe paper I had to go sideways.\n5. At the party I had a {5} time.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "as",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "how",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "than",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "when",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "carried",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "dotted",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "dressed",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "undressed",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "worn",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Anything",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Everyone",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Nowhere",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Somehow",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Something",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "few",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "fewer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "least",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "less",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "little",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "are doing",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "have been doing",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "have been making",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "were doing",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "were making",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "horrible",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "horribleness",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "horribly",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "horrify",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "most horribly",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232969"
+      ],
+      "item": "Nr. 8612",
+      "instruction": "Prüfung 2002/03 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232970]\n[%Nr. 8612]\n[!Prüfung 2001/02 Realschule Sachsen]\n1. Ms McGinnis, one of them, knows [-exact][-exacting][+exactly][-exactness] what that means.\n2. People find comfort in [-had][+having][-is having][-to have] their animal back, says the Ohio native \n[-which][+who][-whom][-whose] moved to Manhattan 6 years ago.\n3. Cats, dogs and birds - those are some of the pets that Manhattan's Humane Society [+has helped][-help][-helping][-helps] to rescue since September 11.\n4. The vets and [-her][-his][+their][-your] assistants saved more [-as][-of all][+than][-then] 200 pets from lower Manhattan's evacuated apartments.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Ms McGinnis, one of them, knows {0} what that means.\n2. People find comfort in {1} their animal back, says the Ohio native \n{2} moved to Manhattan 6 years ago.\n3. Cats, dogs and birds - those are some of the pets that Manhattan's Humane Society {3} to rescue since September 11.\n4. The vets and {4} assistants saved more {5} 200 pets from lower Manhattan's evacuated apartments.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "exact",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "exacting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "exactly",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "exactness",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "had",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "having",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "is having",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "to have",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "which",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "who",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "whom",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "whose",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "has helped",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "help",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "helping",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "helps",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "his",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "your",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "as",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "of all",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "than",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232970"
+      ],
+      "item": "Nr. 8612",
+      "instruction": "Prüfung 2001/02 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232971]\n[%Nr. 8612]\n[!Prüfung 2004/05 Realschule Sachsen]\n1. For something [-complete][-completed][+completely][-completion] different, visit Rotorua's Thermal Village.\n2. For a special treat, head out to Te Whau Vineyard and Café on Waiheke Island, in the Hauraki Gulf. Here you [-founding][-founded][-has found][+will find] a great New Zealand/Pacific menu.\n3. There you can have a Maori Hangi, a traditional native meal, where meat, fish and vegetables [+are wrapped][-are wrapping][-wrap][-wraps] in leaves, steamed on heated volcanic rocks and covered in earth.\n4. The kiwi is a well-known fruit which [+everybody][-everything][-every time][-everywhere] associates with New Zealand.\n5. Auckland has a large oriental population, so there [+are][-has been][-is][-was] many Chinese, Thai and Korean restaurants. There's also a Mongolian barbecue.\n6. The country might also be famous [-because][+for][-in][-of] its lamb, but the seafood is fantastic, too - especially the green-lipped mussels.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. For something {0} different, visit Rotorua's Thermal Village.\n2. For a special treat, head out to Te Whau Vineyard and Café on Waiheke Island, in the Hauraki Gulf. Here you {1} a great New Zealand/Pacific menu.\n3. There you can have a Maori Hangi, a traditional native meal, where meat, fish and vegetables {2} in leaves, steamed on heated volcanic rocks and covered in earth.\n4. The kiwi is a well-known fruit which {3} associates with New Zealand.\n5. Auckland has a large oriental population, so there {4} many Chinese, Thai and Korean restaurants. There's also a Mongolian barbecue.\n6. The country might also be famous {5} its lamb, but the seafood is fantastic, too - especially the green-lipped mussels.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "complete",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "completed",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "completely",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "completion",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "founding",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "founded",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "has found",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "will find",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "are wrapped",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "are wrapping",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "wrap",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "wraps",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "everybody",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "everything",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "every time",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "everywhere",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "has been",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "was",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "because",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "for",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "in",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "of",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232971"
+      ],
+      "item": "Nr. 8612",
+      "instruction": "Prüfung 2004/05 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232972]\n[%Nr. 8612]\n[!Prüfung 2003/04 Realschule Sachsen]\n1. The Tour de France is a 3,000 kilometre race that [-completed][-completing][-has completed][+is completed] in stages with a day or two of rest between them.\n2. A cyclist uses up to 10,000 calories [-about][-among][-between][+during] a 200 km mountain stage.\n3. Some stretches are 200 km over mountains, others are long sprints [-is lasting][-last][-lasted][+lasting] seven hours.\n4. The winner of the tour is the cyclist with [-shorten][-shortest][-shortly][+the shortest] total time for all stages and he gets about € 350,000.\n5. [-Tradition][-Traditional][+Traditionally][-Traditions], the winner [-becomes][-gets][+shares][-takes]\n the money among the whole team of riders and support personnel.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. The Tour de France is a 3,000 kilometre race that {0} in stages with a day or two of rest between them.\n2. A cyclist uses up to 10,000 calories {1} a 200 km mountain stage.\n3. Some stretches are 200 km over mountains, others are long sprints {2} seven hours.\n4. The winner of the tour is the cyclist with {3} total time for all stages and he gets about € 350,000.\n5. {4}, the winner {5}\n the money among the whole team of riders and support personnel.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "completed",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "completing",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "has completed",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "is completed",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "about",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "among",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "between",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "during",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is lasting",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "last",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "lasted",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "lasting",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "shorten",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "shortest",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "shortly",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the shortest",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Tradition",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Traditional",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Traditionally",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "Traditions",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "becomes",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "gets",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "shares",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "takes",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232972"
+      ],
+      "item": "Nr. 8612",
+      "instruction": "Prüfung 2003/04 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232973]\n[%Nr. 8614]\n[!Prüfung 2008/09 Realschule Sachsen]\n\n1. It is not only the distance but also the [-differ][+difference][-different][-differential] in lifestyle.\n2. If you [+speak][-speaking][-speaks][-spoke] about the natives of the Artic Region, prefer the word Inuit, which means people.\n3. So the Dene and the Inuit have [-be][+been][-was][-were] living there for a long time.\nToday the Inuit population of Canada is about 25,000. \n4. Today the Inuit population of Canada is about 25,000. They [-have moved] [-move][+moved][-moving] to the Artic Region about 1,000 years ago.\n5. It is far from the international flavour of large Canadian cities like Toronto in the east and Vancouver in the west to the [-big][+great][-huge][-large] natural beauty of Yellowknife on the Great Slave Lake in the Northwest Territory.\n6. Many natural wonders can be found in the NWT, e.g. [-his][-it][-it's][+its] Virginia Falls are about twice as high [+as][-how][-like][-so] the famous Niagara Falls in Ontario.\n7. The Canadian government gave the Inuit [+their][-there][-they're][-where] own territory where they mostly spend life with hunting and fishing in the wilderness.\n8. The Northwest Territories (NWT), one of the administrative districts, is in the Canadian Arctic and four times [-big][+bigger][-biggest][-giant] than Germany, but only 41,000 people live there now.\n9. So the Dene and the Inuit have [-be][+been][-was][-were] living there for a long time.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. It is not only the distance but also the {0} in lifestyle.\n2. If you {1} about the natives of the Artic Region, prefer the word Inuit, which means people.\n3. So the Dene and the Inuit have {2} living there for a long time.\nToday the Inuit population of Canada is about 25,000. \n4. Today the Inuit population of Canada is about 25,000. They {3} {4} to the Artic Region about 1,000 years ago.\n5. It is far from the international flavour of large Canadian cities like Toronto in the east and Vancouver in the west to the {5} natural beauty of Yellowknife on the Great Slave Lake in the Northwest Territory.\n6. Many natural wonders can be found in the NWT, e.g. {6} Virginia Falls are about twice as high {7} the famous Niagara Falls in Ontario.\n7. The Canadian government gave the Inuit {8} own territory where they mostly spend life with hunting and fishing in the wilderness.\n8. The Northwest Territories (NWT), one of the administrative districts, is in the Canadian Arctic and four times {9} than Germany, but only 41,000 people live there now.\n9. So the Dene and the Inuit have {10} living there for a long time.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "differ",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "difference",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "different",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "differential",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "speak",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "speaking",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "speaks",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "spoke",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "be",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "been",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "was",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "were",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "have moved",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "move",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "moved",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "moving",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "big",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "great",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "huge",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "large",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "his",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "it",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "it's",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "its",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "as",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "how",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "like",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "so",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "there",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they're",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "where",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "big",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bigger",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "biggest",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "giant",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{10}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "be",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "been",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "was",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "were",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232973"
+      ],
+      "item": "Nr. 8614",
+      "instruction": "Prüfung 2008/09 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232974]\n[%Nr. 8614]\n[!Prüfung 2007/08 Realschule Sachsen]\n\n1. And who was the man this prize [-are named][+is named][-named][-names] after?\n2. In 1896 he died. One year later it was found out [-than][+that][-then][-there] he had left most of his wealth to a fund.\n3. But he was not only interested in science, he also [-gave][+paid][-presented][-sold] attention to social problems.\n4. Nobel worked on a development of explosive nitroclycerine and obtained a patent on dynamite. All in all, Nobel had 355 patents and he was one of [-more wealth][+the wealthiest][-wealth][-wealthy] men in Europe.\n5. He was able to [-studied][-studies][+study][-studying] without going to a university.\n6. With his [-invent][-invented][+inventions][-inventor], he wanted to help mankind.\n7. He also [-speak][-speaking][+speaks][-spoke] foreign languages.\n8. This fund should award people [-where][-which][-who][+whose] work had been of the greatest benefit to mankind. It is called the Nobel Foundation.\n9. Alfred Bernhard Nobel was born [-at][-of][+on][-to] October 21, 1833 in Sweden. His father was an engineer and Alfred was interested in science, too, especially in chemistry.\n10. The Nobel Prize is an international award administered by the Nobel Foundation in Stockholm, Sweden. Each Nobel Prize [+consists][-exists][-lasts][-passes] of a medal, personal diploma, and a cash award.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. And who was the man this prize {0} after?\n2. In 1896 he died. One year later it was found out {1} he had left most of his wealth to a fund.\n3. But he was not only interested in science, he also {2} attention to social problems.\n4. Nobel worked on a development of explosive nitroclycerine and obtained a patent on dynamite. All in all, Nobel had 355 patents and he was one of {3} men in Europe.\n5. He was able to {4} without going to a university.\n6. With his {5}, he wanted to help mankind.\n7. He also {6} foreign languages.\n8. This fund should award people {7} work had been of the greatest benefit to mankind. It is called the Nobel Foundation.\n9. Alfred Bernhard Nobel was born {8} October 21, 1833 in Sweden. His father was an engineer and Alfred was interested in science, too, especially in chemistry.\n10. The Nobel Prize is an international award administered by the Nobel Foundation in Stockholm, Sweden. Each Nobel Prize {9} of a medal, personal diploma, and a cash award.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "are named",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "is named",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "named",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "names",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "than",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "that",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "there",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "gave",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "paid",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "presented",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sold",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "more wealth",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the wealthiest",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "wealth",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "wealthy",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "studied",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "studies",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "study",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "studying",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "invent",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "invented",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "inventions",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "inventor",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "speak",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "speaking",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "speaks",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "spoke",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "where",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "which",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "who",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "whose",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "at",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "of",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "on",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "to",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "consists",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "exists",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "lasts",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "passes",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232974"
+      ],
+      "item": "Nr. 8614",
+      "instruction": "Prüfung 2007/08 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232975]\n[%Nr. 8614]\n[!Prüfung 2005/06 Realschule Sachsen]\n\n1. Commentators have [+said][-say][-saying][-says] that England players are __lions__ in winter but __lambs__ in summer when the World Cup takes place.\n2. They have got some of the best players, the most loyal fans and [-a rich][-richer][-rich][+the richest] clubs of the world.\n3. And the long hard season in the Premier League and the Champions League brings a greater risk of injury, caused [+by][-from][-of][-off] football, too.\n4. No other country makes [-his][-it's][+its][-ours] players work so hard, even without winter break.\n5. So why [-didn't they win][-don't they win][-hadn't they won][+haven't they won] the World Cup since 1966?\n6. And if nothing [-change][-changed][+changes][-had changed] in British football, it will be __lambs__ who go to Germany in 2006.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Commentators have {0} that England players are __lions__ in winter but __lambs__ in summer when the World Cup takes place.\n2. They have got some of the best players, the most loyal fans and {1} clubs of the world.\n3. And the long hard season in the Premier League and the Champions League brings a greater risk of injury, caused {2} football, too.\n4. No other country makes {3} players work so hard, even without winter break.\n5. So why {4} the World Cup since 1966?\n6. And if nothing {5} in British football, it will be __lambs__ who go to Germany in 2006.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "said",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "say",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "saying",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "says",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a rich",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "richer",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "rich",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "the richest",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "by",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "from",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "of",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "off",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "his",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "it's",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "its",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "ours",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "didn't they win",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "don't they win",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "hadn't they won",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "haven't they won",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "change",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "changed",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "changes",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "had changed",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232975"
+      ],
+      "item": "Nr. 8614",
+      "instruction": "Prüfung 2005/06 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232976]\n[%Nr. 8614]\n[!Prüfung 2006/07 Realschule Sachsen]\n\n1. J. Oliver is talking [+about][-against][-over][-through] his campaign to improve school meals.\n2. __Food to go__ is another expression for [+takeaway][-take on][-take-off][-take over].\n3. The chef believes [-strong][-stronger][+strongly][-strongest] that food should be shared and enjoyed around a table.\n4. If you do something __on the go__ like eating or [-calling][+making][-phoning][-ringing] a phone call, you do it while being involved in [-another][-bother][-either][+other] activities, for example travelling or shopping.\n5. The expression __to be on the go__ once [-had been meaning][-is meaning][-means][+meant]\n to be drunk, but now it means to be active and busy. I’ve been on the go all day.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. J. Oliver is talking {0} his campaign to improve school meals.\n2. __Food to go__ is another expression for {1}.\n3. The chef believes {2} that food should be shared and enjoyed around a table.\n4. If you do something __on the go__ like eating or {3} a phone call, you do it while being involved in {4} activities, for example travelling or shopping.\n5. The expression __to be on the go__ once {5}\n to be drunk, but now it means to be active and busy. I’ve been on the go all day.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "about",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "against",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "over",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "through",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "takeaway",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "take on",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "take-off",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "take over",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "strong",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "stronger",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "strongly",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "strongest",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "calling",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "making",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "phoning",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ringing",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "another",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bother",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "either",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "other",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "had been meaning",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "is meaning",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "means",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "meant",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232976"
+      ],
+      "item": "Nr. 8614",
+      "instruction": "Prüfung 2006/07 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232977]\n[%Nr. 8616]\n[!Prüfung 2012/13 Realschule Sachsen]\n\n1. But 5 years later they [-go][-goes][-gone][+went] bankrupt.\n2. Together with his friend L. Clarence Noble he opened his first company in 1869 selling [-bottle][+bottled][-bottles][-bottling] horseradish and added pickles, sauerkraut and vinegar to their products.\n3. In 1875 he started F&J Heinz Co. with his brother Frederic and cousin John. Soon [+after][-behind][-following][-next] that, Heinz was the country's leading manufacturer of ketchup, mustard, pickles and vinegar.\n4. For example, he did business based on the simple idea that every profit should be earned [-honest][-honestly][+honesty][-honour].\n5. As a child he sold excess vegetables from his [-mother][+mother's][-mothers][-mothers'] garden and by high school he was buying veggies at wholesale and delivering them to neighbours’ homes.\n6. His parents [-are coming][+came][-come][-have come] from Germany to Pittsburgh US in the late 1900s.\n7. Another principle of Henry Heinz was his hatred of waste of any kind. He inspired each of his employees to avoid even the [-more slight][-most slight][-slighter][+slightest] waste of material, time and opportunity.\n8. This is an invention everybody knows throughout the world. Did you know that Henry John Heinz was the person [-where][-which][+who][-whose] created this very tasty tomato sauce?\n9. After [-attend][-attended][+attending][-attends] business college he worked in the office of his father's brick factory.\n10. Many of [-her][+his][-our][-your] business ideals and principles, almost unheard of at the time, remain progressive to this day.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. But 5 years later they {0} bankrupt.\n2. Together with his friend L. Clarence Noble he opened his first company in 1869 selling {1} horseradish and added pickles, sauerkraut and vinegar to their products.\n3. In 1875 he started F&J Heinz Co. with his brother Frederic and cousin John. Soon {2} that, Heinz was the country's leading manufacturer of ketchup, mustard, pickles and vinegar.\n4. For example, he did business based on the simple idea that every profit should be earned {3}.\n5. As a child he sold excess vegetables from his {4} garden and by high school he was buying veggies at wholesale and delivering them to neighbours’ homes.\n6. His parents {5} from Germany to Pittsburgh US in the late 1900s.\n7. Another principle of Henry Heinz was his hatred of waste of any kind. He inspired each of his employees to avoid even the {6} waste of material, time and opportunity.\n8. This is an invention everybody knows throughout the world. Did you know that Henry John Heinz was the person {7} created this very tasty tomato sauce?\n9. After {8} business college he worked in the office of his father's brick factory.\n10. Many of {9} business ideals and principles, almost unheard of at the time, remain progressive to this day.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "go",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "goes",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "gone",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "went",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "bottle",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bottled",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "bottles",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bottling",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "after",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "behind",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "following",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "next",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "honest",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "honestly",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "honesty",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "honour",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "mother",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mother's",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "mothers",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "mothers'",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "are coming",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "came",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "come",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "have come",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "more slight",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "most slight",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "slighter",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "slightest",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "where",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "which",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "who",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "whose",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "attend",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "attended",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "attending",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "attends",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "his",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "your",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232977"
+      ],
+      "item": "Nr. 8616",
+      "instruction": "Prüfung 2012/13 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232978]\n[%Nr. 8616]\n[!Prüfung 2009/10 Realschule Sachsen]\n\n1. This is a great student area with many cool cafés, live music and a really [+beautiful][-beautify][-beautifully][-beauty] Botanic Garden.\n2. There are sightseeing buses, boat trips [-at][-in][-of][+on] the river or black cabs that give you great tours of the city.\n3. Cave Hill Country Park, Belfast Castle and Belfast Zoo are [+north][-northerly][-northern][-northern-most] of the centre.\n4. Nowadays, there [+are][-is][-was][-were] cinemas, a Hard Rock Café and other cool places to eat.\n5. And nearby is the shipyard where the Titanic [-is built][+was built][-were built][-will be built]\n at the beginning of the 20th century. Now the city wants to build a Titanic theme park there!\n6. On the other side of the River Lagan is the Odyssey, a big complex with all [+kinds][-species][-styles][-ways] of cool stuff. There's an interactive science museum called W5 (whowhatwherewhenwhy).\n7. And there's the Odyssey Arena, [-what][-where][+which][-who] is home to the Belfast ice hockey team and it is also a big concert hall.\n8. Check them [-in][-of][+out][-over] - you'll find them very green and pretty!\n9. The centre of Belfast has so [-a lot][-lots][+many][-much] wonderful shops, pubs and discos. Great for hanging out!\n10. A 15-minute walk [-keeps][-puts][-runs][+takes] you to Queen's University, the biggest, best and most beautiful university in Northern Ireland.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. This is a great student area with many cool cafés, live music and a really {0} Botanic Garden.\n2. There are sightseeing buses, boat trips {1} the river or black cabs that give you great tours of the city.\n3. Cave Hill Country Park, Belfast Castle and Belfast Zoo are {2} of the centre.\n4. Nowadays, there {3} cinemas, a Hard Rock Café and other cool places to eat.\n5. And nearby is the shipyard where the Titanic {4}\n at the beginning of the 20th century. Now the city wants to build a Titanic theme park there!\n6. On the other side of the River Lagan is the Odyssey, a big complex with all {5} of cool stuff. There's an interactive science museum called W5 (whowhatwherewhenwhy).\n7. And there's the Odyssey Arena, {6} is home to the Belfast ice hockey team and it is also a big concert hall.\n8. Check them {7} - you'll find them very green and pretty!\n9. The centre of Belfast has so {8} wonderful shops, pubs and discos. Great for hanging out!\n10. A 15-minute walk {9} you to Queen's University, the biggest, best and most beautiful university in Northern Ireland.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "beautiful",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "beautify",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "beautifully",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "beauty",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "at",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "in",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "of",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "on",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "north",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "northerly",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "northern",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "northern-most",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "was",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "were",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is built",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "was built",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "were built",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "will be built",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "kinds",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "species",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "styles",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "ways",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "what",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "where",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "which",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "who",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "in",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "of",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "out",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "over",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "a lot",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "lots",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "many",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "much",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "keeps",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "puts",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "runs",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "takes",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232978"
+      ],
+      "item": "Nr. 8616",
+      "instruction": "Prüfung 2009/10 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232979]\n[%Nr. 8616]\n[!Prüfung 2010/11 Realschule Sachsen]\n\n1. Life was very simple then as there [-there][-wear][+were][-where] no devices like cars, phones or TV.\n2. In those times only boys were allowed to go to school, girls got [-her][-his][-our][+their] education at home. Lessons at school started [+at][-in][-on][-to] 7 o’clock in winter, one hour earlier in summer.\n3. If you [+had][-have][-have had][-must] to go to the dentist, it could have cost your life. That was because the dentist used instruments [-dislike][-enjoy][+like][-love] stones and bricks that caused a lot of blood and pain.\n4. About 450 years ago Elizabeth I became the Queen of England and that's why this era is called Elizabethan Age. It spanned from 1558 to 1603. It is also the time when Shakespeare [-live][+lived][-lives][-living].\n5. After using toilets, people used clumps of hay or grass to [+clean][-cleaned][-cleaner][-cleaning]\n themselves.\n6. People thought that smells caused [+bad][-bat][-bed][-bet] diseases. To fight this off, women used fragrances and herbs, [+which][-who][-whom][-whose] they wore around their necks.\n7. Fashion and clothes were different too. Did you [-knew][+know][-knowing][-known] that people used urine to bleach their hair?",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Life was very simple then as there {0} no devices like cars, phones or TV.\n2. In those times only boys were allowed to go to school, girls got {1} education at home. Lessons at school started {2} 7 o’clock in winter, one hour earlier in summer.\n3. If you {3} to go to the dentist, it could have cost your life. That was because the dentist used instruments {4} stones and bricks that caused a lot of blood and pain.\n4. About 450 years ago Elizabeth I became the Queen of England and that's why this era is called Elizabethan Age. It spanned from 1558 to 1603. It is also the time when Shakespeare {5}.\n5. After using toilets, people used clumps of hay or grass to {6}\n themselves.\n6. People thought that smells caused {7} diseases. To fight this off, women used fragrances and herbs, {8} they wore around their necks.\n7. Fashion and clothes were different too. Did you {9} that people used urine to bleach their hair?",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "there",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "wear",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "were",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "where",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "her",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "his",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "our",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "at",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "in",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "on",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "to",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "had",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "have",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "have had",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "must",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "dislike",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "enjoy",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "like",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "love",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "live",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "lived",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "lives",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "living",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "clean",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "cleaned",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "cleaner",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "cleaning",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "bad",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "bat",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bed",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "bet",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "which",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "who",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "whom",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "whose",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "knew",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "know",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "knowing",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "known",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232979"
+      ],
+      "item": "Nr. 8616",
+      "instruction": "Prüfung 2010/11 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232980]\n[%Nr. 8616]\n[!Prüfung 2011/12 Realschule Sachsen]\n\n1. Don’t worry, if you follow some simple rules, you [-want to enjoy][+will enjoy][-would enjoy][-would have enjoyed] your holiday in Australia.\n2. If you get into contact with a Box Jellyfish, you must react very quickly [+because][-then][-while][-why] this jellyfish possesses an extremely powerful venom.\n3. Be [-safe][-secure][-strict][+sure] to have a bottle of vinegar in your first aid kit to apply to the sting.\n4. Most of [-their][-theirs][+them][-they] are in the water like the Blue Ring Octopus, the Stone Fish or the White Shark.\n5. But did you know that the [-dangerous][-more dangerous][+most dangerous][-most dangerously] animals of the world live there as well?\n6. There are also dangerous animals [-what][+which][-who][-whose] live on land, for example snakes, reptiles and spiders.\n7. While [-is travelling][-travel][-travels][+travelling] around this area you should be very careful.\n8. After 30 seconds, you can remove the tentacles but you will need medical aid [+as][-like][-so][-than]\n soon as possible.\n9. Along the Great Barrier Reef, Box Jellyfish can be [-find][+found][-founded][-have found].\n10. If you come to Australia, you will see lots of unique animals there. These are animals that [-are developed][-developing][-develops][+have developed] for thousands of years, like the kangaroo, the platypus or the koala and other marsupials.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. Don’t worry, if you follow some simple rules, you {0} your holiday in Australia.\n2. If you get into contact with a Box Jellyfish, you must react very quickly {1} this jellyfish possesses an extremely powerful venom.\n3. Be {2} to have a bottle of vinegar in your first aid kit to apply to the sting.\n4. Most of {3} are in the water like the Blue Ring Octopus, the Stone Fish or the White Shark.\n5. But did you know that the {4} animals of the world live there as well?\n6. There are also dangerous animals {5} live on land, for example snakes, reptiles and spiders.\n7. While {6} around this area you should be very careful.\n8. After 30 seconds, you can remove the tentacles but you will need medical aid {7}\n soon as possible.\n9. Along the Great Barrier Reef, Box Jellyfish can be {8}.\n10. If you come to Australia, you will see lots of unique animals there. These are animals that {9} for thousands of years, like the kangaroo, the platypus or the koala and other marsupials.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "want to enjoy",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "will enjoy",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "would enjoy",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "would have enjoyed",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "because",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "then",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "while",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "why",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "safe",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "secure",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "strict",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "sure",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "theirs",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "them",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "dangerous",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "more dangerous",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "most dangerous",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "most dangerously",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "what",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "which",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "who",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "whose",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "is travelling",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "travel",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "travels",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "travelling",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "as",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "like",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "so",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "than",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "find",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "found",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "founded",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "have found",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "are developed",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "developing",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "develops",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "have developed",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232980"
+      ],
+      "item": "Nr. 8616",
+      "instruction": "Prüfung 2011/12 Realschule Sachsen"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:232981]\n[%Nr. 8618]\n[!Prüfung 2013/14 Realschule Sachsen]\n\n1. And what's more, once you were inside the box everything you [+said][-say][-saying][-says] was private.\n2. [-Clutch][-Clutched][-Clutches][+Clutching] their pennies they waited patiently for [-their][-there][-they][-they're] turn to be linked up to the great wide world.\n3. Now there is a new generation of phone boxes [-where][+which][-who][-whose] can link you up to the Internet, receive emails, take payment [-at][-by][-in][-past] phone card or credit card. Impressive, perhaps, but where is the romance?\n4. People of all types and classes would orderly [-employ][-join][+queue][-turn on] outside its red iron door.\n5. In the good old days, the traditional British telephone box was a national symbol. Before mobile phones made everything so easy, the public telephone box [-are][-is][+was][-were] an important focus for community life.\n6. Everybody uses mobiles nowadays, but talking loudly in [+public][-publican][-publicity][-publicly]  places with unseen faces, about personal feelings or secret dealings ... well it's not something the true British feels comfortable about!\n7. For a shy people [-how][-just][+like][-so] the British it was an opportunity to meet and [-change][+exchange][-reimburse][-replace] news, gossip with neighbours and get some fresh air.",
+    "bit": {
+      "type": "multiple-choice-text",
+      "format": "bitmark--",
+      "body": "1. And what's more, once you were inside the box everything you {0} was private.\n2. {1} their pennies they waited patiently for {2} turn to be linked up to the great wide world.\n3. Now there is a new generation of phone boxes {3} can link you up to the Internet, receive emails, take payment {4} phone card or credit card. Impressive, perhaps, but where is the romance?\n4. People of all types and classes would orderly {5} outside its red iron door.\n5. In the good old days, the traditional British telephone box was a national symbol. Before mobile phones made everything so easy, the public telephone box {6} an important focus for community life.\n6. Everybody uses mobiles nowadays, but talking loudly in {7}  places with unseen faces, about personal feelings or secret dealings ... well it's not something the true British feels comfortable about!\n7. For a shy people {8} the British it was an opportunity to meet and {9} news, gossip with neighbours and get some fresh air.",
+      "placeholders": {
+        "{0}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "said",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "say",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "saying",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "says",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "Clutch",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Clutched",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Clutches",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "Clutching",
+              "hint": "",
+              "isCorrect": true
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "their",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "there",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "they're",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "where",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "which",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "who",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "whose",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "at",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "by",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "in",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "past",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "employ",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "join",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "queue",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "turn on",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "are",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "is",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "was",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "were",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "public",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "publican",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "publicity",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "publicly",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "how",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "just",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "like",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "so",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        },
+        "{9}": {
+          "type": "select",
+          "item": "",
+          "options": [
+            {
+              "text": "change",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "exchange",
+              "hint": "",
+              "isCorrect": true
+            },
+            {
+              "text": "reimburse",
+              "hint": "",
+              "isCorrect": false
+            },
+            {
+              "text": "replace",
+              "hint": "",
+              "isCorrect": false
+            }
+          ],
+          "prefix": "",
+          "postfix": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "id": [
+        "232981"
+      ],
+      "item": "Nr. 8618",
+      "instruction": "Prüfung 2013/14 Realschule Sachsen"
+    }
+  }
+]

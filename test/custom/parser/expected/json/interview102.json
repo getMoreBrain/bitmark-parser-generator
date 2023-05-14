@@ -1,0 +1,145 @@
+[
+  {
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "A7",
+      "hint": "",
+      "instruction": "Berichten Sie.",
+      "body": "",
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "jpg",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/news_header.jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
+        }
+      },
+      "questions": [
+        {
+          "question": "Welchen Platz nehmen Nachrichten bei den Fernsehsendern Ihres Heimatlandes ein?",
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": "1",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": "",
+          "isShortAnswer": true
+        },
+        {
+          "question": "Welche Art von Nachrichtensendungen gibt es in den Fernsehprogrammen Ihres Heimatlandes?",
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": "2",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": "",
+          "isShortAnswer": true
+        },
+        {
+          "question": "Wann werden die Nachrichten gesendet?",
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": "3",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": "",
+          "isShortAnswer": true
+        },
+        {
+          "question": "Welche Themen werden behandelt? Welche Themen interessieren Sie, welche nicht?",
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": "4",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": "",
+          "isShortAnswer": true
+        },
+        {
+          "question": "Welche dieser Nachrichtensendungen sehen Sie und warum?",
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": "7",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": "",
+          "isShortAnswer": true
+        },
+        {
+          "question": "Kennen Sie Nachrichtensendungen für Kinder? Was halten Sie davon?",
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": "8",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": "",
+          "isShortAnswer": true
+        },
+        {
+          "question": "Sollte man Ihrer Meinung nach Gewaltszenen in Nachrichten zeigen?",
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": "9",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": "",
+          "isShortAnswer": true
+        }
+      ],
+      "footer": ""
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "image": {
+            "format": "png",
+            "provider": "docs.bitbook.education",
+            "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/zdf-logo.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": ""
+          }
+        }
+      ],
+      "errors": [
+        {
+          "message": "1 excess resource(s) present in the bit. The bit resource type is '&image'",
+          "text": "[.interview&image]\n[%A7]\n[!Berichten Sie.]\n===\n[%1] Welchen Platz nehmen Nachrichten bei den Fernsehsendern Ihres Heimatlandes ein?[@shortAnswer]\n===\n[%2] Welche Art von Nachrichtensendungen gibt es in den Fernsehprogrammen Ihres Heimatlandes?[@shortAnswer]\n===\n[%3] Wann werden die Nachrichten gesendet?[@shortAnswer]\n===\n[%4] Welche Themen werden behandelt? Welche Themen interessieren Sie, welche nicht?[@shortAnswer]\n===\n[%7] Welche dieser Nachrichtensendungen sehen Sie und warum?[@shortAnswer]\n===\n[%8] Kennen Sie Nachrichtensendungen für Kinder? Was halten Sie davon?[@shortAnswer]\n===\n[%9] Sollte man Ihrer Meinung nach Gewaltszenen in Nachrichten zeigen?[@shortAnswer]\n===\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/zdf-logo.png]\n\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/news_header.jpg]\n",
+          "location": {
+            "start": {
+              "offset": 0,
+              "line": 1,
+              "column": 1
+            },
+            "end": {
+              "offset": 920,
+              "line": 22,
+              "column": 1
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.interview&image]\n[%A7]\n[!Berichten Sie.]\n===\n[%1] Welchen Platz nehmen Nachrichten bei den Fernsehsendern Ihres Heimatlandes ein?[@shortAnswer]\n===\n[%2] Welche Art von Nachrichtensendungen gibt es in den Fernsehprogrammen Ihres Heimatlandes?[@shortAnswer]\n===\n[%3] Wann werden die Nachrichten gesendet?[@shortAnswer]\n===\n[%4] Welche Themen werden behandelt? Welche Themen interessieren Sie, welche nicht?[@shortAnswer]\n===\n[%7] Welche dieser Nachrichtensendungen sehen Sie und warum?[@shortAnswer]\n===\n[%8] Kennen Sie Nachrichtensendungen für Kinder? Was halten Sie davon?[@shortAnswer]\n===\n[%9] Sollte man Ihrer Meinung nach Gewaltszenen in Nachrichten zeigen?[@shortAnswer]\n===\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/zdf-logo.png]\n\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/news_header.jpg]"
+  }
+]

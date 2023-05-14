@@ -1,0 +1,32 @@
+[
+  {
+    "bitmark": "[.message&article]\n[&article:\n**Abenteuer Ausland**\n\nViele Deutsche zog und zieht es ins Ausland. Dabei waren Abenteuerlust, Abwechslung und die Suche nach einer interessanten Herausforderung im beruflichen Bereich früher die stärksten Motive. Vor allem intellektuelle Weltenbummler hielten einst Ausschau nach vielfältigen Erfahrungen und Karrieremöglichkeiten, denn die besten Chancen auf einen gut bezahlten Job im Ausland hatten in der Vergangenheit hauptsächlich Arbeitskräfte mit einem akademischen Abschluss.]\n\nWhat the Hell!",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "What the Hell!",
+      "resource": {
+        "type": "article",
+        "article": {
+          "format": "",
+          "href": "",
+          "body": "**Abenteuer Ausland**\n\nViele Deutsche zog und zieht es ins Ausland. Dabei waren Abenteuerlust, Abwechslung und die Suche nach einer interessanten Herausforderung im beruflichen Bereich früher die stärksten Motive. Vor allem intellektuelle Weltenbummler hielten einst Ausschau nach vielfältigen Erfahrungen und Karrieremöglichkeiten, denn die besten Chancen auf einen gut bezahlten Job im Ausland hatten in der Vergangenheit hauptsächlich Arbeitskräfte mit einem akademischen Abschluss."
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.message&article-link]\n[&article-link:https://www.youtube.com/watch?v=RecY5iZn6B0]\n\nWhat the Hell!",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "What the Hell!",
+      "resource": {
+        "type": "article-link",
+        "articleLink": {
+          "url": "https://www.youtube.com/watch?v=RecY5iZn6B0"
+        }
+      }
+    }
+  }
+]

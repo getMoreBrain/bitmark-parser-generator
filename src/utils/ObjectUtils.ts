@@ -6,6 +6,56 @@ export interface GetFilenamesSyncOptions {
 
 class ObjectUtils {
   /**
+   * Check if a variable is a function
+   *
+   * @param val
+   * @returns true if a function
+   */
+  isFunction(val: unknown) {
+    return Object.prototype.toString.call(val) === '[object Function]';
+  }
+
+  /**
+   * Check if a variable is an array
+   *
+   * @param val
+   * @returns true if a array
+   */
+  isArray(val: unknown) {
+    return Array.isArray(val); // Object.prototype.toString.call(val) === '[object Array]';
+  }
+
+  /**
+   * Check if a variable is a date
+   *
+   * @param val
+   * @returns true if a date
+   */
+  isDate(val: unknown) {
+    return Object.prototype.toString.call(val) === '[object Date]';
+  }
+
+  /**
+   * Check if a variable is a object
+   *
+   * @param val
+   * @returns true if an object
+   */
+  isObject(val: unknown) {
+    return Object.prototype.toString.call(val) === '[object Object]';
+  }
+
+  /**
+   * Check if a variable is a value (i.e. a number)
+   *
+   * @param val
+   * @returns true if a value
+   */
+  isValue(val: unknown) {
+    return !this.isObject(val) && !this.isArray(val);
+  }
+
+  /**
    * Order the properties of a plain JS object.
    * The original properties are removed, and re-added in the new order.
    * Any non-specified properties are dropped.
@@ -102,6 +152,26 @@ class ObjectUtils {
       if (excludeKeys && excludeKeys.indexOf(k) >= 0) continue;
 
       if (Array.isArray(v) && v.length === 0) {
+        delete objAsAny[k];
+      }
+    }
+  }
+
+  /**
+   * Remove any keys whose value is '{}' from a plain JS object
+   *
+   * @param obj plain JS object
+   * @param excludeKeys keys to be excluded from removal
+   */
+  removeEmptyObjectProperties(obj: unknown, excludeKeys?: string[]): void {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const objAsAny = obj as any;
+
+    for (const [k, v] of Object.entries(objAsAny)) {
+      if (excludeKeys && excludeKeys.indexOf(k) >= 0) continue;
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      if (this.isObject(v) && Object.keys(v as any).length === 0) {
         delete objAsAny[k];
       }
     }

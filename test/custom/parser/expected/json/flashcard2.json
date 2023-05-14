@@ -1,0 +1,29 @@
+[
+  {
+    "bitmark": "[.flashcard-1]\nSeitenlinie\n==\nside line[!Brit. | ˈsʌɪdlʌɪn |][&audio:http://cdn.bitbook.education/publishers/3/books/26363/sideline_brit.mp3]\n--\nside line[!Amer. | ˈsaɪdlaɪn |][&audio:http://cdn.bitbook.education/publishers/3/books/26363/sideline_us.mp3]\n--\ntouch line",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Seitenlinie\n==\nside line\n--\nside line\n--\ntouch line",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Amer. | ˈsaɪdlaɪn |"
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "http://cdn.bitbook.education/publishers/3/books/26363/sideline_brit.mp3"
+        },
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "http://cdn.bitbook.education/publishers/3/books/26363/sideline_us.mp3"
+        }
+      ]
+    }
+  }
+]

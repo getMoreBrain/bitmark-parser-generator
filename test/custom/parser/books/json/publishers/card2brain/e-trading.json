@@ -1,0 +1,647 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:232249]\n[@language:de]\n[#E-Trading]\n[@coverImage:https://docs.bitmark.cloud/bit-books/card2brain/etrading/web-resources/images/card2brain_etrading_cover.png]\n[@externalId:e-e-trading_pwdz8iwputrd]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232249"
+      ],
+      "language": [
+        "de"
+      ],
+      "title": "E-Trading",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/card2brain/etrading/web-resources/images/card2brain_etrading_cover.png"
+      ],
+      "externalId": [
+        "e-e-trading_pwdz8iwputrd"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:232250]\n[#Fragen zu Online-Wertschriftenhandel, Börse, Titel, Unternehmen, usw.]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "232250"
+      ],
+      "title": "Fragen zu Online-Wertschriftenhandel, Börse, Titel, Unternehmen, usw."
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232251]\nNenne ein Synonym für Wertschrift.\n==\nWertpapier, Valor, Titel.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne ein Synonym für Wertschrift.\n==\nWertpapier, Valor, Titel.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232251"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232252]\nWas versteht man unter «E-Trading»?\n==\nDen Wertschriftenhandel via Internet.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was versteht man unter «E-Trading»?\n==\nDen Wertschriftenhandel via Internet.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232252"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232253]\nWas ist die «Dotcomblase» und wann ist sie geplatzt?\n==\nDie Dotcomblase ist die Spekulationsblase, die insbesondere Unternehmen betraf, welche Dienstleistungen im Zusammenhang mit dem Internet anboten (sogenannte Dotcom-Unternehmen; benannt nach dem .com in ihrer Internetadresse). Sie platzte anfangs 2000.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was ist die «Dotcomblase» und wann ist sie geplatzt?\n==\nDie Dotcomblase ist die Spekulationsblase, die insbesondere Unternehmen betraf, welche Dienstleistungen im Zusammenhang mit dem Internet anboten (sogenannte Dotcom-Unternehmen; benannt nach dem .com in ihrer Internetadresse). Sie platzte anfangs 2000.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232253"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232254]\nWas ist «Daytrading»?\n==\nDer minutenaktuelle, spekulative Börsenhandel",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was ist «Daytrading»?\n==\nDer minutenaktuelle, spekulative Börsenhandel",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232254"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232255]\nNenne zwei Vorteile von Online-Trading-Plattformen.\n==\nTiefe Transaktionskosten, Geschwindigkeit (dank E-Trading kann der Kunde rasch auf marktrelevante Neuigkeiten und Änderungen reagieren), 24-Stunden-Zugang.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne zwei Vorteile von Online-Trading-Plattformen.\n==\nTiefe Transaktionskosten, Geschwindigkeit (dank E-Trading kann der Kunde rasch auf marktrelevante Neuigkeiten und Änderungen reagieren), 24-Stunden-Zugang.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232255"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232256]\nWas ist ein «Long-only-Anleger»?\n==\nEin Investor, der Wertschriften kauft und dann im Depot belässt, sie also nicht sofort weiterverkauft.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was ist ein «Long-only-Anleger»?\n==\nEin Investor, der Wertschriften kauft und dann im Depot belässt, sie also nicht sofort weiterverkauft.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232256"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232257]\nWer Onlinehandel betreiben will, muss über gewisse Börsenkenntnisse verfügen. Ja oder nein? Warum?\n==\nJa, denn für das E-Trading gibt es keine Beratung. Ein potenzieller Händler sollte also wissen, welches Wertpapier in sein Portfolio passt.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer Onlinehandel betreiben will, muss über gewisse Börsenkenntnisse verfügen. Ja oder nein? Warum?\n==\nJa, denn für das E-Trading gibt es keine Beratung. Ein potenzieller Händler sollte also wissen, welches Wertpapier in sein Portfolio passt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232257"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232258]\nWer trägt beim Onlinehandel die Verantwortung für Anlageentscheide?\n==\nDer Kunde",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer trägt beim Onlinehandel die Verantwortung für Anlageentscheide?\n==\nDer Kunde",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232258"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232259]\nWas versteht man im Bereich des Onlinehandels unter einem «Beratungsmandat»?\n==\nEin spezielles Mandat bei dem der Kunde nicht selbst alle Geschäfte online abwickelt, sondern zusätzlich für eine aktive und persönliche Beratung durch sein Finanzinstitut bezahlt. Der Vermögensverwalter bespricht sich meistens regelmässig mit dem Kunden und gibt ihm Empfehlungen ab.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was versteht man im Bereich des Onlinehandels unter einem «Beratungsmandat»?\n==\nEin spezielles Mandat bei dem der Kunde nicht selbst alle Geschäfte online abwickelt, sondern zusätzlich für eine aktive und persönliche Beratung durch sein Finanzinstitut bezahlt. Der Vermögensverwalter bespricht sich meistens regelmässig mit dem Kunden und gibt ihm Empfehlungen ab.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232259"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232260]\nZur Abwicklung von E-Trading-Geschäften benötigt man einen Internetanschluss. Warum sollte man einen ISDN- oder ADSL-Anschluss dem ortsunabhängigen WLAN vorziehen?\n==\nWeil bei WLAN die Sicherheitslücken, die Hacker ausnützen können, tendenziell grösser sind.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zur Abwicklung von E-Trading-Geschäften benötigt man einen Internetanschluss. Warum sollte man einen ISDN- oder ADSL-Anschluss dem ortsunabhängigen WLAN vorziehen?\n==\nWeil bei WLAN die Sicherheitslücken, die Hacker ausnützen können, tendenziell grösser sind.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232260"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232261]\nWelche Voraussetzungen sollte man beim E-Trading erfüllen?\n==\nSein eigenes Risikoprofil richtig einschätzen können, über gewisse Börsengrundkenntnisse verfügen und nur Geld zum Handeln verwenden, auf das man nicht unbedingt angewiesen ist.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche Voraussetzungen sollte man beim E-Trading erfüllen?\n==\nSein eigenes Risikoprofil richtig einschätzen können, über gewisse Börsengrundkenntnisse verfügen und nur Geld zum Handeln verwenden, auf das man nicht unbedingt angewiesen ist.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232261"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232262]\nWas ist – nebst einem niedrigeren Gewinn – der Nachteil von kleinen Anlagebeträgen?\n==\nBereits geringe Tradinggebühren können einen beträchtlichen Teil allfälliger Kursgewinne wegfressen.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was ist – nebst einem niedrigeren Gewinn – der Nachteil von kleinen Anlagebeträgen?\n==\nBereits geringe Tradinggebühren können einen beträchtlichen Teil allfälliger Kursgewinne wegfressen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232262"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232263]\nWelche Elemente benötigt man, um sich auf ein Onlineportal einzuloggen?\n==\nE-Trading-Nummer, individuelles Passwort und Rasterkarte",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche Elemente benötigt man, um sich auf ein Onlineportal einzuloggen?\n==\nE-Trading-Nummer, individuelles Passwort und Rasterkarte",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232263"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232264]\nWozu dient die Funktion «Asset Allocation» beim eigenen Onlineportal-Zugang?\n==\nSie berechnet die Vermögensaufteilung inklusive der Konten nach Währungen und nach Titelkategorien wie Aktien und Obligationen.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wozu dient die Funktion «Asset Allocation» beim eigenen Onlineportal-Zugang?\n==\nSie berechnet die Vermögensaufteilung inklusive der Konten nach Währungen und nach Titelkategorien wie Aktien und Obligationen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232264"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232265]\nWas ist der Unterschied zwischen einem Limit- und einem Bestenskauf?\n==\nBeim Limitkauf kann der Kunde selber bestimmen, wie viel er bereit ist, für eine bestimmte Wertschrift zu zahlen. Ein Bestenskauf hat keine Limite – d.h. der Kunde erhält die Wertschrift zum aktuellen Marktpreis.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was ist der Unterschied zwischen einem Limit- und einem Bestenskauf?\n==\nBeim Limitkauf kann der Kunde selber bestimmen, wie viel er bereit ist, für eine bestimmte Wertschrift zu zahlen. Ein Bestenskauf hat keine Limite – d.h. der Kunde erhält die Wertschrift zum aktuellen Marktpreis.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232265"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232266]\nNenne drei bekannte Handelsplätze.\n==\nSchweizer Börse SIX, SWX Europe, amerikanische NASDAQ und NYSE, deutsche XETRA.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne drei bekannte Handelsplätze.\n==\nSchweizer Börse SIX, SWX Europe, amerikanische NASDAQ und NYSE, deutsche XETRA.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232266"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232267]\nWas sind «strukturierte Produkte»?\n==\nJene Finanzinstrumente, die durch die Kombination mehrerer Basisfinanzprodukte entstehen, wobei mindestens eines ein Derivat ist (derivative Finanzinstrumente beziehen sich auf Basiswerte wie beispielsweise Aktien, Obligationen, Indizes oder Waren).",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was sind «strukturierte Produkte»?\n==\nJene Finanzinstrumente, die durch die Kombination mehrerer Basisfinanzprodukte entstehen, wobei mindestens eines ein Derivat ist (derivative Finanzinstrumente beziehen sich auf Basiswerte wie beispielsweise Aktien, Obligationen, Indizes oder Waren).",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232267"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232268]\nWozu dient beim Onlinehandel die «Watchlist»?\n==\nSie zeigt ausgewählte aktuelle Kursentwicklungen und berechnet Performancedaten.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wozu dient beim Onlinehandel die «Watchlist»?\n==\nSie zeigt ausgewählte aktuelle Kursentwicklungen und berechnet Performancedaten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232268"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232269]\nWas versteht man beim Wertschriftenhandel unter «Bewertung»?\n==\nDie Einschätzung des Werts und Potenzials eines Titels",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was versteht man beim Wertschriftenhandel unter «Bewertung»?\n==\nDie Einschätzung des Werts und Potenzials eines Titels",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232269"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232270]\nNenne einige Beispiele von Informationen, die ein Anleger benötigt, um seine Anlageentscheide zu fällen.\n==\nKonjunkturdaten wie das Wirtschaftswachstum, die Inflationsrate oder die Exportentwicklung eines Landes; Marktdaten wie das Zinsumfeld oder relevante Börsenkurse.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne einige Beispiele von Informationen, die ein Anleger benötigt, um seine Anlageentscheide zu fällen.\n==\nKonjunkturdaten wie das Wirtschaftswachstum, die Inflationsrate oder die Exportentwicklung eines Landes; Marktdaten wie das Zinsumfeld oder relevante Börsenkurse.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232270"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232271]\nWarum sind Informationen zum Zinsumfeld für einen Anleger wichtig?\n==\nUnternehmen finanzieren sich oft über den Geldmarkt. Sind die Zinsen hoch, muss ein Unternehmen mehr für benötigtes Fremdkapital zahlen, was sich negativ auf das Unternehmensergebnis und somit auf den Gewinn auswirkt.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Warum sind Informationen zum Zinsumfeld für einen Anleger wichtig?\n==\nUnternehmen finanzieren sich oft über den Geldmarkt. Sind die Zinsen hoch, muss ein Unternehmen mehr für benötigtes Fremdkapital zahlen, was sich negativ auf das Unternehmensergebnis und somit auf den Gewinn auswirkt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232271"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232272]\nWarum sind Informationen zum Börsenkurs einer Aktie für einen Anleger wichtig?\n==\nSie geben Aufschluss über die Gewinneinschätzung anderer Investoren. Ist der Börsenkurs einer Aktie tief, bzw. ist die Aktie günstig bewertet, erwartet offenbar eine Mehrheit der Investoren einen tendenziell sinkenden Gewinn. Das «Gewinnpotenzial» der Aktie wird als tief bewertet. Ist der Aktienkurs dagegen steigend, rechnen offenbar viele Investoren mit einer guten Geschäftsentwicklung.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Warum sind Informationen zum Börsenkurs einer Aktie für einen Anleger wichtig?\n==\nSie geben Aufschluss über die Gewinneinschätzung anderer Investoren. Ist der Börsenkurs einer Aktie tief, bzw. ist die Aktie günstig bewertet, erwartet offenbar eine Mehrheit der Investoren einen tendenziell sinkenden Gewinn. Das «Gewinnpotenzial» der Aktie wird als tief bewertet. Ist der Aktienkurs dagegen steigend, rechnen offenbar viele Investoren mit einer guten Geschäftsentwicklung.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232272"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232273]\nNenne ein Synonym für «Asset Allocation».\n==\nVermögensaufteilung",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne ein Synonym für «Asset Allocation».\n==\nVermögensaufteilung",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232273"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232274]\nWer eine Aktie kauft, wird Miteigentümer eines Unternehmens. Ja oder nein?\n==\nJa",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer eine Aktie kauft, wird Miteigentümer eines Unternehmens. Ja oder nein?\n==\nJa",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232274"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232275]\nObligationen unterliegen keinen Kursschwankungen. Richtig oder falsch?\n==\nFalsch",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Obligationen unterliegen keinen Kursschwankungen. Richtig oder falsch?\n==\nFalsch",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232275"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232276]\nWas für Gebühren fallen beim E-Trading an?\n==\nBörsen- und Umsatzabgaben, Depotgebühren, Courtagen (Transaktionskosten für den Kauf und Verkauf von Wertschriften) und sonstige Gebühren an den Betreiber des Portals.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was für Gebühren fallen beim E-Trading an?\n==\nBörsen- und Umsatzabgaben, Depotgebühren, Courtagen (Transaktionskosten für den Kauf und Verkauf von Wertschriften) und sonstige Gebühren an den Betreiber des Portals.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232276"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232277]\nWas sind «Discountbroker»?\n==\nDiscountbroker sind ausschliesslich als Börsenhändler tätig und haben in der Regel keine realen Anlaufstellen oder Filialen. Sie bieten in der Regel weder Anlageberatung noch Kauf/ Verkaufsempfehlungen an.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was sind «Discountbroker»?\n==\nDiscountbroker sind ausschliesslich als Börsenhändler tätig und haben in der Regel keine realen Anlaufstellen oder Filialen. Sie bieten in der Regel weder Anlageberatung noch Kauf/ Verkaufsempfehlungen an.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232277"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232278]\nWelches sind wichtige Kriterien bei der Wahl einer Handelsplattform?\n==\nNeben der Höhe der gesamthaften Gebühren auch das Angebot der Anlageprodukte, die Benutzerfreundlichkeit, der Umfang und die Aktualität der gelieferten Börseninformationen sowie die Personalisierbarkeit der Onlineinformationen.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welches sind wichtige Kriterien bei der Wahl einer Handelsplattform?\n==\nNeben der Höhe der gesamthaften Gebühren auch das Angebot der Anlageprodukte, die Benutzerfreundlichkeit, der Umfang und die Aktualität der gelieferten Börseninformationen sowie die Personalisierbarkeit der Onlineinformationen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232278"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232279]\nWas ist ein Aktienindex?\n==\nEine Kennzahl, welche die Entwicklung bestimmter Aktienkurse widerspiegelt",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was ist ein Aktienindex?\n==\nEine Kennzahl, welche die Entwicklung bestimmter Aktienkurse widerspiegelt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232279"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232280]\nWas zeichnet ein gut diversifiziertes Portfolio aus?\n==\nIn einem gut diversifizierten Portfolio sind die Investitionen weltweit über verschiedene Anlageklassen wie Aktien, Obligationen, Geldmarkt, Immobilien und Rohstoffe sowie über verschiedene Währungen verteilt. Die Aktienquote sollte zum Beispiel nicht nur Titel aus einem Land und schon gar nicht nur von einem Unternehmen umfassen.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was zeichnet ein gut diversifiziertes Portfolio aus?\n==\nIn einem gut diversifizierten Portfolio sind die Investitionen weltweit über verschiedene Anlageklassen wie Aktien, Obligationen, Geldmarkt, Immobilien und Rohstoffe sowie über verschiedene Währungen verteilt. Die Aktienquote sollte zum Beispiel nicht nur Titel aus einem Land und schon gar nicht nur von einem Unternehmen umfassen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232280"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232281]\nWas passiert mit dem Kurs einer Aktie, wenn sich die Gewinnaussichten des Unternehmens über Erwarten verbessern?\n==\nEr steigt.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was passiert mit dem Kurs einer Aktie, wenn sich die Gewinnaussichten des Unternehmens über Erwarten verbessern?\n==\nEr steigt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232281"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232282]\nWas ist eine «Dividende»?\n==\nDer pro Aktie ausbezahlte Anteil am Reingewinn eines Unternehmens (Aktiengesellschaft).",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was ist eine «Dividende»?\n==\nDer pro Aktie ausbezahlte Anteil am Reingewinn eines Unternehmens (Aktiengesellschaft).",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232282"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232283]\nWer legt die Höhe der Dividende fest?\n==\nDie Generalversammlung auf Antrag des Verwaltungsrats",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer legt die Höhe der Dividende fest?\n==\nDie Generalversammlung auf Antrag des Verwaltungsrats",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232283"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232284]\nWelche der folgenden Aktien sind in der Regel am riskantesten: Bluechips, Aktien von Gesellschaften aus Schwellenländern, Small- und Midcaps?\n==\nAktien von Gesellschaften aus Schwellenländern.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche der folgenden Aktien sind in der Regel am riskantesten: Bluechips, Aktien von Gesellschaften aus Schwellenländern, Small- und Midcaps?\n==\nAktien von Gesellschaften aus Schwellenländern.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232284"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232285]\nNenne ein Synonym für «Obligation».\n==\nSchuldverschreibung, Anleihe.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne ein Synonym für «Obligation».\n==\nSchuldverschreibung, Anleihe.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232285"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232286]\nWer emittiert Obligationen?\n==\nEinrichtungen der öffentlichen Hand (z. B. Bund und Kantone) sowie Unternehmen.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer emittiert Obligationen?\n==\nEinrichtungen der öffentlichen Hand (z. B. Bund und Kantone) sowie Unternehmen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232286"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232287]\nWelchen zwei Risiken sind Obligationen in Fremdwährungen ausgesetzt?\n==\nDen Kursschwankungen und dem Wechselkursrisiko.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welchen zwei Risiken sind Obligationen in Fremdwährungen ausgesetzt?\n==\nDen Kursschwankungen und dem Wechselkursrisiko.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232287"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232288]\nSinkt der Dollar, gewinnt eine US-Staatsanleihe in Franken gerechnet an Wert. Ja oder nein?\n==\nNein",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Sinkt der Dollar, gewinnt eine US-Staatsanleihe in Franken gerechnet an Wert. Ja oder nein?\n==\nNein",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232288"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232289]\nWarum sind Obligationen im Allgemeinen weniger riskant als Aktien?\n==\nSollte der Herausgeber Konkurs gehen, erhalten die Obligationäre ihr Geld vor den Aktionären zurück.",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Warum sind Obligationen im Allgemeinen weniger riskant als Aktien?\n==\nSollte der Herausgeber Konkurs gehen, erhalten die Obligationäre ihr Geld vor den Aktionären zurück.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232289"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1:bitmark--]\n[@id:232290]\nRohstoffe gehören zu den alternativen Anlagen und können ebenfalls an der Börse gehandelt werden. Ja oder nein?\n==\nJa",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Rohstoffe gehören zu den alternativen Anlagen und können ebenfalls an der Börse gehandelt werden. Ja oder nein?\n==\nJa",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232290"
+      ]
+    }
+  }
+]

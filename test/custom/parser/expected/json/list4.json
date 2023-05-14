@@ -1,0 +1,15 @@
+[
+  {
+    "bitmark": "[.assignment:bitmark++&article:bitmark++]\n[%A8a]\n[!Wortschatz: Schule und Ausbildung\nLesen Sie die folgenden Redemittel zum [^_ what a difference a day make] Thema Schule und Ausbildung.]\n\n**Schulzeit**\n\n* eine Schule besuchen/zur Schule gehen\n* auf eine Schule gehen/in die Schule gehen\n* die Schule schwänzen\n* die Schulausbildung abschließen\n* Fächer haben/wählen/mögen\n* ein gutes/mittelmäßiges/schlechtes Zeugnis erhalten/bekommen\n* für eine Prüfung lernen/büffeln (umg.)\n* eine Prüfung/das Abitur/die mittlere Reife machen/ablegen/bestehen\n* durch eine Prüfung fallen/bei einer Prüfung durchfallen\n* in die nächste Klasse (nicht) versetzt werden/sitzen bleiben\n\na) belegen\nb) gehen\nc) schreiben \nd) lernen\ne) besuchen \nf) studieren \ng) ergreifen \nh) ablegen\n\n(A) belegen\n(B) gehen\n(C) schreiben \n(D) lernen\n(E) besuchen \n(F) studieren \n(G) ergreifen \n(H) ablegen\n\n||add image- not found in general folder||",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "**Schulzeit**\n\n* eine Schule besuchen/zur Schule gehen\n* auf eine Schule gehen/in die Schule gehen\n* die Schule schwänzen\n* die Schulausbildung abschließen\n* Fächer haben/wählen/mögen\n* ein gutes/mittelmäßiges/schlechtes Zeugnis erhalten/bekommen\n* für eine Prüfung lernen/büffeln (umg.)\n* eine Prüfung/das Abitur/die mittlere Reife machen/ablegen/bestehen\n* durch eine Prüfung fallen/bei einer Prüfung durchfallen\n* in die nächste Klasse (nicht) versetzt werden/sitzen bleiben\n\na) belegen\nb) gehen\nc) schreiben \nd) lernen\ne) besuchen \nf) studieren \ng) ergreifen \nh) ablegen\n\n(A) belegen\n(B) gehen\n(C) schreiben \n(D) lernen\n(E) besuchen \n(F) studieren \n(G) ergreifen \n(H) ablegen",
+      "item": "A8a",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Wortschatz: Schule und Ausbildung\nLesen Sie die folgenden Redemittel zum [^_ what a difference a day make"
+    }
+  }
+]

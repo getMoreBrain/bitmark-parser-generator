@@ -1,0 +1,37 @@
+[
+  {
+    "bitmark": "[.article&article]I am coffee toast[_cloze][!noun ain hint for the second gap][?1 or 2][_gap text][!verb]\n[!wtf]\n[&article-online:https://docs.bitbook.education/bit-books/compendio/schubert_erkundungen_c1/web-resources/cover/compendio_uebungen/web_resources/images/05_ablauf_und_termine_022.html]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "I am coffee toast{0}",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cloze",
+            "gap text"
+          ],
+          "hint": "1 or 2",
+          "instruction": "verb",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      },
+      "instruction": "wtf",
+      "resource": {
+        "type": "article-online"
+      }
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '-online'",
+        "line": 3,
+        "column": 9,
+        "errorLine": "[&article-online:https://docs.bitbook.education/bit-books/compendio/schubert_erkundungen_c1/web-resources/cover/compendio_uebungen/web_resources/images/05_ablauf_und_termine_022.html]"
+      }
+    ]
+  }
+]

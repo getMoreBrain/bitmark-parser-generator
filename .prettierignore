@@ -4,4 +4,4 @@ lib
 .yarn/
 dist/
 docs/
-#src/ast/AstRules.ts
+src/generated/

@@ -1,0 +1,2135 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:186686]\n[@language:en]\n[#QualiCarte]\n[@coverImage:https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/qualicarte_cover.png]\n[@externalId:e-qualicarte_bzlok0uhqju2]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186686"
+      ],
+      "language": [
+        "en"
+      ],
+      "title": "QualiCarte",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/berufsbildner/covers/web-resources/images/qualicarte_cover.png"
+      ],
+      "externalId": [
+        "e-qualicarte_bzlok0uhqju2"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:186687]\n===\nDatum:\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Datum:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "186687"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:186688]\n===\nLehrbetrieb\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Lehrbetrieb",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "186688"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:186689]\n===\nBerufsbildnerin/ Berufsbildner:\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Berufsbildnerin/ Berufsbildner:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "186689"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:186690]\n[#Qualitätsentwicklung mit der QualiCarte]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "186690"
+      ],
+      "title": "Qualitätsentwicklung mit der QualiCarte"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:186691]\n[%][%Grundlage]\nDas Berufsbildungsgesetz BBG fordert in Art. 8 explizit die Sicherstellung der Qualitätsentwicklung durch die Anbieter der Berufsbildung. Dazu gehören im dualen System die Lehrbetriebe und auch Institutionen für die Bildung in beruflicher Praxis.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Das Berufsbildungsgesetz BBG fordert in Art. 8 explizit die Sicherstellung der Qualitätsentwicklung durch die Anbieter der Berufsbildung. Dazu gehören im dualen System die Lehrbetriebe und auch Institutionen für die Bildung in beruflicher Praxis.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186691"
+      ],
+      "lead": "Grundlage"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:186692]\n[%][%Ziel der QualiCarte]\nDie **QualiCarte** ist ein berufsunabhängiges Instrument zur Beurteilung der Qualität in der betrieblichen Ausbildung. Mit Hilfe der **QualiCarte** soll das Optimierungspotential erkannt werden, um die Ausbildung laufend zu verbessern. Die **QualiCarte** definiert Anforderungen an eine qualitativ hochwertige Ausbildung.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Die **QualiCarte** ist ein berufsunabhängiges Instrument zur Beurteilung der Qualität in der betrieblichen Ausbildung. Mit Hilfe der **QualiCarte** soll das Optimierungspotential erkannt werden, um die Ausbildung laufend zu verbessern. Die **QualiCarte** definiert Anforderungen an eine qualitativ hochwertige Ausbildung.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186692"
+      ],
+      "lead": "Ziel der QualiCarte"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:186693]\n[%][%Entwicklungsprozess]\nQualitätsentwicklung ist ein kontinuierlicher Prozess. Es ist deshalb zentral, dass die Ausbildungsqualität und Verbesserungsmassnahmen mindestens einmal jährlich mit der **QualiCarte** überprüft werden.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Qualitätsentwicklung ist ein kontinuierlicher Prozess. Es ist deshalb zentral, dass die Ausbildungsqualität und Verbesserungsmassnahmen mindestens einmal jährlich mit der **QualiCarte** überprüft werden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186693"
+      ],
+      "lead": "Entwicklungsprozess"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:186694]\n[%][%Aufbau]\nDie **QualiCarte** besteht aus 28 Qualitätsanforderungen, die in 5 Kapitel unterteilt sind (Überprüfung der Ziele und Optimierungsmassnahmen, Anstellung, Einführung, Bildungsprozess, Verantwortung und Abschluss).",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Die **QualiCarte** besteht aus 28 Qualitätsanforderungen, die in 5 Kapitel unterteilt sind (Überprüfung der Ziele und Optimierungsmassnahmen, Anstellung, Einführung, Bildungsprozess, Verantwortung und Abschluss).",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186694"
+      ],
+      "lead": "Aufbau"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:186695]\n[%][%Selbstbeurteilung]\nDer/die Berufsbildner/in bewertet jede Qualitätsanforderung nach vorher festgelegten objektiven Kriterien. Erläuterungen zu den einzelnen Anforderungen sind online im Handbuch zur **QualiCarte** zu finden.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Der/die Berufsbildner/in bewertet jede Qualitätsanforderung nach vorher festgelegten objektiven Kriterien. Erläuterungen zu den einzelnen Anforderungen sind online im Handbuch zur **QualiCarte** zu finden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186695"
+      ],
+      "lead": "Selbstbeurteilung"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:186696]\n[%][%Ziele und Fristen]\nFür Qualitätsanforderungen, die mit - oder -- bewertet werden, braucht es gezielte Massnahmen, damit diese Anforderungen in Zukunft ebenfalls erfüllt oder gar übertroffen werden. Dazu braucht es klare Ziele und realistische Fristen. Spätestens nach Ablauf der Fristen muss die Wirkung der Massnahmen überprüft werden.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Für Qualitätsanforderungen, die mit - oder -- bewertet werden, braucht es gezielte Massnahmen, damit diese Anforderungen in Zukunft ebenfalls erfüllt oder gar übertroffen werden. Dazu braucht es klare Ziele und realistische Fristen. Spätestens nach Ablauf der Fristen muss die Wirkung der Massnahmen überprüft werden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186696"
+      ],
+      "lead": "Ziele und Fristen"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:186697]\n[%][%Fremdbeurteilung]\nDie **QualiCarte** wird als Instrument der Fremdevaluation eingesetzt, wenn Vertreter/innen von Kantonen oder OdA die Ausbildungsqualität eines Lehrbetriebs evaluieren wollen.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Die **QualiCarte** wird als Instrument der Fremdevaluation eingesetzt, wenn Vertreter/innen von Kantonen oder OdA die Ausbildungsqualität eines Lehrbetriebs evaluieren wollen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186697"
+      ],
+      "lead": "Fremdbeurteilung"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:186698]\n[%][%Kantonale Lehraufsicht]\nGemäss BBG Art. 24 sorgen die Kantone für die Aufsicht über die berufliche Grundbildung. Bei der Aufsichtstätigkeit über die Qualität der Bildung in beruflicher Praxis wenden die Kantone die Qualitätskriterien gemäss **QualiCarte** an. Die Kantone können sich bei der Erteilung (bzw. beim Entzug) der Bildungsbewilligung auf die Anforderungskriterien gemäss **QualiCarte** berufen.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Gemäss BBG Art. 24 sorgen die Kantone für die Aufsicht über die berufliche Grundbildung. Bei der Aufsichtstätigkeit über die Qualität der Bildung in beruflicher Praxis wenden die Kantone die Qualitätskriterien gemäss **QualiCarte** an. Die Kantone können sich bei der Erteilung (bzw. beim Entzug) der Bildungsbewilligung auf die Anforderungskriterien gemäss **QualiCarte** berufen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186698"
+      ],
+      "lead": "Kantonale Lehraufsicht"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:186699]\n[%][%Weitere Informationen]\nwww.qualicarte.ch\nwww.qbb.berufsbildung.ch\n\n**Entwickelt von der Schweizerischen Berufsbildungsämter-Konferenz (SBBK) in Zusammenarbeit mit dem Schweizerischen Arbeitgeberverband (SAV) und dem Schweizerischen Gewerbeverband (SGV)**",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "www.qualicarte.ch\nwww.qbb.berufsbildung.ch\n\n**Entwickelt von der Schweizerischen Berufsbildungsämter-Konferenz (SBBK) in Zusammenarbeit mit dem Schweizerischen Arbeitgeberverband (SAV) und dem Schweizerischen Gewerbeverband (SGV)**",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186699"
+      ],
+      "lead": "Weitere Informationen"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:186702]\n[###Qualitätsanforderungen - Beurteilung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "186702"
+      ],
+      "title": "Qualitätsanforderungen - Beurteilung"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice-1]\n[@id:186703]\n[!Die in der letzten QualiCarte festgehaltenen Massnahmen sind wirksam. Die gesetzten Ziele wurden erreicht.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]",
+    "bit": {
+      "type": "multiple-choice-1",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Die in der letzten QualiCarte festgehaltenen Massnahmen sind wirksam. Die gesetzten Ziele wurden erreicht.",
+      "body": "",
+      "hint": "",
+      "choices": [
+        {
+          "choice": "Anforderungen nicht erfüllt",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Anforderungen teilweise erfüllt",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+          "item": "",
+          "isCorrect": false,
+          "instruction": "",
+          "hint": ""
+        },
+        {
+          "choice": "Anforderungen gut erfüllt",
+          "item": "",
+          "isCorrect": true,
+          "instruction": "",
+          "hint": ""
+        }
+      ],
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186703"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:186740]\n[###Bemerkungen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "186740"
+      ],
+      "title": "Bemerkungen"
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:186741]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186741"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:186705]\n[##Anstellung: Der Lehrbetrieb arbeitet Anstellungsmodalitäten aus.]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "186705"
+      ],
+      "title": "Anstellung: Der Lehrbetrieb arbeitet Anstellungsmodalitäten aus."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice]\n[@id:186984]\nQualitätsanforderungen - Beurteilung\n===\n[!1 - Das Anforderungsprofil an die lernende Person ist bekannt.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!2 - Gespräche mit den ausgewählten Bewerbenden finden statt und weitere Auswahlinstrumente werden eingesetzt.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!3 - Es werden Schnupperlehren organisiert und ausgewertet.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!4 - Die Bewerbenden werden über die Arbeitsbedingungen informiert.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!5 - Die Resultate des Bewerbungsverfahrens werden allen Bewerbenden klar kommuniziert.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!6 - Den Bewerbenden werden die Vertragsbedingungen erklärt.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "Qualitätsanforderungen - Beurteilung",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "1 - Das Anforderungsprofil an die lernende Person ist bekannt.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "2 - Gespräche mit den ausgewählten Bewerbenden finden statt und weitere Auswahlinstrumente werden eingesetzt.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "3 - Es werden Schnupperlehren organisiert und ausgewertet.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "4 - Die Bewerbenden werden über die Arbeitsbedingungen informiert.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "5 - Die Resultate des Bewerbungsverfahrens werden allen Bewerbenden klar kommuniziert.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "6 - Den Bewerbenden werden die Vertragsbedingungen erklärt.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "186984"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:186742]\n[###Bemerkungen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "186742"
+      ],
+      "title": "Bemerkungen"
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:186743]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186743"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:186708]\n[##Einführung: Der Lehrbetrieb bereitet ein Einführungsprogramm vor.]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "186708"
+      ],
+      "title": "Einführung: Der Lehrbetrieb bereitet ein Einführungsprogramm vor."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice]\n[@id:186985]\nQualitätsanforderungen - Beurteilung\n===\n[!7 - Die für die Ausbildung zuständigen Personen sind bestimmt.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!8 - Die persönliche Begrüssung und Einführung am ersten Lehrtag sind organisiert.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!9 - Die Lernenden werden über die Tätigkeiten und das Arbeitsumfeld des Lehrbetriebs informiert.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!10 - Die Lernenden werden über die begleitenden Massnahmen der Arbeitssicherheit und Gesundheitsschutz, der Sicherheits- und Hygienevorschriften informiert.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!11 - Ein Arbeitsplatz mit den für die Ausübung des Berufes erforderlichen Werkzeugen und Einrichtungen wird den Lernenden zur Verfügung gestellt.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!12 - Die Lernenden werden bei Lehrbeginn über Sinn und Zweck der Bildungsverordnung und des Bildungsplans (betrieblicher Bildungsplan, Modelllehrgang, etc.) informiert.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "Qualitätsanforderungen - Beurteilung",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "7 - Die für die Ausbildung zuständigen Personen sind bestimmt.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "8 - Die persönliche Begrüssung und Einführung am ersten Lehrtag sind organisiert.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "9 - Die Lernenden werden über die Tätigkeiten und das Arbeitsumfeld des Lehrbetriebs informiert.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "10 - Die Lernenden werden über die begleitenden Massnahmen der Arbeitssicherheit und Gesundheitsschutz, der Sicherheits- und Hygienevorschriften informiert.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "11 - Ein Arbeitsplatz mit den für die Ausübung des Berufes erforderlichen Werkzeugen und Einrichtungen wird den Lernenden zur Verfügung gestellt.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "12 - Die Lernenden werden bei Lehrbeginn über Sinn und Zweck der Bildungsverordnung und des Bildungsplans (betrieblicher Bildungsplan, Modelllehrgang, etc.) informiert.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "186985"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:186744]\n[###Bemerkungen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "186744"
+      ],
+      "title": "Bemerkungen"
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:186745]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186745"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:186711]\n[##Bildungsprozess: Der Lehrbetrieb fördert den schrittweisen Erwerb von Handlungskompetenzen und Kenntnissen, die für das Berufsleben nötig sind und nimmt sich für die Ausbildung der lernenden Person Zeit.]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "186711"
+      ],
+      "title": "Bildungsprozess: Der Lehrbetrieb fördert den schrittweisen Erwerb von Handlungskompetenzen und Kenntnissen, die für das Berufsleben nötig sind und nimmt sich für die Ausbildung der lernenden Person Zeit."
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice]\n[@id:186712]\nQualitätsanforderungen - Beurteilung\n===\n[!13 - Die Lernenden erhalten während der Probezeit regelmässig Rückmeldungen; am Ende der Probezeit wird zusammen mit den Lernenden ein Bildungsbericht erstellt.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!14 - Der Stellenwert der Ausbildung von Lernenden durch ihre Berufsbildenden und andere Arten der Unterstützung sind im Lehrbetrieb formell verankert.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!15 - Der Bildungsplan und die anderen Instrumente zur Förderung der betrieblichen Bildung werden konsequent eingesetzt.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!16 - Der/die Berufsbildner/in setzt klare und messbare Lernschritte fest und überprüft sie.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!17 - Verschiedene Arbeitsmethoden und Arbeitsabläufe werden geplant, gezeigt und erklärt.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!18 - Die Arbeiten der Lernenden werden in qualitativer und quantitativer Hinsicht überprüft, dokumentiert und besprochen.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!19 - Die Lernenden werden schrittweise in die Arbeitsprozesse des Lehrbetriebs integriert, ihre Selbstständigkeit wird gefördert.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!20 - Die Leistungen der Lernenden in der Berufsfachschule und in den überbetrieblichen Kursen werden kontrolliert und besprochen.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!21 - Der/die Berufsbildner/in achtet darauf, dass die lernende Person entsprechend ihren Möglichkeiten gefördert wird.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!22 - Gemäss Bildungsverordnung des entsprechenden Berufs erstellt der/die Berufsbildner/in halbjährlich einen Bildungsbericht und bespricht diesen mit der lernenden Person.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!23 - Der/die Berufsbildner/in bietet den Lernenden Gelegenheit zu kritischen Rückmeldungen und geht nach Möglichkeit auf diese ein.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "Qualitätsanforderungen - Beurteilung",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "13 - Die Lernenden erhalten während der Probezeit regelmässig Rückmeldungen; am Ende der Probezeit wird zusammen mit den Lernenden ein Bildungsbericht erstellt.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "14 - Der Stellenwert der Ausbildung von Lernenden durch ihre Berufsbildenden und andere Arten der Unterstützung sind im Lehrbetrieb formell verankert.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "15 - Der Bildungsplan und die anderen Instrumente zur Förderung der betrieblichen Bildung werden konsequent eingesetzt.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "16 - Der/die Berufsbildner/in setzt klare und messbare Lernschritte fest und überprüft sie.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "17 - Verschiedene Arbeitsmethoden und Arbeitsabläufe werden geplant, gezeigt und erklärt.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "18 - Die Arbeiten der Lernenden werden in qualitativer und quantitativer Hinsicht überprüft, dokumentiert und besprochen.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "19 - Die Lernenden werden schrittweise in die Arbeitsprozesse des Lehrbetriebs integriert, ihre Selbstständigkeit wird gefördert.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "20 - Die Leistungen der Lernenden in der Berufsfachschule und in den überbetrieblichen Kursen werden kontrolliert und besprochen.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "21 - Der/die Berufsbildner/in achtet darauf, dass die lernende Person entsprechend ihren Möglichkeiten gefördert wird.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "22 - Gemäss Bildungsverordnung des entsprechenden Berufs erstellt der/die Berufsbildner/in halbjährlich einen Bildungsbericht und bespricht diesen mit der lernenden Person.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "23 - Der/die Berufsbildner/in bietet den Lernenden Gelegenheit zu kritischen Rückmeldungen und geht nach Möglichkeit auf diese ein.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "186712"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-9]\n[@id:186756]\n[###Bemerkungen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "186756"
+      ],
+      "title": "Bemerkungen"
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:186757]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186757"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:186714]\n**Verantwortung und Abschluss**: Der Lehrbetrieb setzt sich für die Lernenden ein und arbeitet mit allen Partnern der Berufsbildung zusammen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "**Verantwortung und Abschluss**: Der Lehrbetrieb setzt sich für die Lernenden ein und arbeitet mit allen Partnern der Berufsbildung zusammen.",
+      "id": [
+        "186714"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice]\n[@id:186986]\nQualitätsanforderungen - Beurteilung\n===\n[!24 - Hat die lernende Person Schwierigkeiten oder droht die Auflösung des Lehrverhältnisses, kontaktiert der/die Berufsbildner/in je nach Situation frühzeitig die gesetzlichen Vertreter, das zuständige Berufsbildungsamt und/oder die Berufsfachschule.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!25 - Alle für das Qualifikationsverfahren notwendigen organisatorischen und formalen Massnahmen werden rechtzeitig getroffen.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!26 - Die Austrittsmodalitäten betreffend der Lernenden sind rechtzeitig geregelt.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!27 - Der/die Berufsbildner/in bildet sich regelmässig weiter.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!28 - Der Lehrbetrieb stellt dem/der Berufsbildner/in die notwendigen zeitlichen, finanziellen und materiellen Ressourcen zur Verfügung.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "Qualitätsanforderungen - Beurteilung",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "24 - Hat die lernende Person Schwierigkeiten oder droht die Auflösung des Lehrverhältnisses, kontaktiert der/die Berufsbildner/in je nach Situation frühzeitig die gesetzlichen Vertreter, das zuständige Berufsbildungsamt und/oder die Berufsfachschule.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "25 - Alle für das Qualifikationsverfahren notwendigen organisatorischen und formalen Massnahmen werden rechtzeitig getroffen.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "26 - Die Austrittsmodalitäten betreffend der Lernenden sind rechtzeitig geregelt.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "27 - Der/die Berufsbildner/in bildet sich regelmässig weiter.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "28 - Der Lehrbetrieb stellt dem/der Berufsbildner/in die notwendigen zeitlichen, finanziellen und materiellen Ressourcen zur Verfügung.",
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "186986"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-10]\n[@id:186762]\n[###Bemerkungen]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-10",
+      "id": [
+        "186762"
+      ],
+      "title": "Bemerkungen"
+    }
+  },
+  {
+    "bitmark": "[.essay]\n[@id:186763]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186763"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-11]\n[@id:186764]\n[##Ziele/Massnahmen 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-11",
+      "id": [
+        "186764"
+      ],
+      "title": "Ziele/Massnahmen 1"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:186717]\n===\nBeschreibung\n===\nVerantwortliche Person(en)\n===\nFrist (Monat / Jahr)\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Beschreibung",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Verantwortliche Person(en)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Frist (Monat / Jahr)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "186717"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice]\n[@id:186718]\nErfüllt\n[+Ja]\n[-Nein]",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "Erfüllt",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Ja",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Nein",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "186718"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-12]\n[@id:186768]\n[##Ziele/Massnahmen 2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-12",
+      "id": [
+        "186768"
+      ],
+      "title": "Ziele/Massnahmen 2"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:186719]\n===\nBeschreibung\n===\nVerantwortliche Person(en)\n===\nFrist (Monat / Jahr)\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Beschreibung",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Verantwortliche Person(en)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Frist (Monat / Jahr)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "186719"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice]\n[@id:186765]\nErfüllt\n[+Ja]\n[-Nein]",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "Erfüllt",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Ja",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Nein",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "186765"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-13]\n[@id:186769]\n[##Ziele/Massnahmen 3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-13",
+      "id": [
+        "186769"
+      ],
+      "title": "Ziele/Massnahmen 3"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:186721]\n===\nBeschreibung\n===\nVerantwortliche Person(en)\n===\nFrist (Monat / Jahr)\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Beschreibung",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Verantwortliche Person(en)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Frist (Monat / Jahr)",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "186721"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice]\n[@id:186766]\nErfüllt\n[+Ja]\n[-Nein]",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "Erfüllt",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "choices": [
+            {
+              "choice": "Ja",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "Nein",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "186766"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-14]\n[@id:186767]\n[##Abschluss]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-14",
+      "id": [
+        "186767"
+      ],
+      "title": "Abschluss"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:186723]\n===\nDatum/ Unterschriften:\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Datum/ Unterschriften:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "186723"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:186724]\n===\nBerufsbildnerin/ Berufsbildner\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Berufsbildnerin/ Berufsbildner",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "186724"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:186725]\n===\nFür den Lehrbetrieb\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Für den Lehrbetrieb",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "186725"
+      ]
+    }
+  }
+]

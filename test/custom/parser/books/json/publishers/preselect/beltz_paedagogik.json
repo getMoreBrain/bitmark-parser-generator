@@ -1,0 +1,792 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:288272]\n[#Pädagogik]\n[@language:de]\n[@publisher:preselect]\n[@theme:beltz_paedagogik]\n[@coverImage:https://docs.bitmark.cloud/bit-books/preselect/beltz/paedagogik/web-resources/images/paedagogik_cover.png]\n[@externalId:e-pdagogik_jqg6-8yaujxy]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288272"
+      ],
+      "title": "Pädagogik",
+      "language": [
+        "de"
+      ],
+      "publisher": [
+        "preselect"
+      ],
+      "theme": [
+        "beltz_paedagogik"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/preselect/beltz/paedagogik/web-resources/images/paedagogik_cover.png"
+      ],
+      "externalId": [
+        "e-pdagogik_jqg6-8yaujxy"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:288273]\n[&image:https://docs.bitmark.cloud/bit-books/preselect/beltz/paedagogik/web-resources/images/preselect_beltz_paedagogik_2.png][@width:400]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "288273"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/preselect/beltz/paedagogik/web-resources/images/preselect_beltz_paedagogik_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "400",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288274]\n[%][%EDITORIAL]\nEs ist Anfang Juli, und die Sommerzeit steht bevor – eine Zeit, um durchzuschnaufen und die Anspannung der letzten Wochen und Monate hinter sich zu lassen. Hinzu kommt in diesem Sommer: Nach mehr als zwei überaus schwierigen Jahren dürfen wir hoffen, dass die Pandemie mehr oder weniger hinter uns liegt. Auch wenn das Corona-Virus uns noch weiter begleiten und unser Leben beeinflussen wird, so können wir doch recht sicher sein, dass die Schule davon nur noch wenig beeinträchtigt sein wird. Dieser Sommer kann also auch eine Zeit sein, darüber nachzudenken, wie Schule und Unterricht nach der Pandemie aussehen können. Oder zugespitzt: Was von dem, was wir – nicht selten notgedrungen – in der Pandemie gelernt haben, hat sich bewährt und soll bleiben? – Diese Frage wird uns in der PÄDAGOGIK ganz sicher in den nächsten Ausgaben in verschiedenen Zusammenhängen beschäftigen, und es wird im kommenden Jahr auch einen eigenen Schwerpunkt dazu geben.\n\nZunächst einmal besinnen wir uns jedoch mit diesem Doppelheft auf zwei Standardanforderungen an den Lehrerberuf, die wir im Kreis der Redaktion auch gern als »Brot und Butter«-Themen bezeichnen. Im ersten Schwerpunkt stehen die pädagogischen Beziehungen im Mittelpunkt. Es ist eine alte Weisheit, jedoch mittlerweile auch wissenschaftlich solide belegt, dass Lernen besser gelingt, wenn zwischen Lehrkraft und Lerner:in eine vertrauensvolle und wertschätzende Beziehung besteht. Erfolgreiche Lehrkräfte interessieren sich umfassend für ihre Schüler:innen und wissen, was jede:r Einzelne von ihnen für erfolgreiches Lernen benötigt. Wer also die eigene Schule weiterentwickeln will, sollte sich die Frage stellen, was dafür getan werden kann, dass solche lernförderlichen Beziehungen nicht nur zufällig und in Abhängigkeit von der Persönlichkeit der jeweiligen Lehrkraft entstehen. Genau dieser Frage gehen wir im Einführungsbeitrag wie auch in den verschiedenen Erfahrungsberichten nach. Das Ergebnis ist überaus anspornend, denn es zeigt sich, dass Schulen in diesem Bereich vielfältige Handlungsmöglichkeiten haben, die zu erkunden sich lohnt. Entscheidend und nicht immer selbstverständlich ist dabei der systemische Blick auf dieses Thema, das nur auf den ersten Blick vor allem durch individuelles Handeln der einzelnen Lehrkräfte geprägt zu sein scheint.\n\nAuch im zweiten Schwerpunkt steht eine alltägliche Anforderung im Mittelpunkt: Wie lässt sich Beziehung zu Eltern partnerschaftlich gestalten? In der Vergangenheit hatten manche Schulen eine Neigung, die Elternarbeit eher von oben herab zu gestalten und nur das Nötigste zu tun, um die Eltern über die Aktivitäten in der Schule sowie der einzelnen Lerngruppen zu informieren. Das hat sich geändert, denn inzwischen hat sich die Erkenntnis durchgesetzt, dass die aktive Mitwirkung von Eltern im Rahmen einer Erziehungspartnerschaft ein wichtiger Baustein für den Lernerfolg der Schüler:innen sein kann. Wie sich eine solch aktive Mitwirkung aus Sicht der Schule, aber auch der Eltern gestalten lässt, zeigen die Beiträge im zweiten Schwerpunkt. Auch hier geht es also letztlich um gute Beziehungen, die nicht alles sind, ohne die jedoch alles sehr viel mühsamer gelingt.\n\nDR. JOCHEN SCHNACK\n\nRedaktionsleiter",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Es ist Anfang Juli, und die Sommerzeit steht bevor – eine Zeit, um durchzuschnaufen und die Anspannung der letzten Wochen und Monate hinter sich zu lassen. Hinzu kommt in diesem Sommer: Nach mehr als zwei überaus schwierigen Jahren dürfen wir hoffen, dass die Pandemie mehr oder weniger hinter uns liegt. Auch wenn das Corona-Virus uns noch weiter begleiten und unser Leben beeinflussen wird, so können wir doch recht sicher sein, dass die Schule davon nur noch wenig beeinträchtigt sein wird. Dieser Sommer kann also auch eine Zeit sein, darüber nachzudenken, wie Schule und Unterricht nach der Pandemie aussehen können. Oder zugespitzt: Was von dem, was wir – nicht selten notgedrungen – in der Pandemie gelernt haben, hat sich bewährt und soll bleiben? – Diese Frage wird uns in der PÄDAGOGIK ganz sicher in den nächsten Ausgaben in verschiedenen Zusammenhängen beschäftigen, und es wird im kommenden Jahr auch einen eigenen Schwerpunkt dazu geben.\n\nZunächst einmal besinnen wir uns jedoch mit diesem Doppelheft auf zwei Standardanforderungen an den Lehrerberuf, die wir im Kreis der Redaktion auch gern als »Brot und Butter«-Themen bezeichnen. Im ersten Schwerpunkt stehen die pädagogischen Beziehungen im Mittelpunkt. Es ist eine alte Weisheit, jedoch mittlerweile auch wissenschaftlich solide belegt, dass Lernen besser gelingt, wenn zwischen Lehrkraft und Lerner:in eine vertrauensvolle und wertschätzende Beziehung besteht. Erfolgreiche Lehrkräfte interessieren sich umfassend für ihre Schüler:innen und wissen, was jede:r Einzelne von ihnen für erfolgreiches Lernen benötigt. Wer also die eigene Schule weiterentwickeln will, sollte sich die Frage stellen, was dafür getan werden kann, dass solche lernförderlichen Beziehungen nicht nur zufällig und in Abhängigkeit von der Persönlichkeit der jeweiligen Lehrkraft entstehen. Genau dieser Frage gehen wir im Einführungsbeitrag wie auch in den verschiedenen Erfahrungsberichten nach. Das Ergebnis ist überaus anspornend, denn es zeigt sich, dass Schulen in diesem Bereich vielfältige Handlungsmöglichkeiten haben, die zu erkunden sich lohnt. Entscheidend und nicht immer selbstverständlich ist dabei der systemische Blick auf dieses Thema, das nur auf den ersten Blick vor allem durch individuelles Handeln der einzelnen Lehrkräfte geprägt zu sein scheint.\n\nAuch im zweiten Schwerpunkt steht eine alltägliche Anforderung im Mittelpunkt: Wie lässt sich Beziehung zu Eltern partnerschaftlich gestalten? In der Vergangenheit hatten manche Schulen eine Neigung, die Elternarbeit eher von oben herab zu gestalten und nur das Nötigste zu tun, um die Eltern über die Aktivitäten in der Schule sowie der einzelnen Lerngruppen zu informieren. Das hat sich geändert, denn inzwischen hat sich die Erkenntnis durchgesetzt, dass die aktive Mitwirkung von Eltern im Rahmen einer Erziehungspartnerschaft ein wichtiger Baustein für den Lernerfolg der Schüler:innen sein kann. Wie sich eine solch aktive Mitwirkung aus Sicht der Schule, aber auch der Eltern gestalten lässt, zeigen die Beiträge im zweiten Schwerpunkt. Auch hier geht es also letztlich um gute Beziehungen, die nicht alles sind, ohne die jedoch alles sehr viel mühsamer gelingt.\n\nDR. JOCHEN SCHNACK\n\nRedaktionsleiter",
+      "id": [
+        "288274"
+      ],
+      "lead": "EDITORIAL"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:288275]\nPS: Wir freuen uns wie immer auf Ihre Rückmeldungen und Kommentare unter\n↗ paedagogik-redaktion@beltz.de \noder bei Twitter unter\n↗ redaktion_PÄDAGOGIK",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "PS: Wir freuen uns wie immer auf Ihre Rückmeldungen und Kommentare unter\n↗ paedagogik-redaktion@beltz.de \noder bei Twitter unter\n↗ redaktion_PÄDAGOGIK",
+      "id": [
+        "288275"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:288276]\n[&image:https://docs.bitmark.cloud/bit-books/preselect/beltz/paedagogik/web-resources/images/preselect_beltz_paedagogik_3.png][@width:200]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "288276"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/preselect/beltz/paedagogik/web-resources/images/preselect_beltz_paedagogik_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "200",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:288277]\n[▼ch-1]\n[#THEMA 1: PÄDAGOGISCHE BEZIEHUNGEN GESTALTEN]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "288277"
+      ],
+      "anchor": "ch-1",
+      "title": "THEMA 1: PÄDAGOGISCHE BEZIEHUNGEN GESTALTEN"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:288278]\n[▼ch-2]\n[##Pädagogische Beziehungen – eine Wiederentdeckung?]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "288278"
+      ],
+      "anchor": "ch-2",
+      "title": "Pädagogische Beziehungen – eine Wiederentdeckung?"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark--]\n[@id:288279]\nDurch die Pandemie und die Schulschließungen sind den Kindern und Jugendlichen Alltagsstrukturen weggebrochen. Ganz besonders vermissen sie den leibhaftigen Kontakt zu Gleichaltrigen. Viele Lehrer:innen seufzen: Uns fehlen die Kinder! Pädagogische Beziehungen sind fundamental, nicht nur für das Lernen.\n- ULRICH HERRMANN UND MARION OSWALD",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Durch die Pandemie und die Schulschließungen sind den Kindern und Jugendlichen Alltagsstrukturen weggebrochen. Ganz besonders vermissen sie den leibhaftigen Kontakt zu Gleichaltrigen. Viele Lehrer:innen seufzen: Uns fehlen die Kinder! Pädagogische Beziehungen sind fundamental, nicht nur für das Lernen.\n- ULRICH HERRMANN UND MARION OSWALD",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288279"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288280]\nKleine Rückblende: Der Leipziger Lehrerverein betrieb schon vor dem Ersten Weltkrieg ein pädagogisch-psychologisches Laboratorium für empirisch-pädagogische Forschung. Ein Untersuchungsgegenstand war das Schwanken der Leistungsfeststellungen in einer Schulklasse bei Lehrerwechsel. Woran konnte das liegen? Angesichts des relativ standardisiert »erteilten« Unterrichts lag der Schluss nahe, dass die Schülerleistung erheblich von der Lehrer-Schüler-Beziehung abhing: je besser die Beziehung, desto besser auch die Leistung.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Kleine Rückblende: Der Leipziger Lehrerverein betrieb schon vor dem Ersten Weltkrieg ein pädagogisch-psychologisches Laboratorium für empirisch-pädagogische Forschung. Ein Untersuchungsgegenstand war das Schwanken der Leistungsfeststellungen in einer Schulklasse bei Lehrerwechsel. Woran konnte das liegen? Angesichts des relativ standardisiert »erteilten« Unterrichts lag der Schluss nahe, dass die Schülerleistung erheblich von der Lehrer-Schüler-Beziehung abhing: je besser die Beziehung, desto besser auch die Leistung.",
+      "id": [
+        "288280"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288281]\n[%][%BEZIEHUNG DURCH RESONANZ]\nLernmotivation und -leistung sind immer auch mitbedingt durch förderliche personale Beziehungen. Gut 100 Jahre später stellt Joachim Bauer fest, dass durch Resonanz zwischen Lehrpersonen und Schüler:innen eine Beziehung entsteht, die sich unmittelbar positiv auf Lern- und Leistungsverhalten auswirkt, wenn die Lehrperson aufgrund von Einfühlung und verstehender Zuwendung »drei zentrale Aufträge« konstruktiv aufnimmt, die die Schüler:innen unbewusst an sie richten: »1. Lass mich spüren, dass ich da bin, dass ich für Dich existiere! 2. Zeige mir durch Deine Resonanzen, was meine starken und schwachen Seiten sind! 3. Lass mich spüren, ob Du – bei aller Kritik – an mich und meine Entwicklungspotentiale glaubst!« (Bauer 2019, S. 39). \n\nBeziehungen zwischen Lehrpersonen und Lernenden sind Resonanzen in einer Wechselwirkung (Bauer 2020). Sie eröffnen __Möglichkeitsräume__, auf die junge Menschen für ihre Entwicklung angewiesen sind, die sie aber nur vertrauensvoll und im Bewusstsein von erfolgreicher Selbstwirksamkeit betreten können, wenn sie sicher sein können, dass die zu erwartenden Risiken durch wirksame Hilfestellungen gemindert und die Erfolgschancen vergrößert werden. Die Wirklichkeit ist oft anders: Annedore Prengels Studien zur Qualität pädagogischer Beziehungen zeigen vor dem Hintergrund von Kinderrechten, wie abwertend, ausgrenzend, demütigend Lehrer:innen viel zu häufig mit ihren Schüler:innen umgehen, oft unbewusst (Prengel 2019). Die Hattie-Studie belegt, dass kaum etwas so wirksam für Lernen ist wie eine positive Lehrer-Schüler-Beziehung. Dazu gehört, dass »Lehrpersonen [...] dem Schüler die Erfahrung ermöglichen, im Klassenzimmer anerkannt zu sein«, dass ihm zugehört wird, dass er Empathie und Fürsorge erfährt (Hattie ⁵ 2020, S. 141). Hattie/Zierer weisen in diesem Zusammenhang darauf hin, dass dabei authentisches Verhalten, die »Glaubwürdigkeit« der Lehrperson, zu den Faktoren mit der höchsten »Effektstärke von 0,90« gehört (Hattie/Zierer ⁵ 2021, S. 89). \n\nVertrauensvoll gestaltete tragfähige Beziehungen wirken sich positiv auch auf das Wohlbefinden und die Motivation von Lehrenden und damit auf das gesamte Schulleben aus. Die hohe Bedeutung, die Beziehungsfähigkeit im Berufsalltag hat, ergibt sich aus einer Analyse von __Burn-out__-Symptomen von Lehrpersonen, die ärztlichen Rat suchten oder an dem von Bauer mitbegründeten »Lehrercoaching nach dem Freiburger Modell« teilnahmen. Es zeigte sich, dass ein wesentlicher Faktor für die Aufrechterhaltung der Berufsfähigkeit und -zufriedenheit Beziehungs- und Resonanzfähigkeit ist (Bauer 2020). Eine Befragung zur Wirkung eines entsprechenden Coaching-Programms (Pfeifer u. a. 2020) zeigt, dass Erfolge nicht zuletzt auch auf einer intensivierten Beziehungs- und Rückmeldekultur der Lehrpersonen __untereinander__ beruhen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Lernmotivation und -leistung sind immer auch mitbedingt durch förderliche personale Beziehungen. Gut 100 Jahre später stellt Joachim Bauer fest, dass durch Resonanz zwischen Lehrpersonen und Schüler:innen eine Beziehung entsteht, die sich unmittelbar positiv auf Lern- und Leistungsverhalten auswirkt, wenn die Lehrperson aufgrund von Einfühlung und verstehender Zuwendung »drei zentrale Aufträge« konstruktiv aufnimmt, die die Schüler:innen unbewusst an sie richten: »1. Lass mich spüren, dass ich da bin, dass ich für Dich existiere! 2. Zeige mir durch Deine Resonanzen, was meine starken und schwachen Seiten sind! 3. Lass mich spüren, ob Du – bei aller Kritik – an mich und meine Entwicklungspotentiale glaubst!« (Bauer 2019, S. 39). \n\nBeziehungen zwischen Lehrpersonen und Lernenden sind Resonanzen in einer Wechselwirkung (Bauer 2020). Sie eröffnen __Möglichkeitsräume__, auf die junge Menschen für ihre Entwicklung angewiesen sind, die sie aber nur vertrauensvoll und im Bewusstsein von erfolgreicher Selbstwirksamkeit betreten können, wenn sie sicher sein können, dass die zu erwartenden Risiken durch wirksame Hilfestellungen gemindert und die Erfolgschancen vergrößert werden. Die Wirklichkeit ist oft anders: Annedore Prengels Studien zur Qualität pädagogischer Beziehungen zeigen vor dem Hintergrund von Kinderrechten, wie abwertend, ausgrenzend, demütigend Lehrer:innen viel zu häufig mit ihren Schüler:innen umgehen, oft unbewusst (Prengel 2019). Die Hattie-Studie belegt, dass kaum etwas so wirksam für Lernen ist wie eine positive Lehrer-Schüler-Beziehung. Dazu gehört, dass »Lehrpersonen ${{0}} dem Schüler die Erfahrung ermöglichen, im Klassenzimmer ane[...] zu sein«, dass ihm zugehört wird, dass er Empathie und Fürsorge erfährt (Hattie ⁵ 2020, S. 141). Hattie/Zierer weisen in diesem Zusammenhang darauf hin, dass dabei authentisches Verhalten, die »Glaubwürdigkeit« der Lehrperson, zu den Faktoren mit der höchsten »Effektstärke von 0,90« gehört (Hattie/Zierer ⁵ 2021, S. 89). \n\nVertrauensvoll gestaltete tragfähige Beziehungen wirken sich positiv auch auf das Wohlbefinden und die Motivation von Lehrenden und damit auf das gesamte Schulleben aus. Die hohe Bedeutung, die Beziehungsfähigkeit im Berufsalltag hat, ergibt sich aus einer Analyse von __Burn-out__-Symptomen von Lehrpersonen, die ärztlichen Rat suchten oder an dem von Bauer mitbegründeten »Lehrercoaching nach dem Freiburger Modell« teilnahmen. Es zeigte sich, dass ein wesentlicher Faktor für die Aufrechterhaltung der Berufsfähigkeit und -zufriedenheit Beziehungs- und Resonanzfähigkeit ist (Bauer 2020). Eine Befragung zur Wirkung eines entsprechenden Coaching-Programms (Pfeifer u. a. 2020) zeigt, dass Erfolge nicht zuletzt auch auf einer intensivierten Beziehungs- und Rückmeldekultur der Lehrpersonen __untereinander__ beruhen.",
+      "id": [
+        "288281"
+      ],
+      "lead": "BEZIEHUNG DURCH RESONANZ"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288282]\n[%][%STANDARDS ZUR BEZIEHUNGSARBEIT]\nErfolgreiche Schulen schaffen Räume für Beziehungsarbeit: »Wie man sich fühlt, so lernt man. – Wissenschaftliche Erkenntnisse legen nahe, dass eine positive Beziehung zwischen Lehrenden und Lernenden Bildungsprozesse intensiviert und Lernergebnisse steigert. [...] Daher herrscht an guten Schulen ein beziehungsintensives Lernklima, das von möglichst allen mitgetragen wird, und das sich auch auf den Umgang der Lehrenden miteinander bezieht« (Planspiel »Gute Schule«, Innovationskarte 31). Der reformpädagogische Schulverbund »Blick über den Zaun« hat »Standards für pädagogisches Handeln« formuliert (2019), die in ihrem Kern auch die Beziehungsarbeit betreffen: Schule »muss ein Ort sein, an dem Kinder und Jugendliche die Erfahrung machen, dass es auf sie ankommt, dass sie gebraucht werden und ›zählen‹.« Sie muss sich die Frage stellen, was sie dafür tut, um »ein Klima der Achtung, der gegenseitigen Hilfe und Freundlichkeit zu schaffen«, und zwar zwischen allen Mitgliedern der Schulgemeinschaft (S. 6). Dazu zählt aber auch der besondere Blick auf die Schüler:innen: ein offener, achtsamer, empathischer Umgang auf Augenhöhe, der sie einlädt, innerhalb ihrer Lerngruppe und gegenüber ihren Lehrer:innen Gedanken und Er-lebnisse vorzubringen und gehört zu werden. Sie sollten für ihre Anliegen feste Ansprechpartner:innen haben, die sich Zeit nehmen. Bedeutsam ist der offene und konstruktive Umgang mit Konflikten sowie eine Kultur, in der Fehler als Chance begriffen werden, um daraus individuell erreichbare Ziele zu formulieren.\n\nLehrpersonen – sowohl an staatlichen als auch an Schulen in freier Trägerschaft –, die diese oder ähnliche Standards zur gezielten Pflege einer pädagogischen Beziehungskultur leben, bezeichnen sich als erfolgreich und berufszufrieden (Herrmann 2002, S. 257).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Erfolgreiche Schulen schaffen Räume für Beziehungsarbeit: »Wie man sich fühlt, so lernt man. – Wissenschaftliche Erkenntnisse legen nahe, dass eine positive Beziehung zwischen Lehrenden und Lernenden Bildungsprozesse intensiviert und Lernergebnisse steigert. ${{0}} Daher herrscht an guten Schulen ein beziehungsintensives Lernklim[...] von möglichst allen mitgetragen wird, und das sich auch auf den Umgang der Lehrenden miteinander bezieht« (Planspiel »Gute Schule«, Innovationskarte 31). Der reformpädagogische Schulverbund »Blick über den Zaun« hat »Standards für pädagogisches Handeln« formuliert (2019), die in ihrem Kern auch die Beziehungsarbeit betreffen: Schule »muss ein Ort sein, an dem Kinder und Jugendliche die Erfahrung machen, dass es auf sie ankommt, dass sie gebraucht werden und ›zählen‹.« Sie muss sich die Frage stellen, was sie dafür tut, um »ein Klima der Achtung, der gegenseitigen Hilfe und Freundlichkeit zu schaffen«, und zwar zwischen allen Mitgliedern der Schulgemeinschaft (S. 6). Dazu zählt aber auch der besondere Blick auf die Schüler:innen: ein offener, achtsamer, empathischer Umgang auf Augenhöhe, der sie einlädt, innerhalb ihrer Lerngruppe und gegenüber ihren Lehrer:innen Gedanken und Er-lebnisse vorzubringen und gehört zu werden. Sie sollten für ihre Anliegen feste Ansprechpartner:innen haben, die sich Zeit nehmen. Bedeutsam ist der offene und konstruktive Umgang mit Konflikten sowie eine Kultur, in der Fehler als Chance begriffen werden, um daraus individuell erreichbare Ziele zu formulieren.\n\nLehrpersonen – sowohl an staatlichen als auch an Schulen in freier Trägerschaft –, die diese oder ähnliche Standards zur gezielten Pflege einer pädagogischen Beziehungskultur leben, bezeichnen sich als erfolgreich und berufszufrieden (Herrmann 2002, S. 257).",
+      "id": [
+        "288282"
+      ],
+      "lead": "STANDARDS ZUR BEZIEHUNGSARBEIT"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:288283]\nVertrauensvoll gestaltete tragfähige Beziehungen wirken sich positiv auf das Wohlbefinden und die Motivation von Lehrenden aus.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Vertrauensvoll gestaltete tragfähige Beziehungen wirken sich positiv auf das Wohlbefinden und die Motivation von Lehrenden aus.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288283"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288284]\n[%][%PÄDAGOGISCHE BEZIEHUNGEN – EIN UNERLEDIGTES THEMA?]\nEine Voraussetzung für erfolgreiches Lernen ist die soziale Eingebundenheit: das Erleben von Zuwendung, Anerkennung und Resonanz, von Vertrauen und Bindung, von Unterstützung und Ermutigung. Das ist keine neue pädagogische Einsicht (Hattie/Zierer 2021, S. 83; Liegle 2017) und doch ein unerledigtes Thema. Hartmut Rosa zeigt, dass die Schule ein Ort ist, an dem jede Unterrichtsstunde als erfolgreicher Resonanzraum oder auch als durch Misserfolg gekennzeichnete Entfremdungszone entstehen kann, wenn förderliche Beziehungen zustande kommen oder verfehlt werden (Rosa 2019, S. 402 ff.). Rosa formuliert daraus schlussfolgernd eine scharfe Kritik unseres bestehenden Schulsystems: In der Art, wie Resonanzräume ermöglicht oder diese verhindert werden, werden die sozial-kulturellen herkunftsbedingten schulischen Begünstigungen und Benachteiligungen reproduziert und zementiert. Der Aufbau und die Pflege pädagogischer Beziehungen ist kein __Nice-to-have__, sondern betrifft den Kern des pädagogischen Berufsethos und ist ein unerledigtes bildungs- und schulpolitisches Thema ersten Ranges (ebd., S. 419).\n\nWie groß der Bedarf ist, diese Einsicht in den unmittelbaren Zusammenhang von professioneller Beziehungsgestaltung und Lernerfolg auch im Schulalltag umzusetzen und dazuzulernen, zeigen zahlreiche Studien (Herrmann 2019) sowie die entsprechenden Veranstaltungen der Deutschen Schulakademie: Das Forum »Beziehungen gestalten – erfolgreich lernen« fand im Februar 2019 in Berlin statt, im März 2021 folgte der digitale Impuls »Beziehungen wirksam gestalten« im Rahmen des »Deutschen Schulpreises 20/21 Spezial«. Mit diesem Schulpreis »Spezial« wurden Schulen ausgezeichnet, die zukunftsweisende Konzepte für Beziehungskulturen unter Pandemiebedingungen entwickelt hatten. Alle Schwerpunkte – digitales Lernen, Teamarbeit im Kollegium, Vernetzungen über die Schule hinaus, die Förderung selbstorganisierten oder individuellen Lernens – setzen eine intensive Beziehungsarbeit innerhalb und außerhalb der Schule voraus (siehe Markus in diesem Heft).\n\nLaut »Kinder- und Jugend(hilfe) Monitor 2021« (Böllert 2021) nehmen Kinder und Jugendliche das Leben mit Virusinfektionen wie Corona »als neue Normalität« wahr und akzeptieren weitgehend die angeordneten Schutzmaßnahmen. Sie »sehen es als ihre soziale Verantwortung an, die Krise ernst zu nehmen und sich um ihre Mitmenschen zu sorgen«. Besorgniserregend ist allerdings, dass in der Gruppe der Elf- bis 17-Jährigen »jedes dritte Kind coronabedingt unter psychischen Auffälligkeiten« leidet (ebd., S. 2) und in welchem Maße vor allem die pandemiebedingten Schulschließungen negative Auswirkungen auf Bildungsprozesse haben können (Zierer 2022). Nicht Lernen, sondern soziale Kontakte und Freundschaften müssen im Vordergrund stehen (Zinnecker 2003), nicht zuletzt deswegen, weil die Zahl der Geschwister drastisch gesunken ist und in Zeiten von Pubertät die entwicklungsbiografisch unvermeidlichen sozialen Um- und Neuorientierungen durch gelingende Freundschaften prägend sind (Fend 2000, bes. S. 269 ff.). Als den Kindern und Jugendlichen die Schule als wichtiger psychosozialer Lebensraum wegbrach, dachte außer den Kinder- und Jugendärzten zunächst niemand über die Folgen nach. Und dann nur an das Nebensächlichste überhaupt, was ja alle betraf: die unerledigt gebliebenen Lerninhalte. Und die Reaktion der Politik? Nachholen durch das Bundesprogramm »Aufholen« (siehe PÄDAGOGIK, Heft 4/22), so als wüssten professionelle Pädagog:innen nicht, dass lernwillige und über tragfähige Beziehungen unterstützte Kinder mühelos viel »Stoff« aufholen können, sollte dieser denn wirklich unverzichtbar sein. Viel entscheidender ist jetzt Beziehungsarbeit, damit verstörte Kinder und Jugendliche gestärkt werden, Lernen individuell und gemeinsam wieder gelingen kann: »Wir brauchen [...] ein Klima des Vertrauens und Zutrauens, [...] der Geborgenheit und Freude, [...] in dem die kognitive Leistung, so wichtig sie auch ist, nicht über allen anderen Dimensionen des Menschen steht. Wir brauchen ein Klima, in dem das soziale Miteinander wichtig ist« (Zierer 2022, S. 42).\n\nWie ist es um die Wirklichkeit in Schulen bestellt? Reinhold Miller resümiert aus seiner langjährigen Erfahrung als Schulexperte und Lehrerfortbildner, dass »erhebliche Defizite in den Bereichen der Selbst- und Beziehungskompetenz« bestehen (Miller 2015, S. 8). Liest man die in unserem Themenschwerpunkt versammelten Praxisbeiträge, darf man weniger pessimistisch sein. Sie alle zeigen, dass sich in den zurückliegenden Jahren Schulen aufgemacht haben, ihre pädagogischen Beziehungen zu intensivieren, weil sie wissen, dass Zeit für bewusstes gegenseitiges Wahrnehmen und Zuhören, Anerkennen und Ermutigen __die__ entscheidende Ressource für Motivation und Anstrengungsbereitschaft ist und damit auch grundlegend für gelingende Lern- und Bildungsprozesse.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Eine Voraussetzung für erfolgreiches Lernen ist die soziale Eingebundenheit: das Erleben von Zuwendung, Anerkennung und Resonanz, von Vertrauen und Bindung, von Unterstützung und Ermutigung. Das ist keine neue pädagogische Einsicht (Hattie/Zierer 2021, S. 83; Liegle 2017) und doch ein unerledigtes Thema. Hartmut Rosa zeigt, dass die Schule ein Ort ist, an dem jede Unterrichtsstunde als erfolgreicher Resonanzraum oder auch als durch Misserfolg gekennzeichnete Entfremdungszone entstehen kann, wenn förderliche Beziehungen zustande kommen oder verfehlt werden (Rosa 2019, S. 402 ff.). Rosa formuliert daraus schlussfolgernd eine scharfe Kritik unseres bestehenden Schulsystems: In der Art, wie Resonanzräume ermöglicht oder diese verhindert werden, werden die sozial-kulturellen herkunftsbedingten schulischen Begünstigungen und Benachteiligungen reproduziert und zementiert. Der Aufbau und die Pflege pädagogischer Beziehungen ist kein __Nice-to-have__, sondern betrifft den Kern des pädagogischen Berufsethos und ist ein unerledigtes bildungs- und schulpolitisches Thema ersten Ranges (ebd., S. 419).\n\nWie groß der Bedarf ist, diese Einsicht in den unmittelbaren Zusammenhang von professioneller Beziehungsgestaltung und Lernerfolg auch im Schulalltag umzusetzen und dazuzulernen, zeigen zahlreiche Studien (Herrmann 2019) sowie die entsprechenden Veranstaltungen der Deutschen Schulakademie: Das Forum »Beziehungen gestalten – erfolgreich lernen« fand im Februar 2019 in Berlin statt, im März 2021 folgte der digitale Impuls »Beziehungen wirksam gestalten« im Rahmen des »Deutschen Schulpreises 20/21 Spezial«. Mit diesem Schulpreis »Spezial« wurden Schulen ausgezeichnet, die zukunftsweisende Konzepte für Beziehungskulturen unter Pandemiebedingungen entwickelt hatten. Alle Schwerpunkte – digitales Lernen, Teamarbeit im Kollegium, Vernetzungen über die Schule hinaus, die Förderung selbstorganisierten oder individuellen Lernens – setzen eine intensive Beziehungsarbeit innerhalb und außerhalb der Schule voraus (siehe Markus in diesem Heft).\n\nLaut »Kinder- und Jugend(hilfe) Monitor 2021« (Böllert 2021) nehmen Kinder und Jugendliche das Leben mit Virusinfektionen wie Corona »als neue Normalität« wahr und akzeptieren weitgehend die angeordneten Schutzmaßnahmen. Sie »sehen es als ihre soziale Verantwortung an, die Krise ernst zu nehmen und sich um ihre Mitmenschen zu sorgen«. Besorgniserregend ist allerdings, dass in der Gruppe der Elf- bis 17-Jährigen »jedes dritte Kind coronabedingt unter psychischen Auffälligkeiten« leidet (ebd., S. 2) und in welchem Maße vor allem die pandemiebedingten Schulschließungen negative Auswirkungen auf Bildungsprozesse haben können (Zierer 2022). Nicht Lernen, sondern soziale Kontakte und Freundschaften müssen im Vordergrund stehen (Zinnecker 2003), nicht zuletzt deswegen, weil die Zahl der Geschwister drastisch gesunken ist und in Zeiten von Pubertät die entwicklungsbiografisch unvermeidlichen sozialen Um- und Neuorientierungen durch gelingende Freundschaften prägend sind (Fend 2000, bes. S. 269 ff.). Als den Kindern und Jugendlichen die Schule als wichtiger psychosozialer Lebensraum wegbrach, dachte außer den Kinder- und Jugendärzten zunächst niemand über die Folgen nach. Und dann nur an das Nebensächlichste überhaupt, was ja alle betraf: die unerledigt gebliebenen Lerninhalte. Und die Reaktion der Politik? Nachholen durch das Bundesprogramm »Aufholen« (siehe PÄDAGOGIK, Heft 4/22), so als wüssten professionelle Pädagog:innen nicht, dass lernwillige und über tragfähige Beziehungen unterstützte Kinder mühelos viel »Stoff« aufholen können, sollte dieser denn wirklich unverzichtbar sein. Viel entscheidender ist jetzt Beziehungsarbeit, damit verstörte Kinder und Jugendliche gestärkt werden, Lernen individuell und gemeinsam wieder gelingen kann: »Wir brauchen ${{0}} ein Klima des Vertrauens und Zutrauens, ${{1}} der Geborgenheit und Freude, ${{2}} in[...]ie kognitive Leistung, so wichtig sie auc[...] nicht über allen anderen Dime[...]n des Menschen steht. Wir brauchen ein Klima, in dem das soziale Miteinander wichtig ist« (Zierer 2022, S. 42).\n\nWie ist es um die Wirklichkeit in Schulen bestellt? Reinhold Miller resümiert aus seiner langjährigen Erfahrung als Schulexperte und Lehrerfortbildner, dass »erhebliche Defizite in den Bereichen der Selbst- und Beziehungskompetenz« bestehen (Miller 2015, S. 8). Liest man die in unserem Themenschwerpunkt versammelten Praxisbeiträge, darf man weniger pessimistisch sein. Sie alle zeigen, dass sich in den zurückliegenden Jahren Schulen aufgemacht haben, ihre pädagogischen Beziehungen zu intensivieren, weil sie wissen, dass Zeit für bewusstes gegenseitiges Wahrnehmen und Zuhören, Anerkennen und Ermutigen __die__ entscheidende Ressource für Motivation und Anstrengungsbereitschaft ist und damit auch grundlegend für gelingende Lern- und Bildungsprozesse.",
+      "id": [
+        "288284"
+      ],
+      "lead": "PÄDAGOGISCHE BEZIEHUNGEN – EIN UNERLEDIGTES THEMA?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:288285]\n**DR. ULRICH HERRMANN** war Professor für Allgemeine und Historische Pädagogik sowie für Schulpädagogik an den Universitäten Tübingen und Ulm; Autor bei »Lehren & Lernen«.\n↗ ulrich.herrmann@t-online.de",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**DR. ULRICH HERRMANN** war Professor für Allgemeine und Historische Pädagogik sowie für Schulpädagogik an den Universitäten Tübingen und Ulm; Autor bei »Lehren & Lernen«.\n↗ ulrich.herrmann@t-online.de",
+      "id": [
+        "288285"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:288286]\n**DR. MARION OSWALD** ist Leiterin des Gymnasiums der Christlichen Schule Dresden und Mitglied der Redaktion von PÄDAGOGIK.\n↗ marion.oswald@gmx.de",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**DR. MARION OSWALD** ist Leiterin des Gymnasiums der Christlichen Schule Dresden und Mitglied der Redaktion von PÄDAGOGIK.\n↗ marion.oswald@gmx.de",
+      "id": [
+        "288286"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:288287]\nLehrpersonen, die Standards zur gezielten Pflege einer pädagogischen Beziehungskultur leben, bezeichnen sich als erfolgreich und berufszufrieden.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Lehrpersonen, die Standards zur gezielten Pflege einer pädagogischen Beziehungskultur leben, bezeichnen sich als erfolgreich und berufszufrieden.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288287"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:288288]\n[%][%Literatur]\n• Bauer, Joachim (2019): Einfühlung, Zuwendung und pädagogische Führung: Die Bedeutung der Beziehung für Lehren und Lernen. Eine neurobiologisch fundierte Perspektive. In: Herrmann 2019, S. 35–41.\n• Bauer, Joachim (2020): Lehrergesundheit: Die Potenziale beziehungsorientierter Pädagogik – Öffnung von Entwicklungs- und Möglichkeitsräumen durch Resonanz. In: Lehren & Lernen 46, H. 8/9, S. 48–50. \n• Blick über den Zaun (2019): Leitbild des Schulverbunds; https://www.blickueberdenzaun.de\n• Böllert, Karin (2021): Deutscher Kinder- und Jugend(hilfe)Monitor 2021; https://www.agj.de/fileadmin/files/pressemeldungen/Jugend_hilfe_Monitor_07_05_2021.pdf \n• Deutsche Schulakademie (2019): www.deutsche-schulakademie.de/programm/foren/forum-beziehungen-gestalten-erfolgreich-lernen \n• Deutsches Schulportal (2021): https://deutsches-schulportal.de/schulkultur/digitaler-impuls-beziehungen-wirksam-gestalten/\n• Fend, Helmut (2000): Entwicklungspsychologie des Jugendalters. Opladen: Leske + Budrich. \n• Hattie, John (⁵ 2020): Lernen sichtbar machen. Überarb. deutsch-sprach. Ausg. von »Visible Learning«. Besorgt von Wolfgang Beywl und Klaus Zierer. Baltmannsweiler: Schneider Verlag Hohengehren.\n• Hattie, John/Zierer, Klaus (⁵ 2021): Kenne deinen Einfluss! »Visible Learning« für die Unterrichtspraxis. Baltmannsweiler: Schneider Verlag Hohengehren.\n• Herrmann, Ulrich (2002): Wie lernen Lehrer ihren Beruf? Empirische Befunde und praktische Vorschläge. Weinheim/Basel: Beltz.\n• Herrmann, Ulrich (Hrsg.) (2019): Pädagogische Beziehungen. Grundlagen – Praxisformen – Wirkungen. Weinheim/Basel: Beltz.\n• Liegle, Ludwig (2017): Beziehungspädagogik. Erziehung, Lehren und Lernen als Beziehungspraxis. Stuttgart: Kohlhammer.\n• Miller, Reinhold (2015): Beziehungstraining. 50 Übungseinheiten für die Schulpraxis. Weinheim/Basel: Beltz.\n• Pfeifer, Ruth u. a. (2020): Erfolgreiches Coaching für Lehrer/innen zur Förderung der Beziehungskompetenz – das »Freiburger Modell« unter der Lupe. In: Lehren & Lernen 46, H. 8/9, S. 39–47.\n• Prengel, Annedore (2019): Pädagogische Beziehungen im Lichte der Kinderrechte. In: Herrmann 2019, S. 73–81.\n• Rosa, Hartmut (2019): Resonanz. Eine Soziologie der Weltbeziehung. Frankfurt a. M.: Suhrkamp.\n• Schratz, Michael u. a. (Hrsg.) (2019): Planspiel »Gute Schule«. Qualität dynamisch erfahren – Schulentwicklung gemeinsam anstoßen. Stuttgart: Klett/Kallmeyer.\n• Zierer, Klaus (2022): Die pädagogische Klimakrise bewältigen. In: PÄDAGOGIK 74, H. 3, S. 40–43.\n• Zinnecker, Jürgen u. a. (2003): null zoff & voll busy. Die erste Jugendgeneration des neuen Jahrhunderts. Opladen: Leske + Budrich.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Bauer, Joachim (2019): Einfühlung, Zuwendung und pädagogische Führung: Die Bedeutung der Beziehung für Lehren und Lernen. Eine neurobiologisch fundierte Perspektive. In: Herrmann 2019, S. 35–41.\n• Bauer, Joachim (2020): Lehrergesundheit: Die Potenziale beziehungsorientierter Pädagogik – Öffnung von Entwicklungs- und Möglichkeitsräumen durch Resonanz. In: Lehren & Lernen 46, H. 8/9, S. 48–50. \n• Blick über den Zaun (2019): Leitbild des Schulverbunds; https://www.blickueberdenzaun.de\n• Böllert, Karin (2021): Deutscher Kinder- und Jugend(hilfe)Monitor 2021; https://www.agj.de/fileadmin/files/pressemeldungen/Jugend_hilfe_Monitor_07_05_2021.pdf \n• Deutsche Schulakademie (2019): www.deutsche-schulakademie.de/programm/foren/forum-beziehungen-gestalten-erfolgreich-lernen \n• Deutsches Schulportal (2021): https://deutsches-schulportal.de/schulkultur/digitaler-impuls-beziehungen-wirksam-gestalten/\n• Fend, Helmut (2000): Entwicklungspsychologie des Jugendalters. Opladen: Leske + Budrich. \n• Hattie, John (⁵ 2020): Lernen sichtbar machen. Überarb. deutsch-sprach. Ausg. von »Visible Learning«. Besorgt von Wolfgang Beywl und Klaus Zierer. Baltmannsweiler: Schneider Verlag Hohengehren.\n• Hattie, John/Zierer, Klaus (⁵ 2021): Kenne deinen Einfluss! »Visible Learning« für die Unterrichtspraxis. Baltmannsweiler: Schneider Verlag Hohengehren.\n• Herrmann, Ulrich (2002): Wie lernen Lehrer ihren Beruf? Empirische Befunde und praktische Vorschläge. Weinheim/Basel: Beltz.\n• Herrmann, Ulrich (Hrsg.) (2019): Pädagogische Beziehungen. Grundlagen – Praxisformen – Wirkungen. Weinheim/Basel: Beltz.\n• Liegle, Ludwig (2017): Beziehungspädagogik. Erziehung, Lehren und Lernen als Beziehungspraxis. Stuttgart: Kohlhammer.\n• Miller, Reinhold (2015): Beziehungstraining. 50 Übungseinheiten für die Schulpraxis. Weinheim/Basel: Beltz.\n• Pfeifer, Ruth u. a. (2020): Erfolgreiches Coaching für Lehrer/innen zur Förderung der Beziehungskompetenz – das »Freiburger Modell« unter der Lupe. In: Lehren & Lernen 46, H. 8/9, S. 39–47.\n• Prengel, Annedore (2019): Pädagogische Beziehungen im Lichte der Kinderrechte. In: Herrmann 2019, S. 73–81.\n• Rosa, Hartmut (2019): Resonanz. Eine Soziologie der Weltbeziehung. Frankfurt a. M.: Suhrkamp.\n• Schratz, Michael u. a. (Hrsg.) (2019): Planspiel »Gute Schule«. Qualität dynamisch erfahren – Schulentwicklung gemeinsam anstoßen. Stuttgart: Klett/Kallmeyer.\n• Zierer, Klaus (2022): Die pädagogische Klimakrise bewältigen. In: PÄDAGOGIK 74, H. 3, S. 40–43.\n• Zinnecker, Jürgen u. a. (2003): null zoff & voll busy. Die erste Jugendgeneration des neuen Jahrhunderts. Opladen: Leske + Budrich.",
+      "id": [
+        "288288"
+      ],
+      "lead": "Literatur"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:288289]\n[▼ch-3]\n[##Die Beziehungskompetenz der Lehrkräfte stärken]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "288289"
+      ],
+      "anchor": "ch-3",
+      "title": "Die Beziehungskompetenz der Lehrkräfte stärken"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark--]\n[@id:288290]\nWir haben 2015 in unserer gemeinsamen Arbeit an der Brecht-Schule Hamburg eine Fortbildung zur Stärkung der Beziehungskompetenz von Lehrer:innen konzipiert, in verschiedenen Formaten durchgeführt und kontinuierlich weiterentwickelt. Im folgenden Beitrag hierzu einige Thesen und praktische Anregungen.\n- SUSANNE HÜTTEBRÄUCKER UND CHRISTOPH SCHNEIDER",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Wir haben 2015 in unserer gemeinsamen Arbeit an der Brecht-Schule Hamburg eine Fortbildung zur Stärkung der Beziehungskompetenz von Lehrer:innen konzipiert, in verschiedenen Formaten durchgeführt und kontinuierlich weiterentwickelt. Im folgenden Beitrag hierzu einige Thesen und praktische Anregungen.\n- SUSANNE HÜTTEBRÄUCKER UND CHRISTOPH SCHNEIDER",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288290"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288291]\nUnser Beitrag beginnt mit drei bewusst zugespitzten Thesen, die auf grundlegende Ausgangspunkte und Hintergründe für unsere Fortbildung verweisen. Im zweiten Teil geben wir exemplarische Einblicke in unsere Fortbildungspraxis. Fünf ausgewählte Übungen sollen interessierte Leser:innen anregen, diese für sich selbst oder gemeinsam mit Kolleg:innen auszuprobieren.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Unser Beitrag beginnt mit drei bewusst zugespitzten Thesen, die auf grundlegende Ausgangspunkte und Hintergründe für unsere Fortbildung verweisen. Im zweiten Teil geben wir exemplarische Einblicke in unsere Fortbildungspraxis. Fünf ausgewählte Übungen sollen interessierte Leser:innen anregen, diese für sich selbst oder gemeinsam mit Kolleg:innen auszuprobieren.",
+      "id": [
+        "288291"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288292]\n[%][%THESE 1: BEZIEHUNGSQUALITÄT IST LEBENSQUALITÄT]\nNichts kostet so viel Kraft – privat und beruflich – wie misslingende Beziehungen. Umgekehrt setzt es Energie und Lebensfreude frei, wenn wir uns in gelingenden sozialen Beziehungen bewegen. »The good life is built with good relationships« – auf diese Formel hat der amerikanische Psychiater Robert Waldinger die Erkenntnisse aus einer von ihm geleiteten Langzeitstudie der Harvard-Universität zum psychischen und physischen Wohlergehen von über 700 Menschen mit unterschiedlichen sozialen Hintergründen gebracht (Waldinger 2016).\n\nEs lohnt sich also, wenn wir aktiv an der Qualität unserer Beziehungen arbeiten. Aber es erfordert auch Arbeit, herausfordernde Arbeit an und mit der eigenen Person. Denn die Erfolgschancen sind gering, wenn wir uns darüber aufregen, wie unmöglich sich wieder einmal unser Gegenüber, z.B. ein Schüler oder eine Schülerin, verhalten hat. Beziehungskompetent handeln heißt dagegen, selbst Verantwortung zu übernehmen. In Beziehungen, in denen ohnehin alles mit allem zusammenhängt, können von jedem Teil des Systems Anstöße zur Veränderung der Interaktionsmuster ausgehen. Also ist es vielversprechend, wenn wir bei uns selbst anfangen. Unsere Fortbildung zielt deshalb auf die Beziehungskompetenz der teilnehmenden Kolleginnen und Kollegen. Wer über andere (vermeintlich) Schuldige schimpft, fühlt sich hilflos und passiv. Wer sich aktiv auf den Weg macht, an und mit der eigenen Person zu arbeiten, gewinnt Gestaltungsspielräume (zurück).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Nichts kostet so viel Kraft – privat und beruflich – wie misslingende Beziehungen. Umgekehrt setzt es Energie und Lebensfreude frei, wenn wir uns in gelingenden sozialen Beziehungen bewegen. »The good life is built with good relationships« – auf diese Formel hat der amerikanische Psychiater Robert Waldinger die Erkenntnisse aus einer von ihm geleiteten Langzeitstudie der Harvard-Universität zum psychischen und physischen Wohlergehen von über 700 Menschen mit unterschiedlichen sozialen Hintergründen gebracht (Waldinger 2016).\n\nEs lohnt sich also, wenn wir aktiv an der Qualität unserer Beziehungen arbeiten. Aber es erfordert auch Arbeit, herausfordernde Arbeit an und mit der eigenen Person. Denn die Erfolgschancen sind gering, wenn wir uns darüber aufregen, wie unmöglich sich wieder einmal unser Gegenüber, z.B. ein Schüler oder eine Schülerin, verhalten hat. Beziehungskompetent handeln heißt dagegen, selbst Verantwortung zu übernehmen. In Beziehungen, in denen ohnehin alles mit allem zusammenhängt, können von jedem Teil des Systems Anstöße zur Veränderung der Interaktionsmuster ausgehen. Also ist es vielversprechend, wenn wir bei uns selbst anfangen. Unsere Fortbildung zielt deshalb auf die Beziehungskompetenz der teilnehmenden Kolleginnen und Kollegen. Wer über andere (vermeintlich) Schuldige schimpft, fühlt sich hilflos und passiv. Wer sich aktiv auf den Weg macht, an und mit der eigenen Person zu arbeiten, gewinnt Gestaltungsspielräume (zurück).",
+      "id": [
+        "288292"
+      ],
+      "lead": "THESE 1: BEZIEHUNGSQUALITÄT IST LEBENSQUALITÄT"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288293]\n[%][%THESE 2: GUTE SCHULEN BRAUCHEN GELINGEND GESTALTETE BEZIEHUNGEN]\nDer Freiburger Neurobiologe Joachim Bauer betont in seinen Veröffentlichungen die fundamentale pädagogische Bedeutung guter Beziehungen: »Zwischenmenschliche Erfahrungen sind für die biologische Entwicklung von Kindern und Jugendlichen von gleichrangiger Bedeutung wie gute Ernährung, die Möglichkeit zu körperlicher Bewegung und intellektuelle Anregungen. [...] Kern aller Pädagogik ist die pädagogische Beziehung. Ohne sie verfehlen Lerninhalte ihr Ziel« (Bauer 2017, S. 4 f.).\n\nBemerkenswert ist, dass es Bauer dabei keineswegs (primär) um Schule als Wohlfühlort geht, sondern (auch) schlicht um Bildung: »Gelingende Beziehungsgestaltung ist die zwingende Voraussetzung für den schulischen Bildungsprozess, sie ist der unabdingbare Transfusionskanal, über den Bildungsinhalte die Schüler erreichen können« (Bauer 2008, S. 17). Diese neurobiologisch fundierten Erkenntnisse korrespondieren mit Ergebnissen der Bildungsforschung. So kommt etwa die viel zitierte Hattie-Studie, in der unter dem Titel »Visible Learning« Lernprozesse und die Bedingungen für deren Gelingen im Fokus stehen, zu dem Schluss: »The power of positive teacher-student relationships is critical for learning to occur« (Hattie 2009, S. 128).\n\nAngesichts dieses Forschungsstands ist es dann überraschend bis desaströs, dass in Studium und Referendariat das Thema Lehrer-Schüler-Beziehungen – oder gar die Idee, dass man diese bewusst reflektiert und professionell gestalten kann – bis heute allenfalls eine Nebenrolle spielt (siehe Vogelsaenger in diesem Heft). Auch für die Fort- und Weiterbildung von Lehrkräften gilt deshalb, was Hattie schon 2009 mit Blick auf die Ausbildung von Lehrer:innen formuliert: »Teacher education might be more successful if it [...] demonstrated how teachers can build positive relationships with all students. [...] A major overhaul of teacher education is well overdue« (Hattie 2009, S. 126 f.).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Freiburger Neurobiologe Joachim Bauer betont in seinen Veröffentlichungen die fundamentale pädagogische Bedeutung guter Beziehungen: »Zwischenmenschliche Erfahrungen sind für die biologische Entwicklung von Kindern und Jugendlichen von gleichrangiger Bedeutung wie gute Ernährung, die Möglichkeit zu körperlicher Bewegung und intellektuelle Anregungen. ${{0}} Kern aller Pädagogik ist die pädagogische Beziehung. Ohne sie verfehlen Lerninhalte ihr Ziel« (Bau[...]7, S. 4 f.).\n\nBemerkenswert ist, dass es Bauer dabei keineswegs (primär) um Schule als Wohlfühlort geht, sondern (auch) schlicht um Bildung: »Gelingende Beziehungsgestaltung ist die zwingende Voraussetzung für den schulischen Bildungsprozess, sie ist der unabdingbare Transfusionskanal, über den Bildungsinhalte die Schüler erreichen können« (Bauer 2008, S. 17). Diese neurobiologisch fundierten Erkenntnisse korrespondieren mit Ergebnissen der Bildungsforschung. So kommt etwa die viel zitierte Hattie-Studie, in der unter dem Titel »Visible Learning« Lernprozesse und die Bedingungen für deren Gelingen im Fokus stehen, zu dem Schluss: »The power of positive teacher-student relationships is critical for learning to occur« (Hattie 2009, S. 128).\n\nAngesichts dieses Forschungsstands ist es dann überraschend bis desaströs, dass in Studium und Referendariat das Thema Lehrer-Schüler-Beziehungen – oder gar die Idee, dass man diese bewusst reflektiert und professionell gestalten kann – bis heute allenfalls eine Nebenrolle spielt (siehe Vogelsaenger in diesem Heft). Auch für die Fort- und Weiterbildung von Lehrkräften gilt deshalb, was Hattie schon 2009 mit Blick auf die Ausbildung von Lehrer:innen formuliert: »Teacher education might be more successful if it ${{1}} demonstrated how teachers can build positive relationships with all students. ${{2}} A major overh[...] teacher education is well overdue« (Hattie 2009, S. 126 f.).[...]",
+      "id": [
+        "288293"
+      ],
+      "lead": "THESE 2: GUTE SCHULEN BRAUCHEN GELINGEND GESTALTETE BEZIEHUNGEN"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:288294]\nWer sich aktiv auf den Weg macht, an und mit der eigenen Person zu arbeiten, gewinnt Gestaltungsspielräume (zurück).",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Wer sich aktiv auf den Weg macht, an und mit der eigenen Person zu arbeiten, gewinnt Gestaltungsspielräume (zurück).",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288294"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288295]\n[%][%THESE 3: BEZIEHUNGSKOMPETENZ IST LEHR- UND LERNBAR]\nAlle finden’s also wichtig, aber nirgends kann man’s lernen. Warum ist das so? Ein Grund könnte sein, dass die Beziehungskompetenz von (angehenden) Lehrer:innen vielfach als gegebene, statische Größe hingenommen wird. So werden im Referendariat oft mit dem Begriff »Lehrerpersönlichkeit« Rückmeldungen verbunden, die bestimmte Stärken und Schwächen von Lehrkräften – gerade auf der Ebene von Kommunikation, Interaktion und Beziehungsgeschehen – im unveränderlich Charakterlichen verorten. Die Botschaft: »So bist du halt (offenbar)«, ist gegenüber angehenden Lehrkräften aber ebenso problematisch wie gegenüber Schüler:innen. Stattdessen sollte es um Entwicklungsmöglichkeiten gehen.\n\nGewiss gibt es biografisch-persönliche Grenzen der eigenen Lernfähigkeit. Ebenso sicher existiert aber, jenseits sogenannter Charaktereigenschaften, ein weites Spielfeld, in dem persönliche, kommunikatisoziale Fähigkeiten trainiert und entwickelt werden können. Das ist für viele andere soziale Berufsgruppen, wie etwa Sozialarbeiter:innen oder Therapeut:innen, selbstverständlich und sollte auch für Lehrkräfte zu einer Selbstverständlichkeit werden.\n\nWie aber kann man die eigene Beziehungskompetenz – etwa im Rahmen einer Fortbildung – trainieren und entwickeln? Dies funktioniert nicht durch enge Passepartout-Ziel-vorstellungen, wie ein Lehrer oder eine Lehrerin idealtypisch Beziehungen zu gestalten habe. Der Ansatzpunkt unserer Fortbildung ist individuell. Jede:r Teilnehmende bringt bereits individuelle Ressourcen mit, jede:r Teilnehmende kann weitere Ressourcen in sich entdecken und entwickeln. Individuell heißt aber nicht beliebig. Um die eigene Praxis weiterentwickeln und gegebenenfalls die eigene Haltung verändern zu können, braucht es sinnvolle Anstöße und Angebote zur Reflexion, Beispiele und – auch herausfordernde – Positionen zur Auseinandersetzung sowie Raum und Zeit zum Üben. Mit unserer Fortbildung versuchen wir, auf diese Art und Weise »professionell angemessene Rahmenbedingungen für konstruktive Veränderungen bereitzustellen« (von Schlippe/ Schweitzer 2016, S. 202).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Alle finden’s also wichtig, aber nirgends kann man’s lernen. Warum ist das so? Ein Grund könnte sein, dass die Beziehungskompetenz von (angehenden) Lehrer:innen vielfach als gegebene, statische Größe hingenommen wird. So werden im Referendariat oft mit dem Begriff »Lehrerpersönlichkeit« Rückmeldungen verbunden, die bestimmte Stärken und Schwächen von Lehrkräften – gerade auf der Ebene von Kommunikation, Interaktion und Beziehungsgeschehen – im unveränderlich Charakterlichen verorten. Die Botschaft: »So bist du halt (offenbar)«, ist gegenüber angehenden Lehrkräften aber ebenso problematisch wie gegenüber Schüler:innen. Stattdessen sollte es um Entwicklungsmöglichkeiten gehen.\n\nGewiss gibt es biografisch-persönliche Grenzen der eigenen Lernfähigkeit. Ebenso sicher existiert aber, jenseits sogenannter Charaktereigenschaften, ein weites Spielfeld, in dem persönliche, kommunikatisoziale Fähigkeiten trainiert und entwickelt werden können. Das ist für viele andere soziale Berufsgruppen, wie etwa Sozialarbeiter:innen oder Therapeut:innen, selbstverständlich und sollte auch für Lehrkräfte zu einer Selbstverständlichkeit werden.\n\nWie aber kann man die eigene Beziehungskompetenz – etwa im Rahmen einer Fortbildung – trainieren und entwickeln? Dies funktioniert nicht durch enge Passepartout-Ziel-vorstellungen, wie ein Lehrer oder eine Lehrerin idealtypisch Beziehungen zu gestalten habe. Der Ansatzpunkt unserer Fortbildung ist individuell. Jede:r Teilnehmende bringt bereits individuelle Ressourcen mit, jede:r Teilnehmende kann weitere Ressourcen in sich entdecken und entwickeln. Individuell heißt aber nicht beliebig. Um die eigene Praxis weiterentwickeln und gegebenenfalls die eigene Haltung verändern zu können, braucht es sinnvolle Anstöße und Angebote zur Reflexion, Beispiele und – auch herausfordernde – Positionen zur Auseinandersetzung sowie Raum und Zeit zum Üben. Mit unserer Fortbildung versuchen wir, auf diese Art und Weise »professionell angemessene Rahmenbedingungen für konstruktive Veränderungen bereitzustellen« (von Schlippe/ Schweitzer 2016, S. 202).",
+      "id": [
+        "288295"
+      ],
+      "lead": "THESE 3: BEZIEHUNGSKOMPETENZ IST LEHR- UND LERNBAR"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288296]\n[%][%FÜNF ÜBUNGEN ALS EINLADUNG ZUM AUSPROBIEREN]\nEinige Übungen sind nur gemeinsam mit anderen Kolleg:innen, im Austausch und mit der Möglichkeit zum Wahrnehmungsabgleich sinnvoll. Die folgenden fünf Übungen können hingegen auch allein ausprobiert werden. Dabei formulieren wir – im Sinne der größeren Unmittelbarkeit mit kollegialem »Du« – immer zunächst so konkret wie möglich ein BasisÜbungsangebot, auf das weitere Anregungen folgen.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Einige Übungen sind nur gemeinsam mit anderen Kolleg:innen, im Austausch und mit der Möglichkeit zum Wahrnehmungsabgleich sinnvoll. Die folgenden fünf Übungen können hingegen auch allein ausprobiert werden. Dabei formulieren wir – im Sinne der größeren Unmittelbarkeit mit kollegialem »Du« – immer zunächst so konkret wie möglich ein BasisÜbungsangebot, auf das weitere Anregungen folgen.",
+      "id": [
+        "288296"
+      ],
+      "lead": "FÜNF ÜBUNGEN ALS EINLADUNG ZUM AUSPROBIEREN"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:288297]\n[%][%ÜBUNG 1:]\n[!Wie sprichst du eigentlich?]\nÜberlege, mit welchen Sätzen – in genau welchem Wortlaut – du eine Unterrichtsstunde eröffnest oder ein Beratungsgespräch mit einem Schüler beziehungsweise einer Schülerin und gegebenenfalls noch einem Elternteil üblicherweise beginnst. Notiere daneben jeweils zwei bis vier alternative Formulierungen und überprüfe dann so genau wie möglich: Was implizieren deine Fragen? Welche Angebote, die Wirklichkeit zu sehen, sind in ihnen versteckt?\n\nIn einer entsprechenden Übung für Berater:innen werden unter anderem die folgenden Gesprächseröffnungen verglichen: Weshalb sind Sie hier? Was ist Ihr Problem? Was kann ich heute für Sie tun? Welche Lösung möchten Sie heute erreichen? (vgl. von Schlippe/Schweitzer 2016, S. 250). Überlege, was hier jeweils impliziert wird und welche dieser Formulierungen du für ein Gespräch mit einer herausfordernden Schülerin beziehungsweise einem Schüler wählen würdest.\n\nWeitere Anregungen zu minimalen Formulierungsveränderungen mit potenziell »maximaler Wirkung« finden sich in den Veröffentlichungen von Manfred Prior, unter anderem das Reframing-Angebot für Gespräche mit Schüler:innen, deren Klagen, was sie alles »nicht« können, sich in eine gemeinsame Überlegung überführen lassen, warum er beziehungsweise sie etwas »noch nicht« kann und so weiter (Prior 2009, S. 54 ff.).",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Wie sprichst du eigentlich?",
+      "partialAnswer": "",
+      "body": "Überlege, mit welchen Sätzen – in genau welchem Wortlaut – du eine Unterrichtsstunde eröffnest oder ein Beratungsgespräch mit einem Schüler beziehungsweise einer Schülerin und gegebenenfalls noch einem Elternteil üblicherweise beginnst. Notiere daneben jeweils zwei bis vier alternative Formulierungen und überprüfe dann so genau wie möglich: Was implizieren deine Fragen? Welche Angebote, die Wirklichkeit zu sehen, sind in ihnen versteckt?\n\nIn einer entsprechenden Übung für Berater:innen werden unter anderem die folgenden Gesprächseröffnungen verglichen: Weshalb sind Sie hier? Was ist Ihr Problem? Was kann ich heute für Sie tun? Welche Lösung möchten Sie heute erreichen? (vgl. von Schlippe/Schweitzer 2016, S. 250). Überlege, was hier jeweils impliziert wird und welche dieser Formulierungen du für ein Gespräch mit einer herausfordernden Schülerin beziehungsweise einem Schüler wählen würdest.\n\nWeitere Anregungen zu minimalen Formulierungsveränderungen mit potenziell »maximaler Wirkung« finden sich in den Veröffentlichungen von Manfred Prior, unter anderem das Reframing-Angebot für Gespräche mit Schüler:innen, deren Klagen, was sie alles »nicht« können, sich in eine gemeinsame Überlegung überführen lassen, warum er beziehungsweise sie etwas »noch nicht« kann und so weiter (Prior 2009, S. 54 ff.).",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288297"
+      ],
+      "lead": "ÜBUNG 1:"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:288298]\nEs ist überraschend bis desaströs, dass in Studium und Referendariat das Thema Lehrer-Schüler-Beziehungen bis heute allenfalls eine Nebenrolle spielt.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Es ist überraschend bis desaströs, dass in Studium und Referendariat das Thema Lehrer-Schüler-Beziehungen bis heute allenfalls eine Nebenrolle spielt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288298"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:288299]\n[%][%ÜBUNG 2:]\n[!Welche Werte stehen an deiner Klassentür?]\nNotiere zunächst in einer Mindmap – z.B. mit dem Titel »Meine Werte« in einem zentralen Kreis, um den herum du diese Werte anordnest –, welche Werte du generell lebst und vertrittst (Ehrlichkeit? Gerechtigkeit? Harmonie? usw.). Sammle möglichst viele solcher für dich zutreffenden Werte, und unterstreiche, welche auch für dein berufliches Wirken handlungsleitend sind oder sein sollen. Dann wähle die drei wichtigsten aus, um sie auf ein leeres Blatt, das deine Klassenzimmertür darstellt, zu schreiben.\n\nWie gut passen deine drei Werte zueinander? Sind sie sehr nah beieinander oder ergänzen sie einander komplementär? Vergleiche dies mit den drei Werten einer fiktiven Kollegin, die Leistung, Respekt und Humor über ihre Klassentür geschrieben hat. Welche dieser Akzentsetzungen sind dir fremd, welche könntest du mitgehen?\n\nÜberlege so konkret wie möglich: An welchen Stellen sind die von dir gewählten Werte bereits in deinem Unterricht für die Schüler:innen spürbar? In welchen Situationen kannst und willst du zukünftig noch klarer und sichtbarer für diese Werte einstehen?\n\nSchließlich: Würdest du deine drei Werte zu Beginn eines neuen Schuljahres einer neuen Schulklasse oder beim ersten Elternabend vorstellen? Und falls ja: Wie genau würdest du das tun? Wenn du willst, bereite eine Art »Mission Statement« vor.",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Welche Werte stehen an deiner Klassentür?",
+      "partialAnswer": "",
+      "body": "Notiere zunächst in einer Mindmap – z.B. mit dem Titel »Meine Werte« in einem zentralen Kreis, um den herum du diese Werte anordnest –, welche Werte du generell lebst und vertrittst (Ehrlichkeit? Gerechtigkeit? Harmonie? usw.). Sammle möglichst viele solcher für dich zutreffenden Werte, und unterstreiche, welche auch für dein berufliches Wirken handlungsleitend sind oder sein sollen. Dann wähle die drei wichtigsten aus, um sie auf ein leeres Blatt, das deine Klassenzimmertür darstellt, zu schreiben.\n\nWie gut passen deine drei Werte zueinander? Sind sie sehr nah beieinander oder ergänzen sie einander komplementär? Vergleiche dies mit den drei Werten einer fiktiven Kollegin, die Leistung, Respekt und Humor über ihre Klassentür geschrieben hat. Welche dieser Akzentsetzungen sind dir fremd, welche könntest du mitgehen?\n\nÜberlege so konkret wie möglich: An welchen Stellen sind die von dir gewählten Werte bereits in deinem Unterricht für die Schüler:innen spürbar? In welchen Situationen kannst und willst du zukünftig noch klarer und sichtbarer für diese Werte einstehen?\n\nSchließlich: Würdest du deine drei Werte zu Beginn eines neuen Schuljahres einer neuen Schulklasse oder beim ersten Elternabend vorstellen? Und falls ja: Wie genau würdest du das tun? Wenn du willst, bereite eine Art »Mission Statement« vor.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288299"
+      ],
+      "lead": "ÜBUNG 2:"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:288300]\n[%][%ÜBUNG 3:]\n[!Was bringt dich auf die Palme?]\nWann hat dich zuletzt die Äußerung eines Schülers oder einer Schülerin herausgefordert, verletzt, unangenehm berührt oder sogar (fast) zum Ausflippen gebracht? Versuche, dich an den Wortlaut zu erinnern. Und schreibe dann auf ein leeres Blatt die drei bis fünf Sätze, die dich sicher auf die Palme bringen.\n\nÜberlege, welche inneren Knöpfe oder Triggerpunkte mit diesen Sätzen (beruflich oder privat, gegebenenfalls auch unabhängig davon und wer genau sie zu dir sagt) berührt werden. Was genau ist es, was dich auf die Palme bringt? Wo genau (in deinem Körper) merkst du das? Wo noch? Wenn es dir hilft, kannst du die Augen schließen und die Sätze nacheinander laut aussprechen, auch in unterschiedlicher Tonlage. Wessen Stimme hörst du?\n\nNehmen wir an, dass diese Sätze und Formulierungen für dich eine größere, tiefere Bedeutung haben als für dein Gegenüber. Könnte es sein, dass du schon einmal jemanden durch eine (allzu) heftige Reaktion auf einen dieser Sätze überrascht oder deinerseits verletzt hast? Wie willst du beim nächsten Mal reagieren, wenn jemand diese Sätze zu dir sagt? Was kannst du dafür tun, damit dir dies gelingen wird?",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Was bringt dich auf die Palme?",
+      "partialAnswer": "",
+      "body": "Wann hat dich zuletzt die Äußerung eines Schülers oder einer Schülerin herausgefordert, verletzt, unangenehm berührt oder sogar (fast) zum Ausflippen gebracht? Versuche, dich an den Wortlaut zu erinnern. Und schreibe dann auf ein leeres Blatt die drei bis fünf Sätze, die dich sicher auf die Palme bringen.\n\nÜberlege, welche inneren Knöpfe oder Triggerpunkte mit diesen Sätzen (beruflich oder privat, gegebenenfalls auch unabhängig davon und wer genau sie zu dir sagt) berührt werden. Was genau ist es, was dich auf die Palme bringt? Wo genau (in deinem Körper) merkst du das? Wo noch? Wenn es dir hilft, kannst du die Augen schließen und die Sätze nacheinander laut aussprechen, auch in unterschiedlicher Tonlage. Wessen Stimme hörst du?\n\nNehmen wir an, dass diese Sätze und Formulierungen für dich eine größere, tiefere Bedeutung haben als für dein Gegenüber. Könnte es sein, dass du schon einmal jemanden durch eine (allzu) heftige Reaktion auf einen dieser Sätze überrascht oder deinerseits verletzt hast? Wie willst du beim nächsten Mal reagieren, wenn jemand diese Sätze zu dir sagt? Was kannst du dafür tun, damit dir dies gelingen wird?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288300"
+      ],
+      "lead": "ÜBUNG 3:"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:288301]\n[%][%ÜBUNG 4:]\n[!Welche Ressourcen haben meine Schüler:innen – und welche noch?]\nLege eine Tabelle mit vier Spalten an. Schreibe in die erste Spalte alle Schüler:innen-Namen einer Klasse, mit der du dich gerade viel beschäftigst. Nun versuche, in die zweite Spalte zu jedem Schüler und jeder Schülerin eine positive Eigenschaft, eine Qualität beziehungsweise eine Ressource aufzuschreiben, z.B. mit einem Adjektiv. Was zeichnet diese:n Schüler:in aus, was kann er beziehungsweise sie besonders gut? Das dürfen auch auf den ersten Blick nebensächliche Dinge sein. Beobachte, bei wem dir gleich recht viel einfällt (hier darfst du natürlich auch direkt die dritte und vierte Spalte nutzen) und zu wem erst einmal nichts. Warum ist das so?\n\nBegreife es als deine Aufgabe, die Tabelle zu komplettieren. Bei allem, was dich an diesem Menschen stört oder aufregt: Es liegt an dir und deiner Haltung, noch mal genauer hinzusehen und gezielt seine beziehungsweise ihre Ressourcen und Qualitäten in den Blick zu nehmen. Was entdeckst du, was dir – und gegebenenfalls sogar den Eltern oder dem Schüler beziehungs-weise der Schülerin selbst – verborgen blieb? Was für einen Unterschied macht das, obwohl er beziehungsweise sie kein:e andere:r geworden ist? Und siehst du eine Gelegenheit, bei der du ihm beziehungsweise ihr auf authentische Art rückmelden kannst, was du entdeckt hast? Was für einen Unterschied könnte das machen?\n\nFür ausgewählte Schüler:innen, mit denen du dich besonders beschäftigen willst, kannst du – vielleicht sogar gemeinsam mit ihnen im Rahmen eines längeren Beratungsgesprächs – ein Ressourcen-Zauberkleid zeichnen (siehe Abbildung).",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Welche Ressourcen haben meine Schüler:innen – und welche noch?",
+      "partialAnswer": "",
+      "body": "Lege eine Tabelle mit vier Spalten an. Schreibe in die erste Spalte alle Schüler:innen-Namen einer Klasse, mit der du dich gerade viel beschäftigst. Nun versuche, in die zweite Spalte zu jedem Schüler und jeder Schülerin eine positive Eigenschaft, eine Qualität beziehungsweise eine Ressource aufzuschreiben, z.B. mit einem Adjektiv. Was zeichnet diese:n Schüler:in aus, was kann er beziehungsweise sie besonders gut? Das dürfen auch auf den ersten Blick nebensächliche Dinge sein. Beobachte, bei wem dir gleich recht viel einfällt (hier darfst du natürlich auch direkt die dritte und vierte Spalte nutzen) und zu wem erst einmal nichts. Warum ist das so?\n\nBegreife es als deine Aufgabe, die Tabelle zu komplettieren. Bei allem, was dich an diesem Menschen stört oder aufregt: Es liegt an dir und deiner Haltung, noch mal genauer hinzusehen und gezielt seine beziehungsweise ihre Ressourcen und Qualitäten in den Blick zu nehmen. Was entdeckst du, was dir – und gegebenenfalls sogar den Eltern oder dem Schüler beziehungs-weise der Schülerin selbst – verborgen blieb? Was für einen Unterschied macht das, obwohl er beziehungsweise sie kein:e andere:r geworden ist? Und siehst du eine Gelegenheit, bei der du ihm beziehungsweise ihr auf authentische Art rückmelden kannst, was du entdeckt hast? Was für einen Unterschied könnte das machen?\n\nFür ausgewählte Schüler:innen, mit denen du dich besonders beschäftigen willst, kannst du – vielleicht sogar gemeinsam mit ihnen im Rahmen eines längeren Beratungsgesprächs – ein Ressourcen-Zauberkleid zeichnen (siehe Abbildung).",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288301"
+      ],
+      "lead": "ÜBUNG 4:"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:288303]\n[%][%ÜBUNG 5:]\n[!Wie viel Nähe und wie viel Distanz zu den Schüler:innen ist richtig für dich?]\nZeichne auf ein Blatt Papier das Riemann-Thomann-Modell: ein Pfeil von links nach rechts, einer von oben nach unten, sodass eine Art Koordinatensystem entsteht. An die vier PfeilEnden, jeweils einander gegenüber, schreibst du die jeweils zwei gegensätzlichen Pole, welche »Grundstrebungen« der Persönlichkeit bezeichnen: Nähe/Distanz und Dauer/Wechsel (vgl. Thomann/Schulz von Thun 2011, S. 176 ff.).\n\nÜberlege nun in einem ersten Schritt, welche Qualitäten alle vier Enden für eine gelingende Beziehung zwischen Lehrkraft und Schüler:innen bieten: empathisch-zugewandte Nähe und professionelle Distanz, konstante Verlässlichkeit und lebendiger Abwechslungsreichtum und so weiter – und dann versuche, dich mit einem Kreuz dort im Koordinatensystem zu positionieren, wo du dich als Lehrkraft einordnen würdest. Stehst du genau in der Mitte (Vorsicht: Diese könnte golden, aber auch mittelmäßig sein!) oder näher an einem der Pole? Und fühlst du dich dort richtig aufgehoben oder würdest du dich gerne in eine Richtung entwickeln?\n\nZeichne das Modell ein zweites Mal auf, und bitte eine wohlwollende Person aus deinem privaten Umfeld sowie zwei bis drei vertraute Kolleg:innen, dort ein Kreuz zu machen – ohne dass sie dein Kreuz sehen –, wo sie ihrerseits dich vermuten beziehungsweise dein Handeln verorten würden. Gibt es Unterschiede zwischen Selbst- und Fremdwahrnehmung?\n\nFrage deine Schüler:innen im Rahmen des nächsten anonymen Schüler:innen-Feedbacks, wie distanziert beziehungsweise streng, verständnisvoll beziehungsweise zugewandt sie dich erleben: Lass sie ankreuzen, ob du »zu streng«, »angemessen streng« oder »zu wenig streng« bist und so weiter.\n\nZu sinnvollen Anpassungen der vorgeschlagenen Übungen laden wir alle Leser:innen explizit ein und freuen uns zugleich über Rückfragen und Rückmeldungen.",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Wie viel Nähe und wie viel Distanz zu den Schüler:innen ist richtig für dich?",
+      "partialAnswer": "",
+      "body": "Zeichne auf ein Blatt Papier das Riemann-Thomann-Modell: ein Pfeil von links nach rechts, einer von oben nach unten, sodass eine Art Koordinatensystem entsteht. An die vier PfeilEnden, jeweils einander gegenüber, schreibst du die jeweils zwei gegensätzlichen Pole, welche »Grundstrebungen« der Persönlichkeit bezeichnen: Nähe/Distanz und Dauer/Wechsel (vgl. Thomann/Schulz von Thun 2011, S. 176 ff.).\n\nÜberlege nun in einem ersten Schritt, welche Qualitäten alle vier Enden für eine gelingende Beziehung zwischen Lehrkraft und Schüler:innen bieten: empathisch-zugewandte Nähe und professionelle Distanz, konstante Verlässlichkeit und lebendiger Abwechslungsreichtum und so weiter – und dann versuche, dich mit einem Kreuz dort im Koordinatensystem zu positionieren, wo du dich als Lehrkraft einordnen würdest. Stehst du genau in der Mitte (Vorsicht: Diese könnte golden, aber auch mittelmäßig sein!) oder näher an einem der Pole? Und fühlst du dich dort richtig aufgehoben oder würdest du dich gerne in eine Richtung entwickeln?\n\nZeichne das Modell ein zweites Mal auf, und bitte eine wohlwollende Person aus deinem privaten Umfeld sowie zwei bis drei vertraute Kolleg:innen, dort ein Kreuz zu machen – ohne dass sie dein Kreuz sehen –, wo sie ihrerseits dich vermuten beziehungsweise dein Handeln verorten würden. Gibt es Unterschiede zwischen Selbst- und Fremdwahrnehmung?\n\nFrage deine Schüler:innen im Rahmen des nächsten anonymen Schüler:innen-Feedbacks, wie distanziert beziehungsweise streng, verständnisvoll beziehungsweise zugewandt sie dich erleben: Lass sie ankreuzen, ob du »zu streng«, »angemessen streng« oder »zu wenig streng« bist und so weiter.\n\nZu sinnvollen Anpassungen der vorgeschlagenen Übungen laden wir alle Leser:innen explizit ein und freuen uns zugleich über Rückfragen und Rückmeldungen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288303"
+      ],
+      "lead": "ÜBUNG 5:"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:288302]\n[&image:https://docs.bitmark.cloud/bit-books/preselect/beltz/paedagogik/web-resources/images/preselect_beltz_paedagogik_1.png][@width:774]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "288302"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/preselect/beltz/paedagogik/web-resources/images/preselect_beltz_paedagogik_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "774",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:288304]\n[%][%Literatur]\n• Bauer, Joachim (⁷ 2014): Lob der Schule. München: Heyne.\n• Bauer, Joachim: Die pädagogische Beziehung: Neurowissenschaften und Pädagogik im Dialog. In: Lehren und Lernen 1/2017, S. 4–10.\n• Hattie, John (2009): Visible Learning: A synthesis of over 800 meta-analyses relating to achievement. London: Routledge.\n• Prior, Manfred (2009): MiniMax für Lehrer. 16 Kommunikationsstrategien mit maximaler Wirkung. Weinheim/Basel: Beltz.\n• Von Schlippe, Arist/Schweitzer, Jochen (³ 2016): Lehrbuch der systemischen Therapie und Beratung I. Göttingen: Vandenhoeck & Ruprecht.\n• Thomann, Christoph/Schulz von Thun, Friedemann (⁶ 2011): Klärungshilfe 1. Handbuch für Therapeuten, Gesprächshelfer und Moderatoren in schwierigen Gesprächen. Reinbek bei Hamburg: Rowohlt; ==www.schulz-von-thun.de/die-modelle/das-riemann-thomann-modell==|link:https://www.schulz-von-thun.de/die-modelle/das-riemann-thomann-modell|\n• Waldinger, Robert (2016): What makes a good life? TED-talk von 2016; ==www.dailygood.org/story/1196/what-makes-a-good-life-robert-waldinger/==|link:https://www.dailygood.org/story/1196/what-makes-a-good-life-robert-waldinger/|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Bauer, Joachim (⁷ 2014): Lob der Schule. München: Heyne.\n• Bauer, Joachim: Die pädagogische Beziehung: Neurowissenschaften und Pädagogik im Dialog. In: Lehren und Lernen 1/2017, S. 4–10.\n• Hattie, John (2009): Visible Learning: A synthesis of over 800 meta-analyses relating to achievement. London: Routledge.\n• Prior, Manfred (2009): MiniMax für Lehrer. 16 Kommunikationsstrategien mit maximaler Wirkung. Weinheim/Basel: Beltz.\n• Von Schlippe, Arist/Schweitzer, Jochen (³ 2016): Lehrbuch der systemischen Therapie und Beratung I. Göttingen: Vandenhoeck & Ruprecht.\n• Thomann, Christoph/Schulz von Thun, Friedemann (⁶ 2011): Klärungshilfe 1. Handbuch für Therapeuten, Gesprächshelfer und Moderatoren in schwierigen Gesprächen. Reinbek bei Hamburg: Rowohlt; ==www.schulz-von-thun.de/die-modelle/das-riemann-thomann-modell==|link:https://www.schulz-von-thun.de/die-modelle/das-riemann-thomann-modell|\n• Waldinger, Robert (2016): What makes a good life? TED-talk von 2016; ==www.dailygood.org/story/1196/what-makes-a-good-life-robert-waldinger/==|link:https://www.dailygood.org/story/1196/what-makes-a-good-life-robert-waldinger/|",
+      "id": [
+        "288304"
+      ],
+      "lead": "Literatur"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:288305]\n**SUSANNE HÜTTEBRÄUCKER** ist Sozialarbeiterin, Supervisorin, Kinder- und Jugendtherapeutin und bietet unter anderem gemeinsam mit Christoph Schneider an der Brecht-Schule Hamburg Fortbildungen für Lehrer:innen zu den Themen Krisen-, Konfliktmanagement, Elternberatung und »Professionelle Beziehungsgestaltung« an.\n↗ huettebraeucker@brecht-schule.hamburg",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**SUSANNE HÜTTEBRÄUCKER** ist Sozialarbeiterin, Supervisorin, Kinder- und Jugendtherapeutin und bietet unter anderem gemeinsam mit Christoph Schneider an der Brecht-Schule Hamburg Fortbildungen für Lehrer:innen zu den Themen Krisen-, Konfliktmanagement, Elternberatung und »Professionelle Beziehungsgestaltung« an.\n↗ huettebraeucker@brecht-schule.hamburg",
+      "id": [
+        "288305"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:288306]\n**CHRISTOPH SCHNEIDER** ist pädagogischer Geschäftsführer der Brecht-Schule Hamburg, einer gemeinnützigen Privatschule, wo er seit 2012 unter anderem die Fächer Geschichte und Deutsch unterrichtet. Seit 2015 entwickelt er mit Susanne Hüttebräucker das gemeinsame Fortbildungsangebot »Professionelle Beziehungsgestaltung für Lehrkräfte« kontinuierlich weiter.\n↗ schneider@brecht-schule.hamburg,\n==www.brecht-schule.hamburg==|link:https://www.brecht-schule.hamburg/|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**CHRISTOPH SCHNEIDER** ist pädagogischer Geschäftsführer der Brecht-Schule Hamburg, einer gemeinnützigen Privatschule, wo er seit 2012 unter anderem die Fächer Geschichte und Deutsch unterrichtet. Seit 2015 entwickelt er mit Susanne Hüttebräucker das gemeinsame Fortbildungsangebot »Professionelle Beziehungsgestaltung für Lehrkräfte« kontinuierlich weiter.\n↗ schneider@brecht-schule.hamburg,\n==www.brecht-schule.hamburg==|link:https://www.brecht-schule.hamburg/|",
+      "id": [
+        "288306"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:288307]\n[▼ch-4]\n[##Professionelle Beziehungen in der Lehrerausbildung]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "288307"
+      ],
+      "anchor": "ch-4",
+      "title": "Professionelle Beziehungen in der Lehrerausbildung"
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark--]\n[@id:288308]\nWie pädagogische Beziehungen professionell zu gestalten sind, sollte nicht nur im Rahmen des Lehramtsstudiums reflektiert werden, sondern universitäre Seminare selbst müssen vorbildhaft Raum für Beziehungen auf Augenhöhe und Rollenmodelle bieten – Perspektiven eines Schulleiters und Dozenten.\n- WOLFGANG VOGELSAENGER",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "Wie pädagogische Beziehungen professionell zu gestalten sind, sollte nicht nur im Rahmen des Lehramtsstudiums reflektiert werden, sondern universitäre Seminare selbst müssen vorbildhaft Raum für Beziehungen auf Augenhöhe und Rollenmodelle bieten – Perspektiven eines Schulleiters und Dozenten.\n- WOLFGANG VOGELSAENGER",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288308"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288309]\nProfessionelle pädagogische Beziehungen sind die Grundlage jeder guten Schule (Klein/Riekmann/Vogelsaenger 2018). Als Leiter einer Schule, die 1975 als »Beziehungsschule« nach langer multiprofessioneller Planung durch Lehrer:innen, Eltern, Politiker:innen, Architekt:innen und Wissenschaftler:innen der Universität Göttingen ihre Arbeit aufnahm und die noch heute nach dem damals entwickelten Konzept des Team-Kleingruppen-Modells (TKM) arbeitet (Schlömerkemper/Winkel 2009), für das sie 2011 mit dem Deutschen Schulpreis ausgezeichnet wurde, habe ich 16 Jahre verantwortlich mitgewirkt, dass dieses Konzept den Generationswechsel von der Gründungs- hin zu einer neuen Pädagogengeneration überlebte. Das ist nicht selbstverständlich. Es gibt genug Beispiele, dass ein hervorragendes Schulkonzept einen Schulleitungs- oder Generationenwechsel nicht überdauerte. Für mich liegt die Erklärung dafür darin, dass engagierte Schulen vom staatlichen Bildungssystem nicht automatisch gestärkt werden. Leuchtturmschulen werden eher durch private Initiativen wie die Robert-Bosch-Stiftung gefördert. Und selbst dann, wenn Schulen ausgezeichnet werden, fehlt häufig die Unterstützung systemischer Rahmenbedingungen, um die Standards guter Schulen in die Breite zu tragen. Dazu würde auch eine Qualifizierung von Lehrkräften gehören, die schon von ihrer Ausbildung her alle Voraussetzungen mitbringen, um die Konzepte guter Schulen umzusetzen und zu leben. Kern des Konzeptes unserer Schule ist die Subjekt-Subjekt-Beziehung zwischen allen etwa 5000 Mitgliedern der Schulgemeinschaft. Das fängt mit dem allgemeinen »Du« an, geht über die Zusicherung der Angstfreiheit, die konsequente Organisation aller Mitglieder dieser Schulgemeinschaft in eigenverantwortlichen Teams bis hin zur umfassenden Partizipation aller in der Pädagogisch-Didaktischen Konferenz. Ähnliche Konzepte finden sich in allen Schulpreisschulen: Gute Beziehungen sind die entscheidende Grundlage für Wohlbefinden und Leistung aller Institutionen, in denen es um Lernen, Leben und Arbeiten geht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Professionelle pädagogische Beziehungen sind die Grundlage jeder guten Schule (Klein/Riekmann/Vogelsaenger 2018). Als Leiter einer Schule, die 1975 als »Beziehungsschule« nach langer multiprofessioneller Planung durch Lehrer:innen, Eltern, Politiker:innen, Architekt:innen und Wissenschaftler:innen der Universität Göttingen ihre Arbeit aufnahm und die noch heute nach dem damals entwickelten Konzept des Team-Kleingruppen-Modells (TKM) arbeitet (Schlömerkemper/Winkel 2009), für das sie 2011 mit dem Deutschen Schulpreis ausgezeichnet wurde, habe ich 16 Jahre verantwortlich mitgewirkt, dass dieses Konzept den Generationswechsel von der Gründungs- hin zu einer neuen Pädagogengeneration überlebte. Das ist nicht selbstverständlich. Es gibt genug Beispiele, dass ein hervorragendes Schulkonzept einen Schulleitungs- oder Generationenwechsel nicht überdauerte. Für mich liegt die Erklärung dafür darin, dass engagierte Schulen vom staatlichen Bildungssystem nicht automatisch gestärkt werden. Leuchtturmschulen werden eher durch private Initiativen wie die Robert-Bosch-Stiftung gefördert. Und selbst dann, wenn Schulen ausgezeichnet werden, fehlt häufig die Unterstützung systemischer Rahmenbedingungen, um die Standards guter Schulen in die Breite zu tragen. Dazu würde auch eine Qualifizierung von Lehrkräften gehören, die schon von ihrer Ausbildung her alle Voraussetzungen mitbringen, um die Konzepte guter Schulen umzusetzen und zu leben. Kern des Konzeptes unserer Schule ist die Subjekt-Subjekt-Beziehung zwischen allen etwa 5000 Mitgliedern der Schulgemeinschaft. Das fängt mit dem allgemeinen »Du« an, geht über die Zusicherung der Angstfreiheit, die konsequente Organisation aller Mitglieder dieser Schulgemeinschaft in eigenverantwortlichen Teams bis hin zur umfassenden Partizipation aller in der Pädagogisch-Didaktischen Konferenz. Ähnliche Konzepte finden sich in allen Schulpreisschulen: Gute Beziehungen sind die entscheidende Grundlage für Wohlbefinden und Leistung aller Institutionen, in denen es um Lernen, Leben und Arbeiten geht.",
+      "id": [
+        "288309"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.statement:bitmark--]\n[@id:288310]\n»Ich weiß nicht, ob es ein perfektes Lehramtsstudium geben kann. Ich stelle mir vor, dass schon einiges damit getan wäre, wenn eine Reflexionskultur unter Studierenden entwickelt würde, die sich [...] mit [...] der eigenen Schulzeit befasst. Im Seminar ist mir aufgefallen, wie sehr unsere eigenen Erfahrungen als Schüler:innen uns heute noch prägen, im positiven und negativen Sinne, und wie heilsam und erkenntnisreich es sein kann, sich damit auseinanderzusetzen. Es erscheint mir wichtig, dass Menschen, die die Profession ›Lehrkraft‹ anstreben, unter An- und Begleitung lernen, sich wirklich und ehrlich zu reflektieren und sich mit sich selbst auseinanderzusetzen, bevor sie mit Kindern arbeiten.«\n- ZIT. AUS EINEM PORTFOLIO STUDIERENDER",
+    "bit": {
+      "type": "statement",
+      "format": "bitmark--",
+      "body": "»Ich weiß nicht, ob es ein perfektes Lehramtsstudium geben kann. Ich stelle mir vor, dass schon einiges damit getan wäre, wenn eine Reflexionskultur unter Studierenden entwickelt würde, die sich ${{0}} mit ${{1}} der eigenen Schulze[...]asst.[...]minar ist mir aufgefallen, wie sehr unsere eigenen Erfahrungen als Schüler:innen uns heute noch prägen, im positiven und negativen Sinne, und wie heilsam und erkenntnisreich es sein kann, sich damit auseinanderzusetzen. Es erscheint mir wichtig, dass Menschen, die die Profession ›Lehrkraft‹ anstreben, unter An- und Begleitung lernen, sich wirklich und ehrlich zu reflektieren und sich mit sich selbst auseinanderzusetzen, bevor sie mit Kindern arbeiten.«\n- ZIT. AUS EINEM PORTFOLIO STUDIERENDER",
+      "id": [
+        "288310"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:288311]\nGute Schulen müssen eine »vierte« Ausbildung für ihre frisch examinierten Kolleg:innen anbieten, wenn sie im Sinne des Schulkonzeptes arbeiten sollen.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Gute Schulen müssen eine »vierte« Ausbildung für ihre frisch examinierten Kolleg:innen anbieten, wenn sie im Sinne des Schulkonzeptes arbeiten sollen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288311"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288312]\n[%][%BEZIEHUNGEN PROFESSIONELL GESTALTEN – DESIDERAT UNIVERSITÄRER AUSBILDUNG]\nIch habe als Schulleiter in Göttingen etwa 200 neue Pädagog:innen eingestellt und dafür mit mindestens 2000 Menschen Gespräche geführt. In den meisten Fällen traf ich dabei auf große Zustimmung zu unserem Konzept. Diese hatte ihren Ursprung allerdings weniger in der Ausbildung der Kolleg:innen, sondern in ihrer individuellen persönlichen Haltung. Meist wurden gleichzeitig Ängste formuliert, ob man ein solches System mittragen könne, da man dafür nicht durch die eigene Ausbildung vorbereitet sei, weder durch das Studium noch durch das Referendariat. Damit ist klar, dass gute Schulen eine »vierte« Ausbildung für ihre frisch examinierten Kolleg:innen anbieten müssen, wenn sie im Sinne des Schulkonzeptes arbeiten und die Haltung der Schule übernehmen sollen. Dies leisten wir als Schule unter anderem in jedem Jahr, indem wir auf unsere Initiative hin mindestens zwei Tage mit den »Neuen« in unserem Schullandheim konzeptionell arbeiten. Denn wenn wir die neuen Kräfte befähigen wollen, sich den Anforderungen heterogener Lerngruppen, der Inklusion und der Beziehungsgestaltung als Grundlage pädagogischen Arbeitens zu stellen, dann müssen wir diese Zusatzleistung erbringen, obwohl wir uns wünschten, dass diese Kompetenzen in den beiden Phasen der offiziellen Ausbildung erworben werden. Die wichtigste Ergänzung zu diesem Crashkurs ist die Einbindung der neuen Kolleg:innen in die vorhandenen Klassen-, Jahrgangs- und Fachteams, in denen sie sich nahezu täglich mit erfahreneren Kolleg:innen über die praktische Umsetzung des Konzeptes austauschen können und in denen regelmäßig kollegiale Fallbesprechungen gemeinsam mit den Sozialpädagog:innen stattfinden. Lehrer:innen, die alle eine ähnliche Ausbildung durchlaufen haben, entwickeln sich also völlig unterschiedlich in Abhängigkeit von der Schule, an der sie letztlich ihren Arbeitsplatz finden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Ich habe als Schulleiter in Göttingen etwa 200 neue Pädagog:innen eingestellt und dafür mit mindestens 2000 Menschen Gespräche geführt. In den meisten Fällen traf ich dabei auf große Zustimmung zu unserem Konzept. Diese hatte ihren Ursprung allerdings weniger in der Ausbildung der Kolleg:innen, sondern in ihrer individuellen persönlichen Haltung. Meist wurden gleichzeitig Ängste formuliert, ob man ein solches System mittragen könne, da man dafür nicht durch die eigene Ausbildung vorbereitet sei, weder durch das Studium noch durch das Referendariat. Damit ist klar, dass gute Schulen eine »vierte« Ausbildung für ihre frisch examinierten Kolleg:innen anbieten müssen, wenn sie im Sinne des Schulkonzeptes arbeiten und die Haltung der Schule übernehmen sollen. Dies leisten wir als Schule unter anderem in jedem Jahr, indem wir auf unsere Initiative hin mindestens zwei Tage mit den »Neuen« in unserem Schullandheim konzeptionell arbeiten. Denn wenn wir die neuen Kräfte befähigen wollen, sich den Anforderungen heterogener Lerngruppen, der Inklusion und der Beziehungsgestaltung als Grundlage pädagogischen Arbeitens zu stellen, dann müssen wir diese Zusatzleistung erbringen, obwohl wir uns wünschten, dass diese Kompetenzen in den beiden Phasen der offiziellen Ausbildung erworben werden. Die wichtigste Ergänzung zu diesem Crashkurs ist die Einbindung der neuen Kolleg:innen in die vorhandenen Klassen-, Jahrgangs- und Fachteams, in denen sie sich nahezu täglich mit erfahreneren Kolleg:innen über die praktische Umsetzung des Konzeptes austauschen können und in denen regelmäßig kollegiale Fallbesprechungen gemeinsam mit den Sozialpädagog:innen stattfinden. Lehrer:innen, die alle eine ähnliche Ausbildung durchlaufen haben, entwickeln sich also völlig unterschiedlich in Abhängigkeit von der Schule, an der sie letztlich ihren Arbeitsplatz finden.",
+      "id": [
+        "288312"
+      ],
+      "lead": "BEZIEHUNGEN PROFESSIONELL GESTALTEN – DESIDERAT UNIVERSITÄRER AUSBILDUNG"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288313]\n[%][%DIE SCHULE ALS »VIERTE« AUSBILDUNGSPHASE]\nDie Schule ist so die vierte und nach der ersten die wichtigste Ausbildungsphase von Lehrkräften. Die eigene Schulzeit prägt Vorstellungen und Haltungen, wie Schule sein sollte oder auch nicht. Das Studium fokussiert den wissenschaftlichen Aspekt der oft zufällig gewählten Fächer, leider auch in der Pädagogik. Die Vorbereitung auf die tatsächlich nötigen Anforderungen des Berufes gerät dabei in den Hintergrund. So werden die Studierenden in dem bestärkt, was sie mit wenigen Ausnahmen schon in der Schule gelernt haben: Das Fach steht im Vordergrund, nicht der Mensch. Und so trägt die Universität bei zur Erhaltung eines überkommenen Systems, anstatt es zu überwinden.\n\nInsbesondere im gymnasialen Referendariat geht es dann vor allem darum, das Fachwissen in die funktionalen Einzelhäppchen von Stunden herunterzubrechen. Die Referendar:innen lernen mit erheblichem Aufwand, eine einzige Unterrichtsstunde vorzubereiten und durchzuführen; sie erlernen aber nur selten Strategien, wöchentlich 24 oder mehr Stunden zu stemmen, die individuelle Leistung zu bewerten, mit heterogenen Lerngruppen und Kindern mit Förderbedarfen zu arbeiten, die Kommunikation mit Kindern und Jugendlichen, Kolleg:innen und Eltern beziehungsförderlich zu gestalten oder mit Krisen umzugehen.\n\nDas ist kein individuelles Versagen oder Gelingen der einzelnen Schulen, Seminare oder Universitäten, sondern der »Webfehler« eines Systems, in dem scheinbar alles bis ins Einzelne geregelt ist, bis hin zur Abiturprüfungsaufsicht vor den Toiletten. In diesem überregulierten System bleibt der wichtigste Aspekt – die Ausgestaltung der Beziehungen – weitgehend der Willkür der »Mächtigeren« überlassen (Vogelsaenger 2022a). Die von meinen Studierenden geschriebenen Geschichten erzählen unvorstellbare Misshandlungen aus eigenem Erleben (Vogelsaenger 2022b). Fatal ist, dass diese negativen Schulerfahrungen durch die Betonung der Fachlichkeit in den Universitäten weitergeführt und im Referendariat endgültig zementiert werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Schule ist so die vierte und nach der ersten die wichtigste Ausbildungsphase von Lehrkräften. Die eigene Schulzeit prägt Vorstellungen und Haltungen, wie Schule sein sollte oder auch nicht. Das Studium fokussiert den wissenschaftlichen Aspekt der oft zufällig gewählten Fächer, leider auch in der Pädagogik. Die Vorbereitung auf die tatsächlich nötigen Anforderungen des Berufes gerät dabei in den Hintergrund. So werden die Studierenden in dem bestärkt, was sie mit wenigen Ausnahmen schon in der Schule gelernt haben: Das Fach steht im Vordergrund, nicht der Mensch. Und so trägt die Universität bei zur Erhaltung eines überkommenen Systems, anstatt es zu überwinden.\n\nInsbesondere im gymnasialen Referendariat geht es dann vor allem darum, das Fachwissen in die funktionalen Einzelhäppchen von Stunden herunterzubrechen. Die Referendar:innen lernen mit erheblichem Aufwand, eine einzige Unterrichtsstunde vorzubereiten und durchzuführen; sie erlernen aber nur selten Strategien, wöchentlich 24 oder mehr Stunden zu stemmen, die individuelle Leistung zu bewerten, mit heterogenen Lerngruppen und Kindern mit Förderbedarfen zu arbeiten, die Kommunikation mit Kindern und Jugendlichen, Kolleg:innen und Eltern beziehungsförderlich zu gestalten oder mit Krisen umzugehen.\n\nDas ist kein individuelles Versagen oder Gelingen der einzelnen Schulen, Seminare oder Universitäten, sondern der »Webfehler« eines Systems, in dem scheinbar alles bis ins Einzelne geregelt ist, bis hin zur Abiturprüfungsaufsicht vor den Toiletten. In diesem überregulierten System bleibt der wichtigste Aspekt – die Ausgestaltung der Beziehungen – weitgehend der Willkür der »Mächtigeren« überlassen (Vogelsaenger 2022a). Die von meinen Studierenden geschriebenen Geschichten erzählen unvorstellbare Misshandlungen aus eigenem Erleben (Vogelsaenger 2022b). Fatal ist, dass diese negativen Schulerfahrungen durch die Betonung der Fachlichkeit in den Universitäten weitergeführt und im Referendariat endgültig zementiert werden.",
+      "id": [
+        "288313"
+      ],
+      "lead": "DIE SCHULE ALS »VIERTE« AUSBILDUNGSPHASE"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288314]\n[%][%ROLLENWECHSEL – ALS DOZENT IN DER LEHRER INNENAUSBILDUNG]\n2018 begann ich damit, halbjährlich ein Seminar zum Thema »Beziehungen professionell gestalten« für Lehramtsstudierende im Masterstudium durchzuführen. Der skeptische Blick auf die Inhalte des Lehramtsstudiums hat sich durch die Arbeit mit den Studierenden verschärft. Ich halte jetzt nicht nur die Inhalte für überdenkenswert, sondern vielmehr noch die Art und Weise, wie die Beziehungen zwischen Dozierenden und Studierenden gestaltet werden.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "2018 begann ich damit, halbjährlich ein Seminar zum Thema »Beziehungen professionell gestalten« für Lehramtsstudierende im Masterstudium durchzuführen. Der skeptische Blick auf die Inhalte des Lehramtsstudiums hat sich durch die Arbeit mit den Studierenden verschärft. Ich halte jetzt nicht nur die Inhalte für überdenkenswert, sondern vielmehr noch die Art und Weise, wie die Beziehungen zwischen Dozierenden und Studierenden gestaltet werden.",
+      "id": [
+        "288314"
+      ],
+      "lead": "ROLLENWECHSEL – ALS DOZENT IN DER LEHRER INNENAUSBILDUNG"
+    }
+  },
+  {
+    "bitmark": "[.statement:bitmark--]\n[@id:288315]\n»Ich fand es unglaublich paradox, dass wir in einer Pädagogik-Vorlesung lernen, wie schlecht es ist, frontal zu unterrichten und reines Bulemielernen für Klausuren zu machen. Dabei sind die Universitätskurse immer genau so aufgebaut. In deinem Kurs hatten wir stets die Möglichkeit zu diskutieren, mit offenem Ausgang.«\n- ZIT. AUS EINEM PORTFOLIO STUDIERENDER",
+    "bit": {
+      "type": "statement",
+      "format": "bitmark--",
+      "body": "»Ich fand es unglaublich paradox, dass wir in einer Pädagogik-Vorlesung lernen, wie schlecht es ist, frontal zu unterrichten und reines Bulemielernen für Klausuren zu machen. Dabei sind die Universitätskurse immer genau so aufgebaut. In deinem Kurs hatten wir stets die Möglichkeit zu diskutieren, mit offenem Ausgang.«\n- ZIT. AUS EINEM PORTFOLIO STUDIERENDER",
+      "id": [
+        "288315"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288316]\nDer Schritt von der Erkenntnis zum Handeln erfolgt nicht durch die Lektüre und Diskussion wissenschaftlicher Texte, sondern durch Vorbilder, durch Rollenmuster, durch eigenes Erleben. Eine nachhaltige, positiv auf das System Schule wirkende Lehramtsausbildung muss ein Lernen vorleben, das in einem Umfeld geschieht, welches Muster für das künftige schulische Umfeld ist. Es muss durch Angstfreiheit, Vertrauen, kollegiale Fallberatungen, zunehmende Selbststeuerung, Subjekt-Subjekt Beziehungen, transparente und in der Schule anzuwendende Bewertungsstrategien individueller Leistungen und Interessen, Sinnhaftigkeit, Well Being, Kollaboration, Kommunikation, Kreativität und kritisches Denken gekennzeichnet sein. Die Studierenden müssen – ausgehend von ihren biografischen Erfahrungen – alles lernen und mit ihren Kommiliton:innen und Dozent:innen erleben, was sie in die Lage versetzt, Beziehungen zu den Kindern und Jugendlichen, zu deren Eltern und zu ihren Kolleg:innen positiv zu gestalten. In den als Prüfungsleistung vorzulegenden Arbeiten meiner Studierenden wird in nahezu allen bislang 220 Portfolios aber immer wieder betont, dass dies eben nicht so ist.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Der Schritt von der Erkenntnis zum Handeln erfolgt nicht durch die Lektüre und Diskussion wissenschaftlicher Texte, sondern durch Vorbilder, durch Rollenmuster, durch eigenes Erleben. Eine nachhaltige, positiv auf das System Schule wirkende Lehramtsausbildung muss ein Lernen vorleben, das in einem Umfeld geschieht, welches Muster für das künftige schulische Umfeld ist. Es muss durch Angstfreiheit, Vertrauen, kollegiale Fallberatungen, zunehmende Selbststeuerung, Subjekt-Subjekt Beziehungen, transparente und in der Schule anzuwendende Bewertungsstrategien individueller Leistungen und Interessen, Sinnhaftigkeit, Well Being, Kollaboration, Kommunikation, Kreativität und kritisches Denken gekennzeichnet sein. Die Studierenden müssen – ausgehend von ihren biografischen Erfahrungen – alles lernen und mit ihren Kommiliton:innen und Dozent:innen erleben, was sie in die Lage versetzt, Beziehungen zu den Kindern und Jugendlichen, zu deren Eltern und zu ihren Kolleg:innen positiv zu gestalten. In den als Prüfungsleistung vorzulegenden Arbeiten meiner Studierenden wird in nahezu allen bislang 220 Portfolios aber immer wieder betont, dass dies eben nicht so ist.",
+      "id": [
+        "288316"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.statement:bitmark--]\n[@id:288317]\n»Obwohl Beziehungen ein zentrales Element unseres Lebens sind, spielen diese als inhaltliches Element in unserem Studium kaum eine Rolle.« \n- EIN STUDENT",
+    "bit": {
+      "type": "statement",
+      "format": "bitmark--",
+      "body": "»Obwohl Beziehungen ein zentrales Element unseres Lebens sind, spielen diese als inhaltliches Element in unserem Studium kaum eine Rolle.« \n- EIN STUDENT",
+      "id": [
+        "288317"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288318]\nAm Ende ihres Masterstudiums wurden die Studierenden von mir zum ersten Mal während ihres Studiums gefragt, warum sie Lehrer:innen werden wollen und was sie über die Gestaltung von schulischen Beziehungen denken. Wann, wenn nicht in dieser Phase, sollten diese Fragen gestellt werden?",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Am Ende ihres Masterstudiums wurden die Studierenden von mir zum ersten Mal während ihres Studiums gefragt, warum sie Lehrer:innen werden wollen und was sie über die Gestaltung von schulischen Beziehungen denken. Wann, wenn nicht in dieser Phase, sollten diese Fragen gestellt werden?",
+      "id": [
+        "288318"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288319]\n[%][%ANGST ALS LEHRMEISTERIN]\nDie Mehrzahl meiner Studierenden hat Angst. Aus dieser Erfahrung heraus beginne ich inzwischen meine Seminare mit der Zusicherung, bei mir müsse niemand Angst haben. So habe ich auch immer die neuen Kinder der 5. Klassen empfangen. Dass dies an der Universität nötig sein würde, hätte ich mir vorher nie vorstellen können.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Die Mehrzahl meiner Studierenden hat Angst. Aus dieser Erfahrung heraus beginne ich inzwischen meine Seminare mit der Zusicherung, bei mir müsse niemand Angst haben. So habe ich auch immer die neuen Kinder der 5. Klassen empfangen. Dass dies an der Universität nötig sein würde, hätte ich mir vorher nie vorstellen können.",
+      "id": [
+        "288319"
+      ],
+      "lead": "ANGST ALS LEHRMEISTERIN"
+    }
+  },
+  {
+    "bitmark": "[.statement:bitmark--]\n[@id:288320]\n»[Angst] ist leider ein ständiger Begleiter während des Studiums. Sei es die Angst vor Klausuren oder Hausarbeiten, die Angst, sein Studium nicht zu schaffen, oder auch die Angst vor Professor:innen oder Dozent:innen. Daher fand ich es sehr beruhigend [...] dass du genau diese Ängste angesprochen hast [...] und du hast mir das Gefühl vermittelt, dass ich dich immer als Ansprechpartner erreichen kann.«\n- ZIT. AUS EINEM PORTFOLIO STUDIERENDER",
+    "bit": {
+      "type": "statement",
+      "format": "bitmark--",
+      "body": "»[Angst] ist leider ein ständiger Begleiter während des Studiums. Sei es die Angst vor Klausuren oder Hausarbeiten, die Angst, sein Studium nicht zu schaffen, oder auch die Angst vor Professor:innen oder Dozent:innen. Daher fand ich es sehr beruhigend ${{0}} dass du genau diese Ängste ang[...]hen hast ${{1}} und du hast mir das Gefühl ver[...]t, dass ich dich immer als Ansprechpartner erreichen kann.«\n- ZIT. AUS EINEM PORTFOLIO STUDIERENDER",
+      "id": [
+        "288320"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288321]\nWie kann es sein, dass Universitäten als Initiatoren und Hort reformpädagogischer Erkenntnisse eine kontrollierte Anwesenheitspflicht haben, Entschuldigungen für Verspätungen verlangen, Multiple-Choice-Tests schreiben, in denen Fußnoten aus Hunderten von Vorlesungsfolien abgefragt werden, Veranstaltungen durchführen, in denen Dozent:innen monologisieren, während ihre Student:innen die Kameras und Mikrofone ausgeschaltet haben? An einigen Universitäten spielen alle Ausbildungsphasen begleitende und reflektierende Portfolios eine zentrale Rolle. Ich nutze sie zur Gestaltung meiner Beziehung zu den Studierenden, zum Ausbildungskonzept der Universität Göttingen gehören sie leider nicht.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Wie kann es sein, dass Universitäten als Initiatoren und Hort reformpädagogischer Erkenntnisse eine kontrollierte Anwesenheitspflicht haben, Entschuldigungen für Verspätungen verlangen, Multiple-Choice-Tests schreiben, in denen Fußnoten aus Hunderten von Vorlesungsfolien abgefragt werden, Veranstaltungen durchführen, in denen Dozent:innen monologisieren, während ihre Student:innen die Kameras und Mikrofone ausgeschaltet haben? An einigen Universitäten spielen alle Ausbildungsphasen begleitende und reflektierende Portfolios eine zentrale Rolle. Ich nutze sie zur Gestaltung meiner Beziehung zu den Studierenden, zum Ausbildungskonzept der Universität Göttingen gehören sie leider nicht.",
+      "id": [
+        "288321"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.statement:bitmark--]\n[@id:288322]\n»Insgesamt bin ich positiv überrascht von der Wahl der Prüfungsleistung. [...] Das Portfolio hilft mir dabei, meine eigenen, im Seminar gemachten Erfahrungen zu reflektieren und mich dementsprechend weiterzuentwickeln. [Es] kann individuell und kreativ gestaltet werden. Bilder, Videos oder auch Podcasts ermöglichen uns Studierenden eine große Vielfalt. Jeder kann das machen, womit er sich am wohlsten fühlt [...].«\n- ZIT. AUS EINEM PORTFOLIO STUDIERENDER",
+    "bit": {
+      "type": "statement",
+      "format": "bitmark--",
+      "body": "»Insgesamt bin ich positiv überrascht von der Wahl der Prüfungsleistung. ${{0}} Das Portfolio hilft mir dabei,[...] eigenen, im Seminar gemachten Erfahrungen zu reflektieren und mich dementsprechend weiterzuentwickeln. [Es] kann individuell und kreativ gestaltet werden. Bilder, Videos oder auch Podcasts ermöglichen uns Studierenden eine große Vielfalt. Jeder kann das machen, womit er sich am wohlsten fühlt ${{1}}.«\n- ZIT. AUS EINEM PORTFOLIO S[...]ENDER",
+      "id": [
+        "288322"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:288323]\n[%][%LERNSEITS, NICHT LEHRSEITS DENKEN]\nSo wie ich als Lehrer und Schulleiter die Kinder und Jugendlichen stets im Zentrum unserer Beziehungen gesehen habe, so betrachte ich auch die Studierenden. Die Konsequenz daraus ist, dass die Ziele der Lernprozesse immer weniger von den Lehrenden und zunehmend von den Lernenden definiert werden, der Ausgang der Lernprozesse offener wird, ja letztlich die Lehrenden in diesen Prozessen selbst zu Lernenden werden und mit den anderen Lernenden über die gemeinsamen Ergebnisse staunen. Es geht nicht mehr darum, eine Lerneinheit so zu planen, dass die Lernenden durch einzelne Schritte geführt werden, deren Ergebnis dann in einem schon vorgedachten fertigen Tafelbild und einer Hausaufgabe münden, sondern dass die Lehrenden die Sequenzen so planen, dass es anteilig mindestens gleichrangige Freiräume für die Lernenden gibt, in denen sie kollaborativ über das diskutieren können, was ihnen in den Lernsituationen angeboten wurde, und in denen sie ihre eigenen Lernwege gehen, sich mit eigenen Schwerpunkten beschäftigen können. Die Offenheit der Planungen entscheidet über die Glaubhaftigkeit dieser Prozesse. Sie müssen sich gleichberechtigt auf der einen Seite mit den Inhalten und auf der anderen mit den Interessen und individuellen Dispositionen der Lernenden beschäftigen. Wir müssen mit unseren Lernimpulsen da anknüpfen, wo die Lernenden sich befinden, da, wo wir ihr Interesse, ihre Freuden, Ängste und Unsicherheiten vermuten. Das ist nicht leicht, kostet manchmal auch nachts Gedanken. Einfacher wird es, wenn wir die Lernenden in die Planung einbeziehen.\nEs geht um die Wandlung von Subjekt-Objekt-Beziehungen in Subjekt-Subjekt-Beziehungen, nicht darum, die Lehrer:innenausbildung durch einen neuen Inhalt »Beziehungen« zu ergänzen, sondern um einen kompletten Kulturwandel. Studierende und Referendar:innen sollten in ihrer Ausbildung eine Beziehungsgestaltung erleben, die sie an ihren künftigen Arbeitsplatz und in ihr persönliches Leben mitnehmen können (Steinl/Vogelsaenger 2020).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "So wie ich als Lehrer und Schulleiter die Kinder und Jugendlichen stets im Zentrum unserer Beziehungen gesehen habe, so betrachte ich auch die Studierenden. Die Konsequenz daraus ist, dass die Ziele der Lernprozesse immer weniger von den Lehrenden und zunehmend von den Lernenden definiert werden, der Ausgang der Lernprozesse offener wird, ja letztlich die Lehrenden in diesen Prozessen selbst zu Lernenden werden und mit den anderen Lernenden über die gemeinsamen Ergebnisse staunen. Es geht nicht mehr darum, eine Lerneinheit so zu planen, dass die Lernenden durch einzelne Schritte geführt werden, deren Ergebnis dann in einem schon vorgedachten fertigen Tafelbild und einer Hausaufgabe münden, sondern dass die Lehrenden die Sequenzen so planen, dass es anteilig mindestens gleichrangige Freiräume für die Lernenden gibt, in denen sie kollaborativ über das diskutieren können, was ihnen in den Lernsituationen angeboten wurde, und in denen sie ihre eigenen Lernwege gehen, sich mit eigenen Schwerpunkten beschäftigen können. Die Offenheit der Planungen entscheidet über die Glaubhaftigkeit dieser Prozesse. Sie müssen sich gleichberechtigt auf der einen Seite mit den Inhalten und auf der anderen mit den Interessen und individuellen Dispositionen der Lernenden beschäftigen. Wir müssen mit unseren Lernimpulsen da anknüpfen, wo die Lernenden sich befinden, da, wo wir ihr Interesse, ihre Freuden, Ängste und Unsicherheiten vermuten. Das ist nicht leicht, kostet manchmal auch nachts Gedanken. Einfacher wird es, wenn wir die Lernenden in die Planung einbeziehen.\nEs geht um die Wandlung von Subjekt-Objekt-Beziehungen in Subjekt-Subjekt-Beziehungen, nicht darum, die Lehrer:innenausbildung durch einen neuen Inhalt »Beziehungen« zu ergänzen, sondern um einen kompletten Kulturwandel. Studierende und Referendar:innen sollten in ihrer Ausbildung eine Beziehungsgestaltung erleben, die sie an ihren künftigen Arbeitsplatz und in ihr persönliches Leben mitnehmen können (Steinl/Vogelsaenger 2020).",
+      "id": [
+        "288323"
+      ],
+      "lead": "LERNSEITS, NICHT LEHRSEITS DENKEN"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark--]\n[@id:288324]\nReferendar:innen erlernen nur selten Strategien, die Kommunikation mit Kindern und Jugendlichen, Kolleg:innen und Eltern beziehungsförderlich zu gestalten.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Referendar:innen erlernen nur selten Strategien, die Kommunikation mit Kindern und Jugendlichen, Kolleg:innen und Eltern beziehungsförderlich zu gestalten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "288324"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:288325]\n**WOLFGANG VOGELSAENGER** war von 2002 bis 2018 Schulleiter der Georg-Christoph-Lichtenberg-Gesamtschule in Göttingen-Geismar, bis 2021 verantwortlich für das Thema »Beziehungen« in der Deutschen Schulakademie und leitet derzeit das Seminar »Beziehungen professionell gestalten« an der Universität Göttingen.\n↗ wolfgang.vogelsaenger@web.de",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "**WOLFGANG VOGELSAENGER** war von 2002 bis 2018 Schulleiter der Georg-Christoph-Lichtenberg-Gesamtschule in Göttingen-Geismar, bis 2021 verantwortlich für das Thema »Beziehungen« in der Deutschen Schulakademie und leitet derzeit das Seminar »Beziehungen professionell gestalten« an der Universität Göttingen.\n↗ wolfgang.vogelsaenger@web.de",
+      "id": [
+        "288325"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:288326]\n[%][%Literatur]\n• Agostini, Evi/Risse, Erika/Schratz, Michael (2018): Lernseits denken, erfolgreich unterrichten. Hamburg: AOL-Verlag.\n• Klein, Jochen/Riekmann, Barbara/Vogelsaenger, Wolfgang (2018): Beziehungen professionell gestalten. Empfehlungen der Deutschen Schulakademie für die Gestaltung professioneller Beziehungen in der Schule; ==www.deutsche-schulakademie.de/media/393/download?attachment==|link:https://www.bosch-stiftung.de/de/projekt/die-deutsche-schulakademie|\n• Schlömerkemper, Jörg/Winkel, Klaus (2009): Lernen im TeamKleingruppen-Modell. Biografische und empirische Untersuchungen zum Sozialen Lernen in der Integrierten Gesamtschule Göttingen-Geismar. Göttingen; ==www.jschloe.de/2009_TKM-Buch.pdf==|link:https://www.jschloe.de/2009_TKM-Buch.pdf|\n• Steinl, Vincent/Vogelsaenger, Wolfgang (2020): Didaktik und pädagogische Beziehungen in Zeiten der Pandemie. Ein Praxisbericht. In: Frohe, Julia/Heinrich, Martin (Hrsg.): Schulische Bildung in Zeiten der Pandemie. Befunde, Konzepte und Erfahrungen mit Blick auf Schul- und Unterrichtsorganisation, Bildungsgerechtigkeit und Lehrpraxis. Zeitschrift für Schul- und Professionsentwicklung Jg. 2, H. 6/2020, S. 175–192; ==www.pflb-journal.de/index.php/pflb/article/view/3910==|link:https://www.pflb-journal.de/index.php/pflb/article/view/3910|\n• Vogelsaenger, Wolfgang (2022a): Ungewissheit, Beziehungen und die demokratische Schule. In: Beutel, Silvia-Iris/Rademacher, Helmolt (Hrsg.): Ungewissheit. Jahrbuch Demokratie in Schule und Bildung, Bd. 9/2022 [in Vorbereitung].\n• Vogelsaenger, Wolfgang (2022b): Anerkennung und Missachtung in der Schule – zur Biografiearbeit von Lehramtsstudierenden. In: Die Materialwerkstatt. Zeitschrift für Konzepte und Arbeitsmaterialien für Lehrer:innenbildung und Unterricht, Bd. 4/2022 [in Vorbereitung].",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "• Agostini, Evi/Risse, Erika/Schratz, Michael (2018): Lernseits denken, erfolgreich unterrichten. Hamburg: AOL-Verlag.\n• Klein, Jochen/Riekmann, Barbara/Vogelsaenger, Wolfgang (2018): Beziehungen professionell gestalten. Empfehlungen der Deutschen Schulakademie für die Gestaltung professioneller Beziehungen in der Schule; ==www.deutsche-schulakademie.de/media/393/download?attachment==|link:https://www.bosch-stiftung.de/de/projekt/die-deutsche-schulakademie|\n• Schlömerkemper, Jörg/Winkel, Klaus (2009): Lernen im TeamKleingruppen-Modell. Biografische und empirische Untersuchungen zum Sozialen Lernen in der Integrierten Gesamtschule Göttingen-Geismar. Göttingen; ==www.jschloe.de/2009_TKM-Buch.pdf==|link:https://www.jschloe.de/2009_TKM-Buch.pdf|\n• Steinl, Vincent/Vogelsaenger, Wolfgang (2020): Didaktik und pädagogische Beziehungen in Zeiten der Pandemie. Ein Praxisbericht. In: Frohe, Julia/Heinrich, Martin (Hrsg.): Schulische Bildung in Zeiten der Pandemie. Befunde, Konzepte und Erfahrungen mit Blick auf Schul- und Unterrichtsorganisation, Bildungsgerechtigkeit und Lehrpraxis. Zeitschrift für Schul- und Professionsentwicklung Jg. 2, H. 6/2020, S. 175–192; ==www.pflb-journal.de/index.php/pflb/article/view/3910==|link:https://www.pflb-journal.de/index.php/pflb/article/view/3910|\n• Vogelsaenger, Wolfgang (2022a): Ungewissheit, Beziehungen und die demokratische Schule. In: Beutel, Silvia-Iris/Rademacher, Helmolt (Hrsg.): Ungewissheit. Jahrbuch Demokratie in Schule und Bildung, Bd. 9/2022 [in Vorbereitung].\n• Vogelsaenger, Wolfgang (2022b): Anerkennung und Missachtung in der Schule – zur Biografiearbeit von Lehramtsstudierenden. In: Die Materialwerkstatt. Zeitschrift für Konzepte und Arbeitsmaterialien für Lehrer:innenbildung und Unterricht, Bd. 4/2022 [in Vorbereitung].",
+      "id": [
+        "288326"
+      ],
+      "lead": "Literatur"
+    }
+  }
+]

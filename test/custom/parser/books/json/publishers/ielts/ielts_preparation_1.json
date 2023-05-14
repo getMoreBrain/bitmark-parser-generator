@@ -1,0 +1,2424 @@
+[
+  {
+    "bitmark": "[.book]\r\n[@id:291542]\r\n[@externalId:e-ielts-preparation-1_epfarbicerfl]\r\n[#IELTS Preparation 1]\r\n[@language:en]\r\n[@coverImage:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_1.png]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291542"
+      ],
+      "externalId": [
+        "e-ielts-preparation-1_epfarbicerfl"
+      ],
+      "title": "IELTS Preparation 1",
+      "language": [
+        "en"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_1.png"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291543]\r\n[▼ch-1]\r\n[#IELTS Listening 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291543"
+      ],
+      "anchor": "ch-1",
+      "title": "IELTS Listening 1"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291544]\r\n[▼ch-1-PTy]\r\n[##Section 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291544"
+      ],
+      "anchor": "ch-1-PTy",
+      "title": "Section 1"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:291545]\r\n[%][%Listening Tip]\r\nIn the IELTS Listening paper, Sections 1 and 3 are conversations between two or three people. Sections 2 and 4 are monologues with only one main speaker. Sometimes, you may hear another speaker introducing the talk or asking questions.\r\n\r\nRelated Topic: ==Listening Preparation==|link:https://www.ielts-writing.info/EXAM/IELTS-listening-preparation/|",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "In the IELTS Listening paper, Sections 1 and 3 are conversations between two or three people. Sections 2 and 4 are monologues with only one main speaker. Sometimes, you may hear another speaker introducing the talk or asking questions.\r\n\r\nRelated Topic: ==Listening Preparation==|link:https://www.ielts-writing.info/EXAM/IELTS-listening-preparation/|",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291545"
+      ],
+      "lead": "Listening Tip"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&audio]\r\n[@id:291546]\r\n[%][%Questions 1-7]\r\n[!Complete the form below, using NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.]\r\n[&audio:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_ielts_mc_pt01.mp3]\r\n\r\n**Travel Safe**\r\nINSURANCE PLC\r\n\r\n**Department**: Motor Insurance\r\n**Client details**:\r\n**Name**: Elisabeth [_ Ricard]\r\n**Date of birth**: 8.10.1975\r\n**Address**: [_60 Forest Road] (street) Callington (town)\r\n**Policy number**: [_CZ8809]\r\n\r\n**Accident details**:\r\n**Date**: [_12th September][_12.09]\r\n**Time**: Approx. [_8.30 pm][_ half past eight]\r\n**Supporting evidence**: [_police report]\r\n**Medical problems (if any)**: [_ minor] injuries",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**Travel Safe**\r\nINSURANCE PLC\r\n\r\n**Department**: Motor Insurance\r\n**Client details**:\r\n**Name**: Elisabeth {0}\r\n**Date of birth**: 8.10.1975\r\n**Address**: {1} (street) Callington (town)\r\n**Policy number**: {2}\r\n\r\n**Accident details**:\r\n**Date**: {3}\r\n**Time**: Approx. {4}\r\n**Supporting evidence**: {5}\r\n**Medical problems (if any)**: {6} injuries",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291546"
+      ],
+      "lead": "Questions 1-7",
+      "instruction": "Complete the form below, using NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_ielts_mc_pt01.mp3"
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Ricard"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "60 Forest Road"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "CZ8809"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "12th September",
+            "12.09"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "8.30 pm",
+            "half past eight"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "police report"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "minor"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:291547]\r\n[%][%Listening Tip]\r\nIn the IELTS Listening exam, you may be asked to label a map or plan. In such questions, think of ways you can describe where places are before you listen. You will need to think of vocabulary for directions, for example: __on the left, first right, along the road__ and vocabulary for places or position, such as __opposite, next to, behind, at the end of the street__.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "In the IELTS Listening exam, you may be asked to label a map or plan. In such questions, think of ways you can describe where places are before you listen. You will need to think of vocabulary for directions, for example: __on the left, first right, along the road__ and vocabulary for places or position, such as __opposite, next to, behind, at the end of the street__.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291547"
+      ],
+      "lead": "Listening Tip"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\r\n[@id:291548]\r\n[%][%Questions 8-10]\r\n[!Label the diagram/plan below.\r\nWrite the correct letter, A-G, next to questions 8-10.]\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_1.png|@width:716|\r\n\r\n**8** traffic lights [_G]\r\n\r\n**9** petrol station [_C]\r\n\r\n**10** blue van [_D]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_1.png|@width:716|\r\n\r\n**8** traffic lights {0}\r\n\r\n**9** petrol station {1}\r\n\r\n**10** blue van {2}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291548"
+      ],
+      "lead": "Questions 8-10",
+      "instruction": "Label the diagram/plan below.\r\nWrite the correct letter, A-G, next to questions 8-10.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "G"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "C"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "D"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291549]\r\n[▼ch-2]\r\n[#IELTS Listening 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291549"
+      ],
+      "anchor": "ch-2",
+      "title": "IELTS Listening 1"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291550]\r\n[▼ch-3]\r\n[##Section 2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291550"
+      ],
+      "anchor": "ch-3",
+      "title": "Section 2"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:291551]\r\n[%][%IELTS Tip]\r\nDon't worry about the parts of the test that are finished, or those yet to come. Concentrate fully on the module you have in front of you.\r\n\r\n**Sentence Completion TIP**: Be careful that what you write fits grammatically with the other words in the sentence and is spelled correctly.\r\n\r\nRelated Topic: ==Examiner-approved Listening tips==|link:https://www.ielts-writing.info/EXAM/ielts-preparation-tips/examiner-approved-listening-tips.html|",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "Don't worry about the parts of the test that are finished, or those yet to come. Concentrate fully on the module you have in front of you.\r\n\r\n**Sentence Completion TIP**: Be careful that what you write fits grammatically with the other words in the sentence and is spelled correctly.\r\n\r\nRelated Topic: ==Examiner-approved Listening tips==|link:https://www.ielts-writing.info/EXAM/ielts-preparation-tips/examiner-approved-listening-tips.html|",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291551"
+      ],
+      "lead": "IELTS Tip"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&audio]\r\n[@id:291552]\r\n[%][%Questions 11-14]\r\n[!Complete the sentences below, using NO MORE THAN THREE WORDS for each answer.]\r\n[&audio:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_ielts_mc_pt02.mp3]\r\n\r\n**11** Dormouse numbers have fallen [_across the world] as well as in the UK.\r\n\r\n**12** Dormice are about as heavy as two [_pound coins].\r\n\r\n**13** You are most likely to have seen a dormouse in a [_picture].\r\n\r\n**14** In the UK, dormice probably live in hedges and woods, and next to [_farmland].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**11** Dormouse numbers have fallen {0} as well as in the UK.\r\n\r\n**12** Dormice are about as heavy as two {1}.\r\n\r\n**13** You are most likely to have seen a dormouse in a {2}.\r\n\r\n**14** In the UK, dormice probably live in hedges and woods, and next to {3}.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291552"
+      ],
+      "lead": "Questions 11-14",
+      "instruction": "Complete the sentences below, using NO MORE THAN THREE WORDS for each answer.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_ielts_mc_pt02.mp3"
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "across the world"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "pound coins"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "picture"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "farmland"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\r\n[@id:291553]\r\n[%][%Questions 15-17]\r\n[!Label the identification sheet below.\r\n\r\nWrite the correct letter A-E next to questions 5-8.]\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_2.png|@width:804|\r\n\r\n**15** opened by woodmice [_E]\r\n\r\n**16** opened by voles [_A]\r\n\r\n**17** opened by dormice [_B]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_2.png|@width:804|\r\n\r\n**15** opened by woodmice {0}\r\n\r\n**16** opened by voles {1}\r\n\r\n**17** opened by dormice {2}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291553"
+      ],
+      "lead": "Questions 15-17",
+      "instruction": "Label the identification sheet below.\r\n\r\nWrite the correct letter A-E next to questions 5-8.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "E"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "A"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "B"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze]\r\n[@id:291554]\r\n[%][%Questions 18-20]\r\n[!Complete the summary below.\r\n\r\nUsing NO MORE THAN ONE WORD in each space.]\r\n\r\nIf you find nuts opened by dormice **18** [_record] where you found them. Put them into some kind of **19** [_container] and **20** [_label] them (name and address). Post them to Action for Wildlife.",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "If you find nuts opened by dormice **18** {0} where you found them. Put them into some kind of **19** {1} and **20** {2} them (name and address). Post them to Action for Wildlife.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291554"
+      ],
+      "lead": "Questions 18-20",
+      "instruction": "Complete the summary below.\r\n\r\nUsing NO MORE THAN ONE WORD in each space.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "record"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "container"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "label"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291555]\r\n[▼ch-4]\r\n[#IELTS Listening 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291555"
+      ],
+      "anchor": "ch-4",
+      "title": "IELTS Listening 1"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291556]\r\n[▼ch-5]\r\n[##Section 3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291556"
+      ],
+      "anchor": "ch-5",
+      "title": "Section 3"
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:291557]\r\n[%][%Listening Tip: matching]\r\nIn Section 3 of the Listening Module, you hear two, three or four people talking about an academic topic. They may be students or teachers. They could be talking about a particular course assignment or project, or a more general academic topic, such as study skills.\r\n\r\nThe numbered items appear in the order in which you hear them, but the options (A-C) do not. Make sure that you read all the options before the recording starts.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "In Section 3 of the Listening Module, you hear two, three or four people talking about an academic topic. They may be students or teachers. They could be talking about a particular course assignment or project, or a more general academic topic, such as study skills.\r\n\r\nThe numbered items appear in the order in which you hear them, but the options (A-C) do not. Make sure that you read all the options before the recording starts.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291557"
+      ],
+      "lead": "Listening Tip: matching"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&audio]\r\n[@id:291558]\r\n[%][%Questions 21-26]\r\n[!Which company website has the following features?]\r\n\r\n[&audio:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_ielts_mc_pt03.mp3]\r\n\r\nWrite the correct letter A, B or C in boxes 21-26 on your answer sheet.\r\n**A** Hills Cycles website\r\n**B** Wheels Unlimited website\r\n**C** Both websites\r\n\r\n**21** bicycle catalogue [_C]\r\n\r\n**22** price list [_C]\r\n\r\n**23** bicycle accessories [_B]\r\n\r\n**24** company history [_A]\r\n\r\n**25** online ordering [_B]\r\n\r\n**26** moving graphics [_A]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Write the correct letter A, B or C in boxes 21-26 on your answer sheet.\r\n**A** Hills Cycles website\r\n**B** Wheels Unlimited website\r\n**C** Both websites\r\n\r\n**21** bicycle catalogue {0}\r\n\r\n**22** price list {1}\r\n\r\n**23** bicycle accessories {2}\r\n\r\n**24** company history {3}\r\n\r\n**25** online ordering {4}\r\n\r\n**26** moving graphics {5}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291558"
+      ],
+      "lead": "Questions 21-26",
+      "instruction": "Which company website has the following features?",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_ielts_mc_pt03.mp3"
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "C"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "C"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "B"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "A"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "B"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "A"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice]\r\n[@id:291559]\r\n[%][%Questions 27-30]\r\n[!Choose the correct letter, A, B, or C.]\r\n===\r\n[!27 According to the tutor, the basic criterion for evaluating the websites should relate to]\r\n[-appearance.]\r\n[-ease of use.]\r\n[+target customers.]\r\n===\r\n[!28 On the subject of timing, the tutor says]\r\n[+the students' plan is appropriate.]\r\n[-the students' presentation will be too long.]\r\n[-the students can extend the presentation if necessary.]\r\n===\r\n[!29 Sarah and Jack will share the work by]\r\n[-speaking in short turns.]\r\n[-doing half the presentation each.]\r\n[+managing different aspects.]\r\n===\r\n[!30 The tutor advises Sarah and Jack not to]\r\n[-talk too much.]\r\n[+show complicated lists.]\r\n[-use a lot of visuals.]\r\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Choose the correct letter, A, B, or C.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "27 According to the tutor, the basic criterion for evaluating the websites should relate to",
+          "choices": [
+            {
+              "choice": "appearance.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "ease of use.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "target customers.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "28 On the subject of timing, the tutor says",
+          "choices": [
+            {
+              "choice": "the students' plan is appropriate.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "the students' presentation will be too long.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "the students can extend the presentation if necessary.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "29 Sarah and Jack will share the work by",
+          "choices": [
+            {
+              "choice": "speaking in short turns.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "doing half the presentation each.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "managing different aspects.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "30 The tutor advises Sarah and Jack not to",
+          "choices": [
+            {
+              "choice": "talk too much.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "show complicated lists.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "use a lot of visuals.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "291559"
+      ],
+      "lead": "Questions 27-30"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291560]\r\n[▼ch-6]\r\n[#IELTS Listening 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291560"
+      ],
+      "anchor": "ch-6",
+      "title": "IELTS Listening 1"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291561]\r\n[▼ch-7]\r\n[##Section 4]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291561"
+      ],
+      "anchor": "ch-7",
+      "title": "Section 4"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:291562]\r\n[%][%Listening Test Tip]\r\n• As the listening module of the exam involves listening, reading, hearing and writing skills, learn to use them simultaneously.\r\n• Concentrate on the questions one at a time, but be prepared for the next question. Look ahead if you have time.\r\n• Listen to the instructions on the tape as well. A general clue is usually given.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "• As the listening module of the exam involves listening, reading, hearing and writing skills, learn to use them simultaneously.\r\n• Concentrate on the questions one at a time, but be prepared for the next question. Look ahead if you have time.\r\n• Listen to the instructions on the tape as well. A general clue is usually given.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291562"
+      ],
+      "lead": "Listening Test Tip"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--&audio]\r\n[@id:291563]\r\n[%][%Questions 31-37]\r\n[!Answer the questions below.\r\n\r\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.]\r\n\r\n[&audio:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_ielts_mc_pt04.mp3]\r\n\r\n**31** Which elephants stay together all their life? [_adult females]\r\n\r\n**32** What are elephant family groups known as? [_bond groups]\r\n\r\n**33** When scientists tracked groups of elephants, which feature of behaviour did they notice? [_co-ordination][_co-ordination between families]\r\n\r\n**34** Which sense do elephants probably use to communicate over long distances? [_hearing]\r\n\r\n**35** What did American scientists do with a recording of elephant calls? [_broadcast it]\r\n\r\n**36** What did the elephants in the experiment rush to find? [_a female][_a female elephant]\r\n\r\n**37** What were scientists unable to do with the recording they had made? [_hear it]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "**31** Which elephants stay together all their life? {0}\r\n\r\n**32** What are elephant family groups known as? {1}\r\n\r\n**33** When scientists tracked groups of elephants, which feature of behaviour did they notice? {2}\r\n\r\n**34** Which sense do elephants probably use to communicate over long distances? {3}\r\n\r\n**35** What did American scientists do with a recording of elephant calls? {4}\r\n\r\n**36** What did the elephants in the experiment rush to find? {5}\r\n\r\n**37** What were scientists unable to do with the recording they had made? {6}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291563"
+      ],
+      "lead": "Questions 31-37",
+      "instruction": "Answer the questions below.\r\n\r\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/audios/exams_ielts_mc_pt04.mp3"
+        }
+      },
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "adult females"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "bond groups"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "co-ordination",
+            "co-ordination between families"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "hearing"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "broadcast it"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a female",
+            "a female elephant"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "hear it"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:291564]\r\n[%][%Listening Tip]\r\nIf you cannot choose between two answers for one question, write them both down for now. One might be the answer to a later question, then you will know you cannot choose it twice.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "If you cannot choose between two answers for one question, write them both down for now. One might be the answer to a later question, then you will know you cannot choose it twice.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291564"
+      ],
+      "lead": "Listening Tip"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\r\n[@id:291565]\r\n[%][%Questions 38-40]\r\n[!What does the lecturer say about each type of elephant call?\r\n\r\nChoose your answers from the box, and write the letters A-H next to questions 38-40.]\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_4.png|@width:500|\r\n\r\n**38** Greeting [_C]\r\n\r\n**39** Contact call [_F]\r\n\r\n**40** Summons to move on [_B]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_4.png|@width:500|\r\n\r\n**38** Greeting {0}\r\n\r\n**39** Contact call {1}\r\n\r\n**40** Summons to move on {2}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291565"
+      ],
+      "lead": "Questions 38-40",
+      "instruction": "What does the lecturer say about each type of elephant call?\r\n\r\nChoose your answers from the box, and write the letters A-H next to questions 38-40.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "C"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "F"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "B"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291566]\r\n[▼ch-8]\r\n[#IELTS Reading 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291566"
+      ],
+      "anchor": "ch-8",
+      "title": "IELTS Reading 1"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291567]\r\n[▼ch-9]\r\n[##Passage 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291567"
+      ],
+      "anchor": "ch-9",
+      "title": "Passage 1"
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:291568]\r\n[%][%Reading Tip: matching headings]\r\nYou should read the headings before reading the text to focus your mind on the main ideas you need to look for.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "You should read the headings before reading the text to focus your mind on the main ideas you need to look for.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291568"
+      ],
+      "lead": "Reading Tip: matching headings"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\r\n[@id:291569]\r\n[%][%Questions 1-9]\r\n[!The Reading Passage has nine paragraphs A–I.\r\n\r\nChoose the correct heading for each paragraph from the list of headings below.]\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_5.png|@width:500|\r\n\r\n**1** Paragraph A [_v]\r\n\r\n**2** Paragraph B [_viii]\r\n\r\n**3** Paragraph C [_xi]\r\n\r\n**4** Paragraph D [_ii]\r\n\r\n**5** Paragraph E [_iv]\r\n\r\n**6** Paragraph F [_ix]\r\n\r\n**7** Paragraph G [_i]\r\n\r\n**8** Paragraph H [_xii]\r\n\r\n**9** Paragraph I [_vii]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_5.png|@width:500|\r\n\r\n**1** Paragraph A {0}\r\n\r\n**2** Paragraph B {1}\r\n\r\n**3** Paragraph C {2}\r\n\r\n**4** Paragraph D {3}\r\n\r\n**5** Paragraph E {4}\r\n\r\n**6** Paragraph F {5}\r\n\r\n**7** Paragraph G {6}\r\n\r\n**8** Paragraph H {7}\r\n\r\n**9** Paragraph I {8}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291569"
+      ],
+      "lead": "Questions 1-9",
+      "instruction": "The Reading Passage has nine paragraphs A–I.\r\n\r\nChoose the correct heading for each paragraph from the list of headings below.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "v"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "viii"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "xi"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ii"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "iv"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "ix"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "i"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "xii"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{8}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "vii"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:291570]\r\n[%][%Reading Tip: multiple-choice questions]\r\n• Multiple-choice questions will commonly include four choices, which will be related to the information mentioned in the text. A process of elimination of the incorrect answers is useful in helping you to reduce the number of errors you make.\r\n• You should read the question carefully, and then consider the information given for each choice. The ideas in the choices may not be mentions at all, be irrelevant to the question, refer to someone or something else, or be the opposite in meaning to the text.\r\n• Through understanding and eliminating incorrect choices, you have a better chance of choosing the correct answer under time pressure. A 50/50 chance is good, eliminating all the incorrect answer is best.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "• Multiple-choice questions will commonly include four choices, which will be related to the information mentioned in the text. A process of elimination of the incorrect answers is useful in helping you to reduce the number of errors you make.\r\n• You should read the question carefully, and then consider the information given for each choice. The ideas in the choices may not be mentions at all, be irrelevant to the question, refer to someone or something else, or be the opposite in meaning to the text.\r\n• Through understanding and eliminating incorrect choices, you have a better chance of choosing the correct answer under time pressure. A 50/50 chance is good, eliminating all the incorrect answer is best.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291570"
+      ],
+      "lead": "Reading Tip: multiple-choice questions"
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice]\r\n[@id:291571]\r\n[%][%Questions 10-13]\r\n[!Choose the correct letter, A, B, C or D.]\r\n===\r\n[!**10** What proportion of poor households get all their income from reef products?]\r\n[+A 12%]\r\n[-B 20%]\r\n[-C 29%]\r\n[-D 59%]\r\n===\r\n[!**11** Kat moodsal fishing]\r\n[-A is a seasonal activity.]\r\n[-B is a commercial activity.]\r\n[+C requires little investment.]\r\n[-D requires use of a rowing boat.]\r\n===\r\n[!**12** Which characteristic of present-day islanders do the writers describe?]\r\n[-A physical strength]\r\n[+B fishing expertise]\r\n[-C courage]\r\n[-D imagination]\r\n===\r\n[!**13** What do the writers say about the system for using the reef on Agatti?]\r\n[-A Fish catches are shared equally.]\r\n[-B The reef owner issues permits.]\r\n[-C There are frequent disputes.]\r\n[-D There is open access.]\r\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Choose the correct letter, A, B, C or D.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "**10** What proportion of poor households get all their income from reef products?",
+          "choices": [
+            {
+              "choice": "A 12%",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "B 20%",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "C 29%",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "D 59%",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "**11** Kat moodsal fishing",
+          "choices": [
+            {
+              "choice": "A is a seasonal activity.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "B is a commercial activity.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "C requires little investment.",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "D requires use of a rowing boat.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "**12** Which characteristic of present-day islanders do the writers describe?",
+          "choices": [
+            {
+              "choice": "A physical strength",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "B fishing expertise",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "C courage",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "D imagination",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        },
+        {
+          "item": "",
+          "instruction": "**13** What do the writers say about the system for using the reef on Agatti?",
+          "choices": [
+            {
+              "choice": "A Fish catches are shared equally.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "B The reef owner issues permits.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "C There are frequent disputes.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "D There is open access.",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "291571"
+      ],
+      "lead": "Questions 10-13"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291572]\r\n[▼ch-10]\r\n[#IELTS Reading 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291572"
+      ],
+      "anchor": "ch-10",
+      "title": "IELTS Reading 1"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291573]\r\n[▼ch-11]\r\n[##Passage 2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291573"
+      ],
+      "anchor": "ch-11",
+      "title": "Passage 2"
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:291574]\r\n[%][%Reading Tip: summary completion]\r\nIn one type of summary task, you have to complete a gapped summary of part or all of the text using words from a box. Don't always expect words or phrases in the box to be the same as in the text. They may be words with similar meaning or the same word in a different form, so read both the text and the summary carefully.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "In one type of summary task, you have to complete a gapped summary of part or all of the text using words from a box. Don't always expect words or phrases in the box to be the same as in the text. They may be words with similar meaning or the same word in a different form, so read both the text and the summary carefully.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291574"
+      ],
+      "lead": "Reading Tip: summary completion"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\r\n[@id:291575]\r\n[%][%Questions 14-19]\r\n[!Complete the summary below using words from the box.]\r\n==Reading paper for this section==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_Passage_2.htm|\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_6.png|@width:1428|\r\n\r\n**Singapore**\r\nWhen Singapore became an independent, self-sufficient state it decided to build up its **14** [_industry], and government organisations were created to support this policy. However, this initial plan met with limited success due to a shortage of **15** [_labour] and land. It was therefore decided to develop the **16** [_service] sector of the economy instead.\r\n\r\nSingapore is now a leading city, but planners are working to ensure that its economy continues to grow. In contrast to previous policies, there is emphasis on **17** [_decentralisation]. In addition, land will be recovered to extend the financial district, and provide **18** [_entertainment] as well as housing. The government also plans to improve the quality of Singapore's environment, but due to the shortage of natural landscapes it will concentrate instead on what it calls **19** [_beautification].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "==Reading paper for this section==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_Passage_2.htm|\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_6.png|@width:1428|\r\n\r\n**Singapore**\r\nWhen Singapore became an independent, self-sufficient state it decided to build up its **14** {0}, and government organisations were created to support this policy. However, this initial plan met with limited success due to a shortage of **15** {1} and land. It was therefore decided to develop the **16** {2} sector of the economy instead.\r\n\r\nSingapore is now a leading city, but planners are working to ensure that its economy continues to grow. In contrast to previous policies, there is emphasis on **17** {3}. In addition, land will be recovered to extend the financial district, and provide **18** {4} as well as housing. The government also plans to improve the quality of Singapore's environment, but due to the shortage of natural landscapes it will concentrate instead on what it calls **19** {5}.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291575"
+      ],
+      "lead": "Questions 14-19",
+      "instruction": "Complete the summary below using words from the box.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "industry"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "labour"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "service"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "decentralisation"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "entertainment"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "beautification"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\r\n[@id:291576]\r\n[%][%Questions 20-26]\r\n[!Do the following statements agree with the information given in ==Reading Passage 2==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_Passage_2.htm|?]\r\n\r\n__In boxes 20-26 on your answer sheet write__\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_11.png|@width:500|\r\n\r\n**20** After 1965, the Singaporean government switched the focus of the island's economy. [_TRUE]\r\n\r\n**21** The creation of Singapore's financial centre was delayed while a suitable site was found. [_FALSE]\r\n\r\n**22** Singapore's four regional centres will eventually be the same size as its central business district. [_NOT GIVEN]\r\n\r\n**23** Planners have modelled new urban developments on other coastal cities. [_TRUE]\r\n\r\n**24** Plants and trees are amongst the current priorities for Singapore's city planners. [_TRUE]\r\n\r\n**25** The government has enacted new laws to protect Singapore's old buildings. [_NOT GIVEN]\r\n\r\n**26** Singapore will find it difficult to compete with leading cities in other parts of the world. [_FALSE]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "__In boxes 20-26 on your answer sheet write__\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_11.png|@width:500|\r\n\r\n**20** After 1965, the Singaporean government switched the focus of the island's economy. {0}\r\n\r\n**21** The creation of Singapore's financial centre was delayed while a suitable site was found. {1}\r\n\r\n**22** Singapore's four regional centres will eventually be the same size as its central business district. {2}\r\n\r\n**23** Planners have modelled new urban developments on other coastal cities. {3}\r\n\r\n**24** Plants and trees are amongst the current priorities for Singapore's city planners. {4}\r\n\r\n**25** The government has enacted new laws to protect Singapore's old buildings. {5}\r\n\r\n**26** Singapore will find it difficult to compete with leading cities in other parts of the world. {6}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291576"
+      ],
+      "lead": "Questions 20-26",
+      "instruction": "Do the following statements agree with the information given in ==Reading Passage 2==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_Passage_2.htm|?",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "TRUE"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "FALSE"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "NOT GIVEN"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "TRUE"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "TRUE"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "NOT GIVEN"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "FALSE"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291577]\r\n[▼ch-12]\r\n[#IELTS Reading 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291577"
+      ],
+      "anchor": "ch-12",
+      "title": "IELTS Reading 1"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291578]\r\n[▼ch-13]\r\n[##Passage 3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291578"
+      ],
+      "anchor": "ch-13",
+      "title": "Passage 3"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\r\n[@id:291579]\r\n[%][%Questions 27-33]\r\n[!Reading ==Passage 3==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_Passage_3.htm| has nine paragraphs, labelled **A–I**.\r\n\r\nWhich paragraphs contains the following information?\r\n\r\nWrite the correct letter **A-I** in boxes **27-33** on your answer sheet.]\r\n\r\n**NB** __You may use any letter more than once__.\r\n\r\n**27** an example of a food which particularly benefits from the addition of spices. [_D]\r\n\r\n**28** a range of methods for making food safer to eat. [_I]\r\n\r\n**29** a comparison between countries with different climate types. [_F]\r\n\r\n**30** an explanation of how people first learned to select appropriate spices. [_G]\r\n\r\n**31** a method of enhancing the effectiveness of individual spices. [_D]\r\n\r\n**32** the relative effectiveness of certain spices against harmful organisms. [_C]\r\n\r\n**33** the possible origins of a dislike for unspiced foods. [_H]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "**NB** __You may use any letter more than once__.\r\n\r\n**27** an example of a food which particularly benefits from the addition of spices. {0}\r\n\r\n**28** a range of methods for making food safer to eat. {1}\r\n\r\n**29** a comparison between countries with different climate types. {2}\r\n\r\n**30** an explanation of how people first learned to select appropriate spices. {3}\r\n\r\n**31** a method of enhancing the effectiveness of individual spices. {4}\r\n\r\n**32** the relative effectiveness of certain spices against harmful organisms. {5}\r\n\r\n**33** the possible origins of a dislike for unspiced foods. {6}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291579"
+      ],
+      "lead": "Questions 27-33",
+      "instruction": "Reading ==Passage 3==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_Passage_3.htm| has nine paragraphs, labelled **A–I**.\r\n\r\nWhich paragraphs contains the following information?\r\n\r\nWrite the correct letter **A-I** in boxes **27-33** on your answer sheet.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "D"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "I"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "F"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "G"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "D"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "C"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "H"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:291580]\r\n[%][%IELTS Reading Tip]\r\nSome of you may have difficulty keeping within the word limit. Try to focus on using noun phrases. If you find yourself getting stuck, you can write longer responses initially and edit them down to three or two words once you have answered all of the questions.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Some of you may have difficulty keeping within the word limit. Try to focus on using noun phrases. If you find yourself getting stuck, you can write longer responses initially and edit them down to three or two words once you have answered all of the questions.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291580"
+      ],
+      "lead": "IELTS Reading Tip"
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark++]\r\n[@id:291581]\r\n[%][%Questions 34-39]\r\n[!Answer the questions below with words taken from Reading ==Passage 3==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_Passage_3.htm|.\r\n\r\nUse **NO MORE THAN TWO WORDS** for each answer.]\r\n\r\n**34** According to the writers, what might the use of spices in cooking help people to avoid? [_food poisoning]\r\n\r\n**35** What proportion of bacteria in food do four of the spices tested destroy? [_100%][_100 percent]\r\n\r\n**36** Which food often contains a spice known as ‘quatre epices’? [_sausage][_sausages]\r\n\r\n**37** Which types of country use the fewest number of spices in cooking? [_cooler ones]\r\n\r\n**38** What might food aversions often be associated with? [_unspiced foods]\r\n\r\n**39** Apart from spices, which substance is used in all countries to preserve food? [_salt]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark++",
+      "body": "**34** According to the writers, what might the use of spices in cooking help people to avoid? {0}\r\n\r\n**35** What proportion of bacteria in food do four of the spices tested destroy? {1}\r\n\r\n**36** Which food often contains a spice known as ‘quatre epices’? {2}\r\n\r\n**37** Which types of country use the fewest number of spices in cooking? {3}\r\n\r\n**38** What might food aversions often be associated with? {4}\r\n\r\n**39** Apart from spices, which substance is used in all countries to preserve food? {5}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291581"
+      ],
+      "lead": "Questions 34-39",
+      "instruction": "Answer the questions below with words taken from Reading ==Passage 3==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_Passage_3.htm|.\r\n\r\nUse **NO MORE THAN TWO WORDS** for each answer.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "food poisoning"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "100%",
+            "100 percent"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "sausage",
+            "sausages"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "cooler ones"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "unspiced foods"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "salt"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.multiple-choice:bitmark++]\r\n[@id:291582]\r\n[%][%Question 40]\r\n[!Choose the correct letter, **A, B, C or D**.]\r\n===\r\n[!40 Which is the best title for Reading ==Passage 3==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_Passage_3.htm|?]\r\n\r\n[+**A** The function of spices in food preparation]\r\n[-**B** A history of food preservation techniques]\r\n[-**C** Traditional recipes from around the world]\r\n[-**D** An analysis of the chemical properties of spice plants]\r\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark++",
+      "item": "",
+      "instruction": "Choose the correct letter, **A, B, C or D**.",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "40 Which is the best title for Reading ==Passage 3==|link:https://www.ielts-writing.info/EXAM/docs/Reading/IELTS_Reading_Passage_3.htm|?",
+          "choices": [
+            {
+              "choice": "**A** The function of spices in food preparation",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "**B** A history of food preservation techniques",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "**C** Traditional recipes from around the world",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "choice": "**D** An analysis of the chemical properties of spice plants",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "291582"
+      ],
+      "lead": "Question 40"
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\r\\n'",
+        "line": 7,
+        "column": 0,
+        "errorLine": "\r"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291583]\r\n[▼ch-14]\r\n[#IELTS Writing 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291583"
+      ],
+      "anchor": "ch-14",
+      "title": "IELTS Writing 1"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291584]\r\n[▼ch-15]\r\n[##Task 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291584"
+      ],
+      "anchor": "ch-15",
+      "title": "Task 1"
+    }
+  },
+  {
+    "bitmark": "[.info]\r\n[@id:291585]\r\n[%][%Writing Tip]\r\nDo not write a rough draft, then re-write it. You will waste valuable time. Use time at the end to check for small errors: verb agreements, plurals, punctuation, verb tense. These things are easily corrected and effect what mark your work will receive.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark--",
+      "body": "Do not write a rough draft, then re-write it. You will waste valuable time. Use time at the end to check for small errors: verb agreements, plurals, punctuation, verb tense. These things are easily corrected and effect what mark your work will receive.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291585"
+      ],
+      "lead": "Writing Tip"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark++]\r\n[@id:291586]\r\n[!Write at least 150 words.]\r\nYou should spend about 20 minutes on this task.\r\n\r\n__The graph below shows the total value of exports and the value of fuel, food and manufactured goods exported by one country from 2000 to 2005.\r\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.__\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_8.png|@width:1004|",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark++",
+      "instruction": "Write at least 150 words.",
+      "partialAnswer": "",
+      "body": "You should spend about 20 minutes on this task.\r\n\r\n__The graph below shows the total value of exports and the value of fuel, food and manufactured goods exported by one country from 2000 to 2005.\r\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.__\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_8.png|@width:1004|",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291586"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:291587]\r\n[%][%Model Answer]\r\nThe graph shows the value of fuel, food, manufactured goods and the total value of exports in one country from 2000 to 2005.\r\n\r\nAs we can see the total value of exports grows up during last four years. In year 2000; 2001 and 2002 the total export was droping down, but after that situation gets better and the total export in year 2005 is nearly 450,000 million dollars.\r\n\r\nWe can see that the export of food is almost the same for all years, every year below 10,000 millions dollars. The export of fuel in year 2000 was about 45.000 million dollars but it was getting down and in year 2005 was only half this amount, what is mean 20.000 millions dollars. Manufactured food in the year 2000 was a little below 20.000 millions dollars and in the year 2005 a little above 20.000 million dollars.\r\n\r\n(145 words)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The graph shows the value of fuel, food, manufactured goods and the total value of exports in one country from 2000 to 2005.\r\n\r\nAs we can see the total value of exports grows up during last four years. In year 2000; 2001 and 2002 the total export was droping down, but after that situation gets better and the total export in year 2005 is nearly 450,000 million dollars.\r\n\r\nWe can see that the export of food is almost the same for all years, every year below 10,000 millions dollars. The export of fuel in year 2000 was about 45.000 million dollars but it was getting down and in year 2005 was only half this amount, what is mean 20.000 millions dollars. Manufactured food in the year 2000 was a little below 20.000 millions dollars and in the year 2005 a little above 20.000 million dollars.\r\n\r\n(145 words)",
+      "id": [
+        "291587"
+      ],
+      "lead": "Model Answer"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:291588]\r\n[%][%Commentary]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "291588"
+      ],
+      "lead": "Commentary"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:291589]\r\n[%][%Task Achievement]\r\nThe summary is factually accurate, and statements are supported by relevant data. In some respects, the writer focuses on the less interesting information in the graph and neglects to highlight more significant features. In particular, although the overall picture is summarised in the second paragraph, the writer fails to make explicit comparisons between the different export groups in the final paragraph, or summarise the main trends in those areas.\r\n\r\nThe first paragraph restates the task rubric with minor modification, so this loses marks in the assessment and a penalty is given for being underlength (145 words).",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The summary is factually accurate, and statements are supported by relevant data. In some respects, the writer focuses on the less interesting information in the graph and neglects to highlight more significant features. In particular, although the overall picture is summarised in the second paragraph, the writer fails to make explicit comparisons between the different export groups in the final paragraph, or summarise the main trends in those areas.\r\n\r\nThe first paragraph restates the task rubric with minor modification, so this loses marks in the assessment and a penalty is given for being underlength (145 words).",
+      "id": [
+        "291589"
+      ],
+      "lead": "Task Achievement"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:291590]\r\n[%][%Coherence and Cohesion]\r\nInformation is organised clearly and logically, and paragraphing is appropriate. Relationships within sentences are clearly signalled, for example __(that) situation__ in the second paragraph. Phrases are also reduced as appropriate, for example __and in the year 2005 a little above ...__.\r\n\r\nThe answer may have attracted a higher band in this category if more use had been made of ==Linking Words==|link:https://www.ielts-writing.info/EXAM/grammar/linking-words.html| to mark topic shifts, e.g. on the other hand in the third paragraph.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Information is organised clearly and logically, and paragraphing is appropriate. Relationships within sentences are clearly signalled, for example __(that) situation__ in the second paragraph. Phrases are also reduced as appropriate, for example __and in the year 2005 a little above ...__.\r\n\r\nThe answer may have attracted a higher band in this category if more use had been made of ==Linking Words==|link:https://www.ielts-writing.info/EXAM/grammar/linking-words.html| to mark topic shifts, e.g. on the other hand in the third paragraph.",
+      "id": [
+        "291590"
+      ],
+      "lead": "Coherence and Cohesion"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:291591]\r\n[%][%Lexical Resource]\r\nThe range of vocabulary used in this answer is fairly narrow. To some extent this is probably a reflection of its shortness, but omissions are evident too. The writer does not always seem to use the most appropriate lexis for this type of summary, and resorts to phrases such as __droping down, grows up__, and __gets better.__ The range of adverbs at the writer’s disposal also seems to be limited: using words such as __sharply__ or __slightly__ would have made a more accurate and suitable response. There is only one isolated spelling error: **droping**.\r\n\r\nDespite some of the inadequacies referred to above, the answer is readily understandable.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The range of vocabulary used in this answer is fairly narrow. To some extent this is probably a reflection of its shortness, but omissions are evident too. The writer does not always seem to use the most appropriate lexis for this type of summary, and resorts to phrases such as __droping down, grows up__, and __gets better.__ The range of adverbs at the writer’s disposal also seems to be limited: using words such as __sharply__ or __slightly__ would have made a more accurate and suitable response. There is only one isolated spelling error: **droping**.\r\n\r\nDespite some of the inadequacies referred to above, the answer is readily understandable.",
+      "id": [
+        "291591"
+      ],
+      "lead": "Lexical Resource"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:291592]\r\n[%][%Grammatical Range and Accuracy]\r\nIn such a short answer there is not much scope for structural range, but the grammar is mainly accurate and produces an impression of fluency. The main problem is the inconsistent choice of verb forms: the mixture of present and past tenses is not always appropriate, neither is the mixture of simple and continuous forms: __was droping, was getting down__.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In such a short answer there is not much scope for structural range, but the grammar is mainly accurate and produces an impression of fluency. The main problem is the inconsistent choice of verb forms: the mixture of present and past tenses is not always appropriate, neither is the mixture of simple and continuous forms: __was droping, was getting down__.",
+      "id": [
+        "291592"
+      ],
+      "lead": "Grammatical Range and Accuracy"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:291593]\r\n[%][%Marks]\r\nThis answer would probably have achieved a **Band 5**, and may have achieved a **Band 6** had it been at the required length.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This answer would probably have achieved a **Band 5**, and may have achieved a **Band 6** had it been at the required length.",
+      "id": [
+        "291593"
+      ],
+      "lead": "Marks"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291594]\r\n[▼ch-16]\r\n[#IELTS Writing 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291594"
+      ],
+      "anchor": "ch-16",
+      "title": "IELTS Writing 1"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291595]\r\n[▼ch-17]\r\n[##Task 2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291595"
+      ],
+      "anchor": "ch-17",
+      "title": "Task 2"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:291596]\r\n[%][%Checking and editing your essays]\r\nMany IELTS candidates often lose marks in the exam because they don’t check their writing after they finish. Make sure you take two or three minutes to read through each ==essay==|link:https://www.ielts-writing.info/EXAM/ielts-writing/Essay.html|, and check it for errors. Remember the examiner is looking at four things: ==grammar==|link:https://www.ielts-writing.info/EXAM/grammar/|, ==vocabulary==|link:https://www.ielts-writing.info/EXAM/vocabulary/|, **organisation and structure** and **ideas**.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "Many IELTS candidates often lose marks in the exam because they don’t check their writing after they finish. Make sure you take two or three minutes to read through each ==essay==|link:https://www.ielts-writing.info/EXAM/ielts-writing/Essay.html|, and check it for errors. Remember the examiner is looking at four things: ==grammar==|link:https://www.ielts-writing.info/EXAM/grammar/|, ==vocabulary==|link:https://www.ielts-writing.info/EXAM/vocabulary/|, **organisation and structure** and **ideas**.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291596"
+      ],
+      "lead": "Checking and editing your essays"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark++]\r\n[@id:291597]\r\n[!Give reasons for your answer, and include any relevant examples from your own knowledge or experience.\r\n\r\nWrite at least 250 words.]\r\nYou should spend about 40 minutes on this task.\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_9.png|@width:1422|",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark++",
+      "instruction": "Give reasons for your answer, and include any relevant examples from your own knowledge or experience.\r\n\r\nWrite at least 250 words.",
+      "partialAnswer": "",
+      "body": "You should spend about 40 minutes on this task.\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_9.png|@width:1422|",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291597"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:291598]\r\n[%][%Model answer]\r\nMuch could be said about different ways of testing or checking students at schools or universities. The most popular ones have always caused been causing very exciting discussions and debates around the world. We all do realise that teachers need to have a system that helps them to test their students knowledge, so they can see how effective their teaching methods are. The question is do we really need to put so much pressure on these features? Are they really so effective?\r\n\r\nThe first thing about tests and exams is, that they do check the level of information the students managed to learn from the lectures. The questions usually cover the area that has been thought at school, so if students can answer them correctly it means that the teaching was successful.\r\n\r\nThe other, equally important aspect is, that due to the tests or exams that students are facing at school they get motivated to study more, in order to get better marks and to improve their knowledge. Sometimes it might be just the fact that it is called an exam, that makes students get together and study harder.\r\n\r\nOn the other hand, some students might feel discouraged by the same fact that makes the others motivated what of course results in low marks in the actual exam. They also think that the results are very often not relevant to their efforts they put into studying. Because the marking system is not fair, they just do not feel like studying more for the exam.\r\n\r\nFurthermore, many students find the exams of different kinds very stressful, especially the school ones. They often think that there could be another way of testing, less stressful, that should be introduced in schools or universities. The supporters of this opinion often bring out the fact, that most of students start smoking actually because of the stress they are exposed to at school. And that is definitely not beneficial for you or your health.\r\n\r\nTo put things together, is there really such a big need for exams at schools? Is there really no other way to check how students effective are the teaching methods? That is of course not that easy, but still, I am deeply convinced that things can be changed. It requires all the involved sides to think and come up with new ideas that could later be put into schools and that wouldn’t be that stressful anymore, so students can actually start enjoying them.\r\n\r\n(411 words)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Much could be said about different ways of testing or checking students at schools or universities. The most popular ones have always caused been causing very exciting discussions and debates around the world. We all do realise that teachers need to have a system that helps them to test their students knowledge, so they can see how effective their teaching methods are. The question is do we really need to put so much pressure on these features? Are they really so effective?\r\n\r\nThe first thing about tests and exams is, that they do check the level of information the students managed to learn from the lectures. The questions usually cover the area that has been thought at school, so if students can answer them correctly it means that the teaching was successful.\r\n\r\nThe other, equally important aspect is, that due to the tests or exams that students are facing at school they get motivated to study more, in order to get better marks and to improve their knowledge. Sometimes it might be just the fact that it is called an exam, that makes students get together and study harder.\r\n\r\nOn the other hand, some students might feel discouraged by the same fact that makes the others motivated what of course results in low marks in the actual exam. They also think that the results are very often not relevant to their efforts they put into studying. Because the marking system is not fair, they just do not feel like studying more for the exam.\r\n\r\nFurthermore, many students find the exams of different kinds very stressful, especially the school ones. They often think that there could be another way of testing, less stressful, that should be introduced in schools or universities. The supporters of this opinion often bring out the fact, that most of students start smoking actually because of the stress they are exposed to at school. And that is definitely not beneficial for you or your health.\r\n\r\nTo put things together, is there really such a big need for exams at schools? Is there really no other way to check how students effective are the teaching methods? That is of course not that easy, but still, I am deeply convinced that things can be changed. It requires all the involved sides to think and come up with new ideas that could later be put into schools and that wouldn’t be that stressful anymore, so students can actually start enjoying them.\r\n\r\n(411 words)",
+      "id": [
+        "291598"
+      ],
+      "lead": "Model answer"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:291599]\r\n[%][%Commentary]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "291599"
+      ],
+      "lead": "Commentary"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:291600]\r\n[%][%Task Achievement]\r\nThe writer responds to the task appropriately, and generally remains focused on the question to be addressed. Benefits and disadvantages are considered, and the writer finally adopts a position, as required.\r\n\r\nDespite the overall relevance of this answer, some improvements could be achieved. The first paragraph approaches the topic rather indirectly, and lacks a clearly defined focus, which weakens the impact of the introduction. Some of its content is, perhaps, not strictly relevant. The final paragraph suffers from the same problem, though to a slightly lesser extent. The crux of the piece, the writer’s own conclusion, is in the middle of the paragraph ( __... I am deeply convinced that ...__ ), rather than being positioned prominently. Perhaps the writing would benefit from adopting a more assertive tone.\r\n\r\nAt 411 words the piece is over the length required.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The writer responds to the task appropriately, and generally remains focused on the question to be addressed. Benefits and disadvantages are considered, and the writer finally adopts a position, as required.\r\n\r\nDespite the overall relevance of this answer, some improvements could be achieved. The first paragraph approaches the topic rather indirectly, and lacks a clearly defined focus, which weakens the impact of the introduction. Some of its content is, perhaps, not strictly relevant. The final paragraph suffers from the same problem, though to a slightly lesser extent. The crux of the piece, the writer’s own conclusion, is in the middle of the paragraph ( __... I am deeply convinced that ...__ ), rather than being positioned prominently. Perhaps the writing would benefit from adopting a more assertive tone.\r\n\r\nAt 411 words the piece is over the length required.",
+      "id": [
+        "291600"
+      ],
+      "lead": "Task Achievement"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\r\n[@id:291601]\r\n[%][%Coherence and Cohesion]\r\nThis writer uses her linguistic knowledge to the full to guide the reader successfully through the answer.\r\n\r\nThe organisation of information is commendably clear and progresses from introduction, through benefits and disadvantages, to conclusion. Appropriate paragraphing supports this structure.\r\n\r\nPronouns and articles are generally used to good effect to signal relationships within and between sentences, and paragraphs are linked with a well-chosen linking device.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "This writer uses her linguistic knowledge to the full to guide the reader successfully through the answer.\r\n\r\nThe organisation of information is commendably clear and progresses from introduction, through benefits and disadvantages, to conclusion. Appropriate paragraphing supports this structure.\r\n\r\nPronouns and articles are generally used to good effect to signal relationships within and between sentences, and paragraphs are linked with a well-chosen linking device.",
+      "id": [
+        "291601"
+      ],
+      "lead": "Coherence and Cohesion"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:291602]\r\n[%][%Lexical Resource]\r\nA wide range of lexis is used, with a high degree of accuracy. The writer shows knowledge of idiomatic phrasing, such as __The other, equally important aspect is ...__ . Occasionally it is evident that the writer has some limitations, for example __supporters ... often bring out the fact that ...__ or __To put things together ...__ . However, in these cases the writer successfully paraphrases, and these infrequent lapses barely affect the reader’s progress. Spelling is almost flawless.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "A wide range of lexis is used, with a high degree of accuracy. The writer shows knowledge of idiomatic phrasing, such as __The other, equally important aspect is ...__ . Occasionally it is evident that the writer has some limitations, for example __supporters ... often bring out the fact that ...__ or __To put things together ...__ . However, in these cases the writer successfully paraphrases, and these infrequent lapses barely affect the reader’s progress. Spelling is almost flawless.",
+      "id": [
+        "291602"
+      ],
+      "lead": "Lexical Resource"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:291603]\r\n[%][%Grammatical Range and Accuracy]\r\nThe writer’s command of grammar, as with lexis, conveys the impression of fluency. A wide range of structures is attempted, with a good degree of accuracy.\r\n\r\nFor example, __The first good thing about tests or exams is that they do check the level of ...__ , is a difficult structure used perfectly accurately here. Occasionally there are errors with complex structures, such as ... __some students might feel discouraged by the same fact that makes the others motivated ...__ , but there is no interference with comprehension whatsoever. Simpler and more frequent structures rarely exhibit errors, and punctuation is practically error-free.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The writer’s command of grammar, as with lexis, conveys the impression of fluency. A wide range of structures is attempted, with a good degree of accuracy.\r\n\r\nFor example, __The first good thing about tests or exams is that they do check the level of ...__ , is a difficult structure used perfectly accurately here. Occasionally there are errors with complex structures, such as ... __some students might feel discouraged by the same fact that makes the others motivated ...__ , but there is no interference with comprehension whatsoever. Simpler and more frequent structures rarely exhibit errors, and punctuation is practically error-free.",
+      "id": [
+        "291603"
+      ],
+      "lead": "Grammatical Range and Accuracy"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\r\n[@id:291604]\r\n[%][%Marks]\r\nThis answer would probably receive a **Band 7** or **Band 8**.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This answer would probably receive a **Band 7** or **Band 8**.",
+      "id": [
+        "291604"
+      ],
+      "lead": "Marks"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291605]\r\n[▼ch-18]\r\n[#IELTS Speaking 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291605"
+      ],
+      "anchor": "ch-18",
+      "title": "IELTS Speaking 1"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\r\n[@id:291606]\r\n[%][%Speaking Tip]\r\n•1 Don’t speak too quickly. It can make it difficult for the examiner to understand you.\r\n•1 Don’t mumble. Speak clearly or the examiner won’t understand you.\r\n•1 If you can’t answer a question, tell the examiner. He or she will explain a word (==Part 1==|link:https://www.ielts-writing.info/EXAM/ielts-speaking/ielts-speaking-part-one.html| and 2) or re-phrase the question (==Part 3==|link:https://www.ielts-writing.info/EXAM/ielts_speaking/1148/|).\r\n•1 Look at the examiner when you are speaking; this is not considered impolite.",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "•1 Don’t speak too quickly. It can make it difficult for the examiner to understand you.\r\n•1 Don’t mumble. Speak clearly or the examiner won’t understand you.\r\n•1 If you can’t answer a question, tell the examiner. He or she will explain a word (==Part 1==|link:https://www.ielts-writing.info/EXAM/ielts-speaking/ielts-speaking-part-one.html| and 2) or re-phrase the question (==Part 3==|link:https://www.ielts-writing.info/EXAM/ielts_speaking/1148/|).\r\n•1 Look at the examiner when you are speaking; this is not considered impolite.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291606"
+      ],
+      "lead": "Speaking Tip"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291607]\r\n[▼ch-19]\r\n[##Part 1]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291607"
+      ],
+      "anchor": "ch-19",
+      "title": "Part 1"
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark++]\r\n[@id:291608]\r\n[!Answer the questions:]\r\n\r\n• Where are you from?\r\n\r\n• Are you a student, or do you have a job?\r\n\r\n• What do you study? / What is your job?\r\n\r\n• Do you enjoy your job / your studies?",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "• Where are you from?\r\n\r\n• Are you a student, or do you have a job?\r\n\r\n• What do you study? / What is your job?\r\n\r\n• Do you enjoy your job / your studies?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291608"
+      ],
+      "instruction": "Answer the questions:"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291609]\r\n[▼ch-20]\r\n[##Part 2]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291609"
+      ],
+      "anchor": "ch-20",
+      "title": "Part 2"
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark++]\r\n[@id:291610]\r\nYou will have to talk about the topic for one to two minutes.\r\nYou have one minute to think about what you’re going to say.\r\nYou can make some notes to help you if you wish.\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_10.png|@width:600|",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "You will have to talk about the topic for one to two minutes.\r\nYou have one minute to think about what you’re going to say.\r\nYou can make some notes to help you if you wish.\r\n\r\n|image:https://docs.bitmark.cloud/bit-books/ielts/preparation_1/web-resources/images/ielts_prep_1_10.png|@width:600|",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291610"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\r\n[@id:291611]\r\n[▼ch-21]\r\n[##Part 3]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "291611"
+      ],
+      "anchor": "ch-21",
+      "title": "Part 3"
+    }
+  },
+  {
+    "bitmark": "[.assignment:bitmark++]\r\n[@id:291612]\r\n[!Answer these questions related to finding things:]\r\n**Collecting things as a hobby**\r\n• What kind of things do people like collecting as a hobby?\r\n• What educational benefit do you think collecting objects like coins or stamps might have?\r\n\r\n**Archaeology**\r\n• How useful do you think it is for humans to uncover objects from the past?\r\n• Who do you think historic objects should belong to when they have been found?\r\n\r\n**Exploration**\r\n• Can you suggest what motivated people in the past to explore the world?\r\n• Do you think interest in space exploration will increase in future?",
+    "bit": {
+      "type": "assignment",
+      "format": "bitmark++",
+      "body": "**Collecting things as a hobby**\r\n• What kind of things do people like collecting as a hobby?\r\n• What educational benefit do you think collecting objects like coins or stamps might have?\r\n\r\n**Archaeology**\r\n• How useful do you think it is for humans to uncover objects from the past?\r\n• Who do you think historic objects should belong to when they have been found?\r\n\r\n**Exploration**\r\n• Can you suggest what motivated people in the past to explore the world?\r\n• Do you think interest in space exploration will increase in future?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "291612"
+      ],
+      "instruction": "Answer these questions related to finding things:"
+    }
+  }
+]

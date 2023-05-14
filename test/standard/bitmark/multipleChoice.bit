@@ -1,9 +1,3 @@
-[.multiple-choice-1]
-[@id:186303]
-[!Stimmst du dieser Aussage zu? ]
-Der Lehrbetrieb setzt sich für die Lernenden ein und arbeitet mit allen Partnern der Berufsbildung zusammen
-[+Ja]
-[-Nein]
 
 [.multiple-choice-1]
 [@id:186304]
@@ -296,93 +290,6 @@ mains.]
 [+on ne sait pas]
 ===
 
-[.multiple-choice:bitmark]
-[@id:190701]
-[!ICH BEVORZUGE …]
-===
-[!1. ]
-[+Bier]
-[-Wein]
-===
-[!2. ]
-[+Schokolade]
-[-Chips]
-===
-[!3. ]
-[+Ferien am Meer]
-[-Ferien in den Bergen]
-===
-[!4. ]
-[+Hund]
-[-Katze]
-===
-[!5. ]
-[+Sport treiben]
-[-TV schauen]
-===
-[!6. ]
-[+Kundenkontakt]
-[-Büroarbeit]
-===
-[!7. ]
-[+Kaffee]
-[-Tee]
-===
-[!8. ]
-[+Stadt]
-[-Land]
-===
-[!9. ]
-[+Selber Kochen]
-[-Im Restaurant Essen]
-===
-[!10. ]
-[+Weihnachten mit zu Hause mit der Familie]
-[-Weihnachten in die Ferien fahren]
-===
-[!11. ]
-[+Wellness]
-[-Fitness]
-===
-[!12. ]
-[+Spazieren]
-[-Velotour]
-===
-[!13. ]
-[+Sportliche Kleider ]
-[-Elegante Kleider]
-===
-[!14. ]
-[+Camping]
-[-5 Stern Hotel]
-===
-[!15. ]
-[+Schlager]
-[-Pop/Rock]
-===
-[!16. ]
-[+Tatort (Krimi)]
-[-Rosamunde Pilcher (Roman)]
-===
-[!17. ]
-[+Kultur]
-[-Sport]
-===
-[!18. ]
-[+Migros]
-[-Coop]
-===
-
-
-[.multiple-choice-1&image-link]
-[@id:232617]
-[!Hauptstadt von Sri Lanka]
-[&image-link:https://card2brain.ch/c2b-images/card/1399684-answer.jpg?v=1654534534510]
-[-Islamabad]
-[-Montevideo]
-[-Dakar]
-[+Colombo]
-[-Peking]
 
 [.multiple-choice-1&audio]
 [@id:107936]
@@ -440,4 +347,86 @@ Ist die Durchsage wichtig für dich?]
 [-b) fahre] [-c) fahrt] [-d) fahren]
 
 
+[.multiple-choice-1]
+[@id:186303]
+[!Stimmst du dieser Aussage zu? ]
+Der Lehrbetrieb setzt sich für die Lernenden ein und arbeitet mit allen Partnern der Berufsbildung zusammen
+[+Ja]
+[-Nein]
 
+
+[.multiple-choice-1]
+[@id:232614]
+[!Hauptstadt von Polen]
+[+Warschau]
+[-Berlin]
+[-Prag]
+[-Tegucigalpa]
+[-Rabat]
+
+[.multiple-choice-1:bitmark++]
+[@id:232875]
+
+[!Welche der Antwortmöglichkeiten ordnet der Abbildung die richtigen Bezeichnungen zu?]
+|image:https://docs.bitmark.cloud/bit-books/card2brain/uebungsaufgaben_wi_bba/web-resources/images/uebungsaufgaben_wi_bba_3.jpg|
+[+a) 1. Client mit Webbrowser - 2. Internet - 3. Webserver - 4. Anwendungsserver - 5. Datenbankserver - 6. Datenbank]
+[-b) 1. Datenbank - 2. Internet - 3. Webserver - 4. Anwendungsserver - 5. Datenbankserver - 6. Client mit Webbrowser]
+[-c) 1. Datenbank - 2. Internet - 3. Webserver - 4. Datenbankserver - 5. Anwendungsserver - 6. Client mit Webbrowser]
+[-d) 1. Datenbank - 2. Internet - 3. Anwendungsserver - 4. Webserver - 5. Datenbankserver - 6. Client mit Webbrowser]
+[-e) 1. Client mit Webbrowser - 2. Internet - 3. Webserver - 4. Datenbankserver - 5. Anwendungsserver - 6. Datenbank]
+
+[.multiple-choice-1:bitmark--]
+[@id:232876]
+
+[!Welches der folgenden Statements beschreibt das Anwendungssystem auf operativer Ebene?]
+[-a) Systeme, die dem Unternehmen dabei helfen, Kunden zu finden.]
+[-b) Systeme, die durch die Bereitstellung von Berichten über Entscheidungsfindungen dienen.]
+[-c) Systeme, um schwach strukturierte oder unstrukturierte Entscheidungsfindungsprozesse zu unterstützen.]
+[-d) Systeme, die zur Verwaltung der Ein- und Ausgaben eines Unternehmens dienen.]
+[+e) Systeme, die die Aktivitäten und Transaktionen des Unternehmens überwachen und ausführen.]
+
+
+[.multiple-choice&image]
+[@id:107955]
+[%21]
+[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-21.png]
+[!Du bekommst eine E-Mail von deinem Freund Detlef. Warum hat Detlef dir eine E-Mail geschickt? Lies die E-Mail und wähl
+die richtige Antwort.]
+[-Er möchte dich einladen.]
+[-Er möchte dir danken.]
+[+Er möchte dir Grüße schicken.]
+
+[.multiple-choice]
+[@id:107956]
+[%22]
+[!Du willst deine Freundin Julia anrufen. Du rufst an und ein Mann antwortet. Was sagst du? Wähl die beste Antwort.]
+[-Hallo, Julia.]
+[+Hallo, ist Julia da?]
+[-Moment bitte.]
+
+[.multiple-choice:bitmark--]
+|| FIXED: PEG parser is not correctly parsing the chained [%item] tags - it is adding them at the quizzes level ||
+[@id:291806]
+[%]
+[!Teilen Sie die folgenden Begriffe in der entsprechenden Spalte korrekt zu:]
+===
+[!Staatliche Vorsorge]
+[+1. Säule][%1]
+[-2. Säule][%2]
+[-3. Säule][%3]
+===
+[!Individuelle Ergänzung]
+[-1. Säule][%1]
+[-2. Säule][%2]
+[+3. Säule][%3]
+===
+[!Existenzsicherung]
+[+1. Säule][%1]
+[-2. Säule][%2]
+[-3. Säule][%3]
+===
+[!Berufliche Vorsorge]
+[-1. Säule][%1]
+[+2. Säule][%2]
+[-3. Säule][%3]
+===

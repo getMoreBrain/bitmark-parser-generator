@@ -1,0 +1,188 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:132090]\n[#Zentrale Aufnahmeprüfung 2019 für die Langgymnasien]\n[@language:de]\n[@externalId:e-zentrale-aufnahmeprfung-2019-fr-die-lang_tkle288rus4g]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "132090"
+      ],
+      "title": "Zentrale Aufnahmeprüfung 2019 für die Langgymnasien",
+      "language": [
+        "de"
+      ],
+      "externalId": [
+        "e-zentrale-aufnahmeprfung-2019-fr-die-lang_tkle288rus4g"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:132091]\n[##Sprachprüfung Deutsch]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "132091"
+      ],
+      "title": "Sprachprüfung Deutsch"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:132092]\n[%Persönliche Angaben]\n\n===\nName:[@shortAnswer]\n===\nVorname:[@shortAnswer]\n===\nPrüfungsnummer:[@shortAnswer]\n===\nKantonsschule:[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "Persönliche Angaben",
+      "instruction": "",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "Name:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Vorname:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Prüfungsnummer:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Kantonsschule:",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "132092"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:132093]\n[%Allgemeine Hinweise:]\n\n• Schreibe zu einem der drei nachfolgenden Themen einen Text.\n\n• Du hast 60 Minuten Zeit.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "• Schreibe zu einem der drei nachfolgenden Themen einen Text.\n\n• Du hast 60 Minuten Zeit.",
+      "id": [
+        "132093"
+      ],
+      "item": "Allgemeine Hinweise:"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:132094]\n[##Verfassen eines Textes]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "132094"
+      ],
+      "title": "Verfassen eines Textes"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:132095]\n[%1]\n[!Der Staplodiplokus]\n__Erstmals ist es Forschern gelungen, die Existenz eines Staplodiplokus nachzuweisen!__\n\nErzähle, wie es den Forschern gelungen ist, einen Staplodiplokus zu entdecken. Stelle dabei auch klar, was ein Staplodiplokus ist. In der Deutung des Wortes «Staplodiplokus» bist du vollkommen frei.\n\nSchreibe im Präteritum. Gib die Nummer des Themas an und übernimm den Titel.",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Der Staplodiplokus",
+      "partialAnswer": "",
+      "body": "__Erstmals ist es Forschern gelungen, die Existenz eines Staplodiplokus nachzuweisen!__\n\nErzähle, wie es den Forschern gelungen ist, einen Staplodiplokus zu entdecken. Stelle dabei auch klar, was ein Staplodiplokus ist. In der Deutung des Wortes «Staplodiplokus» bist du vollkommen frei.\n\nSchreibe im Präteritum. Gib die Nummer des Themas an und übernimm den Titel.",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "132095"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:132096]\n[%2]\n[!Zu lange gezögert]\nErzähle eine Geschichte, aus der hervorgeht, in welcher Situation und warum jemand zu lange zögerte. Beschreibe auch, was im Inneren dieser Person vorging.\nSchreibe im Präteritum. Gib die Nummer des Themas an und übernimm den Titel.",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Zu lange gezögert",
+      "partialAnswer": "",
+      "body": "Erzähle eine Geschichte, aus der hervorgeht, in welcher Situation und warum jemand zu lange zögerte. Beschreibe auch, was im Inneren dieser Person vorging.\nSchreibe im Präteritum. Gib die Nummer des Themas an und übernimm den Titel.",
+      "item": "2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "132096"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:132097]\n[%3]\n[!Erfundene Geschichte]\nErfinde eine Geschichte, in der die folgenden Wörter mindestens einmal vorkommen, aber nicht aneinandergereiht:\n\n__Nachbar, vorbeirauschen, Spiegel, Pfote, Wasser__\n\nDer Nachbar soll in deiner Geschichte eine wichtige Figur sein.\n\nUnterstreiche in deinem Text die vorgegebenen Wörter. Gib die Nummer des Themas an und setze einen passenden Titel.",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Erfundene Geschichte",
+      "partialAnswer": "",
+      "body": "Erfinde eine Geschichte, in der die folgenden Wörter mindestens einmal vorkommen, aber nicht aneinandergereiht:\n\n__Nachbar, vorbeirauschen, Spiegel, Pfote, Wasser__\n\nDer Nachbar soll in deiner Geschichte eine wichtige Figur sein.\n\nUnterstreiche in deinem Text die vorgegebenen Wörter. Gib die Nummer des Themas an und setze einen passenden Titel.",
+      "item": "3",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "132097"
+      ]
+    }
+  }
+]

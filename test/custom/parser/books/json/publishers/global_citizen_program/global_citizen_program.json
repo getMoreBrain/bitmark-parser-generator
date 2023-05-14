@@ -1,0 +1,839 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:268450]\n[@externalId:e-the-global-citizen-program_1dskpblrbbai]\n[@language:en]\n[#The Global Citizen Program]\n[##Paris, Amsterdam, Berlin and Prague]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "268450"
+      ],
+      "externalId": [
+        "e-the-global-citizen-program_1dskpblrbbai"
+      ],
+      "language": [
+        "en"
+      ],
+      "title": "The Global Citizen Program",
+      "subtitle": "Paris, Amsterdam, Berlin and Prague"
+    }
+  },
+  {
+    "bitmark": "[.info:bitmark++]\n[@id:268451]\n**Program Length:**\n15 Days\n\n**Program Dates:** \nJune 27 - July 11, 2023 | July 10 - 24, 2023\n\n==Contact us==|link:https://theglobalcitizenprogram.com/teen-travel-leader| for Private Group Options",
+    "bit": {
+      "type": "info",
+      "format": "bitmark++",
+      "body": "**Program Length:**\n15 Days\n\n**Program Dates:** \nJune 27 - July 11, 2023 | July 10 - 24, 2023\n\n==Contact us==|link:https://theglobalcitizenprogram.com/teen-travel-leader| for Private Group Options",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "268451"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:268452]\n[&image:https://docs.bitmark.cloud/bit-books/global_citizen_program/web-resources/images/global_citizen_program_1.png][@width:2880]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "268452"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/global_citizen_program/web-resources/images/global_citizen_program_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "2880",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:268453]\n[▼ch-1]\n[#Day by Day Itinerary]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "268453"
+      ],
+      "anchor": "ch-1",
+      "title": "Day by Day Itinerary"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268454]\n[%][%Day 1 - Overnight Flight]\nBoard your overnight flight bound for Paris.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Board your overnight flight bound for Paris.",
+      "id": [
+        "268454"
+      ],
+      "lead": "Day 1 - Overnight Flight"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268455]\n[%][%Day 2 - Paris]\nArrive in Paris. Meet your Travel Director at the airport and transfer to your centrally located hotel. Start exploring the city on an orientation tour before a group welcome dinner.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Arrive in Paris. Meet your Travel Director at the airport and transfer to your centrally located hotel. Start exploring the city on an orientation tour before a group welcome dinner.",
+      "id": [
+        "268455"
+      ],
+      "lead": "Day 2 - Paris"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:268456]\n[&video-link:https://youtu.be/UfEiKK-iX70]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "268456"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/UfEiKK-iX70",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268457]\n[%][%Day 3 - Paris]\nEnjoy a guided tour of Paris focusing on important Parisian sights such as the Arc de Triomphe, the Champs Elysées and the Opera House. In the afternoon, ascend the Eiffel Tower to admire the marvelous views of the city. In the evening enjoy a walk around the artistic quarter of Montmartre.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Enjoy a guided tour of Paris focusing on important Parisian sights such as the Arc de Triomphe, the Champs Elysées and the Opera House. In the afternoon, ascend the Eiffel Tower to admire the marvelous views of the city. In the evening enjoy a walk around the artistic quarter of Montmartre.",
+      "id": [
+        "268457"
+      ],
+      "lead": "Day 3 - Paris"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--&image]\n[@id:268458]\n[%][%An Artist’s Haven]\n[&image:https://docs.bitmark.cloud/bit-books/global_citizen_program/web-resources/images/global_citizen_program_2.jpeg][@width:1500]\nYou’ll have to climb 270 steps to get to the top of the hill in Montmartre to visit Paris’ second most visited site, Sacré Coeur. From here you can also enjoy panoramic sweeping views of the city. including a birds eye view of the Eiffel Tower. Montmartre is a lovely area with fantastic restaurants and cafes, art galleries and museums. Van Gogh, Picasso, Degas, Toulouse-Lautrec are just a few of the great artists who lived or painted in Montmartre.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "You’ll have to climb 270 steps to get to the top of the hill in Montmartre to visit Paris’ second most visited site, Sacré Coeur. From here you can also enjoy panoramic sweeping views of the city. including a birds eye view of the Eiffel Tower. Montmartre is a lovely area with fantastic restaurants and cafes, art galleries and museums. Van Gogh, Picasso, Degas, Toulouse-Lautrec are just a few of the great artists who lived or painted in Montmartre.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "268458"
+      ],
+      "lead": "An Artist’s Haven",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/global_citizen_program/web-resources/images/global_citizen_program_2.jpeg",
+          "showInIndex": false,
+          "format": "jpeg",
+          "width": "1500",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268459]\n[%][%Day 4 - Paris]\nThis morning visit the Palace of Versailles. Learn about life in the court of Louis XIV, Le Roi Soleil as you walk around the palace and the opulent gardens. You’ll have some free time to explore the ornate gardens before returning to Paris where you will make your own dinner during an interactive cooking lesson with a local French chef.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This morning visit the Palace of Versailles. Learn about life in the court of Louis XIV, Le Roi Soleil as you walk around the palace and the opulent gardens. You’ll have some free time to explore the ornate gardens before returning to Paris where you will make your own dinner during an interactive cooking lesson with a local French chef.",
+      "id": [
+        "268459"
+      ],
+      "lead": "Day 4 - Paris"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:268460]\n[!Write down the recipe for your own dinner.]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Write down the recipe for your own dinner.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "268460"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:268461]\n[!Describe your favorite sight from Paris.]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Describe your favorite sight from Paris.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "268461"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268462]\n[%][%Day 5 - Bruges]\nToday cross the border from France and to Belgium. Your first stop will be in Brussels where you will see the Grand-Place, the Atomium, various European Union buildings and see the exhibition “Experience Europe” at the European Commission. Later, continue to Bruges, and take an orientation walking tour of this medieval town with cobble-stoned lanes and beautiful canals.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Today cross the border from France and to Belgium. Your first stop will be in Brussels where you will see the Grand-Place, the Atomium, various European Union buildings and see the exhibition “Experience Europe” at the European Commission. Later, continue to Bruges, and take an orientation walking tour of this medieval town with cobble-stoned lanes and beautiful canals.",
+      "id": [
+        "268462"
+      ],
+      "lead": "Day 5 - Bruges"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:268463]\n[&video-link:https://youtu.be/E7pt2Zwg79g]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "268463"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/E7pt2Zwg79g",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268464]\n[%][%Day 6 - Bruges]\nDelve into the history of World War I as you visit the Flanders Battlefields. Visit Flanders Field Museum and the Menin Gate Memorial to the fallen soldiers of the war. Return to Bruges and visit the Choco-Story, the Chocolate Museum.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Delve into the history of World War I as you visit the Flanders Battlefields. Visit Flanders Field Museum and the Menin Gate Memorial to the fallen soldiers of the war. Return to Bruges and visit the Choco-Story, the Chocolate Museum.",
+      "id": [
+        "268464"
+      ],
+      "lead": "Day 6 - Bruges"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:268465]\n[!Describe your favorite sight from Bruges.]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Describe your favorite sight from Bruges.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "268465"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.statement:bitmark--&image]\n[@id:268466]\n[&image:https://docs.bitmark.cloud/bit-books/global_citizen_program/web-resources/images/global_citizen_program_3.png][@width:1094]\n“The knowledge the students received, combined with the rich array of travel experiences, resulted in a better-than-imagined program that facilitated an authentic experience of Europe.”\n— Michelle M., Leader",
+    "bit": {
+      "type": "statement",
+      "format": "bitmark--",
+      "body": "“The knowledge the students received, combined with the rich array of travel experiences, resulted in a better-than-imagined program that facilitated an authentic experience of Europe.”\n— Michelle M., Leader",
+      "id": [
+        "268466"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/global_citizen_program/web-resources/images/global_citizen_program_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "1094",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268467]\n[%][%Day 7 - Amsterdam]\nCross another border today from Belgium to The Netherlands. Your first stop will be the town of Kinderdijk. Take a scenic bicycle ride to admire the 18th-century iconic windmills. Continue to Amsterdam, and see the city by night on a canal cruise.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Cross another border today from Belgium to The Netherlands. Your first stop will be the town of Kinderdijk. Take a scenic bicycle ride to admire the 18th-century iconic windmills. Continue to Amsterdam, and see the city by night on a canal cruise.",
+      "id": [
+        "268467"
+      ],
+      "lead": "Day 7 - Amsterdam"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:268468]\n[&video-link:https://youtu.be/nvSsjV31ePs]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "268468"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/nvSsjV31ePs",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268469]\n[%][%Day 8 - Amsterdam]\nVisit the Anne Frank House, and see the cramped annex where the young girl and her family hid from the Nazis for two years. The house is now a museum which has preserved the hiding place and contains an exhibition on the life and times of Anne Frank. This afternoon, take an excursion to the beautiful village of Zaanse Schans to visit a traditional Dutch farm where you’ll learn about cheese making, and visit a clog making factory.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Visit the Anne Frank House, and see the cramped annex where the young girl and her family hid from the Nazis for two years. The house is now a museum which has preserved the hiding place and contains an exhibition on the life and times of Anne Frank. This afternoon, take an excursion to the beautiful village of Zaanse Schans to visit a traditional Dutch farm where you’ll learn about cheese making, and visit a clog making factory.",
+      "id": [
+        "268469"
+      ],
+      "lead": "Day 8 - Amsterdam"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268470]\n[%][%Day 9 - Amsterdam]\nThis morning, tour the Dutch Resistance Museum and learn about the Nazi occupation of Holland from 1940-1945. Later in the day, visit the Bloemenmarkt, the world’s only floating flower market and spend some time shopping the different vendors and markets.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This morning, tour the Dutch Resistance Museum and learn about the Nazi occupation of Holland from 1940-1945. Later in the day, visit the Bloemenmarkt, the world’s only floating flower market and spend some time shopping the different vendors and markets.",
+      "id": [
+        "268470"
+      ],
+      "lead": "Day 9 - Amsterdam"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:268471]\n[!Describe your favorite sight from Amsterdam.]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Describe your favorite sight from Amsterdam.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "268471"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--&image]\n[@id:268472]\n[&image:https://docs.bitmark.cloud/bit-books/global_citizen_program/web-resources/images/global_citizen_program_4.jpeg][@width:1500]\n[%][%The City of Canals]\nMany people don’t realize that the Dutch capital is actually below sea level. This means that 75% of the city is made up of polders, marshlands protected by an intricate system of dikes. For many people, the canals are what define the Dutch city. With houses on one side of the canal and shops on the other, people are connected to their neighbors both literally and figuratively.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Many people don’t realize that the Dutch capital is actually below sea level. This means that 75% of the city is made up of polders, marshlands protected by an intricate system of dikes. For many people, the canals are what define the Dutch city. With houses on one side of the canal and shops on the other, people are connected to their neighbors both literally and figuratively.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "268472"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/global_citizen_program/web-resources/images/global_citizen_program_4.jpeg",
+          "showInIndex": false,
+          "format": "jpeg",
+          "width": "1500",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "lead": "The City of Canals"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268473]\n[%][%Day 10 - Berlin]\nBoard a train that will transport you from Amsterdam to Berlin. Upon arrival transfer to the hotel and begin to explore this historical and dynamic city that has risen from the scars of recent history to reclaim its splendor as the capital of a reunified Germany during your orientation walking tour.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Board a train that will transport you from Amsterdam to Berlin. Upon arrival transfer to the hotel and begin to explore this historical and dynamic city that has risen from the scars of recent history to reclaim its splendor as the capital of a reunified Germany during your orientation walking tour.",
+      "id": [
+        "268473"
+      ],
+      "lead": "Day 10 - Berlin"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:268474]\n[&video-link:https://youtu.be/ZHHbpy91O2E]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "268474"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/ZHHbpy91O2E",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268475]\n[%][%Day 11 - Berlin]\nEnjoy a guided visit with highlights that include portions of the Berlin Wall, the Brandenburg Gate, the Holocaust Memorial, Potsdamer Platz and Checkpoint Charlie. Enjoy a unique walking tour which explores Berlin’s vibrant street art scene. Afterwards, participate in a street art workshop with a local artist who will teach you techniques to create your own piece of art to take home with you.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Enjoy a guided visit with highlights that include portions of the Berlin Wall, the Brandenburg Gate, the Holocaust Memorial, Potsdamer Platz and Checkpoint Charlie. Enjoy a unique walking tour which explores Berlin’s vibrant street art scene. Afterwards, participate in a street art workshop with a local artist who will teach you techniques to create your own piece of art to take home with you.",
+      "id": [
+        "268475"
+      ],
+      "lead": "Day 11 - Berlin"
+    }
+  },
+  {
+    "bitmark": "[.take-picture:bitmark--]\n[@id:268476]\n[!Upload a picture of your art piece.]",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "268476"
+      ],
+      "instruction": "Upload a picture of your art piece."
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268477]\n[%][%Day 12 - Berlin]\nThis morning visit Sachsenhausen Memorial. Located 50 miles north of Berlin in Oranienburg, the former concentration camp was built by the Nazis in 1936 and was liberated in 1945. Your local guide will explain the role this camp played during the rule of the Third Reich and this dark and troubling part of German history.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This morning visit Sachsenhausen Memorial. Located 50 miles north of Berlin in Oranienburg, the former concentration camp was built by the Nazis in 1936 and was liberated in 1945. Your local guide will explain the role this camp played during the rule of the Third Reich and this dark and troubling part of German history.",
+      "id": [
+        "268477"
+      ],
+      "lead": "Day 12 - Berlin"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:268478]\n[!Describe your experience. What did you learn about German history?]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Describe your experience. What did you learn about German history?",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "268478"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--&image]\n[@id:268479]\n[&image:https://docs.bitmark.cloud/bit-books/global_citizen_program/web-resources/images/global_citizen_program_5_v2.png][@width:1500]\n[%][%Did You Know?]\nBerlin boasts a spectacular collection of 960 bridges (even more than Venice!). Many Berliners consider the double deck Oberbaumbrücke to be the most beautiful of all. Formerly a border crossing between East and West during the Cold War it now connects the unified boroughs of Friedrichschain to the west and Kreuzberg to the east, and serves as a symbol of Berlin and German reunification.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "Berlin boasts a spectacular collection of 960 bridges (even more than Venice!). Many Berliners consider the double deck Oberbaumbrücke to be the most beautiful of all. Formerly a border crossing between East and West during the Cold War it now connects the unified boroughs of Friedrichschain to the west and Kreuzberg to the east, and serves as a symbol of Berlin and German reunification.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "268479"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/global_citizen_program/web-resources/images/global_citizen_program_5_v2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": "1500",
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "lead": "Did You Know?"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268480]\n[%][%Day 13 - Prague]\nTravel to Dresden in the morning where you will visit the Volkswagen Transparent Factory. Featuring a glass roof and a full glass facade it is one of the most environmentally friendly car plants in the world. See the entire process of electric vehicle manufacturing during a tour of this fascinating factory. The plant in is being developed into the __Center of Future Mobility__, an innovative showcase of e-mobility and digitalization. Continue on to Prague for your overnight.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Travel to Dresden in the morning where you will visit the Volkswagen Transparent Factory. Featuring a glass roof and a full glass facade it is one of the most environmentally friendly car plants in the world. See the entire process of electric vehicle manufacturing during a tour of this fascinating factory. The plant in is being developed into the __Center of Future Mobility__, an innovative showcase of e-mobility and digitalization. Continue on to Prague for your overnight.",
+      "id": [
+        "268480"
+      ],
+      "lead": "Day 13 - Prague"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:268481]\n[&video-link:https://youtu.be/ffxGB2j9ADo]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "268481"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "youtu.be",
+          "url": "https://youtu.be/ffxGB2j9ADo",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268482]\n[%][%Day 14 - Prague]\nEnjoy a guided tour of this beautiful city.  Amongst many highlights you will see the Malá Strana (Lesser Quarter) and the graceful Charles Bridge built in the 14th century. Next visit the Hradčany Castle complex high above the city. In the evening, take a boat cruise along the River Vltava to see the illuminated buildings of Prague.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Enjoy a guided tour of this beautiful city.  Amongst many highlights you will see the Malá Strana (Lesser Quarter) and the graceful Charles Bridge built in the 14th century. Next visit the Hradčany Castle complex high above the city. In the evening, take a boat cruise along the River Vltava to see the illuminated buildings of Prague.",
+      "id": [
+        "268482"
+      ],
+      "lead": "Day 14 - Prague"
+    }
+  },
+  {
+    "bitmark": "[.essay:bitmark--]\n[@id:268483]\n[!Describe your favorite sight from Prague.]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
+      "instruction": "Describe your favorite sight from Prague.",
+      "partialAnswer": "",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "268483"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268484]\n[%][%Day 15 - Departure Day]\nTransfer to the airport for your return flight to USA.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Transfer to the airport for your return flight to USA.",
+      "id": [
+        "268484"
+      ],
+      "lead": "Day 15 - Departure Day"
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--]\n[@id:268485]\n[!Daily Reflection]\n===\n[%1]\n===\n[%2]\n===\n[%3]\n===\n[%4]\n===\n[%5]\n===\n[%6]\n===\n[%7]\n===\n[%8]\n===\n[%9]\n===\n[%10]\n===\n[%11]\n===\n[%12]\n===\n[%13]\n===\n[%14]\n===\n[%15]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Daily Reflection",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "1",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "2",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "3",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "4",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "5",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "6",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "7",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "8",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "9",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "10",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "11",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "12",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "13",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "14",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "15",
+          "question": "",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "id": [
+        "268485"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:268486]\n[▼ch-2]\n[#Join the Program!]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "268486"
+      ],
+      "anchor": "ch-2",
+      "title": "Join the Program!"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:268487]\nStudents will join other teens from across the United States, accompanied by experienced, passionate and globally-minded U.S. certified educators. These inspiring leaders guide, nurture and mentor students on their journey to Global Citizenship.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Students will join other teens from across the United States, accompanied by experienced, passionate and globally-minded U.S. certified educators. These inspiring leaders guide, nurture and mentor students on their journey to Global Citizenship.",
+      "id": [
+        "268487"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:268488]\nWhat’s Included:\n\n• Roundtrip Airfare\n• Accommodations\n• Teacher Leaders\n• Full Time Local Program Director\n• Transportation to Included Activities\n• Breakfast and Dinner Daily\n• All Attractions and Activities \n• Guided Sightseeing by Local Expert Guides\n• All Tips and Gratuities\n• 24-Hour Support \n• All Taxes and Fees\n• Global Citizen Certificate\n• Pre-Travel Preparation Meetings and Seminars",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "What’s Included:\n\n• Roundtrip Airfare\n• Accommodations\n• Teacher Leaders\n• Full Time Local Program Director\n• Transportation to Included Activities\n• Breakfast and Dinner Daily\n• All Attractions and Activities \n• Guided Sightseeing by Local Expert Guides\n• All Tips and Gratuities\n• 24-Hour Support \n• All Taxes and Fees\n• Global Citizen Certificate\n• Pre-Travel Preparation Meetings and Seminars",
+      "id": [
+        "268488"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++]\n[@id:268489]\n[%][%Questions?]\n==Contact Us==|link:https://theglobalcitizenprogram.com/teen-travel-contact-request|",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "==Contact Us==|link:https://theglobalcitizenprogram.com/teen-travel-contact-request|",
+      "id": [
+        "268489"
+      ],
+      "lead": "Questions?"
+    }
+  }
+]

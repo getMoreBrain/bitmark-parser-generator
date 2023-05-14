@@ -1,0 +1,1766 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:232291]\n[#Einführung in die politische Philosophie]\n[@language:de]\n[@coverImage:https://docs.bitmark.cloud/bit-books/card2brain/einfuehr_philosophie/web-resources/images/card2brain_einfuehr_philosophie_cover.png]\n[@externalId:e-einfhrung-in-die-politische-ph_k5fo-bdp_uuc]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232291"
+      ],
+      "title": "Einführung in die politische Philosophie",
+      "language": [
+        "de"
+      ],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/card2brain/einfuehr_philosophie/web-resources/images/card2brain_einfuehr_philosophie_cover.png"
+      ],
+      "externalId": [
+        "e-einfhrung-in-die-politische-ph_k5fo-bdp_uuc"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232292]\nWas ist politisches Handeln? Worauf bezieht sich das Adjektiv \"politisch\"?\n==\na) spezifische Form der Assoziation (Polis, Partei, Staat etc.)\nb) Bestimmung und Durchsetzung allgemein verbindlicher Regeln des Zusammenlebens\nc) Entscheidungsfindung duch Konsens/Deliberation (=Überlegungen)\nd) machtbasiertes Handeln und Feilschen\n- positiv: im gegensatz zum Krieg; legitimer Einsatz von Machtmitteln\n- negativ: im Gegensatz zu Freiwilligkeit oder Deliberation (soft power, hard power, civilian power, normative power, smart power)\ne) Grosses Spektrum des Handeln:\n- High Politics: Politik, die unmittelbar interessiert ist daran, das Überleben des Staates zu sichern (nat. und internat. Sicherheit)\n- Low Politics: Wirtschaftliche und soziale Politik, nicht überlebenswichtige Massnahmen\nf) Beziehung zwischen politischen Gemeinwesen/Staaten",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was ist politisches Handeln? Worauf bezieht sich das Adjektiv \"politisch\"?\n==\na) spezifische Form der Assoziation (Polis, Partei, Staat etc.)\nb) Bestimmung und Durchsetzung allgemein verbindlicher Regeln des Zusammenlebens\nc) Entscheidungsfindung duch Konsens/Deliberation (=Überlegungen)\nd) machtbasiertes Handeln und Feilschen\n- positiv: im gegensatz zum Krieg; legitimer Einsatz von Machtmitteln\n- negativ: im Gegensatz zu Freiwilligkeit oder Deliberation (soft power, hard power, civilian power, normative power, smart power)\ne) Grosses Spektrum des Handeln:\n- High Politics: Politik, die unmittelbar interessiert ist daran, das Überleben des Staates zu sichern (nat. und internat. Sicherheit)\n- Low Politics: Wirtschaftliche und soziale Politik, nicht überlebenswichtige Massnahmen\nf) Beziehung zwischen politischen Gemeinwesen/Staaten",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232292"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '\\n'",
+        "line": 2,
+        "column": 12,
+        "errorLine": "[@id:232292]"
+      },
+      {
+        "message": "Unexpected input 'Was ist politisches Handeln? Worauf bezieht sich das Adjektiv \"politisch\"?'",
+        "line": 3,
+        "column": 0,
+        "errorLine": "Was ist politisches Handeln? Worauf bezieht sich das Adjektiv \"politisch\"?"
+      },
+      {
+        "message": "Unexpected input '- negativ'",
+        "line": 10,
+        "column": 0,
+        "errorLine": "- negativ: im Gegensatz zu Freiwilligkeit oder Deliberation (soft power, hard power, civilian power, normative power, smart power)"
+      },
+      {
+        "message": "Unexpected input 'e) Grosses Spektrum des Handeln'",
+        "line": 11,
+        "column": 0,
+        "errorLine": "e) Grosses Spektrum des Handeln:"
+      },
+      {
+        "message": "Unexpected input '- High Politics'",
+        "line": 12,
+        "column": 0,
+        "errorLine": "- High Politics: Politik, die unmittelbar interessiert ist daran, das Überleben des Staates zu sichern (nat. und internat. Sicherheit)"
+      },
+      {
+        "message": "Unexpected input '- Low Politics'",
+        "line": 13,
+        "column": 0,
+        "errorLine": "- Low Politics: Wirtschaftliche und soziale Politik, nicht überlebenswichtige Massnahmen"
+      },
+      {
+        "message": "Unexpected input 'f) Beziehung zwischen politischen Gemeinwesen/Staaten\\n'",
+        "line": 14,
+        "column": 0,
+        "errorLine": "f) Beziehung zwischen politischen Gemeinwesen/Staaten"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232293]\n\"politisch\" bezeichnet allgemein....?\n==\na) horizontales Anerkennungsverhältnis zwischen Bürgerinnen und Bürgern, die sich als gleiche anerkennen\nb) vertikales Unterwerfungsverhältnis von Personen unter politische Institutionen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "\"politisch\" bezeichnet allgemein....?\n==\na) horizontales Anerkennungsverhältnis zwischen Bürgerinnen und Bürgern, die sich als gleiche anerkennen\nb) vertikales Unterwerfungsverhältnis von Personen unter politische Institutionen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232293"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '\\n'",
+        "line": 2,
+        "column": 12,
+        "errorLine": "[@id:232293]"
+      },
+      {
+        "message": "Unexpected input '\"politisch\" bezeichnet allgemein....?'",
+        "line": 3,
+        "column": 0,
+        "errorLine": "\"politisch\" bezeichnet allgemein....?"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232294]\nWas bedeutet politeia?\n==\npolitisches Gemeinwesen\n--\nKernbedeutung: mit der territorial gebundenen Kompetenz der Gesetzgebung ausgestattete Assoziation von Bürgerinnen und Bürgern\n--\numfassend auch ungeschriebene Regeln, Normengefüge etc.\n--\nRawls`basic structure: Umfassendes Kooperationssystem",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was bedeutet politeia?\n==\npolitisches Gemeinwesen\n--\nKernbedeutung: mit der territorial gebundenen Kompetenz der Gesetzgebung ausgestattete Assoziation von Bürgerinnen und Bürgern\n--\numfassend auch ungeschriebene Regeln, Normengefüge etc.\n--\nRawls`basic structure: Umfassendes Kooperationssystem",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232294"
+      ]
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '`'",
+        "line": 11,
+        "column": 5,
+        "errorLine": "Rawls`basic structure: Umfassendes Kooperationssystem"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232295]\nWer hat \"a society's main political, social and econimic institutions and how they fit together into one unified system of social cooperation from one generation to the next\" gesagt?\n==\nRawls",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer hat \"a society's main political, social and econimic institutions and how they fit together into one unified system of social cooperation from one generation to the next\" gesagt?\n==\nRawls",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232295"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232296]\nWas bedeutet \"politics\"?\n==\nProzess politischen Entscheidens und Handelns\nFeilschen um Interessenwahrnehmung-und Ausgleich, Verhandlungsprozesse, Wahlverfahren etc.\nDeliberationsverfahren, Vernehmlassungsprozesse, Wahlkampf\ngesellschaftliche Anerkennungsprozesse",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was bedeutet \"politics\"?\n==\nProzess politischen Entscheidens und Handelns\nFeilschen um Interessenwahrnehmung-und Ausgleich, Verhandlungsprozesse, Wahlverfahren etc.\nDeliberationsverfahren, Vernehmlassungsprozesse, Wahlkampf\ngesellschaftliche Anerkennungsprozesse",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232296"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232297]\nWas bedeutet \"policy\"?\n==\nPolitikfeld, Politikinhalt, Massnahmen des öffentlichen Handelns (inhaltliche Dimension)\nz.B. Sozialpolitik, Bildungspolitik, Gesundheitspolitik, Energiepolitik",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was bedeutet \"policy\"?\n==\nPolitikfeld, Politikinhalt, Massnahmen des öffentlichen Handelns (inhaltliche Dimension)\nz.B. Sozialpolitik, Bildungspolitik, Gesundheitspolitik, Energiepolitik",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232297"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232298]\n\"politisch\" bezeichnet das gemeinsame Handeln unter welchen Bedingungen?\n==\n1. Allgemeine Verbindlichkeit/Rechtsförmigkeit: es sollen verbindliche Regeln festgelegt werden\n2. Notwendigeit des Entscheids: Entscheide können nicht unbeschränkt aufgeschoben werden\n3. Nicht reduzierbar auf technische Fragen: Entscheide basieren auf Wertewahl und Güterabwägung\n4. Dissens: Entscheide müssen oft gefällt werden, obwohl es über Werte und Ziele keinen abschliessenden Konsens gibt",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "\"politisch\" bezeichnet das gemeinsame Handeln unter welchen Bedingungen?\n==\n1. Allgemeine Verbindlichkeit/Rechtsförmigkeit: es sollen verbindliche Regeln festgelegt werden\n2. Notwendigeit des Entscheids: Entscheide können nicht unbeschränkt aufgeschoben werden\n3. Nicht reduzierbar auf technische Fragen: Entscheide basieren auf Wertewahl und Güterabwägung\n4. Dissens: Entscheide müssen oft gefällt werden, obwohl es über Werte und Ziele keinen abschliessenden Konsens gibt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232298"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232299]\nNenne die drei Verständnisse des Politischen\n==\nepistemisch\nagonistisch\nantagonistisch",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nenne die drei Verständnisse des Politischen\n==\nepistemisch\nagonistisch\nantagonistisch",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232299"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232300]\nepistemisches Verständnis\n==\nWissenschaftliche Wahrheitsfindung (tendenziell harmonisch); Paradigma Wissenschaft\ngeht von Möglichkeit der Reduzierung von Pluralismus an Meinungen aus: politische Entscheide sind entweder richtig oder falsch\nführt entweder zu\n- wissenschaftsbasierter \"Antipolitik\" (Misstrauen), deliberativ-elitär: Expertokratie (s. Platon Politeia)\n- Politik als Wahrheitsfindung, deliberativ-demokratisch: Wahrheitsfindung ist unter Einbezug möglichst vieler möglichst kompetenter Akteure in herrschaftsfreiem DDiskurs am besten erreichbar",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "epistemisches Verständnis\n==\nWissenschaftliche Wahrheitsfindung (tendenziell harmonisch); Paradigma Wissenschaft\ngeht von Möglichkeit der Reduzierung von Pluralismus an Meinungen aus: politische Entscheide sind entweder richtig oder falsch\nführt entweder zu\n- wissenschaftsbasierter \"Antipolitik\" (Misstrauen), deliberativ-elitär: Expertokratie (s. Platon Politeia)\n- Politik als Wahrheitsfindung, deliberativ-demokratisch: Wahrheitsfindung ist unter Einbezug möglichst vieler möglichst kompetenter Akteure in herrschaftsfreiem DDiskurs am besten erreichbar",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232300"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232301]\nagonistisches Verständnis\n==\nWettbewerb und Zusammenarbeit nach gemeinsamen Regeln und Verfahren; Paradigma Sport\nWissenschaftliches Wissen nicht hinreichend für die Lösung von politischen Problemen\nIrreduzibler Pluralismusmus der Interessen und Wertesysteme\nZusammenarbeit und Wettberwerb durch Verfahren/Normen. Zustimmung zu Verfahren und Grundrechten (anstatt Zustimmung zu konkreten Inhalten)\nAnerkennung einer Verfassungsgrundlage und wechselseitige Anerkennung als Mitgleider der politischen Gemeinschaft\npolitische Gegnerschaft in anerkannten Verfahren (Sport: Gegner, nicht Feind, Kampf bis zum Letzten)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "agonistisches Verständnis\n==\nWettbewerb und Zusammenarbeit nach gemeinsamen Regeln und Verfahren; Paradigma Sport\nWissenschaftliches Wissen nicht hinreichend für die Lösung von politischen Problemen\nIrreduzibler Pluralismusmus der Interessen und Wertesysteme\nZusammenarbeit und Wettberwerb durch Verfahren/Normen. Zustimmung zu Verfahren und Grundrechten (anstatt Zustimmung zu konkreten Inhalten)\nAnerkennung einer Verfassungsgrundlage und wechselseitige Anerkennung als Mitgleider der politischen Gemeinschaft\npolitische Gegnerschaft in anerkannten Verfahren (Sport: Gegner, nicht Feind, Kampf bis zum Letzten)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232301"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232302]\nZwei Varianten des agonistischen Verständnisses\n==\n1. Liberale Demokratie: kompetitives Mehrparteiensystem und Parlamentarismus beruhend auf Gesetz und Verfassung, in der Grundrechte und Menschenrechte garantiert sind (John Locke)\n2. Adversarial politics: \n- liberale Demokratie und jeder politische Akt ist hegemonial\n- Politik ist die ständige Auseinandersetzung um Hegemonie: Politik als Machtkampf\n- Demokratie überwindet nicht den Wir-Sie Gegensatz, sondern etabliert ihn",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zwei Varianten des agonistischen Verständnisses\n==\n1. Liberale Demokratie: kompetitives Mehrparteiensystem und Parlamentarismus beruhend auf Gesetz und Verfassung, in der Grundrechte und Menschenrechte garantiert sind (John Locke)\n2. Adversarial politics: \n- liberale Demokratie und jeder politische Akt ist hegemonial\n- Politik ist die ständige Auseinandersetzung um Hegemonie: Politik als Machtkampf\n- Demokratie überwindet nicht den Wir-Sie Gegensatz, sondern etabliert ihn",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232302"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232303]\nAntagonistisches Verständnis\n==\nKampf um Hegemonie zwischen Freund und Feind; Paradigma Krieg\njeder Konsens beruht auf Ausschliessung eines signifikanten Andern\nFreund (wir) Feind (sie) Schema als Grundstruktur\nniemals rationale Lösung grundlegender kolletiver Identitätskonflikte\nCarl Schmitt",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Antagonistisches Verständnis\n==\nKampf um Hegemonie zwischen Freund und Feind; Paradigma Krieg\njeder Konsens beruht auf Ausschliessung eines signifikanten Andern\nFreund (wir) Feind (sie) Schema als Grundstruktur\nniemals rationale Lösung grundlegender kolletiver Identitätskonflikte\nCarl Schmitt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232303"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232304]\ndeskriptive Aussagen\n==\nauf nicht wertender Beschreibun beruhend\n--\nin der Regel überprüfbar, wiederlegbar, präzise/unpräzise; intersubjektiv (für mehrere Akteure) nachvollziehbar",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "deskriptive Aussagen\n==\nauf nicht wertender Beschreibun beruhend\n--\nin der Regel überprüfbar, wiederlegbar, präzise/unpräzise; intersubjektiv (für mehrere Akteure) nachvollziehbar",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232304"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232305]\nnormative Aussagen\n==\n\"Sollen\", eine Norm angeben oder anwenden; eine Norm begründen\n1. juridische Norm (positive Norm): Verbot, positive Pflicht/Standard, Erlaubnis\n2. moralische Norm, gilt aber auch ohne rechtliche Bestimmung oder ist deren Grundlage",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "normative Aussagen\n==\n\"Sollen\", eine Norm angeben oder anwenden; eine Norm begründen\n1. juridische Norm (positive Norm): Verbot, positive Pflicht/Standard, Erlaubnis\n2. moralische Norm, gilt aber auch ohne rechtliche Bestimmung oder ist deren Grundlage",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232305"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232306]\nevaluative Aussagen\n==\nauf wertende Beschreibung auf Grund von Kriterien/Normen bezogen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "evaluative Aussagen\n==\nauf wertende Beschreibung auf Grund von Kriterien/Normen bezogen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232306"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232307]\nempirische Methode\n==\nauf Beschreibung, Beobachtung und Erfahrung beruhende Erklärung von Korrelationen und Kausalitäten\nberuht auf begrifflich bestimmter Sammlung von Informationen und qualitativen oder quantitativen Methoden der Auswertung",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "empirische Methode\n==\nauf Beschreibung, Beobachtung und Erfahrung beruhende Erklärung von Korrelationen und Kausalitäten\nberuht auf begrifflich bestimmter Sammlung von Informationen und qualitativen oder quantitativen Methoden der Auswertung",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232307"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232308]\nlogisch/mathematisch/analytisch\n==\nerfahrungsunabhängig geltende Beziehungen zwischen Begriffen oder Zahlen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "logisch/mathematisch/analytisch\n==\nerfahrungsunabhängig geltende Beziehungen zwischen Begriffen oder Zahlen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232308"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232309]\nMoralphilosophisch (normativ)\n==\nBegründung von Normen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Moralphilosophisch (normativ)\n==\nBegründung von Normen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232309"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232310]\nWer sagte \"we can define political philosophy as an investigation into the nature, causes and effects of good and bad government\"?\n==\nMiller",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"we can define political philosophy as an investigation into the nature, causes and effects of good and bad government\"?\n==\nMiller",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232310"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232311]\nAnnahmen des Naturzustands gem. Hobbes\n==\n1. Gleichheit der Menschen (auch der Schwächste kann den Stärksten töten)\n2. Uncertainty (kein Risikokalkül möchglich, man weiss nicht wem vertrauen)\n3. Gebrechtlichkeit, mangel an Selbstvertrauen (diffidence)\n4. totale Abwesenheit von PA (no common power)\n5. Strebenatur des Menschen; Konkurrenz individueller, unbegrenzter Begehrlichkeiten (natural right)\n6. Knappheit der Ressourcen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Annahmen des Naturzustands gem. Hobbes\n==\n1. Gleichheit der Menschen (auch der Schwächste kann den Stärksten töten)\n2. Uncertainty (kein Risikokalkül möchglich, man weiss nicht wem vertrauen)\n3. Gebrechtlichkeit, mangel an Selbstvertrauen (diffidence)\n4. totale Abwesenheit von PA (no common power)\n5. Strebenatur des Menschen; Konkurrenz individueller, unbegrenzter Begehrlichkeiten (natural right)\n6. Knappheit der Ressourcen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232311"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232312]\nNash equilibrium\n==\nwenn A die beste Wahl trifft unter Berücksichtigung der Wahl von B, und B die beste Wahl unter Berücksichtigung der Wahl von A trifft",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nash equilibrium\n==\nwenn A die beste Wahl trifft unter Berücksichtigung der Wahl von B, und B die beste Wahl unter Berücksichtigung der Wahl von A trifft",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232312"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232313]\nNotwendige Elemente der PA aufgrund von Hobbes' Gedankenexperiment\n==\n1. Allgemeine Anerkennung der PA (Vertrag)\n2. Zwangsgewalt (unbedingte Durchsetzbarkeit)\n3. Souveränität (höchste Souveränität)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Notwendige Elemente der PA aufgrund von Hobbes' Gedankenexperiment\n==\n1. Allgemeine Anerkennung der PA (Vertrag)\n2. Zwangsgewalt (unbedingte Durchsetzbarkeit)\n3. Souveränität (höchste Souveränität)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232313"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232314]\nVom Souverän zu erwartende Leisungen\n==\nSchutz, Schiedsgericht, Regulierung, Jurisdition (Garantie der Einhaltung verbindlicher Regeln), Allokation (Zuteilung und Garantie von Gütern)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Vom Souverän zu erwartende Leisungen\n==\nSchutz, Schiedsgericht, Regulierung, Jurisdition (Garantie der Einhaltung verbindlicher Regeln), Allokation (Zuteilung und Garantie von Gütern)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232314"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232315]\nWer sagte \"Man to Man is a kind of God; an Man to Man is an arrant Wolfe\"?\n==\nHobbes",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"Man to Man is a kind of God; an Man to Man is an arrant Wolfe\"?\n==\nHobbes",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232315"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232316]\nWer sagte \"Was die meisten Menschen Frieden nennen, das sei ein blosses Wort; in Wirklichkeit befänden sich von Natur alle Staaten mit allen ständig in einem Krieg ohne Kriegserklärung\"?\n==\nPlato",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"Was die meisten Menschen Frieden nennen, das sei ein blosses Wort; in Wirklichkeit befänden sich von Natur alle Staaten mit allen ständig in einem Krieg ohne Kriegserklärung\"?\n==\nPlato",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232316"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232317]\nWer sagte \"He being in a much worse condition who is exposed to the Arbitrary Power of one Man, who has the Command of 100,000, than he that is exposed to the Arbitrary Power of 100,000 single Men\"?\n==\nJohn Locke",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"He being in a much worse condition who is exposed to the Arbitrary Power of one Man, who has the Command of 100,000, than he that is exposed to the Arbitrary Power of 100,000 single Men\"?\n==\nJohn Locke",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232317"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232318]\nassoziative Ansatz (Arostotelismus, Hegelanismus, Kommunitarismus, Konservatismus) Voraussetzungen\n==\n1. existierende soziale Praxis\n2. konkrete assoziative Bindung der Menschen\n3. konkrete historische Situierung der Menschen\n4. Stufung und Assoziierung der Gemeinschaften\n5. Teleologisches Menschenbild (was ist der Mensch wenn er sich bestmöglichst entwickelt)\n6. Idee des Gute; gutes Leben",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "assoziative Ansatz (Arostotelismus, Hegelanismus, Kommunitarismus, Konservatismus) Voraussetzungen\n==\n1. existierende soziale Praxis\n2. konkrete assoziative Bindung der Menschen\n3. konkrete historische Situierung der Menschen\n4. Stufung und Assoziierung der Gemeinschaften\n5. Teleologisches Menschenbild (was ist der Mensch wenn er sich bestmöglichst entwickelt)\n6. Idee des Gute; gutes Leben",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232318"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232319]\n2 Hauptthesen von Aristoteles\n==\n1. Staat (Polis) gehört zu den von Natur aus existierenden Dingen\n2. Mensch ist ein von Natur aus politisches Wesen (zoon politikon)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "2 Hauptthesen von Aristoteles\n==\n1. Staat (Polis) gehört zu den von Natur aus existierenden Dingen\n2. Mensch ist ein von Natur aus politisches Wesen (zoon politikon)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232319"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232320]\nWer sagte \"ein statlicher Verband ist die aus mehreren Dörfern gebildete vollendete Gesellschaft, die die Grenze erreicht hat, bei der vollständige Autarkie besteht. Um des Überlebens willen ist er entstanden, er besteht aber um des vollkommenen Lebens willen.\"?\n==\nAristoteles",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"ein statlicher Verband ist die aus mehreren Dörfern gebildete vollendete Gesellschaft, die die Grenze erreicht hat, bei der vollständige Autarkie besteht. Um des Überlebens willen ist er entstanden, er besteht aber um des vollkommenen Lebens willen.\"?\n==\nAristoteles",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232320"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232321]\nWer sagte \"the state ought not to be considered as nothing better than a partnership agreement in trade of pepper and coffee\"?\n==\nEdmund Burke",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"the state ought not to be considered as nothing better than a partnership agreement in trade of pepper and coffee\"?\n==\nEdmund Burke",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232321"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232322]\nWer sagte \"but what is government itself, but the greatest of all reflections on human nature? .... In framing a government which is to be administered by men over men, the greatest difficulty lies in this: you must first enable the government to control the governed; and in the next place oblige it to control itself\"?\n==\nJames Madison",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"but what is government itself, but the greatest of all reflections on human nature? .... In framing a government which is to be administered by men over men, the greatest difficulty lies in this: you must first enable the government to control the governed; and in the next place oblige it to control itself\"?\n==\nJames Madison",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232322"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232323]\nWas bedeutet \"neutral\"?\n==\n1. möglichst voraussetzungsschwach\n2. ohne wertendes Menschenbild\n3. ohne teleologisches Menschenbild\n4. ohne konkrete Konzeption von Gemeinschaft, nur Faktum des Pluralismus\n5. ohne Voraussetzung \"natürlicher\" Autorität --> Mensch als frei denken; zu eigenen Präferenzen fähiges Wesen (z.B. eigene Idee des guten Lebens), handelt nach Gründen\n6. Mensch als verhaltens-und entwicklungsoffenes Wesen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was bedeutet \"neutral\"?\n==\n1. möglichst voraussetzungsschwach\n2. ohne wertendes Menschenbild\n3. ohne teleologisches Menschenbild\n4. ohne konkrete Konzeption von Gemeinschaft, nur Faktum des Pluralismus\n5. ohne Voraussetzung \"natürlicher\" Autorität --> Mensch als frei denken; zu eigenen Präferenzen fähiges Wesen (z.B. eigene Idee des guten Lebens), handelt nach Gründen\n6. Mensch als verhaltens-und entwicklungsoffenes Wesen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232323"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232324]\nWer sagte \"Das Recht ist also der Inbegriff der Bedingungen, unter denen die Willkür (äussere Freiheit) des einen mit der Willkür des anderen nach einem allgemeinen Gesetz der Freiheit zusammen vereinigt werden kann.\"?\n==\nKant",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"Das Recht ist also der Inbegriff der Bedingungen, unter denen die Willkür (äussere Freiheit) des einen mit der Willkür des anderen nach einem allgemeinen Gesetz der Freiheit zusammen vereinigt werden kann.\"?\n==\nKant",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232324"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232325]\nWelche Funktionen soll die PA in komplexen Gesellschaften erfüllen gemäss Klosko?\n==\n1. personal security\n2. secure environment\n3. burdensome public goods: Rechtssyste, Umweltschutz\n4. not burdensome public goods requiring coordination (e.g. traffic)\n5. regulation, standards (medication, food)\n6. excludable commons (parks, cultural activities, schools)\n7. redistribution (soziale Absicherung, Stabilität durch Umverteilung)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Welche Funktionen soll die PA in komplexen Gesellschaften erfüllen gemäss Klosko?\n==\n1. personal security\n2. secure environment\n3. burdensome public goods: Rechtssyste, Umweltschutz\n4. not burdensome public goods requiring coordination (e.g. traffic)\n5. regulation, standards (medication, food)\n6. excludable commons (parks, cultural activities, schools)\n7. redistribution (soziale Absicherung, Stabilität durch Umverteilung)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232325"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232326]\nwer sagte: „if the needy, whom Smith would otherwise be required to help, have their needs met by state agencies, then the moral benefits provided by the agencies are nonexcludable in regard to her“?\n==\nKlosko",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "wer sagte: „if the needy, whom Smith would otherwise be required to help, have their needs met by state agencies, then the moral benefits provided by the agencies are nonexcludable in regard to her“?\n==\nKlosko",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232326"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232327]\nDefinition Legitimität\n==\nBerechtigte Ausübung der politischen Autorität",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Definition Legitimität\n==\nBerechtigte Ausübung der politischen Autorität",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232327"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232328]\nLegitimität 1\n==\nEmpirisch feststellbare Anerkennung, die eine wirkmächtige Mehrheit einer politischen Organisation als Gantem und ihrem Gefüge von Insitutionen, Verfahren und Leistungen entgegenbringt\n--\nsubj. (faktisch soziale) Legitimität",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Legitimität 1\n==\nEmpirisch feststellbare Anerkennung, die eine wirkmächtige Mehrheit einer politischen Organisation als Gantem und ihrem Gefüge von Insitutionen, Verfahren und Leistungen entgegenbringt\n--\nsubj. (faktisch soziale) Legitimität",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232328"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232329]\nLegitimität 2\n==\nAnerkennungswürdigkeit einer politischen Organisation\n--\nAnerkennungswürdigkeit beruht auf begründbaren Prinzipien, Rechten, Leistungen etc.\n--\nobj. (normative) Legitimität",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Legitimität 2\n==\nAnerkennungswürdigkeit einer politischen Organisation\n--\nAnerkennungswürdigkeit beruht auf begründbaren Prinzipien, Rechten, Leistungen etc.\n--\nobj. (normative) Legitimität",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232329"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232330]\nLegitimität einer Polity\n==\ninput legitimacy",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Legitimität einer Polity\n==\ninput legitimacy",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232330"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232331]\nLegitimität der Verfahren und Machtmittel (haben alle Zugang?)\n==\nthroughput legitimacy",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Legitimität der Verfahren und Machtmittel (haben alle Zugang?)\n==\nthroughput legitimacy",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232331"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232332]\nLegitimität der Leistungen\n==\noutput legitimacy",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Legitimität der Leistungen\n==\noutput legitimacy",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232332"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232333]\nSouveränität Voraussetzungen\n==\nBegriff des Rechts impliziert Unterordnung des Souverän und Untergebenen (Hart)\n--\nWo die Unterwerfungsstruktur zwischen Souverän und Untergebenen bestimmt und im Umfang begrenzt ist, spricht man vom Einzelstaat und seinem Recht",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Souveränität Voraussetzungen\n==\nBegriff des Rechts impliziert Unterordnung des Souverän und Untergebenen (Hart)\n--\nWo die Unterwerfungsstruktur zwischen Souverän und Untergebenen bestimmt und im Umfang begrenzt ist, spricht man vom Einzelstaat und seinem Recht",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232333"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232334]\nSouveränität 1\n==\nStaatsgewalt, höchste Rechtsetzung-und Rechtsdurchsetzungskompetenz (Kompetenz-Kompetenz)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Souveränität 1\n==\nStaatsgewalt, höchste Rechtsetzung-und Rechtsdurchsetzungskompetenz (Kompetenz-Kompetenz)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232334"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232335]\nSouveränität 2\n==\nEinzelstaatlichkeit, internationale Souveränität",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Souveränität 2\n==\nEinzelstaatlichkeit, internationale Souveränität",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232335"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232336]\nWer sagte \"a sovereign: a person or body of persons whose orders the great majority of the society habitually obey and who does not habitually obey any other person or persons\"?\n==\nHart",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"a sovereign: a person or body of persons whose orders the great majority of the society habitually obey and who does not habitually obey any other person or persons\"?\n==\nHart",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232336"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232337]\nrules conferring power (rules of recognition)\n==\nRegeln, die eine Instanz konstituieren und/oder einer Instanz Kompetenz zuerkennen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "rules conferring power (rules of recognition)\n==\nRegeln, die eine Instanz konstituieren und/oder einer Instanz Kompetenz zuerkennen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232337"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232338]\nrules of obligation\n==\nbeinhalten Gebote (Rechtspflicht, Verordnung, Erlass), Verbote oder Erlaubnisse",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "rules of obligation\n==\nbeinhalten Gebote (Rechtspflicht, Verordnung, Erlass), Verbote oder Erlaubnisse",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232338"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232339]\nWer sagte \"Any written constitution may restrict the competence of the legislature, nor merely by specifying the form and manner of legislation, but my excluding altogether certain matters from the scope of its legislative competence\"?\n==\nHart",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"Any written constitution may restrict the competence of the legislature, nor merely by specifying the form and manner of legislation, but my excluding altogether certain matters from the scope of its legislative competence\"?\n==\nHart",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232339"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232340]\nDefinition Freiheit (Hayek)\n==\nZustand der Meschen, in dem Zwang auf einige vonseiten anderer Menschen so weit heragemindert ist, als dies im Gesellschaftsleben möglich ist",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Definition Freiheit (Hayek)\n==\nZustand der Meschen, in dem Zwang auf einige vonseiten anderer Menschen so weit heragemindert ist, als dies im Gesellschaftsleben möglich ist",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232340"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232341]\nCharakteristika von Hayeks Freiheitsverständnis\n==\n1. Bezeichnet ein Zustand\n2. betrifft nur interpersonale Verhältnisse: A ist frei wenn B auf A keinen Zwang ausübt\n3. Zustander in Realität nicht vollkommen realisierbar",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Charakteristika von Hayeks Freiheitsverständnis\n==\n1. Bezeichnet ein Zustand\n2. betrifft nur interpersonale Verhältnisse: A ist frei wenn B auf A keinen Zwang ausübt\n3. Zustander in Realität nicht vollkommen realisierbar",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232341"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232342]\nWer sagte \"selbst einer, der in eine Gletscherspalte gefallen ist, aus der er sich nicht retten kann, könnte nur im übertrageen Sinn \"unfrei\" genannt werden. Unfreiheit liet nur dann vor wenn jemand anderer die Macht hat, die Umstände so zu modifizieren, dass er nach dem Willen des anderen und nicht nach seinem eigenen Willen handeln wird\"?\n==\nHayek",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"selbst einer, der in eine Gletscherspalte gefallen ist, aus der er sich nicht retten kann, könnte nur im übertrageen Sinn \"unfrei\" genannt werden. Unfreiheit liet nur dann vor wenn jemand anderer die Macht hat, die Umstände so zu modifizieren, dass er nach dem Willen des anderen und nicht nach seinem eigenen Willen handeln wird\"?\n==\nHayek",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232342"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232343]\nWer sagte \"Zwang kann jedoch nicht völlig vermieden werden, weil die einzie Methode ihn zu verhindern, die Androhung von Zwang ist\"?\n==\nHayek",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"Zwang kann jedoch nicht völlig vermieden werden, weil die einzie Methode ihn zu verhindern, die Androhung von Zwang ist\"?\n==\nHayek",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232343"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232344]\nWer sagte \"Zwang...wird auf auf diese Weise ein Werkzeug, das den Individuen in der Verfolgug ihrer eigenen Ziele hilft, und icht ein Mittel, das zur Erreichung der Ziele anderer verwedet wird\"?\n==\nHayek",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"Zwang...wird auf auf diese Weise ein Werkzeug, das den Individuen in der Verfolgug ihrer eigenen Ziele hilft, und icht ein Mittel, das zur Erreichung der Ziele anderer verwedet wird\"?\n==\nHayek",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232344"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232345]\nnegative Freiheit (Hayek)\n==\nFreiheit von Beeinträchtigung durch andere (insb. Staat), non-interference",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "negative Freiheit (Hayek)\n==\nFreiheit von Beeinträchtigung durch andere (insb. Staat), non-interference",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232345"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232346]\npositive Freiheit (Hayek)\n==\nFreiheit zur Entfaltung von Möglichkeiten, self-determination, control, power",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "positive Freiheit (Hayek)\n==\nFreiheit zur Entfaltung von Möglichkeiten, self-determination, control, power",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232346"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232347]\nWer sagte \"once I take this view (\"wohlgemeinter Zwang\"), I am in a position to ignore the actual wishes of men or societies, to bully, oppress, torture in the name, and on behalf, of their \"real\" selves. That's why I say that negative freedom must always take precedence\"?\n==\nBerlin",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"once I take this view (\"wohlgemeinter Zwang\"), I am in a position to ignore the actual wishes of men or societies, to bully, oppress, torture in the name, and on behalf, of their \"real\" selves. That's why I say that negative freedom must always take precedence\"?\n==\nBerlin",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232347"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232348]\nWer sagte \"we should be concerned about genuie choice as well as about the availability of options\"?\n==\nMiller",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"we should be concerned about genuie choice as well as about the availability of options\"?\n==\nMiller",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232348"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232349]\nAlternative Bestimmung des Freiheitskonzepts\n==\nAbwesenheit von Zwang, aber Auswahl\n--\nFreiheit als Nichtbeherrschung (non-domination)\n- Abwesenheit von Zwang (non-interference) vs Abweseheit von willkürlichem Zwang (non-domination)\n-Forderung: (negative) Grundfreiheiten und partizipatives politisches System\n--\nFreiheit als triadische Beziehug\n- agent (was ist frei/unfrei; das Selbst)\n- constraints (wovon ist es frei/unfrei; innere/äussere Beschränkungen)\n- purposes (wofür ist es frei/unfrei; tatsächliche Präferenz/authentischer Plan)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Alternative Bestimmung des Freiheitskonzepts\n==\nAbwesenheit von Zwang, aber Auswahl\n--\nFreiheit als Nichtbeherrschung (non-domination)\n- Abwesenheit von Zwang (non-interference) vs Abweseheit von willkürlichem Zwang (non-domination)\n-Forderung: (negative) Grundfreiheiten und partizipatives politisches System\n--\nFreiheit als triadische Beziehug\n- agent (was ist frei/unfrei; das Selbst)\n- constraints (wovon ist es frei/unfrei; innere/äussere Beschränkungen)\n- purposes (wofür ist es frei/unfrei; tatsächliche Präferenz/authentischer Plan)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232349"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232350]\nWer sagte “individual claims are to be assessed not by the resources or primary goods the persons respectively hold, but by the freedoms they actually enjoy to choose between different ways of living that they can have reason to value. It is this actual freedom that is represented by the person’s “capability to achieve various alternative combinations of functionings, or doings and beings”?\n==\nSen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte “individual claims are to be assessed not by the resources or primary goods the persons respectively hold, but by the freedoms they actually enjoy to choose between different ways of living that they can have reason to value. It is this actual freedom that is represented by the person’s “capability to achieve various alternative combinations of functionings, or doings and beings”?\n==\nSen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232350"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232351]\nWer sagte„Es sprach jeder, der sprechen wollte. Es war Demokratie in ihrer reinsten Form. Unter den Rednern mag es zwar eine Hierarchie geben, was die Bedeutung der einzelnen betrifft, doch wurde jeder angehört, ob Häuptling oder einfacher Mann, Krieger oder Medizinmann, Ladenbesitzer oder Farmer, Landbesitzer oder Arbeiter. Die Leute sprachen ohne Unterbrechung, und die Treffen dauerten viele Stunden. Grundlage der Selbstregierung war, dass alle Männer ihre Meinungen offen vortragen konnten und in ihrem Wert als Bürger alle gleich waren. (Frauen wurden bedauerlicherweise als Bürger zweiter Klasse eingestuft)“?\n==\nNelson Mandela",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte„Es sprach jeder, der sprechen wollte. Es war Demokratie in ihrer reinsten Form. Unter den Rednern mag es zwar eine Hierarchie geben, was die Bedeutung der einzelnen betrifft, doch wurde jeder angehört, ob Häuptling oder einfacher Mann, Krieger oder Medizinmann, Ladenbesitzer oder Farmer, Landbesitzer oder Arbeiter. Die Leute sprachen ohne Unterbrechung, und die Treffen dauerten viele Stunden. Grundlage der Selbstregierung war, dass alle Männer ihre Meinungen offen vortragen konnten und in ihrem Wert als Bürger alle gleich waren. (Frauen wurden bedauerlicherweise als Bürger zweiter Klasse eingestuft)“?\n==\nNelson Mandela",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232351"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232352]\nDefinition Demokratie Mandela\n==\n1. verbindliches gemeinsames Handeln\n2. Einbezug der frei geäusserten Stimmen aller, als politisch gleich betrachtete Mitglieder\n3. Anerkenung der Gleichheit im Wert als Mitglied der Gemeinschaft (politische Gleichheit)\n4. soziale und funktionale Unterschiede\n5. freie politische Meinungsäusserung\n6. breite Anhörung der Standpunkte\n7. Austarieren der divergierenden Interessen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Definition Demokratie Mandela\n==\n1. verbindliches gemeinsames Handeln\n2. Einbezug der frei geäusserten Stimmen aller, als politisch gleich betrachtete Mitglieder\n3. Anerkenung der Gleichheit im Wert als Mitglied der Gemeinschaft (politische Gleichheit)\n4. soziale und funktionale Unterschiede\n5. freie politische Meinungsäusserung\n6. breite Anhörung der Standpunkte\n7. Austarieren der divergierenden Interessen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232352"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232353]\nGrundbedingunge des politischen Handelns\n==\n1. Zwang kollektive Entscheidungen zu treffen\n2. keine Einigkeit\n3. begrenzte Information, Irrtumsanfälligkeit\n4. konstanter Wandel",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Grundbedingunge des politischen Handelns\n==\n1. Zwang kollektive Entscheidungen zu treffen\n2. keine Einigkeit\n3. begrenzte Information, Irrtumsanfälligkeit\n4. konstanter Wandel",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232353"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232354]\nWer sagte \"[Bürgerbewusstsein in einer Demokratie setzt voraus] die Kränkung darüber, dass wir weder alleie auf der Welt noch wichtiger als die anderen sind [hingenommen wird]\"?\n==\nChristoph Moellers",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"[Bürgerbewusstsein in einer Demokratie setzt voraus] die Kränkung darüber, dass wir weder alleie auf der Welt noch wichtiger als die anderen sind [hingenommen wird]\"?\n==\nChristoph Moellers",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232354"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '[B'",
+        "line": 3,
+        "column": 11,
+        "errorLine": "Wer sagte \"[Bürgerbewusstsein in einer Demokratie setzt voraus] die Kränkung darüber, dass wir weder alleie auf der Welt noch wichtiger als die anderen sind [hingenommen wird]\"?"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232355]\nNormative Ziele und allgemeine Prinzipien einer Demokratie (Mandela)\n==\n1. allgemeine Beteiligung\n2. Breite Deliberation\n3. Anerkennung der politische Gleichheit der Mitglieder in den Entscheidungsprozessen\n--> nicht hinreichend (s. Terrororganisation)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Normative Ziele und allgemeine Prinzipien einer Demokratie (Mandela)\n==\n1. allgemeine Beteiligung\n2. Breite Deliberation\n3. Anerkennung der politische Gleichheit der Mitglieder in den Entscheidungsprozessen\n--> nicht hinreichend (s. Terrororganisation)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232355"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232356]\ndemokratisch 1\n==\nEigenschaft eines kollektiven Entscheidungs-oder Wahlverfahrens: frei, partizipativ, transparent etc.\nnach Mehrheits-oder Konsensprizip\nabgegrenzte Gruppe\nbestimmter Ort\nbestimmte Zeit\ninhaltliche Begrenzung",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "demokratisch 1\n==\nEigenschaft eines kollektiven Entscheidungs-oder Wahlverfahrens: frei, partizipativ, transparent etc.\nnach Mehrheits-oder Konsensprizip\nabgegrenzte Gruppe\nbestimmter Ort\nbestimmte Zeit\ninhaltliche Begrenzung",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232356"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232357]\ndemokratisch 2\n==\neine von einem Volk (demos) ausgehene und ausgeübte rechtlich-politische Autorität",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "demokratisch 2\n==\neine von einem Volk (demos) ausgehene und ausgeübte rechtlich-politische Autorität",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232357"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232358]\nWer sagte \"Democracy is the governmet of the people, by the people, for the people\"?\n==\nAbraham Lincoln",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"Democracy is the governmet of the people, by the people, for the people\"?\n==\nAbraham Lincoln",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232358"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232359]\nWer sagte \"As I would not be a slave, so I would not be a master. This expresses my idea of democracy\"?\n==\nAbraham Lincoln",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"As I would not be a slave, so I would not be a master. This expresses my idea of democracy\"?\n==\nAbraham Lincoln",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232359"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232360]\nWas ist Volkssouveränität?\n==\nVolk ist Legitimationsquelle, Souveränitätsträger",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Was ist Volkssouveränität?\n==\nVolk ist Legitimationsquelle, Souveränitätsträger",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232360"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232361]\nWer sagte \"if actively adopted by people, democracy produces the best feasible political system, the best state...with all imperfections, more desirable than ay feasible nondemocratic alternative\"?\n==\nDahl",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"if actively adopted by people, democracy produces the best feasible political system, the best state...with all imperfections, more desirable than ay feasible nondemocratic alternative\"?\n==\nDahl",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232361"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232362]\nWarum Demokratie? (Dahl) instrinsischer Aspekt\n==\ninstrinsisch (personale Gleichheit)\n- gleiches Freiheitsrecht einer jeden Person\n- Recht einer jeden Person auf gleiche Berücksichtigung ihrer Anliegen\n--> principle of equal consideration of interest\n-Personen haben Fähikeit, eigene Vorstellungen des uten und Gerechten zu entwickeln\n- Demokratie brint nicht unbedingt Glück, sondern nur Berücksichtiung dringender subjektiver Ansprüche\n--> Presumption of personal autonomy, Strong principle of Equality",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Warum Demokratie? (Dahl) instrinsischer Aspekt\n==\ninstrinsisch (personale Gleichheit)\n- gleiches Freiheitsrecht einer jeden Person\n- Recht einer jeden Person auf gleiche Berücksichtigung ihrer Anliegen\n--> principle of equal consideration of interest\n-Personen haben Fähikeit, eigene Vorstellungen des uten und Gerechten zu entwickeln\n- Demokratie brint nicht unbedingt Glück, sondern nur Berücksichtiung dringender subjektiver Ansprüche\n--> Presumption of personal autonomy, Strong principle of Equality",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232362"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232363]\nWarum Demokratie? (Dahl) instrumentell Aspekt\n==\ninstrumentell (Demokratie realisiert grösstmögliche Freiheit)\n- demokratischer Prozess impliziert notwendig Freihheitsrechte: Meinungsfreiheit etc\n- mehr Plausibilität, dass mehr Menschen unter Gesetzen leben, denen sie frei zustimmen \n- loser's consent: Vertrauen auf Fairness der Verfahren und dynamische Mehrheitsverhältnisse\n- Demokratie fördert menschliche Entwicklung",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Warum Demokratie? (Dahl) instrumentell Aspekt\n==\ninstrumentell (Demokratie realisiert grösstmögliche Freiheit)\n- demokratischer Prozess impliziert notwendig Freihheitsrechte: Meinungsfreiheit etc\n- mehr Plausibilität, dass mehr Menschen unter Gesetzen leben, denen sie frei zustimmen \n- loser's consent: Vertrauen auf Fairness der Verfahren und dynamische Mehrheitsverhältnisse\n- Demokratie fördert menschliche Entwicklung",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232363"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232364]\nWer sagte \"negation of Democracy limits the scope of moral autonomy\"?\n==\nDahl",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"negation of Democracy limits the scope of moral autonomy\"?\n==\nDahl",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232364"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232365]\nzu erfüllende Bedingungen einer Demokratie (Dahl)\n==\n1. grösstmögliche Freiheit\n2. Beförderung moralischer Autonomie\n3. Befriedigung dringender Ansprüche",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "zu erfüllende Bedingungen einer Demokratie (Dahl)\n==\n1. grösstmögliche Freiheit\n2. Beförderung moralischer Autonomie\n3. Befriedigung dringender Ansprüche",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232365"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232366]\nMehrheitsentscheide\n==\n1. Deliberation: freier Austausch von Argumenten: sanfter Zwang des besseren Arguments, truth tracking\n2. Entscheidung: entweder Kosens oder Dissens-->bei Dissens, Entscheidung nach Mehrheitsregel\nmüssen kumulativ vorliegen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Mehrheitsentscheide\n==\n1. Deliberation: freier Austausch von Argumenten: sanfter Zwang des besseren Arguments, truth tracking\n2. Entscheidung: entweder Kosens oder Dissens-->bei Dissens, Entscheidung nach Mehrheitsregel\nmüssen kumulativ vorliegen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232366"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232367]\nWer sagte \"only where the majority, after the decision has been taken, preoceeds to liquidate politically...the opposing minority, does the technical device of majority decision degenerate into majority rule\"?\n==\nHannah Arendt",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"only where the majority, after the decision has been taken, preoceeds to liquidate politically...the opposing minority, does the technical device of majority decision degenerate into majority rule\"?\n==\nHannah Arendt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232367"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232368]\nVoraussetzungen für eine plausible physikalische Begründung der Mehrheitsregel\n==\n1. Zusammenhalt der Polity auch nach Entscheidung (Minderheit ganz \"überwältigt\")\n2. Entscheidung als vektorielle Resultante von Kräften\n3. Gleiche \"Kraft\" aller Teilnehmenden",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Voraussetzungen für eine plausible physikalische Begründung der Mehrheitsregel\n==\n1. Zusammenhalt der Polity auch nach Entscheidung (Minderheit ganz \"überwältigt\")\n2. Entscheidung als vektorielle Resultante von Kräften\n3. Gleiche \"Kraft\" aller Teilnehmenden",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232368"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232369]\nNicht-physikalische Begründung der Mehrheitsregel\n==\nZustimmung=/ physische Kraft\n--\nZustimmungsbegriff bezieht sich auf Einsicht/Überzeugung und abstrahiert von Kraft\n--\nes geht um moralische oder epistemische Überzeugung, um Gründe, nicht Krafteinheiten",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Nicht-physikalische Begründung der Mehrheitsregel\n==\nZustimmung=/ physische Kraft\n--\nZustimmungsbegriff bezieht sich auf Einsicht/Überzeugung und abstrahiert von Kraft\n--\nes geht um moralische oder epistemische Überzeugung, um Gründe, nicht Krafteinheiten",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232369"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232370]\nkommutative (ausgleichende) Gerechtigkeit\n==\nVerhängen von Strafe, Wiedergutmachen von Schäden, Tausch von Gütern\nZiel: arithmetische Gleichheit\nUnabhängig von Eigenschaften der Person\nVoraussetzung: Statusgleichheit",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "kommutative (ausgleichende) Gerechtigkeit\n==\nVerhängen von Strafe, Wiedergutmachen von Schäden, Tausch von Gütern\nZiel: arithmetische Gleichheit\nUnabhängig von Eigenschaften der Person\nVoraussetzung: Statusgleichheit",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232370"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232371]\ndistributive (verteilende) Gerechtigkeit\n==\nVerteilung von Ämtern, Gütern, Rechten, Pflichten\nZiel: geometrische Verhältnismässigkeit; gewichtete Gleichheit der Verteilung\nAbhängig von Eigenschaften der Person\nHerausforderung: für unterschiedliche Verteilungsgegenstände jeweils relevante Verteilungskriterien zu finden",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "distributive (verteilende) Gerechtigkeit\n==\nVerteilung von Ämtern, Gütern, Rechten, Pflichten\nZiel: geometrische Verhältnismässigkeit; gewichtete Gleichheit der Verteilung\nAbhängig von Eigenschaften der Person\nHerausforderung: für unterschiedliche Verteilungsgegenstände jeweils relevante Verteilungskriterien zu finden",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232371"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232372]\nmögliche Verteilungskriterien der distributiven Gerechtigkeit\n==\nstrikte Gleichheit\nVerdienst\nBedarf (Marx)\nGesellschaftlicher Gesamtnutzen oder durchschnittliche individuelle Nutzenssteigerung (Utilitarismus)\nZustimmung; Zustimmungswürdigkeit (Rawls)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "mögliche Verteilungskriterien der distributiven Gerechtigkeit\n==\nstrikte Gleichheit\nVerdienst\nBedarf (Marx)\nGesellschaftlicher Gesamtnutzen oder durchschnittliche individuelle Nutzenssteigerung (Utilitarismus)\nZustimmung; Zustimmungswürdigkeit (Rawls)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232372"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232373]\nDefinition Utilitarismus\n==\nNutzenprinzip: Eine Handlung ist moralisch richtig, wenn und nur wenn sie den grösstmöglichen Nutzen für die grösste Zahl verursacht\nnur Konsequenzen des Handels oder Regeln sind relevant\nVertreter: Adam Smith",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Definition Utilitarismus\n==\nNutzenprinzip: Eine Handlung ist moralisch richtig, wenn und nur wenn sie den grösstmöglichen Nutzen für die grösste Zahl verursacht\nnur Konsequenzen des Handels oder Regeln sind relevant\nVertreter: Adam Smith",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232373"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232374]\nAnnahmen Utilitarismus\n==\n1. Moralische Richtigkeit als Funktion des in sich Guten; das in sich Gute ist logisch unabhängig vom moralisch Richtigen\n2. Rationalitätsgebot: Maximierung dieser Funktion\n3. Verallgemeinerung: Was für jeden Einzelnen von uns gilt, gilt genauso für alle zusamme\n--> nach bestmöglicher Bilanz des in sich Guten für die Gesamtheit streben\n--> Handlung oder Regel ist dann und nur dann geboten, wenn sie ein Übergewicht an guten gegenüber schlechten Folgen im Hinblick auf einen Zweck hervorbringt",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Annahmen Utilitarismus\n==\n1. Moralische Richtigkeit als Funktion des in sich Guten; das in sich Gute ist logisch unabhängig vom moralisch Richtigen\n2. Rationalitätsgebot: Maximierung dieser Funktion\n3. Verallgemeinerung: Was für jeden Einzelnen von uns gilt, gilt genauso für alle zusamme\n--> nach bestmöglicher Bilanz des in sich Guten für die Gesamtheit streben\n--> Handlung oder Regel ist dann und nur dann geboten, wenn sie ein Übergewicht an guten gegenüber schlechten Folgen im Hinblick auf einen Zweck hervorbringt",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232374"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232375]\nPareto-Besser\n==\nZustand A ist besser als Zustand B, wenn mindestens ein Individuum besser gestellt ist, ohne dass ein anderes Individuum schlechter gestellt werden müsste",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Pareto-Besser\n==\nZustand A ist besser als Zustand B, wenn mindestens ein Individuum besser gestellt ist, ohne dass ein anderes Individuum schlechter gestellt werden müsste",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232375"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232376]\nPareto-Optimum\n==\nZustand, in dem es nicht möglich ist, ein Individuum besser zu stellen, ohne gleichzeitig ein anderes schlechter zu stellen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Pareto-Optimum\n==\nZustand, in dem es nicht möglich ist, ein Individuum besser zu stellen, ohne gleichzeitig ein anderes schlechter zu stellen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232376"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232377]\nUtilitaristische Wohlfahrtsfunktion\n==\naddiert den Nutzen eines jeden Individuums zu einem gesellschaftlichen Gesamtnutzen\n- alle werden gleich behandelt ohne Berücksichtigung ihres Ausgangszustads von Nutze: eine zusätzliche Nahrungseiheit für eine verhungernde Person ist gleich wie eine für einen Millionär",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Utilitaristische Wohlfahrtsfunktion\n==\naddiert den Nutzen eines jeden Individuums zu einem gesellschaftlichen Gesamtnutzen\n- alle werden gleich behandelt ohne Berücksichtigung ihres Ausgangszustads von Nutze: eine zusätzliche Nahrungseiheit für eine verhungernde Person ist gleich wie eine für einen Millionär",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232377"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232378]\nintermediäre Wohlfahrtsfunktion\n==\nMit zunehmener Ungleichheit muss der Nutzen für die relativ Reichen zunehmen, u den Verlust von Nutzen der relativ Armen zu kompensieren (einem Reichen muss im Verhältnis viel mehr gegeben werden als den Armen, daher lohnt es sich mehr 1.- einem Armen zu geben)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "intermediäre Wohlfahrtsfunktion\n==\nMit zunehmener Ungleichheit muss der Nutzen für die relativ Reichen zunehmen, u den Verlust von Nutzen der relativ Armen zu kompensieren (einem Reichen muss im Verhältnis viel mehr gegeben werden als den Armen, daher lohnt es sich mehr 1.- einem Armen zu geben)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232378"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232379]\nWer sagte \"Jeder Mensch besitzt eine aus der Gerechtigkeit entspringende Unverletzlichkeit, die auch im Namen des Wohles der ganzen Gesellschaft nicht aufgehoben werden kann...daher lässt es die Gerechtigkeit nicht zu, dass der Verlust der Freiheit bei einigen durch ein grösseres Wohl für andere wettgemacht wird.\"?\n==\nJohn Rawls",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"Jeder Mensch besitzt eine aus der Gerechtigkeit entspringende Unverletzlichkeit, die auch im Namen des Wohles der ganzen Gesellschaft nicht aufgehoben werden kann...daher lässt es die Gerechtigkeit nicht zu, dass der Verlust der Freiheit bei einigen durch ein grösseres Wohl für andere wettgemacht wird.\"?\n==\nJohn Rawls",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232379"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232380]\nSchleier des Nichtwissens\n==\n1. unvollständige Information\n2. Jede Person kennt die möglichen sozialen Positionen und prüft, welche Prinzipien akzeptabel sind ohne zu wissen, in welcher dieser Laen sie sich befinden wird\n3. Kennt allgemeine Ansichten über Gesellschaften, Wirtschaftssysteme etc.\n4. Kennt die zu verteileden Grundgüter (primary goods)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Schleier des Nichtwissens\n==\n1. unvollständige Information\n2. Jede Person kennt die möglichen sozialen Positionen und prüft, welche Prinzipien akzeptabel sind ohne zu wissen, in welcher dieser Laen sie sich befinden wird\n3. Kennt allgemeine Ansichten über Gesellschaften, Wirtschaftssysteme etc.\n4. Kennt die zu verteileden Grundgüter (primary goods)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232380"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232381]\nprimary goods\n==\nDinge, von denen man annimmt, dass sie ein vernünftiger Mensch haben möchte, was auch immer er sonst haben möchte\nzb Rechte, Freiheiten, Chancen, Einkommen, Vermögen, Selbstwertgefühl",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "primary goods\n==\nDinge, von denen man annimmt, dass sie ein vernünftiger Mensch haben möchte, was auch immer er sonst haben möchte\nzb Rechte, Freiheiten, Chancen, Einkommen, Vermögen, Selbstwertgefühl",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232381"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232382]\nPrizipien der Gerechtigkeit nach Rawls\n==\n1. Freiheitsprinzip\n2a. Differenzprinzip\n2b. Prinzip der fairen Chancengleichheit\nabsoluter Vorrang von 1\nVorrang von 2b gegenüber 2a",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Prizipien der Gerechtigkeit nach Rawls\n==\n1. Freiheitsprinzip\n2a. Differenzprinzip\n2b. Prinzip der fairen Chancengleichheit\nabsoluter Vorrang von 1\nVorrang von 2b gegenüber 2a",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232382"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232383]\nFreiheitsprinzip\n==\nJedermann soll gleiches Recht auf das umfangreichste System gleicher Grundfreiheiten haben, das mit dem gleichen System für alle anderen verträglich ist\nVerteilung von Rechten und Freiheiten\nGrenzen individueller Rechte und Freiheiten bestehen in den Rechten und Freiheiten jeder anderen Person",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Freiheitsprinzip\n==\nJedermann soll gleiches Recht auf das umfangreichste System gleicher Grundfreiheiten haben, das mit dem gleichen System für alle anderen verträglich ist\nVerteilung von Rechten und Freiheiten\nGrenzen individueller Rechte und Freiheiten bestehen in den Rechten und Freiheiten jeder anderen Person",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232383"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232384]\nDifferenzprinzip\n==\nsoziale und wirtschaftliche Ungleichheiten müssen den am wenigsten Begünstigten den grösstmöglichen Vorteil bringen\nBesserstellung eines Individuums ist nur dann gerechtfertigt, wenn dadurch auch die Situation des am schlechtesten gestellten Individuums verbessert wird",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Differenzprinzip\n==\nsoziale und wirtschaftliche Ungleichheiten müssen den am wenigsten Begünstigten den grösstmöglichen Vorteil bringen\nBesserstellung eines Individuums ist nur dann gerechtfertigt, wenn dadurch auch die Situation des am schlechtesten gestellten Individuums verbessert wird",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232384"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232385]\nPrinzip der fairen Chancengleichheit\n==\nsoziale und wirschaftliche Ungleichheiten müssen mit Ämtern und Positionen verbunden sein, die allen gemäss fairer Chancengleicheit offen stehen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Prinzip der fairen Chancengleichheit\n==\nsoziale und wirschaftliche Ungleichheiten müssen mit Ämtern und Positionen verbunden sein, die allen gemäss fairer Chancengleicheit offen stehen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232385"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232386]\nMaximin-Regel \n==\nMan wird sich hinter dem Schleier des Nichtwissens für jene Alternative entscheiden, deren schlechstmögliches Ergebnis besser als das aller anderen Alternativen ist",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Maximin-Regel \n==\nMan wird sich hinter dem Schleier des Nichtwissens für jene Alternative entscheiden, deren schlechstmögliches Ergebnis besser als das aller anderen Alternativen ist",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232386"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232387]\nMillers Gründe zugunsten der Werthaltigkeit des Nationalstaates\n==\nGemeinsame Identitt und politisches Gemeinschaftsgefühl im Nationalstaat favorisieren:\n1. Demoktratiefähigkeit \n- losers consent\n- Vertrauen zwischen Gleichartigen\n2. soziale Gerechtigkeit\n- Institutionelle Fähigkeit des Transfers\n- Bereitschaft zur Transferzahlung",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Millers Gründe zugunsten der Werthaltigkeit des Nationalstaates\n==\nGemeinsame Identitt und politisches Gemeinschaftsgefühl im Nationalstaat favorisieren:\n1. Demoktratiefähigkeit \n- losers consent\n- Vertrauen zwischen Gleichartigen\n2. soziale Gerechtigkeit\n- Institutionelle Fähigkeit des Transfers\n- Bereitschaft zur Transferzahlung",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232387"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232388]\nethischer Kosmopolitismus\n==\nbetrifft individuelles Verhalten und Einstellung zu globalen Problemen\ngleiche Gewichtung der Interessen aller Menschen (unabhängig von Rasse, Religion etc)\nnationale Politik zur Förderung globaler Gerechtigkeit",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "ethischer Kosmopolitismus\n==\nbetrifft individuelles Verhalten und Einstellung zu globalen Problemen\ngleiche Gewichtung der Interessen aller Menschen (unabhängig von Rasse, Religion etc)\nnationale Politik zur Förderung globaler Gerechtigkeit",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232388"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232389]\nDefinition Terrorismus (Walzer)\n==\ndas bewusste Töten Unschuldiger, die zufällig am falschen Ort sind, um einer ganzen Bevölkerung Furcht einzujagen und ihre Regierung unter Druck zu setzen",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Definition Terrorismus (Walzer)\n==\ndas bewusste Töten Unschuldiger, die zufällig am falschen Ort sind, um einer ganzen Bevölkerung Furcht einzujagen und ihre Regierung unter Druck zu setzen",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232389"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232390]\nDefinition Staatsterrorismus\n==\ndas bewusste Töten von Unschuldigen, die zufällig am falschen Ort sind, um einer ganzen Bevölkerung Furch einzujagen und ihre Regierung unter Druck zu setzen\nund\nvon diktatorischen und totalitären Regimes gegen ihr eigenes Volk eingesetzt, um Furcht zu verbreiten und eine politische Opposition im Keim zu ersticken",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Definition Staatsterrorismus\n==\ndas bewusste Töten von Unschuldigen, die zufällig am falschen Ort sind, um einer ganzen Bevölkerung Furch einzujagen und ihre Regierung unter Druck zu setzen\nund\nvon diktatorischen und totalitären Regimes gegen ihr eigenes Volk eingesetzt, um Furcht zu verbreiten und eine politische Opposition im Keim zu ersticken",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232390"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232391]\nDefinition Terrorismus im Krieg\n==\nTöten von Zivilisten in so grosser Zahl, dass ihre Regierungen zur Kapitulation gezwugen sind",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Definition Terrorismus im Krieg\n==\nTöten von Zivilisten in so grosser Zahl, dass ihre Regierungen zur Kapitulation gezwugen sind",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232391"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232392]\nwer sagte \"the war is always judged twiche, first with reference to the reasons states have for fighting, secondly with reference to the means they adopt. The first kind is adjectival in character: we say that a particular war is just or unjust. The second one is adverbial: we say that the war is being fought justly or unjustly. Distinuguishing jus ad bellum, the justice of war, from jus in bello, justice in war\"?\n==\nMichael Walzer",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "wer sagte \"the war is always judged twiche, first with reference to the reasons states have for fighting, secondly with reference to the means they adopt. The first kind is adjectival in character: we say that a particular war is just or unjust. The second one is adverbial: we say that the war is being fought justly or unjustly. Distinuguishing jus ad bellum, the justice of war, from jus in bello, justice in war\"?\n==\nMichael Walzer",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232392"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232393]\nius ad bellum\n==\ngerechter Grund (Selbstverteidigung, Intervention bei Verletzung von Menschenrechten, Befreiungskampf)\nlegitime Autorität (Regierung souveräner Staate, Sichherheitsrat UN)\nrechte Absicht (was ist mit higgen agenda?, nur status quo wiederherstellen oder Pflicht zu langfristigem Engagement?)\nletztes Mittel (ultima ration)\nvernüftige Aussicht auf Erfolg\nVerhältnismässigkeit der Güter (positive Folgen eines militärischen Eingriffs müssen die negativen bei weitem übertreffen)",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "ius ad bellum\n==\ngerechter Grund (Selbstverteidigung, Intervention bei Verletzung von Menschenrechten, Befreiungskampf)\nlegitime Autorität (Regierung souveräner Staate, Sichherheitsrat UN)\nrechte Absicht (was ist mit higgen agenda?, nur status quo wiederherstellen oder Pflicht zu langfristigem Engagement?)\nletztes Mittel (ultima ration)\nvernüftige Aussicht auf Erfolg\nVerhältnismässigkeit der Güter (positive Folgen eines militärischen Eingriffs müssen die negativen bei weitem übertreffen)",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232393"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232394]\nius in bello\n==\nVerhältnismässigkeit der Mittel\nNon-Kombattanten-Immunitt\nBehandlung Kriegsgefangener\nSchutzpflicht besetzter Gebiete",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "ius in bello\n==\nVerhältnismässigkeit der Mittel\nNon-Kombattanten-Immunitt\nBehandlung Kriegsgefangener\nSchutzpflicht besetzter Gebiete",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232394"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232395]\nDefinition humanitäre Intervention\n==\nDrohung oder Anwendung vo grenzenüberschreitender militärischer Gewalt durch einen Staat oder eine Staatengruppe mit dem Ziel massive ud elementare Verletzugen vo Menschenrechten zu verhinder oder zu beenden und zwar ohne Einwilligung des angegriffenen Staates",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Definition humanitäre Intervention\n==\nDrohung oder Anwendung vo grenzenüberschreitender militärischer Gewalt durch einen Staat oder eine Staatengruppe mit dem Ziel massive ud elementare Verletzugen vo Menschenrechten zu verhinder oder zu beenden und zwar ohne Einwilligung des angegriffenen Staates",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232395"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232396]\nKriterien der humanitärer Intervention\n==\n1. gerechter Grund: Verletzung grundlegender Menschenrechte\n2. legitime Autorität: UN-Sicherheitsrat oder regionale Organisation kollektiver Sicherheit\n3. ultima ratio\n4. rechte Absicht: Schutz vor massiver Verletzung von Menschenrechten\n5. vernünftige Aussicht auf Erfolg",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Kriterien der humanitärer Intervention\n==\n1. gerechter Grund: Verletzung grundlegender Menschenrechte\n2. legitime Autorität: UN-Sicherheitsrat oder regionale Organisation kollektiver Sicherheit\n3. ultima ratio\n4. rechte Absicht: Schutz vor massiver Verletzung von Menschenrechten\n5. vernünftige Aussicht auf Erfolg",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232396"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232397]\nWer sagte \"nun spricht die moralisch-praktische Vernunft in uns ihr unwiderstehliches Veto aus: Es soll kein Krieg sein... denn das ist nicht die Art wie jedermann sein Recht suchen soll\"?\n==\nKant",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"nun spricht die moralisch-praktische Vernunft in uns ihr unwiderstehliches Veto aus: Es soll kein Krieg sein... denn das ist nicht die Art wie jedermann sein Recht suchen soll\"?\n==\nKant",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232397"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232398]\nWer sagte \"die Solidarität, die so geschaffen wird, wird bekunden, dass jeder Krieg zwischen Frankreich und Deutschland nicht nur undenkbar, sondern materiell unmöglich wird\"?\n==\nRobert Schuman",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Wer sagte \"die Solidarität, die so geschaffen wird, wird bekunden, dass jeder Krieg zwischen Frankreich und Deutschland nicht nur undenkbar, sondern materiell unmöglich wird\"?\n==\nRobert Schuman",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232398"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232399]\nDefinition ziviler Ungehorsam (Bedau)\n==\nöffentliche\ngewaltlose\ngewissensbestimmte\ngesetzeswidrige Handlung\ndie gewöhnlich eine Änderung der Gesetze oder der Regierungspolitik herbeiführen soll",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Definition ziviler Ungehorsam (Bedau)\n==\nöffentliche\ngewaltlose\ngewissensbestimmte\ngesetzeswidrige Handlung\ndie gewöhnlich eine Änderung der Gesetze oder der Regierungspolitik herbeiführen soll",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232399"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232400]\nZusatzbedingungen für ZU gemäss Habermann und Rawls\n==\n1. nur für Fälle schwerwiegender Ungerechtigkeit/Verteidigung von Grundprinzipien\n2. alle legalen Einflussmöglichkeiten sind erschöpft\n3. Verfassungsordnung als Ganzes darf nicht gefährdet werden\n4. öffentliche Ankündigung und Kalkulierbarkeit für Polizei und Aktivisten\n5. Zurückhaltung auf Seiten von Aktivisten und Staat",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Zusatzbedingungen für ZU gemäss Habermann und Rawls\n==\n1. nur für Fälle schwerwiegender Ungerechtigkeit/Verteidigung von Grundprinzipien\n2. alle legalen Einflussmöglichkeiten sind erschöpft\n3. Verfassungsordnung als Ganzes darf nicht gefährdet werden\n4. öffentliche Ankündigung und Kalkulierbarkeit für Polizei und Aktivisten\n5. Zurückhaltung auf Seiten von Aktivisten und Staat",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232400"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232401]\nhermeneutisch\n==\nreflexive Urteile über Identität, über Prozesse des Verstehens von Sinn, über subjektive Erlebnisgebundenheit der Vorverständnisse; Wissen als Prozess der ständigen Revision von Vorverständnisse; Interpretation, Gewichtung von Fakten",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "hermeneutisch\n==\nreflexive Urteile über Identität, über Prozesse des Verstehens von Sinn, über subjektive Erlebnisgebundenheit der Vorverständnisse; Wissen als Prozess der ständigen Revision von Vorverständnisse; Interpretation, Gewichtung von Fakten",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232401"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.flashcard-1]\n[@id:232402]\nDefinition Engel, moralisch vollkommene Wesen \n==\n1. sein System moralischer Überzeugungen ist konsistenz und komplett: es enthält alle wahren und nur wahre moralische Überzeugunen\n2. Handelt immer bewusst gemäss seinen moralischen Überzeugungen\n3. Wesen mit beschränkten kognitiven Kapazitäten und unvollständiger Information",
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark--",
+      "body": "Definition Engel, moralisch vollkommene Wesen \n==\n1. sein System moralischer Überzeugungen ist konsistenz und komplett: es enthält alle wahren und nur wahre moralische Überzeugunen\n2. Handelt immer bewusst gemäss seinen moralischen Überzeugungen\n3. Wesen mit beschränkten kognitiven Kapazitäten und unvollständiger Information",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "232402"
+      ]
+    }
+  }
+]

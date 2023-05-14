@@ -1,0 +1,28 @@
+[
+  {
+    "bitmark": "[.cloze&document]\n[&document-online::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l=en]\n::warning::\nUsing this like this is dangeroous\n::\n::code:JavaScript::\n// And a code block\nlet a = 3;\nlet b = 4;\n::\n::embed:LaTeX::\\f{x} = 3::\n::image:: Optional Picture Caption (Title)\n@2x:http://cdn.bitbook.education/images/cat3_big_image.jpg\n::",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "-online::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l=en]\n::warning::\nUsing this like this is dangeroous\n::\n::code:JavaScript::\n// And a code block\nlet a = 3;\nlet b = 4;\n::\n::embed:LaTeX::\\f{x} = 3::\n::image:: Optional Picture Caption (Title)\n@2x:http://cdn.bitbook.education/images/cat3_big_image.jpg\n::",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    },
+    "errors": [
+      {
+        "message": "Rule violation around '-online'",
+        "line": 2,
+        "column": 10,
+        "errorLine": "[&document-online::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l=en]"
+      },
+      {
+        "message": "Rule violation around '::'",
+        "line": 2,
+        "column": 17,
+        "errorLine": "[&document-online::https://itunes.apple.com/ch/album/like-sugar-single/1392081432?l=en]"
+      }
+    ]
+  }
+]

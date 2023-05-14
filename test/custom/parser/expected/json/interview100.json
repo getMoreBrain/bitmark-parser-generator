@@ -1,0 +1,131 @@
+[
+  {
+    "bitmark": "[.interview:bitmark--]\n[%A1b]\n[!Nachrichten\n\nGlauben Sie dem Untersuchungsergebnis?\nWelche Eigenschaften sollte Ihrer Meinung nach eine Nachrichtensprecherin/ein Nachrichtensprecher besitzen?]\n\n**Wussten Sie das schon?**\nEine Untersuchung der Europäischen Gesellschaft für Psychoanalyse hat ergeben: Je hübscher die Nachrichtensprecherin, desto mehr Informationen verpassen die Männer. Bei den Attraktivsten kann es bis zu zwei Minuten dauern, bis der Mann wieder aufmerksam den Nachrichten folgt. Man kann übrigens auch davon ausgehen, dass Frauen bei Nachrichtensprechern ähnlich reagieren.\n===\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "A1b",
+      "instruction": "Nachrichten\n\nGlauben Sie dem Untersuchungsergebnis?\nWelche Eigenschaften sollte Ihrer Meinung nach eine Nachrichtensprecherin/ein Nachrichtensprecher besitzen?",
+      "body": "**Wussten Sie das schon?**\nEine Untersuchung der Europäischen Gesellschaft für Psychoanalyse hat ergeben: Je hübscher die Nachrichtensprecherin, desto mehr Informationen verpassen die Männer. Bei den Attraktivsten kann es bis zu zwei Minuten dauern, bis der Mann wieder aufmerksam den Nachrichten folgt. Man kann übrigens auch davon ausgehen, dass Frauen bei Nachrichtensprechern ähnlich reagieren.",
+      "footer": "",
+      "hint": "",
+      "questions": []
+    }
+  },
+  {
+    "bitmark": "[.interview:bitmark--&image]\n[%A2]\n[!Berichten Sie oder befragen Sie Ihre Nachbarin/Ihren Nachbarn.]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/businesswoman_reading_newspaper_uid_9-sw.png]\nWie informieren Sie sich über das Tagesgeschehen?\nGibt es einen Unterschied in der Mitteilung von Neuigkeiten zwischen den verschiedenen Medien? Nennen Sie Vorteile und Nachteile.\n===\n**Vorteile**\nFernsehen[@shortAnswer]\n===\nRadio[@shortAnswer]\n===\nTageszeitungen[@shortAnswer]\n===\nInternet[@shortAnswer]\n===\n**Nachteile**\nFernsehen[@shortAnswer]\n===\nRadio[@shortAnswer]\n===\nTageszeitungen[@shortAnswer]\n===\nInternet[@shortAnswer]\n===",
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
+      "item": "A2",
+      "instruction": "Berichten Sie oder befragen Sie Ihre Nachbarin/Ihren Nachbarn.",
+      "body": "Wie informieren Sie sich über das Tagesgeschehen?\nGibt es einen Unterschied in der Mitteilung von Neuigkeiten zwischen den verschiedenen Medien? Nennen Sie Vorteile und Nachteile.",
+      "footer": "",
+      "hint": "",
+      "questions": [
+        {
+          "item": "",
+          "question": "**Vorteile**\nFernsehen",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Radio",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Tageszeitungen",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Internet",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "**Nachteile**\nFernsehen",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Radio",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Tageszeitungen",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        },
+        {
+          "item": "",
+          "question": "Internet",
+          "instruction": "",
+          "hint": "",
+          "isExample": false,
+          "example": "",
+          "sampleSolution": "",
+          "partialAnswer": "",
+          "isShortAnswer": true
+        }
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/businesswoman_reading_newspaper_uid_9-sw.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,818 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:194307]\n[@language:en]\n[#Comparing storytelling in games & literature]\n[@externalId:e-comparing-storytelling-in-games--literat_tp0l1q5lf1i9]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194307"
+      ],
+      "language": [
+        "en"
+      ],
+      "title": "Comparing storytelling in games & literature",
+      "externalId": [
+        "e-comparing-storytelling-in-games--literat_tp0l1q5lf1i9"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194308]\n__I was asked to give a talk comparing storytelling in games and literature by ==Access Creative College==|link:https://www.accesscreative.ac.uk/courses/games-courses/|. This article is based on that talk.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__I was asked to give a talk comparing storytelling in games and literature by ==Access Creative College==|link:https://www.accesscreative.ac.uk/courses/games-courses/|. This article is based on that talk.__",
+      "id": [
+        "194308"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194309]\nIt’s easy to think that interactivity is the key difference between games and literature. Video games are interactive, which makes them unique. It’s an easy statement but misses the point that all forms of storytelling are interactive.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "It’s easy to think that interactivity is the key difference between games and literature. Video games are interactive, which makes them unique. It’s an easy statement but misses the point that all forms of storytelling are interactive.",
+      "id": [
+        "194309"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&image]\n[@id:194310]\n[&image:https://docs.bitmark.cloud/bit-books/medium/comparing_storytelling_in_games_and_literature/comparing_storytelling_in_games_and_literature_1.png][@caption:Scene of the Narration of the Decameron (Salvatore Postiglione, 1892)]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "",
+      "id": [
+        "194310"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/comparing_storytelling_in_games_and_literature/comparing_storytelling_in_games_and_literature_1.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Scene of the Narration of the Decameron (Salvatore Postiglione, 1892)",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194311]\n[%][% Storytelling is conversation]\nThere’s no such thing as a one-way story. The moment a story is told, it is immediately interpreted by the audience and becomes something new. That’s true whether the story exists on the page, as an audiobook, on film, around a campfire or in a game. The life experiences and opinions of every reader, viewer, listener or player collide with those of the creator, in the process generating a new shard of the story with each telling.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "There’s no such thing as a one-way story. The moment a story is told, it is immediately interpreted by the audience and becomes something new. That’s true whether the story exists on the page, as an audiobook, on film, around a campfire or in a game. The life experiences and opinions of every reader, viewer, listener or player collide with those of the creator, in the process generating a new shard of the story with each telling.",
+      "id": [
+        "194311"
+      ],
+      "lead": "Storytelling is conversation"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194312]\nGames excite me because they’re still figuring out their form, pushing at accepted boundaries and experimenting with the art and technology. It’s an immature medium in the best way possible, like cinema in the 20th century. There are many surprising and wonderful stories still to be told by movies, but the form and language of cinema itself has now settled, just as prose fiction did in an earlier time.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Games excite me because they’re still figuring out their form, pushing at accepted boundaries and experimenting with the art and technology. It’s an immature medium in the best way possible, like cinema in the 20th century. There are many surprising and wonderful stories still to be told by movies, but the form and language of cinema itself has now settled, just as prose fiction did in an earlier time.",
+      "id": [
+        "194312"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194313]\nIn other words, we know what movies and books are. But we’re still not entirely sure where video games start and end.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In other words, we know what movies and books are. But we’re still not entirely sure where video games start and end.",
+      "id": [
+        "194313"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194314]\n[%][% Thematic genre similarities]\nThere’s a shared thematic language between most mediums of storytelling. Games are no exception and you’ll frequently find the following genres and sub-genres:\n• Fantasy\n• Science fiction\n• Cyberpunk\n• Action thriller\n• Horror\n• War",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "There’s a shared thematic language between most mediums of storytelling. Games are no exception and you’ll frequently find the following genres and sub-genres:\n• Fantasy\n• Science fiction\n• Cyberpunk\n• Action thriller\n• Horror\n• War",
+      "id": [
+        "194314"
+      ],
+      "lead": "Thematic genre similarities"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194315]\nThese all exist in movies, books and comics, though they’re unusually prominent in gaming. It’s no coincidence that all of these genres are naturally action-focused — by which I don’t necessarily mean __action sequences__ but more literally __scenes in which you can take actions.__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "These all exist in movies, books and comics, though they’re unusually prominent in gaming. It’s no coincidence that all of these genres are naturally action-focused — by which I don’t necessarily mean __action sequences__ but more literally __scenes in which you can take actions.__",
+      "id": [
+        "194315"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194316]\nThe quest-heavy structure of traditional fantasy lends itself to player motivation and goals. Science fiction and cyberpunk makes it easy to introduce gadgets and unusual interfaces for the player to explore. Action thrillers and war games have combat and the immediacy of interaction via weapons. Horror games benefit from a visceral level of immersion and can take full advantage of the latest gaming technology, and again naturally lead in to combat or stealth design.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The quest-heavy structure of traditional fantasy lends itself to player motivation and goals. Science fiction and cyberpunk makes it easy to introduce gadgets and unusual interfaces for the player to explore. Action thrillers and war games have combat and the immediacy of interaction via weapons. Horror games benefit from a visceral level of immersion and can take full advantage of the latest gaming technology, and again naturally lead in to combat or stealth design.",
+      "id": [
+        "194316"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194317]\nAll of these genres are also assumed to be more male-focused, which chimes with the long-held assumption that gamers are male. Though these assumptions have finally started to break down in the last decade, it’s easy to see how it’s shaped the early history of games.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "All of these genres are also assumed to be more male-focused, which chimes with the long-held assumption that gamers are male. Though these assumptions have finally started to break down in the last decade, it’s easy to see how it’s shaped the early history of games.",
+      "id": [
+        "194317"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194318]\nThere are notable, historic genre absences in games:\n• Romance\n• Comedy\n• Crime\n• Literary fiction",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "There are notable, historic genre absences in games:\n• Romance\n• Comedy\n• Crime\n• Literary fiction",
+      "id": [
+        "194318"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194319]\nAll of these are __huge__ genres in movies and literature, yet are exceedingly rare in gaming. Romance exists only as a tick-box quest-exercise in AAA game design, although there are now sub-genres of adventure and narrative-heavy games which focus on romance. It’s still massively underserved when compared to its domination of ebook charts.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "All of these are __huge__ genres in movies and literature, yet are exceedingly rare in gaming. Romance exists only as a tick-box quest-exercise in AAA game design, although there are now sub-genres of adventure and narrative-heavy games which focus on romance. It’s still massively underserved when compared to its domination of ebook charts.",
+      "id": [
+        "194319"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:194320]\n[&video-link:https://www.youtube.com/watch?v=81mzm5ARi9U]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194320"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=81mzm5ARi9U",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194321]\nComedy is rarer still, perhaps because introducing player agency is directly at odds with traditional concepts of comedy timing and structure. To clarify, while games are occasionally funny, it’s very unusual to have a game whose primary intent is comedy — at least, not since the days of early 90s LucasArts. Portal 2 is still one of the highest profile comedy games, and that’s seven years old.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Comedy is rarer still, perhaps because introducing player agency is directly at odds with traditional concepts of comedy timing and structure. To clarify, while games are occasionally funny, it’s very unusual to have a game whose primary intent is comedy — at least, not since the days of early 90s LucasArts. Portal 2 is still one of the highest profile comedy games, and that’s seven years old.",
+      "id": [
+        "194321"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194322]\nThe most surprising omission is crime. While criminal activities are a frequent occurrence in games such as GTA, it’s unusual to have games which could be thought of as specifically crime fiction. LA Noire was a notable experiment back in 2011, and Heavy Rain a year before; since then, we’ve had Her Story. It’s a peculiar oversight, given that crime fiction would seem to offer all the action based storytelling of the fantasy, science fiction and war genres. I suspect the problem resides in finding ways to make the player feel like the detective: when games are still heavily authored, how can the player ever feel like they were the one to solve the crime, rather than being presented with the solution by the designer? That was Her Story’s genius, being entirely clue-based and leaving the analysis and conclusions entirely to the player.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The most surprising omission is crime. While criminal activities are a frequent occurrence in games such as GTA, it’s unusual to have games which could be thought of as specifically crime fiction. LA Noire was a notable experiment back in 2011, and Heavy Rain a year before; since then, we’ve had Her Story. It’s a peculiar oversight, given that crime fiction would seem to offer all the action based storytelling of the fantasy, science fiction and war genres. I suspect the problem resides in finding ways to make the player feel like the detective: when games are still heavily authored, how can the player ever feel like they were the one to solve the crime, rather than being presented with the solution by the designer? That was Her Story’s genius, being entirely clue-based and leaving the analysis and conclusions entirely to the player.",
+      "id": [
+        "194322"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:194323]\n[&video-link:https://www.youtube.com/watch?v=Jt5Cx91nc94]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194323"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=Jt5Cx91nc94",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194324]\nLiterary fiction is always a sticky one, in that it’s notoriously difficult to define in the first place. For decades there was no equivalent in gaming, until Dear Esther arrived on the scene in 2012. An elegiac wandering across and beneath a Hebridean island, the game resolutely refused to give the player any specific tasks or goals, other than proceeding through the vague narrative. Treated with suspicion by some traditional players, who declared it to not be a game, it spawned the wittily named ‘walking simulator’ genre. In truth, ‘walking simulators’ are gaming’s literary fiction: hard to classify, reluctant to explain itself, often obtuse, frequently fascinating and exquisitely composed.||",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Literary fiction is always a sticky one, in that it’s notoriously difficult to define in the first place. For decades there was no equivalent in gaming, until Dear Esther arrived on the scene in 2012. An elegiac wandering across and beneath a Hebridean island, the game resolutely refused to give the player any specific tasks or goals, other than proceeding through the vague narrative. Treated with suspicion by some traditional players, who declared it to not be a game, it spawned the wittily named ‘walking simulator’ genre. In truth, ‘walking simulators’ are gaming’s literary fiction: hard to classify, reluctant to explain itself, often obtuse, frequently fascinating and exquisitely composed.||",
+      "id": [
+        "194324"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194325]\n[%][%Mechanical genre]\nGames are unusual as storytelling mediums in that they have an additional genre definition, relating to their mechanical design. Regardless of a book’s content, the act of reading it remains the same: your eyes scan the words from start to finish. If you can read one book, you can read any book — at least in terms of the raw mechanics of consuming it; your capacity or willingness to understand and interpret will vary massively.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Games are unusual as storytelling mediums in that they have an additional genre definition, relating to their mechanical design. Regardless of a book’s content, the act of reading it remains the same: your eyes scan the words from start to finish. If you can read one book, you can read any book — at least in terms of the raw mechanics of consuming it; your capacity or willingness to understand and interpret will vary massively.",
+      "id": [
+        "194325"
+      ],
+      "lead": "Mechanical genre"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194326]\nThat’s not the case for games, which have a multitude of ways to transfer information to their audiences. Being able to play one game does not guarantee that you will be able to play other games. Enjoying the thematic genre of a game does not mean you will be able to navigate the mechanical genre.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "That’s not the case for games, which have a multitude of ways to transfer information to their audiences. Being able to play one game does not guarantee that you will be able to play other games. Enjoying the thematic genre of a game does not mean you will be able to navigate the mechanical genre.",
+      "id": [
+        "194326"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194327]\nSome examples:\n\n• First person shooter\n• Third person shooter\n• Beat-em-up\n• Schmup\n• Puzzler\n• Brawler\n• Action-RPG\n• RPG\n• JRPG\n• Interactive fiction\n• Platformer\n• Racing\n• Simulator",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Some examples:\n\n• First person shooter\n• Third person shooter\n• Beat-em-up\n• Schmup\n• Puzzler\n• Brawler\n• Action-RPG\n• RPG\n• JRPG\n• Interactive fiction\n• Platformer\n• Racing\n• Simulator",
+      "id": [
+        "194327"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194328]\nAnd so it goes. These mechanical approaches each require different skillsets from players, both in terms of navigation and interaction. This poses an interesting conundrum for designers: if a player is unable to successfully operate the viewpoint camera in a first person game, then it’s irrelevant how much they might enjoy your carefully crafted story as they will never be able to access it.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "And so it goes. These mechanical approaches each require different skillsets from players, both in terms of navigation and interaction. This poses an interesting conundrum for designers: if a player is unable to successfully operate the viewpoint camera in a first person game, then it’s irrelevant how much they might enjoy your carefully crafted story as they will never be able to access it.",
+      "id": [
+        "194328"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194329]\nChoosing the mechanical genre with which to deliver a narrative is therefore critical. Dear Esther’s core audience may not have had the patience to negotiate complex platforming. There have been cases of narrative games attempting to shoehorn themselves into inappropriate mechanical genres, forcing players to engage with unfamiliar or unwanted systems — Dreamfall’s failed attempt to integrate combat into its puzzle storytelling, or Grim Fandango’s ill-fated shifting of the point-and-click adventure genre into a primitive 3D, third person viewpoint that only served to put barriers between the core player audience and the content.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Choosing the mechanical genre with which to deliver a narrative is therefore critical. Dear Esther’s core audience may not have had the patience to negotiate complex platforming. There have been cases of narrative games attempting to shoehorn themselves into inappropriate mechanical genres, forcing players to engage with unfamiliar or unwanted systems — Dreamfall’s failed attempt to integrate combat into its puzzle storytelling, or Grim Fandango’s ill-fated shifting of the point-and-click adventure genre into a primitive 3D, third person viewpoint that only served to put barriers between the core player audience and the content.",
+      "id": [
+        "194329"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&video-link]\n[@id:194330]\n[&video-link:https://www.youtube.com/watch?v=8X2kIfS6fb8][@caption:The trailer doesn’t show the perspective employed by the game itself.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "",
+      "id": [
+        "194330"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=8X2kIfS6fb8",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "The trailer doesn’t show the perspective employed by the game itself."
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194331]\nNote the recent mini-furore over CD Projekt’s decision to make their next game, Cyberpunk 2077, a first person perspective game — a decision which has dismayed many fans of their third person fantasy back catalogue. Just as readers will sometimes prefer a particular narrative style or perspective, so do gamers.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Note the recent mini-furore over CD Projekt’s decision to make their next game, Cyberpunk 2077, a first person perspective game — a decision which has dismayed many fans of their third person fantasy back catalogue. Just as readers will sometimes prefer a particular narrative style or perspective, so do gamers.",
+      "id": [
+        "194331"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194332]\nWhere this gets interesting is in the entitlement of some gamers to demand the designers change their decisions, or even to hand over control to the player. Games are unique in being technically able to offer players a choice of first person or third person viewpoints, but a game’s perspective is every bit as important as a novel’s. Authors do not idly choose their story’s perspective and neither do game designers. The notion of a book including a toggle switch, enabling readers to pick their preferred writing style, is unrealistic and disrespectful of the author’s intent; the same goes for games, at least when story is concerned.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Where this gets interesting is in the entitlement of some gamers to demand the designers change their decisions, or even to hand over control to the player. Games are unique in being technically able to offer players a choice of first person or third person viewpoints, but a game’s perspective is every bit as important as a novel’s. Authors do not idly choose their story’s perspective and neither do game designers. The notion of a book including a toggle switch, enabling readers to pick their preferred writing style, is unrealistic and disrespectful of the author’s intent; the same goes for games, at least when story is concerned.",
+      "id": [
+        "194332"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194333]\nThe complication here is in the collision between mechanical and thematic genres. Giving a player (or reader) control over the narrative viewpoint makes little sense; but in the case of games, what happens if a player simply lacks the skill to engage with your chosen mechanics? They are immediately locked out of the entire story, in a way that doesn’t happen in literature. A book might be described as ‘hard work’ or outside of a reader’s comfort zone, but the words are still words, one after another. A film keeps playing, scene after scene, regardless of the viewer’s comprehension: there’s no challenge to the technical act of encountering it.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The complication here is in the collision between mechanical and thematic genres. Giving a player (or reader) control over the narrative viewpoint makes little sense; but in the case of games, what happens if a player simply lacks the skill to engage with your chosen mechanics? They are immediately locked out of the entire story, in a way that doesn’t happen in literature. A book might be described as ‘hard work’ or outside of a reader’s comfort zone, but the words are still words, one after another. A film keeps playing, scene after scene, regardless of the viewer’s comprehension: there’s no challenge to the technical act of encountering it.",
+      "id": [
+        "194333"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194334]\n[%][%Prioritising mechanical or thematic genre]\nThe best games find ways to fuse mechanical and thematic genres, such that they enhance one another.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The best games find ways to fuse mechanical and thematic genres, such that they enhance one another.",
+      "id": [
+        "194334"
+      ],
+      "lead": "Prioritising mechanical or thematic genre"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194335]\nTo return to CD Projekt, for their Witcher games they opted for a third person, hack-and-slash style approach. The Witcher games are based on novels by Andrzej Sapkowski and are told in the third person, primarily from the perspective of an established protagonist: Geralt of Rivia, a monster hunter. By using the third person perspective, CD Projekt emphasise that Geralt is a defined character, with his own attitudes, past, morality and appearance; players can influence him, nudging him in particular directions, but at no point is he going to behave in a way that betrays the character’s roots.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "To return to CD Projekt, for their Witcher games they opted for a third person, hack-and-slash style approach. The Witcher games are based on novels by Andrzej Sapkowski and are told in the third person, primarily from the perspective of an established protagonist: Geralt of Rivia, a monster hunter. By using the third person perspective, CD Projekt emphasise that Geralt is a defined character, with his own attitudes, past, morality and appearance; players can influence him, nudging him in particular directions, but at no point is he going to behave in a way that betrays the character’s roots.",
+      "id": [
+        "194335"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:194336]\n[&video-link:https://www.youtube.com/watch?v=XHrskkHf958]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194336"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=XHrskkHf958",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194337]\nSwitching to what sounds to be a loose first person perspective for Cyberpunk 2077 is accompanied by a fundamental change to the player character, which can now be created by the player and more heavily customised in appearance and behaviour. There’s still authorial intent in the story and player character’s dialogue, but the player is afforded far greater agency. The first person perspective provides a more intimate and personal way of telling the story, enabling players to inhabit a fresh, as yet undefined character. The developers have also noted how the first person perspective is far better suited to the narrow, towering cities of a futuristic science fiction world than a third person camera, which requires more space to function easily.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Switching to what sounds to be a loose first person perspective for Cyberpunk 2077 is accompanied by a fundamental change to the player character, which can now be created by the player and more heavily customised in appearance and behaviour. There’s still authorial intent in the story and player character’s dialogue, but the player is afforded far greater agency. The first person perspective provides a more intimate and personal way of telling the story, enabling players to inhabit a fresh, as yet undefined character. The developers have also noted how the first person perspective is far better suited to the narrow, towering cities of a futuristic science fiction world than a third person camera, which requires more space to function easily.",
+      "id": [
+        "194337"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194338]\nEarly reports suggest that Cyberpunk 2077 will not be exclusively first person, occasionally switching to a third person view when the storytelling would benefit — much like the approach taken by Wolfenstein: The New Order, which embraces visceral, first person shooter mechanics but is telling the story of a very defined character. It is his story you are witnessing, even while embodying him for much of the narrative.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Early reports suggest that Cyberpunk 2077 will not be exclusively first person, occasionally switching to a third person view when the storytelling would benefit — much like the approach taken by Wolfenstein: The New Order, which embraces visceral, first person shooter mechanics but is telling the story of a very defined character. It is his story you are witnessing, even while embodying him for much of the narrative.",
+      "id": [
+        "194338"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194339]\n[%][%‘First person’ in games versus literature]\nIn prose, be it fiction or non-fiction, a first person perspective is usually synonymous with certain characteristics:\n• Intimacy with the protagonist\n• Access to the inner thoughts of the narrator character\n• A character-focused, rather than plot-focused story\n• Deep insight into the narrator’s personality\n• A strong empathic connection with the reader",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In prose, be it fiction or non-fiction, a first person perspective is usually synonymous with certain characteristics:\n• Intimacy with the protagonist\n• Access to the inner thoughts of the narrator character\n• A character-focused, rather than plot-focused story\n• Deep insight into the narrator’s personality\n• A strong empathic connection with the reader",
+      "id": [
+        "194339"
+      ],
+      "lead": "‘First person’ in games versus literature"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194340]\nIn games, a first person perspective means something very different.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "In games, a first person perspective means something very different.",
+      "id": [
+        "194340"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194341]\nGenerally, it means this:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Generally, it means this:",
+      "id": [
+        "194341"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark++&image]\n[@id:194342]\n[&image:https://docs.bitmark.cloud/bit-books/medium/comparing_storytelling_in_games_and_literature/comparing_storytelling_in_games_and_literature_2.png][@caption:The DOOM remake]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "",
+      "id": [
+        "194342"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/comparing_storytelling_in_games_and_literature/comparing_storytelling_in_games_and_literature_2.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "The DOOM remake",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194343]\nIntimacy in a first person game usually means getting close enough to something in order to shoot it in the face. This is a somewhat facetious observation, and not entirely fair in the case of the DOOM remake, which utilises its first person perspective in subtle and clever ways to set tone and character. It’s a very successful fusion of mechanics and narrative, as I explore in this First 5 Minutes video:",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Intimacy in a first person game usually means getting close enough to something in order to shoot it in the face. This is a somewhat facetious observation, and not entirely fair in the case of the DOOM remake, which utilises its first person perspective in subtle and clever ways to set tone and character. It’s a very successful fusion of mechanics and narrative, as I explore in this First 5 Minutes video:",
+      "id": [
+        "194343"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:194344]\n[&video-link:https://www.youtube.com/watch?v=c-BQnEOQIZ0]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194344"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=c-BQnEOQIZ0",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194345]\nNonetheless, there’s no getting around the fact that one of the most revered first person games in history, featuring an ‘iconic’ gaming character, spends no time exploring its protagonist’s inner thoughts.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Nonetheless, there’s no getting around the fact that one of the most revered first person games in history, featuring an ‘iconic’ gaming character, spends no time exploring its protagonist’s inner thoughts.",
+      "id": [
+        "194345"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194346]\n[&image:https://docs.bitmark.cloud/bit-books/medium/comparing_storytelling_in_games_and_literature/comparing_storytelling_in_games_and_literature_3.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194346"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/comparing_storytelling_in_games_and_literature/comparing_storytelling_in_games_and_literature_3.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194347]\nI’m referring, of course, to Gordon Freeman, of Half Life fame. As a prototypical geek avatar — scientist, glasses, beard, male, socially inept — he is presented as an entirely empty vessel, even to the extent of having no dialogue during scenes which would normally lend themselves to conversation. The intent was to enable players to fully inhabit the character as they played through the story, rather than being forced into a particular authorial alley. The story is instead told through supporting characters, resulting in a first person perspective with exclusively third person characterisation. Half Life and Half Life 2 use other narrative techniques, which we’ll get to in my next article on the subject.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "I’m referring, of course, to Gordon Freeman, of Half Life fame. As a prototypical geek avatar — scientist, glasses, beard, male, socially inept — he is presented as an entirely empty vessel, even to the extent of having no dialogue during scenes which would normally lend themselves to conversation. The intent was to enable players to fully inhabit the character as they played through the story, rather than being forced into a particular authorial alley. The story is instead told through supporting characters, resulting in a first person perspective with exclusively third person characterisation. Half Life and Half Life 2 use other narrative techniques, which we’ll get to in my next article on the subject.",
+      "id": [
+        "194347"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194348]\nThis shallow interpretation of a first person viewpoint is something that the ‘walking simulators’ of Dear Esther and the more recent Firewatch and What Remains of Edith Finch serve to counter. They are all first person games which embrace their perspective, diving deep into their protagonist narrators, in the process offering deliberately subjective and unreliable narrations.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "This shallow interpretation of a first person viewpoint is something that the ‘walking simulators’ of Dear Esther and the more recent Firewatch and What Remains of Edith Finch serve to counter. They are all first person games which embrace their perspective, diving deep into their protagonist narrators, in the process offering deliberately subjective and unreliable narrations.",
+      "id": [
+        "194348"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194349]\nThe direct follow-up to Dear Esther, Everybody Has Gone To The Rapture, suffers from having a Freeman-esque empty vessel as the player characer, transferring all its characterisation onto secondary, observed characters. Half Life 2 gets away with this because its vague narrative is tied to hugely engaging and exciting action mechanics; Rapture, on the other hand, has little in the way of activities for the player, leaving them as little more than a story hunter, scrabbling about in a beautiful English village for scraps of narrative.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The direct follow-up to Dear Esther, Everybody Has Gone To The Rapture, suffers from having a Freeman-esque empty vessel as the player characer, transferring all its characterisation onto secondary, observed characters. Half Life 2 gets away with this because its vague narrative is tied to hugely engaging and exciting action mechanics; Rapture, on the other hand, has little in the way of activities for the player, leaving them as little more than a story hunter, scrabbling about in a beautiful English village for scraps of narrative.",
+      "id": [
+        "194349"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194350]\n[%][%Structure and pacing]\nGame designers — and players — have unique hurdles which aren’t concerns of novel writers. Prose fiction tends to have a rigid structure, along these lines:\n• Defined duration: you know how long the book is because you’re holding it in your hands, or you can see the page count of your ebook\n• No progress gating: technically, you can’t get ‘stuck’ in a book (though you can, of course, encounter stories and writing styles which are challenging, or uninteresting)\n• Books end at the end: when you read the final page, the book is done\n• Chapter-based\n• Carefully controlled pacing: this is defined entirely by the author (though reading speed is an influencing factor)\n• Fixed story: the words on the page will not change once they have been published\n• Only requires a single skill: if you can read one book, you can read any book (though genre resistance and thematic prejudice can be a complicating, though somewhat artificial factor)",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Game designers — and players — have unique hurdles which aren’t concerns of novel writers. Prose fiction tends to have a rigid structure, along these lines:\n• Defined duration: you know how long the book is because you’re holding it in your hands, or you can see the page count of your ebook\n• No progress gating: technically, you can’t get ‘stuck’ in a book (though you can, of course, encounter stories and writing styles which are challenging, or uninteresting)\n• Books end at the end: when you read the final page, the book is done\n• Chapter-based\n• Carefully controlled pacing: this is defined entirely by the author (though reading speed is an influencing factor)\n• Fixed story: the words on the page will not change once they have been published\n• Only requires a single skill: if you can read one book, you can read any book (though genre resistance and thematic prejudice can be a complicating, though somewhat artificial factor)",
+      "id": [
+        "194350"
+      ],
+      "lead": "Structure and pacing"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194351]\nGames aren’t nearly as simple, introducing a myriad of complexities and uncertainties for storytellers:\n• Flexible duration: the same game could take 10 hours for one player to complete, 100 for another — some genres, such as RPGs, are especially susceptible to this flex\n• Gated progress: if a player lacks certain skills, or the difficulty curve has been poorly implemented, player progress in the story will halt\n• Ends when victory conditions are met: these may or may not by in sync with the story’s natural conclusion\n• Level or quest based: games tend to have hundreds of micro-tasks, pulling the player’s attention in multiple, potentially conflicting directions\n• Non-linear and changeable: many games are not fixed, allowing the player to directly influence the path and pacing of the story\n• Requires multiple skills: being good at one type of game does not mean you will be good at all types of games",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Games aren’t nearly as simple, introducing a myriad of complexities and uncertainties for storytellers:\n• Flexible duration: the same game could take 10 hours for one player to complete, 100 for another — some genres, such as RPGs, are especially susceptible to this flex\n• Gated progress: if a player lacks certain skills, or the difficulty curve has been poorly implemented, player progress in the story will halt\n• Ends when victory conditions are met: these may or may not by in sync with the story’s natural conclusion\n• Level or quest based: games tend to have hundreds of micro-tasks, pulling the player’s attention in multiple, potentially conflicting directions\n• Non-linear and changeable: many games are not fixed, allowing the player to directly influence the path and pacing of the story\n• Requires multiple skills: being good at one type of game does not mean you will be good at all types of games",
+      "id": [
+        "194351"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194352]\n[&image:https://docs.bitmark.cloud/bit-books/medium/comparing_storytelling_in_games_and_literature/comparing_storytelling_in_games_and_literature_4.png][@caption:Watch out for the ant-lions.]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194352"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/comparing_storytelling_in_games_and_literature/comparing_storytelling_in_games_and_literature_4.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Watch out for the ant-lions.",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194353]\nThe final point is especially important: if the creators of Dear Esther had chosen to tell the same story in the form of a third person, cover-based shooter, or as a tricky platformer set on a series of side-on Hebridean islands they would have encountered significant player dissonance. While there is always some crossover, much of the audience for a game like Dear Esther will not possess traditional gaming skills.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The final point is especially important: if the creators of Dear Esther had chosen to tell the same story in the form of a third person, cover-based shooter, or as a tricky platformer set on a series of side-on Hebridean islands they would have encountered significant player dissonance. While there is always some crossover, much of the audience for a game like Dear Esther will not possess traditional gaming skills.",
+      "id": [
+        "194353"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194354]\n[%][%Why games writing is hard]\nBeing an accomplished writer of comics, novels or scripts does not ensure success in the realm of games. Games are a nightmare for writers, who have to surrender much of what they take for granted in other mediums and throw out many of the established rules:\n• The player controls the pacing, not the writer\n• Individual player skill impacts on story intent\n• Mechanical busywork and incidental action will distract from the story’s critical path\n• It’s difficult to apply 3-act story structure to a 10–150+ hour experience",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Being an accomplished writer of comics, novels or scripts does not ensure success in the realm of games. Games are a nightmare for writers, who have to surrender much of what they take for granted in other mediums and throw out many of the established rules:\n• The player controls the pacing, not the writer\n• Individual player skill impacts on story intent\n• Mechanical busywork and incidental action will distract from the story’s critical path\n• It’s difficult to apply 3-act story structure to a 10–150+ hour experience",
+      "id": [
+        "194354"
+      ],
+      "lead": "Why games writing is hard"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194355]\nIs it even possible to tell a heroic story if the player is rubbish at playing your game? Captain America wasn’t killed in the comics or his first movie because he got stuck on a door frame, or forgot how to jump. In games, players will do everything they can to subvert and destroy tone, atmosphere and emotion, either deliberately or inadvertently.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Is it even possible to tell a heroic story if the player is rubbish at playing your game? Captain America wasn’t killed in the comics or his first movie because he got stuck on a door frame, or forgot how to jump. In games, players will do everything they can to subvert and destroy tone, atmosphere and emotion, either deliberately or inadvertently.",
+      "id": [
+        "194355"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark--]\n[@id:194356]\nHow do you capture the Hero’s Journey, when the hero dies fifty times on the way to the finale, or simply can’t figure out how to defeat the villain?",
+    "bit": {
+      "type": "note",
+      "format": "bitmark--",
+      "body": "How do you capture the Hero’s Journey, when the hero dies fifty times on the way to the finale, or simply can’t figure out how to defeat the villain?",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "194356"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194357]\n[%][%Control and manipulation]\nTalking of journeys, the game Journey takes an interesting approach. It offers a deliberately very restrictive set of player verbs, even in the context of its multiplayer interactions. Anonymous players who find themselves exploring the world together can communicate only via chirrups and whistles, while the light challenge of the game is all about movement, jumping and gliding.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Talking of journeys, the game Journey takes an interesting approach. It offers a deliberately very restrictive set of player verbs, even in the context of its multiplayer interactions. Anonymous players who find themselves exploring the world together can communicate only via chirrups and whistles, while the light challenge of the game is all about movement, jumping and gliding.",
+      "id": [
+        "194357"
+      ],
+      "lead": "Control and manipulation"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194358]\nThe game’s fiction is matched directly to its mechanics, such that even in multiplayer the atmosphere remains unbroken. The invasion of your single player story-based game by an anonymous player from somewhere else in the world would ordinarily spell disaster, but Journey’s verb set ensures that players can’t do anything which would disrupt its tone.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The game’s fiction is matched directly to its mechanics, such that even in multiplayer the atmosphere remains unbroken. The invasion of your single player story-based game by an anonymous player from somewhere else in the world would ordinarily spell disaster, but Journey’s verb set ensures that players can’t do anything which would disrupt its tone.",
+      "id": [
+        "194358"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&image]\n[@id:194359]\n[&image:https://docs.bitmark.cloud/bit-books/medium/comparing_storytelling_in_games_and_literature/comparing_storytelling_in_games_and_literature_5.png]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "194359"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitmark.cloud/bit-books/medium/comparing_storytelling_in_games_and_literature/comparing_storytelling_in_games_and_literature_5.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194360]\nWhether this is clever design or overly prescriptive and cynical depends largely on your point of view. It conjures an engaging experience, but leaves little room for player expression or any kind of depth.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Whether this is clever design or overly prescriptive and cynical depends largely on your point of view. It conjures an engaging experience, but leaves little room for player expression or any kind of depth.",
+      "id": [
+        "194360"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194361]\nSpec Ops: The Line and Bioshock both attempted to comment directly on player agency and how that intersects with authorial intent, neither of them quite following through on their points even while being interesting, fourth-wall-demolishing meta-narratives.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Spec Ops: The Line and Bioshock both attempted to comment directly on player agency and how that intersects with authorial intent, neither of them quite following through on their points even while being interesting, fourth-wall-demolishing meta-narratives.",
+      "id": [
+        "194361"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194362]\n[%][%Do, don’t tell]\nThe mantra of ‘show, don’t tell’ applies to all forms of storytelling, including games. In the context of games, though, it becomes about player agency and mechanical design. If a game’s story is being told entirely through cut-scenes, expository dialogue, on-screen text, then it’s missing the point — those are all storytelling techniques from __other__ mediums, such as film, or literature.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "The mantra of ‘show, don’t tell’ applies to all forms of storytelling, including games. In the context of games, though, it becomes about player agency and mechanical design. If a game’s story is being told entirely through cut-scenes, expository dialogue, on-screen text, then it’s missing the point — those are all storytelling techniques from __other__ mediums, such as film, or literature.",
+      "id": [
+        "194362"
+      ],
+      "lead": "Do, don’t tell"
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194363]\nDelivering a game’s story via player actions is what unlocks the true potential of the form — that’s why the DOOM remake’s efforts to align the protagonist’s character and the action mechanics are so successful, in that they support one another. The game has scary monsters, but through the actions available to the player and the presentation of the lead character it becomes clear that you shouldn’t be afraid of them: the monsters should be afraid of you.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Delivering a game’s story via player actions is what unlocks the true potential of the form — that’s why the DOOM remake’s efforts to align the protagonist’s character and the action mechanics are so successful, in that they support one another. The game has scary monsters, but through the actions available to the player and the presentation of the lead character it becomes clear that you shouldn’t be afraid of them: the monsters should be afraid of you.",
+      "id": [
+        "194363"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194364]\nIt’s easy as a writer to look at the lack of narrative control, structural vagueness and player meddling as reasons to steer well clear of games writing, but that would be missing the vast rewards and exciting challenges available to writers who dare to give it a go.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "It’s easy as a writer to look at the lack of narrative control, structural vagueness and player meddling as reasons to steer well clear of games writing, but that would be missing the vast rewards and exciting challenges available to writers who dare to give it a go.",
+      "id": [
+        "194364"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194365]\nWriters in other forms don’t get to deliver branching narratives, exploring multiple versions and threads of the story; they don’t get to engage with the audience as an active participant, rather than as a passive interpreter; even if all forms of storytelling are inherently an act of interpretation between creator and consumer, it’s only in games that the __delivery__ of the work can be customised for each audience member.",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "Writers in other forms don’t get to deliver branching narratives, exploring multiple versions and threads of the story; they don’t get to engage with the audience as an active participant, rather than as a passive interpreter; even if all forms of storytelling are inherently an act of interpretation between creator and consumer, it’s only in games that the __delivery__ of the work can be customised for each audience member.",
+      "id": [
+        "194365"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194366]\n__This article is already loooooong, so I’m wrapping it up here. ==You can read Part 2 here==|link:https://simonkjones.medium.com/3-approaches-to-storytelling-in-games-4e62de86ef30|, in which I explore the design approaches to melding story and mechanics: which comes first?__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__This article is already loooooong, so I’m wrapping it up here. ==You can read Part 2 here==|link:https://simonkjones.medium.com/3-approaches-to-storytelling-in-games-4e62de86ef30|, in which I explore the design approaches to melding story and mechanics: which comes first?__",
+      "id": [
+        "194366"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--]\n[@id:194367]\n__I’m a writer of science fiction and fantasy. You might have heard me on The Writing Life podcast. If you’re into writing and tech for writers you can jump on my newsletter at https://simonkjones.substack.com/ Thanks!__",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "__I’m a writer of science fiction and fantasy. You might have heard me on The Writing Life podcast. If you’re into writing and tech for writers you can jump on my newsletter at https://simonkjones.substack.com/ Thanks!__",
+      "id": [
+        "194367"
+      ]
+    }
+  }
+]

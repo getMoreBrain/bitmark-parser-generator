@@ -1,0 +1,171 @@
+[
+  {
+    "bitmark": "[.book]\n[@id:304909]\n[@externalId:e-navigation_7w6epe8eh-ra]\n\n[#Navigation]\n[@language:de]\n[##Kapitel und Seiten aufrufen, vor- / zurückblättern, Kurs- und Kapitelübersicht.]\n[@coverImage:https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/cover_motilern_bedienung.png]\n[@publisher:motilern]\n[@theme:motilern]",
+    "bit": {
+      "type": "book",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304909"
+      ],
+      "externalId": [
+        "e-navigation_7w6epe8eh-ra"
+      ],
+      "title": "Navigation",
+      "language": [
+        "de"
+      ],
+      "subtitle": "Kapitel und Seiten aufrufen, vor- / zurückblättern, Kurs- und Kapitelübersicht.",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/motilern/bedienungsanleitung/web-resources/images/cover_motilern_bedienung.png"
+      ],
+      "publisher": [
+        "motilern"
+      ],
+      "theme": [
+        "motilern"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.chapter:bitmark++]\n[@id:304910]\n[▼ch-1]\n[#Navigation]\n[▼Ref_Navigation]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark++",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 1,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304910"
+      ],
+      "anchor": "Ref_Navigation",
+      "title": "Navigation"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[@id:304911]\n[▼ch-2]\n[##Kapitel und Seiten aufrufen, vor- / zurückblättern, Kurs- und Kapitelübersicht.]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "id": [
+        "304911"
+      ],
+      "anchor": "ch-2",
+      "title": "Kapitel und Seiten aufrufen, vor- / zurückblättern, Kurs- und Kapitelübersicht."
+    }
+  },
+  {
+    "bitmark": "[.quote:bitmark--]\n[@id:304912]\n“Bildung ist nicht, was man hineinstopft. Bildung ist, was man herausholt.” [@quotedPerson:Ludwig Hasler]",
+    "bit": {
+      "type": "quote",
+      "format": "bitmark--",
+      "body": "“Bildung ist nicht, was man hineinstopft. Bildung ist, was man herausholt.”",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304912"
+      ],
+      "quotedPerson": "Ludwig Hasler"
+    }
+  },
+  {
+    "bitmark": "[.video-link]\n[@id:304913]\n[&video-link:https://player.vimeo.com/video/702078703]",
+    "bit": {
+      "type": "video-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304913"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "player.vimeo.com",
+          "url": "https://player.vimeo.com/video/702078703",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark--]\n[@id:304914]\n[!Transkript]\nWillkommen bei MotiLern, jenem Lern-Management-System, bei dem die Motivation des Lernenden, deinen Kurs bis zum Ende durchzumachen, ganz im Fokus steht.\n\nMein Name ist Michael Smetana und ich habe dieses Tool entwickelt. Und ich zeig dir jetzt gleich mal, wie einfach du hier in diesem Tool deine einzelnen Seiten aufrufen und navigieren kannst.\n\nDass man ein Kapitel aufruft, indem man auf die **Kachel** des Kapitels drauf klickt, das hast du schon entdeckt. Und dass man dann in der Kapitel-Übersicht, die einzelnen Seiten anklicken kann, das hast du auch schon entdeckt, sonst wärst du ja gar nicht da.\n\nJetzt zeig ich dir, wie du auf die **nächste Seite** weiterblätterst. Dazu gibt es rechts oben im Menü in einem runden Kreis so einen Pfeil nach rechts. Da kannst du draufklicken, dann kommst auf die nächste Seite. Und damit's besonders leicht wird für dich und für jeden Lernenden hast du den gleichen Button am Ende jeder Seite nochmal. Links daneben findest dann einen runden Kreis mit dem Pfeil nach links. Das ist natürlich zum **Zurückblättern** und den gleichen Button hast am Ende der Seite auch noch.\n\nWie kommst du jetzt zurück in die **Kapitel-Übersicht**? Da gibt es zwei Möglichkeiten. Die eine Möglichkeit ist: Du klickst oben im Menü auf das aufgeschlagene Buch auf den Button. So kommst su zurück zur Kapitel-Übersicht, wo du alle Seiten des Kapitels siehst. Oder du klickst oben im Header auf den Namen des Kapitels drauf. Dann bist auch gleich dort.\n\nWie kommst du jetzt aus einer Seite zurück zur gesamten Kurs-Übersicht, wo du dann alle Kapitel siehst? Auch das ist sehr einfach. Da klickst entweder im Menü oben auf den Button mit dem Lesezeichen oder du kannst auch direkt oben im Header auf den Namen des ganzen Kurses klicken. Dann bist schon da.\n\nJetzt ist noch die Frage Wie komme ich dann wieder zurück? Ganz auf die **Startseite von MotiLern**. Auch das ist recht einfach. Du hast im Menü das kleine Häuschen. Wenn du darauf klickst, bist du ganz an der Einstiegsseite und kannst deine Kurse auswählen. Oder natürlich auch wenn du auf das Logo draufklickst ... dann geht es auch.\n\nSo, das war jetzt einmal das Wichtigste zur Navigation. Jetzt spiel ein bisschen rum, klick' mal auf die nächste Seite, klick' zurück auf die letzte Seite, navigiert wieder rauf in die Kapitel-Übersicht in die Kurs-Übersicht, vielleicht auch noch auf die Startseite von MotiLern. Geh wieder hinein und mach dich einmal vertraut mit der Steuerung.\n\nViel Freude dabei.",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark--",
+      "body": "Willkommen bei MotiLern, jenem Lern-Management-System, bei dem die Motivation des Lernenden, deinen Kurs bis zum Ende durchzumachen, ganz im Fokus steht.\n\nMein Name ist Michael Smetana und ich habe dieses Tool entwickelt. Und ich zeig dir jetzt gleich mal, wie einfach du hier in diesem Tool deine einzelnen Seiten aufrufen und navigieren kannst.\n\nDass man ein Kapitel aufruft, indem man auf die **Kachel** des Kapitels drauf klickt, das hast du schon entdeckt. Und dass man dann in der Kapitel-Übersicht, die einzelnen Seiten anklicken kann, das hast du auch schon entdeckt, sonst wärst du ja gar nicht da.\n\nJetzt zeig ich dir, wie du auf die **nächste Seite** weiterblätterst. Dazu gibt es rechts oben im Menü in einem runden Kreis so einen Pfeil nach rechts. Da kannst du draufklicken, dann kommst auf die nächste Seite. Und damit's besonders leicht wird für dich und für jeden Lernenden hast du den gleichen Button am Ende jeder Seite nochmal. Links daneben findest dann einen runden Kreis mit dem Pfeil nach links. Das ist natürlich zum **Zurückblättern** und den gleichen Button hast am Ende der Seite auch noch.\n\nWie kommst du jetzt zurück in die **Kapitel-Übersicht**? Da gibt es zwei Möglichkeiten. Die eine Möglichkeit ist: Du klickst oben im Menü auf das aufgeschlagene Buch auf den Button. So kommst su zurück zur Kapitel-Übersicht, wo du alle Seiten des Kapitels siehst. Oder du klickst oben im Header auf den Namen des Kapitels drauf. Dann bist auch gleich dort.\n\nWie kommst du jetzt aus einer Seite zurück zur gesamten Kurs-Übersicht, wo du dann alle Kapitel siehst? Auch das ist sehr einfach. Da klickst entweder im Menü oben auf den Button mit dem Lesezeichen oder du kannst auch direkt oben im Header auf den Namen des ganzen Kurses klicken. Dann bist schon da.\n\nJetzt ist noch die Frage Wie komme ich dann wieder zurück? Ganz auf die **Startseite von MotiLern**. Auch das ist recht einfach. Du hast im Menü das kleine Häuschen. Wenn du darauf klickst, bist du ganz an der Einstiegsseite und kannst deine Kurse auswählen. Oder natürlich auch wenn du auf das Logo draufklickst ... dann geht es auch.\n\nSo, das war jetzt einmal das Wichtigste zur Navigation. Jetzt spiel ein bisschen rum, klick' mal auf die nächste Seite, klick' zurück auf die letzte Seite, navigiert wieder rauf in die Kapitel-Übersicht in die Kurs-Übersicht, vielleicht auch noch auf die Startseite von MotiLern. Geh wieder hinein und mach dich einmal vertraut mit der Steuerung.\n\nViel Freude dabei.",
+      "id": [
+        "304914"
+      ],
+      "instruction": "Transkript"
+    }
+  },
+  {
+    "bitmark": "[.note:bitmark++]\n[@id:304915]\n[%][%Übungsanleitung]\n• Mach dich mit der Navigation vertaut.\n\t• Klick' mal auf die nächste Seite. Oben und am Ende der Seite.\n\t• Klick' zurück auf die letzte Seite. Oben und am Ende der Seite.\n\t• Navigiere wieder rauf in die Kapitel-Übersicht.\n\t• Geh zurück zur Kurs-Übersicht.\n• Kehre zur Startseite von MotiLern zurück.\n\t• Geh wieder in den Einführungskurs hinein und spiel einfach ein bisschen rum.\n• Wenn du das Gefühl hast, dass du sattelfest bist, dann mach weiter mit der nächsten Seite.",
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "body": "• Mach dich mit der Navigation vertaut.\n\t• Klick' mal auf die nächste Seite. Oben und am Ende der Seite.\n\t• Klick' zurück auf die letzte Seite. Oben und am Ende der Seite.\n\t• Navigiere wieder rauf in die Kapitel-Übersicht.\n\t• Geh zurück zur Kurs-Übersicht.\n• Kehre zur Startseite von MotiLern zurück.\n\t• Geh wieder in den Einführungskurs hinein und spiel einfach ein bisschen rum.\n• Wenn du das Gefühl hast, dass du sattelfest bist, dann mach weiter mit der nächsten Seite.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304915"
+      ],
+      "lead": "Übungsanleitung"
+    }
+  },
+  {
+    "bitmark": "[.details-1:bitmark++]\n[@id:304916]\n[!Das hier Gelernte brauchst du schon bald auf folgenden Seiten dieses Kurses:]\n• Seiten-Inhalte > Voraussetzungen, Slider, Hinweisboxen, Ausklapp-Text, Multiple-Choice\n• Orientierung > Sternebewertung, Fortschritt, persönliche Notizen, Lern-Tagebuch, Suche.\n• Motivation > Warum erfolgreiche Selbstlernkurse ihre Lernenden bestmöglich motivieren.",
+    "bit": {
+      "type": "details-1",
+      "format": "bitmark++",
+      "body": "• Seiten-Inhalte > Voraussetzungen, Slider, Hinweisboxen, Ausklapp-Text, Multiple-Choice\n• Orientierung > Sternebewertung, Fortschritt, persönliche Notizen, Lern-Tagebuch, Suche.\n• Motivation > Warum erfolgreiche Selbstlernkurse ihre Lernenden bestmöglich motivieren.",
+      "id": [
+        "304916"
+      ],
+      "instruction": "Das hier Gelernte brauchst du schon bald auf folgenden Seiten dieses Kurses:"
+    }
+  },
+  {
+    "bitmark": "[.side-note:bitmark++]\n[@id:304917]\n[%][%Fazit]\n• **Blättern** geht im Hauptmenü und am Ende jeder Seite.\n• **Kurs-Übersicht**: Symbol \"Lesezeichen\" oder Name des Kapitels im Header.\n• **Kurs-Übersicht**: Symbol \"offenes Buch\" oder Kursname im Header.",
+    "bit": {
+      "type": "side-note",
+      "format": "bitmark++",
+      "body": "• **Blättern** geht im Hauptmenü und am Ende jeder Seite.\n• **Kurs-Übersicht**: Symbol \"Lesezeichen\" oder Name des Kapitels im Header.\n• **Kurs-Übersicht**: Symbol \"offenes Buch\" oder Kursname im Header.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "304917"
+      ],
+      "lead": "Fazit"
+    }
+  }
+]
