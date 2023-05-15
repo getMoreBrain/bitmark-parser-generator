@@ -9,8 +9,7 @@
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
   "files": [
-    "dist",
-    "scripts"
+    "dist"
   ],
   "scripts": {
     "start": "node -r esbuild-register ./test/custom/dev/bmgDevJson.ts",
@@ -36,7 +35,6 @@
     "generate-build-info": "node ./scripts/generate-build-info.js",
     "publish": "yarn npm publish",
     "prepublish": "run lint && run clean && run build && run test",
-    "postinstall": "run generate-build-info && run build-grammar-bit",
     "clean": "shx rm -rf ./dist",
     "lint": "eslint --max-warnings 0 -- './**/*.@(tsx|ts|jsx|js|mjs|cjs)'",
     "ncu": "yarn dlx npm-check-updates -i",
