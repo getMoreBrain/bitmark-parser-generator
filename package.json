@@ -1,6 +1,6 @@
 {
   "name": "@getmorebrain/bitmark-parser-generator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A bitmark parser and generator using an Abstract Syntax Tree (AST) and Peggy.js",
   "author": "Richard Sewell",
   "license": "ISC",
