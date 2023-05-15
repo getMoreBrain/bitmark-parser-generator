@@ -12,7 +12,7 @@ import path from 'path';
 import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
 import { Ast } from '../../../src/ast/Ast';
 // import { BitmarkFileGenerator } from '../../..src/generator/bitmark/BitmarkFileGenerator';
-import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
+// import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
 import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
 import { JsonParser } from '../../../src/parser/json/JsonParser';
 
@@ -36,7 +36,7 @@ class BmgDevBitmarkAntlr {
 
       // Bitmark ==> JSON
       // Convert the bitmark to JSON
-      const json = bitmarkParser.parse(bitStr);
+      const json = bitmarkParser.parseUsingAntlr(bitStr);
       const jsonStr = JSON.stringify(json, undefined, 2);
 
       // Convert the bitmark JSON to bitmark AST

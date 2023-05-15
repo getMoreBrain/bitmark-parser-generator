@@ -12,13 +12,14 @@ import path from 'path';
 import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
 import { Ast } from '../../../src/ast/Ast';
 // import { BitmarkFileGenerator } from '../../..src/generator/bitmark/BitmarkFileGenerator';
-import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
+// import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
 import { JsonObjectGenerator } from '../../../src/generator/json/JsonObjectGenerator';
 import { BitmarkParserType } from '../../../src/model/enum/BitmarkParserType';
 import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
-import { JsonParser } from '../../../src/parser/json/JsonParser';
 
-const jsonParser = new JsonParser();
+// import { JsonParser } from '../../../src/parser/json/JsonParser';
+
+// const jsonParser = new JsonParser();
 const ast = new Ast();
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 const bitmarkParser = new BitmarkParser();

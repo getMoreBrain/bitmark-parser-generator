@@ -1,4 +1,3 @@
-import NodePolyfillPlugin from 'node-polyfill-webpack-plugin';
 import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
@@ -61,14 +60,10 @@ const config: Configuration = {
         terserOptions: {
           ecma: 2020,
         },
-        // exclude: /node_modules\/bitmark-grammar/ /*[new RegExp('node_modules/bitmark-grammar/.+')],*/,
       }),
     ],
   },
   plugins: [
-    // new NodePolyfillPlugin({
-    //   includeAliases: ['constants', 'os', 'path', 'process', 'stream'],
-    // }),
     new BundleAnalyzerPlugin({
       openAnalyzer: false,
       analyzerMode: 'static',
