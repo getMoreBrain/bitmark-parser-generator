@@ -248,6 +248,33 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
+  // bitmark -> bits -> bitsValue -> labelTrue / labelFalse
+
+  protected enter_labelTrue(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const value = node.value as string | undefined;
+
+    // Ignore example that is not at the bit level as it are handled elsewhere
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const bit = parent?.value as Bit;
+    if (bit) {
+      this.writeProperty(PropertyKey.labelTrue, value, true);
+      this.writeProperty(PropertyKey.labelFalse, bit.labelFalse, true);
+    }
+  }
+
+  // bitmark -> bits -> bitsValue -> example
+
+  protected enter_example(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const value = node.value as boolean | undefined;
+
+    // Ignore example that is not at the bit level as it are handled elsewhere
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    // Special case for example
+    this.writeProperty('example', value, true, true);
+  }
+
   // bitmark -> bits -> bitsValue -> sampleSolution
 
   protected enter_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -978,12 +1005,12 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> bitsValue -> questions -> questionsValue -> question -> isShortAnswer
 
   protected leaf_isShortAnswer(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value === true) {
-      // Writing [@shortAnswer] after the 'question' causes newlines in the body to change.
-      // This is likely a parser bug.
-      // this.writeOPA();
-      // this.writeString('shortAnswer');
-      // this.writeCL();
+    // Generally, shortAnswer is the default.
+    // Write long answer if shortAnswer is specifically false.
+    if (node.value === false) {
+      this.writeOPA();
+      this.writeString('longAnswer');
+      this.writeCL();
     }
   }
 
@@ -1093,7 +1120,9 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
       const astKey = meta.astKey ? meta.astKey : key;
       const funcName = `enter_${astKey}`;
 
-      // Special cases
+      // Special cases (handled outside of the automatically generated handlers)
+      if (astKey === PropertyKey.example) continue;
+      if (astKey === PropertyKey.labelTrue) continue;
       if (astKey === PropertyKey.labelFalse) continue;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -1106,20 +1135,8 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
         // Ignore any property that is not at the bit level as that will be handled by a different handler
         if (parent?.key !== NodeType.bitsValue) return;
 
-        if (astKey === 'labelTrue') {
-          // Special case
-          const bit = parent?.value as Bit;
-          if (bit) {
-            this.writeProperty(PropertyKey.labelTrue, value, meta.isSingle);
-            this.writeProperty(PropertyKey.labelFalse, bit.labelFalse, meta.isSingle);
-          }
-        } else if (astKey === PropertyKey.example) {
-          // Special case
-          this.writeProperty('example', value, meta.isSingle, true);
-        } else {
-          // Standard case
-          this.writeProperty(key, node.value, meta.isSingle);
-        }
+        // Write the property
+        this.writeProperty(key, node.value, meta.isSingle, meta.ignoreFalse, meta.ignoreTrue);
       };
 
       // Bind this
@@ -1292,6 +1309,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     values?: unknown | unknown[],
     singleOnly?: boolean,
     ignoreFalse?: boolean,
+    ignoreTrue?: boolean,
   ): void {
     let valuesArray: unknown[];
 
@@ -1308,6 +1326,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
         for (const val of valuesArray) {
           if (val !== undefined) {
             if (ignoreFalse && val === false) continue;
+            if (ignoreTrue && val === true) continue;
             this.writeOPA();
             this.writeString(name);
             this.writeColon();

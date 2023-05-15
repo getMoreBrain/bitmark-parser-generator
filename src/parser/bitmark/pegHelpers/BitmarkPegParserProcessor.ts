@@ -185,10 +185,14 @@ class BitmarkPegParserProcessor {
     let errors: ParserError[] = [];
 
     for (const bitStr of bitStrs) {
-      if (DEBUG_BIT_RAW) this.debugPrint('RAW BIT', bitStr.trim());
+      const bitTrimmed = bitStr.trim();
+      if (DEBUG_BIT_RAW) this.debugPrint('RAW BIT', bitTrimmed);
+
+      // Ignore empty bits (only happens if entire file is empty / whitespace only
+      if (!bitTrimmed) continue;
 
       // Parse the raw bit
-      const bitParserResult = this.parse(bitStr ?? '', {
+      const bitParserResult = this.parse(bitStr, {
         startRule: 'bit',
       }) as SubParserResult<Bit>;
 

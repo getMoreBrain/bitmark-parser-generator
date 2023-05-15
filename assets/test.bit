@@ -1,20 +1,21 @@
-[.interview:bitmark--]
-[%B4]
-[!Überlegen Sie sich einen Vorfall und erstatten Sie selbst Strafanzeige gegen unbekannt.]
-(Vorname, Nachname)
-(Straße, Hausnummer)
-(Postleitzahl, Ort)
-(Telefonnummer)
-
-An die Staatsanwaltschaft
-(Straße, Hausnummer)
-(Postleitzahl, Ort)
-
-__Strafanzeige gegen unbekannt__
-
-(Ort, Datum)
+[.match-reverse]
+[@id:287869]
+[%][%match-reverse]
+[!Wie heißen die passenden Nomen?]
 ===
-Sehr geehrte Damen und Herren,
-folgenden Vorfall möchte ich zur Anzeige bringen:
+Tier
+==
+das[@example]
 ===
+Kuh
+==
+die
+===
+Löwe
+==
+die
+===
+Schmetterling
+==
+der
 ===

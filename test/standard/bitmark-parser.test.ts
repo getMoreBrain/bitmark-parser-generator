@@ -21,7 +21,7 @@ const SINGLE_FILE_COUNT = 100;
 const TEST_AGAINST_ANTLR_PARSER = false;
 
 // Set to true to generate performance debug output
-const DEBUG_PERFORMANCE = true;
+const DEBUG_PERFORMANCE = false;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, './bitmark');
 const JSON_INPUT_DIR = path.resolve(__dirname, './bitmark/json');
@@ -29,7 +29,7 @@ const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/bitmark-parser/output
 
 // Enable or disable testing of specific files
 const TEST_FILES = [
-  // '_simple.bit',
+  '_simple.bit',
   'article.bit',
   'assignment.bit',
   'book.bit',
@@ -147,7 +147,7 @@ describe('json-gen', () => {
         if (TEST_AGAINST_ANTLR_PARSER) {
           // Generate JSON from generated bitmark markup using the ANTLR parser
           performance.mark('ANTLR:Start');
-          originalJson = bitmarkParser.parse(originalMarkup);
+          originalJson = bitmarkParser.parseUsingAntlr(originalMarkup);
 
           // Write the new JSON
           fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {

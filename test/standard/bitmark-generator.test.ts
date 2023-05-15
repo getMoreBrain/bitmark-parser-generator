@@ -21,7 +21,7 @@ const SINGLE_FILE_COUNT = 100;
 const TEST_AGAINST_ANTLR_PARSER = false;
 
 // Set to true to generate performance debug output
-const DEBUG_PERFORMANCE = true;
+const DEBUG_PERFORMANCE = false;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, './bitmark');
 // const JSON_INPUT_DIR = path.resolve(__dirname, './bitmark/json');
@@ -152,7 +152,7 @@ describe('bitmark-gen', () => {
         if (TEST_AGAINST_ANTLR_PARSER) {
           // Generate JSON from original bitmark markup using the ANTLR parser
           performance.mark('ANTLR:Start');
-          originalJson = bitmarkParser.parse(originalMarkup);
+          originalJson = bitmarkParser.parseUsingAntlr(originalMarkup);
 
           // Write the new JSON
           fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {
@@ -207,7 +207,7 @@ describe('bitmark-gen', () => {
 
         if (TEST_AGAINST_ANTLR_PARSER) {
           // Generate JSON from generated bitmark markup using the ANTLR parser
-          newJson = bitmarkParser.parse(newMarkup);
+          newJson = bitmarkParser.parseUsingAntlr(newMarkup);
 
           // Write the new JSON
           fs.writeFileSync(generatedJsonFile, JSON.stringify(newJson, null, 2), {

@@ -8,6 +8,8 @@ export interface PropertyKeyMetadata {
   isInvertedBoolean?: boolean; // If the value is treated as a boolean with the value inverted (e.g. isLongAnswer ==> isShortAnswer = false)
   astKey?: string; // If the AST key is different from the markup property key
   jsonKey?: string; // If the json key is different from the markup property key
+  ignoreFalse?: boolean; // If the property should be ignored if the value is false
+  ignoreTrue?: boolean; // If the property should be ignored if the value is true
 }
 
 const PropertyKey = superenum({
@@ -163,11 +165,13 @@ PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.partialAnswer, {
 });
 PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.toc, {
   isSingle: true,
-  // isBoolean: true, - ANTLR parser toc progress as a string (but it usually has value "false" or "true"!)
+  isBoolean: true, // ANTLR parser toc progress as a string (but it usually has value "false" or "true"!)
+  ignoreTrue: true,
 });
 PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.progress, {
   isSingle: true,
-  // isBoolean: true, - ANTLR parser treats progress as a string (but it usually has value "false" or "true"!)
+  isBoolean: true, // ANTLR parser treats progress as a string (but it usually has value "false" or "true"!)
+  ignoreTrue: true,
 });
 PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.level, {
   isSingle: true,
@@ -176,6 +180,7 @@ PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.level, {
 
 PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.example, {
   isSingle: true,
+  ignoreFalse: true,
 });
 
 PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.shortAnswer, {

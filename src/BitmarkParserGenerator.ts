@@ -1,19 +1,40 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
-import * as fs from 'fs-extra';
-import path from 'path';
 
 import { Ast } from './ast/Ast';
-import { FileOptions } from './ast/writer/FileWriter';
-import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
 import { BitmarkOptions } from './generator/bitmark/BitmarkGenerator';
 import { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerator';
-import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
 import { JsonOptions } from './generator/json/JsonGenerator';
 import { JsonObjectGenerator } from './generator/json/JsonObjectGenerator';
 import { BitmarkAst } from './model/ast/Nodes';
 import { BitmarkParserType, BitmarkParserTypeType } from './model/enum/BitmarkParserType';
 import { BitmarkParser } from './parser/bitmark/BitmarkParser';
 import { JsonParser } from './parser/json/JsonParser';
+import { env } from './utils/env/Env';
+
+/*
+ * NOTE:
+ *
+ * We want to be able to strip out the NodeJS specific functions from the final bundle.
+ * Any code between the comments STRIP:START and STRIP:END will be removed.
+ *
+ * However, the Typescript compiler will remove comments that it does not believe are associated with code.
+ * Therefore we have to use some dummy code to prevent it from removing the ANTLR stripping comments.
+ */
+const STRIP = 0;
+
+/* STRIP:START */
+STRIP;
+
+/* eslint-disable arca/import-ordering */
+import * as fs from 'fs-extra';
+import path from 'path';
+
+import { FileOptions } from './ast/writer/FileWriter';
+import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
+import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
+
+/* STRIP:END */
+STRIP;
 
 /**
  * Conversion options for bitmark / JSON conversion
@@ -75,6 +96,13 @@ class BitmarkParserGenerator {
   protected bitmarkParser = new BitmarkParser();
 
   /**
+   * Get the version of the bitmark-parser-generator library
+   */
+  version(): string {
+    return env.appVersion.full;
+  }
+
+  /**
    * Convert bitmark from bitmark to JSON, or JSON to bitmark.
    *
    * Input type is detected automatically and may be string, object (JSON or AST), or file
@@ -109,11 +137,18 @@ class BitmarkParserGenerator {
 
     let inStr: string = input as string;
 
+    // Check if we are trying to write to a file in the browser
+    if (env.isBrowser && opts.outputFile) {
+      throw new Error('Cannot write to file in browser environment');
+    }
+
     // If a file, read the file in
-    if (fs.existsSync(inStr)) {
-      inStr = fs.readFileSync(inStr, {
-        encoding: 'utf8',
-      });
+    if (env.isNode) {
+      if (fs.existsSync(inStr)) {
+        inStr = fs.readFileSync(inStr, {
+          encoding: 'utf8',
+        });
+      }
     }
 
     // Preprocess as AST to see if AST
@@ -142,7 +177,7 @@ class BitmarkParserGenerator {
     const bitmarkToJSON = async (bitmarkStr: string) => {
       if (bitmarkParserType === BitmarkParserType.antlr) {
         // Convert the bitmark to JSON using the antlr parser
-        const json = this.bitmarkParser.parse(bitmarkStr);
+        const json = this.bitmarkParser.parseUsingAntlr(bitmarkStr);
 
         if (opts.outputFile) {
           const jsonStr = JSON.stringify(json, undefined, jsonPrettifySpace);

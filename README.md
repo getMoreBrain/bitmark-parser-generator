@@ -133,7 +133,6 @@ More advanced usage is possible, such as implementing custom streaming output wr
 
 See the [API Documentation](docs/API.md) for more information.
 
-
 ## License
 
 This open source software is licenced under the [ISC licence](https://opensource.org/license/isc-license-txt).

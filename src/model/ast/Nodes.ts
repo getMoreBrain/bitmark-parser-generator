@@ -165,13 +165,13 @@ export interface Pair {
   key?: string;
   keyAudio?: AudioResource;
   keyImage?: ImageResource;
+  values?: string[];
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
   example?: Example;
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
-  values?: string[];
 }
 
 export interface Matrix {
@@ -186,11 +186,11 @@ export interface Matrix {
 }
 
 export interface MatrixCell {
+  values?: string[];
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
   example?: Example;
-  values?: string[];
 }
 
 // Question

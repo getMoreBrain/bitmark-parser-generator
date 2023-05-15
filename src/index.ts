@@ -1,3 +1,15 @@
+/*
+ * NOTE:
+ *
+ * We want to be able to strip out the NodeJS specific functions from the final bundle.
+ * Any code between the comments STRIP:START and STRIP:END will be removed.
+ *
+ * However, the Typescript compiler will remove comments that it does not believe are associated with code.
+ * Therefore we have to use some dummy code to prevent it from removing the ANTLR stripping comments.
+ */
+
+import { init } from './init/init';
+
 export { BitmarkParserGenerator, Output } from './BitmarkParserGenerator';
 
 export { Builder } from './ast/Builder';
@@ -7,23 +19,31 @@ export { Ast } from './ast/Ast';
 export { JsonParser } from './parser/json/JsonParser';
 export { JsonGenerator } from './generator/json/JsonGenerator';
 export { JsonStringGenerator } from './generator/json/JsonStringGenerator';
-export { JsonFileGenerator } from './generator/json/JsonFileGenerator';
 
 export { BitmarkParser } from './parser/bitmark/BitmarkParser';
 export { BitmarkGenerator } from './generator/bitmark/BitmarkGenerator';
 export { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerator';
-export { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
 
 export { Writer } from './ast/writer/Writer';
 export { StringWriter } from './ast/writer/StringWriter';
-export { FileWriter } from './ast/writer/FileWriter';
-export { StreamWriter } from './ast/writer/StreamWriter';
 
 export { BitType } from './model/enum/BitType';
 export { TextFormat } from './model/enum/TextFormat';
 export { ResourceType } from './model/enum/ResourceType';
 export { NodeType } from './model/ast/NodeType';
 export { BitmarkParserType } from './model/enum/BitmarkParserType';
+
+const STRIP = 0;
+/* STRIP:START */
+STRIP;
+
+export { JsonFileGenerator } from './generator/json/JsonFileGenerator';
+export { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
+export { FileWriter } from './ast/writer/FileWriter';
+export { StreamWriter } from './ast/writer/StreamWriter';
+
+/* STRIP:END */
+STRIP;
 
 //
 // Type only exports
@@ -141,3 +161,6 @@ export type {
   WebsiteLinkResourceJson,
 } from './model/json/ResourceJson';
 export type { ParserJson } from './model/json/ParserJson';
+
+// Initialise the application
+init();

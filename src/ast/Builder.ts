@@ -497,13 +497,13 @@ class Builder {
       key,
       keyAudio,
       keyImage,
+      values,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
       example,
       isCaseSensitive,
       isShortAnswer,
-      values,
     };
 
     // Remove Unset Optionals
@@ -567,11 +567,11 @@ class Builder {
 
     // NOTE: Node order is important and is defined here
     const node: MatrixCell = {
+      values,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
       example,
-      values,
     };
 
     // Remove Unset Optionals

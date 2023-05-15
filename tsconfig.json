@@ -24,6 +24,7 @@
     // "downlevelIteration": true,
     // "importHelpers": true,
     "allowJs": true, // Required for PEG parser
+    "removeComments": false,
     // "incremental": true,
     // "strictPropertyInitialization": false
     // "resolveJsonModule": true,

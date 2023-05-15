@@ -439,6 +439,7 @@ function parseMatchPairs(context: BitmarkPegParserContext, bitType: BitTypeType,
         keyAudio,
         keyImage,
         values: pairValues,
+        isShortAnswer: true, // Default shortAnswer to true - will be overridden by @shortAnswer:false or @longAnswer?
         ...extraTags,
       });
       pairs.push(pair);
@@ -553,6 +554,7 @@ function parseMatchMatrix(context: BitmarkPegParserContext, bitType: BitTypeType
         // keyAudio,
         // keyImage,
         cells: matrixCells,
+        isShortAnswer: true, // Default shortAnswer to true - will be overridden by @shortAnswer:false or @longAnswer?
         isCaseSensitive: true,
       });
       matrix.push(m);

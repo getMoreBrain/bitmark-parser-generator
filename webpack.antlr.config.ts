@@ -1,7 +1,6 @@
 import NodePolyfillPlugin from 'node-polyfill-webpack-plugin';
 import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { Configuration } from 'webpack';
 
 const root = __dirname;
@@ -23,7 +22,7 @@ const config: Configuration = {
   entry,
   output: {
     path: outputFilename,
-    filename: 'bitmark-parser-generator.min.js',
+    filename: 'bitmark-parser-generator-antlr.min.js',
     library: {
       type: 'umd',
       name: 'bitmarkParserGenerator',
@@ -36,44 +35,23 @@ const config: Configuration = {
       fs: require.resolve('./dist/cjs/utils/polyfill/fs.js'),
     },
   },
-  module: {
-    rules: [
-      {
-        test: /\.[jt]sx?$/,
-        enforce: 'pre',
-        exclude: /(node_modules)/,
-        use: [
-          {
-            loader: 'webpack-strip-block',
-            options: {
-              start: 'STRIP:START',
-              end: 'STRIP:END',
-            },
-          },
-        ],
-      },
-    ],
-  },
   optimization: {
     minimize: true,
     minimizer: [
       new TerserPlugin({
         terserOptions: {
           ecma: 2020,
+          format: {
+            ascii_only: true, // Required for Anltr 'serialized ATN segments'
+          },
         },
         // exclude: /node_modules\/bitmark-grammar/ /*[new RegExp('node_modules/bitmark-grammar/.+')],*/,
       }),
     ],
   },
   plugins: [
-    // new NodePolyfillPlugin({
-    //   includeAliases: ['constants', 'os', 'path', 'process', 'stream'],
-    // }),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-      analyzerMode: 'static',
-      reportFilename: 'bundle-report.html',
-      defaultSizes: 'stat',
+    new NodePolyfillPlugin({
+      includeAliases: ['constants', 'os', 'path', 'process', 'stream'],
     }),
   ],
 };
