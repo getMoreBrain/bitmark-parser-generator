@@ -33,7 +33,7 @@ const TEST_FILES = [
   // 'app-link.bit',
   // 'article.bit',
   // 'assignment.bit',
-  'audio-embed.bit',
+  // 'audio-embed.bit',
   // 'audio-link.bit',
   // 'audio.bit',
   // 'bit-alias.bit',
@@ -69,6 +69,10 @@ const TEST_FILES = [
   // 'book-teaser.bit',
   // 'book-title.bit',
   // 'book.bit',
+  // 'bot-action-announce.bit',
+  // 'bot-action-remind.bit',
+  // 'bot-action-response.bit',
+  // 'bot-action-save.bit',
   // 'bot-action-send.bit',
   // 'browser-image.bit',
   // 'bug.bit',
@@ -171,7 +175,7 @@ const bitmarkParser = new BitmarkParser();
  */
 function getTestFilenames(): string[] {
   const files = FileUtils.getFilenamesSync(TEST_INPUT_DIR, {
-    match: new RegExp('.+\\.bit$'),
+    // match: new RegExp('.+\\.bit$'),
     recursive: true,
   });
 

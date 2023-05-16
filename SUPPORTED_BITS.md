@@ -12,62 +12,62 @@
 | assignment | ✅ | ✅ | ✅ | OK |
 | audio | ✅ | ❌ | ❌ | TO TEST |
 | audio-embed | ✅ | ❌ | ❌ | TO TEST |
-| audio-link | ✅ | ❌ | ❌ | TO TEST |
-| bit-alias | ❌ | ❌ | ❌ | TO TEST |
+| audio-link | ✅ | ✅ | ✅ | OK |
+| bit-alias | ❌ | ✅ | ✅ | OK |
 | bit-book-ending* | ✅ | ❌ | ❌ | NO EXAMPLE FOUND |
 | bit-book-summary* | ✅ | ❌ | ❌ | NO EXAMPLE FOUND |
-| blog-article | ✅ | ❌ | ❌ | TO TEST |
+| blog-article | ✅ | ✅ | ✅ | OK |
 | book | ✅ | ✅ | ✅ | OK |
-| book-acknowledgments | ✅ | ❌ | ❌ | TO TEST |
-| book-addendum | ✅ | ❌ | ❌ | TO TEST |
-| book-afterword | ✅ | ❌ | ❌ | TO TEST |
-| book-appendix | ✅ | ❌ | ❌ | TO TEST |
-| book-article | ✅ | ❌ | ❌ | TO TEST |
-| book-author-bio | ✅ | ❌ | ❌ | TO TEST |
-| book-bibliography | ✅ | ❌ | ❌ | TO TEST |
-| book-coming-soon | ✅ | ❌ | ❌ | TO TEST |
-| book-conclusion | ✅ | ❌ | ❌ | TO TEST |
-| book-copyright | ✅ | ❌ | ❌ | TO TEST |
-| book-copyright-permissions | ✅ | ❌ | ❌ | TO TEST |
-| book-dedication | ✅ | ❌ | ❌ | TO TEST |
-| book-endnotes | ✅ | ❌ | ❌ | TO TEST |
-| book-epigraph | ✅ | ❌ | ❌ | TO TEST |
-| book-epilogue | ✅ | ❌ | ❌ | TO TEST |
-| book-foreword | ✅ | ❌ | ❌ | TO TEST |
-| book-frontispiece | ✅ | ❌ | ❌ | TO TEST |
-| book-inciting-incident | ✅ | ❌ | ❌ | TO TEST |
-| book-introduction | ✅ | ❌ | ❌ | TO TEST |
-| book-list-of-contributors | ✅ | ❌ | ❌ | TO TEST |
-| book-notes | ✅ | ❌ | ❌ | TO TEST |
-| book-postscript | ✅ | ❌ | ❌ | TO TEST |
-| book-preface | ✅ | ❌ | ❌ | TO TEST |
-| book-prologue | ✅ | ❌ | ❌ | TO TEST |
-| book-read-more | ✅ | ❌ | ❌ | TO TEST |
-| book-reference-list | ✅ | ❌ | ❌ | TO TEST |
-| book-request-for-a-book-review | ✅ | ❌ | ❌ | TO TEST |
-| book-summary | ✅ | ❌ | ❌ | TO TEST |
-| book-teaser | ✅ | ❌ | ❌ | TO TEST |
-| book-title | ✅ | ❌ | ❌ | TO TEST |
-| bot-action-announce | ❌ | ❌ | ❌ | NOT SUPPORTED |
+| book-acknowledgments | ✅ | ✅ | ✅ | OK |
+| book-addendum | ✅ | ✅ | ✅ | OK |
+| book-afterword | ✅ | ✅ | ✅ | OK |
+| book-appendix | ✅ | ✅ | ✅ | OK |
+| book-article | ✅ | ✅ | ✅ | OK |
+| book-author-bio | ✅ | ✅ | ✅ | OK |
+| book-bibliography | ✅ | ✅ | ✅ | OK |
+| book-coming-soon | ✅ | ✅ | ✅ | OK |
+| book-conclusion | ✅ | ✅ | ✅ | OK |
+| book-copyright | ✅ | ✅ | ✅ | OK |
+| book-copyright-permissions | ✅ | ✅ | ✅ | OK |
+| book-dedication | ✅ | ✅ | ✅ | OK |
+| book-endnotes | ✅ | ✅ | ✅ | OK |
+| book-epigraph | ✅ | ✅ | ✅ | OK |
+| book-epilogue | ✅ | ✅ | ✅ | OK |
+| book-foreword | ✅ | ✅ | ✅ | OK |
+| book-frontispiece | ✅ | ✅ | ✅ | OK |
+| book-inciting-incident | ✅ | ✅ | ✅ | OK |
+| book-introduction | ✅ | ✅ | ✅ | OK |
+| book-list-of-contributors | ✅ | ✅ | ✅ | OK |
+| book-notes | ✅ | ✅ | ✅ | OK |
+| book-postscript | ✅ | ✅ | ✅ | OK |
+| book-preface | ✅ | ✅ | ✅ | OK |
+| book-prologue | ✅ | ✅ | ✅ | OK |
+| book-read-more | ✅ | ✅ | ✅ | OK |
+| book-reference-list | ✅ | ✅ | ✅ | OK |
+| book-request-for-a-book-review | ✅ | ✅ | ✅ | OK |
+| book-summary | ✅ | ✅ | ✅ | OK |
+| book-teaser | ✅ | ✅ | ✅ | OK |
+| book-title | ✅ | ✅ | ✅ | OK |
+| bot-action-announce | ❌ | ✅ | ✅ | OK |
 | bot-action-rating-number | ❌ | ❌ | ❌ | NOT SUPPORTED |
-| bot-action-remind | ❌ | ❌ | ❌ | NOT SUPPORTED |
-| bot-action-response | ✅ | ❌ | ❌ | TO TEST |
-| bot-action-save | ❌ | ❌ | ❌ | NOT SUPPORTED |
+| bot-action-remind | ❌ | ✅ | ✅ | OK |
+| bot-action-response | ✅ | ✅ | ✅ | OK |
+| bot-action-save | ❌ | ✅ | ✅ | OK |
 | bot-action-send | ✅ | ❌ | ❌ | TO TEST |
 | bot-action-true-false | ❌ | ❌ | ❌ | NOT SUPPORTED |
 | bot-interview | ❌ | ❌ | ❌ | NOT SUPPORTED |
-| browser-image | ✅ | ❌ | ❌ | TO TEST |
+| browser-image | ✅ | ✅ | ✅ | OK |
 | bug* | ✅ | ❌ | ❌ | TO TEST |
 | button-copy-text* | ✅ | ❌ | ❌ | NO EXAMPLE FOUND |
-| card-1 | ✅ | ❌ | ❌ | TO TEST |
-| chapter | ✅ | ❌ | ❌ | TO TEST |
+| card-1 | ✅ | ✅ | ✅ | OK |
+| chapter | ✅ | ✅ | ✅ | OK |
 | chapter-subject-matter* | ✅ | ❌ | ❌ | NO EXAMPLE FOUND |
 | chat | ❌ | ❌ | ❌ | NOT SUPPORTED |
 | cloze | ✅ | ✅ | ✅ | OK |
 | cloze-and-multiple-choice-text | ✅ | ✅ | ✅ | OK |
 | cloze-instruction-grouped | ✅ | ✅ | ✅ | OK |
 | cloze-solution-grouped | ✅ | ✅ | ✅ | OK |
-| code | ✅ | ❌ | ❌ | TO TEST |
+| code | ✅ | ✅ | ✅ | OK |
 | conclusion* | ✅ | ❌ | ❌ | NO EXAMPLE FOUND |
 | conversation | ❌ | ❌ | ❌ | NOT SUPPORTED |
 | conversation-left-1* | ✅ | ❌ | ❌ | TO TEST |
@@ -80,10 +80,10 @@
 | danger* | ✅ | ❌ | ❌ | TO TEST |
 | details | ❌ | ❌ | ❌ | NOT SUPPORTED |
 | details-1 | ✅ | ✅ | ✅ | OK |
-| document | ✅ | ❌ | ❌ | TO TEST |
-| document-download | ✅ | ❌ | ❌ | TO TEST |
+| document | ✅ | ✅ | ✅ | OK |
+| document-download | ✅ | ✅ | ✅ | OK |
 | document-embed* | ✅ | ❌ | ❌ | TO TEST |
-| document-link | ✅ | ❌ | ❌ | TO TEST |
+| document-link | ✅ | ✅ | ✅ | OK |
 | document-upload | ❌ | ❌ | ❌ | NOT SUPPORTED |
 | editorial* | ✅ | ❌ | ❌ | NO EXAMPLE FOUND |
 | essay | ✅ | ❌ | ❌ | TO TEST |
@@ -94,8 +94,8 @@
 | flashcard-language-1 | ❌ | ❌ | ❌ | NOT SUPPORTED |
 | flashcard-language-set | ❌ | ❌ | ❌ | NOT SUPPORTED |
 | flashcard-set | ❌ | ❌ | ❌ | NOT SUPPORTED |
-| focus-image | ✅ | ❌ | ❌ | TO TEST |
-| foot-note* | ✅ | ❌ | ❌ | TO TEST |
+| focus-image | ✅ | ✅ | ✅ | OK |
+| foot-note | ✅ | ✅ | ✅ | OK |
 | group-born | ❌ | ❌ | ❌ | NOT SUPPORTED |
 | group-died | ❌ | ❌ | ❌ | NOT SUPPORTED |
 | help | ✅ | ✅ | ✅ | OK |
@@ -138,13 +138,13 @@
 | multiple-choice-text | ✅ | ✅ | ✅ | OK |
 | multiple-response | ✅ | ✅ | ✅ | OK |
 | multiple-response-1 | ✅ | ✅ | ✅ | OK |
-| newspaper-article | ✅ | ❌ | ❌ | TO TEST |
+| newspaper-article | ✅ | ✅ | ✅ | OK |
 | note | ✅ | ✅ | ✅ | OK |
-| notebook-article | ✅ | ❌ | ❌ | TO TEST |
-| page | ✅ | ❌ | ❌ | TO TEST |
+| notebook-article | ✅ | ✅ | ✅ | OK |
+| page | ✅ | ✅ | ✅ | OK |
 | photo | ✅ | ❌ | ❌ | TO TEST |
 | preparation-note | ✅ | ✅ | ✅ | OK |
-| question-1 | ✅ | ❌ | ❌ | TO TEST |
+| question-1 | ✅ | ✅ | ✅ | OK |
 | quote | ✅ | ✅ | ✅ | OK |
 | rating | ❌ | ❌ | ❌ | NOT SUPPORTED |
 | record | ❌ | ❌ | ❌ | NOT SUPPORTED |
@@ -153,16 +153,16 @@
 | remark | ✅ | ✅ | ✅ | OK |
 | sample-solution | ✅ | ❌ | ❌ | TO TEST |
 | scorm* | ✅ | ❌ | ❌ | NO EXAMPLE FOUND |
-| screenshot | ✅ | ❌ | ❌ | |
-| self-assessment | ✅ | ❌ | ❌ | |
+| screenshot | ✅ | ❌ | ❌ | TODO - CREATE TEST |
+| self-assessment | ✅ | ❌ | ❌ | TODO - CREATE TEST |
 | sequence | ❌ | ✅ | ✅ | OK |
 | side-note | ❌ | ✅ | ✅ | OK |
 | statement | ❌ | ✅ | ✅ | OK |
-| sticky-note* | ✅ | ❌ | ❌ | TO TEST |
+| sticky-note | ✅ | ✅ | ✅ | OK |
 | still-image-film | ✅ | ❌ | ❌ | TO TEST |
 | still-image-film-embed | ✅ | ❌ | ❌ | TO TEST |
 | still-image-film-link | ✅ | ❌ | ❌ | TO TEST |
-| summary | ✅ | ❌ | ❌ | TO TEST |
+| summary | ✅ | ✅ | ✅ | OK |
 | survey | ✅ | ❌ | ❌ | TO TEST |
 | survey-1 | ❌ | ❌ | ❌ | NOT SUPPORTED |
 | survey-anonymous | ❌ | ❌ | ❌ | NOT SUPPORTED |
@@ -173,10 +173,10 @@
 | true-false-1 | ✅ | ✅ | ✅ | OK |
 | vendor-padlet-embed* | ✅ | ❌ | ❌ | NO EXAMPLE FOUND |
 | video | ✅ | ✅ | ✅ | OK |
-| video-embed | ✅ | ❌ | ❌ | TO TEST |
+| video-embed | ✅ | ✅ | ✅ | OK |
 | video-landscape | ✅ | ❌ | ❌ | TO TEST |
 | video-link | ✅ | ❌ | ❌ | TO TEST |
 | video-portrait | ✅ | ❌ | ❌ | TO TEST |
-| warning | ✅ | ❌ | ❌ | TO TEST |
+| warning | ✅ | ✅ | ✅ | OK |
 | website-link* | ✅ | ❌ | ❌ | TO TEST |
-| workbook-article | ✅ | ❌ | ❌ | TO TEST |
+| workbook-article | ✅ | ✅ | ✅ | OK |

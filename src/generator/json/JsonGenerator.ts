@@ -1577,84 +1577,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         if (bitJson.body == null) bitJson.body = '';
         break;
 
-      case BitType.assignment:
-      case BitType.audio:
-      case BitType.audioEmbed:
-      case BitType.audioLink:
-      case BitType.bitAlias:
-      case BitType.blogArticle:
-      case BitType.book:
-      case BitType.bookAcknowledgments:
-      case BitType.bookAddendum:
-      case BitType.bookAfterword:
-      case BitType.bookAppendix:
-      case BitType.bookArticle:
-      case BitType.bookAutherBio:
-      case BitType.bookBibliography:
-      case BitType.bookComingSoon:
-      case BitType.bookConclusion:
-      case BitType.bookCopyright:
-      case BitType.bookCopyrightPermissions:
-      case BitType.bookDedication:
-      case BitType.bookEndnotes:
-      case BitType.bookEpigraph:
-      case BitType.bookEpilogue:
-      case BitType.bookForword:
-      case BitType.bookFrontispiece:
-      case BitType.bookIncitingIncident:
-      case BitType.bookIntroduction:
-      case BitType.bookListOfContributors:
-      case BitType.bookNotes:
-      case BitType.bookPostscript:
-      case BitType.bookPreface:
-      case BitType.bookPrologue:
-      case BitType.bookReadMore:
-      case BitType.bookReferenceList:
-      case BitType.bookRequestForABookReview:
-      case BitType.bookSummary:
-      case BitType.bookTeaser:
-      case BitType.bookTitle:
-      case BitType.botActionResponse:
-      case BitType.browserImage:
-      case BitType.card1:
-      case BitType.cloze:
-      case BitType.clozeInstructionGrouped:
-      case BitType.clozeSolutionGrouped:
-      case BitType.code:
-      case BitType.document:
-      case BitType.documentDownload:
-      case BitType.documentLink:
-      case BitType.example:
-      case BitType.focusImage:
-      case BitType.help:
-      case BitType.hint:
-      case BitType.image:
-      case BitType.imageLink:
-      case BitType.imageZoom:
-      case BitType.info:
-      case BitType.internalLink:
-      case BitType.newspaperArticle:
-      case BitType.note:
-      case BitType.notebookArticle:
-      case BitType.photo:
-      case BitType.preparationNote:
-      case BitType.question1:
-      case BitType.quote:
-      case BitType.releaseNote:
-      case BitType.remark:
-      case BitType.screenshot:
-      case BitType.sideNote:
-      case BitType.stillImageFilm:
-      case BitType.stillImageFilmEmbed:
-      case BitType.stillImageFilmLink:
-      case BitType.summary:
-      case BitType.takePicture:
-      case BitType.video:
-      case BitType.videoEmbed:
-      case BitType.videoLandscape:
-      case BitType.videoLink:
-      case BitType.videoPortrait:
-      case BitType.workbookArticle:
+      default: // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
         if (bitJson.item == null) bitJson.item = '';
         if (bitJson.hint == null) bitJson.hint = '';
         if (bitJson.isExample == null) bitJson.isExample = false;
@@ -1755,8 +1678,6 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
         if (bitJson.body == null) bitJson.body = '';
         break;
-
-      default:
     }
 
     // Remove unwanted properties
