@@ -59,6 +59,9 @@ import {
   TypeValue,
 } from './BitmarkPegParserTypes';
 
+// Dummy for stripping unwanted code
+const STRIP = 0;
+
 class BitmarkPegParserHelper {
   private cardIndex = 0;
   private cardSideIndex = 0;
@@ -512,6 +515,9 @@ class BitmarkPegParserHelper {
    * @param data
    */
   private debugPrint(header: string, data?: unknown): void {
+    /* STRIP:START */
+    STRIP;
+
     if (DEBUG) {
       if (DEBUG_DATA) {
         // Strip 'parser' out of the data, otherwise it is too verbose
@@ -528,6 +534,9 @@ class BitmarkPegParserHelper {
         console.log(`- TRACE: ${header}`);
       }
     }
+
+    /* STRIP:END */
+    STRIP;
   }
 }
 

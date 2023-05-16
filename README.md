@@ -7,6 +7,8 @@ NOTE: THIS PROJECT IS NOT YET PRODUCTION READY.
 
 A bitmark parser and generator using an Abstract Syntax Tree (AST) and Peggy.js.
 
+[List of supported bits](./SUPPORTED_BITS.md)
+
 Use this package to:
 - parse bitmark markup in NodeJS or the browser.
 - programmatically create or modify bitmark.

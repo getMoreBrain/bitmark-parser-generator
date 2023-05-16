@@ -130,6 +130,9 @@ const DEBUG = ENABLE_DEBUG && process.env.NODE_ENV === 'development';
 
 const builder = new Builder();
 
+// Dummy for stripping unwanted code
+const STRIP = 0;
+
 class BitmarkPegParserProcessor {
   private context: BitmarkPegParserContext;
   private nonFatalWarnings: ParserError[] = [];
@@ -647,6 +650,9 @@ class BitmarkPegParserProcessor {
    * @param data
    */
   private debugPrint(header: string, data: unknown): void {
+    /* STRIP:START */
+    STRIP;
+
     if (DEBUG) {
       if (DEBUG_DATA) {
         // Strip 'parser' out of the data, otherwise it is too verbose
@@ -663,6 +669,9 @@ class BitmarkPegParserProcessor {
         console.log(`- DEBUG: ${header}`);
       }
     }
+
+    /* STRIP:END */
+    STRIP;
   }
 }
 
