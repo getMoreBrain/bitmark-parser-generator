@@ -1,0 +1,46 @@
+[
+  {
+    "bitmark": "[.still-image-film]\n[@id:119760]\n[&still-image-film:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4][@duration:PT12M31S]",
+    "bit": {
+      "type": "still-image-film",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "119760"
+      ],
+      "resource": {
+        "type": "still-image-film",
+        "image": {
+          "provider": "",
+          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
+          "format": "mp4",
+          "duration": "PT12M31S"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.still-image-film]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&still-image-film:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]",
+    "bit": {
+      "type": "still-image-film",
+      "format": "bitmark--",
+      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "still-image-film",
+        "image": {
+          "provider": "",
+          "url": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
+          "format": "wmv"
+        }
+      }
+    }
+  }
+]

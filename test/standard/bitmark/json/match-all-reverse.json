@@ -1,0 +1,33 @@
+[
+  {
+    "bitmark": "[.match-all-reverse]\n[@id:324342]\n[%item][%Lead]\n[!Instruction]\n===\nHe will fix your laptop for you.\n==\nYour laptop will be fixed by him.\n--\nYour laptop will be fixed for you by him.\n===",
+    "bit": {
+      "type": "match-all-reverse",
+      "format": "bitmark--",
+      "item": "item",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "He will fix your laptop for you.",
+          "values": [
+            "Your laptop will be fixed by him.",
+            "Your laptop will be fixed for you by him."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "324342"
+      ],
+      "lead": "Lead",
+      "instruction": "Instruction"
+    }
+  }
+]

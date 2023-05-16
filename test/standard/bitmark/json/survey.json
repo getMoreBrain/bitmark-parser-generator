@@ -1,0 +1,71 @@
+[
+  {
+    "bitmark": "[.survey]\n[@id:93061]\n[%D2]\n[!Evaluation\n\nÜberprüfen Sie sich selbst.]\n===\nIch kann mich über das Thema __Geräte und moderne Technik__ umfassend äußern und eine grafische Darstellung beschreiben.\n[•gut]\n[•nicht so gut]\n===\nIch kann Artikel über moderne Technik und Gerätebeschreibungen auch im Detail verstehen.\n[•gut]\n[•nicht so gut]\n===\nIch kann ein Gerät beschreiben und ein Produkt präsentieren.\n[•gut]\n[•nicht so gut]\n===\nIch kann Texte über Produkte, Obsoleszenz, Produktnamen oder Gefahren am Computer verstehen und den Inhalt wiedergeben.\n[•gut]\n[•nicht so gut]\n===\nIch kann meine Meinung zu den Themen __Obsoleszenz__ und __Computergefahren__ formulieren und Tipps geben.\n[•gut]\n[•nicht so gut]\n===\nIch kann mich mündlich und schriftlich zum Thema __Umgang mit Smartphones bei Kindern und Jugendlichen__ äußern und Vorschläge unterbreiten.\n[•gut]\n[•nicht so gut]\n===\nIch kann einen Text über Lernprozesse verstehen und mich zu eigenen Lernstrategien äußern.\n[•gut]\n[•nicht so gut]\n===\nIch kann eine Auswahl treffen und meine Meinung begründen.\n[•gut]\n[•nicht so gut]\n===\nIch kann einfache Beschreibungen einer Erfindung und Texte zum Thema __Erfindungen und Erfinder__ verstehen und mich zu diesem Thema äußern. __(fakultativ)__\n[•gut]\n[•nicht so gut]\n===",
+    "bit": {
+      "type": "survey",
+      "format": "bitmark--",
+      "body": "===\nIch kann mich über das Thema __Geräte und moderne Technik__ umfassend äußern und eine grafische Darstellung beschreiben.\n\n\n===\nIch kann Artikel über moderne Technik und Gerätebeschreibungen auch im Detail verstehen.\n\n\n===\nIch kann ein Gerät beschreiben und ein Produkt präsentieren.\n\n\n===\nIch kann Texte über Produkte, Obsoleszenz, Produktnamen oder Gefahren am Computer verstehen und den Inhalt wiedergeben.\n\n\n===\nIch kann meine Meinung zu den Themen __Obsoleszenz__ und __Computergefahren__ formulieren und Tipps geben.\n\n\n===\nIch kann mich mündlich und schriftlich zum Thema __Umgang mit Smartphones bei Kindern und Jugendlichen__ äußern und Vorschläge unterbreiten.\n\n\n===\nIch kann einen Text über Lernprozesse verstehen und mich zu eigenen Lernstrategien äußern.\n\n\n===\nIch kann eine Auswahl treffen und meine Meinung begründen.\n\n\n===\nIch kann einfache Beschreibungen einer Erfindung und Texte zum Thema __Erfindungen und Erfinder__ verstehen und mich zu diesem Thema äußern. __(fakultativ)__\n\n\n===",
+      "item": "D2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "93061"
+      ],
+      "instruction": "Evaluation\n\nÜberprüfen Sie sich selbst.",
+      "bullet": [
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.survey]\n[%D2]\n[!Evaluation\n\nÜberprüfen Sie sich selbst.]\n===\nIch kann mich über das Thema __Geräte und moderne Technik__ umfassend äußern und eine grafische Darstellung beschreiben.\n[ •gut ]\n[ •nicht so gut]\n===\nIch kann Artikel über moderne Technik und Gerätebeschreibungen auch im Detail verstehen.\n[ •gut ]\n[ •nicht so gut]\n===\nIch kann ein Gerät beschreiben und ein Produkt präsentieren.\n[ •gut ]\n[ •nicht so gut]\n===\nIch kann Texte über Produkte, Obsoleszenz, Produktnamen oder Gefahren am Computer verstehen und den Inhalt wiedergeben.\n[ •gut ]\n[ •nicht so gut]\n===\nIch kann meine Meinung zu den Themen __Obsoleszenz__ und __Computergefahren__ formulieren und Tipps geben.\n[ •gut ]\n[ •nicht so gut]\n===\nIch kann mich mündlich und schriftlich zum Thema __Umgang mit Smartphones bei Kindern und Jugendlichen__ äußern und Vorschläge unterbreiten.\n[ •gut ]\n[ •nicht so gut]\n===\nIch kann einen Text über Lernprozesse verstehen und mich zu eigenen Lernstrategien äußern.\n[ •gut ]\n[ •nicht so gut]\n===\nIch kann eine Auswahl treffen und meine Meinung begründen.\n[ •gut ]\n[ •nicht so gut]\n===\nIch kann einfache Beschreibungen einer Erfindung und Texte zum Thema __Erfindungen und Erfinder__ verstehen und mich zu diesem Thema äußern. __(fakultativ)__\n[ •gut ]\n[ •nicht so gut]\n===",
+    "bit": {
+      "type": "survey",
+      "format": "bitmark--",
+      "body": "===\nIch kann mich über das Thema __Geräte und moderne Technik__ umfassend äußern und eine grafische Darstellung beschreiben.\n\n\n===\nIch kann Artikel über moderne Technik und Gerätebeschreibungen auch im Detail verstehen.\n\n\n===\nIch kann ein Gerät beschreiben und ein Produkt präsentieren.\n\n\n===\nIch kann Texte über Produkte, Obsoleszenz, Produktnamen oder Gefahren am Computer verstehen und den Inhalt wiedergeben.\n\n\n===\nIch kann meine Meinung zu den Themen __Obsoleszenz__ und __Computergefahren__ formulieren und Tipps geben.\n\n\n===\nIch kann mich mündlich und schriftlich zum Thema __Umgang mit Smartphones bei Kindern und Jugendlichen__ äußern und Vorschläge unterbreiten.\n\n\n===\nIch kann einen Text über Lernprozesse verstehen und mich zu eigenen Lernstrategien äußern.\n\n\n===\nIch kann eine Auswahl treffen und meine Meinung begründen.\n\n\n===\nIch kann einfache Beschreibungen einer Erfindung und Texte zum Thema __Erfindungen und Erfinder__ verstehen und mich zu diesem Thema äußern. __(fakultativ)__\n\n\n===",
+      "item": "D2",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "instruction": "Evaluation\n\nÜberprüfen Sie sich selbst.",
+      "bullet": [
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut",
+        "gut",
+        "nicht so gut"
+      ]
+    }
+  }
+]

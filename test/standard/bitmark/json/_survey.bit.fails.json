@@ -1,0 +1,70 @@
+[
+  {
+    "bitmark": "[.survey]\n|| Not sure if .survey bit is still supported and if so how. Generates JSON with bullets ||\n[@id:191141]\n===\nICH BEVORZUGE …\n1.\n[• Bier]\n[• Wein]\n===\n2.\n[• Schokolade]\n[• Chips]\n===\n3.\n[• Ferien am Meer]\n[• Ferien in den Bergen]\n===\n4.\n[• Hund]\n[• Katze]\n===\n5.\n[• Sport treiben]\n[• TV schauen]\n===\n6.\n[• Kundenkontakt]\n[• Büroarbeit]\n===\n7.\n[• Kaffee]\n[• Tee]\n===\n8.\n[• Stadt]\n[• Land]\n===\n9.\n[• Selber Kochen]\n[• Im Restaurant Essen]\n===\n10.\n[• Weihnachten mit zu Hause mit der Familie]\n[• Weihnachten in die Ferien fahren]\n===\n11.\n[• Wellness]\n[• Fitness]\n===\n12.\n[• Spazieren]\n[• Velotour]\n===\n13.\n[• Sportliche Kleider ]\n[• Elegante Kleider]\n===\n14.\n[• Camping]\n[• 5 Stern Hotel]\n===\n15.\n[• Schlager]\n[• Pop/Rock]\n===\n16.\n[• Tatort (Krimi)]\n[• Rosamunde Pilcher (Roman)]\n===\n17.\n[• Kultur]\n[• Sport]\n===\n18.\n[• Migros]\n[• Coop]\n===",
+    "bit": {
+      "type": "survey",
+      "format": "bitmark--",
+      "body": "===\nICH BEVORZUGE …\n1.\n\n\n===\n2.\n\n\n===\n3.\n\n\n===\n4.\n\n\n===\n5.\n\n\n===\n6.\n\n\n===\n7.\n\n\n===\n8.\n\n\n===\n9.\n\n\n===\n10.\n\n\n===\n11.\n\n\n===\n12.\n\n\n===\n13.\n\n\n===\n14.\n\n\n===\n15.\n\n\n===\n16.\n\n\n===\n17.\n\n\n===\n18.\n\n\n===",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "191141"
+      ],
+      "bullet": [
+        "",
+        "Bier",
+        "Wein",
+        "Schokolade",
+        "Chips",
+        "Ferien am Meer",
+        "Ferien in den Bergen",
+        "Hund",
+        "Katze",
+        "Sport treiben",
+        "TV schauen",
+        "Kundenkontakt",
+        "Büroarbeit",
+        "Kaffee",
+        "Tee",
+        "Stadt",
+        "Land",
+        "Selber Kochen",
+        "Im Restaurant Essen",
+        "Weihnachten mit zu Hause mit der Familie",
+        "Weihnachten in die Ferien fahren",
+        "Wellness",
+        "Fitness",
+        "Spazieren",
+        "Velotour",
+        "Sportliche Kleider",
+        "Elegante Kleider",
+        "Camping",
+        "5 Stern Hotel",
+        "Schlager",
+        "Pop/Rock",
+        "Tatort (Krimi)",
+        "Rosamunde Pilcher (Roman)",
+        "Kultur",
+        "Sport",
+        "Migros",
+        "Coop"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '1.'",
+        "line": 6,
+        "column": 0,
+        "errorLine": "1."
+      },
+      {
+        "message": "missing CL at '\\n'",
+        "line": 6,
+        "column": 2,
+        "errorLine": "1."
+      }
+    ]
+  }
+]

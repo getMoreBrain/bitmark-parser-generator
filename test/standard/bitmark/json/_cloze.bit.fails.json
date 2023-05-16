@@ -1,0 +1,279 @@
+[
+  {
+    "bitmark": "[.cloze:bitmark--]\n|| Square brackets confuse the ANTLR parser ||\n[@id:136392]\n[%05_Ablauf und Termine_023 (Freitext) ]\n[!Ordnen Sie die folgenden Aufgaben den einzelnen Projektphasen zu.]\nA] Stakeholder-Analyse\nB] Erstellen eines Projektstrukturplans\nC] Projektführung\nD] Machbarkeitsanalyse\nE] Projektabschlussbericht\nF] Erstellen eines Aufwandsplans\nG] Auflösung der Projektorganisation\nH] Controlling\n\n**Projektphase**\nInitialisierung [_a][_A] [_d][_D]\nPlanung [_b][_B] [_f][_F]\nRealisierung [_c][_C] [_h][_H]\nAbschluss [_e][_E] [_g][_G]\n\n||TODO: should the number of possible answer appear? are they interchangable?||",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Controlling\n\n**Projektphase**\nInitialisierung {0} {1}\nPlanung {2} {3}\nRealisierung {4} {5}\nAbschluss {6} {7}",
+      "item": "05_Ablauf und Termine_023 (Freitext)",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "136392"
+      ],
+      "instruction": "Ordnen Sie die folgenden Aufgaben den einzelnen Projektphasen zu.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "a",
+            "A"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "d",
+            "D"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "b",
+            "B"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "f",
+            "F"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "c",
+            "C"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "h",
+            "H"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "e",
+            "E"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{7}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "g",
+            "G"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n0. young → [_younger]  [@example] → [_youngest]  [_youngerer!][@example]",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "0. young → {0}   → {1}  {2}",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "younger"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "youngest"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "youngerer!"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": ""
+        }
+      }
+    },
+    "example": ""
+  },
+  {
+    "bitmark": "[.cloze:bitmark--]\n|| Chaining of [?HINT?] does not work because of the space and it ends up at the top level ||\n[@id:272904]\n[%34]\n[!Füllen Sie den Lückentext zum Vertriebssystem mit den passenden Begriffen aus.]\nBeim [_direkten Vertrieb][_direkten Vertrieb2][?Hint] verkauft eigene [_Verkaufsstellen] einrichten, [_Verkaufsmitarbeitende] einstellen. Beim [_indirekten Vertrieb][_indirekten Vertrieb2] [?HINT?] läuft den [_Grosshandel] [_NOT Grosshandel2] und / oder den [_Einzelhandel].",
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "body": "Beim {0} verkauft eigene {1} einrichten, {2} einstellen. Beim {3}  läuft den {4} {5} und / oder den {6}.",
+      "item": "34",
+      "hint": "HINT?",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "272904"
+      ],
+      "instruction": "Füllen Sie den Lückentext zum Vertriebssystem mit den passenden Begriffen aus.",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "direkten Vertrieb",
+            "direkten Vertrieb2"
+          ],
+          "hint": "Hint",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{1}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Verkaufsstellen"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{2}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Verkaufsmitarbeitende"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{3}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "indirekten Vertrieb",
+            "indirekten Vertrieb2"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{4}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Grosshandel"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{5}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "NOT Grosshandel2"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        },
+        "{6}": {
+          "type": "gap",
+          "item": "",
+          "solutions": [
+            "Einzelhandel"
+          ],
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": ""
+        }
+      }
+    }
+  }
+]

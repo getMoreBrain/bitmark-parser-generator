@@ -1,0 +1,59 @@
+[
+  {
+    "bitmark": "[.audio-embed]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&audio:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]",
+    "bit": {
+      "type": "audio-embed",
+      "format": "bitmark--",
+      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.audio-embed]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&audio:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]",
+    "bit": {
+      "type": "audio-embed",
+      "format": "bitmark--",
+      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.audio-embed]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&audio-embed:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]",
+    "bit": {
+      "type": "audio-embed",
+      "format": "bitmark--",
+      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "audio-embed",
+        "audioEmbed": {
+          "format": "mp3",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3"
+        }
+      }
+    }
+  }
+]

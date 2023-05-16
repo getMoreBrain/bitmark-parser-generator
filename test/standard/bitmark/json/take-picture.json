@@ -1,0 +1,82 @@
+[
+  {
+    "bitmark": "[.take-picture]\n[@id:189522]\n[!Halten Sie Ihre Ergebnisse stichwortartig auf Flipchart oder Pinkarten fest damit Sie diese später im Plenum vorstellen können.]\n\nWichtig: die Bullet-Points der Folie sind nur Möglichkeiten und Ideen…bestimmt haben Sie selber noch andere Ideen, Sie müssen nicht zu jedem Bullet-Point Stellung beziehen.\n\nZeit: 60 Minuten",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark--",
+      "body": "Wichtig: die Bullet-Points der Folie sind nur Möglichkeiten und Ideen…bestimmt haben Sie selber noch andere Ideen, Sie müssen nicht zu jedem Bullet-Point Stellung beziehen.\n\nZeit: 60 Minuten",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "189522"
+      ],
+      "instruction": "Halten Sie Ihre Ergebnisse stichwortartig auf Flipchart oder Pinkarten fest damit Sie diese später im Plenum vorstellen können."
+    }
+  },
+  {
+    "bitmark": "[.take-picture:bitmark++]\n[@id:213729]\n[%7]\n[!Ergänzen Sie die unten stehende Tabelle mit den richtigen Begriffen. Nehmen Sie dazu die folgenden Begriffe. Aufgepasst, ein Begriff lässt sich nicht sinnvoll unterbringen.\nBegriffe: Nutzungsverhalten, Werbeerfolg, Marktleistung, Kundenorientierung, Marktkennzahlen, Kundenzufriedenheit]\n|image:https://docs.bitmark.cloud/bit-books/compendio/marketing_quiz/web-resources/images/compendio_marketing_7_v2.png||@width:650|",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark++",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/compendio/marketing_quiz/web-resources/images/compendio_marketing_7_v2.png||@width:650|",
+      "item": "7",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "213729"
+      ],
+      "instruction": "Ergänzen Sie die unten stehende Tabelle mit den richtigen Begriffen. Nehmen Sie dazu die folgenden Begriffe. Aufgepasst, ein Begriff lässt sich nicht sinnvoll unterbringen.\nBegriffe: Nutzungsverhalten, Werbeerfolg, Marktleistung, Kundenorientierung, Marktkennzahlen, Kundenzufriedenheit"
+    }
+  },
+  {
+    "bitmark": "[.take-picture:bitmark--]\n[@id:213734]\n[%12]\n[!Erstellen Sie mit den folgenden Begriffen das Marktsystem nach R. Kühn für Konsumgüter:\nKunden, Detailhandel, Natur, Markt, Konkurrenz, Entscheider, Gesellschaft, Grossist, unser Unternehmen, interne Beeinflusser, externe Beeinflusser, Wirtschaft, Umfeld, Endkunden, Käufer, Technologie, Handel]\n||image solution||",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark--",
+      "body": "",
+      "item": "12",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "213734"
+      ],
+      "instruction": "Erstellen Sie mit den folgenden Begriffen das Marktsystem nach R. Kühn für Konsumgüter:\nKunden, Detailhandel, Natur, Markt, Konkurrenz, Entscheider, Gesellschaft, Grossist, unser Unternehmen, interne Beeinflusser, externe Beeinflusser, Wirtschaft, Umfeld, Endkunden, Käufer, Technologie, Handel"
+    }
+  },
+  {
+    "bitmark": "[.take-picture:bitmark--]\n[@id:213737]\n[%15 A]\n[%][%Ausgangslage]\nSie sind Marketingverantwortliche/-r beim Bauberatungsunternehmen Easy Building AG. Ihre Kunden sind Bauherren (Privatpersonen), die ein Eigenheim bauen und eine unabhängige Expertenmeinung wünschen, z. B. bei der Vergabe von Aufträgen, der Beurteilung verschiedener Lieferanten und Dienstleister oder bei der Bauabnahme.\n[!Erläutern Sie das Marktsystem, in dem sich die Easy Building bewegt.]\n||image solution||",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark--",
+      "body": "Sie sind Marketingverantwortliche/-r beim Bauberatungsunternehmen Easy Building AG. Ihre Kunden sind Bauherren (Privatpersonen), die ein Eigenheim bauen und eine unabhängige Expertenmeinung wünschen, z. B. bei der Vergabe von Aufträgen, der Beurteilung verschiedener Lieferanten und Dienstleister oder bei der Bauabnahme.",
+      "item": "15 A",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "213737"
+      ],
+      "lead": "Ausgangslage",
+      "instruction": "Erläutern Sie das Marktsystem, in dem sich die Easy Building bewegt."
+    }
+  },
+  {
+    "bitmark": "[.take-picture]\n[@id:197943]",
+    "bit": {
+      "type": "take-picture",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "197943"
+      ]
+    }
+  }
+]

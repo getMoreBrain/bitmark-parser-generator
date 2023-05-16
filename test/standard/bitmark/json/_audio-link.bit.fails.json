@@ -1,0 +1,22 @@
+[
+  {
+    "bitmark": "[.article:bitmark++&audio-link]\n[@id:301682]\nDas sprechende Buch\n[&audio-link:https://bewirken.org/buch-audioplayer/?file=26&title=Gemeinsam%20Schule%20ver%C3%A4ndern]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "body": "Das sprechende Buch",
+      "id": [
+        "301682"
+      ],
+      "resource": {
+        "type": "audio-link",
+        "audioLink": {
+          "provider": "org/buch-audioplayer/?file=26&title=Gemeinsam%20Schule%20ver%C3%A4ndern",
+          "url": "https://bewirken.org/buch-audioplayer/?file=26&title=Gemeinsam%20Schule%20ver%C3%A4ndern",
+          "duration": "",
+          "autoplay": true
+        }
+      }
+    }
+  }
+]

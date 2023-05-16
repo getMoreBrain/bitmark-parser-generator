@@ -1,0 +1,15 @@
+[
+  {
+    "bitmark": "[.bot-action-announce]\n[@date:2022-10-01T08:00:00CET]",
+    "bit": {
+      "type": "bot-action-announce",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "date": "2022-10-01T08:00:00CET"
+    }
+  }
+]

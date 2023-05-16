@@ -1,0 +1,205 @@
+[
+  {
+    "bitmark": "[.video-link]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&video:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]",
+    "bit": {
+      "type": "video-link",
+      "format": "bitmark--",
+      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "wmv",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "mute": false,
+          "autoplay": false,
+          "allowSubtitles": false,
+          "showSubtitles": false,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "posterImage": {
+            "src": "",
+            "format": "",
+            "width": null,
+            "height": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.video-link]\n[@id:119760]\n[&video-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4][@src1x:https://www.youtube.com/tumb_201809210816.png][@src2x:https://www.youtube.com/tumb_201809210816.png][@width:740][@height:540][@duration:PT12M31S]",
+    "bit": {
+      "type": "video-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "119760"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "docs.bitmark.cloud",
+          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
+          "width": "740",
+          "height": "540",
+          "duration": "PT12M31S",
+          "thumbnails": [
+            {
+              "format": "png",
+              "width": null,
+              "height": null,
+              "src1x": "https://www.youtube.com/tumb_201809210816.png"
+            },
+            {
+              "format": "png",
+              "width": null,
+              "height": null,
+              "src2x": "https://www.youtube.com/tumb_201809210816.png"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.video-link]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&video-link:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]",
+    "bit": {
+      "type": "video-link",
+      "format": "bitmark--",
+      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "docs.bitbook.education",
+          "url": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:186837]\n[&video-link:https://www.youtube.com/watch?v=E41oFn8EdqY][@caption:Erklärvideo zum Bildungsbericht (1/2): Zielsetzung]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "186837"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=E41oFn8EdqY",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Erklärvideo zum Bildungsbericht (1/2): Zielsetzung"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article:bitmark--&video-link]\n[@id:187546]\n[&video-link:https://www.youtube.com/watch?v=FW47I-KbmF4&t=6s][@caption:Erklärvideo die Lerndokumentation]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "187546"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "www.youtube.com",
+          "url": "https://www.youtube.com/watch?v=FW47I-KbmF4&t=6s",
+          "width": null,
+          "height": null,
+          "duration": "",
+          "caption": "Erklärvideo die Lerndokumentation"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:185332]\n\n[&video-link:https://vimeo.com/585451927]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "185332"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "vimeo.com",
+          "url": "https://vimeo.com/585451927",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:185329]\n[&video-link:https://vimeo.com/585450701]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "185329"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "vimeo.com",
+          "url": "https://vimeo.com/585450701",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.article&video-link]\n[@id:185330]\n\n[&video-link:https://vimeo.com/585457783]",
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "body": "",
+      "id": [
+        "185330"
+      ],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "provider": "vimeo.com",
+          "url": "https://vimeo.com/585457783",
+          "width": null,
+          "height": null,
+          "duration": ""
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,330 @@
+[
+  {
+    "bitmark": "[.mark:bitmark--]\n[@id:92441]\n[%A28c1]\n[!Das Privatleben von Prominenten\n\nMarkieren Sie gemeinsam alle Adjektive in blau.]\n\n\n**Ehe-Aus für Bruno?**\n\n__Corinna (33), die fünfte Ehefrau des__ ['berühmten][@mark:blue] __Sängers Bruno (63), will die Scheidung!__\n\nIn der ['letzten][@mark:blue] Zeit vermehrten sich die Gerüchte, Bruno habe ein Verhältnis mit der ['schönen] Backgroundsängerin Sharika. Jetzt reagierte seine Ehefrau. In einem Interview mit der Zeitschrift BLITZ sagte die Blondine: „Jetzt ist Schluss! Ich kann es nicht ertragen, dass Bruno schon wieder eine Geliebte hat!“ Corinna hat bereits den ['erfolgreichen][@mark:blue] Scheidungsanwalt Otto August von Unmut engagiert, der sie im Scheidungsprozess vertreten soll. Sie fordert die Hälfte des Vermögens und das ['alleinige][@mark:blue] Sorgerecht für den ['gemeinsamen][@mark:blue] Sohn Lucas (6 Jahre). Was das Finanzielle betrifft, so räumen Experten der ['betrogenen][@mark:blue] Ehefrau wenig Chancen ein. Sie hatte vor der Hochzeit einen Ehevertrag unterschrieben und auf ['finanzielle][@mark:blue] Ansprüche im Fall einer Scheidung verzichtet. Für Bruno wäre es die fünfte Scheidung. Er hat bereits sieben Kinder aus früheren Ehen, für die er Unterhalt zahlen muss.\n\nDoch vielleicht gibt es eine ['unerwartete][@mark:blue] Wendung. Ein ['stadtbekannter][@mark:blue] Juwelier bestätigte gestern gegenüber BLITZ, dass Bruno Schmuck im Wert von 50 000 Euro gekauft habe. Ist der ['wertvolle] Schmuck für Corinna? Will Bruno seinen Fehler wieder gutmachen? Gibt es am Ende sogar eine ['romantische][@mark:blue] Versöhnung?",
+    "bit": {
+      "type": "mark",
+      "format": "bitmark--",
+      "item": "A28c1",
+      "instruction": "Das Privatleben von Prominenten\n\nMarkieren Sie gemeinsam alle Adjektive in blau.",
+      "hint": "",
+      "body": "**Ehe-Aus für Bruno?**\n\n__Corinna (33), die fünfte Ehefrau des__  __Sängers Bruno (63), will die Scheidung!__\n\nIn der  Zeit vermehrten sich die Gerüchte, Bruno habe ein Verhältnis mit der ['schönen] Backgroundsängerin Sharika. Jetzt reagierte seine Ehefrau. In einem Interview mit der Zeitschrift BLITZ sagte die Blondine: „Jetzt ist Schluss! Ich kann es nicht ertragen, dass Bruno schon wieder eine Geliebte hat!“ Corinna hat bereits den  Scheidungsanwalt Otto August von Unmut engagiert, der sie im Scheidungsprozess vertreten soll. Sie fordert die Hälfte des Vermögens und das  Sorgerecht für den  Sohn Lucas (6 Jahre). Was das Finanzielle betrifft, so räumen Experten der  Ehefrau wenig Chancen ein. Sie hatte vor der Hochzeit einen Ehevertrag unterschrieben und auf  Ansprüche im Fall einer Scheidung verzichtet. Für Bruno wäre es die fünfte Scheidung. Er hat bereits sieben Kinder aus früheren Ehen, für die er Unterhalt zahlen muss.\n\nDoch vielleicht gibt es eine  Wendung. Ein  Juwelier bestätigte gestern gegenüber BLITZ, dass Bruno Schmuck im Wert von 50 000 Euro gekauft habe. Ist der ['wertvolle] Schmuck für Corinna? Will Bruno seinen Fehler wieder gutmachen? Gibt es am Ende sogar eine  Versöhnung?",
+      "marks": {
+        "{berühmten:0}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{letzten:1}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{erfolgreichen:2}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{alleinige:3}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{gemeinsamen:4}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{betrogenen:5}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{finanzielle:6}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{unerwartete:7}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{stadtbekannter:8}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{romantische:9}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "blue",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        }
+      },
+      "id": [
+        "92441"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.mark:bitmark--&image]\n[@id:93041]\n[%C1]\n[!Heben Sie im Text alle Passiv- und Passiversatzformen hervor.]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/trabant_p50_front.jpg]\n**Der Trabant**\n\nDie Geschichte beginnt durchaus innovativ: 1954 beschloss die DDR-Staatsführung, einen Kleinwagen zu entwickeln. Er sollte ['bezahlbar sein] und gleichzeitig so robust, dass er eine Weile halten würde. Doch bald stellte sich heraus, dass das Projekt ['nicht so einfach umzusetzen war], denn Bleche für die Herstellung einer Auto-Karosserie waren in Ostdeutschland ein seltenes Gut.\n\nNach einigen Überlegungen ['wurde] ein Prototyp auf die Räder ['gestellt], der zeigte, wie sich das Problem ['umgehen ließ]: mit Duroplast, einer Kombination aus Baumwollfasern und Kunststoff. Zur Herstellung des Gehäuses ['wurden] verschiedene Lagen Baumwollfasern mit Kunststoffteilchen ['übereinandergelegt] und mit Hitze in eine Form ['gepresst]. 1957 ['konnte] der ursprünglich __P50__ benannte Wagen mit einer Leistung von 18 PS in Serie ['hergestellt werden]. Bei einem Preisausschreiben gewann der Name __Trabant__, was so viel bedeutet wie Begleiter. Der sowjetische Sputnik stand Pate für den Namen. 1964 ['wurde] der __Trabant__ nach einer Überarbeitung mit stolzen 23 PS und einer neuen Karosserie ['präsentiert]. Insgesamt ['wurden] 17 Verbesserungen an dem Auto ['vorgenommen]. 1991 endet die Geschichte des treuen __Begleiters__ nach mehr als drei Millionen gebauten Exemplaren. Nach der Wiedervereinigung und der Währungsunion war er nicht mehr gefragt.",
+    "bit": {
+      "type": "mark",
+      "format": "bitmark--",
+      "item": "C1",
+      "instruction": "Heben Sie im Text alle Passiv- und Passiversatzformen hervor.",
+      "hint": "",
+      "body": "**Der Trabant**\n\nDie Geschichte beginnt durchaus innovativ: 1954 beschloss die DDR-Staatsführung, einen Kleinwagen zu entwickeln. Er sollte ['bezahlbar sein] und gleichzeitig so robust, dass er eine Weile halten würde. Doch bald stellte sich heraus, dass das Projekt ['nicht so einfach umzusetzen war], denn Bleche für die Herstellung einer Auto-Karosserie waren in Ostdeutschland ein seltenes Gut.\n\nNach einigen Überlegungen ['wurde] ein Prototyp auf die Räder ['gestellt], der zeigte, wie sich das Problem ['umgehen ließ]: mit Duroplast, einer Kombination aus Baumwollfasern und Kunststoff. Zur Herstellung des Gehäuses ['wurden] verschiedene Lagen Baumwollfasern mit Kunststoffteilchen ['übereinandergelegt] und mit Hitze in eine Form ['gepresst]. 1957 ['konnte] der ursprünglich __P50__ benannte Wagen mit einer Leistung von 18 PS in Serie ['hergestellt werden]. Bei einem Preisausschreiben gewann der Name __Trabant__, was so viel bedeutet wie Begleiter. Der sowjetische Sputnik stand Pate für den Namen. 1964 ['wurde] der __Trabant__ nach einer Überarbeitung mit stolzen 23 PS und einer neuen Karosserie ['präsentiert]. Insgesamt ['wurden] 17 Verbesserungen an dem Auto ['vorgenommen]. 1991 endet die Geschichte des treuen __Begleiters__ nach mehr als drei Millionen gebauten Exemplaren. Nach der Wiedervereinigung und der Währungsunion war er nicht mehr gefragt.",
+      "marks": {},
+      "id": [
+        "93041"
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/trabant_p50_front.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.mark:bitmark++][@id:92871]\n[%A4a]\n[!Die indirekte Rede\n\nLesen Sie die folgenden Sätze und kennzeichnen Sie die Verben.]\nDie Ergebnisse seien alarmierend.\nFast jedes fünfte Kind in Deutschland habe psychische Probleme.\nKäse zerstöre den Körper, mache fett, faul und krank.\nVon den Tätern fehle jede Spur.\n\n► Diese Sätze stehen in der indirekten Rede, das heißt, sie geben wieder, was jemand gesagt hat. Im Deutschen kann man dafür eine besondere grammatische Form verwenden: den\n\n\n◼︎ Die Verwendung des **Konjunktiv I** ermöglicht es, einen Sachverhalt oder eine Aussage **neutral** wiederzugeben. Der **Konjunktiv I** wird vor allem bei Nachrichten in Rundfunk, Fernsehen und Zeitungen genutzt.\n|remark:Indikativ\nDie Ergebnisse **sind** alarmierend.\nJedes fünfte Kind **hat** psychische Probleme.\nKäse **zerstört** den Körper, ...\nVon den Tätern **fehlt** jede Spur.\n\n\n|remark:Konjunktiv I\nDie Ergebnisse **seien** alarmierend.\nJedes fünfte Kind **habe** psychische Probleme.\nKäse **zerstöre** den Körper, ...\nVon den Tätern **fehle** jede Spur.\n\n\n|remark:Bildung des Konjunktiv I\nDer Konjunktiv I wird aus dem **Verbstamm im Präsens** und der **Konjunktivendung** gebildet.\nIn vielen Fällen ist der Konjunktiv I identisch mit dem Indikativ. In diesen Fällen nehmen wir den **Konjunktiv II**.\n\n\n**Gegenwart**\n|image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gegenwart.png|\n**Vergangenheit**\nDer Minister sagte: „Ich war in Frankreich und habe mit dem Außenminister gesprochen.“\n\nDer Minister sagte, er **sei** in Frankreich **gewesen** und **habe** mit dem Außenminister **gesprochen**.\n➔ Konjunktiv I von __haben/sein__ + Partizip II",
+    "bit": {
+      "type": "mark",
+      "format": "bitmark++",
+      "item": "A4a",
+      "instruction": "Die indirekte Rede\n\nLesen Sie die folgenden Sätze und kennzeichnen Sie die Verben.",
+      "hint": "",
+      "body": "Die Ergebnisse seien alarmierend.\nFast jedes fünfte Kind in Deutschland habe psychische Probleme.\nKäse zerstöre den Körper, mache fett, faul und krank.\nVon den Tätern fehle jede Spur.\n\n► Diese Sätze stehen in der indirekten Rede, das heißt, sie geben wieder, was jemand gesagt hat. Im Deutschen kann man dafür eine besondere grammatische Form verwenden: den\n\n\n◼︎ Die Verwendung des **Konjunktiv I** ermöglicht es, einen Sachverhalt oder eine Aussage **neutral** wiederzugeben. Der **Konjunktiv I** wird vor allem bei Nachrichten in Rundfunk, Fernsehen und Zeitungen genutzt.\n|remark:Indikativ\nDie Ergebnisse **sind** alarmierend.\nJedes fünfte Kind **hat** psychische Probleme.\nKäse **zerstört** den Körper, ...\nVon den Tätern **fehlt** jede Spur.\n\n\n|remark:Konjunktiv I\nDie Ergebnisse **seien** alarmierend.\nJedes fünfte Kind **habe** psychische Probleme.\nKäse **zerstöre** den Körper, ...\nVon den Tätern **fehle** jede Spur.\n\n\n|remark:Bildung des Konjunktiv I\nDer Konjunktiv I wird aus dem **Verbstamm im Präsens** und der **Konjunktivendung** gebildet.\nIn vielen Fällen ist der Konjunktiv I identisch mit dem Indikativ. In diesen Fällen nehmen wir den **Konjunktiv II**.\n\n\n**Gegenwart**\n|image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gegenwart.png|\n**Vergangenheit**\nDer Minister sagte: „Ich war in Frankreich und habe mit dem Außenminister gesprochen.“\n\nDer Minister sagte, er **sei** in Frankreich **gewesen** und **habe** mit dem Außenminister **gesprochen**.\n➔ Konjunktiv I von __haben/sein__ + Partizip II",
+      "marks": {},
+      "id": [
+        "92871"
+      ]
+    },
+    "errors": [
+      {
+        "message": "missing NL at '[@'",
+        "line": 1,
+        "column": 17,
+        "errorLine": "[.mark:bitmark++][@id:92871]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.mark:bitmark--][@id:92872]\n[%A4b]\n[!Die indirekte Rede\n\nUnterstreichen Sie in den Nachrichten alle Formen der indirekten Rede.]\n\n**Nachrichten**\n\n**1. Berlin: Studie zur Jugendgesundheit Immer mehr Kinder sind psychisch auffällig**\nIm Auftrag des Bundesbildungsministeriums untersuchte das __Robert-Koch-Institut__ den physischen und psychischen Gesundheitszustand von Kindern und Jugendlichen in Deutschland. Die Ergebnisse seien alarmierend, meinte die Ministerin, die den Bericht des Instituts gestern auf einer Pressekonferenz vorstellte. Fast jedes fünfte Kind in Deutschland habe psychische Probleme und zehn Prozent der Kinder würden unter Ängsten leiden. 15 Prozent der Kinder seien übergewichtig und 28,9 Prozent der Mädchen zwischen 11 und 17 Jahren hätten Essstörungen. Für die Studie hatten Wissenschaftler fast 18 000 Kinder und Jugendliche bis 17 Jahre untersucht.\n\n**2. London: Käse ist böse!\nWerbeverbot im britischen Kinderfernsehen**\nKäse zerstöre den Körper, mache fett, faul und krank. Außerdem sei er zu salzig für Kinder, so die Meinung der britischen Rundfunk-Aufsichtsbehörde Ofcom. Nach mehrjährigen Beratungen entschied die Behörde jetzt, Käse in die Kategorie „Junk Food“ einzuordnen. Die Konsequenz: Für das Milchprodukt darf künftig nicht mehr in Kinderprogrammen geworben werden – ein Schicksal, das der Käse übrigens mit vielen Lebensmitteln, unter anderem mit Rosinen, teilt.\n\n**3. Wien: Verbindung zwischen Budapest und Wien Kaninchen blockieren Autobahn**\nAlarm auf der wichtigsten Verkehrsverbindung zwischen Budapest und Wien: Beim Zusammenstoß von zwei Lastwagen westlich von Budapest sind etwa 5 000 Kaninchen entlaufen, als ein Lkw umstürzte und der Laderaum aufbrach. Die Polizei sperrte die Unfallstelle weiträumig ab. Menschen seien nicht zu Schaden gekommen. Polizisten, Feuerwehrleute und der Fahrer des betroffenen Lastwagens seien allerdings noch viele Stunden damit beschäftigt gewesen, die Kaninchen wieder einzufangen, sagte eine Sprecherin der Autobahnpolizei.\n\n**4. Amsterdam: Dreister Überfall am Flughafen Diamanten im Wert von 100 Millionen Dollar gestohlen**\nMehrere bewaffnete Räuber haben gestern bei einem Überfall auf dem Amsterdamer Flughafen Schiphol Edelsteine im Wert von 100 Millionen Dollar erbeutet. In einem Wagen der Fluggesellschaft KLM fuhren die Diebe vor einen KLM-Jet, der mit seiner teuren Fracht eigentlich nach Brüssel fliegen sollte. Sie bedrohten das Sicherheitspersonal und ließen innerhalb weniger Minuten die Diamanten in einem gepanzerten Fahrzeug verschwinden. Das Fahrzeug wurde später leer in der Nähe des Flughafens gefunden. Der Flughafensprecher meinte heute zu dem Vorfall, die Polizei habe noch keinen Verdächtigen, von den Tätern fehle jede Spur.]",
+    "bit": {
+      "type": "mark",
+      "format": "bitmark--",
+      "item": "A4b",
+      "instruction": "Die indirekte Rede\n\nUnterstreichen Sie in den Nachrichten alle Formen der indirekten Rede.",
+      "hint": "",
+      "body": "**Nachrichten**\n\n**1. Berlin: Studie zur Jugendgesundheit Immer mehr Kinder sind psychisch auffällig**\nIm Auftrag des Bundesbildungsministeriums untersuchte das __Robert-Koch-Institut__ den physischen und psychischen Gesundheitszustand von Kindern und Jugendlichen in Deutschland. Die Ergebnisse seien alarmierend, meinte die Ministerin, die den Bericht des Instituts gestern auf einer Pressekonferenz vorstellte. Fast jedes fünfte Kind in Deutschland habe psychische Probleme und zehn Prozent der Kinder würden unter Ängsten leiden. 15 Prozent der Kinder seien übergewichtig und 28,9 Prozent der Mädchen zwischen 11 und 17 Jahren hätten Essstörungen. Für die Studie hatten Wissenschaftler fast 18 000 Kinder und Jugendliche bis 17 Jahre untersucht.\n\n**2. London: Käse ist böse!\nWerbeverbot im britischen Kinderfernsehen**\nKäse zerstöre den Körper, mache fett, faul und krank. Außerdem sei er zu salzig für Kinder, so die Meinung der britischen Rundfunk-Aufsichtsbehörde Ofcom. Nach mehrjährigen Beratungen entschied die Behörde jetzt, Käse in die Kategorie „Junk Food“ einzuordnen. Die Konsequenz: Für das Milchprodukt darf künftig nicht mehr in Kinderprogrammen geworben werden – ein Schicksal, das der Käse übrigens mit vielen Lebensmitteln, unter anderem mit Rosinen, teilt.\n\n**3. Wien: Verbindung zwischen Budapest und Wien Kaninchen blockieren Autobahn**\nAlarm auf der wichtigsten Verkehrsverbindung zwischen Budapest und Wien: Beim Zusammenstoß von zwei Lastwagen westlich von Budapest sind etwa 5 000 Kaninchen entlaufen, als ein Lkw umstürzte und der Laderaum aufbrach. Die Polizei sperrte die Unfallstelle weiträumig ab. Menschen seien nicht zu Schaden gekommen. Polizisten, Feuerwehrleute und der Fahrer des betroffenen Lastwagens seien allerdings noch viele Stunden damit beschäftigt gewesen, die Kaninchen wieder einzufangen, sagte eine Sprecherin der Autobahnpolizei.\n\n**4. Amsterdam: Dreister Überfall am Flughafen Diamanten im Wert von 100 Millionen Dollar gestohlen**\nMehrere bewaffnete Räuber haben gestern bei einem Überfall auf dem Amsterdamer Flughafen Schiphol Edelsteine im Wert von 100 Millionen Dollar erbeutet. In einem Wagen der Fluggesellschaft KLM fuhren die Diebe vor einen KLM-Jet, der mit seiner teuren Fracht eigentlich nach Brüssel fliegen sollte. Sie bedrohten das Sicherheitspersonal und ließen innerhalb weniger Minuten die Diamanten in einem gepanzerten Fahrzeug verschwinden. Das Fahrzeug wurde später leer in der Nähe des Flughafens gefunden. Der Flughafensprecher meinte heute zu dem Vorfall, die Polizei habe noch keinen Verdächtigen, von den Tätern fehle jede Spur.]",
+      "marks": {},
+      "id": [
+        "92872"
+      ]
+    },
+    "errors": [
+      {
+        "message": "missing NL at '[@'",
+        "line": 1,
+        "column": 17,
+        "errorLine": "[.mark:bitmark--][@id:92872]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 20,
+        "column": 623,
+        "errorLine": "Mehrere bewaffnete Räuber haben gestern bei einem Überfall auf dem Amsterdamer Flughafen Schiphol Edelsteine im Wert von 100 Millionen Dollar erbeutet. In einem Wagen der Fluggesellschaft KLM fuhren die Diebe vor einen KLM-Jet, der mit seiner teuren Fracht eigentlich nach Brüssel fliegen sollte. Sie bedrohten das Sicherheitspersonal und ließen innerhalb weniger Minuten die Diamanten in einem gepanzerten Fahrzeug verschwinden. Das Fahrzeug wurde später leer in der Nähe des Flughafens gefunden. Der Flughafensprecher meinte heute zu dem Vorfall, die Polizei habe noch keinen Verdächtigen, von den Tätern fehle jede Spur.]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.mark:bitmark--][@id:92873]\n[%A4c]\n[!Die indirekte Rede\n\nMarkieren Sie in der folgenden Meldung alle Formen der indirekten Rede in der Gegenwart und der Vergangenheit.]\n\n**Flugausfälle und Verspätungen durch Warnstreiks**\n\nWarnstreiks bei mehreren deutschen Fluggesellschaften haben am Morgen zu mehrstündigen Verspätungen und Ausfällen im Flugverkehr geführt. Die Arbeitnehmervereinigung Cockpit hatte die Piloten für zweieinhalb Stunden zu befristeten Warnstreiks aufgerufen. Insgesamt ['hätten sich][@mark:green] rund 200 Piloten und Co-Piloten an dem „äußerst erfolg-reichen“ Arbeitskampf ['beteiligt][@mark:green], teilte Cockpit mit. Von 5.30 Uhr bis 8.00 Uhr ['seien][@mark:green] 97 von 99 Flügen auf allen großen deutschen Flughäfen ['betroffen gewesen][@mark:green]. Lufthansa ['habe][@mark:green] 64 Flüge ['annulliert][@mark:green]. Da der Arbeitgeber in den mehrmonatigen Verhandlungen über Gehaltssteigerungen keine guten Angebote ['vorgelegt habe][@mark:green], ['seien][@mark:green] die Warnstreiks ['notwendig gewesen][@mark:green], sagte ein Sprecher der Pilotengewerkschaft. Die Streiks ['seien][@mark:green] für die Gewerkschaft ['das „letzte Mittel“ gewesen][@mark:green], um ihren Forderungen Nachdruck zu verleihen. Sollte die Gewerkschaft nun keine „deutlich nachgebesserten Angebote“ erhalten, ['werde][@mark:green] es weitere Warnstreiks oder auch einen unbefristeten Streik ['geben][@mark:green].",
+    "bit": {
+      "type": "mark",
+      "format": "bitmark--",
+      "item": "A4c",
+      "instruction": "Die indirekte Rede\n\nMarkieren Sie in der folgenden Meldung alle Formen der indirekten Rede in der Gegenwart und der Vergangenheit.",
+      "hint": "",
+      "body": "**Flugausfälle und Verspätungen durch Warnstreiks**\n\nWarnstreiks bei mehreren deutschen Fluggesellschaften haben am Morgen zu mehrstündigen Verspätungen und Ausfällen im Flugverkehr geführt. Die Arbeitnehmervereinigung Cockpit hatte die Piloten für zweieinhalb Stunden zu befristeten Warnstreiks aufgerufen. Insgesamt  rund 200 Piloten und Co-Piloten an dem „äußerst erfolg-reichen“ Arbeitskampf , teilte Cockpit mit. Von 5.30 Uhr bis 8.00 Uhr  97 von 99 Flügen auf allen großen deutschen Flughäfen . Lufthansa  64 Flüge . Da der Arbeitgeber in den mehrmonatigen Verhandlungen über Gehaltssteigerungen keine guten Angebote ,  die Warnstreiks , sagte ein Sprecher der Pilotengewerkschaft. Die Streiks  für die Gewerkschaft , um ihren Forderungen Nachdruck zu verleihen. Sollte die Gewerkschaft nun keine „deutlich nachgebesserten Angebote“ erhalten,  es weitere Warnstreiks oder auch einen unbefristeten Streik .",
+      "marks": {
+        "{hätten sich:0}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "green",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{beteiligt:1}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "green",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{seien:2}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "green",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{betroffen gewesen:3}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "green",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{habe:4}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "green",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{annulliert:5}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "green",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{vorgelegt habe:6}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "green",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{seien:7}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "green",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{notwendig gewesen:8}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "green",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{seien:9}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "green",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{das „letzte Mittel“ gewesen:10}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "green",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{werde:11}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "green",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        },
+        "{geben:12}": {
+          "item": "",
+          "text": "",
+          "richText": "",
+          "mark": "green",
+          "instruction": "",
+          "hint": "",
+          "isExample": false
+        }
+      },
+      "id": [
+        "92873"
+      ]
+    },
+    "errors": [
+      {
+        "message": "missing NL at '[@'",
+        "line": 1,
+        "column": 17,
+        "errorLine": "[.mark:bitmark--][@id:92873]"
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "bitmark": "[.true-false-1]\n[@id:285736]\n[%28][%true-false-1]\n[+Ein Elefant ist grösser als eine Maus.]",
+    "bit": {
+      "type": "true-false-1",
+      "format": "bitmark--",
+      "item": "28",
+      "lead": "true-false-1",
+      "instruction": "",
+      "hint": "",
+      "statement": "Ein Elefant ist grösser als eine Maus.",
+      "isCorrect": true,
+      "isExample": false,
+      "body": "",
+      "id": [
+        "285736"
+      ]
+    }
+  }
+]

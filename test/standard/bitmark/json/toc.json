@@ -1,0 +1,30 @@
+[
+  {
+    "bitmark": "[.toc]\n[@id:92374]",
+    "bit": {
+      "type": "toc",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "92374"
+      ],
+      "toc": "92374]\n"
+    }
+  },
+  {
+    "bitmark": "[.toc]",
+    "bit": {
+      "type": "toc",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    }
+  }
+]

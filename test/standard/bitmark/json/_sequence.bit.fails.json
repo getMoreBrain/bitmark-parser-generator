@@ -1,0 +1,63 @@
+[
+  {
+    "bitmark": "[.sequence]\n|| This dividers are incorrect. ANTLR parser throws errors, PEG parser parses as body ||\n[@id:107963]\n[%26]\n[!Ein Freund besucht dich in München. Du möchtest wissen, wann sein Zug in München ankommt. Wähl die Wörter in der\nrichtigen Reihenfolge aus, um die Frage zu formulieren.]\n---\nWann\n---\nkommt\n---\ndein\n---\nZug\n---\nan\n---\n?\n---",
+    "bit": {
+      "type": "sequence",
+      "format": "bitmark--",
+      "instruction": "Ein Freund besucht dich in München. Du möchtest wissen, wann sein Zug in München ankommt. Wähl die Wörter in der\nrichtigen Reihenfolge aus, um die Frage zu formulieren.",
+      "body": "WannkommtdeinZugan?",
+      "elements": [],
+      "item": "26",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "107963"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 6,
+        "column": 56,
+        "errorLine": "richtigen Reihenfolge aus, um die Frage zu formulieren.]"
+      },
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 8,
+        "column": 4,
+        "errorLine": "Wann"
+      },
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 10,
+        "column": 5,
+        "errorLine": "kommt"
+      },
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 12,
+        "column": 4,
+        "errorLine": "dein"
+      },
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 14,
+        "column": 3,
+        "errorLine": "Zug"
+      },
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 16,
+        "column": 2,
+        "errorLine": "an"
+      },
+      {
+        "message": "Unexpected input '\\n---\n'",
+        "line": 18,
+        "column": 1,
+        "errorLine": "?"
+      }
+    ]
+  }
+]

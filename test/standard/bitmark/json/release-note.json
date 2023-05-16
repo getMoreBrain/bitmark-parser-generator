@@ -1,0 +1,24 @@
+[
+  {
+    "bitmark": "[.release-note]\n[@releaseVersion:1.0.2]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]",
+    "bit": {
+      "type": "release-note",
+      "format": "bitmark--",
+      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "releaseVersion": "1.0.2"
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "png",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png"
+        }
+      ]
+    }
+  }
+]

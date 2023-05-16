@@ -1,0 +1,155 @@
+[
+  {
+    "bitmark": "[.message&article]\n[&article:\n**Abenteuer Ausland**\n\nViele Deutsche zog und zieht es ins Ausland. Dabei waren Abenteuerlust, Abwechslung und die Suche nach einer interessanten Herausforderung im beruflichen Bereich früher die stärksten Motive. Vor allem intellektuelle Weltenbummler hielten einst Ausschau nach vielfältigen Erfahrungen und Karrieremöglichkeiten, denn die besten Chancen auf einen gut bezahlten Job im Ausland hatten in der Vergangenheit hauptsächlich Arbeitskräfte mit einem akademischen Abschluss.]\n\nWhat the Hell!",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "What the Hell!",
+      "resource": {
+        "type": "article",
+        "article": {
+          "format": "",
+          "href": "",
+          "body": "**Abenteuer Ausland**\n\nViele Deutsche zog und zieht es ins Ausland. Dabei waren Abenteuerlust, Abwechslung und die Suche nach einer interessanten Herausforderung im beruflichen Bereich früher die stärksten Motive. Vor allem intellektuelle Weltenbummler hielten einst Ausschau nach vielfältigen Erfahrungen und Karrieremöglichkeiten, denn die besten Chancen auf einen gut bezahlten Job im Ausland hatten in der Vergangenheit hauptsächlich Arbeitskräfte mit einem akademischen Abschluss."
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.message&article-link]\n[&article-link:https://www.youtube.com/watch?v=RecY5iZn6B0]\n\nWhat the Hell!",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "What the Hell!",
+      "resource": {
+        "type": "article-link",
+        "articleLink": {
+          "url": "https://www.youtube.com/watch?v=RecY5iZn6B0"
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.message&website] Have a look at http://www.apple.com",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "Have a look at http://www.apple.com",
+      "resource": {
+        "type": "website",
+        "website": {}
+      }
+    }
+  },
+  {
+    "bitmark": "[.message&image]\n[&image:https://cdn.bitmark.cloud/cat.jpg]\nHave a look at this cute cat! 😻",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "Have a look at this cute cat! 😻",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://cdn.bitmark.cloud/cat.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.message:bitmark--]\nHave a look at this **cute** cat! 😻",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "Have a look at this **cute** cat! 😻"
+    }
+  },
+  {
+    "bitmark": "[.message&website] Have a look at http://www.apple.com\n[&website:https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript]\n[&audio:https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript.mp3]\n[&video:https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript.mp4]\n[&document:https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript]\n\n[!this is a mesage]",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "Have a look at http://www.apple.com",
+      "resource": {
+        "type": "website",
+        "website": "https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript",
+        "siteName": [
+          "https://stackoverflow.com/",
+          "stackoverflow.com"
+        ],
+        "private": {}
+      }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "audio",
+          "format": "mp3",
+          "src": "https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript.mp3"
+        },
+        {
+          "type": "video",
+          "format": "mp4",
+          "src": "https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript.mp4"
+        },
+        {
+          "type": "document",
+          "src": "https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript"
+        }
+      ]
+    }
+  },
+  {
+    "bitmark": "[.message&image]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/065-1b.png][@caption: Willy Brandt: Bundeskanzler der Bundesrepublik Deutschland von 1969 bis 1974]",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/065-1b.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "Willy Brandt: Bundeskanzler der Bundesrepublik Deutschland von 1969 bis 1974",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  },
+  {
+    "bitmark": "[.message&image]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/727494_original_r_k_b_by_lupo_pixelio-heller.png][@src1x:https://cdn.bitmark.cloud/cat.jpg][@src2x:https://cdn.bitmark.cloud/catty.jpg]\n\nHave a look at this cute cat! 😻",
+    "bit": {
+      "type": "message",
+      "format": "bitmark--",
+      "body": "Have a look at this cute cat! 😻",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/727494_original_r_k_b_by_lupo_pixelio-heller.png",
+          "showInIndex": false,
+          "format": "png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": "",
+          "src1x": "https://cdn.bitmark.cloud/cat.jpg",
+          "src2x": "https://cdn.bitmark.cloud/catty.jpg"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,100 @@
+[
+  {
+    "bitmark": "[.rating]\n[@id:186279]\n===\n[%1]Das Anforderungsprofil an die lernende Person ist bekannt.\n[• --]\n[• -]\n[• +]\n[• ++]\n===\n[%2]Gespräche mit den ausgewählten Bewerbenden finden statt und weitere Auswahlinstrumente werden eingesetzt.\n[• --]\n[• -]\n[• +]\n[• ++]\n===\n[%3]Es werden Schnupperlehren organisiert und ausgewertet.\n[• --]\n[• -]\n[• +]\n[• ++]\n===\n[%4]Die Bewerbenden werden über die Arbeitsbedingungen informiert.\n[• --]\n[• -]\n[• +]\n[• ++]\n===\n[%5]Die Resultate des Bewerbungsverfahrens werden allen Bewerbenden klar kommuniziert.\n[• --]\n[• -]\n[• +]\n[• ++]\n===\n[%6]Den Bewerbenden werden die Vertragsbedingungen erklärt.\n[• --]\n[• -]\n[• +]\n[• ++]\n===",
+    "bit": {
+      "type": "rating",
+      "format": "bitmark--",
+      "body": "===\n[%1]Das Anforderungsprofil an die lernende Person ist bekannt.\n[• --]\n[• -]\n[• +]\n[• ++]\n===\n[%2]Gespräche mit den ausgewählten Bewerbenden finden statt und weitere Auswahlinstrumente werden eingesetzt.\n[• --]\n[• -]\n[• +]\n[• ++]\n===\n[%3]Es werden Schnupperlehren organisiert und ausgewertet.\n[• --]\n[• -]\n[• +]\n[• ++]\n===\n[%4]Die Bewerbenden werden über die Arbeitsbedingungen informiert.\n[• --]\n[• -]\n[• +]\n[• ++]\n===\n[%5]Die Resultate des Bewerbungsverfahrens werden allen Bewerbenden klar kommuniziert.\n[• --]\n[• -]\n[• +]\n[• ++]\n===\n[%6]Den Bewerbenden werden die Vertragsbedingungen erklärt.\n[• --]\n[• -]\n[• +]\n[• ++]\n===",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186279"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '[%'",
+        "line": 4,
+        "column": 0,
+        "errorLine": "[%1]Das Anforderungsprofil an die lernende Person ist bekannt."
+      },
+      {
+        "message": "Rule violation around ']'",
+        "line": 4,
+        "column": 3,
+        "errorLine": "[%1]Das Anforderungsprofil an die lernende Person ist bekannt."
+      },
+      {
+        "message": "Unexpected input '[•'",
+        "line": 5,
+        "column": 0,
+        "errorLine": "[• --]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 5,
+        "column": 5,
+        "errorLine": "[• --]"
+      },
+      {
+        "message": "Unexpected input '[•'",
+        "line": 6,
+        "column": 0,
+        "errorLine": "[• -]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 6,
+        "column": 4,
+        "errorLine": "[• -]"
+      },
+      {
+        "message": "Unexpected input '[•'",
+        "line": 7,
+        "column": 0,
+        "errorLine": "[• +]"
+      },
+      {
+        "message": "Unexpected input ']'",
+        "line": 7,
+        "column": 4,
+        "errorLine": "[• +]"
+      },
+      {
+        "message": "Unexpected input '[•'",
+        "line": 8,
+        "column": 0,
+        "errorLine": "[• ++]"
+      },
+      {
+        "message": "Rule violation around ']'",
+        "line": 8,
+        "column": 5,
+        "errorLine": "[• ++]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.rating]\n[@id:186276]\n===\nDie in der letzten QualiCarte festgehaltenen Massnahmen sind wirksam. Die gesetzten Ziele wurden erreicht.\n[• --]\n[• -]\n[• +]\n[• ++]\n===",
+    "bit": {
+      "type": "rating",
+      "format": "bitmark--",
+      "body": "===\nDie in der letzten QualiCarte festgehaltenen Massnahmen sind wirksam. Die gesetzten Ziele wurden erreicht.\n\n\n\n\n===",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "186276"
+      ],
+      "bullet": [
+        "--",
+        "-",
+        "+",
+        "++"
+      ]
+    }
+  }
+]

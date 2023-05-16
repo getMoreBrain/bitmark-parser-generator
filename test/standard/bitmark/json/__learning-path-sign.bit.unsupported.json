@@ -1,0 +1,19 @@
+[
+  {
+    "bitmark": "[.learning-path-sign]\n[!Nullserie]\n[@action:Päsenz-Seminar]\n[@duration:3600s]\n\nCan also contain resources like all bits",
+    "bit": {
+      "type": "learning-path-sign",
+      "format": "bitmark--",
+      "body": "Can also contain resources like all bits",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "isTracked": true,
+      "isInfoOnly": false,
+      "instruction": "Nullserie",
+      "action": "Päsenz-Seminar",
+      "duration": "3600s"
+    }
+  }
+]

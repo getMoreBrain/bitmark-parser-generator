@@ -1,0 +1,17 @@
+[
+  {
+    "bitmark": "[.learning-path-video-call]\n[@videoCallLink:https://yasminboland.com/video/call.php]",
+    "bit": {
+      "type": "learning-path-video-call",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "isTracked": true,
+      "isInfoOnly": false,
+      "videoCallLink": "https://yasminboland.com/video/call.php"
+    }
+  }
+]

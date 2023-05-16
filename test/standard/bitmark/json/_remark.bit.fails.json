@@ -1,0 +1,48 @@
+[
+  {
+    "bitmark": "[.remark++]\n[@id:239833]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k4_4.png|\n\n**Unsere Empfehlung**: Verbinde Online-Sessions mit dem Flipped-Classroom-Ansatz, damit die Lernerfahrung auch ergänzend an anderen Orten stattfinden kann. Nutze außerdem digitale Board-Tools, um auch digitale Lernräume zu schaffen, die (visuell) einprägsam sind und binde analoge Lernmaterialien und Gegenstände in Online-Sessions ein, mit denen Teilnehmende Wissen verknüpfen können.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k4_4.png|\n\n**Unsere Empfehlung**: Verbinde Online-Sessions mit dem Flipped-Classroom-Ansatz, damit die Lernerfahrung auch ergänzend an anderen Orten stattfinden kann. Nutze außerdem digitale Board-Tools, um auch digitale Lernräume zu schaffen, die (visuell) einprägsam sind und binde analoge Lernmaterialien und Gegenstände in Online-Sessions ein, mit denen Teilnehmende Wissen verknüpfen können.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "239833"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '++'",
+        "line": 1,
+        "column": 8,
+        "errorLine": "[.remark++]"
+      }
+    ]
+  },
+  {
+    "bitmark": "[.remark++]\n[@id:239840]\n|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k4_4.png|\n**Unsere Empfehlung**: Einige besondere Bedürfnisse, die nur durch spezielle Lernbegleiter*innen erfüllt werden können, brauchen digital die gleiche Aufmerksamkeit wie analog. Viele Lernbedürfnisse, denen in normalen Unterrichtsformen schwer gerecht werden kann, werden aber durch eine Mischung aus synchronem und asynchronem Unterricht und Selbstorganisation erst erfüllbar. Hinzu kommt, dass die Nutzung von digitalen Hilfsmitteln und Informationsquellen es den Schüler*innen leichter macht, die eigene Lerngeschwindigkeit zu halten und zusätzliche Informationen oder Hilfen zu erhalten. Die dafür nötige Veränderung der Eigenverantwortung und Selbstorganisation der Lernenden ist aber ein Prozess, für den wir als Lehrende Geduld brauchen.",
+    "bit": {
+      "type": "remark",
+      "format": "bitmark--",
+      "body": "|image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k4_4.png|\n**Unsere Empfehlung**: Einige besondere Bedürfnisse, die nur durch spezielle Lernbegleiter*innen erfüllt werden können, brauchen digital die gleiche Aufmerksamkeit wie analog. Viele Lernbedürfnisse, denen in normalen Unterrichtsformen schwer gerecht werden kann, werden aber durch eine Mischung aus synchronem und asynchronem Unterricht und Selbstorganisation erst erfüllbar. Hinzu kommt, dass die Nutzung von digitalen Hilfsmitteln und Informationsquellen es den Schüler*innen leichter macht, die eigene Lerngeschwindigkeit zu halten und zusätzliche Informationen oder Hilfen zu erhalten. Die dafür nötige Veränderung der Eigenverantwortung und Selbstorganisation der Lernenden ist aber ein Prozess, für den wir als Lehrende Geduld brauchen.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "239840"
+      ]
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '++'",
+        "line": 1,
+        "column": 8,
+        "errorLine": "[.remark++]"
+      }
+    ]
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "bitmark": "[.still-image-film-link]\n[@id:119760]\n[&still-image-film-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]",
+    "bit": {
+      "type": "still-image-film-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "119760"
+      ],
+      "resource": {
+        "type": "still-image-film-link",
+        "videoLink": {
+          "provider": "",
+          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
+          "format": "mp4"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "bitmark": "[.website-link]\n[@id:119761]\n[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]",
+    "bit": {
+      "type": "website-link",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "119761"
+      ],
+      "resource": {
+        "type": "website-link",
+        "websiteLink": {
+          "siteName": "",
+          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4"
+        }
+      }
+    }
+  }
+]

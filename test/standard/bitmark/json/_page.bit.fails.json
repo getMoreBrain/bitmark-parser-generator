@@ -1,0 +1,45 @@
+[
+  {
+    "bitmark": "[.page:bitmark++&image]\n|| ANTLR parser fails to parse body ||\n[@id:214259]\n[%11]\n[&image:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-16812_xtk030_u2030_inhaltpdf_hcdyhpeiccvb/webp/tk_marketing_16812_xtk030_inhaltpdf_gvrmhjlgov_k/tk_marketing_16812_xtk030_inhaltpdf_gvrmhjlgov_k-011.webp]\n[@thumbImage:https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-16812_xtk030_u2030_inhaltpdf_hcdyhpeiccvb/thumbs/tk_marketing_16812_xtk030_inhaltpdf_gvrmhjlgov_k-thumbs-011/tk_marketing_16812_xtk030_inhaltpdf_gvrmhjlgov_k-thumbs-011.jpg]\n\n\n00\n1\n2\n3\n4\nÿ\n6\n78\n9 \u000e\n\u000f\nCancel",
+    "bit": {
+      "type": "page",
+      "format": "bitmark++",
+      "body": "00\n1\n2\n3\n4\nÿ\n6\n78\n9 \u000e\n\u000f\nCancel",
+      "id": [
+        "214259"
+      ],
+      "item": "11",
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-16812_xtk030_u2030_inhaltpdf_hcdyhpeiccvb/webp/tk_marketing_16812_xtk030_inhaltpdf_gvrmhjlgov_k/tk_marketing_16812_xtk030_inhaltpdf_gvrmhjlgov_k-011.webp",
+          "showInIndex": false,
+          "format": "webp",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      },
+      "thumbImage": [
+        "https://bitmark-full-content-test.s3-eu-west-1.amazonaws.com/generated/e-16812_xtk030_u2030_inhaltpdf_hcdyhpeiccvb/thumbs/tk_marketing_16812_xtk030_inhaltpdf_gvrmhjlgov_k-thumbs-011/tk_marketing_16812_xtk030_inhaltpdf_gvrmhjlgov_k-thumbs-011.jpg"
+      ]
+    },
+    "errors": [
+      {
+        "message": "token recognition error at: '\u000e'",
+        "line": 17,
+        "column": 2,
+        "errorLine": "9 \u000e"
+      },
+      {
+        "message": "token recognition error at: '\u000f'",
+        "line": 18,
+        "column": 0,
+        "errorLine": "\u000f"
+      }
+    ]
+  }
+]

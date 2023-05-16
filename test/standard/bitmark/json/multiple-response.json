@@ -1,0 +1,63 @@
+[
+  {
+    "bitmark": "[.multiple-response:bitmark--]\n[@id:291969]\n[%]\n[!Welche der folgenden Personen sind grundsätzlich beitragspflichtig?]\n===\n[+Unselbständige]\n[+IV-Rentner]\n[-18 jähriger Schüler]\n[+22 jähriger Student]\n[-16 jähriger Lehrling]\n===",
+    "bit": {
+      "type": "multiple-response",
+      "format": "bitmark--",
+      "item": "",
+      "instruction": "Welche der folgenden Personen sind grundsätzlich beitragspflichtig?",
+      "body": "",
+      "footer": "",
+      "hint": "",
+      "quizzes": [
+        {
+          "item": "",
+          "instruction": "",
+          "responses": [
+            {
+              "response": "Unselbständige",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "IV-Rentner",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "18 jähriger Schüler",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "22 jähriger Student",
+              "item": "",
+              "isCorrect": true,
+              "instruction": "",
+              "hint": ""
+            },
+            {
+              "response": "16 jähriger Lehrling",
+              "item": "",
+              "isCorrect": false,
+              "instruction": "",
+              "hint": ""
+            }
+          ],
+          "hint": "",
+          "isExample": false,
+          "example": ""
+        }
+      ],
+      "id": [
+        "291969"
+      ]
+    }
+  }
+]

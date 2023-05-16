@@ -1,0 +1,71 @@
+[
+  {
+    "bitmark": "[.match-reverse]\n[@id:287869]\n[%][%match-reverse]\n[!Wie heißen die passenden Nomen?]\n===\nTier\n==\ndas[@example]\n===\nKuh\n==\ndie\n===\nLöwe\n==\ndie\n===\nSchmetterling\n==\nder\n===",
+    "bit": {
+      "type": "match-reverse",
+      "format": "bitmark--",
+      "item": "",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Tier",
+          "values": [
+            "das"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Kuh",
+          "values": [
+            "die"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Löwe",
+          "values": [
+            "die"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "key": "Schmetterling",
+          "values": [
+            "der"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "287869"
+      ],
+      "lead": "match-reverse",
+      "instruction": "Wie heißen die passenden Nomen?"
+    }
+  }
+]
