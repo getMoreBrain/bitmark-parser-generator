@@ -1,30 +1,17 @@
-[.match-picture]
+[.match-picture:bitmark++]
+[@id:285726] ||this bit type does not work||
+[%25][%match-picture]
 [!Name the animals on the pictures.]
 
 ===
-[&image:http://cdn.bitbook.education/books/com.firstpub.book98789/animals/cat.jpg]
+|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|@width:928|
 ==
 cat
 ===
-[&image:http://cdn.bitbook.education/books/com.firstpub.book98789/animals/tiger.jpg]
+|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|@width:928|
 ==
 tiger
 ===
-
-
-[.match-picture]
-[!Name the animals on the pictures.]
-
-===
-[&image:https://cdn.bitbook.education/avatars/cat_70x70@1.jpg][@src1x:https://cdn.bitbook.education/avatars/cat_70x70@2.jpg][@src2x:https://cdn.bitbook.education/avatars/cat_70x70@3.jpg]
-==
-cat
-===
-[&image:http://cdn.bitbook.education/books/com.firstpub.book98789/animals/tiger.jpg]
-==
-tiger
-===
-
 
 
 [.match-picture]

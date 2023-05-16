@@ -101,6 +101,7 @@ const TEST_FILES = [
   // 'focus-image.bit',
   // 'foot-note.bit',
   // 'help.bit',
+  // 'highlight-text.bit',
   // 'hint.bit',
   // 'image-link.bit',
   // 'image-prototype.bit',
@@ -162,7 +163,7 @@ const TEST_FILES = [
   // 'video-portrait.bit',
   // 'video.bit',
   // 'warning.bit',
-  // 'website-link.bit',
+  'website-link.bit',
   // 'workbook-article.bit',
 ];
 

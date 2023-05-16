@@ -63,6 +63,9 @@ class BitUtils {
       case BitType.documentDownload:
         return ResourceType.documentDownload;
 
+      case BitType.websiteLink:
+        return ResourceType.websiteLink;
+
       default:
       // Do nothing
     }

@@ -1,0 +1,192 @@
+[
+  {
+    "bitmark": "[.match-picture:bitmark++]\n[@id:285726] ||this bit type does not work||\n[%25][%match-picture]\n[!Name the animals on the pictures.]\n\n===\n|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|@width:928|\n==\ncat\n===\n|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|@width:928|\n==\ntiger\n===",
+    "bit": {
+      "type": "match-picture",
+      "format": "bitmark++",
+      "item": "25",
+      "heading": {},
+      "pairs": [],
+      "body": "|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|@width:928|cat|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|@width:928|tiger",
+      "id": [
+        "285726"
+      ],
+      "lead": "match-picture",
+      "instruction": "Name the animals on the pictures."
+    },
+    "errors": [
+      {
+        "message": "Unexpected input '===\\n|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|'",
+        "line": 7,
+        "column": 0,
+        "errorLine": "|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|@width:928|"
+      },
+      {
+        "message": "Unexpected input '|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|'",
+        "line": 7,
+        "column": 0,
+        "errorLine": "|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|@width:928|"
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 8,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'cat'",
+        "line": 9,
+        "column": 0,
+        "errorLine": "cat"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 10,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input '|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|'",
+        "line": 11,
+        "column": 0,
+        "errorLine": "|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|@width:928|"
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 12,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'tiger'",
+        "line": 13,
+        "column": 0,
+        "errorLine": "tiger"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 14,
+        "column": 0,
+        "errorLine": "==="
+      }
+    ]
+  },
+  {
+    "bitmark": "[.match-picture]\n[@id:136185]\n[%Activity 12]\n[!You can buy food and drink in many different places. Match photos 1–6 to the descriptions beneath.]\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f023.jpg]\n==\nHier kann man japanisch essen.\n===\n\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg]\n==\nHier kann man Kaffee trinken.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f059.jpg]\n==\nHier kann man Bratwurst kaufen.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f022.jpg]\n==\nHier kann man ein Schinkenbrötchen kaufen.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f025.jpg]\n==\nHier kann man Obst und Gemüse kaufen.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f021.jpg]\n==\nHier kann man Brot kaufen.\n===",
+    "bit": {
+      "type": "match-picture",
+      "format": "bitmark--",
+      "item": "Activity 12",
+      "heading": {},
+      "pairs": [
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f023.jpg"
+          },
+          "values": [
+            "Hier kann man japanisch essen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg"
+          },
+          "values": [
+            "Hier kann man Kaffee trinken."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f059.jpg"
+          },
+          "values": [
+            "Hier kann man Bratwurst kaufen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f022.jpg"
+          },
+          "values": [
+            "Hier kann man ein Schinkenbrötchen kaufen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f025.jpg"
+          },
+          "values": [
+            "Hier kann man Obst und Gemüse kaufen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        },
+        {
+          "keyImage": {
+            "width": null,
+            "height": null,
+            "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f021.jpg"
+          },
+          "values": [
+            "Hier kann man Brot kaufen."
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": [
+        "136185"
+      ],
+      "instruction": "You can buy food and drink in many different places. Match photos 1–6 to the descriptions beneath."
+    }
+  }
+]

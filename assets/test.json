@@ -1,20 +1,24 @@
 [
   {
+    "bitmark": "[.website-link]\n[@id:119761]\n[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]",
     "bit": {
-      "type": "chapter",
+      "type": "website-link",
       "format": "bitmark--",
-      "id": ["135649"],
-      "title": "It’s complicated",
-      "level": 2,
-      "toc": false,
-      "progress": false,
-      "anchor": "ch-1",
+      "body": "",
       "item": "",
       "hint": "",
-      "example": "",
       "isExample": false,
-      "body": ""
-    },
-    "bitmark": "[.chapter]\n[@id:135649]\n[##It’s complicated]\n[@toc:true][@progress:true][▼ch-1]"
+      "example": "",
+      "id": [
+        "119761"
+      ],
+      "resource": {
+        "type": "website-link",
+        "websiteLink": {
+          "siteName": "",
+          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4"
+        }
+      }
+    }
   }
 ]

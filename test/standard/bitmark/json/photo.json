@@ -4,23 +4,24 @@
     "bit": {
       "type": "photo",
       "format": "bitmark--",
-      "body": "**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig",
       "item": "",
       "hint": "",
-      "isExample": false,
       "example": "",
+      "isExample": false,
+      "body": "**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig",
       "resource": {
         "type": "image",
         "image": {
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
-          "showInIndex": false,
           "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
           "width": null,
           "height": null,
           "alt": "",
-          "caption": "",
           "license": "",
-          "copyright": ""
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
       }
     }
@@ -30,33 +31,26 @@
     "bit": {
       "type": "photo",
       "format": "bitmark--",
-      "body": "**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig",
       "item": "",
       "hint": "",
-      "isExample": false,
       "example": "",
+      "isExample": false,
+      "body": "**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig",
       "resource": {
         "type": "image",
         "image": {
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
-          "showInIndex": false,
           "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
           "width": null,
           "height": null,
           "alt": "",
-          "caption": "",
           "license": "",
-          "copyright": ""
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
       }
-    },
-    "errors": [
-      {
-        "message": "Unexpected input '&image'",
-        "line": 1,
-        "column": 7,
-        "errorLine": "[.photo&image]"
-      }
-    ]
+    }
   }
 ]

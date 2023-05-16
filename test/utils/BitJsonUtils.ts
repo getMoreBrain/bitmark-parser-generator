@@ -59,6 +59,7 @@ class BitJsonUtils {
               if (!resource.alt) delete resource.alt;
 
               if (!resource.href) delete resource.href;
+              if (!resource.siteName) delete resource.siteName;
 
               // Ignore provider and format because they are generated (sometimes incorrectly by ANTLR parser)
               delete resource.provider;

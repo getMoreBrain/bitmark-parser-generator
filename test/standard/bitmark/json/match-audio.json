@@ -1,0 +1,34 @@
+[
+  {
+    "bitmark": "[.match-audio]\n[@id:285729]\n[%26][%match-audio]\n[Listen to the audio and name the animal you are hearing.]\n===\n[&audio:https://cdn.bitmark.cloud/publishers/3/books/26363/miau.mp3]\n==\ncat\n===",
+    "bit": {
+      "type": "match-audio",
+      "format": "bitmark--",
+      "item": "26",
+      "heading": {},
+      "pairs": [
+        {
+          "keyAudio": {
+            "format": "mp3",
+            "src": "https://cdn.bitmark.cloud/publishers/3/books/26363/miau.mp3"
+          },
+          "values": [
+            "cat"
+          ],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": "",
+          "isLongAnswer": false
+        }
+      ],
+      "body": "[Listen to the audio and name the animal you are hearing.]",
+      "id": [
+        "285729"
+      ],
+      "lead": "match-audio"
+    }
+  }
+]

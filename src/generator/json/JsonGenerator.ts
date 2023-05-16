@@ -1616,6 +1616,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     //       The properties used in the antlr parser are a bit random sometimes?
     switch (bitJson.type) {
       case BitType.article:
+      case BitType.highlightText:
+      case BitType.message:
+      case BitType.sampleSolution:
         if (bitJson.body == null) bitJson.body = '';
         break;
 

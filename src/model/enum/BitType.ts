@@ -53,6 +53,7 @@ const BitTypeRaw = {
   botActionTrueFalse: 'bot-action-true-false',
   botInterview: 'bot-interview',
   browserImage: 'browser-image',
+  bug: 'bug',
   card1: 'card-1',
   chapter: 'chapter',
   chat: 'chat',
@@ -63,6 +64,7 @@ const BitTypeRaw = {
   code: 'code',
   conversation: 'conversation',
   correction: 'correction',
+  danger: 'danger',
   details: 'details',
   details1: 'details-1',
   document: 'document',
@@ -141,6 +143,7 @@ const BitTypeRaw = {
   surveyAnonymous: 'survey-anonymous',
   surveyAnonymous1: 'survey-anonymous-1',
   takePicture: 'take-picture',
+  toc: 'toc',
   trueFalse: 'true-false',
   trueFalse1: 'true-false-1',
   video: 'video',
@@ -149,6 +152,7 @@ const BitTypeRaw = {
   videoLink: 'video-link',
   videoPortrait: 'video-portrait',
   warning: 'warning',
+  websiteLink: 'website-link',
   workbookArticle: 'workbook-article',
 } as const;
 
