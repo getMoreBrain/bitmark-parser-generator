@@ -17,3 +17,9 @@
 # Without this, the repo is marked as >90% javascript, while most code is actually typescript
 /packages/*/bin/**/*.js linguist-generated
 /packages/*/lib/*.js    linguist-generated
+
+# Mark the test folder as generated so it is ignored by the language stats
+/test/**                linguist-generated
+
+# Mark js files as generated so it is ignored by the language stats
+/**/*.js                linguist-generated
