@@ -48,28 +48,34 @@ import {
   AppLinkResourceJson,
   AppLinkResourceWrapperJson,
   AppResourceWrapperJson,
+  ArticleEmbedResourceWrapperJson,
   ArticleLikeResourceJson,
   ArticleLinkResourceWrapperJson,
   ArticleResourceJson,
   ArticleResourceWrapperJson,
+  AudioEmbedResourceWrapperJson,
   AudioLinkResourceJson,
   AudioLinkResourceWrapperJson,
   AudioResourceJson,
   AudioResourceWrapperJson,
   BaseResourceJson,
   DocumentDownloadResourceWrapperJson,
+  DocumentEmbedResourceWrapperJson,
   DocumentLinkResourceJson,
   DocumentLinkResourceWrapperJson,
   DocumentResourceJson,
   DocumentResourceWrapperJson,
+  ImageEmbedResourceWrapperJson,
   ImageLinkResourceJson,
   ImageLinkResourceWrapperJson,
   ImageResourceJson,
   ImageResourceWrapperJson,
   ResourceJson,
   ResourceWrapperJson,
+  StillImageFilmEmbedResourceWrapperJson,
   StillImageFilmLinkResourceWrapperJson,
   StillImageFilmResourceWrapperJson,
+  VideoEmbedResourceWrapperJson,
   VideoLinkResourceJson,
   VideoLinkResourceWrapperJson,
   VideoResourceJson,
@@ -1088,6 +1094,12 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         );
         break;
 
+      case ResourceType.imageEmbed:
+        (resourceJson as ImageEmbedResourceWrapperJson).imageEmbed = this.addImageLinkLikeResource(
+          resource as ImageResource,
+        );
+        break;
+
       case ResourceType.audio:
         (resourceJson as AudioResourceWrapperJson).audio = this.addAudioLikeResource(resource as AudioResource);
         break;
@@ -1098,12 +1110,24 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         );
         break;
 
+      case ResourceType.audioEmbed:
+        (resourceJson as AudioEmbedResourceWrapperJson).audioEmbed = this.addAudioLinkLikeResource(
+          resource as AudioResource,
+        );
+        break;
+
       case ResourceType.video:
         (resourceJson as VideoResourceWrapperJson).video = this.addVideoLikeResource(resource as VideoResource);
         break;
 
       case ResourceType.videoLink:
         (resourceJson as VideoLinkResourceWrapperJson).videoLink = this.addVideoLinkLikeResource(
+          resource as VideoResource,
+        );
+        break;
+
+      case ResourceType.videoEmbed:
+        (resourceJson as VideoEmbedResourceWrapperJson).videoEmbed = this.addVideoLinkLikeResource(
           resource as VideoResource,
         );
         break;
@@ -1120,12 +1144,24 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         );
         break;
 
+      case ResourceType.stillImageFilmEmbed:
+        (resourceJson as StillImageFilmEmbedResourceWrapperJson).stillImageFilmEmbed = this.addVideoLikeResource(
+          resource as VideoResource,
+        );
+        break;
+
       case ResourceType.article:
         (resourceJson as ArticleResourceWrapperJson).article = this.addArticleLikeResource(resource as ArticleResource);
         break;
 
       case ResourceType.articleLink:
         (resourceJson as ArticleLinkResourceWrapperJson).articleLink = this.addArticleLinkLikeResource(
+          resource as ArticleResource,
+        );
+        break;
+
+      case ResourceType.articleEmbed:
+        (resourceJson as ArticleEmbedResourceWrapperJson).articleEmbed = this.addArticleLinkLikeResource(
           resource as ArticleResource,
         );
         break;
@@ -1138,6 +1174,12 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
       case ResourceType.documentLink:
         (resourceJson as DocumentLinkResourceWrapperJson).documentLink = this.addArticleLinkLikeResource(
+          resource as ArticleResource,
+        );
+        break;
+
+      case ResourceType.documentEmbed:
+        (resourceJson as DocumentEmbedResourceWrapperJson).documentEmbed = this.addArticleLinkLikeResource(
           resource as ArticleResource,
         );
         break;

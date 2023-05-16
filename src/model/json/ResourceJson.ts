@@ -44,6 +44,11 @@ export interface ImageLinkResourceWrapperJson extends ResourceWrapperJson {
   imageLink: ImageLinkResourceJson;
 }
 
+export interface ImageEmbedResourceWrapperJson extends ResourceWrapperJson {
+  type: 'image-embed'; // resource type
+  imageEmbed: ImageLinkResourceJson;
+}
+
 export interface AudioResourceWrapperJson extends ResourceWrapperJson {
   type: 'audio'; // resource type
   audio: AudioResourceJson;
@@ -52,6 +57,11 @@ export interface AudioResourceWrapperJson extends ResourceWrapperJson {
 export interface AudioLinkResourceWrapperJson extends ResourceWrapperJson {
   type: 'audio-link'; // resource type
   audioLink: AudioLinkResourceJson;
+}
+
+export interface AudioEmbedResourceWrapperJson extends ResourceWrapperJson {
+  type: 'audio-embed'; // resource type
+  audioEmbed: AudioLinkResourceJson;
 }
 
 export interface VideoResourceWrapperJson extends ResourceWrapperJson {
@@ -64,6 +74,11 @@ export interface VideoLinkResourceWrapperJson extends ResourceWrapperJson {
   videoLink: VideoLinkResourceJson;
 }
 
+export interface VideoEmbedResourceWrapperJson extends ResourceWrapperJson {
+  type: 'video-embed'; // resource type
+  videoEmbed: VideoLinkResourceJson;
+}
+
 export interface StillImageFilmResourceWrapperJson extends ResourceWrapperJson {
   type: 'still-image-film'; // resource type
   stillImageFilm: StillImageFilmResourceJson;
@@ -74,6 +89,11 @@ export interface StillImageFilmLinkResourceWrapperJson extends ResourceWrapperJs
   stillImageFilmLink: StillImageFilmLinkResourceJson;
 }
 
+export interface StillImageFilmEmbedResourceWrapperJson extends ResourceWrapperJson {
+  type: 'still-image-film-embed'; // resource type
+  stillImageFilmEmbed: StillImageFilmLinkResourceJson;
+}
+
 export interface ArticleResourceWrapperJson extends ResourceWrapperJson {
   type: 'article'; // resource type
   article: ArticleResourceJson;
@@ -82,6 +102,11 @@ export interface ArticleResourceWrapperJson extends ResourceWrapperJson {
 export interface ArticleLinkResourceWrapperJson extends ResourceWrapperJson {
   type: 'article-link'; // resource type
   articleLink: ArticleLinkResourceJson;
+}
+
+export interface ArticleEmbedResourceWrapperJson extends ResourceWrapperJson {
+  type: 'article-embed'; // resource type
+  articleEmbed: ArticleLinkResourceJson;
 }
 
 // Deprecated ??
@@ -95,6 +120,10 @@ export interface DocumentLinkResourceWrapperJson extends ResourceWrapperJson {
   documentLink: DocumentLinkResourceJson;
 }
 
+export interface DocumentEmbedResourceWrapperJson extends ResourceWrapperJson {
+  type: 'document-embed'; // resource type
+  documentEmbed: DocumentLinkResourceJson;
+}
 export interface DocumentDownloadResourceWrapperJson extends ResourceWrapperJson {
   type: 'document-download'; // resource type
   documentDownload: DocumentDownloadResourceJson;

@@ -961,6 +961,7 @@ class Builder {
         break;
 
       case ResourceType.imageLink:
+      case ResourceType.imageEmbed:
         node = this.imageLinkResource(finalData);
         break;
 
@@ -969,6 +970,7 @@ class Builder {
         break;
 
       case ResourceType.audioLink:
+      case ResourceType.audioEmbed:
         node = this.audioLinkResource(finalData);
         break;
 
@@ -977,6 +979,7 @@ class Builder {
         break;
 
       case ResourceType.videoLink:
+      case ResourceType.videoEmbed:
         node = this.videoLinkResource(finalData);
         break;
 
@@ -985,6 +988,7 @@ class Builder {
         break;
 
       case ResourceType.stillImageFilmLink:
+      case ResourceType.stillImageFilmEmbed:
         node = this.stillImageFilmLinkResource(finalData);
         break;
 
@@ -993,6 +997,7 @@ class Builder {
         break;
 
       case ResourceType.articleLink:
+      case ResourceType.articleEmbed:
         node = this.articleLinkResource(finalData);
         break;
 
@@ -1001,6 +1006,7 @@ class Builder {
         break;
 
       case ResourceType.documentLink:
+      case ResourceType.documentEmbed:
         node = this.documentLinkResource(finalData);
         break;
 
