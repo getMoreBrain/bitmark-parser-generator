@@ -1,0 +1,42 @@
+[.message&article]
+[&article:
+**Abenteuer Ausland**
+
+Viele Deutsche zog und zieht es ins Ausland. Dabei waren Abenteuerlust, Abwechslung und die Suche nach einer interessanten Herausforderung im beruflichen Bereich früher die stärksten Motive. Vor allem intellektuelle Weltenbummler hielten einst Ausschau nach vielfältigen Erfahrungen und Karrieremöglichkeiten, denn die besten Chancen auf einen gut bezahlten Job im Ausland hatten in der Vergangenheit hauptsächlich Arbeitskräfte mit einem akademischen Abschluss.]
+
+What the Hell!
+
+
+[.message&article-link]
+[&article-link:https://www.youtube.com/watch?v=RecY5iZn6B0]
+
+What the Hell!
+
+
+[.message&website] Have a look at http://www.apple.com
+
+
+[.message&image]
+[&image:https://cdn.bitmark.cloud/cat.jpg]
+Have a look at this cute cat! 😻
+
+[.message:bitmark--]
+Have a look at this **cute** cat! 😻
+
+
+[.message&website] Have a look at http://www.apple.com
+[&website:https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript]
+[&audio:https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript.mp3]
+[&video:https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript.mp4]
+[&document:https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript]
+
+[!this is a mesage]
+
+[.message&image]
+[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/065-1b.png][@caption: Willy Brandt: Bundeskanzler der Bundesrepublik Deutschland von 1969 bis 1974]
+
+
+[.message&image]
+[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/727494_original_r_k_b_by_lupo_pixelio-heller.png][@src1x:https://cdn.bitmark.cloud/cat.jpg][@src2x:https://cdn.bitmark.cloud/catty.jpg]
+
+Have a look at this cute cat! 😻

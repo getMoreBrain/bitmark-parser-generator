@@ -1,0 +1,32 @@
+[
+  {
+    "bitmark": "[.bug:bitmark++]\n[@ageRange:18][@ageRange:120]\n[@language:en]\n[@language:jp]\n[@language:cn]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n[&image:https://cdn.bitbook.education/cat.jpg]\n\nSome more text.\n::remark::\n::",
+    "bit": {
+      "type": "bug",
+      "format": "bitmark++",
+      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\n\nSome more text.\n::remark::\n::",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "ageRange": [
+        "18",
+        "120"
+      ],
+      "language": [
+        "en",
+        "jp",
+        "cn"
+      ]
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "image",
+          "format": "jpg",
+          "src": "https://cdn.bitbook.education/cat.jpg"
+        }
+      ]
+    }
+  }
+]

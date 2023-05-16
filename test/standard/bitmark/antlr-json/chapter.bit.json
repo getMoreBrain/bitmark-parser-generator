@@ -1,0 +1,262 @@
+[
+  {
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:135649]\n[##It’s complicated]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-1",
+      "id": [
+        "135649"
+      ],
+      "title": "It’s complicated"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-2]\n[@id:135651]\n[##So Hedge Therefore, Who Join Forever]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-2",
+      "id": [
+        "135651"
+      ],
+      "title": "So Hedge Therefore, Who Join Forever"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-3]\n[@id:135653]\n[##The plug problem]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-3",
+      "id": [
+        "135653"
+      ],
+      "title": "The plug problem"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-4]\n[@id:135655]\n[##In principle, the solution would be simple, but…]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-4",
+      "id": [
+        "135655"
+      ],
+      "title": "In principle, the solution would be simple, but…"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-5]\n[@id:135657]\n[##Existing e-learning standards (AICC, SCORM etc.) do not meet today’s requirements]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-5",
+      "id": [
+        "135657"
+      ],
+      "title": "Existing e-learning standards (AICC, SCORM etc.) do not meet today’s requirements"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-6]\n[@id:135659]\n[##bitmark — the freely accessible content-first standard for interactive learning content]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-6",
+      "id": [
+        "135659"
+      ],
+      "title": "bitmark — the freely accessible content-first standard for interactive learning content"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-7]\n[@id:135661]\n[###Suitable for all learning content]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-7",
+      "id": [
+        "135661"
+      ],
+      "title": "Suitable for all learning content"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-8]\n[@id:135663]\n[###Uncompromisingly “content-first”]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-8",
+      "id": [
+        "135663"
+      ],
+      "title": "Uncompromisingly “content-first”"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-9]\n[@id:135665]\n[###Openness of the standard prevents “lock-in” effects]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-9",
+      "id": [
+        "135665"
+      ],
+      "title": "Openness of the standard prevents “lock-in” effects"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-10]\n[@id:135667]\n[###Digital transformation of learning]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 3,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-10",
+      "id": [
+        "135667"
+      ],
+      "title": "Digital transformation of learning"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-11]\n[@id:135669]\n[##Democratization of learning]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-11",
+      "id": [
+        "135669"
+      ],
+      "title": "Democratization of learning"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-12]\n[@id:135671]\n[##The “bitmark Association”]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-12",
+      "id": [
+        "135671"
+      ],
+      "title": "The “bitmark Association”"
+    }
+  },
+  {
+    "bitmark": "[.chapter]\n[▼ch-13]\n[@id:135673]\n[##Useful links:]",
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "level": 2,
+      "progress": true,
+      "toc": true,
+      "anchor": "ch-13",
+      "id": [
+        "135673"
+      ],
+      "title": "Useful links:"
+    }
+  }
+]

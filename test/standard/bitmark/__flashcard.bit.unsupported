@@ -1,0 +1,30 @@
+|| OK ||
+[.flashcard]
+===
+Seitenlinie[@lang:de jp][@pos:noun]
+==
+side line[@lang:en][@pos:noun]
+--
+touch line[@lang:en][@pos:noun]
+===
+Fussball[@lang:de][@pos:noun]
+==
+football[@lang:en][@pos:noun]
+--
+soccer[@lang:en][@pos:noun]
+===
+
+[.flashcard]
+===
+Seitenlinie[@lang:de][@pos:noun]
+==
+side line[@lang:en][@pos:noun]
+--
+touch line[@lang:en][@pos:noun]
+===
+Fussball[@lang:de][@pos:noun]
+==
+football[@lang:en][@pos:noun]
+--
+soccer[@lang:en][@pos:noun]
+===

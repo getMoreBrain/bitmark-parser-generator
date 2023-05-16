@@ -1,0 +1,200 @@
+
+[.match-all:bitmark++]
+[@id:92546]
+[%B2b]
+[!Textarbeit
+
+Wortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.]
+
+|remark
+hauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe
+
+
+===
+[%1]Beherbergung
+==
+Unterbringung
+--
+Übernachtung
+===
+[%2]Herberge
+==
+Hotel
+--
+Unterbringungsmöglichkeit
+===
+[%3]übernachten
+==
+logieren
+--
+residieren
+===
+[%4]überwiegend
+==
+hauptsächlich
+--
+weitgehend
+===
+[%5]einen guten Ruf haben
+==
+einen guten Namen haben
+--
+angesehen sein
+===
+
+
+[.match-all]
+[@id:324342]
+[%item][%Lead]
+[!Instruction]
+===
+He will fix your laptop for you.
+==
+Your laptop will be fixed by him.
+--
+Your laptop will be fixed for you by him.
+===
+
+
+[.match-all:bitmark--]
+[%A18b]
+[!Wie? – Modalangaben
+
+Antworten Sie. Bilden Sie Sätze wie im Beispiel.]
+===
+◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__
+==
+a) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.[@example]
+--
+b) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.[@example]
+===
+1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__
+==
+[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]
+--
+[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]
+===
+2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__
+==
+[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]
+--
+[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]
+===
+3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__
+==
+[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]
+--
+[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]
+===
+4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__
+==
+[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]
+--
+[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]
+===
+5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__
+==
+[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]
+--
+[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]
+===
+6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__
+==
+[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]
+--
+[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]
+===
+
+
+[.match-all:bitmark++]
+[%B2b ]
+[!Textarbeit
+
+Wortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.]
+
+::remark::
+hauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe
+::
+
+===
+[%1]Beherbergung
+==
+Unterbringung
+--
+Übernachtung
+===
+[%2]Herberge
+==
+Hotel
+--
+Unterbringungsmöglichkeit
+===
+[%3]übernachten
+==
+logieren
+--
+residieren
+===
+[%4]überwiegend
+==
+hauptsächlich
+--
+weitgehend
+===
+[%5]einen guten Ruf haben
+==
+einen guten Namen haben
+--
+angesehen sein
+===
+
+
+
+[.match-all]
+[%C11]
+[!Bilden Sie Fragen und antworten Sie wie im Beispiel.]
+
+Kannst Du ...?
+
+===
+◇ ich – dein Bleistift – mal – leihen
+==
+Kannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir.[@example]
+===
+[%1]die Gäste – das Restaurant Milano – auf dem Stadtplan – zeigen
+==
+Kannst du den Gästen auf dem Stadtplan das Restaurant „Milano“ zeigen?
+--
+Ja, ich zeige es ihnen.
+===
+[%2]die Firma Krüger – das Angebot – faxen
+==
+Kannst du der Firma Krüger das Angebot faxen?
+--
+Ja, ich faxe es ihr.
+===
+[%3]ich – die Hausarbeit – am Wochenende – abnehmen
+==
+Kannst du mir am Wochenende die Hausarbeit abnehmen?
+--
+Ja, ich nehme sie dir ab.
+===
+[%4]der Chef – das Protokoll der Sitzung – heute noch – geben
+==
+Kannst du dem Chef heute noch das Protokoll der Sitzung geben?
+--
+Ja, ich gebe es ihm.
+===
+[%5]ich – dein Auto – schenken
+==
+Kannst du mir dein Auto schenken?
+--
+Nein, ich schenke es dir nicht.
+===
+[%6]wir – zwei Flaschen Mineralwasser – mitbringen
+==
+Kannst du uns zwei Flaschen Mineralwasser mitbringen?
+--
+Ja, ich bringe sie euch mit.
+===
+
