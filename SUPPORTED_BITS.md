@@ -1,7 +1,7 @@
 | BIT | USED GMB | SUPPORTED | TESTED | NOTES |
 | ------ | -- | -- | -- | -- |
 | _error | ✅ | ✅ | ✅ | Used for error handling to indicate a bit type that is not supported or a bit parse error |
-| anchor | ➖ | ❌ | ❌ | LEGACY? |
+| anchor | ➖ | ➖ | ➖ | LEGACY? |
 | annotation-bookmark | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
 | annotation-favorite | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
 | annotation-handwritten | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
