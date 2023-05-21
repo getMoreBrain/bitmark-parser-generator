@@ -31,11 +31,11 @@ function buildResource(
   let resource: Resource | undefined;
   const excessResources: Resource[] = [];
 
-  const finalResourceType = BitUtils.calculateResourceType(bitType, resourceType, undefined);
+  const validResourceTypes = BitUtils.calculateValidResourceTypes(bitType, resourceType, undefined);
 
   if (resources) {
     for (const r of resources.reverse()) {
-      if (r.type === finalResourceType && !resource) {
+      if (validResourceTypes.indexOf(r.type) >= 0 && !resource) {
         resource = r;
       } else {
         excessResources.push(r);

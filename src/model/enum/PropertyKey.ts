@@ -15,6 +15,8 @@ export interface PropertyKeyMetadata {
 const PropertyKey = superenum({
   id: 'id',
   externalId: 'externalId',
+  padletId: 'padletId',
+  releaseVersion: 'releaseVersion',
   ageRange: 'ageRange',
   language: 'language',
   computerLanguage: 'computerLanguage', // single
@@ -63,6 +65,14 @@ PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.id, {
 });
 PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.externalId, {
   isTrimmedString: true,
+});
+PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.padletId, {
+  isTrimmedString: true,
+  isSingle: true,
+});
+PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.releaseVersion, {
+  isTrimmedString: true,
+  isSingle: true,
 });
 PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.ageRange, {
   isTrimmedString: true,

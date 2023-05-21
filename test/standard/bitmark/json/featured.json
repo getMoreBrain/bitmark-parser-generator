@@ -1,0 +1,17 @@
+[
+  {
+    "bitmark": "[.featured]\n[@id:342339]\nFeatured\nIt's exactly the same as an .article.",
+    "bit": {
+      "type": "featured",
+      "format": "bitmark--",
+      "body": "Featured\nIt's exactly the same as an .article.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": [
+        "342339"
+      ]
+    }
+  }
+]

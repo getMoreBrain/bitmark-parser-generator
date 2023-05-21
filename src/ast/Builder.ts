@@ -99,6 +99,8 @@ class Builder {
     resourceType?: ResourceTypeType; // This is optional, it will be inferred from the resource
     id?: string | string[];
     externalId?: string | string[];
+    padletId?: string | string[];
+    releaseVersion?: string | string[];
     ageRange?: number | number[];
     language?: string | string[];
     computerLanguage?: string | string[];
@@ -172,6 +174,8 @@ class Builder {
       resourceType,
       id,
       externalId,
+      padletId,
+      releaseVersion,
       ageRange,
       language,
       computerLanguage,
@@ -236,13 +240,17 @@ class Builder {
       parser,
     } = data;
 
+    const resourceTypes = BitUtils.calculateValidResourceTypes(bitType, resourceType, resource);
+
     // NOTE: Node order is important and is defined here
     const node: Bit = {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
-      resourceType: BitUtils.calculateResourceType(bitType, resourceType, resource),
+      resourceType: resourceTypes.length > 0 ? resourceTypes[0] : undefined,
       id: this.toAstProperty(PropertyKey.id, id),
       externalId: this.toAstProperty(PropertyKey.externalId, externalId),
+      padletId: this.toAstProperty(PropertyKey.padletId, padletId),
+      releaseVersion: this.toAstProperty(PropertyKey.releaseVersion, releaseVersion),
       book,
       ageRange: this.toAstProperty(PropertyKey.ageRange, ageRange),
       language: this.toAstProperty(PropertyKey.language, language),

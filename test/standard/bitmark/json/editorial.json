@@ -1,0 +1,15 @@
+[
+  {
+    "bitmark": "[.editorial]\n[@id:342338]\nEditorial\nIt's exactly the same as an .article.",
+    "bit": {
+      "type": "editorial",
+      "format": "bitmark--",
+      "body": "Editorial\nIt's exactly the same as an .article.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": ["342338"]
+    }
+  }
+]

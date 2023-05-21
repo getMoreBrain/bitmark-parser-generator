@@ -8,6 +8,8 @@ export interface BitJson {
   // Properties
   id: string | string[];
   externalId: string | string[];
+  padletId: string | string[];
+  releaseVersion: string | string[];
   ageRange: number | number[];
   language: string | string[];
   computerLanguage: string | string[];

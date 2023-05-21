@@ -1503,6 +1503,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       // Properties
       id: undefined,
       externalId: undefined,
+      padletId: undefined,
+      releaseVersion: undefined,
       book: undefined,
       ageRange: undefined,
       language: undefined,
@@ -1730,6 +1732,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     // Properties
     if (bitJson.id == null) delete bitJson.id;
     if (bitJson.externalId == null) delete bitJson.externalId;
+    if (bitJson.padletId == null) delete bitJson.padletId;
+    if (bitJson.releaseVersion == null) delete bitJson.releaseVersion;
     if (bitJson.book == null) delete bitJson.book;
     if (bitJson.ageRange == null) delete bitJson.ageRange;
     if (bitJson.language == null) delete bitJson.language;

@@ -1,0 +1,14 @@
+[
+  {
+    "bit": {
+      "type": "bit-book-summary",
+      "format": "bitmark--",
+      "item": "",
+      "hint": "",
+      "example": "",
+      "isExample": false,
+      "body": ""
+    },
+    "bitmark": "[.bit-book-summary]"
+  }
+]

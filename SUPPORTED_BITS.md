@@ -14,8 +14,8 @@
 | audio-embed | ✅ | ❌ | ❌ | TODO: Not sure which resource type is correct, &audio, or &audio-embed. Awaiting answer |
 | audio-link | ✅ | ✅ | ✅ |  |
 | bit-alias | ➖ | ✅ | ✅ |  |
-| bit-book-ending | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
-| bit-book-summary | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
+| bit-book-ending | ✅ | ✅ | ✅ |  |
+| bit-book-summary | ✅ | ✅ | ✅ |  |
 | blog-article | ✅ | ✅ | ✅ |  |
 | book | ✅ | ✅ | ✅ |  |
 | book-acknowledgments | ✅ | ✅ | ✅ |  |
@@ -61,14 +61,14 @@
 | button-copy-text | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
 | card-1 | ✅ | ✅ | ✅ |  |
 | chapter | ✅ | ✅ | ✅ |  |
-| chapter-subject-matter | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
+| chapter-subject-matter | ✅ | ✅ | ✅ |  |
 | chat | ➖ | ➖ | ➖ | LEGACY? |
 | cloze | ✅ | ✅ | ✅ |  |
 | cloze-and-multiple-choice-text | ✅ | ✅ | ✅ |  |
 | cloze-instruction-grouped | ✅ | ✅ | ✅ |  |
 | cloze-solution-grouped | ✅ | ✅ | ✅ |  |
 | code | ✅ | ✅ | ✅ |  |
-| conclusion | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
+| conclusion | ✅ | ✅ | ✅ |  |
 | conversation | ➖ | ➖ | ➖ | LEGACY? |
 | conversation-left-1 | ✅ | ❌ | ❌ | TO TEST |
 | conversation-left-1-scream | ✅ | ❌ | ❌ | TO TEST |
@@ -85,10 +85,10 @@
 | document-embed | ✅ | ✅ | ✅ |  |
 | document-link | ✅ | ✅ | ✅ |  |
 | document-upload | ➖ | ➖ | ➖ | LEGACY? |
-| editorial | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
+| editorial | ✅ | ✅ | ✅ |  |
 | essay | ✅ | ❌ | ❌ | TO TEST |
 | example | ✅ | ✅ | ✅ |  |
-| featured | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
+| featured | ✅ | ✅ | ✅ |  |
 | flashcard | ➖ | ➖ | ➖ | LEGACY? |
 | flashcard-1 | ➖ | ➖ | ➖ | LEGACY? |
 | flashcard-language-1 | ➖ | ➖ | ➖ | LEGACY? |
@@ -149,7 +149,7 @@
 | rating | ➖ | ➖ | ➖ | LEGACY? |
 | record | ➖ | ➖ | ➖ | LEGACY? |
 | record-audio | ➖ | ➖ | ➖ | LEGACY? |
-| release-note | ✅ | ❌ | ❌ | TODO: @releaseVersion property not yet implemented |
+| release-note | ✅ | ✅ | ✅ |  |
 | remark | ✅ | ✅ | ✅ |  |
 | sample-solution | ✅ | ✅ | ✅ |  |
 | scorm | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
@@ -171,7 +171,7 @@
 | toc | ✅ | ✅ | ✅ |  |
 | true-false | ✅ | ✅ | ✅ |  |
 | true-false-1 | ✅ | ✅ | ✅ |  |
-| vendor-padlet-embed | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
+| vendor-padlet-embed | ✅ | ✅ | ✅ |  |
 | video | ✅ | ✅ | ✅ |  |
 | video-embed | ✅ | ✅ | ✅ | TODO: Not sure which resource type is correct, &video, or &video-embed. Awaiting answer |
 | video-landscape | ✅ | ✅ | ✅ |  |

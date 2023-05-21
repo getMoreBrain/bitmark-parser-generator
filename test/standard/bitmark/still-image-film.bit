@@ -1,8 +1,15 @@
 [.still-image-film]
+[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg]
+[&audio:https://docs.bitmark.cloud/bit-books/ef/unit_1/web-resources/audio/b1_1_1_6_j.mp3]
+
+
+[.still-image-film]
+|| This bit is incorrect as it should have an image resource and an audio resource ||
 [@id:119760]
 [&still-image-film:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4][@duration:PT12M31S]
 
 
 [.still-image-film]
+|| This bit is incorrect as it should have an image resource and an audio resource ||
 Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.
 [&still-image-film:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]

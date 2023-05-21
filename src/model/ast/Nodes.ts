@@ -43,6 +43,8 @@ export interface Bit {
   resourceType?: ResourceTypeType;
   id?: Property;
   externalId?: Property;
+  padletId?: Property;
+  releaseVersion?: Property;
   ageRange?: Property;
   language?: Property;
   computerLanguage?: Property;
