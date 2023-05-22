@@ -1,6 +1,6 @@
 import { BitTypeType } from '../model/enum/BitType';
 import { PropertyKey, PropertyKeyMetadata, PropertyKeyType } from '../model/enum/PropertyKey';
-import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
+import { ResourceTypeType } from '../model/enum/ResourceType';
 import { TextFormatType, TextFormat } from '../model/enum/TextFormat';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
@@ -10,7 +10,6 @@ import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { StringUtils } from '../utils/StringUtils';
-import { UrlUtils } from '../utils/UrlUtils';
 
 import { NodeValidator } from './rules/NodeValidator';
 
@@ -38,33 +37,11 @@ import {
   Select,
   HighlightText,
   Highlight,
-  ImageLinkResource,
-  AudioLinkResource,
-  VideoResource,
-  VideoLinkResource,
-  StillImageFilmResource,
-  StillImageFilmLinkResource,
-  ArticleResource,
-  ArticleLinkResource,
-  DocumentResource,
-  DocumentLinkResource,
-  AppResource,
-  AppLinkResource,
-  WebsiteLinkResource,
   ItemLead,
   ExtraProperties,
-  DocumentDownloadResource,
   Property,
   BotResponse,
 } from '../model/ast/Nodes';
-
-interface RemoveUnwantedPropertiesOptions {
-  ignoreUndefined?: string[];
-  ignoreFalse?: string[];
-  ignoreEmptyString?: string[];
-  ignoreEmptyArrays?: string[];
-  ignoreEmptyObjects?: string[];
-}
 
 /**
  * Builder to build bitmark AST node programmatically
@@ -240,13 +217,11 @@ class Builder {
       parser,
     } = data;
 
-    const resourceTypes = BitUtils.calculateValidResourceTypes(bitType, resourceType, resource);
-
     // NOTE: Node order is important and is defined here
     const node: Bit = {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
-      resourceType: resourceTypes.length > 0 ? resourceTypes[0] : undefined,
+      resourceType: BitUtils.calculateValidResourceType(bitType, resourceType, resource),
       id: this.toAstProperty(PropertyKey.id, id),
       externalId: this.toAstProperty(PropertyKey.externalId, externalId),
       padletId: this.toAstProperty(PropertyKey.padletId, padletId),
@@ -317,7 +292,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateBit(node);
@@ -353,7 +328,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -388,7 +363,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -419,7 +394,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -452,7 +427,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -473,7 +448,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    // this.removeUnwantedProperties(node);
+    // ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -515,7 +490,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -552,7 +527,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -583,7 +558,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -633,7 +608,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node, { ignoreEmptyString: ['question'], ignoreFalse: ['isShortAnswer'] });
+    ObjectUtils.removeUnwantedProperties(node, { ignoreEmptyString: ['question'], ignoreFalse: ['isShortAnswer'] });
 
     return node;
   }
@@ -713,7 +688,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -752,7 +727,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -787,7 +762,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -826,7 +801,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -863,7 +838,7 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -898,564 +873,14 @@ class Builder {
     };
 
     // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
 
-  /**
-   * Build resource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  resource(
-    data: {
-      type: ResourceTypeType;
-
-      // Generic part (value of bit tag)
-      value?: string; // url / src / href / app / body
-
-      // ImageLikeResource / AudioLikeResource / VideoLikeResource / Article / Document
-      format?: string;
-
-      // ImageLikeResource
-      src1x?: string;
-      src2x?: string;
-      src3x?: string;
-      src4x?: string;
-
-      // ImageLikeResource / VideoLikeResource
-      width?: number;
-      height?: number;
-      alt?: string;
-
-      // VideoLikeResource
-      duration?: number; // string?
-      mute?: boolean;
-      autoplay?: boolean;
-      allowSubtitles?: boolean;
-      showSubtitles?: boolean;
-      posterImage?: ImageResource;
-      thumbnails?: ImageResource[];
-
-      // WebsiteLinkResource
-      siteName?: string;
-
-      // ArticleLikeResource
-      // body?: string;
-
-      // Generic Resource
-      license?: string;
-      copyright?: string;
-      showInIndex?: boolean;
-      caption?: string;
-    },
-    //
-  ): Resource | undefined {
-    let node: Resource | undefined;
-
-    const { type, value: valueIn, format: formatIn, ...rest } = data;
-    const finalData = {
-      type,
-      value: valueIn ?? '',
-      format: formatIn ?? '',
-      ...rest,
-    };
-
-    switch (type) {
-      case ResourceType.image:
-        node = this.imageResource(finalData);
-        break;
-
-      case ResourceType.imageLink:
-      case ResourceType.imageEmbed:
-        node = this.imageLinkResource(finalData);
-        break;
-
-      case ResourceType.audio:
-        node = this.audioResource(finalData);
-        break;
-
-      case ResourceType.audioLink:
-      case ResourceType.audioEmbed:
-        node = this.audioLinkResource(finalData);
-        break;
-
-      case ResourceType.video:
-        node = this.videoResource(finalData);
-        break;
-
-      case ResourceType.videoLink:
-      case ResourceType.videoEmbed:
-        node = this.videoLinkResource(finalData);
-        break;
-
-      case ResourceType.stillImageFilm:
-        node = this.stillImageFilmResource(finalData);
-        break;
-
-      case ResourceType.stillImageFilmLink:
-      case ResourceType.stillImageFilmEmbed:
-        node = this.stillImageFilmLinkResource(finalData);
-        break;
-
-      case ResourceType.article:
-        node = this.articleResource(finalData);
-        break;
-
-      case ResourceType.articleLink:
-      case ResourceType.articleEmbed:
-        node = this.articleLinkResource(finalData);
-        break;
-
-      case ResourceType.document:
-        node = this.documentResource(finalData);
-        break;
-
-      case ResourceType.documentLink:
-      case ResourceType.documentEmbed:
-        node = this.documentLinkResource(finalData);
-        break;
-
-      case ResourceType.documentDownload:
-        node = this.documentDownloadResource(finalData);
-        break;
-
-      case ResourceType.app:
-        node = this.appResource(finalData);
-        break;
-
-      case ResourceType.appLink:
-        node = this.appLinkResource(finalData);
-        break;
-
-      case ResourceType.websiteLink:
-        node = this.websiteLinkResource(finalData);
-        break;
-
-      default:
-    }
-
-    return node;
-  }
-
-  /**
-   * Build imageResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  imageResource(data: {
-    format: string;
-    value: string; //src
-    src1x?: string;
-    src2x?: string;
-    src3x?: string;
-    src4x?: string;
-    width?: number;
-    height?: number;
-    alt?: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): ImageResource {
-    const node: ImageResource = this.imageLikeResource({
-      type: ResourceType.image,
-      ...data,
-    }) as ImageResource;
-
-    return node;
-  }
-
-  /**
-   * Build imageLinkResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  imageLinkResource(data: {
-    format: string;
-    value: string;
-    src1x?: string;
-    src2x?: string;
-    src3x?: string;
-    src4x?: string;
-    width?: number;
-    height?: number;
-    alt?: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): ImageLinkResource {
-    const node: ImageLinkResource = this.imageLikeResource({
-      type: ResourceType.imageLink,
-      ...data,
-    }) as ImageLinkResource;
-
-    return node;
-  }
-
-  /**
-   * Build audioResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  audioResource(data: {
-    format: string;
-    value: string; // src
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): AudioResource {
-    const node: AudioResource = this.audioLikeResource({
-      type: ResourceType.audio,
-      ...data,
-    }) as AudioResource;
-
-    return node;
-  }
-
-  /**
-   * Build audioLinkResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  audioLinkResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): AudioLinkResource {
-    const node: AudioLinkResource = this.audioLikeResource({
-      type: ResourceType.audioLink,
-      ...data,
-    }) as AudioLinkResource;
-
-    return node;
-  }
-
-  /**
-   * Build videoResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  videoResource(data: {
-    format: string;
-    value: string; // src
-    width?: number;
-    height?: number;
-    duration?: number; // string?
-    mute?: boolean;
-    autoplay?: boolean;
-    allowSubtitles?: boolean;
-    showSubtitles?: boolean;
-    alt?: string;
-    posterImage?: ImageResource;
-    thumbnails?: ImageResource[];
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): VideoResource {
-    const node: VideoResource = this.videoLikeResource({
-      type: ResourceType.video,
-      ...data,
-    }) as VideoResource;
-
-    return node;
-  }
-
-  /**
-   * Build videoLinkResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  videoLinkResource(data: {
-    format: string;
-    value: string;
-    width?: number;
-    height?: number;
-    duration?: number; // string?
-    mute?: boolean;
-    autoplay?: boolean;
-    allowSubtitles?: boolean;
-    showSubtitles?: boolean;
-    alt?: string;
-    posterImage?: ImageResource;
-    thumbnails?: ImageResource[];
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): VideoLinkResource {
-    const node: VideoLinkResource = this.videoLikeResource({
-      type: ResourceType.videoLink,
-      ...data,
-    }) as VideoLinkResource;
-
-    return node;
-  }
-
-  /**
-   * Build stillImageFilmResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  stillImageFilmResource(data: {
-    format: string;
-    value: string; // src
-    width?: number;
-    height?: number;
-    duration?: number; // string?
-    mute?: boolean;
-    autoplay?: boolean;
-    allowSubtitles?: boolean;
-    showSubtitles?: boolean;
-    alt?: string;
-    posterImage?: ImageResource;
-    thumbnails?: ImageResource[];
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): StillImageFilmResource {
-    const node: StillImageFilmResource = this.videoLikeResource({
-      type: ResourceType.stillImageFilm,
-      ...data,
-    }) as StillImageFilmResource;
-
-    return node;
-  }
-
-  /**
-   * Build stillImageFilmLinkResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  stillImageFilmLinkResource(data: {
-    format: string;
-    value: string;
-    width?: number;
-    height?: number;
-    duration?: number; // string?
-    mute?: boolean;
-    autoplay?: boolean;
-    allowSubtitles?: boolean;
-    showSubtitles?: boolean;
-    alt?: string;
-    posterImage?: ImageResource;
-    thumbnails?: ImageResource[];
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): StillImageFilmLinkResource {
-    const node: StillImageFilmLinkResource = this.videoLikeResource({
-      type: ResourceType.stillImageFilmLink,
-      ...data,
-    }) as StillImageFilmLinkResource;
-
-    return node;
-  }
-
-  /**
-   * Build articleResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  articleResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): ArticleResource {
-    const node: ArticleResource = this.articleLikeResource({
-      type: ResourceType.article,
-      ...data,
-    }) as ArticleResource;
-
-    return node;
-  }
-
-  /**
-   * Build articleLinkResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  articleLinkResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): ArticleLinkResource {
-    const node: ArticleLinkResource = this.articleLikeResource({
-      type: ResourceType.articleLink,
-      ...data,
-    }) as ArticleLinkResource;
-
-    return node;
-  }
-
-  /**
-   * Build documentResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  documentResource(data: {
-    format: string;
-    href?: string;
-    body?: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): DocumentResource {
-    const node: DocumentResource = this.articleLikeResource({
-      type: ResourceType.document,
-      ...data,
-    }) as DocumentResource;
-
-    return node;
-  }
-
-  /**
-   * Build documentLinkResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  documentLinkResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): DocumentLinkResource {
-    const node: DocumentLinkResource = this.articleLikeResource({
-      type: ResourceType.documentLink,
-      ...data,
-    }) as DocumentLinkResource;
-
-    return node;
-  }
-
-  /**
-   * Build documentDownloadResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  documentDownloadResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): DocumentDownloadResource {
-    const node: DocumentDownloadResource = this.articleLikeResource({
-      type: ResourceType.documentDownload,
-      ...data,
-    }) as DocumentDownloadResource;
-
-    return node;
-  }
-
-  /**
-   * Build appResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  appResource(data: {
-    value: string; // app
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): AppResource {
-    const node: AppResource = this.appLikeResource({
-      type: ResourceType.appLink,
-      ...data,
-    }) as AppResource;
-
-    return node;
-  }
-
-  /**
-   * Build appLinkResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  appLinkResource(data: {
-    value: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): AppLinkResource {
-    const node: AppLinkResource = this.appLikeResource({
-      type: ResourceType.appLink,
-      ...data,
-    }) as AppLinkResource;
-
-    return node;
-  }
-
-  /**
-   * Build websiteLinkResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  websiteLinkResource(data: {
-    value: string;
-    siteName?: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): WebsiteLinkResource | undefined {
-    const { value, siteName, license, copyright, showInIndex, caption } = data;
-
-    // NOTE: Node order is important and is defined here
-    const node: WebsiteLinkResource = {
-      type: ResourceType.websiteLink,
-      value,
-      siteName,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-    };
-
-    // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
-
-    // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node);
-  }
+  //
+  // Private
+  //
 
   private itemLead(item?: string, lead?: string): ItemLead | undefined {
     let node: ItemLead | undefined;
@@ -1469,217 +894,6 @@ class Builder {
     }
 
     return node;
-  }
-
-  //
-  // Private
-  //
-
-  private imageLikeResource(data: {
-    type: 'image' | 'image-link';
-    value: string;
-    src1x?: string;
-    src2x?: string;
-    src3x?: string;
-    src4x?: string;
-    width?: number;
-    height?: number;
-    alt?: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): ImageResource | ImageLinkResource | undefined {
-    const { type, value, src1x, src2x, src3x, src4x, width, height, alt, license, copyright, showInIndex, caption } =
-      data;
-
-    // NOTE: Node order is important and is defined here
-    const node: ImageResource | ImageLinkResource = {
-      type,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
-      value,
-      src1x,
-      src2x,
-      src3x,
-      src4x,
-      width,
-      height,
-      alt,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-    };
-
-    // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
-
-    // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node);
-  }
-
-  private audioLikeResource(data: {
-    type: 'audio' | 'audio-link';
-    value: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): AudioResource | AudioLinkResource | undefined {
-    const { type, value, license, copyright, showInIndex, caption } = data;
-
-    // NOTE: Node order is important and is defined here
-    const node: AudioResource | AudioLinkResource = {
-      type,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
-      value,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-    };
-
-    // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
-
-    // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node);
-  }
-
-  private videoLikeResource(data: {
-    type: 'video' | 'video-link' | 'still-image-film' | 'still-image-film-link';
-    value: string;
-    width?: number;
-    height?: number;
-    duration?: number; // string?
-    mute?: boolean;
-    autoplay?: boolean;
-    allowSubtitles?: boolean;
-    showSubtitles?: boolean;
-    alt?: string;
-    posterImage?: ImageResource;
-    thumbnails?: ImageResource[];
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource | undefined {
-    const {
-      type,
-      value,
-      width,
-      height,
-      duration,
-      mute,
-      autoplay,
-      allowSubtitles,
-      showSubtitles,
-      alt,
-      posterImage,
-      thumbnails,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-    } = data;
-
-    // NOTE: Node order is important and is defined here
-    const node: VideoResource | VideoLinkResource | StillImageFilmResource | StillImageFilmLinkResource = {
-      type,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
-      value,
-      width,
-      height,
-      duration,
-      mute,
-      autoplay,
-      allowSubtitles,
-      showSubtitles,
-      alt,
-      posterImage,
-      thumbnails,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-    };
-
-    // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
-
-    // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node);
-  }
-
-  private articleLikeResource(data: {
-    type: 'article' | 'article-link' | 'document' | 'document-link' | 'document-download';
-    value?: string; // url / href
-    body?: string | undefined;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }):
-    | ArticleResource
-    | ArticleLinkResource
-    | DocumentResource
-    | DocumentLinkResource
-    | DocumentDownloadResource
-    | undefined {
-    const { type, value, license, copyright, showInIndex, caption } = data;
-
-    // NOTE: Node order is important and is defined here
-    const node:
-      | ArticleResource
-      | ArticleLinkResource
-      | DocumentResource
-      | DocumentLinkResource
-      | DocumentDownloadResource = {
-      type,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
-      value,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-    };
-
-    // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
-
-    // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node);
-  }
-
-  private appLikeResource(data: {
-    type: 'app' | 'app-link';
-    value: string; // url / app
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): AppResource | AppLinkResource | undefined {
-    const { type, value, license, copyright, showInIndex, caption } = data;
-
-    // NOTE: Node order is important and is defined here
-    const node: AppResource | AppLinkResource = {
-      type,
-      value,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-    };
-
-    // Remove Unset Optionals
-    this.removeUnwantedProperties(node);
-
-    // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node);
   }
 
   private toAstProperty(key: PropertyKeyType, value: unknown | unknown[] | undefined): Property | undefined {
@@ -1708,17 +922,6 @@ class Builder {
     }
 
     return ArrayUtils.asArray(value);
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private removeUnwantedProperties(obj: unknown, options?: RemoveUnwantedPropertiesOptions): void {
-    options = Object.assign({}, options);
-
-    ObjectUtils.removeUndefinedProperties(obj, options.ignoreUndefined);
-    ObjectUtils.removeFalseProperties(obj, options.ignoreFalse);
-    ObjectUtils.removeEmptyStringProperties(obj, options.ignoreEmptyString);
-    ObjectUtils.removeEmptyArrayProperties(obj, options.ignoreEmptyArrays);
-    ObjectUtils.removeEmptyObjectProperties(obj, options.ignoreEmptyObjects);
   }
 
   private parseExtraProperties(extraProperties: { [key: string]: unknown } | undefined): ExtraProperties | undefined {

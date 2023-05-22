@@ -1,5 +1,6 @@
-import { Bit, Resource } from '../../model/ast/Nodes';
+import { Bit, Resource, StillImageFilmResource } from '../../model/ast/Nodes';
 import { BitType } from '../../model/enum/BitType';
+import { ResourceType } from '../../model/enum/ResourceType';
 import { StringUtils } from '../../utils/StringUtils';
 
 class NodeValidator {
@@ -19,12 +20,19 @@ class NodeValidator {
   }
 
   validateResource<T extends Resource>(resource: T | undefined): T | undefined {
-    if (!resource) return resource;
+    if (!resource) return undefined;
 
     let ret: T | undefined = resource;
     let valid = false;
 
     switch (resource.type) {
+      case ResourceType.stillImageFilm: {
+        const r = resource as unknown as StillImageFilmResource;
+        r.image = this.validateResource(r.image) ?? { type: ResourceType.image };
+        r.audio = this.validateResource(r.audio) ?? { type: ResourceType.audio };
+        valid = !!r.image || !!r.audio; // Allow valid is just image or audio is valid
+        break;
+      }
       default:
         valid = !!resource.value;
     }
@@ -36,8 +44,6 @@ class NodeValidator {
         ret = {
           type: resource.type,
         } as T;
-      } else {
-        ret = undefined;
       }
     }
 

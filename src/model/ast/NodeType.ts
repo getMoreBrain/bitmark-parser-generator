@@ -50,12 +50,6 @@ const NodeType = superenum({
   botResponses: 'botResponses',
   botResponsesValue: 'botResponsesValue',
 
-  resource: 'resource',
-  resourceType: 'resourceType',
-  imageResource: 'imageResource',
-  audioResource: 'audioResource',
-  videoResource: 'videoResource',
-
   // Terminal (leaf)
   markup: 'markup', // bitmark markup
   bitType: 'bitType', // bit type
@@ -171,8 +165,13 @@ const NodeType = superenum({
   feedback: 'feedback',
 
   // Resources
+  resource: 'resource',
+  resourceType: 'resourceType',
+  image: 'image',
+  audio: 'audio',
   type: 'type',
   format: 'format',
+  value: 'value',
   url: 'url',
   src: 'src',
   src1x: 'src1x',

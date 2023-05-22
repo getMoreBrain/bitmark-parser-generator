@@ -21,6 +21,7 @@ import {
   ImageResource,
   Resource,
   ArticleResource,
+  StillImageFilmResource,
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
@@ -626,15 +627,19 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> keyAudio
 
   protected enter_keyAudio(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+    const resource = node.value as Resource;
+
     // This is a resource, so handle it with the common code
-    this.writeResource(node, parent, route);
+    this.writeResource(resource);
   }
 
   // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> keyImage
 
   protected enter_keyImage(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+    const resource = node.value as Resource;
+
     // This is a resource, so handle it with the common code
-    this.writeResource(node, parent, route);
+    this.writeResource(resource);
   }
 
   // bitmark -> bits -> bitsValue -> matrix
@@ -741,8 +746,10 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> bitsValue -> resource
 
   protected enter_resource(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+    const resource = node.value as Resource;
+
     // This is a resource, so handle it with the common code
-    this.writeResource(node, parent, route);
+    this.writeResource(resource);
   }
 
   // bitmark -> bits -> bitsValue -> resource -> posterImage
@@ -1275,32 +1282,43 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     this.write('\n');
   }
 
-  protected writeResource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
-    const resource = node.value as Resource;
+  protected writeResource(resource: Resource): boolean | void {
     const resourceAsArticle = resource as ArticleResource;
 
     if (resource) {
-      // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
-      let valid = false;
-      if (resource.value) {
-        valid = true;
-      }
+      // All resources should now be valid as they are validated in the AST
+      // TODO: remove code below
 
-      // Resource is not valid, cancel walking it's tree.
-      if (!valid) return false;
+      // // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
+      // let valid = false;
+      // if (resource.value) {
+      //   valid = true;
+      // }
 
-      this.writeOPAMP();
-      this.writeString(resource.type);
-      if (resource.type === ResourceType.article && resourceAsArticle.value) {
-        this.writeColon();
-        // this.writeNL();
-        this.writeString(resourceAsArticle.value);
+      // // Resource is not valid, cancel walking it's tree.
+      // if (!valid) return false;
+
+      // Special case for embedded resources
+      if (resource.type === ResourceType.stillImageFilm) {
+        const r = resource as StillImageFilmResource;
+        this.writeResource(r.image);
         this.writeNL();
-      } else if (resource.value) {
-        this.writeColon();
-        this.writeString(resource.value);
+        this.writeResource(r.audio);
+      } else {
+        // Standard case
+        this.writeOPAMP();
+        this.writeString(resource.type);
+        if (resource.type === ResourceType.article && resourceAsArticle.value) {
+          this.writeColon();
+          // this.writeNL();
+          this.writeString(resourceAsArticle.value);
+          this.writeNL();
+        } else if (resource.value) {
+          this.writeColon();
+          this.writeString(resource.value);
+        }
+        this.writeCL();
       }
-      this.writeCL();
     }
   }
 

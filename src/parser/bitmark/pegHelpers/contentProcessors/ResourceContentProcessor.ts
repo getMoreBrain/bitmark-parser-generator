@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Builder } from '../../../../ast/Builder';
-import { Resource } from '../../../../model/ast/Nodes';
-import { BitTypeType } from '../../../../model/enum/BitType';
+import { ResourceBuilder } from '../../../../ast/ResourceBuilder';
+import { AudioResource, ImageResource, Resource } from '../../../../model/ast/Nodes';
+import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
 import { BitUtils } from '../../../../utils/BitUtils';
 
@@ -13,7 +13,8 @@ import {
   TypeKeyResource,
 } from '../BitmarkPegParserTypes';
 
-const builder = new Builder();
+// const builder = new Builder();
+const resourceBuilder = new ResourceBuilder();
 
 /**
  * Get the valid resource from all the resources on the bit, and add the invalid ones to
@@ -29,13 +30,41 @@ function buildResource(
   resources: Resource[] | undefined,
 ): Resource | undefined {
   let resource: Resource | undefined;
+  let filteredResources: Resource[] | undefined;
   const excessResources: Resource[] = [];
 
-  const validResourceTypes = BitUtils.calculateValidResourceTypes(bitType, resourceType, undefined);
+  // Handle special case for stillImageFilm
+  if (bitType === BitType.stillImageFilm) {
+    if (resources) {
+      filteredResources = [];
+      let imageResource: ImageResource | undefined;
+      let audioResource: AudioResource | undefined;
 
-  if (resources) {
-    for (const r of resources.reverse()) {
-      if (validResourceTypes.indexOf(r.type) >= 0 && !resource) {
+      for (const r of resources.reverse()) {
+        if (!imageResource && ResourceType.image === r.type) {
+          imageResource = r as ImageResource;
+        } else if (!audioResource && ResourceType.audio === r.type) {
+          audioResource = r as AudioResource;
+        } else {
+          filteredResources.push(r);
+        }
+      }
+      resource = resourceBuilder.stillImageFilmResource({
+        image: imageResource,
+        audio: audioResource,
+      });
+    }
+  } else {
+    filteredResources = resources;
+  }
+
+  // Get the valid resource types for the bit
+  const validResourceType = BitUtils.calculateValidResourceType(bitType, resourceType, undefined);
+
+  // Return the actual resource, and add all other resources to excess resources
+  if (filteredResources) {
+    for (const r of filteredResources.reverse()) {
+      if (!resource && validResourceType === r.type) {
         resource = r;
       } else {
         excessResources.push(r);
@@ -79,7 +108,7 @@ function resourceContentProcessor(
 
   const type = ResourceType.fromValue(key);
   if (type) {
-    const resource = builder.resource({
+    const resource = resourceBuilder.resource({
       type,
       ...resourceData,
     });

@@ -158,7 +158,7 @@ const TEST_FILES = [
   // 'sticky-note.bit',
   // 'still-image-film-embed.bit',
   // 'still-image-film-link.bit',
-  // 'still-image-film.bit',
+  'still-image-film.bit',
   // 'summary.bit',
   // 'survey.bit',
   // 'take-picture.bit',

@@ -222,8 +222,8 @@ export interface Resource {
   caption?: string;
 }
 
-export interface ImageLikeResource extends Resource {
-  type: 'image' | 'image-link';
+export interface ImageResource extends Resource {
+  type: 'image';
   src1x?: string;
   src2x?: string;
   src3x?: string;
@@ -233,12 +233,31 @@ export interface ImageLikeResource extends Resource {
   alt?: string;
 }
 
-export interface AudioLikeResource extends Resource {
-  type: 'audio' | 'audio-link';
+export interface ImageLinkResource extends Resource {
+  type: 'image-link';
+  src1x?: string;
+  src2x?: string;
+  src3x?: string;
+  src4x?: string;
+  width?: number;
+  height?: number;
+  alt?: string;
 }
 
-export interface VideoLikeResource extends Resource {
-  type: 'video' | 'video-link' | 'still-image-film' | 'still-image-film-link';
+export interface AudioResource extends Resource {
+  type: 'audio';
+}
+
+export interface AudioEmbedResource extends Resource {
+  type: 'audio-embed';
+}
+
+export interface AudioLinkResource extends Resource {
+  type: 'audio-link';
+}
+
+export interface VideoResource extends Resource {
+  type: 'video';
   width?: number;
   height?: number;
   duration?: number; // string?
@@ -251,70 +270,89 @@ export interface VideoLikeResource extends Resource {
   thumbnails?: ImageResource[];
 }
 
-export interface ArticleLikeResource extends Resource {
-  type: 'article' | 'article-link' | 'document' | 'document-link' | 'document-download';
+export interface VideoEmbedResource extends Resource {
+  type: 'video-embed';
+  width?: number;
+  height?: number;
+  duration?: number; // string?
+  mute?: boolean;
+  autoplay?: boolean;
+  allowSubtitles?: boolean;
+  showSubtitles?: boolean;
+  alt?: string;
+  posterImage?: ImageResource;
+  thumbnails?: ImageResource[];
 }
 
-export interface AppLikeResource extends Resource {
-  type: 'app' | 'app-link';
-}
-
-export interface ImageResource extends ImageLikeResource {
-  type: 'image';
-}
-
-export interface ImageLinkResource extends ImageLikeResource {
-  type: 'image-link';
-}
-
-export interface AudioResource extends AudioLikeResource {
-  type: 'audio';
-}
-
-export interface AudioLinkResource extends AudioLikeResource {
-  type: 'audio-link';
-}
-
-export interface VideoResource extends Resource, VideoLikeResource {
-  type: 'video';
-}
-
-export interface VideoLinkResource extends VideoLikeResource {
+export interface VideoLinkResource extends Resource {
   type: 'video-link';
+  width?: number;
+  height?: number;
+  duration?: number; // string?
+  mute?: boolean;
+  autoplay?: boolean;
+  allowSubtitles?: boolean;
+  showSubtitles?: boolean;
+  alt?: string;
+  posterImage?: ImageResource;
+  thumbnails?: ImageResource[];
 }
 
-export interface StillImageFilmResource extends VideoLikeResource {
+export interface StillImageFilmResource extends Resource {
   type: 'still-image-film';
+  image: ImageResource;
+  audio: AudioResource;
 }
 
-export interface StillImageFilmLinkResource extends VideoLikeResource {
+export interface StillImageFilmEmbedResource extends Resource {
+  type: 'still-image-film-embed';
+  width?: number;
+  height?: number;
+  duration?: number; // string?
+  mute?: boolean;
+  autoplay?: boolean;
+  allowSubtitles?: boolean;
+  showSubtitles?: boolean;
+  alt?: string;
+  posterImage?: ImageResource;
+  thumbnails?: ImageResource[];
+}
+
+export interface StillImageFilmLinkResource extends Resource {
   type: 'still-image-film-link';
+  width?: number;
+  height?: number;
+  duration?: number; // string?
+  mute?: boolean;
+  autoplay?: boolean;
+  allowSubtitles?: boolean;
+  showSubtitles?: boolean;
+  alt?: string;
+  posterImage?: ImageResource;
+  thumbnails?: ImageResource[];
 }
 
-export interface ArticleResource extends ArticleLikeResource {
+export interface ArticleResource extends Resource {
   type: 'article';
 }
 
-export interface ArticleLinkResource extends ArticleLikeResource {
-  type: 'article-link';
-}
-
-export interface DocumentResource extends ArticleLikeResource {
+export interface DocumentResource extends Resource {
   type: 'document';
 }
 
-export interface DocumentLinkResource extends ArticleLikeResource {
+export interface DocumentEmbedResource extends Resource {
+  type: 'document-embed';
+}
+
+export interface DocumentLinkResource extends Resource {
   type: 'document-link';
 }
 
-export interface DocumentDownloadResource extends ArticleLikeResource {
+export interface DocumentDownloadResource extends Resource {
   type: 'document-download';
 }
-export interface AppResource extends AppLikeResource {
-  type: 'app';
-}
 
-export interface AppLinkResource extends AppLikeResource {
+export interface AppLinkResource extends Resource {
   type: 'app-link';
 }
 

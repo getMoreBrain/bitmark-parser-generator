@@ -1,10 +1,11 @@
 import { Builder } from '../../ast/Builder';
+import { ResourceBuilder } from '../../ast/ResourceBuilder';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceType, ResourceTypeType } from '../../model/enum/ResourceType';
 import { TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
-import { ResourceJson, ResourceDataJson } from '../../model/json/ResourceJson';
+import { ResourceJson, ResourceDataJson, StillImageFilmResourceJson } from '../../model/json/ResourceJson';
 import { StringUtils } from '../../utils/StringUtils';
 
 import {
@@ -62,6 +63,7 @@ interface ReferenceAndReferenceProperty {
 // const BODY_SPLIT_REGEX = new RegExp('{[0-9]+}', 'g');
 
 const builder = new Builder();
+const resourceBuilder = new ResourceBuilder();
 
 /**
  * A parser for parsing bitmark JSON to bitmark AST
@@ -640,23 +642,28 @@ class JsonParser {
     let node: Resource | undefined;
 
     if (resource) {
-      let resourceKey = ResourceType.keyFromValue(resource.type) ?? ResourceType.unknown;
+      const resourceKey = ResourceType.keyFromValue(resource.type) ?? ResourceType.unknown;
+      let data: ResourceDataJson | undefined;
 
-      // Extra resource key mapping for 'still-image-film' / 'still-image-film-link'
+      // Special case for 'still-image-film'
       if (resource.type === ResourceType.stillImageFilm) {
-        // TODO - I think this is wrong and should be 'video', not 'image'
-        resourceKey = ResourceType.keyFromValue(ResourceType.image) ?? ResourceType.unknown;
-        // resourceKey = ResourceType.keyFromValue(ResourceType.video) ?? ResourceType.unknown;
-      } else if (resource.type === ResourceType.stillImageFilmLink) {
-        resourceKey = ResourceType.keyFromValue(ResourceType.videoLink) ?? ResourceType.unknown;
+        const r = resource as unknown as StillImageFilmResourceJson;
+        const imageNode = this.resourceDataToAst(ResourceType.image, r.image) as ImageResource;
+        const audioNode = this.resourceDataToAst(ResourceType.audio, r.audio) as AudioResource;
+        node = resourceBuilder.stillImageFilmResource({
+          image: imageNode,
+          audio: audioNode,
+        });
+      } else {
+        // Standard single resource case
+
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        data = (resource as any)[resourceKey];
+
+        if (!data) return undefined;
+
+        node = this.resourceDataToAst(resource.type, data);
       }
-
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const data: ResourceDataJson | undefined = (resource as any)[resourceKey];
-
-      if (!data) return undefined;
-
-      node = this.resourceDataToAst(resource.type, data);
     }
 
     return node;
@@ -682,7 +689,7 @@ class JsonParser {
         : undefined;
 
       // Resource
-      node = builder.resource({
+      node = resourceBuilder.resource({
         type,
 
         // Generic (except Article / Document)

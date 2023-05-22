@@ -9,12 +9,8 @@
       "hint": "",
       "isExample": false,
       "example": "",
-      "id": [
-        "304379"
-      ],
-      "stat": [
-        "ok"
-      ],
+      "id": ["304379"],
+      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -41,12 +37,8 @@
       "hint": "",
       "isExample": false,
       "example": "",
-      "id": [
-        "304379"
-      ],
-      "stat": [
-        "ok"
-      ],
+      "id": ["304379"],
+      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -73,12 +65,8 @@
       "hint": "",
       "isExample": false,
       "example": "",
-      "id": [
-        "304379"
-      ],
-      "stat": [
-        "ok"
-      ],
+      "id": ["304379"],
+      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -105,12 +93,8 @@
       "hint": "",
       "isExample": false,
       "example": "",
-      "id": [
-        "304379"
-      ],
-      "stat": [
-        "ok"
-      ],
+      "id": ["304379"],
+      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -137,12 +121,8 @@
       "hint": "",
       "isExample": false,
       "example": "",
-      "id": [
-        "304379"
-      ],
-      "stat": [
-        "ok"
-      ],
+      "id": ["304379"],
+      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -169,12 +149,8 @@
       "hint": "",
       "isExample": false,
       "example": "",
-      "id": [
-        "304379"
-      ],
-      "stat": [
-        "ok"
-      ],
+      "id": ["304379"],
+      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -201,12 +177,8 @@
       "hint": "",
       "isExample": false,
       "example": "",
-      "id": [
-        "304379"
-      ],
-      "stat": [
-        "ok"
-      ],
+      "id": ["304379"],
+      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -233,12 +205,8 @@
       "hint": "",
       "isExample": false,
       "example": "",
-      "id": [
-        "304379"
-      ],
-      "stat": [
-        "ok"
-      ],
+      "id": ["304379"],
+      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -265,12 +233,8 @@
       "hint": "",
       "isExample": false,
       "example": "",
-      "stat": [
-        "ok"
-      ],
-      "id": [
-        "304379"
-      ],
+      "stat": ["ok"],
+      "id": ["304379"],
       "resource": {
         "type": "image",
         "image": {
@@ -297,12 +261,8 @@
       "hint": "",
       "isExample": false,
       "example": "",
-      "id": [
-        "304379"
-      ],
-      "stat": [
-        "ok"
-      ],
+      "id": ["304379"],
+      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -324,31 +284,27 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "body": "",
+      "id": ["304379"],
       "item": "",
       "hint": "",
-      "isExample": false,
       "example": "",
-      "id": [
-        "304379"
-      ],
-      "stat": [
-        "ngk"
-      ],
+      "isExample": false,
+      "body": ".gif]",
       "resource": {
         "type": "image",
         "image": {
-          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ[1].gif",
-          "showInIndex": false,
-          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ[1",
           "width": null,
           "height": null,
           "alt": "",
-          "caption": "",
           "license": "",
-          "copyright": ""
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
-      }
+      },
+      "stat": ["ngk"]
     }
   },
   {
@@ -356,35 +312,13 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "body": "",
+      "id": ["304379"],
       "item": "",
       "hint": "",
-      "isExample": false,
       "example": "",
-      "id": [
-        "304379"
-      ],
-      "stat": [
-        "ngk"
-      ],
-      "resource": {
-        "type": "image-link",
-        "image": {
-          "provider": "",
-          "url": "",
-          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ[].gif",
-          "format": "gif"
-        }
-      }
-    },
-    "parser": {
-      "excessResources": [
-        {
-          "type": "video-link",
-          "format": "gif",
-          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ[].gif"
-        }
-      ]
+      "isExample": false,
+      "body": ".gif]\n.gif]",
+      "stat": ["ngk"]
     }
   },
   {

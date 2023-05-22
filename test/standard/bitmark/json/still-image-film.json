@@ -1,46 +1,108 @@
 [
   {
-    "bitmark": "[.still-image-film]\n[@id:119760]\n[&still-image-film:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4][@duration:PT12M31S]",
     "bit": {
       "type": "still-image-film",
       "format": "bitmark--",
-      "body": "",
       "item": "",
       "hint": "",
-      "isExample": false,
       "example": "",
-      "id": [
-        "119760"
-      ],
+      "isExample": false,
+      "body": "",
       "resource": {
         "type": "still-image-film",
         "image": {
-          "provider": "",
-          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
-          "format": "mp4",
-          "duration": "PT12M31S"
+          "format": "jpg",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
+        },
+        "audio": {
+          "format": "mp3",
+          "provider": "docs.bitmark.cloud",
+          "src": "https://docs.bitmark.cloud/bit-books/ef/unit_1/web-resources/audio/b1_1_1_6_j.mp3",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
       }
-    }
+    },
+    "bitmark": "[.still-image-film]\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg]\n[&audio:https://docs.bitmark.cloud/bit-books/ef/unit_1/web-resources/audio/b1_1_1_6_j.mp3]"
   },
   {
-    "bitmark": "[.still-image-film]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&still-image-film:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]",
     "bit": {
       "type": "still-image-film",
       "format": "bitmark--",
-      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
       "item": "",
       "hint": "",
-      "isExample": false,
       "example": "",
+      "isExample": false,
+      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
       "resource": {
         "type": "still-image-film",
         "image": {
-          "provider": "",
-          "url": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
-          "format": "wmv"
+          "width": null,
+          "height": null,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
+        },
+        "audio": {
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
       }
-    }
+    },
+    "parser": {
+      "excessResources": [
+        {
+          "type": "still-image-film",
+          "image": {
+            "width": null,
+            "height": null,
+            "alt": "",
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": ""
+          },
+          "audio": {
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": ""
+          }
+        }
+      ],
+      "errors": [
+        {
+          "message": "1 excess resource(s) present in the bit. The bit resource type is 'NOT SET'",
+          "text": "[.still-image-film]\n|| This bit is incorrect as it should have an image resource and an audio resource ||\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&still-image-film:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv][@duration:PT12M31S]\n",
+          "location": {
+            "start": {
+              "offset": 1,
+              "line": 2,
+              "column": 1
+            },
+            "end": {
+              "offset": 451,
+              "line": 6,
+              "column": 1
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.still-image-film]\n|| This bit is incorrect as it should have an image resource and an audio resource ||\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&still-image-film:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv][@duration:PT12M31S]"
   }
 ]

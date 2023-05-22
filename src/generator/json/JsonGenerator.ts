@@ -2,6 +2,18 @@ import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeType } from '../../model/ast/NodeType';
 import { BotResponse, Example, ExtraProperties, Highlight, Matrix, Pair, Question, Quiz } from '../../model/ast/Nodes';
+import { ImageLinkResource } from '../../model/ast/Nodes';
+import { AudioEmbedResource } from '../../model/ast/Nodes';
+import { AudioLinkResource } from '../../model/ast/Nodes';
+import { VideoEmbedResource } from '../../model/ast/Nodes';
+import { VideoLinkResource } from '../../model/ast/Nodes';
+import { StillImageFilmResource } from '../../model/ast/Nodes';
+import { DocumentResource } from '../../model/ast/Nodes';
+import { DocumentEmbedResource } from '../../model/ast/Nodes';
+import { DocumentLinkResource } from '../../model/ast/Nodes';
+import { DocumentDownloadResource } from '../../model/ast/Nodes';
+import { StillImageFilmEmbedResource } from '../../model/ast/Nodes';
+import { StillImageFilmLinkResource } from '../../model/ast/Nodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
@@ -27,7 +39,7 @@ import {
   Gap,
   AudioResource,
   VideoResource,
-  AppResource,
+  AppLinkResource,
   WebsiteLinkResource,
   Select,
 } from '../../model/ast/Nodes';
@@ -46,42 +58,25 @@ import {
 } from '../../model/json/BitJson';
 import {
   AppLinkResourceJson,
-  AppLinkResourceWrapperJson,
-  AppResourceWrapperJson,
-  ArticleEmbedResourceWrapperJson,
-  ArticleLikeResourceJson,
-  ArticleLinkResourceWrapperJson,
   ArticleResourceJson,
-  ArticleResourceWrapperJson,
-  AudioEmbedResourceWrapperJson,
+  AudioEmbedResourceJson,
   AudioLinkResourceJson,
-  AudioLinkResourceWrapperJson,
   AudioResourceJson,
-  AudioResourceWrapperJson,
   BaseResourceJson,
-  DocumentDownloadResourceWrapperJson,
-  DocumentEmbedResourceWrapperJson,
+  DocumentDownloadResourceJson,
+  DocumentEmbedResourceJson,
   DocumentLinkResourceJson,
-  DocumentLinkResourceWrapperJson,
   DocumentResourceJson,
-  DocumentResourceWrapperJson,
-  ImageEmbedResourceWrapperJson,
   ImageLinkResourceJson,
-  ImageLinkResourceWrapperJson,
   ImageResourceJson,
-  ImageResourceWrapperJson,
   ResourceJson,
-  ResourceWrapperJson,
-  StillImageFilmEmbedResourceWrapperJson,
-  StillImageFilmLinkResourceWrapperJson,
-  StillImageFilmResourceWrapperJson,
+  StillImageFilmEmbedResourceJson,
+  StillImageFilmLinkResourceJson,
+  VideoEmbedResourceJson,
   VideoEmbedResourceWrapperJson,
   VideoLinkResourceJson,
-  VideoLinkResourceWrapperJson,
   VideoResourceJson,
-  VideoResourceWrapperJson,
   WebsiteLinkResourceJson,
-  WebsiteLinkResourceWrapperJson,
 } from '../../model/json/ResourceJson';
 
 const DEFAULT_OPTIONS: JsonOptions = {
@@ -1068,149 +1063,162 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   protected parseResourceToJson(resource: Resource | undefined): ResourceJson | undefined {
     if (!resource) return undefined;
 
-    // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
-    let valid = false;
-    if (resource.value) {
-      valid = true;
-    }
+    // All resources should now be valid as they are validated in the AST
+    // TODO: remove code below
 
-    // Resource is not valid, return undefined
-    if (!valid) return undefined;
+    // // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
+    // let valid = false;
+    // if (resource.value) {
+    //   valid = true;
+    // }
 
-    // Resource is valid, write it.
-    const resourceJson: ResourceWrapperJson = {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      type: resource.type as any,
-    };
+    // // Resource is not valid, return undefined
+    // if (!valid) return undefined;
+
+    // // Resource is valid, write it.
+
+    let resourceJson: ResourceJson | undefined;
 
     switch (resource.type) {
       case ResourceType.image:
-        (resourceJson as ImageResourceWrapperJson).image = this.addImageLikeResource(resource as ImageResource);
+        resourceJson = {
+          type: ResourceType.image,
+          image: this.addImageResource(resource as ImageResource),
+        };
         break;
 
       case ResourceType.imageLink:
-        (resourceJson as ImageLinkResourceWrapperJson).imageLink = this.addImageLinkLikeResource(
-          resource as ImageResource,
-        );
-        break;
-
-      case ResourceType.imageEmbed:
-        (resourceJson as ImageEmbedResourceWrapperJson).imageEmbed = this.addImageLinkLikeResource(
-          resource as ImageResource,
-        );
+        resourceJson = {
+          type: ResourceType.imageLink,
+          imageLink: this.addImageLinkResource(resource as ImageLinkResource),
+        };
         break;
 
       case ResourceType.audio:
-        (resourceJson as AudioResourceWrapperJson).audio = this.addAudioLikeResource(resource as AudioResource);
-        break;
-
-      case ResourceType.audioLink:
-        (resourceJson as AudioLinkResourceWrapperJson).audioLink = this.addAudioLinkLikeResource(
-          resource as AudioResource,
-        );
+        resourceJson = {
+          type: ResourceType.audio,
+          audio: this.addAudioResource(resource as AudioResource),
+        };
         break;
 
       case ResourceType.audioEmbed:
-        (resourceJson as AudioEmbedResourceWrapperJson).audioEmbed = this.addAudioLinkLikeResource(
-          resource as AudioResource,
-        );
+        resourceJson = {
+          type: ResourceType.audioEmbed,
+          audioEmbed: this.addAudioEmbedResource(resource as AudioEmbedResource),
+        };
+        break;
+
+      case ResourceType.audioLink:
+        resourceJson = {
+          type: ResourceType.audioLink,
+          audioLink: this.addAudioLinkResource(resource as AudioLinkResource),
+        };
         break;
 
       case ResourceType.video:
-        (resourceJson as VideoResourceWrapperJson).video = this.addVideoLikeResource(resource as VideoResource);
-        break;
-
-      case ResourceType.videoLink:
-        (resourceJson as VideoLinkResourceWrapperJson).videoLink = this.addVideoLinkLikeResource(
-          resource as VideoResource,
-        );
+        resourceJson = {
+          type: ResourceType.video,
+          video: this.addVideoResource(resource as VideoResource),
+        };
         break;
 
       case ResourceType.videoEmbed:
-        (resourceJson as VideoEmbedResourceWrapperJson).videoEmbed = this.addVideoLinkLikeResource(
-          resource as VideoResource,
+        resourceJson = {
+          type: ResourceType.videoEmbed,
+          videoEmbed: this.addVideoEmbedResource(resource as VideoEmbedResource),
+        };
+        (resourceJson as VideoEmbedResourceWrapperJson).videoEmbed = this.addVideoLinkResource(
+          resource as VideoLinkResource,
         );
         break;
 
-      case ResourceType.stillImageFilm:
-        (resourceJson as StillImageFilmResourceWrapperJson).stillImageFilm = this.addVideoLikeResource(
-          resource as VideoResource,
-        );
+      case ResourceType.videoLink:
+        resourceJson = {
+          type: ResourceType.videoLink,
+          videoLink: this.addVideoLinkResource(resource as VideoLinkResource),
+        };
+        break;
+
+      case ResourceType.stillImageFilm: {
+        const stillImageFilmResource = resource as StillImageFilmResource;
+        resourceJson = {
+          type: ResourceType.stillImageFilm,
+          image: this.addImageResource(stillImageFilmResource.image),
+          audio: this.addAudioResource(stillImageFilmResource.audio),
+        };
+        break;
+      }
+
+      case ResourceType.stillImageFilmEmbed:
+        resourceJson = {
+          type: ResourceType.stillImageFilmEmbed,
+          stillImageFilmEmbed: this.addStillImageFilmEmbedResource(resource as StillImageFilmEmbedResource),
+        };
         break;
 
       case ResourceType.stillImageFilmLink:
-        (resourceJson as StillImageFilmLinkResourceWrapperJson).stillImageFilmLink = this.addVideoLikeResource(
-          resource as VideoResource,
-        );
-        break;
-
-      case ResourceType.stillImageFilmEmbed:
-        (resourceJson as StillImageFilmEmbedResourceWrapperJson).stillImageFilmEmbed = this.addVideoLikeResource(
-          resource as VideoResource,
-        );
+        resourceJson = {
+          type: ResourceType.stillImageFilmLink,
+          stillImageFilmLink: this.addStillImageFilmLinkResource(resource as StillImageFilmLinkResource),
+        };
         break;
 
       case ResourceType.article:
-        (resourceJson as ArticleResourceWrapperJson).article = this.addArticleLikeResource(resource as ArticleResource);
-        break;
-
-      case ResourceType.articleLink:
-        (resourceJson as ArticleLinkResourceWrapperJson).articleLink = this.addArticleLinkLikeResource(
-          resource as ArticleResource,
-        );
-        break;
-
-      case ResourceType.articleEmbed:
-        (resourceJson as ArticleEmbedResourceWrapperJson).articleEmbed = this.addArticleLinkLikeResource(
-          resource as ArticleResource,
-        );
+        resourceJson = {
+          type: ResourceType.article,
+          article: this.addArticleResource(resource as ArticleResource),
+        };
         break;
 
       case ResourceType.document:
-        (resourceJson as DocumentResourceWrapperJson).document = this.addArticleLinkLikeResource(
-          resource as ArticleResource,
-        );
-        break;
-
-      case ResourceType.documentLink:
-        (resourceJson as DocumentLinkResourceWrapperJson).documentLink = this.addArticleLinkLikeResource(
-          resource as ArticleResource,
-        );
+        resourceJson = {
+          type: ResourceType.document,
+          document: this.addDocumentResource(resource as DocumentResource),
+        };
         break;
 
       case ResourceType.documentEmbed:
-        (resourceJson as DocumentEmbedResourceWrapperJson).documentEmbed = this.addArticleLinkLikeResource(
-          resource as ArticleResource,
-        );
+        resourceJson = {
+          type: ResourceType.documentEmbed,
+          documentEmbed: this.addDocumentEmbedResource(resource as DocumentEmbedResource),
+        };
+        break;
+
+      case ResourceType.documentLink:
+        resourceJson = {
+          type: ResourceType.documentLink,
+          documentLink: this.addDocumentEmbedResource(resource as DocumentEmbedResource),
+        };
         break;
 
       case ResourceType.documentDownload:
-        (resourceJson as DocumentDownloadResourceWrapperJson).documentDownload = this.addArticleLinkLikeResource(
-          resource as ArticleResource,
-        );
-        break;
-
-      case ResourceType.app:
-        (resourceJson as AppResourceWrapperJson).app = resource.value ?? '';
+        resourceJson = {
+          type: ResourceType.documentDownload,
+          documentDownload: this.addDocumentDownloadResource(resource as DocumentDownloadResource),
+        };
         break;
 
       case ResourceType.appLink:
-        (resourceJson as AppLinkResourceWrapperJson).appLink = this.addAppLinkLikeResource(resource as AppResource);
+        resourceJson = {
+          type: ResourceType.appLink,
+          appLink: this.addAppLinkResource(resource as AppLinkResource),
+        };
         break;
 
       case ResourceType.websiteLink:
-        (resourceJson as WebsiteLinkResourceWrapperJson).websiteLink = this.addWebsiteLikeResource(
-          resource as WebsiteLinkResource,
-        );
+        resourceJson = {
+          type: ResourceType.websiteLink,
+          websiteLink: this.addWebsiteLinkResource(resource as WebsiteLinkResource),
+        };
         break;
 
       default:
     }
 
-    return resourceJson as ResourceJson;
+    return resourceJson;
   }
 
-  protected addImageLikeResource(resource: ImageResource | string): ImageResourceJson {
+  protected addImageResource(resource: ImageResource | string): ImageResourceJson {
     const resourceJson: Partial<ImageResourceJson> = {};
 
     if (StringUtils.isString(resource)) {
@@ -1241,20 +1249,20 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return resourceJson as ImageResourceJson;
   }
 
-  protected addImageLinkLikeResource(resource: ImageResource | string): ImageLinkResourceJson {
+  protected addImageLinkResource(resource: ImageLinkResource | string): ImageLinkResourceJson {
     const resourceJson: Partial<ImageLinkResourceJson> = {};
 
     if (StringUtils.isString(resource)) {
       const value = resource as string;
       resource = {
-        type: ResourceType.image,
+        type: ResourceType.imageLink,
         value,
         format: UrlUtils.fileExtensionFromUrl(value),
         provider: UrlUtils.domainFromUrl(value),
       };
     }
 
-    resource = resource as ImageResource; // Keep TS compiler happy
+    resource = resource as ImageLinkResource; // Keep TS compiler happy
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
@@ -1272,7 +1280,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return resourceJson as ImageLinkResourceJson;
   }
 
-  protected addAudioLikeResource(resource: AudioResource): AudioResourceJson {
+  protected addAudioResource(resource: AudioResource): AudioResourceJson {
     const resourceJson: Partial<AudioResourceJson | AudioLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
@@ -1284,7 +1292,23 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return resourceJson as AudioResourceJson;
   }
 
-  protected addAudioLinkLikeResource(resource: AudioResource): AudioLinkResourceJson {
+  protected addAudioEmbedResource(resource: AudioEmbedResource): AudioEmbedResourceJson {
+    const resourceJson: Partial<AudioEmbedResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.src = resource.value;
+
+    // Properties that are always added that do not come from the markup
+    resourceJson.duration = '';
+    resourceJson.autoplay = true;
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as AudioEmbedResourceJson;
+  }
+
+  protected addAudioLinkResource(resource: AudioLinkResource): AudioLinkResourceJson {
     const resourceJson: Partial<AudioLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
@@ -1300,7 +1324,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return resourceJson as AudioLinkResourceJson;
   }
 
-  protected addVideoLikeResource(resource: VideoResource): VideoResourceJson {
+  protected addVideoResource(resource: VideoResource): VideoResourceJson {
     const resourceJson: Partial<VideoResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
@@ -1317,20 +1341,50 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.alt != null) resourceJson.alt = resource.alt;
 
-    if (resource.posterImage != null) resourceJson.posterImage = this.addImageLikeResource(resource.posterImage);
+    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(resource.posterImage);
     if (resource.thumbnails != null && resource.thumbnails.length > 0) {
       resourceJson.thumbnails = [];
       for (const thumbnail of resource.thumbnails) {
-        resourceJson.thumbnails.push(this.addImageLikeResource(thumbnail));
+        resourceJson.thumbnails.push(this.addImageResource(thumbnail));
       }
     }
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
 
-    return resourceJson as VideoResourceJson | VideoLinkResourceJson;
+    return resourceJson as VideoResourceJson;
   }
 
-  protected addVideoLinkLikeResource(resource: VideoResource): VideoLinkResourceJson {
+  protected addVideoEmbedResource(resource: VideoEmbedResource): VideoEmbedResourceJson {
+    const resourceJson: Partial<VideoEmbedResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.src = resource.value;
+    resourceJson.width = resource.width ?? null;
+    resourceJson.height = resource.height ?? null;
+
+    if (resource.duration != null) resourceJson.duration = resource.duration;
+    if (resource.mute != null) resourceJson.mute = resource.mute;
+    if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
+    if (resource.allowSubtitles != null) resourceJson.allowSubtitles = resource.allowSubtitles;
+    if (resource.showSubtitles != null) resourceJson.showSubtitles = resource.showSubtitles;
+
+    if (resource.alt != null) resourceJson.alt = resource.alt;
+
+    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(resource.posterImage);
+    if (resource.thumbnails != null && resource.thumbnails.length > 0) {
+      resourceJson.thumbnails = [];
+      for (const thumbnail of resource.thumbnails) {
+        resourceJson.thumbnails.push(this.addImageResource(thumbnail));
+      }
+    }
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as VideoEmbedResourceJson;
+  }
+
+  protected addVideoLinkResource(resource: VideoLinkResource): VideoLinkResourceJson {
     const resourceJson: Partial<VideoLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
@@ -1347,11 +1401,11 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.alt != null) resourceJson.alt = resource.alt;
 
-    if (resource.posterImage != null) resourceJson.posterImage = this.addImageLikeResource(resource.posterImage);
+    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(resource.posterImage);
     if (resource.thumbnails != null && resource.thumbnails.length > 0) {
       resourceJson.thumbnails = [];
       for (const thumbnail of resource.thumbnails) {
-        resourceJson.thumbnails.push(this.addImageLikeResource(thumbnail));
+        resourceJson.thumbnails.push(this.addImageResource(thumbnail));
       }
     }
 
@@ -1360,7 +1414,67 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return resourceJson as VideoLinkResourceJson;
   }
 
-  protected addArticleLikeResource(resource: ArticleResource): ArticleResourceJson {
+  protected addStillImageFilmEmbedResource(resource: StillImageFilmEmbedResource): StillImageFilmEmbedResourceJson {
+    const resourceJson: Partial<StillImageFilmEmbedResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.src = resource.value;
+    resourceJson.width = resource.width ?? null;
+    resourceJson.height = resource.height ?? null;
+
+    if (resource.duration != null) resourceJson.duration = resource.duration;
+    if (resource.mute != null) resourceJson.mute = resource.mute;
+    if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
+    if (resource.allowSubtitles != null) resourceJson.allowSubtitles = resource.allowSubtitles;
+    if (resource.showSubtitles != null) resourceJson.showSubtitles = resource.showSubtitles;
+
+    if (resource.alt != null) resourceJson.alt = resource.alt;
+
+    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(resource.posterImage);
+    if (resource.thumbnails != null && resource.thumbnails.length > 0) {
+      resourceJson.thumbnails = [];
+      for (const thumbnail of resource.thumbnails) {
+        resourceJson.thumbnails.push(this.addImageResource(thumbnail));
+      }
+    }
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as StillImageFilmEmbedResourceJson;
+  }
+
+  protected addStillImageFilmLinkResource(resource: StillImageFilmLinkResource): StillImageFilmLinkResourceJson {
+    const resourceJson: Partial<StillImageFilmLinkResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.url = resource.value;
+    resourceJson.width = resource.width ?? null;
+    resourceJson.height = resource.height ?? null;
+
+    if (resource.duration != null) resourceJson.duration = resource.duration;
+    if (resource.mute != null) resourceJson.mute = resource.mute;
+    if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
+    if (resource.allowSubtitles != null) resourceJson.allowSubtitles = resource.allowSubtitles;
+    if (resource.showSubtitles != null) resourceJson.showSubtitles = resource.showSubtitles;
+
+    if (resource.alt != null) resourceJson.alt = resource.alt;
+
+    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(resource.posterImage);
+    if (resource.thumbnails != null && resource.thumbnails.length > 0) {
+      resourceJson.thumbnails = [];
+      for (const thumbnail of resource.thumbnails) {
+        resourceJson.thumbnails.push(this.addImageResource(thumbnail));
+      }
+    }
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as StillImageFilmLinkResourceJson;
+  }
+
+  protected addArticleResource(resource: ArticleResource): ArticleResourceJson {
     const resourceJson: Partial<ArticleResourceJson | DocumentResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
@@ -1373,21 +1487,59 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return resourceJson as ArticleResourceJson | DocumentResourceJson;
   }
 
-  protected addArticleLinkLikeResource(
-    resource: ArticleResource,
-  ): ArticleLikeResourceJson | DocumentResourceJson | DocumentLinkResourceJson {
-    const resourceJson: Partial<ArticleLikeResourceJson | DocumentResourceJson | DocumentLinkResourceJson> = {};
+  protected addDocumentResource(resource: DocumentResource): DocumentResourceJson {
+    const resourceJson: Partial<DocumentResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.value != null) resourceJson.url = resource.value;
+    if (resource.value != null) resourceJson.body = resource.value;
+    // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
 
-    return resourceJson as ArticleLikeResourceJson | DocumentResourceJson | DocumentLinkResourceJson;
+    return resourceJson as DocumentResourceJson;
   }
 
-  protected addAppLinkLikeResource(resource: AppResource): AppLinkResourceJson {
+  protected addDocumentEmbedResource(resource: DocumentEmbedResource): DocumentEmbedResourceJson {
+    const resourceJson: Partial<DocumentEmbedResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.body = resource.value;
+    // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as DocumentEmbedResourceJson;
+  }
+
+  protected addDocumentLinkResource(resource: DocumentLinkResource): DocumentLinkResourceJson {
+    const resourceJson: Partial<DocumentLinkResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.body = resource.value;
+    // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as DocumentLinkResourceJson;
+  }
+
+  protected addDocumentDownloadResource(resource: DocumentDownloadResource): DocumentDownloadResourceJson {
+    const resourceJson: Partial<DocumentDownloadResourceJson> = {};
+
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.body = resource.value;
+    // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
+
+    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+
+    return resourceJson as DocumentDownloadResourceJson;
+  }
+
+  protected addAppLinkResource(resource: AppLinkResource): AppLinkResourceJson {
     const resourceJson: Partial<AppLinkResourceJson> = {};
 
     // if (resource.format != null) resourceJson.format = resource.format;
@@ -1398,7 +1550,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     return resourceJson as AppLinkResourceJson;
   }
 
-  protected addWebsiteLikeResource(resource: WebsiteLinkResource): WebsiteLinkResourceJson {
+  protected addWebsiteLinkResource(resource: WebsiteLinkResource): WebsiteLinkResourceJson {
     const resourceJson: Partial<WebsiteLinkResourceJson> = {};
 
     // if (resource.format != null) resourceJson.format = resource.format;

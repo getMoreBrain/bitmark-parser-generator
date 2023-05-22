@@ -4,6 +4,14 @@ export interface GetFilenamesSyncOptions {
   maxDepth?: number;
 }
 
+interface RemoveUnwantedPropertiesOptions {
+  ignoreUndefined?: string[];
+  ignoreFalse?: string[];
+  ignoreEmptyString?: string[];
+  ignoreEmptyArrays?: string[];
+  ignoreEmptyObjects?: string[];
+}
+
 class ObjectUtils {
   /**
    * Check if a variable is a function
@@ -175,6 +183,22 @@ class ObjectUtils {
         delete objAsAny[k];
       }
     }
+  }
+
+  /**
+   * Remove any unwanted properties from a plain JS object
+   *
+   * @param obj plain JS object
+   * @param excludeKeys keys to be excluded from removal
+   */
+  removeUnwantedProperties(obj: unknown, options?: RemoveUnwantedPropertiesOptions): void {
+    options = Object.assign({}, options);
+
+    this.removeUndefinedProperties(obj, options.ignoreUndefined);
+    this.removeFalseProperties(obj, options.ignoreFalse);
+    this.removeEmptyStringProperties(obj, options.ignoreEmptyString);
+    this.removeEmptyArrayProperties(obj, options.ignoreEmptyArrays);
+    this.removeEmptyObjectProperties(obj, options.ignoreEmptyObjects);
   }
 }
 

@@ -102,11 +102,11 @@
 | highlight | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
 | highlight-text | ➖ | ✅ | ✅ |  |
 | hint | ✅ | ✅ | ✅ |  |
-| image | ✅ | ❌ | ❌ | TO TEST |
-| image-link | ✅ | ❌ | ❌ | TO TEST |
-| image-prototype | ✅ | ❌ | ❌ | TO TEST |
-| image-super-wide | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
-| image-zoom | ✅ | ❌ | ❌ | TO TEST |
+| image | ✅ | ✅ | ✅ |  |
+| image-link | ✅ | ✅ | ✅ |  |
+| image-prototype | ✅ | ✅ | ✅ |  |
+| image-super-wide | ✅ | ✅ | ✅ |  |
+| image-zoom | ✅ | ✅ | ✅ |  |
 | info | ✅ | ✅ | ✅ |  |
 | internal-link | ✅ | ✅ | ✅ |  |
 | interview | ✅ | ✅ | ✅ |  |
@@ -159,7 +159,7 @@
 | side-note | ➖ | ✅ | ✅ |  |
 | statement | ➖ | ✅ | ✅ |  |
 | sticky-note | ✅ | ✅ | ✅ |  |
-| still-image-film | ✅ | ❌ | ❌ | TODO: Should this have '&still-image-film' or '&image' resource? |
+| still-image-film | ✅ | ✅ | ✅ |  |
 | still-image-film-embed | ✅ | ❌ | ❌ | TODO: Same question as above |
 | still-image-film-link | ✅ | ❌ | ❌ | TODO: Same question as above |
 | summary | ✅ | ✅ | ✅ |  |
@@ -173,7 +173,7 @@
 | true-false-1 | ✅ | ✅ | ✅ |  |
 | vendor-padlet-embed | ✅ | ✅ | ✅ |  |
 | video | ✅ | ✅ | ✅ |  |
-| video-embed | ✅ | ✅ | ✅ | TODO: Not sure which resource type is correct, &video, or &video-embed. Awaiting answer |
+| video-embed | ✅ | ✅ | ✅ |  |
 | video-landscape | ✅ | ✅ | ✅ |  |
 | video-link | ✅ | ❌ | ❌ | TODO: Not sure which resource type is correct, &video, or &video-link. Awaiting answer |
 | video-portrait | ✅ | ✅ | ✅ |  |

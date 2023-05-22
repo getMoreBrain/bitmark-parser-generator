@@ -10,10 +10,9 @@
       "isExample": false,
       "example": "",
       "resource": {
-        "type": "image-zoom",
+        "type": "image",
         "image": {
           "provider": "",
-          "url": "",
           "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
           "format": "png"
         }

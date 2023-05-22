@@ -1,6 +1,12 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-const BitTypeRaw = {
+import { ResourceType, ResourceTypeType } from './ResourceType';
+
+export interface BitTypeMetadata {
+  resourceType?: ResourceTypeType;
+}
+
+const BitType = superenum({
   _error: '_error', // Used for error handling to indicate a bit type that is not supported or a bit parse error
   anchor: 'anchor',
   article: 'article',
@@ -96,6 +102,8 @@ const BitTypeRaw = {
   image: 'image',
   imageEmbed: 'image-embed',
   imageLink: 'image-link',
+  imagePrototype: 'image-prototype',
+  imageSuperWide: 'image-super-wide',
   imageZoom: 'image-zoom',
   info: 'info',
   internalLink: 'internal-link',
@@ -166,11 +174,103 @@ const BitTypeRaw = {
   warning: 'warning',
   websiteLink: 'website-link',
   workbookArticle: 'workbook-article',
-} as const;
+});
 
-const BitType = superenum(BitTypeRaw);
+// Set metadata on the bit types to describe specific behaviour
 
-export type BitTypeKeys = keyof typeof BitTypeRaw;
+BitType.setMetadata<BitTypeMetadata>(BitType.audio, {
+  resourceType: ResourceType.audio,
+});
+
+BitType.setMetadata<BitTypeMetadata>(BitType.audioEmbed, {
+  resourceType: ResourceType.audioEmbed,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.audioLink, {
+  resourceType: ResourceType.audioLink,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.browserImage, {
+  resourceType: ResourceType.image,
+});
+// BitType.setMetadata<BitTypeMetadata>(BitType.conversationLeft1, {
+//     resourceType: ResourceType.image,
+// });
+// BitType.setMetadata<BitTypeMetadata>(BitType.conversationLeft1Scream, {
+//     resourceType: ResourceType.image,
+// });
+// BitType.setMetadata<BitTypeMetadata>(BitType.conversationLeft1Thought, {
+//     resourceType: ResourceType.image,
+// });
+// BitType.setMetadata<BitTypeMetadata>(BitType.conversationRight1, {
+//     resourceType: ResourceType.image,
+// });
+// BitType.setMetadata<BitTypeMetadata>(BitType.conversationRight1Scream, {
+//     resourceType: ResourceType.image,
+// });
+// BitType.setMetadata<BitTypeMetadata>(BitType.conversationRight1Thought, {
+//     resourceType: ResourceType.image,
+// });
+BitType.setMetadata<BitTypeMetadata>(BitType.document, {
+  resourceType: ResourceType.document,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.documentDownload, {
+  resourceType: ResourceType.documentDownload,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.documentLink, {
+  resourceType: ResourceType.documentLink,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.focusImage, {
+  resourceType: ResourceType.image,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.imageLink, {
+  resourceType: ResourceType.imageLink,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.imagePrototype, {
+  resourceType: ResourceType.image,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.imageSuperWide, {
+  resourceType: ResourceType.image,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.imageZoom, {
+  resourceType: ResourceType.image,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.photo, {
+  resourceType: ResourceType.image,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.screenshot, {
+  resourceType: ResourceType.image,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.stillImageFilm, {
+  resourceType: ResourceType.stillImageFilm,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.stillImageFilmEmbed, {
+  resourceType: ResourceType.stillImageFilmEmbed,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.stillImageFilmLink, {
+  resourceType: ResourceType.stillImageFilmLink,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.video, {
+  resourceType: ResourceType.video,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.videoEmbed, {
+  resourceType: ResourceType.videoEmbed,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.videoLandscape, {
+  resourceType: ResourceType.video,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.videoLink, {
+  resourceType: ResourceType.videoLink,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.videoPortrait, {
+  resourceType: ResourceType.video,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.websiteLink, {
+  resourceType: ResourceType.websiteLink,
+});
+
+BitType.setMetadata<BitTypeMetadata>(BitType.image, {
+  resourceType: ResourceType.image,
+});
+
 export type BitTypeType = EnumType<typeof BitType>;
 
 export { BitType };

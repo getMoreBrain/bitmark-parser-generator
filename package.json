@@ -12,7 +12,8 @@
     "dist"
   ],
   "scripts": {
-    "start": "node -r esbuild-register ./test/custom/dev/bmgDevJson.ts",
+    "start": "run start-bit",
+    "start-gen": "node -r esbuild-register ./test/custom/dev/bmgDevJson.ts",
     "start-bit": "node -r esbuild-register ./test/custom/dev/bmgDevBitmark.ts",
     "start-bit-antlr": "node -r esbuild-register ./test/custom/dev/bmgDevBitmarkAntlr.ts",
     "build": "run clean && run generate-build-info && run build-grammar-bit && run build-cjs && run build-esm && run build-umd && run build-umd-antlr",
