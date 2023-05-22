@@ -29,10 +29,10 @@ function gapChainContentProcessor(
   if (gap) bodyParts.push(gap);
 }
 
-function buildGap(context: BitmarkPegParserContext, bitType: BitTypeType, gapContent: BitContent[]): Gap | undefined {
-  if (context.DEBUG_GAP_CONTENT) context.debugPrint('gap content', gapContent);
+function buildGap(context: BitmarkPegParserContext, bitType: BitTypeType, content: BitContent[]): Gap | undefined {
+  if (context.DEBUG_GAP_CONTENT) context.debugPrint('gap content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.GapChain, bitType, gapContent, [
+  const tags = context.bitContentProcessor(BitContentLevel.GapChain, bitType, content, [
     TypeKey.Cloze,
     TypeKey.Property,
     TypeKey.ItemLead,

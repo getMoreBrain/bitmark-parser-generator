@@ -22,6 +22,7 @@ import {
   Resource,
   ArticleResource,
   StillImageFilmResource,
+  Partner,
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
@@ -274,6 +275,22 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
     // Special case for example
     this.writeProperty('example', value, true, true);
+  }
+
+  // bitmark -> bits -> bitsValue -> partner
+
+  protected enter_partner(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const partner = node.value as Partner;
+
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const { name, avatarImage } = partner;
+
+    this.writeProperty('partner', name, true);
+    if (avatarImage) {
+      this.writeResource(avatarImage);
+    }
   }
 
   // bitmark -> bits -> bitsValue -> sampleSolution

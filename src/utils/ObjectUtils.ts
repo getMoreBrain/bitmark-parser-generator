@@ -200,6 +200,33 @@ class ObjectUtils {
     this.removeEmptyArrayProperties(obj, options.ignoreEmptyArrays);
     this.removeEmptyObjectProperties(obj, options.ignoreEmptyObjects);
   }
+
+  /**
+   * Extract a single value from a plain JS object
+   *
+   * If the item at the key is not an array, the item is returned.
+   * If the object at the key is an array, the last item in the array is returned.
+   *
+   * @param obj
+   * @param key
+   * @returns a non-array value, or undefined if the key does not exist
+   */
+  extractSingleValue(obj: unknown, key: string): unknown | undefined {
+    if (!obj) return undefined;
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const objAsAny = obj as any;
+
+    if (objAsAny[key] == undefined) return undefined;
+
+    let value = objAsAny[key];
+    if (Array.isArray(value)) {
+      if (value.length === 0) return undefined;
+      value = value[value.length - 1];
+    }
+
+    return value;
+  }
 }
 
 const objectUtils = new ObjectUtils();

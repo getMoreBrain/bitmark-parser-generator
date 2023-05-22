@@ -164,6 +164,11 @@ const NodeType = superenum({
   response: 'response',
   feedback: 'feedback',
 
+  // Partner
+  partner: 'partner',
+  name: 'name',
+  avatarImage: 'avatarImage',
+
   // Resources
   resource: 'resource',
   resourceType: 'resourceType',

@@ -54,8 +54,12 @@ export interface BitJson {
   instruction: string;
   isExample: boolean;
   example: string;
+
   isTracked: boolean; // only .learningPathExternalLink?
   isInfoOnly: boolean; // only .learningPathExternalLink?
+
+  partner: PartnerJson;
+
   // NEW property - not in the ANTLR parser
   extraProperties: {
     [key: string]: unknown | unknown[];
@@ -78,6 +82,11 @@ export interface BitJson {
   questions: QuestionJson[];
   footer: string;
   placeholders: BodyBitsJson;
+}
+
+export interface PartnerJson {
+  name: string;
+  avatarImage: ImageResourceJson;
 }
 
 export interface StatementJson {

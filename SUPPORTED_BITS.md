@@ -70,13 +70,13 @@
 | code | ✅ | ✅ | ✅ |  |
 | conclusion | ✅ | ✅ | ✅ |  |
 | conversation | ➖ | ➖ | ➖ | LEGACY? |
-| conversation-left-1 | ✅ | ❌ | ❌ | TO TEST |
-| conversation-left-1-scream | ✅ | ❌ | ❌ | TO TEST |
-| conversation-left-1-thought | ✅ | ❌ | ❌ | TO TEST |
-| conversation-right-1 | ✅ | ❌ | ❌ | TO TEST |
-| conversation-right-1-scream | ✅ | ❌ | ❌ | TO TEST |
-| conversation-right-1-thought | ✅ | ❌ | ❌ | TO TEST |
-| correction | ✅ | ❌ | ❌ | TO TEST |
+| conversation-left-1 | ✅ | ✅ | ✅ |  |
+| conversation-left-1-scream | ✅ | ✅ | ✅ |  |
+| conversation-left-1-thought | ✅ | ✅ | ✅ |  |
+| conversation-right-1 | ✅ | ✅ | ✅ |  |
+| conversation-right-1-scream | ✅ | ✅ | ✅ |  |
+| conversation-right-1-thought | ✅ | ✅ | ✅ |  |
+| correction | ✅ | ❌ | ❌ | DOES NOT WORK IN THE ANTLR PARSER |
 | danger | ✅ | ✅ | ✅ |  |
 | details | ➖ | ➖ | ➖ | LEGACY? |
 | details-1 | ✅ | ✅ | ✅ |  |

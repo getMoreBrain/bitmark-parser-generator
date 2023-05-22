@@ -41,6 +41,7 @@ import {
   ExtraProperties,
   Property,
   BotResponse,
+  Partner,
 } from '../model/ast/Nodes';
 
 /**
@@ -123,6 +124,7 @@ class Builder {
     hint?: string;
     instruction?: string;
     example?: string | boolean;
+    partner?: Partner;
     extraProperties?: {
       [key: string]: unknown | unknown[];
     };
@@ -196,6 +198,7 @@ class Builder {
       hint,
       instruction,
       example,
+      partner,
       extraProperties,
       resource,
       body,
@@ -268,6 +271,7 @@ class Builder {
       hint,
       instruction,
       example: this.toAstProperty(PropertyKey.example, example),
+      partner,
       resource,
       body,
       sampleSolution: ArrayUtils.asArray(sampleSolution),
@@ -870,6 +874,27 @@ class Builder {
       instruction,
       example,
       isCaseSensitive,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
+   * Build (chat) partner node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  partner(data: { name: string; avatarImage?: ImageResource }): Partner {
+    const { name, avatarImage } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Partner = {
+      name,
+      avatarImage,
     };
 
     // Remove Unset Optionals

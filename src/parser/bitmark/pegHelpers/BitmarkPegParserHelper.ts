@@ -39,6 +39,7 @@ const DEBUG_TRACE_CARD_TAGS = false; // Tags within the content of a card
 const DEBUG_TRACE_RESOURCE_TAGS_CHAIN = false; // Resource tags chain
 const DEBUG_TRACE_RESOURCE = false; // Resource tag
 const DEBUG_TRACE_RESOURCE_PROPERTY = false; // Resource property tag
+const DEBUG_TRACE_PARTNER_CHAIN = true; // Partner tag chain
 const DEBUG_TRACE_GAP_CHAIN = false; // Gap tag chain
 const DEBUG_TRACE_TRUE_FALSE_CHAIN = false; // True/False tag chain
 const DEBUG_TRACE_TAGS = false; // Standard tags
@@ -315,6 +316,19 @@ class BitmarkPegParserHelper {
   //
   // Tag Chain parsing
   //
+
+  handlePartnerChainTags(value: unknown): BitContent {
+    if (DEBUG_TRACE_PARTNER_CHAIN) this.debugPrint(TypeKey.PartnerChain, value);
+
+    return {
+      type: TypeKey.PartnerChain,
+      value,
+      parser: {
+        text: this.parserText(),
+        location: this.parserLocation(),
+      },
+    };
+  }
 
   handleGapChainTags(value: unknown): BitContent {
     if (DEBUG_TRACE_GAP_CHAIN) this.debugPrint(TypeKey.GapChain, value);

@@ -109,7 +109,7 @@ ResourceType
 
 // All bit content (tags, body, cards)
 BitContent
-  = value: (CardSet / GapTagsChain / TrueFalseTagsChain / StandardTagsChain / BodyChar)* { return helper.handleBitContent(value) }
+  = value: (CardSet / GapTagsChain / TrueFalseTagsChain / PartnerTagsChain / StandardTagsChain / BodyChar)* { return helper.handleBitContent(value) }
 
 // Standard bit tags chain
 StandardTagsChain
@@ -187,6 +187,10 @@ ResourcePropertyTag
 //
 
 // Gap tags chain
+PartnerTagsChain
+  = value: PartnerTag others: (ResourceTagsChain)* { return helper.handlePartnerChainTags([value, ...others]); }
+
+// Gap tags chain
 GapTagsChain
   = value: ClozeTag+ others: (ClozeTag / ItemLeadTag / InstructionTag / HintTag / PropertyTag)* { return helper.handleGapChainTags([...value, ...others]); }
 
@@ -196,7 +200,13 @@ TrueFalseTagsChain
 
 
 //
-// Tags
+// Specific Tags
+//
+PartnerTag
+  = "[@partner" value: KeyValueTag_Value "]" { return helper.handlePropertyTag('partner', value) }
+
+//
+// Generic Tags
 //
 
 // Title tag

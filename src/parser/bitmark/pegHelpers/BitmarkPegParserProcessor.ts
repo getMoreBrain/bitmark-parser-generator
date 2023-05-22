@@ -78,6 +78,7 @@ import { clozeTagContentProcessor } from './contentProcessors/ClozeTagContentPro
 import { defaultTagContentProcessor } from './contentProcessors/DefaultTagContentProcessor';
 import { gapChainContentProcessor } from './contentProcessors/GapChainContentProcessor';
 import { itemLeadTagContentProcessor } from './contentProcessors/ItemLeadTagContentProcessor';
+import { partnerChainContentProcessor } from './contentProcessors/PartnerChainContentProcessor';
 import { propertyContentProcessor } from './contentProcessors/PropertyContentProcessor';
 import { buildResource, resourceContentProcessor } from './contentProcessors/ResourceContentProcessor';
 import { buildTitles, titleTagContentProcessor } from './contentProcessors/TitleTagContentProcessor';
@@ -110,6 +111,8 @@ const DEBUG_BIT_CONTENT = true; // Print the top level parsed bit content (with 
 const DEBUG_BIT_TAGS = true; // Print the tags extracted from the bit parsed content
 const DEBUG_BODY = true; // Print the final parsed body
 const DEBUG_FOOTER = true; // Print the final parsed footer
+const DEBUG_PARTNER_CONTENT = true; // Print the parsed partner content
+const DEBUG_PARTNER_TAGS = true; // Print the tags extracted from the parsed partner content
 const DEBUG_GAP_CONTENT = true; // Print the parsed gap content
 const DEBUG_GAP_TAGS = true; // Print the tags extracted from the parsed gap content
 const DEBUG_SELECT_CONTENT = true; // Print the parsed select content (true/false v2)
@@ -156,6 +159,8 @@ class BitmarkPegParserProcessor {
       DEBUG_BIT_TAGS,
       DEBUG_BODY,
       DEBUG_FOOTER,
+      DEBUG_PARTNER_CONTENT,
+      DEBUG_PARTNER_TAGS,
       DEBUG_GAP_CONTENT,
       DEBUG_GAP_TAGS,
       DEBUG_SELECT_CONTENT,
@@ -247,6 +252,7 @@ class BitmarkPegParserProcessor {
         TypeKey.ItemLead,
         TypeKey.Instruction,
         TypeKey.Hint,
+        TypeKey.PartnerChain,
         TypeKey.GapChain,
         TypeKey.TrueFalseChain,
         TypeKey.Resource,
@@ -444,6 +450,10 @@ class BitmarkPegParserProcessor {
 
         case TypeKey.Resource:
           resourceContentProcessor(this.context, bitLevel, bitType, content, result);
+          break;
+
+        case TypeKey.PartnerChain:
+          partnerChainContentProcessor(this.context, bitLevel, bitType, content, result);
           break;
 
         case TypeKey.GapChain:

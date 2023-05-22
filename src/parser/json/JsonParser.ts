@@ -25,6 +25,7 @@ import {
   Matrix,
   MatrixCell,
   Pair,
+  Partner,
   Question,
   Quiz,
   Resource,
@@ -44,6 +45,7 @@ import {
   QuizJson,
   ResponseJson,
   StatementJson,
+  PartnerJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -228,6 +230,7 @@ class JsonParser {
       instruction,
       isExample,
       example,
+      partner,
       resource,
       body,
       sampleSolution,
@@ -251,6 +254,8 @@ class JsonParser {
 
     // body & placeholders
     const bodyNode = this.bodyToAst(body, placeholders);
+
+    const partnerNode = this.partnerBitToAst(partner);
 
     //+-statement
     const statementNodes = this.statementBitsToAst(statement, isCorrect, statements);
@@ -328,6 +333,7 @@ class JsonParser {
       hint,
       instruction,
       example: example || isExample,
+      partner: partnerNode,
       resource: resourceNode,
       body: bodyNode,
       sampleSolution: sampleSolution,
@@ -344,6 +350,17 @@ class JsonParser {
     });
 
     return bitNode;
+  }
+
+  private partnerBitToAst(partner?: PartnerJson): Partner | undefined {
+    let node: Partner | undefined;
+
+    if (partner) {
+      const avatarImage = this.resourceDataToAst(ResourceType.image, partner.avatarImage) as ImageResource | undefined;
+      node = builder.partner({ name: partner.name, avatarImage });
+    }
+
+    return node;
   }
 
   private statementBitsToAst(

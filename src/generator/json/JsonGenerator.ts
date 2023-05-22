@@ -1,7 +1,6 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeType } from '../../model/ast/NodeType';
-import { BotResponse, Example, ExtraProperties, Highlight, Matrix, Pair, Question, Quiz } from '../../model/ast/Nodes';
 import { ImageLinkResource } from '../../model/ast/Nodes';
 import { AudioEmbedResource } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
@@ -25,6 +24,17 @@ import { StringUtils } from '../../utils/StringUtils';
 import { UrlUtils } from '../../utils/UrlUtils';
 import { Generator } from '../Generator';
 
+import {
+  BotResponse,
+  Example,
+  ExtraProperties,
+  Highlight,
+  Matrix,
+  Pair,
+  Partner,
+  Question,
+  Quiz,
+} from '../../model/ast/Nodes';
 import {
   BitmarkAst,
   Bit,
@@ -51,6 +61,7 @@ import {
   MatrixCellJson,
   MatrixJson,
   PairJson,
+  PartnerJson,
   QuestionJson,
   QuizJson,
   ResponseJson,
@@ -306,6 +317,28 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       exampleStr = (StringUtils.isString(exampleStr) ? exampleStr : '') ?? '';
       this.addProperty(this.bitJson, PropertyKey.example, exampleStr, true);
     }
+  }
+
+  // bitmark -> bits -> bitsValue -> partner
+
+  protected enter_partner(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const partner = node.value as Partner;
+
+    // Ignore example that is not at the bit level as it are handled elsewhere
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const { name, avatarImage } = partner;
+
+    const partnerJson = {} as PartnerJson;
+    this.addProperty(partnerJson, 'name', name ?? '', true);
+    if (avatarImage) {
+      const res = this.parseResourceToJson(avatarImage);
+      if (res && res.type === ResourceType.image) {
+        partnerJson.avatarImage = res.image;
+      }
+    }
+
+    this.bitJson.partner = partnerJson;
   }
 
   // bitmark -> bits -> bitsValue -> sampleSolution
@@ -1708,6 +1741,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       // Only .learningPathExternalLink?
       isTracked: undefined,
       isInfoOnly: undefined,
+
+      // Partner .conversion-xxx only
+      partner: undefined,
 
       // Extra Properties
       extraProperties: undefined,

@@ -33,38 +33,40 @@ class BitJsonUtils {
           // if (!bit.example) delete bit.example;
           // if (!bit.isExample) delete bit.isExample;
 
-          // Clean bit resource
+          // Clean bit resource(s)
+          const resourcesToClean: any[] = [];
           if (bit.resource) {
-            delete bit.resource.private;
-
-            const resourcesToClean = [...Object.keys(bit.resource).map((key) => bit.resource[key])];
+            resourcesToClean.push(...Object.keys(bit.resource).map((key) => bit.resource[key]));
             if (bit.resource?.video?.posterImage) resourcesToClean.push(bit.resource.video.posterImage);
 
-            // Delete the defaults - ignored for testing
-            for (const resource of resourcesToClean) {
-              if (!resource.width) delete resource.width;
-              if (!resource.height) delete resource.height;
+            delete bit.resource.private;
+          }
+          if (bit.partner?.avatarImage) resourcesToClean.push(bit.partner.avatarImage);
 
-              if (!resource.license) delete resource.license;
-              if (!resource.copyright) delete resource.copyright;
-              if (!resource.provider) delete resource.provider;
-              if (!resource.showInIndex) delete resource.showInIndex;
-              if (!resource.caption) delete resource.caption;
-              if (!resource.duration) delete resource.duration;
+          // Delete the defaults - ignored for testing
+          for (const resource of resourcesToClean) {
+            if (!resource.width) delete resource.width;
+            if (!resource.height) delete resource.height;
 
-              if (!resource.allowSubtitles) delete resource.allowSubtitles;
-              if (!resource.showSubtitles) delete resource.showSubtitles;
-              if (!resource.autoplay) delete resource.autoplay;
-              if (!resource.mute) delete resource.mute;
-              if (!resource.alt) delete resource.alt;
+            if (!resource.license) delete resource.license;
+            if (!resource.copyright) delete resource.copyright;
+            if (!resource.provider) delete resource.provider;
+            if (!resource.showInIndex) delete resource.showInIndex;
+            if (!resource.caption) delete resource.caption;
+            if (!resource.duration) delete resource.duration;
 
-              if (!resource.href) delete resource.href;
-              if (!resource.siteName) delete resource.siteName;
+            if (!resource.allowSubtitles) delete resource.allowSubtitles;
+            if (!resource.showSubtitles) delete resource.showSubtitles;
+            if (!resource.autoplay) delete resource.autoplay;
+            if (!resource.mute) delete resource.mute;
+            if (!resource.alt) delete resource.alt;
 
-              // Ignore provider and format because they are generated (sometimes incorrectly by ANTLR parser)
-              delete resource.provider;
-              delete resource.format;
-            }
+            if (!resource.href) delete resource.href;
+            if (!resource.siteName) delete resource.siteName;
+
+            // Ignore provider and format because they are generated (sometimes incorrectly by ANTLR parser)
+            delete resource.provider;
+            delete resource.format;
           }
         }
 

@@ -88,6 +88,7 @@ export interface Bit {
   hint?: string;
   instruction?: string;
   example?: Property;
+  partner?: Partner;
   resource?: Resource;
   body?: Body;
   sampleSolution?: string[];
@@ -209,7 +210,113 @@ export interface Question {
   isShortAnswer?: boolean;
 }
 
+// Body
+
+export type Body = BodyPart[];
+export type BodyPart = BodyText | Gap | Select | Highlight;
+
+export interface BodyText {
+  bodyText: string;
+}
+
+// Footer
+
+export interface FooterText {
+  footerText: string;
+}
+
+// (chat) Partner
+export interface Partner {
+  name: string;
+  avatarImage?: ImageResource;
+}
+
+// Gap
+
+export interface Gap {
+  gap: {
+    solutions: string[];
+    itemLead?: ItemLead;
+    hint?: string;
+    instruction?: string;
+    example?: Example;
+    isCaseSensitive?: boolean;
+  };
+}
+
+// Select
+
+export interface Select {
+  select: {
+    prefix?: string;
+    options: SelectOption[];
+    postfix?: string;
+    itemLead?: ItemLead;
+    hint?: string;
+    instruction?: string;
+    example?: Example;
+    isCaseSensitive?: boolean;
+  };
+}
+
+export interface SelectOption {
+  text: string;
+  isCorrect: boolean;
+  itemLead?: ItemLead;
+  hint?: string;
+  instruction?: string;
+  example?: Example;
+  isCaseSensitive?: boolean;
+}
+
+// Highlight
+
+export interface Highlight {
+  highlight: {
+    prefix?: string;
+    texts: HighlightText[];
+    postfix?: string;
+    itemLead?: ItemLead;
+    hint?: string;
+    instruction?: string;
+    example?: Example;
+    isCaseSensitive?: boolean;
+  };
+}
+
+export interface HighlightText {
+  text: string;
+  isCorrect: boolean;
+  isHighlighted: boolean;
+  itemLead?: ItemLead;
+  hint?: string;
+  instruction?: string;
+  example?: Example;
+  isCaseSensitive?: boolean;
+}
+
+// Generic
+
+export interface ItemLead {
+  item?: string;
+  lead?: string;
+}
+
+export type Example = string | boolean;
+
+export interface Decision {
+  text: string;
+  isCorrect: boolean;
+  itemLead?: ItemLead;
+  hint?: string;
+  instruction?: string;
+  example?: Example;
+  isCaseSensitive?: boolean;
+}
+
+//
 // Resource
+//
 
 export interface Resource {
   type: ResourceTypeType;
@@ -360,106 +467,3 @@ export interface WebsiteLinkResource extends Resource {
   type: 'website-link';
   siteName?: string;
 }
-
-// Body
-
-export type Body = BodyPart[];
-export type BodyPart = BodyText | Gap | Select | Highlight;
-
-export interface BodyText {
-  bodyText: string;
-}
-
-// Footer
-
-export interface FooterText {
-  footerText: string;
-}
-
-// Gap
-
-export interface Gap {
-  gap: {
-    solutions: string[];
-    itemLead?: ItemLead;
-    hint?: string;
-    instruction?: string;
-    example?: Example;
-    isCaseSensitive?: boolean;
-  };
-}
-
-// Select
-
-export interface Select {
-  select: {
-    prefix?: string;
-    options: SelectOption[];
-    postfix?: string;
-    itemLead?: ItemLead;
-    hint?: string;
-    instruction?: string;
-    example?: Example;
-    isCaseSensitive?: boolean;
-  };
-}
-
-export interface SelectOption {
-  text: string;
-  isCorrect: boolean;
-  itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
-  example?: Example;
-  isCaseSensitive?: boolean;
-}
-
-// Highlight
-
-export interface Highlight {
-  highlight: {
-    prefix?: string;
-    texts: HighlightText[];
-    postfix?: string;
-    itemLead?: ItemLead;
-    hint?: string;
-    instruction?: string;
-    example?: Example;
-    isCaseSensitive?: boolean;
-  };
-}
-
-export interface HighlightText {
-  text: string;
-  isCorrect: boolean;
-  isHighlighted: boolean;
-  itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
-  example?: Example;
-  isCaseSensitive?: boolean;
-}
-
-// Generic
-
-export interface ItemLead {
-  item?: string;
-  lead?: string;
-}
-
-export type Example = string | boolean;
-
-export interface Decision {
-  text: string;
-  isCorrect: boolean;
-  itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
-  example?: Example;
-  isCaseSensitive?: boolean;
-}
-
-// protected validate(): void {
-//   Validator.isRequired(this.text, 'text');
-//   Validator.isRequired(this.isCorrect, 'isCorrect');
-// }

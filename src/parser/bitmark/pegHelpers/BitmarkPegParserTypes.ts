@@ -29,6 +29,8 @@ import {
   Resource,
   FooterText,
   BotResponse,
+  Partner,
+  ExtraProperties,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER = '===';
@@ -77,6 +79,7 @@ export interface BitContentProcessorResult {
   cardBody?: string;
   body?: Body;
   footer?: FooterText;
+  partner?: Partner;
   trueFalse?: TrueFalseValue[];
   example?: string;
   isCorrect?: boolean;
@@ -98,7 +101,7 @@ export interface BitContentProcessorResult {
   isShortAnswer?: boolean;
   isCaseSensitive?: boolean;
   reaction?: string;
-  extraProperties?: any;
+  extraProperties?: ExtraProperties;
 }
 
 export interface BitSpecificTitles {
@@ -160,6 +163,7 @@ const TypeKey = superenum({
   Hint: 'Hint',
   True: 'True',
   False: 'False',
+  PartnerChain: 'PartnerChain',
   GapChain: 'GapChain',
   TrueFalseChain: 'TrueFalseChain',
   Cloze: 'Cloze',
@@ -180,6 +184,7 @@ const BitContentLevel = superenum({
   Statement: 'Statement',
   Choice: 'Choice',
   Response: 'Response',
+  PartnerChain: 'PartnerChain',
   GapChain: 'GapChain',
   HighlightChain: 'HighlightChain',
   SelectChain: 'SelectChain',
@@ -201,6 +206,8 @@ export interface BitmarkPegParserContext {
   DEBUG_BIT_TAGS: boolean;
   DEBUG_BODY: boolean;
   DEBUG_FOOTER: boolean;
+  DEBUG_PARTNER_CONTENT: boolean;
+  DEBUG_PARTNER_TAGS: boolean;
   DEBUG_GAP_CONTENT: boolean;
   DEBUG_GAP_TAGS: boolean;
   DEBUG_SELECT_CONTENT: boolean;
