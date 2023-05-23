@@ -132,18 +132,18 @@ CardSet_V2
   = value: (CardSetStart_V2 Cards_V2* CardSetEnd_V2) { return helper.handleCardSet(value[1].flat()); }
 
 CardSetStart_V2
-  = NL "+++" NL &("===" NL) { helper.handleCardSetStart(); }
+  = NL "++" NL &("====" NL) { helper.handleCardSetStart(); }
 
 CardSetEnd_V2
-  = ("===" NL "+++" &EOL) { helper.handleCardSetEnd(); }
+  = ("====" NL "++" &EOL) { helper.handleCardSetEnd(); }
 
-// Matches anything that is NOT !("========" followed by anything except a !("========" to the EOF, so matches the
-// rest of the card set without consuming the final !("========" which is consumed by the CardSetEnd rule
+// Matches anything that is NOT !("====" followed by anything except a !("====" to the EOF, so matches the
+// rest of the card set without consuming the final !("====" which is consumed by the CardSetEnd rule
 Cards_V2
-  = !("===" (!(NL "===") .)* EOF) value: CardLineOrDivider_V2 { return helper.handleCards(value); }
+  = !("====" (!(NL "====") .)* EOF) value: CardLineOrDivider_V2 { return helper.handleCards(value); }
 
 CardLineOrDivider_V2
-  = value: ("===" NL / "---" NL / "~~~" NL / CardLine_V2) { return helper.handleCardLineOrDivider(value, 2); }
+  = value: ("====" NL / "--" NL / "~~" NL / CardLine_V2) { return helper.handleCardLineOrDivider(value, 2); }
 
 CardLine_V2
  = value: $(Line NL) { return helper.handleCardLine(value); }

@@ -1291,7 +1291,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     if (this.options.cardSetVersion === 1) {
       this.write('===');
     } else {
-      this.write('+++\n===');
+      this.write('++\n====');
     }
   }
 
@@ -1299,7 +1299,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     if (this.options.cardSetVersion === 1) {
       this.write('===');
     } else {
-      this.write('===\n+++');
+      this.write('====\n++');
     }
   }
 
@@ -1307,7 +1307,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     if (this.options.cardSetVersion === 1) {
       this.write('===');
     } else {
-      this.write('===');
+      this.write('====');
     }
   }
 
@@ -1315,7 +1315,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     if (this.options.cardSetVersion === 1) {
       this.write('==');
     } else {
-      this.write('---');
+      this.write('--');
     }
   }
 
@@ -1323,7 +1323,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     if (this.options.cardSetVersion === 1) {
       this.write('--');
     } else {
-      this.write('~~~');
+      this.write('~~');
     }
   }
 
