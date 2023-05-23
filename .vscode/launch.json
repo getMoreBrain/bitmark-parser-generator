@@ -113,7 +113,7 @@
       // "internalConsoleOptions": "openOnSessionStart",
       // "outFiles": ["${workspaceRoot}/dist/**/*"],
       // "envFile": "${workspaceRoot}/.env",
-    }
+    },
     {
       "type": "node",
       "request": "launch",
@@ -155,6 +155,6 @@
       // "internalConsoleOptions": "openOnSessionStart",
       // "outFiles": ["${workspaceRoot}/dist/**/*"],
       // "envFile": "${workspaceRoot}/.env",
-    },
+    }
   ]
 }

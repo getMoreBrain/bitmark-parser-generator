@@ -484,13 +484,13 @@ class Builder {
       key,
       keyAudio,
       keyImage,
-      values,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
       example,
       isCaseSensitive,
       isShortAnswer,
+      values,
     };
 
     // Remove Unset Optionals
