@@ -125,8 +125,8 @@
 | learning-path-video-call | ✅ | ❌ | ❌ | TO TEST |
 | mark | ✅ | ❌ | ❌ | TO TEST |
 | match | ✅ | ✅ | ✅ |  |
-| match-all | ✅ | ❌ | ❌ | TO TEST |
-| match-all-reverse | ✅ | ❌ | ❌ | TO TEST |
+| match-all | ✅ | ✅ | ✅ |  |
+| match-all-reverse | ✅ | ✅ | ✅ |  |
 | match-audio | ➖ | ➖ | ➖ | LEGACY? |
 | match-matrix | ✅ | ✅ | ✅ |  |
 | match-picture | ➖ | ➖ | ➖ | LEGACY? |
