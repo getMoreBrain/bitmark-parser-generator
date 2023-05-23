@@ -30,10 +30,10 @@ const DEBUG_TRACE_RESOURCE_TYPE = false; // The bit resource type (e.g. &image)
 const DEBUG_TRACE_BIT_CONTENT = false; // The content of the bit - verbose if a lot of body text
 const DEBUG_TRACE_STANDARD_TAGS_CHAIN = false; // Top level tag chains
 const DEBUG_TRACE_BIT_TAG = false; // Top level tags
-const DEBUG_TRACE_CARD_SET = false; // The content of the card set
-const DEBUG_TRACE_CARD_SET_START = false; // Start of a card set
-const DEBUG_TRACE_CARD_SET_END = false; // End of a card set
-const DEBUG_TRACE_CARD_LINE_OR_DIVIDER = false; // A card line or a card divider (=== / == / --)
+const DEBUG_TRACE_CARD_SET = true; // The content of the card set
+const DEBUG_TRACE_CARD_SET_START = true; // Start of a card set
+const DEBUG_TRACE_CARD_SET_END = true; // End of a card set
+const DEBUG_TRACE_CARD_LINE_OR_DIVIDER = true; // A card line or a card divider (=== / == / --)
 const DEBUG_TRACE_CARD_CONTENT = true; // The content of the card - verbose if a lot of card body text
 const DEBUG_TRACE_CARD_TAGS = false; // Tags within the content of a card
 const DEBUG_TRACE_RESOURCE_TAGS_CHAIN = false; // Resource tags chain
@@ -50,9 +50,12 @@ const DEBUG = ENABLE_DEBUG && process.env.NODE_ENV === 'development';
 
 import {
   BitContent,
-  CARD_DIVIDER,
-  CARD_SIDE_DIVIDER,
-  CARD_VARIANT_DIVIDER,
+  CARD_DIVIDER_V2,
+  CARD_SIDE_DIVIDER_V1,
+  CARD_VARIANT_DIVIDER_V1,
+  CARD_DIVIDER_V1,
+  CARD_VARIANT_DIVIDER_V2,
+  CARD_SIDE_DIVIDER_V2,
   CardData,
   ParserHelperOptions,
   TypeKey,
@@ -166,7 +169,7 @@ class BitmarkPegParserHelper {
     return value;
   }
 
-  handleCardLineOrDivider(value: unknown) {
+  handleCardLineOrDivider(value: unknown, version: number) {
     if (DEBUG_TRACE_CARD_LINE_OR_DIVIDER) this.debugPrint('CardLineOrDivider', value);
 
     let isCardDivider = false;
@@ -175,9 +178,15 @@ class BitmarkPegParserHelper {
 
     if (Array.isArray(value) && value.length === 2) {
       value = value[0];
-      isCardDivider = value === CARD_DIVIDER;
-      isSideDivider = value === CARD_SIDE_DIVIDER;
-      isVariantDivider = value === CARD_VARIANT_DIVIDER;
+      if (version === 1) {
+        isCardDivider = value === CARD_DIVIDER_V1;
+        isSideDivider = value === CARD_SIDE_DIVIDER_V1;
+        isVariantDivider = value === CARD_VARIANT_DIVIDER_V1;
+      } else {
+        isCardDivider = value === CARD_DIVIDER_V2;
+        isSideDivider = value === CARD_SIDE_DIVIDER_V2;
+        isVariantDivider = value === CARD_VARIANT_DIVIDER_V2;
+      }
     }
 
     if (isCardDivider) {

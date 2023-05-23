@@ -19,7 +19,7 @@ const jsonParser = new JsonParser();
 const ast = new Ast();
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 
-class BmgDevJson {
+class BmgDevGenerator {
   async test(debug?: boolean): Promise<void> {
     const filename = path.resolve(__dirname, '../../..', 'assets', 'test.json');
 
@@ -68,8 +68,8 @@ class BmgDevJson {
   }
 }
 
-const bmg = new BmgDevJson();
+const generator = new BmgDevGenerator();
 
-bmg.test(false).then(() => {
+generator.test(false).then(() => {
   // Done
 });

@@ -8,6 +8,7 @@
  */
 
 import { BitTypeType } from '../../../model/enum/BitType';
+import { CardSetTypeType } from '../../../model/enum/CardSetType';
 
 import {
   BitContent,
@@ -101,18 +102,18 @@ class BitmarkPegParserValidator {
     }
   }
 
-  validateCardSetRequired(
+  validateCardSetType(
     context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
     bitType: BitTypeType,
     cardSet: BitContent[] | undefined,
-    required: boolean,
+    cardSetType: CardSetTypeType | undefined,
   ): void {
-    if (cardSet && !required) {
+    if (cardSet && !cardSetType) {
       const parserData = Array.isArray(cardSet) && cardSet.length > 0 ? cardSet[0] : undefined;
       context.addWarning(`Bit '${bitType}' should not have a card set. It will be ignored`, parserData);
-    } else if (!cardSet && required) {
-      context.addWarning(`Bit '${bitType}' is missing the card set`);
+    } else if (!cardSet && cardSetType) {
+      context.addWarning(`Bit '${bitType}' is missing the card set. It should have a '${cardSetType}' type card set`);
     }
   }
 

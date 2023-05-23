@@ -1,9 +1,11 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
+import { CardSetType, CardSetTypeType } from './CardSetType';
 import { ResourceType, ResourceTypeType } from './ResourceType';
 
 export interface BitTypeMetadata {
   resourceType?: ResourceTypeType;
+  cardSetType?: CardSetTypeType;
 }
 
 const BitType = superenum({
@@ -123,6 +125,7 @@ const BitType = superenum({
   learningPathVideoCall: 'learning-path-video-call',
   mark: 'mark',
   match: 'match',
+  matchAll: 'match-all',
   matchAudio: 'match-audio',
   matchMatrix: 'match-matrix',
   matchPicture: 'match-picture',
@@ -188,27 +191,12 @@ BitType.setMetadata<BitTypeMetadata>(BitType.audioEmbed, {
 BitType.setMetadata<BitTypeMetadata>(BitType.audioLink, {
   resourceType: ResourceType.audioLink,
 });
+BitType.setMetadata<BitTypeMetadata>(BitType.botActionResponse, {
+  cardSetType: CardSetType.botActionResponses,
+});
 BitType.setMetadata<BitTypeMetadata>(BitType.browserImage, {
   resourceType: ResourceType.image,
 });
-// BitType.setMetadata<BitTypeMetadata>(BitType.conversationLeft1, {
-//     resourceType: ResourceType.image,
-// });
-// BitType.setMetadata<BitTypeMetadata>(BitType.conversationLeft1Scream, {
-//     resourceType: ResourceType.image,
-// });
-// BitType.setMetadata<BitTypeMetadata>(BitType.conversationLeft1Thought, {
-//     resourceType: ResourceType.image,
-// });
-// BitType.setMetadata<BitTypeMetadata>(BitType.conversationRight1, {
-//     resourceType: ResourceType.image,
-// });
-// BitType.setMetadata<BitTypeMetadata>(BitType.conversationRight1Scream, {
-//     resourceType: ResourceType.image,
-// });
-// BitType.setMetadata<BitTypeMetadata>(BitType.conversationRight1Thought, {
-//     resourceType: ResourceType.image,
-// });
 BitType.setMetadata<BitTypeMetadata>(BitType.document, {
   resourceType: ResourceType.document,
 });
@@ -233,11 +221,44 @@ BitType.setMetadata<BitTypeMetadata>(BitType.imageSuperWide, {
 BitType.setMetadata<BitTypeMetadata>(BitType.imageZoom, {
   resourceType: ResourceType.image,
 });
+BitType.setMetadata<BitTypeMetadata>(BitType.interview, {
+  cardSetType: CardSetType.questions,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.match, {
+  cardSetType: CardSetType.questions,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.matchAll, {
+  cardSetType: CardSetType.matchPairs,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.matchAudio, {
+  cardSetType: CardSetType.matchPairs,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.matchMatrix, {
+  cardSetType: CardSetType.matchMatrix,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.matchPicture, {
+  cardSetType: CardSetType.matchPairs,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.matchReverse, {
+  cardSetType: CardSetType.matchPairs,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.matchSolutionGrouped, {
+  cardSetType: CardSetType.matchPairs,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.multipleChoice, {
+  cardSetType: CardSetType.quiz,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.multipleResponse, {
+  cardSetType: CardSetType.quiz,
+});
 BitType.setMetadata<BitTypeMetadata>(BitType.photo, {
   resourceType: ResourceType.image,
 });
 BitType.setMetadata<BitTypeMetadata>(BitType.screenshot, {
   resourceType: ResourceType.image,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.sequence, {
+  cardSetType: CardSetType.elements,
 });
 BitType.setMetadata<BitTypeMetadata>(BitType.stillImageFilm, {
   resourceType: ResourceType.stillImageFilm,
@@ -247,6 +268,9 @@ BitType.setMetadata<BitTypeMetadata>(BitType.stillImageFilmEmbed, {
 });
 BitType.setMetadata<BitTypeMetadata>(BitType.stillImageFilmLink, {
   resourceType: ResourceType.stillImageFilmLink,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.trueFalse, {
+  cardSetType: CardSetType.statements,
 });
 BitType.setMetadata<BitTypeMetadata>(BitType.video, {
   resourceType: ResourceType.video,

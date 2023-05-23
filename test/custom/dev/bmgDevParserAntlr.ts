@@ -13,18 +13,15 @@ import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
 import { Ast } from '../../../src/ast/Ast';
 // import { BitmarkFileGenerator } from '../../..src/generator/bitmark/BitmarkFileGenerator';
 // import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
-import { JsonObjectGenerator } from '../../../src/generator/json/JsonObjectGenerator';
-import { BitmarkParserType } from '../../../src/model/enum/BitmarkParserType';
 import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
+import { JsonParser } from '../../../src/parser/json/JsonParser';
 
-// import { JsonParser } from '../../../src/parser/json/JsonParser';
-
-// const jsonParser = new JsonParser();
+const jsonParser = new JsonParser();
 const ast = new Ast();
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 const bitmarkParser = new BitmarkParser();
 
-class BmgDevBitmark {
+class BmgDevParserAntlr {
   async test(debug?: boolean): Promise<void> {
     const filename = path.resolve(__dirname, '../../..', 'assets', 'test.bit');
 
@@ -37,30 +34,32 @@ class BmgDevBitmark {
       // Preprocess and log
       console.log(`\n${bitStr}\n\n`);
 
-      // Generate AST from the Bitmark markup
-      const bitmarkAst = bitmarkParser.toAst(bitStr, {
-        parserType: BitmarkParserType.peggy,
-      });
-
-      // AST ==> Bitmark
-      const generator = new JsonObjectGenerator();
-      const json = await generator.generate(bitmarkAst);
+      // Bitmark ==> JSON
+      // Convert the bitmark to JSON
+      const json = bitmarkParser.parseUsingAntlr(bitStr);
       const jsonStr = JSON.stringify(json, undefined, 2);
+
+      // Convert the bitmark JSON to bitmark AST
+      const bitmarkAst = jsonParser.toAst(json);
 
       console.log(JSON.stringify(bitmarkAst, null, 2));
       ast.printTree(bitmarkAst);
 
       console.log(jsonStr);
     } else {
-      const res = await bitmarkParserGenerator.convert(filename);
-      const resStr = JSON.stringify(res, undefined, 2);
-      console.log(resStr);
+      const res = await bitmarkParserGenerator.convert(filename, {
+        bitmarkParserType: 'antlr',
+        jsonOptions: {
+          prettify: true,
+        },
+      });
+      console.log(res);
     }
   }
 }
 
-const bmg = new BmgDevBitmark();
+const parserAntlr = new BmgDevParserAntlr();
 
-bmg.test(true).then(() => {
+parserAntlr.test(false).then(() => {
   // Done
 });

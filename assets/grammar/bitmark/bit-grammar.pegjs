@@ -109,7 +109,7 @@ ResourceType
 
 // All bit content (tags, body, cards)
 BitContent
-  = value: (CardSet / GapTagsChain / TrueFalseTagsChain / PartnerTagsChain / StandardTagsChain / BodyChar)* { return helper.handleBitContent(value) }
+  = value: (CardSet_V2 / CardSet_V1 / GapTagsChain / TrueFalseTagsChain / PartnerTagsChain / StandardTagsChain / BodyChar)* { return helper.handleBitContent(value) }
 
 // Standard bit tags chain
 StandardTagsChain
@@ -127,25 +127,47 @@ BitTag
 BodyChar
   = value: . { return { type: TypeKey.BodyChar, value: value } }
 
-// CardSet
-CardSet
-  = value: (CardSetStart Cards* CardSetEnd) { return helper.handleCardSet(value[1].flat()); }
+// Modern CardSet
+CardSet_V2
+  = value: (CardSetStart_V2 Cards_V2* CardSetEnd_V2) { return helper.handleCardSet(value[1].flat()); }
 
-CardSetStart
+CardSetStart_V2
+  = NL "+++" NL &("===" NL) { helper.handleCardSetStart(); }
+
+CardSetEnd_V2
+  = ("===" NL "+++" &EOL) { helper.handleCardSetEnd(); }
+
+// Matches anything that is NOT !("========" followed by anything except a !("========" to the EOF, so matches the
+// rest of the card set without consuming the final !("========" which is consumed by the CardSetEnd rule
+Cards_V2
+  = !("===" (!(NL "===") .)* EOF) value: CardLineOrDivider_V2 { return helper.handleCards(value); }
+
+CardLineOrDivider_V2
+  = value: ("===" NL / "---" NL / "~~~" NL / CardLine_V2) { return helper.handleCardLineOrDivider(value, 2); }
+
+CardLine_V2
+ = value: $(Line NL) { return helper.handleCardLine(value); }
+
+
+// Legacy CardSet
+CardSet_V1
+  = value: (CardSetStart_V1 Cards_V1* CardSetEnd_V1) { return helper.handleCardSet(value[1].flat()); }
+
+CardSetStart_V1
   = NL &("===" NL) { helper.handleCardSetStart(); }
 
-CardSetEnd
+CardSetEnd_V1
   = ("===" &EOL) { helper.handleCardSetEnd(); }
 
 // Matches anything that is NOT '===' followed by anything except a '===' to the EOF, so matches the rest of the card
 // set without consuming the final '===' which is consumed by the CardSetEnd rule
-Cards
-  = !("===" (!(NL "===") .)* EOF) value: CardLineOrDivider { return helper.handleCards(value); }
+Cards_V1
+  = !("===" (!(NL "===") .)* EOF) value: CardLineOrDivider_V1 { return helper.handleCards(value); }
 
-CardLineOrDivider
-  = value: ("===" NL / "==" NL / "--" NL / CardLine) { return helper.handleCardLineOrDivider(value); }
+CardLineOrDivider_V1
+  = value: ("===" NL / "==" NL / "--" NL / CardLine_V1) { return helper.handleCardLineOrDivider(value, 1); }
 
-CardLine
+CardLine_V1
  = value: $(Line NL) { return helper.handleCardLine(value); }
 
 

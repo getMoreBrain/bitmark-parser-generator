@@ -27,6 +27,7 @@ import {
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
   // debugGenerationInline: true,
+  cardSetVersion: 2,
 };
 
 /**
@@ -37,7 +38,14 @@ export interface BitmarkOptions {
    * If true, always include bitmark text format even if it is 'bitmark--'
    * If false, only include bitmark text format if it is not 'bitmark--'
    */
+
   explicitTextFormat?: boolean;
+
+  /**
+   * Card set version to generate
+   */
+  cardSetVersion?: number;
+
   /**
    * [development only]
    * Generate debug information in the output.
@@ -343,7 +351,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> bitsValue -> elements
 
   protected enter_elements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
+    this.writeCardSetStart();
     this.writeNL();
   }
 
@@ -355,13 +363,13 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     _route: NodeInfo[],
   ): void {
     this.writeNL();
-    this.writeElementDivider();
+    this.writeCardSetVariantDivider();
     this.writeNL();
   }
 
   protected exit_elements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeNL();
-    this.writeMajorDivider();
+    this.writeCardSetEnd();
   }
 
   // bitmark -> bits -> bitsValue -> body -> bodyValue -> gap -> solutions
@@ -406,7 +414,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     const isStatementDivider = this.isStatementDivider(route);
 
     if (isStatementDivider) {
-      this.writeMajorDivider();
+      this.writeCardSetStart();
       this.writeNL();
     }
   }
@@ -422,7 +430,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (isStatementDivider) {
       this.writeNL();
-      this.writeMajorDivider();
+      this.writeCardSetCardDivider();
     }
     this.writeNL();
   }
@@ -432,7 +440,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (isStatementDivider) {
       this.writeNL();
-      this.writeMajorDivider();
+      this.writeCardSetEnd();
     }
   }
 
@@ -511,7 +519,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> bitsValue -> quizzes
 
   protected enter_quizzes(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
+    this.writeCardSetStart();
     this.writeNL();
   }
 
@@ -523,12 +531,12 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     _route: NodeInfo[],
   ): void {
     // this.writeNL();
-    this.writeMajorDivider();
+    this.writeCardSetCardDivider();
     this.writeNL();
   }
 
   protected exit_quizzes(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
+    this.writeCardSetEnd();
     this.writeNL();
   }
 
@@ -559,7 +567,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (!valid) return false;
 
-    this.writeMajorDivider();
+    this.writeCardSetStart();
     this.writeNL();
   }
 
@@ -571,7 +579,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     _route: NodeInfo[],
   ): void {
     this.writeNL();
-    this.writeMinorDivider();
+    this.writeCardSetEnd();
     this.writeNL();
   }
 
@@ -594,7 +602,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     _route: NodeInfo[],
   ): void {
     this.writeNL();
-    this.writeMinorDivider();
+    this.writeCardSetSideDivider();
     this.writeNL();
   }
 
@@ -605,7 +613,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> bitsValue -> pairs
 
   protected enter_pairs(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
+    this.writeCardSetStart();
     this.writeNL();
   }
 
@@ -617,13 +625,13 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     _route: NodeInfo[],
   ): void {
     this.writeNL();
-    this.writeMajorDivider();
+    this.writeCardSetCardDivider();
     this.writeNL();
   }
 
   protected exit_pairs(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeNL();
-    this.writeMajorDivider();
+    this.writeCardSetEnd();
     this.writeNL();
   }
 
@@ -662,7 +670,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> bitsValue -> matrix
 
   protected enter_matrix(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
+    this.writeCardSetStart();
     this.writeNL();
   }
 
@@ -674,13 +682,13 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     _route: NodeInfo[],
   ): void {
     this.writeNL();
-    this.writeMajorDivider();
+    this.writeCardSetCardDivider();
     this.writeNL();
   }
 
   protected exit_matrix(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeNL();
-    this.writeMajorDivider();
+    this.writeCardSetEnd();
     this.writeNL();
   }
 
@@ -703,7 +711,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
   protected enter_values(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeNL();
-    this.writeMinorDivider();
+    this.writeCardSetSideDivider();
     this.writeNL();
   }
 
@@ -715,14 +723,14 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     _route: NodeInfo[],
   ): void {
     this.writeNL();
-    this.writeElementDivider();
+    this.writeCardSetVariantDivider();
     this.writeNL();
   }
 
   // bitmark -> bits -> bitsValue -> questions
 
   protected enter_questions(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
+    this.writeCardSetStart();
     this.writeNL();
   }
 
@@ -733,12 +741,12 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
-    this.writeMajorDivider();
+    this.writeCardSetCardDivider();
     this.writeNL();
   }
 
   protected exit_questions(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeMajorDivider();
+    this.writeCardSetEnd();
     this.writeNL();
   }
 
@@ -1279,16 +1287,44 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     this.write('#');
   }
 
-  protected writeMajorDivider(): void {
-    this.write('===');
+  protected writeCardSetStart(): void {
+    if (this.options.cardSetVersion === 1) {
+      this.write('===');
+    } else {
+      this.write('+++\n===');
+    }
   }
 
-  protected writeMinorDivider(): void {
-    this.write('==');
+  protected writeCardSetEnd(): void {
+    if (this.options.cardSetVersion === 1) {
+      this.write('===');
+    } else {
+      this.write('===\n+++');
+    }
   }
 
-  protected writeElementDivider(): void {
-    this.write('--');
+  protected writeCardSetCardDivider(): void {
+    if (this.options.cardSetVersion === 1) {
+      this.write('===');
+    } else {
+      this.write('===');
+    }
+  }
+
+  protected writeCardSetSideDivider(): void {
+    if (this.options.cardSetVersion === 1) {
+      this.write('==');
+    } else {
+      this.write('---');
+    }
+  }
+
+  protected writeCardSetVariantDivider(): void {
+    if (this.options.cardSetVersion === 1) {
+      this.write('--');
+    } else {
+      this.write('~~~');
+    }
   }
 
   protected writeNL(): void {

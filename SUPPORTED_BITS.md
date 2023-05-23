@@ -160,8 +160,8 @@
 | statement | ➖ | ✅ | ✅ |  |
 | sticky-note | ✅ | ✅ | ✅ |  |
 | still-image-film | ✅ | ✅ | ✅ |  |
-| still-image-film-embed | ✅ | ❌ | ❌ | TODO: Same question as above |
-| still-image-film-link | ✅ | ❌ | ❌ | TODO: Same question as above |
+| still-image-film-embed | ✅ | ❌ | ❌ | TODO: Understand format |
+| still-image-film-link | ✅ | ❌ | ❌ | TODO: Understand format |
 | summary | ✅ | ✅ | ✅ |  |
 | survey | ✅ | ❌ | ❌ | TODO: This bit behaves the same as self-assessment in the ANTLR parser, but it seems wrong there |
 | survey-1 | ➖ | ➖ | ➖ | LEGACY? |
@@ -175,7 +175,7 @@
 | video | ✅ | ✅ | ✅ |  |
 | video-embed | ✅ | ✅ | ✅ |  |
 | video-landscape | ✅ | ✅ | ✅ |  |
-| video-link | ✅ | ❌ | ❌ | TODO: Not sure which resource type is correct, &video, or &video-link. Awaiting answer |
+| video-link | ✅ |  ✅ | ✅ |  |
 | video-portrait | ✅ | ✅ | ✅ |  |
 | warning | ✅ | ✅ | ✅ |  |
 | website-link | ✅ | ✅ | ✅ |  |

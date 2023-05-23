@@ -1,128 +1,113 @@
 [
   {
-    "bitmark": "[.match-all:bitmark++]\n[@id:92546]\n[%B2b]\n[!Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.]\n\n|remark\nhauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe\n\n\n===\n[%1]Beherbergung\n==\nUnterbringung\n--\nÜbernachtung\n===\n[%2]Herberge\n==\nHotel\n--\nUnterbringungsmöglichkeit\n===\n[%3]übernachten\n==\nlogieren\n--\nresidieren\n===\n[%4]überwiegend\n==\nhauptsächlich\n--\nweitgehend\n===\n[%5]einen guten Ruf haben\n==\neinen guten Namen haben\n--\nangesehen sein\n===",
     "bit": {
       "type": "match-all",
       "format": "bitmark++",
+      "id": ["92546"],
       "item": "B2b",
-      "heading": {},
+      "hint": "",
+      "instruction": "Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.",
+      "example": "",
+      "isExample": false,
+      "body": "|remark\nhauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe",
       "pairs": [
         {
           "key": "Beherbergung",
-          "values": [
-            "Unterbringung",
-            "Übernachtung"
-          ],
+          "values": ["Unterbringung", "Übernachtung"],
           "item": "1",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "Herberge",
-          "values": [
-            "Hotel",
-            "Unterbringungsmöglichkeit"
-          ],
+          "values": ["Hotel", "Unterbringungsmöglichkeit"],
           "item": "2",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "übernachten",
-          "values": [
-            "logieren",
-            "residieren"
-          ],
+          "values": ["logieren", "residieren"],
           "item": "3",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "überwiegend",
-          "values": [
-            "hauptsächlich",
-            "weitgehend"
-          ],
+          "values": ["hauptsächlich", "weitgehend"],
           "item": "4",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "einen guten Ruf haben",
-          "values": [
-            "einen guten Namen haben",
-            "angesehen sein"
-          ],
+          "values": ["einen guten Namen haben", "angesehen sein"],
           "item": "5",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         }
-      ],
-      "body": "|remark\n ◇ der kleinste Teil ◇ Ausstattung ◇  ◇  ◇  ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇  ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe\n\nUnterbringungHotellogierenhauptsächlicheinen guten Namen haben",
-      "id": [
-        "92546"
-      ],
-      "instruction": "Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden."
-    }
+      ]
+    },
+    "bitmark": "[.match-all:bitmark++]\n[@id:92546]\n[%B2b]\n[!Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.]\n\n|remark\nhauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe\n\n\n===\n[%1]Beherbergung\n==\nUnterbringung\n--\nÜbernachtung\n===\n[%2]Herberge\n==\nHotel\n--\nUnterbringungsmöglichkeit\n===\n[%3]übernachten\n==\nlogieren\n--\nresidieren\n===\n[%4]überwiegend\n==\nhauptsächlich\n--\nweitgehend\n===\n[%5]einen guten Ruf haben\n==\neinen guten Namen haben\n--\nangesehen sein\n==="
   },
   {
-    "bitmark": "[.match-all]\n[@id:324342]\n[%item][%Lead]\n[!Instruction]\n===\nHe will fix your laptop for you.\n==\nYour laptop will be fixed by him.\n--\nYour laptop will be fixed for you by him.\n===",
     "bit": {
       "type": "match-all",
       "format": "bitmark--",
+      "id": ["324342"],
       "item": "item",
-      "heading": {},
+      "lead": "Lead",
+      "hint": "",
+      "instruction": "Instruction",
+      "example": "",
+      "isExample": false,
+      "body": "",
       "pairs": [
         {
           "key": "He will fix your laptop for you.",
-          "values": [
-            "Your laptop will be fixed by him.",
-            "Your laptop will be fixed for you by him."
-          ],
+          "values": ["Your laptop will be fixed by him.", "Your laptop will be fixed for you by him."],
           "item": "",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         }
-      ],
-      "body": "",
-      "id": [
-        "324342"
-      ],
-      "lead": "Lead",
-      "instruction": "Instruction"
-    }
+      ]
+    },
+    "bitmark": "[.match-all]\n[@id:324342]\n[%item][%Lead]\n[!Instruction]\n===\nHe will fix your laptop for you.\n==\nYour laptop will be fixed by him.\n--\nYour laptop will be fixed for you by him.\n==="
   },
   {
-    "bitmark": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.[@example]\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.[@example]\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n===",
     "bit": {
       "type": "match-all",
       "format": "bitmark--",
       "item": "A18b",
-      "heading": {},
+      "hint": "",
+      "instruction": "Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.",
+      "example": "",
+      "isExample": false,
+      "body": "",
       "pairs": [
         {
           "key": "◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__",
@@ -133,202 +118,171 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": true,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__",
-          "values": [
-            "[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]",
-            "[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]"
-          ],
+          "values": ["", ""],
           "item": "",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__",
-          "values": [
-            "[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]",
-            "[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]"
-          ],
+          "values": ["", ""],
           "item": "",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__",
-          "values": [
-            "[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]",
-            "[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]"
-          ],
+          "values": ["", ""],
           "item": "",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__",
-          "values": [
-            "[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]",
-            "[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]"
-          ],
+          "values": ["", ""],
           "item": "",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__",
-          "values": [
-            "[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]",
-            "[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]"
-          ],
+          "values": ["", ""],
           "item": "",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__",
-          "values": [
-            "[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]",
-            "[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]"
-          ],
+          "values": ["", ""],
           "item": "",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         }
-      ],
-      "body": "",
-      "instruction": "Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel."
-    }
+      ]
+    },
+    "bitmark": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.[@example]\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.[@example]\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n==="
   },
   {
-    "bitmark": "[.match-all:bitmark++]\n[%B2b ]\n[!Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.]\n\n::remark::\nhauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe\n::\n\n===\n[%1]Beherbergung\n==\nUnterbringung\n--\nÜbernachtung\n===\n[%2]Herberge\n==\nHotel\n--\nUnterbringungsmöglichkeit\n===\n[%3]übernachten\n==\nlogieren\n--\nresidieren\n===\n[%4]überwiegend\n==\nhauptsächlich\n--\nweitgehend\n===\n[%5]einen guten Ruf haben\n==\neinen guten Namen haben\n--\nangesehen sein\n===",
     "bit": {
       "type": "match-all",
       "format": "bitmark++",
       "item": "B2b",
-      "heading": {},
+      "hint": "",
+      "instruction": "Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.",
+      "example": "",
+      "isExample": false,
+      "body": "::remark::\nhauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe\n::",
       "pairs": [
         {
           "key": "Beherbergung",
-          "values": [
-            "Unterbringung",
-            "Übernachtung"
-          ],
+          "values": ["Unterbringung", "Übernachtung"],
           "item": "1",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "Herberge",
-          "values": [
-            "Hotel",
-            "Unterbringungsmöglichkeit"
-          ],
+          "values": ["Hotel", "Unterbringungsmöglichkeit"],
           "item": "2",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "übernachten",
-          "values": [
-            "logieren",
-            "residieren"
-          ],
+          "values": ["logieren", "residieren"],
           "item": "3",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "überwiegend",
-          "values": [
-            "hauptsächlich",
-            "weitgehend"
-          ],
+          "values": ["hauptsächlich", "weitgehend"],
           "item": "4",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "einen guten Ruf haben",
-          "values": [
-            "einen guten Namen haben",
-            "angesehen sein"
-          ],
+          "values": ["einen guten Namen haben", "angesehen sein"],
           "item": "5",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         }
-      ],
-      "body": "::remark::\n ◇ der kleinste Teil ◇ Ausstattung ◇  ◇  ◇  ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇  ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe\n::\nUnterbringungHotellogierenhauptsächlicheinen guten Namen haben",
-      "instruction": "Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden."
-    }
+      ]
+    },
+    "bitmark": "[.match-all:bitmark++]\n[%B2b ]\n[!Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.]\n\n::remark::\nhauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe\n::\n\n===\n[%1]Beherbergung\n==\nUnterbringung\n--\nÜbernachtung\n===\n[%2]Herberge\n==\nHotel\n--\nUnterbringungsmöglichkeit\n===\n[%3]übernachten\n==\nlogieren\n--\nresidieren\n===\n[%4]überwiegend\n==\nhauptsächlich\n--\nweitgehend\n===\n[%5]einen guten Ruf haben\n==\neinen guten Namen haben\n--\nangesehen sein\n==="
   },
   {
-    "bitmark": "[.match-all]\n[%C11]\n[!Bilden Sie Fragen und antworten Sie wie im Beispiel.]\n\nKannst Du ...?\n\n===\n◇ ich – dein Bleistift – mal – leihen\n==\nKannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir.[@example]\n===\n[%1]die Gäste – das Restaurant Milano – auf dem Stadtplan – zeigen\n==\nKannst du den Gästen auf dem Stadtplan das Restaurant „Milano“ zeigen?\n--\nJa, ich zeige es ihnen.\n===\n[%2]die Firma Krüger – das Angebot – faxen\n==\nKannst du der Firma Krüger das Angebot faxen?\n--\nJa, ich faxe es ihr.\n===\n[%3]ich – die Hausarbeit – am Wochenende – abnehmen\n==\nKannst du mir am Wochenende die Hausarbeit abnehmen?\n--\nJa, ich nehme sie dir ab.\n===\n[%4]der Chef – das Protokoll der Sitzung – heute noch – geben\n==\nKannst du dem Chef heute noch das Protokoll der Sitzung geben?\n--\nJa, ich gebe es ihm.\n===\n[%5]ich – dein Auto – schenken\n==\nKannst du mir dein Auto schenken?\n--\nNein, ich schenke es dir nicht.\n===\n[%6]wir – zwei Flaschen Mineralwasser – mitbringen\n==\nKannst du uns zwei Flaschen Mineralwasser mitbringen?\n--\nJa, ich bringe sie euch mit.\n===",
     "bit": {
       "type": "match-all",
       "format": "bitmark--",
       "item": "C11",
-      "heading": {},
+      "hint": "",
+      "instruction": "Bilden Sie Fragen und antworten Sie wie im Beispiel.",
+      "example": "",
+      "isExample": false,
+      "body": "Kannst Du ...?",
       "pairs": [
         {
           "key": "◇ ich – dein Bleistift – mal – leihen",
-          "values": [
-            "Kannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir."
-          ],
+          "values": ["Kannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir."],
           "item": "",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": true,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
@@ -340,84 +294,68 @@
           "item": "1",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "die Firma Krüger – das Angebot – faxen",
-          "values": [
-            "Kannst du der Firma Krüger das Angebot faxen?",
-            "Ja, ich faxe es ihr."
-          ],
+          "values": ["Kannst du der Firma Krüger das Angebot faxen?", "Ja, ich faxe es ihr."],
           "item": "2",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "ich – die Hausarbeit – am Wochenende – abnehmen",
-          "values": [
-            "Kannst du mir am Wochenende die Hausarbeit abnehmen?",
-            "Ja, ich nehme sie dir ab."
-          ],
+          "values": ["Kannst du mir am Wochenende die Hausarbeit abnehmen?", "Ja, ich nehme sie dir ab."],
           "item": "3",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "der Chef – das Protokoll der Sitzung – heute noch – geben",
-          "values": [
-            "Kannst du dem Chef heute noch das Protokoll der Sitzung geben?",
-            "Ja, ich gebe es ihm."
-          ],
+          "values": ["Kannst du dem Chef heute noch das Protokoll der Sitzung geben?", "Ja, ich gebe es ihm."],
           "item": "4",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "ich – dein Auto – schenken",
-          "values": [
-            "Kannst du mir dein Auto schenken?",
-            "Nein, ich schenke es dir nicht."
-          ],
+          "values": ["Kannst du mir dein Auto schenken?", "Nein, ich schenke es dir nicht."],
           "item": "5",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         },
         {
           "key": "wir – zwei Flaschen Mineralwasser – mitbringen",
-          "values": [
-            "Kannst du uns zwei Flaschen Mineralwasser mitbringen?",
-            "Ja, ich bringe sie euch mit."
-          ],
+          "values": ["Kannst du uns zwei Flaschen Mineralwasser mitbringen?", "Ja, ich bringe sie euch mit."],
           "item": "6",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
           "example": "",
+          "isCaseSensitive": true,
           "isLongAnswer": false
         }
-      ],
-      "body": "Kannst Du ...?",
-      "instruction": "Bilden Sie Fragen und antworten Sie wie im Beispiel."
-    }
+      ]
+    },
+    "bitmark": "[.match-all]\n[%C11]\n[!Bilden Sie Fragen und antworten Sie wie im Beispiel.]\n\nKannst Du ...?\n\n===\n◇ ich – dein Bleistift – mal – leihen\n==\nKannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir.[@example]\n===\n[%1]die Gäste – das Restaurant Milano – auf dem Stadtplan – zeigen\n==\nKannst du den Gästen auf dem Stadtplan das Restaurant „Milano“ zeigen?\n--\nJa, ich zeige es ihnen.\n===\n[%2]die Firma Krüger – das Angebot – faxen\n==\nKannst du der Firma Krüger das Angebot faxen?\n--\nJa, ich faxe es ihr.\n===\n[%3]ich – die Hausarbeit – am Wochenende – abnehmen\n==\nKannst du mir am Wochenende die Hausarbeit abnehmen?\n--\nJa, ich nehme sie dir ab.\n===\n[%4]der Chef – das Protokoll der Sitzung – heute noch – geben\n==\nKannst du dem Chef heute noch das Protokoll der Sitzung geben?\n--\nJa, ich gebe es ihm.\n===\n[%5]ich – dein Auto – schenken\n==\nKannst du mir dein Auto schenken?\n--\nNein, ich schenke es dir nicht.\n===\n[%6]wir – zwei Flaschen Mineralwasser – mitbringen\n==\nKannst du uns zwei Flaschen Mineralwasser mitbringen?\n--\nJa, ich bringe sie euch mit.\n==="
   }
 ]

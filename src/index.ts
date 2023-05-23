@@ -50,7 +50,7 @@ STRIP;
 // Type only exports
 //
 
-export type { ConvertOptions, OutputType } from './BitmarkParserGenerator';
+export type { ConvertOptions, PrettifyOptions, OutputType } from './BitmarkParserGenerator';
 export type { FileOptions } from './ast/writer/FileWriter';
 export type { BitmarkOptions } from './generator/bitmark/BitmarkGenerator';
 export type { JsonOptions } from './generator/json/JsonGenerator';

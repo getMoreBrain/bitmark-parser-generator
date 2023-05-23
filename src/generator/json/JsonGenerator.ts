@@ -101,11 +101,23 @@ export interface JsonOptions {
   /**
    * Prettify the JSON.
    *
-   * If not set, JSON will not be prettified.
+   * If not set or false, JSON will not be prettified.
    * If true, JSON will be prettified with an indent of 2.
    * If a positive integer, JSON will be prettified with an indent of this number.
+   *
+   * If prettify is set, a string will be returned if possible.
    */
   prettify?: boolean | number;
+
+  /**
+   * Stringify the JSON.
+   *
+   * If not set or false, JSON will be returned as a plain JS object.
+   * It true, JSON will be stringified.
+   *
+   * If prettify is set, it will override this setting.
+   */
+  stringify?: boolean;
 
   /**
    * [development only]

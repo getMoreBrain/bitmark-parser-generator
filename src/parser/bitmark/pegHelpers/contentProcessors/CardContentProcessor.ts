@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Builder } from '../../../../ast/Builder';
 import { CardSet } from '../../../../model/ast/CardSet';
-import { BitType, BitTypeType } from '../../../../model/enum/BitType';
+import { BitType, BitTypeMetadata, BitTypeType } from '../../../../model/enum/BitType';
+import { CardSetType } from '../../../../model/enum/CardSetType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
@@ -86,57 +87,48 @@ function buildCards(
 
   // Parse the card contents
   let result: BitSpecificCards = {};
-  let requireCardSet = true;
 
-  switch (bitType) {
-    case BitType.sequence:
+  // Get the bit metadata to check how to parse the card set
+  const meta = BitType.getMetadata<BitTypeMetadata>(bitType) ?? {};
+  const cardSetType = meta.cardSetType;
+
+  switch (cardSetType) {
+    case CardSetType.elements:
       result = parseElements(context, bitType, cardSet);
       break;
 
-    case BitType.trueFalse:
+    case CardSetType.statements:
       result = parseStatements(context, bitType, cardSet, statementV1, statementsV1);
       break;
 
-    case BitType.multipleChoice:
-    case BitType.multipleResponse:
+    case CardSetType.quiz:
       result = parseQuiz(context, bitType, cardSet, choicesV1, responsesV1);
       break;
 
-    case BitType.interview:
+    case CardSetType.questions:
       result = parseQuestions(context, bitType, cardSet);
       break;
 
-    case BitType.match:
-    case BitType.matchSolutionGrouped:
-    case BitType.matchReverse:
-    case BitType.matchAudio:
-    case BitType.matchPicture:
+    case CardSetType.matchPairs:
       // ==> heading / pairs
       result = parseMatchPairs(context, bitType, cardSet);
       break;
 
-    case BitType.matchMatrix:
+    case CardSetType.matchMatrix:
       // ==> heading / matrix
       result = parseMatchMatrix(context, bitType, cardSet);
       break;
 
-    case BitType.botActionResponse:
-      result = parseBotResponses(context, bitType, cardSet);
+    case CardSetType.botActionResponses:
+      result = parseBotActionResponses(context, bitType, cardSet);
       break;
 
     default:
-      requireCardSet = false;
     // Return default empty object
   }
 
   // Validate card set required and present, or not required and not present
-  BitmarkPegParserValidator.validateCardSetRequired(
-    context,
-    BitContentLevel.Bit,
-    bitType,
-    cardSetContent,
-    requireCardSet,
-  );
+  BitmarkPegParserValidator.validateCardSetType(context, BitContentLevel.Bit, bitType, cardSetContent, cardSetType);
 
   return result;
 }
@@ -567,7 +559,11 @@ function parseMatchMatrix(context: BitmarkPegParserContext, bitType: BitTypeType
   };
 }
 
-function parseBotResponses(context: BitmarkPegParserContext, bitType: BitTypeType, cardSet: CardSet): BitSpecificCards {
+function parseBotActionResponses(
+  context: BitmarkPegParserContext,
+  bitType: BitTypeType,
+  cardSet: CardSet,
+): BitSpecificCards {
   const botResponses: BotResponse[] = [];
 
   for (const card of cardSet.cards) {

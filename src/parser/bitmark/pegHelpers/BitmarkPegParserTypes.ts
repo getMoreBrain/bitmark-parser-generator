@@ -33,9 +33,13 @@ import {
   ExtraProperties,
 } from '../../../model/ast/Nodes';
 
-const CARD_DIVIDER = '===';
-const CARD_SIDE_DIVIDER = '==';
-const CARD_VARIANT_DIVIDER = '--';
+const CARD_DIVIDER_V2 = '===';
+const CARD_SIDE_DIVIDER_V2 = '---';
+const CARD_VARIANT_DIVIDER_V2 = '~~~';
+
+const CARD_DIVIDER_V1 = '===';
+const CARD_SIDE_DIVIDER_V1 = '==';
+const CARD_VARIANT_DIVIDER_V1 = '--';
 
 export interface ParseOptions {
   filename?: string;
@@ -238,4 +242,13 @@ export interface BitmarkPegParserContext {
   debugPrint(header: string, data: unknown): void;
 }
 
-export { TypeKey, BitContentLevel, CARD_DIVIDER, CARD_SIDE_DIVIDER, CARD_VARIANT_DIVIDER };
+export {
+  TypeKey,
+  BitContentLevel,
+  CARD_DIVIDER_V2,
+  CARD_SIDE_DIVIDER_V2,
+  CARD_VARIANT_DIVIDER_V2,
+  CARD_DIVIDER_V1,
+  CARD_SIDE_DIVIDER_V1,
+  CARD_VARIANT_DIVIDER_V1,
+};
