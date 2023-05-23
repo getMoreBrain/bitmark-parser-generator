@@ -225,6 +225,9 @@ BitType.setMetadata<BitTypeMetadata>(BitType.imageZoom, {
 BitType.setMetadata<BitTypeMetadata>(BitType.interview, {
   cardSetType: CardSetType.questions,
 });
+BitType.setMetadata<BitTypeMetadata>(BitType.interviewInstructionGrouped, {
+  cardSetType: CardSetType.questions,
+});
 BitType.setMetadata<BitTypeMetadata>(BitType.match, {
   cardSetType: CardSetType.questions,
 });

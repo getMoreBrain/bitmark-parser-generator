@@ -110,7 +110,7 @@
 | info | ✅ | ✅ | ✅ |  |
 | internal-link | ✅ | ✅ | ✅ |  |
 | interview | ✅ | ✅ | ✅ |  |
-| interview-instruction-grouped | ✅ | ❌ | ❌ | TO TEST |
+| interview-instruction-grouped | ✅ | ✅ | ✅ |  |
 | learning-path-book | ✅ | ❌ | ❌ | TO TEST |
 | learning-path-bot-training | ➖ | ➖ | ➖ | LEGACY? |
 | learning-path-classroom-event | ✅ | ❌ | ❌ | TO TEST |

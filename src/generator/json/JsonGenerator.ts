@@ -1894,6 +1894,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         break;
 
       case BitType.interview:
+      case BitType.interviewInstructionGrouped:
         if (bitJson.item == null) bitJson.item = '';
         if (bitJson.hint == null) bitJson.hint = '';
         if (bitJson.instruction == null) bitJson.instruction = '';
