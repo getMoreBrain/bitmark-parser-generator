@@ -5,11 +5,9 @@
       "format": "bitmark++",
       "id": ["92546"],
       "item": "B2b",
-      "hint": "",
       "instruction": "Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.",
-      "example": "",
-      "isExample": false,
       "body": "|remark\nhauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe",
+      "heading": {},
       "pairs": [
         {
           "key": "Beherbergung",
@@ -77,11 +75,9 @@
       "id": ["324342"],
       "item": "item",
       "lead": "Lead",
-      "hint": "",
       "instruction": "Instruction",
-      "example": "",
-      "isExample": false,
       "body": "",
+      "heading": {},
       "pairs": [
         {
           "key": "He will fix your laptop for you.",
@@ -103,11 +99,9 @@
       "type": "match-all",
       "format": "bitmark--",
       "item": "A18b",
-      "hint": "",
       "instruction": "Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.",
-      "example": "",
-      "isExample": false,
       "body": "",
+      "heading": {},
       "pairs": [
         {
           "key": "◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__",
@@ -198,11 +192,9 @@
       "type": "match-all",
       "format": "bitmark++",
       "item": "B2b",
-      "hint": "",
       "instruction": "Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.",
-      "example": "",
-      "isExample": false,
       "body": "::remark::\nhauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe\n::",
+      "heading": {},
       "pairs": [
         {
           "key": "Beherbergung",
@@ -268,11 +260,9 @@
       "type": "match-all",
       "format": "bitmark--",
       "item": "C11",
-      "hint": "",
       "instruction": "Bilden Sie Fragen und antworten Sie wie im Beispiel.",
-      "example": "",
-      "isExample": false,
       "body": "Kannst Du ...?",
+      "heading": {},
       "pairs": [
         {
           "key": "◇ ich – dein Bleistift – mal – leihen",

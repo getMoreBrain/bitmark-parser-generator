@@ -1905,6 +1905,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       case BitType.match:
       case BitType.matchReverse:
       case BitType.matchSolutionGrouped:
+      case BitType.matchAll:
+      case BitType.matchAllReverse:
         if (bitJson.item == null) bitJson.item = '';
         if (bitJson.heading == null) bitJson.heading = {} as HeadingJson;
         if (bitJson.body == null) bitJson.body = '';

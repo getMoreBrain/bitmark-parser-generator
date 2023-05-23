@@ -126,6 +126,7 @@ const BitType = superenum({
   mark: 'mark',
   match: 'match',
   matchAll: 'match-all',
+  matchAllReverse: 'match-all-reverse',
   matchAudio: 'match-audio',
   matchMatrix: 'match-matrix',
   matchPicture: 'match-picture',
@@ -228,6 +229,9 @@ BitType.setMetadata<BitTypeMetadata>(BitType.match, {
   cardSetType: CardSetType.questions,
 });
 BitType.setMetadata<BitTypeMetadata>(BitType.matchAll, {
+  cardSetType: CardSetType.matchPairs,
+});
+BitType.setMetadata<BitTypeMetadata>(BitType.matchAllReverse, {
   cardSetType: CardSetType.matchPairs,
 });
 BitType.setMetadata<BitTypeMetadata>(BitType.matchAudio, {
