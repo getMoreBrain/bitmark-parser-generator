@@ -1,10 +1,21 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-import { CardSetType, CardSetTypeType } from './CardSetType';
-import { ResourceType, ResourceTypeType } from './ResourceType';
+import { CardSetTypeType } from './CardSetType';
+import { ResourceTypeType } from './ResourceType';
+import { TagChainTypeType } from './TagChainType';
+import { TagTypeType } from './TagType';
 
 export interface BitTypeMetadata {
+  // Tags and Tag chains that are valid for this bit type
+  tags: (TagTypeType | PropertyKey | TagChainTypeType)[];
+
+  // Is a resource attachment allowed (e.g. not for [.image], but for [.article&image])
+  resourceAttachmentAllowed: boolean;
+
+  // Resource type that is valid for this bit type
   resourceType?: ResourceTypeType;
+
+  // Type of card set that is valid for this bit type (if any)
   cardSetType?: CardSetTypeType;
 }
 
@@ -102,7 +113,6 @@ const BitType = superenum({
   highlightText: 'highlight-text',
   hint: 'hint',
   image: 'image',
-  imageEmbed: 'image-embed',
   imageLink: 'image-link',
   imagePrototype: 'image-prototype',
   imageSuperWide: 'image-super-wide',
@@ -178,128 +188,6 @@ const BitType = superenum({
   warning: 'warning',
   websiteLink: 'website-link',
   workbookArticle: 'workbook-article',
-});
-
-// Set metadata on the bit types to describe specific behaviour
-
-BitType.setMetadata<BitTypeMetadata>(BitType.audio, {
-  resourceType: ResourceType.audio,
-});
-
-BitType.setMetadata<BitTypeMetadata>(BitType.audioEmbed, {
-  resourceType: ResourceType.audioEmbed,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.audioLink, {
-  resourceType: ResourceType.audioLink,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.botActionResponse, {
-  cardSetType: CardSetType.botActionResponses,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.browserImage, {
-  resourceType: ResourceType.image,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.document, {
-  resourceType: ResourceType.document,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.documentDownload, {
-  resourceType: ResourceType.documentDownload,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.documentLink, {
-  resourceType: ResourceType.documentLink,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.focusImage, {
-  resourceType: ResourceType.image,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.imageLink, {
-  resourceType: ResourceType.imageLink,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.imagePrototype, {
-  resourceType: ResourceType.image,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.imageSuperWide, {
-  resourceType: ResourceType.image,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.imageZoom, {
-  resourceType: ResourceType.image,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.interview, {
-  cardSetType: CardSetType.questions,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.interviewInstructionGrouped, {
-  cardSetType: CardSetType.questions,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.match, {
-  cardSetType: CardSetType.questions,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.matchAll, {
-  cardSetType: CardSetType.matchPairs,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.matchAllReverse, {
-  cardSetType: CardSetType.matchPairs,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.matchAudio, {
-  cardSetType: CardSetType.matchPairs,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.matchMatrix, {
-  cardSetType: CardSetType.matchMatrix,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.matchPicture, {
-  cardSetType: CardSetType.matchPairs,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.matchReverse, {
-  cardSetType: CardSetType.matchPairs,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.matchSolutionGrouped, {
-  cardSetType: CardSetType.matchPairs,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.multipleChoice, {
-  cardSetType: CardSetType.quiz,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.multipleResponse, {
-  cardSetType: CardSetType.quiz,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.photo, {
-  resourceType: ResourceType.image,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.screenshot, {
-  resourceType: ResourceType.image,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.sequence, {
-  cardSetType: CardSetType.elements,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.stillImageFilm, {
-  resourceType: ResourceType.stillImageFilm,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.stillImageFilmEmbed, {
-  resourceType: ResourceType.stillImageFilmEmbed,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.stillImageFilmLink, {
-  resourceType: ResourceType.stillImageFilmLink,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.trueFalse, {
-  cardSetType: CardSetType.statements,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.video, {
-  resourceType: ResourceType.video,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.videoEmbed, {
-  resourceType: ResourceType.videoEmbed,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.videoLandscape, {
-  resourceType: ResourceType.video,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.videoLink, {
-  resourceType: ResourceType.videoLink,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.videoPortrait, {
-  resourceType: ResourceType.video,
-});
-BitType.setMetadata<BitTypeMetadata>(BitType.websiteLink, {
-  resourceType: ResourceType.websiteLink,
-});
-
-BitType.setMetadata<BitTypeMetadata>(BitType.image, {
-  resourceType: ResourceType.image,
 });
 
 export type BitTypeType = EnumType<typeof BitType>;

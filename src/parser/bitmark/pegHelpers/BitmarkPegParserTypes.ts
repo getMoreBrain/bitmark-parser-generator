@@ -179,6 +179,9 @@ const TypeKey = superenum({
   CardChar: 'CardChar',
   CardText: 'CardText',
   Comment: 'Comment',
+
+  // Chains
+  TagChain: 'TagChain',
 });
 
 export type TypeKeyType = EnumType<typeof TypeKey>;
