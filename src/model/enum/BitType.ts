@@ -1,27 +1,32 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
+import { TagDataMap } from '../config/TagData';
+
 import { CardSetTypeType } from './CardSetType';
 import { ResourceTypeType } from './ResourceType';
-import { TagChainTypeType } from './TagChainType';
-import { TagTypeType } from './TagType';
 
 export interface BitTypeMetadata {
-  // Tags and Tag chains that are valid for this bit type
-  tags: (TagTypeType | PropertyKey | TagChainTypeType)[];
+  // Tags, Property Tags, and Tag chains that are valid for this bit type
+  tags: TagDataMap;
 
   // Is a resource attachment allowed (e.g. not for [.image], but for [.article&image])
-  resourceAttachmentAllowed: boolean;
+  // (default: false)
+  resourceAttachmentAllowed?: boolean;
 
   // Resource type that is valid for this bit type
   resourceType?: ResourceTypeType;
 
   // Type of card set that is valid for this bit type (if any)
   cardSetType?: CardSetTypeType;
+
+  // Is a body allowed? (default: false)
+  bodyAllowed?: boolean;
 }
 
 const BitType = superenum({
   _error: '_error', // Used for error handling to indicate a bit type that is not supported or a bit parse error
   anchor: 'anchor',
+  appLink: 'app-link',
   article: 'article',
   articleAttachment: 'article-attachment',
   articleEmbed: 'article-embed',

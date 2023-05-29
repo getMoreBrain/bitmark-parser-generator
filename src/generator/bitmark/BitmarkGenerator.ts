@@ -651,7 +651,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
   // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> keyAudio
 
-  protected enter_keyAudio(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+  protected enter_keyAudio(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const resource = node.value as Resource;
 
     // This is a resource, so handle it with the common code
@@ -660,7 +660,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
   // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> keyImage
 
-  protected enter_keyImage(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+  protected enter_keyImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const resource = node.value as Resource;
 
     // This is a resource, so handle it with the common code
@@ -770,7 +770,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
   // bitmark -> bits -> bitsValue -> resource
 
-  protected enter_resource(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+  protected enter_resource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const resource = node.value as Resource;
 
     // This is a resource, so handle it with the common code

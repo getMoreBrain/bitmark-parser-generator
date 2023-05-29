@@ -84,6 +84,7 @@ import { buildResource, resourceContentProcessor } from './contentProcessors/Res
 import { buildTitles, titleTagContentProcessor } from './contentProcessors/TitleTagContentProcessor';
 import { trueFalseChainContentProcessor } from './contentProcessors/TrueFalseChainContentProcessor';
 import { trueFalseTagContentProcessor } from './contentProcessors/TrueFalseTagContentProcessor';
+import { referenceTagContentProcessor } from './contentProcessors/referenceTagContentProcessor';
 
 import {
   BitContent,
@@ -111,18 +112,8 @@ const DEBUG_BIT_CONTENT = true; // Print the top level parsed bit content (with 
 const DEBUG_BIT_TAGS = true; // Print the tags extracted from the bit parsed content
 const DEBUG_BODY = true; // Print the final parsed body
 const DEBUG_FOOTER = true; // Print the final parsed footer
-const DEBUG_PARTNER_CONTENT = true; // Print the parsed partner content
-const DEBUG_PARTNER_TAGS = true; // Print the tags extracted from the parsed partner content
-const DEBUG_GAP_CONTENT = true; // Print the parsed gap content
-const DEBUG_GAP_TAGS = true; // Print the tags extracted from the parsed gap content
-const DEBUG_SELECT_CONTENT = true; // Print the parsed select content (true/false v2)
-const DEBUG_SELECT_TAGS = true; // Print the tags extracted from the parsed select content (true/false v2)
-const DEBUG_HIGHLIGHT_CONTENT = true; // Print the parsed select content (highlight text)
-const DEBUG_HIGHLIGHT_TAGS = true; // Print the tags extracted from the parsed select content (highlight text)
-const DEBUG_TRUE_FALSE_V1_CONTENT = true; // Print the parsed true/false (v1) content
-const DEBUG_TRUE_FALSE_V1_TAGS = true; // Print the tags extracted from the parsed true/false (v1) content
-const DEBUG_CHOICE_RESPONSE_V1_CONTENT = true; // Print the parsed choices/responses content
-const DEBUG_CHOICE_RESPONSE_V1_TAGS = true; // Print the tags extracted from the parsed choices/responses content
+const DEBUG_CHAIN_CONTENT = true; // Print the parsed chain content
+const DEBUG_CHAIN_TAGS = true; // Print the tags extracted from the parsed chain content
 const DEBUG_CARD_SET_CONTENT = true; // Print the parsed card set content
 const DEBUG_CARD_SET = true; // Print the card set built from the parsed card set content
 const DEBUG_CARD_PARSED = true; // Print the parsed card (will create a lot of output if card value is large)
@@ -159,18 +150,8 @@ class BitmarkPegParserProcessor {
       DEBUG_BIT_TAGS,
       DEBUG_BODY,
       DEBUG_FOOTER,
-      DEBUG_PARTNER_CONTENT,
-      DEBUG_PARTNER_TAGS,
-      DEBUG_GAP_CONTENT,
-      DEBUG_GAP_TAGS,
-      DEBUG_SELECT_CONTENT,
-      DEBUG_SELECT_TAGS,
-      DEBUG_HIGHLIGHT_CONTENT,
-      DEBUG_HIGHLIGHT_TAGS,
-      DEBUG_TRUE_FALSE_V1_CONTENT,
-      DEBUG_TRUE_FALSE_V1_TAGS,
-      DEBUG_CHOICE_RESPONSE_V1_CONTENT,
-      DEBUG_CHOICE_RESPONSE_V1_TAGS,
+      DEBUG_CHAIN_CONTENT,
+      DEBUG_CHAIN_TAGS,
       DEBUG_CARD_SET_CONTENT,
       DEBUG_CARD_SET,
       DEBUG_CARD_PARSED,
@@ -242,9 +223,15 @@ class BitmarkPegParserProcessor {
 
     if (DEBUG_BIT_CONTENT) this.debugPrint('BIT CONTENT', bitContent);
 
+    // Validate the bit tags
+    bitContent = BitmarkPegParserValidator.validateBitTags(this.context, BitContentLevel.Bit, bitType, bitContent);
+
     // Parse the bit content into a an object with the appropriate keys
     const { body, footer, cardSet, title, statement, statements, choices, responses, resources, ...tags } =
-      this.bitContentProcessor(BitContentLevel.Bit, bitType, bitContent, [
+      this.bitContentProcessor(
+        BitContentLevel.Bit,
+        bitType,
+        bitContent /*[
         TypeKey.Title,
         TypeKey.Anchor,
         TypeKey.Reference,
@@ -258,7 +245,8 @@ class BitmarkPegParserProcessor {
         TypeKey.Resource,
         TypeKey.BodyText,
         TypeKey.CardSet,
-      ]);
+      ]*/,
+      );
 
     if (DEBUG_BIT_TAGS) this.debugPrint('BIT TAGS', tags);
     if (DEBUG_BODY) this.debugPrint('BIT BODY', body);
@@ -368,10 +356,12 @@ class BitmarkPegParserProcessor {
   private bitContentProcessor(
     bitLevel: BitContentLevelType,
     bitType: BitTypeType,
-    data: BitContent[],
-    validTypes: TypeKeyType[],
+    data: BitContent[] | undefined,
+    /*validTypes: TypeKeyType[],*/
   ): BitContentProcessorResult {
     const result: BitContentProcessorResult = {};
+    if (!data) return result;
+
     result.title = [];
     result.solutions = [];
     result.statements = [];
@@ -382,14 +372,12 @@ class BitmarkPegParserProcessor {
     result.extraProperties = {};
 
     let seenItem = false;
+    let seenReference = false;
     let inFooter = false;
     const bodyParts: BodyPart[] = [];
     let bodyPart = '';
     let footer = '';
     let cardBody = '';
-
-    // Validate the bit content
-    BitmarkPegParserValidator.validateBitContent(this.context, bitLevel, bitType, data);
 
     // Helper for building the body text
     const addBodyText = () => {
@@ -409,10 +397,8 @@ class BitmarkPegParserProcessor {
 
     // Reduce the Type/Key/Value data to a single object that can be used to build the bit
     data.forEach((content, _index) => {
+      if (!content) debugger;
       const { type, value } = content as TypeKeyValue;
-
-      // Only parse requested types
-      if (validTypes.indexOf(type as TypeKeyType) === -1) return;
 
       switch (type) {
         case TypeKey.ItemLead: {
@@ -424,9 +410,13 @@ class BitmarkPegParserProcessor {
         case TypeKey.Instruction:
         case TypeKey.Hint:
         case TypeKey.Anchor:
-        case TypeKey.Reference:
         case TypeKey.SampleSolution:
           defaultTagContentProcessor(this.context, bitLevel, bitType, content, result);
+          break;
+
+        case TypeKey.Reference:
+          referenceTagContentProcessor(this.context, bitLevel, bitType, content, result, seenReference);
+          seenReference = true;
           break;
 
         case TypeKey.Title:
@@ -437,7 +427,7 @@ class BitmarkPegParserProcessor {
           propertyContentProcessor(this.context, bitLevel, bitType, content, result);
           break;
 
-        case TypeKey.Cloze: {
+        case TypeKey.Gap: {
           clozeTagContentProcessor(this.context, bitLevel, bitType, content, result);
           break;
         }

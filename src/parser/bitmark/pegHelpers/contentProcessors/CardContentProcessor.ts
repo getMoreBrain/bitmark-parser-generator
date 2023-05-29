@@ -89,8 +89,8 @@ function buildCards(
   let result: BitSpecificCards = {};
 
   // Get the bit metadata to check how to parse the card set
-  const meta = BitType.getMetadata<BitTypeMetadata>(bitType) ?? {};
-  const cardSetType = meta.cardSetType;
+  const meta = BitType.getMetadata<BitTypeMetadata>(bitType);
+  const cardSetType = meta && meta.cardSetType;
 
   switch (cardSetType) {
     case CardSetType.elements:
@@ -145,7 +145,7 @@ function parseElements(context: BitmarkPegParserContext, bitType: BitTypeType, c
 
         if (context.DEBUG_CARD_PARSED) context.debugPrint('parsedCardContent (elements)', content);
 
-        const tags = context.bitContentProcessor(BitContentLevel.CardElement, bitType, content, [TypeKey.CardText]);
+        const tags = context.bitContentProcessor(BitContentLevel.CardElement, bitType, content);
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (elements)', tags);
 
@@ -181,7 +181,6 @@ function parseStatements(
           BitContentLevel.CardStatements,
           bitType,
           content,
-          [TypeKey.TrueFalseChain, TypeKey.Property, TypeKey.ItemLead, TypeKey.Instruction, TypeKey.Hint],
         );
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (statements)', tags);
@@ -239,13 +238,7 @@ function parseQuiz(
 
         if (context.DEBUG_CARD_PARSED) context.debugPrint('parsedCardContent (quizzes)', content);
 
-        const tags = context.bitContentProcessor(BitContentLevel.CardQuiz, bitType, content, [
-          TypeKey.TrueFalseChain,
-          TypeKey.Property,
-          TypeKey.ItemLead,
-          TypeKey.Instruction,
-          TypeKey.Hint,
-        ]);
+        const tags = context.bitContentProcessor(BitContentLevel.CardQuiz, bitType, content);
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (quizzes)', tags);
 
@@ -307,14 +300,7 @@ function parseQuestions(context: BitmarkPegParserContext, bitType: BitTypeType, 
 
         if (context.DEBUG_CARD_PARSED) context.debugPrint('parsedCardContent (questions)', content);
 
-        const tags = context.bitContentProcessor(BitContentLevel.CardQuestion, bitType, content, [
-          TypeKey.CardText,
-          TypeKey.Property,
-          TypeKey.ItemLead,
-          TypeKey.Instruction,
-          TypeKey.Hint,
-          TypeKey.SampleSolution,
-        ]);
+        const tags = context.bitContentProcessor(BitContentLevel.CardQuestion, bitType, content);
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (questions)', tags);
 
@@ -366,15 +352,6 @@ function parseMatchPairs(context: BitmarkPegParserContext, bitType: BitTypeType,
           BitContentLevel.CardMatch,
           bitType,
           content,
-          [
-            TypeKey.CardText,
-            TypeKey.Title,
-            TypeKey.Property,
-            TypeKey.ItemLead,
-            TypeKey.Instruction,
-            TypeKey.Hint,
-            TypeKey.Resource,
-          ],
         );
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (match heading / pairs)', tags);
@@ -477,15 +454,7 @@ function parseMatchMatrix(context: BitmarkPegParserContext, bitType: BitTypeType
 
         if (context.DEBUG_CARD_PARSED) context.debugPrint('parsedCardContent (match heading / matrix)', content);
 
-        const tags = context.bitContentProcessor(BitContentLevel.CardMatrix, bitType, content, [
-          TypeKey.CardText,
-          TypeKey.Title,
-          TypeKey.Property,
-          TypeKey.ItemLead,
-          TypeKey.Instruction,
-          TypeKey.Hint,
-          TypeKey.Resource,
-        ]);
+        const tags = context.bitContentProcessor(BitContentLevel.CardMatrix, bitType, content);
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (match heading / matrix)', tags);
 
@@ -580,13 +549,7 @@ function parseBotActionResponses(
           reaction,
           cardBody: feedback,
           ...tags
-        } = context.bitContentProcessor(BitContentLevel.CardBotResponse, bitType, content, [
-          TypeKey.CardText,
-          TypeKey.Property,
-          TypeKey.ItemLead,
-          TypeKey.Instruction,
-          TypeKey.Hint,
-        ]);
+        } = context.bitContentProcessor(BitContentLevel.CardBotResponse, bitType, content);
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (botResponses)', tags);
 

@@ -18,27 +18,6 @@
 
 import { ParserError } from '../../../model/parser/ParserError';
 
-// Debugging flags for helping develop and debug the parser
-const ENABLE_DEBUG = true;
-const DEBUG_DATA = true; // Include data in the debug output
-const DEBUG_DATA_INCLUDE_PARSER = false; // Include the parser data in the debug output - very very verbose!
-const DEBUG_TRACE_TEXT_FORMAT = false; // The bit text format (e.g. bitmark++)
-const DEBUG_TRACE_RESOURCE_TYPE = false; // The bit resource type (e.g. &image)
-const DEBUG_TRACE_BIT_CONTENT = false; // The content of the bit - verbose if a lot of body text
-const DEBUG_TRACE_BIT_TAG = false; // Top level tags
-const DEBUG_TRACE_TAGS = false; // Standard tags
-const DEBUG_TRACE_PROPERTY_TAGS = false; // Standard property tags
-const DEBUG_TRACE_TAGS_CHAIN = false; // Top level tag chains
-const DEBUG_TRACE_CARD_SET = false; // The content of the card set
-const DEBUG_TRACE_CARD_SET_START = false; // Start of a card set
-const DEBUG_TRACE_CARD_SET_END = false; // End of a card set
-const DEBUG_TRACE_CARD_LINE_OR_DIVIDER = false; // A card line or a card divider (=== / == / --)
-const DEBUG_TRACE_CARD_CONTENT = false; // The content of the card - verbose if a lot of card body text
-const DEBUG_TRACE_CARD_TAGS = false; // Tags within the content of a card
-
-// DO NOT EDIT THIS LINE. Ensures no debug in production in case ENABLE_DEBUG is accidentally left on
-const DEBUG = ENABLE_DEBUG && process.env.NODE_ENV === 'development';
-
 import {
   BitContent,
   CARD_DIVIDER_V2,
@@ -53,6 +32,27 @@ import {
   TypeKeyType,
   TypeValue,
 } from './BitmarkPegParserTypes';
+
+import '../../../config/config';
+
+const ENABLE_DEBUG = true;
+const DEBUG_DATA = true;
+const DEBUG_DATA_INCLUDE_PARSER = false;
+const DEBUG_TRACE_TEXT_FORMAT = false;
+const DEBUG_TRACE_RESOURCE_TYPE = false;
+const DEBUG_TRACE_BIT_CONTENT = false;
+const DEBUG_TRACE_BIT_TAG = false;
+const DEBUG_TRACE_TAGS = false;
+const DEBUG_TRACE_PROPERTY_TAGS = false;
+const DEBUG_TRACE_RESOURCE_TAGS = false;
+const DEBUG_TRACE_TAGS_CHAIN = false;
+const DEBUG_TRACE_CARD_SET = false;
+const DEBUG_TRACE_CARD_SET_START = false;
+const DEBUG_TRACE_CARD_SET_END = false;
+const DEBUG_TRACE_CARD_LINE_OR_DIVIDER = false;
+const DEBUG_TRACE_CARD_CONTENT = false;
+const DEBUG_TRACE_CARD_TAGS = false;
+const DEBUG = ENABLE_DEBUG && process.env.NODE_ENV === 'development';
 
 // Dummy for stripping unwanted code
 const STRIP = 0;
@@ -145,23 +145,32 @@ class BitmarkPegParserHelper {
     };
   }
 
+  handleResourceTag(key: string, value: unknown): BitContent {
+    if (DEBUG_TRACE_RESOURCE_TAGS) this.debugPrint(TypeKey.Resource, { key, value });
+
+    return {
+      type: TypeKey.Resource,
+      key,
+      value,
+      parser: {
+        text: this.parserText(),
+        location: this.parserLocation(),
+      },
+    };
+  }
+
   handleTagChain(value: unknown): BitContent[] {
     if (DEBUG_TRACE_TAGS_CHAIN) this.debugPrint('TagsChain', value);
     const content = this.reduceToArrayOfTypes(value);
+    let newContent: BitContent[] = content;
 
     if (content.length > 1) {
-      const chain: TypeValue = {
-        type: TypeKey.TagChain,
-        value: content,
-        parser: {
-          text: this.parserText(),
-          location: this.parserLocation(),
-        },
-      };
-      return [chain];
+      const head = content[0];
+      head.chain = content.slice(1);
+      newContent = [head];
     }
 
-    return content;
+    return newContent;
   }
 
   //

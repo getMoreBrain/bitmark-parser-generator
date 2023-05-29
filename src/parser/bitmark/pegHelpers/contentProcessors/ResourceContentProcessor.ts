@@ -10,7 +10,7 @@ import {
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
-  TypeKeyResource,
+  TypeKeyValue,
 } from '../BitmarkPegParserTypes';
 
 // const builder = new Builder();
@@ -100,7 +100,7 @@ function resourceContentProcessor(
   target: BitContentProcessorResult,
 ): void {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { type: ignoreType, key, ...resourceData } = content as TypeKeyResource;
+  const { type: ignoreType, key, ...resourceData } = content as TypeKeyValue<string>;
 
   const resources = target.resources;
 

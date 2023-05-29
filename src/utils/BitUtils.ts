@@ -26,7 +26,7 @@ class BitUtils {
     }
 
     if (!ret) {
-      const meta = BitType.getMetadata<BitTypeMetadata>(bitType) ?? {};
+      const meta = BitType.getMetadata<BitTypeMetadata>(bitType);
 
       if (meta) {
         ret = meta.resourceType;

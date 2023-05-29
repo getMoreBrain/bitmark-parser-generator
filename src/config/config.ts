@@ -1,6 +1,7 @@
 // Bit configs
 import './bits/_errorBitConfig';
 import './bits/anchorBitConfig';
+import './bits/appLinkBitConfig';
 import './bits/articleAttachmentBitConfig';
 import './bits/articleBitConfig';
 import './bits/articleEmbedBitConfig';

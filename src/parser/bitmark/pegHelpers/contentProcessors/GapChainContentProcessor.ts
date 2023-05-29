@@ -9,7 +9,6 @@ import {
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
-  TypeKey,
   TypeValue,
 } from '../BitmarkPegParserTypes';
 
@@ -30,17 +29,11 @@ function gapChainContentProcessor(
 }
 
 function buildGap(context: BitmarkPegParserContext, bitType: BitTypeType, content: BitContent[]): Gap | undefined {
-  if (context.DEBUG_GAP_CONTENT) context.debugPrint('gap content', content);
+  if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('gap content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.GapChain, bitType, content, [
-    TypeKey.Cloze,
-    TypeKey.Property,
-    TypeKey.ItemLead,
-    TypeKey.Instruction,
-    TypeKey.Hint,
-  ]);
+  const tags = context.bitContentProcessor(BitContentLevel.GapChain, bitType, content);
 
-  if (context.DEBUG_GAP_TAGS) context.debugPrint('gap TAGS', tags);
+  if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', tags);
 
   const gap = builder.gap({
     solutions: [],

@@ -131,7 +131,7 @@ BitTag
   / ItemLeadTag
   / InstructionTag
   / HintTag
-  / ClozeTag
+  / GapTag
   / SampleSolutionTag
   / TrueTag
   / FalseTag
@@ -242,13 +242,13 @@ FalseTag
 SampleSolutionTag
   = "[$" value: Tag_Value "]" { return helper.handleTag(TypeKey.SampleSolution, value) }
 
-// Cloze tag
-ClozeTag
-  = "[_" value: Tag_Value "]" { return helper.handleTag(TypeKey.Cloze, value) }
+// Gap tag
+GapTag
+  = "[_" value: Tag_Value "]" { return helper.handleTag(TypeKey.Gap, value) }
 
 // Resource tag
 ResourceTag
-  = "[&" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return helper.handleReourceTag(key, value); }
+  = "[&" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return helper.handleResourceTag(key, value); }
 
 // Remark (unparsed body)
 RemarkTag

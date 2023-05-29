@@ -100,7 +100,9 @@ export interface BitContentProcessorResult {
   instruction?: string;
   hint?: string;
   anchor?: string;
+  book?: string;
   reference?: string;
+  referenceEnd?: string;
   sampleSolution?: string;
   isShortAnswer?: boolean;
   isCaseSensitive?: boolean;
@@ -136,52 +138,56 @@ export interface BitSpecificCards {
 
 export type BitContent = TypeValue | TypeKeyValue;
 
-export interface TypeValue extends ParserData {
+export interface TypeValue<T = unknown> extends ParserData {
   type: string;
-  value?: unknown;
+  value?: T;
+  chain?: BitContent[];
 }
 
-export interface TypeKeyValue extends ParserData {
+export interface TypeKeyValue<T = unknown> extends ParserData {
   type: string;
   key: string;
-  value?: unknown;
-}
-
-export interface TypeKeyResource extends ParserData {
-  type: string;
-  key: string;
-  url: string;
+  value?: T;
+  chain?: BitContent[];
 }
 
 const TypeKey = superenum({
+  // Bit header
   TextFormat: 'TextFormat',
   ResourceType: 'ResourceType',
-  Resource: 'Resource',
-  ResourceProperty: 'ResourceProperty',
+
+  // Tags
   Title: 'Title',
   Anchor: 'Anchor',
   Reference: 'Reference',
-  Property: 'Property',
   ItemLead: 'ItemLead',
   Instruction: 'Instruction',
   Hint: 'Hint',
   True: 'True',
   False: 'False',
-  PartnerChain: 'PartnerChain',
-  GapChain: 'GapChain',
-  TrueFalseChain: 'TrueFalseChain',
-  Cloze: 'Cloze',
+  Gap: 'Gap',
   SampleSolution: 'SampleSolution',
+  Comment: 'Comment',
+
+  // Generic Tags (converted to specific tags by the BitTagValidator)
+  Property: 'Property',
+  Resource: 'Resource',
+  TagChain: 'TagChain',
+
+  // Text
   BodyChar: 'BodyChar',
   BodyText: 'BodyText',
+
+  // Card Set
   CardSet: 'CardSet',
   Card: 'Card',
   CardChar: 'CardChar',
   CardText: 'CardText',
-  Comment: 'Comment',
 
   // Chains
-  TagChain: 'TagChain',
+  PartnerChain: 'PartnerChain',
+  GapChain: 'GapChain',
+  TrueFalseChain: 'TrueFalseChain',
 });
 
 export type TypeKeyType = EnumType<typeof TypeKey>;
@@ -192,6 +198,7 @@ const BitContentLevel = superenum({
   Choice: 'Choice',
   Response: 'Response',
   PartnerChain: 'PartnerChain',
+  BookChain: 'BookChain',
   GapChain: 'GapChain',
   HighlightChain: 'HighlightChain',
   SelectChain: 'SelectChain',
@@ -213,18 +220,8 @@ export interface BitmarkPegParserContext {
   DEBUG_BIT_TAGS: boolean;
   DEBUG_BODY: boolean;
   DEBUG_FOOTER: boolean;
-  DEBUG_PARTNER_CONTENT: boolean;
-  DEBUG_PARTNER_TAGS: boolean;
-  DEBUG_GAP_CONTENT: boolean;
-  DEBUG_GAP_TAGS: boolean;
-  DEBUG_SELECT_CONTENT: boolean;
-  DEBUG_SELECT_TAGS: boolean;
-  DEBUG_HIGHLIGHT_CONTENT: boolean;
-  DEBUG_HIGHLIGHT_TAGS: boolean;
-  DEBUG_TRUE_FALSE_V1_CONTENT: boolean;
-  DEBUG_TRUE_FALSE_V1_TAGS: boolean;
-  DEBUG_CHOICE_RESPONSE_V1_CONTENT: boolean;
-  DEBUG_CHOICE_RESPONSE_V1_TAGS: boolean;
+  DEBUG_CHAIN_CONTENT: boolean;
+  DEBUG_CHAIN_TAGS: boolean;
   DEBUG_CARD_SET_CONTENT: boolean;
   DEBUG_CARD_SET: boolean;
   DEBUG_CARD_PARSED: boolean;
@@ -236,8 +233,8 @@ export interface BitmarkPegParserContext {
   bitContentProcessor(
     bitLevel: BitContentLevelType,
     bitType: BitTypeType,
-    data: BitContent[],
-    validTypes: TypeKeyType[],
+    data: BitContent[] | undefined,
+    /*validTypes: TypeKeyType[],*/
   ): BitContentProcessorResult;
   splitBitContent(bitContent: BitContent[], types: TypeKeyType[]): BitContent[][];
   addWarning(message: string, parserData?: ParserData, parserDataOriginal?: ParserData): void;
