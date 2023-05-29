@@ -61,9 +61,9 @@
  * - To undersand the operation and to help debug and develop, use the DEBUG_XXX flags in the code below.
  *   and in BitmarkPegParserHelper.ts
  */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { Builder } from '../../../ast/Builder';
+import { CardSet } from '../../../model/ast/CardSet';
 import { Bit, BitmarkAst, BodyPart, BodyText } from '../../../model/ast/Nodes';
 import { BitType, BitTypeType } from '../../../model/enum/BitType';
 import { ResourceType } from '../../../model/enum/ResourceType';
@@ -116,7 +116,6 @@ const DEBUG_CHAIN_CONTENT = true; // Print the parsed chain content
 const DEBUG_CHAIN_TAGS = true; // Print the tags extracted from the parsed chain content
 const DEBUG_CARD_SET_CONTENT = true; // Print the parsed card set content
 const DEBUG_CARD_SET = true; // Print the card set built from the parsed card set content
-const DEBUG_CARD_PARSED = true; // Print the parsed card (will create a lot of output if card value is large)
 const DEBUG_CARD_TAGS = true; // Print the tags extracted from the card content
 
 // DO NOT EDIT THIS LINE. Ensures no debug in production in case ENABLE_DEBUG is accidentally left on
@@ -154,7 +153,6 @@ class BitmarkPegParserProcessor {
       DEBUG_CHAIN_TAGS,
       DEBUG_CARD_SET_CONTENT,
       DEBUG_CARD_SET,
-      DEBUG_CARD_PARSED,
       DEBUG_CARD_TAGS,
 
       parser: this.parser,
@@ -224,29 +222,11 @@ class BitmarkPegParserProcessor {
     if (DEBUG_BIT_CONTENT) this.debugPrint('BIT CONTENT', bitContent);
 
     // Validate the bit tags
-    bitContent = BitmarkPegParserValidator.validateBitTags(this.context, BitContentLevel.Bit, bitType, bitContent);
+    bitContent = BitmarkPegParserValidator.validateBitTags(this.context, bitType, bitContent);
 
     // Parse the bit content into a an object with the appropriate keys
     const { body, footer, cardSet, title, statement, statements, choices, responses, resources, ...tags } =
-      this.bitContentProcessor(
-        BitContentLevel.Bit,
-        bitType,
-        bitContent /*[
-        TypeKey.Title,
-        TypeKey.Anchor,
-        TypeKey.Reference,
-        TypeKey.Property,
-        TypeKey.ItemLead,
-        TypeKey.Instruction,
-        TypeKey.Hint,
-        TypeKey.PartnerChain,
-        TypeKey.GapChain,
-        TypeKey.TrueFalseChain,
-        TypeKey.Resource,
-        TypeKey.BodyText,
-        TypeKey.CardSet,
-      ]*/,
-      );
+      this.bitContentProcessor(BitContentLevel.Bit, bitType, bitContent);
 
     if (DEBUG_BIT_TAGS) this.debugPrint('BIT TAGS', tags);
     if (DEBUG_BODY) this.debugPrint('BIT BODY', body);
@@ -379,6 +359,8 @@ class BitmarkPegParserProcessor {
     let footer = '';
     let cardBody = '';
 
+    const inChain = bitLevel === BitContentLevel.Chain;
+
     // Helper for building the body text
     const addBodyText = () => {
       if (bodyPart) {
@@ -428,7 +410,8 @@ class BitmarkPegParserProcessor {
           break;
 
         case TypeKey.Gap: {
-          clozeTagContentProcessor(this.context, bitLevel, bitType, content, result);
+          if (!inChain) addBodyText();
+          gapChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts, inChain);
           break;
         }
 
@@ -442,22 +425,13 @@ class BitmarkPegParserProcessor {
           resourceContentProcessor(this.context, bitLevel, bitType, content, result);
           break;
 
-        case TypeKey.PartnerChain:
-          partnerChainContentProcessor(this.context, bitLevel, bitType, content, result);
-          break;
-
-        case TypeKey.GapChain:
-          addBodyText();
-          gapChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
-          break;
-
         case TypeKey.TrueFalseChain:
           addBodyText();
           trueFalseChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
           break;
 
         case TypeKey.CardSet: {
-          result.cardSet = value as TypeValue[];
+          result.cardSet = value as CardSet;
           inFooter = true; // After the card set, body lines should be written to the footer rather than the body
           break;
         }

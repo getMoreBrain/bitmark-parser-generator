@@ -6,9 +6,10 @@
  * All rights reserved.
  *
  */
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { EnumType, superenum } from '@ncoderz/superenum';
 
+import { CardSet } from '../../../model/ast/CardSet';
 import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTypeType } from '../../../model/enum/ResourceType';
 import { TextFormatType } from '../../../model/enum/TextFormat';
@@ -44,9 +45,12 @@ const CARD_VARIANT_DIVIDER_V1 = '--';
 export interface ParseOptions {
   filename?: string;
   startRule?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   tracer?: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ParseFunction = (input: string, options?: ParseOptions) => any;
 
 export interface ParserHelperOptions {
@@ -79,7 +83,7 @@ export interface CardData {
 }
 
 export interface BitContentProcessorResult {
-  cardSet?: TypeValue[];
+  cardSet?: CardSet;
   cardBody?: string;
   body?: Body;
   footer?: FooterText;
@@ -185,7 +189,6 @@ const TypeKey = superenum({
   CardText: 'CardText',
 
   // Chains
-  PartnerChain: 'PartnerChain',
   GapChain: 'GapChain',
   TrueFalseChain: 'TrueFalseChain',
 });
@@ -194,21 +197,8 @@ export type TypeKeyType = EnumType<typeof TypeKey>;
 
 const BitContentLevel = superenum({
   Bit: 'Bit',
-  Statement: 'Statement',
-  Choice: 'Choice',
-  Response: 'Response',
-  PartnerChain: 'PartnerChain',
-  BookChain: 'BookChain',
-  GapChain: 'GapChain',
-  HighlightChain: 'HighlightChain',
-  SelectChain: 'SelectChain',
-  CardElement: 'CardElement',
-  CardStatements: 'CardStatements',
-  CardQuiz: 'CardQuiz',
-  CardQuestion: 'CardQuestion',
-  CardMatch: 'CardMatch',
-  CardMatrix: 'CardMatrix',
-  CardBotResponse: 'CardBotResponse',
+  Card: 'Card',
+  Chain: 'Chain',
 });
 
 export type BitContentLevelType = EnumType<typeof BitContentLevel>;
@@ -224,7 +214,6 @@ export interface BitmarkPegParserContext {
   DEBUG_CHAIN_TAGS: boolean;
   DEBUG_CARD_SET_CONTENT: boolean;
   DEBUG_CARD_SET: boolean;
-  DEBUG_CARD_PARSED: boolean;
   DEBUG_CARD_TAGS: boolean;
 
   parser: ParserInfo;

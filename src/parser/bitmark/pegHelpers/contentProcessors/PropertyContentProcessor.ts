@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyKey, PropertyKeyMetadata } from '../../../../model/enum/PropertyKey';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';

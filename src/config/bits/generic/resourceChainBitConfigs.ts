@@ -1,5 +1,5 @@
-import { TagDataMap } from '../../model/config/TagData';
-import { ResourceType } from '../../model/enum/ResourceType';
+import { TagDataMap } from '../../../model/config/TagData';
+import { ResourceType } from '../../../model/enum/ResourceType';
 
 // Image
 

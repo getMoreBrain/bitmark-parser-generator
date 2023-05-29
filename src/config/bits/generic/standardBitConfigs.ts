@@ -1,6 +1,6 @@
-import { TagDataMap } from '../../model/config/TagData';
-import { PropertyKey } from '../../model/enum/PropertyKey';
-import { TagType } from '../../model/enum/TagType';
+import { TagDataMap } from '../../../model/config/TagData';
+import { PropertyKey } from '../../../model/enum/PropertyKey';
+import { TagType } from '../../../model/enum/TagType';
 
 const TAGS_PROPERTY_ID: TagDataMap = {
   [PropertyKey.id]: {

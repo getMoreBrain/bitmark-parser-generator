@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Builder } from '../../../../ast/Builder';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 

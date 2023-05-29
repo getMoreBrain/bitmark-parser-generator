@@ -1,7 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Builder } from '../../../../ast/Builder';
 import { BodyPart, Gap } from '../../../../model/ast/Nodes';
 import { BitTypeType } from '../../../../model/enum/BitType';
+
+import { clozeTagContentProcessor } from './ClozeTagContentProcessor';
 
 import {
   BitContent,
@@ -19,25 +20,39 @@ function gapChainContentProcessor(
   _bitLevel: BitContentLevelType,
   bitType: BitTypeType,
   content: BitContent,
-  _target: BitContentProcessorResult,
+  target: BitContentProcessorResult,
   bodyParts: BodyPart[],
+  inChain: boolean,
 ): void {
-  const { value } = content as TypeValue;
-
-  const gap = buildGap(context, bitType, value as BitContent[]);
-  if (gap) bodyParts.push(gap);
+  if (inChain) {
+    clozeTagContentProcessor(context, BitContentLevel.GapChain, bitType, content, target);
+  } else {
+    const gap = buildGap(context, bitType, content);
+    if (gap) bodyParts.push(gap);
+  }
 }
 
-function buildGap(context: BitmarkPegParserContext, bitType: BitTypeType, content: BitContent[]): Gap | undefined {
+function buildGap(context: BitmarkPegParserContext, bitType: BitTypeType, content: BitContent): Gap | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('gap content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.GapChain, bitType, content);
+  const solutions = [];
+
+  const target: BitContentProcessorResult = {
+    solutions: [],
+  };
+  clozeTagContentProcessor(context, BitContentLevel.GapChain, bitType, content, target);
+
+  const tags = context.bitContentProcessor(BitContentLevel.GapChain, bitType, content.chain, true);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', tags);
 
+  const { solutions: chainedSolutions, ...rest } = tags;
+  if (target.solutions) solutions.push(...target.solutions);
+  if (chainedSolutions) solutions.push(...chainedSolutions);
+
   const gap = builder.gap({
-    solutions: [],
-    ...tags,
+    solutions,
+    ...rest,
     isCaseSensitive: true,
   });
 

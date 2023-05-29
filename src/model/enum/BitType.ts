@@ -17,7 +17,24 @@ export interface BitTypeMetadata {
   resourceType?: ResourceTypeType;
 
   // Type of card set that is valid for this bit type (if any)
-  cardSetType?: CardSetTypeType;
+  cardSet?: CardSetConfig;
+
+  // Is a body allowed? (default: false)
+  bodyAllowed?: boolean;
+}
+
+export interface CardSetConfig {
+  type: CardSetTypeType;
+
+  // Configuration for each variant from the card set
+  // - all cards have the same config
+  // - each variant is indexed via side and variant
+  variants: CardSetVariantConfig[][];
+}
+
+export interface CardSetVariantConfig {
+  // Tags, Property Tags, and Tag chains that are valid for this bit type
+  tags: TagDataMap;
 
   // Is a body allowed? (default: false)
   bodyAllowed?: boolean;

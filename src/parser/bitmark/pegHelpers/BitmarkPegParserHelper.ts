@@ -16,7 +16,10 @@
  *
  */
 
+import { Card, CardSet, CardSide, UnparsedCardSet } from '../../../model/ast/CardSet';
 import { ParserError } from '../../../model/parser/ParserError';
+
+import { ParseFunction } from './BitmarkPegParserTypes';
 
 import {
   BitContent,
@@ -52,6 +55,7 @@ const DEBUG_TRACE_CARD_SET_END = false;
 const DEBUG_TRACE_CARD_LINE_OR_DIVIDER = false;
 const DEBUG_TRACE_CARD_CONTENT = false;
 const DEBUG_TRACE_CARD_TAGS = false;
+const DEBUG_TRACE_CARD_PARSED = true; // Print the parsed card (will create a lot of output if card value is large)
 const DEBUG = ENABLE_DEBUG && process.env.NODE_ENV === 'development';
 
 // Dummy for stripping unwanted code
@@ -62,10 +66,12 @@ class BitmarkPegParserHelper {
   private cardSideIndex = 0;
   private cardVariantIndex = 0;
 
+  private parse: ParseFunction;
   private parserText: () => ParserError['text'];
   private parserLocation: () => ParserError['location'];
 
   constructor(options: ParserHelperOptions) {
+    this.parse = options.parse;
     this.parserText = options.parserText;
     this.parserLocation = options.parserLocation;
   }
@@ -179,9 +185,79 @@ class BitmarkPegParserHelper {
 
   handleCardSet(value: unknown): BitContent {
     if (DEBUG_TRACE_CARD_SET) this.debugPrint(TypeKey.CardSet, value);
+
+    // Build card set
+    const cards = value as BitContent[];
+    const unparsedCardSet: UnparsedCardSet = {
+      cards: [],
+    };
+    const cardSet: CardSet = {
+      cards: [],
+    };
+
+    if (cards) {
+      for (const content of cards) {
+        if (!content) continue;
+        const { type, value: cardData } = content as TypeValue;
+        if (!type || type !== TypeKey.Card) continue;
+        const { cardIndex, cardSideIndex, cardVariantIndex: cardContentIndex, value } = cardData as CardData;
+
+        // Get or create card
+        let card = unparsedCardSet.cards[cardIndex];
+        if (!card) {
+          card = {
+            sides: [],
+          };
+          unparsedCardSet.cards[cardIndex] = card;
+        }
+
+        // Get or create side
+        let side = card.sides[cardSideIndex];
+        if (!side) {
+          side = {
+            variants: [],
+          };
+          card.sides[cardSideIndex] = side;
+        }
+
+        // Set variant value
+        const variant = side.variants[cardContentIndex];
+        if (!variant) {
+          side.variants[cardContentIndex] = value;
+        } else {
+          side.variants[cardContentIndex] += value;
+        }
+      }
+
+      // Parse the card data
+      for (const unparsedCard of unparsedCardSet.cards) {
+        const card = {
+          sides: [],
+        } as Card;
+        cardSet.cards.push(card);
+        for (const unparsedSide of unparsedCard.sides) {
+          const side = {
+            variants: [],
+          } as CardSide;
+          card.sides.push(side);
+          for (const rawContent of unparsedSide.variants) {
+            let content = this.parse(rawContent, {
+              startRule: 'cardContent',
+            }) as BitContent[];
+
+            content = this.reduceToArrayOfTypes(content);
+
+            if (DEBUG_TRACE_CARD_PARSED) this.debugPrint('parsedCardContent', content);
+
+            side.variants.push(content);
+          }
+        }
+      }
+    }
+
     return {
       type: TypeKey.CardSet,
-      value,
+      value: cardSet,
       parser: {
         text: this.parserText(),
         location: this.parserLocation(),

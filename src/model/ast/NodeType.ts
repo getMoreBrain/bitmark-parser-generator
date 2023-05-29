@@ -198,6 +198,8 @@ const NodeType = superenum({
 
   // Parser Info / Errors
   parser: 'parser',
+  warnings: 'warnings',
+  warningsValue: 'warningsValue',
   errors: 'errors',
   errorsValue: 'errorsValue',
   message: 'message',

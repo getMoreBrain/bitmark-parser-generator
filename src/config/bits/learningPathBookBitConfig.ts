@@ -2,7 +2,7 @@ import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
 import { PropertyKey } from '../../model/enum/PropertyKey';
 import { TagType } from '../../model/enum/TagType';
 
-import { TAGS_DEFAULT } from './_standardBitConfigs';
+import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
 // Set metadata on the bit types to describe specific behaviour
 

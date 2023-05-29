@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ResourceBuilder } from '../../../../ast/ResourceBuilder';
 import { AudioResource, ImageResource, Resource } from '../../../../model/ast/Nodes';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
