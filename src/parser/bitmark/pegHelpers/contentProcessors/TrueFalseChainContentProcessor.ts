@@ -1,6 +1,8 @@
 import { Builder } from '../../../../ast/Builder';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 
+import { trueFalseTagContentProcessor } from './TrueFalseTagContentProcessor';
+
 import {
   BodyPart,
   Choice,
@@ -31,8 +33,24 @@ function trueFalseChainContentProcessor(
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
+  inChain: boolean,
 ): void {
-  const { value } = content as TypeValue;
+  if (inChain) {
+    trueFalseTagContentProcessor(context, BitContentLevel.Chain, bitType, content, target);
+  } else {
+    buildTrueFalse(context, _bitLevel, bitType, content, target, bodyParts);
+  }
+}
+
+function buildTrueFalse(
+  context: BitmarkPegParserContext,
+  _bitLevel: BitContentLevelType,
+  bitType: BitTypeType,
+  content: BitContent,
+  target: BitContentProcessorResult,
+  bodyParts: BodyPart[],
+): void {
+  const chainContent = [content, ...(content.chain ?? [])];
 
   const statements = target.statements;
   const choices = target.choices;
@@ -42,7 +60,7 @@ function trueFalseChainContentProcessor(
 
   if (bitType === BitType.trueFalse1) {
     // Treat as true/false for statement
-    target.statement = buildStatement(context, bitType, value as BitContent[]);
+    target.statement = buildStatement(context, bitType, chainContent);
   } else if (
     bitType === BitType.trueFalse ||
     bitType === BitType.multipleChoice ||
@@ -51,18 +69,18 @@ function trueFalseChainContentProcessor(
     bitType === BitType.multipleResponse1
   ) {
     // Treat as true/false for choices / responses
-    const tf = buildStatementsChoicesResponses(context, bitType, value as BitContent[]);
+    const tf = buildStatementsChoicesResponses(context, bitType, chainContent);
 
     if (tf.statements) statements.push(...tf.statements);
     if (tf.choices) choices.push(...tf.choices);
     if (tf.responses) responses.push(...tf.responses);
   } else if (bitType === BitType.highlightText) {
     // Treat as highlight text
-    const highlight = buildHighlight(context, bitType, value as BitContent[]);
+    const highlight = buildHighlight(context, bitType, chainContent);
     if (highlight) bodyParts.push(highlight);
   } else {
     // Treat as select
-    const select = buildSelect(context, bitType, value as BitContent[]);
+    const select = buildSelect(context, bitType, chainContent);
     if (select) bodyParts.push(select);
   }
 }
@@ -84,7 +102,7 @@ function buildStatement(
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('trueFalse V1 content (statement)', trueFalseContent);
 
-  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Statement, bitType, trueFalseContent);
+  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, bitType, trueFalseContent);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('trueFalse V1 tags (statement)', tags);
 
@@ -120,10 +138,6 @@ function buildStatementsChoicesResponses(
   const choices: Choice[] = [];
   const responses: Response[] = [];
 
-  const bitContentLevel = BitContentLevel.Statement;
-  if (insertChoices) BitContentLevel.Choice;
-  if (insertResponses) BitContentLevel.Response;
-
   const trueFalseContents = context.splitBitContent(trueFalseContent, [TypeKey.True, TypeKey.False]);
 
   if (context.DEBUG_CHAIN_CONTENT) {
@@ -131,7 +145,7 @@ function buildStatementsChoicesResponses(
   }
 
   for (const contents of trueFalseContents) {
-    const { trueFalse, ...tags } = context.bitContentProcessor(bitContentLevel, bitType, contents);
+    const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, bitType, contents);
 
     if (context.DEBUG_CHAIN_TAGS) context.debugPrint('trueFalse V1 tags (choices/responses)', tags);
 
@@ -172,7 +186,7 @@ function buildHighlight(
 ): Highlight | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('highlight content', highlightContent);
 
-  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.HighlightChain, bitType, highlightContent);
+  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, bitType, highlightContent);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('highlight TAGS', { trueFalse, ...tags });
 
@@ -198,7 +212,7 @@ function buildSelect(
 ): Select | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('select content', selectContent);
 
-  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.SelectChain, bitType, selectContent);
+  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, bitType, selectContent);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('select TAGS', { trueFalse, ...tags });
 

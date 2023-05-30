@@ -41,6 +41,9 @@ const PropertyKey = superenum({
   duration: 'duration', // single
   reference: 'reference',
   list: 'list',
+  textReference: 'textReference', // single
+  isTracked: 'isTracked', // single
+  isInfoOnly: 'isInfoOnly', // single
   labelTrue: 'labelTrue', // single
   labelFalse: 'labelFalse', // single
   quotedPerson: 'quotedPerson', // single
@@ -59,6 +62,26 @@ const PropertyKey = superenum({
   longAnswer: 'longAnswer', // single
   caseSensitive: 'caseSensitive', // single
   reaction: 'reaction', // single - botResponse
+
+  // Only in resources
+  width: 'width', // single
+  height: 'height', // single
+  license: 'license', // single
+  copyright: 'copyright', // single
+  caption: 'caption', // single
+  showInIndex: 'showInIndex', // single
+
+  alt: 'alt', // single
+  src1x: 'src1x', // single
+  src2x: 'src2x', // single
+  src3x: 'src3x', // single
+  src4x: 'src4x', // single
+  mute: 'mute', // single
+  autoplay: 'autoplay', // single
+  allowSubtitles: 'allowSubtitles', // single
+  showSubtitles: 'showSubtitles', // single
+  siteName: 'siteName', // single
+  posterImage: 'posterImage', // single
 });
 
 export type PropertyKeyType = EnumType<typeof PropertyKey>;

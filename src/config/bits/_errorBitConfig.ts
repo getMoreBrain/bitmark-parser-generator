@@ -4,4 +4,5 @@ import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
 BitType.setMetadata<BitTypeMetadata>(BitType._error, {
   tags: {},
   resourceAttachmentAllowed: false,
+  bodyAllowed: true,
 });

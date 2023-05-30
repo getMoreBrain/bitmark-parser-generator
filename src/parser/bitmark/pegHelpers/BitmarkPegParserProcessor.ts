@@ -74,11 +74,9 @@ import { ParserInfo } from '../../../model/parser/ParserInfo';
 
 import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
 import { buildCards } from './contentProcessors/CardContentProcessor';
-import { clozeTagContentProcessor } from './contentProcessors/ClozeTagContentProcessor';
 import { defaultTagContentProcessor } from './contentProcessors/DefaultTagContentProcessor';
 import { gapChainContentProcessor } from './contentProcessors/GapChainContentProcessor';
 import { itemLeadTagContentProcessor } from './contentProcessors/ItemLeadTagContentProcessor';
-import { partnerChainContentProcessor } from './contentProcessors/PartnerChainContentProcessor';
 import { propertyContentProcessor } from './contentProcessors/PropertyContentProcessor';
 import { buildResource, resourceContentProcessor } from './contentProcessors/ResourceContentProcessor';
 import { buildTitles, titleTagContentProcessor } from './contentProcessors/TitleTagContentProcessor';
@@ -364,22 +362,21 @@ class BitmarkPegParserProcessor {
     // Helper for building the body text
     const addBodyText = () => {
       if (bodyPart) {
-        if (bodyPart) {
-          // Check the body part for common potential mistakes
-          BitmarkPegParserValidator.checkBodyForCommonPotentialMistakes(this.context, bitLevel, bitType, bodyPart);
+        // Validate the body part
+        bodyPart = BitmarkPegParserValidator.checkBodyPart(this.context, bitLevel, bitType, bodyPart);
 
+        if (bodyPart) {
           const bodyText = builder.bodyText({
             text: bodyPart,
           });
           bodyParts.push(bodyText);
         }
-        bodyPart = '';
       }
+      bodyPart = '';
     };
 
     // Reduce the Type/Key/Value data to a single object that can be used to build the bit
     data.forEach((content, _index) => {
-      if (!content) debugger;
       const { type, value } = content as TypeKeyValue;
 
       switch (type) {
@@ -417,7 +414,8 @@ class BitmarkPegParserProcessor {
 
         case TypeKey.True:
         case TypeKey.False: {
-          trueFalseTagContentProcessor(this.context, bitLevel, bitType, content, result);
+          if (!inChain) addBodyText();
+          trueFalseChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts, inChain);
           break;
         }
 
@@ -425,10 +423,10 @@ class BitmarkPegParserProcessor {
           resourceContentProcessor(this.context, bitLevel, bitType, content, result);
           break;
 
-        case TypeKey.TrueFalseChain:
-          addBodyText();
-          trueFalseChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
-          break;
+        // case TypeKey.TrueFalseChain:
+        //   addBodyText();
+        //   trueFalseChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
+        //   break;
 
         case TypeKey.CardSet: {
           result.cardSet = value as CardSet;
@@ -458,20 +456,22 @@ class BitmarkPegParserProcessor {
     // Add the last body text part, and trim the body text parts
     addBodyText();
 
-    // Build the body and footer, trimming both
+    // Validate and build the body (trimmed)
     result.body = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
+    BitmarkPegParserValidator.checkBody(this.context, bitLevel, bitType, result.body);
+
+    // Validate and build the footer (trimmed)
     footer = footer.trim();
     if (footer) {
-      // Check the body part for common potential mistakes
-      BitmarkPegParserValidator.checkBodyForCommonPotentialMistakes(this.context, bitLevel, bitType, footer);
-      result.footer = builder.footerText({ text: footer });
+      footer = BitmarkPegParserValidator.checkFooter(this.context, bitLevel, bitType, footer);
+      if (footer) {
+        result.footer = builder.footerText({ text: footer });
+      }
     }
 
-    // Add card body
+    // Add card body (validated elsewhere)
     cardBody = cardBody.trim();
     if (cardBody) {
-      // Check the body part for common potential mistakes
-      BitmarkPegParserValidator.checkBodyForCommonPotentialMistakes(this.context, bitLevel, bitType, cardBody);
       result.cardBody = cardBody;
     }
 

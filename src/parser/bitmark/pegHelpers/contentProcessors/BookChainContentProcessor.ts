@@ -42,7 +42,7 @@ function buildBook(
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('book content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.BookChain, bitType, content.chain, true);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('book TAGS', tags);
 

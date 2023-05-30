@@ -103,6 +103,9 @@ class Builder {
     videoCallLink?: string | string[];
     bot?: string | string[];
     list?: string | string[];
+    textReference?: string | string[];
+    isTracked?: string | string[];
+    isInfoOnly?: string | string[];
     labelTrue?: string | string[];
     labelFalse?: string | string[];
     quotedPerson?: string | string[];
@@ -179,6 +182,9 @@ class Builder {
       videoCallLink,
       bot,
       list,
+      textReference,
+      isTracked,
+      isInfoOnly,
       labelTrue,
       labelFalse,
       book,
@@ -254,6 +260,9 @@ class Builder {
       duration: this.toAstProperty(PropertyKey.duration, duration),
       referenceProperty: this.toAstProperty(PropertyKey.reference, referenceProperty),
       list: this.toAstProperty(PropertyKey.list, list),
+      textReference: this.toAstProperty(PropertyKey.textReference, textReference),
+      isTracked: this.toAstProperty(PropertyKey.isTracked, isTracked),
+      isInfoOnly: this.toAstProperty(PropertyKey.isInfoOnly, isInfoOnly),
       labelTrue: this.toAstProperty(PropertyKey.labelTrue, labelTrue),
       labelFalse: this.toAstProperty(PropertyKey.labelFalse, labelFalse),
       quotedPerson: this.toAstProperty(PropertyKey.quotedPerson, quotedPerson),

@@ -1,6 +1,6 @@
 import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
-import { CardSetType } from '../../model/enum/CardSetType';
 
+import { CARD_SET_BOT_ACTION_RESPONSES } from './generic/cardSetBitConfigs';
 import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
 // Set metadata on the bit types to describe specific behaviour
@@ -8,5 +8,7 @@ import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 BitType.setMetadata<BitTypeMetadata>(BitType.botActionResponse, {
   tags: { ...TAGS_DEFAULT },
   resourceAttachmentAllowed: false,
-  cardSetType: CardSetType.botActionResponses,
+  cardSet: CARD_SET_BOT_ACTION_RESPONSES,
+  bodyAllowed: true,
+  footerAllowed: true,
 });

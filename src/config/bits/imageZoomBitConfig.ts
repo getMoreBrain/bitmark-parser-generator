@@ -10,4 +10,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.imageZoom, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_IMAGE_RESOURCE },
   resourceAttachmentAllowed: false,
   resourceType: ResourceType.image,
+  bodyAllowed: true,
 });

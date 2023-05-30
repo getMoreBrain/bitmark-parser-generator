@@ -21,8 +21,17 @@ export interface BitTypeMetadata {
 
   // Is a body allowed? (default: false)
   bodyAllowed?: boolean;
+
+  // Is a footer allowed? (default: false)
+  footerAllowed?: boolean;
 }
 
+/**
+ * TODO: The CardSetConfig needs improving to handle more use cases
+ * - Different card configurations
+ * - Infinitely repeating cards (this is the default, but maybe there could also be limited cards)
+ * - Infinitely repeating sides (this is hacked in at the moment, but the config is not really correct)
+ */
 export interface CardSetConfig {
   type: CardSetTypeType;
 
@@ -36,8 +45,11 @@ export interface CardSetVariantConfig {
   // Tags, Property Tags, and Tag chains that are valid for this bit type
   tags: TagDataMap;
 
-  // Is a body allowed? (default: false)
+  // Is a body allowed in this card variant? (default: false)
   bodyAllowed?: boolean;
+
+  // If true, this config repeats infinitely
+  infiniteRepeat?: boolean;
 }
 
 const BitType = superenum({
@@ -129,6 +141,7 @@ const BitType = superenum({
   flashcard: 'flashcard',
   flashcard1: 'flashcard-1',
   focusImage: 'focus-image',
+  footNote: 'foot-note',
   groupBorn: 'group-born',
   groupDied: 'group-died',
   help: 'help',
@@ -188,6 +201,7 @@ const BitType = superenum({
   selfAssessment: 'self-assessment',
   sequence: 'sequence',
   sideNote: 'side-note',
+  stickyNote: 'sticky-note',
   stillImageFilm: 'still-image-film',
   stillImageFilmEmbed: 'still-image-film-embed',
   stillImageFilmLink: 'still-image-film-link',

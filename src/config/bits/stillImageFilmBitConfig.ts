@@ -10,4 +10,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.stillImageFilm, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_STILL_IMAGE_RESOURCE },
   resourceAttachmentAllowed: false,
   resourceType: ResourceType.stillImageFilm,
+  bodyAllowed: true,
 });

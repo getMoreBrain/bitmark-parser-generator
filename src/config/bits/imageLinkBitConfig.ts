@@ -10,4 +10,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.imageLink, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_IMAGE_LINK_RESOURCE },
   resourceAttachmentAllowed: false,
   resourceType: ResourceType.imageLink,
+  bodyAllowed: true,
 });

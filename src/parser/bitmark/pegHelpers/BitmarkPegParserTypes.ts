@@ -32,6 +32,7 @@ import {
   BotResponse,
   Partner,
   ExtraProperties,
+  ImageResource,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -111,6 +112,25 @@ export interface BitContentProcessorResult {
   isShortAnswer?: boolean;
   isCaseSensitive?: boolean;
   reaction?: string;
+  license?: string;
+  copyright?: string;
+  showInIndex?: boolean;
+  caption?: string;
+  src1x?: string;
+  src2x?: string;
+  src3x?: string;
+  src4x?: string;
+  width?: number;
+  height?: number;
+  alt?: string;
+  duration?: number; // string?
+  mute?: boolean;
+  autoplay?: boolean;
+  allowSubtitles?: boolean;
+  showSubtitles?: boolean;
+  posterImage?: ImageResource;
+  siteName?: string;
+
   extraProperties?: ExtraProperties;
 }
 

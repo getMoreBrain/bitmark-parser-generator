@@ -10,4 +10,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.documentLink, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_DOCUMENT_LINK_RESOURCE },
   resourceAttachmentAllowed: false,
   resourceType: ResourceType.documentLink,
+  bodyAllowed: true,
 });

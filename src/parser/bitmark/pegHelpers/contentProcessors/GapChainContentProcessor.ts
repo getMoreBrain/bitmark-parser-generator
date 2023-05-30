@@ -25,7 +25,7 @@ function gapChainContentProcessor(
   inChain: boolean,
 ): void {
   if (inChain) {
-    clozeTagContentProcessor(context, BitContentLevel.GapChain, bitType, content, target);
+    clozeTagContentProcessor(context, BitContentLevel.Chain, bitType, content, target);
   } else {
     const gap = buildGap(context, bitType, content);
     if (gap) bodyParts.push(gap);
@@ -35,23 +35,16 @@ function gapChainContentProcessor(
 function buildGap(context: BitmarkPegParserContext, bitType: BitTypeType, content: BitContent): Gap | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('gap content', content);
 
-  const solutions = [];
+  const chainContent = [content, ...(content.chain ?? [])];
 
-  const target: BitContentProcessorResult = {
-    solutions: [],
-  };
-  clozeTagContentProcessor(context, BitContentLevel.GapChain, bitType, content, target);
-
-  const tags = context.bitContentProcessor(BitContentLevel.GapChain, bitType, content.chain, true);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, chainContent);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', tags);
 
-  const { solutions: chainedSolutions, ...rest } = tags;
-  if (target.solutions) solutions.push(...target.solutions);
-  if (chainedSolutions) solutions.push(...chainedSolutions);
+  const { solutions, ...rest } = tags;
 
   const gap = builder.gap({
-    solutions,
+    solutions: solutions ?? [],
     ...rest,
     isCaseSensitive: true,
   });

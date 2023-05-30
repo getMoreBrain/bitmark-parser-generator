@@ -1,184 +1,64 @@
 [
   {
-    "bitmark": "[.essay:bitmark--]\n|| PEG parser does not consider the instruction [!] at the end of the body line valid, but the ANTLR parser does ||\n[@id:245552]\n[%][%Lernaufgabe E – 22]\nFachmann Gesundheit Bruno Moll und Fachfrau Gesundheit Anna Schulz haben in der erweiterten Beispielhaften Situation mithilfe des Internets weitere präventive Massnahmen recherchiert. Aus ihren Recherchen ziehen sie den Schluss, dass es reicht, wenn sich die Klientinnen und Klienten gut ernähren, viel an der frischen Luft sind und gute soziale Kontakte pflegen. [!Überprüfen Sie die Hypothese und beurteilen Sie diese Aussage.]",
     "bit": {
       "type": "essay",
       "format": "bitmark--",
+      "id": ["245552"],
+      "partialAnswer": "",
+      "item": "",
+      "lead": "Lernaufgabe E – 22",
+      "hint": "",
       "instruction": "Überprüfen Sie die Hypothese und beurteilen Sie diese Aussage.",
-      "partialAnswer": "",
-      "body": "Fachmann Gesundheit Bruno Moll und Fachfrau Gesundheit Anna Schulz haben in der erweiterten Beispielhaften Situation mithilfe des Internets weitere präventive Massnahmen recherchiert. Aus ihren Recherchen ziehen sie den Schluss, dass es reicht, wenn sich die Klientinnen und Klienten gut ernähren, viel an der frischen Luft sind und gute soziale Kontakte pflegen.",
-      "item": "",
-      "hint": "",
-      "isExample": false,
       "example": "",
-      "id": [
-        "245552"
-      ],
-      "lead": "Lernaufgabe E – 22"
-    }
-  },
-  {
-    "bitmark": "[.essay::bitmark++]\n|| double :: in the bit declaration confuses the ANTLR parser ||\n[@id:272740]\n[%2][%Situationen und Aufgaben gemäss Lehrplan]\nEin Kunde hat eine sehr empfindliche Haut, die schnell zu **Juckreiz** neigt. Er möchte sich längerfristig so behandeln, dass dieser Juckreiz möglichst selten auftritt.\n\n[!Machen Sie sich Gedanken zu folgenden Fragen:]\n\n• Haben Sie selbst dieses Problem auch schon erlebt, dass es Sie juckt? Was haben Sie dagegen unternommen?\n• Warum hat die Haut gejuckt? Welche Ursachen könnten eine Rolle spielen?",
-    "bit": {
-      "type": "essay",
-      "format": "bitmark--",
-      "instruction": "",
-      "partialAnswer": "",
-      "body": "[@id:272740]\n[%2][%Situationen und Aufgaben gemäss Lehrplan]\nEin Kunde hat eine sehr empfindliche Haut, die schnell zu **Juckreiz** neigt. Er möchte sich längerfristig so behandeln, dass dieser Juckreiz möglichst selten auftritt.\n\n[!Machen Sie sich Gedanken zu folgenden Fragen:]\n\n• Haben Sie selbst dieses Problem auch schon erlebt, dass es Sie juckt? Was haben Sie dagegen unternommen?\n• Warum hat die Haut gejuckt? Welche Ursachen könnten eine Rolle spielen?",
-      "item": "",
-      "hint": "",
       "isExample": false,
-      "example": ""
+      "body": "Fachmann Gesundheit Bruno Moll und Fachfrau Gesundheit Anna Schulz haben in der erweiterten Beispielhaften Situation mithilfe des Internets weitere präventive Massnahmen recherchiert. Aus ihren Recherchen ziehen sie den Schluss, dass es reicht, wenn sich die Klientinnen und Klienten gut ernähren, viel an der frischen Luft sind und gute soziale Kontakte pflegen."
     },
-    "errors": [
-      {
-        "message": "Rule violation around '::'",
-        "line": 1,
-        "column": 7,
-        "errorLine": "[.essay::bitmark++]"
-      },
-      {
-        "message": "Unexpected input ']'",
-        "line": 1,
-        "column": 18,
-        "errorLine": "[.essay::bitmark++]"
-      },
-      {
-        "message": "Unexpected input '[@'",
-        "line": 3,
-        "column": 0,
-        "errorLine": "[@id:272740]"
-      },
-      {
-        "message": "Unexpected input ']'",
-        "line": 3,
-        "column": 11,
-        "errorLine": "[@id:272740]"
-      },
-      {
-        "message": "Unexpected input '[%'",
-        "line": 4,
-        "column": 0,
-        "errorLine": "[%2][%Situationen und Aufgaben gemäss Lehrplan]"
-      },
-      {
-        "message": "Rule violation around ']'",
-        "line": 4,
-        "column": 3,
-        "errorLine": "[%2][%Situationen und Aufgaben gemäss Lehrplan]"
-      }
-    ]
+    "bitmark": "[.essay:bitmark--]\n|| PEG parser does not consider the instruction [!] at the end of the body line valid, but the ANTLR parser does ||\n[@id:245552]\n[%][%Lernaufgabe E – 22]\nFachmann Gesundheit Bruno Moll und Fachfrau Gesundheit Anna Schulz haben in der erweiterten Beispielhaften Situation mithilfe des Internets weitere präventive Massnahmen recherchiert. Aus ihren Recherchen ziehen sie den Schluss, dass es reicht, wenn sich die Klientinnen und Klienten gut ernähren, viel an der frischen Luft sind und gute soziale Kontakte pflegen. [!Überprüfen Sie die Hypothese und beurteilen Sie diese Aussage.]"
   },
   {
-    "bitmark": "[.essay:bitmark++]\n[@id:152151]\n[!Eine Garagen- und Fahrschulgruppe wendet die Gruppenbesteuerung an: Die Beteiligungsverhältnisse präsentieren sich wie folgt:]\n|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_1.png|\n\nErstellen Sie die Mehrwertsteuerabrechnung 20.1 aufgrund der nachfolgenden Angaben:\n\n**01.01. bis 31.12.20.1 - Beträge In CHF (exkl. MWST)**\n• Autohandels AG\n3.200.000 - Verkäufe an inländische Kunden\n80.000 - Verkäufe an Fahrschule\n100.000 - Dividendenerträge von Gruppengesellschaften\nInvestitionen 7,7% = 50% des Umsatzes\nÜbriger Aufwand 7,7% = 10% des Umsatzes\n\n• Immobilien AG\n120.000 - Mieterträge von Autohandels AG\n80.000 - Mieterträge von Reparatur und Carrossierie AG\n100.000 - Mietersträge von Fahrschule AG\n-65.000 - Aufwendungen (7,7%)\n\n• Reparatur und Carrosserie AG\n820.000 - Umsätze mit Dritten\n150.000 - Umsätze mit Fahrschule AG\n-360.000 - Aufwendungen (7,7%)\n\n• Fahrschule AG\n270.000 - Kurse und Schulungen im Inland\n80.000 - Kurse und Schulungen im Ausland\n40.000 - Verkäufe von ausgemusterten Fahrzeugen an Dritte\n140.000 - Aufwendungen (7,7%)\n||despite it being a table with three columns I didn't want to do it as an image since it would need two separate images with only one line in the second one||\n\n[?|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png|\n1)VOST: 3.200.000 * 60% * 7,70%\t\t\t\tVOST\t**147.840**\n2)|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_5.png|\n3) VOST auf steuerbaren Leistungen = 84,5% auf 7,7% von 360\t    **23.423**\n\n4)direkte VOST auf Ausland-Umsätzen, da für diese\noptiert werden könnte (Art. 29 Ibis MWSTG).\nBerechnung: 80.000 / 3.900 = 20.51%; 140.000 * 20,51 * 7,70%\t       **2.211**\n\n**Abrechnung:**\n\nUmsatz (3.200.000+820.000+390.000)\t4.410.000\n./. ausg. Umsätze\t-390.000\nsteuerbare Umsätze\t4.020.000\n\n**Steuer 7,70%\t309.540**\n**VOST\t-176.557**\n**Nettozahllast\t132.983**\n]",
     "bit": {
       "type": "essay",
       "format": "bitmark++",
-      "instruction": "Eine Garagen- und Fahrschulgruppe wendet die Gruppenbesteuerung an: Die Beteiligungsverhältnisse präsentieren sich wie folgt:",
+      "id": ["272740"],
       "partialAnswer": "",
-      "body": "|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_1.png|\n\nErstellen Sie die Mehrwertsteuerabrechnung 20.1 aufgrund der nachfolgenden Angaben:\n\n**01.01. bis 31.12.20.1 - Beträge In CHF (exkl. MWST)**\n• Autohandels AG\n3.200.000 - Verkäufe an inländische Kunden\n80.000 - Verkäufe an Fahrschule\n100.000 - Dividendenerträge von Gruppengesellschaften\nInvestitionen 7,7% = 50% des Umsatzes\nÜbriger Aufwand 7,7% = 10% des Umsatzes\n\n• Immobilien AG\n120.000 - Mieterträge von Autohandels AG\n80.000 - Mieterträge von Reparatur und Carrossierie AG\n100.000 - Mietersträge von Fahrschule AG\n-65.000 - Aufwendungen (7,7%)\n\n• Reparatur und Carrosserie AG\n820.000 - Umsätze mit Dritten\n150.000 - Umsätze mit Fahrschule AG\n-360.000 - Aufwendungen (7,7%)\n\n• Fahrschule AG\n270.000 - Kurse und Schulungen im Inland\n80.000 - Kurse und Schulungen im Ausland\n40.000 - Verkäufe von ausgemusterten Fahrzeugen an Dritte\n140.000 - Aufwendungen (7,7%)",
-      "item": "",
-      "hint": "|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png|\n1)VOST: 3.200.000 * 60% * 7,70%\t\t\t\tVOST\t**147.840**\n2)|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_5.png|\n3) VOST auf steuerbaren Leistungen = 84,5% auf 7,7% von 360\t    **23.423**\n\n4)direkte VOST auf Ausland-Umsätzen, da für diese\noptiert werden könnte (Art. 29 Ibis MWSTG).\nBerechnung: 80.000 / 3.900 = 20.51%; 140.000 * 20,51 * 7,70%\t       **2.211**\n\n**Abrechnung:**\n\nUmsatz (3.200.000+820.000+390.000)\t4.410.000\n./. ausg. Umsätze\t-390.000\nsteuerbare Umsätze\t4.020.000\n\n**Steuer 7,70%\t309.540**\n**VOST\t-176.557**\n**Nettozahllast\t132.983**",
-      "isExample": false,
+      "item": "2",
+      "lead": "Situationen und Aufgaben gemäss Lehrplan",
+      "hint": "",
+      "instruction": "Machen Sie sich Gedanken zu folgenden Fragen:",
       "example": "",
-      "id": [
-        "152151"
-      ]
-    }
+      "isExample": false,
+      "body": "Ein Kunde hat eine sehr empfindliche Haut, die schnell zu **Juckreiz** neigt. Er möchte sich längerfristig so behandeln, dass dieser Juckreiz möglichst selten auftritt.\n\n\n\n• Haben Sie selbst dieses Problem auch schon erlebt, dass es Sie juckt? Was haben Sie dagegen unternommen?\n• Warum hat die Haut gejuckt? Welche Ursachen könnten eine Rolle spielen?"
+    },
+    "bitmark": "[.essay::bitmark++]\n|| double :: in the bit declaration confuses the ANTLR parser ||\n[@id:272740]\n[%2][%Situationen und Aufgaben gemäss Lehrplan]\nEin Kunde hat eine sehr empfindliche Haut, die schnell zu **Juckreiz** neigt. Er möchte sich längerfristig so behandeln, dass dieser Juckreiz möglichst selten auftritt.\n\n[!Machen Sie sich Gedanken zu folgenden Fragen:]\n\n• Haben Sie selbst dieses Problem auch schon erlebt, dass es Sie juckt? Was haben Sie dagegen unternommen?\n• Warum hat die Haut gejuckt? Welche Ursachen könnten eine Rolle spielen?"
   },
   {
-    "bitmark": "[.essay]\n[@id:136476]\n[%1]\n[!Gib das Ergebnis an:\n(107 · 0.471)+(6.98+3.41+3.02−3.39)−(97 · 0.471)]",
+    "bit": {
+      "type": "essay",
+      "format": "bitmark++",
+      "id": ["152151"],
+      "partialAnswer": "",
+      "item": "",
+      "hint": "|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png|\n1)VOST: 3.200.000 * 60% * 7,70%\t\t\t\tVOST\t**147.840**\n2)|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_5.png|\n3) VOST auf steuerbaren Leistungen = 84,5% auf 7,7% von 360\t    **23.423**\n\n4)direkte VOST auf Ausland-Umsätzen, da für diese\noptiert werden könnte (Art. 29 Ibis MWSTG).\nBerechnung: 80.000 / 3.900 = 20.51%; 140.000 * 20,51 * 7,70%\t       **2.211**\n\n**Abrechnung:**\n\nUmsatz (3.200.000+820.000+390.000)\t4.410.000\n./. ausg. Umsätze\t-390.000\nsteuerbare Umsätze\t4.020.000\n\n**Steuer 7,70%\t309.540**\n**VOST\t-176.557**\n**Nettozahllast\t132.983**",
+      "instruction": "Eine Garagen- und Fahrschulgruppe wendet die Gruppenbesteuerung an: Die Beteiligungsverhältnisse präsentieren sich wie folgt:",
+      "example": "",
+      "isExample": false,
+      "body": "|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_1.png|\n\nErstellen Sie die Mehrwertsteuerabrechnung 20.1 aufgrund der nachfolgenden Angaben:\n\n**01.01. bis 31.12.20.1 - Beträge In CHF (exkl. MWST)**\n• Autohandels AG\n3.200.000 - Verkäufe an inländische Kunden\n80.000 - Verkäufe an Fahrschule\n100.000 - Dividendenerträge von Gruppengesellschaften\nInvestitionen 7,7% = 50% des Umsatzes\nÜbriger Aufwand 7,7% = 10% des Umsatzes\n\n• Immobilien AG\n120.000 - Mieterträge von Autohandels AG\n80.000 - Mieterträge von Reparatur und Carrossierie AG\n100.000 - Mietersträge von Fahrschule AG\n-65.000 - Aufwendungen (7,7%)\n\n• Reparatur und Carrosserie AG\n820.000 - Umsätze mit Dritten\n150.000 - Umsätze mit Fahrschule AG\n-360.000 - Aufwendungen (7,7%)\n\n• Fahrschule AG\n270.000 - Kurse und Schulungen im Inland\n80.000 - Kurse und Schulungen im Ausland\n40.000 - Verkäufe von ausgemusterten Fahrzeugen an Dritte\n140.000 - Aufwendungen (7,7%)"
+    },
+    "bitmark": "[.essay:bitmark++]\n[@id:152151]\n[!Eine Garagen- und Fahrschulgruppe wendet die Gruppenbesteuerung an: Die Beteiligungsverhältnisse präsentieren sich wie folgt:]\n|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_1.png|\n\nErstellen Sie die Mehrwertsteuerabrechnung 20.1 aufgrund der nachfolgenden Angaben:\n\n**01.01. bis 31.12.20.1 - Beträge In CHF (exkl. MWST)**\n• Autohandels AG\n3.200.000 - Verkäufe an inländische Kunden\n80.000 - Verkäufe an Fahrschule\n100.000 - Dividendenerträge von Gruppengesellschaften\nInvestitionen 7,7% = 50% des Umsatzes\nÜbriger Aufwand 7,7% = 10% des Umsatzes\n\n• Immobilien AG\n120.000 - Mieterträge von Autohandels AG\n80.000 - Mieterträge von Reparatur und Carrossierie AG\n100.000 - Mietersträge von Fahrschule AG\n-65.000 - Aufwendungen (7,7%)\n\n• Reparatur und Carrosserie AG\n820.000 - Umsätze mit Dritten\n150.000 - Umsätze mit Fahrschule AG\n-360.000 - Aufwendungen (7,7%)\n\n• Fahrschule AG\n270.000 - Kurse und Schulungen im Inland\n80.000 - Kurse und Schulungen im Ausland\n40.000 - Verkäufe von ausgemusterten Fahrzeugen an Dritte\n140.000 - Aufwendungen (7,7%)\n||despite it being a table with three columns I didn't want to do it as an image since it would need two separate images with only one line in the second one||\n\n[?|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png|\n1)VOST: 3.200.000 * 60% * 7,70%\t\t\t\tVOST\t**147.840**\n2)|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_5.png|\n3) VOST auf steuerbaren Leistungen = 84,5% auf 7,7% von 360\t    **23.423**\n\n4)direkte VOST auf Ausland-Umsätzen, da für diese\noptiert werden könnte (Art. 29 Ibis MWSTG).\nBerechnung: 80.000 / 3.900 = 20.51%; 140.000 * 20,51 * 7,70%\t       **2.211**\n\n**Abrechnung:**\n\nUmsatz (3.200.000+820.000+390.000)\t4.410.000\n./. ausg. Umsätze\t-390.000\nsteuerbare Umsätze\t4.020.000\n\n**Steuer 7,70%\t309.540**\n**VOST\t-176.557**\n**Nettozahllast\t132.983**\n]"
+  },
+  {
     "bit": {
       "type": "essay",
       "format": "bitmark--",
-      "instruction": "Gib das Ergebnis an:\n(107 · 0.471)+(6.98+3.41+3.023.39)(97 · 0.471)",
+      "id": ["136476"],
       "partialAnswer": "",
-      "body": "[!Gib das Ergebnis an:\n(107 · 0.471)+(6.98+3.41+3.02−3.39)−(97 · 0.471)]",
       "item": "1",
       "hint": "",
-      "isExample": false,
+      "instruction": "Gib das Ergebnis an:\n(107 · 0.471)+(6.98+3.41+3.02−3.39)−(97 · 0.471)",
       "example": "",
-      "id": [
-        "136476"
-      ]
+      "isExample": false,
+      "body": ""
     },
-    "errors": [
-      {
-        "message": "token recognition error at: '−'",
-        "line": 5,
-        "column": 29,
-        "errorLine": "(107 · 0.471)+(6.98+3.41+3.02−3.39)−(97 · 0.471)]"
-      },
-      {
-        "message": "token recognition error at: '−'",
-        "line": 5,
-        "column": 35,
-        "errorLine": "(107 · 0.471)+(6.98+3.41+3.02−3.39)−(97 · 0.471)]"
-      }
-    ]
-  },
-  {
-    "bitmark": "[.interview:bitmark--&image]\n[@id:136477]\n[%2]\n[&image:https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/mathe_2019/web-resources/images/aufnahmepruefung1.png]\n\n[!__Auf dem Ponyhof__]\n===\na) Wie gross ist der Futterbedarf im Monat März für alle Ponys?\n===\nb) Wie viel sollte ein Reiter eines Ponys mit durchschnittlichem Gewicht höchstens wiegen?\n===\nc) Einmal pro Tag wird Wasser für die Ponys bereitgestellt. Wie viele Wassertröge werden mindestens benötigt?\n===",
-    "bit": {
-      "type": "interview",
-      "format": "bitmark--",
-      "item": "2",
-      "instruction": "__Auf dem Ponyhof__",
-      "body": "a) Wie gross ist der Futterbedarf im Monat März für alle Ponys?b) Wie viel sollte ein Reiter eines Ponys mit durchschnittlichem Gewicht höchstens wiegen?c) Einmal pro Tag wird Wasser für die Ponys bereitgestellt. Wie viele Wassertröge werden mindestens benötigt?",
-      "footer": "",
-      "hint": "",
-      "questions": [
-        {
-          "item": "",
-          "question": "a) Wie gross ist der Futterbedarf im Monat März für alle Ponys?",
-          "instruction": "",
-          "hint": "",
-          "isExample": false,
-          "example": "",
-          "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
-        },
-        {
-          "item": "",
-          "question": "b) Wie viel sollte ein Reiter eines Ponys mit durchschnittlichem Gewicht höchstens wiegen?",
-          "instruction": "",
-          "hint": "",
-          "isExample": false,
-          "example": "",
-          "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
-        },
-        {
-          "item": "",
-          "question": "c) Einmal pro Tag wird Wasser für die Ponys bereitgestellt. Wie viele Wassertröge werden mindestens benötigt?",
-          "instruction": "",
-          "hint": "",
-          "isExample": false,
-          "example": "",
-          "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
-        }
-      ],
-      "id": [
-        "136477"
-      ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "src": "https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/mathe_2019/web-resources/images/aufnahmepruefung1.png",
-          "showInIndex": false,
-          "format": "png",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "caption": "",
-          "license": "",
-          "copyright": ""
-        }
-      }
-    }
+    "bitmark": "[.essay]\n[@id:136476]\n[%1]\n[!Gib das Ergebnis an:\n(107 · 0.471)+(6.98+3.41+3.02−3.39)−(97 · 0.471)]"
   }
 ]

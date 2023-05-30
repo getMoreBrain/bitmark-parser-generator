@@ -9,6 +9,7 @@ import { partnerChainContentProcessor } from './PartnerChainContentProcessor';
 
 import {
   BitContent,
+  BitContentLevel,
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
@@ -30,8 +31,8 @@ function propertyContentProcessor(
   if (key === PropertyKey.partner) {
     partnerChainContentProcessor(context, bitLevel, bitType, content, target);
     return;
-  } else if (bitType === BitType.learningPathBook && key === PropertyKey.book) {
-    bookChainContentProcessor(context, bitLevel, bitType, content, target);
+  } else if (key === PropertyKey.book) {
+    bookChainContentProcessor(context, bitLevel, bitType, content, target, bitLevel === BitContentLevel.Chain);
     return;
   }
 

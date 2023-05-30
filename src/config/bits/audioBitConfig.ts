@@ -10,4 +10,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.audio, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_AUDIO_RESOURCE },
   resourceAttachmentAllowed: false,
   resourceType: ResourceType.audio,
+  bodyAllowed: true,
 });

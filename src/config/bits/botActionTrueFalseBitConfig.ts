@@ -7,4 +7,5 @@ import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 BitType.setMetadata<BitTypeMetadata>(BitType.botActionTrueFalse, {
   tags: { ...TAGS_DEFAULT },
   resourceAttachmentAllowed: false,
+  bodyAllowed: true,
 });

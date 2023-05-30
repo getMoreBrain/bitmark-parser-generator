@@ -10,4 +10,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.videoLink, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_VIDEO_LINK_RESOURCE },
   resourceAttachmentAllowed: false,
   resourceType: ResourceType.videoLink,
+  bodyAllowed: true,
 });

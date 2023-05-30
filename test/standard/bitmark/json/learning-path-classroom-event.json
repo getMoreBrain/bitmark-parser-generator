@@ -1,89 +1,95 @@
 [
   {
-    "bitmark": "[.learning-path-classroom-event]\n[!Grundlagen 1]\n[@action:Päsenz-Seminar]\n[@date:2022-10-01T08:00:00CET]\n[@duration:28800s]\n[@location:東京]",
     "bit": {
       "type": "learning-path-classroom-event",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
-      "isExample": false,
-      "example": "",
+      "date": "2022-10-01T08:00:00CET",
+      "location": "東京",
+      "action": "Päsenz-Seminar",
+      "duration": "28800s",
       "isTracked": true,
       "isInfoOnly": false,
+      "item": "",
+      "hint": "",
       "instruction": "Grundlagen 1",
-      "action": "Päsenz-Seminar",
-      "date": "2022-10-01T08:00:00CET",
-      "duration": "28800s",
-      "location": "東京"
-    }
+      "example": "",
+      "isExample": false,
+      "body": ""
+    },
+    "bitmark": "[.learning-path-classroom-event]\n[!Grundlagen 1]\n[@action:Päsenz-Seminar]\n[@date:2022-10-01T08:00:00CET]\n[@duration:28800s]\n[@location:東京]"
   },
   {
-    "bitmark": "[.essay]\n[%ess1]\n[!我是物理学家卡洛·罗韦利我，，爱诗歌爱智慧]\n\n::essay::\n日本观光船事故内情。我是物理学家卡洛·罗韦利，我爱诗歌，爱智慧\n我父母在北海道，我一个人住在东京。我属猪，猪在日本不是猪，而是野猪。听说在中国属猪的人有金运，将来会有很多钱。太可惜了，我是野猪，没有金运，是个穷人。\n::\n[@location:东京]",
     "bit": {
       "type": "essay",
       "format": "bitmark--",
-      "instruction": "我是物理学家卡洛·罗韦利我，，爱诗歌爱智慧",
+      "location": "东京",
       "partialAnswer": "",
-      "body": "::essay::\n日本观光船事故内情。我是物理学家卡洛·罗韦利，我爱诗歌，爱智慧\n我父母在北海道，我一个人住在东京。我属猪，猪在日本不是猪，而是野猪。听说在中国属猪的人有金运，将来会有很多钱。太可惜了，我是野猪，没有金运，是个穷人。\n::",
       "item": "ess1",
       "hint": "",
-      "isExample": false,
+      "instruction": "我是物理学家卡洛·罗韦利我，，爱诗歌爱智慧",
       "example": "",
-      "location": "东京"
-    }
-  },
-  {
-    "bitmark": "[.learning-path-classroom-event]\n[!Grundlagen 1]\n[@action:Päsenz-Seminar]\n[@date:2022-10-01T08:00:00CET]\n[@duration:28800s]\n[@location:Zug]\n[@isTracked:true]\n[@isInfoOnly:false]\n[@textReference: foo\nbar\nbaz]",
-    "bit": {
-      "type": "learning-path-classroom-event",
-      "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
       "isExample": false,
-      "example": "",
-      "isTracked": true,
-      "isInfoOnly": false,
-      "instruction": "Grundlagen 1",
-      "action": "Päsenz-Seminar",
-      "date": "2022-10-01T08:00:00CET",
-      "duration": "28800s",
-      "location": "Zug",
-      "textReference": "foo\nbar\nbaz"
-    }
-  },
-  {
-    "bitmark": "[.learning-path-classroom-event]\n[!Grundlagen 1]\n[@action:Päsenz-Seminar]\n[@date:2022-10-01T08:00:00CET]\n[@duration:28800s]\n[@location:Zug]\n[@isTracked:trua]\n[@isInfoOnly:felse]",
-    "bit": {
-      "type": "learning-path-classroom-event",
-      "format": "bitmark--",
-      "body": "[@isTracked:trua]\n[@isInfoOnly:felse]",
-      "item": "",
-      "hint": "",
-      "isExample": false,
-      "example": "",
-      "isTracked": true,
-      "isInfoOnly": false,
-      "instruction": "Grundlagen 1",
-      "action": "Päsenz-Seminar",
-      "date": "2022-10-01T08:00:00CET",
-      "duration": "28800s",
-      "location": "Zug"
+      "body": "::essay::\n日本观光船事故内情。我是物理学家卡洛·罗韦利，我爱诗歌，爱智慧\n我父母在北海道，我一个人住在东京。我属猪，猪在日本不是猪，而是野猪。听说在中国属猪的人有金运，将来会有很多钱。太可惜了，我是野猪，没有金运，是个穷人。\n::"
     },
-    "errors": [
-      {
-        "message": "isTracked property has to be true or false",
-        "line": 7,
-        "column": 0,
-        "errorLine": "[@location:Zug]"
-      },
-      {
-        "message": "isInfoOnly property has to be true or false",
-        "line": 8,
-        "column": 0,
-        "errorLine": "[@isTracked:trua]"
-      }
-    ]
+    "parser": {
+      "warnings": [
+        {
+          "message": "'Property' with key 'location' is an excess property here",
+          "text": "[@location:东京]",
+          "location": {
+            "start": {
+              "offset": 165,
+              "line": 10,
+              "column": 1
+            },
+            "end": {
+              "offset": 179,
+              "line": 10,
+              "column": 15
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.essay]\n[%ess1]\n[!我是物理学家卡洛·罗韦利我，，爱诗歌爱智慧]\n\n::essay::\n日本观光船事故内情。我是物理学家卡洛·罗韦利，我爱诗歌，爱智慧\n我父母在北海道，我一个人住在东京。我属猪，猪在日本不是猪，而是野猪。听说在中国属猪的人有金运，将来会有很多钱。太可惜了，我是野猪，没有金运，是个穷人。\n::\n[@location:东京]"
+  },
+  {
+    "bit": {
+      "type": "learning-path-classroom-event",
+      "format": "bitmark--",
+      "date": "2022-10-01T08:00:00CET",
+      "location": "Zug",
+      "action": "Päsenz-Seminar",
+      "duration": "28800s",
+      "textReference": "foo\nbar\nbaz",
+      "isTracked": true,
+      "isInfoOnly": false,
+      "item": "",
+      "hint": "",
+      "instruction": "Grundlagen 1",
+      "example": "",
+      "isExample": false,
+      "body": ""
+    },
+    "bitmark": "[.learning-path-classroom-event]\n[!Grundlagen 1]\n[@action:Päsenz-Seminar]\n[@date:2022-10-01T08:00:00CET]\n[@duration:28800s]\n[@location:Zug]\n[@isTracked:true]\n[@isInfoOnly:false]\n[@textReference: foo\nbar\nbaz]"
+  },
+  {
+    "bit": {
+      "type": "learning-path-classroom-event",
+      "format": "bitmark--",
+      "date": "2022-10-01T08:00:00CET",
+      "location": "Zug",
+      "action": "Päsenz-Seminar",
+      "duration": "28800s",
+      "isTracked": true,
+      "isInfoOnly": true,
+      "item": "",
+      "hint": "",
+      "instruction": "Grundlagen 1",
+      "example": "",
+      "isExample": false,
+      "body": ""
+    },
+    "bitmark": "[.learning-path-classroom-event]\n[!Grundlagen 1]\n[@action:Päsenz-Seminar]\n[@date:2022-10-01T08:00:00CET]\n[@duration:28800s]\n[@location:Zug]\n[@isTracked:trua]\n[@isInfoOnly:felse]"
   }
 ]

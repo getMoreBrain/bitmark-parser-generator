@@ -69,6 +69,9 @@ export interface Bit {
   bot?: Property;
   referenceProperty?: Property;
   list?: Property;
+  textReference?: Property;
+  isTracked?: Property;
+  isInfoOnly?: Property;
   labelTrue?: Property;
   labelFalse?: Property;
   quotedPerson?: Property;

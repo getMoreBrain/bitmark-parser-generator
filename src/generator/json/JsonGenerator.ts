@@ -765,6 +765,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         // Create the question
         const pairJson: Partial<PairJson> = {
           key: p.key ?? '',
+          keyAudio: p.keyAudio ? this.addAudioResource(p.keyAudio) : undefined,
+          keyImage: p.keyImage ? this.addImageResource(p.keyImage) : undefined,
           values: p.values ?? [],
           ...this.toItemLeadHintInstruction(p),
           ...this.toExampleAndIsExample(p.example),
@@ -775,6 +777,18 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
         // Delete unwanted properties
         if (p.itemLead?.lead == null) delete pairJson.lead;
+        if (pairJson.key) {
+          delete pairJson.keyAudio;
+          delete pairJson.keyImage;
+        }
+        if (pairJson.keyAudio != null) {
+          delete pairJson.key;
+          delete pairJson.keyImage;
+        }
+        if (pairJson.keyImage != null) {
+          delete pairJson.key;
+          delete pairJson.keyAudio;
+        }
 
         pairsJson.push(pairJson as PairJson);
       }
@@ -1725,6 +1739,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       videoCallLink: undefined,
       duration: undefined,
       list: undefined,
+      textReference: undefined,
+      isTracked: undefined,
+      isInfoOnly: undefined,
       labelTrue: undefined,
       labelFalse: undefined,
       quotedPerson: undefined,
@@ -1749,10 +1766,6 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       // Example
       example: undefined,
       isExample: undefined,
-
-      // Only .learningPathExternalLink?
-      isTracked: undefined,
-      isInfoOnly: undefined,
 
       // Partner .conversion-xxx only
       partner: undefined,
@@ -1918,7 +1931,18 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         if (bitJson.body == null) bitJson.body = '';
         break;
 
+      case BitType.learningPathBook:
+      case BitType.learningPathBotTraining:
+      case BitType.learningPathClassroomEvent:
+      case BitType.learningPathClassroomTraining:
+      case BitType.learningPathClosing:
       case BitType.learningPathExternalLink:
+      case BitType.learningPathFeedback:
+      case BitType.learningPathLearningGoal:
+      case BitType.learningPathLti:
+      case BitType.learningPathSign:
+      case BitType.learningPathStep:
+      case BitType.learningPathVideoCall:
         if (bitJson.item == null) bitJson.item = '';
         if (bitJson.hint == null) bitJson.hint = '';
         if (bitJson.isExample == null) bitJson.isExample = false;
@@ -1958,6 +1982,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (bitJson.videoCallLink == null) delete bitJson.videoCallLink;
     if (bitJson.duration == null) delete bitJson.duration;
     if (bitJson.list == null) delete bitJson.list;
+    if (bitJson.textReference == null) delete bitJson.textReference;
+    if (bitJson.isTracked == null) delete bitJson.isTracked;
+    if (bitJson.isInfoOnly == null) delete bitJson.isInfoOnly;
     if (bitJson.labelTrue == null) delete bitJson.labelTrue;
     if (bitJson.labelFalse == null) delete bitJson.labelFalse;
     if (bitJson.quotedPerson == null) delete bitJson.quotedPerson;

@@ -10,4 +10,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.websiteLink, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_WEBSITE_LINK_RESOURCE },
   resourceAttachmentAllowed: false,
   resourceType: ResourceType.websiteLink,
+  bodyAllowed: true,
 });

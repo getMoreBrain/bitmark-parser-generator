@@ -10,4 +10,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.documentDownload, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_DOCUMENT_DOWNLOAD_RESOURCE },
   resourceAttachmentAllowed: false,
   resourceType: ResourceType.documentDownload,
+  bodyAllowed: true,
 });

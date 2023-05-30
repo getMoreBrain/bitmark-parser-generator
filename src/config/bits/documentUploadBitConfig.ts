@@ -7,4 +7,5 @@ import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 BitType.setMetadata<BitTypeMetadata>(BitType.documentUpload, {
   tags: { ...TAGS_DEFAULT },
   resourceAttachmentAllowed: false,
+  bodyAllowed: true,
 });

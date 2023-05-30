@@ -13,4 +13,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.articleLink, {
   },
   resourceAttachmentAllowed: false,
   resourceType: ResourceType.articleLink,
+  bodyAllowed: true,
 });

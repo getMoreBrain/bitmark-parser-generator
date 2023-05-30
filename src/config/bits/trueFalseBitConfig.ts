@@ -1,12 +1,15 @@
 import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
-import { CardSetType } from '../../model/enum/CardSetType';
 
+import { CARD_SET_STATEMENTS } from './generic/cardSetBitConfigs';
+import { TAGS_CHAIN_ANY_RESOURCE } from './generic/resourceChainBitConfigs';
 import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
 // Set metadata on the bit types to describe specific behaviour
 
 BitType.setMetadata<BitTypeMetadata>(BitType.trueFalse, {
-  tags: { ...TAGS_DEFAULT },
-  resourceAttachmentAllowed: false,
-  cardSetType: CardSetType.statements,
+  tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_ANY_RESOURCE },
+  resourceAttachmentAllowed: true,
+  cardSet: CARD_SET_STATEMENTS,
+  bodyAllowed: true,
+  footerAllowed: true,
 });

@@ -10,4 +10,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.appLink, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_APP_LINK_RESOURCE },
   resourceAttachmentAllowed: false,
   resourceType: ResourceType.appLink,
+  bodyAllowed: false,
 });

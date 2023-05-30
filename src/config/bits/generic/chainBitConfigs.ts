@@ -34,4 +34,41 @@ const TAGS_CHAIN_GAP: TagDataMap = {
   },
 };
 
-export { TAGS_CHAIN_PARTNER, TAGS_CHAIN_GAP };
+// Gap (cloze)
+
+const TAGS_CHAIN_TRUE_FALSE: TagDataMap = {
+  [TagType.True]: {
+    maxCount: INFINITE_COUNT,
+    chain: {
+      [TagType.True]: {
+        maxCount: INFINITE_COUNT,
+      },
+      [TagType.False]: {
+        maxCount: INFINITE_COUNT,
+      },
+      ...TAGS_ITEM_LEAD_INSTRUCTION_HINT,
+      ...TAGS_PROPERTY_EXAMPLE,
+      // [PropertyKey.caseSensitive]: {
+      //   isProperty: true,
+      // },
+    },
+  },
+  [TagType.False]: {
+    maxCount: INFINITE_COUNT,
+    chain: {
+      [TagType.True]: {
+        maxCount: INFINITE_COUNT,
+      },
+      [TagType.False]: {
+        maxCount: INFINITE_COUNT,
+      },
+      ...TAGS_ITEM_LEAD_INSTRUCTION_HINT,
+      ...TAGS_PROPERTY_EXAMPLE,
+      // [PropertyKey.caseSensitive]: {
+      //   isProperty: true,
+      // },
+    },
+  },
+};
+
+export { TAGS_CHAIN_PARTNER, TAGS_CHAIN_GAP, TAGS_CHAIN_TRUE_FALSE };

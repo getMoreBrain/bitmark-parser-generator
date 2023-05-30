@@ -112,6 +112,31 @@ class ResourceBuilder {
       ...rest,
     };
 
+    // Special case for video like tags - build thumbnails from the srcXx properties
+    switch (type) {
+      case ResourceType.video:
+      case ResourceType.videoEmbed:
+      case ResourceType.videoLink:
+      case ResourceType.stillImageFilmEmbed:
+      case ResourceType.stillImageFilmLink: {
+        const thumbnailKeys = ['src1x', 'src2x', 'src3x', 'src4x'];
+        const thumbnails: ImageResource[] = [];
+        for (const k of thumbnailKeys) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const dataAsAny = data as any;
+          const value = dataAsAny[k];
+          if (value) {
+            const image = this.resource({
+              type: ResourceType.image,
+              value,
+            });
+            if (image) thumbnails.push(image as ImageResource);
+          }
+        }
+        finalData.thumbnails = thumbnails;
+      }
+    }
+
     switch (type) {
       case ResourceType.image:
         node = this.imageResource(finalData);

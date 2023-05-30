@@ -1,19 +1,5 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-import { TagDataMap } from '../config/TagData';
-
-export interface CardSetVariantConfig {
-  // Tags, Property Tags, and Tag chains that are valid for this bit type
-  tags: TagDataMap;
-
-  // Is a body allowed? (default: false)
-  bodyAllowed?: boolean;
-}
-
-export interface CardSetTypeMetadata {
-  variants: CardSetVariantConfig[];
-}
-
 const CardSetType = superenum({
   elements: 'elements',
   statements: 'statements',

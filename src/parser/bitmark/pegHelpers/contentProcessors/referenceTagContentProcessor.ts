@@ -21,7 +21,7 @@ function referenceTagContentProcessor(
 
   const trimmedStringValue = StringUtils.trimmedString(value);
 
-  if (!isReferenceEnd) {
+  if (isReferenceEnd) {
     target.referenceEnd = trimmedStringValue;
   } else {
     target.reference = trimmedStringValue;
