@@ -69,6 +69,9 @@ const TAGS_CHAIN_AUDIO_RESOURCE: TagDataMap = {
     isResource: true,
     chain: {
       ...TAGS_DEFAULT_RESOURCE_CHAIN,
+      [PropertyKey.duration]: { isProperty: true },
+      [PropertyKey.mute]: { isProperty: true },
+      [PropertyKey.autoplay]: { isProperty: true },
     },
   },
 };
@@ -78,6 +81,9 @@ const TAGS_CHAIN_AUDIO_EMBED_RESOURCE: TagDataMap = {
     isResource: true,
     chain: {
       ...TAGS_DEFAULT_RESOURCE_CHAIN,
+      [PropertyKey.duration]: { isProperty: true },
+      [PropertyKey.mute]: { isProperty: true },
+      [PropertyKey.autoplay]: { isProperty: true },
     },
   },
 };
@@ -87,6 +93,9 @@ const TAGS_CHAIN_AUDIO_LINK_RESOURCE: TagDataMap = {
     isResource: true,
     chain: {
       ...TAGS_DEFAULT_RESOURCE_CHAIN,
+      [PropertyKey.duration]: { isProperty: true },
+      [PropertyKey.mute]: { isProperty: true },
+      [PropertyKey.autoplay]: { isProperty: true },
     },
   },
 };
@@ -166,7 +175,7 @@ const TAGS_CHAIN_VIDEO_LINK_RESOURCE: TagDataMap = {
 
 // Still Image
 
-const TAGS_CHAIN_STILL_IMAGE_RESOURCE: TagDataMap = {
+const TAGS_CHAIN_STILL_IMAGE_FILM_RESOURCE: TagDataMap = {
   [ResourceType.image]: {
     isResource: true,
     chain: {
@@ -184,11 +193,14 @@ const TAGS_CHAIN_STILL_IMAGE_RESOURCE: TagDataMap = {
     isResource: true,
     chain: {
       ...TAGS_DEFAULT_RESOURCE_CHAIN,
+      [PropertyKey.duration]: { isProperty: true },
+      [PropertyKey.mute]: { isProperty: true },
+      [PropertyKey.autoplay]: { isProperty: true },
     },
   },
 };
 
-const TAGS_CHAIN_STILL_IMAGE_EMBED_RESOURCE: TagDataMap = {
+const TAGS_CHAIN_STILL_IMAGE_FILM_EMBED_RESOURCE: TagDataMap = {
   [ResourceType.stillImageFilmEmbed]: {
     isResource: true,
     chain: {
@@ -212,7 +224,7 @@ const TAGS_CHAIN_STILL_IMAGE_EMBED_RESOURCE: TagDataMap = {
   },
 };
 
-const TAGS_CHAIN_STILL_IMAGE_LINK_RESOURCE: TagDataMap = {
+const TAGS_CHAIN_STILL_IMAGE_FILM_LINK_RESOURCE: TagDataMap = {
   [ResourceType.stillImageFilmLink]: {
     isResource: true,
     chain: {
@@ -338,9 +350,9 @@ const TAGS_CHAIN_ANY_RESOURCE: TagDataMap = {
   ...TAGS_CHAIN_VIDEO_RESOURCE,
   ...TAGS_CHAIN_VIDEO_EMBED_RESOURCE,
   ...TAGS_CHAIN_VIDEO_LINK_RESOURCE,
-  ...TAGS_CHAIN_STILL_IMAGE_RESOURCE,
-  ...TAGS_CHAIN_STILL_IMAGE_EMBED_RESOURCE,
-  ...TAGS_CHAIN_STILL_IMAGE_LINK_RESOURCE,
+  ...TAGS_CHAIN_STILL_IMAGE_FILM_RESOURCE,
+  ...TAGS_CHAIN_STILL_IMAGE_FILM_EMBED_RESOURCE,
+  ...TAGS_CHAIN_STILL_IMAGE_FILM_LINK_RESOURCE,
   ...TAGS_CHAIN_ARTICLE_RESOURCE,
   ...TAGS_CHAIN_ARTICLE_EMBED_RESOURCE,
   ...TAGS_CHAIN_ARTICLE_LINK_RESOURCE,
@@ -362,9 +374,9 @@ export {
   TAGS_CHAIN_VIDEO_RESOURCE,
   TAGS_CHAIN_VIDEO_EMBED_RESOURCE,
   TAGS_CHAIN_VIDEO_LINK_RESOURCE,
-  TAGS_CHAIN_STILL_IMAGE_RESOURCE,
-  TAGS_CHAIN_STILL_IMAGE_EMBED_RESOURCE,
-  TAGS_CHAIN_STILL_IMAGE_LINK_RESOURCE,
+  TAGS_CHAIN_STILL_IMAGE_FILM_RESOURCE,
+  TAGS_CHAIN_STILL_IMAGE_FILM_EMBED_RESOURCE,
+  TAGS_CHAIN_STILL_IMAGE_FILM_LINK_RESOURCE,
   TAGS_CHAIN_ARTICLE_RESOURCE,
   TAGS_CHAIN_ARTICLE_EMBED_RESOURCE,
   TAGS_CHAIN_ARTICLE_LINK_RESOURCE,

@@ -337,12 +337,15 @@ class ResourceBuilder {
   audioResource(data: {
     format: string;
     value: string; // src
+    duration?: number; // string?
+    mute?: boolean;
+    autoplay?: boolean;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AudioResource {
-    const { value, license, copyright, showInIndex, caption } = data;
+    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioResource = {
@@ -350,6 +353,9 @@ class ResourceBuilder {
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
+      duration,
+      mute,
+      autoplay,
       license,
       copyright,
       showInIndex,
@@ -372,12 +378,15 @@ class ResourceBuilder {
   audioEmbedResource(data: {
     format: string;
     value: string; // src
+    duration?: number; // string?
+    mute?: boolean;
+    autoplay?: boolean;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AudioEmbedResource {
-    const { value, license, copyright, showInIndex, caption } = data;
+    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioEmbedResource = {
@@ -385,6 +394,9 @@ class ResourceBuilder {
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
+      duration,
+      mute,
+      autoplay,
       license,
       copyright,
       showInIndex,
@@ -407,12 +419,15 @@ class ResourceBuilder {
   audioLinkResource(data: {
     format: string;
     value: string;
+    duration?: number; // string?
+    mute?: boolean;
+    autoplay?: boolean;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AudioLinkResource {
-    const { value, license, copyright, showInIndex, caption } = data;
+    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioLinkResource = {
@@ -420,6 +435,9 @@ class ResourceBuilder {
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
+      duration,
+      mute,
+      autoplay,
       license,
       copyright,
       showInIndex,

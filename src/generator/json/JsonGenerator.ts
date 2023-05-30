@@ -1084,6 +1084,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
       // Special cases (handled outside of the automatically generated handlers)
       if (astKey === PropertyKey.example) continue;
+      if (astKey === PropertyKey.partner) continue;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[funcName] = (node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]) => {
@@ -1246,7 +1247,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       case ResourceType.documentLink:
         resourceJson = {
           type: ResourceType.documentLink,
-          documentLink: this.addDocumentEmbedResource(resource as DocumentEmbedResource),
+          documentLink: this.addDocumentLinkResource(resource as DocumentLinkResource),
         };
         break;
 
@@ -1346,6 +1347,10 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (resource.provider != null) resourceJson.provider = resource.provider;
     if (resource.value != null) resourceJson.src = resource.value;
 
+    if (resource.duration != null) resourceJson.duration = resource.duration;
+    if (resource.mute != null) resourceJson.mute = resource.mute;
+    if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
+
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
 
     return resourceJson as AudioResourceJson;
@@ -1358,9 +1363,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (resource.provider != null) resourceJson.provider = resource.provider;
     if (resource.value != null) resourceJson.src = resource.value;
 
-    // Properties that are always added that do not come from the markup
-    resourceJson.duration = '';
-    resourceJson.autoplay = true;
+    if (resource.duration != null) resourceJson.duration = resource.duration;
+    if (resource.mute != null) resourceJson.mute = resource.mute;
+    if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
 
@@ -1374,9 +1379,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (resource.provider != null) resourceJson.provider = resource.provider;
     if (resource.value != null) resourceJson.url = resource.value;
 
-    // Properties that are always added that do not come from the markup
-    resourceJson.duration = '';
-    resourceJson.autoplay = true;
+    if (resource.duration != null) resourceJson.duration = resource.duration;
+    if (resource.mute != null) resourceJson.mute = resource.mute;
+    if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson, true);
 
@@ -1478,7 +1483,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.value != null) resourceJson.src = resource.value;
+    if (resource.value != null) resourceJson.url = resource.value;
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
 
@@ -1551,7 +1556,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.value != null) resourceJson.body = resource.value;
+    if (resource.value != null) resourceJson.url = resource.value;
     // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
@@ -1564,7 +1569,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.value != null) resourceJson.body = resource.value;
+    if (resource.value != null) resourceJson.url = resource.value;
     // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
@@ -1577,7 +1582,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.value != null) resourceJson.body = resource.value;
+    if (resource.value != null) resourceJson.url = resource.value;
     // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
@@ -1590,7 +1595,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.value != null) resourceJson.body = resource.value;
+    if (resource.value != null) resourceJson.url = resource.value;
     // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
@@ -1602,7 +1607,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     const resourceJson: Partial<AppLinkResourceJson> = {};
 
     // if (resource.format != null) resourceJson.format = resource.format;
-    if (resource.value != null) resourceJson.app = resource.value;
+    if (resource.value != null) resourceJson.url = resource.value;
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
 
@@ -1834,6 +1839,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       case BitType.highlightText:
       case BitType.message:
       case BitType.sampleSolution:
+      case BitType.page:
+      case BitType.statement:
         if (bitJson.body == null) bitJson.body = '';
         break;
 

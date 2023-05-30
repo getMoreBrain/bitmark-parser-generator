@@ -1,7 +1,6 @@
-import { INFINITE_COUNT } from '../../model/config/TagData';
 import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
-import { TagType } from '../../model/enum/TagType';
 
+import { TAGS_CHAIN_TRUE_FALSE } from './generic/chainBitConfigs';
 import { TAGS_CHAIN_ANY_RESOURCE } from './generic/resourceChainBitConfigs';
 import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
@@ -11,8 +10,7 @@ BitType.setMetadata<BitTypeMetadata>(BitType.multipleResponse1, {
   tags: {
     ...TAGS_DEFAULT,
     ...TAGS_CHAIN_ANY_RESOURCE,
-    [TagType.True]: { maxCount: INFINITE_COUNT },
-    [TagType.False]: { maxCount: INFINITE_COUNT },
+    ...TAGS_CHAIN_TRUE_FALSE,
   },
   resourceAttachmentAllowed: true,
   bodyAllowed: true,

@@ -5,6 +5,7 @@ import { PropertyKey } from '../../../model/enum/PropertyKey';
 import { ResourceType } from '../../../model/enum/ResourceType';
 import { TagType } from '../../../model/enum/TagType';
 
+import { TAGS_CHAIN_TRUE_FALSE } from './chainBitConfigs';
 import { TAGS_ITEM_LEAD_INSTRUCTION_HINT, TAGS_PROPERTY_EXAMPLE } from './standardBitConfigs';
 
 // elements
@@ -51,8 +52,7 @@ const CARD_SET_QUIZ: CardSetConfig = {
     [
       {
         tags: {
-          [TagType.True]: { maxCount: INFINITE_COUNT },
-          [TagType.False]: { maxCount: INFINITE_COUNT },
+          ...TAGS_CHAIN_TRUE_FALSE,
           ...TAGS_ITEM_LEAD_INSTRUCTION_HINT,
           ...TAGS_PROPERTY_EXAMPLE,
         },

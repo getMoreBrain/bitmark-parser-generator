@@ -42,9 +42,6 @@ function buildCards(
 
   let result: BitSpecificCards = {};
 
-  // Return empty object if no card set
-  if (!cardSet) return result;
-
   // Process the card contents
   const processedCardSet = processCardSet(context, bitType, cardSet);
 
@@ -95,10 +92,17 @@ function buildCards(
   return result;
 }
 
-function processCardSet(context: BitmarkPegParserContext, bitType: BitTypeType, cardSet: CardSet): ProcessedCardSet {
+function processCardSet(
+  context: BitmarkPegParserContext,
+  bitType: BitTypeType,
+  cardSet: CardSet | undefined,
+): ProcessedCardSet {
   const processedCardSet: ProcessedCardSet = {
     cards: [],
   };
+
+  // Early return if no card set
+  if (!cardSet) return processedCardSet;
 
   // Process the card contents
   let cardNo = 0;

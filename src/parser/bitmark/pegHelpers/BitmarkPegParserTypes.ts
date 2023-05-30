@@ -123,7 +123,7 @@ export interface BitContentProcessorResult {
   width?: number;
   height?: number;
   alt?: string;
-  duration?: number; // string?
+  // duration?: string | string[]; // number? - there is a collision between duration at bit level, and duration in resource.
   mute?: boolean;
   autoplay?: boolean;
   allowSubtitles?: boolean;

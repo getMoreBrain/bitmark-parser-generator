@@ -25,7 +25,7 @@ function partnerChainContentProcessor(
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('partner content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.PartnerChain, bitType, content.chain);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('partner TAGS', tags);
 

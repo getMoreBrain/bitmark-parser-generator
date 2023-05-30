@@ -34,7 +34,7 @@ const TAGS_CHAIN_GAP: TagDataMap = {
   },
 };
 
-// Gap (cloze)
+// TrueFalse (mutliple-choice1, multiple-response1, highlightText)
 
 const TAGS_CHAIN_TRUE_FALSE: TagDataMap = {
   [TagType.True]: {

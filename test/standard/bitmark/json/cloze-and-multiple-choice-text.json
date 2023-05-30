@@ -1,40 +1,43 @@
 [
   {
-    "bitmark": "[.cloze-and-multiple-choice-text]\n[@id:287842]\n[%][%cloze-and-multiple-choice-text]\nThe students completed the [_cloze] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][-options] correctly\n\nHere we chain [+other] [-options] incorrectly",
     "bit": {
       "type": "cloze-and-multiple-choice-text",
       "format": "bitmark--",
+      "id": ["287842"],
+      "item": "",
+      "lead": "cloze-and-multiple-choice-text",
+      "hint": "",
+      "example": "",
+      "isExample": false,
       "body": "The students completed the {0} with the correct verb {1}\n\n{2} is on another line and may cause issues with bit chaining.\n\nHere we chain {3} correctly\n\nHere we chain {4} {5} incorrectly",
       "placeholders": {
         "{0}": {
           "type": "gap",
+          "solutions": ["cloze"],
           "item": "",
-          "solutions": [
-            "cloze"
-          ],
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": "",
+          "isCaseSensitive": true
         },
         "{1}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "forms",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "formats",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -42,21 +45,21 @@
         },
         "{2}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "other",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "options",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -64,21 +67,21 @@
         },
         "{3}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "other",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "options",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -86,16 +89,16 @@
         },
         "{4}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "other",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -103,26 +106,23 @@
         },
         "{5}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "options",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
           "example": ""
         }
-      },
-      "id": [
-        "287842"
-      ],
-      "lead": "cloze-and-multiple-choice-text"
-    }
+      }
+    },
+    "bitmark": "[.cloze-and-multiple-choice-text]\n[@id:287842]\n[%][%cloze-and-multiple-choice-text]\nThe students completed the [_cloze] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][-options] correctly\n\nHere we chain [+other] [-options] incorrectly"
   }
 ]

@@ -1,11 +1,21 @@
 import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
+import { PropertyKey } from '../../model/enum/PropertyKey';
+import { TagType } from '../../model/enum/TagType';
 
 import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
 // Set metadata on the bit types to describe specific behaviour
 
 const BOOK_CONFIG: BitTypeMetadata = {
-  tags: { ...TAGS_DEFAULT },
+  tags: {
+    ...TAGS_DEFAULT,
+    [TagType.Title]: { maxCount: 2 },
+    [PropertyKey.coverImage]: { isProperty: true },
+    [PropertyKey.subject]: { isProperty: true },
+    [PropertyKey.author]: { isProperty: true },
+    [PropertyKey.publisher]: { isProperty: true },
+    [PropertyKey.theme]: { isProperty: true },
+  },
   resourceAttachmentAllowed: false,
   bodyAllowed: true,
 };
@@ -21,6 +31,7 @@ BitType.setMetadata<BitTypeMetadata>(BitType.bookBibliography, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookComingSoon, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookConclusion, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookCopyright, BOOK_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.bookCopyrightPermissions, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookDedication, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookEndnotes, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookEpigraph, BOOK_CONFIG);

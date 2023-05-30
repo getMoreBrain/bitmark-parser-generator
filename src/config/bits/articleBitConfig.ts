@@ -7,6 +7,6 @@ import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
 BitType.setMetadata<BitTypeMetadata>(BitType.article, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_ANY_RESOURCE },
-  resourceAttachmentAllowed: false,
+  resourceAttachmentAllowed: true,
   bodyAllowed: true,
 });

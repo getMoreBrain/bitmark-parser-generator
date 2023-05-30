@@ -2,7 +2,7 @@ import { INFINITE_COUNT, TagDataMap } from '../../../model/config/TagData';
 import { PropertyKey } from '../../../model/enum/PropertyKey';
 import { TagType } from '../../../model/enum/TagType';
 
-const TAGS_STANDARD_PROPERTIES: TagDataMap = {
+const TAGS_ALL_BITS: TagDataMap = {
   [PropertyKey.id]: {
     isProperty: true,
   },
@@ -17,6 +17,7 @@ const TAGS_STANDARD_PROPERTIES: TagDataMap = {
     isProperty: true,
     maxCount: INFINITE_COUNT,
   },
+  [TagType.Anchor]: {},
 };
 const TAGS_ITEM_LEAD_INSTRUCTION_HINT: TagDataMap = {
   [TagType.ItemLead]: {
@@ -32,9 +33,9 @@ const TAGS_PROPERTY_EXAMPLE: TagDataMap = {
 };
 
 const TAGS_DEFAULT: TagDataMap = {
-  ...TAGS_STANDARD_PROPERTIES,
+  ...TAGS_ALL_BITS,
   ...TAGS_ITEM_LEAD_INSTRUCTION_HINT,
   ...TAGS_PROPERTY_EXAMPLE,
 };
 
-export { TAGS_DEFAULT, TAGS_STANDARD_PROPERTIES, TAGS_ITEM_LEAD_INSTRUCTION_HINT, TAGS_PROPERTY_EXAMPLE };
+export { TAGS_DEFAULT, TAGS_ALL_BITS, TAGS_ITEM_LEAD_INSTRUCTION_HINT, TAGS_PROPERTY_EXAMPLE };

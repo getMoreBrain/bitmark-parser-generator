@@ -1,4 +1,5 @@
 import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
+import { PropertyKey } from '../../model/enum/PropertyKey';
 import { TagType } from '../../model/enum/TagType';
 
 import { TAGS_CHAIN_ANY_RESOURCE } from './generic/resourceChainBitConfigs';
@@ -10,6 +11,8 @@ BitType.setMetadata<BitTypeMetadata>(BitType.trueFalse1, {
   tags: {
     ...TAGS_DEFAULT,
     ...TAGS_CHAIN_ANY_RESOURCE,
+    [PropertyKey.labelTrue]: { isProperty: true },
+    [PropertyKey.labelFalse]: { isProperty: true },
     [TagType.True]: {},
     [TagType.False]: {},
   },

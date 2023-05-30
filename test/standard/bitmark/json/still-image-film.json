@@ -39,6 +39,7 @@
     "bit": {
       "type": "still-image-film",
       "format": "bitmark--",
+      "duration": "PT12M31S",
       "item": "",
       "hint": "",
       "example": "",
@@ -84,9 +85,41 @@
           }
         }
       ],
-      "errors": [
+      "warnings": [
         {
-          "message": "1 excess resource(s) present in the bit. The bit resource type is 'NOT SET'",
+          "message": "'Resource' with key 'still-image-film' is not valid here. It will be ignored",
+          "text": "[&still-image-film:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]",
+          "location": {
+            "start": {
+              "offset": 280,
+              "line": 5,
+              "column": 1
+            },
+            "end": {
+              "offset": 430,
+              "line": 5,
+              "column": 151
+            }
+          }
+        },
+        {
+          "message": "'Property' with key 'duration' is an excess property here",
+          "text": "[@duration:PT12M31S]",
+          "location": {
+            "start": {
+              "offset": 430,
+              "line": 5,
+              "column": 151
+            },
+            "end": {
+              "offset": 450,
+              "line": 5,
+              "column": 171
+            }
+          }
+        },
+        {
+          "message": "1 excess resource(s) present in the bit. The expected resource types are '&image' and '&audio'",
           "text": "[.still-image-film]\n|| This bit is incorrect as it should have an image resource and an audio resource ||\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&still-image-film:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv][@duration:PT12M31S]\n",
           "location": {
             "start": {

@@ -3,6 +3,7 @@ import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
 import { PropertyKey } from '../../model/enum/PropertyKey';
 import { TagType } from '../../model/enum/TagType';
 
+import { TAGS_CHAIN_ANY_RESOURCE } from './generic/resourceChainBitConfigs';
 import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
 // Set metadata on the bit types to describe specific behaviour
@@ -28,108 +29,122 @@ const TAGS_LEARNING_PATH_RESOURCE: TagDataMap = {
 BitType.setMetadata<BitTypeMetadata>(BitType.learningPathBook, {
   tags: {
     ...TAGS_DEFAULT,
+    ...TAGS_CHAIN_ANY_RESOURCE,
     ...TAGS_LEARNING_PATH_RESOURCE,
   },
-  resourceAttachmentAllowed: false,
+  resourceAttachmentAllowed: true,
   bodyAllowed: true,
 });
 
 BitType.setMetadata<BitTypeMetadata>(BitType.learningPathBotTraining, {
   tags: {
     ...TAGS_DEFAULT,
+    ...TAGS_CHAIN_ANY_RESOURCE,
     ...TAGS_LEARNING_PATH_RESOURCE,
   },
-  resourceAttachmentAllowed: false,
+  resourceAttachmentAllowed: true,
   bodyAllowed: true,
 });
 
 BitType.setMetadata<BitTypeMetadata>(BitType.learningPathClassroomEvent, {
   tags: {
     ...TAGS_DEFAULT,
+    ...TAGS_CHAIN_ANY_RESOURCE,
     ...TAGS_LEARNING_PATH_RESOURCE,
   },
-  resourceAttachmentAllowed: false,
+  resourceAttachmentAllowed: true,
   bodyAllowed: true,
 });
 
 BitType.setMetadata<BitTypeMetadata>(BitType.learningPathClassroomTraining, {
   tags: {
     ...TAGS_DEFAULT,
+    ...TAGS_CHAIN_ANY_RESOURCE,
     ...TAGS_LEARNING_PATH_RESOURCE,
   },
-  resourceAttachmentAllowed: false,
+  resourceAttachmentAllowed: true,
   bodyAllowed: true,
 });
 
 BitType.setMetadata<BitTypeMetadata>(BitType.learningPathClosing, {
   tags: {
     ...TAGS_DEFAULT,
+    ...TAGS_CHAIN_ANY_RESOURCE,
     ...TAGS_LEARNING_PATH_RESOURCE,
   },
-  resourceAttachmentAllowed: false,
+  resourceAttachmentAllowed: true,
   bodyAllowed: true,
 });
 
 BitType.setMetadata<BitTypeMetadata>(BitType.learningPathExternalLink, {
   tags: {
     ...TAGS_DEFAULT,
+    ...TAGS_CHAIN_ANY_RESOURCE,
     ...TAGS_LEARNING_PATH_RESOURCE,
+    [PropertyKey.externalLink]: { isProperty: true },
+    [PropertyKey.externalLinkText]: { isProperty: true },
   },
-  resourceAttachmentAllowed: false,
+  resourceAttachmentAllowed: true,
   bodyAllowed: true,
 });
 
 BitType.setMetadata<BitTypeMetadata>(BitType.learningPathFeedback, {
   tags: {
     ...TAGS_DEFAULT,
+    ...TAGS_CHAIN_ANY_RESOURCE,
     ...TAGS_LEARNING_PATH_RESOURCE,
   },
-  resourceAttachmentAllowed: false,
+  resourceAttachmentAllowed: true,
   bodyAllowed: true,
 });
 
 BitType.setMetadata<BitTypeMetadata>(BitType.learningPathLearningGoal, {
   tags: {
     ...TAGS_DEFAULT,
+    ...TAGS_CHAIN_ANY_RESOURCE,
     ...TAGS_LEARNING_PATH_RESOURCE,
   },
-  resourceAttachmentAllowed: false,
+  resourceAttachmentAllowed: true,
   bodyAllowed: true,
 });
 
 BitType.setMetadata<BitTypeMetadata>(BitType.learningPathLti, {
   tags: {
     ...TAGS_DEFAULT,
+    ...TAGS_CHAIN_ANY_RESOURCE,
     ...TAGS_LEARNING_PATH_RESOURCE,
   },
-  resourceAttachmentAllowed: false,
+  resourceAttachmentAllowed: true,
   bodyAllowed: true,
 });
 
 BitType.setMetadata<BitTypeMetadata>(BitType.learningPathSign, {
   tags: {
     ...TAGS_DEFAULT,
+    ...TAGS_CHAIN_ANY_RESOURCE,
     ...TAGS_LEARNING_PATH_RESOURCE,
   },
-  resourceAttachmentAllowed: false,
+  resourceAttachmentAllowed: true,
   bodyAllowed: true,
 });
 
 BitType.setMetadata<BitTypeMetadata>(BitType.learningPathStep, {
   tags: {
     ...TAGS_DEFAULT,
+    ...TAGS_CHAIN_ANY_RESOURCE,
     ...TAGS_LEARNING_PATH_RESOURCE,
   },
-  resourceAttachmentAllowed: false,
+  resourceAttachmentAllowed: true,
   bodyAllowed: true,
 });
 
 BitType.setMetadata<BitTypeMetadata>(BitType.learningPathVideoCall, {
   tags: {
     ...TAGS_DEFAULT,
+    ...TAGS_CHAIN_ANY_RESOURCE,
     ...TAGS_LEARNING_PATH_RESOURCE,
     [PropertyKey.videoCallLink]: { isProperty: true },
   },
-  resourceAttachmentAllowed: false,
+  resourceAttachmentAllowed: true,
   bodyAllowed: true,
 });
