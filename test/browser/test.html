@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <head>
   <title>bonaroo-able test</title>
-  <script src="../../dist/browser/bitmark-parser-generator.min.js"></script>
+  <!-- <script src="../../dist/browser/bitmark-parser-generator.min.js"></script> -->
+  <script src="../../dist/browser/bitmark-parser-generator-antlr.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       console.log('bitmark-parser-generator Browser Test');
@@ -110,7 +111,14 @@ Hier [_dürfen][@example]Sie nicht spielen. Es ist verboten.
       const calculateDiff = () => {
         console.log('Calculating JSON diff (PEG / ANTLR)');
         try {
-          const diffMap = deepDiffMapper.map(JSON.parse(dom.jsonANTLR.value), JSON.parse(dom.json.value), {
+          const antlr = JSON.parse(dom.jsonANTLR.value);
+          const peg = JSON.parse(dom.json.value);
+
+          // Ignore parser output for the diff
+          antlr.forEach((bit) => delete bit.parser);
+          peg.forEach((bit) => delete bit.parser);
+
+          const diffMap = deepDiffMapper.map(antlr, peg, {
             ignoreUnchanged: true,
           });
 

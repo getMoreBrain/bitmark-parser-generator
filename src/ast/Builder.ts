@@ -104,8 +104,8 @@ class Builder {
     bot?: string | string[];
     list?: string | string[];
     textReference?: string | string[];
-    isTracked?: string | string[];
-    isInfoOnly?: string | string[];
+    isTracked?: boolean;
+    isInfoOnly?: boolean;
     labelTrue?: string | string[];
     labelFalse?: string | string[];
     quotedPerson?: string | string[];

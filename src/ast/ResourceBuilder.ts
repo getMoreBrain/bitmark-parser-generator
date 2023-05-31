@@ -133,7 +133,8 @@ class ResourceBuilder {
             if (image) thumbnails.push(image as ImageResource);
           }
         }
-        finalData.thumbnails = thumbnails;
+        // Merge with existing thumbnails
+        finalData.thumbnails = [...(finalData.thumbnails ?? []), ...thumbnails];
       }
     }
 

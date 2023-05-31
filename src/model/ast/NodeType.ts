@@ -169,6 +169,7 @@ const NodeType = superenum({
   keyAudio: 'keyAudio',
   keyImage: 'keyImage',
   response: 'response',
+  reaction: 'reaction',
   feedback: 'feedback',
 
   // Partner

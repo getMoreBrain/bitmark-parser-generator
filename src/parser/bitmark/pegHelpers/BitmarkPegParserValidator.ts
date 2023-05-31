@@ -10,7 +10,6 @@
 import { CardSet } from '../../../model/ast/CardSet';
 import { Body } from '../../../model/ast/Nodes';
 import { INFINITE_COUNT, TagData, TagDataMap } from '../../../model/config/TagData';
-import { ResourceTypeType } from '../../../model/enum/ResourceType';
 import { ParserData } from '../../../model/parser/ParserData';
 
 import {
@@ -69,7 +68,7 @@ interface WarningInfo {
   invalid?: boolean; // Tag / data is not valid for this bit
   tooMany?: number; // The tag / data has been included too many times (should be at most this many times)
   tooFew?: number; // The tag / data has not been included enough times (should be at least this many times)
-  excessProperty?: boolean; // The property is not recognised, but will be included as an excess property
+  extraProperty?: boolean; // The property is not recognised, but will be included as an extra property
   excessResource?: boolean; // The resource is not allowed, but will be included as an excess resource
   unexpectedCardSet?: boolean; // The card set was not expected for this bit
   unexpectedCardSideVariant?: boolean; // The card side variant is not recognised for the card set
@@ -490,10 +489,10 @@ class BitmarkPegParserValidator {
       // type is not valid as no tag data exists for it
       switch (typeKey) {
         case TypeKey.Property: {
-          // The property is not valid for this bit type, but since we allow excess properties, we will return it as
+          // The property is not valid for this bit type, but since we allow extra properties, we will return it as
           // ok but with a warning
-          warning = { excessProperty: true };
-          validatedContent = content; // Add tag anyway - we don't remove excess properties
+          warning = { extraProperty: true };
+          validatedContent = content; // Add tag anyway - we don't remove extra properties
           break;
         }
 
@@ -517,8 +516,8 @@ class BitmarkPegParserValidator {
         warningStr = `'${type}'${keyStr} is not valid here.${ignoredStr}`;
       } else if (warning.tooMany) {
         warningStr = `'${type}'${keyStr} is included more than ${warning.tooMany} time(s). The earlier ones will be ignored`;
-      } else if (warning.excessProperty) {
-        warningStr = `'${type}'${keyStr} is an excess property here`;
+      } else if (warning.extraProperty) {
+        warningStr = `'${type}'${keyStr} is an unexpected property. It is not included in the output by default`;
       } else if (warning.unexpectedCardSet) {
         warningStr = `'${type}'${keyStr} is not expected here.${ignoredStr}`;
       } else if (warning.unexpectedCardSideVariant) {
@@ -672,7 +671,7 @@ class BitmarkPegParserValidator {
   private validateCardSet(
     context: BitmarkPegParserContext,
     bitType: BitTypeType,
-    tagData: TagData,
+    _tagData: TagData,
     content: TypeKeyValue,
     cardSetConfig: CardSetConfig | undefined,
   ): ValidateReturn {

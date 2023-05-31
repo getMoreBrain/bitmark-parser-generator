@@ -15,6 +15,7 @@ import {
   Body,
   BodyPart,
   BodyText,
+  BotResponse,
   Choice,
   FooterText,
   Gap,
@@ -46,6 +47,7 @@ import {
   ResponseJson,
   StatementJson,
   PartnerJson,
+  BotResponseJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -205,6 +207,8 @@ class JsonParser {
       kind,
       action,
       thumbImage,
+      focusX,
+      focusY,
       duration,
       deeplink,
       externalLink,
@@ -212,6 +216,9 @@ class JsonParser {
       videoCallLink,
       bot,
       list,
+      textReference,
+      isTracked,
+      isInfoOnly,
       labelTrue,
       labelFalse,
       quotedPerson,
@@ -249,6 +256,9 @@ class JsonParser {
       placeholders,
     } = bit;
 
+    // Bit type
+    const bitType = BitType.fromValue(type) ?? BitType._error;
+
     // resource
     const resourceNode = this.resourceBitToAst(resource);
 
@@ -260,11 +270,11 @@ class JsonParser {
     //+-statement
     const statementNodes = this.statementBitsToAst(statement, isCorrect, statements);
 
-    //+-response - TODO - handle BotResponse[]
-    const responseNodes = this.responseBitsToAst(responses as ResponseJson[]);
+    //+-response
+    const responseNodes = this.responseBitsToAst(bitType, responses as ResponseJson[]);
 
     // quizzes
-    const quizNodes = this.quizBitsToAst(quizzes);
+    const quizNodes = this.quizBitsToAst(bitType, quizzes);
 
     // heading
     const headingNode = this.headingBitToAst(heading);
@@ -280,6 +290,9 @@ class JsonParser {
 
     // questions
     const questionNodes = this.questionBitsToAst(questions);
+
+    // botResponses
+    const botResponseNodes = this.botResponseBitsToAst(bitType, responses as BotResponseJson[]);
 
     // footer
     const footerNode = this.footerToAst(footer);
@@ -310,12 +323,17 @@ class JsonParser {
       duration,
       referenceProperty,
       thumbImage,
+      focusX,
+      focusY,
       deeplink,
       externalLink,
       externalLinkText,
       videoCallLink,
       bot,
       list,
+      textReference,
+      isTracked,
+      isInfoOnly,
       labelTrue,
       labelFalse,
       quotedPerson,
@@ -346,6 +364,7 @@ class JsonParser {
       matrix: matrixNodes,
       choices: choiceNodes,
       questions: questionNodes,
+      botResponses: botResponseNodes,
       footer: footerNode,
     });
 
@@ -421,8 +440,12 @@ class JsonParser {
     return nodes;
   }
 
-  private responseBitsToAst(responses?: ResponseJson[]): Response[] | undefined {
+  private responseBitsToAst(bitType: BitTypeType, responses?: ResponseJson[]): Response[] | undefined {
     const nodes: Response[] = [];
+
+    // Return early if bot response as the responses should be interpreted as bot responses
+    if (bitType === BitType.botActionResponse) return undefined;
+
     if (Array.isArray(responses)) {
       for (const r of responses) {
         const { response, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = r;
@@ -491,13 +514,13 @@ class JsonParser {
     return nodes;
   }
 
-  private quizBitsToAst(quizzes?: QuizJson[]): Quiz[] | undefined {
+  private quizBitsToAst(bitType: BitTypeType, quizzes?: QuizJson[]): Quiz[] | undefined {
     const nodes: Quiz[] = [];
     if (Array.isArray(quizzes)) {
       for (const q of quizzes) {
         const { item, lead, hint, instruction, isExample, example, choices, responses } = q;
         const choiceNodes = this.choiceBitsToAst(choices);
-        const responseNodes = this.responseBitsToAst(responses);
+        const responseNodes = this.responseBitsToAst(bitType, responses);
         const node = builder.quiz({
           item,
           lead,
@@ -645,6 +668,32 @@ class JsonParser {
           example: example || isExample,
           isCaseSensitive,
           isShortAnswer,
+        });
+        nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+
+    return nodes;
+  }
+
+  private botResponseBitsToAst(bitType: BitTypeType, responses?: BotResponseJson[]): BotResponse[] | undefined {
+    const nodes: BotResponse[] = [];
+
+    // Return early if not bot response as the responses should be interpreted as standard responses
+    if (bitType !== BitType.botActionResponse) return undefined;
+
+    if (Array.isArray(responses)) {
+      for (const r of responses) {
+        const { response, reaction, feedback, item, lead, hint } = r;
+        const node = builder.botResponse({
+          response,
+          reaction,
+          feedback,
+          item,
+          lead,
+          hint,
         });
         nodes.push(node);
       }

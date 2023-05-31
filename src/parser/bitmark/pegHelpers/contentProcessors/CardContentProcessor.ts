@@ -371,9 +371,11 @@ function parseMatchPairs(
         extraTags = {
           ...extraTags,
           ...tags,
-          example: example ? true : false,
           isCaseSensitive: true,
         };
+        // Allow example from any card side
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        if (example) (extraTags as any).example = example;
       }
       sideIdx++;
     }

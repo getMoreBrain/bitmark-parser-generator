@@ -10,7 +10,6 @@ import {
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
-  TypeValue,
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();

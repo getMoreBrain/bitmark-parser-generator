@@ -1,4 +1,4 @@
-import { BitType, BitTypeType } from '../../../../model/enum/BitType';
+import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyKey, PropertyKeyMetadata } from '../../../../model/enum/PropertyKey';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { NumberUtils } from '../../../../utils/NumberUtils';

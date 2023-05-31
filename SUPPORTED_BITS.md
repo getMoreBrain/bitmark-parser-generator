@@ -1,4 +1,4 @@
-| BIT | USED GMB | SUPPORTED | TESTED | NOTES |
+| BIT | USED? | PARSER | GENERATOR | NOTES |
 | ------ | -- | -- | -- | -- |
 | _error | ✅ | ✅ | ✅ | Used for error handling to indicate a bit type that is not supported or a bit parse error |
 | anchor | ➖ | ➖ | ➖ | LEGACY? |
@@ -17,7 +17,7 @@
 | bit-book-ending | ✅ | ✅ | ✅ |  |
 | bit-book-summary | ✅ | ✅ | ✅ |  |
 | blog-article | ✅ | ✅ | ✅ |  |
-| book | ✅ | ✅ | ❌ |  |
+| book | ✅ | ✅ | ✅ |  |
 | book-acknowledgments | ✅ | ✅ | ✅ |  |
 | book-addendum | ✅ | ✅ | ✅ |  |
 | book-afterword | ✅ | ✅ | ✅ |  |
@@ -123,8 +123,8 @@
 | learning-path-sign | ➖ | ➖ | ➖ | LEGACY? |
 | learning-path-step | ✅ | ✅ | ✅ |  |
 | learning-path-video-call | ✅ | ✅ | ✅ |  |
-| mark | ✅ | ❌ | ❌ | TO TEST |
-| match | ✅ | ✅ | ✅ |  |
+| mark | ✅ | ❌ | ❌ | NOT WORKING IN ANTLR PARSER, not sure how to implement |
+| match | ✅ | ✅ | ❌ |  |
 | match-all | ✅ | ✅ | ✅ |  |
 | match-all-reverse | ✅ | ✅ | ✅ |  |
 | match-audio | ➖ | ➖ | ➖ | LEGACY? |

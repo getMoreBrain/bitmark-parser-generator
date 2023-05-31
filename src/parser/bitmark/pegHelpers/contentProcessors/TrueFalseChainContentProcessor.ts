@@ -21,7 +21,6 @@ import {
   BitmarkPegParserContext,
   StatementsOrChoicesOrResponses,
   TypeKey,
-  TypeValue,
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();

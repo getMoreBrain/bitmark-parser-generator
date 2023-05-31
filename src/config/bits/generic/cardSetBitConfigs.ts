@@ -1,4 +1,3 @@
-import { INFINITE_COUNT } from '../../../model/config/TagData';
 import { CardSetConfig } from '../../../model/enum/BitType';
 import { CardSetType } from '../../../model/enum/CardSetType';
 import { PropertyKey } from '../../../model/enum/PropertyKey';

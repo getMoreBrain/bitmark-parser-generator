@@ -120,6 +120,15 @@ export interface JsonOptions {
   stringify?: boolean;
 
   /**
+   * Include extra properties in the output.
+   *
+   * If not set or false, extra properties will NOT be included in the JSON output
+   * It true, extra properties will be included in the JSON output.
+   *
+   */
+  includeExtraProperties?: boolean;
+
+  /**
    * [development only]
    * Generate debug information in the output.
    */
@@ -377,7 +386,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   protected enter_extraProperties(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const extraProperties = node.value as ExtraProperties | undefined;
 
-    if (extraProperties) {
+    if (this.options.includeExtraProperties && extraProperties) {
       for (const [key, values] of Object.entries(extraProperties)) {
         let k = key;
         if (Object.prototype.hasOwnProperty.call(this.bitJson, key)) {
@@ -1078,7 +1087,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
    */
   protected generatePropertyHandlers() {
     for (const key of PropertyKey.values()) {
-      const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(PropertyKey.fromValue(key)) ?? {};
+      const validatedKey = PropertyKey.fromValue(key);
+      const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(validatedKey) ?? {};
       const astKey = meta.astKey ? meta.astKey : key;
       const funcName = `enter_${astKey}`;
 
@@ -1201,11 +1211,14 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
       case ResourceType.stillImageFilm: {
         const stillImageFilmResource = resource as StillImageFilmResource;
-        resourceJson = {
-          type: ResourceType.stillImageFilm,
-          image: this.addImageResource(stillImageFilmResource.image),
-          audio: this.addAudioResource(stillImageFilmResource.audio),
-        };
+        // Only write the resource if it has both an image and audio
+        if (stillImageFilmResource.image.value != null && stillImageFilmResource.audio.value != null) {
+          resourceJson = {
+            type: ResourceType.stillImageFilm,
+            image: this.addImageResource(stillImageFilmResource.image),
+            audio: this.addAudioResource(stillImageFilmResource.audio),
+          };
+        }
         break;
       }
 
@@ -1835,6 +1848,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     // NOTE: Not all bits have the same default properties.
     //       The properties used in the antlr parser are a bit random sometimes?
     switch (bitJson.type) {
+      case BitType._error:
+        break;
+
       case BitType.article:
       case BitType.highlightText:
       case BitType.message:

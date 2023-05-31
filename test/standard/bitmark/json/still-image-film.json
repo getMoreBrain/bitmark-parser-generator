@@ -44,25 +44,7 @@
       "hint": "",
       "example": "",
       "isExample": false,
-      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
-      "resource": {
-        "type": "still-image-film",
-        "image": {
-          "width": null,
-          "height": null,
-          "alt": "",
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": ""
-        },
-        "audio": {
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": ""
-        }
-      }
+      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten."
     },
     "parser": {
       "excessResources": [

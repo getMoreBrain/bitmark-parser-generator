@@ -81,7 +81,6 @@ import { propertyContentProcessor } from './contentProcessors/PropertyContentPro
 import { buildResource, resourceContentProcessor } from './contentProcessors/ResourceContentProcessor';
 import { buildTitles, titleTagContentProcessor } from './contentProcessors/TitleTagContentProcessor';
 import { trueFalseChainContentProcessor } from './contentProcessors/TrueFalseChainContentProcessor';
-import { trueFalseTagContentProcessor } from './contentProcessors/TrueFalseTagContentProcessor';
 import { referenceTagContentProcessor } from './contentProcessors/referenceTagContentProcessor';
 
 import {
