@@ -1,7 +1,7 @@
+import { init } from '../init/init';
 import { NodeTypeType, NodeType } from '../model/ast/NodeType';
 import { BitmarkAst, Node } from '../model/ast/Nodes';
 import { StringUtils } from '../utils/StringUtils';
-import '../config/config';
 
 /**
  * AST tree node information
@@ -76,6 +76,11 @@ export interface AstWalkCallbacks {
  * An AST (Abstract Syntax Tree) implementation for the bitmark language
  */
 class Ast {
+  constructor() {
+    // Ensure init has been called - this is not the best place, but there is no standard entry point
+    init();
+  }
+
   /**
    * Walk an AST, decending each branch and calling callbacks when entering, leaving, and when in between child
    * nodes.

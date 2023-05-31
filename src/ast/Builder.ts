@@ -10,6 +10,7 @@ import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { StringUtils } from '../utils/StringUtils';
+import { env } from '../utils/env/Env';
 
 import { NodeValidator } from './rules/NodeValidator';
 
@@ -303,6 +304,9 @@ class Builder {
       // Must always be last in the AST so key clashes are avoided correctly with other properties
       extraProperties: this.parseExtraProperties(extraProperties),
     };
+
+    // Add the version to the parser info
+    this.addVersionToParserInfo(node);
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node);
@@ -971,6 +975,12 @@ class Builder {
     }
 
     return res;
+  }
+
+  private addVersionToParserInfo(bit: Bit) {
+    const parser: ParserInfo = bit.parser ?? {};
+    parser.version = env.appVersion.full;
+    bit.parser = parser;
   }
 }
 

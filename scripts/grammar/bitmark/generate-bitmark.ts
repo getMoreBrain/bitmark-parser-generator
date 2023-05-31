@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import peggy, { SourceBuildOptions } from 'peggy';
+import { init } from '../../../src/init/init';
 
 type SourceOptions = SourceBuildOptions<'source'> & {
   // tspegjs: {
@@ -37,6 +38,9 @@ const startRule = optBitmark ? 'bitmark' : 'bitmarkPlus';
 
 // Select input file
 const inputPath = optBitmark ? inputBitmarkPath : inputTextPath;
+
+// Initialised the environment
+init();
 
 console.log('Generating Bitmark Parser');
 console.log(`For: ${optBitmark ? 'Bitmark' : 'Text'}`);

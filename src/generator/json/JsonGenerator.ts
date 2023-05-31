@@ -1033,8 +1033,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
   protected enter_parser(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const parser = node.value as ParserInfo | undefined;
-    if (parser && (parser.warnings || parser.errors)) {
+    if (parser) {
       // Warnings and Errors don't need parsing from AST
+      const version = parser.version;
       const warnings = parser.warnings;
       const errors = parser.errors;
 
@@ -1051,9 +1052,10 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       if (parent?.key === NodeType.bitsValue) {
         // Bit level parser information
         this.bitWrapperJson.parser = {
-          excessResources,
+          version,
           warnings,
           errors,
+          excessResources,
         };
       } else {
         // Top level parser information (not specific to a bit)
