@@ -25,7 +25,7 @@ Specify the bitmark parser to use, overriding the default
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:25](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/BitmarkParserGenerator.ts#L25)
+[BitmarkParserGenerator.ts:46](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L46)
 
 ___
 
@@ -37,7 +37,7 @@ Specify the output format, overriding the default
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:29](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/BitmarkParserGenerator.ts#L29)
+[BitmarkParserGenerator.ts:50](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L50)
 
 ___
 
@@ -49,7 +49,7 @@ Specify a file to write the output to
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:33](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/BitmarkParserGenerator.ts#L33)
+[BitmarkParserGenerator.ts:54](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L54)
 
 ___
 
@@ -61,7 +61,7 @@ Options for the output file
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:37](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/BitmarkParserGenerator.ts#L37)
+[BitmarkParserGenerator.ts:58](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L58)
 
 ___
 
@@ -73,7 +73,7 @@ Options for bitmark generation
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:41](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/BitmarkParserGenerator.ts#L41)
+[BitmarkParserGenerator.ts:62](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L62)
 
 ___
 
@@ -85,4 +85,4 @@ Options for JSON generation
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:45](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/BitmarkParserGenerator.ts#L45)
+[BitmarkParserGenerator.ts:66](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L66)

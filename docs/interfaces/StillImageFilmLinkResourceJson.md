@@ -4,9 +4,7 @@
 
 ## Hierarchy
 
-- [`LinkResourceJson`](LinkResourceJson.md)
-
-- `VideoLikeResourceJson`
+- `BaseResourceJson`
 
   ↳ **`StillImageFilmLinkResourceJson`**
 
@@ -20,6 +18,7 @@
 - [showInIndex](StillImageFilmLinkResourceJson.md#showInIndex)
 - [caption](StillImageFilmLinkResourceJson.md#caption)
 - [format](StillImageFilmLinkResourceJson.md#format)
+- [url](StillImageFilmLinkResourceJson.md#url)
 - [src](StillImageFilmLinkResourceJson.md#src)
 - [width](StillImageFilmLinkResourceJson.md#width)
 - [height](StillImageFilmLinkResourceJson.md#height)
@@ -31,7 +30,6 @@
 - [alt](StillImageFilmLinkResourceJson.md#alt)
 - [posterImage](StillImageFilmLinkResourceJson.md#posterImage)
 - [thumbnails](StillImageFilmLinkResourceJson.md#thumbnails)
-- [url](StillImageFilmLinkResourceJson.md#url)
 
 ## Properties
 
@@ -41,11 +39,11 @@
 
 #### Inherited from
 
-[LinkResourceJson](LinkResourceJson.md).[license](LinkResourceJson.md#license)
+BaseResourceJson.license
 
 #### Defined in
 
-[model/json/ResourceJson.ts:121](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L121)
+[model/json/ResourceJson.ts:137](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L137)
 
 ___
 
@@ -55,11 +53,11 @@ ___
 
 #### Inherited from
 
-[LinkResourceJson](LinkResourceJson.md).[copyright](LinkResourceJson.md#copyright)
+BaseResourceJson.copyright
 
 #### Defined in
 
-[model/json/ResourceJson.ts:122](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L122)
+[model/json/ResourceJson.ts:138](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L138)
 
 ___
 
@@ -69,11 +67,11 @@ ___
 
 #### Inherited from
 
-[LinkResourceJson](LinkResourceJson.md).[provider](LinkResourceJson.md#provider)
+BaseResourceJson.provider
 
 #### Defined in
 
-[model/json/ResourceJson.ts:123](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L123)
+[model/json/ResourceJson.ts:139](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L139)
 
 ___
 
@@ -83,11 +81,11 @@ ___
 
 #### Inherited from
 
-[LinkResourceJson](LinkResourceJson.md).[showInIndex](LinkResourceJson.md#showInIndex)
+BaseResourceJson.showInIndex
 
 #### Defined in
 
-[model/json/ResourceJson.ts:124](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L124)
+[model/json/ResourceJson.ts:140](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L140)
 
 ___
 
@@ -97,11 +95,11 @@ ___
 
 #### Inherited from
 
-[LinkResourceJson](LinkResourceJson.md).[caption](LinkResourceJson.md#caption)
+BaseResourceJson.caption
 
 #### Defined in
 
-[model/json/ResourceJson.ts:125](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L125)
+[model/json/ResourceJson.ts:141](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L141)
 
 ___
 
@@ -109,167 +107,9 @@ ___
 
 • **format**: `string`
 
-#### Inherited from
-
-VideoLikeResourceJson.format
-
 #### Defined in
 
-[model/json/ResourceJson.ts:152](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L152)
-
-___
-
-### src
-
-• **src**: `string`
-
-#### Inherited from
-
-VideoLikeResourceJson.src
-
-#### Defined in
-
-[model/json/ResourceJson.ts:154](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L154)
-
-___
-
-### width
-
-• **width**: ``null`` \| `number`
-
-#### Inherited from
-
-VideoLikeResourceJson.width
-
-#### Defined in
-
-[model/json/ResourceJson.ts:155](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L155)
-
-___
-
-### height
-
-• **height**: ``null`` \| `number`
-
-#### Inherited from
-
-VideoLikeResourceJson.height
-
-#### Defined in
-
-[model/json/ResourceJson.ts:156](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L156)
-
-___
-
-### duration
-
-• **duration**: `number`
-
-#### Inherited from
-
-VideoLikeResourceJson.duration
-
-#### Defined in
-
-[model/json/ResourceJson.ts:157](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L157)
-
-___
-
-### mute
-
-• **mute**: `boolean`
-
-#### Inherited from
-
-VideoLikeResourceJson.mute
-
-#### Defined in
-
-[model/json/ResourceJson.ts:158](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L158)
-
-___
-
-### autoplay
-
-• **autoplay**: `boolean`
-
-#### Inherited from
-
-VideoLikeResourceJson.autoplay
-
-#### Defined in
-
-[model/json/ResourceJson.ts:159](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L159)
-
-___
-
-### allowSubtitles
-
-• **allowSubtitles**: `boolean`
-
-#### Inherited from
-
-VideoLikeResourceJson.allowSubtitles
-
-#### Defined in
-
-[model/json/ResourceJson.ts:160](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L160)
-
-___
-
-### showSubtitles
-
-• **showSubtitles**: `boolean`
-
-#### Inherited from
-
-VideoLikeResourceJson.showSubtitles
-
-#### Defined in
-
-[model/json/ResourceJson.ts:161](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L161)
-
-___
-
-### alt
-
-• **alt**: `string`
-
-#### Inherited from
-
-VideoLikeResourceJson.alt
-
-#### Defined in
-
-[model/json/ResourceJson.ts:162](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L162)
-
-___
-
-### posterImage
-
-• **posterImage**: [`ImageResourceJson`](ImageResourceJson.md)
-
-#### Inherited from
-
-VideoLikeResourceJson.posterImage
-
-#### Defined in
-
-[model/json/ResourceJson.ts:163](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L163)
-
-___
-
-### thumbnails
-
-• **thumbnails**: [`ImageResourceJson`](ImageResourceJson.md)[]
-
-#### Inherited from
-
-VideoLikeResourceJson.thumbnails
-
-#### Defined in
-
-[model/json/ResourceJson.ts:164](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L164)
+[model/json/ResourceJson.ts:267](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L267)
 
 ___
 
@@ -277,10 +117,116 @@ ___
 
 • **url**: `string`
 
-#### Overrides
+#### Defined in
 
-[LinkResourceJson](LinkResourceJson.md).[url](LinkResourceJson.md#url)
+[model/json/ResourceJson.ts:268](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L268)
+
+___
+
+### src
+
+• **src**: `string`
 
 #### Defined in
 
-[model/json/ResourceJson.ts:210](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L210)
+[model/json/ResourceJson.ts:269](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L269)
+
+___
+
+### width
+
+• **width**: ``null`` \| `number`
+
+#### Defined in
+
+[model/json/ResourceJson.ts:270](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L270)
+
+___
+
+### height
+
+• **height**: ``null`` \| `number`
+
+#### Defined in
+
+[model/json/ResourceJson.ts:271](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L271)
+
+___
+
+### duration
+
+• **duration**: `number`
+
+#### Defined in
+
+[model/json/ResourceJson.ts:272](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L272)
+
+___
+
+### mute
+
+• **mute**: `boolean`
+
+#### Defined in
+
+[model/json/ResourceJson.ts:273](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L273)
+
+___
+
+### autoplay
+
+• **autoplay**: `boolean`
+
+#### Defined in
+
+[model/json/ResourceJson.ts:274](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L274)
+
+___
+
+### allowSubtitles
+
+• **allowSubtitles**: `boolean`
+
+#### Defined in
+
+[model/json/ResourceJson.ts:275](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L275)
+
+___
+
+### showSubtitles
+
+• **showSubtitles**: `boolean`
+
+#### Defined in
+
+[model/json/ResourceJson.ts:276](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L276)
+
+___
+
+### alt
+
+• **alt**: `string`
+
+#### Defined in
+
+[model/json/ResourceJson.ts:277](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L277)
+
+___
+
+### posterImage
+
+• **posterImage**: [`ImageResourceJson`](ImageResourceJson.md)
+
+#### Defined in
+
+[model/json/ResourceJson.ts:278](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L278)
+
+___
+
+### thumbnails
+
+• **thumbnails**: [`ImageResourceJson`](ImageResourceJson.md)[]
+
+#### Defined in
+
+[model/json/ResourceJson.ts:279](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L279)

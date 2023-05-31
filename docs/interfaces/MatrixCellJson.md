@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[model/json/BitJson.ts:162](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L162)
+[model/json/BitJson.ts:173](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L173)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:163](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L163)
+[model/json/BitJson.ts:174](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L174)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:164](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L164)
+[model/json/BitJson.ts:175](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L175)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:165](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L165)
+[model/json/BitJson.ts:176](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L176)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:166](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L166)
+[model/json/BitJson.ts:177](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L177)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:167](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L167)
+[model/json/BitJson.ts:178](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L178)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:168](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L168)
+[model/json/BitJson.ts:179](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L179)

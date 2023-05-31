@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[model/json/BitWrapperJson.ts:5](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitWrapperJson.ts#L5)
+[model/json/BitWrapperJson.ts:5](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitWrapperJson.ts#L5)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[model/json/BitWrapperJson.ts:6](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitWrapperJson.ts#L6)
+[model/json/BitWrapperJson.ts:6](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitWrapperJson.ts#L6)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[model/json/BitWrapperJson.ts:7](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitWrapperJson.ts#L7)
+[model/json/BitWrapperJson.ts:7](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitWrapperJson.ts#L7)

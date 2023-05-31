@@ -29,4 +29,4 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:380](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L380)
+[model/ast/Nodes.ts:278](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L278)

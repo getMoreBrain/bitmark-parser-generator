@@ -72,7 +72,7 @@ Exit  A1
 
 #### Defined in
 
-[ast/Ast.ts:111](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Ast.ts#L111)
+[ast/Ast.ts:112](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L112)
 
 ___
 
@@ -96,7 +96,7 @@ For the route A1 -> B4 -> C2 the route key would be A1_B4_C2
 
 #### Defined in
 
-[ast/Ast.ts:123](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Ast.ts#L123)
+[ast/Ast.ts:124](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L124)
 
 ___
 
@@ -119,7 +119,7 @@ Useful for debug / development purposes
 
 #### Defined in
 
-[ast/Ast.ts:141](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Ast.ts#L141)
+[ast/Ast.ts:142](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L142)
 
 ___
 
@@ -144,7 +144,7 @@ bitmark AST in a standard format (BitmarkAst object)
 
 #### Defined in
 
-[ast/Ast.ts:176](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Ast.ts#L176)
+[ast/Ast.ts:177](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L177)
 
 ___
 
@@ -168,4 +168,4 @@ true if Bit JSON, otherwise false
 
 #### Defined in
 
-[ast/Ast.ts:199](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Ast.ts#L199)
+[ast/Ast.ts:200](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L200)

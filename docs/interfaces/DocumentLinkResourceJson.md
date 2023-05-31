@@ -4,9 +4,7 @@
 
 ## Hierarchy
 
-- [`LinkResourceJson`](LinkResourceJson.md)
-
-- `ArticleLikeResourceJson`
+- `BaseResourceJson`
 
   ↳ **`DocumentLinkResourceJson`**
 
@@ -20,9 +18,9 @@
 - [showInIndex](DocumentLinkResourceJson.md#showInIndex)
 - [caption](DocumentLinkResourceJson.md#caption)
 - [format](DocumentLinkResourceJson.md#format)
+- [url](DocumentLinkResourceJson.md#url)
 - [href](DocumentLinkResourceJson.md#href)
 - [body](DocumentLinkResourceJson.md#body)
-- [url](DocumentLinkResourceJson.md#url)
 
 ## Properties
 
@@ -32,11 +30,11 @@
 
 #### Inherited from
 
-[LinkResourceJson](LinkResourceJson.md).[license](LinkResourceJson.md#license)
+BaseResourceJson.license
 
 #### Defined in
 
-[model/json/ResourceJson.ts:121](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L121)
+[model/json/ResourceJson.ts:137](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L137)
 
 ___
 
@@ -46,11 +44,11 @@ ___
 
 #### Inherited from
 
-[LinkResourceJson](LinkResourceJson.md).[copyright](LinkResourceJson.md#copyright)
+BaseResourceJson.copyright
 
 #### Defined in
 
-[model/json/ResourceJson.ts:122](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L122)
+[model/json/ResourceJson.ts:138](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L138)
 
 ___
 
@@ -60,11 +58,11 @@ ___
 
 #### Inherited from
 
-[LinkResourceJson](LinkResourceJson.md).[provider](LinkResourceJson.md#provider)
+BaseResourceJson.provider
 
 #### Defined in
 
-[model/json/ResourceJson.ts:123](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L123)
+[model/json/ResourceJson.ts:139](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L139)
 
 ___
 
@@ -74,11 +72,11 @@ ___
 
 #### Inherited from
 
-[LinkResourceJson](LinkResourceJson.md).[showInIndex](LinkResourceJson.md#showInIndex)
+BaseResourceJson.showInIndex
 
 #### Defined in
 
-[model/json/ResourceJson.ts:124](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L124)
+[model/json/ResourceJson.ts:140](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L140)
 
 ___
 
@@ -88,11 +86,11 @@ ___
 
 #### Inherited from
 
-[LinkResourceJson](LinkResourceJson.md).[caption](LinkResourceJson.md#caption)
+BaseResourceJson.caption
 
 #### Defined in
 
-[model/json/ResourceJson.ts:125](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L125)
+[model/json/ResourceJson.ts:141](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L141)
 
 ___
 
@@ -100,41 +98,9 @@ ___
 
 • **format**: `string`
 
-#### Inherited from
-
-ArticleLikeResourceJson.format
-
 #### Defined in
 
-[model/json/ResourceJson.ts:168](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L168)
-
-___
-
-### href
-
-• **href**: `string`
-
-#### Inherited from
-
-ArticleLikeResourceJson.href
-
-#### Defined in
-
-[model/json/ResourceJson.ts:170](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L170)
-
-___
-
-### body
-
-• **body**: `string`
-
-#### Inherited from
-
-ArticleLikeResourceJson.body
-
-#### Defined in
-
-[model/json/ResourceJson.ts:171](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L171)
+[model/json/ResourceJson.ts:304](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L304)
 
 ___
 
@@ -142,10 +108,26 @@ ___
 
 • **url**: `string`
 
-#### Overrides
+#### Defined in
 
-[LinkResourceJson](LinkResourceJson.md).[url](LinkResourceJson.md#url)
+[model/json/ResourceJson.ts:305](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L305)
+
+___
+
+### href
+
+• **href**: `string`
 
 #### Defined in
 
-[model/json/ResourceJson.ts:226](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L226)
+[model/json/ResourceJson.ts:306](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L306)
+
+___
+
+### body
+
+• **body**: `string`
+
+#### Defined in
+
+[model/json/ResourceJson.ts:307](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L307)

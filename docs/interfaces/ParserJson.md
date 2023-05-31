@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[model/json/ParserJson.ts:6](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ParserJson.ts#L6)
+[model/json/ParserJson.ts:6](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ParserJson.ts#L6)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[model/json/ParserJson.ts:7](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ParserJson.ts#L7)
+[model/json/ParserJson.ts:7](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ParserJson.ts#L7)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[model/json/ParserJson.ts:8](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ParserJson.ts#L8)
+[model/json/ParserJson.ts:8](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ParserJson.ts#L8)

@@ -13,7 +13,8 @@
 ### Properties
 
 - [type](StillImageFilmResourceWrapperJson.md#type)
-- [stillImageFilm](StillImageFilmResourceWrapperJson.md#stillImageFilm)
+- [image](StillImageFilmResourceWrapperJson.md#image)
+- [audio](StillImageFilmResourceWrapperJson.md#audio)
 
 ## Properties
 
@@ -27,14 +28,24 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:68](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L68)
+[model/json/ResourceJson.ts:84](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L84)
 
 ___
 
-### stillImageFilm
+### image
 
-• **stillImageFilm**: [`StillImageFilmResourceJson`](StillImageFilmResourceJson.md)
+• **image**: [`ImageResourceJson`](ImageResourceJson.md)
 
 #### Defined in
 
-[model/json/ResourceJson.ts:69](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L69)
+[model/json/ResourceJson.ts:85](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L85)
+
+___
+
+### audio
+
+• **audio**: [`AudioResourceJson`](AudioResourceJson.md)
+
+#### Defined in
+
+[model/json/ResourceJson.ts:86](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L86)

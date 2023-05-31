@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[model/json/BitJson.ts:82](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L82)
+[model/json/BitJson.ts:93](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L93)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:83](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L83)
+[model/json/BitJson.ts:94](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L94)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:84](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L84)
+[model/json/BitJson.ts:95](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L95)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:85](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L85)
+[model/json/BitJson.ts:96](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L96)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:86](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L86)
+[model/json/BitJson.ts:97](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L97)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:87](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L87)
+[model/json/BitJson.ts:98](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L98)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:88](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L88)
+[model/json/BitJson.ts:99](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L99)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:89](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L89)
+[model/json/BitJson.ts:100](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L100)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-[model/json/BitJson.ts:90](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BitJson.ts#L90)
+[model/json/BitJson.ts:101](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BitJson.ts#L101)

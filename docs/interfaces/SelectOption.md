@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:368](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L368)
+[model/ast/Nodes.ts:266](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L266)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:369](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L369)
+[model/ast/Nodes.ts:267](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L267)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:370](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L370)
+[model/ast/Nodes.ts:268](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L268)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:371](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L371)
+[model/ast/Nodes.ts:269](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L269)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:372](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L372)
+[model/ast/Nodes.ts:270](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L270)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:373](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L373)
+[model/ast/Nodes.ts:271](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L271)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:374](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L374)
+[model/ast/Nodes.ts:272](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L272)

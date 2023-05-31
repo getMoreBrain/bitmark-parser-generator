@@ -69,7 +69,7 @@ export interface ConvertOptions {
 /**
  * Prettify options for bitmark / JSON prettify / validate
  */
-export interface PrettifyOptions {
+export interface UpgradeOptions {
   /**
    * Specify the bitmark parser to use, overriding the default
    */
@@ -355,7 +355,9 @@ class BitmarkParserGenerator {
   }
 
   /**
-   * Prettify bitmark or JSON, upgrading to the latest supported syntax in the process.
+   * Upgrade bitmark or JSON, upgrading to the latest supported syntax, removing unrecognised data in the process.
+   *
+   * THIS FEATURE SHOULD BE USED WITH CAUTION. IT WILL POTENTIALLY DELETE DATA.
    *
    * Input type is detected automatically and may be:
    * - string: bitmark, JSON
@@ -373,11 +375,11 @@ class BitmarkParserGenerator {
    * @param input - bitmark or JSON or AST as a string, JSON or AST as plain JS object, or path to a file containing
    * bitmark, JSON, or AST.
    * @param options - the conversion options
-   * @returns Promise that resolves to string if prettifying to bitmark, a plain JS object if converting to JSON, or
+   * @returns Promise that resolves to string if upgrading to bitmark, a plain JS object if converting to JSON, or
    * void if writing to a file
    * @throws Error if any error occurs
    */
-  async prettify(input: string | fs.PathLike | unknown, options?: PrettifyOptions): Promise<string | unknown | void> {
+  async upgrade(input: string | fs.PathLike | unknown, options?: UpgradeOptions): Promise<string | unknown | void> {
     let res: string | unknown | void;
     const opts: ConvertOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
@@ -409,7 +411,7 @@ class BitmarkParserGenerator {
 
     // Helper conversion functions
     const bitmarkToBitmark = async (bitmarkStr: string) => {
-      // Validate and prettify
+      // Validate and upgrade
       const astJson = this.bitmarkParser.toAst(bitmarkStr, {
         parserType: bitmarkParserType,
       });
@@ -427,7 +429,7 @@ class BitmarkParserGenerator {
     };
 
     const jsonToJson = async (astJson: BitmarkAst) => {
-      // Validate and prettify
+      // Validate and upgrade
 
       // Convert the AST to JSON
       if (opts.outputFile) {
@@ -444,7 +446,7 @@ class BitmarkParserGenerator {
       }
     };
 
-    // Validate and Prettify
+    // Validate and Upgrade
     if (isBitmark) {
       // Bitmark ==> Bitmark
       await bitmarkToBitmark(inStr);

@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- `VideoLikeResource`
+- [`Resource`](Resource.md)
 
   ↳ **`StillImageFilmResource`**
 
@@ -19,17 +19,9 @@
 - [provider](StillImageFilmResource.md#provider)
 - [showInIndex](StillImageFilmResource.md#showInIndex)
 - [caption](StillImageFilmResource.md#caption)
-- [width](StillImageFilmResource.md#width)
-- [height](StillImageFilmResource.md#height)
-- [duration](StillImageFilmResource.md#duration)
-- [mute](StillImageFilmResource.md#mute)
-- [autoplay](StillImageFilmResource.md#autoplay)
-- [allowSubtitles](StillImageFilmResource.md#allowSubtitles)
-- [showSubtitles](StillImageFilmResource.md#showSubtitles)
-- [alt](StillImageFilmResource.md#alt)
-- [posterImage](StillImageFilmResource.md#posterImage)
-- [thumbnails](StillImageFilmResource.md#thumbnails)
 - [type](StillImageFilmResource.md#type)
+- [image](StillImageFilmResource.md#image)
+- [audio](StillImageFilmResource.md#audio)
 
 ## Properties
 
@@ -39,11 +31,11 @@
 
 #### Inherited from
 
-VideoLikeResource.format
+[Resource](Resource.md).[format](Resource.md#format)
 
 #### Defined in
 
-[model/ast/Nodes.ts:214](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L214)
+[model/ast/Nodes.ts:326](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L326)
 
 ___
 
@@ -53,11 +45,11 @@ ___
 
 #### Inherited from
 
-VideoLikeResource.value
+[Resource](Resource.md).[value](Resource.md#value)
 
 #### Defined in
 
-[model/ast/Nodes.ts:215](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L215)
+[model/ast/Nodes.ts:327](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L327)
 
 ___
 
@@ -67,11 +59,11 @@ ___
 
 #### Inherited from
 
-VideoLikeResource.license
+[Resource](Resource.md).[license](Resource.md#license)
 
 #### Defined in
 
-[model/ast/Nodes.ts:216](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L216)
+[model/ast/Nodes.ts:328](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L328)
 
 ___
 
@@ -81,11 +73,11 @@ ___
 
 #### Inherited from
 
-VideoLikeResource.copyright
+[Resource](Resource.md).[copyright](Resource.md#copyright)
 
 #### Defined in
 
-[model/ast/Nodes.ts:217](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L217)
+[model/ast/Nodes.ts:329](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L329)
 
 ___
 
@@ -95,11 +87,11 @@ ___
 
 #### Inherited from
 
-VideoLikeResource.provider
+[Resource](Resource.md).[provider](Resource.md#provider)
 
 #### Defined in
 
-[model/ast/Nodes.ts:218](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L218)
+[model/ast/Nodes.ts:330](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L330)
 
 ___
 
@@ -109,11 +101,11 @@ ___
 
 #### Inherited from
 
-VideoLikeResource.showInIndex
+[Resource](Resource.md).[showInIndex](Resource.md#showInIndex)
 
 #### Defined in
 
-[model/ast/Nodes.ts:219](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L219)
+[model/ast/Nodes.ts:331](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L331)
 
 ___
 
@@ -123,151 +115,11 @@ ___
 
 #### Inherited from
 
-VideoLikeResource.caption
+[Resource](Resource.md).[caption](Resource.md#caption)
 
 #### Defined in
 
-[model/ast/Nodes.ts:220](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L220)
-
-___
-
-### width
-
-• `Optional` **width**: `number`
-
-#### Inherited from
-
-VideoLikeResource.width
-
-#### Defined in
-
-[model/ast/Nodes.ts:240](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L240)
-
-___
-
-### height
-
-• `Optional` **height**: `number`
-
-#### Inherited from
-
-VideoLikeResource.height
-
-#### Defined in
-
-[model/ast/Nodes.ts:241](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L241)
-
-___
-
-### duration
-
-• `Optional` **duration**: `number`
-
-#### Inherited from
-
-VideoLikeResource.duration
-
-#### Defined in
-
-[model/ast/Nodes.ts:242](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L242)
-
-___
-
-### mute
-
-• `Optional` **mute**: `boolean`
-
-#### Inherited from
-
-VideoLikeResource.mute
-
-#### Defined in
-
-[model/ast/Nodes.ts:243](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L243)
-
-___
-
-### autoplay
-
-• `Optional` **autoplay**: `boolean`
-
-#### Inherited from
-
-VideoLikeResource.autoplay
-
-#### Defined in
-
-[model/ast/Nodes.ts:244](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L244)
-
-___
-
-### allowSubtitles
-
-• `Optional` **allowSubtitles**: `boolean`
-
-#### Inherited from
-
-VideoLikeResource.allowSubtitles
-
-#### Defined in
-
-[model/ast/Nodes.ts:245](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L245)
-
-___
-
-### showSubtitles
-
-• `Optional` **showSubtitles**: `boolean`
-
-#### Inherited from
-
-VideoLikeResource.showSubtitles
-
-#### Defined in
-
-[model/ast/Nodes.ts:246](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L246)
-
-___
-
-### alt
-
-• `Optional` **alt**: `string`
-
-#### Inherited from
-
-VideoLikeResource.alt
-
-#### Defined in
-
-[model/ast/Nodes.ts:247](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L247)
-
-___
-
-### posterImage
-
-• `Optional` **posterImage**: [`ImageResource`](ImageResource.md)
-
-#### Inherited from
-
-VideoLikeResource.posterImage
-
-#### Defined in
-
-[model/ast/Nodes.ts:248](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L248)
-
-___
-
-### thumbnails
-
-• `Optional` **thumbnails**: [`ImageResource`](ImageResource.md)[]
-
-#### Inherited from
-
-VideoLikeResource.thumbnails
-
-#### Defined in
-
-[model/ast/Nodes.ts:249](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L249)
+[model/ast/Nodes.ts:332](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L332)
 
 ___
 
@@ -277,8 +129,28 @@ ___
 
 #### Overrides
 
-VideoLikeResource.type
+[Resource](Resource.md).[type](Resource.md#type)
 
 #### Defined in
 
-[model/ast/Nodes.ts:285](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L285)
+[model/ast/Nodes.ts:421](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L421)
+
+___
+
+### image
+
+• **image**: [`ImageResource`](ImageResource.md)
+
+#### Defined in
+
+[model/ast/Nodes.ts:422](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L422)
+
+___
+
+### audio
+
+• **audio**: [`AudioResource`](AudioResource.md)
+
+#### Defined in
+
+[model/ast/Nodes.ts:423](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L423)
