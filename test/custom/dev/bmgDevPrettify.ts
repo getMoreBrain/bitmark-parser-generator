@@ -9,22 +9,22 @@ Copyright ©2023 Get More Brain
 import * as fs from 'fs-extra';
 import path from 'path';
 
-import { BitmarkParserGenerator, Output } from '../../../src/BitmarkParserGenerator';
-import { Ast } from '../../../src/ast/Ast';
+import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
+// import { Ast } from '../../../src/ast/Ast';
 // import { BitmarkFileGenerator } from '../../..src/generator/bitmark/BitmarkFileGenerator';
 import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
-import { JsonObjectGenerator } from '../../../src/generator/json/JsonObjectGenerator';
+// import { JsonObjectGenerator } from '../../../src/generator/json/JsonObjectGenerator';
 import { BitmarkParserType } from '../../../src/model/enum/BitmarkParserType';
 import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
 
 // import { JsonParser } from '../../../src/parser/json/JsonParser';
 
 // const jsonParser = new JsonParser();
-const ast = new Ast();
+// const ast = new Ast();
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 const bitmarkParser = new BitmarkParser();
 
-class BmgDevParser {
+class BmgDevPrettify {
   async test(debug?: boolean): Promise<void> {
     const filename = path.resolve(__dirname, '../../..', 'assets', 'test.bit');
     // const filename = path.resolve(__dirname, '../../..', 'assets', 'test.json');
@@ -50,7 +50,7 @@ class BmgDevParser {
       const res = await generator.generate(bitmarkAst);
       console.log(res);
     } else {
-      const res = await bitmarkParserGenerator.prettify(filename, {
+      const res = await bitmarkParserGenerator.upgrade(filename, {
         jsonOptions: {
           prettify: true,
         },
@@ -60,7 +60,7 @@ class BmgDevParser {
   }
 }
 
-const parser = new BmgDevParser();
+const parser = new BmgDevPrettify();
 
 parser.test(false).then(() => {
   // Done

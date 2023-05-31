@@ -24,6 +24,7 @@ function titleTagContentProcessor(
   if (!title) return;
 
   // Parse the title and its level
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const titleValue: { title: string; level: string[] } = value as any;
   const titleText = StringUtils.trimmedString(titleValue.title);
   const level = titleValue.level.length;

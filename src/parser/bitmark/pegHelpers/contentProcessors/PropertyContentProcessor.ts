@@ -37,6 +37,7 @@ function propertyContentProcessor(
   }
 
   // Helper for building the properties
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const addProperty = (obj: any, key: string, v: unknown) => {
     const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(PropertyKey.fromValue(key)) ?? {};
 
