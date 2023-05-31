@@ -16,37 +16,10 @@
  *
  */
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
-import { ResourcePropertyKey } from '../../../model/enum/ResourcePropertyKey';
+import { Card, CardSet, CardSide, UnparsedCardSet } from '../../../model/ast/CardSet';
 import { ParserError } from '../../../model/parser/ParserError';
 
-// Debugging flags for helping develop and debug the parser
-const ENABLE_DEBUG = true;
-const DEBUG_DATA = true; // Include data in the debug output
-const DEBUG_DATA_INCLUDE_PARSER = false; // Include the parser data in the debug output - very very verbose!
-const DEBUG_TRACE_TEXT_FORMAT = false; // The bit text format (e.g. bitmark++)
-const DEBUG_TRACE_RESOURCE_TYPE = false; // The bit resource type (e.g. &image)
-const DEBUG_TRACE_BIT_CONTENT = false; // The content of the bit - verbose if a lot of body text
-const DEBUG_TRACE_STANDARD_TAGS_CHAIN = false; // Top level tag chains
-const DEBUG_TRACE_BIT_TAG = false; // Top level tags
-const DEBUG_TRACE_CARD_SET = true; // The content of the card set
-const DEBUG_TRACE_CARD_SET_START = true; // Start of a card set
-const DEBUG_TRACE_CARD_SET_END = true; // End of a card set
-const DEBUG_TRACE_CARD_LINE_OR_DIVIDER = true; // A card line or a card divider (=== / == / --)
-const DEBUG_TRACE_CARD_CONTENT = true; // The content of the card - verbose if a lot of card body text
-const DEBUG_TRACE_CARD_TAGS = false; // Tags within the content of a card
-const DEBUG_TRACE_RESOURCE_TAGS_CHAIN = false; // Resource tags chain
-const DEBUG_TRACE_RESOURCE = false; // Resource tag
-const DEBUG_TRACE_RESOURCE_PROPERTY = false; // Resource property tag
-const DEBUG_TRACE_PARTNER_CHAIN = true; // Partner tag chain
-const DEBUG_TRACE_GAP_CHAIN = false; // Gap tag chain
-const DEBUG_TRACE_TRUE_FALSE_CHAIN = false; // True/False tag chain
-const DEBUG_TRACE_TAGS = false; // Standard tags
-const DEBUG_TRACE_PROPERTY_TAGS = false; // Standard property tags
-
-// DO NOT EDIT THIS LINE. Ensures no debug in production in case ENABLE_DEBUG is accidentally left on
-const DEBUG = ENABLE_DEBUG && process.env.NODE_ENV === 'development';
+import { ParseFunction } from './BitmarkPegParserTypes';
 
 import {
   BitContent,
@@ -63,6 +36,28 @@ import {
   TypeValue,
 } from './BitmarkPegParserTypes';
 
+import '../../../config/config';
+
+const ENABLE_DEBUG = true;
+const DEBUG_DATA = true;
+const DEBUG_DATA_INCLUDE_PARSER = false;
+const DEBUG_TRACE_TEXT_FORMAT = false;
+const DEBUG_TRACE_RESOURCE_TYPE = false;
+const DEBUG_TRACE_BIT_CONTENT = false;
+const DEBUG_TRACE_BIT_TAG = false;
+const DEBUG_TRACE_TAGS = false;
+const DEBUG_TRACE_PROPERTY_TAGS = false;
+const DEBUG_TRACE_RESOURCE_TAGS = false;
+const DEBUG_TRACE_TAGS_CHAIN = false;
+const DEBUG_TRACE_CARD_SET = false;
+const DEBUG_TRACE_CARD_SET_START = false;
+const DEBUG_TRACE_CARD_SET_END = false;
+const DEBUG_TRACE_CARD_LINE_OR_DIVIDER = false;
+const DEBUG_TRACE_CARD_CONTENT = false;
+const DEBUG_TRACE_CARD_TAGS = false;
+const DEBUG_TRACE_CARD_PARSED = true; // Print the parsed card (will create a lot of output if card value is large)
+const DEBUG = ENABLE_DEBUG && process.env.NODE_ENV === 'development';
+
 // Dummy for stripping unwanted code
 const STRIP = 0;
 
@@ -71,10 +66,12 @@ class BitmarkPegParserHelper {
   private cardSideIndex = 0;
   private cardVariantIndex = 0;
 
+  private parse: ParseFunction;
   private parserText: () => ParserError['text'];
   private parserLocation: () => ParserError['location'];
 
   constructor(options: ParserHelperOptions) {
+    this.parse = options.parse;
     this.parserText = options.parserText;
     this.parserLocation = options.parserLocation;
   }
@@ -122,14 +119,64 @@ class BitmarkPegParserHelper {
   // Bit tags parsing
   //
 
-  handleStandardTagsChain(value: unknown): BitContent[] {
-    if (DEBUG_TRACE_STANDARD_TAGS_CHAIN) this.debugPrint('StandardTagsChain', value);
-    return this.reduceToArrayOfTypes(value);
-  }
-
   handleBitTag(value: BitContent): BitContent {
     if (DEBUG_TRACE_BIT_TAG) this.debugPrint('BitTag', value);
     return value;
+  }
+
+  handleTag(type: TypeKeyType, value: unknown): BitContent {
+    if (DEBUG_TRACE_TAGS) this.debugPrint(type, value);
+
+    return {
+      type,
+      value,
+      parser: {
+        text: this.parserText(),
+        location: this.parserLocation(),
+      },
+    };
+  }
+
+  handlePropertyTag(key: string, value: unknown): BitContent {
+    if (DEBUG_TRACE_PROPERTY_TAGS) this.debugPrint(TypeKey.Property, { key, value });
+
+    return {
+      type: TypeKey.Property,
+      key,
+      value,
+      parser: {
+        text: this.parserText(),
+        location: this.parserLocation(),
+      },
+    };
+  }
+
+  handleResourceTag(key: string, value: unknown): BitContent {
+    if (DEBUG_TRACE_RESOURCE_TAGS) this.debugPrint(TypeKey.Resource, { key, value });
+
+    return {
+      type: TypeKey.Resource,
+      key,
+      value,
+      parser: {
+        text: this.parserText(),
+        location: this.parserLocation(),
+      },
+    };
+  }
+
+  handleTagChain(value: unknown): BitContent[] {
+    if (DEBUG_TRACE_TAGS_CHAIN) this.debugPrint('TagsChain', value);
+    const content = this.reduceToArrayOfTypes(value);
+    let newContent: BitContent[] = content;
+
+    if (content.length > 1) {
+      const head = content[0];
+      head.chain = content.slice(1);
+      newContent = [head];
+    }
+
+    return newContent;
   }
 
   //
@@ -138,9 +185,79 @@ class BitmarkPegParserHelper {
 
   handleCardSet(value: unknown): BitContent {
     if (DEBUG_TRACE_CARD_SET) this.debugPrint(TypeKey.CardSet, value);
+
+    // Build card set
+    const cards = value as BitContent[];
+    const unparsedCardSet: UnparsedCardSet = {
+      cards: [],
+    };
+    const cardSet: CardSet = {
+      cards: [],
+    };
+
+    if (cards) {
+      for (const content of cards) {
+        if (!content) continue;
+        const { type, value: cardData } = content as TypeValue;
+        if (!type || type !== TypeKey.Card) continue;
+        const { cardIndex, cardSideIndex, cardVariantIndex: cardContentIndex, value } = cardData as CardData;
+
+        // Get or create card
+        let card = unparsedCardSet.cards[cardIndex];
+        if (!card) {
+          card = {
+            sides: [],
+          };
+          unparsedCardSet.cards[cardIndex] = card;
+        }
+
+        // Get or create side
+        let side = card.sides[cardSideIndex];
+        if (!side) {
+          side = {
+            variants: [],
+          };
+          card.sides[cardSideIndex] = side;
+        }
+
+        // Set variant value
+        const variant = side.variants[cardContentIndex];
+        if (!variant) {
+          side.variants[cardContentIndex] = value;
+        } else {
+          side.variants[cardContentIndex] += value;
+        }
+      }
+
+      // Parse the card data
+      for (const unparsedCard of unparsedCardSet.cards) {
+        const card = {
+          sides: [],
+        } as Card;
+        cardSet.cards.push(card);
+        for (const unparsedSide of unparsedCard.sides) {
+          const side = {
+            variants: [],
+          } as CardSide;
+          card.sides.push(side);
+          for (const rawContent of unparsedSide.variants) {
+            let content = this.parse(rawContent, {
+              startRule: 'cardContent',
+            }) as BitContent[];
+
+            content = this.reduceToArrayOfTypes(content);
+
+            if (DEBUG_TRACE_CARD_PARSED) this.debugPrint('parsedCardContent', content);
+
+            side.variants.push(content);
+          }
+        }
+      }
+    }
+
     return {
       type: TypeKey.CardSet,
-      value,
+      value: cardSet,
       parser: {
         text: this.parserText(),
         location: this.parserLocation(),
@@ -255,145 +372,6 @@ class BitmarkPegParserHelper {
     if (DEBUG_TRACE_CARD_TAGS) this.debugPrint('CardTags', value);
 
     return value;
-  }
-
-  //
-  // Resource parsing
-  //
-
-  handleResourceTagsChain(resourceValue: any, extraProps: any[]) {
-    if (DEBUG_TRACE_RESOURCE_TAGS_CHAIN) this.debugPrint('ResourceTagsChain', [resourceValue, ...extraProps]);
-
-    const invalidResourceExtraProperties = ['type', 'key', 'value'];
-
-    // Merge extra properties into the resource type (TODO = check if valid??)
-    for (const p of extraProps) {
-      if (!invalidResourceExtraProperties.includes(p.key)) {
-        switch (p.key) {
-          case ResourcePropertyKey.license:
-          case ResourcePropertyKey.copyright:
-          case ResourcePropertyKey.provider:
-          case ResourcePropertyKey.caption:
-          case ResourcePropertyKey.src1x:
-          case ResourcePropertyKey.src2x:
-          case ResourcePropertyKey.src3x:
-          case ResourcePropertyKey.src4x:
-          case ResourcePropertyKey.alt:
-          case ResourcePropertyKey.duration:
-            // Trim specific string properties - It might be better NOT to do this, but ANTLR parser does it
-            resourceValue[p.key] = `${p.value ?? ''}`.trim();
-            break;
-
-          default:
-            resourceValue[p.key] = p.value;
-        }
-      }
-    }
-
-    return resourceValue;
-  }
-
-  handleReourceTag(key: string, value: unknown): BitContent {
-    if (DEBUG_TRACE_RESOURCE) this.debugPrint(TypeKey.Resource, { key, value });
-
-    // console.log('ResourceTag');
-    return {
-      type: TypeKey.Resource,
-      key,
-      value,
-      parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
-      },
-    };
-  }
-
-  handleReourcePropertyTag(key: string, value: unknown): BitContent {
-    if (DEBUG_TRACE_RESOURCE_PROPERTY) this.debugPrint(TypeKey.ResourceProperty, { key, value });
-
-    return {
-      type: TypeKey.ResourceProperty,
-      key,
-      value,
-      parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
-      },
-    };
-  }
-
-  //
-  // Tag Chain parsing
-  //
-
-  handlePartnerChainTags(value: unknown): BitContent {
-    if (DEBUG_TRACE_PARTNER_CHAIN) this.debugPrint(TypeKey.PartnerChain, value);
-
-    return {
-      type: TypeKey.PartnerChain,
-      value,
-      parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
-      },
-    };
-  }
-
-  handleGapChainTags(value: unknown): BitContent {
-    if (DEBUG_TRACE_GAP_CHAIN) this.debugPrint(TypeKey.GapChain, value);
-
-    return {
-      type: TypeKey.GapChain,
-      value,
-      parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
-      },
-    };
-  }
-
-  handleTrueFalseChainTags(value: unknown): BitContent {
-    if (DEBUG_TRACE_TRUE_FALSE_CHAIN) this.debugPrint(TypeKey.TrueFalseChain, value);
-
-    return {
-      type: TypeKey.TrueFalseChain,
-      value,
-      parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
-      },
-    };
-  }
-
-  //
-  // Tags parsing
-  //
-
-  handleTag(type: TypeKeyType, value: unknown): BitContent {
-    if (DEBUG_TRACE_TAGS) this.debugPrint(type, value);
-
-    return {
-      type,
-      value,
-      parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
-      },
-    };
-  }
-
-  handlePropertyTag(key: string, value: unknown): BitContent {
-    if (DEBUG_TRACE_PROPERTY_TAGS) this.debugPrint(TypeKey.Property, { key, value });
-
-    return {
-      type: TypeKey.Property,
-      key,
-      value,
-      parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
-      },
-    };
   }
 
   //

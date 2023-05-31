@@ -62,6 +62,7 @@ const NodeType = superenum({
   externalIdValue: 'externalIdValue',
   releaseVersion: 'releaseVersion',
   releaseVersionValue: 'releaseVersionValue',
+  padletId: 'padletId',
   padletIdValue: 'padletIdValue',
   ageRange: 'ageRange',
   ageRangeValue: 'ageRangeValue',
@@ -109,6 +110,12 @@ const NodeType = superenum({
   referencePropertyValue: 'referencePropertyValue',
   list: 'list',
   listValue: 'listValue',
+  textReference: 'textReference',
+  textReferenceValue: 'textReferenceValue',
+  isTracked: 'isTracked',
+  isTrackedValue: 'isTrackedValue',
+  isInfoOnly: 'isInfoOnly',
+  isInfoOnlyValue: 'isInfoOnlyValue',
   labelTrue: 'labelTrue',
   labelFalse: 'labelFalse',
   quotedPerson: 'quotedPerson',
@@ -162,6 +169,7 @@ const NodeType = superenum({
   keyAudio: 'keyAudio',
   keyImage: 'keyImage',
   response: 'response',
+  reaction: 'reaction',
   feedback: 'feedback',
 
   // Partner
@@ -198,6 +206,8 @@ const NodeType = superenum({
 
   // Parser Info / Errors
   parser: 'parser',
+  warnings: 'warnings',
+  warningsValue: 'warningsValue',
   errors: 'errors',
   errorsValue: 'errorsValue',
   message: 'message',

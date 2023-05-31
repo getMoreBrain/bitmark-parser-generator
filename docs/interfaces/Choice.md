@@ -32,7 +32,7 @@ Decision.text
 
 #### Defined in
 
-[model/ast/Nodes.ts:413](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L413)
+[model/ast/Nodes.ts:311](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L311)
 
 ___
 
@@ -46,7 +46,7 @@ Decision.isCorrect
 
 #### Defined in
 
-[model/ast/Nodes.ts:414](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L414)
+[model/ast/Nodes.ts:312](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L312)
 
 ___
 
@@ -60,7 +60,7 @@ Decision.itemLead
 
 #### Defined in
 
-[model/ast/Nodes.ts:415](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L415)
+[model/ast/Nodes.ts:313](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L313)
 
 ___
 
@@ -74,7 +74,7 @@ Decision.hint
 
 #### Defined in
 
-[model/ast/Nodes.ts:416](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L416)
+[model/ast/Nodes.ts:314](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L314)
 
 ___
 
@@ -88,7 +88,7 @@ Decision.instruction
 
 #### Defined in
 
-[model/ast/Nodes.ts:417](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L417)
+[model/ast/Nodes.ts:315](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L315)
 
 ___
 
@@ -102,7 +102,7 @@ Decision.example
 
 #### Defined in
 
-[model/ast/Nodes.ts:418](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L418)
+[model/ast/Nodes.ts:316](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L316)
 
 ___
 
@@ -116,4 +116,4 @@ Decision.isCaseSensitive
 
 #### Defined in
 
-[model/ast/Nodes.ts:419](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L419)
+[model/ast/Nodes.ts:317](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L317)

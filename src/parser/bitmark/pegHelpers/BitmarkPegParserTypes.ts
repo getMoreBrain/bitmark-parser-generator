@@ -6,9 +6,10 @@
  * All rights reserved.
  *
  */
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { EnumType, superenum } from '@ncoderz/superenum';
 
+import { CardSet } from '../../../model/ast/CardSet';
 import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTypeType } from '../../../model/enum/ResourceType';
 import { TextFormatType } from '../../../model/enum/TextFormat';
@@ -31,6 +32,7 @@ import {
   BotResponse,
   Partner,
   ExtraProperties,
+  ImageResource,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -44,9 +46,12 @@ const CARD_VARIANT_DIVIDER_V1 = '--';
 export interface ParseOptions {
   filename?: string;
   startRule?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   tracer?: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ParseFunction = (input: string, options?: ParseOptions) => any;
 
 export interface ParserHelperOptions {
@@ -79,7 +84,7 @@ export interface CardData {
 }
 
 export interface BitContentProcessorResult {
-  cardSet?: TypeValue[];
+  cardSet?: CardSet;
   cardBody?: string;
   body?: Body;
   footer?: FooterText;
@@ -100,11 +105,32 @@ export interface BitContentProcessorResult {
   instruction?: string;
   hint?: string;
   anchor?: string;
+  book?: string;
   reference?: string;
+  referenceEnd?: string;
   sampleSolution?: string;
   isShortAnswer?: boolean;
   isCaseSensitive?: boolean;
   reaction?: string;
+  license?: string;
+  copyright?: string;
+  showInIndex?: boolean;
+  caption?: string;
+  src1x?: string;
+  src2x?: string;
+  src3x?: string;
+  src4x?: string;
+  width?: number;
+  height?: number;
+  alt?: string;
+  // duration?: string | string[]; // number? - there is a collision between duration at bit level, and duration in resource.
+  mute?: boolean;
+  autoplay?: boolean;
+  allowSubtitles?: boolean;
+  showSubtitles?: boolean;
+  posterImage?: ImageResource;
+  siteName?: string;
+
   extraProperties?: ExtraProperties;
 }
 
@@ -136,69 +162,63 @@ export interface BitSpecificCards {
 
 export type BitContent = TypeValue | TypeKeyValue;
 
-export interface TypeValue extends ParserData {
+export interface TypeValue<T = unknown> extends ParserData {
   type: string;
-  value?: unknown;
+  value?: T;
+  chain?: BitContent[];
 }
 
-export interface TypeKeyValue extends ParserData {
+export interface TypeKeyValue<T = unknown> extends ParserData {
   type: string;
   key: string;
-  value?: unknown;
-}
-
-export interface TypeKeyResource extends ParserData {
-  type: string;
-  key: string;
-  url: string;
+  value?: T;
+  chain?: BitContent[];
 }
 
 const TypeKey = superenum({
+  // Bit header
   TextFormat: 'TextFormat',
   ResourceType: 'ResourceType',
-  Resource: 'Resource',
-  ResourceProperty: 'ResourceProperty',
+
+  // Tags
   Title: 'Title',
   Anchor: 'Anchor',
   Reference: 'Reference',
-  Property: 'Property',
   ItemLead: 'ItemLead',
   Instruction: 'Instruction',
   Hint: 'Hint',
   True: 'True',
   False: 'False',
-  PartnerChain: 'PartnerChain',
-  GapChain: 'GapChain',
-  TrueFalseChain: 'TrueFalseChain',
-  Cloze: 'Cloze',
+  Gap: 'Gap',
   SampleSolution: 'SampleSolution',
+  Comment: 'Comment',
+
+  // Generic Tags (converted to specific tags by the BitTagValidator)
+  Property: 'Property',
+  Resource: 'Resource',
+  TagChain: 'TagChain',
+
+  // Text
   BodyChar: 'BodyChar',
   BodyText: 'BodyText',
+
+  // Card Set
   CardSet: 'CardSet',
   Card: 'Card',
   CardChar: 'CardChar',
   CardText: 'CardText',
-  Comment: 'Comment',
+
+  // Chains
+  GapChain: 'GapChain',
+  TrueFalseChain: 'TrueFalseChain',
 });
 
 export type TypeKeyType = EnumType<typeof TypeKey>;
 
 const BitContentLevel = superenum({
   Bit: 'Bit',
-  Statement: 'Statement',
-  Choice: 'Choice',
-  Response: 'Response',
-  PartnerChain: 'PartnerChain',
-  GapChain: 'GapChain',
-  HighlightChain: 'HighlightChain',
-  SelectChain: 'SelectChain',
-  CardElement: 'CardElement',
-  CardStatements: 'CardStatements',
-  CardQuiz: 'CardQuiz',
-  CardQuestion: 'CardQuestion',
-  CardMatch: 'CardMatch',
-  CardMatrix: 'CardMatrix',
-  CardBotResponse: 'CardBotResponse',
+  Card: 'Card',
+  Chain: 'Chain',
 });
 
 export type BitContentLevelType = EnumType<typeof BitContentLevel>;
@@ -210,21 +230,10 @@ export interface BitmarkPegParserContext {
   DEBUG_BIT_TAGS: boolean;
   DEBUG_BODY: boolean;
   DEBUG_FOOTER: boolean;
-  DEBUG_PARTNER_CONTENT: boolean;
-  DEBUG_PARTNER_TAGS: boolean;
-  DEBUG_GAP_CONTENT: boolean;
-  DEBUG_GAP_TAGS: boolean;
-  DEBUG_SELECT_CONTENT: boolean;
-  DEBUG_SELECT_TAGS: boolean;
-  DEBUG_HIGHLIGHT_CONTENT: boolean;
-  DEBUG_HIGHLIGHT_TAGS: boolean;
-  DEBUG_TRUE_FALSE_V1_CONTENT: boolean;
-  DEBUG_TRUE_FALSE_V1_TAGS: boolean;
-  DEBUG_CHOICE_RESPONSE_V1_CONTENT: boolean;
-  DEBUG_CHOICE_RESPONSE_V1_TAGS: boolean;
+  DEBUG_CHAIN_CONTENT: boolean;
+  DEBUG_CHAIN_TAGS: boolean;
   DEBUG_CARD_SET_CONTENT: boolean;
   DEBUG_CARD_SET: boolean;
-  DEBUG_CARD_PARSED: boolean;
   DEBUG_CARD_TAGS: boolean;
 
   parser: ParserInfo;
@@ -233,8 +242,8 @@ export interface BitmarkPegParserContext {
   bitContentProcessor(
     bitLevel: BitContentLevelType,
     bitType: BitTypeType,
-    data: BitContent[],
-    validTypes: TypeKeyType[],
+    data: BitContent[] | undefined,
+    /*validTypes: TypeKeyType[],*/
   ): BitContentProcessorResult;
   splitBitContent(bitContent: BitContent[], types: TypeKeyType[]): BitContent[][];
   addWarning(message: string, parserData?: ParserData, parserDataOriginal?: ParserData): void;

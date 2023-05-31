@@ -9,12 +9,10 @@
       "hint": "",
       "isExample": false,
       "example": "",
-      "id": [
-        "119760"
-      ],
+      "id": ["119760"],
       "resource": {
         "type": "still-image-film-link",
-        "videoLink": {
+        "stillImageFilmLink": {
           "provider": "",
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
           "format": "mp4"

@@ -44,7 +44,7 @@ Called when a branch node is entered
 
 #### Defined in
 
-[ast/Ast.ts:35](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Ast.ts#L35)
+[ast/Ast.ts:36](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L36)
 
 ___
 
@@ -74,7 +74,7 @@ Called when between child nodes
 
 #### Defined in
 
-[ast/Ast.ts:47](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Ast.ts#L47)
+[ast/Ast.ts:48](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L48)
 
 ___
 
@@ -102,7 +102,7 @@ Called when a branch node is exited
 
 #### Defined in
 
-[ast/Ast.ts:62](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Ast.ts#L62)
+[ast/Ast.ts:63](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L63)
 
 ___
 
@@ -130,4 +130,4 @@ Called when a leaf node is entered
 
 #### Defined in
 
-[ast/Ast.ts:71](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/ast/Ast.ts#L71)
+[ast/Ast.ts:72](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L72)

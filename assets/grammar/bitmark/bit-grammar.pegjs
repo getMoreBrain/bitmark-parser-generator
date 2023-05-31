@@ -109,11 +109,11 @@ ResourceType
 
 // All bit content (tags, body, cards)
 BitContent
-  = value: (CardSet_V2 / CardSet_V1 / GapTagsChain / TrueFalseTagsChain / PartnerTagsChain / StandardTagsChain / BodyChar)* { return helper.handleBitContent(value) }
+  = value: (CardSet_V2 / CardSet_V1 / TagChain / BodyChar)* { return helper.handleBitContent(value) }
 
-// Standard bit tags chain
-StandardTagsChain
-  = value: (BitTag ChainedBitTag*) { return helper.handleStandardTagsChain(value) }
+// Bit tag chain
+TagChain
+  = value: (BitTag ChainedBitTag*) { return helper.handleTagChain(value) }
 
 // Chained bit tag
 ChainedBitTag
@@ -121,7 +121,21 @@ ChainedBitTag
 
 // Bit tag
 BitTag
-  = value: (CommentTag / RemarkTag / TitleTag / AnchorTag / ReferenceTag / PropertyTag / ItemLeadTag / InstructionTag / HintTag / ResourceTagsChain) { return helper.handleBitTag(value) }
+  = value: (
+    CommentTag
+  / RemarkTag
+  / PropertyTag
+  / TitleTag
+  / AnchorTag
+  / ReferenceTag
+  / ItemLeadTag
+  / InstructionTag
+  / HintTag
+  / GapTag
+  / SampleSolutionTag
+  / TrueTag
+  / FalseTag
+  / ResourceTag) { return helper.handleBitTag(value) }
 
 // Character of Body of the bit - parse directly and don't add location information for performance
 BodyChar
@@ -177,55 +191,12 @@ CardLine_V1
 
 // Root cardContent rule
 cardContent
-  = value: (CardContentTags / CardChar)* { return helper.handleCardContent(value); }
-
-CardContentTags
-  = value: (CommentTag / ItemLeadTag / InstructionTag / HintTag / SampleSolutionTag / TrueFalseTagsChain / PropertyTag / TitleTag / ResourceTagsChain) { return helper.handleCardTags(value); }
+  = value: (TagChain / CardChar)* { return helper.handleCardContent(value); }
 
 // Line of Body of the card - parse directly and don't add location information for performance
 CardChar
   = value: . { return { type: TypeKey.CardChar, value: value } }
 
-
-//
-// Resource
-//
-
-// Resource tag with chained properties
-ResourceTagsChain
-  = value: ResourceTag props: ResourcePropertyTag* { return helper.handleResourceTagsChain(value, props); }
-
-// The resource tag
-ResourceTag
-  = "[&" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return helper.handleReourceTag(key, value); }
-
-// Resource Extra Data Tag
-ResourcePropertyTag
-  = "[@" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return helper.handleReourcePropertyTag(key, value); }
-
-
-//
-// Tag chains
-//
-
-// Gap tags chain
-PartnerTagsChain
-  = value: PartnerTag others: (ResourceTagsChain)* { return helper.handlePartnerChainTags([value, ...others]); }
-
-// Gap tags chain
-GapTagsChain
-  = value: ClozeTag+ others: (ClozeTag / ItemLeadTag / InstructionTag / HintTag / PropertyTag)* { return helper.handleGapChainTags([...value, ...others]); }
-
-// True/False tags chain
-TrueFalseTagsChain
-  = value: (TrueTag / FalseTag)+ others: (ItemLeadTag / InstructionTag / HintTag / PropertyTag)* { return helper.handleTrueFalseChainTags([...value, ...others]); }
-
-
-//
-// Specific Tags
-//
-PartnerTag
-  = "[@partner" value: KeyValueTag_Value "]" { return helper.handlePropertyTag('partner', value) }
 
 //
 // Generic Tags
@@ -271,9 +242,13 @@ FalseTag
 SampleSolutionTag
   = "[$" value: Tag_Value "]" { return helper.handleTag(TypeKey.SampleSolution, value) }
 
-// Cloze tag
-ClozeTag
-  = "[_" value: Tag_Value "]" { return helper.handleTag(TypeKey.Cloze, value) }
+// Gap tag
+GapTag
+  = "[_" value: Tag_Value "]" { return helper.handleTag(TypeKey.Gap, value) }
+
+// Resource tag
+ResourceTag
+  = "[&" key: KeyValueTag_Key value: KeyValueTag_Value "]" { return helper.handleResourceTag(key, value); }
 
 // Remark (unparsed body)
 RemarkTag

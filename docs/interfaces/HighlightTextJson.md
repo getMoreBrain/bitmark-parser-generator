@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[model/json/BodyBitJson.ts:56](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BodyBitJson.ts#L56)
+[model/json/BodyBitJson.ts:56](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BodyBitJson.ts#L56)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[model/json/BodyBitJson.ts:57](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BodyBitJson.ts#L57)
+[model/json/BodyBitJson.ts:57](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BodyBitJson.ts#L57)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[model/json/BodyBitJson.ts:58](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BodyBitJson.ts#L58)
+[model/json/BodyBitJson.ts:58](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BodyBitJson.ts#L58)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[model/json/BodyBitJson.ts:59](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BodyBitJson.ts#L59)
+[model/json/BodyBitJson.ts:59](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BodyBitJson.ts#L59)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[model/json/BodyBitJson.ts:60](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BodyBitJson.ts#L60)
+[model/json/BodyBitJson.ts:60](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BodyBitJson.ts#L60)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[model/json/BodyBitJson.ts:61](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BodyBitJson.ts#L61)
+[model/json/BodyBitJson.ts:61](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BodyBitJson.ts#L61)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[model/json/BodyBitJson.ts:62](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BodyBitJson.ts#L62)
+[model/json/BodyBitJson.ts:62](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BodyBitJson.ts#L62)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[model/json/BodyBitJson.ts:63](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BodyBitJson.ts#L63)
+[model/json/BodyBitJson.ts:63](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BodyBitJson.ts#L63)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[model/json/BodyBitJson.ts:64](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BodyBitJson.ts#L64)
+[model/json/BodyBitJson.ts:64](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BodyBitJson.ts#L64)
 
 ___
 
@@ -115,4 +115,4 @@ ___
 
 #### Defined in
 
-[model/json/BodyBitJson.ts:65](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/BodyBitJson.ts#L65)
+[model/json/BodyBitJson.ts:65](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/BodyBitJson.ts#L65)

@@ -69,6 +69,9 @@ export interface Bit {
   bot?: Property;
   referenceProperty?: Property;
   list?: Property;
+  textReference?: Property;
+  isTracked?: Property;
+  isInfoOnly?: Property;
   labelTrue?: Property;
   labelFalse?: Property;
   quotedPerson?: Property;
@@ -353,14 +356,23 @@ export interface ImageLinkResource extends Resource {
 
 export interface AudioResource extends Resource {
   type: 'audio';
+  duration?: number; // string?
+  mute?: boolean;
+  autoplay?: boolean;
 }
 
 export interface AudioEmbedResource extends Resource {
   type: 'audio-embed';
+  duration?: number; // string?
+  mute?: boolean;
+  autoplay?: boolean;
 }
 
 export interface AudioLinkResource extends Resource {
   type: 'audio-link';
+  duration?: number; // string?
+  mute?: boolean;
+  autoplay?: boolean;
 }
 
 export interface VideoResource extends Resource {

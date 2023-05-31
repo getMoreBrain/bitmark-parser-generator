@@ -11,7 +11,7 @@
 ### Methods
 
 - [toAst](BitmarkParser.md#toAst)
-- [parse](BitmarkParser.md#parse)
+- [parseUsingAntlr](BitmarkParser.md#parseUsingAntlr)
 
 ## Constructors
 
@@ -44,24 +44,28 @@ bitmark AST
 
 #### Defined in
 
-[parser/bitmark/BitmarkParser.ts:25](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/parser/bitmark/BitmarkParser.ts#L25)
+[parser/bitmark/BitmarkParser.ts:43](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/parser/bitmark/BitmarkParser.ts#L43)
 
 ___
 
-### parse
+### parseUsingAntlr
 
-▸ **parse**(`pathOrMarkup`): [`BitWrapperJson`](../interfaces/BitWrapperJson.md)[]
+▸ **parseUsingAntlr**(`pathOrMarkup`): [`BitWrapperJson`](../interfaces/BitWrapperJson.md)[]
+
+Perform parsing using the ANTLR parser.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `pathOrMarkup` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `pathOrMarkup` | `string` | path to bitmark markup file, or bitmark markup as a string |
 
 #### Returns
 
 [`BitWrapperJson`](../interfaces/BitWrapperJson.md)[]
 
+JSON object representing the bitmark markup
+
 #### Defined in
 
-[parser/bitmark/BitmarkParser.ts:35](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/parser/bitmark/BitmarkParser.ts#L35)
+[parser/bitmark/BitmarkParser.ts:59](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/parser/bitmark/BitmarkParser.ts#L59)

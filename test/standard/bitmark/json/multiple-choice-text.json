@@ -1,33 +1,38 @@
 [
   {
-    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:287839]\n[%][%multiple-choice-text]\nThe students complete[+d][-t][-s][@example] the [+cloze][-cloth][-close] with the correct verb forms.",
     "bit": {
       "type": "multiple-choice-text",
       "format": "bitmark--",
+      "id": ["287839"],
+      "item": "",
+      "lead": "multiple-choice-text",
+      "hint": "",
+      "example": "",
+      "isExample": false,
       "body": "The students complete{0} the {1} with the correct verb forms.",
       "placeholders": {
         "{0}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "d",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "t",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "s",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": true,
@@ -35,72 +40,74 @@
         },
         "{1}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "cloze",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "cloth",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "close",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
           "example": ""
         }
-      },
-      "id": [
-        "287839"
-      ],
-      "lead": "multiple-choice-text"
-    }
+      }
+    },
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:287839]\n[%][%multiple-choice-text]\nThe students complete[+d][-t][-s][@example] the [+cloze][-cloth][-close] with the correct verb forms."
   },
   {
-    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:213773]\n[%46]\n[!ln einem Beratungsunternehmen für Evaluationen von Bundesprojekten diskutiert die Geschäftsleiterin mit drei Partnern, welchen Preis sie für ein ausgeschriebenes Mandat offerieren wollen. Dabei sind sie nicht einig, well sie sich an verschiedenen «K»onentieren. Welche Faktoren sind bei den folgenden Argumenten relevant?]\n[-Zahlungsbereitschaft Kunde][+Konkurrenz][-Kapazität][-Kosten] Wir sollten günstiger sein als Polyconsult, sonst kriegen sie diesen Auftrag auch noch und können weiter Mitarbeitende einstellen, die uns dann fehlen.\n\n[-Zahlungsbereitschaft Kunde][-Konkurrenz][+Kapazität][-Kosten] Wenn wir das Projekt im Januar machen können, können wir 10% Rabatt geben. Im Januar ist wenig los. Sonst offerieren wir den normalen Preis.\n\n[+Zahlungsbereitschaft Kunde][-Konkurrenz][-Kapazität][-Kosten] Ich glaube, wir sollten dieses Projekt wirklich tief offerieren, weil sie kaum Budget haben. Wenn wir dieses Projekt sauber durchführen, können wir bet Folgeprojekten, wenn der Kredit gesprochen ist, die verlorene Marge wieder gutmachen.\n\n[-Zahlungsbereitschaft Kunde][-Konkurrenz][-Kapazität][+Kosten] Für den Marktforschungsteil müssen wir höhere Ansätze verlangen, weil wir den extern einkaufen müssen.",
     "bit": {
       "type": "multiple-choice-text",
       "format": "bitmark--",
+      "id": ["213773"],
+      "item": "46",
+      "hint": "",
+      "instruction": "ln einem Beratungsunternehmen für Evaluationen von Bundesprojekten diskutiert die Geschäftsleiterin mit drei Partnern, welchen Preis sie für ein ausgeschriebenes Mandat offerieren wollen. Dabei sind sie nicht einig, well sie sich an verschiedenen «K»onentieren. Welche Faktoren sind bei den folgenden Argumenten relevant?",
+      "example": "",
+      "isExample": false,
       "body": "{0} Wir sollten günstiger sein als Polyconsult, sonst kriegen sie diesen Auftrag auch noch und können weiter Mitarbeitende einstellen, die uns dann fehlen.\n\n{1} Wenn wir das Projekt im Januar machen können, können wir 10% Rabatt geben. Im Januar ist wenig los. Sonst offerieren wir den normalen Preis.\n\n{2} Ich glaube, wir sollten dieses Projekt wirklich tief offerieren, weil sie kaum Budget haben. Wenn wir dieses Projekt sauber durchführen, können wir bet Folgeprojekten, wenn der Kredit gesprochen ist, die verlorene Marge wieder gutmachen.\n\n{3} Für den Marktforschungsteil müssen wir höhere Ansätze verlangen, weil wir den extern einkaufen müssen.",
       "placeholders": {
         "{0}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "Zahlungsbereitschaft Kunde",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Konkurrenz",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "Kapazität",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Kosten",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -108,31 +115,31 @@
         },
         "{1}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "Zahlungsbereitschaft Kunde",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Konkurrenz",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Kapazität",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "Kosten",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -140,31 +147,31 @@
         },
         "{2}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "Zahlungsbereitschaft Kunde",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "Konkurrenz",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Kapazität",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Kosten",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -172,73 +179,74 @@
         },
         "{3}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "Zahlungsbereitschaft Kunde",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Konkurrenz",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Kapazität",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Kosten",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
           "example": ""
         }
-      },
-      "id": [
-        "213773"
-      ],
-      "item": "46",
-      "instruction": "ln einem Beratungsunternehmen für Evaluationen von Bundesprojekten diskutiert die Geschäftsleiterin mit drei Partnern, welchen Preis sie für ein ausgeschriebenes Mandat offerieren wollen. Dabei sind sie nicht einig, well sie sich an verschiedenen «K»onentieren. Welche Faktoren sind bei den folgenden Argumenten relevant?"
-    }
+      }
+    },
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:213773]\n[%46]\n[!ln einem Beratungsunternehmen für Evaluationen von Bundesprojekten diskutiert die Geschäftsleiterin mit drei Partnern, welchen Preis sie für ein ausgeschriebenes Mandat offerieren wollen. Dabei sind sie nicht einig, well sie sich an verschiedenen «K»onentieren. Welche Faktoren sind bei den folgenden Argumenten relevant?]\n[-Zahlungsbereitschaft Kunde][+Konkurrenz][-Kapazität][-Kosten] Wir sollten günstiger sein als Polyconsult, sonst kriegen sie diesen Auftrag auch noch und können weiter Mitarbeitende einstellen, die uns dann fehlen.\n\n[-Zahlungsbereitschaft Kunde][-Konkurrenz][+Kapazität][-Kosten] Wenn wir das Projekt im Januar machen können, können wir 10% Rabatt geben. Im Januar ist wenig los. Sonst offerieren wir den normalen Preis.\n\n[+Zahlungsbereitschaft Kunde][-Konkurrenz][-Kapazität][-Kosten] Ich glaube, wir sollten dieses Projekt wirklich tief offerieren, weil sie kaum Budget haben. Wenn wir dieses Projekt sauber durchführen, können wir bet Folgeprojekten, wenn der Kredit gesprochen ist, die verlorene Marge wieder gutmachen.\n\n[-Zahlungsbereitschaft Kunde][-Konkurrenz][-Kapazität][+Kosten] Für den Marktforschungsteil müssen wir höhere Ansätze verlangen, weil wir den extern einkaufen müssen."
   },
   {
-    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:213840]\n[%59]\n[!Es ist eine Aufgabe der Unternehmensführung, die strategischen Unternehmensziele festzulegen. Ordnen Sie die folgenden Aussagen dem richtigen Zielbereich zu.]\n[+Leistungsziel][-Finanzziel][-Soziales Ziel] Bis 20xx zählen wir im Produktbereich XY mindestens 120 000 Kunden bei einem Umsatz von mindestens CHF 4 Mio\n[-Leistungsziel][-Finanzziel][+Soziales Ziel] Aus unserem erzielten Reingewinn (vor Steuern) fliessen jährlich maximal 3% In die regionale und die überregionale Jugendsportförderung.\n[-Leistungsziel][-Finanzziel][+Soziales Ziel] Mittels des Führungsmodells MbO (Management by Objectives) beteiligen wir unsere Mitarbeitenden finanziell am persönlichen Leistungserfolg.\n[-Leistungsziel][+Finanzziel][-Soziales Ziel] Sämtliche Investitionsvorhaben, die die Erweiterung unserer Fertigungskapazitäten betreffen, müssen zu mindestens 75% eigenfinanziert sein.",
     "bit": {
       "type": "multiple-choice-text",
       "format": "bitmark--",
+      "id": ["213840"],
+      "item": "59",
+      "hint": "",
+      "instruction": "Es ist eine Aufgabe der Unternehmensführung, die strategischen Unternehmensziele festzulegen. Ordnen Sie die folgenden Aussagen dem richtigen Zielbereich zu.",
+      "example": "",
+      "isExample": false,
       "body": "{0} Bis 20xx zählen wir im Produktbereich XY mindestens 120 000 Kunden bei einem Umsatz von mindestens CHF 4 Mio\n{1} Aus unserem erzielten Reingewinn (vor Steuern) fliessen jährlich maximal 3% In die regionale und die überregionale Jugendsportförderung.\n{2} Mittels des Führungsmodells MbO (Management by Objectives) beteiligen wir unsere Mitarbeitenden finanziell am persönlichen Leistungserfolg.\n{3} Sämtliche Investitionsvorhaben, die die Erweiterung unserer Fertigungskapazitäten betreffen, müssen zu mindestens 75% eigenfinanziert sein.",
       "placeholders": {
         "{0}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "Leistungsziel",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "Finanzziel",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Soziales Ziel",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -246,26 +254,26 @@
         },
         "{1}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "Leistungsziel",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Finanzziel",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Soziales Ziel",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -273,26 +281,26 @@
         },
         "{2}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "Leistungsziel",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Finanzziel",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Soziales Ziel",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -300,63 +308,64 @@
         },
         "{3}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "Leistungsziel",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Finanzziel",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "Soziales Ziel",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
           "example": ""
         }
-      },
-      "id": [
-        "213840"
-      ],
-      "item": "59",
-      "instruction": "Es ist eine Aufgabe der Unternehmensführung, die strategischen Unternehmensziele festzulegen. Ordnen Sie die folgenden Aussagen dem richtigen Zielbereich zu."
-    }
+      }
+    },
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:213840]\n[%59]\n[!Es ist eine Aufgabe der Unternehmensführung, die strategischen Unternehmensziele festzulegen. Ordnen Sie die folgenden Aussagen dem richtigen Zielbereich zu.]\n[+Leistungsziel][-Finanzziel][-Soziales Ziel] Bis 20xx zählen wir im Produktbereich XY mindestens 120 000 Kunden bei einem Umsatz von mindestens CHF 4 Mio\n[-Leistungsziel][-Finanzziel][+Soziales Ziel] Aus unserem erzielten Reingewinn (vor Steuern) fliessen jährlich maximal 3% In die regionale und die überregionale Jugendsportförderung.\n[-Leistungsziel][-Finanzziel][+Soziales Ziel] Mittels des Führungsmodells MbO (Management by Objectives) beteiligen wir unsere Mitarbeitenden finanziell am persönlichen Leistungserfolg.\n[-Leistungsziel][+Finanzziel][-Soziales Ziel] Sämtliche Investitionsvorhaben, die die Erweiterung unserer Fertigungskapazitäten betreffen, müssen zu mindestens 75% eigenfinanziert sein."
   },
   {
-    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:208481]\n[%15]\n[!Gehören die Personengruppen zum Beschaffungs- oder zum Absatzmarkt? Markieren Sie die zutreffende Antwort.]\n\nLieferanten [+Beschaffungsmarkt][-Absatzmarkt]\nKunden [-Beschaffungsmarkt][+Absatzmarkt]\nKonkurrenz  [-Beschaffungsmarkt][+Absatzmarkt]\nMitarbeitende[+Beschaffungsmarkt][-Absatzmarkt]\nKapitalgeber[+Beschaffungsmarkt][-Absatzmarkt]\n||changed instr :Gehören die in der Tabelle aufgeführten Personengruppen zum Beschaffungs- oder zum Absatzmarkt? Markieren Sie die zutreffende Antwort.||",
     "bit": {
       "type": "multiple-choice-text",
       "format": "bitmark--",
+      "id": ["208481"],
+      "item": "15",
+      "hint": "",
+      "instruction": "Gehören die Personengruppen zum Beschaffungs- oder zum Absatzmarkt? Markieren Sie die zutreffende Antwort.",
+      "example": "",
+      "isExample": false,
       "body": "Lieferanten {0}\nKunden {1}\nKonkurrenz  {2}\nMitarbeitende{3}\nKapitalgeber{4}",
       "placeholders": {
         "{0}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "Beschaffungsmarkt",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "Absatzmarkt",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -364,21 +373,21 @@
         },
         "{1}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "Beschaffungsmarkt",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Absatzmarkt",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -386,21 +395,21 @@
         },
         "{2}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "Beschaffungsmarkt",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "Absatzmarkt",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -408,21 +417,21 @@
         },
         "{3}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "Beschaffungsmarkt",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "Absatzmarkt",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -430,58 +439,74 @@
         },
         "{4}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "Beschaffungsmarkt",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "Absatzmarkt",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
           "example": ""
         }
-      },
-      "id": [
-        "208481"
-      ],
-      "item": "15",
-      "instruction": "Gehören die Personengruppen zum Beschaffungs- oder zum Absatzmarkt? Markieren Sie die zutreffende Antwort."
-    }
+      }
+    },
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:208481]\n[%15]\n[!Gehören die Personengruppen zum Beschaffungs- oder zum Absatzmarkt? Markieren Sie die zutreffende Antwort.]\n\nLieferanten [+Beschaffungsmarkt][-Absatzmarkt]\nKunden [-Beschaffungsmarkt][+Absatzmarkt]\nKonkurrenz  [-Beschaffungsmarkt][+Absatzmarkt]\nMitarbeitende[+Beschaffungsmarkt][-Absatzmarkt]\nKapitalgeber[+Beschaffungsmarkt][-Absatzmarkt]\n||changed instr :Gehören die in der Tabelle aufgeführten Personengruppen zum Beschaffungs- oder zum Absatzmarkt? Markieren Sie die zutreffende Antwort.||"
   },
   {
-    "bitmark": "[.multiple-choice-text&image]\n[@id:107949]\n[%16]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-16.png]\n[!Ein Bekannter von dir ist noch nicht lange in Deutschland. Du erklärst ihm wichtige Verkehrsschilder. Wähl das\nrichtige Modalverb zur Erklärung.]\n\nWähl das richtige Wort.\nA) Hier [+dürfen][-müssen] Sie nicht parken.\nB) Hier [+können][-müssen] Sie über die Straße gehen.\nC) Hier [-dürfen][+müssen] Sie warten.",
     "bit": {
       "type": "multiple-choice-text",
       "format": "bitmark--",
+      "id": ["107949"],
+      "item": "16",
+      "hint": "",
+      "instruction": "Ein Bekannter von dir ist noch nicht lange in Deutschland. Du erklärst ihm wichtige Verkehrsschilder. Wähl das\nrichtige Modalverb zur Erklärung.",
+      "example": "",
+      "isExample": false,
       "body": "Wähl das richtige Wort.\nA) Hier {0} Sie nicht parken.\nB) Hier {1} Sie über die Straße gehen.\nC) Hier {2} Sie warten.",
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-16.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
+        }
+      },
       "placeholders": {
         "{0}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "dürfen",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "müssen",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -489,21 +514,21 @@
         },
         "{1}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "können",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             },
             {
               "text": "müssen",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
@@ -511,46 +536,28 @@
         },
         "{2}": {
           "type": "select",
-          "item": "",
+          "prefix": "",
           "options": [
             {
               "text": "dürfen",
-              "hint": "",
-              "isCorrect": false
+              "isCorrect": false,
+              "hint": ""
             },
             {
               "text": "müssen",
-              "hint": "",
-              "isCorrect": true
+              "isCorrect": true,
+              "hint": ""
             }
           ],
-          "prefix": "",
           "postfix": "",
+          "item": "",
           "hint": "",
           "instruction": "",
           "isExample": false,
           "example": ""
         }
-      },
-      "id": [
-        "107949"
-      ],
-      "item": "16",
-      "resource": {
-        "type": "image",
-        "image": {
-          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-16.png",
-          "showInIndex": false,
-          "format": "png",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "caption": "",
-          "license": "",
-          "copyright": ""
-        }
-      },
-      "instruction": "Ein Bekannter von dir ist noch nicht lange in Deutschland. Du erklärst ihm wichtige Verkehrsschilder. Wähl das\nrichtige Modalverb zur Erklärung."
-    }
+      }
+    },
+    "bitmark": "[.multiple-choice-text&image]\n[@id:107949]\n[%16]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-16.png]\n[!Ein Bekannter von dir ist noch nicht lange in Deutschland. Du erklärst ihm wichtige Verkehrsschilder. Wähl das\nrichtige Modalverb zur Erklärung.]\n\nWähl das richtige Wort.\nA) Hier [+dürfen][-müssen] Sie nicht parken.\nB) Hier [+können][-müssen] Sie über die Straße gehen.\nC) Hier [-dürfen][+müssen] Sie warten."
   }
 ]

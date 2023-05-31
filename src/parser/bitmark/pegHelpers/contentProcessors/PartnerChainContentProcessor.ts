@@ -1,8 +1,8 @@
 import { Builder } from '../../../../ast/Builder';
-import { ImageResource, Partner, Resource } from '../../../../model/ast/Nodes';
+import { ImageResource, Resource } from '../../../../model/ast/Nodes';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
-import { ObjectUtils } from '../../../../utils/ObjectUtils';
+import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
   BitContent,
@@ -10,8 +10,6 @@ import {
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
-  TypeKey,
-  TypeValue,
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
@@ -23,29 +21,18 @@ function partnerChainContentProcessor(
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
-  const { value } = content as TypeValue;
+  // const { value } = content as TypeValue;
 
-  target.partner = buildPartner(context, bitType, value as BitContent[]);
-}
+  if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('partner content', content);
 
-function buildPartner(
-  context: BitmarkPegParserContext,
-  bitType: BitTypeType,
-  content: BitContent[],
-): Partner | undefined {
-  if (context.DEBUG_PARTNER_CONTENT) context.debugPrint('partner content', content);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, content.chain);
 
-  const tags = context.bitContentProcessor(BitContentLevel.PartnerChain, bitType, content, [
-    TypeKey.Property,
-    TypeKey.Resource,
-  ]);
+  if (context.DEBUG_CHAIN_TAGS) context.debugPrint('partner TAGS', tags);
 
-  if (context.DEBUG_PARTNER_TAGS) context.debugPrint('partner TAGS', tags);
+  const { resources } = tags;
 
-  const { extraProperties, resources } = tags;
-
-  // Extract the name from the extra properties
-  const name = ObjectUtils.extractSingleValue(extraProperties, 'partner') as string;
+  // Extract the name from the content tag
+  const name = StringUtils.trimmedString(content.value);
 
   // Extract avatarImage from the resources
   const avatarImage = extractAvatarImage(context, resources);
@@ -55,7 +42,7 @@ function buildPartner(
     avatarImage,
   });
 
-  return partner;
+  target.partner = partner;
 }
 
 function extractAvatarImage(

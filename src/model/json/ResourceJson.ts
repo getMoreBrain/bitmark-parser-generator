@@ -171,22 +171,27 @@ export interface AudioResourceJson extends BaseResourceJson {
   format: string;
   url: string;
   src: string;
+  duration: number; // string?
+  mute: boolean;
+  autoplay: boolean;
 }
 
 export interface AudioEmbedResourceJson extends BaseResourceJson {
   format: string;
   url: string;
   src: string;
-  duration: string; // Has a default value in JSON, never comes from the bitmark
-  autoplay: boolean; // Has a default value in JSON, never comes from the bitmark
+  duration: number; // string?
+  mute: boolean;
+  autoplay: boolean;
 }
 
 export interface AudioLinkResourceJson extends BaseResourceJson {
   format: string;
   url: string;
   src: string;
-  duration: string; // Has a default value in JSON, never comes from the bitmark
-  autoplay: boolean; // Has a default value in JSON, never comes from the bitmark
+  duration: number; // string?
+  mute: boolean;
+  autoplay: boolean;
 }
 
 export interface VideoResourceJson extends BaseResourceJson {

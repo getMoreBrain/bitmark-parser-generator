@@ -278,7 +278,7 @@ describe('bitmark-parser', () => {
         if (TEST_AGAINST_ANTLR_PARSER) {
           // Generate JSON from generated bitmark markup using the ANTLR parser
           performance.mark('ANTLR:Start');
-          originalJson = bitmarkParser.parse(originalMarkup);
+          originalJson = bitmarkParser.parseUsingAntlr(originalMarkup);
 
           // Write the new JSON
           fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {
@@ -314,6 +314,7 @@ describe('bitmark-parser', () => {
         // Generate JSON from AST
         const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
           prettify: true,
+          includeExtraProperties: true, // Include extra properties in the JSON when testing the books as several have them
         });
 
         await generator.generate(bitmarkAst);

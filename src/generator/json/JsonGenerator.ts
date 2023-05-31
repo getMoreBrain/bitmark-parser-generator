@@ -120,6 +120,15 @@ export interface JsonOptions {
   stringify?: boolean;
 
   /**
+   * Include extra properties in the output.
+   *
+   * If not set or false, extra properties will NOT be included in the JSON output
+   * It true, extra properties will be included in the JSON output.
+   *
+   */
+  includeExtraProperties?: boolean;
+
+  /**
    * [development only]
    * Generate debug information in the output.
    */
@@ -377,7 +386,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
   protected enter_extraProperties(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const extraProperties = node.value as ExtraProperties | undefined;
 
-    if (extraProperties) {
+    if (this.options.includeExtraProperties && extraProperties) {
       for (const [key, values] of Object.entries(extraProperties)) {
         let k = key;
         if (Object.prototype.hasOwnProperty.call(this.bitJson, key)) {
@@ -765,6 +774,8 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         // Create the question
         const pairJson: Partial<PairJson> = {
           key: p.key ?? '',
+          keyAudio: p.keyAudio ? this.addAudioResource(p.keyAudio) : undefined,
+          keyImage: p.keyImage ? this.addImageResource(p.keyImage) : undefined,
           values: p.values ?? [],
           ...this.toItemLeadHintInstruction(p),
           ...this.toExampleAndIsExample(p.example),
@@ -775,6 +786,18 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
         // Delete unwanted properties
         if (p.itemLead?.lead == null) delete pairJson.lead;
+        if (pairJson.key) {
+          delete pairJson.keyAudio;
+          delete pairJson.keyImage;
+        }
+        if (pairJson.keyAudio != null) {
+          delete pairJson.key;
+          delete pairJson.keyImage;
+        }
+        if (pairJson.keyImage != null) {
+          delete pairJson.key;
+          delete pairJson.keyAudio;
+        }
 
         pairsJson.push(pairJson as PairJson);
       }
@@ -1064,12 +1087,14 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
    */
   protected generatePropertyHandlers() {
     for (const key of PropertyKey.values()) {
-      const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(PropertyKey.fromValue(key)) ?? {};
+      const validatedKey = PropertyKey.fromValue(key);
+      const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(validatedKey) ?? {};
       const astKey = meta.astKey ? meta.astKey : key;
       const funcName = `enter_${astKey}`;
 
       // Special cases (handled outside of the automatically generated handlers)
       if (astKey === PropertyKey.example) continue;
+      if (astKey === PropertyKey.partner) continue;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[funcName] = (node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]) => {
@@ -1186,11 +1211,14 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
       case ResourceType.stillImageFilm: {
         const stillImageFilmResource = resource as StillImageFilmResource;
-        resourceJson = {
-          type: ResourceType.stillImageFilm,
-          image: this.addImageResource(stillImageFilmResource.image),
-          audio: this.addAudioResource(stillImageFilmResource.audio),
-        };
+        // Only write the resource if it has both an image and audio
+        if (stillImageFilmResource.image.value != null && stillImageFilmResource.audio.value != null) {
+          resourceJson = {
+            type: ResourceType.stillImageFilm,
+            image: this.addImageResource(stillImageFilmResource.image),
+            audio: this.addAudioResource(stillImageFilmResource.audio),
+          };
+        }
         break;
       }
 
@@ -1232,7 +1260,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       case ResourceType.documentLink:
         resourceJson = {
           type: ResourceType.documentLink,
-          documentLink: this.addDocumentEmbedResource(resource as DocumentEmbedResource),
+          documentLink: this.addDocumentLinkResource(resource as DocumentLinkResource),
         };
         break;
 
@@ -1332,6 +1360,10 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (resource.provider != null) resourceJson.provider = resource.provider;
     if (resource.value != null) resourceJson.src = resource.value;
 
+    if (resource.duration != null) resourceJson.duration = resource.duration;
+    if (resource.mute != null) resourceJson.mute = resource.mute;
+    if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
+
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
 
     return resourceJson as AudioResourceJson;
@@ -1344,9 +1376,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (resource.provider != null) resourceJson.provider = resource.provider;
     if (resource.value != null) resourceJson.src = resource.value;
 
-    // Properties that are always added that do not come from the markup
-    resourceJson.duration = '';
-    resourceJson.autoplay = true;
+    if (resource.duration != null) resourceJson.duration = resource.duration;
+    if (resource.mute != null) resourceJson.mute = resource.mute;
+    if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
 
@@ -1360,9 +1392,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (resource.provider != null) resourceJson.provider = resource.provider;
     if (resource.value != null) resourceJson.url = resource.value;
 
-    // Properties that are always added that do not come from the markup
-    resourceJson.duration = '';
-    resourceJson.autoplay = true;
+    if (resource.duration != null) resourceJson.duration = resource.duration;
+    if (resource.mute != null) resourceJson.mute = resource.mute;
+    if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson, true);
 
@@ -1464,7 +1496,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.value != null) resourceJson.src = resource.value;
+    if (resource.value != null) resourceJson.url = resource.value;
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
 
@@ -1537,7 +1569,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.value != null) resourceJson.body = resource.value;
+    if (resource.value != null) resourceJson.url = resource.value;
     // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
@@ -1550,7 +1582,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.value != null) resourceJson.body = resource.value;
+    if (resource.value != null) resourceJson.url = resource.value;
     // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
@@ -1563,7 +1595,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.value != null) resourceJson.body = resource.value;
+    if (resource.value != null) resourceJson.url = resource.value;
     // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
@@ -1576,7 +1608,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
 
     if (resource.format != null) resourceJson.format = resource.format;
     if (resource.provider != null) resourceJson.provider = resource.provider;
-    if (resource.value != null) resourceJson.body = resource.value;
+    if (resource.value != null) resourceJson.url = resource.value;
     // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
@@ -1588,7 +1620,7 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     const resourceJson: Partial<AppLinkResourceJson> = {};
 
     // if (resource.format != null) resourceJson.format = resource.format;
-    if (resource.value != null) resourceJson.app = resource.value;
+    if (resource.value != null) resourceJson.url = resource.value;
 
     this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
 
@@ -1725,6 +1757,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       videoCallLink: undefined,
       duration: undefined,
       list: undefined,
+      textReference: undefined,
+      isTracked: undefined,
+      isInfoOnly: undefined,
       labelTrue: undefined,
       labelFalse: undefined,
       quotedPerson: undefined,
@@ -1749,10 +1784,6 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
       // Example
       example: undefined,
       isExample: undefined,
-
-      // Only .learningPathExternalLink?
-      isTracked: undefined,
-      isInfoOnly: undefined,
 
       // Partner .conversion-xxx only
       partner: undefined,
@@ -1817,10 +1848,15 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     // NOTE: Not all bits have the same default properties.
     //       The properties used in the antlr parser are a bit random sometimes?
     switch (bitJson.type) {
+      case BitType._error:
+        break;
+
       case BitType.article:
       case BitType.highlightText:
       case BitType.message:
       case BitType.sampleSolution:
+      case BitType.page:
+      case BitType.statement:
         if (bitJson.body == null) bitJson.body = '';
         break;
 
@@ -1918,7 +1954,18 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
         if (bitJson.body == null) bitJson.body = '';
         break;
 
+      case BitType.learningPathBook:
+      case BitType.learningPathBotTraining:
+      case BitType.learningPathClassroomEvent:
+      case BitType.learningPathClassroomTraining:
+      case BitType.learningPathClosing:
       case BitType.learningPathExternalLink:
+      case BitType.learningPathFeedback:
+      case BitType.learningPathLearningGoal:
+      case BitType.learningPathLti:
+      case BitType.learningPathSign:
+      case BitType.learningPathStep:
+      case BitType.learningPathVideoCall:
         if (bitJson.item == null) bitJson.item = '';
         if (bitJson.hint == null) bitJson.hint = '';
         if (bitJson.isExample == null) bitJson.isExample = false;
@@ -1958,6 +2005,9 @@ class JsonGenerator implements Generator<void>, AstWalkCallbacks {
     if (bitJson.videoCallLink == null) delete bitJson.videoCallLink;
     if (bitJson.duration == null) delete bitJson.duration;
     if (bitJson.list == null) delete bitJson.list;
+    if (bitJson.textReference == null) delete bitJson.textReference;
+    if (bitJson.isTracked == null) delete bitJson.isTracked;
+    if (bitJson.isInfoOnly == null) delete bitJson.isInfoOnly;
     if (bitJson.labelTrue == null) delete bitJson.labelTrue;
     if (bitJson.labelFalse == null) delete bitJson.labelFalse;
     if (bitJson.quotedPerson == null) delete bitJson.quotedPerson;

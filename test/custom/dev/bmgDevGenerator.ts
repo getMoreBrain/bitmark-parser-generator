@@ -70,6 +70,6 @@ class BmgDevGenerator {
 
 const generator = new BmgDevGenerator();
 
-generator.test(false).then(() => {
+generator.test(true).then(() => {
   // Done
 });

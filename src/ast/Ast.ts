@@ -1,6 +1,7 @@
 import { NodeTypeType, NodeType } from '../model/ast/NodeType';
 import { BitmarkAst, Node } from '../model/ast/Nodes';
 import { StringUtils } from '../utils/StringUtils';
+import '../config/config';
 
 /**
  * AST tree node information

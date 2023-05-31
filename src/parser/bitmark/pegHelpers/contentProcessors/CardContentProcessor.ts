@@ -1,11 +1,17 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Builder } from '../../../../ast/Builder';
-import { CardSet } from '../../../../model/ast/CardSet';
 import { BitType, BitTypeMetadata, BitTypeType } from '../../../../model/enum/BitType';
 import { CardSetType } from '../../../../model/enum/CardSetType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
+import { BitContentLevel, BitSpecificCards, BitmarkPegParserContext } from '../BitmarkPegParserTypes';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
+import {
+  CardSet,
+  ProcessedCard,
+  ProcessedCardSet,
+  ProcessedCardSide,
+  ProcessedCardVariant,
+} from '../../../../model/ast/CardSet';
 import {
   AudioResource,
   BotResponse,
@@ -20,107 +26,60 @@ import {
   Response,
   Statement,
 } from '../../../../model/ast/Nodes';
-import {
-  BitContent,
-  BitContentLevel,
-  BitSpecificCards,
-  BitmarkPegParserContext,
-  CardData,
-  TypeKey,
-  TypeValue,
-} from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
 
 function buildCards(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
-  cardSetContent: TypeValue[] | undefined,
+  cardSet: CardSet | undefined,
   statementV1: Statement | undefined,
   statementsV1: Statement[] | undefined,
   choicesV1: Choice[] | undefined,
   responsesV1: Response[] | undefined,
 ): BitSpecificCards {
-  const cardSet: CardSet = {
-    cards: [],
-  };
-
-  if (context.DEBUG_CARD_SET_CONTENT) context.debugPrint('card set content', cardSetContent);
-
-  // Build card set
-  if (cardSetContent) {
-    for (const content of cardSetContent) {
-      if (!content) continue;
-      const { type, value: cardData } = content as TypeValue;
-      if (!type || type !== TypeKey.Card) continue;
-      const { cardIndex, cardSideIndex, cardVariantIndex: cardContentIndex, value } = cardData as CardData;
-
-      // Get or create card
-      let card = cardSet.cards[cardIndex];
-      if (!card) {
-        card = {
-          sides: [],
-        };
-        cardSet.cards[cardIndex] = card;
-      }
-
-      // Get or create side
-      let side = card.sides[cardSideIndex];
-      if (!side) {
-        side = {
-          variants: [],
-        };
-        card.sides[cardSideIndex] = side;
-      }
-
-      // Set variant value
-      const variant = side.variants[cardContentIndex];
-      if (!variant) {
-        side.variants[cardContentIndex] = value;
-      } else {
-        side.variants[cardContentIndex] += value;
-      }
-    }
-  }
-
   if (context.DEBUG_CARD_SET) context.debugPrint('card set', cardSet);
 
-  // Parse the card contents
   let result: BitSpecificCards = {};
 
+  // Process the card contents
+  const processedCardSet = processCardSet(context, bitType, cardSet);
+
+  // Parse the card contents according to the card set type
+
   // Get the bit metadata to check how to parse the card set
-  const meta = BitType.getMetadata<BitTypeMetadata>(bitType) ?? {};
-  const cardSetType = meta.cardSetType;
+  const meta = BitType.getMetadata<BitTypeMetadata>(bitType);
+  const cardSetType = meta && meta.cardSet?.type;
 
   switch (cardSetType) {
     case CardSetType.elements:
-      result = parseElements(context, bitType, cardSet);
+      result = parseElements(context, bitType, processedCardSet);
       break;
 
     case CardSetType.statements:
-      result = parseStatements(context, bitType, cardSet, statementV1, statementsV1);
+      result = parseStatements(context, bitType, processedCardSet, statementV1, statementsV1);
       break;
 
     case CardSetType.quiz:
-      result = parseQuiz(context, bitType, cardSet, choicesV1, responsesV1);
+      result = parseQuiz(context, bitType, processedCardSet, choicesV1, responsesV1);
       break;
 
     case CardSetType.questions:
-      result = parseQuestions(context, bitType, cardSet);
+      result = parseQuestions(context, bitType, processedCardSet);
       break;
 
     case CardSetType.matchPairs:
       // ==> heading / pairs
-      result = parseMatchPairs(context, bitType, cardSet);
+      result = parseMatchPairs(context, bitType, processedCardSet);
       break;
 
     case CardSetType.matchMatrix:
       // ==> heading / matrix
-      result = parseMatchMatrix(context, bitType, cardSet);
+      result = parseMatchMatrix(context, bitType, processedCardSet);
       break;
 
     case CardSetType.botActionResponses:
-      result = parseBotActionResponses(context, bitType, cardSet);
+      result = parseBotActionResponses(context, bitType, processedCardSet);
       break;
 
     default:
@@ -128,26 +87,80 @@ function buildCards(
   }
 
   // Validate card set required and present, or not required and not present
-  BitmarkPegParserValidator.validateCardSetType(context, BitContentLevel.Bit, bitType, cardSetContent, cardSetType);
+  // BitmarkPegParserValidator.validateCardSetType(context, BitContentLevel.Bit, bitType, cardSetContent, cardSetType);
 
   return result;
 }
 
-function parseElements(context: BitmarkPegParserContext, bitType: BitTypeType, cardSet: CardSet): BitSpecificCards {
+function processCardSet(
+  context: BitmarkPegParserContext,
+  bitType: BitTypeType,
+  cardSet: CardSet | undefined,
+): ProcessedCardSet {
+  const processedCardSet: ProcessedCardSet = {
+    cards: [],
+  };
+
+  // Early return if no card set
+  if (!cardSet) return processedCardSet;
+
+  // Process the card contents
+  let cardNo = 0;
+  let sideNo = 0;
+  let variantNo = 0;
+  for (const card of cardSet.cards) {
+    const processedCard: ProcessedCard = {
+      no: cardNo++,
+      sides: [],
+    };
+    processedCardSet.cards.push(processedCard);
+    for (const side of card.sides) {
+      const processedSide: ProcessedCardSide = {
+        no: sideNo++,
+        variants: [],
+      };
+      processedCard.sides.push(processedSide);
+      for (const content of side.variants) {
+        const processedVariant: ProcessedCardVariant = {
+          no: variantNo++,
+        } as ProcessedCardVariant;
+        processedSide.variants.push(processedVariant);
+        const tags = context.bitContentProcessor(BitContentLevel.Card, bitType, content);
+
+        if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (elements)', tags);
+
+        // Validate the cardBody
+        tags.cardBody = BitmarkPegParserValidator.checkCardBody(
+          context,
+          BitContentLevel.Card,
+          bitType,
+          tags.cardBody,
+          processedCard.no,
+          processedSide.no,
+          processedVariant.no,
+        );
+
+        processedVariant.data = tags;
+      }
+      variantNo = 0;
+    }
+    sideNo = 0;
+  }
+
+  return processedCardSet;
+}
+
+function parseElements(
+  _context: BitmarkPegParserContext,
+  _bitType: BitTypeType,
+  cardSet: ProcessedCardSet,
+): BitSpecificCards {
   const elements: string[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
-      for (const rawContent of side.variants) {
-        const content = context.parse(rawContent, {
-          startRule: 'cardContent',
-        }) as BitContent[];
-
-        if (context.DEBUG_CARD_PARSED) context.debugPrint('parsedCardContent (elements)', content);
-
-        const tags = context.bitContentProcessor(BitContentLevel.CardElement, bitType, content, [TypeKey.CardText]);
-
-        if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (elements)', tags);
+      for (const content of side.variants) {
+        const tags = content.data;
 
         elements.push(tags.cardBody ?? '');
       }
@@ -160,9 +173,9 @@ function parseElements(context: BitmarkPegParserContext, bitType: BitTypeType, c
 }
 
 function parseStatements(
-  context: BitmarkPegParserContext,
-  bitType: BitTypeType,
-  cardSet: CardSet,
+  _context: BitmarkPegParserContext,
+  _bitType: BitTypeType,
+  cardSet: ProcessedCardSet,
   statementV1: Statement | undefined,
   statementsV1: Statement[] | undefined,
 ): BitSpecificCards {
@@ -170,21 +183,8 @@ function parseStatements(
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
-      for (const rawContent of side.variants) {
-        const content = context.parse(rawContent, {
-          startRule: 'cardContent',
-        }) as BitContent[];
-
-        if (context.DEBUG_CARD_PARSED) context.debugPrint('parsedCardContent (statements)', content);
-
-        const { statements: chainedStatements, ...tags } = context.bitContentProcessor(
-          BitContentLevel.CardStatements,
-          bitType,
-          content,
-          [TypeKey.TrueFalseChain, TypeKey.Property, TypeKey.ItemLead, TypeKey.Instruction, TypeKey.Hint],
-        );
-
-        if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (statements)', tags);
+      for (const content of side.variants) {
+        const { statements: chainedStatements, ...tags } = content.data;
 
         // Re-build the statement, adding any tags that were not in the True/False chain
         // These tags are actually not in the correct place, but we can still interpret them and fix the data.
@@ -219,9 +219,9 @@ function parseStatements(
 }
 
 function parseQuiz(
-  context: BitmarkPegParserContext,
+  _context: BitmarkPegParserContext,
   bitType: BitTypeType,
-  cardSet: CardSet,
+  cardSet: ProcessedCardSet,
   choicesV1: Choice[] | undefined,
   responsesV1: Response[] | undefined,
 ): BitSpecificCards {
@@ -232,22 +232,8 @@ function parseQuiz(
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
-      for (const rawContent of side.variants) {
-        const content = context.parse(rawContent, {
-          startRule: 'cardContent',
-        }) as BitContent[];
-
-        if (context.DEBUG_CARD_PARSED) context.debugPrint('parsedCardContent (quizzes)', content);
-
-        const tags = context.bitContentProcessor(BitContentLevel.CardQuiz, bitType, content, [
-          TypeKey.TrueFalseChain,
-          TypeKey.Property,
-          TypeKey.ItemLead,
-          TypeKey.Instruction,
-          TypeKey.Hint,
-        ]);
-
-        if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (quizzes)', tags);
+      for (const content of side.variants) {
+        const tags = content.data;
 
         if (insertResponses) {
           if (tags.trueFalse && tags.trueFalse.length > 0) {
@@ -295,28 +281,17 @@ function parseQuiz(
   };
 }
 
-function parseQuestions(context: BitmarkPegParserContext, bitType: BitTypeType, cardSet: CardSet): BitSpecificCards {
+function parseQuestions(
+  _context: BitmarkPegParserContext,
+  _bitType: BitTypeType,
+  cardSet: ProcessedCardSet,
+): BitSpecificCards {
   const questions: Question[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
-      for (const rawContent of side.variants) {
-        const content = context.parse(rawContent, {
-          startRule: 'cardContent',
-        }) as BitContent[];
-
-        if (context.DEBUG_CARD_PARSED) context.debugPrint('parsedCardContent (questions)', content);
-
-        const tags = context.bitContentProcessor(BitContentLevel.CardQuestion, bitType, content, [
-          TypeKey.CardText,
-          TypeKey.Property,
-          TypeKey.ItemLead,
-          TypeKey.Instruction,
-          TypeKey.Hint,
-          TypeKey.SampleSolution,
-        ]);
-
-        if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (questions)', tags);
+      for (const content of side.variants) {
+        const tags = content.data;
 
         const q = builder.question({
           question: tags.cardBody ?? '',
@@ -333,7 +308,11 @@ function parseQuestions(context: BitmarkPegParserContext, bitType: BitTypeType, 
   };
 }
 
-function parseMatchPairs(context: BitmarkPegParserContext, bitType: BitTypeType, cardSet: CardSet): BitSpecificCards {
+function parseMatchPairs(
+  _context: BitmarkPegParserContext,
+  _bitType: BitTypeType,
+  cardSet: ProcessedCardSet,
+): BitSpecificCards {
   let sideIdx = 0;
   let heading: Heading | undefined;
   const pairs: Pair[] = [];
@@ -355,29 +334,8 @@ function parseMatchPairs(context: BitmarkPegParserContext, bitType: BitTypeType,
     extraTags = {};
 
     for (const side of card.sides) {
-      for (const rawContent of side.variants) {
-        const content = context.parse(rawContent, {
-          startRule: 'cardContent',
-        }) as BitContent[];
-
-        if (context.DEBUG_CARD_PARSED) context.debugPrint('parsedCardContent (match heading / pairs)', content);
-
-        const { cardBody, title, resources, example, ...tags } = context.bitContentProcessor(
-          BitContentLevel.CardMatch,
-          bitType,
-          content,
-          [
-            TypeKey.CardText,
-            TypeKey.Title,
-            TypeKey.Property,
-            TypeKey.ItemLead,
-            TypeKey.Instruction,
-            TypeKey.Hint,
-            TypeKey.Resource,
-          ],
-        );
-
-        if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (match heading / pairs)', tags);
+      for (const content of side.variants) {
+        const { cardBody, title, resources, example, ...tags } = content.data;
 
         // Get the 'heading' which is the [#title] at level 1
         const heading = title && title[1];
@@ -413,9 +371,11 @@ function parseMatchPairs(context: BitmarkPegParserContext, bitType: BitTypeType,
         extraTags = {
           ...extraTags,
           ...tags,
-          example: example ? true : false,
           isCaseSensitive: true,
         };
+        // Allow example from any card side
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        if (example) (extraTags as any).example = example;
       }
       sideIdx++;
     }
@@ -444,7 +404,11 @@ function parseMatchPairs(context: BitmarkPegParserContext, bitType: BitTypeType,
   };
 }
 
-function parseMatchMatrix(context: BitmarkPegParserContext, bitType: BitTypeType, cardSet: CardSet): BitSpecificCards {
+function parseMatchMatrix(
+  _context: BitmarkPegParserContext,
+  _bitType: BitTypeType,
+  cardSet: ProcessedCardSet,
+): BitSpecificCards {
   let sideIdx = 0;
   let heading: Heading | undefined;
   let forKeys: string | undefined = undefined;
@@ -470,24 +434,8 @@ function parseMatchMatrix(context: BitmarkPegParserContext, bitType: BitTypeType
       matrixCellValues = [];
       matrixCellTags = {};
 
-      for (const rawContent of side.variants) {
-        const content = context.parse(rawContent, {
-          startRule: 'cardContent',
-        }) as BitContent[];
-
-        if (context.DEBUG_CARD_PARSED) context.debugPrint('parsedCardContent (match heading / matrix)', content);
-
-        const tags = context.bitContentProcessor(BitContentLevel.CardMatrix, bitType, content, [
-          TypeKey.CardText,
-          TypeKey.Title,
-          TypeKey.Property,
-          TypeKey.ItemLead,
-          TypeKey.Instruction,
-          TypeKey.Hint,
-          TypeKey.Resource,
-        ]);
-
-        if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (match heading / matrix)', tags);
+      for (const content of side.variants) {
+        const tags = content.data;
 
         const { title, cardBody, ...restTags } = tags;
 
@@ -560,35 +508,16 @@ function parseMatchMatrix(context: BitmarkPegParserContext, bitType: BitTypeType
 }
 
 function parseBotActionResponses(
-  context: BitmarkPegParserContext,
-  bitType: BitTypeType,
-  cardSet: CardSet,
+  _context: BitmarkPegParserContext,
+  _bitType: BitTypeType,
+  cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const botResponses: BotResponse[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
-      for (const rawContent of side.variants) {
-        const content = context.parse(rawContent, {
-          startRule: 'cardContent',
-        }) as BitContent[];
-
-        if (context.DEBUG_CARD_PARSED) context.debugPrint('parsedCardContent (botResponses)', content);
-
-        const {
-          instruction,
-          reaction,
-          cardBody: feedback,
-          ...tags
-        } = context.bitContentProcessor(BitContentLevel.CardBotResponse, bitType, content, [
-          TypeKey.CardText,
-          TypeKey.Property,
-          TypeKey.ItemLead,
-          TypeKey.Instruction,
-          TypeKey.Hint,
-        ]);
-
-        if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (botResponses)', tags);
+      for (const content of side.variants) {
+        const { instruction, reaction, cardBody: feedback, ...tags } = content.data;
 
         const botResponse = builder.botResponse({
           response: instruction ?? '',

@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- `ImageLikeResourceJson`
+- `BaseResourceJson`
 
   ↳ **`ImageResourceJson`**
 
@@ -36,11 +36,11 @@
 
 #### Inherited from
 
-ImageLikeResourceJson.license
+BaseResourceJson.license
 
 #### Defined in
 
-[model/json/ResourceJson.ts:121](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L121)
+[model/json/ResourceJson.ts:137](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L137)
 
 ___
 
@@ -50,11 +50,11 @@ ___
 
 #### Inherited from
 
-ImageLikeResourceJson.copyright
+BaseResourceJson.copyright
 
 #### Defined in
 
-[model/json/ResourceJson.ts:122](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L122)
+[model/json/ResourceJson.ts:138](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L138)
 
 ___
 
@@ -64,11 +64,11 @@ ___
 
 #### Inherited from
 
-ImageLikeResourceJson.provider
+BaseResourceJson.provider
 
 #### Defined in
 
-[model/json/ResourceJson.ts:123](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L123)
+[model/json/ResourceJson.ts:139](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L139)
 
 ___
 
@@ -78,11 +78,11 @@ ___
 
 #### Inherited from
 
-ImageLikeResourceJson.showInIndex
+BaseResourceJson.showInIndex
 
 #### Defined in
 
-[model/json/ResourceJson.ts:124](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L124)
+[model/json/ResourceJson.ts:140](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L140)
 
 ___
 
@@ -92,11 +92,11 @@ ___
 
 #### Inherited from
 
-ImageLikeResourceJson.caption
+BaseResourceJson.caption
 
 #### Defined in
 
-[model/json/ResourceJson.ts:125](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L125)
+[model/json/ResourceJson.ts:141](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L141)
 
 ___
 
@@ -104,13 +104,9 @@ ___
 
 • **format**: `string`
 
-#### Inherited from
-
-ImageLikeResourceJson.format
-
 #### Defined in
 
-[model/json/ResourceJson.ts:133](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L133)
+[model/json/ResourceJson.ts:145](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L145)
 
 ___
 
@@ -118,13 +114,9 @@ ___
 
 • **url**: `string`
 
-#### Inherited from
-
-ImageLikeResourceJson.url
-
 #### Defined in
 
-[model/json/ResourceJson.ts:134](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L134)
+[model/json/ResourceJson.ts:146](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L146)
 
 ___
 
@@ -132,13 +124,9 @@ ___
 
 • **src**: `string`
 
-#### Inherited from
-
-ImageLikeResourceJson.src
-
 #### Defined in
 
-[model/json/ResourceJson.ts:135](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L135)
+[model/json/ResourceJson.ts:147](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L147)
 
 ___
 
@@ -146,13 +134,9 @@ ___
 
 • **src1x**: `string`
 
-#### Inherited from
-
-ImageLikeResourceJson.src1x
-
 #### Defined in
 
-[model/json/ResourceJson.ts:136](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L136)
+[model/json/ResourceJson.ts:148](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L148)
 
 ___
 
@@ -160,13 +144,9 @@ ___
 
 • **src2x**: `string`
 
-#### Inherited from
-
-ImageLikeResourceJson.src2x
-
 #### Defined in
 
-[model/json/ResourceJson.ts:137](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L137)
+[model/json/ResourceJson.ts:149](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L149)
 
 ___
 
@@ -174,13 +154,9 @@ ___
 
 • **src3x**: `string`
 
-#### Inherited from
-
-ImageLikeResourceJson.src3x
-
 #### Defined in
 
-[model/json/ResourceJson.ts:138](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L138)
+[model/json/ResourceJson.ts:150](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L150)
 
 ___
 
@@ -188,13 +164,9 @@ ___
 
 • **src4x**: `string`
 
-#### Inherited from
-
-ImageLikeResourceJson.src4x
-
 #### Defined in
 
-[model/json/ResourceJson.ts:139](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L139)
+[model/json/ResourceJson.ts:151](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L151)
 
 ___
 
@@ -202,13 +174,9 @@ ___
 
 • **width**: ``null`` \| `number`
 
-#### Inherited from
-
-ImageLikeResourceJson.width
-
 #### Defined in
 
-[model/json/ResourceJson.ts:140](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L140)
+[model/json/ResourceJson.ts:152](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L152)
 
 ___
 
@@ -216,13 +184,9 @@ ___
 
 • **height**: ``null`` \| `number`
 
-#### Inherited from
-
-ImageLikeResourceJson.height
-
 #### Defined in
 
-[model/json/ResourceJson.ts:141](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L141)
+[model/json/ResourceJson.ts:153](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L153)
 
 ___
 
@@ -230,10 +194,6 @@ ___
 
 • **alt**: `string`
 
-#### Inherited from
-
-ImageLikeResourceJson.alt
-
 #### Defined in
 
-[model/json/ResourceJson.ts:142](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L142)
+[model/json/ResourceJson.ts:154](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L154)

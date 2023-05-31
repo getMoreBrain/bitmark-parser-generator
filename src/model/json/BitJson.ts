@@ -33,6 +33,9 @@ export interface BitJson {
   videoCallLink: string | string[];
   bot: string | string[];
   list: string | string[];
+  textReference: string;
+  isTracked: boolean; // only .learningPathExternalLink?
+  isInfoOnly: boolean; // only .learningPathExternalLink?
   labelTrue: string;
   labelFalse: string;
   quotedPerson: string;
@@ -54,9 +57,6 @@ export interface BitJson {
   instruction: string;
   isExample: boolean;
   example: string;
-
-  isTracked: boolean; // only .learningPathExternalLink?
-  isInfoOnly: boolean; // only .learningPathExternalLink?
 
   partner: PartnerJson;
 

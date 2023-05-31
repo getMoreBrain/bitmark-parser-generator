@@ -12,25 +12,31 @@
 
   ↳ [`AudioResourceWrapperJson`](AudioResourceWrapperJson.md)
 
+  ↳ [`AudioEmbedResourceWrapperJson`](AudioEmbedResourceWrapperJson.md)
+
   ↳ [`AudioLinkResourceWrapperJson`](AudioLinkResourceWrapperJson.md)
 
   ↳ [`VideoResourceWrapperJson`](VideoResourceWrapperJson.md)
+
+  ↳ [`VideoEmbedResourceWrapperJson`](VideoEmbedResourceWrapperJson.md)
 
   ↳ [`VideoLinkResourceWrapperJson`](VideoLinkResourceWrapperJson.md)
 
   ↳ [`StillImageFilmResourceWrapperJson`](StillImageFilmResourceWrapperJson.md)
 
+  ↳ [`StillImageFilmEmbedResourceWrapperJson`](StillImageFilmEmbedResourceWrapperJson.md)
+
   ↳ [`StillImageFilmLinkResourceWrapperJson`](StillImageFilmLinkResourceWrapperJson.md)
 
   ↳ [`ArticleResourceWrapperJson`](ArticleResourceWrapperJson.md)
 
-  ↳ [`ArticleLinkResourceWrapperJson`](ArticleLinkResourceWrapperJson.md)
-
   ↳ [`DocumentResourceWrapperJson`](DocumentResourceWrapperJson.md)
+
+  ↳ [`DocumentEmbedResourceWrapperJson`](DocumentEmbedResourceWrapperJson.md)
 
   ↳ [`DocumentLinkResourceWrapperJson`](DocumentLinkResourceWrapperJson.md)
 
-  ↳ [`AppResourceWrapperJson`](AppResourceWrapperJson.md)
+  ↳ [`DocumentDownloadResourceWrapperJson`](DocumentDownloadResourceWrapperJson.md)
 
   ↳ [`AppLinkResourceWrapperJson`](AppLinkResourceWrapperJson.md)
 
@@ -50,4 +56,4 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:35](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/json/ResourceJson.ts#L35)
+[model/json/ResourceJson.ts:41](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L41)

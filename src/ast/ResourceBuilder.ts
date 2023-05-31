@@ -112,6 +112,32 @@ class ResourceBuilder {
       ...rest,
     };
 
+    // Special case for video like tags - build thumbnails from the srcXx properties
+    switch (type) {
+      case ResourceType.video:
+      case ResourceType.videoEmbed:
+      case ResourceType.videoLink:
+      case ResourceType.stillImageFilmEmbed:
+      case ResourceType.stillImageFilmLink: {
+        const thumbnailKeys = ['src1x', 'src2x', 'src3x', 'src4x'];
+        const thumbnails: ImageResource[] = [];
+        for (const k of thumbnailKeys) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const dataAsAny = data as any;
+          const value = dataAsAny[k];
+          if (value) {
+            const image = this.resource({
+              type: ResourceType.image,
+              value,
+            });
+            if (image) thumbnails.push(image as ImageResource);
+          }
+        }
+        // Merge with existing thumbnails
+        finalData.thumbnails = [...(finalData.thumbnails ?? []), ...thumbnails];
+      }
+    }
+
     switch (type) {
       case ResourceType.image:
         node = this.imageResource(finalData);
@@ -312,12 +338,15 @@ class ResourceBuilder {
   audioResource(data: {
     format: string;
     value: string; // src
+    duration?: number; // string?
+    mute?: boolean;
+    autoplay?: boolean;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AudioResource {
-    const { value, license, copyright, showInIndex, caption } = data;
+    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioResource = {
@@ -325,6 +354,9 @@ class ResourceBuilder {
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
+      duration,
+      mute,
+      autoplay,
       license,
       copyright,
       showInIndex,
@@ -347,12 +379,15 @@ class ResourceBuilder {
   audioEmbedResource(data: {
     format: string;
     value: string; // src
+    duration?: number; // string?
+    mute?: boolean;
+    autoplay?: boolean;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AudioEmbedResource {
-    const { value, license, copyright, showInIndex, caption } = data;
+    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioEmbedResource = {
@@ -360,6 +395,9 @@ class ResourceBuilder {
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
+      duration,
+      mute,
+      autoplay,
       license,
       copyright,
       showInIndex,
@@ -382,12 +420,15 @@ class ResourceBuilder {
   audioLinkResource(data: {
     format: string;
     value: string;
+    duration?: number; // string?
+    mute?: boolean;
+    autoplay?: boolean;
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
     caption?: string;
   }): AudioLinkResource {
-    const { value, license, copyright, showInIndex, caption } = data;
+    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioLinkResource = {
@@ -395,6 +436,9 @@ class ResourceBuilder {
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
+      duration,
+      mute,
+      autoplay,
       license,
       copyright,
       showInIndex,

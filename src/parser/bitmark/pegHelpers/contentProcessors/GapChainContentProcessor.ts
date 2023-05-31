@@ -1,7 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Builder } from '../../../../ast/Builder';
 import { BodyPart, Gap } from '../../../../model/ast/Nodes';
 import { BitTypeType } from '../../../../model/enum/BitType';
+
+import { clozeTagContentProcessor } from './ClozeTagContentProcessor';
 
 import {
   BitContent,
@@ -9,8 +10,6 @@ import {
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
-  TypeKey,
-  TypeValue,
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
@@ -20,31 +19,32 @@ function gapChainContentProcessor(
   _bitLevel: BitContentLevelType,
   bitType: BitTypeType,
   content: BitContent,
-  _target: BitContentProcessorResult,
+  target: BitContentProcessorResult,
   bodyParts: BodyPart[],
+  inChain: boolean,
 ): void {
-  const { value } = content as TypeValue;
-
-  const gap = buildGap(context, bitType, value as BitContent[]);
-  if (gap) bodyParts.push(gap);
+  if (inChain) {
+    clozeTagContentProcessor(context, BitContentLevel.Chain, bitType, content, target);
+  } else {
+    const gap = buildGap(context, bitType, content);
+    if (gap) bodyParts.push(gap);
+  }
 }
 
-function buildGap(context: BitmarkPegParserContext, bitType: BitTypeType, content: BitContent[]): Gap | undefined {
-  if (context.DEBUG_GAP_CONTENT) context.debugPrint('gap content', content);
+function buildGap(context: BitmarkPegParserContext, bitType: BitTypeType, content: BitContent): Gap | undefined {
+  if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('gap content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.GapChain, bitType, content, [
-    TypeKey.Cloze,
-    TypeKey.Property,
-    TypeKey.ItemLead,
-    TypeKey.Instruction,
-    TypeKey.Hint,
-  ]);
+  const chainContent = [content, ...(content.chain ?? [])];
 
-  if (context.DEBUG_GAP_TAGS) context.debugPrint('gap TAGS', tags);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, chainContent);
+
+  if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', tags);
+
+  const { solutions, ...rest } = tags;
 
   const gap = builder.gap({
-    solutions: [],
-    ...tags,
+    solutions: solutions ?? [],
+    ...rest,
     isCaseSensitive: true,
   });
 

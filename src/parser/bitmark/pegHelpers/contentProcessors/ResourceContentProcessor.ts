@@ -1,16 +1,16 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ResourceBuilder } from '../../../../ast/ResourceBuilder';
 import { AudioResource, ImageResource, Resource } from '../../../../model/ast/Nodes';
-import { BitType, BitTypeType } from '../../../../model/enum/BitType';
+import { BitType, BitTypeMetadata, BitTypeType } from '../../../../model/enum/BitType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
 import { BitUtils } from '../../../../utils/BitUtils';
 
 import {
   BitContent,
+  BitContentLevel,
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
-  TypeKeyResource,
+  TypeKeyValue,
 } from '../BitmarkPegParserTypes';
 
 // const builder = new Builder();
@@ -32,6 +32,10 @@ function buildResource(
   let resource: Resource | undefined;
   let filteredResources: Resource[] | undefined;
   const excessResources: Resource[] = [];
+
+  // Get the meta data for the bit
+  const meta = BitType.getMetadata<BitTypeMetadata>(bitType);
+  const resourceAttachmentAllowed = meta?.resourceAttachmentAllowed;
 
   // Handle special case for stillImageFilm
   if (bitType === BitType.stillImageFilm) {
@@ -59,7 +63,8 @@ function buildResource(
   }
 
   // Get the valid resource types for the bit
-  const validResourceType = BitUtils.calculateValidResourceType(bitType, resourceType, undefined);
+  const rt = resourceAttachmentAllowed ? resourceType : undefined;
+  const validResourceType = BitUtils.calculateValidResourceType(bitType, rt, undefined);
 
   // Return the actual resource, and add all other resources to excess resources
   if (filteredResources) {
@@ -72,10 +77,23 @@ function buildResource(
     }
   }
 
-  if (resourceType && !resource) {
-    context.addError(
-      `Resource type '&${resourceType}' specified in the bit header, but such a resource is not present in the bit`,
-    );
+  if (!resourceAttachmentAllowed && resourceType) {
+    let warningMsg = `Resource type '&${resourceType}' is specified in the bit header, but no extra resource is allowed for this bit.`;
+
+    if (validResourceType) {
+      warningMsg += ` The resource type '&${validResourceType}' is automatically expected and should not be added.`;
+    }
+    context.addWarning(warningMsg);
+  }
+
+  if (!resource) {
+    if (resourceType) {
+      context.addWarning(
+        `Resource type '&${resourceType}' is specified in the bit header, but no such a resource is present in the bit`,
+      );
+    } else if (validResourceType) {
+      context.addWarning(`Resource type '&${validResourceType}' is required but is not present in the bit`);
+    }
   }
 
   if (excessResources.length > 0) {
@@ -83,24 +101,30 @@ function buildResource(
     context.parser.excessResources = excessResources;
 
     // Add an error to warn about the excess resources
-    const resourceTypeString = resourceType ? `&${resourceType}` : 'NOT SET';
-    context.addError(
-      `${excessResources.length} excess resource(s) present in the bit. The bit resource type is '${resourceTypeString}'`,
-    );
+    let warningMsg = `${excessResources.length} excess resource(s) present in the bit.`;
+    if (validResourceType === BitType.stillImageFilm) {
+      // Special case for stillImageFilm
+      warningMsg += ` The expected resource types are '&image' and '&audio'`;
+    } else {
+      const resourceTypeString = validResourceType ? `&${validResourceType}` : 'NONE';
+      warningMsg += ` The expected resource type is '${resourceTypeString}'`;
+    }
+
+    context.addWarning(warningMsg);
   }
 
   return resource;
 }
 
 function resourceContentProcessor(
-  _context: BitmarkPegParserContext,
+  context: BitmarkPegParserContext,
   _bitLevel: BitContentLevelType,
-  _bitType: BitTypeType,
+  bitType: BitTypeType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { type: ignoreType, key, ...resourceData } = content as TypeKeyResource;
+  const { type: _ignoreType, key, value, chain } = content as TypeKeyValue<string>;
 
   const resources = target.resources;
 
@@ -108,9 +132,13 @@ function resourceContentProcessor(
 
   const type = ResourceType.fromValue(key);
   if (type) {
+    // Parse the resource chain
+    const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, chain);
+
     const resource = resourceBuilder.resource({
       type,
-      ...resourceData,
+      value,
+      ...tags,
     });
     if (resource) resources.push(resource);
   }

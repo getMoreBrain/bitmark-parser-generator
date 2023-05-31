@@ -36,7 +36,7 @@ Generate bitmark markup from a bitmark AST as a file
 
 #### Defined in
 
-[generator/bitmark/BitmarkFileGenerator.ts:22](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/generator/bitmark/BitmarkFileGenerator.ts#L22)
+[generator/bitmark/BitmarkFileGenerator.ts:22](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkFileGenerator.ts#L22)
 
 ## Methods
 
@@ -62,4 +62,4 @@ Generator.generate
 
 #### Defined in
 
-[generator/bitmark/BitmarkFileGenerator.ts:32](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/generator/bitmark/BitmarkFileGenerator.ts#L32)
+[generator/bitmark/BitmarkFileGenerator.ts:32](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkFileGenerator.ts#L32)

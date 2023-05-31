@@ -41,6 +41,9 @@ const PropertyKey = superenum({
   duration: 'duration', // single
   reference: 'reference',
   list: 'list',
+  textReference: 'textReference', // single
+  isTracked: 'isTracked', // single
+  isInfoOnly: 'isInfoOnly', // single
   labelTrue: 'labelTrue', // single
   labelFalse: 'labelFalse', // single
   quotedPerson: 'quotedPerson', // single
@@ -51,169 +54,34 @@ const PropertyKey = superenum({
   progress: 'progress', // single, chapter only
   level: 'level', // single, chapter only
 
+  book: 'book', // single, only in 'learning-path-book'
+  partner: 'partner', // single, only in 'conversation-xxx'
+
   // Only in cards
   shortAnswer: 'shortAnswer', // single
   longAnswer: 'longAnswer', // single
   caseSensitive: 'caseSensitive', // single
   reaction: 'reaction', // single - botResponse
-});
 
-// Set metadata on the property keys to describe specific behaviour
+  // Only in resources
+  width: 'width', // single
+  height: 'height', // single
+  license: 'license', // single
+  copyright: 'copyright', // single
+  caption: 'caption', // single
+  showInIndex: 'showInIndex', // single
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.id, {
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.externalId, {
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.padletId, {
-  isTrimmedString: true,
-  isSingle: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.releaseVersion, {
-  isTrimmedString: true,
-  isSingle: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.ageRange, {
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.language, {
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.computerLanguage, {
-  isSingle: true,
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.coverImage, {
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.publisher, {
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.publications, {
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.author, {
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.subject, {
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.date, {
-  isSingle: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.location, {
-  isSingle: true,
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.theme, {
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.kind, {
-  isSingle: true,
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.action, {
-  isSingle: true,
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.thumbImage, {
-  isSingle: true,
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.focusX, {
-  isSingle: true,
-  isNumber: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.focusY, {
-  isSingle: true,
-  isNumber: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.deeplink, {
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.externalLink, {
-  isSingle: true,
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.externalLinkText, {
-  isSingle: true,
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.videoCallLink, {
-  isSingle: true,
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.bot, {});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.duration, {
-  isSingle: true,
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.reference, {
-  isSingle: false,
-  isTrimmedString: true,
-  astKey: 'referenceProperty',
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.list, {
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.labelTrue, {
-  isSingle: true,
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.labelFalse, {
-  isSingle: true,
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.quotedPerson, {
-  isSingle: true,
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.partialAnswer, {
-  isSingle: true,
-  isTrimmedString: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.toc, {
-  isSingle: true,
-  isBoolean: true, // ANTLR parser toc progress as a string (but it usually has value "false" or "true"!)
-  ignoreTrue: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.progress, {
-  isSingle: true,
-  isBoolean: true, // ANTLR parser treats progress as a string (but it usually has value "false" or "true"!)
-  ignoreTrue: true,
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.level, {
-  isSingle: true,
-  astKey: 'levelProperty',
-});
-
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.example, {
-  isSingle: true,
-  ignoreFalse: true,
-});
-
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.shortAnswer, {
-  isSingle: true,
-  isBoolean: true,
-  astKey: 'isShortAnswer',
-  jsonKey: 'isShortAnswer',
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.longAnswer, {
-  isSingle: true,
-  isInvertedBoolean: true,
-  astKey: 'isShortAnswer',
-  jsonKey: 'isShortAnswer',
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.caseSensitive, {
-  isSingle: true,
-  isBoolean: true,
-  astKey: 'isCaseSensitive',
-  jsonKey: 'isCaseSensitive',
-});
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.reaction, {
-  isSingle: true,
-  isTrimmedString: true,
+  alt: 'alt', // single
+  src1x: 'src1x', // single
+  src2x: 'src2x', // single
+  src3x: 'src3x', // single
+  src4x: 'src4x', // single
+  mute: 'mute', // single
+  autoplay: 'autoplay', // single
+  allowSubtitles: 'allowSubtitles', // single
+  showSubtitles: 'showSubtitles', // single
+  siteName: 'siteName', // single
+  posterImage: 'posterImage', // single
 });
 
 export type PropertyKeyType = EnumType<typeof PropertyKey>;

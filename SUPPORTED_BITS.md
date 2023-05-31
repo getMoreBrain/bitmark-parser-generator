@@ -1,4 +1,4 @@
-| BIT | USED GMB | SUPPORTED | TESTED | NOTES |
+| BIT | USED? | PARSER | GENERATOR | NOTES |
 | ------ | -- | -- | -- | -- |
 | _error | ✅ | ✅ | ✅ | Used for error handling to indicate a bit type that is not supported or a bit parse error |
 | anchor | ➖ | ➖ | ➖ | LEGACY? |
@@ -6,12 +6,12 @@
 | annotation-favorite | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
 | annotation-handwritten | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
 | annotation-note | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
-| app-link | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
+| app-link | ✅ | ✅ | ✅ |  |
 | article | ✅ | ✅ | ✅ |  |
 | article-attachment | ➖ | ➖ | ➖ | LEGACY? |
 | assignment | ✅ | ✅ | ✅ |  |
 | audio | ✅ | ✅ | ✅ |  |
-| audio-embed | ✅ | ❌ | ❌ | TODO: Not sure which resource type is correct, &audio, or &audio-embed. Awaiting answer |
+| audio-embed | ✅ | ✅ | ✅ |  |
 | audio-link | ✅ | ✅ | ✅ |  |
 | bit-alias | ➖ | ✅ | ✅ |  |
 | bit-book-ending | ✅ | ✅ | ✅ |  |
@@ -86,7 +86,7 @@
 | document-link | ✅ | ✅ | ✅ |  |
 | document-upload | ➖ | ➖ | ➖ | LEGACY? |
 | editorial | ✅ | ✅ | ✅ |  |
-| essay | ✅ | ❌ | ❌ | TO TEST |
+| essay | ✅ | ✅ | ✅ |  |
 | example | ✅ | ✅ | ✅ |  |
 | featured | ✅ | ✅ | ✅ |  |
 | flashcard | ➖ | ➖ | ➖ | LEGACY? |
@@ -111,20 +111,20 @@
 | internal-link | ✅ | ✅ | ✅ |  |
 | interview | ✅ | ✅ | ✅ |  |
 | interview-instruction-grouped | ✅ | ✅ | ✅ |  |
-| learning-path-book | ✅ | ❌ | ❌ | TO TEST |
+| learning-path-book | ✅ | ✅ | ✅ |  |
 | learning-path-bot-training | ➖ | ➖ | ➖ | LEGACY? |
-| learning-path-classroom-event | ✅ | ❌ | ❌ | TO TEST |
-| learning-path-classroom-training | ✅ | ❌ | ❌ | TO TEST |
-| learning-path-closing | ✅ | ❌ | ❌ | TO TEST |
+| learning-path-classroom-event | ✅ | ✅ | ✅ |  |
+| learning-path-classroom-training | ✅ | ✅ | ✅ |  |
+| learning-path-closing | ✅ | ✅ | ✅ |  |
 | learning-path-external-link | ✅ | ✅ | ✅ |  |
 | learning-path-feedback | ➖ | ➖ | ➖ | LEGACY? |
-| learning-path-learning-goal | ✅ | ❌ | ❌ | TO TEST |
-| learning-path-lti | ✅ | ❌ | ❌ | TO TEST |
+| learning-path-learning-goal | ✅ | ✅ | ✅ |  |
+| learning-path-lti | ✅ | ✅ | ✅ |  |
 | learning-path-sign | ➖ | ➖ | ➖ | LEGACY? |
-| learning-path-step | ✅ | ❌ | ❌ | TO TEST |
-| learning-path-video-call | ✅ | ❌ | ❌ | TO TEST |
-| mark | ✅ | ❌ | ❌ | TO TEST |
-| match | ✅ | ✅ | ✅ |  |
+| learning-path-step | ✅ | ✅ | ✅ |  |
+| learning-path-video-call | ✅ | ✅ | ✅ |  |
+| mark | ✅ | ❌ | ❌ | NOT WORKING IN ANTLR PARSER, not sure how to implement |
+| match | ✅ | ✅ | ❌ |  |
 | match-all | ✅ | ✅ | ✅ |  |
 | match-all-reverse | ✅ | ✅ | ✅ |  |
 | match-audio | ➖ | ➖ | ➖ | LEGACY? |
@@ -160,8 +160,8 @@
 | statement | ➖ | ✅ | ✅ |  |
 | sticky-note | ✅ | ✅ | ✅ |  |
 | still-image-film | ✅ | ✅ | ✅ |  |
-| still-image-film-embed | ✅ | ❌ | ❌ | TODO: Understand format |
-| still-image-film-link | ✅ | ❌ | ❌ | TODO: Understand format |
+| still-image-film-embed | ✅ | ✅ | ✅ |  |
+| still-image-film-link | ✅ | ✅ | ✅ |  |
 | summary | ✅ | ✅ | ✅ |  |
 | survey | ✅ | ❌ | ❌ | TODO: This bit behaves the same as self-assessment in the ANTLR parser, but it seems wrong there |
 | survey-1 | ➖ | ➖ | ➖ | LEGACY? |

@@ -6,13 +6,23 @@
 
 ### Properties
 
+- [values](MatrixCell.md#values)
 - [itemLead](MatrixCell.md#itemLead)
 - [hint](MatrixCell.md#hint)
 - [instruction](MatrixCell.md#instruction)
 - [example](MatrixCell.md#example)
-- [values](MatrixCell.md#values)
 
 ## Properties
+
+### values
+
+• `Optional` **values**: `string`[]
+
+#### Defined in
+
+[model/ast/Nodes.ts:195](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L195)
+
+___
 
 ### itemLead
 
@@ -20,7 +30,7 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:189](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L189)
+[model/ast/Nodes.ts:196](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L196)
 
 ___
 
@@ -30,7 +40,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:190](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L190)
+[model/ast/Nodes.ts:197](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L197)
 
 ___
 
@@ -40,7 +50,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:191](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L191)
+[model/ast/Nodes.ts:198](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L198)
 
 ___
 
@@ -50,14 +60,4 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:192](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L192)
-
-___
-
-### values
-
-• `Optional` **values**: `string`[]
-
-#### Defined in
-
-[model/ast/Nodes.ts:193](https://github.com/getMoreBrain/bitmark-parser-generator/blob/b82d7bf/src/model/ast/Nodes.ts#L193)
+[model/ast/Nodes.ts:199](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L199)

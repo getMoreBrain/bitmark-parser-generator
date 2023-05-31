@@ -26,8 +26,8 @@ import {
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
-  // debugGenerationInline: true,
-  cardSetVersion: 2,
+  debugGenerationInline: false,
+  cardSetVersion: 1,
 };
 
 /**
@@ -61,6 +61,9 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   private options: BitmarkOptions;
   private writer: Writer;
   private printed = false;
+
+  // TODO - should be in a context that gets passed around
+  private skipNLBetweenBitsValue = false;
 
   /**
    * Generate bitmark markup from a bitmark AST
@@ -247,6 +250,10 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
     // Check if a no newline key is to the left in this 'between' callback
     const noNl = ((): boolean => {
+      if (this.skipNLBetweenBitsValue) {
+        this.skipNLBetweenBitsValue = false;
+        return true;
+      }
       for (const keyType of noNlKeys) {
         if (left.key === keyType /*|| right.key === keyType*/) return true;
       }
@@ -579,7 +586,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     _route: NodeInfo[],
   ): void {
     this.writeNL();
-    this.writeCardSetEnd();
+    this.writeCardSetSideDivider();
     this.writeNL();
   }
 
@@ -651,7 +658,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
   // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> keyAudio
 
-  protected enter_keyAudio(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+  protected enter_keyAudio(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const resource = node.value as Resource;
 
     // This is a resource, so handle it with the common code
@@ -660,7 +667,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
 
   // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> keyImage
 
-  protected enter_keyImage(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+  protected enter_keyImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const resource = node.value as Resource;
 
     // This is a resource, so handle it with the common code
@@ -768,9 +775,71 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     this.writeNL();
   }
 
+  // bitmark -> bits -> bitsValue -> botResponses
+
+  protected enter_botResponses(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeCardSetStart();
+    this.writeNL();
+  }
+
+  protected between_botResponses(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeCardSetCardDivider();
+    this.writeNL();
+  }
+
+  protected exit_botResponses(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeCardSetEnd();
+    this.writeNL();
+  }
+
+  // bitmark -> bits -> bitsValue -> botResponses -> botResponsesValue
+
+  protected between_botResponsesValue(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeNL();
+  }
+
+  protected exit_botResponsesValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeNL();
+  }
+
+  // bitmark -> bits -> bitsValue -> botResponses -> botResponsesValue -> response
+
+  protected leaf_response(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeOPB();
+    this.writeString(node.value);
+    this.writeCL();
+  }
+
+  // bitmark -> bits -> bitsValue -> botResponses -> botResponsesValue -> reaction
+
+  protected leaf_reaction(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('reaction', node.value, true);
+  }
+
+  // bitmark -> bits -> bitsValue -> botResponses -> botResponsesValue -> feedback
+
+  protected leaf_feedback(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const feeback = node.value as string;
+    if (feeback) {
+      this.write(feeback);
+    }
+  }
+
   // bitmark -> bits -> bitsValue -> resource
 
-  protected enter_resource(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+  protected enter_resource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const resource = node.value as Resource;
 
     // This is a resource, so handle it with the common code
@@ -786,14 +855,24 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> resource -> ...
-  // bitmark -> bits -> bitsValue -> resource -> posterImage -> ...
-  // bitmark -> bits -> bitsValue -> resource -> thumbnails -> thumbnailsValue -> ...
+  // bitmark -> bits -> bitsValue -> resource -> thumbnails
   // [src1x,src2x,src3x,src4x,width,height,alt,caption]
 
-  // protected enter_posterImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-  //   this.writeProperty('posterImage', node.value);
-  // }
+  protected enter_thumbnails(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const thumbnails = node.value as ImageResource[];
+
+    if (Array.isArray(thumbnails)) {
+      const thumbnailKeys = ['src1x', 'src2x', 'src3x', 'src4x'];
+
+      for (let i = 0; i < thumbnails.length; i++) {
+        // Can only handle 4 thumbnails
+        if (i === thumbnailKeys.length) break;
+        const thumbnail = thumbnails[i];
+        const key = thumbnailKeys[i];
+        this.writeProperty(key, thumbnail.value, true);
+      }
+    }
+  }
 
   //
   // Terminal nodes (leaves)
@@ -1156,6 +1235,8 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
       if (astKey === PropertyKey.example) continue;
       if (astKey === PropertyKey.labelTrue) continue;
       if (astKey === PropertyKey.labelFalse) continue;
+      if (astKey === PropertyKey.posterImage) continue;
+      if (astKey === PropertyKey.partner) continue;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[funcName] = (node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]) => {
@@ -1383,6 +1464,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     ignoreTrue?: boolean,
   ): void {
     let valuesArray: unknown[];
+    let wroteSomething = false;
 
     if (values !== undefined) {
       if (!Array.isArray(values)) {
@@ -1403,9 +1485,14 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
             this.writeColon();
             this.writeString(`${val}`);
             this.writeCL();
+            wroteSomething = true;
           }
         }
       }
+    }
+
+    if (!wroteSomething) {
+      this.skipNLBetweenBitsValue = true;
     }
   }
 

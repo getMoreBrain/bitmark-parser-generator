@@ -4,6 +4,7 @@ const ResourceTypeRaw = {
   unknown: 'unknown',
 
   image: 'image',
+  imageEmbed: 'imageEmbed',
   imageLink: 'image-link',
   audio: 'audio',
   audioEmbed: 'audio-embed',
@@ -15,6 +16,8 @@ const ResourceTypeRaw = {
   stillImageFilmEmbed: 'still-image-film-embed',
   stillImageFilmLink: 'still-image-film-link',
   article: 'article',
+  articleEmbed: 'articleEmbed',
+  articleLink: 'articleLink',
   document: 'document',
   documentEmbed: 'document-embed',
   documentLink: 'document-link',
