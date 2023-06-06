@@ -2,16 +2,9 @@ import { Builder } from '../../../../ast/Builder';
 import { BitType, BitTypeMetadata, BitTypeType } from '../../../../model/enum/BitType';
 import { CardSetType } from '../../../../model/enum/CardSetType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
-import { BitContentLevel, BitSpecificCards, BitmarkPegParserContext } from '../BitmarkPegParserTypes';
+import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
-import {
-  CardSet,
-  ProcessedCard,
-  ProcessedCardSet,
-  ProcessedCardSide,
-  ProcessedCardVariant,
-} from '../../../../model/ast/CardSet';
 import {
   AudioResource,
   BotResponse,
@@ -26,24 +19,35 @@ import {
   Response,
   Statement,
 } from '../../../../model/ast/Nodes';
+import {
+  BitContentLevel,
+  BitSpecificCards,
+  BitmarkPegParserContext,
+  ParsedCardSet,
+  ProcessedCard,
+  ProcessedCardSet,
+  ProcessedCardSide,
+  ProcessedCardVariant,
+} from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
 
 function buildCards(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
-  cardSet: CardSet | undefined,
+  textFormat: TextFormatType,
+  parsedCardSet: ParsedCardSet | undefined,
   statementV1: Statement | undefined,
   statementsV1: Statement[] | undefined,
   choicesV1: Choice[] | undefined,
   responsesV1: Response[] | undefined,
 ): BitSpecificCards {
-  if (context.DEBUG_CARD_SET) context.debugPrint('card set', cardSet);
+  if (context.DEBUG_CARD_SET) context.debugPrint('card set', parsedCardSet);
 
   let result: BitSpecificCards = {};
 
   // Process the card contents
-  const processedCardSet = processCardSet(context, bitType, cardSet);
+  const processedCardSet = processCardSet(context, bitType, textFormat, parsedCardSet);
 
   // Parse the card contents according to the card set type
 
@@ -95,20 +99,21 @@ function buildCards(
 function processCardSet(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
-  cardSet: CardSet | undefined,
+  textFormat: TextFormatType,
+  parsedCardSet: ParsedCardSet | undefined,
 ): ProcessedCardSet {
   const processedCardSet: ProcessedCardSet = {
     cards: [],
   };
 
   // Early return if no card set
-  if (!cardSet) return processedCardSet;
+  if (!parsedCardSet) return processedCardSet;
 
   // Process the card contents
   let cardNo = 0;
   let sideNo = 0;
   let variantNo = 0;
-  for (const card of cardSet.cards) {
+  for (const card of parsedCardSet.cards) {
     const processedCard: ProcessedCard = {
       no: cardNo++,
       sides: [],
@@ -125,7 +130,7 @@ function processCardSet(
           no: variantNo++,
         } as ProcessedCardVariant;
         processedSide.variants.push(processedVariant);
-        const tags = context.bitContentProcessor(BitContentLevel.Card, bitType, content);
+        const tags = context.bitContentProcessor(BitContentLevel.Card, bitType, textFormat, content);
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (elements)', tags);
 

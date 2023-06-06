@@ -9,7 +9,6 @@
 
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-import { CardSet } from '../../../model/ast/CardSet';
 import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTypeType } from '../../../model/enum/ResourceType';
 import { TextFormatType } from '../../../model/enum/TextFormat';
@@ -66,8 +65,8 @@ export interface SubParserResult<T> {
 }
 
 export interface BitHeader {
-  bitType?: BitTypeType;
-  textFormat?: TextFormatType;
+  bitType: BitTypeType;
+  textFormat: TextFormatType;
   resourceType?: ResourceTypeType;
 }
 
@@ -84,7 +83,7 @@ export interface CardData {
 }
 
 export interface BitContentProcessorResult {
-  cardSet?: CardSet;
+  cardSet?: ParsedCardSet;
   cardBody?: string;
   body?: Body;
   footer?: FooterText;
@@ -223,6 +222,57 @@ const BitContentLevel = superenum({
 
 export type BitContentLevelType = EnumType<typeof BitContentLevel>;
 
+// Card Set
+
+export interface UnparsedCardSet {
+  cards: UnparsedCard[];
+}
+
+export interface UnparsedCard {
+  sides: UnparsedCardSide[];
+}
+
+export interface UnparsedCardSide {
+  variants: UnparsedCardContent[];
+}
+
+type UnparsedCardContent = string;
+
+export interface ParsedCardSet {
+  cards: ParsedCard[];
+}
+
+export interface ParsedCard {
+  sides: ParsedCardSide[];
+}
+
+export interface ParsedCardSide {
+  variants: ParsedCardContent[];
+}
+
+type ParsedCardContent = BitContent[];
+
+export interface ProcessedCardSet {
+  cards: ProcessedCard[];
+}
+
+export interface ProcessedCard {
+  no: number;
+  sides: ProcessedCardSide[];
+}
+
+export interface ProcessedCardSide {
+  no: number;
+  variants: ProcessedCardVariant[];
+}
+
+export interface ProcessedCardVariant {
+  no: number;
+  data: BitContentProcessorResult;
+}
+
+// Context
+
 export interface BitmarkPegParserContext {
   DEBUG_BIT_RAW: boolean;
   DEBUG_BIT_CONTENT_RAW: boolean;
@@ -242,6 +292,7 @@ export interface BitmarkPegParserContext {
   bitContentProcessor(
     bitLevel: BitContentLevelType,
     bitType: BitTypeType,
+    textFormat: TextFormatType,
     data: BitContent[] | undefined,
     /*validTypes: TypeKeyType[],*/
   ): BitContentProcessorResult;

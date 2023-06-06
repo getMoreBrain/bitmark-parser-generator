@@ -11,7 +11,7 @@ import { JsonGenerator, JsonOptions } from './JsonGenerator';
  *
  * TODO: NOT IMPLEMENTED!
  */
-class JsonFileGenerator implements Generator<void> {
+class JsonFileGenerator implements Generator<BitmarkAst, void> {
   private generator: JsonGenerator;
 
   /**

@@ -9,7 +9,7 @@ import { JsonGenerator, JsonOptions } from './JsonGenerator';
  * Generate bitmark JSON from a bitmark AST as a plain JS object
  *
  */
-class JsonObjectGenerator implements Generator<BitWrapperJson[]> {
+class JsonObjectGenerator implements Generator<BitmarkAst, BitWrapperJson[]> {
   private generator: JsonGenerator;
   private writer: StringWriter;
 

@@ -43,7 +43,9 @@ class BmgDevParser {
       });
 
       // AST ==> JSON
-      const generator = new JsonObjectGenerator();
+      const generator = new JsonObjectGenerator({
+        textAsPlainText: false,
+      });
       const json = await generator.generate(bitmarkAst);
       const jsonStr = JSON.stringify(json, undefined, 2);
 
@@ -55,6 +57,7 @@ class BmgDevParser {
       const res = await bitmarkParserGenerator.convert(filename, {
         jsonOptions: {
           prettify: true,
+          textAsPlainText: false,
         },
       });
       console.log(res);

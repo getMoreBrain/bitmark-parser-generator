@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import peggy, { SourceBuildOptions } from 'peggy';
+
 import { init } from '../../../src/init/init';
 
 type SourceOptions = SourceBuildOptions<'source'> & {
@@ -11,15 +12,15 @@ type SourceOptions = SourceBuildOptions<'source'> & {
 };
 
 // const customHeader = `
-// import { TypeKey } from '../../../parser/bitmark/pegHelpers/BitmarkPegParserTypes'
-// import { BitmarkParserProcessor } from '../../../parser/bitmark/pegHelpers/BitmarkPegParserProcessor';
-// import { BitmarkPegParserBuilder } from '../../../parser/bitmark/pegHelpers/BitmarkPegParserBuilder';
+// import { TypeKey } from '../../../parser/bitmark/peg/BitmarkPegParserTypes'
+// import { BitmarkParserProcessor } from '../../../parser/bitmark/peg/BitmarkPegParserProcessor';
+// import { BitmarkPegParserBuilder } from '../../../parser/bitmark/peg/BitmarkPegParserBuilder';
 // `;
 
 const dependencies = {
-  '{ TypeKey }': '../../../parser/bitmark/pegHelpers/BitmarkPegParserTypes',
-  '{ BitmarkPegParserHelper }': '../../../parser/bitmark/pegHelpers/BitmarkPegParserHelper',
-  '{ BitmarkPegParserProcessor }': '../../../parser/bitmark/pegHelpers/BitmarkPegParserProcessor',
+  '{ TypeKey }': '../../../parser/bitmark/peg/BitmarkPegParserTypes',
+  '{ BitmarkPegParserHelper }': '../../../parser/bitmark/peg/BitmarkPegParserHelper',
+  '{ BitmarkPegParserProcessor }': '../../../parser/bitmark/peg/BitmarkPegParserProcessor',
 };
 
 const inputTextPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'text-grammar.pegjs');

@@ -1,3 +1,5 @@
+import { Text } from '../ast/TextNodes';
+
 export type ResourceDataJson = ImageResourceJson &
   ImageLinkResourceJson &
   AudioResourceJson &
@@ -138,7 +140,7 @@ export interface BaseResourceJson {
   copyright: string;
   provider: string;
   showInIndex: boolean;
-  caption: string;
+  caption: Text;
 }
 
 export interface ImageResourceJson extends BaseResourceJson {

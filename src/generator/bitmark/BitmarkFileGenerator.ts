@@ -9,7 +9,7 @@ import { BitmarkGenerator, BitmarkOptions } from './BitmarkGenerator';
 /**
  * Generate bitmark markup from a bitmark AST as a file
  */
-class BitmarkFileGenerator implements Generator<void> {
+class BitmarkFileGenerator implements Generator<BitmarkAst, void> {
   private generator: BitmarkGenerator;
 
   /**

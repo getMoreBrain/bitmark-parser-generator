@@ -7,7 +7,7 @@ import { BitmarkGenerator, BitmarkOptions } from './BitmarkGenerator';
 /**
  * Generate bitmark markup from a bitmark AST as a string
  */
-class BitmarkStringGenerator implements Generator<string> {
+class BitmarkStringGenerator implements Generator<BitmarkAst, string> {
   private generator: BitmarkGenerator;
   private writer: StringWriter;
 

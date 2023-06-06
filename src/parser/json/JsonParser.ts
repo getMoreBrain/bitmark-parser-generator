@@ -1,9 +1,12 @@
+import { Ast } from '../../ast/Ast';
 import { Builder } from '../../ast/Builder';
 import { ResourceBuilder } from '../../ast/ResourceBuilder';
+import { TextStringGenerator } from '../../generator/text/TextStringGenerator';
+import { Text, TextAst } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceType, ResourceTypeType } from '../../model/enum/ResourceType';
-import { TextFormatType } from '../../model/enum/TextFormat';
+import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { ResourceJson, ResourceDataJson, StillImageFilmResourceJson } from '../../model/json/ResourceJson';
 import { StringUtils } from '../../utils/StringUtils';
@@ -14,7 +17,7 @@ import {
   BitmarkAst,
   Body,
   BodyPart,
-  BodyText,
+  BodyString,
   BotResponse,
   Choice,
   FooterText,
@@ -58,6 +61,7 @@ import {
   SelectJson,
   HighlightJson,
 } from '../../model/json/BodyBitJson';
+import { NodeType } from '../../model/ast/NodeType';
 
 interface ReferenceAndReferenceProperty {
   reference?: string;
@@ -73,6 +77,12 @@ const resourceBuilder = new ResourceBuilder();
  * A parser for parsing bitmark JSON to bitmark AST
  */
 class JsonParser {
+  private textGenerator: TextStringGenerator;
+
+  constructor() {
+    this.textGenerator = new TextStringGenerator();
+  }
+
   /**
    * Convert JSON to AST.
    *
@@ -259,11 +269,14 @@ class JsonParser {
     // Bit type
     const bitType = BitType.fromValue(type) ?? BitType._error;
 
+    // Format
+    const textFormat = TextFormat.fromValue(format) ?? TextFormat.bitmarkMinusMinus;
+
     // resource
     const resourceNode = this.resourceBitToAst(resource);
 
     // body & placeholders
-    const bodyNode = this.bodyToAst(body, placeholders);
+    const bodyNode = this.bodyToAst(body, placeholders, textFormat);
 
     const partnerNode = this.partnerBitToAst(partner);
 
@@ -295,7 +308,7 @@ class JsonParser {
     const botResponseNodes = this.botResponseBitsToAst(bitType, responses as BotResponseJson[]);
 
     // footer
-    const footerNode = this.footerToAst(footer);
+    const footerNode = this.footerToAst(footer, textFormat);
 
     // Convert reference to referenceProperty
     const { reference, referenceProperty } = this.referenceToAst(referenceIn);
@@ -798,7 +811,7 @@ class JsonParser {
     return node;
   }
 
-  private bodyToAst(body: string, placeholders: BodyBitsJson): Body | undefined {
+  private bodyToAst(body: Text, placeholders: BodyBitsJson, format: TextFormatType): Body | undefined {
     let node: Body | undefined;
 
     const placeholderNodes: {
@@ -808,7 +821,7 @@ class JsonParser {
     // Placeholders
     if (placeholders) {
       for (const [key, val] of Object.entries(placeholders)) {
-        const bit = this.bodyBitToAst(val);
+        const bit = this.bodyBitToAst(val, format);
         placeholderNodes[key] = bit;
       }
     }
@@ -817,6 +830,15 @@ class JsonParser {
     if (body) {
       // TODO - this split will need escaping, but actually we shouldn't need it anyway once bitmark JSON is actually
       // all JSON
+      // TODO - will need to convert text JSON back to text and then split in order to be able to build the
+      // body correctly in AST
+
+      if (Array.isArray(body)) {
+        // body is JSON, so convert to text
+        const ast = new Ast();
+        ast.printTree(body, NodeType.body);
+        this.textGenerator.generate(body);
+      }
 
       const bodyPartNodes: BodyPart[] = [];
       const bodyParts: string[] = StringUtils.splitPlaceholders(body, Object.keys(placeholderNodes));
@@ -829,23 +851,23 @@ class JsonParser {
           bodyPartNodes.push(placeholderNodes[bodyPart]);
         } else {
           // Treat as text
-          const bodyText = this.bodyTextToAst(bodyPart);
+          const bodyText = this.bodyTextToAst(bodyPart, format);
           bodyPartNodes.push(bodyText);
         }
       }
 
-      node = builder.body({ bodyParts: bodyPartNodes });
+      node = builder.body({ bodyParts: bodyPartNodes }, format);
     }
 
     return node;
   }
 
-  private bodyTextToAst(bodyText: string): BodyText {
+  private bodyTextToAst(bodyText: string, format: TextFormatType): BodyString {
     // TODO => Will be more complicated one the body text is JSON
-    return builder.bodyText({ text: bodyText });
+    return builder.bodyText({ text: bodyText }, format);
   }
 
-  private bodyBitToAst(bit: BodyBitJson): BodyPart {
+  private bodyBitToAst(bit: BodyBitJson, format: TextFormatType): BodyPart {
     switch (bit.type) {
       case BodyBitType.gap: {
         const gap = this.gapBitToAst(bit);
@@ -860,13 +882,13 @@ class JsonParser {
         return hightlight;
       }
     }
-    return this.bodyTextToAst('');
+    return this.bodyTextToAst('', format);
   }
 
-  private footerToAst(footerText: string): FooterText | undefined {
+  private footerToAst(footerText: Text, format: TextFormatType): FooterText | undefined {
     // TODO => Will be more complicated one the body text is JSON
     if (StringUtils.isString(footerText)) {
-      return builder.footerText({ text: footerText });
+      return builder.footerText({ text: footerText }, format);
     }
     return undefined;
   }

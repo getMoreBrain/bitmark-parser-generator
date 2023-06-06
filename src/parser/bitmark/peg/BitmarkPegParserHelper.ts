@@ -16,10 +16,9 @@
  *
  */
 
-import { Card, CardSet, CardSide, UnparsedCardSet } from '../../../model/ast/CardSet';
 import { ParserError } from '../../../model/parser/ParserError';
 
-import { ParseFunction } from './BitmarkPegParserTypes';
+import { ParseFunction, ParsedCard, ParsedCardSet, ParsedCardSide, UnparsedCardSet } from './BitmarkPegParserTypes';
 
 import {
   BitContent,
@@ -191,7 +190,7 @@ class BitmarkPegParserHelper {
     const unparsedCardSet: UnparsedCardSet = {
       cards: [],
     };
-    const cardSet: CardSet = {
+    const cardSet: ParsedCardSet = {
       cards: [],
     };
 
@@ -233,12 +232,12 @@ class BitmarkPegParserHelper {
       for (const unparsedCard of unparsedCardSet.cards) {
         const card = {
           sides: [],
-        } as Card;
+        } as ParsedCard;
         cardSet.cards.push(card);
         for (const unparsedSide of unparsedCard.sides) {
           const side = {
             variants: [],
-          } as CardSide;
+          } as ParsedCardSide;
           card.sides.push(side);
           for (const rawContent of unparsedSide.variants) {
             let content = this.parse(rawContent, {

@@ -1,32 +1,16 @@
 import { BitTypeType } from '../enum/BitType';
+import { BodyBitTypeType } from '../enum/BodyBitType';
 import { ResourceTypeType } from '../enum/ResourceType';
 import { TextFormatType } from '../enum/TextFormat';
 import { ParserError } from '../parser/ParserError';
 import { ParserInfo } from '../parser/ParserInfo';
 
+import { TextNode } from './TextNodes';
+
 // Node
 
-export type Node =
-  | BitmarkAst
-  | Bit
-  | Statement
-  | Choice
-  | Response
-  | Quiz
-  | Pair
-  | Resource
-  | Body
-  | BodyPart
-  | BodyText
-  | Gap
-  | Select
-  | SelectOption
-  | BodyText
-  | ItemLead
-  | Example
-  | string
-  | number
-  | boolean;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type Node = any;
 
 // Bitmark
 
@@ -78,8 +62,8 @@ export interface Bit {
   partialAnswer?: Property;
   extraProperties?: ExtraProperties;
   book?: string;
-  title?: string;
-  subtitle?: string;
+  title?: TextNode;
+  subtitle?: TextNode;
   levelProperty?: Property; // 'level' can be a property [@level:2] - string
   level?: number; // 'level' can either the subtitle level [##subtitle]
   toc?: Property;
@@ -88,9 +72,9 @@ export interface Bit {
   reference?: string;
   referenceEnd?: string;
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
-  example?: Property;
+  hint?: TextNode;
+  instruction?: TextNode;
+  example?: Example;
   partner?: Partner;
   resource?: Resource;
   body?: Body;
@@ -120,6 +104,12 @@ export interface ExtraProperties {
 
 export type Property = string[] | number[] | boolean[] | unknown[];
 
+// (chat) Partner
+export interface Partner {
+  name: string;
+  avatarImage?: ImageResource;
+}
+
 // Statement
 
 export interface Statement extends Decision {
@@ -144,15 +134,15 @@ export interface BotResponse {
   reaction: string;
   feedback: string;
   itemLead?: ItemLead;
-  hint?: string;
+  hint?: TextNode;
 }
 
 // Quiz
 
 export interface Quiz {
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: TextNode;
+  instruction?: TextNode;
   example?: Example;
   choices?: Choice[];
   responses?: Response[];
@@ -173,8 +163,8 @@ export interface Pair {
   keyImage?: ImageResource;
   values?: string[];
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: TextNode;
+  instruction?: TextNode;
   example?: Example;
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
@@ -183,8 +173,8 @@ export interface Pair {
 export interface Matrix {
   key: string;
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: TextNode;
+  instruction?: TextNode;
   example?: Example;
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
@@ -194,8 +184,8 @@ export interface Matrix {
 export interface MatrixCell {
   values?: string[];
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: TextNode;
+  instruction?: TextNode;
   example?: Example;
 }
 
@@ -206,8 +196,8 @@ export interface Question {
   partialAnswer?: string;
   sampleSolution?: string;
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: TextNode;
+  instruction?: TextNode;
   example?: Example;
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
@@ -215,33 +205,40 @@ export interface Question {
 
 // Body
 
-export type Body = BodyPart[];
-export type BodyPart = BodyText | Gap | Select | Highlight;
+export interface Body {
+  bodyParts: BodyPart[];
+  bodyText: TextNode;
+}
 
-export interface BodyText {
-  bodyText: string;
+export type BodyPart = BodyPartText | BodyBit;
+
+export interface BodyPartText {
+  bodyPartText: string;
 }
 
 // Footer
 
 export interface FooterText {
-  footerText: string;
+  footerText: TextNode;
 }
 
-// (chat) Partner
-export interface Partner {
-  name: string;
-  avatarImage?: ImageResource;
+// BodyBits
+
+export interface BodyBit {
+  type: BodyBitTypeType;
+  placeholderIndex: number;
+  data: unknown;
 }
 
 // Gap
 
-export interface Gap {
-  gap: {
+export interface Gap extends BodyBit {
+  type: 'gap';
+  data: {
     solutions: string[];
     itemLead?: ItemLead;
-    hint?: string;
-    instruction?: string;
+    hint?: TextNode;
+    instruction?: TextNode;
     example?: Example;
     isCaseSensitive?: boolean;
   };
@@ -249,14 +246,15 @@ export interface Gap {
 
 // Select
 
-export interface Select {
-  select: {
+export interface Select extends BodyBit {
+  type: 'select';
+  data: {
     prefix?: string;
     options: SelectOption[];
     postfix?: string;
     itemLead?: ItemLead;
-    hint?: string;
-    instruction?: string;
+    hint?: TextNode;
+    instruction?: TextNode;
     example?: Example;
     isCaseSensitive?: boolean;
   };
@@ -266,22 +264,23 @@ export interface SelectOption {
   text: string;
   isCorrect: boolean;
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: TextNode;
+  instruction?: TextNode;
   example?: Example;
   isCaseSensitive?: boolean;
 }
 
 // Highlight
 
-export interface Highlight {
-  highlight: {
+export interface Highlight extends BodyBit {
+  type: 'highlight';
+  data: {
     prefix?: string;
     texts: HighlightText[];
     postfix?: string;
     itemLead?: ItemLead;
-    hint?: string;
-    instruction?: string;
+    hint?: TextNode;
+    instruction?: TextNode;
     example?: Example;
     isCaseSensitive?: boolean;
   };
@@ -292,8 +291,8 @@ export interface HighlightText {
   isCorrect: boolean;
   isHighlighted: boolean;
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: TextNode;
+  instruction?: TextNode;
   example?: Example;
   isCaseSensitive?: boolean;
 }
@@ -301,18 +300,18 @@ export interface HighlightText {
 // Generic
 
 export interface ItemLead {
-  item?: string;
-  lead?: string;
+  item?: TextNode;
+  lead?: TextNode;
 }
 
-export type Example = string | boolean;
+export type Example = TextNode | boolean;
 
 export interface Decision {
   text: string;
   isCorrect: boolean;
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: TextNode;
+  instruction?: TextNode;
   example?: Example;
   isCaseSensitive?: boolean;
 }
@@ -329,7 +328,7 @@ export interface Resource {
   copyright?: string;
   provider?: string;
   showInIndex?: boolean;
-  caption?: string;
+  caption?: TextNode;
 }
 
 export interface ImageResource extends Resource {

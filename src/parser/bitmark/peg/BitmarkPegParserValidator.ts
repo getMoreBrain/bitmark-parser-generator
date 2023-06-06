@@ -7,7 +7,6 @@
  *
  */
 
-import { CardSet } from '../../../model/ast/CardSet';
 import { Body } from '../../../model/ast/Nodes';
 import { INFINITE_COUNT, TagData, TagDataMap } from '../../../model/config/TagData';
 import { ParserData } from '../../../model/parser/ParserData';
@@ -25,6 +24,7 @@ import {
   BitContentLevel,
   BitContentLevelType,
   BitmarkPegParserContext,
+  ParsedCardSet,
   TypeKey,
   TypeKeyType,
   TypeKeyValue,
@@ -685,7 +685,7 @@ class BitmarkPegParserValidator {
     }
 
     const { value } = content;
-    const cardSet = value as CardSet;
+    const cardSet = value as ParsedCardSet;
     let warning: WarningInfo | undefined;
 
     // For each of the variants in the card set, validate its contents

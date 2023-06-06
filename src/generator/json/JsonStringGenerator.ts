@@ -6,10 +6,8 @@ import { JsonGenerator, JsonOptions } from './JsonGenerator';
 
 /**
  * Generate bitmark JSON from a bitmark AST as a string
- *
- * TODO: NOT IMPLEMENTED!
  */
-class JsonStringGenerator implements Generator<string> {
+class JsonStringGenerator implements Generator<BitmarkAst, string> {
   private generator: JsonGenerator;
   private writer: StringWriter;
 

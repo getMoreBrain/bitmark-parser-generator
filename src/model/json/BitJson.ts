@@ -1,3 +1,5 @@
+import { Text, TextAst } from '../ast/TextNodes';
+
 import { BodyBitsJson } from './BodyBitJson';
 import { AudioResourceJson, ImageResourceJson, ResourceJson } from './ResourceJson';
 
@@ -42,8 +44,8 @@ export interface BitJson {
 
   book: string;
 
-  title: string;
-  subtitle: string;
+  title: Text;
+  subtitle: Text;
   level: number;
   toc: boolean;
   progress: boolean;
@@ -51,12 +53,12 @@ export interface BitJson {
   reference: string | string[]; // Has 2 meanings, depending on bit (anchor/reference, or @reference)
   referenceEnd: string;
 
-  item: string;
-  lead: string;
-  hint: string;
-  instruction: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
   isExample: boolean;
-  example: string;
+  example: Text;
 
   partner: PartnerJson;
 
@@ -65,7 +67,7 @@ export interface BitJson {
     [key: string]: unknown | unknown[];
   };
   resource: ResourceJson;
-  body: string;
+  body: Text;
 
   sampleSolution: string;
   partialAnswer: string;
@@ -80,7 +82,7 @@ export interface BitJson {
   matrix: MatrixJson[];
   choices: ChoiceJson[];
   questions: QuestionJson[];
-  footer: string;
+  footer: Text;
   placeholders: BodyBitsJson;
 }
 
@@ -92,46 +94,46 @@ export interface PartnerJson {
 export interface StatementJson {
   statement: string;
   isCorrect: boolean;
-  item: string;
-  lead: string;
-  hint: string;
-  instruction: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
   isExample: boolean;
-  example: string;
+  example: Text;
   isCaseSensitive: boolean;
 }
 
 export interface ChoiceJson {
   choice: string;
   isCorrect: boolean;
-  item: string;
-  lead: string;
-  hint: string;
-  instruction: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
   isExample: boolean;
-  example: string;
+  example: Text;
   isCaseSensitive: boolean;
 }
 
 export interface ResponseJson {
   response: string;
   isCorrect: boolean;
-  item: string;
-  lead: string;
-  hint: string;
-  instruction: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
   isExample: boolean;
-  example: string;
+  example: Text;
   isCaseSensitive: boolean;
 }
 
 export interface QuizJson {
-  item: string;
-  lead: string;
-  hint: string;
-  instruction: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
   isExample: boolean;
-  example: string;
+  example: Text;
   choices: ChoiceJson[];
   responses: ResponseJson[];
 }
@@ -146,12 +148,12 @@ export interface PairJson {
   keyAudio: AudioResourceJson;
   keyImage: ImageResourceJson;
   values: string[];
-  item: string;
-  lead: string;
-  hint: string;
-  instruction: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
   isExample: boolean;
-  example: string;
+  example: Text;
   isCaseSensitive: boolean;
   isLongAnswer: boolean;
 }
@@ -159,36 +161,36 @@ export interface PairJson {
 export interface MatrixJson {
   key: string;
   cells: MatrixCellJson[];
-  item: string;
-  lead: string;
-  hint: string;
-  instruction: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
   isExample: boolean;
-  example: string;
+  example: Text;
   isCaseSensitive: boolean;
   isLongAnswer: boolean;
 }
 
 export interface MatrixCellJson {
   values: string[];
-  item: string;
-  lead: string;
-  hint: string;
-  instruction: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
   isExample: boolean;
-  example: string;
+  example: Text;
 }
 
 export interface QuestionJson {
   question: string;
   partialAnswer: string;
   sampleSolution: string;
-  item: string;
-  lead: string;
-  hint: string;
-  instruction: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
   isExample: boolean;
-  example: string;
+  example: Text;
   isCaseSensitive: boolean;
   isShortAnswer: boolean;
 }
@@ -197,7 +199,7 @@ export interface BotResponseJson {
   response: string;
   reaction: string;
   feedback: string;
-  item: string;
-  lead: string;
-  hint: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
 }

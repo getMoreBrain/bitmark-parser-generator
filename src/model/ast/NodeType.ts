@@ -15,12 +15,20 @@ const NodeType = superenum({
   property: 'property',
   propertyValues: 'propertyValues',
   itemLead: 'itemLead',
+
   body: 'body',
-  bodyValue: 'bodyValue',
+  bodyParts: 'bodyParts',
+  bodyPartsValue: 'bodyPartsValue',
+  bodyPartText: 'bodyPartText',
+  data: 'data',
+  placeholderIndex: 'placeholderIndex',
+  bodyText: 'bodyText',
   footer: 'footer',
+  footerText: 'footerText',
   gap: 'gap',
   select: 'select',
   highlight: 'highlight',
+
   elements: 'elements',
   solutions: 'solutions',
   options: 'options',
@@ -146,8 +154,6 @@ const NodeType = superenum({
   reference: 'reference',
   referenceEnd: 'referenceEnd',
 
-  bodyText: 'bodyText',
-  footerText: 'footerText',
   elementsValue: 'elementsValue',
   solutionsValue: 'solutionsValue',
   prefix: 'prefix',
@@ -204,8 +210,20 @@ const NodeType = superenum({
   thumbnails: 'thumbnails',
   thumbnailsValue: 'thumbnailsValue',
 
+  // Text
+  textAst: 'textAst',
+  textAstValue: 'textAstValue',
+  content: 'contentValue',
+  contentValue: 'contentValue',
+  contentValueValue: 'contentValueValue',
+  attrs: 'attrs',
+  section: 'section',
+  parent: 'parent',
+
   // Parser Info / Errors
   parser: 'parser',
+  version: 'version',
+  bitmarkVersion: 'bitmarkVersion',
   warnings: 'warnings',
   warningsValue: 'warningsValue',
   errors: 'errors',

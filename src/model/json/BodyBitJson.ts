@@ -1,3 +1,5 @@
+import { Text } from '../ast/TextNodes';
+
 export interface BodyBitsJson {
   [key: string]: BodyBitJson;
 }
@@ -6,23 +8,23 @@ export type BodyBitJson = GapJson | SelectJson | HighlightJson;
 
 export interface BaseBodyBitJson {
   type: string; // body bit type
-  item: string;
-  lead: string;
-  hint: string;
-  instruction: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
   isExample: boolean;
-  example: string;
+  example: Text;
 }
 
 export interface GapJson extends BaseBodyBitJson {
   type: 'gap'; // body bit type
   solutions: string[];
-  item: string;
-  lead: string;
-  hint: string;
-  instruction: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
   isExample: boolean;
-  example: string;
+  example: Text;
   isCaseSensitive: boolean;
 }
 
@@ -36,12 +38,12 @@ export interface SelectJson extends BaseBodyBitJson {
 export interface SelectOptionJson {
   text: string;
   isCorrect: boolean;
-  item: string;
-  lead: string;
-  hint: string;
-  instruction: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
   isExample: boolean;
-  example: string;
+  example: Text;
   isCaseSensitive: boolean;
 }
 
@@ -56,11 +58,11 @@ export interface HighlightTextJson {
   text: string;
   isHighlighted: boolean;
   isCorrect: boolean;
-  item: string;
-  lead: string;
-  hint: string;
-  instruction: string;
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
   isExample: boolean;
-  example: string;
+  example: Text;
   isCaseSensitive: boolean;
 }
