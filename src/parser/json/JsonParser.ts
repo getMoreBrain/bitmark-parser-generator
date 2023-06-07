@@ -2,11 +2,12 @@ import { Ast } from '../../ast/Ast';
 import { Builder } from '../../ast/Builder';
 import { ResourceBuilder } from '../../ast/ResourceBuilder';
 import { TextStringGenerator } from '../../generator/text/TextStringGenerator';
-import { Text, TextAst } from '../../model/ast/TextNodes';
+import { NodeType } from '../../model/ast/NodeType';
+import { Text } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceType, ResourceTypeType } from '../../model/enum/ResourceType';
-import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
+import { TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { ResourceJson, ResourceDataJson, StillImageFilmResourceJson } from '../../model/json/ResourceJson';
 import { StringUtils } from '../../utils/StringUtils';
@@ -16,8 +17,9 @@ import {
   Bit,
   BitmarkAst,
   Body,
+  BodyBit,
   BodyPart,
-  BodyString,
+  BodyText,
   BotResponse,
   Choice,
   FooterText,
@@ -61,14 +63,22 @@ import {
   SelectJson,
   HighlightJson,
 } from '../../model/json/BodyBitJson';
-import { NodeType } from '../../model/ast/NodeType';
 
 interface ReferenceAndReferenceProperty {
   reference?: string;
   referenceProperty?: string | string[];
 }
 
-// const BODY_SPLIT_REGEX = new RegExp('{[0-9]+}', 'g');
+interface ItemLeadHintInstruction {
+  item?: string;
+  lead?: string;
+  hint?: string;
+  instruction?: string;
+}
+
+interface Example {
+  example: string | boolean;
+}
 
 const builder = new Builder();
 const resourceBuilder = new ResourceBuilder();
@@ -269,14 +279,11 @@ class JsonParser {
     // Bit type
     const bitType = BitType.fromValue(type) ?? BitType._error;
 
-    // Format
-    const textFormat = TextFormat.fromValue(format) ?? TextFormat.bitmarkMinusMinus;
-
     // resource
     const resourceNode = this.resourceBitToAst(resource);
 
     // body & placeholders
-    const bodyNode = this.bodyToAst(body, placeholders, textFormat);
+    const bodyNode = this.bodyToAst(body, placeholders);
 
     const partnerNode = this.partnerBitToAst(partner);
 
@@ -308,7 +315,7 @@ class JsonParser {
     const botResponseNodes = this.botResponseBitsToAst(bitType, responses as BotResponseJson[]);
 
     // footer
-    const footerNode = this.footerToAst(footer, textFormat);
+    const footerNode = this.footerToAst(footer);
 
     // Convert reference to referenceProperty
     const { reference, referenceProperty } = this.referenceToAst(referenceIn);
@@ -316,7 +323,7 @@ class JsonParser {
     // Build bit
     const bitNode = builder.bit({
       bitType: type as BitTypeType,
-      textFormat: format as TextFormatType | undefined,
+      textFormat: format as TextFormatType,
       id,
       externalId,
       padletId,
@@ -351,19 +358,16 @@ class JsonParser {
       labelFalse,
       quotedPerson,
       book,
-      title,
-      subtitle,
+      title: this.parseText(title),
+      subtitle: this.parseText(subtitle),
       level,
       toc,
       progress,
       anchor,
       reference,
       referenceEnd,
-      item,
-      lead,
-      hint,
-      instruction,
-      example: example || isExample,
+      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+      ...this.parseExample(example, isExample),
       partner: partnerNode,
       resource: resourceNode,
       body: bodyNode,
@@ -413,11 +417,8 @@ class JsonParser {
         const node = builder.statement({
           text: statement,
           isCorrect,
-          item,
-          lead,
-          hint,
-          instruction,
-          example: example || isExample,
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example, isExample),
           isCaseSensitive,
         });
         nodes.push(node);
@@ -437,11 +438,8 @@ class JsonParser {
         const node = builder.choice({
           text: choice,
           isCorrect,
-          item,
-          lead,
-          hint,
-          instruction,
-          example: example || isExample,
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example, isExample),
           isCaseSensitive,
         });
         nodes.push(node);
@@ -465,11 +463,8 @@ class JsonParser {
         const node = builder.response({
           text: response,
           isCorrect,
-          item,
-          lead,
-          hint,
-          instruction,
-          example: example || isExample,
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example, isExample),
           isCaseSensitive,
         });
         nodes.push(node);
@@ -489,11 +484,8 @@ class JsonParser {
         const node = builder.selectOption({
           text,
           isCorrect,
-          item,
-          lead,
-          hint,
-          instruction,
-          example: example || isExample,
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example, isExample),
           isCaseSensitive,
         });
         nodes.push(node);
@@ -513,11 +505,8 @@ class JsonParser {
           text,
           isCorrect,
           isHighlighted,
-          item,
-          lead,
-          hint,
-          instruction,
-          example: example || isExample,
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example, isExample),
           isCaseSensitive,
         });
         nodes.push(node);
@@ -535,11 +524,8 @@ class JsonParser {
         const choiceNodes = this.choiceBitsToAst(choices);
         const responseNodes = this.responseBitsToAst(bitType, responses);
         const node = builder.quiz({
-          item,
-          lead,
-          hint,
-          instruction,
-          example: example || isExample,
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example, isExample),
           choices: choiceNodes,
           responses: responseNodes,
         });
@@ -588,11 +574,8 @@ class JsonParser {
           keyAudio: audio,
           keyImage: image,
           values,
-          item,
-          lead,
-          hint,
-          instruction,
-          example: example || isExample,
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example, isExample),
           isCaseSensitive,
           isShortAnswer: !isLongAnswer,
         });
@@ -613,11 +596,8 @@ class JsonParser {
         const node = builder.matrix({
           key,
           cells: this.matrixCellsToAst(cells) ?? [],
-          item,
-          lead,
-          hint,
-          instruction,
-          example: example || isExample,
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example, isExample),
           isCaseSensitive,
           isShortAnswer: !isLongAnswer,
         });
@@ -638,11 +618,8 @@ class JsonParser {
 
         const node = builder.matrixCell({
           values,
-          item,
-          lead,
-          hint,
-          instruction,
-          example: example || isExample,
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example, isExample),
         });
         nodes.push(node);
       }
@@ -674,11 +651,8 @@ class JsonParser {
           question,
           partialAnswer,
           sampleSolution,
-          item,
-          lead,
-          hint,
-          instruction,
-          example: example || isExample,
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example, isExample),
           isCaseSensitive,
           isShortAnswer,
         });
@@ -704,9 +678,9 @@ class JsonParser {
           response,
           reaction,
           feedback,
-          item,
-          lead,
-          hint,
+          item: this.parseText(item),
+          lead: this.parseText(lead),
+          hint: this.parseText(hint),
         });
         nodes.push(node);
       }
@@ -782,7 +756,7 @@ class JsonParser {
         src2x: data.src2x,
         src3x: data.src3x,
         src4x: data.src4x,
-        caption: data.caption,
+        caption: this.parseText(data.caption),
 
         // ImageLikeResource / VideoLikeResource
         width: data.width ?? undefined,
@@ -811,18 +785,18 @@ class JsonParser {
     return node;
   }
 
-  private bodyToAst(body: Text, placeholders: BodyBitsJson, format: TextFormatType): Body | undefined {
+  private bodyToAst(body: Text, placeholders: BodyBitsJson): Body | undefined {
     let node: Body | undefined;
 
     const placeholderNodes: {
-      [keyof: string]: BodyPart;
+      [keyof: string]: BodyBit;
     } = {};
 
     // Placeholders
     if (placeholders) {
       for (const [key, val] of Object.entries(placeholders)) {
-        const bit = this.bodyBitToAst(val, format);
-        placeholderNodes[key] = bit;
+        const bit = this.bodyBitToAst(val);
+        placeholderNodes[key] = bit as BodyBit;
       }
     }
 
@@ -841,7 +815,7 @@ class JsonParser {
       }
 
       const bodyPartNodes: BodyPart[] = [];
-      const bodyParts: string[] = StringUtils.splitPlaceholders(body, Object.keys(placeholderNodes));
+      const bodyParts: string[] = StringUtils.splitPlaceholders(body as string, Object.keys(placeholderNodes));
 
       for (let i = 0, len = bodyParts.length; i < len; i++) {
         const bodyPart = bodyParts[i];
@@ -851,23 +825,22 @@ class JsonParser {
           bodyPartNodes.push(placeholderNodes[bodyPart]);
         } else {
           // Treat as text
-          const bodyText = this.bodyTextToAst(bodyPart, format);
+          const bodyText = this.bodyTextToAst(bodyPart);
           bodyPartNodes.push(bodyText);
         }
       }
 
-      node = builder.body({ bodyParts: bodyPartNodes }, format);
+      node = builder.body({ bodyParts: bodyPartNodes });
     }
 
     return node;
   }
 
-  private bodyTextToAst(bodyText: string, format: TextFormatType): BodyString {
-    // TODO => Will be more complicated one the body text is JSON
-    return builder.bodyText({ text: bodyText }, format);
+  private bodyTextToAst(bodyText: string): BodyText {
+    return builder.bodyText({ text: bodyText });
   }
 
-  private bodyBitToAst(bit: BodyBitJson, format: TextFormatType): BodyPart {
+  private bodyBitToAst(bit: BodyBitJson): BodyPart {
     switch (bit.type) {
       case BodyBitType.gap: {
         const gap = this.gapBitToAst(bit);
@@ -882,13 +855,14 @@ class JsonParser {
         return hightlight;
       }
     }
-    return this.bodyTextToAst('', format);
+    return this.bodyTextToAst('');
   }
 
-  private footerToAst(footerText: Text, format: TextFormatType): FooterText | undefined {
-    // TODO => Will be more complicated one the body text is JSON
-    if (StringUtils.isString(footerText)) {
-      return builder.footerText({ text: footerText }, format);
+  private footerToAst(footerText: Text): FooterText | undefined {
+    const text = this.parseText(footerText);
+
+    if (text) {
+      return builder.footerText({ text });
     }
     return undefined;
   }
@@ -913,11 +887,8 @@ class JsonParser {
     // Build bit
     const bitNode = builder.gap({
       solutions,
-      item,
-      lead,
-      hint,
-      instruction,
-      example: example || isExample,
+      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+      ...this.parseExample(example, isExample),
       isCaseSensitive,
     });
 
@@ -935,11 +906,8 @@ class JsonParser {
       options: selectOptionNodes,
       prefix,
       postfix,
-      item,
-      lead,
-      hint,
-      instruction,
-      example: example || isExample,
+      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+      ...this.parseExample(example, isExample),
       isCaseSensitive: true,
     });
 
@@ -957,15 +925,34 @@ class JsonParser {
       texts: highlightTextNodes,
       prefix,
       postfix,
-      item,
-      lead,
-      hint,
-      instruction,
-      example: example || isExample,
+      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+      ...this.parseExample(example, isExample),
       isCaseSensitive: true,
     });
 
     return node;
+  }
+
+  private parseItemLeadHintInstruction(item: Text, lead: Text, hint: Text, instruction: Text): ItemLeadHintInstruction {
+    return {
+      item: this.parseText(item),
+      lead: this.parseText(lead),
+      hint: this.parseText(hint),
+      instruction: this.parseText(instruction),
+    };
+  }
+
+  private parseExample(example: Text, isExample: boolean): Example {
+    const exampleStr = this.parseText(example);
+    if (exampleStr) {
+      return { example: exampleStr };
+    }
+    return { example: !!isExample };
+  }
+
+  private parseText(text: Text): string {
+    // TODO!!!
+    return text as unknown as string;
   }
 }
 

@@ -89,7 +89,7 @@ export interface BitContentProcessorResult {
   footer?: FooterText;
   partner?: Partner;
   trueFalse?: TrueFalseValue[];
-  example?: string;
+  example?: string | boolean;
   isCorrect?: boolean;
   solutions?: string[];
   statement?: Statement;
@@ -292,7 +292,6 @@ export interface BitmarkPegParserContext {
   bitContentProcessor(
     bitLevel: BitContentLevelType,
     bitType: BitTypeType,
-    textFormat: TextFormatType,
     data: BitContent[] | undefined,
     /*validTypes: TypeKeyType[],*/
   ): BitContentProcessorResult;

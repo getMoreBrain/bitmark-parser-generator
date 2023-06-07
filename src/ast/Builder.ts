@@ -1,9 +1,8 @@
-import { Text, TextNode } from '../model/ast/TextNodes';
 import { BitTypeType } from '../model/enum/BitType';
 import { BodyBitType } from '../model/enum/BodyBitType';
 import { PropertyKey } from '../model/enum/PropertyKey';
 import { ResourceTypeType } from '../model/enum/ResourceType';
-import { TextFormatType, TextFormat } from '../model/enum/TextFormat';
+import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
 import { ArrayUtils } from '../utils/ArrayUtils';
@@ -32,7 +31,6 @@ import {
   AudioResource,
   ImageResource,
   MatrixCell,
-  BodyPart,
   Gap,
   SelectOption,
   Select,
@@ -42,8 +40,8 @@ import {
   ExtraProperties,
   BotResponse,
   Partner,
-  BodyPartText,
-  BodyBit,
+  BodyText,
+  BodyPart,
 } from '../model/ast/Nodes';
 
 /**
@@ -114,8 +112,8 @@ class Builder extends BaseBuilder {
     partialAnswer?: string | string[];
     levelProperty?: string | string[];
     book?: string;
-    title?: Text;
-    subtitle?: Text;
+    title?: string;
+    subtitle?: string;
     level?: number | string;
     toc?: boolean;
     progress?: boolean;
@@ -124,11 +122,11 @@ class Builder extends BaseBuilder {
     // If a string is passed to reference, it will be considered a "[►Reference]" tag
     reference?: string;
     referenceEnd?: string;
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
     partner?: Partner;
     extraProperties?: {
       [key: string]: unknown | unknown[];
@@ -270,8 +268,8 @@ class Builder extends BaseBuilder {
       quotedPerson: this.toAstProperty(PropertyKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyKey.partialAnswer, partialAnswer),
       levelProperty: this.toAstProperty(PropertyKey.level, levelProperty),
-      title: this.toTextNode(title),
-      subtitle: this.toTextNode(subtitle),
+      title,
+      subtitle,
       level: NumberUtils.asNumber(level),
       toc: this.toAstProperty(PropertyKey.toc, toc),
       progress: this.toAstProperty(PropertyKey.progress, progress),
@@ -279,9 +277,9 @@ class Builder extends BaseBuilder {
       reference,
       referenceEnd,
       itemLead: this.itemLead(item, lead),
-      hint: this.toTextNode(hint),
-      instruction: this.toTextNode(instruction),
-      example: this.toExampeNode(example),
+      hint,
+      instruction,
+      example: this.toExample(example),
       partner,
       resource,
       body,
@@ -325,11 +323,11 @@ class Builder extends BaseBuilder {
   choice(data: {
     text: string;
     isCorrect: boolean;
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
     isCaseSensitive?: boolean;
   }): Choice {
     const { text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = data;
@@ -339,9 +337,9 @@ class Builder extends BaseBuilder {
       text,
       isCorrect,
       itemLead: this.itemLead(item, lead),
-      hint: this.toTextNode(hint),
-      instruction: this.toTextNode(instruction),
-      example: this.toExampeNode(example),
+      hint,
+      instruction,
+      example: this.toExample(example),
       isCaseSensitive,
     };
 
@@ -360,11 +358,11 @@ class Builder extends BaseBuilder {
   response(data: {
     text: string;
     isCorrect: boolean;
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
     isCaseSensitive?: boolean;
   }): Response {
     const { text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = data;
@@ -374,9 +372,9 @@ class Builder extends BaseBuilder {
       text,
       isCorrect,
       itemLead: this.itemLead(item, lead),
-      hint: this.toTextNode(hint),
-      instruction: this.toTextNode(instruction),
-      example: this.toExampeNode(example),
+      hint,
+      instruction,
+      example: this.toExample(example),
       isCaseSensitive,
     };
 
@@ -396,9 +394,9 @@ class Builder extends BaseBuilder {
     response: string;
     reaction: string;
     feedback: string;
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
+    item?: string;
+    lead?: string;
+    hint?: string;
   }): BotResponse {
     const { response, reaction, feedback, item, lead, hint } = data;
 
@@ -408,7 +406,7 @@ class Builder extends BaseBuilder {
       reaction,
       feedback,
       itemLead: this.itemLead(item, lead),
-      hint: this.toTextNode(hint),
+      hint,
     };
 
     // Remove Unset Optionals
@@ -424,11 +422,11 @@ class Builder extends BaseBuilder {
    * @returns
    */
   quiz(data: {
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
     choices?: Choice[];
     responses?: Response[];
   }): Quiz {
@@ -437,9 +435,9 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: Quiz = {
       itemLead: this.itemLead(item, lead),
-      hint: this.toTextNode(hint),
-      instruction: this.toTextNode(instruction),
-      example: this.toExampeNode(example),
+      hint,
+      instruction,
+      example: this.toExample(example),
       choices,
       responses,
     };
@@ -482,11 +480,11 @@ class Builder extends BaseBuilder {
     keyAudio?: AudioResource;
     keyImage?: ImageResource;
     values: string[];
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
     isCaseSensitive?: boolean;
     isShortAnswer?: boolean;
   }): Pair {
@@ -499,9 +497,9 @@ class Builder extends BaseBuilder {
       keyAudio,
       keyImage,
       itemLead: this.itemLead(item, lead),
-      hint: this.toTextNode(hint),
-      instruction: this.toTextNode(instruction),
-      example: this.toExampeNode(example),
+      hint,
+      instruction,
+      example: this.toExample(example),
       isCaseSensitive,
       isShortAnswer,
       values,
@@ -522,11 +520,11 @@ class Builder extends BaseBuilder {
   matrix(data: {
     key: string;
     cells: MatrixCell[];
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
     isCaseSensitive?: boolean;
     isShortAnswer?: boolean;
   }): Matrix {
@@ -536,9 +534,9 @@ class Builder extends BaseBuilder {
     const node: Matrix = {
       key,
       itemLead: this.itemLead(item, lead),
-      hint: this.toTextNode(hint),
-      instruction: this.toTextNode(instruction),
-      example: this.toExampeNode(example),
+      hint,
+      instruction,
+      example: this.toExample(example),
       isCaseSensitive,
       isShortAnswer,
       cells,
@@ -558,11 +556,11 @@ class Builder extends BaseBuilder {
    */
   matrixCell(data: {
     values: string[];
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
   }): MatrixCell {
     const { values, item, lead, hint, instruction, example } = data;
 
@@ -570,9 +568,9 @@ class Builder extends BaseBuilder {
     const node: MatrixCell = {
       values,
       itemLead: this.itemLead(item, lead),
-      hint: this.toTextNode(hint),
-      instruction: this.toTextNode(instruction),
-      example: this.toExampeNode(example),
+      hint,
+      instruction,
+      example: this.toExample(example),
     };
 
     // Remove Unset Optionals
@@ -591,11 +589,11 @@ class Builder extends BaseBuilder {
     question: string;
     partialAnswer?: string;
     sampleSolution?: string;
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
     isCaseSensitive?: boolean;
     isShortAnswer?: boolean;
   }): Question {
@@ -617,9 +615,9 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       question,
       partialAnswer,
-      hint: this.toTextNode(hint),
-      instruction: this.toTextNode(instruction),
-      example: this.toExampeNode(example),
+      hint,
+      instruction,
+      example: this.toExample(example),
       isCaseSensitive,
       isShortAnswer,
       sampleSolution,
@@ -637,32 +635,11 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  body(data: { bodyParts: BodyPart[] }, textFormat: TextFormatType): Body {
+  body(data: { bodyParts: BodyPart[] }): Body {
     const { bodyParts } = data;
-
-    // Convert the text bodyParts into bodyText with the correct placeholders, and set the placeholder index values
-    // in the bit bodyParts
-    let fullBodyText = '';
-    let placeholderIndex = 0;
-    for (let i = 0; i < bodyParts.length; i++) {
-      const bodyPart = bodyParts[i];
-
-      const isText = Object.prototype.hasOwnProperty.call(bodyPart, 'bodyPartText');
-
-      if (isText) {
-        const asText = bodyPart as BodyPartText;
-        fullBodyText += asText.bodyPartText;
-      } else {
-        const asBodyBit = bodyPart as BodyBit;
-        fullBodyText += `{${placeholderIndex}}`;
-        asBodyBit.placeholderIndex = placeholderIndex;
-        placeholderIndex++;
-      }
-    }
 
     const node: Body = {
       bodyParts,
-      bodyText: this.toTextNode(fullBodyText, textFormat) as TextNode,
     };
 
     return node;
@@ -674,12 +651,15 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  bodyPartText(data: { text: string }): BodyPartText {
+  bodyText(data: { text: string }): BodyText {
     const { text } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: BodyPartText = {
-      bodyPartText: text,
+    const node: BodyText = {
+      type: BodyBitType.text,
+      data: {
+        bodyText: text,
+      },
     };
     return node;
   }
@@ -690,12 +670,12 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  footerText(data: { text: Text }, textFormat: TextFormatType): FooterText {
+  footerText(data: { text: string }): FooterText {
     const { text } = data;
 
     // NOTE: Node order is important and is defined here
     const node: FooterText = {
-      footerText: this.toTextNode(text, textFormat) as TextNode,
+      footerText: text,
     };
     return node;
   }
@@ -708,11 +688,11 @@ class Builder extends BaseBuilder {
    */
   gap(data: {
     solutions: string[];
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
     isCaseSensitive?: boolean;
   }): Gap {
     const { solutions, item, lead, hint, instruction, example, isCaseSensitive } = data;
@@ -720,13 +700,12 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: Gap = {
       type: BodyBitType.gap,
-      placeholderIndex: -1,
       data: {
         solutions,
         itemLead: this.itemLead(item, lead),
-        hint: this.toTextNode(hint),
-        instruction: this.toTextNode(instruction),
-        example: this.toExampeNode(example),
+        hint,
+        instruction,
+        example: this.toExample(example),
         isCaseSensitive,
       },
     };
@@ -747,11 +726,11 @@ class Builder extends BaseBuilder {
     options: SelectOption[];
     prefix?: string;
     postfix?: string;
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
     isCaseSensitive?: boolean;
   }): Select {
     const { options, prefix, postfix, item, lead, hint, instruction, example, isCaseSensitive } = data;
@@ -759,15 +738,14 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: Select = {
       type: BodyBitType.select,
-      placeholderIndex: -1,
       data: {
         prefix,
         options,
         postfix,
         itemLead: this.itemLead(item, lead),
-        hint: this.toTextNode(hint),
-        instruction: this.toTextNode(instruction),
-        example: this.toExampeNode(example),
+        hint,
+        instruction,
+        example: this.toExample(example),
         isCaseSensitive,
       },
     };
@@ -787,11 +765,11 @@ class Builder extends BaseBuilder {
   selectOption(data: {
     text: string;
     isCorrect: boolean;
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
     isCaseSensitive?: boolean;
   }): SelectOption {
     const { text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = data;
@@ -801,9 +779,9 @@ class Builder extends BaseBuilder {
       text,
       isCorrect,
       itemLead: this.itemLead(item, lead),
-      hint: this.toTextNode(hint),
-      instruction: this.toTextNode(instruction),
-      example: this.toExampeNode(example),
+      hint,
+      instruction,
+      example: this.toExample(example),
       isCaseSensitive,
     };
 
@@ -823,11 +801,11 @@ class Builder extends BaseBuilder {
     texts: HighlightText[];
     prefix?: string;
     postfix?: string;
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
     isCaseSensitive?: boolean;
   }): Highlight {
     const { texts, prefix, postfix, item, lead, hint, instruction, example, isCaseSensitive } = data;
@@ -835,15 +813,14 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: Highlight = {
       type: BodyBitType.highlight,
-      placeholderIndex: -1,
       data: {
         prefix,
         texts,
         postfix,
         itemLead: this.itemLead(item, lead),
-        hint: this.toTextNode(hint),
-        instruction: this.toTextNode(instruction),
-        example: this.toExampeNode(example),
+        hint,
+        instruction,
+        example: this.toExample(example),
         isCaseSensitive,
       },
     };
@@ -864,11 +841,11 @@ class Builder extends BaseBuilder {
     text: string;
     isCorrect: boolean;
     isHighlighted: boolean;
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
     isCaseSensitive?: boolean;
   }): HighlightText {
     const { text, isCorrect, isHighlighted, item, lead, hint, instruction, example, isCaseSensitive } = data;
@@ -879,9 +856,9 @@ class Builder extends BaseBuilder {
       isCorrect,
       isHighlighted,
       itemLead: this.itemLead(item, lead),
-      hint: this.toTextNode(hint),
-      instruction: this.toTextNode(instruction),
-      example: this.toExampeNode(example),
+      hint,
+      instruction,
+      example: this.toExample(example),
       isCaseSensitive,
     };
 
@@ -900,11 +877,11 @@ class Builder extends BaseBuilder {
   statement(data: {
     text: string;
     isCorrect: boolean;
-    item?: Text;
-    lead?: Text;
-    hint?: Text;
-    instruction?: Text;
-    example?: Text | boolean;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
     isCaseSensitive?: boolean;
   }): Statement {
     const { text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = data;
@@ -914,9 +891,9 @@ class Builder extends BaseBuilder {
       text,
       isCorrect,
       itemLead: this.itemLead(item, lead),
-      hint: this.toTextNode(hint),
-      instruction: this.toTextNode(instruction),
-      example: this.toExampeNode(example),
+      hint,
+      instruction,
+      example: this.toExample(example),
       isCaseSensitive,
     };
 
@@ -951,14 +928,14 @@ class Builder extends BaseBuilder {
   // Private
   //
 
-  private itemLead(item: Text | undefined, lead: Text | undefined): ItemLead | undefined {
+  private itemLead(item: string | undefined, lead: string | undefined): ItemLead | undefined {
     let node: ItemLead | undefined;
 
     // NOTE: Node order is important and is defined here
     if (item || lead) {
       node = {
-        item: this.toTextNode(item),
-        lead: this.toTextNode(lead),
+        item,
+        lead,
       };
     }
 

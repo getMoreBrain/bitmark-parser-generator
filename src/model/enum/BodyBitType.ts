@@ -1,6 +1,7 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 const BodyBitTypeRaw = {
+  text: 'text',
   gap: 'gap',
   select: 'select',
   highlight: 'highlight',

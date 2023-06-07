@@ -1,6 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 
 import { trueFalseTagContentProcessor } from './TrueFalseTagContentProcessor';
 
@@ -28,18 +27,16 @@ const builder = new Builder();
 
 function trueFalseChainContentProcessor(
   context: BitmarkPegParserContext,
-  _bitLevel: BitContentLevelType,
+  bitLevel: BitContentLevelType,
   bitType: BitTypeType,
-  textFormat: TextFormatType,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
-  inChain: boolean,
 ): void {
-  if (inChain) {
+  if (bitLevel === BitContentLevel.Chain) {
     trueFalseTagContentProcessor(context, BitContentLevel.Chain, bitType, content, target);
   } else {
-    buildTrueFalse(context, _bitLevel, bitType, textFormat, content, target, bodyParts);
+    buildTrueFalse(context, bitLevel, bitType, content, target, bodyParts);
   }
 }
 
@@ -47,7 +44,6 @@ function buildTrueFalse(
   context: BitmarkPegParserContext,
   _bitLevel: BitContentLevelType,
   bitType: BitTypeType,
-  textFormat: TextFormatType,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
@@ -62,7 +58,7 @@ function buildTrueFalse(
 
   if (bitType === BitType.trueFalse1) {
     // Treat as true/false for statement
-    target.statement = buildStatement(context, bitType, textFormat, chainContent);
+    target.statement = buildStatement(context, bitType, chainContent);
   } else if (
     bitType === BitType.trueFalse ||
     bitType === BitType.multipleChoice ||
@@ -71,18 +67,18 @@ function buildTrueFalse(
     bitType === BitType.multipleResponse1
   ) {
     // Treat as true/false for choices / responses
-    const tf = buildStatementsChoicesResponses(context, bitType, textFormat, chainContent);
+    const tf = buildStatementsChoicesResponses(context, bitType, chainContent);
 
     if (tf.statements) statements.push(...tf.statements);
     if (tf.choices) choices.push(...tf.choices);
     if (tf.responses) responses.push(...tf.responses);
   } else if (bitType === BitType.highlightText) {
     // Treat as highlight text
-    const highlight = buildHighlight(context, bitType, textFormat, chainContent);
+    const highlight = buildHighlight(context, bitType, chainContent);
     if (highlight) bodyParts.push(highlight);
   } else {
     // Treat as select
-    const select = buildSelect(context, bitType, textFormat, chainContent);
+    const select = buildSelect(context, bitType, chainContent);
     if (select) bodyParts.push(select);
   }
 }
@@ -98,19 +94,13 @@ function buildTrueFalse(
 function buildStatement(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
-  textFormat: TextFormatType,
   trueFalseContent: BitContent[],
 ): Statement | undefined {
   if (bitType !== BitType.trueFalse1) return undefined;
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('trueFalse V1 content (statement)', trueFalseContent);
 
-  const { trueFalse, ...tags } = context.bitContentProcessor(
-    BitContentLevel.Chain,
-    bitType,
-    textFormat,
-    trueFalseContent,
-  );
+  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, bitType, trueFalseContent);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('trueFalse V1 tags (statement)', tags);
 
@@ -134,7 +124,6 @@ function buildStatement(
 function buildStatementsChoicesResponses(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
-  textFormat: TextFormatType,
   trueFalseContent: BitContent[],
 ): StatementsOrChoicesOrResponses {
   // NOTE: We handle V1 tags in V2 multiple-choice / multiple-response for maxium backwards compatibility
@@ -154,7 +143,7 @@ function buildStatementsChoicesResponses(
   }
 
   for (const contents of trueFalseContents) {
-    const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, contents);
+    const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, bitType, contents);
 
     if (context.DEBUG_CHAIN_TAGS) context.debugPrint('trueFalse V1 tags (choices/responses)', tags);
 
@@ -191,17 +180,11 @@ function buildStatementsChoicesResponses(
 function buildHighlight(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
-  textFormat: TextFormatType,
   highlightContent: BitContent[],
 ): Highlight | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('highlight content', highlightContent);
 
-  const { trueFalse, ...tags } = context.bitContentProcessor(
-    BitContentLevel.Chain,
-    bitType,
-    textFormat,
-    highlightContent,
-  );
+  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, bitType, highlightContent);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('highlight TAGS', { trueFalse, ...tags });
 
@@ -223,12 +206,11 @@ function buildHighlight(
 function buildSelect(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
-  textFormat: TextFormatType,
   selectContent: BitContent[],
 ): Select | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('select content', selectContent);
 
-  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, selectContent);
+  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, bitType, selectContent);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('select TAGS', { trueFalse, ...tags });
 

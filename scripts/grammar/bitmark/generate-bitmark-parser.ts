@@ -23,34 +23,25 @@ const dependencies = {
   '{ BitmarkPegParserProcessor }': '../../../parser/bitmark/peg/BitmarkPegParserProcessor',
 };
 
-const inputTextPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'text-grammar.pegjs');
-const inputBitmarkPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'bit-grammar.pegjs');
+const inputPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'bit-grammar.pegjs');
 const outputPath = path.resolve(__dirname, '../../..', 'src/generated/parser/bitmark/', 'bitmark-peggy-parser.js');
 const testFilePath = path.resolve(__dirname, '../../..', 'assets/', 'test.bit');
 
 // Process command line options
 const commandLineOptions = process.argv.slice(2);
 const optTest = commandLineOptions.includes('--test');
-const optBitmark = commandLineOptions.includes('--bit');
-const allowedStartRules = optBitmark
-  ? ['bitmark', 'bit', 'cardContent']
-  : ['bitmarkPlus', 'bitmarkPlusPlus', 'bitmarkMinusMinus'];
-const startRule = optBitmark ? 'bitmark' : 'bitmarkPlus';
-
-// Select input file
-const inputPath = optBitmark ? inputBitmarkPath : inputTextPath;
+const allowedStartRules = ['bitmark', 'bit', 'cardContent'];
+const startRule = 'bitmark';
 
 // Initialised the environment
 init();
 
 console.log('Generating Bitmark Parser');
-console.log(`For: ${optBitmark ? 'Bitmark' : 'Text'}`);
 console.log(`Input: ${inputPath}`);
 console.log(`Output: ${outputPath}`);
 console.log(`Allowed start rules: ${allowedStartRules.join(', ')}`);
 if (optTest) {
-  console.log(`Test: ${optTest ? testFilePath : 'None'}`);
-  console.log(`Text start rule: ${startRule}`);
+  console.log(`Test: ${testFilePath}`);
 }
 console.log('\n');
 

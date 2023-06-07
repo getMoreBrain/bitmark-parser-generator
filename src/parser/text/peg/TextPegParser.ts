@@ -1,9 +1,10 @@
-import { parse as _parse } from '@getmorebrain/bitmark-peg-parse-helpers';
+import { parse as _parse } from '../../../generated/parser/text/text-peggy-parser.js';
+import { TextAst } from '../../../model/ast/TextNodes.js';
 
 interface ParseOptions {
   startRule?: string;
 }
-type Parse = (str: string, options?: ParseOptions) => unknown;
+type Parse = (str: string, options?: ParseOptions) => TextAst;
 
 const parse: Parse = _parse;
 

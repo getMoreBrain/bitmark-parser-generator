@@ -2,7 +2,6 @@ import { ResourceBuilder } from '../../../../ast/ResourceBuilder';
 import { AudioResource, ImageResource, Resource } from '../../../../model/ast/Nodes';
 import { BitType, BitTypeMetadata, BitTypeType } from '../../../../model/enum/BitType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { BitUtils } from '../../../../utils/BitUtils';
 
 import {
@@ -121,7 +120,6 @@ function resourceContentProcessor(
   context: BitmarkPegParserContext,
   _bitLevel: BitContentLevelType,
   bitType: BitTypeType,
-  textFormat: TextFormatType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
@@ -135,7 +133,7 @@ function resourceContentProcessor(
   const type = ResourceType.fromValue(key);
   if (type) {
     // Parse the resource chain
-    const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, chain);
+    const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, chain);
 
     const resource = resourceBuilder.resource({
       type,

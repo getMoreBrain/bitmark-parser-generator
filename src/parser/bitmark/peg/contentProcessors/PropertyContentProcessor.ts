@@ -9,7 +9,6 @@ import { partnerChainContentProcessor } from './PartnerChainContentProcessor';
 
 import {
   BitContent,
-  BitContentLevel,
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
@@ -32,7 +31,7 @@ function propertyContentProcessor(
     partnerChainContentProcessor(context, bitLevel, bitType, content, target);
     return;
   } else if (key === PropertyKey.book) {
-    bookChainContentProcessor(context, bitLevel, bitType, content, target, bitLevel === BitContentLevel.Chain);
+    bookChainContentProcessor(context, bitLevel, bitType, content, target);
     return;
   }
 
@@ -47,8 +46,8 @@ function propertyContentProcessor(
     if (meta.astKey) key = meta.astKey;
     if (meta.isTrimmedString) v = StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
     if (meta.isNumber) v = NumberUtils.asNumber(v);
-    if (meta.isBoolean) v = BooleanUtils.asBoolean(v, true);
-    if (meta.isInvertedBoolean) v = !BooleanUtils.asBoolean(v, true);
+    if (meta.isBoolean) v = BooleanUtils.toBoolean(v, true);
+    if (meta.isInvertedBoolean) v = !BooleanUtils.toBoolean(v, true);
 
     if (meta.isSingle) {
       obj[key] = v;

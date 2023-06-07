@@ -1,73 +1,31 @@
-import { Property } from '../model/ast/Nodes';
-import { Text, TextAst, TextNode } from '../model/ast/TextNodes';
+import { Example, Property } from '../model/ast/Nodes';
 import { PropertyKey, PropertyKeyMetadata, PropertyKeyType } from '../model/enum/PropertyKey';
-import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
-import { TextParser } from '../parser/text/TextParser';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { StringUtils } from '../utils/StringUtils';
 
 class BaseBuilder {
-  private textParser: TextParser;
-
-  constructor() {
-    this.textParser = new TextParser();
-  }
-
   /**
-   * Convert string or AST to a TextNode, filling in both the string and AST in the textNode.
+   * Convert example to an Example.
+   * This function recognises boolean strings and converts them to boolean values.
    *
    * @param bitmarkText - bitmark text
    * @returns bitmark text AST as plain JS object
    */
-  protected toTextNode(stringOrTextAst: Text | undefined, format?: TextFormatType): TextNode | undefined {
-    if (stringOrTextAst == null) return undefined;
-    let textAst: TextAst;
-    let text: string;
-
-    // Default format to 'bitmark--'
-    format = format ?? TextFormat.bitmarkMinusMinus;
-
-    if (StringUtils.isString(stringOrTextAst)) {
-      text = stringOrTextAst as string;
-      textAst = this.textParser.toAst(text, { textFormat: format });
-    } else {
-      textAst = stringOrTextAst as TextAst;
-      text = 'TODO - GENERATOR';
-    }
-
-    return {
-      format,
-      text,
-      textAst,
-    };
-  }
-
-  /**
-   * Convert string or AST to a TextNode, or leave a boolean as it is.
-   *
-   * @param bitmarkText - bitmark text
-   * @returns bitmark text AST as plain JS object
-   */
-  protected toExampeNode(
-    exampleIn: Text | boolean | undefined,
-    format?: TextFormatType,
-  ): TextNode | boolean | undefined {
+  protected toExample(exampleIn: string | boolean | undefined): Example | undefined {
     if (exampleIn == null) return undefined;
-    let res: TextNode | boolean | undefined;
-
-    // Default format to 'bitmark--'
-    format = format ?? TextFormat.bitmarkMinusMinus;
+    let text = '';
 
     const isBooleanString = BooleanUtils.isBooleanString(exampleIn);
     if (isBooleanString) {
-      res = BooleanUtils.asBoolean(exampleIn, true);
+      if (!BooleanUtils.toBoolean(exampleIn)) return undefined;
+      return true;
     } else {
-      res = this.toTextNode(exampleIn, format);
+      text = exampleIn as string;
     }
 
-    return res;
+    return text;
   }
 
   /**
@@ -89,8 +47,8 @@ class BaseBuilder {
       if (v == null) return undefined;
       if (meta.isTrimmedString) v = StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
       if (meta.isNumber) v = NumberUtils.asNumber(v);
-      if (meta.isBoolean) v = BooleanUtils.asBoolean(v, true);
-      if (meta.isInvertedBoolean) v = !BooleanUtils.asBoolean(v, true);
+      if (meta.isBoolean) v = BooleanUtils.toBoolean(v, true);
+      if (meta.isInvertedBoolean) v = !BooleanUtils.toBoolean(v, true);
       return v;
     };
     if (Array.isArray(value)) {

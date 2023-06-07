@@ -63,14 +63,14 @@
  */
 
 import { Builder } from '../../../ast/Builder';
-import { Bit, BitmarkAst, BodyPart, BodyPartText } from '../../../model/ast/Nodes';
+import { Bit, BitmarkAst, BodyPart, BodyText } from '../../../model/ast/Nodes';
 import { BitType, BitTypeType } from '../../../model/enum/BitType';
+import { BodyBitType } from '../../../model/enum/BodyBitType';
 import { ResourceType } from '../../../model/enum/ResourceType';
-import { TextFormat, TextFormatType } from '../../../model/enum/TextFormat';
+import { TextFormat } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
-import { StringUtils } from '../../../utils/StringUtils';
 
 import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
 import { buildCards } from './contentProcessors/CardContentProcessor';
@@ -224,7 +224,7 @@ class BitmarkPegParserProcessor {
 
     // Parse the bit content into a an object with the appropriate keys
     const { body, footer, cardSet, title, statement, statements, choices, responses, resources, ...tags } =
-      this.bitContentProcessor(BitContentLevel.Bit, bitType, bitHeader.textFormat, bitContent);
+      this.bitContentProcessor(BitContentLevel.Bit, bitType, bitContent);
 
     if (DEBUG_BIT_TAGS) this.debugPrint('BIT TAGS', tags);
     if (DEBUG_BODY) this.debugPrint('BIT BODY', body);
@@ -234,16 +234,7 @@ class BitmarkPegParserProcessor {
     const titles = buildTitles(this.context, bitType, title);
 
     // Build the card data for the specific bit type
-    const bitSpecificCards = buildCards(
-      this.context,
-      bitType,
-      textFormat,
-      cardSet,
-      statement,
-      statements,
-      choices,
-      responses,
-    );
+    const bitSpecificCards = buildCards(this.context, bitType, cardSet, statement, statements, choices, responses);
 
     // Build the resources
     const resource = buildResource(this.context, bitType, resourceType, resources);
@@ -344,7 +335,6 @@ class BitmarkPegParserProcessor {
   private bitContentProcessor(
     bitLevel: BitContentLevelType,
     bitType: BitTypeType,
-    textFormat: TextFormatType,
     data: BitContent[] | undefined,
   ): BitContentProcessorResult {
     const result: BitContentProcessorResult = {};
@@ -375,9 +365,7 @@ class BitmarkPegParserProcessor {
         // Validate the body part
         bodyPart = BitmarkPegParserValidator.checkBodyPart(this.context, bitLevel, bitType, bodyPart);
 
-        const bodyText = builder.bodyPartText({
-          text: bodyPart,
-        });
+        const bodyText = builder.bodyText({ text: bodyPart });
         bodyParts.push(bodyText);
       }
       bodyPart = '';
@@ -416,28 +404,19 @@ class BitmarkPegParserProcessor {
 
         case TypeKey.Gap: {
           if (!inChain) addBodyText();
-          gapChainContentProcessor(this.context, bitLevel, bitType, textFormat, content, result, bodyParts, inChain);
+          gapChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
           break;
         }
 
         case TypeKey.True:
         case TypeKey.False: {
           if (!inChain) addBodyText();
-          trueFalseChainContentProcessor(
-            this.context,
-            bitLevel,
-            bitType,
-            textFormat,
-            content,
-            result,
-            bodyParts,
-            inChain,
-          );
+          trueFalseChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
           break;
         }
 
         case TypeKey.Resource:
-          resourceContentProcessor(this.context, bitLevel, bitType, textFormat, content, result);
+          resourceContentProcessor(this.context, bitLevel, bitType, content, result);
           break;
 
         // case TypeKey.TrueFalseChain:
@@ -474,8 +453,7 @@ class BitmarkPegParserProcessor {
     addBodyText();
 
     // Validate and build the body (trimmed)
-    result.body =
-      bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }, textFormat) : undefined;
+    result.body = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
     BitmarkPegParserValidator.checkBody(this.context, bitLevel, bitType, result.body);
 
     // Validate and build the footer (trimmed)
@@ -483,7 +461,7 @@ class BitmarkPegParserProcessor {
     if (footer) {
       footer = BitmarkPegParserValidator.checkFooter(this.context, bitLevel, bitType, footer);
       if (footer) {
-        result.footer = builder.footerText({ text: footer }, textFormat);
+        result.footer = builder.footerText({ text: footer });
       }
     }
 
@@ -563,12 +541,13 @@ class BitmarkPegParserProcessor {
     // Trim start
     let foundBodyText = false;
     let trimmedBodyParts: BodyPart[] = bodyParts.reduce((acc, bodyPart) => {
-      const bodyText = bodyPart as BodyPartText;
-      if (!foundBodyText && bodyText.bodyPartText != undefined) {
-        const t = bodyText.bodyPartText.trimStart();
+      const bodyText = bodyPart as BodyText;
+      if (!foundBodyText && bodyText.type === BodyBitType.text) {
+        const t = bodyText.data.bodyText.trimStart();
         if (t) {
           foundBodyText = true;
-          acc.push({ bodyPartText: t });
+          bodyText.data.bodyText = t;
+          acc.push(bodyText);
         }
       } else {
         // Not body text, so add it
@@ -581,12 +560,13 @@ class BitmarkPegParserProcessor {
     // Trim end
     foundBodyText = false;
     trimmedBodyParts = trimmedBodyParts.reduceRight((acc, bodyPart) => {
-      const bodyText = bodyPart as BodyPartText;
-      if (!foundBodyText && bodyText.bodyPartText != undefined) {
-        const t = bodyText.bodyPartText.trimEnd();
+      const bodyText = bodyPart as BodyText;
+      if (!foundBodyText && bodyText.type === BodyBitType.text) {
+        const t = bodyText.data.bodyText.trimEnd();
         if (t) {
           foundBodyText = true;
-          acc.unshift({ bodyPartText: t });
+          bodyText.data.bodyText = t;
+          acc.unshift(bodyText);
         }
       } else {
         // Not body text, so add it

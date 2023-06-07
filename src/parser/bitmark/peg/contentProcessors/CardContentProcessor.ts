@@ -2,7 +2,6 @@ import { Builder } from '../../../../ast/Builder';
 import { BitType, BitTypeMetadata, BitTypeType } from '../../../../model/enum/BitType';
 import { CardSetType } from '../../../../model/enum/CardSetType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
 import {
@@ -35,7 +34,6 @@ const builder = new Builder();
 function buildCards(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
-  textFormat: TextFormatType,
   parsedCardSet: ParsedCardSet | undefined,
   statementV1: Statement | undefined,
   statementsV1: Statement[] | undefined,
@@ -47,7 +45,7 @@ function buildCards(
   let result: BitSpecificCards = {};
 
   // Process the card contents
-  const processedCardSet = processCardSet(context, bitType, textFormat, parsedCardSet);
+  const processedCardSet = processCardSet(context, bitType, parsedCardSet);
 
   // Parse the card contents according to the card set type
 
@@ -99,7 +97,6 @@ function buildCards(
 function processCardSet(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
-  textFormat: TextFormatType,
   parsedCardSet: ParsedCardSet | undefined,
 ): ProcessedCardSet {
   const processedCardSet: ProcessedCardSet = {
@@ -130,7 +127,7 @@ function processCardSet(
           no: variantNo++,
         } as ProcessedCardVariant;
         processedSide.variants.push(processedVariant);
-        const tags = context.bitContentProcessor(BitContentLevel.Card, bitType, textFormat, content);
+        const tags = context.bitContentProcessor(BitContentLevel.Card, bitType, content);
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (elements)', tags);
 

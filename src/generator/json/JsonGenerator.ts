@@ -1,7 +1,7 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeType } from '../../model/ast/NodeType';
-import { BodyBit, BodyPart, ImageLinkResource } from '../../model/ast/Nodes';
+import { BodyBit, BodyPart, BodyText, ImageLinkResource } from '../../model/ast/Nodes';
 import { AudioEmbedResource } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
@@ -13,15 +13,16 @@ import { DocumentLinkResource } from '../../model/ast/Nodes';
 import { DocumentDownloadResource } from '../../model/ast/Nodes';
 import { StillImageFilmEmbedResource } from '../../model/ast/Nodes';
 import { StillImageFilmLinkResource } from '../../model/ast/Nodes';
-import { Text, TextAst, TextNode } from '../../model/ast/TextNodes';
+import { Text, TextAst } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
+import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { ParserInfo } from '../../model/parser/ParserInfo';
+import { TextParser } from '../../parser/text/TextParser';
 import { ArrayUtils } from '../../utils/ArrayUtils';
-import { BooleanUtils } from '../../utils/BooleanUtils';
 import { StringUtils } from '../../utils/StringUtils';
 import { UrlUtils } from '../../utils/UrlUtils';
 import { Generator } from '../Generator';
@@ -155,8 +156,8 @@ export interface JsonOptions {
 
 interface ItemLeadHintInstructionNode {
   itemLead?: ItemLead;
-  hint?: TextNode;
-  instruction?: TextNode;
+  hint?: string;
+  instruction?: string;
 }
 
 interface ItemLeadHintInstuction {
@@ -178,6 +179,7 @@ interface ExampleAndIsExample {
  */
 class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
   protected ast = new Ast();
+  private textParser = new TextParser();
 
   // TODO - move to context
   private options: JsonOptions;
@@ -348,38 +350,6 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
     this.cleanAndSetDefaultsForBitJson(this.bitJson);
   }
 
-  // bitmark -> bits -> bitsValue -> example
-
-  protected enter_example(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const example = node.value as TextNode | undefined;
-
-    // Ignore example that is not at the bit level as it are handled elsewhere
-    if (parent?.key !== NodeType.bitsValue) return;
-
-    // The enter_example (non-leaf) is always a TextNode
-
-    if (example) {
-      const exampleTextNode = example as TextNode;
-
-      this.addProperty(this.bitJson, 'isExample', true, true);
-      this.bitJson.example = this.toTextAstOrString(exampleTextNode);
-    }
-  }
-
-  protected leaf_example(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const example = node.value as boolean | undefined;
-
-    // Ignore example that is not at the bit level as it are handled elsewhere
-    if (parent?.key !== NodeType.bitsValue) return;
-
-    // The leaf_example is always a boolean
-
-    if (example) {
-      this.addProperty(this.bitJson, 'isExample', true, true);
-      this.bitJson.example = this.toTextAstOrString(undefined);
-    }
-  }
-
   // bitmark -> bits -> bitsValue -> partner
 
   protected enter_partner(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -441,48 +411,120 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> body -> bodyParts -> bodyPartsValue
+  // bitmark -> bits -> bitsValue -> body -> bodyParts
 
-  protected enter_bodyPartsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const bodyPart = node.value as BodyPart;
+  protected enter_bodyParts(node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): boolean {
+    const bodyParts = node.value as BodyPart[];
+    const plainText = this.options.textAsPlainText;
+    const textFormat = this.getTextFormat(route);
+    let fullBodyTextStr = '';
+    let placeholderIndex = 0;
 
-    // The text part of the body is handled in enter_bodyText
-    const isText = Object.prototype.hasOwnProperty.call(bodyPart, 'bodyPartText');
-    if (isText) return;
+    // Ensure placeholders exists
+    if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
 
-    const bodyBit = bodyPart as BodyBit;
+    // Ensure body exists
+    if (this.bitJson.body == null) this.bitJson.body = this.bodyDefault;
 
-    let bodyBitJson: BodyBitJson | undefined;
+    // Function for creating the placeholder keys
+    const createPlaceholderKeys = (i: number): { legacyPlaceholderKey: string; placeholderKey: string } => {
+      return {
+        // Old placeholder style (for backwards compatibility) = {0}
+        legacyPlaceholderKey: `{${i}}`,
 
-    // Create a placeholder in the body, and get its key
-    const placeholderKey = this.createBodyPlaceholder(bodyBit);
+        // New placeholder style (cannot clash as bitmark parser would have removed it) = [!0]
+        placeholderKey: `[!${i}]`,
+      };
+    };
 
-    switch (bodyBit.type) {
-      case BodyBitType.gap: {
-        const gap = bodyBit as Gap;
-        bodyBitJson = this.createGapJson(gap);
-        break;
-      }
+    // Loop the text bodyParts creating full body text with the correct placeholders
+    //
+    // For text output 'fullBodyTextStr:
+    // - is created and written to the JSON
+    // - has placeholders inserted into 'fullBodyTextStr' in the format {0}
+    //
+    // For JSON output 'fullBodyTextStr:
+    // - is created and passed into the text parser to create the body text AST
+    // - has placeholders inserted into 'fullBodyTextStr' in the format [!0] to allow the text parser to identify
+    //   where the body bits should be inserted
+    //
+    for (let i = 0; i < bodyParts.length; i++) {
+      const bodyPart = bodyParts[i];
 
-      case BodyBitType.select: {
-        const select = bodyBit as Select;
-        bodyBitJson = this.createSelectJson(select);
+      const isText = bodyPart.type === BodyBitType.text;
 
-        break;
-      }
+      if (isText) {
+        const asText = bodyPart as BodyText;
+        const bodyTextPart = asText.data.bodyText;
 
-      case BodyBitType.highlight: {
-        const highlight = bodyBit as Highlight;
-        bodyBitJson = this.createHighlightJson(highlight);
+        // Append the text part to the full text body
+        fullBodyTextStr += bodyTextPart;
+      } else {
+        const { legacyPlaceholderKey, placeholderKey } = createPlaceholderKeys(placeholderIndex);
 
-        break;
+        // Append the placeholder to the full text body
+        fullBodyTextStr += plainText ? legacyPlaceholderKey : placeholderKey;
+
+        placeholderIndex++;
       }
     }
 
-    // Add the gap to the placeholders
-    if (bodyBitJson) {
-      this.insertBodyPlaceholderData(placeholderKey, bodyBitJson);
+    // Add string or AST to the body
+    this.bitJson.body = this.toTextAstOrString(fullBodyTextStr, textFormat);
+    const bodyAst = this.bitJson.body as TextAst;
+
+    // Loop the body parts again to create the body bits:
+    // - For text output the body bits are inserted into the 'placeholders' object
+    // - For JSON output the body bits are inserted into body AST, replacing the placeholders created by the text parser
+    placeholderIndex = 0;
+    for (let i = 0; i < bodyParts.length; i++) {
+      const bodyPart = bodyParts[i];
+
+      // Skip text body parts as they are handled above
+      const isText = bodyPart.type === BodyBitType.text;
+      if (isText) continue;
+
+      const bodyBit = bodyPart as BodyBit;
+      let bodyBitJson: BodyBitJson | undefined;
+
+      const { legacyPlaceholderKey } = createPlaceholderKeys(placeholderIndex);
+
+      switch (bodyPart.type) {
+        case BodyBitType.gap: {
+          const gap = bodyBit as Gap;
+          bodyBitJson = this.createGapJson(gap);
+          break;
+        }
+
+        case BodyBitType.select: {
+          const select = bodyBit as Select;
+          bodyBitJson = this.createSelectJson(select);
+          break;
+        }
+
+        case BodyBitType.highlight: {
+          const highlight = bodyBit as Highlight;
+          bodyBitJson = this.createHighlightJson(highlight);
+          break;
+        }
+      }
+
+      // Add the gap to the placeholders
+      if (bodyBitJson) {
+        if (plainText) {
+          // Add the body bit to the placeholders
+          this.bitJson.placeholders[legacyPlaceholderKey] = bodyBitJson;
+        } else {
+          // Insert the body bit into the body AST
+          this.replacePlaceholderWithBodyBit(bodyAst, bodyBitJson, placeholderIndex);
+        }
+      }
+
+      placeholderIndex++;
     }
+
+    // Stop traversal of this branch for efficiency
+    return false;
   }
 
   // bitmark -> bits -> bitsValue -> elements
@@ -888,13 +930,13 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
 
   // bitmark -> bits -> bitsValue -> title
 
-  protected enter_title(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_title(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.bitJson.title = this.toTextAstOrString(node.value);
   }
 
   //  bitmark -> bits -> bitsValue -> subtitle
 
-  protected enter_subtitle(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_subtitle(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.bitJson.subtitle = this.toTextAstOrString(node.value);
   }
 
@@ -930,8 +972,8 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
 
   //  bitmark -> bits -> bitsValue ->  * -> hint
 
-  protected enter_hint(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const hint = node.value as TextNode;
+  protected leaf_hint(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const hint = node.value as string;
 
     // Ignore hint that is not at the bit level as it are handled elsewhere
     if (parent?.key !== NodeType.bitsValue) return;
@@ -941,8 +983,8 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
 
   // bitmark -> bits -> bitsValue ->  * -> instruction
 
-  protected enter_instruction(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const instruction = node.value as TextNode;
+  protected leaf_instruction(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const instruction = node.value as string;
 
     // Ignore instruction that is not at the bit level as it are handled elsewhere
     if (parent?.key !== NodeType.bitsValue) return;
@@ -950,23 +992,23 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
     this.bitJson.instruction = this.toTextAstOrString(instruction);
   }
 
-  // bitmark -> bits -> body -> bodyValue -> bodyText
+  // bitmark -> bits -> bitsValue -> example
 
-  protected enter_bodyText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const value = node.value as TextNode;
-    if (value) {
-      if (this.options.textAsPlainText) {
-        this.bitJson.body = value.text;
-      } else {
-        this.bitJson.body = this.toTextAstOrString(value);
-      }
-    }
+  protected leaf_example(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const example = node.value as string | boolean | undefined;
+
+    // Ignore example that is not at the bit level as it are handled elsewhere
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const res = this.toExampleAndIsExample(example);
+    this.bitJson.isExample = res.isExample;
+    this.bitJson.example = res.example;
   }
 
   // bitmark -> bits -> footer -> footerText
 
   protected leaf_footerText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const footer = node.value as TextNode;
+    const footer = node.value as string;
 
     this.bitJson.footer = this.toTextAstOrString(footer);
   }
@@ -991,7 +1033,7 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
       if (Array.isArray(parserExcessResources) && parserExcessResources.length > 0) {
         excessResources = [];
         for (const r of parserExcessResources) {
-          const rJson = this.parseResourceToJson(r);
+          const rJson = this.parseResourceToJson(r as Resource);
           if (rJson) excessResources.push(rJson);
         }
       }
@@ -1689,13 +1731,13 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
       if (resource.copyright != null) resourceJson.copyright = resource.copyright ?? '';
       if (resource.provider != null) resourceJson.provider = resource.provider;
       if (resource.showInIndex != null) resourceJson.showInIndex = resource.showInIndex ?? false;
-      if (resource.caption != null) resourceJson.caption = this.toTextAstOrString(resource.caption);
+      if (resource.caption != null) resourceJson.caption = this.toTextAstOrString(resource.caption ?? '');
     } else {
       resourceJson.license = resource.license ?? '';
       resourceJson.copyright = resource.copyright ?? '';
       if (resource.provider != null) resourceJson.provider = resource.provider;
       resourceJson.showInIndex = resource.showInIndex ?? false;
-      resourceJson.caption = this.toTextAstOrString(resource.caption);
+      resourceJson.caption = this.toTextAstOrString(resource.caption ?? '');
     }
 
     return resourceJson as ArticleResourceJson | DocumentResourceJson;
@@ -1703,43 +1745,28 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
 
   protected toItemLeadHintInstruction(item: ItemLeadHintInstructionNode): ItemLeadHintInstuction {
     return {
-      item: this.toTextAstOrString(item.itemLead?.item),
-      lead: this.toTextAstOrString(item.itemLead?.lead),
-      hint: this.toTextAstOrString(item.hint),
-      instruction: this.toTextAstOrString(item.instruction),
+      item: this.toTextAstOrString(item.itemLead?.item ?? ''),
+      lead: this.toTextAstOrString(item.itemLead?.lead ?? ''),
+      hint: this.toTextAstOrString(item.hint ?? ''),
+      instruction: this.toTextAstOrString(item.instruction ?? ''),
     };
   }
 
   protected toExampleAndIsExample(exampleIn: Example | undefined): ExampleAndIsExample {
     let isExample = false;
-    let example: Text | undefined;
+    let example: Text = this.textDefault;
 
     if (exampleIn === true) {
-      isExample = BooleanUtils.asBoolean(exampleIn, true);
-      example = this.toTextAstOrString(undefined);
-    } else {
-      if (exampleIn) {
-        const exampleTextNode = exampleIn as TextNode;
-        isExample = true;
-        example = this.toTextAstOrString(exampleTextNode);
-      } else {
-        isExample = false;
-        example = this.toTextAstOrString(undefined);
-      }
+      isExample = true;
+    } else if (exampleIn) {
+      isExample = true;
+      example = this.toTextAstOrString(exampleIn);
     }
 
     return {
       isExample,
       example,
     };
-  }
-
-  protected toTextAstOrString(textNode: TextNode | undefined): TextAst | string | undefined {
-    if (this.options.textAsPlainText) {
-      return textNode?.text || '';
-    }
-
-    return textNode?.textAst ?? [];
   }
 
   protected addProperty(
@@ -1763,58 +1790,95 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
   }
 
   /**
-   * Create a new body placeholder and return its key
+   * Get the bit type from any node
    *
-   * @param bodyBit the body bit for which to create a placeholder
-   * @returns body placeholder key
+   * @param route the route to the node
+   * @returns the bit type
    */
-  protected createBodyPlaceholder(bodyBit: BodyBit): string {
-    // Ensure placeholders exists
-    if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
-
-    // Ensure body exists
-    if (this.bitJson.body == null) this.bitJson.body = this.bodyDefault;
-
-    // Add the placeholder to the body
-    const placeholder = `{${bodyBit.placeholderIndex}}`;
-
-    // if (this.options.textAsPlainText) {
-    //   this.bitJson.body += placeholder;
-    // } else {
-    //   const bodyAsArray = this.bitJson.body as TextAst[];
-    //   bodyAsArray.push(placeholder);
-    // }
-
-    // this.placeholderIndex++;
-
-    return placeholder;
-  }
-
-  /**
-   * Insert a the data for a body placeholder.
-   * createBodyPlaceholder() must have been called to get the key
-   *
-   * @param placeholderKey
-   * @param bodyBitJson
-   * @returns
-   */
-  protected insertBodyPlaceholderData(placeholderKey: string, bodyBitJson: BodyBitJson): void {
-    // Keep TS happy. Will always be the case as long as createBodyPlaceholder() has been called to get the key
-    if (!this.bitJson.placeholders) return;
-
-    // Add the gap to the placeholders
-    this.bitJson.placeholders[placeholderKey] = bodyBitJson;
-  }
-
   protected getBitType(route: NodeInfo[]): BitTypeType | undefined {
     for (const node of route) {
       if (node.key === NodeType.bitsValue) {
         const n = node.value as Bit;
-        return n?.bitType;
+        return BitType.fromValue(n?.bitType);
       }
     }
 
     return undefined;
+  }
+
+  /**
+   * Get the text format from any node
+   *
+   * @param route the route to the node
+   * @returns the text format
+   */
+  protected getTextFormat(route: NodeInfo[]): TextFormatType | undefined {
+    for (const node of route) {
+      if (node.key === NodeType.bitsValue) {
+        const n = node.value as Bit;
+        return TextFormat.fromValue(n?.textFormat);
+      }
+    }
+
+    return undefined;
+  }
+
+  /**
+   * Convert parse a string to TextAst if required, otherwise just return the string as is.
+   * @param text
+   * @returns
+   */
+  protected toTextAstOrString(
+    text: string | undefined,
+    format: TextFormatType = TextFormat.bitmarkMinusMinus,
+  ): TextAst | string | undefined {
+    if (!text) undefined;
+
+    if (this.options.textAsPlainText) {
+      return text;
+    }
+
+    // Use the text parser to parse the text
+    const textAst = this.textParser.toAst(text, {
+      textFormat: format,
+    });
+
+    return textAst;
+  }
+
+  /**
+   * Walk the body AST to find the placeholder and replace it with the body bit.
+   *
+   * @param bodyAst the body AST
+   * @param bodyBitJson the body bit json to insert at the placeholder position
+   * @param index the index of the placeholder to replace
+   */
+  protected replacePlaceholderWithBodyBit(bodyAst: TextAst, bodyBitJson: BodyBitJson, index: number) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const walkRecursive = (node: any, parent: any, parentKey: any): boolean => {
+      if (Array.isArray(node)) {
+        // Walk the array of nodes
+        for (let i = 0; i < node.length; i++) {
+          const child = node[i];
+          const done = walkRecursive(child, node, i);
+          if (done) return true;
+        }
+      } else {
+        if (node.type === 'bit' && node.index === index) {
+          // Found the placeholder, replace it with the body bit
+          parent[parentKey] = bodyBitJson;
+          return true;
+        }
+        if (node.content) {
+          // Walk the child content
+          const done = walkRecursive(node.content, node, 'content');
+          if (done) return true;
+        }
+      }
+      return false;
+    };
+
+    walkRecursive(bodyAst, null, null);
   }
 
   //
@@ -1960,6 +2024,8 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
    * @returns
    */
   protected cleanAndSetDefaultsForBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
+    const plainText = this.options.textAsPlainText;
+
     // Clear 'item' which may be an empty string if 'lead' was set but item not
     // Only necessary because '.article' does not include a default value for 'item'
     // which is totally inconsistent, but maybe is wanted.
@@ -2177,7 +2243,7 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
     if (bitJson.questions == null) delete bitJson.questions;
 
     // Placeholders
-    if (bitJson.placeholders == null) delete bitJson.placeholders;
+    if (!plainText || bitJson.placeholders == null) delete bitJson.placeholders;
 
     // Footer
     if (bitJson.footer == null) delete bitJson.footer;

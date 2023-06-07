@@ -161,7 +161,7 @@ class BitmarkPegParserValidator {
     const meta = this.getMetadataForBitType(bitType);
     const { bodyAllowed } = meta;
 
-    const hasBody = body.length > 0;
+    const hasBody = body.bodyParts.length > 0;
 
     if (hasBody && !bodyAllowed) {
       context.addWarning(`Bit '${bitType}' should not have a body.`);

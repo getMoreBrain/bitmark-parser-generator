@@ -21,7 +21,6 @@ const NodeType = superenum({
   bodyPartsValue: 'bodyPartsValue',
   bodyPartText: 'bodyPartText',
   data: 'data',
-  placeholderIndex: 'placeholderIndex',
   bodyText: 'bodyText',
   footer: 'footer',
   footerText: 'footerText',
@@ -219,6 +218,8 @@ const NodeType = superenum({
   attrs: 'attrs',
   section: 'section',
   parent: 'parent',
+  marks: 'marks',
+  marksValue: 'marksValue',
 
   // Parser Info / Errors
   parser: 'parser',

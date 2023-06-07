@@ -86,11 +86,11 @@ Das war's
 
 {{
 
-function s(_string: string | undefined): string {
+function s(_string) {
   return _string ?? ""
 }
 
-function unbreakscape(_str: string | undefined): string {
+function unbreakscape(_str) {
 	let u_ = _str || ""
 
   let re_ = new RegExp( /([*_`!])\^(?!\^)/, "g")
@@ -99,15 +99,15 @@ function unbreakscape(_str: string | undefined): string {
   return u_
 }
 
-function bitmarkPlusPlus(_str: string) {
+function bitmarkPlusPlus(_str) {
     return peg$parse(_str, { startRule: "bitmarkPlusPlus" })
 }
 
-function bitmarkPlus(_str: string) {
+function bitmarkPlus(_str) {
     return peg$parse(_str, { startRule: "bitmarkPlus" })
 }
 
-function bitmarkMinusMinus(_str: string) {
+function bitmarkMinusMinus(_str) {
     return peg$parse(_str, { startRule: "bitmarkMinusMinus" })
 }
 
@@ -118,7 +118,7 @@ function bitmarkMinusMinus(_str: string) {
 
 {
     let section = ""
-    var indentStack: string[] = [], indent: string  = ""
+    var indentStack = [], indent = ""
 
     input = input.trimStart()
 }
@@ -324,7 +324,7 @@ INDENT
       { indentStack.push(indent); indent = i.join("")})
 
 DEDENT
-  = &{ indent = indentStack.pop() ?? ""; return true }
+  = &{ indent = indentStack.pop(); return true }
 
 
 
@@ -413,7 +413,8 @@ InlineTag = InlineHalfTag InlineHalfTag
 InlineLaTexTag = InlineLaTexHalfTag InlineLaTexHalfTag
 
 InlineStyledText
-  = InlineTag ' '? t: $((!(' '? InlineTag) .)* ) ' '? InlineTag marks: AttrChain? { if (!marks) marks = []; return { marks, text: unbreakscape(t), type: "text" } }
+  = BodyBitOpenTag t: $(([0-9])+ ) BodyBitCloseTag { return { index: +t, type: "bit" } }
+  / InlineTag ' '? t: $((!(' '? InlineTag) .)* ) ' '? InlineTag marks: AttrChain? { if (!marks) marks = []; return { marks, text: unbreakscape(t), type: "text" } }
   / BoldTag ' '? t: $((!(' '? BoldTag) .)* ) ' '? BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
   / ItalicTag ' '? t: $((!(' '? ItalicTag) .)* ) ' '? ItalicTag { return { marks: [{type: "italic"}], text: unbreakscape(t), type: "text" } }
   / LightTag ' '? t: $((!(' '? LightTag) .)* ) ' '? LightTag { return { marks: [{type: "light"}], text: unbreakscape(t), type: "text" } }
@@ -500,8 +501,14 @@ ItalicTag = ItalicHalfTag ItalicHalfTag
 LightTag = LightHalfTag LightHalfTag
 HighlightTag = HighlightHalfTag HighlightHalfTag
 
+// Reuse the instruction tag for the body bit.
+// It cannot appear in the body as the bitmark parser would remove it, so it is safe to re-use.
+BodyBitOpenTag = '[!'
+BodyBitCloseTag = ']'
+
 StyledText
-  = BoldTag ' '? t: $((!(' '? BoldTag) .)* ) ' '? BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
+  = BodyBitOpenTag t: $(([0-9])+ ) BodyBitCloseTag { return { index: +t, type: "bit" } }
+  / BoldTag ' '? t: $((!(' '? BoldTag) .)* ) ' '? BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
   / ItalicTag ' '? t: $((!(' '? ItalicTag) .)* ) ' '? ItalicTag { return { marks: [{type: "italic"}], text: unbreakscape(t), type: "text" } }
   / LightTag ' '? t: $((!(' '? LightTag) .)* ) ' '? LightTag { return { marks: [{type: "light"}], text: unbreakscape(t), type: "text" } }
   / HighlightTag ' '? t: $((!(' '? HighlightTag) .)* ) ' '? HighlightTag { return { marks: [{type: "highlight"}], text: unbreakscape(t), type: "text" } }

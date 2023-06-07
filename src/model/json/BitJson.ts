@@ -1,4 +1,4 @@
-import { Text, TextAst } from '../ast/TextNodes';
+import { Text } from '../ast/TextNodes';
 
 import { BodyBitsJson } from './BodyBitJson';
 import { AudioResourceJson, ImageResourceJson, ResourceJson } from './ResourceJson';

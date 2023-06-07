@@ -66,6 +66,8 @@ export type {
   Node,
   BitmarkAst,
   Bit,
+  ItemLead,
+  Example,
   ExtraProperties,
   Property,
   Partner,
@@ -80,17 +82,15 @@ export type {
   MatrixCell,
   Question,
   Body,
+  BodyText,
   BodyPart,
-  BodyPartText,
-  FooterText,
   BodyBit,
   Gap,
   Select,
   SelectOption,
   Highlight,
   HighlightText,
-  ItemLead,
-  Example,
+  FooterText,
   Resource,
   ImageResource,
   ImageLinkResource,
@@ -111,7 +111,7 @@ export type {
   AppLinkResource,
   WebsiteLinkResource,
 } from './model/ast/Nodes';
-export type { Text, TextNode, TextAst } from './model/ast/TextNodes';
+export type { Text, TextAst } from './model/ast/TextNodes';
 export type { BitWrapperJson } from './model/json/BitWrapperJson';
 export type {
   BitJson,

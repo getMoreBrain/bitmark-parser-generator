@@ -258,46 +258,6 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
     this.write('#');
   }
 
-  protected writeCardSetStart(): void {
-    if (this.options.cardSetVersion === 1) {
-      this.write('===');
-    } else {
-      this.write('++\n====');
-    }
-  }
-
-  protected writeCardSetEnd(): void {
-    if (this.options.cardSetVersion === 1) {
-      this.write('===');
-    } else {
-      this.write('====\n++');
-    }
-  }
-
-  protected writeCardSetCardDivider(): void {
-    if (this.options.cardSetVersion === 1) {
-      this.write('===');
-    } else {
-      this.write('====');
-    }
-  }
-
-  protected writeCardSetSideDivider(): void {
-    if (this.options.cardSetVersion === 1) {
-      this.write('==');
-    } else {
-      this.write('--');
-    }
-  }
-
-  protected writeCardSetVariantDivider(): void {
-    if (this.options.cardSetVersion === 1) {
-      this.write('--');
-    } else {
-      this.write('~~');
-    }
-  }
-
   protected writeNL(): void {
     if (this.options.debugGenerationInline) {
       this.write('\\n');
@@ -354,7 +314,7 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
     ignoreTrue?: boolean,
   ): void {
     let valuesArray: unknown[];
-    let wroteSomething = false;
+    // let wroteSomething = false;
 
     if (values !== undefined) {
       if (!Array.isArray(values)) {
@@ -375,14 +335,10 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
             this.writeColon();
             this.writeString(`${val}`);
             this.writeCL();
-            wroteSomething = true;
+            // wroteSomething = true;
           }
         }
       }
-    }
-
-    if (!wroteSomething) {
-      this.skipNLBetweenBitsValue = true;
     }
   }
 
@@ -401,7 +357,7 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
 
   protected isWriteTextFormat(bitsValue: string): boolean {
     const isMinusMinus = TextFormat.fromValue(bitsValue) === TextFormat.bitmarkMinusMinus;
-    const writeFormat = !isMinusMinus || this.options.explicitTextFormat;
+    const writeFormat = !isMinusMinus;
     return !!writeFormat;
   }
 

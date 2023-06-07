@@ -1,7 +1,6 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
-import { TextNode } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
@@ -24,7 +23,6 @@ import {
   ArticleResource,
   StillImageFilmResource,
   Partner,
-  Example,
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
@@ -333,7 +331,7 @@ class BitmarkGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks 
   protected enter_body(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     // always write a NL before the body content if there is any?
     const body = node.value as Body;
-    if (body.length > 0) {
+    if (body.bodyParts.length > 0) {
       this.writeNL();
     }
   }

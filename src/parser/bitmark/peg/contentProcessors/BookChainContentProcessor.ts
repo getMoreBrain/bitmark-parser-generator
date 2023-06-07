@@ -1,5 +1,4 @@
 import { BitTypeType } from '../../../../model/enum/BitType';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -14,17 +13,15 @@ import {
 
 function bookChainContentProcessor(
   context: BitmarkPegParserContext,
-  _bitLevel: BitContentLevelType,
+  bitLevel: BitContentLevelType,
   bitType: BitTypeType,
-  textFormat: TextFormatType,
   content: BitContent,
   target: BitContentProcessorResult,
-  inChain: boolean,
 ): void {
-  if (inChain) {
+  if (bitLevel === BitContentLevel.Chain) {
     // Do nothing
   } else {
-    const book = buildBook(context, bitType, textFormat, content);
+    const book = buildBook(context, bitType, content);
     target.book = book.book;
     target.reference = book.reference;
     target.referenceEnd = book.referenceEnd;
@@ -34,7 +31,6 @@ function bookChainContentProcessor(
 function buildBook(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
-  textFormat: TextFormatType,
   content: BitContent,
 ): {
   book: string | undefined;
@@ -45,7 +41,7 @@ function buildBook(
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('book content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, content.chain);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('book TAGS', tags);
 

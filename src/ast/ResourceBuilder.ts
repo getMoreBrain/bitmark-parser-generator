@@ -1,4 +1,3 @@
-import { Text } from '../model/ast/TextNodes';
 import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { UrlUtils } from '../utils/UrlUtils';
@@ -85,7 +84,7 @@ class ResourceBuilder extends BaseBuilder {
         license?: string;
         copyright?: string;
         showInIndex?: boolean;
-        caption?: Text;
+        caption?: string;
       };
       audio?: {
         format: string;
@@ -93,14 +92,14 @@ class ResourceBuilder extends BaseBuilder {
         license?: string;
         copyright?: string;
         showInIndex?: boolean;
-        caption?: Text;
+        caption?: string;
       };
 
       // Generic Resource
       license?: string;
       copyright?: string;
       showInIndex?: boolean;
-      caption?: Text;
+      caption?: string;
     },
     //
   ): Resource | undefined {
@@ -252,7 +251,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): ImageResource {
     const { value, src1x, src2x, src3x, src4x, width, height, alt, license, copyright, showInIndex, caption } = data;
 
@@ -272,7 +271,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -301,7 +300,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): ImageLinkResource {
     const { value, src1x, src2x, src3x, src4x, width, height, alt, license, copyright, showInIndex, caption } = data;
 
@@ -321,7 +320,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -346,7 +345,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): AudioResource {
     const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
 
@@ -362,7 +361,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -387,7 +386,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): AudioEmbedResource {
     const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
 
@@ -403,7 +402,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -428,7 +427,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): AudioLinkResource {
     const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
 
@@ -444,7 +443,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -476,7 +475,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): VideoResource {
     const {
       value,
@@ -515,7 +514,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -547,7 +546,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): VideoEmbedResource {
     const {
       value,
@@ -586,7 +585,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -618,7 +617,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): VideoLinkResource {
     const {
       value,
@@ -657,7 +656,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -712,7 +711,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): StillImageFilmEmbedResource {
     const {
       value,
@@ -751,7 +750,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -783,7 +782,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): StillImageFilmLinkResource {
     const {
       value,
@@ -822,7 +821,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -844,7 +843,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): ArticleResource {
     const { value, license, copyright, showInIndex, caption } = data;
 
@@ -857,7 +856,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -879,7 +878,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): DocumentResource {
     const { value, license, copyright, showInIndex, caption } = data;
 
@@ -892,7 +891,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -914,7 +913,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): DocumentEmbedResource {
     const { value, license, copyright, showInIndex, caption } = data;
 
@@ -927,7 +926,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -949,7 +948,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): DocumentLinkResource {
     const { value, license, copyright, showInIndex, caption } = data;
 
@@ -962,7 +961,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -984,7 +983,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): DocumentDownloadResource {
     const { value, license, copyright, showInIndex, caption } = data;
 
@@ -997,7 +996,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -1018,7 +1017,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): AppLinkResource {
     const { value, license, copyright, showInIndex, caption } = data;
 
@@ -1029,7 +1028,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals
@@ -1051,7 +1050,7 @@ class ResourceBuilder extends BaseBuilder {
     license?: string;
     copyright?: string;
     showInIndex?: boolean;
-    caption?: Text;
+    caption?: string;
   }): WebsiteLinkResource | undefined {
     const { value, siteName, license, copyright, showInIndex, caption } = data;
 
@@ -1063,7 +1062,7 @@ class ResourceBuilder extends BaseBuilder {
       license,
       copyright,
       showInIndex,
-      caption: this.toTextNode(caption),
+      caption,
     };
 
     // Remove Unset Optionals

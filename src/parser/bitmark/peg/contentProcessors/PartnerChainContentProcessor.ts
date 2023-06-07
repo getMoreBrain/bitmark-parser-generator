@@ -2,7 +2,6 @@ import { Builder } from '../../../../ast/Builder';
 import { ImageResource, Resource } from '../../../../model/ast/Nodes';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -19,7 +18,6 @@ function partnerChainContentProcessor(
   context: BitmarkPegParserContext,
   _bitLevel: BitContentLevelType,
   bitType: BitTypeType,
-  textFormat: TextFormatType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
@@ -27,7 +25,7 @@ function partnerChainContentProcessor(
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('partner content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, content.chain);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('partner TAGS', tags);
 
