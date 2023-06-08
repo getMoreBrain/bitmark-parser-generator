@@ -63,19 +63,47 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
    */
   public async generate(ast: TextAst): Promise<void> {
     // Reset the state
-    this.printed = false;
+    this.resetState();
 
     // Open the writer
     await this.writer.open();
 
+    // Walk the text AST
+    this.walkAndWrite(ast);
+
+    // Close the writer
+    await this.writer.close();
+  }
+
+  /**
+   * Generate text from a bitmark text AST synchronously
+   *
+   * @param ast bitmark text AST
+   */
+  public generateSync(ast: TextAst): void {
+    // Reset the state
+    this.resetState();
+
+    // Open the writer
+    this.writer.openSync();
+
+    // Walk the text AST
+    this.walkAndWrite(ast);
+
+    // Close the writer
+    this.writer.closeSync();
+  }
+
+  private resetState(): void {
+    this.printed = false;
+  }
+
+  private walkAndWrite(ast: TextAst): void {
     // Walk the bitmark AST
     this.ast.walk(ast, this, undefined);
 
     // Ensure a blank line at end of file
     this.writeLine();
-
-    // Close the writer
-    await this.writer.close();
   }
 
   enter(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {

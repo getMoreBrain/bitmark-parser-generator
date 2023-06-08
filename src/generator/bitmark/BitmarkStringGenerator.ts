@@ -30,6 +30,16 @@ class BitmarkStringGenerator implements Generator<BitmarkAst, string> {
     await this.generator.generate(ast);
     return this.writer.getString();
   }
+
+  /**
+   * Generate bitmark markup from bitmark AST as a string synchronously
+   *
+   * @param ast bitmark AST
+   */
+  public generateSync(ast: BitmarkAst): string {
+    this.generator.generateSync(ast);
+    return this.writer.getString();
+  }
 }
 
 export { BitmarkStringGenerator };

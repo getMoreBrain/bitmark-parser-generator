@@ -226,6 +226,41 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
    */
   public async generate(ast: BitmarkAst): Promise<void> {
     // Reset the state
+    this.resetState();
+
+    // Open the writer
+    await this.writer.open();
+
+    // Walk the bitmark AST
+    this.walkAndWrite(ast);
+
+    // Write the JSON object to file
+    this.write(JSON.stringify(this.json, null, this.jsonPrettifySpace));
+
+    // Close the writer
+    await this.writer.close();
+  }
+
+  /**
+   * Generate text from a bitmark text AST synchronously
+   *
+   * @param ast bitmark text AST
+   */
+  public generateSync(ast: BitmarkAst): void {
+    // Reset the state
+    this.resetState();
+
+    // Open the writer
+    this.writer.openSync();
+
+    // Walk the bitmark AST
+    this.walkAndWrite(ast);
+
+    // Close the writer
+    this.writer.closeSync();
+  }
+
+  private resetState(): void {
     this.json = [];
     this.bitWrapperJson = {};
     this.bitJson = {};
@@ -233,18 +268,11 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
     this.bodyDefault = this.options.textAsPlainText ? '' : [];
 
     this.printed = false;
+  }
 
-    // Open the writer
-    await this.writer.open();
-
+  private walkAndWrite(ast: BitmarkAst): void {
     // Walk the bitmark AST
     this.ast.walk(ast, this, undefined);
-
-    // Write the JSON object to file
-    this.write(JSON.stringify(this.json, null, this.jsonPrettifySpace));
-
-    // Close the writer
-    await this.writer.close();
   }
 
   enter(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {

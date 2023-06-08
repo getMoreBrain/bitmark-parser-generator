@@ -96,20 +96,51 @@ class BitmarkGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks 
    */
   public async generate(ast: BitmarkAst): Promise<void> {
     // Reset the state
-    this.skipNLBetweenBitsValue = false;
-    this.printed = false;
+    this.resetState();
 
     // Open the writer
     await this.writer.open();
 
     // Walk the bitmark AST
-    this.ast.walk(ast, this, undefined);
+    this.walkAndWrite(ast);
 
     // Ensure a blank line at end of file
     this.writeLine();
 
     // Close the writer
     await this.writer.close();
+  }
+
+  /**
+   * Generate text from a bitmark text AST synchronously
+   *
+   * @param ast bitmark text AST
+   */
+  public generateSync(ast: BitmarkAst): void {
+    // Reset the state
+    this.resetState();
+
+    // Open the writer
+    this.writer.openSync();
+
+    // Walk the bitmark AST
+    this.walkAndWrite(ast);
+
+    // Close the writer
+    this.writer.closeSync();
+  }
+
+  private resetState(): void {
+    this.skipNLBetweenBitsValue = false;
+    this.printed = false;
+  }
+
+  private walkAndWrite(ast: BitmarkAst): void {
+    // Walk the bitmark AST
+    this.ast.walk(ast, this, undefined);
+
+    // Ensure a blank line at end of file
+    this.writeLine();
   }
 
   enter(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {

@@ -87,9 +87,11 @@ const resourceBuilder = new ResourceBuilder();
  * A parser for parsing bitmark JSON to bitmark AST
  */
 class JsonParser {
+  private ast: Ast;
   private textGenerator: TextStringGenerator;
 
   constructor() {
+    this.ast = new Ast();
     this.textGenerator = new TextStringGenerator();
   }
 
@@ -809,9 +811,8 @@ class JsonParser {
 
       if (Array.isArray(body)) {
         // body is JSON, so convert to text
-        const ast = new Ast();
-        ast.printTree(body, NodeType.body);
-        this.textGenerator.generate(body);
+        // const ast = new Ast();
+        this.parseText(body);
       }
 
       const bodyPartNodes: BodyPart[] = [];
@@ -951,8 +952,11 @@ class JsonParser {
   }
 
   private parseText(text: Text): string {
+    this.ast.printTree(text, NodeType.body);
+    const parsedText = this.textGenerator.generateSync(text);
+
     // TODO!!!
-    return text as unknown as string;
+    return parsedText as string;
   }
 }
 

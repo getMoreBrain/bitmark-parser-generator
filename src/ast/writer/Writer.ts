@@ -3,9 +3,20 @@
  */
 export interface Writer {
   /**
+   * If true, the writer is synchronous.
+   * If false, the writer is asynchronous.
+   *
+   * When the writer is synchronous, the openSync() and closeSync() methods can be used, and
+   * the output can be generated synchrounously.
+   */
+  readonly isSync: boolean;
+
+  /**
    * Open the writer for writing.
    *
    * Must be called before any calls to writeXXX();
+   *
+   * This method can be used regardless of the value of isSync.
    */
   open(): Promise<void>;
 
@@ -13,8 +24,28 @@ export interface Writer {
    * Close the writer for writing.
    *
    * Must be called after any calls to writeXXX();
+   *
+   * This method can be used regardless of the value of isSync.
    */
   close(): Promise<void>;
+
+  /**
+   * Open the writer for writing.
+   *
+   * Must be called before any calls to writeXXX();
+   *
+   * This method is only available when isSync is true.
+   */
+  openSync(): void;
+
+  /**
+   * Close the writer for writing.
+   *
+   * Must be called after any calls to writeXXX();
+   *
+   * This method is only available when isSync is true.
+   */
+  closeSync(): void;
 
   /**
    * Writes a string value to the output.

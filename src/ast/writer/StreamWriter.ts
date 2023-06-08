@@ -9,6 +9,10 @@ abstract class StreamWriter implements Writer {
   private _stream: NodeJS.WritableStream | undefined;
   public endOfLineString = os.EOL;
 
+  public get isSync() {
+    return false;
+  }
+
   /**
    * Get the current write stream
    */
@@ -26,6 +30,14 @@ abstract class StreamWriter implements Writer {
   abstract open(): Promise<void>;
 
   abstract close(): Promise<void>;
+
+  public openSync(): void {
+    throw new Error('Sync operation not supported');
+  }
+
+  public closeSync(): void {
+    throw new Error('Sync operation not supported');
+  }
 
   public writeLine(value?: string): this {
     if (!this._stream) return this;
