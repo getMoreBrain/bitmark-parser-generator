@@ -22,6 +22,11 @@ export interface ImageTextNode extends TextNode {
   attrs?: ImageTextNodeAttributes;
 }
 
+export interface TaskItemTextNode extends TextNode {
+  type: 'taskItem';
+  attrs?: TaskItemTextNodeAttributes;
+}
+
 export interface ImageTextNodeAttributes {
   textAlign: string;
   src: string;
@@ -31,4 +36,8 @@ export interface ImageTextNodeAttributes {
   width: string | number | null;
   height: string | number | null;
   section: string;
+}
+
+export interface TaskItemTextNodeAttributes {
+  checked: boolean;
 }

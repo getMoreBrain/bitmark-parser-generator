@@ -6,6 +6,7 @@ import * as fs from 'fs-extra';
 import path from 'path';
 
 import { TextGenerator } from '../../src/generator/text/TextGenerator';
+import { TextFormat } from '../../src/model/enum/TextFormat';
 import { TextParser } from '../../src/parser/text/TextParser';
 import { FileUtils } from '../../src/utils/FileUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
@@ -18,11 +19,16 @@ const TEST_INPUT_DIR = path.resolve(__dirname, './text');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/text-generator/output');
 
 // Enable or disable testing of specific files
-const TEST_ALL = true;
+const TEST_ALL = false;
 
 let TEST_FILES: string[] = [
   //
   // 'plain.text',
+  // 'list.text',
+  // 'bold.text',
+  // 'light.text',
+  // 'italic.text',
+  'highlight.text',
 ];
 
 // ALL tests for CI
@@ -30,6 +36,11 @@ if (process.env.CI || TEST_ALL) {
   TEST_FILES = [
     //
     'plain.text',
+    'list.text',
+    'bold.text',
+    'light.text',
+    'italic.text',
+    'highlight.text',
   ];
 }
 
@@ -110,7 +121,9 @@ describe('text-generation', () => {
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
         // Generate JSON from original bitmark markup using the PEG parser
-        const textAst = textParser.toAst(originalMarkup);
+        const textAst = textParser.toAst(originalMarkup, {
+          textFormat: TextFormat.bitmarkPlusPlus,
+        });
 
         // Write JSON file
         fs.writeFileSync(originalJsonFile, JSON.stringify(textAst, null, 2), {
@@ -138,7 +151,9 @@ describe('text-generation', () => {
         const newMarkup = fs.readFileSync(generatedMarkupFile, 'utf8');
 
         // Generate JSON from generated bitmark markup using the PEG parser
-        const newTextAst = textParser.toAst(newMarkup);
+        const newTextAst = textParser.toAst(newMarkup, {
+          textFormat: TextFormat.bitmarkPlusPlus,
+        });
 
         // Write the new JSON file
         fs.writeFileSync(generatedJsonFile, JSON.stringify(newTextAst, null, 2), {

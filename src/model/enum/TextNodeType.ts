@@ -4,7 +4,10 @@ const TextNodeType = superenum({
   text: 'text',
   paragraph: 'paragraph',
   bulletList: 'bulletList',
+  orderedList: 'orderedList',
+  taskList: 'taskList',
   listItem: 'listItem',
+  taskItem: 'taskItem',
   image: 'image',
 
   // Body bits

@@ -1,0 +1,657 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Some text before the list",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  },
+  {
+    "type": "orderedList",
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Ordered list item 1",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "orderedList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Ordered\nlist item 2",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "orderedList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Ordered list item 3",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "attrs": {
+              "start": 1,
+              "section": ""
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "section": ""
+                    },
+                    "content": [
+                      {
+                        "text": "Bullet list item 3.1",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ],
+                "parent": "bulletList",
+                "attrs": {}
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "section": ""
+                    },
+                    "content": [
+                      {
+                        "text": "Bullet list item 3.2",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ],
+                "parent": "bulletList",
+                "attrs": {}
+              }
+            ],
+            "parent": ""
+          }
+        ],
+        "parent": "orderedList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Ordered list item 4",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "orderedList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Ordered\nlist item 5",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "orderedList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Ordered list item 6",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "attrs": {
+              "start": 1,
+              "section": ""
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "section": ""
+                    },
+                    "content": [
+                      {
+                        "text": "Bullet list item 6.1",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ],
+                "parent": "bulletList",
+                "attrs": {}
+              }
+            ],
+            "parent": ""
+          }
+        ],
+        "parent": "orderedList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Ordered list item 7",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "orderedList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Ordered list item 8",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "attrs": {
+              "start": 1,
+              "section": ""
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "section": ""
+                    },
+                    "content": [
+                      {
+                        "text": "Bullet list item 8.1",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ],
+                "parent": "bulletList",
+                "attrs": {}
+              }
+            ],
+            "parent": ""
+          }
+        ],
+        "parent": "orderedList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Ordered list item 9",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "orderedList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Ordered list item 10",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "attrs": {
+              "start": 1,
+              "section": ""
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "section": ""
+                    },
+                    "content": [
+                      {
+                        "text": "Bullet list item 10.1",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ],
+                "parent": "bulletList",
+                "attrs": {}
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "section": ""
+                    },
+                    "content": [
+                      {
+                        "text": "Bullet list item 10.2",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ],
+                "parent": "bulletList",
+                "attrs": {}
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "section": ""
+                    },
+                    "content": [
+                      {
+                        "text": "Bullet list item 10.3",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ],
+                "parent": "bulletList",
+                "attrs": {}
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "section": ""
+                    },
+                    "content": [
+                      {
+                        "text": "Bullet list item 10.4",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ],
+                "parent": "bulletList",
+                "attrs": {}
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "section": ""
+                    },
+                    "content": [
+                      {
+                        "text": "Bullet list item 10.5",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ],
+                "parent": "bulletList",
+                "attrs": {}
+              }
+            ],
+            "parent": ""
+          }
+        ],
+        "parent": "orderedList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Ordered list item 11",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "orderedList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Ordered list item 12",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "orderedList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Bullet list item 1",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "bulletList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Bullet list item 2",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "bulletList",
+        "attrs": {}
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Some text after the list\n\n\nA task list",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  },
+  {
+    "type": "taskList",
+    "content": [
+      {
+        "type": "taskItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Task list item 11.1 checked",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "taskList",
+        "attrs": {
+          "checked": true
+        }
+      },
+      {
+        "type": "taskItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Task list item 11.2 checked",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "taskList",
+        "attrs": {
+          "checked": true
+        }
+      },
+      {
+        "type": "taskItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Task list item 11.3 checked",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "taskList",
+        "attrs": {
+          "checked": true
+        }
+      },
+      {
+        "type": "taskItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Task list item\n11.4 NOT checked",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "taskList",
+        "attrs": {
+          "checked": false
+        }
+      },
+      {
+        "type": "taskItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Task list item 11.5 NOT checked",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "taskList",
+        "attrs": {
+          "checked": false
+        }
+      },
+      {
+        "type": "taskItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Task list item 11.6\nchecked",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "taskList",
+        "attrs": {
+          "checked": true
+        }
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Some text after the tasklist",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  }
+]

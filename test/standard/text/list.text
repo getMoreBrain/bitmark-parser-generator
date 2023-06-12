@@ -1,0 +1,41 @@
+Some text before the list
+•1 Ordered list item 1
+•1 Ordered
+list item 2
+•1 Ordered list item 3
+	• Bullet list item 3.1
+	• Bullet list item 3.2
+•1 Ordered list item 4
+•1 Ordered
+list item 5
+•1 Ordered list item 6
+	• Bullet list item 6.1
+•1 Ordered list item 7
+•1 Ordered list item 8
+	• Bullet list item 8.1
+•1 Ordered list item 9
+•1 Ordered list item 10
+	• Bullet list item 10.1
+	• Bullet list item 10.2
+	• Bullet list item 10.3
+	• Bullet list item 10.4
+	• Bullet list item 10.5
+•1 Ordered list item 11
+•1 Ordered list item 12
+• Bullet list item 1
+• Bullet list item 2
+
+Some text after the list
+
+
+A task list
+•+ Task list item 11.1 checked
+•+ Task list item 11.2 checked
+•+ Task list item 11.3 checked
+•- Task list item
+11.4 NOT checked
+•- Task list item 11.5 NOT checked
+•+ Task list item 11.6
+checked
+
+Some text after the tasklist

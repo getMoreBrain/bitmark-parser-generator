@@ -1,7 +1,7 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { NodeType } from '../../model/ast/NodeType';
 import { Bit } from '../../model/ast/Nodes';
-import { ImageTextNode, TextAst, TextNode } from '../../model/ast/TextNodes';
+import { ImageTextNode, TaskItemTextNode, TextAst, TextNode } from '../../model/ast/TextNodes';
 import { BitTypeType } from '../../model/enum/BitType';
 import { TextMarkType } from '../../model/enum/TextMarkType';
 import { TextNodeType } from '../../model/enum/TextNodeType';
@@ -40,6 +40,7 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
 
   // State
   private writerText = '';
+  private currentIndent = 0;
   private placeholderIndex = 0;
   private placeholders: BodyBitsJson = {};
 
@@ -102,6 +103,7 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
     this.printed = false;
 
     this.writerText = '';
+    this.currentIndent = 0;
     this.placeholderIndex = 0;
     this.placeholders = {};
   }
@@ -224,19 +226,23 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
   // END NODE HANDLERS
 
   protected handleEnterNode(node: TextNode): void {
+    this.handleIndent(node);
+
     switch (node.type) {
       case TextNodeType.text:
-        this.writeMarks(node);
+        this.writeMarks(node, true);
         this.writeText(node);
         break;
+
       case TextNodeType.listItem:
-        if (node.parent === TextNodeType.bulletList) {
-          this.writeString('• ');
-        }
+      case TextNodeType.taskItem:
+        this.writeBullet(node);
         break;
+
       case TextNodeType.image:
         this.writeImage(node as ImageTextNode);
         break;
+
       case TextNodeType.gap:
       case TextNodeType.select:
       case TextNodeType.highlight:
@@ -257,14 +263,50 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
   protected handleExitNode(node: TextNode): void {
     switch (node.type) {
       case TextNodeType.text:
-        this.writeMarks(node);
+        this.writeMarks(node, false);
         break;
+
       case TextNodeType.paragraph:
-      case TextNodeType.bulletList:
       case TextNodeType.image:
         // Block type nodes, write a newline
         this.writeNL();
         break;
+
+      case TextNodeType.bulletList:
+      case TextNodeType.orderedList:
+      case TextNodeType.taskList:
+        // List Block type nodes, write a newline only if there is no indent
+        if (this.currentIndent <= 1) this.writeNL();
+        break;
+
+      default:
+      // Ignore unknown type
+    }
+
+    this.handleDedent(node);
+  }
+
+  protected handleIndent(node: TextNode) {
+    switch (node.type) {
+      case TextNodeType.bulletList:
+      case TextNodeType.orderedList:
+      case TextNodeType.taskList:
+        this.currentIndent++;
+        break;
+
+      default:
+      // Ignore unknown type
+    }
+  }
+
+  protected handleDedent(node: TextNode) {
+    switch (node.type) {
+      case TextNodeType.bulletList:
+      case TextNodeType.orderedList:
+      case TextNodeType.taskList:
+        this.currentIndent--;
+        break;
+
       default:
       // Ignore unknown type
     }
@@ -294,7 +336,7 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
     this.write(s);
   }
 
-  protected writeMarks(node: TextNode): void {
+  protected writeMarks(node: TextNode, _enter: boolean): void {
     if (node.marks) {
       for (const mark of node.marks) {
         switch (mark.type) {
@@ -315,6 +357,26 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
         }
       }
     }
+  }
+
+  protected writeBullet(node: TextNode) {
+    let bullet = '';
+
+    // Add indentation
+    for (let i = 1; i < this.currentIndent; i++) bullet += '\t';
+    // for (let i = 1; i < this.currentIndent; i++) bullet += '_';
+
+    // Add bullet
+    if (node.parent === TextNodeType.bulletList) {
+      bullet += '• ';
+    } else if (node.parent === TextNodeType.orderedList) {
+      bullet += '•1 ';
+    } else if (node.parent === TextNodeType.taskList) {
+      const taskList = node as TaskItemTextNode;
+      const checked = taskList.attrs?.checked ?? false;
+      bullet += checked ? '•+ ' : '•- ';
+    }
+    if (bullet) this.writeString(bullet);
   }
 
   protected writeImage(node: ImageTextNode): void {
