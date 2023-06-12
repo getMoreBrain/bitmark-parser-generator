@@ -9,7 +9,7 @@ import { BitmarkGenerator, BitmarkOptions } from './BitmarkGenerator';
 /**
  * Generate bitmark markup from a bitmark AST as a file
  */
-class BitmarkFileGenerator implements Generator<BitmarkAst, void> {
+class BitmarkFileGenerator implements Generator<BitmarkAst> {
   private generator: BitmarkGenerator;
 
   /**
@@ -31,6 +31,15 @@ class BitmarkFileGenerator implements Generator<BitmarkAst, void> {
    */
   public async generate(ast: BitmarkAst): Promise<void> {
     return this.generator.generate(ast);
+  }
+
+  /**
+   * Generate bitmark markup from bitmark AST as a file synchronously
+   *
+   * @param ast bitmark AST
+   */
+  public generateSync(_ast: BitmarkAst): string {
+    throw new Error('Sync operation not supported');
   }
 }
 

@@ -8,7 +8,7 @@ const NodeType = superenum({
   unknown: 'unknown', // unknown
 
   // Non-terminal
-  bitmark: 'bitmark', // bitmark
+  bitmarkAst: 'bitmarkAst', // bitmarkAst
   bits: 'bits', // bits
   bitsValue: 'bitsValue', // bit
   properties: 'properties',
@@ -137,6 +137,7 @@ const NodeType = superenum({
   instruction: 'instruction',
   example: 'example',
   exampleValue: 'exampleValue',
+  isExample: 'isExample',
 
   extraProperties: 'extraProperties',
 

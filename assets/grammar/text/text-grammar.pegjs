@@ -86,6 +86,8 @@ Das war's
 
 {{
 
+const UNBREAKSCAPE_REGEX = new RegExp(/([*_`!])\^(?!\^)/, "g");
+
 function s(_string) {
   return _string ?? ""
 }
@@ -93,8 +95,7 @@ function s(_string) {
 function unbreakscape(_str) {
 	let u_ = _str || ""
 
-  let re_ = new RegExp( /([*_`!])\^(?!\^)/, "g")
-  u_ = u_.replace(re_, "$1")
+  u_ = u_.replace(UNBREAKSCAPE_REGEX, "$1")
 
   return u_
 }

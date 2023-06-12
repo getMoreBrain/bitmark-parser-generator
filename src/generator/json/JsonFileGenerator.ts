@@ -11,7 +11,7 @@ import { JsonGenerator, JsonOptions } from './JsonGenerator';
  *
  * TODO: NOT IMPLEMENTED!
  */
-class JsonFileGenerator implements Generator<BitmarkAst, void> {
+class JsonFileGenerator implements Generator<BitmarkAst> {
   private generator: JsonGenerator;
 
   /**
@@ -33,6 +33,15 @@ class JsonFileGenerator implements Generator<BitmarkAst, void> {
    */
   public async generate(ast: BitmarkAst): Promise<void> {
     return this.generator.generate(ast);
+  }
+
+  /**
+   * Generate bitmark JSON from bitmark AST as a file synchronously
+   *
+   * @param ast bitmark AST
+   */
+  public generateSync(_ast: BitmarkAst): string {
+    throw new Error('Sync operation not supported');
   }
 }
 

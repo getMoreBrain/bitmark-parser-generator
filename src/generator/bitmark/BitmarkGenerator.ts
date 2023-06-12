@@ -56,7 +56,7 @@ export interface BitmarkOptions {
 /**
  * Generate bitmark markup from a bitmark AST
  */
-class BitmarkGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
+class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected ast = new Ast();
   private options: BitmarkOptions;
   private writer: Writer;
@@ -137,7 +137,7 @@ class BitmarkGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks 
 
   private walkAndWrite(ast: BitmarkAst): void {
     // Walk the bitmark AST
-    this.ast.walk(ast, this, undefined);
+    this.ast.walk(ast, NodeType.bitmarkAst, this, undefined);
 
     // Ensure a blank line at end of file
     this.writeLine();
@@ -343,15 +343,15 @@ class BitmarkGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks 
 
   protected enter_itemLead(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const itemLead = node.value as ItemLead;
-    if (itemLead && (itemLead.item?.text || itemLead.lead?.text)) {
+    if (itemLead && (itemLead.item || itemLead.lead)) {
       // Always write item if item or lead is set
       this.writeOPC();
-      this.writeString(itemLead.item?.text || '');
+      this.writeString(itemLead.item || '');
       this.writeCL();
 
-      if (itemLead.lead?.text) {
+      if (itemLead.lead) {
         this.writeOPC();
-        this.writeString(itemLead.lead.text);
+        this.writeString(itemLead.lead);
         this.writeCL();
       }
     }
@@ -910,8 +910,8 @@ class BitmarkGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks 
   //  bitmark -> bits -> title
 
   protected leaf_title(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const value = node.value as TextNode;
-    const title = value?.text;
+    const value = node.value as string;
+    const title = value;
     const bit = parent?.value as Bit;
     const level = bit.level || 1;
     if (level && title) {
@@ -925,8 +925,8 @@ class BitmarkGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks 
   //  bitmark -> bits -> subtitle
 
   protected leaf_subtitle(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const value = node.value as TextNode;
-    const subtitle = value?.text;
+    const value = node.value as string;
+    const subtitle = value;
     const level = 2;
     if (level && subtitle) {
       this.writeOP();
@@ -988,9 +988,9 @@ class BitmarkGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks 
 
   //  * -> hint
 
-  protected enter_hint(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const value = node.value as TextNode;
-    const text = value?.text;
+  protected leaf_hint(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const value = node.value as string;
+    const text = value;
     if (text) {
       this.writeOPQ();
       this.writeString(text);
@@ -1000,9 +1000,9 @@ class BitmarkGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks 
 
   // bitmark -> bits -> bitsValue ->  * -> instruction
 
-  protected enter_instruction(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const value = node.value as TextNode;
-    const text = value?.text;
+  protected leaf_instruction(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const value = node.value as string;
+    const text = value;
     if (text) {
       this.writeOPB();
       this.writeString(text);
@@ -1013,15 +1013,15 @@ class BitmarkGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks 
   // bitmark -> bits -> bitsValue ->  * -> example
 
   protected enter_example(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const example = node.value as TextNode | undefined;
+    const example = node.value as string | undefined;
 
     if (example) {
       this.writeOPA();
       this.writeString('example');
 
-      if (example.text !== '') {
+      if (example !== '') {
         this.writeColon();
-        this.writeString(example.text);
+        this.writeString(example);
       }
 
       this.writeCL();
@@ -1040,9 +1040,9 @@ class BitmarkGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks 
 
   // bitmark -> bits -> body -> bodyValue -> bodyText
 
-  protected enter_bodyText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const value = node.value as TextNode;
-    const text = value?.text;
+  protected leaf_bodyText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const value = node.value as string;
+    const text = value;
     if (text) {
       this.writeString(text);
     }
@@ -1050,9 +1050,9 @@ class BitmarkGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks 
 
   // bitmark -> bits -> footer -> footerText
 
-  protected enter_footerText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const value = node.value as TextNode;
-    const text = value?.text;
+  protected leaf_footerText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const value = node.value as string;
+    const text = value;
     if (text) {
       this.writeString(text);
     }
@@ -1223,8 +1223,8 @@ class BitmarkGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks 
   }
 
   protected enter_caption(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const value = node.value as TextNode;
-    this.writeProperty('caption', value?.text);
+    const value = node.value as string;
+    this.writeProperty('caption', value);
   }
 
   // bitmark -> bits -> bitsValue -> resource -> ...

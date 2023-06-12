@@ -1,16 +1,24 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
-import { Writer } from '../../ast/writer/Writer';
 import { NodeType } from '../../model/ast/NodeType';
-import { Bit, Resource, ArticleResource, StillImageFilmResource } from '../../model/ast/Nodes';
-import { TextAst } from '../../model/ast/TextNodes';
-import { BitType, BitTypeType } from '../../model/enum/BitType';
-import { ResourceType } from '../../model/enum/ResourceType';
-import { TextFormat } from '../../model/enum/TextFormat';
+import { Bit } from '../../model/ast/Nodes';
+import { TextAst, TextNode } from '../../model/ast/TextNodes';
+import { BitTypeType } from '../../model/enum/BitType';
+import { TextMarkType } from '../../model/enum/TextMarkType';
+import { TextNodeType } from '../../model/enum/TextNodeType';
+import { BodyBitJson, BodyBitsJson } from '../../model/json/BodyBitJson';
 import { Generator } from '../Generator';
 
 const DEFAULT_OPTIONS: TextOptions = {
   debugGenerationInline: false,
 };
+
+// Regex explanation:
+// - Match a single character of a text mark and capture in group 1
+// - check that the character BEFORE is NOT the same mark (look-behind)
+// - check that the character AFTER IS the same mark
+// - check that the character AFTER that is NOT the same mark (look-ahead)
+// This will capture all double marks, and ignore single or more than double marks
+const BREAKSCAPE_REGEX = new RegExp('([*_`!])(?<!\\1\\1)\\1(?!\\1)', 'g');
 
 /**
  * Text generation options
@@ -26,12 +34,14 @@ export interface TextOptions {
 /**
  * Generate text from a bitmark text AST
  */
-class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
+class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
   protected ast = new Ast();
   private options: TextOptions;
-  private writer: Writer;
 
   // State
+  private writerText = '';
+  private placeholderIndex = 0;
+  private placeholders: BodyBitsJson = {};
 
   // Debug
   private printed = false;
@@ -42,13 +52,11 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
    * @param writer - destination for the output
    * @param options - text generation options
    */
-  constructor(writer: Writer, options?: TextOptions) {
+  constructor(options?: TextOptions) {
     this.options = {
       ...DEFAULT_OPTIONS,
       ...options,
     };
-
-    this.writer = writer;
 
     this.enter = this.enter.bind(this);
     this.between = this.between.bind(this);
@@ -61,18 +69,14 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
    *
    * @param ast bitmark text AST
    */
-  public async generate(ast: TextAst): Promise<void> {
+  public async generate(ast: TextAst): Promise<string> {
     // Reset the state
     this.resetState();
-
-    // Open the writer
-    await this.writer.open();
 
     // Walk the text AST
     this.walkAndWrite(ast);
 
-    // Close the writer
-    await this.writer.close();
+    return this.writerText;
   }
 
   /**
@@ -80,30 +84,31 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
    *
    * @param ast bitmark text AST
    */
-  public generateSync(ast: TextAst): void {
+  public generateSync(ast: TextAst): string {
     // Reset the state
     this.resetState();
-
-    // Open the writer
-    this.writer.openSync();
 
     // Walk the text AST
     this.walkAndWrite(ast);
 
-    // Close the writer
-    this.writer.closeSync();
+    return this.writerText;
+  }
+
+  public getPlaceholders(): BodyBitsJson {
+    return this.placeholders;
   }
 
   private resetState(): void {
     this.printed = false;
+
+    this.writerText = '';
+    this.placeholderIndex = 0;
+    this.placeholders = {};
   }
 
   private walkAndWrite(ast: TextAst): void {
     // Walk the bitmark AST
-    this.ast.walk(ast, this, undefined);
-
-    // Ensure a blank line at end of file
-    this.writeLine();
+    this.ast.walk(ast, NodeType.textAst, this, undefined);
   }
 
   enter(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
@@ -176,114 +181,154 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
   // NODE HANDLERS
   //
 
+  // * -> textAstValue
+
+  protected enter_textAstValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.handleEnterNode(node.value);
+  }
+
+  protected between_textAstValue(
+    node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.handleBetweenNode(node.value);
+  }
+
+  protected exit_textAstValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.handleExitNode(node.value);
+  }
+
+  // * -> contentValue
+
+  protected enter_contentValueValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.handleEnterNode(node.value);
+  }
+
+  protected between_contentValueValue(
+    node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.handleBetweenNode(node.value);
+  }
+
+  protected exit_contentValueValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.handleExitNode(node.value);
+  }
+
   // END NODE HANDLERS
+
+  protected handleEnterNode(node: TextNode): void {
+    switch (node.type) {
+      case TextNodeType.text:
+        this.writeMarks(node);
+        this.writeText(node);
+        break;
+      case TextNodeType.listItem:
+        if (node.parent === TextNodeType.bulletList) {
+          this.writeString('• ');
+        }
+        break;
+      case TextNodeType.gap:
+      case TextNodeType.select:
+      case TextNodeType.highlight:
+        this.writeBodyBit(node);
+        break;
+      default:
+      // Ignore unknown type
+    }
+  }
+
+  protected handleBetweenNode(node: TextNode): void {
+    switch (node.type) {
+      default:
+      // Ignore unknown type
+    }
+  }
+
+  protected handleExitNode(node: TextNode): void {
+    switch (node.type) {
+      case TextNodeType.text:
+        this.writeMarks(node);
+        break;
+      case TextNodeType.paragraph:
+        this.writeNL();
+        break;
+      default:
+      // Ignore unknown type
+    }
+  }
 
   //
   // WRITE FUNCTIONS
   //
 
+  protected writeBodyBit(node: TextNode) {
+    // Write placeholder to the text
+    const placeholder = `[!${this.placeholderIndex}]`;
+    this.writerText += placeholder;
+
+    this.placeholders[placeholder] = node as unknown as BodyBitJson;
+
+    this.placeholderIndex++;
+  }
+
+  protected writeText(node: TextNode): void {
+    if (node.text == null) return;
+
+    // Breakscape the text
+    const s = node.text.replace(BREAKSCAPE_REGEX, '$1^$1');
+
+    // Write the text
+    this.write(s);
+  }
+
+  protected writeMarks(node: TextNode): void {
+    if (node.marks) {
+      for (const mark of node.marks) {
+        switch (mark.type) {
+          case TextMarkType.bold:
+            this.writeBoldTag();
+            break;
+          case TextMarkType.light:
+            this.writeLightTag();
+            break;
+          case TextMarkType.italic:
+            this.writeItalicTag();
+            break;
+          case TextMarkType.highlight:
+            this.writeHighlight();
+            break;
+          default:
+          // Do nothing
+        }
+      }
+    }
+  }
+
   protected writeString(s?: string): void {
     if (s != null) this.write(`${s}`);
   }
 
-  protected writeOPBUL(): void {
-    this.write('[•');
+  protected writeBoldTag(): void {
+    this.write('**');
   }
 
-  protected writeOPESC(): void {
-    this.write('[^');
+  protected writeLightTag(): void {
+    this.write('``');
   }
 
-  protected writeOPRANGLE(): void {
-    this.write('[►');
+  protected writeItalicTag(): void {
+    this.write('__');
   }
 
-  protected writeOPDANGLE(): void {
-    this.write('[▼');
-  }
-
-  protected writeOPD(): void {
-    this.write('[.');
-  }
-
-  protected writeOPU(): void {
-    this.write('[_');
-  }
-
-  protected writeOPB(): void {
-    this.write('[!');
-  }
-
-  protected writeOPQ(): void {
-    this.write('[?');
-  }
-
-  protected writeOPA(): void {
-    this.write('[@');
-  }
-
-  protected writeOPP(): void {
-    this.write('[+');
-  }
-
-  protected writeOPM(): void {
-    this.write('[-');
-  }
-
-  protected writeOPS(): void {
-    this.write('[\\');
-  }
-
-  protected writeOPR(): void {
-    this.write('[*');
-  }
-
-  protected writeOPC(): void {
-    this.write('[%');
-  }
-
-  protected writeOPAMP(): void {
-    this.write('[&');
-  }
-
-  protected writeOPDOLLAR(): void {
-    this.write('[$');
-  }
-
-  protected writeOPHASH(): void {
-    this.write('[#');
-  }
-
-  protected writeOPPRE(): void {
-    this.write("['");
-  }
-
-  protected writeOPPOST(): void {
-    this.write('['); // TODO - not sure what symbol is for postfix
-  }
-
-  protected writeOP(): void {
-    this.write('[');
-  }
-
-  protected writeCL(): void {
-    this.write(']');
-  }
-
-  protected writeAmpersand(): void {
-    this.write('&');
-  }
-
-  protected writeColon(): void {
-    this.write(':');
-  }
-
-  // protected writeDoubleColon(): void {
-  //   this.write('::');
-  // }
-
-  protected writeHash(): void {
-    this.write('#');
+  protected writeHighlight(): void {
+    this.write('!!');
   }
 
   protected writeNL(): void {
@@ -292,82 +337,6 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
       return;
     }
     this.write('\n');
-  }
-
-  protected writeResource(resource: Resource): boolean | void {
-    const resourceAsArticle = resource as ArticleResource;
-
-    if (resource) {
-      // All resources should now be valid as they are validated in the AST
-      // TODO: remove code below
-
-      // // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
-      // let valid = false;
-      // if (resource.value) {
-      //   valid = true;
-      // }
-
-      // // Resource is not valid, cancel walking it's tree.
-      // if (!valid) return false;
-
-      // Special case for embedded resources
-      if (resource.type === ResourceType.stillImageFilm) {
-        const r = resource as StillImageFilmResource;
-        this.writeResource(r.image);
-        this.writeNL();
-        this.writeResource(r.audio);
-      } else {
-        // Standard case
-        this.writeOPAMP();
-        this.writeString(resource.type);
-        if (resource.type === ResourceType.article && resourceAsArticle.value) {
-          this.writeColon();
-          // this.writeNL();
-          this.writeString(resourceAsArticle.value);
-          this.writeNL();
-        } else if (resource.value) {
-          this.writeColon();
-          this.writeString(resource.value);
-        }
-        this.writeCL();
-      }
-    }
-  }
-
-  protected writeProperty(
-    name: string,
-    values?: unknown | unknown[],
-    singleOnly?: boolean,
-    ignoreFalse?: boolean,
-    ignoreTrue?: boolean,
-  ): void {
-    let valuesArray: unknown[];
-    // let wroteSomething = false;
-
-    if (values !== undefined) {
-      if (!Array.isArray(values)) {
-        valuesArray = [values];
-      } else {
-        valuesArray = values;
-      }
-
-      if (valuesArray.length > 0) {
-        if (singleOnly) valuesArray = valuesArray.slice(valuesArray.length - 1);
-
-        for (const val of valuesArray) {
-          if (val !== undefined) {
-            if (ignoreFalse && val === false) continue;
-            if (ignoreTrue && val === true) continue;
-            this.writeOPA();
-            this.writeString(name);
-            this.writeColon();
-            this.writeString(`${val}`);
-            this.writeCL();
-            // wroteSomething = true;
-          }
-        }
-      }
-    }
   }
 
   protected writeInlineDebug(key: string, state: { open?: boolean; close?: boolean; single?: boolean }) {
@@ -381,17 +350,6 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
     }
 
     this.writeString(tag);
-  }
-
-  protected isWriteTextFormat(bitsValue: string): boolean {
-    const isMinusMinus = TextFormat.fromValue(bitsValue) === TextFormat.bitmarkMinusMinus;
-    const writeFormat = !isMinusMinus;
-    return !!writeFormat;
-  }
-
-  protected isStatementDivider(route: NodeInfo[]) {
-    const bitType = this.getBitType(route);
-    return !(bitType === BitType.trueFalse1);
   }
 
   protected getBitType(route: NodeInfo[]): BitTypeType | undefined {
@@ -414,7 +372,7 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
    * @param value - The string value to be written.
    */
   write(value: string): this {
-    this.writer.write(value);
+    this.writerText += value;
     return this;
   }
 
@@ -423,7 +381,7 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
    * @param value - The line to write. When omitted, only the endOfLineString is written.
    */
   writeLine(value?: string): this {
-    this.writer.writeLine(value);
+    this.writerText += `${value}\n`;
     return this;
   }
 
@@ -433,7 +391,9 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
    * @param delimiter - An optional delimiter to be written at the end of each line, except for the last one.
    */
   writeLines(values: string[], delimiter?: string): this {
-    this.writer.writeLines(values, delimiter);
+    for (const value of values) {
+      this.writerText += `${value}${delimiter ?? ''}\n`;
+    }
     return this;
   }
 
@@ -441,7 +401,7 @@ class TextGenerator implements Generator<TextAst, void>, AstWalkCallbacks {
    * Writes a single whitespace character to the output.
    */
   writeWhiteSpace(): this {
-    this.writer.writeWhiteSpace();
+    this.writerText += ' ';
     return this;
   }
 }

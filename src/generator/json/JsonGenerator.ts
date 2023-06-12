@@ -177,7 +177,7 @@ interface ExampleAndIsExample {
  *
  * TODO: NOT IMPLEMENTED!
  */
-class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
+class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected ast = new Ast();
   private textParser = new TextParser();
 
@@ -272,7 +272,7 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
 
   private walkAndWrite(ast: BitmarkAst): void {
     // Walk the bitmark AST
-    this.ast.walk(ast, this, undefined);
+    this.ast.walk(ast, NodeType.bitmarkAst, this, undefined);
   }
 
   enter(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
@@ -351,7 +351,7 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
 
   // bitmark
 
-  protected enter_bitmark(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_bitmarkAst(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     // Reset the JSON
     this.json = [];
   }
@@ -1856,14 +1856,11 @@ class JsonGenerator implements Generator<BitmarkAst, void>, AstWalkCallbacks {
    * @param text
    * @returns
    */
-  protected toTextAstOrString(
-    text: string | undefined,
-    format: TextFormatType = TextFormat.bitmarkMinusMinus,
-  ): TextAst | string | undefined {
+  protected toTextAstOrString(text: string | undefined, format: TextFormatType = TextFormat.bitmarkMinusMinus): Text {
     if (!text) undefined;
 
     if (this.options.textAsPlainText) {
-      return text;
+      return text as string;
     }
 
     // Use the text parser to parse the text

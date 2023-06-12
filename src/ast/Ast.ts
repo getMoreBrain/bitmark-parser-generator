@@ -113,11 +113,12 @@ class Ast {
    * ```
    *
    * @param context - context object to pass to callbacks
-   * @param ast - bitmark AST
+   * @param ast - bitmark / text AST
+   * @param type - type of AST to walk (i.e. NodeType.bitmarkAst, NodeType.textAst)
    * @param callbacks - set of callbacks to call while walking the tree
    */
-  walk<C>(ast: Node, callbacks: AstWalkCallbacks<C>, context: C): void {
-    this.walkRecursive(ast, undefined, callbacks, [{ index: 0, key: 'bitmark', value: ast }], context);
+  walk<C>(ast: Node, type: NodeTypeType, callbacks: AstWalkCallbacks<C>, context: C): void {
+    this.walkRecursive(ast, undefined, callbacks, [{ index: 0, key: type, value: ast }], context);
   }
 
   /**
@@ -147,7 +148,7 @@ class Ast {
    * @param ast - AST
    * @param rootKey - root node key
    */
-  printTree(ast: Node, rootKey: NodeTypeType = NodeType.bitmark): void {
+  printTree(ast: Node, rootKey: NodeTypeType = NodeType.bitmarkAst): void {
     this.walkRecursive(
       ast,
       undefined,

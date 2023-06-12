@@ -32,6 +32,16 @@ class JsonObjectGenerator implements Generator<BitmarkAst, BitWrapperJson[]> {
     await this.generator.generate(ast);
     return JSON.parse(this.writer.getString());
   }
+
+  /**
+   * Generate bitmark JSON from bitmark AST as a plain JS object synchronously
+   *
+   * @param ast bitmark AST
+   */
+  public generateSync(ast: BitmarkAst): BitWrapperJson[] {
+    this.generator.generateSync(ast);
+    return JSON.parse(this.writer.getString());
+  }
 }
 
 export { JsonObjectGenerator };

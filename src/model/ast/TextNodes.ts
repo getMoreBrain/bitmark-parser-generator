@@ -1,7 +1,18 @@
+import { TextMarkTypeType } from '../enum/TextMarkType';
+import { TextNodeTypeType } from '../enum/TextNodeType';
+
 export type Text = string | TextAst;
 
-// export interface TextAst {
-//   // TODO
-// }
+export interface TextNode {
+  type: TextNodeTypeType;
+  marks: TextMark[];
+  text?: string;
+  content?: TextNode[];
+  parent?: TextNodeTypeType;
+}
 
-export type TextAst = unknown; // TODO
+export interface TextMark {
+  type: TextMarkTypeType;
+}
+
+export type TextAst = TextNode[];

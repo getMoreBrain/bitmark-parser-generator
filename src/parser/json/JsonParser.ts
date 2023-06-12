@@ -1,7 +1,7 @@
 import { Ast } from '../../ast/Ast';
 import { Builder } from '../../ast/Builder';
 import { ResourceBuilder } from '../../ast/ResourceBuilder';
-import { TextStringGenerator } from '../../generator/text/TextStringGenerator';
+import { TextGenerator } from '../../generator/text/TextGenerator';
 import { NodeType } from '../../model/ast/NodeType';
 import { Text } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
@@ -88,11 +88,11 @@ const resourceBuilder = new ResourceBuilder();
  */
 class JsonParser {
   private ast: Ast;
-  private textGenerator: TextStringGenerator;
+  private textGenerator: TextGenerator;
 
   constructor() {
     this.ast = new Ast();
-    this.textGenerator = new TextStringGenerator();
+    this.textGenerator = new TextGenerator();
   }
 
   /**
@@ -789,10 +789,23 @@ class JsonParser {
 
   private bodyToAst(body: Text, placeholders: BodyBitsJson): Body | undefined {
     let node: Body | undefined;
-
+    let bodyStr: string | undefined;
     const placeholderNodes: {
       [keyof: string]: BodyBit;
     } = {};
+
+    if (Array.isArray(body)) {
+      // Body is an array (prosemirror like JSON)
+
+      // Parse the body to string in case it is in JSON format
+      bodyStr = this.parseText(body);
+
+      // Get the placeholders from the text parser
+      placeholders = this.textGenerator.getPlaceholders();
+    } else {
+      // Body is a string (legacy)
+      bodyStr = body;
+    }
 
     // Placeholders
     if (placeholders) {
@@ -802,21 +815,10 @@ class JsonParser {
       }
     }
 
-    // Body (with insterted placeholders)
-    if (body) {
-      // TODO - this split will need escaping, but actually we shouldn't need it anyway once bitmark JSON is actually
-      // all JSON
-      // TODO - will need to convert text JSON back to text and then split in order to be able to build the
-      // body correctly in AST
-
-      if (Array.isArray(body)) {
-        // body is JSON, so convert to text
-        // const ast = new Ast();
-        this.parseText(body);
-      }
-
+    if (bodyStr) {
+      // Split the body string and insert the placeholders
       const bodyPartNodes: BodyPart[] = [];
-      const bodyParts: string[] = StringUtils.splitPlaceholders(body as string, Object.keys(placeholderNodes));
+      const bodyParts: string[] = StringUtils.splitPlaceholders(bodyStr, Object.keys(placeholderNodes));
 
       for (let i = 0, len = bodyParts.length; i < len; i++) {
         const bodyPart = bodyParts[i];
@@ -951,12 +953,16 @@ class JsonParser {
     return { example: !!isExample };
   }
 
-  private parseText(text: Text): string {
-    this.ast.printTree(text, NodeType.body);
-    const parsedText = this.textGenerator.generateSync(text);
+  private parseText(text: Text | undefined): string | undefined {
+    if (text == null) return undefined;
+    if (Array.isArray(text)) {
+      this.ast.printTree(text, NodeType.textAst);
+      const parsedText = this.textGenerator.generateSync(text);
 
-    // TODO!!!
-    return parsedText as string;
+      return parsedText;
+    }
+
+    return text as string;
   }
 }
 
