@@ -12,6 +12,18 @@ const DEFAULT_OPTIONS: TextOptions = {
   debugGenerationInline: false,
 };
 
+const BOLD_HALF_MARK = '*';
+const LIGHT_HALF_MARK = '`';
+const ITALIC_HALF_MARK = '_';
+const HIGHLIGHT_HALF_MARK = '!';
+
+const BOLD_MARK = BOLD_HALF_MARK + BOLD_HALF_MARK;
+const LIGHT_MARK = LIGHT_HALF_MARK + LIGHT_HALF_MARK;
+const ITALIC_MARK = ITALIC_HALF_MARK + ITALIC_HALF_MARK;
+const HIGHLIGHT_MARK = HIGHLIGHT_HALF_MARK + HIGHLIGHT_HALF_MARK;
+
+const ALL_HALF_MARKS = [BOLD_HALF_MARK, LIGHT_HALF_MARK, ITALIC_HALF_MARK, HIGHLIGHT_HALF_MARK];
+
 // Regex explanation:
 // - Match a single character of a text mark and capture in group 1
 // - check that the character BEFORE is NOT the same mark (look-behind)
@@ -39,6 +51,7 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
   private options: TextOptions;
 
   // State
+  private lastWrittenChar = '';
   private writerText = '';
   private currentIndent = 0;
   private placeholderIndex = 0;
@@ -414,19 +427,19 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
   }
 
   protected writeBoldTag(): void {
-    this.write('**');
+    this.write(BOLD_MARK);
   }
 
   protected writeLightTag(): void {
-    this.write('``');
+    this.write(LIGHT_MARK);
   }
 
   protected writeItalicTag(): void {
-    this.write('__');
+    this.write(ITALIC_MARK);
   }
 
   protected writeHighlight(): void {
-    this.write('!!');
+    this.write(HIGHLIGHT_MARK);
   }
 
   protected writeNL(): void {
@@ -470,7 +483,19 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
    * @param value - The string value to be written.
    */
   write(value: string): this {
+    // Breakscape the text join if necessary
+    if (value && value.length > 0) {
+      const firstChar = value[0];
+      if (firstChar === this.lastWrittenChar && ALL_HALF_MARKS.indexOf(firstChar) >= 0) {
+        this.writerText += '^';
+      }
+    }
+
     this.writerText += value;
+
+    // Save the last written char for breakscaping when writing marks
+    if (value && value.length > 0) this.lastWrittenChar = value[value.length - 1];
+
     return this;
   }
 
@@ -479,7 +504,7 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
    * @param value - The line to write. When omitted, only the endOfLineString is written.
    */
   writeLine(value?: string): this {
-    this.writerText += `${value}\n`;
+    this.write(`${value}\n`);
     return this;
   }
 
@@ -490,7 +515,7 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
    */
   writeLines(values: string[], delimiter?: string): this {
     for (const value of values) {
-      this.writerText += `${value}${delimiter ?? ''}\n`;
+      this.write(`${value}${delimiter ?? ''}\n`);
     }
     return this;
   }
@@ -499,7 +524,7 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
    * Writes a single whitespace character to the output.
    */
   writeWhiteSpace(): this {
-    this.writerText += ' ';
+    this.write(' ');
     return this;
   }
 }
