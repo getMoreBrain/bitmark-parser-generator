@@ -260,6 +260,9 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
         this.writeMarks(node);
         break;
       case TextNodeType.paragraph:
+      case TextNodeType.bulletList:
+      case TextNodeType.image:
+        // Block type nodes, write a newline
         this.writeNL();
         break;
       default:

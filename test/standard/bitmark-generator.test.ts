@@ -343,7 +343,7 @@ function getTestFilenames(): string[] {
   return files;
 }
 
-describe('bitmark-gen', () => {
+describe('bitmark-generator', () => {
   describe('JSON => Markup => JSON: Tests', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
@@ -420,7 +420,7 @@ describe('bitmark-gen', () => {
           const bitmarkAst = bitmarkParser.toAst(originalMarkup);
 
           // Generate JSON from AST
-          const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
+          const generator = new JsonFileGenerator(originalJsonFile, undefined, {
             prettify: true,
             textAsPlainText: true,
           });
@@ -428,7 +428,7 @@ describe('bitmark-gen', () => {
           await generator.generate(bitmarkAst);
 
           // Read in the test JSON file
-          originalJson = fs.readJsonSync(generatedJsonFile, 'utf8');
+          originalJson = fs.readJsonSync(originalJsonFile, 'utf8');
         }
 
         // Remove uninteresting JSON items

@@ -1,0 +1,243 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Mithilfe der ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "Marktforschung",
+        "type": "text"
+      },
+      {
+        "text": " finden Sie im besten Fall heraus, was Ihre Kunden wollen, wie Ihr Unternehmen wahrgenommen wird, wie Ihre Produkte im Vergleich zur Konkurrenz abschneiden, und ähnliche Fragen. Die Marktforschung hat vier ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "Einsatzgebiete",
+        "type": "text"
+      },
+      {
+        "text": ":",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  },
+  {
+    "type": "bulletList",
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "Markt",
+                "type": "text"
+              },
+              {
+                "text": ": Fragen zu Marktkennzahlen, Marktstrukturen und Markttendenzen\ncontinues on the next line",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "bulletList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "Marktleistung",
+                "type": "text"
+              },
+              {
+                "text": ": Fragen zu Image und Konzepttest",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "bulletList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "Käufer",
+                "type": "text"
+              },
+              {
+                "text": ": Fragen zu Käuferverhalten, Nutzungsverhalten, Einstellungen und Kundenzufriedenheit",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "bulletList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "Werbung",
+                "type": "text"
+              },
+              {
+                "text": ": Fragen zu Werbeerfolg und Werbeaussagen",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "bulletList",
+        "attrs": {}
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Der Marktforschung sind ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "Grenzen",
+        "type": "text"
+      },
+      {
+        "text": " gesetzt. Beispielsweise kann es zu Ungenauigkeiten oder Verzerrungen kommen. Zudem sind Kosten und Aufwand zu berücksichtigen.\n\nDie ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "Methoden",
+        "type": "text"
+      },
+      {
+        "text": " der Marktforschung sind in der folgenden Tabelle dargestellt.",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  },
+  {
+    "type": "image",
+    "attrs": {
+      "textAlign": "left",
+      "src": "https://docs.bitmark.cloud/bit-books/compendio/tk_marketing/web-resources/images/compendio_tk_marketing_22.png",
+      "alt": null,
+      "title": null,
+      "class": "center",
+      "section": ""
+    }
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "Sekundärmarktforschung",
+        "type": "text"
+      },
+      {
+        "text": " hat den Vorteil, dass die Daten schnell zu beschaffen sind und in vielen Fällen kostenlos zur Verfügung stehen. Demgegenüber stehen die Nachteile, dass Daten zu wenig genau für die eigene Fragestellung sind oder die Aktualität der Daten nicht gegeben ist.\n\nBei der ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "Primärmarktforschung",
+        "type": "text"
+      },
+      {
+        "text": " ist der Vorteil, dass die gewonnenen Informationen genau auf die aktuelle Situation zugeschnitten sind. Dafür ist Primärmarktforschung oft aufwendig und damit teuer.",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  }
+]

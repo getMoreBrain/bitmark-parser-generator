@@ -333,14 +333,14 @@ const bitmarkParser = new BitmarkParser();
  */
 function getTestFilenames(): string[] {
   const files = FileUtils.getFilenamesSync(TEST_INPUT_DIR, {
-    // match: new RegExp('.+\\.bit$'),
+    match: new RegExp('.+\\.bit$'),
     recursive: true,
   });
 
   return files;
 }
 
-describe('json-gen', () => {
+describe('bitmark-parser', () => {
   describe('Markup => JSON (both parsers): Tests', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
