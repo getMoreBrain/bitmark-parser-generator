@@ -23,6 +23,7 @@ import {
   ArticleResource,
   StillImageFilmResource,
   Partner,
+  Example,
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
@@ -1012,28 +1013,22 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmark -> bits -> bitsValue ->  * -> example
 
-  protected enter_example(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const example = node.value as string | undefined;
-
-    if (example) {
-      this.writeOPA();
-      this.writeString('example');
-
-      if (example !== '') {
-        this.writeColon();
-        this.writeString(example);
-      }
-
-      this.writeCL();
-    }
-  }
-
   protected leaf_example(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const value = node.value as boolean | undefined;
+    const value = node.value as Example | undefined;
 
     if (value === true) {
       this.writeOPA();
       this.writeString('example');
+      this.writeCL();
+    } else if (value) {
+      this.writeOPA();
+      this.writeString('example');
+
+      if (value !== '') {
+        this.writeColon();
+        this.writeString(value);
+      }
+
       this.writeCL();
     }
   }
@@ -1222,7 +1217,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeProperty('showInIndex', node.value);
   }
 
-  protected enter_caption(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_caption(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const value = node.value as string;
     this.writeProperty('caption', value);
   }

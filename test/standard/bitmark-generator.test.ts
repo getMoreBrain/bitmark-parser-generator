@@ -422,6 +422,7 @@ describe('bitmark-gen', () => {
           // Generate JSON from AST
           const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
             prettify: true,
+            textAsPlainText: true,
           });
 
           await generator.generate(bitmarkAst);
@@ -480,6 +481,7 @@ describe('bitmark-gen', () => {
           // Generate JSON from AST
           const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
             prettify: true,
+            textAsPlainText: true,
           });
 
           await generator.generate(bitmarkAst);

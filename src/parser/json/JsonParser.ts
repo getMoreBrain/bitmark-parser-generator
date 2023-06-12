@@ -956,7 +956,7 @@ class JsonParser {
   private parseText(text: Text | undefined): string | undefined {
     if (text == null) return undefined;
     if (Array.isArray(text)) {
-      this.ast.printTree(text, NodeType.textAst);
+      // this.ast.printTree(text, NodeType.textAst);
       const parsedText = this.textGenerator.generateSync(text);
 
       return parsedText;

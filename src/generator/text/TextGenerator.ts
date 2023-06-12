@@ -1,7 +1,7 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { NodeType } from '../../model/ast/NodeType';
 import { Bit } from '../../model/ast/Nodes';
-import { TextAst, TextNode } from '../../model/ast/TextNodes';
+import { ImageTextNode, TextAst, TextNode } from '../../model/ast/TextNodes';
 import { BitTypeType } from '../../model/enum/BitType';
 import { TextMarkType } from '../../model/enum/TextMarkType';
 import { TextNodeType } from '../../model/enum/TextNodeType';
@@ -234,6 +234,9 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
           this.writeString('• ');
         }
         break;
+      case TextNodeType.image:
+        this.writeImage(node as ImageTextNode);
+        break;
       case TextNodeType.gap:
       case TextNodeType.select:
       case TextNodeType.highlight:
@@ -309,6 +312,36 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
         }
       }
     }
+  }
+
+  protected writeImage(node: ImageTextNode): void {
+    if (node.attrs == null || !node.attrs.src) return;
+    const attrs = node.attrs;
+
+    let s = `|image:${attrs.src}|`;
+
+    // Loop and write the attributes
+    for (const [k, v] of Object.entries(attrs)) {
+      switch (k) {
+        case 'textAlign':
+          if (v !== 'left') s += `|captionAlign:${v}|`;
+          break;
+        case 'title':
+          if (v) s += `|caption:${v}|`;
+          break;
+        case 'class':
+          if (v !== 'center') if (v) s += `|align:${v}|`;
+          break;
+        case 'alt':
+        case 'width':
+        case 'height':
+          if (v) s += `|${k}:${v}|`;
+          break;
+      }
+    }
+
+    // Write the text
+    this.writeString(s);
   }
 
   protected writeString(s?: string): void {

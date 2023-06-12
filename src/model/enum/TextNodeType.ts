@@ -5,6 +5,7 @@ const TextNodeType = superenum({
   paragraph: 'paragraph',
   bulletList: 'bulletList',
   listItem: 'listItem',
+  image: 'image',
 
   // Body bits
   gap: 'gap',

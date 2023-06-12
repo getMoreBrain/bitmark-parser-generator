@@ -438,6 +438,7 @@ describe('json-gen', () => {
         // Generate JSON from AST
         const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
           prettify: true,
+          textAsPlainText: true,
           includeExtraProperties: true, // Include extra properties in the JSON when testing
         });
 

@@ -448,9 +448,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     let fullBodyTextStr = '';
     let placeholderIndex = 0;
 
-    // Ensure placeholders exists
-    if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
-
     // Ensure body exists
     if (this.bitJson.body == null) this.bitJson.body = this.bodyDefault;
 
@@ -540,6 +537,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       // Add the gap to the placeholders
       if (bodyBitJson) {
         if (plainText) {
+          // Ensure placeholders exists
+          if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
+
           // Add the body bit to the placeholders
           this.bitJson.placeholders[legacyPlaceholderKey] = bodyBitJson;
         } else {
@@ -2248,6 +2248,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     // Body
     if (bitJson.body == null) delete bitJson.body;
+
+    // Placeholders
+    if (bitJson.placeholders == null || Object.keys(bitJson.placeholders).length === 0) delete bitJson.placeholders;
 
     // Resource
     if (bitJson.resource == null) delete bitJson.resource;
