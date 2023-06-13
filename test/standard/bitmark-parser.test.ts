@@ -333,14 +333,14 @@ const bitmarkParser = new BitmarkParser();
  */
 function getTestFilenames(): string[] {
   const files = FileUtils.getFilenamesSync(TEST_INPUT_DIR, {
-    // match: new RegExp('.+\\.bit$'),
+    match: new RegExp('.+\\.bit$'),
     recursive: true,
   });
 
   return files;
 }
 
-describe('json-gen', () => {
+describe('bitmark-parser', () => {
   describe('Markup => JSON (both parsers): Tests', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
@@ -391,6 +391,12 @@ describe('json-gen', () => {
         const generatedAstFile = path.resolve(fullFolder, `${id}.ast.json`);
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);
 
+        const jsonOptions = {
+          textAsPlainText: true, // For testing the parser, use plain text rather than JSON for text
+          prettify: true, // For testing the output is easier to read if it is prettified
+          includeExtraProperties: true, // Include extra properties in the JSON when testing
+        };
+
         // Copy the original test markup file to the output folder
         fs.copySync(testFile, originalMarkupFile);
 
@@ -436,9 +442,8 @@ describe('json-gen', () => {
         });
 
         // Generate JSON from AST
-        const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
-          prettify: true,
-          includeExtraProperties: true, // Include extra properties in the JSON when testing
+        const generator = new JsonFileGenerator(generatedJsonFile, {
+          jsonOptions,
         });
 
         await generator.generate(bitmarkAst);
@@ -462,7 +467,7 @@ describe('json-gen', () => {
         });
 
         // Print performance information
-        if (DEBUG_PERFORMANCE) {
+        if (!process.env.CI && DEBUG_PERFORMANCE) {
           const pegTimeSecs = Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000;
           if (TEST_AGAINST_ANTLR_PARSER) {
             const antlrTimeSecs = Math.round(performance.measure('ANTLR', 'ANTLR:Start', 'ANTLR:End').duration) / 1000;

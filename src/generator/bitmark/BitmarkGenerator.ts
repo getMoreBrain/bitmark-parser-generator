@@ -2,6 +2,8 @@ import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
+import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
+import { CardSetVersion, CardSetVersionType } from '../../model/enum/CardSetVersion';
 import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { TextFormat } from '../../model/enum/TextFormat';
@@ -23,11 +25,11 @@ import {
   ArticleResource,
   StillImageFilmResource,
   Partner,
+  Example,
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
   debugGenerationInline: false,
-  cardSetVersion: 1,
 };
 
 /**
@@ -42,9 +44,11 @@ export interface BitmarkOptions {
   explicitTextFormat?: boolean;
 
   /**
-   * Card set version to generate
+   * Card set version to generate:
+   * 1: === / == / --
+   * 2: ++==== / ==== / -- / ~~ / ====++
    */
-  cardSetVersion?: number;
+  cardSetVersion?: CardSetVersionType;
 
   /**
    * [development only]
@@ -54,28 +58,74 @@ export interface BitmarkOptions {
 }
 
 /**
+ * Bitmark generator options
+ */
+export interface BitmarkGeneratorOptions {
+  /**
+   * bitmarkVersion - The version of bitmark to output.
+   * If not specified, the version will default to 3.
+   *
+   * Specifying the version will set defaults for other options.
+   * - Bitmark v2:
+   *   - cardSetVersion: 1
+   * - Bitmark v3:
+   *   - cardSetVersion: 2 (TODO, currently CardSet v1 will still be used)
+   */
+  bitmarkVersion?: BitmarkVersionType;
+
+  /**
+   * The options for JSON generation.
+   */
+  bitmarkOptions?: BitmarkOptions;
+}
+
+/**
  * Generate bitmark markup from a bitmark AST
  */
-class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
+class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected ast = new Ast();
+  private bitmarkVersion: BitmarkVersionType;
   private options: BitmarkOptions;
   private writer: Writer;
-  private printed = false;
 
-  // TODO - should be in a context that gets passed around
+  // State
   private skipNLBetweenBitsValue = false;
+
+  // Debug
+  private printed = false;
 
   /**
    * Generate bitmark markup from a bitmark AST
    *
    * @param writer - destination for the output
+   * @param bitmarkVersion - The version of bitmark to output.
+   * If not specified, the version will default to 3.
+   *
+   * Specifying the version will set defaults for other options.
+   * - Bitmark v2:
+   *   - cardSetVersion: 1
+   * - Bitmark v3:
+   *   - cardSetVersion: 2 (TODO, currently CardSet v1 will still be used)
+   *
    * @param options - bitmark generation options
    */
-  constructor(writer: Writer, options?: BitmarkOptions) {
+  constructor(writer: Writer, options?: BitmarkGeneratorOptions) {
+    this.bitmarkVersion = BitmarkVersion.fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
     this.options = {
       ...DEFAULT_OPTIONS,
-      ...options,
+      ...options?.bitmarkOptions,
     };
+
+    // Set defaults according to bitmark version
+    if (this.bitmarkVersion === BitmarkVersion.v2) {
+      if (this.options.cardSetVersion === undefined) {
+        this.options.cardSetVersion = CardSetVersion.v1;
+      }
+    } else {
+      if (this.options.cardSetVersion === undefined) {
+        this.options.cardSetVersion = CardSetVersion.v1; // TODO change to v2 when working
+      }
+    }
 
     this.writer = writer;
 
@@ -93,17 +143,52 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
    * @param ast bitmark AST
    */
   public async generate(ast: BitmarkAst): Promise<void> {
+    // Reset the state
+    this.resetState();
+
     // Open the writer
     await this.writer.open();
 
     // Walk the bitmark AST
-    this.ast.walk(ast, this);
+    this.walkAndWrite(ast);
 
     // Ensure a blank line at end of file
     this.writeLine();
 
     // Close the writer
     await this.writer.close();
+  }
+
+  /**
+   * Generate text from a bitmark text AST synchronously
+   *
+   * @param ast bitmark text AST
+   */
+  public generateSync(ast: BitmarkAst): void {
+    // Reset the state
+    this.resetState();
+
+    // Open the writer
+    this.writer.openSync();
+
+    // Walk the bitmark AST
+    this.walkAndWrite(ast);
+
+    // Close the writer
+    this.writer.closeSync();
+  }
+
+  private resetState(): void {
+    this.skipNLBetweenBitsValue = false;
+    this.printed = false;
+  }
+
+  private walkAndWrite(ast: BitmarkAst): void {
+    // Walk the bitmark AST
+    this.ast.walk(ast, NodeType.bitmarkAst, this, undefined);
+
+    // Ensure a blank line at end of file
+    this.writeLine();
   }
 
   enter(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
@@ -280,18 +365,6 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> example
-
-  protected enter_example(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const value = node.value as boolean | undefined;
-
-    // Ignore example that is not at the bit level as it are handled elsewhere
-    if (parent?.key !== NodeType.bitsValue) return;
-
-    // Special case for example
-    this.writeProperty('example', value, true, true);
-  }
-
   // bitmark -> bits -> bitsValue -> partner
 
   protected enter_partner(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -321,7 +394,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
     if (itemLead && (itemLead.item || itemLead.lead)) {
       // Always write item if item or lead is set
       this.writeOPC();
-      this.writeString(itemLead.item);
+      this.writeString(itemLead.item || '');
       this.writeCL();
 
       if (itemLead.lead) {
@@ -337,7 +410,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   protected enter_body(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     // always write a NL before the body content if there is any?
     const body = node.value as Body;
-    if (body.length > 0) {
+    if (body.bodyParts.length > 0) {
       this.writeNL();
     }
   }
@@ -885,7 +958,8 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   //  bitmark -> bits -> title
 
   protected leaf_title(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const title = node.value;
+    const value = node.value as string;
+    const title = value;
     const bit = parent?.value as Bit;
     const level = bit.level || 1;
     if (level && title) {
@@ -899,7 +973,8 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   //  bitmark -> bits -> subtitle
 
   protected leaf_subtitle(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const subtitle = node.value;
+    const value = node.value as string;
+    const subtitle = value;
     const level = 2;
     if (level && subtitle) {
       this.writeOP();
@@ -962,9 +1037,11 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   //  * -> hint
 
   protected leaf_hint(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
+    const value = node.value as string;
+    const text = value;
+    if (text) {
       this.writeOPQ();
-      this.writeString(node.value);
+      this.writeString(text);
       this.writeCL();
     }
   }
@@ -972,9 +1049,11 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> bitsValue ->  * -> instruction
 
   protected leaf_instruction(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
+    const value = node.value as string;
+    const text = value;
+    if (text) {
       this.writeOPB();
-      this.writeString(node.value);
+      this.writeString(text);
       this.writeCL();
     }
   }
@@ -982,15 +1061,19 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> bitsValue ->  * -> example
 
   protected leaf_example(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const example = node.value;
+    const value = node.value as Example | undefined;
 
-    if (example) {
+    if (value === true) {
+      this.writeOPA();
+      this.writeString('example');
+      this.writeCL();
+    } else if (value) {
       this.writeOPA();
       this.writeString('example');
 
-      if (example !== true && example !== '') {
+      if (value !== '') {
         this.writeColon();
-        this.writeString(example as string);
+        this.writeString(value);
       }
 
       this.writeCL();
@@ -1000,16 +1083,20 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   // bitmark -> bits -> body -> bodyValue -> bodyText
 
   protected leaf_bodyText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeString(node.value);
+    const value = node.value as string;
+    const text = value;
+    if (text) {
+      this.writeString(text);
     }
   }
 
   // bitmark -> bits -> footer -> footerText
 
   protected leaf_footerText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeString(node.value);
+    const value = node.value as string;
+    const text = value;
+    if (text) {
+      this.writeString(text);
     }
   }
 
@@ -1178,7 +1265,8 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   }
 
   protected leaf_caption(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('caption', node.value);
+    const value = node.value as string;
+    this.writeProperty('caption', value);
   }
 
   // bitmark -> bits -> bitsValue -> resource -> ...
@@ -1217,7 +1305,8 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
    * Generate the handlers for properties, as they are mostly the same, but not quite
    */
 
-  // protected enter_labelTrue(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  // protected enter_labelTrue(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[],
+  // ): void {
   //   const bit = parent?.value as Bit;
   //   if (bit) {
   //     this.writeProperty('labelTrue', node.value ?? '', true);
@@ -1369,7 +1458,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   }
 
   protected writeCardSetStart(): void {
-    if (this.options.cardSetVersion === 1) {
+    if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('===');
     } else {
       this.write('++\n====');
@@ -1377,7 +1466,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   }
 
   protected writeCardSetEnd(): void {
-    if (this.options.cardSetVersion === 1) {
+    if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('===');
     } else {
       this.write('====\n++');
@@ -1385,7 +1474,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   }
 
   protected writeCardSetCardDivider(): void {
-    if (this.options.cardSetVersion === 1) {
+    if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('===');
     } else {
       this.write('====');
@@ -1393,7 +1482,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   }
 
   protected writeCardSetSideDivider(): void {
-    if (this.options.cardSetVersion === 1) {
+    if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('==');
     } else {
       this.write('--');
@@ -1401,7 +1490,7 @@ class BitmarkGenerator implements Generator<void>, AstWalkCallbacks {
   }
 
   protected writeCardSetVariantDivider(): void {
-    if (this.options.cardSetVersion === 1) {
+    if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('--');
     } else {
       this.write('~~');

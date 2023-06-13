@@ -267,6 +267,12 @@ describe('bitmark-parser', () => {
         const generatedAstFile = path.resolve(fullFolder, `${id}.ast.json`);
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);
 
+        const jsonOptions = {
+          textAsPlainText: true, // For testing the parser, use plain text rather than JSON for text
+          prettify: true, // For testing the output is easier to read if it is prettified
+          includeExtraProperties: true, // Include extra properties in the JSON when testing
+        };
+
         // Copy the original test markup file to the output folder
         fs.copySync(testFile, originalMarkupFile);
 
@@ -312,9 +318,8 @@ describe('bitmark-parser', () => {
         });
 
         // Generate JSON from AST
-        const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
-          prettify: true,
-          includeExtraProperties: true, // Include extra properties in the JSON when testing the books as several have them
+        const generator = new JsonFileGenerator(generatedJsonFile, {
+          jsonOptions,
         });
 
         await generator.generate(bitmarkAst);
@@ -338,7 +343,7 @@ describe('bitmark-parser', () => {
         });
 
         // Print performance information
-        if (DEBUG_PERFORMANCE) {
+        if (!process.env.CI && DEBUG_PERFORMANCE) {
           const pegTimeSecs = Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000;
           if (TEST_AGAINST_ANTLR_PARSER) {
             const antlrTimeSecs = Math.round(performance.measure('ANTLR', 'ANTLR:Start', 'ANTLR:End').duration) / 1000;

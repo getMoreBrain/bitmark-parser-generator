@@ -1,16 +1,17 @@
 import { BitTypeType } from '../model/enum/BitType';
-import { PropertyKey, PropertyKeyMetadata, PropertyKeyType } from '../model/enum/PropertyKey';
+import { BodyBitType } from '../model/enum/BodyBitType';
+import { PropertyKey } from '../model/enum/PropertyKey';
 import { ResourceTypeType } from '../model/enum/ResourceType';
-import { TextFormatType, TextFormat } from '../model/enum/TextFormat';
+import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BitUtils } from '../utils/BitUtils';
-import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
-import { StringUtils } from '../utils/StringUtils';
+import { env } from '../utils/env/Env';
 
+import { BaseBuilder } from './BaseBuilder';
 import { NodeValidator } from './rules/NodeValidator';
 
 import {
@@ -30,8 +31,6 @@ import {
   AudioResource,
   ImageResource,
   MatrixCell,
-  BodyPart,
-  BodyText,
   Gap,
   SelectOption,
   Select,
@@ -39,15 +38,16 @@ import {
   Highlight,
   ItemLead,
   ExtraProperties,
-  Property,
   BotResponse,
   Partner,
+  BodyText,
+  BodyPart,
 } from '../model/ast/Nodes';
 
 /**
  * Builder to build bitmark AST node programmatically
  */
-class Builder {
+class Builder extends BaseBuilder {
   /**
    * Build bitmark node
    *
@@ -147,7 +147,7 @@ class Builder {
     botResponses?: BotResponse[];
     footer?: FooterText;
 
-    bitmark?: string;
+    markup?: string;
     parser?: ParserInfo;
   }): Bit | undefined {
     const {
@@ -222,7 +222,7 @@ class Builder {
       botResponses,
       footer,
 
-      bitmark,
+      markup,
       parser,
     } = data;
 
@@ -279,7 +279,7 @@ class Builder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toAstProperty(PropertyKey.example, example),
+      example: this.toExample(example),
       partner,
       resource,
       body,
@@ -297,12 +297,15 @@ class Builder {
       botResponses,
       footer,
 
-      bitmark,
+      markup,
       parser,
 
       // Must always be last in the AST so key clashes are avoided correctly with other properties
       extraProperties: this.parseExtraProperties(extraProperties),
     };
+
+    // Add the version to the parser info
+    this.addVersionToParserInfo(node);
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node);
@@ -336,7 +339,7 @@ class Builder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example,
+      example: this.toExample(example),
       isCaseSensitive,
     };
 
@@ -371,7 +374,7 @@ class Builder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example,
+      example: this.toExample(example),
       isCaseSensitive,
     };
 
@@ -434,7 +437,7 @@ class Builder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example,
+      example: this.toExample(example),
       choices,
       responses,
     };
@@ -496,7 +499,7 @@ class Builder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example,
+      example: this.toExample(example),
       isCaseSensitive,
       isShortAnswer,
       values,
@@ -533,7 +536,7 @@ class Builder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example,
+      example: this.toExample(example),
       isCaseSensitive,
       isShortAnswer,
       cells,
@@ -567,7 +570,7 @@ class Builder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example,
+      example: this.toExample(example),
     };
 
     // Remove Unset Optionals
@@ -614,7 +617,7 @@ class Builder {
       partialAnswer,
       hint,
       instruction,
-      example,
+      example: this.toExample(example),
       isCaseSensitive,
       isShortAnswer,
       sampleSolution,
@@ -635,12 +638,15 @@ class Builder {
   body(data: { bodyParts: BodyPart[] }): Body {
     const { bodyParts } = data;
 
-    const node: Body = bodyParts;
+    const node: Body = {
+      bodyParts,
+    };
+
     return node;
   }
 
   /**
-   * Build bodyText node
+   * Build bodyPartText node
    *
    * @param data - data for the node
    * @returns
@@ -650,7 +656,10 @@ class Builder {
 
     // NOTE: Node order is important and is defined here
     const node: BodyText = {
-      bodyText: text,
+      type: BodyBitType.text,
+      data: {
+        bodyText: text,
+      },
     };
     return node;
   }
@@ -690,12 +699,13 @@ class Builder {
 
     // NOTE: Node order is important and is defined here
     const node: Gap = {
-      gap: {
+      type: BodyBitType.gap,
+      data: {
         solutions,
         itemLead: this.itemLead(item, lead),
         hint,
         instruction,
-        example,
+        example: this.toExample(example),
         isCaseSensitive,
       },
     };
@@ -727,14 +737,15 @@ class Builder {
 
     // NOTE: Node order is important and is defined here
     const node: Select = {
-      select: {
+      type: BodyBitType.select,
+      data: {
         prefix,
         options,
         postfix,
         itemLead: this.itemLead(item, lead),
         hint,
         instruction,
-        example,
+        example: this.toExample(example),
         isCaseSensitive,
       },
     };
@@ -770,7 +781,7 @@ class Builder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example,
+      example: this.toExample(example),
       isCaseSensitive,
     };
 
@@ -801,14 +812,15 @@ class Builder {
 
     // NOTE: Node order is important and is defined here
     const node: Highlight = {
-      highlight: {
+      type: BodyBitType.highlight,
+      data: {
         prefix,
         texts,
         postfix,
         itemLead: this.itemLead(item, lead),
         hint,
         instruction,
-        example,
+        example: this.toExample(example),
         isCaseSensitive,
       },
     };
@@ -846,7 +858,7 @@ class Builder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example,
+      example: this.toExample(example),
       isCaseSensitive,
     };
 
@@ -881,7 +893,7 @@ class Builder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example,
+      example: this.toExample(example),
       isCaseSensitive,
     };
 
@@ -916,7 +928,7 @@ class Builder {
   // Private
   //
 
-  private itemLead(item?: string, lead?: string): ItemLead | undefined {
+  private itemLead(item: string | undefined, lead: string | undefined): ItemLead | undefined {
     let node: ItemLead | undefined;
 
     // NOTE: Node order is important and is defined here
@@ -928,34 +940,6 @@ class Builder {
     }
 
     return node;
-  }
-
-  private toAstProperty(key: PropertyKeyType, value: unknown | unknown[] | undefined): Property | undefined {
-    const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(key) ?? {};
-
-    if (value == null) return undefined;
-
-    // if (key === 'progress') debugger;
-
-    // Convert property as needed
-    const processValue = (v: unknown) => {
-      if (v == null) return undefined;
-      if (meta.isTrimmedString) v = StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
-      if (meta.isNumber) v = NumberUtils.asNumber(v);
-      if (meta.isBoolean) v = BooleanUtils.asBoolean(v, true);
-      if (meta.isInvertedBoolean) v = !BooleanUtils.asBoolean(v, true);
-      return v;
-    };
-    if (Array.isArray(value)) {
-      const valueArray = value as unknown[];
-      for (let i = 0, len = valueArray.length; i < len; i++) {
-        valueArray[i] = processValue(valueArray[i]);
-      }
-    } else {
-      value = processValue(value);
-    }
-
-    return ArrayUtils.asArray(value);
   }
 
   private parseExtraProperties(extraProperties: { [key: string]: unknown } | undefined): ExtraProperties | undefined {
@@ -971,6 +955,12 @@ class Builder {
     }
 
     return res;
+  }
+
+  private addVersionToParserInfo(bit: Bit) {
+    const parser: ParserInfo = bit.parser ?? {};
+    parser.version = env.appVersion.full;
+    bit.parser = parser;
   }
 }
 

@@ -2,6 +2,7 @@ import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { UrlUtils } from '../utils/UrlUtils';
 
+import { BaseBuilder } from './BaseBuilder';
 import { NodeValidator } from './rules/NodeValidator';
 
 import {
@@ -29,7 +30,7 @@ import {
 /**
  * Builder to build bitmark Resource AST nodes programmatically
  */
-class ResourceBuilder {
+class ResourceBuilder extends BaseBuilder {
   /**
    * Build resource node
    *

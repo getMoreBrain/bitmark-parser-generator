@@ -59,6 +59,8 @@ export type { TextFormatType } from './model/enum/TextFormat';
 export type { ResourceTypeType } from './model/enum/ResourceType';
 export type { NodeTypeType } from './model/ast/NodeType';
 export type { BitmarkParserTypeType } from './model/enum/BitmarkParserType';
+export type { BitmarkVersionType } from './model/enum/BitmarkVersion';
+export type { CardSetVersionType } from './model/enum/CardSetVersion';
 export type { Generator } from './generator/Generator';
 
 export type { NodeInfo, AstWalkCallbacks } from './ast/Ast';
@@ -66,15 +68,31 @@ export type {
   Node,
   BitmarkAst,
   Bit,
+  ItemLead,
+  Example,
+  ExtraProperties,
+  Property,
+  Partner,
   Statement,
   Choice,
   Response,
+  BotResponse,
   Quiz,
   Heading,
   Pair,
   Matrix,
   MatrixCell,
   Question,
+  Body,
+  BodyText,
+  BodyPart,
+  BodyBit,
+  Gap,
+  Select,
+  SelectOption,
+  Highlight,
+  HighlightText,
+  FooterText,
   Resource,
   ImageResource,
   ImageLinkResource,
@@ -91,20 +109,11 @@ export type {
   DocumentResource,
   DocumentEmbedResource,
   DocumentLinkResource,
+  DocumentDownloadResource,
   AppLinkResource,
   WebsiteLinkResource,
-  Body,
-  BodyPart,
-  BodyText,
-  FooterText,
-  Gap,
-  Select,
-  SelectOption,
-  Highlight,
-  HighlightText,
-  ItemLead,
-  Example,
 } from './model/ast/Nodes';
+export type { Text, TextAst } from './model/ast/TextNodes';
 export type { BitWrapperJson } from './model/json/BitWrapperJson';
 export type {
   BitJson,

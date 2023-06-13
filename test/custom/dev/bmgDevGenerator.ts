@@ -13,6 +13,7 @@ import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
 import { Ast } from '../../../src/ast/Ast';
 // import { BitmarkFileGenerator } from '../../..src/generator/bitmark/BitmarkFileGenerator';
 import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
+import { BitmarkVersion } from '../../../src/model/enum/BitmarkVersion';
 import { JsonParser } from '../../../src/parser/json/JsonParser';
 
 const jsonParser = new JsonParser();
@@ -55,13 +56,22 @@ class BmgDevGenerator {
 
       // Generate markup code from AST
       const generator = new BitmarkStringGenerator({
+        bitmarkVersion: BitmarkVersion.v3,
         explicitTextFormat: false,
       });
 
       const res = await generator.generate(bitmarkAst);
       console.log(res);
     } else {
-      const res = await bitmarkParserGenerator.convert(filename);
+      const res = await bitmarkParserGenerator.convert(filename, {
+        bitmarkOptions: {
+          bitmarkVersion: BitmarkVersion.v3,
+        },
+        jsonOptions: {
+          bitmarkVersion: BitmarkVersion.v3,
+          textAsPlainText: false,
+        },
+      });
       // BitmarkGenerator.convert(json);
       console.log(res);
     }

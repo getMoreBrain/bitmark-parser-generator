@@ -1,4 +1,5 @@
 import { BitTypeType } from '../enum/BitType';
+import { BodyBitTypeType } from '../enum/BodyBitType';
 import { ResourceTypeType } from '../enum/ResourceType';
 import { TextFormatType } from '../enum/TextFormat';
 import { ParserError } from '../parser/ParserError';
@@ -6,27 +7,8 @@ import { ParserInfo } from '../parser/ParserInfo';
 
 // Node
 
-export type Node =
-  | BitmarkAst
-  | Bit
-  | Statement
-  | Choice
-  | Response
-  | Quiz
-  | Pair
-  | Resource
-  | Body
-  | BodyPart
-  | BodyText
-  | Gap
-  | Select
-  | SelectOption
-  | BodyText
-  | ItemLead
-  | Example
-  | string
-  | number
-  | boolean;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type Node = any;
 
 // Bitmark
 
@@ -90,7 +72,7 @@ export interface Bit {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Property;
+  example?: Example;
   partner?: Partner;
   resource?: Resource;
   body?: Body;
@@ -108,9 +90,16 @@ export interface Bit {
   botResponses?: BotResponse[];
   footer?: FooterText;
 
-  bitmark?: string;
+  markup?: string; // Called 'bitmark' in the JSON
   parser?: ParserInfo;
 }
+
+export interface ItemLead {
+  item?: string;
+  lead?: string;
+}
+
+export type Example = string | boolean;
 
 // Extra Properties
 
@@ -119,6 +108,12 @@ export interface ExtraProperties {
 }
 
 export type Property = string[] | number[] | boolean[] | unknown[];
+
+// (chat) Partner
+export interface Partner {
+  name: string;
+  avatarImage?: ImageResource;
+}
 
 // Statement
 
@@ -136,6 +131,16 @@ export interface Choice extends Decision {
 
 export interface Response extends Decision {
   //
+}
+
+export interface Decision {
+  text: string;
+  isCorrect: boolean;
+  itemLead?: ItemLead;
+  hint?: string;
+  instruction?: string;
+  example?: Example;
+  isCaseSensitive?: boolean;
 }
 
 // Bot Response
@@ -215,29 +220,31 @@ export interface Question {
 
 // Body
 
-export type Body = BodyPart[];
-export type BodyPart = BodyText | Gap | Select | Highlight;
-
-export interface BodyText {
-  bodyText: string;
+export interface Body {
+  bodyParts: BodyPart[];
 }
 
-// Footer
-
-export interface FooterText {
-  footerText: string;
+export interface BodyText extends BodyPart {
+  type: 'text';
+  data: {
+    bodyText: string;
+  };
 }
 
-// (chat) Partner
-export interface Partner {
-  name: string;
-  avatarImage?: ImageResource;
+export interface BodyPart {
+  type: BodyBitTypeType;
+  data: unknown;
+}
+
+export interface BodyBit extends BodyPart {
+  type: 'gap' | 'select' | 'highlight';
 }
 
 // Gap
 
-export interface Gap {
-  gap: {
+export interface Gap extends BodyBit {
+  type: 'gap';
+  data: {
     solutions: string[];
     itemLead?: ItemLead;
     hint?: string;
@@ -249,8 +256,9 @@ export interface Gap {
 
 // Select
 
-export interface Select {
-  select: {
+export interface Select extends BodyBit {
+  type: 'select';
+  data: {
     prefix?: string;
     options: SelectOption[];
     postfix?: string;
@@ -274,8 +282,9 @@ export interface SelectOption {
 
 // Highlight
 
-export interface Highlight {
-  highlight: {
+export interface Highlight extends BodyBit {
+  type: 'highlight';
+  data: {
     prefix?: string;
     texts: HighlightText[];
     postfix?: string;
@@ -298,23 +307,10 @@ export interface HighlightText {
   isCaseSensitive?: boolean;
 }
 
-// Generic
+// Footer
 
-export interface ItemLead {
-  item?: string;
-  lead?: string;
-}
-
-export type Example = string | boolean;
-
-export interface Decision {
-  text: string;
-  isCorrect: boolean;
-  itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
-  example?: Example;
-  isCaseSensitive?: boolean;
+export interface FooterText {
+  footerText: string;
 }
 
 //

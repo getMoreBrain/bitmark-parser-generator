@@ -8,6 +8,10 @@ class StringWriter implements Writer {
   private _string: string = '';
   public endOfLineString = '\n';
 
+  public get isSync() {
+    return true;
+  }
+
   /**
    * Get the string which has been written.
    *
@@ -20,18 +24,30 @@ class StringWriter implements Writer {
   }
 
   public async open(): Promise<void> {
-    this._buffer = [];
-    this._string = '';
+    this.openSync();
     Promise.resolve();
   }
 
   public async close(): Promise<void> {
+    try {
+      this.closeSync();
+    } catch (e) {
+      return Promise.reject(e);
+    }
+    Promise.resolve();
+  }
+
+  public openSync(): void {
+    this._buffer = [];
+    this._string = '';
+  }
+
+  public closeSync(): void {
     if (!this._buffer) {
-      return Promise.reject(new Error('open never called'));
+      throw new Error('open() or openSync() never called');
     }
     this._string = this._buffer.join('');
     this._buffer = [];
-    Promise.resolve();
   }
 
   public writeLine(value?: string): this {

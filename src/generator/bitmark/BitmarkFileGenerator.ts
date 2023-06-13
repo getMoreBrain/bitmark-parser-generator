@@ -4,24 +4,33 @@ import { FileOptions, FileWriter } from '../../ast/writer/FileWriter';
 import { BitmarkAst } from '../../model/ast/Nodes';
 import { Generator } from '../Generator';
 
-import { BitmarkGenerator, BitmarkOptions } from './BitmarkGenerator';
+import { BitmarkGenerator, BitmarkGeneratorOptions } from './BitmarkGenerator';
+
+/**
+ * Bitmark file generator options
+ */
+export interface BitmarkFileGeneratorOptions extends BitmarkGeneratorOptions {
+  /**
+   * The options for file output.
+   */
+  fileOptions?: FileOptions;
+}
 
 /**
  * Generate bitmark markup from a bitmark AST as a file
  */
-class BitmarkFileGenerator implements Generator<void> {
+class BitmarkFileGenerator implements Generator<BitmarkAst> {
   private generator: BitmarkGenerator;
 
   /**
    * Generate bitmark markup from a bitmark AST as a file
    *
    * @param path - path of file to generate
-   * @param fileOptions - file options
-   * @param bitmarkOptions - bitmark generation options
+   * @param options - bitmark generation options
    */
-  constructor(path: fs.PathLike, fileOptions?: FileOptions, bitmarkOptions?: BitmarkOptions) {
-    const writer = new FileWriter(path, fileOptions);
-    this.generator = new BitmarkGenerator(writer, bitmarkOptions);
+  constructor(path: fs.PathLike, options?: BitmarkFileGeneratorOptions) {
+    const writer = new FileWriter(path, options?.fileOptions);
+    this.generator = new BitmarkGenerator(writer, options);
   }
 
   /**
@@ -31,6 +40,15 @@ class BitmarkFileGenerator implements Generator<void> {
    */
   public async generate(ast: BitmarkAst): Promise<void> {
     return this.generator.generate(ast);
+  }
+
+  /**
+   * Generate bitmark markup from bitmark AST as a file synchronously
+   *
+   * @param ast bitmark AST
+   */
+  public generateSync(_ast: BitmarkAst): string {
+    throw new Error('Sync operation not supported');
   }
 }
 

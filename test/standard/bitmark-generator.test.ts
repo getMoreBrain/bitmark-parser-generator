@@ -343,7 +343,7 @@ function getTestFilenames(): string[] {
   return files;
 }
 
-describe('bitmark-gen', () => {
+describe('bitmark-generator', () => {
   describe('JSON => Markup => JSON: Tests', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
@@ -395,6 +395,15 @@ describe('bitmark-gen', () => {
         const generatedAstFile = path.resolve(fullFolder, `${id}.ast.json`);
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);
 
+        const jsonOptions = {
+          textAsPlainText: true, // For testing the generator, use plain text rather than JSON for text
+          prettify: true, // For testing the output is easier to read if it is prettified
+        };
+
+        const bitmarkOptions = {
+          explicitTextFormat: false,
+        };
+
         // Copy the original test markup file to the output folder
         fs.copySync(testFile, originalMarkupFile);
 
@@ -420,14 +429,14 @@ describe('bitmark-gen', () => {
           const bitmarkAst = bitmarkParser.toAst(originalMarkup);
 
           // Generate JSON from AST
-          const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
-            prettify: true,
+          const generator = new JsonFileGenerator(originalJsonFile, {
+            jsonOptions,
           });
 
           await generator.generate(bitmarkAst);
 
           // Read in the test JSON file
-          originalJson = fs.readJsonSync(generatedJsonFile, 'utf8');
+          originalJson = fs.readJsonSync(originalJsonFile, 'utf8');
         }
 
         // Remove uninteresting JSON items
@@ -446,8 +455,8 @@ describe('bitmark-gen', () => {
         });
 
         // Generate markup code from AST
-        const generator = new BitmarkFileGenerator(generatedMarkupFile, undefined, {
-          explicitTextFormat: false,
+        const generator = new BitmarkFileGenerator(generatedMarkupFile, {
+          bitmarkOptions,
         });
 
         await generator.generate(bitmarkAst);
@@ -478,8 +487,8 @@ describe('bitmark-gen', () => {
           });
 
           // Generate JSON from AST
-          const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
-            prettify: true,
+          const generator = new JsonFileGenerator(generatedJsonFile, {
+            jsonOptions,
           });
 
           await generator.generate(bitmarkAst);
@@ -503,7 +512,7 @@ describe('bitmark-gen', () => {
         });
 
         // Print performance information
-        if (DEBUG_PERFORMANCE) {
+        if (!process.env.CI && DEBUG_PERFORMANCE) {
           const genTimeSecs = Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
           console.log(`'${fileId}' timing; GEN: ${genTimeSecs} s`);
         }

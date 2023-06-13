@@ -2,25 +2,23 @@ import { StringWriter } from '../../ast/writer/StringWriter';
 import { BitmarkAst } from '../../model/ast/Nodes';
 import { Generator } from '../Generator';
 
-import { JsonGenerator, JsonOptions } from './JsonGenerator';
+import { JsonGenerator, JsonGeneratorOptions } from './JsonGenerator';
 
 /**
  * Generate bitmark JSON from a bitmark AST as a string
- *
- * TODO: NOT IMPLEMENTED!
  */
-class JsonStringGenerator implements Generator<string> {
+class JsonStringGenerator implements Generator<BitmarkAst, string> {
   private generator: JsonGenerator;
   private writer: StringWriter;
 
   /**
    * Generate bitmark JSON from a bitmark AST as a string
    *
-   * @param options - bitmark generation options
+   * @param options - JSON generation options
    */
-  constructor(generatorOptions?: JsonOptions) {
+  constructor(options?: JsonGeneratorOptions) {
     this.writer = new StringWriter();
-    this.generator = new JsonGenerator(this.writer, generatorOptions);
+    this.generator = new JsonGenerator(this.writer, options);
   }
 
   /**
@@ -30,6 +28,16 @@ class JsonStringGenerator implements Generator<string> {
    */
   public async generate(ast: BitmarkAst): Promise<string> {
     await this.generator.generate(ast);
+    return this.writer.getString();
+  }
+
+  /**
+   * Generate bitmark JSON from bitmark AST as a string synchronously
+   *
+   * @param ast bitmark AST
+   */
+  public generateSync(ast: BitmarkAst): string {
+    this.generator.generateSync(ast);
     return this.writer.getString();
   }
 }

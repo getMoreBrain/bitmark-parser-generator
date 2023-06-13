@@ -3,7 +3,7 @@ import { BitmarkParserType, BitmarkParserTypeType } from '../../model/enum/Bitma
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { JsonParser } from '../json/JsonParser';
 
-import { parse as bitmarkParse } from './BitmarkPegParser';
+import { parse as bitmarkParse } from './peg/BitmarkPegParser';
 
 /*
  * NOTE:
