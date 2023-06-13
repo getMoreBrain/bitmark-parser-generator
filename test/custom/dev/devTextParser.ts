@@ -17,7 +17,7 @@ import { TextParser } from '../../../src/parser/text/TextParser';
 const ast = new Ast();
 const textParser = new TextParser();
 
-class BmgDevTextParser {
+class DevTextParser {
   async test(debug?: boolean): Promise<void> {
     const filename = path.resolve(__dirname, '../../..', 'assets', 'test.text');
 
@@ -53,7 +53,7 @@ class BmgDevTextParser {
   }
 }
 
-const parser = new BmgDevTextParser();
+const parser = new DevTextParser();
 
 parser.test(true).then(() => {
   // Done

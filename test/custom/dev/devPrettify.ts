@@ -24,7 +24,7 @@ import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 const bitmarkParser = new BitmarkParser();
 
-class BmgDevPrettify {
+class DevPrettify {
   async test(debug?: boolean): Promise<void> {
     const filename = path.resolve(__dirname, '../../..', 'assets', 'test.bit');
     // const filename = path.resolve(__dirname, '../../..', 'assets', 'test.json');
@@ -45,12 +45,17 @@ class BmgDevPrettify {
 
       // AST ==> Bitmark
       const generator = new BitmarkStringGenerator({
-        explicitTextFormat: false,
+        bitmarkOptions: {
+          explicitTextFormat: false,
+        },
       });
       const res = await generator.generate(bitmarkAst);
       console.log(res);
     } else {
       const res = await bitmarkParserGenerator.upgrade(filename, {
+        bitmarkOptions: {
+          explicitTextFormat: false,
+        },
         jsonOptions: {
           prettify: true,
         },
@@ -60,7 +65,7 @@ class BmgDevPrettify {
   }
 }
 
-const parser = new BmgDevPrettify();
+const parser = new DevPrettify();
 
 parser.test(false).then(() => {
   // Done

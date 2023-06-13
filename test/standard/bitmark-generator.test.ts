@@ -13,18 +13,18 @@ import { FileUtils } from '../../src/utils/FileUtils';
 import { BitJsonUtils } from '../utils/BitJsonUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
-// Set to true to test against the ANTLR parser rather than static JSON This is a slow process.
-const TEST_AGAINST_ANTLR_PARSER = false;
+// Enable or disable testing of specific files
+const TEST_ALL = process.env.CI || true;
 
 // Set to true to generate performance debug output
-const DEBUG_PERFORMANCE = false;
+const DEBUG_PERFORMANCE = !process.env.CI;
+
+// Set to true to test against the ANTLR parser rather than static JSON This is a slow process.
+const TEST_AGAINST_ANTLR_PARSER = false;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, './bitmark');
 // const JSON_INPUT_DIR = path.resolve(__dirname, './bitmark/json');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/bitmark-generator/output');
-
-// Enable or disable testing of specific files
-const TEST_ALL = true;
 
 let TEST_FILES: string[] = [
   // // '_simple.bit',
@@ -175,7 +175,7 @@ let TEST_FILES: string[] = [
 ];
 
 // ALL tests for CI
-if (process.env.CI || TEST_ALL) {
+if (TEST_ALL) {
   TEST_FILES = [
     'app-link.bit',
     'article.bit',
@@ -512,7 +512,7 @@ describe('bitmark-generator', () => {
         });
 
         // Print performance information
-        if (!process.env.CI && DEBUG_PERFORMANCE) {
+        if (DEBUG_PERFORMANCE) {
           const genTimeSecs = Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
           console.log(`'${fileId}' timing; GEN: ${genTimeSecs} s`);
         }

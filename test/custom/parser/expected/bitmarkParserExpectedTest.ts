@@ -28,7 +28,7 @@ const SINGLE_FILE_COUNT = 1000;
 const TEST_AGAINST_ANTLR_PARSER = false;
 
 // Set to true to generate performance debug output
-const DEBUG_PERFORMANCE = true;
+const DEBUG_PERFORMANCE = !process.env.CI;
 
 const NODE_MODULES_DIR = path.resolve(__dirname, '../../../../node_modules');
 const BITMARK_GRAMMAR_DIR = path.resolve(NODE_MODULES_DIR, 'bitmark-grammar');
@@ -503,7 +503,7 @@ describe('bitmark-parser', () => {
         });
 
         // Print performance information
-        if (!process.env.CI && DEBUG_PERFORMANCE) {
+        if (DEBUG_PERFORMANCE) {
           const pegTimeSecs = Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000;
           if (TEST_AGAINST_ANTLR_PARSER) {
             const antlrTimeSecs = Math.round(performance.measure('ANTLR', 'ANTLR:Start', 'ANTLR:End').duration) / 1000;

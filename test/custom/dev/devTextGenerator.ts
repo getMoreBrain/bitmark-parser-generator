@@ -16,7 +16,7 @@ import { NodeType } from '../../../src/model/ast/NodeType';
 const ast = new Ast();
 const textGenerator = new TextGenerator();
 
-class BmgDevTextGenerator {
+class DevTextGenerator {
   async test(debug?: boolean): Promise<void> {
     const filename = path.resolve(__dirname, '../../..', 'assets', 'test.text.json');
 
@@ -40,7 +40,7 @@ class BmgDevTextGenerator {
   }
 }
 
-const generator = new BmgDevTextGenerator();
+const generator = new DevTextGenerator();
 
 generator.test(true).then(() => {
   // Done

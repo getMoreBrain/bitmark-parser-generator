@@ -29,7 +29,7 @@ const SINGLE_FILE_COUNT = 1000;
 const TEST_AGAINST_ANTLR_PARSER = false;
 
 // Set to true to generate performance debug output
-const DEBUG_PERFORMANCE = true;
+const DEBUG_PERFORMANCE = !process.env.CI;
 
 // TODO should use 'require.resolve()' rather than direct node_modules
 const NODE_MODULES_DIR = path.resolve(__dirname, '../../../../node_modules');
@@ -547,7 +547,7 @@ describe('bitmark-parser-generator', () => {
         });
 
         // Print performance information
-        if (!process.env.CI && DEBUG_PERFORMANCE) {
+        if (DEBUG_PERFORMANCE) {
           const genTimeSecs = Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
           console.log(`'${fileId}' timing; GEN: ${genTimeSecs} s`);
         }

@@ -117,7 +117,7 @@ const DEBUG_CARD_SET = true; // Print the card set built from the parsed card se
 const DEBUG_CARD_TAGS = true; // Print the tags extracted from the card content
 
 // DO NOT EDIT THIS LINE. Ensures no debug in production in case ENABLE_DEBUG is accidentally left on
-const DEBUG = ENABLE_DEBUG && process.env.NODE_ENV === 'development';
+const DEBUG = ENABLE_DEBUG && process.env.BPG_ENV === 'development';
 
 const builder = new Builder();
 

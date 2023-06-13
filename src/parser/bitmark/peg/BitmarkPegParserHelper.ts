@@ -55,7 +55,7 @@ const DEBUG_TRACE_CARD_LINE_OR_DIVIDER = false;
 const DEBUG_TRACE_CARD_CONTENT = false;
 const DEBUG_TRACE_CARD_TAGS = false;
 const DEBUG_TRACE_CARD_PARSED = true; // Print the parsed card (will create a lot of output if card value is large)
-const DEBUG = ENABLE_DEBUG && process.env.NODE_ENV === 'development';
+const DEBUG = ENABLE_DEBUG && process.env.BPG_ENV === 'development';
 
 // Dummy for stripping unwanted code
 const STRIP = 0;

@@ -11,16 +11,14 @@ import path from 'path';
 
 import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
 import { Ast } from '../../../src/ast/Ast';
-// import { BitmarkFileGenerator } from '../../..src/generator/bitmark/BitmarkFileGenerator';
 import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
-import { BitmarkVersion } from '../../../src/model/enum/BitmarkVersion';
 import { JsonParser } from '../../../src/parser/json/JsonParser';
 
 const jsonParser = new JsonParser();
 const ast = new Ast();
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 
-class BmgDevGenerator {
+class DevGenerator {
   async test(debug?: boolean): Promise<void> {
     const filename = path.resolve(__dirname, '../../..', 'assets', 'test.json');
 
@@ -56,8 +54,9 @@ class BmgDevGenerator {
 
       // Generate markup code from AST
       const generator = new BitmarkStringGenerator({
-        bitmarkVersion: BitmarkVersion.v3,
-        explicitTextFormat: false,
+        bitmarkOptions: {
+          explicitTextFormat: false,
+        },
       });
 
       const res = await generator.generate(bitmarkAst);
@@ -65,11 +64,7 @@ class BmgDevGenerator {
     } else {
       const res = await bitmarkParserGenerator.convert(filename, {
         bitmarkOptions: {
-          bitmarkVersion: BitmarkVersion.v3,
-        },
-        jsonOptions: {
-          bitmarkVersion: BitmarkVersion.v3,
-          textAsPlainText: false,
+          explicitTextFormat: false,
         },
       });
       // BitmarkGenerator.convert(json);
@@ -78,7 +73,7 @@ class BmgDevGenerator {
   }
 }
 
-const generator = new BmgDevGenerator();
+const generator = new DevGenerator();
 
 generator.test(true).then(() => {
   // Done

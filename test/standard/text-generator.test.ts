@@ -11,15 +11,15 @@ import { TextParser } from '../../src/parser/text/TextParser';
 import { FileUtils } from '../../src/utils/FileUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
+// Enable or disable testing of specific files
+const TEST_ALL = process.env.CI || true;
+
 // Set to true to generate performance debug output
-const DEBUG_PERFORMANCE = true;
+const DEBUG_PERFORMANCE = !process.env.CI;
 
 const TEST_INPUT_DIR = path.resolve(__dirname, './text');
 // const JSON_INPUT_DIR = path.resolve(__dirname, './text/json');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/text-generator/output');
-
-// Enable or disable testing of specific files
-const TEST_ALL = true;
 
 let TEST_FILES: string[] = [
   //
@@ -32,7 +32,7 @@ let TEST_FILES: string[] = [
 ];
 
 // ALL tests for CI
-if (process.env.CI || TEST_ALL) {
+if (TEST_ALL) {
   TEST_FILES = [
     //
     'plain.text',
@@ -178,7 +178,7 @@ describe('text-generation', () => {
         });
 
         // Print performance information
-        if (!process.env.CI && DEBUG_PERFORMANCE) {
+        if (DEBUG_PERFORMANCE) {
           const genTimeSecs = Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
           console.log(`'${fileId}' timing; GEN: ${genTimeSecs} s`);
         }
