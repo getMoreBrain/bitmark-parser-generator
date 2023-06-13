@@ -33,6 +33,8 @@ export { TextFormat } from './model/enum/TextFormat';
 export { ResourceType } from './model/enum/ResourceType';
 export { NodeType } from './model/ast/NodeType';
 export { BitmarkParserType } from './model/enum/BitmarkParserType';
+export { BitmarkVersion } from './model/enum/BitmarkVersion';
+export { CardSetVersion } from './model/enum/CardSetVersion';
 
 const STRIP = 0;
 /* STRIP:START */
