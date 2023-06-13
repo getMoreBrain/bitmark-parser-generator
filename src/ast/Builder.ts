@@ -147,7 +147,7 @@ class Builder extends BaseBuilder {
     botResponses?: BotResponse[];
     footer?: FooterText;
 
-    bitmark?: string;
+    markup?: string;
     parser?: ParserInfo;
   }): Bit | undefined {
     const {
@@ -222,7 +222,7 @@ class Builder extends BaseBuilder {
       botResponses,
       footer,
 
-      bitmark,
+      markup,
       parser,
     } = data;
 
@@ -297,7 +297,7 @@ class Builder extends BaseBuilder {
       botResponses,
       footer,
 
-      bitmark,
+      markup,
       parser,
 
       // Must always be last in the AST so key clashes are avoided correctly with other properties
@@ -960,7 +960,6 @@ class Builder extends BaseBuilder {
   private addVersionToParserInfo(bit: Bit) {
     const parser: ParserInfo = bit.parser ?? {};
     parser.version = env.appVersion.full;
-    parser.bitmarkVersion = '3'; // TODO
     bit.parser = parser;
   }
 }

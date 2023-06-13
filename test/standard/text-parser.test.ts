@@ -147,7 +147,7 @@ describe('text-parser', () => {
         });
 
         // Print performance information
-        if (DEBUG_PERFORMANCE) {
+        if (!process.env.CI && DEBUG_PERFORMANCE) {
           const pegTimeSecs = Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000;
           console.log(`'${fileId}' timing; PEG: ${pegTimeSecs} s`);
         }

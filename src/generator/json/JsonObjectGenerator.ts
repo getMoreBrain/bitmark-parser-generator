@@ -3,7 +3,7 @@ import { BitmarkAst } from '../../model/ast/Nodes';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { Generator } from '../Generator';
 
-import { JsonGenerator, JsonOptions } from './JsonGenerator';
+import { JsonGenerator, JsonGeneratorOptions } from './JsonGenerator';
 
 /**
  * Generate bitmark JSON from a bitmark AST as a plain JS object
@@ -16,11 +16,11 @@ class JsonObjectGenerator implements Generator<BitmarkAst, BitWrapperJson[]> {
   /**
    * Generate bitmark JSON from a bitmark AST as a string
    *
-   * @param options - bitmark generation options
+   * @param options - JSON generation options
    */
-  constructor(generatorOptions?: JsonOptions) {
+  constructor(options?: JsonGeneratorOptions) {
     this.writer = new StringWriter();
-    this.generator = new JsonGenerator(this.writer, generatorOptions);
+    this.generator = new JsonGenerator(this.writer, options);
   }
 
   /**

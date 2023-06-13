@@ -2,7 +2,7 @@ import { StringWriter } from '../../ast/writer/StringWriter';
 import { BitmarkAst } from '../../model/ast/Nodes';
 import { Generator } from '../Generator';
 
-import { JsonGenerator, JsonOptions } from './JsonGenerator';
+import { JsonGenerator, JsonGeneratorOptions } from './JsonGenerator';
 
 /**
  * Generate bitmark JSON from a bitmark AST as a string
@@ -14,11 +14,11 @@ class JsonStringGenerator implements Generator<BitmarkAst, string> {
   /**
    * Generate bitmark JSON from a bitmark AST as a string
    *
-   * @param options - bitmark generation options
+   * @param options - JSON generation options
    */
-  constructor(generatorOptions?: JsonOptions) {
+  constructor(options?: JsonGeneratorOptions) {
     this.writer = new StringWriter();
-    this.generator = new JsonGenerator(this.writer, generatorOptions);
+    this.generator = new JsonGenerator(this.writer, options);
   }
 
   /**

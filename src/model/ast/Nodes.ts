@@ -90,7 +90,7 @@ export interface Bit {
   botResponses?: BotResponse[];
   footer?: FooterText;
 
-  bitmark?: string;
+  markup?: string; // Called 'bitmark' in the JSON
   parser?: ParserInfo;
 }
 

@@ -2,6 +2,8 @@ import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
+import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
+import { CardSetVersion, CardSetVersionType } from '../../model/enum/CardSetVersion';
 import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { TextFormat } from '../../model/enum/TextFormat';
@@ -28,7 +30,6 @@ import {
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
   debugGenerationInline: false,
-  cardSetVersion: 1,
 };
 
 /**
@@ -43,9 +44,11 @@ export interface BitmarkOptions {
   explicitTextFormat?: boolean;
 
   /**
-   * Card set version to generate
+   * Card set version to generate:
+   * 1: === / == / --
+   * 2: ++==== / ==== / -- / ~~ / ====++
    */
-  cardSetVersion?: number;
+  cardSetVersion?: CardSetVersionType;
 
   /**
    * [development only]
@@ -55,10 +58,33 @@ export interface BitmarkOptions {
 }
 
 /**
+ * Bitmark generator options
+ */
+export interface BitmarkGeneratorOptions {
+  /**
+   * bitmarkVersion - The version of bitmark to output.
+   * If not specified, the version will default to 3.
+   *
+   * Specifying the version will set defaults for other options.
+   * - Bitmark v2:
+   *   - cardSetVersion: 1
+   * - Bitmark v3:
+   *   - cardSetVersion: 2 (TODO, currently CardSet v1 will still be used)
+   */
+  bitmarkVersion?: BitmarkVersionType;
+
+  /**
+   * The options for JSON generation.
+   */
+  bitmarkOptions?: BitmarkOptions;
+}
+
+/**
  * Generate bitmark markup from a bitmark AST
  */
 class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected ast = new Ast();
+  private bitmarkVersion: BitmarkVersionType;
   private options: BitmarkOptions;
   private writer: Writer;
 
@@ -72,13 +98,34 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * Generate bitmark markup from a bitmark AST
    *
    * @param writer - destination for the output
+   * @param bitmarkVersion - The version of bitmark to output.
+   * If not specified, the version will default to 3.
+   *
+   * Specifying the version will set defaults for other options.
+   * - Bitmark v2:
+   *   - cardSetVersion: 1
+   * - Bitmark v3:
+   *   - cardSetVersion: 2 (TODO, currently CardSet v1 will still be used)
+   *
    * @param options - bitmark generation options
    */
-  constructor(writer: Writer, options?: BitmarkOptions) {
+  constructor(writer: Writer, options?: BitmarkGeneratorOptions) {
+    this.bitmarkVersion = BitmarkVersion.fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
     this.options = {
       ...DEFAULT_OPTIONS,
-      ...options,
+      ...options?.bitmarkOptions,
     };
+
+    // Set defaults according to bitmark version
+    if (this.bitmarkVersion === BitmarkVersion.v2) {
+      if (this.options.cardSetVersion === undefined) {
+        this.options.cardSetVersion = CardSetVersion.v1;
+      }
+    } else {
+      if (this.options.cardSetVersion === undefined) {
+        this.options.cardSetVersion = CardSetVersion.v1; // TODO change to v2 when working
+      }
+    }
 
     this.writer = writer;
 
@@ -1411,7 +1458,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected writeCardSetStart(): void {
-    if (this.options.cardSetVersion === 1) {
+    if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('===');
     } else {
       this.write('++\n====');
@@ -1419,7 +1466,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected writeCardSetEnd(): void {
-    if (this.options.cardSetVersion === 1) {
+    if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('===');
     } else {
       this.write('====\n++');
@@ -1427,7 +1474,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected writeCardSetCardDivider(): void {
-    if (this.options.cardSetVersion === 1) {
+    if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('===');
     } else {
       this.write('====');
@@ -1435,7 +1482,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected writeCardSetSideDivider(): void {
-    if (this.options.cardSetVersion === 1) {
+    if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('==');
     } else {
       this.write('--');
@@ -1443,7 +1490,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected writeCardSetVariantDivider(): void {
-    if (this.options.cardSetVersion === 1) {
+    if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('--');
     } else {
       this.write('~~');

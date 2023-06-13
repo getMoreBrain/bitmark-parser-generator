@@ -19,7 +19,7 @@ const TEST_INPUT_DIR = path.resolve(__dirname, './text');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/text-generator/output');
 
 // Enable or disable testing of specific files
-const TEST_ALL = false;
+const TEST_ALL = true;
 
 let TEST_FILES: string[] = [
   //
@@ -178,7 +178,7 @@ describe('text-generation', () => {
         });
 
         // Print performance information
-        if (DEBUG_PERFORMANCE) {
+        if (!process.env.CI && DEBUG_PERFORMANCE) {
           const genTimeSecs = Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
           console.log(`'${fileId}' timing; GEN: ${genTimeSecs} s`);
         }

@@ -59,6 +59,8 @@ export type { TextFormatType } from './model/enum/TextFormat';
 export type { ResourceTypeType } from './model/enum/ResourceType';
 export type { NodeTypeType } from './model/ast/NodeType';
 export type { BitmarkParserTypeType } from './model/enum/BitmarkParserType';
+export type { BitmarkVersionType } from './model/enum/BitmarkVersion';
+export type { CardSetVersionType } from './model/enum/CardSetVersion';
 export type { Generator } from './generator/Generator';
 
 export type { NodeInfo, AstWalkCallbacks } from './ast/Ast';

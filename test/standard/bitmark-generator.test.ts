@@ -395,6 +395,15 @@ describe('bitmark-generator', () => {
         const generatedAstFile = path.resolve(fullFolder, `${id}.ast.json`);
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);
 
+        const jsonOptions = {
+          textAsPlainText: true, // For testing the generator, use plain text rather than JSON for text
+          prettify: true, // For testing the output is easier to read if it is prettified
+        };
+
+        const bitmarkOptions = {
+          explicitTextFormat: false,
+        };
+
         // Copy the original test markup file to the output folder
         fs.copySync(testFile, originalMarkupFile);
 
@@ -420,9 +429,8 @@ describe('bitmark-generator', () => {
           const bitmarkAst = bitmarkParser.toAst(originalMarkup);
 
           // Generate JSON from AST
-          const generator = new JsonFileGenerator(originalJsonFile, undefined, {
-            prettify: true,
-            textAsPlainText: true,
+          const generator = new JsonFileGenerator(originalJsonFile, {
+            jsonOptions,
           });
 
           await generator.generate(bitmarkAst);
@@ -447,8 +455,8 @@ describe('bitmark-generator', () => {
         });
 
         // Generate markup code from AST
-        const generator = new BitmarkFileGenerator(generatedMarkupFile, undefined, {
-          explicitTextFormat: false,
+        const generator = new BitmarkFileGenerator(generatedMarkupFile, {
+          bitmarkOptions,
         });
 
         await generator.generate(bitmarkAst);
@@ -479,9 +487,8 @@ describe('bitmark-generator', () => {
           });
 
           // Generate JSON from AST
-          const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
-            prettify: true,
-            textAsPlainText: true,
+          const generator = new JsonFileGenerator(generatedJsonFile, {
+            jsonOptions,
           });
 
           await generator.generate(bitmarkAst);
@@ -505,7 +512,7 @@ describe('bitmark-generator', () => {
         });
 
         // Print performance information
-        if (DEBUG_PERFORMANCE) {
+        if (!process.env.CI && DEBUG_PERFORMANCE) {
           const genTimeSecs = Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
           console.log(`'${fileId}' timing; GEN: ${genTimeSecs} s`);
         }

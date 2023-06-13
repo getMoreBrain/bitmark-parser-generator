@@ -3,6 +3,7 @@ import { NodeType } from '../../model/ast/NodeType';
 import { Bit } from '../../model/ast/Nodes';
 import { ImageTextNode, TaskItemTextNode, TextAst, TextNode } from '../../model/ast/TextNodes';
 import { BitTypeType } from '../../model/enum/BitType';
+import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { TextMarkType } from '../../model/enum/TextMarkType';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson, BodyBitsJson } from '../../model/json/BodyBitJson';
@@ -48,6 +49,7 @@ export interface TextOptions {
  */
 class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
   protected ast = new Ast();
+  private bitmarkVersion: BitmarkVersionType;
   private options: TextOptions;
 
   // State
@@ -63,14 +65,22 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
   /**
    * Generate text from a bitmark text AST
    *
-   * @param writer - destination for the output
+   * @param bitmarkVersion - bitmark version, use null to use latest version
    * @param options - text generation options
    */
-  constructor(options?: TextOptions) {
+  constructor(bitmarkVersion?: BitmarkVersionType, options?: TextOptions) {
+    this.bitmarkVersion = BitmarkVersion.fromValue(bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
     this.options = {
       ...DEFAULT_OPTIONS,
       ...options,
     };
+
+    // Set defaults according to bitmark version
+    if (this.bitmarkVersion === BitmarkVersion.v2) {
+      //
+    } else {
+      //
+    }
 
     this.enter = this.enter.bind(this);
     this.between = this.between.bind(this);

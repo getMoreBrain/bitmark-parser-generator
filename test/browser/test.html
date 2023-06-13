@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <head>
   <title>bonaroo-able test</title>
-  <!-- <script src="../../dist/browser/bitmark-parser-generator.min.js"></script> -->
-  <script src="../../dist/browser/bitmark-parser-generator-antlr.min.js"></script>
+  <script src="../../dist/browser/bitmark-parser-generator.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       console.log('bitmark-parser-generator Browser Test');
 
+      const bitmarkVersion = undefined; // Use lastest
       const { BitmarkParserGenerator } = window.bitmarkParserGenerator;
       const bpg = new BitmarkParserGenerator();
       console.log(`Parser version: v${bpg.version()}`);
@@ -17,12 +17,12 @@ Hier [_dürfen][@example]Sie nicht spielen. Es ist verboten.
 `;
       let bitmarkTimeSecs = 0;
       let pegTimeSecs = 0;
-      let antlrTimeSecs = 0;
+      let textTimeSecs = 0;
       let pegSpeedUp = 0;
 
       const dom = {
         json: document.getElementById('output'),
-        jsonANTLR: document.getElementById('outputANTLR'),
+        jsonText: document.getElementById('outputText'),
         bitmark: document.getElementById('input'),
         ast: document.getElementById('ast'),
         toBitmark: document.getElementById('toBitmark'),
@@ -31,8 +31,7 @@ Hier [_dürfen][@example]Sie nicht spielen. Es ist verboten.
 
         bitmarkTime: document.getElementById('bitmarkTime'),
         pegTime: document.getElementById('pegTime'),
-        antlrTime: document.getElementById('antlrTime'),
-        speedUpTime: document.getElementById('speedUpTime'),
+        textTime: document.getElementById('textTime'),
       };
 
       dom.bitmark.value = defaultMarkup;
@@ -45,7 +44,9 @@ Hier [_dürfen][@example]Sie nicht spielen. Es ist verboten.
           const json = dom.json.value;
 
           performance.mark('Start');
-          const bitmark = await bpg.convert(json);
+          const bitmark = await bpg.convert(json, {
+            bitmarkVersion,
+          });
           performance.mark('End');
 
           bitmarkTimeSecs = Math.round(performance.measure('Generator', 'Start', 'End').duration) / 1000;
@@ -66,76 +67,55 @@ Hier [_dürfen][@example]Sie nicht spielen. Es ist verboten.
           const bitmark = dom.bitmark.value;
 
           performance.mark('Start');
-          const json = await bpg.convert(bitmark);
+          const json = await bpg.convert(bitmark, {
+            bitmarkVersion,
+          });
           performance.mark('End');
 
-          // const ast = await bpg.convert(bitmark, {
-          //   outputFormat: 'ast',
-          // });
+          const ast = await bpg.convert(bitmark, {
+            outputFormat: 'ast',
+            bitmarkVersion,
+          });
 
           pegTimeSecs = Math.round(performance.measure('PEG', 'Start', 'End').duration) / 1000;
 
           dom.json.value = JSON.stringify(json, null, 2);
-          // dom.ast.value = JSON.stringify(ast, null, 2);
+          dom.ast.value = JSON.stringify(ast, null, 2);
           dom.pegTime.innerText = `${pegTimeSecs}s`;
         } catch (e) {
           dom.json.value = JSON.stringify(e, Object.getOwnPropertyNames(e), 2);
-          // dom.ast.value = 'Error';
+          dom.ast.value = 'Error';
           console.log(e);
         }
       };
 
-      const bitmarkToJsonANTLR = async () => {
+      const bitmarkToJsonText = async () => {
         performance.clearMarks();
 
-        console.log('Converting Bitmark to JSON (ANTLR)');
+        console.log('Converting Bitmark to JSON (V2)');
         try {
           const bitmark = dom.bitmark.value;
 
           performance.mark('Start');
           const json = await bpg.convert(bitmark, {
-            bitmarkParserType: 'antlr',
+            bitmarkVersion: 2,
           });
           performance.mark('End');
 
-          antlrTimeSecs = Math.round(performance.measure('ANTLR', 'Start', 'End').duration) / 1000;
+          textTimeSecs = Math.round(performance.measure('TEXT', 'Start', 'End').duration) / 1000;
 
-          dom.jsonANTLR.value = JSON.stringify(json, null, 2);
-          dom.antlrTime.innerText = `${antlrTimeSecs}s`;
+          dom.jsonText.value = JSON.stringify(json, null, 2);
+          dom.textTime.innerText = `${textTimeSecs}s`;
         } catch (e) {
-          dom.jsonANTLR.value = JSON.stringify(e, Object.getOwnPropertyNames(e), 2);
-          console.log(e);
-        }
-      };
-
-      const calculateDiff = () => {
-        console.log('Calculating JSON diff (PEG / ANTLR)');
-        try {
-          const antlr = JSON.parse(dom.jsonANTLR.value);
-          const peg = JSON.parse(dom.json.value);
-
-          // Ignore parser output for the diff
-          antlr.forEach((bit) => delete bit.parser);
-          peg.forEach((bit) => delete bit.parser);
-
-          const diffMap = deepDiffMapper.map(antlr, peg, {
-            ignoreUnchanged: true,
-          });
-
-          pegSpeedUp = Math.round((antlrTimeSecs / pegTimeSecs) * 100) / 100;
-
-          dom.diff.value = JSON.stringify(diffMap, null, 2);
-          dom.speedUpTime.innerText = `, Speedup: x${pegSpeedUp}`;
-        } catch (e) {
-          dom.diff.value = JSON.stringify(e, Object.getOwnPropertyNames(e), 2);
+          dom.jsonText.value = JSON.stringify(e, Object.getOwnPropertyNames(e), 2);
           console.log(e);
         }
       };
 
       // Execute initial conversions
       bitmarkToJson().then(() => {
-        bitmarkToJsonANTLR().then(() => {
-          calculateDiff();
+        bitmarkToJsonText().then(() => {
+          jsonToBitmark();
         });
       });
 
@@ -145,16 +125,12 @@ Hier [_dürfen][@example]Sie nicht spielen. Es ist verboten.
       });
       dom.toJson.addEventListener('click', () => {
         bitmarkToJson().then(() => {
-          bitmarkToJsonANTLR().then(() => {
-            calculateDiff();
-          });
+          bitmarkToJsonText();
         });
       });
       dom.bitmark.addEventListener('input', () => {
         bitmarkToJson().then(() => {
-          bitmarkToJsonANTLR().then(() => {
-            calculateDiff();
-          });
+          bitmarkToJsonText();
         });
       });
       dom.json.addEventListener('input', () => {
@@ -216,19 +192,20 @@ Hier [_dürfen][@example]Sie nicht spielen. Es ist verboten.
     <div class="left">
       <div class="heading">BITMARK: <span id="bitmarkTime"></span></div>
       <textarea id="input" class="input"></textarea>
-      <textarea id="ast" class="input" style="display: none"></textarea>
-      <div class="heading">DIFF (PEG ==> ANTLR):</div>
-      <textarea id="outputDiff" class="input" readonly></textarea>
+      <div class="heading">AST:</div>
+      <textarea id="ast" class="input" readonly></textarea>
+      <div class="heading" style="display: none">DIFF (PEG ==> ANTLR):</div>
+      <textarea id="outputDiff" class="input" readonly style="display: none"></textarea>
     </div>
     <div class="buttons">
       <button id="toJson">==></button>
       <button id="toBitmark"><==</button>
     </div>
     <div class="right">
-      <div class="heading">JSON (PEG): <span id="pegTime"></span><span id="speedUpTime"></span></div>
+      <div class="heading">JSON (V3): <span id="pegTime"></span></div>
       <textarea id="output" class="output"></textarea>
-      <div class="heading">JSON (ANTLR): <span id="antlrTime"></span></div>
-      <textarea id="outputANTLR" class="output" readonly></textarea>
+      <div class="heading">JSON (V2): <span id="textTime"></span></div>
+      <textarea id="outputText" class="output" readonly></textarea>
     </div>
   </div>
 
@@ -236,204 +213,5 @@ Hier [_dürfen][@example]Sie nicht spielen. Es ist verboten.
     //
     // Helper functions
     //
-    deepDiffMapper = (function () {
-      const IGNORE_KEY = '__4__34__2_IGNORE_ME__3__6__88_';
-
-      return {
-        VALUE_CREATED: 'created',
-        VALUE_UPDATED: 'updated',
-        VALUE_DELETED: 'deleted',
-        VALUE_UNCHANGED: 'unchanged',
-        map: function (obj1, obj2, options, depth = 0) {
-          const _options = Object.assign({}, options);
-
-          if (this.isFunction(obj1) || this.isFunction(obj2)) {
-            throw 'Invalid argument. Function given, object expected.';
-          }
-          if (this.isValue(obj1) || this.isValue(obj2)) {
-            return {
-              type: this.compareValues(obj1, obj2),
-              data1: obj1,
-              data2: obj2,
-            };
-          }
-
-          const _map = (key, val1, val2) => {
-            const thisDiff = this.map(val1, val2, options, depth + 1);
-
-            const ignore = _options.ignoreUnchanged && thisDiff.type === this.VALUE_UNCHANGED;
-            if (!ignore) {
-              diff[key] = thisDiff;
-            } else {
-              diff[key] = IGNORE_KEY;
-            }
-          };
-
-          const diff = {};
-          for (const key in obj1) {
-            if (this.isFunction(obj1[key])) {
-              continue;
-            }
-
-            let value2 = undefined;
-            if (obj2[key] !== undefined) {
-              value2 = obj2[key];
-            }
-
-            _map(key, obj1[key], value2);
-          }
-          for (const key in obj2) {
-            if (diff[key] === IGNORE_KEY) {
-              delete diff[key];
-              continue;
-            }
-            if (this.isFunction(obj2[key]) || diff[key] !== undefined) {
-              continue;
-            }
-
-            _map(key, undefined, obj2[key]);
-          }
-
-          // If ignore unchanged, delete any empty keys
-          if (_options.ignoreUnchanged && depth === 0) {
-            // Walk tree and remove empy objects
-            const walkAndDeleteRecursive = (node, depth = 0) => {
-              if (this.isValue(node)) return false;
-
-              if (!depth) depth = 0;
-              const childNodes = Object.entries(node);
-              const deleteKeys = [];
-              for (const [k, c] of childNodes) {
-                const del = walkAndDeleteRecursive(c, depth + 1);
-                if (del) deleteKeys.push(k);
-              }
-              // If node is empty, delete it (need to get entries again as may have changed)
-              for (const k of deleteKeys) {
-                delete node[k];
-              }
-              const nodeLeftCount = Object.entries(node).length;
-              return nodeLeftCount === 0;
-            };
-            walkAndDeleteRecursive(diff);
-          }
-
-          return diff;
-        },
-        compareValues: function (value1, value2) {
-          if (value1 === value2) {
-            return this.VALUE_UNCHANGED;
-          }
-          if (this.isDate(value1) && this.isDate(value2) && value1.getTime() === value2.getTime()) {
-            return this.VALUE_UNCHANGED;
-          }
-          if (value1 === undefined) {
-            return this.VALUE_CREATED;
-          }
-          if (value2 === undefined) {
-            return this.VALUE_DELETED;
-          }
-          return this.VALUE_UPDATED;
-        },
-        isFunction: function (x) {
-          return Object.prototype.toString.call(x) === '[object Function]';
-        },
-        isArray: function (x) {
-          return Object.prototype.toString.call(x) === '[object Array]';
-        },
-        isDate: function (x) {
-          return Object.prototype.toString.call(x) === '[object Date]';
-        },
-        isObject: function (x) {
-          return Object.prototype.toString.call(x) === '[object Object]';
-        },
-        isValue: function (x) {
-          return !this.isObject(x) && !this.isArray(x);
-        },
-      };
-    })();
-
-    cleanupJson = (function () {
-      return function (obj, options) {
-        options = Object.assign({}, options);
-
-        if (obj) {
-          let bitWrappers = [];
-          if (!Array.isArray(obj)) {
-            bitWrappers = [obj];
-          } else {
-            bitWrappers = obj;
-          }
-
-          const bitsToRemove = [];
-
-          for (const bw of bitWrappers) {
-            if (options.removeMarkup) delete bw.bitmark;
-            if (options.removeParser) delete bw.parser;
-            delete bw.example;
-
-            const bit = bw.bit;
-            if (bit) {
-              // Clean bit
-
-              // // Item, Lead, Hint, Instruction
-              // if (!bit.item) delete bit.item;
-              // if (!bit.lead) delete bit.lead;
-              // if (!bit.hint) delete bit.hint;
-              // if (!bit.instruction) delete bit.instruction;
-
-              // // Example
-              // if (!bit.example) delete bit.example;
-              // if (!bit.isExample) delete bit.isExample;
-
-              // Clean bit resource
-              if (bit.resource) {
-                delete bit.resource.private;
-
-                const resourcesToClean = [...Object.keys(bit.resource).map((key) => bit.resource[key])];
-                if (bit.resource?.video?.posterImage) resourcesToClean.push(bit.resource.video.posterImage);
-
-                // Delete the defaults - ignored for testing
-                for (const resource of resourcesToClean) {
-                  if (!resource.width) delete resource.width;
-                  if (!resource.height) delete resource.height;
-
-                  if (!resource.license) delete resource.license;
-                  if (!resource.copyright) delete resource.copyright;
-                  if (!resource.provider) delete resource.provider;
-                  if (!resource.showInIndex) delete resource.showInIndex;
-                  if (!resource.caption) delete resource.caption;
-                  if (!resource.duration) delete resource.duration;
-
-                  if (!resource.allowSubtitles) delete resource.allowSubtitles;
-                  if (!resource.showSubtitles) delete resource.showSubtitles;
-                  if (!resource.autoplay) delete resource.autoplay;
-                  if (!resource.mute) delete resource.mute;
-                  if (!resource.alt) delete resource.alt;
-
-                  if (!resource.href) delete resource.href;
-
-                  // Ignore provider and format because they are generated (sometimes incorrectly by ANTLR parser)
-                  delete resource.provider;
-                  delete resource.format;
-                }
-              }
-            }
-
-            if (options.removeErrors) {
-              // Mark bits with errors for removal
-              if (bw.errors) {
-                bitsToRemove.push(bw);
-              }
-            }
-          }
-
-          // Remove bits with errors - they are not useful for testing
-          for (const bw of bitsToRemove) {
-            const idx = bitWrappers.indexOf(bw);
-            if (idx >= 0) bitWrappers.splice(idx, 1);
-          }
-        }
-      };
-    })();
   </script>
 </body>

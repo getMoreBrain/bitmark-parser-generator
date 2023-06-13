@@ -32,6 +32,7 @@ import path from 'path';
 import { FileOptions } from './ast/writer/FileWriter';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
+import { BitmarkVersionType } from './model/enum/BitmarkVersion';
 
 /* STRIP:END */
 STRIP;
@@ -41,9 +42,25 @@ STRIP;
  */
 export interface ConvertOptions {
   /**
+   * The version of bitmark to output.
+   * If not specified, the version will be 3.
+   *
+   * Specifying the version will set defaults for other options.
+   * - Bitmark v2:
+   *   - bitmarkOptions.cardSetVersion: 1
+   *   - jsonOptions.textAsPlainText: true
+   * - Bitmark v3:
+   *   - bitmarkOptions.cardSetVersion: 2 (TODO, currently CardSet v1 will still be used until v2 is working)
+   *   - jsonOptions.textAsPlainText: false
+   *
+   */
+  bitmarkVersion?: BitmarkVersionType;
+
+  /**
    * Specify the bitmark parser to use, overriding the default
    */
   bitmarkParserType?: BitmarkParserTypeType;
+
   /**
    * Specify the output format, overriding the default
    */
@@ -70,6 +87,21 @@ export interface ConvertOptions {
  * Prettify options for bitmark / JSON prettify / validate
  */
 export interface UpgradeOptions {
+  /**
+   * The version of bitmark to output.
+   * If not specified, the version will be 3.
+   *
+   * Specifying the version will set defaults for other options.
+   * - Bitmark v2:
+   *   - bitmarkOptions.cardSetVersion: 1
+   *   - jsonOptions.textAsPlainText: true
+   * - Bitmark v3:
+   *   - bitmarkOptions.cardSetVersion: 2 (TODO, currently CardSet v1 will still be used until v2 is working)
+   *   - jsonOptions.textAsPlainText: false
+   *
+   */
+  bitmarkVersion?: BitmarkVersionType;
+
   /**
    * Specify the bitmark parser to use, overriding the default
    */
@@ -158,7 +190,7 @@ class BitmarkParserGenerator {
     let res: string | unknown | void;
     const opts: ConvertOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
-    const bitmarkOptions = Object.assign({}, opts.bitmarkOptions);
+    // const bitmarkOptions = Object.assign({}, opts.bitmarkOptions);
     const jsonOptions = Object.assign({}, opts.jsonOptions);
 
     const outputFormat = opts.outputFormat;
@@ -236,11 +268,11 @@ class BitmarkParserGenerator {
         // Convert the AST to JSON
         if (opts.outputFile) {
           // Write JSON file
-          const generator = new JsonFileGenerator(opts.outputFile, fileOptions, jsonOptions);
+          const generator = new JsonFileGenerator(opts.outputFile, opts);
           await generator.generate(ast);
         } else {
           // Generate JSON object
-          const generator = new JsonObjectGenerator(bitmarkOptions);
+          const generator = new JsonObjectGenerator(opts);
           const json = await generator.generate(ast);
 
           // Return JSON as object or string depending on prettify/stringify option
@@ -253,11 +285,11 @@ class BitmarkParserGenerator {
       // Convert the AST to bitmark
       if (opts.outputFile) {
         // Write markup file
-        const generator = new BitmarkFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
+        const generator = new BitmarkFileGenerator(opts.outputFile, opts);
         await generator.generate(astJson);
       } else {
         // Generate markup string
-        const generator = new BitmarkStringGenerator(bitmarkOptions);
+        const generator = new BitmarkStringGenerator(opts);
         res = await generator.generate(astJson);
       }
     };
@@ -271,11 +303,11 @@ class BitmarkParserGenerator {
       // Convert the AST to JSON
       if (opts.outputFile) {
         // Write JSON file
-        const generator = new JsonFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
+        const generator = new JsonFileGenerator(opts.outputFile, opts);
         await generator.generate(astJson);
       } else {
         // Generate JSON object
-        const generator = new JsonObjectGenerator(bitmarkOptions);
+        const generator = new JsonObjectGenerator(opts);
         const json = await generator.generate(astJson);
 
         // Return JSON as object or string depending on prettify/stringify option
@@ -289,11 +321,11 @@ class BitmarkParserGenerator {
       // Convert the JSON to bitmark
       if (opts.outputFile) {
         // Write markup file
-        const generator = new BitmarkFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
+        const generator = new BitmarkFileGenerator(opts.outputFile, opts);
         await generator.generate(astJson);
       } else {
         // Generate markup string
-        const generator = new BitmarkStringGenerator(bitmarkOptions);
+        const generator = new BitmarkStringGenerator(opts);
         res = await generator.generate(astJson);
       }
     };
@@ -381,10 +413,11 @@ class BitmarkParserGenerator {
    */
   async upgrade(input: string | fs.PathLike | unknown, options?: UpgradeOptions): Promise<string | unknown | void> {
     let res: string | unknown | void;
-    const opts: ConvertOptions = Object.assign({}, options);
-    const fileOptions = Object.assign({}, opts.fileOptions);
-    const bitmarkOptions = Object.assign({}, opts.bitmarkOptions);
+    const opts: UpgradeOptions = Object.assign({}, options);
+    // const fileOptions = Object.assign({}, opts.fileOptions);
+    // const bitmarkOptions = Object.assign({}, opts.bitmarkOptions);
     const jsonOptions = Object.assign({}, opts.jsonOptions);
+
     const bitmarkParserType = opts.bitmarkParserType;
 
     let inStr: string = input as string;
@@ -419,11 +452,11 @@ class BitmarkParserGenerator {
       // Convert the AST to bitmark
       if (opts.outputFile) {
         // Write markup file
-        const generator = new BitmarkFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
+        const generator = new BitmarkFileGenerator(opts.outputFile, opts);
         await generator.generate(astJson);
       } else {
         // Generate markup string
-        const generator = new BitmarkStringGenerator(bitmarkOptions);
+        const generator = new BitmarkStringGenerator(opts);
         res = await generator.generate(astJson);
       }
     };
@@ -434,11 +467,11 @@ class BitmarkParserGenerator {
       // Convert the AST to JSON
       if (opts.outputFile) {
         // Write JSON file
-        const generator = new JsonFileGenerator(opts.outputFile, fileOptions, bitmarkOptions);
+        const generator = new JsonFileGenerator(opts.outputFile, opts);
         await generator.generate(astJson);
       } else {
         // Generate JSON object
-        const generator = new JsonObjectGenerator(bitmarkOptions);
+        const generator = new JsonObjectGenerator(opts);
         const json = await generator.generate(astJson);
 
         // Return JSON as object or string depending on prettify/stringify option

@@ -184,7 +184,7 @@ class BitmarkPegParserProcessor {
       const bit = bitParserResult.value;
       if (bit) {
         // Add markup to the bit
-        bit.bitmark = bitStr.trim();
+        bit.markup = bitStr.trim();
 
         // Add the bit to the list of bits
         bits.push(bit);

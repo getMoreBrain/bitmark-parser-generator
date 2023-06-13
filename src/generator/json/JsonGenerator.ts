@@ -15,6 +15,7 @@ import { StillImageFilmEmbedResource } from '../../model/ast/Nodes';
 import { StillImageFilmLinkResource } from '../../model/ast/Nodes';
 import { Text, TextAst } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
+import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
@@ -133,15 +134,16 @@ export interface JsonOptions {
   /**
    * Output text as plain text rather than parsed bitmark text
    *
-   * If not set or false, text will be output as parsed bitmark text
-   * It true, text will be output as plain text strings
+   * If not set, the default for the bitmark version will be used.
+   * If false, text will be output as parsed bitmark text.
+   * It true, text will be output as plain text strings.
    */
   textAsPlainText?: boolean;
 
   /**
    * Include extra properties in the output.
    *
-   * If not set or false, extra properties will NOT be included in the JSON output
+   * If not set or false, extra properties will NOT be included in the JSON output.
    * It true, extra properties will be included in the JSON output.
    *
    */
@@ -152,6 +154,28 @@ export interface JsonOptions {
    * Generate debug information in the output.
    */
   debugGenerationInline?: boolean;
+}
+
+/**
+ * JSON generator options
+ */
+export interface JsonGeneratorOptions {
+  /**
+   * bitmarkVersion - The version of bitmark to output.
+   * If not specified, the version will default to 3.
+   *
+   * Specifying the version will set defaults for other options.
+   * - Bitmark v2:
+   *   - textAsPlainText: true
+   * - Bitmark v3:
+   *   - textAsPlainText: false
+   */
+  bitmarkVersion?: BitmarkVersionType;
+
+  /**
+   * The options for JSON generation.
+   */
+  jsonOptions?: JsonOptions;
 }
 
 interface ItemLeadHintInstructionNode {
@@ -179,6 +203,7 @@ interface ExampleAndIsExample {
  */
 class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected ast = new Ast();
+  private bitmarkVersion: BitmarkVersionType;
   private textParser = new TextParser();
 
   // TODO - move to context
@@ -200,14 +225,27 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * Generate bitmark JSON from a bitmark AST
    *
    * @param writer - destination for the output
-   * @param options - bitmark generation options
+   * @param options - JSON generation options
    */
-  constructor(writer: Writer, options?: JsonOptions) {
+  constructor(writer: Writer, options?: JsonGeneratorOptions) {
+    this.bitmarkVersion = BitmarkVersion.fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
     this.options = {
       ...DEFAULT_OPTIONS,
-      ...options,
+      ...options?.jsonOptions,
     };
+
     this.jsonPrettifySpace = this.options.prettify === true ? 2 : this.options.prettify || undefined;
+
+    // Set defaults according to bitmark version
+    if (this.bitmarkVersion === BitmarkVersion.v2) {
+      if (this.options.textAsPlainText === undefined) {
+        this.options.textAsPlainText = true;
+      }
+    } else {
+      if (this.options.textAsPlainText === undefined) {
+        this.options.textAsPlainText = false;
+      }
+    }
 
     this.writer = writer;
 
@@ -1041,9 +1079,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.bitJson.footer = this.toTextAstOrString(footer);
   }
 
-  // bitmark -> bits -> bitsValue -> bitmark
+  // bitmark -> bits -> bitsValue -> markup
 
-  protected leaf_bitmark(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_markup(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const bitmark = node.value as string | undefined;
     if (bitmark) this.bitWrapperJson.bitmark = bitmark;
   }
@@ -1053,8 +1091,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected enter_parser(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const parser = node.value as ParserInfo | undefined;
     if (parser) {
-      // Warnings and Errors don't .bitmarkVersion
-      const { excessResources: parserExcessResources, ...parserRest } = parser;
+      const { version, excessResources: parserExcessResources, ...parserRest } = parser;
+      const bitmarkVersion = `${this.bitmarkVersion}`;
 
       // Parse resources to JSON from AST
       let excessResources: ResourceJson[] | undefined;
@@ -1069,6 +1107,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       if (parent?.key === NodeType.bitsValue) {
         // Bit level parser information
         this.bitWrapperJson.parser = {
+          version,
+          bitmarkVersion,
           ...parserRest,
           excessResources,
         };

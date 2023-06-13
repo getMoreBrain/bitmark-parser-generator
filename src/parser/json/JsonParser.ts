@@ -1,8 +1,6 @@
-import { Ast } from '../../ast/Ast';
 import { Builder } from '../../ast/Builder';
 import { ResourceBuilder } from '../../ast/ResourceBuilder';
 import { TextGenerator } from '../../generator/text/TextGenerator';
-import { NodeType } from '../../model/ast/NodeType';
 import { Text } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BodyBitType } from '../../model/enum/BodyBitType';
@@ -87,11 +85,9 @@ const resourceBuilder = new ResourceBuilder();
  * A parser for parsing bitmark JSON to bitmark AST
  */
 class JsonParser {
-  private ast: Ast;
   private textGenerator: TextGenerator;
 
   constructor() {
-    this.ast = new Ast();
     this.textGenerator = new TextGenerator();
   }
 

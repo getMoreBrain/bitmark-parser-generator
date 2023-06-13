@@ -123,6 +123,15 @@ describe('bitmark-parser-generator', () => {
         const generatedAstFile = path.resolve(fullFolder, `${id}.ast.json`);
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);
 
+        const jsonOptions = {
+          textAsPlainText: true, // For testing the generator, use plain text rather than JSON for text
+          prettify: true, // For testing the output is easier to read if it is prettified
+        };
+
+        const bitmarkOptions = {
+          explicitTextFormat: false,
+        };
+
         // Copy the original test markup file to the output folder
         fs.copySync(testFile, originalMarkupFile);
 
@@ -135,7 +144,7 @@ describe('bitmark-parser-generator', () => {
         if (TEST_AGAINST_ANTLR_PARSER) {
           // Generate JSON from original bitmark markup using the ANTLR parser
           performance.mark('ANTLR:Start');
-          originalJson = bitmarkParser.parse(originalMarkup);
+          originalJson = bitmarkParser.parseUsingAntlr(originalMarkup);
 
           // Write the new JSON
           fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {
@@ -148,8 +157,8 @@ describe('bitmark-parser-generator', () => {
           const bitmarkAst = bitmarkParser.toAst(originalMarkup);
 
           // Generate JSON from AST
-          const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
-            prettify: true,
+          const generator = new JsonFileGenerator(generatedJsonFile, {
+            jsonOptions,
           });
 
           await generator.generate(bitmarkAst);
@@ -174,8 +183,8 @@ describe('bitmark-parser-generator', () => {
         });
 
         // Generate markup code from AST
-        const generator = new BitmarkFileGenerator(generatedMarkupFile, undefined, {
-          explicitTextFormat: false,
+        const generator = new BitmarkFileGenerator(generatedMarkupFile, {
+          bitmarkOptions,
         });
 
         await generator.generate(bitmarkAst);
@@ -190,7 +199,7 @@ describe('bitmark-parser-generator', () => {
 
         if (TEST_AGAINST_ANTLR_PARSER) {
           // Generate JSON from generated bitmark markup using the ANTLR parser
-          newJson = bitmarkParser.parse(newMarkup);
+          newJson = bitmarkParser.parseUsingAntlr(newMarkup);
 
           // Write the new JSON
           fs.writeFileSync(generatedJsonFile, JSON.stringify(newJson, null, 2), {
@@ -206,8 +215,8 @@ describe('bitmark-parser-generator', () => {
           });
 
           // Generate JSON from AST
-          const generator = new JsonFileGenerator(generatedJsonFile, undefined, {
-            prettify: true,
+          const generator = new JsonFileGenerator(generatedJsonFile, {
+            jsonOptions,
           });
 
           await generator.generate(bitmarkAst);
@@ -231,7 +240,7 @@ describe('bitmark-parser-generator', () => {
         });
 
         // Print performance information
-        if (DEBUG_PERFORMANCE) {
+        if (!process.env.CI && DEBUG_PERFORMANCE) {
           const genTimeSecs = Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
           console.log(`'${fileId}' timing; GEN: ${genTimeSecs} s`);
         }

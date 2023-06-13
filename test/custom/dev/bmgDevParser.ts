@@ -15,6 +15,7 @@ import { Ast } from '../../../src/ast/Ast';
 // import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
 import { JsonObjectGenerator } from '../../../src/generator/json/JsonObjectGenerator';
 import { BitmarkParserType } from '../../../src/model/enum/BitmarkParserType';
+import { BitmarkVersion } from '../../../src/model/enum/BitmarkVersion';
 import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
 
 // import { JsonParser } from '../../../src/parser/json/JsonParser';
@@ -44,6 +45,7 @@ class BmgDevParser {
 
       // AST ==> JSON
       const generator = new JsonObjectGenerator({
+        bitmarkVersion: BitmarkVersion.v3,
         textAsPlainText: false,
       });
       const json = await generator.generate(bitmarkAst);
@@ -56,8 +58,9 @@ class BmgDevParser {
     } else {
       const res = await bitmarkParserGenerator.convert(filename, {
         jsonOptions: {
-          prettify: true,
+          bitmarkVersion: BitmarkVersion.v3,
           textAsPlainText: false,
+          prettify: true,
         },
       });
       console.log(res);
