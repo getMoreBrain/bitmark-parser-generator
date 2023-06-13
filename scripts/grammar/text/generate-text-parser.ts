@@ -26,7 +26,13 @@ const testFilePath = path.resolve(__dirname, '../../..', 'assets/', 'test.text')
 // Process command line options
 const commandLineOptions = process.argv.slice(2);
 const optTest = commandLineOptions.includes('--test');
-const allowedStartRules = ['bitmarkPlus', 'bitmarkPlusPlus', 'bitmarkMinusMinus'];
+const allowedStartRules = [
+  'bitmarkPlusPlus',
+  'bitmarkPlus',
+  'bitmarkMinusMinus',
+  'bitmarkPlusString',
+  'bitmarkMinusMinusString',
+];
 const startRule = 'bitmarkPlusPlus';
 
 // Initialised the environment

@@ -1,10 +1,13 @@
 // bitmark Text parser
-// v7.4.4
+// v8.0.1
 
 //Parser peggy.js
 
 // parser options (parameter when running parser):
-// allowedStartRules: ["bitmarkPlusPlus", "bitmarkPlus", "bitmarkMinusMinus"]
+// allowedStartRules: ["bitmarkPlusPlus", "bitmarkPlus", "bitmarkMinusMinus", "bitmarkPlusString", "bitmarkMinusMinusString"]
+
+// The start rules ending in "String" are for internal use only.
+// The public rules return a full StyledText object. This means things got consitent to handle. However, this means, there is always at least one block (a paragraph in case of bitmark+ and bitmark--) present.
 
 // Todos
 
@@ -18,9 +21,9 @@
 // not sure
 
 // - LaTeX embed ?
-// - inline user comment // == Notiztext ==|user-note:@gaba| ?
 
 /*
+
 Empty StyledString
 
 [{ "type": "text", "text": "" }] // NOK - TipTap Error
@@ -81,6 +84,10 @@ Das war's
 
  */
 
+
+
+
+
 // global initializer
 // global utility functions
 
@@ -101,15 +108,42 @@ function unbreakscape(_str) {
 }
 
 function bitmarkPlusPlus(_str) {
-    return peg$parse(_str, { startRule: "bitmarkPlusPlus" })
+  if (typeof parser !== 'undefined') {
+  	return parser.parse(_str, { startRule: "bitmarkPlusPlus" })
+  }
+  return peg$parse(_str, { startRule: "bitmarkPlusPlus" })
+  // if (parser) {
+  // 	return parser.parse(_str, { startRule: "bitmarkPlusPlus" })
+  // } else {
+  //   // embedded in Get More Brain
+  //   return parse(_str, { startRule: "bitmarkPlusPlus" })
+  // }
 }
 
-function bitmarkPlus(_str) {
-    return peg$parse(_str, { startRule: "bitmarkPlus" })
+function bitmarkPlusString(_str) {
+  if (typeof parser !== 'undefined') {
+    return parser.parse(_str, { startRule: "bitmarkPlusString" })
+  }
+  return peg$parse(_str, { startRule: "bitmarkPlusString" })
+  // if (parser) {
+  // 	return parser.parse(_str, { startRule: "bitmarkPlusString" })
+  // } else {
+  //   // embedded in Get More Brain
+  //   return parse(_str, { startRule: "bitmarkPlusString" })
+  // }
 }
 
-function bitmarkMinusMinus(_str) {
-    return peg$parse(_str, { startRule: "bitmarkMinusMinus" })
+function bitmarkMinusMinusString(_str) {
+  if (typeof parser !== 'undefined') {
+  	return parser.parse(_str, { startRule: "bitmarkMinusMinusString" })
+  }
+  return peg$parse(_str, { startRule: "bitmarkMinusMinusString" })
+  // if (parser) {
+  // 	return parser.parse(_str, { startRule: "bitmarkMinusMinusString" })
+  // } else {
+  //   // embedded in Get More Brain
+  //   return parse(_str, { startRule: "bitmarkMinusMinusString" })
+  // }
 }
 
 }}
@@ -183,7 +217,7 @@ SectionType
   / ''
 
 Heading
-  = ':' h: $(char*) { return bitmarkMinusMinus(h.trim()) }
+  = ':' h: $(char*) { return bitmarkMinusMinusString(h.trim()) }
   / '' { return [] }
 
 
@@ -191,11 +225,12 @@ Heading
 // Title Block
 
 TitleTags
-  = '## '
+  = '### '
+  / '## '
   / '# '
 
 TitleBlock
-  = h: TitleTags t: $char* EOL  NL? { return { type: "heading", content: bitmarkMinusMinus(t), attrs: { level: h.length - 1, section } } }
+  = h: TitleTags t: $char* EOL  NL? { return { type: "heading", content: bitmarkMinusMinusString(t), attrs: { level: h.length - 1, section } } }
 
 
 
@@ -275,7 +310,7 @@ BulletListLine
       let item = {
       	type: "paragraph",
 		    attrs: { section },
-      	content: bitmarkPlus(li)
+      	content: bitmarkPlusString(li)
       }
 
 	    let content = [item]
@@ -314,14 +349,14 @@ ListLine
   = !BlankLine SAMEDENT !ListTags ll: $(( !NL . )+ EOL) { return ll }
 
 BlankLine
-  = [ \t]* NL
+  = [ \t] * NL
 
 
 SAMEDENT
-  = i: '\t'* &{ return i.join("") === indent }
+  = i: '\t' * &{ return i.join("") === indent }
 
 INDENT
-  = &( i: '\t'+ &{ return i.length > indent.length }
+  = &( i: '\t' + &{ return i.length > indent.length }
       { indentStack.push(indent); indent = i.join("")})
 
 DEDENT
@@ -333,7 +368,7 @@ DEDENT
 // Paragraph (Block)
 
 Paragraph
-   = !BlockStartTags body: ParagraphBody { return { type: "paragraph", content: bitmarkPlus(body.trim()), attrs: { section } } }
+   = !BlockStartTags body: ParagraphBody { return { type: "paragraph", content: bitmarkPlusString(body.trim()), attrs: { section } } }
 
 ParagraphBody
   = $(ParagraphLine+)
@@ -394,9 +429,17 @@ MediaNumberTags
   = 'width' / 'height'
 
 
-// StyledString
 
-bitmarkPlus "StyledString"
+
+
+
+
+// bitmark+
+
+bitmarkPlus "StyledText"
+  = bs: InlineTags { return [ { type: 'paragraph', content: bs, attrs: { section: '' } } ] }
+
+bitmarkPlusString "StyledString"
   = InlineTags
 
 InlineTags
@@ -483,9 +526,18 @@ Color
   / 'white'
   / 'yellow'
 
+
+
+
+
+
+
 // bitmark--
 
-bitmarkMinusMinus "MinmialStyledString"
+bitmarkMinusMinus "MinmialStyledText"
+  = bs: bitmarkMinusMinusString { return [ { type: 'paragraph', content: bs, attrs: { section: '' } } ] }
+
+bitmarkMinusMinusString "MinmialStyledString"
   = first: PlainText? more: (StyledText / PlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
 
 PlainText
