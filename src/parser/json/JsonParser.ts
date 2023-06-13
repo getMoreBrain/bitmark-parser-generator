@@ -5,7 +5,7 @@ import { Text } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceType, ResourceTypeType } from '../../model/enum/ResourceType';
-import { TextFormatType } from '../../model/enum/TextFormat';
+import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { ResourceJson, ResourceDataJson, StillImageFilmResourceJson } from '../../model/json/ResourceJson';
 import { StringUtils } from '../../utils/StringUtils';
@@ -277,11 +277,14 @@ class JsonParser {
     // Bit type
     const bitType = BitType.fromValue(type) ?? BitType._error;
 
+    // Text Format
+    const textFormat = TextFormat.fromValue(format) ?? TextFormat.bitmarkMinusMinus;
+
     // resource
     const resourceNode = this.resourceBitToAst(resource);
 
     // body & placeholders
-    const bodyNode = this.bodyToAst(body, placeholders);
+    const bodyNode = this.bodyToAst(body, textFormat, placeholders);
 
     const partnerNode = this.partnerBitToAst(partner);
 
@@ -313,7 +316,7 @@ class JsonParser {
     const botResponseNodes = this.botResponseBitsToAst(bitType, responses as BotResponseJson[]);
 
     // footer
-    const footerNode = this.footerToAst(footer);
+    const footerNode = this.footerToAst(footer, textFormat);
 
     // Convert reference to referenceProperty
     const { reference, referenceProperty } = this.referenceToAst(referenceIn);
@@ -783,7 +786,7 @@ class JsonParser {
     return node;
   }
 
-  private bodyToAst(body: Text, placeholders: BodyBitsJson): Body | undefined {
+  private bodyToAst(body: Text, textFormat: TextFormatType, placeholders: BodyBitsJson): Body | undefined {
     let node: Body | undefined;
     let bodyStr: string | undefined;
     const placeholderNodes: {
@@ -794,7 +797,7 @@ class JsonParser {
       // Body is an array (prosemirror like JSON)
 
       // Parse the body to string in case it is in JSON format
-      bodyStr = this.parseText(body);
+      bodyStr = this.parseText(body, textFormat);
 
       // Get the placeholders from the text parser
       placeholders = this.textGenerator.getPlaceholders();
@@ -857,8 +860,8 @@ class JsonParser {
     return this.bodyTextToAst('');
   }
 
-  private footerToAst(footerText: Text): FooterText | undefined {
-    const text = this.parseText(footerText);
+  private footerToAst(footerText: Text, textFormat: TextFormatType): FooterText | undefined {
+    const text = this.parseText(footerText, textFormat);
 
     if (text) {
       return builder.footerText({ text });
@@ -949,11 +952,11 @@ class JsonParser {
     return { example: !!isExample };
   }
 
-  private parseText(text: Text | undefined): string | undefined {
+  private parseText(text: Text | undefined, textFormat?: TextFormatType): string | undefined {
     if (text == null) return undefined;
     if (Array.isArray(text)) {
       // this.ast.printTree(text, NodeType.textAst);
-      const parsedText = this.textGenerator.generateSync(text);
+      const parsedText = this.textGenerator.generateSync(text, textFormat);
 
       return parsedText;
     }

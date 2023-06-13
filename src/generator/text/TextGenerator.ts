@@ -4,10 +4,10 @@ import { Bit } from '../../model/ast/Nodes';
 import { ImageTextNode, TaskItemTextNode, TextAst, TextNode } from '../../model/ast/TextNodes';
 import { BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
+import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { TextMarkType } from '../../model/enum/TextMarkType';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson, BodyBitsJson } from '../../model/json/BodyBitJson';
-import { Generator } from '../Generator';
 
 const DEFAULT_OPTIONS: TextOptions = {
   debugGenerationInline: false,
@@ -47,12 +47,13 @@ export interface TextOptions {
 /**
  * Generate text from a bitmark text AST
  */
-class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
+class TextGenerator implements AstWalkCallbacks {
   protected ast = new Ast();
   private bitmarkVersion: BitmarkVersionType;
   private options: TextOptions;
 
   // State
+  private textFormat: string = TextFormat.bitmarkMinusMinus;
   private lastWrittenChar = '';
   private writerText = '';
   private currentIndent = 0;
@@ -93,9 +94,9 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
    *
    * @param ast bitmark text AST
    */
-  public async generate(ast: TextAst): Promise<string> {
+  public async generate(ast: TextAst, textFormat?: TextFormatType): Promise<string> {
     // Reset the state
-    this.resetState();
+    this.resetState(textFormat);
 
     // Walk the text AST
     this.walkAndWrite(ast);
@@ -108,9 +109,9 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
    *
    * @param ast bitmark text AST
    */
-  public generateSync(ast: TextAst): string {
+  public generateSync(ast: TextAst, textFormat?: TextFormatType): string {
     // Reset the state
-    this.resetState();
+    this.resetState(textFormat);
 
     // Walk the text AST
     this.walkAndWrite(ast);
@@ -122,9 +123,10 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
     return this.placeholders;
   }
 
-  private resetState(): void {
+  private resetState(textFormat?: TextFormatType): void {
     this.printed = false;
 
+    this.textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
     this.writerText = '';
     this.currentIndent = 0;
     this.placeholderIndex = 0;
@@ -291,8 +293,14 @@ class TextGenerator implements Generator<TextAst, string>, AstWalkCallbacks {
 
       case TextNodeType.paragraph:
       case TextNodeType.image:
-        // Block type nodes, write a newline
-        this.writeNL();
+        if (this.textFormat !== TextFormat.bitmarkMinusMinus) {
+          // Block type nodes, write 2x newline
+          // Except:
+          // - for bitmark-- where we don't write newlines for the single wrapping block
+          // - for within a list, where we only write one newline
+          this.writeNL();
+          if (this.currentIndent <= 0) this.writeNL();
+        }
         break;
 
       case TextNodeType.bulletList:

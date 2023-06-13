@@ -1,5 +1,5 @@
 // bitmark Text parser
-// v8.0.1
+// v8.0.2
 
 //Parser peggy.js
 
@@ -93,7 +93,7 @@ Das war's
 
 {{
 
-const UNBREAKSCAPE_REGEX = new RegExp(/([*_`!])\^(?!\^)/, "g");
+const UNBREAKSCAPE_REGEX = new RegExp('\\^([\\^]*)', "g");
 
 function s(_string) {
   return _string ?? ""

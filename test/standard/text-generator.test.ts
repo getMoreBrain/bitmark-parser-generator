@@ -24,6 +24,7 @@ const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/text-generator/output
 let TEST_FILES: string[] = [
   //
   // 'plain.text',
+  // 'breakscaping.text',
   // 'list.text',
   // 'bold.text',
   // 'light.text',
@@ -36,6 +37,7 @@ if (TEST_ALL) {
   TEST_FILES = [
     //
     'plain.text',
+    'breakscaping.text',
     'list.text',
     'bold.text',
     'light.text',
@@ -138,7 +140,7 @@ describe('text-generation', () => {
 
         // Convert the JSON to text
         performance.mark('GEN:Start');
-        const text = textGenerator.generateSync(originalJson);
+        const text = textGenerator.generateSync(originalJson, TextFormat.bitmarkPlusPlus);
 
         // Write the new text to file
         fs.writeFileSync(generatedMarkupFile, text, {

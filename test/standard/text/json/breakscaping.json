@@ -1,0 +1,66 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "^This is some *",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "BOLD",
+        "type": "text"
+      },
+      {
+        "text": "* text\nThis ^  ^is s^ome *^",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "BOLD",
+        "type": "text"
+      },
+      {
+        "text": "* text\nThis i^^^^s some *^^^^",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "BOLD",
+        "type": "text"
+      },
+      {
+        "text": "* text\nThis is some *",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "BOLD",
+        "type": "text"
+      },
+      {
+        "text": "* text\n\n\n^",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  }
+]

@@ -12,6 +12,7 @@ import path from 'path';
 import { Ast } from '../../../src/ast/Ast';
 import { TextGenerator } from '../../../src/generator/text/TextGenerator';
 import { NodeType } from '../../../src/model/ast/NodeType';
+import { TextFormat } from '../../../src/model/enum/TextFormat';
 
 const ast = new Ast();
 const textGenerator = new TextGenerator();
@@ -28,7 +29,7 @@ class DevTextGenerator {
       console.log(`\n${textAst}\n\n`);
 
       // Convert the text JSON to text
-      const text = textGenerator.generateSync(textAst);
+      const text = textGenerator.generateSync(textAst, TextFormat.bitmarkPlusPlus);
 
       ast.printTree(textAst, NodeType.textAst);
       console.log(text);

@@ -24,6 +24,12 @@ const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/text-parser/output');
 let TEST_FILES: string[] = [
   //
   // 'plain.text',
+  // 'breakscaping.text',
+  // 'list.text',
+  // 'bold.text',
+  // 'light.text',
+  // 'italic.text',
+  'highlight.text',
 ];
 
 // ALL tests for CI
@@ -31,6 +37,12 @@ if (TEST_ALL) {
   TEST_FILES = [
     //
     'plain.text',
+    'breakscaping.text',
+    'list.text',
+    'bold.text',
+    'light.text',
+    'italic.text',
+    'highlight.text',
   ];
 }
 

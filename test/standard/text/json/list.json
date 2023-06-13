@@ -43,6 +43,11 @@
             },
             "content": [
               {
+                "marks": [
+                  {
+                    "type": "italic"
+                  }
+                ],
                 "text": "Ordered\nlist item 2",
                 "type": "text"
               }
@@ -193,6 +198,48 @@
                         "type": "text"
                       }
                     ]
+                  },
+                  {
+                    "type": "bulletList",
+                    "attrs": {
+                      "start": 1,
+                      "section": ""
+                    },
+                    "content": [
+                      {
+                        "type": "listItem",
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "attrs": {
+                              "section": ""
+                            },
+                            "content": [
+                              {
+                                "text": "Bullet ",
+                                "type": "text"
+                              },
+                              {
+                                "marks": [
+                                  {
+                                    "type": "italic"
+                                  }
+                                ],
+                                "text": "list",
+                                "type": "text"
+                              },
+                              {
+                                "text": " item 6.1.1",
+                                "type": "text"
+                              }
+                            ]
+                          }
+                        ],
+                        "parent": "bulletList",
+                        "attrs": {}
+                      }
+                    ],
+                    "parent": ""
                   }
                 ],
                 "parent": "bulletList",
@@ -282,7 +329,16 @@
             },
             "content": [
               {
-                "text": "Ordered list item 9",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "Ordered",
+                "type": "text"
+              },
+              {
+                "text": " list item 9",
                 "type": "text"
               }
             ]
@@ -361,10 +417,77 @@
                     },
                     "content": [
                       {
-                        "text": "Bullet list item 10.3",
+                        "text": "Bullet ",
+                        "type": "text"
+                      },
+                      {
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ],
+                        "text": "list item 10.3",
                         "type": "text"
                       }
                     ]
+                  },
+                  {
+                    "type": "orderedList",
+                    "attrs": {
+                      "start": 1,
+                      "section": ""
+                    },
+                    "content": [
+                      {
+                        "type": "listItem",
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "attrs": {
+                              "section": ""
+                            },
+                            "content": [
+                              {
+                                "text": "Ordered list item 10.3.1",
+                                "type": "text"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "orderedList",
+                            "attrs": {
+                              "start": 1,
+                              "section": ""
+                            },
+                            "content": [
+                              {
+                                "type": "listItem",
+                                "content": [
+                                  {
+                                    "type": "paragraph",
+                                    "attrs": {
+                                      "section": ""
+                                    },
+                                    "content": [
+                                      {
+                                        "text": "Ordered list item 10.3.1.1",
+                                        "type": "text"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "parent": "orderedList",
+                                "attrs": {}
+                              }
+                            ],
+                            "parent": ""
+                          }
+                        ],
+                        "parent": "orderedList",
+                        "attrs": {}
+                      }
+                    ],
+                    "parent": ""
                   }
                 ],
                 "parent": "bulletList",
@@ -463,6 +586,11 @@
             },
             "content": [
               {
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
                 "text": "Bullet list item 1",
                 "type": "text"
               }
@@ -525,27 +653,37 @@
                 "type": "text"
               }
             ]
-          }
-        ],
-        "parent": "taskList",
-        "attrs": {
-          "checked": true
-        }
-      },
-      {
-        "type": "taskItem",
-        "content": [
+          },
           {
-            "type": "paragraph",
+            "type": "taskList",
             "attrs": {
+              "start": 1,
               "section": ""
             },
             "content": [
               {
-                "text": "Task list item 11.2 checked",
-                "type": "text"
+                "type": "taskItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "section": ""
+                    },
+                    "content": [
+                      {
+                        "text": "Task list item 11.1.1 checked",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ],
+                "parent": "taskList",
+                "attrs": {
+                  "checked": true
+                }
               }
-            ]
+            ],
+            "parent": ""
           }
         ],
         "parent": "taskList",
