@@ -1,0 +1,13 @@
+And here we are going to break things:
+
+Here is some inline 'style' applied =^=here is the text==|strike|#With a comment as well|, nice huh?
+
+Here is some inline 'style' applied ==here is the text=^=|strike|#With a comment as well|, nice huh?
+
+Here is some inline 'style' applied ==here is the text==^|strike|#With a comment as well|, nice huh?
+
+Here is some inline 'style' applied ==here is the text==|strike^|#With a comment as well|, nice huh?
+
+Here is some inline 'style' applied ==here is the text==|strike|^#With a comment as well|, nice huh?
+
+Here is some inline 'style' applied ==here is the text==|strike|#^With a comment as well|, nice huh?

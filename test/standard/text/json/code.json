@@ -1,0 +1,48 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Some code follows:",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  },
+  {
+    "type": "codeBlock",
+    "attrs": {
+      "language": "JavaScript",
+      "section": ""
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "const chain = Object.assign({}, ...ch)\n\nlet textAlign_ = chain.captionAlign || \"left\"; delete chain.captionAlign\nlet alt_ = chain.alt || null; delete chain.alt\nlet title_ = chain.caption || null; delete chain.caption\nlet class_ = chain.align || \"center\"; delete chain.align"
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "section": ""
+  },
+  {
+    "type": "codeBlock",
+    "attrs": {
+      "language": "typescript",
+      "section": ""
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "/**\n   * Convert Bitmark text to text AST.\n   *\n   * The Bitmark text should be a string.\n   * If parsed bitmark text AST is passed to this function, it will be returned as is.\n   *\n   * @param text - bitmark text\n   * @returns bitmark text AST as plain JS object\n   */\n  toAst(text: string | TextAst | undefined, options?: BitmarkTextParserOptions): TextAst {\n    // If input is not a string, return it as is\n    if (Array.isArray(text)) return text;\n    const str = text as string;\n\n    const testXor = 2 ^ 0x12345678;\n\n    // Ensure options is an object\n    const opts = Object.assign({}, options);\n\n    // Default text format to bitmark-- if not specified\n    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;\n\n    const startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkMinusMinus';\n\n    return bitmarkTextParse(str ?? '', {\n      startRule,\n    });\n  }"
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "section": ""
+  }
+]

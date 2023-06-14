@@ -1,0 +1,91 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Here we are testing the inline tag\n\nHere is some inline 'c' code ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "code",
+            "attrs": {
+              "language": "c"
+            }
+          }
+        ],
+        "text": "int test=0;",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?\n\nHere is some inline 'plain text' code ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "code",
+            "attrs": {
+              "language": "plain text"
+            }
+          }
+        ],
+        "text": "int test=0;",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?\n\nHere is some inline 'colour' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "color",
+            "attrs": {
+              "color": "pink"
+            }
+          }
+        ],
+        "text": "**Bold is ignored**",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?\n\nHere is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "strike"
+          }
+        ],
+        "text": "^Breakscape^!",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?\n\nHere is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "strike"
+          },
+          {
+            "comment": "With a comment as well"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  }
+]

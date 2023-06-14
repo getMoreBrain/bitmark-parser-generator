@@ -1,0 +1,13 @@
+
+Here we are testing the inline tag
+
+Here is some inline 'c' code ==int test=0;==|code:c|, nice huh?
+
+Here is some inline 'plain text' code ==int test=0;==|code|, nice huh?
+
+Here is some inline 'colour' applied ==**Bold is ignored**==|color:pink|, nice huh?
+
+Here is some inline 'style' applied ==^^Break^scape^^!==|strike|, nice huh?
+
+Here is some inline 'style' applied ==here is the text==|strike|#With a comment as well|, nice huh?
+

@@ -1,0 +1,7 @@
+|^danger: A breakscaped section, that is not a section
+This has no section
+|
+
+|This is an error as well|
+This has no section
+|

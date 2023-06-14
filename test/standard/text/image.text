@@ -1,0 +1,8 @@
+Some images follow:
+
+|image:https://t.com/simple.png|
+
+|image:https://t.com/simple.png|@width:928|height:10|
+
+|image:https://t.com/simple.png|#A caption|@alt:Alt text|@captionAlign:right|
+

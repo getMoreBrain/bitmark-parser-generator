@@ -1,0 +1,95 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Here are some ## titls using the ### to mark them",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  },
+  {
+    "type": "heading",
+    "content": [
+      {
+        "text": "Title level 1",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "level": 1,
+      "section": ""
+    }
+  },
+  {
+    "type": "heading",
+    "content": [
+      {
+        "text": "Title ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "level 2",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "level": 2,
+      "section": ""
+    }
+  },
+  {
+    "type": "heading",
+    "content": [
+      {
+        "text": "Title level 3",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "level": 3,
+      "section": ""
+    }
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "#### Title level 4 - there is no title level 4, so this is just a paragraph\n\n\n",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "# Won't be a title as it is wrapped, and outer tags win",
+        "type": "text"
+      },
+      {
+        "text": "\n",
+        "type": "text"
+      },
+      {
+        "text": "\n",
+        "type": "text"
+      },
+      {
+        "text": "That's all folks!",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  }
+]
