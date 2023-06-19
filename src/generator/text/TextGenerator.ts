@@ -46,7 +46,7 @@ const STANDARD_MARKS: { [key: string]: string } = {
   [TextMarkType.highlight]: HIGHLIGHT_MARK,
 };
 
-const BREAKSCAPE_CHAR_REGEX = new RegExp('\\^', 'g');
+const BREAKSCAPE_CHAR_REGEX = new RegExp('(\\^+)', 'g');
 
 // Regex explanation:
 // - Match a single character of a text mark and capture in group 1
@@ -445,7 +445,7 @@ class TextGenerator implements AstWalkCallbacks {
     // Breakscape the text
     let s: string = node.text;
     if (!noBreakscaping) {
-      s = s.replace(BREAKSCAPE_CHAR_REGEX, '^^');
+      s = s.replace(BREAKSCAPE_CHAR_REGEX, '^$1');
       s = s.replace(BREAKSCAPE_REGEX, '$1^$1');
     }
 
