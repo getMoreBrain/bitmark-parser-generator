@@ -11,15 +11,32 @@ export interface TextNode {
   text?: string;
   content?: TextNode[];
   parent?: TextNodeTypeType;
+  attrs?: TextNodeAttibutes;
 }
 
 export interface TextMark {
   type: TextMarkTypeType;
+  attrs?: TextMarkAttibutes;
 }
 
-export interface ImageTextNode extends TextNode {
-  type: 'image';
-  attrs?: ImageTextNodeAttributes;
+export interface LinkMark {
+  type: 'link';
+  attrs?: LinkMarkAttibutes;
+}
+
+export interface CommentMark {
+  type: 'comment';
+  comment: string;
+}
+
+export interface HeadingTextNode extends TextNode {
+  type: 'heading';
+  attrs?: HeadingTextNodeAttributes;
+}
+
+export interface SectionTextNode extends TextNode {
+  type: 'heading';
+  section: string;
 }
 
 export interface TaskItemTextNode extends TextNode {
@@ -27,17 +44,48 @@ export interface TaskItemTextNode extends TextNode {
   attrs?: TaskItemTextNodeAttributes;
 }
 
-export interface ImageTextNodeAttributes {
-  textAlign: string;
-  src: string;
-  alt: string | null;
-  title: string | null;
-  class: string;
-  width: string | number | null;
-  height: string | number | null;
+export interface ImageTextNode extends TextNode {
+  type: 'image';
+  attrs?: ImageTextNodeAttributes;
+}
+
+export interface CodeBlockTextNode extends TextNode {
+  type: 'codeBlock';
+  attrs?: CodeBlockTextNodeAttributes;
+}
+
+export interface TextNodeAttibutes {
   section: string;
 }
 
-export interface TaskItemTextNodeAttributes {
+export interface HeadingTextNodeAttributes extends TextNodeAttibutes {
+  level: number;
+}
+
+export interface TaskItemTextNodeAttributes extends TextNodeAttibutes {
   checked: boolean;
+}
+
+export interface ImageTextNodeAttributes extends TextNodeAttibutes {
+  src: string;
+  alt: string | null;
+  title: string | null;
+  textAlign: string;
+  width: string | number | null;
+  height: string | number | null;
+  class: string;
+  comment: string;
+}
+
+export interface CodeBlockTextNodeAttributes extends TextNodeAttibutes {
+  language: string;
+}
+
+export interface TextMarkAttibutes {
+  //
+}
+
+export interface LinkMarkAttibutes extends TextMarkAttibutes {
+  href: string;
+  target: string;
 }

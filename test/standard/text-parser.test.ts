@@ -12,7 +12,7 @@ import { FileUtils } from '../../src/utils/FileUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
 // Enable or disable testing of specific files
-const TEST_ALL = process.env.CI || false;
+const TEST_ALL = process.env.CI || true;
 
 // Set to true to generate performance debug output
 const DEBUG_PERFORMANCE = !process.env.CI;
@@ -32,6 +32,7 @@ let TEST_FILES: string[] = [
   // 'title.text',
   // 'section.text',
   // 'image.text',
+  // 'link.text',
   // 'code.text',
   'inline.text',
   // 'latex.text',
@@ -50,6 +51,7 @@ if (TEST_ALL) {
     'title.text',
     'section.text',
     'image.text',
+    'link.text',
     'code.text',
     'inline.text',
     // 'latex.text',

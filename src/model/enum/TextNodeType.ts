@@ -1,14 +1,20 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 const TextNodeType = superenum({
+  // Text
   text: 'text',
+
+  // Blocks
   paragraph: 'paragraph',
+  heading: 'heading',
+  section: 'section',
   bulletList: 'bulletList',
   orderedList: 'orderedList',
   taskList: 'taskList',
   listItem: 'listItem',
   taskItem: 'taskItem',
   image: 'image',
+  codeBlock: 'codeBlock',
 
   // Body bits
   gap: 'gap',

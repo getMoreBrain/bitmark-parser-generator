@@ -1,13 +1,25 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { NodeType } from '../../model/ast/NodeType';
 import { Bit } from '../../model/ast/Nodes';
-import { ImageTextNode, TaskItemTextNode, TextAst, TextNode } from '../../model/ast/TextNodes';
 import { BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
-import { TextMarkType } from '../../model/enum/TextMarkType';
+import { TextMarkType, TextMarkTypeType } from '../../model/enum/TextMarkType';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson, BodyBitsJson } from '../../model/json/BodyBitJson';
+
+import {
+  CodeBlockTextNode,
+  CommentMark,
+  HeadingTextNode,
+  ImageTextNode,
+  LinkMark,
+  SectionTextNode,
+  TaskItemTextNode,
+  TextAst,
+  TextMark,
+  TextNode,
+} from '../../model/ast/TextNodes';
 
 const DEFAULT_OPTIONS: TextOptions = {
   debugGenerationInline: false,
@@ -25,6 +37,17 @@ const HIGHLIGHT_MARK = HIGHLIGHT_HALF_MARK + HIGHLIGHT_HALF_MARK;
 
 const ALL_HALF_MARKS = [BOLD_HALF_MARK, LIGHT_HALF_MARK, ITALIC_HALF_MARK, HIGHLIGHT_HALF_MARK];
 
+const HEADING_TAG = '#';
+
+const STANDARD_MARKS: { [key: string]: string } = {
+  [TextMarkType.bold]: BOLD_MARK,
+  [TextMarkType.light]: LIGHT_MARK,
+  [TextMarkType.italic]: ITALIC_MARK,
+  [TextMarkType.highlight]: HIGHLIGHT_MARK,
+};
+
+const BREAKSCAPE_CHAR_REGEX = new RegExp('\\^', 'g');
+
 // Regex explanation:
 // - Match a single character of a text mark and capture in group 1
 // - check that the character BEFORE is NOT the same mark (look-behind)
@@ -32,6 +55,8 @@ const ALL_HALF_MARKS = [BOLD_HALF_MARK, LIGHT_HALF_MARK, ITALIC_HALF_MARK, HIGHL
 // - check that the character AFTER that is NOT the same mark (look-ahead)
 // This will capture all double marks, and ignore single or more than double marks
 const BREAKSCAPE_REGEX = new RegExp('([*_`!])(?<!\\1\\1)\\1(?!\\1)', 'g');
+
+const LINK_REGEX = new RegExp('https?:\\/\\/|mailto:(.*)', 'g');
 
 /**
  * Text generation options
@@ -57,6 +82,7 @@ class TextGenerator implements AstWalkCallbacks {
   private lastWrittenChar = '';
   private writerText = '';
   private currentIndent = 0;
+  private inCodeBlock = false;
   private placeholderIndex = 0;
   private placeholders: BodyBitsJson = {};
 
@@ -129,6 +155,7 @@ class TextGenerator implements AstWalkCallbacks {
     this.textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
     this.writerText = '';
     this.currentIndent = 0;
+    this.inCodeBlock = false;
     this.placeholderIndex = 0;
     this.placeholders = {};
   }
@@ -259,6 +286,14 @@ class TextGenerator implements AstWalkCallbacks {
         this.writeText(node);
         break;
 
+      case TextNodeType.heading:
+        this.writeHeading(node as HeadingTextNode);
+        break;
+
+      case TextNodeType.section:
+        this.writeSection(node as SectionTextNode);
+        break;
+
       case TextNodeType.listItem:
       case TextNodeType.taskItem:
         this.writeBullet(node);
@@ -266,6 +301,11 @@ class TextGenerator implements AstWalkCallbacks {
 
       case TextNodeType.image:
         this.writeImage(node as ImageTextNode);
+        break;
+
+      case TextNodeType.codeBlock:
+        this.inCodeBlock = true;
+        this.writeCodeBlock(node as CodeBlockTextNode);
         break;
 
       case TextNodeType.gap:
@@ -292,15 +332,28 @@ class TextGenerator implements AstWalkCallbacks {
         break;
 
       case TextNodeType.paragraph:
-      case TextNodeType.image:
         if (this.textFormat !== TextFormat.bitmarkMinusMinus) {
-          // Block type nodes, write 2x newline
+          // Paragraph Block type node, write 2x newline
           // Except:
           // - for bitmark-- where we don't write newlines for the single wrapping block
           // - for within a list, where we only write one newline
           this.writeNL();
           if (this.currentIndent <= 0) this.writeNL();
         }
+        break;
+
+      case TextNodeType.heading:
+      case TextNodeType.section:
+      case TextNodeType.image:
+        // Block type nodes, write 2x newline
+        this.writeNL();
+        this.writeNL();
+        break;
+
+      case TextNodeType.codeBlock:
+        // CodeBlock type node, write 1x newline
+        this.writeNL();
+        this.inCodeBlock = false;
         break;
 
       case TextNodeType.bulletList:
@@ -343,6 +396,29 @@ class TextGenerator implements AstWalkCallbacks {
     }
   }
 
+  /**
+   * Check if a text node has a link mark, and if so, return the href
+   *
+   * @param node the node to check for a link mark
+   * @returns the href, or false if no link mark
+   */
+  protected getLinkHref(node: TextNode): string | false {
+    if (node.type === TextNodeType.text && node.marks) {
+      const href = node.marks.reduce((acc, mark) => {
+        if (mark.type === TextMarkType.link) {
+          const linkMark = mark as LinkMark;
+          const href = linkMark.attrs?.href;
+          if (href) return href;
+        }
+        return acc;
+      }, '');
+
+      if (href) return href;
+    }
+
+    return false;
+  }
+
   //
   // WRITE FUNCTIONS
   //
@@ -360,34 +436,109 @@ class TextGenerator implements AstWalkCallbacks {
   protected writeText(node: TextNode): void {
     if (node.text == null) return;
 
+    // Handle link - if it is a link, will return true and write the link
+    if (this.writeLink(node)) return;
+
+    // Handle normal text
+    const noBreakscaping = this.inCodeBlock;
+
     // Breakscape the text
-    const s = node.text.replace(BREAKSCAPE_REGEX, '$1^$1');
+    let s: string = node.text;
+    if (!noBreakscaping) {
+      s = s.replace(BREAKSCAPE_CHAR_REGEX, '^^');
+      s = s.replace(BREAKSCAPE_REGEX, '$1^$1');
+    }
 
     // Write the text
     this.write(s);
   }
 
-  protected writeMarks(node: TextNode, _enter: boolean): void {
+  protected writeLink(node: TextNode): boolean {
+    if (node.text == null) return false;
+
+    const href = this.getLinkHref(node);
+    if (href) {
+      // Breakscape the text
+      let s = node.text.replace(BREAKSCAPE_REGEX, '$1^$1');
+
+      // The node is a link.
+      // Get the text part of the link
+      const hrefText = href.replace(LINK_REGEX, '$1');
+      if (hrefText === s) {
+        // Write the link instead of the text
+        this.write(href);
+      } else {
+        // Write as an inline mark
+        s = `==${s}==|link:${href}|`;
+        this.write(s);
+      }
+
+      return true;
+    }
+
+    return false;
+  }
+
+  protected writeMarks(node: TextNode, enter: boolean): void {
     if (node.marks) {
       for (const mark of node.marks) {
         switch (mark.type) {
           case TextMarkType.bold:
-            this.writeBoldTag();
-            break;
           case TextMarkType.light:
-            this.writeLightTag();
-            break;
           case TextMarkType.italic:
-            this.writeItalicTag();
-            break;
           case TextMarkType.highlight:
-            this.writeHighlight();
+            this.writeStandardMark(mark);
             break;
+          case TextMarkType.strike:
+          case TextMarkType.sub:
+          case TextMarkType.super:
+          case TextMarkType.ins:
+          case TextMarkType.del:
+          case TextMarkType.var:
+          case TextMarkType.code:
+          case TextMarkType.color:
+            this.writeInlineMark(mark, enter);
+            break;
+
+          // Strange case because comment mark is missing type
+          // (https://github.com/getMoreBrain/bitbook-and-bitmark-documentation/issues/14)
+          case undefined: {
+            // Comment mark
+            const commentMark = mark as unknown as CommentMark;
+            if (commentMark.comment != null) {
+              this.writeCommentMark(commentMark, enter);
+            }
+            break;
+          }
+          case TextMarkType.link:
           default:
-          // Do nothing
+          // Do nothing (link is handled in writeText)
         }
       }
     }
+  }
+
+  protected writeHeading(node: HeadingTextNode): void {
+    let s = '';
+    const level = node.attrs?.level ?? 1;
+    for (let i = 0; i < +level; i++) s += HEADING_TAG;
+
+    s += ' ';
+
+    // Write the heading tag
+    this.write(s);
+  }
+
+  protected writeSection(node: SectionTextNode): void {
+    let s = '';
+    if (node.section) {
+      s = `|${node.section}: `;
+    } else {
+      s = '|';
+    }
+
+    // Write the section tag
+    this.write(s);
   }
 
   protected writeBullet(node: TextNode) {
@@ -407,7 +558,7 @@ class TextGenerator implements AstWalkCallbacks {
       const checked = taskList.attrs?.checked ?? false;
       bullet += checked ? '•+ ' : '•- ';
     }
-    if (bullet) this.writeString(bullet);
+    if (bullet) this.write(bullet);
   }
 
   protected writeImage(node: ImageTextNode): void {
@@ -420,44 +571,76 @@ class TextGenerator implements AstWalkCallbacks {
     for (const [k, v] of Object.entries(attrs)) {
       switch (k) {
         case 'textAlign':
-          if (v !== 'left') s += `|captionAlign:${v}|`;
+          if (v !== 'left') s += `@captionAlign:${v}|`;
           break;
         case 'title':
-          if (v) s += `|caption:${v}|`;
+          if (v) s += `@caption:${v}|`;
           break;
         case 'class':
-          if (v !== 'center') if (v) s += `|align:${v}|`;
+          if (v !== 'center') if (v) s += `@align:${v}|`;
+          break;
+        case 'comment':
+          if (v) s += `#${v}|`;
           break;
         case 'alt':
         case 'width':
         case 'height':
-          if (v) s += `|${k}:${v}|`;
+        default:
+          if (v) s += `@${k}:${v}|`;
+          break;
+        case 'src':
+          // Ignore, written above
           break;
       }
     }
 
     // Write the text
-    this.writeString(s);
+    this.write(s);
+  }
+
+  protected writeCodeBlock(node: CodeBlockTextNode): void {
+    if (node.attrs == null || !node.attrs.language) return;
+    const attrs = node.attrs;
+
+    const s = `|code:${attrs.language}\n\n`;
+
+    // Write the text
+    this.write(s);
+  }
+
+  protected writeStandardMark(mark: TextMark) {
+    const s = STANDARD_MARKS[mark.type];
+    if (s) this.write(s);
+  }
+
+  protected writeInlineMark(mark: TextMark, enter: boolean) {
+    if (enter) {
+      this.write('==');
+    } else {
+      let s = `==|${mark.type}`;
+      if (mark.attrs) {
+        for (const [k, v] of Object.entries(mark.attrs)) {
+          if ((k === 'language' && v !== 'plain text') || k === 'color') {
+            s = `${s}:${v}`;
+          }
+        }
+      }
+      s = `${s}|`;
+      this.write(s);
+    }
+  }
+
+  protected writeCommentMark(mark: CommentMark, enter: boolean) {
+    if (enter) {
+      // Do nothing
+    } else {
+      const s = `#${mark.comment}|`;
+      this.write(s);
+    }
   }
 
   protected writeString(s?: string): void {
     if (s != null) this.write(`${s}`);
-  }
-
-  protected writeBoldTag(): void {
-    this.write(BOLD_MARK);
-  }
-
-  protected writeLightTag(): void {
-    this.write(LIGHT_MARK);
-  }
-
-  protected writeItalicTag(): void {
-    this.write(ITALIC_MARK);
-  }
-
-  protected writeHighlight(): void {
-    this.write(HIGHLIGHT_MARK);
   }
 
   protected writeNL(): void {

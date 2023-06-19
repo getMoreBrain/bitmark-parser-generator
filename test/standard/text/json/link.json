@@ -1,0 +1,145 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://image.com",
+              "target": "_blank"
+            }
+          }
+        ],
+        "text": "image.com",
+        "type": "text"
+      },
+      {
+        "text": " try a link as first thing\n\ntry a link in the ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://image.com",
+              "target": "_blank"
+            }
+          }
+        ],
+        "text": "image.com",
+        "type": "text"
+      },
+      {
+        "text": " middle\n\ntry a link at the end ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://image.com",
+              "target": "_blank"
+            }
+          }
+        ],
+        "text": "image.com",
+        "type": "text"
+      },
+      {
+        "text": "\n",
+        "type": "text"
+      },
+      {
+        "text": "\n",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://image.com",
+              "target": "_blank"
+            }
+          }
+        ],
+        "text": "Highligh text",
+        "type": "text"
+      },
+      {
+        "text": " as a link",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  },
+  {
+    "type": "bulletList",
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Test link in a list",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "bulletList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "section": ""
+            },
+            "content": [
+              {
+                "text": "Entgelt für ",
+                "type": "text"
+              },
+              {
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "https://image.com",
+                      "target": "_blank"
+                    }
+                  }
+                ],
+                "text": "image.com",
+                "type": "text"
+              },
+              {
+                "text": " that was a link",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "parent": "bulletList",
+        "attrs": {}
+      }
+    ],
+    "attrs": {
+      "section": ""
+    }
+  }
+]

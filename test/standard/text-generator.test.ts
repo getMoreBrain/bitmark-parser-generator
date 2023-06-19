@@ -32,8 +32,9 @@ let TEST_FILES: string[] = [
   // 'title.text',
   // 'section.text',
   // 'image.text',
+  // 'link.text',
   // 'code.text',
-  // 'inline.text',
+  'inline.text',
   // 'latex.text',
 ];
 
@@ -50,6 +51,7 @@ if (TEST_ALL) {
     'title.text',
     'section.text',
     'image.text',
+    'link.text',
     'code.text',
     'inline.text',
     // 'latex.text',
