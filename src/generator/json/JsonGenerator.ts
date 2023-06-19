@@ -314,7 +314,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   enter(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
-    let res: boolean | void;
+    let res: boolean | void = void 0;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const gen = this as any;
     const funcName = `enter_${node.key}`;
@@ -339,7 +339,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     parent: NodeInfo | undefined,
     route: NodeInfo[],
   ): boolean | void {
-    let res: boolean | void;
+    let res: boolean | void = void 0;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const gen = this as any;
     const funcName = `between_${node.key}`;

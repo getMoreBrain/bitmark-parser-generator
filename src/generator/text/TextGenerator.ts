@@ -4,7 +4,7 @@ import { Bit } from '../../model/ast/Nodes';
 import { BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
-import { TextMarkType, TextMarkTypeType } from '../../model/enum/TextMarkType';
+import { TextMarkType } from '../../model/enum/TextMarkType';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson, BodyBitsJson } from '../../model/json/BodyBitJson';
 
@@ -166,7 +166,7 @@ class TextGenerator implements AstWalkCallbacks {
   }
 
   enter(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
-    let res: boolean | void;
+    let res: boolean | void = void 0;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const gen = this as any;
     const funcName = `enter_${node.key}`;
@@ -191,7 +191,7 @@ class TextGenerator implements AstWalkCallbacks {
     parent: NodeInfo | undefined,
     route: NodeInfo[],
   ): boolean | void {
-    let res: boolean | void;
+    let res: boolean | void = void 0;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const gen = this as any;
     const funcName = `between_${node.key}`;
