@@ -58,6 +58,10 @@ const BREAKSCAPE_CHAR_REGEX = new RegExp('(\\^+)', 'g');
 // This will capture all double marks, and ignore single or more than double marks
 const BREAKSCAPE_REGEX = new RegExp('([*_`!])(?<!\\1\\1)\\1(?!\\1)', 'g');
 
+// Regex explanation:
+// - Match newline or carriage return + newline
+const INDENTATION_REGEX = new RegExp('(\\n|\\r\\n)', 'g');
+
 const LINK_REGEX = new RegExp('https?:\\/\\/|mailto:(.*)', 'g');
 
 /**
@@ -84,6 +88,8 @@ class TextGenerator implements AstWalkCallbacks {
   private lastWrittenChar = '';
   private writerText = '';
   private currentIndent = 0;
+  private prevIndent = 0;
+  private indentationStringCache = '';
   private inCodeBlock = false;
   private placeholderIndex = 0;
   private placeholders: BodyBitsJson = {};
@@ -157,6 +163,8 @@ class TextGenerator implements AstWalkCallbacks {
     this.textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
     this.writerText = '';
     this.currentIndent = 0;
+    this.prevIndent = 0;
+    this.indentationStringCache = '';
     this.inCodeBlock = false;
     this.placeholderIndex = 0;
     this.placeholders = {};
@@ -421,6 +429,24 @@ class TextGenerator implements AstWalkCallbacks {
     return false;
   }
 
+  /**
+   * Get the current indentation string
+   * @returns
+   */
+  protected getIndentationString(): string {
+    // Return the cached indent if indent hasn't changed
+    if (this.currentIndent === this.prevIndent) return this.indentationStringCache;
+
+    let s = '';
+    for (let i = 1; i < this.currentIndent; i++) s += '\t';
+    // for (let i = 1; i < this.currentIndent; i++) s += '_';
+
+    this.indentationStringCache = s;
+    this.prevIndent = this.currentIndent;
+
+    return s;
+  }
+
   //
   // WRITE FUNCTIONS
   //
@@ -449,6 +475,12 @@ class TextGenerator implements AstWalkCallbacks {
     if (!noBreakscaping) {
       s = s.replace(BREAKSCAPE_CHAR_REGEX, '^$1');
       s = s.replace(BREAKSCAPE_REGEX, '$1^$1');
+    }
+
+    // Apply any required indentation
+    if (this.currentIndent > 1) {
+      const indentationString = this.getIndentationString();
+      s = s.replace(INDENTATION_REGEX, `$1${indentationString}`);
     }
 
     // Write the text
@@ -544,11 +576,8 @@ class TextGenerator implements AstWalkCallbacks {
   }
 
   protected writeBullet(node: TextNode) {
-    let bullet = '';
-
     // Add indentation
-    for (let i = 1; i < this.currentIndent; i++) bullet += '\t';
-    // for (let i = 1; i < this.currentIndent; i++) bullet += '_';
+    let bullet = this.getIndentationString();
 
     // Add bullet
     if (node.parent === TextNodeType.bulletList) {

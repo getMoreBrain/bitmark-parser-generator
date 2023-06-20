@@ -379,7 +379,7 @@
                     },
                     "content": [
                       {
-                        "text": "Bullet list item 10.1",
+                        "text": "Bullet\nlist item 10.1",
                         "type": "text"
                       }
                     ]
@@ -470,7 +470,7 @@
                                     },
                                     "content": [
                                       {
-                                        "text": "Ordered list item 10.3.1.1",
+                                        "text": "Ordered list\nitem 10.3.1.1",
                                         "type": "text"
                                       }
                                     ]
