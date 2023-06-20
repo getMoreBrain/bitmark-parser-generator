@@ -38,6 +38,7 @@ BitType.setMetadata<BitTypeMetadata>(BitType.bookEpigraph, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookEpilogue, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookForword, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookFrontispiece, BOOK_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.bookImprint, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookIncitingIncident, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookIntroduction, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookListOfContributors, BOOK_CONFIG);
