@@ -2141,6 +2141,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (bitJson.example == null) bitJson.example = this.textDefault;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         if (bitJson.partialAnswer == null) bitJson.partialAnswer = '';
+        // if (bitJson.sampleSolution == null) bitJson.sampleSolution = '';
         break;
 
       case BitType.trueFalse1:

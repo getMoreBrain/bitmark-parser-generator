@@ -3,6 +3,25 @@
     "bit": {
       "type": "essay",
       "format": "bitmark--",
+      "partialAnswer": "",
+      "item": "1",
+      "hint": "",
+      "instruction": "Listen to the train announcement. Write down every word you hear.",
+      "example": "",
+      "isExample": false,
+      "body": "",
+      "sampleSolution": "The train now approaching Platform 2 is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole."
+    },
+    "parser": {
+      "version": "1.0.4",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.essay]\n[%1]\n[!Listen to the train announcement. Write down every word you hear.]\n[@sampleSolution:The train now approaching Platform 2 is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.]"
+  },
+  {
+    "bit": {
+      "type": "essay",
+      "format": "bitmark--",
       "id": ["245552"],
       "partialAnswer": "",
       "item": "",
