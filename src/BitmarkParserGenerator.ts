@@ -50,7 +50,7 @@ export interface ConvertOptions {
    *   - bitmarkOptions.cardSetVersion: 1
    *   - jsonOptions.textAsPlainText: true
    * - Bitmark v3:
-   *   - bitmarkOptions.cardSetVersion: 2 (TODO, currently CardSet v1 will still be used until v2 is working)
+   *   - bitmarkOptions.cardSetVersion: 2
    *   - jsonOptions.textAsPlainText: false
    *
    */
@@ -96,7 +96,7 @@ export interface UpgradeOptions {
    *   - bitmarkOptions.cardSetVersion: 1
    *   - jsonOptions.textAsPlainText: true
    * - Bitmark v3:
-   *   - bitmarkOptions.cardSetVersion: 2 (TODO, currently CardSet v1 will still be used until v2 is working)
+   *   - bitmarkOptions.cardSetVersion: 2
    *   - jsonOptions.textAsPlainText: false
    *
    */

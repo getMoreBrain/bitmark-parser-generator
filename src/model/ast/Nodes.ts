@@ -77,17 +77,10 @@ export interface Bit {
   resource?: Resource;
   body?: Body;
   sampleSolution?: string[];
-  elements?: string[];
   statement?: Statement;
-  statements?: Statement[];
   choices?: Choice[];
   responses?: Response[];
-  quizzes?: Quiz[];
-  heading?: Heading;
-  pairs?: Pair[];
-  matrix?: Matrix[];
-  questions?: Question[];
-  botResponses?: BotResponse[];
+  cardNode?: CardNode;
   footer?: FooterText;
 
   markup?: string; // Called 'bitmark' in the JSON
@@ -305,6 +298,18 @@ export interface HighlightText {
   instruction?: string;
   example?: Example;
   isCaseSensitive?: boolean;
+}
+
+// Card Node
+export interface CardNode {
+  heading?: Heading;
+  elements?: string[];
+  questions?: Question[];
+  statements?: Statement[];
+  quizzes?: Quiz[];
+  pairs?: Pair[];
+  matrix?: Matrix[];
+  botResponses?: BotResponse[];
 }
 
 // Footer
