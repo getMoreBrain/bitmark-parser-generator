@@ -203,6 +203,34 @@
       // "internalConsoleOptions": "openOnSessionStart",
       // "outFiles": ["${workspaceRoot}/dist/**/*"],
       // "envFile": "${workspaceRoot}/.env",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest: Web Parser - Standard Tests",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": ["--config=jest.config.js", "--testMatch", "<rootDir>/test/standard/web-parser.test.ts", "-i"],
+      // "preLaunchTask": "build",
+      "console": "integratedTerminal"
+      // "disableOptimisticBPs": true,
+      // "internalConsoleOptions": "openOnSessionStart",
+      // "outFiles": ["${workspaceRoot}/dist/**/*"],
+      // "envFile": "${workspaceRoot}/.env",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest: Web Generator - Standard Tests",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": ["--config=jest.config.js", "--testMatch", "<rootDir>/test/standard/web-generator.test.ts", "-i"],
+      // "preLaunchTask": "build",
+      "console": "integratedTerminal"
+      // "disableOptimisticBPs": true,
+      // "internalConsoleOptions": "openOnSessionStart",
+      // "outFiles": ["${workspaceRoot}/dist/**/*"],
+      // "envFile": "${workspaceRoot}/.env",
     }
   ]
 }

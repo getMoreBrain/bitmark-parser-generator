@@ -11,52 +11,12 @@ import { TextParser } from '../../src/parser/text/TextParser';
 import { FileUtils } from '../../src/utils/FileUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
-// Enable or disable testing of specific files
-const TEST_ALL = process.env.CI || true;
+import { DEBUG_PERFORMANCE } from './config/config-test';
+import { TEST_FILES, TEST_FILES_DIR } from './config/config-text-files';
 
-// Set to true to generate performance debug output
-const DEBUG_PERFORMANCE = !process.env.CI;
-
-const TEST_INPUT_DIR = path.resolve(__dirname, './text');
+const TEST_INPUT_DIR = TEST_FILES_DIR;
 // const JSON_INPUT_DIR = path.resolve(__dirname, './text/json');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/text-generator/output');
-
-let TEST_FILES: string[] = [
-  // 'plain.text',
-  // 'breakscaping.text',
-  // 'list.text',
-  // 'bold.text',
-  // 'light.text',
-  // 'italic.text',
-  // 'highlight.text',
-  // 'title.text',
-  // 'section.text',
-  // 'image.text',
-  // 'link.text',
-  // 'code.text',
-  'inline.text',
-  // 'latex.text',
-];
-
-// ALL tests for CI
-if (TEST_ALL) {
-  TEST_FILES = [
-    'plain.text',
-    'breakscaping.text',
-    'list.text',
-    'bold.text',
-    'light.text',
-    'italic.text',
-    'highlight.text',
-    'title.text',
-    'section.text',
-    'image.text',
-    'link.text',
-    'code.text',
-    'inline.text',
-    // 'latex.text',
-  ];
-}
 
 const textGenerator = new TextGenerator();
 const textParser = new TextParser();

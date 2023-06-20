@@ -1,30 +1,28 @@
+/**
+ * @jest-environment jsdom
+ */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { describe, test } from '@jest/globals';
 // import deepEqual from 'deep-equal';
 import * as fs from 'fs-extra';
 import path from 'path';
+import { performance } from 'perf_hooks';
 
-import { BitmarkFileGenerator } from '../../src/generator/bitmark/BitmarkFileGenerator';
-import { JsonFileGenerator } from '../../src/generator/json/JsonFileGenerator';
-import { BitmarkParser } from '../../src/parser/bitmark/BitmarkParser';
-import { JsonParser } from '../../src/parser/json/JsonParser';
+import * as bpgLib from '../../dist/browser/bitmark-parser-generator.min';
 import { FileUtils } from '../../src/utils/FileUtils';
 import { BitJsonUtils } from '../utils/BitJsonUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
 import { TEST_FILES, TEST_FILES_DIR } from './config/config-bitmark-files';
-import { DEBUG_PERFORMANCE, TEST_AGAINST_ANTLR_PARSER } from './config/config-test';
+import { DEBUG_PERFORMANCE } from './config/config-test';
 
 const TEST_INPUT_DIR = TEST_FILES_DIR;
-// const JSON_INPUT_DIR = path.resolve(__dirname, './bitmark/json');
-const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/bitmark-generator/output');
+const JSON_INPUT_DIR = path.resolve(__dirname, './bitmark/json');
+const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/web-bitmark-parser/output');
 
-const jsonParser = new JsonParser();
-const bitmarkParser = new BitmarkParser();
-
-// DISABLE TESTS
-// return false;
+// const jsonParser = new JsonParser();
+const bitmarkParser = new bpgLib.BitmarkParser();
 
 /**
  * Get the list of files in the TEST_INPUT_DIR (bitmark files)
@@ -39,8 +37,8 @@ function getTestFilenames(): string[] {
   return files;
 }
 
-describe('bitmark-generator', () => {
-  describe('JSON => Markup => JSON: Tests', () => {
+describe('web-bitmark-parser', () => {
+  describe('Markup => JSON: Tests', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
 
@@ -70,7 +68,7 @@ describe('bitmark-generator', () => {
       const partFolderAndFile = testFile.replace(TEST_INPUT_DIR, '');
       const partFolder = path.dirname(partFolderAndFile);
       const fullFolder = path.join(TEST_OUTPUT_DIR, partFolder);
-      // const fullJsonInputFolder = path.join(JSON_INPUT_DIR, partFolder);
+      const fullJsonInputFolder = path.join(JSON_INPUT_DIR, partFolder);
       const fileId = testFile.replace(TEST_INPUT_DIR + '/', '');
       const id = path.basename(partFolderAndFile, '.bit');
 
@@ -83,21 +81,17 @@ describe('bitmark-generator', () => {
         fs.ensureDirSync(fullFolder);
 
         // Calculate the filenames
-        // const testJsonFile = path.resolve(fullJsonInputFolder, `${id}.json`);
+        const testJsonFile = path.resolve(fullJsonInputFolder, `${id}.json`);
         const originalMarkupFile = path.resolve(fullFolder, `${id}.bit`);
         const originalJsonFile = path.resolve(fullFolder, `${id}.json`);
-        const generatedMarkupFile = path.resolve(fullFolder, `${id}.gen.bit`);
         const generatedJsonFile = path.resolve(fullFolder, `${id}.gen.json`);
         const generatedAstFile = path.resolve(fullFolder, `${id}.ast.json`);
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);
 
         const jsonOptions = {
-          textAsPlainText: true, // For testing the generator, use plain text rather than JSON for text
+          textAsPlainText: true, // For testing the parser, use plain text rather than JSON for text
           prettify: true, // For testing the output is easier to read if it is prettified
-        };
-
-        const bitmarkOptions = {
-          explicitTextFormat: false,
+          includeExtraProperties: true, // Include extra properties in the JSON when testing
         };
 
         // Copy the original test markup file to the output folder
@@ -106,34 +100,11 @@ describe('bitmark-generator', () => {
         // Read in the test markup file
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
-        // Generate JSON from original bitmark markup using the parser
-        let originalJson: unknown;
+        // Copy the original expected JSON file to the output folder
+        fs.copySync(testJsonFile, originalJsonFile);
 
-        if (TEST_AGAINST_ANTLR_PARSER) {
-          // Generate JSON from original bitmark markup using the ANTLR parser
-          performance.mark('ANTLR:Start');
-          originalJson = bitmarkParser.parseUsingAntlr(originalMarkup);
-
-          // Write the new JSON
-          fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {
-            encoding: 'utf8',
-          });
-
-          performance.mark('ANTLR:End');
-        } else {
-          // Generate JSON from original bitmark markup using the PEG parser
-          const bitmarkAst = bitmarkParser.toAst(originalMarkup);
-
-          // Generate JSON from AST
-          const generator = new JsonFileGenerator(originalJsonFile, {
-            jsonOptions,
-          });
-
-          await generator.generate(bitmarkAst);
-
-          // Read in the test JSON file
-          originalJson = fs.readJsonSync(originalJsonFile, 'utf8');
-        }
+        // Read in the test expected JSON file
+        const originalJson = fs.readJsonSync(originalJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
         BitJsonUtils.cleanupJson(originalJson, { removeParser: true, removeErrors: true });
@@ -141,57 +112,29 @@ describe('bitmark-generator', () => {
         // // Write original bitmark (and JSON?)
         // writeTestJsonAndBitmark(originalJson, fullFolder, id);
 
-        // Convert the bitmark JSON to bitmark AST
-        performance.mark('GEN:Start');
-        const bitmarkAst = jsonParser.toAst(originalJson);
+        // Convert the Bitmark markup to bitmark AST
+        performance.mark('PEG:Start');
+        const bitmarkAst = bitmarkParser.toAst(originalMarkup);
 
         // Write the new AST
         fs.writeFileSync(generatedAstFile, JSON.stringify(bitmarkAst, null, 2), {
           encoding: 'utf8',
         });
 
-        // Generate markup code from AST
-        const generator = new BitmarkFileGenerator(generatedMarkupFile, {
-          bitmarkOptions,
+        // Generate JSON from AST
+        const generator = new bpgLib.JsonStringGenerator({
+          jsonOptions,
         });
 
-        await generator.generate(bitmarkAst);
+        const newJsonStr = await generator.generate(bitmarkAst);
+        const newJson = JSON.parse(newJsonStr);
 
-        performance.mark('GEN:End');
+        performance.mark('PEG:End');
 
-        // Read in the generated markup file
-        const newMarkup = fs.readFileSync(generatedMarkupFile, 'utf8');
-
-        // Generate JSON from generated bitmark markup using the parser
-        let newJson: unknown;
-
-        if (TEST_AGAINST_ANTLR_PARSER) {
-          // Generate JSON from generated bitmark markup using the ANTLR parser
-          newJson = bitmarkParser.parseUsingAntlr(newMarkup);
-
-          // Write the new JSON
-          fs.writeFileSync(generatedJsonFile, JSON.stringify(newJson, null, 2), {
-            encoding: 'utf8',
-          });
-        } else {
-          // Generate JSON from generated bitmark markup using the PEG parser
-          const bitmarkAst = bitmarkParser.toAst(newMarkup);
-
-          // Write the new AST
-          fs.writeFileSync(generatedAstFile, JSON.stringify(bitmarkAst, null, 2), {
-            encoding: 'utf8',
-          });
-
-          // Generate JSON from AST
-          const generator = new JsonFileGenerator(generatedJsonFile, {
-            jsonOptions,
-          });
-
-          await generator.generate(bitmarkAst);
-
-          // Read in the generated JSON file
-          newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
-        }
+        // Write the generated JSON
+        fs.writeJsonSync(generatedJsonFile, newJson, {
+          encoding: 'utf8',
+        });
 
         // Remove uninteresting JSON items
         BitJsonUtils.cleanupJson(originalJson, { removeMarkup: true });
@@ -209,8 +152,8 @@ describe('bitmark-generator', () => {
 
         // Print performance information
         if (DEBUG_PERFORMANCE) {
-          const genTimeSecs = Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
-          console.log(`'${fileId}' timing; GEN: ${genTimeSecs} s`);
+          const pegTimeSecs = Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000;
+          console.log(`'${fileId}' timing; PEG: ${pegTimeSecs} s`);
         }
 
         expect(newJson).toEqual(originalJson);
