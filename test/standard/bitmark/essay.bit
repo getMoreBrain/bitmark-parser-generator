@@ -1,3 +1,8 @@
+[.essay]
+[%1]
+[!Listen to the train announcement. Write down every word you hear.]
+[@sampleSolution:The train now approaching Platform 2 is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.]
+
 [.essay:bitmark--]
 || PEG parser does not consider the instruction [!] at the end of the body line valid, but the ANTLR parser does ||
 [@id:245552]

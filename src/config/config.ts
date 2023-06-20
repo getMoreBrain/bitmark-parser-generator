@@ -156,6 +156,7 @@ import './properties/reactionPropertyConfig';
 import './properties/referencePropertyConfig';
 import './properties/releaseVersionPropertyConfig';
 import './properties/resourcePropertyConfig';
+import './properties/sampleSolutionPropertyConfig';
 import './properties/shortAnswerPropertyConfig';
 import './properties/subjectPropertyConfig';
 import './properties/textReferencePropertyConfig';

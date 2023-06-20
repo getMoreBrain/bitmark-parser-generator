@@ -56,6 +56,7 @@ const PropertyKey = superenum({
 
   book: 'book', // single, only in 'learning-path-book'
   partner: 'partner', // single, only in 'conversation-xxx'
+  sampleSolution: 'sampleSolution', // single, only in 'essay'
 
   // Only in cards
   shortAnswer: 'shortAnswer', // single
