@@ -12,10 +12,8 @@
       "pairs": [
         {
           "key": "2008",
-          "values": [
-            "- 150'000.00"
-          ],
-          "item": "",
+          "values": ["- 150'000.00"],
+          "item": "1.",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
@@ -25,10 +23,8 @@
         },
         {
           "key": "2009",
-          "values": [
-            "- 70'000.00"
-          ],
-          "item": "",
+          "values": ["- 70'000.00"],
+          "item": "2.",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
@@ -38,9 +34,7 @@
         },
         {
           "key": "2010",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -51,9 +45,7 @@
         },
         {
           "key": "2011",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -64,9 +56,7 @@
         },
         {
           "key": "2012",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -77,9 +67,7 @@
         },
         {
           "key": "2013",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -90,9 +78,7 @@
         },
         {
           "key": "2014",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -103,9 +89,7 @@
         },
         {
           "key": "2015",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -116,9 +100,7 @@
         },
         {
           "key": "2016",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -129,9 +111,7 @@
         },
         {
           "key": "2017",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -142,9 +122,7 @@
         },
         {
           "key": "Total",
-          "values": [
-            "- 220'000.00"
-          ],
+          "values": ["- 220'000.00"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -155,9 +133,7 @@
         }
       ],
       "body": "",
-      "id": [
-        "197919"
-      ],
+      "id": ["197919"],
       "instruction": "Verfallene Verluste per 01.01.2018"
     }
   },
@@ -174,9 +150,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A"
-          ],
+          "values": ["A"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -187,9 +161,7 @@
         },
         {
           "key": "Als Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.",
-          "values": [
-            "E"
-          ],
+          "values": ["E"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -200,9 +172,7 @@
         },
         {
           "key": "Marcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.",
-          "values": [
-            "C"
-          ],
+          "values": ["C"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -213,9 +183,7 @@
         },
         {
           "key": "Corinne bildet sich mit Abendkursen weiter.",
-          "values": [
-            "E"
-          ],
+          "values": ["E"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -226,9 +194,7 @@
         },
         {
           "key": "Zwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.",
-          "values": [
-            "C"
-          ],
+          "values": ["C"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -239,9 +205,7 @@
         },
         {
           "key": "Stefan freut sich über ein Lob seiner Vorgesetzten.",
-          "values": [
-            "D"
-          ],
+          "values": ["D"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -252,9 +216,7 @@
         },
         {
           "key": "Daniel Gerber verbringt den Abend vor dem Computer, um zu chatten.",
-          "values": [
-            "C"
-          ],
+          "values": ["C"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -265,9 +227,7 @@
         },
         {
           "key": "Ein Ehepaar installiert eine Alarmanlage im Haus.",
-          "values": [
-            "B"
-          ],
+          "values": ["B"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -278,9 +238,7 @@
         }
       ],
       "body": "A. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung",
-      "id": [
-        "213782"
-      ],
+      "id": ["213782"],
       "lead": "Geschlossene Fragen",
       "instruction": "Ordnen Sie die Bedürfnisse gemäss den fünf Arten nach Maslow den Aussagen zu. Mehrfachzuweisungen sind möglich."
     }
@@ -298,9 +256,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A"
-          ],
+          "values": ["A"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -311,9 +267,7 @@
         },
         {
           "key": "Als Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.",
-          "values": [
-            "E"
-          ],
+          "values": ["E"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -324,9 +278,7 @@
         },
         {
           "key": "Marcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.",
-          "values": [
-            "C"
-          ],
+          "values": ["C"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -337,9 +289,7 @@
         },
         {
           "key": "Corinne bildet sich mit Abendkursen weiter.",
-          "values": [
-            "E"
-          ],
+          "values": ["E"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -350,9 +300,7 @@
         },
         {
           "key": "Zwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.",
-          "values": [
-            "C"
-          ],
+          "values": ["C"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -363,9 +311,7 @@
         },
         {
           "key": "Stefan freut sich über ein Lob seiner Vorgesetzten.",
-          "values": [
-            "D"
-          ],
+          "values": ["D"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -376,9 +322,7 @@
         },
         {
           "key": "Daniel Gerber verbringt den Abend vor dem Computer, um zu chatten.",
-          "values": [
-            "C"
-          ],
+          "values": ["C"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -389,9 +333,7 @@
         },
         {
           "key": "Ein Ehepaar installiert eine Alarmanlage im Haus.",
-          "values": [
-            "B"
-          ],
+          "values": ["B"],
           "item": "",
           "hint": "",
           "instruction": "",
@@ -402,9 +344,7 @@
         }
       ],
       "body": "A. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung",
-      "id": [
-        "208467"
-      ],
+      "id": ["208467"],
       "lead": "Geschlossene Fragen",
       "instruction": "Ordnen Sie die Bedürfnisse gemäss den fünf Arten nach Maslow den Aussagen zu. Mehrfachzuweisungen sind möglich."
     }

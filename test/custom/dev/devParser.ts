@@ -40,7 +40,7 @@ class DevParser {
       // AST ==> JSON
       const generator = new JsonObjectGenerator({
         jsonOptions: {
-          textAsPlainText: false,
+          textAsPlainText: true,
           prettify: true,
         },
       });
