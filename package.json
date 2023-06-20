@@ -73,7 +73,12 @@
     "Richard Sewell (https://github.com/zx-ncoderz)"
   ],
   "resolutions": {
-    "antlr4ts": "0.5.0-alpha.4"
+    "antlr4ts": "0.5.0-alpha.4",
+    "npm-exists": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.2.1.tgz"
+  },
+  "overrides": {
+    "antlr4ts": "0.5.0-alpha.4",
+    "npm-exists": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.2.1.tgz"
   },
   "devDependencies": {
     "@types/eslint-plugin-prettier": "^3.1.0",

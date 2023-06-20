@@ -46,6 +46,8 @@ const STANDARD_MARKS: { [key: string]: string } = {
   [TextMarkType.highlight]: HIGHLIGHT_MARK,
 };
 
+// Regex explanation:
+// - Match one or more ^ characters and capture in group 1
 const BREAKSCAPE_CHAR_REGEX = new RegExp('(\\^+)', 'g');
 
 // Regex explanation:
