@@ -18,7 +18,6 @@ import {
   Response,
   Statement,
   Choice,
-  Heading,
   Body,
   ImageResource,
   Resource,
@@ -524,7 +523,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> statements
 
-  protected enter_statements(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
+  protected enter_statements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     //
   }
 
@@ -544,7 +543,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeNL();
   }
 
-  protected exit_statements(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
+  protected exit_statements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     //
   }
 
@@ -661,7 +660,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> heading
 
-  protected enter_heading(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
+  protected enter_heading(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     //
   }
 

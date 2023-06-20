@@ -124,8 +124,12 @@ class NodeValidator {
     // ===
     // ===
     // must be included in the markup
-    if (!bit.questions) {
-      bit.questions = [];
+    if (!bit.cardNode) {
+      bit.cardNode = {};
+    }
+
+    if (!bit.cardNode.questions) {
+      bit.cardNode.questions = [];
     }
 
     return bit;
