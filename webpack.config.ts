@@ -1,7 +1,7 @@
 import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import { Configuration } from 'webpack';
+import { Configuration, DefinePlugin } from 'webpack';
 
 const root = __dirname;
 const entry = path.resolve(root, './dist/cjs/index.js');
@@ -69,6 +69,9 @@ const config: Configuration = {
       analyzerMode: 'static',
       reportFilename: 'bundle-report.html',
       defaultSizes: 'stat',
+    }),
+    new DefinePlugin({
+      'process.env.BPG_ENV': JSON.stringify('production'),
     }),
   ],
 };

@@ -1,7 +1,7 @@
 import NodePolyfillPlugin from 'node-polyfill-webpack-plugin';
 import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
-import { Configuration } from 'webpack';
+import { Configuration, DefinePlugin } from 'webpack';
 
 const root = __dirname;
 const entry = path.resolve(root, './dist/cjs/index.js');
@@ -52,6 +52,9 @@ const config: Configuration = {
   plugins: [
     new NodePolyfillPlugin({
       includeAliases: ['constants', 'os', 'path', 'process', 'stream'],
+    }),
+    new DefinePlugin({
+      'process.env.BPG_ENV': JSON.stringify('production'),
     }),
   ],
 };
