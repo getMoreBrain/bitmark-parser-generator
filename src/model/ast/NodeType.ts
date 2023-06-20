@@ -28,6 +28,7 @@ const NodeType = superenum({
   select: 'select',
   highlight: 'highlight',
 
+  cardNode: 'cardNode',
   elements: 'elements',
   solutions: 'solutions',
   options: 'options',

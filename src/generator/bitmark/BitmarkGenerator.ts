@@ -69,7 +69,7 @@ export interface BitmarkGeneratorOptions {
    * - Bitmark v2:
    *   - cardSetVersion: 1
    * - Bitmark v3:
-   *   - cardSetVersion: 2 (TODO, currently CardSet v1 will still be used)
+   *   - cardSetVersion: 2
    */
   bitmarkVersion?: BitmarkVersionType;
 
@@ -105,7 +105,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * - Bitmark v2:
    *   - cardSetVersion: 1
    * - Bitmark v3:
-   *   - cardSetVersion: 2 (TODO, currently CardSet v1 will still be used)
+   *   - cardSetVersion: 2
    *
    * @param options - bitmark generation options
    */
@@ -123,7 +123,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       }
     } else {
       if (this.options.cardSetVersion === undefined) {
-        this.options.cardSetVersion = CardSetVersion.v1; // TODO change to v2 when working
+        this.options.cardSetVersion = CardSetVersion.v2;
       }
     }
 
@@ -267,7 +267,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmark
 
-  // bitmark -> bits
+  // bitmarkAst -> bits
 
   protected between_bits(
     _node: NodeInfo,
@@ -281,7 +281,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeNL();
   }
 
-  // bitmark -> bits -> bitsValue
+  // bitmarkAst -> bits -> bitsValue
 
   protected enter_bitsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const bit = node.value as Bit;
@@ -350,7 +350,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> labelTrue / labelFalse
+  // bitmarkAst -> bits -> bitsValue -> labelTrue / labelFalse
 
   protected enter_labelTrue(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const value = node.value as string | undefined;
@@ -365,7 +365,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> partner
+  // bitmarkAst -> bits -> bitsValue -> partner
 
   protected enter_partner(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const partner = node.value as Partner;
@@ -381,13 +381,13 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> sampleSolution
+  // bitmarkAst -> bits -> bitsValue -> sampleSolution
 
   protected enter_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('sampleSolution', node.value);
   }
 
-  // bitmark -> bits -> bitsValue -> itemLead
+  // bitmarkAst -> bits -> bitsValue -> itemLead
 
   protected enter_itemLead(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const itemLead = node.value as ItemLead;
@@ -405,7 +405,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> body
+  // bitmarkAst -> bits -> bitsValue -> body
 
   protected enter_body(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     // always write a NL before the body content if there is any?
@@ -415,9 +415,9 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> body -> bodyValue -> gap
+  // bitmarkAst -> bits -> bitsValue -> body -> bodyValue -> gap
 
-  // bitmark -> bits -> bitsValue -> body -> bodyValue -> gap -> solutions
+  // bitmarkAst -> bits -> bitsValue -> body -> bodyValue -> gap -> solutions
 
   protected enter_solutions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const solutions = node.value as string[];
@@ -428,11 +428,82 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> elements
+  // bitmarkAst -> bits -> bitsValue -> body -> bodyValue -> gap -> solutions
 
-  protected enter_elements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  // bitmarkAst -> bits -> bitsValue -> body -> bodyValue -> select
+
+  // bitmarkAst -> bits -> bitsValue -> body -> bodyValue -> select -> options
+
+  // bitmarkAst -> bits -> bitsValue -> body -> bodyValue -> select -> options -> optionsValue
+
+  protected enter_optionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const selectOption = node.value as SelectOption;
+    if (selectOption.isCorrect) {
+      this.writeOPP();
+    } else {
+      this.writeOPM();
+    }
+    this.write(selectOption.text);
+    this.writeCL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> body -> bodyValue -> highlight
+
+  // bitmarkAst -> bits -> bitsValue -> body -> bodyValue -> highlight -> texts
+
+  // bitmarkAst -> bits -> bitsValue -> body -> bodyValue -> highlight -> texts -> textsValue
+
+  protected enter_textsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const highlightText = node.value as HighlightText;
+    if (highlightText.isCorrect) {
+      this.writeOPP();
+    } else {
+      this.writeOPM();
+    }
+    this.write(highlightText.text);
+    this.writeCL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode
+
+  protected enter_cardNode(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
+    // Ignore cards for true-false-1
+    const isTrueFalse1 = this.isTrueFalse1(route);
+    if (isTrueFalse1) return;
+
     this.writeCardSetStart();
     this.writeNL();
+  }
+
+  protected between_cardNode(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    route: NodeInfo[],
+  ): void {
+    // Ignore cards for true-false-1
+    const isTrueFalse1 = this.isTrueFalse1(route);
+    if (isTrueFalse1) return;
+
+    this.writeNL();
+    this.writeCardSetCardDivider();
+    this.writeNL();
+  }
+
+  protected exit_cardNode(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
+    // Ignore cards for true-false-1
+    const isTrueFalse1 = this.isTrueFalse1(route);
+    if (isTrueFalse1) return;
+
+    this.writeNL();
+    this.writeCardSetEnd();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> elements
+
+  protected enter_elements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    //
   }
 
   protected between_elements(
@@ -448,55 +519,13 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected exit_elements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeNL();
-    this.writeCardSetEnd();
+    //
   }
 
-  // bitmark -> bits -> bitsValue -> body -> bodyValue -> gap -> solutions
-
-  // bitmark -> bits -> bitsValue -> body -> bodyValue -> select
-
-  // bitmark -> bits -> bitsValue -> body -> bodyValue -> select -> options
-
-  // bitmark -> bits -> bitsValue -> body -> bodyValue -> select -> options -> optionsValue
-
-  protected enter_optionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const selectOption = node.value as SelectOption;
-    if (selectOption.isCorrect) {
-      this.writeOPP();
-    } else {
-      this.writeOPM();
-    }
-    this.write(selectOption.text);
-    this.writeCL();
-  }
-
-  // bitmark -> bits -> bitsValue -> body -> bodyValue -> highlight
-
-  // bitmark -> bits -> bitsValue -> body -> bodyValue -> highlight -> texts
-
-  // bitmark -> bits -> bitsValue -> body -> bodyValue -> highlight -> texts -> textsValue
-
-  protected enter_textsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const highlightText = node.value as HighlightText;
-    if (highlightText.isCorrect) {
-      this.writeOPP();
-    } else {
-      this.writeOPM();
-    }
-    this.write(highlightText.text);
-    this.writeCL();
-  }
-
-  // bitmark -> bits -> bitsValue -> statements
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> statements
 
   protected enter_statements(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
-    const isStatementDivider = this.isStatementDivider(route);
-
-    if (isStatementDivider) {
-      this.writeCardSetStart();
-      this.writeNL();
-    }
+    //
   }
 
   protected between_statements(
@@ -506,9 +535,9 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     route: NodeInfo[],
   ): void {
-    const isStatementDivider = this.isStatementDivider(route);
+    const isTrueFalse1 = this.isTrueFalse1(route);
 
-    if (isStatementDivider) {
+    if (!isTrueFalse1) {
       this.writeNL();
       this.writeCardSetCardDivider();
     }
@@ -516,15 +545,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected exit_statements(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
-    const isStatementDivider = this.isStatementDivider(route);
-
-    if (isStatementDivider) {
-      this.writeNL();
-      this.writeCardSetEnd();
-    }
+    //
   }
 
-  // bitmark -> bits -> bitsValue -> statements -> statementsValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> statements -> statementsValue
 
   protected enter_statementsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const statement = node.value as Statement;
@@ -537,8 +561,8 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeCL();
   }
 
-  // bitmark -> bits -> bitsValue -> choices
-  // bitmark -> bits -> bitsValue -> quizzes -> quizzesValue -> choices
+  // bitmarkAst -> bits -> bitsValue -> choices
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> choices
 
   protected between_choices(
     _node: NodeInfo,
@@ -554,7 +578,8 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeNL();
   }
 
-  // bitmark -> bits -> bitsValue -> choices -> choicesValue
+  // bitmarkAst -> bits -> bitsValue -> choices -> choicesValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> choices -> choicesValue
 
   protected enter_choicesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const choice = node.value as Choice;
@@ -567,7 +592,8 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeCL();
   }
 
-  // bitmark -> bits -> bitsValue -> responses
+  // bitmarkAst -> bits -> bitsValue -> responses
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> responses
 
   protected between_responses(
     _node: NodeInfo,
@@ -583,7 +609,8 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeNL();
   }
 
-  // bitmark -> bits -> bitsValue -> responses -> responsesValue
+  // bitmarkAst -> bits -> bitsValue -> responses -> responsesValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> responses -> responsesValue
 
   protected enter_responsesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const response = node.value as Response;
@@ -596,11 +623,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeCL();
   }
 
-  // bitmark -> bits -> bitsValue -> quizzes
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes
 
   protected enter_quizzes(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeCardSetStart();
-    this.writeNL();
+    //
   }
 
   protected between_quizzes(
@@ -616,11 +642,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected exit_quizzes(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeCardSetEnd();
-    this.writeNL();
+    //
   }
 
-  // bitmark -> bits -> bitsValue -> quizzes -> quizzesValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue
 
   protected between_quizzesValue(
     _node: NodeInfo,
@@ -634,21 +659,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> heading
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> heading
 
   protected enter_heading(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
-    const heading = node.value as Heading;
-
-    // Ensure the heading is valid for writing out (it will be valid, but if it is empty, it should not be written)
-    let valid = false;
-    if (heading && heading.forKeys /*&& heading.forValues && heading.forValues.length > 0*/) {
-      valid = true;
-    }
-
-    if (!valid) return false;
-
-    this.writeCardSetStart();
-    this.writeNL();
+    //
   }
 
   protected between_heading(
@@ -664,11 +678,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected exit_heading(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    // this.writeMajorDivider();
-    // this.writeNL();
+    //
   }
 
-  // bitmark -> bits -> bitsValue -> heading -> forValues
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> heading -> forValues
 
   protected enter_forValues(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     //
@@ -690,11 +703,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     //
   }
 
-  // bitmark -> bits -> bitsValue -> pairs
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs
 
   protected enter_pairs(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeCardSetStart();
-    this.writeNL();
+    //
   }
 
   protected between_pairs(
@@ -710,12 +722,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected exit_pairs(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeNL();
-    this.writeCardSetEnd();
-    this.writeNL();
+    //
   }
 
-  // bitmark -> bits -> bitsValue -> pairs -> pairsValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs -> pairsValue
 
   protected between_pairsValue(
     _node: NodeInfo,
@@ -724,12 +734,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
-    // this.writeNL();
-    // this.writeMinorDivider();
-    // this.writeNL();
+    //
   }
 
-  // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> keyAudio
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs -> pairsValue -> keyAudio
 
   protected enter_keyAudio(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const resource = node.value as Resource;
@@ -738,7 +746,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeResource(resource);
   }
 
-  // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> keyImage
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs -> pairsValue -> keyImage
 
   protected enter_keyImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const resource = node.value as Resource;
@@ -747,11 +755,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeResource(resource);
   }
 
-  // bitmark -> bits -> bitsValue -> matrix
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> matrix
 
   protected enter_matrix(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeCardSetStart();
-    this.writeNL();
+    //
   }
 
   protected between_matrix(
@@ -767,12 +774,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected exit_matrix(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeNL();
-    this.writeCardSetEnd();
-    this.writeNL();
+    //
   }
 
-  // bitmark -> bits -> bitsValue -> matrix -> matrixValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> matrix -> matrixValue
 
   protected between_matrixValue(
     _node: NodeInfo,
@@ -781,13 +786,11 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
   ): void {
-    // this.writeNL();
-    // this.writeMinorDivider();
-    // this.writeNL();
+    //
   }
 
-  // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> values
-  // bitmark -> bits -> bitsValue -> matrix -> matrixValue -> cells -> cellsValue -> values
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs -> pairsValue -> values
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> matrix -> matrixValue -> cells -> cellsValue -> values
 
   protected enter_values(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeNL();
@@ -807,11 +810,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeNL();
   }
 
-  // bitmark -> bits -> bitsValue -> questions
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> questions
 
   protected enter_questions(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeCardSetStart();
-    this.writeNL();
+    //
   }
 
   protected between_questions(
@@ -826,11 +828,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected exit_questions(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeCardSetEnd();
-    this.writeNL();
+    //
   }
 
-  // bitmark -> bits -> bitsValue -> questions -> questionsValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> questions -> questionsValue
 
   protected between_questionsValue(
     _node: NodeInfo,
@@ -848,11 +849,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeNL();
   }
 
-  // bitmark -> bits -> bitsValue -> botResponses
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses
 
   protected enter_botResponses(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeCardSetStart();
-    this.writeNL();
+    //
   }
 
   protected between_botResponses(
@@ -867,11 +867,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected exit_botResponses(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeCardSetEnd();
-    this.writeNL();
+    //
   }
 
-  // bitmark -> bits -> bitsValue -> botResponses -> botResponsesValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses -> botResponsesValue
 
   protected between_botResponsesValue(
     _node: NodeInfo,
@@ -887,7 +886,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeNL();
   }
 
-  // bitmark -> bits -> bitsValue -> botResponses -> botResponsesValue -> response
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses -> botResponsesValue -> response
 
   protected leaf_response(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeOPB();
@@ -895,13 +894,13 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeCL();
   }
 
-  // bitmark -> bits -> bitsValue -> botResponses -> botResponsesValue -> reaction
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses -> botResponsesValue -> reaction
 
   protected leaf_reaction(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('reaction', node.value, true);
   }
 
-  // bitmark -> bits -> bitsValue -> botResponses -> botResponsesValue -> feedback
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses -> botResponsesValue -> feedback
 
   protected leaf_feedback(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const feeback = node.value as string;
@@ -910,7 +909,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> resource
+  // bitmarkAst -> bits -> bitsValue -> resource
 
   protected enter_resource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const resource = node.value as Resource;
@@ -919,7 +918,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeResource(resource);
   }
 
-  // bitmark -> bits -> bitsValue -> resource -> posterImage
+  // bitmarkAst -> bits -> bitsValue -> resource -> posterImage
 
   protected enter_posterImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const posterImage = node.value as ImageResource;
@@ -928,7 +927,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> resource -> thumbnails
+  // bitmarkAst -> bits -> bitsValue -> resource -> thumbnails
   // [src1x,src2x,src3x,src4x,width,height,alt,caption]
 
   protected enter_thumbnails(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -951,11 +950,11 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   // Terminal nodes (leaves)
   //
 
-  // bitmark -> bits -> bitsValue -> bitType
+  // bitmarkAst -> bits -> bitsValue -> bitType
 
-  // bitmark -> bits -> bitsValue -> textFormat
+  // bitmarkAst -> bits -> bitsValue -> textFormat
 
-  //  bitmark -> bits -> title
+  //  bitmarkAst -> bits -> title
 
   protected leaf_title(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const value = node.value as string;
@@ -970,7 +969,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  //  bitmark -> bits -> subtitle
+  //  bitmarkAst -> bits -> subtitle
 
   protected leaf_subtitle(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const value = node.value as string;
@@ -984,7 +983,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> book
+  // bitmarkAst -> bits -> bitsValue -> book
 
   protected leaf_book(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const bit = parent?.value as Bit;
@@ -1005,7 +1004,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  //  bitmark -> bits -> bitsValue -> anchor
+  //  bitmarkAst -> bits -> bitsValue -> anchor
 
   protected leaf_anchor(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
@@ -1015,7 +1014,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  //  bitmark -> bits -> bitsValue -> reference
+  //  bitmarkAst -> bits -> bitsValue -> reference
 
   protected leaf_reference(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const bit = parent?.value as Bit;
@@ -1046,7 +1045,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue ->  * -> instruction
+  // bitmarkAst -> bits -> bitsValue ->  * -> instruction
 
   protected leaf_instruction(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const value = node.value as string;
@@ -1058,7 +1057,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue ->  * -> example
+  // bitmarkAst -> bits -> bitsValue ->  * -> example
 
   protected leaf_example(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const value = node.value as Example | undefined;
@@ -1080,7 +1079,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> body -> bodyValue -> bodyText
+  // bitmarkAst -> bits -> body -> bodyValue -> bodyText
 
   protected leaf_bodyText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const value = node.value as string;
@@ -1090,7 +1089,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> footer -> footerText
+  // bitmarkAst -> bits -> footer -> footerText
 
   protected leaf_footerText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const value = node.value as string;
@@ -1100,7 +1099,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> elements -> elementsValue
+  // bitmarkAst -> bits -> bitsValue -> elements -> elementsValue
 
   protected leaf_elementsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
@@ -1108,7 +1107,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> body -> bodyValue -> gap -> solutions -> solution
+  // bitmarkAst -> bits -> bitsValue -> body -> bodyValue -> gap -> solutions -> solution
   // ? -> solutions -> solution
 
   protected leaf_solutionsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1119,8 +1118,8 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue-> body -> bodyValue -> select -> options -> prefix
-  // bitmark -> bits -> bitsValue-> body -> bodyValue -> highlight -> options -> prefix
+  // bitmarkAst -> bits -> bitsValue-> body -> bodyValue -> select -> options -> prefix
+  // bitmarkAst -> bits -> bitsValue-> body -> bodyValue -> highlight -> options -> prefix
 
   protected leaf_prefix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
@@ -1130,8 +1129,8 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue-> body -> bodyValue -> select -> options -> postfix
-  // bitmark -> bits -> bitsValue-> body -> bodyValue -> highlight -> options -> postfix
+  // bitmarkAst -> bits -> bitsValue-> body -> bodyValue -> select -> options -> postfix
+  // bitmarkAst -> bits -> bitsValue-> body -> bodyValue -> highlight -> options -> postfix
 
   protected leaf_postfix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
@@ -1141,13 +1140,13 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue ->  * -> isCaseSensitive
+  // bitmarkAst -> bits -> bitsValue ->  * -> isCaseSensitive
 
-  // bitmark -> bits -> bitsValue ->  * -> isLongAnswer
+  // bitmarkAst -> bits -> bitsValue ->  * -> isLongAnswer
 
-  // bitmark -> bits -> bitsValue ->  * -> isCorrect
+  // bitmarkAst -> bits -> bitsValue ->  * -> isCorrect
 
-  // bitmark -> bits -> bitsValue -> heading -> forKeys
+  // bitmarkAst -> bits -> bitsValue -> heading -> forKeys
 
   protected leaf_forKeys(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeOPHASH();
@@ -1155,7 +1154,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeCL();
   }
 
-  // bitmark -> bits -> bitsValue -> heading -> forValuesValue
+  // bitmarkAst -> bits -> bitsValue -> heading -> forValuesValue
 
   protected leaf_forValuesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeOPHASH();
@@ -1163,8 +1162,8 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeCL();
   }
 
-  // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> key
-  // bitmark -> bits -> bitsValue -> matrix -> matrixValue -> key
+  // bitmarkAst -> bits -> bitsValue -> pairs -> pairsValue -> key
+  // bitmarkAst -> bits -> bitsValue -> matrix -> matrixValue -> key
 
   protected leaf_key(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
@@ -1172,8 +1171,8 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> pairs -> pairsValue -> values -> valuesValue
-  // bitmark -> bits -> bitsValue -> matrix -> matrixValue -> cells -> cellsValue -> values -> valuesValue
+  // bitmarkAst -> bits -> bitsValue -> pairs -> pairsValue -> values -> valuesValue
+  // bitmarkAst -> bits -> bitsValue -> matrix -> matrixValue -> cells -> cellsValue -> values -> valuesValue
 
   protected leaf_valuesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
@@ -1181,7 +1180,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> questions -> questionsValue -> question
+  // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> question
 
   protected leaf_question(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
@@ -1190,7 +1189,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> questions -> questionsValue -> sampleSolution
+  // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> sampleSolution
 
   protected leaf_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     if (node.value) {
@@ -1200,7 +1199,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> questions -> questionsValue -> question -> isShortAnswer
+  // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> question -> isShortAnswer
 
   protected leaf_isShortAnswer(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     // Generally, shortAnswer is the default.
@@ -1212,11 +1211,11 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmark -> bits -> bitsValue -> statements -> text
+  // bitmarkAst -> bits -> bitsValue -> statements -> text
 
-  // bitmark -> bits -> bitsValue -> resource -> ...
-  // bitmark -> bits -> bitsValue -> resource -> posterImage -> ...
-  // bitmark -> bits -> bitsValue -> resource -> thumbnails -> thumbnailsValue -> ...
+  // bitmarkAst -> bits -> bitsValue -> resource -> ...
+  // bitmarkAst -> bits -> bitsValue -> resource -> posterImage -> ...
+  // bitmarkAst -> bits -> bitsValue -> resource -> thumbnails -> thumbnailsValue -> ...
   // [src1x,src2x,src3x,src4x,width,height,alt,caption]
 
   protected leaf_src1x(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1269,9 +1268,9 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeProperty('caption', value);
   }
 
-  // bitmark -> bits -> bitsValue -> resource -> ...
-  // bitmark -> bits -> bitsValue -> resource -> posterImage -> ...
-  // bitmark -> bits -> bitsValue -> resource -> thumbnails -> thumbnailsValue -> ...
+  // bitmarkAst -> bits -> bitsValue -> resource -> ...
+  // bitmarkAst -> bits -> bitsValue -> resource -> posterImage -> ...
+  // bitmarkAst -> bits -> bitsValue -> resource -> thumbnails -> thumbnailsValue -> ...
   // [duration,mute,autoplay,allowSubtitles,showSubtitles]
 
   protected leaf_duration(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1604,9 +1603,9 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return !!writeFormat;
   }
 
-  protected isStatementDivider(route: NodeInfo[]) {
+  protected isTrueFalse1(route: NodeInfo[]) {
     const bitType = this.getBitType(route);
-    return !(bitType === BitType.trueFalse1);
+    return bitType === BitType.trueFalse1;
   }
 
   protected getBitType(route: NodeInfo[]): BitTypeType | undefined {

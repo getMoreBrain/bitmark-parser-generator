@@ -42,6 +42,7 @@ import {
   Partner,
   BodyText,
   BodyPart,
+  CardNode,
 } from '../model/ast/Nodes';
 
 /**
@@ -61,6 +62,9 @@ class Builder extends BaseBuilder {
       bits,
       errors,
     };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -209,17 +213,9 @@ class Builder extends BaseBuilder {
       resource,
       body,
       sampleSolution,
-      elements,
       statement,
-      statements,
       responses,
-      quizzes,
-      heading,
-      pairs,
-      matrix,
       choices,
-      questions,
-      botResponses,
       footer,
 
       markup,
@@ -284,17 +280,10 @@ class Builder extends BaseBuilder {
       resource,
       body,
       sampleSolution: ArrayUtils.asArray(sampleSolution),
-      elements,
       statement,
-      statements,
       responses,
-      quizzes,
-      heading,
-      pairs,
-      matrix,
       choices,
-      questions,
-      botResponses,
+      cardNode: this.cardNode(data),
       footer,
 
       markup,
@@ -454,8 +443,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  heading(data: { forKeys: string; forValues: string | string[] }): Heading {
+  heading(data: { forKeys: string; forValues: string | string[] }): Heading | undefined {
     const { forKeys, forValues } = data;
+
+    if (forKeys == null) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: Heading = {
@@ -464,7 +455,7 @@ class Builder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    // ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }
@@ -937,6 +928,41 @@ class Builder extends BaseBuilder {
         item,
         lead,
       };
+    }
+
+    return node;
+  }
+
+  private cardNode(data: {
+    elements?: string[];
+    statement?: Statement;
+    statements?: Statement[];
+    responses?: Response[];
+    quizzes?: Quiz[];
+    heading?: Heading;
+    pairs?: Pair[];
+    matrix?: Matrix[];
+    choices?: Choice[];
+    questions?: Question[];
+    botResponses?: BotResponse[];
+  }): CardNode | undefined {
+    let node: CardNode | undefined;
+    const { heading, elements, questions, statements, quizzes, pairs, matrix, botResponses } = data;
+
+    if (heading || elements || questions || statements || quizzes || pairs || matrix || botResponses) {
+      node = {
+        heading,
+        elements,
+        questions,
+        statements,
+        quizzes,
+        pairs,
+        matrix,
+        botResponses,
+      };
+
+      // Remove Unset Optionals
+      ObjectUtils.removeUnwantedProperties(node);
     }
 
     return node;
