@@ -1,5 +1,5 @@
 // bitmark Text parser
-// v8.0.2
+// v8.0.10
 
 //Parser peggy.js
 
@@ -11,12 +11,9 @@
 
 // Todos
 
-// - finalize inline code, codeBlock
-//      - JSON of colored code extension
-//      - lang case (caMel, lower?? > enforce)
-//      - default for undefined language
 // - JSON for color
 // - JSON for pure marked text ==aaa== (no attributes)
+// - Are empty attrs needed?
 
 // not sure
 
@@ -39,10 +36,6 @@ Empty StyledText
 */
 
 /*
-
-|note
-
-|note: Title
 
 # Hallo
 
@@ -78,6 +71,9 @@ let b = 4
 
 let c = a + b
 
+|^code: js
+
+
 |
 
 Das war's
@@ -93,7 +89,9 @@ Das war's
 
 {{
 
-const UNBREAKSCAPE_REGEX = new RegExp('\\^([\\^]*)', "g");
+// const UNBREAKSCAPE_REGEX = new RegExp('\\^([\\^]*)', "g");
+// const UNBREAKSCAPE_REGEX = new RegExp(/=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|\[\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
+const UNBREAKSCAPE_REGEX = new RegExp(/=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
 
 function s(_string) {
   return _string ?? ""
@@ -102,7 +100,12 @@ function s(_string) {
 function unbreakscape(_str) {
 	let u_ = _str || ""
 
-  u_ = u_.replace(UNBREAKSCAPE_REGEX, "$1")
+  function replacer(match, p1, offset, string, groups) {
+  		return match.replace("^", "");
+	}
+
+  let re_ = UNBREAKSCAPE_REGEX;
+  u_ = u_.replace(re_, replacer)
 
   return u_
 }
@@ -152,7 +155,6 @@ function bitmarkMinusMinusString(_str) {
 //   instance variables
 
 {
-    let section = ""
     var indentStack = [], indent = ""
 
     input = input.trimStart()
@@ -178,7 +180,6 @@ Block
   / b: ListBlock { return { ...b }}
   / b: ImageBlock { return { ...b }}
   / b: CodeBlock { return { ...b }}
-  / b: Section { return { ...b }}
   / b: Paragraph { return { ...b }}
 
 
@@ -187,34 +188,11 @@ BlockStartTags
   / ListTags
   / ImageTag
   / CodeTag
-  / SectionTag
 
 BlockTag = '|'
 
 NoContent
     = '' { return [] }
-
-
-// Sections
-
-SectionTag
-  = BlockTag t: SectionType { return t }
-
-Section
-  = t: SectionTag h: Heading $([ \t]* EOL) NL? { section = t; return { type: "section", section: t, ...(0 != h.length && { content: h }) } }
-  / BlockTag garbage: $(char+ EOL) { return { type: "error", msg: 'Unknown section type.', found: garbage }}
-
-SectionType
-  = 'note'
-  / 'remark'
-  / 'info'
-  / 'hint'
-  / 'help'
-  / 'warning'
-  / 'danger'
-  / 'example'
-  / 'side-note'
-  / ''
 
 Heading
   = ':' h: $(char*) { return bitmarkMinusMinusString(h.trim()) }
@@ -230,7 +208,7 @@ TitleTags
   / '# '
 
 TitleBlock
-  = h: TitleTags t: $char* EOL  NL? { return { type: "heading", content: bitmarkMinusMinusString(t), attrs: { level: h.length - 1, section } } }
+  = h: TitleTags t: $char* EOL  NL? { return { type: "heading", content: bitmarkMinusMinusString(t), attrs: { level: h.length - 1 } } }
 
 
 
@@ -247,14 +225,14 @@ CodeBlock
   = h: CodeHeader b: CodeBody { return { ...h, content: b }}
 
 CodeHeader
-  = CodeTag $([ \t]* EOL) { return { type: "codeBlock", codeLanguage: "", section }}
-  / CodeTag ':' l: CodeLanguage $([ \t]* EOL) { return { type: "codeBlock", attrs: {language: l.trim(), section } }}
+  = CodeTag $([ \t]* EOL) { return { type: "codeBlock", language: "" }}
+  / CodeTag ':' l: CodeLanguage $([ \t]* EOL) { return { type: "codeBlock", attrs: { language: l.trim().toLowerCase() } }}
 
 CodeLanguage
   = 'bitmark++'
   / 'bitmark--'
   / 'JavaScript'
-  / $([a-zA-Z0-8 +!.#//*éö@:π-′]+)
+  / $(char+)
   / ''
 
  // https://en.wikipedia.org/wiki/List_of_programming_languages
@@ -265,7 +243,7 @@ CodeBody
   = c: $(CodeLine*) { return [{ type: "text", text: c.trim()}] }
 
 CodeLine
-  = !BlockStartTags t: $(char+ EOL)  { return t }
+  = !(BlockStartTags / (BlockTag [ \t]* EOL)) t: $(char+ EOL)  { return t }
   / NL
 
 
@@ -281,9 +259,9 @@ ListTags
   / TaskListTag
 
 ListBlock
-  = c: BulletListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: { section } } }
-  / c: OrderedListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: { section } } }
-  / c: TaskListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: { section } } }
+  = c: BulletListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: { } } }
+  / c: OrderedListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: { } } }
+  / c: TaskListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: { } } }
 
 BulletListContainer = &BulletListTag { return { type: "bulletList" } }
 OrderedListContainer = &OrderedListTag { return { type: "orderedList" } }
@@ -294,8 +272,6 @@ BulletListLine
     lines: ListLine*
     children: ( INDENT c: BulletListLine* DEDENT { return c })?
     {
-
-      if (null === section) section = "";
 
       let parent = 'bulletList'
       if ('•1 ' == lt) {
@@ -309,7 +285,7 @@ BulletListLine
 
       let item = {
       	type: "paragraph",
-		    attrs: { section },
+		    attrs: { },
       	content: bitmarkPlusString(li)
       }
 
@@ -318,7 +294,7 @@ BulletListLine
       if (children && children[0] && children[0].parent) {
         let sublist = {
           type: children[0].parent,
-          attrs: { start: 1, section },
+          attrs: { start: 1 },
           content: children,
           parent: ""
         }
@@ -368,7 +344,7 @@ DEDENT
 // Paragraph (Block)
 
 Paragraph
-   = !BlockStartTags body: ParagraphBody { return { type: "paragraph", content: bitmarkPlusString(body.trim()), attrs: { section } } }
+   = !BlockStartTags BlockTag? body: ParagraphBody { return { type: "paragraph", content: bitmarkPlusString(body.trim()), attrs: { } } }
 
 ParagraphBody
   = $(ParagraphLine+)
@@ -406,8 +382,7 @@ ImageBlock
         alt: alt_,
         title: title_,
         class: class_,
-        ...chain,
-        section
+        ...chain
       }
     }
 
@@ -437,7 +412,7 @@ MediaNumberTags
 // bitmark+
 
 bitmarkPlus "StyledText"
-  = bs: InlineTags { return [ { type: 'paragraph', content: bs, attrs: { section: '' } } ] }
+  = bs: InlineTags { return [ { type: 'paragraph', content: bs, attrs: { } } ] }
 
 bitmarkPlusString "StyledString"
   = InlineTags
@@ -483,10 +458,10 @@ AttrChainItem
   = 'link:' str: $((!BlockTag char)*) BlockTag {return { type: 'link', attrs: { href: str.trim(), target: '_blank' } }}
   / 'var:' str: $((!BlockTag char)*) BlockTag {return { type: 'var', attrs: { name: str.trim() } }}
   / 'code' BlockTag {return { type: 'code', attrs: { language: "plain text" } }}
-  / 'code:' lang: $((!BlockTag char)*) BlockTag {return { type: 'code', attrs: { language: lang.trim() } }}
+  / 'code:' lang: $((!BlockTag char)*) BlockTag {return { type: 'code', attrs: { language: lang.trim().toLowerCase() } }}
   / 'color:' color: Color BlockTag {return { type: 'color', attrs: { color } }}
   / style: AlternativeStyleTags BlockTag {return { type: style }}
-  / '#' str: $((!BlockTag char)*) BlockTag {return { comment: str }}
+  / '#' str: $((!BlockTag char)*) BlockTag {return { type: "comment", comment: str }}
  // / p: $((!(BlockTag / ':') word)*) ':' ' '? v: $((!BlockTag char)*) BlockTag { return { [p]: v } }
  // / p: $((!BlockTag word)*) BlockTag {return { [p]: true } }
 
@@ -534,10 +509,10 @@ Color
 
 // bitmark--
 
-bitmarkMinusMinus "MinmialStyledText"
-  = bs: bitmarkMinusMinusString { return [ { type: 'paragraph', content: bs, attrs: { section: '' } } ] }
+bitmarkMinusMinus "MinimalStyledText"
+  = bs: bitmarkMinusMinusString { return [ { type: 'paragraph', content: bs, attrs: { } } ] }
 
-bitmarkMinusMinusString "MinmialStyledString"
+bitmarkMinusMinusString "MinimalStyledString"
   = first: PlainText? more: (StyledText / PlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
 
 PlainText

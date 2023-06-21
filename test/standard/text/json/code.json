@@ -7,15 +7,12 @@
         "type": "text"
       }
     ],
-    "attrs": {
-      "section": ""
-    }
+    "attrs": {}
   },
   {
     "type": "codeBlock",
     "attrs": {
-      "language": "JavaScript",
-      "section": ""
+      "language": "javascript"
     },
     "content": [
       {
@@ -25,14 +22,9 @@
     ]
   },
   {
-    "type": "section",
-    "section": ""
-  },
-  {
     "type": "codeBlock",
     "attrs": {
-      "language": "typescript",
-      "section": ""
+      "language": "typescript"
     },
     "content": [
       {
@@ -42,7 +34,73 @@
     ]
   },
   {
-    "type": "section",
-    "section": ""
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Some more code follows with tricky bits:",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "codeBlock",
+    "attrs": {
+      "language": "the code starts here"
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "and continues on the next line,\nand the next line"
+      }
+    ]
+  },
+  {
+    "type": "codeBlock",
+    "attrs": {
+      "language": "c99"
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "int main(int argc, char* argv[]){\n  // Body\n}"
+      }
+    ]
+  },
+  {
+    "type": "codeBlock",
+    "attrs": {
+      "language": "typescript"
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "void veryNastyCode() {\n  int xor = 1 ^ 0x1234; // This is fine, not breakscaped away\n  int or  = 1 // Inline comment followed by no indentation\n| 0x1234; // This is going to break things\n}"
+      }
+    ]
+  },
+  {
+    "type": "codeBlock",
+    "attrs": {
+      "language": "coffeescript"
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "void moreNastyCodeMustBeEscaped() {\n  int xor = 1 ^ 0x1234; // This is fine, not breakscaped away\n  int or  = 1 // Inline comment followed by no indentation\n|^\n  return \"Not sure why that is there, but it needs to be escaped!\";\n}"
+      }
+    ]
+  },
+  {
+    "type": "codeBlock",
+    "attrs": {
+      "language": "c++"
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "int mess_up(int **doublePointer) {\n  return \"take that!!\"\n}"
+      }
+    ]
   }
 ]

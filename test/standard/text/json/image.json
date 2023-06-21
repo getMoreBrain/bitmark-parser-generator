@@ -7,9 +7,7 @@
         "type": "text"
       }
     ],
-    "attrs": {
-      "section": ""
-    }
+    "attrs": {}
   },
   {
     "type": "image",
@@ -18,8 +16,7 @@
       "src": "https://t.com/simple.png",
       "alt": null,
       "title": null,
-      "class": "center",
-      "section": ""
+      "class": "center"
     }
   },
   {
@@ -31,8 +28,7 @@
       "title": null,
       "class": "center",
       "width": 928,
-      "height": 10,
-      "section": ""
+      "height": 10
     }
   },
   {
@@ -43,8 +39,7 @@
       "alt": "Alt text",
       "title": null,
       "class": "center",
-      "comment": "A caption",
-      "section": ""
+      "comment": "A caption"
     }
   }
 ]

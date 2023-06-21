@@ -7,9 +7,7 @@
         "type": "text"
       }
     ],
-    "attrs": {
-      "section": ""
-    }
+    "attrs": {}
   },
   {
     "type": "heading",
@@ -20,8 +18,7 @@
       }
     ],
     "attrs": {
-      "level": 1,
-      "section": ""
+      "level": 1
     }
   },
   {
@@ -42,8 +39,7 @@
       }
     ],
     "attrs": {
-      "level": 2,
-      "section": ""
+      "level": 2
     }
   },
   {
@@ -55,8 +51,7 @@
       }
     ],
     "attrs": {
-      "level": 3,
-      "section": ""
+      "level": 3
     }
   },
   {
@@ -88,8 +83,6 @@
         "type": "text"
       }
     ],
-    "attrs": {
-      "section": ""
-    }
+    "attrs": {}
   }
 ]

@@ -75,9 +75,7 @@
         "type": "text"
       }
     ],
-    "attrs": {
-      "section": ""
-    }
+    "attrs": {}
   },
   {
     "type": "bulletList",
@@ -87,9 +85,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Test link in a list",
@@ -106,9 +102,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Entgelt für ",
@@ -138,8 +132,77 @@
         "attrs": {}
       }
     ],
-    "attrs": {
-      "section": ""
-    }
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [],
+    "attrs": {}
+  },
+  {
+    "type": "bulletList",
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "Test link in a list 2",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "attrs": {
+              "start": 1
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {},
+                    "content": [
+                      {
+                        "text": "Entgelt ",
+                        "type": "text"
+                      },
+                      {
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "href": "https://image.com",
+                              "target": "_blank"
+                            }
+                          }
+                        ],
+                        "text": "Highligh\ntext",
+                        "type": "text"
+                      },
+                      {
+                        "text": " as a link",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ],
+                "parent": "bulletList",
+                "attrs": {}
+              }
+            ],
+            "parent": ""
+          }
+        ],
+        "parent": "bulletList",
+        "attrs": {}
+      }
+    ],
+    "attrs": {}
   }
 ]
