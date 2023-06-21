@@ -60,7 +60,7 @@
             "type": "strike"
           }
         ],
-        "text": "^Breakscape^!",
+        "text": "^^Break^scape^^!",
         "type": "text"
       },
       {
@@ -73,6 +73,7 @@
             "type": "strike"
           },
           {
+            "type": "comment",
             "comment": "With a comment as well"
           }
         ],
@@ -84,8 +85,6 @@
         "type": "text"
       }
     ],
-    "attrs": {
-      "section": ""
-    }
+    "attrs": {}
   }
 ]

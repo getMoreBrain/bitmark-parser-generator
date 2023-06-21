@@ -35,7 +35,7 @@ const LIGHT_MARK = LIGHT_HALF_MARK + LIGHT_HALF_MARK;
 const ITALIC_MARK = ITALIC_HALF_MARK + ITALIC_HALF_MARK;
 const HIGHLIGHT_MARK = HIGHLIGHT_HALF_MARK + HIGHLIGHT_HALF_MARK;
 
-const ALL_HALF_MARKS = [BOLD_HALF_MARK, LIGHT_HALF_MARK, ITALIC_HALF_MARK, HIGHLIGHT_HALF_MARK];
+// const ALL_HALF_MARKS = [BOLD_HALF_MARK, LIGHT_HALF_MARK, ITALIC_HALF_MARK, HIGHLIGHT_HALF_MARK];
 
 const HEADING_TAG = '#';
 
@@ -47,22 +47,21 @@ const STANDARD_MARKS: { [key: string]: string } = {
 };
 
 // Regex explanation:
-// - Match one or more ^ characters and capture in group 1
-const BREAKSCAPE_CHAR_REGEX = new RegExp('(\\^+)', 'g');
-
-// Regex explanation:
-// - Match a single character of a text mark and capture in group 1
-// - check that the character BEFORE is NOT the same mark (look-behind)
-// - check that the character AFTER IS the same mark
-// - check that the character AFTER that is NOT the same mark (look-ahead)
-// This will capture all double marks, and ignore single or more than double marks
-const BREAKSCAPE_REGEX = new RegExp('([*_`!])(?<!\\1\\1)\\1(?!\\1)', 'g');
+// - match a single character of a text mark = * ` ! ! and capture in group 1
+// - match zero or more ^ characters and capture in group 2
+// - match the same character as group 1
+// - match a single | or [ and capture in group 3
+// This will capture all double marks, escaped double marks, and [ or |
+// Replace with group 1 (half mark), ^, group 2 (captured ^s), group 1 (half mark)
+// Or if captured [ or |, it will be replaced with [^ or [^
+const BREAKSCAPE_REGEX = new RegExp('([=*_`!])([\\^]*)\\1|([\\|\\[])', 'g');
+const BREAKSCAPE_REGEX_REPLACER = '$1$3^$2$1';
 
 // Regex explanation:
 // - Match newline or carriage return + newline
-const INDENTATION_REGEX = new RegExp('(\\n|\\r\\n)', 'g');
+const INDENTATION_REGEX = new RegExp(/(\n|\r\n)/, 'g');
 
-const LINK_REGEX = new RegExp('https?:\\/\\/|mailto:(.*)', 'g');
+const LINK_REGEX = new RegExp(/https?:\/\/|mailto:(.*)/, 'g');
 
 /**
  * Text generation options
@@ -85,7 +84,6 @@ class TextGenerator implements AstWalkCallbacks {
 
   // State
   private textFormat: string = TextFormat.bitmarkMinusMinus;
-  private lastWrittenChar = '';
   private writerText = '';
   private currentIndent = 0;
   private prevIndent = 0;
@@ -361,7 +359,10 @@ class TextGenerator implements AstWalkCallbacks {
         break;
 
       case TextNodeType.codeBlock:
-        // CodeBlock type node, write 1x newline
+        // CodeBlock type node, write 2x newline
+        this.writeNL();
+        this.write('|');
+        this.writeNL();
         this.writeNL();
         this.inCodeBlock = false;
         break;
@@ -468,13 +469,12 @@ class TextGenerator implements AstWalkCallbacks {
     if (this.writeLink(node)) return;
 
     // Handle normal text
-    const noBreakscaping = this.inCodeBlock;
+    const codeBreakscaping = this.inCodeBlock;
 
     // Breakscape the text
     let s: string = node.text;
-    if (!noBreakscaping) {
-      s = s.replace(BREAKSCAPE_CHAR_REGEX, '^$1');
-      s = s.replace(BREAKSCAPE_REGEX, '$1^$1');
+    if (!codeBreakscaping) {
+      s = s.replace(BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER);
     }
 
     // Apply any required indentation
@@ -493,7 +493,13 @@ class TextGenerator implements AstWalkCallbacks {
     const href = this.getLinkHref(node);
     if (href) {
       // Breakscape the text
-      let s = node.text.replace(BREAKSCAPE_REGEX, '$1^$1');
+      let s = node.text.replace(BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER);
+
+      // Apply any required indentation
+      if (this.currentIndent > 1) {
+        const indentationString = this.getIndentationString();
+        s = s.replace(INDENTATION_REGEX, `$1${indentationString}`);
+      }
 
       // The node is a link.
       // Get the text part of the link
@@ -534,14 +540,8 @@ class TextGenerator implements AstWalkCallbacks {
             this.writeInlineMark(mark, enter);
             break;
 
-          // Strange case because comment mark is missing type
-          // (https://github.com/getMoreBrain/bitbook-and-bitmark-documentation/issues/14)
-          case undefined: {
-            // Comment mark
-            const commentMark = mark as unknown as CommentMark;
-            if (commentMark.comment != null) {
-              this.writeCommentMark(commentMark, enter);
-            }
+          case TextMarkType.comment: {
+            this.writeCommentMark(mark as CommentMark, enter);
             break;
           }
           case TextMarkType.link:
@@ -665,8 +665,10 @@ class TextGenerator implements AstWalkCallbacks {
     if (enter) {
       // Do nothing
     } else {
-      const s = `#${mark.comment}|`;
-      this.write(s);
+      if (mark.comment) {
+        const s = `#${mark.comment}|`;
+        this.write(s);
+      }
     }
   }
 
@@ -715,18 +717,7 @@ class TextGenerator implements AstWalkCallbacks {
    * @param value - The string value to be written.
    */
   write(value: string): this {
-    // Breakscape the text join if necessary
-    if (value && value.length > 0) {
-      const firstChar = value[0];
-      if (firstChar === this.lastWrittenChar && ALL_HALF_MARKS.indexOf(firstChar) >= 0) {
-        this.writerText += '^';
-      }
-    }
-
     this.writerText += value;
-
-    // Save the last written char for breakscaping when writing marks
-    if (value && value.length > 0) this.lastWrittenChar = value[value.length - 1];
 
     return this;
   }

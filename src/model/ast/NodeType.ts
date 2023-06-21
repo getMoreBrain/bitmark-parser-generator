@@ -222,6 +222,7 @@ const NodeType = superenum({
   parent: 'parent',
   marks: 'marks',
   marksValue: 'marksValue',
+  comment: 'comment',
 
   // Parser Info / Errors
   parser: 'parser',

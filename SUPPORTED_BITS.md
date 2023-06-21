@@ -35,6 +35,7 @@
 | book-epilogue | ✅ | ✅ | ✅ |  |
 | book-foreword | ✅ | ✅ | ✅ |  |
 | book-frontispiece | ✅ | ✅ | ✅ |  |
+| book-imprint | ✅ | ✅ | ✅ |  |
 | book-inciting-incident | ✅ | ✅ | ✅ |  |
 | book-introduction | ✅ | ✅ | ✅ |  |
 | book-list-of-contributors | ✅ | ✅ | ✅ |  |

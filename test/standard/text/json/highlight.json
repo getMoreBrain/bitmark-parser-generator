@@ -42,7 +42,7 @@
             "type": "highlight"
           }
         ],
-        "text": "particularly exciting!",
+        "text": "particularly exciting!^",
         "type": "text"
       },
       {
@@ -89,8 +89,6 @@
         "type": "text"
       }
     ],
-    "attrs": {
-      "section": ""
-    }
+    "attrs": {}
   }
 ]

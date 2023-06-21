@@ -7,9 +7,7 @@
         "type": "text"
       }
     ],
-    "attrs": {
-      "section": ""
-    }
+    "attrs": {}
   },
   {
     "type": "orderedList",
@@ -19,9 +17,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Ordered list item 1",
@@ -38,9 +34,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "marks": [
@@ -62,9 +56,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Ordered list item 3",
@@ -75,8 +67,7 @@
           {
             "type": "bulletList",
             "attrs": {
-              "start": 1,
-              "section": ""
+              "start": 1
             },
             "content": [
               {
@@ -84,9 +75,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "attrs": {
-                      "section": ""
-                    },
+                    "attrs": {},
                     "content": [
                       {
                         "text": "Bullet list item 3.1",
@@ -103,9 +92,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "attrs": {
-                      "section": ""
-                    },
+                    "attrs": {},
                     "content": [
                       {
                         "text": "Bullet list item 3.2",
@@ -129,9 +116,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Ordered list item 4",
@@ -148,9 +133,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Ordered\nlist item 5",
@@ -167,9 +150,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Ordered list item 6",
@@ -180,8 +161,7 @@
           {
             "type": "bulletList",
             "attrs": {
-              "start": 1,
-              "section": ""
+              "start": 1
             },
             "content": [
               {
@@ -189,9 +169,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "attrs": {
-                      "section": ""
-                    },
+                    "attrs": {},
                     "content": [
                       {
                         "text": "Bullet list item 6.1",
@@ -202,8 +180,7 @@
                   {
                     "type": "bulletList",
                     "attrs": {
-                      "start": 1,
-                      "section": ""
+                      "start": 1
                     },
                     "content": [
                       {
@@ -211,9 +188,7 @@
                         "content": [
                           {
                             "type": "paragraph",
-                            "attrs": {
-                              "section": ""
-                            },
+                            "attrs": {},
                             "content": [
                               {
                                 "text": "Bullet ",
@@ -257,9 +232,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Ordered list item 7",
@@ -276,9 +249,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Ordered list item 8",
@@ -289,8 +260,7 @@
           {
             "type": "bulletList",
             "attrs": {
-              "start": 1,
-              "section": ""
+              "start": 1
             },
             "content": [
               {
@@ -298,9 +268,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "attrs": {
-                      "section": ""
-                    },
+                    "attrs": {},
                     "content": [
                       {
                         "text": "Bullet list item 8.1",
@@ -324,9 +292,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "marks": [
@@ -352,9 +318,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Ordered list item 10",
@@ -365,8 +329,7 @@
           {
             "type": "bulletList",
             "attrs": {
-              "start": 1,
-              "section": ""
+              "start": 1
             },
             "content": [
               {
@@ -374,9 +337,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "attrs": {
-                      "section": ""
-                    },
+                    "attrs": {},
                     "content": [
                       {
                         "text": "Bullet\nlist item 10.1",
@@ -393,9 +354,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "attrs": {
-                      "section": ""
-                    },
+                    "attrs": {},
                     "content": [
                       {
                         "text": "Bullet list item 10.2",
@@ -412,9 +371,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "attrs": {
-                      "section": ""
-                    },
+                    "attrs": {},
                     "content": [
                       {
                         "text": "Bullet ",
@@ -434,8 +391,7 @@
                   {
                     "type": "orderedList",
                     "attrs": {
-                      "start": 1,
-                      "section": ""
+                      "start": 1
                     },
                     "content": [
                       {
@@ -443,9 +399,7 @@
                         "content": [
                           {
                             "type": "paragraph",
-                            "attrs": {
-                              "section": ""
-                            },
+                            "attrs": {},
                             "content": [
                               {
                                 "text": "Ordered list item 10.3.1",
@@ -456,8 +410,7 @@
                           {
                             "type": "orderedList",
                             "attrs": {
-                              "start": 1,
-                              "section": ""
+                              "start": 1
                             },
                             "content": [
                               {
@@ -465,9 +418,7 @@
                                 "content": [
                                   {
                                     "type": "paragraph",
-                                    "attrs": {
-                                      "section": ""
-                                    },
+                                    "attrs": {},
                                     "content": [
                                       {
                                         "text": "Ordered list\nitem 10.3.1.1",
@@ -498,9 +449,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "attrs": {
-                      "section": ""
-                    },
+                    "attrs": {},
                     "content": [
                       {
                         "text": "Bullet list item 10.4",
@@ -517,9 +466,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "attrs": {
-                      "section": ""
-                    },
+                    "attrs": {},
                     "content": [
                       {
                         "text": "Bullet list item 10.5",
@@ -543,9 +490,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Ordered list item 11",
@@ -562,9 +507,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Ordered list item 12",
@@ -581,9 +524,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "marks": [
@@ -605,9 +546,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Bullet list item 2",
@@ -620,9 +559,7 @@
         "attrs": {}
       }
     ],
-    "attrs": {
-      "section": ""
-    }
+    "attrs": {}
   },
   {
     "type": "paragraph",
@@ -632,9 +569,7 @@
         "type": "text"
       }
     ],
-    "attrs": {
-      "section": ""
-    }
+    "attrs": {}
   },
   {
     "type": "taskList",
@@ -644,9 +579,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Task list item 11.1 checked",
@@ -657,8 +590,7 @@
           {
             "type": "taskList",
             "attrs": {
-              "start": 1,
-              "section": ""
+              "start": 1
             },
             "content": [
               {
@@ -666,9 +598,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "attrs": {
-                      "section": ""
-                    },
+                    "attrs": {},
                     "content": [
                       {
                         "text": "Task list item 11.1.1 checked",
@@ -696,9 +626,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Task list item 11.3 checked",
@@ -717,9 +645,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Task list item\n11.4 NOT checked",
@@ -738,9 +664,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Task list item 11.5 NOT checked",
@@ -759,9 +683,7 @@
         "content": [
           {
             "type": "paragraph",
-            "attrs": {
-              "section": ""
-            },
+            "attrs": {},
             "content": [
               {
                 "text": "Task list item 11.6\nchecked",
@@ -776,9 +698,7 @@
         }
       }
     ],
-    "attrs": {
-      "section": ""
-    }
+    "attrs": {}
   },
   {
     "type": "paragraph",
@@ -788,8 +708,6 @@
         "type": "text"
       }
     ],
-    "attrs": {
-      "section": ""
-    }
+    "attrs": {}
   }
 ]

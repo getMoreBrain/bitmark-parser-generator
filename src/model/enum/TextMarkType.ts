@@ -19,6 +19,7 @@ const TextMarkType = superenum({
   code: 'code',
   color: 'color',
   hash: '#',
+  comment: 'comment',
 });
 
 export type TextMarkTypeType = EnumType<typeof TextMarkType>;
