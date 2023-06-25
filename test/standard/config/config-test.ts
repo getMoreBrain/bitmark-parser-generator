@@ -9,4 +9,12 @@ if (process.env.CI) {
   TEST_AGAINST_ANTLR_PARSER = false;
 }
 
-export { DEBUG_PERFORMANCE, TEST_AGAINST_ANTLR_PARSER };
+function isDebugPerformance(): boolean {
+  return DEBUG_PERFORMANCE;
+}
+
+function isTestAgainstAntlrParser(): boolean {
+  return TEST_AGAINST_ANTLR_PARSER;
+}
+
+export { isDebugPerformance, isTestAgainstAntlrParser };

@@ -151,6 +151,7 @@
 | record | ➖ | ➖ | ➖ | LEGACY? |
 | record-audio | ➖ | ➖ | ➖ | LEGACY? |
 | release-note | ✅ | ✅ | ✅ |  |
+| release-notes-summary | ✅ | ✅ | ✅ |  |
 | remark | ✅ | ✅ | ✅ |  |
 | sample-solution | ✅ | ✅ | ✅ |  |
 | scorm | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |

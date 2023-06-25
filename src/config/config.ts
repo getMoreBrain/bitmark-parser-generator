@@ -87,6 +87,7 @@ import './bits/quoteBitConfig';
 import './bits/ratingBitConfig';
 import './bits/recordAudioBitConfig';
 import './bits/releaseNoteBitConfig';
+import './bits/releaseNotesSummaryBitConfig';
 import './bits/remarkBitConfig';
 import './bits/sampleSolutionBitConfig';
 import './bits/screenshotBitConfig';

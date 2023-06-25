@@ -14,10 +14,13 @@ import { FileUtils } from '../../src/utils/FileUtils';
 import { BitJsonUtils } from '../utils/BitJsonUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
-import { TEST_FILES, TEST_FILES_DIR } from './config/config-bitmark-files';
-import { DEBUG_PERFORMANCE } from './config/config-test';
+import { getTestFiles, getTestFilesDir } from './config/config-bitmark-files';
+import { isDebugPerformance } from './config/config-test';
 
-const TEST_INPUT_DIR = TEST_FILES_DIR;
+const DEBUG_PERFORMANCE = isDebugPerformance();
+
+const TEST_FILES = getTestFiles();
+const TEST_INPUT_DIR = getTestFilesDir();
 const JSON_INPUT_DIR = path.resolve(__dirname, './bitmark/json');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/web-bitmark-parser/output');
 

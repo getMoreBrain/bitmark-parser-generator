@@ -5,6 +5,10 @@ let TEST_ALL = true;
 
 const TEST_FILES_DIR = path.resolve(__dirname, '../text');
 
+if (process.env.CI) {
+  TEST_ALL = true;
+}
+
 let TEST_FILES: string[] = [
   // 'plain.text',
   // 'breakscaping.text',
@@ -40,8 +44,12 @@ if (TEST_ALL) {
   ];
 }
 
-if (process.env.CI) {
-  TEST_ALL = true;
+function getTestFilesDir(): string {
+  return TEST_FILES_DIR;
 }
 
-export { TEST_FILES_DIR, TEST_FILES };
+function getTestFiles(): string[] {
+  return TEST_FILES;
+}
+
+export { getTestFilesDir, getTestFiles };

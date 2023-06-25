@@ -10,6 +10,7 @@ import { JsonFileGenerator } from '../../../../src/generator/json/JsonFileGenera
 import { BitmarkParser } from '../../../../src/parser/bitmark/BitmarkParser';
 // import { JsonParser } from '../../../../src/parser/json/JsonParser';
 import { FileUtils } from '../../../../src/utils/FileUtils';
+import { isDebugPerformance, isTestAgainstAntlrParser } from '../../../standard/config/config-test';
 import { BitJsonUtils } from '../../../utils/BitJsonUtils';
 import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 
@@ -198,11 +199,8 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 const SINGLE_FILE_START = 0;
 const SINGLE_FILE_COUNT = 1000;
 
-// Use the following flag to test against the ANTLR parser. This is a slow process.
-const TEST_AGAINST_ANTLR_PARSER = false; // PEG = 65.838 s,  ANTLR = 960.157 s = 16 min
-
-// Set to true to generate performance debug output
-const DEBUG_PERFORMANCE = !process.env.CI;
+const TEST_AGAINST_ANTLR_PARSER = isTestAgainstAntlrParser();
+const DEBUG_PERFORMANCE = isDebugPerformance();
 
 const TEST_INPUT_DIR = path.resolve(__dirname, '../../../../assets/test/books/bits');
 const JSON_INPUT_DIR = path.resolve(__dirname, 'json');

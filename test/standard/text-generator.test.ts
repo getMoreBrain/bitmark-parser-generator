@@ -11,10 +11,13 @@ import { TextParser } from '../../src/parser/text/TextParser';
 import { FileUtils } from '../../src/utils/FileUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
-import { DEBUG_PERFORMANCE } from './config/config-test';
-import { TEST_FILES, TEST_FILES_DIR } from './config/config-text-files';
+import { isDebugPerformance } from './config/config-test';
+import { getTestFiles, getTestFilesDir } from './config/config-text-files';
 
-const TEST_INPUT_DIR = TEST_FILES_DIR;
+const DEBUG_PERFORMANCE = isDebugPerformance();
+
+const TEST_FILES = getTestFiles();
+const TEST_INPUT_DIR = getTestFilesDir();
 // const JSON_INPUT_DIR = path.resolve(__dirname, './text/json');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/text-generator/output');
 
