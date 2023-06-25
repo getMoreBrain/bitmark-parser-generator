@@ -19,7 +19,7 @@ const textGenerator = new TextGenerator();
 
 class DevTextGenerator {
   async test(debug?: boolean): Promise<void> {
-    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.text.json');
+    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.text.plusplus.json');
 
     if (debug) {
       // Read in the test file

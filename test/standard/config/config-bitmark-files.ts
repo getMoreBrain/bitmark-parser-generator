@@ -3,7 +3,7 @@ import path from 'path';
 // Enable or disable testing of specific files
 let TEST_ALL = true;
 
-const TEST_FILES_DIR = path.resolve(__dirname, '../bitmark');
+const TEST_FILES_DIR = path.resolve(__dirname, '../input/bitmark');
 
 if (process.env.CI) {
   TEST_ALL = true;

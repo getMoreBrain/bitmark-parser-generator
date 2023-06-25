@@ -4,28 +4,24 @@ import { describe, test } from '@jest/globals';
 // import deepEqual from 'deep-equal';
 import * as fs from 'fs-extra';
 import path from 'path';
+import { performance } from 'perf_hooks';
 
-import { TextGenerator } from '../../src/generator/text/TextGenerator';
 import { TextFormat } from '../../src/model/enum/TextFormat';
 import { TextParser } from '../../src/parser/text/TextParser';
 import { FileUtils } from '../../src/utils/FileUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
 import { isDebugPerformance } from './config/config-test';
-import { getTestFiles, getTestFilesDir } from './config/config-text-files';
+import { getTestFiles, getTestFilesDir } from './config/config-text-minusminus-files';
 
 const DEBUG_PERFORMANCE = isDebugPerformance();
 
 const TEST_FILES = getTestFiles();
 const TEST_INPUT_DIR = getTestFilesDir();
-// const JSON_INPUT_DIR = path.resolve(__dirname, './text/json');
-const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/text-generator/output');
+const JSON_INPUT_DIR = path.resolve(TEST_INPUT_DIR, './json');
+const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/text-minusminus-parser/output');
 
-const textGenerator = new TextGenerator();
 const textParser = new TextParser();
-
-// DISABLE TESTS
-// return false;
 
 /**
  * Get the list of files in the TEST_INPUT_DIR (text files)
@@ -40,8 +36,8 @@ function getTestFilenames(): string[] {
   return files;
 }
 
-describe('text-generation', () => {
-  describe('JSON => Text => JSON: Tests', () => {
+describe('text-parser', () => {
+  describe('Text => JSON (text): Tests', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
 
@@ -50,7 +46,7 @@ describe('text-generation', () => {
     // Filter out the files that are not in the test list
     allTestFiles = allTestFiles.filter((testFile) => {
       const fileId = testFile.replace(TEST_INPUT_DIR + '/', '');
-      // const id = path.basename(partFolderAndFile, '.bit');
+      // const id = path.basename(partFolderAndFile, '.text');
       if (TEST_FILES.includes(fileId)) {
         return true;
       } else {
@@ -71,9 +67,9 @@ describe('text-generation', () => {
       const partFolderAndFile = testFile.replace(TEST_INPUT_DIR, '');
       const partFolder = path.dirname(partFolderAndFile);
       const fullFolder = path.join(TEST_OUTPUT_DIR, partFolder);
-      // const fullJsonInputFolder = path.join(JSON_INPUT_DIR, partFolder);
+      const fullJsonInputFolder = path.join(JSON_INPUT_DIR, partFolder);
       const fileId = testFile.replace(TEST_INPUT_DIR + '/', '');
-      const id = path.basename(partFolderAndFile, '.bit');
+      const id = path.basename(partFolderAndFile, '.text');
 
       // console.log('partFolderAndFile', partFolderAndFile);
       // console.log('partFolder', partFolder);
@@ -84,10 +80,9 @@ describe('text-generation', () => {
         fs.ensureDirSync(fullFolder);
 
         // Calculate the filenames
-        // const testJsonFile = path.resolve(fullJsonInputFolder, `${id}.json`);
+        const testJsonFile = path.resolve(fullJsonInputFolder, `${id}.json`);
         const originalMarkupFile = path.resolve(fullFolder, `${id}.text`);
         const originalJsonFile = path.resolve(fullFolder, `${id}.json`);
-        const generatedMarkupFile = path.resolve(fullFolder, `${id}.gen.text`);
         const generatedJsonFile = path.resolve(fullFolder, `${id}.gen.json`);
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);
 
@@ -97,47 +92,31 @@ describe('text-generation', () => {
         // Read in the test markup file
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
-        // Generate JSON from original bitmark markup using the PEG parser
-        const textAst = textParser.toAst(originalMarkup, {
-          textFormat: TextFormat.bitmarkPlusPlus,
-        });
+        // Copy the original expected JSON file to the output folder
+        fs.copySync(testJsonFile, originalJsonFile);
 
-        // Write JSON file
-        fs.writeFileSync(originalJsonFile, JSON.stringify(textAst, null, 2), {
-          encoding: 'utf8',
-        });
-
-        // Read in the test JSON file
+        // Read in the test expected JSON file
         const originalJson = fs.readJsonSync(originalJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
         // BitJsonUtils.cleanupJson(originalJson, { removeParser: true, removeErrors: true });
 
-        // Convert the JSON to text
-        performance.mark('GEN:Start');
-        const text = textGenerator.generateSync(originalJson, TextFormat.bitmarkPlusPlus);
+        // // Write original bitmark (and JSON?)
+        // writeTestJsonAndBitmark(originalJson, fullFolder, id);
 
-        // Write the new text to file
-        fs.writeFileSync(generatedMarkupFile, text, {
+        // Convert the Bitmark markup to bitmark AST
+        performance.mark('PEG:Start');
+        const textAst = textParser.toAst(originalMarkup.trim(), {
+          textFormat: TextFormat.bitmarkMinusMinus,
+        });
+
+        // Write the new AST
+        fs.writeFileSync(generatedJsonFile, JSON.stringify(textAst, null, 2), {
           encoding: 'utf8',
         });
 
-        performance.mark('GEN:End');
+        performance.mark('PEG:End');
 
-        // Read in the generated markup file
-        const newMarkup = fs.readFileSync(generatedMarkupFile, 'utf8');
-
-        // Generate JSON from generated bitmark markup using the PEG parser
-        const newTextAst = textParser.toAst(newMarkup, {
-          textFormat: TextFormat.bitmarkPlusPlus,
-        });
-
-        // Write the new JSON file
-        fs.writeFileSync(generatedJsonFile, JSON.stringify(newTextAst, null, 2), {
-          encoding: 'utf8',
-        });
-
-        // Read in the generated JSON file
         const newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
@@ -156,8 +135,8 @@ describe('text-generation', () => {
 
         // Print performance information
         if (DEBUG_PERFORMANCE) {
-          const genTimeSecs = Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
-          console.log(`'${fileId}' timing; GEN: ${genTimeSecs} s`);
+          const pegTimeSecs = Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000;
+          console.log(`'${fileId}' timing; PEG: ${pegTimeSecs} s`);
         }
 
         expect(newJson).toEqual(originalJson);
