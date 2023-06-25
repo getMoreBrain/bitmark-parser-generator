@@ -19,7 +19,7 @@ const textParser = new TextParser();
 
 class DevTextParser {
   async test(debug?: boolean): Promise<void> {
-    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.text');
+    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.text.plusplus');
 
     if (debug) {
       // Read in the test file

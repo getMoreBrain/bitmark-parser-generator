@@ -21,7 +21,7 @@ const TEST_AGAINST_ANTLR_PARSER = isTestAgainstAntlrParser();
 
 const TEST_FILES = getTestFiles();
 const TEST_INPUT_DIR = getTestFilesDir();
-// const JSON_INPUT_DIR = path.resolve(__dirname, './bitmark/json');
+// const JSON_INPUT_DIR = path.resolve(TEST_INPUT_DIR, './json');
 const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/bitmark-generator/output');
 
 const jsonParser = new JsonParser();

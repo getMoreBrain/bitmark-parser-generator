@@ -47,8 +47,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Parser",
-      "program": "${workspaceFolder}/test/custom/dev/devTextParser.ts",
+      "name": "Dev Text (bitmark++) Parser",
+      "program": "${workspaceFolder}/test/custom/dev/devTextPlusPlusParser.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
       "console": "integratedTerminal",
       "sourceMaps": true,
@@ -57,8 +57,28 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Generator",
-      "program": "${workspaceFolder}/test/custom/dev/devTextGenerator.ts",
+      "name": "Dev Text (bitmark++) Generator",
+      "program": "${workspaceFolder}/test/custom/dev/devTextPlusPlusGenerator.ts",
+      "runtimeArgs": ["-r", "esbuild-register"],
+      "console": "integratedTerminal",
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Dev Text (bitmark--) Parser",
+      "program": "${workspaceFolder}/test/custom/dev/devTextMinusMinusParser.ts",
+      "runtimeArgs": ["-r", "esbuild-register"],
+      "console": "integratedTerminal",
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Dev Text (bitmark--) Generator",
+      "program": "${workspaceFolder}/test/custom/dev/devTextMinusMinusGenerator.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
       "console": "integratedTerminal",
       "sourceMaps": true,
@@ -179,10 +199,10 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Parser - Standard Tests",
+      "name": "Jest: Text Parser (bitmark++)",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--config=jest.config.js", "--testMatch", "<rootDir>/test/standard/text-parser.test.ts", "-i"],
+      "args": ["--config=jest.config.js", "--testMatch", "<rootDir>/test/standard/text-plusplus-parser.test.ts", "-i"],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
       // "disableOptimisticBPs": true,
@@ -193,10 +213,53 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Generator - Standard Tests",
+      "name": "Jest: Text Generator (bitmark++)",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--config=jest.config.js", "--testMatch", "<rootDir>/test/standard/text-generator.test.ts", "-i"],
+      "args": [
+        "--config=jest.config.js",
+        "--testMatch",
+        "<rootDir>/test/standard/text-plusplus-generator.test.ts",
+        "-i"
+      ],
+      // "preLaunchTask": "build",
+      "console": "integratedTerminal"
+      // "disableOptimisticBPs": true,
+      // "internalConsoleOptions": "openOnSessionStart",
+      // "outFiles": ["${workspaceRoot}/dist/**/*"],
+      // "envFile": "${workspaceRoot}/.env",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest: Text Parser (bitmark--)",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": [
+        "--config=jest.config.js",
+        "--testMatch",
+        "<rootDir>/test/standard/text-minusminus-parser.test.ts",
+        "-i"
+      ],
+      // "preLaunchTask": "build",
+      "console": "integratedTerminal"
+      // "disableOptimisticBPs": true,
+      // "internalConsoleOptions": "openOnSessionStart",
+      // "outFiles": ["${workspaceRoot}/dist/**/*"],
+      // "envFile": "${workspaceRoot}/.env",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest: Text Generator (bitmark--)",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": [
+        "--config=jest.config.js",
+        "--testMatch",
+        "<rootDir>/test/standard/text-minusminus-generator.test.ts",
+        "-i"
+      ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
       // "disableOptimisticBPs": true,
