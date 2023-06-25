@@ -5,9 +5,13 @@ let TEST_ALL = true;
 
 const TEST_FILES_DIR = path.resolve(__dirname, '../bitmark');
 
+if (process.env.CI) {
+  TEST_ALL = true;
+}
+
 let TEST_FILES: string[] = [
   // // '_simple.bit',
-  'app-link.bit',
+  // 'app-link.bit',
   // 'article.bit',
   // 'assignment.bit',
   // 'audio-embed.bit',
@@ -128,6 +132,7 @@ let TEST_FILES: string[] = [
   // 'question-1.bit',
   // 'quote.bit',
   // 'release-note.bit',
+  'release-notes-summary.bit',
   // 'remark.bit',
   // 'sample-solution.bit',
   // 'sequence.bit',
@@ -278,6 +283,7 @@ if (TEST_ALL) {
     'question-1.bit',
     'quote.bit',
     'release-note.bit',
+    'release-notes-summary.bit',
     'remark.bit',
     'sample-solution.bit',
     'sequence.bit',
@@ -305,8 +311,12 @@ if (TEST_ALL) {
   ];
 }
 
-if (process.env.CI) {
-  TEST_ALL = true;
+function getTestFilesDir(): string {
+  return TEST_FILES_DIR;
 }
 
-export { TEST_FILES_DIR, TEST_FILES };
+function getTestFiles(): string[] {
+  return TEST_FILES;
+}
+
+export { getTestFilesDir, getTestFiles };

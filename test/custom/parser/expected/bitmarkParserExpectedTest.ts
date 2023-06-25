@@ -10,6 +10,7 @@ import { JsonFileGenerator } from '../../../../src/generator/json/JsonFileGenera
 import { BitmarkParser } from '../../../../src/parser/bitmark/BitmarkParser';
 // import { JsonParser } from '../../../../src/parser/json/JsonParser';
 import { FileUtils } from '../../../../src/utils/FileUtils';
+import { isDebugPerformance, isTestAgainstAntlrParser } from '../../../standard/config/config-test';
 import { BitJsonUtils } from '../../../utils/BitJsonUtils';
 import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 
@@ -24,11 +25,8 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 const SINGLE_FILE_START = 0;
 const SINGLE_FILE_COUNT = 1000;
 
-// Set to true to test against the ANTLR parser rather than static JSON This is a slow process.
-const TEST_AGAINST_ANTLR_PARSER = false;
-
-// Set to true to generate performance debug output
-const DEBUG_PERFORMANCE = !process.env.CI;
+const TEST_AGAINST_ANTLR_PARSER = isTestAgainstAntlrParser();
+const DEBUG_PERFORMANCE = isDebugPerformance();
 
 const NODE_MODULES_DIR = path.resolve(__dirname, '../../../../node_modules');
 const BITMARK_GRAMMAR_DIR = path.resolve(NODE_MODULES_DIR, 'bitmark-grammar');

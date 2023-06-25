@@ -196,6 +196,7 @@ const BitType = superenum({
   // record: 'record',
   recordAudio: 'record-audio',
   releaseNote: 'release-note',
+  releaseNotesSummary: 'release-notes-summary',
   remark: 'remark',
   sampleSolution: 'sample-solution',
   screenshot: 'screenshot',
