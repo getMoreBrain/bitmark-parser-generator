@@ -18,8 +18,16 @@
 
 import { ParserError } from '../../../model/parser/ParserError';
 
-import { ParseFunction, ParsedCard, ParsedCardSet, ParsedCardSide, UnparsedCardSet } from './BitmarkPegParserTypes';
+import { BitmarkPegParserLocationInfo } from './BitmarkPegParserLocationInfo';
 
+import {
+  ParseFunction,
+  ParsedCard,
+  ParsedCardSet,
+  ParsedCardSide,
+  SubParserInput,
+  UnparsedCardSet,
+} from './BitmarkPegParserTypes';
 import {
   BitContent,
   CARD_DIVIDER_V2,
@@ -40,6 +48,7 @@ import '../../../config/config';
 const ENABLE_DEBUG = true;
 const DEBUG_DATA = true;
 const DEBUG_DATA_INCLUDE_PARSER = false;
+const DEBUG_TRACE_RAW_BIT_STRING = true;
 const DEBUG_TRACE_TEXT_FORMAT = false;
 const DEBUG_TRACE_RESOURCE_TYPE = false;
 const DEBUG_TRACE_BIT_CONTENT = false;
@@ -68,16 +77,30 @@ class BitmarkPegParserHelper {
   private parse: ParseFunction;
   private parserText: () => ParserError['text'];
   private parserLocation: () => ParserError['location'];
+  private parserLocationInfo: BitmarkPegParserLocationInfo;
 
   constructor(options: ParserHelperOptions) {
     this.parse = options.parse;
     this.parserText = options.parserText;
     this.parserLocation = options.parserLocation;
+    this.parserLocationInfo = new BitmarkPegParserLocationInfo(this.parserText, this.parserLocation);
   }
 
   //
   // PARSING
   //
+
+  handleRawBit(bitStr: string): SubParserInput {
+    if (DEBUG_TRACE_RAW_BIT_STRING) this.debugPrint('BitStr', bitStr);
+
+    const location = this.parserLocation();
+    this.parserLocationInfo.setRelativeOffset(location?.start.offset ?? 0, location?.start.line ?? 0);
+
+    return {
+      input: bitStr,
+      locationInfo: this.parserLocationInfo,
+    };
+  }
 
   handleTextFormat(value: unknown): BitContent {
     if (DEBUG_TRACE_TEXT_FORMAT) this.debugPrint(TypeKey.TextFormat, value);
@@ -85,8 +108,8 @@ class BitmarkPegParserHelper {
       type: TypeKey.TextFormat,
       value,
       parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
+        text: this.parserLocationInfo.text(),
+        location: this.parserLocationInfo.location(),
       },
     };
   }
@@ -97,8 +120,8 @@ class BitmarkPegParserHelper {
       type: TypeKey.ResourceType,
       value,
       parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
+        text: this.parserLocationInfo.text(),
+        location: this.parserLocationInfo.location(),
       },
     };
   }
@@ -126,12 +149,16 @@ class BitmarkPegParserHelper {
   handleTag(type: TypeKeyType, value: unknown): BitContent {
     if (DEBUG_TRACE_TAGS) this.debugPrint(type, value);
 
+    if (type === TypeKey.Comment) {
+      debugger;
+    }
+
     return {
       type,
       value,
       parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
+        text: this.parserLocationInfo.text(),
+        location: this.parserLocationInfo.location(),
       },
     };
   }
@@ -144,8 +171,8 @@ class BitmarkPegParserHelper {
       key,
       value,
       parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
+        text: this.parserLocationInfo.text(),
+        location: this.parserLocationInfo.location(),
       },
     };
   }
@@ -158,8 +185,8 @@ class BitmarkPegParserHelper {
       key,
       value,
       parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
+        text: this.parserLocationInfo.text(),
+        location: this.parserLocationInfo.location(),
       },
     };
   }
@@ -258,8 +285,8 @@ class BitmarkPegParserHelper {
       type: TypeKey.CardSet,
       value: cardSet,
       parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
+        text: this.parserLocationInfo.text(),
+        location: this.parserLocationInfo.location(),
       },
     };
   }
@@ -329,8 +356,8 @@ class BitmarkPegParserHelper {
         value: '',
       } as CardData,
       parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
+        text: this.parserLocationInfo.text(),
+        location: this.parserLocationInfo.location(),
       },
     };
   }
@@ -352,8 +379,8 @@ class BitmarkPegParserHelper {
         value,
       } as CardData,
       parser: {
-        text: this.parserText(),
-        location: this.parserLocation(),
+        text: this.parserLocationInfo.text(),
+        location: this.parserLocationInfo.location(),
       },
     };
   }
@@ -402,8 +429,8 @@ class BitmarkPegParserHelper {
               type: TypeKey.BodyText,
               value: c.value ?? '',
               parser: {
-                text: this.parserText(),
-                location: this.parserLocation(),
+                text: this.parserLocationInfo.text(),
+                location: this.parserLocationInfo.location(),
               },
             };
           }
@@ -419,8 +446,8 @@ class BitmarkPegParserHelper {
               type: TypeKey.CardText,
               value: c.value ?? '',
               parser: {
-                text: this.parserText(),
-                location: this.parserLocation(),
+                text: this.parserLocationInfo.text(),
+                location: this.parserLocationInfo.location(),
               },
             };
           }

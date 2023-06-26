@@ -58,15 +58,15 @@ BM_Bitmark
 
 // First bit (matches any content before the first bit header that starts with a NL)
 BM_FirstBit
-  = $(BlankLine* BM_BodyLine*)
+  = BlankLine* bit: $(BM_BodyLine*) { return helper.handleRawBit(bit); }
 
 // Subsequent bits after the first bit
 BM_Bits
-  = ($BM_Bit)*
+  = BM_Bit*
 
 // A bit with potential blank lines / comments before it
 BM_Bit
-  =  BlankLine* BM_BitHeader BM_BodyLine*
+  =  BlankLine* bit: $(BM_BitHeader BM_BodyLine*) { return helper.handleRawBit(bit); }
 
 // A bit header
 BM_BitHeader
