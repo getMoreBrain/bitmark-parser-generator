@@ -23,7 +23,7 @@ function commentTagContentProcessor(
 
   const { value } = content as TypeValue;
 
-  const text = StringUtils.isString(value) ? value : '';
+  const text: string = StringUtils.isString(value) ? (value as string) : '';
 
   const comment = builder.comment({
     text,
