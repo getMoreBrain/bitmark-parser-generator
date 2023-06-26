@@ -18,11 +18,11 @@
     }
   },
   {
-    "bitmark": "[.article:bitmark++]\n[@id:151972]\n\n||example:Beispiel\nGoogle ist seit Jahren weltweit einer der attraktivsten Arbeitgeber. Man liest von Wäscheservice, Fitness-Centers oder Abenteuerrutschbahnen, welche die Mitarbeitenden gratis nutzen können. Es wäre nicht zielführend, im eigenen Unternehmen eine Abenteuerrutschbahn aufzustellen, ohne Nutzen und Auswirkungen zu hinterfragen.",
+    "bitmark": "[.article:bitmark++]\n[@id:151972]\n\n|example:Beispiel\nGoogle ist seit Jahren weltweit einer der attraktivsten Arbeitgeber. Man liest von Wäscheservice, Fitness-Centers oder Abenteuerrutschbahnen, welche die Mitarbeitenden gratis nutzen können. Es wäre nicht zielführend, im eigenen Unternehmen eine Abenteuerrutschbahn aufzustellen, ohne Nutzen und Auswirkungen zu hinterfragen.",
     "bit": {
       "type": "article",
       "format": "bitmark++",
-      "body": "||example:Beispiel\nGoogle ist seit Jahren weltweit einer der attraktivsten Arbeitgeber. Man liest von Wäscheservice, Fitness-Centers oder Abenteuerrutschbahnen, welche die Mitarbeitenden gratis nutzen können. Es wäre nicht zielführend, im eigenen Unternehmen eine Abenteuerrutschbahn aufzustellen, ohne Nutzen und Auswirkungen zu hinterfragen.",
+      "body": "|example:Beispiel\nGoogle ist seit Jahren weltweit einer der attraktivsten Arbeitgeber. Man liest von Wäscheservice, Fitness-Centers oder Abenteuerrutschbahnen, welche die Mitarbeitenden gratis nutzen können. Es wäre nicht zielführend, im eigenen Unternehmen eine Abenteuerrutschbahn aufzustellen, ohne Nutzen und Auswirkungen zu hinterfragen.",
       "id": ["151972"]
     }
   },
