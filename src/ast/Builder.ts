@@ -5,6 +5,7 @@ import { ResourceTypeType } from '../model/enum/ResourceType';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
+import { ParserLocation } from '../model/parser/ParserLocation';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BitUtils } from '../utils/BitUtils';
 import { NumberUtils } from '../utils/NumberUtils';
@@ -43,6 +44,7 @@ import {
   BodyText,
   BodyPart,
   CardNode,
+  Comment,
 } from '../model/ast/Nodes';
 
 /**
@@ -915,6 +917,33 @@ class Builder extends BaseBuilder {
     const node: Partner = {
       name,
       avatarImage,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
+   * Build comment node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  comment(data: {
+    text: string;
+    location?: {
+      start: ParserLocation;
+      end: ParserLocation;
+    };
+  }): Comment {
+    const { text, location } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Comment = {
+      text,
+      location,
     };
 
     // Remove Unset Optionals

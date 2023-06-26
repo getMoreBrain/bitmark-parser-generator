@@ -74,14 +74,15 @@ import { ParserInfo } from '../../../model/parser/ParserInfo';
 
 import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
 import { buildCards } from './contentProcessors/CardContentProcessor';
+import { commentTagContentProcessor } from './contentProcessors/CommentTagContentProcessor';
 import { defaultTagContentProcessor } from './contentProcessors/DefaultTagContentProcessor';
 import { gapChainContentProcessor } from './contentProcessors/GapChainContentProcessor';
 import { itemLeadTagContentProcessor } from './contentProcessors/ItemLeadTagContentProcessor';
 import { propertyContentProcessor } from './contentProcessors/PropertyContentProcessor';
+import { referenceTagContentProcessor } from './contentProcessors/ReferenceTagContentProcessor';
 import { buildResource, resourceContentProcessor } from './contentProcessors/ResourceContentProcessor';
 import { buildTitles, titleTagContentProcessor } from './contentProcessors/TitleTagContentProcessor';
 import { trueFalseChainContentProcessor } from './contentProcessors/TrueFalseChainContentProcessor';
-import { referenceTagContentProcessor } from './contentProcessors/referenceTagContentProcessor';
 
 import {
   BitContent,
@@ -223,7 +224,7 @@ class BitmarkPegParserProcessor {
     bitContent = BitmarkPegParserValidator.validateBitTags(this.context, bitType, bitContent);
 
     // Parse the bit content into a an object with the appropriate keys
-    const { body, footer, cardSet, title, statement, statements, choices, responses, resources, ...tags } =
+    const { body, footer, cardSet, title, statement, statements, choices, responses, resources, comments, ...tags } =
       this.bitContentProcessor(BitContentLevel.Bit, bitType, bitContent);
 
     if (DEBUG_BIT_TAGS) this.debugPrint('BIT TAGS', tags);
@@ -239,7 +240,8 @@ class BitmarkPegParserProcessor {
     // Build the resources
     const resource = buildResource(this.context, bitType, resourceType, resources);
 
-    // Build the warnings and errors
+    // Build the comments, warnings and errors for the parser object
+    if (comments) this.parser.comments = comments;
     const warnings = this.buildBitLevelWarnings();
     const errors = this.buildBitLevelErrors();
     if (warnings) this.parser.warnings = warnings;
@@ -348,6 +350,7 @@ class BitmarkPegParserProcessor {
     result.resources = [];
     result.trueFalse = [];
     result.extraProperties = {};
+    result.comments = [];
 
     let seenItem = false;
     let seenReference = false;
@@ -376,6 +379,11 @@ class BitmarkPegParserProcessor {
       const { type, value } = content as TypeKeyValue;
 
       switch (type) {
+        case TypeKey.Comment: {
+          commentTagContentProcessor(this.context, bitLevel, bitType, content, result);
+          break;
+        }
+
         case TypeKey.ItemLead: {
           itemLeadTagContentProcessor(this.context, bitLevel, bitType, content, result, seenItem);
           seenItem = true;
@@ -418,11 +426,6 @@ class BitmarkPegParserProcessor {
         case TypeKey.Resource:
           resourceContentProcessor(this.context, bitLevel, bitType, content, result);
           break;
-
-        // case TypeKey.TrueFalseChain:
-        //   addBodyText();
-        //   trueFalseChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
-        //   break;
 
         case TypeKey.CardSet: {
           result.cardSet = value as ParsedCardSet;
@@ -482,6 +485,7 @@ class BitmarkPegParserProcessor {
     if (result.responses.length === 0) delete result.responses;
     if (result.trueFalse.length === 0) delete result.trueFalse;
     if (result.resources.length === 0) delete result.resources;
+    if (result.comments.length === 0) delete result.comments;
 
     return result;
   }
