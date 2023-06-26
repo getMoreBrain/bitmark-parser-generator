@@ -226,7 +226,8 @@
       "lead": "true-false",
       "hint": "",
       "instruction": "",
-      "body": ""
+      "body": "",
+      "lab": [true]
     },
     "parser": {
       "version": "1.0.7",
