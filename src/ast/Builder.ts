@@ -405,7 +405,9 @@ class Builder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyString: ['response', 'reaction', 'feedback'],
+    });
 
     return node;
   }
