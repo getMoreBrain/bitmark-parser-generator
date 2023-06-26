@@ -79,7 +79,7 @@ import { defaultTagContentProcessor } from './contentProcessors/DefaultTagConten
 import { gapChainContentProcessor } from './contentProcessors/GapChainContentProcessor';
 import { itemLeadTagContentProcessor } from './contentProcessors/ItemLeadTagContentProcessor';
 import { propertyContentProcessor } from './contentProcessors/PropertyContentProcessor';
-import { referenceTagContentProcessor } from './contentProcessors/ReferenceTagContentProcessor';
+import { referenceTagContentProcessor } from './contentProcessors/ReferenceTagContentProcessorf';
 import { buildResource, resourceContentProcessor } from './contentProcessors/ResourceContentProcessor';
 import { buildTitles, titleTagContentProcessor } from './contentProcessors/TitleTagContentProcessor';
 import { trueFalseChainContentProcessor } from './contentProcessors/TrueFalseChainContentProcessor';
