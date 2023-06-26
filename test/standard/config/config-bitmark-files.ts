@@ -11,8 +11,10 @@ if (process.env.CI) {
 
 let TEST_FILES: string[] = [
   // // '_simple.bit',
+  // 'ai-prompt.bit',
   // 'app-link.bit',
   // 'article.bit',
+  // 'article-ai.bit',
   // 'assignment.bit',
   // 'audio-embed.bit',
   // 'audio-link.bit',
@@ -125,6 +127,7 @@ let TEST_FILES: string[] = [
   // 'multiple-response.bit',
   // 'newspaper-article.bit',
   // 'note.bit',
+  // 'note-ai.bit',
   // 'notebook-article.bit',
   // 'page.bit',
   // 'photo.bit',
@@ -143,6 +146,7 @@ let TEST_FILES: string[] = [
   // 'still-image-film-link.bit',
   // 'still-image-film.bit',
   // 'summary.bit',
+  // 'summary-ai.bit',
   // 'survey.bit',
   // 'take-picture.bit',
   // 'toc.bit',
@@ -162,8 +166,10 @@ let TEST_FILES: string[] = [
 // ALL tests for CI
 if (TEST_ALL) {
   TEST_FILES = [
+    'ai-prompt',
     'app-link.bit',
     'article.bit',
+    'article-ai.bit',
     'assignment.bit',
     'audio-embed.bit',
     'audio-link.bit',
@@ -276,6 +282,7 @@ if (TEST_ALL) {
     'multiple-response.bit',
     'newspaper-article.bit',
     'note.bit',
+    'note-ai.bit',
     'notebook-article.bit',
     'page.bit',
     'photo.bit',
@@ -294,6 +301,7 @@ if (TEST_ALL) {
     'still-image-film-link.bit',
     'still-image-film.bit',
     'summary.bit',
+    'summary-ai.bit',
     // 'survey.bit',
     'take-picture.bit',
     'toc.bit',

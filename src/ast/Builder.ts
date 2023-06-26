@@ -1,4 +1,4 @@
-import { BitTypeType } from '../model/enum/BitType';
+import { BitType, BitTypeType } from '../model/enum/BitType';
 import { BodyBitType } from '../model/enum/BodyBitType';
 import { PropertyKey } from '../model/enum/PropertyKey';
 import { ResourceTypeType } from '../model/enum/ResourceType';
@@ -82,6 +82,7 @@ class Builder extends BaseBuilder {
     id?: string | string[];
     externalId?: string | string[];
     padletId?: string | string[];
+    aiGenerated?: boolean;
     releaseVersion?: string | string[];
     ageRange?: number | number[];
     language?: string | string[];
@@ -161,6 +162,7 @@ class Builder extends BaseBuilder {
       id,
       externalId,
       padletId,
+      aiGenerated,
       releaseVersion,
       ageRange,
       language,
@@ -230,6 +232,7 @@ class Builder extends BaseBuilder {
       id: this.toAstProperty(PropertyKey.id, id),
       externalId: this.toAstProperty(PropertyKey.externalId, externalId),
       padletId: this.toAstProperty(PropertyKey.padletId, padletId),
+      aiGenerated: this.toAstProperty(PropertyKey.aiGenerated, aiGenerated),
       releaseVersion: this.toAstProperty(PropertyKey.releaseVersion, releaseVersion),
       book,
       ageRange: this.toAstProperty(PropertyKey.ageRange, ageRange),
@@ -292,6 +295,9 @@ class Builder extends BaseBuilder {
       // Must always be last in the AST so key clashes are avoided correctly with other properties
       extraProperties: this.parseExtraProperties(extraProperties),
     };
+
+    // Set default values
+    this.setDefaultBitValues(node);
 
     // Add the version to the parser info
     this.addVersionToParserInfo(node);
@@ -981,6 +987,17 @@ class Builder extends BaseBuilder {
     }
 
     return res;
+  }
+
+  private setDefaultBitValues(bit: Bit) {
+    // Set AIGenerated == true for all AI generated bits
+    switch (bit.bitType) {
+      case BitType.articleAi:
+      case BitType.noteAi:
+      case BitType.summaryAi:
+        bit.aiGenerated = this.toAstProperty(PropertyKey.aiGenerated, true);
+        break;
+    }
   }
 
   private addVersionToParserInfo(bit: Bit) {

@@ -11,6 +11,7 @@ export interface BitJson {
   id: string | string[];
   externalId: string | string[];
   padletId: string | string[];
+  AIGenerated: boolean;
   releaseVersion: string | string[];
   ageRange: number | number[];
   language: string | string[];

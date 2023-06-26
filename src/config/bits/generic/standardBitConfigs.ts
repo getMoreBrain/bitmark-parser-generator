@@ -5,8 +5,13 @@ import { TagType } from '../../../model/enum/TagType';
 const TAGS_ALL_BITS: TagDataMap = {
   [PropertyKey.id]: {
     isProperty: true,
+    maxCount: INFINITE_COUNT,
   },
   [PropertyKey.externalId]: {
+    isProperty: true,
+    maxCount: INFINITE_COUNT,
+  },
+  [PropertyKey.aiGenerated]: {
     isProperty: true,
   },
   [PropertyKey.ageRange]: {

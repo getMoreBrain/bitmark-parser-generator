@@ -1,7 +1,9 @@
 // Bit configs
 import './bits/_errorBitConfig';
+import './bits/aiPromptBitConfig';
 import './bits/anchorBitConfig';
 import './bits/appLinkBitConfig';
+import './bits/articleAiBitConfig';
 import './bits/articleAttachmentBitConfig';
 import './bits/articleBitConfig';
 import './bits/articleEmbedBitConfig';
@@ -77,6 +79,7 @@ import './bits/multipleChoiceTextBitConfig';
 import './bits/multipleResponse1BitConfig';
 import './bits/multipleResponseBitConfig';
 import './bits/newspaperArticleBitConfig';
+import './bits/noteAiBitConfig';
 import './bits/noteBitConfig';
 import './bits/notebookArticleBitConfig';
 import './bits/pageBitConfig';
@@ -99,6 +102,7 @@ import './bits/stickyNoteBitConfig';
 import './bits/stillImageFilmBitConfig';
 import './bits/stillImageFilmEmbedBitConfig';
 import './bits/stillImageFilmLinkBitConfig';
+import './bits/summaryAiBitConfig';
 import './bits/summaryBitConfig';
 import './bits/survey1BitConfig';
 import './bits/surveyAnonymous1BitConfig';
@@ -120,6 +124,7 @@ import './bits/workbookArticleBitConfig';
 // Property configs
 import './properties/actionPropertyConfig';
 import './properties/ageRangePropertyConfig';
+import './properties/aiGeneratedPropertyConfig';
 import './properties/authorPropertyConfig';
 import './properties/bookPropertyConfig';
 import './properties/botPropertyConfig';

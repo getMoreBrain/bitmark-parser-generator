@@ -1985,6 +1985,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       id: undefined,
       externalId: undefined,
       padletId: undefined,
+      AIGenerated: undefined,
       releaseVersion: undefined,
       book: undefined,
       ageRange: undefined,
@@ -2229,6 +2230,17 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         break;
+
+      case BitType.articleAi:
+      case BitType.noteAi:
+      case BitType.summaryAi:
+        if (bitJson.AIGenerated == null) bitJson.AIGenerated = true;
+        if (bitJson.item == null) bitJson.item = this.textDefault;
+        if (bitJson.hint == null) bitJson.hint = this.textDefault;
+        if (bitJson.isExample == null) bitJson.isExample = false;
+        if (bitJson.example == null) bitJson.example = this.textDefault;
+        if (bitJson.body == null) bitJson.body = this.bodyDefault;
+        break;
     }
 
     // Remove unwanted properties
@@ -2237,6 +2249,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.id == null) delete bitJson.id;
     if (bitJson.externalId == null) delete bitJson.externalId;
     if (bitJson.padletId == null) delete bitJson.padletId;
+    if (bitJson.AIGenerated == null) delete bitJson.AIGenerated;
     if (bitJson.releaseVersion == null) delete bitJson.releaseVersion;
     if (bitJson.book == null) delete bitJson.book;
     if (bitJson.ageRange == null) delete bitJson.ageRange;

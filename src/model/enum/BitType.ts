@@ -54,9 +54,11 @@ export interface CardSetVariantConfig {
 
 const BitType = superenum({
   _error: '_error', // Used for error handling to indicate a bit type that is not supported or a bit parse error
+  aiPrompt: 'ai-prompt',
   anchor: 'anchor',
   appLink: 'app-link',
   article: 'article',
+  articleAi: 'article-ai',
   articleAttachment: 'article-attachment',
   articleEmbed: 'article-embed',
   articleLink: 'article-link',
@@ -186,6 +188,7 @@ const BitType = superenum({
   multipleResponse1: 'multiple-response-1',
   newspaperArticle: 'newspaper-article',
   note: 'note',
+  noteAi: 'note-ai',
   notebookArticle: 'notebook-article',
   page: 'page',
   photo: 'photo',
@@ -209,6 +212,7 @@ const BitType = superenum({
   stillImageFilmLink: 'still-image-film-link',
   statement: 'statement',
   summary: 'summary',
+  summaryAi: 'summary-ai',
   survey: 'survey',
   survey1: 'survey-1',
   surveyAnonymous: 'survey-anonymous',
