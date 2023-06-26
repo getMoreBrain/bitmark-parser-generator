@@ -32,6 +32,7 @@ import {
   Partner,
   ExtraProperties,
   ImageResource,
+  Comment,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -131,6 +132,7 @@ export interface BitContentProcessorResult {
   siteName?: string;
 
   extraProperties?: ExtraProperties;
+  comments?: Comment[];
 }
 
 export interface BitSpecificTitles {

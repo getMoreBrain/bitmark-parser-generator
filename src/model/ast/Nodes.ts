@@ -88,6 +88,22 @@ export interface Bit {
   parser?: ParserInfo;
 }
 
+export interface Comment {
+  text: string;
+  location?: {
+    start: {
+      offset: number;
+      line: number;
+      column: number;
+    };
+    end: {
+      offset: number;
+      line: number;
+      column: number;
+    };
+  };
+}
+
 export interface ItemLead {
   item?: string;
   lead?: string;
