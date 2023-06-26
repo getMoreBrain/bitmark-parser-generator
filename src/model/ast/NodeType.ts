@@ -72,6 +72,8 @@ const NodeType = superenum({
   releaseVersionValue: 'releaseVersionValue',
   padletId: 'padletId',
   padletIdValue: 'padletIdValue',
+  aiGenerated: 'aiGenerated',
+  aiGeneratedValue: 'aiGeneratedValue',
   ageRange: 'ageRange',
   ageRangeValue: 'ageRangeValue',
   language: 'language',

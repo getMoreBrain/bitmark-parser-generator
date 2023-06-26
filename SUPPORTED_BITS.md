@@ -1,6 +1,7 @@
 | BIT | USED? | PARSER | GENERATOR | NOTES |
 | ------ | -- | -- | -- | -- |
 | _error | ✅ | ✅ | ✅ | Used for error handling to indicate a bit type that is not supported or a bit parse error |
+| ai-prompt | ✅ | ✅ | ✅ |  |
 | anchor | ➖ | ➖ | ➖ | LEGACY? |
 | annotation-bookmark | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
 | annotation-favorite | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
@@ -8,6 +9,7 @@
 | annotation-note | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
 | app-link | ✅ | ✅ | ✅ |  |
 | article | ✅ | ✅ | ✅ |  |
+| article-ai | ✅ | ✅ | ✅ |  |
 | article-attachment | ➖ | ➖ | ➖ | LEGACY? |
 | assignment | ✅ | ✅ | ✅ |  |
 | audio | ✅ | ✅ | ✅ |  |
@@ -141,6 +143,7 @@
 | multiple-response-1 | ✅ | ✅ | ✅ |  |
 | newspaper-article | ✅ | ✅ | ✅ |  |
 | note | ✅ | ✅ | ✅ |  |
+| note-ai | ✅ | ✅ | ✅ |  |
 | notebook-article | ✅ | ✅ | ✅ |  |
 | page | ✅ | ✅ | ✅ |  |
 | photo | ✅ | ✅ | ✅ |  |
@@ -165,6 +168,7 @@
 | still-image-film-embed | ✅ | ✅ | ✅ |  |
 | still-image-film-link | ✅ | ✅ | ✅ |  |
 | summary | ✅ | ✅ | ✅ |  |
+| summary-ai | ✅ | ✅ | ✅ |  |
 | survey | ✅ | ❌ | ❌ | TODO: This bit behaves the same as self-assessment in the ANTLR parser, but it seems wrong there |
 | survey-1 | ➖ | ➖ | ➖ | LEGACY? |
 | survey-anonymous | ➖ | ➖ | ➖ | LEGACY? |

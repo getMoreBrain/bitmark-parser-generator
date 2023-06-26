@@ -16,6 +16,7 @@ const PropertyKey = superenum({
   id: 'id',
   externalId: 'externalId',
   padletId: 'padletId',
+  aiGenerated: 'AIGenerated',
   releaseVersion: 'releaseVersion',
   ageRange: 'ageRange',
   language: 'language',

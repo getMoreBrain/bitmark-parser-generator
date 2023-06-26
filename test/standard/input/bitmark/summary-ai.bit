@@ -1,0 +1,34 @@
+[.summary-ai:bitmark++]
+[@ageRange:18][@ageRange:120]
+[@language:en]
+[@language:jp]
+[@language:cn]
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+
+Some more text.
+::remark::
+::
+
+
+[.summary-ai:bitmark++]
+[@AIGenerated:true]
+[@ageRange:18][@ageRange:120]
+[@language:jp]
+[@language:cn]
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+
+Some more text.
+::remark::
+::
+
+[.summary-ai:bitmark++]
+[@AIGenerated:false]
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+
+

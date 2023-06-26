@@ -26,6 +26,7 @@ export interface Bit {
   id?: Property;
   externalId?: Property;
   padletId?: Property;
+  aiGenerated?: Property;
   releaseVersion?: Property;
   ageRange?: Property;
   language?: Property;
