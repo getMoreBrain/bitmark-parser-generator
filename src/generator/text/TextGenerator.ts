@@ -89,6 +89,7 @@ class TextGenerator implements AstWalkCallbacks {
   private prevIndent = 0;
   private indentationStringCache = '';
   private inCodeBlock = false;
+  private exitedCodeBlock = false;
   private placeholderIndex = 0;
   private placeholders: BodyBitsJson = {};
 
@@ -164,6 +165,7 @@ class TextGenerator implements AstWalkCallbacks {
     this.prevIndent = 0;
     this.indentationStringCache = '';
     this.inCodeBlock = false;
+    this.exitedCodeBlock = false;
     this.placeholderIndex = 0;
     this.placeholders = {};
   }
@@ -289,6 +291,10 @@ class TextGenerator implements AstWalkCallbacks {
     this.handleIndent(node);
 
     switch (node.type) {
+      case TextNodeType.paragraph:
+        this.writeParagraph(node);
+        break;
+
       case TextNodeType.text:
         this.writeMarks(node, true);
         this.writeText(node);
@@ -324,6 +330,9 @@ class TextGenerator implements AstWalkCallbacks {
       default:
       // Ignore unknown type
     }
+
+    // Clear exited flags
+    this.exitedCodeBlock = false;
   }
 
   protected handleBetweenNode(node: TextNode): void {
@@ -361,10 +370,9 @@ class TextGenerator implements AstWalkCallbacks {
       case TextNodeType.codeBlock:
         // CodeBlock type node, write 2x newline
         this.writeNL();
-        this.write('|');
-        this.writeNL();
         this.writeNL();
         this.inCodeBlock = false;
+        this.exitedCodeBlock = true;
         break;
 
       case TextNodeType.bulletList:
@@ -549,6 +557,14 @@ class TextGenerator implements AstWalkCallbacks {
           // Do nothing (link is handled in writeText)
         }
       }
+    }
+  }
+
+  protected writeParagraph(_node: TextNode): void {
+    if (this.exitedCodeBlock) {
+      this.write('|');
+      this.writeNL();
+      this.writeNL();
     }
   }
 
