@@ -14,37 +14,7 @@
 // Global variables
 //
 
-// Variable to store the sub-parse location function
-let subParseOffset = 0;
-let subParseLine = 0;
-
-// Sub-parse function (maintains original file location through the sub-parse)
-function createSubParse(location) {
-  const originalLocation = location;
-
-  return function subParse(input, options) {
-    // Get the current parse block start location
-    const currentLocation = originalLocation();
-
-    // Save current offsets
-    const currentSubParseOffset = subParseOffset;
-    const currentSubParseLine = subParseLine;
-
-    // Set new offsets
-    subParseOffset = currentLocation?.start.offset ?? 0;
-    subParseLine = currentLocation?.start.line ?? 0;
-
-    // Parse
-    const res = peg$parse(input, options);
-
-    // Restore original offsets
-    subParseOffset = currentSubParseOffset;
-    subParseLine = currentSubParseLine;
-
-    return res;
-  }
-}
-
+// None
 
 }} // END GLOBAL JS
 
@@ -58,30 +28,53 @@ function createSubParse(location) {
 
 // Create the helper instance (low-level helper functions)
 const helper = new BitmarkPegParserHelper({
-  parse: createSubParse(location),
+  parse: peg$parse,
   parserText: text,
-  parserLocation: location,
+  parserLocation,
 
 });
 
-// Create the processor instance (sematic processor)
+// Create the processor instance (semantic processor)
 const processor = new BitmarkPegParserProcessor({
-  parse: createSubParse(location),
+  parse: peg$parse,
   parserText: text,
-  parserLocation: location,
+  parserLocation,
 });
 
-// Override the default location function to inject the sub-parse location
-function location() {
-  const l = peg$computeLocation(peg$savedPos, peg$currPos);
+// Function to remove 'source' from Location object
+function parserLocation() {
+  const l = location();
   if (!l) return l;
-
-  l.start.offset += subParseOffset;
-  l.start.line += subParseLine;
-  l.end.offset += subParseOffset;
-  l.end.line += subParseLine;
+  delete l.source;
 
   return l;
+}
+
+// Override peg$computeLocation to force the offset flag when computing location
+// (unfortunately not possible in Peggy yet).
+function peg$computeLocation(startPos, endPos, offset) {
+  offset = true;
+  var startPosDetails = peg$computePosDetails(startPos);
+  var endPosDetails = peg$computePosDetails(endPos);
+
+  var res = {
+    source: peg$source,
+    start: {
+      offset: startPos,
+      line: startPosDetails.line,
+      column: startPosDetails.column
+    },
+    end: {
+      offset: endPos,
+      line: endPosDetails.line,
+      column: endPosDetails.column
+    }
+  };
+  if (offset && peg$source && (typeof peg$source.offset === "function")) {
+    res.start = peg$source.offset(res.start);
+    res.end = peg$source.offset(res.end);
+  }
+  return res;
 }
 
 } // END PER PARSE JS
@@ -102,20 +95,27 @@ BM_Bitmark
   / (WS / CommentTag)* bit: $Anything { return processor.buildBits([ bit ]) }
 
 // First bit (matches any content before the first bit header that starts with a NL)
+// This is because the first text could be something that is not a bit header, which is an error
+// we want to catch and not through a parser error for it.
 BM_FirstBit
-  = BlankLine* bit: $(BM_BodyLine*) { return helper.handleRawBit(bit); }
+  = bit: $(BM_BodyLine*) { return helper.handleRawBit(bit); }
 
 // Subsequent bits after the first bit
 BM_Bits
-  = BM_Bit*
+  = BM_NL_Bit*
 
-// A bit with potential blank lines / comments before it
+// A bit with potential blank lines before it
+BM_NL_Bit
+  // = BlankLine* bit: $(BM_BitHeader BM_BodyLine*) { return helper.handleRawBit(bit); }
+  = BlankLine* NL? bit: BM_Bit { return bit; }
+
 BM_Bit
-  =  BlankLine* bit: $(BM_BitHeader BM_BodyLine*) { return helper.handleRawBit(bit); }
+  // = BlankLine* bit: $(BM_BitHeader BM_BodyLine*) { return helper.handleRawBit(bit); }
+  = bit: $(BM_BitHeader BM_BodyLine*) { return helper.handleRawBit(bit); }
 
 // A bit header
 BM_BitHeader
-  = NL? $("[." [^\]]* "]")
+  = bitHeader: "[." [^\]]* "]" { return bitHeader; }
 
 // A line of bit body (and not a subsequent bit header)
 BM_BodyLine

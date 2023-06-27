@@ -16,6 +16,8 @@
  *
  */
 
+import { GrammarLocation, Location } from 'peggy';
+
 import { Bit } from '../../../model/ast/Nodes';
 import { ParserError } from '../../../model/parser/ParserError';
 
@@ -95,9 +97,17 @@ class BitmarkPegParserHelper {
     // Ignore empty bits (only happens if entire file is empty / whitespace only
     if (!rawBitTrimmed) return undefined;
 
+    // Get current parser location
+    const location = this.parserLocation()?.start ?? {
+      line: 1,
+      column: 1,
+      offset: 0,
+    };
+
     // Parse the raw bit
     const bitParserResult = this.parse(rawBit, {
       startRule: 'bit',
+      grammarSource: new GrammarLocation('bit', location),
     }) as SubParserResult<Bit>;
 
     // Add markup to the bit result
@@ -228,7 +238,7 @@ class BitmarkPegParserHelper {
     if (cards) {
       for (const content of cards) {
         if (!content) continue;
-        const { type, value: cardData } = content as TypeValue;
+        const { type, value: cardData, parser } = content as TypeValue;
         if (!type || type !== TypeKey.Card) continue;
         const { cardIndex, cardSideIndex, cardVariantIndex: cardContentIndex, value } = cardData as CardData;
 
@@ -253,9 +263,12 @@ class BitmarkPegParserHelper {
         // Set variant value
         const variant = side.variants[cardContentIndex];
         if (!variant) {
-          side.variants[cardContentIndex] = value;
+          side.variants[cardContentIndex] = {
+            value,
+            parser,
+          };
         } else {
-          side.variants[cardContentIndex] += value;
+          side.variants[cardContentIndex].value += value;
         }
       }
 
@@ -270,9 +283,28 @@ class BitmarkPegParserHelper {
             variants: [],
           } as ParsedCardSide;
           card.sides.push(side);
-          for (const rawContent of unparsedSide.variants) {
-            let content = this.parse(rawContent, {
+          for (const unparsedContent of unparsedSide.variants) {
+            // Get current parser location
+            // It must be modified by the length of the divider to be correct as the text in 'unparsedContent.value'
+            // have the divider removed.
+            let location: Location = {
+              line: 1,
+              column: 1,
+              offset: 0,
+            };
+            if (unparsedContent.parser.location) {
+              location = unparsedContent.parser.location.start;
+              const text = unparsedContent.parser.text;
+              const offsetCorrection = text ? text.length : 0;
+              const lineCorrection = 1;
+              location.offset += offsetCorrection;
+              location.line += lineCorrection;
+            }
+
+            // Run the parser on the card content
+            let content = this.parse(unparsedContent.value, {
               startRule: 'cardContent',
+              grammarSource: new GrammarLocation('card-content', location),
             }) as BitContent[];
 
             content = this.reduceToArrayOfTypes(content);

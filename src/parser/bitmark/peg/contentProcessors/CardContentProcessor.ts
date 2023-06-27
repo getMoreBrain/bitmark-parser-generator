@@ -8,7 +8,6 @@ import {
   AudioResource,
   BotResponse,
   Choice,
-  Comment,
   Heading,
   ImageResource,
   Matrix,
