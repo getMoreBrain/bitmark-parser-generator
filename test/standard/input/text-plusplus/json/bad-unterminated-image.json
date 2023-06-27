@@ -1,0 +1,52 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Unterminated image",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "image",
+    "attrs": {
+      "textAlign": "left",
+      "src": "https://docs.bitmark.cloud/bit-books/swiss_life_select/kommunikation/web-resources/images/08_handschlag.jpg",
+      "alt": null,
+      "title": null,
+      "class": "center"
+    }
+  },
+  {
+    "type": "error",
+    "msg": "'' is not a valid URL"
+  },
+  {
+    "type": "error",
+    "msg": "'563489' is not a valid URL"
+  },
+  {
+    "type": "error",
+    "msg": "'htte://test.com|' is not a valid URL"
+  },
+  {
+    "type": "error",
+    "msg": "'https:/|' is not a valid URL"
+  },
+  {
+    "type": "image",
+    "attrs": {
+      "textAlign": "left",
+      "src": "https://validurl.com",
+      "alt": null,
+      "title": null,
+      "class": "center"
+    }
+  },
+  {
+    "type": "error",
+    "msg": "'https://url.com|fewuibg' is not a valid URL"
+  }
+]

@@ -38,8 +38,9 @@ if (TEST_ALL) {
     'title.text',
     'image.text',
     'link.text',
-    // Code currently broken (in text parser) 'code.text',
+    'code.text',
     'inline.text',
+    'bad-unterminated-image.text',
     // 'latex.text',
   ];
 }

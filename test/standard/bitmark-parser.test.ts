@@ -10,7 +10,7 @@ import { JsonFileGenerator } from '../../src/generator/json/JsonFileGenerator';
 import { BitmarkParser } from '../../src/parser/bitmark/BitmarkParser';
 // import { JsonParser } from '../../src/parser/json/JsonParser';
 import { FileUtils } from '../../src/utils/FileUtils';
-import { BitJsonUtils } from '../utils/BitJsonUtils';
+import { JsonCleanupUtils } from '../utils/JsonCleanupUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
 import { getTestFiles, getTestFilesDir } from './config/config-bitmark-files';
@@ -127,7 +127,7 @@ describe('bitmark-parser', () => {
         }
 
         // Remove uninteresting JSON items
-        BitJsonUtils.cleanupJson(originalJson, { removeParser: true, removeErrors: true });
+        JsonCleanupUtils.cleanupBitJson(originalJson, { removeParser: true, removeErrors: true });
 
         // // Write original bitmark (and JSON?)
         // writeTestJsonAndBitmark(originalJson, fullFolder, id);
@@ -153,8 +153,8 @@ describe('bitmark-parser', () => {
         const newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
-        BitJsonUtils.cleanupJson(originalJson, { removeMarkup: true });
-        BitJsonUtils.cleanupJson(newJson, { removeMarkup: true, removeParser: true, removeErrors: true });
+        JsonCleanupUtils.cleanupBitJson(originalJson, { removeMarkup: true });
+        JsonCleanupUtils.cleanupBitJson(newJson, { removeMarkup: true, removeParser: true, removeErrors: true });
 
         // Compare old and new JSONs
         const diffMap = deepDiffMapper.map(originalJson, newJson, {
