@@ -159,6 +159,7 @@ export interface BitSpecificCards {
   choices?: Choice[];
   questions?: Question[];
   botResponses?: BotResponse[];
+  comments?: Comment[];
 }
 
 export type BitContent = TypeValue | TypeKeyValue;
@@ -256,6 +257,7 @@ type ParsedCardContent = BitContent[];
 
 export interface ProcessedCardSet {
   cards: ProcessedCard[];
+  comments: Comment[];
 }
 
 export interface ProcessedCard {

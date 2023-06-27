@@ -229,8 +229,14 @@ class BitmarkPegParserProcessor {
     // Build the resources
     const resource = buildResource(this.context, bitType, resourceType, resources);
 
-    // Build the comments, warnings and errors for the parser object
-    if (comments) this.parser.comments = comments;
+    // Build the comments for the parser object
+    if (comments || bitSpecificCards.comments) {
+      this.parser.comments = [];
+      if (comments) this.parser.comments.push(...comments);
+      if (bitSpecificCards.comments) this.parser.comments.push(...bitSpecificCards.comments);
+    }
+
+    // Build the warnings and errors for the parser object
     const warnings = this.buildBitLevelWarnings();
     const errors = this.buildBitLevelErrors();
     if (warnings) this.parser.warnings = warnings;
