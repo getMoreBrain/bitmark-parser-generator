@@ -14,7 +14,37 @@
 // Global variables
 //
 
-// None
+// Variable to store the sub-parse location function
+let subParseOffset = 0;
+let subParseLine = 0;
+
+// Sub-parse function (maintains original file location through the sub-parse)
+function createSubParse(location) {
+  const originalLocation = location;
+
+  return function subParse(input, options) {
+    // Get the current parse block start location
+    const currentLocation = originalLocation();
+
+    // Save current offsets
+    const currentSubParseOffset = subParseOffset;
+    const currentSubParseLine = subParseLine;
+
+    // Set new offsets
+    subParseOffset = currentLocation?.start.offset ?? 0;
+    subParseLine = currentLocation?.start.line ?? 0;
+
+    // Parse
+    const res = peg$parse(input, options);
+
+    // Restore original offsets
+    subParseOffset = currentSubParseOffset;
+    subParseLine = currentSubParseLine;
+
+    return res;
+  }
+}
+
 
 }} // END GLOBAL JS
 
@@ -26,18 +56,33 @@
 // Instance variables
 //
 
+// Create the helper instance (low-level helper functions)
 const helper = new BitmarkPegParserHelper({
-  parse: peg$parse,
+  parse: createSubParse(location),
   parserText: text,
   parserLocation: location,
+
 });
 
+// Create the processor instance (sematic processor)
 const processor = new BitmarkPegParserProcessor({
-  parse: peg$parse,
+  parse: createSubParse(location),
   parserText: text,
   parserLocation: location,
 });
 
+// Override the default location function to inject the sub-parse location
+function location() {
+  const l = peg$computeLocation(peg$savedPos, peg$currPos);
+  if (!l) return l;
+
+  l.start.offset += subParseOffset;
+  l.start.line += subParseLine;
+  l.end.offset += subParseOffset;
+  l.end.line += subParseLine;
+
+  return l;
+}
 
 } // END PER PARSE JS
 

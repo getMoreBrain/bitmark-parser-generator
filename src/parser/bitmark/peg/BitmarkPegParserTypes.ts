@@ -16,8 +16,6 @@ import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
 
-import { BitmarkPegParserLocationInfo } from './BitmarkPegParserLocationInfo';
-
 import {
   Body,
   Statement,
@@ -60,11 +58,6 @@ export interface ParserHelperOptions {
   parse: ParseFunction;
   parserText: () => ParserError['text'];
   parserLocation: () => ParserError['location'];
-}
-
-export interface SubParserInput {
-  input: string;
-  locationInfo: BitmarkPegParserLocationInfo;
 }
 
 export interface SubParserResult<T> {

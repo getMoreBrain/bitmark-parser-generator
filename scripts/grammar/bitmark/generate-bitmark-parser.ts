@@ -5,17 +5,8 @@ import peggy, { SourceBuildOptions } from 'peggy';
 import { init } from '../../../src/init/init';
 
 type SourceOptions = SourceBuildOptions<'source'> & {
-  // tspegjs: {
-  //   customHeader?: string;
-  //   returnTypes?: unknown;
-  // };
+  //
 };
-
-// const customHeader = `
-// import { TypeKey } from '../../../parser/bitmark/peg/BitmarkPegParserTypes'
-// import { BitmarkParserProcessor } from '../../../parser/bitmark/peg/BitmarkPegParserProcessor';
-// import { BitmarkPegParserBuilder } from '../../../parser/bitmark/peg/BitmarkPegParserBuilder';
-// `;
 
 const dependencies = {
   '{ TypeKey }': '../../../parser/bitmark/peg/BitmarkPegParserTypes',
@@ -55,10 +46,6 @@ const options: SourceOptions = {
   allowedStartRules,
   plugins: [],
   dependencies,
-  // tspegjs: {
-  //   customHeader,
-  //   // returnTypes: TODO,
-  // },
 };
 
 // Generate parser source

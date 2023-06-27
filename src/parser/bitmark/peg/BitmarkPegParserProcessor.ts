@@ -72,7 +72,6 @@ import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
 
-import { BitmarkPegParserLocationInfo } from './BitmarkPegParserLocationInfo';
 import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
 import { buildCards } from './contentProcessors/CardContentProcessor';
 import { commentTagContentProcessor } from './contentProcessors/CommentTagContentProcessor';
@@ -100,7 +99,6 @@ import {
   TypeValue,
   BitmarkPegParserContext,
   ParsedCardSet,
-  SubParserInput,
 } from './BitmarkPegParserTypes';
 
 // Debugging flags for helping develop and debug the parser
@@ -134,15 +132,13 @@ class BitmarkPegParserProcessor {
   private parser: ParserInfo = {};
 
   private parse: ParseFunction;
-  private parserLocationInfo: BitmarkPegParserLocationInfo;
-  // private parserText: () => ParserError['text'];
-  // private parserLocation: () => ParserError['location'];
+  private parserText: () => ParserError['text'];
+  private parserLocation: () => ParserError['location'];
 
   constructor(options: ParserHelperOptions) {
     this.parse = options.parse;
-    this.parserLocationInfo = new BitmarkPegParserLocationInfo(options.parserText, options.parserLocation);
-    // this.parserText = options.parserText;
-    // this.parserLocation = options.parserLocation;
+    this.parserText = options.parserText;
+    this.parserLocation = options.parserLocation;
 
     // The context is used to pass the parser data and functions to the content builders
     this.context = {
@@ -170,37 +166,23 @@ class BitmarkPegParserProcessor {
   }
 
   // Build bits
-  buildBits(rawBits: SubParserInput[]): BitmarkAst {
+  buildBits(rawBits: SubParserResult<Bit>[]): BitmarkAst {
     const bits: Bit[] = [];
     let errors: ParserError[] = [];
 
     for (const rawBit of rawBits) {
-      const bitTrimmed = rawBit.input.trim();
-      if (DEBUG_BIT_RAW) this.debugPrint('RAW BIT', bitTrimmed);
-
       // Ignore empty bits (only happens if entire file is empty / whitespace only
-      if (!bitTrimmed) continue;
+      if (!rawBit) continue;
 
-      // Set the bit location info for the sub-parse
-      this.parserLocationInfo = rawBit.locationInfo;
-
-      // Parse the raw bit
-      const bitParserResult = this.parse(rawBit.input, {
-        startRule: 'bit',
-      }) as SubParserResult<Bit>;
-
-      const bit = bitParserResult.value;
+      const bit = rawBit.value;
       if (bit) {
-        // Add markup to the bit
-        bit.markup = bitTrimmed;
-
         // Add the bit to the list of bits
         bits.push(bit);
       } else {
         // TODO - convert error location to master parser location
 
         // If bit is undefined, then there was an error parsing the bit
-        errors = errors.concat(bitParserResult.errors ?? []);
+        errors = errors.concat(rawBit.errors ?? []);
       }
     }
 
@@ -599,8 +581,8 @@ class BitmarkPegParserProcessor {
   private addWarning(message: string, parserData?: ParserData, parserDataOriginal?: ParserData) {
     const warning: ParserError = {
       message,
-      text: parserData?.parser.text ?? this.parserLocationInfo.text(),
-      location: parserData?.parser.location ?? this.parserLocationInfo.location(),
+      text: parserData?.parser.text ?? this.parserText(),
+      location: parserData?.parser.location ?? this.parserLocation(),
       original: parserDataOriginal?.parser ?? undefined,
     };
     if (!warning.original) delete warning.original;
@@ -617,8 +599,8 @@ class BitmarkPegParserProcessor {
   private addError(message: string, parserData?: ParserData, parserDataOriginal?: ParserData) {
     const error: ParserError = {
       message,
-      text: parserData?.parser.text ?? this.parserLocationInfo.text(),
-      location: parserData?.parser.location ?? this.parserLocationInfo.location(),
+      text: parserData?.parser.text ?? this.parserText(),
+      location: parserData?.parser.location ?? this.parserLocation(),
       original: parserDataOriginal?.parser ?? undefined,
     };
     if (!error.original) delete error.original;

@@ -16,16 +16,15 @@
  *
  */
 
+import { Bit } from '../../../model/ast/Nodes';
 import { ParserError } from '../../../model/parser/ParserError';
-
-import { BitmarkPegParserLocationInfo } from './BitmarkPegParserLocationInfo';
 
 import {
   ParseFunction,
   ParsedCard,
   ParsedCardSet,
   ParsedCardSide,
-  SubParserInput,
+  SubParserResult,
   UnparsedCardSet,
 } from './BitmarkPegParserTypes';
 import {
@@ -48,7 +47,7 @@ import '../../../config/config';
 const ENABLE_DEBUG = true;
 const DEBUG_DATA = true;
 const DEBUG_DATA_INCLUDE_PARSER = false;
-const DEBUG_TRACE_RAW_BIT_STRING = true;
+const DEBUG_TRACE_RAW_BIT = true;
 const DEBUG_TRACE_TEXT_FORMAT = false;
 const DEBUG_TRACE_RESOURCE_TYPE = false;
 const DEBUG_TRACE_BIT_CONTENT = false;
@@ -77,29 +76,34 @@ class BitmarkPegParserHelper {
   private parse: ParseFunction;
   private parserText: () => ParserError['text'];
   private parserLocation: () => ParserError['location'];
-  private parserLocationInfo: BitmarkPegParserLocationInfo;
 
   constructor(options: ParserHelperOptions) {
     this.parse = options.parse;
     this.parserText = options.parserText;
     this.parserLocation = options.parserLocation;
-    this.parserLocationInfo = new BitmarkPegParserLocationInfo(this.parserText, this.parserLocation);
   }
 
   //
   // PARSING
   //
 
-  handleRawBit(bitStr: string): SubParserInput {
-    if (DEBUG_TRACE_RAW_BIT_STRING) this.debugPrint('BitStr', bitStr);
+  handleRawBit(rawBit: string): SubParserResult<Bit> | undefined {
+    const rawBitTrimmed = rawBit.trim();
 
-    const location = this.parserLocation();
-    this.parserLocationInfo.setRelativeOffset(location?.start.offset ?? 0, location?.start.line ?? 0);
+    if (DEBUG_TRACE_RAW_BIT) this.debugPrint('RAW BIT', rawBitTrimmed);
 
-    return {
-      input: bitStr,
-      locationInfo: this.parserLocationInfo,
-    };
+    // Ignore empty bits (only happens if entire file is empty / whitespace only
+    if (!rawBitTrimmed) return undefined;
+
+    // Parse the raw bit
+    const bitParserResult = this.parse(rawBit, {
+      startRule: 'bit',
+    }) as SubParserResult<Bit>;
+
+    // Add markup to the bit result
+    if (bitParserResult.value) bitParserResult.value.markup = rawBitTrimmed;
+
+    return bitParserResult;
   }
 
   handleTextFormat(value: unknown): BitContent {
@@ -108,8 +112,8 @@ class BitmarkPegParserHelper {
       type: TypeKey.TextFormat,
       value,
       parser: {
-        text: this.parserLocationInfo.text(),
-        location: this.parserLocationInfo.location(),
+        text: this.parserText(),
+        location: this.parserLocation(),
       },
     };
   }
@@ -120,8 +124,8 @@ class BitmarkPegParserHelper {
       type: TypeKey.ResourceType,
       value,
       parser: {
-        text: this.parserLocationInfo.text(),
-        location: this.parserLocationInfo.location(),
+        text: this.parserText(),
+        location: this.parserLocation(),
       },
     };
   }
@@ -149,16 +153,16 @@ class BitmarkPegParserHelper {
   handleTag(type: TypeKeyType, value: unknown): BitContent {
     if (DEBUG_TRACE_TAGS) this.debugPrint(type, value);
 
-    if (type === TypeKey.Comment) {
-      debugger;
-    }
+    // if (type === TypeKey.Comment) {
+    //   debugger;
+    // }
 
     return {
       type,
       value,
       parser: {
-        text: this.parserLocationInfo.text(),
-        location: this.parserLocationInfo.location(),
+        text: this.parserText(),
+        location: this.parserLocation(),
       },
     };
   }
@@ -171,8 +175,8 @@ class BitmarkPegParserHelper {
       key,
       value,
       parser: {
-        text: this.parserLocationInfo.text(),
-        location: this.parserLocationInfo.location(),
+        text: this.parserText(),
+        location: this.parserLocation(),
       },
     };
   }
@@ -185,8 +189,8 @@ class BitmarkPegParserHelper {
       key,
       value,
       parser: {
-        text: this.parserLocationInfo.text(),
-        location: this.parserLocationInfo.location(),
+        text: this.parserText(),
+        location: this.parserLocation(),
       },
     };
   }
@@ -285,8 +289,8 @@ class BitmarkPegParserHelper {
       type: TypeKey.CardSet,
       value: cardSet,
       parser: {
-        text: this.parserLocationInfo.text(),
-        location: this.parserLocationInfo.location(),
+        text: this.parserText(),
+        location: this.parserLocation(),
       },
     };
   }
@@ -356,8 +360,8 @@ class BitmarkPegParserHelper {
         value: '',
       } as CardData,
       parser: {
-        text: this.parserLocationInfo.text(),
-        location: this.parserLocationInfo.location(),
+        text: this.parserText(),
+        location: this.parserLocation(),
       },
     };
   }
@@ -379,8 +383,8 @@ class BitmarkPegParserHelper {
         value,
       } as CardData,
       parser: {
-        text: this.parserLocationInfo.text(),
-        location: this.parserLocationInfo.location(),
+        text: this.parserText(),
+        location: this.parserLocation(),
       },
     };
   }
@@ -429,8 +433,8 @@ class BitmarkPegParserHelper {
               type: TypeKey.BodyText,
               value: c.value ?? '',
               parser: {
-                text: this.parserLocationInfo.text(),
-                location: this.parserLocationInfo.location(),
+                text: this.parserText(),
+                location: this.parserLocation(),
               },
             };
           }
@@ -446,8 +450,8 @@ class BitmarkPegParserHelper {
               type: TypeKey.CardText,
               value: c.value ?? '',
               parser: {
-                text: this.parserLocationInfo.text(),
-                location: this.parserLocationInfo.location(),
+                text: this.parserText(),
+                location: this.parserLocation(),
               },
             };
           }
