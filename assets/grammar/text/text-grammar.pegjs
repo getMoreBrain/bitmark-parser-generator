@@ -1,5 +1,5 @@
 // bitmark Text parser
-// v8.0.10
+// v8.0.10+RS
 
 //Parser peggy.js
 
@@ -388,6 +388,22 @@ ImageBlock
 
     return image
   }
+  / t: ImageTag ':' ' '? u: UrlHttp $([ \t]* EOL) NL?
+  {
+    let image = {
+      type: t,
+      attrs: {
+        textAlign: "left",
+        src: u,
+        alt: null,
+        title: null,
+        class: "center",
+      }
+    }
+
+    return image
+  }
+  / t: ImageTag ":"? url: $(char*) EOL { return { type: "error", msg: `'${url}' is not a valid URL` }}
 
 
 MediaChain

@@ -9,6 +9,7 @@ import { TextGenerator } from '../../src/generator/text/TextGenerator';
 import { TextFormat } from '../../src/model/enum/TextFormat';
 import { TextParser } from '../../src/parser/text/TextParser';
 import { FileUtils } from '../../src/utils/FileUtils';
+import { JsonCleanupUtils } from '../utils/JsonCleanupUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
 import { isDebugPerformance } from './config/config-test';
@@ -111,7 +112,7 @@ describe('text-generation', () => {
         const originalJson = fs.readJsonSync(originalJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
-        // BitJsonUtils.cleanupJson(originalJson, { removeParser: true, removeErrors: true });
+        JsonCleanupUtils.cleanupBitmarkPlusPlusJson(originalJson, { removeErrors: true });
 
         // Convert the JSON to text
         performance.mark('GEN:Start');
@@ -141,8 +142,8 @@ describe('text-generation', () => {
         const newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
-        // BitJsonUtils.cleanupJson(originalJson, { removeMarkup: true });
-        // BitJsonUtils.cleanupJson(newJson, { removeMarkup: true, removeParser: true, removeErrors: true });
+        JsonCleanupUtils.cleanupBitmarkPlusPlusJson(originalJson, { removeErrors: true });
+        JsonCleanupUtils.cleanupBitmarkPlusPlusJson(newJson, { removeErrors: true });
 
         // Compare old and new JSONs
         const diffMap = deepDiffMapper.map(originalJson, newJson, {
