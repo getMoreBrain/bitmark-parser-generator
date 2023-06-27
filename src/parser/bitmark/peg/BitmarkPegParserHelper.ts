@@ -16,10 +16,11 @@
  *
  */
 
-import type { GrammarLocation, Location } from 'peggy';
-
 import { Bit } from '../../../model/ast/Nodes';
 import { ParserError } from '../../../model/parser/ParserError';
+import { ParserLocation } from '../../../model/parser/ParserLocation';
+
+import { PeggyGrammarLocation } from './PeggyGrammarLocation';
 
 import {
   ParseFunction,
@@ -107,7 +108,7 @@ class BitmarkPegParserHelper {
     // Parse the raw bit
     const bitParserResult = this.parse(rawBit, {
       startRule: 'bit',
-      grammarSource: new GrammarLocation('bit', location),
+      grammarSource: new PeggyGrammarLocation('bit', location),
     }) as SubParserResult<Bit>;
 
     // Add markup to the bit result
@@ -287,7 +288,7 @@ class BitmarkPegParserHelper {
             // Get current parser location
             // It must be modified by the length of the divider to be correct as the text in 'unparsedContent.value'
             // have the divider removed.
-            let location: Location = {
+            let location: ParserLocation = {
               line: 1,
               column: 1,
               offset: 0,
@@ -304,7 +305,7 @@ class BitmarkPegParserHelper {
             // Run the parser on the card content
             let content = this.parse(unparsedContent.value, {
               startRule: 'cardContent',
-              grammarSource: new GrammarLocation('card-content', location),
+              grammarSource: new PeggyGrammarLocation('card-content', location),
             }) as BitContent[];
 
             content = this.reduceToArrayOfTypes(content);

@@ -8,7 +8,6 @@
  */
 
 import { EnumType, superenum } from '@ncoderz/superenum';
-import type { GrammarLocation } from 'peggy';
 
 import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTypeType } from '../../../model/enum/ResourceType';
@@ -16,6 +15,8 @@ import { TextFormatType } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
+
+import { PeggyGrammarLocation } from './PeggyGrammarLocation';
 
 import {
   Body,
@@ -46,7 +47,7 @@ const CARD_VARIANT_DIVIDER_V1 = '--';
 
 export interface ParseOptions {
   startRule?: string;
-  grammarSource?: GrammarLocation | unknown;
+  grammarSource?: PeggyGrammarLocation | unknown;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   tracer?: any;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
