@@ -16,7 +16,7 @@
  *
  */
 
-import { GrammarLocation, Location } from 'peggy';
+import type { GrammarLocation, Location } from 'peggy';
 
 import { Bit } from '../../../model/ast/Nodes';
 import { ParserError } from '../../../model/parser/ParserError';

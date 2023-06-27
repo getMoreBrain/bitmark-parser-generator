@@ -8,7 +8,7 @@
  */
 
 import { EnumType, superenum } from '@ncoderz/superenum';
-import { GrammarLocation } from 'peggy';
+import type { GrammarLocation } from 'peggy';
 
 import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTypeType } from '../../../model/enum/ResourceType';
