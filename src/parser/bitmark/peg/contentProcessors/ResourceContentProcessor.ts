@@ -37,8 +37,12 @@ function buildResource(
   const meta = BitType.getMetadata<BitTypeMetadata>(bitType);
   const resourceAttachmentAllowed = meta?.resourceAttachmentAllowed;
 
+  // Get the valid resource types for the bit
+  const rt = resourceAttachmentAllowed ? resourceType : undefined;
+  const validResourceType = BitUtils.calculateValidResourceType(bitType, rt, undefined);
+
   // Handle special case for stillImageFilm
-  if (bitType === BitType.stillImageFilm) {
+  if (validResourceType === ResourceType.stillImageFilm) {
     if (resources) {
       filteredResources = [];
       let imageResource: ImageResource | undefined;
@@ -61,10 +65,6 @@ function buildResource(
   } else {
     filteredResources = resources;
   }
-
-  // Get the valid resource types for the bit
-  const rt = resourceAttachmentAllowed ? resourceType : undefined;
-  const validResourceType = BitUtils.calculateValidResourceType(bitType, rt, undefined);
 
   // Return the actual resource, and add all other resources to excess resources
   if (filteredResources) {
