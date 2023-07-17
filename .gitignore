@@ -32,5 +32,6 @@ node_modules
 # PACKAGE SPECIFIC
 /assets/test
 /assets/test.*
+/assets/classtime
 bitmark.txt
 generated
