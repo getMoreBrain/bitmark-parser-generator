@@ -33,6 +33,8 @@ import { FileOptions } from './ast/writer/FileWriter';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
 import { BitmarkVersionType } from './model/enum/BitmarkVersion';
+import { JsonClasstimeFileGenerator } from './generator/json-classtime/JsonClasstimeFileGenerator';
+import { JsonClasstimeObjectGenerator } from './generator/json-classtime/JsonClasstimeObjectGenerator';
 
 /* STRIP:END */
 STRIP;
@@ -137,6 +139,10 @@ const Output = superenum({
    */
   json: 'json',
   /**
+   * Output classtime JSON as a plain JS object, or a file
+   */
+  jsonClasstime: 'jsonClasstime',
+  /**
    * Output AST as a plain JS object, or a file
    */
   ast: 'ast',
@@ -196,6 +202,7 @@ class BitmarkParserGenerator {
     const outputFormat = opts.outputFormat;
     const outputBitmark = outputFormat === Output.bitmark;
     const outputJson = outputFormat === Output.json;
+    const outputJsonClasstime = outputFormat === Output.jsonClasstime;
     const outputAst = outputFormat === Output.ast;
     const bitmarkParserType = opts.bitmarkParserType;
 
@@ -281,6 +288,27 @@ class BitmarkParserGenerator {
       }
     };
 
+    const bitmarkToJsonClasstime = async (bitmarkStr: string) => {
+      // Generate AST from the Bitmark markup
+      ast = this.bitmarkParser.toAst(bitmarkStr, {
+        parserType: bitmarkParserType,
+      });
+
+      // Convert the AST to JSON
+      if (opts.outputFile) {
+        // Write JSON file
+        const generator = new JsonClasstimeFileGenerator(opts.outputFile, opts);
+        await generator.generate(ast);
+      } else {
+        // Generate JSON object
+        const generator = new JsonClasstimeObjectGenerator(opts);
+        const json = await generator.generate(ast);
+
+        // Return JSON as object or string depending on prettify/stringify option
+        res = this.jsonStringifyPrettify(json, jsonOptions);
+      }
+    };
+
     const astToBitmark = async (astJson: BitmarkAst) => {
       // Convert the AST to bitmark
       if (opts.outputFile) {
@@ -315,6 +343,22 @@ class BitmarkParserGenerator {
       }
     };
 
+    const astToJsonClasstime = async (astJson: BitmarkAst) => {
+      // Convert the AST to JSON (Classtime)
+      if (opts.outputFile) {
+        // Write JSON file
+        const generator = new JsonClasstimeFileGenerator(opts.outputFile, opts);
+        await generator.generate(astJson);
+      } else {
+        // Generate JSON object
+        const generator = new JsonClasstimeObjectGenerator(opts);
+        const json = await generator.generate(astJson);
+
+        // Return JSON as object or string depending on prettify/stringify option
+        res = this.jsonStringifyPrettify(json, jsonOptions);
+      }
+    };
+
     const jsonToBitmark = async (astJson: BitmarkAst) => {
       // We already have the ast from detecting the input type, so use the AST we already have
 
@@ -342,6 +386,11 @@ class BitmarkParserGenerator {
       await astToJson(astJson);
     };
 
+    const jsonToJsonClasstime = async (astJson: BitmarkAst) => {
+      // Validate and prettify
+      await astToJsonClasstime(astJson);
+    };
+
     // Convert
     if (isBitmark) {
       // Input was Bitmark
@@ -351,6 +400,9 @@ class BitmarkParserGenerator {
       } else if (outputAst) {
         // Bitmark ==> AST
         await bitmarkToAst(inStr);
+      } else if (outputJsonClasstime) {
+        // Bitmark ==> JSON (ClassTime)
+        await bitmarkToJsonClasstime(inStr);
       } else {
         // Bitmark ==> JSON
         await bitmarkToJson(inStr);
@@ -364,6 +416,9 @@ class BitmarkParserGenerator {
       } else if (outputJson) {
         // AST ==> JSON
         await astToJson(ast);
+      } else if (outputJsonClasstime) {
+        // AST ==> JSON (Classtime)
+        await astToJsonClasstime(ast);
       } else {
         // AST ==> Bitmark
         await astToBitmark(ast);
@@ -374,6 +429,9 @@ class BitmarkParserGenerator {
       if (outputJson) {
         // JSON ==> JSON
         await jsonToJson(ast);
+      } else if (outputJsonClasstime) {
+        // JSON ==> JSON (Classtime)
+        await jsonToJsonClasstime(ast);
       } else if (outputAst) {
         // JSON ==> AST
         await jsonToAst(ast);

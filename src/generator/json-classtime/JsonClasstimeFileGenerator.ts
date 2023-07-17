@@ -4,10 +4,10 @@ import { FileOptions, FileWriter } from '../../ast/writer/FileWriter';
 import { BitmarkAst } from '../../model/ast/Nodes';
 import { Generator } from '../Generator';
 
-import { JsonGenerator, JsonGeneratorOptions } from './JsonGenerator';
+import { JsonClasstimeGenerator, JsonGeneratorOptions } from './JsonClasstimeGenerator';
 
 /**
- * JSON file generator options
+ * Classtime JSON file generator options
  */
 export interface JsonFileGeneratorOptions extends JsonGeneratorOptions {
   /**
@@ -17,14 +17,14 @@ export interface JsonFileGeneratorOptions extends JsonGeneratorOptions {
 }
 
 /**
- * Generate bitmark JSON from a bitmark AST as a file
+ * Generate classtime JSON from a bitmark AST as a file
  *
  */
-class JsonFileGenerator implements Generator<BitmarkAst> {
-  private generator: JsonGenerator;
+class JsonClasstimeFileGenerator implements Generator<BitmarkAst> {
+  private generator: JsonClasstimeGenerator;
 
   /**
-   * Generate bitmark JSON from a bitmark AST as a file
+   * Generate classtime JSON from a bitmark AST as a file
    *
    * @param path - path of file to generate
    * @param bitmarkVersion - bitmark version, use null to use latest version
@@ -33,11 +33,11 @@ class JsonFileGenerator implements Generator<BitmarkAst> {
    */
   constructor(path: fs.PathLike, options?: JsonFileGeneratorOptions) {
     const writer = new FileWriter(path, options?.fileOptions);
-    this.generator = new JsonGenerator(writer, options);
+    this.generator = new JsonClasstimeGenerator(writer, options);
   }
 
   /**
-   * Generate bitmark JSON from bitmark AST as a file
+   * Generate classtime JSON from bitmark AST as a file
    *
    * @param ast bitmark AST
    */
@@ -46,7 +46,7 @@ class JsonFileGenerator implements Generator<BitmarkAst> {
   }
 
   /**
-   * Generate bitmark JSON from bitmark AST as a file synchronously
+   * Generate classtime JSON from bitmark AST as a file synchronously
    *
    * @param ast bitmark AST
    */
@@ -55,4 +55,4 @@ class JsonFileGenerator implements Generator<BitmarkAst> {
   }
 }
 
-export { JsonFileGenerator };
+export { JsonClasstimeFileGenerator };

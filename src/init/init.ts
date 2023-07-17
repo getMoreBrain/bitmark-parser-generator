@@ -8,6 +8,7 @@ let initialised = false;
 function init(): void {
   if (initialised) return;
 
+  // Initialise environment
   initEnv(buildInfo.name, buildInfo.version);
 
   initialised = true;

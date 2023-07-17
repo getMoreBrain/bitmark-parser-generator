@@ -200,7 +200,7 @@ interface ExampleAndIsExample {
  * Generate bitmark JSON from a bitmark AST
  *
  */
-class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
+class JsonClasstimeGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected ast = new Ast();
   private bitmarkVersion: BitmarkVersionType;
   private textParser = new TextParser();
@@ -2375,4 +2375,4 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 }
 
-export { JsonGenerator };
+export { JsonClasstimeGenerator };
