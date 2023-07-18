@@ -1,5 +1,5 @@
 // bitmark Text parser
-// v8.0.10+RS
+// v8.3.2+BPG
 
 //Parser peggy.js
 
@@ -13,7 +13,7 @@
 
 // - JSON for color
 // - JSON for pure marked text ==aaa== (no attributes)
-// - Are empty attrs needed?
+// - Are empty attrs
 
 // not sure
 
@@ -89,9 +89,8 @@ Das war's
 
 {{
 
-// const UNBREAKSCAPE_REGEX = new RegExp('\\^([\\^]*)', "g");
-// const UNBREAKSCAPE_REGEX = new RegExp(/=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|\[\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
-const UNBREAKSCAPE_REGEX = new RegExp(/=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
+// const UNBREAKSCAPE_REGEX = new RegExp(/=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
+const UNBREAKSCAPE_REGEX = new RegExp(/=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|•\^(\^*)|#\^(\^*)|\|\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
 
 function s(_string) {
   return _string ?? ""
@@ -171,6 +170,10 @@ function bitmarkMinusMinusString(_str) {
 
 // peggy.js // PEG.js
 
+//Start
+//	= bitmarkMinusMinus
+//	= bitmarkPlusPlus
+
 bitmarkPlusPlus "StyledText"
   = Block+
   / NoContent
@@ -188,6 +191,15 @@ BlockStartTags
   / ListTags
   / ImageTag
   / CodeTag
+  / ParagraphTag
+
+
+BlockStart
+  = TitleTags
+  / ListTags
+  / ImageBlock
+  / CodeHeader
+  / ExplicitParagraphHeader
 
 BlockTag = '|'
 
@@ -240,10 +252,10 @@ CodeLanguage
  // https://en.wikipedia.org/wiki/List_of_document_markup_languages
 
 CodeBody
-  = c: $(CodeLine*) { return [{ type: "text", text: c.trim()}] }
+  = c: $(CodeLine*) { return [{ type: "text", text: unbreakscape(c.trim())}] }
 
 CodeLine
-  = !(BlockStartTags / (BlockTag [ \t]* EOL)) t: $(char+ EOL)  { return t }
+  = !BlockStart t: $(char+ EOL)  { return t }
   / NL
 
 
@@ -343,16 +355,23 @@ DEDENT
 
 // Paragraph (Block)
 
+ParagraphTag
+  = BlockTag
+
 Paragraph
-   = !BlockStartTags BlockTag? body: ParagraphBody { return { type: "paragraph", content: bitmarkPlusString(body.trim()), attrs: { } } }
+   = !BlockStart body: ParagraphBody { return { type: "paragraph", content: bitmarkPlusString(body.trim()), attrs: { } } }
+   / ExplicitParagraphHeader body: ParagraphBody { return { type: "paragraph", content: bitmarkPlusString(body.trim()), attrs: { } } }
+   / ExplicitParagraphHeader body: '' { return { type: "paragraph", content: bitmarkPlusString(body.trim()), attrs: { } } }
 
 ParagraphBody
   = $(ParagraphLine+)
 
 ParagraphLine
-  = !BlockStartTags t: $(char+ EOL)
+  = !BlockStart t: $(char+ EOL)
   / t: NL
 
+ExplicitParagraphHeader
+  = ParagraphTag $([ \t]* EOL) NL?
 
 
 // Image Block
@@ -388,22 +407,6 @@ ImageBlock
 
     return image
   }
-  / t: ImageTag ':' ' '? u: UrlHttp $([ \t]* EOL) NL?
-  {
-    let image = {
-      type: t,
-      attrs: {
-        textAlign: "left",
-        src: u,
-        alt: null,
-        title: null,
-        class: "center",
-      }
-    }
-
-    return image
-  }
-  / t: ImageTag ":"? url: $(char*) EOL { return { type: "error", msg: `'${url}' is not a valid URL` }}
 
 
 MediaChain
@@ -437,8 +440,8 @@ InlineTags
   = first: InlinePlainText? more: (InlineStyledText / InlinePlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
 
 InlinePlainText
-  = NL { return { text: "\n", type: "text" } }
-  / t: $(((InlineTagTags? !InlineStyledText .) / (InlineTagTags !InlineStyledText))+) { return { text: unbreakscape(t), type: "text" } } // remove breakscaping tags in body
+  = NL { return { "type": "hardBreak" } }
+  / t: $(((InlineTagTags? !InlineStyledText char) / (InlineTagTags !InlineStyledText))+) { return { text: unbreakscape(t), type: "text" } } // remove breakscaping tags in body
 
 
 InlineHalfTag = '='

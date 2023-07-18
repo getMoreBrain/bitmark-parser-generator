@@ -5,6 +5,7 @@ const TextNodeType = superenum({
   text: 'text',
 
   // Blocks
+  hardBreak: 'hardBreak',
   paragraph: 'paragraph',
   heading: 'heading',
   section: 'section',
