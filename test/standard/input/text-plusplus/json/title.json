@@ -58,8 +58,17 @@
     "type": "paragraph",
     "content": [
       {
-        "text": "#### Title level 4 - there is no title level 4, so this is just a paragraph\n\n\n",
+        "text": "#### Title level 4 - there is no title level 4, so this is just a paragraph",
         "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
       },
       {
         "marks": [
@@ -71,12 +80,10 @@
         "type": "text"
       },
       {
-        "text": "\n",
-        "type": "text"
+        "type": "hardBreak"
       },
       {
-        "text": "\n",
-        "type": "text"
+        "type": "hardBreak"
       },
       {
         "text": "That's all folks!",

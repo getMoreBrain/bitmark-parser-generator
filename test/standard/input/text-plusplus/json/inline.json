@@ -3,7 +3,17 @@
     "type": "paragraph",
     "content": [
       {
-        "text": "Here we are testing the inline tag\n\nHere is some inline 'c' code ",
+        "text": "Here we are testing the inline tag",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'c' code ",
         "type": "text"
       },
       {
@@ -19,7 +29,17 @@
         "type": "text"
       },
       {
-        "text": ", nice huh?\n\nHere is some inline 'plain text' code ",
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'plain text' code ",
         "type": "text"
       },
       {
@@ -35,7 +55,17 @@
         "type": "text"
       },
       {
-        "text": ", nice huh?\n\nHere is some inline 'colour' applied ",
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'colour' applied ",
         "type": "text"
       },
       {
@@ -51,7 +81,17 @@
         "type": "text"
       },
       {
-        "text": ", nice huh?\n\nHere is some inline 'style' applied ",
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
         "type": "text"
       },
       {
@@ -64,7 +104,17 @@
         "type": "text"
       },
       {
-        "text": ", nice huh?\n\nHere is some inline 'style' applied ",
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
         "type": "text"
       },
       {

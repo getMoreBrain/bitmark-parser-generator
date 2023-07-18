@@ -58,6 +58,13 @@ const BREAKSCAPE_REGEX = new RegExp('([=*_`!])([\\^]*)\\1|([\\|\\[])', 'g');
 const BREAKSCAPE_REGEX_REPLACER = '$1$3^$2$1';
 
 // Regex explanation:
+// - match a single | or • or # character at the start of a line and capture in group 1
+// This will capture all new block characters within the code text.
+// Replace with group 1, ^
+const BREAKSCAPE_CODE_REGEX = new RegExp('^(\\||•|#)', 'gm');
+const BREAKSCAPE_CODE_REGEX_REPLACER = '$1^';
+
+// Regex explanation:
 // - Match newline or carriage return + newline
 const INDENTATION_REGEX = new RegExp(/(\n|\r\n)/, 'g');
 
@@ -295,6 +302,10 @@ class TextGenerator implements AstWalkCallbacks {
         this.writeParagraph(node);
         break;
 
+      case TextNodeType.hardBreak:
+        this.writeHardBreak(node);
+        break;
+
       case TextNodeType.text:
         this.writeMarks(node, true);
         this.writeText(node);
@@ -350,12 +361,10 @@ class TextGenerator implements AstWalkCallbacks {
 
       case TextNodeType.paragraph:
         if (this.textFormat !== TextFormat.bitmarkMinusMinus) {
-          // Paragraph Block type node, write 2x newline
+          // Paragraph Block type node, write 1x newline
           // Except:
           // - for bitmark-- where we don't write newlines for the single wrapping block
-          // - for within a list, where we only write one newline
           this.writeNL();
-          if (this.currentIndent <= 0) this.writeNL();
         }
         break;
 
@@ -483,6 +492,8 @@ class TextGenerator implements AstWalkCallbacks {
     let s: string = node.text;
     if (!codeBreakscaping) {
       s = s.replace(BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER);
+    } else {
+      s = s.replace(BREAKSCAPE_CODE_REGEX, BREAKSCAPE_CODE_REGEX_REPLACER);
     }
 
     // Apply any required indentation
@@ -568,6 +579,16 @@ class TextGenerator implements AstWalkCallbacks {
     }
   }
 
+  protected writeHardBreak(_node: TextNode): void {
+    this.writeNL();
+
+    // Apply any required indentation (when in list)
+    if (this.currentIndent > 1) {
+      const indentationString = this.getIndentationString();
+      this.write(indentationString);
+    }
+  }
+
   protected writeHeading(node: HeadingTextNode): void {
     let s = '';
     const level = node.attrs?.level ?? 1;
@@ -649,7 +670,7 @@ class TextGenerator implements AstWalkCallbacks {
     if (node.attrs == null || !node.attrs.language) return;
     const attrs = node.attrs;
 
-    const s = `|code:${attrs.language}\n\n`;
+    const s = `|code:${attrs.language}\n`;
 
     // Write the text
     this.write(s);

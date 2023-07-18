@@ -1,5 +1,5 @@
 // bitmark Text parser
-// v8.3.0+BPG
+// v8.3.2+BPG
 
 //Parser peggy.js
 
@@ -169,6 +169,10 @@ function bitmarkMinusMinusString(_str) {
 
 
 // peggy.js // PEG.js
+
+//Start
+//	= bitmarkMinusMinus
+//	= bitmarkPlusPlus
 
 bitmarkPlusPlus "StyledText"
   = Block+
@@ -437,7 +441,7 @@ InlineTags
 
 InlinePlainText
   = NL { return { "type": "hardBreak" } }
-  / t: $(((InlineTagTags? !InlineStyledText .) / (InlineTagTags !InlineStyledText))+) { return { text: unbreakscape(t), type: "text" } } // remove breakscaping tags in body
+  / t: $(((InlineTagTags? !InlineStyledText char) / (InlineTagTags !InlineStyledText))+) { return { text: unbreakscape(t), type: "text" } } // remove breakscaping tags in body
 
 
 InlineHalfTag = '='

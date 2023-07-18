@@ -5,48 +5,100 @@
       {
         "text": "Unterminated image",
         "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "|image:",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://docs.bitmark.cloud/bit-books/swiss_life_select/kommunikation/web-resources/images/08_handschlag.jpg",
+              "target": "_blank"
+            }
+          }
+        ],
+        "text": "docs.bitmark.cloud/bit-books/swiss_life_select/kommunikation/web-resources/images/08_handschlag.jpg",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "|image",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "|image563489",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "|image:htte://test.com|",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "|image:https:/|",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "|image:",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://validurl.com",
+              "target": "_blank"
+            }
+          }
+        ],
+        "text": "validurl.com",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "|image:",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://url.com",
+              "target": "_blank"
+            }
+          }
+        ],
+        "text": "url.com",
+        "type": "text"
+      },
+      {
+        "text": "|fewuibg",
+        "type": "text"
       }
     ],
     "attrs": {}
-  },
-  {
-    "type": "image",
-    "attrs": {
-      "textAlign": "left",
-      "src": "https://docs.bitmark.cloud/bit-books/swiss_life_select/kommunikation/web-resources/images/08_handschlag.jpg",
-      "alt": null,
-      "title": null,
-      "class": "center"
-    }
-  },
-  {
-    "type": "error",
-    "msg": "'' is not a valid URL"
-  },
-  {
-    "type": "error",
-    "msg": "'563489' is not a valid URL"
-  },
-  {
-    "type": "error",
-    "msg": "'htte://test.com|' is not a valid URL"
-  },
-  {
-    "type": "error",
-    "msg": "'https:/|' is not a valid URL"
-  },
-  {
-    "type": "image",
-    "attrs": {
-      "textAlign": "left",
-      "src": "https://validurl.com",
-      "alt": null,
-      "title": null,
-      "class": "center"
-    }
-  },
-  {
-    "type": "error",
-    "msg": "'https://url.com|fewuibg' is not a valid URL"
   }
 ]

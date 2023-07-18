@@ -3,7 +3,27 @@
     "type": "paragraph",
     "content": [
       {
-        "text": "This is some plain text with no markup.\n\nThere are multiple lines, but nothing else particularly exciting!\n\nOr perhaps nothign exciting? It really depends on your point of view ;)",
+        "text": "This is some plain text with no markup.",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "There are multiple lines, but nothing else particularly exciting!",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Or perhaps nothign exciting? It really depends on your point of view ;)",
         "type": "text"
       }
     ],

@@ -136,7 +136,14 @@
             "attrs": {},
             "content": [
               {
-                "text": "Ordered\nlist item 5",
+                "text": "Ordered",
+                "type": "text"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "text": "list item 5",
                 "type": "text"
               }
             ]
@@ -340,7 +347,14 @@
                     "attrs": {},
                     "content": [
                       {
-                        "text": "Bullet\nlist item 10.1",
+                        "text": "Bullet",
+                        "type": "text"
+                      },
+                      {
+                        "type": "hardBreak"
+                      },
+                      {
+                        "text": "list item 10.1",
                         "type": "text"
                       }
                     ]
@@ -421,7 +435,14 @@
                                     "attrs": {},
                                     "content": [
                                       {
-                                        "text": "Ordered list\nitem 10.3.1.1",
+                                        "text": "Ordered list",
+                                        "type": "text"
+                                      },
+                                      {
+                                        "type": "hardBreak"
+                                      },
+                                      {
+                                        "text": "item 10.3.1.1",
                                         "type": "text"
                                       }
                                     ]
@@ -565,7 +586,20 @@
     "type": "paragraph",
     "content": [
       {
-        "text": "Some text after the list\n\n\nA task list",
+        "text": "Some text after the list",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "A task list",
         "type": "text"
       }
     ],
@@ -648,7 +682,14 @@
             "attrs": {},
             "content": [
               {
-                "text": "Task list item\n11.4 NOT checked",
+                "text": "Task list item",
+                "type": "text"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "text": "11.4 NOT checked",
                 "type": "text"
               }
             ]
@@ -686,7 +727,14 @@
             "attrs": {},
             "content": [
               {
-                "text": "Task list item 11.6\nchecked",
+                "text": "Task list item 11.6",
+                "type": "text"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "text": "checked",
                 "type": "text"
               }
             ]
