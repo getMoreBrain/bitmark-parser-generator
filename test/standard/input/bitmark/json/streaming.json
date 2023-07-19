@@ -220,36 +220,17 @@
       "type": "true-false",
       "format": "bitmark--",
       "id": ["287883"],
-      "labelTrue": "",
+      "labelTrue": "ra",
       "labelFalse": "",
       "item": "",
       "lead": "true-false",
       "hint": "",
       "instruction": "",
-      "body": "",
-      "lab": [true]
+      "body": ""
     },
     "parser": {
       "version": "1.0.7",
-      "bitmarkVersion": "3",
-      "warnings": [
-        {
-          "message": "'Property' with key 'lab' is an unexpected property. It is not included in the output by default",
-          "text": "[@lab\n",
-          "location": {
-            "start": {
-              "offset": 45,
-              "line": 5,
-              "column": 1
-            },
-            "end": {
-              "offset": 51,
-              "line": 6,
-              "column": 1
-            }
-          }
-        }
-      ]
+      "bitmarkVersion": "3"
     },
     "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@lab"
   },
