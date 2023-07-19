@@ -1,0 +1,91 @@
+import { TextMarkTypeType } from '../enum/TextMarkType';
+import { TextNodeTypeType } from '../enum/TextNodeType';
+
+export type Text = string | TextAst;
+
+export type TextAst = TextNode[];
+
+export interface TextNode {
+  type: TextNodeTypeType;
+  marks: TextMark[];
+  text?: string;
+  content?: TextNode[];
+  parent?: TextNodeTypeType;
+  attrs?: TextNodeAttibutes;
+}
+
+export interface TextMark {
+  type: TextMarkTypeType;
+  attrs?: TextMarkAttibutes;
+}
+
+export interface LinkMark {
+  type: 'link';
+  attrs?: LinkMarkAttibutes;
+}
+
+export interface CommentMark {
+  type: 'comment';
+  comment: string;
+}
+
+export interface HeadingTextNode extends TextNode {
+  type: 'heading';
+  attrs?: HeadingTextNodeAttributes;
+}
+
+export interface SectionTextNode extends TextNode {
+  type: 'heading';
+  section: string;
+}
+
+export interface TaskItemTextNode extends TextNode {
+  type: 'taskItem';
+  attrs?: TaskItemTextNodeAttributes;
+}
+
+export interface ImageTextNode extends TextNode {
+  type: 'image';
+  attrs?: ImageTextNodeAttributes;
+}
+
+export interface CodeBlockTextNode extends TextNode {
+  type: 'codeBlock';
+  attrs?: CodeBlockTextNodeAttributes;
+}
+
+export interface TextNodeAttibutes {
+  section: string;
+}
+
+export interface HeadingTextNodeAttributes extends TextNodeAttibutes {
+  level: number;
+}
+
+export interface TaskItemTextNodeAttributes extends TextNodeAttibutes {
+  checked: boolean;
+}
+
+export interface ImageTextNodeAttributes extends TextNodeAttibutes {
+  src: string;
+  alt: string | null;
+  title: string | null;
+  textAlign: string;
+  width: string | number | null;
+  height: string | number | null;
+  class: string;
+  comment: string;
+}
+
+export interface CodeBlockTextNodeAttributes extends TextNodeAttibutes {
+  language: string;
+}
+
+export interface TextMarkAttibutes {
+  //
+}
+
+export interface LinkMarkAttibutes extends TextMarkAttibutes {
+  href: string;
+  target: string;
+}
