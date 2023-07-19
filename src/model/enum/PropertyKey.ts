@@ -21,6 +21,7 @@ const PropertyKey = superenum({
   ageRange: 'ageRange',
   language: 'language',
   computerLanguage: 'computerLanguage', // single
+  subtype: 'subtype',
   coverImage: 'coverImage',
   publisher: 'publisher',
   publications: 'publications',

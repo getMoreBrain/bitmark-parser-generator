@@ -517,7 +517,7 @@ class BitmarkPegParserValidator {
       } else if (warning.tooMany) {
         warningStr = `'${type}'${keyStr} is included more than ${warning.tooMany} time(s). The earlier ones will be ignored`;
       } else if (warning.extraProperty) {
-        warningStr = `'${type}'${keyStr} is an unexpected property. It is not included in the output by default`;
+        warningStr = `'${type}'${keyStr} is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag`;
       } else if (warning.unexpectedCardSet) {
         warningStr = `'${type}'${keyStr} is not expected here.${ignoredStr}`;
       } else if (warning.unexpectedCardSideVariant) {

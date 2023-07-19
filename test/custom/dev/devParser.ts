@@ -40,6 +40,7 @@ class DevParser {
       // AST ==> JSON
       const generator = new JsonObjectGenerator({
         jsonOptions: {
+          enableWarnings: true,
           textAsPlainText: true,
           prettify: true,
         },
@@ -54,6 +55,7 @@ class DevParser {
     } else {
       const res = await bitmarkParserGenerator.convert(filename, {
         jsonOptions: {
+          enableWarnings: true,
           textAsPlainText: false,
           prettify: true,
         },

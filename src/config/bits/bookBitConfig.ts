@@ -10,10 +10,11 @@ const BOOK_CONFIG: BitTypeMetadata = {
   tags: {
     ...TAGS_DEFAULT,
     [TagType.Title]: { maxCount: 2 },
+    [PropertyKey.subtype]: { isProperty: true },
     [PropertyKey.coverImage]: { isProperty: true },
+    [PropertyKey.publisher]: { isProperty: true },
     [PropertyKey.subject]: { isProperty: true },
     [PropertyKey.author]: { isProperty: true },
-    [PropertyKey.publisher]: { isProperty: true },
     [PropertyKey.theme]: { isProperty: true },
   },
   resourceAttachmentAllowed: false,

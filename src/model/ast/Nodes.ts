@@ -31,6 +31,7 @@ export interface Bit {
   ageRange?: Property;
   language?: Property;
   computerLanguage?: Property;
+  subtype?: Property;
   coverImage?: Property;
   publisher?: Property;
   publications?: Property;
