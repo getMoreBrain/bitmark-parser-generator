@@ -83,6 +83,7 @@ class Builder extends BaseBuilder {
     resourceType?: ResourceTypeType; // This is optional, it will be inferred from the resource
     id?: string | string[];
     externalId?: string | string[];
+    spaceId?: string | string[];
     padletId?: string | string[];
     aiGenerated?: boolean;
     releaseVersion?: string | string[];
@@ -163,6 +164,7 @@ class Builder extends BaseBuilder {
       resourceType,
       id,
       externalId,
+      spaceId,
       padletId,
       aiGenerated,
       releaseVersion,
@@ -233,6 +235,7 @@ class Builder extends BaseBuilder {
       resourceType: BitUtils.calculateValidResourceType(bitType, resourceType, resource),
       id: this.toAstProperty(PropertyKey.id, id),
       externalId: this.toAstProperty(PropertyKey.externalId, externalId),
+      spaceId: this.toAstProperty(PropertyKey.spaceId, spaceId),
       padletId: this.toAstProperty(PropertyKey.padletId, padletId),
       aiGenerated: this.toAstProperty(PropertyKey.aiGenerated, aiGenerated),
       releaseVersion: this.toAstProperty(PropertyKey.releaseVersion, releaseVersion),

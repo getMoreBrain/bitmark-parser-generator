@@ -15,6 +15,7 @@ export interface PropertyKeyMetadata {
 const PropertyKey = superenum({
   id: 'id',
   externalId: 'externalId',
+  spaceId: 'spaceId',
   padletId: 'padletId',
   aiGenerated: 'AIGenerated',
   releaseVersion: 'releaseVersion',

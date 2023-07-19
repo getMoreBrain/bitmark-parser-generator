@@ -1984,6 +1984,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       // Properties
       id: undefined,
       externalId: undefined,
+      spaceId: undefined,
       padletId: undefined,
       AIGenerated: undefined,
       releaseVersion: undefined,
@@ -2248,6 +2249,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     // Properties
     if (bitJson.id == null) delete bitJson.id;
     if (bitJson.externalId == null) delete bitJson.externalId;
+    if (bitJson.spaceId == null) delete bitJson.spaceId;
     if (bitJson.padletId == null) delete bitJson.padletId;
     if (bitJson.AIGenerated == null) delete bitJson.AIGenerated;
     if (bitJson.releaseVersion == null) delete bitJson.releaseVersion;

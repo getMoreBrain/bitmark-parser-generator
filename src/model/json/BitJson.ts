@@ -10,6 +10,7 @@ export interface BitJson {
   // Properties
   id: string | string[];
   externalId: string | string[];
+  spaceId: string | string[];
   padletId: string | string[];
   AIGenerated: boolean;
   releaseVersion: string | string[];

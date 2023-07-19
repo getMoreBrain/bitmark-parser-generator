@@ -25,6 +25,7 @@ export interface Bit {
   resourceType?: ResourceTypeType;
   id?: Property;
   externalId?: Property;
+  spaceId?: Property;
   padletId?: Property;
   aiGenerated?: Property;
   releaseVersion?: Property;
