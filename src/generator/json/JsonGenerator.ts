@@ -141,13 +141,13 @@ export interface JsonOptions {
   textAsPlainText?: boolean;
 
   /**
-   * Include extra properties in the output.
+   * Exclude extra properties in the output.
    *
-   * If not set or false, extra properties will NOT be included in the JSON output.
-   * It true, extra properties will be included in the JSON output.
+   * If not set or false, extra properties will be included in the JSON output.
+   * It true, extra properties will NOT be included in the JSON output.
    *
    */
-  includeExtraProperties?: boolean;
+  excludeExtraProperties?: boolean;
 
   /**
    * [development only]
@@ -466,7 +466,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected enter_extraProperties(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const extraProperties = node.value as ExtraProperties | undefined;
 
-    if (this.options.includeExtraProperties && extraProperties) {
+    if (!this.options.excludeExtraProperties && extraProperties) {
       for (const [key, values] of Object.entries(extraProperties)) {
         let k = key;
         if (Object.prototype.hasOwnProperty.call(this.bitJson, key)) {

@@ -428,7 +428,6 @@ describe('bitmark-parser', () => {
         const jsonOptions = {
           textAsPlainText: true, // For testing the parser, use plain text rather than JSON for text
           prettify: true, // For testing the output is easier to read if it is prettified
-          includeExtraProperties: true, // Include extra properties in the JSON when testing
         };
 
         // Copy the original test markup file to the output folder
