@@ -165,6 +165,7 @@ import './properties/resourcePropertyConfig';
 import './properties/sampleSolutionPropertyConfig';
 import './properties/shortAnswerPropertyConfig';
 import './properties/subjectPropertyConfig';
+import './properties/subtypePropertyConfig';
 import './properties/textReferencePropertyConfig';
 import './properties/themePropertyConfig';
 import './properties/thumbImagePropertyConfig';

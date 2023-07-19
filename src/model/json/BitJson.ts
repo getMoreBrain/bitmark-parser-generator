@@ -16,6 +16,7 @@ export interface BitJson {
   ageRange: number | number[];
   language: string | string[];
   computerLanguage: string | string[];
+  subtype: string | string[];
   coverImage: string | string[];
   publisher: string | string[];
   publications: string | string[];
