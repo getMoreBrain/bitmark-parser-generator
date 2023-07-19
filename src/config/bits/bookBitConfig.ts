@@ -1,3 +1,4 @@
+import { INFINITE_COUNT } from '../../model/config/TagData';
 import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
 import { PropertyKey } from '../../model/enum/PropertyKey';
 import { TagType } from '../../model/enum/TagType';
@@ -9,6 +10,10 @@ import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 const BOOK_CONFIG: BitTypeMetadata = {
   tags: {
     ...TAGS_DEFAULT,
+    [PropertyKey.spaceId]: {
+      isProperty: true,
+      maxCount: INFINITE_COUNT,
+    },
     [TagType.Title]: { maxCount: 2 },
     [PropertyKey.subtype]: { isProperty: true },
     [PropertyKey.coverImage]: { isProperty: true },

@@ -164,6 +164,7 @@ import './properties/releaseVersionPropertyConfig';
 import './properties/resourcePropertyConfig';
 import './properties/sampleSolutionPropertyConfig';
 import './properties/shortAnswerPropertyConfig';
+import './properties/spaceIdPropertyConfig';
 import './properties/subjectPropertyConfig';
 import './properties/subtypePropertyConfig';
 import './properties/textReferencePropertyConfig';

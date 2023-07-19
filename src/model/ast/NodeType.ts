@@ -68,6 +68,8 @@ const NodeType = superenum({
   idValue: 'idValue',
   externalId: 'externalId',
   externalIdValue: 'externalIdValue',
+  spaceId: 'spaceId',
+  spaceIdValue: 'spaceIdValue',
   releaseVersion: 'releaseVersion',
   releaseVersionValue: 'releaseVersionValue',
   padletId: 'padletId',
