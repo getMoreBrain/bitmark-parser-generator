@@ -11,7 +11,7 @@ import path from 'path';
 
 import { BitmarkParserGenerator, Output } from '../../../src/BitmarkParserGenerator';
 import { Ast } from '../../../src/ast/Ast';
-import { JsonClasstimeObjectGenerator } from '../../../src/generator/json-classtime/JsonClasstimeObjectGenerator';
+import { ClasstimeJsonObjectGenerator } from '../../../src/generator/json-classtime/ClasstimeJsonObjectGenerator';
 import { BitmarkParserType } from '../../../src/model/enum/BitmarkParserType';
 import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
 
@@ -38,7 +38,7 @@ class DevParserClasstime {
       });
 
       // AST ==> JSON
-      const generator = new JsonClasstimeObjectGenerator({
+      const generator = new ClasstimeJsonObjectGenerator({
         jsonOptions: {
           textAsPlainText: true,
           prettify: true,

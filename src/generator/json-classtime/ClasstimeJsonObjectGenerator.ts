@@ -2,15 +2,16 @@ import { StringWriter } from '../../ast/writer/StringWriter';
 import { BitmarkAst } from '../../model/ast/Nodes';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { Generator } from '../Generator';
+import { JsonGeneratorOptions } from '../json/JsonGenerator';
 
-import { JsonClasstimeGenerator, JsonGeneratorOptions } from './JsonClasstimeGenerator';
+import { ClasstimeJsonGenerator } from './ClasstimeJsonGenerator';
 
 /**
  * Generate classtime JSON from a bitmark AST as a plain JS object
  *
  */
-class JsonClasstimeObjectGenerator implements Generator<BitmarkAst, BitWrapperJson[]> {
-  private generator: JsonClasstimeGenerator;
+class ClasstimeJsonObjectGenerator implements Generator<BitmarkAst, BitWrapperJson[]> {
+  private generator: ClasstimeJsonGenerator;
   private writer: StringWriter;
 
   /**
@@ -20,7 +21,7 @@ class JsonClasstimeObjectGenerator implements Generator<BitmarkAst, BitWrapperJs
    */
   constructor(options?: JsonGeneratorOptions) {
     this.writer = new StringWriter();
-    this.generator = new JsonClasstimeGenerator(this.writer, options);
+    this.generator = new ClasstimeJsonGenerator(this.writer, options);
   }
 
   /**
@@ -44,4 +45,4 @@ class JsonClasstimeObjectGenerator implements Generator<BitmarkAst, BitWrapperJs
   }
 }
 
-export { JsonClasstimeObjectGenerator };
+export { ClasstimeJsonObjectGenerator };

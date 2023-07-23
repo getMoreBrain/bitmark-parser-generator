@@ -21,7 +21,7 @@ const dependencies = {
 
 const inputPath = path.resolve(__dirname, '../../..', 'assets/grammar/text/', 'text-grammar.pegjs');
 const outputPath = path.resolve(__dirname, '../../..', 'src/generated/parser/text/', 'text-peggy-parser.js');
-const testFilePath = path.resolve(__dirname, '../../..', 'assets/', 'test.text');
+const testFilePath = path.resolve(__dirname, '../../..', 'assets/', 'test.text.plusplus');
 
 // Process command line options
 const commandLineOptions = process.argv.slice(2);

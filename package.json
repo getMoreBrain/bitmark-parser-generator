@@ -39,6 +39,7 @@
     "test-parser": "jest --config=jest.config.js --testMatch=\\<rootDir\\>/test/standard/bitmark-parser.test.ts --runInBand",
     "test-parser-books": "jest --config=./test/custom/parser/books/jest.parser.books.config.js --runInBand",
     "test-parser-expected": "jest --config=./test/custom/parser/expected/jest.parser.expected.config.js --runInBand",
+    "test-parser-classtime": "jest --config=jest.config.js --testMatch=\\<rootDir\\>/test/classtime/classtime-bitmark-parser.test.ts --runInBand",
     "test-text-plusplus-parser": "jest --config=jest.config.js --testMatch=\\<rootDir\\>/test/standard/text-plusplus-parser.test.ts --runInBand",
     "test-text-plusplus-generator": "jest --config=jest.config.js --testMatch=\\<rootDir\\>/test/standard/text-plusplus-generator.test.ts --runInBand",
     "test-text-minusminus-parser": "jest --config=jest.config.js --testMatch=\\<rootDir\\>/test/standard/text-minusminus-parser.test.ts --runInBand",

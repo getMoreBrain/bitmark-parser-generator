@@ -1,27 +1,18 @@
 import * as fs from 'fs-extra';
 
-import { FileOptions, FileWriter } from '../../ast/writer/FileWriter';
+import { FileWriter } from '../../ast/writer/FileWriter';
 import { BitmarkAst } from '../../model/ast/Nodes';
 import { Generator } from '../Generator';
+import { JsonFileGeneratorOptions } from '../json/JsonFileGenerator';
 
-import { JsonClasstimeGenerator, JsonGeneratorOptions } from './JsonClasstimeGenerator';
-
-/**
- * Classtime JSON file generator options
- */
-export interface JsonFileGeneratorOptions extends JsonGeneratorOptions {
-  /**
-   * The options for file output.
-   */
-  fileOptions?: FileOptions;
-}
+import { ClasstimeJsonGenerator } from './ClasstimeJsonGenerator';
 
 /**
  * Generate classtime JSON from a bitmark AST as a file
  *
  */
-class JsonClasstimeFileGenerator implements Generator<BitmarkAst> {
-  private generator: JsonClasstimeGenerator;
+class ClasstimeJsonFileGenerator implements Generator<BitmarkAst> {
+  private generator: ClasstimeJsonGenerator;
 
   /**
    * Generate classtime JSON from a bitmark AST as a file
@@ -33,7 +24,7 @@ class JsonClasstimeFileGenerator implements Generator<BitmarkAst> {
    */
   constructor(path: fs.PathLike, options?: JsonFileGeneratorOptions) {
     const writer = new FileWriter(path, options?.fileOptions);
-    this.generator = new JsonClasstimeGenerator(writer, options);
+    this.generator = new ClasstimeJsonGenerator(writer, options);
   }
 
   /**
@@ -55,4 +46,4 @@ class JsonClasstimeFileGenerator implements Generator<BitmarkAst> {
   }
 }
 
-export { JsonClasstimeFileGenerator };
+export { ClasstimeJsonFileGenerator };

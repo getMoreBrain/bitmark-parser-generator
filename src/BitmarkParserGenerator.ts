@@ -33,8 +33,8 @@ import { FileOptions } from './ast/writer/FileWriter';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
 import { BitmarkVersionType } from './model/enum/BitmarkVersion';
-import { JsonClasstimeFileGenerator } from './generator/json-classtime/JsonClasstimeFileGenerator';
-import { JsonClasstimeObjectGenerator } from './generator/json-classtime/JsonClasstimeObjectGenerator';
+import { ClasstimeJsonFileGenerator } from './generator/json-classtime/ClasstimeJsonFileGenerator';
+import { ClasstimeJsonObjectGenerator } from './generator/json-classtime/ClasstimeJsonObjectGenerator';
 
 /* STRIP:END */
 STRIP;
@@ -297,11 +297,11 @@ class BitmarkParserGenerator {
       // Convert the AST to JSON
       if (opts.outputFile) {
         // Write JSON file
-        const generator = new JsonClasstimeFileGenerator(opts.outputFile, opts);
+        const generator = new ClasstimeJsonFileGenerator(opts.outputFile, opts);
         await generator.generate(ast);
       } else {
         // Generate JSON object
-        const generator = new JsonClasstimeObjectGenerator(opts);
+        const generator = new ClasstimeJsonObjectGenerator(opts);
         const json = await generator.generate(ast);
 
         // Return JSON as object or string depending on prettify/stringify option
@@ -347,11 +347,11 @@ class BitmarkParserGenerator {
       // Convert the AST to JSON (Classtime)
       if (opts.outputFile) {
         // Write JSON file
-        const generator = new JsonClasstimeFileGenerator(opts.outputFile, opts);
+        const generator = new ClasstimeJsonFileGenerator(opts.outputFile, opts);
         await generator.generate(astJson);
       } else {
         // Generate JSON object
-        const generator = new JsonClasstimeObjectGenerator(opts);
+        const generator = new ClasstimeJsonObjectGenerator(opts);
         const json = await generator.generate(astJson);
 
         // Return JSON as object or string depending on prettify/stringify option

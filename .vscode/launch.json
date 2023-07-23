@@ -17,6 +17,16 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Dev Bitmark Parser (Classtime)",
+      "program": "${workspaceFolder}/test/custom/dev/devParserClasstime.ts",
+      "runtimeArgs": ["-r", "esbuild-register"],
+      "console": "integratedTerminal",
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Dev Bitmark Parser ANTLR",
       "program": "${workspaceFolder}/test/custom/dev/devParserAntlr.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
@@ -147,6 +157,25 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": ["--config=./test/custom/parser/expected/jest.parser.expected.config.js", "-i"],
+      // "preLaunchTask": "build",
+      "console": "integratedTerminal"
+      // "disableOptimisticBPs": true,
+      // "internalConsoleOptions": "openOnSessionStart",
+      // "outFiles": ["${workspaceRoot}/dist/**/*"],
+      // "envFile": "${workspaceRoot}/.env",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest: Bitmark Parser - Classtime Tests",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": [
+        "--config=jest.config.js",
+        "--testMatch",
+        "<rootDir>/test/classtime/classtime-bitmark-parser.test.ts",
+        "-i"
+      ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
       // "disableOptimisticBPs": true,

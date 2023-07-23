@@ -211,8 +211,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   private writer: Writer;
 
   // State
-  private json: Partial<BitWrapperJson>[] = [];
-  private bitWrapperJson: Partial<BitWrapperJson> = {};
+  protected json: Partial<BitWrapperJson>[] = [];
+  protected bitWrapperJson: Partial<BitWrapperJson> = {};
   private bitJson: Partial<BitJson> = {};
   private textDefault: Text = '';
   private bodyDefault: Text = '';
