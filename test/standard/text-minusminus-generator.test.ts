@@ -111,7 +111,7 @@ describe('text-generation', () => {
         const originalJson = fs.readJsonSync(originalJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
-        // BitJsonUtils.cleanupJson(originalJson, { removeParser: true, removeErrors: true });
+        // JsonCleanupUtils.cleanupBitJson(originalJson, { removeParser: true, removeErrors: true });
 
         // Convert the JSON to text
         performance.mark('GEN:Start');
@@ -141,8 +141,8 @@ describe('text-generation', () => {
         const newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
-        // BitJsonUtils.cleanupJson(originalJson, { removeMarkup: true });
-        // BitJsonUtils.cleanupJson(newJson, { removeMarkup: true, removeParser: true, removeErrors: true });
+        // JsonCleanupUtils.cleanupBitJson(originalJson, { removeMarkup: true });
+        // JsonCleanupUtils.cleanupBitJson(newJson, { removeMarkup: true, removeParser: true, removeErrors: true });
 
         // Compare old and new JSONs
         const diffMap = deepDiffMapper.map(originalJson, newJson, {

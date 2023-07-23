@@ -111,6 +111,14 @@ const DEFAULT_OPTIONS: JsonOptions = {
  */
 export interface JsonOptions {
   /**
+   * Enable parser warnings.
+   *
+   * If not set or false, parser warnings will not be included in the output.
+   * If true, any parser warnings will be included in the output.
+   */
+  enableWarnings?: boolean | number;
+
+  /**
    * Prettify the JSON.
    *
    * If not set or false, JSON will not be prettified.
@@ -141,13 +149,13 @@ export interface JsonOptions {
   textAsPlainText?: boolean;
 
   /**
-   * Include extra properties in the output.
+   * Exclude unknown properties in the output.
    *
-   * If not set or false, extra properties will NOT be included in the JSON output.
-   * It true, extra properties will be included in the JSON output.
+   * If not set or false, unknown properties will be included in the JSON output.
+   * It true, unknown properties will NOT be included in the JSON output.
    *
    */
-  includeExtraProperties?: boolean;
+  excludeUnknownProperties?: boolean;
 
   /**
    * [development only]
@@ -465,7 +473,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected enter_extraProperties(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const extraProperties = node.value as ExtraProperties | undefined;
 
-    if (this.options.includeExtraProperties && extraProperties) {
+    if (!this.options.excludeUnknownProperties && extraProperties) {
       for (const [key, values] of Object.entries(extraProperties)) {
         let k = key;
         if (Object.prototype.hasOwnProperty.call(this.bitJson, key)) {
@@ -1092,7 +1100,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected enter_parser(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const parser = node.value as ParserInfo | undefined;
     if (parser) {
-      const { version, excessResources: parserExcessResources, ...parserRest } = parser;
+      const { version, excessResources: parserExcessResources, warnings, errors, ...parserRest } = parser;
       const bitmarkVersion = `${this.bitmarkVersion}`;
 
       // Parse resources to JSON from AST
@@ -1111,8 +1119,15 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           version,
           bitmarkVersion,
           ...parserRest,
+          warnings,
+          errors,
           excessResources,
         };
+
+        if (!this.options.enableWarnings) {
+          // Remove warnings if not enabled
+          delete this.bitWrapperJson.parser.warnings;
+        }
       } else {
         // Top level parser information (not specific to a bit)
         // TODO - not sure where this error can be written
@@ -1983,6 +1998,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       // Properties
       id: undefined,
       externalId: undefined,
+      spaceId: undefined,
       padletId: undefined,
       AIGenerated: undefined,
       releaseVersion: undefined,
@@ -1990,6 +2006,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       ageRange: undefined,
       language: undefined,
       computerLanguage: undefined,
+      subtype: undefined,
       coverImage: undefined,
       publisher: undefined,
       publications: undefined,
@@ -2247,6 +2264,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     // Properties
     if (bitJson.id == null) delete bitJson.id;
     if (bitJson.externalId == null) delete bitJson.externalId;
+    if (bitJson.spaceId == null) delete bitJson.spaceId;
     if (bitJson.padletId == null) delete bitJson.padletId;
     if (bitJson.AIGenerated == null) delete bitJson.AIGenerated;
     if (bitJson.releaseVersion == null) delete bitJson.releaseVersion;
@@ -2254,6 +2272,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.ageRange == null) delete bitJson.ageRange;
     if (bitJson.language == null) delete bitJson.language;
     if (bitJson.computerLanguage == null) delete bitJson.computerLanguage;
+    if (bitJson.subtype == null) delete bitJson.subtype;
     if (bitJson.coverImage == null) delete bitJson.coverImage;
     if (bitJson.publisher == null) delete bitJson.publisher;
     if (bitJson.publications == null) delete bitJson.publications;

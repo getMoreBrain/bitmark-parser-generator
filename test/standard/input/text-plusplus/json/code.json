@@ -87,7 +87,7 @@
     "content": [
       {
         "type": "text",
-        "text": "void moreNastyCodeMustBeEscaped() {\n  int xor = 1 ^ 0x1234; // This is fine, not breakscaped away\n  int or  = 1 // Inline comment followed by no indentation\n|^\n  return \"Not sure why that is there, but it needs to be escaped!\";\n}"
+        "text": "void moreNastyCodeMustBeEscaped() {\n  int xor = 1 ^ 0x1234; // This is fine, not breakscaped away\n  int or  = 1 // Inline comment followed by no indentation\n|\n  return \"Not sure why that is there, but it needs to be escaped!\";\n}"
       }
     ]
   },

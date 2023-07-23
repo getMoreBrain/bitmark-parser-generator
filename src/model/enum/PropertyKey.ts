@@ -15,12 +15,14 @@ export interface PropertyKeyMetadata {
 const PropertyKey = superenum({
   id: 'id',
   externalId: 'externalId',
+  spaceId: 'spaceId',
   padletId: 'padletId',
   aiGenerated: 'AIGenerated',
   releaseVersion: 'releaseVersion',
   ageRange: 'ageRange',
   language: 'language',
   computerLanguage: 'computerLanguage', // single
+  subtype: 'subtype',
   coverImage: 'coverImage',
   publisher: 'publisher',
   publications: 'publications',

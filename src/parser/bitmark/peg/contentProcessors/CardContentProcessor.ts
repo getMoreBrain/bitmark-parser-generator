@@ -88,8 +88,8 @@ function buildCards(
     // Return default empty object
   }
 
-  // Validate card set required and present, or not required and not present
-  // BitmarkPegParserValidator.validateCardSetType(context, BitContentLevel.Bit, bitType, cardSetContent, cardSetType);
+  // Add the comments
+  result.comments = processedCardSet.comments.length > 0 ? processedCardSet.comments : undefined;
 
   return result;
 }
@@ -101,6 +101,7 @@ function processCardSet(
 ): ProcessedCardSet {
   const processedCardSet: ProcessedCardSet = {
     cards: [],
+    comments: [],
   };
 
   // Early return if no card set
@@ -143,6 +144,9 @@ function processCardSet(
         );
 
         processedVariant.data = tags;
+
+        // Add any comments
+        if (tags.comments) processedCardSet.comments.push(...tags.comments);
       }
       variantNo = 0;
     }

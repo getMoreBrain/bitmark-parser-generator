@@ -10,12 +10,14 @@ export interface BitJson {
   // Properties
   id: string | string[];
   externalId: string | string[];
+  spaceId: string | string[];
   padletId: string | string[];
   AIGenerated: boolean;
   releaseVersion: string | string[];
   ageRange: number | number[];
   language: string | string[];
   computerLanguage: string | string[];
+  subtype: string | string[];
   coverImage: string | string[];
   publisher: string | string[];
   publications: string | string[];

@@ -11,7 +11,7 @@ import { BitmarkParser } from '../../../../src/parser/bitmark/BitmarkParser';
 // import { JsonParser } from '../../../../src/parser/json/JsonParser';
 import { FileUtils } from '../../../../src/utils/FileUtils';
 import { isDebugPerformance, isTestAgainstAntlrParser } from '../../../standard/config/config-test';
-import { BitJsonUtils } from '../../../utils/BitJsonUtils';
+import { JsonCleanupUtils } from '../../../utils/JsonCleanupUtils';
 import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 
 // Passed: 5, 7-9, 11, 14-28, 30, 32-33, 35, 37-39, 42, 46, 49-60, 62, 79, 85-94, 97-98, 110
@@ -268,7 +268,6 @@ describe('bitmark-parser', () => {
         const jsonOptions = {
           textAsPlainText: true, // For testing the parser, use plain text rather than JSON for text
           prettify: true, // For testing the output is easier to read if it is prettified
-          includeExtraProperties: true, // Include extra properties in the JSON when testing
         };
 
         // Copy the original test markup file to the output folder
@@ -301,7 +300,7 @@ describe('bitmark-parser', () => {
         }
 
         // Remove uninteresting JSON items
-        BitJsonUtils.cleanupJson(originalJson, { removeParser: true, removeErrors: true });
+        JsonCleanupUtils.cleanupBitJson(originalJson, { removeParser: true, removeErrors: true });
 
         // // Write original bitmark (and JSON?)
         // writeTestJsonAndBitmark(originalJson, fullFolder, id);
@@ -327,8 +326,8 @@ describe('bitmark-parser', () => {
         const newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
-        BitJsonUtils.cleanupJson(originalJson, { removeMarkup: true });
-        BitJsonUtils.cleanupJson(newJson, { removeMarkup: true, removeParser: true, removeErrors: true });
+        JsonCleanupUtils.cleanupBitJson(originalJson, { removeMarkup: true });
+        JsonCleanupUtils.cleanupBitJson(newJson, { removeMarkup: true, removeParser: true, removeErrors: true });
 
         // Compare old and new JSONs
         const diffMap = deepDiffMapper.map(originalJson, newJson, {

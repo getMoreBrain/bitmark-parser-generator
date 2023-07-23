@@ -25,12 +25,14 @@ export interface Bit {
   resourceType?: ResourceTypeType;
   id?: Property;
   externalId?: Property;
+  spaceId?: Property;
   padletId?: Property;
   aiGenerated?: Property;
   releaseVersion?: Property;
   ageRange?: Property;
   language?: Property;
   computerLanguage?: Property;
+  subtype?: Property;
   coverImage?: Property;
   publisher?: Property;
   publications?: Property;

@@ -10,7 +10,6 @@
       "isExample": false,
       "example": "",
       "id": ["304379"],
-      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -38,7 +37,6 @@
       "isExample": false,
       "example": "",
       "id": ["304379"],
-      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -66,7 +64,6 @@
       "isExample": false,
       "example": "",
       "id": ["304379"],
-      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -94,7 +91,6 @@
       "isExample": false,
       "example": "",
       "id": ["304379"],
-      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -122,7 +118,6 @@
       "isExample": false,
       "example": "",
       "id": ["304379"],
-      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -150,7 +145,6 @@
       "isExample": false,
       "example": "",
       "id": ["304379"],
-      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -178,7 +172,6 @@
       "isExample": false,
       "example": "",
       "id": ["304379"],
-      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -206,7 +199,6 @@
       "isExample": false,
       "example": "",
       "id": ["304379"],
-      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -233,7 +225,6 @@
       "hint": "",
       "isExample": false,
       "example": "",
-      "stat": ["ok"],
       "id": ["304379"],
       "resource": {
         "type": "image",
@@ -262,7 +253,6 @@
       "isExample": false,
       "example": "",
       "id": ["304379"],
-      "stat": ["ok"],
       "resource": {
         "type": "image",
         "image": {
@@ -303,8 +293,7 @@
           "showInIndex": false,
           "caption": ""
         }
-      },
-      "stat": ["ngk"]
+      }
     }
   },
   {
@@ -317,8 +306,7 @@
       "hint": "",
       "example": "",
       "isExample": false,
-      "body": ".gif]\n.gif]",
-      "stat": ["ngk"]
+      "body": ".gif]\n.gif]"
     }
   },
   {

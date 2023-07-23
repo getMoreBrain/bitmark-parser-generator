@@ -16,6 +16,8 @@ import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
 
+import { PeggyGrammarLocation } from './PeggyGrammarLocation';
+
 import {
   Body,
   Statement,
@@ -44,8 +46,8 @@ const CARD_SIDE_DIVIDER_V1 = '==';
 const CARD_VARIANT_DIVIDER_V1 = '--';
 
 export interface ParseOptions {
-  filename?: string;
   startRule?: string;
+  grammarSource?: PeggyGrammarLocation | unknown;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   tracer?: any;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -159,6 +161,7 @@ export interface BitSpecificCards {
   choices?: Choice[];
   questions?: Question[];
   botResponses?: BotResponse[];
+  comments?: Comment[];
 }
 
 export type BitContent = TypeValue | TypeKeyValue;
@@ -238,7 +241,9 @@ export interface UnparsedCardSide {
   variants: UnparsedCardContent[];
 }
 
-type UnparsedCardContent = string;
+interface UnparsedCardContent extends ParserData {
+  value: string;
+}
 
 export interface ParsedCardSet {
   cards: ParsedCard[];
@@ -256,6 +261,7 @@ type ParsedCardContent = BitContent[];
 
 export interface ProcessedCardSet {
   cards: ProcessedCard[];
+  comments: Comment[];
 }
 
 export interface ProcessedCard {

@@ -58,6 +58,13 @@ const BREAKSCAPE_REGEX = new RegExp('([=*_`!])([\\^]*)\\1|([\\|\\[])', 'g');
 const BREAKSCAPE_REGEX_REPLACER = '$1$3^$2$1';
 
 // Regex explanation:
+// - match a single | or • or # character at the start of a line and capture in group 1
+// This will capture all new block characters within the code text.
+// Replace with group 1, ^
+const BREAKSCAPE_CODE_REGEX = new RegExp('^(\\||•|#)', 'gm');
+const BREAKSCAPE_CODE_REGEX_REPLACER = '$1^';
+
+// Regex explanation:
 // - Match newline or carriage return + newline
 const INDENTATION_REGEX = new RegExp(/(\n|\r\n)/, 'g');
 
@@ -89,6 +96,7 @@ class TextGenerator implements AstWalkCallbacks {
   private prevIndent = 0;
   private indentationStringCache = '';
   private inCodeBlock = false;
+  private exitedCodeBlock = false;
   private placeholderIndex = 0;
   private placeholders: BodyBitsJson = {};
 
@@ -164,6 +172,7 @@ class TextGenerator implements AstWalkCallbacks {
     this.prevIndent = 0;
     this.indentationStringCache = '';
     this.inCodeBlock = false;
+    this.exitedCodeBlock = false;
     this.placeholderIndex = 0;
     this.placeholders = {};
   }
@@ -289,6 +298,14 @@ class TextGenerator implements AstWalkCallbacks {
     this.handleIndent(node);
 
     switch (node.type) {
+      case TextNodeType.paragraph:
+        this.writeParagraph(node);
+        break;
+
+      case TextNodeType.hardBreak:
+        this.writeHardBreak(node);
+        break;
+
       case TextNodeType.text:
         this.writeMarks(node, true);
         this.writeText(node);
@@ -324,6 +341,9 @@ class TextGenerator implements AstWalkCallbacks {
       default:
       // Ignore unknown type
     }
+
+    // Clear exited flags
+    this.exitedCodeBlock = false;
   }
 
   protected handleBetweenNode(node: TextNode): void {
@@ -341,12 +361,10 @@ class TextGenerator implements AstWalkCallbacks {
 
       case TextNodeType.paragraph:
         if (this.textFormat !== TextFormat.bitmarkMinusMinus) {
-          // Paragraph Block type node, write 2x newline
+          // Paragraph Block type node, write 1x newline
           // Except:
           // - for bitmark-- where we don't write newlines for the single wrapping block
-          // - for within a list, where we only write one newline
           this.writeNL();
-          if (this.currentIndent <= 0) this.writeNL();
         }
         break;
 
@@ -361,10 +379,9 @@ class TextGenerator implements AstWalkCallbacks {
       case TextNodeType.codeBlock:
         // CodeBlock type node, write 2x newline
         this.writeNL();
-        this.write('|');
-        this.writeNL();
         this.writeNL();
         this.inCodeBlock = false;
+        this.exitedCodeBlock = true;
         break;
 
       case TextNodeType.bulletList:
@@ -475,6 +492,8 @@ class TextGenerator implements AstWalkCallbacks {
     let s: string = node.text;
     if (!codeBreakscaping) {
       s = s.replace(BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER);
+    } else {
+      s = s.replace(BREAKSCAPE_CODE_REGEX, BREAKSCAPE_CODE_REGEX_REPLACER);
     }
 
     // Apply any required indentation
@@ -549,6 +568,24 @@ class TextGenerator implements AstWalkCallbacks {
           // Do nothing (link is handled in writeText)
         }
       }
+    }
+  }
+
+  protected writeParagraph(_node: TextNode): void {
+    if (this.exitedCodeBlock) {
+      this.write('|');
+      this.writeNL();
+      this.writeNL();
+    }
+  }
+
+  protected writeHardBreak(_node: TextNode): void {
+    this.writeNL();
+
+    // Apply any required indentation (when in list)
+    if (this.currentIndent > 1) {
+      const indentationString = this.getIndentationString();
+      this.write(indentationString);
     }
   }
 
@@ -633,7 +670,7 @@ class TextGenerator implements AstWalkCallbacks {
     if (node.attrs == null || !node.attrs.language) return;
     const attrs = node.attrs;
 
-    const s = `|code:${attrs.language}\n\n`;
+    const s = `|code:${attrs.language}\n`;
 
     // Write the text
     this.write(s);

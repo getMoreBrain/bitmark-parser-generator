@@ -166,34 +166,23 @@ class BitmarkPegParserProcessor {
   }
 
   // Build bits
-  buildBits(bitStrs: string[]): BitmarkAst {
+  buildBits(rawBits: SubParserResult<Bit>[]): BitmarkAst {
     const bits: Bit[] = [];
     let errors: ParserError[] = [];
 
-    for (const bitStr of bitStrs) {
-      const bitTrimmed = bitStr.trim();
-      if (DEBUG_BIT_RAW) this.debugPrint('RAW BIT', bitTrimmed);
-
+    for (const rawBit of rawBits) {
       // Ignore empty bits (only happens if entire file is empty / whitespace only
-      if (!bitTrimmed) continue;
+      if (!rawBit) continue;
 
-      // Parse the raw bit
-      const bitParserResult = this.parse(bitStr, {
-        startRule: 'bit',
-      }) as SubParserResult<Bit>;
-
-      const bit = bitParserResult.value;
+      const bit = rawBit.value;
       if (bit) {
-        // Add markup to the bit
-        bit.markup = bitStr.trim();
-
         // Add the bit to the list of bits
         bits.push(bit);
       } else {
         // TODO - convert error location to master parser location
 
         // If bit is undefined, then there was an error parsing the bit
-        errors = errors.concat(bitParserResult.errors ?? []);
+        errors = errors.concat(rawBit.errors ?? []);
       }
     }
 
@@ -240,8 +229,14 @@ class BitmarkPegParserProcessor {
     // Build the resources
     const resource = buildResource(this.context, bitType, resourceType, resources);
 
-    // Build the comments, warnings and errors for the parser object
-    if (comments) this.parser.comments = comments;
+    // Build the comments for the parser object
+    if (comments || bitSpecificCards.comments) {
+      this.parser.comments = [];
+      if (comments) this.parser.comments.push(...comments);
+      if (bitSpecificCards.comments) this.parser.comments.push(...bitSpecificCards.comments);
+    }
+
+    // Build the warnings and errors for the parser object
     const warnings = this.buildBitLevelWarnings();
     const errors = this.buildBitLevelErrors();
     if (warnings) this.parser.warnings = warnings;

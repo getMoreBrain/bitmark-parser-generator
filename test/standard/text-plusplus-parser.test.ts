@@ -9,6 +9,7 @@ import { performance } from 'perf_hooks';
 import { TextFormat } from '../../src/model/enum/TextFormat';
 import { TextParser } from '../../src/parser/text/TextParser';
 import { FileUtils } from '../../src/utils/FileUtils';
+import { JsonCleanupUtils } from '../utils/JsonCleanupUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
 import { isDebugPerformance } from './config/config-test';
@@ -99,7 +100,7 @@ describe('text-parser', () => {
         const originalJson = fs.readJsonSync(originalJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
-        // BitJsonUtils.cleanupJson(originalJson, { removeParser: true, removeErrors: true });
+        JsonCleanupUtils.cleanupBitmarkPlusPlusJson(originalJson, { removeErrors: true });
 
         // // Write original bitmark (and JSON?)
         // writeTestJsonAndBitmark(originalJson, fullFolder, id);
@@ -120,8 +121,8 @@ describe('text-parser', () => {
         const newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
-        // BitJsonUtils.cleanupJson(originalJson, { removeMarkup: true });
-        // BitJsonUtils.cleanupJson(newJson, { removeMarkup: true, removeParser: true, removeErrors: true });
+        JsonCleanupUtils.cleanupBitmarkPlusPlusJson(originalJson, { removeErrors: true });
+        JsonCleanupUtils.cleanupBitmarkPlusPlusJson(newJson, { removeErrors: true });
 
         // Compare old and new JSONs
         const diffMap = deepDiffMapper.map(originalJson, newJson, {

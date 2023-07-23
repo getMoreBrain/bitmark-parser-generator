@@ -83,12 +83,14 @@ class Builder extends BaseBuilder {
     resourceType?: ResourceTypeType; // This is optional, it will be inferred from the resource
     id?: string | string[];
     externalId?: string | string[];
+    spaceId?: string | string[];
     padletId?: string | string[];
     aiGenerated?: boolean;
     releaseVersion?: string | string[];
     ageRange?: number | number[];
     language?: string | string[];
     computerLanguage?: string | string[];
+    subtype?: string | string[];
     coverImage?: string | string[];
     publisher?: string | string[];
     publications?: string | string[];
@@ -163,12 +165,14 @@ class Builder extends BaseBuilder {
       resourceType,
       id,
       externalId,
+      spaceId,
       padletId,
       aiGenerated,
       releaseVersion,
       ageRange,
       language,
       computerLanguage,
+      subtype,
       coverImage,
       publisher,
       publications,
@@ -233,6 +237,7 @@ class Builder extends BaseBuilder {
       resourceType: BitUtils.calculateValidResourceType(bitType, resourceType, resource),
       id: this.toAstProperty(PropertyKey.id, id),
       externalId: this.toAstProperty(PropertyKey.externalId, externalId),
+      spaceId: this.toAstProperty(PropertyKey.spaceId, spaceId),
       padletId: this.toAstProperty(PropertyKey.padletId, padletId),
       aiGenerated: this.toAstProperty(PropertyKey.aiGenerated, aiGenerated),
       releaseVersion: this.toAstProperty(PropertyKey.releaseVersion, releaseVersion),
@@ -240,6 +245,7 @@ class Builder extends BaseBuilder {
       ageRange: this.toAstProperty(PropertyKey.ageRange, ageRange),
       language: this.toAstProperty(PropertyKey.language, language),
       computerLanguage: this.toAstProperty(PropertyKey.computerLanguage, computerLanguage),
+      subtype: this.toAstProperty(PropertyKey.subtype, subtype),
       coverImage: this.toAstProperty(PropertyKey.coverImage, coverImage),
       publisher: this.toAstProperty(PropertyKey.publisher, publisher),
       publications: this.toAstProperty(PropertyKey.publications, publications),

@@ -16,7 +16,17 @@
         "type": "text"
       },
       {
-        "text": " try a link as first thing\n\ntry a link in the ",
+        "text": " try a link as first thing",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "try a link in the ",
         "type": "text"
       },
       {
@@ -33,7 +43,17 @@
         "type": "text"
       },
       {
-        "text": " middle\n\ntry a link at the end ",
+        "text": " middle",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "try a link at the end ",
         "type": "text"
       },
       {
@@ -50,12 +70,10 @@
         "type": "text"
       },
       {
-        "text": "\n",
-        "type": "text"
+        "type": "hardBreak"
       },
       {
-        "text": "\n",
-        "type": "text"
+        "type": "hardBreak"
       },
       {
         "marks": [
@@ -67,7 +85,7 @@
             }
           }
         ],
-        "text": "Highligh text",
+        "text": "Highlight text",
         "type": "text"
       },
       {

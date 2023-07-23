@@ -1,6 +1,6 @@
 {
   "name": "@getmorebrain/bitmark-parser-generator",
-  "version": "1.0.7",
+  "version": "1.0.11",
   "description": "A bitmark parser and generator using Peggy.js",
   "author": "Richard Sewell",
   "license": "ISC",
