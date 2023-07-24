@@ -3,8 +3,6 @@
 
 ![Build & Test](https://github.com/getMoreBrain/bitmark-parser-generator/actions/workflows/build-test.yml/badge.svg?branch=main)
 
-NOTE: THIS PROJECT IS NOT YET PRODUCTION READY.
-
 A bitmark parser and generator using Peggy.js.
 
 [List of supported bits](./SUPPORTED_BITS.md)
