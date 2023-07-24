@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / AudioEmbedResource
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / AudioEmbedResource
 
 # Interface: AudioEmbedResource
 
@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:326](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L326)
+[model/ast/Nodes.ts:346](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L346)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:327](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L327)
+[model/ast/Nodes.ts:347](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L347)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:328](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L328)
+[model/ast/Nodes.ts:348](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L348)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:329](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L329)
+[model/ast/Nodes.ts:349](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L349)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:330](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L330)
+[model/ast/Nodes.ts:350](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L350)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:331](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L331)
+[model/ast/Nodes.ts:351](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L351)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:332](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L332)
+[model/ast/Nodes.ts:352](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L352)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:365](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L365)
+[model/ast/Nodes.ts:385](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L385)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:366](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L366)
+[model/ast/Nodes.ts:386](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L386)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:367](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L367)
+[model/ast/Nodes.ts:387](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L387)
 
 ___
 
@@ -164,4 +164,4 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:368](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L368)
+[model/ast/Nodes.ts:388](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L388)

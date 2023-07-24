@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / DocumentEmbedResourceWrapperJson
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / DocumentEmbedResourceWrapperJson
 
 # Interface: DocumentEmbedResourceWrapperJson
 
@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:111](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L111)
+[model/json/ResourceJson.ts:113](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L113)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:112](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L112)
+[model/json/ResourceJson.ts:114](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L114)

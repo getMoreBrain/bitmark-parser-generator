@@ -1,8 +1,14 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Builder
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Builder
 
 # Class: Builder
 
 Builder to build bitmark AST node programmatically
+
+## Hierarchy
+
+- `BaseBuilder`
+
+  ↳ **`Builder`**
 
 ## Table of contents
 
@@ -33,12 +39,17 @@ Builder to build bitmark AST node programmatically
 - [highlightText](Builder.md#highlightText)
 - [statement](Builder.md#statement)
 - [partner](Builder.md#partner)
+- [comment](Builder.md#comment)
 
 ## Constructors
 
 ### constructor
 
 • **new Builder**()
+
+#### Inherited from
+
+BaseBuilder.constructor
 
 ## Methods
 
@@ -62,7 +73,7 @@ Build bitmark node
 
 #### Defined in
 
-[ast/Builder.ts:57](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L57)
+[ast/Builder.ts:60](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L60)
 
 ___
 
@@ -82,11 +93,14 @@ Build bit node
 | `data.resourceType?` | [`ResourceTypeType`](../modules.md#ResourceTypeType) | - |
 | `data.id?` | `string` \| `string`[] | - |
 | `data.externalId?` | `string` \| `string`[] | - |
+| `data.spaceId?` | `string` \| `string`[] | - |
 | `data.padletId?` | `string` \| `string`[] | - |
+| `data.aiGenerated?` | `boolean` | - |
 | `data.releaseVersion?` | `string` \| `string`[] | - |
 | `data.ageRange?` | `number` \| `number`[] | - |
 | `data.language?` | `string` \| `string`[] | - |
 | `data.computerLanguage?` | `string` \| `string`[] | - |
+| `data.subtype?` | `string` \| `string`[] | - |
 | `data.coverImage?` | `string` \| `string`[] | - |
 | `data.publisher?` | `string` \| `string`[] | - |
 | `data.publications?` | `string` \| `string`[] | - |
@@ -130,10 +144,10 @@ Build bit node
 | `data.hint?` | `string` | - |
 | `data.instruction?` | `string` | - |
 | `data.example?` | `string` \| `boolean` | - |
-| `data.partner?` | `Partner` | - |
+| `data.partner?` | [`Partner`](../interfaces/Partner.md) | - |
 | `data.extraProperties?` | `Object` | - |
 | `data.resource?` | [`Resource`](../interfaces/Resource.md) | - |
-| `data.body?` | [`Body`](../modules.md#Body) | - |
+| `data.body?` | [`Body`](../interfaces/Body.md) | - |
 | `data.sampleSolution?` | `string` \| `string`[] | - |
 | `data.elements?` | `string`[] | - |
 | `data.statement?` | [`Statement`](../interfaces/Statement.md) | - |
@@ -145,9 +159,9 @@ Build bit node
 | `data.matrix?` | [`Matrix`](../interfaces/Matrix.md)[] | - |
 | `data.choices?` | [`Choice`](../interfaces/Choice.md)[] | - |
 | `data.questions?` | [`Question`](../interfaces/Question.md)[] | - |
-| `data.botResponses?` | `BotResponse`[] | - |
+| `data.botResponses?` | [`BotResponse`](../interfaces/BotResponse.md)[] | - |
 | `data.footer?` | [`FooterText`](../interfaces/FooterText.md) | - |
-| `data.bitmark?` | `string` | - |
+| `data.markup?` | `string` | - |
 | `data.parser?` | `ParserInfo` | - |
 
 #### Returns
@@ -156,7 +170,7 @@ Build bit node
 
 #### Defined in
 
-[ast/Builder.ts:74](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L74)
+[ast/Builder.ts:80](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L80)
 
 ___
 
@@ -186,7 +200,7 @@ Build choice node
 
 #### Defined in
 
-[ast/Builder.ts:320](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L320)
+[ast/Builder.ts:326](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L326)
 
 ___
 
@@ -216,13 +230,13 @@ Build response node
 
 #### Defined in
 
-[ast/Builder.ts:355](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L355)
+[ast/Builder.ts:361](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L361)
 
 ___
 
 ### botResponse
 
-▸ **botResponse**(`data`): `BotResponse`
+▸ **botResponse**(`data`): [`BotResponse`](../interfaces/BotResponse.md)
 
 Build bot response node
 
@@ -240,11 +254,11 @@ Build bot response node
 
 #### Returns
 
-`BotResponse`
+[`BotResponse`](../interfaces/BotResponse.md)
 
 #### Defined in
 
-[ast/Builder.ts:390](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L390)
+[ast/Builder.ts:396](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L396)
 
 ___
 
@@ -273,13 +287,13 @@ Build quiz node
 
 #### Defined in
 
-[ast/Builder.ts:421](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L421)
+[ast/Builder.ts:429](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L429)
 
 ___
 
 ### heading
 
-▸ **heading**(`data`): [`Heading`](../interfaces/Heading.md)
+▸ **heading**(`data`): `undefined` \| [`Heading`](../interfaces/Heading.md)
 
 Build heading node
 
@@ -293,11 +307,11 @@ Build heading node
 
 #### Returns
 
-[`Heading`](../interfaces/Heading.md)
+`undefined` \| [`Heading`](../interfaces/Heading.md)
 
 #### Defined in
 
-[ast/Builder.ts:454](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L454)
+[ast/Builder.ts:462](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L462)
 
 ___
 
@@ -330,7 +344,7 @@ Build pair node
 
 #### Defined in
 
-[ast/Builder.ts:475](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L475)
+[ast/Builder.ts:485](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L485)
 
 ___
 
@@ -361,7 +375,7 @@ Build matrix node
 
 #### Defined in
 
-[ast/Builder.ts:517](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L517)
+[ast/Builder.ts:527](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L527)
 
 ___
 
@@ -389,7 +403,7 @@ Build matrixCell node
 
 #### Defined in
 
-[ast/Builder.ts:554](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L554)
+[ast/Builder.ts:564](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L564)
 
 ___
 
@@ -421,13 +435,13 @@ Build question node
 
 #### Defined in
 
-[ast/Builder.ts:585](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L585)
+[ast/Builder.ts:595](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L595)
 
 ___
 
 ### body
 
-▸ **body**(`data`): [`Body`](../modules.md#Body)
+▸ **body**(`data`): [`Body`](../interfaces/Body.md)
 
 Build body node
 
@@ -436,15 +450,15 @@ Build body node
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `data` | `Object` | data for the node |
-| `data.bodyParts` | [`BodyPart`](../modules.md#BodyPart)[] | - |
+| `data.bodyParts` | [`BodyPart`](../interfaces/BodyPart.md)[] | - |
 
 #### Returns
 
-[`Body`](../modules.md#Body)
+[`Body`](../interfaces/Body.md)
 
 #### Defined in
 
-[ast/Builder.ts:635](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L635)
+[ast/Builder.ts:645](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L645)
 
 ___
 
@@ -452,7 +466,7 @@ ___
 
 ▸ **bodyText**(`data`): [`BodyText`](../interfaces/BodyText.md)
 
-Build bodyText node
+Build bodyPartText node
 
 #### Parameters
 
@@ -467,7 +481,7 @@ Build bodyText node
 
 #### Defined in
 
-[ast/Builder.ts:648](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L648)
+[ast/Builder.ts:661](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L661)
 
 ___
 
@@ -490,7 +504,7 @@ Build footer node
 
 #### Defined in
 
-[ast/Builder.ts:664](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L664)
+[ast/Builder.ts:680](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L680)
 
 ___
 
@@ -519,7 +533,7 @@ Build gap node
 
 #### Defined in
 
-[ast/Builder.ts:680](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L680)
+[ast/Builder.ts:696](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L696)
 
 ___
 
@@ -550,7 +564,7 @@ Build select node
 
 #### Defined in
 
-[ast/Builder.ts:715](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L715)
+[ast/Builder.ts:732](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L732)
 
 ___
 
@@ -580,7 +594,7 @@ Build selectOption node
 
 #### Defined in
 
-[ast/Builder.ts:754](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L754)
+[ast/Builder.ts:772](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L772)
 
 ___
 
@@ -611,7 +625,7 @@ Build highlight node
 
 #### Defined in
 
-[ast/Builder.ts:789](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L789)
+[ast/Builder.ts:807](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L807)
 
 ___
 
@@ -642,7 +656,7 @@ Build highlightText node
 
 #### Defined in
 
-[ast/Builder.ts:828](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L828)
+[ast/Builder.ts:847](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L847)
 
 ___
 
@@ -672,13 +686,13 @@ Build statement node
 
 #### Defined in
 
-[ast/Builder.ts:865](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L865)
+[ast/Builder.ts:884](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L884)
 
 ___
 
 ### partner
 
-▸ **partner**(`data`): `Partner`
+▸ **partner**(`data`): [`Partner`](../interfaces/Partner.md)
 
 Build (chat) partner node
 
@@ -692,8 +706,34 @@ Build (chat) partner node
 
 #### Returns
 
-`Partner`
+[`Partner`](../interfaces/Partner.md)
 
 #### Defined in
 
-[ast/Builder.ts:900](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Builder.ts#L900)
+[ast/Builder.ts:919](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L919)
+
+___
+
+### comment
+
+▸ **comment**(`data`): `Comment`
+
+Build comment node
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `data` | `Object` | data for the node |
+| `data.text` | `string` | - |
+| `data.location?` | `Object` | - |
+| `data.location.start` | `ParserLocation` | - |
+| `data.location.end` | `ParserLocation` | - |
+
+#### Returns
+
+`Comment`
+
+#### Defined in
+
+[ast/Builder.ts:940](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Builder.ts#L940)

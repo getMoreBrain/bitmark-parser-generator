@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / VideoLinkResourceJson
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / VideoLinkResourceJson
 
 # Interface: VideoLinkResourceJson
 
@@ -43,7 +43,7 @@ BaseResourceJson.license
 
 #### Defined in
 
-[model/json/ResourceJson.ts:137](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L137)
+[model/json/ResourceJson.ts:139](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L139)
 
 ___
 
@@ -57,7 +57,7 @@ BaseResourceJson.copyright
 
 #### Defined in
 
-[model/json/ResourceJson.ts:138](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L138)
+[model/json/ResourceJson.ts:140](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L140)
 
 ___
 
@@ -71,7 +71,7 @@ BaseResourceJson.provider
 
 #### Defined in
 
-[model/json/ResourceJson.ts:139](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L139)
+[model/json/ResourceJson.ts:141](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L141)
 
 ___
 
@@ -85,13 +85,13 @@ BaseResourceJson.showInIndex
 
 #### Defined in
 
-[model/json/ResourceJson.ts:140](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L140)
+[model/json/ResourceJson.ts:142](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L142)
 
 ___
 
 ### caption
 
-• **caption**: `string`
+• **caption**: [`Text`](../modules.md#Text)
 
 #### Inherited from
 
@@ -99,7 +99,7 @@ BaseResourceJson.caption
 
 #### Defined in
 
-[model/json/ResourceJson.ts:141](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L141)
+[model/json/ResourceJson.ts:143](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L143)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:230](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L230)
+[model/json/ResourceJson.ts:232](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L232)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:231](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L231)
+[model/json/ResourceJson.ts:233](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L233)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:232](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L232)
+[model/json/ResourceJson.ts:234](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L234)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:233](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L233)
+[model/json/ResourceJson.ts:235](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L235)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:234](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L234)
+[model/json/ResourceJson.ts:236](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L236)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:235](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L235)
+[model/json/ResourceJson.ts:237](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L237)
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:236](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L236)
+[model/json/ResourceJson.ts:238](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L238)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:237](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L237)
+[model/json/ResourceJson.ts:239](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L239)
 
 ___
 
@@ -189,7 +189,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:238](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L238)
+[model/json/ResourceJson.ts:240](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L240)
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:239](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L239)
+[model/json/ResourceJson.ts:241](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L241)
 
 ___
 
@@ -209,7 +209,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:240](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L240)
+[model/json/ResourceJson.ts:242](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L242)
 
 ___
 
@@ -219,7 +219,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:241](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L241)
+[model/json/ResourceJson.ts:243](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L243)
 
 ___
 
@@ -229,4 +229,4 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:242](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L242)
+[model/json/ResourceJson.ts:244](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L244)

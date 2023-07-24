@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / AudioEmbedResourceJson
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / AudioEmbedResourceJson
 
 # Interface: AudioEmbedResourceJson
 
@@ -36,7 +36,7 @@ BaseResourceJson.license
 
 #### Defined in
 
-[model/json/ResourceJson.ts:137](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L137)
+[model/json/ResourceJson.ts:139](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L139)
 
 ___
 
@@ -50,7 +50,7 @@ BaseResourceJson.copyright
 
 #### Defined in
 
-[model/json/ResourceJson.ts:138](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L138)
+[model/json/ResourceJson.ts:140](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L140)
 
 ___
 
@@ -64,7 +64,7 @@ BaseResourceJson.provider
 
 #### Defined in
 
-[model/json/ResourceJson.ts:139](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L139)
+[model/json/ResourceJson.ts:141](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L141)
 
 ___
 
@@ -78,13 +78,13 @@ BaseResourceJson.showInIndex
 
 #### Defined in
 
-[model/json/ResourceJson.ts:140](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L140)
+[model/json/ResourceJson.ts:142](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L142)
 
 ___
 
 ### caption
 
-• **caption**: `string`
+• **caption**: [`Text`](../modules.md#Text)
 
 #### Inherited from
 
@@ -92,7 +92,7 @@ BaseResourceJson.caption
 
 #### Defined in
 
-[model/json/ResourceJson.ts:141](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L141)
+[model/json/ResourceJson.ts:143](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L143)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:180](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L180)
+[model/json/ResourceJson.ts:182](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L182)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:181](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L181)
+[model/json/ResourceJson.ts:183](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L183)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:182](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L182)
+[model/json/ResourceJson.ts:184](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L184)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:183](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L183)
+[model/json/ResourceJson.ts:185](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L185)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:184](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L184)
+[model/json/ResourceJson.ts:186](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L186)
 
 ___
 
@@ -152,4 +152,4 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:185](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L185)
+[model/json/ResourceJson.ts:187](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L187)

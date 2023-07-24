@@ -1,8 +1,14 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / AstWalkCallbacks
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / AstWalkCallbacks
 
-# Interface: AstWalkCallbacks
+# Interface: AstWalkCallbacks<C\>
 
 Callbacks for walking the AST
+
+## Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `C` | `undefined` |
 
 ## Implemented by
 
@@ -22,11 +28,11 @@ Callbacks for walking the AST
 
 ### enter
 
-• `Optional` **enter**: (`node`: [`NodeInfo`](NodeInfo.md), `parent`: `undefined` \| [`NodeInfo`](NodeInfo.md), `route`: [`NodeInfo`](NodeInfo.md)[]) => `boolean` \| `void`
+• `Optional` **enter**: (`node`: [`NodeInfo`](NodeInfo.md), `parent`: `undefined` \| [`NodeInfo`](NodeInfo.md), `route`: [`NodeInfo`](NodeInfo.md)[], `context`: `C`) => `boolean` \| `void`
 
 #### Type declaration
 
-▸ (`node`, `parent`, `route`): `boolean` \| `void`
+▸ (`node`, `parent`, `route`, `context`): `boolean` \| `void`
 
 Called when a branch node is entered
 
@@ -37,6 +43,7 @@ Called when a branch node is entered
 | `node` | [`NodeInfo`](NodeInfo.md) | this node info |
 | `parent` | `undefined` \| [`NodeInfo`](NodeInfo.md) | parent node info |
 | `route` | [`NodeInfo`](NodeInfo.md)[] | route to this node from the root |
+| `context` | `C` | - |
 
 ##### Returns
 
@@ -44,17 +51,17 @@ Called when a branch node is entered
 
 #### Defined in
 
-[ast/Ast.ts:36](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L36)
+[ast/Ast.ts:36](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Ast.ts#L36)
 
 ___
 
 ### between
 
-• `Optional` **between**: (`node`: [`NodeInfo`](NodeInfo.md), `leftNode`: [`NodeInfo`](NodeInfo.md), `rightNode`: [`NodeInfo`](NodeInfo.md), `parent`: `undefined` \| [`NodeInfo`](NodeInfo.md), `route`: [`NodeInfo`](NodeInfo.md)[]) => `boolean` \| `void`
+• `Optional` **between**: (`node`: [`NodeInfo`](NodeInfo.md), `leftNode`: [`NodeInfo`](NodeInfo.md), `rightNode`: [`NodeInfo`](NodeInfo.md), `parent`: `undefined` \| [`NodeInfo`](NodeInfo.md), `route`: [`NodeInfo`](NodeInfo.md)[], `context`: `C`) => `boolean` \| `void`
 
 #### Type declaration
 
-▸ (`node`, `leftNode`, `rightNode`, `parent`, `route`): `boolean` \| `void`
+▸ (`node`, `leftNode`, `rightNode`, `parent`, `route`, `context`): `boolean` \| `void`
 
 Called when between child nodes
 
@@ -67,6 +74,7 @@ Called when between child nodes
 | `rightNode` | [`NodeInfo`](NodeInfo.md) | the right (next) child node info |
 | `parent` | `undefined` \| [`NodeInfo`](NodeInfo.md) | parent node info (parent of node) |
 | `route` | [`NodeInfo`](NodeInfo.md)[] |  |
+| `context` | `C` | - |
 
 ##### Returns
 
@@ -74,17 +82,17 @@ Called when between child nodes
 
 #### Defined in
 
-[ast/Ast.ts:48](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L48)
+[ast/Ast.ts:48](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Ast.ts#L48)
 
 ___
 
 ### exit
 
-• `Optional` **exit**: (`node`: [`NodeInfo`](NodeInfo.md), `parent`: `undefined` \| [`NodeInfo`](NodeInfo.md), `route`: [`NodeInfo`](NodeInfo.md)[]) => `void`
+• `Optional` **exit**: (`node`: [`NodeInfo`](NodeInfo.md), `parent`: `undefined` \| [`NodeInfo`](NodeInfo.md), `route`: [`NodeInfo`](NodeInfo.md)[], `context`: `C`) => `void`
 
 #### Type declaration
 
-▸ (`node`, `parent`, `route`): `void`
+▸ (`node`, `parent`, `route`, `context`): `void`
 
 Called when a branch node is exited
 
@@ -95,6 +103,7 @@ Called when a branch node is exited
 | `node` | [`NodeInfo`](NodeInfo.md) | this node info |
 | `parent` | `undefined` \| [`NodeInfo`](NodeInfo.md) | parent node info |
 | `route` | [`NodeInfo`](NodeInfo.md)[] | route to this node from the root |
+| `context` | `C` | - |
 
 ##### Returns
 
@@ -102,17 +111,17 @@ Called when a branch node is exited
 
 #### Defined in
 
-[ast/Ast.ts:63](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L63)
+[ast/Ast.ts:64](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Ast.ts#L64)
 
 ___
 
 ### leaf
 
-• `Optional` **leaf**: (`node`: [`NodeInfo`](NodeInfo.md), `parent`: `undefined` \| [`NodeInfo`](NodeInfo.md), `route`: [`NodeInfo`](NodeInfo.md)[]) => `void`
+• `Optional` **leaf**: (`node`: [`NodeInfo`](NodeInfo.md), `parent`: `undefined` \| [`NodeInfo`](NodeInfo.md), `route`: [`NodeInfo`](NodeInfo.md)[], `context`: `C`) => `void`
 
 #### Type declaration
 
-▸ (`node`, `parent`, `route`): `void`
+▸ (`node`, `parent`, `route`, `context`): `void`
 
 Called when a leaf node is entered
 
@@ -123,6 +132,7 @@ Called when a leaf node is entered
 | `node` | [`NodeInfo`](NodeInfo.md) | this node info |
 | `parent` | `undefined` \| [`NodeInfo`](NodeInfo.md) | parent node info |
 | `route` | [`NodeInfo`](NodeInfo.md)[] | route to this node from the root |
+| `context` | `C` | - |
 
 ##### Returns
 
@@ -130,4 +140,4 @@ Called when a leaf node is entered
 
 #### Defined in
 
-[ast/Ast.ts:72](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L72)
+[ast/Ast.ts:73](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Ast.ts#L73)

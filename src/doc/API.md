@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../README.md)
+[@gmb/bitmark-parser-generator](../README.md)
 ================
 
 A bitmark generator.

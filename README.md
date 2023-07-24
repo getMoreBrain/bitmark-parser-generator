@@ -1,4 +1,4 @@
-@getmorebrain/bitmark-parser-generator
+@gmb/bitmark-parser-generator
 ================
 
 ![Build & Test](https://github.com/getMoreBrain/bitmark-parser-generator/actions/workflows/build-test.yml/badge.svg?branch=main)
@@ -20,12 +20,12 @@ Use this package to:
 
 Using yarn:
 ```
-$ yarn add @getmorebrain/bitmark-parser-generator
+$ yarn add @gmb/bitmark-parser-generator
 ```
 
 Using npm:
 ```
-$ npm install @getmorebrain/bitmark-parser-generator
+$ npm install @gmb/bitmark-parser-generator
 ```
 
 ### CDN (TODO - not yet implemented)
@@ -33,13 +33,13 @@ $ npm install @getmorebrain/bitmark-parser-generator
 Using jsDelivr CDN (ES5 UMD module):
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@getmorebrain/bitmark-parser-generator@<version>/dist/browser/bitmark-parser-generator.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@gmb/bitmark-parser-generator@<version>/dist/browser/bitmark-parser-generator.min.js"></script>
 ```
 
 Using unpkg CDN:
 
 ```html
-<script src="https://unpkg.com/@getmorebrain/bitmark-parser-generator@<version>/dist/bitmark-parser-generator.min.js"></script>
+<script src="https://unpkg.com/@gmb/bitmark-parser-generator@<version>/dist/bitmark-parser-generator.min.js"></script>
 ```
 
 ## Basic Usage

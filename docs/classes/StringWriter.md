@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / StringWriter
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / StringWriter
 
 # Class: StringWriter
 
@@ -18,11 +18,17 @@ Writer to write to a string.
 
 - [endOfLineString](StringWriter.md#endOfLineString)
 
+### Accessors
+
+- [isSync](StringWriter.md#isSync)
+
 ### Methods
 
 - [getString](StringWriter.md#getString)
 - [open](StringWriter.md#open)
 - [close](StringWriter.md#close)
+- [openSync](StringWriter.md#openSync)
+- [closeSync](StringWriter.md#closeSync)
 - [writeLine](StringWriter.md#writeLine)
 - [writeLines](StringWriter.md#writeLines)
 - [write](StringWriter.md#write)
@@ -42,7 +48,31 @@ Writer to write to a string.
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:9](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StringWriter.ts#L9)
+[ast/writer/StringWriter.ts:9](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StringWriter.ts#L9)
+
+## Accessors
+
+### isSync
+
+• `get` **isSync**(): `boolean`
+
+If true, the writer is synchronous.
+If false, the writer is asynchronous.
+
+When the writer is synchronous, the openSync() and closeSync() methods can be used, and
+the output can be generated synchrounously.
+
+#### Returns
+
+`boolean`
+
+#### Implementation of
+
+[Writer](../interfaces/Writer.md).[isSync](../interfaces/Writer.md#isSync)
+
+#### Defined in
+
+[ast/writer/StringWriter.ts:11](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StringWriter.ts#L11)
 
 ## Methods
 
@@ -60,7 +90,7 @@ This cannot be called until after close() has resolved its Promise.
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:18](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StringWriter.ts#L18)
+[ast/writer/StringWriter.ts:22](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StringWriter.ts#L22)
 
 ___
 
@@ -72,6 +102,8 @@ Open the writer for writing.
 
 Must be called before any calls to writeXXX();
 
+This method can be used regardless of the value of isSync.
+
 #### Returns
 
 `Promise`<`void`\>
@@ -82,7 +114,7 @@ Must be called before any calls to writeXXX();
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:22](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StringWriter.ts#L22)
+[ast/writer/StringWriter.ts:26](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StringWriter.ts#L26)
 
 ___
 
@@ -94,6 +126,8 @@ Close the writer for writing.
 
 Must be called after any calls to writeXXX();
 
+This method can be used regardless of the value of isSync.
+
 #### Returns
 
 `Promise`<`void`\>
@@ -104,7 +138,55 @@ Must be called after any calls to writeXXX();
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:28](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StringWriter.ts#L28)
+[ast/writer/StringWriter.ts:31](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StringWriter.ts#L31)
+
+___
+
+### openSync
+
+▸ **openSync**(): `void`
+
+Open the writer for writing.
+
+Must be called before any calls to writeXXX();
+
+This method is only available when isSync is true.
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+[Writer](../interfaces/Writer.md).[openSync](../interfaces/Writer.md#openSync)
+
+#### Defined in
+
+[ast/writer/StringWriter.ts:40](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StringWriter.ts#L40)
+
+___
+
+### closeSync
+
+▸ **closeSync**(): `void`
+
+Close the writer for writing.
+
+Must be called after any calls to writeXXX();
+
+This method is only available when isSync is true.
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+[Writer](../interfaces/Writer.md).[closeSync](../interfaces/Writer.md#closeSync)
+
+#### Defined in
+
+[ast/writer/StringWriter.ts:45](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StringWriter.ts#L45)
 
 ___
 
@@ -130,7 +212,7 @@ Writes a new line to the output. The line is indented automatically. The line is
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:37](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StringWriter.ts#L37)
+[ast/writer/StringWriter.ts:53](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StringWriter.ts#L53)
 
 ___
 
@@ -157,7 +239,7 @@ Writes a collection of lines to the output. Each line is indented automatically 
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:48](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StringWriter.ts#L48)
+[ast/writer/StringWriter.ts:64](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StringWriter.ts#L64)
 
 ___
 
@@ -183,7 +265,7 @@ Writes a string value to the output.
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:63](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StringWriter.ts#L63)
+[ast/writer/StringWriter.ts:79](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StringWriter.ts#L79)
 
 ___
 
@@ -203,4 +285,4 @@ Writes a single whitespace character to the output.
 
 #### Defined in
 
-[ast/writer/StringWriter.ts:70](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StringWriter.ts#L70)
+[ast/writer/StringWriter.ts:86](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StringWriter.ts#L86)

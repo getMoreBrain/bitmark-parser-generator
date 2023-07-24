@@ -1,25 +1,25 @@
-[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / ArticleResource
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / DocumentDownloadResource
 
-# Interface: ArticleResource
+# Interface: DocumentDownloadResource
 
 ## Hierarchy
 
 - [`Resource`](Resource.md)
 
-  ↳ **`ArticleResource`**
+  ↳ **`DocumentDownloadResource`**
 
 ## Table of contents
 
 ### Properties
 
-- [format](ArticleResource.md#format)
-- [value](ArticleResource.md#value)
-- [license](ArticleResource.md#license)
-- [copyright](ArticleResource.md#copyright)
-- [provider](ArticleResource.md#provider)
-- [showInIndex](ArticleResource.md#showInIndex)
-- [caption](ArticleResource.md#caption)
-- [type](ArticleResource.md#type)
+- [format](DocumentDownloadResource.md#format)
+- [value](DocumentDownloadResource.md#value)
+- [license](DocumentDownloadResource.md#license)
+- [copyright](DocumentDownloadResource.md#copyright)
+- [provider](DocumentDownloadResource.md#provider)
+- [showInIndex](DocumentDownloadResource.md#showInIndex)
+- [caption](DocumentDownloadResource.md#caption)
+- [type](DocumentDownloadResource.md#type)
 
 ## Properties
 
@@ -123,7 +123,7 @@ ___
 
 ### type
 
-• **type**: ``"article"``
+• **type**: ``"document-download"``
 
 #### Overrides
 
@@ -131,4 +131,4 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:475](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L475)
+[model/ast/Nodes.ts:491](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L491)

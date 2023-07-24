@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / ItemLead
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / ItemLead
 
 # Interface: ItemLead
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:304](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L304)
+[model/ast/Nodes.ts:110](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L110)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:305](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L305)
+[model/ast/Nodes.ts:111](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L111)

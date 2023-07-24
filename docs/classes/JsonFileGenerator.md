@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / JsonFileGenerator
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / JsonFileGenerator
 
 # Class: JsonFileGenerator
 
@@ -8,7 +8,7 @@ TODO: NOT IMPLEMENTED!
 
 ## Implements
 
-- [`Generator`](../interfaces/Generator.md)<`void`\>
+- [`Generator`](../interfaces/Generator.md)<[`BitmarkAst`](../interfaces/BitmarkAst.md)\>
 
 ## Table of contents
 
@@ -19,12 +19,13 @@ TODO: NOT IMPLEMENTED!
 ### Methods
 
 - [generate](JsonFileGenerator.md#generate)
+- [generateSync](JsonFileGenerator.md#generateSync)
 
 ## Constructors
 
 ### constructor
 
-• **new JsonFileGenerator**(`path`, `fileOptions?`, `jsonOptions?`)
+• **new JsonFileGenerator**(`path`, `options?`)
 
 Generate bitmark JSON from a bitmark AST as a file
 
@@ -33,12 +34,11 @@ Generate bitmark JSON from a bitmark AST as a file
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `path` | `PathLike` | path of file to generate |
-| `fileOptions?` | [`FileOptions`](../interfaces/FileOptions.md) | file options |
-| `jsonOptions?` | [`JsonOptions`](../interfaces/JsonOptions.md) | - |
+| `options?` | `JsonFileGeneratorOptions` | - |
 
 #### Defined in
 
-[generator/json/JsonFileGenerator.ts:24](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonFileGenerator.ts#L24)
+[generator/json/JsonFileGenerator.ts:35](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonFileGenerator.ts#L35)
 
 ## Methods
 
@@ -60,8 +60,34 @@ Generate bitmark JSON from bitmark AST as a file
 
 #### Implementation of
 
-Generator.generate
+[Generator](../interfaces/Generator.md).[generate](../interfaces/Generator.md#generate)
 
 #### Defined in
 
-[generator/json/JsonFileGenerator.ts:34](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonFileGenerator.ts#L34)
+[generator/json/JsonFileGenerator.ts:45](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonFileGenerator.ts#L45)
+
+___
+
+### generateSync
+
+▸ **generateSync**(`_ast`): `string`
+
+Generate bitmark JSON from bitmark AST as a file synchronously
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `_ast` | [`BitmarkAst`](../interfaces/BitmarkAst.md) |
+
+#### Returns
+
+`string`
+
+#### Implementation of
+
+[Generator](../interfaces/Generator.md).[generateSync](../interfaces/Generator.md#generateSync)
+
+#### Defined in
+
+[generator/json/JsonFileGenerator.ts:54](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonFileGenerator.ts#L54)
