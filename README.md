@@ -28,13 +28,13 @@ $ npm install @gmb/bitmark-parser-generator
 
 ### CDN
 
-Using jsDelivr CDN (ES5 UMD module):
+Using jsDelivr CDN (ES6 UMD module):
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@gmb/bitmark-parser-generator@latest/dist/browser/bitmark-parser-generator.min.js"></script>
 ```
 
-Using unpkg CDN:
+Using unpkg CDN (ES6 UMD module):
 
 ```html
 <script src="https://unpkg.com/@gmb/bitmark-parser-generator@latest/dist/browser/bitmark-parser-generator.min.js"></script>
