@@ -2017,7 +2017,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
         return 'cloze';
     }
 
-    return BitType._error;
+    return bitType;
   }
 
   /**
