@@ -227,6 +227,21 @@ class ObjectUtils {
 
     return value;
   }
+
+  /**
+   * Return a random alpha numberic key of the specified length
+   *
+   * NOT SECURE
+   *
+   * @param length
+   * @returns
+   */
+  alphanumericKey(length: number): string {
+    const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let result = '';
+    for (let i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+    return result;
+  }
 }
 
 const objectUtils = new ObjectUtils();
