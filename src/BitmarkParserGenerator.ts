@@ -1,3 +1,4 @@
+/* eslint-disable arca/import-ordering */
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 import { Ast } from './ast/Ast';
@@ -5,11 +6,13 @@ import { BitmarkOptions } from './generator/bitmark/BitmarkGenerator';
 import { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerator';
 import { JsonOptions } from './generator/json/JsonGenerator';
 import { JsonObjectGenerator } from './generator/json/JsonObjectGenerator';
+import { ClasstimeJsonObjectGenerator } from './generator/json-classtime/ClasstimeJsonObjectGenerator';
 import { BitmarkAst } from './model/ast/Nodes';
 import { BitmarkParserType, BitmarkParserTypeType } from './model/enum/BitmarkParserType';
 import { BitmarkParser } from './parser/bitmark/BitmarkParser';
 import { JsonParser } from './parser/json/JsonParser';
 import { env } from './utils/env/Env';
+import { BitmarkVersionType } from './model/enum/BitmarkVersion';
 
 /*
  * NOTE:
@@ -25,16 +28,13 @@ const STRIP = 0;
 /* STRIP:START */
 STRIP;
 
-/* eslint-disable arca/import-ordering */
 import * as fs from 'fs-extra';
 import path from 'path';
 
 import { FileOptions } from './ast/writer/FileWriter';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
-import { BitmarkVersionType } from './model/enum/BitmarkVersion';
 import { ClasstimeJsonFileGenerator } from './generator/json-classtime/ClasstimeJsonFileGenerator';
-import { ClasstimeJsonObjectGenerator } from './generator/json-classtime/ClasstimeJsonObjectGenerator';
 
 /* STRIP:END */
 STRIP;

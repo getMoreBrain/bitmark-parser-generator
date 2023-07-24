@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<head>
+  <title>bonaroo-able test</title>
+  <script src="../../dist/browser/bitmark-parser-generator.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('bitmark-parser-generator Browser Test');
+
+      const bitmarkVersion = undefined; // Use lastest
+      const { BitmarkParserGenerator } = window.bitmarkParserGenerator;
+      const bpg = new BitmarkParserGenerator();
+      console.log(`Parser version: v${bpg.version()}`);
+
+      const defaultMarkup = `[.true-false-1]
+[+Mykosen verbreiten sich von Mensch zu Mensch durch verunreinigte Gegenstände, durch Wasser oder Luft.]
+[@psampleSolution:
+Neben Bakterien und Viren gehören auch Pilze zu den Mikroorganismen, die Menschen krank machen können. Mykosen verbreiten sich von Mensch zu Mensch durch verunreinigte Gegenstände, durch Wasser oder Luft.
+]`;
+      let bitmarkTimeSecs = 0;
+      let pegTimeSecs = 0;
+      let textTimeSecs = 0;
+      let pegSpeedUp = 0;
+
+      const dom = {
+        json: document.getElementById('output'),
+        jsonText: document.getElementById('outputText'),
+        bitmark: document.getElementById('input'),
+        ast: document.getElementById('ast'),
+        toBitmark: document.getElementById('toBitmark'),
+        toJson: document.getElementById('toJson'),
+        diff: document.getElementById('outputDiff'),
+
+        bitmarkTime: document.getElementById('bitmarkTime'),
+        pegTime: document.getElementById('pegTime'),
+        textTime: document.getElementById('textTime'),
+      };
+
+      dom.bitmark.value = defaultMarkup;
+
+      const jsonToBitmark = async () => {
+        performance.clearMarks();
+
+        console.log('Converting JSON to Bitmark');
+        try {
+          const json = dom.json.value;
+
+          performance.mark('Start');
+          const bitmark = await bpg.convert(json, {
+            bitmarkVersion,
+          });
+          performance.mark('End');
+
+          bitmarkTimeSecs = Math.round(performance.measure('Generator', 'Start', 'End').duration) / 1000;
+
+          dom.bitmark.value = bitmark;
+          dom.bitmarkTime.innerText = `${bitmarkTimeSecs}s`;
+        } catch (e) {
+          dom.bitmark.value = JSON.stringify(e, Object.getOwnPropertyNames(e), 2);
+          console.log(e);
+        }
+      };
+
+      const bitmarkToJson = async () => {
+        performance.clearMarks();
+
+        console.log('Converting Bitmark to JSON (PEG)');
+        try {
+          const bitmark = dom.bitmark.value;
+
+          performance.mark('Start');
+          const json = await bpg.convert(bitmark, {
+            bitmarkVersion,
+          });
+          performance.mark('End');
+
+          const ast = await bpg.convert(bitmark, {
+            outputFormat: 'ast',
+            bitmarkVersion,
+          });
+
+          pegTimeSecs = Math.round(performance.measure('PEG', 'Start', 'End').duration) / 1000;
+
+          dom.json.value = JSON.stringify(json, null, 2);
+          dom.ast.value = JSON.stringify(ast, null, 2);
+          dom.pegTime.innerText = `${pegTimeSecs}s`;
+        } catch (e) {
+          dom.json.value = JSON.stringify(e, Object.getOwnPropertyNames(e), 2);
+          dom.ast.value = 'Error';
+          console.log(e);
+        }
+      };
+
+      const bitmarkToJsonText = async () => {
+        performance.clearMarks();
+
+        console.log('Converting Bitmark to JSON (V2)');
+        try {
+          const bitmark = dom.bitmark.value;
+
+          performance.mark('Start');
+          const json = await bpg.convert(bitmark, {
+            bitmarkVersion: 2,
+            outputFormat: 'jsonClasstime',
+          });
+          performance.mark('End');
+
+          textTimeSecs = Math.round(performance.measure('TEXT', 'Start', 'End').duration) / 1000;
+
+          dom.jsonText.value = JSON.stringify(json, null, 2);
+          dom.textTime.innerText = `${textTimeSecs}s`;
+        } catch (e) {
+          dom.jsonText.value = JSON.stringify(e, Object.getOwnPropertyNames(e), 2);
+          console.log(e);
+        }
+      };
+
+      // Execute initial conversions
+      bitmarkToJson().then(() => {
+        bitmarkToJsonText().then(() => {
+          // jsonToBitmark();
+        });
+      });
+
+      // Add event listeners
+      dom.toBitmark.addEventListener('click', () => {
+        jsonToBitmark();
+      });
+      dom.toJson.addEventListener('click', () => {
+        bitmarkToJson().then(() => {
+          bitmarkToJsonText();
+        });
+      });
+      dom.bitmark.addEventListener('input', () => {
+        bitmarkToJson().then(() => {
+          bitmarkToJsonText();
+        });
+      });
+      dom.json.addEventListener('input', () => {
+        // jsonToBitmark();
+      });
+    });
+  </script>
+  <style>
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    .left {
+      display: flex;
+      flex-direction: column;
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+    }
+    .heading {
+      font-family: monospace;
+    }
+    .input {
+      width: 49vw;
+      height: 47vh;
+      box-sizing: border-box;
+      margin: 2px;
+      padding: 5px;
+    }
+    .ast {
+      width: 48vw;
+      height: 47vh;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 5px;
+    }
+    .buttons {
+      width: 3vw;
+      /* display: flex; */
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 60px;
+      margin-top: 20px;
+    }
+    .output {
+      width: 49vw;
+      height: 95vh;
+      box-sizing: border-box;
+      margin: 2px;
+      margin-bottom: 2px;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="left">
+      <div class="heading">BITMARK: <span id="bitmarkTime"></span></div>
+      <textarea id="input" class="input"></textarea>
+      <div class="heading">AST:</div>
+      <textarea id="ast" class="input" readonly></textarea>
+      <div class="heading" style="display: none">DIFF (PEG ==> ANTLR):</div>
+      <textarea id="outputDiff" class="input" readonly style="display: none"></textarea>
+    </div>
+    <div class="buttons">
+      <button id="toJson">==></button>
+      <button id="toBitmark" style="display: none"><==</button>
+    </div>
+    <div class="right">
+      <div class="heading" style="display: none">JSON (V3): <span id="pegTime"></span></div>
+      <textarea id="output" class="output" style="display: none"></textarea>
+      <div class="heading">JSON (Classtime): <span id="textTime"></span></div>
+      <textarea id="outputText" class="output" readonly></textarea>
+    </div>
+  </div>
+
+  <script>
+    //
+    // Helper functions
+    //
+  </script>
+</body>
