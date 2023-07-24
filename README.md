@@ -26,19 +26,21 @@ Using npm:
 $ npm install @gmb/bitmark-parser-generator
 ```
 
-### CDN (TODO - not yet implemented)
+### CDN
 
 Using jsDelivr CDN (ES5 UMD module):
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@gmb/bitmark-parser-generator@<version>/dist/browser/bitmark-parser-generator.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@gmb/bitmark-parser-generator@latest/dist/browser/bitmark-parser-generator.min.js"></script>
 ```
 
 Using unpkg CDN:
 
 ```html
-<script src="https://unpkg.com/@gmb/bitmark-parser-generator@<version>/dist/bitmark-parser-generator.min.js"></script>
+<script src="https://unpkg.com/@gmb/bitmark-parser-generator@latest/dist/browser/bitmark-parser-generator.min.js"></script>
 ```
+
+Replace `latest` with a specific version in either of the URLs above to use a specific version.
 
 ## Basic Usage
 
