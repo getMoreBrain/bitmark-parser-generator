@@ -1,6 +1,6 @@
 {
-  "name": "@getmorebrain/bitmark-parser-generator",
-  "version": "1.0.11",
+  "name": "@gmb/bitmark-parser-generator",
+  "version": "1.0.13",
   "description": "A bitmark parser and generator using Peggy.js",
   "author": "Richard Sewell",
   "license": "ISC",
@@ -25,7 +25,7 @@
     "build-grammar-text-test": "BPG_ENV=development node -r esbuild-register ./scripts/grammar/text/generate-text-parser.ts --test",
     "test": "jest --runInBand",
     "publish": "yarn npm publish",
-    "prepublish": "run lint && run clean && run build && run test",
+    "prepublish": "run clean && run build && run test",
     "clean": "shx rm -rf ./dist",
     "lint": "eslint --max-warnings 0 -- './**/*.@(tsx|ts|jsx|js|mjs|cjs)'",
     "ncu": "yarn dlx npm-check-updates -i",
