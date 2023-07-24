@@ -5,12 +5,14 @@
 
 A bitmark parser and generator using Peggy.js.
 
-[List of supported bits](./SUPPORTED_BITS.md)
+Features:
+- Convert bitmark to JSON, and vice-versa.
+- Programmatically create or modify bitmark.
+- Works in NodeJS or the browser.
+- Validate and prettify bitmark.
+- Fast, with a small browser footprint, less than 60kB.
 
-Use this package to:
-- parse bitmark markup in NodeJS or the browser.
-- programmatically create or modify bitmark.
-- validate and prettify bitmark.
+[List of supported bits](./SUPPORTED_BITS.md)
 
 ## Installation
 
