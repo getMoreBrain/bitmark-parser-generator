@@ -19,10 +19,10 @@ jobs:
           cache: 'yarn'
       - name: Setup Yarn
         run: |
-          yarn config set npmScopes.getmorebrain.npmRegistryServer "https://npm.pkg.github.com"
-          yarn config set npmScopes.getmorebrain.npmPublishRegistry "https://npm.pkg.github.com"
-          yarn config set npmScopes.getmorebrain.npmAlwaysAuth true
-          yarn config set npmScopes.getmorebrain.npmAuthToken $GITHUB_AUTH_TOKEN
+          yarn config set npmScopes.gmb.npmRegistryServer "https://npm.pkg.github.com"
+          yarn config set npmScopes.gmb.npmPublishRegistry "https://npm.pkg.github.com"
+          yarn config set npmScopes.gmb.npmAlwaysAuth true
+          yarn config set npmScopes.gmb.npmAuthToken $GITHUB_AUTH_TOKEN
         env:
           GITHUB_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install dependencies
