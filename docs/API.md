@@ -1,6 +1,6 @@
-@getmorebrain/bitmark-parser-generator / [Exports](modules.md)
+@gmb/bitmark-parser-generator / [Exports](modules.md)
 
-[@getmorebrain/bitmark-parser-generator](../README.md)
+[@gmb/bitmark-parser-generator](../README.md)
 ================
 
 A bitmark generator.

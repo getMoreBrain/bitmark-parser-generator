@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BitmarkGenerator
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BitmarkGenerator
 
 # Class: BitmarkGenerator
 
@@ -6,7 +6,7 @@ Generate bitmark markup from a bitmark AST
 
 ## Implements
 
-- [`Generator`](../interfaces/Generator.md)<`void`\>
+- [`Generator`](../interfaces/Generator.md)<[`BitmarkAst`](../interfaces/BitmarkAst.md)\>
 - [`AstWalkCallbacks`](../interfaces/AstWalkCallbacks.md)
 
 ## Table of contents
@@ -18,6 +18,7 @@ Generate bitmark markup from a bitmark AST
 ### Methods
 
 - [generate](BitmarkGenerator.md#generate)
+- [generateSync](BitmarkGenerator.md#generateSync)
 - [enter](BitmarkGenerator.md#enter)
 - [between](BitmarkGenerator.md#between)
 - [exit](BitmarkGenerator.md#exit)
@@ -40,11 +41,11 @@ Generate bitmark markup from a bitmark AST
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `writer` | [`Writer`](../interfaces/Writer.md) | destination for the output |
-| `options?` | [`BitmarkOptions`](../interfaces/BitmarkOptions.md) | bitmark generation options |
+| `options?` | `BitmarkGeneratorOptions` | bitmark generation options |
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:74](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkGenerator.ts#L74)
+[generator/bitmark/BitmarkGenerator.ts:111](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L111)
 
 ## Methods
 
@@ -66,11 +67,37 @@ Generate bitmark markup from bitmark AST
 
 #### Implementation of
 
-Generator.generate
+[Generator](../interfaces/Generator.md).[generate](../interfaces/Generator.md#generate)
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:95](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkGenerator.ts#L95)
+[generator/bitmark/BitmarkGenerator.ts:144](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L144)
+
+___
+
+### generateSync
+
+▸ **generateSync**(`ast`): `void`
+
+Generate text from a bitmark text AST synchronously
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `ast` | [`BitmarkAst`](../interfaces/BitmarkAst.md) | bitmark text AST |
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+[Generator](../interfaces/Generator.md).[generateSync](../interfaces/Generator.md#generateSync)
+
+#### Defined in
+
+[generator/bitmark/BitmarkGenerator.ts:166](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L166)
 
 ___
 
@@ -94,11 +121,11 @@ Called when a branch node is entered
 
 #### Implementation of
 
-AstWalkCallbacks.enter
+[AstWalkCallbacks](../interfaces/AstWalkCallbacks.md).[enter](../interfaces/AstWalkCallbacks.md#enter)
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:109](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkGenerator.ts#L109)
+[generator/bitmark/BitmarkGenerator.ts:193](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L193)
 
 ___
 
@@ -124,11 +151,11 @@ Called when between child nodes
 
 #### Implementation of
 
-AstWalkCallbacks.between
+[AstWalkCallbacks](../interfaces/AstWalkCallbacks.md).[between](../interfaces/AstWalkCallbacks.md#between)
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:128](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkGenerator.ts#L128)
+[generator/bitmark/BitmarkGenerator.ts:212](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L212)
 
 ___
 
@@ -152,11 +179,11 @@ Called when a branch node is exited
 
 #### Implementation of
 
-AstWalkCallbacks.exit
+[AstWalkCallbacks](../interfaces/AstWalkCallbacks.md).[exit](../interfaces/AstWalkCallbacks.md#exit)
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:149](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkGenerator.ts#L149)
+[generator/bitmark/BitmarkGenerator.ts:233](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L233)
 
 ___
 
@@ -180,11 +207,11 @@ Called when a leaf node is entered
 
 #### Implementation of
 
-AstWalkCallbacks.leaf
+[AstWalkCallbacks](../interfaces/AstWalkCallbacks.md).[leaf](../interfaces/AstWalkCallbacks.md#leaf)
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:161](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkGenerator.ts#L161)
+[generator/bitmark/BitmarkGenerator.ts:245](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L245)
 
 ___
 
@@ -206,7 +233,7 @@ Writes a string value to the output.
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:1542](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkGenerator.ts#L1542)
+[generator/bitmark/BitmarkGenerator.ts:1629](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L1629)
 
 ___
 
@@ -228,7 +255,7 @@ Writes a new line to the output. The line is indented automatically. The line is
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:1551](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkGenerator.ts#L1551)
+[generator/bitmark/BitmarkGenerator.ts:1638](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L1638)
 
 ___
 
@@ -251,7 +278,7 @@ Writes a collection of lines to the output. Each line is indented automatically 
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:1561](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkGenerator.ts#L1561)
+[generator/bitmark/BitmarkGenerator.ts:1648](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L1648)
 
 ___
 
@@ -267,4 +294,4 @@ Writes a single whitespace character to the output.
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:1569](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkGenerator.ts#L1569)
+[generator/bitmark/BitmarkGenerator.ts:1656](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L1656)

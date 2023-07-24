@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BitmarkParserGenerator
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BitmarkParserGenerator
 
 # Class: BitmarkParserGenerator
 
@@ -37,7 +37,7 @@ Get the version of the bitmark-parser-generator library
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:127](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L127)
+[BitmarkParserGenerator.ts:159](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/BitmarkParserGenerator.ts#L159)
 
 ___
 
@@ -83,7 +83,7 @@ void if writing to a file
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:157](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L157)
+[BitmarkParserGenerator.ts:189](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/BitmarkParserGenerator.ts#L189)
 
 ___
 
@@ -128,7 +128,7 @@ void if writing to a file
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:382](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L382)
+[BitmarkParserGenerator.ts:414](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/BitmarkParserGenerator.ts#L414)
 
 ___
 
@@ -158,4 +158,4 @@ bitmark AST
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:471](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L471)
+[BitmarkParserGenerator.ts:504](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/BitmarkParserGenerator.ts#L504)

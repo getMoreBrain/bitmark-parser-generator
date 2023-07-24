@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / MatrixCell
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / MatrixCell
 
 # Interface: MatrixCell
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:195](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L195)
+[model/ast/Nodes.ts:212](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L212)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:196](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L196)
+[model/ast/Nodes.ts:213](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L213)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:197](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L197)
+[model/ast/Nodes.ts:214](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L214)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:198](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L198)
+[model/ast/Nodes.ts:215](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L215)
 
 ___
 
@@ -60,4 +60,4 @@ ___
 
 #### Defined in
 
-[model/ast/Nodes.ts:199](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L199)
+[model/ast/Nodes.ts:216](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L216)

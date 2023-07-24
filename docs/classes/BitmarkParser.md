@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BitmarkParser
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BitmarkParser
 
 # Class: BitmarkParser
 
@@ -44,7 +44,7 @@ bitmark AST
 
 #### Defined in
 
-[parser/bitmark/BitmarkParser.ts:43](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/parser/bitmark/BitmarkParser.ts#L43)
+[parser/bitmark/BitmarkParser.ts:43](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/parser/bitmark/BitmarkParser.ts#L43)
 
 ___
 
@@ -68,4 +68,4 @@ JSON object representing the bitmark markup
 
 #### Defined in
 
-[parser/bitmark/BitmarkParser.ts:59](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/parser/bitmark/BitmarkParser.ts#L59)
+[parser/bitmark/BitmarkParser.ts:59](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/parser/bitmark/BitmarkParser.ts#L59)

@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / StillImageFilmResourceWrapperJson
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / StillImageFilmResourceWrapperJson
 
 # Interface: StillImageFilmResourceWrapperJson
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:84](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L84)
+[model/json/ResourceJson.ts:86](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L86)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:85](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L85)
+[model/json/ResourceJson.ts:87](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L87)
 
 ___
 
@@ -48,4 +48,4 @@ ___
 
 #### Defined in
 
-[model/json/ResourceJson.ts:86](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L86)
+[model/json/ResourceJson.ts:88](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L88)

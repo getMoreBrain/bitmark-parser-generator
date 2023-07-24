@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BitmarkFileGenerator
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BitmarkFileGenerator
 
 # Class: BitmarkFileGenerator
 
@@ -6,7 +6,7 @@ Generate bitmark markup from a bitmark AST as a file
 
 ## Implements
 
-- [`Generator`](../interfaces/Generator.md)<`void`\>
+- [`Generator`](../interfaces/Generator.md)<[`BitmarkAst`](../interfaces/BitmarkAst.md)\>
 
 ## Table of contents
 
@@ -17,12 +17,13 @@ Generate bitmark markup from a bitmark AST as a file
 ### Methods
 
 - [generate](BitmarkFileGenerator.md#generate)
+- [generateSync](BitmarkFileGenerator.md#generateSync)
 
 ## Constructors
 
 ### constructor
 
-• **new BitmarkFileGenerator**(`path`, `fileOptions?`, `bitmarkOptions?`)
+• **new BitmarkFileGenerator**(`path`, `options?`)
 
 Generate bitmark markup from a bitmark AST as a file
 
@@ -31,12 +32,11 @@ Generate bitmark markup from a bitmark AST as a file
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `path` | `PathLike` | path of file to generate |
-| `fileOptions?` | [`FileOptions`](../interfaces/FileOptions.md) | file options |
-| `bitmarkOptions?` | [`BitmarkOptions`](../interfaces/BitmarkOptions.md) | bitmark generation options |
+| `options?` | `BitmarkFileGeneratorOptions` | bitmark generation options |
 
 #### Defined in
 
-[generator/bitmark/BitmarkFileGenerator.ts:22](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkFileGenerator.ts#L22)
+[generator/bitmark/BitmarkFileGenerator.ts:31](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkFileGenerator.ts#L31)
 
 ## Methods
 
@@ -58,8 +58,34 @@ Generate bitmark markup from bitmark AST as a file
 
 #### Implementation of
 
-Generator.generate
+[Generator](../interfaces/Generator.md).[generate](../interfaces/Generator.md#generate)
 
 #### Defined in
 
-[generator/bitmark/BitmarkFileGenerator.ts:32](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkFileGenerator.ts#L32)
+[generator/bitmark/BitmarkFileGenerator.ts:41](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkFileGenerator.ts#L41)
+
+___
+
+### generateSync
+
+▸ **generateSync**(`_ast`): `string`
+
+Generate bitmark markup from bitmark AST as a file synchronously
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `_ast` | [`BitmarkAst`](../interfaces/BitmarkAst.md) |
+
+#### Returns
+
+`string`
+
+#### Implementation of
+
+[Generator](../interfaces/Generator.md).[generateSync](../interfaces/Generator.md#generateSync)
+
+#### Defined in
+
+[generator/bitmark/BitmarkFileGenerator.ts:50](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkFileGenerator.ts#L50)

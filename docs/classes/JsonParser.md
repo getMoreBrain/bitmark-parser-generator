@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / JsonParser
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / JsonParser
 
 # Class: JsonParser
 
@@ -24,6 +24,10 @@ A parser for parsing bitmark JSON to bitmark AST
 
 • **new JsonParser**()
 
+#### Defined in
+
+[parser/json/JsonParser.ts:90](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/parser/json/JsonParser.ts#L90)
+
 ## Methods
 
 ### toAst
@@ -48,7 +52,7 @@ bitmark AST
 
 #### Defined in
 
-[parser/json/JsonParser.ts:84](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/parser/json/JsonParser.ts#L84)
+[parser/json/JsonParser.ts:102](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/parser/json/JsonParser.ts#L102)
 
 ___
 
@@ -73,7 +77,7 @@ bitmark JSON in a standard format (BitWrapperJson[] object)
 
 #### Defined in
 
-[parser/json/JsonParser.ts:112](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/parser/json/JsonParser.ts#L112)
+[parser/json/JsonParser.ts:130](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/parser/json/JsonParser.ts#L130)
 
 ___
 
@@ -97,7 +101,7 @@ true if BitWrapper JSON, otherwise false
 
 #### Defined in
 
-[parser/json/JsonParser.ts:155](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/parser/json/JsonParser.ts#L155)
+[parser/json/JsonParser.ts:173](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/parser/json/JsonParser.ts#L173)
 
 ___
 
@@ -121,7 +125,7 @@ true if Bit JSON, otherwise false
 
 #### Defined in
 
-[parser/json/JsonParser.ts:169](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/parser/json/JsonParser.ts#L169)
+[parser/json/JsonParser.ts:187](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/parser/json/JsonParser.ts#L187)
 
 ___
 
@@ -145,4 +149,4 @@ the Bit wrapper in a BitWrapper
 
 #### Defined in
 
-[parser/json/JsonParser.ts:183](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/parser/json/JsonParser.ts#L183)
+[parser/json/JsonParser.ts:201](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/parser/json/JsonParser.ts#L201)

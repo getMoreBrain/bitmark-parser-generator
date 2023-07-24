@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / FooterText
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / FooterText
 
 # Interface: FooterText
 
@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[model/ast/Nodes.ts:228](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L228)
+[model/ast/Nodes.ts:337](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L337)

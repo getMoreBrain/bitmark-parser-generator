@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Ast
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Ast
 
 # Class: Ast
 
@@ -24,16 +24,20 @@ An AST (Abstract Syntax Tree) implementation for the bitmark language
 
 • **new Ast**()
 
+#### Defined in
+
+[ast/Ast.ts:80](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Ast.ts#L80)
+
 ## Methods
 
 ### walk
 
-▸ **walk**(`ast`, `callbacks`): `void`
+▸ **walk**<`C`\>(`ast`, `type`, `callbacks`, `context`): `void`
 
-Walk an AST, decending each branch and calling callbacks when entering, leaving, and when in between child
+Walk bitmark AST, decending each branch and calling callbacks when entering, leaving, and when in between child
 nodes.
 
-Walking the tree can be used to convert it to another format (e.g. bitmark markup or JSON) or for analysis.
+Walking the tree can be used to convert it to another format (e.g. bitmark markup or JSON or text) or for analysis.
 
 The tree is navigated from root to leaf, decending each branch greedily.
 
@@ -59,12 +63,20 @@ Exit  B2
 Exit  A1
 ```
 
+#### Type parameters
+
+| Name |
+| :------ |
+| `C` |
+
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `ast` | [`BitmarkAst`](../interfaces/BitmarkAst.md) | bitmark AST |
-| `callbacks` | [`AstWalkCallbacks`](../interfaces/AstWalkCallbacks.md) | set of callbacks to call while walking the tree |
+| `ast` | `any` | bitmark / text AST |
+| `type` | [`NodeTypeType`](../modules.md#NodeTypeType) | type of AST to walk (i.e. NodeType.bitmarkAst, NodeType.textAst) |
+| `callbacks` | [`AstWalkCallbacks`](../interfaces/AstWalkCallbacks.md)<`C`\> | set of callbacks to call while walking the tree |
+| `context` | `C` | context object to pass to callbacks |
 
 #### Returns
 
@@ -72,7 +84,7 @@ Exit  A1
 
 #### Defined in
 
-[ast/Ast.ts:112](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L112)
+[ast/Ast.ts:120](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Ast.ts#L120)
 
 ___
 
@@ -96,22 +108,23 @@ For the route A1 -> B4 -> C2 the route key would be A1_B4_C2
 
 #### Defined in
 
-[ast/Ast.ts:124](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L124)
+[ast/Ast.ts:132](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Ast.ts#L132)
 
 ___
 
 ### printTree
 
-▸ **printTree**(`ast`): `void`
+▸ **printTree**(`ast`, `rootKey?`): `void`
 
 Print an AST to the console.
 Useful for debug / development purposes
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `ast` | [`BitmarkAst`](../interfaces/BitmarkAst.md) | bitmark AST |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `ast` | `any` | `undefined` | AST |
+| `rootKey` | [`NodeTypeType`](../modules.md#NodeTypeType) | `NodeType.bitmarkAst` | root node key |
 
 #### Returns
 
@@ -119,7 +132,7 @@ Useful for debug / development purposes
 
 #### Defined in
 
-[ast/Ast.ts:142](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L142)
+[ast/Ast.ts:151](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Ast.ts#L151)
 
 ___
 
@@ -144,7 +157,7 @@ bitmark AST in a standard format (BitmarkAst object)
 
 #### Defined in
 
-[ast/Ast.ts:177](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L177)
+[ast/Ast.ts:187](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Ast.ts#L187)
 
 ___
 
@@ -168,4 +181,4 @@ true if Bit JSON, otherwise false
 
 #### Defined in
 
-[ast/Ast.ts:200](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/Ast.ts#L200)
+[ast/Ast.ts:210](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/Ast.ts#L210)

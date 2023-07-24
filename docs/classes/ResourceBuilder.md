@@ -1,8 +1,14 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / ResourceBuilder
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / ResourceBuilder
 
 # Class: ResourceBuilder
 
 Builder to build bitmark Resource AST nodes programmatically
+
+## Hierarchy
+
+- `BaseBuilder`
+
+  ↳ **`ResourceBuilder`**
 
 ## Table of contents
 
@@ -37,6 +43,10 @@ Builder to build bitmark Resource AST nodes programmatically
 ### constructor
 
 • **new ResourceBuilder**()
+
+#### Inherited from
+
+BaseBuilder.constructor
 
 ## Methods
 
@@ -101,7 +111,7 @@ Build resource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:39](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L39)
+[ast/ResourceBuilder.ts:40](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L40)
 
 ___
 
@@ -136,7 +146,7 @@ Build imageResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:240](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L240)
+[ast/ResourceBuilder.ts:241](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L241)
 
 ___
 
@@ -171,7 +181,7 @@ Build imageLinkResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:289](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L289)
+[ast/ResourceBuilder.ts:290](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L290)
 
 ___
 
@@ -202,7 +212,7 @@ Build audioResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:338](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L338)
+[ast/ResourceBuilder.ts:339](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L339)
 
 ___
 
@@ -233,7 +243,7 @@ Build audioEmbedResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:379](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L379)
+[ast/ResourceBuilder.ts:380](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L380)
 
 ___
 
@@ -264,7 +274,7 @@ Build audioLinkResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:420](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L420)
+[ast/ResourceBuilder.ts:421](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L421)
 
 ___
 
@@ -302,7 +312,7 @@ Build videoResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:461](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L461)
+[ast/ResourceBuilder.ts:462](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L462)
 
 ___
 
@@ -340,7 +350,7 @@ Build videoEmbedResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:532](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L532)
+[ast/ResourceBuilder.ts:533](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L533)
 
 ___
 
@@ -378,7 +388,7 @@ Build videoLinkResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:603](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L603)
+[ast/ResourceBuilder.ts:604](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L604)
 
 ___
 
@@ -402,7 +412,7 @@ Build stillImageFilmResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:674](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L674)
+[ast/ResourceBuilder.ts:675](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L675)
 
 ___
 
@@ -440,7 +450,7 @@ Build stillImageFilmEmbedResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:697](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L697)
+[ast/ResourceBuilder.ts:698](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L698)
 
 ___
 
@@ -478,7 +488,7 @@ Build stillImageFilmLinkResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:768](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L768)
+[ast/ResourceBuilder.ts:769](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L769)
 
 ___
 
@@ -506,7 +516,7 @@ Build articleResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:839](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L839)
+[ast/ResourceBuilder.ts:840](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L840)
 
 ___
 
@@ -534,7 +544,7 @@ Build documentResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:874](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L874)
+[ast/ResourceBuilder.ts:875](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L875)
 
 ___
 
@@ -562,7 +572,7 @@ Build documentEmbedResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:909](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L909)
+[ast/ResourceBuilder.ts:910](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L910)
 
 ___
 
@@ -590,13 +600,13 @@ Build documentLinkResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:944](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L944)
+[ast/ResourceBuilder.ts:945](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L945)
 
 ___
 
 ### documentDownloadResource
 
-▸ **documentDownloadResource**(`data`): `DocumentDownloadResource`
+▸ **documentDownloadResource**(`data`): [`DocumentDownloadResource`](../interfaces/DocumentDownloadResource.md)
 
 Build documentDownloadResource node
 
@@ -614,11 +624,11 @@ Build documentDownloadResource node
 
 #### Returns
 
-`DocumentDownloadResource`
+[`DocumentDownloadResource`](../interfaces/DocumentDownloadResource.md)
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:979](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L979)
+[ast/ResourceBuilder.ts:980](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L980)
 
 ___
 
@@ -645,7 +655,7 @@ Build appLinkResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:1014](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L1014)
+[ast/ResourceBuilder.ts:1015](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L1015)
 
 ___
 
@@ -673,4 +683,4 @@ Build websiteLinkResource node
 
 #### Defined in
 
-[ast/ResourceBuilder.ts:1046](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/ResourceBuilder.ts#L1046)
+[ast/ResourceBuilder.ts:1047](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/ResourceBuilder.ts#L1047)

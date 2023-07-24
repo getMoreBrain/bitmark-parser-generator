@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / ResourceWrapperJson
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / ResourceWrapperJson
 
 # Interface: ResourceWrapperJson
 
@@ -56,4 +56,4 @@
 
 #### Defined in
 
-[model/json/ResourceJson.ts:41](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ResourceJson.ts#L41)
+[model/json/ResourceJson.ts:43](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ResourceJson.ts#L43)

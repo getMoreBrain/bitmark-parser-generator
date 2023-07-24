@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / StreamWriter
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / StreamWriter
 
 # Class: StreamWriter
 
@@ -26,12 +26,15 @@ Writer to write to a stream.
 
 ### Accessors
 
+- [isSync](StreamWriter.md#isSync)
 - [stream](StreamWriter.md#stream)
 
 ### Methods
 
 - [open](StreamWriter.md#open)
 - [close](StreamWriter.md#close)
+- [openSync](StreamWriter.md#openSync)
+- [closeSync](StreamWriter.md#closeSync)
 - [writeLine](StreamWriter.md#writeLine)
 - [writeLines](StreamWriter.md#writeLines)
 - [write](StreamWriter.md#write)
@@ -51,9 +54,33 @@ Writer to write to a stream.
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:10](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StreamWriter.ts#L10)
+[ast/writer/StreamWriter.ts:10](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StreamWriter.ts#L10)
 
 ## Accessors
+
+### isSync
+
+• `get` **isSync**(): `boolean`
+
+If true, the writer is synchronous.
+If false, the writer is asynchronous.
+
+When the writer is synchronous, the openSync() and closeSync() methods can be used, and
+the output can be generated synchrounously.
+
+#### Returns
+
+`boolean`
+
+#### Implementation of
+
+[Writer](../interfaces/Writer.md).[isSync](../interfaces/Writer.md#isSync)
+
+#### Defined in
+
+[ast/writer/StreamWriter.ts:12](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StreamWriter.ts#L12)
+
+___
 
 ### stream
 
@@ -67,7 +94,7 @@ Get the current write stream
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:15](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StreamWriter.ts#L15)
+[ast/writer/StreamWriter.ts:19](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StreamWriter.ts#L19)
 
 • `set` **stream**(`stream`): `void`
 
@@ -85,7 +112,7 @@ Set the current write stream
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:22](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StreamWriter.ts#L22)
+[ast/writer/StreamWriter.ts:26](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StreamWriter.ts#L26)
 
 ## Methods
 
@@ -97,6 +124,8 @@ Open the writer for writing.
 
 Must be called before any calls to writeXXX();
 
+This method can be used regardless of the value of isSync.
+
 #### Returns
 
 `Promise`<`void`\>
@@ -107,7 +136,7 @@ Must be called before any calls to writeXXX();
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:26](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StreamWriter.ts#L26)
+[ast/writer/StreamWriter.ts:30](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StreamWriter.ts#L30)
 
 ___
 
@@ -119,6 +148,8 @@ Close the writer for writing.
 
 Must be called after any calls to writeXXX();
 
+This method can be used regardless of the value of isSync.
+
 #### Returns
 
 `Promise`<`void`\>
@@ -129,7 +160,55 @@ Must be called after any calls to writeXXX();
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:28](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StreamWriter.ts#L28)
+[ast/writer/StreamWriter.ts:32](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StreamWriter.ts#L32)
+
+___
+
+### openSync
+
+▸ **openSync**(): `void`
+
+Open the writer for writing.
+
+Must be called before any calls to writeXXX();
+
+This method is only available when isSync is true.
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+[Writer](../interfaces/Writer.md).[openSync](../interfaces/Writer.md#openSync)
+
+#### Defined in
+
+[ast/writer/StreamWriter.ts:34](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StreamWriter.ts#L34)
+
+___
+
+### closeSync
+
+▸ **closeSync**(): `void`
+
+Close the writer for writing.
+
+Must be called after any calls to writeXXX();
+
+This method is only available when isSync is true.
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+[Writer](../interfaces/Writer.md).[closeSync](../interfaces/Writer.md#closeSync)
+
+#### Defined in
+
+[ast/writer/StreamWriter.ts:38](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StreamWriter.ts#L38)
 
 ___
 
@@ -155,7 +234,7 @@ Writes a new line to the output. The line is indented automatically. The line is
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:30](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StreamWriter.ts#L30)
+[ast/writer/StreamWriter.ts:42](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StreamWriter.ts#L42)
 
 ___
 
@@ -182,7 +261,7 @@ Writes a collection of lines to the output. Each line is indented automatically 
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:41](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StreamWriter.ts#L41)
+[ast/writer/StreamWriter.ts:53](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StreamWriter.ts#L53)
 
 ___
 
@@ -208,7 +287,7 @@ Writes a string value to the output.
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:56](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StreamWriter.ts#L56)
+[ast/writer/StreamWriter.ts:68](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StreamWriter.ts#L68)
 
 ___
 
@@ -228,4 +307,4 @@ Writes a single whitespace character to the output.
 
 #### Defined in
 
-[ast/writer/StreamWriter.ts:63](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/StreamWriter.ts#L63)
+[ast/writer/StreamWriter.ts:75](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/StreamWriter.ts#L75)

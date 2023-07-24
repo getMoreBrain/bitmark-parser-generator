@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / FileOptions
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / FileOptions
 
 # Interface: FileOptions
 
@@ -21,7 +21,7 @@ Append to a file if true, otherwise overwrite
 
 #### Defined in
 
-[ast/writer/FileWriter.ts:13](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/FileWriter.ts#L13)
+[ast/writer/FileWriter.ts:13](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/FileWriter.ts#L13)
 
 ___
 
@@ -33,4 +33,4 @@ Character encoding, defaults to 'utf8'
 
 #### Defined in
 
-[ast/writer/FileWriter.ts:17](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/ast/writer/FileWriter.ts#L17)
+[ast/writer/FileWriter.ts:17](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/ast/writer/FileWriter.ts#L17)

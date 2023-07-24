@@ -1,12 +1,13 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Generator
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Generator
 
-# Interface: Generator<T\>
+# Interface: Generator<T, R\>
 
 ## Type parameters
 
-| Name |
-| :------ |
-| `T` |
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`Node`](../modules.md#Node) |
+| `R` | `void` |
 
 ## Implemented by
 
@@ -22,27 +23,52 @@
 ### Properties
 
 - [generate](Generator.md#generate)
+- [generateSync](Generator.md#generateSync)
 
 ## Properties
 
 ### generate
 
-• **generate**: (`ast`: [`BitmarkAst`](BitmarkAst.md)) => `Promise`<`T`\>
+• **generate**: (`ast`: `T`) => `Promise`<`R`\>
 
 #### Type declaration
 
-▸ (`ast`): `Promise`<`T`\>
+▸ (`ast`): `Promise`<`R`\>
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `ast` | [`BitmarkAst`](BitmarkAst.md) |
+| `ast` | `T` |
 
 ##### Returns
 
-`Promise`<`T`\>
+`Promise`<`R`\>
 
 #### Defined in
 
-[generator/Generator.ts:4](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/Generator.ts#L4)
+[generator/Generator.ts:4](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/Generator.ts#L4)
+
+___
+
+### generateSync
+
+• **generateSync**: (`ast`: `T`) => `R`
+
+#### Type declaration
+
+▸ (`ast`): `R`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `ast` | `T` |
+
+##### Returns
+
+`R`
+
+#### Defined in
+
+[generator/Generator.ts:6](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/Generator.ts#L6)

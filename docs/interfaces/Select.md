@@ -1,18 +1,39 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Select
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / Select
 
 # Interface: Select
+
+## Hierarchy
+
+- [`BodyBit`](BodyBit.md)
+
+  ↳ **`Select`**
 
 ## Table of contents
 
 ### Properties
 
-- [select](Select.md#select)
+- [type](Select.md#type)
+- [data](Select.md#data)
 
 ## Properties
 
-### select
+### type
 
-• **select**: `Object`
+• **type**: ``"select"``
+
+#### Overrides
+
+[BodyBit](BodyBit.md).[type](BodyBit.md#type)
+
+#### Defined in
+
+[model/ast/Nodes.ts:272](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L272)
+
+___
+
+### data
+
+• **data**: `Object`
 
 #### Type declaration
 
@@ -27,6 +48,10 @@
 | `example?` | [`Example`](../modules.md#Example) |
 | `isCaseSensitive?` | `boolean` |
 
+#### Overrides
+
+[BodyBit](BodyBit.md).[data](BodyBit.md#data)
+
 #### Defined in
 
-[model/ast/Nodes.ts:253](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/ast/Nodes.ts#L253)
+[model/ast/Nodes.ts:273](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/ast/Nodes.ts#L273)
