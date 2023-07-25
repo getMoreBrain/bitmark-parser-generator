@@ -23,7 +23,6 @@ import { BodyBitType } from '../../model/enum/BodyBitType';
 import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
-import { ClasstimeBitJson } from '../../model/json-classtime/ClasstimeBitJson';
 import { ClasstimeBitWrapperJson } from '../../model/json-classtime/ClasstimeBitWrapperJson';
 import { GapJson, HighlightJson, HighlightTextJson, SelectJson, SelectOptionJson } from '../../model/json/BodyBitJson';
 import { ParserInfo } from '../../model/parser/ParserInfo';
@@ -52,6 +51,11 @@ import {
   WebsiteLinkResource,
   Select,
 } from '../../model/ast/Nodes';
+import {
+  ClasstimeBitJson,
+  ClasstimeContentJson,
+  ClasstimeExplanationJson,
+} from '../../model/json-classtime/ClasstimeBitJson';
 import {
   ClasstimeBodyBitJson,
   ClozeContentJson,
@@ -91,6 +95,8 @@ import {
   VideoResourceJson,
   WebsiteLinkResourceJson,
 } from '../../model/json/ResourceJson';
+
+const DEFAULT_ALPHANUMERIC_KEY_LENGTH = 5;
 
 const DEFAULT_OPTIONS: JsonOptions = {
   // debugGenerationInline: true,
@@ -369,6 +375,33 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
     if (node.value != null) this.addProperty(this.bitJson, 'sampleSolution', node.value, true);
   }
 
+  // bitmarkAst -> bits -> bitsValue -> extraProperties -> psampleSolution
+
+  protected enter_psampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const psampleSolution = node.value as string[];
+
+    if (!Array.isArray(psampleSolution) || psampleSolution.length === 0) return;
+
+    const explanation: ClasstimeExplanationJson = {
+      blocks: [],
+      entityMap: {},
+    };
+
+    for (const text of psampleSolution) {
+      explanation.blocks.push({
+        key: ObjectUtils.alphanumericKey(DEFAULT_ALPHANUMERIC_KEY_LENGTH),
+        text,
+        type: 'unstyled',
+        depth: 0,
+        inlineStyleRanges: [],
+        entityRanges: [],
+        data: {},
+      });
+    }
+
+    this.bitJson.explanation = explanation;
+  }
+
   // bitmarkAst -> bits -> bitsValue -> itemLead
 
   protected enter_itemLead(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -383,6 +416,9 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
     if (!this.options.excludeUnknownProperties && extraProperties) {
       for (const [key, values] of Object.entries(extraProperties)) {
         let k = key;
+
+        if (k === 'psampleSolution') continue;
+
         if (Object.prototype.hasOwnProperty.call(this.bitJson, key)) {
           k = `_${key}`;
         }
@@ -546,7 +582,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
       for (const el of elements) {
         // Create the choice
         const choiceJson: Partial<ClasstimeChoiceJson> = {
-          id: uuidv4(),
+          // id: uuidv4(),
           content: {
             entity_map: {},
             blocks: [
@@ -554,7 +590,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
                 inline_style_ranges: [],
                 text: el ?? '',
                 depth: 0,
-                key: ObjectUtils.alphanumericKey(5),
+                key: ObjectUtils.alphanumericKey(DEFAULT_ALPHANUMERIC_KEY_LENGTH),
                 type: 'unstyled',
                 data: {},
                 entity_ranges: [],
@@ -589,8 +625,8 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
     if (parent?.key !== NodeType.bitsValue) return;
 
     if (statement) {
-      const choiceJson: ClasstimeChoiceJson = {
-        id: uuidv4(),
+      const choiceJson: Partial<ClasstimeChoiceJson> = {
+        // id: uuidv4(),
         content: {
           entity_map: {},
           blocks: [
@@ -598,7 +634,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
               inline_style_ranges: [],
               text: statement.text ?? '',
               depth: 0,
-              key: ObjectUtils.alphanumericKey(5),
+              key: ObjectUtils.alphanumericKey(DEFAULT_ALPHANUMERIC_KEY_LENGTH),
               type: 'unstyled',
               data: {},
               entity_ranges: [],
@@ -609,7 +645,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
         order: '0',
         image: null,
       };
-      this.bitJson.choices = [choiceJson];
+      this.bitJson.choices = [choiceJson as ClasstimeChoiceJson];
     }
   }
 
@@ -663,7 +699,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
       for (const c of choices) {
         // Create the choice
         const choiceJson: Partial<ClasstimeChoiceJson> = {
-          id: uuidv4(),
+          // id: uuidv4(),
           content: {
             entity_map: {},
             blocks: [
@@ -671,7 +707,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
                 inline_style_ranges: [],
                 text: c.text ?? '',
                 depth: 0,
-                key: ObjectUtils.alphanumericKey(5),
+                key: ObjectUtils.alphanumericKey(DEFAULT_ALPHANUMERIC_KEY_LENGTH),
                 type: 'unstyled',
                 data: {},
                 entity_ranges: [],
@@ -712,7 +748,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
       for (const r of responses) {
         // Create the choice
         const choiceJson: Partial<ClasstimeChoiceJson> = {
-          id: uuidv4(),
+          // id: uuidv4(),
           content: {
             entity_map: {},
             blocks: [
@@ -720,7 +756,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
                 inline_style_ranges: [],
                 text: r.text ?? '',
                 depth: 0,
-                key: ObjectUtils.alphanumericKey(5),
+                key: ObjectUtils.alphanumericKey(DEFAULT_ALPHANUMERIC_KEY_LENGTH),
                 type: 'unstyled',
                 data: {},
                 entity_ranges: [],
@@ -838,7 +874,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
         this.categoryIds.push(id);
 
         const categoryJson: Partial<ClasstimeCategoryJson> = {
-          id,
+          temporaryId: id,
           content: {
             entity_map: {},
             blocks: [
@@ -846,7 +882,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
                 inline_style_ranges: [],
                 text: h ?? '',
                 depth: 0,
-                key: ObjectUtils.alphanumericKey(5),
+                key: ObjectUtils.alphanumericKey(DEFAULT_ALPHANUMERIC_KEY_LENGTH),
                 type: 'unstyled',
                 data: {},
                 entity_ranges: [],
@@ -877,7 +913,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
       for (const p of pairs) {
         // Create the question
         const itemJson: Partial<ClasstimeItemJson> = {
-          id: uuidv4(),
+          // id: uuidv4(),
           content: {
             entity_map: {},
             blocks: [
@@ -885,7 +921,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
                 inline_style_ranges: [],
                 text: p.key ?? '',
                 depth: 0,
-                key: ObjectUtils.alphanumericKey(5),
+                key: ObjectUtils.alphanumericKey(DEFAULT_ALPHANUMERIC_KEY_LENGTH),
                 type: 'unstyled',
                 data: {},
                 entity_ranges: [],
@@ -920,51 +956,51 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
 
   protected enter_matrix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const matrix = node.value as Matrix[];
-    const matrixJsonArray: MatrixJson[] = [];
+    const itemsJson: ClasstimeItemJson[] = [];
 
     if (matrix) {
       for (const m of matrix) {
-        // Choices
-        const matrixCellsJson: MatrixCellJson[] = [];
-        if (m.cells) {
-          for (const c of m.cells) {
-            // Create the choice
-            const matrixCellJson: Partial<MatrixCellJson> = {
-              values: c.values ?? [],
-              ...this.toItemLeadHintInstruction(c),
-              ...this.toExampleAndIsExample(c.example),
-            };
-
-            // Delete unwanted properties
-            if (c.itemLead?.lead == null) delete matrixCellJson.lead;
-            if (c.hint == null) delete matrixCellJson.hint;
-            if (c.example == null) delete matrixCellJson.isExample;
-            if (c.example == null) delete matrixCellJson.example;
-
-            matrixCellsJson.push(matrixCellJson as MatrixCellJson);
-          }
-        }
-
-        // Create the matrix
-        const matrixJson: Partial<MatrixJson> = {
-          key: m.key ?? '',
-          cells: matrixCellsJson ?? [],
-          ...this.toItemLeadHintInstruction(m),
-          ...this.toExampleAndIsExample(m.example),
-          isCaseSensitive: m.isCaseSensitive ?? true,
-          isLongAnswer: !m.isShortAnswer ?? false,
+        // Create the question
+        const itemJson: Partial<ClasstimeItemJson> = {
+          // id: uuidv4(),
+          content: {
+            entity_map: {},
+            blocks: [
+              {
+                inline_style_ranges: [],
+                text: m.key ?? '',
+                depth: 0,
+                key: ObjectUtils.alphanumericKey(DEFAULT_ALPHANUMERIC_KEY_LENGTH),
+                type: 'unstyled',
+                data: {},
+                entity_ranges: [],
+              },
+            ],
+          },
+          categories: [],
         };
 
+        // Add the categories
+        if (m.cells) {
+          for (let i = 0, len = m.cells.length; i < len; i++) {
+            const c = m.cells[i];
+            if (c) {
+              const v = c.values && c.values.length > 0 ? c.values[0] : undefined;
+              if (v) {
+                itemJson.categories?.push(this.categoryIds[i]);
+              }
+            }
+          }
+        }
         // Delete unwanted properties
-        if (m.itemLead?.lead == null) delete matrixJson.lead;
-        if (m.instruction == null) delete matrixJson.instruction;
+        // none
 
-        matrixJsonArray.push(matrixJson as MatrixJson);
+        itemsJson.push(itemJson as ClasstimeItemJson);
       }
     }
 
-    if (matrixJsonArray.length > 0) {
-      this.bitJson.matrix = matrixJsonArray;
+    if (itemsJson.length > 0) {
+      this.bitJson.items = itemsJson;
     }
   }
 
@@ -985,8 +1021,18 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
   protected enter_resource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const resource = node.value as Resource;
 
-    // This is a resource - handle it with the common code
-    this.bitJson.resource = this.parseResourceToJson(resource);
+    if (!resource) return;
+
+    switch (resource.type) {
+      case ResourceType.article: {
+        // Classtime handling
+        this.bitJson.content = this.createClasstimeContent(resource.value);
+        break;
+      }
+      default:
+        // This is a resource - handle it with the common code
+        this.bitJson.resource = this.parseResourceToJson(resource);
+    }
   }
 
   //
@@ -1196,14 +1242,14 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
     return gapJson as GapJson;
   }
 
-  protected createClozeJson(id: string, select: Select): ClasstimeClozeJson {
+  protected createClozeJson(temporaryId: string, select: Select): ClasstimeClozeJson {
     const data = select.data;
 
     // Create the cloze choices
     const choices: ClozeContentJson[] = [];
     for (const option of data.options) {
       const choiceJson: Partial<ClozeContentJson> = {
-        id: uuidv4(),
+        // id: uuidv4(),
         content: option.text,
         is_correct: option.isCorrect ?? false,
         // ...this.toItemLeadHintInstruction(option),
@@ -1218,7 +1264,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
 
     // Create the cloze
     const clozeJson: Partial<ClasstimeClozeJson> = {
-      id,
+      temporaryId,
       // prefix: data.prefix ?? '',
       choices,
       // postfix: data.postfix ?? '',
@@ -1311,6 +1357,25 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
     if (!highlightJson.lead) delete highlightJson.lead;
 
     return highlightJson as HighlightJson;
+  }
+
+  protected createClasstimeContent(text: string | undefined): ClasstimeContentJson | undefined {
+    if (text == null) return undefined;
+
+    return {
+      blocks: [
+        {
+          key: ObjectUtils.alphanumericKey(DEFAULT_ALPHANUMERIC_KEY_LENGTH),
+          text,
+          type: 'unstyled',
+          depth: 0,
+          inlineStyleRanges: [],
+          entityRanges: [],
+          data: {},
+        },
+      ],
+      entityMap: {},
+    };
   }
 
   protected parseResourceToJson(resource: Resource | undefined): ResourceJson | undefined {
@@ -2008,13 +2073,22 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
         return 'text';
       // case BitType.multipleChoice:
       case BitType.match:
+      case BitType.matchMatrix:
         return 'categorizer';
+      // ? Not sure how to decide categorizer / multiple_categorizer
       case BitType.multipleResponse:
         return 'multiple_categorizer';
       case BitType.sequence:
         return 'sorter';
       case BitType.multipleChoiceText:
         return 'cloze';
+      case BitType.chapter: // TODO - is this correct?
+        return BitType.chapter;
+      case BitType._error:
+        // Ignore
+        break;
+      default:
+        console.warn(`Unknown bit type: ${bitType}`);
     }
 
     return bitType;
@@ -2032,13 +2106,13 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
       // format: bit.textFormat,
 
       // Properties
-      id: uuidv4(),
+      // id: uuidv4(),
       title: undefined,
       image: undefined,
       image_details: undefined,
       content: undefined,
       raw_content: undefined,
-      hotspot_data: undefined,
+      // hotspot_data: undefined,
       kind: this.bitTypeToKind(bit.bitType),
       categories: undefined,
       items: undefined,
@@ -2209,7 +2283,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
           };
         if (bitJson.content == null) bitJson.content = null;
         if (!bitJson.raw_content) bitJson.raw_content = null;
-        if (bitJson.hotspot_data == null) bitJson.hotspot_data = null;
+        // if (bitJson.hotspot_data == null) bitJson.hotspot_data = null;
         if (bitJson.categories == null) bitJson.categories = [];
         if (bitJson.items == null) bitJson.items = [];
         if (bitJson.explanation == null) bitJson.explanation = null;

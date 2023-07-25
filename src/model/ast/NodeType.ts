@@ -245,6 +245,10 @@ const NodeType = superenum({
   offset: 'offset',
   line: 'line',
   column: 'column',
+
+  // Classtime specific
+  psampleSolution: 'psampleSolution', // single
+  psampleSolutionValue: 'psampleSolutionValue', // single
 });
 
 export type NodeTypeType = EnumType<typeof NodeType>;

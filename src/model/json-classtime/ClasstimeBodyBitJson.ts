@@ -29,6 +29,7 @@ export interface GapJson extends BaseBodyBitJson {
 }
 
 export interface ClasstimeCategoryJson {
+  temporaryId: string;
   id: string;
   content: {
     entity_map: {};
@@ -47,7 +48,7 @@ export interface CategoryBlockJson {
 }
 
 export interface ClasstimeClozeJson {
-  id: string;
+  temporaryId: string;
   choices: ClozeContentJson[];
   prefix: string;
   postfix: string;

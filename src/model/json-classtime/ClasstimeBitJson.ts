@@ -18,13 +18,13 @@ export interface ClasstimeBitJson {
     source: '';
     is_protected: null;
   };
-  content: string | null; // ?
+  content: ClasstimeContentJson | null; // ?
   raw_content: Text | null;
   hotspot_data: string | null; // ?
   kind: string; // bit type
   categories: unknown[];
   items: unknown[];
-  explanation: string | null; // ?
+  explanation: ClasstimeExplanationJson | null; // ?
   choices: ClasstimeChoiceJson[];
   clozes: ClasstimeClozeJson[];
   is_true_correct: boolean | null; // ?
@@ -119,6 +119,36 @@ export interface ClasstimeBitJson {
   questions: QuestionJson[];
   footer: Text;
   placeholders: ClasstimeBodyBitsJson;
+}
+
+export interface ClasstimeContentJson {
+  blocks: ClasstimeContentBlockJson[];
+  entityMap: {};
+}
+
+export interface ClasstimeContentBlockJson {
+  key: string;
+  text: string;
+  type: string;
+  depth: 0;
+  inlineStyleRanges: [];
+  entityRanges: [];
+  data: {};
+}
+
+export interface ClasstimeExplanationJson {
+  blocks: ClasstimeExplanationBlockJson[];
+  entityMap: {};
+}
+
+export interface ClasstimeExplanationBlockJson {
+  key: string;
+  text: string;
+  type: string;
+  depth: 0;
+  inlineStyleRanges: [];
+  entityRanges: [];
+  data: {};
 }
 
 export interface PartnerJson {

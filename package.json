@@ -16,6 +16,7 @@
     "start-parser": "node -r esbuild-register ./test/custom/dev/devParser.ts",
     "start-parser-antlr": "node -r esbuild-register ./test/custom/dev/devParserAntlr.ts",
     "start-parser-classtime": "node -r esbuild-register ./test/custom/dev/devParserClasstime.ts",
+    "start-parser-classtime-all": "node -r esbuild-register ./test/custom/dev/devParserClasstimeAll.ts",
     "start-generator": "node -r esbuild-register ./test/custom/dev/devGenerator.ts",
     "start-prettify": "node -r esbuild-register ./test/custom/dev/devPrettify.ts",
     "start-text-plusplus-parser": "node -r esbuild-register ./test/custom/dev/devTextPlusPlusParser.ts",
