@@ -9,6 +9,7 @@ export interface ClasstimeBitJson {
   // Properties
   id: string | string[];
   title: Text;
+  description: ClasstimeTextJson | null;
   image: string | null;
   image_details: {
     public_id: '';
@@ -18,16 +19,16 @@ export interface ClasstimeBitJson {
     source: '';
     is_protected: null;
   };
-  content: ClasstimeContentJson | null; // ?
+  content: ClasstimeContentJson | null;
   raw_content: Text | null;
   hotspot_data: string | null; // ?
   kind: string; // bit type
   categories: unknown[];
   items: unknown[];
-  explanation: ClasstimeExplanationJson | null; // ?
+  explanation: ClasstimeTextJson | null;
   choices: ClasstimeChoiceJson[];
   clozes: ClasstimeClozeJson[];
-  is_true_correct: boolean | null; // ?
+  is_true_correct: boolean | null;
   modified: string;
   created: string;
   question_set: string | null;
@@ -136,12 +137,12 @@ export interface ClasstimeContentBlockJson {
   data: {};
 }
 
-export interface ClasstimeExplanationJson {
-  blocks: ClasstimeExplanationBlockJson[];
+export interface ClasstimeTextJson {
+  blocks: ClasstimeTextBlockJson[];
   entityMap: {};
 }
 
-export interface ClasstimeExplanationBlockJson {
+export interface ClasstimeTextBlockJson {
   key: string;
   text: string;
   type: string;

@@ -55,7 +55,7 @@ class DevParserClasstime {
       const res = await bitmarkParserGenerator.convert(filename, {
         outputFormat: Output.jsonClasstime,
         jsonOptions: {
-          textAsPlainText: false,
+          textAsPlainText: true,
           prettify: true,
         },
       });

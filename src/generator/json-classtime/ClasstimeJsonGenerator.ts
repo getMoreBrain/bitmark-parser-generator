@@ -23,6 +23,7 @@ import { BodyBitType } from '../../model/enum/BodyBitType';
 import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
+import { ClasstimeBitJson, ClasstimeContentJson, ClasstimeTextJson } from '../../model/json-classtime/ClasstimeBitJson';
 import { ClasstimeBitWrapperJson } from '../../model/json-classtime/ClasstimeBitWrapperJson';
 import { GapJson, HighlightJson, HighlightTextJson, SelectJson, SelectOptionJson } from '../../model/json/BodyBitJson';
 import { ParserInfo } from '../../model/parser/ParserInfo';
@@ -51,11 +52,6 @@ import {
   WebsiteLinkResource,
   Select,
 } from '../../model/ast/Nodes';
-import {
-  ClasstimeBitJson,
-  ClasstimeContentJson,
-  ClasstimeExplanationJson,
-} from '../../model/json-classtime/ClasstimeBitJson';
 import {
   ClasstimeBodyBitJson,
   ClozeContentJson,
@@ -382,7 +378,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
 
     if (!Array.isArray(psampleSolution) || psampleSolution.length === 0) return;
 
-    const explanation: ClasstimeExplanationJson = {
+    const explanation: ClasstimeTextJson = {
       blocks: [],
       entityMap: {},
     };
@@ -489,8 +485,30 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
     }
 
     // Add string or AST to the body
-    this.bitJson.raw_content = this.toTextAstOrString(fullBodyTextStr, textFormat);
-    const bodyAst = this.bitJson.raw_content as TextAst;
+    const bodyText = this.toTextAstOrString(fullBodyTextStr, textFormat);
+    if (bitType === BitType.multipleChoiceText) {
+      this.bitJson.raw_content = bodyText;
+    } else {
+      if (bodyText) {
+        const description: ClasstimeTextJson = {
+          blocks: [],
+          entityMap: {},
+        };
+        description.blocks.push({
+          key: ObjectUtils.alphanumericKey(DEFAULT_ALPHANUMERIC_KEY_LENGTH),
+          text: bodyText as string,
+          type: 'unstyled',
+          depth: 0,
+          inlineStyleRanges: [],
+          entityRanges: [],
+          data: {},
+        });
+
+        this.bitJson.description = description;
+      }
+    }
+
+    const bodyAst = bodyText as TextAst;
 
     // Loop the body parts again to create the body bits:
     // - For text output the body bits are inserted into the 'placeholders' object
@@ -874,7 +892,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
         this.categoryIds.push(id);
 
         const categoryJson: Partial<ClasstimeCategoryJson> = {
-          temporaryId: id,
+          id,
           content: {
             entity_map: {},
             blocks: [
@@ -2083,7 +2101,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
       case BitType.multipleChoiceText:
         return 'cloze';
       case BitType.chapter: // TODO - is this correct?
-        return BitType.chapter;
+        return BitType._error;
       case BitType._error:
         // Ignore
         break;
@@ -2108,6 +2126,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
       // Properties
       // id: uuidv4(),
       title: undefined,
+      description: undefined,
       image: undefined,
       image_details: undefined,
       content: undefined,
@@ -2271,6 +2290,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
 
       default: // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
         if (bitJson.title == null) bitJson.title = '';
+        if (bitJson.description == null) bitJson.description = null;
         if (bitJson.image == null) bitJson.image = null;
         if (bitJson.image_details == null)
           bitJson.image_details = {
@@ -2351,11 +2371,6 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
       case BitType.matchAllReverse:
         if (bitJson.item == null) bitJson.item = this.textDefault;
         if (bitJson.heading == null) bitJson.heading = {} as HeadingJson;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
-
-      case BitType.matchMatrix:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         break;
 

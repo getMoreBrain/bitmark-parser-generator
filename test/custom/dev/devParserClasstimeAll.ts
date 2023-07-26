@@ -60,7 +60,7 @@ class DevParserClasstimeAll {
         outputFile,
         outputFormat: Output.jsonClasstime,
         jsonOptions: {
-          textAsPlainText: false,
+          textAsPlainText: true,
           prettify: true,
         },
       });
