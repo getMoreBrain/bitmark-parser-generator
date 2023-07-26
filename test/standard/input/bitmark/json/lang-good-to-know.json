@@ -1,0 +1,53 @@
+[
+  {
+    "bitmark": "[.lang-good-to-know]\n[@id:92375]",
+    "bit": {
+      "type": "lang-good-to-know",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": ["92375"]
+    }
+  },
+  {
+    "bitmark": "[.lang-good-to-know]\n[#Summary of this Book]\nThis is the lang-good-to-know of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+    "bit": {
+      "type": "lang-good-to-know",
+      "format": "bitmark--",
+      "body": "This is the lang-good-to-know of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "title": "Summary of this Book"
+    }
+  },
+  {
+    "bitmark": "[.lang-good-to-know]\n[#Summary of Chapter One]\nThis is a lang-good-to-know of chapter 1.",
+    "bit": {
+      "type": "lang-good-to-know",
+      "format": "bitmark--",
+      "body": "This is a lang-good-to-know of chapter 1.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "title": "Summary of Chapter One"
+    }
+  },
+  {
+    "bitmark": "[.lang-good-to-know]",
+    "bit": {
+      "type": "lang-good-to-know",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    }
+  }
+]
