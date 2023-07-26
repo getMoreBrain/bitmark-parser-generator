@@ -5,12 +5,14 @@
 
 A bitmark parser and generator using Peggy.js.
 
-[List of supported bits](./SUPPORTED_BITS.md)
+Features:
+- Convert bitmark to JSON, and vice-versa.
+- Programmatically create or modify bitmark.
+- Works in NodeJS or the browser.
+- Validate and prettify bitmark.
+- Fast, with a small browser footprint, less than 60kB.
 
-Use this package to:
-- parse bitmark markup in NodeJS or the browser.
-- programmatically create or modify bitmark.
-- validate and prettify bitmark.
+[List of supported bits](./SUPPORTED_BITS.md)
 
 ## Installation
 
@@ -26,19 +28,21 @@ Using npm:
 $ npm install @gmb/bitmark-parser-generator
 ```
 
-### CDN (TODO - not yet implemented)
+### CDN
 
-Using jsDelivr CDN (ES5 UMD module):
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/@gmb/bitmark-parser-generator@<version>/dist/browser/bitmark-parser-generator.min.js"></script>
-```
-
-Using unpkg CDN:
+Using jsDelivr CDN (ES6 UMD module):
 
 ```html
-<script src="https://unpkg.com/@gmb/bitmark-parser-generator@<version>/dist/bitmark-parser-generator.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@gmb/bitmark-parser-generator@latest/dist/browser/bitmark-parser-generator.min.js"></script>
 ```
+
+Using unpkg CDN (ES6 UMD module):
+
+```html
+<script src="https://unpkg.com/@gmb/bitmark-parser-generator@latest/dist/browser/bitmark-parser-generator.min.js"></script>
+```
+
+Replace `latest` with a specific version in either of the URLs above to use a specific version.
 
 ## Basic Usage
 
