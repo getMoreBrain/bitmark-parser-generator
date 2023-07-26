@@ -6,9 +6,15 @@ import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
 // Set metadata on the bit types to describe specific behaviour
 
-BitType.setMetadata<BitTypeMetadata>(BitType.image, {
+const IMAGE_CONFIG: BitTypeMetadata = {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_IMAGE_RESOURCE },
   resourceAttachmentAllowed: false,
   resourceType: ResourceType.image,
   bodyAllowed: true,
-});
+};
+BitType.setMetadata<BitTypeMetadata>(BitType.image, IMAGE_CONFIG);
+
+// Aliases
+BitType.setMetadata<BitTypeMetadata>(BitType.imagePrototype, IMAGE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.imageSuperWide, IMAGE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.imageZoom, IMAGE_CONFIG);

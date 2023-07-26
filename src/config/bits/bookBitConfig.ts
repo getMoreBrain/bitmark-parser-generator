@@ -25,8 +25,9 @@ const BOOK_CONFIG: BitTypeMetadata = {
   resourceAttachmentAllowed: false,
   bodyAllowed: true,
 };
-
 BitType.setMetadata<BitTypeMetadata>(BitType.book, BOOK_CONFIG);
+
+// Book aliases
 BitType.setMetadata<BitTypeMetadata>(BitType.bookAcknowledgments, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookAddendum, BOOK_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bookAfterword, BOOK_CONFIG);
