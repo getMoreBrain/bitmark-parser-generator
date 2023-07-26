@@ -1,0 +1,53 @@
+[
+  {
+    "bitmark": "[.lang-teacher-note]\n[@id:92375]",
+    "bit": {
+      "type": "lang-teacher-note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": ["92375"]
+    }
+  },
+  {
+    "bitmark": "[.lang-teacher-note]\n[#Summary of this Book]\nThis is the lang-teacher-note of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+    "bit": {
+      "type": "lang-teacher-note",
+      "format": "bitmark--",
+      "body": "This is the lang-teacher-note of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "title": "Summary of this Book"
+    }
+  },
+  {
+    "bitmark": "[.lang-teacher-note]\n[#Summary of Chapter One]\nThis is a lang-teacher-note of chapter 1.",
+    "bit": {
+      "type": "lang-teacher-note",
+      "format": "bitmark--",
+      "body": "This is a lang-teacher-note of chapter 1.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "title": "Summary of Chapter One"
+    }
+  },
+  {
+    "bitmark": "[.lang-teacher-note]",
+    "bit": {
+      "type": "lang-teacher-note",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    }
+  }
+]
