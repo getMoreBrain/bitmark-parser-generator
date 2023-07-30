@@ -1,1734 +1,2150 @@
 [
   {
-    "bitmark": "[.multiple-choice]\n[@id:187003]\n===\n[!1. Wurden Sie zu einem Vorstellungsgespräch eingeladen? (Qualitätsanforderung 2)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!2. Wurde Ihnen mitgeteilt, dass Sie in die engere Auswahl gekommen sind? (Qualitätsanforderung 5)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!3. Konnten Sie vor dem Unterzeichnen des Lehrvertrags Ihren Lehrbetrieb kennen lernen? (Qualitätsanforderung 3)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!4. Wurde Ihnen vor dem Unterzeichnen des Lehrvertrags erklärt, welche Anforderungen an Sie gestellt werden? (Qualitätsanforderung 1)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!5. Wurden Sie vor dem Unterzeichnen des Lehrvertrags über die Arbeitsbedingungen informiert? (Qualitätsanforderung 4)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!6. Wurden Ihnen die im Lehrvertrag festgelegten Bedingungen wie Arbeitszeiten, Ferien, Lohn usw. erläutert? (Qualitätsanforderung 6)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!7. Wissen Sie wer Ihr/e Berufsbildner/in im Lehrbetrieb und wer Ihre Ansprechperson in Ihrer Abteilung ist? (Qualitätsanforderung 7)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!8. Wurden Sie am ersten Arbeitstag vom Berufsbildner/von der Berufsbildnerin persönlich begrüsst? (Qualitätsanforderung 8)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!9. Wurden Sie zu Beginn Ihrer beruflichen Grundbildung über die Tätigkeiten und das Arbeitsumfeld Ihres Lehrbetriebs informiert? (Qualitätsanforderung 9)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!10. Kennen Sie die Arbeitsregeln sowie die Hygiene- und Sicherheitsvorschriften des Betriebs? (Qualitätsanforderung 10)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!11. Stehen Ihnen ein angemessener Arbeitsplatz und die nötigen Arbeitsmittel zur Verfügung? (Qualitätsanforderung 11)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!12. Wurden Ihnen Sinn und Zweck des Bildungsplans (betrieblicher Bildungsplan/Modelllehrgang) erläutert? (Qualitätsanforderung 12)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!13. Haben Sie während der Probezeit regelmässig Rückmeldungen zu Ihrer Leistung und Ihrem Verhalten erhalten? (Qualitätsanforderung 13)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!14. Erklärt Ihnen der/die Berufsbildner/in regelmässig, was Sie bis wann lernen müssen? (Qualitätsanforderung 16)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!15. Werden Ihre Arbeiten regelmässig überprüft und mit Ihnen besprochen? (Qualitätsanforderung 18)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!16. Werden Sie fortlaufend in die Arbeitsabläufe des Lehrbetriebs integriert? (Qualitätsanforderungen 19)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!17. Verfolgt Ihr/e Berufsbildner/in Ihre Leistungen in der Berufsfachschule und im überbetrieblichen Kurs? (Qualitätsanforderung 20)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!18. Wird der Bildungsbericht mit Ihnen halbjährlich besprochen und Bezug auf den Bildungsplan (betrieblicher Bildungsplan/Modelllehrgang) genommen? (Qualitätsanforderung 22)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!19. Erhalten Sie Gelegenheit, Rückmeldungen zu Ihrer Ausbildung zu machen, und geht Ihr/e Berufsbildner/in auf diese ein? (Qualitätsanforderung 23)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!20. Wissen Sie, an wen Sie sich bei Schwierigkeiten während Ihrer beruflichen Grundbildung wenden können? (Qualitätsanforderung 24)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===",
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "id": ["187003"],
       "item": "",
+      "hint": "",
       "instruction": "",
       "body": "",
-      "footer": "",
-      "hint": "",
       "quizzes": [
         {
           "item": "",
+          "hint": "",
           "instruction": "1. Wurden Sie zu einem Vorstellungsgespräch eingeladen? (Qualitätsanforderung 2)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "2. Wurde Ihnen mitgeteilt, dass Sie in die engere Auswahl gekommen sind? (Qualitätsanforderung 5)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "3. Konnten Sie vor dem Unterzeichnen des Lehrvertrags Ihren Lehrbetrieb kennen lernen? (Qualitätsanforderung 3)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "4. Wurde Ihnen vor dem Unterzeichnen des Lehrvertrags erklärt, welche Anforderungen an Sie gestellt werden? (Qualitätsanforderung 1)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "5. Wurden Sie vor dem Unterzeichnen des Lehrvertrags über die Arbeitsbedingungen informiert? (Qualitätsanforderung 4)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "6. Wurden Ihnen die im Lehrvertrag festgelegten Bedingungen wie Arbeitszeiten, Ferien, Lohn usw. erläutert? (Qualitätsanforderung 6)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "7. Wissen Sie wer Ihr/e Berufsbildner/in im Lehrbetrieb und wer Ihre Ansprechperson in Ihrer Abteilung ist? (Qualitätsanforderung 7)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "8. Wurden Sie am ersten Arbeitstag vom Berufsbildner/von der Berufsbildnerin persönlich begrüsst? (Qualitätsanforderung 8)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "9. Wurden Sie zu Beginn Ihrer beruflichen Grundbildung über die Tätigkeiten und das Arbeitsumfeld Ihres Lehrbetriebs informiert? (Qualitätsanforderung 9)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "10. Kennen Sie die Arbeitsregeln sowie die Hygiene- und Sicherheitsvorschriften des Betriebs? (Qualitätsanforderung 10)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "11. Stehen Ihnen ein angemessener Arbeitsplatz und die nötigen Arbeitsmittel zur Verfügung? (Qualitätsanforderung 11)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "12. Wurden Ihnen Sinn und Zweck des Bildungsplans (betrieblicher Bildungsplan/Modelllehrgang) erläutert? (Qualitätsanforderung 12)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "13. Haben Sie während der Probezeit regelmässig Rückmeldungen zu Ihrer Leistung und Ihrem Verhalten erhalten? (Qualitätsanforderung 13)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "14. Erklärt Ihnen der/die Berufsbildner/in regelmässig, was Sie bis wann lernen müssen? (Qualitätsanforderung 16)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "15. Werden Ihre Arbeiten regelmässig überprüft und mit Ihnen besprochen? (Qualitätsanforderung 18)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "16. Werden Sie fortlaufend in die Arbeitsabläufe des Lehrbetriebs integriert? (Qualitätsanforderungen 19)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "17. Verfolgt Ihr/e Berufsbildner/in Ihre Leistungen in der Berufsfachschule und im überbetrieblichen Kurs? (Qualitätsanforderung 20)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "18. Wird der Bildungsbericht mit Ihnen halbjährlich besprochen und Bezug auf den Bildungsplan (betrieblicher Bildungsplan/Modelllehrgang) genommen? (Qualitätsanforderung 22)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "19. Erhalten Sie Gelegenheit, Rückmeldungen zu Ihrer Ausbildung zu machen, und geht Ihr/e Berufsbildner/in auf diese ein? (Qualitätsanforderung 23)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "20. Wissen Sie, an wen Sie sich bei Schwierigkeiten während Ihrer beruflichen Grundbildung wenden können? (Qualitätsanforderung 24)",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher nein",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "eher ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "ja",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         }
       ],
-      "id": [
-        "187003"
-      ]
-    }
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.multiple-choice]\n[@id:187003]\n===\n[!1. Wurden Sie zu einem Vorstellungsgespräch eingeladen? (Qualitätsanforderung 2)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!2. Wurde Ihnen mitgeteilt, dass Sie in die engere Auswahl gekommen sind? (Qualitätsanforderung 5)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!3. Konnten Sie vor dem Unterzeichnen des Lehrvertrags Ihren Lehrbetrieb kennen lernen? (Qualitätsanforderung 3)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!4. Wurde Ihnen vor dem Unterzeichnen des Lehrvertrags erklärt, welche Anforderungen an Sie gestellt werden? (Qualitätsanforderung 1)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!5. Wurden Sie vor dem Unterzeichnen des Lehrvertrags über die Arbeitsbedingungen informiert? (Qualitätsanforderung 4)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!6. Wurden Ihnen die im Lehrvertrag festgelegten Bedingungen wie Arbeitszeiten, Ferien, Lohn usw. erläutert? (Qualitätsanforderung 6)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!7. Wissen Sie wer Ihr/e Berufsbildner/in im Lehrbetrieb und wer Ihre Ansprechperson in Ihrer Abteilung ist? (Qualitätsanforderung 7)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!8. Wurden Sie am ersten Arbeitstag vom Berufsbildner/von der Berufsbildnerin persönlich begrüsst? (Qualitätsanforderung 8)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!9. Wurden Sie zu Beginn Ihrer beruflichen Grundbildung über die Tätigkeiten und das Arbeitsumfeld Ihres Lehrbetriebs informiert? (Qualitätsanforderung 9)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!10. Kennen Sie die Arbeitsregeln sowie die Hygiene- und Sicherheitsvorschriften des Betriebs? (Qualitätsanforderung 10)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!11. Stehen Ihnen ein angemessener Arbeitsplatz und die nötigen Arbeitsmittel zur Verfügung? (Qualitätsanforderung 11)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!12. Wurden Ihnen Sinn und Zweck des Bildungsplans (betrieblicher Bildungsplan/Modelllehrgang) erläutert? (Qualitätsanforderung 12)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!13. Haben Sie während der Probezeit regelmässig Rückmeldungen zu Ihrer Leistung und Ihrem Verhalten erhalten? (Qualitätsanforderung 13)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!14. Erklärt Ihnen der/die Berufsbildner/in regelmässig, was Sie bis wann lernen müssen? (Qualitätsanforderung 16)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!15. Werden Ihre Arbeiten regelmässig überprüft und mit Ihnen besprochen? (Qualitätsanforderung 18)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!16. Werden Sie fortlaufend in die Arbeitsabläufe des Lehrbetriebs integriert? (Qualitätsanforderungen 19)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!17. Verfolgt Ihr/e Berufsbildner/in Ihre Leistungen in der Berufsfachschule und im überbetrieblichen Kurs? (Qualitätsanforderung 20)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!18. Wird der Bildungsbericht mit Ihnen halbjährlich besprochen und Bezug auf den Bildungsplan (betrieblicher Bildungsplan/Modelllehrgang) genommen? (Qualitätsanforderung 22)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!19. Erhalten Sie Gelegenheit, Rückmeldungen zu Ihrer Ausbildung zu machen, und geht Ihr/e Berufsbildner/in auf diese ein? (Qualitätsanforderung 23)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!20. Wissen Sie, an wen Sie sich bei Schwierigkeiten während Ihrer beruflichen Grundbildung wenden können? (Qualitätsanforderung 24)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n==="
   },
   {
-    "bitmark": "[.multiple-choice]\n[@id:186986]\nQualitätsanforderungen - Beurteilung\n===\n[!24 - Hat die lernende Person Schwierigkeiten oder droht die Auflösung des Lehrverhältnisses, kontaktiert der/die Berufsbildner/in je nach Situation frühzeitig die gesetzlichen Vertreter, das zuständige Berufsbildungsamt und/oder die Berufsfachschule.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!25 - Alle für das Qualifikationsverfahren notwendigen organisatorischen und formalen Massnahmen werden rechtzeitig getroffen.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!26 - Die Austrittsmodalitäten betreffend der Lernenden sind rechtzeitig geregelt.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!27 - Der/die Berufsbildner/in bildet sich regelmässig weiter.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!28 - Der Lehrbetrieb stellt dem/der Berufsbildner/in die notwendigen zeitlichen, finanziellen und materiellen Ressourcen zur Verfügung.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===",
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "id": ["186986"],
       "item": "",
+      "hint": "",
       "instruction": "",
       "body": "Qualitätsanforderungen - Beurteilung",
-      "footer": "",
-      "hint": "",
       "quizzes": [
         {
           "item": "",
+          "hint": "",
           "instruction": "24 - Hat die lernende Person Schwierigkeiten oder droht die Auflösung des Lehrverhältnisses, kontaktiert der/die Berufsbildner/in je nach Situation frühzeitig die gesetzlichen Vertreter, das zuständige Berufsbildungsamt und/oder die Berufsfachschule.",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "Anforderungen nicht erfüllt",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen teilweise erfüllt",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen gut erfüllt",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "25 - Alle für das Qualifikationsverfahren notwendigen organisatorischen und formalen Massnahmen werden rechtzeitig getroffen.",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "Anforderungen nicht erfüllt",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen teilweise erfüllt",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen gut erfüllt",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "26 - Die Austrittsmodalitäten betreffend der Lernenden sind rechtzeitig geregelt.",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "Anforderungen nicht erfüllt",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen teilweise erfüllt",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen gut erfüllt",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "27 - Der/die Berufsbildner/in bildet sich regelmässig weiter.",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "Anforderungen nicht erfüllt",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen teilweise erfüllt",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen gut erfüllt",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         },
         {
           "item": "",
+          "hint": "",
           "instruction": "28 - Der Lehrbetrieb stellt dem/der Berufsbildner/in die notwendigen zeitlichen, finanziellen und materiellen Ressourcen zur Verfügung.",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "Anforderungen nicht erfüllt",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen teilweise erfüllt",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Anforderungen gut erfüllt",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         }
       ],
-      "id": [
-        "186986"
-      ]
-    }
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.multiple-choice]\n[@id:186986]\nQualitätsanforderungen - Beurteilung\n===\n[!24 - Hat die lernende Person Schwierigkeiten oder droht die Auflösung des Lehrverhältnisses, kontaktiert der/die Berufsbildner/in je nach Situation frühzeitig die gesetzlichen Vertreter, das zuständige Berufsbildungsamt und/oder die Berufsfachschule.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!25 - Alle für das Qualifikationsverfahren notwendigen organisatorischen und formalen Massnahmen werden rechtzeitig getroffen.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!26 - Die Austrittsmodalitäten betreffend der Lernenden sind rechtzeitig geregelt.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!27 - Der/die Berufsbildner/in bildet sich regelmässig weiter.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!28 - Der Lehrbetrieb stellt dem/der Berufsbildner/in die notwendigen zeitlichen, finanziellen und materiellen Ressourcen zur Verfügung.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n==="
   },
   {
-    "bitmark": "[.multiple-choice:bitmark--&audio]\n[@id:136408]\n[%LES JEUX VIDÉO]\n[&audio:https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/franzoesisch_2020/web-resources/audio/hoertext_franzoesisch_2020.mp3]\n\n[!Lies zuerst alle Aussagen zu den Teilen A und B durch. Jetzt hörst du den ganzen Text zwei Mal, ein erstes Mal ohne Pause und ein zweites Mal mit einer kurzen Pause nach dem Teil A. Kreuze bei jeder Aussage an, ob sie richtig oder falsch ist.\nWird nichts zur Aussage gesagt, so setze das Kreuz in die Kolonne \"on ne sait pas\".]\n\n**Teil A**\n===\n[%1][!Kevin joue seulement pendant la journée.]\n[+vrai]\n[-faux]\n[-on ne sait pas]\n===\n[%2][!Kevin joue à des jeux de guerre.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%3][!Kevin reste toujours seul.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%4][!Anne oublie le temps quand elle joue.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%5][!Anne ne fait plus de sport.]\n[-vrai]\n[-faux]\n[+on ne sait pas]\n===\n[%6][!Anne et ses parents ont beaucoup de discussions parce qu'elle joue trop.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%7][!A l'école, Anne est une bonne élève.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%8][!**Teil B**\nC'est toujours Lionel qui gagne contre ses fils quand ils jouent à des jeux vidéo.]\n[-vrai]\n[-faux]\n[+on ne sait pas]\n===\n[%9][!Lionel teste seul ses jeux vidéo.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%10][!Lionel gagne beaucoup d'argent.]\n[-vrai]\n[-faux]\n[+on ne sait pas]\n===\n[%11][!Dans le club de Nathalie, il y a très peu de filles.]\n[+vrai]\n[-faux]\n[-on ne sait pas]\n===\n[%12][!Le centre de jeunesse est ouvert tous les jours.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%13][!Nathalie n'a pas de patience quand elle joue.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%14][!Pour jouer aux jeux vidéo, les enfants utilisent les deux\nmains.]\n[+vrai]\n[-faux]\n[-on ne sait pas]\n===\n[%15][!Le professeur est venu à l'émission à trottinette.]\n[-vrai]\n[-faux]\n[+on ne sait pas]\n===",
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "id": ["136408"],
       "item": "LES JEUX VIDÉO",
+      "hint": "",
       "instruction": "Lies zuerst alle Aussagen zu den Teilen A und B durch. Jetzt hörst du den ganzen Text zwei Mal, ein erstes Mal ohne Pause und ein zweites Mal mit einer kurzen Pause nach dem Teil A. Kreuze bei jeder Aussage an, ob sie richtig oder falsch ist.\nWird nichts zur Aussage gesagt, so setze das Kreuz in die Kolonne \"on ne sait pas\".",
       "body": "**Teil A**",
-      "footer": "",
-      "hint": "",
-      "quizzes": [
-        {
-          "item": "1",
-          "instruction": "Kevin joue seulement pendant la journée.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "2",
-          "instruction": "Kevin joue à des jeux de guerre.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "3",
-          "instruction": "Kevin reste toujours seul.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "4",
-          "instruction": "Anne oublie le temps quand elle joue.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "5",
-          "instruction": "Anne ne fait plus de sport.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "6",
-          "instruction": "Anne et ses parents ont beaucoup de discussions parce qu'elle joue trop.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "7",
-          "instruction": "A l'école, Anne est une bonne élève.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "8",
-          "instruction": "**Teil B**\nC'est toujours Lionel qui gagne contre ses fils quand ils jouent à des jeux vidéo.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "9",
-          "instruction": "Lionel teste seul ses jeux vidéo.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "10",
-          "instruction": "Lionel gagne beaucoup d'argent.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "11",
-          "instruction": "Dans le club de Nathalie, il y a très peu de filles.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "12",
-          "instruction": "Le centre de jeunesse est ouvert tous les jours.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "13",
-          "instruction": "Nathalie n'a pas de patience quand elle joue.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "14",
-          "instruction": "Pour jouer aux jeux vidéo, les enfants utilisent les deux\nmains.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "15",
-          "instruction": "Le professeur est venu à l'émission à trottinette.",
-          "choices": [
-            {
-              "choice": "vrai",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "faux",
-              "item": "",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "on ne sait pas",
-              "item": "",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        }
-      ],
-      "id": [
-        "136408"
-      ],
       "resource": {
         "type": "audio",
         "audio": {
           "format": "mp3",
-          "src": "https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/franzoesisch_2020/web-resources/audio/hoertext_franzoesisch_2020.mp3"
+          "provider": "docs.bitmark.cloud",
+          "src": "https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/franzoesisch_2020/web-resources/audio/hoertext_franzoesisch_2020.mp3",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
-      }
-    }
+      },
+      "quizzes": [
+        {
+          "item": "1",
+          "hint": "",
+          "instruction": "Kevin joue seulement pendant la journée.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "2",
+          "hint": "",
+          "instruction": "Kevin joue à des jeux de guerre.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "3",
+          "hint": "",
+          "instruction": "Kevin reste toujours seul.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "4",
+          "hint": "",
+          "instruction": "Anne oublie le temps quand elle joue.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "5",
+          "hint": "",
+          "instruction": "Anne ne fait plus de sport.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "6",
+          "hint": "",
+          "instruction": "Anne et ses parents ont beaucoup de discussions parce qu'elle joue trop.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "7",
+          "hint": "",
+          "instruction": "A l'école, Anne est une bonne élève.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "8",
+          "hint": "",
+          "instruction": "**Teil B**\nC'est toujours Lionel qui gagne contre ses fils quand ils jouent à des jeux vidéo.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "9",
+          "hint": "",
+          "instruction": "Lionel teste seul ses jeux vidéo.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "10",
+          "hint": "",
+          "instruction": "Lionel gagne beaucoup d'argent.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "11",
+          "hint": "",
+          "instruction": "Dans le club de Nathalie, il y a très peu de filles.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "12",
+          "hint": "",
+          "instruction": "Le centre de jeunesse est ouvert tous les jours.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "13",
+          "hint": "",
+          "instruction": "Nathalie n'a pas de patience quand elle joue.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "14",
+          "hint": "",
+          "instruction": "Pour jouer aux jeux vidéo, les enfants utilisent les deux\nmains.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "15",
+          "hint": "",
+          "instruction": "Le professeur est venu à l'émission à trottinette.",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "vrai",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "faux",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "on ne sait pas",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        }
+      ],
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.multiple-choice:bitmark--&audio]\n[@id:136408]\n[%LES JEUX VIDÉO]\n[&audio:https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/franzoesisch_2020/web-resources/audio/hoertext_franzoesisch_2020.mp3]\n\n[!Lies zuerst alle Aussagen zu den Teilen A und B durch. Jetzt hörst du den ganzen Text zwei Mal, ein erstes Mal ohne Pause und ein zweites Mal mit einer kurzen Pause nach dem Teil A. Kreuze bei jeder Aussage an, ob sie richtig oder falsch ist.\nWird nichts zur Aussage gesagt, so setze das Kreuz in die Kolonne \"on ne sait pas\".]\n\n**Teil A**\n===\n[%1][!Kevin joue seulement pendant la journée.]\n[+vrai]\n[-faux]\n[-on ne sait pas]\n===\n[%2][!Kevin joue à des jeux de guerre.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%3][!Kevin reste toujours seul.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%4][!Anne oublie le temps quand elle joue.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%5][!Anne ne fait plus de sport.]\n[-vrai]\n[-faux]\n[+on ne sait pas]\n===\n[%6][!Anne et ses parents ont beaucoup de discussions parce qu'elle joue trop.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%7][!A l'école, Anne est une bonne élève.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%8][!**Teil B**\nC'est toujours Lionel qui gagne contre ses fils quand ils jouent à des jeux vidéo.]\n[-vrai]\n[-faux]\n[+on ne sait pas]\n===\n[%9][!Lionel teste seul ses jeux vidéo.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%10][!Lionel gagne beaucoup d'argent.]\n[-vrai]\n[-faux]\n[+on ne sait pas]\n===\n[%11][!Dans le club de Nathalie, il y a très peu de filles.]\n[+vrai]\n[-faux]\n[-on ne sait pas]\n===\n[%12][!Le centre de jeunesse est ouvert tous les jours.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%13][!Nathalie n'a pas de patience quand elle joue.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%14][!Pour jouer aux jeux vidéo, les enfants utilisent les deux\nmains.]\n[+vrai]\n[-faux]\n[-on ne sait pas]\n===\n[%15][!Le professeur est venu à l'émission à trottinette.]\n[-vrai]\n[-faux]\n[+on ne sait pas]\n==="
   },
   {
-    "bitmark": "[.multiple-choice&image]\n[@id:107942]\n[%9]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-9.png]\n[!Es ist Samstagnachmittag. Du gehst zur Post, um Briefmarken zu kaufen. Kannst du die Briefmarken jetzt bekommen? Wähl\nrichtig aus.\nKannst du die Briefmarken jetzt kaufen?]\n[-Ja]\n[+Nein]",
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "id": ["107942"],
       "item": "9",
+      "hint": "",
       "instruction": "Es ist Samstagnachmittag. Du gehst zur Post, um Briefmarken zu kaufen. Kannst du die Briefmarken jetzt bekommen? Wähl\nrichtig aus.\nKannst du die Briefmarken jetzt kaufen?",
       "body": "",
-      "footer": "",
-      "hint": "",
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-9.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
+        }
+      },
       "quizzes": [
         {
           "item": "",
+          "hint": "",
           "instruction": "",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "Ja",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Nein",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         }
       ],
-      "id": [
-        "107942"
-      ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-9.png",
-          "showInIndex": false,
-          "format": "png",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "caption": "",
-          "license": "",
-          "copyright": ""
-        }
-      }
-    }
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.multiple-choice&image]\n[@id:107942]\n[%9]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-9.png]\n[!Es ist Samstagnachmittag. Du gehst zur Post, um Briefmarken zu kaufen. Kannst du die Briefmarken jetzt bekommen? Wähl\nrichtig aus.\nKannst du die Briefmarken jetzt kaufen?]\n[-Ja]\n[+Nein]"
   },
   {
-    "bitmark": "[.multiple-choice&image]\n[@id:107955]\n[%21]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-21.png]\n[!Du bekommst eine E-Mail von deinem Freund Detlef. Warum hat Detlef dir eine E-Mail geschickt? Lies die E-Mail und wähl\ndie richtige Antwort.]\n[-Er möchte dich einladen.]\n[-Er möchte dir danken.]\n[+Er möchte dir Grüße schicken.]",
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "id": ["107955"],
       "item": "21",
+      "hint": "",
       "instruction": "Du bekommst eine E-Mail von deinem Freund Detlef. Warum hat Detlef dir eine E-Mail geschickt? Lies die E-Mail und wähl\ndie richtige Antwort.",
       "body": "",
-      "footer": "",
-      "hint": "",
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-21.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
+        }
+      },
       "quizzes": [
         {
           "item": "",
+          "hint": "",
           "instruction": "",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "Er möchte dich einladen.",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Er möchte dir danken.",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Er möchte dir Grüße schicken.",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         }
       ],
-      "id": [
-        "107955"
-      ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-21.png",
-          "showInIndex": false,
-          "format": "png",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "caption": "",
-          "license": "",
-          "copyright": ""
-        }
-      }
-    }
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.multiple-choice&image]\n[@id:107955]\n[%21]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-21.png]\n[!Du bekommst eine E-Mail von deinem Freund Detlef. Warum hat Detlef dir eine E-Mail geschickt? Lies die E-Mail und wähl\ndie richtige Antwort.]\n[-Er möchte dich einladen.]\n[-Er möchte dir danken.]\n[+Er möchte dir Grüße schicken.]"
   },
   {
-    "bitmark": "[.multiple-choice]\n[@id:107956]\n[%22]\n[!Du willst deine Freundin Julia anrufen. Du rufst an und ein Mann antwortet. Was sagst du? Wähl die beste Antwort.]\n[-Hallo, Julia.]\n[+Hallo, ist Julia da?]\n[-Moment bitte.]",
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "id": ["107956"],
       "item": "22",
+      "hint": "",
       "instruction": "Du willst deine Freundin Julia anrufen. Du rufst an und ein Mann antwortet. Was sagst du? Wähl die beste Antwort.",
       "body": "",
-      "footer": "",
-      "hint": "",
       "quizzes": [
         {
           "item": "",
+          "hint": "",
           "instruction": "",
+          "isExample": false,
+          "example": "",
           "choices": [
             {
               "choice": "Hallo, Julia.",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Hallo, ist Julia da?",
-              "item": "",
               "isCorrect": true,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             },
             {
               "choice": "Moment bitte.",
-              "item": "",
               "isCorrect": false,
-              "instruction": "",
-              "hint": ""
+              "item": "",
+              "hint": "",
+              "instruction": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         }
       ],
-      "id": [
-        "107956"
-      ]
-    }
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.multiple-choice]\n[@id:107956]\n[%22]\n[!Du willst deine Freundin Julia anrufen. Du rufst an und ein Mann antwortet. Was sagst du? Wähl die beste Antwort.]\n[-Hallo, Julia.]\n[+Hallo, ist Julia da?]\n[-Moment bitte.]"
   },
   {
-    "bitmark": "[.multiple-choice:bitmark--]\n|| FIXED: PEG parser is not correctly parsing the chained [%item] tags - it is adding them at the quizzes level ||\n[@id:291806]\n[%]\n[!Teilen Sie die folgenden Begriffe in der entsprechenden Spalte korrekt zu:]\n===\n[!Staatliche Vorsorge]\n[+1. Säule][%1]\n[-2. Säule][%2]\n[-3. Säule][%3]\n===\n[!Individuelle Ergänzung]\n[-1. Säule][%1]\n[-2. Säule][%2]\n[+3. Säule][%3]\n===\n[!Existenzsicherung]\n[+1. Säule][%1]\n[-2. Säule][%2]\n[-3. Säule][%3]\n===\n[!Berufliche Vorsorge]\n[-1. Säule][%1]\n[+2. Säule][%2]\n[-3. Säule][%3]\n===",
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "id": ["291806"],
+      "item": "",
+      "hint": "",
+      "instruction": "Teilen Sie die folgenden Begriffe in der entsprechenden Spalte korrekt zu:",
+      "body": "",
+      "quizzes": [
+        {
+          "item": "",
+          "hint": "",
+          "instruction": "Staatliche Vorsorge",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "1. Säule",
+              "isCorrect": true,
+              "item": "1",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "2. Säule",
+              "isCorrect": false,
+              "item": "2",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "3. Säule",
+              "isCorrect": false,
+              "item": "3",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "",
+          "hint": "",
+          "instruction": "Individuelle Ergänzung",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "1. Säule",
+              "isCorrect": false,
+              "item": "1",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "2. Säule",
+              "isCorrect": false,
+              "item": "2",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "3. Säule",
+              "isCorrect": true,
+              "item": "3",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "",
+          "hint": "",
+          "instruction": "Existenzsicherung",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "1. Säule",
+              "isCorrect": true,
+              "item": "1",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "2. Säule",
+              "isCorrect": false,
+              "item": "2",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "3. Säule",
+              "isCorrect": false,
+              "item": "3",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        },
+        {
+          "item": "",
+          "hint": "",
+          "instruction": "Berufliche Vorsorge",
+          "isExample": false,
+          "example": "",
+          "choices": [
+            {
+              "choice": "1. Säule",
+              "isCorrect": false,
+              "item": "1",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "2. Säule",
+              "isCorrect": true,
+              "item": "2",
+              "hint": "",
+              "instruction": ""
+            },
+            {
+              "choice": "3. Säule",
+              "isCorrect": false,
+              "item": "3",
+              "hint": "",
+              "instruction": ""
+            }
+          ]
+        }
+      ],
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3",
+      "comments": [
+        {
+          "text": " FIXED: PEG parser is not correctly parsing the chained [%item] tags - it is adding them at the quizzes level ",
+          "location": {
+            "start": {
+              "line": 279,
+              "column": 1,
+              "offset": 7876
+            },
+            "end": {
+              "line": 279,
+              "column": 115,
+              "offset": 7990
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.multiple-choice:bitmark--]\n|| FIXED: PEG parser is not correctly parsing the chained [%item] tags - it is adding them at the quizzes level ||\n[@id:291806]\n[%]\n[!Teilen Sie die folgenden Begriffe in der entsprechenden Spalte korrekt zu:]\n===\n[!Staatliche Vorsorge]\n[+1. Säule][%1]\n[-2. Säule][%2]\n[-3. Säule][%3]\n===\n[!Individuelle Ergänzung]\n[-1. Säule][%1]\n[-2. Säule][%2]\n[+3. Säule][%3]\n===\n[!Existenzsicherung]\n[+1. Säule][%1]\n[-2. Säule][%2]\n[-3. Säule][%3]\n===\n[!Berufliche Vorsorge]\n[-1. Säule][%1]\n[+2. Säule][%2]\n[-3. Säule][%3]\n==="
+  },
+  {
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
       "item": "",
-      "instruction": "Teilen Sie die folgenden Begriffe in der entsprechenden Spalte korrekt zu:",
-      "body": "",
-      "footer": "",
       "hint": "",
+      "instruction": "",
+      "body": "",
       "quizzes": [
         {
           "item": "",
-          "instruction": "Staatliche Vorsorge",
+          "hint": "",
+          "instruction": "1. There is a washer-dryer.",
+          "isExample": true,
+          "example": "",
           "choices": [
             {
-              "choice": "1. Säule",
-              "item": "1",
+              "choice": "P",
               "isCorrect": true,
+              "item": "",
+              "hint": "",
               "instruction": "",
-              "hint": ""
+              "isExample": true,
+              "example": ""
             },
             {
-              "choice": "2. Säule",
-              "item": "2",
+              "choice": "H",
               "isCorrect": false,
+              "item": "",
+              "hint": "",
               "instruction": "",
-              "hint": ""
+              "isExample": false,
+              "example": ""
             },
             {
-              "choice": "3. Säule",
-              "item": "3",
+              "choice": "C",
               "isCorrect": false,
+              "item": "",
+              "hint": "",
               "instruction": "",
-              "hint": ""
+              "isExample": false,
+              "example": ""
             }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "",
-          "instruction": "Individuelle Ergänzung",
-          "choices": [
-            {
-              "choice": "1. Säule",
-              "item": "1",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "2. Säule",
-              "item": "2",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "3. Säule",
-              "item": "3",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "",
-          "instruction": "Existenzsicherung",
-          "choices": [
-            {
-              "choice": "1. Säule",
-              "item": "1",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "2. Säule",
-              "item": "2",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "3. Säule",
-              "item": "3",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
-        },
-        {
-          "item": "",
-          "instruction": "Berufliche Vorsorge",
-          "choices": [
-            {
-              "choice": "1. Säule",
-              "item": "1",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "2. Säule",
-              "item": "2",
-              "isCorrect": true,
-              "instruction": "",
-              "hint": ""
-            },
-            {
-              "choice": "3. Säule",
-              "item": "3",
-              "isCorrect": false,
-              "instruction": "",
-              "hint": ""
-            }
-          ],
-          "hint": "",
-          "isExample": false,
-          "example": ""
+          ]
         }
       ],
-      "id": [
-        "291806"
-      ]
-    }
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[+P][@example]\n[-H]\n[-C]\n==="
+  },
+  {
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "hint": "",
+      "instruction": "",
+      "body": "",
+      "quizzes": [
+        {
+          "item": "",
+          "hint": "",
+          "instruction": "1. There is a washer-dryer.",
+          "isExample": true,
+          "example": "",
+          "choices": [
+            {
+              "choice": "P",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": false,
+              "example": ""
+            },
+            {
+              "choice": "H",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": false,
+              "example": ""
+            },
+            {
+              "choice": "C",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": true,
+              "example": ""
+            }
+          ]
+        }
+      ],
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[+P]\n[-H]\n[-C][@example]\n==="
+  },
+  {
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "hint": "",
+      "instruction": "",
+      "body": "",
+      "quizzes": [
+        {
+          "item": "",
+          "hint": "",
+          "instruction": "1. There is a washer-dryer.",
+          "isExample": true,
+          "example": "",
+          "choices": [
+            {
+              "choice": "P",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": false,
+              "example": ""
+            },
+            {
+              "choice": "H",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": false,
+              "example": ""
+            },
+            {
+              "choice": "C",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": false,
+              "example": ""
+            }
+          ]
+        }
+      ],
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[@example]\n[+P]\n[-H]\n[-C]\n==="
+  },
+  {
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "hint": "",
+      "instruction": "",
+      "body": "",
+      "quizzes": [
+        {
+          "item": "",
+          "hint": "",
+          "instruction": "1. There is a washer-dryer.",
+          "isExample": true,
+          "example": "",
+          "choices": [
+            {
+              "choice": "P",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": true,
+              "example": "hello"
+            },
+            {
+              "choice": "H",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": false,
+              "example": ""
+            },
+            {
+              "choice": "C",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": false,
+              "example": ""
+            }
+          ]
+        }
+      ],
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[+P][@example:hello]\n[-H]\n[-C]\n==="
+  },
+  {
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "hint": "",
+      "instruction": "",
+      "body": "",
+      "quizzes": [
+        {
+          "item": "",
+          "hint": "",
+          "instruction": "1. There is a washer-dryer.",
+          "isExample": true,
+          "example": "",
+          "choices": [
+            {
+              "choice": "P",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": false,
+              "example": ""
+            },
+            {
+              "choice": "H",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": false,
+              "example": ""
+            },
+            {
+              "choice": "C",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": true,
+              "example": "hello"
+            }
+          ]
+        }
+      ],
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[+P]\n[-H]\n[-C][@example:hello]\n==="
+  },
+  {
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "hint": "",
+      "instruction": "",
+      "body": "",
+      "quizzes": [
+        {
+          "item": "",
+          "hint": "",
+          "instruction": "1. There is a washer-dryer.",
+          "isExample": true,
+          "example": "",
+          "choices": [
+            {
+              "choice": "P",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": true,
+              "example": ""
+            },
+            {
+              "choice": "H",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": false,
+              "example": ""
+            },
+            {
+              "choice": "C",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": false,
+              "example": ""
+            }
+          ]
+        }
+      ],
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[@example:false]\n[+P][@example]\n[-H]\n[-C]\n==="
+  },
+  {
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "item": "",
+      "hint": "",
+      "instruction": "",
+      "body": "",
+      "quizzes": [
+        {
+          "item": "",
+          "hint": "",
+          "instruction": "1. There is a washer-dryer.",
+          "isExample": true,
+          "example": "",
+          "choices": [
+            {
+              "choice": "P",
+              "isCorrect": true,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": true,
+              "example": "right"
+            },
+            {
+              "choice": "H",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": true,
+              "example": "hello"
+            },
+            {
+              "choice": "C",
+              "isCorrect": false,
+              "item": "",
+              "hint": "",
+              "instruction": "",
+              "isExample": true,
+              "example": "wrong"
+            }
+          ]
+        }
+      ],
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[+P][@example:right]\n[-H][@example:hello]\n[-C][@example:wrong]\n==="
   }
 ]

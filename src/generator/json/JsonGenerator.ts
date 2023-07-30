@@ -744,11 +744,13 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
               choice: c.text ?? '',
               isCorrect: c.isCorrect ?? false,
               ...this.toItemLeadHintInstruction(c),
-              // ...this.toExampleAndIsExample(c.example),
+              ...this.toExampleAndIsExample(c.example),
             };
 
             // Delete unwanted properties
             if (q.itemLead?.lead == null) delete choiceJson.lead;
+            if (!q.example) delete choiceJson.example;
+            if (!q.example) delete choiceJson.isExample;
 
             choicesJson.push(choiceJson as ChoiceJson);
           }
@@ -763,11 +765,13 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
               response: c.text ?? '',
               isCorrect: c.isCorrect ?? false,
               ...this.toItemLeadHintInstruction(c),
-              // ...this.toExampleAndIsExample(c.example),
+              ...this.toExampleAndIsExample(c.example),
             };
 
             // Delete unwanted properties
             if (q.itemLead?.lead == null) delete responseJson.lead;
+            if (!c.example) delete responseJson.example;
+            if (!c.example) delete responseJson.isExample;
 
             responsesJson.push(responseJson as ResponseJson);
           }

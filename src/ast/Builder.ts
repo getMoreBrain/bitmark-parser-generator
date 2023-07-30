@@ -437,12 +437,31 @@ class Builder extends BaseBuilder {
   }): Quiz {
     const { choices, responses, item, lead, hint, instruction, example } = data;
 
+    // See if choice or response has is an example
+    let isAnswerExample = false;
+    if (choices) {
+      for (const c of choices) {
+        if (c.example) {
+          isAnswerExample = true;
+          break;
+        }
+      }
+    }
+    if (responses) {
+      for (const r of responses) {
+        if (r.example) {
+          isAnswerExample = true;
+          break;
+        }
+      }
+    }
+
     // NOTE: Node order is important and is defined here
     const node: Quiz = {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
+      example: this.toExample(example) || isAnswerExample,
       choices,
       responses,
     };
