@@ -456,16 +456,16 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     // Ignore example that is not at the correct level
     if (parent?.key !== NodeType.markConfig) return;
 
-    const { type, color, indication } = markConfig;
+    const { mark, color, emphasis } = markConfig;
 
     const markJson = {} as Partial<MarkConfigJson>;
 
-    this.addProperty(markJson, 'type', type ?? 'unknown', true);
+    this.addProperty(markJson, 'mark', mark ?? 'unknown', true);
     if (color) this.addProperty(markJson, 'color', color ?? '', true);
-    if (indication) this.addProperty(markJson, 'indication', indication ?? '', true);
+    if (emphasis) this.addProperty(markJson, 'emphasis', emphasis ?? '', true);
 
-    if (!this.bitJson.mark) this.bitJson.mark = [];
-    this.bitJson.mark.push(markJson as MarkConfigJson);
+    if (!this.bitJson.marks) this.bitJson.marks = [];
+    this.bitJson.marks.push(markJson as MarkConfigJson);
   }
 
   // bitmarkAst -> bits -> bitsValue -> sampleSolution
@@ -1255,7 +1255,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     const markJson: Partial<MarkJson> = {
       type: 'mark',
       solution: data.solution,
-      markType: data.type,
+      mark: data.mark,
       ...this.toItemLeadHintInstruction(data),
       ...this.toExampleAndIsExample(data.example),
       //
@@ -2105,8 +2105,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       // Partner .conversion-xxx only
       partner: undefined,
 
-      // Mark (config)
-      mark: undefined,
+      // Marks (config)
+      marks: undefined,
 
       // Extra Properties
       extraProperties: undefined,
@@ -2369,7 +2369,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.isExample == null) delete bitJson.isExample;
 
     // Mark
-    if (bitJson.mark == null) delete bitJson.mark;
+    if (bitJson.marks == null) delete bitJson.marks;
 
     // Extra Properties
     if (bitJson.extraProperties == null) delete bitJson.extraProperties;

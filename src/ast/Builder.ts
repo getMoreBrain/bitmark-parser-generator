@@ -734,14 +734,14 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  markConfig(data: { type: string; color?: string; indication?: string }): MarkConfig {
-    const { type, color, indication } = data;
+  markConfig(data: { mark: string; color?: string; emphasis?: string }): MarkConfig {
+    const { mark, color, emphasis } = data;
 
     // NOTE: Node order is important and is defined here
     const node: MarkConfig = {
-      type,
+      mark,
       color,
-      indication,
+      emphasis,
     };
 
     // Remove Unset Optionals
@@ -758,21 +758,21 @@ class Builder extends BaseBuilder {
    */
   mark(data: {
     solution: string;
-    type?: string;
+    mark?: string;
     item?: string;
     lead?: string;
     hint?: string;
     instruction?: string;
     example?: string | boolean;
   }): Mark {
-    const { solution, type, item, lead, hint, instruction, example } = data;
+    const { solution, mark, item, lead, hint, instruction, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Mark = {
       type: BodyBitType.mark,
       data: {
         solution,
-        type,
+        mark,
         itemLead: this.itemLead(item, lead),
         hint,
         instruction,

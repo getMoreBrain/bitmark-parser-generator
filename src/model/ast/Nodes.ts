@@ -129,9 +129,9 @@ export interface Partner {
 }
 
 export interface MarkConfig {
-  type: string;
+  mark: string;
   color?: string;
-  indication?: string;
+  emphasis?: string;
 }
 
 // Statement
@@ -277,7 +277,7 @@ export interface Mark extends BodyBit {
   type: 'mark';
   data: {
     solution: string;
-    type?: string;
+    mark?: string;
     itemLead?: ItemLead;
     hint?: string;
     instruction?: string;

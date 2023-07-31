@@ -102,7 +102,7 @@ export interface BitContentProcessorResult {
   choices?: Choice[];
   responses?: Response[];
   solution?: string;
-  markType?: string[];
+  mark?: string[];
   title?: string[];
   subtitle?: string;
   resources?: Resource[];

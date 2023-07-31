@@ -79,7 +79,7 @@ const TAGS_CHAIN_MARK_CONFIG: TagDataMap = {
     maxCount: INFINITE_COUNT,
     chain: {
       [PropertyKey.color]: { isProperty: true },
-      [PropertyKey.indication]: { isProperty: true },
+      [PropertyKey.emphasis]: { isProperty: true },
     },
   },
 };
@@ -90,7 +90,7 @@ const TAGS_CHAIN_MARK: TagDataMap = {
   [TagType.Mark]: {
     maxCount: INFINITE_COUNT,
     chain: {
-      [PropertyKey.type]: { isProperty: true },
+      [PropertyKey.mark]: { isProperty: true },
       ...TAGS_PROPERTY_EXAMPLE,
     },
   },

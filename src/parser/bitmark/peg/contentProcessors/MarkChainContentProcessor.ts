@@ -40,11 +40,11 @@ function buildMark(context: BitmarkPegParserContext, bitType: BitTypeType, conte
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('mark TAGS', tags);
 
-  const { solution, markType, ...rest } = tags;
+  const { solution, mark: markType, ...rest } = tags;
 
   const mark = builder.mark({
     solution: solution ?? '',
-    type: ArrayUtils.asSingle(markType),
+    mark: ArrayUtils.asSingle(markType) ?? '',
     ...rest,
   });
 

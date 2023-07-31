@@ -195,7 +195,7 @@ const NodeType = superenum({
   markConfigValue: 'markConfigValue',
   solution: 'solution',
   color: 'color',
-  indication: 'indication',
+  emphasis: 'emphasis',
 
   // Resources
   resource: 'resource',

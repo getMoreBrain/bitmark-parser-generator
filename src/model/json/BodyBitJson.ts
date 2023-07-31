@@ -31,7 +31,7 @@ export interface GapJson extends BaseBodyBitJson {
 export interface MarkJson extends BaseBodyBitJson {
   type: 'mark'; // body bit type
   solution: string;
-  markType: string;
+  mark: string;
   // item: Text;
   // lead: Text;
   // hint: Text;

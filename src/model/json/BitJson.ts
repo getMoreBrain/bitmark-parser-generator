@@ -65,7 +65,7 @@ export interface BitJson {
 
   partner: PartnerJson;
 
-  mark: MarkConfigJson[];
+  marks: MarkConfigJson[];
 
   // NEW property - not in the ANTLR parser
   extraProperties: {
@@ -99,7 +99,7 @@ export interface PartnerJson {
 export interface MarkConfigJson {
   type: string;
   color: string;
-  indication: string;
+  emphasis: string;
 }
 
 export interface StatementJson {

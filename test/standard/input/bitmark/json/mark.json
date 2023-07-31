@@ -12,12 +12,12 @@
         {
           "type": "adjective",
           "color": "blue",
-          "indication": "underline"
+          "emphasis": "underline"
         },
         {
           "type": "verb",
           "color": "red",
-          "indication": "circle"
+          "emphasis": "circle"
         },
         {
           "type": "noun",
@@ -141,6 +141,6 @@
       "version": "1.0.15",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.mark]\n[!Please mark all ==adjectives==|mark:underline|color:blue| and ==verbs==|mark:circle|color:red|.]\n[@mark:adjective][@color:blue][@indication:underline]\n[@mark:verb][@color:red][@indication:circle]\n[@mark:noun][@color:blue]\n\nIn der [=letzten][@type:adjective] Zeit vermehrten sich die Gerüchte, Bruno habe ein Verhältnis\nmit der [=schönen][@type:adjective] Backgroundsängerin Sharika.\n\nJetzt reagierte seine Ehefrau. In einem Interview mit der Zeitschrift BLITZ sagte die Blondine:\n„Jetzt ist Schluss! Ich kann es nicht ertragen, dass Bruno schon wieder eine Geliebte hat!“\nCorinna hat bereits den [=erfolgreichen][@type:adjective] Scheidungsanwalt Otto August von\nUnmut engagiert, der sie im Scheidungsprozess vertreten soll. Sie fordert die Hälfte des Vermögens\nund das [=alleinige][@type:adjective] Sorgerecht für den [=gemeinsamen][@type:adjective] Sohn Lucas (6 Jahre).\nWas das Finanzielle betrifft, so räumen Experten der [=betrogenen][@type:verb] Ehefrau wenig Chancen ein. Sie\nhatte vor der Hochzeit einen Ehevertrag unterschrieben und auf [=finanzielle][@type:adjective] Ansprüche im Fall\neiner Scheidung verzichtet. Für Bruno wäre es die fünfte Scheidung. Er hat bereits sieben Kinder aus früheren\nEhen, für die er Unterhalt zahlen muss.\n\nDoch vielleicht gibt es eine [=unerwartete][@type:adjective] Wendung. Ein [=stadtbekannter][@type:adjective][@example:hello] Juwelier\nbestätigte gestern gegenüber BLITZ, dass Bruno Schmuck im Wert von 50 000 Euro gekauft habe. Ist\nder [=wertvolle] Schmuck für Corinna? Will Bruno seinen Fehler wieder gutmachen? Gibt es am Ende\nsogar eine [=romantische][@type:adjective][@example] Versöhnung?"
+    "bitmark": "[.mark]\n[!Please mark all ==adjectives==|mark:underline|color:blue| and ==verbs==|mark:circle|color:red|.]\n[@mark:adjective][@color:blue][@emphasis:underline]\n[@mark:verb][@color:red][@emphasis:circle]\n[@mark:noun][@color:blue]\n\nIn der [=letzten][@type:adjective] Zeit vermehrten sich die Gerüchte, Bruno habe ein Verhältnis\nmit der [=schönen][@type:adjective] Backgroundsängerin Sharika.\n\nJetzt reagierte seine Ehefrau. In einem Interview mit der Zeitschrift BLITZ sagte die Blondine:\n„Jetzt ist Schluss! Ich kann es nicht ertragen, dass Bruno schon wieder eine Geliebte hat!“\nCorinna hat bereits den [=erfolgreichen][@type:adjective] Scheidungsanwalt Otto August von\nUnmut engagiert, der sie im Scheidungsprozess vertreten soll. Sie fordert die Hälfte des Vermögens\nund das [=alleinige][@type:adjective] Sorgerecht für den [=gemeinsamen][@type:adjective] Sohn Lucas (6 Jahre).\nWas das Finanzielle betrifft, so räumen Experten der [=betrogenen][@type:verb] Ehefrau wenig Chancen ein. Sie\nhatte vor der Hochzeit einen Ehevertrag unterschrieben und auf [=finanzielle][@type:adjective] Ansprüche im Fall\neiner Scheidung verzichtet. Für Bruno wäre es die fünfte Scheidung. Er hat bereits sieben Kinder aus früheren\nEhen, für die er Unterhalt zahlen muss.\n\nDoch vielleicht gibt es eine [=unerwartete][@type:adjective] Wendung. Ein [=stadtbekannter][@type:adjective][@example:hello] Juwelier\nbestätigte gestern gegenüber BLITZ, dass Bruno Schmuck im Wert von 50 000 Euro gekauft habe. Ist\nder [=wertvolle] Schmuck für Corinna? Will Bruno seinen Fehler wieder gutmachen? Gibt es am Ende\nsogar eine [=romantische][@type:adjective][@example] Versöhnung?"
   }
 ]

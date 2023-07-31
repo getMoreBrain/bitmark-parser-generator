@@ -65,7 +65,7 @@ const PropertyKey = superenum({
   mark: 'mark', // Special case in mark chain
   type: 'type', // single
   color: 'color', // single
-  indication: 'indication', // single
+  emphasis: 'emphasis', // single
 
   // Only in cards
   shortAnswer: 'shortAnswer', // single
