@@ -644,27 +644,33 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
     if (parent?.key !== NodeType.bitsValue) return;
 
     if (statement) {
-      const choiceJson: Partial<ClasstimeChoiceJson> = {
-        // id: uuidv4(),
-        content: {
-          entity_map: {},
-          blocks: [
-            {
-              inline_style_ranges: [],
-              text: statement.text ?? '',
-              depth: 0,
-              key: ObjectUtils.alphanumericKey(DEFAULT_ALPHANUMERIC_KEY_LENGTH),
-              type: 'unstyled',
-              data: {},
-              entity_ranges: [],
-            },
-          ],
-        },
-        is_correct: statement.isCorrect ?? false,
-        order: '0',
-        image: null,
-      };
-      this.bitJson.choices = [choiceJson as ClasstimeChoiceJson];
+      // eslint-disable-next-line no-constant-condition
+      if (false /* incorrect? */) {
+        const choiceJson: Partial<ClasstimeChoiceJson> = {
+          // id: uuidv4(),
+          content: {
+            entity_map: {},
+            blocks: [
+              {
+                inline_style_ranges: [],
+                text: statement.text ?? '',
+                depth: 0,
+                key: ObjectUtils.alphanumericKey(DEFAULT_ALPHANUMERIC_KEY_LENGTH),
+                type: 'unstyled',
+                data: {},
+                entity_ranges: [],
+              },
+            ],
+          },
+          is_correct: statement.isCorrect ?? false,
+          order: '0',
+          image: null,
+        };
+        this.bitJson.choices = [choiceJson as ClasstimeChoiceJson];
+      } else {
+        this.bitJson.title = statement.text ?? '';
+      }
+      this.bitJson.is_true_correct = statement.isCorrect ?? false;
     }
   }
 
@@ -981,7 +987,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
       for (const m of matrix) {
         // Create the question
         const itemJson: Partial<ClasstimeItemJson> = {
-          // id: uuidv4(),
+          id: uuidv4(),
           content: {
             entity_map: {},
             blocks: [
