@@ -190,6 +190,13 @@ const NodeType = superenum({
   name: 'name',
   avatarImage: 'avatarImage',
 
+  // Mark
+  markConfig: 'markConfig',
+  markConfigValue: 'markConfigValue',
+  solution: 'solution',
+  color: 'color',
+  indication: 'indication',
+
   // Resources
   resource: 'resource',
   resourceType: 'resourceType',

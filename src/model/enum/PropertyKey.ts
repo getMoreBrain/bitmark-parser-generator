@@ -61,6 +61,12 @@ const PropertyKey = superenum({
   partner: 'partner', // single, only in 'conversation-xxx'
   sampleSolution: 'sampleSolution', // single, only in 'essay'
 
+  // Only in [.mark]
+  mark: 'mark', // Special case in mark chain
+  type: 'type', // single
+  color: 'color', // single
+  indication: 'indication', // single
+
   // Only in cards
   shortAnswer: 'shortAnswer', // single
   longAnswer: 'longAnswer', // single

@@ -1,99 +1,24 @@
-[.mark:bitmark--]
-[@id:92441]
-[%A28c1]
-[!Das Privatleben von Prominenten
+[.mark]
+[!Please mark all ==adjectives==|mark:underline|color:blue| and ==verbs==|mark:circle|color:red|.]
+[@mark:adjective][@color:blue][@indication:underline]
+[@mark:verb][@color:red][@indication:circle]
+[@mark:noun][@color:blue]
 
-Markieren Sie gemeinsam alle Adjektive in blau.]
+In der [=letzten][@type:adjective] Zeit vermehrten sich die Gerüchte, Bruno habe ein Verhältnis
+mit der [=schönen][@type:adjective] Backgroundsängerin Sharika.
 
+Jetzt reagierte seine Ehefrau. In einem Interview mit der Zeitschrift BLITZ sagte die Blondine:
+„Jetzt ist Schluss! Ich kann es nicht ertragen, dass Bruno schon wieder eine Geliebte hat!“
+Corinna hat bereits den [=erfolgreichen][@type:adjective] Scheidungsanwalt Otto August von
+Unmut engagiert, der sie im Scheidungsprozess vertreten soll. Sie fordert die Hälfte des Vermögens
+und das [=alleinige][@type:adjective] Sorgerecht für den [=gemeinsamen][@type:adjective] Sohn Lucas (6 Jahre).
+Was das Finanzielle betrifft, so räumen Experten der [=betrogenen][@type:verb] Ehefrau wenig Chancen ein. Sie
+hatte vor der Hochzeit einen Ehevertrag unterschrieben und auf [=finanzielle][@type:adjective] Ansprüche im Fall
+einer Scheidung verzichtet. Für Bruno wäre es die fünfte Scheidung. Er hat bereits sieben Kinder aus früheren
+Ehen, für die er Unterhalt zahlen muss.
 
-**Ehe-Aus für Bruno?**
+Doch vielleicht gibt es eine [=unerwartete][@type:adjective] Wendung. Ein [=stadtbekannter][@type:adjective][@example:hello] Juwelier
+bestätigte gestern gegenüber BLITZ, dass Bruno Schmuck im Wert von 50 000 Euro gekauft habe. Ist
+der [=wertvolle] Schmuck für Corinna? Will Bruno seinen Fehler wieder gutmachen? Gibt es am Ende
+sogar eine [=romantische][@type:adjective][@example] Versöhnung?
 
-__Corinna (33), die fünfte Ehefrau des__ ['berühmten][@mark:blue] __Sängers Bruno (63), will die Scheidung!__
-
-In der ['letzten][@mark:blue] Zeit vermehrten sich die Gerüchte, Bruno habe ein Verhältnis mit der ['schönen] Backgroundsängerin Sharika. Jetzt reagierte seine Ehefrau. In einem Interview mit der Zeitschrift BLITZ sagte die Blondine: „Jetzt ist Schluss! Ich kann es nicht ertragen, dass Bruno schon wieder eine Geliebte hat!“ Corinna hat bereits den ['erfolgreichen][@mark:blue] Scheidungsanwalt Otto August von Unmut engagiert, der sie im Scheidungsprozess vertreten soll. Sie fordert die Hälfte des Vermögens und das ['alleinige][@mark:blue] Sorgerecht für den ['gemeinsamen][@mark:blue] Sohn Lucas (6 Jahre). Was das Finanzielle betrifft, so räumen Experten der ['betrogenen][@mark:blue] Ehefrau wenig Chancen ein. Sie hatte vor der Hochzeit einen Ehevertrag unterschrieben und auf ['finanzielle][@mark:blue] Ansprüche im Fall einer Scheidung verzichtet. Für Bruno wäre es die fünfte Scheidung. Er hat bereits sieben Kinder aus früheren Ehen, für die er Unterhalt zahlen muss.
-
-Doch vielleicht gibt es eine ['unerwartete][@mark:blue] Wendung. Ein ['stadtbekannter][@mark:blue] Juwelier bestätigte gestern gegenüber BLITZ, dass Bruno Schmuck im Wert von 50 000 Euro gekauft habe. Ist der ['wertvolle] Schmuck für Corinna? Will Bruno seinen Fehler wieder gutmachen? Gibt es am Ende sogar eine ['romantische][@mark:blue] Versöhnung?
-
-
-[.mark:bitmark--&image]
-[@id:93041]
-[%C1]
-[!Heben Sie im Text alle Passiv- und Passiversatzformen hervor.]
-[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/trabant_p50_front.jpg]
-**Der Trabant**
-
-Die Geschichte beginnt durchaus innovativ: 1954 beschloss die DDR-Staatsführung, einen Kleinwagen zu entwickeln. Er sollte ['bezahlbar sein] und gleichzeitig so robust, dass er eine Weile halten würde. Doch bald stellte sich heraus, dass das Projekt ['nicht so einfach umzusetzen war], denn Bleche für die Herstellung einer Auto-Karosserie waren in Ostdeutschland ein seltenes Gut.
-
-Nach einigen Überlegungen ['wurde] ein Prototyp auf die Räder ['gestellt], der zeigte, wie sich das Problem ['umgehen ließ]: mit Duroplast, einer Kombination aus Baumwollfasern und Kunststoff. Zur Herstellung des Gehäuses ['wurden] verschiedene Lagen Baumwollfasern mit Kunststoffteilchen ['übereinandergelegt] und mit Hitze in eine Form ['gepresst]. 1957 ['konnte] der ursprünglich __P50__ benannte Wagen mit einer Leistung von 18 PS in Serie ['hergestellt werden]. Bei einem Preisausschreiben gewann der Name __Trabant__, was so viel bedeutet wie Begleiter. Der sowjetische Sputnik stand Pate für den Namen. 1964 ['wurde] der __Trabant__ nach einer Überarbeitung mit stolzen 23 PS und einer neuen Karosserie ['präsentiert]. Insgesamt ['wurden] 17 Verbesserungen an dem Auto ['vorgenommen]. 1991 endet die Geschichte des treuen __Begleiters__ nach mehr als drei Millionen gebauten Exemplaren. Nach der Wiedervereinigung und der Währungsunion war er nicht mehr gefragt.
-
-[.mark:bitmark++][@id:92871]
-[%A4a]
-[!Die indirekte Rede
-
-Lesen Sie die folgenden Sätze und kennzeichnen Sie die Verben.]
-Die Ergebnisse seien alarmierend.
-Fast jedes fünfte Kind in Deutschland habe psychische Probleme.
-Käse zerstöre den Körper, mache fett, faul und krank.
-Von den Tätern fehle jede Spur.
-
-► Diese Sätze stehen in der indirekten Rede, das heißt, sie geben wieder, was jemand gesagt hat. Im Deutschen kann man dafür eine besondere grammatische Form verwenden: den
-
-
-◼︎ Die Verwendung des **Konjunktiv I** ermöglicht es, einen Sachverhalt oder eine Aussage **neutral** wiederzugeben. Der **Konjunktiv I** wird vor allem bei Nachrichten in Rundfunk, Fernsehen und Zeitungen genutzt.
-|remark:Indikativ
-Die Ergebnisse **sind** alarmierend.
-Jedes fünfte Kind **hat** psychische Probleme.
-Käse **zerstört** den Körper, ...
-Von den Tätern **fehlt** jede Spur.
-
-
-|remark:Konjunktiv I
-Die Ergebnisse **seien** alarmierend.
-Jedes fünfte Kind **habe** psychische Probleme.
-Käse **zerstöre** den Körper, ...
-Von den Tätern **fehle** jede Spur.
-
-
-|remark:Bildung des Konjunktiv I
-Der Konjunktiv I wird aus dem **Verbstamm im Präsens** und der **Konjunktivendung** gebildet.
-In vielen Fällen ist der Konjunktiv I identisch mit dem Indikativ. In diesen Fällen nehmen wir den **Konjunktiv II**.
-
-
-**Gegenwart**
-|image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gegenwart.png|
-**Vergangenheit**
-Der Minister sagte: „Ich war in Frankreich und habe mit dem Außenminister gesprochen.“
-
-Der Minister sagte, er **sei** in Frankreich **gewesen** und **habe** mit dem Außenminister **gesprochen**.
-➔ Konjunktiv I von __haben/sein__ + Partizip II
-
-[.mark:bitmark--][@id:92872]
-[%A4b]
-[!Die indirekte Rede
-
-Unterstreichen Sie in den Nachrichten alle Formen der indirekten Rede.]
-
-**Nachrichten**
-
-**1. Berlin: Studie zur Jugendgesundheit Immer mehr Kinder sind psychisch auffällig**
-Im Auftrag des Bundesbildungsministeriums untersuchte das __Robert-Koch-Institut__ den physischen und psychischen Gesundheitszustand von Kindern und Jugendlichen in Deutschland. Die Ergebnisse seien alarmierend, meinte die Ministerin, die den Bericht des Instituts gestern auf einer Pressekonferenz vorstellte. Fast jedes fünfte Kind in Deutschland habe psychische Probleme und zehn Prozent der Kinder würden unter Ängsten leiden. 15 Prozent der Kinder seien übergewichtig und 28,9 Prozent der Mädchen zwischen 11 und 17 Jahren hätten Essstörungen. Für die Studie hatten Wissenschaftler fast 18 000 Kinder und Jugendliche bis 17 Jahre untersucht.
-
-**2. London: Käse ist böse!
-Werbeverbot im britischen Kinderfernsehen**
-Käse zerstöre den Körper, mache fett, faul und krank. Außerdem sei er zu salzig für Kinder, so die Meinung der britischen Rundfunk-Aufsichtsbehörde Ofcom. Nach mehrjährigen Beratungen entschied die Behörde jetzt, Käse in die Kategorie „Junk Food“ einzuordnen. Die Konsequenz: Für das Milchprodukt darf künftig nicht mehr in Kinderprogrammen geworben werden – ein Schicksal, das der Käse übrigens mit vielen Lebensmitteln, unter anderem mit Rosinen, teilt.
-
-**3. Wien: Verbindung zwischen Budapest und Wien Kaninchen blockieren Autobahn**
-Alarm auf der wichtigsten Verkehrsverbindung zwischen Budapest und Wien: Beim Zusammenstoß von zwei Lastwagen westlich von Budapest sind etwa 5 000 Kaninchen entlaufen, als ein Lkw umstürzte und der Laderaum aufbrach. Die Polizei sperrte die Unfallstelle weiträumig ab. Menschen seien nicht zu Schaden gekommen. Polizisten, Feuerwehrleute und der Fahrer des betroffenen Lastwagens seien allerdings noch viele Stunden damit beschäftigt gewesen, die Kaninchen wieder einzufangen, sagte eine Sprecherin der Autobahnpolizei.
-
-**4. Amsterdam: Dreister Überfall am Flughafen Diamanten im Wert von 100 Millionen Dollar gestohlen**
-Mehrere bewaffnete Räuber haben gestern bei einem Überfall auf dem Amsterdamer Flughafen Schiphol Edelsteine im Wert von 100 Millionen Dollar erbeutet. In einem Wagen der Fluggesellschaft KLM fuhren die Diebe vor einen KLM-Jet, der mit seiner teuren Fracht eigentlich nach Brüssel fliegen sollte. Sie bedrohten das Sicherheitspersonal und ließen innerhalb weniger Minuten die Diamanten in einem gepanzerten Fahrzeug verschwinden. Das Fahrzeug wurde später leer in der Nähe des Flughafens gefunden. Der Flughafensprecher meinte heute zu dem Vorfall, die Polizei habe noch keinen Verdächtigen, von den Tätern fehle jede Spur.]
-
-[.mark:bitmark--][@id:92873]
-[%A4c]
-[!Die indirekte Rede
-
-Markieren Sie in der folgenden Meldung alle Formen der indirekten Rede in der Gegenwart und der Vergangenheit.]
-
-**Flugausfälle und Verspätungen durch Warnstreiks**
-
-Warnstreiks bei mehreren deutschen Fluggesellschaften haben am Morgen zu mehrstündigen Verspätungen und Ausfällen im Flugverkehr geführt. Die Arbeitnehmervereinigung Cockpit hatte die Piloten für zweieinhalb Stunden zu befristeten Warnstreiks aufgerufen. Insgesamt ['hätten sich][@mark:green] rund 200 Piloten und Co-Piloten an dem „äußerst erfolg-reichen“ Arbeitskampf ['beteiligt][@mark:green], teilte Cockpit mit. Von 5.30 Uhr bis 8.00 Uhr ['seien][@mark:green] 97 von 99 Flügen auf allen großen deutschen Flughäfen ['betroffen gewesen][@mark:green]. Lufthansa ['habe][@mark:green] 64 Flüge ['annulliert][@mark:green]. Da der Arbeitgeber in den mehrmonatigen Verhandlungen über Gehaltssteigerungen keine guten Angebote ['vorgelegt habe][@mark:green], ['seien][@mark:green] die Warnstreiks ['notwendig gewesen][@mark:green], sagte ein Sprecher der Pilotengewerkschaft. Die Streiks ['seien][@mark:green] für die Gewerkschaft ['das „letzte Mittel“ gewesen][@mark:green], um ihren Forderungen Nachdruck zu verleihen. Sollte die Gewerkschaft nun keine „deutlich nachgebesserten Angebote“ erhalten, ['werde][@mark:green] es weitere Warnstreiks oder auch einen unbefristeten Streik ['geben][@mark:green].

@@ -178,6 +178,7 @@ BitTag
   / InstructionTag
   / HintTag
   / GapTag
+  / MarkTag
   / SampleSolutionTag
   / TrueTag
   / FalseTag
@@ -295,6 +296,10 @@ SampleSolutionTag
 // Gap tag
 GapTag
   = "[_" value: Tag_Value Tag_CloseOrEOF { return helper.handleTag(TypeKey.Gap, value) }
+
+// Mark tag
+MarkTag
+  = "[=" value: Tag_Value Tag_CloseOrEOF { return helper.handleTag(TypeKey.Mark, value) }
 
 // Resource tag
 ResourceTag

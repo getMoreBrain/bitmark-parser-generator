@@ -126,8 +126,8 @@
 | learning-path-sign | ➖ | ➖ | ➖ | LEGACY? |
 | learning-path-step | ✅ | ✅ | ✅ |  |
 | learning-path-video-call | ✅ | ✅ | ✅ |  |
-| mark | ✅ | ❌ | ❌ | NOT WORKING IN ANTLR PARSER, not sure how to implement |
-| match | ✅ | ✅ | ❌ |  |
+| mark | ✅ | ✅ | ✅ |  |
+| match | ✅ | ✅ | ✅ |  |
 | match-all | ✅ | ✅ | ✅ |  |
 | match-all-reverse | ✅ | ✅ | ✅ |  |
 | match-audio | ➖ | ➖ | ➖ | LEGACY? |

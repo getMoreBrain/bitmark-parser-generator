@@ -78,6 +78,7 @@ import { commentTagContentProcessor } from './contentProcessors/CommentTagConten
 import { defaultTagContentProcessor } from './contentProcessors/DefaultTagContentProcessor';
 import { gapChainContentProcessor } from './contentProcessors/GapChainContentProcessor';
 import { itemLeadTagContentProcessor } from './contentProcessors/ItemLeadTagContentProcessor';
+import { markChainContentProcessor } from './contentProcessors/MarkChainContentProcessor';
 import { propertyContentProcessor } from './contentProcessors/PropertyContentProcessor';
 import { referenceTagContentProcessor } from './contentProcessors/ReferenceTagContentProcessor';
 import { buildResource, resourceContentProcessor } from './contentProcessors/ResourceContentProcessor';
@@ -344,6 +345,7 @@ class BitmarkPegParserProcessor {
     result.responses = [];
     result.resources = [];
     result.trueFalse = [];
+    result.markConfig = [];
     result.extraProperties = {};
     result.comments = [];
 
@@ -406,14 +408,20 @@ class BitmarkPegParserProcessor {
           break;
 
         case TypeKey.Gap: {
-          if (!inChain) addBodyText();
+          if (!inChain) addBodyText(); // Body bit, so add the body text
           gapChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
+          break;
+        }
+
+        case TypeKey.Mark: {
+          if (!inChain) addBodyText(); // Body bit, so add the body text
+          markChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
           break;
         }
 
         case TypeKey.True:
         case TypeKey.False: {
-          if (!inChain) addBodyText();
+          if (!inChain) addBodyText(); // Body bit, so add the body text
           trueFalseChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
           break;
         }
@@ -479,6 +487,7 @@ class BitmarkPegParserProcessor {
     if (result.choices.length === 0) delete result.choices;
     if (result.responses.length === 0) delete result.responses;
     if (result.trueFalse.length === 0) delete result.trueFalse;
+    if (result.markConfig.length === 0) delete result.markConfig;
     if (result.resources.length === 0) delete result.resources;
     if (result.comments.length === 0) delete result.comments;
 

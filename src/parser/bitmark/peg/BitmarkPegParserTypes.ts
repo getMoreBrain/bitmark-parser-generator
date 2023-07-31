@@ -35,6 +35,7 @@ import {
   ExtraProperties,
   ImageResource,
   Comment,
+  MarkConfig,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -94,11 +95,14 @@ export interface BitContentProcessorResult {
   trueFalse?: TrueFalseValue[];
   example?: string | boolean;
   isCorrect?: boolean;
+  markConfig?: MarkConfig[];
   solutions?: string[];
   statement?: Statement;
   statements?: Statement[];
   choices?: Choice[];
   responses?: Response[];
+  solution?: string;
+  markType?: string[];
   title?: string[];
   subtitle?: string;
   resources?: Resource[];
@@ -194,6 +198,7 @@ const TypeKey = superenum({
   True: 'True',
   False: 'False',
   Gap: 'Gap',
+  Mark: 'Mark',
   SampleSolution: 'SampleSolution',
   Comment: 'Comment',
 

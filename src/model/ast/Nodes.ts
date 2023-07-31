@@ -61,6 +61,7 @@ export interface Bit {
   labelFalse?: Property;
   quotedPerson?: Property;
   partialAnswer?: Property;
+  markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: string;
   title?: string;
@@ -125,6 +126,12 @@ export type Property = string[] | number[] | boolean[] | unknown[];
 export interface Partner {
   name: string;
   avatarImage?: ImageResource;
+}
+
+export interface MarkConfig {
+  type: string;
+  color?: string;
+  indication?: string;
 }
 
 // Statement
@@ -249,7 +256,7 @@ export interface BodyPart {
 }
 
 export interface BodyBit extends BodyPart {
-  type: 'gap' | 'select' | 'highlight';
+  type: 'gap' | 'mark' | 'select' | 'highlight';
 }
 
 // Gap
@@ -263,6 +270,18 @@ export interface Gap extends BodyBit {
     instruction?: string;
     example?: Example;
     isCaseSensitive?: boolean;
+  };
+}
+
+export interface Mark extends BodyBit {
+  type: 'mark';
+  data: {
+    solution: string;
+    type?: string;
+    itemLead?: ItemLead;
+    hint?: string;
+    instruction?: string;
+    example?: Example;
   };
 }
 

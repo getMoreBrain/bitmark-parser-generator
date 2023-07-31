@@ -45,6 +45,8 @@ import {
   BodyPart,
   CardNode,
   Comment,
+  Mark,
+  MarkConfig,
 } from '../model/ast/Nodes';
 
 /**
@@ -140,6 +142,7 @@ class Builder extends BaseBuilder {
     extraProperties?: {
       [key: string]: unknown | unknown[];
     };
+    markConfig?: MarkConfig[];
     resource?: Resource;
     body?: Body;
     sampleSolution?: string | string[];
@@ -217,6 +220,7 @@ class Builder extends BaseBuilder {
       instruction,
       example,
       partner,
+      markConfig,
       extraProperties,
       resource,
       body,
@@ -283,6 +287,7 @@ class Builder extends BaseBuilder {
       anchor,
       reference,
       referenceEnd,
+      markConfig,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
@@ -714,6 +719,64 @@ class Builder extends BaseBuilder {
         instruction,
         example: this.toExample(example),
         isCaseSensitive,
+      },
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
+   * Build mark config node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  markConfig(data: { type: string; color?: string; indication?: string }): MarkConfig {
+    const { type, color, indication } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: MarkConfig = {
+      type,
+      color,
+      indication,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
+   * Build mark node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  mark(data: {
+    solution: string;
+    type?: string;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    example?: string | boolean;
+  }): Mark {
+    const { solution, type, item, lead, hint, instruction, example } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Mark = {
+      type: BodyBitType.mark,
+      data: {
+        solution,
+        type,
+        itemLead: this.itemLead(item, lead),
+        hint,
+        instruction,
+        example: this.toExample(example),
       },
     };
 

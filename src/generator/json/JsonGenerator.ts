@@ -1,7 +1,7 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeType } from '../../model/ast/NodeType';
-import { BodyBit, BodyPart, BodyText, ImageLinkResource } from '../../model/ast/Nodes';
+import { BodyBit, BodyPart, BodyText, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
 import { AudioEmbedResource } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
@@ -62,6 +62,7 @@ import {
   BotResponseJson,
   ChoiceJson,
   HeadingJson,
+  MarkConfigJson,
   MatrixCellJson,
   MatrixJson,
   PairJson,
@@ -76,6 +77,7 @@ import {
   GapJson,
   HighlightJson,
   HighlightTextJson,
+  MarkJson,
   SelectJson,
   SelectOptionJson,
 } from '../../model/json/BodyBitJson';
@@ -446,6 +448,26 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.bitJson.partner = partnerJson;
   }
 
+  // bitmarkAst -> bits -> bitsValue -> markConfig -> markConfigValue
+
+  protected enter_markConfigValue(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const markConfig = node.value as MarkConfig;
+
+    // Ignore example that is not at the correct level
+    if (parent?.key !== NodeType.markConfig) return;
+
+    const { type, color, indication } = markConfig;
+
+    const markJson = {} as Partial<MarkConfigJson>;
+
+    this.addProperty(markJson, 'type', type ?? 'unknown', true);
+    if (color) this.addProperty(markJson, 'color', color ?? '', true);
+    if (indication) this.addProperty(markJson, 'indication', indication ?? '', true);
+
+    if (!this.bitJson.mark) this.bitJson.mark = [];
+    this.bitJson.mark.push(markJson as MarkConfigJson);
+  }
+
   // bitmarkAst -> bits -> bitsValue -> sampleSolution
 
   protected enter_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -564,6 +586,12 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         case BodyBitType.gap: {
           const gap = bodyBit as Gap;
           bodyBitJson = this.createGapJson(gap);
+          break;
+        }
+
+        case BodyBitType.mark: {
+          const mark = bodyBit as Mark;
+          bodyBitJson = this.createMarkJson(mark);
           break;
         }
 
@@ -1218,6 +1246,25 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (!gapJson.lead) delete gapJson.lead;
 
     return gapJson as GapJson;
+  }
+
+  protected createMarkJson(mark: Mark): MarkJson {
+    const data = mark.data;
+
+    // Create the mark
+    const markJson: Partial<MarkJson> = {
+      type: 'mark',
+      solution: data.solution,
+      markType: data.type,
+      ...this.toItemLeadHintInstruction(data),
+      ...this.toExampleAndIsExample(data.example),
+      //
+    };
+
+    // Remove unwanted properties
+    if (!markJson.lead) delete markJson.lead;
+
+    return markJson as MarkJson;
   }
 
   protected createSelectJson(select: Select): SelectJson {
@@ -2058,6 +2105,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       // Partner .conversion-xxx only
       partner: undefined,
 
+      // Mark (config)
+      mark: undefined,
+
       // Extra Properties
       extraProperties: undefined,
 
@@ -2317,6 +2367,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     // Example
     if (bitJson.example == null) delete bitJson.example;
     if (bitJson.isExample == null) delete bitJson.isExample;
+
+    // Mark
+    if (bitJson.mark == null) delete bitJson.mark;
 
     // Extra Properties
     if (bitJson.extraProperties == null) delete bitJson.extraProperties;

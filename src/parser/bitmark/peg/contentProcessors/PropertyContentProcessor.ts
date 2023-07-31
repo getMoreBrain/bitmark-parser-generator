@@ -5,6 +5,7 @@ import { NumberUtils } from '../../../../utils/NumberUtils';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import { bookChainContentProcessor } from './BookChainContentProcessor';
+import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
 import { partnerChainContentProcessor } from './PartnerChainContentProcessor';
 
 import {
@@ -32,6 +33,9 @@ function propertyContentProcessor(
     return;
   } else if (key === PropertyKey.book) {
     bookChainContentProcessor(context, bitLevel, bitType, content, target);
+    return;
+  } else if (key === PropertyKey.mark) {
+    markConfigChainContentProcessor(context, bitLevel, bitType, content, target);
     return;
   }
 
