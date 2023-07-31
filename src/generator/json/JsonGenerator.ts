@@ -749,8 +749,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
             // Delete unwanted properties
             if (q.itemLead?.lead == null) delete choiceJson.lead;
-            if (!q.example) delete choiceJson.example;
-            if (!q.example) delete choiceJson.isExample;
 
             choicesJson.push(choiceJson as ChoiceJson);
           }
@@ -770,8 +768,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
             // Delete unwanted properties
             if (q.itemLead?.lead == null) delete responseJson.lead;
-            if (!c.example) delete responseJson.example;
-            if (!c.example) delete responseJson.isExample;
 
             responsesJson.push(responseJson as ResponseJson);
           }
@@ -1241,8 +1237,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       if (!optionJson.item) delete optionJson.item;
       if (!optionJson.lead) delete optionJson.lead;
       if (!optionJson.instruction) delete optionJson.instruction;
-      if (!optionJson.example) delete optionJson.example;
-      if (!optionJson.isExample) delete optionJson.isExample;
       if (!optionJson.isCaseSensitive) delete optionJson.isCaseSensitive;
 
       options.push(optionJson as SelectOptionJson);
@@ -1282,8 +1276,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       if (!textJson.item) delete textJson.item;
       if (!textJson.lead) delete textJson.lead;
       if (!textJson.hint) delete textJson.hint;
-      if (!textJson.example) delete textJson.example;
-      if (!textJson.isExample) delete textJson.isExample;
       if (!textJson.isCaseSensitive) delete textJson.isCaseSensitive;
 
       texts.push(textJson as HighlightTextJson);
