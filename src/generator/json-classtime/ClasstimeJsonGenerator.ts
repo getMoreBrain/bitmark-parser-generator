@@ -344,6 +344,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
     this.bitWrapperJson = {
       //
     };
+    this.categoryIds = []; // Reset category IDs at the start of each bit
     // this.json.push(this.bitWrapperJson);
 
     this.bitJson = this.createBitJson(bit);
