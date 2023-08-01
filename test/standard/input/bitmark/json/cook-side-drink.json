@@ -1,0 +1,53 @@
+[
+  {
+    "bitmark": "[.cook-side-drink]\n[@id:92375]",
+    "bit": {
+      "type": "cook-side-drink",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": ["92375"]
+    }
+  },
+  {
+    "bitmark": "[.cook-side-drink]\n[#Summary of this Book]\nThis is the cook-side-drink of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+    "bit": {
+      "type": "cook-side-drink",
+      "format": "bitmark--",
+      "body": "This is the cook-side-drink of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "title": "Summary of this Book"
+    }
+  },
+  {
+    "bitmark": "[.cook-side-drink]\n[#Summary of Chapter One]\nThis is a cook-side-drink of chapter 1.",
+    "bit": {
+      "type": "cook-side-drink",
+      "format": "bitmark--",
+      "body": "This is a cook-side-drink of chapter 1.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "title": "Summary of Chapter One"
+    }
+  },
+  {
+    "bitmark": "[.cook-side-drink]",
+    "bit": {
+      "type": "cook-side-drink",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": ""
+    }
+  }
+]
