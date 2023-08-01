@@ -79,6 +79,20 @@
 | conversation-right-1 | ✅ | ✅ | ✅ |  |
 | conversation-right-1-scream | ✅ | ✅ | ✅ |  |
 | conversation-right-1-thought | ✅ | ✅ | ✅ |  |
+| cook-preparation | ✅ | ✅ | ✅ |  |
+| cook-step | ✅ | ✅ | ✅ |  |
+| cook-ingredients | ✅ | ✅ | ✅ |  |
+| cook-remark | ✅ | ✅ | ✅ |  |
+| cook-variation | ✅ | ✅ | ✅ |  |
+| cook-insert | ✅ | ✅ | ✅ |  |
+| cook-arrangement | ✅ | ✅ | ✅ |  |
+| cook-practice-advise | ✅ | ✅ | ✅ |  |
+| cook-plate | ✅ | ✅ | ✅ |  |
+| cook-recommendation | ✅ | ✅ | ✅ |  |
+| cook-personal-recommendation | ✅ | ✅ | ✅ |  |
+| cook-side-drink | ✅ | ✅ | ✅ |  |
+| cook-side-dish | ✅ | ✅ | ✅ |  |
+| cook-timer | ✅ | ✅ | ✅ |  |
 | correction | ✅ | ❌ | ❌ | DOES NOT WORK IN THE ANTLR PARSER |
 | danger | ✅ | ✅ | ✅ |  |
 | details | ➖ | ➖ | ➖ | LEGACY? |
@@ -114,6 +128,22 @@
 | internal-link | ✅ | ✅ | ✅ |  |
 | interview | ✅ | ✅ | ✅ |  |
 | interview-instruction-grouped | ✅ | ✅ | ✅ |  |
+| langLearningOutcomes | ✅ | ✅ | ✅ |  |
+| langEnablingLanguageSkills | ✅ | ✅ | ✅ |  |
+| langLifeSkills | ✅ | ✅ | ✅ |  |
+| langEnglishAroundWorld | ✅ | ✅ | ✅ |  |
+| langGoodToKnow | ✅ | ✅ | ✅ |  |
+| langLearningStrategy | ✅ | ✅ | ✅ |  |
+| langLikeALocal | ✅ | ✅ | ✅ |  |
+| langUsefulPhrases | ✅ | ✅ | ✅ |  |
+| langLevelDown | ✅ | ✅ | ✅ |  |
+| langLevelUp | ✅ | ✅ | ✅ |  |
+| langExtraActivity | ✅ | ✅ | ✅ |  |
+| langVideoScript | ✅ | ✅ | ✅ |  |
+| langAudioScript | ✅ | ✅ | ✅ |  |
+| langVocabulary | ✅ | ✅ | ✅ |  |
+| langHomework | ✅ | ✅ | ✅ |  |
+| langTeacherNote | ✅ | ✅ | ✅ |  |
 | learning-path-book | ✅ | ✅ | ✅ |  |
 | learning-path-bot-training | ➖ | ➖ | ➖ | LEGACY? |
 | learning-path-classroom-event | ✅ | ✅ | ✅ |  |
